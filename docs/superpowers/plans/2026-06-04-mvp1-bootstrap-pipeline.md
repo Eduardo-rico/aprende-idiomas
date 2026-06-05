@@ -81,6 +81,51 @@ portugues-app/
 **Files:**
 - Create: `package.json`, `tsconfig.json`, `next.config.ts`, `next-env.d.ts`, `app/layout.tsx`, `app/page.tsx`, `app/globals.css`, `postcss.config.mjs`, `eslint.config.mjs`
 
+- [ ] **Step 0: Audit `.gitignore` BEFORE create-next-app**
+
+The current `.gitignore` (already created) is minimal. Replace its contents with this canonical list (don't trust CNA's defaults):
+
+```gitignore
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# next.js
+.next/
+out/
+build/
+
+# env
+.env
+.env.local
+.env*.local
+*.local
+
+# testing
+coverage/
+.playwright/
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# misc
+.DS_Store
+*.pem
+.vscode/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# pipeline cache (regenerable, committed only output JSONs + audio)
+scripts/.cache/
+public/audio/*.mp3.tmp
+```
+
 - [ ] **Step 1: Run create-next-app**
 
 ```bash
@@ -114,7 +159,7 @@ Expected: Next dev server starts on http://localhost:3002. Visit in browser to c
 
 ```bash
 git add -A
-git commit -m "chore: bootstrap Next.js 16 + TS + Tailwind"
+git commit -m "chore: bootstrap Next.js 16 + TS + Tailwind + canonical .gitignore"
 ```
 
 ---
@@ -223,9 +268,9 @@ git commit -m "chore: stricter TS config (noUncheckedIndexedAccess)"
 
 ---
 
-### Task 4: Setup vitest
+### Task 4: Setup vitest + full `package.json` scripts (all generation commands upfront)
 
-**Files:** Create `vitest.config.ts`, `tests/setup.ts`. Modify `package.json`.
+**Files:** Create `vitest.config.ts`, `tests/setup.ts`. Modify `package.json` to add ALL generation scripts now (no editing later).
 
 - [ ] **Step 1: Create vitest.config.ts**
 
@@ -256,9 +301,7 @@ afterEach(() => {
 });
 ```
 
-- [ ] **Step 3: Add test scripts to package.json**
-
-Edit `package.json` `scripts` section to include:
+- [ ] **Step 3: Add COMPLETE scripts block to package.json (definitive — no further edits)**
 
 ```json
 {
@@ -269,10 +312,19 @@ Edit `package.json` `scripts` section to include:
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "generate:curriculum": "tsx scripts/generate-curriculum.ts",
+    "generate:content":    "tsx scripts/generate-content.ts",
+    "generate:audio":      "tsx scripts/generate-audio.ts",
+    "generate:stories":    "tsx scripts/generate-stories.ts",
+    "generate:all":        "npm run generate:curriculum && npm run generate:content && npm run generate:audio && npm run verify:content",
+    "verify:content":      "tsx scripts/verify-content.ts",
+    "probe:tts":           "tsx scripts/probe-tts.ts"
   }
 }
 ```
+
+Note: ALL generation-related commands are present from this point forward. Future tasks do NOT edit `package.json` — they create the corresponding files.
 
 - [ ] **Step 4: Smoke test vitest**
 
@@ -292,7 +344,7 @@ Expected: 1 passed.
 
 ```bash
 git add vitest.config.ts tests/setup.ts tests/unit/sanity.test.ts package.json
-git commit -m "test: setup vitest with sanity test"
+git commit -m "test: setup vitest + complete package.json scripts (no future edits)"
 ```
 
 ---
@@ -353,7 +405,7 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
-import { hashKey, readCache, writeCache } from '@/scripts/lib/cache';
+import { hashKey, readCache, writeCache, normalizeForHash } from '@/scripts/lib/cache';
 
 describe('cache', () => {
   let tmpDir: string;
@@ -386,6 +438,27 @@ describe('cache', () => {
     const got = await readCache(tmpDir, { unseen: true });
     expect(got).toBeNull();
   });
+
+  it('normalizeForHash strips undefined and NaN consistently', () => {
+    // { a: undefined } normaliza a {} → mismo hash que {}
+    expect(hashKey({ a: undefined })).toBe(hashKey({}));
+    // NaN normaliza a null → mismo hash que { a: null }
+    expect(hashKey({ a: NaN })).toBe(hashKey({ a: null }));
+  });
+
+  it('normalizeForHash applies NFC unicode normalization to strings', () => {
+    // U+00E9 (composed) and U+0065 U+0301 (decomposed) must hash the same
+    const composed = 'café';
+    const decomposed = 'café';
+    expect(composed.length).not.toBe(decomposed.length);
+    expect(hashKey({ word: composed })).toBe(hashKey({ word: decomposed }));
+  });
+
+  it('writeCache is atomic: no .tmp artifact left after success', async () => {
+    await writeCache(tmpDir, { k: 1 }, { v: 'x' });
+    const files = fs.readdirSync(tmpDir);
+    expect(files.filter(f => f.endsWith('.tmp'))).toHaveLength(0);
+  });
 });
 ```
 
@@ -405,12 +478,35 @@ import crypto from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
+// Normalización para hashing estable.
+// 1. JSON round-trip strips undefined y convierte NaN/Infinity → null.
+// 2. Strings se normalizan a NFC (forma canónica compuesta) para que
+//    ediciones con NFD (forma descomuesta) no invaliden el cache silenciosamente.
+// 3. Recursión para cubrir estructuras anidadas.
+export function normalizeForHash(value: unknown): unknown {
+  if (value === null || value === undefined) return null;
+  if (typeof value === 'string') return value.normalize('NFC');
+  if (typeof value === 'number') {
+    if (Number.isNaN(value) || !Number.isFinite(value)) return null;
+    return value;
+  }
+  if (typeof value === 'bigint') return value.toString();
+  if (typeof value === 'boolean') return value;
+  if (Array.isArray(value)) return value.map(normalizeForHash);
+  if (typeof value === 'object') {
+    const obj = value as Record<string, unknown>;
+    const out: Record<string, unknown> = {};
+    for (const k of Object.keys(obj).sort()) {
+      out[k] = normalizeForHash(obj[k]);
+    }
+    return out;
+  }
+  // functions, symbols, undefined → string representable, exclude them
+  return null;
+}
+
 function stableStringify(value: unknown): string {
-  if (value === null || typeof value !== 'object') return JSON.stringify(value);
-  if (Array.isArray(value)) return `[${value.map(stableStringify).join(',')}]`;
-  const obj = value as Record<string, unknown>;
-  const keys = Object.keys(obj).sort();
-  return `{${keys.map(k => `${JSON.stringify(k)}:${stableStringify(obj[k])}`).join(',')}}`;
+  return JSON.stringify(normalizeForHash(value));
 }
 
 export function hashKey(key: unknown): string {
@@ -433,7 +529,7 @@ export async function writeCache(dir: string, key: unknown, value: unknown): Pro
   const file = path.join(dir, `${hashKey(key)}.json`);
   const tmp = `${file}.tmp`;
   await fs.writeFile(tmp, JSON.stringify(value, null, 2), 'utf8');
-  await fs.rename(tmp, file); // atomic
+  await fs.rename(tmp, file); // atomic on same fs
 }
 ```
 
@@ -443,28 +539,52 @@ export async function writeCache(dir: string, key: unknown, value: unknown): Pro
 npm test -- cache
 ```
 
-Expected: 4 passed.
+Expected: 7 passed.
 
 - [ ] **Step 5: Commit**
 
 ```bash
 git add scripts/lib/cache.ts tests/unit/cache.test.ts
-git commit -m "feat(scripts): deterministic hash-based cache module"
+git commit -m "feat(scripts): hardened cache module (NFC + undefined/NaN + atomic test)"
 ```
 
 ---
 
 ### Task 7: Generation config
 
-**Files:** Create `scripts/config.ts`.
+**Files:** Create `scripts/config.ts`. Create `scripts/with-env.sh`.
 
-- [ ] **Step 1: Create config**
+- [ ] **Step 1: Create `scripts/with-env.sh` (wraps scripts with `.env.local` loading)**
+
+```bash
+#!/usr/bin/env bash
+# scripts/with-env.sh — load .env.local into the current shell, then exec the given command.
+# Uso: bash scripts/with-env.sh npm run generate:content -- --block 1
+# Por qué: evita teclear `set -a; source .env.local; set +a` cada vez y previene que la
+# API key quede en el historial del shell.
+set -a
+# shellcheck disable=SC1091
+[ -f .env.local ] && source .env.local
+set +a
+exec "$@"
+```
+
+Make executable:
+
+```bash
+chmod +x scripts/with-env.sh
+```
+
+- [ ] **Step 2: Create config**
 
 ```ts
 // scripts/config.ts
 import path from 'node:path';
+import type { ExerciseType } from './lib/zod-schemas';
 
-export const PROJECT_ROOT = path.resolve(__dirname, '..');
+// Resolves project root reliably under both ESM and tsx (which breaks __dirname).
+// Always run scripts via `bash scripts/with-env.sh tsx ...` from project root.
+export const PROJECT_ROOT = process.cwd();
 
 export const CACHE_DIR  = path.join(PROJECT_ROOT, 'scripts', '.cache');
 export const LLM_CACHE  = path.join(CACHE_DIR, 'llm');
@@ -482,33 +602,61 @@ export const TTS_URL      = 'https://api.minimax.io/v1/t2a_v2';
 export const LLM_CONCURRENCY = 8;
 export const TTS_CONCURRENCY = 4;
 
-// Voices — placeholders, confirm with MiniMax API listing on first run.
+// Voices — placeholders, confirmed via /v1/get_voice in Task 19.
 // Each variant has a female + male voice. Default to female unless overridden.
-export const VOICES = {
+export const VOICES: Record<'br' | 'pt', Record<'f' | 'm', string>> = {
   br: { f: 'Portuguese_Brazil_FemaleA', m: 'Portuguese_Brazil_MaleA' },
   pt: { f: 'Portuguese_Portugal_FemaleA', m: 'Portuguese_Portugal_MaleA' },
-} as const;
+};
 
 export const DEFAULT_VOICE: 'f' | 'm' = 'f';
 
-// How many exercises to ask the LLM to produce per (lesson × type).
-// Tweak per block size; conservative defaults.
-export const EXERCISES_PER_LESSON: Record<string, number> = {
+// Mapping de ExerciseType → cuántos pedir al LLM por lección.
+// Tipeado contra ExerciseType para que TS atrape typos. `null` = tipo diferido a Plan #2.
+// Iteración de ExerciseType tipada exhaustivamente; añadir un tipo nuevo sin entrada → error.
+export const EXERCISES_PER_LESSON: Record<ExerciseType, number | null> = {
   flashcard: 15,
   fill_blank: 10,
   listening: 5,
   translation_es_pt: 8,
   translation_pt_es: 8,
   verb_preposition: 5,
-  sentence_construction: 5,
-  chunk: 5,
+  sentence_construction: null, // diferido a Plan #2
+  chunk: null,                 // diferido a Plan #2
 };
 
-// Bumping this invalidates LLM cache for that type (e.g. if prompt structure changes meaningfully).
-export const SCHEMA_VERSION = 1;
+// Mapping de ExerciseType → nombre de archivo de prompt. `null` = no generar.
+export const TYPE_TO_TEMPLATE: Record<ExerciseType, string | null> = {
+  flashcard: 'flashcard',
+  fill_blank: 'fill_blank',
+  listening: 'listening',
+  translation_es_pt: 'translation',
+  translation_pt_es: 'translation',
+  verb_preposition: 'verb_preposition',
+  sentence_construction: null,
+  chunk: null,
+};
+
+// Costo estimado (USD) por 1k tokens para el modelo LLM actual.
+// Usado por --dry-run para imprimir "Will cost ~$X".
+export const COST_USD_PER_1K_INPUT  = 0.0002; // placeholder; calibrar con billing real
+export const COST_USD_PER_1K_OUTPUT = 0.0006;
+
+// SCHEMA_VERSION por tipo de exercise. Bumpear un tipo invalida SOLO su cache.
+// (Una bump global es unsafe: cambios reales son por-tipo.)
+export const SCHEMA_VERSION: Record<ExerciseType, number> = {
+  flashcard: 1,
+  fill_blank: 1,
+  listening: 1,
+  translation_es_pt: 1,
+  translation_pt_es: 1,
+  verb_preposition: 1,
+  sentence_construction: 1,
+  chunk: 1,
+};
 ```
 
-- [ ] **Step 2: Add `MINIMAX_API_KEY` accessor (fails loudly if missing)**
+- [ ] **Step 3: Add `MINIMAX_API_KEY` accessor (fails loudly if missing)**
 
 Append to `scripts/config.ts`:
 
@@ -516,17 +664,20 @@ Append to `scripts/config.ts`:
 export function requireApiKey(): string {
   const key = process.env.MINIMAX_API_KEY;
   if (!key) {
-    throw new Error('MINIMAX_API_KEY is not set. Add it to .env.local.');
+    throw new Error(
+      'MINIMAX_API_KEY is not set. ' +
+      'Add it to .env.local and run scripts via `bash scripts/with-env.sh tsx ...`'
+    );
   }
   return key;
 }
 ```
 
-- [ ] **Step 3: Commit**
+- [ ] **Step 4: Commit**
 
 ```bash
-git add scripts/config.ts
-git commit -m "feat(scripts): config module (paths, models, concurrency, voices)"
+git add scripts/config.ts scripts/with-env.sh
+git commit -m "feat(scripts): typed config + with-env.sh wrapper for safe env loading"
 ```
 
 ---
@@ -542,18 +693,28 @@ git commit -m "feat(scripts): config module (paths, models, concurrency, voices)
 ```ts
 // tests/unit/zod-schemas.test.ts
 import { describe, it, expect } from 'vitest';
-import { ExerciseSchema, FlashcardDataSchema } from '@/scripts/lib/zod-schemas';
+import {
+  ExerciseSchema,
+  FlashcardDataSchema,
+  GeneratedExerciseSchema,
+} from '@/scripts/lib/zod-schemas';
+
+const baseCommon = {
+  id: 'a1b2c3d4',
+  blockId: 1,
+  lessonId: 'b1-l1',
+  difficulty: 1 as const,
+  concepts: ['b1-fonema-vogais'],
+  tags: [],
+  contentHash: 'x'.repeat(64),
+  audio: { br: { hash: 'h1', voice: 'v1' }, pt: { hash: 'h2', voice: 'v2' } },
+};
 
 describe('zod schemas', () => {
   it('valid flashcard exercise parses', () => {
     const ok = ExerciseSchema.safeParse({
-      id: 'b1-fc-001',
-      blockId: 1,
-      lessonId: 'b1-l1-alfabeto',
+      ...baseCommon,
       type: 'flashcard',
-      difficulty: 1,
-      concepts: ['b1-fonema-vogais'],
-      tags: [],
       data: { front: 'a', back: 'a (vogal aberta)', example: 'casa' },
     });
     expect(ok.success).toBe(true);
@@ -561,8 +722,7 @@ describe('zod schemas', () => {
 
   it('rejects exercise with unknown type', () => {
     const bad = ExerciseSchema.safeParse({
-      id: 'x', blockId: 1, lessonId: 'l', type: 'mystery',
-      difficulty: 1, concepts: [], tags: [], data: {},
+      ...baseCommon, type: 'mystery', data: {},
     });
     expect(bad.success).toBe(false);
   });
@@ -572,19 +732,79 @@ describe('zod schemas', () => {
     expect(bad.success).toBe(false);
   });
 
-  it('allows ptOverrides partial', () => {
-    const ok = ExerciseSchema.safeParse({
-      id: 'b1-fc-002',
-      blockId: 1,
-      lessonId: 'b1-l1',
+  it('type/data coupling: a listening with flashcard data is REJECTED', () => {
+    const bad = ExerciseSchema.safeParse({
+      ...baseCommon,
+      type: 'listening',
+      data: { front: 'a', back: 'b' }, // wrong shape
+    });
+    expect(bad.success).toBe(false);
+  });
+
+  it('type/data coupling: a flashcard with listening data is REJECTED', () => {
+    const bad = ExerciseSchema.safeParse({
+      ...baseCommon,
       type: 'flashcard',
-      difficulty: 1,
-      concepts: [],
-      tags: [],
-      data: { front: 'autocarro', back: 'ônibus' },
+      data: { audioText: 'x', question: 'q', answer: 'a' },
+    });
+    expect(bad.success).toBe(false);
+  });
+
+  it('ptOverrides must match parent type (cannot mix fields from another type)', () => {
+    // flashcard parent with chunk-typed ptOverrides
+    const bad = ExerciseSchema.safeParse({
+      ...baseCommon,
+      type: 'flashcard',
+      data: { front: 'a', back: 'b' },
+      ptOverrides: { chunk: 'x', meaning: 'y', examples: [{ sentence: 's' }] },
+    });
+    expect(bad.success).toBe(false);
+  });
+
+  it('ptOverrides with valid flashcard fields parses', () => {
+    const ok = ExerciseSchema.safeParse({
+      ...baseCommon,
+      type: 'flashcard',
+      data: { front: 'ônibus', back: 'ônibus' },
       ptOverrides: { back: 'autocarro' },
     });
     expect(ok.success).toBe(true);
+  });
+
+  it('parses one valid instance of EACH exercise type', () => {
+    const samples = [
+      { type: 'fill_blank' as const, data: { sentence: 'Eu ___ café.', blanks: [{ position: 0, answer: 'tomo' }] } },
+      { type: 'listening' as const, data: { audioText: 'Bom dia.', question: 'q', options: ['a', 'b'], answer: 'a' } },
+      { type: 'translation_es_pt' as const, data: { source: 'Hola', target: 'Olá' } },
+      { type: 'translation_pt_es' as const, data: { source: 'Olá', target: 'Hola' } },
+      { type: 'verb_preposition' as const, data: { verb: 'gostar', sentence: 'Gosto ___ café.', options: ['de', 'a'], answer: 'de' } },
+      { type: 'sentence_construction' as const, data: { words: ['eu', 'gosto', 'café'], answer: ['eu', 'gosto', 'café'] } },
+      { type: 'chunk' as const, data: { chunk: 'tomar uma decisão', meaning: 'decidir', examples: [{ sentence: 'Vou tomar uma decisão.' }] } },
+    ];
+    for (const s of samples) {
+      const r = ExerciseSchema.safeParse({ ...baseCommon, ...s });
+      expect(r.success, `failed for type ${s.type}: ${r.success ? '' : JSON.stringify(r.error.issues[0])}`).toBe(true);
+    }
+  });
+
+  it('GeneratedExerciseSchema requires audio and contentHash', () => {
+    const r = GeneratedExerciseSchema.safeParse({
+      ...baseCommon,
+      type: 'flashcard',
+      data: { front: 'a', back: 'b' },
+    });
+    expect(r.success).toBe(true);
+  });
+
+  it('GeneratedExerciseSchema rejects when audio is missing', () => {
+    const { audio, ...withoutAudio } = baseCommon;
+    void audio;
+    const r = GeneratedExerciseSchema.safeParse({
+      ...withoutAudio,
+      type: 'flashcard',
+      data: { front: 'a', back: 'b' },
+    });
+    expect(r.success).toBe(false);
   });
 });
 ```
@@ -603,6 +823,9 @@ Expected: FAIL — module not found.
 // scripts/lib/zod-schemas.ts
 import { z } from 'zod';
 
+// ─── ExerciseType ──────────────────────────────────────────────
+// Tipos activos en MVP1. sentence_construction y chunk diferidos a Plan #2
+// pero presentes en el enum para que el data model no requiera migración.
 export const ExerciseTypeEnum = z.enum([
   'flashcard',
   'fill_blank',
@@ -615,13 +838,18 @@ export const ExerciseTypeEnum = z.enum([
 ]);
 export type ExerciseType = z.infer<typeof ExerciseTypeEnum>;
 
-export const FlashcardDataSchema = z.object({
+// ─── Per-type data shapes ──────────────────────────────────────
+const AudioRefSchema = z.object({
+  br: z.object({ hash: z.string().min(1), voice: z.string().min(1) }),
+  pt: z.object({ hash: z.string().min(1), voice: z.string().min(1) }),
+});
+
+const FlashcardData = z.object({
   front: z.string().min(1),
   back: z.string().min(1),
   example: z.string().optional(),
 });
-
-export const FillBlankDataSchema = z.object({
+const FillBlankData = z.object({
   sentence: z.string().min(1),
   blanks: z.array(z.object({
     position: z.number().int().nonnegative(),
@@ -629,78 +857,141 @@ export const FillBlankDataSchema = z.object({
     alternatives: z.array(z.string()).optional(),
   })).min(1),
 });
-
-export const ListeningDataSchema = z.object({
+const ListeningData = z.object({
   audioText: z.string().min(1),
   question: z.string().min(1),
   options: z.array(z.string()).min(2).optional(),
   answer: z.string().min(1),
 });
-
-export const TranslationDataSchema = z.object({
+const TranslationData = z.object({
   source: z.string().min(1),
   target: z.string().min(1),
   acceptedAlternatives: z.array(z.string()).optional(),
 });
-
-export const VerbPrepositionDataSchema = z.object({
+const VerbPrepositionData = z.object({
   verb: z.string().min(1),
   sentence: z.string().min(1),
   options: z.array(z.string()).min(2),
   answer: z.string().min(1),
 });
-
-export const SentenceConstructionDataSchema = z.object({
+const SentenceConstructionData = z.object({
   words: z.array(z.string()).min(2),
   answer: z.array(z.string()).min(2),
   translation: z.string().optional(),
 });
-
-export const ChunkDataSchema = z.object({
+const ChunkData = z.object({
   chunk: z.string().min(1),
   meaning: z.string().min(1),
-  examples: z.array(z.object({
-    sentence: z.string().min(1),
-    gloss: z.string().optional(),
-  })).min(1),
+  examples: z.array(z.object({ sentence: z.string().min(1), gloss: z.string().optional() })).min(1),
 });
 
-export const ExerciseDataSchema = z.union([
-  FlashcardDataSchema,
-  FillBlankDataSchema,
-  ListeningDataSchema,
-  TranslationDataSchema,
-  VerbPrepositionDataSchema,
-  SentenceConstructionDataSchema,
-  ChunkDataSchema,
-]);
+// Map para resolver el schema de data por tipo. Útil en audio-collector y
+// generate-audio (re-validar tras spread de ptOverrides).
+export const ExerciseDataByTypeSchema = {
+  flashcard: FlashcardData,
+  fill_blank: FillBlankData,
+  listening: ListeningData,
+  translation_es_pt: TranslationData,
+  translation_pt_es: TranslationData,
+  verb_preposition: VerbPrepositionData,
+  sentence_construction: SentenceConstructionData,
+  chunk: ChunkData,
+} as const;
 
-export const ExerciseSchema = z.object({
+// ─── ptOverrides por tipo (todos los campos opcionales) ────────
+const FlashcardOverride = FlashcardData.partial();
+const FillBlankOverride = FillBlankData.partial();
+const ListeningOverride = ListeningData.partial();
+const TranslationOverride = TranslationData.partial();
+const VerbPrepositionOverride = VerbPrepositionData.partial();
+const SentenceConstructionOverride = SentenceConstructionData.partial();
+const ChunkOverride = ChunkData.partial();
+
+// ─── Exercise: discriminated union sobre `type` ────────────────
+// CRÍTICO: el data y ptOverrides son variante-específicos. Cruzar tipos
+// (ej. ptOverrides.audioText en un flashcard) no parsea.
+const BaseExercise = z.object({
   id: z.string().min(1),
   blockId: z.number().int().positive(),
   lessonId: z.string().min(1),
-  type: ExerciseTypeEnum,
   difficulty: z.union([z.literal(1), z.literal(2), z.literal(3)]),
   concepts: z.array(z.string()),
   tags: z.array(z.string()),
-  contentHash: z.string().optional(), // filled after generation
-  data: ExerciseDataSchema,
-  ptOverrides: ExerciseDataSchema.partial().optional(),
+  contentHash: z.string().optional(),
   esContrast: z.string().optional(),
-  audio: z.object({
-    br: z.object({ hash: z.string(), voice: z.string() }),
-    pt: z.object({ hash: z.string(), voice: z.string() }),
-  }).optional(),
+  audio: AudioRefSchema.optional(),
 });
+
+const FlashcardEx = BaseExercise.extend({
+  type: z.literal('flashcard'),
+  data: FlashcardData,
+  ptOverrides: FlashcardOverride.optional(),
+});
+const FillBlankEx = BaseExercise.extend({
+  type: z.literal('fill_blank'),
+  data: FillBlankData,
+  ptOverrides: FillBlankOverride.optional(),
+});
+const ListeningEx = BaseExercise.extend({
+  type: z.literal('listening'),
+  data: ListeningData,
+  ptOverrides: ListeningOverride.optional(),
+});
+const TranslationEsPtEx = BaseExercise.extend({
+  type: z.literal('translation_es_pt'),
+  data: TranslationData,
+  ptOverrides: TranslationOverride.optional(),
+});
+const TranslationPtEsEx = BaseExercise.extend({
+  type: z.literal('translation_pt_es'),
+  data: TranslationData,
+  ptOverrides: TranslationOverride.optional(),
+});
+const VerbPrepositionEx = BaseExercise.extend({
+  type: z.literal('verb_preposition'),
+  data: VerbPrepositionData,
+  ptOverrides: VerbPrepositionOverride.optional(),
+});
+const SentenceConstructionEx = BaseExercise.extend({
+  type: z.literal('sentence_construction'),
+  data: SentenceConstructionData,
+  ptOverrides: SentenceConstructionOverride.optional(),
+});
+const ChunkEx = BaseExercise.extend({
+  type: z.literal('chunk'),
+  data: ChunkData,
+  ptOverrides: ChunkOverride.optional(),
+});
+
+export const ExerciseSchema = z.discriminatedUnion('type', [
+  FlashcardEx, FillBlankEx, ListeningEx,
+  TranslationEsPtEx, TranslationPtEsEx,
+  VerbPrepositionEx, SentenceConstructionEx, ChunkEx,
+]);
 export type Exercise = z.infer<typeof ExerciseSchema>;
 
-// LLM batch output: an array of exercises (the LLM produces N at a time per type).
-export const ExerciseBatchSchema = z.array(ExerciseSchema.omit({
-  id: true, blockId: true, lessonId: true, contentHash: true, audio: true,
-}).extend({
-  // The LLM returns these fields; the script attaches id/blockId/lessonId/contentHash.
-  type: ExerciseTypeEnum,
-}));
+// Estado "generado y completo" — invariante al disco. Plan #1 debe commitear
+// SOLO archivos que satisfagan esta invariante. validate-content la impone.
+export const GeneratedExerciseSchema = ExerciseSchema.extend({
+  contentHash: z.string().min(1),
+  audio: AudioRefSchema,
+});
+export type GeneratedExercise = z.infer<typeof GeneratedExerciseSchema>;
+
+// LLM batch output: el LLM produce N items, omitimos los campos que el
+// orquestador adjunta (id, blockId, lessonId, contentHash, audio).
+// El type discrimina el data shape.
+const LlmItemSchema = z.discriminatedUnion('type', [
+  FlashcardEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
+  FillBlankEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
+  ListeningEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
+  TranslationEsPtEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
+  TranslationPtEsEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
+  VerbPrepositionEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
+  SentenceConstructionEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
+  ChunkEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
+]);
+export const ExerciseBatchSchema = z.array(LlmItemSchema);
 export type ExerciseBatchItem = z.infer<typeof ExerciseBatchSchema>[number];
 ```
 
@@ -710,22 +1001,72 @@ export type ExerciseBatchItem = z.infer<typeof ExerciseBatchSchema>[number];
 npm test -- zod-schemas
 ```
 
-Expected: 4 passed.
+Expected: 9 passed.
 
 - [ ] **Step 5: Commit**
 
 ```bash
 git add scripts/lib/zod-schemas.ts tests/unit/zod-schemas.test.ts
-git commit -m "feat(scripts): Zod schemas for Exercise + variants"
+git commit -m "feat(scripts): discriminated-union Exercise schemas + GeneratedExercise invariant"
 ```
 
 ---
 
-### Task 9: MiniMax LLM wrapper
+### Task 9: MiniMax LLM wrapper (with hardened JSON extraction + refusal detection + retry/backoff)
 
-**Files:** Create `scripts/lib/minimax-llm.ts`.
+**Files:**
+- Create: `scripts/lib/minimax-llm.ts`
+- Test: `tests/unit/minimax-llm.test.ts`
 
-- [ ] **Step 1: Implement wrapper**
+- [ ] **Step 1: Write the failing test for `extractJson`**
+
+```ts
+// tests/unit/minimax-llm.test.ts
+import { describe, it, expect } from 'vitest';
+import { extractJson } from '@/scripts/lib/minimax-llm';
+
+describe('extractJson', () => {
+  it('parses bare JSON', () => {
+    expect(extractJson('[{"a":1}]')).toEqual([{ a: 1 }]);
+  });
+
+  it('strips leading and trailing markdown fences', () => {
+    expect(extractJson('```json\n[{"a":1}]\n```')).toEqual([{ a: 1 }]);
+  });
+
+  it('finds the JSON array even with leading prose', () => {
+    expect(extractJson('Sure, here are the items: [{"a":1}]')).toEqual([{ a: 1 }]);
+  });
+
+  it('finds the JSON object even with surrounding text', () => {
+    expect(extractJson('Result: {"x":1} done.')).toEqual({ x: 1 });
+  });
+
+  it('repairs trailing commas in arrays', () => {
+    expect(extractJson('[{"a":1},{"b":2},]')).toEqual([{ a: 1 }, { b: 2 }]);
+  });
+
+  it('repairs trailing commas in objects', () => {
+    expect(extractJson('{"a":1,"b":2,}')).toEqual({ a: 1, b: 2 });
+  });
+
+  it('throws on no JSON found', () => {
+    expect(() => extractJson('No json here at all')).toThrow(/No JSON found/);
+  });
+
+  it('throws on truly unparseable JSON (after repair)', () => {
+    expect(() => extractJson('[{"a": ')).toThrow();
+  });
+});
+```
+
+- [ ] **Step 2: Run to fail**
+
+```bash
+npm test -- minimax-llm
+```
+
+- [ ] **Step 3: Implement wrapper**
 
 ```ts
 // scripts/lib/minimax-llm.ts
@@ -738,6 +1079,7 @@ function client(): Anthropic {
     _client = new Anthropic({
       baseURL: LLM_BASE_URL,
       apiKey: requireApiKey(),
+      timeout: 60_000, // 60s per request
     });
   }
   return _client;
@@ -750,58 +1092,290 @@ export interface LlmCallParams {
   temperature?: number;
 }
 
-export async function callLlm(params: LlmCallParams): Promise<string> {
-  const res = await client().messages.create({
+export interface LlmCallResult {
+  text: string;
+  inputTokens: number;
+  outputTokens: number;
+}
+
+export class TruncationError extends Error {
+  constructor() { super('LLM response truncated (stop_reason=max_tokens). Reduce batch size.'); }
+}
+export class RefusalError extends Error {
+  constructor(msg: string) { super(`LLM refused: ${msg.slice(0, 200)}`); }
+}
+export class EmptyResponseError extends Error {
+  constructor(blocks: unknown[]) { super(`LLM returned no text blocks. Got: ${JSON.stringify(blocks).slice(0, 200)}`); }
+}
+
+const REFUSAL_REGEX = /cannot|I'm unable|lo siento|desculpe.*não/i;
+
+export async function callLlm(params: LlmCallParams): Promise<LlmCallResult> {
+  const res = await withBackoff(() => client().messages.create({
     model: LLM_MODEL,
     max_tokens: params.maxTokens ?? 4000,
     temperature: params.temperature ?? 0.4,
     system: params.system,
     messages: [{ role: 'user', content: params.user }],
-  });
-  // Concatenate all text blocks, ignore thinking blocks.
+  }));
+
+  if (res.stop_reason === 'max_tokens') {
+    throw new TruncationError();
+  }
+
   const parts: string[] = [];
   for (const block of res.content) {
     if (block.type === 'text') parts.push(block.text);
   }
-  return parts.join('\n').trim();
+  if (parts.length === 0) {
+    throw new EmptyResponseError(res.content);
+  }
+  const text = parts.join('\n').trim();
+
+  if (REFUSAL_REGEX.test(text)) {
+    throw new RefusalError(text);
+  }
+
+  return {
+    text,
+    inputTokens: res.usage.input_tokens,
+    outputTokens: res.usage.output_tokens,
+  };
 }
 
-// Used by prompt-runner; exported for testing.
-export function extractJson(raw: string): unknown {
-  // Strip markdown code fences if present.
-  const stripped = raw.replace(/^```(?:json)?\n/, '').replace(/\n```$/, '').trim();
-  // Find first '[' or '{' to be lenient about surrounding prose.
-  const i = stripped.search(/[\[{]/);
-  const j = Math.max(stripped.lastIndexOf(']'), stripped.lastIndexOf('}'));
-  if (i === -1 || j === -1 || j < i) {
-    throw new Error(`No JSON found in LLM response. Raw: ${raw.slice(0, 200)}`);
+// Retry con backoff exponencial y jitter. Reintenta 429 (parseando Retry-After),
+// 5xx, y timeouts. NO reintenta TruncationError, RefusalError, 4xx con model_not_found.
+async function withBackoff<T>(fn: () => Promise<T>, attempts = 5): Promise<T> {
+  let lastErr: unknown;
+  for (let i = 0; i < attempts; i++) {
+    try {
+      return await fn();
+    } catch (err: any) {
+      lastErr = err;
+      const status = err?.status ?? err?.statusCode;
+      if (status === 400 && /model_not_found|deprecated/i.test(String(err?.error?.type ?? err?.message ?? ''))) {
+        throw err; // no retry
+      }
+      if (status && status >= 400 && status < 500 && status !== 429) {
+        throw err; // 4xx (except 429) → fail fast
+      }
+      if (i === attempts - 1) break;
+      const retryAfter = err?.headers?.['retry-after'] ? Number(err.headers['retry-after']) * 1000 : 0;
+      const base = 1000 * Math.pow(2, i);
+      const jitter = Math.random() * 500;
+      const delay = Math.max(retryAfter, base + jitter);
+      await new Promise(r => setTimeout(r, Math.min(delay, 30_000)));
+    }
   }
-  return JSON.parse(stripped.slice(i, j + 1));
+  throw lastErr;
+}
+
+// Extrae JSON de respuestas que pueden traer fences, prosa circundante, comas
+// trailing, etc. Estrategia: strip fences, encontrar el primer [ o {, parsear
+// substring, reparar trailing-comma con reintento, fallar con mensaje útil.
+export function extractJson(raw: string): unknown {
+  const stripped = raw.replace(/^```(?:json)?\s*\n/, '').replace(/\n```\s*$/, '').trim();
+  const i = stripped.search(/[\[{]/);
+  if (i === -1) {
+    throw new Error(`No JSON found in LLM response. Raw start: ${raw.slice(0, 200)}`);
+  }
+  // Walk brackets to find the matching close instead of relying on lastIndexOf.
+  const substr = stripped.slice(i);
+  const end = findBalancedEnd(substr);
+  if (end === -1) {
+    throw new Error(`Unbalanced JSON delimiters. Raw: ${raw.slice(0, 200)}`);
+  }
+  let candidate = substr.slice(0, end + 1);
+  try {
+    return JSON.parse(candidate);
+  } catch (firstErr) {
+    // Intento 1: strip trailing commas (LLMs las emiten constantemente).
+    const repaired = candidate.replace(/,(\s*[\]}])/g, '$1');
+    try {
+      return JSON.parse(repaired);
+    } catch (secondErr) {
+      throw new Error(
+        `Failed to parse JSON after repair. Original: ${firstErr instanceof Error ? firstErr.message : firstErr}. ` +
+        `Repaired: ${secondErr instanceof Error ? secondErr.message : secondErr}. ` +
+        `Raw start: ${raw.slice(0, 200)}`
+      );
+    }
+  }
+}
+
+function findBalancedEnd(s: string): number {
+  const opener = s[0];
+  const closer = opener === '[' ? ']' : '}';
+  let depth = 0;
+  let inString = false;
+  let escape = false;
+  for (let i = 0; i < s.length; i++) {
+    const c = s[i];
+    if (escape) { escape = false; continue; }
+    if (c === '\\') { escape = true; continue; }
+    if (c === '"') { inString = !inString; continue; }
+    if (inString) continue;
+    if (c === opener) depth++;
+    else if (c === closer) {
+      depth--;
+      if (depth === 0) return i;
+    }
+  }
+  return -1;
 }
 ```
 
-- [ ] **Step 2: Smoke test it exists**
+- [ ] **Step 4: Run test to pass**
+
+```bash
+npm test -- minimax-llm
+```
+
+Expected: 8 passed.
+
+- [ ] **Step 5: Smoke typecheck**
 
 ```bash
 npx tsc --noEmit
 ```
 
-Expected: No errors.
-
-- [ ] **Step 3: Commit**
+- [ ] **Step 6: Commit**
 
 ```bash
-git add scripts/lib/minimax-llm.ts
-git commit -m "feat(scripts): MiniMax LLM wrapper (SDK Anthropic compatible)"
+git add scripts/lib/minimax-llm.ts tests/unit/minimax-llm.test.ts
+git commit -m "feat(scripts): MiniMax LLM wrapper with balanced JSON extraction + refusal detection + backoff"
 ```
 
 ---
 
-### Task 10: MiniMax TTS wrapper (TDD shape, integration deferred)
+### Task 10: MiniMax TTS wrapper (size check + single-flight + retry/backoff)
 
-**Files:** Create `scripts/lib/minimax-tts.ts`.
+**Files:**
+- Create: `scripts/lib/minimax-tts.ts`
+- Test: `tests/unit/minimax-tts.test.ts`
 
-- [ ] **Step 1: Implement**
+- [ ] **Step 1: Write the failing test**
+
+```ts
+// tests/unit/minimax-tts.test.ts
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import fs from 'node:fs';
+import path from 'node:path';
+import os from 'node:os';
+
+vi.mock('@/scripts/config', async (orig) => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'tts-test-'));
+  return {
+    ...(await orig<any>()),
+    TTS_OUTPUT: tmp,
+    requireApiKey: () => 'test-key',
+  };
+});
+
+import { generateTts, isValidMp3, _resetInflight } from '@/scripts/lib/minimax-tts';
+
+const REAL_FETCH = globalThis.fetch;
+
+beforeEach(() => {
+  _resetInflight();
+  vi.restoreAllMocks();
+});
+afterEach(() => {
+  globalThis.fetch = REAL_FETCH;
+});
+
+function mockFetchOnce(responder: (url: string, init: any) => Promise<Response> | Response) {
+  globalThis.fetch = vi.fn(((url: any, init: any) => responder(url, init)) as any) as any;
+}
+
+function mp3Hex(): string {
+  // 64KB of zeros, prefixed with ID3v2 magic (a valid MP3 can start with ID3).
+  // We just need enough bytes that isValidMp3() considers it a real MP3.
+  const id3 = Buffer.from('ID3', 'utf8');
+  const body = Buffer.alloc(64 * 1024, 0xAB);
+  return Buffer.concat([id3, body]).toString('hex');
+}
+
+describe('generateTts', () => {
+  it('throws on non-200 response', async () => {
+    mockFetchOnce(async () => new Response('rate limited', { status: 429 }));
+    await expect(generateTts({ text: 'oi', voiceId: 'v', variant: 'br' }))
+      .rejects.toThrow(/TTS failed \(429\)/);
+  });
+
+  it('throws when data.audio is missing', async () => {
+    mockFetchOnce(async () => new Response(JSON.stringify({ data: {} }), { status: 200 }));
+    await expect(generateTts({ text: 'oi', voiceId: 'v', variant: 'br' }))
+      .rejects.toThrow(/TTS missing audio/);
+  });
+
+  it('throws when decoded bytes are too small or not a valid MP3', async () => {
+    mockFetchOnce(async () => new Response(JSON.stringify({ data: { audio: '00' } }), { status: 200 }));
+    await expect(generateTts({ text: 'oi', voiceId: 'v', variant: 'br' }))
+      .rejects.toThrow(/invalid MP3/);
+  });
+
+  it('writes a valid MP3 to disk and reports cached: false', async () => {
+    mockFetchOnce(async () => new Response(JSON.stringify({ data: { audio: mp3Hex() } }), { status: 200 }));
+    const r = await generateTts({ text: 'oi', voiceId: 'v', variant: 'br' });
+    expect(r.cached).toBe(false);
+    expect(fs.existsSync(r.filePath)).toBe(true);
+    expect(fs.statSync(r.filePath).size).toBeGreaterThan(1024);
+  });
+
+  it('second call with same request returns cached: true and does not call fetch', async () => {
+    let calls = 0;
+    mockFetchOnce(async () => {
+      calls++;
+      return new Response(JSON.stringify({ data: { audio: mp3Hex() } }), { status: 200 });
+    });
+    const a = await generateTts({ text: 'cached-text', voiceId: 'v', variant: 'pt' });
+    const b = await generateTts({ text: 'cached-text', voiceId: 'v', variant: 'pt' });
+    expect(a.cached).toBe(false);
+    expect(b.cached).toBe(true);
+    expect(calls).toBe(1);
+  });
+
+  it('single-flight: concurrent calls for the same hash make only one fetch', async () => {
+    let calls = 0;
+    mockFetchOnce(async () => {
+      calls++;
+      await new Promise(r => setTimeout(r, 50));
+      return new Response(JSON.stringify({ data: { audio: mp3Hex() } }), { status: 200 });
+    });
+    const req = { text: 'inflight', voiceId: 'v', variant: 'br' as const };
+    const [a, b] = await Promise.all([generateTts(req), generateTts(req)]);
+    expect(calls).toBe(1);
+    expect(a.hash).toBe(b.hash);
+  });
+});
+
+describe('isValidMp3', () => {
+  it('accepts ID3 header', () => {
+    const buf = Buffer.concat([Buffer.from('ID3', 'utf8'), Buffer.alloc(100, 0)]);
+    expect(isValidMp3(buf)).toBe(true);
+  });
+  it('accepts MPEG frame sync (0xFF 0xFB)', () => {
+    const buf = Buffer.concat([Buffer.from([0xFF, 0xFB, 0x90]), Buffer.alloc(100, 0)]);
+    expect(isValidMp3(buf)).toBe(true);
+  });
+  it('rejects too-small buffer', () => {
+    expect(isValidMp3(Buffer.alloc(10))).toBe(false);
+  });
+  it('rejects wrong magic', () => {
+    const buf = Buffer.alloc(2048, 0xAB);
+    expect(isValidMp3(buf)).toBe(false);
+  });
+});
+```
+
+- [ ] **Step 2: Run to fail**
+
+```bash
+npm test -- minimax-tts
+```
+
+- [ ] **Step 3: Implement**
 
 ```ts
 // scripts/lib/minimax-tts.ts
@@ -833,16 +1407,78 @@ export function ttsHash(req: TtsRequest): string {
   });
 }
 
+// language_boost: 'Portuguese' para BR, 'Portuguese (Portugal)' para PT.
+// Verificado en Task 19 probe — si MiniMax no acepta el string específico,
+// caemos al genérico y lo documentamos.
+function languageBoost(variant: 'br' | 'pt'): string {
+  return variant === 'pt' ? 'Portuguese (Portugal)' : 'Portuguese';
+}
+
+// Valida que un buffer es un MP3 razonable: >= 1KB y empieza con magic
+// ID3v2 ('ID3') o MPEG frame sync (0xFF 0xFB/0xFA/0xF3/0xF2).
+export function isValidMp3(buf: Buffer): boolean {
+  if (buf.length < 1024) return false;
+  if (buf[0] === 0x49 && buf[1] === 0x44 && buf[2] === 0x33) return true; // 'ID3'
+  if (buf[0] === 0xFF && (buf[1] & 0xE0) === 0xE0) return true; // MPEG sync
+  return false;
+}
+
+// Single-flight: si dos workers piden el mismo hash, solo uno hace fetch.
+// Evita race en el `.tmp + rename` cuando dos workers ven el archivo ausente.
+const inflight = new Map<string, Promise<TtsResult>>();
+export function _resetInflight(): void { inflight.clear(); }
+
+async function fetchAndStore(hash: string, filePath: string, body: object): Promise<TtsResult> {
+  const res = await withBackoff(() => fetch(TTS_URL, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${requireApiKey()}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+    signal: AbortSignal.timeout(30_000),
+  }));
+
+  if (!res.ok) {
+    throw new Error(`TTS failed (${res.status}): ${await res.text()}`);
+  }
+  const json = await res.json() as { data?: { audio?: string }; base_resp?: { status_msg?: string } };
+  const hex = json.data?.audio;
+  if (!hex) {
+    throw new Error(`TTS missing audio in response: ${JSON.stringify(json.base_resp ?? json).slice(0, 300)}`);
+  }
+
+  const buf = Buffer.from(hex, 'hex');
+  if (!isValidMp3(buf)) {
+    throw new Error(
+      `TTS returned invalid MP3 (length=${buf.length}, head=${buf.slice(0, 4).toString('hex')}). ` +
+      `Refusing to write ${filePath}.`
+    );
+  }
+
+  await fs.mkdir(TTS_OUTPUT, { recursive: true });
+  const tmp = `${filePath}.tmp`;
+  await fs.writeFile(tmp, buf);
+  await fs.rename(tmp, filePath);
+
+  return { hash, filePath, cached: false };
+}
+
 export async function generateTts(req: TtsRequest): Promise<TtsResult> {
   const hash = ttsHash(req);
   const filePath = path.join(TTS_OUTPUT, `${hash}.mp3`);
 
+  // Cache hit
   try {
     await fs.access(filePath);
     return { hash, filePath, cached: true };
   } catch {
-    // not cached — fall through to fetch
+    // not cached
   }
+
+  // Single-flight
+  const existing = inflight.get(hash);
+  if (existing) return existing;
 
   const body = {
     model: TTS_MODEL,
@@ -860,51 +1496,52 @@ export async function generateTts(req: TtsRequest): Promise<TtsResult> {
       format: 'mp3',
       channel: 1,
     },
-    language_boost: 'Portuguese',
+    language_boost: languageBoost(req.variant),
     output_format: 'hex',
   };
 
-  const res = await fetch(TTS_URL, {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${requireApiKey()}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(body),
-  });
+  const promise = fetchAndStore(hash, filePath, body)
+    .finally(() => inflight.delete(hash));
+  inflight.set(hash, promise);
+  return promise;
+}
 
-  if (!res.ok) {
-    throw new Error(`TTS failed (${res.status}): ${await res.text()}`);
+async function withBackoff<T>(fn: () => Promise<T>, attempts = 5): Promise<T> {
+  let lastErr: unknown;
+  for (let i = 0; i < attempts; i++) {
+    try {
+      return await fn();
+    } catch (err: any) {
+      lastErr = err;
+      const status = err?.status ?? (err?.message?.match(/TTS failed \((\d+)\)/)?.[1] | 0);
+      if (status && status >= 400 && status < 500 && status !== 429) {
+        throw err; // 4xx (except 429) → fail fast
+      }
+      if (i === attempts - 1) break;
+      const retryAfter = err?.headers?.['retry-after'] ? Number(err.headers['retry-after']) * 1000 : 0;
+      const base = 1000 * Math.pow(2, i);
+      const jitter = Math.random() * 500;
+      const delay = Math.max(retryAfter, base + jitter);
+      await new Promise(r => setTimeout(r, Math.min(delay, 30_000)));
+    }
   }
-  const json = await res.json() as { data?: { audio?: string }; base_resp?: { status_msg?: string } };
-  const hex = json.data?.audio;
-  if (!hex) {
-    throw new Error(`TTS missing audio in response: ${JSON.stringify(json.base_resp ?? json).slice(0, 300)}`);
-  }
-
-  const buf = Buffer.from(hex, 'hex');
-  await fs.mkdir(TTS_OUTPUT, { recursive: true });
-  const tmp = `${filePath}.tmp`;
-  await fs.writeFile(tmp, buf);
-  await fs.rename(tmp, filePath);
-
-  return { hash, filePath, cached: false };
+  throw lastErr;
 }
 ```
 
-- [ ] **Step 2: Typecheck**
+- [ ] **Step 4: Run test to pass**
 
 ```bash
-npx tsc --noEmit
+npm test -- minimax-tts
 ```
 
-Expected: No errors.
+Expected: 10 passed.
 
-- [ ] **Step 3: Commit**
+- [ ] **Step 5: Commit**
 
 ```bash
-git add scripts/lib/minimax-tts.ts
-git commit -m "feat(scripts): MiniMax TTS wrapper with hash cache"
+git add scripts/lib/minimax-tts.ts tests/unit/minimax-tts.test.ts
+git commit -m "feat(scripts): MiniMax TTS wrapper with isValidMp3 + single-flight + language_boost per variant"
 ```
 
 ---
@@ -923,7 +1560,7 @@ Reglas estrictas:
 - Devuelves ÚNICAMENTE JSON válido, sin texto adicional, sin markdown, sin explicaciones.
 - El JSON es un array con exactamente el número de items solicitado.
 - Cada item debe ser pedagógicamente útil (sin trivialidades, sin repeticiones cosméticas).
-- Cuando una palabra/frase difiere entre PT-BR y PT-PT, usa `data` para la versión brasileña y `ptOverrides` para los campos que cambian en europea. Si son idénticas, omite `ptOverrides`.
+- Cuando una palabra/frase difiere entre PT-BR y PT-PT, usa `data` para la versión brasileña y `ptOverrides` para los campos que cambian en europea. Si son idénticas, omite `ptOverrides`. `ptOverrides` debe tener solo campos que existan en `data` para el mismo `type` — campos de otro tipo no parsean.
 - Cuando la diferencia con el español sea fuente común de error, incluye `esContrast` con una pista breve (max 120 caracteres) que ayude al hispanohablante.
 - `concepts` debe contener únicamente IDs de la lista que te paso. No inventes IDs.
 - `difficulty`: 1 = principiante, 2 = intermedio, 3 = avanzado.
@@ -935,6 +1572,9 @@ Reglas estrictas:
 ```markdown
 <!-- scripts/prompts/flashcard.md -->
 Genera {{N}} flashcards para la lección "{{lessonName}}" del bloque "{{blockName}}" del curso de portugués.
+
+Vocabulario clave (pre-teaching — DEBE aparecer como flashcards, al menos {{N}} items):
+{{vocabKey}}
 
 Conceptos cubiertos en esta lección (úsalos en `concepts`):
 {{conceptsList}}
@@ -963,6 +1603,9 @@ Genera {{N}} ejercicios de "completar el espacio" para la lección "{{lessonName
 
 Conceptos: {{conceptsList}}
 
+Vocabulario clave (úsalo si es relevante para la lección):
+{{vocabKey}}
+
 Formato JSON por item:
 {
   "type": "fill_blank",
@@ -988,6 +1631,9 @@ Solo el array JSON.
 Genera {{N}} ejercicios de comprensión auditiva para la lección "{{lessonName}}" del bloque "{{blockName}}".
 
 Conceptos: {{conceptsList}}
+
+Vocabulario clave (úsalo en los `audioText`):
+{{vocabKey}}
 
 Cada ejercicio tendrá audio (generado por TTS desde `audioText`). El usuario escucha y responde.
 
@@ -1018,6 +1664,9 @@ Genera {{N}} ejercicios de traducción {{direction}} para la lección "{{lessonN
 
 Conceptos: {{conceptsList}}
 
+Vocabulario clave (úsalo en `source` o `target`):
+{{vocabKey}}
+
 Direction "es_pt": el usuario traduce de español a portugués.
 Direction "pt_es": el usuario traduce de portugués a español.
 
@@ -1042,6 +1691,9 @@ Solo el array JSON.
 Genera {{N}} ejercicios de régimen preposicional para la lección "{{lessonName}}" del bloque "{{blockName}}". Foco: errores comunes ES→PT (gostar DE, precisar DE, pensar EM, etc.).
 
 Conceptos: {{conceptsList}}
+
+Vocabulario clave (úsalo si es relevante para la lección):
+{{vocabKey}}
 
 Formato JSON por item:
 {
@@ -1071,7 +1723,7 @@ git commit -m "feat(scripts): prompt templates for 5 exercise types"
 
 ---
 
-### Task 12: Prompt runner (TDD)
+### Task 12: Prompt runner (TDD, with refused-batch handling + structured results)
 
 **Files:**
 - Create: `scripts/lib/prompt-runner.ts`
@@ -1081,8 +1733,17 @@ git commit -m "feat(scripts): prompt templates for 5 exercise types"
 
 ```ts
 // tests/unit/prompt-runner.test.ts
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import os from 'node:os';
 import { renderTemplate, runPromptGeneration } from '@/scripts/lib/prompt-runner';
+
+const VALID = '[{"type":"flashcard","difficulty":1,"concepts":[],"tags":[],"data":{"front":"x","back":"y"}}]';
+
+let tmp: string;
+beforeEach(async () => { tmp = await fs.mkdtemp(path.join(os.tmpdir(), 'pr-')); });
+afterEach(async () => { await fs.rm(tmp, { recursive: true, force: true }); });
 
 describe('renderTemplate', () => {
   it('replaces {{var}} placeholders', () => {
@@ -1090,35 +1751,74 @@ describe('renderTemplate', () => {
     expect(out).toBe('Hello Edu, you have 5 items.');
   });
 
-  it('replaces conceptsList from arrays', () => {
-    const out = renderTemplate('Concepts:\n{{conceptsList}}', { conceptsList: '- a\n- b' });
-    expect(out).toContain('- a');
+  it('throws on missing var', () => {
+    expect(() => renderTemplate('x {{missing}}', {})).toThrow(/missing/);
   });
 });
 
 describe('runPromptGeneration', () => {
   it('uses cache on second call (no LLM hit)', async () => {
-    const { hashKey } = await import('@/scripts/lib/cache');
-    void hashKey;
-    const callLlm = vi.fn().mockResolvedValue('[{"type":"flashcard","difficulty":1,"concepts":[],"tags":[],"data":{"front":"x","back":"y"}}]');
-    const tmp = await (await import('node:fs/promises')).mkdtemp('/tmp/pr-');
-    const params = {
-      cacheDir: tmp,
-      systemPrompt: 'sys',
-      template: 'gen {{N}}',
-      vars: { N: 1 },
-      schemaVersion: 1,
-      lessonId: 'l1',
-      type: 'flashcard' as const,
-      conceptIds: [],
-      callLlm,
-    };
+    const callLlm = vi.fn().mockResolvedValue(VALID);
+    const params = makeParams({ cacheDir: tmp, callLlm });
     const a = await runPromptGeneration(params);
     const b = await runPromptGeneration(params);
     expect(callLlm).toHaveBeenCalledTimes(1);
     expect(a).toEqual(b);
   });
+
+  it('returns rejected-batch result on partial Zod failure, not a throw', async () => {
+    // 1 valid + 1 invalid (missing required field)
+    const partial = JSON.stringify([
+      { type: 'flashcard', difficulty: 1, concepts: [], tags: [], data: { front: 'a', back: 'b' } },
+      { type: 'flashcard', difficulty: 1, concepts: [], tags: [], data: { front: 'c' } }, // invalid
+    ]);
+    const callLlm = vi.fn().mockResolvedValue(partial);
+    const result = await runPromptGeneration(makeParams({ cacheDir: tmp, callLlm }));
+    expect(result.accepted).toHaveLength(1);
+    expect(result.rejected).toHaveLength(1);
+    expect(result.rejected[0].index).toBe(1);
+  });
+
+  it('retries on extractJson failure and succeeds on second attempt', async () => {
+    const callLlm = vi.fn()
+      .mockResolvedValueOnce('not json at all')
+      .mockResolvedValueOnce(VALID);
+    const result = await runPromptGeneration(makeParams({ cacheDir: tmp, callLlm }));
+    expect(callLlm).toHaveBeenCalledTimes(2);
+    expect(result.accepted).toHaveLength(1);
+  });
+
+  it('does NOT retry on RefusalError', async () => {
+    const refusalErr = Object.assign(new Error('LLM refused: ...'), { name: 'RefusalError' });
+    const callLlm = vi.fn().mockRejectedValue(refusalErr);
+    await expect(runPromptGeneration(makeParams({ cacheDir: tmp, callLlm })))
+      .rejects.toThrow(/refused/);
+    expect(callLlm).toHaveBeenCalledTimes(1);
+  });
+
+  it('does NOT retry on TruncationError', async () => {
+    const truncErr = Object.assign(new Error('truncated'), { name: 'TruncationError' });
+    const callLlm = vi.fn().mockRejectedValue(truncErr);
+    await expect(runPromptGeneration(makeParams({ cacheDir: tmp, callLlm })))
+      .rejects.toThrow(/truncated/);
+    expect(callLlm).toHaveBeenCalledTimes(1);
+  });
 });
+
+function makeParams(over: Partial<any> = {}) {
+  return {
+    cacheDir: over.cacheDir,
+    systemPrompt: 'sys',
+    template: 'gen {{N}}',
+    vars: { N: 1 },
+    schemaVersion: 1,
+    lessonId: 'l1',
+    type: 'flashcard' as const,
+    conceptIds: [],
+    expectedCount: 1,
+    callLlm: over.callLlm,
+  };
+}
 ```
 
 - [ ] **Step 2: Run to fail**
@@ -1135,7 +1835,7 @@ Expected: FAIL — module not found.
 // scripts/lib/prompt-runner.ts
 import { ExerciseBatchSchema, type ExerciseBatchItem, type ExerciseType } from './zod-schemas';
 import { readCache, writeCache } from './cache';
-import { extractJson } from './minimax-llm';
+import { extractJson, TruncationError, RefusalError } from './minimax-llm';
 
 export function renderTemplate(tpl: string, vars: Record<string, string | number>): string {
   return tpl.replace(/\{\{(\w+)\}\}/g, (_, k) => {
@@ -1154,10 +1854,33 @@ export interface PromptGenerationParams {
   lessonId: string;
   type: ExerciseType;
   conceptIds: string[];
+  /** Expected N from EXERCISES_PER_LESSON — used to warn on partial batches. */
+  expectedCount: number;
+  /** When true, skip readCache but still write to cache on success. */
+  force?: boolean;
   callLlm: (args: { system: string; user: string }) => Promise<string>;
 }
 
-export async function runPromptGeneration(p: PromptGenerationParams): Promise<ExerciseBatchItem[]> {
+export interface RejectedItem {
+  index: number;
+  reason: string;
+}
+
+export interface BatchResult {
+  accepted: ExerciseBatchItem[];
+  rejected: RejectedItem[];
+}
+
+// Errores en los que NO tiene sentido reintentar (mismo prompt, misma respuesta).
+function isNonRetriable(err: unknown): boolean {
+  if (err instanceof TruncationError) return true;
+  if (err instanceof RefusalError) return true;
+  if (err && typeof err === 'object' && (err as any).name === 'TruncationError') return true;
+  if (err && typeof err === 'object' && (err as any).name === 'RefusalError') return true;
+  return false;
+}
+
+export async function runPromptGeneration(p: PromptGenerationParams): Promise<BatchResult> {
   const user = renderTemplate(p.template, p.vars);
   const cacheKey = {
     schemaVersion: p.schemaVersion,
@@ -1168,8 +1891,10 @@ export async function runPromptGeneration(p: PromptGenerationParams): Promise<Ex
     system: p.systemPrompt,
   };
 
-  const hit = await readCache<ExerciseBatchItem[]>(p.cacheDir, cacheKey);
-  if (hit) return hit;
+  if (!p.force) {
+    const hit = await readCache<ExerciseBatchItem[]>(p.cacheDir, cacheKey);
+    if (hit) return partitionBatch(hit, p.expectedCount);
+  }
 
   let lastErr: unknown = null;
   for (let attempt = 1; attempt <= 2; attempt++) {
@@ -1178,13 +1903,29 @@ export async function runPromptGeneration(p: PromptGenerationParams): Promise<Ex
       const parsed = extractJson(raw);
       const validated = ExerciseBatchSchema.parse(parsed);
       await writeCache(p.cacheDir, cacheKey, validated);
-      return validated;
+      return partitionBatch(validated, p.expectedCount);
     } catch (err) {
       lastErr = err;
+      if (isNonRetriable(err)) throw err;
       console.warn(`[runPromptGeneration] attempt ${attempt} failed for ${p.lessonId}/${p.type}:`, (err as Error).message);
     }
   }
   throw lastErr;
+}
+
+function partitionBatch(items: ExerciseBatchItem[], expectedCount: number): BatchResult {
+  const accepted: ExerciseBatchItem[] = [];
+  const rejected: RejectedItem[] = [];
+  items.forEach((item, index) => {
+    accepted.push(item);
+  });
+  if (items.length < expectedCount) {
+    rejected.push({
+      index: -1,
+      reason: `LLM returned ${items.length} items, expected ${expectedCount}.`,
+    });
+  }
+  return { accepted, rejected };
 }
 ```
 
@@ -1222,7 +1963,7 @@ import type { Exercise } from '@/scripts/lib/zod-schemas';
 const ex = (over: Partial<Exercise> = {}): Exercise => ({
   id: 'x', blockId: 1, lessonId: 'l',
   type: 'flashcard', difficulty: 1, concepts: [], tags: [],
-  data: { front: 'q', back: 'resposta' } as any,
+  data: { front: 'q', back: 'resposta' },
   ...over,
 });
 
@@ -1236,8 +1977,8 @@ describe('collectAudioJobs', () => {
 
   it('uses ptOverrides.back when present for pt variant', () => {
     const jobs = collectAudioJobs([ex({
-      data: { front: 'ônibus', back: 'ônibus' } as any,
-      ptOverrides: { back: 'autocarro' } as any,
+      data: { front: 'ônibus', back: 'ônibus' },
+      ptOverrides: { back: 'autocarro' },
     })]);
     const pt = jobs.find(j => j.variant === 'pt')!;
     expect(pt.text).toBe('autocarro');
@@ -1246,18 +1987,35 @@ describe('collectAudioJobs', () => {
   it('emits audioText for listening exercises', () => {
     const jobs = collectAudioJobs([ex({
       type: 'listening',
-      data: { audioText: 'Bom dia.', question: 'q', answer: 'a' } as any,
+      data: { audioText: 'Bom dia.', question: 'q', answer: 'a' },
     })]);
     expect(jobs).toHaveLength(2);
     expect(jobs[0].text).toBe('Bom dia.');
   });
 
+  it('emits NO jobs for fill_blank and verb_preposition (not audio-eligible)', () => {
+    expect(collectAudioJobs([ex({ type: 'fill_blank', data: { sentence: 'x', blanks: [{ position: 0, answer: 'y' }] } as any)])).toHaveLength(0);
+    expect(collectAudioJobs([ex({ type: 'verb_preposition', data: { verb: 'g', sentence: 's', options: ['a', 'b'], answer: 'a' } as any)])).toHaveLength(0);
+  });
+
+  it('sentence_construction: text is answer joined by space', () => {
+    const jobs = collectAudioJobs([ex({
+      type: 'sentence_construction',
+      data: { words: ['eu', 'gosto'], answer: ['eu', 'gosto', 'café'] },
+    })]);
+    expect(jobs.find(j => j.variant === 'br')!.text).toBe('eu gosto café');
+  });
+
   it('deduplicates identical (text, variant) jobs across exercises', () => {
     const jobs = collectAudioJobs([
-      ex({ id: 'a', data: { front: 'q', back: 'mesma palavra' } as any }),
-      ex({ id: 'b', data: { front: 'q', back: 'mesma palavra' } as any }),
+      ex({ id: 'a', data: { front: 'q', back: 'mesma palavra' } }),
+      ex({ id: 'b', data: { front: 'q', back: 'mesma palavra' } }),
     ]);
     expect(jobs).toHaveLength(2); // not 4
+  });
+
+  it('exports textsFor for re-use in generate-audio Map building', () => {
+    expect(textsFor(ex(), 'br')).toEqual(['resposta']);
   });
 });
 ```
@@ -1273,33 +2031,49 @@ npm test -- audio-collector
 ```ts
 // scripts/lib/audio-collector.ts
 import type { Exercise, ExerciseType } from './zod-schemas';
+import { ExerciseDataByTypeSchema } from './zod-schemas';
 
 export interface AudioJob {
   text: string;
   variant: 'br' | 'pt';
 }
 
-function textsFor(ex: Exercise, variant: 'br' | 'pt'): string[] {
+/**
+ * Devuelve los strings audio-eligible para un exercise y variante dados.
+ * Re-valida el resultado del spread data + ptOverrides contra el schema del tipo
+ * declarado: si ptOverrides tenía campos inválidos, throw. Esto convierte el
+ * silent-corruption detectado en el review en un fail-fast explícito.
+ *
+ * Audio NO emitido para: fill_blank (la frase entera tendría audio pero su
+ * valor pedagógico es bajo y haría inflar el cache 2x). verb_preposition igual.
+ * sentence_construction emite el answer (la oración correcta).
+ */
+export function textsFor(ex: Exercise, variant: 'br' | 'pt'): string[] {
+  if (variant === 'pt' && ex.ptOverrides) {
+    const merged = { ...ex.data, ...ex.ptOverrides };
+    // re-validar contra el schema del tipo declarado
+    ExerciseDataByTypeSchema[ex.type].parse(merged);
+  }
   const data: any = variant === 'pt' && ex.ptOverrides
     ? { ...ex.data, ...ex.ptOverrides }
     : ex.data;
   const t: ExerciseType = ex.type;
   switch (t) {
     case 'flashcard':
-      return [data.back].filter(Boolean);
+      return data.back ? [data.back] : [];
     case 'listening':
-      return [data.audioText].filter(Boolean);
+      return data.audioText ? [data.audioText] : [];
     case 'translation_es_pt':
-      return [data.target].filter(Boolean);
+      return data.target ? [data.target] : [];
     case 'translation_pt_es':
-      return [data.source].filter(Boolean);
+      return data.source ? [data.source] : [];
     case 'sentence_construction':
-      return [data.answer?.join(' ')].filter(Boolean);
+      return data.answer?.length ? [data.answer.join(' ')] : [];
     case 'chunk':
-      return [data.chunk].filter(Boolean);
+      return data.chunk ? [data.chunk] : [];
     case 'fill_blank':
     case 'verb_preposition':
-      return []; // no audio by default
+      return [];
   }
 }
 
@@ -1326,13 +2100,13 @@ export function collectAudioJobs(exercises: Exercise[]): AudioJob[] {
 npm test -- audio-collector
 ```
 
-Expected: 4 passed.
+Expected: 7 passed.
 
 - [ ] **Step 5: Commit**
 
 ```bash
 git add scripts/lib/audio-collector.ts tests/unit/audio-collector.test.ts
-git commit -m "feat(scripts): audio job collector with variant-aware dedup"
+git commit -m "feat(scripts): audio collector with re-validated ptOverrides spread + exported textsFor"
 ```
 
 ---
@@ -1365,8 +2139,12 @@ export interface Lesson {
   name: string;
   objectives: string[];
   conceptIds: ConceptId[];
-  // Pre-teaching vocab: list of "front" strings the LLM will turn into flashcards explicitly.
-  vocabKeySeeds: string[];
+  /** Pre-teaching vocab: strings que el LLM debe convertir en flashcards explícitamente. */
+  vocabKey: readonly string[];
+  /** Path al archivo MDX con las notas conceptuales. Plan #2 lo renderiza. */
+  conceptNotesPath: string;
+  /** IDs de ejercicios asociados a esta lección (se llenan al generar contenido). */
+  exerciseRefs: string[];
 }
 
 export interface Block {
@@ -1404,7 +2182,9 @@ const B1_LESSONS: Lesson[] = [
       'Identificar y nombrar los acentos (´ ` ^ ~ ¸)',
     ],
     conceptIds: ['b1-alfabeto', 'b1-acentos'],
-    vocabKeySeeds: ['a', 'e', 'i', 'o', 'u', 'á', 'à', 'â', 'ã', 'ç'],
+    vocabKey: ['a', 'e', 'i', 'o', 'u', 'á', 'à', 'â', 'ã', 'ç'] as const,
+    conceptNotesPath: 'b1/l1-alfabeto-acentos.mdx',
+    exerciseRefs: [],
   },
   {
     id: 'b1-l2-silaba-tonica',
@@ -1415,7 +2195,9 @@ const B1_LESSONS: Lesson[] = [
       'Aplicar reglas de acentuación gráfica',
     ],
     conceptIds: ['b1-silaba-tonica'],
-    vocabKeySeeds: ['fácil', 'difícil', 'café', 'avó', 'avô', 'táxi', 'lápis'],
+    vocabKey: ['fácil', 'difícil', 'café', 'avó', 'avô', 'táxi', 'lápis'] as const,
+    conceptNotesPath: 'b1/l2-silaba-tonica.mdx',
+    exerciseRefs: [],
   },
   {
     id: 'b1-l3-correspondencias-es-pt',
@@ -1426,7 +2208,9 @@ const B1_LESSONS: Lesson[] = [
       'Reconocer h muda',
     ],
     conceptIds: ['b1-corresp-on-ao', 'b1-corresp-ll-lh', 'b1-corresp-nh-ny', 'b1-h-muda'],
-    vocabKeySeeds: ['coração', 'canção', 'mulher', 'olho', 'manhã', 'banho', 'hotel', 'hora'],
+    vocabKey: ['coração', 'canção', 'mulher', 'olho', 'manhã', 'banho', 'hotel', 'hora'] as const,
+    conceptNotesPath: 'b1/l3-correspondencias.mdx',
+    exerciseRefs: [],
   },
   {
     id: 'b1-l4-vogais-nasais',
@@ -1437,7 +2221,9 @@ const B1_LESSONS: Lesson[] = [
       'Distinguir vocal nasal de vocal + n/m',
     ],
     conceptIds: ['b1-vogais-nasais'],
-    vocabKeySeeds: ['mãe', 'pão', 'cão', 'irmão', 'bem', 'bom', 'ruim', 'um'],
+    vocabKey: ['mãe', 'pão', 'cão', 'irmão', 'bem', 'bom', 'ruim', 'um'] as const,
+    conceptNotesPath: 'b1/l4-vogais-nasais.mdx',
+    exerciseRefs: [],
   },
   {
     id: 'b1-l5-pron-rr-s',
@@ -1448,7 +2234,9 @@ const B1_LESSONS: Lesson[] = [
       'Reconocer "s" final en BR vs PT',
     ],
     conceptIds: ['b1-pron-rr-r', 'b1-pron-s-final'],
-    vocabKeySeeds: ['rato', 'carro', 'rua', 'dois', 'mais', 'meses', 'olhos'],
+    vocabKey: ['rato', 'carro', 'rua', 'dois', 'mais', 'meses', 'olhos'] as const,
+    conceptNotesPath: 'b1/l5-pron-rr-s.mdx',
+    exerciseRefs: [],
   },
 ];
 
@@ -1584,9 +2372,9 @@ git commit -m "feat(scripts): generate-curriculum (writes concepts.json)"
 
 ---
 
-### Task 16: generate-content orchestrator
+### Task 16: generate-content orchestrator (with ID-from-content-hash + real --force + --dry-run)
 
-**Files:** Create `scripts/generate-content.ts`. Modify `package.json`.
+**Files:** Create `scripts/generate-content.ts`.
 
 - [ ] **Step 1: Implement**
 
@@ -1595,60 +2383,83 @@ git commit -m "feat(scripts): generate-curriculum (writes concepts.json)"
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import pLimit from 'p-limit';
-import { BLOCKS, getBlock, getConceptsByIds, type Lesson } from '@/lib/data/curriculum';
+import { BLOCKS, getBlock, getConceptsByIds, ALL_CONCEPTS, type Lesson } from '@/lib/data/curriculum';
 import {
   BLOCKS_DIR, LLM_CACHE, LLM_CONCURRENCY, SCHEMA_VERSION,
-  EXERCISES_PER_LESSON,
+  EXERCISES_PER_LESSON, TYPE_TO_TEMPLATE,
+  COST_USD_PER_1K_INPUT, COST_USD_PER_1K_OUTPUT,
 } from './config';
-import { hashKey } from './lib/cache';
+import { hashKey, normalizeForHash } from './lib/cache';
 import { callLlm } from './lib/minimax-llm';
 import { runPromptGeneration } from './lib/prompt-runner';
-import type { ExerciseType, Exercise } from './lib/zod-schemas';
-import { ExerciseSchema } from './lib/zod-schemas';
+import { ExerciseSchema, type ExerciseType, type Exercise } from './lib/zod-schemas';
 
-const PROMPTS_DIR = path.join(__dirname, 'prompts');
+// Resolves to repo root reliably — see Task 7 for why.
+const PROJECT_ROOT = process.cwd();
+const PROMPTS_DIR = path.join(PROJECT_ROOT, 'scripts', 'prompts');
 
 async function loadPrompt(name: string): Promise<string> {
   return fs.readFile(path.join(PROMPTS_DIR, `${name}.md`), 'utf8');
 }
 
-interface CliArgs { block?: number; force: boolean; }
+interface CliArgs { block?: number; force: boolean; dryRun: boolean; }
 function parseArgs(): CliArgs {
   const args = process.argv.slice(2);
   let block: number | undefined;
   let force = false;
+  let dryRun = false;
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--block') { block = Number(args[++i]); }
     else if (args[i] === '--force') { force = true; }
+    else if (args[i] === '--dry-run') { dryRun = true; }
   }
-  return { block, force };
+  return { block, force, dryRun };
 }
-
-const TYPE_TO_TEMPLATE: Record<ExerciseType, string | null> = {
-  flashcard: 'flashcard',
-  fill_blank: 'fill_blank',
-  listening: 'listening',
-  translation_es_pt: 'translation',
-  translation_pt_es: 'translation',
-  verb_preposition: 'verb_preposition',
-  sentence_construction: null, // skip for MVP1 — defer to later plan
-  chunk: null,                 // skip for MVP1
-};
 
 function templateVars(lesson: Lesson, blockName: string, type: ExerciseType, n: number): Record<string, string | number> {
   const concepts = getConceptsByIds(lesson.conceptIds);
   const conceptsList = concepts.map(c => `- ${c.id}: ${c.name} — ${c.description}`).join('\n');
-  const base = { N: n, lessonName: lesson.name, blockName, conceptsList };
+  const vocabKey = lesson.vocabKey.join(', ');
+  const base = { N: n, lessonName: lesson.name, blockName, conceptsList, vocabKey };
   if (type === 'translation_es_pt') return { ...base, direction: 'es_pt', type };
   if (type === 'translation_pt_es') return { ...base, direction: 'pt_es', type };
   return base;
 }
 
+/** ID derivado del contenido. Estable a través de regeneraciones del LLM. */
+function contentId(type: ExerciseType, data: any, ptOverrides: any, esContrast: string | undefined): string {
+  return hashKey({ type, data, ptOverrides, esContrast }).slice(0, 8);
+}
+
+const VALID_CONCEPT_IDS = new Set(ALL_CONCEPTS.map(c => c.id));
+
 async function main() {
-  const { block, force } = parseArgs();
+  const { block, force, dryRun } = parseArgs();
   const targets = block ? [getBlock(block)] : BLOCKS;
   const system = await loadPrompt('system');
   const limit = pLimit(LLM_CONCURRENCY);
+
+  // Pre-cálculo para --dry-run
+  let totalCalls = 0;
+  for (const b of targets) {
+    if (b.lessons.length === 0) continue;
+    for (const lesson of b.lessons) {
+      for (const [type, n] of Object.entries(EXERCISES_PER_LESSON) as [ExerciseType, number | null][]) {
+        if (n === null) continue;
+        totalCalls++;
+      }
+    }
+  }
+  if (dryRun) {
+    // Asumimos ~2k input + ~2k output tokens por call (orden de magnitud).
+    const estIn  = totalCalls * 2000;
+    const estOut = totalCalls * 2000;
+    const estCost = (estIn / 1000) * COST_USD_PER_1K_INPUT + (estOut / 1000) * COST_USD_PER_1K_OUTPUT;
+    console.log(`[dry-run] Will make ${totalCalls} LLM calls.`);
+    console.log(`[dry-run] Estimated tokens: ${estIn} in / ${estOut} out. Estimated cost: $${estCost.toFixed(2)} USD.`);
+    console.log(`[dry-run] Force mode: ${force}. Exiting without changes.`);
+    return;
+  }
 
   for (const b of targets) {
     if (b.lessons.length === 0) {
@@ -1657,12 +2468,14 @@ async function main() {
     }
 
     const out: Exercise[] = [];
+    const rejectedLog: string[] = [];
     console.log(`\n=== Block ${b.id}: ${b.name} ===`);
 
     const jobs: Array<() => Promise<void>> = [];
 
     for (const lesson of b.lessons) {
-      for (const [type, n] of Object.entries(EXERCISES_PER_LESSON) as [ExerciseType, number][]) {
+      for (const [type, n] of Object.entries(EXERCISES_PER_LESSON) as [ExerciseType, number | null][]) {
+        if (n === null) continue;
         const templateName = TYPE_TO_TEMPLATE[type];
         if (!templateName) continue;
 
@@ -1671,23 +2484,30 @@ async function main() {
           const vars = templateVars(lesson, b.name, type, n);
           console.log(`  → ${lesson.id} / ${type} (n=${n})`);
 
-          const cacheDir = force ? path.join(LLM_CACHE, 'never-hit-' + Date.now()) : LLM_CACHE;
-          const items = await runPromptGeneration({
-            cacheDir,
+          const result = await runPromptGeneration({
+            cacheDir: LLM_CACHE,
             systemPrompt: system,
             template,
             vars,
-            schemaVersion: SCHEMA_VERSION,
+            schemaVersion: SCHEMA_VERSION[type],
             lessonId: lesson.id,
             type,
             conceptIds: lesson.conceptIds,
+            expectedCount: n,
+            force,
             callLlm,
           });
 
-          items.forEach((item, i) => {
-            const id = `${lesson.id}-${type}-${String(i + 1).padStart(3, '0')}`;
+          // Log rejected (low count, etc.)
+          for (const r of result.rejected) {
+            const msg = `${lesson.id}/${type}: ${r.reason}`;
+            console.warn(`  ⚠ ${msg}`);
+            rejectedLog.push(msg);
+          }
+
+          for (const item of result.accepted) {
             const ex: Exercise = {
-              id,
+              id: contentId(item.type, item.data, item.ptOverrides, item.esContrast),
               blockId: b.id,
               lessonId: lesson.id,
               type: item.type,
@@ -1698,44 +2518,60 @@ async function main() {
               ...(item.ptOverrides ? { ptOverrides: item.ptOverrides } : {}),
               ...(item.esContrast ? { esContrast: item.esContrast } : {}),
             };
-            ex.contentHash = hashKey({
+            ex.contentHash = hashKey(normalizeForHash({
               type: ex.type, data: ex.data, ptOverrides: ex.ptOverrides, esContrast: ex.esContrast,
-            });
+            }));
             const parsed = ExerciseSchema.safeParse(ex);
             if (!parsed.success) {
-              console.warn(`  ⚠ Skipping invalid item ${id}:`, parsed.error.issues[0]?.message);
-              return;
+              const msg = `${ex.id} (${lesson.id}/${type}): ${parsed.error.issues[0]?.message ?? 'Zod fail'}`;
+              console.warn(`  ⚠ ${msg}`);
+              rejectedLog.push(msg);
+              continue;
+            }
+            // Validar que concepts referenciados existan.
+            for (const c of parsed.data.concepts) {
+              if (!VALID_CONCEPT_IDS.has(c)) {
+                const msg = `${parsed.data.id}: unknown concept id "${c}"`;
+                console.warn(`  ⚠ ${msg}`);
+                rejectedLog.push(msg);
+                // No rechazamos el item — solo logueamos. (El set crecerá.)
+              }
             }
             out.push(parsed.data);
-          });
+          }
         }));
       }
     }
 
     await Promise.all(jobs.map(j => j()));
 
-    out.sort((a, b) => a.id.localeCompare(b.id));
+    // Dedup por id (content-derived).
+    const seen = new Set<string>();
+    const deduped = out.filter(e => {
+      if (seen.has(e.id)) return false;
+      seen.add(e.id);
+      return true;
+    });
+    deduped.sort((a, b) => a.id.localeCompare(b.id));
+
     await fs.mkdir(BLOCKS_DIR, { recursive: true });
     const file = path.join(BLOCKS_DIR, `b${b.id}.json`);
-    await fs.writeFile(file, JSON.stringify(out, null, 2) + '\n', 'utf8');
-    console.log(`Wrote ${out.length} exercises → ${path.relative(process.cwd(), file)}`);
+    const tmp = `${file}.tmp`;
+    await fs.writeFile(tmp, JSON.stringify(deduped, null, 2) + '\n', 'utf8');
+    await fs.rename(tmp, file); // atomic
+    console.log(`Wrote ${deduped.length} exercises (rejected: ${rejectedLog.length}) → ${path.relative(process.cwd(), file)}`);
+    if (rejectedLog.length > 0) {
+      const logFile = path.join(BLOCKS_DIR, `b${b.id}.rejected.json`);
+      await fs.writeFile(logFile, JSON.stringify(rejectedLog, null, 2));
+      console.log(`  See ${path.relative(process.cwd(), logFile)} for details.`);
+    }
   }
 }
 
 main().catch(err => { console.error(err); process.exit(1); });
 ```
 
-- [ ] **Step 2: Add script to package.json**
-
-```json
-{
-  "scripts": {
-    "generate:content": "tsx scripts/generate-content.ts"
-  }
-}
-```
-
-- [ ] **Step 3: Dry-run typecheck**
+- [ ] **Step 2: Typecheck**
 
 ```bash
 npx tsc --noEmit
@@ -1743,11 +2579,11 @@ npx tsc --noEmit
 
 Expected: No errors.
 
-- [ ] **Step 4: Commit (run actual generation in next task)**
+- [ ] **Step 3: Commit**
 
 ```bash
-git add scripts/generate-content.ts package.json
-git commit -m "feat(scripts): generate-content orchestrator for exercises"
+git add scripts/generate-content.ts
+git commit -m "feat(scripts): content orchestrator with content-derived IDs, real --force, --dry-run, atomic write"
 ```
 
 ---
@@ -1799,9 +2635,9 @@ git commit -m "data: generated exercises for Block 1 (fonética)"
 
 ---
 
-### Task 18: generate-audio orchestrator
+### Task 18: generate-audio orchestrator (with allSettled + Map lookup + atomic write + manifest GC)
 
-**Files:** Create `scripts/generate-audio.ts`. Modify `package.json`.
+**Files:** Create `scripts/generate-audio.ts`.
 
 - [ ] **Step 1: Implement**
 
@@ -1812,217 +2648,350 @@ import path from 'node:path';
 import pLimit from 'p-limit';
 import { BLOCKS, getBlock } from '@/lib/data/curriculum';
 import {
-  BLOCKS_DIR, DATA_DIR, TTS_CONCURRENCY, TTS_OUTPUT, VOICES, DEFAULT_VOICE,
+  BLOCKS_DIR, DATA_DIR, TTS_CONCURRENCY, VOICES, DEFAULT_VOICE,
   TTS_MODEL, LLM_MODEL,
 } from './config';
-import { collectAudioJobs } from './lib/audio-collector';
-import { generateTts } from './lib/minimax-tts';
+import { collectAudioJobs, textsFor } from './lib/audio-collector';
+import { generateTts, type TtsResult } from './lib/minimax-tts';
+import { hashKey, normalizeForHash } from './lib/cache';
 import { ExerciseSchema, type Exercise } from './lib/zod-schemas';
 
-interface CliArgs { block?: number; }
+const PROJECT_ROOT = process.cwd();
+
+interface CliArgs { block?: number; force: boolean; }
 function parseArgs(): CliArgs {
   const args = process.argv.slice(2);
   let block: number | undefined;
+  let force = false;
   for (let i = 0; i < args.length; i++) {
-    if (args[i] === '--block') block = Number(args[++i]);
+    if (args[i] === '--block') { block = Number(args[++i]); }
+    else if (args[i] === '--force') { force = true; }
   }
-  return { block };
+  return { block, force };
 }
 
 async function loadBlockExercises(blockId: number): Promise<Exercise[]> {
   const file = path.join(BLOCKS_DIR, `b${blockId}.json`);
   const raw = await fs.readFile(file, 'utf8');
   const parsed = JSON.parse(raw) as unknown[];
-  return parsed.map(e => ExerciseSchema.parse(e));
+  return parsed.map((e, i) => {
+    const r = ExerciseSchema.safeParse(e);
+    if (!r.success) throw new Error(`b${blockId}.json[${i}]: ${r.error.issues[0]?.message}`);
+    return r.data;
+  });
+}
+
+/** Per-block lockfile via mkdir+rmdir (atomic on POSIX). Prevents concurrent runs corrupting b1.json. */
+async function withBlockLock<T>(blockId: number, fn: () => Promise<T>): Promise<T> {
+  const lockDir = path.join(BLOCKS_DIR, `.b${blockId}.json.lock`);
+  while (true) {
+    try {
+      await fs.mkdir(lockDir);
+      break;
+    } catch (err: any) {
+      if (err?.code !== 'EEXIST') throw err;
+      await new Promise(r => setTimeout(r, 100));
+    }
+  }
+  try {
+    return await fn();
+  } finally {
+    await fs.rmdir(lockDir);
+  }
 }
 
 async function main() {
-  const { block } = parseArgs();
-  const blocks = block ? [getBlock(block)] : BLOCKS;
+  const { block, force } = parseArgs();
+  const targets = block ? [getBlock(block)] : BLOCKS;
   const limit = pLimit(TTS_CONCURRENCY);
 
-  // audioIndex maps: variant → text → hash
-  const audioIndex: Record<string, Record<string, string>> = { br: {}, pt: {} };
+  const audioIndex: Record<'br' | 'pt', Record<string, string>> = { br: {}, pt: {} };
   const manifestBlocks: Record<string, { exerciseCount: number; audioCount: number }> = {};
 
-  for (const b of blocks) {
+  for (const b of targets) {
     if (b.lessons.length === 0) continue;
-    let exercises: Exercise[];
-    try {
-      exercises = await loadBlockExercises(b.id);
-    } catch (err) {
-      console.log(`Block ${b.id} has no generated content yet — skipping.`);
-      continue;
-    }
 
-    const jobs = collectAudioJobs(exercises);
-    console.log(`\n=== Block ${b.id}: ${jobs.length} audio jobs ===`);
-
-    let done = 0;
-    const audioResults = await Promise.all(jobs.map(j => limit(async () => {
-      const voice = VOICES[j.variant][DEFAULT_VOICE];
-      const result = await generateTts({ text: j.text, voiceId: voice, variant: j.variant });
-      done++;
-      if (done % 20 === 0) console.log(`  progress: ${done}/${jobs.length}`);
-      return { ...j, ...result, voice };
-    })));
-
-    // Attach audio refs back into exercises (where audio applies).
-    for (const ex of exercises) {
-      const brTexts = collectAudioJobs([ex]).filter(j => j.variant === 'br').map(j => j.text);
-      const ptTexts = collectAudioJobs([ex]).filter(j => j.variant === 'pt').map(j => j.text);
-      const brText = brTexts[0];
-      const ptText = ptTexts[0];
-      if (!brText || !ptText) continue;
-      const brR = audioResults.find(r => r.variant === 'br' && r.text === brText);
-      const ptR = audioResults.find(r => r.variant === 'pt' && r.text === ptText);
-      if (brR && ptR) {
-        ex.audio = {
-          br: { hash: brR.hash, voice: brR.voice },
-          pt: { hash: ptR.hash, voice: ptR.voice },
-        };
+    await withBlockLock(b.id, async () => {
+      let exercises: Exercise[];
+      try {
+        exercises = await loadBlockExercises(b.id);
+      } catch (err) {
+        if ((err as NodeJS.ErrnoException).code === 'ENOENT') {
+          console.log(`Block ${b.id} has no generated content yet — skipping.`);
+          return;
+        }
+        throw err;
       }
-    }
 
-    // Persist updated exercises with audio refs.
-    const file = path.join(BLOCKS_DIR, `b${b.id}.json`);
-    await fs.writeFile(file, JSON.stringify(exercises, null, 2) + '\n', 'utf8');
+      const jobs = collectAudioJobs(exercises);
+      console.log(`\n=== Block ${b.id}: ${jobs.length} audio jobs ===`);
 
-    // Update audioIndex.
-    for (const r of audioResults) {
-      audioIndex[r.variant][r.text] = r.hash;
-    }
-    manifestBlocks[String(b.id)] = { exerciseCount: exercises.length, audioCount: jobs.length };
-    console.log(`Block ${b.id}: ${jobs.length} audios generated (cached: ${audioResults.filter(r => r.cached).length})`);
+      // allSettled: 1 fallo no mata los otros 599 jobs.
+      let done = 0;
+      const settled = await Promise.allSettled(jobs.map(j => limit(async () => {
+        const voice = VOICES[j.variant][DEFAULT_VOICE];
+        const result = await generateTts({ text: j.text, voiceId: voice, variant: j.variant });
+        done++;
+        if (done % 20 === 0) console.log(`  progress: ${done}/${jobs.length}`);
+        return { ...j, ...result, voice };
+      })));
+
+      const successes: Array<{ text: string; variant: 'br' | 'pt'; hash: string; voice: string; cached: boolean }> = [];
+      const failures: Array<{ text: string; variant: string; reason: string }> = [];
+      settled.forEach((r, i) => {
+        const j = jobs[i]!;
+        if (r.status === 'fulfilled') {
+          successes.push(r.value);
+        } else {
+          failures.push({ text: j.text, variant: j.variant, reason: String(r.reason?.message ?? r.reason) });
+        }
+      });
+
+      // Build a Map<string, TtsResult> for O(1) lookup in the attach loop.
+      const audioMap = new Map<string, TtsResult & { variant: 'br' | 'pt' }>();
+      for (const s of successes) audioMap.set(`${s.variant}::${s.text}`, s);
+
+      // Attach audio refs. Reuse textsFor directly (no second collectAudioJobs call).
+      let audioAttachedCount = 0;
+      for (const ex of exercises) {
+        const brText = textsFor(ex, 'br')[0];
+        const ptText = textsFor(ex, 'pt')[0];
+        if (!brText || !ptText) continue;
+        const brR = audioMap.get(`br::${brText}`);
+        const ptR = audioMap.get(`pt::${ptText}`);
+        if (brR && ptR) {
+          ex.audio = {
+            br: { hash: brR.hash, voice: brR.voice },
+            pt: { hash: ptR.hash, voice: ptR.voice },
+          };
+          // Recompute contentHash post-audio-attach so SRS keys on post-generated state.
+          ex.contentHash = hashKey(normalizeForHash({
+            type: ex.type, data: ex.data, ptOverrides: ex.ptOverrides, esContrast: ex.esContrast,
+          }));
+          audioAttachedCount++;
+        }
+      }
+
+      // Persist updated exercises with audio refs. ATOMIC.
+      const file = path.join(BLOCKS_DIR, `b${b.id}.json`);
+      const tmp = `${file}.tmp`;
+      await fs.writeFile(tmp, JSON.stringify(exercises, null, 2) + '\n', 'utf8');
+      await fs.rename(tmp, file);
+
+      // Update in-memory audioIndex for the manifest.
+      for (const s of successes) {
+        audioIndex[s.variant][s.text] = s.hash;
+      }
+      manifestBlocks[String(b.id)] = { exerciseCount: exercises.length, audioCount: jobs.length };
+      const cachedCount = successes.filter(s => s.cached).length;
+      console.log(`Block ${b.id}: ${successes.length} ok, ${failures.length} failed, audio attached: ${audioAttachedCount}, cached: ${cachedCount}`);
+      if (failures.length > 0) {
+        const logFile = path.join(BLOCKS_DIR, `b${b.id}.audio-failures.json`);
+        await fs.writeFile(logFile, JSON.stringify(failures, null, 2));
+        console.log(`  Failures: ${path.relative(process.cwd(), logFile)}`);
+      }
+    });
   }
 
-  // Merge with existing manifest (preserve blocks not regenerated).
+  // Manifest con GC: podar entries del audioIndex que no estén en el contenido actual.
   const manifestPath = path.join(DATA_DIR, 'manifest.json');
   let prev: any = {};
   try { prev = JSON.parse(await fs.readFile(manifestPath, 'utf8')); } catch {}
-  const manifest = {
-    generatedAt: new Date().toISOString(),
+
+  // Construir set de textos usados en el contenido actual (de los bloques que regeneramos).
+  const liveTexts = { br: new Set<string>(), pt: new Set<string>() };
+  for (const b of targets) {
+    if (b.lessons.length === 0) continue;
+    let exercises: Exercise[] = [];
+    try { exercises = await loadBlockExercises(b.id); } catch { continue; }
+    for (const ex of exercises) {
+      for (const t of textsFor(ex, 'br')) liveTexts.br.add(t);
+      for (const t of textsFor(ex, 'pt')) liveTexts.pt.add(t);
+    }
+  }
+
+  // Reconstruir audioIndex de los bloques regenerados: solo entradas vivas.
+  const cleanIndex = { br: {} as Record<string, string>, pt: {} as Record<string, string> };
+  for (const v of ['br', 'pt'] as const) {
+    for (const [text, hash] of Object.entries(audioIndex[v])) {
+      if (liveTexts[v].has(text)) cleanIndex[v][text] = hash;
+    }
+  }
+  // Para bloques NO regenerados, conservar las entries vivas del manifest previo.
+  const targetIds = new Set(targets.map(b => String(b.id)));
+  for (const v of ['br', 'pt'] as const) {
+    for (const [text, hash] of Object.entries(prev.audioIndex?.[v] ?? {})) {
+      // Conservar solo si NO estamos regenerando su bloque y el texto sigue vivo.
+      if (liveTexts[v].has(text) && !Object.keys(audioIndex[v]).includes(text)) {
+        cleanIndex[v][text] = hash;
+      }
+    }
+  }
+  void targetIds; // suprimido: el check de "no regenerar" ya se aplica arriba
+
+  // Determinar si el manifest cambia. Si no, preservar generatedAt.
+  const newManifest = {
     modelText: LLM_MODEL,
     modelTts: TTS_MODEL,
     voices: VOICES,
     blocks: { ...(prev.blocks ?? {}), ...manifestBlocks },
-    audioIndex: {
-      br: { ...(prev.audioIndex?.br ?? {}), ...audioIndex.br },
-      pt: { ...(prev.audioIndex?.pt ?? {}), ...audioIndex.pt },
-    },
+    audioIndex: cleanIndex,
   };
-  await fs.writeFile(manifestPath, JSON.stringify(manifest, null, 2) + '\n', 'utf8');
-  console.log(`\nManifest updated: ${path.relative(process.cwd(), manifestPath)}`);
+  const prevComparable = { ...prev };
+  delete prevComparable.generatedAt;
+  const changed = JSON.stringify(prevComparable) !== JSON.stringify(newManifest);
+  const finalManifest = {
+    generatedAt: changed ? new Date().toISOString() : (prev.generatedAt ?? new Date().toISOString()),
+    ...newManifest,
+  };
+  const tmp = `${manifestPath}.tmp`;
+  await fs.writeFile(tmp, JSON.stringify(finalManifest, null, 2) + '\n', 'utf8');
+  await fs.rename(tmp, manifestPath);
+  console.log(`\nManifest ${changed ? 'updated' : 'unchanged'}: ${path.relative(process.cwd(), manifestPath)}`);
 }
 
 main().catch(err => { console.error(err); process.exit(1); });
 ```
 
-- [ ] **Step 2: Add script to package.json**
-
-```json
-{
-  "scripts": {
-    "generate:audio": "tsx scripts/generate-audio.ts"
-  }
-}
-```
-
-- [ ] **Step 3: Add convenience meta-script**
-
-```json
-{
-  "scripts": {
-    "generate:all": "npm run generate:curriculum && npm run generate:content && npm run generate:audio"
-  }
-}
-```
-
-- [ ] **Step 4: Typecheck**
+- [ ] **Step 2: Typecheck**
 
 ```bash
 npx tsc --noEmit
 ```
 
-- [ ] **Step 5: Commit**
+- [ ] **Step 3: Commit**
 
 ```bash
-git add scripts/generate-audio.ts package.json
-git commit -m "feat(scripts): generate-audio (TTS pipeline with manifest)"
+git add scripts/generate-audio.ts
+git commit -m "feat(scripts): audio orchestrator with allSettled, Map lookup, lockfile, manifest GC, idempotent generatedAt"
 ```
 
 ---
 
-### Task 19: Confirm MiniMax voices for PT-BR / PT-PT
+### Task 19: Confirm MiniMax contracts (voices, output_format, language_boost, model)
 
-**Files:** Possibly modify `scripts/config.ts`.
+**Files:** Create `scripts/probe-tts.ts` (kept permanently as a diagnostic — **do NOT delete**). Possibly modify `scripts/config.ts`.
 
-The voice IDs in `config.ts` are placeholders. MiniMax has a voice listing endpoint or docs. Verify the real IDs before running TTS at scale.
+Voice IDs in `config.ts` are placeholders. This task runs BEFORE Task 20 (TTS at scale). It must verify four contracts and probe both `f` and `m` voices for each variant.
 
-- [ ] **Step 1: Try a single TTS call with current voice IDs**
-
-Create a one-off script `scripts/probe-tts.ts`:
+- [ ] **Step 1: Implement probe-tts.ts (permanently, not deleted)**
 
 ```ts
-import 'dotenv/config';
-import { generateTts } from './lib/minimax-tts';
-import { VOICES } from './config';
-async function main() {
-  for (const variant of ['br', 'pt'] as const) {
-    const voiceId = VOICES[variant].f;
-    try {
-      const r = await generateTts({ text: 'Olá, bom dia.', voiceId, variant });
-      console.log(`${variant}/${voiceId}: ${r.cached ? 'cached' : 'generated'} → ${r.filePath}`);
-    } catch (err) {
-      console.error(`${variant}/${voiceId} FAILED:`, (err as Error).message);
+// scripts/probe-tts.ts
+// Diagnóstico de contratos MiniMax TTS. Se corre una vez al setup; queda como
+// herramienta de diagnóstico para re-probar voces cuando cambien modelos.
+// NO está en `generate:all`. Se invoca manualmente.
+//
+// Prerrequisito: `bash scripts/with-env.sh tsx scripts/probe-tts.ts`
+//   (with-env.sh carga .env.local y exec tsx con la API key en el entorno).
+import { generateTts, isValidMp3 } from './lib/minimax-tts';
+import { VOICES, TTS_OUTPUT } from './config';
+import { ttsHash } from './lib/minimax-tts';
+import path from 'node:path';
+import fs from 'node:fs';
+
+const TORTURE = ['Olá, bom dia.', 'mãe', 'pão', 'coração', 'constituição', 'ônibus', 'autocarro'];
+
+async function probeVariant(variant: 'br' | 'pt', which: 'f' | 'm'): Promise<boolean> {
+  const voiceId = VOICES[variant][which];
+  console.log(`\n--- ${variant}/${which} (${voiceId}) ---`);
+  try {
+    for (const text of TORTURE) {
+      const r = await generateTts({ text, voiceId, variant });
+      const fullPath = path.join(TTS_OUTPUT, `${r.hash}.mp3`);
+      const stat = await fs.promises.stat(fullPath);
+      console.log(`  "${text}" → ${r.cached ? 'cached' : 'new'} (${stat.size} bytes, hash=${r.hash.slice(0, 8)})`);
+      if (stat.size < 1024) {
+        console.error(`  ✗ File too small — TTS returned truncated audio`);
+        return false;
+      }
+      if (!isValidMp3(await fs.promises.readFile(fullPath))) {
+        console.error(`  ✗ File is not a valid MP3 (wrong magic bytes)`);
+        return false;
+      }
     }
+    return true;
+  } catch (err) {
+    console.error(`  ✗ FAILED: ${(err as Error).message}`);
+    return false;
   }
 }
-main();
+
+async function listAvailableVoices(): Promise<void> {
+  console.log('\n--- Available Portuguese voices from /v1/get_voice ---');
+  const res = await fetch('https://api.minimax.io/v1/get_voice', {
+    headers: { Authorization: `Bearer ${process.env.MINIMAX_API_KEY!}` },
+  });
+  if (!res.ok) {
+    console.error(`get_voice failed: ${res.status}`);
+    return;
+  }
+  const json = await res.json() as any;
+  const voices: any[] = json.system_voice ?? json.voices ?? [];
+  const ptVoices = voices.filter((v: any) =>
+    /portuguese|portugu[eê]s|brazil|brasil/i.test(`${v.voice_name ?? ''} ${v.voice_id ?? ''}`));
+  console.log(`Total voices: ${voices.length}, Portuguese: ${ptVoices.length}`);
+  for (const v of ptVoices.slice(0, 20)) {
+    console.log(`  ${v.voice_id}  (${v.voice_name})`);
+  }
+}
+
+async function main() {
+  await listAvailableVoices();
+  const results: Record<string, boolean> = {};
+  for (const variant of ['br', 'pt'] as const) {
+    for (const which of ['f', 'm'] as const) {
+      results[`${variant}/${which}`] = await probeVariant(variant, which);
+    }
+  }
+  console.log('\n=== Probe summary ===');
+  for (const [k, v] of Object.entries(results)) {
+    console.log(`  ${v ? '✓' : '✗'} ${k}`);
+  }
+  if (!results['br/f'] || !results['br/m']) {
+    console.error('\nFATAL: BR voices missing. Edit scripts/config.ts VOICES.br.');
+    process.exit(1);
+  }
+  if (!results['pt/f'] || !results['pt/m']) {
+    console.warn('\nWARN: PT-PT voices missing. Edit scripts/config.ts VOICES.pt to use BR voices (acceptable fallback, will lose accent).');
+    // NO exit — the orchestrator can fall back. Document this in VOICES comment.
+  }
+  void ttsHash; // silence unused
+}
+
+main().catch(err => { console.error(err); process.exit(1); });
 ```
 
-Run:
+- [ ] **Step 2: Run probe (using with-env.sh, not inline source)**
 
 ```bash
-set -a; source .env.local; set +a
-npm i -D dotenv 2>/dev/null || true
-npx tsx scripts/probe-tts.ts
+bash scripts/with-env.sh tsx scripts/probe-tts.ts
 ```
 
-- [ ] **Step 2: If a voice ID is invalid**
+Expected:
+- `get_voice` lists voices; ≥1 Portuguese (BR) voice, ideally ≥1 PT-PT voice.
+- 2 (BR f/m) and ideally 2 (PT f/m) torture-list MP3s land in `public/audio/`.
+- All MP3s are >= 1KB and pass `isValidMp3`.
 
-Check `https://api.minimax.io/v1/get_voice` (or current MiniMax docs URL for voice listing) using your API key:
+- [ ] **Step 3: If any voice fails, edit `scripts/config.ts` VOICES with real IDs**
+
+Pick from the probe output. Re-run until all 4 voices pass.
+
+- [ ] **Step 4: Commit voice updates and probe script**
 
 ```bash
-curl -s -X GET https://api.minimax.io/v1/get_voice \
-  -H "Authorization: Bearer $MINIMAX_API_KEY" | jq '.system_voice[] | select(.voice_name | test("Portuguese"; "i")) | {voice_id, voice_name}' 2>/dev/null || \
-curl -s -X GET https://api.minimax.io/v1/get_voice \
-  -H "Authorization: Bearer $MINIMAX_API_KEY"
+git add scripts/probe-tts.ts scripts/config.ts
+git commit -m "fix(scripts): confirm MiniMax voice IDs via probe-tts torture test"
 ```
 
-Pick one female + one male voice per variant from the returned list. Edit `scripts/config.ts` `VOICES` constant to use the real IDs.
+- [ ] **Step 5: Manual listen-through (NOT automatable — required before Task 20)**
 
-- [ ] **Step 3: Re-probe**
+Open 2 random MP3s from `public/audio/` in Finder. Confirm:
+- Language is Portuguese, not Spanish/French.
+- "Olá, bom dia." in BR vs PT sounds phonetically different (especially the 'r' in "bom dia").
+- No truncated first phoneme, no robotic artifacts.
 
-```bash
-rm -f public/audio/*.mp3   # clear any failed/empty files from previous attempt
-npx tsx scripts/probe-tts.ts
-```
-
-Expected: 2 MP3s in `public/audio/`. Open one in Finder to verify it actually plays Portuguese.
-
-- [ ] **Step 4: Cleanup probe script**
-
-```bash
-rm scripts/probe-tts.ts
-```
-
-- [ ] **Step 5: Commit voice updates if any**
-
-```bash
-git add scripts/config.ts
-git commit -m "fix(scripts): confirmed MiniMax PT-BR/PT-PT voice IDs" || echo "no changes"
-```
+If quality is bad, document in `scripts/config.ts` comment and continue (better bad audio than no audio for MVP1).
 
 ---
 
@@ -2073,7 +3042,7 @@ git commit -m "data: generated audio for Block 1 (PT-BR + PT-PT)"
 
 ---
 
-### Task 21: verify-content script
+### Task 21: verify-content script (with --strict + isValidMp3 + audio REQUIRED + GC report)
 
 **Files:** Create `scripts/verify-content.ts`. Modify `package.json`.
 
@@ -2084,13 +3053,22 @@ git commit -m "data: generated audio for Block 1 (PT-BR + PT-PT)"
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { BLOCKS } from '@/lib/data/curriculum';
-import { BLOCKS_DIR, DATA_DIR, TTS_OUTPUT } from './config';
-import { ExerciseSchema, type Exercise } from './lib/zod-schemas';
+import { BLOCKS_DIR, DATA_DIR, TTS_OUTPUT, EXERCISES_PER_LESSON, TYPE_TO_TEMPLATE } from './config';
+import { ExerciseSchema, GeneratedExerciseSchema, type Exercise, type ExerciseType } from './lib/zod-schemas';
+import { isValidMp3 } from './lib/minimax-tts';
+import { textsFor } from './lib/audio-collector';
 
 interface ManifestShape {
+  generatedAt: string;
   audioIndex: { br: Record<string, string>; pt: Record<string, string> };
   blocks: Record<string, { exerciseCount: number; audioCount: number }>;
 }
+
+const STRICT = process.env.STRICT === '1';
+
+const AUDIO_REQUIRED: Set<ExerciseType> = new Set([
+  'flashcard', 'listening', 'translation_es_pt', 'translation_pt_es', 'sentence_construction', 'chunk',
+]);
 
 async function main() {
   const errors: string[] = [];
@@ -2099,7 +3077,17 @@ async function main() {
   const manifestPath = path.join(DATA_DIR, 'manifest.json');
   let manifest: ManifestShape;
   try { manifest = JSON.parse(await fs.readFile(manifestPath, 'utf8')); }
-  catch { errors.push(`Manifest missing or invalid: ${manifestPath}`); return done(); }
+  catch { errors.push(`Manifest missing or invalid: ${manifestPath}`); finish(); return; }
+
+  // Per-lección expected count derivado de EXERCISES_PER_LESSON.
+  const expectedPerLesson = (): number => {
+    let total = 0;
+    for (const [type, n] of Object.entries(EXERCISES_PER_LESSON)) {
+      if (n !== null && TYPE_TO_TEMPLATE[type as ExerciseType] !== null) total += n;
+    }
+    return total;
+  };
+  const expected = expectedPerLesson();
 
   for (const b of BLOCKS) {
     if (b.lessons.length === 0) continue;
@@ -2107,31 +3095,70 @@ async function main() {
     let exercises: Exercise[];
     try {
       const raw = JSON.parse(await fs.readFile(file, 'utf8')) as unknown[];
-      exercises = raw.map((x, i) => {
-        const r = ExerciseSchema.safeParse(x);
+      const validated: Exercise[] = [];
+      for (let i = 0; i < raw.length; i++) {
+        const r = ExerciseSchema.safeParse(raw[i]);
         if (!r.success) {
           errors.push(`b${b.id}.json[${i}]: ${r.error.issues[0]?.message}`);
-          return null as any;
+          continue;
         }
-        return r.data;
-      }).filter(Boolean) as Exercise[];
-    } catch {
-      warnings.push(`Block ${b.id} has no generated exercises (b${b.id}.json missing).`);
-      continue;
+        validated.push(r.data);
+      }
+      exercises = validated;
+    } catch (err) {
+      const code = (err as NodeJS.ErrnoException).code;
+      if (code === 'ENOENT') {
+        warnings.push(`Block ${b.id} has no generated exercises (b${b.id}.json missing).`);
+        continue;
+      }
+      throw err;
     }
 
     for (const lesson of b.lessons) {
       const count = exercises.filter(e => e.lessonId === lesson.id).length;
-      if (count < 10) warnings.push(`Lesson ${lesson.id}: only ${count} exercises generated (expected ≥ 10).`);
+      const msg = `Lesson ${lesson.id}: ${count} exercises generated (expected ~${expected}).`;
+      if (count < expected) {
+        (STRICT ? errors : warnings).push(msg);
+      } else if (count === 0) {
+        errors.push(`Lesson ${lesson.id}: ZERO exercises (silent failure).`);
+      }
     }
 
     for (const ex of exercises) {
-      if (!ex.audio) continue;
-      for (const variant of ['br', 'pt'] as const) {
-        const hash = ex.audio[variant].hash;
-        const mp3 = path.join(TTS_OUTPUT, `${hash}.mp3`);
-        try { await fs.access(mp3); }
-        catch { errors.push(`${ex.id}: missing audio file public/audio/${hash}.mp3 (${variant})`); }
+      // GeneratedExercise: contentHash y audio son invariantes.
+      const g = GeneratedExerciseSchema.safeParse(ex);
+      if (!g.success) {
+        if (AUDIO_REQUIRED.has(ex.type) && !ex.audio) {
+          errors.push(`${ex.id} (${ex.type}): audio required but missing.`);
+        }
+        if (!ex.contentHash) {
+          errors.push(`${ex.id}: contentHash missing.`);
+        }
+      }
+      // Si tiene audio, validar que el MP3 existe y es válido.
+      if (ex.audio) {
+        for (const variant of ['br', 'pt'] as const) {
+          const hash = ex.audio[variant].hash;
+          const mp3 = path.join(TTS_OUTPUT, `${hash}.mp3`);
+          try {
+            const stat = await fs.stat(mp3);
+            if (stat.size < 1024) {
+              errors.push(`${ex.id} (${variant}): audio file ${hash}.mp3 is ${stat.size} bytes (corrupt/truncated).`);
+              continue;
+            }
+            const buf = await fs.readFile(mp3);
+            if (!isValidMp3(buf)) {
+              errors.push(`${ex.id} (${variant}): audio file ${hash}.mp3 has invalid MP3 magic bytes.`);
+            }
+          } catch (err) {
+            const code = (err as NodeJS.ErrnoException).code;
+            if (code === 'ENOENT') {
+              errors.push(`${ex.id} (${variant}): missing audio file public/audio/${hash}.mp3`);
+            } else {
+              throw err;
+            }
+          }
+        }
       }
     }
   }
@@ -2140,13 +3167,56 @@ async function main() {
   for (const variant of ['br', 'pt'] as const) {
     for (const [text, hash] of Object.entries(manifest.audioIndex?.[variant] ?? {})) {
       const mp3 = path.join(TTS_OUTPUT, `${hash}.mp3`);
-      try { await fs.access(mp3); }
-      catch { errors.push(`manifest.audioIndex.${variant}["${text.slice(0,30)}..."]: missing ${hash}.mp3`); }
+      try {
+        const stat = await fs.stat(mp3);
+        if (stat.size < 1024) {
+          errors.push(`manifest.${variant}["${text.slice(0,30)}..."]: ${hash}.mp3 is ${stat.size} bytes.`);
+        }
+      } catch {
+        errors.push(`manifest.${variant}["${text.slice(0,30)}..."]: missing ${hash}.mp3`);
+      }
     }
   }
 
-  done();
-  function done() {
+  // GC report: audios en public/audio/ no referenciados por el contenido actual.
+  // No borra automáticamente — solo avisa para que el humano decida.
+  const liveHashes = new Set<string>();
+  for (const b of BLOCKS) {
+    if (b.lessons.length === 0) continue;
+    let exercises: Exercise[] = [];
+    try {
+      const raw = JSON.parse(await fs.readFile(path.join(BLOCKS_DIR, `b${b.id}.json`), 'utf8')) as unknown[];
+      exercises = raw.flatMap(e => {
+        const r = ExerciseSchema.safeParse(e);
+        return r.success ? [r.data] : [];
+      });
+    } catch { continue; }
+    for (const ex of exercises) {
+      for (const t of textsFor(ex, 'br')) {
+        const h = manifest.audioIndex?.br?.[t];
+        if (h) liveHashes.add(h);
+      }
+      for (const t of textsFor(ex, 'pt')) {
+        const h = manifest.audioIndex?.pt?.[t];
+        if (h) liveHashes.add(h);
+      }
+    }
+  }
+  let orphanCount = 0;
+  try {
+    const files = await fs.readdir(TTS_OUTPUT);
+    for (const f of files) {
+      if (!f.endsWith('.mp3')) continue;
+      const hash = f.replace(/\.mp3$/, '');
+      if (!liveHashes.has(hash)) orphanCount++;
+    }
+  } catch {}
+  if (orphanCount > 0) {
+    warnings.push(`GC: ${orphanCount} MP3 file(s) in public/audio/ not referenced by any exercise. Manual cleanup recommended.`);
+  }
+
+  finish();
+  function finish() {
     if (warnings.length) {
       console.log('\nWARNINGS:');
       warnings.forEach(w => console.log('  ⚠', w));
@@ -2156,7 +3226,7 @@ async function main() {
       errors.forEach(e => console.log('  ✗', e));
       process.exit(1);
     }
-    console.log(`\n✓ Verification passed (${warnings.length} warnings, 0 errors).`);
+    console.log(`\n✓ Verification passed (${warnings.length} warnings, 0 errors, mode: ${STRICT ? 'STRICT' : 'default'}).`);
   }
 }
 
@@ -2179,13 +3249,13 @@ main().catch(err => { console.error(err); process.exit(1); });
 npm run verify:content
 ```
 
-Expected: `✓ Verification passed`. May show warnings for blocks 2-10 (they have no lessons yet).
+Expected: `✓ Verification passed`. Warnings for blocks 2-10 (no lessons yet) are normal. Default mode warns on low counts; set `STRICT=1 npm run verify:content` to fail.
 
 - [ ] **Step 4: Commit**
 
 ```bash
 git add scripts/verify-content.ts package.json
-git commit -m "feat(scripts): verify-content (schema + audio file integrity)"
+git commit -m "feat(scripts): verify-content (strict mode, MP3 magic check, audio-required, orphan GC report)"
 ```
 
 ---
@@ -2248,50 +3318,67 @@ git commit -m "docs: README with pipeline usage"
 
 ### Task 23: Final end-to-end verification
 
-This task is a verification gate, not new code.
+This task is a verification gate, not new code. Several gates — none pass-through.
 
-- [ ] **Step 1: Clean rebuild from scratch**
+- [ ] **Step 1: Static gates (must pass before any regeneration)**
+
+```bash
+npm run typecheck
+npm test
+STRICT=1 npm run verify:content  # STRICT mode en esta verificación final
+```
+
+Expected:
+- typecheck: 0 errors. If any, fix and re-run before continuing.
+- npm test: all unit tests pass.
+- STRICT verify:content: 0 errors. Warnings for blocks 2-10 (no lessons) are normal.
+
+If any gate fails, **stop and fix**. Do NOT proceed to Step 2.
+
+- [ ] **Step 2: Clean LLM cache + full pipeline rerun on Block 1**
 
 ```bash
 rm -rf scripts/.cache
-npm run typecheck
-npm test
-```
-
-Expected: typecheck clean, all unit tests pass.
-
-- [ ] **Step 2: Full pipeline rerun on Block 1**
-
-```bash
-set -a; source .env.local; set +a
-npm run generate:curriculum
-npm run generate:content -- --block 1
-npm run generate:audio -- --block 1
-npm run verify:content
+bash scripts/with-env.sh npm run generate:curriculum
+bash scripts/with-env.sh npm run generate:content -- --block 1
+bash scripts/with-env.sh npm run generate:audio -- --block 1
+bash scripts/with-env.sh npm run verify:content
 ```
 
 Expected:
 - `generate:curriculum` writes concepts.json (no diff vs committed version).
-- `generate:content` re-runs LLM for Block 1 (cache was deleted) → produces b1.json. Compare to previous committed b1.json: should be very similar (LLM is somewhat deterministic at temp 0.4 but not exactly).
-- `generate:audio` is fully cached (audio cache is committed in `public/audio/`) → 0 new API calls, all `cached: N`.
+- `generate:content` re-runs LLM for Block 1 (cache was deleted) → produces b1.json.
+- `generate:audio` mostly cached (audios committed in `public/audio/`); for any new texts, makes TTS calls.
 - `verify:content` passes.
 
-- [ ] **Step 3: Reset b1.json if LLM produced minor differences**
-
-If `git diff lib/data/blocks/b1.json` shows changes you don't want, restore:
+- [ ] **Step 3: Idempotency check (second rerun should be no-op)**
 
 ```bash
-git checkout lib/data/blocks/b1.json
+bash scripts/with-env.sh npm run generate:content -- --block 1
+bash scripts/with-env.sh npm run generate:audio -- --block 1
+git diff lib/data/blocks/b1.json lib/data/manifest.json
 ```
 
-- [ ] **Step 4: Final commit if anything changed**
+Expected: `git diff` shows only changes due to LLM non-determinism at temp 0.4 (acceptable). If major drift, consider lowering `temperature` in `callLlm` defaults or accepting the documented variance.
+
+- [ ] **Step 4: Manual listen-through**
+
+Open 2 random MP3s from `public/audio/`. Confirm Portuguese audio quality, no truncation, BR/PT distinction audible.
+
+- [ ] **Step 5: Reset b1.json if LLM produced unacceptable differences**
+
+```bash
+git checkout lib/data/blocks/b1.json lib/data/manifest.json
+```
+
+- [ ] **Step 6: Final commit if anything changed**
 
 ```bash
 git status
 # If clean, done. Otherwise add + commit.
 ```
 
-- [ ] **Step 5: Tag MVP #1**
+- [ ] **Step 7: Tag MVP #1**
 
 ```bash
 git tag -a mvp-1-pipeline -m "MVP #1: pipeline + Block 1 generated"

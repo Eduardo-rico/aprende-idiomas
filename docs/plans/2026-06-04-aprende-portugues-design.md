@@ -159,48 +159,56 @@ Permite: dashboard "tu maestría por concepto", drill "refuerza mis 10 conceptos
 ### 4.3. Ejercicios (`lib/data/blocks/b{N}.json`)
 
 ```ts
-type Exercise = {
-  id: string;              // 'b3-pres-001'
+// ID es derivado del contenido (sha256 de stableStringify({type, data, ptOverrides, esContrast}),
+// truncado a 8 chars) para que el SRS sea estable a través de regeneraciones del LLM.
+// CRÍTICO: el ID posicional (lessonId-type-NNN) es frágil — el cache hit del LLM puede
+// producir distintos items en distintas posiciones, rompiendo identidades de cards.
+type ExerciseId = string; // 8-char content hash
+
+// Exercise como discriminated union sobre `type`. El tipo de `data` se infiere del literal.
+type Exercise = FlashcardExercise | FillBlankExercise | ListeningExercise
+  | TranslationExercise | VerbPrepositionExercise
+  | SentenceConstructionExercise | ChunkExercise;
+
+type ExerciseType = Exercise['type']; // union de los 8 literales
+
+type FlashcardExercise = {
+  id: ExerciseId;
   blockId: number;
   lessonId: string;
-  type:
-    | 'flashcard'
-    | 'fill_blank'
-    | 'listening'
-    | 'translation_es_pt'
-    | 'translation_pt_es'
-    | 'verb_preposition'
-    | 'sentence_construction'
-    | 'chunk';
+  type: 'flashcard';
   difficulty: 1 | 2 | 3;
-  concepts: ConceptId[];   // entidad de primera clase, no tags sueltos
-  tags: string[];          // metadata adicional (ej. 'falso-amigo')
-  contentHash: string;     // sha256 del data; cambio invalida SRS de la card
-  data: ExerciseData;      // versión base (PT-BR por defecto, o común)
-  ptOverrides?: Partial<ExerciseData>;  // solo lo que cambia en PT-PT
-  esContrast?: string;     // pista para hispanohablantes (opcional)
-  audio?: {
-    br: { hash: string; voice: string };
-    pt: { hash: string; voice: string };
-  };
+  concepts: ConceptId[];        // IDs válidos referenciados en concepts.json (validado post-generación)
+  tags: string[];               // ej. 'falso-amigo', 'irregular'
+  contentHash: string;
+  data: { front: string; back: string; example?: string };
+  ptOverrides?: { type: 'flashcard'; front?: string; back?: string; example?: string };
+  esContrast?: string;
+  audio?: { br: { hash: string; voice: string }; pt: { hash: string; voice: string } };
+};
+// ... un struct por tipo. data y ptOverrides son variante-específicos.
+
+// Estado "generado y completo" — invariante al disco: tiene contentHash Y audio.
+// Plan #1 debe commitear SOLO archivos que satisfagan esta invariante.
+type GeneratedExercise = Exercise & {
+  contentHash: string;
+  audio: { br: { hash: string; voice: string }; pt: { hash: string; voice: string } };
 };
 ```
 
-Resolución por variante:
+Resolución por variante — se re-parsea contra el schema del tipo declarado:
 ```ts
-const resolved = variant === 'pt'
-  ? { ...exercise.data, ...exercise.ptOverrides }
-  : exercise.data;
+function resolveExercise(ex: Exercise, variant: 'br' | 'pt'): Exercise['data'] {
+  if (variant !== 'pt' || !ex.ptOverrides) return ex.data;
+  const merged = { ...ex.data, ...ex.ptOverrides };
+  // re-validar: si ptOverrides tenía campos inválidos para el tipo, throw.
+  return ExerciseDataByTypeSchema[ex.type].parse(merged);
+}
 ```
 
-`ExerciseData` es un discriminated union por `type`. Ejemplos:
-- `flashcard`: `{ front: string; back: string; example?: string }`
-- `fill_blank`: `{ sentence: string; blanks: Array<{ position: number; answer: string; alternatives?: string[] }> }`
-- `listening`: `{ audioText: string; question: string; options?: string[]; answer: string }`
-- `translation_es_pt` / `translation_pt_es`: `{ source: string; target: string; acceptedAlternatives?: string[] }`
-- `verb_preposition`: `{ verb: string; sentence: string; options: string[]; answer: string }`
-- `sentence_construction`: `{ words: string[]; answer: string[]; translation?: string }`
-- `chunk`: `{ chunk: string; meaning: string; examples: Array<{ sentence: string; gloss?: string }> }`
+`ptOverrides` es un discriminated union con los mismos miembros que Exercise pero todos los campos opcionales. Cruzar tipos (ej. `ptOverrides.audioText` en un flashcard) no compila y no parsea. Esto elimina la clase de bug "Frankenstein data" detectada en el review.
+
+Tipos de ejercicio activos en MVP1: `flashcard`, `fill_blank`, `listening`, `translation_es_pt`, `translation_pt_es`, `verb_preposition`. `sentence_construction` y `chunk` quedan en el enum (para que el data model no requiera migración en Plan #2) pero su generación se difiere.
 
 ### 4.4. Mini-historias (`lib/data/stories/b{N}-s{M}.json`)
 
