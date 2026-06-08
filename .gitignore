@@ -1,9 +1,38 @@
+# dependencies
 node_modules/
+.pnp
+.pnp.js
+
+# next.js
 .next/
 out/
+build/
+
+# env
 .env
 .env.local
-scripts/.cache/
-.DS_Store
+.env*.local
+*.local
+
+# testing
+coverage/
+.playwright/
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 *.log
-tsconfig.tsbuildinfo
+
+# misc
+.DS_Store
+*.pem
+.vscode/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# pipeline cache (regenerable, committed only output JSONs + audio)
+scripts/.cache/
+public/audio/*.mp3.tmp
