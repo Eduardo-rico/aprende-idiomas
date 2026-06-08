@@ -1,0 +1,74 @@
+[
+  {
+    "id": "b1-acentos",
+    "name": "Acentos diacríticos",
+    "blockId": 1,
+    "description": "Agudo, grave, circunflejo, tilde, cedilha",
+    "prereqs": []
+  },
+  {
+    "id": "b1-alfabeto",
+    "name": "Alfabeto portugués",
+    "blockId": 1,
+    "description": "Letras y nombres en portugués",
+    "prereqs": []
+  },
+  {
+    "id": "b1-corresp-ll-lh",
+    "name": "Correspondencia -ll- → -lh-",
+    "blockId": 1,
+    "description": "Pasaje sistemático ES→PT",
+    "prereqs": []
+  },
+  {
+    "id": "b1-corresp-nh-ny",
+    "name": "Correspondencia -ñ → -nh-",
+    "blockId": 1,
+    "description": "Pasaje sistemático ES→PT",
+    "prereqs": []
+  },
+  {
+    "id": "b1-corresp-on-ao",
+    "name": "Correspondencia -ón → -ão",
+    "blockId": 1,
+    "description": "Pasaje sistemático ES→PT",
+    "prereqs": []
+  },
+  {
+    "id": "b1-h-muda",
+    "name": "H muda",
+    "blockId": 1,
+    "description": "H inicial siempre muda",
+    "prereqs": []
+  },
+  {
+    "id": "b1-pron-rr-r",
+    "name": "Pronunciación rr/r inicial",
+    "blockId": 1,
+    "description": "En BR como /h/; en PT vibrante",
+    "prereqs": []
+  },
+  {
+    "id": "b1-pron-s-final",
+    "name": "Pronunciación de \"s\" final",
+    "blockId": 1,
+    "description": "BR /s/; PT /ʃ/",
+    "prereqs": []
+  },
+  {
+    "id": "b1-silaba-tonica",
+    "name": "Sílaba tónica",
+    "blockId": 1,
+    "description": "Reglas de acentuación tónica",
+    "prereqs": [
+      "b1-acentos"
+    ]
+  },
+  {
+    "id": "b1-vogais-nasais",
+    "name": "Vocales nasales",
+    "blockId": 1,
+    "description": "ã, õ, am, em, im, om, um",
+    "prereqs": []
+  }
+]
