@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg: oklch(0.985 0.02 80);            /* #FFF8E7 cream */
+  --color-bg-elevated: oklch(1 0 0);
+  --color-fg: oklch(0.18 0.02 80);              /* warm dark */
+  --color-fg-muted: oklch(0.5 0.02 80);
+  --color-border: oklch(0.9 0.02 80);
+  --color-primary: oklch(0.86 0.18 95);         /* #FFD60A yellow */
+  --color-accent: oklch(0.62 0.16 155);         /* #00A86B green */
+  --color-error: oklch(0.7 0.18 22);            /* #FF6B6B coral */
+  --color-info: oklch(0.7 0.12 230);            /* #4DA8DA blue */
+  --font-display: "Fraunces", serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+.dark {
+  --color-bg: oklch(0.16 0.02 80);
+  --color-bg-elevated: oklch(0.22 0.02 80);
+  --color-fg: oklch(0.95 0.02 80);
+  --color-fg-muted: oklch(0.7 0.02 80);
+  --color-border: oklch(0.3 0.02 80);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-fg);
+  --color-muted: var(--color-fg-muted);
+  --color-border: var(--color-border);
+  --color-primary: var(--color-primary);
+  --color-accent: var(--color-accent);
+  --color-destructive: var(--color-error);
+  --color-info: var(--color-info);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+body { font-family: var(--font-sans); background: var(--color-bg); color: var(--color-fg); }
+h1, h2, h3, h4 { font-family: var(--font-display); }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes wave {
+  0%, 100% { height: 0.4rem; }
+  50% { height: 1rem; }
 }
+.wave-bar { animation: wave 0.6s ease-in-out infinite; height: 0.4rem; }
