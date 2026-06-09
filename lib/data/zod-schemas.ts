@@ -100,6 +100,20 @@ const VerbPrepositionOverride = z.strictObject(VerbPrepositionData.shape).partia
 const SentenceConstructionOverride = z.strictObject(SentenceConstructionData.shape).partial();
 const ChunkOverride = z.strictObject(ChunkData.shape).partial();
 
+// Map para resolver el override schema (strict) por tipo. El resolver del
+// cliente (lib/exercise-resolver.ts) lo usa para rechazar ptOverrides con
+// campos de otro tipo (ej. { chunk } sobre un flashcard) antes de mergear.
+export const PtOverrideByTypeSchema = {
+  flashcard: FlashcardOverride,
+  fill_blank: FillBlankOverride,
+  listening: ListeningOverride,
+  translation_es_pt: TranslationOverride,
+  translation_pt_es: TranslationOverride,
+  verb_preposition: VerbPrepositionOverride,
+  sentence_construction: SentenceConstructionOverride,
+  chunk: ChunkOverride,
+} as const;
+
 // ─── Exercise: discriminated union sobre `type` ────────────────
 // CRÍTICO: el data y ptOverrides son variante-específicos. Cruzar tipos
 // (ej. ptOverrides.audioText en un flashcard) no parsea.
