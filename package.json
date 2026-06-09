@@ -11,12 +11,12 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "generate:curriculum": "tsx scripts/generate-curriculum.ts",
-    "generate:content":    "tsx scripts/generate-content.ts",
-    "generate:audio":      "tsx scripts/generate-audio.ts",
-    "generate:stories":    "tsx scripts/generate-stories.ts",
-    "generate:all":        "npm run generate:curriculum && npm run generate:content && npm run generate:audio && npm run verify:content",
-    "verify:content":      "tsx scripts/verify-content.ts",
-    "probe:tts":           "tsx scripts/probe-tts.ts"
+    "generate:content": "tsx scripts/generate-content.ts",
+    "generate:audio": "tsx scripts/generate-audio.ts",
+    "generate:stories": "tsx scripts/generate-stories.ts",
+    "generate:all": "npm run generate:curriculum && npm run generate:content && npm run generate:audio && npm run verify:content",
+    "verify:content": "tsx scripts/verify-content.ts",
+    "probe:tts": "tsx scripts/probe-tts.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.102.0",
@@ -44,6 +44,7 @@
     "@vitest/ui": "^4.1.8",
     "eslint": "^9",
     "eslint-config-next": "16.2.7",
+    "fake-indexeddb": "^6.2.5",
     "jsdom": "^29.1.1",
     "tailwindcss": "^4",
     "tsx": "^4.22.4",
