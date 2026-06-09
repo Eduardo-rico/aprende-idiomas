@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aprende Português
 
-## Getting Started
+App de aprendizaje estructurado de portugués (BR + PT) para hispanohablantes. Sigue el currículo de 10 bloques: fonética → morfología → verbos → subjuntivo → sintaxis → léxico → variación.
 
-First, run the development server:
+**Status:** MVP #1 — pipeline de generación + Bloque 1 (fonética) generado. UI en próximo plan.
+
+## Setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+cp .env.local.example .env.local
+# Editar .env.local y pegar MINIMAX_API_KEY real
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Comandos
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Comando | Qué hace |
+|---|---|
+| `npm run dev` | Inicia Next.js en http://localhost:3000 |
+| `npm test` | Corre tests unitarios (vitest) |
+| `npm run typecheck` | TypeScript en modo `--noEmit` |
+| `npm run generate:curriculum` | Escribe `lib/data/concepts.json` desde curriculum.ts |
+| `npm run generate:content -- --block N` | Genera ejercicios del bloque N con MiniMax LLM |
+| `npm run generate:audio -- --block N` | Genera MP3s del bloque N con MiniMax TTS |
+| `npm run generate:all` | Pipeline completo de generación |
+| `npm run verify:content` | Valida JSONs + integridad de audios |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Idempotencia
 
-## Learn More
+Todas las llamadas a MiniMax están cacheadas por hash determinista:
+- **LLM cache:** `scripts/.cache/llm/<hash>.json` (gitignored, regenerable).
+- **Audio:** `public/audio/<hash>.mp3` (committed). Mismo texto + voz + variante = mismo hash = mismo archivo.
 
-To learn more about Next.js, take a look at the following resources:
+Re-ejecutar cualquier script con todo cacheado no llama a la API y no produce git diff. Para forzar regeneración: `--force`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Estructura
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Ver `docs/plans/2026-06-04-aprende-portugues-design.md` para el diseño completo.
