@@ -81,6 +81,17 @@ export const ExerciseDataByTypeSchema = {
 // Usamos strictObject + partial para que ptOverrides rechace campos de otro
 // tipo (ej. { chunk, meaning, examples } en un flashcard). En Zod 4 un
 // `.partial()` regular permite unknown keys y eso rompe la invariante.
+//
+// nullTolerance: el LLM emite literalmente `"ptOverrides": null` (en vez de
+// omitir el campo) en muchos items. Zod `.optional()` solo acepta undefined,
+// por lo que `null` se rechaza. `nullTolerance(s)` envuelve un schema opcional
+// para que también acepte `null` y lo transforme en undefined antes de validar.
+const nullTolerance = <T extends z.ZodType>(schema: T) =>
+  z.preprocess(
+    (v) => (v === null ? undefined : v),
+    schema.optional(),
+  ) as unknown as z.ZodOptional<T>;
+
 const FlashcardOverride = z.strictObject(FlashcardData.shape).partial();
 const FillBlankOverride = z.strictObject(FillBlankData.shape).partial();
 const ListeningOverride = z.strictObject(ListeningData.shape).partial();
@@ -107,42 +118,42 @@ const BaseExercise = z.object({
 const FlashcardEx = BaseExercise.extend({
   type: z.literal('flashcard'),
   data: FlashcardData,
-  ptOverrides: FlashcardOverride.optional(),
+  ptOverrides: nullTolerance(FlashcardOverride),
 });
 const FillBlankEx = BaseExercise.extend({
   type: z.literal('fill_blank'),
   data: FillBlankData,
-  ptOverrides: FillBlankOverride.optional(),
+  ptOverrides: nullTolerance(FillBlankOverride),
 });
 const ListeningEx = BaseExercise.extend({
   type: z.literal('listening'),
   data: ListeningData,
-  ptOverrides: ListeningOverride.optional(),
+  ptOverrides: nullTolerance(ListeningOverride),
 });
 const TranslationEsPtEx = BaseExercise.extend({
   type: z.literal('translation_es_pt'),
   data: TranslationData,
-  ptOverrides: TranslationOverride.optional(),
+  ptOverrides: nullTolerance(TranslationOverride),
 });
 const TranslationPtEsEx = BaseExercise.extend({
   type: z.literal('translation_pt_es'),
   data: TranslationData,
-  ptOverrides: TranslationOverride.optional(),
+  ptOverrides: nullTolerance(TranslationOverride),
 });
 const VerbPrepositionEx = BaseExercise.extend({
   type: z.literal('verb_preposition'),
   data: VerbPrepositionData,
-  ptOverrides: VerbPrepositionOverride.optional(),
+  ptOverrides: nullTolerance(VerbPrepositionOverride),
 });
 const SentenceConstructionEx = BaseExercise.extend({
   type: z.literal('sentence_construction'),
   data: SentenceConstructionData,
-  ptOverrides: SentenceConstructionOverride.optional(),
+  ptOverrides: nullTolerance(SentenceConstructionOverride),
 });
 const ChunkEx = BaseExercise.extend({
   type: z.literal('chunk'),
   data: ChunkData,
-  ptOverrides: ChunkOverride.optional(),
+  ptOverrides: nullTolerance(ChunkOverride),
 });
 
 export const ExerciseSchema = z.discriminatedUnion('type', [
