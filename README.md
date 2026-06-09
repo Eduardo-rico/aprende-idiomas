@@ -36,3 +36,4 @@ Re-ejecutar cualquier script con todo cacheado no llama a la API y no produce gi
 ## Estructura
 
 Ver `docs/plans/2026-06-04-aprende-portugues-design.md` para el diseño completo.
+# aprende-idiomas
