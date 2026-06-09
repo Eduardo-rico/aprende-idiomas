@@ -27,11 +27,11 @@ export function ttsHash(req: TtsRequest): string {
   });
 }
 
-// language_boost: 'Portuguese' para BR, 'Portuguese (Portugal)' para PT.
-// Verificado en Task 19 probe — si MiniMax no acepta el string específico,
-// caemos al genérico y lo documentamos.
-function languageBoost(variant: 'br' | 'pt'): string {
-  return variant === 'pt' ? 'Portuguese (Portugal)' : 'Portuguese';
+// language_boost: MiniMax acepta SOLO strings de un enum estricto (ver
+// System Voice ID List). 'Portuguese' es el único válido para nuestro caso.
+// La diferenciación BR vs PT se hace por la voz elegida, no por language_boost.
+function languageBoost(_variant: 'br' | 'pt'): string {
+  return 'Portuguese';
 }
 
 // Valida que un buffer es un MP3 razonable: >= 1KB y empieza con magic

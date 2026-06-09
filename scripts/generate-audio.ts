@@ -4,7 +4,7 @@ import path from 'node:path';
 import pLimit from 'p-limit';
 import { BLOCKS, getBlock } from '@/lib/data/curriculum';
 import {
-  BLOCKS_DIR, DATA_DIR, TTS_CONCURRENCY, VOICES, DEFAULT_VOICE,
+  BLOCKS_DIR, DATA_DIR, TTS_CONCURRENCY, TTS_DELAY_MS, VOICES, DEFAULT_VOICE,
   TTS_MODEL, LLM_MODEL,
 } from './config';
 import { collectAudioJobs, textsFor } from './lib/audio-collector';
@@ -83,9 +83,11 @@ async function main() {
       console.log(`\n=== Block ${b.id}: ${jobs.length} audio jobs ===`);
 
       // allSettled: 1 fallo no mata los otros 599 jobs.
+      // TTS_DELAY_MS entre requests para evitar RPM rate limit (código 1002).
       let done = 0;
       const settled = await Promise.allSettled(jobs.map(j => limit(async () => {
         const voice = VOICES[j.variant][DEFAULT_VOICE];
+        if (TTS_DELAY_MS > 0 && done > 0) await new Promise(r => setTimeout(r, TTS_DELAY_MS));
         const result = await generateTts({ text: j.text, voiceId: voice, variant: j.variant });
         done++;
         if (done % 20 === 0) console.log(`  progress: ${done}/${jobs.length}`);

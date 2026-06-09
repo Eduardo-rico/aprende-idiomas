@@ -20,14 +20,30 @@ export const TTS_URL      = 'https://api.minimax.io/v1/t2a_v2';
 
 // Concurrency
 export const LLM_CONCURRENCY = 8;
-export const TTS_CONCURRENCY = 4;
+export const TTS_CONCURRENCY = 1; // MiniMax RPM rate-limit; secuencial evita 1002
+export const TTS_DELAY_MS = 1500;   // 1.5s entre requests = 40 RPM, debajo del límite
 
 // Voices — placeholders, confirmed via /v1/get_voice in Task 19.
 // Each variant has a female + male voice. Default to female unless overridden.
 export const VOICES: Record<'br' | 'pt', Record<'f' | 'm', string>> = {
-  br: { f: 'Portuguese_Brazil_FemaleA', m: 'Portuguese_Brazil_MaleA' },
-  pt: { f: 'Portuguese_Portugal_FemaleA', m: 'Portuguese_Portugal_MaleA' },
-};
+  // Voces portuguesas dedicadas de MiniMax (líneas 197-269 de la doc oficial
+  // System Voice ID List). El modelo 'speech-2.8-hd' las pronuncia naturalmente
+  // en portugués — sin acento robótico. Las voces son multilenguaje, pero con
+  // language_boost: 'Portuguese' el modelo se adapta.
+  //
+  // BR: voces cálidas, ritmo brasileiro (Sentimental Lady, Jovial Man).
+  // PT: voces más reservadas, ritmo peninsular (Wise Lady, Narrator).
+  // El language_boost NO diferencia BR/PT en MiniMax; la diferencia se hace
+  // eligiendo voces con cadencia más animada vs más formal.
+  br: {
+    f: 'Portuguese_SentimentalLady',
+    m: 'Portuguese_JovialMan',
+  },
+  pt: {
+    f: 'Portuguese_Wiselady',
+    m: 'Portuguese_Narrator',
+  },
+} as const;
 
 export const DEFAULT_VOICE: 'f' | 'm' = 'f';
 
