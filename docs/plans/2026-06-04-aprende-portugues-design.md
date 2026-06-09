@@ -184,15 +184,37 @@ type FlashcardExercise = {
   data: { front: string; back: string; example?: string };
   ptOverrides?: { type: 'flashcard'; front?: string; back?: string; example?: string };
   esContrast?: string;
-  audio?: { br: { hash: string; voice: string }; pt: { hash: string; voice: string } };
+  // Audio: por cada variante BR/PT, un set de variantes de voz (gender + emotion).
+  // El usuario puede togglear cuál variante escuchar. Por default se elige
+  // automáticamente: female neutral para flashcard/listening, male neutral
+  // para chunks/formal. El LLM puede sugerir 'gender' y 'emotion' por exercise
+  // (ver campo `suggested` abajo) y la generación puede override.
+  suggested?: { gender?: 'f' | 'm'; emotion?: 'neutral'|'happy'|'sad'|'angry'|'calm'|'surprised' };
+  audio?: {
+    br: AudioVariantSet;
+    pt: AudioVariantSet;
+  };
 };
-// ... un struct por tipo. data y ptOverrides son variante-específicos.
+
+// Cada variant set tiene 6 audios por variante (3 genders × 2 emotions)
+// para que el usuario elija. Costo: 6x el cómputo de TTS, pero el cache hash
+// lo hace gratis en reruns. Para Bloque 1 ya generado, el regen con --force
+// recupera verb_preposition pero NO regenera variantes (pueden agregarse
+// después con una flag).
+type AudioVariantSet = {
+  f_neutral:  { hash: string; voice: string };
+  m_neutral:  { hash: string; voice: string };
+  f_happy:    { hash: string; voice: string };
+  m_happy:    { hash: string; voice: string };
+  f_calm:     { hash: string; voice: string };
+  m_calm:     { hash: string; voice: string };
+};
 
 // Estado "generado y completo" — invariante al disco: tiene contentHash Y audio.
 // Plan #1 debe commitear SOLO archivos que satisfagan esta invariante.
 type GeneratedExercise = Exercise & {
   contentHash: string;
-  audio: { br: { hash: string; voice: string }; pt: { hash: string; voice: string } };
+  audio: { br: AudioVariantSet; pt: AudioVariantSet };
 };
 ```
 

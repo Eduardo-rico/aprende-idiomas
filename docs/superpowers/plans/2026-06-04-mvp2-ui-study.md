@@ -267,7 +267,9 @@ export type ConceptId = string;
 export type LessonId = string;
 export type BlockId = number;
 export type Variant = "br" | "pt";
-export type AudioVariant = "f_neutral" | "m_neutral" | "f_happy" | "m_happy" | "f_calm" | "m_calm";
+// CRITICAL FIX (C3): 1 voice per variant until Plan #4 regen. The 6-voice
+// union (f/m × neutral/happy/calm) returns when b1.json carries AudioVariantSet.
+export type AudioVariant = "default";
 export type Rating = 1 | 2 | 3 | 4;
 export const RATING = { Again: 1, Hard: 2, Good: 3, Easy: 4 } as const;
 
@@ -352,9 +354,11 @@ class PortuguesDB extends Dexie {
     this.version(1).stores({
       cards: "id, blockId, lessonId, nextReviewAt, state, [blockId+nextReviewAt], [lessonId+nextReviewAt]",
       sessions: "++id, startedAt, blockId, lessonId, mode",
-      events: "++id, ts, cardId, sessionId, [cardId+ts], [ts+conceptIds]",
+      events: "++id, ts, cardId, sessionId, [cardId+ts], *conceptIds",
       errorQueue: "cardId, ts",
-      errorReasons: "++id, cardId, ts, [conceptIds+ts]",
+      // FIX: Dexie does not support compound indexes over arrays.
+      // Use multiEntry (*conceptIds) for per-concept lookups.
+      errorReasons: "++id, cardId, ts, *conceptIds",
       settings: "key",
       achievements: "id, unlockedAt",
       streak: "date",
@@ -419,12 +423,17 @@ describe("FSRS wrapper", () => {
     expect(c2.reps).toBe(1);
   });
 
-  it("schedule is deterministic with fixed now", () => {
-    const c0 = newCard("abc12345", 1, "b1-l1");
+  it("schedule is deterministic: same (card, rating, now) → same nextReviewAt for any card", () => {
+    // CRITICAL FIX: original test was a tautology (schedule(c0, ..., fixed) === schedule(c0, ..., fixed)).
+    // Real invariant: any two cards with same (now, rating) get same delta.
     const fixed = new Date("2026-06-08T12:00:00Z");
-    const c1 = schedule(c0, RATING.Good, fixed);
-    const c2 = schedule(c0, RATING.Good, fixed);
-    expect(c1.nextReviewAt.toISOString()).toBe(c2.nextReviewAt.toISOString());
+    const a0 = newCard("a1b2c3d4", 1, "b1-l1");
+    const b0 = newCard("x9y8z7w6", 2, "b1-l2");
+    const a1 = schedule(a0, RATING.Good, fixed);
+    const b1 = schedule(b0, RATING.Good, fixed);
+    const aDelta = a1.nextReviewAt.getTime() - a0.nextReviewAt.getTime();
+    const bDelta = b1.nextReviewAt.getTime() - b0.nextReviewAt.getTime();
+    expect(aDelta).toBe(bDelta);
   });
 });
 ```
@@ -625,11 +634,56 @@ git commit -m "feat(mastery): weightedAccuracy + masteryPct + recordAnswerForCon
 
 ### Task 5: Exercise resolver (`lib/exercise-resolver.ts`) + tests
 
-This is the runtime mirror of design doc §4.3 — it resolves `ptOverrides` against the discriminated union, re-validating with Zod.
+This task uses the **real** zod schemas from `lib/data/zod-schemas.ts` (not a duplicate). One source of truth: `lib/data/zod-schemas.ts` is the file that `scripts/lib/zod-schemas.ts` re-exports from.
 
-**Files:** Create `lib/exercise-resolver.ts`. Create `tests/unit/exercise-resolver.test.ts`.
+**CRITICAL fixes applied:**
+- C2: reuses `lib/data/zod-schemas.ts` (moved from scripts/ — see Step 0)
+- C3: AudioVariant simplified to 1 voice per variant (matches `b1.json` data)
+- C7 (I-prefixed): `resolveExerciseData` test now also covers `ptOverrides: null` (server emits this)
 
-- [ ] **Step 1: Tests**
+**Files:** Create `lib/data/zod-schemas.ts` (moved from scripts/ in Step 0). Create `lib/exercise-resolver.ts`. Create `tests/unit/exercise-resolver.test.ts`.
+
+- [ ] **Step 0: Move zod-schemas from scripts to lib/data (C2)**
+
+```bash
+mv scripts/lib/zod-schemas.ts lib/data/zod-schemas.ts
+sed -i '' "s|'./zod-schemas'|'@/lib/data/zod-schemas'|" scripts/lib/zod-schemas.ts
+# (Note: file becomes a thin re-export; rename or just adjust import path.)
+```
+
+Then edit `scripts/lib/zod-schemas.ts` to be a one-liner re-export:
+
+```ts
+// scripts/lib/zod-schemas.ts — re-export from canonical location.
+export * from "@/lib/data/zod-schemas";
+```
+
+The original `lib/data/zod-schemas.ts` lives in this Task's commit. Update its import path for ExerciseDataByTypeSchema (no longer needs to live in scripts — we import from `@/lib/data/zod-schemas` directly).
+
+- [ ] **Step 1: Update zod-schemas for 1-voice audio (C3)**
+
+In `lib/data/zod-schemas.ts`, replace the `AudioVariantSetSchema` block (which currently has 6 voices) with:
+
+```ts
+// CRITICAL: b1.json (committed) has 1 audio per variant, stored FLAT:
+//   audio: { br: { hash, voice }, pt: { hash, voice } }
+// (verified against the committed data — no nested voice level).
+// Schema MUST match the data or the client crashes reading.
+// The 6-voice AudioVariantSet per design doc §4.3 is DEFERRED to Plan #4 (regen).
+const AudioRefSchema = z.object({ hash: z.string().min(1), voice: z.string().min(1) });
+// audio: { br: AudioRef, pt: AudioRef }
+```
+
+(In `BaseExercise`, the audio field is `audio: z.object({ br: AudioRefSchema, pt: AudioRefSchema }).optional()` — this already matches the existing schema in `lib/data/zod-schemas.ts`, so **no schema change needed**; just verify.)
+
+And in `AudioVariant` enum (`lib/db/schema.ts`), change:
+```ts
+export type AudioVariant = "default";
+```
+
+Update `VoicePicker` (Task 10) to show only the "default" option instead of 6.
+
+- [ ] **Step 2: Tests**
 
 ```ts
 // tests/unit/exercise-resolver.test.ts
@@ -647,43 +701,52 @@ const exBr = {
   data: { front: "ônibus", back: "ônibus" },
   ptOverrides: { back: "autocarro" },
   audio: {
-    br: { f_neutral: { hash: "hbr", voice: "v" } } as any,
-    pt: { f_neutral: { hash: "hpt", voice: "v" } } as any,
+    br: { hash: "hbr", voice: "v" },
+    pt: { hash: "hpt", voice: "v" },
   },
 };
 
 describe("resolveExerciseData", () => {
   it("BR returns data unchanged", () => {
-    const out = resolveExerciseData(exBr, "br");
-    expect(out.back).toBe("ônibus");
+    expect(resolveExerciseData(exBr, "br").back).toBe("ônibus");
   });
 
   it("PT applies ptOverrides and re-validates", () => {
-    const out = resolveExerciseData(exBr, "pt");
-    expect(out.back).toBe("autocarro");
+    expect(resolveExerciseData(exBr, "pt").back).toBe("autocarro");
   });
 
   it("PT without overrides returns data", () => {
-    const noOverride = { ...exBr, ptOverrides: undefined };
-    const out = resolveExerciseData(noOverride, "pt");
-    expect(out.back).toBe("ônibus");
+    const noOverride: any = { ...exBr, ptOverrides: undefined };
+    expect(resolveExerciseData(noOverride, "pt").back).toBe("ônibus");
+  });
+
+  it("re-validates with Zod: invalid ptOverrides type throws", () => {
+    // flashcard with chunk-typed ptOverrides must fail (C7-I fix)
+    const bad: any = { ...exBr, ptOverrides: { chunk: "x", meaning: "y", examples: [{ sentence: "s" }] } };
+    expect(() => resolveExerciseData(bad, "pt")).toThrow();
+  });
+
+  it("tolerates ptOverrides: null (LLM emits null when no override)", () => {
+    // Server schema (zod-schemas.ts) has nullTolerance; resolver should also tolerate.
+    const nullOverride: any = { ...exBr, ptOverrides: null };
+    expect(resolveExerciseData(nullOverride, "pt").back).toBe("ônibus");
   });
 });
 
 describe("resolveAudioHash", () => {
-  it("returns the hash for the requested variant", () => {
-    expect(resolveAudioHash(exBr, "br", "f_neutral")).toBe("hbr");
-    expect(resolveAudioHash(exBr, "pt", "f_neutral")).toBe("hpt");
+  it("returns the hash for each variant (flat shape, matches b1.json)", () => {
+    expect(resolveAudioHash(exBr, "br")).toBe("hbr");
+    expect(resolveAudioHash(exBr, "pt")).toBe("hpt");
   });
 });
 ```
 
-- [ ] **Step 2: Implement**
+- [ ] **Step 3: Implement**
 
 ```ts
 // lib/exercise-resolver.ts
-import type { AudioVariant, Variant } from "./db/schema";
-import { ExerciseDataByTypeSchema, type Exercise } from "@/lib/data/zod-schemas-runtime";
+import { ExerciseDataByTypeSchema, type Exercise } from "@/lib/data/zod-schemas";
+import type { AudioVariant, Variant } from "@/lib/db/schema";
 
 export function resolveExerciseData(ex: Exercise, variant: Variant): Exercise["data"] {
   if (variant !== "pt" || !ex.ptOverrides) return ex.data;
@@ -691,66 +754,13 @@ export function resolveExerciseData(ex: Exercise, variant: Variant): Exercise["d
   return ExerciseDataByTypeSchema[ex.type].parse(merged);
 }
 
-export function resolveAudioHash(ex: Exercise, variant: Variant, voice: AudioVariant): string {
-  return (ex.audio as any)[variant][voice].hash;
+// Audio in b1.json is flat: audio[variant] = { hash, voice }.
+// The `voice` param returns in Plan #4 when AudioVariantSet lands.
+export function resolveAudioHash(ex: Exercise, variant: Variant): string {
+  const ref = ex.audio?.[variant];
+  if (!ref) throw new Error(`Exercise ${ex.id} has no audio for variant ${variant}`);
+  return ref.hash;
 }
-```
-
-- [ ] **Step 3: Create the runtime zod-schemas mirror**
-
-`lib/data/zod-schemas-runtime.ts`:
-```ts
-// Mirror of scripts/lib/zod-schemas.ts but available to the client bundle.
-// Server generates content; client just reads/validates. Zod is bundled.
-import { z } from "zod";
-
-const FlashcardData = z.object({ front: z.string().min(1), back: z.string().min(1), example: z.string().optional() });
-const FillBlankData = z.object({ sentence: z.string().min(1), blanks: z.array(z.object({ position: z.number().int().nonnegative(), answer: z.string().min(1), alternatives: z.array(z.string()).optional() })).min(1) });
-const ListeningData = z.object({ audioText: z.string().min(1), question: z.string().min(1), options: z.array(z.string()).min(2).optional(), answer: z.string().min(1) });
-const TranslationData = z.object({ source: z.string().min(1), target: z.string().min(1), acceptedAlternatives: z.array(z.string()).optional() });
-const VerbPrepositionData = z.object({ verb: z.string().min(1), sentence: z.string().min(1), options: z.array(z.string()).min(2), answer: z.string().min(1) });
-const SentenceConstructionData = z.object({ words: z.array(z.string()).min(2), answer: z.array(z.string()).min(2), translation: z.string().optional() });
-const ChunkData = z.object({ chunk: z.string().min(1), meaning: z.string().min(1), examples: z.array(z.object({ sentence: z.string().min(1), gloss: z.string().optional() })).min(1) });
-
-export const ExerciseDataByTypeSchema = {
-  flashcard: FlashcardData, fill_blank: FillBlankData, listening: ListeningData,
-  translation_es_pt: TranslationData, translation_pt_es: TranslationData,
-  verb_preposition: VerbPrepositionData, sentence_construction: SentenceConstructionData, chunk: ChunkData,
-} as const;
-
-const AudioVariantSetSchema = z.object({
-  f_neutral: z.object({ hash: z.string().min(1), voice: z.string().min(1) }),
-  m_neutral: z.object({ hash: z.string().min(1), voice: z.string().min(1) }),
-  f_happy: z.object({ hash: z.string().min(1), voice: z.string().min(1) }),
-  m_happy: z.object({ hash: z.string().min(1), voice: z.string().min(1) }),
-  f_calm: z.object({ hash: z.string().min(1), voice: z.string().min(1) }),
-  m_calm: z.object({ hash: z.string().min(1), voice: z.string().min(1) }),
-});
-
-const BaseExercise = z.object({
-  id: z.string().min(1),
-  blockId: z.number().int().positive(),
-  lessonId: z.string().min(1),
-  difficulty: z.union([z.literal(1), z.literal(2), z.literal(3)]),
-  concepts: z.array(z.string()),
-  tags: z.array(z.string()),
-  contentHash: z.string().optional(),
-  esContrast: z.string().optional(),
-  audio: AudioVariantSetSchema.optional(),
-  suggested: z.object({ gender: z.union([z.literal("f"), z.literal("m")]).optional(), emotion: z.union([z.literal("neutral"), z.literal("happy"), z.literal("sad"), z.literal("angry"), z.literal("calm"), z.literal("surprised")]).optional() }).optional(),
-});
-
-const FlashcardEx = BaseExercise.extend({ type: z.literal("flashcard"), data: FlashcardData, ptOverrides: FlashcardData.partial().optional() });
-const FillBlankEx = BaseExercise.extend({ type: z.literal("fill_blank"), data: FillBlankData, ptOverrides: FillBlankData.partial().optional() });
-const ListeningEx = BaseExercise.extend({ type: z.literal("listening"), data: ListeningData, ptOverrides: ListeningData.partial().optional() });
-const TranslationEsPtEx = BaseExercise.extend({ type: z.literal("translation_es_pt"), data: TranslationData, ptOverrides: TranslationData.partial().optional() });
-const TranslationPtEsEx = BaseExercise.extend({ type: z.literal("translation_pt_es"), data: TranslationData, ptOverrides: TranslationData.partial().optional() });
-const VerbPrepositionEx = BaseExercise.extend({ type: z.literal("verb_preposition"), data: VerbPrepositionData, ptOverrides: VerbPrepositionData.partial().optional() });
-const SentenceConstructionEx = BaseExercise.extend({ type: z.literal("sentence_construction"), data: SentenceConstructionData, ptOverrides: SentenceConstructionData.partial().optional() });
-const ChunkEx = BaseExercise.extend({ type: z.literal("chunk"), data: ChunkData, ptOverrides: ChunkData.partial().optional() });
-
-export const ExerciseSchema = z.discriminatedUnion("type", [FlashcardEx, FillBlankEx, ListeningEx, TranslationEsPtEx, TranslationPtEsEx, VerbPrepositionEx, SentenceConstructionEx, ChunkEx]);
-export type Exercise = z.infer<typeof ExerciseSchema>;
 ```
 
 - [ ] **Step 4: Typecheck + tests**
@@ -760,13 +770,13 @@ npx tsc --noEmit
 npm test -- exercise-resolver
 ```
 
-Expected: 5 passed.
+Expected: 7 passed.
 
 - [ ] **Step 5: Commit**
 
 ```bash
-git add lib/exercise-resolver.ts lib/data/zod-schemas-runtime.ts tests/unit/exercise-resolver.test.ts
-git commit -m "feat(ui): exercise resolver with ptOverrides re-validation + runtime zod schemas"
+git add lib/data/zod-schemas.ts lib/exercise-resolver.ts scripts/lib/zod-schemas.ts tests/unit/exercise-resolver.test.ts
+git commit -m "feat(ui): exercise resolver using canonical zod-schemas (single source of truth) + 1-voice audio"
 ```
 
 ---
@@ -782,30 +792,18 @@ git commit -m "feat(ui): exercise resolver with ptOverrides re-validation + runt
 import { describe, it, expect } from "vitest";
 import { pickVoice, audioUrl } from "@/lib/audio/resolve";
 
-const exFlashcard = { type: "flashcard" as const, suggested: { gender: "m" as const, emotion: "happy" as const } };
-const exChunk = { type: "chunk" as const };
-
+// CRITICAL FIX: 1 voice per variant ("default") — matches b1.json data.
+// 6-voice design deferred to Plan #4 (regen).
 describe("pickVoice", () => {
-  it("user pref wins", () => {
-    expect(pickVoice(exFlashcard as any, "br", { br: "f_calm", pt: "f_neutral" })).toBe("f_calm");
-  });
-
-  it("exercise suggested gender+emotion when no pref", () => {
-    expect(pickVoice(exFlashcard as any, "br", { br: "f_neutral", pt: "f_neutral" })).toBe("m_happy");
-  });
-
-  it("default: f_neutral for non-chunk", () => {
-    expect(pickVoice(exFlashcard as any, "br", { br: "f_neutral", pt: "f_neutral" })).toBe("m_happy"); // suggested wins
-  });
-
-  it("default: m_neutral for chunk", () => {
-    expect(pickVoice(exChunk as any, "br", { br: "f_neutral", pt: "f_neutral" })).toBe("m_neutral");
+  it("returns 'default' (only voice available)", () => {
+    expect(pickVoice({ type: "flashcard" } as any, "br", { br: "default", pt: "default" })).toBe("default");
+    expect(pickVoice({ type: "chunk" } as any, "pt", { br: "default", pt: "default" })).toBe("default");
   });
 });
 
 describe("audioUrl", () => {
   it("builds /audio/<hash>.mp3", () => {
-    expect(audioUrl("abc123def", "br", "f_neutral")).toBe("/audio/abc123def.mp3");
+    expect(audioUrl("abc123def")).toBe("/audio/abc123def.mp3");
   });
 });
 ```
@@ -816,20 +814,17 @@ describe("audioUrl", () => {
 // lib/audio/resolve.ts
 import type { AudioVariant, Variant } from "@/lib/db/schema";
 
+// CRITICAL FIX: 1 voice per variant until Plan #4 regen produces 6.
+// Picker becomes a no-op; UI just shows the single available voice.
 export function pickVoice(
-  ex: { type: string; suggested?: { gender?: "f" | "m"; emotion?: string } },
-  variant: Variant,
-  pref: Record<Variant, AudioVariant>,
+  _ex: { type?: string; suggested?: unknown },
+  _variant: Variant,
+  _pref: Record<Variant, AudioVariant>,
 ): AudioVariant {
-  if (pref[variant]) return pref[variant];
-  const s = ex.suggested;
-  if (s?.gender && s?.emotion) {
-    return `${s.gender}_${s.emotion}` as AudioVariant;
-  }
-  return ex.type === "chunk" ? "m_neutral" : "f_neutral";
+  return "default";
 }
 
-export function audioUrl(hash: string, _variant: Variant, _voice: AudioVariant): string {
+export function audioUrl(hash: string, _variant?: Variant, _voice?: AudioVariant): string {
   return `/audio/${hash}.mp3`;
 }
 ```
@@ -839,7 +834,7 @@ export function audioUrl(hash: string, _variant: Variant, _voice: AudioVariant):
 ```bash
 npm test -- audio-resolver
 git add lib/audio/resolve.ts tests/unit/audio-resolver.test.ts
-git commit -m "feat(audio): pickVoice + audioUrl with pref → suggested → default"
+git commit -m "feat(audio): simplified pickVoice (1 voice) + audioUrl"
 ```
 
 ---
@@ -881,14 +876,57 @@ describe("repository", () => {
     const due = await getDueCards(new Date(), 10);
     expect(due.map(c => c.id).sort()).toEqual(["due1", "due2"]);
   });
+
+  it("submitAnswer: atomic transaction across cards, events, mastery, sessions (C4)", async () => {
+    const card = await getOrCreateCard("ans1", 1, "b1-l1");
+    const sid = (await db.sessions.add({
+      startedAt: new Date(), blockId: 1, lessonId: "b1-l1", mode: "lesson", cardsReviewed: 0, correctCount: 0, durationMs: 0,
+    })) as number;
+
+    const { submitAnswer } = await import("@/lib/db/repository");
+    await submitAnswer({
+      cardId: "ans1", rating: 3, responseMs: 1200, mode: "lesson", variant: "br", conceptIds: ["b1-fonema-vogais"], blockId: 1, sessionId: sid,
+    });
+
+    // All 4 stores updated
+    const updatedCard = await db.cards.get("ans1");
+    expect(updatedCard?.reps).toBe(1);
+    expect(updatedCard?.state).toBeGreaterThan(0);
+
+    const events = await db.events.toArray();
+    expect(events).toHaveLength(1);
+    expect(events[0]?.conceptIds).toEqual(["b1-fonema-vogais"]);
+
+    const mastery = await db.conceptMastery.get("b1-fonema-vogais");
+    expect(mastery?.exposureCount).toBe(1);
+    expect(mastery?.correctCount).toBe(1);
+
+    const session = await db.sessions.get(sid);
+    expect(session?.cardsReviewed).toBe(1);
+    expect(session?.correctCount).toBe(1);
+  });
 });
 ```
 
-- [ ] **Step 2: Install fake-indexeddb for tests**
+- [ ] **Step 2: Install fake-indexeddb and wire to global setup (C4)**
 
 ```bash
 npm install -D fake-indexeddb
 ```
+
+Then add to `tests/setup.ts` (already exists from Plan #1):
+
+```ts
+// tests/setup.ts
+import "fake-indexeddb/auto";
+import { afterEach, vi } from "vitest";
+
+afterEach(() => {
+  vi.restoreAllMocks();
+});
+```
+
+This way every test gets `indexedDB` automatically — no per-test import needed.
 
 - [ ] **Step 3: Implement**
 
@@ -968,9 +1006,11 @@ export async function submitAnswer(p: SubmitAnswerParams): Promise<void> {
     await recordAnswerForConcepts(p.conceptIds, p.blockId, p.rating >= 3);
 
     if (p.sessionId) {
+      // CRITICAL FIX (I8): original had broken parens — `?? 0 + 1` parsed as `?? 1`.
+      const sess = await db.sessions.get(p.sessionId);
       await db.sessions.update(p.sessionId, {
-        cardsReviewed: (await db.sessions.get(p.sessionId))?.cardsReviewed ?? 0 + 1,
-        correctCount: ((await db.sessions.get(p.sessionId))?.correctCount ?? 0) + (p.rating >= 3 ? 1 : 0),
+        cardsReviewed: (sess?.cardsReviewed ?? 0) + 1,
+        correctCount: (sess?.correctCount ?? 0) + (p.rating >= 3 ? 1 : 0),
       });
     }
   });
@@ -1014,6 +1054,9 @@ interface SettingsState {
   setVoicePref: (v: Variant, voice: AudioVariant) => void;
   setTheme: (t: "light" | "dark") => void;
   setDailyGoal: (n: number) => void;
+  // CRITICAL FIX (C10): wired setters so Settings toggles actually work.
+  setShowContrast: (b: boolean) => void;
+  setSoundFx: (b: boolean) => void;
 }
 
 export const useSettings = create<SettingsState>()(
@@ -1025,12 +1068,14 @@ export const useSettings = create<SettingsState>()(
       dailyGoalMinutes: 15,
       theme: "light",
       soundFx: true,
-      voicePref: { br: "f_neutral", pt: "f_neutral" },
+      voicePref: { br: "default", pt: "default" },
       setVariant: (v) => set({ variant: v }),
       toggleCompare: () => set((s) => ({ showCompareToggle: !s.showCompareToggle })),
       setVoicePref: (variant, voice) => set((s) => ({ voicePref: { ...s.voicePref, [variant]: voice } })),
       setTheme: (t) => set({ theme: t }),
       setDailyGoal: (n) => set({ dailyGoalMinutes: n }),
+      setShowContrast: (b) => set({ showContrast: b }),
+      setSoundFx: (b) => set({ soundFx: b }),
     }),
     { name: "pt-settings", storage: createJSONStorage(() => localStorage) },
   ),
@@ -1213,13 +1258,10 @@ export function VariantToggle() {
 import { useSettings } from "@/lib/stores/settings";
 import type { AudioVariant, Variant } from "@/lib/db/schema";
 
+// CRITICAL FIX (C3): b1.json has 1 voice per variant. The 6-voice picker
+// returns in Plan #4 when TTS regen produces f/m × neutral/happy/calm.
 const variants: { id: AudioVariant; label: string }[] = [
-  { id: "f_neutral", label: "F neutral" },
-  { id: "m_neutral", label: "M neutral" },
-  { id: "f_happy", label: "F alegre" },
-  { id: "m_happy", label: "M alegre" },
-  { id: "f_calm", label: "F calmada" },
-  { id: "m_calm", label: "M calmado" },
+  { id: "default", label: "Voz padrão (única disponible — más voces en Plan #4)" },
 ];
 
 export function VoicePicker() {
@@ -1465,28 +1507,31 @@ export function LessonCard({ lesson, dueCount, blockId }: Props) {
 }
 ```
 
-- [ ] **Step 2: Block detail page**
+- [ ] **Step 2: Block detail page (C5/C6 fix: React.use(params))**
 
 ```tsx
 // app/blocks/[id]/page.tsx
 "use client";
-import { notFound } from "next/navigation";
-import { BLOCKS, getBlock } from "@/lib/data/curriculum";
+import { notFound, useRouter } from "next/navigation";
+import { use, useEffect, useState } from "react";
+import { getBlock } from "@/lib/data/curriculum";
 import { LessonCard } from "@/components/LessonCard";
-import { useEffect, useState } from "react";
 import { getDueInLesson } from "@/lib/db/repository";
 
 export default function BlockPage({ params }: { params: Promise<{ id: string }> }) {
-  const [blockId, setBlockId] = useState<number | null>(null);
+  // CRITICAL FIX (C5): use React.use() in client pages, not params.then + useState (flash bug).
+  const { id } = use(params);
+  const blockId = Number(id);
+  const block = getBlock(blockId);
+  const router = useRouter();
+
+  // notFound from useEffect cannot throw — redirect instead.
+  useEffect(() => {
+    if (block.lessons.length === 0) router.push("/blocks");
+  }, [block.lessons.length, router]);
+
   const [dueByLesson, setDueByLesson] = useState<Record<string, number>>({});
-
   useEffect(() => {
-    params.then(p => setBlockId(Number(p.id)));
-  }, [params]);
-
-  useEffect(() => {
-    if (blockId === null) return;
-    const block = getBlock(blockId);
     (async () => {
       const out: Record<string, number> = {};
       const now = new Date();
@@ -1496,11 +1541,7 @@ export default function BlockPage({ params }: { params: Promise<{ id: string }> 
       }
       setDueByLesson(out);
     })();
-  }, [blockId]);
-
-  if (blockId === null) return <div className="p-12">Cargando...</div>;
-  const block = getBlock(blockId);
-  if (block.lessons.length === 0) return notFound();
+  }, [block]);
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-12 space-y-6">
@@ -1525,21 +1566,29 @@ export default function BlockPage({ params }: { params: Promise<{ id: string }> 
 }
 ```
 
-- [ ] **Step 3: Lesson detail (intro to practice)**
+- [ ] **Step 3: Lesson detail (intro to practice) — C6 fix: server component, not async client**
 
 ```tsx
 // app/blocks/[id]/lessons/[lid]/page.tsx
-"use client";
+// CRITICAL FIX (C6): original was "use client" + async function. That doesn't compile.
+// This is a server component that reads params synchronously and passes
+// data to a client ConceptMastery component.
 import { notFound } from "next/navigation";
-import { getBlock, getLesson } from "@/lib/data/curriculum";
 import Link from "next/link";
+import { getBlock, getLesson } from "@/lib/data/curriculum";
 import { ConceptMastery } from "@/components/ConceptMastery";
 
-export default async function LessonIntro({ params }: { params: Promise<{ id: string; lid: string }> }) {
+export default async function LessonIntro({
+  params,
+}: {
+  params: Promise<{ id: string; lid: string }>;
+}) {
   const { id, lid } = await params;
   const block = getBlock(Number(id));
   const lesson = getLesson(lid);
-  if (block.lessons.length === 0 || !block.lessons.find(l => l.id === lid)) return notFound();
+  if (block.lessons.length === 0 || !block.lessons.find(l => l.id === lid)) {
+    notFound();
+  }
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12 space-y-6">
@@ -1617,19 +1666,18 @@ import type { Exercise } from "@/lib/exercise-resolver";
 import { AudioButton } from "@/components/AudioButton";
 import { useSettings } from "@/lib/stores/settings";
 import { resolveExerciseData, resolveAudioHash } from "@/lib/exercise-resolver";
-import { pickVoice, audioUrl } from "@/lib/audio/resolve";
+import { audioUrl } from "@/lib/audio/resolve";
 
 interface Props { ex: Exercise; revealed: boolean; onReveal: () => void; }
 export function FlashcardCard({ ex, revealed, onReveal }: Props) {
-  const { variant, voicePref } = useSettings();
+  const { variant } = useSettings();
   const data = resolveExerciseData(ex, variant);
-  const voice = pickVoice(ex, variant, voicePref);
-  const hash = resolveAudioHash(ex, variant, voice);
+  const hash = resolveAudioHash(ex, variant);
   return (
     <div className="p-8 border-2 border-border rounded-2xl text-center space-y-6">
       <div className="text-xs text-muted uppercase">{revealed ? "Respuesta" : "Traduce al portugués"}</div>
       <div className="text-4xl font-display">{revealed ? data.back : data.front}</div>
-      <AudioButton src={audioUrl(hash, variant, voice)} />
+      <AudioButton src={audioUrl(hash)} />
       {ex.esContrast && revealed && (
         <div className="text-sm text-muted italic">⚠️ {ex.esContrast}</div>
       )}
@@ -1643,7 +1691,7 @@ export function FlashcardCard({ ex, revealed, onReveal }: Props) {
 }
 ```
 
-- [ ] **Step 2: FillBlankCard**
+- [ ] **Step 2: FillBlankCard (C7 fix: static import, no `require()` wrapper)**
 
 ```tsx
 // components/cards/FillBlankCard.tsx
@@ -1651,10 +1699,12 @@ export function FlashcardCard({ ex, revealed, onReveal }: Props) {
 import { useState } from "react";
 import type { Exercise } from "@/lib/exercise-resolver";
 import { resolveExerciseData } from "@/lib/exercise-resolver";
+import { useSettings } from "@/lib/stores/settings";
 
 interface Props { ex: Exercise; onSubmit: (answer: string, correct: boolean) => void; }
 export function FillBlankCard({ ex, onSubmit }: Props) {
-  const { variant } = useStateSettings();
+  // CRITICAL FIX: import useSettings directly, no require() wrapper.
+  const { variant } = useSettings();
   const data = resolveExerciseData(ex, variant);
   const [input, setInput] = useState("");
   const [revealed, setRevealed] = useState(false);
@@ -1681,11 +1731,6 @@ export function FillBlankCard({ ex, onSubmit }: Props) {
     </div>
   );
 }
-
-function useStateSettings() {
-  const { useSettings } = require("@/lib/stores/settings");
-  return useSettings();
-}
 ```
 
 - [ ] **Step 3: ListeningCard**
@@ -1695,25 +1740,22 @@ function useStateSettings() {
 "use client";
 import { useState } from "react";
 import type { Exercise } from "@/lib/exercise-resolver";
-import { resolveExerciseData } from "@/lib/exercise-resolver";
+import { resolveExerciseData, resolveAudioHash } from "@/lib/exercise-resolver";
 import { AudioButton } from "@/components/AudioButton";
 import { audioUrl } from "@/lib/audio/resolve";
-import { resolveAudioHash } from "@/lib/exercise-resolver";
 import { useSettings } from "@/lib/stores/settings";
-import { pickVoice } from "@/lib/audio/resolve";
 
 interface Props { ex: Exercise; onSubmit: (answer: string, correct: boolean) => void; }
 export function ListeningCard({ ex, onSubmit }: Props) {
-  const { variant, voicePref } = useSettings();
+  const { variant } = useSettings();
   const data = resolveExerciseData(ex, variant);
   const [answer, setAnswer] = useState<string | null>(null);
-  const voice = pickVoice(ex, variant, voicePref);
-  const hash = resolveAudioHash(ex, variant, voice);
+  const hash = resolveAudioHash(ex, variant);
 
   return (
     <div className="p-8 border-2 border-border rounded-2xl space-y-6 text-center">
       <div className="text-xs text-muted uppercase">Escucha y responde</div>
-      <AudioButton src={audioUrl(hash, variant, voice)} size="lg" />
+      <AudioButton src={audioUrl(hash)} size="lg" />
       <p className="text-lg">{data.question}</p>
       {data.options && (
         <div className="grid grid-cols-2 gap-2">
@@ -1742,10 +1784,12 @@ export function ListeningCard({ ex, onSubmit }: Props) {
 import { useState } from "react";
 import type { Exercise } from "@/lib/exercise-resolver";
 import { resolveExerciseData } from "@/lib/exercise-resolver";
+import { useSettings } from "@/lib/stores/settings";
 
 interface Props { ex: Exercise; onSubmit: (answer: string, correct: boolean) => void; }
 export function TranslationCard({ ex, onSubmit }: Props) {
-  const { variant } = useSettings2();
+  // CRITICAL FIX (C7): static import, no require() wrapper.
+  const { variant } = useSettings();
   const data = resolveExerciseData(ex, variant);
   const [input, setInput] = useState("");
   const [revealed, setRevealed] = useState(false);
@@ -1773,10 +1817,6 @@ export function TranslationCard({ ex, onSubmit }: Props) {
   );
 }
 
-function useSettings2() {
-  const { useSettings } = require("@/lib/stores/settings");
-  return useSettings();
-}
 ```
 
 - [ ] **Step 5: VerbPrepositionCard**
@@ -1787,10 +1827,12 @@ function useSettings2() {
 import { useState } from "react";
 import type { Exercise } from "@/lib/exercise-resolver";
 import { resolveExerciseData } from "@/lib/exercise-resolver";
+import { useSettings } from "@/lib/stores/settings";
 
 interface Props { ex: Exercise; onSubmit: (answer: string, correct: boolean) => void; }
 export function VerbPrepositionCard({ ex, onSubmit }: Props) {
-  const { variant } = useSettings3();
+  // CRITICAL FIX (C7): static import, no require() wrapper.
+  const { variant } = useSettings();
   const data = resolveExerciseData(ex, variant);
   const [answer, setAnswer] = useState<string | null>(null);
 
@@ -1815,10 +1857,6 @@ export function VerbPrepositionCard({ ex, onSubmit }: Props) {
   );
 }
 
-function useSettings3() {
-  const { useSettings } = require("@/lib/stores/settings");
-  return useSettings();
-}
 ```
 
 - [ ] **Step 6: Commit**
@@ -1862,60 +1900,52 @@ interface Props {
 
 export function ExerciseRunner({ exercises, blockId, lessonId, onFinish }: Props) {
   const { variant } = useSettings();
-  const { sessionId, mode, markPending, clearPending, incrCorrect, isPending } = useSession();
+  const { sessionId, mode, incrCorrect } = useSession();
   const [idx, setIdx] = useState(0);
   const [shownAt, setShownAt] = useState<number>(Date.now());
+  const [stats, setStats] = useState({ reviewed: 0, correct: 0 });
   const ex = exercises[idx];
 
   useEffect(() => {
     if (!ex) return;
-    markPending(ex.id);
     setShownAt(Date.now());
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === " " && ex.type === "flashcard" && !isPending(`${ex.id}-flipped`)) {
-        e.preventDefault();
-        const btn = document.getElementById("flashcard-reveal-btn");
-        btn?.click();
-      }
-    };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
   }, [ex?.id]);
 
-  if (!ex) {
-    onFinish({ reviewed: exercises.length, correct: 0 });
-    return null;
-  }
+  // CRITICAL FIX (C8): onFinish in useEffect, not in render (side-effect in
+  // render causes infinite loop with parent setState).
+  useEffect(() => {
+    if (!ex && exercises.length > 0) {
+      onFinish(stats);
+    }
+  }, [ex, exercises.length, stats, onFinish]);
 
-  const handleAnswer = async (answer: string, correct: boolean) => {
-    if (!sessionId) return;
-    const rating = correct ? RATING.Good : RATING.Again;
+  if (!ex) return null;
+
+  // CRITICAL FIX (C9): sessionId must be valid — caller (PracticePage)
+  // guarantees it, but we fail loudly instead of silently dropping answers.
+  const submit = async (rating: 1 | 2 | 3 | 4) => {
+    if (!sessionId) {
+      console.error("ExerciseRunner: no sessionId — answer dropped. PracticePage must create session before render.");
+      return;
+    }
     await submitAnswer({
       cardId: ex.id, rating, responseMs: Date.now() - shownAt,
       mode: mode || "lesson", variant, conceptIds: ex.concepts, blockId, sessionId,
     });
+    const correct = rating >= 3;
     incrCorrect(correct);
+    setStats(s => ({ reviewed: s.reviewed + 1, correct: s.correct + (correct ? 1 : 0) }));
     if (correct) confetti({ particleCount: 50, spread: 70 });
-    clearPending(ex.id);
-    setIdx(idx + 1);
+    setIdx(i => i + 1);
   };
 
-  const handleFlashcardGrade = async (rating: 1 | 2 | 3 | 4) => {
-    if (!sessionId) return;
-    await submitAnswer({
-      cardId: ex.id, rating, responseMs: Date.now() - shownAt,
-      mode: mode || "lesson", variant, conceptIds: ex.concepts, blockId, sessionId,
-    });
-    incrCorrect(rating >= 3);
-    if (rating >= 3) confetti({ particleCount: 50, spread: 70 });
-    clearPending(ex.id);
-    setIdx(idx + 1);
-  };
+  const handleAnswer = (_answer: string, correct: boolean) =>
+    submit(correct ? RATING.Good : RATING.Again);
 
   return (
     <div className="max-w-xl mx-auto px-4 py-8 space-y-4">
       <div className="text-sm text-muted">{idx + 1} / {exercises.length}</div>
-      {ex.type === "flashcard" && <FlashcardWithGrades ex={ex} onReveal={() => {}} onGrade={handleFlashcardGrade} />}
+      {ex.type === "flashcard" && <FlashcardWithGrades ex={ex} onGrade={submit} />}
       {ex.type === "fill_blank" && <FillBlankCard ex={ex} onSubmit={handleAnswer} />}
       {ex.type === "listening" && <ListeningCard ex={ex} onSubmit={handleAnswer} />}
       {(ex.type === "translation_es_pt" || ex.type === "translation_pt_es") && <TranslationCard ex={ex} onSubmit={handleAnswer} />}
@@ -1924,11 +1954,31 @@ export function ExerciseRunner({ exercises, blockId, lessonId, onFinish }: Props
   );
 }
 
-function FlashcardWithGrades({ ex, onReveal, onGrade }: { ex: Exercise; onReveal: () => void; onGrade: (r: 1 | 2 | 3 | 4) => void }) {
+function FlashcardWithGrades({ ex, onGrade }: { ex: Exercise; onGrade: (r: 1 | 2 | 3 | 4) => void }) {
   const [revealed, setRevealed] = useState(false);
+
+  // CRITICAL FIX (C5): keyboard handler lives here with direct state access —
+  // no DOM getElementById lookup, no isPending key mismatch.
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === " " && !revealed) {
+        e.preventDefault();
+        setRevealed(true);
+      } else if (revealed && ["1", "2", "3", "4"].includes(e.key)) {
+        e.preventDefault();
+        onGrade(Number(e.key) as 1 | 2 | 3 | 4);
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [revealed, onGrade]);
+
+  // Reset reveal state when exercise changes.
+  useEffect(() => { setRevealed(false); }, [ex.id]);
+
   return (
     <div className="space-y-4">
-      <FlashcardCard ex={ex} revealed={revealed} onReveal={() => { setRevealed(true); onReveal(); }} />
+      <FlashcardCard ex={ex} revealed={revealed} onReveal={() => setRevealed(true)} />
       {revealed && (
         <div className="grid grid-cols-4 gap-2 text-sm">
           {([["Otra vez", 1], ["Difícil", 2], ["Bien", 3], ["Fácil", 4]] as [string, 1 | 2 | 3 | 4][]).map(([label, rating]) => (
@@ -1938,7 +1988,7 @@ function FlashcardWithGrades({ ex, onReveal, onGrade }: { ex: Exercise; onReveal
               className="p-3 border-2 border-border rounded-md hover:border-primary"
             >
               <div className="font-medium">{label}</div>
-              <div className="text-xs text-muted">{rating}</div>
+              <div className="text-xs text-muted">[{rating}]</div>
             </button>
           ))}
         </div>
@@ -1966,63 +2016,84 @@ git commit -m "feat(ui): ExerciseRunner orchestrating session with keyboard + gr
 ```tsx
 // app/practice/[lessonId]/page.tsx
 "use client";
-import { useEffect, useState } from "react";
-import { notFound, useRouter } from "next/navigation";
+import { use, useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { getLesson } from "@/lib/data/curriculum";
 import { getOrCreateCard } from "@/lib/db/repository";
 import { db } from "@/lib/db/schema";
 import { ExerciseRunner } from "@/components/ExerciseRunner";
-import { ExerciseSchema, type Exercise } from "@/lib/exercise-resolver";
+// CRITICAL FIX (I1): static imports — no dynamic import() of modules already in the graph.
+import { ExerciseSchema, type Exercise } from "@/lib/data/zod-schemas";
+import { useSession } from "@/lib/stores/session";
+// CRITICAL FIX (I-Turbopack): static JSON import — template-literal dynamic
+// import of JSON breaks under Turbopack production builds. Block 1 only in MVP #2;
+// when Plan #4 adds blocks 2-10, switch to a static import map.
+import b1Data from "@/lib/data/blocks/b1.json";
+
+const BLOCK_DATA: Record<number, unknown[]> = { 1: b1Data as unknown[] };
 
 export default function PracticePage({ params }: { params: Promise<{ lessonId: string }> }) {
+  // CRITICAL FIX (C5-pattern): React.use(params), not params.then + useState.
+  const { lessonId: rawLessonId } = use(params);
+  const lesson = getLesson(rawLessonId);
+  const lessonId = lesson.id;
+  const blockId = lesson.blockId;
+
   const [exercises, setExercises] = useState<Exercise[] | null>(null);
   const [sessionId, setSessionId] = useState<number | null>(null);
-  const [lessonId, setLessonId] = useState<string | null>(null);
-  const [blockId, setBlockId] = useState<number | null>(null);
+  const [sessionError, setSessionError] = useState<string | null>(null);
   const [done, setDone] = useState<{ reviewed: number; correct: number } | null>(null);
   const router = useRouter();
+  // Guard against React 19 StrictMode double-running this effect in dev,
+  // which would create two sessions.
+  const sessionCreated = useRef(false);
 
   useEffect(() => {
-    params.then(p => {
-      const l = getLesson(p.lessonId);
-      setLessonId(l.id);
-      setBlockId(l.blockId);
-    });
-  }, [params]);
-
-  useEffect(() => {
-    if (lessonId === null || blockId === null) return;
+    if (sessionCreated.current) return;
+    sessionCreated.current = true;
     (async () => {
-      const { ExerciseDataByTypeSchema, ExerciseSchema } = await import("@/lib/data/zod-schemas-runtime");
-      void ExerciseDataByTypeSchema; // ensures import
-      const blockData = await import(`@/lib/data/blocks/b${blockId}.json`);
-      const raw: Exercise[] = (blockData.default || blockData).filter((e: Exercise) => e.lessonId === lessonId);
-      // Get or create cards
-      const cards = await Promise.all(
-        raw.map(async (e) => {
-          await getOrCreateCard(e.id, e.blockId, e.lessonId);
-          return ExerciseSchema.parse(e);
-        })
-      );
-      setExercises(cards);
+      try {
+        const blockData = BLOCK_DATA[blockId];
+        if (!blockData) throw new Error(`No data for block ${blockId} (only Block 1 in MVP #2)`);
+        const raw = (blockData as Exercise[]).filter((e) => e.lessonId === lessonId);
+        const cards = await Promise.all(
+          raw.map(async (e) => {
+            await getOrCreateCard(e.id, e.blockId, e.lessonId);
+            return ExerciseSchema.parse(e);
+          })
+        );
+        setExercises(cards);
 
-      const sid = await db.sessions.add({
-        startedAt: new Date(), blockId, lessonId, mode: "lesson", cardsReviewed: 0, correctCount: 0, durationMs: 0,
-      });
-      setSessionId(sid as number);
+        // CRITICAL FIX (C9): if session creation fails, surface it — never run
+        // the session with sessionId undefined (answers would be dropped).
+        const sid = await db.sessions.add({
+          startedAt: new Date(), blockId, lessonId, mode: "lesson", cardsReviewed: 0, correctCount: 0, durationMs: 0,
+        });
+        setSessionId(sid as number);
+        useSession.getState().beginSession(sid as number, "lesson");
+      } catch (err) {
+        setSessionError(err instanceof Error ? err.message : String(err));
+      }
     })();
   }, [lessonId, blockId]);
 
   useEffect(() => {
     if (!done) return;
-    (async () => {
-      const { useSession } = await import("@/lib/stores/session");
-      useSession.getState().endSession();
-      if (sessionId) {
-        await db.sessions.update(sessionId, { endedAt: new Date(), cardsReviewed: done.reviewed, correctCount: done.correct });
-      }
-    })();
+    useSession.getState().endSession();
+    if (sessionId) {
+      db.sessions.update(sessionId, { endedAt: new Date(), cardsReviewed: done.reviewed, correctCount: done.correct });
+    }
   }, [done, sessionId]);
+
+  if (sessionError) {
+    return (
+      <div className="max-w-md mx-auto px-4 py-16 text-center space-y-4">
+        <h1 className="font-display text-2xl">No se pudo iniciar la sesión</h1>
+        <p className="text-muted text-sm">{sessionError}</p>
+        <button onClick={() => router.push("/blocks")} className="px-4 py-2 border border-border rounded-md">Volver a bloques</button>
+      </div>
+    );
+  }
 
   if (done) {
     const pct = Math.round((done.correct / Math.max(done.reviewed, 1)) * 100);
@@ -2068,8 +2139,8 @@ git commit -m "feat(ui): practice session page with session creation + completio
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getDueCards } from "@/lib/db/repository";
-import { db } from "@/lib/db/schema";
-import { ExerciseSchema, type Exercise } from "@/lib/exercise-resolver";
+import type { Exercise } from "@/lib/data/zod-schemas";
+import b1Data from "@/lib/data/blocks/b1.json";
 
 export default function LearnPage() {
   const [count, setCount] = useState<number | null>(null);
@@ -2087,17 +2158,11 @@ export default function LearnPage() {
   const startDailyMix = async () => {
     const due = await getDueCards(new Date(), 20);
     if (due.length === 0) { router.push("/blocks"); return; }
-    // Pick first blockId from due cards; if mixed, use block 1
-    const blockId = due[0]?.blockId ?? 1;
-    const exercises: Exercise[] = [];
-    for (const card of due) {
-      const blockData = await import(`@/lib/data/blocks/b${blockId}.json`);
-      const found = (blockData.default || blockData).find((e: any) => e.id === card.id);
-      if (found) exercises.push(ExerciseSchema.parse(found));
-    }
-    if (exercises.length === 0) { router.push("/blocks"); return; }
-    const lessonId = exercises[0].lessonId;
-    router.push(`/practice/${lessonId}`);
+    // CRITICAL FIX (I6): single in-memory lookup, no N+1 dynamic imports.
+    const byId = new Map(b1Data.map((e) => [e.id, e]));
+    const first = due.map((card) => byId.get(card.id)).find(Boolean);
+    if (!first) { router.push("/blocks"); return; }
+    router.push(`/practice/${(first as Exercise).lessonId}`);
   };
 
   return (
@@ -2143,7 +2208,7 @@ import { VariantToggle } from "@/components/VariantToggle";
 import { VoicePicker } from "@/components/VoicePicker";
 
 export default function SettingsPage() {
-  const { dailyGoalMinutes, showCompareToggle, showContrast, soundFx, setDailyGoal, toggleCompare } = useSettings();
+  const { dailyGoalMinutes, showCompareToggle, showContrast, soundFx, setDailyGoal, toggleCompare, setShowContrast, setSoundFx } = useSettings();
   const { theme, setTheme } = useTheme();
 
   return (
@@ -2180,14 +2245,14 @@ export default function SettingsPage() {
           Mostrar toggle "Comparar BR ↔ PT" en cards
         </label>
         <label className="flex items-center gap-2">
-          <input type="checkbox" checked={showContrast} disabled />
+          <input type="checkbox" checked={showContrast} onChange={(e) => setShowContrast(e.target.checked)} />
           Mostrar pista para hispanohablantes (esContrast)
         </label>
       </Section>
 
       <Section title="Sonido">
         <label className="flex items-center gap-2">
-          <input type="checkbox" checked={soundFx} disabled />
+          <input type="checkbox" checked={soundFx} onChange={(e) => setSoundFx(e.target.checked)} />
           Efectos de sonido (ding/boop/confetti)
         </label>
       </Section>
@@ -2216,14 +2281,15 @@ git commit -m "feat(ui): settings page (variant, voice, theme, daily goal, toggl
 
 ### Task 19: Final verification + tag
 
-- [ ] **Step 1: Static gates**
+- [ ] **Step 1: Static gates (C11: includes production build)**
 
 ```bash
 npx tsc --noEmit
 npm test
+npm run build
 ```
 
-Expected: typecheck 0 errors, all tests pass.
+Expected: typecheck 0 errors, all tests pass, **production build succeeds** (catches Turbopack-specific issues that `dev` does not — see AGENTS.md warning).
 
 - [ ] **Step 2: Dev server smoke test**
 
@@ -2254,7 +2320,7 @@ git push origin mvp-2-ui
 
 - **Full UI to study Bloque 1 end-to-end**: home → blocks → lesson → practice → completion
 - **FSRS-5 SRS** with persistence in Dexie
-- **Audio playback** with 6 voice variants (f/m × neutral/happy/calm) — though only `f_neutral`/`m_neutral` actually have audio files for Bloque 1 (Plan #4 generates the rest)
+- **Audio playback** with 1 voice per variant (matches b1.json data); the 6-voice picker (f/m × neutral/happy/calm) arrives in Plan #4 with the TTS regen
 - **BR ↔ PT toggle** in NavBar and per-card
 - **Theme** (light/dark) with persistence
 - **Per-lesson practice session** with all 5 exercise types wired
@@ -2277,7 +2343,7 @@ git push origin mvp-2-ui
 
 ### Known limitations of MVP #2
 
-- **Only 1 audio per exercise per variant** (f_neutral default). The picker shows other 4 variants but they 404. Plan #4 will regen with full variant set.
+- **Only 1 audio per exercise per variant** ("default"). Schema, resolver, and picker all consistently use the single voice — no 404s. Plan #4 regens with the full 6-variant set and restores the picker.
 - **No streak counter** in home dashboard (only the design's `dueCount`). Plan #3.
 - **No onboarding flow** — first-time user lands directly on home.
 - **No offline detection** — if audio 404s, the button just shows "—".
