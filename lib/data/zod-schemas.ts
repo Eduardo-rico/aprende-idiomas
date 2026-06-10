@@ -217,3 +217,30 @@ const LlmItemSchema = z.discriminatedUnion('type', [
 ]);
 export const ExerciseBatchSchema = z.array(LlmItemSchema);
 export type ExerciseBatchItem = z.infer<typeof ExerciseBatchSchema>[number];
+
+// ─── Story (mini-historias, Plan #3) ──────────────────────────
+export const StoryVocabSchema = z.object({
+  word: z.string().min(1),
+  ptWord: z.string().min(1).optional(),
+  meaning: z.string().min(1),
+  audioHash: z.object({ br: z.string().min(1), pt: z.string().min(1) }),
+});
+
+export const StoryVariantSchema = z.object({
+  text: z.string().min(20),
+  audioHash: z.string().min(1),
+});
+
+export const StorySchema = z.object({
+  id: z.string().regex(/^b\d+-s\d+-.+/, "story id must be b{N}-s{N}-{slug}"),
+  blockId: z.number().int().min(1).max(10),
+  lessonIds: z.array(z.string()),
+  title: z.string().min(1),
+  level: z.union([z.literal(1), z.literal(2), z.literal(3)]),
+  conceptIds: z.array(z.string()),
+  variants: z.object({ br: StoryVariantSchema, pt: StoryVariantSchema }),
+  vocab: z.array(StoryVocabSchema).min(3).max(12),
+});
+
+export type Story = z.infer<typeof StorySchema>;
+export type StoryVocab = z.infer<typeof StoryVocabSchema>;
