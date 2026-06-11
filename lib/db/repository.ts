@@ -1,15 +1,5 @@
 // lib/db/repository.ts
-import { db, type Card, type CardId, type Rating, type ReviewEvent, type Session, type Variant, type StoryProgressRow } from "./schema";
-
-// Story-specific event types (minimal extension — not stored in schema to avoid breaking ReviewEvent queries)
-type StoryEventType = "story_started" | "story_completed";
-interface StoryEvent {
-  id?: number;
-  ts: Date;
-  type: StoryEventType;
-  storyId: string;
-  variant: Variant;
-}
+import { db, type Card, type CardId, type Rating, type AnswerEvent, type GenericEvent, type Session, type Variant, type StoryProgressRow } from "./schema";
 import { newCard, schedule } from "../srs/fsrs";
 import { recordAnswerForConcepts } from "../mastery/concept";
 
@@ -67,8 +57,9 @@ export async function submitAnswer(p: SubmitAnswerParams): Promise<void> {
     const updated = schedule(card, p.rating);
     await db.cards.put(updated);
 
-    const event: ReviewEvent = {
+    const event: AnswerEvent = {
       ts: new Date(),
+      type: "answer",
       cardId: p.cardId,
       sessionId: p.sessionId,
       rating: p.rating,
@@ -114,8 +105,8 @@ export async function getOrCreateStoryProgress(
     lastVariant: variant,
   };
   await db.storyProgress.put(row);
-  const event: StoryEvent = { ts: now, type: "story_started", storyId, variant };
-  await db.events.add(event as unknown as ReviewEvent);
+  const event: GenericEvent = { ts: now, type: "story_started", payload: { storyId, variant } };
+  await db.events.add(event);
   return row;
 }
 
@@ -126,13 +117,8 @@ export async function markStoryCompleted(storyId: string): Promise<void> {
   if (row.completedAt !== null) return;
   const now = new Date();
   await db.storyProgress.update(storyId, { completedAt: now });
-  const event: StoryEvent = {
-    ts: now,
-    type: "story_completed",
-    storyId,
-    variant: row.lastVariant,
-  };
-  await db.events.add(event as unknown as ReviewEvent);
+  const event: GenericEvent = { ts: now, type: "story_completed", payload: { storyId } };
+  await db.events.add(event);
 }
 
 export async function getCompletedStories(): Promise<string[]> {

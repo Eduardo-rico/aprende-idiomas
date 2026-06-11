@@ -1,7 +1,7 @@
 // tests/unit/repository-story.test.ts
 import { describe, it, expect, beforeEach } from "vitest";
 import "fake-indexeddb/auto";
-import { db } from "@/lib/db/schema";
+import { db, type AppEvent } from "@/lib/db/schema";
 import {
   getOrCreateStoryProgress,
   markStoryCompleted,
@@ -26,9 +26,8 @@ describe("storyProgress repository", () => {
     await markStoryCompleted("b1-s1-y");
     const row = await db.storyProgress.get("b1-s1-y");
     expect(row?.completedAt).not.toBeNull();
-    // events table stores ReviewEvent but story events are cast to fit — check via unknown
     const events = await db.events
-      .filter((e) => (e as unknown as Record<string, unknown>)["type"] === "story_completed")
+      .filter((e: AppEvent) => e.type === "story_completed")
       .toArray();
     expect(events.length).toBe(1);
   });
@@ -46,7 +45,7 @@ describe("storyProgress repository", () => {
     await markStoryCompleted("b1-s1-idempotent");
     await markStoryCompleted("b1-s1-idempotent");
     const events = await db.events
-      .filter((e) => (e as unknown as Record<string, unknown>)["type"] === "story_completed")
+      .filter((e: AppEvent) => e.type === "story_completed")
       .toArray();
     expect(events.length).toBe(1);
   });

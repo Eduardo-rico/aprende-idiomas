@@ -40,9 +40,10 @@ export interface Session {
   durationMs: number;
 }
 
-export interface ReviewEvent {
+export interface AnswerEvent {
   id?: number;
   ts: Date;
+  type: "answer";
   cardId: CardId;
   sessionId?: number;
   rating: Rating;
@@ -52,6 +53,26 @@ export interface ReviewEvent {
   conceptIds: ConceptId[];
   variant: Variant;
 }
+
+export type AppEventType =
+  | "answer"
+  | "lesson_complete"
+  | "session_complete"
+  | "story_started"
+  | "story_completed"
+  | "streak_day"
+  | "level_up"
+  | "achievement_unlocked"
+  | "diagnostic_completed";
+
+export interface GenericEvent {
+  id?: number;
+  ts: Date;
+  type: Exclude<AppEventType, "answer">;
+  payload: Record<string, unknown>;
+}
+
+export type AppEvent = AnswerEvent | GenericEvent;
 
 export type SettingsKey =
   | "variant" | "voicePref" | "showContrast" | "showCompareToggle"
@@ -87,7 +108,7 @@ export interface StoryProgressRow {
 class PortuguesDB extends Dexie {
   cards!: EntityTable<Card, "id">;
   sessions!: EntityTable<Session, "id">;
-  events!: EntityTable<ReviewEvent, "id">;
+  events!: EntityTable<AppEvent, "id">;
   errorQueue!: EntityTable<{ cardId: CardId; ts: Date; reason: string }, "cardId">;
   errorReasons!: EntityTable<{ id?: number; cardId: CardId; ts: Date; reason: string; conceptIds: ConceptId[] }, "id">;
   settings!: EntityTable<SettingsRow, "key">;

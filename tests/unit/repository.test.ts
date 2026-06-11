@@ -1,7 +1,7 @@
 // tests/unit/repository.test.ts
 import { describe, it, expect, beforeEach } from "vitest";
 import "fake-indexeddb/auto";
-import { db } from "@/lib/db/schema";
+import { db, type AnswerEvent } from "@/lib/db/schema";
 import { getOrCreateCard, getDueCards } from "@/lib/db/repository";
 
 describe("repository", () => {
@@ -46,7 +46,7 @@ describe("repository", () => {
 
     const events = await db.events.toArray();
     expect(events).toHaveLength(1);
-    expect(events[0]?.conceptIds).toEqual(["b1-fonema-vogais"]);
+    expect((events[0] as AnswerEvent)?.conceptIds).toEqual(["b1-fonema-vogais"]);
 
     const mastery = await db.conceptMastery.get("b1-fonema-vogais");
     expect(mastery?.exposureCount).toBe(1);
