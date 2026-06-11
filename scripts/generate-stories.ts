@@ -21,6 +21,15 @@ const STORY_SCHEMA_VERSION = 1;
 // ─── Block definitions (Phase 1: b1 only) ──────────────────────
 const BLOCKS: Array<{ id: number; theme: string; concepts: string[] }> = [
   { id: 1, theme: 'O dia a dia de João na padaria', concepts: ['alfabeto', 'acentos', 'vogais nasais', 'sílabas'] },
+  { id: 2, theme: 'A família de Maria em Lisboa', concepts: ['gênero', 'número', 'artigos', 'possessivos'] },
+  { id: 3, theme: 'Pedro vai ao restaurante', concepts: ['presente', 'verbos irregulares', 'pronomes', 'há/tem'] },
+  { id: 4, theme: 'Ana conta suas férias no Brasil', concepts: ['pretérito perfeito', 'imperfeito', 'mais-que-perfeito'] },
+  { id: 5, theme: 'Os planos de Carlos para o futuro', concepts: ['futuro do presente', 'futuro composto', 'condicional'] },
+  { id: 6, theme: 'Esperança e dúvida na vida de Sofia', concepts: ['presente do subjuntivo', 'imperfeito do subjuntivo', 'futuro do subjuntivo'] },
+  { id: 7, theme: 'Um dia comum de Miguel', concepts: ['infinitivo', 'gerúndio', 'particípio', 'infinitivo pessoal'] },
+  { id: 8, theme: 'O debate entre amigos no café', concepts: ['conectores', 'orações subordinadas', 'colocação pronominal'] },
+  { id: 9, theme: 'Cores, sabores e sons do Brasil', concepts: ['léxico temático', 'expressões idiomáticas', 'falsos amigos', 'regência'] },
+  { id: 10, theme: 'Cartas e e-mails entre Portugal e Brasil', concepts: ['registro formal', 'registro informal', 'variação diatópica'] },
 ];
 
 // ─── LLM output schema (before audio enrichment) ───────────────
@@ -217,7 +226,7 @@ async function main(): Promise<void> {
   const { blockFilter } = parseArgs();
   const targets = blockFilter !== undefined
     ? BLOCKS.filter(b => b.id === blockFilter)
-    : BLOCKS.slice(0, 1); // Phase 1: only b1 by default
+    : BLOCKS; // Phase 2: all 10 blocks by default
 
   if (targets.length === 0) {
     console.error(`No block found for --block=${blockFilter}`);
@@ -227,6 +236,7 @@ async function main(): Promise<void> {
   for (const block of targets) {
     console.log(`\n=== Block ${block.id}: ${block.theme} ===`);
     await generateStoryForBlock(block, 1);
+    await generateStoryForBlock(block, 2);
   }
 }
 
