@@ -103,28 +103,49 @@ async function generateStoryForBlock(
   // schemaVersion ensures stale cache is invalidated on StoryOutputSchema bumps.
   const cacheKey = { schemaVersion: STORY_SCHEMA_VERSION, storyId, level, user, system };
 
-  // Try LLM cache first.
-  let llmText: string;
-  const cachedText = await readCache<string>(LLM_CACHE, cacheKey);
-  if (cachedText) {
+  // Try LLM cache first — note: may be a stale bad entry if a previous run
+  // cached before validation. The retry loop handles this: a bad cache hit
+  // causes llmText to be set to null, forcing a fresh LLM call on the next
+  // attempt, and the good response overwrites the stale cache entry.
+  let llmText: string | null = await readCache<string>(LLM_CACHE, cacheKey);
+  if (llmText) {
     console.log(`  ↳ LLM cache hit`);
-    llmText = cachedText;
-  } else {
-    const result = await callLlm({ system, user, maxTokens: 2000 });
-    llmText = result.text;
-    await writeCache(LLM_CACHE, cacheKey, llmText);
   }
 
-  // Parse LLM output.
-  const raw = extractJson(llmText);
-  const parsed = StoryOutputSchema.safeParse(raw);
-  if (!parsed.success) {
-    throw new Error(
-      `StoryOutputSchema failed for ${storyId}: ` +
-      parsed.error.issues.map(i => `${i.path.join('.')}: ${i.message}`).join('; ')
-    );
+  let llmStory: z.infer<typeof StoryOutputSchema> | undefined;
+  const MAX_ATTEMPTS = 3;
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    if (!llmText) {
+      const result = await callLlm({
+        system,
+        user,
+        maxTokens: 2000,
+        ...(attempt > 1 ? { temperature: 0.9 } : {}),
+      });
+      llmText = result.text;
+    }
+    try {
+      const raw = extractJson(llmText);
+      const parsed = StoryOutputSchema.safeParse(raw);
+      if (!parsed.success) {
+        throw new Error(
+          `StoryOutputSchema failed for ${storyId}: ` +
+          parsed.error.issues.map(i => `${i.path.join('.')}: ${i.message}`).join('; ')
+        );
+      }
+      llmStory = parsed.data;
+      await writeCache(LLM_CACHE, cacheKey, llmText); // cache ONLY after validation
+      break;
+    } catch (err) {
+      console.warn(`  ⚠ attempt ${attempt}/${MAX_ATTEMPTS} for ${storyId}: ${err instanceof Error ? err.message : String(err)}`);
+      llmText = null; // force fresh LLM call on next attempt
+      if (attempt === MAX_ATTEMPTS) throw err;
+    }
   }
-  const llmStory = parsed.data;
+
+  if (!llmStory) {
+    throw new Error(`BUG: llmStory is undefined after retry loop for ${storyId}`);
+  }
 
   // ─── TTS (global p-limit, shared across all blocks/stories) ───────
   const brVoice = VOICES.br[DEFAULT_VOICE];
@@ -233,10 +254,39 @@ async function main(): Promise<void> {
     process.exit(1);
   }
 
+  const failures: Array<{ storyId: string; error: string }> = [];
+
   for (const block of targets) {
     console.log(`\n=== Block ${block.id}: ${block.theme} ===`);
-    await generateStoryForBlock(block, 1);
-    await generateStoryForBlock(block, 2);
+    for (const storyIndex of [1, 2] as const) {
+      const storyId = `b${block.id}-s${storyIndex}-${slugify(block.theme)}`;
+      try {
+        await generateStoryForBlock(block, storyIndex);
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        console.error(`  ✗ failed ${storyId}: ${message}`);
+        failures.push({ storyId, error: message });
+      }
+    }
+  }
+
+  const failuresFile = path.join(STORIES_DIR, 'generation-failures.json');
+
+  if (failures.length > 0) {
+    await fs.mkdir(STORIES_DIR, { recursive: true });
+    await fs.writeFile(failuresFile, JSON.stringify(failures, null, 2) + '\n', 'utf8');
+    process.stderr.write(
+      `\n${failures.length} story generation failure(s):\n` +
+      failures.map(f => `  - ${f.storyId}: ${f.error}`).join('\n') + '\n'
+    );
+    process.exit(1);
+  }
+
+  // All succeeded — remove stale failures file if it exists.
+  try {
+    await fs.unlink(failuresFile);
+  } catch {
+    // file didn't exist, that's fine
   }
 }
 

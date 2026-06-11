@@ -123,11 +123,21 @@ export function extractJson(raw: string): unknown {
     try {
       return JSON.parse(repaired);
     } catch (secondErr) {
-      throw new Error(
-        `Failed to parse JSON after repair. Original: ${firstErr instanceof Error ? firstErr.message : firstErr}. ` +
-        `Repaired: ${secondErr instanceof Error ? secondErr.message : secondErr}. ` +
-        `Raw start: ${raw.slice(0, 200)}`
-      );
+      // Intento 2: repair literal newlines/tabs inside JSON string values.
+      // Walk the candidate char-by-char tracking in-string state; replace bare
+      // \n, \r, \t that appear inside a string literal with their escape sequences.
+      const inStringRepaired = repairLiteralNewlinesInStrings(repaired);
+      try {
+        return JSON.parse(inStringRepaired);
+      } catch (thirdErr) {
+        throw new Error(
+          `Failed to parse JSON after all repair attempts (trailing-comma, in-string newlines). ` +
+          `Original: ${firstErr instanceof Error ? firstErr.message : firstErr}. ` +
+          `After trailing-comma repair: ${secondErr instanceof Error ? secondErr.message : secondErr}. ` +
+          `After newline repair: ${thirdErr instanceof Error ? thirdErr.message : thirdErr}. ` +
+          `Raw start: ${raw.slice(0, 200)}`
+        );
+      }
     }
   }
 }
@@ -151,4 +161,38 @@ function findBalancedEnd(s: string): number {
     }
   }
   return -1;
+}
+
+// Replace literal newline/carriage-return/tab characters that appear INSIDE
+// JSON string literals with their two-character escape equivalents.
+// Uses the same in-string state machine as findBalancedEnd (tracks \" escapes).
+function repairLiteralNewlinesInStrings(s: string): string {
+  const out: string[] = [];
+  let inString = false;
+  let escape = false;
+  for (let i = 0; i < s.length; i++) {
+    const c = s[i] as string;
+    if (escape) {
+      escape = false;
+      out.push(c);
+      continue;
+    }
+    if (c === '\\') {
+      escape = true;
+      out.push(c);
+      continue;
+    }
+    if (c === '"') {
+      inString = !inString;
+      out.push(c);
+      continue;
+    }
+    if (inString) {
+      if (c === '\n') { out.push('\\n'); continue; }
+      if (c === '\r') { out.push('\\r'); continue; }
+      if (c === '\t') { out.push('\\t'); continue; }
+    }
+    out.push(c);
+  }
+  return out.join('');
 }
