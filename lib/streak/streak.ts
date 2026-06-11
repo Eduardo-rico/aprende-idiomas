@@ -18,12 +18,14 @@ export function currentStreak(streak: StreakDay[], today: string, goalMin: numbe
   let count = 0;
   let cursor = today;
   for (let i = sorted.length - 1; i >= 0; i--) {
-    if (sorted[i].date !== cursor) {
-      const diff = dateDiffDays(sorted[i].date, cursor);
+    const entry = sorted[i];
+    if (entry === undefined) break;
+    if (entry.date !== cursor) {
+      const diff = dateDiffDays(entry.date, cursor);
       if (diff > 0) break;
       if (diff < 0) continue;
     }
-    if (sorted[i].minutesStudied >= goalMin) {
+    if (entry.minutesStudied >= goalMin) {
       count++;
       cursor = dateOffset(cursor, -1);
     } else {
@@ -42,7 +44,9 @@ export function didStudyToday(streak: StreakDay[], today: string, goalMin: numbe
 export function isStreakAlive(streak: StreakDay[], today: string): boolean {
   if (streak.length === 0) return false;
   const sorted = [...streak].sort((a, b) => a.date.localeCompare(b.date));
-  const last = sorted[sorted.length - 1].date;
+  const lastEntry = sorted[sorted.length - 1];
+  if (lastEntry === undefined) return false;
+  const last = lastEntry.date;
   const diff = dateDiffDays(last, today);
   return diff === 0 || diff === 1;
 }
