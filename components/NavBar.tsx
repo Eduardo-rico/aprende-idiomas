@@ -5,6 +5,7 @@ const links = [
   { href: "/", label: "Inicio" },
   { href: "/learn", label: "Estudiar" },
   { href: "/blocks", label: "Blocos" },
+  { href: "/stories", label: "Histórias" },
   { href: "/stats", label: "Stats" },
   { href: "/settings", label: "⚙" },
 ];
