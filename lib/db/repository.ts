@@ -1,5 +1,15 @@
 // lib/db/repository.ts
-import { db, type Card, type CardId, type Rating, type ReviewEvent, type Session, type Variant } from "./schema";
+import { db, type Card, type CardId, type Rating, type ReviewEvent, type Session, type Variant, type StoryProgressRow } from "./schema";
+
+// Story-specific event types (minimal extension — not stored in schema to avoid breaking ReviewEvent queries)
+type StoryEventType = "story_started" | "story_completed";
+interface StoryEvent {
+  id?: number;
+  ts: Date;
+  type: StoryEventType;
+  storyId: string;
+  variant: Variant;
+}
 import { newCard, schedule } from "../srs/fsrs";
 import { recordAnswerForConcepts } from "../mastery/concept";
 
@@ -81,4 +91,55 @@ export async function submitAnswer(p: SubmitAnswerParams): Promise<void> {
       });
     }
   });
+}
+
+export async function getOrCreateStoryProgress(
+  storyId: string,
+  variant: Variant,
+): Promise<StoryProgressRow> {
+  const existing = await db.storyProgress.get(storyId);
+  if (existing) {
+    // Update lastVariant if it changed and return the merged row
+    if (existing.lastVariant !== variant) {
+      await db.storyProgress.update(storyId, { lastVariant: variant });
+      return { ...existing, lastVariant: variant };
+    }
+    return existing;
+  }
+  const now = new Date();
+  const row: StoryProgressRow = {
+    storyId,
+    startedAt: now,
+    completedAt: null,
+    lastVariant: variant,
+  };
+  await db.storyProgress.put(row);
+  const event: StoryEvent = { ts: now, type: "story_started", storyId, variant };
+  await db.events.add(event as unknown as ReviewEvent);
+  return row;
+}
+
+export async function markStoryCompleted(storyId: string): Promise<void> {
+  const row = await db.storyProgress.get(storyId);
+  if (!row) throw new Error(`StoryProgress not found: ${storyId}`);
+  // Idempotency: if already completed, do nothing (no double event)
+  if (row.completedAt !== null) return;
+  const now = new Date();
+  await db.storyProgress.update(storyId, { completedAt: now });
+  const event: StoryEvent = {
+    ts: now,
+    type: "story_completed",
+    storyId,
+    variant: row.lastVariant,
+  };
+  await db.events.add(event as unknown as ReviewEvent);
+}
+
+export async function getCompletedStories(): Promise<string[]> {
+  // Use .filter() because null keys are not indexed in IndexedDB,
+  // making .where("completedAt").above(new Date(0)) unreliable with fake-indexeddb.
+  const rows = await db.storyProgress
+    .filter((row) => row.completedAt !== null)
+    .toArray();
+  return rows.map((row) => row.storyId);
 }
