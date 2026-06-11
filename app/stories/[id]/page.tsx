@@ -1,4 +1,4 @@
-import { loadStory, loadAllStories } from "@/lib/data/loaders";
+import { loadStory } from "@/lib/data/loaders";
 import { notFound } from "next/navigation";
 import { StoryPlayer } from "@/components/stories/StoryPlayer";
 import { StoryText } from "@/components/stories/StoryText";
