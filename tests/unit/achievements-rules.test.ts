@@ -1,0 +1,84 @@
+// tests/unit/achievements-rules.test.ts
+import { describe, it, expect } from "vitest";
+import { RULES, checkAndUnlock, AppState } from "@/lib/achievements/rules";
+
+function state(overrides: Partial<AppState> = {}): AppState {
+  return {
+    totalAnswers: 0,
+    currentStreak: 0,
+    completedBlocks: [],
+    perfectLessons: 0,
+    storiesRead: 0,
+    vocabCardsLearned: 0,
+    conceptsMastery80: 0,
+    diagnosticCount: 0,
+    variantsUsed: new Set(),
+    ...overrides,
+  };
+}
+
+describe("RULES", () => {
+  it("has at least 18 rules", () => {
+    expect(RULES.length).toBeGreaterThanOrEqual(18);
+  });
+
+  it("every rule has id, name, description, check", () => {
+    for (const r of RULES) {
+      expect(r.id).toBeTruthy();
+      expect(r.name).toBeTruthy();
+      expect(r.description).toBeTruthy();
+      expect(typeof r.check).toBe("function");
+    }
+  });
+
+  it("rule ids are unique", () => {
+    const ids = new Set(RULES.map((r) => r.id));
+    expect(ids.size).toBe(RULES.length);
+  });
+});
+
+describe("specific rules", () => {
+  it("first-card", () => {
+    const r = RULES.find((r) => r.id === "first-card")!;
+    expect(r.check(state({ totalAnswers: 0 }))).toBe(false);
+    expect(r.check(state({ totalAnswers: 1 }))).toBe(true);
+  });
+
+  it("streak-7", () => {
+    const r = RULES.find((r) => r.id === "streak-7")!;
+    expect(r.check(state({ currentStreak: 6 }))).toBe(false);
+    expect(r.check(state({ currentStreak: 7 }))).toBe(true);
+  });
+
+  it("block-1-complete", () => {
+    const r = RULES.find((r) => r.id === "block-1-complete")!;
+    expect(r.check(state({ completedBlocks: [] }))).toBe(false);
+    expect(r.check(state({ completedBlocks: [1] }))).toBe(true);
+  });
+
+  it("pt-explorer", () => {
+    const r = RULES.find((r) => r.id === "pt-explorer")!;
+    expect(r.check(state({ variantsUsed: new Set(["br"]) }))).toBe(false);
+    expect(r.check(state({ variantsUsed: new Set(["br", "pt"]) }))).toBe(true);
+  });
+});
+
+describe("checkAndUnlock", () => {
+  it("returns newly unlocked rules", () => {
+    const s = state({ totalAnswers: 1 });
+    const newUnlocks = checkAndUnlock(new Set(), s);
+    expect(newUnlocks.map((r) => r.id)).toContain("first-card");
+  });
+
+  it("does not return already-unlocked", () => {
+    const s = state({ totalAnswers: 1 });
+    const newUnlocks = checkAndUnlock(new Set(["first-card"]), s);
+    expect(newUnlocks.map((r) => r.id)).not.toContain("first-card");
+  });
+
+  it("returns [] when nothing new", () => {
+    const allIds = new Set(RULES.map((r) => r.id));
+    const newUnlocks = checkAndUnlock(allIds, state({}));
+    expect(newUnlocks).toEqual([]);
+  });
+});
