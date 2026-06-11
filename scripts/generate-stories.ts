@@ -15,6 +15,9 @@ import { readCache, writeCache } from './lib/cache';
 import { renderTemplate } from './lib/prompt-runner';
 import { StorySchema } from './lib/zod-schemas';
 
+// ─── LLM schema version — bump when StoryOutputSchema changes ──────
+const STORY_SCHEMA_VERSION = 1;
+
 // ─── Block definitions (Phase 1: b1 only) ──────────────────────
 const BLOCKS: Array<{ id: number; theme: string; concepts: string[] }> = [
   { id: 1, theme: 'O dia a dia de João na padaria', concepts: ['alfabeto', 'acentos', 'vogais nasais', 'sílabas'] },
@@ -47,6 +50,10 @@ const PROJECT_ROOT = process.cwd();
 const PROMPTS_DIR = path.join(PROJECT_ROOT, 'scripts', 'prompts');
 const STORIES_DIR = path.join(DATA_DIR, 'stories');
 
+// ─── Global TTS limiter + done counter (shared across all blocks/stories) ──
+const ttsLimit = pLimit(Math.min(4, Math.max(1, TTS_CONCURRENCY)));
+let ttsDone = 0;
+
 async function loadPrompt(name: string): Promise<string> {
   return fs.readFile(path.join(PROMPTS_DIR, `${name}.md`), 'utf8');
 }
@@ -71,8 +78,11 @@ async function generateStoryForBlock(
   const level: 1 | 2 | 3 = storyIndex === 1 ? 1 : 2;
   console.log(`→ generating story ${storyId} (level ${level})`);
 
-  // Load and render prompt template.
-  const template = await loadPrompt('story');
+  // Load prompt templates up front.
+  const [template, system] = await Promise.all([
+    loadPrompt('story'),
+    loadPrompt('system'),
+  ]);
   const user = renderTemplate(template, {
     blockId: block.id,
     level,
@@ -81,7 +91,8 @@ async function generateStoryForBlock(
   });
 
   // Build LLM cache key (deterministic, mirrors generate-content pattern).
-  const cacheKey = { storyId, level, user };
+  // schemaVersion ensures stale cache is invalidated on StoryOutputSchema bumps.
+  const cacheKey = { schemaVersion: STORY_SCHEMA_VERSION, storyId, level, user, system };
 
   // Try LLM cache first.
   let llmText: string;
@@ -90,7 +101,6 @@ async function generateStoryForBlock(
     console.log(`  ↳ LLM cache hit`);
     llmText = cachedText;
   } else {
-    const system = await loadPrompt('system');
     const result = await callLlm({ system, user, maxTokens: 2000 });
     llmText = result.text;
     await writeCache(LLM_CACHE, cacheKey, llmText);
@@ -107,14 +117,9 @@ async function generateStoryForBlock(
   }
   const llmStory = parsed.data;
 
-  // ─── TTS (p-limit(4)) ──────────────────────────────────────────
-  const ttsLimit = pLimit(Math.min(4, Math.max(1, TTS_CONCURRENCY)));
-
+  // ─── TTS (global p-limit, shared across all blocks/stories) ───────
   const brVoice = VOICES.br[DEFAULT_VOICE];
   const ptVoice = VOICES.pt[DEFAULT_VOICE];
-
-  // Track call count for TTS_DELAY_MS spacing.
-  let ttsDone = 0;
 
   async function tts(text: string, variant: 'br' | 'pt', voiceId: string): Promise<string> {
     return ttsLimit(async () => {
@@ -190,10 +195,19 @@ function parseArgs(): { blockFilter?: number } {
   let blockFilter: number | undefined;
   for (let i = 0; i < args.length; i++) {
     const a = args[i];
+    let raw: string | undefined;
     if (a !== undefined && a.startsWith('--block=')) {
-      blockFilter = Number(a.slice('--block='.length));
+      raw = a.slice('--block='.length);
     } else if (a === '--block' && args[i + 1] !== undefined) {
-      blockFilter = Number(args[++i]);
+      raw = args[++i];
+    }
+    if (raw !== undefined) {
+      const n = Number(raw);
+      if (Number.isNaN(n)) {
+        console.error(`Error: --block value "${raw}" is not a valid number.`);
+        process.exit(1);
+      }
+      blockFilter = n;
     }
   }
   return { blockFilter };
