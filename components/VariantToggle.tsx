@@ -12,7 +12,7 @@ export function VariantToggle() {
           <button
             key={v}
             onClick={() => setVariant(v)}
-            className={`px-3 py-1 text-sm font-medium ${variant === v ? "bg-primary text-fg" : "text-muted hover:text-foreground"}`}
+            className={`px-3 py-1 text-sm font-medium ${variant === v ? "bg-primary text-foreground" : "text-muted hover:text-foreground"}`}
           >
             {v === "br" ? "🇧🇷 BR" : "🇵🇹 PT"}
           </button>

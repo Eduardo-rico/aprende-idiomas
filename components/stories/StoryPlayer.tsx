@@ -26,12 +26,18 @@ export function StoryPlayer({
   useEffect(() => {
     const audio = new Audio(audioUrl);
     audioRef.current = audio;
-    audio.addEventListener("loadedmetadata", () => setDuration(audio.duration));
-    audio.addEventListener("timeupdate", () => setProgress(audio.currentTime));
-    audio.addEventListener("ended", () => setPlaying(false));
+    const onLoadedMetadata = () => setDuration(audio.duration);
+    const onTimeUpdate = () => setProgress(audio.currentTime);
+    const onEnded = () => setPlaying(false);
+    audio.addEventListener("loadedmetadata", onLoadedMetadata);
+    audio.addEventListener("timeupdate", onTimeUpdate);
+    audio.addEventListener("ended", onEnded);
     setPlaying(false);
     setProgress(0);
     return () => {
+      audio.removeEventListener("loadedmetadata", onLoadedMetadata);
+      audio.removeEventListener("timeupdate", onTimeUpdate);
+      audio.removeEventListener("ended", onEnded);
       audio.pause();
       audio.src = "";
     };
@@ -92,7 +98,7 @@ export function StoryPlayer({
             aria-pressed={variant === v}
             className={`px-2 py-1 text-xs font-medium ${
               variant === v
-                ? "bg-primary text-fg"
+                ? "bg-primary text-foreground"
                 : "text-muted hover:text-foreground"
             }`}
           >
