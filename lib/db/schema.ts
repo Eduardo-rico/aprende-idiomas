@@ -77,6 +77,13 @@ export interface ConceptMastery {
   updatedAt: Date;
 }
 
+export interface StoryProgressRow {
+  storyId: string;
+  startedAt: Date;
+  completedAt: Date | null;
+  lastVariant: Variant;
+}
+
 class PortuguesDB extends Dexie {
   cards!: EntityTable<Card, "id">;
   sessions!: EntityTable<Session, "id">;
@@ -88,6 +95,7 @@ class PortuguesDB extends Dexie {
   streak!: EntityTable<StreakDay, "date">;
   xp!: EntityTable<XpRow, "key">;
   conceptMastery!: EntityTable<ConceptMastery, "conceptId">;
+  storyProgress!: EntityTable<StoryProgressRow, "storyId">;
 
   constructor() {
     super("PortuguesAppDB");
@@ -104,6 +112,9 @@ class PortuguesDB extends Dexie {
       streak: "date",
       xp: "key",
       conceptMastery: "conceptId, blockId, isMastered",
+    });
+    this.version(2).stores({
+      storyProgress: "storyId, completedAt",
     });
   }
 }
