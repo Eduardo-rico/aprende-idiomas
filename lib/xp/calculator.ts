@@ -55,7 +55,8 @@ export function levelFromXp(total: number): number {
  */
 export function levelProgress(total: number): { current: number; start: number; end: number; pct: number } {
   const current = levelFromXp(total);
-  // start: absolute XP threshold that begins this level (= cumulative of level below)
+  // start: cumulative XP floor of the PREVIOUS level tier (0 at level ≤1). It is NOT
+  // the lower bound of pct — UI must use pct directly, never (total-start)/(end-start).
   const start = current === 0 ? 0 : cumulativeXpForLevel(current - 1);
   // end: absolute XP threshold that ends this level (= cumulative of next level)
   const end = cumulativeXpForLevel(current + 1);
