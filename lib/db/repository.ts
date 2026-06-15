@@ -135,6 +135,44 @@ export async function getCompletedStories(): Promise<string[]> {
 
 // ─── Streak / XP / Achievement helpers ────────────────────────────────────────
 
+// ─── Vocab card helpers ──────────────────────────────────────────────────────
+// Vocab cards live in the same `cards` table as exercise cards (FSRS-managed)
+// but are identified by an `id` prefix of `vocab-` instead of a migration that
+// adds a `tags` column. This keeps the schema untouched and lets `getDueVocab`
+// compose with the existing `nextReviewAt` index via an in-memory filter.
+const VOCAB_ID_PREFIX = 'vocab-';
+
+export async function getOrCreateVocabCard(
+  word: string,
+  meaning: string,
+  conceptId: string,
+): Promise<Card> {
+  const id = `${VOCAB_ID_PREFIX}${word.toLowerCase()}`;
+  const existing = await db.cards.get(id);
+  if (existing) return existing;
+  const fresh = newCard(id, 0, `vocab-${conceptId}`);
+  // The Card schema doesn't store the meaning/word directly — those live in the
+  // vocab-catalog.json and are looked up by the UI from the id. We do not
+  // duplicate them on the Card row (avoids sync drift).
+  await db.cards.add(fresh);
+  return fresh;
+}
+
+export async function getDueVocabCards(limit: number, now: Date = new Date()): Promise<Card[]> {
+  // .filter() (not .where) because the prefix isn't indexed. We still hit the
+  // nextReviewAt index first by reading all due cards, then narrowing to vocab.
+  const due = await db.cards
+    .where('nextReviewAt')
+    .belowOrEqual(now)
+    .toArray();
+  return due.filter((c) => c.id.startsWith(VOCAB_ID_PREFIX)).slice(0, limit);
+}
+
+export async function getDueCardsCount(now: Date = new Date()): Promise<number> {
+  return db.cards.where('nextReviewAt').belowOrEqual(now).count();
+}
+
+
 export async function recordSessionEnd(
   sessionId: number,
   variant: Variant,
