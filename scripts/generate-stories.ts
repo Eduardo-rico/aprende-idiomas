@@ -18,18 +18,22 @@ import { StorySchema } from './lib/zod-schemas';
 // ─── LLM schema version — bump when StoryOutputSchema changes ──────
 const STORY_SCHEMA_VERSION = 1;
 
-// ─── Block definitions (Phase 1: b1 only) ──────────────────────
-const BLOCKS: Array<{ id: number; theme: string; concepts: string[] }> = [
-  { id: 1, theme: 'O dia a dia de João na padaria', concepts: ['alfabeto', 'acentos', 'vogais nasais', 'sílabas'] },
-  { id: 2, theme: 'A família de Maria em Lisboa', concepts: ['gênero', 'número', 'artigos', 'possessivos'] },
-  { id: 3, theme: 'Pedro vai ao restaurante', concepts: ['presente', 'verbos irregulares', 'pronomes', 'há/tem'] },
-  { id: 4, theme: 'Ana conta suas férias no Brasil', concepts: ['pretérito perfeito', 'imperfeito', 'mais-que-perfeito'] },
-  { id: 5, theme: 'Os planos de Carlos para o futuro', concepts: ['futuro do presente', 'futuro composto', 'condicional'] },
-  { id: 6, theme: 'Esperança e dúvida na vida de Sofia', concepts: ['presente do subjuntivo', 'imperfeito do subjuntivo', 'futuro do subjuntivo'] },
-  { id: 7, theme: 'Um dia comum de Miguel', concepts: ['infinitivo', 'gerúndio', 'particípio', 'infinitivo pessoal'] },
-  { id: 8, theme: 'O debate entre amigos no café', concepts: ['conectores', 'orações subordinadas', 'colocação pronominal'] },
-  { id: 9, theme: 'Cores, sabores e sons do Brasil', concepts: ['léxico temático', 'expressões idiomáticas', 'falsos amigos', 'regência'] },
-  { id: 10, theme: 'Cartas e e-mails entre Portugal e Brasil', concepts: ['registro formal', 'registro informal', 'variação diatópica'] },
+// ─── Block definitions ──────────────────────────────────────────
+// conceptIds are the canonical IDs from lib/data/curriculum.ts (e.g.
+// 'b2-artigos'), so the regenerated story files align with ALL_CONCEPTS.
+// B9 (livre / drill) has no Concept[] in the curriculum; we keep a minimal
+// set for the story LLM anchor anyway.
+const BLOCKS: Array<{ id: number; theme: string; conceptIds: string[] }> = [
+  { id: 1, theme: 'O dia a dia de João na padaria', conceptIds: ['b1-alfabeto', 'b1-acentos', 'b1-vogais-nasais', 'b1-silaba-tonica'] },
+  { id: 2, theme: 'A família de Maria em Lisboa', conceptIds: ['b2-genero', 'b2-numero', 'b2-artigos', 'b2-possessivos'] },
+  { id: 3, theme: 'Pedro vai ao restaurante', conceptIds: ['b3-presente-regular', 'b3-presente-irregular', 'b3-pronomes', 'b3-existenciais'] },
+  { id: 4, theme: 'Ana conta suas férias no Brasil', conceptIds: ['b4-perfeito-regular', 'b4-imperfeito', 'b4-mais-que-perfeito'] },
+  { id: 5, theme: 'Os planos de Carlos para o futuro', conceptIds: ['b5-futuro-presente', 'b5-futuro-composto', 'b5-condicional'] },
+  { id: 6, theme: 'Esperança e dúvida na vida de Sofia', conceptIds: ['b6-presente-subj', 'b6-imperfeito-subj', 'b6-futuro-subj'] },
+  { id: 7, theme: 'Um dia comum de Miguel', conceptIds: ['b7-infinitivo-pessoal', 'b7-gerundio', 'b7-participio'] },
+  { id: 8, theme: 'O debate entre amigos no café', conceptIds: ['b8-conectores', 'b8-oracoes-subordinadas', 'b8-colocacao-pronominal'] },
+  { id: 9, theme: 'Cores, sabores e sons do Brasil', conceptIds: ['b10-registro', 'b10-variacao-diatopica'] },
+  { id: 10, theme: 'Cartas e e-mails entre Portugal e Brasil', conceptIds: ['b10-registro', 'b10-variacao-diatopica'] },
 ];
 
 // ─── LLM output schema (before audio enrichment) ───────────────
@@ -69,7 +73,7 @@ async function loadPrompt(name: string): Promise<string> {
 
 // ─── Core generator ─────────────────────────────────────────────
 async function generateStoryForBlock(
-  block: { id: number; theme: string; concepts: string[] },
+  block: { id: number; theme: string; conceptIds: string[] },
   storyIndex: 1 | 2,
 ): Promise<void> {
   const storyId = `b${block.id}-s${storyIndex}-${slugify(block.theme)}`;
@@ -96,7 +100,7 @@ async function generateStoryForBlock(
     blockId: block.id,
     level,
     theme: block.theme,
-    concepts: block.concepts.join(', '),
+    concepts: block.conceptIds.join(', '),
   });
 
   // Build LLM cache key (deterministic, mirrors generate-content pattern).
@@ -189,7 +193,7 @@ async function generateStoryForBlock(
     lessonIds: [] as string[],
     title: llmStory.title,
     level,
-    conceptIds: block.concepts,
+    conceptIds: block.conceptIds,
     variants: {
       br: { text: llmStory.br.text, audioHash: brAudioHash },
       pt: { text: llmStory.pt.text, audioHash: ptAudioHash },

@@ -1,7 +1,7 @@
 // scripts/verify-content.ts
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { BLOCKS } from '@/lib/data/curriculum';
+import { BLOCKS, ALL_CONCEPTS } from '@/lib/data/curriculum';
 import { BLOCKS_DIR, DATA_DIR, TTS_OUTPUT, EXERCISES_PER_LESSON, TYPE_TO_TEMPLATE } from './config';
 import {
   ExerciseSchema, GeneratedExerciseSchema,
@@ -10,6 +10,8 @@ import {
 } from './lib/zod-schemas';
 import { isValidMp3 } from './lib/minimax-tts';
 import { textsFor } from './lib/audio-collector';
+
+const VALID_CONCEPT_IDS = new Set(ALL_CONCEPTS.map(c => c.id));
 
 interface ManifestShape {
   generatedAt: string;
@@ -82,7 +84,27 @@ async function main() {
       }
     }
 
+    const validLessonIds = new Set(b.lessons.map(l => l.id));
+
     for (const ex of exercises) {
+      // Drift safety net: every conceptId and lessonId referenced by an
+      // exercise must exist in the curriculum. Under STRICT=1 these become
+      // errors (propose-lessons drift); in default mode they are warnings
+      // for backward compat with the existing free-text conceptIds used
+      // by older story files.
+      for (const cid of ex.concepts ?? []) {
+        if (!VALID_CONCEPT_IDS.has(cid)) {
+          (STRICT ? errors : warnings).push(
+            `${ex.id}: unknown conceptId "${cid}" (not in ALL_CONCEPTS)`
+          );
+        }
+      }
+      if (!validLessonIds.has(ex.lessonId)) {
+        (STRICT ? errors : warnings).push(
+          `${ex.id}: lessonId "${ex.lessonId}" not found in block ${b.id} lessons`
+        );
+      }
+
       // GeneratedExercise: contentHash y audio son invariantes.
       const g = GeneratedExerciseSchema.safeParse(ex);
       if (!g.success) {

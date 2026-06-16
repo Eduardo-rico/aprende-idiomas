@@ -262,3 +262,21 @@ export const DiagnosticSchema = z.object({
 
 export type Diagnostic = z.infer<typeof DiagnosticSchema>;
 export type DiagnosticQuestion = z.infer<typeof DiagnosticQuestionSchema>;
+
+// ─── Lesson (proposed by scripts/propose-lessons.ts, written to lib/data/lessons/bN.json) ───
+// Schema mirrors the Lesson interface in lib/data/curriculum.ts but is the
+// strict wire format used at write time. Empty conceptIds or objectives are
+// rejected; conceptNotesPath must be a future MDX route.
+export const LessonSchema = z.object({
+  id: z.string().regex(/^b\d+-l\d+-[\w-]+$/, "lesson id must be b{N}-l{N}-{slug}"),
+  blockId: z.number().int().min(1).max(10),
+  name: z.string().min(1).max(80),
+  objectives: z.array(z.string().min(1)).min(1).max(6),
+  conceptIds: z.array(z.string().min(1)).min(1).max(8),
+  vocabKey: z.array(z.string().min(1)).min(1).max(7),
+  conceptNotesPath: z.string().regex(/^b\d+\/l[\w-]+\.mdx$/, "conceptNotesPath must be b{N}/l{N}-{slug}.mdx"),
+  exerciseRefs: z.array(z.string()).default([]),
+});
+
+export const LessonListSchema = z.array(LessonSchema);
+export type Lesson = z.infer<typeof LessonSchema>;
