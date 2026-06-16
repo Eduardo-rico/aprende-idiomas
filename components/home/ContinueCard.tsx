@@ -50,10 +50,10 @@ export function ContinueCard() {
       <div className="text-xs text-muted-foreground mb-1">🔁 Repaso</div>
       <h3 className="font-display text-xl mb-2">{dueCount} cards listas</h3>
       <Link
-        href="/learn"
+        href="/review"
         className="inline-block px-3 py-1.5 bg-primary text-primary-foreground rounded-md text-sm"
       >
-        Repasar ahora
+        Empezar repaso diario →
       </Link>
     </section>
   );

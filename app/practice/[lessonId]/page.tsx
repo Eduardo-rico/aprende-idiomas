@@ -9,6 +9,7 @@ import { ExerciseRunner } from "@/components/ExerciseRunner";
 // CRITICAL FIX (I1): static imports — no dynamic import() of modules already in the graph.
 import { ExerciseSchema, type Exercise } from "@/lib/data/zod-schemas";
 import { useSession } from "@/lib/stores/session";
+import { useSettings } from "@/lib/stores/settings";
 // CRITICAL FIX (I-Turbopack): static JSON import — template-literal dynamic
 // import of JSON breaks under Turbopack production builds.
 import b1Data from "@/lib/data/blocks/b1.json";
@@ -39,8 +40,10 @@ export default function PracticePage({ params }: { params: Promise<{ lessonId: s
   const lesson = getLesson(rawLessonId);
   const lessonId = lesson.id;
   const blockId = lesson.blockId;
+  const { localPracticeFilter } = useSettings();
 
   const [exercises, setExercises] = useState<Exercise[] | null>(null);
+  const [hiddenCount, setHiddenCount] = useState(0);
   const [sessionId, setSessionId] = useState<number | null>(null);
   const [sessionError, setSessionError] = useState<string | null>(null);
   const [done, setDone] = useState<{ reviewed: number; correct: number } | null>(null);
@@ -57,13 +60,38 @@ export default function PracticePage({ params }: { params: Promise<{ lessonId: s
         const blockData = BLOCK_DATA[blockId];
         if (!blockData) throw new Error(`No data for block ${blockId} (B9 is freeDrill — see /drill/vocab).)`);
         const raw = (blockData as Exercise[]).filter((e) => e.lessonId === lessonId);
-        const cards = await Promise.all(
-          raw.map(async (e) => {
-            await getOrCreateCard(e.id, e.blockId, e.lessonId);
-            return ExerciseSchema.parse(e);
-          })
-        );
-        setExercises(cards);
+        // Ensure every card row exists so we can read its state / nextReviewAt.
+        for (const e of raw) {
+          await getOrCreateCard(e.id, e.blockId, e.lessonId);
+        }
+        // If the feature flag is on, drop cards that are not due (state>0 and
+        // nextReviewAt > now). Brand-new cards (state===0) and overdue review
+        // cards stay in the queue. Cards scheduled for the future are hidden
+        // and counted for the "X más disponibles más tarde" hint.
+        let playable: Exercise[] = raw;
+        let hidden = 0;
+        if (localPracticeFilter) {
+          const now = new Date();
+          // Batch read all card rows in one IndexedDB round-trip, then filter
+          // in memory — avoids an N+1 sequence of getCardById awaits.
+          const ids = raw.map((e) => e.id);
+          const cards = await db.cards.bulkGet(ids);
+          const byId = new Map(ids.map((id, i) => [id, cards[i]]));
+          const kept: Exercise[] = [];
+          for (const e of raw) {
+            const card = byId.get(e.id);
+            if (!card) { kept.push(e); continue; }
+            if (card.state === 0 || card.nextReviewAt.getTime() <= now.getTime()) {
+              kept.push(e);
+            } else {
+              hidden++;
+            }
+          }
+          playable = kept;
+        }
+        const validated = playable.map((e) => ExerciseSchema.parse(e));
+        setExercises(validated);
+        setHiddenCount(hidden);
 
         // CRITICAL FIX (C9): if session creation fails, surface it — never run
         // the session with sessionId undefined (answers would be dropped).
@@ -76,7 +104,7 @@ export default function PracticePage({ params }: { params: Promise<{ lessonId: s
         setSessionError(err instanceof Error ? err.message : String(err));
       }
     })();
-  }, [lessonId, blockId]);
+  }, [lessonId, blockId, localPracticeFilter]);
 
   useEffect(() => {
     if (!done) return;
@@ -115,5 +143,16 @@ export default function PracticePage({ params }: { params: Promise<{ lessonId: s
     return <div className="p-12 text-center text-muted">Cargando...</div>;
   }
 
-  return <ExerciseRunner exercises={exercises} blockId={blockId} lessonId={lessonId} onFinish={setDone} />;
+  return (
+    <div>
+      {localPracticeFilter && hiddenCount > 0 && (
+        <div className="max-w-xl mx-auto px-4 pt-6">
+          <p className="text-xs text-muted">
+            {hiddenCount} tarjeta{hiddenCount === 1 ? "" : "s"} más disponible{hiddenCount === 1 ? "" : "s"} más tarde
+          </p>
+        </div>
+      )}
+      <ExerciseRunner exercises={exercises} blockId={blockId} lessonId={lessonId} onFinish={setDone} />
+    </div>
+  );
 }

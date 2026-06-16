@@ -12,6 +12,10 @@ interface SettingsState {
   theme: "light" | "dark";
   soundFx: boolean;
   voicePref: Record<Variant, AudioVariant>;
+  /** Filter /practice/[lessonId] to due cards only. Default off (legacy
+   *  behavior). When on, the lesson page shows only cards that are due now
+   *  or brand-new, and a hint about cards available later. */
+  localPracticeFilter: boolean;
 
   setVariant: (v: Variant) => void;
   toggleCompare: () => void;
@@ -21,6 +25,7 @@ interface SettingsState {
   // CRITICAL FIX (C10): wired setters so Settings toggles actually work.
   setShowContrast: (b: boolean) => void;
   setSoundFx: (b: boolean) => void;
+  setLocalPracticeFilter: (b: boolean) => void;
 }
 
 export const useSettings = create<SettingsState>()(
@@ -33,6 +38,7 @@ export const useSettings = create<SettingsState>()(
       theme: "light",
       soundFx: true,
       voicePref: { br: "default", pt: "default" },
+      localPracticeFilter: false,
       setVariant: (v) => set({ variant: v }),
       toggleCompare: () => set((s) => ({ showCompareToggle: !s.showCompareToggle })),
       setVoicePref: (variant, voice) => set((s) => ({ voicePref: { ...s.voicePref, [variant]: voice } })),
@@ -40,6 +46,7 @@ export const useSettings = create<SettingsState>()(
       setDailyGoal: (n) => set({ dailyGoalMinutes: n }),
       setShowContrast: (b) => set({ showContrast: b }),
       setSoundFx: (b) => set({ soundFx: b }),
+      setLocalPracticeFilter: (b) => set({ localPracticeFilter: b }),
     }),
     { name: "pt-settings", storage: createJSONStorage(() => localStorage) },
   ),

@@ -1,6 +1,8 @@
 // lib/db/repository.ts
 import { db, type Card, type CardId, type Rating, type AnswerEvent, type GenericEvent, type Session, type Variant, type StoryProgressRow } from "./schema";
 import { newCard, schedule } from "../srs/fsrs";
+import { buildDueQueue, type DueQueueOptions } from "../srs/review-queue";
+import { resetLeech, isLeech } from "../srs/leeches";
 import { recordAnswerForConcepts } from "../mastery/concept";
 import { currentStreak, didStudyToday, isStreakAlive } from "@/lib/streak/streak";
 import { levelFromXp } from "@/lib/xp/calculator";
@@ -14,12 +16,30 @@ export async function getOrCreateCard(id: CardId, blockId: number, lessonId: str
   return fresh;
 }
 
-export async function getDueCards(now: Date, limit: number): Promise<Card[]> {
-  return db.cards
+export interface GetDueCardsOptions {
+  /** Maximum total cards in the returned queue. Defaults to `limit`. */
+  cap?: number;
+  /** Maximum brand-new (state === 0) cards included. Defaults to 0. */
+  newCardsPerDay?: number;
+}
+
+/** Returns due cards ordered review-first, then new, capped at `cap` and
+ *  with at most `newCardsPerDay` brand-new cards. Backward compatible: if
+ *  no `options` is provided, behaves as before (just trim to `limit`). */
+export async function getDueCards(now: Date, limit: number, options: GetDueCardsOptions = {}): Promise<Card[]> {
+  const all = await db.cards
     .where("nextReviewAt")
     .belowOrEqual(now)
-    .limit(limit)
     .toArray();
+  const cap = options.cap ?? limit;
+  const newPerDay = options.newCardsPerDay ?? 0;
+  // If no per-day cap is requested, fall back to the legacy behavior so
+  // existing callers (e.g. block-page counters) keep their semantics.
+  if (newPerDay === 0) {
+    return all.slice(0, cap);
+  }
+  const { review, newCards } = buildDueQueue(all, { cap, newCardsPerDay: newPerDay } satisfies DueQueueOptions);
+  return [...review, ...newCards];
 }
 
 export async function getDueInBlock(blockId: number, now: Date, limit: number): Promise<Card[]> {
@@ -28,6 +48,33 @@ export async function getDueInBlock(blockId: number, now: Date, limit: number): 
     .between([blockId, new Date(0)], [blockId, now])
     .limit(limit)
     .toArray();
+}
+
+function startOfDay(now: Date): Date {
+  const d = new Date(now);
+  d.setHours(0, 0, 0, 0);
+  return d;
+}
+
+/** Count of `answer` events recorded since local midnight. Drives the
+ *  "X repasos" display on /learn and /review. */
+export async function getReviewedCountToday(now: Date = new Date()): Promise<number> {
+  return db.events
+    .where("ts")
+    .above(startOfDay(now))
+    .filter((e): e is AnswerEvent => e.type === "answer")
+    .count();
+}
+
+/** Count of brand-new cards introduced since local midnight. With the v4
+ *  `introducedAt` index this is an indexed count; without it, the call
+ *  would fall back to a full table scan. The index is mandatory for the
+ *  daily queue to be fast on large collections. */
+export async function getNewCardCountToday(now: Date = new Date()): Promise<number> {
+  return db.cards
+    .where("introducedAt")
+    .above(startOfDay(now))
+    .count();
 }
 
 export async function getDueInLesson(lessonId: string, now: Date, limit: number): Promise<Card[]> {
@@ -42,6 +89,22 @@ export async function getCardById(id: CardId): Promise<Card | undefined> {
   return db.cards.get(id);
 }
 
+/** Reset a leech card: rebuild FSRS state to New while keeping id, blockId,
+ *  lessonId, contentHash, and the original introducedAt. Returns the
+ *  updated card. Caller should re-read the card into the runner so the user
+ *  sees the freshly-reset state on the next render. */
+export async function resetLeechCard(id: CardId, now: Date = new Date()): Promise<Card> {
+  const card = await db.cards.get(id);
+  if (!card) throw new Error(`resetLeechCard: card ${id} not found`);
+  if (!isLeech(card)) {
+    // Idempotent / safe: if the user double-taps the reset we don't double-reset.
+    return card;
+  }
+  const fresh = resetLeech(card, now);
+  await db.cards.put(fresh);
+  return fresh;
+}
+
 export interface SubmitAnswerParams {
   cardId: CardId;
   rating: Rating;
@@ -53,11 +116,12 @@ export interface SubmitAnswerParams {
   sessionId?: number;
 }
 
-export async function submitAnswer(p: SubmitAnswerParams): Promise<void> {
+export async function submitAnswer(p: SubmitAnswerParams): Promise<Card> {
+  let updated: Card | undefined;
   await db.transaction("rw", db.cards, db.events, db.conceptMastery, db.sessions, async () => {
     const card = await db.cards.get(p.cardId);
     if (!card) throw new Error(`Card not found: ${p.cardId}`);
-    const updated = schedule(card, p.rating);
+    updated = schedule(card, p.rating);
     await db.cards.put(updated);
 
     const event: AnswerEvent = {
@@ -85,6 +149,8 @@ export async function submitAnswer(p: SubmitAnswerParams): Promise<void> {
       });
     }
   });
+  if (!updated) throw new Error(`submitAnswer: card ${p.cardId} disappeared mid-transaction`);
+  return updated;
 }
 
 export async function getOrCreateStoryProgress(

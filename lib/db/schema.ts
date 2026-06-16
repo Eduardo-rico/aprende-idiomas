@@ -34,7 +34,7 @@ export interface Session {
   endedAt?: Date;
   blockId?: BlockId;
   lessonId?: LessonId;
-  mode: "daily" | "lesson" | "drill" | "review_errors" | "story";
+  mode: "daily" | "lesson" | "drill" | "review_errors" | "story" | "review";
   cardsReviewed: number;
   correctCount: number;
   durationMs: number;
@@ -149,6 +149,11 @@ class PortuguesDB extends Dexie {
     });
     this.version(3).stores({
       diagnosticResults: "++id, takenAt, completed",
+    });
+    // v4: add `introducedAt` index on cards so `getNewCardCountToday` and
+    // the review-queue new-cards ordering are O(log N) instead of O(N).
+    this.version(4).stores({
+      cards: "id, blockId, lessonId, nextReviewAt, state, introducedAt, [blockId+nextReviewAt], [lessonId+nextReviewAt]",
     });
   }
 }

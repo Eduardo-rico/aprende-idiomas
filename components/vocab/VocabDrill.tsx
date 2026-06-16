@@ -20,6 +20,7 @@ import { xpForRating } from '@/lib/xp/calculator';
 import { useSettings } from '@/lib/stores/settings';
 import { useSession } from '@/lib/stores/session';
 import { db, RATING, type Card } from '@/lib/db/schema';
+import { nextIntervalMs, formatInterval } from '@/lib/srs/intervals';
 
 interface VocabCard { card: Card; item: VocabCatalogItem; }
 
@@ -36,6 +37,9 @@ export function VocabDrill() {
   const [correctCount, setCorrectCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const [startedAt] = useState(() => new Date());
+  // Set after each grade so the user can see "Próxima: en 3 días" before
+  // the next card loads. Cleared on each new card.
+  const [lastInterval, setLastInterval] = useState<string | null>(null);
 
   // Bootstrap: ensure BOOTSTRAP_SIZE vocab cards exist, then load due cards.
   useEffect(() => {
@@ -88,10 +92,11 @@ export function VocabDrill() {
 
   const onRate = useCallback(async (rating: 1 | 2 | 3 | 4) => {
     if (!current || !sessionId) return;
-    await submitAnswer({
+    const now = Date.now();
+    const updated = await submitAnswer({
       cardId: current.card.id,
       rating: rating as 1 | 2 | 3 | 4,
-      responseMs: Date.now() - startedAt.getTime(),
+      responseMs: now - startedAt.getTime(),
       mode: 'drill',
       variant,
       conceptIds: current.item.conceptIds,
@@ -104,6 +109,7 @@ export function VocabDrill() {
     if (xp > 0) await addXp(xp);
     setReviewed((n) => n + 1);
     setCorrectCount((n) => n + (correct ? 1 : 0));
+    setLastInterval(formatInterval(nextIntervalMs(updated, new Date(now))));
     setRevealed(false);
     setIdx((i) => i + 1);
   }, [current, sessionId, variant, startedAt]);
@@ -146,8 +152,9 @@ export function VocabDrill() {
 
   return (
     <div className="space-y-6">
-      <div className="text-xs text-muted-foreground uppercase">
-        {idx + 1} / {queue.length}
+      <div className="flex items-center justify-between text-xs text-muted-foreground uppercase">
+        <span>{idx + 1} / {queue.length}</span>
+        {lastInterval && <span>Próxima: {lastInterval}</span>}
       </div>
       <div className="p-8 border-2 border-border rounded-2xl text-center space-y-6">
         <div className="text-xs text-muted uppercase">
@@ -169,21 +176,24 @@ export function VocabDrill() {
         )}
       </div>
       {revealed && (
-        <div className="grid grid-cols-4 gap-2">
-          {[
-            { r: RATING.Again, label: 'Otra vez', key: '1' },
-            { r: RATING.Hard, label: 'Difícil', key: '2' },
-            { r: RATING.Good, label: 'Bien', key: '3' },
-            { r: RATING.Easy, label: 'Fácil', key: '4' },
-          ].map((b) => (
-            <button
-              key={b.key}
-              onClick={() => onRate(b.r)}
-              className="px-3 py-2 border border-border rounded-md text-sm hover:bg-muted/30"
-            >
-              {b.label}
-            </button>
-          ))}
+        <div className="space-y-2">
+          <div className="grid grid-cols-4 gap-2">
+            {[
+              { r: RATING.Again, label: 'Otra vez', key: '1' },
+              { r: RATING.Hard, label: 'Difícil', key: '2' },
+              { r: RATING.Good, label: 'Bien', key: '3' },
+              { r: RATING.Easy, label: 'Fácil', key: '4' },
+            ].map((b) => (
+              <button
+                key={b.key}
+                onClick={() => onRate(b.r)}
+                className="px-3 py-2 border border-border rounded-md text-sm hover:bg-muted/30"
+              >
+                {b.label}
+              </button>
+            ))}
+          </div>
+          <p className="text-xs text-muted-foreground text-center">1 / 2 / 3 / 4 para calificar</p>
         </div>
       )}
     </div>
