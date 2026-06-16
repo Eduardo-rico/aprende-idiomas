@@ -1,42 +1,52 @@
 // lib/vocab/catalog.ts
-// Vocab library — global catalog derived from stories, used for /drill/vocab
-// and the vocab-augmenting story sidebar. Re-exports the catalog type from
-// loaders (single source of truth) and adds lookup helpers.
-import { loadVocabCatalog, type VocabCatalogItem } from '@/lib/data/loaders';
+// Client-safe vocab library. The catalog data is loaded by the server
+// component (see lib/vocab/catalog-server.ts) and passed in as a prop or
+// stored in a module-level cache by an init function. The lookup helpers
+// below are pure (no fs) and safe to import from client components.
+import type { VocabCatalogItem } from "./catalog-types";
 
 export type { VocabCatalogItem };
 
 let cache: VocabCatalogItem[] | null = null;
 
-async function getCatalog(): Promise<VocabCatalogItem[]> {
-  if (!cache) cache = await loadVocabCatalog();
+/** Initialize the in-memory cache. Call once from a server component
+ *  before the client renders, or from a client effect. */
+export function initCatalog(items: VocabCatalogItem[]): void {
+  cache = items;
+}
+
+function ensureCache(): VocabCatalogItem[] {
+  if (!cache) {
+    throw new Error('Vocab catalog not initialized. Call initCatalog() in the server component.');
+  }
   return cache;
 }
 
-export async function getAllVocab(): Promise<VocabCatalogItem[]> {
-  return getCatalog();
+export function getAllVocab(): VocabCatalogItem[] {
+  return ensureCache();
 }
 
-export async function lookupVocab(word: string): Promise<VocabCatalogItem | null> {
-  const items = await getCatalog();
+export function lookupVocab(word: string): VocabCatalogItem | null {
+  const items = ensureCache();
   return items.find((v) => v.word.toLowerCase() === word.toLowerCase()) ?? null;
 }
 
-export async function getVocabByConcept(conceptId: string): Promise<VocabCatalogItem[]> {
-  const items = await getCatalog();
-  return items.filter((v) => v.conceptIds.includes(conceptId));
+export function getVocabByConcept(conceptId: string): VocabCatalogItem[] {
+  return ensureCache().filter((v) => v.conceptIds.includes(conceptId));
 }
 
-export async function getRandomVocab(n: number, exclude: string[] = []): Promise<VocabCatalogItem[]> {
-  const items = await getCatalog();
+export function getRandomVocab(n: number, exclude: string[] = []): VocabCatalogItem[] {
+  const items = ensureCache();
   const excludeSet = new Set(exclude.map((w) => w.toLowerCase()));
   const pool = items.filter((v) => !excludeSet.has(v.word.toLowerCase()));
-  // Fisher-Yates partial shuffle (no Math.random — we use a deterministic
-  // timestamp-based seed so SSR + client renders match).
+  // Fisher-Yates partial shuffle (only shuffle the n cards we need).
   const out = [...pool];
   for (let i = out.length - 1; i > 0 && i > out.length - n - 1; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [out[i], out[j]] = [out[j], out[i]];
+    const a = out[i]!;
+    const b = out[j]!;
+    out[i] = b;
+    out[j] = a;
   }
   return out.slice(0, Math.min(n, out.length));
 }

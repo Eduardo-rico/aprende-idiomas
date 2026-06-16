@@ -1,9 +1,9 @@
 import { promises as fs } from "fs";
 import path from "path";
-import { Story, StorySchema } from "@/lib/data/zod-schemas";
+import { Story, StorySchema, Diagnostic, DiagnosticSchema } from "@/lib/data/zod-schemas";
 
 const STORIES_DIR = path.join(process.cwd(), "lib/data/stories");
-const VOCAB_CATALOG = path.join(process.cwd(), "lib/data/vocab-catalog.json");
+const DIAGNOSTIC_FILE = path.join(process.cwd(), "lib/data/diagnostic.json");
 
 export async function loadAllStories(): Promise<Story[]> {
   try {
@@ -40,21 +40,15 @@ export async function loadStory(id: string): Promise<Story | null> {
   }
 }
 
-export type VocabCatalogItem = {
-  word: string;
-  ptWord?: string;
-  meaning: string;
-  audioHash: { br: string; pt: string };
-  conceptIds: string[];
-  storyIds: string[];
-};
-
-export async function loadVocabCatalog(): Promise<VocabCatalogItem[]> {
+// Returns the diagnostic test questions, or null if the file is missing.
+// The file is checked in to git; if you want to regenerate, edit by hand
+// (the LLM version proved too unreliable for the strict schema).
+export async function loadDiagnostic(): Promise<Diagnostic | null> {
   try {
-    const raw = await fs.readFile(VOCAB_CATALOG, "utf-8");
-    return JSON.parse(raw) as VocabCatalogItem[];
+    const raw = await fs.readFile(DIAGNOSTIC_FILE, "utf-8");
+    return DiagnosticSchema.parse(JSON.parse(raw));
   } catch (err) {
-    if ((err as NodeJS.ErrnoException).code === "ENOENT") return [];
+    if ((err as NodeJS.ErrnoException).code === "ENOENT") return null;
     throw err;
   }
 }

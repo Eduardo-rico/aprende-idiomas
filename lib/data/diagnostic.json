@@ -1,0 +1,166 @@
+{
+  "generatedAt": "2026-06-15T00:00:00.000Z",
+  "schemaVersion": 1,
+  "questions": [
+    {
+      "id": "q01b01",
+      "blockId": 1,
+      "conceptId": "b1-alfabeto",
+      "prompt": "Como se chama a letra Ç em português?",
+      "options": ["Cê cedilha", "Cê com til", "Cê circunflexo", "Cê agudo"],
+      "correctIndex": 0
+    },
+    {
+      "id": "q02b01",
+      "blockId": 1,
+      "conceptId": "b1-acentos",
+      "prompt": "Qual destas palavras tem acento gráfico (til) que indica vogal nasal?",
+      "options": ["cafe", "maçã", "cafezal", "cafeicultor"],
+      "correctIndex": 1
+    },
+    {
+      "id": "q03b01",
+      "blockId": 1,
+      "conceptId": "b1-vogais-nasais",
+      "prompt": "Em qual palavra a vogal tônica é nasal?",
+      "options": ["casa", "mão", "pão", "lua"],
+      "correctIndex": 2
+    },
+    {
+      "id": "q04b01",
+      "blockId": 1,
+      "conceptId": "b1-silaba-tonica",
+      "prompt": "A palavra 'café' tem a sílaba tônica em qual posição?",
+      "options": ["Primeira sílaba", "Segunda (penúltima) sílaba", "Última sílaba", "Não tem sílaba tônica"],
+      "correctIndex": 2
+    },
+    {
+      "id": "q05b01",
+      "blockId": 1,
+      "conceptId": "b1-corresp-on-ao",
+      "prompt": "Qual é a forma portuguesa da palavra espanhola 'corazón'?",
+      "options": ["corazon", "coraçon", "coração", "coraçam"],
+      "correctIndex": 2
+    },
+    {
+      "id": "q06b01",
+      "blockId": 1,
+      "conceptId": "b1-corresp-ll-lh",
+      "prompt": "Qual é a forma portuguesa da palavra espanhola 'caballo'?",
+      "options": ["cavalo", "cabalho", "cavallo", "cavalho"],
+      "correctIndex": 0
+    },
+    {
+      "id": "q07b01",
+      "blockId": 1,
+      "conceptId": "b1-corresp-nh-ny",
+      "prompt": "Qual é a forma portuguesa da palavra espanhola 'niño'?",
+      "options": ["nino", "niño", "ninho", "ninõ"],
+      "correctIndex": 2
+    },
+    {
+      "id": "q08b01",
+      "blockId": 1,
+      "conceptId": "b1-h-muda",
+      "prompt": "Em qual destas palavras a letra H é pronunciada?",
+      "options": ["hora", "homem", "hoje", "hotel"],
+      "correctIndex": 0
+    },
+    {
+      "id": "q09b02",
+      "blockId": 2,
+      "conceptId": "b2-genero",
+      "prompt": "Qual é a forma feminina de 'professor'?",
+      "options": ["professora", "professorá", "professora-mulher", "professoressa"],
+      "correctIndex": 0
+    },
+    {
+      "id": "q10b02",
+      "blockId": 2,
+      "conceptId": "b2-numero",
+      "prompt": "Qual é o plural de 'pão'?",
+      "options": ["pãos", "pães", "pões", "pães"],
+      "correctIndex": 1
+    },
+    {
+      "id": "q11b02",
+      "blockId": 2,
+      "conceptId": "b2-artigos",
+      "prompt": "Complete: '___ livros estão em ___ mesa.'",
+      "options": ["Os / a", "As / a", "Os / à", "As / à"],
+      "correctIndex": 0
+    },
+    {
+      "id": "q12b02",
+      "blockId": 2,
+      "conceptId": "b2-possessivos",
+      "prompt": "Como se diz 'mi casa' (mi casa) em português?",
+      "options": ["meu casa", "minha casa", "meua casa", "meus casa"],
+      "correctIndex": 1
+    },
+    {
+      "id": "q13b02",
+      "blockId": 2,
+      "conceptId": "b2-possessivos",
+      "prompt": "Complete: 'Onde está ___ mãe?' (tu/mãe)",
+      "options": ["teu", "tua", "seu", "sua"],
+      "correctIndex": 1
+    },
+    {
+      "id": "q14b02",
+      "blockId": 2,
+      "conceptId": "b2-genero",
+      "prompt": "Qual destas palavras é FEMININA?",
+      "options": ["o dia", "o problema", "a noite", "o mapa"],
+      "correctIndex": 2
+    },
+    {
+      "id": "q15b03",
+      "blockId": 3,
+      "conceptId": "b3-presente-regular",
+      "prompt": "Complete no presente: 'Eu ___ (estudar) português todos os dias.'",
+      "options": ["estudo", "estudas", "estuda", "estudam"],
+      "correctIndex": 0
+    },
+    {
+      "id": "q16b03",
+      "blockId": 3,
+      "conceptId": "b3-presente-irregular",
+      "prompt": "Qual é a forma correta no presente? 'Eu ___ (fazer) o trabalho.'",
+      "options": ["faço", "fazo", "fazendo", "fiz"],
+      "correctIndex": 0
+    },
+    {
+      "id": "q17b03",
+      "blockId": 3,
+      "conceptId": "b3-presente-irregular",
+      "prompt": "Complete: 'Nós ___ (ir) ao cinema hoje.'",
+      "options": ["vamos", "imos", "vão", "iremos"],
+      "correctIndex": 0
+    },
+    {
+      "id": "q18b03",
+      "blockId": 3,
+      "conceptId": "b3-pronomes",
+      "prompt": "Qual pronome pessoal completa: '___ moramos em Lisboa.' (nós)",
+      "options": ["Eu", "Tu", "Nós", "Eles"],
+      "correctIndex": 2
+    },
+    {
+      "id": "q19b03",
+      "blockId": 3,
+      "conceptId": "b3-ha-tem",
+      "prompt": "Qual frase está correta?",
+      "options": ["Há muitos livros na estante.", "Tem muitos livros na estante.", "Haverem muitos livros na estante.", "Houve muitos livros na estante."],
+      "correctIndex": 0
+    },
+    {
+      "id": "q20b03",
+      "blockId": 3,
+      "conceptId": "b3-presente-irregular",
+      "prompt": "Complete: 'Ela ___ (ser) muito inteligente.'",
+      "options": ["é", "está", "foi", "será"],
+      "correctIndex": 0
+    }
+  ]
+}

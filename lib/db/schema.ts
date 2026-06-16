@@ -105,6 +105,15 @@ export interface StoryProgressRow {
   lastVariant: Variant;
 }
 
+export interface DiagnosticResultRow {
+  id?: number;
+  takenAt: Date;
+  completed: boolean;
+  answers: number[];
+  recommendedStart: number;
+  score: number;
+}
+
 class PortuguesDB extends Dexie {
   cards!: EntityTable<Card, "id">;
   sessions!: EntityTable<Session, "id">;
@@ -117,6 +126,7 @@ class PortuguesDB extends Dexie {
   xp!: EntityTable<XpRow, "key">;
   conceptMastery!: EntityTable<ConceptMastery, "conceptId">;
   storyProgress!: EntityTable<StoryProgressRow, "storyId">;
+  diagnosticResults!: EntityTable<DiagnosticResultRow, "id">;
 
   constructor() {
     super("PortuguesAppDB");
@@ -136,6 +146,9 @@ class PortuguesDB extends Dexie {
     });
     this.version(2).stores({
       storyProgress: "storyId, completedAt",
+    });
+    this.version(3).stores({
+      diagnosticResults: "++id, takenAt, completed",
     });
   }
 }

@@ -244,3 +244,21 @@ export const StorySchema = z.object({
 
 export type Story = z.infer<typeof StorySchema>;
 export type StoryVocab = z.infer<typeof StoryVocabSchema>;
+
+// ─── Diagnostic (Plan #3) ────────────────────────────────────────────────────
+export const DiagnosticQuestionSchema = z.object({
+  id: z.string().min(1),
+  blockId: z.number().int().min(1).max(3),
+  conceptId: z.string().min(1),
+  prompt: z.string().min(10),
+  options: z.tuple([z.string(), z.string(), z.string(), z.string()]),
+  correctIndex: z.union([z.literal(0), z.literal(1), z.literal(2), z.literal(3)]),
+});
+
+export const DiagnosticSchema = z.object({
+  generatedAt: z.string().min(1),
+  questions: z.array(DiagnosticQuestionSchema).length(20),
+});
+
+export type Diagnostic = z.infer<typeof DiagnosticSchema>;
+export type DiagnosticQuestion = z.infer<typeof DiagnosticQuestionSchema>;
