@@ -118,25 +118,33 @@ export function extractJson(raw: string): unknown {
   try {
     return JSON.parse(candidate);
   } catch (firstErr) {
-    // Intento 1: strip trailing commas (LLMs las emiten constantemente).
-    const repaired = candidate.replace(/,(\s*[\]}])/g, '$1');
+    // Intento 0: el LLM emite `undefined` (literal de JS) en vez de null u omitir
+    // el campo. Reemplazar `:undefined` / `: undefined` por `:null` y `,undefined` por ``.
+    const undefinedRepaired = candidate.replace(/:\s*undefined\b/g, ':null').replace(/,(\s*)undefined\b/g, '$1');
     try {
-      return JSON.parse(repaired);
-    } catch (secondErr) {
-      // Intento 2: repair literal newlines/tabs inside JSON string values.
-      // Walk the candidate char-by-char tracking in-string state; replace bare
-      // \n, \r, \t that appear inside a string literal with their escape sequences.
-      const inStringRepaired = repairLiteralNewlinesInStrings(repaired);
+      return JSON.parse(undefinedRepaired);
+    } catch (undefinedErr) {
+      // Intento 1: strip trailing commas (LLMs las emiten constantemente).
+      const repaired = undefinedRepaired.replace(/,(\s*[\]}])/g, '$1');
       try {
-        return JSON.parse(inStringRepaired);
-      } catch (thirdErr) {
-        throw new Error(
-          `Failed to parse JSON after all repair attempts (trailing-comma, in-string newlines). ` +
-          `Original: ${firstErr instanceof Error ? firstErr.message : firstErr}. ` +
-          `After trailing-comma repair: ${secondErr instanceof Error ? secondErr.message : secondErr}. ` +
-          `After newline repair: ${thirdErr instanceof Error ? thirdErr.message : thirdErr}. ` +
-          `Raw start: ${raw.slice(0, 200)}`
-        );
+        return JSON.parse(repaired);
+      } catch (secondErr) {
+        // Intento 2: repair literal newlines/tabs inside JSON string values.
+        // Walk the candidate char-by-char tracking in-string state; replace bare
+        // \n, \r, \t that appear inside a string literal with their escape sequences.
+        const inStringRepaired = repairLiteralNewlinesInStrings(repaired);
+        try {
+          return JSON.parse(inStringRepaired);
+        } catch (thirdErr) {
+          throw new Error(
+            `Failed to parse JSON after all repair attempts (undefined, trailing-comma, in-string newlines). ` +
+            `Original: ${firstErr instanceof Error ? firstErr.message : firstErr}. ` +
+            `After undefined repair: ${undefinedErr instanceof Error ? undefinedErr.message : undefinedErr}. ` +
+            `After trailing-comma repair: ${secondErr instanceof Error ? secondErr.message : secondErr}. ` +
+            `After newline repair: ${thirdErr instanceof Error ? thirdErr.message : thirdErr}. ` +
+            `Raw start: ${raw.slice(0, 200)}`
+          );
+        }
       }
     }
   }

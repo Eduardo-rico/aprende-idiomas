@@ -24,7 +24,7 @@ export interface PromptGenerationParams {
   expectedCount: number;
   /** When true, skip readCache but still write to cache on success. */
   force?: boolean;
-  callLlm: (args: { system: string; user: string }) => Promise<string>;
+  callLlm: (args: { system: string; user: string; maxTokens?: number }) => Promise<string>;
 }
 
 export interface RejectedItem {
@@ -38,10 +38,10 @@ export interface BatchResult {
 }
 
 // Errores en los que NO tiene sentido reintentar (mismo prompt, misma respuesta).
+// TruncationError IS retriable now: we bump maxTokens on each attempt so a
+// max_tokens stop on attempt 1 has room to complete on attempt 2.
 function isNonRetriable(err: unknown): boolean {
-  if (err instanceof TruncationError) return true;
   if (err instanceof RefusalError) return true;
-  if (err && typeof err === 'object' && (err as any).name === 'TruncationError') return true;
   if (err && typeof err === 'object' && (err as any).name === 'RefusalError') return true;
   return false;
 }
@@ -90,7 +90,7 @@ export async function runPromptGeneration(p: PromptGenerationParams): Promise<Ba
   let lastErr: unknown = null;
   for (let attempt = 1; attempt <= 2; attempt++) {
     try {
-      const raw = await p.callLlm({ system: p.systemPrompt, user });
+      const raw = await p.callLlm({ system: p.systemPrompt, user, maxTokens: 4000 + 1000 * (attempt - 1) });
       const parsed = extractJson(raw);
       const partitioned = partitionByZod(parsed);
       // Cacheamos solo si TODO el batch parseó; si no, podríamos re-procesar

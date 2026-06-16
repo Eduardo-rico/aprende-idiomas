@@ -62,12 +62,12 @@ describe('runPromptGeneration', () => {
     expect(callLlm).toHaveBeenCalledTimes(1);
   });
 
-  it('does NOT retry on TruncationError', async () => {
+  it('DOES retry on TruncationError (now retriable with maxTokens bump)', async () => {
     const truncErr = Object.assign(new Error('truncated'), { name: 'TruncationError' });
     const callLlm = vi.fn().mockRejectedValue(truncErr);
     await expect(runPromptGeneration(makeParams({ cacheDir: tmp, callLlm })))
       .rejects.toThrow(/truncated/);
-    expect(callLlm).toHaveBeenCalledTimes(1);
+    expect(callLlm).toHaveBeenCalledTimes(2);
   });
 });
 

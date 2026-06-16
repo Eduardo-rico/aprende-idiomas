@@ -19,8 +19,8 @@ import { ExerciseSchema, type ExerciseType, type Exercise } from './lib/zod-sche
 // Adapter: prompt-runner espera `(args) => Promise<string>` pero callLlm
 // retorna `{ text, inputTokens, outputTokens }`. El orchestrator no necesita
 // los tokens per-call (los agregamos en el futuro), así que extraemos `text`.
-const callLlmString = async (args: { system: string; user: string }): Promise<string> => {
-  const r = await callLlm({ system: args.system, user: args.user });
+const callLlmString = async (args: { system: string; user: string; maxTokens?: number }): Promise<string> => {
+  const r = await callLlm({ system: args.system, user: args.user, ...(args.maxTokens ? { maxTokens: args.maxTokens } : {}) });
   return r.text;
 };
 

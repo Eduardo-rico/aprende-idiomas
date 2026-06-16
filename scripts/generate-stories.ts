@@ -120,10 +120,13 @@ async function generateStoryForBlock(
   const MAX_ATTEMPTS = 3;
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
     if (!llmText) {
+      // On retry, bump maxTokens — level 2 stories are long enough that
+      // 2000 truncates the response. Going 2000→2500→3000 fits ~99% of
+      // level-1+level-2 stories without going over model limits.
       const result = await callLlm({
         system,
         user,
-        maxTokens: 2000,
+        maxTokens: 2000 + 500 * (attempt - 1),
         ...(attempt > 1 ? { temperature: 0.9 } : {}),
       });
       llmText = result.text;

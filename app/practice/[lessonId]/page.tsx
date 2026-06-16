@@ -10,11 +10,28 @@ import { ExerciseRunner } from "@/components/ExerciseRunner";
 import { ExerciseSchema, type Exercise } from "@/lib/data/zod-schemas";
 import { useSession } from "@/lib/stores/session";
 // CRITICAL FIX (I-Turbopack): static JSON import — template-literal dynamic
-// import of JSON breaks under Turbopack production builds. Block 1 only in MVP #2;
-// when Plan #4 adds blocks 2-10, switch to a static import map.
+// import of JSON breaks under Turbopack production builds.
 import b1Data from "@/lib/data/blocks/b1.json";
+import b2Data from "@/lib/data/blocks/b2.json";
+import b3Data from "@/lib/data/blocks/b3.json";
+import b4Data from "@/lib/data/blocks/b4.json";
+import b5Data from "@/lib/data/blocks/b5.json";
+import b6Data from "@/lib/data/blocks/b6.json";
+import b7Data from "@/lib/data/blocks/b7.json";
+import b8Data from "@/lib/data/blocks/b8.json";
+import b10Data from "@/lib/data/blocks/b10.json";
 
-const BLOCK_DATA: Record<number, unknown[]> = { 1: b1Data as unknown[] };
+const BLOCK_DATA: Record<number, unknown[]> = {
+  1: b1Data as unknown[],
+  2: b2Data as unknown[],
+  3: b3Data as unknown[],
+  4: b4Data as unknown[],
+  5: b5Data as unknown[],
+  6: b6Data as unknown[],
+  7: b7Data as unknown[],
+  8: b8Data as unknown[],
+  10: b10Data as unknown[],
+};
 
 export default function PracticePage({ params }: { params: Promise<{ lessonId: string }> }) {
   // CRITICAL FIX (C5-pattern): React.use(params), not params.then + useState.
@@ -38,7 +55,7 @@ export default function PracticePage({ params }: { params: Promise<{ lessonId: s
     (async () => {
       try {
         const blockData = BLOCK_DATA[blockId];
-        if (!blockData) throw new Error(`No data for block ${blockId} (only Block 1 in MVP #2)`);
+        if (!blockData) throw new Error(`No data for block ${blockId} (B9 is freeDrill — see /drill/vocab).)`);
         const raw = (blockData as Exercise[]).filter((e) => e.lessonId === lessonId);
         const cards = await Promise.all(
           raw.map(async (e) => {
