@@ -41,7 +41,7 @@ export function VocabDrill() {
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const all = await getAllVocab();
+      const all = getAllVocab();
       if (all.length === 0) {
         setLoading(false);
         return;
@@ -57,7 +57,7 @@ export function VocabDrill() {
       const enriched: VocabCard[] = [];
       for (const c of dueCards) {
         const word = c.id.replace(/^vocab-/, '');
-        const item = await lookupVocab(word);
+        const item = lookupVocab(word);
         if (item) enriched.push({ card: c, item });
       }
       if (cancelled) return;

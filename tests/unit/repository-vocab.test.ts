@@ -39,7 +39,7 @@ describe('vocab card repository', () => {
     });
     const due = await getDueVocabCards(10);
     expect(due.length).toBe(1);
-    expect(due[0].id).toBe('vocab-moça');
+    expect(due[0]?.id).toBe('vocab-moça');
   });
 
   it('getDueVocabCards respects limit', async () => {

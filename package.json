@@ -14,6 +14,7 @@
     "generate:content": "tsx scripts/generate-content.ts",
     "generate:audio": "tsx scripts/generate-audio.ts",
     "generate:stories": "tsx scripts/generate-stories.ts",
+    "generate:diagnostic": "tsx scripts/generate-diagnostic.ts",
     "build:catalog": "tsx scripts/build-vocab-catalog.ts",
     "generate:all": "npm run generate:curriculum && npm run generate:content && npm run generate:audio && npm run verify:content",
     "verify:content": "tsx scripts/verify-content.ts",
