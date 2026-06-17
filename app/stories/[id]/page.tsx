@@ -1,7 +1,7 @@
 import { loadStory } from "@/lib/data/loaders";
 import { notFound } from "next/navigation";
 import { StoryPlayer } from "@/components/stories/StoryPlayer";
-import { StoryText } from "@/components/stories/StoryText";
+import { StoryReader } from "@/components/stories/StoryReader";
 import { VocabSidebar } from "@/components/stories/VocabSidebar";
 import { StoryActions } from "./StoryActions";
 
@@ -31,7 +31,7 @@ export default async function StoryPage({
       />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
         <div className="md:col-span-2">
-          <StoryText story={story} />
+          <StoryReader story={story} />
         </div>
         <VocabSidebar story={story} />
       </div>
