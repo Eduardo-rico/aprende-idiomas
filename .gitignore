@@ -36,3 +36,6 @@ next-env.d.ts
 # pipeline cache (regenerable, committed only output JSONs + audio)
 scripts/.cache/
 public/audio/*.mp3.tmp
+
+# git worktrees (project-local)
+.worktrees/
