@@ -42,6 +42,47 @@ export async function getDueCards(now: Date, limit: number, options: GetDueCards
   return [...review, ...newCards];
 }
 
+/** Get due cards matching ANY of the given tags (multi-tag OR semantics).
+ *  Uses the `*tags` multiEntry index added in schema v5. If `tags` is empty
+ *  or the user passes `["all"]`, falls through to the existing
+ *  `getDueCards` so the unfiltered behavior is preserved.
+ *
+ *  Note: the date range (`belowOrEqual(now)`) and the tag filter are
+ *  intersected in memory — Dexie doesn't support multi-index intersection
+ *  and `[*tags+nextReviewAt]` is illegal (no multiEntry compounds). The
+ *  tag index keeps the initial scan small (only cards with that tag),
+ *  and the date filter is cheap. */
+export async function getDueCardsByTag(
+  tags: string[],
+  now: Date,
+  limit: number,
+  options: GetDueCardsOptions = {},
+): Promise<Card[]> {
+  if (tags.length === 0) {
+    return getDueCards(now, limit, options);
+  }
+  const tagged = await db.cards
+    .where("tags")
+    .anyOf(tags)
+    .toArray();
+  const due = tagged.filter((c) => c.nextReviewAt.getTime() <= now.getTime());
+  // Reuse the same review-first / new-cap ordering as getDueCards.
+  const cap = options.cap ?? limit;
+  const newPerDay = options.newCardsPerDay ?? 0;
+  if (newPerDay === 0) {
+    return due.slice(0, cap);
+  }
+  const { review, newCards } = buildDueQueue(due, { cap, newCardsPerDay: newPerDay } satisfies DueQueueOptions);
+  return [...review, ...newCards];
+}
+
+/** Count of cards that have the given tag. Cheap (O(log N)) via the
+ *  `*tags` multiEntry index. Used by the filter bar to render
+ *  "Vocab (47)" next to each chip. */
+export async function getCardsByTagCount(tag: string): Promise<number> {
+  return db.cards.where("tags").equals(tag).count();
+}
+
 export async function getDueInBlock(blockId: number, now: Date, limit: number): Promise<Card[]> {
   return db.cards
     .where("[blockId+nextReviewAt]")
@@ -203,25 +244,53 @@ export async function getCompletedStories(): Promise<string[]> {
 
 // ─── Vocab card helpers ──────────────────────────────────────────────────────
 // Vocab cards live in the same `cards` table as exercise cards (FSRS-managed)
-// but are identified by an `id` prefix of `vocab-` instead of a migration that
-// adds a `tags` column. This keeps the schema untouched and lets `getDueVocab`
-// compose with the existing `nextReviewAt` index via an in-memory filter.
+// but are identified by an `id` prefix of `vocab-`. Schema v5 added a real
+// `tags?: string[]` field; we now stamp `["vocab", ...]` on every vocab
+// card (with an optional `story:{storyId}` from the Story Reader) so the
+// filter bar on /learn and the `vocab-50` achievement work without
+// scanning the id prefix.
 const VOCAB_ID_PREFIX = 'vocab-';
+
+export interface GetOrCreateVocabCardOpts {
+  /** When provided, the card is tagged with `story:{storyId}` in addition
+   *  to the standard `vocab` tag. Used by the Story Reader to mark which
+   *  story introduced a given word. */
+  storyId?: string;
+}
 
 export async function getOrCreateVocabCard(
   word: string,
   meaning: string,
   conceptId: string,
+  opts: GetOrCreateVocabCardOpts = {},
 ): Promise<Card> {
   const id = `${VOCAB_ID_PREFIX}${word.toLowerCase()}`;
-  const existing = await db.cards.get(id);
-  if (existing) return existing;
-  const fresh = newCard(id, 0, `vocab-${conceptId}`);
-  // The Card schema doesn't store the meaning/word directly — those live in the
-  // vocab-catalog.json and are looked up by the UI from the id. We do not
-  // duplicate them on the Card row (avoids sync drift).
-  await db.cards.add(fresh);
-  return fresh;
+  const desiredTags = ["vocab", ...(opts.storyId ? [`story:${opts.storyId}`] : [])];
+  // Read + write in one transaction so two concurrent callers don't
+  // race past the getOrCreate guard and create duplicate cards.
+  return db.transaction("rw", db.cards, async () => {
+    const existing = await db.cards.get(id);
+    if (existing) {
+      // Append any new tags from `desiredTags` (de-dup). Existing tags
+      // are preserved so we don't clobber a tag the user previously
+      // earned via a different path.
+      const existingTags = existing.tags ?? [];
+      const merged = Array.from(new Set([...existingTags, ...desiredTags]));
+      if (merged.length !== existingTags.length) {
+        const updated: Card = { ...existing, tags: merged };
+        await db.cards.put(updated);
+        return updated;
+      }
+      return existing;
+    }
+    const fresh = newCard(id, 0, `vocab-${conceptId}`);
+    fresh.tags = desiredTags;
+    // The Card schema doesn't store the meaning/word directly — those live
+    // in the vocab-catalog.json and are looked up by the UI from the id. We
+    // do not duplicate them on the Card row (avoids sync drift).
+    await db.cards.add(fresh);
+    return fresh;
+  });
 }
 
 export async function getDueVocabCards(limit: number, now: Date = new Date()): Promise<Card[]> {
@@ -364,10 +433,13 @@ export async function getAppState(goalMin: number): Promise<AppState> {
   const lessonsCompleted = genericEvents.filter((e) => e.type === "lesson_complete");
   const diagnosticEvents = genericEvents.filter((e) => e.type === "diagnostic_completed");
 
-  // Cards in DB (lib/db/schema.ts Card) do not have a tags field — vocabCardsLearned
-  // cannot be derived from the cards table with the current schema.
-  // Return 0 as a safe default; will be wired up when the schema gains a tags column.
-  const vocabCardsLearned = 0;
+  // Count vocab cards via the `*tags` multiEntry index added in schema v5.
+  // This is O(log N) and reflects the "vocab-50" achievement rule
+  // (lib/achievements/rules.ts:38), which fires at >= 50. Note: pre-v5
+  // vocab cards (created with the `vocab-` id prefix but no tag) don't
+  // count here until the user touches them in VocabDrill or the Story
+  // Reader — see plan "no backfill."
+  const vocabCardsLearned = await db.cards.where("tags").equals("vocab").count();
 
   const streakStatus = await getStreakStatus(goalMin);
 

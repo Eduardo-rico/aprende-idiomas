@@ -26,6 +26,11 @@ export interface Card {
   lastRating?: Rating;
   lastReviewedAt?: Date;
   introducedAt: Date;
+  /** Categorical tags. Indexed via multiEntry (`*tags`) so a single card
+   *  can be found by any of its tags. Optional: cards created before
+   *  schema v5 don't have the field; they just don't match any tag
+   *  filter. No backfill — see plan. */
+  tags?: string[];
 }
 
 export interface Session {
@@ -154,6 +159,13 @@ class PortuguesDB extends Dexie {
     // the review-queue new-cards ordering are O(log N) instead of O(N).
     this.version(4).stores({
       cards: "id, blockId, lessonId, nextReviewAt, state, introducedAt, [blockId+nextReviewAt], [lessonId+nextReviewAt]",
+    });
+    // v5: add `*tags` multiEntry index so `where("tags").equals(...)`
+    // works on the cards table. Mirrors the existing `*conceptIds`
+    // pattern on events (line above) and errorReasons. The `Card.tags?`
+    // field is optional, so legacy rows deserialize fine.
+    this.version(5).stores({
+      cards: "id, blockId, lessonId, nextReviewAt, state, introducedAt, *tags, [blockId+nextReviewAt], [lessonId+nextReviewAt]",
     });
   }
 }
