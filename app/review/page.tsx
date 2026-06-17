@@ -4,15 +4,20 @@
 // Exercise (so the runner can render any type — flashcard, fill_blank, …),
 // and plays a mixed review across all blocks/lessons. Distinct from
 // /practice/[lessonId] which is lesson-scoped and lesson-ordered.
+//
+// When the user arrived from /learn with a tag filter active, the filter
+// set is encoded in the `?tags=vocab,story:b1-...` query string. We honor
+// that here so the session reflects the filter the user picked.
 "use client";
-import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
-import { getDueCards } from "@/lib/db/repository";
+import { Suspense, useEffect, useRef, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { getDueCards, getDueCardsByTag } from "@/lib/db/repository";
 import { db } from "@/lib/db/schema";
 import { ExerciseRunner } from "@/components/ExerciseRunner";
 import type { Exercise } from "@/lib/data/zod-schemas";
 import { FSRS_CONFIG } from "@/lib/srs/config";
 import { useSession } from "@/lib/stores/session";
+import { tagLabel } from "@/lib/db/tags";
 import b1Data from "@/lib/data/blocks/b1.json";
 import b2Data from "@/lib/data/blocks/b2.json";
 import b3Data from "@/lib/data/blocks/b3.json";
@@ -35,8 +40,18 @@ const ALL_BLOCK_DATA: unknown[] = [
   ...(b10Data as unknown[]),
 ];
 
-export default function ReviewPage() {
+// Next.js 16 requires useSearchParams() to be wrapped in a Suspense boundary
+// for the page to remain prerenderable. We split the page into an inner
+// component (the only consumer of useSearchParams) and a thin outer wrapper
+// that exports the Suspense shell. See:
+// node_modules/next/dist/docs/01-app/03-api-reference/04-functions/use-search-params.md
+function ReviewPageInner() {
   const router = useRouter();
+  const search = useSearchParams();
+  const activeTags = (search.get("tags") ?? "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter((s) => s.length > 0);
   const [exercises, setExercises] = useState<Exercise[] | null>(null);
   const [sessionId, setSessionId] = useState<number | null>(null);
   const [sessionError, setSessionError] = useState<string | null>(null);
@@ -51,10 +66,10 @@ export default function ReviewPage() {
     (async () => {
       try {
         const now = new Date();
-        const due = await getDueCards(now, FSRS_CONFIG.daily_review_cap, {
-          cap: FSRS_CONFIG.daily_review_cap,
-          newCardsPerDay: FSRS_CONFIG.new_cards_per_day,
-        });
+        const options = { cap: FSRS_CONFIG.daily_review_cap, newCardsPerDay: FSRS_CONFIG.new_cards_per_day };
+        const due = activeTags.length === 0
+          ? await getDueCards(now, FSRS_CONFIG.daily_review_cap, options)
+          : await getDueCardsByTag(activeTags, now, FSRS_CONFIG.daily_review_cap, options);
         const review = due.filter((c) => c.state > 0).length;
         const newCards = due.filter((c) => c.state === 0).length;
         setSplit({ review, newCards });
@@ -93,7 +108,7 @@ export default function ReviewPage() {
         setSessionError(err instanceof Error ? err.message : String(err));
       }
     })();
-  }, [router]);
+  }, [router, activeTags.length, activeTags.join(",")]);
 
   useEffect(() => {
     if (!done) return;
@@ -145,12 +160,15 @@ export default function ReviewPage() {
     return <div className="p-12 text-center text-muted">Cargando repaso diario…</div>;
   }
 
-  // blockId/lessonId here are nominal — submitAnswer will write the actual
-  // card's blockId/lessonId via the card row, not these literals.
   return (
     <div>
-      <div className="max-w-xl mx-auto px-4 pt-6 text-xs text-muted uppercase tracking-wide">
-        Repaso diario
+      <div className="max-w-xl mx-auto px-4 pt-6 flex items-center justify-between text-xs text-muted uppercase tracking-wide">
+        <span>Repaso diario</span>
+        {activeTags.length > 0 && (
+          <span className="normal-case tracking-normal">
+            Filtrando por: {activeTags.map(tagLabel).join(", ")}
+          </span>
+        )}
       </div>
       <ExerciseRunner
         exercises={exercises}
@@ -159,5 +177,16 @@ export default function ReviewPage() {
         onFinish={setDone}
       />
     </div>
+  );
+}
+
+export default function ReviewPage() {
+  // The fallback matches the rest of the loading state (matches the "Cargando"
+  // message the inner component shows when `exercises` is null), so the
+  // prerendered HTML and the hydrated state look identical.
+  return (
+    <Suspense fallback={<div className="p-12 text-center text-muted">Cargando repaso diario…</div>}>
+      <ReviewPageInner />
+    </Suspense>
   );
 }
