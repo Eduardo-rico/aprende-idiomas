@@ -43,6 +43,19 @@ export function StoryPlayer({
     };
   }, [audioUrl]);
 
+  // StoryReader dispatches this event when the user taps a word — pause
+  // the player so the user can hear the tapped word's audio without
+  // overlap. See components/stories/StoryReader.tsx.
+  useEffect(() => {
+    const onPause = () => {
+      if (!audioRef.current) return;
+      audioRef.current.pause();
+      setPlaying(false);
+    };
+    window.addEventListener("reader-pause-story-audio", onPause);
+    return () => window.removeEventListener("reader-pause-story-audio", onPause);
+  }, []);
+
   const toggle = () => {
     if (!audioRef.current) return;
     if (playing) {
