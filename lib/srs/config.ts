@@ -12,6 +12,9 @@ import type { StepUnit } from "ts-fsrs";
 //
 // Daily cap and new-cards-per-day are conservative — a user can scale them
 // up by editing this file, and a future settings page can expose them.
+// `satisfies` (not `as const`) so the values stay locked to literal types
+// for the test suite (srs-config.test.ts asserts e.g. request_retention ===
+// 0.9) while still allowing a Partial<FsrsConfig> spread in scheduler.ts.
 export const FSRS_CONFIG = {
   /** Target probability of recall on a graded card. ts-fsrs uses this to
    *  invert the desired interval from the card's stability. 0.9 = Anki default. */
@@ -44,6 +47,38 @@ export const FSRS_CONFIG = {
   /** A card is flagged as a "leech" once it has been lapsed this many times.
    *  UI surfaces a reset action; the algorithm otherwise treats it normally. */
   leech_lapses_threshold: 8,
-} as const;
+} satisfies FsrsConfig;
 
-export type FsrsConfig = typeof FSRS_CONFIG;
+export interface FsrsConfig {
+  /** Target probability of recall on a graded card. ts-fsrs uses this to
+   *  invert the desired interval from the card's stability. 0.9 = Anki default. */
+  request_retention: number;
+
+  /** Add ±5 % jitter to intervals so users don't see every card on the same
+   *  day. Recommended by ts-fsrs authors. */
+  enable_fuzz: boolean;
+
+  /** Cap any single interval at 1 year. Without this, a long-stable card
+   *  would schedule itself years out and effectively disappear. */
+  maximum_interval: number;
+
+  /** Steps (in minutes) for a brand-new card before it graduates to Review.
+   *  A "Good" answer advances one step; an "Again" resets to the first step. */
+  learning_steps: readonly StepUnit[];
+
+  /** Steps (in minutes) for a card that was "Again" in Review. After all
+   *  steps pass with Good, the card returns to Review with reduced stability. */
+  relearning_steps: readonly StepUnit[];
+
+  /** Maximum review cards (state > 0, due) shown in a single /review session.
+   *  Prevents an overflow on a return-from-vacation day. */
+  daily_review_cap: number;
+
+  /** Maximum brand-new cards (state === 0) introduced in a single /review
+   *  session. Limits the cognitive load on a busy day. */
+  new_cards_per_day: number;
+
+  /** A card is flagged as a "leech" once it has been lapsed this many times.
+   *  UI surfaces a reset action; the algorithm otherwise treats it normally. */
+  leech_lapses_threshold: number;
+}
