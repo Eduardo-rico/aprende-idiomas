@@ -1,19 +1,7 @@
 // lib/srs/fsrs.ts
-import { fsrs, createEmptyCard, Rating as FsrsRating, generatorParameters, type Grade, type StepUnit } from "ts-fsrs";
+import { createEmptyCard, Rating as FsrsRating, type Grade } from "ts-fsrs";
 import { type Card, type CardId, type Rating, RATING } from "../db/schema";
-import { FSRS_CONFIG } from "./config";
-
-// ts-fsrs types `learning_steps` and `relearning_steps` as `StepUnit[]`
-// where `StepUnit` is a template literal like `${number}m`. We declare
-// the config tuples as that exact type so the values flow through without
-// a cast.
-const scheduler = fsrs(generatorParameters({
-  request_retention: FSRS_CONFIG.request_retention,
-  enable_fuzz: FSRS_CONFIG.enable_fuzz,
-  maximum_interval: FSRS_CONFIG.maximum_interval,
-  learning_steps: FSRS_CONFIG.learning_steps as readonly StepUnit[] as StepUnit[],
-  relearning_steps: FSRS_CONFIG.relearning_steps as readonly StepUnit[] as StepUnit[],
-}));
+import { getScheduler } from "./scheduler";
 
 function toGrade(rating: Rating): Grade {
   switch (rating) {
@@ -41,6 +29,11 @@ export function newCard(id: CardId, blockId: number, lessonId: string): Card {
 }
 
 export function schedule(card: Card, rating: Rating, now = new Date()): Card {
+  // Resolved per call so changes to the 5 generatorParameters fields
+  // (request_retention, enable_fuzz, maximum_interval, learning_steps,
+  // relearning_steps) take effect on the next grade, not on the next
+  // page load. See lib/srs/scheduler.ts for the cache/rebuild logic.
+  const scheduler = getScheduler();
   const result = scheduler.next(card.fsrs, now, toGrade(rating));
   return {
     ...card,
@@ -58,6 +51,7 @@ export function schedule(card: Card, rating: Rating, now = new Date()): Card {
  *  mutating the card. Used by the runner to show "Próxima: en 3 días" the
  *  moment the user grades — the actual write happens in `schedule()`. */
 export function previewIntervalMs(card: Card, rating: Rating, now = new Date()): number {
+  const scheduler = getScheduler();
   const result = scheduler.next(card.fsrs, now, toGrade(rating));
   return Math.max(0, result.card.due.getTime() - now.getTime());
 }

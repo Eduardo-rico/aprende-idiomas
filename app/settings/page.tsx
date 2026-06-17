@@ -4,9 +4,15 @@ import { useSettings } from "@/lib/stores/settings";
 import { useTheme } from "@/components/ThemeProvider";
 import { VariantToggle } from "@/components/VariantToggle";
 import { VoicePicker } from "@/components/VoicePicker";
+import { Section } from "@/components/settings/Section";
+import { FsrsSection } from "@/components/settings/FsrsSection";
 
 export default function SettingsPage() {
-  const { dailyGoalMinutes, showCompareToggle, showContrast, soundFx, setDailyGoal, toggleCompare, setShowContrast, setSoundFx } = useSettings();
+  const {
+    dailyGoalMinutes, showCompareToggle, showContrast, soundFx,
+    localPracticeFilter,
+    setDailyGoal, toggleCompare, setShowContrast, setSoundFx, setLocalPracticeFilter,
+  } = useSettings();
   const { theme, setTheme } = useTheme();
 
   return (
@@ -37,6 +43,26 @@ export default function SettingsPage() {
         />
       </Section>
 
+      <Section title="FSRS">
+        <FsrsSection />
+      </Section>
+
+      <Section title="Práctica local">
+        <label className="flex items-center gap-2">
+          <input
+            type="checkbox"
+            checked={localPracticeFilter}
+            onChange={(e) => setLocalPracticeFilter(e.target.checked)}
+          />
+          Filtrar <code>/practice/[lessonId]</code> a tarjetas listas
+        </label>
+        <p className="text-xs text-muted-foreground">
+          Cuando está activo, las páginas de práctica solo muestran tarjetas
+          nuevas o con repaso vencido. Las tarjetas programadas para más tarde
+          se ocultan (con un aviso de cuántas hay).
+        </p>
+      </Section>
+
       <Section title="Display">
         <label className="flex items-center gap-2">
           <input type="checkbox" checked={showCompareToggle} onChange={toggleCompare} />
@@ -54,15 +80,20 @@ export default function SettingsPage() {
           Efectos de sonido (ding/boop/confetti)
         </label>
       </Section>
-    </div>
-  );
-}
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
-  return (
-    <section className="border border-border rounded-lg p-4 space-y-2">
-      <h2 className="font-medium">{title}</h2>
-      <div className="space-y-1">{children}</div>
-    </section>
+      <Section title="Sesión">
+        <button
+          type="button"
+          onClick={async () => {
+            await fetch("/api/auth/logout", { method: "POST" });
+            // Hard nav so the proxy re-runs and redirects to /login.
+            window.location.href = "/login";
+          }}
+          className="px-4 py-2 border border-border rounded-md text-sm hover:border-foreground"
+        >
+          Cerrar sesión
+        </button>
+      </Section>
+    </div>
   );
 }
