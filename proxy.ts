@@ -6,6 +6,12 @@
 //
 // The signed cookie is the same one set by /api/auth/login. See
 // lib/auth/session.ts for how it's signed/verified.
+//
+// Phase 0 (multi-idioma) verified: the negative matcher below already
+// covers any /[lang]/... path. The lang segment is a child of every
+// gated route; the gate doesn't care which language the user studies.
+// The /api/vocab/lookup route also passes through because it doesn't
+// match any of the excluded prefixes.
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { isAuthCookieValid } from "@/lib/auth/session";
@@ -31,5 +37,8 @@ export const config = {
   //   - /api/auth/* (the login/logout endpoints must work to set/clear the cookie)
   //   - /_next/static and /_next/image (build assets)
   //   - /favicon.ico, /robots.txt, anything with a file extension (assets)
+  //
+  // The /[lang]/... segment is NOT excluded. The auth gate sits above
+  // the lang gate; the lang is irrelevant to authentication.
   matcher: ["/((?!login$|api/auth|_next/static|_next/image|favicon\\.ico|robots\\.txt|.*\\.[a-zA-Z0-9]+$).*)"],
 };

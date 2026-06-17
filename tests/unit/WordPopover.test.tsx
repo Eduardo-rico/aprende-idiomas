@@ -35,7 +35,7 @@ describe("WordPopover (Phase C)", () => {
   it("shows 'Buscando…' while the lookup is in flight", () => {
     // Never resolve — popover stays in the loading state.
     fetchMock.mockReturnValue(new Promise(() => {}));
-    render(<WordPopover word="padaria" storyId="b1-s1-foo" onClose={() => {}} />);
+    render(<WordPopover word="padaria" storyId="b1-s1-foo" lang="pt" onClose={() => {}} />);
     expect(screen.getByText(/Buscando…/)).toBeTruthy();
   });
 
@@ -45,7 +45,7 @@ describe("WordPopover (Phase C)", () => {
       status: 200,
       json: async () => mockItem("padaria", "panadería"),
     });
-    render(<WordPopover word="padaria" storyId="b1-s1-foo" onClose={() => {}} />);
+    render(<WordPopover word="padaria" storyId="b1-s1-foo" lang="pt" onClose={() => {}} />);
     await waitFor(() => screen.getByText("panadería"));
     expect(screen.getByText("padaria")).toBeTruthy();
     expect(screen.getByLabelText(/Pronunciar padaria/)).toBeTruthy();
@@ -57,7 +57,7 @@ describe("WordPopover (Phase C)", () => {
       status: 200,
       json: async () => ({ word: "quux", item: null }),
     });
-    render(<WordPopover word="quux" storyId="b1-s1-foo" onClose={() => {}} />);
+    render(<WordPopover word="quux" storyId="b1-s1-foo" lang="pt" onClose={() => {}} />);
     await waitFor(() => screen.getByText(/No está en el diccionario/));
     // No add-to-vocab button on a miss.
     expect(screen.queryByText(/Agregar al vocabulario/)).toBeNull();
@@ -69,7 +69,7 @@ describe("WordPopover (Phase C)", () => {
       status: 200,
       json: async () => mockFallback("cheiro", "olor"),
     });
-    render(<WordPopover word="cheiro" storyId="b1-s1-foo" onClose={() => {}} />);
+    render(<WordPopover word="cheiro" storyId="b1-s1-foo" lang="pt" onClose={() => {}} />);
     await waitFor(() => screen.getByText("olor"));
     expect(screen.getByText("cheiro")).toBeTruthy();
     expect(screen.getByText(/\(sin audio\)/)).toBeTruthy();
@@ -80,20 +80,20 @@ describe("WordPopover (Phase C)", () => {
 
   it("shows the error message on a network failure", async () => {
     fetchMock.mockRejectedValue(new Error("boom"));
-    render(<WordPopover word="padaria" storyId="b1-s1-foo" onClose={() => {}} />);
+    render(<WordPopover word="padaria" storyId="b1-s1-foo" lang="pt" onClose={() => {}} />);
     await waitFor(() => screen.getByText("boom"));
   });
 
-  it("URL-encodes the word in the request", async () => {
+  it("URL-encodes the word in the request and includes the lang", async () => {
     fetchMock.mockResolvedValue({
       ok: true,
       status: 200,
       json: async () => ({ word: "l'água", item: null }),
     });
-    render(<WordPopover word="l'água" storyId="b1-s1-foo" onClose={() => {}} />);
+    render(<WordPopover word="l'água" storyId="b1-s1-foo" lang="pt" onClose={() => {}} />);
     await waitFor(() => screen.getByText(/No está en el diccionario/));
     expect(fetchMock).toHaveBeenCalledWith(
-      "/api/vocab/lookup?w=l'%C3%A1gua",
+      "/api/vocab/lookup?w=l'%C3%A1gua&lang=pt",
     );
   });
 
@@ -104,7 +104,7 @@ describe("WordPopover (Phase C)", () => {
       json: async () => mockItem("padaria", "panadería"),
     });
     const onClose = vi.fn();
-    render(<WordPopover word="padaria" storyId="b1-s1-foo" onClose={onClose} />);
+    render(<WordPopover word="padaria" storyId="b1-s1-foo" lang="pt" onClose={onClose} />);
     await waitFor(() => screen.getByText("panadería"));
     fireEvent.keyDown(document, { key: "Escape" });
     expect(onClose).toHaveBeenCalledTimes(1);

@@ -1,10 +1,10 @@
 // lib/exercise-resolver.ts
 import {
   ExerciseDataByTypeSchema,
-  PtOverrideByTypeSchema,
+  VariantOverrideByTypeSchema,
   type Exercise,
 } from "@/lib/data/zod-schemas";
-import type { Variant } from "@/lib/db/schema";
+import { type VariantKey, DEFAULT_VARIANT } from "@/lib/data/variant";
 
 export type { Exercise };
 
@@ -29,6 +29,8 @@ export interface ResolvedData {
   // translation
   source?: string;
   target?: string;
+  sourceLang?: string;
+  targetLang?: string;
   acceptedAlternatives?: string[];
   // verb_preposition
   verb?: string;
@@ -41,22 +43,39 @@ export interface ResolvedData {
   examples?: { sentence: string; gloss?: string }[];
 }
 
-export function resolveExerciseData(ex: Exercise, variant: Variant): ResolvedData {
-  // LLM emits ptOverrides: null when there is no override; treat as none.
-  const overrides = ex.ptOverrides ?? undefined;
-  if (variant !== "pt" || !overrides) return ex.data as ResolvedData;
+/**
+ * Phase 1 (multi-idioma): `variantOverrides` es un record por VariantKey.
+ *
+ * Reglas de fallback (mismas que `textsFor` en audio-collector):
+ * - Variante canónica (`pt-br` / `pt-pt`): sin override propio → datos
+ *   base. NO cae al DEFAULT_VARIANT (eso aplicaría semántica PT-BR a
+ *   un usuario que explícitamente pidió PT-PT).
+ * - Variante legacy `'pt'`: cae al override de `pt-br` (compat con el
+ *   contenido pre-Phase-1, donde `ptOverrides` aplicaba a la "variante PT"
+ *   europea y se promovía a `variantOverrides["pt-br"]`).
+ * - Variante legacy `'br'` o cualquier otra desconocida: sin override.
+ *   `ptOverrides` nunca aplicaba a BR; cualquier otra key es desconocida.
+ */
+function isLegacyPtAlias(variant: VariantKey): boolean {
+  return variant === "pt";
+}
+
+export function resolveExerciseData(ex: Exercise, variant: VariantKey): ResolvedData {
+  const overrides = ex.variantOverrides?.[variant]
+    ?? (isLegacyPtAlias(variant) ? ex.variantOverrides?.[DEFAULT_VARIANT] : undefined);
+  if (!overrides) return ex.data as ResolvedData;
 
   // Validate the override against the type's strict override schema first so
   // foreign-typed fields (e.g. a chunk override on a flashcard) throw instead
   // of being silently stripped by the non-strict data schema after merge.
-  const validOverride = PtOverrideByTypeSchema[ex.type].parse(overrides);
+  const validOverride = VariantOverrideByTypeSchema[ex.type].parse(overrides);
   const merged = { ...ex.data, ...validOverride };
   return ExerciseDataByTypeSchema[ex.type].parse(merged) as ResolvedData;
 }
 
 // Audio in b1.json is flat: audio[variant] = { hash, voice }.
-// The `voice` param returns in Plan #4 when AudioVariantSet lands.
-export function resolveAudioHash(ex: Exercise, variant: Variant): string {
+// `variant` is a free VariantKey string now (Phase 1).
+export function resolveAudioHash(ex: Exercise, variant: VariantKey): string {
   const ref = ex.audio?.[variant];
   if (!ref) throw new Error(`Exercise ${ex.id} has no audio for variant ${variant}`);
   return ref.hash;

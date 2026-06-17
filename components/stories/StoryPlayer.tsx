@@ -11,10 +11,13 @@ export function StoryPlayer({
   audioBr: string;
   audioPt: string;
   title: string;
-  initialVariant?: "br" | "pt";
+  // Phase 1: el tipo Variant es ahora un alias de VariantKey (string).
+  // Las legacy keys "br"/"pt" siguen funcionando; el cast en runtime
+  // cae al default "br" si llega otra cosa.
+  initialVariant?: string;
 }) {
   const { variant: settingsVariant } = useSettings();
-  const [variant, setLocalVariant] = useState<"br" | "pt">(
+  const [variant, setLocalVariant] = useState<string>(
     initialVariant ?? settingsVariant,
   );
   const [playing, setPlaying] = useState(false);

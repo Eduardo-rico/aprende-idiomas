@@ -13,8 +13,8 @@ describe('vocab catalog', () => {
 
   beforeAll(async () => {
     _resetCatalogCacheForTests();
-    items = await loadVocabCatalog();
-    initCatalog(items);
+    items = await loadVocabCatalog("pt");
+    initCatalog(items, "pt");
   });
 
   it('catalog loads from disk', () => {

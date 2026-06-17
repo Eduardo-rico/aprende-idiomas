@@ -225,7 +225,7 @@ function AnswerableCard({
 }) {
   if (ex.type === "fill_blank") return <FillBlankCard ex={ex} onSubmit={onAnswer} />;
   if (ex.type === "listening") return <ListeningCard ex={ex} onSubmit={onAnswer} />;
-  if (ex.type === "translation_es_pt" || ex.type === "translation_pt_es")
+  if (ex.type === "translation")
     return <TranslationCard ex={ex} onSubmit={onAnswer} />;
   if (ex.type === "verb_preposition") return <VerbPrepositionCard ex={ex} onSubmit={onAnswer} />;
   return null;

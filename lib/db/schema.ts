@@ -1,15 +1,22 @@
 // lib/db/schema.ts
 import Dexie, { type EntityTable } from "dexie";
 import type { Card as FsrsCard } from "ts-fsrs";
+import type { VariantKey } from "@/lib/data/variant";
 
 export type CardId = string;
 export type ConceptId = string;
 export type LessonId = string;
 export type BlockId = number;
-export type Variant = "br" | "pt";
-// CRITICAL FIX (C3): 1 voice per variant until Plan #4 regen. The 6-voice
-// union (f/m × neutral/happy/calm) returns when b1.json carries AudioVariantSet.
-export type AudioVariant = "default";
+
+// Phase 4 (multi-idioma): the legacy `Variant = "br" | "pt"` alias is
+// removed. All consumers import `VariantKey` from `@/lib/data/variant`
+// (the canonical home). The localStorage migration in
+// `lib/stores/localstorage-migrate.ts` translates any persisted
+// legacy "br"/"pt" value to the canonical "pt-br"/"pt-pt" on first load.
+// Phase 1: 1 voice por variant hasta Plan #4 regen. Antes era literal
+// "default"; ahora string libre para acomodar voces específicas por
+// dialecto (ej. "vitoria", "joao", "francisca").
+export type AudioVariant = string;
 export type Rating = 1 | 2 | 3 | 4;
 export const RATING = { Again: 1, Hard: 2, Good: 3, Easy: 4 } as const;
 
@@ -31,6 +38,11 @@ export interface Card {
    *  schema v5 don't have the field; they just don't match any tag
    *  filter. No backfill — see plan. */
   tags?: string[];
+  /** Active target language for this card. Optional: cards created
+   *  before schema v6 don't have the field; lazy-init to "pt" in
+   *  Phase 4 (`getOrCreateVocabCard`, `recordAnswer`). Indexed in v6
+   *  for per-language queries. */
+  language?: string;
 }
 
 export interface Session {
@@ -56,7 +68,7 @@ export interface AnswerEvent {
   responseMs: number;
   mode: string;
   conceptIds: ConceptId[];
-  variant: Variant;
+  variant: VariantKey;
 }
 
 export type AppEventType =
@@ -107,7 +119,7 @@ export interface StoryProgressRow {
   storyId: string;
   startedAt: Date;
   completedAt: Date | null;
-  lastVariant: Variant;
+  lastVariant: VariantKey;
 }
 
 export interface DiagnosticResultRow {
@@ -119,7 +131,7 @@ export interface DiagnosticResultRow {
   score: number;
 }
 
-class PortuguesDB extends Dexie {
+class AppDB extends Dexie {
   cards!: EntityTable<Card, "id">;
   sessions!: EntityTable<Session, "id">;
   events!: EntityTable<AppEvent, "id">;
@@ -167,7 +179,15 @@ class PortuguesDB extends Dexie {
     this.version(5).stores({
       cards: "id, blockId, lessonId, nextReviewAt, state, introducedAt, *tags, [blockId+nextReviewAt], [lessonId+nextReviewAt]",
     });
+    // v6: add `language` index on cards for per-language queries
+    // (Phase 4 will populate it on write via `getOrCreateVocabCard`
+    // and `recordAnswer`). Legacy cards don't have the field; the
+    // index is empty for them, which is fine — they continue to
+    // match queries that don't filter by language. No backfill.
+    this.version(6).stores({
+      cards: "id, blockId, lessonId, nextReviewAt, state, introducedAt, *tags, language, [blockId+nextReviewAt], [lessonId+nextReviewAt]",
+    });
   }
 }
 
-export const db = new PortuguesDB();
+export const db = new AppDB();

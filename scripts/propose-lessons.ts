@@ -16,19 +16,22 @@
 //   bash scripts/with-env.sh tsx scripts/propose-lessons.ts --block=2,3,4 --force
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { ALL_CONCEPTS, getBlock } from '@/lib/data/curriculum';
+import { dataDir } from '@/lib/data/registry';
+import { ALL_CONCEPTS, getBlock } from '@/lib/data/languages/pt/curriculum';
 import { LessonListSchema } from './lib/zod-schemas';
 import { callLlm, extractJson } from './lib/minimax-llm';
 import { readCache, writeCache } from './lib/cache';
-import { LLM_CACHE, DATA_DIR, PROJECT_ROOT } from './config';
+import { LLM_CACHE, PROJECT_ROOT } from './config';
+import { parseLangArgs, noopForLang } from './lib/cli';
 
 // Bump cuando cambia el schema de LessonListSchema o el formato del prompt.
 const PROPOSE_SCHEMA_VERSION = 1;
 
-const LESSONS_DIR  = path.join(DATA_DIR, 'lessons');
+// Resolved at runtime inside main() from parseLangArgs().
+let LESSONS_DIR  = '';
+let STORIES_DIR  = '';
 const PROMPTS_DIR  = path.join(PROJECT_ROOT, 'scripts', 'prompts');
 const HANDBOOK_DIR = path.join(PROJECT_ROOT, 'scripts', 'data');
-const STORIES_DIR  = path.join(DATA_DIR, 'stories');
 
 // ─── Per-block target lesson count (rango orientativo, no contrato estricto) ─
 // El plan ajustó 31 lecciones para 9 bloques (B9 freeDrill no genera lecciones).
@@ -241,6 +244,16 @@ function renderTemplate(tpl: string, vars: Record<string, string | number>): str
 
 // ─── Main ───────────────────────────────────────────────────────
 async function main() {
+  const { lang } = parseLangArgs();
+  // Phase 5: solo PT tiene curriculum con Concept[]; scaffolds vacíos
+  // no pueden proponer lecciones.
+  if (lang !== 'pt') {
+    console.log(noopForLang(lang, 'propose-lessons'));
+    return;
+  }
+  LESSONS_DIR = path.join(dataDir(lang), 'lessons');
+  STORIES_DIR = path.join(dataDir(lang), 'stories');
+
   const { blocks, force } = parseArgs();
   const targets = blocks.length > 0
     ? [...new Set(blocks)].sort((a, b) => a - b)

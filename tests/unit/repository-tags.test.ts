@@ -42,19 +42,22 @@ describe("repository tags (Phase B)", () => {
     await expect(table.where("tags").equals("vocab").count()).resolves.toBe(0);
   });
 
-  it("getOrCreateVocabCard stamps the 'vocab' tag on creation", async () => {
+  it("getOrCreateVocabCard stamps 'vocab' + 'lang:pt' on creation (Phase 4)", async () => {
     const card = await getOrCreateVocabCard("padaria", "panadería", "places");
-    expect(card.tags).toEqual(["vocab"]);
+    expect(card.tags).toEqual(expect.arrayContaining(["vocab", "lang:pt"]));
   });
 
   it("getOrCreateVocabCard adds 'story:{id}' when opts.storyId is provided", async () => {
     const card = await getOrCreateVocabCard("rio", "río", "nature", {
       storyId: "b1-s1-o-dia-a-dia-de-joao-na-padaria",
     });
-    expect(card.tags).toEqual([
-      "vocab",
-      "story:b1-s1-o-dia-a-dia-de-joao-na-padaria",
-    ]);
+    expect(card.tags).toEqual(
+      expect.arrayContaining([
+        "vocab",
+        "lang:pt",
+        "story:b1-s1-o-dia-a-dia-de-joao-na-padaria",
+      ]),
+    );
   });
 
   it("getOrCreateVocabCard is idempotent: second call returns the same card, de-dup'd tags", async () => {
@@ -63,7 +66,7 @@ describe("repository tags (Phase B)", () => {
       storyId: "b1-s1-...",
     });
     expect(a.id).toBe(b.id);
-    expect(b.tags).toEqual(["vocab", "story:b1-s1-..."]);
+    expect(b.tags).toEqual(expect.arrayContaining(["vocab", "lang:pt", "story:b1-s1-..."]));
   });
 
   it("getCardsByTagCount: counts cards that have the tag, via multiEntry", async () => {

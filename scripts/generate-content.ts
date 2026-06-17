@@ -5,9 +5,10 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import pLimit from 'p-limit';
-import { BLOCKS, getBlock, getConceptsByIds, ALL_CONCEPTS, type Lesson } from '@/lib/data/curriculum';
+import { blocksDir } from '@/lib/data/registry';
+import { BLOCKS, getBlock, getConceptsByIds, ALL_CONCEPTS, type Lesson } from '@/lib/data/languages/pt/curriculum';
 import {
-  BLOCKS_DIR, LLM_CACHE, LLM_CONCURRENCY, SCHEMA_VERSION,
+  LLM_CACHE, LLM_CONCURRENCY, SCHEMA_VERSION,
   EXERCISES_PER_LESSON, TYPE_TO_TEMPLATE,
   COST_USD_PER_1K_INPUT, COST_USD_PER_1K_OUTPUT,
 } from './config';
@@ -15,6 +16,7 @@ import { hashKey, normalizeForHash } from './lib/cache';
 import { callLlm } from './lib/minimax-llm';
 import { runPromptGeneration } from './lib/prompt-runner';
 import { ExerciseSchema, type ExerciseType, type Exercise } from './lib/zod-schemas';
+import { parseLangArgs, noopForLang } from './lib/cli';
 
 // Adapter: prompt-runner espera `(args) => Promise<string>` pero callLlm
 // retorna `{ text, inputTokens, outputTokens }`. El orchestrator no necesita
@@ -27,6 +29,9 @@ const callLlmString = async (args: { system: string; user: string; maxTokens?: n
 // Resolves to repo root reliably — see Task 7 for why.
 const PROJECT_ROOT = process.cwd();
 const PROMPTS_DIR = path.join(PROJECT_ROOT, 'scripts', 'prompts');
+
+// Resolved at runtime inside main() from parseLangArgs().
+let BLOCKS_DIR = '';
 
 async function loadPrompt(name: string): Promise<string> {
   return fs.readFile(path.join(PROMPTS_DIR, `${name}.md`), 'utf8');
@@ -51,19 +56,37 @@ function templateVars(lesson: Lesson, blockName: string, type: ExerciseType, n: 
   const conceptsList = concepts.map(c => `- ${c.id}: ${c.name} — ${c.description}`).join('\n');
   const vocabKey = lesson.vocabKey.join(', ');
   const base = { N: n, lessonName: lesson.name, blockName, conceptsList, vocabKey };
-  if (type === 'translation_es_pt') return { ...base, direction: 'es_pt', type };
-  if (type === 'translation_pt_es') return { ...base, direction: 'pt_es', type };
+  // Phase 1: el tipo `translation` unificado usa `sourceLang`/`targetLang`
+  // en lugar de direction. El prompt recibe la dirección explícita.
+  if (type === 'translation') return { ...base, direction: 'es_pt', type };
   return base;
 }
 
-/** ID derivado del contenido. Estable a través de regeneraciones del LLM. */
-function contentId(type: ExerciseType, data: unknown, ptOverrides: unknown, esContrast: string | undefined): string {
-  return hashKey({ type, data, ptOverrides, esContrast }).slice(0, 8);
+/** ID derivado del contenido. Estable a través de regeneraciones del LLM.
+ *  Phase 1: usa `variantOverrides` en lugar de `ptOverrides` (la canónica).
+ *  El legacy `ptOverrides` se sigue aceptando vía el preprocessor del
+ *  schema al re-validar, pero el ID se computa sobre la forma canónica
+ *  (variantOverrides["pt-br"] cuando hay override). */
+function contentId(
+  type: ExerciseType,
+  data: unknown,
+  variantOverrides: unknown,
+  esContrast: string | undefined,
+): string {
+  return hashKey({ type, data, variantOverrides, esContrast }).slice(0, 8);
 }
 
 const VALID_CONCEPT_IDS = new Set(ALL_CONCEPTS.map(c => c.id));
 
 async function main() {
+  const { lang } = parseLangArgs();
+  // Phase 5: solo PT tiene curriculum con lecciones; scaffolds vacíos
+  // no generan contenido.
+  if (lang !== 'pt') {
+    console.log(noopForLang(lang, 'generate-content'));
+    return;
+  }
+  BLOCKS_DIR = blocksDir(lang);
   const { block, force, dryRun } = parseArgs();
   const targets = block ? [getBlock(block)] : BLOCKS;
   const system = await loadPrompt('system');
@@ -137,22 +160,26 @@ async function main() {
 
           for (const item of result.accepted) {
             // Construir el Exercise. El discriminated union de Zod no permite
-            // construir el objeto literal con data+ptOverrides condicionales
+            // construir el objeto literal con data+variantOverrides condicionales
             // (TS no puede narrow 'type' a través de spreads). Construimos un
             // borrador tipado como ExerciseBatchItem (que SÍ tiene type+data
             // ya discriminados) y añadimos los campos comunes. La validación
             // con ExerciseSchema.safeParse inmediatamente después confirma la
             // forma final.
+            // Phase 4: read `variantOverrides` directly. The Zod preprocessor
+            // still accepts the legacy `ptOverrides` alias on input, so any
+            // pre-Phase-1 data continues to parse on re-validation.
+            const rawOverrides = (item as unknown as { variantOverrides?: unknown }).variantOverrides;
             const baseWithType = {
               ...item,
-              id: contentId(item.type, item.data, item.ptOverrides, item.esContrast),
+              id: contentId(item.type, item.data, rawOverrides, item.esContrast),
               blockId: b.id,
               lessonId: lesson.id,
             } as unknown as Exercise;
             baseWithType.contentHash = hashKey(normalizeForHash({
               type: baseWithType.type,
               data: baseWithType.data,
-              ptOverrides: baseWithType.ptOverrides,
+              variantOverrides: (baseWithType as unknown as { variantOverrides?: unknown }).variantOverrides,
               esContrast: baseWithType.esContrast,
             }));
             const parsed = ExerciseSchema.safeParse(baseWithType);

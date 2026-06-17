@@ -1,5 +1,5 @@
 // lib/db/repository.ts
-import { db, type Card, type CardId, type Rating, type AnswerEvent, type GenericEvent, type Session, type Variant, type StoryProgressRow } from "./schema";
+import { db, type Card, type CardId, type Rating, type AnswerEvent, type GenericEvent, type Session, type StoryProgressRow } from "./schema";
 import { newCard, schedule } from "../srs/fsrs";
 import { buildDueQueue, type DueQueueOptions } from "../srs/review-queue";
 import { resetLeech, isLeech } from "../srs/leeches";
@@ -7,6 +7,8 @@ import { recordAnswerForConcepts } from "../mastery/concept";
 import { currentStreak, didStudyToday, isStreakAlive } from "@/lib/streak/streak";
 import { levelFromXp } from "@/lib/xp/calculator";
 import { RULES, type AppState } from "@/lib/achievements/rules";
+import { DEFAULT_LANGUAGE, type LanguageId } from "@/lib/locales";
+import { type VariantKey } from "@/lib/data/variant";
 
 export async function getOrCreateCard(id: CardId, blockId: number, lessonId: string): Promise<Card> {
   const existing = await db.cards.get(id);
@@ -151,7 +153,7 @@ export interface SubmitAnswerParams {
   rating: Rating;
   responseMs: number;
   mode: Session["mode"];
-  variant: Variant;
+  variant: VariantKey;
   conceptIds: string[];
   blockId: number;
   sessionId?: number;
@@ -196,7 +198,7 @@ export async function submitAnswer(p: SubmitAnswerParams): Promise<Card> {
 
 export async function getOrCreateStoryProgress(
   storyId: string,
-  variant: Variant,
+  variant: VariantKey,
 ): Promise<StoryProgressRow> {
   const existing = await db.storyProgress.get(storyId);
   if (existing) {
@@ -244,11 +246,20 @@ export async function getCompletedStories(): Promise<string[]> {
 
 // ─── Vocab card helpers ──────────────────────────────────────────────────────
 // Vocab cards live in the same `cards` table as exercise cards (FSRS-managed)
-// but are identified by an `id` prefix of `vocab-`. Schema v5 added a real
-// `tags?: string[]` field; we now stamp `["vocab", ...]` on every vocab
-// card (with an optional `story:{storyId}` from the Story Reader) so the
-// filter bar on /learn and the `vocab-50` achievement work without
-// scanning the id prefix.
+// but are identified by an `id` prefix of `vocab-{lang}-`. Phase 4 added
+// the lang segment so the same word in two different target languages
+// doesn't collide (e.g. `vocab-pt-bom` vs `vocab-ru-bom`).
+//
+// Schema v5 added a real `tags?: string[]` field; we now stamp
+// `["vocab", "lang:{lang}", ...]` on every vocab card (with an optional
+// `story:{storyId}` from the Story Reader) so the filter bar on /learn
+// and the `vocab-50` achievement work without scanning the id prefix.
+//
+// Migration on first touch: pre-Phase-4 rows have the legacy id
+// `vocab-{word}` (no lang). On the first lookup we find that row by
+// scanning the `vocab-` prefix and rename it to `vocab-{lang}-{word}`.
+// Migration only runs for `lang === "pt"` (the only language with
+// content); for empty scaffolds the caller creates a fresh row.
 const VOCAB_ID_PREFIX = 'vocab-';
 
 export interface GetOrCreateVocabCardOpts {
@@ -256,6 +267,11 @@ export interface GetOrCreateVocabCardOpts {
    *  to the standard `vocab` tag. Used by the Story Reader to mark which
    *  story introduced a given word. */
   storyId?: string;
+  /** Phase 4: the target language the word belongs to. Used both as the
+   *  id segment (so different langs don't collide) and as the
+   *  `language` field on the Card row (so per-language queries via the
+   *  schema v6 index work). Defaults to "pt" for back-compat. */
+  language?: LanguageId;
 }
 
 export async function getOrCreateVocabCard(
@@ -264,27 +280,60 @@ export async function getOrCreateVocabCard(
   conceptId: string,
   opts: GetOrCreateVocabCardOpts = {},
 ): Promise<Card> {
-  const id = `${VOCAB_ID_PREFIX}${word.toLowerCase()}`;
-  const desiredTags = ["vocab", ...(opts.storyId ? [`story:${opts.storyId}`] : [])];
+  const language: LanguageId = opts.language ?? DEFAULT_LANGUAGE;
+  const wordKey = word.toLowerCase();
+  const newId = `${VOCAB_ID_PREFIX}${language}-${wordKey}`;
+  const desiredTags = [
+    "vocab",
+    `lang:${language}`,
+    ...(opts.storyId ? [`story:${opts.storyId}`] : []),
+  ];
   // Read + write in one transaction so two concurrent callers don't
   // race past the getOrCreate guard and create duplicate cards.
   return db.transaction("rw", db.cards, async () => {
-    const existing = await db.cards.get(id);
+    const existing = await db.cards.get(newId);
     if (existing) {
-      // Append any new tags from `desiredTags` (de-dup). Existing tags
-      // are preserved so we don't clobber a tag the user previously
-      // earned via a different path.
+      // Append any new tags from `desiredTags` (de-dup) and stamp the
+      // language field if it's missing. Existing tags are preserved so
+      // we don't clobber a tag the user previously earned.
       const existingTags = existing.tags ?? [];
-      const merged = Array.from(new Set([...existingTags, ...desiredTags]));
-      if (merged.length !== existingTags.length) {
-        const updated: Card = { ...existing, tags: merged };
+      const mergedTags = Array.from(new Set([...existingTags, ...desiredTags]));
+      const needsLanguageStamp = !existing.language;
+      if (mergedTags.length !== existingTags.length || needsLanguageStamp) {
+        const updated: Card = {
+          ...existing,
+          tags: mergedTags,
+          ...(needsLanguageStamp ? { language } : {}),
+        };
         await db.cards.put(updated);
         return updated;
       }
       return existing;
     }
-    const fresh = newCard(id, 0, `vocab-${conceptId}`);
+    // First-touch migration: a pre-Phase-4 row with the legacy id
+    // `vocab-{wordKey}` (no lang segment) might still exist. Find it by
+    // scanning the `vocab-` prefix and rename it to the new id. Only
+    // for "pt" — the empty scaffolds have no rows to migrate.
+    if (language === "pt") {
+      const legacyId = `${VOCAB_ID_PREFIX}${wordKey}`;
+      if (legacyId !== newId) {
+        const legacy = await db.cards.get(legacyId);
+        if (legacy) {
+          const renamed: Card = {
+            ...legacy,
+            id: newId,
+            tags: Array.from(new Set([...(legacy.tags ?? []), ...desiredTags])),
+            language,
+          };
+          await db.cards.delete(legacyId);
+          await db.cards.put(renamed);
+          return renamed;
+        }
+      }
+    }
+    const fresh = newCard(newId, 0, `vocab-${conceptId}`);
     fresh.tags = desiredTags;
+    fresh.language = language;
     // The Card schema doesn't store the meaning/word directly — those live
     // in the vocab-catalog.json and are looked up by the UI from the id. We
     // do not duplicate them on the Card row (avoids sync drift).
@@ -310,7 +359,7 @@ export async function getDueCardsCount(now: Date = new Date()): Promise<number> 
 
 export async function recordSessionEnd(
   sessionId: number,
-  variant: Variant,
+  variant: VariantKey,
   minutesStudied: number,
   cardsReviewed: number,
 ): Promise<void> {

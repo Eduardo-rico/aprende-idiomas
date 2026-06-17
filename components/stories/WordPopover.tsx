@@ -7,11 +7,16 @@
 //     no "add to vocab" (no TTS hash, no canonical conceptId)
 //   - "missing": not in catalog or fallback
 // Clicking outside or pressing Esc dismisses.
+//
+// The active target language is threaded in as a prop from StoryReader;
+// we add `&lang=...` to the lookup URL so the API route hits the right
+// catalog and fallback dictionary.
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { audioUrl } from "@/lib/audio/resolve";
 import { getOrCreateVocabCard } from "@/lib/db/repository";
 import { useSettings } from "@/lib/stores/settings";
+import type { LanguageId } from "@/lib/locales";
 
 type CatalogItem = {
   word: string;
@@ -35,10 +40,12 @@ type State =
 export function WordPopover({
   word,
   storyId,
+  lang,
   onClose,
 }: {
   word: string;
   storyId: string;
+  lang: LanguageId;
   onClose: () => void;
 }) {
   const [state, setState] = useState<State>({ kind: "loading" });
@@ -52,7 +59,9 @@ export function WordPopover({
     let cancelled = false;
     (async () => {
       try {
-        const res = await fetch(`/api/vocab/lookup?w=${encodeURIComponent(word)}`);
+        const res = await fetch(
+          `/api/vocab/lookup?w=${encodeURIComponent(word)}&lang=${encodeURIComponent(lang)}`,
+        );
         if (cancelled) return;
         if (!res.ok) {
           setState({ kind: "error", message: `Error ${res.status}` });
@@ -80,7 +89,7 @@ export function WordPopover({
     return () => {
       cancelled = true;
     };
-  }, [word]);
+  }, [word, lang]);
 
   // Close on Esc or click outside.
   useEffect(() => {
@@ -114,8 +123,11 @@ export function WordPopover({
     setAdding(true);
     try {
       const item = state.item;
-      // Phase B 4-arg getOrCreateVocabCard: stamps ["vocab", "story:{storyId}"].
-      await getOrCreateVocabCard(item.word, item.meaning, "story", { storyId });
+      // Phase 4: thread the active target language so the card id and
+      // `lang:` tag are scoped per-language. The `lang` prop was added
+      // in Phase 3 when StoryReader started receiving it from the
+      // server-rendered story page.
+      await getOrCreateVocabCard(item.word, item.meaning, "story", { storyId, language: lang });
       setAdded(true);
     } catch (err) {
       console.error("Failed to add vocab card", err);

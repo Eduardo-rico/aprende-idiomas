@@ -2,17 +2,22 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import pLimit from 'p-limit';
-import { BLOCKS, getBlock } from '@/lib/data/curriculum';
+import { blocksDir, dataDir } from '@/lib/data/registry';
+import { BLOCKS, getBlock } from '@/lib/data/languages/pt/curriculum';
 import {
-  BLOCKS_DIR, DATA_DIR, TTS_CONCURRENCY, TTS_DELAY_MS, VOICES, DEFAULT_VOICE,
+  TTS_CONCURRENCY, TTS_DELAY_MS, VOICES, DEFAULT_VOICE,
   TTS_MODEL, LLM_MODEL,
 } from './config';
 import { collectAudioJobs, textsFor } from './lib/audio-collector';
 import { generateTts } from './lib/minimax-tts';
 import { hashKey, normalizeForHash } from './lib/cache';
-import { ExerciseSchema, type Exercise } from './lib/zod-schemas';
+import { ExerciseInputSchema, type Exercise } from './lib/zod-schemas';
+import { parseLangArgs, noopForLang } from './lib/cli';
 
 const PROJECT_ROOT = process.cwd();
+// Resolved at runtime inside main() from parseLangArgs().
+let BLOCKS_DIR = '';
+let DATA_DIR = '';
 
 interface CliArgs { block?: number; force: boolean; }
 function parseArgs(): CliArgs {
@@ -31,7 +36,9 @@ async function loadBlockExercises(blockId: number): Promise<Exercise[]> {
   const raw = await fs.readFile(file, 'utf8');
   const parsed = JSON.parse(raw) as unknown[];
   return parsed.map((e, i) => {
-    const r = ExerciseSchema.safeParse(e);
+    // ExerciseInputSchema aplica el preprocessor (ptOverrides → variantOverrides,
+    // translation_es_pt → translation, etc.).
+    const r = ExerciseInputSchema.safeParse(e);
     if (!r.success) throw new Error(`b${blockId}.json[${i}]: ${r.error.issues[0]?.message}`);
     return r.data;
   });
@@ -57,11 +64,23 @@ async function withBlockLock<T>(blockId: number, fn: () => Promise<T>): Promise<
 }
 
 async function main() {
+  const { lang } = parseLangArgs();
+  // Phase 5: generate-audio solo corre para PT (los scaffolds vacíos
+  // no tienen ejercicios para sintetizar).
+  if (lang !== 'pt') {
+    console.log(noopForLang(lang, 'generate-audio'));
+    return;
+  }
+  BLOCKS_DIR = blocksDir(lang);
+  DATA_DIR = dataDir(lang);
   const { block, force } = parseArgs();
   const targets = block ? [getBlock(block)] : BLOCKS;
   const limit = pLimit(TTS_CONCURRENCY);
 
-  const audioIndex: Record<'br' | 'pt', Record<string, string>> = { br: {}, pt: {} };
+  // Phase 1: audioIndex es un record libre por VariantKey. Por ahora
+  // seguimos generando bajo las keys legacy (br/pt) para no romper el
+  // manifest existente; la migración de keys es Phase 4.
+  const audioIndex: Record<string, Record<string, string>> = { br: {}, pt: {} };
   const manifestBlocks: Record<string, { exerciseCount: number; audioCount: number }> = {};
 
   for (const b of targets) {
@@ -86,15 +105,19 @@ async function main() {
       // TTS_DELAY_MS entre requests para evitar RPM rate limit (código 1002).
       let done = 0;
       const settled = await Promise.allSettled(jobs.map(j => limit(async () => {
-        const voice = VOICES[j.variant][DEFAULT_VOICE];
+        // Phase 1: AudioJob.variant es VariantKey (string), pero MiniMax
+        // TTS espera 'br' | 'pt'. Los callers pasan esos dos valores
+        // (collectAudioJobs usa 'pt-br' y 'pt-pt'); mapeamos aquí.
+        const ttsVariant: 'br' | 'pt' = j.variant === 'pt-br' ? 'pt' : 'br';
+        const voice = VOICES[j.variant]?.[DEFAULT_VOICE] ?? VOICES[ttsVariant]?.[DEFAULT_VOICE] ?? '';
         if (TTS_DELAY_MS > 0 && done > 0) await new Promise(r => setTimeout(r, TTS_DELAY_MS));
-        const result = await generateTts({ text: j.text, voiceId: voice, variant: j.variant });
+        const result = await generateTts({ text: j.text, voiceId: voice, variant: ttsVariant });
         done++;
         if (done % 20 === 0) console.log(`  progress: ${done}/${jobs.length}`);
         return { ...j, ...result, voice };
       })));
 
-      const successes: Array<{ text: string; variant: 'br' | 'pt'; hash: string; voice: string; cached: boolean }> = [];
+      const successes: Array<{ text: string; variant: string; hash: string; voice: string; cached: boolean }> = [];
       const failures: Array<{ text: string; variant: string; reason: string }> = [];
       settled.forEach((r, i) => {
         const j = jobs[i]!;
@@ -106,14 +129,14 @@ async function main() {
       });
 
       // Build a Map<string, TtsResult> for O(1) lookup in the attach loop.
-      // Map value type: only fields we actually use (hash + voice + variant).
-      // TtsResult includes filePath which is not needed here; the success
-      // record from the allSettled block doesn't carry filePath either.
-      type AttachInfo = { hash: string; voice: string; variant: 'br' | 'pt' };
+      type AttachInfo = { hash: string; voice: string; variant: string };
       const audioMap = new Map<string, AttachInfo>();
       for (const s of successes) audioMap.set(`${s.variant}::${s.text}`, s);
 
       // Attach audio refs. Reuse textsFor directly (no second collectAudioJobs call).
+      // Phase 1: shim de compat — los MP3s se siguen escribiendo bajo las
+      // keys legacy "br" y "pt" en el JSON para no romper el formato del
+      // manifest. La migración a "pt-br"/"pt-pt" es Phase 4.
       let audioAttachedCount = 0;
       for (const ex of exercises) {
         const brText = textsFor(ex, 'br')[0];
@@ -127,8 +150,12 @@ async function main() {
             pt: { hash: ptR.hash, voice: ptR.voice },
           };
           // Recompute contentHash post-audio-attach so SRS keys on post-generated state.
+          // Phase 4: read `variantOverrides` directly. The Zod preprocessor
+          // still accepts the legacy `ptOverrides` alias on input, so any
+          // pre-Phase-1 data continues to parse on re-validation.
+          const variantOverrides = (ex as unknown as { variantOverrides?: unknown }).variantOverrides;
           ex.contentHash = hashKey(normalizeForHash({
-            type: ex.type, data: ex.data, ptOverrides: ex.ptOverrides, esContrast: ex.esContrast,
+            type: ex.type, data: ex.data, variantOverrides, esContrast: ex.esContrast,
           }));
           audioAttachedCount++;
         }
@@ -141,8 +168,12 @@ async function main() {
       await fs.rename(tmp, file);
 
       // Update in-memory audioIndex for the manifest.
+      // Phase 1: el manifest sigue usando keys legacy "br"/"pt" hasta
+      // la migración de Phase 4. Mapeamos pt-br→br y pt-pt→pt.
       for (const s of successes) {
-        audioIndex[s.variant][s.text] = s.hash;
+        const manifestKey = s.variant === 'pt-br' ? 'br' : s.variant === 'pt-pt' ? 'pt' : s.variant;
+        if (!audioIndex[manifestKey]) audioIndex[manifestKey] = {};
+        audioIndex[manifestKey][s.text] = s.hash;
       }
       manifestBlocks[String(b.id)] = { exerciseCount: exercises.length, audioCount: jobs.length };
       const cachedCount = successes.filter(s => s.cached).length;
@@ -173,10 +204,11 @@ async function main() {
   }
 
   // Reconstruir audioIndex de los bloques regenerados: solo entradas vivas.
-  const cleanIndex = { br: {} as Record<string, string>, pt: {} as Record<string, string> };
+  const cleanIndex: Record<string, Record<string, string>> = { br: {}, pt: {} };
   for (const v of ['br', 'pt'] as const) {
-    for (const [text, hash] of Object.entries(audioIndex[v])) {
-      if (liveTexts[v].has(text)) cleanIndex[v][text] = hash;
+    const idx = audioIndex[v] ?? {};
+    for (const [text, hash] of Object.entries(idx)) {
+      if (liveTexts[v].has(text)) cleanIndex[v]![text] = hash;
     }
   }
   // Para bloques NO regenerados, conservar las entries vivas del manifest previo.
@@ -185,8 +217,8 @@ async function main() {
     const prevIdx: Record<string, string> = prev.audioIndex?.[v] ?? {};
     for (const [text, hash] of Object.entries(prevIdx)) {
       // Conservar solo si NO estamos regenerando su bloque y el texto sigue vivo.
-      if (liveTexts[v].has(text) && !Object.keys(audioIndex[v]).includes(text)) {
-        cleanIndex[v][text] = hash;
+      if (liveTexts[v].has(text) && !Object.keys(audioIndex[v] ?? {}).includes(text)) {
+        cleanIndex[v]![text] = hash;
       }
     }
   }

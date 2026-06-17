@@ -1,15 +1,20 @@
-// scripts/lib/zod-schemas.ts
+// lib/data/zod-schemas.ts
 import { z } from 'zod';
 
 // ─── ExerciseType ──────────────────────────────────────────────
 // Tipos activos en MVP1. sentence_construction y chunk diferidos a Plan #2
 // pero presentes en el enum para que el data model no requiera migración.
+//
+// Phase 1 (multi-idioma): los tipos legacy `translation_es_pt` y
+// `translation_pt_es` colapsan a un único `translation`. El preprocessor
+// `normalizeExerciseInput` (más abajo) acepta el input legacy y lo
+// normaliza a la forma canónica con `sourceLang`/`targetLang` en `data`.
+// La salida de `ExerciseSchema` es siempre la forma canónica.
 export const ExerciseTypeEnum = z.enum([
   'flashcard',
   'fill_blank',
   'listening',
-  'translation_es_pt',
-  'translation_pt_es',
+  'translation',
   'verb_preposition',
   'sentence_construction',
   'chunk',
@@ -17,10 +22,15 @@ export const ExerciseTypeEnum = z.enum([
 export type ExerciseType = z.infer<typeof ExerciseTypeEnum>;
 
 // ─── Per-type data shapes ──────────────────────────────────────
-const AudioRefSchema = z.object({
-  br: z.object({ hash: z.string().min(1), voice: z.string().min(1) }),
-  pt: z.object({ hash: z.string().min(1), voice: z.string().min(1) }),
+// AudioRefSchema: record libre de { hash, voice } por VariantKey.
+// Contenido legacy usa "br" y "pt"; contenido nuevo puede usar cualquier
+// clave (ej. "pt-br", "pt-pt", "ru"). La clave es libre a propósito:
+// añadir un dialecto es un cambio de datos, no de schema.
+const AudioRefEntry = z.object({
+  hash: z.string().min(1),
+  voice: z.string().min(1),
 });
+const AudioRefSchema = z.record(z.string(), AudioRefEntry);
 
 const FlashcardData = z.object({
   front: z.string().min(1),
@@ -42,9 +52,15 @@ const ListeningData = z.object({
   options: z.array(z.string()).min(2).optional(),
   answer: z.string().min(1),
 });
+// TranslationData: `source` y `target` son el texto (la frase origen
+// a traducir y la traducción esperada). `sourceLang` y `targetLang`
+// son los códigos de idioma (ej. "es", "pt-br"). El preprocessor
+// rellena sourceLang/targetLang a partir del tipo legacy.
 const TranslationData = z.object({
   source: z.string().min(1),
   target: z.string().min(1),
+  sourceLang: z.string().min(2),
+  targetLang: z.string().min(2),
   acceptedAlternatives: z.array(z.string()).optional(),
 });
 const VerbPrepositionData = z.object({
@@ -65,33 +81,27 @@ const ChunkData = z.object({
 });
 
 // Map para resolver el schema de data por tipo. Útil en audio-collector y
-// generate-audio (re-validar tras spread de ptOverrides).
+// generate-audio (re-validar tras spread de variantOverrides).
 export const ExerciseDataByTypeSchema = {
   flashcard: FlashcardData,
   fill_blank: FillBlankData,
   listening: ListeningData,
-  translation_es_pt: TranslationData,
-  translation_pt_es: TranslationData,
+  translation: TranslationData,
   verb_preposition: VerbPrepositionData,
   sentence_construction: SentenceConstructionData,
   chunk: ChunkData,
 } as const;
 
-// ─── ptOverrides por tipo (todos los campos opcionales) ────────
-// Usamos strictObject + partial para que ptOverrides rechace campos de otro
-// tipo (ej. { chunk, meaning, examples } en un flashcard). En Zod 4 un
-// `.partial()` regular permite unknown keys y eso rompe la invariante.
+// ─── variantOverrides por tipo (todos los campos opcionales) ────
+// Usamos strictObject + partial para que variantOverrides rechace campos
+// de otro tipo (ej. { chunk, meaning, examples } en un flashcard). En
+// Zod 4 un `.partial()` regular permite unknown keys y eso rompe la
+// invariante.
 //
-// nullTolerance: el LLM emite literalmente `"ptOverrides": null` (en vez de
-// omitir el campo) en muchos items. Zod `.optional()` solo acepta undefined,
-// por lo que `null` se rechaza. `nullTolerance(s)` envuelve un schema opcional
-// para que también acepte `null` y lo transforme en undefined antes de validar.
-const nullTolerance = <T extends z.ZodType>(schema: T) =>
-  z.preprocess(
-    (v) => (v === null ? undefined : v),
-    schema.optional(),
-  ) as unknown as z.ZodOptional<T>;
-
+// El valor de variantOverrides es un record por VariantKey. La
+// validación per-tipo (que la variante coincida con el tipo de
+// ejercicio) se hace en el resolver (lib/exercise-resolver.ts), no
+// aquí — el schema no puede saber el tipo del padre desde un valor.
 const FlashcardOverride = z.strictObject(FlashcardData.shape).partial();
 const FillBlankOverride = z.strictObject(FillBlankData.shape).partial();
 const ListeningOverride = z.strictObject(ListeningData.shape).partial();
@@ -100,23 +110,33 @@ const VerbPrepositionOverride = z.strictObject(VerbPrepositionData.shape).partia
 const SentenceConstructionOverride = z.strictObject(SentenceConstructionData.shape).partial();
 const ChunkOverride = z.strictObject(ChunkData.shape).partial();
 
-// Map para resolver el override schema (strict) por tipo. El resolver del
-// cliente (lib/exercise-resolver.ts) lo usa para rechazar ptOverrides con
-// campos de otro tipo (ej. { chunk } sobre un flashcard) antes de mergear.
-export const PtOverrideByTypeSchema = {
+const VariantOverrideValue = z.union([
+  FlashcardOverride,
+  FillBlankOverride,
+  ListeningOverride,
+  TranslationOverride,
+  VerbPrepositionOverride,
+  SentenceConstructionOverride,
+  ChunkOverride,
+]);
+
+// Map para resolver el override schema (strict) por tipo. El resolver
+// del cliente (lib/exercise-resolver.ts) lo usa para rechazar
+// variantOverrides con campos de otro tipo antes de mergear.
+export const VariantOverrideByTypeSchema = {
   flashcard: FlashcardOverride,
   fill_blank: FillBlankOverride,
   listening: ListeningOverride,
-  translation_es_pt: TranslationOverride,
-  translation_pt_es: TranslationOverride,
+  translation: TranslationOverride,
   verb_preposition: VerbPrepositionOverride,
   sentence_construction: SentenceConstructionOverride,
   chunk: ChunkOverride,
 } as const;
 
 // ─── Exercise: discriminated union sobre `type` ────────────────
-// CRÍTICO: el data y ptOverrides son variante-específicos. Cruzar tipos
-// (ej. ptOverrides.audioText en un flashcard) no parsea.
+// CRÍTICO: el data es variante-específico. Cruzar tipos (ej. data con
+// audioText en un flashcard) no parsea. variantOverrides se valida
+// contra la unión de override schemas (no conoce el tipo del padre).
 const BaseExercise = z.object({
   id: z.string().min(1),
   blockId: z.number().int().positive(),
@@ -132,50 +152,95 @@ const BaseExercise = z.object({
 const FlashcardEx = BaseExercise.extend({
   type: z.literal('flashcard'),
   data: FlashcardData,
-  ptOverrides: nullTolerance(FlashcardOverride),
+  variantOverrides: z.record(z.string(), VariantOverrideValue).optional(),
 });
 const FillBlankEx = BaseExercise.extend({
   type: z.literal('fill_blank'),
   data: FillBlankData,
-  ptOverrides: nullTolerance(FillBlankOverride),
+  variantOverrides: z.record(z.string(), VariantOverrideValue).optional(),
 });
 const ListeningEx = BaseExercise.extend({
   type: z.literal('listening'),
   data: ListeningData,
-  ptOverrides: nullTolerance(ListeningOverride),
+  variantOverrides: z.record(z.string(), VariantOverrideValue).optional(),
 });
-const TranslationEsPtEx = BaseExercise.extend({
-  type: z.literal('translation_es_pt'),
+const TranslationEx = BaseExercise.extend({
+  type: z.literal('translation'),
   data: TranslationData,
-  ptOverrides: nullTolerance(TranslationOverride),
-});
-const TranslationPtEsEx = BaseExercise.extend({
-  type: z.literal('translation_pt_es'),
-  data: TranslationData,
-  ptOverrides: nullTolerance(TranslationOverride),
+  variantOverrides: z.record(z.string(), VariantOverrideValue).optional(),
 });
 const VerbPrepositionEx = BaseExercise.extend({
   type: z.literal('verb_preposition'),
   data: VerbPrepositionData,
-  ptOverrides: nullTolerance(VerbPrepositionOverride),
+  variantOverrides: z.record(z.string(), VariantOverrideValue).optional(),
 });
 const SentenceConstructionEx = BaseExercise.extend({
   type: z.literal('sentence_construction'),
   data: SentenceConstructionData,
-  ptOverrides: nullTolerance(SentenceConstructionOverride),
+  variantOverrides: z.record(z.string(), VariantOverrideValue).optional(),
 });
 const ChunkEx = BaseExercise.extend({
   type: z.literal('chunk'),
   data: ChunkData,
-  ptOverrides: nullTolerance(ChunkOverride),
+  variantOverrides: z.record(z.string(), VariantOverrideValue).optional(),
 });
 
 export const ExerciseSchema = z.discriminatedUnion('type', [
   FlashcardEx, FillBlankEx, ListeningEx,
-  TranslationEsPtEx, TranslationPtEsEx,
+  TranslationEx,
   VerbPrepositionEx, SentenceConstructionEx, ChunkEx,
 ]);
 export type Exercise = z.infer<typeof ExerciseSchema>;
+
+// ─── Preprocessor para backward compat (Phase 1) ───────────────
+// Acepta las formas legacy del input y las normaliza a la forma canónica.
+// Se exporta para que scripts y otros callers puedan normalizar JSON
+// crudo antes de validar.
+//
+//   1. `type: "translation_es_pt"` → `type: "translation"`,
+//      `data.sourceLang = "es"`, `data.targetLang = "pt-br"`.
+//   2. `type: "translation_pt_es"` → `type: "translation"`,
+//      `data.sourceLang = "pt-br"`, `data.targetLang = "es"`.
+//   3. `ptOverrides` (no null) → `variantOverrides["pt-br"]`.
+//      Si `variantOverrides` ya está presente, `ptOverrides` se descarta
+//      (la canónica gana).
+//   4. `variantOverrides: null` → se elimina (tratado como undefined).
+export function normalizeExerciseInput(v: unknown): unknown {
+  if (!v || typeof v !== "object") return v;
+  const obj = { ...(v as Record<string, unknown>) };
+
+  // (1, 2) Normalizar tipos de traducción legacy
+  if (obj.type === "translation_es_pt" || obj.type === "translation_pt_es") {
+    const data = obj.data;
+    if (data && typeof data === "object") {
+      const direction = obj.type === "translation_es_pt"
+        ? { sourceLang: "es", targetLang: "pt-br" }
+        : { sourceLang: "pt-br", targetLang: "es" };
+      obj.type = "translation";
+      obj.data = { ...(data as Record<string, unknown>), ...direction };
+    }
+  }
+
+  // (3) Promover ptOverrides a variantOverrides["pt-br"]
+  if ("ptOverrides" in obj && obj.ptOverrides !== undefined && obj.ptOverrides !== null) {
+    if (!("variantOverrides" in obj) || obj.variantOverrides === undefined || obj.variantOverrides === null) {
+      obj.variantOverrides = { "pt-br": obj.ptOverrides };
+    }
+    delete obj.ptOverrides;
+  }
+
+  // (4) variantOverrides: null → eliminar
+  if ("variantOverrides" in obj && obj.variantOverrides === null) {
+    delete obj.variantOverrides;
+  }
+
+  return obj;
+}
+
+/** Schema de input con preprocessor. Usar cuando se parsea JSON crudo
+ *  (output de LLM, archivos de contenido legacy) para aceptar ambas
+ *  formas. Para contenido nuevo, `ExerciseSchema` parsea directo. */
+export const ExerciseInputSchema = z.preprocess(normalizeExerciseInput, ExerciseSchema);
 
 // Estado "generado y completo" — invariante al disco. Plan #1 debe commitear
 // SOLO archivos que satisfagan esta invariante. validate-content la impone.
@@ -189,32 +254,31 @@ const RequiredGeneratedFields = {
 const FlashcardGen = FlashcardEx.extend(RequiredGeneratedFields);
 const FillBlankGen = FillBlankEx.extend(RequiredGeneratedFields);
 const ListeningGen = ListeningEx.extend(RequiredGeneratedFields);
-const TranslationEsPtGen = TranslationEsPtEx.extend(RequiredGeneratedFields);
-const TranslationPtEsGen = TranslationPtEsEx.extend(RequiredGeneratedFields);
+const TranslationGen = TranslationEx.extend(RequiredGeneratedFields);
 const VerbPrepositionGen = VerbPrepositionEx.extend(RequiredGeneratedFields);
 const SentenceConstructionGen = SentenceConstructionEx.extend(RequiredGeneratedFields);
 const ChunkGen = ChunkEx.extend(RequiredGeneratedFields);
 
 export const GeneratedExerciseSchema = z.discriminatedUnion('type', [
   FlashcardGen, FillBlankGen, ListeningGen,
-  TranslationEsPtGen, TranslationPtEsGen,
+  TranslationGen,
   VerbPrepositionGen, SentenceConstructionGen, ChunkGen,
 ]);
 export type GeneratedExercise = z.infer<typeof GeneratedExerciseSchema>;
 
 // LLM batch output: el LLM produce N items, omitimos los campos que el
 // orquestador adjunta (id, blockId, lessonId, contentHash, audio).
-// El type discrimina el data shape.
-const LlmItemSchema = z.discriminatedUnion('type', [
+// El type discrimina el data shape. El preprocessor acepta tanto la
+// forma canónica como la legacy (translation_es_pt, ptOverrides).
+const LlmItemSchema = z.preprocess(normalizeExerciseInput, z.discriminatedUnion('type', [
   FlashcardEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
   FillBlankEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
   ListeningEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
-  TranslationEsPtEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
-  TranslationPtEsEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
+  TranslationEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
   VerbPrepositionEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
   SentenceConstructionEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
   ChunkEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
-]);
+]));
 export const ExerciseBatchSchema = z.array(LlmItemSchema);
 export type ExerciseBatchItem = z.infer<typeof ExerciseBatchSchema>[number];
 
@@ -223,7 +287,9 @@ export const StoryVocabSchema = z.object({
   word: z.string().min(1),
   ptWord: z.string().min(1).optional(),
   meaning: z.string().min(1),
-  audioHash: z.object({ br: z.string().min(1), pt: z.string().min(1) }),
+  // Record libre por VariantKey. Contenido legacy usa "br" y "pt";
+  // contenido nuevo puede usar "pt-br", "pt-pt", "ru", etc.
+  audioHash: z.record(z.string(), z.string().min(1)),
 });
 
 export const StoryVariantSchema = z.object({
@@ -238,7 +304,8 @@ export const StorySchema = z.object({
   title: z.string().min(1),
   level: z.union([z.literal(1), z.literal(2), z.literal(3)]),
   conceptIds: z.array(z.string()),
-  variants: z.object({ br: StoryVariantSchema, pt: StoryVariantSchema }),
+  // Record libre de variantes por VariantKey.
+  variants: z.record(z.string(), StoryVariantSchema),
   vocab: z.array(StoryVocabSchema).min(3).max(12),
 });
 

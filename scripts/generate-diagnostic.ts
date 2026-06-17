@@ -9,11 +9,18 @@
 // works in CI. It just reports the current state of the file.
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { diagnosticFile } from '@/lib/data/registry';
 import { DiagnosticSchema } from './lib/zod-schemas';
-
-const DIAGNOSTIC_FILE = path.join(process.cwd(), 'lib', 'data', 'diagnostic.json');
+import { parseLangArgs, noopForLang } from './lib/cli';
 
 async function main() {
+  const { lang } = parseLangArgs();
+  // Phase 5: solo PT tiene diagnostic hand-written.
+  if (lang !== 'pt') {
+    console.log(noopForLang(lang, 'generate-diagnostic'));
+    return;
+  }
+  const DIAGNOSTIC_FILE = diagnosticFile(lang);
   try {
     const raw = await fs.readFile(DIAGNOSTIC_FILE, 'utf-8');
     const parsed = DiagnosticSchema.parse(JSON.parse(raw));

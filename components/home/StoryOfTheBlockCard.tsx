@@ -4,9 +4,11 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { getCompletedStories } from '@/lib/db/repository';
 import { useSettings } from '@/lib/stores/settings';
+import { useLang } from '@/lib/stores/lang-context';
 import type { Story } from '@/lib/data/zod-schemas';
 
 export function StoryOfTheBlockCard({ stories }: { stories: Story[] }) {
+  const lang = useLang();
   const { variant } = useSettings();
   const [completed, setCompleted] = useState<Set<string>>(new Set());
   const [hydrated, setHydrated] = useState(false);
@@ -52,7 +54,7 @@ export function StoryOfTheBlockCard({ stories }: { stories: Story[] }) {
         {hydrated && completed.has(story.id) && ' · ✓ ya leída'}
       </p>
       <Link
-        href={`/stories/${story.id}`}
+        href={`/${lang}/stories/${story.id}`}
         className="inline-block px-3 py-1.5 bg-primary text-primary-foreground rounded-md text-sm"
       >
         {hydrated && completed.has(story.id) ? 'Releer' : 'Empezar'}

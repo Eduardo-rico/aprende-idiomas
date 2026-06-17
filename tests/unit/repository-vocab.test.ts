@@ -9,10 +9,13 @@ describe('vocab card repository', () => {
     await db.cards.clear();
   });
 
-  it('creates a new vocab card with vocab- prefix in id', async () => {
+  it('creates a new vocab card with vocab-{lang}- prefix in id (Phase 4)', async () => {
     const card = await getOrCreateVocabCard('padaria', 'panadería', 'b1-alfabeto');
-    expect(card.id).toBe('vocab-padaria');
+    expect(card.id).toBe('vocab-pt-padaria');
     expect(card.blockId).toBe(0); // vocab is cross-block
+    expect(card.language).toBe('pt');
+    expect(card.tags).toContain('vocab');
+    expect(card.tags).toContain('lang:pt');
   });
 
   it('returns the same card on a second call (idempotent)', async () => {
@@ -39,7 +42,7 @@ describe('vocab card repository', () => {
     });
     const due = await getDueVocabCards(10);
     expect(due.length).toBe(1);
-    expect(due[0]?.id).toBe('vocab-moça');
+    expect(due[0]?.id).toBe('vocab-pt-moça');
   });
 
   it('getDueVocabCards respects limit', async () => {

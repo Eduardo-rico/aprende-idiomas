@@ -1,7 +1,7 @@
 // components/BlockCard.tsx
 "use client";
 import Link from "next/link";
-import type { Block } from "@/lib/data/curriculum";
+import type { Block } from "@/lib/data/curriculum-types";
 
 interface Props { block: Block; masteryPct: number; isUnlocked: boolean; }
 

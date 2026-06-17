@@ -7,6 +7,7 @@ import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import type { FsrsConfig } from "@/lib/srs/config";
 import type { StepUnit } from "ts-fsrs";
+import { runLocalStorageMigrations } from "./localstorage-migrate";
 
 export type FsrsOverrides = Partial<Omit<FsrsConfig, "learning_steps" | "relearning_steps">> & {
   // The steps fields are stored as plain strings and parsed on read, so
@@ -29,7 +30,10 @@ export const useFsrsOverrides = create<FsrsOverridesState>()(
         set((s) => ({ overrides: { ...s.overrides, [key]: value } })),
       clearOverrides: () => set({ overrides: {} }),
     }),
-    { name: "pt-fsrs-overrides", storage: createJSONStorage(() => localStorage) },
+    // Phase 4: persist key renamed to "app-fsrs-overrides" (was
+    // "pt-fsrs-overrides"). The localStorage migration copies the
+    // legacy payload on first load.
+    { name: "app-fsrs-overrides", storage: createJSONStorage(() => localStorage) },
   ),
 );
 
@@ -55,4 +59,10 @@ export function resolveOverrides(overrides: FsrsOverrides): Partial<FsrsConfig> 
     }
   }
   return out;
+}
+
+// Run the migration at module load so existing users don't lose their
+// overrides on first reload after the rename.
+if (typeof window !== "undefined") {
+  runLocalStorageMigrations();
 }

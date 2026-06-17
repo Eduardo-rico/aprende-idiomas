@@ -1,15 +1,31 @@
 // app/login/page.tsx
 // Single-password login form. On submit POSTs to /api/auth/login with
 // the password; on success the server sets a signed httpOnly cookie and
-// we redirect to the original `?next=…` URL (or `/` if none).
+// we redirect to the original `?next=…` URL. If `next` is missing or
+// points to "/", we redirect to the default target language ("/pt/").
 "use client";
 import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { DEFAULT_LANGUAGE, hasLocale } from "@/lib/locales";
 
 function LoginForm() {
   const router = useRouter();
   const search = useSearchParams();
-  const next = search.get("next") || "/";
+  // Phase 3 (multi-idioma): if no `next` is given, send the user to the
+  // default target language's home (`/pt`). If `next` is given, the proxy
+  // preserved the requested path; for legacy bookmarks that lack a lang
+  // prefix (e.g. `/learn`), re-prefix with the default lang. Path that
+  // already starts with `/<known-lang>/` is honored verbatim.
+  const rawNext = search.get("next");
+  const next = (() => {
+    if (!rawNext) return `/${DEFAULT_LANGUAGE}`;
+    if (!rawNext.startsWith("/")) return `/${DEFAULT_LANGUAGE}`;
+    // Strip leading slash, then peek the first segment.
+    const firstSegment = rawNext.slice(1).split("/")[0] ?? "";
+    if (hasLocale(firstSegment)) return rawNext;
+    // No lang prefix — re-prefix with the default.
+    return `/${DEFAULT_LANGUAGE}${rawNext === "/" ? "" : rawNext}`;
+  })();
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);

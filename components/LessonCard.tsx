@@ -1,7 +1,7 @@
 // components/LessonCard.tsx
 "use client";
 import Link from "next/link";
-import type { Lesson } from "@/lib/data/curriculum";
+import type { Lesson } from "@/lib/data/curriculum-types";
 
 interface Props { lesson: Lesson; dueCount: number; blockId: number; }
 

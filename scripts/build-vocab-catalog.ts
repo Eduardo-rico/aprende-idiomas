@@ -5,7 +5,8 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { z } from 'zod';
-import { DATA_DIR } from './config';
+import { dataDir } from '@/lib/data/registry';
+import { parseLangArgs, noopForLang } from './lib/cli';
 import { loadAllStories } from '../lib/data/loaders';
 
 const VocabCatalogItemSchema = z.object({
@@ -32,10 +33,10 @@ interface RawStory {
   }>;
 }
 
-async function readStoriesFromDisk(): Promise<RawStory[]> {
+async function readStoriesFromDisk(lang: 'pt'): Promise<RawStory[]> {
   // Reuse the public loaders for schema validation, then read the raw JSONs
   // for stable, sorted output.
-  const dir = path.join(DATA_DIR, 'stories');
+  const dir = path.join(dataDir(lang), 'stories');
   let entries: string[];
   try {
     entries = await fs.readdir(dir);
@@ -79,13 +80,21 @@ function buildCatalog(stories: RawStory[]): VocabCatalogItem[] {
 }
 
 async function main() {
+  const { lang } = parseLangArgs();
+  // Phase 5: build-vocab-catalog solo corre para PT (los scaffolds
+  // vacíos no tienen stories de las que derivar vocab).
+  if (lang !== 'pt') {
+    console.log(noopForLang(lang, 'build-vocab-catalog'));
+    return;
+  }
+
   // Validate that the existing stories parse (fail fast if zod is out of sync).
-  const validated = await loadAllStories();
+  const validated = await loadAllStories(lang);
 
   // Use the raw JSON for stable ordering — loaders return zod-validated
   // objects whose `vocab` arrays preserve file order, but the schema strips
   // unknown keys, so this is safer than relying on the validated shape.
-  const stories = await readStoriesFromDisk();
+  const stories = await readStoriesFromDisk(lang);
   if (stories.length !== validated.length) {
     throw new Error(
       `Mismatch: ${stories.length} story files on disk vs ${validated.length} validated. ` +
@@ -96,7 +105,7 @@ async function main() {
   const catalog = buildCatalog(stories);
   VocabCatalogSchema.parse(catalog);
 
-  const outFile = path.join(DATA_DIR, 'vocab-catalog.json');
+  const outFile = path.join(dataDir(lang), 'vocab-catalog.json');
   const json = JSON.stringify(catalog, null, 2) + '\n';
 
   // Idempotency: skip write if the file already has identical content.

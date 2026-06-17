@@ -3,8 +3,10 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { getDueCardsCount } from '@/lib/db/repository';
+import { useLang } from '@/lib/stores/lang-context';
 
 export function ContinueCard() {
+  const lang = useLang();
   const [dueCount, setDueCount] = useState<number | null>(null);
 
   useEffect(() => {
@@ -36,7 +38,7 @@ export function ContinueCard() {
         <div className="text-xs text-muted-foreground mb-1">📚 Continuar</div>
         <p className="text-sm">No hay cards listas para repaso.</p>
         <Link
-          href="/blocks"
+          href={`/${lang}/blocks`}
           className="text-sm text-primary underline mt-2 inline-block"
         >
           Ver bloques
@@ -50,7 +52,7 @@ export function ContinueCard() {
       <div className="text-xs text-muted-foreground mb-1">🔁 Repaso</div>
       <h3 className="font-display text-xl mb-2">{dueCount} cards listas</h3>
       <Link
-        href="/review"
+        href={`/${lang}/review`}
         className="inline-block px-3 py-1.5 bg-primary text-primary-foreground rounded-md text-sm"
       >
         Empezar repaso diario →
@@ -58,3 +60,4 @@ export function ContinueCard() {
     </section>
   );
 }
+

@@ -1,5 +1,7 @@
 // scripts/config.ts
 import path from 'node:path';
+import { dataDir, blocksDir, storiesDir } from '@/lib/data/registry';
+import { LANGUAGES, type LanguageId } from '@/lib/locales';
 import type { ExerciseType } from './lib/zod-schemas';
 
 // Resolves project root reliably under both ESM and tsx (which breaks __dirname).
@@ -9,8 +11,17 @@ export const PROJECT_ROOT = process.cwd();
 export const CACHE_DIR  = path.join(PROJECT_ROOT, 'scripts', '.cache');
 export const LLM_CACHE  = path.join(CACHE_DIR, 'llm');
 export const TTS_OUTPUT = path.join(PROJECT_ROOT, 'public', 'audio');
-export const DATA_DIR   = path.join(PROJECT_ROOT, 'lib', 'data');
-export const BLOCKS_DIR = path.join(DATA_DIR, 'blocks');
+
+// Phase 2 (multi-idioma): los scripts leen/escriben el plano de datos del
+// idioma activo. Por compatibilidad con el flujo pre-Phase-2, el default es
+// "pt". Phase 5: cada script toma `--lang=<id>` (ver `scripts/lib/cli.ts`)
+// y los shorthands aquí siguen resolviendo a PT (default) para que el
+// código PT-only (tests, `scripts-data-paths.test.ts`) compile sin
+// necesidad de recibir un lang.
+export const DEFAULT_LANG: LanguageId = 'pt';
+export const DATA_DIR   = dataDir(DEFAULT_LANG);
+export const BLOCKS_DIR = blocksDir(DEFAULT_LANG);
+export const STORIES_DIR = storiesDir(DEFAULT_LANG);
 
 export const LLM_MODEL = process.env.MINIMAX_LLM_MODEL ?? 'MiniMax-M2.5-highspeed';
 export const TTS_MODEL = process.env.MINIMAX_TTS_MODEL ?? 'speech-2.8-hd';
@@ -25,21 +36,19 @@ export const TTS_DELAY_MS = 1500;   // 1.5s entre requests = 40 RPM, debajo del 
 
 // Voices — placeholders, confirmed via /v1/get_voice in Task 19.
 // Each variant has a female + male voice. Default to female unless overridden.
-export const VOICES: Record<'br' | 'pt', Record<'f' | 'm', string>> = {
-  // Voces portuguesas dedicadas de MiniMax (líneas 197-269 de la doc oficial
-  // System Voice ID List). El modelo 'speech-2.8-hd' las pronuncia naturalmente
-  // en portugués — sin acento robótico. Las voces son multilenguaje, pero con
-  // language_boost: 'Portuguese' el modelo se adapta.
-  //
+// Phase 1 (multi-idioma): las claves son VariantKey (string libre). Por
+// ahora solo PT-BR y PT-PT tienen voces dedicadas; los scaffolds RU/RO/CS
+// usan string vacío (no se generan audios para esos idiomas todavía).
+export const VOICES: Record<string, Record<'f' | 'm', string>> = {
   // BR: voces cálidas, ritmo brasileiro (Sentimental Lady, Jovial Man).
   // PT: voces más reservadas, ritmo peninsular (Wise Lady, Narrator).
   // El language_boost NO diferencia BR/PT en MiniMax; la diferencia se hace
   // eligiendo voces con cadencia más animada vs más formal.
-  br: {
+  'pt-br': {
     f: 'Portuguese_SentimentalLady',
     m: 'Portuguese_JovialMan',
   },
-  pt: {
+  'pt-pt': {
     f: 'Portuguese_Wiselady',
     m: 'Portuguese_Narrator',
   },
@@ -47,15 +56,34 @@ export const VOICES: Record<'br' | 'pt', Record<'f' | 'm', string>> = {
 
 export const DEFAULT_VOICE: 'f' | 'm' = 'f';
 
+// Phase 5 (multi-idioma): `language_boost` de MiniMax es un enum estricto.
+// PT usa "Portuguese"; los scaffolds RU/RO/CS aún sin idioma declarado
+// por MiniMax usan string vacío (el script no llama MiniMax para esos
+// idiomas — es un no-op a nivel script). Mantener el record cerrado contra
+// `LanguageId` para que un idioma nuevo falle en typecheck hasta que
+// alguien le asigne un boost (o lo deje vacío a propósito).
+export const LANGUAGE_BOOST: Record<LanguageId, string> = {
+  pt: 'Portuguese',
+  ru: '',
+  ro: '',
+  cs: '',
+};
+
+// Re-exponer LANGUAGES para que callers no tengan que importar de
+// `lib/locales` solo para iterar idiomas.
+export { LANGUAGES };
+
 // Mapping de ExerciseType → cuántos pedir al LLM por lección.
 // Tipeado contra ExerciseType para que TS atrape typos. `null` = tipo diferido a Plan #2.
 // Iteración de ExerciseType tipada exhaustivamente; añadir un tipo nuevo sin entrada → error.
+// Phase 1: `translation_es_pt` y `translation_pt_es` colapsan a un único
+// `translation`. El prompt de generación se elige en `generate-content.ts`
+// según `sourceLang`/`targetLang` del item; aquí solo decimos cuántos pedir.
 export const EXERCISES_PER_LESSON: Record<ExerciseType, number | null> = {
   flashcard: 15,
   fill_blank: 10,
   listening: 5,
-  translation_es_pt: 8,
-  translation_pt_es: 8,
+  translation: 8,
   verb_preposition: 5,
   sentence_construction: null, // diferido a Plan #2
   chunk: null,                 // diferido a Plan #2
@@ -66,8 +94,7 @@ export const TYPE_TO_TEMPLATE: Record<ExerciseType, string | null> = {
   flashcard: 'flashcard',
   fill_blank: 'fill_blank',
   listening: 'listening',
-  translation_es_pt: 'translation',
-  translation_pt_es: 'translation',
+  translation: 'translation',
   verb_preposition: 'verb_preposition',
   sentence_construction: null,
   chunk: null,
@@ -84,8 +111,7 @@ export const SCHEMA_VERSION: Record<ExerciseType, number> = {
   flashcard: 1,
   fill_blank: 1,
   listening: 1,
-  translation_es_pt: 1,
-  translation_pt_es: 1,
+  translation: 1,
   verb_preposition: 1,
   sentence_construction: 1,
   chunk: 1,

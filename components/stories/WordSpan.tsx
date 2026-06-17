@@ -2,17 +2,23 @@
 // A single tappable word in the story reader. Word tokens render as
 // <button>s (so they're keyboard- and screen-reader-accessible). Punctuation
 // and whitespace render as inert text — no tap target, no nested buttons.
+//
+// The active target language is threaded in from StoryReader so the
+// popover's vocab lookup can be language-scoped.
 "use client";
 import { useState } from "react";
 import { WordPopover } from "./WordPopover";
 import type { TextToken } from "@/lib/text/portuguese-tokenize";
+import type { LanguageId } from "@/lib/locales";
 
 export function WordSpan({
   token,
   storyId,
+  lang,
 }: {
   token: TextToken;
   storyId: string;
+  lang: LanguageId;
 }) {
   // Only word tokens are tappable. We deliberately skip norm === "" because
   // that means the token is purely punctuation/letters we don't want to
@@ -37,6 +43,7 @@ export function WordSpan({
         <WordPopover
           word={token.norm}
           storyId={storyId}
+          lang={lang}
           onClose={() => setOpen(false)}
         />
       )}

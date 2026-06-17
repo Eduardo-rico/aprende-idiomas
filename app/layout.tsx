@@ -1,7 +1,18 @@
+// app/layout.tsx
+// Root layout (Next 16). Owns <html>, <body>, font classes, and the
+// shared <head> metadata. The lang segment adds the LangProvider and
+// the lang-aware <main> wrapper via `app/[lang]/layout.tsx` — a level
+// below the root, not a replacement.
+//
+// Per the Next 16 i18n doc: "ensure all special files inside `app/`
+// are nested under `app/[lang]`" and "The root layout can also be
+// nested in the new folder (e.g. app/[lang]/layout.js)". The lang
+// layout is OPTIONAL; without it, the root layout owns everything.
+// For our app the root layout owns <html> + fonts (shared across every
+// page, including /login and /api/auth/*, which intentionally don't
+// get the chrome), and the lang layout adds the LangProvider + NavBar.
 import type { Metadata } from "next";
 import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import { NavBar } from "@/components/NavBar";
 import "./globals.css";
 
 const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", display: "swap" });
@@ -16,10 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es" className="h-full" suppressHydrationWarning>
       <body className={`${fraunces.variable} ${jakarta.variable} min-h-full flex flex-col font-sans`}>
-        <ThemeProvider>
-          <NavBar />
-          <main className="flex-1">{children}</main>
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

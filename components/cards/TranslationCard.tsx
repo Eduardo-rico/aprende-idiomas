@@ -25,7 +25,7 @@ export function TranslationCard({ ex, onSubmit }: Props) {
 
   return (
     <div className="p-8 border-2 border-border rounded-2xl space-y-6">
-      <div className="text-xs text-muted uppercase">{ex.type === "translation_es_pt" ? "ES → PT" : "PT → ES"}</div>
+      <div className="text-xs text-muted uppercase">{(data.sourceLang ?? "?").toUpperCase()} → {(data.targetLang ?? "?").toUpperCase()}</div>
       <div className="text-xl text-center font-mono">{data.source}</div>
       {!revealed ? (
         <div className="flex gap-2">

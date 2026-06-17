@@ -3,16 +3,28 @@
 // preserved (split on \n\n), each word inside a paragraph becomes a
 // tappable <WordSpan>, and tapping shows the popover. Pauses the audio
 // player on tap so the user can hear the word, then can resume.
+//
+// The active `lang` is passed in as a prop from the server-rendered
+// story page (it already has it from `params`). We thread it down to
+// `WordSpan` → `WordPopover` so the `/api/vocab/lookup` fetch hits the
+// correct language catalog and fallback dictionary.
 "use client";
 import { useEffect, useMemo, useRef } from "react";
 import { tokenize } from "@/lib/text/portuguese-tokenize";
 import { WordSpan } from "./WordSpan";
 import { useSettings } from "@/lib/stores/settings";
 import type { Story } from "@/lib/data/zod-schemas";
+import type { LanguageId } from "@/lib/locales";
 
-export function StoryReader({ story }: { story: Story }) {
+export function StoryReader({ story, lang }: { story: Story; lang: LanguageId }) {
   const { variant } = useSettings();
-  const text = variant === "br" ? story.variants.br.text : story.variants.pt.text;
+  // Phase 1: variants es un record libre. Fallback a 'br' o 'pt' si la
+  // variante activa no tiene entrada en este story.
+  const text = story.variants[variant]?.text
+    ?? (variant === "pt" ? story.variants.pt?.text : story.variants.br?.text)
+    ?? story.variants.br?.text
+    ?? story.variants.pt?.text
+    ?? "";
   // Memoize the token list — the text is static for the lifetime of the page.
   const paragraphs = useMemo(() => text.split("\n\n"), [text]);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -48,7 +60,7 @@ export function StoryReader({ story }: { story: Story }) {
             {tokens.map((t, j) =>
               t.kind === "word" && t.norm.length > 0 ? (
                 <span data-word-button key={`${i}-${j}`}>
-                  <WordSpan token={t} storyId={story.id} />
+                  <WordSpan token={t} storyId={story.id} lang={lang} />
                 </span>
               ) : (
                 <span key={`${i}-${j}`}>{t.raw}</span>

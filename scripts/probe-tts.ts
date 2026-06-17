@@ -14,7 +14,9 @@ import fs from 'node:fs';
 const TORTURE = ['Olá, bom dia.', 'mãe', 'pão', 'coração', 'constituição', 'ônibus', 'autocarro'];
 
 async function probeVariant(variant: 'br' | 'pt', which: 'f' | 'm'): Promise<boolean> {
-  const voiceId = VOICES[variant][which];
+  // Phase 1: VOICES usa keys nuevas; mapeamos a las legacy para probe.
+  const voiceKey = variant === 'pt' ? 'pt-pt' : 'pt-br';
+  const voiceId = VOICES[voiceKey]?.[which] ?? '';
   console.log(`\n--- ${variant}/${which} (${voiceId}) ---`);
   try {
     for (const text of TORTURE) {

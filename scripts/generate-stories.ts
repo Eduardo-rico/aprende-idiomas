@@ -6,14 +6,16 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { z } from 'zod';
 import pLimit from 'p-limit';
+import { storiesDir } from '@/lib/data/registry';
 import {
-  DATA_DIR, LLM_CACHE, VOICES, DEFAULT_VOICE, TTS_CONCURRENCY, TTS_DELAY_MS,
+  LLM_CACHE, VOICES, DEFAULT_VOICE, TTS_CONCURRENCY, TTS_DELAY_MS,
 } from './config';
 import { callLlm, extractJson } from './lib/minimax-llm';
 import { generateTts } from './lib/minimax-tts';
 import { readCache, writeCache } from './lib/cache';
 import { renderTemplate } from './lib/prompt-runner';
 import { StorySchema } from './lib/zod-schemas';
+import { parseLangArgs, noopForLang } from './lib/cli';
 
 // ─── LLM schema version — bump when StoryOutputSchema changes ──────
 const STORY_SCHEMA_VERSION = 1;
@@ -61,7 +63,8 @@ function slugify(s: string): string {
 
 const PROJECT_ROOT = process.cwd();
 const PROMPTS_DIR = path.join(PROJECT_ROOT, 'scripts', 'prompts');
-const STORIES_DIR = path.join(DATA_DIR, 'stories');
+// Resolved at runtime inside main() from parseLangArgs().
+let STORIES_DIR = '';
 
 // ─── Global TTS limiter + done counter (shared across all blocks/stories) ──
 const ttsLimit = pLimit(Math.min(4, Math.max(1, TTS_CONCURRENCY)));
@@ -155,8 +158,10 @@ async function generateStoryForBlock(
   }
 
   // ─── TTS (global p-limit, shared across all blocks/stories) ───────
-  const brVoice = VOICES.br[DEFAULT_VOICE];
-  const ptVoice = VOICES.pt[DEFAULT_VOICE];
+  // Phase 1: VOICES usa keys nuevas "pt-br"/"pt-pt"; mapeamos a las
+  // legacy "br"/"pt" que el TTS de MiniMax espera.
+  const brVoice = VOICES['pt-br']?.[DEFAULT_VOICE] ?? '';
+  const ptVoice = VOICES['pt-pt']?.[DEFAULT_VOICE] ?? '';
 
   async function tts(text: string, variant: 'br' | 'pt', voiceId: string): Promise<string> {
     return ttsLimit(async () => {
@@ -251,6 +256,14 @@ function parseArgs(): { blockFilter?: number } {
 }
 
 async function main(): Promise<void> {
+  const { lang } = parseLangArgs();
+  // Phase 5: solo PT tiene themes/conceptIds y la cadena de TTS; los
+  // scaffolds vacíos no generan stories.
+  if (lang !== 'pt') {
+    console.log(noopForLang(lang, 'generate-stories'));
+    return;
+  }
+  STORIES_DIR = storiesDir(lang);
   const { blockFilter } = parseArgs();
   const targets = blockFilter !== undefined
     ? BLOCKS.filter(b => b.id === blockFilter)

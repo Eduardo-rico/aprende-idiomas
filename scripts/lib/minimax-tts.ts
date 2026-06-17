@@ -1,12 +1,16 @@
 // scripts/lib/minimax-tts.ts
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { TTS_MODEL, TTS_URL, TTS_OUTPUT, requireApiKey } from '@/scripts/config';
+import { TTS_MODEL, TTS_URL, TTS_OUTPUT, LANGUAGE_BOOST, requireApiKey } from '@/scripts/config';
+import type { LanguageId } from '@/lib/locales';
 import { hashKey } from './cache';
 
 export interface TtsRequest {
   text: string;
   voiceId: string;
+  // Phase 1: el variant es VariantKey (string libre). MiniMax sigue
+  // esperando 'br' | 'pt' a nivel de protocolo, así que los callers
+  // deben pasar uno de los dos. El cast queda en el cliente.
   variant: 'br' | 'pt';
   speed?: number;
 }
@@ -28,10 +32,13 @@ export function ttsHash(req: TtsRequest): string {
 }
 
 // language_boost: MiniMax acepta SOLO strings de un enum estricto (ver
-// System Voice ID List). 'Portuguese' es el único válido para nuestro caso.
-// La diferenciación BR vs PT se hace por la voz elegida, no por language_boost.
-function languageBoost(_variant: 'br' | 'pt'): string {
-  return 'Portuguese';
+// System Voice ID List). Phase 5: el boost se elige por `lang` (no por
+// `variant`) — para PT retornamos "Portuguese" (BR y PT comparten boost;
+// la diferencia BR/PT viene de la voz elegida en `VOICES[variant]`).
+// Para scaffolds sin TTS (RU/RO/CS) el script entero es no-op y este
+// boost nunca se envía.
+function languageBoost(lang: LanguageId): string {
+  return LANGUAGE_BOOST[lang];
 }
 
 // Valida que un buffer es un MP3 razonable: >= 1KB y empieza con magic
@@ -119,7 +126,7 @@ export async function generateTts(req: TtsRequest): Promise<TtsResult> {
       format: 'mp3',
       channel: 1,
     },
-    language_boost: languageBoost(req.variant),
+    language_boost: languageBoost('pt'),
     output_format: 'hex',
   };
 
