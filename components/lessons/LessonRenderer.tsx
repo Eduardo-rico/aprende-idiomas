@@ -12,26 +12,26 @@
 // (Example, Tip, Rule). If the MDX is missing, renders a friendly
 // fallback hint pointing at `npm run generate:lessons`.
 //
-// Audio playback is injected client-side by a future
-// `<LessonAudioPlayer>` (L5+) that scans the rendered DOM for
-// `[data-audio-ref]` markers. The renderer does NOT load audio
-// itself — it only renders the placeholder span produced by
-// `<Example audioRef={n} />`.
+// L6: `audioRefs` is plumbed through to the `lessonMdxComponents`
+// factory so the `<Example>` blocks render a real
+// `<LessonAudioPlayer>` button (consuming the sidecar produced by
+// `scripts/generate-audio.ts`) instead of the L3 placeholder span.
 "use client";
 import { use } from "react";
 import { loadLessonMdx } from "@/lib/data/mdx";
 import type { LanguageId } from "@/lib/locales";
 import { lessonMdxComponents } from "./mdx-components";
+import type { VariantKey } from "@/lib/data/variant";
 
 export function LessonRenderer({
   mdxPath,
   lang,
-  audioRefs: _audioRefs,
+  audioRefs,
 }: {
   lessonId: string;
   mdxPath: string;
   lang: LanguageId;
-  audioRefs?: Record<string, Array<{ hash: string; voice: string }>>;
+  audioRefs?: Record<VariantKey, Array<{ hash: string; voice: string }>>;
 }) {
   const MdxContent = use(loadLessonMdx(lang, mdxPath));
   if (!MdxContent) {
@@ -46,5 +46,5 @@ export function LessonRenderer({
       </div>
     );
   }
-  return <MdxContent components={lessonMdxComponents()} />;
+  return <MdxContent components={lessonMdxComponents({ audioRefs })} />;
 }
