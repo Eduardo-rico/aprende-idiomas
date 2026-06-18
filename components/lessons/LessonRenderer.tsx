@@ -26,10 +26,12 @@ import { lessonMdxComponents } from "./mdx-components";
 export function LessonRenderer({
   mdxPath,
   lang,
+  audioRefs: _audioRefs,
 }: {
   lessonId: string;
   mdxPath: string;
   lang: LanguageId;
+  audioRefs?: Record<string, Array<{ hash: string; voice: string }>>;
 }) {
   const MdxContent = use(loadLessonMdx(lang, mdxPath));
   if (!MdxContent) {

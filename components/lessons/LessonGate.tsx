@@ -29,6 +29,24 @@ interface Props {
   lessonId: string;
   mdxPath: string;
   lang: LanguageId;
+  /**
+   * Content to render once the gate decides the user is "fresh" — i.e.
+   * they have either never seen the lesson, or last saw it >1h ago
+   * (in which case the gate silently flips to `skip` and redirects
+   * straight to practice, so children are never visible in that case).
+   * In the "show-lesson" branch the gate renders <LessonStep> instead
+   * of `children`. While the gate is loading or skipping, `children`
+   * is hidden behind a placeholder.
+   *
+   * L5 deviation: the original L4 design had the gate own the routing
+   * (`router.replace`). The plan preferred a `children` prop pattern so
+   * the practice page stays declarative — load data, wrap runner in
+   * gate. We keep both flows: the gate still does the skip-via-redirect
+   * (existing behavior) AND accepts children for callers that want the
+   * declarative form. The practice page is the only caller that needs
+   * children.
+   */
+  children?: React.ReactNode;
 }
 
 type GateState =
@@ -36,7 +54,7 @@ type GateState =
   | { status: "show-lesson" }
   | { status: "skip" };
 
-export function LessonGate({ lessonId, mdxPath, lang }: Props) {
+export function LessonGate({ lessonId, mdxPath, lang, children }: Props) {
   const router = useRouter();
   const [gate, setGate] = useState<GateState>({ status: "loading" });
 
@@ -62,9 +80,14 @@ export function LessonGate({ lessonId, mdxPath, lang }: Props) {
   }, [lessonId, lang]);
 
   useEffect(() => {
+    // Only redirect when we don't have `children` to render — otherwise
+    // we'd loop back to this very page. The presence of children means
+    // the caller (e.g. /practice) wants us to render them inline once
+    // the user has seen the lesson recently enough.
     if (gate.status !== "skip") return;
+    if (children !== undefined) return;
     router.replace(`/practice/${lang}/${lessonId}`);
-  }, [gate, lessonId, lang, router]);
+  }, [gate, lessonId, lang, router, children]);
 
   if (gate.status === "loading") {
     return (
@@ -74,8 +97,16 @@ export function LessonGate({ lessonId, mdxPath, lang }: Props) {
     );
   }
   if (gate.status === "skip") {
-    // Brief flash before the redirect effect fires — same loading
-    // message so the user doesn't see a layout jump.
+    // Two render modes:
+    //   - children provided → render them (caller owns the destination;
+    //     we're already on the practice page, so we hand control back).
+    //   - no children → brief placeholder before the redirect effect
+    //     fires (the redirect goes to /practice/[lang]/[lessonId] which
+    //     IS this page, so this only fires for callers that mounted the
+    //     gate from elsewhere — currently none, kept for back-compat).
+    if (children !== undefined) {
+      return <>{children}</>;
+    }
     return (
       <div className="max-w-3xl mx-auto px-4 py-8 text-sm text-muted-foreground">
         Cargando ejercicios…
