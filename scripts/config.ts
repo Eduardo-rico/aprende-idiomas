@@ -23,6 +23,15 @@ export const DATA_DIR   = dataDir(DEFAULT_LANG);
 export const BLOCKS_DIR = blocksDir(DEFAULT_LANG);
 export const STORIES_DIR = storiesDir(DEFAULT_LANG);
 
+/** L5: directory where lesson MDX files live. The path mirrors the
+ *  `conceptNotesPath` convention — e.g. lesson `b1-l1-alfabeto-acentos`
+ *  with `conceptNotesPath="b1/l1-alfabeto-acentos.mdx"` resolves to
+ *  `lib/data/languages/pt/mdx/b1/l1-alfabeto-acentos.mdx`. The audio-refs
+ *  sidecar lives next to the lesson JSON, not here. */
+export function lessonMdxDir(lang: LanguageId = DEFAULT_LANG): string {
+  return path.join(dataDir(lang), 'mdx');
+}
+
 export const LLM_MODEL = process.env.MINIMAX_LLM_MODEL ?? 'MiniMax-M2.5-highspeed';
 export const TTS_MODEL = process.env.MINIMAX_TTS_MODEL ?? 'speech-2.8-hd';
 

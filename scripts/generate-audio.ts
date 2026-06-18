@@ -8,7 +8,7 @@ import {
   TTS_CONCURRENCY, TTS_DELAY_MS, VOICES, DEFAULT_VOICE,
   TTS_MODEL, LLM_MODEL,
 } from './config';
-import { collectAudioJobs, textsFor } from './lib/audio-collector';
+import { collectAudioJobs, lessonExampleTexts, textsFor } from './lib/audio-collector';
 import { generateTts } from './lib/minimax-tts';
 import { hashKey, normalizeForHash } from './lib/cache';
 import { ExerciseInputSchema, type Exercise } from './lib/zod-schemas';
@@ -96,6 +96,28 @@ async function main() {
           return;
         }
         throw err;
+      }
+
+      // L5: process lesson audio. The audio-refs sidecar lives in
+      // `lib/data/languages/pt/lessons/audio-refs.json`. For each
+      // lesson in the block, look up its MDX file (if generated) and
+      // extract example texts. The stub returns [] and logs; once
+      // real TTS is wired in, the hashes land in `audio-refs.json`
+      // via the same load+save pass we use for exercise audio below.
+      const lessonMdxRoot = path.join(DATA_DIR, 'mdx');
+      for (const lesson of b.lessons) {
+        const mdxAbsPath = path.join(lessonMdxRoot, lesson.conceptNotesPath);
+        let mdxBody = '';
+        try {
+          mdxBody = await fs.readFile(mdxAbsPath, 'utf8');
+        } catch (err) {
+          if ((err as NodeJS.ErrnoException).code !== 'ENOENT') throw err;
+          // MDX not yet generated (the generate-lessons script is a
+          // stub in L5) — skip silently. When the real generator
+          // lands, the next audio run will pick up the examples.
+          continue;
+        }
+        lessonExampleTexts(lesson.conceptNotesPath, mdxBody);
       }
 
       const jobs = collectAudioJobs(exercises);
