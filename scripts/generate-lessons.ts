@@ -1,34 +1,46 @@
 // scripts/generate-lessons.ts
-// L5 (lessons-before-exercises): generates MDX content for one lesson at a
-// time. CLI surface:
+// L5 → L6: generates MDX content for one lesson at a time. CLI surface:
 //
-//   bash scripts/with-env.sh npm run --silent generate:lessons -- --lang=pt --block=b1 --lesson=l1
+//   bash scripts/with-env.sh npm run --silent generate:lessons -- --lang=pt --block=b1 --lesson=l1 [--write]
 //
-// For each concept in the lesson's `conceptIds`, asks the LLM (same
-// `minimax-llm` plumbing as `generate-content.ts`) for:
+// For the lesson's concept list (from `lib/data/languages/pt/lessons/{block}.json`
+// or the TS-embedded B1 lessons), calls the LLM (same `minimax-llm` plumbing
+// as `generate-content.ts`) for one batch with shape:
 //
-//   - 1 `<Rule title="...">...</Rule>` — the explanation, PT→ES-friendly.
-//   - 3 `<Example index={n} audioRef={n}>pt text\n\nES translation</Example>`.
-//   - 1 `<Tip>...</Tip>` — a mnemonic / common-mistake callout.
+//   {
+//     "rule":   { "title": "...", "body": "..." },
+//     "examples": [ { "pt": "...", "es": "..." }, ...3 of them ],
+//     "tip":    "..."
+//   }
+//
+// Renders that into MDX using the project's custom components:
+//
+//   <Rule title="...">...</Rule>
+//   <Example index={0} audioRef={0} pt="..." es="..." />
+//   <Example index={1} audioRef={1} pt="..." es="..." />
+//   <Example index={2} audioRef={2} pt="..." es="..." />
+//   <Tip>...</Tip>
 //
 // Output files (mirrors `conceptNotesPath` from the lesson JSON):
 //   - lib/data/languages/{lang}/mdx/{block}/{lessonId}.mdx
-//   - lib/data/languages/{lang}/lessons/audio-refs.json (entry appended)
 //
-// L5 status: STUB. The script parses `--lang`, `--block`, `--lesson`,
-// resolves the lesson in the curriculum, and prints what it WOULD do —
-// it does NOT call the LLM and does NOT write files. This unblocks L5
-// verification (the script must run without crashing) and gives us the
-// shell to fill in next.
+// Flags:
+//   --write   persist the rendered MDX to disk. Without this flag the
+//             script prints the MDX to stdout and exits 0 (dry-run by
+//             default — same contract as `generate-content.ts --dry-run`).
 //
 // We deliberately accept `--block=b1` (string id) rather than `--block=1`
 // (numeric) so the CLI matches the plan's wording AND the user can copy
 // it from `/blocks/[id]` URLs without a translation step.
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { z } from 'zod';
 import { parseLangArgs, noopForLang } from './lib/cli';
 import { lessonMdxDir } from './config';
 import { LANGUAGES } from '@/lib/locales';
+import { callLlm, extractJson } from './lib/minimax-llm';
+import { requireApiKey } from './config';
+import { getConceptsByIds } from '@/lib/data/languages/pt/curriculum';
 
 // ─── CLI arg parsing ──────────────────────────────────────────────
 //
@@ -40,12 +52,12 @@ import { LANGUAGES } from '@/lib/locales';
 //                   — accepted formats: "l1", "l1-alfabeto-acentos", or the
 //                   fully-qualified "b1-l1-alfabeto-acentos" (block segment
 //                   stripped automatically).
-//   --dry-run       explicit no-op mode (the script is already a stub).
+//   --write         persist the rendered MDX to disk (default: dry-run,
+//                   print to stdout).
 //
 // Exit codes:
-//   0 — success (stub: always, when args parse)
-//   1 — arg parse error
-//   1 — language has no curriculum (scaffold/no-op)
+//   0 — success
+//   1 — arg parse error / LLM call failed
 //   2 — lesson not found in the curriculum
 
 export interface GenerateLessonsArgs {
@@ -58,14 +70,15 @@ export interface GenerateLessonsArgs {
    *  Resolved by combining blockId + lessonShortId. If the user passed
    *  the full id we still split it cleanly. */
   lessonId: string;
-  dryRun: boolean;
+  /** When true, write the MDX file. Otherwise print to stdout (dry-run). */
+  write: boolean;
 }
 
 export function parseGenerateLessonsArgs(argv: string[]): GenerateLessonsArgs {
   const { lang, rest } = parseLangArgs(argv);
   let blockRaw: string | undefined;
   let lessonRaw: string | undefined;
-  let dryRun = false;
+  let write = false;
   for (let i = 0; i < rest.length; i++) {
     const a = rest[i];
     if (a === undefined) continue;
@@ -73,7 +86,7 @@ export function parseGenerateLessonsArgs(argv: string[]): GenerateLessonsArgs {
     else if (a === '--block') blockRaw = rest[++i];
     else if (a.startsWith('--lesson=')) lessonRaw = a.slice('--lesson='.length);
     else if (a === '--lesson') lessonRaw = rest[++i];
-    else if (a === '--dry-run') dryRun = true;
+    else if (a === '--write') write = true;
   }
   if (!blockRaw) throw new Error('--block=<id> is required (e.g. --block=b1).');
   if (!lessonRaw) throw new Error('--lesson=<id> is required (e.g. --lesson=l1).');
@@ -100,7 +113,7 @@ export function parseGenerateLessonsArgs(argv: string[]): GenerateLessonsArgs {
   }
   const lessonId = `${blockPrefix}${lessonShortId}`;
 
-  return { lang, blockId, lessonShortId, lessonId, dryRun };
+  return { lang, blockId, lessonShortId, lessonId, write };
 }
 
 // ─── Lesson lookup ────────────────────────────────────────────────
@@ -108,10 +121,10 @@ export function parseGenerateLessonsArgs(argv: string[]): GenerateLessonsArgs {
 interface ResolvedLesson {
   blockId: number;
   lessonId: string;
+  lessonName: string;
   conceptIds: string[];
   conceptNotesPath: string;
   mdxAbsPath: string;
-  audioRefsAbsPath: string;
 }
 
 async function resolveLesson(args: GenerateLessonsArgs): Promise<ResolvedLesson | null> {
@@ -132,34 +145,118 @@ async function resolveLesson(args: GenerateLessonsArgs): Promise<ResolvedLesson 
   });
   if (!lesson) return null;
   const mdxAbsPath = path.join(lessonMdxDir(args.lang), lesson.conceptNotesPath);
-  const audioRefsAbsPath = path.join(
-    process.cwd(),
-    'lib',
-    'data',
-    'languages',
-    args.lang,
-    'lessons',
-    'audio-refs.json',
-  );
   return {
     blockId: lesson.blockId,
     lessonId: lesson.id,
+    lessonName: lesson.name,
     conceptIds: [...lesson.conceptIds],
     conceptNotesPath: lesson.conceptNotesPath,
     mdxAbsPath,
-    audioRefsAbsPath,
   };
 }
 
-// ─── Stub output ─────────────────────────────────────────────────
+// ─── LLM call + Zod validation ───────────────────────────────────
 
-function formatStubPlan(args: GenerateLessonsArgs, lesson: ResolvedLesson): string {
+// Schema for the LLM's single-shot output. Three examples are required
+// because that's the count the renderer + audio collector expect.
+const ExamplePairSchema = z.object({
+  pt: z.string().min(1),
+  es: z.string().min(1),
+});
+export const LessonGenerationSchema = z.object({
+  rule: z.object({
+    title: z.string().min(1),
+    body: z.string().min(1),
+  }),
+  examples: z.array(ExamplePairSchema).length(3),
+  tip: z.string().min(1),
+});
+export type LessonGeneration = z.infer<typeof LessonGenerationSchema>;
+
+// Export the schema name for tests/importers that want to validate
+// pre-existing data without re-creating the Zod object.
+export const LESSON_GENERATION_SCHEMA_NAME = 'LessonGenerationSchema' as const;
+
+const SYSTEM_PROMPT = `Eres un profesor de portugués para hispanohablantes. Tu tarea es generar el material MDX de UNA lección del bloque indicado.
+
+Responde EXCLUSIVAMENTE con un objeto JSON válido (sin fences, sin prosa) con esta forma EXACTA:
+
+{
+  "rule": { "title": "Título corto de la regla", "body": "Explicación clara en español con referencia puntual al portugués, 1-3 párrafos cortos." },
+  "examples": [
+    { "pt": "Frase corta en portugués (1-10 palabras).", "es": "Traducción natural al español." },
+    { "pt": "Segunda frase.", "es": "Segunda traducción." },
+    { "pt": "Tercera frase.", "es": "Tercera traducción." }
+  ],
+  "tip": "Mnemonia, error frecuente, o truco para recordar (1-2 frases, tono cercano)."
+}
+
+Reglas:
+- EXACTAMENTE 3 ejemplos.
+- "pt" debe ser portugués natural (no español翻译) y el texto será sintetizado a audio (evita caracteres no-ASCII raros: tildes y ç sí; emoji no).
+- "es" debe ser español natural (sin calcos).
+- "title" y "body" hablan al lector en español; mencionan el término portugués entre comillas simples cuando aplique.
+- No incluyas campos extra. No envuelvas en fences. JSON estricto.`;
+
+function buildUserPrompt(lessonName: string, conceptList: string, vocabKey: string): string {
+  return `Lección: ${lessonName}
+Conceptos cubiertos:
+${conceptList}
+Vocabulario clave (úsalo en los ejemplos): ${vocabKey}
+
+Genera el JSON con la regla, 3 ejemplos y el tip.`;
+}
+
+async function callLessonLlm(lesson: ResolvedLesson): Promise<LessonGeneration> {
+  // We compute the concept list lazily so the call site (which is the
+  // only one that touches the curriculum at runtime) doesn't crash when
+  // a concept id is unknown — getConceptsByIds returns an empty list
+  // for unknown ids, so we render a friendly user prompt instead.
+  const concepts = getConceptsByIds(lesson.conceptIds);
+  const conceptsList = concepts
+    .filter((c) => lesson.conceptIds.includes(c.id))
+    .map((c) => `- ${c.id}: ${c.name} — ${c.description}`)
+    .join('\n') || `- (lesson conceptIds: ${lesson.conceptIds.join(', ')})`;
+  // For the vocab, we don't have a direct accessor on ResolvedLesson
+  // (we only carry conceptIds). Pass an empty string — the prompt
+  // still works and the LLM uses the concepts list as the source.
+  const user = buildUserPrompt(lesson.lessonName, conceptsList, '');
+
+  const { text } = await callLlm({
+    system: SYSTEM_PROMPT,
+    user,
+    maxTokens: 2000,
+  });
+  const raw = extractJson(text);
+  return LessonGenerationSchema.parse(raw);
+}
+
+// ─── MDX rendering ────────────────────────────────────────────────
+
+// Escape characters that would break MDX string attributes: " and { }.
+// We keep the scope intentionally small: the LLM is told to avoid
+// special chars, and we only need to defend against `pt` strings that
+// contain quotes or backticks.
+function escapeAttr(s: string): string {
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+export function renderLessonMdx(gen: LessonGeneration): string {
   const lines: string[] = [];
-  lines.push(`[generate-lessons] ${args.lang}/${args.blockId}/${args.lessonId}`);
-  lines.push(`  concepts (${lesson.conceptIds.length}): ${lesson.conceptIds.join(', ') || '(none)'}`);
-  lines.push(`  would write ${path.relative(process.cwd(), lesson.mdxAbsPath)}`);
-  lines.push(`  would update ${path.relative(process.cwd(), lesson.audioRefsAbsPath)}`);
-  lines.push(`  skipping actual generation (stub)`);
+  lines.push(`<Rule title="${escapeAttr(gen.rule.title)}">${gen.rule.body}</Rule>`);
+  lines.push('');
+  gen.examples.forEach((ex, i) => {
+    lines.push(
+      `<Example index={${i}} audioRef={${i}} pt="${escapeAttr(ex.pt)}" es="${escapeAttr(ex.es)}" />`,
+    );
+    lines.push('');
+  });
+  lines.push(`<Tip>${gen.tip}</Tip>`);
+  lines.push('');
   return lines.join('\n');
 }
 
@@ -185,16 +282,36 @@ async function main(): Promise<void> {
     process.exit(2);
   }
 
-  console.log(formatStubPlan(args, lesson));
-  // Touch fs.readFile so the import stays in the bundle (and to surface
-  // any path-resolution bug early — we don't want this stub silently
-  // missing a typo in lessonMdxDir).
+  let gen: LessonGeneration;
   try {
-    await fs.readFile(lesson.mdxAbsPath);
+    gen = await callLessonLlm(lesson);
   } catch (err) {
-    if ((err as NodeJS.ErrnoException).code !== 'ENOENT') throw err;
-    // ENOENT is the expected case before the script is implemented.
+    console.error('[generate-lessons] LLM call failed:', err instanceof Error ? err.message : String(err));
+    if (err instanceof Error && /MINIMAX_API_KEY/.test(err.message)) {
+      console.error(
+        '  Hint: set MINIMAX_API_KEY in .env.local and re-run via `bash scripts/with-env.sh`.',
+      );
+    }
+    process.exit(1);
   }
+
+  const mdx = renderLessonMdx(gen);
+
+  if (!args.write) {
+    // Dry-run: print the rendered MDX to stdout so the caller (or a
+    // human running this in CI) can inspect what WOULD be written.
+    process.stdout.write(mdx);
+    return;
+  }
+
+  // Write: ensure parent dir exists, then atomic write.
+  await fs.mkdir(path.dirname(lesson.mdxAbsPath), { recursive: true });
+  const tmp = `${lesson.mdxAbsPath}.tmp`;
+  await fs.writeFile(tmp, mdx, 'utf8');
+  await fs.rename(tmp, lesson.mdxAbsPath);
+  console.error(
+    `[generate-lessons] wrote ${path.relative(process.cwd(), lesson.mdxAbsPath)} (${gen.examples.length} examples)`,
+  );
 }
 
 // `require.main === module` is the standard CommonJS guard that prevents
@@ -202,6 +319,11 @@ async function main(): Promise<void> {
 // only wants the arg-parser, not a real CLI run). Under `tsx` this still
 // resolves correctly because tsx sets `require.main` for the entry script.
 if (require.main === module) {
+  // requireApiKey() is invoked lazily by `callLlm`; we don't pre-check
+  // here so the dry-run path can still validate args (the no-API-key
+  // error comes from the actual LLM call). This matches the behavior
+  // of `generate-content.ts`.
+  void requireApiKey;
   main().catch((err) => {
     console.error('[generate-lessons] error:', err instanceof Error ? err.message : String(err));
     process.exit(1);
