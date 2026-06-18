@@ -10,14 +10,18 @@
 // that here so the session reflects the filter the user picked.
 "use client";
 import { Suspense, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
-import { getDueCards, getDueCardsByTag } from "@/lib/db/repository";
+import { getDueCards, getDueCardsByTag, getLessonViewsForLanguage } from "@/lib/db/repository";
 import { db } from "@/lib/db/schema";
 import { ExerciseRunner } from "@/components/ExerciseRunner";
 import type { Exercise } from "@/lib/data/zod-schemas";
 import { FSRS_CONFIG } from "@/lib/srs/config";
 import { useSession } from "@/lib/stores/session";
 import { tagLabel } from "@/lib/db/tags";
+import type { Lesson } from "@/lib/data/curriculum-types";
+import { hasLocale, type LanguageId } from "@/lib/locales";
+import type { LessonView } from "@/lib/db/schema";
 
 // Next.js 16 requires useSearchParams() to be wrapped in a Suspense boundary
 // for the page to remain prerenderable. We split the page into an inner
@@ -28,7 +32,8 @@ function ReviewPageInner() {
   const router = useRouter();
   const search = useSearchParams();
   const params = useParams<{ lang: string }>();
-  const lang = params.lang;
+  const rawLang = params.lang;
+  const lang: LanguageId = hasLocale(rawLang) ? rawLang : "pt";
   const activeTags = (search.get("tags") ?? "")
     .split(",")
     .map((s) => s.trim())
@@ -39,6 +44,13 @@ function ReviewPageInner() {
   const [split, setSplit] = useState<{ review: number; newCards: number } | null>(null);
   const [done, setDone] = useState<{ reviewed: number; correct: number } | null>(null);
   const [byId, setById] = useState<Map<string, Exercise>>(new Map());
+  // L5: "Repasar lección" surfaces the user's most-recent lesson views.
+  // Stored as a list so we can sort/limit client-side if Dexie's index
+  // ordering changes. We resolve lesson titles from the curriculum
+  // (fetched alongside the exercises) so the card shows a real name
+  // instead of just `b1-l1-alfabeto-acentos`.
+  const [recentLessonViews, setRecentLessonViews] = useState<LessonView[]>([]);
+  const [lessonTitleById, setLessonTitleById] = useState<Map<string, string>>(new Map());
   // Guard against React 19 StrictMode double-running this effect in dev.
   const sessionCreated = useRef(false);
 
@@ -49,6 +61,37 @@ function ReviewPageInner() {
       if (!res.ok) return;
       const { exercises: all } = (await res.json()) as { exercises: Exercise[] };
       setById(new Map(all.map((e) => [e.id, e])));
+    })();
+  }, [lang]);
+
+  // L5: load curriculum + recent lesson views in parallel so the
+  // "Repasar lección" cards can show a friendly lesson title instead
+  // of the raw lessonId. We don't need to wait for either before
+  // showing the daily review — both fetches are independent of the
+  // SRS queue.
+  useEffect(() => {
+    (async () => {
+      try {
+        const [views, curRes] = await Promise.all([
+          getLessonViewsForLanguage(lang),
+          fetch(`/api/curriculum?lang=${lang}`),
+        ]);
+        // Sort by viewedAt DESC (the repo already sorts, but be defensive
+        // in case a future schema bump drops the index) and cap at 10.
+        const sorted = [...views]
+          .sort((a, b) => b.viewedAt - a.viewedAt)
+          .slice(0, 10);
+        setRecentLessonViews(sorted);
+        if (curRes.ok) {
+          const { lessons } = (await curRes.json()) as { lessons: Record<string, Lesson> };
+          setLessonTitleById(new Map(Object.entries(lessons).map(([id, l]) => [id, l.name])));
+        }
+      } catch (err) {
+        // Don't break the review session if the lesson-views table
+        // doesn't exist yet (Dexie upgrade in flight) — just hide the
+        // section.
+        console.error("ReviewPage: failed to load recent lesson views", err);
+      }
     })();
   }, [lang]);
 
@@ -161,14 +204,71 @@ function ReviewPageInner() {
           </span>
         )}
       </div>
+
+      {/* L5: "Repasar lección" — quick links back to the standalone lesson
+          page for any lesson the user has seen recently. Sourced from
+          Dexie's lessonViews table; rendered above the runner so the
+          user can jump into a lesson review without losing the daily
+          session. The empty state mirrors the "No has visto ninguna
+          lección todavía" copy from the spec. */}
+      {recentLessonViews.length > 0 && (
+        <section className="max-w-xl mx-auto px-4 mt-6">
+          <h2 className="font-display text-xl mb-2">Repasar lección</h2>
+          <p className="text-xs text-muted mb-3">
+            Lecciones que viste recientemente. Ábrelas para releer la explicación.
+          </p>
+          <ul className="space-y-2">
+            {recentLessonViews.map((view) => (
+              <li
+                key={view.id}
+                className="flex items-center justify-between rounded-md border border-border px-4 py-3 bg-card"
+              >
+                <div>
+                  <div className="font-medium text-sm">
+                    {lessonTitleById.get(view.lessonId) ?? view.lessonId}
+                  </div>
+                  <div className="text-xs text-muted">
+                    Vista por última vez {formatRelativeTime(view.viewedAt)}
+                  </div>
+                </div>
+                <Link
+                  href={`/${lang}/lessons/${view.lessonId}`}
+                  className="px-3 py-1 text-sm border border-border rounded-md hover:bg-accent"
+                >
+                  Repasar lección →
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       <ExerciseRunner
         exercises={exercises}
         blockId={0}
         lessonId="daily-review"
         onFinish={setDone}
+        lang={lang}
       />
     </div>
   );
+}
+
+/** Compact "hace X" / "ayer" / date label for a viewedAt timestamp.
+ *  Kept local to this file because the only caller is the
+ *  "Repasar lección" section above — no other page needs it. */
+function formatRelativeTime(ts: number): string {
+  const now = Date.now();
+  const diffMs = now - ts;
+  const minutes = Math.floor(diffMs / 60_000);
+  if (minutes < 1) return "hace un momento";
+  if (minutes < 60) return `hace ${minutes} min`;
+  const hours = Math.floor(minutes / 60);
+  if (hours < 24) return `hace ${hours} h`;
+  const days = Math.floor(hours / 24);
+  if (days === 1) return "ayer";
+  if (days < 7) return `hace ${days} días`;
+  return new Date(ts).toLocaleDateString();
 }
 
 export default function ReviewPage() {

@@ -131,6 +131,20 @@ export interface DiagnosticResultRow {
   score: number;
 }
 
+/** L4 (lessons-before-exercises): a row per "user has seen this lesson
+ *  content". Written by `recordLessonView` in the repository when the
+ *  user clicks "Continuar a ejercicios →" on a `LessonStep`. Drives
+ *  the `LessonGate` decision ("show lesson again or skip?") and the
+ *  `/review` "Repasar lección" feature. Indexed by id (PK), lessonId,
+ *  viewedAt, and language; compound `[language+viewedAt]` powers
+ *  per-language time-sorted reads without a full scan. */
+export interface LessonView {
+  id: string;
+  lessonId: string;
+  language: string;
+  viewedAt: number;
+}
+
 class AppDB extends Dexie {
   cards!: EntityTable<Card, "id">;
   sessions!: EntityTable<Session, "id">;
@@ -144,6 +158,7 @@ class AppDB extends Dexie {
   conceptMastery!: EntityTable<ConceptMastery, "conceptId">;
   storyProgress!: EntityTable<StoryProgressRow, "storyId">;
   diagnosticResults!: EntityTable<DiagnosticResultRow, "id">;
+  lessonViews!: EntityTable<LessonView, "id">;
 
   constructor() {
     super("PortuguesAppDB");
@@ -186,6 +201,18 @@ class AppDB extends Dexie {
     // match queries that don't filter by language. No backfill.
     this.version(6).stores({
       cards: "id, blockId, lessonId, nextReviewAt, state, introducedAt, *tags, language, [blockId+nextReviewAt], [lessonId+nextReviewAt]",
+    });
+    // v7: add `lessonViews` table — one row per user viewing a lesson
+    // content page (written by `recordLessonView` in repository.ts when
+    // the user clicks "Continuar a ejercicios →" on a `LessonStep`).
+    // Drives the `LessonGate` decision ("has the user seen this lesson
+    // in the last hour?") and the future /review "Repasar lección"
+    // feature. The compound `[language+viewedAt]` index keeps per-lang
+    // time-sorted reads O(log N). All other tables are unchanged
+    // (Dexie allows adding a new table in a version bump without an
+    // upgrade body — existing stores are inherited verbatim).
+    this.version(7).stores({
+      lessonViews: "id, lessonId, viewedAt, language, [language+viewedAt]",
     });
   }
 }

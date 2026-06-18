@@ -7,6 +7,7 @@ import { FillBlankCard } from "./cards/FillBlankCard";
 import { ListeningCard } from "./cards/ListeningCard";
 import { TranslationCard } from "./cards/TranslationCard";
 import { VerbPrepositionCard } from "./cards/VerbPrepositionCard";
+import { LessonStep } from "./lessons/LessonStep";
 import { submitAnswer, getCardById, resetLeechCard } from "@/lib/db/repository";
 import { useSettings } from "@/lib/stores/settings";
 import { useSession } from "@/lib/stores/session";
@@ -20,6 +21,12 @@ interface Props {
   blockId: number;
   lessonId: string;
   onFinish: (stats: { reviewed: number; correct: number }) => void;
+  /** Target language for any lesson-type exercises rendered inside the
+   *  runner. Required when `exercises` includes a `lesson` type entry —
+   *  the runner pipes this through to <LessonStep> so the standalone
+   *  lesson navigation matches the URL the user is on. Optional for
+   *  runners that never see lesson exercises (daily review). */
+  lang?: import("@/lib/locales").LanguageId;
 }
 
 /** Local view-state: the user has answered a non-flashcard exercise and is
@@ -29,7 +36,7 @@ interface PendingGrade {
   correct: boolean;
 }
 
-export function ExerciseRunner({ exercises, blockId, lessonId, onFinish }: Props) {
+export function ExerciseRunner({ exercises, blockId, lessonId, onFinish, lang }: Props) {
   const { variant } = useSettings();
   const { sessionId, mode, incrCorrect } = useSession();
   const [idx, setIdx] = useState(0);
@@ -128,6 +135,7 @@ export function ExerciseRunner({ exercises, blockId, lessonId, onFinish }: Props
   };
 
   const isFlashcard = ex.type === "flashcard";
+  const isLesson = ex.type === "lesson";
 
   return (
     <div className="max-w-xl mx-auto px-4 py-8 space-y-4">
@@ -146,14 +154,33 @@ export function ExerciseRunner({ exercises, blockId, lessonId, onFinish }: Props
           )}
         </div>
       </div>
-      {isFlashcard
-        ? <FlashcardWithGrades ex={ex} onGrade={grade} />
-        : (
-          <div className="space-y-4">
-            <AnswerableCard ex={ex} onAnswer={handleAnswer} />
-            {pending && <GradePanel pending={pending} onGrade={grade} />}
-          </div>
+      {isLesson
+        ? (
+          // Lesson exercises render the MDX content + "Continuar a
+          // ejercicios →" button via LessonStep. The button navigates
+          // to /practice/:lang/:lessonId; once we land there the
+          // runner picks up at idx+1 (the lesson counts toward the
+          // total but doesn't require a grade). The grade path is
+          // never entered for a lesson.
+          //
+          // L5: lang is now plumbed in as a prop instead of being
+          // hardcoded — the runner is reused by /review (which doesn't
+          // hit the lesson branch, but the prop keeps the type honest)
+          // and by /practice which DOES.
+          <LessonStep
+            lessonId={ex.data.lessonId}
+            mdxPath={ex.data.mdxPath}
+            lang={lang ?? ("pt" as import("@/lib/locales").LanguageId)}
+          />
         )
+        : isFlashcard
+          ? <FlashcardWithGrades ex={ex} onGrade={grade} />
+          : (
+            <div className="space-y-4">
+              <AnswerableCard ex={ex} onAnswer={handleAnswer} />
+              {pending && <GradePanel pending={pending} onGrade={grade} />}
+            </div>
+          )
       }
       {showLeechModal && leechCard && (
         <LeechResetModal

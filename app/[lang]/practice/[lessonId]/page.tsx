@@ -5,13 +5,19 @@ import { useParams, useRouter } from "next/navigation";
 import { getOrCreateCard } from "@/lib/db/repository";
 import { db } from "@/lib/db/schema";
 import { ExerciseRunner } from "@/components/ExerciseRunner";
+import { LessonGate } from "@/components/lessons/LessonGate";
 import { ExerciseSchema, type Exercise } from "@/lib/data/zod-schemas";
 import { useSession } from "@/lib/stores/session";
 import { useSettings } from "@/lib/stores/settings";
 import type { Lesson } from "@/lib/data/curriculum-types";
+import { hasLocale, type LanguageId } from "@/lib/locales";
 
 export default function PracticePage({ params }: { params: Promise<{ lang: string; lessonId: string }> }) {
-  const { lang, lessonId: rawLessonId } = use(params);
+  const { lang: rawLang, lessonId: rawLessonId } = use(params);
+  // The lang layout validated the param via hasLocale before this page
+  // mounted. The fallback to "pt" is defensive only — if the lang
+  // doesn't exist, the layout would have already redirected.
+  const lang: LanguageId = hasLocale(rawLang) ? rawLang : "pt";
   const router = useRouter();
   const { localPracticeFilter } = useSettings();
 
@@ -141,7 +147,24 @@ export default function PracticePage({ params }: { params: Promise<{ lang: strin
           </p>
         </div>
       )}
-      <ExerciseRunner exercises={exercises} blockId={lesson.blockId} lessonId={lesson.id} onFinish={setDone} />
+      {/* L5: LessonGate decides whether to show the lesson (first time
+          or last view > 1h ago) or skip straight to practice. The gate
+          accepts `children` once it has decided the user is "fresh";
+          we wrap the ExerciseRunner so the gate renders the lesson
+          step OR the runner — never both. */}
+      <LessonGate
+        lessonId={lesson.id}
+        mdxPath={lesson.conceptNotesPath}
+        lang={lang}
+      >
+        <ExerciseRunner
+          exercises={exercises}
+          blockId={lesson.blockId}
+          lessonId={lesson.id}
+          onFinish={setDone}
+          lang={lang}
+        />
+      </LessonGate>
     </div>
   );
 }

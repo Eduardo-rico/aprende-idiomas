@@ -18,6 +18,7 @@ export const ExerciseTypeEnum = z.enum([
   'verb_preposition',
   'sentence_construction',
   'chunk',
+  'lesson',
 ]);
 export type ExerciseType = z.infer<typeof ExerciseTypeEnum>;
 
@@ -31,6 +32,37 @@ const AudioRefEntry = z.object({
   voice: z.string().min(1),
 });
 const AudioRefSchema = z.record(z.string(), AudioRefEntry);
+
+// ─── Lesson audio-refs (sidecar) ────────────────────────────────
+// Live in `lib/data/languages/{lang}/lessons/audio-refs.json` (one
+// per-language sidecar). The key is the lessonId (e.g. "b1-regulares-ar"),
+// the value bundles display metadata (blockId/title/exampleCount) and a
+// per-variant map of audio refs for the lesson's examples.
+//
+// The audioRefs map uses the same free VariantKey convention as
+// AudioRefSchema. Each value is an ARRAY of refs — one per example
+// (lessons have N examples per variant, not a single audio per item).
+//
+// A missing audio-refs entry for a lesson is not an error: the loader
+// returns `{}` and the route handler falls back to lesson.name + 0
+// examples.
+export const LessonAudioRefSchema = z.object({
+  hash: z.string().min(1),
+  voice: z.string().min(1),
+});
+
+export const LessonAudioRefsEntrySchema = z.object({
+  blockId: z.number().int().positive(),
+  title: z.string().min(1),
+  exampleCount: z.number().int().nonnegative(),
+  audioRefs: z.record(z.string(), z.array(LessonAudioRefSchema)),
+});
+
+export const LessonAudioRefsFileSchema = z.record(
+  z.string().regex(/^b\d+-[\w-]+$/, 'lessonId must look like b1-regulares-ar'),
+  LessonAudioRefsEntrySchema,
+);
+export type LessonAudioRefs = z.infer<typeof LessonAudioRefsFileSchema>;
 
 const FlashcardData = z.object({
   front: z.string().min(1),
@@ -80,6 +112,17 @@ const ChunkData = z.object({
   examples: z.array(z.object({ sentence: z.string().min(1), gloss: z.string().optional() })).min(1),
 });
 
+// LessonData: 1 lesson step por lección. Renderiza MDX (conceptNotesPath).
+// No tiene audio en data — los audio refs viven en un sidecar
+// `lib/data/languages/pt/lessons/audio-refs.json` (L2).
+export const LessonDataSchema = z.object({
+  kind: z.literal('lesson'),
+  lessonId: z.string().regex(/^b\d+-[\w-]+$/, 'lessonId must look like b1-regulares-ar'),
+  blockId: z.number().int().positive(),
+  mdxPath: z.string().regex(/^b\d+\/l[\w-]+\.mdx$/, 'mdxPath must look like b1/l-regulares-ar.mdx'),
+  exampleCount: z.number().int().nonnegative(),
+});
+
 // Map para resolver el schema de data por tipo. Útil en audio-collector y
 // generate-audio (re-validar tras spread de variantOverrides).
 export const ExerciseDataByTypeSchema = {
@@ -90,6 +133,7 @@ export const ExerciseDataByTypeSchema = {
   verb_preposition: VerbPrepositionData,
   sentence_construction: SentenceConstructionData,
   chunk: ChunkData,
+  lesson: LessonDataSchema,
 } as const;
 
 // ─── variantOverrides por tipo (todos los campos opcionales) ────
@@ -109,6 +153,7 @@ const TranslationOverride = z.strictObject(TranslationData.shape).partial();
 const VerbPrepositionOverride = z.strictObject(VerbPrepositionData.shape).partial();
 const SentenceConstructionOverride = z.strictObject(SentenceConstructionData.shape).partial();
 const ChunkOverride = z.strictObject(ChunkData.shape).partial();
+const LessonOverride = z.strictObject(LessonDataSchema.shape).partial();
 
 const VariantOverrideValue = z.union([
   FlashcardOverride,
@@ -118,6 +163,7 @@ const VariantOverrideValue = z.union([
   VerbPrepositionOverride,
   SentenceConstructionOverride,
   ChunkOverride,
+  LessonOverride,
 ]);
 
 // Map para resolver el override schema (strict) por tipo. El resolver
@@ -131,6 +177,7 @@ export const VariantOverrideByTypeSchema = {
   verb_preposition: VerbPrepositionOverride,
   sentence_construction: SentenceConstructionOverride,
   chunk: ChunkOverride,
+  lesson: LessonOverride,
 } as const;
 
 // ─── Exercise: discriminated union sobre `type` ────────────────
@@ -184,11 +231,17 @@ const ChunkEx = BaseExercise.extend({
   data: ChunkData,
   variantOverrides: z.record(z.string(), VariantOverrideValue).optional(),
 });
+const LessonEx = BaseExercise.extend({
+  type: z.literal('lesson'),
+  data: LessonDataSchema,
+  variantOverrides: z.record(z.string(), LessonOverride).optional(),
+});
 
 export const ExerciseSchema = z.discriminatedUnion('type', [
   FlashcardEx, FillBlankEx, ListeningEx,
   TranslationEx,
   VerbPrepositionEx, SentenceConstructionEx, ChunkEx,
+  LessonEx,
 ]);
 export type Exercise = z.infer<typeof ExerciseSchema>;
 
@@ -258,11 +311,13 @@ const TranslationGen = TranslationEx.extend(RequiredGeneratedFields);
 const VerbPrepositionGen = VerbPrepositionEx.extend(RequiredGeneratedFields);
 const SentenceConstructionGen = SentenceConstructionEx.extend(RequiredGeneratedFields);
 const ChunkGen = ChunkEx.extend(RequiredGeneratedFields);
+const LessonGen = LessonEx.extend(RequiredGeneratedFields);
 
 export const GeneratedExerciseSchema = z.discriminatedUnion('type', [
   FlashcardGen, FillBlankGen, ListeningGen,
   TranslationGen,
   VerbPrepositionGen, SentenceConstructionGen, ChunkGen,
+  LessonGen,
 ]);
 export type GeneratedExercise = z.infer<typeof GeneratedExerciseSchema>;
 
@@ -278,6 +333,7 @@ const LlmItemSchema = z.preprocess(normalizeExerciseInput, z.discriminatedUnion(
   VerbPrepositionEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
   SentenceConstructionEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
   ChunkEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
+  LessonEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
 ]));
 export const ExerciseBatchSchema = z.array(LlmItemSchema);
 export type ExerciseBatchItem = z.infer<typeof ExerciseBatchSchema>[number];

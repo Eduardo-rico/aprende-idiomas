@@ -23,6 +23,15 @@ export const DATA_DIR   = dataDir(DEFAULT_LANG);
 export const BLOCKS_DIR = blocksDir(DEFAULT_LANG);
 export const STORIES_DIR = storiesDir(DEFAULT_LANG);
 
+/** L5: directory where lesson MDX files live. The path mirrors the
+ *  `conceptNotesPath` convention — e.g. lesson `b1-l1-alfabeto-acentos`
+ *  with `conceptNotesPath="b1/l1-alfabeto-acentos.mdx"` resolves to
+ *  `lib/data/languages/pt/mdx/b1/l1-alfabeto-acentos.mdx`. The audio-refs
+ *  sidecar lives next to the lesson JSON, not here. */
+export function lessonMdxDir(lang: LanguageId = DEFAULT_LANG): string {
+  return path.join(dataDir(lang), 'mdx');
+}
+
 export const LLM_MODEL = process.env.MINIMAX_LLM_MODEL ?? 'MiniMax-M2.5-highspeed';
 export const TTS_MODEL = process.env.MINIMAX_TTS_MODEL ?? 'speech-2.8-hd';
 
@@ -87,6 +96,7 @@ export const EXERCISES_PER_LESSON: Record<ExerciseType, number | null> = {
   verb_preposition: 5,
   sentence_construction: null, // diferido a Plan #2
   chunk: null,                 // diferido a Plan #2
+  lesson: 1,                   // 1 lesson step por lección (L1)
 };
 
 // Mapping de ExerciseType → nombre de archivo de prompt. `null` = no generar.
@@ -98,6 +108,7 @@ export const TYPE_TO_TEMPLATE: Record<ExerciseType, string | null> = {
   verb_preposition: 'verb_preposition',
   sentence_construction: null,
   chunk: null,
+  lesson: null,                // no se genera por LLM; el MDX es el contenido
 };
 
 // Costo estimado (USD) por 1k tokens para el modelo LLM actual.
@@ -115,6 +126,7 @@ export const SCHEMA_VERSION: Record<ExerciseType, number> = {
   verb_preposition: 1,
   sentence_construction: 1,
   chunk: 1,
+  lesson: 1,
 };
 
 export function requireApiKey(): string {

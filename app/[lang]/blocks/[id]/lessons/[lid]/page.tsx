@@ -41,6 +41,20 @@ export default async function LessonIntro({
         </div>
       </section>
 
+      <section className="rounded-xl border-2 border-accent bg-accent/5 p-5 space-y-3">
+        <div className="text-xs uppercase tracking-wide text-muted">Antes de practicar</div>
+        <p className="text-sm">
+          Esta lección incluye una explicación con la regla gramatical y ejemplos traducidos.
+          Léela una vez — luego pasarás directo a los ejercicios.
+        </p>
+        <Link
+          href={`/lessons/${lesson.id}?lang=${lang}`}
+          className="inline-flex items-center px-4 py-2 bg-accent text-accent-foreground rounded-md font-medium hover:opacity-90"
+        >
+          Ver lección →
+        </Link>
+      </section>
+
       <Link
         href={`/${lang}/practice/${lesson.id}`}
         className="block p-6 border-2 border-primary rounded-xl text-center hover:bg-primary/5"

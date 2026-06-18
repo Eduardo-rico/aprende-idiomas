@@ -70,6 +70,7 @@ export function textsFor(ex: Exercise, variant: VariantKey): string[] {
       return data.chunk ? [data.chunk] : [];
     case 'fill_blank':
     case 'verb_preposition':
+    case 'lesson':
       return [];
   }
 }
@@ -91,4 +92,53 @@ export function collectAudioJobs(exercises: Exercise[]): AudioJob[] {
     }
   }
   return jobs;
+}
+
+// ─── L5: Lesson example audio (MDX-derived) ────────────────────────
+//
+// Lesson audio doesn't live on an Exercise — it lives inside the MDX
+// content (each `<Example>` has a PT sentence that needs TTS). This
+// helper extracts the PT text from the `<Example>` JSX bodies of a
+// lesson's MDX file, in declaration order, so `generate-audio.ts`
+// can produce one audio hash per example and append it to
+// `audio-refs.json` (next to the lesson JSON).
+//
+// L5 status: STUB. We parse the MDX with a regex (not a real parser)
+// because real audio generation is the next phase — for now the
+// function returns `[]` so `generate-audio.ts` doesn't crash and the
+// audio-refs sidecar stays empty (the renderer falls back to "no audio"
+// gracefully). The parser itself is left in place so a future LLM call
+// or hand-authored content drops in without touching the wiring.
+//
+// Format we look for (see components/lessons/mdx-components.tsx for the
+// canonical `<Example>` prop list):
+//
+//   <Example index={N} audioRef={N}>PT sentence\n\nES translation</Example>
+//
+// We deliberately use `pt=` syntax in the future; for L5 the simple
+// "text inside the tag" assumption is good enough because that's the
+// format the renderer + LLM prompt template will produce.
+
+export function lessonExampleTexts(mdxPath: string, mdxBody: string): string[] {
+  // STUB: log and return empty. We accept (and discard) the body so
+  // the future real parser can pick up the exact same signature
+  // without callers changing.
+  console.log(
+    `lesson audio: skipping (no LLM call yet) — ${mdxPath} has ${countExampleTags(mdxBody)} <Example> tag(s)`,
+  );
+  return [];
+}
+
+/** Quick-and-dirty counter for the stub's log message. Returns the
+ *  number of `<Example` opening tags in `body`. We deliberately avoid
+ *  pulling a real MDX parser for the stub — a substring count is
+ *  sufficient diagnostic output. */
+function countExampleTags(body: string): number {
+  let count = 0;
+  let i = 0;
+  while ((i = body.indexOf('<Example', i)) !== -1) {
+    count++;
+    i += '<Example'.length;
+  }
+  return count;
 }
