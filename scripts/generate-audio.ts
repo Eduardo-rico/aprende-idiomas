@@ -2,8 +2,8 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import pLimit from 'p-limit';
-import { blocksDir, dataDir } from '@/lib/data/registry';
-import { BLOCKS, getBlock } from '@/lib/data/languages/pt/curriculum';
+import { blocksDir, dataDir, lessonsDir } from '@/lib/data/registry';
+import { BLOCKS, getBlock, type Lesson } from '@/lib/data/languages/pt/curriculum';
 import {
   TTS_CONCURRENCY, TTS_DELAY_MS, VOICES, DEFAULT_VOICE,
   TTS_MODEL, LLM_MODEL,
@@ -11,8 +11,18 @@ import {
 import { collectAudioJobs, lessonExampleTexts, textsFor } from './lib/audio-collector';
 import { generateTts } from './lib/minimax-tts';
 import { hashKey, normalizeForHash } from './lib/cache';
-import { ExerciseInputSchema, type Exercise } from './lib/zod-schemas';
+import {
+  ExerciseInputSchema,
+  LessonAudioRefsFileSchema,
+  type Exercise,
+} from './lib/zod-schemas';
 import { parseLangArgs, noopForLang } from './lib/cli';
+import type { VariantKey } from '@/lib/data/variant';
+
+// Type for a single lesson example audio ref (mirrors the Zod
+// LessonAudioRefSchema — we re-state it here because the schema is
+// not exported as a type).
+type LessonAudioRef = { hash: string; voice: string };
 
 const PROJECT_ROOT = process.cwd();
 // Resolved at runtime inside main() from parseLangArgs().
@@ -63,6 +73,70 @@ async function withBlockLock<T>(blockId: number, fn: () => Promise<T>): Promise<
   }
 }
 
+// ─── Lesson audio-refs sidecar (L6) ───────────────────────────────
+//
+// Merges per-block lesson audio updates into the per-language sidecar
+// `lib/data/languages/{lang}/lessons/audio-refs.json`. The schema is
+// `Record<lessonId, { blockId, title, exampleCount, audioRefs: Record<VariantKey, LessonAudioRef[]> }>`.
+//
+// The merge is per-lesson-id and only overwrites entries for the
+// lessons in `updates` — other lessons' entries (from other blocks,
+// or from previous runs of this block before content changed) are
+// preserved. The file is written atomically (.tmp + rename).
+export async function mergeAndWriteLessonsAudioRefs(
+  lang: import('@/lib/locales').LanguageId,
+  updates: Array<{
+    lesson: Lesson;
+    audioRefs: Record<VariantKey, LessonAudioRef[]>;
+  }>,
+): Promise<void> {
+  const file = path.join(lessonsDir(lang), 'audio-refs.json');
+  let prev: Record<string, unknown> = {};
+  try {
+    const raw = await fs.readFile(file, 'utf8');
+    prev = JSON.parse(raw);
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code !== 'ENOENT') throw err;
+    // ENOENT → start from empty (first run for this language).
+  }
+  // Validate the previous payload against the schema; if it doesn't
+  // parse, log and start fresh (so a malformed sidecar from a manual
+  // edit doesn't kill the whole audio run).
+  let merged: import('@/lib/data/zod-schemas').LessonAudioRefs;
+  try {
+    merged = LessonAudioRefsFileSchema.parse(prev);
+  } catch (err) {
+    console.warn(
+      `[generate-audio] Existing audio-refs.json is malformed; rebuilding from updates only. Error: ${(err as Error).message}`,
+    );
+    merged = {};
+  }
+  for (const { lesson, audioRefs } of updates) {
+    // Pick the first non-empty variant list for exampleCount. If both
+    // are empty (TTS failed for every example), exampleCount = 0
+    // (the route handler treats this as "no audio" gracefully).
+    const exampleCount = Math.max(
+      audioRefs['pt-br']?.length ?? 0,
+      audioRefs['pt-pt']?.length ?? 0,
+    );
+    merged[lesson.id] = {
+      blockId: lesson.blockId,
+      title: lesson.name,
+      exampleCount,
+      audioRefs,
+    };
+  }
+  // Re-validate after merge so a malformed `updates` entry fails loud.
+  const validated = LessonAudioRefsFileSchema.parse(merged);
+  await fs.mkdir(path.dirname(file), { recursive: true });
+  const tmp = `${file}.tmp`;
+  await fs.writeFile(tmp, JSON.stringify(validated, null, 2) + '\n', 'utf8');
+  await fs.rename(tmp, file);
+  console.log(
+    `[generate-audio] Wrote ${updates.length} lesson entries → ${path.relative(process.cwd(), file)}`,
+  );
+}
+
 async function main() {
   const { lang } = parseLangArgs();
   // Phase 5: generate-audio solo corre para PT (los scaffolds vacíos
@@ -98,26 +172,97 @@ async function main() {
         throw err;
       }
 
-      // L5: process lesson audio. The audio-refs sidecar lives in
-      // `lib/data/languages/pt/lessons/audio-refs.json`. For each
-      // lesson in the block, look up its MDX file (if generated) and
-      // extract example texts. The stub returns [] and logs; once
-      // real TTS is wired in, the hashes land in `audio-refs.json`
-      // via the same load+save pass we use for exercise audio below.
+      // L6: process lesson audio. For each lesson in the block, look up
+      // its MDX file (if generated) and extract example texts. Real TTS
+      // runs against the per-variant voices; results land in
+      // `audio-refs.json` (per-language sidecar consumed by the L2 API
+      // route + LessonRenderer).
+      //
+      // We deliberately run the lesson TTS AFTER the per-block lock is
+      // acquired so the sidecar write is atomic relative to other
+      // audio work for the same block. We don't share the `limit`
+      // concurrency gate with the exercise jobs because lesson TTS is
+      // a per-block pass and we want to bound the whole block's
+      // wall-clock time independently.
       const lessonMdxRoot = path.join(DATA_DIR, 'mdx');
+      const lessonLimit = pLimit(TTS_CONCURRENCY);
+      const lessonUpdates: Array<{ lesson: Lesson; audioRefs: Record<VariantKey, LessonAudioRef[]> }> = [];
       for (const lesson of b.lessons) {
         const mdxAbsPath = path.join(lessonMdxRoot, lesson.conceptNotesPath);
         let mdxBody = '';
         try {
           mdxBody = await fs.readFile(mdxAbsPath, 'utf8');
         } catch (err) {
-          if ((err as NodeJS.ErrnoException).code !== 'ENOENT') throw err;
-          // MDX not yet generated (the generate-lessons script is a
-          // stub in L5) — skip silently. When the real generator
-          // lands, the next audio run will pick up the examples.
+          if ((err as NodeJS.ErrnoException).code !== 'ENOENT') {
+            throw err;
+          }
+          // MDX not yet generated — skip silently. (Mirrors the
+          // pre-L6 behavior; the next audio run after the lesson
+          // content is generated will pick up the examples.)
           continue;
         }
-        lessonExampleTexts(lesson.conceptNotesPath, mdxBody);
+        const texts = lessonExampleTexts(lesson.conceptNotesPath, mdxBody);
+        if (texts.length === 0) continue;
+
+        // For each example text, generate TTS under both `pt-br` and
+        // `pt-pt` (matching the per-variant approach used for exercise
+        // audio). The result list must align with the example index
+        // (so the renderer can resolve audioRef={N} → Nth entry).
+        const audioRefs: Record<VariantKey, LessonAudioRef[]> = { 'pt-br': [], 'pt-pt': [] };
+        for (const text of texts) {
+          // Run both variants in parallel (limited). We could
+          // parallelize across texts too, but the per-text fan-out
+          // (2 variants × N examples) is bounded by TTS_CONCURRENCY
+          // and matches the exercise job pool.
+          const settledVariants: PromiseSettledResult<{
+            variant: 'pt-br' | 'pt-pt';
+            hash: string;
+            voice: string;
+          }>[] = await Promise.allSettled(
+            (['pt-br', 'pt-pt'] as const).map((variant) =>
+              lessonLimit(async () => {
+                const ttsVariant: 'br' | 'pt' = variant === 'pt-br' ? 'pt' : 'br';
+                const voice =
+                  VOICES[variant]?.[DEFAULT_VOICE] ??
+                  VOICES[ttsVariant]?.[DEFAULT_VOICE] ??
+                  '';
+                if (TTS_DELAY_MS > 0) {
+                  await new Promise((r) => setTimeout(r, TTS_DELAY_MS));
+                }
+                const r = await generateTts({ text, voiceId: voice, variant: ttsVariant });
+                return { variant, hash: r.hash, voice };
+              }),
+            ),
+          );
+          for (const r of settledVariants) {
+            if (r.status === 'fulfilled') {
+              audioRefs[r.value.variant]!.push({ hash: r.value.hash, voice: r.value.voice });
+            } else {
+              // 1 fallo por variante = array queda desalineado. Para
+              // mantener la invariante "audioRef={N} → texts[N]" en
+              // el renderer, hacemos push con un placeholder
+              // distinguible (string vacío en hash) y logueamos. El
+              // renderer detecta esto y omite el botón.
+              console.warn(
+                `lesson audio: TTS failed for ${lesson.id} (text "${text}"):`,
+                String(r.reason?.message ?? r.reason),
+              );
+              // Push a placeholder into BOTH variant arrays to keep
+              // them aligned. The renderer filters out empty hashes.
+              audioRefs['pt-br']!.push({ hash: '', voice: '' });
+              audioRefs['pt-pt']!.push({ hash: '', voice: '' });
+            }
+          }
+        }
+        lessonUpdates.push({ lesson, audioRefs });
+      }
+
+      // Persist the audio-refs sidecar. Read the existing file (if
+      // any), merge in the updates for this block, write back. The
+      // sidecar is per-language (not per-block), so we do this once
+      // per block; merges are idempotent on lessonId.
+      if (lessonUpdates.length > 0) {
+        await mergeAndWriteLessonsAudioRefs(lang, lessonUpdates);
       }
 
       const jobs = collectAudioJobs(exercises);
