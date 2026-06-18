@@ -94,7 +94,7 @@ export function collectAudioJobs(exercises: Exercise[]): AudioJob[] {
   return jobs;
 }
 
-// ─── L5: Lesson example audio (MDX-derived) ────────────────────────
+// ─── L5/L6: Lesson example audio (MDX-derived) ────────────────────
 //
 // Lesson audio doesn't live on an Exercise — it lives inside the MDX
 // content (each `<Example>` has a PT sentence that needs TTS). This
@@ -103,42 +103,59 @@ export function collectAudioJobs(exercises: Exercise[]): AudioJob[] {
 // can produce one audio hash per example and append it to
 // `audio-refs.json` (next to the lesson JSON).
 //
-// L5 status: STUB. We parse the MDX with a regex (not a real parser)
-// because real audio generation is the next phase — for now the
-// function returns `[]` so `generate-audio.ts` doesn't crash and the
-// audio-refs sidecar stays empty (the renderer falls back to "no audio"
-// gracefully). The parser itself is left in place so a future LLM call
-// or hand-authored content drops in without touching the wiring.
+// Real parser (L6): matches the canonical self-closing shape produced
+// by `scripts/generate-lessons.ts` and accepted by
+// `components/lessons/mdx-components.tsx`:
 //
-// Format we look for (see components/lessons/mdx-components.tsx for the
-// canonical `<Example>` prop list):
+//   <Example index={N} audioRef={N} pt="..." es="..." />
 //
-//   <Example index={N} audioRef={N}>PT sentence\n\nES translation</Example>
+// We extract the `pt` attribute value, decoding the entity escapes
+// that `renderLessonMdx` emits (&quot;, &amp;, &lt;, &gt;) so the TTS
+// text is clean. We deliberately accept only the self-closing form —
+// the renderer + LLM prompt template produce that shape, and a
+// non-self-closing `<Example>...</Example>` is the legacy L5
+// hand-authored format we no longer need to support.
 //
-// We deliberately use `pt=` syntax in the future; for L5 the simple
-// "text inside the tag" assumption is good enough because that's the
-// format the renderer + LLM prompt template will produce.
+// `mdxPath` is accepted as a diagnostic (logged when no examples
+// match — surfaces malformed MDX in the audio run logs) so the
+// signature is stable for callers.
 
+const HTML_ENTITY_RE = /&(?:quot|amp|lt|gt);/g;
+const HTML_ENTITY_DECODE: Record<string, string> = {
+  '&quot;': '"',
+  '&amp;': '&',
+  '&lt;': '<',
+  '&gt;': '>',
+};
+
+/**
+ * Extracts the `pt` prop value of every `<Example ... pt="..." />`
+ * self-closing tag in `mdxBody`, in source order. Returns `[]` when
+ * no tags match.
+ *
+ * The regex is intentionally permissive about which other attributes
+ * are present (so `<Example pt="..." index={0} audioRef={0} />`
+ * matches the same as the canonical ordering), but it REQUIRES the
+ * `pt=` attribute — tags without it are skipped (the audio collector
+ * needs the PT text to make a TTS call; missing it is a malformed
+ * MDX, not a recoverable case).
+ */
 export function lessonExampleTexts(mdxPath: string, mdxBody: string): string[] {
-  // STUB: log and return empty. We accept (and discard) the body so
-  // the future real parser can pick up the exact same signature
-  // without callers changing.
-  console.log(
-    `lesson audio: skipping (no LLM call yet) — ${mdxPath} has ${countExampleTags(mdxBody)} <Example> tag(s)`,
-  );
-  return [];
-}
-
-/** Quick-and-dirty counter for the stub's log message. Returns the
- *  number of `<Example` opening tags in `body`. We deliberately avoid
- *  pulling a real MDX parser for the stub — a substring count is
- *  sufficient diagnostic output. */
-function countExampleTags(body: string): number {
-  let count = 0;
-  let i = 0;
-  while ((i = body.indexOf('<Example', i)) !== -1) {
-    count++;
-    i += '<Example'.length;
+  // Match `<Example` followed by any attributes (greedy) and ending
+  // with `/>` (self-closing). The body is small (~1-3KB) so a single
+  // regex pass is fine — no need for a real MDX parser dependency.
+  const re = /<Example\b[^>]*\bpt=(?:"([^"]*)"|\{`([^`]*)`\})[^>]*\/?>/g;
+  const out: string[] = [];
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(mdxBody)) !== null) {
+    const raw = m[1] ?? m[2] ?? '';
+    out.push(raw.replace(HTML_ENTITY_RE, (e) => HTML_ENTITY_DECODE[e] ?? e));
   }
-  return count;
+  if (out.length === 0) {
+    // Surface malformed MDX in the audio run logs (the existing stub
+    // logged a count; we keep that behavior so a regression in the
+    // MDX renderer is loud).
+    console.log(`lesson audio: no <Example pt="..." /> tags found in ${mdxPath}`);
+  }
+  return out;
 }
