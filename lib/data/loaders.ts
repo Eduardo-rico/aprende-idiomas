@@ -14,13 +14,14 @@ import { promises as fs } from 'node:fs';
 import type { LanguageId } from '@/lib/locales';
 import {
   blocksDir, storiesDir, manifestFile, vocabCatalogFile,
-  diagnosticFile, conceptsFile, langExists,
+  diagnosticFile, conceptsFile, langExists, lessonsDir,
 } from '@/lib/data/registry';
 import {
   type Block, type Concept, type Lesson,
 } from '@/lib/data/curriculum-types';
 import {
   type Story, type Diagnostic, StorySchema, DiagnosticSchema,
+  LessonAudioRefsFileSchema,
 } from '@/lib/data/zod-schemas';
 
 // ─── Curriculum (TS module) ──────────────────────────────────────
@@ -217,6 +218,26 @@ export async function loadConcepts(lang: LanguageId): Promise<Concept[]> {
     return JSON.parse(raw) as Concept[];
   } catch (err) {
     if ((err as NodeJS.ErrnoException).code === 'ENOENT') return [];
+    throw err;
+  }
+}
+
+// ─── Lesson audio-refs (per-language sidecar) ──────────────────
+//
+// L2 of the lessons-before-exercises plan: returns the parsed
+// `lib/data/languages/{lang}/lessons/audio-refs.json` map of
+// lessonId → LessonAudioRefsEntry. Missing file → `{}` (languages
+// with no lesson content, or PT before audio generation, fall back
+// to empty refs in the route handler).
+export async function loadLessonsAudioRefs(
+  lang: LanguageId,
+): Promise<import('@/lib/data/zod-schemas').LessonAudioRefs> {
+  const file = path.join(lessonsDir(lang), 'audio-refs.json');
+  try {
+    const raw = await fs.readFile(file, 'utf-8');
+    return LessonAudioRefsFileSchema.parse(JSON.parse(raw));
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === 'ENOENT') return {};
     throw err;
   }
 }

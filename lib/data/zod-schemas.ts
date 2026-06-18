@@ -33,6 +33,37 @@ const AudioRefEntry = z.object({
 });
 const AudioRefSchema = z.record(z.string(), AudioRefEntry);
 
+// ─── Lesson audio-refs (sidecar) ────────────────────────────────
+// Live in `lib/data/languages/{lang}/lessons/audio-refs.json` (one
+// per-language sidecar). The key is the lessonId (e.g. "b1-regulares-ar"),
+// the value bundles display metadata (blockId/title/exampleCount) and a
+// per-variant map of audio refs for the lesson's examples.
+//
+// The audioRefs map uses the same free VariantKey convention as
+// AudioRefSchema. Each value is an ARRAY of refs — one per example
+// (lessons have N examples per variant, not a single audio per item).
+//
+// A missing audio-refs entry for a lesson is not an error: the loader
+// returns `{}` and the route handler falls back to lesson.name + 0
+// examples.
+export const LessonAudioRefSchema = z.object({
+  hash: z.string().min(1),
+  voice: z.string().min(1),
+});
+
+export const LessonAudioRefsEntrySchema = z.object({
+  blockId: z.number().int().positive(),
+  title: z.string().min(1),
+  exampleCount: z.number().int().nonnegative(),
+  audioRefs: z.record(z.string(), z.array(LessonAudioRefSchema)),
+});
+
+export const LessonAudioRefsFileSchema = z.record(
+  z.string().regex(/^b\d+-[\w-]+$/, 'lessonId must look like b1-regulares-ar'),
+  LessonAudioRefsEntrySchema,
+);
+export type LessonAudioRefs = z.infer<typeof LessonAudioRefsFileSchema>;
+
 const FlashcardData = z.object({
   front: z.string().min(1),
   back: z.string().min(1),
