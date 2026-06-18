@@ -48,7 +48,7 @@ export default async function LessonIntro({
           Léela una vez — luego pasarás directo a los ejercicios.
         </p>
         <Link
-          href={`/lessons/${lesson.id}?lang=${lang}`}
+          href={`/${lang}/lessons/${lesson.id}`}
           className="inline-flex items-center px-4 py-2 bg-accent text-accent-foreground rounded-md font-medium hover:opacity-90"
         >
           Ver lección →

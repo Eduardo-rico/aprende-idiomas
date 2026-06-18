@@ -73,9 +73,12 @@ test.describe('Lessons flow', () => {
       new RegExp(`/${LANG}/lessons/${LESSON_ID}`),
     );
     // Either the MDX content is there OR the fallback is there.
-    const fallback = page.getByText(/MDX not yet generated/i);
-    const exampleOrRule = page.locator('[class*="rounded-lg"]').first();
-    await expect(fallback.or(exampleOrRule)).toBeVisible();
+    // We check for the lesson's <h1> heading (rendered unconditionally
+    // by the page) — this confirms the standalone page actually mounted
+    // (vs. a 404 boundary). Using the heading avoids strict-mode
+    // violations that happen when the fallback text matches two
+    // nested elements (outer rounded-lg + inner text-sm).
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
 
     // 5. Click "Continuar a ejercicios →" — the L5.3 link at the bottom.
     const continueLink = page.getByRole('link', { name: /Continuar a ejercicios/i });
