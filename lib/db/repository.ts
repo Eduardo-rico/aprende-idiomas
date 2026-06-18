@@ -1,5 +1,5 @@
 // lib/db/repository.ts
-import { db, type Card, type CardId, type Rating, type AnswerEvent, type GenericEvent, type Session, type StoryProgressRow } from "./schema";
+import { db, type Card, type CardId, type Rating, type AnswerEvent, type GenericEvent, type Session, type StoryProgressRow, type LessonView } from "./schema";
 import { newCard, schedule } from "../srs/fsrs";
 import { buildDueQueue, type DueQueueOptions } from "../srs/review-queue";
 import { resetLeech, isLeech } from "../srs/leeches";
@@ -525,4 +525,65 @@ export async function checkAndUnlockAchievements(goalMin: number): Promise<strin
     await unlockAchievement(r.id);
   }
   return newRules.map((r) => r.id);
+}
+
+// ─── Lesson views (L4: lessons-before-exercises) ────────────────
+//
+// One row per "user saw this lesson content". Written by `LessonStep`
+// when the user clicks "Continuar a ejercicios →". Read by `LessonGate`
+// to decide whether to re-show the lesson or skip straight to practice,
+// and by the future `/review` "Repasar lección" feature.
+//
+// Schema: see `LessonView` in lib/db/schema.ts (v7).
+
+/** Record that a user has seen a lesson's content page. Returns the
+ *  new row's id so callers can correlate it with their own UI state.
+ *
+ *  The id is `lessonview-{language}-{lessonId}-{ts}` where `ts` is
+ *  `Date.now()`. The `ts` suffix guarantees uniqueness even if the
+ *  user double-taps the "Continuar" button within the same millisecond
+ *  (rare but possible — the button does no debounce). */
+export async function recordLessonView(
+  lessonId: string,
+  language: LanguageId,
+): Promise<string> {
+  const id = `lessonview-${language}-${lessonId}-${Date.now()}`;
+  const row: LessonView = {
+    id,
+    lessonId,
+    language,
+    viewedAt: Date.now(),
+  };
+  await db.lessonViews.add(row);
+  return id;
+}
+
+/** All views for a language, newest first. Used by /review "Repasar
+ *  lección" to surface recently-seen lessons. Uses the
+ *  `[language+viewedAt]` compound index added in schema v7. */
+export async function getLessonViewsForLanguage(
+  language: LanguageId,
+): Promise<LessonView[]> {
+  const rows = await db.lessonViews
+    .where("[language+viewedAt]")
+    .between([language, 0], [language, Number.MAX_SAFE_INTEGER])
+    .toArray();
+  return rows.sort((a, b) => b.viewedAt - a.viewedAt);
+}
+
+/** The most recent view of a specific lesson in a specific language,
+ *  or `undefined` if the user has never seen it. Used by `LessonGate`
+ *  to decide between "show the lesson again" and "skip straight to
+ *  practice". */
+export async function getLastLessonView(
+  lessonId: string,
+  language: LanguageId,
+): Promise<LessonView | undefined> {
+  const rows = await db.lessonViews
+    .where("[language+viewedAt]")
+    .between([language, 0], [language, Number.MAX_SAFE_INTEGER])
+    .toArray();
+  const matching = rows.filter((r) => r.lessonId === lessonId);
+  if (matching.length === 0) return undefined;
+  return matching.reduce((acc, r) => (r.viewedAt > acc.viewedAt ? r : acc));
 }

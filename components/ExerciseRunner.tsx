@@ -7,6 +7,7 @@ import { FillBlankCard } from "./cards/FillBlankCard";
 import { ListeningCard } from "./cards/ListeningCard";
 import { TranslationCard } from "./cards/TranslationCard";
 import { VerbPrepositionCard } from "./cards/VerbPrepositionCard";
+import { LessonStep } from "./lessons/LessonStep";
 import { submitAnswer, getCardById, resetLeechCard } from "@/lib/db/repository";
 import { useSettings } from "@/lib/stores/settings";
 import { useSession } from "@/lib/stores/session";
@@ -128,6 +129,7 @@ export function ExerciseRunner({ exercises, blockId, lessonId, onFinish }: Props
   };
 
   const isFlashcard = ex.type === "flashcard";
+  const isLesson = ex.type === "lesson";
 
   return (
     <div className="max-w-xl mx-auto px-4 py-8 space-y-4">
@@ -146,14 +148,28 @@ export function ExerciseRunner({ exercises, blockId, lessonId, onFinish }: Props
           )}
         </div>
       </div>
-      {isFlashcard
-        ? <FlashcardWithGrades ex={ex} onGrade={grade} />
-        : (
-          <div className="space-y-4">
-            <AnswerableCard ex={ex} onAnswer={handleAnswer} />
-            {pending && <GradePanel pending={pending} onGrade={grade} />}
-          </div>
+      {isLesson
+        ? (
+          // Lesson exercises render the MDX content + "Continuar a
+          // ejercicios →" button via LessonStep. The button navigates
+          // to /practice/:lang/:lessonId; once we land there the
+          // runner picks up at idx+1 (the lesson counts toward the
+          // total but doesn't require a grade). The grade path is
+          // never entered for a lesson.
+          <LessonStep
+            lessonId={ex.data.lessonId}
+            mdxPath={ex.data.mdxPath}
+            lang={"pt" as import("@/lib/locales").LanguageId}
+          />
         )
+        : isFlashcard
+          ? <FlashcardWithGrades ex={ex} onGrade={grade} />
+          : (
+            <div className="space-y-4">
+              <AnswerableCard ex={ex} onAnswer={handleAnswer} />
+              {pending && <GradePanel pending={pending} onGrade={grade} />}
+            </div>
+          )
       }
       {showLeechModal && leechCard && (
         <LeechResetModal
