@@ -87,6 +87,7 @@ export const EXERCISES_PER_LESSON: Record<ExerciseType, number | null> = {
   verb_preposition: 5,
   sentence_construction: null, // diferido a Plan #2
   chunk: null,                 // diferido a Plan #2
+  lesson: 1,                   // 1 lesson step por lección (L1)
 };
 
 // Mapping de ExerciseType → nombre de archivo de prompt. `null` = no generar.
@@ -98,6 +99,7 @@ export const TYPE_TO_TEMPLATE: Record<ExerciseType, string | null> = {
   verb_preposition: 'verb_preposition',
   sentence_construction: null,
   chunk: null,
+  lesson: null,                // no se genera por LLM; el MDX es el contenido
 };
 
 // Costo estimado (USD) por 1k tokens para el modelo LLM actual.
@@ -115,6 +117,7 @@ export const SCHEMA_VERSION: Record<ExerciseType, number> = {
   verb_preposition: 1,
   sentence_construction: 1,
   chunk: 1,
+  lesson: 1,
 };
 
 export function requireApiKey(): string {

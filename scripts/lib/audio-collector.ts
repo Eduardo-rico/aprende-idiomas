@@ -70,6 +70,7 @@ export function textsFor(ex: Exercise, variant: VariantKey): string[] {
       return data.chunk ? [data.chunk] : [];
     case 'fill_blank':
     case 'verb_preposition':
+    case 'lesson':
       return [];
   }
 }
