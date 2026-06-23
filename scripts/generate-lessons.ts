@@ -39,6 +39,7 @@ import { parseLangArgs, noopForLang } from './lib/cli';
 import { lessonMdxDir } from './config';
 import { LANGUAGES } from '@/lib/locales';
 import { callLlm, extractJson } from './lib/minimax-llm';
+import { assertLatinScript } from './lib/latin-guard';
 import { requireApiKey } from './config';
 import { getConceptsByIds } from '@/lib/data/languages/pt/curriculum';
 
@@ -307,6 +308,10 @@ async function main(): Promise<void> {
   }
 
   const mdx = renderLessonMdx(gen);
+
+  // Anti-bleed gate: never write a lesson whose MDX contains characters from
+  // other writing systems (the highspeed model leaks CJK/Cyrillic).
+  assertLatinScript(mdx, `lesson ${lesson.lessonId}`);
 
   if (!args.write) {
     // Dry-run: print the rendered MDX to stdout so the caller (or a

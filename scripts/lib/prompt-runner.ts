@@ -2,6 +2,7 @@
 import { ExerciseBatchSchema, type ExerciseBatchItem, type ExerciseType } from './zod-schemas';
 import { readCache, writeCache } from './cache';
 import { extractJson, TruncationError, RefusalError } from './minimax-llm';
+import { findNonLatinDeep } from './latin-guard';
 
 export function renderTemplate(tpl: string, vars: Record<string, string | number>): string {
   return tpl.replace(/\{\{(\w+)\}\}/g, (_, k) => {
@@ -58,15 +59,23 @@ function partitionByZod(raw: unknown): { accepted: ExerciseBatchItem[]; rejected
   const rejected: RejectedItem[] = [];
   raw.forEach((item, index) => {
     const r = ExerciseBatchSchema.element.safeParse(item);
-    if (r.success) {
-      accepted.push(r.data);
-    } else {
+    if (!r.success) {
       const first = r.error.issues[0];
       rejected.push({
         index,
         reason: `${first?.path?.join('.') ?? ''}: ${first?.message ?? 'invalid'}`,
       });
+      return;
     }
+    // Anti-bleed gate: drop items with characters from other writing systems
+    // (CJK/Cyrillic/…) so the highspeed model's multilingual leakage never
+    // reaches disk. Treated like a Zod failure: rejected, not cached.
+    const bleed = findNonLatinDeep(r.data);
+    if (bleed.length > 0) {
+      rejected.push({ index, reason: `non-latin bleed: ${[...new Set(bleed)].join(' ')}` });
+      return;
+    }
+    accepted.push(r.data);
   });
   return { accepted, rejected };
 }

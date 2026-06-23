@@ -24,9 +24,11 @@
       ],
       "answer": "à"
     },
-    "ptOverrides": {
-      "sentence": "No Brasil, numa comunicação formal: \"O trem ___ à estação às nove.\"",
-      "answer": "à"
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "No Brasil, numa comunicação formal: \"O trem ___ à estação às nove.\"",
+        "answer": "à"
+      }
     }
   },
   {
@@ -43,6 +45,16 @@
     ],
     "contentHash": "03b9ccb0873e29b1500152877621e7edbe0a878fa81dcdaf20819d92ef87f8bc",
     "esContrast": "Portugal usa 'correio' para correo postal; Brasil usa 'contato' para comunicación, 'correio' para postal.",
+    "audio": {
+      "br": {
+        "hash": "5ebf4369a7533e7a38112da8ac3538e9fd360486c91b77ed17c3b2523185b608",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "c1745ad78c8c4609113088c88d4fc613eae20631808aca41f585e62a2207de7d",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Os contactos correspondem-se entre as duas variants. Continuaram a usar o termo correio em Portugal e contato no Brasil.",
@@ -55,25 +67,17 @@
       ],
       "answer": "Correio"
     },
-    "ptOverrides": {
-      "audioText": "Os contatos correspondem-se entre as duas variantes. Continuaram a usar o termo correio em Portugal e contato no Brasil.",
-      "question": "Qual termo se usa no Brasil para se referir à comunicação escrita oficial?",
-      "options": [
-        "Correio",
-        "Contato",
-        "Contacto",
-        "Carta"
-      ],
-      "answer": "Contato"
-    },
-    "audio": {
-      "br": {
-        "hash": "5ebf4369a7533e7a38112da8ac3538e9fd360486c91b77ed17c3b2523185b608",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "c1745ad78c8c4609113088c88d4fc613eae20631808aca41f585e62a2207de7d",
-        "voice": "Portuguese_Wiselady"
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "Os contatos correspondem-se entre as duas variantes. Continuaram a usar o termo correio em Portugal e contato no Brasil.",
+        "question": "Qual termo se usa no Brasil para se referir à comunicação escrita oficial?",
+        "options": [
+          "Correio",
+          "Contato",
+          "Contacto",
+          "Carta"
+        ],
+        "answer": "Contato"
       }
     }
   },
@@ -104,17 +108,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "As duas variantes do português ___ em muitos aspetos.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "correspondem-se",
-          "alternatives": [
-            "se correspondem"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "As duas variantes do português ___ em muitos aspetos.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "correspondem-se",
+            "alternatives": [
+              "se correspondem"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -131,6 +137,16 @@
     ],
     "contentHash": "049c847776ea2402f3cdefbfa71a3bb26e464c4075a939ff5b3343c8d43c9f69",
     "esContrast": "'Saudade' no es exactamente 'añoranza'; expresa un sentimiento mixto de nostalgia y deseo.",
+    "audio": {
+      "br": {
+        "hash": "d6bb332b448e8fbd9f0a340d780869d7d3f3f9344f0e197affe8a834716c43f8",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "2008b6b9f29f330899dad74f2eeb81d31d57f96fe369e505ca7f1a8459524416",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Eu tenho saudade de você, meu amigo. A palavra saudade é muito especial na cultura brasileira e portuguesa.",
@@ -142,16 +158,6 @@
         "Lembrar"
       ],
       "answer": "Saudade"
-    },
-    "audio": {
-      "br": {
-        "hash": "d6bb332b448e8fbd9f0a340d780869d7d3f3f9344f0e197affe8a834716c43f8",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "2008b6b9f29f330899dad74f2eeb81d31d57f96fe369e505ca7f1a8459524416",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -168,18 +174,6 @@
     ],
     "contentHash": "08155994042e58cf8de27753186a734122d62d3c0590d046264b33dd5286daa4",
     "esContrast": "'Ao vosso dispor' es más formal y típico de PT europeo; en BR se diría 'à disposição' o 'ao seu dispor'.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Segue em anexo a documentação solicitada. Fico ao dispor para quaisquer esclarecimentos.",
-      "target": "Adjunto le remito la documentación solicitada. Quedo a su disposición para cualquier aclaración.",
-      "acceptedAlternatives": [
-        "Envio-lhe em anexo a documentação solicitada. Permaneço ao vosso dispor para quaisquer esclarecimentos.",
-        "Aqui juntei a documentação pedida. Estou ao dispor para mais informações."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Seguem em anexo os documentos solicitados. Remainho ao vosso dispor para quaisquer esclarecimentos."
-    },
     "audio": {
       "br": {
         "hash": "f6de68f84a2e411582ff9e1adf1b4caabd5cf6ed370c8ecb8caf74f1d7f5fa38",
@@ -188,6 +182,22 @@
       "pt": {
         "hash": "494273bd60463c7e6ef8208500d49e8811c1b737c1442ba383f05d7e32a9da9d",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Segue em anexo a documentação solicitada. Fico ao dispor para quaisquer esclarecimentos.",
+      "target": "Adjunto le remito la documentación solicitada. Quedo a su disposición para cualquier aclaración.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Envio-lhe em anexo a documentação solicitada. Permaneço ao vosso dispor para quaisquer esclarecimentos.",
+        "Aqui juntei a documentação pedida. Estou ao dispor para mais informações."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Seguem em anexo os documentos solicitados. Remainho ao vosso dispor para quaisquer esclarecimentos."
       }
     }
   },
@@ -207,7 +217,7 @@
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
-      "sentence": "Eu não gosto ___ этих книг.",
+      "sentence": "Eu não gosto ___ desses livros.",
       "options": [
         "de",
         "a",
@@ -228,12 +238,6 @@
     "tags": [],
     "contentHash": "0b0913142213897eb73758ac0388986633c1d917230b3dab7c9703440b09f8b1",
     "esContrast": "'Abs' viene de 'abusivamente' en PT-BR, no existe en ES ni en PT-PT",
-    "type": "flashcard",
-    "data": {
-      "front": "Expresión informal de despedida entre amigos (= 'un abrazo')",
-      "back": "abs / abraço / beijos",
-      "example": "Abs, te vejo amanhã! (= ¡Un abrazo, te veo mañana!)"
-    },
     "audio": {
       "br": {
         "hash": "4562e0e62e51365b0f6aba181271cb23d78c8f080332c9b36a2040a1c09705c9",
@@ -243,6 +247,12 @@
         "hash": "0758e35eb4eaee12eec26dd05e2405d440aecb4f4472f700aa0caab062e32f2a",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Expresión informal de despedida entre amigos (= 'un abrazo')",
+      "back": "abs / abraço / beijos",
+      "example": "Abs, te vejo amanhã! (= ¡Un abrazo, te veo mañana!)"
     }
   },
   {
@@ -286,14 +296,6 @@
     ],
     "contentHash": "184775030a06047e457aae23f5ed73310aadfa26af5c6086fc2c9705b36aabec",
     "esContrast": "Cuidado: 'prezado' no es 'preciado'; es equivalente a 'estimado'.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Estimado senhor director, escrevo-lhe para solicitar uma reunião.",
-      "target": "Estimado senhor director, le escribo para solicitar una reunión.",
-      "acceptedAlternatives": [
-        "Prezado senhor director, le escribo para solicitar uma reunião."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "7186eaa921542bea3dd902780a0575cdc53d6dc76f9de4b130cdaab0136fbebe",
@@ -303,6 +305,16 @@
         "hash": "8e1441947f4967c5fe4bc7c63051a2c6b88b9fd244c54ebc74a4f536980a1c28",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Estimado senhor director, escrevo-lhe para solicitar uma reunião.",
+      "target": "Estimado senhor director, le escribo para solicitar una reunión.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Prezado senhor director, le escribo para solicitar uma reunião."
+      ]
     }
   },
   {
@@ -320,6 +332,16 @@
     ],
     "contentHash": "1993e06ebb8fb69ebb1175ef0db5606de63ae8c571f0c2a8e55ab6de024e96b8",
     "esContrast": "El Acuerdo Ortográfico generó controversy porque algunos prefieren mantener las diferencias tradicionales.",
+    "audio": {
+      "br": {
+        "hash": "bcfb639f7821d84b54fe2a458dc1a0c792ac1801175d36f324c0ca6ecbb5686d",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "03fb9b0b6f11d63f7244bf02b1aa37f2b9b29a006a0dccf196e672cde7ed52cc",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "A norma culta escrita em Portugal e no Brasil apresenta diferenças ortográficas. O Acordo Ortográfico de 1990 tentou unificar, mas o uso cotidiano continua variado.",
@@ -331,16 +353,6 @@
         "Imponer la norma culta brasileña"
       ],
       "answer": "Unificar la ortografía entre ambos países"
-    },
-    "audio": {
-      "br": {
-        "hash": "bcfb639f7821d84b54fe2a458dc1a0c792ac1801175d36f324c0ca6ecbb5686d",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "03fb9b0b6f11d63f7244bf02b1aa37f2b9b29a006a0dccf196e672cde7ed52cc",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -357,20 +369,6 @@
     ],
     "contentHash": "1e198e75bacf55aaddedc07f42da6082c921ef3a02c19b2179e4067f6946613e",
     "esContrast": "«Achar» en BR = creer/opinar; en PT = encontrar. Evita confundir «acho que» con «encuentro que».",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Yo creo que tienes razón, pero no lo encuentro así.",
-      "target": "Eu acho que você tem razão, mas não acho assim.",
-      "acceptedAlternatives": [
-        "Eu acho que tens razão, mas não acho assim."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Eu acho que tens razão, mas não o acho assim.",
-      "acceptedAlternatives": [
-        "Acho que tens razão, mas não o acho assim."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "b2d38c3a810950c36e98e316b4a9f80f163f8ae6861de6fe242350e1558171bd",
@@ -379,6 +377,24 @@
       "pt": {
         "hash": "f1e20813bb3c95dc353a529a15558a15173058d0715b65319a09c9adc12c51fe",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Yo creo que tienes razón, pero no lo encuentro así.",
+      "target": "Eu acho que você tem razão, mas não acho assim.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Eu acho que tens razão, mas não acho assim."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Eu acho que tens razão, mas não o acho assim.",
+        "acceptedAlternatives": [
+          "Acho que tens razão, mas não o acho assim."
+        ]
       }
     }
   },
@@ -393,12 +409,6 @@
     "tags": [],
     "contentHash": "1f7391d9b7f386c6d635c7b57e194e46217e675ec44af2a50478f18f8e445418",
     "esContrast": "En español 'usted' es único; en portugués hay tres niveles de formalidad según el contexto",
-    "type": "flashcard",
-    "data": {
-      "front": "Pronombre de tratamiento formal en portugués (equivalente a 'usted')",
-      "back": "você / o senhor / a senhora",
-      "example": "O senhor pode me ajudar? (= ¿Usted puede ayudarme?)"
-    },
     "audio": {
       "br": {
         "hash": "41270e9fdc8127cf5caddf03276e359952d6944a568befbe44484c31e22827f0",
@@ -408,6 +418,12 @@
         "hash": "4ed341849d9d165b491fed4b53cd85ffacd3b727ccf8c32452537e19cb5d1d03",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Pronombre de tratamiento formal en portugués (equivalente a 'usted')",
+      "back": "você / o senhor / a senhora",
+      "example": "O senhor pode me ajudar? (= ¿Usted puede ayudarme?)"
     }
   },
   {
@@ -424,6 +440,16 @@
     ],
     "contentHash": "1f7c93eb70bcd27b464714868b116f2bf03b9856c14c1d96297701068ffb3b48",
     "esContrast": "'Bicha' en PT-BR significa 'fila'; en PT-PT es ofensivo. Cuidado con falsos amigos.",
+    "audio": {
+      "br": {
+        "hash": "90e3a753ed31728a38f1eb02428b7eb1a4b02bbb7874655a502bcf3bc5e8a85c",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "14b0b0d8f4ff1ed49b3a0b2846b502a90cef352fad659ca3b79c0faf3a1a768e",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "No Brasil, quando queremos esperar em uma fila, chamamos de bicha. Em Portugal, a palavra bicha tem outro significado.",
@@ -436,25 +462,17 @@
       ],
       "answer": "Fila"
     },
-    "ptOverrides": {
-      "audioText": "Em Portugal, quando queremos esperar numa fila, chamamos de fila. No Brasil, a palavra fila tem outro significado.",
-      "question": "Como se diz 'bicha' no Brasil?",
-      "options": [
-        "Fila",
-        "Bicha",
-        "Filete",
-        "Fila não existe no Brasil"
-      ],
-      "answer": "Fila"
-    },
-    "audio": {
-      "br": {
-        "hash": "90e3a753ed31728a38f1eb02428b7eb1a4b02bbb7874655a502bcf3bc5e8a85c",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "14b0b0d8f4ff1ed49b3a0b2846b502a90cef352fad659ca3b79c0faf3a1a768e",
-        "voice": "Portuguese_Wiselady"
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "Em Portugal, quando queremos esperar numa fila, chamamos de fila. No Brasil, a palavra fila tem outro significado.",
+        "question": "Como se diz 'bicha' no Brasil?",
+        "options": [
+          "Fila",
+          "Bicha",
+          "Filete",
+          "Fila não existe no Brasil"
+        ],
+        "answer": "Fila"
       }
     }
   },
@@ -472,15 +490,6 @@
     ],
     "contentHash": "2516e46a0de39174d8ad97056309d6239852aba1acda852a6dfb38066348ee28",
     "esContrast": "'Achar' en PT-BR significa 'creer/pensar'; en ES 'achar' sería 'encontrar'.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Eu acho que a variação diatópica é fascinante.",
-      "target": "Yo creo que la variación diatópica es fascinante.",
-      "acceptedAlternatives": [
-        "Yo opino que la variación diatópica",
-        "Me parece que la variación diatópica"
-      ]
-    },
     "audio": {
       "br": {
         "hash": "0f0d19bda9af64336ff225c612aa37c853ac3dfb5dc6d63c79749fd64dbb3f05",
@@ -490,6 +499,17 @@
         "hash": "65a57fb62040b0dbb3b5a38c7c0baabbe42b4c2bd844a0807f71048d0ecf03a5",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Eu acho que a variação diatópica é fascinante.",
+      "target": "Yo creo que la variación diatópica es fascinante.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Yo opino que la variación diatópica",
+        "Me parece que la variación diatópica"
+      ]
     }
   },
   {
@@ -506,15 +526,6 @@
     ],
     "contentHash": "264c3a9f0956e59e8cd7ab8d2b2e7c1dcc8a0dab571da8de81b761b307aa1a9c",
     "esContrast": "Cuidado: 'bizarro' en español = 'valiente'; en BR = 'genial' (¡contrario!).",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Qué significa 'maluco' en Brasil? ¿Y 'bizarro'?",
-      "back": "🇧🇷 BR: 'maluco' = 'loco/chiflado' (coloquial); 'bizarro' = 'genial/increíble'. 🇵🇹 PT: 'bizarro' = 'valiente/extravagante' (más cercano al español); 'maluco' = mismo sentido.",
-      "example": "BR: «Que ideia maluca! Esse filme é muito bizarro!» PT: «Ele é um sujeito bastante bizarro.»"
-    },
-    "ptOverrides": {
-      "back": "🇧🇷 BR: 'maluco' = 'loco'; 'bizarro' = 'genial'. 🇵🇹 PT: 'bizarro' ≈ 'extravagante' (más similar al español)."
-    },
     "audio": {
       "br": {
         "hash": "67c7d93f95dbbe3420fc7426c4b2fe67730d522a3156e36414483e8630be3f79",
@@ -523,6 +534,17 @@
       "pt": {
         "hash": "e0bf745730da407fed51e58925e76b5a2648a0e9a2f1c760fc4641386642478c",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Qué significa 'maluco' en Brasil? ¿Y 'bizarro'?",
+      "back": "🇧🇷 BR: 'maluco' = 'loco/chiflado' (coloquial); 'bizarro' = 'genial/increíble'. 🇵🇹 PT: 'bizarro' = 'valiente/extravagante' (más cercano al español); 'maluco' = mismo sentido.",
+      "example": "BR: «Que ideia maluca! Esse filme é muito bizarro!» PT: «Ele é um sujeito bastante bizarro.»"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "🇧🇷 BR: 'maluco' = 'loco'; 'bizarro' = 'genial'. 🇵🇹 PT: 'bizarro' ≈ 'extravagante' (más similar al español)."
       }
     }
   },
@@ -539,12 +561,6 @@
       "formal"
     ],
     "contentHash": "2aaa15ef3ecaa7141494dc2973bc49a5983c5cca1b33b38a23f05c03dc87b65b",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Qué forma de tratamiento es más común en Portugal en situaciones formales?",
-      "back": "🇵🇹 En PT se usa más 'o senhor / a senhora' y 'você' (formal/informal). 🇧🇷 En BR predomina 'você' (informal) y 'o senhor' (formal). El 'tu' es regional (norte de PT, sur de BR).",
-      "example": "PT formal: «O senhor sabe a hora?» / BR: «Você sabe que horas são?»"
-    },
     "audio": {
       "br": {
         "hash": "fa798400f253ab56615123a9a10531f148d8151a323b41704bae8112021c405a",
@@ -554,6 +570,12 @@
         "hash": "b4a14c43dbb6f115472576db92ae6bf67952c884f77541bd338163c947aab197",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Qué forma de tratamiento es más común en Portugal en situaciones formales?",
+      "back": "🇵🇹 En PT se usa más 'o senhor / a senhora' y 'você' (formal/informal). 🇧🇷 En BR predomina 'você' (informal) y 'o senhor' (formal). El 'tu' es regional (norte de PT, sur de BR).",
+      "example": "PT formal: «O senhor sabe a hora?» / BR: «Você sabe que horas são?»"
     }
   },
   {
@@ -570,20 +592,6 @@
     ],
     "contentHash": "2c640e11c39456a8b7cbe5c92e0e2689ffd700e937c4f7c89a2084d90866414d",
     "esContrast": "«Bicha» en BR = fila/coloquial; en PT-PT es ofensivo (serpiente). Usa «fila» en Portugal.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Formamos una bicha enorme para entrar al concierto.",
-      "target": "Formamos uma bicha enorme para entrar no show.",
-      "acceptedAlternatives": [
-        "Fizemos uma bicha enorme para entrar no show."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Formámos uma fila enorme para entrar no concerto.",
-      "acceptedAlternatives": [
-        "Fizemos uma fila enorme para entrar no concerto."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "50b74d7dfccf9321e285428f61b1bef6076b3cc67c241dcdfed3fde42c95a030",
@@ -592,6 +600,24 @@
       "pt": {
         "hash": "b9b3ee2384819e1a6d01a5e5eceba6942a55a031f9ba149ca84bcf9864143623",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Formamos una bicha enorme para entrar al concierto.",
+      "target": "Formamos uma bicha enorme para entrar no show.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Fizemos uma bicha enorme para entrar no show."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Formámos uma fila enorme para entrar no concerto.",
+        "acceptedAlternatives": [
+          "Fizemos uma fila enorme para entrar no concerto."
+        ]
       }
     }
   },
@@ -646,18 +672,20 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Ó lá! Que ___? Há muito tempo que não te vejo!",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "novidades",
-          "alternatives": [
-            "diga",
-            "ouve"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Ó lá! Que ___? Há muito tempo que não te vejo!",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "novidades",
+            "alternatives": [
+              "diga",
+              "ouve"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -674,20 +702,6 @@
     ],
     "contentHash": "2ee3583d9798732a7cf05c08a18c6ec1c117006ddfe27d06dc9b102d91cc566c",
     "esContrast": "En PT-PT se prefiere «continuar a + infinitivo»; en BR se usa «continuar + gerúndio».",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Las cartas de mi abuelo continuaron llegando incluso después de su muerte.",
-      "target": "As cartas do meu avô continuaram chegando mesmo depois da morte dele.",
-      "acceptedAlternatives": [
-        "As cartas do meu avô continuaram a chegar mesmo depois da morte dele."
-      ]
-    },
-    "ptOverrides": {
-      "target": "As cartas do meu avô continuaram a chegar mesmo depois da morte dele.",
-      "acceptedAlternatives": [
-        "As cartas do meu avô continuaram chegando mesmo depois da morte dele."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "8bb6526608ab9ee31fee71c113761f35d2f493db2faf76afef1a8b18a701a8b5",
@@ -696,6 +710,24 @@
       "pt": {
         "hash": "d38759be6b4ca4f52ba636eac23858001c2bec2665450b9d1d845eb94d15f895",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Las cartas de mi abuelo continuaron llegando incluso después de su muerte.",
+      "target": "As cartas do meu avô continuaram chegando mesmo depois da morte dele.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "As cartas do meu avô continuaram a chegar mesmo depois da morte dele."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "As cartas do meu avô continuaram a chegar mesmo depois da morte dele.",
+        "acceptedAlternatives": [
+          "As cartas do meu avô continuaram chegando mesmo depois da morte dele."
+        ]
       }
     }
   },
@@ -713,12 +745,6 @@
     ],
     "contentHash": "3bf42d9766c58d24c387c759a6b6613206f4329bfe2f152c76d2a01810558dca",
     "esContrast": "Portugal continental tiene variaciones regionales noticeable entre norte y sur.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "As pessoas do Norte são mais abertas e as do Sul são mais reservadas.",
-      "target": "Las personas del Norte son más abiertas y las del Sur son más reservadas.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "39043b1f1e27efd7f8b8d01a0c35be795270f12a1c615adb8ad7a73a4bc06464",
@@ -728,6 +754,14 @@
         "hash": "8809fa26ddeaa08622eb0ead3e85404cb94f5253dc85a702a06792a7a01287ae",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "As pessoas do Norte são mais abertas e as do Sul são mais reservadas.",
+      "target": "Las personas del Norte son más abiertas y las del Sur son más reservadas.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": []
     }
   },
   {
@@ -744,18 +778,6 @@
     ],
     "contentHash": "3dec5fb6fdeba9b6f34996ecfc332d68f653a59f9fa8c720e70f32006e1dd7f3",
     "esContrast": "'Próprio' es un vocativo afectuoso (coloquial BR); en España se diría 'chaval', 'tío' o 'colega'.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Olá, próprio! Tudo bem contigo?",
-      "target": "¡Hola, amigo! ¿Qué tal estás?",
-      "acceptedAlternatives": [
-        "¡Hola, crack! ¿Qué tal estás?",
-        "¡Hola, chico! ¿Qué tal estás?"
-      ]
-    },
-    "ptOverrides": {
-      "target": "¡Hola, tío! ¿Qué tal estás?"
-    },
     "audio": {
       "br": {
         "hash": "e18a9f660d5095626bdf43d02454d5743f46c5c93a988b5d4944aa03352634d0",
@@ -764,6 +786,22 @@
       "pt": {
         "hash": "e24dddb45abf5ce73632877e2f6cff7d3ebd58b7a7bc3e7051599fd017b06d04",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Olá, próprio! Tudo bem contigo?",
+      "target": "¡Hola, amigo! ¿Qué tal estás?",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "¡Hola, crack! ¿Qué tal estás?",
+        "¡Hola, chico! ¿Qué tal estás?"
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "¡Hola, tío! ¿Qué tal estás?"
       }
     }
   },
@@ -794,17 +832,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "As tradições do Norte do Brasil ___ sendo preservadas.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "continuaram",
-          "alternatives": [
-            "continuam"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "As tradições do Norte do Brasil ___ sendo preservadas.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "continuaram",
+            "alternatives": [
+              "continuam"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -821,15 +861,6 @@
     ],
     "contentHash": "3fc42791df4a15dcbddf6f6b359ad028529676c03bb9a40a326fceb50884da82",
     "esContrast": "'E aí' es saludo informal (BR); 'meu irmão' y 'bora' son coloquiales y no existen en España.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "E aí, meu irmão! Bora tomar um café?",
-      "target": "¿Qué tal, hermano! ¿Nos tomamos un café?",
-      "acceptedAlternatives": [
-        "¿Qué pasa, hermano! ¿Nos tomamos un café?",
-        "¿Y eso, bro! ¿Nos tomamos un café?"
-      ]
-    },
     "audio": {
       "br": {
         "hash": "c1fd2f55669036ba5fcb31bb4e5d59a6807cc2ea64fb5e52bcb878837b918a63",
@@ -839,6 +870,17 @@
         "hash": "f10491e14279ccaf1f7cd949d72af889ec9cc4ab8cace0df697c4c119990ddcd",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "E aí, meu irmão! Bora tomar um café?",
+      "target": "¿Qué tal, hermano! ¿Nos tomamos un café?",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "¿Qué pasa, hermano! ¿Nos tomamos un café?",
+        "¿Y eso, bro! ¿Nos tomamos un café?"
+      ]
     }
   },
   {
@@ -868,17 +910,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Os meus ___ com o Brasil têm sido muito produtivos.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "contactos",
-          "alternatives": [
-            "contatos"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Os meus ___ com o Brasil têm sido muito produtivos.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "contactos",
+            "alternatives": [
+              "contatos"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -895,6 +939,16 @@
     ],
     "contentHash": "4755f09afb196bfb4b46dd6d1009bd5640645e68fd98dedd08ec5fd09c41c0ee",
     "esContrast": "En portugués, 'senhor' es tratamiento formal, mientras que en español se usa 'señor' de forma más general.",
+    "audio": {
+      "br": {
+        "hash": "18c5c22c7c313cbcd64776e1896f8123f03971185e074e4be6476a14692dc4a1",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "3c27b7a7f7a4f6c208c62b55382ab8408ede88fb73e9e1c29da73cb73c181962",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Bom dia, meu nome é Maria. Gostaria de falar com o senhor Silva, por favor.",
@@ -906,16 +960,6 @@
         "Registro afectivo"
       ],
       "answer": "Registro formal"
-    },
-    "audio": {
-      "br": {
-        "hash": "18c5c22c7c313cbcd64776e1896f8123f03971185e074e4be6476a14692dc4a1",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "3c27b7a7f7a4f6c208c62b55382ab8408ede88fb73e9e1c29da73cb73c181962",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -945,17 +989,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Com os melhores cumprimentos,",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "saúdo",
-          "alternatives": [
-            "cumprimentos"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Com os melhores cumprimentos,",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "saúdo",
+            "alternatives": [
+              "cumprimentos"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -972,6 +1018,16 @@
     ],
     "contentHash": "4fc10cfbf82fd57aefab0b90b61493f27423fe6ac4d90488909fe5e551c7c1ad",
     "esContrast": "En PT se usa 'contacto' como sustantivo; en ES se prefiere 'contacto' como adjetivo o 'contactar'.",
+    "audio": {
+      "br": {
+        "hash": "44fadc111b4b5fcd66c15ed34b633360c1d98e0143f8600b83893b8f795c0ab3",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "21e7fe808697935e52cae279ff21ae20f8fbf2f0b72f861835b0906162bf9b2d",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Obrigado pela atenção. Aguardo o seu contacto telefónico para dar uma resposta.",
@@ -983,16 +1039,6 @@
         "Teléfono de contacto"
       ],
       "answer": "Contacto telefónico"
-    },
-    "audio": {
-      "br": {
-        "hash": "44fadc111b4b5fcd66c15ed34b633360c1d98e0143f8600b83893b8f795c0ab3",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "21e7fe808697935e52cae279ff21ae20f8fbf2f0b72f861835b0906162bf9b2d",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -1023,18 +1069,20 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Meu ___ , o almoço está na mesa. Quando puderes, vem comer.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "filho",
-          "alternatives": [
-            "rapaz",
-            "gajo"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Meu ___ , o almoço está na mesa. Quando puderes, vem comer.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "filho",
+            "alternatives": [
+              "rapaz",
+              "gajo"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -1051,6 +1099,16 @@
     ],
     "contentHash": "6424b51e1a708a57525873f99dac99abbbbc20543db989074ba35937c018de72",
     "esContrast": "'Achar' en BR = encontrar; 'achar' en PT = parecer/creer. Gran fuente de malentendidos.",
+    "audio": {
+      "br": {
+        "hash": "6472c3efa7d856f2a9c31ae1f029420380ff925b533fbfb6987a5852e2de15b6",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "68af063af9d2e1574527c7b9023ec7ebb58af9bcc41f05dfaa1aac59f657543c",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "No Brasil, achar significa encontrar. Em Portugal, achar significa parecer, creer. São verbos com uso diferente.",
@@ -1063,25 +1121,17 @@
       ],
       "answer": "Parecer o creer"
     },
-    "ptOverrides": {
-      "audioText": "No Brasil, achar significa encontrar. Em Portugal, achar significa parecer, creer. São verbos com uso diferente.",
-      "question": "No Brasil, o que significa o verbo 'achar'?",
-      "options": [
-        "Parecer ou crer",
-        "Encontrar",
-        "Buscar",
-        "Pensar"
-      ],
-      "answer": "Encontrar"
-    },
-    "audio": {
-      "br": {
-        "hash": "6472c3efa7d856f2a9c31ae1f029420380ff925b533fbfb6987a5852e2de15b6",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "68af063af9d2e1574527c7b9023ec7ebb58af9bcc41f05dfaa1aac59f657543c",
-        "voice": "Portuguese_Wiselady"
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "No Brasil, achar significa encontrar. Em Portugal, achar significa parecer, creer. São verbos com uso diferente.",
+        "question": "No Brasil, o que significa o verbo 'achar'?",
+        "options": [
+          "Parecer ou crer",
+          "Encontrar",
+          "Buscar",
+          "Pensar"
+        ],
+        "answer": "Encontrar"
       }
     }
   },
@@ -1098,12 +1148,6 @@
       "coloquial"
     ],
     "contentHash": "64b87fbb34469c7057e7ed5d8a75ad08add4fd14d5d6f5b391b5359f0bd20f59",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Qué es el 'carioca' y qué variante representa?",
-      "back": "Carioca es lo relativo a la ciudad de Río de Janeiro. Variante del portugués brasileño con rasgos fonéticos propios: 'r'舌尖izado, reducción de 'di/ti'.",
-      "example": "No Rio, diz-se «tchau» de forma diferente de São Paulo."
-    },
     "audio": {
       "br": {
         "hash": "c0be64142dc786474d0dd59c4660224017f24fd6240a82dc159e4e1c2645f807",
@@ -1113,6 +1157,12 @@
         "hash": "0400813d973d743bb047cf5910f3064436e4d764d1ba5e1b46937728a99b1808",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Qué es el 'carioca' y qué variante representa?",
+      "back": "Carioca es lo relativo a la ciudad de Río de Janeiro. Variante del portugués brasileño con rasgos fonéticos propios: 'r' apical, reducción de 'di/ti'.",
+      "example": "No Rio, diz-se «tchau» de forma diferente de São Paulo."
     }
   },
   {
@@ -1142,17 +1192,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "A ___ é um sentimento muito forte na cultura portuguesa.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "saudade",
-          "alternatives": [
-            "saudade"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "A ___ é um sentimento muito forte na cultura portuguesa.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "saudade",
+            "alternatives": [
+              "saudade"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -1169,15 +1221,6 @@
     ],
     "contentHash": "6815b803d183cbb0c35edcc7de4e4cc1323f6627117aff409bb4b6c0fbd8b62d",
     "esContrast": "'Contacto telefónico' suena redundante en PT; se dice 'contacto' o 'número de telefone'. 'Cabeçalho' = 'encabezado' (no 'cabecera' de mesa).",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "O meu contacto telefónico é o número que consta no cabeçalho deste e-mail.",
-      "target": "Mi contacto telefónico es el número que figura en la cabecera de este correo.",
-      "acceptedAlternatives": [
-        "O meu número de telefone encontra-se no cabeçalho deste e-mail.",
-        "Pode contactar-me pelo número indicado no início deste e-mail."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "9dcabaa68b6fab8590ddbb6dee66758ff108e319978aec998787b1c438ac70ee",
@@ -1187,6 +1230,17 @@
         "hash": "05a7f1fee9e3c793ec0069b5c0a51c645865e2259ac01a4d99787126129a50b3",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "O meu contacto telefónico é o número que consta no cabeçalho deste e-mail.",
+      "target": "Mi contacto telefónico es el número que figura en la cabecera de este correo.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "O meu número de telefone encontra-se no cabeçalho deste e-mail.",
+        "Pode contactar-me pelo número indicado no início deste e-mail."
+      ]
     }
   },
   {
@@ -1199,12 +1253,6 @@
     ],
     "tags": [],
     "contentHash": "6b460b149ed8e00d2e285caf63efa8f832368108e2a00cdae9beccc8c106dd88",
-    "type": "flashcard",
-    "data": {
-      "front": "Conector formal para añadir información (= 'además, igualmente')",
-      "back": "ademais / outrossim / igualmente",
-      "example": "Gostaria de agradecer e, igualmente, parabenizá-lo."
-    },
     "audio": {
       "br": {
         "hash": "76d68fd3b5e523e40c7d13ac63aa7e98ec5acd832ee7681b7a42b8442f08e851",
@@ -1214,6 +1262,12 @@
         "hash": "d391dd6587a1a8a0b0e6eec5b39494e4561ea864b3e94a0010fee89b8185418d",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Conector formal para añadir información (= 'además, igualmente')",
+      "back": "ademais / outrossim / igualmente",
+      "example": "Gostaria de agradecer e, igualmente, parabenizá-lo."
     }
   },
   {
@@ -1230,15 +1284,6 @@
     ],
     "contentHash": "6e8d5cdd5e8c8fd2ba7e36fb8952bb7f6d7f4c2eb50130743668dcd37cbb95c2",
     "esContrast": "'Cumprimentos' en PT equivale a 'saludos', pero en contexto formal va más allá de un simple saludo casual.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Cumprimentos respeitosos para toda a equipa.",
-      "target": "Saludos respetuosos para todo el equipo.",
-      "acceptedAlternatives": [
-        "Respetuosos saludos para todo el equipo.",
-        "Mis respetuosos saludos para todo el equipo."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "f7b29975687d281d5baf44576cb0a7ef408e97cb32e32af9d3bbeee4918f2783",
@@ -1248,6 +1293,17 @@
         "hash": "33aaf5eeb7059f406d73236f51320fa3696a196ccdea25fb5fc123b368497dcd",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Cumprimentos respeitosos para toda a equipa.",
+      "target": "Saludos respetuosos para todo el equipo.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Respetuosos saludos para todo el equipo.",
+        "Mis respetuosos saludos para todo el equipo."
+      ]
     }
   },
   {
@@ -1276,17 +1332,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Agradeço ___ pela atenção e aguardo resposta.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "antecipadamente",
-          "alternatives": [
-            "com antecedência"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Agradeço ___ pela atenção e aguardo resposta.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "antecipadamente",
+            "alternatives": [
+              "com antecedência"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -1301,12 +1359,6 @@
       "regional"
     ],
     "contentHash": "71b4e9212053e26d76a9440ce4e34d99c7afb24d3a9cf0ed191a0cf675dc1b33",
-    "type": "flashcard",
-    "data": {
-      "front": "Léxico diatópico: 'quarto' en PT vs. otras palabras en BR",
-      "back": "🇵🇹 PT: 'quarto' puede ser cualquier habitación. 🇧🇷 BR: 'quarto' = habitación para dormir; 'sala' = sala de estar; 'quarto' no se usa para la sala.",
-      "example": "PT: «O quarto da frente tem vista.» BR: «Moro num apartamento com dois quartos e uma sala.»"
-    },
     "audio": {
       "br": {
         "hash": "aa7322d5ea2b51af60a494575829d0c3a168821ee4c353aa5aeb6f3dd6bb4795",
@@ -1316,6 +1368,12 @@
         "hash": "a862e0aa4df762c7a2c79dbaca28c4e8d610b803683eea7bb57cbf6f521b8238",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Léxico diatópico: 'quarto' en PT vs. otras palabras en BR",
+      "back": "🇵🇹 PT: 'quarto' puede ser cualquier habitación. 🇧🇷 BR: 'quarto' = habitación para dormir; 'sala' = sala de estar; 'quarto' no se usa para la sala.",
+      "example": "PT: «O quarto da frente tem vista.» BR: «Moro num apartamento com dois quartos e uma sala.»"
     }
   },
   {
@@ -1332,20 +1390,6 @@
     ],
     "contentHash": "772691574fac7152ee83e473aedd6bf34482e830502d22e60220aca9cde95d13",
     "esContrast": "«Saudade» no tiene equivalente directo en español; es un sentimiento típicamente portugués.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Siento una saudade inexplicable por mi tierra natal.",
-      "target": "Sinto uma saudade inexplicável pela minha terra natal.",
-      "acceptedAlternatives": [
-        "Sinto uma inexplicável saudade pela minha terra natal."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Sinto uma saudade inexplicável pela minha terra natal.",
-      "acceptedAlternatives": [
-        "Sinto uma inexplicável saudade pela minha terra natal."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "6864babd8894a89f1c47035d15ef389115f0e7fe5ee756d96f515c1a7e19754e",
@@ -1354,6 +1398,24 @@
       "pt": {
         "hash": "6489ae5b71500979f7abd10ae5d8a13c62db5de5b1ceee49f29d9a7cc0e0fe9b",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Siento una saudade inexplicable por mi tierra natal.",
+      "target": "Sinto uma saudade inexplicável pela minha terra natal.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Sinto uma inexplicável saudade pela minha terra natal."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Sinto uma saudade inexplicável pela minha terra natal.",
+        "acceptedAlternatives": [
+          "Sinto uma inexplicável saudade pela minha terra natal."
+        ]
       }
     }
   },
@@ -1397,15 +1459,6 @@
     ],
     "contentHash": "7b17a7b68e90d7b6839b940ae48e942b2d653d909e7fe0fd711b4fbcbf728b2c",
     "esContrast": "'Consigo' en PT-PT es formal (equivalente a 'con usted'); en español sería 'contigo' (informal).",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Gostaria de estabelecer contacto telefónico consigo amanhã.",
-      "target": "Desearía establecer contacto telefónico con usted mañana.",
-      "acceptedAlternatives": [
-        "Quisiera establecer contacto telefónico con usted mañana.",
-        "Me gustaría ponerme en contacto telefónico con usted mañana."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "d426bba76c00fc107b99d34fe907ff3dba181686e86742f58af0b237487e58ef",
@@ -1415,6 +1468,17 @@
         "hash": "77a37b9c83ec8c0b5ee757e44afa72bd6fb26d98e4f9156abc9da695bcf4cf0b",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Gostaria de estabelecer contacto telefónico consigo amanhã.",
+      "target": "Desearía establecer contacto telefónico con usted mañana.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Quisiera establecer contacto telefónico con usted mañana.",
+        "Me gustaría ponerme en contacto telefónico con usted mañana."
+      ]
     }
   },
   {
@@ -1431,15 +1495,6 @@
     ],
     "contentHash": "7b9b4b9e0274bc41c2b7a25661d7a1d175422adb86a551500912d8491b869b96",
     "esContrast": "'E aí' es muy coloquial en BR; en PT se dice más 'Então' o 'Então, como estás?'.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "E aí, João? Tudo bem contigo?",
-      "target": "¿Qué tal, João? ¿Todo bien contigo?",
-      "acceptedAlternatives": [
-        "Qué tal, João? Tudo bem?",
-        "E aí, João? Como estás?"
-      ]
-    },
     "audio": {
       "br": {
         "hash": "e95a8409bc10a52d438bb3db255860a5aa1be547b3624d16b090e30a6dfd95d2",
@@ -1449,6 +1504,17 @@
         "hash": "980112204a281432abd386315278852c78686254920eb994b16c1631f0e02fbc",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "E aí, João? Tudo bem contigo?",
+      "target": "¿Qué tal, João? ¿Todo bien contigo?",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Qué tal, João? Tudo bem?",
+        "E aí, João? Como estás?"
+      ]
     }
   },
   {
@@ -1462,12 +1528,6 @@
     "tags": [],
     "contentHash": "7d06ab4afb2393da949451ea3456c4d97eb5a4afe36ba21a57f1ecb4bd9edd59",
     "esContrast": "En BR 'você' es informal; en ES 'tú' funciona para ambos registros. En PT-PT, 'tu' es informal y 'você' es formal.",
-    "type": "flashcard",
-    "data": {
-      "front": "Pronombre informal usado en Brasil para 'tú'",
-      "back": "você",
-      "example": "Você quer café? (= ¿Quieres café?)"
-    },
     "audio": {
       "br": {
         "hash": "7fc6d932861d2959e9bb8ad79de1ed44b220fa93d9f41d07de76e7bee5a3349d",
@@ -1477,6 +1537,12 @@
         "hash": "ddc352b21c0d827e7811c3356782c6fe4a94ff1c26dcbaec4bbe2ba47804f649",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Pronombre informal usado en Brasil para 'tú'",
+      "back": "você",
+      "example": "Você quer café? (= ¿Quieres café?)"
     }
   },
   {
@@ -1493,20 +1559,6 @@
     ],
     "contentHash": "80a3b750ac3ab8df741af0bdc90db1f9587ef1688ebc9e8b222e36f42e28044f",
     "esContrast": "«Corresponder-se» en PT-PT usa más la forma pronominal «correspondem-se» que en BR.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Las dos cartas se corresponden en contenido y en tono emocional.",
-      "target": "As duas cartas se correspondem em conteúdo e em tom emocional.",
-      "acceptedAlternatives": [
-        "As duas cartas correspondem-se em conteúdo e em tom emocional."
-      ]
-    },
-    "ptOverrides": {
-      "target": "As duas cartas correspondem-se em conteúdo e em tom emocional.",
-      "acceptedAlternatives": [
-        "As duas cartas se correspondem em conteúdo e em tom emocional."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "d59b1ae84118093afa7074bfb71cebb21468723bb7447f67c67ec28cd3b7e75e",
@@ -1515,6 +1567,24 @@
       "pt": {
         "hash": "6fb773d66f61caaf2fa4333cb66475cb621a6f45444beded5e017a064130c20b",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Las dos cartas se corresponden en contenido y en tono emocional.",
+      "target": "As duas cartas se correspondem em conteúdo e em tom emocional.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "As duas cartas correspondem-se em conteúdo e em tom emocional."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "As duas cartas correspondem-se em conteúdo e em tom emocional.",
+        "acceptedAlternatives": [
+          "As duas cartas se correspondem em conteúdo e em tom emocional."
+        ]
       }
     }
   },
@@ -1532,6 +1602,16 @@
     ],
     "contentHash": "8568365f449d4f63094876ebf5915630481a9d3e941151bcf29feaba0ad60fa5",
     "esContrast": "En PT-BR se usa mucho 'tu' entre amigos; en España 'tú' también, pero 'você' es más formal allí.",
+    "audio": {
+      "br": {
+        "hash": "bac7fa66420826e51789b397f814c265e720bee5ad02ba4dd0ed1bbff638335c",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "61b61059eb07a4ac5019365e52efb5f83efd9fa1ab45bded6765cb945cd4c0e4",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Oi, meu amigo! Tudo bem? Vamos combinar de sair amanhã, tá?",
@@ -1544,25 +1624,17 @@
       ],
       "answer": "Tu e você"
     },
-    "ptOverrides": {
-      "audioText": "Olá, meu amigo! Tudo bem? Vamos combinar de sair amanhã, está bem?",
-      "question": "¿Qué pronombres de tratamiento se usan en esta conversación?",
-      "options": [
-        "O senhor e a senhora",
-        "Tu e você",
-        "Ele e ela",
-        "Você e a gente"
-      ],
-      "answer": "Tu e você"
-    },
-    "audio": {
-      "br": {
-        "hash": "bac7fa66420826e51789b397f814c265e720bee5ad02ba4dd0ed1bbff638335c",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "61b61059eb07a4ac5019365e52efb5f83efd9fa1ab45bded6765cb945cd4c0e4",
-        "voice": "Portuguese_Wiselady"
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "Olá, meu amigo! Tudo bem? Vamos combinar de sair amanhã, está bem?",
+        "question": "¿Qué pronombres de tratamiento se usan en esta conversación?",
+        "options": [
+          "O senhor e a senhora",
+          "Tu e você",
+          "Ele e ela",
+          "Você e a gente"
+        ],
+        "answer": "Tu e você"
       }
     }
   },
@@ -1580,12 +1652,6 @@
     ],
     "contentHash": "85e396b1516d5c0ba07e3be23b1c1b5dc7eaa32a10691cb3d562e032865d0e5a",
     "esContrast": "Lo que en España/Portugal es 'cola', en Brasil se dice 'fila'.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Qué significa 'bicha' en Brasil y en Portugal?",
-      "back": "🇧🇷 Brasil: 'bicha' es una insulto homofóbico (despectivo). 🇵🇹 Portugal: 'bicha' significa 'fila/cola'.",
-      "example": "PT: «Estava uma bicha enorme na bilheteira.» BR: Evita su uso por ser ofensivo."
-    },
     "audio": {
       "br": {
         "hash": "217ddf839d34440f69ee5bd8d702ef9d859192df1009d645af119e67c6e3344a",
@@ -1595,6 +1661,12 @@
         "hash": "c8efb12a5dec52fc104a01a359b726b7adc367ce48bb40b83b6faa243f7058d3",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Qué significa 'bicha' en Brasil y en Portugal?",
+      "back": "🇧🇷 Brasil: 'bicha' es una insulto homofóbico (despectivo). 🇵🇹 Portugal: 'bicha' significa 'fila/cola'.",
+      "example": "PT: «Estava uma bicha enorme na bilheteira.» BR: Evita su uso por ser ofensivo."
     }
   },
   {
@@ -1611,23 +1683,6 @@
     ],
     "contentHash": "882baba345dcec3f905cda3dd80695ae214daf55799a5ab040b4212e27aba492",
     "esContrast": "En Portugal 'bicha' es la fila; en Brasil se dice 'fila' o 'fila de espera'.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Fiz bicha para pagar a conta do restaurante.",
-      "target": "Hice cola para pagar la cuenta del restaurante.",
-      "acceptedAlternatives": [
-        "Me puse en la fila",
-        "Hice fila"
-      ]
-    },
-    "ptOverrides": {
-      "source": "Fiz bicha para pagar a conta do restaurante.",
-      "target": "Hice cola para pagar la cuenta del restaurante.",
-      "acceptedAlternatives": [
-        "Me puse en la fila",
-        "Hice fila"
-      ]
-    },
     "audio": {
       "br": {
         "hash": "2911c110631b408a870aa803ba7741069d22655a70f01ea2d853543049de7573",
@@ -1636,6 +1691,27 @@
       "pt": {
         "hash": "c55763a38908739ad00038baf342a8a88b2ff18fb5fae10c294e89fe10b22d8d",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Fiz bicha para pagar a conta do restaurante.",
+      "target": "Hice cola para pagar la cuenta del restaurante.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Me puse en la fila",
+        "Hice fila"
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "source": "Fiz bicha para pagar a conta do restaurante.",
+        "target": "Hice cola para pagar la cuenta del restaurante.",
+        "acceptedAlternatives": [
+          "Me puse en la fila",
+          "Hice fila"
+        ]
       }
     }
   },
@@ -1652,15 +1728,6 @@
     ],
     "contentHash": "887c4692d9dc76e0f635e30d4b7831adb935e0960f411702dcc23e6fdaca7af9",
     "esContrast": "En PT formal se evita 'usted' (você); se usa construcciones impersonales o 'a direção' como sujeto.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Venho informar que o projeto foi aprovado pela direção.",
-      "target": "Me permito informar que el proyecto fue aprobado por la dirección.",
-      "acceptedAlternatives": [
-        "Informo que o projeto foi aprovado pela direção.",
-        "Cabe-me informar que o projeto foi aprovado."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "ef06386506b6a2ee33a9103bdc37ac643e6a6e363a2d217433cf1de72ba49a63",
@@ -1670,6 +1737,17 @@
         "hash": "844c5dbaac09bf13259b35a719a1cd7cfb7c2660b7bb60d2ee712c5a81f8e4c6",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Venho informar que o projeto foi aprovado pela direção.",
+      "target": "Me permito informar que el proyecto fue aprobado por la dirección.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Informo que o projeto foi aprovado pela direção.",
+        "Cabe-me informar que o projeto foi aprovado."
+      ]
     }
   },
   {
@@ -1682,12 +1760,6 @@
     ],
     "tags": [],
     "contentHash": "8889b3d1e846f352d7de6ba766f613826b9c183fe74caea53cfcc36d2c9dd4cb",
-    "type": "flashcard",
-    "data": {
-      "front": "Expresión formal para iniciar una carta o e-mail ('Estimado/a...')",
-      "back": "Prezado(a) / Caro(a)",
-      "example": "Prezado Senhor Silva, (= Estimado Señor Silva,)"
-    },
     "audio": {
       "br": {
         "hash": "4d3b27d2b7ef29b047de0d1a48bfe68ee41c25386313f98c5b0644c83ea68c19",
@@ -1697,6 +1769,12 @@
         "hash": "b8b51b5fd636ffd1447a365215a6074a3bfb6002563624a9cce38194acd2d75f",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Expresión formal para iniciar una carta o e-mail ('Estimado/a...')",
+      "back": "Prezado(a) / Caro(a)",
+      "example": "Prezado Senhor Silva, (= Estimado Señor Silva,)"
     }
   },
   {
@@ -1803,17 +1881,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Eu não ___ onde deixei as chaves do carro.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "acho",
-          "alternatives": [
-            "encontro"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Eu não ___ onde deixei as chaves do carro.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "acho",
+            "alternatives": [
+              "encontro"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -1828,15 +1908,6 @@
       "regional"
     ],
     "contentHash": "9c8f5ab67bf46a26ea7606a6a7cce8c1b0dfae961549d1aceeb484eb82d9ff44",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo se dice 'gorro' en Portugal? ¿Y 'bufanda'?",
-      "back": "🇵🇹 PT: 'gorro' (gorro); 'cachecol' (bufanda). 🇧🇷 BR: 'boné' (gorra), 'bufanda' o 'cachecol'.",
-      "example": "Compro um gorro e um cachecol em Lisboa."
-    },
-    "ptOverrides": {
-      "back": "🇵🇹 PT: 'gorro' (gorro); 'cachecol' (bufanda). 🇧🇷 BR: boné, bufanda."
-    },
     "audio": {
       "br": {
         "hash": "4af2d8b4790668f265d6164836b41178dbb4eea98fb9e302f124ba7935a61a9d",
@@ -1845,6 +1916,17 @@
       "pt": {
         "hash": "3fba871eb196bfe9bd0f3f4305a7ce2a8acaded90ab18641fac07d7950fd851d",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo se dice 'gorro' en Portugal? ¿Y 'bufanda'?",
+      "back": "🇵🇹 PT: 'gorro' (gorro); 'cachecol' (bufanda). 🇧🇷 BR: 'boné' (gorra), 'bufanda' o 'cachecol'.",
+      "example": "Compro um gorro e um cachecol em Lisboa."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "🇵🇹 PT: 'gorro' (gorro); 'cachecol' (bufanda). 🇧🇷 BR: boné, bufanda."
       }
     }
   },
@@ -1888,20 +1970,6 @@
     ],
     "contentHash": "a120b356144309702debf72753d3a2418fe66918268e415035e4c0775526d55c",
     "esContrast": "«Saudade» en PT-BR se usa con artículo femenino (a saudade); en PT-PT puede variar su género.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "La saudade de Brasil es diferente de la saudade portuguesa.",
-      "target": "A saudade do Brasil é diferente da saudade portuguesa.",
-      "acceptedAlternatives": [
-        "A saudade brasileira é diferente da portuguesa."
-      ]
-    },
-    "ptOverrides": {
-      "target": "A saudade brasileira é diferente da portuguesa.",
-      "acceptedAlternatives": [
-        "A saudade do Brasil é diferente da portuguesa."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "c00bc75b6d8a7353c238ed85360543cda4878897cdb89eb1d5bfb43874deeffc",
@@ -1910,6 +1978,24 @@
       "pt": {
         "hash": "367470e06b4987a56a39670863c1e8ee9ad2ab43926287772615815c906709b4",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "La saudade de Brasil es diferente de la saudade portuguesa.",
+      "target": "A saudade do Brasil é diferente da saudade portuguesa.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "A saudade brasileira é diferente da portuguesa."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "A saudade brasileira é diferente da portuguesa.",
+        "acceptedAlternatives": [
+          "A saudade do Brasil é diferente da portuguesa."
+        ]
       }
     }
   },
@@ -1926,20 +2012,6 @@
     ],
     "contentHash": "a2541a1fcabcb8d02bea85cb1c7adbba884fdfec4414deaf41ff416bf6bd74bc",
     "esContrast": "«Correio(s)» en BR se pluraliza más; en PT-PT se usa «correio» o «correios» indistintamente.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Voy al correo a enviar un paquete certificado.",
-      "target": "Vou ao correio enviar uma encomenda registrada.",
-      "acceptedAlternatives": [
-        "Vou aos correios enviar uma encomenda registrada."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Vou aos correios enviar uma encomenda registada.",
-      "acceptedAlternatives": [
-        "Vou ao correio enviar uma encomenda registada."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "b68ae464e7cd963401d2c9818da143bfd4d6818ef35402dbf3ad13410248ca10",
@@ -1948,6 +2020,24 @@
       "pt": {
         "hash": "7741a756a8f7bb8cb7dd33abf73f027824a8cab6be1a52787ad395976cd50b85",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Voy al correo a enviar un paquete certificado.",
+      "target": "Vou ao correio enviar uma encomenda registrada.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Vou aos correios enviar uma encomenda registrada."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Vou aos correios enviar uma encomenda registada.",
+        "acceptedAlternatives": [
+          "Vou ao correio enviar uma encomenda registada."
+        ]
       }
     }
   },
@@ -1965,20 +2055,6 @@
     ],
     "contentHash": "a32d2dc4497c86693c0e3a2448093b9eb19b7d814fd25d83fddf9a0be857ae7a",
     "esContrast": "En PT-PT 'correio' abarca todo el servicio postal; en BR también se usa 'correios'.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Mandei uma carta pelo correio normal.",
-      "target": "Envíe una carta por correo ordinario.",
-      "acceptedAlternatives": [
-        "Envíe una carta por correo normal."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Envíe una carta por correo normal.",
-      "acceptedAlternatives": [
-        "Envíe una carta por correo normal."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "44811bfb3ba807be13b14464c55b504ec469f545dc79de61889d72e78e5a11b4",
@@ -1987,6 +2063,24 @@
       "pt": {
         "hash": "8de087eaa837ef20c261af821f3616c59050190edf6166eee0aca68aaa287d30",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Mandei uma carta pelo correio normal.",
+      "target": "Envíe una carta por correo ordinario.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Envíe una carta por correo normal."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Envíe una carta por correo normal.",
+        "acceptedAlternatives": [
+          "Envíe una carta por correo normal."
+        ]
       }
     }
   },
@@ -2016,17 +2110,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "A norma culta escrita em Portugal e no Brasil ___ em aspetos gramaticais.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "diferem",
-          "alternatives": [
-            "divergem"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "A norma culta escrita em Portugal e no Brasil ___ em aspetos gramaticais.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "diferem",
+            "alternatives": [
+              "divergem"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -2044,15 +2140,6 @@
     ],
     "contentHash": "a398e02b1fb7e055090fb7f0fb63b0bf53bb53932aebd629e1e2be004b9ed41b",
     "esContrast": "'V. Exa.' = 'Vuestra Excelencia' es archaic en español moderno; en PT aún se usa en registros muy formales.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Venho por este meio informar V. Exa. de que a reunião foi adiada.",
-      "target": "Por la presente informo a V.E. de que la reunión ha sido pospuesta.",
-      "acceptedAlternatives": [
-        "Les informo por este medio de que la reunión fue postergada.",
-        "Por la presente, informo a usted de que la reunión fue aplazada."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "f19d19e80fe05b5276841e9b4571acbebaa344cf71990f4e91b1ac5e2ca8d70e",
@@ -2062,6 +2149,17 @@
         "hash": "32d2e0fee6cc2e33051738ddf88fed7caeb270cae733cdd1373aa4d88394732b",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Venho por este meio informar V. Exa. de que a reunião foi adiada.",
+      "target": "Por la presente informo a V.E. de que la reunión ha sido pospuesta.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Les informo por este medio de que la reunión fue postergada.",
+        "Por la presente, informo a usted de que la reunión fue aplazada."
+      ]
     }
   },
   {
@@ -2078,18 +2176,6 @@
     ],
     "contentHash": "a3b9c99389370b3099713adbb443b9c074e30f3cdb84153e422a7fbfb6e454b7",
     "esContrast": "'Fala-me' usa 'me' enclítico; en BR puede ser más natural 'Me fala' en contexto informal.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Fala-me quando puderes, preciso de falar contigo.",
-      "target": "Háblame cuando puedas, necesito hablar contigo.",
-      "acceptedAlternatives": [
-        "Me fala quando der, preciso te falar.",
-        "Contacta-me quando puderes, preciso falar contigo."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Fala comigo quando puderes, preciso falar contigo."
-    },
     "audio": {
       "br": {
         "hash": "989163eddf978152eeb2c481e948a85a4f54054b738a778fe13b377ad3f2c94a",
@@ -2098,6 +2184,22 @@
       "pt": {
         "hash": "fb45dd48a89a7551396dbe86f99f1b71a746ab8c4fda3eac9a3a562173065cc5",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Fala-me quando puderes, preciso de falar contigo.",
+      "target": "Háblame cuando puedas, necesito hablar contigo.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Me fala quando der, preciso te falar.",
+        "Contacta-me quando puderes, preciso falar contigo."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Fala comigo quando puderes, preciso falar contigo."
       }
     }
   },
@@ -2128,17 +2230,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "No meu ___ , essa é a melhor opção.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "entender",
-          "alternatives": [
-            "ver"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "No meu ___ , essa é a melhor opção.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "entender",
+            "alternatives": [
+              "ver"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -2155,15 +2259,6 @@
     ],
     "contentHash": "ab7799059fc1bc54c71201c0b880869dc116445b03d1f2603aa79ee8017d68bb",
     "esContrast": "'Saudade' es un concepto portugués sin equivalente exacto en español.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "A saudade que sinto de Portugal é impossível de descrever.",
-      "target": "La saudade que siento de Portugal es imposible de describir.",
-      "acceptedAlternatives": [
-        "La añoranza que siento de Portugal",
-        "La nostalgia que siento de Portugal"
-      ]
-    },
     "audio": {
       "br": {
         "hash": "61a3b41acd4b21780bdc3ab05aec1e4a0e6d976ce74877e33ee75b3f2011164c",
@@ -2173,6 +2268,17 @@
         "hash": "02ff575fa4dbc1d5260ed1f8a35ea286de62ef4bb3f079873b34db55c9648dc6",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "A saudade que sinto de Portugal é impossível de descrever.",
+      "target": "La saudade que siento de Portugal es imposible de describir.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "La añoranza que siento de Portugal",
+        "La nostalgia que siento de Portugal"
+      ]
     }
   },
   {
@@ -2188,12 +2294,6 @@
     ],
     "contentHash": "ac328f9f6712910c138642fa4240b153dac17e23f242d748119d73141d672e26",
     "esContrast": "En español 'el abajo firmante' se usa en documentos oficiales; en PT-BR es similar",
-    "type": "flashcard",
-    "data": {
-      "front": "Fórmula de cortesía para referirse a sí mismo en e-mails formales (= 'el abajo firmante')",
-      "back": "o abaixo-assinado / Eu, abaixo-assinado",
-      "example": "Eu, abaixo-assinado, declaro que... (= Yo, el abajo firmante, declaro que...)"
-    },
     "audio": {
       "br": {
         "hash": "f3adcd32752e5ae0e6ef57f742cfb0685c24caed28c2929444c53348637bd547",
@@ -2203,6 +2303,12 @@
         "hash": "fcef8c71b408caf2ce6f6516ac51728100c9be68d73a5250ebf990ecb791cbe0",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Fórmula de cortesía para referirse a sí mismo en e-mails formales (= 'el abajo firmante')",
+      "back": "o abaixo-assinado / Eu, abaixo-assinado",
+      "example": "Eu, abaixo-assinado, declaro que... (= Yo, el abajo firmante, declaro que...)"
     }
   },
   {
@@ -2219,6 +2325,16 @@
     ],
     "contentHash": "ad73147808b9998c39747275d0fc42071326f860de76fa2bd3da999e20c9fec2",
     "esContrast": "'Prezado' significa 'querido' en PT formal, no 'preocupado' como podría pensar un hispanohablante.",
+    "audio": {
+      "br": {
+        "hash": "020e1b4b599ed9fe31d522dc23794cc7c478419f638b9889c7705e2587be8923",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "7c493e50f71db3b893d63b4de14185cf80d5c3fbf73f302259ca24cd7e979873",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Prezado cliente, agradecemos o seu contacto. Responderemos em breve.",
@@ -2230,16 +2346,6 @@
         "Falow + abs"
       ],
       "answer": "Prezado + cliente"
-    },
-    "audio": {
-      "br": {
-        "hash": "020e1b4b599ed9fe31d522dc23794cc7c478419f638b9889c7705e2587be8923",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "7c493e50f71db3b893d63b4de14185cf80d5c3fbf73f302259ca24cd7e979873",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -2252,16 +2358,6 @@
     ],
     "tags": [],
     "contentHash": "addaefb6765f27d5bed4802ea9905e17af7389f06df0ad8421ae301b44682631",
-    "type": "flashcard",
-    "data": {
-      "front": "Saludo informal usado en Brasil (equivalente a 'hola')",
-      "back": "oi",
-      "example": "Oi, tudo bem? (= ¡Hola! ¿Qué tal?)"
-    },
-    "ptOverrides": {
-      "back": "olá / oi",
-      "example": "Olá, como está?"
-    },
     "audio": {
       "br": {
         "hash": "f422ce649c7c4d962e7486ce18bbe2726a9631609a59f238e835466dbe31567f",
@@ -2270,6 +2366,18 @@
       "pt": {
         "hash": "287d3ed70ee446627e9a6a7bec426170fdcad716d7866312ac7e6319d8dc7424",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Saludo informal usado en Brasil (equivalente a 'hola')",
+      "back": "oi",
+      "example": "Oi, tudo bem? (= ¡Hola! ¿Qué tal?)"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "olá / oi",
+        "example": "Olá, como está?"
       }
     }
   },
@@ -2285,12 +2393,6 @@
       "irregular"
     ],
     "contentHash": "b21f2d271203cd1b0e3c6c761def80cf29acd3e38ee7beb2a61bc60b2c61804f",
-    "type": "flashcard",
-    "data": {
-      "front": "Completa: 'As duas cidades ___ em contacto desde 1990.'",
-      "back": "As duas cidades manteram-se em contacto desde 1990. / 🇧🇷 BR: se mantiveram em contato.",
-      "example": "Continuaram correspondendo-se durante anos."
-    },
     "audio": {
       "br": {
         "hash": "eeb89f5b385eedb93f9673d5aec4b9f79816b942507b7c7318a8094b528c96f7",
@@ -2300,6 +2402,12 @@
         "hash": "b4d635bd0fd06c642eb3111953126c2fa6350e06dd506cba0a4a445854eb451a",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Completa: 'As duas cidades ___ em contacto desde 1990.'",
+      "back": "As duas cidades manteram-se em contacto desde 1990. / 🇧🇷 BR: se mantiveram em contato.",
+      "example": "Continuaram correspondendo-se durante anos."
     }
   },
   {
@@ -2314,12 +2422,6 @@
       "regional"
     ],
     "contentHash": "b52a9cd2732f88a5cccfba39df9b1fa0296543dd4608e10c14b78d9c018ccd36",
-    "type": "flashcard",
-    "data": {
-      "front": "Traduce al BR: 'Fui aos correios enviar uma carta.'",
-      "back": "Fui ao correio enviar uma carta. / Fui na agência dos correios enviar uma carta.",
-      "example": "No Brasil se usa 'correio' en singular o 'agência dos correios'; en PT se dice 'correios'."
-    },
     "audio": {
       "br": {
         "hash": "2bc5b5e0a55eb19c0a9345f11bd23be33d0ab8761d7bf18256a3d3db753c5718",
@@ -2329,6 +2431,12 @@
         "hash": "8e37fed8351887419f62dfb60e5b378b35a4013ed981ab4e1dc25cde3901f86b",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Traduce al BR: 'Fui aos correios enviar uma carta.'",
+      "back": "Fui ao correio enviar uma carta. / Fui na agência dos correios enviar uma carta.",
+      "example": "No Brasil se usa 'correio' en singular o 'agência dos correios'; en PT se dice 'correios'."
     }
   },
   {
@@ -2357,17 +2465,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Pode ___-me o favor de me dizer as horas?",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "fazer",
-          "alternatives": [
-            "dar"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Pode ___-me o favor de me dizer as horas?",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "fazer",
+            "alternatives": [
+              "dar"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -2384,12 +2494,6 @@
     ],
     "contentHash": "b82835d629ed7fea48a8c750ed6393f0a8da071502af12aa3df36c9014910a86",
     "esContrast": "En español 'soledad' no transmite el mismo matiz emocional que 'saudade' tiene en portugués.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Qué es 'saudade' y en qué variante se usa más intensamente?",
-      "back": "Saudade é um sentimento de nostalgia e longing por algo ou alguém ausente. É mais valorizado culturalmente no Brasil e Portugal, mas é central na cultura portuguesa.",
-      "example": "Tenho saudade da minha avó."
-    },
     "audio": {
       "br": {
         "hash": "f1b4980f96efa129944492ae8a1f2f96b80894f1df0c95b52330fa064c6f71d7",
@@ -2399,6 +2503,12 @@
         "hash": "a274047b1e0e88b883a6e1d66391a67bb64e1253f09fd43aeb941f8d35e04358",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Qué es 'saudade' y en qué variante se usa más intensamente?",
+      "back": "Saudade é um sentimento de nostalgia e longing por algo ou alguém ausente. É mais valorizado culturalmente no Brasil e Portugal, mas é central na cultura portuguesa.",
+      "example": "Tenho saudade da minha avó."
     }
   },
   {
@@ -2413,15 +2523,6 @@
       "regional"
     ],
     "contentHash": "ba018be3e2b8ce860ea21f51fb6e3b639557a349acef0733fe4cdf0d94899243",
-    "type": "flashcard",
-    "data": {
-      "front": "Léxico diatópico: 'pastel' en Brasil vs. Portugal",
-      "back": "🇧🇷 BR: 'pastel' = empanada frita rellena (pastel de Belém es portugués); 'pastel de vento' = cruasan. 🇵🇹 PT: 'pastel' se refiere a pasteles en general.",
-      "example": "BR: «Vou comer um pastel de queijo na padaria.» PT: «Quero um pastel de nata.»"
-    },
-    "ptOverrides": {
-      "back": "🇧🇷 BR: 'pastel' = empanada frita. 🇵🇹 PT: pastel de Belém, pastel de nata."
-    },
     "audio": {
       "br": {
         "hash": "b6eaf894d9f8ef52fadbb3a7e31b6991950ea873c0bec22e06cca47d717d98b2",
@@ -2430,6 +2531,17 @@
       "pt": {
         "hash": "abf6843eca919b760d94369381b363a12a0cb26bb4de440c4b3d2e55e7a85f93",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Léxico diatópico: 'pastel' en Brasil vs. Portugal",
+      "back": "🇧🇷 BR: 'pastel' = empanada frita rellena (pastel de Belém es portugués); 'pastel de vento' = cruasan. 🇵🇹 PT: 'pastel' se refiere a pasteles en general.",
+      "example": "BR: «Vou comer um pastel de queijo na padaria.» PT: «Quero um pastel de nata.»"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "🇧🇷 BR: 'pastel' = empanada frita. 🇵🇹 PT: pastel de Belém, pastel de nata."
       }
     }
   },
@@ -2460,17 +2572,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "___ senhor, poderia dar-me essa informação?",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "O",
-          "alternatives": [
-            "Senhor"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "___ senhor, poderia dar-me essa informação?",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "O",
+            "alternatives": [
+              "Senhor"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -2487,15 +2601,6 @@
     ],
     "contentHash": "c0623917401ee8d0a6e05fad6bdef16c338560681bcf976a0cab1490ee211d53",
     "esContrast": "'Fixe' es argot PT (cool/guay); no confundir con 'fijo'. 'Vocês' en PT se usa más que en BR.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Abraço grande para a equipa, vocês são fixe!",
-      "target": "Un abrazo fuerte para el equipo, ¡sois geniales!",
-      "acceptedAlternatives": [
-        "Um abraço grande para a equipa, vocês são fixe!",
-        "Abraço para o pessoal, vocês são demais!"
-      ]
-    },
     "audio": {
       "br": {
         "hash": "fe411f942e448f00d661880d63a4e806c4e9f51dba180e350eb0e06b8584ba9b",
@@ -2505,6 +2610,17 @@
         "hash": "6a09426c62dbaaf6879ff6b98da65c05c679df07c6570e6cc258a5b0ae0c6c5e",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Abraço grande para a equipa, vocês são fixe!",
+      "target": "Un abrazo fuerte para el equipo, ¡sois geniales!",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Um abraço grande para a equipa, vocês são fixe!",
+        "Abraço para o pessoal, vocês são demais!"
+      ]
     }
   },
   {
@@ -2546,12 +2662,6 @@
       "regional"
     ],
     "contentHash": "c2858eb6c23e1391388b5b00310b1bf02d85760e7c3dd88b2a54916ae3a0f1ed",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Qué es la 'norma culta' en relación con la variación diatópica?",
-      "back": "La norma culta es el estándar formal del idioma usado en medios de comunicación, documentos oficiales y educación. Coincide más entre BR y PT que el uso coloquial, pero aún hay diferencias léxicas y gramaticales.",
-      "example": "En textos escritos formales, BR y PT se entienden fácilmente; en conversación coloquial, las diferencias son mayores."
-    },
     "audio": {
       "br": {
         "hash": "5bf458c5c8bc3440775191b084ba91f07dd1f10f7f36cb3691070e596c7a7f63",
@@ -2561,6 +2671,12 @@
         "hash": "511eda22f2b3d0db2496c2d1a0c081fdb4744404b5645fd57a5203f4201edbd4",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Qué es la 'norma culta' en relación con la variación diatópica?",
+      "back": "La norma culta es el estándar formal del idioma usado en medios de comunicación, documentos oficiales y educación. Coincide más entre BR y PT que el uso coloquial, pero aún hay diferencias léxicas y gramaticales.",
+      "example": "En textos escritos formales, BR y PT se entienden fácilmente; en conversación coloquial, las diferencias son mayores."
     }
   },
   {
@@ -2590,17 +2706,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "O serviço de ___ em Portugal é muito eficiente.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "correio",
-          "alternatives": [
-            "correios"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "O serviço de ___ em Portugal é muito eficiente.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "correio",
+            "alternatives": [
+              "correios"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -2616,16 +2734,6 @@
     ],
     "contentHash": "c398eb394178813b13db85a7266b182016fdf52f5e18cc109d044cfe4203b99c",
     "esContrast": "En PT-BR se escribe 'afecto' igual que en español, pero en PT-PT cambia a 'afeto'",
-    "type": "flashcard",
-    "data": {
-      "front": "Palabra para 'afecto, cariño' en PT-BR",
-      "back": "afecto",
-      "example": "Ela tem muito afecto pelos alunos."
-    },
-    "ptOverrides": {
-      "back": "afecto / afeto",
-      "example": "Ela tem muito afeto pelos alunos."
-    },
     "audio": {
       "br": {
         "hash": "3ef4ed670fc3b9677c6259f343d3dd7887a2abdfe60d98103288fc1a0be758d5",
@@ -2634,6 +2742,18 @@
       "pt": {
         "hash": "fce994751be9d79e44c7825f12eea39af079dd1bac333082bddd10af9580093d",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Palabra para 'afecto, cariño' en PT-BR",
+      "back": "afecto",
+      "example": "Ela tem muito afecto pelos alunos."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "afecto / afeto",
+        "example": "Ela tem muito afeto pelos alunos."
       }
     }
   },
@@ -2650,12 +2770,6 @@
     ],
     "contentHash": "ca1b64bc1c8f00e28194d8e81a4a080025c6ae54188d599f010a755eadcf081b",
     "esContrast": "En portugués significa 'saludos', no 'cumplidos' como en español (elogios = elogios)",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo se dice 'cumplidos' en portugués (referido a saludos)?",
-      "back": "cumprimentos",
-      "example": "Enviei-lhe os meus cumprimentos. (= Le envié mis saludos)"
-    },
     "audio": {
       "br": {
         "hash": "a4a56952abc4dbfe09a60fb8122a5ef9d001b7d4b6193efa6775309fc4b71181",
@@ -2665,6 +2779,12 @@
         "hash": "14a6b36ca32da779de4521fb1b680bf8959165902942c3a287193b9b2c8ece6c",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo se dice 'cumplidos' en portugués (referido a saludos)?",
+      "back": "cumprimentos",
+      "example": "Enviei-lhe os meus cumprimentos. (= Le envié mis saludos)"
     }
   },
   {
@@ -2682,15 +2802,6 @@
     ],
     "contentHash": "cba7cf71031bf9f05fd28ea7fc4e4903480bdd5f1a5759792c5684df76595eaa",
     "esContrast": "'Vocês' = 'ustedes' (español), NO 'vocés'. Es falso amigo: PT 'vocês' = 3ª persona, no 2ª plural coloquial.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Vocês podem me ajudar com isso?",
-      "target": "¿Ustedes pueden ayudarme con eso?",
-      "acceptedAlternatives": [
-        "¿Podéis ayudarme con eso?",
-        "¿Podeis ayudarme con eso?"
-      ]
-    },
     "audio": {
       "br": {
         "hash": "82dca1ca7f64301cf381b9c58734d0a533cb7238cf7cb611a3241b8bb59c4da4",
@@ -2700,6 +2811,17 @@
         "hash": "2309e4f0e6441a004b7475f147140f0fd8fc7afb00e54621b70159068f39a4e0",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Vocês podem me ajudar com isso?",
+      "target": "¿Ustedes pueden ayudarme con eso?",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "¿Podéis ayudarme con eso?",
+        "¿Podeis ayudarme con eso?"
+      ]
     }
   },
   {
@@ -2729,17 +2851,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Madeira e Açores ___ variantes dialectais próprias dentro do português europeu.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "possuem",
-          "alternatives": [
-            "têm"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Madeira e Açores ___ variantes dialectais próprias dentro do português europeu.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "possuem",
+            "alternatives": [
+              "têm"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -2756,15 +2880,6 @@
     ],
     "contentHash": "ce4df185d095dbd945c332276fb8bc06f04b1c0e6427930493f8b4c3343de5f7",
     "esContrast": "'Afecto' en PT significa 'cariño'; en español es menos común y suena más frío o formal.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Minha filha, quero te dar um abraço com muito afecto.",
-      "target": "Hija mía, quiero darte un abrazo con mucho cariño.",
-      "acceptedAlternatives": [
-        "Hija mía, quiero darte un abrazo con mucho afecto.",
-        "Hija querida, quiero darte un abrazo con mucho cariño."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "15ad22799fc01bcf3e5f6e3317bc064c84071f9cb0ea48f2e4146295a0b974b3",
@@ -2774,6 +2889,17 @@
         "hash": "3840b534b92bbfc0babd4f8a13a2ae5b50e6559dd95d9b22108bb1a265e24db8",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Minha filha, quero te dar um abraço com muito afecto.",
+      "target": "Hija mía, quiero darte un abrazo con mucho cariño.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Hija mía, quiero darte un abrazo con mucho afecto.",
+        "Hija querida, quiero darte un abrazo con mucho cariño."
+      ]
     }
   },
   {
@@ -2803,18 +2929,20 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Caro ___ , Encaminho a presente mensagem para solicitar informações.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "cliente",
-          "alternatives": [
-            "senhor",
-            "amigo"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Caro ___ , Encaminho a presente mensagem para solicitar informações.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "cliente",
+            "alternatives": [
+              "senhor",
+              "amigo"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -2830,15 +2958,6 @@
     ],
     "contentHash": "d5cf7fdfa3cea9f281bffea13625c50e306c5e9d1494f10e1ae6812eb314fdb0",
     "esContrast": "'Cumprimentos' en PT es 'saludos', no confundir con 'felicitaciones'.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Com os meus cumprimentos cordiais, Maria.",
-      "target": "Reciba mis cordiales saludos, María.",
-      "acceptedAlternatives": [
-        "Atentamente, Maria.",
-        "Com cordial abraço, Maria."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "c4f9632259b7967288db23e5ef2cec212870cccddc15815bdbbbe4b9e162245d",
@@ -2848,6 +2967,17 @@
         "hash": "cfd86b54b2f958556c2b5d30eface6bad25cdf31cfca5c2e9cb3d627da9d42ac",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Com os meus cumprimentos cordiais, Maria.",
+      "target": "Reciba mis cordiales saludos, María.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Atentamente, Maria.",
+        "Com cordial abraço, Maria."
+      ]
     }
   },
   {
@@ -2862,12 +2992,6 @@
       "regional"
     ],
     "contentHash": "d84dde46fc35410037ae0e72825d2d369a4c74c9f3fba62788a942948b6c3510",
-    "type": "flashcard",
-    "data": {
-      "front": "Léxico diatópico: ¿qué significa 'freguês' en Portugal?",
-      "back": "🇵🇹 PT: 'freguês' = 'cliente habitual' de una tienda o restaurante. 🇧🇷 BR: se dice 'freguês' también, pero 'cliente' es más común.",
-      "example": "«O freguês do café da esquina já conhece todos os empregados.»"
-    },
     "audio": {
       "br": {
         "hash": "6d602df74f702698b7ffe844846fc0eb327f92468487b9c1a8b0ec13ef5b05c5",
@@ -2877,6 +3001,12 @@
         "hash": "9253c6f0b2bffa31a6fe0d2f84af3e8f33b983003ebe3988f16409108cfda935",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Léxico diatópico: ¿qué significa 'freguês' en Portugal?",
+      "back": "🇵🇹 PT: 'freguês' = 'cliente habitual' de una tienda o restaurante. 🇧🇷 BR: se dice 'freguês' también, pero 'cliente' es más común.",
+      "example": "«O freguês do café da esquina já conhece todos os empregados.»"
     }
   },
   {
@@ -2890,12 +3020,6 @@
     "tags": [],
     "contentHash": "de4c58caf40eef43575c5d576ff75f99c3d628ca3a7aa568c096dd70665b015d",
     "esContrast": "En español 'registro' funciona igual; ambos idiomas usan este término en sociolingüística",
-    "type": "flashcard",
-    "data": {
-      "front": "Término para 'registro' en el contexto lingüístico de formalidad",
-      "back": "registro formal / registro informal",
-      "example": "Devemos adaptar o nosso registro conforme o interlocutor."
-    },
     "audio": {
       "br": {
         "hash": "8c703651fdd4b1c76558fe15b6edd225a845bdf2022ad9a976746c4e4d48caea",
@@ -2905,6 +3029,12 @@
         "hash": "cdce8fedb0daa218383b2cf225665b46617d2db7e74b0499e08b3a34e66ef314",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Término para 'registro' en el contexto lingüístico de formalidad",
+      "back": "registro formal / registro informal",
+      "example": "Devemos adaptar o nosso registro conforme o interlocutor."
     }
   },
   {
@@ -2917,12 +3047,6 @@
     ],
     "tags": [],
     "contentHash": "dfe63849578c8a46d90021e2bba47785ffce3dae366cfca3a4fc50df18561f08",
-    "type": "flashcard",
-    "data": {
-      "front": "Cierre formal para e-mails profesionales ('Atentamente')",
-      "back": "Atenciosamente / Cumprimentos cordiais",
-      "example": "Atenciosamente, João Silva."
-    },
     "audio": {
       "br": {
         "hash": "23963080e85ad9c913041d68bab35986baf0a1c05b1ef49df69572c355ae46eb",
@@ -2932,6 +3056,12 @@
         "hash": "8681ea3c340df4df02897c94120c55c1fb1a3894deacf7e23e5c69dc82b5ea64",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Cierre formal para e-mails profesionales ('Atentamente')",
+      "back": "Atenciosamente / Cumprimentos cordiais",
+      "example": "Atenciosamente, João Silva."
     }
   },
   {
@@ -2961,17 +3091,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Tive de esperar uma hora na ___ para comprar os bilhetes.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "bicha",
-          "alternatives": [
-            "fila"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Tive de esperar uma hora na ___ para comprar os bilhetes.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "bicha",
+            "alternatives": [
+              "fila"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -3001,17 +3133,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Nos Açores, o dialeto local ___ características do português antigo.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "mantém",
-          "alternatives": [
-            "conserva"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Nos Açores, o dialeto local ___ características do português antigo.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "mantém",
+            "alternatives": [
+              "conserva"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -3025,12 +3159,6 @@
     "tags": [],
     "contentHash": "e4a0e2b0caeda9a92df6bad500fe2b0e34de708ace7714adaa5acf9f10ca0918",
     "esContrast": "'Anexo' funciona igual en ambos idiomas para documentos adjuntos",
-    "type": "flashcard",
-    "data": {
-      "front": "Vocabulario de e-mail: 'archivo adjunto'",
-      "back": "anexo",
-      "example": "Segue em anexo o relatório. (= Sigo adjunta el informe / Se adjunta el informe)"
-    },
     "audio": {
       "br": {
         "hash": "9a837eae39be4dca72fb86d008cb76e30221658abf97d907b4556812b48691d1",
@@ -3040,6 +3168,12 @@
         "hash": "f9401bcf6556984d755d702e92bd2fce2f67b61e87a81a0c8284e8b8e26a74ae",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Vocabulario de e-mail: 'archivo adjunto'",
+      "back": "anexo",
+      "example": "Segue em anexo o relatório. (= Sigo adjunta el informe / Se adjunta el informe)"
     }
   },
   {
@@ -3055,20 +3189,6 @@
     ],
     "contentHash": "e70c7f5806010822609e0d63669f12d625625519bafa97511a343d4fcc462d1e",
     "esContrast": "En Portugal se escribe 'contactos'; en Brasil se prefiere 'contatos'.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Tenho muitos contactos profissionais em Lisboa.",
-      "target": "Tengo muchos contactos profesionales en Lisboa.",
-      "acceptedAlternatives": [
-        "Tengo muchos contactos profesionales en Lisboa."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Tengo muchos contactos profesionales en Lisboa.",
-      "acceptedAlternatives": [
-        "Tengo muchos contactos profesionales en Lisboa."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "06bd738ceb910a1454c7a2d4d5a79990658572d3e6b335f979d78c991202f408",
@@ -3077,6 +3197,24 @@
       "pt": {
         "hash": "297adb87159ef30a3780306e7a07ea1ac57a8d2707dfdd1034ca326c1691dd22",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Tenho muitos contactos profissionais em Lisboa.",
+      "target": "Tengo muchos contactos profesionales en Lisboa.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Tengo muchos contactos profesionales en Lisboa."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Tengo muchos contactos profesionales en Lisboa.",
+        "acceptedAlternatives": [
+          "Tengo muchos contactos profesionales en Lisboa."
+        ]
       }
     }
   },
@@ -3093,12 +3231,6 @@
     ],
     "contentHash": "ea284b97c55719577d5749acd60c1dbd5d8befe0926cc2064ec37b08144bc64d",
     "esContrast": "'Achacar' en español = 'extorsionar'. En BR se dice 'extorquir' ou 'chantagear'.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Qué significa 'achar' en portugués brasileiro?",
-      "back": "Achar significa 'creer/pensar' o 'encontrar' en PT-BR. ⚠️ NO significa 'achacar' (acosar) como en español.",
-      "example": "Eu acho que ele tem razão. / Vou achar as chaves."
-    },
     "audio": {
       "br": {
         "hash": "0353f57885ba208765ce8fdacbb9087346d268adafd6084a309cb6b2080fff25",
@@ -3108,6 +3240,12 @@
         "hash": "51d3d32cf7a0c8b22845afb29f6d9c80aa95e511f21942f299a828c59347cefa",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Qué significa 'achar' en portugués brasileiro?",
+      "back": "Achar significa 'creer/pensar' o 'encontrar' en PT-BR. ⚠️ NO significa 'achacar' (acosar) como en español.",
+      "example": "Eu acho que ele tem razão. / Vou achar as chaves."
     }
   },
   {
@@ -3123,14 +3261,6 @@
     ],
     "contentHash": "ec9d8ba5b4ebfc6d62e501134353ed78b209e4f531c0a979f5759ceae46895d4",
     "esContrast": "El verbo 'corresponder-se' se conjuga como reflexivo recíproco.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Os conceitos de família correspondem-se nos dois países.",
-      "target": "Los conceptos de familia se corresponden en los dos países.",
-      "acceptedAlternatives": [
-        "Los conceptos de familia coinciden"
-      ]
-    },
     "audio": {
       "br": {
         "hash": "72b8df41fa0fef197e8c19d91a9d4249814643f641e105151c48951c46ccdf2a",
@@ -3140,6 +3270,16 @@
         "hash": "bb9f834ce05c8fca97f7438f5832491ee963f6259b7de0346d0622c9c629f7a7",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Os conceitos de família correspondem-se nos dois países.",
+      "target": "Los conceptos de familia se corresponden en los dos países.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Los conceptos de familia coinciden"
+      ]
     }
   },
   {
@@ -3156,15 +3296,6 @@
     ],
     "contentHash": "ed7ab9b0a6e0b5a91af98a56b6b7f0af0caf73b31d506d32b12451d48e5864e0",
     "esContrast": "No traduzcas 'chica' como 'rapariga' en Brasil; puede resultar ofensivo o arcaico.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Qué significa 'rapariga' en Portugal vs. en Brasil?",
-      "back": "🇵🇹 Portugal: 'rapariga' = 'chica/chica joven'. 🇧🇷 Brasil: 'rapariga' es arcaico/vulgar (significaba 'prostituta'). En BR se dice 'menina', 'garota' o 'moça'.",
-      "example": "PT: «A rapariga ao lado estuda medicina.» BR: «A garota ao lado estuda medicina.»"
-    },
-    "ptOverrides": {
-      "back": "🇵🇹 PT: 'rapariga' = 'chica'. 🇧🇷 BR: evitar, decir 'garota' ou 'menina'."
-    },
     "audio": {
       "br": {
         "hash": "c0c1bc904808408e4fa024a28863ead0ad4d73cd7f39f3d996158dff5013ad14",
@@ -3173,6 +3304,17 @@
       "pt": {
         "hash": "474c6b1af180f48c5a429ea9f397855fc92bd473e87409abcfa24baa8314d990",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Qué significa 'rapariga' en Portugal vs. en Brasil?",
+      "back": "🇵🇹 Portugal: 'rapariga' = 'chica/chica joven'. 🇧🇷 Brasil: 'rapariga' es arcaico/vulgar (significaba 'prostituta'). En BR se dice 'menina', 'garota' o 'moça'.",
+      "example": "PT: «A rapariga ao lado estuda medicina.» BR: «A garota ao lado estuda medicina.»"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "🇵🇹 PT: 'rapariga' = 'chica'. 🇧🇷 BR: evitar, decir 'garota' ou 'menina'."
       }
     }
   },
@@ -3190,18 +3332,6 @@
     ],
     "contentHash": "ee49ed34e95d3173c75e237fbe08cdce1e34dd6bab225f458688af4389614967",
     "esContrast": "'Caro' en PT formal significa 'querido', no 'costoso'. Es un falso amigo muy común.",
-    "type": "listening",
-    "data": {
-      "audioText": "Caro director, venho por este meio solicitar uma reunião. Atenciosamente, João.",
-      "question": "¿Cuál es el错误 común que un hispanohablante cometería al traducir 'Caro director'?",
-      "options": [
-        "Traducir 'caro' como 'caro' (costoso)",
-        "Traducir 'caro' como 'querido'",
-        "Traducir 'venho' como 'vengo'",
-        "Traducir 'meio' como 'medio'"
-      ],
-      "answer": "Traducir 'caro' como 'caro' (costoso)"
-    },
     "audio": {
       "br": {
         "hash": "c746346c90431d5217f41e605edbd194bc354186a9fc097f7b33f8e4dece78be",
@@ -3211,6 +3341,18 @@
         "hash": "377a4709787eec8659186c2a84218404c8668e041d635a0968b7ea51e3170456",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "listening",
+    "data": {
+      "audioText": "Caro director, venho por este meio solicitar uma reunião. Atenciosamente, João.",
+      "question": "¿Cuál es el error común que un hispanohablante cometería al traducir 'Caro director'?",
+      "options": [
+        "Traducir 'caro' como 'caro' (costoso)",
+        "Traducir 'caro' como 'querido'",
+        "Traducir 'venho' como 'vengo'",
+        "Traducir 'meio' como 'medio'"
+      ],
+      "answer": "Traducir 'caro' como 'caro' (costoso)"
     }
   },
   {
@@ -3253,20 +3395,6 @@
     ],
     "contentHash": "f35d479ccd00ddfba18a5e5e42b5ba35b78d055b47f9238d48a53706c710c7c3",
     "esContrast": "«Contatos» en BR vs «contactos» en PT. Ambos usan «telefone», pero BR también dice «mudar de».",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Perdí todos mis contactos del trabajo cuando cambié de teléfono.",
-      "target": "Perdi todos os meus contatos do trabalho quando troquei de telefone.",
-      "acceptedAlternatives": [
-        "Perdi todos os meus contactos do trabalho quando mudei de telemóvel."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Perdi todos os meus contactos do trabalho quando mudei de telemóvel.",
-      "acceptedAlternatives": [
-        "Perdi todos os meus contatos do trabalho quando mudei de telemóvel."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "7a2ae1a86c12c736ad6b0ea20026622cf39b9fc54efd302ef215f0c47ea12240",
@@ -3275,6 +3403,24 @@
       "pt": {
         "hash": "2f69bef88ea8d8ef7f14ecc38d1307a2a11514a862137aab934887d36bead86e",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Perdí todos mis contactos del trabajo cuando cambié de teléfono.",
+      "target": "Perdi todos os meus contatos do trabalho quando troquei de telefone.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Perdi todos os meus contactos do trabalho quando mudei de telemóvel."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Perdi todos os meus contactos do trabalho quando mudei de telemóvel.",
+        "acceptedAlternatives": [
+          "Perdi todos os meus contatos do trabalho quando mudei de telemóvel."
+        ]
       }
     }
   },
@@ -3290,13 +3436,7 @@
       "irregular"
     ],
     "contentHash": "f3b0f549860a53901559585b691539cc6e037ab00d8e1ab50aba427a2be0e984",
-    "esContrast": "El pretérito 'continuaram' es третьa persona del plural del pretérito indefinido.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "As duas famílias continuaram a escrever-se durante décadas.",
-      "target": "Las dos familias continuaron escribiéndose durante décadas.",
-      "acceptedAlternatives": []
-    },
+    "esContrast": "El pretérito 'continuaram' es tercera persona del plural del pretérito indefinido.",
     "audio": {
       "br": {
         "hash": "8ea82020b8d947572f4130960c5e1fbca6ce5ff8b728202e9f0cae809802c04e",
@@ -3306,6 +3446,14 @@
         "hash": "292274bbb9a1b643193851dbb8e22ada60fde72002cc59ad2a6f891151d0aea5",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "As duas famílias continuaram a escrever-se durante décadas.",
+      "target": "Las dos familias continuaron escribiéndose durante décadas.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": []
     }
   },
   {
@@ -3322,18 +3470,6 @@
     ],
     "contentHash": "f49512eebdc25c438b4ff4468c77b50c697ea1fc189ff9240e13e1fd5eecb382",
     "esContrast": "El tratamiento 'senhor/a senhora' + título profesional marca formalidad extrema en PT-BR.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "A senhora Dra. Maria, poderia enviar o relatório por e-mail?",
-      "target": "La señora Dra. María, ¿podría enviar el informe por correo electrónico?",
-      "acceptedAlternatives": [
-        "La Dra. María, ¿podría enviar el informe por e-mail?",
-        "La señora doctora María, ¿podría enviar el informe por correo electrónico?"
-      ]
-    },
-    "ptOverrides": {
-      "target": "La señora Dra. María, ¿podría enviar el informe por correo electrónico?"
-    },
     "audio": {
       "br": {
         "hash": "bba9ab5a0d57a28be70d427e6e00782409930b57f8c67f2c037a8852f08dff61",
@@ -3342,6 +3478,22 @@
       "pt": {
         "hash": "54ce33ee9f5b2c1b891bdf29f8e29ff8b3312d5eacbbe9ebfab531d01bb5250c",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "A senhora Dra. Maria, poderia enviar o relatório por e-mail?",
+      "target": "La señora Dra. María, ¿podría enviar el informe por correo electrónico?",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "La Dra. María, ¿podría enviar el informe por e-mail?",
+        "La señora doctora María, ¿podría enviar el informe por correo electrónico?"
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "La señora Dra. María, ¿podría enviar el informe por correo electrónico?"
       }
     }
   },
@@ -3373,18 +3525,20 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Venho por este meio ___ a Vossa Senhoria sobre o assunto.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "manifestar",
-          "alternatives": [
-            "informar",
-            "contactar"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Venho por este meio ___ a Vossa Senhoria sobre o assunto.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "manifestar",
+            "alternatives": [
+              "informar",
+              "contactar"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -3398,12 +3552,6 @@
     "tags": [],
     "contentHash": "fa5682ad23f604e87b2d0ef6b6062774eb619732ce979ed6a8741d5f53d5ee22",
     "esContrast": "'Próprio' en PT puede equivaler a 'propio' o a 'mismo' según el contexto",
-    "type": "flashcard",
-    "data": {
-      "front": "Adjetivo que significa 'propio' en contextos formales ('en su propia oficina')",
-      "back": "próprio",
-      "example": "Compareça pessoalmente no nosso escritório. (= Comparezca usted mismo en nuestra oficina)"
-    },
     "audio": {
       "br": {
         "hash": "18cd470079320d213b4e617ef18185bc0fa309114527758708cd2c3192c2e7a2",
@@ -3413,6 +3561,12 @@
         "hash": "4ba9d9d3c319e4fb46aa67cc3b1e33f6eb9647d68007d1ad223a9dcab48b9a0a",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Adjetivo que significa 'propio' en contextos formales ('en su propia oficina')",
+      "back": "próprio",
+      "example": "Compareça pessoalmente no nosso escritório. (= Comparezca usted mismo en nuestra oficina)"
     }
   },
   {
@@ -3427,15 +3581,6 @@
       "regional"
     ],
     "contentHash": "fc80a43039b1a7aeba8dc69672f4627cde4c9728ea3a3134ffc30d73acbe78b9",
-    "type": "flashcard",
-    "data": {
-      "front": "Traduce al PT-PT: 'Ela gave os contactos do escritório.'",
-      "back": "Ela gave os contactos do escritório. (igual en PT-PT) / 🇧🇷 BR: Ela tem os contatos do escritório.",
-      "example": "PT-PT usa 'ct' en lugar de 'c': contactos, afectivo, corretor."
-    },
-    "ptOverrides": {
-      "back": "Ela gave os contactos do escritório. 🇧🇷 BR: contatos"
-    },
     "audio": {
       "br": {
         "hash": "43638abf4d6df1773cf66ee06ae243b59c9a4fcb4735f737a579a5ebdab36166",
@@ -3444,6 +3589,17 @@
       "pt": {
         "hash": "1f1b56f0d287ee119cf48fb9ab9032abee3961b845cb454443dd505d9ce39eb6",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Traduce al PT-PT: 'Ela gave os contactos do escritório.'",
+      "back": "Ela gave os contactos do escritório. (igual en PT-PT) / 🇧🇷 BR: Ela tem os contatos do escritório.",
+      "example": "PT-PT usa 'ct' en lugar de 'c': contactos, afectivo, corretor."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "Ela gave os contactos do escritório. 🇧🇷 BR: contatos"
       }
     }
   },
@@ -3457,12 +3613,6 @@
     ],
     "tags": [],
     "contentHash": "fd6369b546c54d6a50a232b9717c0fe35e38ad0ebf9eedc82c81d4f489d45d13",
-    "type": "flashcard",
-    "data": {
-      "front": "Cómo preguntar por contacto telefónico en contexto formal",
-      "back": "posso deixar meu telefone? / qual é o seu número?",
-      "example": "Posso deixar meu telefone para contato? (= ¿Puedo dejar mi número de contacto?)"
-    },
     "audio": {
       "br": {
         "hash": "f1fedfefc363cfc8756f9decf330d2887130eba41e39e574ad4ccdb7c909bda3",
@@ -3472,6 +3622,12 @@
         "hash": "169867ae90303e2a94a2d3bf8e2777b9fd2c5c251db692a111573fc0b9b37907",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Cómo preguntar por contacto telefónico en contexto formal",
+      "back": "posso deixar meu telefone? / qual é o seu número?",
+      "example": "Posso deixar meu telefone para contato? (= ¿Puedo dejar mi número de contacto?)"
     }
   },
   {
@@ -3487,12 +3643,6 @@
     ],
     "contentHash": "fec7c17ffc125a869469a8be56242dc4fd1eeb36b55f2a087270447127a21848",
     "esContrast": "En ES 'ustedes' es solo formal; en BR 'vocês' es igual para ambos registros (formal e informal)",
-    "type": "flashcard",
-    "data": {
-      "front": "Plural de 'você' en Brasil (= 'ustedes')",
-      "back": "vocês",
-      "example": "Vocês podem ficar à vontade. (= Ustedes pueden quedarse cómodos)"
-    },
     "audio": {
       "br": {
         "hash": "5cb57b91045174279bbac9a9cd988c6bd43087601108a526a021eec2b0073a38",
@@ -3502,6 +3652,12 @@
         "hash": "9c652964781f57fbe1ec3e76372973badd269ba691366d604d97fef995c247dc",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Plural de 'você' en Brasil (= 'ustedes')",
+      "back": "vocês",
+      "example": "Vocês podem ficar à vontade. (= Ustedes pueden quedarse cómodos)"
     }
   }
 ]

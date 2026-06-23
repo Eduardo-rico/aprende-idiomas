@@ -12,6 +12,16 @@
     ],
     "contentHash": "01b15ce8b69c2ff8113995311515b8235c6fc36817630e6f00dba177e9bc63a3",
     "esContrast": "En BR, 'r' inicial en 'rua' suena suave como /ʁ/; en PT es vibrante fuerte.",
+    "audio": {
+      "br": {
+        "hash": "f7dc30a5a7bdfbaff6c957035e9439578afc8cc6caaa08f7c38fb1d663b0af60",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "80c236a271cd9e2907ad7a5cd3cec1ae32b19c6bfe0a90c5ae0c045d10193eb4",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "A rua do meu carro fica perto da esquina. Você conhece a rua?",
@@ -24,17 +34,9 @@
       ],
       "answer": "El carro"
     },
-    "ptOverrides": {
-      "audioText": "A rua do meu carro fica perto da esquina. Você conhece a rua?"
-    },
-    "audio": {
-      "br": {
-        "hash": "f7dc30a5a7bdfbaff6c957035e9439578afc8cc6caaa08f7c38fb1d663b0af60",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "80c236a271cd9e2907ad7a5cd3cec1ae32b19c6bfe0a90c5ae0c045d10193eb4",
-        "voice": "Portuguese_Wiselady"
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "A rua do meu carro fica perto da esquina. Você conhece a rua?"
       }
     }
   },
@@ -49,12 +51,6 @@
     "tags": [],
     "contentHash": "01bc77ff7ff13a67e514c5e6e7cc558ed6a7cab5156e229e2eb83ddbba9934d2",
     "esContrast": "La 'rr' española es igual, pero en BR a veces suena más suave que en español.",
-    "type": "flashcard",
-    "data": {
-      "front": "Pronuncia: CARRO",
-      "back": "['ka.ʁu] o ['ka.hu]",
-      "example": "O carro está na garagem."
-    },
     "audio": {
       "br": {
         "hash": "755bd1673ec8b589a6b42b9068fa2957065aa675f131280f4532b67fe1495c7b",
@@ -64,6 +60,12 @@
         "hash": "5543fc7fc58c85f8a19f00bee6453eecba38e8b8b32fc2b439e0c9ed6371d1d1",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Pronuncia: CARRO",
+      "back": "['ka.ʁu] o ['ka.hu]",
+      "example": "O carro está na garagem."
     }
   },
   {
@@ -79,6 +81,16 @@
     ],
     "contentHash": "023c2c90ac15a0fa596a39cd64560f60a2a7cc3dc61b48eeff655759cc82df13",
     "esContrast": "En portugués, el nombre de la letra 'a' suena diferente que en español.",
+    "audio": {
+      "br": {
+        "hash": "f59b9a14ededc1dd329833f26abe6f0755b43bc8a6440fb6789b8a36d0be6c41",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "f40f3609285a719e10a0a9933e00c271eb14b03ff33172afe17369831cc890c5",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Meu nome começa com a letra A. Qual é a primeira letra do meu nome?",
@@ -90,16 +102,6 @@
         "O"
       ],
       "answer": "A"
-    },
-    "audio": {
-      "br": {
-        "hash": "f59b9a14ededc1dd329833f26abe6f0755b43bc8a6440fb6789b8a36d0be6c41",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "f40f3609285a719e10a0a9933e00c271eb14b03ff33172afe17369831cc890c5",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -115,14 +117,6 @@
     ],
     "contentHash": "02615cb8458ed4d5b2b1c2284000bf54384a4d3ed19ca1695dbd89a418dfd935",
     "esContrast": "'Um' nasalizado se distingue de 'uno' español. Ambas palabras tienen nasalización.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Um dos meus irmãos não come pão por causa da alergia.",
-      "target": "Uno de mis hermanos no come pan por la alergia.",
-      "acceptedAlternatives": [
-        "Uno de mis hermanos no come pan debido a la alergia."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "4402efc6619d12d39c597a186bf321c28fd07dffd0bf8197e01b3ec8ede023db",
@@ -132,6 +126,16 @@
         "hash": "eb145140f392c69f45c1cebf7821b27b34f706f60c929f980375b038ff7ae12b",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Um dos meus irmãos não come pão por causa da alergia.",
+      "target": "Uno de mis hermanos no come pan por la alergia.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Uno de mis hermanos no come pan debido a la alergia."
+      ]
     }
   },
   {
@@ -147,15 +151,6 @@
     ],
     "contentHash": "045fccecc23935a34fc874a921201bbda5c375532e2704bcd464ab7fa8e9ef88",
     "esContrast": "'difícil' es esdrújula en PT (tilde), pero grave en ES (sin tilde).",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Aquele livro é muito difícil.",
-      "target": "Aquella lectura es muy difícil.",
-      "acceptedAlternatives": [
-        "Aquella vez es muy difícil.",
-        "Ese libro es muy difícil."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "c91039d00d02f91de6659eab76364fe53262788af7d15de1ce62b47671722b44",
@@ -165,6 +160,17 @@
         "hash": "d1b05559e7c9b06d2dccc33e58234e66ffba1f790ecd8ebc7578137ee0667c2d",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Aquele livro é muito difícil.",
+      "target": "Aquella lectura es muy difícil.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Aquella vez es muy difícil.",
+        "Ese libro es muy difícil."
+      ]
     }
   },
   {
@@ -193,17 +199,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "A minha ___ cantou uma canção bonita.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "irmã",
-          "alternatives": [
-            "mãe"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "A minha ___ cantou uma canção bonita.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "irmã",
+            "alternatives": [
+              "mãe"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -220,12 +228,6 @@
     ],
     "contentHash": "0560d6c55c66d08d75ea3157b6739c12ff8b691ca020c29265859d4136b71965",
     "esContrast": "Cuidado: 'homem' suena diferente por la nasalización.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo se dice 'hombre' en portugués?",
-      "back": "homem",
-      "example": "O homem que trabalha comigo é brasileiro."
-    },
     "audio": {
       "br": {
         "hash": "fe2738374ed8efbe46d06a5f845de7c7ad4b2d0f9607e04f554f176c66cb1ea5",
@@ -235,6 +237,12 @@
         "hash": "13bba08d05d09f15b42922a0f391d793745fe9cd900ae47a7b1b523afb2fb921",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo se dice 'hombre' en portugués?",
+      "back": "homem",
+      "example": "O homem que trabalha comigo é brasileiro."
     }
   },
   {
@@ -259,15 +267,17 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "O ___ ladra à noite.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "cão",
-          "alternatives": []
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "O ___ ladra à noite.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "cão",
+            "alternatives": []
+          }
+        ]
+      }
     }
   },
   {
@@ -284,14 +294,6 @@
     ],
     "contentHash": "058511dccdac0b68ceb8391b9556bcb9235c28c7ad5f58f2b5956f4822bdffdb",
     "esContrast": "En BR 'correu' suena /koˈhew/; en PT-PT es /koˈʁew/. Similar a español, pero el sonido del 'r' es diferente.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Rosa correu três quilômetros.",
-      "target": "Rosa corrió tres kilómetros."
-    },
-    "ptOverrides": {
-      "target": "Rosa corrió tres kilómetros."
-    },
     "audio": {
       "br": {
         "hash": "38c7c06d0889d9b7af8f7e6917e88f9c2ceef1bee429c6f91a2964f0ee16239a",
@@ -300,6 +302,18 @@
       "pt": {
         "hash": "298bc3cc64553825a384c752811356c197e9702315666a5f0dfaed0d8d1e7664",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Rosa correu três quilômetros.",
+      "target": "Rosa corrió tres kilómetros.",
+      "sourceLang": "pt-br",
+      "targetLang": "es"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Rosa corrió tres kilómetros."
       }
     }
   },
@@ -316,12 +330,6 @@
     ],
     "contentHash": "065e9aee99aa80a127202651a68f321b104a0648e15cadaa811308d0faec4948",
     "esContrast": "En BR la 's' de 'mesmo' suena como 'z'; en PT suena como 'x' o 'zh'.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Qué ocurre con la 's' en posición de coda silábica en BR vs PT?",
-      "back": "BR: se mantiene como /s/ | PT: se realiza como /ʃ/ ante consonante o final",
-      "example": "mesmo → BR [mez.mu] / PT [meʒ.mu] | nós mesmos → BR [nos mez.mus]"
-    },
     "audio": {
       "br": {
         "hash": "a3c57c8f4cdae76418d9c774e344c4b602b1b003db3b3e01bf2318ee9e62033c",
@@ -331,6 +339,12 @@
         "hash": "de7ec48a470faabec07c4fb91e0e18ce72ea841b48408981bb8c94c4225e6a5b",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Qué ocurre con la 's' en posición de coda silábica en BR vs PT?",
+      "back": "BR: se mantiene como /s/ | PT: se realiza como /ʃ/ ante consonante o final",
+      "example": "mesmo → BR [mez.mu] / PT [meʒ.mu] | nós mesmos → BR [nos mez.mus]"
     }
   },
   {
@@ -373,6 +387,16 @@
     ],
     "contentHash": "06f92d255f75a34e922b957f08455bebd0516374fa889de9b03a72ae5a6189b7",
     "esContrast": "La ll española se convierte en lh portuguesa: ojo → olho.",
+    "audio": {
+      "br": {
+        "hash": "9ed32bc3e66a80ecee07f780c7f9d5de4cd90692f0d7e2d0ef011c1d2eb146d0",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "2276a07bf75b1d75413351abbf8a9bb964b18188a724a2484cde6dc86fae1bd5",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "A mulher de olho verde mora ali.",
@@ -383,16 +407,6 @@
         "olho"
       ],
       "answer": "olho"
-    },
-    "audio": {
-      "br": {
-        "hash": "9ed32bc3e66a80ecee07f780c7f9d5de4cd90692f0d7e2d0ef011c1d2eb146d0",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "2276a07bf75b1d75413351abbf8a9bb964b18188a724a2484cde6dc86fae1bd5",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -405,12 +419,6 @@
     ],
     "tags": [],
     "contentHash": "082b70a799850fbc14264701676235e0f9ea5a2884f8a70b2bbf799ce616ae50",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Quiero tomar un café ahora.",
-      "target": "Quero tomar um café agora.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "e48680a6f809e71864365e5e961a0a49e56ae358a889c28e827695d489b345b2",
@@ -420,6 +428,14 @@
         "hash": "a05ec37c314251d86b367583f5f7603edd10dc2a74803f8e912affcc27687f61",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Quiero tomar un café ahora.",
+      "target": "Quero tomar um café agora.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": []
     }
   },
   {
@@ -464,14 +480,6 @@
     ],
     "contentHash": "0866375c5635c030b28581d18679174978fe9a10b786a24d04e29b29f93854cf",
     "esContrast": "El circunflejo en Â puede indicar contracción de 'ao'; aquí marca el sonido cerrado de la 'a'.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Lâminas de aço são muito resistentes.",
-      "target": "Las láminas de acero son muy resistentes.",
-      "acceptedAlternatives": [
-        "Las hojas de acero son muy resistentes."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "a6adcc1a96ad5acdb7b14df3a5826023559dcfd5dec460e52b783f2d838a51df",
@@ -481,6 +489,16 @@
         "hash": "46e502dce9999b1e5389cb437f3894e1b67b1c4267f37244d7b0590bf5d5093d",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Lâminas de aço são muito resistentes.",
+      "target": "Las láminas de acero son muy resistentes.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Las hojas de acero son muy resistentes."
+      ]
     }
   },
   {
@@ -496,6 +514,16 @@
     ],
     "contentHash": "086de3319b3530596650426824253c8b76e08023b8b4072601ef27b1f4c42128",
     "esContrast": "En español decimos 'abuela' sin tilde, pero en portugués cambia según la variante.",
+    "audio": {
+      "br": {
+        "hash": "d0a20486b7aba2128aa52445bac3077db4ee2a3b4d67c82d53a39499a879f760",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "6ebdf7fbd6cd14f132a7f0404f79d38153c650870a5a5eaffe2957f994160bef",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Minha avó mora no Brasil. Minha avô mora em Lisboa.",
@@ -508,19 +536,11 @@
       ],
       "answer": "Brasil e Portugal"
     },
-    "ptOverrides": {
-      "audioText": "Minha avô mora no Brasil. Minha avó mora em Lisboa.",
-      "question": "¿En qué país se dice 'avô' y en cuál se dice 'avó'?",
-      "answer": "Portugal e Brasil"
-    },
-    "audio": {
-      "br": {
-        "hash": "d0a20486b7aba2128aa52445bac3077db4ee2a3b4d67c82d53a39499a879f760",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "6ebdf7fbd6cd14f132a7f0404f79d38153c650870a5a5eaffe2957f994160bef",
-        "voice": "Portuguese_Wiselady"
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "Minha avô mora no Brasil. Minha avó mora em Lisboa.",
+        "question": "¿En qué país se dice 'avô' y en cuál se dice 'avó'?",
+        "answer": "Portugal e Brasil"
       }
     }
   },
@@ -538,12 +558,6 @@
     ],
     "contentHash": "08716d78dfcff8a283ed4384c3f25f5e4e13ad73d563d0489aabae8d1a0ff858",
     "esContrast": "Similar al español, pero la vibración es más intensa en BR.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cuál es la regla de pronunciación de 'r' en posición media en PT-BR?",
-      "back": "Se pronuncia como /ʁ/ (vibrante múltiple) entre vocales",
-      "example": "caro /ka.ʁu/, duro /du.ʁu/, mar /maʁ/"
-    },
     "audio": {
       "br": {
         "hash": "518265bb7a518cdd7605d52c38fe89d1c7de279a65b2b3af2a924fa5dfe5be5d",
@@ -553,6 +567,12 @@
         "hash": "91c347f9c5472c83f736ef0294b97680c8263c2cba20b919c7d830f1584c1846",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cuál es la regla de pronunciación de 'r' en posición media en PT-BR?",
+      "back": "Se pronuncia como /ʁ/ (vibrante múltiple) entre vocales",
+      "example": "caro /ka.ʁu/, duro /du.ʁu/, mar /maʁ/"
     }
   },
   {
@@ -615,12 +635,6 @@
       "basico"
     ],
     "contentHash": "0de55e46b35a0d866ddf27d9de6f5c7917988626d4bd33c6e5720de181576c10",
-    "type": "flashcard",
-    "data": {
-      "front": "Cuántas letras tiene el alfabeto portugués?",
-      "back": "26 letras (el mismo que el español)",
-      "example": "O alfabeto português tem 26 letras, igual ao espanhol."
-    },
     "audio": {
       "br": {
         "hash": "d15c16f10e0c680ab6227e97c02c1920a220e625131df66bc6d6adb3ca14eadc",
@@ -630,6 +644,12 @@
         "hash": "8a06d1518f9f8af08ba7259421ab60ecd54220b3ee4ed8c7d612fc02e69eb137",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Cuántas letras tiene el alfabeto portugués?",
+      "back": "26 letras (el mismo que el español)",
+      "example": "O alfabeto português tem 26 letras, igual ao espanhol."
     }
   },
   {
@@ -644,12 +664,6 @@
       "regular"
     ],
     "contentHash": "110cf663234124e7a93f347c4fa21d2cd688b02df1d0df42a9f022ad5e048e10",
-    "type": "flashcard",
-    "data": {
-      "front": "lleno",
-      "back": "cheio",
-      "example": "O restaurante está cheio."
-    },
     "audio": {
       "br": {
         "hash": "2ed94860c88b25deb58729708cfa0d855e9c1784aad558a166061bb423fb5d5c",
@@ -659,6 +673,12 @@
         "hash": "6dc4e9e6a5d19307501bd3483769d6d01ebe699fbbf54f801fa11f65e1ce0dd7",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "lleno",
+      "back": "cheio",
+      "example": "O restaurante está cheio."
     }
   },
   {
@@ -673,12 +693,6 @@
       "basico"
     ],
     "contentHash": "1147ba5d7209415074816c13c3287920e04b842ed067c8f8e162c77749a9378b",
-    "type": "flashcard",
-    "data": {
-      "front": "Cuál es la letra que aparece solo en portugués y no en español?",
-      "back": "ç (cê cedilhado)",
-      "example": "A palavra 'ação' leva 'ç' em português."
-    },
     "audio": {
       "br": {
         "hash": "4c53c9c0fe26ae70293286f69d9d32c97b100973686d2fd528278a412ed58627",
@@ -688,6 +702,12 @@
         "hash": "7c33f96bbf9fda4b50660964f4598edb8082f5f24105909d6b6a86887ec8c644",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Cuál es la letra que aparece solo en portugués y no en español?",
+      "back": "ç (cê cedilhado)",
+      "example": "A palavra 'ação' leva 'ç' em português."
     }
   },
   {
@@ -702,6 +722,16 @@
     "tags": [],
     "contentHash": "12243a35e4204796fd6528111f6063b0e778878842a4cce137d43c386b6ef2d2",
     "esContrast": "La Ç y las vocales acentuadas son los únicos casos con marcas diacríticas en el alfabeto portugués.",
+    "audio": {
+      "br": {
+        "hash": "df3f3f85bf03ff926820b5b2508fe8b4f9873b3856c75fbd7c374595ed2ea8ad",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "17d3435cb76a2f2e608f4cf79556c00ff0ae68c50c8660c293dce79179b97e68",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Liste no alfabeto: A, B, C, Ç, D, E. Repita as letras que têm cedilha ou acento.",
@@ -713,16 +743,6 @@
         "Cuatro"
       ],
       "answer": "Una"
-    },
-    "audio": {
-      "br": {
-        "hash": "df3f3f85bf03ff926820b5b2508fe8b4f9873b3856c75fbd7c374595ed2ea8ad",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "17d3435cb76a2f2e608f4cf79556c00ff0ae68c50c8660c293dce79179b97e68",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -739,12 +759,6 @@
     ],
     "contentHash": "133a98bd7637666e2039f943707b21edc89a55332b000d8f17d90a107850bebf",
     "esContrast": "⚠️ 'Hábito' en español SÍ lleva tilde (HA-bi-to), pero en portugués NO. La terminación vocal no requiere tilde.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Por qué 'hábito' NO lleva tilde pero 'fácil' SÍ?",
-      "back": "hábito = paroxítona terminada en vocal → sin tilde. fácil = paroxítona terminada en -l → CON tilde.",
-      "example": "Tenho o hábito de ler. / Este exercício é fácil."
-    },
     "audio": {
       "br": {
         "hash": "f1df432de83ceb38e477998fabf9d3a36d37dc8b6facd47735ef2aa572cc5b6c",
@@ -754,6 +768,12 @@
         "hash": "d3bb7078d1d0c841f19af14a8ea2586a40945f531fedfca5a940fc2ddb280304",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Por qué 'hábito' NO lleva tilde pero 'fácil' SÍ?",
+      "back": "hábito = paroxítona terminada en vocal → sin tilde. fácil = paroxítona terminada en -l → CON tilde.",
+      "example": "Tenho o hábito de ler. / Este exercício é fácil."
     }
   },
   {
@@ -769,14 +789,6 @@
     ],
     "contentHash": "15eab0ae71a17773a768de390083018a4533863f5b9eb5fc9338244b25a672a7",
     "esContrast": "En pt se dice 'ônibus' (BR) o 'colectivo' (PT) para 'autobús'. La tilde en 'difícil' es obligatoria.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Ese autobús es difícil de tomar.",
-      "target": "Esse ônibus é difícil de pegar.",
-      "acceptedAlternatives": [
-        "Esse colectivo é difícil de pegar."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "e14856fd0d1b698a8ed17cd49ab4f157576efe4fd9f33519712aa86a9ffb7275",
@@ -786,6 +798,16 @@
         "hash": "ffd59c374fe4ec59f6bf3fe4579082f106f4fed6de3e89f310ef19bc682146b3",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Ese autobús es difícil de tomar.",
+      "target": "Esse ônibus é difícil de pegar.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Esse colectivo é difícil de pegar."
+      ]
     }
   },
   {
@@ -801,17 +823,6 @@
     ],
     "contentHash": "182b84cfb46d631d45a568346e47df5c665986417863793329a298f135369b15",
     "esContrast": "En BR 'mais' termina en /s/; en PT-PT termina en /ʃ/.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Mês é mais.",
-      "target": "El mes es más."
-    },
-    "ptOverrides": {
-      "target": "El mes es más.",
-      "acceptedAlternatives": [
-        "El mes es más."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "3dc575ca84a3919959ed0bee04850067b88c5ec817e2f67e32f2618cf192888f",
@@ -820,6 +831,21 @@
       "pt": {
         "hash": "d82b576c944ce1db9b1ed4634e49b2ad440b1bf2d1ad2127257fe6799d7592db",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Mês é mais.",
+      "target": "El mes es más.",
+      "sourceLang": "pt-br",
+      "targetLang": "es"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "El mes es más.",
+        "acceptedAlternatives": [
+          "El mes es más."
+        ]
       }
     }
   },
@@ -861,15 +887,6 @@
       "vocabulário-chave"
     ],
     "contentHash": "18959c8b37a71835eaa91d6cbf256bbec85390ea60df7786838f7afbd7e6168f",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Que hora é? Não tenho hora.",
-      "target": "¿Qué hora es? No tengo hora.",
-      "acceptedAlternatives": [
-        "¿Qué hora es? No tengo hora.",
-        "¿Qué hora es? No sé qué hora es."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "98371320dcba0277da5b89b0e7dc46ae4b4623d7a1b438b42de0fbf15c5120a7",
@@ -879,6 +896,17 @@
         "hash": "f21d8c92b7a62c64177a225e18d8243646ec3e1b1453e7fa80f688d54c3f41ab",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Que hora é? Não tenho hora.",
+      "target": "¿Qué hora es? No tengo hora.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "¿Qué hora es? No tengo hora.",
+        "¿Qué hora es? No sé qué hora es."
+      ]
     }
   },
   {
@@ -895,6 +923,16 @@
     ],
     "contentHash": "194576a12da4ad28fd9a6ec167810cc5a41f5b2db0ecf7ade06d9de6b53ff87b",
     "esContrast": "En BR la 's' final de 'olhos' suena /s/; en PT es /ʃ/. Presta atención a ambos.",
+    "audio": {
+      "br": {
+        "hash": "2b677f0e9b217ce974d5d9e545f899b1e4e00078d2a6ad012f111f32a1db136c",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "15e4a1f29c8693b9704c3c4cd38bb7c4b15ff372e82301bd81bfba656893f57b",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Meus olhos são verdes. Mais pessoas têm olhos castanhos no Brasil.",
@@ -907,17 +945,9 @@
       ],
       "answer": "Verdes"
     },
-    "ptOverrides": {
-      "audioText": "Os meus olhos são verdes. Mais pessoas têm olhos castanhos em Portugal."
-    },
-    "audio": {
-      "br": {
-        "hash": "2b677f0e9b217ce974d5d9e545f899b1e4e00078d2a6ad012f111f32a1db136c",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "15e4a1f29c8693b9704c3c4cd38bb7c4b15ff372e82301bd81bfba656893f57b",
-        "voice": "Portuguese_Wiselady"
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "Os meus olhos são verdes. Mais pessoas têm olhos castanhos em Portugal."
       }
     }
   },
@@ -932,11 +962,6 @@
     "tags": [],
     "contentHash": "195e61ed7c9cb8855487b6750cc491b3082a89b5859abc7d4e00ef2a01a0f41a",
     "esContrast": "Hotel y hora se escriben igual en PT; la H es muda en ambos.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "El hotel tiene buena hora",
-      "target": "O hotel tem boa hora"
-    },
     "audio": {
       "br": {
         "hash": "6707c1b7f71f43db41ab071d10ad3f3a03ab9ae77779993477c3accb349419b7",
@@ -946,6 +971,13 @@
         "hash": "7f3b0cd50ce24ff4b7898c44cf4f3c1f625e42ca45bdbd720decd68e199572fa",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "El hotel tiene buena hora",
+      "target": "O hotel tem boa hora",
+      "sourceLang": "es",
+      "targetLang": "pt-br"
     }
   },
   {
@@ -961,20 +993,6 @@
     ],
     "contentHash": "1a16ca625b059daa5d70b0c44e8752aebc3c74ed719907830f5eb67e1e67d4f5",
     "esContrast": "",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Los ojos del gato son verdes.",
-      "target": "Os olhos do gato são verdes.",
-      "acceptedAlternatives": [
-        "Os olhos do gato são esverdeados."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Os olhos do gato são verdes.",
-      "acceptedAlternatives": [
-        "Os olhos do gato são esverdeados."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "7e67a84a89cc5af3deb8c1d99ac705270d37044bd8c916083a7d92be5d1a98f4",
@@ -983,6 +1001,24 @@
       "pt": {
         "hash": "d55af0cac5e6438449c2794248811001fc2e29f20cec2d2346e0408738a68bab",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Los ojos del gato son verdes.",
+      "target": "Os olhos do gato são verdes.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Os olhos do gato são esverdeados."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Os olhos do gato são verdes.",
+        "acceptedAlternatives": [
+          "Os olhos do gato são esverdeados."
+        ]
       }
     }
   },
@@ -1011,15 +1047,17 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "A palavra 'história' tem ___ sílabas e dois acentos.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "quatro",
-          "alternatives": []
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "A palavra 'história' tem ___ sílabas e dois acentos.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "quatro",
+            "alternatives": []
+          }
+        ]
+      }
     }
   },
   {
@@ -1075,15 +1113,17 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Este bolo está muito ___.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "bom",
-          "alternatives": []
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Este bolo está muito ___.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "bom",
+            "alternatives": []
+          }
+        ]
+      }
     }
   },
   {
@@ -1098,14 +1138,6 @@
       "vocabulário-chave"
     ],
     "contentHash": "1ea185c80124f559cac12de2263c4e64741b0f76e05d733f34e95a25e6b84369",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Amanhã é segunda-feira.",
-      "target": "Mañana es lunes.",
-      "acceptedAlternatives": [
-        "Mañana es día lunes."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "917eccc0345f8324a6448accd0e341d536a33b9d0b5132405272f66ffb5802e3",
@@ -1115,6 +1147,16 @@
         "hash": "a9b3bd7fb883ce629f4386a83769ad4feb14d40170096a83f48e9c17b17f2e5d",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Amanhã é segunda-feira.",
+      "target": "Mañana es lunes.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Mañana es día lunes."
+      ]
     }
   },
   {
@@ -1130,14 +1172,6 @@
     ],
     "contentHash": "2101d5d2388a1550ebb2c5174f4764f90c96be6b0d7735e7ec780a30e34c5b02",
     "esContrast": "'Mãe' es solo la madre biológica, no se confunde con 'madrasta'.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Mi madre es doctora.",
-      "target": "Minha mãe é médica.",
-      "acceptedAlternatives": [
-        "Minha mãe é doutora."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "e1043ebb3526b69045821fb770bf05008e4a2f7496215c4a33d092b4691939b7",
@@ -1147,6 +1181,16 @@
         "hash": "a1bd5bdb4b19ed2a2f72948a1aa07dd5532ed9dffc02ae2d9b07ff87484636da",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Mi madre es doctora.",
+      "target": "Minha mãe é médica.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Minha mãe é doutora."
+      ]
     }
   },
   {
@@ -1193,12 +1237,6 @@
     ],
     "contentHash": "227a5e6e0a7aede772ff73a8a0ff91abf3a4d7ced08026731c35fd3efec7a213",
     "esContrast": "'Três' (circunflejo) ≠ 'tres' español; 'maçãs' lleva ç y tilde nasal.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Elena tiene tres manzanas rojas.",
-      "target": "Elena tem três maçãs vermelhas.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "63416355732d210897e00b63e4023af6f3ab02c178ce3d96c757a475cb2e864f",
@@ -1208,6 +1246,14 @@
         "hash": "0ceb339b2b48b39e932e33856022d457b26a1ee0300368f02dca584a1c339446",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Elena tiene tres manzanas rojas.",
+      "target": "Elena tem três maçãs vermelhas.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": []
     }
   },
   {
@@ -1223,14 +1269,6 @@
     ],
     "contentHash": "22a0f60d6cff476d5a8f7518311be9b67cd1a6e6889de4fe023b6d8711baf553",
     "esContrast": "MÃE lleva tilde porque es esdrújula; en español 'madre' no lleva tilde.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Aquela mãe está cansada.",
-      "target": "Aquella madre está cansada.",
-      "acceptedAlternatives": [
-        "Esa madre está cansada."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "4a5c3aee2a39abf7784c5810550d618c75e971d614ac12e08e0b40d0f2f5df8b",
@@ -1240,6 +1278,16 @@
         "hash": "d12a7cbdac7f01f4b70841546e9833b1e98bc406d8972316ed64abd4d3844800",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Aquela mãe está cansada.",
+      "target": "Aquella madre está cansada.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Esa madre está cansada."
+      ]
     }
   },
   {
@@ -1281,12 +1329,6 @@
       "o-nasal"
     ],
     "contentHash": "2465aa85d27ec61bb8cef0c5ef8d656f576eee53164e701731b8cb51013eb9b3",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo se dice 'perro' en portugués?",
-      "back": "cão",
-      "example": "O cão do meu vizinho é pequeno."
-    },
     "audio": {
       "br": {
         "hash": "571be3e76184c68cc77b0adeaf22948d32237b9e764e5f898d41144fa81bb9e0",
@@ -1296,6 +1338,12 @@
         "hash": "ba90b7a3ef77c6826e7dda29a38f4c1f25dc82b844613b0bbace5a818728d2aa",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo se dice 'perro' en portugués?",
+      "back": "cão",
+      "example": "O cão do meu vizinho é pequeno."
     }
   },
   {
@@ -1310,11 +1358,6 @@
     "tags": [],
     "contentHash": "2643a450ddd81cc6411a7dd0e1a4ef02fd4cad842dece7f8ddefecdcb1af2a81",
     "esContrast": "Esa → Essa; canción → canção (-ón > -ão).",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Esa canción es muy popular",
-      "target": "Essa canção é muito popular"
-    },
     "audio": {
       "br": {
         "hash": "ee836b183d243c5ae1c3104a4b0ff75b0ffb0aa1537f1c9515988183046d67be",
@@ -1324,6 +1367,13 @@
         "hash": "90be16d7e6379d3d778f516d719a02afc46690da270776c2cb6a9a05b40dbf08",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Esa canción es muy popular",
+      "target": "Essa canção é muito popular",
+      "sourceLang": "es",
+      "targetLang": "pt-br"
     }
   },
   {
@@ -1337,15 +1387,6 @@
     "tags": [],
     "contentHash": "26a3cf133f1b1afa16e9b39534d70469062ee744b1cf477a74ea31b45355deed",
     "esContrast": "La 's' final se mantiene como /s/ en BR, pero en PT se convierte en /ʃ/.",
-    "type": "flashcard",
-    "data": {
-      "front": "Pronuncia: MAIS",
-      "back": "[majs]",
-      "example": "Quero mais café, por favor."
-    },
-    "ptOverrides": {
-      "back": "[majʃ]"
-    },
     "audio": {
       "br": {
         "hash": "7a8d79d357f99e0716718ec659b6ed36082eb81fa9d61fbb1d0896026368e685",
@@ -1354,6 +1395,17 @@
       "pt": {
         "hash": "fd2d8d548313bde87b348e3ecb474f447b52d674d6b5a667ce0a0343e1760d39",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Pronuncia: MAIS",
+      "back": "[majs]",
+      "example": "Quero mais café, por favor."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "[majʃ]"
       }
     }
   },
@@ -1371,12 +1423,6 @@
     ],
     "contentHash": "273b3166f8c41d1b6981976cf77b03f6195f7334b41bc3cab5b912c965c5fb50",
     "esContrast": "Irregular: no es 'hermano' → 'irmão', el grupo 'nh' es diferente en español.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo se dice 'hermano' en portugués?",
-      "back": "irmão",
-      "example": "O meu irmão mais velho mora em São Paulo."
-    },
     "audio": {
       "br": {
         "hash": "75f44ada44bfaf6ab1c0e5225598aec69dd59ecd78682b46b2247399362bd94a",
@@ -1386,6 +1432,12 @@
         "hash": "caecb541c8f4c145d2e0b56d07138314f13677cee2f6973502364c500f186f02",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo se dice 'hermano' en portugués?",
+      "back": "irmão",
+      "example": "O meu irmão mais velho mora em São Paulo."
     }
   },
   {
@@ -1401,14 +1453,6 @@
     ],
     "contentHash": "28aa88dca65eea7106b13a9a00386c38a964fd4a7d0c3c7ed6a4bff71369d0f8",
     "esContrast": "'táxi' es esdrújula en PT (tildada); en ES es grave y no lleva tilde.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Preciso de um táxi para o aeroporto.",
-      "target": "Necesito un taxi para el aeropuerto.",
-      "acceptedAlternatives": [
-        "Necesito un taxi para el aeropuerto."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "0e263012a5045cb707718a9268ae789cd472f51f2000763978070bc80931c75c",
@@ -1418,6 +1462,16 @@
         "hash": "ffebbb8f78104a26e78d3efa95d8541e9573679fdd37b470fb3b1712f8fd8575",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Preciso de um táxi para o aeroporto.",
+      "target": "Necesito un taxi para el aeropuerto.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Necesito un taxi para el aeropuerto."
+      ]
     }
   },
   {
@@ -1436,14 +1490,6 @@
     ],
     "contentHash": "2a5d3f341cda2236284e616c9cf7e351fc5b0e91213ccc5ae1783f0bb5392543",
     "esContrast": "Múltiples 'r' en BR se pronuncian como /h/: ratão, carro, correu, rápido, rua.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "O ratão do carro correu mais rápido na rua.",
-      "target": "El ratón grande del carro corrió más rápido en la calle."
-    },
-    "ptOverrides": {
-      "target": "El ratón grande del coche corrió más rápido en la calle."
-    },
     "audio": {
       "br": {
         "hash": "abe9609d4b5ae73fe775c1deaf5d00a97521400c012b6058af3af4ce282f382e",
@@ -1452,6 +1498,18 @@
       "pt": {
         "hash": "a0d8b79382030383cbe6bdd48361c209079a6e90386b4823a27e50d403104687",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "O ratão do carro correu mais rápido na rua.",
+      "target": "El ratón grande del carro corrió más rápido en la calle.",
+      "sourceLang": "pt-br",
+      "targetLang": "es"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "El ratón grande del coche corrió más rápido en la calle."
       }
     }
   },
@@ -1468,6 +1526,16 @@
     ],
     "contentHash": "2a707b3f87b10ebdc4282db2cb1525ec1bfa52afd4863eecefe89ab5d7f7fcf3",
     "esContrast": "-ón en español se convierte en -ão en portugués: canción → canção.",
+    "audio": {
+      "br": {
+        "hash": "47bc50cea6f647cac3469328ac7e60b8c1b4920a2fb83b88cede5649aeba98d1",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "95e10555afd257aeda6c316b0b9662a9766ee3b1779aa9dfad6de5dd66b1bc1d",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "A canção do coração habla de amor.",
@@ -1478,16 +1546,6 @@
         "habla"
       ],
       "answer": "coração"
-    },
-    "audio": {
-      "br": {
-        "hash": "47bc50cea6f647cac3469328ac7e60b8c1b4920a2fb83b88cede5649aeba98d1",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "95e10555afd257aeda6c316b0b9662a9766ee3b1779aa9dfad6de5dd66b1bc1d",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -1501,6 +1559,16 @@
     "tags": [],
     "contentHash": "2b6d8e9b411b41b4a48da95fd899abe7459e036daee220c1bb8ea7d573b1be3f",
     "esContrast": "'Um' es nasal, no confundas con el artículo 'un' español.",
+    "audio": {
+      "br": {
+        "hash": "c875972d6cf050cce7e19ec554e8b17620d7f891271505f39ea71dbef98d9827",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "515e46464c6142e1749fdef91b070aec82521a5304e5612056de3425d19a2c0d",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "A mãe comprou pão e deu um pedaço ao cão.",
@@ -1512,16 +1580,6 @@
         "Carne"
       ],
       "answer": "Pão"
-    },
-    "audio": {
-      "br": {
-        "hash": "c875972d6cf050cce7e19ec554e8b17620d7f891271505f39ea71dbef98d9827",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "515e46464c6142e1749fdef91b070aec82521a5304e5612056de3425d19a2c0d",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -1537,14 +1595,6 @@
     ],
     "contentHash": "2bf4e946cd33eadf44fc56bd61ecaab3e3846c584af252170e80ae08caaddf30",
     "esContrast": "'lápis' es esdrújula en PT; 'lápiz' es grave en ES. Plural: lápis vs lápices.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Comprei três lápis novos.",
-      "target": "Compré tres lápices nuevos.",
-      "acceptedAlternatives": [
-        "Compré tres lápices nuevos."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "b3a94f14dfa3ac0062bac0b6bfcaf4d0317b10d2c7cc705cc6faca1dbf91625c",
@@ -1554,6 +1604,16 @@
         "hash": "8a9124e453690fd894d8da16a8792e89f83e9f4fb93392072695f1eeac78a93d",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Comprei três lápis novos.",
+      "target": "Compré tres lápices nuevos.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Compré tres lápices nuevos."
+      ]
     }
   },
   {
@@ -1569,14 +1629,6 @@
     ],
     "contentHash": "2f00fa00b38d7583802a809c666076e608a9767c6f2a525412888e6ece082614",
     "esContrast": "En BR 'olhos' suena /ˈoʎus/ con 's' final; en PT-PT sería /ˈoʎuʃ/.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Dois meses, mais olhos.",
-      "target": "Dos meses, más ojos."
-    },
-    "ptOverrides": {
-      "target": "Dos meses, más ojos."
-    },
     "audio": {
       "br": {
         "hash": "b826eaacf60fd0583edabbece708e4e4e69002e468597a36c1f705022f728a41",
@@ -1585,6 +1637,18 @@
       "pt": {
         "hash": "576fa1f0f2ebb1bef181a770539ec1ad8b0e3851fc07abfc5d53993750a1ac59",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Dois meses, mais olhos.",
+      "target": "Dos meses, más ojos.",
+      "sourceLang": "pt-br",
+      "targetLang": "es"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Dos meses, más ojos."
       }
     }
   },
@@ -1612,15 +1676,17 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "O computador é muit___ útil para a familia.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "útil",
-          "alternatives": []
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "O computador é muit___ útil para a familia.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "útil",
+            "alternatives": []
+          }
+        ]
+      }
     }
   },
   {
@@ -1634,15 +1700,6 @@
     "tags": [],
     "contentHash": "32400dc758d615094631c4935b915bb0709bbc7920a32b69eb19a35887e364e0",
     "esContrast": "Portugués usa 'alfabeto', no 'abecedário' (que también existe pero es menos común).",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Português tem vinte e três letras no alfabeto.",
-      "target": "El portugués tiene veintitrés letras en el alfabeto.",
-      "acceptedAlternatives": [
-        "El portugués tiene veintitrés letras en el abecedario.",
-        "El portugués tiene veintitrés letras en el alfabeto."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "adfbf0d70780f7bf2cd7a856236d4c0043e8c1612e09c0c16e908f1071d7394d",
@@ -1652,6 +1709,17 @@
         "hash": "9e3567f8045c66a8b8a5163d394cc2707bf1bbcdc2498023638105059e8bc7e5",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Português tem vinte e três letras no alfabeto.",
+      "target": "El portugués tiene veintitrés letras en el alfabeto.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "El portugués tiene veintitrés letras en el abecedario.",
+        "El portugués tiene veintitrés letras en el alfabeto."
+      ]
     }
   },
   {
@@ -1678,17 +1746,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Este filme é ___ — não gostei nada.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "mau",
-          "alternatives": [
-            "péssimo"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Este filme é ___ — não gostei nada.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "mau",
+            "alternatives": [
+              "péssimo"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -1704,12 +1774,6 @@
       "a-nasal"
     ],
     "contentHash": "350526ca8e5e5aba85ce59c8fb635595c9f640e9138b35b611c98bb82d09609a",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo se dice 'hermana' en portugués?",
-      "back": "irmã",
-      "example": "A minha irmã mais nova tem 15 anos."
-    },
     "audio": {
       "br": {
         "hash": "98b78a0e6d6a5915b92b4aa46f4e938b01369c8e18f79324a612615dcf6ef326",
@@ -1719,6 +1783,12 @@
         "hash": "4b674ffc2376f1c6575983bc36fbead16a842e72060049af0d2ee813c1a2f869",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo se dice 'hermana' en portugués?",
+      "back": "irmã",
+      "example": "A minha irmã mais nova tem 15 anos."
     }
   },
   {
@@ -1760,12 +1830,6 @@
       "vocabulario-clave"
     ],
     "contentHash": "389f9059aa802da0d4ec62aec360aafe4375110590d9ab4a8807f7056758b8e9",
-    "type": "flashcard",
-    "data": {
-      "front": "corazón",
-      "back": "coração",
-      "example": "O coração da cidade bate forte."
-    },
     "audio": {
       "br": {
         "hash": "c64ac0d04fb584f9fdfc78104e011b29003562a3cd71860920b401c9efd3b4a2",
@@ -1775,6 +1839,12 @@
         "hash": "56c2597306da4c348bb19b232e0366d835a5d5e6f17f8d418a9d3365aa6e2e4c",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "corazón",
+      "back": "coração",
+      "example": "O coração da cidade bate forte."
     }
   },
   {
@@ -1789,6 +1859,16 @@
       "falso-amigo"
     ],
     "contentHash": "3b453da43772bb4259aa47e94938a631b9effe4a92b31e1f9d3be4da3fc3f5f7",
+    "audio": {
+      "br": {
+        "hash": "acf504a36366151cb3c86c7d7eed036472e9f874b2f15d98d92a8402793c2cbd",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "972975cc05be1ed8ae65f35803d60cbdf1f526b0721efecad4854423187e6fe1",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Agora escute: fácil, difícil, café, táxi, lápis.",
@@ -1800,16 +1880,6 @@
         "táxi"
       ],
       "answer": "fácil"
-    },
-    "audio": {
-      "br": {
-        "hash": "acf504a36366151cb3c86c7d7eed036472e9f874b2f15d98d92a8402793c2cbd",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "972975cc05be1ed8ae65f35803d60cbdf1f526b0721efecad4854423187e6fe1",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -1824,11 +1894,6 @@
     "tags": [],
     "contentHash": "3c91ed822e4d437bb4c42564d1f847041e22806ff0b12560d6521d5447b57e2f",
     "esContrast": "Ojo/ojos → olho/olhos (cambio -ll- > -lh-)",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "La mujer tiene ojos hermosos",
-      "target": "A mulher tem olhos belos"
-    },
     "audio": {
       "br": {
         "hash": "44d48a3953222d54659a0ea3cd6f507e81ae9dc9d68bcff7f2c00b469980bb0a",
@@ -1838,6 +1903,13 @@
         "hash": "fd18e47fab38e18e34fa3fd186333cf72453d57e9c2db6b53978f155b759340d",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "La mujer tiene ojos hermosos",
+      "target": "A mulher tem olhos belos",
+      "sourceLang": "es",
+      "targetLang": "pt-br"
     }
   },
   {
@@ -1895,18 +1967,20 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Em português europeu, a letra W chama-se ___ , como no inglês.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "dúplex",
-          "alternatives": [
-            "doble",
-            "dâblio"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Em português europeu, a letra W chama-se ___ , como no inglês.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "dúplex",
+            "alternatives": [
+              "doble",
+              "dâblio"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -1935,17 +2009,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Três ___ para ti.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "vezes",
-          "alternatives": [
-            "vezes"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Três ___ para ti.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "vezes",
+            "alternatives": [
+              "vezes"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -1961,12 +2037,6 @@
       "vocabulario-clave"
     ],
     "contentHash": "41573acfdab2e9fc40199e8bafc8642b7851b543169f287afb630c35db5a2eac",
-    "type": "flashcard",
-    "data": {
-      "front": "lluvia",
-      "back": "chuva",
-      "example": "Está caindo uma chuva forte agora."
-    },
     "audio": {
       "br": {
         "hash": "4bd6528b3026f7e7433c3874ca751e9e42925c64bbee8263dc60bbdeba50b994",
@@ -1976,6 +2046,12 @@
         "hash": "bfd0575bd8b1c1c8a99521f22aa740e4e5c61f9c787773ca81957cf5b1eb8252",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "lluvia",
+      "back": "chuva",
+      "example": "Está caindo uma chuva forte agora."
     }
   },
   {
@@ -2043,15 +2119,6 @@
       "vocabulário-chave"
     ],
     "contentHash": "4895694914379229b5cc08d17d5cd6f34d46712cdb10bf6cc4e20f0bc1283199",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Esta canção é muito bonita.",
-      "target": "Esta canción es muy bonita.",
-      "acceptedAlternatives": [
-        "Esa canción es muy bonita.",
-        "Esta canción es muy linda."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "0e7cf601728ac58fe7c6020aef34abacd88876167586539fe1af4204607f5446",
@@ -2061,6 +2128,17 @@
         "hash": "68fc30c82227b14aca0b75b29cd8463b4b61ee11b7ec53bfa0b7f17a32df407f",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Esta canção é muito bonita.",
+      "target": "Esta canción es muy bonita.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Esa canción es muy bonita.",
+        "Esta canción es muy linda."
+      ]
     }
   },
   {
@@ -2078,6 +2156,16 @@
     ],
     "contentHash": "48c59fd358c178c35c503f253112b9914778e24c23d77550533dfec5e28a555f",
     "esContrast": "En BR, 'rr' en 'ratos' y 'carro' suena como /h/, no como en español.",
+    "audio": {
+      "br": {
+        "hash": "c2b39447b84afe329d5a8b5811fccda30801eca0dfd1c0478242de7d908f1fca",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "9272612ae54a233a9943feb1bf5d3506d96673a2c925237e64a07c93edd7d725",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Tenho dois ratos brancos em casa. Eles moram atrás do carro.",
@@ -2090,17 +2178,9 @@
       ],
       "answer": "Dos ratones detrás del carro"
     },
-    "ptOverrides": {
-      "audioText": "Tenho dois ratos brancos em casa. Eles moram atrás do carro."
-    },
-    "audio": {
-      "br": {
-        "hash": "c2b39447b84afe329d5a8b5811fccda30801eca0dfd1c0478242de7d908f1fca",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "9272612ae54a233a9943feb1bf5d3506d96673a2c925237e64a07c93edd7d725",
-        "voice": "Portuguese_Wiselady"
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "Tenho dois ratos brancos em casa. Eles moram atrás do carro."
       }
     }
   },
@@ -2144,6 +2224,16 @@
     ],
     "contentHash": "49b99558936d825a4484a3fde77ee5c99bbe5550821cdfdaf5b709edcdf57361",
     "esContrast": "La ñ española se convierte en nh portuguesa: baño → banho.",
+    "audio": {
+      "br": {
+        "hash": "824787b5e286cbcd097a41345ef79e6fd8b92479fa0e8f2dca4ef4b18704e0fe",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "c153b5e9a85f7e26940807dacb6ecf9d39f762e1e019d362caea5ea0184ca1b4",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Ela tomou um banho de manhã.",
@@ -2154,16 +2244,6 @@
         "tomou"
       ],
       "answer": "banho"
-    },
-    "audio": {
-      "br": {
-        "hash": "824787b5e286cbcd097a41345ef79e6fd8b92479fa0e8f2dca4ef4b18704e0fe",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "c153b5e9a85f7e26940807dacb6ecf9d39f762e1e019d362caea5ea0184ca1b4",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -2179,12 +2259,6 @@
     ],
     "contentHash": "4a68612350b6a2f9b6de68e418ef60149870309fc5ca265d233cf4ff6c46e05e",
     "esContrast": "En español es 'be, ce, de'; en portugués son 'bê, cê, dê' con sonido de 'e'.",
-    "type": "flashcard",
-    "data": {
-      "front": "Cómo se llaman las letras del alfabeto en português? (ejemplo con B, C, D)",
-      "back": "bê, cê, dê (con sonido /e/ al final)",
-      "example": "Para soletrar: 'bê-cê-dê-ê'."
-    },
     "audio": {
       "br": {
         "hash": "b7679709b2e97d000f3d5e1f15012c1346a9cc1bfa8b795e1b9b9a4a2a24f28a",
@@ -2194,6 +2268,12 @@
         "hash": "100a924a1e9525ec6f31698a7a32da6c865843941f9d16a0877c5cff0ba74de9",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Cómo se llaman las letras del alfabeto en português? (ejemplo con B, C, D)",
+      "back": "bê, cê, dê (con sonido /e/ al final)",
+      "example": "Para soletrar: 'bê-cê-dê-ê'."
     }
   },
   {
@@ -2208,14 +2288,6 @@
       "vocabulário-chave"
     ],
     "contentHash": "4aa4cf657596c322991f1dba0f7b942bdf985207159e0f9a7291ad452b8ff825",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Fecha bem os olhos e descansa.",
-      "target": "Cierra bien los ojos y descansa.",
-      "acceptedAlternatives": [
-        "Cierra bien los ojos y descansa un poco."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "c9f7a66303dbb50b146026c63573697042c5760ec47657c9034e31f93b6066ee",
@@ -2225,6 +2297,16 @@
         "hash": "de082a46236c45df5c0453a7679d53df85e00a13faf1aa210d689a41f9d6a046",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Fecha bem os olhos e descansa.",
+      "target": "Cierra bien los ojos y descansa.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Cierra bien los ojos y descansa un poco."
+      ]
     }
   },
   {
@@ -2241,14 +2323,6 @@
     ],
     "contentHash": "4aeeb75d29c7b04688361bb0f6b4dbc79a00bfc6ae41e38b9f1d284c8b81d25b",
     "esContrast": "ÃO es un sonido nasal que no existe igual en español; se traduce como 'ón' o 'an' según la palabra.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "O menino comeu pão com mel.",
-      "target": "El niño comió pan con miel.",
-      "acceptedAlternatives": [
-        "El chico comió pan con miel."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "22e0c8f2a9bf20ce027612139a5705865e6d4e96f5011aa68e2e2d8573c07bfd",
@@ -2258,6 +2332,16 @@
         "hash": "0fc5874571b96880e36521ec46cc877deba6c6d02433576be0cedde152a1ba35",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "O menino comeu pão com mel.",
+      "target": "El niño comió pan con miel.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "El chico comió pan con miel."
+      ]
     }
   },
   {
@@ -2273,20 +2357,6 @@
     ],
     "contentHash": "4d0b69ee79612eeacf8763ef13588a18c96965ed75a674d9f80ae5ac5900287f",
     "esContrast": "",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "El carro es rojo.",
-      "target": "O carro é vermelho.",
-      "acceptedAlternatives": [
-        "O carro é encarnado."
-      ]
-    },
-    "ptOverrides": {
-      "target": "O carro é vermelho.",
-      "acceptedAlternatives": [
-        "O carro é encarnado."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "69486a11454afdaa392b7b2baaa9b79fcf0ea82aeb857b14ab387b775b97e922",
@@ -2295,6 +2365,24 @@
       "pt": {
         "hash": "3dc08bfc40a249c336b571621bca2eef1d8f7b55fd7058f04602e3f31091b62f",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "El carro es rojo.",
+      "target": "O carro é vermelho.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "O carro é encarnado."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "O carro é vermelho.",
+        "acceptedAlternatives": [
+          "O carro é encarnado."
+        ]
       }
     }
   },
@@ -2311,20 +2399,6 @@
     ],
     "contentHash": "4db8fa0842782071048df3ad22d7f4537066ed3bb2bcf6951cc094665ef471a4",
     "esContrast": "PT-PT usa 'avô' con circumflexo; PT-BR acepta 'avó' también. En es es 'abuelo' con '-ab'.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Mi abuelo ya murió.",
-      "target": "Meu avô já morreu.",
-      "acceptedAlternatives": [
-        "Meu avó já morreu."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Meu avô já morreu.",
-      "acceptedAlternatives": [
-        "Meu avó já morreu."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "650e58b32162ec528a5fcbb267efd33bb50ddb241702476030c789334049399a",
@@ -2333,6 +2407,24 @@
       "pt": {
         "hash": "bd63f99dabe7046798650e0d6edc2684a7d7087ccd58dd73dabaffb882eaeba9",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Mi abuelo ya murió.",
+      "target": "Meu avô já morreu.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Meu avó já morreu."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Meu avô já morreu.",
+        "acceptedAlternatives": [
+          "Meu avó já morreu."
+        ]
       }
     }
   },
@@ -2399,6 +2491,16 @@
     ],
     "tags": [],
     "contentHash": "50bfb2149d13ba302fa0c77ed145aff5a6c95b2d0946d13464ac9ca0b30efc87",
+    "audio": {
+      "br": {
+        "hash": "abc01703f0cc1867f9581b2c997b1c98e421b02741c369a28e3483f7074eaa86",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "13a778e716e7ba2d4f27c80a46635c2d1bd809fc7d8c84ffa4d61a33bc0ff420",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Ouvindo: café, táxi, fácil.",
@@ -2410,16 +2512,6 @@
         "Ninguna"
       ],
       "answer": "Dos"
-    },
-    "audio": {
-      "br": {
-        "hash": "abc01703f0cc1867f9581b2c997b1c98e421b02741c369a28e3483f7074eaa86",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "13a778e716e7ba2d4f27c80a46635c2d1bd809fc7d8c84ffa4d61a33bc0ff420",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -2436,12 +2528,6 @@
     ],
     "contentHash": "51a1ce6eb95c2acaf1ac28a198e25f8eef6ebef9aa3956ca615e2efdb85fbbe1",
     "esContrast": "⚠️ En español es aguda (TA-xi) sin tilde. En portugués SÍ lleva tilde por terminar en -i.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Dónde está la sílaba tónica en 'táxi'?",
-      "back": "táxi — es paroxítona (acento en la penúltima: TÁ-xi)",
-      "example": "Vou de táxi para o aeroporto."
-    },
     "audio": {
       "br": {
         "hash": "f672cbb5450327261bdb1cda9bb5fd095f3bf56a5b2994c8b00c94a2f2f3f3b0",
@@ -2451,6 +2537,12 @@
         "hash": "dec9a345977470f69af8b0000800dfc4e23b53cce1e4420f50ec68799a7c1c63",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Dónde está la sílaba tónica en 'táxi'?",
+      "back": "táxi — es paroxítona (acento en la penúltima: TÁ-xi)",
+      "example": "Vou de táxi para o aeroporto."
     }
   },
   {
@@ -2467,12 +2559,6 @@
     ],
     "contentHash": "51b532fd6b8b3ae3ad6b6d091e1c4d743aa2a8b3122875ca994aad0fb58a4aa1",
     "esContrast": "En español no existe. En português indica fusión de preposición 'a' con artículo.",
-    "type": "flashcard",
-    "data": {
-      "front": "Qué indica el acento grave (`)?",
-      "back": "Solo se usa en la contracción 'a' + 'aquele/aquela' → 'àquele/àquela'",
-      "example": "Vou à padaria. (= a + a padaria)"
-    },
     "audio": {
       "br": {
         "hash": "2e11bb7bb3fd5bc6e8b33729dc962b16dcf046959471510073a8fab0722ede95",
@@ -2482,6 +2568,12 @@
         "hash": "f1fc2163828c7a463e373722efa6604ad851a6582216e00e5afb1fd302253879",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Qué indica el acento grave (`)?",
+      "back": "Solo se usa en la contracción 'a' + 'aquele/aquela' → 'àquele/àquela'",
+      "example": "Vou à padaria. (= a + a padaria)"
     }
   },
   {
@@ -2498,14 +2590,6 @@
     ],
     "contentHash": "52a18a1a9f06a25a6c64f7957050d7fce40a08c3a56ffd0a73ab9560a7deb6d7",
     "esContrast": "Pão lleva tilde (ã), Nós es diferente de 'nos' español; â es circunflejo.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "El padre de João fue a São Paulo y trajo pão para nós.",
-      "target": "O pai de João foi a São Paulo e trouxe pão para nós.",
-      "acceptedAlternatives": [
-        "O pai de João foi a São Paulo e trouxe pão para nós."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "97a464d3f4dbec3ba216871949bdbe0bacb7b16b932ebf4aab31ef2d5c9a475a",
@@ -2515,6 +2599,16 @@
         "hash": "be0546a82cd6bbc428d6c604ffcdab093f0f0b6e0d71e711d2f0ede8b0b35e01",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "El padre de João fue a São Paulo y trajo pão para nós.",
+      "target": "O pai de João foi a São Paulo e trouxe pão para nós.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "O pai de João foi a São Paulo e trouxe pão para nós."
+      ]
     }
   },
   {
@@ -2527,15 +2621,6 @@
     ],
     "tags": [],
     "contentHash": "52b5b890116f21bac0f7eaeccd43a76a3ec38538d62f47e13f494704244c63e2",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Está todo bien, gracias.",
-      "target": "Está tudo bem, obrigado.",
-      "acceptedAlternatives": [
-        "Está tudo bem, obrigado.",
-        "Está tudo ok, obrigado."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "f8c5bbacc4f8b17a75763852d453f37d2665e5731cbb1b0891542d42e657062d",
@@ -2545,6 +2630,17 @@
         "hash": "f220474779eafb3e125239ce7a7e0834dcf1f27ef5a7f7c7aeff91ec2b8d77de",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Está todo bien, gracias.",
+      "target": "Está tudo bem, obrigado.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Está tudo bem, obrigado.",
+        "Está tudo ok, obrigado."
+      ]
     }
   },
   {
@@ -2561,20 +2657,6 @@
     ],
     "contentHash": "537c969567a8a73995ba1546bfb06fc25084e51770d9790956cc8734d930f941",
     "esContrast": "'Passaram' tiene /s/ intervocálica, no al final.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Los meses pasaron rápido.",
-      "target": "Os meses passaram rápido.",
-      "acceptedAlternatives": [
-        "Os meses passaram depressa."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Os meses passaram rápido.",
-      "acceptedAlternatives": [
-        "Os meses passaram depressa."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "556d2460002b88c664c512df9e01d4ba92d3fda6685d1edef3daa23a5cf40f31",
@@ -2583,6 +2665,24 @@
       "pt": {
         "hash": "152616144a7f26cc8309b556b61cd5774f3d0e2cf3beb16ca795f6199a11b292",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Los meses pasaron rápido.",
+      "target": "Os meses passaram rápido.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Os meses passaram depressa."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Os meses passaram rápido.",
+        "acceptedAlternatives": [
+          "Os meses passaram depressa."
+        ]
       }
     }
   },
@@ -2638,17 +2738,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Quero dois ___ de pão.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "pães",
-          "alternatives": [
-            "pães"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Quero dois ___ de pão.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "pães",
+            "alternatives": [
+              "pães"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -2691,12 +2793,6 @@
     ],
     "contentHash": "5930c2c9b5d1c73013619130c7a6e7a48bff50d1cdb3f48a615a5488cb5d48f8",
     "esContrast": "En pt se escribe 'táxi' con acento en la primera 'a'. En es es 'tá-xi' con tilde en la 'a' también.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Llamé a un taxi para ir al aeropuerto.",
-      "target": "Chamei um táxi para ir ao aeroporto.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "fb4066894414d2619495cabda64ba2f33fa195dc8332de104aad5c1720ab1027",
@@ -2706,6 +2802,14 @@
         "hash": "a5fb1dc57a67454612078f59b048b9189ba8f71888b4981771db008b542e2e15",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Llamé a un taxi para ir al aeropuerto.",
+      "target": "Chamei um táxi para ir ao aeroporto.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": []
     }
   },
   {
@@ -2721,14 +2825,6 @@
     ],
     "contentHash": "59ae5c8042e4a910415cb8261935659b6715855a13fca7041211e2b97a3b62f6",
     "esContrast": "'café' lleva tilde en ambos idiomas por ser esdrújula.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Quero tomar um café.",
-      "target": "Quiero tomar un café.",
-      "acceptedAlternatives": [
-        "Quiero tomar un café."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "19e934924f599358729b2d1469bde163559dd128381d102a600effbec7c3d8b0",
@@ -2738,6 +2834,16 @@
         "hash": "fc83367f0c9b9f135dffca3df35233798485ab970e5166dde299447d7425d706",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Quero tomar um café.",
+      "target": "Quiero tomar un café.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Quiero tomar un café."
+      ]
     }
   },
   {
@@ -2751,14 +2857,6 @@
     "tags": [],
     "contentHash": "5b4c538b9bd1afbf39d4a0ab2c24958f832940dbb34683766b8cd29f160bd586",
     "esContrast": "La secuencia 'ões' se nasaliza completamente, igual que 'mãe' al inicio.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Comprei três pães e um bolo para a mãe do meu amigo.",
-      "target": "Compré tres panes y un pastel para la madre de mi amigo.",
-      "acceptedAlternatives": [
-        "Compré tres panes y una torta para la madre de mi amigo."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "a0a9c0e4c1dbeb62ef2a181a798ad398e9cd61d571161c43792c7bee0f4bff2b",
@@ -2768,6 +2866,16 @@
         "hash": "ff19d954c8eee026b9ce7b9d54ba8a2d77bdc3d02cd4c620a3cf0eaf98853ee4",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Comprei três pães e um bolo para a mãe do meu amigo.",
+      "target": "Compré tres panes y un pastel para la madre de mi amigo.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Compré tres panes y una torta para la madre de mi amigo."
+      ]
     }
   },
   {
@@ -2783,16 +2891,6 @@
     ],
     "contentHash": "5be546f88ce8347c0ca5b472996d8f230eec4d7cedcd2f673c81607c21cd5799",
     "esContrast": "En español la 'r' inicial es vibrante simple; en BR suena como 'j' suave.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo se pronuncia la 'r' al inicio de palabra en PT-BR?",
-      "back": "Como /h/ (aspiración suave)",
-      "example": "rua → ['hua] | rato → ['hatu]"
-    },
-    "ptOverrides": {
-      "back": "Como vibrante alveolar [ʁ]",
-      "example": "rua → ['ʁua] | rato → ['ʁatu]"
-    },
     "audio": {
       "br": {
         "hash": "d755415c5bbe82910a0c57582f934bed327225bdf3507f599a0b95153311b0b9",
@@ -2801,6 +2899,18 @@
       "pt": {
         "hash": "2396ba3063bd71420cc6f5ed4ac0e731b951dcc66103c804f3bbc6945ed9d176",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo se pronuncia la 'r' al inicio de palabra en PT-BR?",
+      "back": "Como /h/ (aspiración suave)",
+      "example": "rua → ['hua] | rato → ['hatu]"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "Como vibrante alveolar [ʁ]",
+        "example": "rua → ['ʁua] | rato → ['ʁatu]"
       }
     }
   },
@@ -2818,12 +2928,6 @@
     ],
     "contentHash": "5c1ce6e302cd2b564e0e34b46c783fa7d072a3ee489732d1943fc7dad5edde7a",
     "esContrast": "Ojos en español; la terminación '-os' suena muy diferente en cada variante.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Por qué 'olhos' se pronuncia diferente entre variantes?",
-      "back": "Porque la 's' final es /s/ en BR y /ʃ/ en PT",
-      "example": "olhos → ['ɔ.ʎos] en BR / ['ɔ.ʎoʃ] en PT"
-    },
     "audio": {
       "br": {
         "hash": "1dc760ca6197d1f15c5bb0e47c19b27e8f29caede3a819313b2654cc1225f833",
@@ -2833,6 +2937,12 @@
         "hash": "0540f1ef4e652330e802e76a569a2d75bd98df8287e656431e58e5425f52c57c",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Por qué 'olhos' se pronuncia diferente entre variantes?",
+      "back": "Porque la 's' final es /s/ en BR y /ʃ/ en PT",
+      "example": "olhos → ['ɔ.ʎos] en BR / ['ɔ.ʎoʃ] en PT"
     }
   },
   {
@@ -2848,12 +2958,6 @@
       "a-nasal"
     ],
     "contentHash": "5c39fcc31c32aea41b066659da588a726d618e684ae7246971bd5cfdf6f23bb8",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cuál es el plural de 'pão'?",
-      "back": "pães",
-      "example": "Ontem comprei dois pães na padaria."
-    },
     "audio": {
       "br": {
         "hash": "b89464d0917ee600d21037c2e9e1111764413d6550833bcde7334564184b9c4c",
@@ -2863,6 +2967,12 @@
         "hash": "409d8ed46515eb94e776b47821b11b8b8184b55acb3131255f374b49b34fa552",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cuál es el plural de 'pão'?",
+      "back": "pães",
+      "example": "Ontem comprei dois pães na padaria."
     }
   },
   {
@@ -2876,6 +2986,16 @@
     "tags": [],
     "contentHash": "5e4bd926e9aa8dfdf06c7f5a427dfee71fb8e70ddd360aac9dd2cb7bba402eec",
     "esContrast": "'Bom' con 'o' nasal es diferente a 'bueno' en español.",
+    "audio": {
+      "br": {
+        "hash": "97065e0da4204c3a589d3f302de8df6ed2f01789ce10473635f2acac18eae564",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "b7fcf811468a3e766902c6a1b25aa2e3d5e3149f13a9d56a1b6f5066d350560a",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "O almoço está bom, mas o café está ruim.",
@@ -2887,16 +3007,6 @@
         "Pequeno"
       ],
       "answer": "Bom"
-    },
-    "audio": {
-      "br": {
-        "hash": "97065e0da4204c3a589d3f302de8df6ed2f01789ce10473635f2acac18eae564",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "b7fcf811468a3e766902c6a1b25aa2e3d5e3149f13a9d56a1b6f5066d350560a",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -2914,12 +3024,6 @@
     ],
     "contentHash": "5e68ce66ad7ff87335df1196c834be92928ad9bbac9be28ad3c9585a0cd1a543",
     "esContrast": "En BR moderno, muchos diptongos se neutralizan. En PT-PT sí hay diferencia clara entre /e/ y /ɛ/.",
-    "type": "flashcard",
-    "data": {
-      "front": "Cuál es la diferencia entre 'papel' y 'papél'?",
-      "back": "'papel' (/paˈpɛw/) = papel (material); 'papel' (/paˈpɛw/) se pronuncia igual en BR — la diferencia de acento no cambia el sonido en muchas variedades",
-      "example": "Necesito papel para escribir. / Este papel é muito resistente."
-    },
     "audio": {
       "br": {
         "hash": "d6cf4d9d43803da4ab27926009c71e599446743087dbc85946ff2c18509967e4",
@@ -2929,6 +3033,12 @@
         "hash": "defb8ed6b265f9f292328483c10f26d725b4ab75b8e0f8693b45971011f39d86",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Cuál es la diferencia entre 'papel' y 'papél'?",
+      "back": "'papel' (/paˈpɛw/) = papel (material); 'papel' (/paˈpɛw/) se pronuncia igual en BR — la diferencia de acento no cambia el sonido en muchas variedades",
+      "example": "Necesito papel para escribir. / Este papel é muito resistente."
     }
   },
   {
@@ -2942,6 +3052,16 @@
     "tags": [],
     "contentHash": "5f17e878211c2289472b4a7a65a31cd9988a74076384c226bd23ef7091ea5ab5",
     "esContrast": "'Irmão' termina en nasal ão, confusión con 'hermano'.",
+    "audio": {
+      "br": {
+        "hash": "9b05fef770cd11ba66af614a03693d0311b3669726d81f2a0ae9ff69be539297",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "fb89bb1a28ca0961dd7e21ceaa0f1d88e82660e3639a98e35d63b56e183e6800",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Meu irmão tem um cão.",
@@ -2953,16 +3073,6 @@
         "O tio"
       ],
       "answer": "O irmão"
-    },
-    "audio": {
-      "br": {
-        "hash": "9b05fef770cd11ba66af614a03693d0311b3669726d81f2a0ae9ff69be539297",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "fb89bb1a28ca0961dd7e21ceaa0f1d88e82660e3639a98e35d63b56e183e6800",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -3005,6 +3115,16 @@
     ],
     "contentHash": "620b39dc3c12bf39172d116fca83f8c12047137b1c6452a4860f2435703ee807",
     "esContrast": "En PT, la 's' final en 'meses' suena como /ʃ/; en BR es /s/.",
+    "audio": {
+      "br": {
+        "hash": "ee0a58364acbf1ec6a7a82a967a15ed9a6609a4afa7a892c4b6cc09142b59a8b",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "acfd97759bee375deed4e39854b78a5a50b41cf7c0971ba91c42dd2721f71f54",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Quantos meses você ficou no Brasil? Fiquei três meses, mas foram os meses mais bons.",
@@ -3017,17 +3137,9 @@
       ],
       "answer": "Tres meses"
     },
-    "ptOverrides": {
-      "audioText": "Quantos meses ficou em Portugal? Fiquei três meses, mas foram os meses mais bons."
-    },
-    "audio": {
-      "br": {
-        "hash": "ee0a58364acbf1ec6a7a82a967a15ed9a6609a4afa7a892c4b6cc09142b59a8b",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "acfd97759bee375deed4e39854b78a5a50b41cf7c0971ba91c42dd2721f71f54",
-        "voice": "Portuguese_Wiselady"
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "Quantos meses ficou em Portugal? Fiquei três meses, mas foram os meses mais bons."
       }
     }
   },
@@ -3043,12 +3155,6 @@
       "regular"
     ],
     "contentHash": "62b470e0148e5023ca48f162743364cb098ca40efdb42b52f2413279856a1ae9",
-    "type": "flashcard",
-    "data": {
-      "front": "mañana",
-      "back": "manhã",
-      "example": "Nos vemos amanhã de manhã."
-    },
     "audio": {
       "br": {
         "hash": "71d9b77d870613a0dc1eab4007a225f32e71d42ee3d8df678776956aeca85423",
@@ -3058,6 +3164,12 @@
         "hash": "6f216697ee5b737abfed71644981625405a50d962a32f547bc592e67215a2f95",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "mañana",
+      "back": "manhã",
+      "example": "Nos vemos amanhã de manhã."
     }
   },
   {
@@ -3072,12 +3184,6 @@
       "h-muda"
     ],
     "contentHash": "6524706c9fdfc4d12c8a2fb5c1d220750382b14ba0c1f5db086f4836dcc8e5c3",
-    "type": "flashcard",
-    "data": {
-      "front": "hola",
-      "back": "oi",
-      "example": "Oi, tudo bem?"
-    },
     "audio": {
       "br": {
         "hash": "f422ce649c7c4d962e7486ce18bbe2726a9631609a59f238e835466dbe31567f",
@@ -3087,6 +3193,12 @@
         "hash": "06aba1373f20193b56dfaeed791bdbb0e93e0e6fbab5cc5626632da7eefa5a3c",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "hola",
+      "back": "oi",
+      "example": "Oi, tudo bem?"
     }
   },
   {
@@ -3102,12 +3214,6 @@
     ],
     "contentHash": "654c0b722ae8cb480e39a586fff26b3f8f162ccbc10bacc0bdfa36f518332b56",
     "esContrast": "En español: ma-MA-mé (3 sílabas, esdrújula). El plural 'mães' tiene 2 sílabas en portugués.",
-    "type": "flashcard",
-    "data": {
-      "front": "Clasifica 'mamãe': ¿aguda, grave o esdrújula?",
-      "back": "ma-mãe: 2 sílabas → oxítona. Termina en 'ã' (nasal), así que LLEVA tilde: mamãe.",
-      "example": "A minha mamãe é muito carinhosa."
-    },
     "audio": {
       "br": {
         "hash": "c1a027de653c23ff71b41e4aa3672b5b767045d3c44113ffff5919ea408dd3cb",
@@ -3117,6 +3223,12 @@
         "hash": "752812e72d0d82688c93ad330dd7d63d7096724dc732134025042847d9b7913c",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Clasifica 'mamãe': ¿aguda, grave o esdrújula?",
+      "back": "ma-mãe: 2 sílabas → oxítona. Termina en 'ã' (nasal), así que LLEVA tilde: mamãe.",
+      "example": "A minha mamãe é muito carinhosa."
     }
   },
   {
@@ -3130,14 +3242,6 @@
     "tags": [],
     "contentHash": "65a02894cc2eb063097f204b1925726aafedf278fbf9e234da9a632c7eeeeb01",
     "esContrast": "'Bem' con nasal suena diferente a 'bien' español. La nasalización marca la diferencia.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Ele está bem hoje, graças a Deus.",
-      "target": "Él está bien hoy, gracias a Dios.",
-      "acceptedAlternatives": [
-        "Él se encuentra bien hoy, gracias a Dios."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "084b17513e9e54aac1bb1649bf89db473b774c5bdabddcafe337ebe97a538129",
@@ -3147,6 +3251,16 @@
         "hash": "423f3da4c50e5114d417b4e33caffb0c9aa9ccde6fd4e6d4bf0080b0a00773b1",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Ele está bem hoje, graças a Deus.",
+      "target": "Él está bien hoy, gracias a Dios.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Él se encuentra bien hoy, gracias a Dios."
+      ]
     }
   },
   {
@@ -3162,20 +3276,6 @@
     ],
     "contentHash": "666eaeb9b92df3438012da9b4e6c600781389997bbe5e7b2f697fbceab75c4ef",
     "esContrast": "PT-BR: avô (grave, tilde); PT-PT: avô (grave, sin tilde). Falso amigo de 'abuelo'.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "O meu avô é português.",
-      "target": "Mi abuelo es portugués.",
-      "acceptedAlternatives": [
-        "Mi abuelo es portugués."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Mi abuelo es portugués.",
-      "acceptedAlternatives": [
-        "Mi abuelo es portugués."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "c8e81934532aa9ef36cc600745e50040e53d60e45a2a9a0b30568b87c8cd1d7c",
@@ -3184,6 +3284,24 @@
       "pt": {
         "hash": "d4ec26dd72ce4aeb9a7a649cf92114f4b19ced9a3fed39b4f55c8b144e420fd2",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "O meu avô é português.",
+      "target": "Mi abuelo es portugués.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Mi abuelo es portugués."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Mi abuelo es portugués.",
+        "acceptedAlternatives": [
+          "Mi abuelo es portugués."
+        ]
       }
     }
   },
@@ -3200,12 +3318,6 @@
       "a-nasal"
     ],
     "contentHash": "6a14a1d441175fff52850372a47d3136447564e1d1dbd7d10e87f75ff2fe366c",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo se dice 'madre' en portugués?",
-      "back": "mãe",
-      "example": "A minha mãe é muito carinhosa."
-    },
     "audio": {
       "br": {
         "hash": "be3d270b94ec066222b0361dcc8bad5cce0cde77e9b37c2dff90103319c26a44",
@@ -3215,6 +3327,12 @@
         "hash": "909023a74cf3747289d32ddfc1cab5f2f51d86bf667545663f5d35d2e81d552b",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo se dice 'madre' en portugués?",
+      "back": "mãe",
+      "example": "A minha mãe é muito carinhosa."
     }
   },
   {
@@ -3230,12 +3348,6 @@
     ],
     "contentHash": "6c6bb9ac7887c77fa8d68324d58ffab7f44ea0e8184176c9e8aff4f97b8269c2",
     "esContrast": "En pt la tilde va en 'difícil' y la 'ú' suena diferente. En es se acentúa 'di-fí-cil'.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Esa lección es muy difícil.",
-      "target": "Essa lição é muito difícil.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "cc677d966ab610944b970bad50e88667e326ef4740de71aaaf14511662ca6384",
@@ -3245,6 +3357,14 @@
         "hash": "b9d7d21aa792de058227cffb79e88eb7654c422e03e66efd392fafe2840107dc",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Esa lección es muy difícil.",
+      "target": "Essa lição é muito difícil.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": []
     }
   },
   {
@@ -3285,14 +3405,6 @@
     ],
     "tags": [],
     "contentHash": "6dfaaf5b078996a843ae030202e4079911e65ed55670dd0cb1979c8b59f1ebb2",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Quero um pão com manteiga.",
-      "target": "Quiero un pan con mantequilla.",
-      "acceptedAlternatives": [
-        "Quiero un pan con manteca."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "2587b494b3b63f03348648f4a4be4032e617f2c750b7f744d5d812b11bd3496a",
@@ -3302,6 +3414,16 @@
         "hash": "6f4f4fae9be26b9bc85cb9212bf1a8de93f155c9521f7017b671ff830cddcaad",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Quero um pão com manteiga.",
+      "target": "Quiero un pan con mantequilla.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Quiero un pan con manteca."
+      ]
     }
   },
   {
@@ -3318,12 +3440,6 @@
     ],
     "contentHash": "6e92fc3173a93775547faf3c820dd968205da004d08068907e307a182351dca8",
     "esContrast": "En español también es aguda: ca-FÉ. Recuerda pronunciar la 'e' final como /e/ cerrada.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿En qué sílaba cae el acento en 'café'?",
-      "back": "café — es oxítona (acento en la última sílaba: ca-FÉ)",
-      "example": "Eu quero um café, por favor."
-    },
     "audio": {
       "br": {
         "hash": "42ddc094704909cc77fd03d7b06344802dbbc787c4a6f38063bfdfd2728a39c3",
@@ -3333,6 +3449,12 @@
         "hash": "4c68129df269ce7f3d4a640fcc56ce99a73edf388dc578b43583775f251f91e6",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿En qué sílaba cae el acento en 'café'?",
+      "back": "café — es oxítona (acento en la última sílaba: ca-FÉ)",
+      "example": "Eu quero um café, por favor."
     }
   },
   {
@@ -3376,12 +3498,6 @@
     ],
     "contentHash": "7088d52506c59a861e0f4a5b9a5d289887f32a61b6ed906cdc7bc64be6667ec4",
     "esContrast": "Similar a la ñ española, pero en português afecta a 'a' y 'o'.",
-    "type": "flashcard",
-    "data": {
-      "front": "Para qué sirve la tilde (~)?",
-      "back": "Indica nasalización: ã, õ",
-      "example": "maçã /maˈsɐ̃/, coração /koɾaˈsɐ̃w/."
-    },
     "audio": {
       "br": {
         "hash": "119feaf93a7e5a0cfaf56afee7c12f53b58db5c8916734066aa5605c117e6cee",
@@ -3391,6 +3507,12 @@
         "hash": "de110b3e4b6bd326e70a8021d2102e134ad7c4382b09c1526da5eaabae7e1fd0",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Para qué sirve la tilde (~)?",
+      "back": "Indica nasalización: ã, õ",
+      "example": "maçã /maˈsɐ̃/, coração /koɾaˈsɐ̃w/."
     }
   },
   {
@@ -3407,12 +3529,6 @@
     ],
     "contentHash": "7093d2de583d1979caa4e2757363e14b0aeb5914ef792ec6723bfb3e29035e04",
     "esContrast": "Funciona igual que en español: indica sílaba tónica y sonido.",
-    "type": "flashcard",
-    "data": {
-      "front": "Qué indica el acento agudo (´)?",
-      "back": "Vocal cerrada: á, é, í, ó, ú — indica tonicidad y sonido cerrado",
-      "example": "café /kaˈfɛ/, você /voˈse/."
-    },
     "audio": {
       "br": {
         "hash": "5289e2317d97f747d9d59c18b6b4616d6f41d9421f1b3a55a41db0f2d37a22d5",
@@ -3422,6 +3538,12 @@
         "hash": "d39ecf2a628de5cebf4854d8bdae5f1b1325db42f9d3d2f3467e78275b03dee4",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Qué indica el acento agudo (´)?",
+      "back": "Vocal cerrada: á, é, í, ó, ú — indica tonicidad y sonido cerrado",
+      "example": "café /kaˈfɛ/, você /voˈse/."
     }
   },
   {
@@ -3436,12 +3558,6 @@
       "regular"
     ],
     "contentHash": "71a149adf38403486e2a90d291bf899ee148b69edb77ef4f00b270ee165d0307",
-    "type": "flashcard",
-    "data": {
-      "front": "niño",
-      "back": "criança / moleque",
-      "example": "A criança está dormindo."
-    },
     "audio": {
       "br": {
         "hash": "e7641a2c36fd5b2458466b4416e6883d4dc0bbbb80e94b2e4ee2c0bd624e5a26",
@@ -3451,6 +3567,12 @@
         "hash": "3b407318229ea16c792c77658fc275d5d35703836eedb21d9d22db53dc14f205",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "niño",
+      "back": "criança / moleque",
+      "example": "A criança está dormindo."
     }
   },
   {
@@ -3468,11 +3590,6 @@
     ],
     "contentHash": "71f7652e6ad36e8893128e0c0cfd00b8adfe69d88ffc39a343f8fc830bab6c42",
     "esContrast": "Soldadillo → soldado (-ill- > -ilh-); morado → roxo (falso amigo: 'morado' en PT es 'roxo').",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "El soldadillo tiene un ojo morado",
-      "target": "O soldado tem um olho roxo"
-    },
     "audio": {
       "br": {
         "hash": "da885736ddd9b9e5f59c55d612d8f90bffd9f4b9d49dc901b92a669915347e1d",
@@ -3482,6 +3599,13 @@
         "hash": "914fc7f4f2f78391a88125a4c9b1e89cbda81c016e3f1023aaae36c0e58cf66f",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "El soldadillo tiene un ojo morado",
+      "target": "O soldado tem um olho roxo",
+      "sourceLang": "es",
+      "targetLang": "pt-br"
     }
   },
   {
@@ -3548,14 +3672,6 @@
     ],
     "contentHash": "79125e5d3cf7302f3052e1c176f831a7ba0e69e48017785f7a8992269144e28e",
     "esContrast": "'fácil' lleva tilde en PT por ser esdrújula; en ES es grave y no lleva tilde.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Este exercício é muito fácil.",
-      "target": "Este ejercicio es muy fácil.",
-      "acceptedAlternatives": [
-        "Este ejercicio es muy fácil."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "28ba4295e5184f755dd997ea64d2b7edc807bf7f3bd12b39148b644993b7e12b",
@@ -3565,6 +3681,16 @@
         "hash": "1b69fc87101efc77ac097a9772cd8b176e9f6c7020fc525da68d8d2e1677d57b",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Este exercício é muito fácil.",
+      "target": "Este ejercicio es muy fácil.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Este ejercicio es muy fácil."
+      ]
     }
   },
   {
@@ -3667,20 +3793,6 @@
     ],
     "contentHash": "7d62650ebfdb313502b4199d1666a8732eb1e008ce26c709e0862e687fd45181",
     "esContrast": "En PT-PT se prefiere 'má' pospuesta; en BR se dice 'ruim'.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Ella cantaba muy bien, pero ahora su voz está mala.",
-      "target": "Ela cantava muito bem, mas agora sua voz está ruim.",
-      "acceptedAlternatives": [
-        "Ela cantava muito bem, porém agora sua voz está ruim."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Ela cantava muito bem, mas agora a voz dela está má.",
-      "acceptedAlternatives": [
-        "Ela cantava muito bem, porém a voz dela está má."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "31f0241fda316f674b96eb53a1d71ccc65e7f49aa42b2b596fd43652eabb78db",
@@ -3689,6 +3801,24 @@
       "pt": {
         "hash": "5fb8c4f86452b4d915d77d7c36cc453cb35c39da50a51ae452ec786993ee72f1",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Ella cantaba muy bien, pero ahora su voz está mala.",
+      "target": "Ela cantava muito bem, mas agora sua voz está ruim.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Ela cantava muito bem, porém agora sua voz está ruim."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Ela cantava muito bem, mas agora a voz dela está má.",
+        "acceptedAlternatives": [
+          "Ela cantava muito bem, porém a voz dela está má."
+        ]
       }
     }
   },
@@ -3705,12 +3835,6 @@
     ],
     "contentHash": "7d8a2c74418806231a41fbd9bdc6ad42193ee46ffaa48d4a49209f9852df5162",
     "esContrast": "En español: Bra-SIL (2 sílabas, aguda). La regla de la tilde es igual: terminación en -l = sin tilde.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cuántas sílabas tiene ' Brasil'? ¿Es aguda, grave o esdrújula?",
-      "back": "Brasil: 2 sílabas (Bra-sil) → paroxítona. Termina en -l → sin tilde.",
-      "example": "Eu amo o Brasil."
-    },
     "audio": {
       "br": {
         "hash": "495dc2d59adeb429547a3e6da92462056f489cd544407c2f0e8fcebf81807c47",
@@ -3720,6 +3844,12 @@
         "hash": "05795bc686b832d78d64ec3400a79e370272c8cb9d183f21f82c63129ac6b862",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cuántas sílabas tiene ' Brasil'? ¿Es aguda, grave o esdrújula?",
+      "back": "Brasil: 2 sílabas (Bra-sil) → paroxítona. Termina en -l → sin tilde.",
+      "example": "Eu amo o Brasil."
     }
   },
   {
@@ -3761,14 +3891,6 @@
     "tags": [],
     "contentHash": "7fdd81e12dc46ab234b02bdef02bc846114245c9f55ebaab516c4a0bec2fbbe9",
     "esContrast": "El circunflejo (ô) no es igual al acento español (ó); cambia el sonido.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "La palavra coração leva acento circunflexo.",
-      "target": "A palavra coração leva acento circunflexo.",
-      "acceptedAlternatives": [
-        "A palavra coração tem acento circunflexo."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "9dad08992e1bb23cc1df015436b28eb2c2a4d4ed8944845572f42808d040aa1e",
@@ -3778,6 +3900,16 @@
         "hash": "f53655bb9af0d3568445b9a80aff81f48e59d8ffe9a23bbbe24d40786595e219",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "La palavra coração leva acento circunflexo.",
+      "target": "A palavra coração leva acento circunflexo.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "A palavra coração tem acento circunflexo."
+      ]
     }
   },
   {
@@ -3794,12 +3926,6 @@
     ],
     "contentHash": "80945c47431be98d6805e5d68c65f47542db43a2218208f38d8061e93d773715",
     "esContrast": "En español la cedilla (ç) ya no se usa; en portugués sí.",
-    "type": "flashcard",
-    "data": {
-      "front": "Cómo se pronuncia la letra 'ç' en portugués?",
-      "back": "Como la 's' antes de e, i (sonido /s/)",
-      "example": "Açaí se pronuncia [asaˈi], no como 'çaí'."
-    },
     "audio": {
       "br": {
         "hash": "80aef2356c2f73ccf8f042ed5dcb66693cf1dcc5021a7bef1f1b93336c62062a",
@@ -3809,6 +3935,12 @@
         "hash": "0066c5f12c00f08db56a792d5531b06208a39f960132bf45d4b9a1bfa9ad75bc",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Cómo se pronuncia la letra 'ç' en portugués?",
+      "back": "Como la 's' antes de e, i (sonido /s/)",
+      "example": "Açaí se pronuncia [asaˈi], no como 'çaí'."
     }
   },
   {
@@ -3874,14 +4006,6 @@
     "tags": [],
     "contentHash": "8213a892d67d64f1c68530a70c3571cb8b90dfa0c40ee7ebcd33a0be5293ec76",
     "esContrast": "Atenção: 'mais velho' = mayor en edad, no confundir con 'velho' solo.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Mi hermano mayor vive en São Paulo.",
-      "target": "Meu irmão mais velho mora em São Paulo.",
-      "acceptedAlternatives": [
-        "Meu irmão mais velho vive em São Paulo."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "ff2b829785770014242c8b2c35efa9b147307b5b56b8235c783b171facffc8f8",
@@ -3891,6 +4015,16 @@
         "hash": "a56c4bbe8b2d8c9e0fc076a3fb34783b4ee438d9cbd0eeadeaa627208bb78ae1",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Mi hermano mayor vive en São Paulo.",
+      "target": "Meu irmão mais velho mora em São Paulo.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Meu irmão mais velho vive em São Paulo."
+      ]
     }
   },
   {
@@ -3907,12 +4041,6 @@
     ],
     "contentHash": "82d8f1d5b21d11ccd83c1b3cc03435c382d0c3bc65e99e4dcc08f93c04657b4d",
     "esContrast": "Se pronuncia /ũ/ nasalizado, no como 'uno' en español.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cuál es el artículo indefinido masculino singular en portugués?",
-      "back": "um",
-      "example": "Eu tenho um irmão e uma irmã."
-    },
     "audio": {
       "br": {
         "hash": "65809fb4806b9f670e0118917866394234757d005411edabf00b0b088bbb7254",
@@ -3922,6 +4050,12 @@
         "hash": "fe16516733513e45cd94f63a5ff818413bbf2352d40a5b421e456ec97b956cec",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cuál es el artículo indefinido masculino singular en portugués?",
+      "back": "um",
+      "example": "Eu tenho um irmão e uma irmã."
     }
   },
   {
@@ -3963,15 +4097,6 @@
     ],
     "contentHash": "85f61ce8664a6f292d0897408cd1d8cff04299db422fe8898ce257b307cb04fd",
     "esContrast": "Cuidado: 'mãe' es 'madre/mamá', no 'mamá' en el sentido de 'mamón'.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "A minha mãe é brasileira.",
-      "target": "Mi madre es brasileña.",
-      "acceptedAlternatives": [
-        "Mi mamá es brasileña.",
-        "Mi madre es brasilera."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "4398547ea044bc16762f22cbc1b7da0b7daf96fa6582089269d31474f4b1a8fc",
@@ -3981,6 +4106,17 @@
         "hash": "e44cca5fd07fb48232357c4ba78ddc100e7a5d5ee6f4d626b1d0f7c736cc2607",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "A minha mãe é brasileira.",
+      "target": "Mi madre es brasileña.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Mi mamá es brasileña.",
+        "Mi madre es brasilera."
+      ]
     }
   },
   {
@@ -3998,12 +4134,6 @@
     ],
     "contentHash": "8695dcff8e77e7b82a7994d6c33999bab4327265dcfb54cc12612aaca21d81fe",
     "esContrast": "En español 'para' nunca lleva acento; en portugués 'pará' es una forma verbal.",
-    "type": "flashcard",
-    "data": {
-      "front": "Cuál es la diferencia entre 'para' y 'pará'?",
-      "back": "'para' es preposición; 'pará' (con acento) es verbo 'parar' en 3ª persona del singular del presente de indicativo",
-      "example": "Ele pará de chorar. / Isso é para você."
-    },
     "audio": {
       "br": {
         "hash": "ad4b7926f41f72f8b086fa6c3cc81147f469678415ff7e03f8b08591a4bae577",
@@ -4013,6 +4143,12 @@
         "hash": "de5987fb01bd6a4f4661d60a6b2ab82e08f6bda099003ab80238dc21fa71a93d",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Cuál es la diferencia entre 'para' y 'pará'?",
+      "back": "'para' es preposición; 'pará' (con acento) es verbo 'parar' en 3ª persona del singular del presente de indicativo",
+      "example": "Ele pará de chorar. / Isso é para você."
     }
   },
   {
@@ -4028,15 +4164,6 @@
       "e-nasal"
     ],
     "contentHash": "86baae71c5acb1071480bd35e98d4a89cf88ce85b434c296bf2473951483ee67",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Qué significa 'também'?",
-      "back": "también / también",
-      "example": "Eu também quero ir ao cinema."
-    },
-    "ptOverrides": {
-      "back": "também"
-    },
     "audio": {
       "br": {
         "hash": "159b75212641da918d44f0f92c89c45ee054c3c366d29051a6c56592f7c2098c",
@@ -4045,6 +4172,17 @@
       "pt": {
         "hash": "66403e4971d14b80deec13515ca06492f137a118a4bf8bd66ea293963aaadf26",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Qué significa 'também'?",
+      "back": "también / también",
+      "example": "Eu também quero ir ao cinema."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "também"
       }
     }
   },
@@ -4062,12 +4200,6 @@
     ],
     "contentHash": "86c358b83ecf6d9356f86d8eb68d2cb2ce38f03c8dd90fd9613eacdf3cf20003",
     "esContrast": "Ambas palabras terminan en 's': BR /s/, PT /ʃ/ en ambos casos.",
-    "type": "flashcard",
-    "data": {
-      "front": "Compara la pronunciación de 'dois reais' en BR vs PT",
-      "back": "BR: [dojs ʁe.'ajs] | PT: [dojʃ ʁe.'ajʃ]",
-      "example": "Dois reais é pouco."
-    },
     "audio": {
       "br": {
         "hash": "fa5aa10145d4169f2b5c3a83da31b30997ed2a13ea8f12fd5eb612a215a89931",
@@ -4077,6 +4209,12 @@
         "hash": "60e738b48b7d4b73a50afae59e7eca31953f9333a2e98c993ff877f4cd94cd41",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Compara la pronunciación de 'dois reais' en BR vs PT",
+      "back": "BR: [dojs ʁe.'ajs] | PT: [dojʃ ʁe.'ajʃ]",
+      "example": "Dois reais é pouco."
     }
   },
   {
@@ -4091,12 +4229,6 @@
       "basico"
     ],
     "contentHash": "881c40d7def736a0264ae0d768b92c4be3d878c0820c240a6fb9d3e29fa7f6cd",
-    "type": "flashcard",
-    "data": {
-      "front": "Se usan las letras K, W e Y en portugués?",
-      "back": "Sí, pero solo en palabras extranjeras: kiwi, wifi, show, kart",
-      "example": "Ele gosta de jogar kart."
-    },
     "audio": {
       "br": {
         "hash": "ced0ff1b7610b903aca4e23742e10848a892a56ba854ad1f6e5fb805567070a5",
@@ -4106,6 +4238,12 @@
         "hash": "aa1231e8bf36009fb5d3faa5f9ab51d5565bd660a80936f2c66b4dda22d8cdc0",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Se usan las letras K, W e Y en portugués?",
+      "back": "Sí, pero solo en palabras extranjeras: kiwi, wifi, show, kart",
+      "example": "Ele gosta de jogar kart."
     }
   },
   {
@@ -4118,12 +4256,6 @@
     ],
     "tags": [],
     "contentHash": "88aaa870b0e844359ecffe59e63295364ce84d8b893052b4233511c120c91934",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "El pan está en la mesa.",
-      "target": "O pão está na mesa.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "461e63a9d72fac2cda856d2b8de4940a4a5e2e75c0337e9fda880a6e0a9efa62",
@@ -4133,6 +4265,14 @@
         "hash": "41df554e570751d5ceac100f5d681415e957950956222da67d0304c657ca3ece",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "El pan está en la mesa.",
+      "target": "O pão está na mesa.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": []
     }
   },
   {
@@ -4148,12 +4288,6 @@
       "vocabulario-clave"
     ],
     "contentHash": "88f4a544d432ed84c59423fe66fd3e8868451a755315a25522e89f113dd6a7b3",
-    "type": "flashcard",
-    "data": {
-      "front": "hotel",
-      "back": "hotel",
-      "example": "O hotel fica no centro."
-    },
     "audio": {
       "br": {
         "hash": "33529ccc4c688273e51fd0b8a97bd3e9b04e356f030c9899006d664444380409",
@@ -4163,6 +4297,12 @@
         "hash": "d814834349ab2230b0c48e62a7d9aea111d1fe7bbbbcb639e57f814338717eab",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "hotel",
+      "back": "hotel",
+      "example": "O hotel fica no centro."
     }
   },
   {
@@ -4177,11 +4317,6 @@
     "tags": [],
     "contentHash": "8978047ad67ffe3ab6e3ac5517e63b160767ddd4f4bf6846b888f8d3ef68a1c2",
     "esContrast": "En PT se escribe 'amanhã', en ES 'mañana': cambia -ñ > -nh y -ón > -ão.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Mañana por la mañana",
-      "target": "Amanhã de manhã"
-    },
     "audio": {
       "br": {
         "hash": "86690f06a5489933dc343203feb58e086aa11621aa43e841347c4e36b5d59097",
@@ -4191,6 +4326,13 @@
         "hash": "143c888c57e622bae0f3ee14c70b6fb60fe219524f272e665a0faec2ba4f8753",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Mañana por la mañana",
+      "target": "Amanhã de manhã",
+      "sourceLang": "es",
+      "targetLang": "pt-br"
     }
   },
   {
@@ -4207,12 +4349,6 @@
     ],
     "contentHash": "8b4f402c91c4e478a555345ca18c180cd0931673671cf76d2eefea6a46240cd3",
     "esContrast": "En español 'lápiz' es esdrújula (LÁ-piz) y termina en -z. En portugués termina en -s y la tilde cambia de posición.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Dónde está la sílaba tónica en 'lápis'?",
-      "back": "lápis — es paroxítona (acento en la penúltima: LÁ-pis)",
-      "example": "Preciso de um lápis para escrever."
-    },
     "audio": {
       "br": {
         "hash": "b1455f33298c20368cfd12bd25c3cba6c65697151a32a8e70bcf97fd325364ba",
@@ -4222,6 +4358,12 @@
         "hash": "e3ad4b5a499e8654d3cbb43b8b1be8856e64caae86fdfbb77d792038623ce679",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Dónde está la sílaba tónica en 'lápis'?",
+      "back": "lápis — es paroxítona (acento en la penúltima: LÁ-pis)",
+      "example": "Preciso de um lápis para escrever."
     }
   },
   {
@@ -4250,15 +4392,17 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "A minha ___ mora em Lisboa e tem 80 anos.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "avó",
-          "alternatives": []
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "A minha ___ mora em Lisboa e tem 80 anos.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "avó",
+            "alternatives": []
+          }
+        ]
+      }
     }
   },
   {
@@ -4275,12 +4419,6 @@
     ],
     "contentHash": "8c01145dbc9ecd030279f6183ba0d90b65291870b475915d930a229c58787259",
     "esContrast": "En español 'bem' no existe; recuerda la nasalización final.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo se dice 'bien' en portugués?",
-      "back": "bem",
-      "example": "Eu estou bem, obrigado."
-    },
     "audio": {
       "br": {
         "hash": "cfe5bb712a28758bdf3075b2120f8c4bb23f5a623f32fb5fec2b050d087090d9",
@@ -4290,6 +4428,12 @@
         "hash": "11c45c7ce43f9f88cfdc0047cab5c0ef14e8f39a796c26e7e3f7adc3ae1b3b97",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo se dice 'bien' en portugués?",
+      "back": "bem",
+      "example": "Eu estou bem, obrigado."
     }
   },
   {
@@ -4307,20 +4451,6 @@
     ],
     "contentHash": "8c2626c75cb867627062ff36caa5d098e94236b0d07acb1d18add77b9dec9b77",
     "esContrast": "",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "La ciudad brasileña tiene muchas calles anchas.",
-      "target": "A cidade brasileira tem muitas ruas largas.",
-      "acceptedAlternatives": [
-        "O Brasil tem muitas ruas largas."
-      ]
-    },
-    "ptOverrides": {
-      "target": "A cidade brasileira tem muitas ruas largas.",
-      "acceptedAlternatives": [
-        "O Brasil tem muitas ruas largas."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "ea1917933baeb2088f911cc7e1823a12fe58da148076a7191c142d0399157662",
@@ -4329,6 +4459,24 @@
       "pt": {
         "hash": "529ac03cbd8ead623b27c8e6b29f747c0a688f88fcd74a3f9287cc7297914bbd",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "La ciudad brasileña tiene muchas calles anchas.",
+      "target": "A cidade brasileira tem muitas ruas largas.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "O Brasil tem muitas ruas largas."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "A cidade brasileira tem muitas ruas largas.",
+        "acceptedAlternatives": [
+          "O Brasil tem muitas ruas largas."
+        ]
       }
     }
   },
@@ -4343,6 +4491,16 @@
     "tags": [],
     "contentHash": "8de82d917d18c39313315818b0689c5d1cd7ace2e42f681a3a2eee940c4f9599",
     "esContrast": "La 'ã' de mãe es nasal. En español 'mae' no existe así.",
+    "audio": {
+      "br": {
+        "hash": "37b10df6fd6d41c438d92921607104d121768b9c8476050c88000732c5a577c0",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "074b0d369b0543eeaa0403e835df7e71700e18a3c083df3852b6d4fa72eff534",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Eu vejo uma mãe.",
@@ -4354,16 +4512,6 @@
         "mãe"
       ],
       "answer": "mãe"
-    },
-    "audio": {
-      "br": {
-        "hash": "37b10df6fd6d41c438d92921607104d121768b9c8476050c88000732c5a577c0",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "074b0d369b0543eeaa0403e835df7e71700e18a3c083df3852b6d4fa72eff534",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -4379,12 +4527,6 @@
     ],
     "contentHash": "8e638d6e242a58a9f62c6243fff427e16c7d01837d8f16a9b2e5a5448bf06f8c",
     "esContrast": "El acento grave (à) indica contracción con 'a', no es tilde como en italiano.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "El acento grave indica contracción en portugués.",
-      "target": "O acento grave indica contração em português.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "8d69aa4676dad48ad1cc44e5b1de2b1c6fe4946a71c203c6e84c6fdf358828fc",
@@ -4394,6 +4536,14 @@
         "hash": "1f2c712e5f4da07735ef7605045037c5bf58246ff92e1196b6ce9fc4eb771306",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "El acento grave indica contracción en portugués.",
+      "target": "O acento grave indica contração em português.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": []
     }
   },
   {
@@ -4432,6 +4582,16 @@
     ],
     "tags": [],
     "contentHash": "8f97e91737025068faccf8c9cd9dd0f04588b22bbbdd9a79468df1b07636479a",
+    "audio": {
+      "br": {
+        "hash": "dd51292d91cd4239dd4b6d0e39b814dde11c565d8f8f0d41432ed4a1687ef318",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "3975282a65c8f8c1a30f8bed48b6a6278bada65130466ca3f367773d7caf366f",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Qual palavra é paroxítona: difíceis, café, táxi?",
@@ -4443,16 +4603,6 @@
         "lápis"
       ],
       "answer": "difíceis"
-    },
-    "audio": {
-      "br": {
-        "hash": "dd51292d91cd4239dd4b6d0e39b814dde11c565d8f8f0d41432ed4a1687ef318",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "3975282a65c8f8c1a30f8bed48b6a6278bada65130466ca3f367773d7caf366f",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -4469,12 +4619,6 @@
     ],
     "contentHash": "90adc730fb0236e4b07ac9151cccf45da83e190be35b31193fa897d2a1dc6949",
     "esContrast": "En español, las palabras terminadas en -és también son agudas con tilde: café, marajá... Regla similar.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cuál es la regla de acentuación para palabras terminadas en -és, -eas, -em, -ens?",
-      "back": "Son oxítonas y LLEVAN tilde: café, marajás, parabéns, vinténs",
-      "example": "Ela é muito simpática, parabéns!"
-    },
     "audio": {
       "br": {
         "hash": "1ee3403589bf62989e1c6850319af5b83b572a1ff89060af0893a597377a5331",
@@ -4484,6 +4628,12 @@
         "hash": "9ae1973ede0a215ad6c947973ae2a3b8625c3ae8849157bb232459a7d670656d",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cuál es la regla de acentuación para palabras terminadas en -és, -eas, -em, -ens?",
+      "back": "Son oxítonas y LLEVAN tilde: café, marajás, parabéns, vinténs",
+      "example": "Ela é muito simpática, parabéns!"
     }
   },
   {
@@ -4499,12 +4649,6 @@
     ],
     "contentHash": "9163a7645fa60a2dbd0aa265e518d6ec1b14acf0774f0ce12984b20e69a68171",
     "esContrast": "En pt, 'fácil' se escribe igual pero la sílaba tónica cambia a 'fa-' (no 'fi-' como crees al hispanohablar).",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Este ejercicio es fácil.",
-      "target": "Este exercício é fácil.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "028797632e7053649944e588003f5c2b642424d9fe9e18d1cb7fd3462d3317e6",
@@ -4514,6 +4658,14 @@
         "hash": "f418d9b99fab9e685a9c1641c90b8a27b7be7abe4f0cfa071d1acfc04efcef23",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Este ejercicio es fácil.",
+      "target": "Este exercício é fácil.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": []
     }
   },
   {
@@ -4529,16 +4681,6 @@
     ],
     "contentHash": "91a80ac407f73dee9eafbf95ece3eb380485b759f5b568916dca75e68d1df4ae",
     "esContrast": "En español la 's' final se aspira según región; en PT-BR se pronuncia /s/ clara.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo se pronuncia la 's' al final de sílaba en PT-BR?",
-      "back": "Como /s/ (sorda)",
-      "example": "dois → [dojs] | meses → [me.zis]"
-    },
-    "ptOverrides": {
-      "back": "Como /ʃ/ (sonora alveopalatal)",
-      "example": "dois → [dojʃ] | meses → [me.zɛʃ]"
-    },
     "audio": {
       "br": {
         "hash": "9a4b6a52aca3ffe460478fb086085f75d99b259f64e37597eea56a91070c92c2",
@@ -4547,6 +4689,18 @@
       "pt": {
         "hash": "cb0c8647cded5134ed0b27b140d6c8b4d53f34be5d73ef1ca05f7eda0acda3eb",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo se pronuncia la 's' al final de sílaba en PT-BR?",
+      "back": "Como /s/ (sorda)",
+      "example": "dois → [dojs] | meses → [me.zis]"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "Como /ʃ/ (sonora alveopalatal)",
+        "example": "dois → [dojʃ] | meses → [me.zɛʃ]"
       }
     }
   },
@@ -4563,14 +4717,6 @@
     ],
     "contentHash": "9472f3044d45e9206b607f545bf3ad168ba41c0756894a1040cde2dbe0b92268",
     "esContrast": "En pt se escribe 'lápis' sin tilde y en plural es 'lápis' (igual). En es: 'lápiz/lápices' con tilde.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Compré tres lápices nuevos.",
-      "target": "Comprei três lápis novos.",
-      "acceptedAlternatives": [
-        "Comprei três lápis de novo."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "b3a94f14dfa3ac0062bac0b6bfcaf4d0317b10d2c7cc705cc6faca1dbf91625c",
@@ -4580,6 +4726,16 @@
         "hash": "8a9124e453690fd894d8da16a8792e89f83e9f4fb93392072695f1eeac78a93d",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Compré tres lápices nuevos.",
+      "target": "Comprei três lápis novos.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Comprei três lápis de novo."
+      ]
     }
   },
   {
@@ -4596,11 +4752,6 @@
     ],
     "contentHash": "953797d5259766b3569237c5cb3216f2f73bbe530312e6ab0ed224a7e82483ba",
     "esContrast": "Canção es 'canción' en PT; en ES se escribe 'canción' con tilde.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "El corazón de la canción",
-      "target": "O coração da canção"
-    },
     "audio": {
       "br": {
         "hash": "29a2f99f46ec45abdccddd9f2e20f9763516ad60460ce0d0be94e981552a8b40",
@@ -4610,6 +4761,13 @@
         "hash": "9a2411609e12fd4c869eb3b47e785fcd752882ff789431cce67dad3a702dd9eb",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "El corazón de la canción",
+      "target": "O coração da canção",
+      "sourceLang": "es",
+      "targetLang": "pt-br"
     }
   },
   {
@@ -4652,14 +4810,6 @@
     ],
     "contentHash": "96860d5ea4e6f302033bf72da708ec278069ded8a19a2ce0cdf2dc97bcda642e",
     "esContrast": "'Cão' se escribe con 'c' pero suena como 'can' en español.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "O cão do vizinho late muito.",
-      "target": "El perro del vecino ladra mucho.",
-      "acceptedAlternatives": [
-        "El can del vecino ladra mucho."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "0b98863a08ae7c317440794a665e794c31cbadcff5198c8a58727863867de1aa",
@@ -4669,6 +4819,16 @@
         "hash": "6f4253636185e4c65a984b663ad2765cb9089c884f0048c33218c963c57c1582",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "O cão do vizinho late muito.",
+      "target": "El perro del vecino ladra mucho.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "El can del vecino ladra mucho."
+      ]
     }
   },
   {
@@ -4681,14 +4841,6 @@
     ],
     "tags": [],
     "contentHash": "96bfd62cbbdba662e203037ebcf57539b06608ed13d063f71a86984ba48f8dc0",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "O meu irmão mais velho mora em Lisboa.",
-      "target": "Mi hermano mayor vive en Lisboa.",
-      "acceptedAlternatives": [
-        "Mi hermano mayor reside en Lisboa."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "75bc4661cfd606296f1caa881837e074666033e283056decb2a554c92d6d3316",
@@ -4698,6 +4850,16 @@
         "hash": "edd21ea3957dccb048788bdfa68e917ff9979b987beb90eb79dc259e74a89b0a",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "O meu irmão mais velho mora em Lisboa.",
+      "target": "Mi hermano mayor vive en Lisboa.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Mi hermano mayor reside en Lisboa."
+      ]
     }
   },
   {
@@ -4738,12 +4900,6 @@
       "regular"
     ],
     "contentHash": "97b042f2c2690da22eaa81c5e0846d6b82117c4df5a78a75d11d715543e2de44",
-    "type": "flashcard",
-    "data": {
-      "front": "mujer",
-      "back": "mulher",
-      "example": "Aquela mulher é minha mãe."
-    },
     "audio": {
       "br": {
         "hash": "3b9e213c45923353726969327b44751029b8a278f3078c324a88826425263c6f",
@@ -4753,6 +4909,12 @@
         "hash": "5b08e9760898194931c1608e506782bf0351a785baf493c7d0c151d06fc789e7",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "mujer",
+      "back": "mulher",
+      "example": "Aquela mulher é minha mãe."
     }
   },
   {
@@ -4794,12 +4956,6 @@
       "vocabulario-clave"
     ],
     "contentHash": "98b6061c701fe187307d8dd40863222b5e274347eb1cfaa002be26c22b55e486",
-    "type": "flashcard",
-    "data": {
-      "front": "canción",
-      "back": "canção",
-      "example": "Essa canção me faz chorar."
-    },
     "audio": {
       "br": {
         "hash": "9500cc93c96879d9d3f0337f1d0483eb66ade9099d91ea87a68b265c6d2be0df",
@@ -4809,6 +4965,12 @@
         "hash": "b12bb5838beba219f2ad864fea6431dea7d9327ae949f0c77407e79ce45b73af",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "canción",
+      "back": "canção",
+      "example": "Essa canção me faz chorar."
     }
   },
   {
@@ -4822,15 +4984,6 @@
     "tags": [],
     "contentHash": "98da19265f2f87e102b260c46be70d71f1bd30f3dfd7206e406a66fd27721809",
     "esContrast": "En BR la 'r' inicial es /h/; en español sería ['rua] con 'r' suave.",
-    "type": "flashcard",
-    "data": {
-      "front": "Pronuncia: RUA",
-      "back": "['hua] en BR, ['ʁua] en PT",
-      "example": "A rua é muito movimentada."
-    },
-    "ptOverrides": {
-      "back": "['ʁua]"
-    },
     "audio": {
       "br": {
         "hash": "fae2fecf9ee492138f6233c5f73cd459e6f61ee7ed93d87057165aa503d3f7f3",
@@ -4839,6 +4992,17 @@
       "pt": {
         "hash": "e7dd430d360c72c2b90093f03753ae69d93e82c80304d8f821bc34a234967eea",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Pronuncia: RUA",
+      "back": "['hua] en BR, ['ʁua] en PT",
+      "example": "A rua é muito movimentada."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "['ʁua]"
       }
     }
   },
@@ -4854,14 +5018,6 @@
       "falso-amigo"
     ],
     "contentHash": "99c0eaf29df0d04f1a9e752586bcc541e70ffc82a99349edc8ffdd8415eabc01",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Açaí é uma fruta típica do Brasil.",
-      "target": "El açaí es una fruta típica de Brasil.",
-      "acceptedAlternatives": [
-        "El açaí es una fruta típica de Brasil."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "b3414e9c1ca5a6eb367ef0244c7dc40496b0790f5b7a4023202f257ab29cd2e2",
@@ -4871,6 +5027,16 @@
         "hash": "81f9828a72d9faa0cccf561eb2bd541ef248ec6db779cde2557cec106735d032",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Açaí é uma fruta típica do Brasil.",
+      "target": "El açaí es una fruta típica de Brasil.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "El açaí es una fruta típica de Brasil."
+      ]
     }
   },
   {
@@ -4942,12 +5108,6 @@
     ],
     "contentHash": "a37da8d4d447df76a94c9873d17c0c20ad6c814ec3babdc1ec6f4c3abccd8d88",
     "esContrast": "El español tiene 5 vocales; el portugués tiene más por los acentos.",
-    "type": "flashcard",
-    "data": {
-      "front": "Cuántas vocales tiene el portugués con acentos?",
-      "back": "7 vocales orales (a, e, i, o, u, é, ó) + 2 nasales (ã, õ) con tilde",
-      "example": "casa, café, Lisboa,奥运会, público, maçã, razão."
-    },
     "audio": {
       "br": {
         "hash": "ccffe43d76eb502c43665caa58704a68a8c3cce9c0bd32453b2c0fe880ddbc2e",
@@ -4957,6 +5117,12 @@
         "hash": "c27caac037eea14a694a976cf861a67d2073c6d7052e6bdc4a8c9cedbdc3f1f5",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Cuántas vocales tiene el portugués con acentos?",
+      "back": "7 vocales orales (a, e, i, o, u, é, ó) + 2 nasales (ã, õ) con tilde",
+      "example": "casa, café, Lisboa, público, maçã, razão."
     }
   },
   {
@@ -4972,12 +5138,6 @@
       "vocabulario-clave"
     ],
     "contentHash": "a3ba6f48116df9c54b2548f1b314a41d593cdbd70ea561037726cee71c2d9eff",
-    "type": "flashcard",
-    "data": {
-      "front": "baño",
-      "back": "banho",
-      "example": "Vou tomar um banho."
-    },
     "audio": {
       "br": {
         "hash": "8169023ea3b6994278a162a396430dd947c8e6c0f56e69197f172e72bcd211bc",
@@ -4987,6 +5147,12 @@
         "hash": "d7b57936f683311855b43770bde0d7f9d4531422c9b64cff3003357ce9b4a0c4",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "baño",
+      "back": "banho",
+      "example": "Vou tomar um banho."
     }
   },
   {
@@ -5054,15 +5220,6 @@
     ],
     "contentHash": "aab559041fa623c8abaee2c5442e93476139de50fa344671e799809e9e9c19bd",
     "esContrast": "En español la 'rr' es siempre vibrante múltiple; en BR puede ser más suave, como una 'j' aspirada.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo se pronuncia la 'rr' en português brasileiro?",
-      "back": "Como um 'h' aspirado suave ou vibrante múltiplo alveolar",
-      "example": "carro → ['ka.ʁu] ou ['ka.hu]"
-    },
-    "ptOverrides": {
-      "back": "Como vibrante múltiplo alveolar ['ka.ʁu]"
-    },
     "audio": {
       "br": {
         "hash": "a8ce82ef2e5e619206a82649338ef0297de42f966e00fae22ec5344ac7e800bb",
@@ -5071,6 +5228,17 @@
       "pt": {
         "hash": "635c4f2a04ecb1cb8a31e041ed63fe3b210de80ce5b9b54fc43d0d081fba7bc2",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo se pronuncia la 'rr' en português brasileiro?",
+      "back": "Como um 'h' aspirado suave ou vibrante múltiplo alveolar",
+      "example": "carro → ['ka.ʁu] ou ['ka.hu]"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "Como vibrante múltiplo alveolar ['ka.ʁu]"
       }
     }
   },
@@ -5088,12 +5256,6 @@
     ],
     "contentHash": "aba830a5cc7ea8df24ad6154fbd3e13a6a2cc4599bd82894f00adaa9a39c4c03",
     "esContrast": "⚠️ En español es llana (di-FI-cil) SIN tilde. En portugués SÍ lleva tilde por terminar en -l.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Dónde está la sílaba tónica en 'difícil'?",
-      "back": "difícil — es paroxítona (acento en la penúltima: di-FÍ-cil)",
-      "example": "A lição de hoje é difícil."
-    },
     "audio": {
       "br": {
         "hash": "008b90176a945a462ccea64a473e3d0aac3a8fc494bf0dbe3f4397535ecce39f",
@@ -5103,6 +5265,12 @@
         "hash": "3b3fda6a621ac94c0951cad94ed8b5e2301009ea2e7eca8a861ba9df418573b2",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Dónde está la sílaba tónica en 'difícil'?",
+      "back": "difícil — es paroxítona (acento en la penúltima: di-FÍ-cil)",
+      "example": "A lição de hoje é difícil."
     }
   },
   {
@@ -5144,12 +5312,6 @@
       "o-nasal"
     ],
     "contentHash": "b0265e22747069d80fe259d1cae19bbb412f91bf69a59ea60aadfee97d4fbaf9",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo se dice 'bueno' en portugués?",
-      "back": "bom",
-      "example": "Este filme é muito bom!"
-    },
     "audio": {
       "br": {
         "hash": "15ee6453a7f0b8790e053f2155a1d4283a90f89c9b7ef3b2fdeabf218e95becb",
@@ -5159,6 +5321,12 @@
         "hash": "ec95a3ac15e5337c9200ba6002a4ad86cda87f252ce0ee15d2c83641d54086c4",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo se dice 'bueno' en portugués?",
+      "back": "bom",
+      "example": "Este filme é muito bom!"
     }
   },
   {
@@ -5174,14 +5342,6 @@
     ],
     "contentHash": "b18f6d5a979eeb85299dd6dc338254006ba3e9a290d31243324425312f14db8b",
     "esContrast": "En BR 'dois' termina /s/ y 'mais' termina /s/; en PT-PT ambos terminan en /ʃ/.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Quero dois cafés, mais água e menos açúcar.",
-      "target": "Quiero dos cafés, más agua y menos azúcar."
-    },
-    "ptOverrides": {
-      "target": "Quiero dos cafés, más agua y menos azúcar."
-    },
     "audio": {
       "br": {
         "hash": "b4f6ce46d1b29cae46d87e50cb62897b88c01b38db59161f2c55c5ee8d5ae2f7",
@@ -5190,6 +5350,18 @@
       "pt": {
         "hash": "75ec80c7c034e2bb50bb1385341d987aaa6c3f50c75a0080983bb6a01b0cf8fa",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Quero dois cafés, mais água e menos açúcar.",
+      "target": "Quiero dos cafés, más agua y menos azúcar.",
+      "sourceLang": "pt-br",
+      "targetLang": "es"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Quiero dos cafés, más agua y menos azúcar."
       }
     }
   },
@@ -5234,18 +5406,6 @@
     ],
     "contentHash": "b19dd2a968fa253f2a8d89268256d6ad61d9b2d6234116f96d093d83f480022f",
     "esContrast": "En PT-BR, 'roeu' suena como /ʁoˈew/ (r inicial ≈ /h/), muy distinto del español 'roer'.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "O rato roeu a roupa.",
-      "target": "El ratón rogó la ropa."
-    },
-    "ptOverrides": {
-      "target": "El ratón royó la ropa.",
-      "acceptedAlternatives": [
-        "El ratón royó la ropa.",
-        "El rata royó la ropa."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "123ab1b0c9a586a97592d519affd8bd377b649b944a2491fa7d6da07169432df",
@@ -5254,6 +5414,22 @@
       "pt": {
         "hash": "b3eca2bd8bee5d0d67409c72a81ddbab134fd4a129476e6a6ede5c1948a828b3",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "O rato roeu a roupa.",
+      "target": "El ratón rogó la ropa.",
+      "sourceLang": "pt-br",
+      "targetLang": "es"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "El ratón royó la ropa.",
+        "acceptedAlternatives": [
+          "El ratón royó la ropa.",
+          "El rata royó la ropa."
+        ]
       }
     }
   },
@@ -5296,12 +5472,6 @@
       "basico"
     ],
     "contentHash": "b4a3724c0e080a7273d94fe1c95e5eaffbb570de9739ea39498dd2c8d2b91080",
-    "type": "flashcard",
-    "data": {
-      "front": "Cómo se llama la letra 'A' en português?",
-      "back": "á (á: sonido /a/)",
-      "example": "Quando dizemos o nome das letras, dizemos: 'á', 'bê', 'cê'..."
-    },
     "audio": {
       "br": {
         "hash": "51e1930556586275cfa5f83079a6f2a0fca5c8a60dd0b06c78a157f7f9a1ea69",
@@ -5311,6 +5481,12 @@
         "hash": "05dc5861c2f92ac93b4a69d35abd0a7304b49a809d68607b3fc190af6b258e67",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Cómo se llama la letra 'A' en português?",
+      "back": "á (á: sonido /a/)",
+      "example": "Quando dizemos o nome das letras, dizemos: 'á', 'bê', 'cê'..."
     }
   },
   {
@@ -5327,12 +5503,6 @@
       "falso-amigo"
     ],
     "contentHash": "b61938cea9e1bc802d29963026f93fa0499447ae404741802a113f19c8af6d6f",
-    "type": "flashcard",
-    "data": {
-      "front": "Hay diferencia entre PT-BR y PT-PT en el uso del circunflexo?",
-      "back": "PT-PT usa más circunflexo: 'vôo' vs PT-BR 'voo'; '苇o' vs '苇o' — en algunos casos PT-PT distingue lo que BR no marca",
-      "example": "PT-PT: vôo (vuelo) / PT-BR: voo"
-    },
     "audio": {
       "br": {
         "hash": "4583bb63425986a51b95f74005e72e80c23b4e61c275d8c32825acbf80823121",
@@ -5342,6 +5512,12 @@
         "hash": "78a9f789f6e809d5f5fd5ed7d966f4f7c6a3072ebb87c1fc15cadfcff8d41086",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Hay diferencia entre PT-BR y PT-PT en el uso del circunflexo?",
+      "back": "PT-PT usa más circunflexo: 'vôo' vs PT-BR 'voo'; 'pôo' vs 'poo' — en algunos casos PT-PT distingue lo que BR no marca",
+      "example": "PT-PT: vôo (vuelo) / PT-BR: voo"
     }
   },
   {
@@ -5356,15 +5532,6 @@
       "vocabulário-chave"
     ],
     "contentHash": "b8b5635945e563d060dc4c7081ba4cbdf0f20add0bcc6a27bf112dd5a1779c1f",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "O meu coração está feliz.",
-      "target": "Mi corazón está feliz.",
-      "acceptedAlternatives": [
-        "Mi corazón está contento.",
-        "Mi corazón está alegre."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "cc6e6a3ce0c8bb20a9d4682c8d62225abb69f98d419c5530d0501b4c86218e5c",
@@ -5374,6 +5541,17 @@
         "hash": "529276dc6915c9717d113bef6fc4e4494cdc0620eeec052866b2636c89a8163f",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "O meu coração está feliz.",
+      "target": "Mi corazón está feliz.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Mi corazón está contento.",
+        "Mi corazón está alegre."
+      ]
     }
   },
   {
@@ -5427,15 +5605,17 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Tenho muit___ sede também.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "a",
-          "alternatives": []
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Tenho muit___ sede também.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "a",
+            "alternatives": []
+          }
+        ]
+      }
     }
   },
   {
@@ -5451,14 +5631,6 @@
     ],
     "contentHash": "ba9de48e8fef592063d1ca46edfa23de37607c2a3cd69d8e927ef54dc5461f50",
     "esContrast": "'Ruim' es la forma más natural en BR; 'mau' se reserva para antes del sustantivo.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "La situación es mala.",
-      "target": "A situação é ruim.",
-      "acceptedAlternatives": [
-        "A situação é má."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "b856ba3d066e46e558b3eb18d57f689d5e6e3cd30f5a942846d885dab40d38d4",
@@ -5468,6 +5640,16 @@
         "hash": "1dfa50b80678272dfbc935972553abe3b46a35241eeaefb746587c83a026d821",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "La situación es mala.",
+      "target": "A situação é ruim.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "A situação é má."
+      ]
     }
   },
   {
@@ -5508,6 +5690,16 @@
     ],
     "contentHash": "bd843713ef3a43b1f3cf4a03d51257aa46bdeeb8875b5ece468712f42706850e",
     "esContrast": "En español 'lápis' y 'fácil' SÍ llevan tilde, pero en portugués NO, por la regla de las palabras graves terminadas en -s, -l, -r, -n.",
+    "audio": {
+      "br": {
+        "hash": "bd6656b5046dd330512264622bd71ab45b6e9a3421e3a0ed2b0f6d273634785b",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "56822adcbd9ae360141d0f57c3dc8ee61712758ef202c2c7524613cf3fc9617a",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Repita: lápis, fácil, café.",
@@ -5519,16 +5711,6 @@
         "Porque son esdrújulas"
       ],
       "answer": "Porque terminan en consonantel consonante del grupo s, l, r, n"
-    },
-    "audio": {
-      "br": {
-        "hash": "bd6656b5046dd330512264622bd71ab45b6e9a3421e3a0ed2b0f6d273634785b",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "56822adcbd9ae360141d0f57c3dc8ee61712758ef202c2c7524613cf3fc9617a",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -5545,11 +5727,6 @@
     ],
     "contentHash": "bd87ddc18a889c11c2fd2ffb31609f48abf066f587931798bfe4582eb1665c6c",
     "esContrast": "Diminutivo -illa → -inha; mujer → mulher, ojo → olh- en composiciones.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Ella es una mujercillla",
-      "target": "Ela é uma mulherzinha"
-    },
     "audio": {
       "br": {
         "hash": "f95c6af029adafed62791dd21eba646da1781753fb71e145b3be35a9c67dc02c",
@@ -5559,6 +5736,13 @@
         "hash": "71a02774a644e27fe0f82eaa9dbf7d3d1086480c24f880a32a76bbaaa8982eda",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Ella es una mujercillla",
+      "target": "Ela é uma mulherzinha",
+      "sourceLang": "es",
+      "targetLang": "pt-br"
     }
   },
   {
@@ -5622,14 +5806,6 @@
     "tags": [],
     "contentHash": "be3cd7cbe87e39434537dea7b80f28fc751a58d0a28e358900d8a958b2e5a5de",
     "esContrast": "'Cão' es más formal que 'cachorro' para perro.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "El perro es bueno.",
-      "target": "O cão é bom.",
-      "acceptedAlternatives": [
-        "O cachorro é bom."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "85c24ce32ae4a51ab71b367c91fa3c4f0e61e0d5076bcb543f8f8efaca8603be",
@@ -5639,6 +5815,16 @@
         "hash": "3e09d1bd94da35972be778ea947fb07936049bb756449a5413b92c9bc4af9088",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "El perro es bueno.",
+      "target": "O cão é bom.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "O cachorro é bom."
+      ]
     }
   },
   {
@@ -5655,12 +5841,6 @@
     ],
     "contentHash": "be6d8a6e44347f5a88f4f9b2fa83b1438ef8b3a559b4190732ea135b48ea6e07",
     "esContrast": "En español 'os' suena /os/; en PT europeas es como 'och' o 'ozh'.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Por qué en PT europeo 'os' suena como 'och'?",
-      "back": "Porque la 's' entre vocales se convierte en /ʒ/ o /ʃ/ por asimilación",
-      "example": "os homens → [o'ʒõjʃ] o [o'ʃõjʃ]"
-    },
     "audio": {
       "br": {
         "hash": "251914a3a8dd5349f750e3d7a907f76293a96ffd08e0f76860d6a7dceac0ac6a",
@@ -5670,6 +5850,12 @@
         "hash": "6cd86d7dc6ef82a2813ab5e01a64c7644b6451ab3e7a4eaa31a5d4a5db72fcea",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Por qué en PT europeo 'os' suena como 'och'?",
+      "back": "Porque la 's' entre vocales se convierte en /ʒ/ o /ʃ/ por asimilación",
+      "example": "os homens → [o'ʒõjʃ] o [o'ʃõjʃ]"
     }
   },
   {
@@ -5685,12 +5871,6 @@
     ],
     "contentHash": "bee518df4de15a3c18b5794f089d753584e6a78d26ebcdafaf7791a7b6cd07cd",
     "esContrast": "En portugués 'emoção' lleva tilde (ã), no aguda como 'emoción' en español.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "La palabra emoción se escribe com acento en portugués.",
-      "target": "A palavra emoção se escreve com acento em português.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "0c751487e6b388c0cd0634a415063f6b70f97aae030d83b2e735a890829ba398",
@@ -5700,6 +5880,14 @@
         "hash": "cbf094b8f775383dd74c830c9badc0b6dfaa44ca608b1e6eafd3a3ed84596366",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "La palabra emoción se escribe com acento en portugués.",
+      "target": "A palavra emoção se escreve com acento em português.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": []
     }
   },
   {
@@ -5714,6 +5902,16 @@
     "tags": [],
     "contentHash": "bf81e577b30c20ebff5abc80fa72a5fdd8991b832912e0df17987ed446a2e757",
     "esContrast": "La Ç no existe en español. Representa el sonido 's' en contextos donde la 'c' española no lo hace.",
+    "audio": {
+      "br": {
+        "hash": "6de27eb6d2f5b0146486cfbd5bafb7c0fae237ce9db73d89a2d43554313b6250",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "68607fcfb639d43922475b971b78990fa04f869779825ec492841033e48bfe6e",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Cê sabe escrever a letra Ç? O 's' com cedilha é importante em português.",
@@ -5725,16 +5923,6 @@
         "El sonido 'z'"
       ],
       "answer": "El sonido 's' antes de e, i, o, u"
-    },
-    "audio": {
-      "br": {
-        "hash": "6de27eb6d2f5b0146486cfbd5bafb7c0fae237ce9db73d89a2d43554313b6250",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "68607fcfb639d43922475b971b78990fa04f869779825ec492841033e48bfe6e",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -5780,6 +5968,16 @@
     ],
     "contentHash": "c1dfca55b92337ecbc1dcb5ab11e97a341e6bddd39b5dbd085a4a32e81ed14eb",
     "esContrast": "'Mato' en BR: /mátu/; 'carro' y 'rato' en BR: /káhu/, /hátu/. En PT todos tienen 'r' vibrante.",
+    "audio": {
+      "br": {
+        "hash": "de63ed83933a48ab1314e184f68d118bdc509c5810d2205d11da470aa32b45ab",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "c98b2498c5497b7bca87dff9da2b580fafd75b7a22e464efc9c4f4106fd5a26c",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "O carro está no mato. Mais um rato apareceu. Dois meses de paciência.",
@@ -5792,17 +5990,9 @@
       ],
       "answer": "Un ratón en el jardín"
     },
-    "ptOverrides": {
-      "audioText": "O carro está no mato. Mais um rato apareceu. Dois meses de paciência."
-    },
-    "audio": {
-      "br": {
-        "hash": "de63ed83933a48ab1314e184f68d118bdc509c5810d2205d11da470aa32b45ab",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "c98b2498c5497b7bca87dff9da2b580fafd75b7a22e464efc9c4f4106fd5a26c",
-        "voice": "Portuguese_Wiselady"
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "O carro está no mato. Mais um rato apareceu. Dois meses de paciência."
       }
     }
   },
@@ -5820,12 +6010,6 @@
     ],
     "contentHash": "c2c0c60df80a63bb894fce94e5b28d4fce23751a455229024b16927f4393193e",
     "esContrast": "En español ambos se escriben 'por'. En portugués, el infinitivo 'pôr' se distingue con acento circunflejo.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Por qué 'pôr' (verbo) y 'por' (preposición) se escriben diferente?",
-      "back": "pôr = verbo (con circumflexo por la contracción 'pôr' de 'poder') | por = preposición (sin tilde)",
-      "example": "Vou pôr o livro na mesa. / Caminhei por horas."
-    },
     "audio": {
       "br": {
         "hash": "d23eeb3edd36640291db0ef7989ae73d10468ab7e19590bb9c4a6930cd696f39",
@@ -5835,6 +6019,12 @@
         "hash": "2dba0549302c2617b47a58baa1f596c65a016abf58a7e1ade7eaa1da42549a33",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Por qué 'pôr' (verbo) y 'por' (preposición) se escriben diferente?",
+      "back": "pôr = verbo (con circumflexo por la contracción 'pôr' de 'poder') | por = preposición (sin tilde)",
+      "example": "Vou pôr o livro na mesa. / Caminhei por horas."
     }
   },
   {
@@ -5849,12 +6039,6 @@
       "regular"
     ],
     "contentHash": "c2e97f57797c8dc3ae45da0c349bc3fcc06a9c7f33ab08a73f0b49da584c7bd2",
-    "type": "flashcard",
-    "data": {
-      "front": "león",
-      "back": "leão",
-      "example": "O leão é o rei da selva."
-    },
     "audio": {
       "br": {
         "hash": "9df333c8a27df5fc4ea05eb7e76cf35cbc67a11ce07d7c4a150cd1f665e868fb",
@@ -5864,6 +6048,12 @@
         "hash": "18813c352b5832430ef476677c45e5281fd88836880fabc892e7f8734e979d7a",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "león",
+      "back": "leão",
+      "example": "O leão é o rei da selva."
     }
   },
   {
@@ -5877,6 +6067,16 @@
     "tags": [],
     "contentHash": "c5dab06e47357347b734a5725618ce503c7b778bdd380ef260d1c59cd857d32b",
     "esContrast": "El circunflejo portugués (^) puede indicar contracción o cambio vocálico, no solo intensidad.",
+    "audio": {
+      "br": {
+        "hash": "2ed1d559f9f552fbd88e3843662ea6e5e9ae995c1485eedf09247c60070509fe",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "9dda99840f68a874044e7e7a156b59fa9acee3a233bea731d29a2b4035935bfa",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Ouça: 'mãe', 'tônico', 'irmão'. Quantas palavras têm acento circunflexo?",
@@ -5888,16 +6088,6 @@
         "Ninguna"
       ],
       "answer": "Dos"
-    },
-    "audio": {
-      "br": {
-        "hash": "2ed1d559f9f552fbd88e3843662ea6e5e9ae995c1485eedf09247c60070509fe",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "9dda99840f68a874044e7e7a156b59fa9acee3a233bea731d29a2b4035935bfa",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -5911,16 +6101,6 @@
     "tags": [],
     "contentHash": "c75efbcc16a6cfe73c592ee424bb7071c3be7f7a82a282efbb9eebde9820f164",
     "esContrast": "En BR suena como 'dois' con 's' clara; en PT suena como 'doish' con sonido de 'x'.",
-    "type": "flashcard",
-    "data": {
-      "front": "Pronuncia: DOIS",
-      "back": "[dojs] en BR",
-      "example": "Tenho dois irmão."
-    },
-    "ptOverrides": {
-      "back": "[dojʃ] en PT",
-      "example": "Tenho dois irmão."
-    },
     "audio": {
       "br": {
         "hash": "9c70648c5ce2cf8b548765aaf5f23c0ef8cedf0aa70d11f189ba2293e30bc65b",
@@ -5929,6 +6109,18 @@
       "pt": {
         "hash": "4cd573c9264a29273a5b025f297c22ce1767c3d198c9b5e19ba41065a96f540f",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Pronuncia: DOIS",
+      "back": "[dojs] en BR",
+      "example": "Tenho dois irmão."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "[dojʃ] en PT",
+        "example": "Tenho dois irmão."
       }
     }
   },
@@ -5945,12 +6137,6 @@
     ],
     "contentHash": "c7a2263e76a71eedd794cc70c7e932edfa4cc2ec25bb2e7364aefe999a0c4a0e",
     "esContrast": "En español: re-_GRÁ_-fi-co. Misma regla, misma posición de la tilde.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cuántas sílabas tiene 'regráfico'? ¿Dónde está la tilde?",
-      "back": "re-grá-fi-co: 4 sílabas (proparoxítona). Tilde en 'grá'. Todas las esdrújulas llevan tilde.",
-      "example": "A língua portuguesa é muito regráfica."
-    },
     "audio": {
       "br": {
         "hash": "9b101f4c82d88210b31c135e8d3974b9195b49a1760629ff92d9de0420c117c2",
@@ -5960,6 +6146,12 @@
         "hash": "4de02dca5be3c01e0d57909597797fcc599bbcf463017e7c6bb958750a067a89",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cuántas sílabas tiene 'regráfico'? ¿Dónde está la tilde?",
+      "back": "re-grá-fi-co: 4 sílabas (proparoxítona). Tilde en 'grá'. Todas las esdrújulas llevan tilde.",
+      "example": "A língua portuguesa é muito regráfica."
     }
   },
   {
@@ -5974,14 +6166,6 @@
       "vocabulário-chave"
     ],
     "contentHash": "c7d20bab80d34fc6ba5b0b85cabfae26ae523df525e97d1c5fce9f771ac88471",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "O hotel fica no centro da cidade.",
-      "target": "El hotel fica en el centro de la ciudad.",
-      "acceptedAlternatives": [
-        "El hotel está en el centro de la ciudad."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "8ff82a4b97906fca8c16a41529190476ad3c0923cd381318cb8c8f6030976ada",
@@ -5991,6 +6175,16 @@
         "hash": "5023e5bc98117b28e3a982b260f8092670d3bfcf22891b3c5f4d28564ca6aec6",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "O hotel fica no centro da cidade.",
+      "target": "El hotel fica en el centro de la ciudad.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "El hotel está en el centro de la ciudad."
+      ]
     }
   },
   {
@@ -6006,12 +6200,6 @@
       "vocabulario-clave"
     ],
     "contentHash": "c7eaa5534faec7c8683b2ddec0facb4d726c40fb3dce21af59a0023b010b5b1e",
-    "type": "flashcard",
-    "data": {
-      "front": "ojo",
-      "back": "olho",
-      "example": "Ela tem olhos verdes."
-    },
     "audio": {
       "br": {
         "hash": "652f28354025a886011ae7c72cbebb31a3a0454e94b83731ad1a8fb8e400a11f",
@@ -6021,6 +6209,12 @@
         "hash": "96d6dd3f76edc6e9e70fd664621e370c09baa4226a30c9cdaa4281c1fc0ebc64",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "ojo",
+      "back": "olho",
+      "example": "Ela tem olhos verdes."
     }
   },
   {
@@ -6036,6 +6230,16 @@
     ],
     "contentHash": "c83e79da740c12d8083eac14c9b1b84f4af6a5bcf0f4acd6225d0a193f8dd3b8",
     "esContrast": "Hotel y hora se pronuncian igual, pero hora en español es 'hora' y en portugués también.",
+    "audio": {
+      "br": {
+        "hash": "79b5a6947af5972824460c040b62e816372bf78c6330fa38fd7f2c07a938e5dd",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "cac80e8f68bbe407c6d4bc0795373f9339dec7a03f7abf1e0ad44aa27310b960",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "O hotel fica na hora certa.",
@@ -6046,16 +6250,6 @@
         "certa"
       ],
       "answer": "na hora"
-    },
-    "audio": {
-      "br": {
-        "hash": "79b5a6947af5972824460c040b62e816372bf78c6330fa38fd7f2c07a938e5dd",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "cac80e8f68bbe407c6d4bc0795373f9339dec7a03f7abf1e0ad44aa27310b960",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -6121,18 +6315,6 @@
     ],
     "contentHash": "cb39859536d624e29ca8d412787fe6f7bcbf9f42d50d9fa0f1f4763a39ede3c9",
     "esContrast": "PT-PT prefiere 'por vezes' vs PT-BR 'às vezes'. El circumflexo en 'avô' es obligatorio en PT-PT.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "En Portugal dicen 'avô' y en Brasil también, aunque a veces usan 'avó'.",
-      "target": "Em Portugal dizem 'avô' e no Brasil também, embora às vezes usem 'avó'.",
-      "acceptedAlternatives": []
-    },
-    "ptOverrides": {
-      "target": "Em Portugal dizem 'avô' e no Brasil também, embora por vezes usem 'avó'.",
-      "acceptedAlternatives": [
-        "Em Portugal dizem 'avô' e no Brasil também, embora às vezes usem 'avó'."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "4d5bed0717c08a76877e79adf447abd826d635848c84a837b750017f25b0cc73",
@@ -6141,6 +6323,22 @@
       "pt": {
         "hash": "22da573c6b28eb5e1bc4b629264d97e672cd1982a65d672c15a8097747048b0a",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "En Portugal dicen 'avô' y en Brasil también, aunque a veces usan 'avó'.",
+      "target": "Em Portugal dizem 'avô' e no Brasil também, embora às vezes usem 'avó'.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": []
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Em Portugal dizem 'avô' e no Brasil também, embora por vezes usem 'avó'.",
+        "acceptedAlternatives": [
+          "Em Portugal dizem 'avô' e no Brasil também, embora às vezes usem 'avó'."
+        ]
       }
     }
   },
@@ -6156,14 +6354,6 @@
       "vocabulário-chave"
     ],
     "contentHash": "cd0da55a3fd900202e09d5cc79e29eda71a5c1ffe029ef33477fe8e4e74d69b6",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Vou tomar banho de manhã.",
-      "target": "Voy a tomar baño por la mañana.",
-      "acceptedAlternatives": [
-        "Voy a bañarme por la mañana."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "c2c35800cff8711e61ebe5adfa0088f4b0425c9bf5d485ff9741ae416fb23464",
@@ -6173,6 +6363,16 @@
         "hash": "04295175acc6956a163a3b4a2651b260d883d7fdb3b75a0b9987c238c6f94dd7",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Vou tomar banho de manhã.",
+      "target": "Voy a tomar baño por la mañana.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Voy a bañarme por la mañana."
+      ]
     }
   },
   {
@@ -6213,12 +6413,6 @@
       "regular"
     ],
     "contentHash": "d057e2c6a25fae8ce6a09a985fe1d2dec6a47112130bf44df551d738cb237f67",
-    "type": "flashcard",
-    "data": {
-      "front": "llamar",
-      "back": "chamar",
-      "example": "Vou te chamar amanhã."
-    },
     "audio": {
       "br": {
         "hash": "7c2eabf90b61c6c1443d4004f8a0e6ec307ea4927a0f4287af282f5bce9b5b42",
@@ -6228,6 +6422,12 @@
         "hash": "ddb9beeb61d81b2b622745d07c0cbbd8667d172a3a181cb17bfb3e906a20608f",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "llamar",
+      "back": "chamar",
+      "example": "Vou te chamar amanhã."
     }
   },
   {
@@ -6244,15 +6444,6 @@
     ],
     "contentHash": "d17610a7b2b252e0614f996f124f709956ad20f269ea637c56f3ac10e241b937",
     "esContrast": "En español la 'r' final es suave; en BR es una fricativa velar /χ/.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo influye la posición de la 'r' en su pronunciación en BR?",
-      "back": "r inicial: /h/ | rr intervocálica: /ʁ/ | r final: /χ/",
-      "example": "rato /h/, carro /ka.ʁu/, ter /teχ/"
-    },
-    "ptOverrides": {
-      "back": "r inicial: /ʁ/ | rr intervocálica: /ʁ/ | r final: /ɾ/"
-    },
     "audio": {
       "br": {
         "hash": "89d7d42a7f4db22fd9977925dc7092021085f20b88024979ccb67a4943a46cbd",
@@ -6261,6 +6452,17 @@
       "pt": {
         "hash": "a98726df66295ea01e2c4daf81c3f42204ae827b848f77bad8df6e976df2146a",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo influye la posición de la 'r' en su pronunciación en BR?",
+      "back": "r inicial: /h/ | rr intervocálica: /ʁ/ | r final: /χ/",
+      "example": "rato /h/, carro /ka.ʁu/, ter /teχ/"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "r inicial: /ʁ/ | rr intervocálica: /ʁ/ | r final: /ɾ/"
       }
     }
   },
@@ -6279,20 +6481,6 @@
     ],
     "contentHash": "d17e3dc1c424a5fe9c28d93af5009ce0d66d3a08df6d87a928862f33cee4b920",
     "esContrast": "",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Dos meses más y terminan las vacaciones.",
-      "target": "Mais dois meses e acabaram as férias.",
-      "acceptedAlternatives": [
-        "Dois meses mais e terminam as férias."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Mais dois meses e acabaram as férias.",
-      "acceptedAlternatives": [
-        "Dois meses mais e terminam as férias."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "c6b17a71bed82b26140ab29fe89717cc67a12a6739b126fefee7a87239eefce4",
@@ -6301,6 +6489,24 @@
       "pt": {
         "hash": "2dc81ac5f8b7c86a502f30ff678f71fe28e0ecd5e5bc87dd0500ad8c728ff223",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Dos meses más y terminan las vacaciones.",
+      "target": "Mais dois meses e acabaram as férias.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Dois meses mais e terminam as férias."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Mais dois meses e acabaram as férias.",
+        "acceptedAlternatives": [
+          "Dois meses mais e terminam as férias."
+        ]
       }
     }
   },
@@ -6317,12 +6523,6 @@
       "o-nasal"
     ],
     "contentHash": "d2e4d9482de0a27628a35b1e296b0a2a4b9b83fecef99ef2c5abe4f74f517e1c",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo se dice 'paloma' en portugués?",
-      "back": "pombo",
-      "example": "O pombo está no telhado."
-    },
     "audio": {
       "br": {
         "hash": "ae75130268ca6b76edd1ac62e5dd033c7186a52dcb26e943bcfab6f64ef8dbbe",
@@ -6332,6 +6532,12 @@
         "hash": "7192b3d99ae345864f841c41442391d90c715b4664c1b087830396feafa25ede",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo se dice 'paloma' en portugués?",
+      "back": "pombo",
+      "example": "O pombo está no telhado."
     }
   },
   {
@@ -6347,17 +6553,6 @@
     ],
     "contentHash": "d32face761eaa6305d0f1b172075fd6fa5cd9b1e44f41949ddd6c6a8c0d0267e",
     "esContrast": "En portugués, las palabras esdrújulas como 'jardím' siempre llevan tilde, pero 'jardín' en español no.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Ela está trabalhando no jardín.",
-      "target": "Ella está trabajando en el jardín.",
-      "acceptedAlternatives": [
-        "Ella está trabajando en el jardín."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Ella está trabajando en el jardín."
-    },
     "audio": {
       "br": {
         "hash": "6de9a362e9ed8f0c80854db5b27834ec19a09f55c4f05d43bdf83e7d745c45af",
@@ -6366,6 +6561,21 @@
       "pt": {
         "hash": "98bd43b444730b5415b947fc2dc643e530c4e57635f95fa7051f985a62dfa3de",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Ela está trabalhando no jardín.",
+      "target": "Ella está trabajando en el jardín.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Ella está trabajando en el jardín."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Ella está trabajando en el jardín."
       }
     }
   },
@@ -6383,12 +6593,6 @@
     ],
     "contentHash": "d41c9b46531a9b8bc25f9e26e2295e89acad427bf5a6c42379bf0a7ff1a8bf17",
     "esContrast": "⚠️ En español es grave (fa-CIL), ¡no caigas en la trampa! En portugués lleva tilde en la 'a'.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Dónde está la sílaba tónica en 'fácil'?",
-      "back": "fácil — es paroxítona (acento en la penúltima: FÁ-cil)",
-      "example": "Este exercício é muito fácil."
-    },
     "audio": {
       "br": {
         "hash": "fca67d3811bf021005c86bf7be5f3d1e405fbcb750655d20646c6d3779868626",
@@ -6398,6 +6602,12 @@
         "hash": "ed38b0629f2f0043c49613e00e5f6f0cc013ae717264d9910b4d8dac0246b337",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Dónde está la sílaba tónica en 'fácil'?",
+      "back": "fácil — es paroxítona (acento en la penúltima: FÁ-cil)",
+      "example": "Este exercício é muito fácil."
     }
   },
   {
@@ -6439,12 +6649,6 @@
       "a-nasal"
     ],
     "contentHash": "d50a76a7b63bdbae6a2fcc7be9468b2050ff02954ab75a80918e3dd3eb99ff9c",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cuál es el plural de 'mão'?",
-      "back": "mãos",
-      "example": "Ela tem as mãos frias."
-    },
     "audio": {
       "br": {
         "hash": "f21c3da0ee7b4b570d4d10ac5a5abe0e4a29df44017f069983b9ea59487f8fdc",
@@ -6454,6 +6658,12 @@
         "hash": "d44ce1de0cffda2288c02b7b30e25598dba164b54a94b393ba79b0e29f77a7a2",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cuál es el plural de 'mão'?",
+      "back": "mãos",
+      "example": "Ela tem as mãos frias."
     }
   },
   {
@@ -6471,14 +6681,6 @@
     ],
     "contentHash": "d5b7686955af854fcc2b5e9ce5243e2978d03aa96f1f0a64694ceda898506633",
     "esContrast": "'Carro' en BR se pronuncia con /h/ inicial; 'rua' también con /h/. 'Carro' = 'coche' en PT-PT.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "O carro está na rua.",
-      "target": "El carro está en la calle."
-    },
-    "ptOverrides": {
-      "target": "El coche está en la calle."
-    },
     "audio": {
       "br": {
         "hash": "d79ee55df4a8a57bcaffa033e7df4eb8e622f009965e1dd0266281cd2b9e31d5",
@@ -6487,6 +6689,18 @@
       "pt": {
         "hash": "7d07eddd80ea2c9c42c65d24e25f408711243398ab1789d37b0be40d49dde0d3",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "O carro está na rua.",
+      "target": "El carro está en la calle.",
+      "sourceLang": "pt-br",
+      "targetLang": "es"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "El coche está en la calle."
       }
     }
   },
@@ -6502,12 +6716,6 @@
       "h-muda"
     ],
     "contentHash": "d70fb1c6ff98f83a2c454d4bc5373cd377beb029ea9b60bd8cef93ea4201c531",
-    "type": "flashcard",
-    "data": {
-      "front": "hora",
-      "back": "hora",
-      "example": "Que hora são agora?"
-    },
     "audio": {
       "br": {
         "hash": "c9bf9211d70fc5c0a1f34fa50b71a68e413e61f9c5643cd1954debe2fd0ec086",
@@ -6517,6 +6725,12 @@
         "hash": "fd3660f825ea4e17bb327af034cbf40600fe7c41ef81064bb50a9991d8f3b9d4",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "hora",
+      "back": "hora",
+      "example": "Que hora são agora?"
     }
   },
   {
@@ -6533,14 +6747,6 @@
     ],
     "contentHash": "d9f4120c0feae272c6dd018e82bf0a2b269d84976abc7bfb7f553637a3eac2e0",
     "esContrast": "ÇÃO forma sílaba nasal; en español 'corazón' no lleva tilde porque es llana terminada en vocal.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "O coração tem quatro câmaras.",
-      "target": "El corazón tiene cuatro cámaras.",
-      "acceptedAlternatives": [
-        "El corazón tiene cuatro cavidades."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "b9639c1124f9d7520124edd6c95d6a169b1d301a7216ce06612fdbf7dc59faa6",
@@ -6550,6 +6756,16 @@
         "hash": "f62b8223e690e5edafb508555dbf9f49336530262c5008edc781cbb71a115d00",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "O coração tem quatro câmaras.",
+      "target": "El corazón tiene cuatro cámaras.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "El corazón tiene cuatro cavidades."
+      ]
     }
   },
   {
@@ -6565,14 +6781,6 @@
     ],
     "contentHash": "dbf3eee453229dc3a0ee365f7ff23e9b28291c2b139561c60f480f1d2cba1f6f",
     "esContrast": "'sílaba' y 'tónica' son esdrújulas en ambos idiomas y llevan tilde.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Na aula, o professor falou sobre a sílaba tónica e as regras de acentuação.",
-      "target": "En clase, el profesor habló sobre la sílaba tónica y las reglas de acentuación.",
-      "acceptedAlternatives": [
-        "En la clase, el profesor habló sobre la sílaba tónica y las reglas de acentuación."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "adbae341d2c34feae7125227abdd2546a759ad7034db59a57f9fd388f51c3bcc",
@@ -6582,6 +6790,16 @@
         "hash": "ee152b498a207393dfd47a20cf9d8b24a5c2ba06ee227986b04de05a71d1bc3e",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Na aula, o professor falou sobre a sílaba tónica e as regras de acentuação.",
+      "target": "En clase, el profesor habló sobre la sílaba tónica y las reglas de acentuación.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "En la clase, el profesor habló sobre la sílaba tónica y las reglas de acentuación."
+      ]
     }
   },
   {
@@ -6598,12 +6816,6 @@
     ],
     "contentHash": "dc037b9532d8c3a48632cf2b8da85e29ce85e698bef61fee4265344fb0193728",
     "esContrast": "Falso amigo: no se parece a 'ruego'. Se pronuncia /ʁũj̃/.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo se dice 'malo' en portugués?",
-      "back": "ruim",
-      "example": "Este tempo está muito ruim para sair."
-    },
     "audio": {
       "br": {
         "hash": "38303147e2a3be95ab471a3f113e340150c284703d0a05a1f64b5224d29e3eab",
@@ -6613,6 +6825,12 @@
         "hash": "f7a71f334d4c6e1923171b683283e87e7f29491c3db3774e47d148b87143928b",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo se dice 'malo' en portugués?",
+      "back": "ruim",
+      "example": "Este tempo está muito ruim para sair."
     }
   },
   {
@@ -6637,15 +6855,17 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Comprei um ___ ontem na padaria.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "pão",
-          "alternatives": []
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Comprei um ___ ontem na padaria.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "pão",
+            "alternatives": []
+          }
+        ]
+      }
     }
   },
   {
@@ -6670,15 +6890,17 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Sinto-me muito ___ hoje.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "bem",
-          "alternatives": []
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Sinto-me muito ___ hoje.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "bem",
+            "alternatives": []
+          }
+        ]
+      }
     }
   },
   {
@@ -6695,12 +6917,6 @@
     ],
     "contentHash": "dce24b0ff9d3d518e1b9d015668efcdbe696a6c64bfde4193f196e5216fcedba",
     "esContrast": "Igual que en español: todas las esdrújulas llevan tilde. Esta regla es idéntica.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Todas las palabras esdrújulas (proparoxítonas) llevan tilde?",
-      "back": "SÍ. En portugués, TODAS las palabras con acento en la antepenúltima sílaba LLEVAN tilde.",
-      "example": "cômodo, rápido, música, político"
-    },
     "audio": {
       "br": {
         "hash": "12ef8624692b706f3a587788ddbeeb51e5260f4c0fdce2a6e9dd0396961f455b",
@@ -6710,6 +6926,12 @@
         "hash": "f3ff4a706cb4b0c449b8e9f039af889ab364dd6a9deb9126a3bf07e03a80667c",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Todas las palabras esdrújulas (proparoxítonas) llevan tilde?",
+      "back": "SÍ. En portugués, TODAS las palabras con acento en la antepenúltima sílaba LLEVAN tilde.",
+      "example": "cômodo, rápido, música, político"
     }
   },
   {
@@ -6723,12 +6945,6 @@
     "tags": [],
     "contentHash": "df2f1d4eb0f7369e2511f66e8c6e2f1aa2e34b0c707c7083023d84cfe7c40a5c",
     "esContrast": "'Um' se pronuncia nasal en portugués, diferenciándose claramente de 'uno' español.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Quiero un café con leche, por favor.",
-      "target": "Quero um café com leite, por favor.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "ca93aaac4429c6a55564c5a912728145e115ce9d784aac79faba9215ec1d5b73",
@@ -6738,6 +6954,14 @@
         "hash": "ff5704fe909f391fcbb83bc96778bba6b8a4a99f8cdf94cacfa09228bb48e1a4",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Quiero un café con leche, por favor.",
+      "target": "Quero um café com leite, por favor.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": []
     }
   },
   {
@@ -6776,20 +7000,6 @@
     ],
     "contentHash": "dfa8ec4f71a4ebb8f339cd0024f645123bcfc0395e55af868d9038a912fb5151",
     "esContrast": "",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Tengo dos meses más de clases.",
-      "target": "Tenho mais dois meses de aulas.",
-      "acceptedAlternatives": [
-        "Faltam-me mais dois meses de aulas."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Tenho mais dois meses de aulas.",
-      "acceptedAlternatives": [
-        "Faltam-me mais dois meses de aulas."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "d3973f50325b2bb4b4626c8b036a90c7ee0c61616ef47017265a167571f2120a",
@@ -6798,6 +7008,24 @@
       "pt": {
         "hash": "ef206a95dfeeb4cfcd1aabdc442c0113a83d9908b6b1b2055105f49e2e82c51f",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Tengo dos meses más de clases.",
+      "target": "Tenho mais dois meses de aulas.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Faltam-me mais dois meses de aulas."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Tenho mais dois meses de aulas.",
+        "acceptedAlternatives": [
+          "Faltam-me mais dois meses de aulas."
+        ]
       }
     }
   },
@@ -6813,14 +7041,6 @@
       "vocabulário-chave"
     ],
     "contentHash": "dfc763270e0fd9ff65705ed476ef6bdbe73a9afe89a921a2995ff46431c5f095",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "A mulher trabalha todos os dias.",
-      "target": "La mujer trabaja todos los días.",
-      "acceptedAlternatives": [
-        "La mujer labora todos los días."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "ca2cc0743feeecdc87bc2d27720761b32cfcf8ff4ae8a217aedad9de9aab5890",
@@ -6830,6 +7050,16 @@
         "hash": "3a07902f4fe8b0ac7679185713c08559cdd7680090cb43413e01fdc4d8e704e9",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "A mulher trabalha todos os dias.",
+      "target": "La mujer trabaja todos los días.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "La mujer labora todos los días."
+      ]
     }
   },
   {
@@ -6898,6 +7128,16 @@
     "tags": [],
     "contentHash": "e02417752232bd4e770c9619248248c1054ece3c7de7c7f8fb864a420ec08d26",
     "esContrast": "El acento agudo en portugués funciona similar al español, pero en 'café' cambia la pronunciación.",
+    "audio": {
+      "br": {
+        "hash": "d9533287b87b89414fe7ab2ae11d6bb20ebd77138a75d803df7bb3f7d9511006",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "e9be64fbd00abb68e07b4c49e43dbeac40d3fb17f9c41f0a089868192bc0558d",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "A palavra 'café' tem acento agudo. Você ouviu o acento?",
@@ -6909,16 +7149,6 @@
         "Tilde (~)"
       ],
       "answer": "Agudo (´)"
-    },
-    "audio": {
-      "br": {
-        "hash": "d9533287b87b89414fe7ab2ae11d6bb20ebd77138a75d803df7bb3f7d9511006",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "e9be64fbd00abb68e07b4c49e43dbeac40d3fb17f9c41f0a089868192bc0558d",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -6934,14 +7164,6 @@
     ],
     "contentHash": "e243811256e21917564feb053de388a142d3acceaaedad9ff47387866b9c31bc",
     "esContrast": "'Bom' = 'bueno', 'ruim' = 'malo'. Cuidado con no confundir con 'bom' español.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Este livro é bom, mas aquele é ruim.",
-      "target": "Este libro es bueno, pero aquel es malo.",
-      "acceptedAlternatives": [
-        "Este libro es bueno, pero aquel es pésimo."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "c26edcc6e576b2dc6afe09eef4f119eda84bf657dbe0b222ca8f45d90d1ee6b1",
@@ -6951,6 +7173,16 @@
         "hash": "05e088dd9fd62c0ab39952c566bc5e215c65765f4b85775e514c27cfbd424e68",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Este livro é bom, mas aquele é ruim.",
+      "target": "Este libro es bueno, pero aquel es malo.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Este libro es bueno, pero aquel es pésimo."
+      ]
     }
   },
   {
@@ -6967,12 +7199,6 @@
     ],
     "contentHash": "e2a9ef15007a53240ffd65d9fe975843e6d4b7f59515955254b5cff3a2d2fea1",
     "esContrast": "No existe en español. En português indica vocal cerrada/tensa.",
-    "type": "flashcard",
-    "data": {
-      "front": "Qué indica el acento circunflexo (^)?",
-      "back": "Vocal fechada/tensa o sílaba tónica: â, ê, ô",
-      "example": "vovô /voˈvɔ/, coração /koɾaˈsɐ̃w/."
-    },
     "audio": {
       "br": {
         "hash": "dc7b0f015d34acdd10ef38815f0f74a2ca80ba9f56a4d33e86968f42a86aef4c",
@@ -6982,6 +7208,12 @@
         "hash": "a67e2dd96e378dd8fee49cdeaf47d6f2aa54fb1d5b6d1c3d2cde620b88701e07",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Qué indica el acento circunflexo (^)?",
+      "back": "Vocal fechada/tensa o sílaba tónica: â, ê, ô",
+      "example": "vovô /voˈvɔ/, coração /koɾaˈsɐ̃w/."
     }
   },
   {
@@ -6996,11 +7228,6 @@
     "tags": [],
     "contentHash": "e48ab1fdfecf2a37bdbea93d18f5f228103171796215dae86660f6f155d053b8",
     "esContrast": "Baño → banho (-ñ > -nh); confusión possible con 'banho' (PT) y 'baño' (ES).",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "El baño de la mujer",
-      "target": "O banho da mulher"
-    },
     "audio": {
       "br": {
         "hash": "192149d6d6ce52aa5b1fa27d5d49967f840b3f65a3ec6a66373b37d6e6811030",
@@ -7010,6 +7237,13 @@
         "hash": "59bbfe20c5b2045463e5f055186df5433334c273ab8dea04198ea621ce984464",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "El baño de la mujer",
+      "target": "O banho da mulher",
+      "sourceLang": "es",
+      "targetLang": "pt-br"
     }
   },
   {
@@ -7038,17 +7272,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Quantos ___ tem?",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "meses",
-          "alternatives": [
-            "meses"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Quantos ___ tem?",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "meses",
+            "alternatives": [
+              "meses"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -7064,12 +7300,6 @@
     ],
     "contentHash": "e6eae5d63ee111cf87d0c07b0e712cafa766ac277567480c6846747128a9b5a9",
     "esContrast": "En español: 'ómnibus' es esdrújula con tilde. En portugués no lleva tilde: ô-ni-bus.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cuántas sílabas tiene 'ônibus'? ¿Es aguda, grave o esdrújula?",
-      "back": "ô-ni-bus: 3 sílabas → paroxítona. Termina en -s → sin tilde (es llana terminada en consonante fuerte).",
-      "example": "Vou de ônibus para o trabalho."
-    },
     "audio": {
       "br": {
         "hash": "f10826a2beeca4f258ba450be053ade6423e953b5157adbc1c95820b5af206be",
@@ -7079,6 +7309,12 @@
         "hash": "132d08ea5fbecbec7d03d0c6e4952af188256d44ba4ed4456c56e45b9a0f8cfb",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cuántas sílabas tiene 'ônibus'? ¿Es aguda, grave o esdrújula?",
+      "back": "ô-ni-bus: 3 sílabas → paroxítona. Termina en -s → sin tilde (es llana terminada en consonante fuerte).",
+      "example": "Vou de ônibus para o trabalho."
     }
   },
   {
@@ -7092,15 +7328,6 @@
     "tags": [],
     "contentHash": "e6fb129ddf15c1feddd414fd93c2dbe836c237a27db1427b48506948418e564e",
     "esContrast": "En BR es ['meses] con 's' clara; en PT es ['mesesh'] con sonido de 'x'.",
-    "type": "flashcard",
-    "data": {
-      "front": "Pronuncia: MESES",
-      "back": "[me.zis]",
-      "example": "Faz três meses que não te vejo."
-    },
-    "ptOverrides": {
-      "back": "[me.zɛʃ]"
-    },
     "audio": {
       "br": {
         "hash": "82e6f9bd533463734bd72002bb81f6d6bf2879a80767bc90e305de4593dc1240",
@@ -7109,6 +7336,17 @@
       "pt": {
         "hash": "378e790b18e9c3b845b8039c1a7718b0f9e557fcc9e350840aaee28a517fb05b",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Pronuncia: MESES",
+      "back": "[me.zis]",
+      "example": "Faz três meses que não te vejo."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "[me.zɛʃ]"
       }
     }
   },
@@ -7136,15 +7374,17 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "A minha ___ está no Brasil.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "mãe",
-          "alternatives": []
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "A minha ___ está no Brasil.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "mãe",
+            "alternatives": []
+          }
+        ]
+      }
     }
   },
   {
@@ -7160,20 +7400,6 @@
     ],
     "contentHash": "e7e139b7868072693efe0fb622882bfb1124646af96682ea3e6de818dcd591bb",
     "esContrast": "En español 'r' inicial es suave; en PT-BR es /ʁ/ fuerte, en PT-PT es vibrante múltiple.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "El ratón corre por la calle.",
-      "target": "O rato corre pela rua.",
-      "acceptedAlternatives": [
-        "O rato correu pela rua."
-      ]
-    },
-    "ptOverrides": {
-      "target": "O rato corre pela rua.",
-      "acceptedAlternatives": [
-        "O rato correu pela rua."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "504487f88f92b3303e64ec3224259063971e88f11c45f7f3cbca7e5c0a5d216a",
@@ -7182,6 +7408,24 @@
       "pt": {
         "hash": "49dc0ec04acd0bc53c8c560b6a7adb3c6dc4ce2331f03bf02cf58f1f1b5df135",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "El ratón corre por la calle.",
+      "target": "O rato corre pela rua.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "O rato correu pela rua."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "O rato corre pela rua.",
+        "acceptedAlternatives": [
+          "O rato correu pela rua."
+        ]
       }
     }
   },
@@ -7225,13 +7469,7 @@
       "regla"
     ],
     "contentHash": "e91c13378b147a4f60bf0fb13a0c5fcda2f15c4c139e748a09757637225b768d",
-    "esContrast": "Regla MUY similar al español. Si termina en这些 sonidos, es llana y lleva tilde.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Qué terminaciones hacen que una palabra sea paroxítona Y lleve tilde?",
-      "back": "Terminaciones que NO se pronuncian: -ns, -l, -r, -z, -x, -on, -ã, -ão (entre otras)",
-      "example": "ácil, répter, cruz, Félix, melón, irmã, coração"
-    },
+    "esContrast": "Regla MUY similar al español. Si termina en esses sonidos, es llana y lleva tilde.",
     "audio": {
       "br": {
         "hash": "de73cf7e8d3479acf8eafca30ba5791bdcf984965b8f5b06c529beb2e8e91ae6",
@@ -7241,6 +7479,12 @@
         "hash": "a7b2f0ae2bd97d75c3c18745f2b4dd13e4399f752282bcb65a13be95cb72abf4",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Qué terminaciones hacen que una palabra sea paroxítona Y lleve tilde?",
+      "back": "Terminaciones que NO se pronuncian: -ns, -l, -r, -z, -x, -on, -ã, -ão (entre otras)",
+      "example": "ácil, répter, cruz, Félix, melón, irmã, coração"
     }
   },
   {
@@ -7254,14 +7498,6 @@
     "tags": [],
     "contentHash": "eb00f539c888e338b7bbcd1b44a6a81ed24cceebc0e2b58d9fd305e1c05c2498",
     "esContrast": "La cedilha (ç) no existe en español; en francés se escribe avec cédille.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "La letra C con cedilha se usa en palabras como façade.",
-      "target": "A letra C com cedilha é usada em palavras como façade.",
-      "acceptedAlternatives": [
-        "A letra c com cedilha é usada em palavras como façade."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "bf260b9ea730b15764bd0fb3059beb08ba15e02cda86bdcf5d96d31ea29b1939",
@@ -7271,6 +7507,16 @@
         "hash": "ab9aff33eec8186c39de0450961f832b3b56ada939b47c7fbd57d7b5c2b8350e",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "La letra C con cedilha se usa en palabras como façade.",
+      "target": "A letra C com cedilha é usada em palavras como façade.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "A letra c com cedilha é usada em palavras como façade."
+      ]
     }
   },
   {
@@ -7287,12 +7533,6 @@
     ],
     "contentHash": "ecddceb02b12b96055ae1fce892c3badb1637e3c43016a5fb0263811031049d1",
     "esContrast": "OJO: 'manzana' se escribe con tilde (~ã), no con 'ñ'.",
-    "type": "flashcard",
-    "data": {
-      "front": "Cómo se escribe 'manzana' en português?",
-      "back": "maçã (con tilde sobre la 'ã')",
-      "example": "Eu gosto de comer maçã."
-    },
     "audio": {
       "br": {
         "hash": "8eae0011cb70534ce65970c31d4f97d1f7d2cfeffbbd83132294255eaccbf0ad",
@@ -7302,6 +7542,12 @@
         "hash": "3a64b6f06476817a99bce3cf9efaa82ddfaac7f720b7f190b346c8bf83ebfbbc",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Cómo se escribe 'manzana' en português?",
+      "back": "maçã (con tilde sobre la 'ã')",
+      "example": "Eu gosto de comer maçã."
     }
   },
   {
@@ -7317,14 +7563,6 @@
     ],
     "contentHash": "eeb37e3c7aa614d5cd86ad7e9c867a42fd645ccbf5bc403fb7f3b4771d9899cc",
     "esContrast": "À es la contracción 'a + a' con acento grave, nunca se escribe 'á' en este caso.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Vou à praia amanhã.",
-      "target": "Voy a la playa mañana.",
-      "acceptedAlternatives": [
-        "Iré a la playa mañana."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "503d1b2d12337f6649bf35194439b3b4fe102f6ab79520fffda7b8ed78adc8f4",
@@ -7334,6 +7572,16 @@
         "hash": "98ddfea609ba22acc9fac3ac3c83899905bf387ed712bf64d6b2d0f4e883d20f",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Vou à praia amanhã.",
+      "target": "Voy a la playa mañana.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Iré a la playa mañana."
+      ]
     }
   },
   {
@@ -7371,12 +7619,6 @@
       "regular"
     ],
     "contentHash": "f05b417d59493dfcc552d4d6a62064cd021095846b033e57c959f2dcc9f7e1f3",
-    "type": "flashcard",
-    "data": {
-      "front": "año",
-      "back": "ano",
-      "example": "Feliz ano novo!"
-    },
     "audio": {
       "br": {
         "hash": "c27f9de2d3e91da726a9c686444137d85035a6a8e5491a17998254a0a5cdb746",
@@ -7386,6 +7628,12 @@
         "hash": "091771fb180558e0602cbd43f486faf78a994c6e0b5ffa65c9ef7fcbaf25a924",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "año",
+      "back": "ano",
+      "example": "Feliz ano novo!"
     }
   },
   {
@@ -7401,12 +7649,6 @@
       "basico"
     ],
     "contentHash": "f0ae3fd665ac2f581026ea4799a83adb606f697a5707d670ca0047cc2aaec8fc",
-    "type": "flashcard",
-    "data": {
-      "front": "Cuáles son los tres tipos de acentos en português?",
-      "back": "águdo (´), circunflexo (^) y grave (`)",
-      "example": "café (agudo), vovô (circunflexo), atrás (grave)."
-    },
     "audio": {
       "br": {
         "hash": "aa7f1badf2a4fdf999d53d49e3af4a46584ea650709a0e3894f6814681794a3f",
@@ -7416,6 +7658,12 @@
         "hash": "aa20cf40498c715c4e54738b5570c404b0018af67d2dd19afc0375b0279a257a",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Cuáles son los tres tipos de acentos en português?",
+      "back": "águdo (´), circunflexo (^) y grave (`)",
+      "example": "café (agudo), vovô (circunflexo), atrás (grave)."
     }
   },
   {
@@ -7472,15 +7720,17 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "O meu ___ mora em Lisboa.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "irmão",
-          "alternatives": []
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "O meu ___ mora em Lisboa.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "irmão",
+            "alternatives": []
+          }
+        ]
+      }
     }
   },
   {
@@ -7494,12 +7744,6 @@
     "tags": [],
     "contentHash": "f283ad9e1bd60f03eba75cd0d3174d15c761bb0a5a2dd3eeac16a30fbf5f903c",
     "esContrast": "Cuidado: la 'r' inicial en BR suena como 'h', no como 'r' española.",
-    "type": "flashcard",
-    "data": {
-      "front": "Pronuncia: RATO",
-      "back": "['hatu] en BR, ['ʁatu] en PT",
-      "example": "O rato correu pelo cozinha."
-    },
     "audio": {
       "br": {
         "hash": "5bfe43a9f7bc813bdc465d72427bdee506f31c8a531b4a7960e7ab5668c84164",
@@ -7509,6 +7753,12 @@
         "hash": "803fa923e45a23cce6f94ac8eb9f0d11b4694646e80ebca42bcb8898423e61b5",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Pronuncia: RATO",
+      "back": "['hatu] en BR, ['ʁatu] en PT",
+      "example": "O rato correu pelo cozinha."
     }
   },
   {
@@ -7524,20 +7774,6 @@
     ],
     "contentHash": "f2dfafbb5beef6418c790c63a2305d42a56658f5517c8aac0fcdf3005bae076c",
     "esContrast": "La 's' final se pronuncia /s/ en BR pero /ʃ/ en PT.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Quiero dos más.",
-      "target": "Quero mais dois.",
-      "acceptedAlternatives": [
-        "Quero dois a mais."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Quero mais dois.",
-      "acceptedAlternatives": [
-        "Quero dois a mais."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "4f96e791bf8e32cf4c455e9616a6cbe490fb7a4b72417efc381442c895f4b409",
@@ -7546,6 +7782,24 @@
       "pt": {
         "hash": "c6276e10c5565b7b7ed879dc8944a583553f64cb68d24fdff0c9afc229005e5f",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Quiero dos más.",
+      "target": "Quero mais dois.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Quero dois a mais."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Quero mais dois.",
+        "acceptedAlternatives": [
+          "Quero dois a mais."
+        ]
       }
     }
   },
@@ -7560,6 +7814,16 @@
     "tags": [],
     "contentHash": "f44036979b52ccbe5545392b5cc675e4f1079827b06ab77be6d117e2bb821085",
     "esContrast": "'Pão' suena diferente a 'pan' por la nasal ã.",
+    "audio": {
+      "br": {
+        "hash": "461e63a9d72fac2cda856d2b8de4940a4a5e2e75c0337e9fda880a6e0a9efa62",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "41df554e570751d5ceac100f5d681415e957950956222da67d0304c657ca3ece",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "O pão está na mesa.",
@@ -7571,16 +7835,6 @@
         "Na cozinha"
       ],
       "answer": "Na mesa"
-    },
-    "audio": {
-      "br": {
-        "hash": "461e63a9d72fac2cda856d2b8de4940a4a5e2e75c0337e9fda880a6e0a9efa62",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "41df554e570751d5ceac100f5d681415e957950956222da67d0304c657ca3ece",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -7596,12 +7850,6 @@
       "u-nasal"
     ],
     "contentHash": "f4babe61dc30d8b5edf3cc54fd481d633ddf7f3de8f31a1f837751244183b61e",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo se dice 'nube' en portugués?",
-      "back": "nuvem",
-      "example": "Há muitas nuvens no céu hoje."
-    },
     "audio": {
       "br": {
         "hash": "48d761afff9a20f9e7bb2beb73181d0c2aff70ba8d301491547aa4258c43bb2d",
@@ -7611,6 +7859,12 @@
         "hash": "6e1ae3142031edeaa33aff009502d7a0adb652049c5a3e84102d5f5fbb24918b",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo se dice 'nube' en portugués?",
+      "back": "nuvem",
+      "example": "Há muitas nuvens no céu hoje."
     }
   },
   {
@@ -7627,15 +7881,6 @@
     ],
     "contentHash": "f56d9fa69680ca15c9a34d32b59b805a1e77cd362d9f6044cbe36c71cdb58383",
     "esContrast": "Ambos idiomas tienen la misma pronunciación /aˈvɔ/. En PT-BR se escribe con tilde; en PT-PT, con acento circunflejo.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo se escribe 'abuelo/a' en PT-BR? ¿Y en PT-PT?",
-      "back": "PT-BR: avó (a-VÓ) | PT-PT: avô (a-VÔ)",
-      "example": "Minha avó faz um bolo delicioso."
-    },
-    "ptOverrides": {
-      "back": "PT-PT: avô (a-VÔ) — el circunflejo indica una sílaba que en PT-BR lleva tilde"
-    },
     "audio": {
       "br": {
         "hash": "e72131aacf3b37419b2b8862e7ccb265360914c58439d1606dfb2b50ef99e0a2",
@@ -7644,6 +7889,17 @@
       "pt": {
         "hash": "88cbc896d998fc04f189ab2ccbec71fa8c52de59a09d56424d2547a2cefe454b",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo se escribe 'abuelo/a' en PT-BR? ¿Y en PT-PT?",
+      "back": "PT-BR: avó (a-VÓ) | PT-PT: avô (a-VÔ)",
+      "example": "Minha avó faz um bolo delicioso."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "PT-PT: avô (a-VÔ) — el circunflejo indica una sílaba que en PT-BR lleva tilde"
       }
     }
   },
@@ -7660,20 +7916,6 @@
     ],
     "contentHash": "f5a62aacbdd0abddc902eb0942c232e6dabbe242c71352d4ae0620d32f44f847",
     "esContrast": "PT-BR: avó (grave, tilde); PT-PT: avô (grave, sin tilde). En ES: abuela.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Minha avó mora em Lisboa.",
-      "target": "Mi abuela vive en Lisboa.",
-      "acceptedAlternatives": [
-        "Mi abuela mora en Lisboa."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Mi abuela vive en Lisboa.",
-      "acceptedAlternatives": [
-        "Mi abuela mora en Lisboa."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "13e66cda5507a44f7867fcfeb3f9a1faa23f0b7e9cf19d94c56418ec19198211",
@@ -7682,6 +7924,24 @@
       "pt": {
         "hash": "91ae77ae7c4e312f39fc996fc676b7eebe29c40667c7bc4c5f234637154a0a8d",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Minha avó mora em Lisboa.",
+      "target": "Mi abuela vive en Lisboa.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Mi abuela mora en Lisboa."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Mi abuela vive en Lisboa.",
+        "acceptedAlternatives": [
+          "Mi abuela mora en Lisboa."
+        ]
       }
     }
   },
@@ -7698,12 +7958,6 @@
       "a-nasal"
     ],
     "contentHash": "f640b1fcb3d7316741cfc36344cb06f29a9ddf6c7cdf76731aaa2ba8a36a9ef0",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo se dice 'pan' en portugués?",
-      "back": "pão",
-      "example": "Eu compro pão todas as manhãs."
-    },
     "audio": {
       "br": {
         "hash": "6fba7d1392d37febea9ce0bffb67b622fa8fd3fc547a1a9a004c3eb997c93cec",
@@ -7713,6 +7967,12 @@
         "hash": "da49a5ff2aa2d5b23b5aa5038e7f0d19b41294db542649d09dd3406d5e3d778b",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo se dice 'pan' en portugués?",
+      "back": "pão",
+      "example": "Eu compro pão todas as manhãs."
     }
   },
   {
@@ -7725,14 +7985,6 @@
     ],
     "tags": [],
     "contentHash": "f6cd60042dfa2784909c4766393552f2bf0191b8334e53246dcf508cf2888271",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "El alfabeto portugués tiene veintiséis letras.",
-      "target": "O alfabeto português tem vinte e seis letras.",
-      "acceptedAlternatives": [
-        "O alfabeto português possui vinte e seis letras."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "55464fc37729d1b68aa34bafaae0c5045a324230c1c3448f6999f55ace546f0b",
@@ -7742,6 +7994,16 @@
         "hash": "3f931b7e3dee42ba107f20c7e15dbe55e6178abc8312d3ff3277d618dc542bf8",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "El alfabeto portugués tiene veintiséis letras.",
+      "target": "O alfabeto português tem vinte e seis letras.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "O alfabeto português possui vinte e seis letras."
+      ]
     }
   },
   {
@@ -7778,24 +8040,26 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Os teus ___ são muito ___.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "olhos",
-          "alternatives": [
-            "olhos"
-          ]
-        },
-        {
-          "position": 1,
-          "answer": "bonitos",
-          "alternatives": [
-            "bonitos"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Os teus ___ são muito ___.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "olhos",
+            "alternatives": [
+              "olhos"
+            ]
+          },
+          {
+            "position": 1,
+            "answer": "bonitos",
+            "alternatives": [
+              "bonitos"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -7810,7 +8074,7 @@
       "regional"
     ],
     "contentHash": "f7f716013b830bffb6e517e0a1523eccb7450892381a4f4ae30f7026760a825c",
-    "esContrast": "En BR la 's' final se mantiene como /z/ por ser链接 a otra sílaba; en PT puede variar según el hablante.",
+    "esContrast": "En BR la 's' final se mantiene como /z/ por ser enlace a otra sílaba; en PT puede variar según el hablante.",
     "type": "fill_blank",
     "data": {
       "sentence": "Ele quer mais ___.",
@@ -7891,14 +8155,6 @@
     ],
     "contentHash": "fa9af65b275889579beb4f91254f85825ff17c616727fe3d860e2b10f6c1f37d",
     "esContrast": "'Ricardo' y 'erreu' en BR suenan con /h/ inicial; en PT-PT son vibrantes múltiples.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Ricardo erreu a resposta.",
-      "target": "Ricardo erró la respuesta."
-    },
-    "ptOverrides": {
-      "target": "Ricardo erró la respuesta."
-    },
     "audio": {
       "br": {
         "hash": "670f9aa5d579f13f7992112647596ba2d9cdc5d915fd8fd4e4c2b4f0404f1bea",
@@ -7907,6 +8163,18 @@
       "pt": {
         "hash": "a7b8f298ecc2312238e8bcb585e5896cfa1745eec2d03e37d24cf576e6771e0e",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Ricardo erreu a resposta.",
+      "target": "Ricardo erró la respuesta.",
+      "sourceLang": "pt-br",
+      "targetLang": "es"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Ricardo erró la respuesta."
       }
     }
   },
@@ -7923,6 +8191,16 @@
     ],
     "contentHash": "fe42aac14ac7b306deb11a034b3f3651a286387eb1e2986d0f4996312e6e125f",
     "esContrast": "En portugués, la h inicial es siempre muda: hotel y horas.",
+    "audio": {
+      "br": {
+        "hash": "6d19c7755018eb150055951b19d1521b4fb795ea507b777fad56565d32a71f1e",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "8f03e435b4c3eafe11774c58170f4c6414e0887bb1e470d5c773625a5626cbcd",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Horas de hotel, manhã de canção.",
@@ -7933,16 +8211,6 @@
         "Tres"
       ],
       "answer": "Dos"
-    },
-    "audio": {
-      "br": {
-        "hash": "6d19c7755018eb150055951b19d1521b4fb795ea507b777fad56565d32a71f1e",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "8f03e435b4c3eafe11774c58170f4c6414e0887bb1e470d5c773625a5626cbcd",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -7958,20 +8226,6 @@
     ],
     "contentHash": "ff7325587a1557e3d849b0f351239ab18097296f9579d790446a8f3a2ae3b8f7",
     "esContrast": "El tilde sobre 'a' (ã) indica nasalización, no existe así en español.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "La palavra mãe significa madre en português.",
-      "target": "A palavra mãe significa mãe em português.",
-      "acceptedAlternatives": [
-        "A palavra mãe quer dizer mãe em português."
-      ]
-    },
-    "ptOverrides": {
-      "target": "A palavra mãe significa mãe em português europeu.",
-      "acceptedAlternatives": [
-        "A palavra mãe quer dizer mãe em português europeu."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "390e2343a540b1f3b6a2d1aaf49375e18a556147aaa03b37428e05493b63eee8",
@@ -7980,6 +8234,24 @@
       "pt": {
         "hash": "78d76ee414ffeb85d965dae339a6331cb1727d11dbdc1929e59bd2f9703ce8b6",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "La palavra mãe significa madre en português.",
+      "target": "A palavra mãe significa mãe em português.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "A palavra mãe quer dizer mãe em português."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "A palavra mãe significa mãe em português europeu.",
+        "acceptedAlternatives": [
+          "A palavra mãe quer dizer mãe em português europeu."
+        ]
       }
     }
   }

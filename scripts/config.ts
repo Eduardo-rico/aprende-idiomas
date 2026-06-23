@@ -32,7 +32,7 @@ export function lessonMdxDir(lang: LanguageId = DEFAULT_LANG): string {
   return path.join(dataDir(lang), 'mdx');
 }
 
-export const LLM_MODEL = process.env.MINIMAX_LLM_MODEL ?? 'MiniMax-M2.5-highspeed';
+export const LLM_MODEL = process.env.MINIMAX_LLM_MODEL ?? 'MiniMax-M3';
 export const TTS_MODEL = process.env.MINIMAX_TTS_MODEL ?? 'speech-2.8-hd';
 
 export const LLM_BASE_URL = 'https://api.minimax.io/anthropic';

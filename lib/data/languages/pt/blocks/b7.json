@@ -13,12 +13,6 @@
     ],
     "contentHash": "03b92017533a626f539196c8f759c06f9384983075d924877aa6be7f072941b5",
     "esContrast": "En español diríamos 'hablar yo', pero no existe: solo 'hablar'.",
-    "type": "flashcard",
-    "data": {
-      "front": "Conjuga o infinitivo pessoal de 'falar' na 1ª pessoa do singular",
-      "back": "falar eu",
-      "example": "Falar eu assim foi um erro."
-    },
     "audio": {
       "br": {
         "hash": "ceaaaf35b62fe44963cfa69c19a473c49ecbc376666f45769aefb06e33c1ac36",
@@ -28,6 +22,12 @@
         "hash": "1b0a134cb6dcff50f4b7a55a0567be2cca54b2bf061aa518316a8e545b2cb43c",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Conjuga o infinitivo pessoal de 'falar' na 1ª pessoa do singular",
+      "back": "falar eu",
+      "example": "Falar eu assim foi um erro."
     }
   },
   {
@@ -41,14 +41,6 @@
     "tags": [],
     "contentHash": "04350a8e8c6c7b0c4fc7eba2875872cf91f7f15318f204c1741ffac5cd59c481",
     "esContrast": "El portugués puede usar 'sem + infinitivo pessoal' donde el español requiere 'sin + infinitivo compuesto'.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Sem eu perceber, ela já tinha decidido tudo.",
-      "target": "Sin que yo lo percibiera, ella ya había decidido todo.",
-      "acceptedAlternatives": [
-        "Sin percibirlo yo, ella ya había decidido todo."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "3aa7325de11df9112b81c7af8ecd9d3fe79f483c834cda6cb8b89ab2d3d60929",
@@ -58,6 +50,16 @@
         "hash": "00f6ad44576e699820af44d98b432c1000011b74c760fb15fdff3f30e35522bd",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Sem eu perceber, ela já tinha decidido tudo.",
+      "target": "Sin que yo lo percibiera, ella ya había decidido todo.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Sin percibirlo yo, ella ya había decidido todo."
+      ]
     }
   },
   {
@@ -152,12 +154,6 @@
     ],
     "contentHash": "0b4ea2612015722862fa45d0e0a4ef94a49af6be45b6002378b86a0251c8deb7",
     "esContrast": "En español 'al + infinitivo' nunca se flexiona: 'al yo llegar' es incorrecto.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Se puede usar el infinitivo pessoal con 'ao' + infinitivo? Ejemplo.",
-      "back": "Sim. 'Ao' indica tempo e exige a flexão quando há sujeito definido.",
-      "example": "Ao eu chegar em casa, vou te ligar. / Ao chegares tu, avisa-me."
-    },
     "audio": {
       "br": {
         "hash": "24858c6d4a6019391b133e6cebc3c6da4f3f8f767ce7f85c3ddffbce98862bfd",
@@ -167,6 +163,12 @@
         "hash": "bb75d73c7e62ea9bf8c4003b6182ed4a9d41c93222fc9c6e11640a54bdc49c7e",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Se puede usar el infinitivo pessoal con 'ao' + infinitivo? Ejemplo.",
+      "back": "Sim. 'Ao' indica tempo e exige a flexão quando há sujeito definido.",
+      "example": "Ao eu chegar em casa, vou te ligar. / Ao chegares tu, avisa-me."
     }
   },
   {
@@ -182,14 +184,6 @@
     ],
     "contentHash": "0e239f7955858b169a97ecafec08df190497c0615258006be711287a3f892791",
     "esContrast": "El portugués evita el subjuntivo con 'depois de + infinitivo pessoal'; el español usa subjuntivo con 'después de que'.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Ter-lhe-ei enviado a mensagem depois de tu confirmares.",
-      "target": "Te habré enviado el mensaje después de que tú confirmes.",
-      "acceptedAlternatives": [
-        "Te habré enviado el mensaje después de que confirmes."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "ef3408078f782ce832225136fdf2fc5d53bc4ad0172a2ffd53ec2c22424b2cb5",
@@ -199,6 +193,16 @@
         "hash": "63f1dae30c138d3bffa759d47e32bbf397e272f43aafdfcb2f9941f215b74323",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Ter-lhe-ei enviado a mensagem depois de tu confirmares.",
+      "target": "Te habré enviado el mensaje después de que tú confirmes.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Te habré enviado el mensaje después de que confirmes."
+      ]
     }
   },
   {
@@ -240,12 +244,6 @@
       "regular"
     ],
     "contentHash": "0e6c2af65a1dc6b981fa3f8584c5178ed05debc9f3da54e08110d79088a1da75",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Qué verbo auxiliar se usa en PT-BR para formar el presente progresivo?",
-      "back": "ESTAR + gerúndio",
-      "example": "Estou falando português agora. (Estoy hablando portugués ahora.)"
-    },
     "audio": {
       "br": {
         "hash": "e831573f1ead0c38edb84b2d8a8901abebf359ba55f303e6269f83caed6e526f",
@@ -255,6 +253,12 @@
         "hash": "3fabda1e54a47bc6fdd62e30b3201450aceac903782e48c7d5b57fa482798123",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Qué verbo auxiliar se usa en PT-BR para formar el presente progresivo?",
+      "back": "ESTAR + gerúndio",
+      "example": "Estou falando português agora. (Estoy hablando portugués ahora.)"
     }
   },
   {
@@ -297,12 +301,6 @@
     ],
     "contentHash": "0f9fec330a0f4ce1b0189594b3c64e84a858ffbe8fa478f8bf8826414ab73611",
     "esContrast": "En español el infinitivo nunca se flexiona: 'hablar' es igual para todos.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Qué es el infinitivo pessoal?",
-      "back": "É uma forma verbal do infinitivo que se flexiona em pessoa e número, diferente do infinitivo impessoal que é invariável.",
-      "example": "Falar é bom. (impessoal) / Falar eu é bom. (pessoal)"
-    },
     "audio": {
       "br": {
         "hash": "d18ea88f7ad86571a937a3e97750ef64247cdbdab22ea2f3e42f20825577778f",
@@ -312,6 +310,12 @@
         "hash": "7dfba86fc90d639505eeac4837d29afb07aed8bdb953081fbf6563eb44c39cef",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Qué es el infinitivo pessoal?",
+      "back": "É uma forma verbal do infinitivo que se flexiona em pessoa e número, diferente do infinitivo impessoal que é invariável.",
+      "example": "Falar é bom. (impessoal) / Falar eu é bom. (pessoal)"
     }
   },
   {
@@ -329,6 +333,16 @@
     ],
     "contentHash": "0fc266bad34dda32918e0bbd2d217682939e7b3b4c9b492c7253ea0c58af2e5b",
     "esContrast": "'Vale a pena' + infinitivo significa 'vale la pena'. Não se dice 'vale a pena fazer'.",
+    "audio": {
+      "br": {
+        "hash": "0de46d22b858db0da44cdaebf27fa77cd9b6b87f6b162471355e38bed382e16e",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "02891220f096f9796c98c2287dd4bcbccd7c285dffcda4f87db28c98212dac34",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Vale a pena ler este livro. Eu já tenho lido duas vezes.",
@@ -340,16 +354,6 @@
         "Lo ha escrito"
       ],
       "answer": "Lo ha leído dos veces"
-    },
-    "audio": {
-      "br": {
-        "hash": "0de46d22b858db0da44cdaebf27fa77cd9b6b87f6b162471355e38bed382e16e",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "02891220f096f9796c98c2287dd4bcbccd7c285dffcda4f87db28c98212dac34",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -366,14 +370,6 @@
     ],
     "contentHash": "10c85d3ce1c2f58fccbd4fdd422e1534f971bea386cb488cfe32474bc45bb961",
     "esContrast": "'Ir + gerúndio' expresa un proceso gradual. En español usamos 'ir entrando'; en portugués es idéntico.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Él viene entrando poco a poco en confianza.",
-      "target": "Ele vai entrando aos poucos em confiança.",
-      "acceptedAlternatives": [
-        "Ele vai entrando aos poucos em confiança."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "5b5dad578b169e9da4d009811e3729f7cb0d678ebcc9a4a0163d9554934f8175",
@@ -383,6 +379,16 @@
         "hash": "ece2acc6dd2918a09a5f636da28f7911a88bb3844110ee84623668ccc2fa20d8",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Él viene entrando poco a poco en confianza.",
+      "target": "Ele vai entrando aos poucos em confiança.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Ele vai entrando aos poucos em confiança."
+      ]
     }
   },
   {
@@ -400,6 +406,16 @@
     ],
     "contentHash": "1154b88e746b3e50b51dc255d215856d759827624f04286b41b0156156612274",
     "esContrast": "'Arrumar' significa 'ordenar/organizar', no 'arreglar' como en español.",
+    "audio": {
+      "br": {
+        "hash": "884c914dfc76d09cf3558ae1f0777ced1300000a746174234942efc44359649b",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "847ed103c3b2fc8bfd3a9d3febf800c19862f63a2e4c221cc67f2bd108ff2268",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Ele tem arrumado o quarto desde ontem e ainda não terminou.",
@@ -412,17 +428,9 @@
       ],
       "answer": "arrumando o quarto"
     },
-    "ptOverrides": {
-      "audioText": "Ele tem arrumado o quarto desde ontem e ainda não terminou."
-    },
-    "audio": {
-      "br": {
-        "hash": "884c914dfc76d09cf3558ae1f0777ced1300000a746174234942efc44359649b",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "847ed103c3b2fc8bfd3a9d3febf800c19862f63a2e4c221cc67f2bd108ff2268",
-        "voice": "Portuguese_Wiselady"
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "Ele tem arrumado o quarto desde ontem e ainda não terminou."
       }
     }
   },
@@ -438,12 +446,6 @@
       "irregular"
     ],
     "contentHash": "19c74826d75a31f90c7324eee45b38f72c5fff4fa151b6b3b3310b1be5b06d45",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cuál es el gerúndio de 'trazer', 'dizer' y 'produzir'?",
-      "back": "trazendo / dizendo / produzindo (todos regulares: -er/-ir + -endo/-indo)",
-      "example": "Ela está dizendo a verdade. (Ella está diciendo la verdad.)"
-    },
     "audio": {
       "br": {
         "hash": "d75d0338d06ef26490a7d9f4afe1cf5197b3a9d58caced825e0c08e7503462f8",
@@ -453,6 +455,12 @@
         "hash": "78a2f13ba8fc8b1bcee4b608bb21b2b87980482577b8f36427ba6a3fbbdb689e",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cuál es el gerúndio de 'trazer', 'dizer' y 'produzir'?",
+      "back": "trazendo / dizendo / produzindo (todos regulares: -er/-ir + -endo/-indo)",
+      "example": "Ela está dizendo a verdade. (Ella está diciendo la verdad.)"
     }
   },
   {
@@ -468,6 +476,16 @@
     ],
     "contentHash": "1bce9b390f85d2c3ead42da8f34ea0dbc0d00f546ac68c5abcd9545366438815",
     "esContrast": "En español se dice 'hablando' pero en portugués es 'falando'.",
+    "audio": {
+      "br": {
+        "hash": "3f0d0e80681a2208f7a18d6289e2d44d0f2aeacffa3e859bbb75f2be2f17a1b1",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "9e7cf076bd6866be62ab80b802c4b2101476b21bf1b7f11fd834ea9290779155",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "O gerúndio em português é formado com as terminações -ando, -endo e -indo.",
@@ -479,16 +497,6 @@
         "Con las terminaciones -ando, -endo, -ir"
       ],
       "answer": "Con las terminaciones -ando, -endo, -indo"
-    },
-    "audio": {
-      "br": {
-        "hash": "3f0d0e80681a2208f7a18d6289e2d44d0f2aeacffa3e859bbb75f2be2f17a1b1",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "9e7cf076bd6866be62ab80b802c4b2101476b21bf1b7f11fd834ea9290779155",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -529,18 +537,6 @@
     ],
     "tags": [],
     "contentHash": "1bf08752ab78756fe6339321ed1baffc6e71a108152233ec222547ef7453a0e1",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Ellos prefieren que ustedes trabajen desde casa.",
-      "target": "Eles preferem vocês trabalharem em casa.",
-      "acceptedAlternatives": [
-        "Ellos prefieren que ustedes trabajen desde casa."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Eles preferem vocês trabalharem em casa.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "18a39850088cee34aa48196fde4145cdfbc0d722826f79c8e7467a066e1f45e6",
@@ -549,6 +545,22 @@
       "pt": {
         "hash": "e80c50e17f5284da557a1e16a5fcb83839061767deb613acbd44ca5a1798a48a",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Ellos prefieren que ustedes trabajen desde casa.",
+      "target": "Eles preferem vocês trabalharem em casa.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Ellos prefieren que ustedes trabajen desde casa."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Eles preferem vocês trabalharem em casa.",
+        "acceptedAlternatives": []
       }
     }
   },
@@ -588,14 +600,6 @@
     ],
     "contentHash": "1f146db06cff45f9e48f59d08e4513ff92846cb8f4a475799ed02a7b92f5f078",
     "esContrast": "'Acordar' en PT = 'despertar/despertarse' en ES. No confundir con 'acordar' = 'decidir'.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Eu acordei sonhando com ela.",
-      "target": "Me desperté soñando con ella.",
-      "acceptedAlternatives": [
-        "Desperté soñando con ella."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "864cc7fd27068cf7ae1280d2c42265ce702a2851e5931fc22c795e069df0eb78",
@@ -605,6 +609,16 @@
         "hash": "73d1aedb790158a588752f694e84d02c054af06ac006440a850334ede037cbf7",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Eu acordei sonhando com ela.",
+      "target": "Me desperté soñando con ella.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Desperté soñando con ella."
+      ]
     }
   },
   {
@@ -620,14 +634,6 @@
     ],
     "contentHash": "1fa654ad8bf9b7ddc9f96651f3377d39892c542e294cd17b89db6f14d5adf70b",
     "esContrast": "'Andar + gerundio' indica acción repetida o habitual; no tiene equivalente directo en español.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Os alunos andam perguntando muito.",
-      "target": "Los alumnos andan preguntando mucho.",
-      "acceptedAlternatives": [
-        "Los alumnos no paran de preguntar."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "f21b7151aefe1f4a9fc8bbff5ebe75989e2b46c97f6cd10e505a09fe0e16fa18",
@@ -637,6 +643,16 @@
         "hash": "9173343b2df10eb0771600b0fb1e4f320c957cb7a48b7ddfc600ddb5a905807d",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Os alunos andam perguntando muito.",
+      "target": "Los alumnos andan preguntando mucho.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Los alumnos no paran de preguntar."
+      ]
     }
   },
   {
@@ -653,12 +669,6 @@
     ],
     "contentHash": "20c6e6a6d381ba551a73d5512ce0f872d07478ed4b18472702db5686121c9eae",
     "esContrast": "En PT-BR se usa 'nasci/nascido'. En PT-PT existe 'nado' como forma arcaica.",
-    "type": "flashcard",
-    "data": {
-      "front": "Participio de NASGER (BR) vs NASCER (PT)",
-      "back": "Nascer → nascido (PT-BR); nado (PT-PT)",
-      "example": "Nasci em São Paulo. (PT-BR: siempre 'nasci')"
-    },
     "audio": {
       "br": {
         "hash": "8b63e67905d016f983f3b91db04d15bc0d45f5d3d9f76dc65d434a81ec077fe6",
@@ -668,6 +678,12 @@
         "hash": "0b1c61e01ea3512658b70d720c26fbf0a489c1b642ba86ecdf9b070a79294f51",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Participio de NASGER (BR) vs NASCER (PT)",
+      "back": "Nascer → nascido (PT-BR); nado (PT-PT)",
+      "example": "Nasci em São Paulo. (PT-BR: siempre 'nasci')"
     }
   },
   {
@@ -684,12 +700,6 @@
     ],
     "contentHash": "232b9a190fab9cda61293114b8b6425468bc977957f94c1b6e38b4a322ffa342",
     "esContrast": "El gerundio regular en -ando/-endo es similar en ambos idiomas.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Estamos estudando juntos.",
-      "target": "Estamos estudiando juntos.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "325533047b8f9e268134416f933cb5a89ca4da4797e1481ed04c63bbaa13fe08",
@@ -699,6 +709,14 @@
         "hash": "f3182c6323b24d98bc063d7ac815f4e191437c519eb5b83114fd3d8200c5262a",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Estamos estudando juntos.",
+      "target": "Estamos estudiando juntos.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": []
     }
   },
   {
@@ -715,12 +733,6 @@
     ],
     "contentHash": "2958554e2926e89ff8c1887bffc3520b3cd7065aa6b7e9ef4e0131cf5567355f",
     "esContrast": "En español: ganar → ganado. En PT-BR: ganhar → ganho. ¡No confundas!",
-    "type": "flashcard",
-    "data": {
-      "front": "Ganhar → participio irregular",
-      "back": "ganhar → ganho (NO 'ganado' como en español)",
-      "example": "Tenho ganho muito com esse novo emprego."
-    },
     "audio": {
       "br": {
         "hash": "9d4be35167ee6bba128a1a7fdf0886de95524f8a7afdf60e162c343e52338266",
@@ -730,6 +742,12 @@
         "hash": "3d5d3ea7af37997b48e9e31c4ac03b1cdce8be8c8bad8a16b63ba9b1caeddd4a",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Ganhar → participio irregular",
+      "back": "ganhar → ganho (NO 'ganado' como en español)",
+      "example": "Tenho ganho muito com esse novo emprego."
     }
   },
   {
@@ -744,14 +762,6 @@
       "irregular"
     ],
     "contentHash": "2a9da328b62c0060232e134677bf5c571a927cfad064855ec130f8044fc1aa85",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Ella ha visto muchas películas este mes.",
-      "target": "Ela tem visto muitos filmes este mês.",
-      "acceptedAlternatives": [
-        "Ela viu muitos filmes este mês."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "cd759f1fd2167fa4169a0f6bdde6becd4dc28f4d763d21253fb7af6e8e0ab113",
@@ -761,6 +771,16 @@
         "hash": "439a75eee0e5753ce48513af459f61968316635a5636d7a8a6e61ff14d8cdbb0",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Ella ha visto muchas películas este mes.",
+      "target": "Ela tem visto muitos filmes este mês.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Ela viu muitos filmes este mês."
+      ]
     }
   },
   {
@@ -776,14 +796,6 @@
     ],
     "contentHash": "2c10f86c64c58aa9771bcbac67ae95a89e3bbadaa042dc6c1edf77c200fc6634",
     "esContrast": "En portugués se usa 'falando'; en español es 'hablando' (verbo diferente).",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Ela está falando português.",
-      "target": "Ella está hablando portugués.",
-      "acceptedAlternatives": [
-        "Ella está hablando."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "a924a7077fdbd3638c946fa8614ff6600cb78871d6599c77320cef96c28a374a",
@@ -793,6 +805,16 @@
         "hash": "5ac0813746d849fec5aafd2e795c4feb8d5108f824833cf793d2e761ef1150a2",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Ela está falando português.",
+      "target": "Ella está hablando portugués.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Ella está hablando."
+      ]
     }
   },
   {
@@ -866,14 +888,6 @@
       "construccion-progresiva"
     ],
     "contentHash": "3107b6743fe8a3c76a9c23c7db1d286a254571da36532ab58190208c4adc077d",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Ele está tentando encontrar uma solução.",
-      "target": "Él está intentando encontrar una solución.",
-      "acceptedAlternatives": [
-        "Él está tratando de encontrar una solución."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "558891dcca38b3db29b7c4a4045b83382426925983bf1406ea18dfbe662b38b6",
@@ -883,6 +897,16 @@
         "hash": "84a0c1ac25a8e797805babe30d8202f3ac99e16545e7791a92bec11872339e68",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Ele está tentando encontrar uma solução.",
+      "target": "Él está intentando encontrar una solución.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Él está tratando de encontrar una solución."
+      ]
     }
   },
   {
@@ -899,15 +923,6 @@
     ],
     "contentHash": "317e72046e6cbf8cfe81ad4e87535a97a63f836bddc0273a8f70a1593d00e105",
     "esContrast": "El 'vosotros' español no tiene equivalente en infinitivo pessoal.",
-    "type": "flashcard",
-    "data": {
-      "front": "Conjuga o infinitivo pessoal de 'falar' na 2ª pessoa do plural",
-      "back": "falardes vós",
-      "example": "Falar vós assim é raro nowadays."
-    },
-    "ptOverrides": {
-      "back": "falar vós (forma em desuso)"
-    },
     "audio": {
       "br": {
         "hash": "8c7cde72c23b579901767436daf95478f387e4f89303f09b949b280053a0b3ac",
@@ -916,6 +931,17 @@
       "pt": {
         "hash": "280a03862506c602086550b8ca90aadcae0ba1158a47523ee826428a501dd802",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Conjuga o infinitivo pessoal de 'falar' na 2ª pessoa do plural",
+      "back": "falardes vós",
+      "example": "Falar vós assim é raro nowadays."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "falar vós (forma em desuso)"
       }
     }
   },
@@ -932,14 +958,6 @@
     ],
     "contentHash": "330cdc4822ff03fbec28702db9a0d15483917ba5738ee2e20f22663b8aae8ed1",
     "esContrast": "'Seguir em frente' = 'seguir adelante', no 'seguir en frente'.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Sempre que possível, sigo em frente.",
-      "target": "Siempre que es posible, sigo adelante.",
-      "acceptedAlternatives": [
-        "Siempre que puedo, sigo adelante."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "5f290738d09ba97b83a7cd88d04ba8b12225deeb0f69a7196642465482584278",
@@ -949,6 +967,16 @@
         "hash": "503cf9ec4ab269195fd66a23932eb6887d97bc0fa2515dc3b50eb8ae59038f6b",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Sempre que possível, sigo em frente.",
+      "target": "Siempre que es posible, sigo adelante.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Siempre que puedo, sigo adelante."
+      ]
     }
   },
   {
@@ -964,12 +992,6 @@
       "falso-amigo"
     ],
     "contentHash": "33e64b56f1dcaa6a7a50ae6dd8b0369a2e3cf65b42923c0292d8dbb85ba2080a",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cuál es el gerúndio de 'poder'? ¿Y de 'fazer'?",
-      "back": "podendo / fazendo (son regulares: -er + -endo)",
-      "example": "Estou podendo sair agora. (Estoy pudiendo salir ahora.)"
-    },
     "audio": {
       "br": {
         "hash": "8cea0fe514c68d50a1dd112c21aa2a714272bee4da477d0564a798f59ea4589f",
@@ -979,6 +1001,12 @@
         "hash": "dc4f77fa73be7e76423aa922045a8464a945418b64fe38ed0e4d818fa72d8994",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cuál es el gerúndio de 'poder'? ¿Y de 'fazer'?",
+      "back": "podendo / fazendo (son regulares: -er + -endo)",
+      "example": "Estou podendo sair agora. (Estoy pudiendo salir ahora.)"
     }
   },
   {
@@ -994,14 +1022,6 @@
     ],
     "contentHash": "356e7362d6723c63f82d4acbab38757d5df966cb3829f522fd2316203468398a",
     "esContrast": "El participio de 'poner' es irregular en portugués: 'posto'. No uses 'ponido'.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Ella ha puesto los libros en la mesa.",
-      "target": "Ela tem posto os livros na mesa.",
-      "acceptedAlternatives": [
-        "Ela pôs os livros na mesa."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "cdb5090cf39e9489e24dbf97cfd03cb8868ebb661786129ef7dc4aafe4d6ffef",
@@ -1011,6 +1031,16 @@
         "hash": "9616c2af99e1298caff5265f174c6aafaa89830d25d027985274ff05bc4106dc",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Ella ha puesto los libros en la mesa.",
+      "target": "Ela tem posto os livros na mesa.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Ela pôs os livros na mesa."
+      ]
     }
   },
   {
@@ -1027,6 +1057,16 @@
     ],
     "contentHash": "3931eedfe34016b02848e4dda820c21c963e03909a5068905b139444ed2aab07",
     "esContrast": "Tener (ter) + participio expresa acción completada, a diferencia del español que usa 'haber'.",
+    "audio": {
+      "br": {
+        "hash": "9564b76313a1ed6e7e58a7aee137f5d01cee618e27fca287cf420ff69b11030b",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "ed7e39041e61e633a83943051a0d9a318e48f68c113a893ab4ad5976f64d4dde",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Tenho escrito três cartas para minha avó esta semana.",
@@ -1039,17 +1079,9 @@
       ],
       "answer": "tres cartas"
     },
-    "ptOverrides": {
-      "audioText": "Tenho escrito três cartas para a minha avó esta semana."
-    },
-    "audio": {
-      "br": {
-        "hash": "9564b76313a1ed6e7e58a7aee137f5d01cee618e27fca287cf420ff69b11030b",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "ed7e39041e61e633a83943051a0d9a318e48f68c113a893ab4ad5976f64d4dde",
-        "voice": "Portuguese_Wiselady"
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "Tenho escrito três cartas para a minha avó esta semana."
       }
     }
   },
@@ -1065,14 +1097,6 @@
       "regular"
     ],
     "contentHash": "3bad5ed3ad085f7067b982d6941f7afe829179893ecb1bbb3bea4ecbba06089d",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "He cargado el teléfono toda la noche.",
-      "target": "Tenho carregado o celular a noite toda.",
-      "acceptedAlternatives": [
-        "Carreguei o celular a noite toda."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "78a2c57e3beca2b6ca53876fe77bf64aa9852d1321cd878cfe6a902b92821020",
@@ -1082,6 +1106,16 @@
         "hash": "e5c0934c98861fc78b14b6a4f2309b03fea27ab3dd835d1c1a12fbbae6f7b62d",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "He cargado el teléfono toda la noche.",
+      "target": "Tenho carregado o celular a noite toda.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Carreguei o celular a noite toda."
+      ]
     }
   },
   {
@@ -1175,12 +1209,6 @@
     "tags": [],
     "contentHash": "41238d65e0fe0bba0f80be3b322e5ef2ce097a72f466e713994a62a8096416bc",
     "esContrast": "En portugués se dice 'recomenda eu desistir'; en español sería 'recomienda que yo desista'.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Ele recomenda eu desistir antes de perder mais tempo.",
-      "target": "Él recomienda que yo desista antes de perder más tiempo.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "28b802cd56760804ce3732983caa011c0d9f29b8e9c14afe794ccc2a117ae83c",
@@ -1190,6 +1218,14 @@
         "hash": "920dffdb7794f9e95be8ae7f50385106484ee6828a20507f9f117192f6f92e40",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Ele recomenda eu desistir antes de perder mais tempo.",
+      "target": "Él recomienda que yo desista antes de perder más tiempo.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": []
     }
   },
   {
@@ -1207,12 +1243,6 @@
     ],
     "contentHash": "427ac7a014e9f43be29f114fc134e27f71dfb77a0e6a2448e62c0a21aac10b69",
     "esContrast": "En español usamos 'necesitar + infinitivo' indistintamente, sin esta distinción.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cuál es la diferencia entre 'precisar' + infinitivo pessoal vs 'precisar de'?",
-      "back": "Precisar + infinitivo pessoal indica necessidade de algo futuro. Precisar de indica necessidade de algo presente.",
-      "example": "Preciso de descansar. (agora) / Para eu descansar amanhã, preciso sair cedo. (futuro)"
-    },
     "audio": {
       "br": {
         "hash": "314a4dd21680828a7c7bc2010f95ba26f61a1faeaf735932b8ac4b5c170410c6",
@@ -1222,6 +1252,12 @@
         "hash": "a41140fc85ff826273758f5b94222ff211c26fd1306a288b2f50d06137370395",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cuál es la diferencia entre 'precisar' + infinitivo pessoal vs 'precisar de'?",
+      "back": "Precisar + infinitivo pessoal indica necessidade de algo futuro. Precisar de indica necessidade de algo presente.",
+      "example": "Preciso de descansar. (agora) / Para eu descansar amanhã, preciso sair cedo. (futuro)"
     }
   },
   {
@@ -1263,14 +1299,6 @@
     ],
     "contentHash": "42f4d8941e1f299cf422aedab6bca811c6fec6dccfbdee3b6d39182d5a7286ab",
     "esContrast": "En portugués el infinitivo pessoal puede reemplazar al infinitivo compuesto: 'depois de o ver' equivale a 'habiendo visto'.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Después de haberlo visto, desistí.",
-      "target": "Depois de o ver, desisti.",
-      "acceptedAlternatives": [
-        "Depois de o ter visto, desisti."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "dea9673ec4bc0248b00ba8a85a2fd12eae105d793475b360f3e2c53339169849",
@@ -1280,6 +1308,16 @@
         "hash": "814066a69a563b4af53085591f322932e04ead0bbdd59aafc98ea71c40e0c964",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Después de haberlo visto, desistí.",
+      "target": "Depois de o ver, desisti.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Depois de o ter visto, desisti."
+      ]
     }
   },
   {
@@ -1294,12 +1332,6 @@
       "vocabulario"
     ],
     "contentHash": "4383565ed3032632fcc033b4597e8e9b64415fa7624267a84ff035410be149f6",
-    "type": "flashcard",
-    "data": {
-      "front": "Traduce: 'Estoy intentando encontrar la solución.'",
-      "back": "Estou tentando encontrar a solução.",
-      "example": "Estou tentando encontrar a solução para o problema."
-    },
     "audio": {
       "br": {
         "hash": "6edf40b5f4d9b7e152eb9b4cf5176aa929778f273a06865a7030c6f6ee3eb480",
@@ -1309,6 +1341,12 @@
         "hash": "03d12a82723ac33c2fd91daef2a8c7345dd843d85193edeedd8c9f7a427a5cde",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Traduce: 'Estoy intentando encontrar la solución.'",
+      "back": "Estou tentando encontrar a solução.",
+      "example": "Estou tentando encontrar a solução para o problema."
     }
   },
   {
@@ -1324,14 +1362,6 @@
     ],
     "contentHash": "43fb54c2d06da1ea8822f98fc471df924acdc24a5d70bdf1b1a0fb6957e337cf",
     "esContrast": "'Vem + gerundio' expresa continuidad gradual; en español usamos 'viene + gerundio'.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "O problema vem piorando com o tempo.",
-      "target": "El problema viene empeorando con el tiempo.",
-      "acceptedAlternatives": [
-        "El problema ha venido empeorando con el tiempo."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "559ef43cd863b61459c3b85f0db0fb10efea6eeaaf1515477c6c29bb2463a49c",
@@ -1341,6 +1371,16 @@
         "hash": "f15c15cb7b50018038201fe5f0021d944d8b80c96155bc21990c831bc1c62a95",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "O problema vem piorando com o tempo.",
+      "target": "El problema viene empeorando con el tiempo.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "El problema ha venido empeorando con el tiempo."
+      ]
     }
   },
   {
@@ -1382,18 +1422,6 @@
     ],
     "contentHash": "47e12b2630d2b1f27b34ec9dea84b871d34dcbb4809d7ce4f6f34e7f9cfbb484",
     "esContrast": "El gerundio con sujeto personal expresa simultaneidad: 'acordar pensando' = 'despertar y pensar'.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Me despierto cada día pensando en lo mismo.",
-      "target": "Acordo todos os dias pensando na mesma coisa.",
-      "acceptedAlternatives": [
-        "Acordo todos os dias a pensar na mesma coisa."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Acordo todos os dias a pensar na mesma coisa.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "f1c81ba1ef09bfc5cf57984faa00949efa24e4a18c2df22a602e6874d84252db",
@@ -1402,6 +1430,22 @@
       "pt": {
         "hash": "16ed0155d12dbd349e219d7af9e854af8b5b72b74066b559d3f229ab5697accf",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Me despierto cada día pensando en lo mismo.",
+      "target": "Acordo todos os dias pensando na mesma coisa.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Acordo todos os dias a pensar na mesma coisa."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Acordo todos os dias a pensar na mesma coisa.",
+        "acceptedAlternatives": []
       }
     }
   },
@@ -1446,12 +1490,6 @@
     ],
     "contentHash": "4c01dfd74dad48756678f4a9fd390741de060b37343b6da8fbfea0e515088e9b",
     "esContrast": "En español es 'dejar de estudiar', sin flexión: 'Dejar yo de estudiar' no funciona.",
-    "type": "flashcard",
-    "data": {
-      "front": "Traduce: 'Desistir de estudar é fácil.'",
-      "back": "Desistires tu de estudar é fácil. / Desistir eu de estudar é fácil.",
-      "example": "Desistires tu de estudar agora vai te prejudicar no futuro."
-    },
     "audio": {
       "br": {
         "hash": "a8b61fb8ce8bbe135452574eaa3bc71bce5833c9b17b580097204a134a30627b",
@@ -1461,6 +1499,12 @@
         "hash": "3e5112a9fa983a94e719439b30f4a712ec0c1f1f50e93032c9eaba22c40d026c",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Traduce: 'Desistir de estudar é fácil.'",
+      "back": "Desistires tu de estudar é fácil. / Desistir eu de estudar é fácil.",
+      "example": "Desistires tu de estudar agora vai te prejudicar no futuro."
     }
   },
   {
@@ -1476,20 +1520,6 @@
     ],
     "contentHash": "4e0d553f78077c0df1164a72a1f046f9373673a84edf25d5961a144c26286056",
     "esContrast": "En portugués, el gerundio nunca se usa con 'ir a' para el futuro como en español.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Estoy hablando con mi amiga.",
-      "target": "Estou falando com minha amiga.",
-      "acceptedAlternatives": [
-        "Estou a falar com minha amiga."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Estou a falar com a minha amiga.",
-      "acceptedAlternatives": [
-        "Estou a falar com a minha amiga."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "e505e7859105897f1ac8f8b3782860b27d24b642dbdcccac53fac32ed148b001",
@@ -1498,6 +1528,24 @@
       "pt": {
         "hash": "84c02ec7c855ff5b17226305564f137fceb4bee03e66fb8f33071f64d5e58403",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Estoy hablando con mi amiga.",
+      "target": "Estou falando com minha amiga.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Estou a falar com minha amiga."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Estou a falar com a minha amiga.",
+        "acceptedAlternatives": [
+          "Estou a falar com a minha amiga."
+        ]
       }
     }
   },
@@ -1514,14 +1562,6 @@
     ],
     "contentHash": "4e4837d67ca59cd58ee0cd23c479625ac95c61cf00f7d374b602ba607df80008",
     "esContrast": "'Ficar' en PT ≠ 'quedar' en ES. Aquí significa 'ponerse/volverse'.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "A situação está ficando difícil.",
-      "target": "La situación se está poniendo difícil.",
-      "acceptedAlternatives": [
-        "La situación está ficando difícil."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "57876d5f253aa50de495e09302bc2c8c7eaf684814a2002cd65041515e9bd098",
@@ -1531,6 +1571,16 @@
         "hash": "b63789119542e91ceac98ff5184fd580d385eca7fc0974d9648907db0a72713b",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "A situação está ficando difícil.",
+      "target": "La situación se está poniendo difícil.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "La situación está ficando difícil."
+      ]
     }
   },
   {
@@ -1547,12 +1597,6 @@
     ],
     "contentHash": "4fedfec8ac8f4dbbb7d65715bde5f41eff22e1c90bdf0710de586d2176d8e0fe",
     "esContrast": "En español: subjuntivo. En portugués: infinitivo pessoal precedido de 'para'.",
-    "type": "flashcard",
-    "data": {
-      "front": "Traduce al portugués: 'Es importante que tú sepas la verdad.'",
-      "back": "É importante para tu saberes a verdade.",
-      "example": "É importante para tu saberes a verdade antes de decidir."
-    },
     "audio": {
       "br": {
         "hash": "99d25435bf61e73bbf4450c3bec2465ea8335e8c5321e5e7ce2e8ef1a70e5846",
@@ -1562,6 +1606,12 @@
         "hash": "ecf4f279dffda247b6a654f18666e0eaf3ae283fa88fa340424f49dd51c7660d",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Traduce al portugués: 'Es importante que tú sepas la verdad.'",
+      "back": "É importante para tu saberes a verdade.",
+      "example": "É importante para tu saberes a verdade antes de decidir."
     }
   },
   {
@@ -1635,12 +1685,6 @@
     ],
     "contentHash": "5292d03a2ceec8793c4a587de4d9207ee612eb0c06476e6b48bcd43f9fdcb081",
     "esContrast": "En español no existe 'hablar tú', solo 'hablar'.",
-    "type": "flashcard",
-    "data": {
-      "front": "Conjuga o infinitivo pessoal de 'falar' na 2ª pessoa do singular",
-      "back": "falares tu",
-      "example": "Fales tu o que quiseres."
-    },
     "audio": {
       "br": {
         "hash": "ba3af263486984503fb5378c601e79e2ad0fbaebe253b97b071777fbd6c1a12c",
@@ -1650,6 +1694,12 @@
         "hash": "bca5c7d583910606624b986e288b0b87f91d50131d0118eab202f9dc2f631ec2",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Conjuga o infinitivo pessoal de 'falar' na 2ª pessoa do singular",
+      "back": "falares tu",
+      "example": "Fales tu o que quiseres."
     }
   },
   {
@@ -1665,14 +1715,6 @@
       "falso-amigo"
     ],
     "contentHash": "5406568e038d38ad7ee4de7a4d6ad5aa0a2642bfd3027656cae7e2be5092d367",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "He escrito tres cartas esta semana.",
-      "target": "Tenho escrito três cartas esta semana.",
-      "acceptedAlternatives": [
-        "Escrevi três cartas esta semana."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "63646c51928515e5d23fa773df977537635685df68e85d0edf890a8475baa2ac",
@@ -1682,6 +1724,16 @@
         "hash": "3f970192ccd24715118bb5f7deb3e7afb82b067d68e4a445da6567b323c84002",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "He escrito tres cartas esta semana.",
+      "target": "Tenho escrito três cartas esta semana.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Escrevi três cartas esta semana."
+      ]
     }
   },
   {
@@ -1725,6 +1777,16 @@
     ],
     "contentHash": "5b51db8eff444373edb2a8d72e847de1c7b97c6a68f680b570b6d19183bd003d",
     "esContrast": "En portugués se puede usar 'andar + gerúndio' para expresar acciones repetidas o continuas.",
+    "audio": {
+      "br": {
+        "hash": "617723255c2b46a23f55d34b9c5f9621c2936d89e9da44790d37adabc8775c72",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "5110058b7b818c93dc756972419cf3050a5d665169079a253e322e484a817516",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "O João está andando pensando na vida dele.",
@@ -1736,16 +1798,6 @@
         "Describe un estado"
       ],
       "answer": "Expresa una acción en progreso continuo"
-    },
-    "audio": {
-      "br": {
-        "hash": "617723255c2b46a23f55d34b9c5f9621c2936d89e9da44790d37adabc8775c72",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "5110058b7b818c93dc756972419cf3050a5d665169079a253e322e484a817516",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -1761,6 +1813,16 @@
     ],
     "contentHash": "5b7470d5f7aa713c5683ebf0946b9101d5ee469e9739c349604d9662ba79f402",
     "esContrast": "El español necesita 'haya desistido' (subjuntivo compuesto). El portugués puede reemplazar eso con 'ele ter desistido' (infinitivo pessoal).",
+    "audio": {
+      "br": {
+        "hash": "b44ceb590396c0d52d89ef3ea1fa76c17ded1707e7dd3cb72f77dba1528704ea",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "e18e5da595cb62a874312313eef1f7d784307b5b49d82d75731e9a3fbd30c287",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Espero que ele tenha desistido. / Espero ele ter desistido.",
@@ -1773,17 +1835,9 @@
       ],
       "answer": "Cuando hay cambio de sujeto entre la oración principal y la subordinada."
     },
-    "ptOverrides": {
-      "audioText": "Espero que ele tenha desistido. / Espero ele ter desistido."
-    },
-    "audio": {
-      "br": {
-        "hash": "b44ceb590396c0d52d89ef3ea1fa76c17ded1707e7dd3cb72f77dba1528704ea",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "e18e5da595cb62a874312313eef1f7d784307b5b49d82d75731e9a3fbd30c287",
-        "voice": "Portuguese_Wiselady"
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "Espero que ele tenha desistido. / Espero ele ter desistido."
       }
     }
   },
@@ -1824,12 +1878,6 @@
     ],
     "contentHash": "5dee39853896b0f1ff59a42b3329c9e5b94eddbb8c59744777322ce7daef7d60",
     "esContrast": "ver → visto (como español), pero atenção: pôr → posto, no 'puesto'.",
-    "type": "flashcard",
-    "data": {
-      "front": "Participio de VER y PÔR",
-      "back": "ver → visto; pôr → posto",
-      "example": "Tenho visto muitos filmes novos. O livro foi posto na mesa."
-    },
     "audio": {
       "br": {
         "hash": "0e9a0dd625d9baa1f1094a95b4381c06507471279b1e2f70bb731f0e8dd4bf56",
@@ -1839,6 +1887,12 @@
         "hash": "0966e5c107d8df3cd82679e79a170d88671472be330af5aa2cb7650d3d163a9c",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Participio de VER y PÔR",
+      "back": "ver → visto; pôr → posto",
+      "example": "Tenho visto muitos filmes novos. O livro foi posto na mesa."
     }
   },
   {
@@ -1855,6 +1909,16 @@
     ],
     "contentHash": "5e2b846342c4770bd7735357e82de59e406ffa7888a0d601f617a20bc2371edb",
     "esContrast": "La estructura 'estar + gerundio' es igual que en español, solo cambia el gerundio de algunos verbos.",
+    "audio": {
+      "br": {
+        "hash": "cc07c925e011292faefeb1677c0a417ce73fe5ac4d214c617620bf2f355d2c87",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "fa60e28baf0c0a22b43d88a9483eed6bcde5e89af1cc67c366257f4a71997955",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Ela está tentando encontrar as chaves do carro.",
@@ -1866,16 +1930,6 @@
         "Andar"
       ],
       "answer": "Estar"
-    },
-    "audio": {
-      "br": {
-        "hash": "cc07c925e011292faefeb1677c0a417ce73fe5ac4d214c617620bf2f355d2c87",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "fa60e28baf0c0a22b43d88a9483eed6bcde5e89af1cc67c366257f4a71997955",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -1914,15 +1968,6 @@
     ],
     "contentHash": "5f90f6786ec5dea0966ce821672e213acaa932d150a1bcc73269f49a43c281ea",
     "esContrast": "En español solo usamos 'haber'. En PT-BR se prefiere 'ter', no 'haver'.",
-    "type": "flashcard",
-    "data": {
-      "front": "Usar HAVER en perfecto compuesto (PT-PT)",
-      "back": "PT-PT: Haver + participio = tiempo perfecto compuesto",
-      "example": "PT-PT: Eu hei feito a tarefa. / PT-BR: Eu tenho feito a tarefa."
-    },
-    "ptOverrides": {
-      "back": "PT-PT: Haver + participio es la norma para perfecto compuesto"
-    },
     "audio": {
       "br": {
         "hash": "dd5c96c78c12de763e6eec553e9dad9902f249856c11b291325a34bd1f9031c7",
@@ -1931,6 +1976,17 @@
       "pt": {
         "hash": "b61dad73e64b7d74a4326a5448d40f21c94d2292f9548a3e35716edcdca58e60",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Usar HAVER en perfecto compuesto (PT-PT)",
+      "back": "PT-PT: Haver + participio = tiempo perfecto compuesto",
+      "example": "PT-PT: Eu hei feito a tarefa. / PT-BR: Eu tenho feito a tarefa."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "PT-PT: Haver + participio es la norma para perfecto compuesto"
       }
     }
   },
@@ -1947,12 +2003,6 @@
       "regional"
     ],
     "contentHash": "6aa6996b7e5340b35124f7b03a4ff7e627a78e2288c9026945fca211d459914b",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Qué significa 'chegando' en el contexto de saludo informal en PT-BR?",
-      "back": "¡Llegué! / ¡Ya estoy aquí! (forma coloquial de chegar)",
-      "example": "— Oi, tudo bem? — Chegando agora!"
-    },
     "audio": {
       "br": {
         "hash": "e749cc35d3a0aeb7769af1283821d54953e4f8ba1e8a13c917fb9ceb5233267b",
@@ -1962,6 +2012,12 @@
         "hash": "7f19e318734f6c209698d40a1c3fa320cc1967f4b00bcc0281d9e0259a99bc15",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Qué significa 'chegando' en el contexto de saludo informal en PT-BR?",
+      "back": "¡Llegué! / ¡Ya estoy aquí! (forma coloquial de chegar)",
+      "example": "— Oi, tudo bem? — Chegando agora!"
     }
   },
   {
@@ -1974,14 +2030,6 @@
     ],
     "tags": [],
     "contentHash": "6b92cf03710a9eaacf48580a88ca8fa00ab6ec1883a0c2e7809efb0b3793ead1",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Ele tem prazer em ajudar os outros.",
-      "target": "Él tiene placer en ayudar a los demás.",
-      "acceptedAlternatives": [
-        "Él tiene el placer de ayudar a los demás."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "516ac980e23794cb0ca66c05f9a3cd8f19351f915456073267c59c92f989b32d",
@@ -1991,6 +2039,16 @@
         "hash": "30b964fd3dc00147179b35a8a9411e7da032607647793aa4e752c891b5cb9709",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Ele tem prazer em ajudar os outros.",
+      "target": "Él tiene placer en ayudar a los demás.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Él tiene el placer de ayudar a los demás."
+      ]
     }
   },
   {
@@ -2007,6 +2065,16 @@
     ],
     "contentHash": "6bee5262078b0f7162b67084827baa90a45556b4cb5bf8ce8bd12afad80a62ee",
     "esContrast": "En español diríamos 'Es mejor salir ahora' sin conjugar el infinitivo. En portugués se conjuga por cambio de sujeto.",
+    "audio": {
+      "br": {
+        "hash": "7c8db8680eebdc8413070a8440b7ef63f53bc0cf40ff084840f77a524627b664",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "8b5efaf42d9dbc06630002c5fd930b144e008dd67026263ca74e63eaf37432d3",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "É melhor sairmos agora do que ficar aqui sem fazer nada.",
@@ -2019,17 +2087,9 @@
       ],
       "answer": "Porque hay cambio de sujeto: 'nós' vs 'eu' implícito."
     },
-    "ptOverrides": {
-      "audioText": "É melhor sairmos agora do que ficar aqui sem fazer nada."
-    },
-    "audio": {
-      "br": {
-        "hash": "7c8db8680eebdc8413070a8440b7ef63f53bc0cf40ff084840f77a524627b664",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "8b5efaf42d9dbc06630002c5fd930b144e008dd67026263ca74e63eaf37432d3",
-        "voice": "Portuguese_Wiselady"
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "É melhor sairmos agora do que ficar aqui sem fazer nada."
       }
     }
   },
@@ -2072,18 +2132,6 @@
     ],
     "contentHash": "77b1c4bbb224fb5af7f42305e3134af28342b9c57753e2c7bac7859b0345c7e6",
     "esContrast": "'Andar + gerúndio' indica un estado o acción continuada, diferente de 'caminhar'.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Ella está caminando por la playa.",
-      "target": "Ela está andando pela praia.",
-      "acceptedAlternatives": [
-        "Ela está a andar pela praia."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Ela está a andar pela praia.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "9183b4ba554f55745efd565fce77baf28f5c6fe54aa59ce4e772142bed7bd598",
@@ -2092,6 +2140,22 @@
       "pt": {
         "hash": "d3839453d586f311fbd9357635cb35069e3e07c87127fd4c272bca346f6fa852",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Ella está caminando por la playa.",
+      "target": "Ela está andando pela praia.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Ela está a andar pela praia."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Ela está a andar pela praia.",
+        "acceptedAlternatives": []
       }
     }
   },
@@ -2108,14 +2172,6 @@
     ],
     "contentHash": "79076c11b217c46df8a9c45c4bed29d6eb46188a3504a474f25e77ee7169ef39",
     "esContrast": "'Sempre que possível' se escribe todo junto, sin coma tras 'possível'.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Siempre que es posible, salgo a correr por la mañana.",
-      "target": "Sempre que é possível, saio para correr de manhã.",
-      "acceptedAlternatives": [
-        "Sempre que possível, saio a correr de manhã."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "21931b653e289d4fd27e11a03e06629828509947070a30944f8c716ddb01d2bf",
@@ -2125,6 +2181,16 @@
         "hash": "e941b560ee283069a2f0792a00a6e97965c5ddcc8d993b9ea532b75cc6db70ab",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Siempre que es posible, salgo a correr por la mañana.",
+      "target": "Sempre que é possível, saio para correr de manhã.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Sempre que possível, saio a correr de manhã."
+      ]
     }
   },
   {
@@ -2139,12 +2205,6 @@
       "infinitivo pessoal"
     ],
     "contentHash": "79ce355883e5e3feff77afbc97efaa953565e76b445dd6175886482decbaefe1",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Es importante hablar con él.",
-      "target": "É importante falar com ele.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "69bf2fb78fd7b0eb990d9e32bec85fa041f84d3ab6fba77d59854cd8516a98fc",
@@ -2154,6 +2214,14 @@
         "hash": "d00189970afab4812ff8ba99cee38b98f011c490eb65d45711737cb68ebd042d",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Es importante hablar con él.",
+      "target": "É importante falar com ele.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": []
     }
   },
   {
@@ -2184,15 +2252,17 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Ele é ___ em Lisboa, não em São Paulo.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "nascido",
-          "alternatives": []
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Ele é ___ em Lisboa, não em São Paulo.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "nascido",
+            "alternatives": []
+          }
+        ]
+      }
     }
   },
   {
@@ -2231,14 +2301,6 @@
     ],
     "tags": [],
     "contentHash": "7bb869a14493f48f04b2b095f10b74c7cb16c90b32aff984c45ebbd348b57154",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Eu tenho feito a tarefa todos os dias.",
-      "target": "Yo he hecho la tarea todos los días.",
-      "acceptedAlternatives": [
-        "Yo he realizado la tarea todos los días."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "3c40e39760f7129183874ad28e524f3ea14e0595c0774ed2d4a831f19d6d7b29",
@@ -2248,6 +2310,16 @@
         "hash": "2bb5bb5a5a2197bde454b0870b2dc55281b8d015c713c722907b2baa9f2e32f5",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Eu tenho feito a tarefa todos os dias.",
+      "target": "Yo he hecho la tarea todos los días.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Yo he realizado la tarea todos los días."
+      ]
     }
   },
   {
@@ -2263,12 +2335,6 @@
     ],
     "contentHash": "81a88fb83fc98746d4b607292da93e15f62899b1bd91209ee9561cdfbde75d3b",
     "esContrast": "En español 'vale la pena', pero en PT-BR es 'vale a pena' (con artículo).",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Qué significa 'vale a pena' en portugués?",
-      "back": "Vale a pena = Merece la pena / Conviene",
-      "example": "Vale a pena experimentar a comida brasileira."
-    },
     "audio": {
       "br": {
         "hash": "eed42b8a9e99cdea8cc5648a0c8ebeb9b8be6a12498b5c76bdb3d93a02bdedd9",
@@ -2278,6 +2344,12 @@
         "hash": "9676d10f0d47bead13c549e5d8afa4c36a278cdd86ef3a1dd9cd8c4ee6df29be",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Qué significa 'vale a pena' en portugués?",
+      "back": "Vale a pena = Merece la pena / Conviene",
+      "example": "Vale a pena experimentar a comida brasileira."
     }
   },
   {
@@ -2347,12 +2419,6 @@
     ],
     "contentHash": "863fc5a68e83d713e9a4e81a54b3148e2d8c7c06ee9dfff0110db78458e56bec",
     "esContrast": "Igual que en español: comer → comido, dormir → dormido.",
-    "type": "flashcard",
-    "data": {
-      "front": "Participio regular de verbos -ER/-IR (comer, dormir)",
-      "back": "comer → comido; dormir → dormido (con -ido)",
-      "example": "Já we've comido naquele restaurante."
-    },
     "audio": {
       "br": {
         "hash": "6756ed6449bf72ce73ddfa1e7c7772b05dfd18ee007278202ad02c5873e4132a",
@@ -2362,6 +2428,12 @@
         "hash": "62f1fce9cf9dbeb8f4b70b82ab17cc217d5298b5fbd33b4258276e4ebbfd1b88",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Participio regular de verbos -ER/-IR (comer, dormir)",
+      "back": "comer → comido; dormir → dormido (con -ido)",
+      "example": "Já we've comido naquele restaurante."
     }
   },
   {
@@ -2376,14 +2448,6 @@
       "basico"
     ],
     "contentHash": "877377ce76ecd07f079aabe990bdc828e17e846b1fa3ff1ca02f57759b8af73f",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Para saberem a verdade, precisam perguntar directamente.",
-      "target": "Para que sepan la verdad, necesitan preguntar directamente.",
-      "acceptedAlternatives": [
-        "Para que ustedes sepan la verdad, necesitan preguntar directamente."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "6857df705270b2f2c6bcebddcf8a75ed23be22fe8f45010574b708ef253ba853",
@@ -2393,6 +2457,16 @@
         "hash": "2c4b88732ff75ca873f8d82e56970afee091ac73152483e6efa7651f37a24533",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Para saberem a verdade, precisam perguntar directamente.",
+      "target": "Para que sepan la verdad, necesitan preguntar directamente.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Para que ustedes sepan la verdad, necesitan preguntar directamente."
+      ]
     }
   },
   {
@@ -2409,12 +2483,6 @@
     ],
     "contentHash": "8964941a2505d130f64260a5536ce28516f1403dbbcd8aa2d59a1a9120c00058",
     "esContrast": "En español 'hablar ellos/ellas' no existe como forma verbal.",
-    "type": "flashcard",
-    "data": {
-      "front": "Conjuga o infinitivo pessoal de 'falar' na 3ª pessoa do plural",
-      "back": "falarem eles/elas",
-      "example": "Falerem eles o que quiserem, não me importa."
-    },
     "audio": {
       "br": {
         "hash": "f68afbe2698460c8736c46bfd4ea1162c1d241fe70a9b104c6d749a2e259cf2b",
@@ -2424,6 +2492,12 @@
         "hash": "08ebc1a38678a227862e881ca6c51bd1badc538f3987b8223c37ef39fd5f28c5",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Conjuga o infinitivo pessoal de 'falar' na 3ª pessoa do plural",
+      "back": "falarem eles/elas",
+      "example": "Falerem eles o que quiserem, não me importa."
     }
   },
   {
@@ -2439,14 +2513,6 @@
     ],
     "contentHash": "899dc89ddb479030463d69f454a5e02f74da8705ce93876461fbd92387c38e33",
     "esContrast": "El infinitivo pessoal flexiona con la partícula 'se': 'antes de se ir' indica la acción de él/ella antes de irse.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Antes de irse, llamó a su madre.",
-      "target": "Antes de se ir, ligou para a mãe.",
-      "acceptedAlternatives": [
-        "Antes de ir-se, ligou para a mãe."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "de763613547d37bc8d8b58c8f1e3498c3111efdfb293fafc74bec8feeaf82598",
@@ -2456,6 +2522,16 @@
         "hash": "cbc0db1470e79dd1d38fc67e2698cd61b5e968589e2c68eda1cc7b5cc730ac7d",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Antes de irse, llamó a su madre.",
+      "target": "Antes de se ir, ligou para a mãe.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Antes de ir-se, ligou para a mãe."
+      ]
     }
   },
   {
@@ -2471,6 +2547,16 @@
     ],
     "contentHash": "8afe28a622f099840062e549832c0d14d3f31e9612fae4266cb858d18bcd2eb1",
     "esContrast": "En español el infinitivo no se conjuga por personas; en portugués sí: falar eu, falares tu, hablar él.",
+    "audio": {
+      "br": {
+        "hash": "821029aa984f20d8e23efbb1354114225e2f3e7d8147776bed074e830adf0cc6",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "9cc812307ffa46812a435fb60b9f0c3e1681f08e3d165e254509a589a1f4cae5",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "O infinitivo pessoal é a forma do infinitivo que se conjuga para cada pessoa.",
@@ -2483,17 +2569,9 @@
       ],
       "answer": "Es el infinitivo conjugado según la persona gramatical."
     },
-    "ptOverrides": {
-      "audioText": "O infinitivo pessoal é a forma do infinitivo que se conjuga para cada pessoa."
-    },
-    "audio": {
-      "br": {
-        "hash": "821029aa984f20d8e23efbb1354114225e2f3e7d8147776bed074e830adf0cc6",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "9cc812307ffa46812a435fb60b9f0c3e1681f08e3d165e254509a589a1f4cae5",
-        "voice": "Portuguese_Wiselady"
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "O infinitivo pessoal é a forma do infinitivo que se conjuga para cada pessoa."
       }
     }
   },
@@ -2511,12 +2589,6 @@
     ],
     "contentHash": "8c46475ddccc82615f1f4a7da44da5fa5388c732411b1b31be752110a48c0a96",
     "esContrast": "En español 'hacer yo' no existe, solo 'hacer'.",
-    "type": "flashcard",
-    "data": {
-      "front": "Conjuga 'fazer' no infinitivo pessoal (pessoa com sujeito definido)",
-      "back": "fazer eu, fazeres tu, fazer ele, fazermos nós, fazerdes vós, fazerem eles",
-      "example": "Fazer eu isso? Nem pensar!"
-    },
     "audio": {
       "br": {
         "hash": "434ae2d0dfbc19a86ad04d71919b9df2e2e31a137ab72dbde44b44aa14668630",
@@ -2526,6 +2598,12 @@
         "hash": "9a3d3a2b36e1dbde09bc49b92bf0d5f0a8ea9ea8a50f2ed8d29dad051af60719",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Conjuga 'fazer' no infinitivo pessoal (pessoa com sujeito definido)",
+      "back": "fazer eu, fazeres tu, fazer ele, fazermos nós, fazerdes vós, fazerem eles",
+      "example": "Fazer eu isso? Nem pensar!"
     }
   },
   {
@@ -2542,12 +2620,6 @@
     ],
     "contentHash": "8e57fbb6ba981d370fb573e3bd3e3c438fa8e827c4b310aae3481c5327f4b786",
     "esContrast": "En español usamos subjuntivo: 'para que yo salga', no 'para yo salir'.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cuándo se usa el infinitivo pessoal en lugar del conjuntivo?",
-      "back": "Depois de preposições (para, em, por, sem, ao) e em frases com sujeito expresso.",
-      "example": "Para eu sair cedo, preciso acordar às 6h. / É importante para vossa excelência entender isso."
-    },
     "audio": {
       "br": {
         "hash": "6ac1444fd134a1ddcb95b064516a39170cd549afc36c0a52d88ae5588b08ef91",
@@ -2557,6 +2629,12 @@
         "hash": "eb327ea032e3b8a3fee7ff6db59ca6b07e914835b91b586c3255f0cd7f749428",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cuándo se usa el infinitivo pessoal en lugar del conjuntivo?",
+      "back": "Depois de preposições (para, em, por, sem, ao) e em frases com sujeito expresso.",
+      "example": "Para eu sair cedo, preciso acordar às 6h. / É importante para vossa excelência entender isso."
     }
   },
   {
@@ -2573,14 +2651,6 @@
     ],
     "contentHash": "8ed1afe5cce91c3a82330fd274f459f7292c8496002f3401b043e33b1f451f68",
     "esContrast": "'Seguir em frente' es la forma correcta; no se dice 'seguir adelante' en portugués.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Seguía adelante con el proyecto a pesar de todo.",
-      "target": "Seguiam em frente com o projeto apesar de tudo.",
-      "acceptedAlternatives": [
-        "Ia seguindo em frente com o projeto apesar de tudo."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "2e431106c1fa4ad00aa7d121d3fec02c02ab3b8312bfc8a3ca1e887d920bdfd2",
@@ -2590,6 +2660,16 @@
         "hash": "479b92828bd457f76d360cc7418fdbee1b7209498b46c670fb7bac154c1ee7b7",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Seguía adelante con el proyecto a pesar de todo.",
+      "target": "Seguiam em frente com o projeto apesar de tudo.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Ia seguindo em frente com o projeto apesar de tudo."
+      ]
     }
   },
   {
@@ -2645,17 +2725,19 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Ela já ___ três livros este ano.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "escritos",
-          "alternatives": [
-            "escrita"
-          ]
-        }
-      ]
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Ela já ___ três livros este ano.",
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "escritos",
+            "alternatives": [
+              "escrita"
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -2672,18 +2754,6 @@
     ],
     "contentHash": "92a52ca0d56044e18355eb6e129c4594b7ecbf04bdcb01bc0800b6326f9e9e10",
     "esContrast": "En PT-BR se prefiere 'estar + gerundio'; en PT-PT se prefiere 'estar a + infinitivo'.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Estoy intentando encontrar la dirección correcta.",
-      "target": "Estou tentando encontrar o endereço certo.",
-      "acceptedAlternatives": [
-        "Estou a tentar encontrar o endereço certo."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Estou a tentar encontrar o endereço certo.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "83bb49f68da7a1a08584f85c293d9048ede310b176b285177255622b8b8e80d7",
@@ -2692,6 +2762,22 @@
       "pt": {
         "hash": "1798556700a321085b76754f57c4e46c81aa934f90c50bf5e152d8a36af6be4b",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Estoy intentando encontrar la dirección correcta.",
+      "target": "Estou tentando encontrar o endereço certo.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Estou a tentar encontrar o endereço certo."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Estou a tentar encontrar o endereço certo.",
+        "acceptedAlternatives": []
       }
     }
   },
@@ -2707,14 +2793,6 @@
       "basico"
     ],
     "contentHash": "949e50b19d4b3eb865e66097f008c774844d383c4e9c42433e299ee51f6f4f40",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "É importante falar eu com ela sobre isso.",
-      "target": "Es importante que yo hable con ella sobre eso.",
-      "acceptedAlternatives": [
-        "Es importante que yo le hable a ella sobre eso."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "e3813edfb338b4644415a233af99133549b1c2cb5750db6293d387951a3e2b2c",
@@ -2724,6 +2802,16 @@
         "hash": "5857e8a9401e94c182a7177c9bd5fc4285a3c856c30e964e1ad24b71b0948a4a",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "É importante falar eu com ela sobre isso.",
+      "target": "Es importante que yo hable con ella sobre eso.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Es importante que yo le hable a ella sobre eso."
+      ]
     }
   },
   {
@@ -2764,12 +2852,6 @@
       "construcción"
     ],
     "contentHash": "94d7b3f75ae0adcd571a89300e1c57ddd28fdf756d39695f4da116663843de73",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Qué significa 'ESTAR + gerúndio' y cómo se compara con el español?",
-      "back": "Expresa acción en progreso. Equivale al presente progresivo español (estar + gerundio).",
-      "example": "Ela está estudiando para a prova. (Ella está estudiando para el examen.)"
-    },
     "audio": {
       "br": {
         "hash": "9768ed324cf9fee2d83238d3d9550297320bcae0cdba0e28448b4d760d937263",
@@ -2779,6 +2861,12 @@
         "hash": "5ecc79e3fdb1c4974c119de2b3f1ad8ed4fee51931966c8676eed9918442ec52",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Qué significa 'ESTAR + gerúndio' y cómo se compara con el español?",
+      "back": "Expresa acción en progreso. Equivale al presente progresivo español (estar + gerundio).",
+      "example": "Ela está estudiando para a prova. (Ella está estudiando para el examen.)"
     }
   },
   {
@@ -2791,14 +2879,6 @@
     ],
     "tags": [],
     "contentHash": "9554a90b7d77c0a274b2de924dac23168c0612c7636d20a5d9ec9f3605ad2f3d",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "A vida útil deste equipamento é de cinco anos.",
-      "target": "La vida útil de este equipo es de cinco años.",
-      "acceptedAlternatives": [
-        "La vida útil de este aparato es de cinco años."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "041531cb4ff4d9cd618bbeecc322bb3a0adee7111c92735c96c50066130f972d",
@@ -2808,6 +2888,16 @@
         "hash": "acbe27cbecff8b3ddfb1489dd42761c670755ee677def135fd6f9ff7fa6406d5",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "A vida útil deste equipamento é de cinco anos.",
+      "target": "La vida útil de este equipo es de cinco años.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "La vida útil de este aparato es de cinco años."
+      ]
     }
   },
   {
@@ -2823,12 +2913,6 @@
     ],
     "contentHash": "96a445f6a3fb62da872a9c7aa4003155d0a464d010fd2e2bb6affbb5c2122e96",
     "esContrast": "En portugués se prefiere el infinitivo pessoal con 'É melhor' en lugar del subjuntivo español.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Es mejor que salgamos ahora.",
-      "target": "É melhor sairmos agora.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "2f94e34c6723530c2f3c3f8827225fff3d9a43c5f1d3a97ec506dae8bd40d6c6",
@@ -2838,6 +2922,14 @@
         "hash": "89f891ec4e212ab43ef48afff1535486ffdc59822d9b2a7e16f89bf591517b2b",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Es mejor que salgamos ahora.",
+      "target": "É melhor sairmos agora.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": []
     }
   },
   {
@@ -2852,14 +2944,6 @@
       "irregular"
     ],
     "contentHash": "970cf7a98bb93182dce4afe05ae7653d27ce82b011c95462d0f8b6a5106d66bf",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "He hecho la tarea con mucho placer.",
-      "target": "Tenho feito a lição com muito prazer.",
-      "acceptedAlternatives": [
-        "Fiz a lição com muito prazer."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "699393d21e332b45e09206afd86a339cff09ec20f4a7a07dac5c33749c4975b8",
@@ -2869,6 +2953,16 @@
         "hash": "c96729ff65b73efaa0c4b8eef2983b851167509b8a0f9598a315c153062f7ef2",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "He hecho la tarea con mucho placer.",
+      "target": "Tenho feito a lição com muito prazer.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Fiz a lição com muito prazer."
+      ]
     }
   },
   {
@@ -2885,12 +2979,6 @@
     ],
     "contentHash": "99790b7d0018e5a35e090ec6d0f86dd09c16d37eed22fe6e6fc82275b87f81e2",
     "esContrast": "En español el infinitivo no se flexiona: 'hablar nosotros' no existe.",
-    "type": "flashcard",
-    "data": {
-      "front": "Conjuga o infinitivo pessoal de 'falar' na 1ª pessoa do plural",
-      "back": "falar nós",
-      "example": "Falar nós português ajuda muito."
-    },
     "audio": {
       "br": {
         "hash": "ca2a5a26baaa2374d2ce7d227049c3b8258c7cee83b98cfedc226a5fa847ae1e",
@@ -2900,6 +2988,12 @@
         "hash": "4f0fad6be6f05c2111d9397bf363228317363ed313c1ade943ec263104a79ae8",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Conjuga o infinitivo pessoal de 'falar' na 1ª pessoa do plural",
+      "back": "falar nós",
+      "example": "Falar nós português ajuda muito."
     }
   },
   {
@@ -2915,12 +3009,6 @@
       "formal"
     ],
     "contentHash": "9ef9dcbf9d59dcd40ce9da84eec52487ae1a370b4808a42c8788c8f25b50adc2",
-    "type": "flashcard",
-    "data": {
-      "front": "En constructions como 'Fazendo uma pesquisa, encontrei...', ¿qué función tiene el gerúndio?",
-      "back": "Función adverbial: expresa una acción simultánea o condicional (equivalente a 'al hacer', 'mientras hacía')",
-      "example": "Fazendo uma pesquisa, descobri a resposta. (Al hacer una búsqueda, descubrí la respuesta.)"
-    },
     "audio": {
       "br": {
         "hash": "2fe507e8078725563b793671efafdb51238532b4ae49b671d5f1a43830e2f648",
@@ -2930,6 +3018,12 @@
         "hash": "1e03a68edfa8ce3dbff9dccd2c4fb8f4c1ff8e9f628517e46ba556e56f02dd93",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "En constructions como 'Fazendo uma pesquisa, encontrei...', ¿qué función tiene el gerúndio?",
+      "back": "Función adverbial: expresa una acción simultánea o condicional (equivalente a 'al hacer', 'mientras hacía')",
+      "example": "Fazendo uma pesquisa, descobri a resposta. (Al hacer una búsqueda, descubrí la respuesta.)"
     }
   },
   {
@@ -2946,18 +3040,6 @@
     ],
     "contentHash": "a21205afb6d6dfa6a06bf6c5bbe47dd4c3070cb790f00c6b354dc1f9f8642d39",
     "esContrast": "'Estar + gerúndio' marca la acción en progreso en un momento concreto del pasado.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Nos encontramos esperando el autobús cuando empezó a llover.",
-      "target": "Estávamos esperando o ônibus quando começou a chover.",
-      "acceptedAlternatives": [
-        "Estávamos a esperar o ônibus quando começou a chover."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Estávamos a esperar o ônibus quando começou a chover.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "0eca39ee57771d7c17281bb2d841b89c7220790bfecec80c4e91f9753a70c049",
@@ -2966,6 +3048,22 @@
       "pt": {
         "hash": "34970ad0abeaf27bc0591f61e0ba3bc3cf1ef488a14374c7ee7cd89df6c6a1e6",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Nos encontramos esperando el autobús cuando empezó a llover.",
+      "target": "Estávamos esperando o ônibus quando começou a chover.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Estávamos a esperar o ônibus quando começou a chover."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Estávamos a esperar o ônibus quando começou a chover.",
+        "acceptedAlternatives": []
       }
     }
   },
@@ -2983,14 +3081,6 @@
     ],
     "contentHash": "a46a90772933b93b56ffc72c33a7279efe3e8b8a74bf482e0eec68ea46ba2abf",
     "esContrast": "El infinitivo pessoal permite omitir 'que' y usar la forma flexionada directamente con el sujeto.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Es necesario que el profesor corrija los exámenes.",
-      "target": "É necessário o professor corrigir os exames.",
-      "acceptedAlternatives": [
-        "É necessário que o professor corrija os exames."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "dca0efb24697f37897eda5adaffc20586632a594f6bd96996a6656b87408dad1",
@@ -3000,6 +3090,16 @@
         "hash": "736bebf8cc352130e4163e49b2aae5ec8bc94b294cbf71004248cbdc52f4bba3",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Es necesario que el profesor corrija los exámenes.",
+      "target": "É necessário o professor corrigir os exames.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "É necessário que o professor corrija os exames."
+      ]
     }
   },
   {
@@ -3041,12 +3141,6 @@
       "vocabulario"
     ],
     "contentHash": "a8bb8161a785632386bbd6fe766fa6235db0bde0a176b96a6f3c5381a158143f",
-    "type": "flashcard",
-    "data": {
-      "front": "Traduce: 'Siempre que sea posible, sigo adelante.'",
-      "back": "Sempre que possível, sigo em frente.",
-      "example": "Sempre que possível, sigo em frente com meus estudos."
-    },
     "audio": {
       "br": {
         "hash": "5f290738d09ba97b83a7cd88d04ba8b12225deeb0f69a7196642465482584278",
@@ -3056,6 +3150,12 @@
         "hash": "503cf9ec4ab269195fd66a23932eb6887d97bc0fa2515dc3b50eb8ae59038f6b",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Traduce: 'Siempre que sea posible, sigo adelante.'",
+      "back": "Sempre que possível, sigo em frente.",
+      "example": "Sempre que possível, sigo em frente com meus estudos."
     }
   },
   {
@@ -3071,12 +3171,6 @@
     ],
     "contentHash": "a9c0aef46e65395ff409c754ee147f6a04f6613609c8594dccc7c56ff94bdad3",
     "esContrast": "En español: dicho. En PT-BR: dito (sin la 'ch').",
-    "type": "flashcard",
-    "data": {
-      "front": "Participio irregular de DIZER",
-      "back": "dizer → dito",
-      "example": "O que foi dito na reunião?"
-    },
     "audio": {
       "br": {
         "hash": "924f7819e614db409d5916d7557cba4e4d81472482aeca59a701fa74706b1751",
@@ -3086,6 +3180,12 @@
         "hash": "028f43f6f56b1180fadbe315dcaac192dee60a43d2e80d7b404b9580dc515d7f",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Participio irregular de DIZER",
+      "back": "dizer → dito",
+      "example": "O que foi dito na reunião?"
     }
   },
   {
@@ -3101,12 +3201,6 @@
     ],
     "contentHash": "aa3f127f0f6917c98fd3e4589893a57ebe9533d043c2362f05bf6a324f70c5a4",
     "esContrast": "¡Cuidado! En español: hecho. En PT-BR: feito (se pronuncia 'fei-to').",
-    "type": "flashcard",
-    "data": {
-      "front": "Participio irregular de FAZER",
-      "back": "fazer → feito (NO hecho, como en español)",
-      "example": "Tenho feito muitos exercícios de português."
-    },
     "audio": {
       "br": {
         "hash": "1a933ea1ccf0bf8f5239e2045022a11d2b06ed0d42ccfbd6b25d9ba92534317d",
@@ -3116,6 +3210,12 @@
         "hash": "85cc586ff107e78c2df2e69777937fe832247d4ff8895bca5381c8e8a705e3b0",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Participio irregular de FAZER",
+      "back": "fazer → feito (NO hecho, como en español)",
+      "example": "Tenho feito muitos exercícios de português."
     }
   },
   {
@@ -3131,12 +3231,6 @@
     ],
     "contentHash": "abae281d11633ee3f42b8fe612a58418a04d26c78f19362c546de2bc6c0881d7",
     "esContrast": "«Ganho» es irregular en portugués (ganhar → ganho), mientras que en español 'ganado' sigue la regla regular.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "A empresa tem ganho muito dinheiro este ano.",
-      "target": "La empresa ha ganado mucho dinero este año.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "da83c3cfa29817c35686e047a6a38d996f37243943aa60f4b113c62718e789d9",
@@ -3146,6 +3240,14 @@
         "hash": "e37b49e3a6e0d36f6ffa9950bb96eb11ab0809c3328eaaecebc76ffbc4e1d206",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "A empresa tem ganho muito dinheiro este ano.",
+      "target": "La empresa ha ganado mucho dinero este año.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": []
     }
   },
   {
@@ -3160,12 +3262,6 @@
       "regular"
     ],
     "contentHash": "ac49221a7a2358ba24514b2730b6d6aa90d283559cd608bb5cf4ea67d83bf82a",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo se forma el gerúndio de los verbos terminados en -AR?",
-      "back": "Reemplazando -AR por -ANDO",
-      "example": "falar → falando (hablar → hablando)"
-    },
     "audio": {
       "br": {
         "hash": "c5d269bc704a46e5ae73c154cc30946cce8582bc7c617a68320f3983240dcc5e",
@@ -3175,6 +3271,12 @@
         "hash": "35d84f7e7f23dd626bf5549d3200742a3461da3ea26cfc151c80c9d10c2be8f9",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo se forma el gerúndio de los verbos terminados en -AR?",
+      "back": "Reemplazando -AR por -ANDO",
+      "example": "falar → falando (hablar → hablando)"
     }
   },
   {
@@ -3230,15 +3332,17 @@
       ],
       "answer": "chegamos / chegado"
     },
-    "ptOverrides": {
-      "sentence": "Quando nós ___ a Portugal, já tínhamos ___ muitos amigos.",
-      "options": [
-        "chegámos / chegado",
-        "chegamos / chega(o)",
-        "chegamos / chegado",
-        "chegámos / chega(o)"
-      ],
-      "answer": "chegámos / chegado"
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Quando nós ___ a Portugal, já tínhamos ___ muitos amigos.",
+        "options": [
+          "chegámos / chegado",
+          "chegamos / chega(o)",
+          "chegamos / chegado",
+          "chegámos / chega(o)"
+        ],
+        "answer": "chegámos / chegado"
+      }
     }
   },
   {
@@ -3282,12 +3386,6 @@
     ],
     "contentHash": "b6ee98bf36b4a0e77021c11d3830ec070cfd7fca2f27e6ac461ca951ccdef8e8",
     "esContrast": "En PT-PT 'arrumar' = recoger la casa. ¡En PT-BR significa arreglarse!",
-    "type": "flashcard",
-    "data": {
-      "front": "Arrumar en PT-BR (significados)",
-      "back": "1. Arreglar / organizar; 2. (mujeres) ponerse nerviosa/traviesa",
-      "example": "Ela fica toda arrumada quando o namorado chega."
-    },
     "audio": {
       "br": {
         "hash": "5117ece6f5f5a4593c9c9160765fb5872fc1bb7cf6684b46e701dde26d55fd28",
@@ -3297,6 +3395,12 @@
         "hash": "36b288d7aecff2cb6c068aa3e0bc54d212de91dfb4b58752e213b96cc44ad49a",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Arrumar en PT-BR (significados)",
+      "back": "1. Arreglar / organizar; 2. (mujeres) ponerse nerviosa/traviesa",
+      "example": "Ela fica toda arrumada quando o namorado chega."
     }
   },
   {
@@ -3311,12 +3415,6 @@
       "construcción"
     ],
     "contentHash": "b77d490b436db7d2634d88f8eee7d841fa262d88379108c9853513687c321e13",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Qué verbo se combina con gerúndio para expresar aproximación o venida gradual?",
-      "back": "VIR + gerúndio",
-      "example": "O dia foi chegando e eu fui me preocupando. (El día fue llegando y yo me fui preocupando.)"
-    },
     "audio": {
       "br": {
         "hash": "c4a1bfb8b02425f9173cb0498e4bb5911c44b5f40247c8e6007edd894fbbfb26",
@@ -3326,6 +3424,12 @@
         "hash": "9e909f7a2a861c52d5e8ab564d5db5ba85485be3815e3824506d6716ed129580",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Qué verbo se combina con gerúndio para expresar aproximación o venida gradual?",
+      "back": "VIR + gerúndio",
+      "example": "O dia foi chegando e eu fui me preocupando. (El día fue llegando y yo me fui preocupando.)"
     }
   },
   {
@@ -3340,12 +3444,6 @@
       "vocabulario"
     ],
     "contentHash": "b9b385f86c7b430765bd2cbb322bfadc35e75e857b0cda21db8b6a967278c082",
-    "type": "flashcard",
-    "data": {
-      "front": "Traduce: 'Ella se despertó cantando.'",
-      "back": "Ela acordou cantando.",
-      "example": "Ela acordou cantando uma música antiga."
-    },
     "audio": {
       "br": {
         "hash": "23b3ca6e6431c31d2b031c7491c7335d67a85b8fb3054ba8ceba3b6b27b95a5b",
@@ -3355,6 +3453,12 @@
         "hash": "1461734780da4de928434fae0ce808877d4a65a25251540c4551dde4ba07a48f",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Traduce: 'Ella se despertó cantando.'",
+      "back": "Ela acordou cantando.",
+      "example": "Ela acordou cantando uma música antiga."
     }
   },
   {
@@ -3392,14 +3496,6 @@
     "tags": [],
     "contentHash": "bffcf7658d232efc5adaa30176dfa328d07e2a91871959b644e1d96777ab5699",
     "esContrast": "«Carregado» en portugués (café) = 'fuerte/con mucho cuerpo'; en español 'cargado' tiene otros matices.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "O café está carregado, prefiro mais suave.",
-      "target": "El café está cargado, prefiero más suave.",
-      "acceptedAlternatives": [
-        "El café está fuerte, prefiero más suave."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "c06e263fb8277076bd281e38ee1cc65599131d9a8af9cf66cd9271109723423d",
@@ -3409,6 +3505,16 @@
         "hash": "aa7cbf3ed2e72b843997e03de6af9dfb3741fdbca30680d67ee51d18f077f334",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "O café está carregado, prefiro mais suave.",
+      "target": "El café está cargado, prefiero más suave.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "El café está fuerte, prefiero más suave."
+      ]
     }
   },
   {
@@ -3422,14 +3528,6 @@
     "tags": [],
     "contentHash": "c1ad509c68ac963b4951dea1b2e5c91fe648c8df0af2cdfa452c9707d1e38ee1",
     "esContrast": "«Vale a pena» se traducen estas tres palabras, no se dice 'vale a pena' en español.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Vale a pena ler este livro pelo menos uma vez.",
-      "target": "Vale la pena leer este libro al menos una vez.",
-      "acceptedAlternatives": [
-        "Merece la pena leer este libro al menos una vez."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "05c39d4c514b128563a023dbb278b7f2ec8a68f359d50bb79185d217eed93d7e",
@@ -3439,6 +3537,16 @@
         "hash": "14b32cd21d151106c2184a4a95dfcb1629e5c3d3ebf82cc1436f257ec2c59794",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Vale a pena ler este livro pelo menos uma vez.",
+      "target": "Vale la pena leer este libro al menos una vez.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Merece la pena leer este libro al menos una vez."
+      ]
     }
   },
   {
@@ -3482,6 +3590,16 @@
     ],
     "contentHash": "c5ffec655bb030573ec37695f6faee32626561525a557eef84887aaaa098778e",
     "esContrast": "'Carregado de' = 'lleno de/cargado de'. Oposición 'carregado' (adj) vs 'carregado' (participio de 'carregar').",
+    "audio": {
+      "br": {
+        "hash": "6046fc5474a62aa734942eb51e162917d1f4f4cbce59afe8117023a37538ed77",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "b2209ae7af214e04fae110518f35f8ef353c2048ac5946e3981037cdaeddd3ef",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Tenho prazer em dizer que o relatório está carregado de erros importantes.",
@@ -3493,16 +3611,6 @@
         "Contenido simple"
       ],
       "answer": "Erros importantes"
-    },
-    "audio": {
-      "br": {
-        "hash": "6046fc5474a62aa734942eb51e162917d1f4f4cbce59afe8117023a37538ed77",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "b2209ae7af214e04fae110518f35f8ef353c2048ac5946e3981037cdaeddd3ef",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -3519,15 +3627,6 @@
     ],
     "contentHash": "c6c330df9c98d42e4d720dc5bfbf0eaa99e1d61e42d21b9efbdf51231b0778b8",
     "esContrast": "'Arrumar' en PT-BR significa arreglar/ordenar; en PT-PT puede significar también 'guardar' o 'preparar'.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Ya he arreglado la casa para la visita.",
-      "target": "Tenho arrumado a casa para a visita.",
-      "acceptedAlternatives": [
-        "Arrumiei a casa para a visita.",
-        "Já arrumei a casa para a visita."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "a180506eeb6db6ffa5994bf60e98d80d6cdc5adaab8b3d57415441dcd4df0346",
@@ -3537,6 +3636,17 @@
         "hash": "ce6260e3edc5e5a30f1a557a819287868f0402075724bade323eebd077418c21",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Ya he arreglado la casa para la visita.",
+      "target": "Tenho arrumado a casa para a visita.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Arrumiei a casa para a visita.",
+        "Já arrumei a casa para a visita."
+      ]
     }
   },
   {
@@ -3560,8 +3670,10 @@
         }
       ]
     },
-    "ptOverrides": {
-      "sentence": "Vou tentando encontrar uma solução ___ que possível."
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Vou tentando encontrar uma solução ___ que possível."
+      }
     }
   },
   {
@@ -3641,6 +3753,16 @@
     ],
     "contentHash": "ccbc27b9ca392a122156d70d69d5b32005b7e3a4a74abf0599f7bc3b77ce7237",
     "esContrast": "El participio irregular 'gasto' funciona como adjetivo en portugués.",
+    "audio": {
+      "br": {
+        "hash": "4070ad7e92d0f96dfefa741713c6577c2426270f6dce64e72e12e57e4becfd32",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "cb23c5e38aa4c765637afa46c170697ba982878e0c093a37715d7512f6cafaee",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "A vida útil deste aparelho já terminou. Ele está todo gasto.",
@@ -3652,16 +3774,6 @@
         "Está cargado"
       ],
       "answer": "Ya terminó su vida útil"
-    },
-    "audio": {
-      "br": {
-        "hash": "4070ad7e92d0f96dfefa741713c6577c2426270f6dce64e72e12e57e4becfd32",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "cb23c5e38aa4c765637afa46c170697ba982878e0c093a37715d7512f6cafaee",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -3678,12 +3790,6 @@
     ],
     "contentHash": "cef7412dc722ae16da05d8250ec244996676649d0be49a83b37edb53951db1e6",
     "esContrast": "El verbo 'poder' es irregular también en español, pero no se flexiona.",
-    "type": "flashcard",
-    "data": {
-      "front": "Conjuga 'poder' no infinitivo pessoal (todas as pessoas)",
-      "back": "poder eu, poderes tu, poder ele, podermos nós, poderdes vós, poderem eles",
-      "example": "Poder eu fazer isso? Impossível!"
-    },
     "audio": {
       "br": {
         "hash": "32e3e1f9ace85a999c887ece2b6c130c2a6576e1033a32b84efd56388e8da2f6",
@@ -3693,6 +3799,12 @@
         "hash": "339e131e77fde524024e10e9c5f43226dfc54b8b1ee29b5bcb719871cfb6f29f",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Conjuga 'poder' no infinitivo pessoal (todas as pessoas)",
+      "back": "poder eu, poderes tu, poder ele, podermos nós, poderdes vós, poderem eles",
+      "example": "Poder eu fazer isso? Impossível!"
     }
   },
   {
@@ -3709,12 +3821,6 @@
     ],
     "contentHash": "cefde2fc50e75d565d1a6e993e6db7203fdef781809d0dc191d56457b5ca3015",
     "esContrast": "En español usamos infinitivo compuesto o subjuntivo: 'después de haber llegado'.",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cuándo se puede usar el infinitivo pessoal en lugar del infinitivo composto?",
-      "back": "Para expresar una acción futura o posterior respecto al verbo principal.",
-      "example": "Depois de eu chegar, podemos sair. (equivale a 'depois de eu ter chegado')"
-    },
     "audio": {
       "br": {
         "hash": "112c0676b5cda1b25c0d4fbf82a657a826b68580a4ce39f322ab26c56caf99d1",
@@ -3724,6 +3830,12 @@
         "hash": "f7576d564e200b6d9d486d7343cb5f71f49b8634f10266c6fc9a35dd1e56718c",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cuándo se puede usar el infinitivo pessoal en lugar del infinitivo composto?",
+      "back": "Para expresar una acción futura o posterior respecto al verbo principal.",
+      "example": "Depois de eu chegar, podemos sair. (equivale a 'depois de eu ter chegado')"
     }
   },
   {
@@ -3739,6 +3851,16 @@
     ],
     "contentHash": "cf7ee9d070d5be0f9eaa1809b457dd13eede4a7c6e56da6bb75623dce10465e3",
     "esContrast": "En español diríamos 'No sé qué hacer'. En portugués se dice 'Não sei que fazeres', conjugando el infinitivo por el 'tu' implícito.",
+    "audio": {
+      "br": {
+        "hash": "aad51381f1eaa7da26ee9bc9031a4ca96a5c457568f2a7bf0d7dd416fa41ed11",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "5aa4474c9ce0928c5703fb0ff2256afb4b0d00c3b7ebd6cd66cea9a231ffbbe7",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Não sei que fazeres para resolver esse problema.",
@@ -3751,17 +3873,9 @@
       ],
       "answer": "Cuando la frase interrogativa tiene un sujeto diferente."
     },
-    "ptOverrides": {
-      "audioText": "Não sei que fazeres para resolver esse problema."
-    },
-    "audio": {
-      "br": {
-        "hash": "aad51381f1eaa7da26ee9bc9031a4ca96a5c457568f2a7bf0d7dd416fa41ed11",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "5aa4474c9ce0928c5703fb0ff2256afb4b0d00c3b7ebd6cd66cea9a231ffbbe7",
-        "voice": "Portuguese_Wiselady"
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "Não sei que fazeres para resolver esse problema."
       }
     }
   },
@@ -3777,12 +3891,6 @@
       "vocabulario"
     ],
     "contentHash": "d3d578cf3e86cac47a34e28563887a2a4d18424c76a21a67f0add1dc564d5138",
-    "type": "flashcard",
-    "data": {
-      "front": "Traduce: '¿Dónde nos encontraremos?' (usando gerúndio)",
-      "back": "Onde vamos nos encontrar?",
-      "example": "Onde vamos nos encontrar amanhã?"
-    },
     "audio": {
       "br": {
         "hash": "742d0308f67fdd64e8a12246779030f9585db010c5fb5b5cbad62fb865f0cf31",
@@ -3792,6 +3900,12 @@
         "hash": "554ab304fe5b01d3d58fb7ba7b9024b2c7e85ad7c3feb487ce5580b033d90ba6",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Traduce: '¿Dónde nos encontraremos?' (usando gerúndio)",
+      "back": "Onde vamos nos encontrar?",
+      "example": "Onde vamos nos encontrar amanhã?"
     }
   },
   {
@@ -3833,14 +3947,6 @@
     ],
     "contentHash": "d89951cfc56f156bd66e174d53cf5b1a5066cabb43e88e09c549a054f85603d6",
     "esContrast": "'Acabou' y 'terminou' son sinónimos coloquiales; 'findou' es más literario.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "La vida útil de este aparato ha terminado.",
-      "target": "A vida útil deste aparelho terminou.",
-      "acceptedAlternatives": [
-        "A vida útil deste aparelho acabou."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "295d01223e324024d975bd1db8b15fb78eefed036a9a8cb5b2c71ede47e77f4a",
@@ -3850,6 +3956,16 @@
         "hash": "560f370ae519c75bcf81ab2a6650f375ff7b0bae078249d41951a86bf54fbb5f",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "La vida útil de este aparato ha terminado.",
+      "target": "A vida útil deste aparelho terminou.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "A vida útil deste aparelho acabou."
+      ]
     }
   },
   {
@@ -3864,12 +3980,6 @@
       "construcción"
     ],
     "contentHash": "ddb15d6d08b452274517139c8b04c7ac9a1b50a28eedf100103cf7fadf5db441",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Qué verbo indica un proceso gradual cuando se combina con gerúndio?",
-      "back": "IR + gerúndio (indica algo que sucede poco a poco)",
-      "example": "Fui me acostumando com o novo horário. (Fui acostumbrándome al nuevo horario.)"
-    },
     "audio": {
       "br": {
         "hash": "5c9a07e14e6f7b39125525727659f0d72d34ae3c0caf23b98f1d1cdcfea87553",
@@ -3879,6 +3989,12 @@
         "hash": "fd22e0d958ad5f7377e2325e884008014bdfa3955c3b8ece4eb4916e49778ac4",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Qué verbo indica un proceso gradual cuando se combina con gerúndio?",
+      "back": "IR + gerúndio (indica algo que sucede poco a poco)",
+      "example": "Fui me acostumando com o novo horário. (Fui acostumbrándome al nuevo horario.)"
     }
   },
   {
@@ -3894,6 +4010,16 @@
     ],
     "contentHash": "ded551143b0fe62aa5531aac5efd3c4d19c6ef7dbef0dee45ced71b82a75a267",
     "esContrast": "'Para + infinitivo pessoal' indica finalidad o condición. En español equivalente: 'Para conseguir' (sin conjugar).",
+    "audio": {
+      "br": {
+        "hash": "664228a7f68111f2a3001fb87f81cc91caaee8fe7ddbebaff42bf9b6eea42312",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "a3e1ae43c552b75de495c4f3ff983a4175a496270c89e2457e8b4a33836c2ea2",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Para eu conseguir o emprego, preciso estudar muito.",
@@ -3906,17 +4032,9 @@
       ],
       "answer": "Indica una condición o finalidad para la acción del sujeto principal."
     },
-    "ptOverrides": {
-      "audioText": "Para eu conseguir o emprego, preciso estudar muito."
-    },
-    "audio": {
-      "br": {
-        "hash": "664228a7f68111f2a3001fb87f81cc91caaee8fe7ddbebaff42bf9b6eea42312",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "a3e1ae43c552b75de495c4f3ff983a4175a496270c89e2457e8b4a33836c2ea2",
-        "voice": "Portuguese_Wiselady"
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "Para eu conseguir o emprego, preciso estudar muito."
       }
     }
   },
@@ -3981,12 +4099,6 @@
       "avanzado"
     ],
     "contentHash": "e679742678978b2e965fc084597d1557410aea1d93d640f4697a7b298ea691ea",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "É necessário eu ir pessoalmente para resolverem este assunto.",
-      "target": "Es necesario que yo vaya personalmente para que resuelvan este asunto.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "e56485239d3e49f9961248c1f242ddff6bdf936bfd43087e38c68cbce0abaf26",
@@ -3996,6 +4108,14 @@
         "hash": "ec0f94ffc62521b15c5acbf98d45bcb48b56d98eb9e91cffe971eb7d4a617213",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "É necessário eu ir pessoalmente para resolverem este assunto.",
+      "target": "Es necesario que yo vaya personalmente para que resuelvan este asunto.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": []
     }
   },
   {
@@ -4010,12 +4130,6 @@
       "infinitivo pessoal"
     ],
     "contentHash": "e77c4143ca5e3c6406a97708f4dec9e25519864398739d8b655cdb93486df14a",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "No es necesario correr.",
-      "target": "Não é preciso correr.",
-      "acceptedAlternatives": []
-    },
     "audio": {
       "br": {
         "hash": "cb482901408eaee415ae9fcb6a4ea876b4b5b14a159034b1d5147f07afb4156b",
@@ -4025,6 +4139,14 @@
         "hash": "f56f6aa0ee50603edb3a1684c94633cf8876686548bc262f00973e70f8649459",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "No es necesario correr.",
+      "target": "Não é preciso correr.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": []
     }
   },
   {
@@ -4039,12 +4161,6 @@
       "regular"
     ],
     "contentHash": "e791790f9d09a6f4b7cb8b1c06ab4e318cbd5ee075076bdd9224688c2847af3a",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Cómo se forma el gerúndio de los verbos terminados en -ER e -IR?",
-      "back": "Reemplazando -ER por -ENDO y -IR por -INDO",
-      "example": "comer → comendo / dormir → dormindo"
-    },
     "audio": {
       "br": {
         "hash": "e8a705ddebeed9e76950dad8c8440fb378b9d2e7e1cfaa50bbba1dc4798f961b",
@@ -4054,6 +4170,12 @@
         "hash": "822ac85d699dba65d5fa4f3154484fe7bab580529fe73bc411036d56c47bd7c0",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Cómo se forma el gerúndio de los verbos terminados en -ER e -IR?",
+      "back": "Reemplazando -ER por -ENDO y -IR por -INDO",
+      "example": "comer → comendo / dormir → dormindo"
     }
   },
   {
@@ -4069,14 +4191,6 @@
     ],
     "contentHash": "e86c3aa3e65bf34a2dc4fe2f2ccadf8d79e83db5f72671f9003e097280937015",
     "esContrast": "«Nado» es irregular (nascer → nado); en español 'nacido' es regular.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Ela tem nascido em Lisboa, mas cresceu no Brasil.",
-      "target": "Ella ha nacido en Lisboa, pero creció en Brasil.",
-      "acceptedAlternatives": [
-        "Ella nació en Lisboa, pero creció en Brasil."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "ffd172a59644c42561498168a2aead1cc783e70fd3c075e345ba8d22da1a85d7",
@@ -4086,6 +4200,16 @@
         "hash": "4aa7bd2cd9516730bd8b6a1b8d2f4fd968e16ef602179f9d0f2f020826c896ba",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Ela tem nascido em Lisboa, mas cresceu no Brasil.",
+      "target": "Ella ha nacido en Lisboa, pero creció en Brasil.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Ella nació en Lisboa, pero creció en Brasil."
+      ]
     }
   },
   {
@@ -4101,20 +4225,6 @@
     ],
     "contentHash": "e999ac35ed968f49635410e72c3a5420bae7adcc9726ffbbb6ae961b481715e8",
     "esContrast": "El infinitivo pessoal flexiona en PT-PT: 'podes' (tú puedes), 'fazê-lo' (hacerlo, con pronombre enclítico).",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Sé que puedes hacerlo mejor.",
-      "target": "Sei que podes fazê-lo melhor.",
-      "acceptedAlternatives": [
-        "Sei que podes fazer melhor."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Sei que podes fazê-lo melhor.",
-      "acceptedAlternatives": [
-        "Sei que podes fazer melhor."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "ae873607961f0591240642f314ee1c8a886100b58e5e73c26d45b670cc21703a",
@@ -4123,6 +4233,24 @@
       "pt": {
         "hash": "45616e5303ddc36890833177c4e1ff7ee6485c85461592244a7549a9c112bb32",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Sé que puedes hacerlo mejor.",
+      "target": "Sei que podes fazê-lo melhor.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Sei que podes fazer melhor."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Sei que podes fazê-lo melhor.",
+        "acceptedAlternatives": [
+          "Sei que podes fazer melhor."
+        ]
       }
     }
   },
@@ -4140,14 +4268,6 @@
     ],
     "contentHash": "ea1a5cc9cf46cdf5b005f96af683da59d46d5c19c72ef14d9e6802948dbdd6b3",
     "esContrast": "«Arrumado» en PT-BR significa 'ordenado/arreglado', no 'arreglado' como en español (PT-PT: 'arrumado' = arreglado).",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "O quarto está bem arrumado.",
-      "target": "La habitación está bien arreglada.",
-      "acceptedAlternatives": [
-        "La habitación está bien ordenada."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "a8fd1443aad983f84fb25b83753f4b5cfde130f71bba4cbf83fbb7aac2cce656",
@@ -4157,6 +4277,16 @@
         "hash": "ea0b6485089f557c3330cc05aaa170706dd40bbbe2bef764e38c61c4605397c3",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "O quarto está bem arrumado.",
+      "target": "La habitación está bien arreglada.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "La habitación está bien ordenada."
+      ]
     }
   },
   {
@@ -4173,6 +4303,16 @@
     ],
     "contentHash": "eb2651dee3c5adafe86b5b677c0dbe5b780733f9228f939f703d13579d744878",
     "esContrast": "En español también se dice 'estoy hablando', pero en portugués se dice 'estou falando'.",
+    "audio": {
+      "br": {
+        "hash": "7a373d6c66b266e5dbd331c4a8ee4ff9be4939c2f5b3d8e44384e2f10113b4b1",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "508d13dcec487ab97249e6599f32db22252b29f6616731cb729c57faeb131092",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Estou falando ao telefone quando ele chega.",
@@ -4184,16 +4324,6 @@
         "Andar + gerúndio"
       ],
       "answer": "Estar + gerúndio"
-    },
-    "audio": {
-      "br": {
-        "hash": "7a373d6c66b266e5dbd331c4a8ee4ff9be4939c2f5b3d8e44384e2f10113b4b1",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "508d13dcec487ab97249e6599f32db22252b29f6616731cb729c57faeb131092",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -4287,14 +4417,6 @@
     ],
     "contentHash": "f44809037f3fe1f54f140d24f093d3ec85c53a09d6ff912398265b7ff5a317e5",
     "esContrast": "El portugués 'ao + infinitivo pessoal' equivale a 'al + infinitivo' español, pero flexionando.",
-    "type": "translation_pt_es",
-    "data": {
-      "source": "Ao chegares a casa, telefona-me imediatamente.",
-      "target": "Al llegar tú a casa, llámame inmediatamente.",
-      "acceptedAlternatives": [
-        "Cuando llegues a casa, llámame inmediatamente."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "e094eb1aba777a26d411fefc4b15324a838bb9ac135af28b9522e1ac974edb0e",
@@ -4304,6 +4426,16 @@
         "hash": "164af32bbc4398bb3e52da97edaf0582203ba8ef88a544a469bc189a63e9f64c",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Ao chegares a casa, telefona-me imediatamente.",
+      "target": "Al llegar tú a casa, llámame inmediatamente.",
+      "sourceLang": "pt-br",
+      "targetLang": "es",
+      "acceptedAlternatives": [
+        "Cuando llegues a casa, llámame inmediatamente."
+      ]
     }
   },
   {
@@ -4319,14 +4451,6 @@
     ],
     "contentHash": "f53e27b72003a9f01547b88f91389444a63e35125ddcb41f34bd46d6301dc73e",
     "esContrast": "Cuidado: 'trabalho' en PT es trabajo; no confundas con 'trabajo' (empleo) = 'emprego'.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "¿Vale la pena hacer ese trabajo?",
-      "target": "Vale a pena fazer esse trabalho?",
-      "acceptedAlternatives": [
-        "Vale a pena fazer esse serviço?"
-      ]
-    },
     "audio": {
       "br": {
         "hash": "a1ff97cfaf34c6b2ea19ee260b000c02149814d3375da8f0e927f29c75b8a76e",
@@ -4336,6 +4460,16 @@
         "hash": "fee0e22fcf3194b6e7e35bc8c3bad2cd7530a60c91d8ac948424a004cffe8b2b",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "translation",
+    "data": {
+      "source": "¿Vale la pena hacer ese trabajo?",
+      "target": "Vale a pena fazer esse trabalho?",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "Vale a pena fazer esse serviço?"
+      ]
     }
   },
   {
@@ -4353,6 +4487,16 @@
     ],
     "contentHash": "f7357cb21eeefe1805dd8f8214697c469b2b6f38a11af5cb82be1d9fa6773473",
     "esContrast": "'Sempre que possível' es una expresión fija que equivale a 'siempre que sea posible' en español.",
+    "audio": {
+      "br": {
+        "hash": "8c6396d4d5c3090b116f18b6be93620abb864f625cb2dee2765c8e2989014777",
+        "voice": "Portuguese_SentimentalLady"
+      },
+      "pt": {
+        "hash": "05e9c875e08b70cb5632ce580641a24180ff8bd71b6fffa91431b72ded179a2e",
+        "voice": "Portuguese_Wiselady"
+      }
+    },
     "type": "listening",
     "data": {
       "audioText": "Sempre que possível, acordo cedo e sigo em frente sem encontrar desculpas.",
@@ -4364,16 +4508,6 @@
         "Continuar + gerúndio"
       ],
       "answer": "Estar + gerúndio"
-    },
-    "audio": {
-      "br": {
-        "hash": "8c6396d4d5c3090b116f18b6be93620abb864f625cb2dee2765c8e2989014777",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "05e9c875e08b70cb5632ce580641a24180ff8bd71b6fffa91431b72ded179a2e",
-        "voice": "Portuguese_Wiselady"
-      }
     }
   },
   {
@@ -4388,12 +4522,6 @@
       "construcción"
     ],
     "contentHash": "f9b547749f4055741fd95ce6ec7efdff137f85aad2db82123de65b8398c76ab8",
-    "type": "flashcard",
-    "data": {
-      "front": "¿Qué verbo se usa con gerúndio para expresar una acción continua o persistente?",
-      "back": "ANDAR + gerúndio",
-      "example": "Ele anda dizendo que vai sair da empresa. (Él anda diciendo que va a salir de la empresa.)"
-    },
     "audio": {
       "br": {
         "hash": "8c5ee49324c842208f22462b9b6957fe01ad325067ec4182d82f66638e54285b",
@@ -4403,6 +4531,12 @@
         "hash": "8f4f3bd4a4ab613471ddbacc32e3017fcb6bb58a9d0251bbf6637fbc30fec5cb",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "¿Qué verbo se usa con gerúndio para expresar una acción continua o persistente?",
+      "back": "ANDAR + gerúndio",
+      "example": "Ele anda dizendo que vai sair da empresa. (Él anda diciendo que va a salir de la empresa.)"
     }
   },
   {
@@ -4419,20 +4553,6 @@
     ],
     "contentHash": "fb2ebf430deb404d727af51d3b5af906600ddcc66958acb5636ec85b275adc5b",
     "esContrast": "En portugués se puede usar el infinitivo pessoal en lugar del subjuntivo: Preciso que vengas = Preciso que venhas.",
-    "type": "translation_es_pt",
-    "data": {
-      "source": "Necesito que vengas mañana.",
-      "target": "Preciso que venhas amanhã.",
-      "acceptedAlternatives": [
-        "É preciso que venhas amanhã."
-      ]
-    },
-    "ptOverrides": {
-      "target": "Preciso que venha(s) amanhã.",
-      "acceptedAlternatives": [
-        "É preciso que venha(s) amanhã."
-      ]
-    },
     "audio": {
       "br": {
         "hash": "e4f50cc042abcf68a4e2490413d339b5be876b6413f84552c4f6a770a96ade32",
@@ -4441,6 +4561,24 @@
       "pt": {
         "hash": "a08f118545751b6abb9d577623c6aab732fe73ca79fc4f4b434e756bd7eb9c40",
         "voice": "Portuguese_Wiselady"
+      }
+    },
+    "type": "translation",
+    "data": {
+      "source": "Necesito que vengas mañana.",
+      "target": "Preciso que venhas amanhã.",
+      "sourceLang": "es",
+      "targetLang": "pt-br",
+      "acceptedAlternatives": [
+        "É preciso que venhas amanhã."
+      ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Preciso que venha(s) amanhã.",
+        "acceptedAlternatives": [
+          "É preciso que venha(s) amanhã."
+        ]
       }
     }
   },
@@ -4509,12 +4647,6 @@
     ],
     "contentHash": "fec7825b97c79163f0e1be8ff92c7d4e1b72510a61a7bbaea66c8c78aeb0c037",
     "esContrast": "Similar al español: hablar → hablado. -AR siempre da -ADO.",
-    "type": "flashcard",
-    "data": {
-      "front": "Participio regular de verbos -AR (ejemplo: falar)",
-      "back": "falar → falado (con -ado)",
-      "example": "Ela tem falado muito ultimamente."
-    },
     "audio": {
       "br": {
         "hash": "d50fefca331a5e3687cbc8c5d2ce87d6d3c9705c86d92fe5476b1cabccca4896",
@@ -4524,6 +4656,12 @@
         "hash": "18129f1e8ef0f6ec9d45b1949d1c8f9c9ab53da8415fc58a374012533864ea0d",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Participio regular de verbos -AR (ejemplo: falar)",
+      "back": "falar → falado (con -ado)",
+      "example": "Ela tem falado muito ultimamente."
     }
   },
   {
@@ -4540,12 +4678,6 @@
     ],
     "contentHash": "ff5e736453b9f8aef495a8d7b4296739a16a1c232d5b78d041d7b4cfd7a45743",
     "esContrast": "En español 'hablar él/ella' no existe como forma independiente.",
-    "type": "flashcard",
-    "data": {
-      "front": "Conjuga o infinitivo pessoal de 'falar' na 3ª pessoa do singular",
-      "back": "falar ele/ela",
-      "example": "Falar ela assim é surpreendente."
-    },
     "audio": {
       "br": {
         "hash": "ea3cd1b9010c41883f32a4f28e0043af3299b481fab455ad7845c59e3e839020",
@@ -4555,6 +4687,12 @@
         "hash": "ab80ed5b15c3c30d50a902966565de495a92383a789e43bf3b7ed577d02e4244",
         "voice": "Portuguese_Wiselady"
       }
+    },
+    "type": "flashcard",
+    "data": {
+      "front": "Conjuga o infinitivo pessoal de 'falar' na 3ª pessoa do singular",
+      "back": "falar ele/ela",
+      "example": "Falar ela assim é surpreendente."
     }
   }
 ]

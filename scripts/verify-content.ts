@@ -10,6 +10,7 @@ import {
 } from './lib/zod-schemas';
 import { isValidMp3 } from './lib/minimax-tts';
 import { parseLangArgs, noopForLang } from './lib/cli';
+import { findNonLatin, findNonLatinDeep } from './lib/latin-guard';
 
 const VALID_CONCEPT_IDS = new Set(ALL_CONCEPTS.map(c => c.id));
 
@@ -303,6 +304,43 @@ async function main() {
   } else {
     errors.push('diagnostic.json missing (Plan #3 deliverable).');
   }
+
+  // ─── Anti-bleed gate ───────────────────────────────────────────────────
+  // No content field may contain characters from another writing system
+  // (CJK/Cyrillic/…). This is a hard error: the highspeed model leaked these
+  // and they must never ship again.
+  let bleedHits = 0;
+  for (const b of BLOCKS) {
+    const f = path.join(BLOCKS_DIR, `b${b.id}.json`);
+    if (!(await fileExists(f))) continue;
+    try {
+      const arr = JSON.parse(await fs.readFile(f, 'utf8'));
+      const bad = findNonLatinDeep(arr);
+      if (bad.length) { bleedHits++; errors.push(`b${b.id}.json: non-Latin bleed ${[...new Set(bad)].join(' ')}`); }
+    } catch { /* parse errors reported elsewhere */ }
+  }
+  try {
+    const sDir = path.join(DATA_DIR, 'stories');
+    for (const f of (await fs.readdir(sDir)).filter(x => /^b\d+-s\d+-.+\.json$/.test(x))) {
+      const bad = findNonLatinDeep(JSON.parse(await fs.readFile(path.join(sDir, f), 'utf8')));
+      if (bad.length) { bleedHits++; errors.push(`story ${f}: non-Latin bleed ${[...new Set(bad)].join(' ')}`); }
+    }
+  } catch { /* no stories dir */ }
+  try {
+    const bad = findNonLatinDeep(JSON.parse(await fs.readFile(path.join(DATA_DIR, 'vocab-catalog.json'), 'utf8')));
+    if (bad.length) { bleedHits++; errors.push(`vocab-catalog.json: non-Latin bleed ${[...new Set(bad)].join(' ')}`); }
+  } catch { /* no catalog */ }
+  try {
+    const mdxRoot = path.join(DATA_DIR, 'mdx');
+    for (const blockDir of await fs.readdir(mdxRoot)) {
+      const dir = path.join(mdxRoot, blockDir);
+      for (const f of (await fs.readdir(dir)).filter(x => x.endsWith('.mdx'))) {
+        const bad = findNonLatin(await fs.readFile(path.join(dir, f), 'utf8'));
+        if (bad.length) { bleedHits++; errors.push(`mdx ${blockDir}/${f}: non-Latin bleed ${[...new Set(bad)].join(' ')}`); }
+      }
+    }
+  } catch { /* no mdx dir */ }
+  if (bleedHits === 0) console.log('✓ no non-Latin bleed in any content');
 
   finish();
   function finish() {
