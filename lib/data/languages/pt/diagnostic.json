@@ -23,7 +23,7 @@
       "blockId": 1,
       "conceptId": "b1-vogais-nasais",
       "prompt": "Em qual palavra a vogal tônica é nasal?",
-      "options": ["casa", "mão", "pão", "lua"],
+      "options": ["casa", "sol", "pão", "lua"],
       "correctIndex": 2
     },
     {
@@ -46,8 +46,8 @@
       "id": "q06b01",
       "blockId": 1,
       "conceptId": "b1-corresp-ll-lh",
-      "prompt": "Qual é a forma portuguesa da palavra espanhola 'caballo'?",
-      "options": ["cavalo", "cabalho", "cavallo", "cavalho"],
+      "prompt": "Qual é a forma portuguesa da palavra espanhola 'llave'?",
+      "options": ["chave", "lhave", "clave", "llhave"],
       "correctIndex": 0
     },
     {
@@ -62,8 +62,8 @@
       "id": "q08b01",
       "blockId": 1,
       "conceptId": "b1-h-muda",
-      "prompt": "Em qual destas palavras a letra H é pronunciada?",
-      "options": ["hora", "homem", "hoje", "hotel"],
+      "prompt": "Em qual palavra o dígrafo soa /ʃ/?",
+      "options": ["chave", "hora", "casa", "rua"],
       "correctIndex": 0
     },
     {
@@ -79,7 +79,7 @@
       "blockId": 2,
       "conceptId": "b2-numero",
       "prompt": "Qual é o plural de 'pão'?",
-      "options": ["pãos", "pães", "pões", "pães"],
+      "options": ["pãos", "pães", "pões", "pãis"],
       "correctIndex": 1
     },
     {
@@ -149,10 +149,10 @@
     {
       "id": "q19b03",
       "blockId": 3,
-      "conceptId": "b3-ha-tem",
-      "prompt": "Qual frase está correta?",
-      "options": ["Há muitos livros na estante.", "Tem muitos livros na estante.", "Haverem muitos livros na estante.", "Houve muitos livros na estante."],
-      "correctIndex": 0
+      "conceptId": "b3-existenciais",
+      "prompt": "Qual frase está INCORRETA?",
+      "options": ["Há muitos livros na estante.", "Tem muitos livros na estante.", "Haverem muitos livros na estante.", "Houve muitos livros aqui."],
+      "correctIndex": 2
     },
     {
       "id": "q20b03",
