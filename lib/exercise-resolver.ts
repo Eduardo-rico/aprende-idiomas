@@ -47,22 +47,34 @@ export interface ResolvedData {
  * Phase 1 (multi-idioma): `variantOverrides` es un record por VariantKey.
  *
  * Reglas de fallback (mismas que `textsFor` en audio-collector):
- * - Variante canónica (`pt-br` / `pt-pt`): sin override propio → datos
- *   base. NO cae al DEFAULT_VARIANT (eso aplicaría semántica PT-BR a
- *   un usuario que explícitamente pidió PT-PT).
- * - Variante legacy `'pt'`: cae al override de `pt-br` (compat con el
- *   contenido pre-Phase-1, donde `ptOverrides` aplicaba a la "variante PT"
- *   europea y se promovía a `variantOverrides["pt-br"]`).
+ * - Variante canónica `pt-pt`: sin override propio → cae al override
+ *   bajo `"pt-br"` (key legacy que almacenó el texto europeo PT). Si
+ *   tampoco hay ese override, retorna datos base.
+ * - Variante legacy `'pt'`: misma semántica europea; cae al override de
+ *   `"pt-br"` (compat con contenido pre-Phase-1).
+ * - Variante canónica `pt-br`: NO usa la key legacy `"pt-br"` como
+ *   override (ese texto es europeo, mislabeled). Retorna datos base si
+ *   no hay un override propio bajo otra key.
  * - Variante legacy `'br'` o cualquier otra desconocida: sin override.
- *   `ptOverrides` nunca aplicaba a BR; cualquier otra key es desconocida.
+ *
+ * NOTE: La migración legacy (lib/data/variant.ts `ptOverridesToVariantOverrides`)
+ * almacenó los overrides europeos bajo `"pt-br"`. Ese key ahora se trata
+ * como EUROPEAN_LEGACY_KEY. La clave para texto BR real sería un override
+ * distinto, pero el base data (ex.data) ya es BR, así que pt-br no necesita
+ * override a menos que haya contenido nuevo.
  */
-function isLegacyPtAlias(variant: VariantKey): boolean {
-  return variant === "pt";
+// The legacy migration (lib/data/variant.ts) stored European-PT overrides under
+// the "pt-br" key. So the "pt-br"-keyed override is actually European (pt-pt),
+// and BR is the base (ex.data). We must NOT apply it to pt-br/br users.
+const LEGACY_EUROPEAN_KEY = "pt-br";
+function europeanFallback(variant: VariantKey): boolean {
+  return variant === "pt-pt" || variant === "pt";
 }
 
 export function resolveExerciseData(ex: Exercise, variant: VariantKey): ResolvedData {
-  const overrides = ex.variantOverrides?.[variant]
-    ?? (isLegacyPtAlias(variant) ? ex.variantOverrides?.[DEFAULT_VARIANT] : undefined);
+  const direct = variant === LEGACY_EUROPEAN_KEY ? undefined : ex.variantOverrides?.[variant];
+  const overrides = direct
+    ?? (europeanFallback(variant) ? ex.variantOverrides?.[LEGACY_EUROPEAN_KEY] : undefined);
   if (!overrides) return ex.data as ResolvedData;
 
   // Validate the override against the type's strict override schema first so

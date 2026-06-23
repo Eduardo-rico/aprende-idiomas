@@ -52,7 +52,7 @@ export function ptOverridesToVariantOverrides(input: {
     return input.variantOverrides as Record<VariantKey, unknown>;
   }
   if (input.ptOverrides !== undefined && input.ptOverrides !== null) {
-    return { "pt-br": input.ptOverrides };
+    return { "pt-pt": input.ptOverrides };
   }
   return {};
 }

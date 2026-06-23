@@ -23,18 +23,22 @@ describe('collectAudioJobs', () => {
     expect(jobs.every(j => j.text === 'resposta')).toBe(true);
   });
 
-  it('uses variantOverrides["pt-br"].back for pt-br variant', () => {
+  it('legacy "pt-br"-keyed override is European: pt-pt gets it, pt-br gets base', () => {
+    // The legacy migration stored European text under "pt-br". The audio
+    // collector mirrors the resolver: pt-br NEVER uses that key; pt-pt does.
     const jobs = collectAudioJobs([ex({
       data: { front: 'ônibus', back: 'ônibus' },
       variantOverrides: { 'pt-br': { back: 'autocarro' } },
     })]);
     const ptbr = jobs.find(j => j.variant === 'pt-br')!;
-    expect(ptbr.text).toBe('autocarro');
+    expect(ptbr.text).toBe('ônibus'); // pt-br gets base, NOT the European text
     const ptpt = jobs.find(j => j.variant === 'pt-pt')!;
-    expect(ptpt.text).toBe('ônibus'); // no override at pt-pt
+    expect(ptpt.text).toBe('autocarro'); // pt-pt falls back to legacy "pt-br" key
   });
 
-  it('legacy ptOverrides is promoted to variantOverrides["pt-br"] via preprocessor', () => {
+  it('legacy ptOverrides is promoted to variantOverrides["pt-pt"] via preprocessor (E1 fix)', () => {
+    // ptOverrides held European text; now emitted under "pt-pt" (E1 fix).
+    // pt-br gets base; pt-pt gets the European audio.
     const raw = {
       id: 'x', blockId: 1, lessonId: 'l',
       type: 'flashcard' as const, difficulty: 1 as const, concepts: [], tags: [],
@@ -43,8 +47,10 @@ describe('collectAudioJobs', () => {
     };
     const parsed = ExerciseInputSchema.parse(raw);
     const jobs = collectAudioJobs([parsed]);
+    const ptpt = jobs.find(j => j.variant === 'pt-pt')!;
+    expect(ptpt.text).toBe('autocarro');
     const ptbr = jobs.find(j => j.variant === 'pt-br')!;
-    expect(ptbr.text).toBe('autocarro');
+    expect(ptbr.text).toBe('ônibus'); // pt-br gets base
   });
 
   it('emits audioText for listening exercises', () => {

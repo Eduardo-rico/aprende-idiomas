@@ -42,9 +42,11 @@ describe("lib/data/variant", () => {
   });
 
   describe("ptOverridesToVariantOverrides", () => {
-    it("wraps a non-empty ptOverrides under 'pt-br'", () => {
+    it("wraps a non-empty ptOverrides under 'pt-pt' (European)", () => {
+      // ptOverrides contained European PT text; emit under "pt-pt" so the
+      // resolver correctly applies it to pt-pt users (E1 fix).
       const r = ptOverridesToVariantOverrides({ ptOverrides: { back: "autocarro" } });
-      expect(r).toEqual({ "pt-br": { back: "autocarro" } });
+      expect(r).toEqual({ "pt-pt": { back: "autocarro" } });
     });
 
     it("prefers variantOverrides when both are present", () => {
@@ -69,11 +71,12 @@ describe("lib/data/variant", () => {
 
     it("ignores empty variantOverrides object (falls back to ptOverrides)", () => {
       // An empty {} from the LLM is treated as "no overrides", same as null.
+      // ptOverrides is European text → emitted under "pt-pt" (E1 fix).
       const r = ptOverridesToVariantOverrides({
         ptOverrides: { back: "autocarro" },
         variantOverrides: {},
       });
-      expect(r).toEqual({ "pt-br": { back: "autocarro" } });
+      expect(r).toEqual({ "pt-pt": { back: "autocarro" } });
     });
 
     it("returns the input variantOverrides when non-empty and ptOverrides is missing", () => {

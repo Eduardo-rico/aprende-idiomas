@@ -25,19 +25,25 @@ export interface AudioJob {
  * al default es→pt.
  */
 export function textsFor(ex: Exercise, variant: VariantKey): string[] {
-  // Reglas de override (Phase 1 multi-idioma):
-  // - Variant canónica (`pt-br` o `pt-pt`): sin override → datos base;
-  //   con override propio → ese override. NUNCA cae al DEFAULT_VARIANT
-  //   (eso aplicaría semántica PT-BR a un usuario que pidió PT-PT).
-  // - Variant legacy `'pt'`: cae al override de `pt-br` (compat con el
-  //   contenido pre-Phase-1, donde `ptOverrides` aplicaba a la "variante PT").
-  // - Variant legacy `'br'` o cualquier otra desconocida: no aplica override
-  //   (preserva el comportamiento original de la app single-target PT-BR).
+  // Reglas de override (Phase 1 multi-idioma) — MIRRORS lib/exercise-resolver.ts:
+  // - El key legacy `"pt-br"` almacena texto europeo (mislabeled por la migración).
+  //   LEGACY_EUROPEAN_KEY = "pt-br".
+  // - Variante `pt-pt` o `'pt'` (european fallback): sin override propio bajo
+  //   `"pt-pt"` → cae al key legacy `"pt-br"`. Esto es audio europeo correcto.
+  // - Variante `pt-br`: NO usa el key legacy `"pt-br"` (es texto europeo).
+  //   Retorna base data (PT-BR). Solo usaría un override con key distinto.
+  // - Variante legacy `'br'` o cualquier otra desconocida: sin override.
+  const LEGACY_EUROPEAN_KEY = 'pt-br';
+  function europeanFallback(v: VariantKey): boolean {
+    return v === 'pt-pt' || v === 'pt';
+  }
   let overrides: unknown;
-  if (variant === 'pt') {
-    overrides = ex.variantOverrides?.['pt'] ?? ex.variantOverrides?.[DEFAULT_VARIANT];
-  } else if (variant === 'pt-br' || variant === 'pt-pt') {
-    overrides = ex.variantOverrides?.[variant];
+  if (variant === LEGACY_EUROPEAN_KEY) {
+    // pt-br: never apply the legacy "pt-br" key (it's European text).
+    overrides = undefined;
+  } else if (europeanFallback(variant)) {
+    // pt-pt / 'pt': direct override under "pt-pt", else fall back to legacy key.
+    overrides = ex.variantOverrides?.[variant] ?? ex.variantOverrides?.[LEGACY_EUROPEAN_KEY];
   } else {
     // 'br' o desconocido: sin override.
     overrides = undefined;

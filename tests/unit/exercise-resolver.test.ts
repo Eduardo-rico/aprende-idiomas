@@ -36,13 +36,17 @@ describe("resolveExerciseData", () => {
     expect(resolveExerciseData(exBr, "pt").back).toBe("autocarro");
   });
 
-  it("pt-br applies its own override", () => {
-    expect(resolveExerciseData(exBr, "pt-br").back).toBe("autocarro");
+  it("pt-br does NOT apply the legacy 'pt-br'-keyed override (that key holds European text)", () => {
+    // The legacy migration stored European-PT overrides under "pt-br".
+    // pt-br users must receive the base data (BR), not the European text.
+    expect(resolveExerciseData(exBr, "pt-br").back).toBe("ônibus");
   });
 
-  it("pt-pt without override returns base data", () => {
+  it("pt-pt falls back to the legacy 'pt-br' key (European override)", () => {
+    // pt-pt has no explicit "pt-pt" key, so it falls back to the legacy
+    // "pt-br"-keyed entry, which holds European text.
     const noPtPtOverride = { ...exBr, variantOverrides: { "pt-br": { back: "autocarro" } } };
-    expect(resolveExerciseData(noPtPtOverride, "pt-pt").back).toBe("ônibus");
+    expect(resolveExerciseData(noPtPtOverride, "pt-pt").back).toBe("autocarro");
   });
 
   it("pt-pt with its own override applies it", () => {
@@ -62,14 +66,15 @@ describe("resolveExerciseData", () => {
   });
 
   it("re-validates with Zod: invalid variantOverrides type throws", () => {
-    // flashcard with chunk-typed variantOverrides["pt-br"] must fail.
+    // flashcard with chunk-typed variantOverrides["pt-br"] must fail when
+    // pt-pt resolves it via the legacy European-key fallback.
     // The resolver validates the override against the strict per-type
     // override schema (VariantOverrideByTypeSchema).
     const bad = {
       ...exBr,
       variantOverrides: { "pt-br": { chunk: "x", meaning: "y", examples: [{ sentence: "s" }] } },
     };
-    expect(() => resolveExerciseData(bad, "pt-br")).toThrow();
+    expect(() => resolveExerciseData(bad, "pt-pt")).toThrow();
   });
 
   it("tolerates variantOverrides: empty record", () => {
