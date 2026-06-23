@@ -16,6 +16,7 @@
 - Answer normalization (text types): `trim()` + `toLowerCase()` + `.normalize('NFC')`, **accents significant** (matches `FillBlankCard`).
 - New types are **text-only**: `audio` is optional in the generated schema, they are NOT added to `AUDIO_REQUIRED`, and `textsFor` returns `[]` (except `shadowing`).
 - No new content in this plan — Task data is hand-written fixtures in tests only. Mass content is Plan 5b.
+- **Expert-review amendments** (see design doc E-series): conjugation answers are **variant-aware** via the existing `resolveExerciseData(ex, variant)` (a `pt-pt` answer like `falas` lives in `variantOverrides["pt-pt"]`; the card resolves it automatically) — E9. Shadowing uses **feature-targeted self-checks**, not binary pass/fail — E11 (schema + card below carry `selfChecks`). Type re-weighting (cap `multiple_choice`, minimize `matching`) is a **content** decision enforced in Plan 5b, not here — 5a builds all five cards regardless. The English/structural gate extension (E2) ships in the content-fixes plan and must land before 5b.
 - Tailwind-only styling; reuse existing card classes (`p-8 border-2 border-border rounded-2xl`, `bg-primary`, etc.).
 - Commit after every task. Run `npm run typecheck && npm test` before each commit.
 
@@ -119,6 +120,9 @@ export const MultipleChoiceData = z.object({
 });
 export const ShadowingData = z.object({
   text: z.string().min(1), es: z.string().min(1), audioRef: z.string().optional(),
+  // E11: feature-targeted self-eval prompts shown after recording, e.g.
+  // ["¿Nasalizaste 'pão'?", "¿La 'r' inicial sonó como /h/ (BR)?"].
+  selfChecks: z.array(z.string()).optional(),
 });
 ```
 
@@ -602,7 +606,7 @@ import { pickRecorderMime } from "@/lib/exercises/recorder";
 interface Props { ex: Exercise; onSubmit: (answer: string, correct: boolean) => void; }
 export function ShadowingCard({ ex, onSubmit }: Props) {
   const { variant } = useSettings();
-  const d = resolveExerciseData(ex, variant) as { text: string; es: string; audioRef?: string };
+  const d = resolveExerciseData(ex, variant) as { text: string; es: string; audioRef?: string; selfChecks?: string[] };
   const modelUrl = d.audioRef ? `/audio/${d.audioRef}.mp3` : null;
   const [phase, setPhase] = useState<"idle" | "recording" | "recorded">("idle");
   const [recUrl, setRecUrl] = useState<string | null>(null);
@@ -657,7 +661,14 @@ export function ShadowingCard({ ex, onSubmit }: Props) {
       </div>
       {error && <div className="text-center text-sm text-red-600">{error}</div>}
       {phase === "recorded" && (
-        <button onClick={() => onSubmit("", true)} className="w-full px-4 py-2 bg-primary rounded-md font-medium">Listo — calificar</button>
+        <div className="space-y-3">
+          {(d.selfChecks ?? []).length > 0 && (
+            <ul className="text-sm space-y-1">
+              {d.selfChecks!.map((c, i) => <li key={i} className="text-muted-foreground">• {c}</li>)}
+            </ul>
+          )}
+          <button onClick={() => onSubmit("", true)} className="w-full px-4 py-2 bg-primary rounded-md font-medium">Listo — calificar</button>
+        </div>
       )}
       {phase === "idle" && !modelUrl && (
         <button onClick={() => onSubmit("", true)} className="w-full text-sm text-muted-foreground underline">Saltar grabación</button>

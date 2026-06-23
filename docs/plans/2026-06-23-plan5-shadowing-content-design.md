@@ -182,6 +182,108 @@ the shared "options grid → onSubmit(opt, opt===answer)" into a small shared pi
 rather than copy-pasting; keep schemas separate (`ListeningData.audioText` vs
 `multiple_choice` has none).
 
+## Expert review resolutions (linguist + pedagogue, 2026-06-23)
+
+A contrastive linguist and an SLA/pedagogy expert reviewed the whole corpus +
+this design. Resolutions (audio-free unless flagged):
+
+**E1 — PT-PT variant is unreachable (critical, code).** Legacy `ptOverrides`
+(European text) were migrated under `variantOverrides["pt-br"]`
+(`lib/data/variant.ts`), but `resolveExerciseData` only falls back to that key
+for the legacy `"pt"` alias (`isLegacyPtAlias`, `exercise-resolver.ts:59-65`).
+Net: `pt-pt` users get BR base; `pt-br` users get European overrides applied.
+`variantOverrides` is part of the content-id hash, so **renaming keys in the
+JSON would churn ids and orphan Dexie progress** → fix at the **resolver**:
+`pt-pt` → `variantOverrides["pt-pt"] ?? variantOverrides["pt-br"]` (legacy
+European); `pt-br`/`br` → no legacy override. Also fix
+`ptOverridesToVariantOverrides` to emit `"pt-pt"` going forward, and `textsFor`'s
+matching comment. Lives in the **content-fixes plan**, before 5b.
+
+**E2 — Gate misses English/Spanish bleed (critical).** `latin-guard` only blocks
+non-Latin scripts; surviving English (`"Eu the dei"`→lhe, `"Ela gave"`,
+story `"announcing"`, `"sweatshirt"`) and mixed ES/PT sources pass. **Extend the
+gate before 5b** with (a) an English-stopword heuristic over PT/ES fields and
+(b) a structural check (fill_blank: blank count == answer count). Wire into
+verify-content as errors. Content-fixes plan.
+
+**E3 — Broken diagnostic items (content).** `diagnostic.json`: `q03b01` two
+correct (mão+pão nasal), `q10b02` "pães" duplicated, `q08b01` no correct answer
+(h silent in all four), `q19` marks valid BR `"Tem muitos livros"` wrong +
+`conceptId` mismatch (`b3-ha-tem` vs `b3-existenciais`), `q06` mis-tagged
+(ll→v). Fix in content-fixes plan.
+
+**E4 — esContrast / MDX factual errors (content).** `ll→lh` is wrong — ES `ll`
+→ PT **`ch`** (chave, chamar); fix `b1/l3-correspondencias.mdx` + the
+`b1-corresp-ll-lh` concept tag. `"ligación"` is not Spanish → reframe as the
+`ligar` false friend (PT telefonar/encender vs ES flirtear/atar). `"acalentar"`
+misuse → `aquecer = calentar`. `"-ma siempre masculino"` is false (a cama, a
+forma) → qualify to Greek-origin cultismos. Make all `esContrast` Spanish
+(some are PT) and backfill empties on the false-friend/regência items.
+Add missing classic false friends (embaraçada, esquisito, oficina, apenas,
+salada). Content-fixes plan.
+
+**E5 — Malformed exercises (content).** `b4.json` has a `verb_preposition` with
+two blanks but one answer and the infinitive left in the sentence, and a
+`translation` with a mixed ES/PT `source`. Fix/remove. Content-fixes plan.
+
+**E6 — Interleaving is designed but not implemented (pedagogy, code).**
+`buildDueQueue` (review-queue.ts) is recency-blocked and the `/learn` daily-mix
+button routes to a single lesson. Real concept/type interleaving is the biggest
+unused retention lever. Logic-only fix. → **Plan 5d (SRS/engagement)**, not
+content.
+
+**E7 — Lessons too thin → build the deferred richer lessons (pedagogy).** The
+five consecutive verb blocks (B3–B7) ship without a single conjugation table;
+hard contrastive lessons (b4/l4 perfeito↔imperfeito, b8/l3 colocação) get the
+same 1-paragraph treatment. The deferred `<VerbConjugation>` + contrastive
+tables + vocab section are a **real gap, not YAGNI — promote to build** (Plan
+5c). Data-driven per R7.
+
+**E8 — Exercise-type re-weighting (pedagogy → changes 5b).** The mix is
+recognition-heavy. **`multiple_choice` is redundant** (it is the diagnostic
+style; recognition already over-served) → **cap ≤3/block**, reserved for
+discrimination items (gender/plural irregulars). **`matching` is low-value** for
+adults (cognate pairing is trivial) → minimize or drop. Shift that budget to
+**`error_correction` (highest value) + `conjugation` (fills production gap)**.
+5b's "~8–10 each uniformly" is replaced by this weighting.
+
+**E9 — Conjugation must be variant-aware + canonical vocab (5a/5b).**
+`tense`/`person` are free strings; the answer (`falas` vs `fala`) depends on
+tu/você → freeze a **closed canonical set** of ~12 `tense` labels and the
+`person` set, and make conjugation answers variant-aware (or carry
+variantOverrides). Defined in the agent brief (5b) and honored by the
+`ConjugationCard`/`<VerbConjugation>` (5a/5c).
+
+**E10 — merge validation (5b).** `merge-staged` must reject MC items with
+duplicate options or out-of-range `correctIndex`, and error_correction items
+whose `correct` is not the single uncontroversial fix.
+
+**E11 — Shadowing self-eval (5a/5c).** Without STT, replace binary pass/fail
+with 2–3 **feature-targeted** self-checks tied to the sentence's PT difficulty
+("¿nasalizaste *pão*?", "¿la *r* inicial sonó como /h/?"), a repetition count,
+and drive shadowing primarily from B1 minimal-pair/nasal/r/s-final content where
+self-diagnosis by ear is feasible. Refines the 5a `ShadowingCard`.
+
+**E12 — SRS/engagement fixes (pedagogy, code) → Plan 5d.** New-card floor on
+heavy-review days (currently drops to 0 when reviews ≥ cap); lower
+`leech_lapses_threshold` 8→4–5; **decouple XP from the FSRS rating** (Easy +5 >
+Good +1 incentivizes mis-rating, corrupting the scheduler).
+
+**E13 — Diagnostic ceiling items (pedagogy/content).** Diagnostic only covers
+B1–B3, so prior learners can't place past B3. Add MCQ ceiling items from
+B4/B6/B8 (no audio). Content-fixes plan.
+
+**Deferred (need new audio, out of this round):** story `b3-s1` BR uses
+`ementa` (should be `cardápio`); stories `b9-s2`/`b2-s2` English words in
+audio-bearing text; `b10` flashcard `back` with `gave`.
+
+### Plan map after review
+- **content-fixes** (new, no audio, **runs before 5b**): E1, E2, E3, E4, E5, E13.
+- **5a** (code): exercise types + shadowing; honors E9 (variant-aware conjugation), E11 (shadowing self-eval).
+- **5b** (content): re-weighted per E8; brief enforces E9 canonical vocab; merge enforces E10; **depends on E2 gate extension**.
+- **5c** (richer lessons): promoted per E7; VerbConjugation honors E9.
+- **5d** (SRS/engagement): E6 interleaving, E12 floor/leech/XP.
+
 ## Out of scope
 
 - 6-voice audio (f/m × neutral/happy/calm) — deferred.
