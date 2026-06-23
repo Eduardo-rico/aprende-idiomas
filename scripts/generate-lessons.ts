@@ -225,7 +225,10 @@ async function callLessonLlm(lesson: ResolvedLesson): Promise<LessonGeneration> 
   const { text } = await callLlm({
     system: SYSTEM_PROMPT,
     user,
-    maxTokens: 2000,
+    // 4000 matches the minimax-llm + prompt-runner default. Dense
+    // contrast-table lessons (es↔pt correspondences, BR↔PT variation)
+    // truncate at 2000 with stop_reason=max_tokens.
+    maxTokens: 4000,
   });
   const raw = extractJson(text);
   return LessonGenerationSchema.parse(raw);
@@ -245,9 +248,17 @@ function escapeAttr(s: string): string {
     .replace(/>/g, '&gt;');
 }
 
+// Collapse internal newlines/whitespace runs to a single space. A blank
+// line inside a JSX block element (e.g. a multi-paragraph <Rule> body)
+// closes the MDX "paragraph" before the closing tag, which fails the
+// build with "Expected a closing tag". Rule/Tip bodies are single-line.
+function collapseWs(s: string): string {
+  return s.replace(/\s+/g, ' ').trim();
+}
+
 export function renderLessonMdx(gen: LessonGeneration): string {
   const lines: string[] = [];
-  lines.push(`<Rule title="${escapeAttr(gen.rule.title)}">${gen.rule.body}</Rule>`);
+  lines.push(`<Rule title="${escapeAttr(gen.rule.title)}">${collapseWs(gen.rule.body)}</Rule>`);
   lines.push('');
   gen.examples.forEach((ex, i) => {
     lines.push(
@@ -255,7 +266,7 @@ export function renderLessonMdx(gen: LessonGeneration): string {
     );
     lines.push('');
   });
-  lines.push(`<Tip>${gen.tip}</Tip>`);
+  lines.push(`<Tip>${collapseWs(gen.tip)}</Tip>`);
   lines.push('');
   return lines.join('\n');
 }
