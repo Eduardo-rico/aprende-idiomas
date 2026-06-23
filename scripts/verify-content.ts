@@ -9,7 +9,6 @@ import {
   type Exercise, type ExerciseType,
 } from './lib/zod-schemas';
 import { isValidMp3 } from './lib/minimax-tts';
-import { textsFor } from './lib/audio-collector';
 import { parseLangArgs, noopForLang } from './lib/cli';
 
 const VALID_CONCEPT_IDS = new Set(ALL_CONCEPTS.map(c => c.id));
@@ -32,12 +31,6 @@ async function fileExists(p: string): Promise<boolean> {
 const AUDIO_REQUIRED: Set<ExerciseType> = new Set([
   'flashcard', 'listening', 'translation', 'sentence_construction', 'chunk',
 ]);
-
-// Variantes que el script itera para validar audios. Phase 1: PT-BR y
-// PT-PT (con keys nuevos). El manifest legacy tiene "br" y "pt"; el shim
-// en textsFor preserva el comportamiento original para esas keys.
-const ACTIVE_VARIANTS = ['pt-br', 'pt-pt'] as const;
-const LEGACY_VARIANTS = ['br', 'pt'] as const;
 
 async function main() {
   const { lang } = parseLangArgs();
@@ -181,7 +174,16 @@ async function main() {
   // Phase 1: iteramos las variantes activas (pt-br/pt-pt) Y las legacy
   // (br/pt) para mantener compat con el manifest existente. El shim en
   // textsFor preserva el comportamiento original para las legacy keys.
+  // A file is live if ANY content source references its hash: exercises,
+  // stories (+ their vocab), the vocab catalog, lesson example audio
+  // (audio-refs.json), or the manifest audioIndex (which the manifest
+  // cross-check above requires to have files). Anything else is dead
+  // weight left over from regenerated content and is a true orphan.
   const liveHashes = new Set<string>();
+  const addHash = (h: unknown) => {
+    if (typeof h === 'string' && /^[a-f0-9]{64}$/.test(h)) liveHashes.add(h);
+  };
+  // Exercises — read the inline audio hash directly (robust to manifest drift).
   for (const b of BLOCKS) {
     if (b.lessons.length === 0) continue;
     let exercises: Exercise[] = [];
@@ -193,14 +195,38 @@ async function main() {
       });
     } catch { continue; }
     for (const ex of exercises) {
-      for (const variant of [...ACTIVE_VARIANTS, ...LEGACY_VARIANTS]) {
-        for (const t of textsFor(ex, variant)) {
-          const h = manifest.audioIndex?.[variant]?.[t];
-          if (h) liveHashes.add(h);
-        }
-      }
+      const audio = (ex as { audio?: Record<string, { hash?: string }> }).audio;
+      for (const v of Object.values(audio ?? {})) addHash(v?.hash);
     }
   }
+  // Manifest audioIndex (already validated to have files above).
+  for (const idx of Object.values(manifest.audioIndex ?? {})) {
+    for (const h of Object.values(idx ?? {})) addHash(h);
+  }
+  // Stories + story vocab.
+  try {
+    const sDir = path.join(DATA_DIR, 'stories');
+    for (const f of (await fs.readdir(sDir)).filter(x => /^b\d+-s\d+-.+\.json$/.test(x))) {
+      const s = JSON.parse(await fs.readFile(path.join(sDir, f), 'utf8'));
+      for (const v of Object.values(s.variants ?? {})) addHash((v as { audioHash?: string })?.audioHash);
+      for (const w of (s.vocab ?? [])) for (const h of Object.values(w.audioHash ?? {})) addHash(h);
+    }
+  } catch {}
+  // Vocab catalog.
+  try {
+    const vc = JSON.parse(await fs.readFile(path.join(DATA_DIR, 'vocab-catalog.json'), 'utf8'));
+    for (const e of (Array.isArray(vc) ? vc : [])) for (const h of Object.values(e.audioHash ?? {})) addHash(h);
+  } catch {}
+  // Lesson example audio (audio-refs.json sidecar).
+  try {
+    const refs = JSON.parse(await fs.readFile(path.join(DATA_DIR, 'lessons', 'audio-refs.json'), 'utf8'));
+    for (const entry of Object.values(refs)) {
+      for (const arr of Object.values((entry as { audioRefs?: Record<string, Array<{ hash?: string }>> }).audioRefs ?? {})) {
+        for (const r of (arr ?? [])) addHash(r?.hash);
+      }
+    }
+  } catch {}
+
   let orphanCount = 0;
   try {
     const files = await fs.readdir(TTS_OUTPUT);
@@ -211,7 +237,7 @@ async function main() {
     }
   } catch {}
   if (orphanCount > 0) {
-    warnings.push(`GC: ${orphanCount} MP3 file(s) in public/audio/ not referenced by any exercise. Manual cleanup recommended.`);
+    warnings.push(`GC: ${orphanCount} MP3 file(s) in public/audio/ not referenced by any content. Run scripts/gc-audio.mjs --delete to remove.`);
   }
 
   // ─── Stories (Plan #3) ────────────────────────────────────────────────
