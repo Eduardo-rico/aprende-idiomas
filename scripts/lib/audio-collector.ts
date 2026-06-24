@@ -1,7 +1,7 @@
 // scripts/lib/audio-collector.ts
 import type { Exercise, ExerciseType } from './zod-schemas';
 import { ExerciseDataByTypeSchema } from './zod-schemas';
-import { type VariantKey, DEFAULT_VARIANT } from '@/lib/data/variant';
+import { type VariantKey } from '@/lib/data/variant';
 
 export interface AudioJob {
   text: string;

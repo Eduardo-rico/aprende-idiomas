@@ -4,7 +4,7 @@ import {
   VariantOverrideByTypeSchema,
   type Exercise,
 } from "@/lib/data/zod-schemas";
-import { type VariantKey, DEFAULT_VARIANT } from "@/lib/data/variant";
+import { type VariantKey } from "@/lib/data/variant";
 
 export type { Exercise };
 
