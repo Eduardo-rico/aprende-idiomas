@@ -11,6 +11,16 @@ import {
 import { isValidMp3 } from './lib/minimax-tts';
 import { parseLangArgs, noopForLang } from './lib/cli';
 import { findNonLatin, findNonLatinDeep } from './lib/latin-guard';
+import { findEnglishWords, blankCountMismatch } from './lib/content-guard';
+import { textsFor } from './lib/audio-collector';
+
+// Deep-collect every string leaf in a value (for per-field bleed checks).
+function collectStrings(v: unknown, out: string[] = []): string[] {
+  if (typeof v === 'string') out.push(v);
+  else if (Array.isArray(v)) for (const x of v) collectStrings(x, out);
+  else if (v && typeof v === 'object') for (const x of Object.values(v)) collectStrings(x, out);
+  return out;
+}
 
 const VALID_CONCEPT_IDS = new Set(ALL_CONCEPTS.map(c => c.id));
 
@@ -152,6 +162,33 @@ async function main() {
           }
         }
       }
+
+      // ── English-bleed + structural gate (E2) ──────────────────────────
+      // Hard error on English words in any string field, EXCEPT audio-bearing
+      // fields of exercises that already have recorded audio: their text is
+      // locked to the TTS file, so fixing requires regeneration — a warning,
+      // deferred to the audio round. Content without audio yet (new 5b output)
+      // is strict everywhere, which is the point: catch bleed before TTS.
+      let audioStrings = new Set<string>();
+      try {
+        for (const v of ['pt-br', 'pt-pt'] as const) for (const t of textsFor(ex, v)) audioStrings.add(t);
+      } catch { /* malformed override is reported by the schema check above */ }
+      const strings = collectStrings(ex.data);
+      if (ex.esContrast) strings.push(ex.esContrast);
+      for (const s of strings) {
+        // Intentional contrastive English glosses are quoted ('will', 'had
+        // seen') or parenthetical ((esto/this), (eso/that)). Strip those spans
+        // so the gate flags only unquoted running-text bleed ("Eu the dei",
+        // "wants to give us a surprise"), not the deliberate trilingual glosses.
+        const scanned = s.replace(/\([^)]*\)/g, ' ').replace(/'[^']*'/g, ' ');
+        const hits = findEnglishWords(scanned);
+        if (!hits.length) continue;
+        const locked = !!ex.audio && audioStrings.has(s);
+        const msg = `${ex.id}: English bleed: ${[...new Set(hits)].join(' ')}`;
+        if (locked) warnings.push(`${msg} [audio-bearing — deferred to audio round]`);
+        else errors.push(msg);
+      }
+      if (blankCountMismatch(ex)) errors.push(`${ex.id}: fill_blank blank/answer count mismatch.`);
     }
   }
 
