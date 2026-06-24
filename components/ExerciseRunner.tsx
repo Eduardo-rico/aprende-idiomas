@@ -7,6 +7,7 @@ import { FillBlankCard } from "./cards/FillBlankCard";
 import { ListeningCard } from "./cards/ListeningCard";
 import { TranslationCard } from "./cards/TranslationCard";
 import { VerbPrepositionCard } from "./cards/VerbPrepositionCard";
+import { ErrorCorrectionCard } from "./cards/ErrorCorrectionCard";
 import { LessonStep } from "./lessons/LessonStep";
 import { submitAnswer, getCardById, resetLeechCard } from "@/lib/db/repository";
 import { useSettings } from "@/lib/stores/settings";
@@ -255,6 +256,7 @@ function AnswerableCard({
   if (ex.type === "translation")
     return <TranslationCard ex={ex} onSubmit={onAnswer} />;
   if (ex.type === "verb_preposition") return <VerbPrepositionCard ex={ex} onSubmit={onAnswer} />;
+  if (ex.type === "error_correction") return <ErrorCorrectionCard ex={ex} onSubmit={onAnswer} />;
   return null;
 }
 
