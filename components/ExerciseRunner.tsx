@@ -8,6 +8,7 @@ import { ListeningCard } from "./cards/ListeningCard";
 import { TranslationCard } from "./cards/TranslationCard";
 import { VerbPrepositionCard } from "./cards/VerbPrepositionCard";
 import { ErrorCorrectionCard } from "./cards/ErrorCorrectionCard";
+import { ConjugationCard } from "./cards/ConjugationCard";
 import { LessonStep } from "./lessons/LessonStep";
 import { submitAnswer, getCardById, resetLeechCard } from "@/lib/db/repository";
 import { useSettings } from "@/lib/stores/settings";
@@ -257,6 +258,7 @@ function AnswerableCard({
     return <TranslationCard ex={ex} onSubmit={onAnswer} />;
   if (ex.type === "verb_preposition") return <VerbPrepositionCard ex={ex} onSubmit={onAnswer} />;
   if (ex.type === "error_correction") return <ErrorCorrectionCard ex={ex} onSubmit={onAnswer} />;
+  if (ex.type === "conjugation") return <ConjugationCard ex={ex} onSubmit={onAnswer} />;
   return null;
 }
 
