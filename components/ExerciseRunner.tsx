@@ -10,6 +10,7 @@ import { VerbPrepositionCard } from "./cards/VerbPrepositionCard";
 import { ErrorCorrectionCard } from "./cards/ErrorCorrectionCard";
 import { ConjugationCard } from "./cards/ConjugationCard";
 import { MultipleChoiceCard } from "./cards/MultipleChoiceCard";
+import { MatchingCard } from "./cards/MatchingCard";
 import { LessonStep } from "./lessons/LessonStep";
 import { submitAnswer, getCardById, resetLeechCard } from "@/lib/db/repository";
 import { useSettings } from "@/lib/stores/settings";
@@ -261,6 +262,7 @@ function AnswerableCard({
   if (ex.type === "error_correction") return <ErrorCorrectionCard ex={ex} onSubmit={onAnswer} />;
   if (ex.type === "conjugation") return <ConjugationCard ex={ex} onSubmit={onAnswer} />;
   if (ex.type === "multiple_choice") return <MultipleChoiceCard ex={ex} onSubmit={onAnswer} />;
+  if (ex.type === "matching") return <MatchingCard ex={ex} onSubmit={onAnswer} />;
   return null;
 }
 
