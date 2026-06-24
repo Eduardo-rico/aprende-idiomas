@@ -71,10 +71,12 @@ describe('loadAllStories / loadStory', () => {
 });
 
 describe('loadDiagnostic("pt")', () => {
-  it('retorna el diagnostic con 20 questions', async () => {
+  it('retorna el diagnostic con al menos 20 questions (incluye ceiling B4/B6/B8)', async () => {
     const d = await loadDiagnostic('pt');
     expect(d).not.toBeNull();
-    expect(d?.questions.length).toBe(20);
+    expect(d?.questions.length).toBe(26);
+    // E13: ceiling items let learners place beyond B3.
+    expect(d?.questions.some((q) => q.blockId > 3)).toBe(true);
   });
 });
 

@@ -371,7 +371,9 @@ export type StoryVocab = z.infer<typeof StoryVocabSchema>;
 // ─── Diagnostic (Plan #3) ────────────────────────────────────────────────────
 export const DiagnosticQuestionSchema = z.object({
   id: z.string().min(1),
-  blockId: z.number().int().min(1).max(3),
+  // Ceiling items (E13) place learners beyond B3, so blockId now spans the
+  // full curriculum range (was max 3).
+  blockId: z.number().int().min(1).max(10),
   conceptId: z.string().min(1),
   prompt: z.string().min(10),
   options: z.tuple([z.string(), z.string(), z.string(), z.string()]),
@@ -380,7 +382,8 @@ export const DiagnosticQuestionSchema = z.object({
 
 export const DiagnosticSchema = z.object({
   generatedAt: z.string().min(1),
-  questions: z.array(DiagnosticQuestionSchema).length(20),
+  // At least the 20 base items; ceiling items (E13) extend the set.
+  questions: z.array(DiagnosticQuestionSchema).min(20),
 });
 
 export type Diagnostic = z.infer<typeof DiagnosticSchema>;

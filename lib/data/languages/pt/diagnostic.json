@@ -161,6 +161,54 @@
       "prompt": "Complete: 'Ela ___ (ser) muito inteligente.'",
       "options": ["é", "está", "foi", "será"],
       "correctIndex": 0
+    },
+    {
+      "id": "q21b04",
+      "blockId": 4,
+      "conceptId": "b4-perfeito-irregular",
+      "prompt": "Pretérito perfeito de 'fazer': 'Ontem eu ___ todo o trabalho.'",
+      "options": ["fiz", "fazi", "fazia", "fez"],
+      "correctIndex": 0
+    },
+    {
+      "id": "q22b04",
+      "blockId": 4,
+      "conceptId": "b4-contraste-passado",
+      "prompt": "Complete: 'Quando eu era criança, ___ todos os dias na praça.'",
+      "options": ["brinquei", "brincarei", "brincava", "tinha brincado"],
+      "correctIndex": 2
+    },
+    {
+      "id": "q23b06",
+      "blockId": 6,
+      "conceptId": "b6-presente-subj",
+      "prompt": "Presente do conjuntivo: 'Espero que ele ___ (ser) feliz.'",
+      "options": ["é", "seja", "será", "fosse"],
+      "correctIndex": 1
+    },
+    {
+      "id": "q24b06",
+      "blockId": 6,
+      "conceptId": "b6-se-subjuntivo",
+      "prompt": "Complete: 'Se eu ___ (ter) tempo, viajaria mais.'",
+      "options": ["tenho", "tiver", "teria", "tivesse"],
+      "correctIndex": 3
+    },
+    {
+      "id": "q25b08",
+      "blockId": 8,
+      "conceptId": "b8-colocacao-pronominal",
+      "prompt": "Qual é a colocação pronominal correta após 'não'?",
+      "options": ["Não disseram-me nada.", "Me não disseram nada.", "Não me disseram nada.", "Não disseram nada-me."],
+      "correctIndex": 2
+    },
+    {
+      "id": "q26b08",
+      "blockId": 8,
+      "conceptId": "b8-conectores",
+      "prompt": "Complete com o conector de causa: 'Ele saiu ___ estava cansado.'",
+      "options": ["porém", "porque", "embora", "portanto"],
+      "correctIndex": 1
     }
   ]
 }
