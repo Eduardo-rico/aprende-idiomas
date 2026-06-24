@@ -19,6 +19,13 @@ export const ExerciseTypeEnum = z.enum([
   'sentence_construction',
   'chunk',
   'lesson',
+  // Plan 5a: text-only types (no audio, except shadowing which reuses an
+  // existing audio hash). Content for these arrives in Plan 5b.
+  'error_correction',
+  'conjugation',
+  'matching',
+  'multiple_choice',
+  'shadowing',
 ]);
 export type ExerciseType = z.infer<typeof ExerciseTypeEnum>;
 
@@ -112,6 +119,28 @@ const ChunkData = z.object({
   examples: z.array(z.object({ sentence: z.string().min(1), gloss: z.string().optional() })).min(1),
 });
 
+// ─── Plan 5a: new text-only exercise types ─────────────────────
+export const ErrorCorrectionData = z.object({
+  sentence: z.string().min(1), correct: z.string().min(1), explanationEs: z.string().min(1),
+});
+export const ConjugationData = z.object({
+  infinitive: z.string().min(1), person: z.string().min(1), tense: z.string().min(1),
+  answer: z.string().min(1), hintEs: z.string().min(1),
+});
+export const MatchingData = z.object({
+  pairs: z.array(z.object({ left: z.string().min(1), right: z.string().min(1) })).min(3).max(6),
+});
+export const MultipleChoiceData = z.object({
+  question: z.string().min(1), options: z.array(z.string().min(1)).min(2).max(4),
+  correctIndex: z.number().int().nonnegative(), explanationEs: z.string().min(1),
+});
+export const ShadowingData = z.object({
+  text: z.string().min(1), es: z.string().min(1), audioRef: z.string().optional(),
+  // E11: feature-targeted self-eval prompts shown after recording, e.g.
+  // ["¿Nasalizaste 'pão'?", "¿La 'r' inicial sonó como /h/ (BR)?"].
+  selfChecks: z.array(z.string()).optional(),
+});
+
 // LessonData: 1 lesson step por lección. Renderiza MDX (conceptNotesPath).
 // No tiene audio en data — los audio refs viven en un sidecar
 // `lib/data/languages/pt/lessons/audio-refs.json` (L2).
@@ -134,6 +163,11 @@ export const ExerciseDataByTypeSchema = {
   sentence_construction: SentenceConstructionData,
   chunk: ChunkData,
   lesson: LessonDataSchema,
+  error_correction: ErrorCorrectionData,
+  conjugation: ConjugationData,
+  matching: MatchingData,
+  multiple_choice: MultipleChoiceData,
+  shadowing: ShadowingData,
 } as const;
 
 // ─── variantOverrides por tipo (todos los campos opcionales) ────
@@ -154,6 +188,11 @@ const VerbPrepositionOverride = z.strictObject(VerbPrepositionData.shape).partia
 const SentenceConstructionOverride = z.strictObject(SentenceConstructionData.shape).partial();
 const ChunkOverride = z.strictObject(ChunkData.shape).partial();
 const LessonOverride = z.strictObject(LessonDataSchema.shape).partial();
+const ErrorCorrectionOverride = z.strictObject(ErrorCorrectionData.shape).partial();
+const ConjugationOverride = z.strictObject(ConjugationData.shape).partial();
+const MatchingOverride = z.strictObject(MatchingData.shape).partial();
+const MultipleChoiceOverride = z.strictObject(MultipleChoiceData.shape).partial();
+const ShadowingOverride = z.strictObject(ShadowingData.shape).partial();
 
 const VariantOverrideValue = z.union([
   FlashcardOverride,
@@ -164,6 +203,11 @@ const VariantOverrideValue = z.union([
   SentenceConstructionOverride,
   ChunkOverride,
   LessonOverride,
+  ErrorCorrectionOverride,
+  ConjugationOverride,
+  MatchingOverride,
+  MultipleChoiceOverride,
+  ShadowingOverride,
 ]);
 
 // Map para resolver el override schema (strict) por tipo. El resolver
@@ -178,6 +222,11 @@ export const VariantOverrideByTypeSchema = {
   sentence_construction: SentenceConstructionOverride,
   chunk: ChunkOverride,
   lesson: LessonOverride,
+  error_correction: ErrorCorrectionOverride,
+  conjugation: ConjugationOverride,
+  matching: MatchingOverride,
+  multiple_choice: MultipleChoiceOverride,
+  shadowing: ShadowingOverride,
 } as const;
 
 // ─── Exercise: discriminated union sobre `type` ────────────────
@@ -236,12 +285,38 @@ const LessonEx = BaseExercise.extend({
   data: LessonDataSchema,
   variantOverrides: z.record(z.string(), LessonOverride).optional(),
 });
+const ErrorCorrectionEx = BaseExercise.extend({
+  type: z.literal('error_correction'),
+  data: ErrorCorrectionData,
+  variantOverrides: z.record(z.string(), VariantOverrideValue).optional(),
+});
+const ConjugationEx = BaseExercise.extend({
+  type: z.literal('conjugation'),
+  data: ConjugationData,
+  variantOverrides: z.record(z.string(), VariantOverrideValue).optional(),
+});
+const MatchingEx = BaseExercise.extend({
+  type: z.literal('matching'),
+  data: MatchingData,
+  variantOverrides: z.record(z.string(), VariantOverrideValue).optional(),
+});
+const MultipleChoiceEx = BaseExercise.extend({
+  type: z.literal('multiple_choice'),
+  data: MultipleChoiceData,
+  variantOverrides: z.record(z.string(), VariantOverrideValue).optional(),
+});
+const ShadowingEx = BaseExercise.extend({
+  type: z.literal('shadowing'),
+  data: ShadowingData,
+  variantOverrides: z.record(z.string(), VariantOverrideValue).optional(),
+});
 
 export const ExerciseSchema = z.discriminatedUnion('type', [
   FlashcardEx, FillBlankEx, ListeningEx,
   TranslationEx,
   VerbPrepositionEx, SentenceConstructionEx, ChunkEx,
   LessonEx,
+  ErrorCorrectionEx, ConjugationEx, MatchingEx, MultipleChoiceEx, ShadowingEx,
 ]);
 export type Exercise = z.infer<typeof ExerciseSchema>;
 
@@ -313,11 +388,24 @@ const SentenceConstructionGen = SentenceConstructionEx.extend(RequiredGeneratedF
 const ChunkGen = ChunkEx.extend(RequiredGeneratedFields);
 const LessonGen = LessonEx.extend(RequiredGeneratedFields);
 
+// Plan 5a (R1): text-only types are "generated" with only a contentHash —
+// audio stays optional (they enqueue no TTS; shadowing reuses an existing hash).
+const TextOnlyGeneratedFields = {
+  contentHash: z.string().min(1),
+  audio: AudioRefSchema.optional(),
+};
+const ErrorCorrectionGen = ErrorCorrectionEx.extend(TextOnlyGeneratedFields);
+const ConjugationGen = ConjugationEx.extend(TextOnlyGeneratedFields);
+const MatchingGen = MatchingEx.extend(TextOnlyGeneratedFields);
+const MultipleChoiceGen = MultipleChoiceEx.extend(TextOnlyGeneratedFields);
+const ShadowingGen = ShadowingEx.extend(TextOnlyGeneratedFields);
+
 export const GeneratedExerciseSchema = z.discriminatedUnion('type', [
   FlashcardGen, FillBlankGen, ListeningGen,
   TranslationGen,
   VerbPrepositionGen, SentenceConstructionGen, ChunkGen,
   LessonGen,
+  ErrorCorrectionGen, ConjugationGen, MatchingGen, MultipleChoiceGen, ShadowingGen,
 ]);
 export type GeneratedExercise = z.infer<typeof GeneratedExerciseSchema>;
 
@@ -334,6 +422,11 @@ const LlmItemSchema = z.preprocess(normalizeExerciseInput, z.discriminatedUnion(
   SentenceConstructionEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
   ChunkEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
   LessonEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
+  ErrorCorrectionEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
+  ConjugationEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
+  MatchingEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
+  MultipleChoiceEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
+  ShadowingEx.omit({ id: true, blockId: true, lessonId: true, contentHash: true, audio: true }),
 ]));
 export const ExerciseBatchSchema = z.array(LlmItemSchema);
 export type ExerciseBatchItem = z.infer<typeof ExerciseBatchSchema>[number];

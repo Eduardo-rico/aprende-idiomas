@@ -97,6 +97,12 @@ export const EXERCISES_PER_LESSON: Record<ExerciseType, number | null> = {
   sentence_construction: null, // diferido a Plan #2
   chunk: null,                 // diferido a Plan #2
   lesson: 1,                   // 1 lesson step por lección (L1)
+  // Plan 5a: tipos nuevos sin template aún; Plan 5b define el target real.
+  error_correction: null,
+  conjugation: null,
+  matching: null,
+  multiple_choice: null,
+  shadowing: null,
 };
 
 // Mapping de ExerciseType → nombre de archivo de prompt. `null` = no generar.
@@ -109,6 +115,12 @@ export const TYPE_TO_TEMPLATE: Record<ExerciseType, string | null> = {
   sentence_construction: null,
   chunk: null,
   lesson: null,                // no se genera por LLM; el MDX es el contenido
+  // Plan 5a: sin prompt templates aún (los añade Plan 5b).
+  error_correction: null,
+  conjugation: null,
+  matching: null,
+  multiple_choice: null,
+  shadowing: null,
 };
 
 // Costo estimado (USD) por 1k tokens para el modelo LLM actual.
@@ -127,6 +139,11 @@ export const SCHEMA_VERSION: Record<ExerciseType, number> = {
   sentence_construction: 1,
   chunk: 1,
   lesson: 1,
+  error_correction: 1,
+  conjugation: 1,
+  matching: 1,
+  multiple_choice: 1,
+  shadowing: 1,
 };
 
 export function requireApiKey(): string {

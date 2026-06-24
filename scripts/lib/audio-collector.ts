@@ -77,6 +77,13 @@ export function textsFor(ex: Exercise, variant: VariantKey): string[] {
     case 'fill_blank':
     case 'verb_preposition':
     case 'lesson':
+    // Plan 5a: text-only types enqueue no TTS. shadowing reuses an existing
+    // audio hash (data.audioRef) rather than generating a new one.
+    case 'error_correction':
+    case 'conjugation':
+    case 'matching':
+    case 'multiple_choice':
+    case 'shadowing':
       return [];
   }
 }
