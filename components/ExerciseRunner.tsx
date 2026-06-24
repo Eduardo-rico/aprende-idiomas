@@ -9,6 +9,7 @@ import { TranslationCard } from "./cards/TranslationCard";
 import { VerbPrepositionCard } from "./cards/VerbPrepositionCard";
 import { ErrorCorrectionCard } from "./cards/ErrorCorrectionCard";
 import { ConjugationCard } from "./cards/ConjugationCard";
+import { MultipleChoiceCard } from "./cards/MultipleChoiceCard";
 import { LessonStep } from "./lessons/LessonStep";
 import { submitAnswer, getCardById, resetLeechCard } from "@/lib/db/repository";
 import { useSettings } from "@/lib/stores/settings";
@@ -259,6 +260,7 @@ function AnswerableCard({
   if (ex.type === "verb_preposition") return <VerbPrepositionCard ex={ex} onSubmit={onAnswer} />;
   if (ex.type === "error_correction") return <ErrorCorrectionCard ex={ex} onSubmit={onAnswer} />;
   if (ex.type === "conjugation") return <ConjugationCard ex={ex} onSubmit={onAnswer} />;
+  if (ex.type === "multiple_choice") return <MultipleChoiceCard ex={ex} onSubmit={onAnswer} />;
   return null;
 }
 
