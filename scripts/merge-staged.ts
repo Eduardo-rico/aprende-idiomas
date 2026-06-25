@@ -16,7 +16,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { BLOCKS, ALL_CONCEPTS } from '@/lib/data/languages/pt/curriculum';
 import { BLOCKS_DIR } from './config';
-import { GeneratedExerciseSchema } from './lib/zod-schemas';
+import { ExerciseSchema } from './lib/zod-schemas';
 import { findNonLatinDeep } from './lib/latin-guard';
 import { findEnglishWords } from './lib/content-guard';
 import { assignIds, validateNewType, contentHash, type StagedItem } from './lib/staged-validate';
@@ -80,14 +80,18 @@ function main() {
   const { withIds, collisions } = assignIds(staged, existingIds);
   for (const c of collisions) problems.push(`collision: id ${c} already exists (duplicate content) — not appended`);
 
-  // Final shape validation against the generated schema (audio-optional).
+  // Final shape validation. We use ExerciseSchema (not GeneratedExerciseSchema)
+  // because 5b content is text-only: fill_blank/verb_preposition and the 5a
+  // types are stored WITHOUT audio (matching the existing corpus). We always
+  // attach a contentHash, so the generated-state invariant is still satisfied.
   const finalized = withIds.map((it) => ({
     ...it,
     blockId,
     contentHash: contentHash(it.type, it.data, it.variantOverrides, it.esContrast),
   }));
   finalized.forEach((ex, i) => {
-    const r = GeneratedExerciseSchema.safeParse(ex);
+    if (!ex.contentHash) problems.push(`finalized[${i}] (${ex.type}/${ex.id}): missing contentHash`);
+    const r = ExerciseSchema.safeParse(ex);
     if (!r.success) {
       const iss = r.error.issues[0];
       problems.push(`finalized[${i}] (${ex.type}/${ex.id}): ${iss?.path?.join('.') || '(root)'} — ${iss?.message ?? 'Zod fail'}`);
