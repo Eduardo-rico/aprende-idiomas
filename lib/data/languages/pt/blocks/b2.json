@@ -6459,5 +6459,564 @@
         "Mi número está en tu celular."
       ]
     }
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b2-l2-genero-gramatical",
+    "difficulty": 1,
+    "concepts": [
+      "b2-genero"
+    ],
+    "tags": [
+      "falso-amigo",
+      "genero"
+    ],
+    "esContrast": "Género: 'problema' es masculino en PT pese a terminar en -a.",
+    "data": {
+      "sentence": "A problema é muito difícil.",
+      "correct": "O problema é muito difícil.",
+      "explanationEs": "En PT 'problema' es masculino (o problema); el -a final no marca femenino como en español."
+    },
+    "id": "9fb06ef7",
+    "blockId": 2,
+    "contentHash": "9fb06ef73b96a9ed94e8f81d9b505dbde864872b03b32aa54166babaa001f543"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b2-l2-genero-gramatical",
+    "difficulty": 2,
+    "concepts": [
+      "b2-genero"
+    ],
+    "tags": [
+      "falso-amigo",
+      "genero"
+    ],
+    "esContrast": "'viagem' es femenino en PT (a viagem), no masculino como 'el viaje'.",
+    "data": {
+      "sentence": "O viagem foi muito longo.",
+      "correct": "A viagem foi muito longa.",
+      "explanationEs": "'viagem' es femenino en PT; arrastra la concordancia: a viagem... longa."
+    },
+    "id": "2a484dc4",
+    "blockId": 2,
+    "contentHash": "2a484dc4a799f43f320a5698d5969b074113d18b46f7af9e45097be449f6ae27"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b2-l2-genero-gramatical",
+    "difficulty": 2,
+    "concepts": [
+      "b2-genero"
+    ],
+    "tags": [
+      "falso-amigo",
+      "genero"
+    ],
+    "esContrast": "'leite' es masculino en PT (o leite), a diferencia de 'la leche'.",
+    "data": {
+      "sentence": "A leite já está quente.",
+      "correct": "O leite já está quente.",
+      "explanationEs": "'leite' es masculino en PT (o leite), aunque 'leche' sea femenino en español."
+    },
+    "id": "2ad0c58f",
+    "blockId": 2,
+    "contentHash": "2ad0c58f11e68e9739ef7696e0997d61ba5ec03f87cf8281270e2d767406d87d"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b2-l2-genero-gramatical",
+    "difficulty": 2,
+    "concepts": [
+      "b2-genero"
+    ],
+    "tags": [
+      "genero"
+    ],
+    "esContrast": "'árvore' es femenino en PT (a árvore).",
+    "data": {
+      "sentence": "O árvore do jardim é antiga.",
+      "correct": "A árvore do jardim é antiga.",
+      "explanationEs": "'árvore' es femenino en PT: a árvore."
+    },
+    "id": "c550419f",
+    "blockId": 2,
+    "contentHash": "c550419f872ce8d67b1c56fee724e83d3036c67f5605b8c881e23bcc3a6cf9fe"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 1,
+    "concepts": [
+      "b2-artigos"
+    ],
+    "tags": [
+      "contracao"
+    ],
+    "esContrast": "Contracción obligatoria em+o = no.",
+    "data": {
+      "sentence": "Eu moro em o Brasil há dez anos.",
+      "correct": "Eu moro no Brasil há dez anos.",
+      "explanationEs": "En PT la preposición 'em' + artículo 'o' se contrae obligatoriamente en 'no'."
+    },
+    "id": "beae9531",
+    "blockId": 2,
+    "contentHash": "beae9531dd8d9cf6436a1daf05a995b5a473593d3c7c98b10679231460ede657"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 1,
+    "concepts": [
+      "b2-artigos"
+    ],
+    "tags": [
+      "contracao"
+    ],
+    "esContrast": "Contracción obligatoria de+o = do.",
+    "data": {
+      "sentence": "Este é o carro de o meu pai.",
+      "correct": "Este é o carro do meu pai.",
+      "explanationEs": "'de' + 'o' se contrae en 'do' de forma obligatoria en PT."
+    },
+    "id": "13ebe726",
+    "blockId": 2,
+    "contentHash": "13ebe726a37188e8ac1c8f96fd65c984ae68fbc9ad3a18d811ebcb66b229153d"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 2,
+    "concepts": [
+      "b2-artigos"
+    ],
+    "tags": [
+      "contracao",
+      "crase"
+    ],
+    "esContrast": "Contracción a+a = à (crase).",
+    "data": {
+      "sentence": "Todas as manhãs vou a a praia.",
+      "correct": "Todas as manhãs vou à praia.",
+      "explanationEs": "'a' (preposición) + 'a' (artículo) se funden en 'à' (crase)."
+    },
+    "id": "5a092cc8",
+    "blockId": 2,
+    "contentHash": "5a092cc82cde76dc4403b1866a5d2e79af4c74cdf22d6b27e63e770c61c4bd9d"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-possessivos"
+    ],
+    "tags": [
+      "possessivo",
+      "concordancia"
+    ],
+    "esContrast": "El posesivo concuerda en género y número con lo poseído: chaves (fem. pl.) → minhas.",
+    "data": {
+      "sentence": "Eu perdi meu chaves outra vez.",
+      "correct": "Eu perdi minhas chaves outra vez.",
+      "explanationEs": "En PT el posesivo concuerda con lo poseído: 'chave' es femenino y está en plural, así que 'minhas chaves'."
+    },
+    "id": "f6f47168",
+    "blockId": 2,
+    "contentHash": "f6f471684ac680c4b2662ff9e749c12983f8ac119399ed3787f390fe143cac9d"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-numero"
+    ],
+    "tags": [
+      "plural"
+    ],
+    "esContrast": "Plural de '-ão': pão → pães.",
+    "data": {
+      "sentence": "Os pão da padaria estão frescos.",
+      "correct": "Os pães da padaria estão frescos.",
+      "explanationEs": "Muchos sustantivos en '-ão' forman el plural en '-ães': pão → pães."
+    },
+    "id": "4345f6ea",
+    "blockId": 2,
+    "contentHash": "4345f6ea301de451ab0bd16096d7368e7e0e5267dd395713cab08a50c94f21f4"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-numero"
+    ],
+    "tags": [
+      "plural"
+    ],
+    "esContrast": "Plural de '-l': animal → animais.",
+    "data": {
+      "sentence": "No zoológico há muitos animal exóticos.",
+      "correct": "No zoológico há muitos animais exóticos.",
+      "explanationEs": "Los sustantivos en '-al' hacen el plural en '-ais': animal → animais."
+    },
+    "id": "93d20b71",
+    "blockId": 2,
+    "contentHash": "93d20b715a46c12f0ee8f4d169fb80436f2629b6bf409745fd54b53d9be6ff48"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-numero"
+    ],
+    "tags": [
+      "plural"
+    ],
+    "data": {
+      "question": "¿Cuál es el plural correcto de 'coração'?",
+      "options": [
+        "corações",
+        "coraçãos",
+        "coraçães"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "'coração' pertenece al grupo '-ão' → '-ões': corações."
+    },
+    "id": "674fe02c",
+    "blockId": 2,
+    "contentHash": "674fe02cd9270b635be5f88d93d7ee133c11fa8cd40a2350ed9e0b226c2aab5c"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 1,
+    "concepts": [
+      "b2-artigos"
+    ],
+    "tags": [
+      "contracao"
+    ],
+    "data": {
+      "question": "Completa: 'O caderno ___ menina está aqui.' (de + a)",
+      "options": [
+        "da",
+        "dela",
+        "de a",
+        "a"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "'de' + 'a' se contrae en 'da'. 'dela' (de+ela) significa 'de ella', distinto."
+    },
+    "id": "be8743ad",
+    "blockId": 2,
+    "contentHash": "be8743adc585854fb801751acde31ff78aa2f6b19bbc70cd3bfb3874b0e3f445"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b2-l2-genero-gramatical",
+    "difficulty": 2,
+    "concepts": [
+      "b2-genero"
+    ],
+    "tags": [
+      "genero"
+    ],
+    "data": {
+      "question": "¿Cuál forma es correcta en PT?",
+      "options": [
+        "a árvore",
+        "o árvore",
+        "a árvora"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "'árvore' es femenino: a árvore."
+    },
+    "id": "1bea0f05",
+    "blockId": 2,
+    "contentHash": "1bea0f05276daad1570d93c5a3a8942a865002b8c337778cd6674212ad2b8c5e"
+  },
+  {
+    "type": "matching",
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 1,
+    "concepts": [
+      "b2-numero"
+    ],
+    "tags": [
+      "plural"
+    ],
+    "data": {
+      "pairs": [
+        {
+          "left": "pão",
+          "right": "pães"
+        },
+        {
+          "left": "mão",
+          "right": "mãos"
+        },
+        {
+          "left": "coração",
+          "right": "corações"
+        },
+        {
+          "left": "papel",
+          "right": "papéis"
+        }
+      ]
+    },
+    "id": "c90cae18",
+    "blockId": 2,
+    "contentHash": "c90cae18bf14f4698ebe0dc295e9978ef9f301b997960e750d0ea67f2ec7c855"
+  },
+  {
+    "type": "matching",
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-demonstrativos"
+    ],
+    "tags": [
+      "demonstrativo"
+    ],
+    "data": {
+      "pairs": [
+        {
+          "left": "perto de mim (aqui)",
+          "right": "este"
+        },
+        {
+          "left": "perto de ti (aí)",
+          "right": "esse"
+        },
+        {
+          "left": "longe de ambos (lá)",
+          "right": "aquele"
+        }
+      ]
+    },
+    "id": "08c13f51",
+    "blockId": 2,
+    "contentHash": "08c13f51aad17c0613e9bcef121defbbf7f98a9cb5c81474926d2abdaf941be5"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 1,
+    "concepts": [
+      "b2-artigos"
+    ],
+    "tags": [
+      "contracao"
+    ],
+    "esContrast": "em + o = no.",
+    "data": {
+      "sentence": "Eu trabalho ___ centro da cidade.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "no"
+        }
+      ]
+    },
+    "id": "4cc388b7",
+    "blockId": 2,
+    "contentHash": "4cc388b742e0245a09f214c717dfef16853e19438d26353379085c23ebd01f36"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 1,
+    "concepts": [
+      "b2-artigos"
+    ],
+    "tags": [
+      "contracao"
+    ],
+    "esContrast": "de + o = do.",
+    "data": {
+      "sentence": "A porta ___ quarto está aberta.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "do"
+        }
+      ]
+    },
+    "id": "72ae98a9",
+    "blockId": 2,
+    "contentHash": "72ae98a91ecf6046f021af28aec98ac951f03fb1d9c6bf2cfe7f9471904ca79d"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 2,
+    "concepts": [
+      "b2-artigos"
+    ],
+    "tags": [
+      "contracao",
+      "crase"
+    ],
+    "esContrast": "a + a = à (crase).",
+    "data": {
+      "sentence": "Ela vai ___ escola de bicicleta.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "à"
+        }
+      ]
+    },
+    "id": "d931d23e",
+    "blockId": 2,
+    "contentHash": "d931d23e23e37c9c9b00c4acc46a01f6e74d0caac669aa612acd8b646cdfe467"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 1,
+    "concepts": [
+      "b2-artigos"
+    ],
+    "tags": [
+      "contracao"
+    ],
+    "esContrast": "em + a = na.",
+    "data": {
+      "sentence": "Os livros estão ___ mesa da sala.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "na"
+        }
+      ]
+    },
+    "id": "3317f030",
+    "blockId": 2,
+    "contentHash": "3317f030514bb28256566d698285f1e71a99cb55ba1e7e5697fcd63889ad0a0e"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 2,
+    "concepts": [
+      "b2-artigos"
+    ],
+    "tags": [
+      "contracao"
+    ],
+    "esContrast": "de + os = dos.",
+    "data": {
+      "sentence": "A casa ___ avós fica no campo.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "dos"
+        }
+      ]
+    },
+    "id": "c49e03fd",
+    "blockId": 2,
+    "contentHash": "c49e03fdbd59dc3906e0ed631a51b799b2a72e3e9118ce767d0d3f3d90581e02"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-possessivos"
+    ],
+    "tags": [
+      "possessivo"
+    ],
+    "esContrast": "Posesivo plural concordando: meus.",
+    "data": {
+      "sentence": "Estes são ___ livros favoritos. (meu)",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "meus"
+        }
+      ]
+    },
+    "id": "a092e856",
+    "blockId": 2,
+    "contentHash": "a092e856222451835b709077a3254b58f7d645051cfbaf3910924d99a97869bb"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-numero"
+    ],
+    "tags": [
+      "plural"
+    ],
+    "esContrast": "Plural '-l' → '-is': papel → papéis.",
+    "data": {
+      "sentence": "Os ___ estão em cima da mesa. (papel)",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "papéis"
+        }
+      ]
+    },
+    "id": "208d6710",
+    "blockId": 2,
+    "contentHash": "208d6710c9797376ff1a32175ae1c7c32218b7f8d2d4dd84da3ec8c446a42fba"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-numero"
+    ],
+    "tags": [
+      "plural"
+    ],
+    "esContrast": "Plural '-ão' → '-ões': lição → lições.",
+    "data": {
+      "sentence": "As ___ de hoje são difíceis. (lição)",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "lições"
+        }
+      ]
+    },
+    "id": "cfa0de98",
+    "blockId": 2,
+    "contentHash": "cfa0de98014f869caaebe83b1b483ad52a809a47435d646d0b0c81dc6fac2212"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-demonstrativos"
+    ],
+    "tags": [
+      "demonstrativo"
+    ],
+    "esContrast": "'este' = cerca del hablante (aqui).",
+    "data": {
+      "sentence": "___ caneta que tenho na mão é minha. (demonstrativo de proximidade)",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "esta"
+        }
+      ]
+    },
+    "id": "7f5f90d3",
+    "blockId": 2,
+    "contentHash": "7f5f90d3b218211c60085da10e64d1127b065b913b49c27950fab7d66c7a7899"
   }
 ]
