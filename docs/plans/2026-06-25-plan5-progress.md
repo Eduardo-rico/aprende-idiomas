@@ -17,7 +17,7 @@ _Last updated: 2026-06-25._
 | 5a — exercise types + shadowing | `plan5a-exercise-types-shadowing.md` | ✅ done — merged to main |
 | 5b — mass content | `plan5b-mass-content.md` | ✅ **b2–b8 + b10 done** (b9 = freeDrill, no exercises). Linguist + pedagogue review applied. |
 | 5c — richer lessons | `plan5c-richer-lessons.md` | ✅ done — VerbConjugation component + vocab sections + 11 conjugation tables (audio untouched) |
-| 5d — SRS / engagement | `plan5d-srs-engagement.md` | ⬜ not started |
+| 5d — SRS / engagement | `plan5d-srs-engagement.md` | ✅ done — interleaving, new-card floor, leech 8→5, XP decoupling |
 
 Execution note: content-fixes, 5a, and 5b so far were run **inline** (not
 subagent-driven) because the account monthly spend limit blocked subagent
@@ -130,12 +130,16 @@ dep). Contrast tables (the 3rd spec sub-item) were NOT added — the existing
 `<Rule>` prose + the per-exercise `esContrast` already cover ES↔PT contrast;
 revisit if a dedicated table is wanted. Shipped green + Playwright-verified.
 
-## 5d ⬜ — SRS / engagement (not started)
+## 5d ✅ — SRS / engagement (done)
 
-Interleaving (E6), new-card floor, leech threshold 8→5, XP decoupling (E12).
-Spec: `plan5d-srs-engagement.md`. Open note from 5a Task 7: `computeRecommendation`
-defaults `recommendedStart=1` when no block fails (a learner who passes
-everything places at block 1) — revisit here.
+All four pedagogy fixes shipped: E6 interleaving (`lib/srs/interleave.ts`
++ wired into `/review`; `/learn` daily mix routes to `/review`), E12
+new-card floor (`new_cards_floor: 3`, total may exceed cap by the floor),
+leech threshold 8→5, and XP decoupled from the FSRS rating
+(Hard/Good/Easy all → 2, Again → 0). Pure logic/config; 594 vitest green.
+**Still open** (carried from 5a Task 7, NOT addressed here):
+`computeRecommendation` defaults `recommendedStart=1` when no block fails —
+a learner who passes everything places at block 1. Revisit separately.
 
 ## Carry-overs / pending human action
 
