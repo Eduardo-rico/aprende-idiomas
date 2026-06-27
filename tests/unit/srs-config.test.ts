@@ -22,7 +22,11 @@ describe('FSRS_CONFIG', () => {
     expect(FSRS_CONFIG.new_cards_per_day).toBe(10);
   });
 
-  it('flags leeches at 8 lapses', () => {
-    expect(FSRS_CONFIG.leech_lapses_threshold).toBe(8);
+  it('flags leeches at 5 lapses (E12: lowered from 8)', () => {
+    expect(FSRS_CONFIG.leech_lapses_threshold).toBe(5);
+  });
+
+  it('guarantees a new-card floor of 3 (E12)', () => {
+    expect(FSRS_CONFIG.new_cards_floor).toBe(3);
   });
 });

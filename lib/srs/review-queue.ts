@@ -6,6 +6,10 @@ export interface DueQueueOptions {
   cap: number;
   /** Maximum brand-new (state === 0) cards included. */
   newCardsPerDay: number;
+  /** E12: guaranteed minimum of new cards even when overdue reviews fill
+   *  the cap, so heavy-review days never starve new learning. The total
+   *  may exceed `cap` by at most this floor. Defaults to 0 (no floor). */
+  newCardsFloor?: number;
 }
 
 export interface DueQueue {
@@ -44,9 +48,16 @@ export function buildDueQueue(
   const review = reviewAll.slice(0, reviewCap);
 
   // Whatever slots the reviews didn't claim are available for new cards,
-  // but never more than `newCardsPerDay`.
+  // but never more than `newCardsPerDay`. E12: also guarantee a small floor
+  // of new cards even when reviews filled the cap (the floor may push the
+  // total slightly over `cap`, by design — new learning must never starve).
+  const floor = Math.max(0, options.newCardsFloor ?? 0);
   const newSlots = Math.max(0, options.cap - review.length);
-  const newCards = newAll.slice(0, Math.min(options.newCardsPerDay, newSlots));
+  const allowedNew = Math.max(
+    Math.min(floor, newAll.length),
+    Math.min(options.newCardsPerDay, newSlots),
+  );
+  const newCards = newAll.slice(0, allowedNew);
 
   return { review, newCards };
 }

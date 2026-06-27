@@ -1,8 +1,12 @@
 // lib/xp/calculator.ts
 import type { Rating } from "@/lib/db/schema";
 
+// E12: XP is decoupled from the FSRS rating. Rewarding Easy (4) more than
+// Good (3) nudged learners to self-rate "Easy" and corrupt scheduling.
+// Any correct grade (Hard/Good/Easy) now awards the same; only "Again" (1,
+// a failed recall) awards nothing.
 const RATING_XP: Record<Rating, number> = {
-  1: 0, 2: 0, 3: 1, 4: 5,
+  1: 0, 2: 2, 3: 2, 4: 2,
 };
 
 const EVENT_XP: Record<string, number> = {

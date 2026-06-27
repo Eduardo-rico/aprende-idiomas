@@ -4,10 +4,11 @@ import { xpForRating, xpForEvent, levelFromXp, levelProgress } from "@/lib/xp/ca
 import type { Rating } from "@/lib/db/schema";
 
 describe("xpForRating", () => {
+  // E12: XP decoupled from the FSRS rating — any correct grade is equal.
   it("Again (1) = 0", () => expect(xpForRating(1 as Rating)).toBe(0));
-  it("Hard (2) = 0", () => expect(xpForRating(2 as Rating)).toBe(0));
-  it("Good (3) = 1", () => expect(xpForRating(3 as Rating)).toBe(1));
-  it("Easy (4) = 5", () => expect(xpForRating(4 as Rating)).toBe(5));
+  it("Hard (2) = 2", () => expect(xpForRating(2 as Rating)).toBe(2));
+  it("Good (3) = 2", () => expect(xpForRating(3 as Rating)).toBe(2));
+  it("Easy (4) = 2", () => expect(xpForRating(4 as Rating)).toBe(2));
 });
 
 describe("xpForEvent", () => {

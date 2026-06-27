@@ -46,7 +46,9 @@ describe("repository cap + daily mix (T3.4)", () => {
       await seedCard(`n${i}`, 0, now, new Date(now.getTime() - (i + 1) * 60_000));
     }
     const out = await getDueCards(now, 100, { cap: 4, newCardsPerDay: 10 });
-    expect(out.length).toBeLessThanOrEqual(4);
+    // E12: the total may exceed `cap` by at most the new-card floor (3),
+    // which guarantees new learning even when reviews fill the cap.
+    expect(out.length).toBeLessThanOrEqual(4 + FSRS_CONFIG.new_cards_floor);
   });
 
   it("getDueCards review-first ordering: overdue review comes before new", async () => {
@@ -82,12 +84,14 @@ describe("repository cap + daily mix (T3.4)", () => {
       await seedCard(`n${i}`, 0, now, new Date(now.getTime() - (i + 1) * 1000));
     }
     const out = await getDueCards(now, 100, { cap: 5, newCardsPerDay: 3 });
-    // 4 reviews fill 4 slots, leaving 1 slot for a new card.
-    expect(out.length).toBe(5);
+    // Reviews still take all 4 of their slots; E12's new-card floor (3)
+    // then guarantees 3 new cards even though only 1 cap slot remained,
+    // so the total is 4 reviews + 3 new = 7.
     const reviewCount = out.filter((c) => c.state > 0).length;
     const newCount = out.filter((c) => c.state === 0).length;
     expect(reviewCount).toBe(4);
-    expect(newCount).toBe(1);
+    expect(newCount).toBe(FSRS_CONFIG.new_cards_floor);
+    expect(out.length).toBe(4 + FSRS_CONFIG.new_cards_floor);
   });
 
   it("getNewCardCountToday: counts cards introduced since local midnight", async () => {

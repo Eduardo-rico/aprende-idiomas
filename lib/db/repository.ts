@@ -2,6 +2,7 @@
 import { db, type Card, type CardId, type Rating, type AnswerEvent, type GenericEvent, type Session, type StoryProgressRow, type LessonView } from "./schema";
 import { newCard, schedule } from "../srs/fsrs";
 import { buildDueQueue, type DueQueueOptions } from "../srs/review-queue";
+import { FSRS_CONFIG } from "../srs/config";
 import { resetLeech, isLeech } from "../srs/leeches";
 import { recordAnswerForConcepts } from "../mastery/concept";
 import { currentStreak, didStudyToday, isStreakAlive } from "@/lib/streak/streak";
@@ -40,7 +41,7 @@ export async function getDueCards(now: Date, limit: number, options: GetDueCards
   if (newPerDay === 0) {
     return all.slice(0, cap);
   }
-  const { review, newCards } = buildDueQueue(all, { cap, newCardsPerDay: newPerDay } satisfies DueQueueOptions);
+  const { review, newCards } = buildDueQueue(all, { cap, newCardsPerDay: newPerDay, newCardsFloor: FSRS_CONFIG.new_cards_floor } satisfies DueQueueOptions);
   return [...review, ...newCards];
 }
 
@@ -74,7 +75,7 @@ export async function getDueCardsByTag(
   if (newPerDay === 0) {
     return due.slice(0, cap);
   }
-  const { review, newCards } = buildDueQueue(due, { cap, newCardsPerDay: newPerDay } satisfies DueQueueOptions);
+  const { review, newCards } = buildDueQueue(due, { cap, newCardsPerDay: newPerDay, newCardsFloor: FSRS_CONFIG.new_cards_floor } satisfies DueQueueOptions);
   return [...review, ...newCards];
 }
 

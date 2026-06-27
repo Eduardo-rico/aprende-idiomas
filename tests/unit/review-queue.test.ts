@@ -21,6 +21,18 @@ describe("buildDueQueue (T3.8)", () => {
     expect(out.newCards).toEqual([]);
   });
 
+  it("E12: still introduces the floor of new cards when reviews exceed the cap", () => {
+    const past = new Date("2026-06-16T12:00:00Z");
+    const reviews = Array.from({ length: 120 }, (_, i) =>
+      makeCard("r" + i, 2, new Date(past.getTime() + i)),
+    );
+    const fresh = Array.from({ length: 4 }, (_, i) =>
+      makeCard("n" + i, 0, past, new Date(past.getTime() + i)),
+    );
+    const q = buildDueQueue([...reviews, ...fresh], { cap: 100, newCardsPerDay: 10, newCardsFloor: 3 });
+    expect(q.newCards.length).toBe(3);
+  });
+
   it("reviews only: cap limits review slice", () => {
     const now = new Date("2026-06-16T12:00:00Z");
     const cards: Card[] = [

@@ -68,14 +68,11 @@ export default function LearnPage() {
     if (due.length === 0) { router.push(`/${lang}/blocks`); return; }
     const first = due.map((card) => byId.get(card.id)).find(Boolean);
     if (!first) { router.push(`/${lang}/blocks`); return; }
-    // When a tag filter is active, go to /review so the popover can show
-    // the active filter; otherwise reuse the original lesson-scoped path
-    // (faster, no popover).
-    if (activeTags.size > 0) {
-      router.push(`/${lang}/review`);
-    } else {
-      router.push(`/${lang}/practice/${first.lessonId}`);
-    }
+    // E6: the daily mix always goes to the multi-card /review session,
+    // which interleaves reviews + new cards across concepts/types. (It
+    // used to route the no-filter case to a single lesson's /practice,
+    // which defeated interleaving.)
+    router.push(`/${lang}/review`);
   };
 
   const total = counts ? counts.review + counts.newCards : 0;

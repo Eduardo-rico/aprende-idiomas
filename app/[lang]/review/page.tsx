@@ -17,6 +17,7 @@ import { db } from "@/lib/db/schema";
 import { ExerciseRunner } from "@/components/ExerciseRunner";
 import type { Exercise } from "@/lib/data/zod-schemas";
 import { FSRS_CONFIG } from "@/lib/srs/config";
+import { interleave } from "@/lib/srs/interleave";
 import { useSession } from "@/lib/stores/session";
 import { tagLabel } from "@/lib/db/tags";
 import type { Lesson } from "@/lib/data/curriculum-types";
@@ -114,8 +115,15 @@ function ReviewPageInner() {
           return;
         }
 
+        // E6: interleave so consecutive cards rarely share a concept/type
+        // (otherwise reviews and new cards run as two same-concept blocks).
+        const mixed = interleave(
+          due,
+          (id) => byId.get(id)?.concepts?.[0],
+          (id) => byId.get(id)?.type,
+        );
         const ordered: Exercise[] = [];
-        for (const card of due) {
+        for (const card of mixed) {
           const ex = byId.get(card.id);
           if (ex) ordered.push(ex);
         }

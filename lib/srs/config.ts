@@ -44,9 +44,14 @@ export const FSRS_CONFIG = {
    *  session. Limits the cognitive load on a busy day. */
   new_cards_per_day: 10,
 
+  /** E12: guaranteed minimum of new cards per day even when overdue reviews
+   *  fill the cap — heavy-review days never starve new learning. */
+  new_cards_floor: 3,
+
   /** A card is flagged as a "leech" once it has been lapsed this many times.
-   *  UI surfaces a reset action; the algorithm otherwise treats it normally. */
-  leech_lapses_threshold: 8,
+   *  UI surfaces a reset action; the algorithm otherwise treats it normally.
+   *  E12: lowered 8 → 5 so chronically-failed cards surface sooner. */
+  leech_lapses_threshold: 5,
 } satisfies FsrsConfig;
 
 export interface FsrsConfig {
@@ -77,6 +82,9 @@ export interface FsrsConfig {
   /** Maximum brand-new cards (state === 0) introduced in a single /review
    *  session. Limits the cognitive load on a busy day. */
   new_cards_per_day: number;
+
+  /** Guaranteed minimum of new cards per day even when reviews fill the cap. */
+  new_cards_floor: number;
 
   /** A card is flagged as a "leech" once it has been lapsed this many times.
    *  UI surfaces a reset action; the algorithm otherwise treats it normally. */
