@@ -15,7 +15,7 @@ _Last updated: 2026-06-25._
 |---|---|---|
 | content-fixes | `plan5-content-fixes.md` | ✅ done — merged to main |
 | 5a — exercise types + shadowing | `plan5a-exercise-types-shadowing.md` | ✅ done — merged to main |
-| 5b — mass content | `plan5b-mass-content.md` | 🔄 infra + **b2** done; **b3–b10 pending** |
+| 5b — mass content | `plan5b-mass-content.md` | 🔄 infra + **b2, b3** done; **b4–b10 pending** |
 | 5c — richer lessons | `plan5c-richer-lessons.md` | ⬜ not started |
 | 5d — SRS / engagement | `plan5d-srs-engagement.md` | ⬜ not started |
 
@@ -54,8 +54,12 @@ Tooling done:
 - `scripts/prompts/agent-content-brief.md` — shapes, canonical tense/person
   (E9), ES→PT interference rubric (R8), per-block weighting (E8).
 
-Content done: **b2** — 24 text-only items (10 error_correction, 3 MC, 2
-matching, 9 fill_blank). `b2.json` 204→228.
+Content done:
+- **b2** — 24 text-only items (10 error_correction, 3 MC, 2 matching, 9
+  fill_blank). `b2.json` 204→228.
+- **b3** (verb block) — 25 text-only items (13 conjugation variant-aware
+  você/tu, 7 error_correction, 3 fill_blank, 2 MC; no matching/translation).
+  `b3.json` 204→229. Branch `content/5b-b3`, commit `2fbf510`.
 
 ### How to resume b3–b10 (per block N)
 
