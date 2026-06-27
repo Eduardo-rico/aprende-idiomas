@@ -12,11 +12,12 @@
 // page, including /login and /api/auth/*, which intentionally don't
 // get the chrome), and the lang layout adds the LangProvider + NavBar.
 import type { Metadata } from "next";
-import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
+import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", display: "swap" });
-const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta", display: "swap" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono", display: "swap" });
 
 export const metadata: Metadata = {
   title: "Aprende Português",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className="h-full" suppressHydrationWarning>
-      <body className={`${fraunces.variable} ${jakarta.variable} min-h-full flex flex-col font-sans`}>
+      <body className={`${fraunces.variable} ${inter.variable} ${jetbrainsMono.variable} min-h-full flex flex-col font-sans`}>
         {children}
       </body>
     </html>

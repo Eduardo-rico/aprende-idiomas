@@ -1,41 +1,109 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: oklch(0.985 0.02 80);            /* #FFF8E7 cream */
-  --color-bg-elevated: oklch(1 0 0);
-  --color-fg: oklch(0.18 0.02 80);              /* warm dark */
-  --color-fg-muted: oklch(0.5 0.02 80);
-  --color-border: oklch(0.9 0.02 80);
-  --color-primary: oklch(0.86 0.18 95);         /* #FFD60A yellow */
-  --color-accent: oklch(0.62 0.16 155);         /* #00A86B green */
-  --color-error: oklch(0.7 0.18 22);            /* #FF6B6B coral */
-  --color-info: oklch(0.7 0.12 230);            /* #4DA8DA blue */
-  --font-display: "Fraunces", serif;
-  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  /* Paper */
+  --paper: #FBF7EE;
+  --paper-raised: #FFFFFF;
+  --paper-sunken: #F4EFE0;
+  /* Ink */
+  --ink: #2A241D;
+  --ink-muted: #6B6359;
+  --ink-faint: #9A9082;
+  /* Rules */
+  --rule: #DDD6C7;
+  --rule-strong: #C9C0AD;
+  /* Semantic accents */
+  --lesson: #2E8B57;
+  --lesson-soft: #E6F2EA;
+  --review: #D4922A;
+  --review-soft: #FAF2DF;
+  --diagnostic: #4F46E5;
+  --diagnostic-soft: #ECEBFB;
+  /* Variants */
+  --br: #CA8A04;
+  --pt: #1E40AF;
+  /* Status */
+  --success: #2E8B57;
+  --success-soft: #E6F2EA;
+  --error: #B54545;
+  --error-soft: #F8EAEA;
+  --info: #5B9BD5;
+  --info-soft: #EAF2FA;
+  /* Typography */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  /* Shadows */
+  --shadow-xs: 0 1px 1px rgba(42, 36, 29, .04);
+  --shadow-sm: 0 1px 2px rgba(42, 36, 29, .06), 0 1px 1px rgba(42, 36, 29, .04);
+  --shadow-md: 0 4px 12px rgba(42, 36, 29, .07), 0 1px 2px rgba(42, 36, 29, .04);
+  /* Motion */
+  --ease: cubic-bezier(.2, .8, .2, 1);
 }
 
-.dark {
-  --color-bg: oklch(0.16 0.02 80);
-  --color-bg-elevated: oklch(0.22 0.02 80);
-  --color-fg: oklch(0.95 0.02 80);
-  --color-fg-muted: oklch(0.7 0.02 80);
-  --color-border: oklch(0.3 0.02 80);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1A1714;
+    --paper-raised: #23201C;
+    --paper-sunken: #14110F;
+    --ink: #EDE5D5;
+    --ink-muted: #B8AE9D;
+    --ink-faint: #837A6B;
+    --rule: #3A3530;
+    --rule-strong: #524A42;
+    --lesson-soft: #1F2F25;
+    --review-soft: #2F261A;
+    --info-soft: #1A2530;
+    --diagnostic-soft: #211F3F;
+  }
 }
 
 @theme inline {
-  --color-background: var(--color-bg);
-  --color-foreground: var(--color-fg);
-  --color-muted: var(--color-fg-muted);
-  --color-border: var(--color-border);
-  --color-primary: var(--color-primary);
-  --color-accent: var(--color-accent);
-  --color-destructive: var(--color-error);
-  --color-info: var(--color-info);
-  --font-sans: var(--font-sans);
+  /* Paper / Ink / Rules */
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-paper-sunken: var(--paper-sunken);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  /* Semantic accents */
+  --color-lesson: var(--lesson);
+  --color-lesson-soft: var(--lesson-soft);
+  --color-review: var(--review);
+  --color-review-soft: var(--review-soft);
+  --color-diagnostic: var(--diagnostic);
+  --color-diagnostic-soft: var(--diagnostic-soft);
+  /* Variants */
+  --color-br: var(--br);
+  --color-pt: var(--pt);
+  /* Status */
+  --color-error: var(--error);
+  --color-info: var(--info);
+  --color-success: var(--success);
+  /* Legacy aliases (kept so existing components keep compiling) */
+  --color-background: var(--paper);
+  --color-foreground: var(--ink);
+  --color-muted: var(--ink-muted);
+  --color-border: var(--rule);
+  --color-primary: var(--lesson);
+  --color-accent: var(--review);
+  --color-destructive: var(--error);
+  /* Typography */
   --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+  /* Backward-compat: existing classes use font-sans; map it to body */
+  --font-sans: var(--font-body);
+  /* Shadows + motion */
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --ease-default: var(--ease);
 }
 
-body { font-family: var(--font-sans); background: var(--color-bg); color: var(--color-fg); }
+body { font-family: var(--font-body); background: var(--paper); color: var(--ink); }
 h1, h2, h3, h4 { font-family: var(--font-display); }
 
 @keyframes wave {
