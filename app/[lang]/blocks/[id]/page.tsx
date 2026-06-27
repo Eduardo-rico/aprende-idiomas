@@ -86,6 +86,7 @@ export default function BlockPage({ params }: { params: Promise<{ lang: string; 
             lesson={lesson}
             dueCount={dueByLesson[lesson.id] ?? 0}
             blockId={block.id}
+            lang={lang}
           />
         ))}
       </section>
