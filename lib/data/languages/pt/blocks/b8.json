@@ -6548,5 +6548,567 @@
         "audioText": "Diga-me quem deixou o estreante frustrado."
       }
     }
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b8-l3-colocacao-pronominal",
+    "difficulty": 2,
+    "concepts": [
+      "b8-colocacao-pronominal"
+    ],
+    "tags": [
+      "colocacao",
+      "proclise"
+    ],
+    "esContrast": "Tras una palabra negativa va próclise (pronombre antes del verbo): 'não me diga'.",
+    "data": {
+      "sentence": "Não diga-me isso, por favor.",
+      "correct": "Não me diga isso, por favor.",
+      "explanationEs": "La negación 'não' atrae el pronombre a posición proclítica: 'não me diga'."
+    },
+    "id": "c626c3c9",
+    "blockId": 8,
+    "contentHash": "c626c3c974f98e4715675b944956716d94961d04fa6f83f72ca38e2b8f721930"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b8-l3-colocacao-pronominal",
+    "difficulty": 2,
+    "concepts": [
+      "b8-colocacao-pronominal"
+    ],
+    "tags": [
+      "colocacao",
+      "proclise",
+      "que"
+    ],
+    "esContrast": "La conjunción 'que' atrae próclise: 'que me ajude'.",
+    "data": {
+      "sentence": "Espero que ajude-me com o projeto.",
+      "correct": "Espero que me ajude com o projeto.",
+      "explanationEs": "'que' atrae el pronombre a próclise: 'que me ajude'."
+    },
+    "id": "c17161d2",
+    "blockId": 8,
+    "contentHash": "c17161d2b6194af5e04ebccc1feff1a3eceaec34ac0c2a5261bd9267bba3c520"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b8-l3-colocacao-pronominal",
+    "difficulty": 3,
+    "concepts": [
+      "b8-colocacao-pronominal"
+    ],
+    "tags": [
+      "colocacao",
+      "proclise"
+    ],
+    "esContrast": "Las conjunciones subordinantes ('quando') atraen próclise: 'quando o vi'.",
+    "data": {
+      "sentence": "Quando vi-o na rua, fiquei muito feliz.",
+      "correct": "Quando o vi na rua, fiquei muito feliz.",
+      "explanationEs": "'quando' (subordinante) atrae el pronombre antes del verbo: 'quando o vi'."
+    },
+    "id": "d69a8be6",
+    "blockId": 8,
+    "contentHash": "d69a8be642a474494e5e98307e7cc4326a4dd9ada6d30b3ea208658bec26ac6b"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+    "difficulty": 1,
+    "concepts": [
+      "b8-conectores"
+    ],
+    "tags": [
+      "conectores",
+      "interferencia"
+    ],
+    "esContrast": "'mas' (pero) no se confunde con 'mais' (más): falso amigo gráfico.",
+    "data": {
+      "sentence": "Estudei muito, mais não passei na prova.",
+      "correct": "Estudei muito, mas não passei na prova.",
+      "explanationEs": "'mas' significa 'pero'; 'mais' significa 'más'. Aquí es adversativo: 'mas'."
+    },
+    "id": "24de03f2",
+    "blockId": 8,
+    "contentHash": "24de03f2741d14447f54580e9815fa15411cdf145c954ddb2cb792360facd08e"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+    "difficulty": 2,
+    "concepts": [
+      "b8-conectores"
+    ],
+    "tags": [
+      "conectores",
+      "causa"
+    ],
+    "esContrast": "La causa se introduce con 'porque' (junto), no 'por que'.",
+    "data": {
+      "sentence": "Fiquei em casa por que choveu o dia todo.",
+      "correct": "Fiquei em casa porque choveu o dia todo.",
+      "explanationEs": "El conector causal es 'porque' (en una palabra): 'porque choveu'."
+    },
+    "id": "d2eb33c6",
+    "blockId": 8,
+    "contentHash": "d2eb33c6f65973246a67e9cbf425ce3fd8428c4a7253cc390b484554ed0499b7"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+    "difficulty": 3,
+    "concepts": [
+      "b8-conectores"
+    ],
+    "tags": [
+      "conectores",
+      "concessivo",
+      "conjuntivo"
+    ],
+    "esContrast": "'embora' (aunque) pide conjuntivo: 'esteja'.",
+    "data": {
+      "sentence": "Embora ele está cansado, continuou trabalhando.",
+      "correct": "Embora ele esteja cansado, continuou trabalhando.",
+      "explanationEs": "El concesivo 'embora' exige conjuntivo: 'esteja'."
+    },
+    "id": "fa684345",
+    "blockId": 8,
+    "contentHash": "fa6843451f54befebc85196e3ba4447dd01895ab7811b73a9b589816af717c94"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b8-l4-discurso-indireto",
+    "difficulty": 3,
+    "concepts": [
+      "b8-discurso-indireto"
+    ],
+    "tags": [
+      "discurso-indireto",
+      "tempo"
+    ],
+    "esContrast": "En el discurso indirecto en pasado, el presente pasa a imperfeito: 'estava'.",
+    "data": {
+      "sentence": "Ontem ele disse que está muito cansado.",
+      "correct": "Ontem ele disse que estava muito cansado.",
+      "explanationEs": "Discurso indirecto en pasado: presente → imperfeito ('estava')."
+    },
+    "id": "706cc57c",
+    "blockId": 8,
+    "contentHash": "706cc57c7c14dc1e7c69a153c56a3b3f99e30a3813601c716f37dab3e0fe3db4"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b8-l4-discurso-indireto",
+    "difficulty": 3,
+    "concepts": [
+      "b8-discurso-indireto"
+    ],
+    "tags": [
+      "discurso-indireto",
+      "futuro"
+    ],
+    "esContrast": "En el discurso indirecto en pasado, el futuro perifrástico pasa a imperfeito: 'ia viajar'.",
+    "data": {
+      "sentence": "Maria disse que vou viajar na próxima semana.",
+      "correct": "Maria disse que ia viajar na próxima semana.",
+      "explanationEs": "Discurso indirecto en pasado: 'vou viajar' → 'ia viajar', con cambio de pronombre implícito."
+    },
+    "id": "d9a7ac36",
+    "blockId": 8,
+    "contentHash": "d9a7ac365b0c48e44684d82b3e79a6fd126548a135610bdfed030ce1d65d5952"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b8-l2-subordinadas-substantivas-adjetivas",
+    "difficulty": 2,
+    "concepts": [
+      "b8-oracoes-subordinadas"
+    ],
+    "tags": [
+      "subordinada",
+      "dequeismo"
+    ],
+    "esContrast": "'achar' rige 'que' sin 'de' (evitar el dequeísmo): 'acho que'.",
+    "data": {
+      "sentence": "Eu acho de que ele tem razão.",
+      "correct": "Eu acho que ele tem razão.",
+      "explanationEs": "'achar' se construye con 'que' (sin 'de'): 'acho que'."
+    },
+    "id": "6271f983",
+    "blockId": 8,
+    "contentHash": "6271f983bd3b41823aa3cb3ab792349b19e928587ff7cfca88831626a14a76d5"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b8-l2-subordinadas-substantivas-adjetivas",
+    "difficulty": 3,
+    "concepts": [
+      "b8-oracoes-subordinadas"
+    ],
+    "tags": [
+      "relativa",
+      "cujo"
+    ],
+    "esContrast": "La relación de posesión usa el relativo 'cujo': 'cujo autor'.",
+    "data": {
+      "sentence": "O livro que o autor é famoso está esgotado.",
+      "correct": "O livro cujo autor é famoso está esgotado.",
+      "explanationEs": "Para indicar posesión en la relativa se usa 'cujo': 'o livro cujo autor'."
+    },
+    "id": "5a721355",
+    "blockId": 8,
+    "contentHash": "5a7213555a241c3f34d778bc4191eb781dd33af7f384c862d0dad0bac6c53a06"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b8-l2-subordinadas-substantivas-adjetivas",
+    "difficulty": 2,
+    "concepts": [
+      "b8-oracoes-subordinadas"
+    ],
+    "tags": [
+      "relativa",
+      "onde"
+    ],
+    "esContrast": "El lugar en la relativa se introduce con 'onde': 'a cidade onde moro'.",
+    "data": {
+      "sentence": "A cidade que eu moro é muito bonita.",
+      "correct": "A cidade onde eu moro é muito bonita.",
+      "explanationEs": "Para lugar se usa el relativo 'onde': 'a cidade onde moro'."
+    },
+    "id": "0f44db92",
+    "blockId": 8,
+    "contentHash": "0f44db9261965cd5d1319ee460c81b4d4a18276e2c83212f51bcc31a4024c1cd"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+    "difficulty": 2,
+    "concepts": [
+      "b8-conectores"
+    ],
+    "tags": [
+      "conectores",
+      "consecutivo",
+      "interferencia"
+    ],
+    "esContrast": "Calco del español 'entonces'; el consecutivo en PT es 'então'.",
+    "data": {
+      "sentence": "Estava cansado, entonces fui dormir cedo.",
+      "correct": "Estava cansado, então fui dormir cedo.",
+      "explanationEs": "El conector consecutivo en portugués es 'então' (no el español 'entonces')."
+    },
+    "id": "89d9cd61",
+    "blockId": 8,
+    "contentHash": "89d9cd61b639c12986a5437a2641654edde694fe5b47479fbbbe953ec32fd410"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+    "difficulty": 2,
+    "concepts": [
+      "b8-conectores"
+    ],
+    "tags": [
+      "conectores",
+      "concessivo"
+    ],
+    "data": {
+      "question": "'embora' introduce una idea de:",
+      "options": [
+        "concesión",
+        "causa",
+        "tiempo"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "'embora' (aunque) es concesivo y pide conjuntivo."
+    },
+    "id": "e0aa80cf",
+    "blockId": 8,
+    "contentHash": "e0aa80cfdbfa705d4368cb58cb7bd01af54833f05ef799a71982290b73dc8a7f"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b8-l3-colocacao-pronominal",
+    "difficulty": 2,
+    "concepts": [
+      "b8-colocacao-pronominal"
+    ],
+    "tags": [
+      "colocacao",
+      "proclise"
+    ],
+    "data": {
+      "question": "¿Cuál palabra atrae el pronombre antes del verbo (próclise)?",
+      "options": [
+        "não",
+        "sim",
+        "muito"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "Las palabras negativas como 'não' atraen próclise: 'não me diga'."
+    },
+    "id": "5df58939",
+    "blockId": 8,
+    "contentHash": "5df589390be8d65c812fe6bfbd0518cd07267edcb8a0b13428f607af4dcd2b6a"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b8-l4-discurso-indireto",
+    "difficulty": 3,
+    "concepts": [
+      "b8-discurso-indireto"
+    ],
+    "tags": [
+      "discurso-indireto"
+    ],
+    "data": {
+      "question": "Directo: 'Vou ao cinema.' Indirecto en pasado: 'Ele disse que ___ ao cinema.'",
+      "options": [
+        "ia",
+        "vai",
+        "foi"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "El futuro perifrástico 'vou' pasa a imperfeito 'ia' en el discurso indirecto en pasado."
+    },
+    "id": "2440db88",
+    "blockId": 8,
+    "contentHash": "2440db883cc977de62683c5f8fbf29beb89507da5cd9fc4c774e66d25c0d9a50"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b8-l2-subordinadas-substantivas-adjetivas",
+    "difficulty": 2,
+    "concepts": [
+      "b8-oracoes-subordinadas"
+    ],
+    "tags": [
+      "relativa",
+      "onde"
+    ],
+    "data": {
+      "question": "'La casa ___ vivo' (= donde vivo):",
+      "options": [
+        "onde",
+        "que",
+        "cujo"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "Para lugar se usa 'onde': 'a casa onde vivo'."
+    },
+    "id": "c5d95688",
+    "blockId": 8,
+    "contentHash": "c5d95688885be78aa95a0a4160c8727b99190b44d58ed97247d55ce9dc885c9b"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+    "difficulty": 1,
+    "concepts": [
+      "b8-conectores"
+    ],
+    "tags": [
+      "conectores",
+      "interferencia"
+    ],
+    "data": {
+      "question": "'Pero' (adversativo) en portugués es:",
+      "options": [
+        "mas",
+        "mais",
+        "mes"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "'mas' = pero; 'mais' = más. Son falsos amigos gráficos."
+    },
+    "id": "916d035f",
+    "blockId": 8,
+    "contentHash": "916d035fcabd59f4949d22083929e0fa7fbc5dc49a51b7e9c46840208fb8673b"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b8-l3-colocacao-pronominal",
+    "difficulty": 3,
+    "concepts": [
+      "b8-colocacao-pronominal"
+    ],
+    "tags": [
+      "colocacao",
+      "mesoclise"
+    ],
+    "data": {
+      "question": "La mesóclise (ej. 'dir-se-á') aparece con verbos en:",
+      "options": [
+        "futuro y condicional",
+        "presente",
+        "pasado"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "La mesóclise solo ocurre con futuro do presente y condicional: 'dir-se-á', 'far-se-ia'."
+    },
+    "id": "934ae377",
+    "blockId": 8,
+    "contentHash": "934ae377ca6890aa8e7b55c92471f30422651fb14ccf1d579f481b3be1d66706"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b8-l2-subordinadas-substantivas-adjetivas",
+    "difficulty": 2,
+    "concepts": [
+      "b8-oracoes-subordinadas"
+    ],
+    "tags": [
+      "relativa",
+      "cujo"
+    ],
+    "data": {
+      "question": "El relativo 'cujo' expresa:",
+      "options": [
+        "posesión",
+        "lugar",
+        "tiempo"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "'cujo' indica posesión: 'o autor cujo livro...'."
+    },
+    "id": "10d4feb6",
+    "blockId": 8,
+    "contentHash": "10d4feb6c6d0d3db17b6234fd5541da91d92476e4ac28a5c76b7733c892fac02"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+    "difficulty": 1,
+    "concepts": [
+      "b8-conectores"
+    ],
+    "tags": [
+      "conectores",
+      "causa"
+    ],
+    "esContrast": "Causa = 'porque'.",
+    "data": {
+      "sentence": "Não saí de casa ___ estava chovendo muito.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "porque"
+        }
+      ]
+    },
+    "id": "c95d14b1",
+    "blockId": 8,
+    "contentHash": "c95d14b18dfac18b5e51692ee6cad8c310fdccb851f1414fa4a9754932157cff"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+    "difficulty": 3,
+    "concepts": [
+      "b8-conectores"
+    ],
+    "tags": [
+      "conectores",
+      "concessivo"
+    ],
+    "esContrast": "Concesivo + conjuntivo: 'Embora estivesse...'.",
+    "data": {
+      "sentence": "___ estivesse cansado, ele terminou o relatório.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "Embora"
+        }
+      ]
+    },
+    "id": "28a83819",
+    "blockId": 8,
+    "contentHash": "28a83819badca8d6e4b7e46df168ccb71703e97839288729e41554c37ca36d20"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b8-l3-colocacao-pronominal",
+    "difficulty": 2,
+    "concepts": [
+      "b8-colocacao-pronominal"
+    ],
+    "tags": [
+      "colocacao",
+      "proclise"
+    ],
+    "esContrast": "Tras 'não' va próclise: 'não me disse'.",
+    "data": {
+      "sentence": "Ele não ___ disse nada sobre a viagem.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "me"
+        }
+      ]
+    },
+    "id": "e75e296f",
+    "blockId": 8,
+    "contentHash": "e75e296f16bd7d19e695153a5c047482cfa37aba1d1ff89a5610048e4a71cd62"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b8-l4-discurso-indireto",
+    "difficulty": 3,
+    "concepts": [
+      "b8-discurso-indireto"
+    ],
+    "tags": [
+      "discurso-indireto"
+    ],
+    "esContrast": "Pregunta indirecta en pasado: presente → imperfeito 'queria'.",
+    "data": {
+      "sentence": "Ele perguntou se eu ___ (querer) ir ao cinema com ele.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "queria"
+        }
+      ]
+    },
+    "id": "95e39a7a",
+    "blockId": 8,
+    "contentHash": "95e39a7a54018aa7dfc1461ca808004df90ea181d564ec4e1bfacd02dc4b2878"
+  },
+  {
+    "type": "matching",
+    "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+    "difficulty": 2,
+    "concepts": [
+      "b8-conectores"
+    ],
+    "tags": [
+      "conectores"
+    ],
+    "data": {
+      "pairs": [
+        {
+          "left": "porque",
+          "right": "causa"
+        },
+        {
+          "left": "mas",
+          "right": "oposição"
+        },
+        {
+          "left": "então",
+          "right": "consequência"
+        },
+        {
+          "left": "embora",
+          "right": "concessão"
+        }
+      ]
+    },
+    "id": "23fe61d0",
+    "blockId": 8,
+    "contentHash": "23fe61d090bc555495faeb87126cf535a32a258f39567eeef7147e2507edeede"
   }
 ]

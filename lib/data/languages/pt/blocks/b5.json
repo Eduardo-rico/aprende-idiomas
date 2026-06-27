@@ -6482,5 +6482,576 @@
       "front": "¿Cuál es la diferencia entre 'se' (condicional) y 'se' (reflexivo)?",
       "back": "Se condicional: conjunción que introduce una condición.\nEjemplo: Se chover, fico em casa.\n\nSe reflexivo: pronombre que indica ação do sujeito sobre si mesmo.\nEjemplo: Eu me esfuerzo todos os dias."
     }
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 1,
+    "concepts": [
+      "b5-futuro-presente"
+    ],
+    "tags": [
+      "futuro",
+      "-ar"
+    ],
+    "data": {
+      "infinitive": "falar",
+      "person": "eu",
+      "tense": "futuro do presente",
+      "answer": "falarei",
+      "hintEs": "yo hablaré"
+    },
+    "id": "dcc3f383",
+    "blockId": 5,
+    "contentHash": "dcc3f383c404ea64ad48e02f2ab2711eddf530a8589663498baec8c418c75c35"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 1,
+    "concepts": [
+      "b5-futuro-presente"
+    ],
+    "tags": [
+      "futuro",
+      "ser"
+    ],
+    "data": {
+      "infinitive": "ser",
+      "person": "eu",
+      "tense": "futuro do presente",
+      "answer": "serei",
+      "hintEs": "yo seré"
+    },
+    "id": "cd2409b8",
+    "blockId": 5,
+    "contentHash": "cd2409b8037528cdd8204c8506f447148a92355d29a843fb8719a869aa515c11"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 2,
+    "concepts": [
+      "b5-futuro-presente"
+    ],
+    "tags": [
+      "futuro",
+      "irregular",
+      "fazer"
+    ],
+    "data": {
+      "infinitive": "fazer",
+      "person": "eu",
+      "tense": "futuro do presente",
+      "answer": "farei",
+      "hintEs": "yo haré"
+    },
+    "id": "e448128f",
+    "blockId": 5,
+    "contentHash": "e448128f5d4b0be9b575ca251cb950be8bf561e2c80228de048b240e44dc2c51"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 2,
+    "concepts": [
+      "b5-futuro-presente"
+    ],
+    "tags": [
+      "futuro",
+      "irregular",
+      "dizer"
+    ],
+    "data": {
+      "infinitive": "dizer",
+      "person": "eu",
+      "tense": "futuro do presente",
+      "answer": "direi",
+      "hintEs": "yo diré"
+    },
+    "id": "dc8aba2f",
+    "blockId": 5,
+    "contentHash": "dc8aba2f2582abbc35e21bc94ced3ad45eb8b9c37a58c05c748691d1120889c8"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 3,
+    "concepts": [
+      "b5-futuro-presente"
+    ],
+    "tags": [
+      "futuro",
+      "irregular",
+      "trazer"
+    ],
+    "data": {
+      "infinitive": "trazer",
+      "person": "eles/elas",
+      "tense": "futuro do presente",
+      "answer": "trarão",
+      "hintEs": "ellos/ellas traerán"
+    },
+    "id": "99014239",
+    "blockId": 5,
+    "contentHash": "9901423934ce14392c418487cd3ca8ea1336bb37a01353fb3946cf1e8a2698fe"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 2,
+    "concepts": [
+      "b5-futuro-presente"
+    ],
+    "tags": [
+      "futuro",
+      "ter"
+    ],
+    "data": {
+      "infinitive": "ter",
+      "person": "você",
+      "tense": "futuro do presente",
+      "answer": "terá",
+      "hintEs": "tú/usted tendrá(s)"
+    },
+    "variantOverrides": {
+      "pt-pt": {
+        "answer": "terás"
+      }
+    },
+    "id": "37740d01",
+    "blockId": 5,
+    "contentHash": "37740d017fe7e70a01a447419d995b0f5b2fe5dda472a90f4b4df0066e40d852"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 1,
+    "concepts": [
+      "b5-futuro-presente"
+    ],
+    "tags": [
+      "futuro",
+      "ir"
+    ],
+    "data": {
+      "infinitive": "ir",
+      "person": "eu",
+      "tense": "futuro do presente",
+      "answer": "irei",
+      "hintEs": "yo iré"
+    },
+    "id": "7531c36d",
+    "blockId": 5,
+    "contentHash": "7531c36d29b26a7092b084cec3f823f3736018b38aea395467c52a1d33fd034f"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b5-l3-condicional",
+    "difficulty": 1,
+    "concepts": [
+      "b5-condicional"
+    ],
+    "tags": [
+      "condicional",
+      "-ar"
+    ],
+    "data": {
+      "infinitive": "falar",
+      "person": "eu",
+      "tense": "condicional",
+      "answer": "falaria",
+      "hintEs": "yo hablaría"
+    },
+    "id": "2f68e579",
+    "blockId": 5,
+    "contentHash": "2f68e5794be44835bf290fabf3537846f0869148250654928b933736370fd4e3"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b5-l3-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-condicional"
+    ],
+    "tags": [
+      "condicional",
+      "irregular",
+      "fazer"
+    ],
+    "data": {
+      "infinitive": "fazer",
+      "person": "eu",
+      "tense": "condicional",
+      "answer": "faria",
+      "hintEs": "yo haría"
+    },
+    "id": "b785e4db",
+    "blockId": 5,
+    "contentHash": "b785e4db94a288419d4562536d70332688dc71bd6cf0e90d038f5307b424a1f8"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b5-l3-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-condicional"
+    ],
+    "tags": [
+      "condicional",
+      "irregular",
+      "dizer"
+    ],
+    "data": {
+      "infinitive": "dizer",
+      "person": "eu",
+      "tense": "condicional",
+      "answer": "diria",
+      "hintEs": "yo diría"
+    },
+    "id": "55a0666f",
+    "blockId": 5,
+    "contentHash": "55a0666fc16c547f8ba398d35cb99984fee56e8e9c853c03a0bbdeaa767124e2"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b5-l3-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-condicional"
+    ],
+    "tags": [
+      "condicional",
+      "ser"
+    ],
+    "data": {
+      "infinitive": "ser",
+      "person": "eles/elas",
+      "tense": "condicional",
+      "answer": "seriam",
+      "hintEs": "ellos/ellas serían"
+    },
+    "id": "4c7ac2f0",
+    "blockId": 5,
+    "contentHash": "4c7ac2f05256b392622104a63988b70a6df21f21abb4f424451ec2f6f1e32519"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b5-l3-condicional",
+    "difficulty": 1,
+    "concepts": [
+      "b5-condicional"
+    ],
+    "tags": [
+      "condicional",
+      "cortesia"
+    ],
+    "data": {
+      "infinitive": "gostar",
+      "person": "eu",
+      "tense": "condicional",
+      "answer": "gostaria",
+      "hintEs": "yo querría/me gustaría"
+    },
+    "id": "05449e18",
+    "blockId": 5,
+    "contentHash": "05449e184dabc3cd079565ade9a1116673631dc045f73dbb394e7728c0f97e1f"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b5-l3-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-condicional"
+    ],
+    "tags": [
+      "condicional",
+      "ver"
+    ],
+    "data": {
+      "infinitive": "ver",
+      "person": "eu",
+      "tense": "condicional",
+      "answer": "veria",
+      "hintEs": "yo vería"
+    },
+    "id": "b81e8fda",
+    "blockId": 5,
+    "contentHash": "b81e8fda29ba46380a36275c417c445810cb66141bab0728f5bc5d0961a02887"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 1,
+    "concepts": [
+      "b5-futuro-presente"
+    ],
+    "tags": [
+      "futuro",
+      "interferencia"
+    ],
+    "esContrast": "Calco del acento español ('hablaré'); el futuro en PT hace la 1ª persona en '-ei': 'falarei'.",
+    "data": {
+      "sentence": "Amanhã eu falaré com o chefe.",
+      "correct": "Amanhã eu falarei com o chefe.",
+      "explanationEs": "El futuro do presente hace la 1ª persona en '-ei': 'falarei' (no el español 'falaré')."
+    },
+    "id": "85396ad6",
+    "blockId": 5,
+    "contentHash": "85396ad6d0d789b09f180e4bc5af118cb931d31cd0a18b60fec202d7e4cd3267"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 2,
+    "concepts": [
+      "b5-futuro-presente"
+    ],
+    "tags": [
+      "futuro",
+      "irregular",
+      "fazer"
+    ],
+    "esContrast": "'fazer' tiene futuro irregular: 'farei', no la forma regular 'fazerei'.",
+    "data": {
+      "sentence": "Eu fazerei isso amanhã de manhã.",
+      "correct": "Eu farei isso amanhã de manhã.",
+      "explanationEs": "El futuro de 'fazer' es irregular: 'farei' (no 'fazerei')."
+    },
+    "id": "da0227bd",
+    "blockId": 5,
+    "contentHash": "da0227bd3bbc11ce81c4f64ec26bd3cb84bb777383152265e327c87898924d0f"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b5-l2-futuro-composto",
+    "difficulty": 2,
+    "concepts": [
+      "b5-futuro-composto"
+    ],
+    "tags": [
+      "perifrastico",
+      "interferencia"
+    ],
+    "esContrast": "El futuro perifrástico en PT es 'ir + infinitivo' SIN 'a' (vou falar), a diferencia del español 'ir a + infinitivo'.",
+    "data": {
+      "sentence": "Eu vou a falar com ela hoje.",
+      "correct": "Eu vou falar com ela hoje.",
+      "explanationEs": "En portugués el futuro perifrástico no lleva 'a': 'vou falar' (no 'vou a falar')."
+    },
+    "id": "eb7f85c1",
+    "blockId": 5,
+    "contentHash": "eb7f85c1c6b5365f23fa0895e165ed70f226ce39b9a12c45ce7f5ce4f3fa3f3b"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b5-l3-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-condicional"
+    ],
+    "tags": [
+      "condicional",
+      "cortesia"
+    ],
+    "esContrast": "El condicional de 'poder' es 'poderia' (sin tilde, distinto del español 'podría').",
+    "data": {
+      "sentence": "Você podería me ajudar com isto?",
+      "correct": "Você poderia me ajudar com isto?",
+      "explanationEs": "El condicional de 'poder' en PT es 'poderia'."
+    },
+    "id": "adab6a42",
+    "blockId": 5,
+    "contentHash": "adab6a42a6025ad463f2f1640b205d9d9a74d0f76ccb462741a3c7c11ac1d475"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b5-l4-se-futuro-condicional",
+    "difficulty": 3,
+    "concepts": [
+      "b5-se-condicional"
+    ],
+    "tags": [
+      "condicional",
+      "irrealis"
+    ],
+    "esContrast": "En la condición irreal NO se usa condicional tras 'se'; va el imperfeito do conjuntivo ('tivesse'), calco del español 'si tendría'.",
+    "data": {
+      "sentence": "Se eu teria dinheiro, eu compraria uma casa.",
+      "correct": "Se eu tivesse dinheiro, eu compraria uma casa.",
+      "explanationEs": "En la condicional irreal, tras 'se' va imperfeito do conjuntivo ('tivesse') y en la principal el condicional ('compraria')."
+    },
+    "id": "b2959079",
+    "blockId": 5,
+    "contentHash": "b29590793755550dcaa79bdd4176c23c9992f2a9fc52338d9c08fa3f76f02e00"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b5-l3-condicional",
+    "difficulty": 3,
+    "concepts": [
+      "b5-condicional"
+    ],
+    "tags": [
+      "condicional",
+      "discurso-indireto"
+    ],
+    "esContrast": "El discurso indirecto en pasado convierte el futuro en condicional: 'chegaria'.",
+    "data": {
+      "sentence": "Ele disse que chegará tarde à reunião.",
+      "correct": "Ele disse que chegaria tarde à reunião.",
+      "explanationEs": "En el discurso indirecto en pasado, el futuro pasa a condicional: 'disse que chegaria'."
+    },
+    "id": "dc5f73f8",
+    "blockId": 5,
+    "contentHash": "dc5f73f8156c75ec0187fdf196572839c25a67c2e1757e7c96fe8b1ae081def2"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 2,
+    "concepts": [
+      "b5-futuro-presente"
+    ],
+    "tags": [
+      "futuro"
+    ],
+    "esContrast": "Futuro de 'viajar' en 'nós': 'viajaremos'.",
+    "data": {
+      "sentence": "Amanhã nós ___ (viajar) para o Rio de Janeiro.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "viajaremos"
+        }
+      ]
+    },
+    "id": "7502f1c7",
+    "blockId": 5,
+    "contentHash": "7502f1c7932ae272a38c50132a7062111d92146dbaf99a6cc630d5db86c1ff98"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b5-l3-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-condicional"
+    ],
+    "tags": [
+      "condicional",
+      "cortesia"
+    ],
+    "esContrast": "Petición cortés con condicional: 'poderia'.",
+    "data": {
+      "sentence": "Você ___ (poder) me ajudar, por favor?",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "poderia"
+        }
+      ]
+    },
+    "id": "3dc6033d",
+    "blockId": 5,
+    "contentHash": "3dc6033d1d93b3fc87b37d45bda32b389627d1a826761ef41e6d7c718885fed9"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b5-l2-futuro-composto",
+    "difficulty": 1,
+    "concepts": [
+      "b5-futuro-composto"
+    ],
+    "tags": [
+      "perifrastico"
+    ],
+    "esContrast": "Futuro perifrástico = 'ir' conjugado + infinitivo: 'vou estudar'.",
+    "data": {
+      "sentence": "Eu ___ estudar mais no próximo ano.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "vou"
+        }
+      ]
+    },
+    "id": "73a4d2cb",
+    "blockId": 5,
+    "contentHash": "73a4d2cb3c92ff4be09b9a8dbc3cbc5ee9ae592ecf7689b57006195d86c35c4a"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 2,
+    "concepts": [
+      "b5-futuro-presente"
+    ],
+    "tags": [
+      "futuro",
+      "irregular"
+    ],
+    "data": {
+      "question": "¿Cuál es el futuro do presente de 'fazer' (eu)?",
+      "options": [
+        "farei",
+        "fazerei",
+        "faço"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "'fazer' es irregular en futuro: 'farei'. 'fazerei' no existe y 'faço' es presente."
+    },
+    "id": "4b100602",
+    "blockId": 5,
+    "contentHash": "4b100602e9db36751880569cd188b35fbc0b50f3f3270012ee9f4bd54eedb27b"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b5-l2-futuro-composto",
+    "difficulty": 2,
+    "concepts": [
+      "b5-futuro-composto"
+    ],
+    "tags": [
+      "perifrastico",
+      "registro"
+    ],
+    "data": {
+      "question": "En portugués brasileño coloquial, ¿cómo se expresa más a menudo el futuro?",
+      "options": [
+        "vou falar (ir + infinitivo)",
+        "falarei (futuro simple)",
+        "falo (presente)"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "El brasileño coloquial prefiere el futuro perifrástico 'ir + infinitivo' (vou falar) sobre el futuro simple."
+    },
+    "id": "d4b0188a",
+    "blockId": 5,
+    "contentHash": "d4b0188a60c4fbbe2b85945173b6201027f46e963724cb64a7e625a0ab5a0391"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b5-l4-se-futuro-condicional",
+    "difficulty": 3,
+    "concepts": [
+      "b5-se-condicional"
+    ],
+    "tags": [
+      "condicional",
+      "irrealis"
+    ],
+    "data": {
+      "question": "'Se eu tivesse dinheiro, ___ uma casa.' ¿Cuál completa correctamente?",
+      "options": [
+        "compraria",
+        "comprarei",
+        "comprava"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "Condición irreal: la principal va en condicional ('compraria')."
+    },
+    "id": "707ac39c",
+    "blockId": 5,
+    "contentHash": "707ac39c5c670ad445a64ac2903b67067438d27872c5295339673da3eba394e5"
   }
 ]

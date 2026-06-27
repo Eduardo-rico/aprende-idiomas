@@ -8031,5 +8031,593 @@
         "Eles já a tinham pedido quando chegamos."
       ]
     }
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b4-l1-perfeito-regular",
+    "difficulty": 1,
+    "concepts": [
+      "b4-perfeito-regular"
+    ],
+    "tags": [
+      "perfeito",
+      "-ar"
+    ],
+    "data": {
+      "infinitive": "falar",
+      "person": "eu",
+      "tense": "pretérito perfeito",
+      "answer": "falei",
+      "hintEs": "yo hablé"
+    },
+    "id": "5981c546",
+    "blockId": 4,
+    "contentHash": "5981c546be7b294bc6c98dd42538c5256efd0d0aacaf7ce1e709fac6bb59c70b"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b4-l1-perfeito-regular",
+    "difficulty": 2,
+    "concepts": [
+      "b4-perfeito-regular"
+    ],
+    "tags": [
+      "perfeito",
+      "-er"
+    ],
+    "data": {
+      "infinitive": "comer",
+      "person": "você",
+      "tense": "pretérito perfeito",
+      "answer": "comeu",
+      "hintEs": "tú/usted comió/comiste"
+    },
+    "variantOverrides": {
+      "pt-pt": {
+        "answer": "comeste"
+      }
+    },
+    "id": "72e90352",
+    "blockId": 4,
+    "contentHash": "72e903523681d9a9600ea57cfe8a5da4464a55529563d9fb3e592fe96af212c3"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b4-l1-perfeito-regular",
+    "difficulty": 2,
+    "concepts": [
+      "b4-perfeito-regular"
+    ],
+    "tags": [
+      "perfeito",
+      "-ir"
+    ],
+    "data": {
+      "infinitive": "partir",
+      "person": "eles/elas",
+      "tense": "pretérito perfeito",
+      "answer": "partiram",
+      "hintEs": "ellos/ellas partieron/salieron"
+    },
+    "id": "31e6a7ee",
+    "blockId": 4,
+    "contentHash": "31e6a7ee6c2051cea4e9bc6df2faa32aa5623287311730625ef5cc35f594cc38"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b4-l1-perfeito-regular",
+    "difficulty": 3,
+    "concepts": [
+      "b4-perfeito-regular"
+    ],
+    "tags": [
+      "perfeito",
+      "-ar",
+      "variante"
+    ],
+    "esContrast": "En PT-PT el acento distingue el tiempo: 'trabalhámos' (perfeito) vs 'trabalhamos' (presente). En BR ambas se escriben igual.",
+    "data": {
+      "infinitive": "trabalhar",
+      "person": "nós",
+      "tense": "pretérito perfeito",
+      "answer": "trabalhamos",
+      "hintEs": "nosotros trabajamos (pasado)"
+    },
+    "variantOverrides": {
+      "pt-pt": {
+        "answer": "trabalhámos"
+      }
+    },
+    "id": "35cc02df",
+    "blockId": 4,
+    "contentHash": "35cc02df57e26d5fd7ed1246e8ba201eda906630146c3bddca15ba81476936da"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b4-l2-perfeito-irregular",
+    "difficulty": 1,
+    "concepts": [
+      "b4-perfeito-irregular"
+    ],
+    "tags": [
+      "perfeito",
+      "irregular",
+      "ser"
+    ],
+    "data": {
+      "infinitive": "ser",
+      "person": "eu",
+      "tense": "pretérito perfeito",
+      "answer": "fui",
+      "hintEs": "yo fui"
+    },
+    "id": "4dde0a01",
+    "blockId": 4,
+    "contentHash": "4dde0a01caa560e2cf0019f235fe0840b9c780a03427035e7ca4b94c5ab12de3"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b4-l2-perfeito-irregular",
+    "difficulty": 2,
+    "concepts": [
+      "b4-perfeito-irregular"
+    ],
+    "tags": [
+      "perfeito",
+      "irregular",
+      "ter"
+    ],
+    "data": {
+      "infinitive": "ter",
+      "person": "ele/ela",
+      "tense": "pretérito perfeito",
+      "answer": "teve",
+      "hintEs": "él/ella tuvo"
+    },
+    "id": "52622d66",
+    "blockId": 4,
+    "contentHash": "52622d66f60452cece08117c4b4e5d058a3bedc4a804233b43fc62574b889230"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b4-l2-perfeito-irregular",
+    "difficulty": 2,
+    "concepts": [
+      "b4-perfeito-irregular"
+    ],
+    "tags": [
+      "perfeito",
+      "irregular",
+      "fazer"
+    ],
+    "data": {
+      "infinitive": "fazer",
+      "person": "eu",
+      "tense": "pretérito perfeito",
+      "answer": "fiz",
+      "hintEs": "yo hice"
+    },
+    "id": "4a6bf5f1",
+    "blockId": 4,
+    "contentHash": "4a6bf5f1695a06cc0402d00d157abb3e05c3b6343047860ee8cd875f9d0b48c1"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b4-l2-perfeito-irregular",
+    "difficulty": 2,
+    "concepts": [
+      "b4-perfeito-irregular"
+    ],
+    "tags": [
+      "perfeito",
+      "irregular",
+      "dizer"
+    ],
+    "data": {
+      "infinitive": "dizer",
+      "person": "eu",
+      "tense": "pretérito perfeito",
+      "answer": "disse",
+      "hintEs": "yo dije"
+    },
+    "id": "a9803655",
+    "blockId": 4,
+    "contentHash": "a9803655c646a317299331c8fbf9d36f76c1ade985c99e4a482c4badaf5f1802"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b4-l2-perfeito-irregular",
+    "difficulty": 3,
+    "concepts": [
+      "b4-perfeito-irregular"
+    ],
+    "tags": [
+      "perfeito",
+      "irregular",
+      "poder"
+    ],
+    "data": {
+      "infinitive": "poder",
+      "person": "eu",
+      "tense": "pretérito perfeito",
+      "answer": "pude",
+      "hintEs": "yo pude"
+    },
+    "id": "62c56cbf",
+    "blockId": 4,
+    "contentHash": "62c56cbf3801e2480722e276285d25dab2641c54cbe8451ef776da0f8b016f7b"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b4-l2-perfeito-irregular",
+    "difficulty": 3,
+    "concepts": [
+      "b4-perfeito-irregular"
+    ],
+    "tags": [
+      "perfeito",
+      "irregular",
+      "por"
+    ],
+    "data": {
+      "infinitive": "pôr",
+      "person": "eu",
+      "tense": "pretérito perfeito",
+      "answer": "pus",
+      "hintEs": "yo puse"
+    },
+    "id": "2b827e19",
+    "blockId": 4,
+    "contentHash": "2b827e1908f3e91d40f67eade127df8577092577509ba855e93bdb0e62b1bb62"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b4-l3-imperfeito",
+    "difficulty": 1,
+    "concepts": [
+      "b4-imperfeito"
+    ],
+    "tags": [
+      "imperfeito",
+      "-ar"
+    ],
+    "data": {
+      "infinitive": "falar",
+      "person": "eu",
+      "tense": "pretérito imperfeito",
+      "answer": "falava",
+      "hintEs": "yo hablaba"
+    },
+    "id": "259a72a1",
+    "blockId": 4,
+    "contentHash": "259a72a1dcd84cafb53b1a74f842b180c9defacf883e83f6b805b9860eba7251"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b4-l3-imperfeito",
+    "difficulty": 2,
+    "concepts": [
+      "b4-imperfeito"
+    ],
+    "tags": [
+      "imperfeito",
+      "irregular",
+      "ser"
+    ],
+    "data": {
+      "infinitive": "ser",
+      "person": "eu",
+      "tense": "pretérito imperfeito",
+      "answer": "era",
+      "hintEs": "yo era"
+    },
+    "id": "26c25856",
+    "blockId": 4,
+    "contentHash": "26c2585635d49b2594b376ce8daa5234cc048f8388f3494bbbd42ba13144715b"
+  },
+  {
+    "type": "conjugation",
+    "lessonId": "b4-l3-imperfeito",
+    "difficulty": 2,
+    "concepts": [
+      "b4-imperfeito"
+    ],
+    "tags": [
+      "imperfeito",
+      "irregular",
+      "ir"
+    ],
+    "data": {
+      "infinitive": "ir",
+      "person": "nós",
+      "tense": "pretérito imperfeito",
+      "answer": "íamos",
+      "hintEs": "nosotros íbamos"
+    },
+    "id": "3118c921",
+    "blockId": 4,
+    "contentHash": "3118c92131e276194b810a23bdf1ef2d045af5cbdaebac43dd5a5c427ed3237d"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b4-l1-perfeito-regular",
+    "difficulty": 1,
+    "concepts": [
+      "b4-perfeito-regular"
+    ],
+    "tags": [
+      "perfeito",
+      "interferencia"
+    ],
+    "esContrast": "La 1ª persona del perfeito en -ar termina en '-ei' (falei), no en '-é' como el español 'hablé'.",
+    "data": {
+      "sentence": "Ontem eu falé com ela por telefone.",
+      "correct": "Ontem eu falei com ela por telefone.",
+      "explanationEs": "El pretérito perfeito de los verbos en -ar hace la 1ª persona en '-ei': 'falei'."
+    },
+    "id": "2720f54b",
+    "blockId": 4,
+    "contentHash": "2720f54b0db5e3c5d62518c0315acfaf941b0424fe97bcbc600e54d2b7982246"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b4-l2-perfeito-irregular",
+    "difficulty": 2,
+    "concepts": [
+      "b4-perfeito-irregular"
+    ],
+    "tags": [
+      "perfeito",
+      "irregular",
+      "fazer"
+    ],
+    "esContrast": "'fazer' es irregular en el perfeito: 'fiz', no la forma regular 'fazi'.",
+    "data": {
+      "sentence": "Eu fazi todo o trabalho ontem.",
+      "correct": "Eu fiz todo o trabalho ontem.",
+      "explanationEs": "El pretérito perfeito de 'fazer' en 1ª persona es 'fiz' (irregular)."
+    },
+    "id": "c5b8eb1e",
+    "blockId": 4,
+    "contentHash": "c5b8eb1e8b41ef115c26ddf9cbffcb8a38e84739e9dd750802f4361f847696d4"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b4-l2-perfeito-irregular",
+    "difficulty": 2,
+    "concepts": [
+      "b4-perfeito-irregular"
+    ],
+    "tags": [
+      "perfeito",
+      "irregular",
+      "ter",
+      "interferencia"
+    ],
+    "esContrast": "Calco del español 'tuvo'; el perfeito de 'ter' en 3ª persona es 'teve'.",
+    "data": {
+      "sentence": "Ontem ele tuvo um problema no trabalho.",
+      "correct": "Ontem ele teve um problema no trabalho.",
+      "explanationEs": "El pretérito perfeito de 'ter' en 3ª persona es 'teve' (no el español 'tuvo')."
+    },
+    "id": "258da011",
+    "blockId": 4,
+    "contentHash": "258da01194bbfd10636b2d1bd8db64db1e516f80df175ae207ecc08be8e203e7"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b4-l4-contraste-perfeito-imperfeito",
+    "difficulty": 3,
+    "concepts": [
+      "b4-contraste-passado"
+    ],
+    "tags": [
+      "contraste",
+      "enquanto"
+    ],
+    "esContrast": "Una acción de fondo en curso usa imperfeito ('estudava'), no perfeito.",
+    "data": {
+      "sentence": "Enquanto eu estudei, o telefone tocou.",
+      "correct": "Enquanto eu estudava, o telefone tocou.",
+      "explanationEs": "La acción de fondo en desarrollo ('mientras estudiaba') va en imperfeito: 'estudava'; el evento puntual ('tocou') en perfeito."
+    },
+    "id": "b723fb8a",
+    "blockId": 4,
+    "contentHash": "b723fb8aabdd0e41a8389183dbf4ef4154f157337cc171fe162f3718db54d78b"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b4-l3-imperfeito",
+    "difficulty": 2,
+    "concepts": [
+      "b4-imperfeito"
+    ],
+    "tags": [
+      "imperfeito",
+      "acento"
+    ],
+    "esContrast": "El imperfeito de -er/-ir en 'nós' lleva acento: 'comíamos'.",
+    "data": {
+      "sentence": "Antes nós comiamos juntos todos os domingos.",
+      "correct": "Antes nós comíamos juntos todos os domingos.",
+      "explanationEs": "El imperfeito de los verbos en -er/-ir en 1ª plural lleva tilde: 'comíamos'."
+    },
+    "id": "efe67f57",
+    "blockId": 4,
+    "contentHash": "efe67f57cd7b06c6c3cec55d8b8e6f3a8280450946448f3dc9dfbc25d02d2976"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b4-l5-mais-que-perfeito",
+    "difficulty": 3,
+    "concepts": [
+      "b4-mais-que-perfeito"
+    ],
+    "tags": [
+      "mais-que-perfeito",
+      "particípio"
+    ],
+    "esContrast": "El mais-que-perfeito composto usa 'tinha' + participio ('saído'), no el verbo conjugado.",
+    "data": {
+      "sentence": "Quando cheguei, ele já tinha saiu.",
+      "correct": "Quando cheguei, ele já tinha saído.",
+      "explanationEs": "El pretérito mais-que-perfeito composto se forma con 'tinha' + participio: 'tinha saído'."
+    },
+    "id": "aa80bd41",
+    "blockId": 4,
+    "contentHash": "aa80bd414c4679a9c50817fc0ad2cdaf74d2d9359866dd650649c385f4b26e45"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b4-l1-perfeito-regular",
+    "difficulty": 1,
+    "concepts": [
+      "b4-perfeito-regular"
+    ],
+    "tags": [
+      "perfeito"
+    ],
+    "esContrast": "Perfeito de 'comprar' (-ar) en 1ª persona: 'comprei'.",
+    "data": {
+      "sentence": "Ontem eu ___ (comprar) um carro novo.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "comprei"
+        }
+      ]
+    },
+    "id": "be97b58b",
+    "blockId": 4,
+    "contentHash": "be97b58bb9e0c1153d93cbb29a0ea10245694c5fd0a2217133f35bd6a544f651"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b4-l3-imperfeito",
+    "difficulty": 2,
+    "concepts": [
+      "b4-imperfeito"
+    ],
+    "tags": [
+      "imperfeito",
+      "habito"
+    ],
+    "esContrast": "El imperfeito expresa hábito en el pasado: 'brincava' (= jugaba).",
+    "data": {
+      "sentence": "Quando era criança, eu ___ no parque todos os dias.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "brincava",
+          "alternatives": [
+            "jogava"
+          ]
+        }
+      ]
+    },
+    "id": "000b0f11",
+    "blockId": 4,
+    "contentHash": "000b0f1150b5659195926240dbcd3f3edbf347a6952b6f1412d9480694512fa7"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b4-l4-contraste-perfeito-imperfeito",
+    "difficulty": 3,
+    "concepts": [
+      "b4-contraste-passado"
+    ],
+    "tags": [
+      "contraste"
+    ],
+    "esContrast": "Acción en curso interrumpida = imperfeito ('via'); el evento que interrumpe = perfeito ('tocou').",
+    "data": {
+      "sentence": "Eu ___ televisão quando o telefone tocou.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "via",
+          "alternatives": [
+            "assistia"
+          ]
+        }
+      ]
+    },
+    "id": "689bec59",
+    "blockId": 4,
+    "contentHash": "689bec59741f8ff0a6815aeba4fa6d52c40b201da93f9aa26b6511c1786b26fa"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b4-l4-contraste-perfeito-imperfeito",
+    "difficulty": 2,
+    "concepts": [
+      "b4-contraste-passado"
+    ],
+    "tags": [
+      "contraste",
+      "habito"
+    ],
+    "data": {
+      "question": "¿Cuál describe un hábito en el pasado?",
+      "options": [
+        "Antigamente chovia muito",
+        "Ontem choveu muito"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "El imperfeito ('chovia') marca hábito o repetición; el perfeito ('choveu') marca un evento puntual cerrado."
+    },
+    "id": "a113611c",
+    "blockId": 4,
+    "contentHash": "a113611c2a065e54fc7c117edb7fc3fd0ee1102acc868e997b8dff242abaf040"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b4-l2-perfeito-irregular",
+    "difficulty": 2,
+    "concepts": [
+      "b4-perfeito-irregular"
+    ],
+    "tags": [
+      "perfeito",
+      "irregular"
+    ],
+    "data": {
+      "question": "¿Cuál es el pretérito perfeito de 'fazer' en 1ª persona (eu)?",
+      "options": [
+        "fiz",
+        "fazi",
+        "fez"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "'fazer' es irregular: 'fiz' (eu). 'fez' es 3ª persona y 'fazi' no existe."
+    },
+    "id": "14c7e34a",
+    "blockId": 4,
+    "contentHash": "14c7e34a4c8de47b7e3e52ff91884db8091a53959d3c3c814ac6c5dfba56749d"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b4-l4-contraste-perfeito-imperfeito",
+    "difficulty": 2,
+    "concepts": [
+      "b4-contraste-passado"
+    ],
+    "tags": [
+      "contraste",
+      "marcador"
+    ],
+    "data": {
+      "question": "¿Qué marcador temporal pide normalmente pretérito perfeito (evento puntual)?",
+      "options": [
+        "ontem",
+        "sempre",
+        "antigamente"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "'ontem' señala un momento puntual → perfeito. 'sempre' y 'antigamente' favorecen el imperfeito (hábito)."
+    },
+    "id": "4462b966",
+    "blockId": 4,
+    "contentHash": "4462b966b5711eb1439cabed1e99c0b7bbba9c43e26f42bf7f35014999875366"
   }
 ]

@@ -3659,5 +3659,622 @@
       "back": "vocês",
       "example": "Vocês podem ficar à vontade. (= Ustedes pueden quedarse cómodos)"
     }
+  },
+  {
+    "type": "matching",
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 2,
+    "concepts": [
+      "b10-variacao-diatopica"
+    ],
+    "tags": [
+      "lexico",
+      "br-pt"
+    ],
+    "data": {
+      "pairs": [
+        {
+          "left": "ônibus (BR)",
+          "right": "autocarro"
+        },
+        {
+          "left": "trem (BR)",
+          "right": "comboio"
+        },
+        {
+          "left": "celular (BR)",
+          "right": "telemóvel"
+        },
+        {
+          "left": "geladeira (BR)",
+          "right": "frigorífico"
+        }
+      ]
+    },
+    "id": "f6b6eab9",
+    "blockId": 10,
+    "contentHash": "f6b6eab9807b2b34acf26848f88b23c58ab7e5b86fd0871705763ef52a71a014"
+  },
+  {
+    "type": "matching",
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 2,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "registro"
+    ],
+    "data": {
+      "pairs": [
+        {
+          "left": "valeu",
+          "right": "obrigado"
+        },
+        {
+          "left": "tchau",
+          "right": "até logo"
+        },
+        {
+          "left": "a gente",
+          "right": "nós"
+        },
+        {
+          "left": "pra",
+          "right": "para"
+        }
+      ]
+    },
+    "id": "98cbd62b",
+    "blockId": 10,
+    "contentHash": "98cbd62b0f217fcc1f55daa41ea0b2c9b5a2a1ca262672ab57fb799b39eba236"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 1,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "registro",
+      "formal"
+    ],
+    "data": {
+      "question": "En registro formal, para dirigirse a un cliente se usa:",
+      "options": [
+        "o senhor / a senhora",
+        "você",
+        "tu"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "El tratamiento formal es 'o senhor / a senhora', con verbo en 3ª persona."
+    },
+    "id": "b63d821e",
+    "blockId": 10,
+    "contentHash": "b63d821e499d91d7c75f0ab7671c9dd61f39aef453de58b58b25ae5983d77aa3"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 1,
+    "concepts": [
+      "b10-variacao-diatopica"
+    ],
+    "tags": [
+      "lexico",
+      "pt"
+    ],
+    "data": {
+      "question": "'Autocarro' es la palabra de:",
+      "options": [
+        "Portugal",
+        "Brasil",
+        "ninguno"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "'Autocarro' es portuguesa de Portugal; en Brasil se dice 'ônibus'."
+    },
+    "id": "52e1df16",
+    "blockId": 10,
+    "contentHash": "52e1df16e0f6cf751ac66da026a67cb669869d57908d0b9fc4577f3bd1d068a6"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 1,
+    "concepts": [
+      "b10-variacao-diatopica"
+    ],
+    "tags": [
+      "lexico",
+      "br"
+    ],
+    "data": {
+      "question": "'Trem' (tren) es más usado en:",
+      "options": [
+        "Brasil",
+        "Portugal"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "En Brasil se dice 'trem'; en Portugal, 'comboio'."
+    },
+    "id": "c04e9290",
+    "blockId": 10,
+    "contentHash": "c04e9290886a90d19d81271b5cedb0c71e71b3135abb9925efa425ce6cbc131b"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 2,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "registro",
+      "formal"
+    ],
+    "data": {
+      "question": "¿Cuál es más formal para cerrar una carta?",
+      "options": [
+        "Atenciosamente",
+        "Beijos",
+        "Falou"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "'Atenciosamente' es formal; 'beijos' y 'falou' son informales."
+    },
+    "id": "c4d2b750",
+    "blockId": 10,
+    "contentHash": "c4d2b7500636543202466145fae95cfbf211047f0b22d25ed8c9a5e5bd9db11e"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 2,
+    "concepts": [
+      "b10-variacao-diatopica"
+    ],
+    "tags": [
+      "lexico",
+      "pt"
+    ],
+    "data": {
+      "question": "'Pequeno-almoço' (desayuno) es propio de:",
+      "options": [
+        "Portugal",
+        "Brasil"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "En Portugal el desayuno es 'pequeno-almoço'; en Brasil, 'café da manhã'."
+    },
+    "id": "377d85d3",
+    "blockId": 10,
+    "contentHash": "377d85d3ccc6bd630df87e19f41ee99a4184bf4b41943bf51a0d947f8386abbd"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 1,
+    "concepts": [
+      "b10-variacao-diatopica"
+    ],
+    "tags": [
+      "lexico",
+      "br"
+    ],
+    "data": {
+      "question": "En Brasil, el desayuno se dice:",
+      "options": [
+        "café da manhã",
+        "pequeno-almoço",
+        "matina"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "En Brasil es 'café da manhã'; 'pequeno-almoço' es de Portugal."
+    },
+    "id": "d2020dd1",
+    "blockId": 10,
+    "contentHash": "d2020dd1dc48ee34c27ed3055c0978a79b9e2ce604f1dcacbdf31f26bccdac32"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 2,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "registro",
+      "a-gente"
+    ],
+    "data": {
+      "question": "'A gente vai' equivale, en registro informal, a:",
+      "options": [
+        "nós vamos",
+        "ustedes van",
+        "ellos van"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "'A gente' significa 'nosotros' (informal) y concuerda en 3ª persona singular: 'a gente vai'."
+    },
+    "id": "6a31fb22",
+    "blockId": 10,
+    "contentHash": "6a31fb22ae501b7e168a9a87dff6c93355c4fbfd783010c95b12c896341534f2"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 2,
+    "concepts": [
+      "b10-variacao-diatopica"
+    ],
+    "tags": [
+      "gramatica",
+      "progressivo"
+    ],
+    "data": {
+      "question": "El progresivo 'estou fazendo' es típico de Brasil; en Portugal se dice:",
+      "options": [
+        "estou a fazer",
+        "estou faço",
+        "fazendo estou"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "Portugal prefiere 'estar a' + infinitivo: 'estou a fazer'."
+    },
+    "id": "e6e74857",
+    "blockId": 10,
+    "contentHash": "e6e748572367e1bc4b6e0cc3402c5f56ab5b13e8b6c2aa1f43cdd609bbea13b4"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 2,
+    "concepts": [
+      "b10-variacao-diatopica"
+    ],
+    "tags": [
+      "tratamento"
+    ],
+    "data": {
+      "question": "Tratamiento informal de 2ª persona predominante en Portugal y el sur de Brasil:",
+      "options": [
+        "tu",
+        "você",
+        "o senhor"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "'tu' (con conjugación de 2ª persona) predomina en Portugal y en el sur de Brasil."
+    },
+    "id": "077c9838",
+    "blockId": 10,
+    "contentHash": "077c98384b92f1fa33d9369e5fb0123e1445f0d447f6dcab950476dd33a92f1c"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 1,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "registro",
+      "formal"
+    ],
+    "data": {
+      "question": "¿A qué registro corresponde 'Prezado Senhor'?",
+      "options": [
+        "formal",
+        "informal",
+        "coloquial"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "'Prezado Senhor' es un encabezamiento formal de cartas y documentos."
+    },
+    "id": "eecfb214",
+    "blockId": 10,
+    "contentHash": "eecfb214426529772b91f17fe33863793fcb8b54049501374a77a9e144572c06"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 1,
+    "concepts": [
+      "b10-variacao-diatopica"
+    ],
+    "tags": [
+      "lexico",
+      "pt"
+    ],
+    "data": {
+      "question": "'Telemóvel' (celular) se usa en:",
+      "options": [
+        "Portugal",
+        "Brasil"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "En Portugal es 'telemóvel'; en Brasil, 'celular'."
+    },
+    "id": "00b74ff8",
+    "blockId": 10,
+    "contentHash": "00b74ff840ec42a98c8cb2ab0adb57c8c81e814c65f11d787117a55caf82ffa3"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 1,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "registro",
+      "formal"
+    ],
+    "data": {
+      "question": "El tratamiento 'a senhora' es:",
+      "options": [
+        "formal",
+        "informal"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "'a senhora' es tratamiento formal y respetuoso, con verbo en 3ª persona."
+    },
+    "id": "d86dacc4",
+    "blockId": 10,
+    "contentHash": "d86dacc45dc7d918ebede3e4c2bd5f68dc18fb8a13bfdca3a3771ee8fae84839"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 2,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "registro",
+      "a-gente"
+    ],
+    "esContrast": "'a gente' concuerda en 3ª persona singular: 'a gente vai'.",
+    "data": {
+      "sentence": "A gente vamos ao cinema hoje à noite.",
+      "correct": "A gente vai ao cinema hoje à noite.",
+      "explanationEs": "'a gente' (= nosotros, informal) lleva el verbo en 3ª persona singular: 'a gente vai'."
+    },
+    "id": "3d979702",
+    "blockId": 10,
+    "contentHash": "3d9797024f9c8809c2ea93928cc36d237ecc2b06909aebf5bca860dec6175192"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "registro",
+      "tratamento"
+    ],
+    "esContrast": "Con 'o senhor' se usa 3ª persona y no se mezcla con 'tu'.",
+    "data": {
+      "sentence": "O senhor pode me dizer onde tu mora?",
+      "correct": "O senhor pode me dizer onde mora?",
+      "explanationEs": "El tratamiento 'o senhor' exige 3ª persona; mezclarlo con 'tu' rompe la concordancia."
+    },
+    "id": "f441dd18",
+    "blockId": 10,
+    "contentHash": "f441dd1828dd10a318f9a9ce52717c1d5fea10e374f6d58b6fc35ca85d5a28e1"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 2,
+    "concepts": [
+      "b10-variacao-diatopica"
+    ],
+    "tags": [
+      "falso-amigo"
+    ],
+    "esContrast": "'embarazada' (ES) = 'grávida' (PT); 'embaraçada' significa avergonzada.",
+    "data": {
+      "sentence": "Minha irmã está embaraçada, vai ter um bebê.",
+      "correct": "Minha irmã está grávida, vai ter um bebê.",
+      "explanationEs": "Falso amigo: 'embarazada' en español es 'grávida' en portugués; 'embaraçada' = avergonzada."
+    },
+    "id": "b227cb52",
+    "blockId": 10,
+    "contentHash": "b227cb52408bba733f839cf3ef1749ee9ba74436bc72969723425ab26e9d3ebe"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 1,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "registro",
+      "concordancia"
+    ],
+    "esContrast": "'você' lleva 3ª persona también en registro cuidado: 'você sabe'.",
+    "data": {
+      "sentence": "Você sabes a resposta desta pergunta?",
+      "correct": "Você sabe a resposta desta pergunta?",
+      "explanationEs": "'você' concuerda en 3ª persona: 'você sabe'."
+    },
+    "id": "0847ef58",
+    "blockId": 10,
+    "contentHash": "0847ef58dac9495b1e21ec50d74298aeb0e654e31f03b809eb544cdadb25d467"
+  },
+  {
+    "type": "error_correction",
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-variacao-diatopica"
+    ],
+    "tags": [
+      "coerencia-variante"
+    ],
+    "esContrast": "Conviene no mezclar léxico de Portugal y Brasil en una misma frase.",
+    "data": {
+      "sentence": "Eu tomo o pequeno-almoço e depois pego o ônibus.",
+      "correct": "Eu tomo o café da manhã e depois pego o ônibus.",
+      "explanationEs": "Mezcla de variantes: 'pequeno-almoço' es de Portugal y 'ônibus' de Brasil. En variante brasileña: 'café da manhã' + 'ônibus'."
+    },
+    "id": "6202b902",
+    "blockId": 10,
+    "contentHash": "6202b90249b065a372274c7ebe54f9d504514056657f69f6fec2fde17b0e987a"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 2,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "registro",
+      "formal"
+    ],
+    "esContrast": "Cierre formal de carta: 'Atenciosamente'.",
+    "data": {
+      "sentence": "Para encerrar uma carta formal, escrevemos '___'.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "Atenciosamente"
+        }
+      ]
+    },
+    "id": "148c0447",
+    "blockId": 10,
+    "contentHash": "148c04472130919afec736c1bb66ccc18d3761d06e1a29047096875299404178"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 1,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "registro",
+      "a-gente"
+    ],
+    "esContrast": "'a gente' + 3ª persona: 'a gente vai'.",
+    "data": {
+      "sentence": "A gente ___ (ir) à praia no domingo de manhã.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "vai"
+        }
+      ]
+    },
+    "id": "00bc55b0",
+    "blockId": 10,
+    "contentHash": "00bc55b054e911f9d407a8c616fc87d6f927a437101947f99eb9ef079251019c"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 1,
+    "concepts": [
+      "b10-variacao-diatopica"
+    ],
+    "tags": [
+      "lexico",
+      "br"
+    ],
+    "esContrast": "Desayuno en Brasil: 'café da manhã'.",
+    "data": {
+      "sentence": "No Brasil, a primeira refeição do dia é o '___ da manhã'.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "café"
+        }
+      ]
+    },
+    "id": "9df296e0",
+    "blockId": 10,
+    "contentHash": "9df296e07ca966ff1da6e037b9eb60d09a1659547fc5c4a95ddfc791ec628938"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 2,
+    "concepts": [
+      "b10-variacao-diatopica"
+    ],
+    "tags": [
+      "gramatica",
+      "progressivo"
+    ],
+    "esContrast": "Progresivo en Portugal: 'estar a' + infinitivo.",
+    "data": {
+      "sentence": "Em Portugal diz-se: 'Estou ___ falar ao telefone.'",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "a"
+        }
+      ]
+    },
+    "id": "b18478ee",
+    "blockId": 10,
+    "contentHash": "b18478ee62a1c75c74e2d19d65fba7cabeb2d6cecf9fa3a4c64c0eb8482ea006"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 2,
+    "concepts": [
+      "b10-variacao-diatopica"
+    ],
+    "tags": [
+      "lexico",
+      "pt"
+    ],
+    "esContrast": "'ônibus' (BR) = 'autocarro' (PT).",
+    "data": {
+      "sentence": "Em Portugal, o 'ônibus' chama-se '___'.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "autocarro"
+        }
+      ]
+    },
+    "id": "4e43ccae",
+    "blockId": 10,
+    "contentHash": "4e43ccaec7bc88ce15662d3b9e732a77475787daa649b4f63e3c66e0c73a0eb1"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 1,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "registro",
+      "formal"
+    ],
+    "esContrast": "Tratamiento formal masculino: 'o senhor'.",
+    "data": {
+      "sentence": "Tratamento formal: 'O ___ deseja mais alguma coisa?'",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "senhor"
+        }
+      ]
+    },
+    "id": "9395a9c7",
+    "blockId": 10,
+    "contentHash": "9395a9c749986ae7003a2f7d78d1801a9a6c5087d412067a14303069aecfcd2a"
   }
 ]

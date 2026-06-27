@@ -6993,7 +6993,7 @@
   {
     "type": "conjugation",
     "lessonId": "b3-l1-presente-regular",
-    "difficulty": 2,
+    "difficulty": 1,
     "concepts": [
       "b3-presente-regular"
     ],
@@ -7243,22 +7243,23 @@
   {
     "type": "error_correction",
     "lessonId": "b3-l3-imperativo-presente-irregular",
-    "difficulty": 1,
+    "difficulty": 2,
     "concepts": [
       "b3-presente-irregular"
     ],
     "tags": [
-      "interferencia"
+      "irregular",
+      "saber"
     ],
-    "esContrast": "'muy' no existe en portugués; el intensificador es 'muito'.",
+    "esContrast": "'saber' tiene 1ª persona irregular: 'sei', no la regular 'sabo' (calco del español 'sé/sabo').",
     "data": {
-      "sentence": "Eu sou muy feliz hoje.",
-      "correct": "Eu sou muito feliz hoje.",
-      "explanationEs": "En portugués no existe 'muy'; se usa 'muito' delante del adjetivo."
+      "sentence": "Eu não sabo a resposta da pergunta.",
+      "correct": "Eu não sei a resposta da pergunta.",
+      "explanationEs": "'saber' es irregular: la 1ª persona del presente es 'sei', no 'sabo'."
     },
-    "id": "68a3a2b6",
+    "id": "74821f0d",
     "blockId": 3,
-    "contentHash": "68a3a2b6dcecaca0034122aba9dd5aea35149a26091f43c4bedcae4f6164440a"
+    "contentHash": "74821f0d5ab17b1344529864b4bbf0c9229ab7827736451f0b2dbf3c32adf236"
   },
   {
     "type": "error_correction",
@@ -7311,17 +7312,18 @@
     ],
     "tags": [
       "irregular",
-      "ir"
+      "ir",
+      "interferencia"
     ],
-    "esContrast": "'ir' tiene 1ª persona irregular: 'vou'.",
+    "esContrast": "Calco del español 'voy'; la 1ª persona de 'ir' en PT es 'vou'.",
     "data": {
-      "sentence": "Eu vo para casa agora.",
+      "sentence": "Eu voy para casa agora.",
       "correct": "Eu vou para casa agora.",
-      "explanationEs": "'ir' es irregular: la 1ª persona del presente es 'vou'."
+      "explanationEs": "'ir' es irregular: la 1ª persona del presente es 'vou' (no el español 'voy')."
     },
-    "id": "47db3f97",
+    "id": "b3f99790",
     "blockId": 3,
-    "contentHash": "47db3f9780faf9b4c69bef404c5c3940df0b0e624b29fba68b12239f8aaf6057"
+    "contentHash": "b3f99790bd1a803b6aec84bea53b07a1a3373dcfba722272cabb3e1e1a194f8f"
   },
   {
     "type": "error_correction",
@@ -7470,5 +7472,55 @@
     "id": "a8f34263",
     "blockId": 3,
     "contentHash": "a8f34263b9268e281bfbc1d17edad2df48f6a758d4257e2aebd7e4ef9da6039e"
+  },
+  {
+    "type": "multiple_choice",
+    "lessonId": "b3-l3-imperativo-presente-irregular",
+    "difficulty": 2,
+    "concepts": [
+      "b3-imperativo"
+    ],
+    "tags": [
+      "imperativo",
+      "voce"
+    ],
+    "data": {
+      "question": "Para dar una orden formal (a 'você') con el verbo 'falar', se usa:",
+      "options": [
+        "fale",
+        "fala",
+        "falas"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "El imperativo de 'você' toma la forma del presente do conjuntivo: 'fale'. 'fala' es el imperativo de 'tu'."
+    },
+    "id": "22073fb4",
+    "blockId": 3,
+    "contentHash": "22073fb42faa72b2f68f663818575dc5bbe48424dd297f17d926d01f7bb3d94c"
+  },
+  {
+    "type": "fill_blank",
+    "lessonId": "b3-l3-imperativo-presente-irregular",
+    "difficulty": 2,
+    "concepts": [
+      "b3-imperativo"
+    ],
+    "tags": [
+      "imperativo",
+      "voce"
+    ],
+    "esContrast": "Imperativo formal (você) de 'abrir': 'Abra' (forma del conjuntivo).",
+    "data": {
+      "sentence": "___ (abrir) a porta, por favor! (imperativo formal, você)",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "Abra"
+        }
+      ]
+    },
+    "id": "842c4750",
+    "blockId": 3,
+    "contentHash": "842c4750882f9d11f2c28236cbdd135a31fa4d745aa6647c8eb2042b5dec435e"
   }
 ]

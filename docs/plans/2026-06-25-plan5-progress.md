@@ -15,7 +15,7 @@ _Last updated: 2026-06-25._
 |---|---|---|
 | content-fixes | `plan5-content-fixes.md` | ✅ done — merged to main |
 | 5a — exercise types + shadowing | `plan5a-exercise-types-shadowing.md` | ✅ done — merged to main |
-| 5b — mass content | `plan5b-mass-content.md` | 🔄 infra + **b2, b3** done; **b4–b10 pending** |
+| 5b — mass content | `plan5b-mass-content.md` | ✅ **b2–b8 + b10 done** (b9 = freeDrill, no exercises). Linguist + pedagogue review applied. |
 | 5c — richer lessons | `plan5c-richer-lessons.md` | ⬜ not started |
 | 5d — SRS / engagement | `plan5d-srs-engagement.md` | ⬜ not started |
 
@@ -57,9 +57,36 @@ Tooling done:
 Content done:
 - **b2** — 24 text-only items (10 error_correction, 3 MC, 2 matching, 9
   fill_blank). `b2.json` 204→228.
-- **b3** (verb block) — 25 text-only items (13 conjugation variant-aware
-  você/tu, 7 error_correction, 3 fill_blank, 2 MC; no matching/translation).
-  `b3.json` 204→229. Branch `content/5b-b3`, commit `2fbf510`.
+- **b3** (presente, verbos) — 27 items (13 conjugation variant-aware
+  você/tu, 7 error_correction, 4 fill_blank, 3 MC incl. 2 imperativo).
+  `b3.json` 204→231.
+- **b4** (pasado: perfeito/imperfeito/mais-que-perfeito) — 25 items
+  (13 conjugation, 6 error_correction, 3 fill_blank, 3 MC). 255→280.
+- **b5** (futuro/condicional) — 25 items (13 conjugation, 6 ec, 3 fb, 3 MC). 204→229.
+- **b6** (conjuntivo presente/imperfeito/futuro) — 25 items
+  (13 conjugation, 6 ec, 3 fb, 3 MC). 260→285.
+- **b7** (infinitivo pessoal/gerúndio/particípio) — 25 items
+  (10 conjugation, 8 ec, 4 fb, 3 MC). Particípio via ec/fb/MC (no está en el
+  set de `tense`). 148→173.
+- **b8** (sintaxis: conectores/subordinadas/colocação/discurso indireto) — 24
+  items (12 ec, 7 MC, 4 fb, 1 matching; sin conjugation). 204→228.
+- **b10** (registro + variação BR↔PT) — 25 items (12 MC, 5 ec, 6 fb, 2 matching). 102→127.
+- **b9** — skip permanente: es `freeDrill` (léxico sobre el catálogo de vocab),
+  no tiene lecciones ni conceptos a los que adjuntar ejercicios.
+
+### Revisión experta aplicada (5b-b3..b10)
+
+Dos subagentes (lingüista PT-BR/PT-PT+ES, pedagogo SLA) revisaron los 148 items
+de los 4 tipos gramaticalmente sensibles (conjugation/error_correction/MC/
+matching). **0 blockers / 0 altas.** Fixes aplicados: errores artificiales →
+calcos reales del español (`tuvo`, `falaré`, `voy`, `entonces`, y en b6 forma
+ES→PT del conjuntivo: `venga→venha`, `viniera→viesse`, `estudie→estude`,
+`tengan→tenham`); `ganhado→ganho` (debatible) reemplazado por `ponhado→posto`;
+doble preposición `desde de manhã`→`desde manhã`; distractor `escrevudo`→
+`escripto`; matching `cara→senhor`→`pra→para`; recalibración de dificultad; y
++2 items de imperativo en b3 (la lección l3 no tenía ninguno). Se rechazó el
+fix sugerido de `haver→há` (el alternativo `tem→há` sería incorrecto: `tem`
+existencial es válido en BR).
 
 ### How to resume b3–b10 (per block N)
 
