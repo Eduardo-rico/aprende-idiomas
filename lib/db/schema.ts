@@ -2,6 +2,7 @@
 import Dexie, { type EntityTable } from "dexie";
 import type { Card as FsrsCard } from "ts-fsrs";
 import type { VariantKey } from "@/lib/data/variant";
+import { createPreV8Backup, v8UpgradeHook } from "./migrate-v7-to-v8";
 
 export type CardId = string;
 export type ConceptId = string;
@@ -269,16 +270,27 @@ class AppDB extends Dexie {
       cards: "id, blockId, lessonId, nextReviewAt, state, introducedAt, *tags, language, [blockId+nextReviewAt], [lessonId+nextReviewAt], [language+state]",
       conceptMastery: "conceptId, blockId, isMastered, lastReviewed",
     }).upgrade(async (tx) => {
-      // Siembra defaults de uiState y userProfile si están vacías.
-      await tx.table("userProfile").put({
-        id: "me",
-        createdAt: new Date(),
-        displayName: "Edu",
-        preferredVariant: "pt-br",
-        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || "UTC",
-      });
+      await v8UpgradeHook(tx);
     });
   }
 }
 
+// Programar backup al primer open (solo si versión actual < 8).
+// Idempotente: si ya se hizo backup, no-op.
+let backupScheduled = false;
+async function ensureBackupBeforeV8() {
+  if (backupScheduled) return;
+  backupScheduled = true;
+  try {
+    const currentVersion = await Dexie.getDatabaseNames().then(() => db.verno);
+    if (currentVersion < 8) {
+      await createPreV8Backup();
+    }
+  } catch (e) {
+    console.warn("[db] backup pre-v8 failed (non-fatal):", e);
+  }
+}
+
 export const db = new AppDB();
+db.on("populate", ensureBackupBeforeV8);
+db.on("versionchange", ensureBackupBeforeV8);
