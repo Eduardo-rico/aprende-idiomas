@@ -198,22 +198,22 @@
       "regular",
       "verbos -ar"
     ],
-    "contentHash": "04e3860ed2fa97bb69dee56498309ccce681ccd69dc2aef2204203eb0cdfac43",
+    "contentHash": "c6bd4561f1d0f4049cb19e99fe8776ff38cbea9026dffd697c10700e14309a2a",
     "esContrast": "PT-BR \"curtimos\" vs PT-PT \"aproveitamos\" — ambos válidos, ambos regulares.",
     "audio": {
       "br": {
-        "hash": "5f7db95e618b82cd9e2d80ec714366389a5ee8be32cc0e6c751123f14d7fb0b6",
+        "hash": "1817c11fc0f8fdd94c5d87493e9f560e278f35c5abc015bf321a232fd916f95e",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "b839c1604adf47415d23459ee4e0095893331e689313ad5cf5a0b2982f0fa0b2",
+        "hash": "4b6da559d1923ec8387e02ea1d95de5caaf8751d4309433a7350eb14445b5839",
         "voice": "Portuguese_Wiselady"
       }
     },
     "type": "translation",
     "data": {
-      "source": "Durante las vacaciones, no fizemos nada especial, mas curtimos muito.",
-      "target": "Durante las vacaciones, no hicimos nada especial, pero disfrutamos mucho.",
+      "source": "Durante las vacaciones, no hicimos nada especial, pero disfrutamos mucho.",
+      "target": "Durante as férias, não fizemos nada especial, mas curtimos muito.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
@@ -221,12 +221,8 @@
       ]
     },
     "variantOverrides": {
-      "pt-br": {
-        "source": "Durante as férias, não fizemos nada especial, mas aproveitamos muito.",
-        "target": "Durante las vacaciones, no hicimos nada especial, pero disfrutamos mucho.",
-        "acceptedAlternatives": [
-          "Durante las vacaciones, no hicimos nada especial, pero aprovechamos mucho."
-        ]
+      "pt-pt": {
+        "target": "Durante as férias, não fizemos nada de especial, mas divertimo-nos imenso."
       }
     }
   },

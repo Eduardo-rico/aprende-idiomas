@@ -3580,26 +3580,26 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "fc80a43039b1a7aeba8dc69672f4627cde4c9728ea3a3134ffc30d73acbe78b9",
+    "contentHash": "d9dd9f839353abd912edac659938cc0ef1725a9f4dd6cc09510ada44906875d9",
     "audio": {
       "br": {
-        "hash": "43638abf4d6df1773cf66ee06ae243b59c9a4fcb4735f737a579a5ebdab36166",
+        "hash": "70837ecd4bd23b5dff4a8e28353691dfa48a6fe1201a7f5edd40f9d89adb8e0c",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "1f1b56f0d287ee119cf48fb9ab9032abee3961b845cb454443dd505d9ce39eb6",
+        "hash": "932b66f35339c4c95c4531741b2a9cc84be11f0b5452eb7e7d1cf2fc0af6ec06",
         "voice": "Portuguese_Wiselady"
       }
     },
     "type": "flashcard",
     "data": {
       "front": "Traduce al PT-PT: 'Ela tem os contactos do escritório.'",
-      "back": "Ela gave os contactos do escritório. (igual en PT-PT) / 🇧🇷 BR: Ela tem os contatos do escritório.",
+      "back": "Ela tem os contactos do escritório.",
       "example": "PT-PT usa 'ct' en lugar de 'c': contactos, afectivo, corretor."
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "Ela gave os contactos do escritório. 🇧🇷 BR: contatos"
+        "back": "Ela tem os contatos do escritório."
       }
     }
   },
