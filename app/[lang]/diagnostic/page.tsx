@@ -33,7 +33,7 @@ export default async function DiagnosticPage({
           {diagnostic.questions.length} preguntas · ~5 minutos · sin bloqueante
         </p>
       </div>
-      <DiagnosticRunner questions={diagnostic.questions} />
+      <DiagnosticRunner questions={diagnostic.questions} lang={lang} />
     </div>
   );
 }

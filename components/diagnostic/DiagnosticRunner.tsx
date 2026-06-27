@@ -6,12 +6,12 @@ import { db, type GenericEvent } from '@/lib/db/schema';
 import { computeRecommendation } from '@/lib/diagnostic/scorer';
 import { DiagnosticResults } from './DiagnosticResults';
 
-export function DiagnosticRunner({ questions }: { questions: DiagnosticQuestion[] }) {
+export function DiagnosticRunner({ questions, lang }: { questions: DiagnosticQuestion[]; lang: string }) {
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [result, setResult] = useState<ReturnType<typeof computeRecommendation> | null>(null);
 
-  if (result) return <DiagnosticResults result={result} />;
+  if (result) return <DiagnosticResults result={result} lang={lang} />;
 
   const q = questions[idx];
   if (!q) return <p className="p-8 text-muted-foreground">No hay preguntas.</p>;

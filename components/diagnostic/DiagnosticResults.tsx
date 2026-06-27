@@ -5,7 +5,7 @@ import type { Recommendation } from '@/lib/diagnostic/scorer';
 
 export type { Recommendation };
 
-export function DiagnosticResults({ result }: { result: Recommendation }) {
+export function DiagnosticResults({ result, lang }: { result: Recommendation; lang: string }) {
   return (
     <div className="max-w-xl mx-auto p-6 space-y-4">
       <h2 className="font-display text-3xl">Resultados</h2>
@@ -19,7 +19,7 @@ export function DiagnosticResults({ result }: { result: Recommendation }) {
           Empezá por el Bloque {result.recommendedStart}
         </div>
         <Link
-          href={`/blocks/${result.recommendedStart}`}
+          href={`/${lang}/blocks/${result.recommendedStart}`}
           className="inline-block px-4 py-2 bg-primary text-primary-foreground rounded-md"
         >
           Ir al Bloque {result.recommendedStart} →

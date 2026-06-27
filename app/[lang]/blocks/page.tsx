@@ -59,6 +59,7 @@ export default function BlocksPage() {
             block={b}
             masteryPct={masteryByBlock[b.id] ?? 0}
             isUnlocked={b.prereqs.every(p => (masteryByBlock[p] ?? 0) >= 80) || b.id === 1}
+            lang={lang}
           />
         ))}
       </div>
