@@ -1,5 +1,5 @@
 // lib/db/repository.ts
-import { db, type Card, type CardId, type Rating, type AnswerEvent, type GenericEvent, type Session, type StoryProgressRow, type LessonView } from "./schema";
+import { db, type Card, type CardId, type Rating, type AnswerEvent, type GenericEvent, type Session, type StoryProgressRow, type LessonView, type UserProfile, type UiStateRow, type TelemetryEvent, type DailyGoalRow } from "./schema";
 import { newCard, schedule } from "../srs/fsrs";
 import { buildDueQueue, type DueQueueOptions } from "../srs/review-queue";
 import { FSRS_CONFIG } from "../srs/config";
@@ -591,4 +591,27 @@ export async function getLastLessonView(
   const matching = rows.filter((r) => r.lessonId === lessonId);
   if (matching.length === 0) return undefined;
   return matching.reduce((acc, r) => (r.viewedAt > acc.viewedAt ? r : acc));
+}
+
+// ─── v8 helpers ───────────────────────────────────────────────────────────────
+
+// v8 helpers
+export async function getUiState<T = unknown>(key: string): Promise<T | undefined> {
+  const row = await db.uiState.get(key);
+  return row?.value as T | undefined;
+}
+export async function setUiState(key: string, value: unknown): Promise<void> {
+  await db.uiState.put({ key, value, updatedAt: new Date() });
+}
+export async function logTelemetry(level: "warn" | "error", source: string, message: string, context?: Record<string, unknown>): Promise<void> {
+  // Ring buffer: si > 1000 filas, borra las 200 más antiguas.
+  const count = await db.telemetry.count();
+  if (count > 1000) {
+    const old = await db.telemetry.orderBy("ts").limit(200).primaryKeys();
+    await db.telemetry.bulkDelete(old);
+  }
+  await db.telemetry.add({ ts: new Date(), level, source, message, context });
+}
+export async function getUserProfile(): Promise<UserProfile | undefined> {
+  return db.userProfile.get("me");
 }

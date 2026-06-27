@@ -145,6 +145,39 @@ export interface LessonView {
   viewedAt: number;
 }
 
+/** v8: identidad separada de auth (preparación para multiusuario). */
+export interface UserProfile {
+  id: "me"; // single-row table
+  createdAt: Date;
+  displayName: string;
+  preferredVariant: VariantKey;
+  timezone: string;
+}
+
+/** v8: estado UI para "Continuar" en portada. */
+export interface UiStateRow {
+  key: string; // "lastLesson:<chapterId>:<sectionId>", "lastSession", "activeTab:progreso", etc.
+  value: unknown;
+  updatedAt: Date;
+}
+
+/** v8: ring buffer de errores/warnings client-side (cap 1000). */
+export interface TelemetryEvent {
+  id?: number;
+  ts: Date;
+  level: "warn" | "error";
+  source: string;
+  message: string;
+  context?: Record<string, unknown>;
+}
+
+/** v8: meta diaria de objetivo (separada de streak/XP). */
+export interface DailyGoalRow {
+  date: string; // YYYY-MM-DD local
+  goalMinutes: number;
+  achievedMinutes: number;
+}
+
 class AppDB extends Dexie {
   cards!: EntityTable<Card, "id">;
   sessions!: EntityTable<Session, "id">;
@@ -159,6 +192,11 @@ class AppDB extends Dexie {
   storyProgress!: EntityTable<StoryProgressRow, "storyId">;
   diagnosticResults!: EntityTable<DiagnosticResultRow, "id">;
   lessonViews!: EntityTable<LessonView, "id">;
+
+  userProfile!: EntityTable<UserProfile, "id">;
+  uiState!: EntityTable<UiStateRow, "key">;
+  telemetry!: EntityTable<TelemetryEvent, "id">;
+  dailyGoals!: EntityTable<DailyGoalRow, "date">;
 
   constructor() {
     super("PortuguesAppDB");
@@ -213,6 +251,32 @@ class AppDB extends Dexie {
     // upgrade body — existing stores are inherited verbatim).
     this.version(7).stores({
       lessonViews: "id, lessonId, viewedAt, language, [language+viewedAt]",
+    });
+    // v8: nuevas tablas (userProfile, uiState, telemetry, dailyGoals) +
+    // índices aditivos sobre tablas existentes. Migración expand-migrate-contract:
+    // tablas existentes se copian verbatim (Dexie lo hace solo); las nuevas
+    // arrancan vacías y se siembran en upgrade(). NO rechazar filas por
+    // validación parcial: skip + log + seguir (ver migrate-v7-to-v8.ts).
+    this.version(8).stores({
+      // Tablas nuevas
+      userProfile: "id",
+      uiState: "key, updatedAt",
+      telemetry: "++id, ts, level, [level+ts]",
+      dailyGoals: "date",
+      // Índices aditivos sobre tablas existentes
+      events: "++id, ts, cardId, sessionId, type, [cardId+ts], [type+ts], *conceptIds",
+      sessions: "++id, startedAt, endedAt, blockId, lessonId, mode",
+      cards: "id, blockId, lessonId, nextReviewAt, state, introducedAt, *tags, language, [blockId+nextReviewAt], [lessonId+nextReviewAt], [language+state]",
+      conceptMastery: "conceptId, blockId, isMastered, lastReviewed",
+    }).upgrade(async (tx) => {
+      // Siembra defaults de uiState y userProfile si están vacías.
+      await tx.table("userProfile").put({
+        id: "me",
+        createdAt: new Date(),
+        displayName: "Edu",
+        preferredVariant: "pt-br",
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || "UTC",
+      });
     });
   }
 }
