@@ -8,6 +8,7 @@
 import type { ReactNode } from "react";
 import React from "react";
 import { LessonAudioPlayer } from "./LessonAudioPlayer";
+import { VerbConjugation } from "./VerbConjugation";
 import type { VariantKey } from "@/lib/data/variant";
 
 // Shape of a single audio ref — mirrors LessonAudioRefSchema in
@@ -126,5 +127,5 @@ export function lessonMdxComponents(
   const ExampleWithAudio: React.ComponentType<any> = (props) => (
     <Example {...props} audioRefs={opts.audioRefs} />
   );
-  return { Example: ExampleWithAudio, Tip, Rule };
+  return { Example: ExampleWithAudio, Tip, Rule, VerbConjugation };
 }
