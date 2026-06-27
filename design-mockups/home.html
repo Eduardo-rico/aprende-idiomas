@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual Lusitano — Portada</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@450&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBF7EE; --paper-raised:#FFFFFF; --paper-sunken:#F4EFE0;
+    --ink:#2A241D; --ink-muted:#6B6359; --ink-faint:#9A9082;
+    --rule:#DDD6C7; --rule-strong:#C9C0AD;
+    --lesson:#2E8B57; --lesson-soft:#E6F2EA;
+    --review:#D4922A; --review-soft:#FAF2DF;
+    --diagnostic:#4F46E5; --diagnostic-soft:#ECEBFB;
+    --br:#CA8A04; --pt:#1E40AF;
+    --font-display:"Fraunces",Georgia,serif;
+    --font-body:"Inter",system-ui,sans-serif;
+    --font-mono:"JetBrains Mono",monospace;
+    --shadow-xs:0 1px 1px rgba(42,36,29,.04);
+    --shadow-sm:0 1px 2px rgba(42,36,29,.06),0 1px 1px rgba(42,36,29,.04);
+    --shadow-md:0 4px 12px rgba(42,36,29,.06),0 1px 2px rgba(42,36,29,.04);
+    --ease:cubic-bezier(.2,.8,.2,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--font-body);background:var(--paper);color:var(--ink);
+    -webkit-font-smoothing:antialiased;line-height:1.55}
+  h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;letter-spacing:-.02em;line-height:1.15}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:50;background:rgba(251,247,238,.82);
+    backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+  .nav-inner{max-width:960px;margin:0 auto;padding:0 24px;height:56px;
+    display:flex;align-items:center;gap:28px}
+  .brand{font-family:var(--font-display);font-size:19px;font-weight:600;display:flex;align-items:center;gap:8px}
+  .brand .dot{width:8px;height:8px;border-radius:999px;background:var(--br)}
+  .nav-links{margin-left:auto;display:flex;gap:4px;align-items:center}
+  .nav-links a{padding:6px 12px;border-radius:6px;font-size:14px;font-weight:500;
+    color:var(--ink-muted);text-decoration:none;transition:.12s var(--ease)}
+  .nav-links a:hover{color:var(--ink);background:var(--paper-sunken)}
+  .nav-links a.active{color:var(--lesson);background:var(--lesson-soft)}
+  .variant-toggle{display:inline-flex;border:1px solid var(--rule-strong);border-radius:6px;overflow:hidden;margin-left:8px}
+  .variant-toggle button{padding:5px 11px;font-size:12px;font-weight:600;font-family:var(--font-body);
+    background:none;border:none;color:var(--ink-muted);cursor:pointer}
+  .variant-toggle button.on{background:var(--ink);color:var(--paper)}
+
+  /* PAGE */
+  main{max-width:760px;margin:0 auto;padding:56px 24px 96px}
+  .eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--ink-faint);font-weight:600;margin-bottom:6px}
+  .eyebrow-rule{width:28px;height:2px;background:var(--rule-strong);margin-bottom:28px}
+  .hero-title{font-size:39px;margin-bottom:8px}
+  .hero-sub{font-size:18px;color:var(--ink-muted);margin-bottom:28px}
+
+  .stat-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+  .stat{background:var(--paper-raised);border:1px solid var(--rule);border-radius:10px;
+    padding:18px 20px;display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-xs)}
+  .ring{width:52px;height:52px;flex:none}
+  .stat .big{font-family:var(--font-display);font-size:25px;font-weight:600;line-height:1}
+  .stat .lbl{font-size:13px;color:var(--ink-muted);margin-top:3px}
+
+  .xp{margin-bottom:48px}
+  .xp .meta{font-size:13px;color:var(--ink-muted);margin-bottom:8px;display:flex;justify-content:space-between}
+  .bar{height:8px;background:var(--rule);border-radius:999px;overflow:hidden}
+  .bar > i{display:block;height:100%;background:var(--lesson);border-radius:999px}
+
+  /* CTA */
+  .cta{display:block;text-decoration:none;color:inherit;background:var(--lesson);
+    border-radius:12px;padding:22px 24px;color:#fff;box-shadow:var(--shadow-md);
+    margin-bottom:48px;transition:.2s var(--ease)}
+  .cta:hover{transform:translateY(-1px)}
+  .cta .lead{font-family:var(--font-display);font-size:25px;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+  .cta .sub{font-size:14px;opacity:.9;margin-top:6px}
+
+  .card{background:var(--paper-raised);border:1px solid var(--rule);border-radius:10px;
+    padding:22px;box-shadow:var(--shadow-xs);transition:.2s var(--ease);text-decoration:none;color:inherit;display:block}
+  .card:hover{box-shadow:var(--shadow-sm)}
+  .card .c-eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-bottom:6px}
+  .card h3{font-size:22px;margin-bottom:4px}
+  .card .c-meta{font-size:14px;color:var(--ink-muted)}
+  .card .c-foot{margin-top:16px;display:flex;justify-content:space-between;align-items:center}
+  .pill{font-size:13px;font-weight:500;color:var(--lesson);display:inline-flex;align-items:center;gap:6px}
+  .btn-sec{font-size:14px;font-weight:500;color:var(--ink);border:1px solid var(--rule-strong);
+    border-radius:6px;padding:7px 14px;background:var(--paper-raised)}
+
+  .section-gap{margin-top:48px}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+  /* TOC libro */
+  .toc{background:var(--paper-raised);border:1px solid var(--rule);border-radius:10px;overflow:hidden}
+  .toc-row{display:flex;align-items:center;gap:16px;padding:14px 22px;border-bottom:1px solid var(--rule);
+    text-decoration:none;color:inherit;transition:.12s var(--ease)}
+  .toc-row:last-child{border-bottom:none}
+  .toc-row:hover{background:var(--paper-sunken)}
+  .toc-row.locked{opacity:.5}
+  .toc-row.current{background:var(--lesson-soft)}
+  .ch-num{font-family:var(--font-mono);font-size:13px;color:var(--ink-faint);width:28px}
+  .ch-name{flex:1;font-family:var(--font-display);font-size:18px;font-weight:500}
+  .ch-bar{width:90px;height:6px;background:var(--rule);border-radius:999px;overflow:hidden}
+  .ch-bar > i{display:block;height:100%;background:var(--lesson)}
+  .ch-pct{font-family:var(--font-mono);font-size:12px;color:var(--ink-muted);width:40px;text-align:right}
+  .badge-current{font-size:11px;font-weight:600;color:var(--lesson);text-transform:uppercase;letter-spacing:.05em}
+
+  .annot{max-width:760px;margin:0 auto;padding:0 24px 60px;color:var(--ink-faint);font-size:13px;font-style:italic;
+    font-family:var(--font-display)}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <span class="brand"><span class="dot"></span>Aprende Português</span>
+    <div class="nav-links">
+      <a href="#" class="active">Estudar</a>
+      <a href="#">Livro</a>
+      <a href="#">Histórias</a>
+      <a href="#">Progresso</a>
+      <a href="#">⚙</a>
+      <div class="variant-toggle"><button class="on">BR</button><button>PT</button></div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="eyebrow">Hoje</div>
+  <div class="eyebrow-rule"></div>
+
+  <h1 class="hero-title">Bom dia, Edu.</h1>
+  <p class="hero-sub">Llevas <strong>12 días</strong> seguidos · Estás en el Capítulo III — Pretérito perfeito</p>
+
+  <div class="stat-row">
+    <div class="stat">
+      <svg class="ring" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.5" fill="none" stroke="#DDD6C7" stroke-width="3"/><circle cx="18" cy="18" r="15.5" fill="none" stroke="#2E8B57" stroke-width="3" stroke-dasharray="97" stroke-dashoffset="12" stroke-linecap="round" transform="rotate(-90 18 18)"/></svg>
+      <div><div class="big">12 días</div><div class="lbl">de racha viva</div></div>
+    </div>
+    <div class="stat">
+      <svg class="ring" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.5" fill="none" stroke="#DDD6C7" stroke-width="3"/><circle cx="18" cy="18" r="15.5" fill="none" stroke="#D4922A" stroke-width="3" stroke-dasharray="97" stroke-dashoffset="38" stroke-linecap="round" transform="rotate(-90 18 18)"/></svg>
+      <div><div class="big">18 / 30</div><div class="lbl">minutos de hoy</div></div>
+    </div>
+  </div>
+
+  <div class="xp">
+    <div class="meta"><span>Nivel B1 · 1.240 XP</span><span>próximo nivel en 320 XP</span></div>
+    <div class="bar"><i style="width:68%"></i></div>
+  </div>
+
+  <a href="#" class="cta">
+    <div class="lead"><span>Empezar sesión</span><span>→</span></div>
+    <div class="sub">47 tarjetas listas · 12 repasos · 35 nuevas · ~20 min</div>
+  </a>
+
+  <div class="eyebrow">Continuar</div>
+  <div class="eyebrow-rule"></div>
+  <a href="#" class="card">
+    <div class="c-eyebrow">Lección 7 · Capítulo III</div>
+    <h3>Pretérito perfeito composto</h3>
+    <div class="c-meta">8 conceptos · empezaste ayer</div>
+    <div class="c-foot">
+      <span class="pill">📖 Lectura a medias</span>
+      <span class="btn-sec">Continuar →</span>
+    </div>
+  </a>
+
+  <div class="section-gap"></div>
+  <div class="eyebrow">Tu libro de texto</div>
+  <div class="eyebrow-rule"></div>
+  <div class="toc">
+    <a href="#" class="toc-row"><span class="ch-num">I</span><span class="ch-name">Fonética y ortografía</span><span class="ch-bar"><i style="width:100%"></i></span><span class="ch-pct">100%</span></a>
+    <a href="#" class="toc-row"><span class="ch-num">II</span><span class="ch-name">Morfología nominal</span><span class="ch-bar"><i style="width:85%"></i></span><span class="ch-pct">85%</span></a>
+    <a href="#" class="toc-row current"><span class="ch-num">III</span><span class="ch-name">Pretérito perfeito <span class="badge-current">· actual</span></span><span class="ch-bar"><i style="width:62%"></i></span><span class="ch-pct">62%</span></a>
+    <a href="#" class="toc-row locked"><span class="ch-num">IV</span><span class="ch-name">Pasados — perfeito/imperfeito</span><span class="ch-bar"><i style="width:0%"></i></span><span class="ch-pct">🔒</span></a>
+    <a href="#" class="toc-row locked"><span class="ch-num">V</span><span class="ch-name">Futuros y condicional</span><span class="ch-bar"><i style="width:0%"></i></span><span class="ch-pct">🔒</span></a>
+  </div>
+
+  <div class="section-gap"></div>
+  <div class="two-col">
+    <div>
+      <div class="eyebrow">Repaso rápido</div><div class="eyebrow-rule"></div>
+      <a href="#" class="card">
+        <h3 style="font-size:20px">Vocabulario global</h3>
+        <div class="c-meta">220 palabras · 5 min</div>
+        <div class="c-foot"><span class="pill" style="color:var(--review)">⚡ Sin plan</span><span class="btn-sec">Empezar →</span></div>
+      </a>
+    </div>
+    <div>
+      <div class="eyebrow">História do bloco</div><div class="eyebrow-rule"></div>
+      <a href="#" class="card">
+        <h3 style="font-size:20px">"O Café da Manhã"</h3>
+        <div class="c-meta">Nivel 2 · 12 frases · 4 min</div>
+        <div class="c-foot"><span class="pill" style="color:var(--pt)">🇵🇹 PT-PT</span><span class="btn-sec">Leer →</span></div>
+      </a>
+    </div>
+  </div>
+</main>
+<p class="annot">— Manual Lusitano · folio 1 · papel, serifa, ritmo —</p>
+</body>
+</html>

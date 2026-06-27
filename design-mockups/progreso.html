@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual Lusitano — Progreso</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@450&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBF7EE; --paper-raised:#FFFFFF; --paper-sunken:#F4EFE0;
+    --ink:#2A241D; --ink-muted:#6B6359; --ink-faint:#9A9082;
+    --rule:#DDD6C7; --rule-strong:#C9C0AD;
+    --lesson:#2E8B57; --lesson-soft:#E6F2EA;
+    --review:#D4922A; --review-soft:#FAF2DF;
+    --info:#5B9BD5; --info-soft:#EAF2FA; --diagnostic:#4F46E5;
+    --error:#B54545;
+    --font-display:"Fraunces",Georgia,serif; --font-body:"Inter",system-ui,sans-serif; --font-mono:"JetBrains Mono",monospace;
+    --shadow-xs:0 1px 1px rgba(42,36,29,.04); --shadow-sm:0 1px 2px rgba(42,36,29,.06);
+    --ease:cubic-bezier(.2,.8,.2,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--font-body);background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:var(--font-display);font-weight:500;letter-spacing:-.02em}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(251,247,238,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+  .nav-inner{max-width:920px;margin:0 auto;padding:0 24px;height:56px;display:flex;align-items:center;gap:28px}
+  .brand{font-family:var(--font-display);font-size:19px;font-weight:600;display:flex;align-items:center;gap:8px}
+  .brand .dot{width:8px;height:8px;border-radius:999px;background:#CA8A04}
+  .nav-links{margin-left:auto;display:flex;gap:4px}
+  .nav-links a{padding:6px 12px;border-radius:6px;font-size:14px;font-weight:500;color:var(--ink-muted);text-decoration:none}
+  .nav-links a.active{color:var(--lesson);background:var(--lesson-soft)}
+
+  main{max-width:920px;margin:0 auto;padding:48px 24px 96px}
+  .eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-bottom:6px}
+  .eyebrow-rule{width:28px;height:2px;background:var(--rule-strong);margin-bottom:24px}
+  h1.title{font-size:39px;margin-bottom:6px}
+  .sub{color:var(--ink-muted);font-size:17px;margin-bottom:40px}
+
+  .tabs{display:inline-flex;border:1px solid var(--rule-strong);border-radius:8px;overflow:hidden;margin-bottom:36px}
+  .tabs button{padding:8px 18px;font-size:14px;font-weight:500;background:none;border:none;color:var(--ink-muted);cursor:pointer;font-family:var(--font-body)}
+  .tabs button.on{background:var(--ink);color:var(--paper)}
+
+  .section-lbl{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin:40px 0 4px}
+  .section-rule{width:28px;height:2px;background:var(--rule-strong);margin-bottom:20px}
+
+  /* outcome metrics */
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .metric{background:var(--paper-raised);border:1px solid var(--rule);border-radius:10px;padding:18px;box-shadow:var(--shadow-xs)}
+  .metric .m-lbl{font-size:12px;color:var(--ink-muted);margin-bottom:10px;min-height:32px}
+  .metric .m-big{font-family:var(--font-display);font-size:30px;font-weight:600;line-height:1}
+  .metric .m-delta{font-size:12px;font-family:var(--font-mono);margin-top:6px}
+  .up{color:var(--lesson)} .down{color:var(--error)}
+
+  /* heatmap */
+  .heat{display:flex;gap:4px;flex-wrap:wrap;background:var(--paper-raised);border:1px solid var(--rule);border-radius:10px;padding:20px;box-shadow:var(--shadow-xs)}
+  .day{width:15px;height:15px;border-radius:3px;background:var(--rule)}
+  .day.l1{background:#CDE6D6} .day.l2{background:#8FCBA8} .day.l3{background:#5AAE7C} .day.l4{background:#2E8B57}
+
+  /* mastery list */
+  .mastery{background:var(--paper-raised);border:1px solid var(--rule);border-radius:10px;overflow:hidden;box-shadow:var(--shadow-xs)}
+  .m-row{display:flex;align-items:center;gap:16px;padding:13px 20px;border-bottom:1px solid var(--rule)}
+  .m-row:last-child{border-bottom:none}
+  .m-name{flex:1;font-size:15px}
+  .m-name small{color:var(--ink-faint);font-family:var(--font-mono);font-size:11px;display:block;margin-top:2px}
+  .m-bar{width:120px;height:6px;background:var(--rule);border-radius:999px;overflow:hidden}
+  .m-bar > i{display:block;height:100%}
+  .m-pct{font-family:var(--font-mono);font-size:12px;width:40px;text-align:right;color:var(--ink-muted)}
+  .decay{font-size:11px;color:var(--review);font-family:var(--font-mono)}
+
+  /* production vs recognition */
+  .balance{background:var(--paper-raised);border:1px solid var(--rule);border-radius:10px;padding:24px;box-shadow:var(--shadow-xs)}
+  .balance .b-row{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+  .balance .b-lbl{width:120px;font-size:14px;color:var(--ink-muted)}
+  .balance .b-track{flex:1;height:24px;background:var(--paper-sunken);border-radius:6px;overflow:hidden}
+  .balance .b-track > i{display:block;height:100%;display:flex;align-items:center;padding-left:10px;color:#fff;font-size:12px;font-weight:600;font-family:var(--font-mono)}
+  .balance .note{font-size:13px;color:var(--ink-muted);font-style:italic;font-family:var(--font-display);margin-top:6px}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <span class="brand"><span class="dot"></span>Aprende Português</span>
+    <div class="nav-links"><a href="#">Estudar</a><a href="#">Livro</a><a href="#">Histórias</a><a href="#" class="active">Progresso</a><a href="#">⚙</a></div>
+  </div>
+</nav>
+
+<main>
+  <div class="eyebrow">Tu avance</div>
+  <div class="eyebrow-rule"></div>
+  <h1 class="title">Progresso</h1>
+  <p class="sub">Lo que de verdad importa: no cuántas tarjetas hiciste, sino cuánto retienes y produces.</p>
+
+  <div class="tabs"><button class="on">Aprendizaje</button><button>Logros</button></div>
+
+  <div class="section-lbl">Resultados de aprendizaje</div>
+  <div class="section-rule"></div>
+  <div class="grid4">
+    <div class="metric"><div class="m-lbl">Retención a 7 días</div><div class="m-big">87%</div><div class="m-delta up">▲ +5% vs mes pasado</div></div>
+    <div class="metric"><div class="m-lbl">Velocidad de respuesta media</div><div class="m-big">8.2<span style="font-size:16px">s</span></div><div class="m-delta up">▼ de 14s (más automático)</div></div>
+    <div class="metric"><div class="m-lbl">Conceptos dominados</div><div class="m-big">34<span style="font-size:16px">/61</span></div><div class="m-delta up">▲ +3 esta semana</div></div>
+    <div class="metric"><div class="m-lbl">Vocab que produces</div><div class="m-big">218</div><div class="m-delta up">▲ activo, no solo pasivo</div></div>
+  </div>
+
+  <div class="section-lbl">Constancia · últimos 90 días</div>
+  <div class="section-rule"></div>
+  <div class="heat" id="heat"></div>
+
+  <div class="section-lbl">Producción vs Reconocimiento</div>
+  <div class="section-rule"></div>
+  <div class="balance">
+    <div class="b-row"><span class="b-lbl">Reconoces (PT→ES)</span><div class="b-track"><i style="width:88%;background:var(--info)">88%</i></div></div>
+    <div class="b-row"><span class="b-lbl">Produces (ES→PT)</span><div class="b-track"><i style="width:64%;background:var(--lesson)">64%</i></div></div>
+    <p class="note">Brecha de 24 pts — sana. Las Production Sessions están cerrándola: hace un mes era 41 pts.</p>
+  </div>
+
+  <div class="section-lbl">Maestría por concepto</div>
+  <div class="section-rule"></div>
+  <div class="mastery">
+    <div class="m-row"><div class="m-name">Presente irregular: ter <small>b3-presente-irregular-ter</small></div><div class="m-bar"><i style="width:95%;background:var(--lesson)"></i></div><span class="m-pct">95%</span></div>
+    <div class="m-row"><div class="m-name">Pretérito perfeito composto <small>b3-pret-perf-composto</small></div><div class="m-bar"><i style="width:72%;background:var(--lesson)"></i></div><span class="m-pct">72%</span></div>
+    <div class="m-row"><div class="m-name">Falso amigo: ficar <small>b2-falso-amigo-ficar</small> · <span class="decay">↓ decayendo</span></div><div class="m-bar"><i style="width:58%;background:var(--review)"></i></div><span class="m-pct">58%</span></div>
+    <div class="m-row"><div class="m-name">Vogais nasais (ão/õe) <small>b1-vogais-nasais</small> · <span class="decay">↓ repasar pronto</span></div><div class="m-bar"><i style="width:44%;background:var(--error)"></i></div><span class="m-pct">44%</span></div>
+  </div>
+</main>
+<script>
+  // genera 90 días de heatmap con intensidad aleatoria
+  const heat=document.getElementById('heat');
+  for(let i=0;i<90;i++){const d=document.createElement('div');const r=Math.random();
+    d.className='day '+(r>.85?'l4':r>.6?'l3':r>.4?'l2':r>.2?'l1':'');heat.appendChild(d);}
+</script>
+</body>
+</html>

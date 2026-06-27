@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual Lusitano — Lección</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,500;9..144,0,600;9..144,1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@450&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBF7EE; --paper-raised:#FFFFFF; --paper-sunken:#F4EFE0;
+    --ink:#2A241D; --ink-muted:#6B6359; --ink-faint:#9A9082;
+    --rule:#DDD6C7; --rule-strong:#C9C0AD;
+    --lesson:#2E8B57; --lesson-soft:#E6F2EA;
+    --review:#D4922A; --info:#5B9BD5; --info-soft:#EAF2FA;
+    --error:#B54545; --error-soft:#F8EAEA;
+    --font-display:"Fraunces",Georgia,serif;
+    --font-body:"Inter",system-ui,sans-serif;
+    --font-mono:"JetBrains Mono",monospace;
+    --shadow-xs:0 1px 1px rgba(42,36,29,.04);
+    --shadow-sm:0 1px 2px rgba(42,36,29,.06);
+    --ease:cubic-bezier(.2,.8,.2,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--font-body);background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;letter-spacing:-.02em;line-height:1.15}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(251,247,238,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+  .nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;height:56px;display:flex;align-items:center;gap:28px}
+  .brand{font-family:var(--font-display);font-size:19px;font-weight:600;display:flex;align-items:center;gap:8px}
+  .brand .dot{width:8px;height:8px;border-radius:999px;background:#CA8A04}
+  .nav-links{margin-left:auto;display:flex;gap:4px}
+  .nav-links a{padding:6px 12px;border-radius:6px;font-size:14px;font-weight:500;color:var(--ink-muted);text-decoration:none}
+  .nav-links a.active{color:var(--lesson);background:var(--lesson-soft)}
+
+  .runhead{max-width:1080px;margin:0 auto;padding:20px 24px 0;font-family:var(--font-display);
+    font-style:italic;font-size:14px;color:var(--ink-faint);display:flex;justify-content:space-between}
+  .folio{font-family:var(--font-mono);font-style:normal;font-size:12px}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:8px 24px 96px;
+    display:grid;grid-template-columns:1fr 248px;gap:56px}
+
+  .ch-eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--lesson);font-weight:600;margin-bottom:6px}
+  .ch-rule{width:28px;height:2px;background:var(--lesson);margin-bottom:24px}
+  .ch-title{font-size:42px;line-height:1.05;margin-bottom:14px}
+  .ch-meta{font-size:14px;color:var(--ink-muted);margin-bottom:0}
+  .divider{height:1px;background:var(--rule);margin:40px 0}
+
+  .prose{font-size:18px;line-height:1.7;color:var(--ink);max-width:62ch}
+  .prose p{margin-bottom:18px}
+  .dropcap::first-letter{font-family:var(--font-display);font-weight:600;color:var(--lesson);
+    font-size:64px;line-height:.8;float:left;margin:6px 12px 0 0}
+  .conj{font-family:var(--font-mono);font-size:15px;background:var(--paper-sunken);
+    border-radius:8px;padding:14px 18px;margin:8px 0 18px;line-height:1.9;border:1px solid var(--rule)}
+  blockquote{border-left:3px solid var(--lesson);padding:4px 0 4px 20px;margin:24px 0;
+    font-style:italic;font-family:var(--font-display);font-size:20px;color:var(--ink-muted)}
+  blockquote cite{display:block;font-size:14px;font-style:normal;font-family:var(--font-body);color:var(--ink-faint);margin-top:8px}
+  .audio-inline{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--ink-muted);
+    background:var(--paper-sunken);border:1px solid var(--rule);border-radius:999px;padding:5px 14px;margin:4px 8px 4px 0;cursor:pointer}
+  .audio-inline .pin{width:22px;height:22px;border-radius:999px;background:var(--lesson);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px}
+
+  .cta-row{margin-top:32px}
+  .cta-go{display:inline-flex;align-items:center;gap:8px;background:var(--lesson);color:#fff;
+    font-weight:500;border-radius:8px;padding:12px 22px;text-decoration:none;box-shadow:var(--shadow-sm)}
+
+  .end{text-align:center;color:var(--ink-faint);font-family:var(--font-display);margin-top:48px}
+  .end .cont{font-style:italic;font-size:15px;color:var(--ink-muted);margin-bottom:18px}
+
+  /* MARGEN */
+  .margin{display:flex;flex-direction:column;gap:18px;padding-top:120px}
+  .note{border-left:2px solid;padding:2px 0 2px 14px}
+  .note.tip{border-color:var(--lesson)}
+  .note.warn{border-color:var(--review)}
+  .note.es{border-color:var(--info)}
+  .note .n-lbl{font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;margin-bottom:5px}
+  .note.tip .n-lbl{color:var(--lesson)} .note.warn .n-lbl{color:var(--review)} .note.es .n-lbl{color:var(--info)}
+  .note p{font-size:14px;line-height:1.5;color:var(--ink-muted);font-style:italic;font-family:var(--font-display)}
+  .vk{font-family:var(--font-mono);font-style:normal;color:var(--ink)}
+
+  @media(max-width:880px){.wrap{grid-template-columns:1fr;gap:0}.margin{padding-top:32px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <span class="brand"><span class="dot"></span>Aprende Português</span>
+    <div class="nav-links"><a href="#" class="active">Livro</a><a href="#">Histórias</a><a href="#">Progresso</a><a href="#">⚙</a></div>
+  </div>
+</nav>
+
+<div class="runhead"><span>Capítulo III — Pretérito perfeito</span><span class="folio">p. 12</span></div>
+
+<div class="wrap">
+  <article>
+    <div class="ch-eyebrow">Capítulo III · Lección 7</div>
+    <div class="ch-rule"></div>
+    <h1 class="ch-title">Pretérito Perfeito Composto</h1>
+    <p class="ch-meta">8 conceitos · 14 min · audio nativo BR + PT</p>
+    <div class="divider"></div>
+
+    <div class="prose">
+      <p class="dropcap">Trata-se de um tempo verbal que usamos para falar de ações que começaram no passado e continuam a ter efeito no presente. O verbo auxiliar é sempre <strong>ter</strong>, seguido do particípio passado.</p>
+
+      <div class="conj">eu <strong>tenho</strong> falado &nbsp;·&nbsp; tu <strong>tens</strong> falado &nbsp;·&nbsp; ele <strong>tem</strong> falado<br>
+      nós <strong>temos</strong> falado &nbsp;·&nbsp; vós <strong>tendes</strong> falado &nbsp;·&nbsp; eles <strong>têm</strong> falado</div>
+
+      <p>Compará-lo com o espanhol ajuda: onde o castelhano usa <em>"he hablado"</em>, o português distingue entre a ação pontual e a ação repetida no tempo.</p>
+
+      <blockquote>Tenho estudado português todos os dias.
+        <cite>— Maria, 32, Lisboa</cite></blockquote>
+
+      <p>Ouça as duas variantes e note a diferença de cadência:</p>
+      <span class="audio-inline"><span class="pin">▶</span> "tenho estudado" — PT-BR</span>
+      <span class="audio-inline"><span class="pin">▶</span> "tenho estudado" — PT-PT</span>
+
+      <div class="cta-row">
+        <a href="#" class="cta-go">Continuar a exercícios →</a>
+      </div>
+
+      <div class="end">
+        <p class="cont">Continua na p. 13 →</p>
+        <div style="font-size:18px">❦</div>
+      </div>
+    </div>
+  </article>
+
+  <aside class="margin">
+    <div class="note tip">
+      <div class="n-lbl">Dica</div>
+      <p>Em PT-BR fala-se mais <span class="vk">"tenho feito"</span> do que <span class="vk">"hei feito"</span>.</p>
+    </div>
+    <div class="note warn">
+      <div class="n-lbl">Cuidado</div>
+      <p>Não confunda com o pretérito perfeito <em>simples</em> (<span class="vk">falei</span>), que é pontual.</p>
+    </div>
+    <div class="note es">
+      <div class="n-lbl">Contraste ES</div>
+      <p>ES "he hablado" ≠ sempre "tenho falado". Aqui implica <strong>repetição</strong>, não uma só vez.</p>
+    </div>
+    <div class="note warn">
+      <div class="n-lbl">Variação BR ↔ PT</div>
+      <p><span class="vk">ônibus</span> (BR) → <span class="vk">autocarro</span> (PT)</p>
+    </div>
+  </aside>
+</div>
+</body>
+</html>
