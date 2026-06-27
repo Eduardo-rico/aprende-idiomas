@@ -143,13 +143,22 @@ a learner who passes everything places at block 1. Revisit separately.
 
 ## Carry-overs / pending human action
 
-- **Audio round** (deferred; the gate flags these as warnings): `b4 04e3860e`
-  translation (its BR/PT audio was generated from the **Spanish** `target` —
-  needs target→PT-BR + TTS regen); `b10 fc80a430` `back` + `c753a69c` BR
-  `audioText` still contain English (their pt-pt overrides are already clean).
+- ✅ **Audio round** (DONE): fixed the residual English/Spanish + regen'd TTS
+  for `b3 c753a69c` (listening audioText), `b10 fc80a430` (flashcard `back`),
+  and `b4 04e3860e` (translation — source/target were swapped, so its audio
+  was Spanish). Surgical regen (generate-audio reorders the whole block and
+  won't re-attach partially-cached items), 5 new clips, orphans GC'd.
+  verify:content 2 warnings → 0.
+- ✅ **Diagnostic `recommendedStart`** (DONE): a learner who passes everything
+  now places at the highest tested block, not B1.
 - **5a shadowing device smoke** — record/playback on a real iPhone (Safari) +
-  desktop Chrome; not doable headless.
+  desktop Chrome; not doable headless. STILL PENDING.
 - **Pre-existing flaky suite test** — full suite failed ~1/10 runs with no
-  reproducible test (not introduced by 5a/5b); worth hunting down.
-- **Spend limit** — raising it re-enables subagent-driven execution (faster,
-  with independent per-task review) for b3–b10 and 5c/5d.
+  reproducible test; worth hunting down. STILL PENDING.
+
+### Note for future audio fixes
+`generate-audio.ts --block N` rewrites/reorders ALL items in the block and
+only attaches audio when BOTH variants are (re)generated in the same run
+(cached variants aren't attached). For surgical single-item fixes, regenerate
+just those clips via `generateTts` and set `audio.{br,pt}.hash` in place
+(content-addressed → unchanged clips are free). Audio mp3s ARE tracked in git.
