@@ -16,7 +16,7 @@ _Last updated: 2026-06-25._
 | content-fixes | `plan5-content-fixes.md` | ✅ done — merged to main |
 | 5a — exercise types + shadowing | `plan5a-exercise-types-shadowing.md` | ✅ done — merged to main |
 | 5b — mass content | `plan5b-mass-content.md` | ✅ **b2–b8 + b10 done** (b9 = freeDrill, no exercises). Linguist + pedagogue review applied. |
-| 5c — richer lessons | `plan5c-richer-lessons.md` | ⬜ not started |
+| 5c — richer lessons | `plan5c-richer-lessons.md` | ✅ done — VerbConjugation component + vocab sections + 11 conjugation tables (audio untouched) |
 | 5d — SRS / engagement | `plan5d-srs-engagement.md` | ⬜ not started |
 
 Execution note: content-fixes, 5a, and 5b so far were run **inline** (not
@@ -115,11 +115,20 @@ existencial es válido en BR).
    from 5a — 5b uses staged files, not the classic LLM `generate-content`
    pipeline, so they aren't needed unless that pipeline is later wired.
 
-## 5c ⬜ — richer lessons (not started)
+## 5c ✅ — richer lessons (done)
 
-Data-driven `<VerbConjugation>` MDX component (R7), vocabulary section, and
-contrast tables, **inserted around the untouched audio-bearing `<Example>`
-lines** (no TTS regeneration). Spec: `plan5c-richer-lessons.md`.
+Data-driven `<VerbConjugation>` MDX component (R7) + a `### Vocabulário`
+section per lesson + conjugation tables for the 11 verb lessons of b3–b7,
+**inserted before the first `<Example>` so the audio lines stay
+byte-identical** (312 insertions, 0 deletions — no TTS regen). Infra in
+`scripts/lib/enrich-mdx.ts` (insertBlock idempotent + buildVocabMdx +
+buildVerbConjugationMdx) and the `scripts/enrich-lessons.ts --write` CLI
+(glosses from `vocab-catalog.json`, validates with assertLatinScript + the
+English guard). **Deviation from the spec:** conjugation forms are
+hand-curated BR paradigms, not LLM-generated (deterministic, no MiniMax
+dep). Contrast tables (the 3rd spec sub-item) were NOT added — the existing
+`<Rule>` prose + the per-exercise `esContrast` already cover ES↔PT contrast;
+revisit if a dedicated table is wanted. Shipped green + Playwright-verified.
 
 ## 5d ⬜ — SRS / engagement (not started)
 
