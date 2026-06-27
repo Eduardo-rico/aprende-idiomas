@@ -17,7 +17,9 @@ export function ListeningCard({ ex, onSubmit }: Props) {
   return (
     <div className="p-8 border-2 border-border rounded-2xl space-y-6 text-center">
       <div className="text-xs text-muted uppercase">Escucha y responde</div>
-      <div className="flex justify-center"><AudioButton src={audioUrl(hash)} size="lg" /></div>
+      {hash
+        ? <div className="flex justify-center"><AudioButton src={audioUrl(hash)} size="lg" /></div>
+        : <div className="text-sm text-muted">Audio no disponible</div>}
       <p className="text-lg">{data.question}</p>
       {data.options && (
         <div className="grid grid-cols-2 gap-2">

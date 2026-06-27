@@ -15,7 +15,7 @@ export function FlashcardCard({ ex, revealed, onReveal }: Props) {
     <div className="p-8 border-2 border-border rounded-2xl text-center space-y-6">
       <div className="text-xs text-muted uppercase">{revealed ? "Respuesta" : "Traduce al portugués"}</div>
       <div className="text-4xl font-display">{revealed ? data.back : data.front}</div>
-      <div className="flex justify-center"><AudioButton src={audioUrl(hash)} /></div>
+      {hash && <div className="flex justify-center"><AudioButton src={audioUrl(hash)} /></div>}
       {ex.esContrast && revealed && (
         <div className="text-sm text-muted italic">⚠️ {ex.esContrast}</div>
       )}

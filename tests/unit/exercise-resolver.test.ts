@@ -103,11 +103,24 @@ describe("resolveAudioHash", () => {
     expect(resolveAudioHash(exNew, "pt-pt")).toBe("hpt2");
   });
 
-  it("throws when the variant has no audio entry", () => {
-    const noPtAudio = {
+  it("maps the full variant key to the legacy short key (pt-br → br)", () => {
+    // Audio is stored under "br"/"pt" but settings passes "pt-br"/"pt-pt".
+    expect(resolveAudioHash(exBr, "pt-br")).toBe("hbr");
+    expect(resolveAudioHash(exBr, "pt-pt")).toBe("hpt");
+  });
+
+  it("falls back to another available variant when the requested one is missing", () => {
+    const onlyBr = {
       ...exBr,
       audio: { br: { hash: "hbr", voice: "v" } },
     };
-    expect(() => resolveAudioHash(noPtAudio, "pt")).toThrow(/no audio for variant/);
+    // No "pt"/"pt-pt" entry → fall back to the only audio present rather
+    // than throwing (which would crash the whole exercise runner).
+    expect(resolveAudioHash(onlyBr, "pt-pt")).toBe("hbr");
+  });
+
+  it("returns null when there is no audio at all", () => {
+    const noAudio = { ...exBr, audio: undefined };
+    expect(resolveAudioHash(noAudio, "pt-br")).toBeNull();
   });
 });

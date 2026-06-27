@@ -85,10 +85,22 @@ export function resolveExerciseData(ex: Exercise, variant: VariantKey): Resolved
   return ExerciseDataByTypeSchema[ex.type].parse(merged) as ResolvedData;
 }
 
-// Audio in b1.json is flat: audio[variant] = { hash, voice }.
-// `variant` is a free VariantKey string now (Phase 1).
-export function resolveAudioHash(ex: Exercise, variant: VariantKey): string {
-  const ref = ex.audio?.[variant];
-  if (!ref) throw new Error(`Exercise ${ex.id} has no audio for variant ${variant}`);
-  return ref.hash;
+// Audio is stored flat under the SHORT variant keys: audio.br / audio.pt =
+// { hash, voice }. Callers, however, pass the full VariantKey ("pt-br" /
+// "pt-pt") from settings — a mismatch introduced when variants moved to the
+// long form in Phase 1, which made resolveAudioHash throw for EVERY
+// audio-bearing card. We map the long key to the short one, then fall back
+// to any other available variant, and finally to `null` so the card renders
+// without an audio button instead of crashing the whole runner.
+const VARIANT_TO_AUDIO_KEY: Record<string, string> = { "pt-br": "br", "pt-pt": "pt" };
+
+export function resolveAudioHash(ex: Exercise, variant: VariantKey): string | null {
+  const audio = ex.audio;
+  if (!audio) return null;
+  const shortKey = VARIANT_TO_AUDIO_KEY[variant] ?? variant;
+  const ref =
+    audio[shortKey] ??        // mapped short key ("br" / "pt")
+    audio[variant] ??         // already-full key (future-proof)
+    Object.values(audio)[0];  // any other available variant
+  return ref?.hash ?? null;
 }
