@@ -172,10 +172,16 @@ export function ExerciseRunner({ exercises, blockId, lessonId, onFinish, lang }:
           // hardcoded — the runner is reused by /review (which doesn't
           // hit the lesson branch, but the prop keeps the type honest)
           // and by /practice which DOES.
+          // NOTE: `lesson`-type exercises carry `mdxPath`, but the runner
+          // is a Client Component and lesson MDX is an async server
+          // component that can't render here. No `lesson` exercises exist
+          // in the corpus today, so we pass an empty slot (the "Continuar"
+          // button still works). If lesson exercises are ever generated,
+          // the runner must receive their MDX pre-rendered from the server.
           <LessonStep
             lessonId={ex.data.lessonId}
-            mdxPath={ex.data.mdxPath}
             lang={lang ?? ("pt" as import("@/lib/locales").LanguageId)}
+            lessonSlot={null}
           />
         )
         : isFlashcard

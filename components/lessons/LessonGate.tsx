@@ -27,8 +27,10 @@ const RECENT_VIEW_MS = 60 * 60 * 1000; // 1 hour
 
 interface Props {
   lessonId: string;
-  mdxPath: string;
   lang: LanguageId;
+  /** Server-pre-rendered lesson MDX, shown in the "show-lesson" branch.
+   *  See LessonRenderer's header note on why this is a slot, not a path. */
+  lessonSlot: React.ReactNode;
   /**
    * Content to render once the gate decides the user is "fresh" — i.e.
    * they have either never seen the lesson, or last saw it >1h ago
@@ -54,7 +56,7 @@ type GateState =
   | { status: "show-lesson" }
   | { status: "skip" };
 
-export function LessonGate({ lessonId, mdxPath, lang, children }: Props) {
+export function LessonGate({ lessonId, lang, lessonSlot, children }: Props) {
   const router = useRouter();
   const [gate, setGate] = useState<GateState>({ status: "loading" });
 
@@ -86,7 +88,7 @@ export function LessonGate({ lessonId, mdxPath, lang, children }: Props) {
     // the user has seen the lesson recently enough.
     if (gate.status !== "skip") return;
     if (children !== undefined) return;
-    router.replace(`/practice/${lang}/${lessonId}`);
+    router.replace(`/${lang}/practice/${lessonId}`);
   }, [gate, lessonId, lang, router, children]);
 
   if (gate.status === "loading") {
@@ -113,5 +115,12 @@ export function LessonGate({ lessonId, mdxPath, lang, children }: Props) {
       </div>
     );
   }
-  return <LessonStep lessonId={lessonId} mdxPath={mdxPath} lang={lang} />;
+  return (
+    <LessonStep
+      lessonId={lessonId}
+      lang={lang}
+      lessonSlot={lessonSlot}
+      onAdvance={() => setGate({ status: "skip" })}
+    />
+  );
 }

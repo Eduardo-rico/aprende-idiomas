@@ -14,17 +14,31 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { LessonRenderer } from "./LessonRenderer";
 import { recordLessonView } from "@/lib/db/repository";
 import type { LanguageId } from "@/lib/locales";
 
 interface Props {
   lessonId: string;
-  mdxPath: string;
   lang: LanguageId;
+  /**
+   * The lesson content (MDX) pre-rendered on the server and passed down
+   * as a slot. LessonStep is a Client Component, so it can't render the
+   * (async) MDX itself — see LessonRenderer's header note. `null` when
+   * no lesson content is available.
+   */
+  lessonSlot: React.ReactNode;
+  /**
+   * Called after the lesson view is recorded, to advance the UI to the
+   * exercises. When provided (the LessonGate case), the gate flips to its
+   * "skip" branch and renders the exercise runner in place — no
+   * navigation. When absent (legacy callers), we fall back to a route
+   * push. Navigating to the SAME practice URL would NOT re-run the gate's
+   * effect, so the callback is the reliable path.
+   */
+  onAdvance?: () => void;
 }
 
-export function LessonStep({ lessonId, mdxPath, lang }: Props) {
+export function LessonStep({ lessonId, lang, lessonSlot, onAdvance }: Props) {
   const router = useRouter();
   const [recording, setRecording] = useState(false);
 
@@ -39,12 +53,16 @@ export function LessonStep({ lessonId, mdxPath, lang }: Props) {
       // the safer UX.
       console.error("LessonStep: recordLessonView failed", err);
     }
-    router.push(`/practice/${lang}/${lessonId}`);
+    if (onAdvance) {
+      onAdvance();
+      return;
+    }
+    router.push(`/${lang}/practice/${lessonId}`);
   };
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8 space-y-6">
-      <LessonRenderer lessonId={lessonId} mdxPath={mdxPath} lang={lang} />
+      {lessonSlot}
       <div className="flex justify-end">
         <button
           onClick={onContinue}

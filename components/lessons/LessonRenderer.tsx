@@ -1,29 +1,29 @@
 // components/lessons/LessonRenderer.tsx
-// Client component (L4 deviation from L3): the renderer used to be a
-// server component (RSC), but L4 needs it from inside other client
-// components (LessonStep, LessonGate). A server component can't be
-// rendered inside a client tree without serialization, so the renderer
-// is now `'use client'` and resolves the dynamic MDX import via
-// React 19's `use()` hook. The dynamic import in `lib/data/mdx.ts`
-// is unchanged — Webpack/Turbopack dynamic imports work on both
-// server and client.
+// Server component. `@next/mdx` compiles each lesson's `.mdx` to an
+// *async* component; React only allows async components on the server,
+// so the MDX MUST be rendered server-side. (An earlier "L4 deviation"
+// made this a Client Component with React 19's `use()` hook — that
+// works when SSR'd from a server page, but Next 16 throws
+// "async Client Component" the moment the MDX renders on the pure
+// client, which is exactly what the /practice gate did.)
 //
-// Renders the MDX content with the custom lesson components
-// (Example, Tip, Rule). If the MDX is missing, renders a friendly
-// fallback hint pointing at `npm run generate:lessons`.
+// Server pages (StandaloneLessonPage, the practice route shell) render
+// this directly. Client components that need the lesson (LessonGate /
+// LessonStep) receive its pre-rendered output as a `lessonSlot` prop —
+// a server component passed as a prop is rendered on the server and is
+// allowed inside a client tree (see Next "Interleaving Server and
+// Client Components").
 //
-// L6: `audioRefs` is plumbed through to the `lessonMdxComponents`
-// factory so the `<Example>` blocks render a real
-// `<LessonAudioPlayer>` button (consuming the sidecar produced by
-// `scripts/generate-audio.ts`) instead of the L3 placeholder span.
-"use client";
-import { use } from "react";
+// Renders the MDX with the custom lesson components (Example, Tip,
+// Rule). If the MDX is missing, renders a friendly fallback hint.
+// `audioRefs` is plumbed into the `lessonMdxComponents` factory so the
+// `<Example>` blocks render a real `<LessonAudioPlayer>` button.
 import { loadLessonMdx } from "@/lib/data/mdx";
 import type { LanguageId } from "@/lib/locales";
 import { lessonMdxComponents } from "./mdx-components";
 import type { VariantKey } from "@/lib/data/variant";
 
-export function LessonRenderer({
+export async function LessonRenderer({
   mdxPath,
   lang,
   audioRefs,
@@ -33,7 +33,7 @@ export function LessonRenderer({
   lang: LanguageId;
   audioRefs?: Record<VariantKey, Array<{ hash: string; voice: string }>>;
 }) {
-  const MdxContent = use(loadLessonMdx(lang, mdxPath));
+  const MdxContent = await loadLessonMdx(lang, mdxPath);
   if (!MdxContent) {
     return (
       <div className="rounded-lg border border-dashed p-6 text-center text-muted-foreground">
