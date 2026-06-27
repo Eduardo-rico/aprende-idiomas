@@ -153,8 +153,13 @@ a learner who passes everything places at block 1. Revisit separately.
   now places at the highest tested block, not B1.
 - **5a shadowing device smoke** — record/playback on a real iPhone (Safari) +
   desktop Chrome; not doable headless. STILL PENDING.
-- **Pre-existing flaky suite test** — full suite failed ~1/10 runs with no
-  reproducible test; worth hunting down. STILL PENDING.
+- ✅ **Flaky suite** (DONE): `--sequence.shuffle` surfaced 3 independent
+  flakes — minimax-tts cache pollution (clear temp dir per test), fsrs
+  determinism test comparing creation-time deltas (compare nextReviewAt
+  directly), and a real source bug in `recordLessonView` (two `Date.now()`
+  calls → id ts ≠ viewedAt). 25/25 shuffled full-suite runs now green.
+  **Tip:** run `npx vitest run --sequence.shuffle` to catch order/timing
+  flakes the default fixed order hides.
 
 ### Note for future audio fixes
 `generate-audio.ts --block N` rewrites/reorders ALL items in the block and
