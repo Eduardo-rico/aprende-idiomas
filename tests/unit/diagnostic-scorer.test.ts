@@ -12,9 +12,9 @@ const questions: DiagnosticQuestion[] = [
 ];
 
 describe('computeRecommendation', () => {
-  it('all correct → recommends B1 (you can start at the beginning)', () => {
+  it('all correct → recommends the highest tested block (strong learner placed forward, not B1)', () => {
     const rec = computeRecommendation(questions, [0, 1, 2, 3, 0]);
-    expect(rec.recommendedStart).toBe(1);
+    expect(rec.recommendedStart).toBe(3); // questions span blocks 1–3; mastery → start at B3
   });
 
   it('0% in B1, 100% in B2, B3 → recommends B1 (must review)', () => {

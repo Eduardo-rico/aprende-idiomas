@@ -5,7 +5,9 @@
 import type { DiagnosticQuestion } from '@/lib/data/zod-schemas';
 
 export interface Recommendation {
-  /** Block to start at (1-indexed). Falls back to 1 when no failure. */
+  /** Block to start at (1-indexed). When no block fails, this is the
+   *  highest tested block (a strong learner is placed forward, not at 1).
+   *  Falls back to 1 only when there are no answers. */
   recommendedStart: number;
   /** Overall accuracy as an integer percentage 0-100. */
   score: number;
@@ -60,11 +62,18 @@ export function computeRecommendation(
   }
 
   // Find the lowest block (numerically) whose accuracy is below the
-  // threshold. If none are failing, default to block 1 (start at the
-  // beginning).
+  // threshold — that's where the learner needs to start reviewing.
   const sortedBlocks = Object.entries(blockScores).sort(([a], [b]) => Number(a) - Number(b));
   const failingBlock = sortedBlocks.find(([, acc]) => acc < ACCURACY_THRESHOLD);
-  const recommendedStart = failingBlock ? Number(failingBlock[0]) : 1;
+  // When no block fails, the learner has shown mastery of everything the
+  // diagnostic covers, so place them at the HIGHEST tested block instead of
+  // sending them back to block 1. (We stop at the highest tested block
+  // rather than +1 because the next block may be the freeDrill block or
+  // beyond the curriculum.)
+  const testedBlocks = Object.keys(blockScores).map(Number);
+  const recommendedStart = failingBlock
+    ? Number(failingBlock[0])
+    : (testedBlocks.length ? Math.max(...testedBlocks) : 1);
 
   return {
     recommendedStart,
