@@ -9,7 +9,7 @@ import { currentStreak, didStudyToday, isStreakAlive } from "@/lib/streak/streak
 import { levelFromXp } from "@/lib/xp/calculator";
 import { RULES, type AppState } from "@/lib/achievements/rules";
 import { DEFAULT_LANGUAGE, type LanguageId } from "@/lib/locales";
-import { type VariantKey } from "@/lib/data/variant";
+import { type VariantKey, legacyVariantToKey } from "@/lib/data/variant";
 
 export async function getOrCreateCard(id: CardId, blockId: number, lessonId: string): Promise<Card> {
   const existing = await db.cards.get(id);
@@ -476,8 +476,13 @@ export async function getAppState(goalMin: number): Promise<AppState> {
     .count();
 
   // AnswerEvent rows are the discriminated union branch with flat `variant` field.
+  // Translate any legacy "br"/"pt" values to canonical "pt-br"/"pt-pt" so the
+  // achievement rules in lib/achievements/rules.ts (which key on canonical
+  // names) actually fire on pre-Phase-4 data. See lib/data/variant.ts.
   const answerEvents = events.filter((e): e is AnswerEvent => e.type === "answer");
-  const variantsUsed = new Set(answerEvents.map((e) => e.variant).filter(Boolean));
+  const variantsUsed = new Set(
+    answerEvents.map((e) => legacyVariantToKey(e.variant)).filter(Boolean),
+  );
 
   const genericEvents = events.filter((e): e is GenericEvent => e.type !== "answer");
   const lessonsCompleted = genericEvents.filter((e) => e.type === "lesson_complete");

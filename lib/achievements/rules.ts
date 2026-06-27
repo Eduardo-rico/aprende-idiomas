@@ -39,8 +39,11 @@ export const RULES: Rule[] = [
   { id: "concept-master-1", name: "Maestría 1", description: "1 concepto con 80% mastery", check: s => s.conceptsMastery80 >= 1 },
   { id: "concept-master-10", name: "Maestría 10", description: "10 conceptos con 80% mastery", check: s => s.conceptsMastery80 >= 10 },
   { id: "diagnostic-taken", name: "Auto-conhecimento", description: "Toma el test diagnóstico", check: s => s.diagnosticCount >= 1 },
-  { id: "br-explorer", name: "Brasil", description: "Estudia en variante BR", check: s => s.variantsUsed.has("br") },
-  { id: "pt-explorer", name: "Portugal", description: "Estudia en variante PT", check: s => s.variantsUsed.has("pt") },
+  // Phase 4: legacy "br"/"pt" replaced by canonical "pt-br"/"pt-pt"
+  // (see lib/data/variant.ts). The AchievementEngine populates
+  // variantsUsed with canonical keys via legacyVariantToKey().
+  { id: "br-explorer", name: "Brasil", description: "Estudia en variante BR", check: s => s.variantsUsed.has("pt-br") || s.variantsUsed.has("br") },
+  { id: "pt-explorer", name: "Portugal", description: "Estudia en variante PT", check: s => s.variantsUsed.has("pt-pt") || s.variantsUsed.has("pt") },
 ];
 
 export function checkAndUnlock(prevUnlocked: Set<string>, state: AppState): Rule[] {

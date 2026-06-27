@@ -56,10 +56,29 @@ describe("specific rules", () => {
     expect(r.check(state({ completedBlocks: [1] }))).toBe(true);
   });
 
-  it("pt-explorer", () => {
+  it("br-explorer dispara con 'pt-br' canónico", () => {
+    const r = RULES.find((r) => r.id === "br-explorer")!;
+    expect(r.check(state({ variantsUsed: new Set(["pt-br"]) }))).toBe(true);
+    // belt-and-suspenders: legacy "br" también dispara
+    expect(r.check(state({ variantsUsed: new Set(["br"]) }))).toBe(true);
+  });
+
+  it("pt-explorer dispara con 'pt-pt' canónico", () => {
     const r = RULES.find((r) => r.id === "pt-explorer")!;
-    expect(r.check(state({ variantsUsed: new Set(["br"]) }))).toBe(false);
-    expect(r.check(state({ variantsUsed: new Set(["br", "pt"]) }))).toBe(true);
+    expect(r.check(state({ variantsUsed: new Set(["pt-pt"]) }))).toBe(true);
+    // belt-and-suspenders: legacy "pt" también dispara
+    expect(r.check(state({ variantsUsed: new Set(["pt"]) }))).toBe(true);
+  });
+
+  it("br-explorer y pt-explorer son mutuamente excluyentes", () => {
+    const br = RULES.find((r) => r.id === "br-explorer")!;
+    const pt = RULES.find((r) => r.id === "pt-explorer")!;
+    // Solo pt-br → br-explorer, NO pt-explorer
+    expect(br.check(state({ variantsUsed: new Set(["pt-br"]) }))).toBe(true);
+    expect(pt.check(state({ variantsUsed: new Set(["pt-br"]) }))).toBe(false);
+    // Solo pt-pt → pt-explorer, NO br-explorer
+    expect(br.check(state({ variantsUsed: new Set(["pt-pt"]) }))).toBe(false);
+    expect(pt.check(state({ variantsUsed: new Set(["pt-pt"]) }))).toBe(true);
   });
 });
 
