@@ -14,12 +14,19 @@ vi.mock('@/scripts/config', async (orig) => {
 });
 
 import { generateTts, isValidMp3, _resetInflight } from '@/scripts/lib/minimax-tts';
+import { TTS_OUTPUT } from '@/scripts/config';
 
 const REAL_FETCH = globalThis.fetch;
 
 beforeEach(() => {
   _resetInflight();
   vi.restoreAllMocks();
+  // Isolate the (persistent, per-file) temp cache dir between tests:
+  // several tests reuse the same {text,voiceId,variant} → same content hash
+  // → same cache file. Without this, a success test that writes the file
+  // makes a reject-expecting test resolve from cache when it runs first
+  // (order-dependent flake, only visible under --sequence.shuffle).
+  for (const f of fs.readdirSync(TTS_OUTPUT)) fs.rmSync(path.join(TTS_OUTPUT, f), { force: true });
 });
 afterEach(() => {
   globalThis.fetch = REAL_FETCH;

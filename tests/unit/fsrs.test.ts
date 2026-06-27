@@ -43,8 +43,10 @@ describe("FSRS wrapper", () => {
     const b0 = newCard("x9y8z7w6", 2, "b1-l2");
     const a1 = schedule(a0, RATING.Good, fixed);
     const b1 = schedule(b0, RATING.Good, fixed);
-    const aDelta = a1.nextReviewAt.getTime() - a0.nextReviewAt.getTime();
-    const bDelta = b1.nextReviewAt.getTime() - b0.nextReviewAt.getTime();
-    expect(aDelta).toBe(bDelta);
+    // Both are scheduled from the SAME `fixed` now with the SAME rating, so
+    // their resulting nextReviewAt must be identical. (The old delta-vs-delta
+    // form subtracted each card's creation-time baseline — a0 and b0 are
+    // created microseconds apart, so the deltas flaked across a ms boundary.)
+    expect(a1.nextReviewAt.getTime()).toBe(b1.nextReviewAt.getTime());
   });
 });

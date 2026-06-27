@@ -548,12 +548,16 @@ export async function recordLessonView(
   lessonId: string,
   language: LanguageId,
 ): Promise<string> {
-  const id = `lessonview-${language}-${lessonId}-${Date.now()}`;
+  // One Date.now() for BOTH the id suffix and viewedAt — two separate calls
+  // can straddle a millisecond boundary, leaving the id's timestamp ≠
+  // viewedAt (an occasional flake, and a real inconsistency in the data).
+  const now = Date.now();
+  const id = `lessonview-${language}-${lessonId}-${now}`;
   const row: LessonView = {
     id,
     lessonId,
     language,
-    viewedAt: Date.now(),
+    viewedAt: now,
   };
   await db.lessonViews.add(row);
   return id;
