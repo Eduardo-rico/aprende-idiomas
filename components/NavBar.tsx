@@ -1,7 +1,10 @@
 // components/NavBar.tsx
-// Top sticky nav. Links are lang-prefixed via the active `useLang()`.
-// We use the active language for hrefs (not just path startsWith) so
-// navigating from /pt/learn to /pt/blocks preserves the lang segment.
+// Manual Lusitano top nav. Sticky, blurred paper background, brand mark
+// with a green dot. Links are lang-prefixed via the active `useLang()`
+// so navigating from /pt/learn to /pt/blocks preserves the lang segment.
+// All colors use the new Manual Lusitano tokens (paper/ink/rule/lesson)
+// instead of the legacy border/background aliases — see
+// app/globals.css and components/ui/.
 "use client";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -15,11 +18,10 @@ export function NavBar() {
   const router = useRouter();
   const { language, setLanguage } = useSettings();
   const links = [
-    { href: `/${lang}`, label: "Inicio" },
-    { href: `/${lang}/learn`, label: "Estudiar" },
-    { href: `/${lang}/blocks`, label: "Blocos" },
+    { href: `/${lang}`, label: "Estudar" },
+    { href: `/${lang}/blocks`, label: "Livro" },
     { href: `/${lang}/stories`, label: "Histórias" },
-    { href: `/${lang}/stats`, label: "Stats" },
+    { href: `/${lang}/stats`, label: "Progresso" },
     { href: `/${lang}/settings`, label: "⚙" },
   ];
   // Phase 5: los 4 idiomas están habilitados. Cambiar el dropdown hace
@@ -31,30 +33,39 @@ export function NavBar() {
     router.push(`/${next}`);
   };
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-border">
-      <div className="max-w-5xl mx-auto px-4 flex items-center gap-6 h-14">
-        <Link href={`/${lang}`} className="font-display text-xl">
-          {LANG_FLAGS[lang]} {LANG_LABELS[lang]}
+    <nav className="sticky top-0 z-50 backdrop-blur-md bg-paper/80 border-b border-rule">
+      <div className="max-w-5xl mx-auto px-6 flex items-center gap-7 h-14">
+        <Link href={`/${lang}`} className="font-display text-[19px] font-semibold flex items-center gap-2 no-underline text-ink">
+          <span
+            aria-hidden="true"
+            className="inline-block w-2 h-2 rounded-full bg-lesson"
+          />
+          Aprende Português
         </Link>
-        <ul className="flex gap-1 ml-auto">
-          {links.map(l => (
-            <li key={l.href}>
-              <Link
-                href={l.href}
-                className={`px-3 py-1.5 rounded-md text-sm ${
-                  path === l.href ? "bg-accent/10 text-accent" : "text-muted hover:text-foreground"
-                }`}
-              >
-                {l.label}
-              </Link>
-            </li>
-          ))}
+        <ul className="flex gap-1 ml-auto items-center list-none">
+          {links.map((l) => {
+            const active = path === l.href;
+            return (
+              <li key={l.href}>
+                <Link
+                  href={l.href}
+                  className={
+                    active
+                      ? "px-3 py-1.5 rounded-md text-sm font-medium text-lesson bg-lesson-soft no-underline"
+                      : "px-3 py-1.5 rounded-md text-sm font-medium text-ink-muted hover:text-ink hover:bg-paper-sunken no-underline transition-colors duration-150 ease-[var(--ease)]"
+                  }
+                >
+                  {l.label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
         <select
           value={language}
           onChange={(e) => handleLanguageChange(e.target.value as LanguageId)}
           aria-label="Idioma objetivo"
-          className="border border-border rounded-md px-2 py-1 text-xs bg-background"
+          className="border border-rule-strong rounded-md px-2 py-1 text-xs bg-paper text-ink"
         >
           {LANGUAGES.map((l) => (
             <option key={l} value={l}>

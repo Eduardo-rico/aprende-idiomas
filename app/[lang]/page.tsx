@@ -1,65 +1,163 @@
 // app/[lang]/page.tsx
-// Lang-scoped home. The active `lang` flows in via `params: Promise<{ lang: string }>`;
-// the lang layout has already validated it via `hasLocale`, but we still
-// narrow defensively. In-page links are lang-prefixed so navigating from
-// /pt to /pt/stats preserves the language segment.
-import Link from 'next/link';
-import { loadAllStories } from '@/lib/data/loaders';
-import { hasLocale, DEFAULT_LANGUAGE, type LanguageId } from '@/lib/locales';
-import { TodaySummary } from '@/components/home/TodaySummary';
-import { StoryOfTheBlockCard } from '@/components/home/StoryOfTheBlockCard';
-import { ContinueCard } from '@/components/home/ContinueCard';
-import { VariantToggle } from '@/components/VariantToggle';
-import { EmptyState } from './_empty-state';
+// Manual Lusitano portada. Server component: streams the layout
+// scaffold (heading, subline, TOC, continue lesson, footer note)
+// immediately, then a small client island (`HomeStatsClient`) hydrates
+// with live SRS counts from Dexie (browser-only IndexedDB).
+//
+// Server-side we only resolve the curriculum (filesystem-backed TS/JSON
+// modules). Dexie lives client-side; the previous home page already
+// followed this hybrid pattern with `TodaySummary`/`ContinueCard`.
+//
+// Per Next 16: `params` is a Promise; we await it. `hasLocale` rejects
+// unknown langs (defense-in-depth — the lang layout has already
+// validated it, but we re-check defensively).
+import { Eyebrow } from "@/components/ui";
+import { TocBook, type TocEntry } from "@/components/home/TocBook";
+import { ContinueLessonCard } from "@/components/home/ContinueLessonCard";
+import { QuickReviewCard } from "@/components/home/QuickReviewCard";
+import { StoryOfTheBlockCardNew } from "@/components/home/StoryOfTheBlockCardNew";
+import { HomeStatsClient } from "@/components/home/HomeStatsClient";
+import { loadCurriculum } from "@/lib/data/loaders";
+import { hasLocale, type LanguageId } from "@/lib/locales";
+import { notFound } from "next/navigation";
+import { EmptyState } from "./_empty-state";
 
-export default async function LangHomePage({
-  params,
-}: {
+export const dynamic = "force-dynamic";
+
+interface PageProps {
   params: Promise<{ lang: string }>;
-}) {
-  const { lang: rawLang } = await params;
-  const lang: LanguageId = hasLocale(rawLang) ? rawLang : DEFAULT_LANGUAGE;
-  const stories = await loadAllStories(lang);
+}
 
-  // Phase 5: idioma sin contenido → empty state en vez del chrome PT.
-  if (stories.length === 0) {
+// Derive a coarse "mastery" percentage per block from its lessons'
+// prereq depth. Without live SRS mastery, this is the best server-side
+// signal: a block whose prereqs are all from earlier blocks is "in
+// progress"; one with no prereqs is "available". Locking rule: blocks
+// that have not yet been authored (`lessons.length === 0`) are locked.
+function chaptersFromCurriculum(BLOCKS: Awaited<ReturnType<typeof loadCurriculum>>["BLOCKS"]): TocEntry[] {
+  const maxAuthored = BLOCKS.reduce(
+    (acc, b) => (b.lessons.length > 0 ? Math.max(acc, b.id) : acc),
+    0,
+  );
+  const currentChapter = maxAuthored;
+  return BLOCKS.map((b) => {
+    const hasContent = b.lessons.length > 0;
+    const locked = !hasContent;
+    // Synthetic progress: blocks with content get a stepped estimate
+    // based on their position relative to the most recent authored
+    // block. The first authored block is 100%, the most recent is
+    // "current" (~62%), intermediates interpolate. This matches the
+    // mockup's TOC visual without claiming false precision.
+    let progressPct = 0;
+    let current = false;
+    if (hasContent) {
+      if (b.id === currentChapter) {
+        progressPct = 62;
+        current = true;
+      } else if (b.id < currentChapter) {
+        const steps = currentChapter - 1;
+        const stepPct = (currentChapter - b.id) / Math.max(steps, 1);
+        progressPct = Math.round(100 - stepPct * 38); // 100% → 62%
+      } else {
+        progressPct = 0;
+      }
+    }
+    return {
+      chapterNum: b.id,
+      name: b.name,
+      progressPct,
+      locked,
+      current,
+    };
+  });
+}
+
+export default async function LangHomePage({ params }: PageProps) {
+  const { lang: rawLang } = await params;
+  if (!hasLocale(rawLang)) notFound();
+  const lang: LanguageId = rawLang;
+
+  // Scaffold language without authored content → empty state. Matches
+  // the existing fallback in the legacy home page.
+  const { BLOCKS } = await loadCurriculum(lang);
+  if (BLOCKS.length === 0) {
     return <EmptyState lang={lang} page="la página de inicio" />;
   }
 
-  return (
-    <div className="max-w-3xl mx-auto px-4 py-8 space-y-4">
-      <header className="flex items-center justify-between flex-wrap gap-4">
-        <div>
-          <h1 className="font-display text-4xl">Aprende Português</h1>
-          <p className="text-sm text-muted-foreground">
-            Português brasileiro + europeu para hispanohablantes
-          </p>
-        </div>
-        <div className="flex items-center gap-3">
-          <VariantToggle />
-          <nav className="flex gap-3 text-sm">
-            <Link href={`/${lang}/diagnostic`} className="text-muted-foreground hover:text-foreground">
-              Diagnóstico
-            </Link>
-            <Link href={`/${lang}/stats`} className="text-muted-foreground hover:text-foreground">
-              Stats
-            </Link>
-            <Link href={`/${lang}/achievements`} className="text-muted-foreground hover:text-foreground">
-              Logros
-            </Link>
-            <Link href={`/${lang}/blocks`} className="text-muted-foreground hover:text-foreground">
-              Bloques
-            </Link>
-            <Link href={`/${lang}/settings`} className="text-muted-foreground hover:text-foreground">
-              Settings
-            </Link>
-          </nav>
-        </div>
-      </header>
+  const chapters = chaptersFromCurriculum(BLOCKS);
+  const currentChapter =
+    chapters.find((c) => c.current) ?? chapters.find((c) => !c.locked) ?? chapters[0]!;
 
-      <TodaySummary />
-      <StoryOfTheBlockCard stories={stories} />
-      <ContinueCard />
-    </div>
+  // Pick the first available chapter's first lesson as the "continue
+  // reading" target. Once the user has a real `lastLesson` in uiState
+  // we will swap this for a read from Dexie (browser-only).
+  const firstBlock = BLOCKS.find((b) => b.id === currentChapter.chapterNum);
+  const firstLesson = firstBlock?.lessons[0];
+  const lastLessonTitle =
+    firstLesson?.name ?? chapters[currentChapter.chapterNum - 1]?.name ?? "Lección";
+
+  return (
+    <main className="max-w-[760px] mx-auto px-6 py-14 pb-24">
+      <Eyebrow>Hoje</Eyebrow>
+
+      <h1 className="font-display text-[39px] mb-2 leading-[1.1]">
+        Bom dia, Edu.
+      </h1>
+      <p className="text-[18px] text-ink-muted mb-7">
+        {currentChapter.locked ? (
+          <>Estás en el <strong>Capítulo {currentChapter.chapterNum}</strong></>
+        ) : (
+          <>
+            Estás en el{" "}
+            <strong>
+              Capítulo {romanize(currentChapter.chapterNum)} — {currentChapter.name}
+            </strong>
+          </>
+        )}
+      </p>
+
+      <HomeStatsClient lang={lang} />
+
+      <ContinueLessonCard
+        lang={lang}
+        chapterNum={currentChapter.chapterNum}
+        sectionTitle={lastLessonTitle}
+        progressPct={currentChapter.progressPct}
+      />
+
+      <TocBook lang={lang} chapters={chapters} />
+
+      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <Eyebrow>Repaso rápido</Eyebrow>
+          <QuickReviewCard
+            lang={lang}
+            href="learn"
+            title="Vocabulario global"
+            meta="220 palabras · 5 min"
+            badgeText="⚡ Sin plan"
+            badgeClass="text-review"
+          />
+        </div>
+        <div>
+          <Eyebrow>História do bloco</Eyebrow>
+          <StoryOfTheBlockCardNew
+            lang={lang}
+            href={`stories/b${currentChapter.chapterNum}-s1`}
+            title={`"O Café da Manhã"`}
+            meta="Nivel 2 · 12 frases · 4 min"
+            badgeText="🇵🇹 PT-PT"
+            badgeClass="text-pt"
+          />
+        </div>
+      </div>
+
+      <p className="text-center text-ink-faint italic font-display text-sm mt-12">
+        — Manual Lusitano · folio 1 · papel, serifa, ritmo —
+      </p>
+    </main>
   );
+}
+
+function romanize(n: number): string {
+  return ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"][n - 1] ?? String(n);
 }
