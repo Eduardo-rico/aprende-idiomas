@@ -30,7 +30,6 @@
     "@fontsource/jetbrains-mono": "^5.2.8",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
-    "@next/mdx": "^16.2.9",
     "@types/mdx": "^2.0.14",
     "canvas-confetti": "^1.9.4",
     "dexie": "^4.4.3",
@@ -46,13 +45,14 @@
     "zustand": "^5.0.14"
   },
   "devDependencies": {
+    "@next/mdx": "^16.2.9",
     "@playwright/test": "^1.60.0",
     "@tailwindcss/postcss": "^4",
     "@tailwindcss/typography": "^0.5.20",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@types/canvas-confetti": "^1.9.0",
-    "@types/node": "^20",
+    "@types/node": "^22.20.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@vitest/ui": "^4.1.8",
