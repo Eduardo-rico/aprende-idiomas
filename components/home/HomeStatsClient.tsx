@@ -86,7 +86,7 @@ export function HomeStatsClient({ lang }: Props) {
       <XpBar current={xpCurrent} nextLevel={xpNext} totalXp={totalXp || 0} />
 
       <Link
-        href={`/${lang}/learn`}
+        href={`/${lang}/practicar/srs`}
         className="block no-underline bg-lesson rounded-xl px-6 py-5 mb-12 text-paper transition-transform duration-200 ease-[var(--ease)] hover:-translate-y-px shadow-[var(--shadow-md)]"
         aria-label="Empezar sesión de práctica"
       >
