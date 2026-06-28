@@ -241,3 +241,186 @@ export async function loadLessonsAudioRefs(
     throw err;
   }
 }
+
+// ─── Lesson view-model (A.2 — Manual Lusitano lección page) ──
+//
+// Loads a lesson by chapter + section slug and assembles the flat
+// "view model" the `/libro/[chapter]/[section]` page consumes.
+//
+// URL convention: `/[lang]/libro/{chapter}/{section}` where `chapter`
+// is the blockId (1..10) and `section` is the lesson slug — the part
+// after the `b{N}-l{N}-` prefix in the canonical lessonId (e.g.
+// `presente-regular`). The loader matches by either:
+//   1. The full canonical id `b{chapter}-l{N}-{section}` — fastest.
+//   2. Any lesson in the block whose slug ends with `{section}` —
+//      tolerant of an off-by-one number in the URL.
+//
+// Returns `null` if no lesson matches, the block id is not numeric,
+// or the lang has no curriculum. The route calls notFound() on null.
+export interface LessonViewModel {
+  lessonId: string;
+  blockId: number;
+  blockName: string;
+  lessonNumber: number;
+  title: string;
+  /** Paragraph shown first, wrapped in <DropCap>. Defaults to the
+   *  lesson objectives joined; the LLM-generated prose (Plan #2)
+   *  will replace this once lessons are authored. */
+  firstParagraph: string;
+  /** Conjugation rows for the optional paradigm table. Empty when
+   *  the lesson has no paradigm. */
+  conjugation: Array<{ pronoun: string; form: string }>;
+  /** Second body paragraph. Defaults to a brief gloss + cue to play
+   *  audio when no authored prose is available yet. */
+  bodyParagraph: string;
+  /** Pull-quote body + cite. */
+  quoteText: string;
+  quoteCite: string;
+  /** Audio URLs split by canonical VariantKey (pt-br / pt-pt). The
+   *  first example's audio for each variant is the surfaced URL;
+   *  the audio preloader from Task 0.9 warms it. */
+  audioRefs: {
+    "pt-br": Array<{ url: string; hash: string; voice: string }>;
+    "pt-pt": Array<{ url: string; hash: string; voice: string }>;
+  };
+  /** Margin notes rendered in the right column. */
+  marginNotes: Array<{
+    variant: "tip" | "warn" | "es" | "variant";
+    label: string;
+    body: string;
+  }>;
+  /** Editorial meta for the running head + title block. */
+  conceptCount: number;
+  estimatedMinutes: number;
+  /** Fictional page number; pages are derived deterministically so the
+   *  URL `Continua na p. N+1 →` cue stays stable across renders. */
+  pageNumber: number;
+  /** Path to the lesson's MDX concept notes. Used by the embedded
+   *  <LessonRenderer> so the full lesson body is available below the
+   *  fold even when the view model only summarizes. */
+  mdxPath: string;
+}
+
+export async function loadLesson(
+  lang: LanguageId,
+  chapter: string,
+  section: string,
+): Promise<LessonViewModel | null> {
+  if (!/^\d+$/.test(chapter)) return null;
+  const chapterNum = Number(chapter);
+  const curriculum = await loadCurriculum(lang);
+  const block = curriculum.BLOCKS.find((b) => b.id === chapterNum);
+  if (!block) return null;
+
+  // Match: prefer exact canonical id, else any lesson whose slug tail
+  // matches the section.
+  const lessons = block.lessons;
+  const exact = lessons.find((l) => l.id === `b${chapterNum}-${section}`);
+  const lesson =
+    exact ??
+    lessons.find((l) => l.id === `b${chapterNum}-l${section}`) ??
+    lessons.find((l) => {
+      const tail = l.id.split('-').slice(2).join('-');
+      return tail === section;
+    }) ??
+    lessons.find((l) => l.id.endsWith(`-${section}`));
+  if (!lesson) return null;
+
+  // Audio refs (per-variant example lists).
+  const audioRefsMap = await loadLessonsAudioRefs(lang);
+  const entry = audioRefsMap[lesson.id];
+  const brRefs = entry?.audioRefs?.['pt-br'] ?? [];
+  const ptRefs = entry?.audioRefs?.['pt-pt'] ?? [];
+
+  // Static page number: chapters start at p.1, each lesson adds a
+  // page. Stable across renders — used for the running head "p. N".
+  const priorLessons = curriculum.BLOCKS
+    .slice(0, chapterNum - 1)
+    .reduce((acc, b) => acc + b.lessons.length, 0);
+  const lessonIndexInBlock = lessons.findIndex((l) => l.id === lesson.id);
+  const pageNumber = priorLessons + lessonIndexInBlock + 1;
+
+  // Lesson number inside the block (1..N).
+  const lessonNumberMatch = lesson.id.match(/-l(\d+)-/);
+  const lessonNumber = lessonNumberMatch ? Number(lessonNumberMatch[1]) : lessonIndexInBlock + 1;
+
+  return {
+    lessonId: lesson.id,
+    blockId: lesson.blockId,
+    blockName: block.name,
+    lessonNumber,
+    title: entry?.title ?? lesson.name,
+    firstParagraph:
+      lesson.objectives[0] ??
+      `Conteúdo da lição ${lesson.name} em breve — gerado pelo orquestrador.`,
+    conjugation: [],
+    bodyParagraph:
+      "Ouça as duas variantes e note a diferença de cadência e timbre.",
+    quoteText: lesson.vocabKey[0]
+      ? `Exemplo com "${lesson.vocabKey[0]}"`
+      : lesson.name,
+    quoteCite: `Capítulo ${chapterNum} — ${block.name}`,
+    audioRefs: {
+      "pt-br": brRefs.map((r) => ({
+        url: `/audio/${r.hash}.mp3`,
+        hash: r.hash,
+        voice: r.voice,
+      })),
+      "pt-pt": ptRefs.map((r) => ({
+        url: `/audio/${r.hash}.mp3`,
+        hash: r.hash,
+        voice: r.voice,
+      })),
+    },
+    marginNotes: buildMarginNotesForLesson(lesson, block),
+    conceptCount: lesson.conceptIds.length,
+    estimatedMinutes: Math.max(5, Math.round(lesson.vocabKey.length * 1.5)),
+    pageNumber,
+    mdxPath: lesson.conceptNotesPath,
+  };
+}
+
+/**
+ * Builds margin notes for a lesson from its curriculum metadata. The
+ * notes are heuristic until Plan #2 authors explicit pedagogy: each
+ * note surfaces a vocabulary contrast, an ES warning, or a BR/PT
+ * variation cue — derived from the lesson's vocabKey + conceptIds.
+ */
+function buildMarginNotesForLesson(
+  lesson: import('./curriculum-types').Lesson,
+  block: import('./curriculum-types').Block,
+): LessonViewModel['marginNotes'] {
+  const notes: LessonViewModel['marginNotes'] = [];
+  if (lesson.vocabKey.length > 0) {
+    notes.push({
+      variant: 'tip',
+      label: 'Dica',
+      body: `Foca primeiro em "${lesson.vocabKey[0]}" — é o item de maior payoff deste capítulo.`,
+    });
+  }
+  if (lesson.conceptIds.length > 1) {
+    notes.push({
+      variant: 'warn',
+      label: 'Cuidado',
+      body: `Esta lição combina ${lesson.conceptIds.length} conceptos — repasa cada um antes de avançar.`,
+    });
+  }
+  notes.push({
+    variant: 'es',
+    label: 'Contraste ES',
+    body: `ES y PT comparten la raíz latina, pero la flexión y el orden pueden variar — não confies en la traducción literal.`,
+  });
+  if (lesson.vocabKey.length > 1) {
+    notes.push({
+      variant: 'variant',
+      label: 'Variação BR ↔ PT',
+      body: `Em "${lesson.vocabKey[0]}" pode haver diferença de cadência entre PT-BR e PT-PT — ouça as duas variantes.`,
+    });
+  }
+  // Drop the trailing template-feeling note if the block has no
+  // pedagogical content yet (lessons with empty conceptIds).
+  if (lesson.conceptIds.length === 0) {
+    return notes.slice(0, 1);
+  }
+  return notes;
+}
