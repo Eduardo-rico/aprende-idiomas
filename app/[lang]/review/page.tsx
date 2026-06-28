@@ -14,7 +14,7 @@ import Link from "next/link";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { getDueCards, getDueCardsByTag, getLessonViewsForLanguage } from "@/lib/db/repository";
 import { db } from "@/lib/db/schema";
-import { ExerciseRunner } from "@/components/ExerciseRunner";
+import { SessionScreen } from "@/components/session/SessionScreen";
 import type { Exercise } from "@/lib/data/zod-schemas";
 import { FSRS_CONFIG } from "@/lib/srs/config";
 import { interleave } from "@/lib/srs/interleave";
@@ -251,11 +251,10 @@ function ReviewPageInner() {
         </section>
       )}
 
-      <ExerciseRunner
+      <SessionScreen
         exercises={exercises}
-        blockId={0}
-        lessonId="daily-review"
         onFinish={setDone}
+        onClose={() => router.push(`/${lang}`)}
         lang={lang}
       />
     </div>

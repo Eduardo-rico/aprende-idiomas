@@ -1,0 +1,154 @@
+// app/[lang]/practicar/srs/PracticarSrsInner.tsx
+// Client island for the /practicar/srs route. Loads the SRS queue
+// (same logic as /review: getDueCards → interleave → resolve to
+// Exercise[]), opens a Dexie session row, and renders <SessionScreen>.
+// On finish: closes the session row, navigates to a "Sesión completa"
+// summary card. Mirrors the data-fetching half of /review/page.tsx so
+// we don't duplicate the FSRS-cap logic.
+"use client";
+import { useEffect, useRef, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { db } from "@/lib/db/schema";
+import { getDueCards, getDueCardsByTag } from "@/lib/db/repository";
+import { FSRS_CONFIG } from "@/lib/srs/config";
+import { interleave } from "@/lib/srs/interleave";
+import { useSession } from "@/lib/stores/session";
+import type { Exercise } from "@/lib/data/zod-schemas";
+import { SessionScreen } from "@/components/session/SessionScreen";
+import type { LanguageId } from "@/lib/locales";
+
+export function PracticarSrsInner({ lang }: { lang: LanguageId }) {
+  const router = useRouter();
+  const search = useSearchParams();
+  const activeTags = (search.get("tags") ?? "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter((s) => s.length > 0);
+  const [exercises, setExercises] = useState<Exercise[] | null>(null);
+  const [sessionId, setSessionId] = useState<number | null>(null);
+  const [done, setDone] = useState<{ reviewed: number; correct: number } | null>(null);
+  const [err, setErr] = useState<string | null>(null);
+  // Guard against React 19 StrictMode double-running this effect in dev.
+  const sessionCreated = useRef(false);
+
+  useEffect(() => {
+    if (sessionCreated.current) return;
+    sessionCreated.current = true;
+    (async () => {
+      try {
+        const now = new Date();
+        const options = {
+          cap: FSRS_CONFIG.daily_review_cap,
+          newCardsPerDay: FSRS_CONFIG.new_cards_per_day,
+        };
+        const due =
+          activeTags.length === 0
+            ? await getDueCards(now, FSRS_CONFIG.daily_review_cap, options)
+            : await getDueCardsByTag(
+                activeTags,
+                now,
+                FSRS_CONFIG.daily_review_cap,
+                options,
+              );
+        if (due.length === 0) {
+          router.replace(`/${lang}/learn`);
+          return;
+        }
+        const allRes = await fetch(`/api/blocks?lang=${lang}`);
+        if (!allRes.ok) throw new Error("No se pudo cargar el currículo");
+        const { exercises: all } = (await allRes.json()) as {
+          exercises: Exercise[];
+        };
+        const byId = new Map(all.map((e) => [e.id, e]));
+        const mixed = interleave(
+          due,
+          (id) => byId.get(id)?.concepts?.[0],
+          (id) => byId.get(id)?.type,
+        );
+        const ordered: Exercise[] = [];
+        for (const c of mixed) {
+          const ex = byId.get(c.id);
+          if (ex) ordered.push(ex);
+        }
+        if (ordered.length === 0) {
+          router.replace(`/${lang}/learn`);
+          return;
+        }
+        setExercises(ordered);
+        const sid = await db.sessions.add({
+          startedAt: new Date(),
+          blockId: 0,
+          lessonId: "daily-review",
+          mode: "review",
+          cardsReviewed: 0,
+          correctCount: 0,
+          durationMs: 0,
+        });
+        setSessionId(sid as number);
+        useSession.getState().beginSession(sid as number, "review");
+      } catch (e) {
+        setErr(e instanceof Error ? e.message : String(e));
+      }
+    })();
+  }, [router, lang, activeTags.length, activeTags.join(",")]);
+
+  useEffect(() => {
+    if (!done || !sessionId) return;
+    useSession.getState().endSession();
+    db.sessions.update(sessionId, {
+      endedAt: new Date(),
+      cardsReviewed: done.reviewed,
+      correctCount: done.correct,
+    });
+  }, [done, sessionId]);
+
+  if (err) {
+    return (
+      <div className="mx-auto max-w-md px-4 py-16 text-center">
+        <h1 className="font-display text-2xl">No se pudo iniciar la sesión</h1>
+        <p className="mt-2 text-sm text-ink-muted">{err}</p>
+      </div>
+    );
+  }
+  if (done) {
+    const pct = Math.round((done.correct / Math.max(done.reviewed, 1)) * 100);
+    return (
+      <div className="mx-auto max-w-md px-4 py-16 text-center">
+        <h1 className="font-display text-4xl">¡Sesión completa!</h1>
+        <div className="mt-4 font-display text-6xl">{pct}%</div>
+        <p className="mt-2 text-ink-muted">
+          {done.correct} de {done.reviewed} correctas
+        </p>
+        <div className="mt-6 flex justify-center gap-2">
+          <button
+            onClick={() => router.push(`/${lang}`)}
+            className="rounded-md border border-rule-strong px-4 py-2"
+          >
+            Inicio
+          </button>
+          <button
+            onClick={() => router.push(`/${lang}/libro`)}
+            className="rounded-md bg-lesson px-4 py-2 text-white"
+          >
+            Libro
+          </button>
+        </div>
+      </div>
+    );
+  }
+  if (!exercises) {
+    return (
+      <div className="p-12 text-center text-ink-muted" data-testid="session-loading">
+        Cargando sesión…
+      </div>
+    );
+  }
+  return (
+    <SessionScreen
+      exercises={exercises}
+      onFinish={setDone}
+      onClose={() => router.push(`/${lang}`)}
+      lang={lang}
+    />
+  );
+}
