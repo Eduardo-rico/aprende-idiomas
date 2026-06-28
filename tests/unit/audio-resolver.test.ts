@@ -2,12 +2,21 @@
 import { describe, it, expect } from "vitest";
 import { pickVoice, audioUrl } from "@/lib/audio/resolve";
 
-// CRITICAL FIX: 1 voice per variant ("default") — matches b1.json data.
-// 6-voice design deferred to Plan #4 (regen).
 describe("pickVoice", () => {
-  it("returns 'default' (only voice available)", () => {
-    expect(pickVoice({ type: "flashcard" } as any, "br", { br: "default", pt: "default" })).toBe("default");
-    expect(pickVoice({ type: "chunk" } as any, "pt", { br: "default", pt: "default" })).toBe("default");
+  it("returns preferred voice for pt-br", () => {
+    expect(pickVoice("pt-br", ["vitoria", "francisca", "other"])).toBe("vitoria");
+  });
+  it("returns preferred voice for pt-pt", () => {
+    expect(pickVoice("pt-pt", ["vitoria", "francisca", "other"])).toBe("francisca");
+  });
+  it("falls back to first matching prefix when preferred unavailable", () => {
+    expect(pickVoice("pt-br", ["pt-br-rafael", "other"])).toBe("pt-br-rafael");
+  });
+  it("falls back to first available when no match", () => {
+    expect(pickVoice("xx-xx", ["alpha", "beta"])).toBe("alpha");
+  });
+  it("returns 'default' when nothing available", () => {
+    expect(pickVoice("pt-br", [])).toBe("default");
   });
 });
 
