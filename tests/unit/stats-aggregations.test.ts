@@ -7,8 +7,14 @@ import {
   strongestConcepts,
   fsrsRetention,
   brVsPtSplit,
+  retention7d,
+  responseTimeAvg,
+  masteredCount,
+  productionVsRecognition,
+  vocabProduces,
+  masteryRows,
 } from "@/lib/stats/aggregations";
-import type { AppEvent } from "@/lib/db/schema";
+import type { AppEvent, ConceptMastery } from "@/lib/db/schema";
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -30,6 +36,33 @@ function makeAnswer(
     variant,
   };
 }
+
+// Richer builder for the new aggregations — accepts mode/rating/conceptIds.
+function makeAnswerFull(
+  opts: {
+    ts?: Date;
+    correct?: boolean;
+    rating?: 1 | 2 | 3 | 4;
+    mode?: string;
+    conceptIds?: string[];
+    responseMs?: number;
+  } = {},
+): AppEvent {
+  const rating = (opts.rating ?? (opts.correct ? 3 : 1)) as 1 | 2 | 3 | 4;
+  return {
+    ts: opts.ts ?? new Date("2026-06-27T12:00:00Z"),
+    type: "answer",
+    cardId: "c1",
+    rating,
+    correct: opts.correct ?? rating >= 3,
+    responseMs: opts.responseMs ?? 500,
+    mode: opts.mode ?? "daily",
+    conceptIds: opts.conceptIds ?? [],
+    variant: "pt-br",
+  };
+}
+
+const NOW = new Date("2026-06-27T12:00:00Z");
 
 // ─── aggregateByDay ───────────────────────────────────────────────────────────
 
@@ -221,5 +254,237 @@ describe("brVsPtSplit", () => {
     const split = brVsPtSplit(events);
     expect(split.br).toBe(1);
     expect(split.pt).toBe(0);
+  });
+});
+
+// ─── retention7d ──────────────────────────────────────────────────────────────
+
+describe("retention7d", () => {
+  it("returns 0 when no answer events", () => {
+    expect(retention7d([], NOW)).toBe(0);
+  });
+
+  it("returns 0 when all events are outside the 7-day window", () => {
+    const events = [
+      makeAnswerFull({ ts: new Date("2026-06-01T12:00:00Z"), correct: true }),
+    ];
+    expect(retention7d(events, NOW)).toBe(0);
+  });
+
+  it("computes accuracy over the last 7 days inclusive", () => {
+    const events = [
+      makeAnswerFull({ ts: new Date("2026-06-26T12:00:00Z"), correct: true }),
+      makeAnswerFull({ ts: new Date("2026-06-26T13:00:00Z"), correct: true }),
+      makeAnswerFull({ ts: new Date("2026-06-25T12:00:00Z"), correct: false }),
+      // Outside the window (>7 days ago).
+      makeAnswerFull({ ts: new Date("2026-06-19T12:00:00Z"), correct: true }),
+    ];
+    expect(retention7d(events, NOW)).toBeCloseTo(2 / 3, 2);
+  });
+
+  it("ignores non-answer events", () => {
+    const events: AppEvent[] = [
+      { ts: new Date("2026-06-26T12:00:00Z"), type: "lesson_complete", payload: {} },
+    ];
+    expect(retention7d(events, NOW)).toBe(0);
+  });
+});
+
+// ─── responseTimeAvg ─────────────────────────────────────────────────────────
+
+describe("responseTimeAvg", () => {
+  it("returns 0 when no answer events in window", () => {
+    expect(responseTimeAvg([], NOW)).toBe(0);
+  });
+
+  it("returns the mean response time in seconds", () => {
+    const events = [
+      makeAnswerFull({ ts: new Date("2026-06-26T12:00:00Z"), responseMs: 4_000 }),
+      makeAnswerFull({ ts: new Date("2026-06-26T13:00:00Z"), responseMs: 12_000 }),
+    ];
+    expect(responseTimeAvg(events, NOW)).toBeCloseTo(8, 2);
+  });
+
+  it("only counts events inside the 7-day window", () => {
+    const events = [
+      makeAnswerFull({ ts: new Date("2026-06-26T12:00:00Z"), responseMs: 10_000 }),
+      makeAnswerFull({ ts: new Date("2026-06-01T12:00:00Z"), responseMs: 1_000_000 }),
+    ];
+    expect(responseTimeAvg(events, NOW)).toBeCloseTo(10, 2);
+  });
+});
+
+// ─── masteredCount ───────────────────────────────────────────────────────────
+
+describe("masteredCount", () => {
+  it("returns 0/0 for empty input", () => {
+    expect(masteredCount([])).toEqual({ mastered: 0, total: 0 });
+  });
+
+  it("excludes concepts with exposureCount === 0", () => {
+    const m = [
+      { conceptId: "a", blockId: 1, accuracy: 0.9, exposureCount: 10, correctCount: 9, masteryPct: 90, isMastered: true, updatedAt: NOW },
+      { conceptId: "b", blockId: 1, accuracy: 0, exposureCount: 0, correctCount: 0, masteryPct: 0, isMastered: false, updatedAt: NOW },
+    ] as ConceptMastery[];
+    expect(masteredCount(m)).toEqual({ mastered: 1, total: 1 });
+  });
+
+  it("counts isMastered true across exposed concepts", () => {
+    const m = [
+      { conceptId: "a", blockId: 1, accuracy: 0.9, exposureCount: 10, correctCount: 9, masteryPct: 90, isMastered: true, updatedAt: NOW },
+      { conceptId: "b", blockId: 1, accuracy: 0.8, exposureCount: 5, correctCount: 4, masteryPct: 80, isMastered: true, updatedAt: NOW },
+      { conceptId: "c", blockId: 1, accuracy: 0.4, exposureCount: 8, correctCount: 3, masteryPct: 40, isMastered: false, updatedAt: NOW },
+    ] as ConceptMastery[];
+    expect(masteredCount(m)).toEqual({ mastered: 2, total: 3 });
+  });
+});
+
+// ─── productionVsRecognition ─────────────────────────────────────────────────
+
+describe("productionVsRecognition", () => {
+  it("returns 0/0 when no answer events", () => {
+    expect(productionVsRecognition([])).toEqual({ recognition: 0, production: 0 });
+  });
+
+  it("computes accuracy per bucket independently", () => {
+    const events = [
+      makeAnswerFull({ mode: "lesson", correct: true }),
+      makeAnswerFull({ mode: "lesson", correct: true }),
+      makeAnswerFull({ mode: "daily", correct: true }),
+      makeAnswerFull({ mode: "drill", correct: true }),
+      makeAnswerFull({ mode: "drill", correct: false }),
+      makeAnswerFull({ mode: "review_errors", correct: false }),
+    ];
+    expect(productionVsRecognition(events)).toEqual({
+      recognition: 1,
+      production: 1 / 3,
+    });
+  });
+
+  it("excludes story mode from both buckets", () => {
+    const events = [
+      makeAnswerFull({ mode: "story", correct: true }),
+      makeAnswerFull({ mode: "lesson", correct: false }),
+    ];
+    expect(productionVsRecognition(events)).toEqual({ recognition: 0, production: 0 });
+  });
+});
+
+// ─── vocabProduces ───────────────────────────────────────────────────────────
+
+describe("vocabProduces", () => {
+  it("returns 0 when no production-mode events", () => {
+    expect(vocabProduces([makeAnswerFull({ mode: "lesson", conceptIds: ["c1"] })], NOW)).toBe(0);
+  });
+
+  it("counts unique conceptIds across drill and review_errors with rating >= 3", () => {
+    const events = [
+      makeAnswerFull({ mode: "drill", rating: 3, conceptIds: ["c1", "c2"] }),
+      makeAnswerFull({ mode: "drill", rating: 4, conceptIds: ["c2", "c3"] }),
+      makeAnswerFull({ mode: "drill", rating: 1, conceptIds: ["c4"] }), // dropped (rating < 3)
+      makeAnswerFull({ mode: "review_errors", rating: 3, conceptIds: ["c5"] }),
+    ];
+    expect(vocabProduces(events, NOW)).toBe(4); // c1, c2, c3, c5
+  });
+
+  it("only counts events inside the 30-day window", () => {
+    const events = [
+      makeAnswerFull({ ts: new Date("2026-06-26T12:00:00Z"), mode: "drill", rating: 3, conceptIds: ["c1"] }),
+      makeAnswerFull({ ts: new Date("2026-05-01T12:00:00Z"), mode: "drill", rating: 3, conceptIds: ["c9"] }),
+    ];
+    expect(vocabProduces(events, NOW)).toBe(1);
+  });
+});
+
+// ─── masteryRows + decay detection ───────────────────────────────────────────
+
+describe("masteryRows", () => {
+  const exp = (
+    id: string,
+    masteryPct: number,
+    exposureCount: number,
+    isMastered = false,
+    lastReviewed?: Date,
+  ): ConceptMastery => ({
+    conceptId: id,
+    blockId: 1,
+    accuracy: masteryPct / 100,
+    exposureCount,
+    correctCount: Math.round((masteryPct / 100) * exposureCount),
+    masteryPct,
+    isMastered,
+    lastReviewed,
+    updatedAt: NOW,
+  });
+
+  it("sorts by masteryPct descending and drops unexposed concepts", () => {
+    const rows = masteryRows({
+      mastery: [exp("a", 90, 10, true), exp("z", 0, 0), exp("b", 50, 5)],
+      events: [],
+      now: NOW,
+    });
+    expect(rows.map((r) => r.conceptId)).toEqual(["a", "b"]);
+  });
+
+  it("flags a concept as decaying when last-week acc drops >= 0.08 vs previous week", () => {
+    // NOW = 2026-06-27T12:00:00Z → last7 cutoff = 2026-06-20T12:00:00Z,
+    // prev7 cutoff = 2026-06-13T12:00:00Z. Last-week events must be in
+    // [2026-06-20, 2026-06-27]; prev-week events must be in
+    // [2026-06-13, 2026-06-20) — anything earlier than 2026-06-13 falls
+    // outside both windows and isn't counted.
+    const events: AppEvent[] = [];
+    for (let i = 0; i < 5; i++) {
+      events.push(
+        makeAnswerFull({
+          ts: new Date("2026-06-26T10:00:00Z"),
+          conceptIds: ["a"],
+          correct: false,
+        }),
+      );
+    }
+    for (let i = 0; i < 5; i++) {
+      events.push(
+        makeAnswerFull({
+          ts: new Date("2026-06-18T10:00:00Z"),
+          conceptIds: ["a"],
+          correct: true,
+        }),
+      );
+    }
+    const rows = masteryRows({
+      mastery: [exp("a", 60, 20, false)],
+      events,
+      now: NOW,
+    });
+    expect(rows[0]?.decay).toBe("decaying");
+  });
+
+  it("flags low mastery + stale lastReviewed as review-soon", () => {
+    const stale = new Date("2026-06-01T12:00:00Z");
+    const rows = masteryRows({
+      mastery: [exp("a", 30, 5, false, stale)],
+      events: [],
+      now: NOW,
+    });
+    expect(rows[0]?.decay).toBe("review-soon");
+  });
+
+  it("returns null decay for healthy concepts", () => {
+    const rows = masteryRows({
+      mastery: [exp("a", 90, 10, true, NOW)],
+      events: [],
+      now: NOW,
+    });
+    expect(rows[0]?.decay).toBeNull();
+  });
+
+  it("uses resolveName callback when provided", () => {
+    const rows = masteryRows({
+      mastery: [exp("a", 80, 10, true)],
+      events: [],
+      now: NOW,
+      resolveName: (id) => `Pretty ${id}`,
+    });
+    expect(rows[0]?.name).toBe("Pretty a");
   });
 });
