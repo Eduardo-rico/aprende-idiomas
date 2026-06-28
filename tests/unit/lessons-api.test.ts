@@ -1,9 +1,12 @@
 // tests/unit/lessons-api.test.ts
-// Unit tests for GET /api/lessons/[lang]/[lessonId]. Mocks
+// Unit tests for GET /api/lessons/[lessonId]. Mocks
 // `loadCurriculum` and `loadLessonsAudioRefs` so we exercise the
 // route handler in isolation (no disk reads, no real curriculum
 // import). `next/server` is stubbed so the test doesn't pull the
 // real Next runtime — we just need NextResponse.json semantics.
+//
+// The route is PT-only (Task 0.7): the `[lang]` segment was dropped
+// from the path and the handler hardcodes `LANG = "pt"`.
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
 // Mock loaders BEFORE importing the route. The plan calls out that
@@ -29,7 +32,7 @@ vi.mock("next/server", () => ({
 }));
 
 // Import after the mocks are registered.
-import { GET } from "@/app/api/lessons/[lang]/[lessonId]/route";
+import { GET } from "@/app/api/lessons/[lessonId]/route";
 import { loadCurriculum, loadLessonsAudioRefs } from "@/lib/data/loaders";
 
 const mockedCurriculum = vi.mocked(loadCurriculum);
@@ -41,11 +44,11 @@ beforeEach(() => {
 
 // Helper: build the params promise the route expects (Next 16
 // `params: Promise<{...}>` signature).
-function paramsFor(lang: string, lessonId: string) {
-  return Promise.resolve({ lang, lessonId });
+function paramsFor(lessonId: string) {
+  return Promise.resolve({ lessonId });
 }
 
-describe("GET /api/lessons/[lang]/[lessonId]", () => {
+describe("GET /api/lessons/[lessonId]", () => {
   it("returns 200 with full shape for a known PT lesson with audio refs", async () => {
     mockedCurriculum.mockResolvedValue({
       BLOCKS: [
@@ -90,8 +93,8 @@ describe("GET /api/lessons/[lang]/[lessonId]", () => {
     });
 
     const res = await GET(
-      new Request("http://localhost/api/lessons/pt/b1-regulares-ar"),
-      { params: paramsFor("pt", "b1-regulares-ar") }
+      new Request("http://localhost/api/lessons/b1-regulares-ar"),
+      { params: paramsFor("b1-regulares-ar") }
     );
     expect(res.status).toBe(200);
     const body = (await res.json()) as Record<string, unknown>;
@@ -103,27 +106,6 @@ describe("GET /api/lessons/[lang]/[lessonId]", () => {
     expect((body.audioRefs as Record<string, unknown[]>)["pt-br"]).toHaveLength(
       1
     );
-  });
-
-  it("returns 400 for an unknown language (xx)", async () => {
-    const res = await GET(
-      new Request("http://localhost/api/lessons/xx/b1-regulares-ar"),
-      { params: paramsFor("xx", "b1-regulares-ar") }
-    );
-    expect(res.status).toBe(400);
-    // Loaders must not be called — the lang check fires first.
-    expect(mockedCurriculum).not.toHaveBeenCalled();
-    expect(mockedAudioRefs).not.toHaveBeenCalled();
-  });
-
-  it("returns 400 for ru (scaffolded but no lesson content)", async () => {
-    const res = await GET(
-      new Request("http://localhost/api/lessons/ru/b1-regulares-ar"),
-      { params: paramsFor("ru", "b1-regulares-ar") }
-    );
-    expect(res.status).toBe(400);
-    expect(mockedCurriculum).not.toHaveBeenCalled();
-    expect(mockedAudioRefs).not.toHaveBeenCalled();
   });
 
   it("returns 404 for an unknown lessonId", async () => {
@@ -141,8 +123,8 @@ describe("GET /api/lessons/[lang]/[lessonId]", () => {
     mockedAudioRefs.mockResolvedValue({});
 
     const res = await GET(
-      new Request("http://localhost/api/lessons/pt/unknown"),
-      { params: paramsFor("pt", "unknown") }
+      new Request("http://localhost/api/lessons/unknown"),
+      { params: paramsFor("unknown") }
     );
     expect(res.status).toBe(404);
   });
@@ -184,8 +166,8 @@ describe("GET /api/lessons/[lang]/[lessonId]", () => {
     mockedAudioRefs.mockResolvedValue({});
 
     const res = await GET(
-      new Request("http://localhost/api/lessons/pt/b1-test"),
-      { params: paramsFor("pt", "b1-test") }
+      new Request("http://localhost/api/lessons/b1-test"),
+      { params: paramsFor("b1-test") }
     );
     expect(res.status).toBe(200);
     const body = (await res.json()) as Record<string, unknown>;

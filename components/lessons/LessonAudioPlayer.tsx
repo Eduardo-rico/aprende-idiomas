@@ -29,10 +29,11 @@ type LessonAudioRef = { hash: string; voice: string };
 
 export interface LessonAudioPlayerProps {
   /** The audio-refs map for the lesson, keyed by variant. The L2 API
-   *  route at `/api/lessons/:lang/:lessonId` returns this shape. Each
-   *  value is the per-example list, aligned to the example index
-   *  emitted by the renderer (so `index` here is the example number
-   *  the player was placed against). */
+   *  route at `/api/lessons/:lessonId` returns this shape (the
+   *  `:lang` segment was dropped in Task 0.7; the app is PT-only).
+   *  Each value is the per-example list, aligned to the example
+   *  index emitted by the renderer (so `index` here is the example
+   *  number the player was placed against). */
   audioRefs: Record<VariantKey, LessonAudioRef[]>;
   /** Example index this player is rendering for. */
   index: number;
