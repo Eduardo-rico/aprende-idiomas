@@ -1,7 +1,9 @@
-// app/[lang]/cuenta/sesion/page.tsx
+// app/[lang]/(config)/cuenta/sesion/page.tsx
 // Sub-view for session length + fatigue check + logout. Server shell
 // wraps the client SesionForm which writes the new sessionLengthMinutes
-// and fatigueCheckEnabled fields to the Zustand store.
+// and fatigueCheckEnabled fields to the Zustand store. The semantic
+// <main> wrapper is owned by app/[lang]/(config)/cuenta/layout.tsx;
+// this page is a <div> with its own narrower max-width.
 import { CuentaNav } from "@/components/cuenta/CuentaNav";
 import { SesionForm } from "./SesionForm";
 
@@ -12,8 +14,8 @@ export default async function SesionPage({
 }) {
   const { lang } = await params;
   return (
-    <main
-      className="mx-auto max-w-[640px] px-6 py-12"
+    <div
+      className="mx-auto max-w-[640px]"
       data-testid="cuenta-sesion"
     >
       <h1 className="mb-1.5 font-display text-[39px]">Sesión</h1>
@@ -22,6 +24,6 @@ export default async function SesionPage({
       </p>
       <CuentaNav lang={lang} active="sesion" />
       <SesionForm />
-    </main>
+    </div>
   );
 }

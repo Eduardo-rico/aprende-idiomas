@@ -1,8 +1,9 @@
 // app/[lang]/layout.tsx
 // Lang-scoped layout. Wraps the children in <LangProvider> + NavBar +
-// <main>. The active `lang` becomes the route param read by server
-// components via `params: Promise<{ lang: string }>`; client components
-// get it from useLang() inside the provider.
+// a neutral <div className="flex-1">. The active `lang` becomes the
+// route param read by server components via `params: Promise<{ lang:
+// string }>`; client components get it from useLang() inside the
+// provider.
 //
 // Per Next 16: `params` is a Promise; we await it. `hasLocale` rejects
 // unknown langs with notFound() so /xx/* renders 404 instead of crashing
@@ -13,6 +14,11 @@
 // + chrome. The lang attribute on <html> is set globally to "es" in
 // the root (UI chrome is Spanish); the active target language is
 // carried in <LangProvider> for components that need it.
+//
+// Note: as of B.1, this layout does NOT wrap children in <main>; each
+// route group that needs a semantic <main> (e.g. (config)/cuenta/
+// layout.tsx) provides its own. This avoids nested-<main> HTML invalid
+// markup when sub-pages also want a semantic <main> wrapper.
 import { notFound } from "next/navigation";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { NavBar } from "@/components/NavBar";
@@ -34,7 +40,7 @@ export default async function LangLayout({
     <ThemeProvider>
       <LangProvider lang={typedLang}>
         <NavBar />
-        <main className="flex-1">{children}</main>
+        <div className="flex-1">{children}</div>
       </LangProvider>
     </ThemeProvider>
   );

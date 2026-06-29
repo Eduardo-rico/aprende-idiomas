@@ -1,8 +1,10 @@
-// app/[lang]/cuenta/preferencias/page.tsx
+// app/[lang]/(config)/cuenta/preferencias/page.tsx
 // Sub-view for variant + voice settings. Wraps the existing shadcn
 // VariantToggle and VoicePicker (kept as-is for now; redesign tracked
 // separately). The page itself is Manual Lusitano chrome and adds a
-// CuentaNav strip above the sections.
+// CuentaNav strip above the sections. The semantic <main> wrapper is
+// owned by app/[lang]/(config)/cuenta/layout.tsx; this page is a <div>
+// with its own narrower max-width (forms read better at 640px).
 import { CuentaNav } from "@/components/cuenta/CuentaNav";
 import { VariantToggle } from "@/components/VariantToggle";
 import { VoicePicker } from "@/components/VoicePicker";
@@ -15,8 +17,8 @@ export default async function PreferenciasPage({
 }) {
   const { lang } = await params;
   return (
-    <main
-      className="mx-auto max-w-[640px] px-6 py-12"
+    <div
+      className="mx-auto max-w-[640px]"
       data-testid="cuenta-preferencias"
     >
       <h1 className="mb-1.5 font-display text-[39px]">Preferencias</h1>
@@ -36,6 +38,6 @@ export default async function PreferenciasPage({
           <VoicePicker />
         </div>
       </section>
-    </main>
+    </div>
   );
 }

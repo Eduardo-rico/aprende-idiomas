@@ -15,7 +15,7 @@ vi.mock("@/lib/stores/settings", () => ({
   }),
 }));
 
-import { SesionForm } from "@/app/[lang]/cuenta/sesion/SesionForm";
+import { SesionForm } from "@/app/[lang]/(config)/cuenta/sesion/SesionForm";
 
 afterEach(() => {
   cleanup();

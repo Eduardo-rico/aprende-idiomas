@@ -1,9 +1,9 @@
-// app/[lang]/cuenta/page.tsx
+// app/[lang]/(config)/cuenta/page.tsx
 // Hub page for the /cuenta sub-views. Server component, async params
 // (Next 16 contract). Renders a 2x2 grid of HubCard links to the four
-// most-used configuration sub-views. The legacy /settings page still
-// exists as a fallback for FSRS + local-practice-filter sections that
-// are out of scope for A.5.
+// most-used configuration sub-views. The semantic <main> wrapper lives
+// in app/[lang]/(config)/cuenta/layout.tsx; this page is a <div> with
+// its own max-width (the hub needs 760px for the 2-col card grid).
 import { HubCard } from "@/components/cuenta/HubCard";
 
 const ITEMS = [
@@ -36,10 +36,7 @@ export default async function CuentaHub({
 }) {
   const { lang } = await params;
   return (
-    <main
-      className="mx-auto max-w-[760px] px-6 py-12"
-      data-testid="cuenta-hub"
-    >
+    <div className="mx-auto max-w-[760px]" data-testid="cuenta-hub">
       <h1 className="mb-1.5 font-display text-[39px] font-medium tracking-[-.02em]">
         Cuenta
       </h1>
@@ -56,6 +53,6 @@ export default async function CuentaHub({
           />
         ))}
       </div>
-    </main>
+    </div>
   );
 }

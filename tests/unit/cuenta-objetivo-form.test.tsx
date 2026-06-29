@@ -12,7 +12,7 @@ vi.mock("@/lib/stores/settings", () => ({
   }),
 }));
 
-import { ObjetivoForm } from "@/app/[lang]/cuenta/objetivo/ObjetivoForm";
+import { ObjetivoForm } from "@/app/[lang]/(config)/cuenta/objetivo/ObjetivoForm";
 
 afterEach(() => {
   cleanup();

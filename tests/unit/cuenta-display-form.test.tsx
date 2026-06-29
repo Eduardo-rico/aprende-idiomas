@@ -23,7 +23,7 @@ vi.mock("@/components/ThemeProvider", () => ({
   useTheme: () => ({ theme: "light", setTheme }),
 }));
 
-import { DisplayForm } from "@/app/[lang]/cuenta/display/DisplayForm";
+import { DisplayForm } from "@/app/[lang]/(config)/cuenta/display/DisplayForm";
 
 afterEach(() => {
   cleanup();
