@@ -22,7 +22,11 @@ export function NavBar() {
     { href: `/${lang}/blocks`, label: "Livro" },
     { href: `/${lang}/stories`, label: "Histórias" },
     { href: `/${lang}/stats`, label: "Progresso" },
-    { href: `/${lang}/settings`, label: "⚙" },
+    // A.6: nav item now points at the new /cuenta hub (Manual Lusitano
+    // chrome) rather than the legacy /settings page. The /settings URL
+    // still 308s to /cuenta via next.config redirects for backward
+    // compatibility (bookmarks, in-flight links).
+    { href: `/${lang}/cuenta`, label: "Cuenta" },
   ];
   // Phase 5: los 4 idiomas están habilitados. Cambiar el dropdown hace
   // `setLanguage` (persiste en el settings store) y navega a la home
