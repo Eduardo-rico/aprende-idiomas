@@ -29,6 +29,12 @@ interface SettingsState {
    *  behavior). When on, the lesson page shows only cards that are due now
    *  or brand-new, and a hint about cards available later. */
   localPracticeFilter: boolean;
+  /** Default session length in minutes (D.4). 20 min short, 40 min opt-in
+   *  extended. The session screen caps at sessionLengthMinutes and offers
+   *  a fatigue check at 18 min when fatigueCheckEnabled is on. */
+  sessionLengthMinutes: 20 | 40;
+  /** Whether the session UI shows a fatigue nudge at the 18-min mark. */
+  fatigueCheckEnabled: boolean;
 
   setLanguage: (l: LanguageId) => void;
   setVariant: (v: VariantKey) => void;
@@ -40,6 +46,8 @@ interface SettingsState {
   setShowContrast: (b: boolean) => void;
   setSoundFx: (b: boolean) => void;
   setLocalPracticeFilter: (b: boolean) => void;
+  setSessionLength: (m: 20 | 40) => void;
+  setFatigueCheck: (b: boolean) => void;
 }
 
 export const useSettings = create<SettingsState>()(
@@ -54,6 +62,8 @@ export const useSettings = create<SettingsState>()(
       soundFx: true,
       voicePref: { "pt-br": "default", "pt-pt": "default" },
       localPracticeFilter: false,
+      sessionLengthMinutes: 20,
+      fatigueCheckEnabled: true,
       setLanguage: (l) => set({ language: l }),
       setVariant: (v) => set({ variant: v }),
       toggleCompare: () => set((s) => ({ showCompareToggle: !s.showCompareToggle })),
@@ -63,6 +73,8 @@ export const useSettings = create<SettingsState>()(
       setShowContrast: (b) => set({ showContrast: b }),
       setSoundFx: (b) => set({ soundFx: b }),
       setLocalPracticeFilter: (b) => set({ localPracticeFilter: b }),
+      setSessionLength: (m) => set({ sessionLengthMinutes: m }),
+      setFatigueCheck: (b) => set({ fatigueCheckEnabled: b }),
     }),
     // Phase 4: persist key renamed to "app-settings" (was "pt-settings")
     // so it no longer carries the PT-specific name. The
