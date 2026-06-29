@@ -3,22 +3,14 @@
 // Server shell awaits params (Next 16 contract), has dynamic = force-dynamic
 // (Dexie is browser-only; the inner island touches it), and wraps the
 // client island in <Suspense> so the prerendered HTML and the hydrated
-// state look identical.
+// state look identical. The fallback uses the shared SessionFallback
+// component (B.1.b) so the loading chrome stays consistent with the
+// other session-style runners (practicar/srs).
 import { Suspense } from "react";
 import { hasLocale, type LanguageId } from "@/lib/locales";
+import { SessionFallback } from "@/components/session/SessionFallback";
 
 export const dynamic = "force-dynamic";
-
-function PageFallback() {
-  return (
-    <div
-      className="p-12 text-center text-ink-muted"
-      data-testid="progreso-loading"
-    >
-      Cargando progreso…
-    </div>
-  );
-}
 
 export default async function ProgresoPage({
   params,
@@ -26,11 +18,11 @@ export default async function ProgresoPage({
   params: Promise<{ lang: string }>;
 }) {
   const { lang: rawLang } = await params;
-  if (!hasLocale(rawLang)) return <PageFallback />;
+  if (!hasLocale(rawLang)) return <SessionFallback message="Cargando progreso…" testId="progreso-loading" />;
   const lang: LanguageId = rawLang;
   const { ProgresoShell } = await import("@/components/progreso/ProgresoShell");
   return (
-    <Suspense fallback={<PageFallback />}>
+    <Suspense fallback={<SessionFallback message="Cargando progreso…" testId="progreso-loading" />}>
       <ProgresoShell lang={lang} />
     </Suspense>
   );

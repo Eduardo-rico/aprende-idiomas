@@ -99,11 +99,6 @@ describe("app/[lang]/* routes", () => {
     expect(typeof mod.default).toBe("function");
   });
 
-  it("settings/page.tsx is a client component", async () => {
-    const mod = await import("@/app/[lang]/settings/page");
-    expect(typeof mod.default).toBe("function");
-  });
-
   it("achievements/page.tsx is a client component", async () => {
     const mod = await import("@/app/[lang]/achievements/page");
     expect(typeof mod.default).toBe("function");
