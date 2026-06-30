@@ -39,6 +39,12 @@ export function DiagnosticRunner({ questions, lang }: { questions: DiagnosticQue
       payload: { score: r.score, recommendedStart: r.recommendedStart },
     };
     void db.events.add(event);
+    // Mark onboarding as done so the homepage switches to the session CTA.
+    void db.settings.put({
+      key: "onboardingDone",
+      value: true,
+      updatedAt: new Date(),
+    });
   };
 
   return (
