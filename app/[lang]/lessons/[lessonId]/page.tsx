@@ -18,6 +18,7 @@ import Link from "next/link";
 import { hasLocale, type LanguageId } from "@/lib/locales";
 import { loadCurriculum, loadLessonsAudioRefs } from "@/lib/data/loaders";
 import { LessonRenderer } from "@/components/lessons/LessonRenderer";
+import { BloqueBreadcrumb } from "@/components/bloque/BloqueBreadcrumb";
 
 export default async function StandaloneLessonPage({
   params,
@@ -52,9 +53,7 @@ export default async function StandaloneLessonPage({
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8 space-y-6">
-      <div className="text-xs text-muted">
-        Lección · Bloque {lesson.blockId}
-      </div>
+      <BloqueBreadcrumb blockId={lesson.blockId} suffix="lesson-before" />
       <h1 className="font-display text-4xl">{lesson.name}</h1>
 
       <LessonRenderer

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { loadCurriculum } from "@/lib/data/loaders";
 import { hasLocale, type LanguageId } from "@/lib/locales";
 import { ConceptMastery } from "@/components/ConceptMastery";
+import { BloqueBreadcrumb } from "@/components/bloque/BloqueBreadcrumb";
 
 export default async function LessonIntro({
   params,
@@ -30,7 +31,7 @@ export default async function LessonIntro({
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12 space-y-6">
-      <div className="text-xs text-muted">Bloque {block.id} · Lección</div>
+      <BloqueBreadcrumb blockId={block.id} suffix="lesson-after" />
       <h1 className="font-display text-4xl">{lesson.name}</h1>
       <p className="text-muted">Objetivos: {lesson.objectives.join(" · ")}</p>
 

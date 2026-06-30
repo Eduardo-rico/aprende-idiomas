@@ -5,6 +5,7 @@ import { use, useEffect, useState } from "react";
 import type { Block, Lesson } from "@/lib/data/curriculum-types";
 import { LessonCard } from "@/components/LessonCard";
 import { getDueInLesson } from "@/lib/db/repository";
+import { BloqueBreadcrumb } from "@/components/bloque/BloqueBreadcrumb";
 
 export default function BlockPage({ params }: { params: Promise<{ lang: string; id: string }> }) {
   const { lang, id } = use(params);
@@ -59,7 +60,7 @@ export default function BlockPage({ params }: { params: Promise<{ lang: string; 
   return (
     <div className="max-w-3xl mx-auto px-4 py-12 space-y-6">
       <header>
-        <div className="text-xs text-muted">Bloque {block.id}</div>
+        <BloqueBreadcrumb blockId={block.id} />
         <h1 className="font-display text-4xl">{block.name}</h1>
         <p className="text-muted mt-2">{block.description}</p>
       </header>
