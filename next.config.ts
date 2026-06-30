@@ -2,6 +2,11 @@ import type { NextConfig } from "next";
 import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
+  // Self-host: emit a minimal standalone server (`.next/standalone/server.js`)
+  // with only the node_modules it actually needs. The Dockerfile copies that
+  // plus `.next/static` and `public/` (which holds the ~451 MB audio corpus).
+  // No effect on `npm run dev`.
+  output: "standalone",
   // Configure `pageExtensions` to include markdown and MDX files.
   // Required by @next/mdx so .mdx files are recognized as routes/imports.
   pageExtensions: ["ts", "tsx", "md", "mdx"],

@@ -1,0 +1,17 @@
+# Build context excludes — keep public/audio (needed at runtime).
+node_modules
+.next
+.git
+.github
+npm-debug.log*
+*.log
+.env.local
+.env*.local
+test-results
+playwright-report
+coverage
+.DS_Store
+.superpowers
+docs/superpowers
+*.md
+!README.md

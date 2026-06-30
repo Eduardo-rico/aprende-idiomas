@@ -1,0 +1,32 @@
+# Manual Lusitano — self-host compose.
+#
+#   docker compose up -d --build      # build + run detached
+#   docker compose logs -f            # tail logs
+#   docker compose down               # stop
+#
+# The port is bound to 127.0.0.1 on purpose: do NOT expose 3000 directly to
+# the internet. Put a reverse proxy (nginx / Caddy / Cloudflare Tunnel) in
+# front with TLS. (Exposing app ports straight to 0.0.0.0 is how the Redis
+# cryptominer incident happened — keep this behind a proxy.)
+
+services:
+  app:
+    build: .
+    image: portugues-app
+    container_name: portugues-app
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      NODE_ENV: production
+      # ── Auth gate ────────────────────────────────────────────────
+      # Left on the DEV fallback per your choice. The dev password
+      # ("charalito4") and secret are visible in lib/auth/session.ts and
+      # in the public repo. If this VPS is ever reachable from the
+      # internet, set both of these to real values and the gate switches
+      # off the fallback automatically (isAuthConfigured()):
+      # APP_SECRET: "<run: openssl rand -hex 32>"
+      # APP_PASSWORD: "<your private password>"
+      #
+      # MINIMAX_API_KEY is NOT needed to serve the app (audio is baked into
+      # the image). Only the generate:audio / generate:content scripts use it.
