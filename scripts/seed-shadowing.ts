@@ -2,9 +2,9 @@
 // Genera shadowing cards para bloques 3-8. Invocar: tsx scripts/seed-shadowing.ts
 // Requiere MINIMAX_API_KEY en el entorno.
 
-import { writeFile, mkdir } from "node:fs/promises";
-import { join } from "node:path";
-import { createHash } from "node:crypto";
+import { writeFileSync } from "node:fs";
+import { generateTts } from "./lib/minimax-tts";
+import { VOICES, DEFAULT_VOICE } from "./config";
 
 interface ShadowItem { prompt: string; blockId: number; variant: "br" | "pt" | "both"; }
 
@@ -47,14 +47,10 @@ const ITEMS: ShadowItem[] = [
   { prompt: "Mesmo que fosse difícil, ela continuaria tentando.", blockId: 8, variant: "both" },
 ];
 
-async function sha256hex(buf: Buffer): Promise<string> {
-  return createHash("sha256").update(buf).digest("hex");
-}
+// Map seed variant keys ("br"/"pt") to canonical VariantKey ("pt-br"/"pt-pt")
+const VARIANT_KEY = { br: "pt-br", pt: "pt-pt" } as const;
 
 async function main() {
-  const { generateTts } = await import("../lib/llm/tts.js");
-  await mkdir("public/audio", { recursive: true });
-
   const results: Array<{ prompt: string; blockId: number; br?: string; pt?: string }> = [];
 
   for (const item of ITEMS) {
@@ -65,17 +61,15 @@ async function main() {
     const variants: Array<"br" | "pt"> = item.variant === "both" ? ["br", "pt"] : [item.variant];
 
     for (const variant of variants) {
-      const buf = await generateTts(item.prompt, variant);
-      const hash = await sha256hex(Buffer.from(buf));
-      const path = join("public/audio", `${hash}.mp3`);
-      await writeFile(path, Buffer.from(buf));
-      result[variant] = hash;
-      console.log(`✓ ${variant} b${item.blockId} "${item.prompt.slice(0, 40)}…" → ${hash.slice(0, 8)}`);
+      const variantKey = VARIANT_KEY[variant];
+      const voiceId = VOICES[variantKey]?.[DEFAULT_VOICE] ?? VOICES["pt-br"]![DEFAULT_VOICE]!;
+      const ttsResult = await generateTts({ text: item.prompt, voiceId, variant });
+      result[variant] = ttsResult.hash;
+      console.log(`✓ ${variant} b${item.blockId} "${item.prompt.slice(0, 40)}…" → ${ttsResult.hash.slice(0, 8)} (cached=${ttsResult.cached})`);
     }
     results.push(result);
   }
 
-  const { writeFileSync } = await import("node:fs");
   writeFileSync("lib/data/languages/pt/shadowing-seeds.json", JSON.stringify(results, null, 2));
   console.log(`\n✓ ${results.length} shadowing seeds written`);
 }

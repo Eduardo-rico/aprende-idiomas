@@ -46,6 +46,6 @@ export async function getPendingProduction(): Promise<
     .map((r) => ({
       id: r.id!,
       ts: r.ts,
-      entry: r.context as ProductionEntry & { submittedAt: string },
+      entry: r.context as unknown as ProductionEntry & { submittedAt: string },
     }));
 }
