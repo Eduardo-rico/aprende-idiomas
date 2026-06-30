@@ -1,0 +1,476 @@
+[
+  {
+    "word": "ficar",
+    "translations": ["quedarse", "estar"],
+    "falseFriend": true,
+    "note": "NO es 'ficar' (sin traducción directa). 'Ficar com' = quedarse con.",
+    "variants": { "br": "ficar", "pt": "ficar" },
+    "register": "neutral",
+    "conceptIds": ["b2-falso-amigo-ficar"],
+    "examples": ["Vou ficar em casa hoje.", "Ficou com fome?"]
+  },
+  {
+    "word": "pegar",
+    "translations": ["coger (ES neutro)", "agarrar", "tomar"],
+    "falseFriend": true,
+    "note": "Falso amigo CRÍTICO. 'Pegar' en BR no es 'pegar' ES. Incluye tomar (bus), coger (fruta), capturar.",
+    "variants": { "br": "pegar", "pt": "pegar/agarrar" },
+    "register": "neutral",
+    "conceptIds": ["b2-falso-amigo-pegar"],
+    "examples": ["Vou pegar o ônibus.", "Pegou a bola."]
+  },
+  {
+    "word": "puxar",
+    "translations": ["tirar de", "jalar (MX)"],
+    "falseFriend": false,
+    "variants": { "br": "puxar", "pt": "puxar" },
+    "register": "neutral",
+    "conceptIds": ["b2-verbos-movimiento"],
+    "examples": ["Puxa a cadeira.", "Puxou a arma."]
+  },
+  {
+    "word": "borracha",
+    "translations": ["goma (de borrar)"],
+    "falseFriend": true,
+    "note": "NO es 'borracha' (persona ebria). Aunque también existe como adjetivo de embriaguez ('estar bêbada'). Como sustantivo neutro = material caucho o goma de borrar.",
+    "variants": { "br": "borracha", "pt": "borracha" },
+    "register": "neutral",
+    "conceptIds": ["b2-falso-amigo-borracha"],
+    "examples": ["Esta borracha apaga bem."]
+  },
+  {
+    "word": "oficina",
+    "translations": ["taller (mecánico/creativo)"],
+    "falseFriend": true,
+    "note": "ES 'oficina' = escritório en PT. 'Oficina' en PT = taller mecánico o creativo.",
+    "variants": { "br": "oficina", "pt": "oficina" },
+    "register": "neutral",
+    "conceptIds": ["b2-falso-amigo-oficina"],
+    "examples": ["Levei o carro à oficina."]
+  },
+  {
+    "word": "escritório",
+    "translations": ["oficina (ES)"],
+    "falseFriend": false,
+    "variants": { "br": "escritório", "pt": "escritório" },
+    "register": "neutral",
+    "conceptIds": ["b2-vocab-cotidiano"],
+    "examples": ["Trabalha num escritório."]
+  },
+  {
+    "word": "propina",
+    "translations": ["soborno", "cuota (PT escolar)"],
+    "falseFriend": true,
+    "note": "Para propina de camarero: 'gorjeta' (BR/PT). Para soborno: 'propina'. En PT universitario: cuota/matrícula.",
+    "variants": { "br": "gorjeta (camarero) / propina (soborno)", "pt": "gorjeta (camarero) / propina (soborno/cuota)" },
+    "register": "neutral",
+    "conceptIds": ["b2-falso-amigo-propina"],
+    "examples": ["Dei uma gorjeta ao garçom."]
+  },
+  {
+    "word": "gorjeta",
+    "translations": ["propina (camarero)"],
+    "falseFriend": false,
+    "variants": { "br": "gorjeta", "pt": "gorjeta" },
+    "register": "neutral",
+    "conceptIds": ["b2-vocab-cotidiano"],
+    "examples": ["A gorjeta já está incluída?"]
+  },
+  {
+    "word": "achar",
+    "translations": ["encontrar", "opinar", "creer (BR)"],
+    "falseFriend": false,
+    "note": "En BR coloquial = 'creer, pensar' ('eu acho que sim'). En PT = encontrar principalmente.",
+    "variants": { "br": "achar (pensar/encontrar)", "pt": "achar (encontrar)" },
+    "register": "neutral",
+    "conceptIds": ["b2-variantes-br-pt"],
+    "examples": ["Acho que vai chover.", "Vou achar a chave."]
+  },
+  {
+    "word": "carta",
+    "translations": ["carta (epístola)", "mapa (PT)"],
+    "falseFriend": true,
+    "note": "En PT, 'carta' también significa 'mapa'. Menú restaurante: 'ementa' (PT) / 'cardápio' (BR).",
+    "variants": { "br": "carta (carta)/cardápio (menú)", "pt": "carta (carta/mapa)/ementa (menú)" },
+    "register": "neutral",
+    "conceptIds": ["b2-falso-amigo-carta"],
+    "examples": ["Pediu a ementa.", "O cardápio de hoje."]
+  },
+  {
+    "word": "ementa",
+    "translations": ["menú (PT)"],
+    "falseFriend": false,
+    "variants": { "br": "— (usar cardápio)", "pt": "ementa" },
+    "register": "neutral",
+    "conceptIds": ["b2-vocab-restaurante"],
+    "examples": ["Olha a ementa."]
+  },
+  {
+    "word": "cardápio",
+    "translations": ["menú (BR)"],
+    "falseFriend": false,
+    "variants": { "br": "cardápio", "pt": "— (usar ementa)" },
+    "register": "neutral",
+    "conceptIds": ["b2-vocab-restaurante"],
+    "examples": ["Vou pedir o cardápio."]
+  },
+  {
+    "word": "ônibus / autocarro",
+    "translations": ["autobús", "camión (MX)"],
+    "falseFriend": false,
+    "note": "Variante léxica clave: BR usa 'ônibus' (del francés), PT usa 'autocarro'. Mismo vehículo, distinto nombre.",
+    "variants": { "br": "ônibus", "pt": "autocarro" },
+    "register": "neutral",
+    "conceptIds": ["b3-variantes-transporte-bus"],
+    "examples": ["Vou de ônibus.", "Apanhei o autocarro."]
+  },
+  {
+    "word": "trem / comboio",
+    "translations": ["tren"],
+    "falseFriend": false,
+    "note": "BR: 'trem' (del inglés 'train' vía FR). PT: 'comboio'. 'Trem' en PT-PT es coloquial y puede sonar raro.",
+    "variants": { "br": "trem", "pt": "comboio" },
+    "register": "neutral",
+    "conceptIds": ["b3-variantes-transporte-tren"],
+    "examples": ["O trem chegou atrasado.", "O comboio para Lisboa."]
+  },
+  {
+    "word": "metrô / metro",
+    "translations": ["metro (subterráneo)"],
+    "falseFriend": false,
+    "note": "Misma palabra, distinto acento gráfico: BR = 'metrô' (circunflejo), PT = 'metro' (sin acento).",
+    "variants": { "br": "metrô", "pt": "metro" },
+    "register": "neutral",
+    "conceptIds": ["b3-variantes-transporte-metro"],
+    "examples": ["Pego o metrô no centro.", "Vou de metro."]
+  },
+  {
+    "word": "avião",
+    "translations": ["avión"],
+    "falseFriend": false,
+    "variants": { "br": "avião", "pt": "avião" },
+    "register": "neutral",
+    "conceptIds": ["b3-vocab-transporte"],
+    "examples": ["O avião decolou às oito.", "O avião aterrou em Lisboa."]
+  },
+  {
+    "word": "celular / telemóvel",
+    "translations": ["teléfono celular", "móvil"],
+    "falseFriend": false,
+    "note": "BR: 'celular' (igual que ES-MX). PT: 'telemóvel'. Evitar 'celular' en PT-PT, suena extranjero.",
+    "variants": { "br": "celular", "pt": "telemóvel" },
+    "register": "neutral",
+    "conceptIds": ["b4-variantes-tecnologia-celular"],
+    "examples": ["Esqueci o celular em casa.", "O telemóvel está sem bateria."]
+  },
+  {
+    "word": "geladeira / frigorífico",
+    "translations": ["refrigerador", "nevera"],
+    "falseFriend": false,
+    "note": "BR: 'geladeira' (de 'gelada' = helada). PT: 'frigorífico'. Ambas formas coexisten pero son marcadores dialectales fuertes.",
+    "variants": { "br": "geladeira", "pt": "frigorífico" },
+    "register": "neutral",
+    "conceptIds": ["b4-variantes-hogar-geladeira"],
+    "examples": ["Tem cerveja na geladeira?", "Está no frigorífico."]
+  },
+  {
+    "word": "microondas",
+    "translations": ["microondas"],
+    "falseFriend": false,
+    "variants": { "br": "micro-ondas", "pt": "microondas" },
+    "register": "neutral",
+    "conceptIds": ["b4-vocab-hogar"],
+    "examples": ["Aquece no micro-ondas.", "Usa o microondas."]
+  },
+  {
+    "word": "suco / sumo",
+    "translations": ["jugo", "zumo"],
+    "falseFriend": false,
+    "note": "BR: 'suco' (jugo de fruta). PT: 'sumo'. En PT-PT 'suco' puede sonar informal o brasileño.",
+    "variants": { "br": "suco", "pt": "sumo" },
+    "register": "neutral",
+    "conceptIds": ["b4-variantes-comida-suco"],
+    "examples": ["Um suco de laranja, por favor.", "Um sumo de manga."]
+  },
+  {
+    "word": "sorvete / gelado",
+    "translations": ["helado (postre)"],
+    "falseFriend": false,
+    "note": "BR: 'sorvete'. PT: 'gelado'. Cuidado: 'gelado' en BR es adjetivo = 'frío/helado' (temperatura).",
+    "variants": { "br": "sorvete", "pt": "gelado" },
+    "register": "neutral",
+    "conceptIds": ["b4-variantes-comida-sorvete"],
+    "examples": ["Quero um sorvete de chocolate.", "Dois gelados de baunilha."]
+  },
+  {
+    "word": "bolo",
+    "translations": ["pastel", "torta", "bizcocho"],
+    "falseFriend": false,
+    "variants": { "br": "bolo", "pt": "bolo" },
+    "register": "neutral",
+    "conceptIds": ["b4-vocab-comida"],
+    "examples": ["Fiz um bolo de aniversário.", "O bolo de cenoura é delicioso."]
+  },
+  {
+    "word": "banheiro / casa de banho",
+    "translations": ["baño", "servicio"],
+    "falseFriend": false,
+    "note": "BR: 'banheiro'. PT: 'casa de banho' o simplemente 'WC'. 'Banheiro' en PT puede entenderse pero suena BR.",
+    "variants": { "br": "banheiro", "pt": "casa de banho / WC" },
+    "register": "neutral",
+    "conceptIds": ["b3-variantes-hogar-banheiro"],
+    "examples": ["Onde fica o banheiro?", "A casa de banho fica ao fundo."]
+  },
+  {
+    "word": "farmácia",
+    "translations": ["farmacia"],
+    "falseFriend": false,
+    "variants": { "br": "farmácia", "pt": "farmácia" },
+    "register": "neutral",
+    "conceptIds": ["b5-vocab-salud"],
+    "examples": ["Preciso ir à farmácia.", "A farmácia está fechada."]
+  },
+  {
+    "word": "médico",
+    "translations": ["médico", "doctor"],
+    "falseFriend": false,
+    "variants": { "br": "médico", "pt": "médico" },
+    "register": "neutral",
+    "conceptIds": ["b5-vocab-salud"],
+    "examples": ["Vou ao médico amanhã.", "O médico receitou repouso."]
+  },
+  {
+    "word": "fato",
+    "translations": ["traje/terno (PT)", "hecho (BR/PT)"],
+    "falseFriend": true,
+    "note": "En PT-PT 'fato' = traje (suit). En BR 'fato' = hecho (fact). En BR el traje se llama 'terno'. En PT el 'fato' de facto existe también con el sentido de 'hecho'.",
+    "variants": { "br": "fato (hecho) / terno (traje)", "pt": "fato (traje y hecho)" },
+    "register": "neutral",
+    "conceptIds": ["b3-variantes-ropa-fato"],
+    "examples": ["Usou um fato escuro na reunião.", "Comprou um terno novo."]
+  },
+  {
+    "word": "calças / calça",
+    "translations": ["pantalón"],
+    "falseFriend": false,
+    "note": "PT usa el plural 'calças'. BR usa el singular 'calça'. Mismo objeto, número gramatical distinto (como ES 'pantalones' vs 'pantalón').",
+    "variants": { "br": "calça", "pt": "calças" },
+    "register": "neutral",
+    "conceptIds": ["b3-variantes-ropa-calca"],
+    "examples": ["Comprei uma calça nova.", "As calças estão na gaveta."]
+  },
+  {
+    "word": "casaco / jaqueta",
+    "translations": ["chaqueta", "abrigo", "chamarra (MX)"],
+    "falseFriend": false,
+    "note": "PT: 'casaco' = abrigo o chaqueta exterior. BR: 'jaqueta' es más común para chaqueta corta; 'casaco' también se usa en BR pero más para abrigo.",
+    "variants": { "br": "jaqueta (chaqueta) / casaco (abrigo)", "pt": "casaco" },
+    "register": "neutral",
+    "conceptIds": ["b3-variantes-ropa-casaco"],
+    "examples": ["Pega o casaco, vai fazer frio.", "Comprei uma jaqueta de couro."]
+  },
+  {
+    "word": "gravata",
+    "translations": ["corbata"],
+    "falseFriend": false,
+    "variants": { "br": "gravata", "pt": "gravata" },
+    "register": "neutral",
+    "conceptIds": ["b3-vocab-ropa"],
+    "examples": ["Ele usa gravata no trabalho.", "Que gravata elegante!"]
+  },
+  {
+    "word": "chinelo",
+    "translations": ["chancla", "sandalia", "chinela (ES-CL)"],
+    "falseFriend": false,
+    "variants": { "br": "chinelo / sandália", "pt": "chinelo / sandália" },
+    "register": "neutral",
+    "conceptIds": ["b3-vocab-ropa"],
+    "examples": ["Fui à praia de chinelo.", "Deixa o chinelo na porta."]
+  },
+  {
+    "word": "polvo",
+    "translations": ["pulpo (PT-PT)", "polvo (BR y PT = partículas de polvo)"],
+    "falseFriend": true,
+    "note": "En PT-PT 'polvo' = pulpo (cefalópodo). En BR 'polvo' = polvo (suciedad) y también se llama 'polvo' al pulpo. ¡Trampa doble! Verificar contexto.",
+    "variants": { "br": "polvo (polvo/suciedad; pulpo también se llama polvo)", "pt": "polvo (pulpo)" },
+    "register": "neutral",
+    "conceptIds": ["b5-falso-amigo-polvo"],
+    "examples": ["Há polvo no prato.", "Tem muito polvo na prateleira."]
+  },
+  {
+    "word": "exquisito",
+    "translations": ["excelente", "delicioso", "exquisito"],
+    "falseFriend": true,
+    "note": "CUIDADO: en ES 'exquisito' = refinado/raro. En PT 'esquisito' (grafía distinta) = raro/extraño. La forma 'exquisito' en PT-PT coloquial puede usarse como 'delicioso', pero la trampa principal es que 'esquisito' PT ≠ 'exquisito' ES.",
+    "variants": { "br": "esquisito (raro/extraño)", "pt": "esquisito (raro/extraño)" },
+    "register": "neutral",
+    "conceptIds": ["b5-falso-amigo-esquisito"],
+    "examples": ["Que coisa esquisita!", "Esse sabor é esquisito."]
+  },
+  {
+    "word": "apelido",
+    "translations": ["apodo", "nickname"],
+    "falseFriend": true,
+    "note": "ES 'apellido' = sobrenome en PT. 'Apelido' en PT/BR = apodo (nickname). No confundir: 'Qual é o seu apelido?' pregunta por tu apodo, no por tu apellido.",
+    "variants": { "br": "apelido (apodo) / sobrenome (apellido)", "pt": "apelido (apodo) / sobrenome (apellido)" },
+    "register": "neutral",
+    "conceptIds": ["b2-falso-amigo-apelido"],
+    "examples": ["Meu apelido é Zeca.", "Qual é o seu sobrenome?"]
+  },
+  {
+    "word": "sobrenome",
+    "translations": ["apellido"],
+    "falseFriend": false,
+    "variants": { "br": "sobrenome", "pt": "apelido (PT-PT) / sobrenome" },
+    "register": "neutral",
+    "conceptIds": ["b2-vocab-identidad"],
+    "examples": ["Qual é o seu sobrenome?", "Escreva o sobrenome completo."]
+  },
+  {
+    "word": "ligar",
+    "translations": ["llamar (por teléfono)", "conectar", "encender"],
+    "falseFriend": false,
+    "note": "'Ligar' en BR = llamar por teléfono ('te ligo depois'). También = conectar/encender un aparato. En PT = conectar/encender principalmente; llamar = 'telefonar'.",
+    "variants": { "br": "ligar (llamar/conectar/encender)", "pt": "ligar (conectar/encender) / telefonar (llamar)" },
+    "register": "neutral",
+    "conceptIds": ["b4-variantes-verbos-ligar"],
+    "examples": ["Te ligo mais tarde.", "Liga a luz, por favor."]
+  },
+  {
+    "word": "mandar",
+    "translations": ["enviar", "mandar"],
+    "falseFriend": false,
+    "variants": { "br": "mandar", "pt": "mandar / enviar" },
+    "register": "neutral",
+    "conceptIds": ["b3-verbos-cotidianos"],
+    "examples": ["Mandei uma mensagem.", "Manda o arquivo por email."]
+  },
+  {
+    "word": "deixar",
+    "translations": ["dejar", "permitir", "soltar"],
+    "falseFriend": false,
+    "variants": { "br": "deixar", "pt": "deixar" },
+    "register": "neutral",
+    "conceptIds": ["b3-verbos-cotidianos"],
+    "examples": ["Deixa eu falar.", "Deixei o livro em casa."]
+  },
+  {
+    "word": "levar",
+    "translations": ["llevar (de aquí allá)"],
+    "falseFriend": false,
+    "note": "Contrastar con 'trazer' (traer = hacia aquí). 'Levar' = alejar del hablante; 'trazer' = acercar al hablante.",
+    "variants": { "br": "levar", "pt": "levar" },
+    "register": "neutral",
+    "conceptIds": ["b3-verbos-movimiento"],
+    "examples": ["Leva o guarda-chuva.", "Levei os filhos ao parque."]
+  },
+  {
+    "word": "trazer",
+    "translations": ["traer (hacia aquí)"],
+    "falseFriend": false,
+    "note": "Opuesto de 'levar'. 'Trazer' = mover hacia el hablante. 'Traz mais vinho' = trae más vino (hacia donde estoy yo).",
+    "variants": { "br": "trazer", "pt": "trazer" },
+    "register": "neutral",
+    "conceptIds": ["b3-verbos-movimiento"],
+    "examples": ["Traz a conta, por favor.", "Trouxe um presente."]
+  },
+  {
+    "word": "tirar",
+    "translations": ["sacar foto", "quitar", "sacar"],
+    "falseFriend": false,
+    "note": "'Tirar uma foto' = sacar una foto (muy común en BR/PT). También = quitar ropa ('tirar a blusa') o sacar algo de un lugar.",
+    "variants": { "br": "tirar", "pt": "tirar" },
+    "register": "neutral",
+    "conceptIds": ["b3-verbos-polisemicos"],
+    "examples": ["Pode tirar uma foto?", "Tira o casaco."]
+  },
+  {
+    "word": "você / tu",
+    "translations": ["tú (pronombre 2a persona singular)"],
+    "falseFriend": false,
+    "note": "BR: 'você' es el pronombre neutro-informal estándar. 'Tu' existe en Brasil pero es regional (Sul, NE). PT: 'tu' es el informal y 'você' el formal. Conjugación varía: 'tu falas' vs 'você fala'.",
+    "variants": { "br": "você (estándar informal)", "pt": "tu (informal) / você (formal)" },
+    "register": "informal",
+    "conceptIds": ["b1-gramatica-pronombres-vocetu"],
+    "examples": ["Você fala inglês?", "Tu falas inglês?"]
+  },
+  {
+    "word": "estar a + infinitivo / estar + gerúndio",
+    "translations": ["estar + gerundio (progresivo)"],
+    "falseFriend": false,
+    "note": "Para el progresivo: PT usa 'estar a + infinitivo' ('estou a comer'). BR usa 'estar + gerúndio' ('estou comendo'). Ambas son correctas en sus variedades.",
+    "variants": { "br": "estou comendo (gerúndio)", "pt": "estou a comer (a + infinitivo)" },
+    "register": "neutral",
+    "conceptIds": ["b2-gramatica-progresivo"],
+    "examples": ["Estou a comer.", "Estou comendo."]
+  },
+  {
+    "word": "lá / aí",
+    "translations": ["allá / ahí"],
+    "falseFriend": false,
+    "note": "En PT: 'lá' = allá (lejos del oyente y del hablante); 'aí' = ahí (cerca del oyente). En BR coloquial 'aí' se usa muchísimo como marcador discursivo ('aí eu fui' = entonces yo fui).",
+    "variants": { "br": "aí (marcador discursivo frecuente) / lá", "pt": "lá / aí" },
+    "register": "neutral",
+    "conceptIds": ["b2-gramatica-adverbios-lugar"],
+    "examples": ["Ele mora lá.", "Aí eu decidi sair."]
+  },
+  {
+    "word": "embaraçada",
+    "translations": ["embarazada (grávida)", "avergonzada (embarrassed)"],
+    "falseFriend": true,
+    "note": "TRAMPA DOBLE. En PT 'embaraçada' = avergonzada o enredada, NO embarazada. 'Embarazada' en ES = 'grávida' en PT. Además en inglés 'embarrassed' ≠ 'embarazado' ES.",
+    "variants": { "br": "grávida (embarazada) / embaraçada (avergonzada)", "pt": "grávida (embarazada) / embaraçada (avergonzada)" },
+    "register": "neutral",
+    "conceptIds": ["b5-falso-amigo-embaracada"],
+    "examples": ["Ela está grávida de três meses.", "Fiquei embaraçada com o comentário."]
+  },
+  {
+    "word": "grávida",
+    "translations": ["embarazada (gestante)"],
+    "falseFriend": false,
+    "variants": { "br": "grávida", "pt": "grávida" },
+    "register": "neutral",
+    "conceptIds": ["b5-vocab-salud"],
+    "examples": ["Está grávida do primeiro filho.", "A médica confirmou que estou grávida."]
+  },
+  {
+    "word": "policia / polícia",
+    "translations": ["policía (institución)", "policía (agente)"],
+    "falseFriend": false,
+    "note": "En PT, 'a polícia' (femenino) = la policía (institución). 'O polícia' (masculino) = el agente. En BR 'a polícia' = institución; 'o policial' = agente.",
+    "variants": { "br": "a polícia (institución) / o policial (agente)", "pt": "a polícia (institución) / o polícia (agente)" },
+    "register": "neutral",
+    "conceptIds": ["b5-variantes-vocab-policia"],
+    "examples": ["A polícia chegou rapidinho.", "O policial pediu meus documentos."]
+  },
+  {
+    "word": "legal",
+    "translations": ["genial (BR slang)", "legal (jurídico)"],
+    "falseFriend": true,
+    "note": "En BR 'legal' es un elogio cotidiano: 'que legal!' = ¡qué genial/padre/chido! En PT formal significa solo 'legal/jurídico'. En PT coloquial se usa pero es influencia brasileña.",
+    "variants": { "br": "legal (genial/chido/padre)", "pt": "legal (jurídico; coloquial: bien)" },
+    "register": "informal",
+    "conceptIds": ["b2-falso-amigo-legal"],
+    "examples": ["Que legal essa viagem!", "Isso é totalmente legal."]
+  },
+  {
+    "word": "saudade",
+    "translations": ["añoranza", "nostalgia", "morriña"],
+    "falseFriend": false,
+    "note": "Concepto cultural único PT/BR: melancolía nostálgica por algo o alguien amado que está ausente. No tiene traducción exacta en ES.",
+    "variants": { "br": "saudade", "pt": "saudade" },
+    "register": "neutral",
+    "conceptIds": ["b6-cultura-saudade"],
+    "examples": ["Estou com saudade de você.", "Que saudade do Brasil!"]
+  },
+  {
+    "word": "obrigado / obrigada",
+    "translations": ["gracias"],
+    "falseFriend": false,
+    "note": "Se conjuga en género del HABLANTE, no del oyente. Hombre dice 'obrigado'; mujer dice 'obrigada'. Error común de hispanohablantes.",
+    "variants": { "br": "obrigado/obrigada", "pt": "obrigado/obrigada" },
+    "register": "neutral",
+    "conceptIds": ["b1-vocab-cortesia"],
+    "examples": ["Obrigado pela ajuda!", "Obrigada, muito gentil."]
+  }
+]
