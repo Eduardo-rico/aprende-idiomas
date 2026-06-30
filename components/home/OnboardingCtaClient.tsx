@@ -21,7 +21,7 @@ interface DueSummary {
 }
 
 export function OnboardingCtaClient({ lang }: Props) {
-  const [showDiagnosticCta, setShowDiagnosticCta] = useState(false);
+  const [showDiagnosticCta, setShowDiagnosticCta] = useState<boolean | null>(null);
   const [due, setDue] = useState<DueSummary | null>(null);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export function OnboardingCtaClient({ lang }: Props) {
       ]);
       setShowDiagnosticCta(!onboardingDone || cardCount === 0);
     }
-    void checkOnboarding();
+    checkOnboarding().catch(() => setShowDiagnosticCta(false));
   }, []);
 
   useEffect(() => {
@@ -53,6 +53,8 @@ export function OnboardingCtaClient({ lang }: Props) {
   }, []);
 
   const estMinutes = Math.round((due?.total ?? 0) * 0.4);
+
+  if (showDiagnosticCta === null) return null;
 
   if (showDiagnosticCta) {
     return (
