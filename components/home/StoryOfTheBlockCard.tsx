@@ -34,7 +34,7 @@ export function StoryOfTheBlockCard({ stories }: { stories: Story[] }) {
       <section className="border border-border rounded-lg p-4">
         <div className="text-xs text-muted-foreground mb-1">📖 Historia del Bloque</div>
         <p className="text-sm text-muted-foreground">
-          Aún no hay historias generadas. Corré <code className="px-1 rounded bg-muted">npm run generate:stories</code>.
+          Aún no hay historias generadas. Corre <code className="px-1 rounded bg-muted">npm run generate:stories</code>.
         </p>
       </section>
     );

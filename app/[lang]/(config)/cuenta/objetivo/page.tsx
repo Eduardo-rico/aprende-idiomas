@@ -20,7 +20,7 @@ export default async function ObjetivoPage({
     >
       <h1 className="mb-1.5 font-display text-[39px]">Objetivo diario</h1>
       <p className="mb-8 text-ink-muted">
-        Cuántos minutos al día querés estudiar.
+        Cuántos minutos al día quieres estudiar.
       </p>
       <CuentaNav lang={lang} active="objetivo" />
       <ObjetivoForm />

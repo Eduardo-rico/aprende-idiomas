@@ -63,7 +63,7 @@ export function OnboardingCtaClient({ lang }: Props) {
         className="block no-underline bg-diagnostic text-paper rounded-xl px-6 py-5 mb-12 shadow-[var(--shadow-md)] transition-transform duration-200 ease-[var(--ease)] hover:-translate-y-px"
       >
         <div className="font-display text-[25px] font-semibold flex justify-between items-center leading-tight">
-          <span>Hacé el diagnóstico</span>
+          <span>Haz el diagnóstico</span>
           <ArrowRight size={22} aria-hidden="true" />
         </div>
         <div className="text-sm opacity-90 mt-1.5">

@@ -15,7 +15,7 @@ const ITEMS = [
   {
     slug: "objetivo",
     title: "Objetivo diario",
-    desc: "Cuántos minutos al día querés estudiar.",
+    desc: "Cuántos minutos al día quieres estudiar.",
   },
   {
     slug: "display",
@@ -41,7 +41,7 @@ export default async function CuentaHub({
         Cuenta
       </h1>
       <p className="mb-8 text-ink-muted">
-        Configurá tu experiencia de estudio.
+        Configura tu experiencia de estudio.
       </p>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {ITEMS.map((i) => (

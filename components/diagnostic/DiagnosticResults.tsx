@@ -16,7 +16,7 @@ export function DiagnosticResults({ result, lang }: { result: Recommendation; la
       <div className="border border-border rounded-lg p-4">
         <div className="text-sm text-muted-foreground mb-1">Recomendación</div>
         <div className="text-2xl font-display font-semibold mb-2">
-          Empezá por el Bloque {result.recommendedStart}
+          Empieza por el Bloque {result.recommendedStart}
         </div>
         <Link
           href={`/${lang}/blocks/${result.recommendedStart}`}

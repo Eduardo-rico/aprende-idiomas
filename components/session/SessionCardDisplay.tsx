@@ -44,15 +44,15 @@ function exampleFor(ex: Exercise): string | undefined {
 
 const PROMPT: Record<string, string> = {
   flashcard: "¿Qué significa en español?",
-  listening: "Escuchá",
-  fill_blank: "Completá la frase",
-  translation: "Traducí al portugués",
-  conjugation: "Conjugá el verbo",
-  error_correction: "Corregí el error",
-  matching: "Emparejá",
-  multiple_choice: "Elegí la opción correcta",
-  shadowing: "Repetí en voz alta",
-  verb_preposition: "Elegí la preposición correcta",
+  listening: "Escucha",
+  fill_blank: "Completa la frase",
+  translation: "Traduce al portugués",
+  conjugation: "Conjuga el verbo",
+  error_correction: "Corrige el error",
+  matching: "Empareja",
+  multiple_choice: "Elige la opción correcta",
+  shadowing: "Repite en voz alta",
+  verb_preposition: "Elige la preposición correcta",
 };
 
 export function SessionCardDisplay({
