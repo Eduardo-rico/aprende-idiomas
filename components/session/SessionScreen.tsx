@@ -7,17 +7,26 @@
 // grading (submitAnswer) lands in a follow-up; the existing
 // ExerciseRunner keeps owning that machinery elsewhere. See
 // task-A.3-report.md concerns.
+//
+// D.9: exercises whose tags include "shadowing", "cloze", or "production"
+// are dispatched to their dedicated card components which handle grading
+// internally (no reveal/GradePanel step for those types).
 "use client";
 import { useCallback, useState } from "react";
 import type { Exercise } from "@/lib/data/zod-schemas";
 import type { LanguageId } from "@/lib/locales";
 import { useSessionTimer } from "@/lib/hooks/useSessionTimer";
 import { useGradeKeyboard, type GradeRating } from "@/lib/hooks/useGradeKeyboard";
+import { useSettings } from "@/lib/stores/settings";
 import { SessionTopBar } from "./SessionTopBar";
 import { ExerciseHead } from "./ExerciseHead";
 import { SessionCardDisplay } from "./SessionCardDisplay";
 import { GradePanel } from "./GradePanel";
 import { SessionFooter } from "./SessionFooter";
+import { ShadowingCard } from "@/components/cards/ShadowingCard";
+import { ClozeCard } from "@/components/cards/ClozeCard";
+import { ProductionCard } from "@/components/cards/ProductionCard";
+import clozeSeedsRaw from "@/lib/data/languages/pt/cloze-seeds.json";
 
 const TYPE_LABEL: Record<string, string> = {
   flashcard: "Flashcard · recordar",
@@ -47,6 +56,37 @@ const PLACEHOLDER_INTERVALS_MS = {
   easy: 9 * 86_400_000,
 };
 
+// ─── D.9: Cloze-seeds distractor lookup ────────────────────────
+// Match by exact text so the correct distractors are surfaced for
+// known cloze exercises. Returns [] for unknown / other-language cards.
+type ClozeSeed = {
+  storyId: string;
+  blockId: number;
+  text: string;
+  answer: string;
+  distractors: string[];
+  variant: string;
+};
+const clozeSeeds = clozeSeedsRaw as ClozeSeed[];
+
+function getClozeDistractors(text: string): string[] {
+  const seed = clozeSeeds.find((s) => s.text === text);
+  return seed?.distractors ?? [];
+}
+
+// ─── D.9: Safe data accessor for non-schema exercise types ─────
+// Exercises with "cloze" or "production" tags do not have their own
+// discriminated-union type in the schema yet; we cast data to a loose
+// shape so TypeScript doesn't reject field accesses.
+type LooseData = {
+  text?: string;
+  sentence?: string;
+  front?: string;
+  answer?: string;
+  blanks?: Array<{ position: number; answer: string }>;
+  prompt?: string;
+};
+
 export function SessionScreen({
   exercises,
   onFinish,
@@ -63,6 +103,7 @@ export function SessionScreen({
   const [reviewed, setReviewed] = useState(0);
   const [correct, setCorrect] = useState(0);
   const { label: timerLabel } = useSessionTimer(Date.now());
+  const { variant: settingsVariant } = useSettings();
 
   const ex = exercises[idx];
   const total = exercises.length;
@@ -101,16 +142,55 @@ export function SessionScreen({
   const accent = TYPE_ACCENT[ex.type] ?? "lesson";
   const conceptId = ex.concepts?.[0] ?? ex.lessonId ?? ex.id;
 
-  return (
-    <div data-testid="session-screen">
-      <SessionTopBar
-        progress={idx / Math.max(total, 1)}
-        countLabel={`${idx + 1} / ${total}`}
-        timerLabel={timerLabel}
-        onClose={onClose}
+  // ─── D.9: card type dispatch ────────────────────────────────
+  // Shadowing is a first-class schema type — TypeScript narrows here.
+  // Cloze and production are tag-based (no schema type yet), so we
+  // cast data to LooseData to access their fields without type errors.
+  const tags = ex.tags;
+
+  let cardArea: React.ReactNode;
+
+  if (ex.type === "shadowing") {
+    // ShadowingCard owns its own audio + record + self-eval flow;
+    // it calls onSubmit when the user is done grading themselves.
+    cardArea = (
+      <ShadowingCard
+        ex={ex}
+        onSubmit={(_answer: string, wasCorrect: boolean) =>
+          handleGrade(wasCorrect ? 3 : 1)
+        }
       />
-      <main className="mx-auto max-w-[720px] px-6 pb-10 pt-12">
-        <ExerciseHead typeLabel={typeLabel} typeAccent={accent} conceptId={conceptId} />
+    );
+  } else if (tags.includes("cloze")) {
+    const d = ex.data as unknown as LooseData;
+    const clozeText = d.text ?? d.sentence ?? d.front ?? "";
+    const clozeAnswer = d.answer ?? d.blanks?.[0]?.answer ?? "";
+    cardArea = (
+      <ClozeCard
+        text={clozeText}
+        answer={clozeAnswer}
+        distractors={getClozeDistractors(clozeText)}
+        onGrade={handleGrade}
+      />
+    );
+  } else if (tags.includes("production")) {
+    const d = ex.data as unknown as LooseData;
+    const topic = d.prompt ?? d.front ?? d.text ?? d.sentence ?? "";
+    // ProductionCard variant is "pt-br" | "pt-pt"; VariantKey is a string alias.
+    const safeVariant: "pt-br" | "pt-pt" =
+      settingsVariant === "pt-pt" ? "pt-pt" : "pt-br";
+    cardArea = (
+      <ProductionCard
+        topic={topic}
+        blockId={ex.blockId}
+        variant={safeVariant}
+        onDone={() => handleGrade(3)}
+      />
+    );
+  } else {
+    // Default: existing reveal-then-grade flow with SessionCardDisplay + GradePanel.
+    cardArea = (
+      <>
         <SessionCardDisplay
           exercise={ex}
           reveal={reveal}
@@ -125,6 +205,21 @@ export function SessionScreen({
           onGrade={handleGrade}
           intervals={PLACEHOLDER_INTERVALS_MS}
         />
+      </>
+    );
+  }
+
+  return (
+    <div data-testid="session-screen">
+      <SessionTopBar
+        progress={idx / Math.max(total, 1)}
+        countLabel={`${idx + 1} / ${total}`}
+        timerLabel={timerLabel}
+        onClose={onClose}
+      />
+      <main className="mx-auto max-w-[720px] px-6 pb-10 pt-12">
+        <ExerciseHead typeLabel={typeLabel} typeAccent={accent} conceptId={conceptId} />
+        {cardArea}
       </main>
       <SessionFooter remaining={remaining} />
     </div>
