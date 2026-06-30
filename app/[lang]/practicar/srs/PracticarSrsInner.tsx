@@ -16,6 +16,7 @@ import { useSession } from "@/lib/stores/session";
 import type { Exercise } from "@/lib/data/zod-schemas";
 import { SessionScreen } from "@/components/session/SessionScreen";
 import type { LanguageId } from "@/lib/locales";
+import { SessionResultCard } from "@/components/session/SessionResultCard";
 
 export function PracticarSrsInner({ lang }: { lang: LanguageId }) {
   const router = useRouter();
@@ -104,36 +105,35 @@ export function PracticarSrsInner({ lang }: { lang: LanguageId }) {
 
   if (err) {
     return (
-      <div className="mx-auto max-w-md px-4 py-16 text-center">
-        <h1 className="font-display text-2xl">No se pudo iniciar la sesión</h1>
-        <p className="mt-2 text-sm text-ink-muted">{err}</p>
-      </div>
+      <SessionResultCard variant="error" message={err} />
     );
   }
   if (done) {
     const pct = Math.round((done.correct / Math.max(done.reviewed, 1)) * 100);
     return (
-      <div className="mx-auto max-w-md px-4 py-16 text-center">
-        <h1 className="font-display text-4xl">¡Sesión completa!</h1>
-        <div className="mt-4 font-display text-6xl">{pct}%</div>
-        <p className="mt-2 text-ink-muted">
-          {done.correct} de {done.reviewed} correctas
-        </p>
-        <div className="mt-6 flex justify-center gap-2">
-          <button
-            onClick={() => router.push(`/${lang}`)}
-            className="rounded-md border border-rule-strong px-4 py-2"
-          >
-            Inicio
-          </button>
-          <button
-            onClick={() => router.push(`/${lang}/libro`)}
-            className="rounded-md bg-lesson px-4 py-2 text-white"
-          >
-            Libro
-          </button>
-        </div>
-      </div>
+      <SessionResultCard
+        variant="done"
+        headline="¡Sesión completa!"
+        pct={pct}
+        correct={done.correct}
+        reviewed={done.reviewed}
+        actions={
+          <>
+            <button
+              onClick={() => router.push(`/${lang}`)}
+              className="rounded-md border border-rule-strong px-4 py-2"
+            >
+              Inicio
+            </button>
+            <button
+              onClick={() => router.push(`/${lang}/libro`)}
+              className="rounded-md bg-lesson px-4 py-2 text-white"
+            >
+              Libro
+            </button>
+          </>
+        }
+      />
     );
   }
   if (!exercises) {

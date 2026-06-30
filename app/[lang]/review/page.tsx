@@ -22,6 +22,7 @@ import { useSession } from "@/lib/stores/session";
 import { tagLabel } from "@/lib/db/tags";
 import type { Lesson } from "@/lib/data/curriculum-types";
 import { hasLocale, type LanguageId } from "@/lib/locales";
+import { SessionResultCard } from "@/components/session/SessionResultCard";
 import type { LessonView } from "@/lib/db/schema";
 
 // Next.js 16 requires useSearchParams() to be wrapped in a Suspense boundary
@@ -162,39 +163,48 @@ function ReviewPageInner() {
 
   if (sessionError) {
     return (
-      <div className="max-w-md mx-auto px-4 py-16 text-center space-y-4">
-        <h1 className="font-display text-2xl">No se pudo iniciar la sesión</h1>
-        <p className="text-muted text-sm">{sessionError}</p>
-        <button onClick={() => router.push(`/${lang}/learn`)} className="px-4 py-2 border border-border rounded-md">
-          Volver
-        </button>
-      </div>
+      <SessionResultCard
+        variant="error"
+        message={sessionError}
+        action={
+          <button
+            onClick={() => router.push(`/${lang}/learn`)}
+            className="rounded-md border border-rule-strong px-4 py-2"
+          >
+            Volver
+          </button>
+        }
+      />
     );
   }
 
   if (done) {
     const pct = Math.round((done.correct / Math.max(done.reviewed, 1)) * 100);
     return (
-      <div className="max-w-md mx-auto px-4 py-16 text-center space-y-4">
-        <h1 className="font-display text-4xl">¡Repaso completo!</h1>
-        <div className="text-6xl font-display">{pct}%</div>
-        <p className="text-muted">
-          {done.correct} de {done.reviewed} correctas
-        </p>
-        {split && (
-          <p className="text-sm text-muted">
-            {split.review} repasos · {split.newCards} nuevas
-          </p>
-        )}
-        <div className="flex gap-2 justify-center">
-          <button onClick={() => router.push(`/${lang}/blocks`)} className="px-4 py-2 border border-border rounded-md">
-            Ver bloques
-          </button>
-          <button onClick={() => router.push(`/${lang}`)} className="px-4 py-2 bg-primary text-fg rounded-md">
-            Inicio
-          </button>
-        </div>
-      </div>
+      <SessionResultCard
+        variant="done"
+        headline="¡Repaso completo!"
+        pct={pct}
+        correct={done.correct}
+        reviewed={done.reviewed}
+        subtitle={split && `${split.review} repasos · ${split.newCards} nuevas`}
+        actions={
+          <>
+            <button
+              onClick={() => router.push(`/${lang}/blocks`)}
+              className="rounded-md border border-rule-strong px-4 py-2"
+            >
+              Ver bloques
+            </button>
+            <button
+              onClick={() => router.push(`/${lang}`)}
+              className="rounded-md bg-lesson px-4 py-2 text-white"
+            >
+              Inicio
+            </button>
+          </>
+        }
+      />
     );
   }
 
