@@ -289,23 +289,23 @@
   },
   {
     "word": "polvo",
-    "translations": ["pulpo (PT-PT)", "polvo (BR y PT = partículas de polvo)"],
+    "translations": ["pulpo (octopus)"],
     "falseFriend": true,
-    "note": "En PT-PT 'polvo' = pulpo (cefalópodo). En BR 'polvo' = polvo (suciedad) y también se llama 'polvo' al pulpo. ¡Trampa doble! Verificar contexto.",
-    "variants": { "br": "polvo (polvo/suciedad; pulpo también se llama polvo)", "pt": "polvo (pulpo)" },
+    "note": "ES 'polvo' (suciedad/dust) = PT 'pó'. En PT/BR, 'polvo' = pulpo (octopus). Trampa visual: mismo grafía, significados opuestos.",
+    "variants": { "br": "polvo (pulpo/octopus)", "pt": "polvo (pulpo/octopus)" },
     "register": "neutral",
     "conceptIds": ["b5-falso-amigo-polvo"],
     "examples": ["Há polvo no prato.", "Tem muito polvo na prateleira."]
   },
   {
-    "word": "exquisito",
-    "translations": ["excelente", "delicioso", "exquisito"],
+    "word": "esquisito",
+    "translations": ["raro", "extraño", "peculiar"],
     "falseFriend": true,
-    "note": "CUIDADO: en ES 'exquisito' = refinado/raro. En PT 'esquisito' (grafía distinta) = raro/extraño. La forma 'exquisito' en PT-PT coloquial puede usarse como 'delicioso', pero la trampa principal es que 'esquisito' PT ≠ 'exquisito' ES.",
+    "note": "ES 'exquisito' (con 'qu') = delicioso/refinado. PT 'esquisito' (con 'sq', grafía distinta) = raro/extraño/peculiar. Trampa: un hispanohablante lee 'esquisito' y piensa 'delicioso'; en PT significa lo contrario.",
     "variants": { "br": "esquisito (raro/extraño)", "pt": "esquisito (raro/extraño)" },
     "register": "neutral",
-    "conceptIds": ["b5-falso-amigo-esquisito"],
-    "examples": ["Que coisa esquisita!", "Esse sabor é esquisito."]
+    "conceptIds": ["b2-falso-amigo-esquisito"],
+    "examples": ["Que pessoa esquisita!", "Tem um gosto esquisito."]
   },
   {
     "word": "apelido",
@@ -416,7 +416,7 @@
   },
   {
     "word": "embaraçada",
-    "translations": ["embarazada (grávida)", "avergonzada (embarrassed)"],
+    "translations": ["avergonzada", "enredada", "confundida"],
     "falseFriend": true,
     "note": "TRAMPA DOBLE. En PT 'embaraçada' = avergonzada o enredada, NO embarazada. 'Embarazada' en ES = 'grávida' en PT. Además en inglés 'embarrassed' ≠ 'embarazado' ES.",
     "variants": { "br": "grávida (embarazada) / embaraçada (avergonzada)", "pt": "grávida (embarazada) / embaraçada (avergonzada)" },
