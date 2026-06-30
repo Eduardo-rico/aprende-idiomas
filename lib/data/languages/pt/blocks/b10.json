@@ -439,7 +439,7 @@
       "falso-amigo"
     ],
     "contentHash": "1f7c93eb70bcd27b464714868b116f2bf03b9856c14c1d96297701068ffb3b48",
-    "esContrast": "'Bicha' en PT-BR significa 'fila'; en PT-PT es ofensivo. Cuidado con falsos amigos.",
+    "esContrast": "El autobús se llama 'ônibus' en Brasil y 'autocarro' en Portugal. Mismo vehículo, palabras distintas.",
     "audio": {
       "br": {
         "hash": "90e3a753ed31728a38f1eb02428b7eb1a4b02bbb7874655a502bcf3bc5e8a85c",
@@ -452,27 +452,27 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "No Brasil, quando queremos esperar em uma fila, chamamos de bicha. Em Portugal, a palavra bicha tem outro significado.",
-      "question": "¿Cómo se dice 'fila' en Portugal?",
+      "audioText": "No Brasil, o veículo de transporte urbano chama-se ônibus. Em Portugal, o mesmo veículo chama-se autocarro. São duas palavras diferentes para a mesma coisa!",
+      "question": "¿Cómo se dice 'autobús' en Portugal?",
       "options": [
-        "Filete",
-        "Fila",
-        "Bicha",
-        "Bicha não existe em Portugal"
+        "Ônibus",
+        "Autocarro",
+        "Comboio",
+        "Trolé"
       ],
-      "answer": "Fila"
+      "answer": "Autocarro"
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "Em Portugal, quando queremos esperar numa fila, chamamos de fila. No Brasil, a palavra fila tem outro significado.",
-        "question": "Como se diz 'bicha' no Brasil?",
+        "audioText": "Em Portugal, o veículo de transporte urbano chama-se autocarro. No Brasil, chama-se ônibus. É uma diferença importante entre os dois países!",
+        "question": "Como se diz 'ônibus' em Portugal?",
         "options": [
-          "Fila",
-          "Bicha",
-          "Filete",
-          "Fila não existe no Brasil"
+          "Autocarro",
+          "Ônibus",
+          "Comboio",
+          "Táxi"
         ],
-        "answer": "Fila"
+        "answer": "Autocarro"
       }
     }
   },
@@ -604,12 +604,12 @@
     },
     "type": "translation",
     "data": {
-      "source": "Formamos una bicha enorme para entrar al concierto.",
-      "target": "Formamos uma bicha enorme para entrar no show.",
+      "source": "Formamos una fila enorme para entrar al concierto.",
+      "target": "Formamos uma fila enorme para entrar no show.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Fizemos uma bicha enorme para entrar no show."
+        "Fizemos uma fila enorme para entrar no show."
       ]
     },
     "variantOverrides": {
@@ -1664,9 +1664,9 @@
     },
     "type": "flashcard",
     "data": {
-      "front": "¿Qué significa 'bicha' en Brasil y en Portugal?",
-      "back": "🇧🇷 Brasil: 'bicha' es una insulto homofóbico (despectivo). 🇵🇹 Portugal: 'bicha' significa 'fila/cola'.",
-      "example": "PT: «Estava uma bicha enorme na bilheteira.» BR: Evita su uso por ser ofensivo."
+      "front": "¿Cómo se dice 'autobús' en PT-BR y en PT-PT?",
+      "back": "🇧🇷 Brasil: 'ônibus'. 🇵🇹 Portugal: 'autocarro'. Misma cosa, palabras distintas.",
+      "example": "BR: «Perdi o ônibus.» PT: «Perdi o autocarro.»"
     }
   },
   {
@@ -1682,7 +1682,7 @@
       "regional"
     ],
     "contentHash": "882baba345dcec3f905cda3dd80695ae214daf55799a5ab040b4212e27aba492",
-    "esContrast": "En Portugal 'bicha' es la fila; en Brasil se dice 'fila' o 'fila de espera'.",
+    "esContrast": "En portugués 'fila' es universal para la cola; en PT-PT también se usa 'fila de espera'.",
     "audio": {
       "br": {
         "hash": "2911c110631b408a870aa803ba7741069d22655a70f01ea2d853543049de7573",
@@ -1695,7 +1695,7 @@
     },
     "type": "translation",
     "data": {
-      "source": "Fiz bicha para pagar a conta do restaurante.",
+      "source": "Fiz fila para pagar a conta do restaurante.",
       "target": "Hice cola para pagar la cuenta del restaurante.",
       "sourceLang": "pt-br",
       "targetLang": "es",
@@ -1706,7 +1706,7 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "source": "Fiz bicha para pagar a conta do restaurante.",
+        "source": "Fiz fila de espera para pagar a conta do restaurante.",
         "target": "Hice cola para pagar la cuenta del restaurante.",
         "acceptedAlternatives": [
           "Me puse en la fila",
@@ -3077,7 +3077,7 @@
       "falso-amigo"
     ],
     "contentHash": "e1594e446def6dd087469a374097407096e4fc0a0e9dd61c63de708bf56df721",
-    "esContrast": "En PT 'bicha' es fila (cola); en BR es insulto. Usa 'fila' en Brasil.",
+    "esContrast": "En portugués 'fila' es la palabra estándar para la cola en ambas variedades.",
     "type": "fill_blank",
     "data": {
       "sentence": "Tive que esperar uma hora na ___ para comprar os bilhetes.",
@@ -3086,7 +3086,7 @@
           "position": 0,
           "answer": "fila",
           "alternatives": [
-            "bicha"
+            "fila de espera"
           ]
         }
       ]
@@ -3097,9 +3097,9 @@
         "blanks": [
           {
             "position": 0,
-            "answer": "bicha",
+            "answer": "fila",
             "alternatives": [
-              "fila"
+              "fila de espera"
             ]
           }
         ]
