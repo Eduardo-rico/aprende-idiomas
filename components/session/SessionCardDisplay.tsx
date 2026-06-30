@@ -9,6 +9,7 @@
 "use client";
 import type { Exercise } from "@/lib/data/zod-schemas";
 import type { LanguageId } from "@/lib/locales";
+import { db } from "@/lib/db/schema";
 
 type FlashcardData = { front: string; back: string; example?: string };
 type ListeningData = { audioText: string; question: string };
@@ -60,12 +61,16 @@ export function SessionCardDisplay({
   onReveal,
   onPlayAudio,
   lang: _lang,
+  rule,
+  contrastText,
 }: {
   exercise: Exercise;
   reveal: boolean;
   onReveal: () => void;
   onPlayAudio: () => void;
   lang: LanguageId;
+  rule?: string;
+  contrastText?: string;
 }) {
   const front = frontFor(exercise);
   const back = backFor(exercise);
@@ -121,7 +126,33 @@ export function SessionCardDisplay({
               <strong>Contraste ES:</strong> {esContrast}
             </div>
           )}
+          {rule && (
+            <div className="mt-4 p-3 bg-paper-sunken border border-rule rounded-md text-left">
+              <div className="text-xs uppercase tracking-[0.07em] text-ink-muted font-semibold mb-1.5">
+                Regla
+              </div>
+              <p className="text-sm text-ink-muted">{rule}</p>
+              {contrastText && (
+                <p className="text-sm text-ink-faint italic mt-1.5">{contrastText}</p>
+              )}
+            </div>
+          )}
         </div>
+      )}
+      {reveal && (
+        <button
+          className="mt-3 text-xs text-ink-faint hover:text-ink-muted underline block mx-auto"
+          onClick={() =>
+            db.telemetry.add({
+              ts: new Date(),
+              level: "warn",
+              source: "extra-review",
+              message: String(exercise.id ?? "unknown"),
+            })
+          }
+        >
+          + Repaso extra
+        </button>
       )}
     </article>
   );
