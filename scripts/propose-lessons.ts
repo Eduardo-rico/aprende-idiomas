@@ -277,6 +277,39 @@ async function main() {
     }
   }
 
+  // Glossary coverage check
+  try {
+    const { glossarySchema } = await import("../lib/data/languages/pt/glossary-schema.js");
+    const glossaryData = (await import("../lib/data/languages/pt/glossary.json", { assert: { type: "json" } })).default;
+    glossarySchema.parse(glossaryData); // validate schema
+    const glossaryWords = new Set(glossaryData.map((e: { word: string }) => e.word));
+
+    // collect all vocab words from all proposed lessons
+    const proposedWords = new Set<string>();
+    for (const id of targets) {
+      const lessonFile = path.join(LESSONS_DIR, `b${id}.json`);
+      try {
+        const lessons = JSON.parse(await fs.readFile(lessonFile, 'utf-8')) as Array<{ vocab?: Array<{ word: string }> }>;
+        for (const lesson of lessons) {
+          for (const vocab of lesson.vocab ?? []) {
+            proposedWords.add(vocab.word);
+          }
+        }
+      } catch {
+        // file may not exist if block was skipped or failed
+      }
+    }
+
+    const missing = [...proposedWords].filter((w: string) => !glossaryWords.has(w));
+    if (missing.length > 0) {
+      console.warn(`\n[propose-lessons] ⚠️  ${missing.length} vocab words sin glossary entry:`, missing.slice(0, 8));
+    } else if (proposedWords.size > 0) {
+      console.log(`\n[propose-lessons] ✓ all vocab words covered in glossary (${proposedWords.size} total)`);
+    }
+  } catch {
+    // glossary not yet created — skip silently
+  }
+
   if (failures.length > 0) {
     const failFile = path.join(LESSONS_DIR, 'generation-failures.json');
     await fs.mkdir(LESSONS_DIR, { recursive: true });
