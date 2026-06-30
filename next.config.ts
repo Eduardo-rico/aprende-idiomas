@@ -20,6 +20,31 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  // E.4: Content-Security-Policy header — applied to all routes.
+  // img-src includes data: (inline SVGs / placeholder images) and blob:
+  // (audio waveform canvas exports). Update this list if external image
+  // hosts are added.
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Content-Security-Policy",
+            value: [
+              "default-src 'self'",
+              "img-src 'self' data: blob:",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+              "style-src 'self' 'unsafe-inline'",
+              "font-src 'self' data:",
+              "connect-src 'self'",
+              "media-src 'self' blob:",
+            ].join("; "),
+          },
+        ],
+      },
+    ];
+  },
 };
 
 const withMDX = createMDX({});
