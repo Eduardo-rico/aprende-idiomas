@@ -3,7 +3,7 @@ import { db, type Card, type CardId, type Rating, type AnswerEvent, type Generic
 import { newCard, schedule } from "../srs/fsrs";
 import { buildDueQueue, type DueQueueOptions } from "../srs/review-queue";
 import { FSRS_CONFIG } from "../srs/config";
-import { resetLeech, isLeech } from "../srs/leeches";
+import { resetLeech, isLeech, getLeechAction } from "../srs/leeches";
 import { recordAnswerForConcepts } from "../mastery/concept";
 import { currentStreak, didStudyToday, isStreakAlive } from "@/lib/streak/streak";
 import { levelFromXp } from "@/lib/xp/calculator";
@@ -194,6 +194,23 @@ export async function submitAnswer(p: SubmitAnswerParams): Promise<Card> {
     }
   });
   if (!updated) throw new Error(`submitAnswer: card ${p.cardId} disappeared mid-transaction`);
+
+  // D.5: leech ladder check — runs OUTSIDE the transaction so telemetry
+  // and optional card reset don't need to join the cards/events/sessions
+  // transaction. `updated.lapses` already holds the fresh value computed
+  // by schedule() and persisted in the transaction above.
+  if (p.rating === 1) {
+    const action = getLeechAction(updated.lapses);
+    if (action) {
+      await logTelemetry("warn", "leech", action.message, { cardId: p.cardId, lapses: updated.lapses });
+      if (action.level === "reset") {
+        const reset = resetLeech(updated);
+        await db.cards.put(reset);
+        updated = reset;
+      }
+    }
+  }
+
   return updated;
 }
 
