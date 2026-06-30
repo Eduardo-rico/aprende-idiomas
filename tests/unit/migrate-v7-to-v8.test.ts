@@ -2,6 +2,7 @@
 import "fake-indexeddb/auto";
 import { describe, it, expect, beforeEach } from "vitest";
 import Dexie from "dexie";
+import type { Table } from "dexie";
 import { db } from "@/lib/db/schema";
 import { createPreV8Backup, restoreFromBackup, purgeStaleBackups } from "@/lib/db/migrate-v7-to-v8";
 
@@ -58,4 +59,54 @@ describe("migrate-v7-to-v8", () => {
     await purgeStaleBackups();
     expect(await Dexie.getDatabaseNames()).toContain("PortuguesAppDB_backup_v7");
   });
+});
+
+// E.2 — Snapshot profiles: verifies migration handles different user profiles
+// (nuevo / intermedio / veterano) without data loss.
+
+async function seedV7Profile(profile: "nuevo" | "intermedio" | "veterano") {
+  const seed = new Dexie("PortuguesAppDB");
+  seed.version(1).stores({ cards: "id, blockId, lessonId, nextReviewAt, state" });
+  await seed.open();
+  const sizes = { nuevo: 5, intermedio: 50, veterano: 500 };
+  const n = sizes[profile];
+  const cards = Array.from({ length: n }, (_, i) => ({
+    id: `${profile}-c${i}`,
+    blockId: (i % 10) + 1,
+    lessonId: `l${i}`,
+    contentHash: `h${i}`,
+    fsrs: {},
+    nextReviewAt: new Date(),
+    state: i % 3,
+    reps: i,
+    lapses: i % 5,
+    introducedAt: new Date(),
+  }));
+  await (seed.table("cards") as Table).bulkAdd(cards);
+  seed.close();
+}
+
+describe("migrate-v7-to-v8 — perfiles snapshot (E.2)", () => {
+  beforeEach(async () => {
+    if (db.isOpen()) db.close();
+    await Dexie.delete("PortuguesAppDB");
+    await Dexie.delete("PortuguesAppDB_backup_v7");
+  });
+
+  it.each([
+    ["nuevo", 5],
+    ["intermedio", 50],
+    ["veterano", 500],
+  ] as const)(
+    "perfil %s (%i tarjetas) sobrevive migración v7→v8",
+    async (profile, expectedCount) => {
+      await seedV7Profile(profile);
+      await createPreV8Backup();
+      await db.open();
+      const count = await db.cards.count();
+      expect(count).toBe(expectedCount);
+      // Backup también debe existir
+      expect(await Dexie.getDatabaseNames()).toContain("PortuguesAppDB_backup_v7");
+    },
+  );
 });
