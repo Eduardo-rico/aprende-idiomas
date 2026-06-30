@@ -20,6 +20,7 @@ import { HomeStatsClient } from "@/components/home/HomeStatsClient";
 import { loadCurriculum } from "@/lib/data/loaders";
 import { hasLocale, type LanguageId } from "@/lib/locales";
 import { notFound } from "next/navigation";
+import { NavBar } from "@/components/NavBar";
 import { EmptyState } from "./_empty-state";
 
 export const dynamic = "force-dynamic";
@@ -96,6 +97,8 @@ export default async function LangHomePage({ params }: PageProps) {
     firstLesson?.name ?? chapters[currentChapter.chapterNum - 1]?.name ?? "Lección";
 
   return (
+    <>
+    <NavBar />
     <main className="max-w-[760px] mx-auto px-6 py-14 pb-24">
       <Eyebrow>Hoje</Eyebrow>
 
@@ -155,6 +158,7 @@ export default async function LangHomePage({ params }: PageProps) {
         — Manual Lusitano · folio 1 · papel, serifa, ritmo —
       </p>
     </main>
+    </>
   );
 }
 

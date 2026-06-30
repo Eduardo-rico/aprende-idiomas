@@ -2,7 +2,7 @@
 import { loadAllStories } from "@/lib/data/loaders";
 import Link from "next/link";
 import { hasLocale, type LanguageId } from "@/lib/locales";
-import { EmptyState } from "../_empty-state";
+import { EmptyState } from "../../_empty-state";
 
 export default async function StoriesPage({
   params,

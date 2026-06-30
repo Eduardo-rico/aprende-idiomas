@@ -21,7 +21,6 @@
 // markup when sub-pages also want a semantic <main> wrapper.
 import { notFound } from "next/navigation";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { NavBar } from "@/components/NavBar";
 import { LangProvider } from "@/lib/stores/lang-context";
 import { hasLocale, type LanguageId } from "@/lib/locales";
 
@@ -39,7 +38,6 @@ export default async function LangLayout({
   return (
     <ThemeProvider>
       <LangProvider lang={typedLang}>
-        <NavBar />
         <div className="flex-1">{children}</div>
       </LangProvider>
     </ThemeProvider>

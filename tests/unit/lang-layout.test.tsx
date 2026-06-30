@@ -2,7 +2,8 @@
 // @vitest-environment jsdom
 // Unit tests for the lang layout. Two behaviors:
 //   1. With a registered lang (pt/ru/ro/cs), the children render
-//      inside <ThemeProvider> + <LangProvider> + <NavBar> + <main>.
+//      inside <ThemeProvider> + <LangProvider> (no NavBar — since B.1
+//      NavBar is owned by each route group, not the lang layout).
 //   2. With an unknown lang, the layout throws NEXT_NOT_FOUND via
 //      notFound() — render throws, the test catches that.
 //
@@ -52,13 +53,9 @@ describe("app/[lang]/layout", () => {
     });
     render(<>{jsx}</>);
     expect(screen.getByTestId("child")).toBeTruthy();
-    // NavBar contains a brand link whose label includes the active lang's
-    // native name ("Português" for `pt`). The text is broken up by the
-    // flag emoji, so use a function matcher. Several elements can include
-    // the word (the brand link + the lang select's <option>); query by
-    // the brand-link href instead to disambiguate.
-    const brandLinks = screen.getAllByRole("link", { name: (n: string) => n.includes("Português") });
-    expect(brandLinks.some((el) => el.getAttribute("href") === "/pt")).toBe(true);
+    // Since B.1: NavBar is owned by each route group layout, NOT by the
+    // lang layout. The lang layout is now a pure ThemeProvider +
+    // LangProvider passthrough. We only assert that children render.
   });
 
   it("renders children for every registered language", async () => {

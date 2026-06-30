@@ -1,4 +1,4 @@
-// app/[lang]/stats/page.tsx
+// app/[lang]/(data)/progreso/page.tsx
 // Progreso page (A.4). Last shadcn holdout converted to Manual Lusitano.
 // Server shell awaits params (Next 16 contract), has dynamic = force-dynamic
 // (Dexie is browser-only; the inner island touches it), and wraps the

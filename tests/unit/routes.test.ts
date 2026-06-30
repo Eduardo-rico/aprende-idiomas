@@ -45,12 +45,12 @@ vi.stubGlobal("localStorage", {
 
 describe("app/[lang]/* routes", () => {
   it("stories/page.tsx is a server component that reads lang from params", async () => {
-    const mod = await import("@/app/[lang]/stories/page");
+    const mod = await import("@/app/[lang]/(story)/stories/page");
     expect(typeof mod.default).toBe("function");
   });
 
   it("stories/[id]/page.tsx reads lang and id from params", async () => {
-    const mod = await import("@/app/[lang]/stories/[id]/page");
+    const mod = await import("@/app/[lang]/(story)/stories/[id]/page");
     expect(typeof mod.default).toBe("function");
   });
 
@@ -70,7 +70,7 @@ describe("app/[lang]/* routes", () => {
   });
 
   it("diagnostic/page.tsx reads lang from params and forwards to loader", async () => {
-    const mod = await import("@/app/[lang]/diagnostic/page");
+    const mod = await import("@/app/[lang]/(intro)/diagnostic/page");
     expect(typeof mod.default).toBe("function");
   });
 
@@ -94,8 +94,8 @@ describe("app/[lang]/* routes", () => {
     expect(typeof mod.default).toBe("function");
   });
 
-  it("stats/page.tsx is a client component", async () => {
-    const mod = await import("@/app/[lang]/stats/page");
+  it("progreso/page.tsx is a server component (renamed from stats)", async () => {
+    const mod = await import("@/app/[lang]/(data)/progreso/page");
     expect(typeof mod.default).toBe("function");
   });
 
