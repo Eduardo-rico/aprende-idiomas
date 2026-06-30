@@ -22,6 +22,7 @@
 import { notFound } from "next/navigation";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LangProvider } from "@/lib/stores/lang-context";
+import { UiStateHydrator } from "@/components/UiStateHydrator";
 import { hasLocale, type LanguageId } from "@/lib/locales";
 
 export default async function LangLayout({
@@ -38,7 +39,9 @@ export default async function LangLayout({
   return (
     <ThemeProvider>
       <LangProvider lang={typedLang}>
-        <div className="flex-1">{children}</div>
+        <UiStateHydrator>
+          <div className="flex-1">{children}</div>
+        </UiStateHydrator>
       </LangProvider>
     </ThemeProvider>
   );
