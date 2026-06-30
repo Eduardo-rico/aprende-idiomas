@@ -64,10 +64,12 @@ export function PracticarSrsInner({ lang }: { lang: LanguageId }) {
           exercises: Exercise[];
         };
         const byId = new Map(all.map((e) => [e.id, e]));
+        // Build a Map keyed by card id for O(1) lookups in the interleave callbacks.
+        const cardById = new Map(due.map((c) => [c.id, c]));
         const mixed = interleave(
           due,
-          (id) => byId.get(id)?.concepts?.[0],
-          (id) => byId.get(id)?.type,
+          (id) => cardById.get(id)?.lessonId,          // concept proxy: cards from same lesson share concepts
+          (id) => cardById.get(id)?.tags?.[0] ?? "flashcard", // type proxy: first tag drives diversity
         );
         const ordered: Exercise[] = [];
         for (const c of mixed) {
