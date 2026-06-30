@@ -21,6 +21,9 @@ import { SessionResultCard } from "@/components/session/SessionResultCard";
 export function PracticarSrsInner({ lang }: { lang: LanguageId }) {
   const router = useRouter();
   const search = useSearchParams();
+  const showFatigue = useSession((s) => s.showFatigueCheck());
+  const ackFatigue = useSession((s) => s.acknowledgeFatigue);
+  const endSession = useSession((s) => s.endSession);
   const activeTags = (search.get("tags") ?? "")
     .split(",")
     .map((s) => s.trim())
@@ -144,11 +147,30 @@ export function PracticarSrsInner({ lang }: { lang: LanguageId }) {
     );
   }
   return (
-    <SessionScreen
-      exercises={exercises}
-      onFinish={setDone}
-      onClose={() => router.push(`/${lang}`)}
-      lang={lang}
-    />
+    <>
+      {showFatigue && (
+        <div className="fixed inset-x-0 top-0 z-50 bg-review text-paper px-4 py-3 text-center text-sm">
+          Llevas 18 min · los intervalos ya están guardados ·{" "}
+          <button
+            className="underline mr-2"
+            onClick={() => {
+              endSession();
+              router.push(`/${lang}`);
+            }}
+          >
+            Terminar
+          </button>
+          <button className="underline" onClick={ackFatigue}>
+            Seguir
+          </button>
+        </div>
+      )}
+      <SessionScreen
+        exercises={exercises}
+        onFinish={setDone}
+        onClose={() => router.push(`/${lang}`)}
+        lang={lang}
+      />
+    </>
   );
 }
