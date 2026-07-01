@@ -11,9 +11,12 @@
 // `legacyVariantToKey()` so the migration is explicit, not magic.
 export type VariantKey = string;
 
-/** Default variant for new content. PT-BR is the most common dialect
- *  and matches the current default. */
-export const DEFAULT_VARIANT: VariantKey = "pt-br";
+/** Default variant for new users/settings. European Portuguese: the
+ *  user's goal is Portugal, and PT-PT is the harder listening target —
+ *  training on it makes PT-BR comprehension nearly free, not vice versa.
+ *  (Base *content* remains PT-BR with pt-pt overrides; this only sets
+ *  which variant the UI and voices default to.) */
+export const DEFAULT_VARIANT: VariantKey = "pt-pt";
 
 /** Type guard. Empty strings and whitespace are not valid. */
 export function isVariantKey(s: string): s is VariantKey {

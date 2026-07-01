@@ -13,8 +13,8 @@ import {
 } from "@/lib/data/variant";
 
 describe("lib/data/variant", () => {
-  it("DEFAULT_VARIANT is pt-br", () => {
-    expect(DEFAULT_VARIANT).toBe("pt-br");
+  it("DEFAULT_VARIANT is pt-pt (user's goal: European Portuguese)", () => {
+    expect(DEFAULT_VARIANT).toBe("pt-pt");
   });
 
   it("isVariantKey accepts non-empty strings without leading/trailing whitespace", () => {
