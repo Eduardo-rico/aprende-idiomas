@@ -23,17 +23,16 @@ describe('collectAudioJobs', () => {
     expect(jobs.every(j => j.text === 'resposta')).toBe(true);
   });
 
-  it('legacy "pt-br"-keyed override is European: pt-pt gets it, pt-br gets base', () => {
-    // The legacy migration stored European text under "pt-br". The audio
-    // collector mirrors the resolver: pt-br NEVER uses that key; pt-pt does.
+  it('la base es europea; el override "pt-br" da el audio brasileño', () => {
+    // Tras la inversión del 2026-07-28 el colector es espejo del resolver:
+    // data = PT-PT, variantOverrides['pt-br'] = brasileño. Si esto se
+    // desincroniza, el alumno oye una frase y lee otra.
     const jobs = collectAudioJobs([ex({
-      data: { front: 'ônibus', back: 'ônibus' },
-      variantOverrides: { 'pt-br': { back: 'autocarro' } },
+      data: { front: 'autobús', back: 'autocarro' },
+      variantOverrides: { 'pt-br': { back: 'ônibus' } },
     })]);
-    const ptbr = jobs.find(j => j.variant === 'pt-br')!;
-    expect(ptbr.text).toBe('ônibus'); // pt-br gets base, NOT the European text
-    const ptpt = jobs.find(j => j.variant === 'pt-pt')!;
-    expect(ptpt.text).toBe('autocarro'); // pt-pt falls back to legacy "pt-br" key
+    expect(jobs.find(j => j.variant === 'pt-pt')!.text).toBe('autocarro');
+    expect(jobs.find(j => j.variant === 'pt-br')!.text).toBe('ônibus');
   });
 
   it('legacy ptOverrides is promoted to variantOverrides["pt-pt"] via preprocessor (E1 fix)', () => {

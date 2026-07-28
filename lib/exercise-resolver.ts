@@ -68,12 +68,19 @@ export interface ResolvedData {
 const BR_KEYS = new Set(["pt-br", "br"]);
 const PT_KEYS = new Set(["pt-pt", "pt"]);
 
-export function resolveExerciseData(ex: Exercise, variant: VariantKey): ResolvedData {
-  // La base YA es europea: un usuario de PT-PT no necesita override.
-  if (PT_KEYS.has(variant)) return ex.data as ResolvedData;
+/** Normaliza el alias corto a la clave canónica. */
+function claveDe(variant: VariantKey): string {
+  if (BR_KEYS.has(variant)) return "pt-br";
+  if (PT_KEYS.has(variant)) return "pt-pt";
+  return variant;
+}
 
-  const key = BR_KEYS.has(variant) ? "pt-br" : variant;
-  const overrides = ex.variantOverrides?.[key];
+export function resolveExerciseData(ex: Exercise, variant: VariantKey): ResolvedData {
+  // La base ya es europea, así que pt-pt normalmente no necesita override —
+  // pero si alguien declara uno explícito bajo "pt-pt", gana. Ignorarlo sería
+  // el mismo tipo de sorpresa silenciosa que este cambio vino a quitar (y es
+  // además lo que produce el shim legacy de `ptOverrides`).
+  const overrides = ex.variantOverrides?.[claveDe(variant)];
   if (!overrides) return ex.data as ResolvedData;
 
   // Validate the override against the type's strict override schema first so

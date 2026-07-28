@@ -353,7 +353,7 @@ export type Exercise = z.infer<typeof ExerciseSchema>;
 //      `data.sourceLang = "es"`, `data.targetLang = "pt-br"`.
 //   2. `type: "translation_pt_es"` → `type: "translation"`,
 //      `data.sourceLang = "pt-br"`, `data.targetLang = "es"`.
-//   3. `ptOverrides` (no null) → `variantOverrides["pt-br"]`.
+//   3. `ptOverrides` (no null) → `variantOverrides["pt-pt"]` (siempre fue texto europeo).
 //      Si `variantOverrides` ya está presente, `ptOverrides` se descarta
 //      (la canónica gana).
 //   4. `variantOverrides: null` → se elimina (tratado como undefined).
@@ -373,10 +373,22 @@ export function normalizeExerciseInput(v: unknown): unknown {
     }
   }
 
-  // (3) Promover ptOverrides a variantOverrides["pt-br"]
+  // (3) Promover ptOverrides a variantOverrides["pt-pt"].
+  //
+  // `ptOverrides` es el campo legacy anterior a Phase 1 y SIEMPRE contenía
+  // texto EUROPEO (era «el override para portugués de Portugal» sobre una base
+  // brasileña). Promoverlo a la clave "pt-br" —como se hacía— metía texto
+  // europeo en la clave brasileña, que es exactamente la confusión que costó
+  // el 91 % del corpus. Va a "pt-pt", que es lo que además documenta
+  // `ptOverridesToVariantOverrides` en lib/data/variant.ts.
+  //
+  // Ojo: esto normaliza la FORMA, no la semántica. Un fichero legacy sigue
+  // teniendo `data` brasileño; invertirlo es trabajo de
+  // `scripts/invert-variant-base.ts`. Hoy ya no queda contenido con este
+  // campo (verificado: 0 ficheros bajo lib/data/languages/).
   if ("ptOverrides" in obj && obj.ptOverrides !== undefined && obj.ptOverrides !== null) {
     if (!("variantOverrides" in obj) || obj.variantOverrides === undefined || obj.variantOverrides === null) {
-      obj.variantOverrides = { "pt-br": obj.ptOverrides };
+      obj.variantOverrides = { "pt-pt": obj.ptOverrides };
     }
     delete obj.ptOverrides;
   }

@@ -80,7 +80,7 @@ describe('zod schemas — multi-language variant keys', () => {
   });
 
   describe('ptOverrides → variantOverrides promotion', () => {
-    it('promotes ptOverrides to variantOverrides["pt-br"]', () => {
+    it('promueve ptOverrides a variantOverrides["pt-pt"] — siempre fue texto europeo', () => {
       const r = ExerciseInputSchema.safeParse({
         ...baseCommon,
         type: 'flashcard',
@@ -90,7 +90,7 @@ describe('zod schemas — multi-language variant keys', () => {
       expect(r.success).toBe(true);
       if (r.success) {
         const vo = r.data.variantOverrides as Record<string, { back: string }>;
-        expect(vo).toEqual({ 'pt-br': { back: 'autocarro' } });
+        expect(vo).toEqual({ 'pt-pt': { back: 'autocarro' } });
         expect('ptOverrides' in r.data).toBe(false);
       }
     });
@@ -264,9 +264,11 @@ describe('zod schemas — multi-language variant keys', () => {
       });
     });
 
-    it('promotes ptOverrides to variantOverrides["pt-br"]', () => {
+    it('promueve ptOverrides a variantOverrides["pt-pt"] — siempre fue texto europeo', () => {
+      // Antes iba a "pt-br", que metía texto europeo en la clave brasileña:
+      // exactamente la confusión que costó el 91 % del corpus.
       const r = normalizeExerciseInput({ type: 'flashcard', ptOverrides: { back: 'autocarro' } });
-      expect(r).toEqual({ type: 'flashcard', variantOverrides: { 'pt-br': { back: 'autocarro' } } });
+      expect(r).toEqual({ type: 'flashcard', variantOverrides: { 'pt-pt': { back: 'autocarro' } } });
     });
 
     it('does not mutate the input object', () => {

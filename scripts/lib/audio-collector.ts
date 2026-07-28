@@ -25,29 +25,21 @@ export interface AudioJob {
  * al default es→pt.
  */
 export function textsFor(ex: Exercise, variant: VariantKey): string[] {
-  // Reglas de override (Phase 1 multi-idioma) — MIRRORS lib/exercise-resolver.ts:
-  // - El key legacy `"pt-br"` almacena texto europeo (mislabeled por la migración).
-  //   LEGACY_EUROPEAN_KEY = "pt-br".
-  // - Variante `pt-pt` o `'pt'` (european fallback): sin override propio bajo
-  //   `"pt-pt"` → cae al key legacy `"pt-br"`. Esto es audio europeo correcto.
-  // - Variante `pt-br`: NO usa el key legacy `"pt-br"` (es texto europeo).
-  //   Retorna base data (PT-BR). Solo usaría un override con key distinto.
-  // - Variante legacy `'br'` o cualquier otra desconocida: sin override.
-  const LEGACY_EUROPEAN_KEY = 'pt-br';
-  function europeanFallback(v: VariantKey): boolean {
-    return v === 'pt-pt' || v === 'pt';
-  }
-  let overrides: unknown;
-  if (variant === LEGACY_EUROPEAN_KEY) {
-    // pt-br: never apply the legacy "pt-br" key (it's European text).
-    overrides = undefined;
-  } else if (europeanFallback(variant)) {
-    // pt-pt / 'pt': direct override under "pt-pt", else fall back to legacy key.
-    overrides = ex.variantOverrides?.[variant] ?? ex.variantOverrides?.[LEGACY_EUROPEAN_KEY];
-  } else {
-    // 'br' o desconocido: sin override.
-    overrides = undefined;
-  }
+  // Reglas de override — ESPEJO EXACTO de lib/exercise-resolver.ts, y tiene
+  // que seguir siéndolo: si el audio se sintetiza de un texto distinto del que
+  // se muestra, el alumno oye una frase y lee otra.
+  //
+  // Tras la inversión del 2026-07-28 las claves dicen la verdad:
+  //   ex.data                    → portugués europeo (PT-PT), la base
+  //   variantOverrides['pt-br']  → portugués de Brasil
+  //
+  // Antes, este archivo llevaba la misma capa de compensación que el resolver
+  // (LEGACY_EUROPEAN_KEY) porque la clave "pt-br" guardaba texto europeo.
+  const PT_KEYS = new Set(['pt-pt', 'pt']);
+  const BR_KEYS = new Set(['pt-br', 'br']);
+  const clave = BR_KEYS.has(variant) ? 'pt-br' : PT_KEYS.has(variant) ? 'pt-pt' : variant;
+  // Un override explícito bajo la clave gana; si no, la base (que es europea).
+  const overrides: unknown = ex.variantOverrides?.[clave];
   if (overrides) {
     const merged = { ...ex.data, ...overrides };
     // re-validar contra el schema del tipo declarado
