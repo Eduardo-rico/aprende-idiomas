@@ -1,0 +1,404 @@
+<title>AO BALCÃO — la serie</title>
+<style>
+:root{
+  --cal:#FCFCFA;--surface:#FFFFFF;--sunken:#EFF2F6;
+  --ink:#16202B;--ink-2:#55636F;--ink-3:#8794A0;
+  --rule:#DDE3E9;--rule-2:#C3CDD7;
+  --cobalt:#1B4F8F;--cobalt-soft:#E8EFF7;--cobalt-line:#B6CBE2;
+  --learn:#2E6B4F;--learn-soft:#E6F0EA;
+  --review:#A8690B;--review-soft:#F8F0E0;
+  --error:#A32B2B;--error-soft:#F8ECEC;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root{
+  --cal:#0C1218;--surface:#131C24;--sunken:#0F171E;--ink:#E9EEF2;--ink-2:#93A2AF;--ink-3:#6C7C8A;
+  --rule:#202D38;--rule-2:#2E3E4B;--cobalt:#7FB2EC;--cobalt-soft:#142334;--cobalt-line:#2A415B;
+  --learn:#58BC90;--learn-soft:#122318;--review:#E0A544;--review-soft:#241C0E;
+  --error:#F2827C;--error-soft:#251415;}}
+:root[data-theme="dark"]{--cal:#0C1218;--surface:#131C24;--sunken:#0F171E;--ink:#E9EEF2;--ink-2:#93A2AF;
+  --ink-3:#6C7C8A;--rule:#202D38;--rule-2:#2E3E4B;--cobalt:#7FB2EC;--cobalt-soft:#142334;--cobalt-line:#2A415B;
+  --learn:#58BC90;--learn-soft:#122318;--review:#E0A544;--review-soft:#241C0E;--error:#F2827C;--error-soft:#251415;}
+:root[data-theme="light"]{--cal:#FCFCFA;--surface:#FFFFFF;--sunken:#EFF2F6;--ink:#16202B;--ink-2:#55636F;
+  --ink-3:#8794A0;--rule:#DDE3E9;--rule-2:#C3CDD7;--cobalt:#1B4F8F;--cobalt-soft:#E8EFF7;--cobalt-line:#B6CBE2;
+  --learn:#2E6B4F;--learn-soft:#E6F0EA;--review:#A8690B;--review-soft:#F8F0E0;--error:#A32B2B;--error-soft:#F8ECEC;}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--cal);color:var(--ink);font-family:var(--serif);font-size:17px;
+  line-height:1.62;-webkit-font-smoothing:antialiased}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px;border-radius:2px}
+.pg{max-width:900px;margin:0 auto;padding:0 24px}
+.col{max-width:66ch}
+p{margin:0 0 17px}
+code{font-family:var(--mono);font-size:.84em;background:var(--sunken);border:1px solid var(--rule);
+  border-radius:3px;padding:.08em .34em;color:var(--ink-2)}
+.kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 16px}
+h1{font-size:clamp(34px,6.4vw,58px);line-height:1.02;letter-spacing:-.028em;margin:0 0 10px;
+  font-weight:600;text-wrap:balance}
+.sub-t{font-size:19px;color:var(--ink-2);font-style:italic;margin:0 0 22px}
+h2{font-size:28px;letter-spacing:-.02em;margin:0 0 6px;font-weight:600;text-wrap:balance}
+h3{font-size:20px;letter-spacing:-.015em;margin:0 0 8px;font-weight:600}
+.lede{font-size:19.5px;color:var(--ink-2);margin:0;text-wrap:pretty}
+.lede strong{color:var(--ink);font-weight:600}
+.rule-sm{width:32px;height:2px;background:var(--cobalt);margin:0 0 22px}
+.dek{color:var(--ink-2);margin:0 0 26px;font-size:16.5px;font-family:var(--sans)}
+header.mast{border-bottom:1px solid var(--rule);padding:56px 0 34px;margin-bottom:50px}
+section{margin:0 0 68px}
+
+.board{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1px;background:var(--rule);
+  border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin:28px 0 0}
+.bt{background:var(--surface);padding:15px}
+.bt .n{font-family:var(--mono);font-size:25px;line-height:1;font-variant-numeric:tabular-nums;
+  font-weight:500;color:var(--cobalt);letter-spacing:-.02em}
+.bt .l{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--ink-3);margin-top:7px;line-height:1.35}
+
+.tw{overflow-x:auto;border:1px solid var(--rule);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px;font-family:var(--sans)}
+th,td{text-align:left;padding:11px 15px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:500;background:var(--sunken);white-space:nowrap}
+tbody tr:last-child td{border-bottom:none}
+td.num,th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:14px}
+tr.total td{background:var(--sunken);font-weight:600}
+
+/* reparto */
+.cast{display:flex;flex-direction:column;gap:12px}
+.ch{background:var(--surface);border:1px solid var(--rule);border-radius:11px;padding:18px 20px}
+.ch .cn{font-size:19px;font-weight:600;letter-spacing:-.014em;margin:0 0 2px}
+.ch .cm{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--ink-3);margin:0 0 12px}
+.ch p{font-family:var(--sans);font-size:15px;color:var(--ink-2);margin:0 0 11px;line-height:1.55}
+.ch p:last-child{margin-bottom:0}
+.ch .voz{border-left:2px solid var(--cobalt);padding:2px 0 2px 14px;font-family:var(--sans);font-size:14.5px;
+  color:var(--ink-2);line-height:1.5}
+.ch .voz b{color:var(--ink);font-weight:600}
+.ch b{color:var(--ink);font-weight:600}
+
+/* guion */
+.script{border:1px solid var(--rule);border-radius:11px;background:var(--surface);overflow:hidden}
+.line{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:13px 18px;border-bottom:1px solid var(--rule)}
+.line:last-child{border-bottom:none}
+.line.who-fatima{background:linear-gradient(90deg,var(--cobalt-soft) 0 3px,transparent 3px)}
+.line.som{background:var(--sunken)}
+.nm{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--cobalt);padding-top:4px;line-height:1.4}
+.line.som .nm{color:var(--ink-3)}
+.pt{font-size:18.5px;line-height:1.45;margin:0 0 7px;letter-spacing:-.008em}
+.line.som .pt{font-size:15px;font-style:italic;color:var(--ink-3);font-family:var(--sans)}
+.vd{font-family:var(--sans);font-size:13.5px;color:var(--ink-3);line-height:1.5;margin:0}
+.vd b{color:var(--ink-2);font-weight:600}
+.tag{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;
+  border-radius:999px;padding:1px 7px;margin-left:7px;vertical-align:2px;border:1px solid currentColor}
+.t1{color:var(--error);background:var(--error-soft)}
+.t2{color:var(--learn);background:var(--learn-soft)}
+.t0{color:var(--review);background:var(--review-soft)}
+
+.rules{list-style:none;margin:0;padding:0;counter-reset:r}
+.rules li{border-top:1px solid var(--rule);padding:14px 0 14px 38px;position:relative;
+  font-size:15.5px;color:var(--ink-2);font-family:var(--sans);line-height:1.55;counter-increment:r}
+.rules li:last-child{border-bottom:1px solid var(--rule)}
+.rules li::before{content:counter(r);position:absolute;left:0;top:14px;font-family:var(--mono);
+  font-size:12px;color:var(--cobalt);border:1px solid var(--cobalt-line);border-radius:4px;
+  width:24px;height:22px;display:flex;align-items:center;justify-content:center}
+.rules li b{color:var(--ink);font-weight:600}
+
+.quote{border-left:2px solid var(--cobalt);padding:4px 0 4px 18px;margin:0 0 20px;font-size:17px;color:var(--ink-2)}
+.quote b{color:var(--ink);font-weight:600}
+.alert{border:1px solid var(--learn);background:var(--learn-soft);border-radius:11px;padding:20px 22px;margin:0 0 22px}
+.alert .at{font-family:var(--mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--learn);font-weight:600;margin-bottom:9px}
+.alert p{font-family:var(--sans);font-size:15.5px;color:var(--ink-2);margin:0 0 11px;line-height:1.55}
+.alert p:last-child{margin-bottom:0}
+.alert b{color:var(--ink)}
+
+footer{border-top:1px solid var(--rule);margin-top:20px;padding:28px 0 60px;
+  font-family:var(--mono);font-size:12px;color:var(--ink-3);line-height:1.7}
+footer b{color:var(--ink-2);font-weight:500}
+@media (max-width:620px){
+  body{font-size:16px}
+  .line{grid-template-columns:1fr;gap:5px}
+  .nm{padding-top:0}
+  .pt{font-size:17.5px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<header class="mast"><div class="pg">
+  <p class="kicker">La serie · 28 jul 2026 · portugués europeo</p>
+  <h1>AO BALCÃO</h1>
+  <p class="sub-t">Portugal, contado por quem o serve</p>
+  <p class="lede col">Un ingeniero de sonido mexicano llega a Lisboa con un contrato y sin papeles. Todo lo que necesita —una llave, una morada, un número fiscal, un trabajo que pueda cobrar— pasa por el mismo mostrador de la misma pastelaria de Arroios, y por una mujer de 68 años que se lo puede dar con una firma y no se la da. <strong>Cuarenta y cuatro episodios, ninguno de más de cinco minutos, y en el primero un hombre no consigue pedir un café.</strong></p>
+  <div class="board">
+    <div class="bt"><div class="n">44</div><div class="l">episodios</div></div>
+    <div class="bt"><div class="n">6</div><div class="l">voces</div></div>
+    <div class="bt"><div class="n">4</div><div class="l">escenarios</div></div>
+    <div class="bt"><div class="n">259</div><div class="l">formas en 8 eps.</div></div>
+    <div class="bt"><div class="n">0</div><div class="l">«você» portugueses</div></div>
+  </div>
+</div></header>
+
+<main class="pg">
+
+  <section>
+    <h2>Por qué engancha</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Tres motores, y ninguno es la disciplina del alumno.</p>
+    <p class="col"><strong>Una apuesta material desde el episodio 1.</strong> No es «aprender portugués»: es la llave, el papel y el dinero. Migue no puede cobrar sin NIF; no hay NIF sin morada por escrito; y la Dona Fátima no se la firma <em>porque tiene sobre la mesa una oferta por el edificio y un inquilino registrado le complica la venta</em>. Una sola frase compra la trama, el secreto y el motivo — y sostiene todo el anillo burocrático (<code>NIF</code>, <code>morada</code>, <code>apelido</code>, <code>Junta de Freguesia</code>, <code>fatura com contribuinte</code>) que hoy tiene <strong>cero ocurrencias</strong> en los 2.037 ejercicios.</p>
+    <p class="col"><strong>Deuda serial que cierra dentro de cada banda.</strong> El 90 % de quienes empiezan se detienen entre A2 y B1. Un misterio que se resuelve en C1 paga sólo al 5 % que llega — es el mismo error que estamos corrigiendo en el corpus (lo bueno en la semana 34), cometido en la estructura dramática. Por eso A1 cierra con el NIF, A2 con la venta del edificio, B1 con la pastelaria. Ningún arco cruza más de 12 episodios. <strong>El que se baja en A2 —que es la mayoría— cobra.</strong></p>
+    <div class="quote col"><b>O Arquivo: la prueba audible de progreso, a coste cero.</b> Cada línea de habla no controlada queda guardada. La ráfaga que la Dona Fátima suelta en el segundo 3 del episodio 1 vuelve <b>íntegra y sin retocar</b> en el episodio 4 y en el 40. No es una gráfica: es un hecho, y es infalsificable, porque el material es el mismo y el que cambió fue él.</div>
+  </section>
+
+  <section>
+    <h2>Las cuatro capas</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Es lo que hace que «manejable desde el momento 1» e «inmersivo» dejen de contradecirse — y la única parte del diseño que no depende del talento del guionista.</p>
+    <div class="tw"><table>
+      <thead><tr><th>Capa</th><th>Qué es</th><th>Regla dura</th></tr></thead>
+      <tbody>
+        <tr><td><b>0 · español</b></td><td>Migue contando qué le pasó. 90 s en el ep. 1 → 45 s en el 4 → 30 s en el 13 → <b>0 s en el 25</b>. Calendario publicado y auditado.</td><td>No puede contener <b>ningún dato</b> que responda a una tarea de la app.</td></tr>
+        <tr><td><b>1 · portugués real</b></td><td>Habla no controlada desde el minuto uno: 145 ppm, ráfagas de 175, reducción máxima, sin limpiar.</td><td><b>Ninguna pregunta se responde con la Capa 1.</b></td></tr>
+        <tr><td><b>2 · portugués manejable</b></td><td>Lo mismo dentro del léxico cerrado, a 95–125 ppm. En A1 vive <em>dentro de la escena</em>: Kilu reformula, Marta rebobina.</td><td><b>Todas</b> las preguntas se responden con la Capa 2. Ninguna línea difícil se queda sin reemisión.</td></tr>
+        <tr><td><b>3 · el juego</b></td><td>Las tareas.</td><td>La app no marca el día por reproducir el episodio, <b>sólo por cerrar las tareas</b>.</td></tr>
+      </tbody>
+    </table></div>
+    <p class="col" style="margin-top:18px">Cuatro escenarios y no hacen falta más: <strong>el balcão</strong> de la Pastelaria Flor de Arroios, <strong>la escalera y el cuarto</strong> de encima, <strong>la ventanilla</strong> de la Junta de Freguesia, y <strong>el teléfono</strong> — que desde A2 es un escenario propio porque es donde el hispanohablante se derrumba: no hay cara, no hay contexto, y la reducción vocálica va entera.</p>
+  </section>
+
+  <section>
+    <h2>El reparto</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Cinco voces cargan A1–A2. La sexta entra en B1. Que aparezca una voz nueva y más difícil justo cuando el alumno se ha acomodado es una función pedagógica, no un lujo.</p>
+    <div class="cast">
+      <article class="ch">
+        <p class="cn">Migue — Miguel Ángel Rentería</p>
+        <p class="cm">36 · Guadalajara · ingeniero de sonido</p>
+        <p>Es el alumno dentro de la serie y <b>la única voz que no debe sonar nativa</b>. Sus errores son el temario y se reparan en escena. Su oficio justifica que haya grabaciones, que exista O Arquivo y que se pueda rebobinar sin romper la ficción.</p>
+        <p class="voz"><b>Voz:</b> barítono cálido, 105–125 ppm, sonrisa audible, vocales españolas plenas. Dos configuraciones: «acento marcado» (eps. 1–24) y «acento residual» (25 en adelante). Más una en español para la Capa 0.</p>
+      </article>
+      <article class="ch">
+        <p class="cn">Dona Fátima Andrade</p>
+        <p class="cm">68 · Lisboa, Arroios · dueña de la pastelaria y del edificio</p>
+        <p>Eso le da las dos palancas: el mostrador y el contrato. Trata en tercera persona a quien no conoce y espera lo mismo de vuelta. <b>Es el arco fonológico del curso hecho persona:</b> deliberadamente incomprensible en el episodio 1, perfectamente comprensible en el 40.</p>
+        <p class="voz"><b>Voz:</b> contralto grave con grano, autoridad total, 140–175 ppm según a quién hable, reducción máxima y silencios secos. <b>No es una viejita dulce: es una patrona.</b> Sus fórmulas se repiten hasta la exactitud, porque lo que hace aprendible el habla rápida es la frecuencia, no la lentitud.</p>
+      </article>
+      <article class="ch">
+        <p class="cn">Kiluanji «Kilu» Neto</p>
+        <p class="cm">33 · Luanda · enfermero, cliente diario de las 7:30</p>
+        <p>Desde el episodio 1, porque su función es ser la rampa y la rampa tiene que estar el primer día. Vocales átonas <b>plenas</b> y ritmo silábico: un hispanohablante lo entiende muchísimo mejor que a un lisboeta, y ése es su trabajo. Lleva el <b>40 % de las líneas en A1, el 25 % en A2 y el 12 % en B1</b> — el subsidio se le retira al alumno sin avisarle. Hoy el corpus tiene cero ocurrencias de Angola.</p>
+        <p class="voz"><b>Voz:</b> tenor medio, articulación separada, 125–145 ppm. La más inteligible del reparto, y debe serlo de forma obvia.</p>
+      </article>
+      <article class="ch">
+        <p class="cn">Marta Vilaverde</p>
+        <p class="cm">24 · Matosinhos · monta la serie con Migue</p>
+        <p><b>Cuando el episodio repite una frase despacio, es porque ella rebobina dentro de la ficción.</b> Eso convierte la capa fonética —el contenido más caro de A1— en una escena en vez de un truco de app. Es la única con licencia para señalar la lengua, y siempre desde el oído, nunca desde la regla.</p>
+        <p class="voz"><b>Voz:</b> mezzo brillante, 150–165 ppm, melodía nortenha. Al rebobinar baja a 95–105 ppm <b>sin cambiar de timbre</b>: es la misma persona hablando lento, no una voz de dictado.</p>
+      </article>
+      <article class="ch">
+        <p class="cn">Sr. Joaquim Almeida</p>
+        <p class="cm">54 · Almada · funcionário de la Junta de Freguesia</p>
+        <p><b>Es dos personas y ése es el punto.</b> En la ventanilla: 110 ppm, plano, fórmulas nominales, tercera persona. En el café: 150 ppm, <code>ó pá</code>, enclisis coloquial, fado amateur los jueves. Su modo ventanilla es el nativo que habla despacio <em>por carácter</em> — un regalo pedagógico que no cuesta una sexta voz.</p>
+        <p class="voz"><b>Voz:</b> barítono seco, dos configuraciones de la misma voz. Si salen como dos voces distintas, se pierde la lección de registro entera y no se recupera sin volver a doblar.</p>
+      </article>
+      <article class="ch">
+        <p class="cn">Nuno Cardoso <span class="tag t2">entra en B1</span></p>
+        <p class="cm">28 · Marvila · trabaja el balcão con Fátima</p>
+        <p><b>180–190 ppm, reducción al máximo, se solapa, interrumpe, abandona frases.</b> Es el techo de dificultad auditiva y entra exactamente cuando el alumno cree que ya entiende Lisboa. <b>Prohibido «limpiarlo» en el doblaje:</b> si suena a locutor, el personaje no sirve para nada.</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Episodio 1 · «Uma bica, se faz favor»</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col"><strong>4:30 de pista, 1:15 de núcleo dramático. 43 formas nuevas, 94 tokens.</strong> De las 43, unas 15 son transparentes de oído para un hispanohablante, así que el coste real del primer episodio son <strong>28 palabras</strong>. Migue entra a las 7:30 y quiere un café. No sabe pedirlo. Kilu le presta la fórmula; la Dona Fátima no baja la velocidad ni una vez.</p>
+
+    <div class="script">
+      <div class="line who-fatima"><span class="nm">Fátima <span class="tag t1">capa 1</span></span><div>
+        <p class="pt">Ó Zé! Ó Zé, isso fica para a semana, ouviste? Que eu ainda não assinei nada!</p>
+        <p class="vd"><b>El primer portugués que oye el alumno en su vida.</b> 175 ppm, ráfaga sin respiración, gritada hacia la cocina, <b>no</b> al cliente. Reducción al máximo, que se pierdan las átonas. <b>No ralentizar, no limpiar.</b> Debe sonar a pared.</p></div></div>
+      <div class="line som"><span class="nm">som</span><div>
+        <p class="pt">máquina de café; chávenas no mármore; rádio ao fundo; a porta de vidro abre e corta a ráfaga</p>
+        <p class="vd">Entra <b>antes</b> de la primera voz. La puerta que abre es la señal de que esa ráfaga no era para el oyente.</p></div></div>
+      <div class="line who-fatima"><span class="nm">Fátima</span><div>
+        <p class="pt">O seguinte, faz favor!</p>
+        <p class="vd">Grito seco de mostrador, sin mirar a nadie, sin amabilidad. Es una llamada de turno.</p></div></div>
+      <div class="line"><span class="nm">Kilu</span><div>
+        <p class="pt">Bom dia, Dona Fátima. Uma bica, se faz favor.</p>
+        <p class="vd">140 ppm, articulación separada, vocales átonas <b>plenas</b>. <b>Cada palabra debe poder transcribirse a la primera.</b></p></div></div>
+      <div class="line who-fatima"><span class="nm">Fátima</span><div>
+        <p class="pt">Uma bica.</p>
+        <p class="vd">Repetición de comanda, monótona, hacia la máquina, ya de espaldas.</p></div></div>
+      <div class="line"><span class="nm">Kilu</span><div>
+        <p class="pt">Bom dia.</p>
+        <p class="vd">Ahora hacia Migue: medio tono más arriba, sonrisa audible, más lento (125 ppm). Es un saludo a un desconocido con cara de perdido.</p></div></div>
+      <div class="line"><span class="nm">Migue</span><div>
+        <p class="pt">Bom dia… eh…</p>
+        <p class="vd">Acento marcado, 110 ppm. La «o» de «bom» demasiado abierta. El «eh» es aire, no palabra.</p></div></div>
+      <div class="line who-fatima"><span class="nm">Fátima</span><div>
+        <p class="pt">Faz favor?</p>
+        <p class="vd">Misma cadena, <b>ahora ascendente y dirigida a él</b>. 160 ppm, impaciente, hay cola. Máximo 0,4 s de pausa: corta a Migue.</p></div></div>
+      <div class="line"><span class="nm">Migue <span class="tag t0">español</span></span><div>
+        <p class="pt">Un café con leche.</p>
+        <p class="vd">Con total naturalidad y confianza. No cuenta en el presupuesto portugués: <b>es el error diagnóstico del episodio.</b></p></div></div>
+      <div class="line who-fatima"><span class="nm">Fátima</span><div>
+        <p class="pt">Hã?</p>
+        <p class="vd">Monosílabo, tras 1,5 s de silencio seco — la máquina sigue; ella no. Ni amable ni hostil: <b>un muro.</b></p></div></div>
+      <div class="line"><span class="nm">Kilu</span><div>
+        <p class="pt">Um galão.</p>
+        <p class="vd">Muy bajito, casi al oído, cómplice, hiperarticulado. <b>Es un soplo, no una corrección.</b></p></div></div>
+      <div class="line"><span class="nm">Migue</span><div>
+        <p class="pt">Um galão. Se faz favor.</p>
+        <p class="vd">Copiando, con dos milímetros de duda antes de «se faz favor». 105 ppm, aplicado; sube al final como preguntando si lo ha dicho bien.</p></div></div>
+      <div class="line who-fatima"><span class="nm">Fátima</span><div>
+        <p class="pt">Um galão. E um pastel de nata?</p>
+        <p class="vd">Primera mitad hacia la máquina. Pausa de 1 s. Segunda mitad de vuelta a él, 165 ppm, seca. No es una sugerencia amable: <b>es negocio.</b></p></div></div>
+      <div class="line"><span class="nm">Migue</span><div>
+        <p class="pt">Sim. Sim!</p>
+        <p class="vd">El primero dudoso y bajo; el segundo, medio segundo después, alto y con alivio.</p></div></div>
+      <div class="line who-fatima"><span class="nm">Fátima <span class="tag t1">capa 1</span></span><div>
+        <p class="pt">É para aqui ou para levar?</p>
+        <p class="vd">175 ppm, una sola masa sonora, todo ligado. <b>Debe resultar incomprensible la primera vez.</b></p></div></div>
+      <div class="line"><span class="nm">Migue</span><div>
+        <p class="pt">Desculpe?</p>
+        <p class="vd">95 ppm, pequeño, avergonzado, subiendo mucho. Se le va la voz.</p></div></div>
+      <div class="line who-fatima"><span class="nm">Fátima</span><div>
+        <p class="pt">É para aqui ou para levar?</p>
+        <p class="vd"><b>Idéntica.</b> Misma velocidad, misma masa, mismo volumen. <b>No ralentizar ni un 5 %.</b> Si acaso, medio tono más irritada.</p></div></div>
+      <div class="line"><span class="nm">Kilu <span class="tag t2">capa 2</span></span><div>
+        <p class="pt">Aqui? Ou levar?</p>
+        <p class="vd"><b>La reformulación que hace comprensible la línea anterior — y la hace un personaje, no la app.</b> 110 ppm, dos bloques separados por medio segundo, al oído.</p></div></div>
+      <div class="line"><span class="nm">Migue</span><div>
+        <p class="pt">Para levar.</p>
+        <p class="vd">Rápido, de huida. Ha elegido la última opción que oyó porque es la única que retuvo.</p></div></div>
+      <div class="line"><span class="nm">Kilu</span><div>
+        <p class="pt">Não, não. Para aqui.</p>
+        <p class="vd">Firme, casi cortándolo, sin agresividad y sin negociación. Los dos «não» pegados.</p></div></div>
+      <div class="line"><span class="nm">Migue</span><div>
+        <p class="pt">Para aqui?</p>
+        <p class="vd">Eco desconcertado, subiendo.</p></div></div>
+      <div class="line"><span class="nm">Kilu</span><div>
+        <p class="pt">Para aqui. … Aqui, ao balcão.</p>
+        <p class="vd">Plano y definitivo, cae el final. Ya sentándose, taburete audible, sin volverse. Asunto cerrado.</p></div></div>
+      <div class="line who-fatima"><span class="nm">Fátima</span><div>
+        <p class="pt">São dois e setenta.</p>
+        <p class="vd">155 ppm, seca, sin «euros». Golpe de moneda sobre el mármol justo después.</p></div></div>
+      <div class="line"><span class="nm">Migue</span><div>
+        <p class="pt">Obrigada.</p>
+        <p class="vd">Alegre, orgulloso, alargando la última «a». <b>Está convencido de haberlo hecho perfecto.</b></p></div></div>
+      <div class="line who-fatima"><span class="nm">Fátima</span><div>
+        <p class="pt">De nada.</p>
+        <p class="vd">Ni una pausa ni un gesto: no lo ha registrado o no le importa. Plano, ya con la mano en la máquina.</p></div></div>
+      <div class="line"><span class="nm">Kilu</span><div>
+        <p class="pt">Obrigado, Dona Fátima.</p>
+        <p class="vd">Clara, 135 ppm, recogiendo su bica. Cálido y rutinario.</p></div></div>
+      <div class="line who-fatima"><span class="nm">Fátima</span><div>
+        <p class="pt">De nada, Kilu. … Obrigada! Até amanhã.</p>
+        <p class="vd">Un grado más cálida: a Kilu lo conoce. Y el «Obrigada» va <b>en primer plano</b>, al repartidor de pan. <b>No es ambiente: es una réplica.</b></p></div></div>
+      <div class="line who-fatima"><span class="nm">Fátima</span><div>
+        <p class="pt">Ó rapaz! … Amanhã. A chave.</p>
+        <p class="vd">Subiendo el volumen para alcanzarlo, imperativo, sin cariño, con reverberación de local. Luego dos bloques separados por 1 s, grave, casi para sí.</p></div></div>
+      <div class="line"><span class="nm">Migue</span><div>
+        <p class="pt">Amanhã. A chave.</p>
+        <p class="vd">Repitiendo para memorizar, cuidadoso, sin subir al final.</p></div></div>
+      <div class="line who-fatima"><span class="nm">Fátima</span><div>
+        <p class="pt">Isso.</p>
+        <p class="vd"><b>Dos sílabas, sin volverse.</b> Es todo lo que ella da, y es aprobación. Corte seco sobre el ruido de la máquina.</p></div></div>
+    </div>
+
+    <div class="alert" style="margin-top:26px">
+      <div class="at">Por qué existe este episodio</div>
+      <p>Para que alguien que no sabe una palabra de portugués cierre su primera sesión <b>habiendo pedido algo</b>, no habiendo estudiado algo.</p>
+      <p>Y para enseñar la concordancia de <code>obrigado</code>/<code>obrigada</code> con <b>tres datos yuxtapuestos y cero explicación</b>, en cuarenta segundos: Migue (hombre) mal · Kilu (hombre) bien · Fátima (mujer) bien. Hoy <code>obrigada</code> aparece <b>cero veces</b> en los 2.037 ejercicios.</p>
+      <p>Fíjate en lo que <em>no</em> pasa: cuando Migue pide que le repitan, <b>la repetición llega igual de rápida.</b> Eso es lo primero que hay que desaprender del método escolar.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Lo que el nativo de Lisboa corrigió</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Leyó los ocho episodios réplica por réplica. Éstas son las de este episodio; están todas aplicadas arriba.</p>
+    <ol class="rules">
+      <li><b><code>Faz favor!</code> como llamada de turno no existe en Portugal</b> — ni en el corpus: las 6 ocurrencias del repo son todas <code>se faz favor</code>. Se sustituye por <code>O seguinte, faz favor!</code>, y se conserva <code>Faz favor?</code> ascendente porque ésa sí es la función auténtica. La serie pasa de cuatro funciones, dos de ellas inventadas, a <b>dos reales bien contrastadas</b>.</li>
+      <li><b><code>Ó?</code> interrogativo no es portugués:</b> <code>ó</code> es partícula vocativa y sólo eso. Sustituido por <code>Hã?</code>.</li>
+      <li><code>E um pastel?</code> en una pastelaria es ambiguo — nata o bacalhau. Pasa a <code>E um pastel de nata?</code>.</li>
+      <li><b>Precio corregido:</b> galão más pastel a 2,30 € es precio de 2014. <code>São dois e setenta</code>.</li>
+      <li><b><code>pá</code> en boca de una señora de 68 se elimina.</b> El resto de la ráfaga es habla real y se conserva íntegra.</li>
+      <li><b>Se añade la Capa 2 que faltaba</b> (<code>Aqui? Ou levar?</code>): la única frase del episodio con una decisión operativa dentro se quedaba sin reemisión manejable.</li>
+      <li><b>Se añade <code>Isso.</code></b> — el alumno pidió una victoria antes del episodio 4 y tenía razón: en la versión anterior perdía ocho veces seguidas. Es la primera grieta de Fátima y cuesta una palabra.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>El presupuesto léxico, medido</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">El especialista en adquisición demostró que la primera tanda subestimaba la novedad entre 2× y 4×. Estos recuentos están <strong>medidos con un tokenizador sobre los guiones</strong>, no estimados, y donde el presupuesto se pasaba se recortaron réplicas.</p>
+    <div class="tw"><table>
+      <thead><tr><th>Ep.</th><th class="num">Réplicas</th><th class="num">Tokens</th><th class="num">Formas nuevas</th><th class="num">% nuevo</th><th class="num">Caracteres</th></tr></thead>
+      <tbody>
+        <tr><td>1 · Uma bica, se faz favor</td><td class="num">31</td><td class="num">94</td><td class="num">43</td><td class="num">100 %</td><td class="num">571</td></tr>
+        <tr><td>2 · Dois apelidos</td><td class="num">28</td><td class="num">71</td><td class="num">31</td><td class="num">57,7 %</td><td class="num">525</td></tr>
+        <tr><td>3 · Mais um</td><td class="num">33</td><td class="num">67</td><td class="num">27</td><td class="num">59,7 %</td><td class="num">454</td></tr>
+        <tr><td>4 · Estás a ouvir?</td><td class="num">40</td><td class="num">112</td><td class="num">25</td><td class="num">29,5 %</td><td class="num">733</td></tr>
+        <tr><td>5 · Está esquisito</td><td class="num">46</td><td class="num">152</td><td class="num">31</td><td class="num">32,9 %</td><td class="num">972</td></tr>
+        <tr><td>6 · Senha B dezassete</td><td class="num">51</td><td class="num">182</td><td class="num">40</td><td class="num">34,1 %</td><td class="num">1.277</td></tr>
+        <tr><td>7 · Às sete e meia</td><td class="num">48</td><td class="num">163</td><td class="num">43</td><td class="num">35,0 %</td><td class="num">983</td></tr>
+        <tr><td>8 · Não era nada</td><td class="num">34</td><td class="num">125</td><td class="num">19</td><td class="num">18,4 %</td><td class="num">779</td></tr>
+        <tr class="total"><td>Total</td><td class="num">311</td><td class="num">966</td><td class="num">259</td><td class="num">—</td><td class="num">6.294</td></tr>
+      </tbody>
+    </table></div>
+    <p class="col" style="margin-top:18px"><strong>La curva es la correcta:</strong> del 100 % de novedad en el episodio 1 al 18,4 % en el 8. Es exactamente lo que tiene que pasar — el alumno empieza sin nada y termina la semana reconociendo cuatro de cada cinco palabras que oye.</p>
+    <p class="col"><strong>Reaparición medida:</strong> 136 de 259 formas viven en un solo episodio (52,5 %, frente al 59,8 % de la primera tanda). Sigue siendo demasiado, y por eso existe la regla de tres puertas — pero <strong>todas las palabras-bandera europeas ya cumplen</strong>: <code>fixe</code> en 3 episodios, <code>desculpe</code> 3, <code>bica</code> 3, <code>obrigada</code> 3, <code>pois</code> 4, <code>morada</code> 4.</p>
+    <p class="col">Los 6.294 caracteres de la tabla son sólo el <strong>núcleo dramático</strong> — lo que hay que escribir a mano. La pista completa lleva además la Capa 0 en español, la reprise <em>Outra vez</em> y la coda de reciclaje, ninguna de las cuales introduce una palabra nueva.</p>
+
+    <div class="tw" style="margin-top:20px"><table>
+      <thead><tr><th>Lo que se sintetiza</th><th class="num">Caracteres</th><th class="num">Pista</th></tr></thead>
+      <tbody>
+        <tr><td>Núcleo dramático, portugués</td><td class="num">6.294</td><td class="num">11:30</td></tr>
+        <tr><td>Capa 0, español (90 s → 45 s)</td><td class="num">~5.600</td><td class="num">~7 min</td></tr>
+        <tr><td>«Outra vez» — la reprise manejable</td><td class="num">~2.600</td><td class="num">~4 min</td></tr>
+        <tr><td>Coda de reciclaje</td><td class="num">~6.400</td><td class="num">~9 min</td></tr>
+        <tr><td>La ráfaga reutilizada en el ep. 4</td><td class="num">−150</td><td class="num">mismo fichero</td></tr>
+        <tr class="total"><td>Los ocho episodios</td><td class="num">~20.700</td><td class="num">~34 min</td></tr>
+        <tr class="total"><td>Los 44 episodios</td><td class="num">~308.000</td><td class="num">~295 min</td></tr>
+      </tbody>
+    </table></div>
+    <p class="col" style="margin-top:18px"><strong>Los ocho primeros episodios son el 15,8 % de tu cuota mensual</strong> — cabe la primera semana con margen para rehacerla seis veces. <strong>Y la serie entera, los 44 episodios, son 2,4 meses de cuota.</strong> Eso es asequible de verdad: la columna narrativa completa del curso, de A1 a B1, por menos de tres meses de suscripción.</p>
+    <p class="col">La razón de que salga tan barata está en la estructura: <strong>44 episodios son 12 de A1, 12 de A2 y 20 de B1. B2, C1 y C2 no añaden ficción nueva</strong> — reciclan el mismo material como aparato, tomas gemelas y episodios degradados. Escribir y doblar se hace una vez; el nivel alto se construye encima.</p>
+  </section>
+
+  <section>
+    <h2>Lo que la serie no cubre</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Dicho en voz alta por el propio documento, y conviene que quede claro antes de empezar.</p>
+    <div class="alert" style="border-color:var(--review);background:var(--review-soft)">
+      <div class="at" style="color:var(--review)">Contabilidad honesta</div>
+      <p>Doce episodios de A1 son <b>~51 minutos de pista y ~4.500 palabras</b> de portugués. El currículo de A1 pide <b>180 minutos de audio y 12.000 palabras de input</b>.</p>
+      <p>La serie es, por tanto, <b>el 28 % del audio y el 37 % del input del nivel</b> — no su totalidad. El resto son los artefactos leídos, el banco de dictado, los 120 pares mínimos, las capas de reprise aisladas y los textos funcionales reales.</p>
+      <p>Venderla como la columna vertebral entera sería <b>el mismo error de contabilidad que este trabajo le reprocha al corpus viejo.</b></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Las reglas duras de la biblia</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Diez, y todas son verificables por gate automático. Éstas son las que más cambian respecto al corpus actual.</p>
+    <ol class="rules">
+      <li><b>Ningún personaje portugués usa <code>você</code>.</b> La única emisión de la palabra en toda la serie es la cita con que Fátima se la devuelve a Migue en el episodio 2. <em>Hoy: 273 ocurrencias en el corpus.</em></li>
+      <li><b>Cero gerundio en boca portuguesa.</b> <code>estar a + infinitivo</code> seis veces o más por episodio desde el ep. 4, incluida la muletilla <code>estás a ver?</code></li>
+      <li><b><code>obrigada</code>/<code>obrigado</code> concordando con el hablante, siempre y sin comentario</b> — con una excepción: en el ep. 4 Marta lo señala en cuatro palabras y desde el oído. <em>Hoy: <code>obrigada</code> = 0 en los bloques.</em></li>
+      <li><b>Toda escena tiene un objetivo material.</b> Nadie conversa sobre el desayuno: alguien quiere algo del otro y no siempre lo consigue. <b>Si la escena podría existir sin personajes, se tira.</b></li>
+      <li><b>Anti-folleto:</b> ninguna línea empieza por «Em Portugal, as pessoas…». Un episodio, un dato, y el dato tiene que hacerle falta a un personaje para resolver algo ese día.</li>
+      <li><b>Anti-clase:</b> nadie explica gramática dentro de la ficción.</li>
+      <li><b>Todo episodio contiene un desacuerdo</b> entre dos personas que tienen algo en juego.</li>
+      <li><b>Todo evento narrativo tiene que ser audible en el metro.</b> Si el efecto de sonido lo dice, una línea de portugués tiene que decirlo también.</li>
+    </ol>
+  </section>
+
+</main>
+
+<footer><div class="pg">
+  <b>El documento completo</b> son 895 líneas en <code>docs/plans/2026-07-28-serie-inmersiva-y-revision-material.md</code>: la revisión del material existente nivel por nivel —A1 se salva el 34 %, A2 el 45 %, B1 el 35 %, B2 el 38 %, C1 el 12 %—, con los ítems que sirven de plantilla, los que se tiran y la resecuenciación de cada banda; los ocho guiones íntegros; la estructura de las temporadas hasta C2; y el molde de cómo un episodio se convierte en una sesión de 25 minutos.<br>
+  <b>Lo siguiente</b> es elegir las seis voces del artifact de casting y doblar el episodio 1. Son 571 caracteres.
+</div></footer>

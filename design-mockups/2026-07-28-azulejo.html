@@ -1,0 +1,750 @@
+<title>Azulejo — rediseño de aprende-idiomas</title>
+<style>
+/* ============================================================
+   AZULEJO — sistema de diseño
+   Cobalto sobre cal: la economía de dos colores del azulejo
+   portugués. Fondo frío para que el color semántico (aprender,
+   repasar, error) sea la única saturación de la pantalla.
+   ============================================================ */
+:root{
+  --cal:#FCFCFA; --surface:#FFFFFF; --sunken:#EFF2F6;
+  --ink:#16202B; --ink-2:#55636F; --ink-3:#8794A0;
+  --rule:#DDE3E9; --rule-2:#C3CDD7;
+  --cobalt:#1B4F8F; --cobalt-soft:#E8EFF7; --cobalt-line:#B6CBE2;
+  --learn:#2E6B4F; --learn-soft:#E6F0EA;
+  --review:#A8690B; --review-soft:#F8F0E0;
+  --error:#A32B2B; --error-soft:#F8ECEC;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --cal:#0C1218; --surface:#131C24; --sunken:#0F171E;
+    --ink:#E9EEF2; --ink-2:#93A2AF; --ink-3:#6C7C8A;
+    --rule:#202D38; --rule-2:#2E3E4B;
+    --cobalt:#7FB2EC; --cobalt-soft:#142334; --cobalt-line:#2A415B;
+    --learn:#58BC90; --learn-soft:#122318;
+    --review:#E0A544; --review-soft:#241C0E;
+    --error:#F2827C; --error-soft:#251415;
+  }
+}
+:root[data-theme="dark"]{
+  --cal:#0C1218; --surface:#131C24; --sunken:#0F171E;
+  --ink:#E9EEF2; --ink-2:#93A2AF; --ink-3:#6C7C8A;
+  --rule:#202D38; --rule-2:#2E3E4B;
+  --cobalt:#7FB2EC; --cobalt-soft:#142334; --cobalt-line:#2A415B;
+  --learn:#58BC90; --learn-soft:#122318;
+  --review:#E0A544; --review-soft:#241C0E;
+  --error:#F2827C; --error-soft:#251415;
+}
+:root[data-theme="light"]{
+  --cal:#FCFCFA; --surface:#FFFFFF; --sunken:#EFF2F6;
+  --ink:#16202B; --ink-2:#55636F; --ink-3:#8794A0;
+  --rule:#DDE3E9; --rule-2:#C3CDD7;
+  --cobalt:#1B4F8F; --cobalt-soft:#E8EFF7; --cobalt-line:#B6CBE2;
+  --learn:#2E6B4F; --learn-soft:#E6F0EA;
+  --review:#A8690B; --review-soft:#F8F0E0;
+  --error:#A32B2B; --error-soft:#F8ECEC;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--cal);color:var(--ink);font-family:var(--sans);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px;border-radius:3px}
+.pg{max-width:1120px;margin:0 auto;padding:0 24px}
+.col{max-width:66ch}
+
+/* ---------- portada del documento ---------- */
+.doc-head{border-bottom:1px solid var(--rule);padding:60px 0 40px;margin-bottom:48px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 18px}
+h1{font-family:var(--serif);font-size:clamp(32px,5.4vw,50px);line-height:1.06;letter-spacing:-.024em;
+  margin:0 0 18px;font-weight:600;text-wrap:balance}
+.lede{font-family:var(--serif);font-size:20px;line-height:1.55;color:var(--ink-2);margin:0;text-wrap:pretty}
+.lede strong{color:var(--ink);font-weight:600}
+
+h2{font-family:var(--serif);font-size:29px;letter-spacing:-.02em;margin:0 0 6px;font-weight:600}
+h3{font-family:var(--serif);font-size:20px;letter-spacing:-.014em;margin:0 0 8px;font-weight:600}
+.rule-sm{width:32px;height:2px;background:var(--cobalt);margin:0 0 22px}
+.doc-sec{margin:0 0 72px}
+.dek{color:var(--ink-2);margin:0 0 28px;font-size:16.5px}
+p{margin:0 0 16px}
+code{font-family:var(--mono);font-size:.85em;background:var(--sunken);border:1px solid var(--rule);
+  border-radius:3px;padding:.08em .34em;color:var(--ink-2);word-break:break-word}
+
+/* ---------- sistema: paleta y tipo ---------- */
+.swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:10px;margin-bottom:14px}
+.sw{border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:var(--surface)}
+.sw .chip{height:56px}
+.sw .meta{padding:9px 11px}
+.sw .nm{font-size:13px;font-weight:600;letter-spacing:-.005em}
+.sw .hx{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-top:2px}
+
+.specimen{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+  padding:26px 28px;display:grid;gap:20px}
+.spec-row{display:grid;grid-template-columns:96px 1fr;gap:20px;align-items:baseline}
+.spec-lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.spec-a{font-family:var(--serif);font-size:29px;letter-spacing:-.02em;line-height:1.2}
+.spec-b{font-family:var(--sans);font-size:16px}
+.spec-c{font-family:var(--mono);font-size:15px}
+.spec-note{font-size:13px;color:var(--ink-3);margin-top:4px;font-family:var(--sans)}
+
+/* ---------- tabla IA ---------- */
+.ia-wrap{overflow-x:auto;border:1px solid var(--rule);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:600px;font-size:14.5px}
+th,td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:500;background:var(--sunken)}
+tbody tr:last-child td{border-bottom:none}
+td.old{font-family:var(--mono);font-size:12.5px;color:var(--ink-3)}
+td.new{font-weight:600}
+.tag-kill{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--error);border:1px solid var(--error);border-radius:999px;padding:1px 7px;white-space:nowrap}
+.tag-new{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--cobalt);border:1px solid var(--cobalt);border-radius:999px;padding:1px 7px;white-space:nowrap}
+
+/* ---------- galería de pantallas ---------- */
+.screens{display:flex;flex-direction:column;gap:64px}
+.screen{display:grid;grid-template-columns:390px minmax(0,1fr);gap:44px;align-items:start}
+.notes h3{margin-bottom:10px}
+.notes .n-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--cobalt);margin:0 0 8px}
+.notes p{font-size:15.5px;color:var(--ink-2);margin:0 0 14px}
+.fixes{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-direction:column;gap:9px}
+.fixes li{font-size:14.5px;color:var(--ink-2);padding-left:20px;position:relative;line-height:1.5}
+.fixes li::before{content:"";position:absolute;left:0;top:.55em;width:9px;height:9px;
+  border:1.5px solid var(--cobalt);border-radius:2px}
+.fixes li b{color:var(--ink);font-weight:600}
+
+/* marco de teléfono */
+.phone{width:390px;border:1px solid var(--rule-2);border-radius:22px;background:var(--surface);
+  overflow:hidden;box-shadow:0 1px 2px rgba(22,32,43,.05),0 12px 32px -12px rgba(22,32,43,.14)}
+.phone-in{height:748px;overflow-y:auto;overscroll-behavior:contain;background:var(--cal)}
+
+/* ============================================================
+   Componentes de la APP (prefijo .a-) — el sistema propuesto
+   ============================================================ */
+.a-bar{position:sticky;top:0;z-index:5;background:var(--cal);border-bottom:1px solid var(--rule);
+  padding:13px 18px;display:flex;align-items:center;gap:11px}
+.a-bar .a-brand{font-family:var(--serif);font-size:16px;font-weight:600;letter-spacing:-.01em}
+.a-bar .a-right{margin-left:auto;display:flex;align-items:center;gap:9px}
+.a-flag{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;border:1px solid var(--cobalt);
+  color:var(--cobalt);border-radius:999px;padding:2px 8px;background:var(--cobalt-soft)}
+.a-body{padding:22px 18px 40px}
+.a-eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 10px}
+.a-h1{font-family:var(--serif);font-size:26px;line-height:1.18;letter-spacing:-.02em;margin:0 0 6px;font-weight:600}
+.a-sub{font-size:14.5px;color:var(--ink-2);margin:0 0 22px;line-height:1.5}
+
+/* --- el azulejo: la escalera de niveles --- */
+.a-tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:5px;margin:0 0 11px}
+.a-tile{aspect-ratio:1;border:1px solid var(--cobalt-line);border-radius:3px;background:var(--surface);
+  display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px;
+  color:var(--ink-3);position:relative;overflow:hidden}
+.a-tile.done{background:var(--cobalt);border-color:var(--cobalt);color:#fff}
+.a-tile.now{border-color:var(--cobalt);border-width:2px;color:var(--cobalt);font-weight:600;background:var(--cobalt-soft)}
+.a-tile.now::after{content:"";position:absolute;inset:auto 0 0 0;height:38%;background:var(--cobalt);opacity:.9}
+.a-tile.now span{position:relative;z-index:1}
+.a-level-line{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;
+  color:var(--ink-2);margin-bottom:26px}
+.a-level-line b{color:var(--ink);font-weight:600}
+.a-level-line .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* --- CTA principal --- */
+.a-cta{display:block;width:100%;text-align:left;border:none;cursor:pointer;
+  background:var(--cobalt);color:#fff;border-radius:12px;padding:19px 20px;margin:0 0 12px;
+  font-family:inherit}
+.a-cta .t{font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.015em;
+  display:flex;justify-content:space-between;align-items:center;gap:12px}
+.a-cta .s{font-size:13.5px;opacity:.88;margin-top:5px;font-family:var(--mono);letter-spacing:.01em}
+
+/* --- tarjetas --- */
+.a-card{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:16px 17px;
+  display:block;text-decoration:none;color:inherit;margin-bottom:10px}
+.a-card .c-eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--ink-3);margin-bottom:6px}
+.a-card h4{font-family:var(--serif);font-size:18px;margin:0 0 4px;font-weight:600;letter-spacing:-.012em}
+.a-card .c-meta{font-size:13px;color:var(--ink-2)}
+.a-foot{display:flex;justify-content:space-between;align-items:center;margin-top:13px;gap:10px}
+.a-pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;
+  padding:2px 8px;border-radius:999px;border:1px solid var(--rule-2);color:var(--ink-2);white-space:nowrap}
+.a-pill.learn{color:var(--learn);border-color:var(--learn);background:var(--learn-soft)}
+.a-pill.review{color:var(--review);border-color:var(--review);background:var(--review-soft)}
+.a-pill.cob{color:var(--cobalt);border-color:var(--cobalt);background:var(--cobalt-soft)}
+.a-go{font-size:13.5px;font-weight:600;color:var(--cobalt)}
+
+.a-sec-lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-3);margin:26px 0 10px;display:flex;align-items:center;gap:9px}
+.a-sec-lbl::after{content:"";flex:1;height:1px;background:var(--rule)}
+
+/* --- sesión / ejercicio --- */
+.a-prog{height:3px;background:var(--sunken);position:relative}
+.a-prog i{position:absolute;inset:0 auto 0 0;background:var(--cobalt);display:block}
+.a-ex-head{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;
+  font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:.06em}
+.a-task{font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--cobalt);margin:0 0 14px}
+.a-sentence{font-family:var(--serif);font-size:25px;line-height:1.4;letter-spacing:-.014em;margin:0 0 8px}
+.a-sentence .bad{color:var(--error);text-decoration:underline wavy var(--error);
+  text-underline-offset:5px;text-decoration-thickness:1.5px}
+.a-sentence .good{color:var(--learn);font-weight:600}
+.a-answer{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:15px 16px;
+  font-family:var(--serif);font-size:19px;line-height:1.4;margin:0 0 16px}
+.a-fb{border-radius:10px;padding:14px 16px;margin:0 0 16px;border:1px solid}
+.a-fb.ok{background:var(--learn-soft);border-color:var(--learn)}
+.a-fb .fb-t{font-family:var(--mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--learn);margin:0 0 7px;font-weight:600}
+.a-fb p{font-size:14.5px;color:var(--ink-2);margin:0}
+.a-contrast{border-left:2px solid var(--cobalt);padding:2px 0 2px 14px;margin:0 0 20px}
+.a-contrast .ct{font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--cobalt);margin-bottom:4px}
+.a-contrast p{font-size:14px;color:var(--ink-2);margin:0;line-height:1.5}
+.a-grade{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:22px}
+.a-gbtn{border:1px solid var(--rule-2);background:var(--surface);border-radius:9px;padding:11px 4px;
+  text-align:center;cursor:pointer;font-family:inherit}
+.a-gbtn .g1{font-size:13px;font-weight:600;color:var(--ink)}
+.a-gbtn .g2{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);margin-top:3px}
+.a-gbtn .g3{font-family:var(--mono);font-size:9.5px;color:var(--ink-3);margin-top:5px;opacity:.8}
+.a-gbtn.again{border-color:var(--error)} .a-gbtn.again .g1{color:var(--error)}
+.a-gbtn.good{border-color:var(--learn);background:var(--learn-soft)} .a-gbtn.good .g1{color:var(--learn)}
+
+/* --- producción escrita --- */
+.a-prompt{background:var(--cobalt-soft);border:1px solid var(--cobalt-line);border-radius:10px;
+  padding:15px 16px;margin:0 0 16px}
+.a-prompt .pt{font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--cobalt);margin-bottom:6px}
+.a-prompt p{font-family:var(--serif);font-size:17px;line-height:1.45;color:var(--ink);margin:0}
+.a-textarea{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:14px 15px;
+  font-family:var(--serif);font-size:16.5px;line-height:1.6;color:var(--ink);min-height:132px}
+.a-textarea .caret{display:inline-block;width:1.5px;height:1.05em;background:var(--cobalt);
+  vertical-align:-2px;margin-left:1px}
+.a-count{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;
+  color:var(--ink-3);margin:8px 0 18px}
+.a-rubric{border:1px solid var(--rule);border-radius:10px;background:var(--surface);overflow:hidden}
+.a-rub-row{display:grid;grid-template-columns:1fr 74px;gap:12px;padding:11px 15px;
+  border-bottom:1px solid var(--rule);align-items:center}
+.a-rub-row:last-child{border-bottom:none}
+.a-rub-row .rn{font-size:14px}
+.a-rub-row .rn small{display:block;color:var(--ink-3);font-size:12.5px;margin-top:2px;line-height:1.4}
+.a-dots{display:flex;gap:3px;justify-content:flex-end}
+.a-dot{width:9px;height:9px;border-radius:2px;border:1px solid var(--rule-2);background:transparent}
+.a-dot.on{background:var(--cobalt);border-color:var(--cobalt)}
+.a-dot.warn{background:var(--review);border-color:var(--review)}
+
+/* --- voz / shadowing --- */
+.a-wave{display:flex;align-items:center;gap:2.5px;height:52px;padding:0 2px}
+.a-wave i{flex:1;background:var(--cobalt);border-radius:1px;opacity:.55;display:block}
+.a-wave.mine i{background:var(--review);opacity:.75}
+.a-wave-lbl{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin:0 0 6px}
+.a-rec{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;
+  background:var(--surface);border:1.5px solid var(--cobalt);color:var(--cobalt);border-radius:999px;
+  padding:13px;font-family:var(--sans);font-size:15px;font-weight:600;cursor:pointer;margin-top:18px}
+.a-rec .dot{width:11px;height:11px;border-radius:999px;background:var(--error)}
+.a-ipa{font-family:var(--mono);font-size:14px;color:var(--cobalt);letter-spacing:.02em}
+
+/* --- lectura / historia --- */
+.a-story{font-family:var(--serif);font-size:18.5px;line-height:1.72;color:var(--ink)}
+.a-story p{margin:0 0 15px}
+.a-story .w{border-bottom:1px dotted var(--cobalt-line);cursor:pointer}
+.a-story .w.hot{background:var(--cobalt-soft);border-bottom:1px solid var(--cobalt);border-radius:2px;
+  padding:0 1px}
+.a-pop{position:relative;background:var(--surface);border:1px solid var(--cobalt);border-radius:10px;
+  padding:13px 15px;margin:6px 0 16px;box-shadow:0 6px 18px -8px rgba(22,32,43,.28)}
+.a-pop .pw{font-family:var(--serif);font-size:18px;font-weight:600;margin-bottom:2px}
+.a-pop .pi{font-family:var(--mono);font-size:12.5px;color:var(--cobalt);margin-bottom:7px}
+.a-pop .pd{font-size:14px;color:var(--ink-2);line-height:1.5}
+.a-pop .pd b{color:var(--ink)}
+.a-q{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:15px 16px;margin-top:8px}
+.a-q .qt{font-family:var(--serif);font-size:16.5px;line-height:1.4;margin:0 0 12px}
+.a-opt{display:flex;align-items:center;gap:10px;border:1px solid var(--rule);border-radius:8px;
+  padding:10px 12px;margin-bottom:7px;font-size:14.5px;font-family:var(--serif)}
+.a-opt .k{font-family:var(--mono);font-size:11px;color:var(--ink-3);border:1px solid var(--rule-2);
+  border-radius:4px;width:19px;height:19px;display:flex;align-items:center;justify-content:center;flex:none}
+.a-opt.sel{border-color:var(--cobalt);background:var(--cobalt-soft)}
+.a-opt.sel .k{border-color:var(--cobalt);color:var(--cobalt)}
+
+/* --- progreso --- */
+.a-metric{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:20px}
+.a-met{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:14px 15px}
+.a-met .mv{font-family:var(--mono);font-size:25px;font-variant-numeric:tabular-nums;line-height:1;
+  letter-spacing:-.02em}
+.a-met .ml{font-size:12.5px;color:var(--ink-3);margin-top:6px;line-height:1.35}
+.a-desc{border:1px solid var(--rule);border-radius:10px;background:var(--surface);overflow:hidden}
+.a-drow{display:grid;grid-template-columns:20px 1fr auto;gap:11px;padding:12px 15px;
+  border-bottom:1px solid var(--rule);align-items:start}
+.a-drow:last-child{border-bottom:none}
+.a-check{width:16px;height:16px;border-radius:3px;border:1.5px solid var(--rule-2);margin-top:2px;
+  display:flex;align-items:center;justify-content:center;flex:none}
+.a-check.on{background:var(--cobalt);border-color:var(--cobalt)}
+.a-check.on::after{content:"";width:8px;height:4.5px;border-left:1.7px solid #fff;border-bottom:1.7px solid #fff;
+  transform:rotate(-45deg) translate(1px,-1px)}
+.a-drow .dt{font-size:14px;line-height:1.45}
+.a-drow .dn{font-family:var(--mono);font-size:11px;color:var(--ink-3);white-space:nowrap;margin-top:2px}
+.a-drow.off .dt{color:var(--ink-3)}
+
+/* --- el libro --- */
+.a-ch{display:grid;grid-template-columns:34px 1fr auto;gap:13px;align-items:center;
+  padding:13px 4px;border-bottom:1px solid var(--rule);text-decoration:none;color:inherit}
+.a-ch:last-of-type{border-bottom:none}
+.a-ch .cn{font-family:var(--mono);font-size:12px;color:var(--ink-3);text-align:center}
+.a-ch .cname{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:-.012em;line-height:1.3}
+.a-ch .cmeta{font-size:12.5px;color:var(--ink-3);margin-top:2px}
+.a-mini{width:56px;height:6px;background:var(--sunken);border-radius:999px;overflow:hidden;border:1px solid var(--rule)}
+.a-mini i{display:block;height:100%;background:var(--cobalt)}
+.a-ch.locked{opacity:.45}
+.a-lvlband{display:flex;align-items:center;gap:9px;margin:22px 0 6px}
+.a-lvlband .lb{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--cobalt);
+  border:1px solid var(--cobalt);background:var(--cobalt-soft);border-radius:4px;padding:2px 9px;font-weight:600}
+.a-lvlband .lx{font-size:12.5px;color:var(--ink-3)}
+.a-lvlband::after{content:"";flex:1;height:1px;background:var(--rule)}
+
+footer{border-top:1px solid var(--rule);margin-top:80px;padding:30px 0 64px;
+  font-family:var(--mono);font-size:12px;color:var(--ink-3);line-height:1.7}
+footer b{color:var(--ink-2);font-weight:500}
+
+@media (max-width:900px){
+  .screen{grid-template-columns:1fr;gap:26px}
+  .phone{width:100%;max-width:390px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<header class="doc-head">
+  <div class="pg">
+    <p class="eyebrow">Rediseño · 28 jul 2026 · aprende-idiomas</p>
+    <h1>Azulejo</h1>
+    <p class="lede col">Cobalto sobre cal: la economía de dos colores del azulejo portugués, aplicada a una app que enseña portugués europeo. <strong>El fondo es frío y callado para que el único color saturado de la pantalla sea el que significa algo</strong> — verde lo que aprendes, ámbar lo que repasas, rojo lo que fallaste. Siete pantallas en lugar de veintitrés.</p>
+  </div>
+</header>
+
+<main class="pg">
+
+  <!-- ====================== EL SISTEMA ====================== -->
+  <section class="doc-sec">
+    <h2>El sistema</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Los azulejos portugueses trabajan con dos colores y una retícula cuadrada. Eso da la paleta, el motivo estructural (los niveles del MCER son seis losetas) y la disciplina: si todo es cobalto y cal, el verde de «dominado» se ve desde el otro lado de la habitación.</p>
+
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#FCFCFA;border-bottom:1px solid var(--rule)"></div><div class="meta"><div class="nm">Cal</div><div class="hx">#FCFCFA · fondo</div></div></div>
+      <div class="sw"><div class="chip" style="background:#16202B"></div><div class="meta"><div class="nm">Tinta azul</div><div class="hx">#16202B · texto</div></div></div>
+      <div class="sw"><div class="chip" style="background:#1B4F8F"></div><div class="meta"><div class="nm">Cobalto</div><div class="hx">#1B4F8F · acento</div></div></div>
+      <div class="sw"><div class="chip" style="background:#2E6B4F"></div><div class="meta"><div class="nm">Aprender</div><div class="hx">#2E6B4F · acierto</div></div></div>
+      <div class="sw"><div class="chip" style="background:#A8690B"></div><div class="meta"><div class="nm">Repasar</div><div class="hx">#A8690B · vencido</div></div></div>
+      <div class="sw"><div class="chip" style="background:#A32B2B"></div><div class="meta"><div class="nm">Error</div><div class="hx">#A32B2B · fallo</div></div></div>
+    </div>
+    <p style="font-size:14px;color:var(--ink-3);margin-bottom:34px">Los seis pares de texto sobre fondo cumplen WCAG AA. Cobalto sobre cal da 8,1:1; verde sobre su fondo suave, 5,3:1; ámbar sobre el suyo, 4,9:1. La auditoría encontró cinco pares que fallaban en el sistema actual — <span style="color:var(--ink-2)">ninguno de éstos falla</span>.</p>
+
+    <h3>Tres voces tipográficas, cada una con un trabajo</h3>
+    <div class="specimen">
+      <div class="spec-row">
+        <div class="spec-lbl">Enseña</div>
+        <div><div class="spec-a">Espero que ele venha à festa.</div>
+        <div class="spec-note">Serifa de gramática de referencia. Todo el portugués, los títulos y la prosa de las lecciones. En producción: <code>Fraunces</code> vía <code>@fontsource</code>, autohospedada.</div></div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-lbl">Opera</div>
+        <div><div class="spec-b">Empezar la ola de hoy · 22 min · 41 tarjetas</div>
+        <div class="spec-note">Sans para todo lo que es control, no contenido: botones, etiquetas, navegación. Nunca lleva portugués.</div></div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-lbl">Mide</div>
+        <div><div class="spec-c">[ˈvɐ.ɲɐ] · B1 · 34/61 · +4 d</div>
+        <div class="spec-note">Monoespaciada para AFI, niveles, intervalos de repaso y cualquier cifra que se alinee en columna.</div></div>
+      </div>
+    </div>
+    <p style="font-size:14px;color:var(--ink-3);margin-top:14px">Hoy las tres fuentes están declaradas y ninguna carga: <code>layout.tsx:18</code> define <code>--font-fraunces</code> con <code>next/font/google</code>, pero <code>globals.css:33</code> pide la familia <code>"Fraunces"</code> por su nombre real, que next/font ofusca. Todo cae a Georgia y system-ui. Es un arreglo de tres líneas.</p>
+  </section>
+
+  <!-- ====================== LA SIMPLIFICACIÓN ====================== -->
+  <section class="doc-sec">
+    <h2>De veintitrés pantallas a siete</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Pediste «más sencilla». La app tiene hoy 23 rutas con <code>page.tsx</code>, cuatro maneras distintas de llegar a un ejercicio y tres de ver tu progreso. La mitad de las entradas dan 404. Esto es lo que queda.</p>
+    <div class="ia-wrap">
+      <table>
+        <thead><tr><th>Pantalla</th><th>Qué hace</th><th>Sustituye a</th></tr></thead>
+        <tbody>
+          <tr><td class="new">Hoy</td><td>Un botón. Dónde estás, qué toca, cuánto falta.</td><td class="old">/, /learn, /review, /practice, /blocks</td></tr>
+          <tr><td class="new">Sesión</td><td>El bucle diario: ejercicio, corrección, calificación FSRS.</td><td class="old">/practicar/srs, /practice/[id], /drill/vocab</td></tr>
+          <tr><td class="new">Producción <span class="tag-new">nueva</span></td><td>Escribes portugués y alguien te corrige con rúbrica.</td><td class="old">— no existía</td></tr>
+          <tr><td class="new">Voz <span class="tag-new">nueva</span></td><td>Escuchas, imitas, comparas. Pares mínimos y AFI.</td><td class="old">— no existía</td></tr>
+          <tr><td class="new">Lectura</td><td>Historias con diccionario emergente y comprensión.</td><td class="old">/stories, /stories/[id]</td></tr>
+          <tr><td class="new">Progreso</td><td>Descriptores demostrados, retención, producción vs. reconocimiento.</td><td class="old">/progreso, /stats, /achievements</td></tr>
+          <tr><td class="new">El libro</td><td>La referencia: niveles, capítulos, lecciones. Consulta, no ruta obligada.</td><td class="old">/libro/…, /lessons/[id], /blocks/[id]</td></tr>
+          <tr><td class="new">Ajustes</td><td>Variante, objetivo diario, copia de seguridad.</td><td class="old">/cuenta ×4, /diagnostic</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:14px;color:var(--ink-3);margin-top:14px">El diagnóstico deja de ser una pantalla y pasa a ser lo primero que ocurre la primera vez que abres la app; hoy termina en un botón que da 404 (<code>DiagnosticResults.tsx:22</code>).</p>
+  </section>
+
+  <!-- ====================== PANTALLAS ====================== -->
+  <section class="doc-sec">
+    <h2>Las pantallas</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Todo el portugués que aparece aquí sale del corpus real del repositorio, en variante europea. Ninguna cifra es de adorno: son las que la app tendría que calcular.</p>
+
+    <div class="screens">
+
+      <!-- ---------- 1. HOY ---------- -->
+      <article class="screen">
+        <div class="phone"><div class="phone-in">
+          <div class="a-bar">
+            <span class="a-brand">Português</span>
+            <div class="a-right"><span class="a-flag">PT&#8209;PT</span></div>
+          </div>
+          <div class="a-body">
+            <p class="a-eyebrow">Martes, 28 de julio</p>
+            <h2 class="a-h1">Vais a medio camino de B1.</h2>
+            <p class="a-sub">Te faltan 27 descriptores para cerrar el nivel. Al ritmo de las últimas cuatro semanas, seis semanas.</p>
+
+            <div class="a-tiles">
+              <div class="a-tile done">A1</div>
+              <div class="a-tile done">A2</div>
+              <div class="a-tile now"><span>B1</span></div>
+              <div class="a-tile">B2</div>
+              <div class="a-tile">C1</div>
+              <div class="a-tile">C2</div>
+            </div>
+            <div class="a-level-line">
+              <span><b>B1</b> · Umbral</span>
+              <span class="num">34 / 61 descriptores</span>
+            </div>
+
+            <button class="a-cta">
+              <span class="t">La ola de hoy <span>&rarr;</span></span>
+              <span class="s">41 tarjetas · 22 min · 12 vencidas</span>
+            </button>
+
+            <div class="a-sec-lbl">Sigues aquí</div>
+            <a class="a-card" href="#">
+              <div class="c-eyebrow">B1 · Capítulo 6 · Lección 3</div>
+              <h4>O conjuntivo depois de «talvez»</h4>
+              <div class="c-meta">Leíste la mitad ayer · 4 conceptos</div>
+              <div class="a-foot"><span class="a-pill learn">Sin terminar</span><span class="a-go">Continuar &rarr;</span></div>
+            </a>
+
+            <div class="a-sec-lbl">Lo que hoy te falta</div>
+            <a class="a-card" href="#">
+              <div class="c-eyebrow">Producción escrita</div>
+              <h4>Escribe sobre una discusión</h4>
+              <div class="c-meta">80–120 palabras · corrección en el momento</div>
+              <div class="a-foot"><span class="a-pill cob">2 descriptores</span><span class="a-go">Empezar &rarr;</span></div>
+            </a>
+            <a class="a-card" href="#">
+              <div class="c-eyebrow">Lectura · 4 min</div>
+              <h4>O debate no café</h4>
+              <div class="c-meta">312 palabras · 9 palabras nuevas para ti</div>
+              <div class="a-foot"><span class="a-pill review">Vence mañana</span><span class="a-go">Leer &rarr;</span></div>
+            </a>
+          </div>
+        </div></div>
+        <div class="notes">
+          <p class="n-kicker">Pantalla 1 · Hoy</p>
+          <h3>Una sola decisión al abrir</h3>
+          <p>La portada actual tiene racha, minutos, barra de XP, un CTA, una tarjeta de continuar, un índice de diez capítulos y dos tarjetas más. Aquí hay una frase que te sitúa, seis losetas y un botón. Todo lo demás es «lo que hoy te falta», y son como mucho dos cosas.</p>
+          <p>Las seis losetas son el azulejo del sistema y también el dato más importante de la app: en qué nivel estás de verdad. La loseta actual se llena por abajo según el porcentaje de descriptores demostrados.</p>
+          <ul class="fixes">
+            <li><b>Mata la barra de XP.</b> Hoy <code>XpBar.tsx:41</code> reparte A1–C2 a 500 XP por escalón: se llega a «C2» antes del Bloque 3. Se sustituye por descriptores demostrados sobre el total del nivel.</li>
+            <li><b>La racha deja de ser una métrica de portada.</b> Castiga al que se va de viaje y no dice nada de lo que sabes.</li>
+            <li><b>«Sigues aquí» apunta a una ruta que existe.</b> Hoy <code>ContinueLessonCard.tsx:19</code> y las diez filas del índice llevan a <code>/blocks/{n}</code> → 404.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ---------- 2. SESIÓN ---------- -->
+      <article class="screen">
+        <div class="phone"><div class="phone-in">
+          <div class="a-prog"><i style="width:38%"></i></div>
+          <div class="a-ex-head"><span>16 / 41</span><span>CORRIGE EL ERROR</span><span>08:12</span></div>
+          <div class="a-body" style="padding-top:8px">
+            <p class="a-task">Hay un castellanismo en esta frase</p>
+            <p class="a-sentence">Espero que ele <span class="bad">venga</span> à festa amanhã.</p>
+            <div class="a-answer">Espero que ele <span class="good">venha</span> à festa amanhã.</div>
+
+            <div class="a-fb ok">
+              <p class="fb-t">Correcto</p>
+              <p>Tras «esperar que» va conjuntivo, y la forma portuguesa es <b>venha</b>, no la española «venga».</p>
+            </div>
+
+            <div class="a-contrast">
+              <div class="ct">Español → Portugués</div>
+              <p>Los dos idiomas piden subjuntivo aquí. Lo que cambia es la forma: <b>ven<u>g</u>a</b> → <b>ven<u>h</u>a</b>. La misma correspondencia <span class="a-ipa">-ñ- → -nh-</span> del capítulo 1.</p>
+            </div>
+
+            <div class="a-sec-lbl">¿Cuándo lo vuelves a ver?</div>
+            <div class="a-grade">
+              <button class="a-gbtn again"><div class="g1">Otra vez</div><div class="g2">1 min</div><div class="g3">1</div></button>
+              <button class="a-gbtn"><div class="g1">Difícil</div><div class="g2">2 d</div><div class="g3">2</div></button>
+              <button class="a-gbtn good"><div class="g1">Bien</div><div class="g2">9 d</div><div class="g3">3</div></button>
+              <button class="a-gbtn"><div class="g1">Fácil</div><div class="g2">21 d</div><div class="g3">4</div></button>
+            </div>
+          </div>
+        </div></div>
+        <div class="notes">
+          <p class="n-kicker">Pantalla 2 · Sesión</p>
+          <h3>La corrección es el producto</h3>
+          <p>Los sesenta ejercicios de corrección de errores son lo mejor que hay en el corpus —el lingüista los revisó uno por uno y los sesenta son correctos— y hoy se muestran sin nada alrededor. Aquí el error va marcado en la frase, la corrección se ve al lado, y el contraste con el español ocupa su propio bloque porque es la razón de ser de esta app frente a Duolingo.</p>
+          <p>Los cuatro botones dicen <em>cuándo vuelve la tarjeta</em>, no «fácil/difícil» a secas. Es la información que el alumno necesita para calificarse con honestidad.</p>
+          <ul class="fixes">
+            <li><b>Estas respuestas se guardan.</b> Hoy no: <code>SessionScreen.tsx:7</code> declara que la calificación FSRS «lands in a follow-up» y <code>PracticarSrsInner.tsx</code> no importa <code>submitAnswer</code>. Nada de lo que haces en el repaso diario se recuerda.</li>
+            <li><b>Los intervalos son reales.</b> Hoy son <code>PLACEHOLDER_INTERVALS_MS</code> fijos: 1 min / 2 d / 4 d / 7 d para todo el mundo y toda tarjeta.</li>
+            <li><b>1.587 campos <code>esContrast</code> dejan de estar escondidos.</b> Ya existen y son buenos; sólo hay que enseñarlos.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ---------- 3. PRODUCCIÓN ---------- -->
+      <article class="screen">
+        <div class="phone"><div class="phone-in">
+          <div class="a-bar"><span class="a-brand">Producción escrita</span>
+            <div class="a-right"><span class="a-flag">B1</span></div></div>
+          <div class="a-body">
+            <div class="a-prompt">
+              <div class="pt">Tarea · 80–120 palabras</div>
+              <p>Conta uma discussão que tiveste com um amigo sobre um tema banal. Usa pelo menos duas vezes o conjuntivo e uma vez «apesar de».</p>
+            </div>
+
+            <div class="a-textarea">Ontem discuti com o meu irmão sobre se vale mais a pena ler ou viajar. Ele acha que viajar ensina mais, embora eu não concorde. Disse-lhe que, apesar de as viagens serem importantes, os livros levam-nos a sítios que nunca vamos visitar. Talvez ele tenha alguma razão, mas<span class="caret"></span></div>
+            <div class="a-count"><span>68 palabras · 2 de 3 requisitos</span><span>conjuntivo ×2 ✓</span></div>
+
+            <div class="a-sec-lbl">Cómo se va a corregir</div>
+            <div class="a-rubric">
+              <div class="a-rub-row">
+                <div class="rn">Cumple la tarea<small>Cuenta una discusión, usa las tres estructuras pedidas</small></div>
+                <div class="a-dots"><i class="a-dot on"></i><i class="a-dot on"></i><i class="a-dot warn"></i><i class="a-dot"></i></div>
+              </div>
+              <div class="a-rub-row">
+                <div class="rn">Corrección gramatical<small>Concordancia, régimen, tiempos</small></div>
+                <div class="a-dots"><i class="a-dot on"></i><i class="a-dot on"></i><i class="a-dot on"></i><i class="a-dot"></i></div>
+              </div>
+              <div class="a-rub-row">
+                <div class="rn">Riqueza léxica<small>Variedad y precisión, sin repetir</small></div>
+                <div class="a-dots"><i class="a-dot on"></i><i class="a-dot on"></i><i class="a-dot"></i><i class="a-dot"></i></div>
+              </div>
+              <div class="a-rub-row">
+                <div class="rn">Portugués europeo<small>Ênclise, léxico y ortografía de Portugal</small></div>
+                <div class="a-dots"><i class="a-dot on"></i><i class="a-dot on"></i><i class="a-dot on"></i><i class="a-dot on"></i></div>
+              </div>
+            </div>
+            <p style="font-size:13px;color:var(--ink-3);margin-top:12px;line-height:1.5">La rúbrica se ve <em>antes</em> de escribir: es la consigna, no el veredicto.</p>
+          </div>
+        </div></div>
+        <div class="notes">
+          <p class="n-kicker">Pantalla 3 · Producción escrita <span class="tag-new">nueva</span></p>
+          <h3>La destreza que vale cero</h3>
+          <p>De 2.037 ejercicios, <b>ninguno</b> pide escribir portugués libremente. Los 806 que piden escribir algo tienen una mediana de siete palabras y se corrigen comparando cadenas con <code>===</code>. C2 se define por lo que produces, así que sin esto la meta es inalcanzable por construcción.</p>
+          <p>La rúbrica se enseña antes de escribir porque así el alumno sabe qué se le pide; y la cuarta fila —portugués europeo— es la que convierte tu decisión de variante en algo que el producto verifica en cada tarea, no en una etiqueta.</p>
+          <ul class="fixes">
+            <li><b><code>ProductionCard.tsx</code> ya existe</b> y es código inalcanzable: cero ítems del corpus llevan la etiqueta <code>production</code>. Falta el contenido, no la interfaz.</li>
+            <li><b>Se retira la promesa falsa.</b> Hoy la app dice «Feedback diferido en 24 h», recoge el texto y lo escribe en una tabla de telemetría que nadie lee.</li>
+            <li><b>El contador cuenta requisitos, no caracteres.</b> Un contador de palabras no enseña; saber que te falta «apesar de», sí.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ---------- 4. VOZ ---------- -->
+      <article class="screen">
+        <div class="phone"><div class="phone-in">
+          <div class="a-bar"><span class="a-brand">Voz</span>
+            <div class="a-right"><span class="a-flag">Par mínimo</span></div></div>
+          <div class="a-body">
+            <p class="a-eyebrow">Vocales que el español no distingue</p>
+            <h2 class="a-h1">avô &nbsp;·&nbsp; avó</h2>
+            <p class="a-sub">Abuelo y abuela sólo se distinguen por la vocal. En español las dos serían la misma /o/.</p>
+
+            <div class="a-card" style="margin-bottom:8px">
+              <div class="c-eyebrow">Cerrada · circunflejo</div>
+              <h4>avô <span class="a-ipa">[ɐˈvo]</span></h4>
+              <div class="a-wave-lbl" style="margin-top:12px"><span>Modelo · Lisboa</span><span>0:01</span></div>
+              <div class="a-wave"><i style="height:22%"></i><i style="height:41%"></i><i style="height:68%"></i><i style="height:88%"></i><i style="height:74%"></i><i style="height:52%"></i><i style="height:36%"></i><i style="height:24%"></i><i style="height:44%"></i><i style="height:62%"></i><i style="height:47%"></i><i style="height:29%"></i><i style="height:18%"></i><i style="height:12%"></i></div>
+            </div>
+
+            <div class="a-card">
+              <div class="c-eyebrow">Abierta · acento agudo</div>
+              <h4>avó <span class="a-ipa">[ɐˈvɔ]</span></h4>
+              <div class="a-wave-lbl" style="margin-top:12px"><span>Tu grabación</span><span>0:01</span></div>
+              <div class="a-wave mine"><i style="height:18%"></i><i style="height:36%"></i><i style="height:78%"></i><i style="height:92%"></i><i style="height:83%"></i><i style="height:61%"></i><i style="height:39%"></i><i style="height:27%"></i><i style="height:33%"></i><i style="height:48%"></i><i style="height:35%"></i><i style="height:21%"></i><i style="height:14%"></i><i style="height:9%"></i></div>
+            </div>
+
+            <button class="a-rec"><span class="dot"></span> Grabar de nuevo</button>
+
+            <div class="a-contrast" style="margin-top:24px">
+              <div class="ct">Cuidado</div>
+              <p>Esta distinción existe igual en Brasil y en Portugal: <b>no es una diferencia entre países</b>. Es una oposición de altura vocálica que el español no tiene.</p>
+            </div>
+          </div>
+        </div></div>
+        <div class="notes">
+          <p class="n-kicker">Pantalla 4 · Voz <span class="tag-new">nueva</span></p>
+          <h3>Lo único que no se puede aprender leyendo</h3>
+          <p>Cero ejercicios de producción oral en todo el corpus, aunque <code>ShadowingCard.tsx</code> y <code>lib/exercises/recorder.ts</code> están escritos. Comparar tu onda con la del modelo no es una métrica seria de pronunciación, pero es la retroalimentación que hace que alguien repita — y repetir es lo que enseña.</p>
+          <p>El aviso de abajo corrige un error real del contenido actual: el corpus enseña que <em>avó/avô</em> es una diferencia entre Brasil y Portugal. No lo es.</p>
+          <ul class="fixes">
+            <li><b>Los pares mínimos son el ejercicio, no un adorno.</b> Hoy no hay ninguno: la reducción vocálica europea —lo único que explica por qué no entiendes a un lisboeta— tiene <b>cero menciones</b> en todo el corpus, y <span class="a-ipa">/ɨ/</span> aparece una vez.</li>
+            <li><b>Saltar la grabación deja de contar como acierto.</b></li>
+            <li><b>El AFI en monoespaciada</b> y siempre junto al audio, nunca solo.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ---------- 5. LECTURA ---------- -->
+      <article class="screen">
+        <div class="phone"><div class="phone-in">
+          <div class="a-bar"><span class="a-brand">O debate no café</span>
+            <div class="a-right"><span class="a-flag">PT&#8209;PT</span></div></div>
+          <div class="a-body">
+            <p class="a-eyebrow">312 palabras · 4 min · B1</p>
+            <div class="a-story">
+              <p>Na segunda-feira, a Mariana chegou ao café da esquina e encontrou o Lucas e a Ana já sentados na <span class="w">mesa de fora</span>.</p>
+              <p>«Eu acho que ler é mais importante do que viajar», afirmou a Ana. «Os livros <span class="w hot">levam-nos</span> a mundos que nunca vamos visitar.»</p>
+            </div>
+
+            <div class="a-pop">
+              <div class="pw">levam-nos</div>
+              <div class="pi">[ˈle.vɐ̃w̃ nuʃ] · levar + nos</div>
+              <div class="pd">«nos llevan». En Portugal el pronombre va <b>detrás</b> del verbo y unido con guion. En Brasil sería <b>«nos levam»</b>, delante — que es también lo que dirías en español.</div>
+            </div>
+
+            <div class="a-story">
+              <p>O Lucas não concordou; ele acha que viajar é a melhor escola. A Mariana então <span class="w">meteu-se</span> na discussão e contou que tinha lido um artigo sobre esse tema.</p>
+              <p>No fim, concordaram que tanto os livros quanto as viagens alimentam a alma. Todos <span class="w">acharam piada</span> e prometeram encontrar-se de novo.</p>
+            </div>
+
+            <div class="a-sec-lbl">¿Lo entendiste?</div>
+            <div class="a-q">
+              <p class="qt">Porque é que a Ana defende a leitura?</p>
+              <div class="a-opt"><span class="k">A</span> Porque não gosta de viajar.</div>
+              <div class="a-opt sel"><span class="k">B</span> Porque os livros levam-nos a sítios inalcançáveis.</div>
+              <div class="a-opt"><span class="k">C</span> Porque estuda letras na universidade.</div>
+            </div>
+            <p style="font-size:13px;color:var(--ink-3);margin-top:10px;line-height:1.5">La pregunta va en portugués. La ayuda del diccionario, en español.</p>
+          </div>
+        </div></div>
+        <div class="notes">
+          <p class="n-kicker">Pantalla 5 · Lectura</p>
+          <h3>El mejor activo del repositorio, desperdiciado</h3>
+          <p>Las veinte historias están escritas en portugués europeo genuinamente bueno —ênclise natural, <em>pequeno-almoço</em>, <em>acharam piada</em>— y hoy la pantalla que las muestra <b>crashea</b>: lee <code>story.variants["pt-br"]</code> y los veinte JSON tienen las claves <code>["br","pt"]</code>. Ninguna es alcanzable.</p>
+          <p>Cuando se arregle, siguen sin tener una sola pregunta de comprensión ni una tarea. Son 3.969 palabras en todo el curso: el input conectado es el cuello de botella real hacia C2, y es lo más barato de multiplicar.</p>
+          <ul class="fixes">
+            <li><b>El diccionario emergente enseña la variante.</b> <code>variantHighlights</code> ya está en el esquema de las historias y no lo renderiza nadie — aquí es la mitad del valor de la pantalla.</li>
+            <li><b>Comprensión en portugués.</b> Los 180 ejercicios de escucha actuales preguntan en español, y 38 preguntan por metalingüística («¿cuál es el conector consecutivo?»).</li>
+            <li><b>Lectura extensiva con series encadenadas</b> y personajes que vuelven: es lo que hace que alguien lea 2.000 palabras en vez de 300.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ---------- 6. PROGRESO ---------- -->
+      <article class="screen">
+        <div class="phone"><div class="phone-in">
+          <div class="a-bar"><span class="a-brand">Progreso</span>
+            <div class="a-right"><span class="a-flag">B1</span></div></div>
+          <div class="a-body">
+            <p class="a-eyebrow">Cuánto te falta para B2</p>
+            <h2 class="a-h1">34 de 61</h2>
+            <p class="a-sub">Descriptores demostrados con al menos dos evidencias distintas. Sólo cuentan las tareas, no las tarjetas.</p>
+
+            <div class="a-tiles" style="margin-bottom:22px">
+              <div class="a-tile done">A1</div><div class="a-tile done">A2</div>
+              <div class="a-tile now"><span>B1</span></div><div class="a-tile">B2</div>
+              <div class="a-tile">C1</div><div class="a-tile">C2</div>
+            </div>
+
+            <div class="a-metric">
+              <div class="a-met"><div class="mv" style="color:var(--learn)">87%</div><div class="ml">Retienes a 7 días</div></div>
+              <div class="a-met"><div class="mv" style="color:var(--review)">1 : 6</div><div class="ml">Produces vs. reconoces</div></div>
+            </div>
+
+            <div class="a-sec-lbl">B1 · Lo que ya sabes hacer</div>
+            <div class="a-desc">
+              <div class="a-drow"><span class="a-check on"></span><span class="dt">Sigo una conversación entre dos portugueses sobre un tema cotidiano.</span><span class="dn">4 ev.</span></div>
+              <div class="a-drow"><span class="a-check on"></span><span class="dt">Cuento una experiencia pasada y explico por qué me importó.</span><span class="dn">3 ev.</span></div>
+              <div class="a-drow"><span class="a-check on"></span><span class="dt">Uso el conjuntivo tras expresiones de duda y de deseo.</span><span class="dn">7 ev.</span></div>
+              <div class="a-drow off"><span class="a-check"></span><span class="dt">Resumo en español lo esencial de un texto en portugués.</span><span class="dn">0 ev.</span></div>
+              <div class="a-drow off"><span class="a-check"></span><span class="dt">Sostengo una discusión y defiendo mi opinión con ejemplos.</span><span class="dn">1 ev.</span></div>
+            </div>
+            <p style="font-size:13px;color:var(--ink-3);margin-top:12px;line-height:1.5">Los dos últimos son de mediación e interacción: hoy la app no tiene ninguna tarea que los demuestre.</p>
+          </div>
+        </div></div>
+        <div class="notes">
+          <p class="n-kicker">Pantalla 6 · Progreso</p>
+          <h3>«¿Cuánto me falta para B2?» con una respuesta verdadera</h3>
+          <p>Es la pregunta que sostiene un proyecto de años, y hoy la app se la inventa: reparte los seis niveles del MCER a 500 XP cada uno. Aquí un descriptor se marca como demostrado cuando hay dos evidencias independientes, y se ve cuántas llevas.</p>
+          <p>Las dos métricas de arriba ya existen en <code>/progreso</code> y están bien elegidas —retención a siete días y producción frente a reconocimiento—, con un comentario en el código que explica por qué se comparó semana contra semana «para mantenernos honestos con la ventana». Eso se conserva tal cual.</p>
+          <ul class="fixes">
+            <li><b>Los descriptores no demostrados son la lista de tareas.</b> Un hueco visible es una recomendación de contenido, no un castigo.</li>
+            <li><b>1 : 6 es una acusación al corpus,</b> no al alumno: hoy la proporción real es peor, porque cero ejercicios son de producción libre.</li>
+            <li><b>Se fusionan <code>/stats</code> y <code>/achievements</code> aquí.</b> Tres pantallas para el mismo tema es la razón de que ninguna se lea.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ---------- 7. EL LIBRO ---------- -->
+      <article class="screen">
+        <div class="phone"><div class="phone-in">
+          <div class="a-bar"><span class="a-brand">El libro</span>
+            <div class="a-right"><span class="a-flag">PT&#8209;PT</span></div></div>
+          <div class="a-body">
+            <p class="a-eyebrow">Referencia · consulta libre</p>
+            <h2 class="a-h1">Todo, ordenado por nivel</h2>
+            <p class="a-sub">No tienes que pasar por aquí para estudiar. Está para cuando quieras mirar algo.</p>
+
+            <div class="a-lvlband"><span class="lb">A2</span><span class="lx">completo</span></div>
+            <a class="a-ch" href="#"><span class="cn">04</span>
+              <span><span class="cname">Pretérito perfeito e imperfeito</span><span class="cmeta">6 lecciones · 280 ejercicios</span></span>
+              <span class="a-mini"><i style="width:100%"></i></span></a>
+            <a class="a-ch" href="#"><span class="cn">05</span>
+              <span><span class="cname">Futuros y condicional</span><span class="cmeta">5 lecciones · 229 ejercicios</span></span>
+              <span class="a-mini"><i style="width:100%"></i></span></a>
+
+            <div class="a-lvlband"><span class="lb">B1</span><span class="lx">estás aquí</span></div>
+            <a class="a-ch" href="#"><span class="cn">06</span>
+              <span><span class="cname">O conjuntivo</span><span class="cmeta">8 lecciones · 285 ejercicios</span></span>
+              <span class="a-mini"><i style="width:62%"></i></span></a>
+            <a class="a-ch" href="#"><span class="cn">07</span>
+              <span><span class="cname">Pronomes e colocação</span><span class="cmeta">5 lecciones · 173 ejercicios</span></span>
+              <span class="a-mini"><i style="width:8%"></i></span></a>
+
+            <div class="a-lvlband"><span class="lb">B2</span><span class="lx">bloqueado hasta cerrar B1</span></div>
+            <a class="a-ch locked" href="#"><span class="cn">08</span>
+              <span><span class="cname">Sintaxis compleja y conectores</span><span class="cmeta">6 lecciones · 228 ejercicios</span></span>
+              <span class="a-mini"><i style="width:0%"></i></span></a>
+            <a class="a-ch locked" href="#"><span class="cn">09</span>
+              <span><span class="cname">Léxico temático</span><span class="cmeta">campo abierto · sin examen</span></span>
+              <span class="a-mini"><i style="width:0%"></i></span></a>
+
+            <div class="a-sec-lbl">Además</div>
+            <a class="a-card" href="#">
+              <div class="c-eyebrow">Consulta rápida</div>
+              <h4>Falsos amigos ES ↔ PT</h4>
+              <div class="c-meta">118 pares · embaraçada, esquisito, oficina, borracha…</div>
+            </a>
+          </div>
+        </div></div>
+        <div class="notes">
+          <p class="n-kicker">Pantalla 7 · El libro</p>
+          <h3>Dos ejes, uno manda</h3>
+          <p>El currículo actual son diez capítulos de gramática y el eje nuevo son seis niveles. No compiten: los niveles agrupan a los capítulos, y el nivel es el que decide qué está abierto. Así el alumno tiene una meta («cerrar B1») y a la vez un sitio donde consultar «cómo iba el futuro do conjuntivo».</p>
+          <p>Y es una referencia, no una ruta obligada: se llega a estudiar desde «Hoy», no desde aquí. Eso es lo que permite que la portada tenga un solo botón.</p>
+          <ul class="fixes">
+            <li><b>Las rutas existen.</b> Hoy <code>/libro</code> y <code>/libro/[chapter]</code> no tienen <code>page.tsx</code>, y <code>blocks/page.tsx</code> redirige ahí con un 308. Todo el índice da 404.</li>
+            <li><b>El glosario deja de estar muerto.</b> <code>glossary.json</code> tiene 118 pares de falsos amigos y no lo importa ninguna pantalla.</li>
+            <li><b>El capítulo 9 se declara lo que es:</b> campo abierto de léxico, sin ejercicios propios. Hoy aparece como un capítulo más y está vacío.</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="pg">
+    <b>Sobre estos mockups.</b> Todo el portugués sale del corpus real del repositorio, en variante europea: la frase del conjuntivo es <code>b6.json</code>, la historia es <code>b8-s1-o-debate-entre-amigos-no-cafe.json</code>. Las cifras de ejercicios por capítulo son las reales. Los datos de progreso son ilustrativos y están marcados como tales en el texto.<br>
+    <b>Qué falta para implementarlos.</b> Los tokens de <code>app/globals.css</code> pasan de papel cálido a cal y cobalto; el arreglo de las tres fuentes son tres líneas en <code>layout.tsx</code>; y las pantallas 3 y 4 necesitan contenido que hoy no existe — la interfaz ya está escrita en <code>ProductionCard.tsx</code> y <code>ShadowingCard.tsx</code>.
+  </div>
+</footer>

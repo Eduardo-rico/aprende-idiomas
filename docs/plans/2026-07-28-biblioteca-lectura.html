@@ -1,0 +1,290 @@
+<title>La Biblioteca — leer en portugués desde el primer día</title>
+<style>
+:root{
+  --cal:#FCFCFA;--surface:#FFFFFF;--sunken:#EFF2F6;
+  --ink:#16202B;--ink-2:#55636F;--ink-3:#8794A0;
+  --rule:#DDE3E9;--rule-2:#C3CDD7;
+  --cobalt:#1B4F8F;--cobalt-soft:#E8EFF7;--cobalt-line:#B6CBE2;
+  --learn:#2E6B4F;--learn-soft:#E6F0EA;
+  --review:#A8690B;--review-soft:#F8F0E0;
+  --error:#A32B2B;--error-soft:#F8ECEC;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root{
+  --cal:#0C1218;--surface:#131C24;--sunken:#0F171E;--ink:#E9EEF2;--ink-2:#93A2AF;--ink-3:#6C7C8A;
+  --rule:#202D38;--rule-2:#2E3E4B;--cobalt:#7FB2EC;--cobalt-soft:#142334;--cobalt-line:#2A415B;
+  --learn:#58BC90;--learn-soft:#122318;--review:#E0A544;--review-soft:#241C0E;
+  --error:#F2827C;--error-soft:#251415;}}
+:root[data-theme="dark"]{--cal:#0C1218;--surface:#131C24;--sunken:#0F171E;--ink:#E9EEF2;--ink-2:#93A2AF;
+  --ink-3:#6C7C8A;--rule:#202D38;--rule-2:#2E3E4B;--cobalt:#7FB2EC;--cobalt-soft:#142334;--cobalt-line:#2A415B;
+  --learn:#58BC90;--learn-soft:#122318;--review:#E0A544;--review-soft:#241C0E;--error:#F2827C;--error-soft:#251415;}
+:root[data-theme="light"]{--cal:#FCFCFA;--surface:#FFFFFF;--sunken:#EFF2F6;--ink:#16202B;--ink-2:#55636F;
+  --ink-3:#8794A0;--rule:#DDE3E9;--rule-2:#C3CDD7;--cobalt:#1B4F8F;--cobalt-soft:#E8EFF7;--cobalt-line:#B6CBE2;
+  --learn:#2E6B4F;--learn-soft:#E6F0EA;--review:#A8690B;--review-soft:#F8F0E0;--error:#A32B2B;--error-soft:#F8ECEC;}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--cal);color:var(--ink);font-family:var(--serif);font-size:17px;
+  line-height:1.62;-webkit-font-smoothing:antialiased}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px;border-radius:2px}
+.pg{max-width:900px;margin:0 auto;padding:0 24px}
+.col{max-width:66ch}
+p{margin:0 0 17px}
+code{font-family:var(--mono);font-size:.84em;background:var(--sunken);border:1px solid var(--rule);
+  border-radius:3px;padding:.08em .34em;color:var(--ink-2)}
+.kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 16px}
+h1{font-size:clamp(30px,5.2vw,46px);line-height:1.07;letter-spacing:-.024em;margin:0 0 18px;
+  font-weight:600;text-wrap:balance}
+h2{font-size:28px;letter-spacing:-.02em;margin:0 0 6px;font-weight:600;text-wrap:balance}
+h3{font-size:20px;letter-spacing:-.015em;margin:0 0 10px;font-weight:600}
+.lede{font-size:20px;color:var(--ink-2);margin:0;text-wrap:pretty}
+.lede strong{color:var(--ink);font-weight:600}
+.rule-sm{width:32px;height:2px;background:var(--cobalt);margin:0 0 22px}
+.dek{color:var(--ink-2);margin:0 0 26px;font-size:16.5px;font-family:var(--sans)}
+header.mast{border-bottom:1px solid var(--rule);padding:56px 0 34px;margin-bottom:50px}
+section{margin:0 0 68px}
+
+.board{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:1px;background:var(--rule);
+  border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin:30px 0 0}
+.bt{background:var(--surface);padding:15px}
+.bt .n{font-family:var(--mono);font-size:25px;line-height:1;font-variant-numeric:tabular-nums;
+  font-weight:500;color:var(--cobalt);letter-spacing:-.02em}
+.bt .l{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--ink-3);margin-top:7px;line-height:1.35}
+
+.tw{overflow-x:auto;border:1px solid var(--rule);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px;font-family:var(--sans)}
+th,td{text-align:left;padding:11px 15px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:500;background:var(--sunken);white-space:nowrap}
+tbody tr:last-child td{border-bottom:none}
+td.num,th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:14px}
+tr.total td{background:var(--sunken);font-weight:600}
+.lv{font-family:var(--mono);font-size:11.5px;font-weight:600;border-radius:4px;padding:2px 7px;
+  border:1px solid currentColor;white-space:nowrap;color:var(--cobalt);background:var(--cobalt-soft)}
+
+/* aviso jurídico */
+.alert{border:1px solid var(--review);background:var(--review-soft);border-radius:11px;padding:22px 24px;margin:0 0 24px}
+.alert .at{font-family:var(--mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--review);font-weight:600;margin-bottom:10px}
+.alert p{font-family:var(--sans);font-size:15.5px;color:var(--ink-2);margin:0 0 12px;line-height:1.55}
+.alert p:last-child{margin-bottom:0}
+.alert b{color:var(--ink)}
+
+/* poemas */
+.poem{background:var(--surface);border:1px solid var(--rule);border-radius:11px;padding:22px 24px;margin:0 0 16px}
+.poem .pt-title{font-size:19px;font-weight:600;letter-spacing:-.014em;margin:0 0 3px}
+.poem .pmeta{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--ink-3);margin:0 0 16px}
+.poem .verse{font-size:19.5px;line-height:1.72;margin:0 0 14px;padding-left:16px;
+  border-left:2px solid var(--cobalt-line);white-space:pre-line}
+.poem .gloss{font-family:var(--sans);font-size:14.5px;color:var(--ink-3);font-style:italic;margin:0 0 14px;line-height:1.5}
+.poem .why{font-family:var(--sans);font-size:15px;color:var(--ink-2);margin:0;line-height:1.55;
+  padding-top:14px;border-top:1px solid var(--rule)}
+.poem .why b{color:var(--ink);font-weight:600}
+.badge{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+  border:1px solid var(--cobalt);color:var(--cobalt);background:var(--cobalt-soft);border-radius:999px;
+  padding:2px 8px;margin-left:8px;vertical-align:2px}
+
+/* flujo de sesión */
+.flow{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.fstep{flex:1;min-width:118px;background:var(--surface);border:1px solid var(--rule);border-radius:9px;
+  padding:13px 14px;font-family:var(--sans)}
+.fstep.hi{border-color:var(--cobalt);background:var(--cobalt-soft)}
+.fstep .fn{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-3);margin-bottom:5px}
+.fstep.hi .fn{color:var(--cobalt)}
+.fstep .ft{font-size:14.5px;font-weight:600;line-height:1.3}
+
+.nots{list-style:none;margin:0;padding:0}
+.nots li{border-top:1px solid var(--rule);padding:15px 0 15px 26px;position:relative;
+  font-size:15.5px;color:var(--ink-2);font-family:var(--sans);line-height:1.55}
+.nots li:last-child{border-bottom:1px solid var(--rule)}
+.nots li::before{content:"";position:absolute;left:0;top:1.35em;width:13px;height:2px;background:var(--error)}
+.nots li b{color:var(--ink);font-weight:600}
+
+.quote{border-left:2px solid var(--cobalt);padding:4px 0 4px 18px;margin:0 0 20px;font-size:17px;color:var(--ink-2)}
+.quote b{color:var(--ink);font-weight:600}
+
+footer{border-top:1px solid var(--rule);margin-top:20px;padding:28px 0 60px;
+  font-family:var(--mono);font-size:12px;color:var(--ink-3);line-height:1.7}
+footer b{color:var(--ink-2);font-weight:500}
+@media (max-width:620px){body{font-size:16px}.poem .verse{font-size:18px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<header class="mast"><div class="pg">
+  <p class="kicker">Anexo del plan · 28 jul 2026 · aprende-idiomas</p>
+  <h1>La Biblioteca</h1>
+  <p class="lede col">Poemas, cuentos, fábulas, chistes y novela, escritos y en audio, por nivel. Sustituye las <strong>3.969 palabras</strong> de lectura conectada que hoy tiene todo el curso de portugués por <strong>145.130 palabras en 443 piezas</strong>. Y la decisión que la ordena entera es que <strong>no es una pestaña</strong>.</p>
+  <div class="board">
+    <div class="bt"><div class="n">443</div><div class="l">piezas</div></div>
+    <div class="bt"><div class="n">145k</div><div class="l">palabras · ×36</div></div>
+    <div class="bt"><div class="n">59</div><div class="l">autores libres</div></div>
+    <div class="bt"><div class="n">16</div><div class="l">autores caídos</div></div>
+    <div class="bt"><div class="n">16,9</div><div class="l">horas de audio</div></div>
+  </div>
+</div></header>
+
+<main class="pg">
+
+  <section>
+    <h2>No es una pestaña. Es el final de la lección.</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Es la decisión de producto más importante del documento, y es contraintuitiva: una biblioteca a la que hay que <em>entrar</em> compite con la racha, y pierde siempre.</p>
+    <div class="flow">
+      <div class="fstep"><div class="fn">18–20 min</div><div class="ft">Lección</div></div>
+      <div class="fstep"><div class="fn">después</div><div class="ft">Repaso</div></div>
+      <div class="fstep hi"><div class="fn">ya desbloqueada</div><div class="ft">La pieza de hoy</div></div>
+      <div class="fstep"><div class="fn">fin</div><div class="ft">Racha cerrada</div></div>
+    </div>
+    <p class="col"><strong>La racha se cierra antes de la pieza.</strong> Si el alumno la salta, no pierde nada. Ésa es la única forma de que la lea por gusto — y por tanto la única forma de saber si le gusta. Dos botones: <em>Ler</em> y <em>Ouvir</em> (sólo audio, para el metro). Sin catálogo que explorar, sin niveles visibles, sin «recomendado para ti»: un lector adulto que abre a las once de la noche no quiere elegir.</p>
+    <div class="quote col">Pero no es un adorno: <b>es la lectura conectada del curso.</b> En A1 la Biblioteca es el 87 % de las palabras de lectura del nivel; en A2, el 72 %; en B1, el 79 %. Lo que el alumno percibe como «lo que leo por gusto» es exactamente lo que el currículo cuenta como input. <b>El input se disfraza de placer y por eso se consume.</b></div>
+    <p class="col">La pestaña existe, pero es el <strong>archivo</strong>: lo ya leído, con las novelas y su progreso. Es donde se vuelve, no por donde se entra.</p>
+  </section>
+
+  <section>
+    <h2>No hay un punto de corte. Hay cuatro.</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Dónde deja de haber que escribir y empieza a poder leerse obra real. No es el mismo nivel en poesía que en novela, y confundirlos es el error caro.</p>
+    <div class="tw"><table>
+      <thead><tr><th>Género</th><th>Corte</th><th>Por qué ahí</th></tr></thead>
+      <tbody>
+        <tr><td><b>Poesía</b></td><td><span class="lv">A1</span></td><td>La excepción que rompe el patrón. El <em>trava-língua</em> es el único texto auténtico que funciona con 300 palabras, <b>porque su objetivo declarado no es entender</b>. «O rato roeu a rolha da garrafa do rei da Rússia» es incomprensible para un A1 y es perfecto: entrena la vibrante, el ataque consonántico y el /ʃ/ final, y el alumno sabe que está diciendo un juego, no fracasando en una lectura. Verso de autor, en cambio, hasta B2.</td></tr>
+        <tr><td><b>Cuento</b></td><td><span class="lv">B1</span></td><td>Adaptado en A2, íntegro en B1 — un <em>conto</em> de Adolfo Coelho sin adaptar es la primera obra real completa de su vida en portugués. Literario, B2: «O Tesouro» de Eça es el objeto exacto del corte.</td></tr>
+        <tr><td><b>Humor</b></td><td><span class="lv">B1</span></td><td>En A1 el humor sólo puede ser situacional. El verbal exige léxico, sintaxis, <em>timing</em> y presuposición cultural en un segundo — es la prueba definitiva de que entiendes la lengua.</td></tr>
+        <tr><td><b>Novela</b></td><td><span class="lv">B1</span></td><td>Adaptada y serializada en B1; íntegra en C1. <em>O Mandarim</em> de Eça en 20 entregas es la puerta; <em>Os Maias</em> al 24 %, serializado, es lo que hace la novela financiable.</td></tr>
+      </tbody>
+    </table></div>
+    <p class="dek col" style="margin-top:18px"><strong>El hallazgo incómodo:</strong> no existe un Chéjov portugués. Entre la facécia popular de B1 y Fialho de Almeida en C1 <strong>no hay nada en dominio público</strong> salvo <em>As Farpas</em>. Ese hueco obliga a escribir 12 crónicas propias de B2 — la única prosa propia por encima de B1 en todo el plan. Y es justo el punto que el alumno señaló como aquel donde abandonaría.</p>
+  </section>
+
+  <section>
+    <h2>El verificador tumbó la premisa jurídica</h2>
+    <div class="rule-sm"></div>
+    <div class="alert">
+      <div class="at">Corrección · afecta a lo que se puede publicar</div>
+      <p><b>México protege vida + 100 años</b> (art. 29 LFDA, reforma de 2003): el plazo más largo del mundo. Y <b>Estados Unidos no cuenta por la muerte del autor sino por la publicación</b>: las obras extranjeras restauradas por la URAA están protegidas 95 años desde su primera publicación.</p>
+      <p><b>Regla operativa: autor muerto en 1925 o antes Y obra publicada en 1930 o antes.</b> Es la intersección de las tres jurisdicciones, no aritmética de curador.</p>
+    </div>
+    <div class="tw"><table>
+      <thead><tr><th>Jurisdicción</th><th>Regla</th><th>Frontera en 2026</th></tr></thead>
+      <tbody>
+        <tr><td>Portugal / UE</td><td>vida + 70</td><td>autor muerto ≤ 1955</td></tr>
+        <tr><td><b>México</b></td><td><b>vida + 100</b></td><td><b>autor muerto ≤ 1925</b></td></tr>
+        <tr><td><b>Estados Unidos</b></td><td>95 años desde publicación</td><td><b>publicación ≤ 1930</b></td></tr>
+      </tbody>
+    </table></div>
+    <p class="col" style="margin-top:20px"><strong>La buena noticia es grande: el Lote 1 entero sobrevive.</strong> Eça (†1900), Camilo (†1890), Júlio Dinis (†1871), Garrett (†1854), Cesário Verde (†1886), Junqueiro (†1923), António Nobre (†1900), Adolfo Coelho (†1919), Teófilo Braga (†1924), Bordalo Pinheiro (†1905), Herculano (†1877), Camões, Bocage, Gil Vicente. Limpios en las tres jurisdicciones.</p>
+    <p class="col"><strong>Se caen 16 autores</strong> — Pessoa, Florbela Espanca, António Aleixo, Camilo Pessanha, Ana de Castro Osório, Leite de Vasconcelos, Čapek, Jirásek, Ilf y Petrov entre ellos. Y <strong>7 fichas se retiran por error de hecho</strong>, no por jurisdicción: «Isto» de Pessoa se publicó en 1936, <em>después de la muerte del autor</em>, violando el propio filtro del catálogo; «Fanatismo» es de 1923, no de 1931; Chardron era editor de Porto, no de Lisboa.</p>
+    <p class="col">Lo caro es que los cuatro textos con derechos vivos eran exactamente los cuatro hitos pedagógicos de A2‑B1. Muere el mejor efecto de producto que había: <em>«hoy leíste a Pessoa a las 120 horas de estudio»</em>. Lo sustituyen las quadras anónimas del <em>Cancioneiro</em> de Teófilo Braga — el titular es más débil, pero el hito de B1 sobrevive a cualquier jurisdicción y es más fuerte: <strong>un conto de Adolfo Coelho íntegro, sin adaptar.</strong></p>
+    <div class="alert" style="border-color:var(--cobalt);background:var(--cobalt-soft)">
+      <div class="at" style="color:var(--cobalt)">Decisión abierta · dueño: Edu · bloquea escribir más aparato</div>
+      <p>Si el servicio se presta desde servidores de la UE al amparo de la ley del país de origen, rige vida+70 y el catálogo se abre hasta 1955 — <b>vuelven Pessoa, Florbela, Pessanha, Čapek</b>. Si la jurisdicción es la del usuario, rige vida+100.</p>
+      <p><b>No lo puede cerrar un curador: lo cierra un abogado mexicano</b> leyendo los transitorios de la reforma de 2003.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Lo que hay que escribir</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">51.290 palabras propias de A1 a B2, más 29.600 de adaptación. Las 334 piezas que los cuatro curadores proponían por separado se consolidaron en 236 con <strong>un solo protagonista</strong>: el mexicano que llega a Lisboa — cuya novela por entregas es a la vez la serie del curso y la única novela que el alumno terminará el primer año.</p>
+    <p class="dek col">Cuatro de las doce muestras ya escritas y corregidas por el nativo. Redondilha maior, siete sílabas, rima consonante:</p>
+
+    <div class="poem">
+      <p class="pt-title">A minha mãe <span class="badge">Pieza de referencia</span></p>
+      <p class="pmeta">A1 · 16 formas distintas · 7/7/7/7</p>
+      <p class="verse">A minha mãe telefona
+todos os domingos, cedo.
+Pergunta se tenho frio.
+Digo que não. Tenho medo.</p>
+      <p class="gloss">Mi madre llama por teléfono / todos los domingos, temprano. / Pregunta si tengo frío. / Digo que no. Tengo miedo.</p>
+      <p class="why">El paralelo <b>tenho frio → tenho medo</b> es toda la cuarteta: ella pregunta por el cuerpo, él contesta por otra cosa, y la simetría sintáctica hace el trabajo sin una sola palabra nueva. Un adulto lo entiende entero; un niño no. Y lleva gramática incrustada sin ejercicio: <b>a minha mãe</b>, posesivo con artículo, obligatorio en Portugal y ausente en Brasil.</p>
+    </div>
+
+    <div class="poem">
+      <p class="pt-title">Ao domingo</p>
+      <p class="pmeta">A1 · 17 formas · 7/7/7/7</p>
+      <p class="verse">Ao domingo lavo a roupa,
+ponho a mesa, bebo vinho.
+Não vou a lado nenhum
+e como sempre sozinho.</p>
+      <p class="gloss">Los domingos lavo la ropa, / pongo la mesa, bebo vino. / No voy a ninguna parte / y como siempre solo.</p>
+      <p class="why">El cuarto verso tiene dos lecturas simultáneas y las dos son verdad — «y <b>como</b>, como siempre, solo» y «y como siempre solo». No se traduce sin perder una. Marcador europeo gratis: <b>ao domingo</b> con valor habitual, donde Brasil diría <em>aos domingos</em>.</p>
+    </div>
+
+    <div class="poem">
+      <p class="pt-title">O vizinho</p>
+      <p class="pmeta">A1 · 7/7/7/7 · verso 4 reescrito tras la revisión</p>
+      <p class="verse">O vizinho põe o rádio
+alto, sempre ao jantar.
+Eu não gosto de barulho,
+mas hoje deixo-o tocar.</p>
+      <p class="gloss">El vecino pone la radio / alta, siempre a la hora de cenar. / A mí no me gusta el ruido, / pero hoy dejo que suene.</p>
+      <p class="why">El verso 4 era <em>«mas hoje eu deixo estar»</em>. El nativo lo tumbó: metía un <b>eu</b> de relleno, <em>deixo estar</em> en primera persona es un semi-idiotismo (la fórmula fija es <em>deixa estar</em>), y la escansión oscilaba entre 7 y 6 sílabas según quién lo dijera. La nueva da siete limpias, rima con <em>jantar</em>, elimina el <b>eu</b> y mete <b>ênclise con pronombre acusativo</b>. El <b>Eu</b> del verso 3 se queda: ahí sí hay contraste real con el vecino.</p>
+    </div>
+
+    <div class="poem">
+      <p class="pt-title">O comboio das seis <span class="badge" style="border-color:var(--review);color:var(--review);background:var(--review-soft)">Degradada</span></p>
+      <p class="pmeta">A1 · 20 formas · 7/7/7/7</p>
+      <p class="verse">O comboio das seis chega
+e não me traz mais ninguém.
+Fico na estação na mesma,
+só por ver chegar alguém.</p>
+      <p class="gloss">El tren de las seis llega / y ya no me trae a nadie. / Me quedo en la estación igualmente, / sólo por ver llegar a alguien.</p>
+      <p class="why">Perdió el puesto de apertura por veredicto del alumno: <em>«correcta, medida, y podría haberla escrito cualquiera»</em>. Se queda en el corpus, y su rima <b>ninguém : alguém</b> cuenta contra la cuota de rima por sufijo — una de las dos reglas con control automático que salieron de la revisión, junto con la «epidemia de <b>eu</b>».</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>La prueba que va antes de sintetizar nada</h2>
+    <div class="rule-sm"></div>
+    <div class="alert" style="border-color:var(--learn);background:var(--learn-soft)">
+      <div class="at" style="color:var(--learn)">Día 1 · antes del primer carácter</div>
+      <p><b>El par <code>cedo : medo</code></b> de la cuarteta «A minha mãe». Las dos /e/ son <b>cerradas</b>. Si la voz abre una de las dos, la rima se cae, el mecanismo de autocorrección fonética se invierte y <b>el alumno aprende activamente que <em>avô</em> rima con <em>avó</em></b>.</p>
+      <p>Si la voz no distingue /o/ de /ɔ/ ni /e/ de /ɛ/, o no reduce la átona final a [ɨ], <b>se cambia de proveedor, no de pieza</b>. Y si no pasa, la poesía no se publica. Es la prueba más barata que existe y va el día 1, no después de 190 audios.</p>
+      <p>Corre sobre material propio. Que dependiera de un texto con derechos discutidos —el <em>maior/dor</em> de Florbela— era en sí un defecto de diseño.</p>
+    </div>
+    <p class="col"><strong>Veinte piezas van marcadas «voz humana o no se publica»</strong>: el bloque seco alentejano entero, los remates por silencio, los tres gritos de la fábula F2 (si el tercero suena igual que los dos primeros, la fábula no funciona), el vecino de M3. Son ~14 minutos de estudio en total. El alumno lo dijo mejor que nadie — <em>«prefiero 30 piezas con voz humana que 190 con voz sintética»</em> — y advirtió el modo de fallo exacto: que se doble todo en lote porque es lo barato, y se publique la sección con las piezas medianas funcionando y las buenas desactivadas, sin que nadie sepa por qué no engancha.</p>
+  </section>
+
+  <section>
+    <h2>El audio, en cuota de ElevenLabs</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Constantes medidas, no estimadas: 5,4 caracteres por palabra en prosa propia y 6,1 en Eça, sobre los textos reales. Convención de ~900 caracteres por minuto de habla.</p>
+    <div class="tw"><table>
+      <thead><tr><th>Nivel</th><th class="num">Piezas</th><th class="num">Palabras</th><th class="num">Caracteres</th><th class="num">Minutos</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td class="num">92</td><td class="num">6.950</td><td class="num">75.060</td><td class="num">83</td></tr>
+        <tr><td>A2</td><td class="num">111</td><td class="num">17.920</td><td class="num">105.516</td><td class="num">117</td></tr>
+        <tr><td>B1</td><td class="num">171</td><td class="num">55.660</td><td class="num">322.488</td><td class="num">358</td></tr>
+        <tr><td>B2</td><td class="num">49</td><td class="num">39.600</td><td class="num">255.660</td><td class="num">284</td></tr>
+        <tr><td>C1</td><td class="num">20</td><td class="num">25.000</td><td class="num">152.500</td><td class="num">169</td></tr>
+        <tr class="total"><td>Total</td><td class="num">443</td><td class="num">145.130</td><td class="num">911.224</td><td class="num">1.012 · 16,9 h</td></tr>
+      </tbody>
+    </table></div>
+    <p class="col" style="margin-top:20px">El documento cotiza esto a $14,58 con Azure a $16 por millón de caracteres. <strong>Con la cuenta que hay ahora, Creator a 131.000 caracteres al mes, la aritmética es otra:</strong> los 911.224 caracteres son <strong>siete meses de cuota</strong>, y con el factor ×2,5 de iteración que el plan aplica, diecisiete. La partida deja de ser dinero y pasa a ser calendario.</p>
+    <p class="col">Lo que sí cabe holgadamente este mes: <strong>A1 entero son 75.060 caracteres</strong>, el 57 % de un mes. A1 y A2 juntos, 180.576 — mes y medio.</p>
+    <p class="col">Contexto que importa: los 551 minutos de A1‑B1 no son audio nuevo, son <strong>el 61 % de los 900 minutos que el plan ya presupuestaba</strong> para esos niveles, con mejor contenido. Los 453 minutos de B2‑C1 sí son adición neta a un tramo que tenía cero.</p>
+    <p class="col"><strong>No se dobla el aparato</strong> —glosas, notas, preguntas— ni la fábula en verso: Krylov en ruso, Filinto Elísio en portugués, el <em>Kytice</em> de Erben en checo. La métrica la destroza cualquier síntesis. Y no se dobla <strong>nada</strong> antes de la verificación nativa del texto: doblar y luego corregir es tirar el audio.</p>
+  </section>
+
+  <section>
+    <h2>Lo que el panel cambió</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Seis objeciones del verificador de dominio público, veintiuna del nativo de Lisboa, once del alumno. Se aceptaron 36 de 38.</p>
+    <ul class="nots">
+      <li><b>La más grave, del nativo:</b> un personaje tuteaba a una señora mayor — en un curso que vende el tratamiento en tercera persona como su joya diferencial. Habría enseñado exactamente lo que promete corregir.</li>
+      <li><b>La más valiosa, también del nativo:</b> el diagnóstico de la «epidemia de <code>eu</code>» y de la rima por sufijo. El portugués omite el sujeto mucho más que el español, y los guionistas lo metían por inercia. Las dos son ya reglas con control automático.</li>
+      <li><b>La categoría que ningún curador tenía, del alumno: «piezas presumibles».</b> Trava-línguas con botón de compartir. Coste cero, y es lo único de todo el documento que se propaga solo.</li>
+      <li><b>Rechazadas, 2 de 11 del alumno</b>, con motivo escrito. El documento las nombra en vez de esconderlas.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer><div class="pg">
+  <b>El documento completo</b> son 1.048 líneas en <code>docs/plans/2026-07-28-biblioteca-lectura.md</code>: el catálogo de las ~95 obras confirmadas con autor, año de muerte y jurisdicción; las doce muestras íntegras con sus correcciones marcadas; el pasaje de Eça montado con todo su aparato tal como lo vería el alumno; el diseño de la novela serializada; y las ocho decisiones abiertas con dueño nominado.<br>
+  <b>La primera de esas ocho bloquea a las demás</b> y no la cierra un curador: la jurisdicción de servicio la decide un abogado mexicano leyendo los transitorios de la reforma de 2003. De ella depende si Pessoa y Florbela vuelven al catálogo.
+</div></footer>

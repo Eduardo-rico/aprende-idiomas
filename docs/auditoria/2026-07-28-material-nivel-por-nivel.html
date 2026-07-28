@@ -1,0 +1,226 @@
+<title>El material, nivel por nivel</title>
+<style>
+:root{
+  --cal:#FCFCFA;--surface:#FFFFFF;--sunken:#EFF2F6;
+  --ink:#16202B;--ink-2:#55636F;--ink-3:#8794A0;
+  --rule:#DDE3E9;--rule-2:#C3CDD7;
+  --cobalt:#1B4F8F;--cobalt-soft:#E8EFF7;--cobalt-line:#B6CBE2;
+  --learn:#2E6B4F;--learn-soft:#E6F0EA;
+  --review:#A8690B;--review-soft:#F8F0E0;
+  --error:#A32B2B;--error-soft:#F8ECEC;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root{
+  --cal:#0C1218;--surface:#131C24;--sunken:#0F171E;--ink:#E9EEF2;--ink-2:#93A2AF;--ink-3:#6C7C8A;
+  --rule:#202D38;--rule-2:#2E3E4B;--cobalt:#7FB2EC;--cobalt-soft:#142334;--cobalt-line:#2A415B;
+  --learn:#58BC90;--learn-soft:#122318;--review:#E0A544;--review-soft:#241C0E;
+  --error:#F2827C;--error-soft:#251415;}}
+:root[data-theme="dark"]{--cal:#0C1218;--surface:#131C24;--sunken:#0F171E;--ink:#E9EEF2;--ink-2:#93A2AF;
+  --ink-3:#6C7C8A;--rule:#202D38;--rule-2:#2E3E4B;--cobalt:#7FB2EC;--cobalt-soft:#142334;--cobalt-line:#2A415B;
+  --learn:#58BC90;--learn-soft:#122318;--review:#E0A544;--review-soft:#241C0E;--error:#F2827C;--error-soft:#251415;}
+:root[data-theme="light"]{--cal:#FCFCFA;--surface:#FFFFFF;--sunken:#EFF2F6;--ink:#16202B;--ink-2:#55636F;
+  --ink-3:#8794A0;--rule:#DDE3E9;--rule-2:#C3CDD7;--cobalt:#1B4F8F;--cobalt-soft:#E8EFF7;--cobalt-line:#B6CBE2;
+  --learn:#2E6B4F;--learn-soft:#E6F0EA;--review:#A8690B;--review-soft:#F8F0E0;--error:#A32B2B;--error-soft:#F8ECEC;}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--cal);color:var(--ink);font-family:var(--serif);font-size:17px;
+  line-height:1.62;-webkit-font-smoothing:antialiased}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px;border-radius:2px}
+.pg{max-width:900px;margin:0 auto;padding:0 24px}
+.col{max-width:66ch}
+p{margin:0 0 17px}
+code{font-family:var(--mono);font-size:.84em;background:var(--sunken);border:1px solid var(--rule);
+  border-radius:3px;padding:.08em .34em;color:var(--ink-2);word-break:break-word}
+.kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 16px}
+h1{font-size:clamp(30px,5.2vw,46px);line-height:1.07;letter-spacing:-.024em;margin:0 0 18px;
+  font-weight:600;text-wrap:balance}
+h2{font-size:28px;letter-spacing:-.02em;margin:0 0 6px;font-weight:600;text-wrap:balance}
+.lede{font-size:20px;color:var(--ink-2);margin:0;text-wrap:pretty}
+.lede strong{color:var(--ink);font-weight:600}
+.rule-sm{width:32px;height:2px;background:var(--cobalt);margin:0 0 22px}
+.dek{color:var(--ink-2);margin:0 0 26px;font-size:16.5px;font-family:var(--sans)}
+header.mast{border-bottom:1px solid var(--rule);padding:56px 0 34px;margin-bottom:46px}
+section{margin:0 0 62px}
+
+.board{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:1px;background:var(--rule);
+  border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin:28px 0 0}
+.bt{background:var(--surface);padding:15px}
+.bt .n{font-family:var(--mono);font-size:25px;line-height:1;font-variant-numeric:tabular-nums;
+  font-weight:500;letter-spacing:-.02em}
+.bt .l{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--ink-3);margin-top:7px;line-height:1.35}
+
+/* barra de salvamento */
+.bands{display:flex;flex-direction:column;gap:9px;margin:0 0 30px}
+.band{display:grid;grid-template-columns:64px 1fr 92px;gap:14px;align-items:center}
+.band .bl{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--cobalt)}
+.band .bar{height:22px;background:var(--sunken);border:1px solid var(--rule);border-radius:4px;
+  overflow:hidden;position:relative}
+.band .bar i{display:block;height:100%;background:var(--learn);opacity:.85}
+.band .bn{font-family:var(--mono);font-size:12px;color:var(--ink-3);text-align:right;
+  font-variant-numeric:tabular-nums}
+
+/* bloque por banda */
+.lvl{border-top:1px solid var(--rule);padding-top:30px;margin-top:34px}
+.lvl-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+.lvl-head h3{font-size:26px;letter-spacing:-.02em;margin:0;font-weight:600}
+.lvl-head .pct{font-family:var(--mono);font-size:13px;color:var(--learn);border:1px solid var(--learn);
+  background:var(--learn-soft);border-radius:999px;padding:2px 10px;font-weight:600}
+.lvl-head .rev{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);margin-left:auto}
+.verdict{font-size:18px;line-height:1.55;color:var(--ink);margin:0 0 20px;text-wrap:pretty}
+.verdict b{font-weight:600}
+
+.find{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.find li{border-top:1px solid var(--rule);padding:14px 0 14px 24px;position:relative;
+  font-family:var(--sans);font-size:15.5px;color:var(--ink-2);line-height:1.55}
+.find li:last-child{border-bottom:1px solid var(--rule)}
+.find li::before{content:"";position:absolute;left:0;top:1.3em;width:11px;height:2px;background:var(--error)}
+.find li b{color:var(--ink);font-weight:600}
+.find li.ok::before{background:var(--learn)}
+
+.pull{background:var(--surface);border:1px solid var(--rule);border-radius:9px;
+  padding:20px 22px;margin:20px 0;font-family:var(--sans);font-size:15.5px;
+  color:var(--ink-2);line-height:1.55}
+.pull b{color:var(--ink);font-weight:600}
+.pull .q{font-family:var(--serif);font-size:22px;color:var(--ink);display:block;
+  margin:0 0 14px;padding-bottom:14px;border-bottom:1px solid var(--rule);
+  line-height:1.32;letter-spacing:-.016em;text-wrap:balance}
+
+.alert{border:1px solid var(--cobalt);background:var(--cobalt-soft);border-radius:11px;padding:22px 24px;margin:0 0 24px}
+.alert .at{font-family:var(--mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--cobalt);font-weight:600;margin-bottom:10px}
+.alert p{font-family:var(--sans);font-size:15.5px;color:var(--ink-2);margin:0 0 12px;line-height:1.55}
+.alert p:last-child{margin-bottom:0}
+.alert b{color:var(--ink)}
+
+footer{border-top:1px solid var(--rule);margin-top:20px;padding:28px 0 60px;
+  font-family:var(--mono);font-size:12px;color:var(--ink-3);line-height:1.7}
+footer b{color:var(--ink-2);font-weight:500}
+@media (max-width:620px){body{font-size:16px}.band{grid-template-columns:52px 1fr 76px;gap:9px}
+  .lvl-head .rev{margin-left:0;width:100%}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<header class="mast"><div class="pg">
+  <p class="kicker">Revisión · 28 jul 2026 · cinco profesores, banda por banda</p>
+  <h1>El material, nivel por nivel</h1>
+  <p class="lede col">Cinco profesores de portugués europeo abrieron y leyeron <strong>1.852 ejercicios</strong> de los 2.037, uno por uno, con una sola pregunta: <em>¿un alumno que hace esto sale sabiendo hacer las cosas del nivel, o sale sabiendo rellenar huecos?</em> La respuesta es peor de lo que decía la auditoría inicial, y por una razón que no habíamos visto.</p>
+  <div class="board">
+    <div class="bt"><div class="n" style="color:var(--cobalt)">1.852</div><div class="l">ítems leídos</div></div>
+    <div class="bt"><div class="n" style="color:var(--learn)">37 %</div><div class="l">se salva</div></div>
+    <div class="bt"><div class="n" style="color:var(--error)">24</div><div class="l">sin respuesta</div></div>
+    <div class="bt"><div class="n" style="color:var(--error)">0</div><div class="l">ítems de C2</div></div>
+    <div class="bt"><div class="n" style="color:var(--review)">3.680</div><div class="l">tokens en todo B2</div></div>
+  </div>
+</div></header>
+
+<main class="pg">
+
+  <section>
+    <div class="alert">
+      <div class="at">El hallazgo que unifica los cinco niveles</div>
+      <p>La auditoría inicial dijo que el corpus <em>omite</em> el portugués europeo. Al abrir los ítems se ve que es peor:</p>
+      <p style="font-family:var(--serif);font-size:19px;color:var(--ink);line-height:1.45"><b>El curso no omite la forma europea: consagra la brasileña como la correcta.</b></p>
+      <p>Un ejercicio de B1 <b>corrige</b> «Ele está comer» → «Ele está comendo». Un MDX de B2 declara que «la próclise es la opción predeterminada», que es la regla de Brasil. Uno de C1 enseña «ÊNCLISE = verbo al inicio», también brasileña, y esconde la forma europea correcta dentro de <code>variantOverrides["pt-br"]</code>, con la clave invertida. No es un hueco: es doctrina, y está enseñada al revés.</p>
+    </div>
+
+    <div class="bands">
+      <div class="band"><span class="bl">A1</span><span class="bar"><i style="width:34%"></i></span><span class="bn">34 % · 587</span></div>
+      <div class="band"><span class="bl">A2</span><span class="bar"><i style="width:45%"></i></span><span class="bn">45 % · 401</span></div>
+      <div class="band"><span class="bl">B1</span><span class="bar"><i style="width:35%"></i></span><span class="bn">35 % · 465</span></div>
+      <div class="band"><span class="bl">B2</span><span class="bar"><i style="width:38%"></i></span><span class="bn">38 % · 518</span></div>
+      <div class="band"><span class="bl">C1</span><span class="bar"><i style="width:12%"></i></span><span class="bn">12 % · 57</span></div>
+      <div class="band"><span class="bl">C2</span><span class="bar"><i style="width:0%"></i></span><span class="bn">— · 0</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Banda por banda</h2>
+    <div class="rule-sm"></div>
+
+    <!-- A1 -->
+    <div class="lvl">
+      <div class="lvl-head"><h3>A1 — fonética, morfología nominal, presente</h3><span class="pct">34 %</span><span class="rev">430 ítems leídos</span></div>
+      <p class="verdict">A1 no está enseñado: está cubierto. Y en el bloque 1 <b>ni siquiera eso — está mal enseñado, que es peor</b>, porque es lo primero que ve todo el mundo, no se puede saltar, y es lo que más repite el repaso espaciado.</p>
+      <ul class="find">
+        <li><b>La lección 2 entera —51 ítems— está construida sobre una idea falsa:</b> que el portugués y el español acentúan distinto las mismas palabras. Repite cuarenta veces que «<em>difícil</em> es esdrújula en portugués y grave sin tilde en español», cuando <b>en las dos lenguas es paroxítona y en las dos lleva tilde</b>.</li>
+        <li>La lección 1 enseña que <b>el acento agudo marca vocal cerrada</b>, con el ejemplo «café /kaˈfɛ/» — que se desmiente a sí mismo en la misma tarjeta.</li>
+        <li>Un alumno que complete el bloque 1 sale escribiendo <b>«habito» sin tilde</b> (un ítem se lo ordena), creyendo que <b>la W se llama «dúplex»</b>, que <b>el alfabeto tiene 23 letras</b> —contradicho por otros tres ítems del mismo bloque—, que <b>la ⟨ç⟩ va ante e/i</b>, que es la regla exactamente invertida, y que <b><code>avó</code>/<code>avô</code> es una diferencia entre Brasil y Portugal</b> en vez de abuela/abuelo. Siete ítems lo machacan, y uno tiene grabado en voz el agramatical «Minha avô mora em Lisboa».</li>
+        <li><b>«El activo limpio» no lo era.</b> Las correspondencias ortográficas ES→PT son 51 ítems y no 64: el 64 salía de contar etiquetas duplicadas. Y el concepto <code>b1-corresp-ll-lh</code> mezcla dos reglas distintas, ninguna de las cuales es «-ll- → -lh-»: <em>ojo→olho</em> es j→lh, y <em>llamar→chamar</em> es ll→ch.</li>
+        <li><b>Falta la única correspondencia que de verdad genera palabras nuevas: h- → f-</b> — <em>hijo/filho</em>, <em>hacer/fazer</em>, <em>hablar/falar</em>. Mientras tanto, 21 ítems se dedican a una «h muda» que también es muda en español: un contraste inventado.</li>
+        <li><b>Y el nivel, medido como tarea y no como forma, casi no existe:</b> cero horas (<code>que horas são</code> = 0), cero <code>desculpe</code>, cero <code>com licença</code>, cero <code>bom dia</code>, cero <code>chamo-me</code>, cero morada, apelido o código postal. Y 35 ítems con gerundio <code>-ndo</code> frente a 4 con <code>estar a + infinitivo</code>.</li>
+      </ul>
+    </div>
+
+    <!-- A2 -->
+    <div class="lvl">
+      <div class="lvl-head"><h3>A2 — pasados, futuros, registros</h3><span class="pct">45 %</span><span class="rev">280 ítems leídos</span></div>
+      <p class="verdict">La banda más sana del corpus. Y aun así, en el punto que más importa para Portugal —el tratamiento— <b>está enseñada al revés</b>.</p>
+      <div class="pull">
+        <span class="q">«'Você' es el equivalente a 'tú' español.»</span>
+        Es la primera línea del MDX que gobierna la lección de tratamiento, 63 ítems. Su consejo remata: <em>«Si es alguien de tu edad con quien tienes confianza, "você" es suficiente»</em>. <b>La palabra <code>tu</code> no aparece ni una vez en toda la nota</b>, y sus tres ejemplos son brasileños en la colocación del clítico. Un mexicano que la aplique en Lisboa tuteará con la forma que allí suena distante.
+      </div>
+      <ul class="find">
+        <li><b>De 1.095 ítems, sólo 20 (1,8 %) obligan a producir una forma inequívoca de <code>tu</code></b>, que en Portugal es la forma normal. De los 39 drills de conjugación, <b>cero</b> usan <code>tu</code> — y cinco usan <code>você</code> con la pista «tú/usted habla(s)», que enseña la confusión en vez de deshacerla.</li>
+        <li>Alrededor conviven <b>cuatro reglas mutuamente excluyentes</b> sobre el tratamiento, y ninguna enuncia la portuguesa real: <b>la deferencia se hace en tercera persona sin pronombre, con nombre o cargo.</b></li>
+        <li><b>El motor sabotea lo poco que está bien:</b> 10 de los 11 <code>fill_blank</code> que miden el contraste perfeito/imperfeito aceptan como alternativa <b>el tiempo contrario</b>. Uno da por buena «Quando eu <b>foi</b> criança», que ni siquiera concuerda en persona. El único ejercicio del nivel que mide ese contraste, no lo mide.</li>
+        <li><b>Los 24 <code>multiple_choice</code> de la banda tienen <code>answer: undefined</code>.</b> Veinticuatro ítems imposibles de aprobar.</li>
+        <li class="ok">Lo bueno, y es mucho: la capa de <code>error_correction</code> sigue siendo oro y es la plantilla de lo que hay que generar veinte veces más.</li>
+      </ul>
+    </div>
+
+    <!-- B1 -->
+    <div class="lvl">
+      <div class="lvl-head"><h3>B1 — conjuntivo, formas no personales</h3><span class="pct">35 %</span><span class="rev">520 ítems leídos</span></div>
+      <p class="verdict">Las <b>formas</b> verbales son en su mayoría correctas. El <b>marco</b> que las envuelve —el ejemplo, la nota de contraste, el distractor, la variante marcada como «la buena»— enseña portugués brasileño, y con frecuencia alarmante enseña portugués inexistente.</p>
+      <ul class="find">
+        <li><b>El conjuntivo ocupa seis lecciones consecutivas: 338 ítems, el 16,6 % del corpus entero.</b> Y el reparto interno está invertido respecto a lo que necesita un hispanohablante: <b>134 ítems de imperfeito do conjuntivo</b> —lo que un mexicano ya trae hecho desde «si tuviera»— frente a <b>46 de futuro do conjuntivo</b>, que es el único que su lengua no tiene.</li>
+        <li><b>El bloque de formas no personales está construido íntegramente sobre el gerundio brasileño.</b> <code>estar a + infinitivo</code> aparece 20 veces en los 2.037 ítems; en la lección del gerundio, de 58 ítems, aparece 5 — siempre como alternativa aceptada o distractor, <b>jamás como respuesta exigida</b>. Un ejercicio <b>corrige</b> «Ele está comer» → «Ele está comendo», y su nota instruye textualmente: <em>«si en español dices "está hablando", en portugués es "está falando"»</em>.</li>
+        <li><b>Y la capa de contraste con el español contiene invenciones puras:</b> «"quisesse" en Brasil, "quissesse" en Portugal» — la segunda no existe. «En Brasil se usa "teu", en Portugal se prefiere "seu"» — exactamente al revés. «"Abs" viene de "abusivamente"» — viene de <em>abraços</em>.</li>
+      </ul>
+    </div>
+
+    <!-- B2 -->
+    <div class="lvl">
+      <div class="lvl-head"><h3>B2 — sintaxis y conectores</h3><span class="pct">38 %</span><span class="rev">540 ítems leídos</span></div>
+      <p class="verdict">No está enseñado: <b>está cubierto por la forma y vacío por la tarea.</b> B2 es leer prensa, sostener una discusión y matizar. Esto es rellenar huecos sobre seis palabras recicladas.</p>
+      <div class="pull">
+        <span class="q">686 ejercicios. 3.680 tokens de portugués en toda la banda.</span>
+        El input más largo tiene <b>18 palabras</b>, y sólo 6 ítems de 686 contienen más de una oración seguida. No hay un párrafo, ni un texto expositivo, ni un argumento, ni una tarea de producción. De 149 etiquetas distintas, <b>ninguna</b> es de producción, mediación, lectura o argumentación.
+      </div>
+      <ul class="find">
+        <li><b>En los tres puntos donde el material toma una decisión doctrinal, la toma contra el portugués europeo.</b> Declara que «la próclise es la opción predeterminada» — regla brasileña; en Portugal la ênclise es lo no marcado. Y enseña que el perfeito composto equivale al «he hecho» español, que es la fosilización clásica vendida como regla.</li>
+        <li><b>Está averiado en frío:</b> 15 de los 60 <code>verb_preposition</code> producen frases agramaticales al aplicar su propia clave — «Quero que ela de mim» — y cinco ejercicios de escucha preguntan por una forma que no está en el audio.</li>
+        <li><b>Y hay palabras de otras lenguas dentro del portugués que iría a doblaje:</b> «suspado», «tiempo», «promiseu», «consequences», «acteur», «okay», «nowadays», «meanwhile», y un «maar ook» neerlandés.</li>
+      </ul>
+    </div>
+
+    <!-- C1-C2 -->
+    <div class="lvl">
+      <div class="lvl-head"><h3>C1 y C2 — colocação pronominal</h3><span class="pct">12 %</span><span class="rev">82 ítems leídos</span></div>
+      <p class="verdict">C1 no está enseñado ni cubierto: <b>está simulado.</b> Los 57 ítems no son C1 — son una lección de B1 sobre clíticos, con siete frases de mesóclise dentro, escrita desde el marco escolar brasileño y etiquetada <code>pt-br</code> en los 93 sitios donde aparece la etiqueta. <b>Cero ocurrencias de <code>pt-pt</code> en todo el bloque.</b></p>
+      <ul class="find">
+        <li><b>El error está en la regla madre:</b> enseña «ÊNCLISE = verbo al inicio», que es la regla de Brasil. En portugués europeo <b>la ênclise es la posición por defecto</b> y la próclise es la excepción, disparada por una lista cerrada. Todo lo demás hereda ese error.</li>
+        <li>Por eso un ítem tiene como base «<b>Me diga</b> logo o que aconteceu!» —agramatical en Lisboa— y esconde la forma europea correcta dentro de <code>variantOverrides["pt-br"]</code>, <b>con la clave invertida</b>.</li>
+        <li><b>C2 no existe.</b> Cero ítems. Cero autores del canon: <code>Eça|Camilo|Garrett|Antero|Pessoa|Saramago</code> = 0 coincidencias en los 2.037 ejercicios y las 20 historias. Cero PALOP, cero alusión histórica, cero mediación. Y <code>não obstante</code>, <code>com efeito</code>, <code>ora bem</code>, <code>de resto</code>, <code>quando muito</code>: cero cada uno.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Qué se hace con esto</h2>
+    <div class="rule-sm"></div>
+    <p class="col">El bloque 1 <strong>se congela entero</strong> — no se corrige ítem a ítem, se reescribe a mano, porque su problema no son erratas sino un marco conceptual invertido, y desaprender lo que el repaso espaciado ya fijó cuesta más que aprenderlo bien.</p>
+    <p class="col">La nota que gobierna el tratamiento <strong>se tira</strong>, no se edita. Y los 24 ejercicios sin respuesta y los 10 que aceptan el tiempo contrario son fallos estructurales que un validador determinista habría atrapado el primer día: son exactamente el tipo de defecto que los gates nuevos existen para cazar.</p>
+    <p class="col">Lo que sí se conserva: los <strong>60 <code>error_correction</code></strong> —revisados uno por uno y correctos los sesenta—, las <strong>20 historias en variante europea</strong>, y las formas verbales de B1, que son buenas aunque su marco no lo sea. Sobre eso se reconstruye.</p>
+  </section>
+
+</main>
+
+<footer><div class="pg">
+  <b>Método.</b> Cinco profesores de portugués europeo para hispanohablantes, uno por banda de nivel, trabajando en paralelo y sin verse entre sí. Cada uno abrió un mínimo de 60 ítems muestreados por bloque y por tipo, y citó cada hallazgo con el id del ejercicio y su texto exacto. Los porcentajes de salvamento son suyos, no del plan.<br>
+  <b>Dónde está todo.</b> Los ítems ejemplares que sirven de plantilla, los que se tiran, los huecos de cada nivel y la resecuenciación propuesta banda por banda están en <code>docs/plans/2026-07-28-serie-inmersiva-y-revision-material.md</code>, §1.
+</div></footer>

@@ -1,0 +1,391 @@
+<title>Plan 0 → C2 — aprende-idiomas</title>
+<style>
+:root{
+  --cal:#FCFCFA; --surface:#FFFFFF; --sunken:#EFF2F6;
+  --ink:#16202B; --ink-2:#55636F; --ink-3:#8794A0;
+  --rule:#DDE3E9; --rule-2:#C3CDD7;
+  --cobalt:#1B4F8F; --cobalt-soft:#E8EFF7; --cobalt-line:#B6CBE2;
+  --learn:#2E6B4F; --learn-soft:#E6F0EA;
+  --review:#A8690B; --review-soft:#F8F0E0;
+  --error:#A32B2B; --error-soft:#F8ECEC;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+  --measure:68ch;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --cal:#0C1218; --surface:#131C24; --sunken:#0F171E;
+    --ink:#E9EEF2; --ink-2:#93A2AF; --ink-3:#6C7C8A;
+    --rule:#202D38; --rule-2:#2E3E4B;
+    --cobalt:#7FB2EC; --cobalt-soft:#142334; --cobalt-line:#2A415B;
+    --learn:#58BC90; --learn-soft:#122318;
+    --review:#E0A544; --review-soft:#241C0E;
+    --error:#F2827C; --error-soft:#251415;
+  }
+}
+:root[data-theme="dark"]{
+  --cal:#0C1218; --surface:#131C24; --sunken:#0F171E;
+  --ink:#E9EEF2; --ink-2:#93A2AF; --ink-3:#6C7C8A;
+  --rule:#202D38; --rule-2:#2E3E4B;
+  --cobalt:#7FB2EC; --cobalt-soft:#142334; --cobalt-line:#2A415B;
+  --learn:#58BC90; --learn-soft:#122318;
+  --review:#E0A544; --review-soft:#241C0E;
+  --error:#F2827C; --error-soft:#251415;
+}
+:root[data-theme="light"]{
+  --cal:#FCFCFA; --surface:#FFFFFF; --sunken:#EFF2F6;
+  --ink:#16202B; --ink-2:#55636F; --ink-3:#8794A0;
+  --rule:#DDE3E9; --rule-2:#C3CDD7;
+  --cobalt:#1B4F8F; --cobalt-soft:#E8EFF7; --cobalt-line:#B6CBE2;
+  --learn:#2E6B4F; --learn-soft:#E6F0EA;
+  --review:#A8690B; --review-soft:#F8F0E0;
+  --error:#A32B2B; --error-soft:#F8ECEC;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--cal);color:var(--ink);font-family:var(--serif);
+  font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px;border-radius:3px}
+.pg{max-width:960px;margin:0 auto;padding:0 24px}
+.col{max-width:var(--measure)}
+p{margin:0 0 17px}
+code{font-family:var(--mono);font-size:.84em;background:var(--sunken);border:1px solid var(--rule);
+  border-radius:3px;padding:.08em .34em;color:var(--ink-2);word-break:break-word}
+em{font-style:italic}
+
+.kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 16px}
+h1{font-size:clamp(31px,5.4vw,48px);line-height:1.06;letter-spacing:-.024em;margin:0 0 18px;
+  font-weight:600;text-wrap:balance}
+h2{font-size:28px;letter-spacing:-.02em;margin:0 0 6px;font-weight:600;text-wrap:balance}
+h3{font-size:20px;letter-spacing:-.015em;margin:0 0 8px;font-weight:600}
+.lede{font-size:20px;color:var(--ink-2);margin:0;text-wrap:pretty}
+.lede strong{color:var(--ink);font-weight:600}
+.rule-sm{width:32px;height:2px;background:var(--cobalt);margin:0 0 22px}
+.dek{color:var(--ink-2);margin:0 0 26px;font-size:16.5px;font-family:var(--sans)}
+header.mast{border-bottom:1px solid var(--rule);padding:58px 0 36px;margin-bottom:52px}
+section{margin:0 0 68px}
+
+/* --- titular --- */
+.headline{background:var(--cobalt);color:#fff;border-radius:12px;padding:26px 28px;margin:0 0 26px}
+.headline .old{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;
+  opacity:.72;margin-bottom:10px}
+.headline .old s{text-decoration:line-through;text-decoration-thickness:1.5px}
+.headline .new{font-size:24px;line-height:1.32;font-weight:600;letter-spacing:-.015em;margin:0}
+
+/* --- tablas --- */
+.tw{overflow-x:auto;border:1px solid var(--rule);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px;font-family:var(--sans)}
+th,td{text-align:left;padding:11px 15px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:500;background:var(--sunken);white-space:nowrap}
+tbody tr:last-child td{border-bottom:none}
+td.num,th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:14px}
+tr.total td{background:var(--sunken);font-weight:600}
+.lvl{font-family:var(--mono);font-size:12px;font-weight:600;border-radius:4px;padding:2px 8px;
+  border:1px solid currentColor;white-space:nowrap}
+.lvl-b2{color:var(--learn);background:var(--learn-soft)}
+.lvl-b1{color:var(--cobalt);background:var(--cobalt-soft)}
+.lvl-a2{color:var(--review);background:var(--review-soft)}
+
+/* --- olas --- */
+.waves{position:relative;margin:0;padding:0;list-style:none}
+.waves::before{content:"";position:absolute;left:31px;top:12px;bottom:12px;width:1px;background:var(--rule)}
+.wave{position:relative;display:grid;grid-template-columns:64px 1fr;gap:18px;padding:0 0 22px}
+.wave-n{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;color:var(--cobalt);
+  background:var(--cal);border:1px solid var(--cobalt-line);border-radius:999px;width:44px;height:26px;
+  display:flex;align-items:center;justify-content:center;position:relative;z-index:1;margin-left:9px}
+.wave.done .wave-n{background:var(--cobalt);color:#fff;border-color:var(--cobalt)}
+.wave-b h4{font-size:17.5px;margin:0 0 3px;font-weight:600;letter-spacing:-.012em;line-height:1.3}
+.wave-b .wm{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);letter-spacing:.04em;margin-bottom:5px}
+.wave-b p{font-size:15px;color:var(--ink-2);margin:0;font-family:var(--sans);line-height:1.5}
+.cutline{display:flex;align-items:center;gap:14px;margin:6px 0 26px;padding-left:9px}
+.cutline .cl-tag{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--learn);border:1px solid var(--learn);background:var(--learn-soft);border-radius:999px;
+  padding:4px 12px;font-weight:600;white-space:nowrap}
+.cutline::after{content:"";flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--learn) 0 7px,transparent 7px 14px)}
+.cut-note{background:var(--learn-soft);border:1px solid var(--learn);border-radius:10px;
+  padding:18px 20px;margin:0 0 30px;font-family:var(--sans);font-size:15px;color:var(--ink-2);line-height:1.55}
+.cut-note b{color:var(--ink)}
+
+/* --- decisiones --- */
+.decisions{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.dec{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:22px 0;border-top:1px solid var(--rule)}
+.dec:last-child{border-bottom:1px solid var(--rule)}
+.dec-n{font-family:var(--mono);font-size:22px;color:var(--cobalt);font-variant-numeric:tabular-nums;padding-top:1px}
+.dec h3{margin-bottom:9px}
+.dec p{font-size:15.5px;color:var(--ink-2);margin:0 0 12px;font-family:var(--sans)}
+.dec p:last-child{margin-bottom:0}
+.opt{display:flex;gap:10px;align-items:flex-start;font-family:var(--sans);font-size:15px;
+  color:var(--ink-2);padding:9px 0;border-top:1px dashed var(--rule)}
+.opt .ok{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
+  border:1px solid var(--rule-2);border-radius:999px;padding:2px 8px;color:var(--ink-3);
+  white-space:nowrap;flex:none;margin-top:2px}
+.opt.rec .ok{color:var(--cobalt);border-color:var(--cobalt);background:var(--cobalt-soft)}
+
+/* --- no hacer --- */
+.nots{list-style:none;margin:0;padding:0}
+.nots li{border-top:1px solid var(--rule);padding:15px 0 15px 26px;position:relative;
+  font-size:15.5px;color:var(--ink-2);font-family:var(--sans);line-height:1.55}
+.nots li:last-child{border-bottom:1px solid var(--rule)}
+.nots li::before{content:"";position:absolute;left:0;top:1.35em;width:13px;height:2px;background:var(--error)}
+.nots li b{color:var(--ink);font-weight:600}
+
+/* --- panel --- */
+.panel-board{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1px;
+  background:var(--rule);border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin:0 0 24px}
+.pt-tile{background:var(--surface);padding:16px}
+.pt-tile .n{font-family:var(--mono);font-size:27px;line-height:1;font-variant-numeric:tabular-nums;font-weight:500}
+.pt-tile .l{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-3);margin-top:7px;line-height:1.35}
+.quote{border-left:2px solid var(--cobalt);padding:4px 0 4px 18px;margin:0 0 20px;
+  font-size:16.5px;color:var(--ink-2)}
+.quote b{color:var(--ink);font-weight:600}
+
+.alert{background:var(--review-soft);border:1px solid var(--review);border-radius:10px;
+  padding:18px 20px;font-family:var(--sans);font-size:15.5px;color:var(--ink-2);line-height:1.55}
+.alert b{color:var(--ink);font-weight:600}
+
+footer{border-top:1px solid var(--rule);margin-top:20px;padding:28px 0 60px;
+  font-family:var(--mono);font-size:12px;color:var(--ink-3);line-height:1.7}
+footer b{color:var(--ink-2);font-weight:500}
+
+@media (max-width:620px){
+  body{font-size:16px}
+  .wave{grid-template-columns:52px 1fr;gap:12px}
+  .waves::before{left:26px}
+  .dec{grid-template-columns:30px 1fr;gap:12px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<header class="mast">
+  <div class="pg">
+    <p class="kicker">Plan · 28 jul 2026 · aprende-idiomas · portugués · rumano · checo · ruso</p>
+    <h1>El plan honesto para llegar lo más lejos posible</h1>
+    <p class="lede col">Cuatro currículos completos de A1 a C2, el modelo de datos que los sostiene y la fábrica que produce el material — sometidos después a tres revisores adversariales. <strong>De sus 29 objeciones se aceptaron 25, y el resultado cambió el titular del producto.</strong></p>
+  </div>
+</header>
+
+<main class="pg">
+
+  <!-- ============ TITULAR ============ -->
+  <section>
+    <h2>Lo primero que cambia es la promesa</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Los criterios de salida que el propio plan escribió para B2, C1 y C2 exigen un evaluador humano contratado por alumno: <strong>14 de las 24 puertas de nivel</strong>. Eso no es una app, es una app más una lista de compras de servicios humanos recurrentes.</p>
+
+    <div class="headline">
+      <div class="old">Antes: <s>De cero a C2 en cuatro idiomas</s></div>
+      <p class="new">De cero a B1 verificado dentro de la app. B2 guiado. C1&#8211;C2 como plan de estudio sobre obras reales y preparación del examen oficial.</p>
+    </div>
+
+    <p class="col">No es una rebaja de ambición: es dejar de contar como «nivel» lo que la app no puede evidenciar. El techo deja de ser un número único y pasa a ser <strong>un techo por destreza</strong>, que es lo que la interfaz debe decir.</p>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Destreza</th><th>Techo en la app</th><th>Por qué</th></tr></thead>
+        <tbody>
+          <tr><td>Comprensión lectora</td><td><span class="lvl lvl-b2">B2</span></td><td>Se puntúa sin humano. Es cuestión de volumen de input, no de instrumento.</td></tr>
+          <tr><td>Comprensión oral</td><td><span class="lvl lvl-b2">B2</span></td><td>Igual, condicionado a audio europeo verificado y ocho voces o más.</td></tr>
+          <tr><td>Producción escrita</td><td><span class="lvl lvl-b2">B2</span></td><td>Rúbrica por LLM con anclas, calibrada por muestreo contra evaluadores humanos.</td></tr>
+          <tr><td>Mediación escrita</td><td><span class="lvl lvl-b2">B2</span></td><td>Igual — y es además la ventaja competitiva de este público.</td></tr>
+          <tr><td>Producción oral</td><td><span class="lvl lvl-b1">B1</span></td><td>El reconocimiento de voz por fonema llega a B1. Por encima hace falta un interlocutor.</td></tr>
+          <tr><td>Interacción</td><td><span class="lvl lvl-a2">A2</span></td><td>Un diálogo ramificado llega a A2. La interacción real exige una persona.</td></tr>
+          <tr class="total"><td>Nivel global certificable</td><td><span class="lvl lvl-a2">A2</span> hoy → <span class="lvl lvl-b1">B1</span></td><td>El propio modelo calcula <code>overallPct = min(bySkill)</code>. Aplicado con honestidad, manda la destreza más floja.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="dek col" style="margin-top:16px">C1 y C2 dejan de ser contenido propio en los cuatro idiomas y pasan a ser lecturas de dominio público —Eça y Camilo, Caragiale y Creangă, Čapek y Hašek, el canon ruso del XIX— más aparato didáctico propio: <strong>40.000 palabras por idioma en vez de 1.200.000</strong>.</p>
+  </section>
+
+  <!-- ============ HORAS ============ -->
+  <section>
+    <h2>Las horas, sin adorno</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Para portugués europeo, la ruta completa 0→C2 son <strong>2.210 horas</strong>: a 45 minutos al día, unos ocho años; a 90 minutos, cuatro. La cifra sale de tomar las horas guiadas que los propios exámenes asocian a cada nivel, descontar por ser hispanohablante y penalizar por estudiar solo.</p>
+    <div class="quote col">
+      La ventaja de ser hispanohablante y la penalización de estudiar sin interlocutor <b>casi se cancelan</b>. Con profesor y viviendo en Lisboa serían ~1.400 horas; solo con esta app, ~2.210. Esas 800 horas de diferencia son el precio de no tener con quién hablar, y el plan no puede esconderlo.
+    </div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>&nbsp;</th><th class="num">Portugués</th><th class="num">Rumano</th><th class="num">Checo</th><th class="num">Ruso</th></tr></thead>
+        <tbody>
+          <tr><td>Horas 0 → B1</td><td class="num">440–620</td><td class="num">390–550</td><td class="num">490–690</td><td class="num">830–1.170</td></tr>
+          <tr><td>Horas 0 → C2</td><td class="num">1.880–2.640</td><td class="num">1.190–1.670</td><td class="num">1.980–2.790</td><td class="num">3.320–4.680</td></tr>
+          <tr><td>Contenido en este plan</td><td class="num">A1–B1</td><td class="num">A1–A2</td><td class="num">A1–A2</td><td class="num">pre-A1–A2</td></tr>
+          <tr><td>Palabras propias</td><td class="num">103.000</td><td class="num">50.000</td><td class="num">33.000</td><td class="num">38.000</td></tr>
+          <tr><td>Ejercicios propios</td><td class="num">3.700</td><td class="num">2.100</td><td class="num">2.300</td><td class="num">3.600</td></tr>
+          <tr><td>Motor extra que exige</td><td class="num">—</td><td class="num">paradigmas</td><td class="num">morfología<br>+ diglosia</td><td class="num">motor entero<br>+10–12 sem</td></tr>
+          <tr><td>Examen externo</td><td class="num">CAPLE</td><td class="num">Inst. Limbii<br>Române</td><td class="num">CCE<br>(llega a C1)</td><td class="num">ТРКИ 1–4</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="dek col" style="margin-top:16px">El orden <strong>PT → RO → CS → RU</strong> es de coste creciente de motor, no de preferencia. El ruso es el único que exige construir un segundo motor completo —cirílico contra el guardián anti-mezcla de alfabetos, escritura manuscrita, teclado ЙЦУКЕН, transliteración, acento posicional, homóglifos— que no le sirve a ningún otro idioma. Por eso va el último y lleva su propia decisión de seguir o no.</p>
+  </section>
+
+  <!-- ============ OLAS ============ -->
+  <section>
+    <h2>El roadmap</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Quince olas. Cada una con lo que entrega, lo que desbloquea y un criterio de terminado verificable. La línea verde marca dónde termina el corte mínimo viable: un producto real, no una demo.</p>
+
+    <ol class="waves">
+      <li class="wave done"><span class="wave-n">00</span><div class="wave-b">
+        <h4>La máquina de trabajo</h4><div class="wm">1 semana · bloqueante</div>
+        <p>Disco externo, los 451 MB de audio transcodificados a Opus 32k y sacados de git, <code>npm install</code>. Hoy quedan 900 MB libres y no hay <code>node_modules</code>: literalmente no se puede correr un test.</p></div></li>
+      <li class="wave done"><span class="wave-n">01</span><div class="wave-b">
+        <h4>El circuito</h4><div class="wm">2 semanas</div>
+        <p><code>submitAnswer</code> cableado, las cuatro rutas que faltan, las claves de variante normalizadas, el bucle de redirección roto. Sin esto nada de lo demás mide nada.</p></div></li>
+      <li class="wave"><span class="wave-n">02</span><div class="wave-b">
+        <h4>La columna vertebral del modelo</h4><div class="wm">5 semanas</div>
+        <p>El eje MCER: descriptores, evidencias, <code>cefr</code>, <code>skills</code>, <code>contextMode</code>. Un <code>stableId</code> separado del hash <em>antes</em> de reescribir nada. Se retira la barra de XP.</p></div></li>
+      <li class="wave"><span class="wave-n">03</span><div class="wave-b">
+        <h4>Gates y triaje</h4><div class="wm">3 semanas</div>
+        <p>Los diez validadores deterministas, y el triaje ítem por ítem de los 2.037 actuales: se salvan ~1.450.</p></div></li>
+      <li class="wave"><span class="wave-n">04</span><div class="wave-b">
+        <h4>La sesión y la unidad</h4><div class="wm">4 semanas</div>
+        <p>La sesión de 25 minutos como unidad de diseño y de inventario. Modo reentrada tras una ausencia. Las 26 unidades funcionales se escriben antes que un solo ejercicio.</p></div></li>
+      <li class="wave"><span class="wave-n">05</span><div class="wave-b">
+        <h4>PT-PT como base</h4><div class="wm">5 semanas + 40 h de nativo</div>
+        <p>El portugués europeo deja de ser un <em>override</em> y pasa a ser el texto base. Los ~250 ejercicios de fonética, reescritos a mano.</p></div></li>
+      <li class="wave"><span class="wave-n">06</span><div class="wave-b">
+        <h4>Producción, mediación e interacción</h4><div class="wm">5 semanas</div>
+        <p>Las tres destrezas que hoy valen cero. Regla dura: ninguna pantalla ofrece una tarea cuyo feedback no pueda entregar antes de cerrar la sesión.</p></div></li>
+      <li class="wave"><span class="wave-n">07</span><div class="wave-b">
+        <h4>Contenido A1–A2 de portugués</h4><div class="wm">fábrica · ~4 meses</div>
+        <p>33.000 palabras propias, dos series de doce episodios con personajes recurrentes, 520 minutos de audio, ~110 tareas.</p></div></li>
+      <li class="wave"><span class="wave-n">08</span><div class="wave-b">
+        <h4>Durabilidad</h4><div class="wm">2 semanas</div>
+        <p>Que un «borrar datos del navegador» deje de destruir años de estudio.</p></div></li>
+      <li class="wave"><span class="wave-n">09</span><div class="wave-b">
+        <h4>Rediseño de UI</h4><div class="wm">4 semanas</div>
+        <p>Los mockups Azulejo implementados: siete pantallas en lugar de veintitrés.</p></div></li>
+    </ol>
+
+    <div class="cutline"><span class="cl-tag">Aquí termina el corte mínimo viable</span></div>
+
+    <div class="cut-note">
+      <b>A2 de portugués europeo, honesto y terminado.</b> 22–26 semanas de ingeniería, ~$2.500–4.500 de revisión nativa, 5–7 meses de calendario con una persona a media dedicación. Lo que entrega: una app donde alguien hace 25 minutos en el metro, sabe qué está haciendo hoy, recibe corrección de lo que escribe antes de guardar el teléfono, y a los 7–10 meses puede presentarse al <b>CIPLE</b> con fundamento. B1 después no es un proyecto nuevo: es la misma máquina, ya pagada, con más contenido.
+    </div>
+
+    <ol class="waves">
+      <li class="wave"><span class="wave-n">10</span><div class="wave-b">
+        <h4>B1 de portugués</h4><div class="wm">fábrica · ~5 meses</div>
+        <p>+70.000 palabras, +1.400 ejercicios, +110 tareas, +86 h de nativo. Aquí el nivel global certificable pasa de A2 a B1.</p></div></li>
+      <li class="wave"><span class="wave-n">11</span><div class="wave-b">
+        <h4>B2 guiado y preparación de examen</h4><div class="wm">2 meses</div></div></li>
+      <li class="wave"><span class="wave-n">12</span><div class="wave-b">
+        <h4>La fábrica multi-idioma + rumano A1</h4><div class="wm">4 semanas + fábrica</div>
+        <p>Incluye un piloto de 40 ítems en rumano, checo y ruso: valida la arquitectura sin comprometer 11.200 ejercicios.</p></div></li>
+      <li class="wave"><span class="wave-n">13</span><div class="wave-b">
+        <h4>Rumano A2 · checo A1–A2</h4><div class="wm">fábrica</div></div></li>
+      <li class="wave"><span class="wave-n">14</span><div class="wave-b">
+        <h4>Ruso — decisión de seguir o no</h4><div class="wm">+11 semanas si se sigue</div></div></li>
+    </ol>
+  </section>
+
+  <!-- ============ PRESUPUESTO ============ -->
+  <section>
+    <h2>El presupuesto</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Con el alcance recortado: <strong>224.000 palabras propias</strong> (el 3,4 % del plan original), 40,5 horas de audio, 11.700 ejercicios y 700 tareas de producción y mediación.</p>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Partida</th><th class="num">PT A1–B1</th><th class="num">+ RO</th><th class="num">+ CS</th><th class="num">+ RU</th><th class="num">Total</th></tr></thead>
+        <tbody>
+          <tr><td>LLM</td><td class="num">$95</td><td class="num">$60</td><td class="num">$65</td><td class="num">$105</td><td class="num">$325</td></tr>
+          <tr><td>Síntesis de voz</td><td class="num">$32</td><td class="num">$13</td><td class="num">$12</td><td class="num">$30</td><td class="num">$87</td></tr>
+          <tr><td>Revisión nativa</td><td class="num">$4.650<br>–8.370</td><td class="num">$1.920<br>–3.840</td><td class="num">$3.000<br>–5.500</td><td class="num">$2.925<br>–5.850</td><td class="num">$12.495<br>–23.560</td></tr>
+          <tr><td>Ingeniería (semanas)</td><td class="num">34</td><td class="num">+4</td><td class="num">+5</td><td class="num">+11</td><td class="num">54</td></tr>
+          <tr class="total"><td>Efectivo</td><td class="num">$4.780<br>–8.500</td><td class="num">$1.990<br>–3.910</td><td class="num">$3.080<br>–5.580</td><td class="num">$3.060<br>–5.985</td><td class="num">$12.910<br>–23.975</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="col" style="margin-top:18px"><strong>El 96–97 % del efectivo es trabajo humano.</strong> El LLM y la síntesis de voz suman $412 entre los cuatro idiomas: son ruido. El cuello de botella es la revisión nativa y, por encima de ella, las 54 semanas de ingeniería.</p>
+    <p class="col">Para comparar: el 0→C2 completo en cuatro idiomas eran <strong>$210.000–590.000 y 17–18 meses-persona</strong>. La diferencia es casi toda C1–C2 y el audio humano de nivel alto — 485 horas que no se pueden sintetizar y $45.000–135.000 en encargos de narrativa original.</p>
+  </section>
+
+  <!-- ============ DECISIONES ============ -->
+  <section>
+    <h2>Las tres decisiones que son tuyas</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Nada de esto lo puede decidir el plan. Las tres cambian el presupuesto en un orden de magnitud.</p>
+
+    <ol class="decisions">
+      <li class="dec"><span class="dec-n">1</span><div>
+        <h3>El techo declarado</h3>
+        <p>¿Se acepta «B1 verificado en la app, B2 guiado, C1–C2 como plan de estudio», o se mantiene la promesa 0→C2 en cuatro idiomas?</p>
+        <div class="opt rec"><span class="ok">Recomendado</span><span>Aceptar el techo por destreza. El producto dice la verdad y sigue siendo el mejor curso de portugués para hispanohablantes que existe.</span></div>
+        <div class="opt"><span class="ok">La otra</span><span>Mantener 0→C2 asumiendo $210k–590k, 17–18 meses-persona, y 14 de 24 puertas de nivel que exigen contratar evaluadores por alumno.</span></div>
+      </div></li>
+
+      <li class="dec"><span class="dec-n">2</span><div>
+        <h3>El objetivo de lectura</h3>
+        <p>Es la única decisión con impacto de cinco cifras, y hay que tomarla antes de escribir una línea: fija el presupuesto de revisión nativa, que es el 96 % del dinero.</p>
+        <div class="opt rec"><span class="ok">Recomendado</span><span><b>103.000 palabras</b> propias para portugués A1–B1 · ~186 h de nativo · $4.650–8.370</span></div>
+        <div class="opt"><span class="ok">Más</span><span>453.000 palabras, según las specs de producción</span></div>
+        <div class="opt"><span class="ok">Máximo</span><span>1.967.000 palabras, según el currículo completo hasta C2</span></div>
+      </div></li>
+
+      <li class="dec"><span class="dec-n">3</span><div>
+        <h3>Ruso: sí o no, y cuándo</h3>
+        <p>Es el único de los cuatro que exige comprar un segundo motor entero, y es aquel en el que no tienes ninguna capacidad de detectar un error tú mismo. Cortarlo no daña a los otros tres; mantenerlo tiene que ser una compra consciente, no algo que ocurre por inercia.</p>
+        <p>Pediste los cuatro idiomas por igual y eso se respetó: mismo modelo de datos, mismos gates, mismo inventario, misma definición de nivel. Lo único que se escalona es el calendario.</p>
+      </div></li>
+    </ol>
+
+    <div class="alert" style="margin-top:30px">
+      <b>Y una tarea de una hora, antes que todo lo demás.</b> Que un portugués nativo escuche <b>30 de los 5.451 MP3</b> y diga si las voces etiquetadas «PT-PT» suenan europeas. De esa hora depende el presupuesto de audio entero: si no lo son, hay que cambiar de proveedor de síntesis y los 451 MB ya generados se tiran. Nadie ha escuchado todavía ni un solo archivo.
+    </div>
+  </section>
+
+  <!-- ============ NO HACER ============ -->
+  <section>
+    <h2>Lo que el plan decide no hacer</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Catorce renuncias explícitas. Éstas son las que más dinero y más tiempo ahorran.</p>
+    <ul class="nots">
+      <li><b>No produce C1–C2 como contenido propio en ningún idioma.</b> Son 4.950.000 palabras (el 74,7 %) y 485 horas de audio humano para el tramo que los propios currículos declaran que casi nadie alcanza. Y lo que se evalúa en C2 —autenticidad, idiomaticidad, estilo— es exactamente lo que no se puede generar sin dejar de ser lo que se evalúa.</li>
+      <li><b>No implementa 21 de los 27 tipos de ejercicio nuevos.</b> Declinación por celda, pares aspectuales, escritura manuscrita, transliteración y compañía quedan como puntos de extensión del modelo. Diseñar el hueco cuesta días; construirlos, ~22 semanas para idiomas que este plan aplaza.</li>
+      <li><b>No publica ningún porcentaje de corte</b> hasta que exista un procedimiento de estandarización propio. «≥55 % en un simulacro» no significa nada sobre un banco de ítems no calibrado.</li>
+      <li><b>No mantiene la promesa de feedback diferido</b> en ninguna de sus formas. Para quien estudia sin señal en el metro, el camino degradado <em>es</em> el camino normal.</li>
+      <li><b>No usa exámenes de aula como puerta de nivel.</b> Un simulacro cronometrado de tres horas es un candado que un adulto que trabaja no abre nunca, y el resultado conocido es quedarse «casi B1» para siempre. El nivel se cierra acumulando descriptores; el simulacro es opcional y troceable.</li>
+      <li><b>No toca los identificadores de los 2.037 ejercicios.</b> El id es el hash del contenido y el progreso de cada usuario apunta a él: renombrarlos huerfanaría todo.</li>
+      <li><b>No hace de la racha una métrica de minutos.</b> Castigar al alumno eficiente es la forma más barata de perderlo.</li>
+    </ul>
+  </section>
+
+  <!-- ============ PANEL ============ -->
+  <section>
+    <h2>El panel adversarial</h2>
+    <div class="rule-sm"></div>
+    <p class="dek col">Un examinador de certificación, un director de ingeniería escéptico y un aprendiz real —mexicano, 35 años, trabaja, ya abandonó Duolingo dos veces— atacaron el plan por separado antes de escribirlo.</p>
+
+    <div class="panel-board">
+      <div class="pt-tile"><div class="n">29</div><div class="l">Objeciones</div></div>
+      <div class="pt-tile"><div class="n" style="color:var(--learn)">25</div><div class="l">Aceptadas</div></div>
+      <div class="pt-tile"><div class="n" style="color:var(--review)">3</div><div class="l">Aceptadas en parte</div></div>
+      <div class="pt-tile"><div class="n" style="color:var(--error)">1</div><div class="l">Rechazada</div></div>
+    </div>
+
+    <h3>Las tres que más cambiaron el plan</h3>
+    <p class="col" style="font-size:16px;color:var(--ink-2)"><strong>El aprendiz:</strong> «la sesión de 25 minutos no existe en ningún punto del plan» y «la sesión 1 es fonología pura, que un adulto en un metro no puede hacer». De ahí salió <code>contextMode</code> como campo de primera clase —la app compone la sesión según dónde estés— y la fonología pasó de bloque a capa de 5–8 minutos dentro de una frase que sirve para algo. También invirtió el orden de producción: <strong>el episodio de la serie va antes que los ejercicios.</strong></p>
+    <p class="col" style="font-size:16px;color:var(--ink-2)"><strong>El examinador:</strong> «la mediación mide recuerdo de contenido, no mediación», y las 288 traducciones que la inflaban «gratis» ahora no cuentan hasta reescribirse con destinatario, propósito y canal. Reetiquetar para poner un gate en verde es exactamente cómo un eje de niveles se vuelve decorativo.</p>
+    <p class="col" style="font-size:16px;color:var(--ink-2)"><strong>El ingeniero:</strong> «con 952 MB libres y sin <code>node_modules</code>, la fase 1 no arranca». Verificado: es cierto, y por eso la ola 0 existe.</p>
+
+    <h3 style="margin-top:26px">La que se rechazó</h3>
+    <p class="col" style="font-size:16px;color:var(--ink-2)">El director de ingeniería recomendó <strong>tirar el ruso entero</strong>. Se rechazó porque no es una decisión del plan: pediste cuatro idiomas por igual. Lo que sí se hizo fue poner el precio delante —va el último, con su go/no-go explícito y sus +10–12 semanas de motor a la vista— para que sea tu decisión informada y no una amputación silenciosa.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="pg">
+    <b>El documento completo</b> son 1.076 líneas en <code>docs/plans/2026-07-28-plan-0-a-c2.md</code>: los cuatro currículos con sus descriptores can-do nivel por nivel, los tipos TypeScript del eje MCER, los prompts de generación listos para usar, los diez gates de calidad y el apéndice con las 29 objeciones una por una.<br>
+    <b>Método.</b> Cuatro diseñadores curriculares (uno por idioma), un arquitecto de datos y un responsable de producción trabajaron en paralelo; tres revisores adversariales atacaron el resultado; un autor final reescribió el plan incorporando las objeciones. <b>11 agentes · 3.228.163 tokens · 70 min.</b> Toda cifra va marcada como <b>[M]</b> medición o <b>[E]</b> estimación en el documento fuente.
+  </div>
+</footer>
