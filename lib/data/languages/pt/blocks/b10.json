@@ -15,7 +15,7 @@
     "type": "verb_preposition",
     "data": {
       "verb": "chegar",
-      "sentence": "Em Portugal, numa comunicação formal: \"O comboio ___ à estação às nove.\"",
+      "sentence": "No Brasil, numa comunicação formal: \"O trem ___ à estação às nove.\"",
       "options": [
         "à",
         "em",
@@ -26,10 +26,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "No Brasil, numa comunicação formal: \"O trem ___ à estação às nove.\"",
-        "answer": "à"
+        "sentence": "Em Portugal, numa comunicação formal: \"O comboio ___ à estação às nove.\""
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "03b9ccb0",
@@ -57,29 +57,30 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "Os contactos correspondem-se entre as duas variants. Continuaram a usar o termo correio em Portugal e contato no Brasil.",
-      "question": "¿Qué término se usa en Portugal para referirse a la comunicación escrita oficial?",
+      "audioText": "Os contatos correspondem-se entre as duas variantes. Continuaram a usar o termo correio em Portugal e contato no Brasil.",
+      "question": "Qual termo se usa no Brasil para se referir à comunicação escrita oficial?",
       "options": [
         "Correio",
+        "Contato",
         "Contacto",
-        "Bicha",
-        "Saudade"
+        "Carta"
       ],
-      "answer": "Correio"
+      "answer": "Contato"
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "Os contatos correspondem-se entre as duas variantes. Continuaram a usar o termo correio em Portugal e contato no Brasil.",
-        "question": "Qual termo se usa no Brasil para se referir à comunicação escrita oficial?",
+        "audioText": "Os contactos correspondem-se entre as duas variants. Continuaram a usar o termo correio em Portugal e contato no Brasil.",
+        "question": "¿Qué término se usa en Portugal para referirse a la comunicación escrita oficial?",
         "options": [
           "Correio",
-          "Contato",
           "Contacto",
-          "Carta"
+          "Bicha",
+          "Saudade"
         ],
-        "answer": "Contato"
+        "answer": "Correio"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "04452b00",
@@ -108,20 +109,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "As duas variantes do português ___ em muitos aspetos.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "correspondem-se",
-            "alternatives": [
-              "se correspondem"
-            ]
-          }
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "049c8477",
@@ -158,7 +146,8 @@
         "Lembrar"
       ],
       "answer": "Saudade"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "08155994",
@@ -187,7 +176,7 @@
     "type": "translation",
     "data": {
       "source": "Segue em anexo a documentação solicitada. Fico ao dispor para quaisquer esclarecimentos.",
-      "target": "Adjunto le remito la documentación solicitada. Quedo a su disposición para cualquier aclaración.",
+      "target": "Seguem em anexo os documentos solicitados. Remainho ao vosso dispor para quaisquer esclarecimentos.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
@@ -197,9 +186,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Seguem em anexo os documentos solicitados. Remainho ao vosso dispor para quaisquer esclarecimentos."
+        "target": "Adjunto le remito la documentación solicitada. Quedo a su disposición para cualquier aclaración."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "0acf94a3",
@@ -225,7 +215,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "0b091314",
@@ -253,7 +244,8 @@
       "front": "Expresión informal de despedida entre amigos (= 'un abrazo')",
       "back": "abs / abraço / beijos",
       "example": "Abs, te vejo amanhã! (= ¡Un abrazo, te veo mañana!)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "12c32016",
@@ -280,7 +272,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "18477503",
@@ -315,7 +308,8 @@
       "acceptedAlternatives": [
         "Prezado senhor director, le escribo para solicitar uma reunião."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1993e06e",
@@ -353,7 +347,8 @@
         "Imponer la norma culta brasileña"
       ],
       "answer": "Unificar la ortografía entre ambos países"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1e198e75",
@@ -382,21 +377,22 @@
     "type": "translation",
     "data": {
       "source": "Yo creo que tienes razón, pero no lo encuentro así.",
-      "target": "Eu acho que você tem razão, mas não acho assim.",
+      "target": "Eu acho que tens razão, mas não o acho assim.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Eu acho que tens razão, mas não acho assim."
+        "Acho que tens razão, mas não o acho assim."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Eu acho que tens razão, mas não o acho assim.",
+        "target": "Eu acho que você tem razão, mas não acho assim.",
         "acceptedAlternatives": [
-          "Acho que tens razão, mas não o acho assim."
+          "Eu acho que tens razão, mas não acho assim."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "1f7391d9",
@@ -424,7 +420,8 @@
       "front": "Pronombre de tratamiento formal en portugués (equivalente a 'usted')",
       "back": "você / o senhor / a senhora",
       "example": "O senhor pode me ajudar? (= ¿Usted puede ayudarme?)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1f7c93eb",
@@ -452,29 +449,29 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "No Brasil, o veículo de transporte urbano chama-se ônibus. Em Portugal, o mesmo veículo chama-se autocarro. São duas palavras diferentes para a mesma coisa!",
-      "question": "¿Cómo se dice 'autobús' en Portugal?",
+      "audioText": "Em Portugal, o veículo de transporte urbano chama-se autocarro. No Brasil, chama-se ônibus. É uma diferença importante entre os dois países!",
+      "question": "Como se diz 'ônibus' em Portugal?",
       "options": [
-        "Ônibus",
         "Autocarro",
+        "Ônibus",
         "Comboio",
-        "Trolé"
+        "Táxi"
       ],
       "answer": "Autocarro"
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "Em Portugal, o veículo de transporte urbano chama-se autocarro. No Brasil, chama-se ônibus. É uma diferença importante entre os dois países!",
-        "question": "Como se diz 'ônibus' em Portugal?",
+        "audioText": "No Brasil, o veículo de transporte urbano chama-se ônibus. Em Portugal, o mesmo veículo chama-se autocarro. São duas palavras diferentes para a mesma coisa!",
+        "question": "¿Cómo se dice 'autobús' en Portugal?",
         "options": [
-          "Autocarro",
           "Ônibus",
+          "Autocarro",
           "Comboio",
-          "Táxi"
-        ],
-        "answer": "Autocarro"
+          "Trolé"
+        ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "2516e46a",
@@ -510,7 +507,8 @@
         "Yo opino que la variación diatópica",
         "Me parece que la variación diatópica"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "264c3a9f",
@@ -539,14 +537,15 @@
     "type": "flashcard",
     "data": {
       "front": "¿Qué significa 'maluco' en Brasil? ¿Y 'bizarro'?",
-      "back": "🇧🇷 BR: 'maluco' = 'loco/chiflado' (coloquial); 'bizarro' = 'genial/increíble'. 🇵🇹 PT: 'bizarro' = 'valiente/extravagante' (más cercano al español); 'maluco' = mismo sentido.",
+      "back": "🇧🇷 BR: 'maluco' = 'loco'; 'bizarro' = 'genial'. 🇵🇹 PT: 'bizarro' ≈ 'extravagante' (más similar al español).",
       "example": "BR: «Que ideia maluca! Esse filme é muito bizarro!» PT: «Ele é um sujeito bastante bizarro.»"
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "🇧🇷 BR: 'maluco' = 'loco'; 'bizarro' = 'genial'. 🇵🇹 PT: 'bizarro' ≈ 'extravagante' (más similar al español)."
+        "back": "🇧🇷 BR: 'maluco' = 'loco/chiflado' (coloquial); 'bizarro' = 'genial/increíble'. 🇵🇹 PT: 'bizarro' = 'valiente/extravagante' (más cercano al español); 'maluco' = mismo sentido."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "2aaa15ef",
@@ -576,7 +575,8 @@
       "front": "¿Qué forma de tratamiento es más común en Portugal en situaciones formales?",
       "back": "🇵🇹 En PT se usa más 'o senhor / a senhora' y 'você' (formal/informal). 🇧🇷 En BR predomina 'você' (informal) y 'o senhor' (formal). El 'tu' es regional (norte de PT, sur de BR).",
       "example": "PT formal: «O senhor sabe a hora?» / BR: «Você sabe que horas são?»"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2c640e11",
@@ -605,21 +605,22 @@
     "type": "translation",
     "data": {
       "source": "Formamos una fila enorme para entrar al concierto.",
-      "target": "Formamos uma fila enorme para entrar no show.",
+      "target": "Formámos uma fila enorme para entrar no concerto.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Fizemos uma fila enorme para entrar no show."
+        "Fizemos uma fila enorme para entrar no concerto."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Formámos uma fila enorme para entrar no concerto.",
+        "target": "Formamos uma fila enorme para entrar no show.",
         "acceptedAlternatives": [
-          "Fizemos uma fila enorme para entrar no concerto."
+          "Fizemos uma fila enorme para entrar no show."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "2e950460",
@@ -643,7 +644,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2eac7ab2",
@@ -660,7 +662,7 @@
     "esContrast": "En contexto informal se usa 'que há de novo?' o 'que notícias?'.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Fala, cara! Que ___? Faz tempo que não te vejo!",
+      "sentence": "Ó lá! Que ___? Há muito tempo que não te vejo!",
       "blanks": [
         {
           "position": 0,
@@ -674,19 +676,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Ó lá! Que ___? Há muito tempo que não te vejo!",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "novidades",
-            "alternatives": [
-              "diga",
-              "ouve"
-            ]
-          }
-        ]
+        "sentence": "Fala, cara! Que ___? Faz tempo que não te vejo!"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "2ee3583d",
@@ -715,21 +708,22 @@
     "type": "translation",
     "data": {
       "source": "Las cartas de mi abuelo continuaron llegando incluso después de su muerte.",
-      "target": "As cartas do meu avô continuaram chegando mesmo depois da morte dele.",
+      "target": "As cartas do meu avô continuaram a chegar mesmo depois da morte dele.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "As cartas do meu avô continuaram a chegar mesmo depois da morte dele."
+        "As cartas do meu avô continuaram chegando mesmo depois da morte dele."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "As cartas do meu avô continuaram a chegar mesmo depois da morte dele.",
+        "target": "As cartas do meu avô continuaram chegando mesmo depois da morte dele.",
         "acceptedAlternatives": [
-          "As cartas do meu avô continuaram chegando mesmo depois da morte dele."
+          "As cartas do meu avô continuaram a chegar mesmo depois da morte dele."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "3bf42d97",
@@ -762,7 +756,8 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3dec5fb6",
@@ -791,7 +786,7 @@
     "type": "translation",
     "data": {
       "source": "Olá, próprio! Tudo bem contigo?",
-      "target": "¡Hola, amigo! ¿Qué tal estás?",
+      "target": "¡Hola, tío! ¿Qué tal estás?",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
@@ -801,9 +796,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "¡Hola, tío! ¿Qué tal estás?"
+        "target": "¡Hola, amigo! ¿Qué tal estás?"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "3e4ec326",
@@ -821,7 +817,7 @@
     "esContrast": "Pretérito perfeito vs presente: 'continuaram' (pasado) vs 'continuam' (presente).",
     "type": "fill_blank",
     "data": {
-      "sentence": "As tradições do Norte do Brasil ___ sendo preservadas pelos indígenas.",
+      "sentence": "As tradições do Norte do Brasil ___ sendo preservadas.",
       "blanks": [
         {
           "position": 0,
@@ -834,18 +830,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "As tradições do Norte do Brasil ___ sendo preservadas.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "continuaram",
-            "alternatives": [
-              "continuam"
-            ]
-          }
-        ]
+        "sentence": "As tradições do Norte do Brasil ___ sendo preservadas pelos indígenas."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "3fc42791",
@@ -881,7 +869,8 @@
         "¿Qué pasa, hermano! ¿Nos tomamos un café?",
         "¿Y eso, bro! ¿Nos tomamos un café?"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4581fc5e",
@@ -903,27 +892,27 @@
       "blanks": [
         {
           "position": 0,
-          "answer": "contatos",
+          "answer": "contactos",
           "alternatives": [
-            "contactos"
+            "contatos"
           ]
         }
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Os meus ___ com o Brasil têm sido muito produtivos.",
         "blanks": [
           {
             "position": 0,
-            "answer": "contactos",
+            "answer": "contatos",
             "alternatives": [
-              "contatos"
+              "contactos"
             ]
           }
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "4755f09a",
@@ -960,7 +949,8 @@
         "Registro afectivo"
       ],
       "answer": "Registro formal"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4a1e949d",
@@ -1002,7 +992,8 @@
           }
         ]
       }
-    }
+    },
+    "variantStatus": "needs-human"
   },
   {
     "id": "4fc10cfb",
@@ -1039,7 +1030,8 @@
         "Teléfono de contacto"
       ],
       "answer": "Contacto telefónico"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "54df0897",
@@ -1057,33 +1049,34 @@
     "esContrast": "'Meu filho' es cariñoso en PT-BR; en PT-PT se usa más 'filho' sin posesivo.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Meu ___ , o almoço está na mesa. Quando puder, venha comer.",
+      "sentence": "Meu ___ , o almoço está na mesa. Quando puderes, vem comer.",
       "blanks": [
         {
           "position": 0,
           "answer": "filho",
           "alternatives": [
-            "menino",
-            "guri"
+            "rapaz",
+            "gajo"
           ]
         }
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Meu ___ , o almoço está na mesa. Quando puderes, vem comer.",
+        "sentence": "Meu ___ , o almoço está na mesa. Quando puder, venha comer.",
         "blanks": [
           {
             "position": 0,
             "answer": "filho",
             "alternatives": [
-              "rapaz",
-              "gajo"
+              "menino",
+              "guri"
             ]
           }
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "6424b51e",
@@ -1112,28 +1105,28 @@
     "type": "listening",
     "data": {
       "audioText": "No Brasil, achar significa encontrar. Em Portugal, achar significa parecer, creer. São verbos com uso diferente.",
-      "question": "En Portugal, ¿qué significa el verbo 'achar'?",
+      "question": "No Brasil, o que significa o verbo 'achar'?",
       "options": [
-        "Encontrar algo",
-        "Parecer o creer",
-        "Pensar en voz alta",
-        "Buscar información"
+        "Parecer ou crer",
+        "Encontrar",
+        "Buscar",
+        "Pensar"
       ],
-      "answer": "Parecer o creer"
+      "answer": "Encontrar"
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "No Brasil, achar significa encontrar. Em Portugal, achar significa parecer, creer. São verbos com uso diferente.",
-        "question": "No Brasil, o que significa o verbo 'achar'?",
+        "question": "En Portugal, ¿qué significa el verbo 'achar'?",
         "options": [
-          "Parecer ou crer",
-          "Encontrar",
-          "Buscar",
-          "Pensar"
+          "Encontrar algo",
+          "Parecer o creer",
+          "Pensar en voz alta",
+          "Buscar información"
         ],
-        "answer": "Encontrar"
+        "answer": "Parecer o creer"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "64b87fbb",
@@ -1163,7 +1156,8 @@
       "front": "¿Qué es el 'carioca' y qué variante representa?",
       "back": "Carioca es lo relativo a la ciudad de Río de Janeiro. Variante del portugués brasileño con rasgos fonéticos propios: 'r' apical, reducción de 'di/ti'.",
       "example": "No Rio, diz-se «tchau» de forma diferente de São Paulo."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "67b27d54",
@@ -1192,20 +1186,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "A ___ é um sentimento muito forte na cultura portuguesa.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "saudade",
-            "alternatives": [
-              "saudade"
-            ]
-          }
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "6815b803",
@@ -1241,7 +1222,8 @@
         "O meu número de telefone encontra-se no cabeçalho deste e-mail.",
         "Pode contactar-me pelo número indicado no início deste e-mail."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6b460b14",
@@ -1268,7 +1250,8 @@
       "front": "Conector formal para añadir información (= 'además, igualmente')",
       "back": "ademais / outrossim / igualmente",
       "example": "Gostaria de agradecer e, igualmente, parabenizá-lo."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6e8d5cdd",
@@ -1304,7 +1287,8 @@
         "Respetuosos saludos para todo el equipo.",
         "Mis respetuosos saludos para todo el equipo."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "71ae42e8",
@@ -1321,7 +1305,7 @@
     "esContrast": "'Antecipadamente' significa 'de antemano', no 'de forma antecipada'.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Agradeço ___ pela atenção e aguardo retorno.",
+      "sentence": "Agradeço ___ pela atenção e aguardo resposta.",
       "blanks": [
         {
           "position": 0,
@@ -1334,18 +1318,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Agradeço ___ pela atenção e aguardo resposta.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "antecipadamente",
-            "alternatives": [
-              "com antecedência"
-            ]
-          }
-        ]
+        "sentence": "Agradeço ___ pela atenção e aguardo retorno."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "71b4e921",
@@ -1374,7 +1350,8 @@
       "front": "Léxico diatópico: 'quarto' en PT vs. otras palabras en BR",
       "back": "🇵🇹 PT: 'quarto' puede ser cualquier habitación. 🇧🇷 BR: 'quarto' = habitación para dormir; 'sala' = sala de estar; 'quarto' no se usa para la sala.",
       "example": "PT: «O quarto da frente tem vista.» BR: «Moro num apartamento com dois quartos e uma sala.»"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "77269157",
@@ -1410,14 +1387,7 @@
         "Sinto uma inexplicável saudade pela minha terra natal."
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "target": "Sinto uma saudade inexplicável pela minha terra natal.",
-        "acceptedAlternatives": [
-          "Sinto uma inexplicável saudade pela minha terra natal."
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "787c7d24",
@@ -1443,7 +1413,8 @@
         "a"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7b17a7b6",
@@ -1479,7 +1450,8 @@
         "Quisiera establecer contacto telefónico con usted mañana.",
         "Me gustaría ponerme en contacto telefónico con usted mañana."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7b9b4b9e",
@@ -1515,7 +1487,8 @@
         "Qué tal, João? Tudo bem?",
         "E aí, João? Como estás?"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7d06ab4a",
@@ -1543,7 +1516,8 @@
       "front": "Pronombre informal usado en Brasil para 'tú'",
       "back": "você",
       "example": "Você quer café? (= ¿Quieres café?)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "80a3b750",
@@ -1572,21 +1546,22 @@
     "type": "translation",
     "data": {
       "source": "Las dos cartas se corresponden en contenido y en tono emocional.",
-      "target": "As duas cartas se correspondem em conteúdo e em tom emocional.",
+      "target": "As duas cartas correspondem-se em conteúdo e em tom emocional.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "As duas cartas correspondem-se em conteúdo e em tom emocional."
+        "As duas cartas se correspondem em conteúdo e em tom emocional."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "As duas cartas correspondem-se em conteúdo e em tom emocional.",
+        "target": "As duas cartas se correspondem em conteúdo e em tom emocional.",
         "acceptedAlternatives": [
-          "As duas cartas se correspondem em conteúdo e em tom emocional."
+          "As duas cartas correspondem-se em conteúdo e em tom emocional."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "8568365f",
@@ -1614,7 +1589,7 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "Oi, meu amigo! Tudo bem? Vamos combinar de sair amanhã, tá?",
+      "audioText": "Olá, meu amigo! Tudo bem? Vamos combinar de sair amanhã, está bem?",
       "question": "¿Qué pronombres de tratamiento se usan en esta conversación?",
       "options": [
         "O senhor e a senhora",
@@ -1626,17 +1601,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "Olá, meu amigo! Tudo bem? Vamos combinar de sair amanhã, está bem?",
-        "question": "¿Qué pronombres de tratamiento se usan en esta conversación?",
-        "options": [
-          "O senhor e a senhora",
-          "Tu e você",
-          "Ele e ela",
-          "Você e a gente"
-        ],
-        "answer": "Tu e você"
+        "audioText": "Oi, meu amigo! Tudo bem? Vamos combinar de sair amanhã, tá?"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "85e396b1",
@@ -1667,7 +1635,8 @@
       "front": "¿Cómo se dice 'autobús' en PT-BR y en PT-PT?",
       "back": "🇧🇷 Brasil: 'ônibus'. 🇵🇹 Portugal: 'autocarro'. Misma cosa, palabras distintas.",
       "example": "BR: «Perdi o ônibus.» PT: «Perdi o autocarro.»"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "882baba3",
@@ -1695,7 +1664,7 @@
     },
     "type": "translation",
     "data": {
-      "source": "Fiz fila para pagar a conta do restaurante.",
+      "source": "Fiz fila de espera para pagar a conta do restaurante.",
       "target": "Hice cola para pagar la cuenta del restaurante.",
       "sourceLang": "pt-br",
       "targetLang": "es",
@@ -1706,14 +1675,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "source": "Fiz fila de espera para pagar a conta do restaurante.",
-        "target": "Hice cola para pagar la cuenta del restaurante.",
-        "acceptedAlternatives": [
-          "Me puse en la fila",
-          "Hice fila"
-        ]
+        "source": "Fiz fila para pagar a conta do restaurante."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "887c4692",
@@ -1748,7 +1713,8 @@
         "Informo que o projeto foi aprovado pela direção.",
         "Cabe-me informar que o projeto foi aprovado."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8889b3d1",
@@ -1775,7 +1741,8 @@
       "front": "Expresión formal para iniciar una carta o e-mail ('Estimado/a...')",
       "back": "Prezado(a) / Caro(a)",
       "example": "Prezado Senhor Silva, (= Estimado Señor Silva,)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8aebdee1",
@@ -1801,7 +1768,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8dc1d8a1",
@@ -1828,7 +1796,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "93493258",
@@ -1852,7 +1821,8 @@
         "entre"
       ],
       "answer": "se"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9c8d7ded",
@@ -1881,20 +1851,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "Eu não ___ onde deixei as chaves do carro.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "acho",
-            "alternatives": [
-              "encontro"
-            ]
-          }
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "9c8f5ab6",
@@ -1921,14 +1878,15 @@
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'gorro' en Portugal? ¿Y 'bufanda'?",
-      "back": "🇵🇹 PT: 'gorro' (gorro); 'cachecol' (bufanda). 🇧🇷 BR: 'boné' (gorra), 'bufanda' o 'cachecol'.",
+      "back": "🇵🇹 PT: 'gorro' (gorro); 'cachecol' (bufanda). 🇧🇷 BR: boné, bufanda.",
       "example": "Compro um gorro e um cachecol em Lisboa."
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "🇵🇹 PT: 'gorro' (gorro); 'cachecol' (bufanda). 🇧🇷 BR: boné, bufanda."
+        "back": "🇵🇹 PT: 'gorro' (gorro); 'cachecol' (bufanda). 🇧🇷 BR: 'boné' (gorra), 'bufanda' o 'cachecol'."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "9cbd4ae1",
@@ -1954,7 +1912,8 @@
         "para"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a120b356",
@@ -1983,21 +1942,22 @@
     "type": "translation",
     "data": {
       "source": "La saudade de Brasil es diferente de la saudade portuguesa.",
-      "target": "A saudade do Brasil é diferente da saudade portuguesa.",
+      "target": "A saudade brasileira é diferente da portuguesa.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "A saudade brasileira é diferente da portuguesa."
+        "A saudade do Brasil é diferente da portuguesa."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "A saudade brasileira é diferente da portuguesa.",
+        "target": "A saudade do Brasil é diferente da saudade portuguesa.",
         "acceptedAlternatives": [
-          "A saudade do Brasil é diferente da portuguesa."
+          "A saudade brasileira é diferente da portuguesa."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "a2541a1f",
@@ -2025,21 +1985,22 @@
     "type": "translation",
     "data": {
       "source": "Voy al correo a enviar un paquete certificado.",
-      "target": "Vou ao correio enviar uma encomenda registrada.",
+      "target": "Vou aos correios enviar uma encomenda registada.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Vou aos correios enviar uma encomenda registrada."
+        "Vou ao correio enviar uma encomenda registada."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Vou aos correios enviar uma encomenda registada.",
+        "target": "Vou ao correio enviar uma encomenda registrada.",
         "acceptedAlternatives": [
-          "Vou ao correio enviar uma encomenda registada."
+          "Vou aos correios enviar uma encomenda registrada."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "a32d2dc4",
@@ -2068,7 +2029,7 @@
     "type": "translation",
     "data": {
       "source": "Mandei uma carta pelo correio normal.",
-      "target": "Envíe una carta por correo ordinario.",
+      "target": "Envíe una carta por correo normal.",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
@@ -2077,12 +2038,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Envíe una carta por correo normal.",
-        "acceptedAlternatives": [
-          "Envíe una carta por correo normal."
-        ]
+        "target": "Envíe una carta por correo ordinario."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "a38afcf6",
@@ -2099,7 +2058,7 @@
     "esContrast": "PT-PT usa 'aspetos', BR usa 'aspectos'.",
     "type": "fill_blank",
     "data": {
-      "sentence": "A norma culta escrita em Portugal e no Brasil ___ em aspectos gramaticais.",
+      "sentence": "A norma culta escrita em Portugal e no Brasil ___ em aspetos gramaticais.",
       "blanks": [
         {
           "position": 0,
@@ -2112,18 +2071,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "A norma culta escrita em Portugal e no Brasil ___ em aspetos gramaticais.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "diferem",
-            "alternatives": [
-              "divergem"
-            ]
-          }
-        ]
+        "sentence": "A norma culta escrita em Portugal e no Brasil ___ em aspectos gramaticais."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "a398e02b",
@@ -2160,7 +2111,8 @@
         "Les informo por este medio de que la reunión fue postergada.",
         "Por la presente, informo a usted de que la reunión fue aplazada."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a3b9c993",
@@ -2189,7 +2141,7 @@
     "type": "translation",
     "data": {
       "source": "Fala-me quando puderes, preciso de falar contigo.",
-      "target": "Háblame cuando puedas, necesito hablar contigo.",
+      "target": "Fala comigo quando puderes, preciso falar contigo.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
@@ -2199,9 +2151,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Fala comigo quando puderes, preciso falar contigo."
+        "target": "Háblame cuando puedas, necesito hablar contigo."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "a9ce69b5",
@@ -2224,7 +2177,6 @@
           "position": 0,
           "answer": "entender",
           "alternatives": [
-            "pensar",
             "ver"
           ]
         }
@@ -2232,18 +2184,19 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "No meu ___ , essa é a melhor opção.",
         "blanks": [
           {
             "position": 0,
             "answer": "entender",
             "alternatives": [
+              "pensar",
               "ver"
             ]
           }
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "ab779905",
@@ -2279,7 +2232,8 @@
         "La añoranza que siento de Portugal",
         "La nostalgia que siento de Portugal"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ac328f9f",
@@ -2309,7 +2263,8 @@
       "front": "Fórmula de cortesía para referirse a sí mismo en e-mails formales (= 'el abajo firmante')",
       "back": "o abaixo-assinado / Eu, abaixo-assinado",
       "example": "Eu, abaixo-assinado, declaro que... (= Yo, el abajo firmante, declaro que...)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ad731478",
@@ -2346,7 +2301,8 @@
         "Falow + abs"
       ],
       "answer": "Prezado + cliente"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "addaefb6",
@@ -2371,15 +2327,16 @@
     "type": "flashcard",
     "data": {
       "front": "Saludo informal usado en Brasil (equivalente a 'hola')",
-      "back": "oi",
-      "example": "Oi, tudo bem? (= ¡Hola! ¿Qué tal?)"
+      "back": "olá / oi",
+      "example": "Olá, como está?"
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "olá / oi",
-        "example": "Olá, como está?"
+        "back": "oi",
+        "example": "Oi, tudo bem? (= ¡Hola! ¿Qué tal?)"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "b21f2d27",
@@ -2408,7 +2365,8 @@
       "front": "Completa: 'As duas cidades ___ em contacto desde 1990.'",
       "back": "As duas cidades manteram-se em contacto desde 1990. / 🇧🇷 BR: se mantiveram em contato.",
       "example": "Continuaram correspondendo-se durante anos."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b52a9cd2",
@@ -2437,7 +2395,8 @@
       "front": "Traduce al BR: 'Fui aos correios enviar uma carta.'",
       "back": "Fui ao correio enviar uma carta. / Fui na agência dos correios enviar uma carta.",
       "example": "No Brasil se usa 'correio' en singular o 'agência dos correios'; en PT se dice 'correios'."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b646cfbb",
@@ -2454,7 +2413,7 @@
     "esContrast": "Se dice 'fazer o favor' (hacer el favor), no 'fazer favor'.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Pode me ___ o favor de me dizer as horas?",
+      "sentence": "Pode ___-me o favor de me dizer as horas?",
       "blanks": [
         {
           "position": 0,
@@ -2467,18 +2426,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Pode ___-me o favor de me dizer as horas?",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "fazer",
-            "alternatives": [
-              "dar"
-            ]
-          }
-        ]
+        "sentence": "Pode me ___ o favor de me dizer as horas?"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "b82835d6",
@@ -2509,7 +2460,8 @@
       "front": "¿Qué es 'saudade' y en qué variante se usa más intensamente?",
       "back": "Saudade é um sentimento de nostalgia e longing por algo ou alguém ausente. É mais valorizado culturalmente no Brasil e Portugal, mas é central na cultura portuguesa.",
       "example": "Tenho saudade da minha avó."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ba018be3",
@@ -2536,14 +2488,15 @@
     "type": "flashcard",
     "data": {
       "front": "Léxico diatópico: 'pastel' en Brasil vs. Portugal",
-      "back": "🇧🇷 BR: 'pastel' = empanada frita rellena (pastel de Belém es portugués); 'pastel de vento' = cruasan. 🇵🇹 PT: 'pastel' se refiere a pasteles en general.",
+      "back": "🇧🇷 BR: 'pastel' = empanada frita. 🇵🇹 PT: pastel de Belém, pastel de nata.",
       "example": "BR: «Vou comer um pastel de queijo na padaria.» PT: «Quero um pastel de nata.»"
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "🇧🇷 BR: 'pastel' = empanada frita. 🇵🇹 PT: pastel de Belém, pastel de nata."
+        "back": "🇧🇷 BR: 'pastel' = empanada frita rellena (pastel de Belém es portugués); 'pastel de vento' = cruasan. 🇵🇹 PT: 'pastel' se refiere a pasteles en general."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "be0b2cf0",
@@ -2561,7 +2514,7 @@
     "esContrast": "En portugués se dice 'o senhor' y 'a senhora' (artículo + sustantivo), no 'el senhor'.",
     "type": "fill_blank",
     "data": {
-      "sentence": "___ senhor, poderia me ajudar com esta informação?",
+      "sentence": "___ senhor, poderia dar-me essa informação?",
       "blanks": [
         {
           "position": 0,
@@ -2574,18 +2527,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "___ senhor, poderia dar-me essa informação?",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "O",
-            "alternatives": [
-              "Senhor"
-            ]
-          }
-        ]
+        "sentence": "___ senhor, poderia me ajudar com esta informação?"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "c0623917",
@@ -2621,7 +2566,8 @@
         "Um abraço grande para a equipa, vocês são fixe!",
         "Abraço para o pessoal, vocês são demais!"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c1c6623d",
@@ -2648,7 +2594,8 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c2858eb6",
@@ -2677,7 +2624,8 @@
       "front": "¿Qué es la 'norma culta' en relación con la variación diatópica?",
       "back": "La norma culta es el estándar formal del idioma usado en medios de comunicación, documentos oficiales y educación. Coincide más entre BR y PT que el uso coloquial, pero aún hay diferencias léxicas y gramaticales.",
       "example": "En textos escritos formales, BR y PT se entienden fácilmente; en conversación coloquial, las diferencias son mayores."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c33c1ba3",
@@ -2706,20 +2654,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "O serviço de ___ em Portugal é muito eficiente.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "correio",
-            "alternatives": [
-              "correios"
-            ]
-          }
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "c398eb39",
@@ -2747,15 +2682,16 @@
     "type": "flashcard",
     "data": {
       "front": "Palabra para 'afecto, cariño' en PT-BR",
-      "back": "afecto",
-      "example": "Ela tem muito afecto pelos alunos."
+      "back": "afecto / afeto",
+      "example": "Ela tem muito afeto pelos alunos."
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "afecto / afeto",
-        "example": "Ela tem muito afeto pelos alunos."
+        "back": "afecto",
+        "example": "Ela tem muito afecto pelos alunos."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "ca1b64bc",
@@ -2785,7 +2721,8 @@
       "front": "¿Cómo se dice 'cumplidos' en portugués (referido a saludos)?",
       "back": "cumprimentos",
       "example": "Enviei-lhe os meus cumprimentos. (= Le envié mis saludos)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "cba7cf71",
@@ -2822,7 +2759,8 @@
         "¿Podéis ayudarme con eso?",
         "¿Podeis ayudarme con eso?"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ce44840f",
@@ -2851,20 +2789,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "Madeira e Açores ___ variantes dialectais próprias dentro do português europeu.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "possuem",
-            "alternatives": [
-              "têm"
-            ]
-          }
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "ce4df185",
@@ -2900,7 +2825,8 @@
         "Hija mía, quiero darte un abrazo con mucho afecto.",
         "Hija querida, quiero darte un abrazo con mucho cariño."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d04ecaf7",
@@ -2917,7 +2843,7 @@
     "esContrast": "'Prezado' y 'Caro' son saludos formales de apertura en e-mails.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Prezado ___ , Encaminho a presente mensagem para solicitar informações.",
+      "sentence": "Caro ___ , Encaminho a presente mensagem para solicitar informações.",
       "blanks": [
         {
           "position": 0,
@@ -2931,19 +2857,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Caro ___ , Encaminho a presente mensagem para solicitar informações.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "cliente",
-            "alternatives": [
-              "senhor",
-              "amigo"
-            ]
-          }
-        ]
+        "sentence": "Prezado ___ , Encaminho a presente mensagem para solicitar informações."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "d5cf7fdf",
@@ -2978,7 +2895,8 @@
         "Atentamente, Maria.",
         "Com cordial abraço, Maria."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d84dde46",
@@ -3007,7 +2925,8 @@
       "front": "Léxico diatópico: ¿qué significa 'freguês' en Portugal?",
       "back": "🇵🇹 PT: 'freguês' = 'cliente habitual' de una tienda o restaurante. 🇧🇷 BR: se dice 'freguês' también, pero 'cliente' es más común.",
       "example": "«O freguês do café da esquina já conhece todos os empregados.»"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "de4c58ca",
@@ -3035,7 +2954,8 @@
       "front": "Término para 'registro' en el contexto lingüístico de formalidad",
       "back": "registro formal / registro informal",
       "example": "Devemos adaptar o nosso registro conforme o interlocutor."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "dfe63849",
@@ -3062,7 +2982,8 @@
       "front": "Cierre formal para e-mails profesionales ('Atentamente')",
       "back": "Atenciosamente / Cumprimentos cordiais",
       "example": "Atenciosamente, João Silva."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e1594e44",
@@ -3080,7 +3001,7 @@
     "esContrast": "En portugués 'fila' es la palabra estándar para la cola en ambas variedades.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Tive que esperar uma hora na ___ para comprar os bilhetes.",
+      "sentence": "Tive de esperar uma hora na ___ para comprar os bilhetes.",
       "blanks": [
         {
           "position": 0,
@@ -3093,18 +3014,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Tive de esperar uma hora na ___ para comprar os bilhetes.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "fila",
-            "alternatives": [
-              "fila de espera"
-            ]
-          }
-        ]
+        "sentence": "Tive que esperar uma hora na ___ para comprar os bilhetes."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "e16ba1ff",
@@ -3133,20 +3046,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "Nos Açores, o dialeto local ___ características do português antigo.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "mantém",
-            "alternatives": [
-              "conserva"
-            ]
-          }
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "e4a0e2b0",
@@ -3174,7 +3074,8 @@
       "front": "Vocabulario de e-mail: 'archivo adjunto'",
       "back": "anexo",
       "example": "Segue em anexo o relatório. (= Sigo adjunta el informe / Se adjunta el informe)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e70c7f58",
@@ -3209,14 +3110,7 @@
         "Tengo muchos contactos profesionales en Lisboa."
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "target": "Tengo muchos contactos profesionales en Lisboa.",
-        "acceptedAlternatives": [
-          "Tengo muchos contactos profesionales en Lisboa."
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "ea284b97",
@@ -3246,7 +3140,8 @@
       "front": "¿Qué significa 'achar' en portugués brasileiro?",
       "back": "Achar significa 'creer/pensar' o 'encontrar' en PT-BR. ⚠️ NO significa 'achacar' (acosar) como en español.",
       "example": "Eu acho que ele tem razão. / Vou achar as chaves."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ec9d8ba5",
@@ -3280,7 +3175,8 @@
       "acceptedAlternatives": [
         "Los conceptos de familia coinciden"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ed7ab9b0",
@@ -3309,14 +3205,15 @@
     "type": "flashcard",
     "data": {
       "front": "¿Qué significa 'rapariga' en Portugal vs. en Brasil?",
-      "back": "🇵🇹 Portugal: 'rapariga' = 'chica/chica joven'. 🇧🇷 Brasil: 'rapariga' es arcaico/vulgar (significaba 'prostituta'). En BR se dice 'menina', 'garota' o 'moça'.",
+      "back": "🇵🇹 PT: 'rapariga' = 'chica'. 🇧🇷 BR: evitar, decir 'garota' ou 'menina'.",
       "example": "PT: «A rapariga ao lado estuda medicina.» BR: «A garota ao lado estuda medicina.»"
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "🇵🇹 PT: 'rapariga' = 'chica'. 🇧🇷 BR: evitar, decir 'garota' ou 'menina'."
+        "back": "🇵🇹 Portugal: 'rapariga' = 'chica/chica joven'. 🇧🇷 Brasil: 'rapariga' es arcaico/vulgar (significaba 'prostituta'). En BR se dice 'menina', 'garota' o 'moça'."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "ee49ed34",
@@ -3353,7 +3250,8 @@
         "Traducir 'meio' como 'medio'"
       ],
       "answer": "Traducir 'caro' como 'caro' (costoso)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ef332524",
@@ -3380,7 +3278,8 @@
         "a"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f35d479c",
@@ -3408,21 +3307,22 @@
     "type": "translation",
     "data": {
       "source": "Perdí todos mis contactos del trabajo cuando cambié de teléfono.",
-      "target": "Perdi todos os meus contatos do trabalho quando troquei de telefone.",
+      "target": "Perdi todos os meus contactos do trabalho quando mudei de telemóvel.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Perdi todos os meus contactos do trabalho quando mudei de telemóvel."
+        "Perdi todos os meus contatos do trabalho quando mudei de telemóvel."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Perdi todos os meus contactos do trabalho quando mudei de telemóvel.",
+        "target": "Perdi todos os meus contatos do trabalho quando troquei de telefone.",
         "acceptedAlternatives": [
-          "Perdi todos os meus contatos do trabalho quando mudei de telemóvel."
+          "Perdi todos os meus contactos do trabalho quando mudei de telemóvel."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "f3b0f549",
@@ -3454,7 +3354,8 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f49512ee",
@@ -3491,11 +3392,7 @@
         "La señora doctora María, ¿podría enviar el informe por correo electrónico?"
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "target": "La señora Dra. María, ¿podría enviar el informe por correo electrónico?"
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "f6dd70a3",
@@ -3513,7 +3410,7 @@
     "esContrast": "'Comunicar' es más natural; 'manifestar' suena muy burocrático.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Venho por meio desta ___ a Vossa Senhoria sobre o assunto.",
+      "sentence": "Venho por este meio ___ a Vossa Senhoria sobre o assunto.",
       "blanks": [
         {
           "position": 0,
@@ -3527,19 +3424,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Venho por este meio ___ a Vossa Senhoria sobre o assunto.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "manifestar",
-            "alternatives": [
-              "informar",
-              "contactar"
-            ]
-          }
-        ]
+        "sentence": "Venho por meio desta ___ a Vossa Senhoria sobre o assunto."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "fa5682ad",
@@ -3567,7 +3455,8 @@
       "front": "Adjetivo que significa 'propio' en contextos formales ('en su propia oficina')",
       "back": "próprio",
       "example": "Compareça pessoalmente no nosso escritório. (= Comparezca usted mismo en nuestra oficina)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fc80a430",
@@ -3594,14 +3483,15 @@
     "type": "flashcard",
     "data": {
       "front": "Traduce al PT-PT: 'Ela tem os contactos do escritório.'",
-      "back": "Ela tem os contactos do escritório.",
+      "back": "Ela tem os contatos do escritório.",
       "example": "PT-PT usa 'ct' en lugar de 'c': contactos, afectivo, corretor."
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "Ela tem os contatos do escritório."
+        "back": "Ela tem os contactos do escritório."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "fd6369b5",
@@ -3628,7 +3518,8 @@
       "front": "Cómo preguntar por contacto telefónico en contexto formal",
       "back": "posso deixar meu telefone? / qual é o seu número?",
       "example": "Posso deixar meu telefone para contato? (= ¿Puedo dejar mi número de contacto?)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fec7c17f",
@@ -3658,7 +3549,8 @@
       "front": "Plural de 'você' en Brasil (= 'ustedes')",
       "back": "vocês",
       "example": "Vocês podem ficar à vontade. (= Ustedes pueden quedarse cómodos)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "type": "matching",
@@ -3693,7 +3585,8 @@
     },
     "id": "f6b6eab9",
     "blockId": 10,
-    "contentHash": "f6b6eab9807b2b34acf26848f88b23c58ab7e5b86fd0871705763ef52a71a014"
+    "contentHash": "f6b6eab9807b2b34acf26848f88b23c58ab7e5b86fd0871705763ef52a71a014",
+    "variantStatus": "unchecked"
   },
   {
     "type": "matching",
@@ -3727,7 +3620,8 @@
     },
     "id": "98cbd62b",
     "blockId": 10,
-    "contentHash": "98cbd62b0f217fcc1f55daa41ea0b2c9b5a2a1ca262672ab57fb799b39eba236"
+    "contentHash": "98cbd62b0f217fcc1f55daa41ea0b2c9b5a2a1ca262672ab57fb799b39eba236",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -3752,7 +3646,8 @@
     },
     "id": "b63d821e",
     "blockId": 10,
-    "contentHash": "b63d821e499d91d7c75f0ab7671c9dd61f39aef453de58b58b25ae5983d77aa3"
+    "contentHash": "b63d821e499d91d7c75f0ab7671c9dd61f39aef453de58b58b25ae5983d77aa3",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -3777,7 +3672,8 @@
     },
     "id": "52e1df16",
     "blockId": 10,
-    "contentHash": "52e1df16e0f6cf751ac66da026a67cb669869d57908d0b9fc4577f3bd1d068a6"
+    "contentHash": "52e1df16e0f6cf751ac66da026a67cb669869d57908d0b9fc4577f3bd1d068a6",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -3801,7 +3697,8 @@
     },
     "id": "c04e9290",
     "blockId": 10,
-    "contentHash": "c04e9290886a90d19d81271b5cedb0c71e71b3135abb9925efa425ce6cbc131b"
+    "contentHash": "c04e9290886a90d19d81271b5cedb0c71e71b3135abb9925efa425ce6cbc131b",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -3826,7 +3723,8 @@
     },
     "id": "c4d2b750",
     "blockId": 10,
-    "contentHash": "c4d2b7500636543202466145fae95cfbf211047f0b22d25ed8c9a5e5bd9db11e"
+    "contentHash": "c4d2b7500636543202466145fae95cfbf211047f0b22d25ed8c9a5e5bd9db11e",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -3850,7 +3748,8 @@
     },
     "id": "377d85d3",
     "blockId": 10,
-    "contentHash": "377d85d3ccc6bd630df87e19f41ee99a4184bf4b41943bf51a0d947f8386abbd"
+    "contentHash": "377d85d3ccc6bd630df87e19f41ee99a4184bf4b41943bf51a0d947f8386abbd",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -3875,7 +3774,8 @@
     },
     "id": "d2020dd1",
     "blockId": 10,
-    "contentHash": "d2020dd1dc48ee34c27ed3055c0978a79b9e2ce604f1dcacbdf31f26bccdac32"
+    "contentHash": "d2020dd1dc48ee34c27ed3055c0978a79b9e2ce604f1dcacbdf31f26bccdac32",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -3900,7 +3800,8 @@
     },
     "id": "6a31fb22",
     "blockId": 10,
-    "contentHash": "6a31fb22ae501b7e168a9a87dff6c93355c4fbfd783010c95b12c896341534f2"
+    "contentHash": "6a31fb22ae501b7e168a9a87dff6c93355c4fbfd783010c95b12c896341534f2",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -3925,7 +3826,8 @@
     },
     "id": "e6e74857",
     "blockId": 10,
-    "contentHash": "e6e748572367e1bc4b6e0cc3402c5f56ab5b13e8b6c2aa1f43cdd609bbea13b4"
+    "contentHash": "e6e748572367e1bc4b6e0cc3402c5f56ab5b13e8b6c2aa1f43cdd609bbea13b4",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -3949,7 +3851,8 @@
     },
     "id": "077c9838",
     "blockId": 10,
-    "contentHash": "077c98384b92f1fa33d9369e5fb0123e1445f0d447f6dcab950476dd33a92f1c"
+    "contentHash": "077c98384b92f1fa33d9369e5fb0123e1445f0d447f6dcab950476dd33a92f1c",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -3974,7 +3877,8 @@
     },
     "id": "eecfb214",
     "blockId": 10,
-    "contentHash": "eecfb214426529772b91f17fe33863793fcb8b54049501374a77a9e144572c06"
+    "contentHash": "eecfb214426529772b91f17fe33863793fcb8b54049501374a77a9e144572c06",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -3998,7 +3902,8 @@
     },
     "id": "00b74ff8",
     "blockId": 10,
-    "contentHash": "00b74ff840ec42a98c8cb2ab0adb57c8c81e814c65f11d787117a55caf82ffa3"
+    "contentHash": "00b74ff840ec42a98c8cb2ab0adb57c8c81e814c65f11d787117a55caf82ffa3",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -4022,7 +3927,8 @@
     },
     "id": "d86dacc4",
     "blockId": 10,
-    "contentHash": "d86dacc45dc7d918ebede3e4c2bd5f68dc18fb8a13bfdca3a3771ee8fae84839"
+    "contentHash": "d86dacc45dc7d918ebede3e4c2bd5f68dc18fb8a13bfdca3a3771ee8fae84839",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -4043,7 +3949,8 @@
     },
     "id": "3d979702",
     "blockId": 10,
-    "contentHash": "3d9797024f9c8809c2ea93928cc36d237ecc2b06909aebf5bca860dec6175192"
+    "contentHash": "3d9797024f9c8809c2ea93928cc36d237ecc2b06909aebf5bca860dec6175192",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -4064,7 +3971,8 @@
     },
     "id": "f441dd18",
     "blockId": 10,
-    "contentHash": "f441dd1828dd10a318f9a9ce52717c1d5fea10e374f6d58b6fc35ca85d5a28e1"
+    "contentHash": "f441dd1828dd10a318f9a9ce52717c1d5fea10e374f6d58b6fc35ca85d5a28e1",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -4084,7 +3992,8 @@
     },
     "id": "b227cb52",
     "blockId": 10,
-    "contentHash": "b227cb52408bba733f839cf3ef1749ee9ba74436bc72969723425ab26e9d3ebe"
+    "contentHash": "b227cb52408bba733f839cf3ef1749ee9ba74436bc72969723425ab26e9d3ebe",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -4105,7 +4014,8 @@
     },
     "id": "0847ef58",
     "blockId": 10,
-    "contentHash": "0847ef58dac9495b1e21ec50d74298aeb0e654e31f03b809eb544cdadb25d467"
+    "contentHash": "0847ef58dac9495b1e21ec50d74298aeb0e654e31f03b809eb544cdadb25d467",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -4125,7 +4035,8 @@
     },
     "id": "6202b902",
     "blockId": 10,
-    "contentHash": "6202b90249b065a372274c7ebe54f9d504514056657f69f6fec2fde17b0e987a"
+    "contentHash": "6202b90249b065a372274c7ebe54f9d504514056657f69f6fec2fde17b0e987a",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -4150,7 +4061,8 @@
     },
     "id": "148c0447",
     "blockId": 10,
-    "contentHash": "148c04472130919afec736c1bb66ccc18d3761d06e1a29047096875299404178"
+    "contentHash": "148c04472130919afec736c1bb66ccc18d3761d06e1a29047096875299404178",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -4175,7 +4087,8 @@
     },
     "id": "00bc55b0",
     "blockId": 10,
-    "contentHash": "00bc55b054e911f9d407a8c616fc87d6f927a437101947f99eb9ef079251019c"
+    "contentHash": "00bc55b054e911f9d407a8c616fc87d6f927a437101947f99eb9ef079251019c",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -4200,7 +4113,8 @@
     },
     "id": "9df296e0",
     "blockId": 10,
-    "contentHash": "9df296e07ca966ff1da6e037b9eb60d09a1659547fc5c4a95ddfc791ec628938"
+    "contentHash": "9df296e07ca966ff1da6e037b9eb60d09a1659547fc5c4a95ddfc791ec628938",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -4225,7 +4139,8 @@
     },
     "id": "b18478ee",
     "blockId": 10,
-    "contentHash": "b18478ee62a1c75c74e2d19d65fba7cabeb2d6cecf9fa3a4c64c0eb8482ea006"
+    "contentHash": "b18478ee62a1c75c74e2d19d65fba7cabeb2d6cecf9fa3a4c64c0eb8482ea006",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -4250,7 +4165,8 @@
     },
     "id": "4e43ccae",
     "blockId": 10,
-    "contentHash": "4e43ccaec7bc88ce15662d3b9e732a77475787daa649b4f63e3c66e0c73a0eb1"
+    "contentHash": "4e43ccaec7bc88ce15662d3b9e732a77475787daa649b4f63e3c66e0c73a0eb1",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -4275,6 +4191,7 @@
     },
     "id": "9395a9c7",
     "blockId": 10,
-    "contentHash": "9395a9c749986ae7003a2f7d78d1801a9a6c5087d412067a14303069aecfcd2a"
+    "contentHash": "9395a9c749986ae7003a2f7d78d1801a9a6c5087d412067a14303069aecfcd2a",
+    "variantStatus": "unchecked"
   }
 ]

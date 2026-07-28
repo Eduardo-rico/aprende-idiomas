@@ -50,10 +50,16 @@ but the `tense` field uses "conjuntivo".)
 
 `person` (closed set): `eu`, `tu`, `você`, `ele/ela`, `nós`, `vocês`, `eles/elas`.
 
-**Variant-aware conjugation:** when the `tu` (PT-PT) and `você` (BR) forms differ,
-put the BR form in base `answer` and the European form in
-`variantOverrides["pt-pt"].answer`. Example: falar/presente/2ª →
-base `answer: "fala"` (você), `variantOverrides: { "pt-pt": { answer: "falas" } }` (tu).
+**Variant-aware conjugation:** the base is **European Portuguese**. When the
+`tu` (PT-PT) and `você` (BR) forms differ, put the **European form in base
+`answer`** and the Brazilian one in `variantOverrides["pt-br"].answer`.
+Example: falar/presente/2ª → base `answer: "falas"` (tu),
+`variantOverrides: { "pt-br": { answer: "fala" } }` (você).
+
+Do not invert this. The previous corpus was generated the other way round and
+91 % of it ended up Brazilian, served to a learner studying for Portugal.
+`tu` is the ordinary second person in Portugal; `você` there is distant, not
+familiar, and deference is done in the **third person without a pronoun**.
 
 ## esContrast / error rubric (R8)
 

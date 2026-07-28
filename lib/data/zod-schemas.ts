@@ -233,6 +233,27 @@ export const VariantOverrideByTypeSchema = {
 // CRÍTICO: el data es variante-específico. Cruzar tipos (ej. data con
 // audioText en un flashcard) no parsea. variantOverrides se valida
 // contra la unión de override schemas (no conoce el tipo del padre).
+// Estado de variante. Existe para matar una ambigüedad que costó el 91 % del
+// corpus: hasta la inversión de 2026-07-28, la AUSENCIA de `variantOverrides`
+// significaba o «verificado idéntico en las dos variantes» o «nadie lo miró»,
+// y no había forma de distinguirlas — así que el contenido brasileño se sirvió
+// como europeo en silencio. Ahora el silencio es un estado explícito.
+//
+//   'divergent'   — las dos formas existen y difieren. `data` es PT-PT,
+//                   `variantOverrides['pt-br']` lleva los campos brasileños.
+//   'unchecked'   — nadie ha verificado que `data` sea válido en PT-PT.
+//                   NO debe servirse como pt-pt sin revisión humana.
+//   'needs-human' — el ítem está roto o el override no es una variante.
+//   'neutral'     — verificado idéntico en ambas. Reservado: hoy nada lo usa,
+//                   porque nadie ha hecho esa verificación todavía.
+export const VariantStatusSchema = z.enum([
+  'neutral',
+  'divergent',
+  'unchecked',
+  'needs-human',
+]);
+export type VariantStatus = z.infer<typeof VariantStatusSchema>;
+
 const BaseExercise = z.object({
   id: z.string().min(1),
   blockId: z.number().int().positive(),
@@ -243,6 +264,9 @@ const BaseExercise = z.object({
   contentHash: z.string().optional(),
   esContrast: z.string().optional(),
   audio: AudioRefSchema.optional(),
+  /** Ver VariantStatusSchema. Opcional para que el contenido anterior a la
+   *  inversión siga parseando; el gate de verify-content lo exige. */
+  variantStatus: VariantStatusSchema.optional(),
 });
 
 const FlashcardEx = BaseExercise.extend({

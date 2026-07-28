@@ -1,0 +1,14 @@
+[
+  {
+    "id": "086de331",
+    "motivo": "marcado a mano: el ítem es incorrecto en las dos variantes",
+    "base": "{\"audioText\":\"Minha avó mora no Brasil. Minha avô mora em Lisboa.\",\"question\":\"¿En qué país se dice 'avó' y en cuál se dice 'avô'?\",\"options\":[\"Brasil e Portugal\",\"Portugal e Brasil\",\"Espanha e Brasil\",\"Brasil e México\"]",
+    "override": "{\"audioText\":\"Minha avô mora no Brasil. Minha avó mora em Lisboa.\",\"question\":\"¿En qué país se dice 'avô' y en cuál se dice 'avó'?\",\"answer\":\"Portugal e Brasil\"}"
+  },
+  {
+    "id": "4a1e949d",
+    "motivo": "el override cambia la frase, no la variante",
+    "base": "{\"sentence\":\"Cordialmente ___ ,\",\"blanks\":[{\"position\":0,\"answer\":\"saúdo\",\"alternatives\":[\"saudação\",\"cumprimento\"]}]}",
+    "override": "{\"sentence\":\"Com os melhores cumprimentos,\",\"blanks\":[{\"position\":0,\"answer\":\"saúdo\",\"alternatives\":[\"cumprimentos\"]}]}"
+  }
+]

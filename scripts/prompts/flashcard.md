@@ -7,7 +7,7 @@ Vocabulario clave (pre-teaching — DEBE aparecer como flashcards, al menos {{N}
 Conceptos cubiertos en esta lección (úsalos en `concepts`):
 {{conceptsList}}
 
-Variante principal: PT-BR. Marca diferencias con PT-PT solo cuando existan.
+Variante base: **PT-PT, portugués europeo**. `data` va siempre en portugués de Portugal. Marca la forma brasileña en `variantOverrides["pt-br"]` sólo cuando difiera, y nunca la dupliques si es idéntica.
 
 Formato JSON por item:
 {

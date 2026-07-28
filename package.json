@@ -20,6 +20,8 @@
     "build:catalog": "tsx scripts/build-vocab-catalog.ts",
     "generate:all": "npm run generate:curriculum && npm run generate:content && npm run generate:audio && npm run verify:content",
     "verify:content": "tsx scripts/verify-content.ts",
+    "verify:variant": "tsx scripts/check-variant.ts",
+    "invert:variant": "tsx scripts/invert-variant-base.ts",
     "gc:audio": "node scripts/gc-audio.mjs",
     "probe:tts": "tsx scripts/probe-tts.ts"
   },

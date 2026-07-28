@@ -33,7 +33,8 @@
         "Assim que encontrar a vaga, ligo-te.",
         "Quando achar a vaga, ligo-te."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "01c91268",
@@ -63,7 +64,8 @@
       "front": "formulário (substantivo)",
       "back": "formulário",
       "example": "Preciso preencher o formulário de inscrição."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "0201bcbb",
@@ -97,7 +99,8 @@
       "acceptedAlternatives": [
         "Cuando la casa se caliente me pondré a estudiar."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "03b538f2",
@@ -131,7 +134,8 @@
       "acceptedAlternatives": [
         "Al inicio, nadie sabía manejar la situación."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "04421012",
@@ -161,7 +165,8 @@
       "front": "Traduce: 'conexión, ligação'",
       "back": "ligação",
       "example": "Há uma ligação entre os dois eventos."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "056ccbea",
@@ -192,7 +197,8 @@
       "front": "¿Dónde va 'talvez' con subjuntivo?",
       "back": "Antes ou depois do verbo no subjuntivo",
       "example": "Talvez ele venha. / Ele talvez venha amanhã."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "064a533b",
@@ -221,7 +227,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "07865669",
@@ -249,7 +256,8 @@
         "por"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "08a7c6a1",
@@ -276,7 +284,7 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "É incrível que você tenha tanta confiança para lidar com situações difíceis no início.",
+      "audioText": "É incrível que tu tenhas tanta confiança para lidar com situações difíceis no início.",
       "question": "¿Qué expresa el hablante sobre la actitud del interlocutor?",
       "options": [
         "Critica su actitud",
@@ -288,9 +296,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "É incrível que tu tenhas tanta confiança para lidar com situações difíceis no início."
+        "audioText": "É incrível que você tenha tanta confiança para lidar com situações difíceis no início."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "0a649f0c",
@@ -314,7 +323,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "0a693481",
@@ -352,11 +362,7 @@
       ],
       "answer": "Expresión impersonal de possibilidade"
     },
-    "variantOverrides": {
-      "pt-br": {
-        "audioText": "É possível que eles suspirem de tão grande que é a confiança."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "0b68f903",
@@ -386,7 +392,8 @@
       "front": "¿Qué significa 'Se por um acaso...'?",
       "back": "'Si por casualidad...' — condición remota e improvável",
       "example": "Se por um acaso você o vir, me avise."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "0cdd0085",
@@ -418,7 +425,8 @@
       "acceptedAlternatives": [
         "Me da miedo que ellos vengan a público revelar todo."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "0e6f747c",
@@ -452,7 +460,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1111ffde",
@@ -487,7 +496,8 @@
       "acceptedAlternatives": [
         "Si él prometiese que venía a la fiesta"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "134441ae",
@@ -518,7 +528,8 @@
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": []
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "14654ef2",
@@ -543,7 +554,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "173d1ece",
@@ -574,7 +586,8 @@
       "front": "Error común: 'Se eu sei...' (españolismo)",
       "back": "Correcto: Se eu soubesse... (imperfeito do subjuntivo)",
       "example": "Se eu soubesse o que ia acontecer, teria fugido."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1876a7b4",
@@ -605,7 +618,8 @@
       "front": "¿Qué significa 'Se ao menos...'?",
       "back": "Expresa desejo irrealizável — 'Si al menos...'",
       "example": "Se ao menos eu pudesse ajudá-lo!"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "187a6c40",
@@ -635,7 +649,8 @@
       "front": "advocacia (substantivo)",
       "back": "advocacia (profissão de advogado)",
       "example": "Ele se formou em advocacia pela USP."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "198befe5",
@@ -660,7 +675,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "198dbde3",
@@ -693,7 +709,8 @@
       "acceptedAlternatives": [
         "Si ustedes comiesen más vegetales"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "19c89d21",
@@ -720,7 +737,8 @@
         "pensar —"
       ],
       "answer": "pensar em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1a95c0df",
@@ -751,7 +769,8 @@
       "front": "Tengo miedo de que él no pueda venir. (traduce al PT-BR)",
       "back": "Tenho medo de que ele não possa vir.",
       "example": "Tenho medo de que ele não possa vir à reunião amanhã."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1c3050fc",
@@ -781,7 +800,8 @@
       "front": "Traduce: 'apretar, apretar la mano'",
       "back": "apertar",
       "example": "Ele apertou a mão do amigo com força."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1d5ff8ff",
@@ -815,7 +835,8 @@
       "acceptedAlternatives": [
         "Desejo que haja uma boa ligação entre nós."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1e30cc88",
@@ -845,7 +866,8 @@
       "front": "Conjuga 'falar' en presente do conjuntivo: Eu",
       "back": "que eu fale",
       "example": "É importante que eu fale com ela hoje."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1ecd4197",
@@ -880,7 +902,8 @@
         "Estudassem"
       ],
       "answer": "Estudar"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1ee66c76",
@@ -910,7 +933,8 @@
       "front": "Traduce: 'inicio'",
       "back": "início",
       "example": "No início do ano, tudo era difícil."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1f424c71",
@@ -938,14 +962,15 @@
     "type": "flashcard",
     "data": {
       "front": "Traduce al portugués: 'Si yo estuviera en tu lugar...'",
-      "back": "Se eu estivesse no teu lugar...",
+      "back": "Se eu estivesse no seu lugar...",
       "example": "Se eu estivesse no teu lugar, não faria isso."
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "Se eu estivesse no seu lugar..."
+        "back": "Se eu estivesse no teu lugar..."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "22557d60",
@@ -977,7 +1002,8 @@
       "acceptedAlternatives": [
         "En cuanto se determine el rumbo de la investigación, os daré noticias."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "22b073bd",
@@ -1012,7 +1038,8 @@
       "acceptedAlternatives": [
         "Quando o céu se puser, o calor vai intensificar."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "253d0395",
@@ -1046,7 +1073,8 @@
       "acceptedAlternatives": [
         "Si hubiera tomado otra dirección, no habría conocido a María."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "260ee130",
@@ -1082,7 +1110,8 @@
         "Fazia"
       ],
       "answer": "Fizesse"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "261d6d4d",
@@ -1116,7 +1145,8 @@
       "acceptedAlternatives": [
         "Como se chovesse amanhã, já comprei o guarda-chuva."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "266656b5",
@@ -1150,7 +1180,8 @@
       "acceptedAlternatives": [
         "Não acredito que eles tenham a confiança necessária."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "278e78fc",
@@ -1178,7 +1209,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2929e031",
@@ -1212,7 +1244,8 @@
       "acceptedAlternatives": [
         "Tenho dúvidas de que ele saiba lidar com este problema."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "299659db",
@@ -1238,11 +1271,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "Se ela ___ mais, teria passado no exame."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "299f7796",
@@ -1270,7 +1299,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2a1567bd",
@@ -1302,7 +1332,8 @@
       "acceptedAlternatives": [
         "Si él promise quedarse quieto, habríamos hecho el trabajo."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2c90a6da",
@@ -1328,11 +1359,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "Assim que nós ___ (terminar) o projeto, tiraremos férias."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "2ca8356e",
@@ -1364,7 +1391,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2cd4cb67",
@@ -1394,7 +1422,8 @@
       "front": "Conector ASSIM QUE + futuro do conjuntivo",
       "back": "Indica ação que ocurrirá imediatamente após outra no futuro: Assim que + [verbo no futuro do conjuntivo]...",
       "example": "Assim que a ligação terminar, vou aquecer o jantar."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2ce1c2c0",
@@ -1428,7 +1457,8 @@
       "acceptedAlternatives": [
         "Quando fizeres a ligação, dá-me um toque."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2cfcc89a",
@@ -1453,7 +1483,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2f57ad8b",
@@ -1488,7 +1519,8 @@
       "acceptedAlternatives": [
         "Tenho medo de que a ideia vaga que tenho seja insuficiente para preencher o formulário."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2fbb364c",
@@ -1522,7 +1554,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2ff1704f",
@@ -1552,7 +1585,8 @@
       "front": "Traduce al portugués: 'Era necesario que el agua se calentara antes de usar.'",
       "back": "Era necessário que a água se aquecesse antes de usar.",
       "example": "Era necessário que a água se aquecesse a 40 graus para o experimento."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "31477887",
@@ -1582,7 +1616,8 @@
       "front": "Traduce: 'suspirar'",
       "back": "suspiar",
       "example": "Ela suspirou de alívio quando soube a notícia."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "319031d5",
@@ -1619,7 +1654,8 @@
         "No hacer nada"
       ],
       "answer": "Decir que regresa mañana"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "32e521c9",
@@ -1650,7 +1686,8 @@
       "front": "formulário (substantivo)",
       "back": "formulário",
       "example": "Preciso preencher este formulário de inscrição."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "348ba22c",
@@ -1686,7 +1723,8 @@
       "acceptedAlternatives": [
         "É possível que ele traga as coisas que precisamos."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "355e5f79",
@@ -1722,14 +1760,7 @@
         "Si hubiéramos llegado antes, habríamos agarrado el último vagón."
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "target": "Si hubiéramos llegado más temprano, habríamos cogido el último vagón.",
-        "acceptedAlternatives": [
-          "Si hubiéramos llegado antes, habríamos agarrado el último vagón."
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "39991646",
@@ -1763,7 +1794,8 @@
       "acceptedAlternatives": [
         "Se tomares a decisão correta, o rumo mudará."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3a081d4c",
@@ -1786,7 +1818,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3bd2d3d6",
@@ -1814,7 +1847,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3bffc14a",
@@ -1842,7 +1876,7 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "Temo que o início da ligação seja confuso para vocês, mas é possível que vocês já estejam preparados.",
+      "audioText": "Receio que o início da ligação seja confuso para vocês, mas é possível que vocês já estejam preparados.",
       "question": "¿Qué emoción expresa el hablante en la primera parte de la oración?",
       "options": [
         "Alegría por el éxito",
@@ -1854,9 +1888,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "Receio que o início da ligação seja confuso para vocês, mas é possível que vocês já estejam preparados."
+        "audioText": "Temo que o início da ligação seja confuso para vocês, mas é possível que vocês já estejam preparados."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "3d44b946",
@@ -1879,24 +1914,24 @@
         {
           "position": 0,
           "answer": "quissessem",
-          "alternatives": [
-            "quisessem"
-          ]
+          "alternatives": []
         }
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Se vocês ___ ir ao concerto, teríamos ido juntos.",
         "blanks": [
           {
             "position": 0,
             "answer": "quissessem",
-            "alternatives": []
+            "alternatives": [
+              "quisessem"
+            ]
           }
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "3e0e742e",
@@ -1927,7 +1962,8 @@
       "front": "Él ya sabe la verdad. (¿Indicativo o Conjuntivo?)",
       "back": "Ele já sabe a verdade. (INDICATIVO - hecho/certeza)",
       "example": "Ele já sabe a verdade, por isso não precisa mentir."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3e7c6342",
@@ -1961,7 +1997,8 @@
       "acceptedAlternatives": [
         "Si él suspira menos, trabajaría mejor."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3f18efea",
@@ -1995,7 +2032,8 @@
       "acceptedAlternatives": [
         "Se eu soubesse falar português, trabalharia em Lisboa."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "411492cc",
@@ -2027,7 +2065,8 @@
       "acceptedAlternatives": [
         "No estoy seguro de que ellos sepan la respuesta correcta."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "419a2f15",
@@ -2057,7 +2096,8 @@
       "front": "vaga (substantivo - emprego)",
       "back": "vaga",
       "example": "Vi uma vaga de emprego interessante."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "41a169d9",
@@ -2084,7 +2124,8 @@
         "precisarem —"
       ],
       "answer": "precisarem de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "42613079",
@@ -2115,7 +2156,8 @@
       "front": "pôr-se (verbo pronominal)",
       "back": "pôr-se (colocar-se, colocar a si mesmo) — reflexivo",
       "example": "Assim que escurecer, vou pôr-me a estudar."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "427e8b73",
@@ -2149,7 +2191,8 @@
       "acceptedAlternatives": [
         "É provável que a ligação se perca no início da ligação."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "43446140",
@@ -2183,7 +2226,8 @@
       "acceptedAlternatives": [
         "Se o sapato não estivesse tão apertado, podia usá-lo."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "435a79ff",
@@ -2210,7 +2254,8 @@
         "depender —"
       ],
       "answer": "depender de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "43b7e44d",
@@ -2237,7 +2282,8 @@
         "em"
       ],
       "answer": "da"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "43c19009",
@@ -2271,7 +2317,8 @@
       "acceptedAlternatives": [
         "Tengo confianza en que él resolverá eso."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "442b94b3",
@@ -2300,7 +2347,7 @@
     "type": "translation",
     "data": {
       "source": "Es posible que al inicio no tengas confianza para expresarte.",
-      "target": "É possível que no início não tenhas confiança para te expressar.",
+      "target": "É possível que no início não tenhas confiança para te expressares.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
@@ -2309,12 +2356,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "É possível que no início não tenhas confiança para te expressares.",
-        "acceptedAlternatives": [
-          "É possível que no início não tenhas confiança para se expressar."
-        ]
+        "target": "É possível que no início não tenhas confiança para te expressar."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "446ab5d2",
@@ -2349,14 +2394,14 @@
         "Condición futura cierta",
         "Hipótesis irreal del pasado (tipo 4)"
       ],
-      "answer": "Hipótesis improbable o irreal presente/futura"
+      "answer": "Hipótese improvável ou irreal presente/futura"
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "Se eu soubesse que ia chover, talvez tivesse trazida a capa.",
-        "answer": "Hipótese improvável ou irreal presente/futura"
+        "answer": "Hipótesis improbable o irreal presente/futura"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "44d40ed6",
@@ -2390,7 +2435,8 @@
       "acceptedAlternatives": [
         "Dúvido que ele soubesse o que passou."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "451f6f84",
@@ -2424,7 +2470,8 @@
       "acceptedAlternatives": [
         "É importante que preencha o formulário."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "466a855e",
@@ -2454,7 +2501,8 @@
       "front": "Traduce al portugués: 'Si el zapato estuviera menos apretado...'",
       "back": "Se o sapato estivesse menos apertado...",
       "example": "Se o sapato estivesse menos apertado, eu poderia usá-lo o dia todo."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "48fddecb",
@@ -2486,7 +2534,8 @@
       "acceptedAlternatives": [
         "Se ela estivesse menos ocupada, viria a visitar-nos."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "496c5452",
@@ -2516,7 +2565,8 @@
       "front": "apertado (adjetivo)",
       "back": "apertado / apertada",
       "example": "O sapato está muito apertado."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "49c18c4f",
@@ -2546,7 +2596,8 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4a8ba7fd",
@@ -2582,7 +2633,8 @@
         "Ter"
       ],
       "answer": "Tivesse"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4aa669a3",
@@ -2608,7 +2660,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4b1ca4fc",
@@ -2639,7 +2692,8 @@
       "front": "aquecer (verbo irregular - pret. subj. futuro)",
       "back": "aquecer → aquecer (mantém) — no futuro do conjuntivo",
       "example": "Assim que a água se aquecer, podemos fazer o chá."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4b2561b4",
@@ -2673,7 +2727,8 @@
       "acceptedAlternatives": [
         "Penso que você tem confiança em mim."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4c1c9fb6",
@@ -2700,7 +2755,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4c57ee17",
@@ -2735,7 +2791,8 @@
       "acceptedAlternatives": [
         "Talvez ele venha a saber a verdade amanhã."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4fd214c6",
@@ -2762,7 +2819,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "5048626c",
@@ -2788,7 +2846,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "520df8fd",
@@ -2813,7 +2872,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "528df64a",
@@ -2840,7 +2900,8 @@
         "∅"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "52ac19fa",
@@ -2870,7 +2931,8 @@
       "front": "Traduce al portugués: 'Si supiera la verdad, te lo diría.'",
       "back": "Se eu soubesse a verdade, eu te diria.",
       "example": "Se eu soubesse a verdade, eu te diria sem hesitar."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "5534671f",
@@ -2904,7 +2966,8 @@
       "acceptedAlternatives": [
         "Es posible que haya una conexión entre los dos casos."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "56497955",
@@ -2934,7 +2997,8 @@
       "front": "Como se forma o futuro do conjuntivo? (verbos em -ER e -IR)",
       "back": "Substitui-se a desinência -er/-ir do pretérito perfeito por -er: comer → comi → com er",
       "example": "Assim que eucomer, vou sair para a reunião."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "566d289a",
@@ -2964,7 +3028,8 @@
       "front": "Conector QUANDO + futuro do conjuntivo",
       "back": "Indica ação futura que ocurrirá no futuro: Quando + [sujeito] + [verbo no futuro do conjuntivo]...",
       "example": "Quando eu conseguir a vaga, vou mudar de cidade."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "58b6df50",
@@ -3002,12 +3067,7 @@
       ],
       "answer": "Pretérito mais-que-perfeito do conjuntivo"
     },
-    "variantOverrides": {
-      "pt-br": {
-        "audioText": "Se eu tivesse promiseu a ela antes, talvez não estivesse sozinha agora.",
-        "answer": "Pretérito mais-que-perfeito do conjuntivo"
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "58cb5eb0",
@@ -3035,15 +3095,15 @@
     "type": "flashcard",
     "data": {
       "front": "Complete: Quando ele ___ (pôr) o formulário, saberemos o rumo do processo.",
-      "back": "pôr",
+      "back": "pôr (forma no futuro do conjuntivo) → puser (PT-PT) / puser (PT-BR)",
       "example": "Quando ele puser o formulário, saberemos o rumo do processo."
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "pôr (forma no futuro do conjuntivo) → puser (PT-PT) / puser (PT-BR)",
-        "example": "Quando ele puser o formulário, saberemos o rumo do processo."
+        "back": "pôr"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "5b27aed7",
@@ -3075,7 +3135,8 @@
       "acceptedAlternatives": [
         "Se ele não tivesse prometido nada, não o estaríamos à espera."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "5bc3df80",
@@ -3114,11 +3175,7 @@
       ],
       "answer": "tenga (subjuntivo)"
     },
-    "variantOverrides": {
-      "pt-br": {
-        "audioText": "Talvez ele tenha mais confiança no início da ligação."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "5d5a108f",
@@ -3149,7 +3206,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "5d724b79",
@@ -3174,7 +3232,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "5fde7221",
@@ -3207,7 +3266,8 @@
       "acceptedAlternatives": [
         "Si nosotros estuviésemos al principio de la construcción"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "61c4310f",
@@ -3241,7 +3301,8 @@
       "acceptedAlternatives": [
         "Espero que veas el error antes de continuar."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "63026879",
@@ -3275,7 +3336,8 @@
       "acceptedAlternatives": [
         "Cuando tengáis una vacante en la firma, avisadme."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "63583190",
@@ -3299,7 +3361,8 @@
         "∅"
       ],
       "answer": "a"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "63ec1e5e",
@@ -3329,7 +3392,8 @@
       "front": "Como se forma o futuro do conjuntivo? (verbos em -AR)",
       "back": "Substitui-se a desinência -ar do pretérito perfeito por -ar: falar → falei → fal ar",
       "example": "Quando eu falar com o chefe, amanhã, vou pedir a vaga."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "64073d7a",
@@ -3359,7 +3423,8 @@
       "front": "¿Indicativo o conjuntivo? 'Talvez ele ___ a verdade.' (dizer)",
       "back": "diga (conjuntivo)",
       "example": "Talvez ele diga a verdade."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "643ed58b",
@@ -3390,7 +3455,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "64e682ff",
@@ -3422,7 +3488,8 @@
       "acceptedAlternatives": [
         "Es extraño que no haya llamado todavía; espero que esté bien."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "65045f37",
@@ -3449,7 +3516,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "659e6191",
@@ -3485,7 +3553,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "676214a2",
@@ -3519,7 +3588,8 @@
       "acceptedAlternatives": [
         "Como si la conexión se hubiera hecho ayer, así reaccionaste."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "67c5b809",
@@ -3546,7 +3616,7 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "É importante que você saiba lidar com essa situação desde o início.",
+      "audioText": "É importante que tu saibas lidar com essa situação desde o início.",
       "question": "¿Por qué se usa el subjuntivo en esta frase?",
       "options": [
         "Porque expresa un hecho cierto",
@@ -3558,9 +3628,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "É importante que tu saibas lidar com essa situação desde o início."
+        "audioText": "É importante que você saiba lidar com essa situação desde o início."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "682e66e2",
@@ -3584,7 +3655,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "694d343b",
@@ -3614,7 +3686,8 @@
       "front": "¿Cómo se forma el imperfeito do conjuntivo de los verbos terminados en -AR?",
       "back": "Se toma la raíz del pretérito imperfeito do indicativo y se añade -ASSE: falar → falasse",
       "example": "Se eu falasse mais devagar, você entenderia melhor."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6972c50b",
@@ -3642,7 +3715,8 @@
         "—"
       ],
       "answer": "com"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6c52eb7f",
@@ -3681,11 +3755,7 @@
       ],
       "answer": "traga"
     },
-    "variantOverrides": {
-      "pt-br": {
-        "audioText": "Talvez ela traga mais confiança para lidar com o apertar da rotina."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "6ca73007",
@@ -3711,7 +3781,8 @@
         "por"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6cc03736",
@@ -3738,7 +3809,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6d873e0e",
@@ -3774,7 +3846,8 @@
         "Que lo ignore"
       ],
       "answer": "Que lo llenen al inicio con confianza"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6ddf92da",
@@ -3804,7 +3877,8 @@
       "front": "Forma el imperfeito do conjuntivo de VER (irregular)",
       "back": "visse, visses, visse, víssemos, vissem",
       "example": "Se eu visse esse filme antes, teria chorado."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6e7f55d2",
@@ -3835,11 +3909,7 @@
       "back": "estivesse, estivesses, estivesse, estivéssemos, estivessem",
       "example": "Se nós estivéssemos prontos, já teríamos partido."
     },
-    "variantOverrides": {
-      "pt-br": {
-        "back": "estivesse, estivesses, estivesse, estivéssemos, estivessem"
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "6e8e5a10",
@@ -3867,7 +3937,8 @@
       "front": "¿Cuál es la conjugación completa de FALAR en imperfeito do conjuntivo?",
       "back": "falasse, falasses, falasse, falássemos, falassem",
       "example": "Se ele falasse a verdade, tudo seria mais fácil."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6f0e5554",
@@ -3899,7 +3970,8 @@
       "acceptedAlternatives": [
         "Se soubéssemos o rumo da investigação, poderíamos ajudá-lo melhor."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "72151956",
@@ -3929,7 +4001,8 @@
       "front": "talvez",
       "back": "talvez",
       "example": "Talvez eu vá à festa amanhã."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "72679e92",
@@ -3946,7 +4019,7 @@
     "esContrast": "Pluscuamperfecto de subjuntivo: tivesse + participio = condicional compuesto en la oración principal.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Se ele não ___ a decisão, teria logrado o éxito.",
+      "sentence": "Se ele não ___ a decisão, teria logrado o sucesso.",
       "blanks": [
         {
           "position": 0,
@@ -3959,9 +4032,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Se ele não ___ a decisão, teria logrado o sucesso."
+        "sentence": "Se ele não ___ a decisão, teria logrado o éxito."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "73224b27",
@@ -3989,14 +4063,15 @@
     "type": "flashcard",
     "data": {
       "front": "Traduce al portugués: 'Si hubiera tenido tiempo, habría salido al exterior.'",
-      "back": "Se eu tivesse tenido tempo, teria saído para o exterior.",
+      "back": "Se eu tivesse tempo, teria saído para o exterior.",
       "example": "Se eu tivesse tenido tempo, teria saído para o exterior da cidade."
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "Se eu tivesse tempo, teria saído para o exterior."
+        "back": "Se eu tivesse tenido tempo, teria saído para o exterior."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "73e6569c",
@@ -4028,7 +4103,8 @@
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": []
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "74ad4db6",
@@ -4062,7 +4138,8 @@
       "acceptedAlternatives": [
         "Tal vez vaya a la reunión mañana."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7823cae6",
@@ -4098,7 +4175,8 @@
         "Que el interlocutor se preocupe"
       ],
       "answer": "Que el interlocutor tenga confianza desde el inicio"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "782bf7f2",
@@ -4122,7 +4200,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "79661cc6",
@@ -4156,7 +4235,8 @@
       "acceptedAlternatives": [
         "Quero que tu venhas ao início da reunião."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7acf7f5e",
@@ -4186,7 +4266,8 @@
       "front": "Es importante que tú vengas mañana. (traduce al PT-BR)",
       "back": "É importante que você venha amanhã.",
       "example": "É importante que você venha amanhã para a reunião."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7ae49552",
@@ -4212,7 +4293,8 @@
         "∅"
       ],
       "answer": "a"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7b8f1ddb",
@@ -4238,7 +4320,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7bbbb8b5",
@@ -4270,7 +4353,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7c3a2e8d",
@@ -4306,7 +4390,8 @@
         "Afirmación neutral"
       ],
       "answer": "Duda o posibilidad"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7dc7da91",
@@ -4331,7 +4416,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7ef779dd",
@@ -4364,7 +4450,8 @@
       "acceptedAlternatives": [
         "Oxalá ela vivesse mais perto de nós."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7fa4ea72",
@@ -4401,7 +4488,8 @@
         "Antes del verano"
       ],
       "answer": "Cuando el verano se caliente"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "80c70b79",
@@ -4431,7 +4519,8 @@
       "front": "Complete: Assim que a água ___ (aquecer), vou preparar o chá.",
       "back": "aquecer",
       "example": "Assim que a água se aquecer, vou preparar o chá."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "81b07c46",
@@ -4464,7 +4553,8 @@
       "acceptedAlternatives": [
         "Si yo le hablara a ella"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8231bdc2",
@@ -4498,7 +4588,8 @@
       "acceptedAlternatives": [
         "Si Prometeo viese la galería de arte moderno"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8351a07a",
@@ -4527,7 +4618,7 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "Se eu tivesse suspado que o tiempo ia ficar assim, teria ficado em casa.",
+      "audioText": "Se eu tivesse suspado que o tempo ia ficar assim, teria ficado em casa.",
       "question": "La oración expresa una hipótesis sobre el pasado que NO se cumplió. ¿Qué tipo de condicional es?",
       "options": [
         "Condicional tipo 3 (hipótesis improbable presente)",
@@ -4535,14 +4626,15 @@
         "Condicional tipo 2 (hipótesis improbable futura)",
         "Condicional tipo 1 (hipótesis provável)"
       ],
-      "answer": "Condicional tipo 4 (hipótesis irreal pasada)"
+      "answer": "Condicional tipo 4 (hipótese irreal passada)"
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "Se eu tivesse suspado que o tempo ia ficar assim, teria ficado em casa.",
-        "answer": "Condicional tipo 4 (hipótese irreal passada)"
+        "audioText": "Se eu tivesse suspado que o tiempo ia ficar assim, teria ficado em casa.",
+        "answer": "Condicional tipo 4 (hipótesis irreal pasada)"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "847071af",
@@ -4571,7 +4663,7 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "Quero que você venha apertar minha mão no início da festa.",
+      "audioText": "Quero que tu venhas apertar a minha mão no início da festa.",
       "question": "¿Cuál es la forma correcta del verbo 'vir' en subjuntivo para 'você'?",
       "options": [
         "vém",
@@ -4583,9 +4675,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "Quero que tu venhas apertar a minha mão no início da festa."
+        "audioText": "Quero que você venha apertar minha mão no início da festa."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "869a319e",
@@ -4615,7 +4708,8 @@
       "front": "Conjuga 'comer' en presente do conjuntivo: Ele",
       "back": "que ele coma",
       "example": "Espero que ele coma mais vegetais."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "86dee484",
@@ -4650,7 +4744,8 @@
       "acceptedAlternatives": [
         "É importante que facças a ligação correta."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "86e213b1",
@@ -4677,7 +4772,8 @@
         "gostar —"
       ],
       "answer": "gostar de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "898193b8",
@@ -4716,7 +4812,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8a623db0",
@@ -4747,7 +4844,8 @@
       "acceptedAlternatives": [
         "Tal vez él venga mañana."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8a956dbd",
@@ -4777,7 +4875,8 @@
       "front": "ligação (substantivo)",
       "back": "ligação (chamada telefônica ou conexão)",
       "example": "Fiz uma ligação para o escritório ontem."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8d514b7e",
@@ -4816,7 +4915,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8ef5f9e1",
@@ -4851,7 +4951,8 @@
         "Si yo pongo el formulario en línea, en cuanto podáis, responderéis.",
         "Si yo cuelgo el formulario en línea, en cuanto podáis responderéis."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8f36fd2f",
@@ -4877,7 +4978,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "93088d54",
@@ -4908,7 +5010,8 @@
       "front": "lidar com (verbo)",
       "back": "lidar com",
       "example": "Ela sabe lidar com situações difíceis."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "951f73ca",
@@ -4940,7 +5043,8 @@
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": []
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "95316b2d",
@@ -4974,7 +5078,8 @@
         "Assim que preencher o formulário, envio-o.",
         "Assim que preencher o formulário, mando-o."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "96866205",
@@ -5009,7 +5114,8 @@
       "acceptedAlternatives": [
         "Espero que tu possas lidar com o problema."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "980326fd",
@@ -5039,7 +5145,8 @@
       "front": "¿Indicativo o conjuntivo? 'Eu sei que ele ___ aqui.' (está)",
       "back": "está (indicativo)",
       "example": "Eu sei que ele está aqui."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "99b87720",
@@ -5073,7 +5180,8 @@
       "acceptedAlternatives": [
         "O fogo que ardesse na parte exterior da galeria já se tinha apagado."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9bd90a95",
@@ -5100,7 +5208,8 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9c260a8c",
@@ -5132,7 +5241,8 @@
       "acceptedAlternatives": [
         "Tal vez él supiera la respuesta si hubiera leído el libro."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9c7872ba",
@@ -5170,12 +5280,7 @@
       ],
       "answer": "fosse (imperfeito do conjuntivo)"
     },
-    "variantOverrides": {
-      "pt-br": {
-        "audioText": "Se o rumo da viagem fosse outro, talvez eu não estivesse tão cansado.",
-        "answer": "fosse (imperfeito do conjuntivo)"
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "9d0765a9",
@@ -5202,7 +5307,8 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9d4f7d44",
@@ -5234,7 +5340,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9de2263f",
@@ -5262,7 +5369,7 @@
     "type": "translation",
     "data": {
       "source": "Duvido que ele saiba lidar com essa situação.",
-      "target": "Dudo que él sepa lidar con esa situación.",
+      "target": "Dudo que él sepa tratar con esa situación.",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
@@ -5271,9 +5378,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Dudo que él sepa tratar con esa situación."
+        "target": "Dudo que él sepa lidar con esa situación."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "9fce0ceb",
@@ -5303,7 +5411,8 @@
       "front": "talvez (adverbio)",
       "back": "talvez",
       "example": "Talvez ele venha amanhã."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9ffe8f93",
@@ -5333,7 +5442,8 @@
       "front": "Forma el imperfeito do conjuntivo de VIR (irregular)",
       "back": "viesse, viesses, viesse, viéssemos, viessem",
       "example": "Se eles viessem à festa, seria mais divertida."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a3b799c6",
@@ -5363,7 +5473,8 @@
       "front": "rumo (substantivo)",
       "back": "rumo",
       "example": "O navio seguia rumo ao sul."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a6c2ee3c",
@@ -5393,7 +5504,8 @@
       "front": "¿Cuándo se usa el imperfeito do conjuntivo en lugar del presente do conjuntivo?",
       "back": "Cuando la oración principal está en pretérito imperfecto, pluscuamperfecto o condicional.",
       "example": "Eu queria que você viesse (pasado) / Eu quero que você venha (presente)."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a833a421",
@@ -5420,7 +5532,8 @@
         "sobre"
       ],
       "answer": "da"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a87305ac",
@@ -5447,7 +5560,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a8c4f697",
@@ -5479,7 +5593,8 @@
       "acceptedAlternatives": [
         "Se o documento não tivesse ardido, nós teríamos a prova."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "aaf03c85",
@@ -5514,7 +5629,8 @@
       "acceptedAlternatives": [
         "Si yo estuviera más urgido, habría rechazado la invitación."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ab9058ad",
@@ -5549,7 +5665,8 @@
       "acceptedAlternatives": [
         "É necessário que a gente dê uma resposta imediata."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ab9dc6c5",
@@ -5579,7 +5696,8 @@
       "front": "Traduce: 'Es posible que...'",
       "back": "É possível que...",
       "example": "É possível que chova amanhã."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ad2cb0f0",
@@ -5604,7 +5722,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b15e3a63",
@@ -5639,7 +5758,8 @@
         "Talvez, se estivesse menos apertado, pudesse ajudar-te amanhã.",
         "Talvez, se estivesse menos apertado, poderia ajudar-te amanhã."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b27edcea",
@@ -5663,7 +5783,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b3092135",
@@ -5696,7 +5817,8 @@
       "acceptedAlternatives": [
         "Si la chimenea ardiese con más intensidad"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b703cdef",
@@ -5726,7 +5848,8 @@
       "front": "Traduce al portugués: 'Si Prometeo no hubiera prometido fuego a los humanos...'",
       "back": "Se Prometeu não tivesse prometido o fogo aos humanos...",
       "example": "Se Prometeu não tivesse prometido o fogo aos humanos, a civilização seria diferente."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b75d20c5",
@@ -5752,7 +5875,8 @@
         "∅"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b7c6c40d",
@@ -5783,7 +5907,8 @@
       "front": "¿Cómo se forma la condición tipo 3 (hipótesis improvável presente)?",
       "back": "Se + imperfeito do subjuntivo + Conditional",
       "example": "Se eu tivesse dinheiro, compraria um carro."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b82f612d",
@@ -5809,7 +5934,8 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b86651eb",
@@ -5839,7 +5965,8 @@
       "front": "vaga (substantivo)",
       "back": "vaga (emprego disponível)",
       "example": "Essa empresa abriu uma vaga para advogado."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b9ad03d4",
@@ -5869,7 +5996,8 @@
       "front": "¿Cómo se forma la condición tipo 4 (hipótese irreal passada)?",
       "back": "Se + mais-que-perfeito do subjuntivo + Condicional composto",
       "example": "Se eu tivesse estudado, teria passado no exame."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b9c397d4",
@@ -5901,7 +6029,8 @@
       "acceptedAlternatives": [
         "En cuanto traigan el formulario, lo preencherei."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ba66841f",
@@ -5932,7 +6061,8 @@
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": []
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "bd6d3574",
@@ -5959,7 +6089,8 @@
         "∅"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "bdb5309a",
@@ -5989,7 +6120,8 @@
       "front": "¿Qué significa 'lidar com'?",
       "back": "lidiar con, tratar con, ocuparse de",
       "example": "Preciso lidar com esse problema agora."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "bf8cd8d3",
@@ -6019,7 +6151,8 @@
       "front": "Conjuga 'ser' en presente do conjuntivo: Eu",
       "back": "que eu seja",
       "example": "É bom que eu seja honesto com você."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c2f0740c",
@@ -6053,7 +6186,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c3039dc6",
@@ -6083,7 +6217,8 @@
       "front": "início (substantivo)",
       "back": "início",
       "example": "O início do curso foi muito difícil."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c56ed47d",
@@ -6110,7 +6245,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c688fbee",
@@ -6139,7 +6275,8 @@
     "data": {
       "front": "Conjuga 'ter' no mais-que-perfeito do subjuntivo",
       "back": "se eu tivesse tido, se tu tivesses tido, se ele tivesse tido..."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c778a8db",
@@ -6164,7 +6301,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c7d36176",
@@ -6201,7 +6339,8 @@
         "Que no había relación alguna"
       ],
       "answer": "Que parecía existir una conexión directa"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "cb93018d",
@@ -6235,7 +6374,8 @@
       "acceptedAlternatives": [
         "Si el rumbo es otro y no hay puesto para ti, como si nada fuera, acepta."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "cbd87b11",
@@ -6262,7 +6402,8 @@
         "∅"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "cd88a7e7",
@@ -6292,7 +6433,8 @@
     "data": {
       "front": "Conjuga 'ter' no imperfeito do subjuntivo",
       "back": "se eu tivesse, se tu tivesses, se ele tivesse, se nós tivéssemos, se vós tivésseis, se eles tivessem"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "cdb2ca2d",
@@ -6322,7 +6464,8 @@
       "front": "confiança (substantivo)",
       "back": "confiança",
       "example": "Ele tem muita confiança em você."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "cefb1b07",
@@ -6358,7 +6501,8 @@
         "Tinha"
       ],
       "answer": "Tiver"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d0091d78",
@@ -6388,7 +6532,8 @@
       "front": "suspirar",
       "back": "suspirar — ele suspirava",
       "example": "Ela suspirava de saudade."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d24421bc",
@@ -6417,7 +6562,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d29b5962",
@@ -6451,7 +6597,8 @@
       "acceptedAlternatives": [
         "Se te dedicares à advocacia, vais precisar de paciência."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d39ebf56",
@@ -6484,7 +6631,8 @@
       "acceptedAlternatives": [
         "Es importante que completes el formulario correctamente."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d3d33b13",
@@ -6519,7 +6667,8 @@
         "Veríamos"
       ],
       "answer": "Víssemos"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d3dbd2f8",
@@ -6551,7 +6700,8 @@
       "acceptedAlternatives": [
         "Si él ardiera de fe, no dudaría de nada."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d3dc059d",
@@ -6582,7 +6732,8 @@
       "front": "Es cierto que ella trabaja mucho. (traduce al PT-BR)",
       "back": "É certo que ela trabalha muito. (INDICATIVO - certeza)",
       "example": "É certo que ela trabalha muito, sempre entrega os projetos no prazo."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d4695b94",
@@ -6612,7 +6763,8 @@
       "front": "Conector SE + futuro do conjuntivo",
       "back": "Indica condição futura: Se + [sujeito] + [verbo no futuro do conjuntivo]...",
       "example": "Se eu preencher o formulário corretamente, serei aprovado."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d4ac795e",
@@ -6642,7 +6794,8 @@
       "front": "Forma el imperfeito do conjuntivo de SER (irregular)",
       "back": "fosse, fosses, fosse, fôssemos, fossem",
       "example": "Se eu fosse mais rico, viajaria o mundo inteiro."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d62089ce",
@@ -6669,7 +6822,8 @@
         "a"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d628d396",
@@ -6701,7 +6855,8 @@
       "front": "prometeu (verbo prometer, pretérito perfeito)",
       "back": "prometer — ele prometeu",
       "example": "Ele me prometeu que voltaria."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d635cdd6",
@@ -6727,7 +6882,8 @@
         "∅"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d671be6e",
@@ -6755,7 +6911,8 @@
       "front": "¿Cuál es la conjugación completa de PARTIR en imperfeito do conjuntivo?",
       "back": "partisse, partisses, partisse, partíssemos, partissem",
       "example": "Se nós partíssemos amanhã, chegaríamos a tempo."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d68375d3",
@@ -6788,7 +6945,8 @@
       "acceptedAlternatives": [
         "Te doy el puesto con la condición de que llenes el formulario hoy."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d7745d02",
@@ -6822,7 +6980,8 @@
       "acceptedAlternatives": [
         "Si hiciésemos una hoguera en la chimenea"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d7916162",
@@ -6849,7 +7008,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "da209019",
@@ -6878,7 +7038,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "da3e3c73",
@@ -6909,7 +7070,8 @@
       "front": "Me alegra que tú estés aquí. (traduce al PT-BR)",
       "back": "Fico feliz que você esteja aqui.",
       "example": "Fico feliz que você esteja aqui para me ajudar."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "daa1df76",
@@ -6944,7 +7106,8 @@
         "Presente do conjuntivo"
       ],
       "answer": "Imperfeito do conjuntivo"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "dbacc415",
@@ -6979,7 +7142,8 @@
       "acceptedAlternatives": [
         "Si yo supiera que iba a llover, habría traído la capa."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "dbc83b61",
@@ -7009,7 +7173,8 @@
       "front": "Forma el imperfeito do conjuntivo de FAZER (irregular)",
       "back": "fizesse, fizesses, fizesse, fizéssemos, fizessem",
       "example": "Se ela fizesse um bolo, todos ficariam felizes."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "dbddf08f",
@@ -7039,7 +7204,8 @@
       "front": "rumo (substantivo)",
       "back": "rumo (direção)",
       "example": "O Brasil está tomando um novo rumo econômico."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "dd01dacf",
@@ -7069,7 +7235,8 @@
       "front": "vaga (adjetivo)",
       "back": "vago / vaga",
       "example": "Ele tinha uma lembrança vaga do passado."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "dd057c9c",
@@ -7099,7 +7266,8 @@
       "front": "Conjuga 'fazer' en presente do conjuntivo: Ela",
       "back": "que ela faça",
       "example": "Quero que ela faça a lição de casa."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "dffe7432",
@@ -7126,7 +7294,8 @@
         "lembrasse —"
       ],
       "answer": "lembrasse de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e1e14a0c",
@@ -7158,7 +7327,8 @@
       "acceptedAlternatives": [
         "Se tivéssemos sabido a verdade antes, tudo teria sido diferente."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e3472039",
@@ -7189,7 +7359,8 @@
       "front": "Traduce al portugués: 'Si Prometeo ardiera eternamente...' (uso literario)",
       "back": "Se Prometeu ardesse eternamente...",
       "example": "Se Prometeu ardesse eternamente no cume do Cáucaso, seu sofrimento seria símbolo."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e3aec573",
@@ -7217,7 +7388,8 @@
       "front": "¿Cuál es la conjugación completa de COMER en imperfeito do conjuntivo?",
       "back": "comesse, comesses, comesse, comêssemos, comessem",
       "example": "Se ela comesse menos doces, seria mais saudável."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e3d20fd0",
@@ -7247,7 +7419,8 @@
       "front": "ligação (substantivo)",
       "back": "ligação",
       "example": "Fiz uma ligação importante ontem."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e453e88d",
@@ -7275,7 +7448,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e4a808b5",
@@ -7305,7 +7479,8 @@
       "front": "Traduce: 'confianza'",
       "back": "confiança",
       "example": "Tenho confiança em você."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e4dbc397",
@@ -7341,7 +7516,8 @@
       "acceptedAlternatives": [
         "Oprimir la vida de alguien es pesado, pero suspiro de alivio cuando acaba."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e552df71",
@@ -7367,7 +7543,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e591d57f",
@@ -7401,7 +7578,8 @@
       "acceptedAlternatives": [
         "Si él supiese que el zapato estaba tan apretado"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e769b603",
@@ -7432,7 +7610,8 @@
       "front": "ardia (verbo arder, pretérito imperfeito)",
       "back": "arder — eu ardia, tu ardias...",
       "example": "O fogo ardia na lareira."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e8c9ae6b",
@@ -7465,7 +7644,8 @@
       "acceptedAlternatives": [
         "Eu esperava que ele chegasse cedinho."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e9764a9c",
@@ -7491,7 +7671,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ea635c56",
@@ -7510,7 +7691,7 @@
     "esContrast": "No Brasil, 'haver' como impessoal pode manter-se; em Portugal, 'haver' é mais comum neste contexto.",
     "type": "fill_blank",
     "data": {
-      "sentence": "É possível que no ___ haja mais vagas. (início)",
+      "sentence": "É possível que no ___ haja mais vagas.",
       "blanks": [
         {
           "position": 0,
@@ -7521,16 +7702,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "É possível que no ___ haja mais vagas.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "início",
-            "alternatives": []
-          }
-        ]
+        "sentence": "É possível que no ___ haja mais vagas. (início)"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "ea7f1371",
@@ -7560,7 +7735,8 @@
       "front": "Conjuga 'ter' en presente do conjuntivo: Nós",
       "back": "que nós tenhamos",
       "example": "É necessário que nós tenhamos paciência."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ea82416e",
@@ -7594,7 +7770,8 @@
       "acceptedAlternatives": [
         "Talvez no início tudo pareça impreciso."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "edd55a17",
@@ -7624,7 +7801,8 @@
       "front": "Forma el imperfeito do conjuntivo de TER (irregular)",
       "back": "tivesse, tivesses, tivesse, tivéssemos, tivessem",
       "example": "Se você tivesse estudado, teria passado no exame."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ee36d9cc",
@@ -7655,7 +7833,8 @@
       "front": "Dudo que ellos estén de acuerdo. (traduce al PT-BR)",
       "back": "Digo que eles estejam de acordo.",
       "example": "Digo que eles estejam de acordo, mas não tenho certeza."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ee56978e",
@@ -7686,7 +7865,8 @@
       "front": "Es posible que él sepa la respuesta. (traduce al PT-BR)",
       "back": "É possível que ele saiba a resposta.",
       "example": "É possível que ele saiba a resposta correta."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ef069ef4",
@@ -7716,7 +7896,8 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f086f74d",
@@ -7744,21 +7925,22 @@
     "type": "translation",
     "data": {
       "source": "Si nosotros hubiéramos sospechado algo, habríamos actuado antes.",
-      "target": "Se nós tivéssemos suspectado algo, teríamos agido antes.",
+      "target": "Se nós tivéssemos suspeitado algo, teríamos agido antes.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Se nós tivéssemos suspeitado algo, teríamos atuado antes."
+        "Se nós tivéssemos suspectado algo, teríamos agido antes."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Se nós tivéssemos suspeitado algo, teríamos agido antes.",
+        "target": "Se nós tivéssemos suspectado algo, teríamos agido antes.",
         "acceptedAlternatives": [
-          "Se nós tivéssemos suspectado algo, teríamos agido antes."
+          "Se nós tivéssemos suspeitado algo, teríamos atuado antes."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "f1153ada",
@@ -7792,7 +7974,8 @@
       "acceptedAlternatives": [
         "Si llegaras a tener éxito en la abogacía, cuando seas nombrado celebraremos."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f1903f8d",
@@ -7823,7 +8006,8 @@
       "front": "Espero que ella llegue a tiempo. (traduce al PT-BR)",
       "back": "Espero que ela chegue a tempo.",
       "example": "Espero que ela chegue a tempo para a apresentação."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f21d22f2",
@@ -7857,7 +8041,8 @@
       "acceptedAlternatives": [
         "Assim que nos entendermos sobre o rumo, mandamos o formulário preenchido."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f2b6ccb6",
@@ -7887,7 +8072,8 @@
       "front": "Traduce al portugués: 'Al início, si no hubiera exposición en la galería...'",
       "back": "No início, se não houvesse exposição na galeria...",
       "example": "No início, se não houvesse exposição na galeria, o evento seria cancelado."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f3c4752f",
@@ -7915,7 +8101,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f67b77e8",
@@ -7953,12 +8140,7 @@
       ],
       "answer": "Condicional tipo 3 (imperfeito do conjuntivo)"
     },
-    "variantOverrides": {
-      "pt-br": {
-        "audioText": "Se eu tivesse dinheiro apertado, talvez viajasse para Portugal este ano.",
-        "answer": "Condicional tipo 3 (imperfeito do conjuntivo)"
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "f8056a17",
@@ -7984,7 +8166,8 @@
         "∅"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f8945bdf",
@@ -8009,7 +8192,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fab76824",
@@ -8039,7 +8223,8 @@
       "front": "¿Cómo se dice 'quizás' en portugués?",
       "back": "talvez",
       "example": "Talvez eu vá ao cinema amanhã."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fb7440b8",
@@ -8074,7 +8259,8 @@
       "acceptedAlternatives": [
         "Quiero que hagas esa ligação al inicio de la reunión."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fc13ad89",
@@ -8100,7 +8286,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fda162e1",
@@ -8128,7 +8315,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fe2ae506",
@@ -8164,7 +8352,8 @@
         "Viajar al exterior"
       ],
       "answer": "Postularse a una oferta de empleo"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fec968e7",
@@ -8194,7 +8383,8 @@
       "front": "¿Cómo se forma el imperfeito do conjuntivo de los verbos terminados en -ER e -IR?",
       "back": "Se toma la raíz del pretérito imperfeito do indicativo y se añade -ESSE: comer → comesse",
       "example": "Se ela comesse mais vegetais, estaria mais saudável."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "feefe9e5",
@@ -8224,7 +8414,8 @@
       "front": "Conector COMO SE + pretérito do conjuntivo",
       "back": "Indica ação hipotética/irreal (como si): Como se + [sujeito] + [verbo no pretérito do conjuntivo]...",
       "example": "Ele fala como se já tivesse ganhado a causa na advocacia."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -8247,7 +8438,8 @@
     },
     "id": "95e5ca55",
     "blockId": 6,
-    "contentHash": "95e5ca55f011ad8483b962e85131129961da4d5aae6af06618f1a071ccc1ecea"
+    "contentHash": "95e5ca55f011ad8483b962e85131129961da4d5aae6af06618f1a071ccc1ecea",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -8271,7 +8463,8 @@
     },
     "id": "b45fa0f3",
     "blockId": 6,
-    "contentHash": "b45fa0f30846dea5f52992c6134312aa07da0d22584c97f9eaf5d049536c15dc"
+    "contentHash": "b45fa0f30846dea5f52992c6134312aa07da0d22584c97f9eaf5d049536c15dc",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -8295,7 +8488,8 @@
     },
     "id": "5c846c71",
     "blockId": 6,
-    "contentHash": "5c846c711a335ca3958b41bc4d364f7c39a552a4ba2b3a119551c4ebee915472"
+    "contentHash": "5c846c711a335ca3958b41bc4d364f7c39a552a4ba2b3a119551c4ebee915472",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -8319,7 +8513,8 @@
     },
     "id": "cf1dbde8",
     "blockId": 6,
-    "contentHash": "cf1dbde8e6b6799a9532cec0ffdac022a4ae8a191d6cdc700a1a7313cd997c14"
+    "contentHash": "cf1dbde8e6b6799a9532cec0ffdac022a4ae8a191d6cdc700a1a7313cd997c14",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -8343,7 +8538,8 @@
     },
     "id": "ec38f0d2",
     "blockId": 6,
-    "contentHash": "ec38f0d232f85d3a6a602063f1aea4485f64e2862d144b3c51bf109af544fc7f"
+    "contentHash": "ec38f0d232f85d3a6a602063f1aea4485f64e2862d144b3c51bf109af544fc7f",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -8366,7 +8562,8 @@
     },
     "id": "69faec04",
     "blockId": 6,
-    "contentHash": "69faec0411a30807cb38ea99ae30f500457d7f78726a96e5c8ca66bf29c6d511"
+    "contentHash": "69faec0411a30807cb38ea99ae30f500457d7f78726a96e5c8ca66bf29c6d511",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -8390,7 +8587,8 @@
     },
     "id": "3cbc3aa0",
     "blockId": 6,
-    "contentHash": "3cbc3aa06f687586ac32d4c29a1d58e54b2a5286efff9b604b8784bb02735d30"
+    "contentHash": "3cbc3aa06f687586ac32d4c29a1d58e54b2a5286efff9b604b8784bb02735d30",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -8414,7 +8612,8 @@
     },
     "id": "739d4742",
     "blockId": 6,
-    "contentHash": "739d4742f6495a492a79d7ad0bc17fcf6b5b66c9a3bd4ac1bb4e84c956f99d9c"
+    "contentHash": "739d4742f6495a492a79d7ad0bc17fcf6b5b66c9a3bd4ac1bb4e84c956f99d9c",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -8438,7 +8637,8 @@
     },
     "id": "6b92f74f",
     "blockId": 6,
-    "contentHash": "6b92f74f7350899147e023494ec4fdd0dfc9020c9c22a5b990f86a84448b7871"
+    "contentHash": "6b92f74f7350899147e023494ec4fdd0dfc9020c9c22a5b990f86a84448b7871",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -8462,7 +8662,8 @@
     },
     "id": "61332de7",
     "blockId": 6,
-    "contentHash": "61332de7e31cde3159094b972af9612270dbcc4cb418f62c9b585e491a53df9a"
+    "contentHash": "61332de7e31cde3159094b972af9612270dbcc4cb418f62c9b585e491a53df9a",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -8486,7 +8687,8 @@
     },
     "id": "d46bc441",
     "blockId": 6,
-    "contentHash": "d46bc441bcc2551a1fd206c52ea39a5ccf247efceb6bdcfce3d65b6940d46dfe"
+    "contentHash": "d46bc441bcc2551a1fd206c52ea39a5ccf247efceb6bdcfce3d65b6940d46dfe",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -8510,7 +8712,8 @@
     },
     "id": "307fac3e",
     "blockId": 6,
-    "contentHash": "307fac3e2bc637249af153a533fe02e4b64cfe1a47f863f540f187d89d9a1bef"
+    "contentHash": "307fac3e2bc637249af153a533fe02e4b64cfe1a47f863f540f187d89d9a1bef",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -8534,7 +8737,8 @@
     },
     "id": "ecc2b2aa",
     "blockId": 6,
-    "contentHash": "ecc2b2aae08ff4f283d20691d399bfd54a1fd6e70dc21637891a7bfac1ba7bd3"
+    "contentHash": "ecc2b2aae08ff4f283d20691d399bfd54a1fd6e70dc21637891a7bfac1ba7bd3",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -8555,7 +8759,8 @@
     },
     "id": "0057f79d",
     "blockId": 6,
-    "contentHash": "0057f79d110c72ca52e82456f405c6274d740d11e760193cca18e529b50c00c9"
+    "contentHash": "0057f79d110c72ca52e82456f405c6274d740d11e760193cca18e529b50c00c9",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -8576,7 +8781,8 @@
     },
     "id": "31da58c8",
     "blockId": 6,
-    "contentHash": "31da58c85795639767e4b58641cd736587880560bcfab364d29fc889e70a90c0"
+    "contentHash": "31da58c85795639767e4b58641cd736587880560bcfab364d29fc889e70a90c0",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -8598,7 +8804,8 @@
     },
     "id": "31f581c1",
     "blockId": 6,
-    "contentHash": "31f581c1b0bbd7761ea4f212d97e00827a9a4bf90806bf7d1080baa04353d522"
+    "contentHash": "31f581c1b0bbd7761ea4f212d97e00827a9a4bf90806bf7d1080baa04353d522",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -8619,7 +8826,8 @@
     },
     "id": "4dbd621a",
     "blockId": 6,
-    "contentHash": "4dbd621aaf38e32d3ea8f00ab9141a1c0dc4230b205a9e796bfeb13877844770"
+    "contentHash": "4dbd621aaf38e32d3ea8f00ab9141a1c0dc4230b205a9e796bfeb13877844770",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -8640,7 +8848,8 @@
     },
     "id": "830d1cfb",
     "blockId": 6,
-    "contentHash": "830d1cfb42a0e7b04d8c3f99e4b70bad909d24e4f4887468d7ddb5eb71cbf220"
+    "contentHash": "830d1cfb42a0e7b04d8c3f99e4b70bad909d24e4f4887468d7ddb5eb71cbf220",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -8661,7 +8870,8 @@
     },
     "id": "9c6be6bd",
     "blockId": 6,
-    "contentHash": "9c6be6bd5de26a7fa804c5f88ce0a5fa47b9a288285ca8c4dd7b3377c642c128"
+    "contentHash": "9c6be6bd5de26a7fa804c5f88ce0a5fa47b9a288285ca8c4dd7b3377c642c128",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -8686,7 +8896,8 @@
     },
     "id": "f77c9982",
     "blockId": 6,
-    "contentHash": "f77c998235c66f7c9c2c022464254121056a1632cc992cb3809683dc9de2975c"
+    "contentHash": "f77c998235c66f7c9c2c022464254121056a1632cc992cb3809683dc9de2975c",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -8711,7 +8922,8 @@
     },
     "id": "4efd88e3",
     "blockId": 6,
-    "contentHash": "4efd88e3b2f14015fb92a47befc66244d55fe31e86359da28b9d6560cbec275f"
+    "contentHash": "4efd88e3b2f14015fb92a47befc66244d55fe31e86359da28b9d6560cbec275f",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -8736,7 +8948,8 @@
     },
     "id": "0bdb4c36",
     "blockId": 6,
-    "contentHash": "0bdb4c365200c090eec5d6c2ed5f6ed87c63c081b9e1e552d6c78e6f9ddc2ada"
+    "contentHash": "0bdb4c365200c090eec5d6c2ed5f6ed87c63c081b9e1e552d6c78e6f9ddc2ada",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -8761,7 +8974,8 @@
     },
     "id": "71807a5f",
     "blockId": 6,
-    "contentHash": "71807a5f4bc9814cc8a4b8af6aa03391e82799c51efe638608f4d2a4e60cb8a0"
+    "contentHash": "71807a5f4bc9814cc8a4b8af6aa03391e82799c51efe638608f4d2a4e60cb8a0",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -8787,7 +9001,8 @@
     },
     "id": "db27b3bf",
     "blockId": 6,
-    "contentHash": "db27b3bf23524754dd823881bef5ec2a4ebeec2f02e93e879f12ac309b95f2be"
+    "contentHash": "db27b3bf23524754dd823881bef5ec2a4ebeec2f02e93e879f12ac309b95f2be",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -8811,6 +9026,7 @@
     },
     "id": "b9809b25",
     "blockId": 6,
-    "contentHash": "b9809b25feb119a32df7bb284865a260127e27a3e727a337a2c95be3169762bb"
+    "contentHash": "b9809b25feb119a32df7bb284865a260127e27a3e727a337a2c95be3169762bb",
+    "variantStatus": "unchecked"
   }
 ]

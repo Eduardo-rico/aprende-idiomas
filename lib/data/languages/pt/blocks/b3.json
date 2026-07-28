@@ -24,18 +24,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "Tu ___ levantas cedo todos os dias.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "te",
-            "alternatives": []
-          }
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "0167ace2",
@@ -65,7 +54,8 @@
       "front": "¿Cuáles son los pronombres personales sujeto en portugués?",
       "back": "eu, tu, ele, ela, nós, vós, eles, elas",
       "example": "Eu como, tu comes, ele come."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "054d8c7d",
@@ -93,15 +83,16 @@
     "type": "flashcard",
     "data": {
       "front": "esperar (en portugués) significa:",
-      "back": "aguardar / también esperar (temporal)",
-      "example": "Estou esperando você há uma hora. (Aguardando/Esperando temporal)"
+      "back": "aguardar / também esperar (temporal)",
+      "example": "Estou à espera há uma hora."
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "aguardar / também esperar (temporal)",
-        "example": "Estou à espera há uma hora."
+        "back": "aguardar / también esperar (temporal)",
+        "example": "Estou esperando você há uma hora. (Aguardando/Esperando temporal)"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "05532ebb",
@@ -129,7 +120,8 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "0676a439",
@@ -163,7 +155,8 @@
       "acceptedAlternatives": [
         "Você tem razão."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "079718bd",
@@ -190,7 +183,8 @@
         "∅"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "07d20060",
@@ -217,7 +211,8 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "08689563",
@@ -252,7 +247,8 @@
         "¿Tú crees que él puede ayudarme?",
         "¿Crees que él me puede ayudar?"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "08c44363",
@@ -289,7 +285,8 @@
         "Dormir"
       ],
       "answer": "Ir ao médico"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "08ff77bd",
@@ -324,14 +321,7 @@
         "Vós apresentastes-nos a ela ontem"
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "target": "Vós nos a apresentastes ontem",
-        "acceptedAlternatives": [
-          "Vós apresentastes-nos a ela ontem"
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "0994c030",
@@ -361,7 +351,8 @@
       "front": "¿Cuáles son los pronombres personales retos en portugués?",
       "back": "Eu, tu, ele, ela, nós, vós, eles, elas",
       "example": "Eu estudo português. Tu falas bem."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "0adafc0d",
@@ -390,7 +381,8 @@
       "front": "¿Cómo se dice 'plato' (comida) en portugués?",
       "back": "prato",
       "example": "Esse prato está delicioso!"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "0b88eddd",
@@ -417,7 +409,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "0e1ebe54",
@@ -447,7 +440,8 @@
       "front": "¿Cómo se forma el pronombre reflexivo en portugués?",
       "back": "Con 'se': eu me, tu te, ele se, nós nos, eles se (para 3ª persona plural)",
       "example": "Nós nos divertimos muito. (Nosotros nos divertimos mucho.)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "0e85e408",
@@ -482,7 +476,8 @@
         "Actualmente hay tres personas a la espera de hacer un pedido de matrimonio.",
         "Actualmente hay tres personas en espera para hacer un pedido de matrimonio."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "0f1ef40f",
@@ -513,7 +508,8 @@
       "front": "Traduce: 'Hay un problema.'",
       "back": "Há um problema.",
       "example": "Há um problema com o seu pedido."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "106f67a3",
@@ -541,7 +537,8 @@
       "front": "¿Cómo se dice 'cubiertos' en portugués?",
       "back": "talheres",
       "example": "Os talheres estão na mesa."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "11acbc7f",
@@ -572,7 +569,8 @@
       "front": "Como se dice 'Hay muchas personas' en portugués brasileiro?",
       "back": "Há muitas pessoas. / Tem muitas pessoas.",
       "example": "Hoje há muitas pessoas na festa."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "12cceab2",
@@ -598,7 +596,8 @@
         "ao"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "15626836",
@@ -634,14 +633,7 @@
         "No Brasil têm razão, mas em Portugal há pessoas que discordam."
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "target": "No Brasil têm razão, mas em Portugal há quem discorde.",
-        "acceptedAlternatives": [
-          "No Brasil têm razão, mas em Portugal há pessoas que discordam."
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "17231c41",
@@ -673,7 +665,8 @@
       "acceptedAlternatives": [
         "Actualmente estoy trabajando en un proyecto nuevo."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "17d127aa",
@@ -710,11 +703,7 @@
       ],
       "answer": "me"
     },
-    "variantOverrides": {
-      "pt-br": {
-        "audioText": "Ela está a poupar dinheiro e disse-me que presentemente não tem pressa."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "1a7ec3f3",
@@ -744,7 +733,8 @@
       "front": "Traduce: 'Mi novia vive en São Paulo.'",
       "back": "A minha namorada mora em São Paulo.",
       "example": "A minha namorada é de São Paulo."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1c539301",
@@ -771,14 +761,15 @@
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'menú' en portugués (PT-BR)?",
-      "back": "cardápio",
+      "back": "ementa",
       "example": "Posso ver o cardápio, por favor?"
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "ementa"
+        "back": "cardápio"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "1e62ca95",
@@ -811,7 +802,8 @@
         "Si él nos dice la verdad, yo le creo a él.",
         "Si nos dice la verdad, le creo."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1f6cb389",
@@ -848,7 +840,8 @@
         "Verbo irregular ficar, terceira pessoa do singular"
       ],
       "answer": "Verbo irregular ficar, primeira pessoa do plural"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "21f8b4a9",
@@ -874,7 +867,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2207a12a",
@@ -903,7 +897,8 @@
       "front": "Conjuga IR en presente: EU, TU, ELE, NÓS, ELES",
       "back": "EU vou | TU vais | ELE vai | NÓS vamos | ELES vão",
       "example": "Eu vou ao mercado amanhã."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2453ccbb",
@@ -934,7 +929,8 @@
       "front": "Conjuga 'falar' en presente (yo, tú, él):",
       "back": "eu falo, tu falas, ele fala",
       "example": "Eu falo português. Tu falas inglês?"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "25589965",
@@ -969,7 +965,8 @@
       "acceptedAlternatives": [
         "Hay quien diga que ahorrar es difícil, pero yo no tengo esa misma opinión."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "26763b80",
@@ -999,12 +996,7 @@
       "back": "Nós pensamos",
       "example": "Nós pensamos que é uma boa ideia."
     },
-    "variantOverrides": {
-      "pt-br": {
-        "back": "Nós pensamos",
-        "example": "Nós pensamos que é uma boa ideia."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "2a2931a0",
@@ -1031,7 +1023,8 @@
         "em"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2ab9b39d",
@@ -1068,11 +1061,7 @@
         "No vengas tarde, de lo contrario no puedes entrar."
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "target": "No vengas tarde, si no no puedes entrar."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "2ac7040f",
@@ -1109,7 +1098,8 @@
         "O garçom pode trazê-la, por favor?",
         "Poderia nos trazer a ementa, por favor?"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2b5b85b8",
@@ -1136,7 +1126,8 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2c9d83a8",
@@ -1173,11 +1164,7 @@
         "No me cuentes mentiras, contame solo la verdad."
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "target": "No me digas mentiras, dime solo la verdad."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "2dbb88c9",
@@ -1204,7 +1191,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3076ada3",
@@ -1231,7 +1219,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "30e615e6",
@@ -1261,7 +1250,8 @@
       "front": "¿Qué son los pronombres oblícuos?",
       "back": "Son los pronombres que funcionan como complemento directo o indirecto del verbo.",
       "example": "Ele me chamou. (Él me llamó.)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "320aa671",
@@ -1291,7 +1281,8 @@
       "front": "¿Cuáles son los pronombres oblícuos átonos de 1ª y 2ª persona?",
       "back": "Me, te, nos, vos",
       "example": "Ele me viu. (Él me vio.) Nós vos esperamos."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "329035d2",
@@ -1322,7 +1313,8 @@
       "front": "Cuál es la diferencia entre 'Ele tem 30 anos' (posesivo) y 'Tem 30 anos' (existencial)?",
       "back": "Cuando 'tem' aparece solo, sin sujeto antes, funciona como existencial: 'Tem 30 anos' = 'Existem 30 anos' (pasaron 30 años). Con sujeto es posesivo.",
       "example": "Tem dois anos que me mudei. (existencial: hace dos años) / Eu tenho dois filhos. (posesivo: tengo dos hijos)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "34224825",
@@ -1353,7 +1345,8 @@
       "front": "¿Qué significa 'se' como pronombre en 'Eu me chamo Ana'?",
       "back": "me/reflexivo (me)",
       "example": "Eu me chamo Ana. (Me llamo Ana.)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "35aaf4d6",
@@ -1383,21 +1376,22 @@
     "type": "translation",
     "data": {
       "source": "Esto me parece razonable, pero dime qué sabes tú.",
-      "target": "Isto parece-me razoável, mas diz-me o que sabes tu.",
+      "target": "Isto parece-me razoável, mas diz-me o que sabes.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Isto me parece razoável, mas diz-me o que tu sabes."
+        "Isto parece-me razoável, mas conta-me o que sabes."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Isto parece-me razoável, mas diz-me o que sabes.",
+        "target": "Isto parece-me razoável, mas diz-me o que sabes tu.",
         "acceptedAlternatives": [
-          "Isto parece-me razoável, mas conta-me o que sabes."
+          "Isto me parece razoável, mas diz-me o que tu sabes."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "368bd639",
@@ -1426,7 +1420,8 @@
       "front": "Conjuga ESTAR en presente: EU, TU, ELE, NÓS, ELES",
       "back": "EU estou | TU estás | ELE está | NÓS estamos | ELES estão",
       "example": "Como você está hoje? Estou bem, obrigado."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3aae2fbc",
@@ -1461,7 +1456,8 @@
       "acceptedAlternatives": [
         "Nosotros pedimos café y pastel."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3df42b79",
@@ -1489,7 +1485,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3f13b57f",
@@ -1523,7 +1520,8 @@
       "acceptedAlternatives": [
         "Ven para acá, quiero hablar contigo."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3f6b80fb",
@@ -1555,7 +1553,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3fd025dd",
@@ -1585,7 +1584,8 @@
       "front": "¿Cuál es la diferencia entre 'pensar' en portugués y español?",
       "back": "En PT-BR se usa pensar + em: 'Penso em você'. En español se dice 'pienso en ti'.",
       "example": "Penso muito em resolver este problema. / Pienso mucho en resolver este problema."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "411fcf29",
@@ -1614,21 +1614,22 @@
     "type": "translation",
     "data": {
       "source": "No pienses más en eso y trae el próximo informe.",
-      "target": "Não penses mais nisso e traz o próximo relatório.",
+      "target": "Não pienses nisso e traz o relatório seguinte.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Não penses nisso mais e traz o próximo relatório."
+        "Não pienses nisso e tráia o relatório seguinte."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Não pienses nisso e traz o relatório seguinte.",
+        "target": "Não penses mais nisso e traz o próximo relatório.",
         "acceptedAlternatives": [
-          "Não pienses nisso e tráia o relatório seguinte."
+          "Não penses nisso mais e traz o próximo relatório."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "43a7d809",
@@ -1657,7 +1658,8 @@
       "front": "¿Cómo se dice 'vino' en portugués?",
       "back": "vinho",
       "example": "Quero uma taça de vinho tinto."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "43bf5efb",
@@ -1687,7 +1689,8 @@
       "front": "¿Cuál es la diferencia entre 'te' (español) y 'te' (portugués)?",
       "back": "En español 'te' es solo informal. En portugués 'te' se usa como pronombre oblícuo (me/te/lhe en PT-BR), no como pronombre reto.",
       "example": "PT-BR: Tu falas comigo. / PT-ES: Tú hablas conmigo."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "45883d3c",
@@ -1724,7 +1727,8 @@
         "Que atualmente se usa em todos os países."
       ],
       "answer": "Que é comum no Brasil, mas estranho em Portugal."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "47253cbf",
@@ -1759,7 +1763,8 @@
       "acceptedAlternatives": [
         "Hubo un momento en que había muchos problemas con esa traducción, pero ya no queda ninguno."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4813e82c",
@@ -1792,17 +1797,17 @@
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Seja honesto comigo e diga-me se quer ir."
+        "Tem honestidade comigo e diz-me se queres ir."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Sê honesto comigo e diz-me se queres ir.",
         "acceptedAlternatives": [
-          "Tem honestidade comigo e diz-me se queres ir."
+          "Seja honesto comigo e diga-me se quer ir."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "487fee9a",
@@ -1837,7 +1842,8 @@
       "acceptedAlternatives": [
         "No presente, tenho uma namorada."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4a3bcc22",
@@ -1871,7 +1877,8 @@
       "acceptedAlternatives": [
         "¿Le gustaría ver el menú?"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4bf4fdc2",
@@ -1897,21 +1904,22 @@
     "type": "translation",
     "data": {
       "source": "Esperen un momento, por favor.",
-      "target": "Esperem um momento, por favor.",
+      "target": "Espere um momento, faça o favor.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Aguarde um momento, por favor."
+        "Espere um momento, se faz favor."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Espere um momento, faça o favor.",
+        "target": "Esperem um momento, por favor.",
         "acceptedAlternatives": [
-          "Espere um momento, se faz favor."
+          "Aguarde um momento, por favor."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "4d2e94e6",
@@ -1939,14 +1947,14 @@
     "data": {
       "front": "Conjuga TER en presente: EU, TU, ELE, NÓS, ELES",
       "back": "EU tenho | TU tens | ELE tem | NÓS temos | ELES têm",
-      "example": "Eu tenho dois filhos e eles têm um cachorro."
+      "example": "Eu tenho dois filhos e eles têm um cão."
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "EU tenho | TU tens | ELE tem | NÓS temos | ELES têm",
-        "example": "Eu tenho dois filhos e eles têm um cão."
+        "example": "Eu tenho dois filhos e eles têm um cachorro."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "4db88ca6",
@@ -1971,7 +1979,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4fef5e1e",
@@ -2007,7 +2016,8 @@
         "Nós líamos a ementa e vocês liam a carta.",
         "Nós líamos o cardápio e vocês liam a carta."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "521b1ea8",
@@ -2036,21 +2046,22 @@
     "type": "translation",
     "data": {
       "source": "No venga mañana, por favor.",
-      "target": "Não venha amanhã, por favor.",
+      "target": "Não venha amanhã, faz o favor.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Não venha amanhã, por obséquio."
+        "Não venha amanhã, se faz favor."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Não venha amanhã, faz o favor.",
+        "target": "Não venha amanhã, por favor.",
         "acceptedAlternatives": [
-          "Não venha amanhã, se faz favor."
+          "Não venha amanhã, por obséquio."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "52dcaa95",
@@ -2081,7 +2092,8 @@
       "front": "Traduce: 'Hace dos años que estudio portugués.'",
       "back": "Há dois anos que estudo português.",
       "example": "Há dois anos que estudo português. / Faz dois anos que estudo português."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "531ed81b",
@@ -2113,7 +2125,8 @@
       "acceptedAlternatives": [
         "Nós demos um presente a ele"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "5380f778",
@@ -2142,7 +2155,8 @@
       "front": "¿Qué significa 'a poupar'?",
       "back": "Ahorrar, economizando",
       "example": "Ela está a poupar dinheiro para a viagem."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "53a11afb",
@@ -2164,26 +2178,26 @@
       "blanks": [
         {
           "position": 0,
-          "answer": "Te",
-          "alternatives": [
-            "Te",
-            "A"
-          ]
+          "answer": "Dar-te-ei",
+          "alternatives": []
         }
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "___ darei o livro amanhã.",
         "blanks": [
           {
             "position": 0,
-            "answer": "Dar-te-ei",
-            "alternatives": []
+            "answer": "Te",
+            "alternatives": [
+              "Te",
+              "A"
+            ]
           }
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "5451c0a7",
@@ -2211,7 +2225,7 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "Tem uma nova mensagem no telemóvel. Dizem que há trabalho disponível no escritório amanhã.",
+      "audioText": "Está uma nova mensagem no telemóvel. Dizem que há trabalho disponível no escritório amanhã.",
       "question": "¿Qué hay disponible mañana?",
       "options": [
         "Há trabalho no escritório.",
@@ -2223,9 +2237,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "Está uma nova mensagem no telemóvel. Dizem que há trabalho disponível no escritório amanhã."
+        "audioText": "Tem uma nova mensagem no telemóvel. Dizem que há trabalho disponível no escritório amanhã."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "5557e460",
@@ -2257,7 +2272,8 @@
       "acceptedAlternatives": [
         "Ela está a contar-lhe agora"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "56cc385d",
@@ -2288,7 +2304,8 @@
       "front": "¿Cómo se dice 'mesero' en portugués?",
       "back": "garçom",
       "example": "O garçom trouxe a água."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "59031069",
@@ -2315,7 +2332,7 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "Eu estou presentemente a pensar em ti.",
+      "audioText": "Eu estou actualmente a pensar em ti.",
       "question": "¿Qué pronombre personal reto aparece en esta frase?",
       "options": [
         "Eu",
@@ -2327,9 +2344,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "Eu estou actualmente a pensar em ti."
+        "audioText": "Eu estou presentemente a pensar em ti."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "5907a56a",
@@ -2347,7 +2365,7 @@
     "esContrast": "'A Maria' es OD; 'a vi' es la forma contracta (PT-PT: vi-a)",
     "type": "fill_blank",
     "data": {
-      "sentence": "___ viu a Maria ontem? — Sim, eu ___ vi.",
+      "sentence": "___ viste a Maria ontem? — Sim, eu ___ vi.",
       "blanks": [
         {
           "position": 0,
@@ -2366,24 +2384,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "___ viste a Maria ontem? — Sim, eu ___ vi.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "A",
-            "alternatives": [
-              "A",
-              "a"
-            ]
-          },
-          {
-            "position": 1,
-            "answer": "a",
-            "alternatives": []
-          }
-        ]
+        "sentence": "___ viu a Maria ontem? — Sim, eu ___ vi."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "591aec46",
@@ -2409,7 +2413,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "5bfa275d",
@@ -2432,27 +2437,27 @@
       "blanks": [
         {
           "position": 0,
-          "answer": "Não se esqueça",
+          "answer": "Não te esqueças",
           "alternatives": [
-            "Não te esqueças"
+            "Não se esqueça"
           ]
         }
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "___ de marcar a consulta com o médico! É importante.",
         "blanks": [
           {
             "position": 0,
-            "answer": "Não te esqueças",
+            "answer": "Não se esqueça",
             "alternatives": [
-              "Não se esqueça"
+              "Não te esqueças"
             ]
           }
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "5c4f40fa",
@@ -2489,11 +2494,7 @@
       ],
       "answer": "Comer (verbo -er, segunda pessoa do plural)"
     },
-    "variantOverrides": {
-      "pt-br": {
-        "audioText": "O que vós comeis hoje? A ementa é muito boa."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "5d3baa3a",
@@ -2528,11 +2529,7 @@
         "Tienes razón, mi padre también tiene una novia nueva."
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "target": "Tú tienes razón, mi padre también tiene una novia nueva."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "60757158",
@@ -2561,13 +2558,14 @@
     "data": {
       "front": "Qué significa 'poupar' dinero?",
       "back": "Significa 'ahorrar', guardar dinero para el futuro.",
-      "example": "Estou a poupar para comprar um apartamento."
+      "example": "Estou a poupar para comprar um apartamento. (PT-PT) / Estou poupar para comprar um apartamento. (PT-BR informal)"
     },
     "variantOverrides": {
       "pt-br": {
-        "example": "Estou a poupar para comprar um apartamento. (PT-PT) / Estou poupar para comprar um apartamento. (PT-BR informal)"
+        "example": "Estou a poupar para comprar um apartamento."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "625478ad",
@@ -2594,15 +2592,16 @@
     "type": "flashcard",
     "data": {
       "front": "'Próximo' en portugués significa:",
-      "back": "Vecino / siguiente (según contexto)",
-      "example": "O vizinho próximo vem sempre à noite. (Vecino cercano)"
+      "back": "Vizinho / seguinte (segundo o contexto)",
+      "example": "O vizinho próximo vem sempre à noite."
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "Vizinho / seguinte (segundo o contexto)",
-        "example": "O vizinho próximo vem sempre à noite."
+        "back": "Vecino / siguiente (según contexto)",
+        "example": "O vizinho próximo vem sempre à noite. (Vecino cercano)"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "638d3c87",
@@ -2637,7 +2636,8 @@
         "Actualmente está pensando en ti.",
         "La novia piensa en ti ahora."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "640d2e4c",
@@ -2664,7 +2664,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "65658bb2",
@@ -2700,7 +2701,8 @@
         "Comer"
       ],
       "answer": "Pensar"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "673ed3a8",
@@ -2726,18 +2728,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "Ela está à ___ do namorado há uma hora.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "espera",
-            "alternatives": []
-          }
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "6881454f",
@@ -2766,7 +2757,8 @@
       "front": "¿Cómo se dice 'propina' en portugués?",
       "back": "gorjeta",
       "example": "Deixei uma gorjeta para o garçom."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6ad1e3dc",
@@ -2793,7 +2785,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6b1f353f",
@@ -2823,24 +2816,25 @@
     "type": "translation",
     "data": {
       "source": "¿Me trae la cuenta, señor?",
-      "target": "Traga-me a conta, por favor.",
+      "target": "Traga-me a conta, se faz favor.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Poderia trazer-me a conta?",
-        "A conta, por favor.",
-        "Traga a conta, por favor."
+        "Poderia trazer-me a conta, se faz favor?",
+        "A conta, se faz favor."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Traga-me a conta, se faz favor.",
+        "target": "Traga-me a conta, por favor.",
         "acceptedAlternatives": [
-          "Poderia trazer-me a conta, se faz favor?",
-          "A conta, se faz favor."
+          "Poderia trazer-me a conta?",
+          "A conta, por favor.",
+          "Traga a conta, por favor."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "6b47a59b",
@@ -2875,7 +2869,8 @@
         "Há que poupar dinheiro.",
         "Tem que poupar dinheiro."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6deff224",
@@ -2905,7 +2900,8 @@
       "front": "¿Se usa 'vós' y 'vos' en el portugués brasileiro actual?",
       "back": "No, en PT-BR se usa 'você/vocês' y 'lhe/os/as'. Vós es arcaico.",
       "example": "PT-BR: Vocês sabem? (¿Ustedes saben?) / PT-PT: Vós sabeis?"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6e502c41",
@@ -2932,7 +2928,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6f9305ba",
@@ -2966,7 +2963,8 @@
       "acceptedAlternatives": [
         "Existe um problema."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "727685df",
@@ -3000,7 +2998,8 @@
       "acceptedAlternatives": [
         "Él es el próximo de la lista."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "74c5e5c3",
@@ -3031,7 +3030,8 @@
       "front": "Qué significa 'atualmente'?",
       "back": "Significa 'actualmente', 'en la actualidad'.",
       "example": "Atualmente, moro no Brasil."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "760987a2",
@@ -3064,7 +3064,8 @@
         "Está ahorrando el dinero para nosotros.",
         "Ella nos está ahorrando el dinero."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "76bcc25a",
@@ -3091,15 +3092,16 @@
     "type": "flashcard",
     "data": {
       "front": "¿Qué significa 'presentemente'?",
-      "back": "Actualmente / en la actualidad",
-      "example": "Presentemente, estou trabalhando em São Paulo."
+      "back": "Atualmente / presentemente",
+      "example": "Presentemente, estou a trabalhar em São Paulo."
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "Atualmente / presentemente",
-        "example": "Presentemente, estou a trabalhar em São Paulo."
+        "back": "Actualmente / en la actualidad",
+        "example": "Presentemente, estou trabalhando em São Paulo."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "76e06b4f",
@@ -3137,7 +3139,8 @@
         "Te"
       ],
       "answer": "A"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "778e39e4",
@@ -3165,7 +3168,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "794a0d83",
@@ -3194,7 +3198,8 @@
       "front": "Conjuga DIZER en presente: EU, TU, ELE, NÓS, ELES",
       "back": "EU digo | TU dizes | ELE diz | NÓS dizemos | ELES dizem",
       "example": "Ela diz que está cansada."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7be21200",
@@ -3228,7 +3233,8 @@
       "acceptedAlternatives": [
         "Diga-me a verdade agora."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7d1faf21",
@@ -3260,7 +3266,8 @@
       "acceptedAlternatives": [
         "El libro que está esperando en la mesa, dámelo."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7e95ece4",
@@ -3292,7 +3299,8 @@
       "acceptedAlternatives": [
         "Ele apresentou-me ontem"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "801648fa",
@@ -3319,7 +3327,8 @@
         "a"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "80e3f3d6",
@@ -3355,7 +3364,8 @@
         "Tem alguém à espera.",
         "Alguém está esperando."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "817a7e55",
@@ -3382,7 +3392,8 @@
         "para"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "82a8a691",
@@ -3408,7 +3419,8 @@
         "∅"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "83e2a8d8",
@@ -3438,7 +3450,8 @@
       "front": "¿Qué significa 'namorada'?",
       "back": "Novia. No confundir con 'enamorada' (apaixonada).",
       "example": "Minha namorada se chama Ana."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "849826de",
@@ -3465,15 +3478,16 @@
     "type": "flashcard",
     "data": {
       "front": "Imperativo AFIRMATIVO de FAZER, DIZER y VIR: (tú)",
-      "back": "FAZER → FAZ | DIZER → DIGA | VIR → VENHA",
-      "example": "Faz o trabalho! Diga a verdade! Vem cá!"
+      "back": "FAZER → FAZ | DIZER → DIGA | VIR → VEM",
+      "example": "Faz o trabalho! Diz a verdade! Vem cá!"
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "FAZER → FAZ | DIZER → DIGA | VIR → VEM",
-        "example": "Faz o trabalho! Diz a verdade! Vem cá!"
+        "back": "FAZER → FAZ | DIZER → DIGA | VIR → VENHA",
+        "example": "Faz o trabalho! Diga a verdade! Vem cá!"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "849bc051",
@@ -3500,18 +3514,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "Quando ___ vejo, fico nervoso.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "te",
-            "alternatives": []
-          }
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "84b944b6",
@@ -3541,7 +3544,8 @@
       "front": "¿Qué función tiene 'se' en portugués?",
       "back": "Se puede ser: pronombre oblícuo (CD/CD de 3ª persona) o partícula reflexiva.",
       "example": "Ele se machucou. (Él se lastimó.) Ela se diverte. (Ella se divierte.)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "859ecaff",
@@ -3574,7 +3578,8 @@
         "Yo la estoy esperando a ella.",
         "Estoy esperándola."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "865f596b",
@@ -3611,7 +3616,8 @@
         "Calmo"
       ],
       "answer": "Mentiroso"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "86c43de0",
@@ -3647,7 +3653,8 @@
         "O carro"
       ],
       "answer": "O produto"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "875e2711",
@@ -3666,7 +3673,7 @@
     "type": "verb_preposition",
     "data": {
       "verb": "ter",
-      "sentence": "BR: Eu tenho ___ razões. / PT: ___ razões.",
+      "sentence": "PT: Eu ___ razões. / BR: Eu tenho ___ razões.",
       "options": [
         "∅ / Há",
         "de / ∅",
@@ -3677,10 +3684,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "PT: Eu ___ razões. / BR: Eu tenho ___ razões.",
-        "answer": "∅ / ∅"
+        "sentence": "BR: Eu tenho ___ razões. / PT: ___ razões."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "88fd973b",
@@ -3707,7 +3714,8 @@
         "sobre"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "895496ad",
@@ -3741,11 +3749,7 @@
       "targetLang": "es",
       "acceptedAlternatives": []
     },
-    "variantOverrides": {
-      "pt-br": {
-        "target": "Quiero que seas más razonable en tus decisiones."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "8a3c0c71",
@@ -3773,15 +3777,16 @@
     "type": "flashcard",
     "data": {
       "front": "Imperativo AFIRMATIVO de ESTAR: (tú/usted/nosotros)",
-      "back": "TÚ: ESTÁ | USTED: ESTEJA | NOSOTROS: ESTEJAMOS | USTEDES: ESTEJAM",
-      "example": "Está quieto! Esteja à vontade! Estejamos preparados!"
+      "back": "TÚ: ESTÁ | O(A) SENHOR(A): ESTEJA | NÓS: ESTEJAMOS | VOCÊS: ESTEJAM",
+      "example": "Está quieto! Esteja à vontade! Sejam bem-vindos!"
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "TÚ: ESTÁ | O(A) SENHOR(A): ESTEJA | NÓS: ESTEJAMOS | VOCÊS: ESTEJAM",
-        "example": "Está quieto! Esteja à vontade! Sejam bem-vindos!"
+        "back": "TÚ: ESTÁ | USTED: ESTEJA | NOSOTROS: ESTEJAMOS | USTEDES: ESTEJAM",
+        "example": "Está quieto! Esteja à vontade! Estejamos preparados!"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "8bbff80a",
@@ -3811,7 +3816,8 @@
       "front": "¿Cuál es el orden típico del pronombre oblícuo en PT-BR?",
       "back": "Generalmente va antes del verbo (proclise): Me avisa. Não me avisa. Me dá o livro.",
       "example": "Ela me ligou ontem. (Ella me llamó ayer.)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8c2d3f75",
@@ -3838,7 +3844,8 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8c65ec46",
@@ -3866,21 +3873,22 @@
     "type": "translation",
     "data": {
       "source": "Presentemente hago lo que puedo.",
-      "target": "Presentemente faço o que posso.",
+      "target": "Presentemente faço o que consigo.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Faço o que posso presentemente."
+        "Presentemente faço o que me é possível."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Presentemente faço o que consigo.",
+        "target": "Presentemente faço o que posso.",
         "acceptedAlternatives": [
-          "Presentemente faço o que me é possível."
+          "Faço o que posso presentemente."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "8f676170",
@@ -3915,7 +3923,8 @@
       "acceptedAlternatives": [
         "Não fique nervoso."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "90ad6683",
@@ -3950,7 +3959,8 @@
       "acceptedAlternatives": [
         "Não tem sentido fazer um pedido agora."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9185fccd",
@@ -3975,7 +3985,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "92181969",
@@ -4011,7 +4022,8 @@
         "Para cima"
       ],
       "answer": "Para a esquerda"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "95444712",
@@ -4047,11 +4059,7 @@
         "En Brasil hay mucha gente que prefiere usar 'ter' en vez de 'haver'."
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "target": "En Brasil, hay mucha gente que prefiere usar 'ter' en lugar de 'haver'."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "956de100",
@@ -4080,7 +4088,8 @@
       "front": "Conjuga SER en presente: EU, TU, ELE, NÓS, ELES",
       "back": "EU sou | TU és | ELE é | NÓS somos | ELES são",
       "example": "Eu sou brasileiro e eles são portugueses."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "984828f0",
@@ -4116,11 +4125,7 @@
         "No seas tan pesimista, porfa."
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "target": "No seas tan pesimista, por favor."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "9878e986",
@@ -4152,7 +4157,8 @@
       "acceptedAlternatives": [
         "Eles estão a economizar dinheiro presentemente"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "996e9eb4",
@@ -4174,25 +4180,25 @@
       "blanks": [
         {
           "position": 0,
-          "answer": "Tenho",
-          "alternatives": [
-            "Há"
-          ]
+          "answer": "Há",
+          "alternatives": []
         }
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "___ vontade de fazer um pedido de casamento, mas tenho medo.",
         "blanks": [
           {
             "position": 0,
-            "answer": "Há",
-            "alternatives": []
+            "answer": "Tenho",
+            "alternatives": [
+              "Há"
+            ]
           }
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "9ac69898",
@@ -4223,7 +4229,8 @@
       "front": "Qué significa 'à espera de' y para qué sirve?",
       "back": "Significa 'a la espera de', 'esperando'. Se usa para indicar espera paciente.",
       "example": "Estou à espera de uma resposta."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9ad13402",
@@ -4251,7 +4258,8 @@
       "front": "'Hacer un pedido' en portugués",
       "back": "fazer um pedido",
       "example": "Eu quero fazer um pedido agora."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9d033dc3",
@@ -4279,14 +4287,15 @@
     "type": "flashcard",
     "data": {
       "front": "En português brasileiro, cuál es la diferencia entre 'há' y 'tem' para expresar existencia?",
-      "back": "En PT-BR son interchangeables: 'Há' es más formal y 'tem' es más coloquial. Ambos significan 'existe/existen'.",
+      "back": "Em PT-PT se usa quase só 'há' para existencial. 'Tem' para existir es muy coloquial.",
       "example": "Há três anos / Tem três anos = Hace tres años."
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "Em PT-PT se usa quase só 'há' para existencial. 'Tem' para existir es muy coloquial."
+        "back": "En PT-BR son interchangeables: 'Há' es más formal y 'tem' es más coloquial. Ambos significan 'existe/existen'."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "9e542862",
@@ -4317,7 +4326,8 @@
       "front": "Por qué en 'Há quanto tempo!' (¡Cuánto tiempo!) se usa 'há' y no 'tem'?",
       "back": "En expresiones fijas de tiempo que funcionan como interjecciones o preguntas, se prefiere 'há' como residuo del uso más formal/estándar.",
       "example": "Há quanto tempo! Não te via desde 2020!"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9f626d97",
@@ -4354,7 +4364,8 @@
         "Primeira pessoa do plural"
       ],
       "answer": "Segunda pessoa do singular"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a0542d09",
@@ -4385,7 +4396,8 @@
       "front": "Qué significa 'presente' en portugués?",
       "back": "Significa 'presente' (opuesto de ausente) o 'regalo' (gift).",
       "example": "Ele está presente na reunião. (está presente) / Esse livro é um presente para você. (un regalo)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a07fb3f6",
@@ -4420,7 +4432,8 @@
       "acceptedAlternatives": [
         "El menú del almuerzo incluye entrante y plato principal."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a0baa3a3",
@@ -4447,7 +4460,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a157534c",
@@ -4476,22 +4490,23 @@
     "type": "translation",
     "data": {
       "source": "Vocês estão satisfeitos com o jantar?",
-      "target": "¿Están satisfechos con la cena?",
+      "target": "¿Estáis satisfechos con la cena?",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
+        "¿Están satisfechos con la cena?",
         "¿Ustedes están satisfechos con la cena?"
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "¿Estáis satisfechos con la cena?",
+        "target": "¿Están satisfechos con la cena?",
         "acceptedAlternatives": [
-          "¿Están satisfechos con la cena?",
           "¿Ustedes están satisfechos con la cena?"
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "a75517f7",
@@ -4517,7 +4532,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a75af754",
@@ -4536,27 +4552,28 @@
     "esContrast": "'Vós' é arcaico em PT-BR; em PT-PT ainda se usa. 'Vocês' (= eles/elas) é o normal no Brasil.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Vós ___ a escolha correta. (aperceber)",
+      "sentence": "Vocês ___ a escolha correta. (aperceber)",
       "blanks": [
         {
           "position": 0,
-          "answer": "apercebeis",
+          "answer": "apercebem",
           "alternatives": []
         }
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Vocês ___ a escolha correta. (aperceber)",
+        "sentence": "Vós ___ a escolha correta. (aperceber)",
         "blanks": [
           {
             "position": 0,
-            "answer": "apercebem",
+            "answer": "apercebeis",
             "alternatives": []
           }
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "a9255b44",
@@ -4584,15 +4601,16 @@
     "type": "flashcard",
     "data": {
       "front": "Imperativo NEGATIVO: No conjugues el verbo en afirmativo. ¿Cómo se forma?",
-      "back": "NÃO + forma de PRESENTE DEL SUBJUNTIVO",
-      "example": "Não SEJA rude. Não ESTEJA triste. Não VÁ embora. Não DIGA mentiras."
+      "back": "NÃO + forma de PRESENTE DO CONJUNTIVO",
+      "example": "Não SEJA rude. Não ESTEJA triste. Não VÁ embora. Não DIGAS mentiras."
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "NÃO + forma de PRESENTE DO CONJUNTIVO",
-        "example": "Não SEJA rude. Não ESTEJA triste. Não VÁ embora. Não DIGAS mentiras."
+        "back": "NÃO + forma de PRESENTE DEL SUBJUNTIVO",
+        "example": "Não SEJA rude. Não ESTEJA triste. Não VÁ embora. Não DIGA mentiras."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "ab184fb0",
@@ -4628,7 +4646,8 @@
         "Deixamos-lhe uma boa gorjeta.",
         "Damos uma boa gorjeta a ele."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ac5dd4c3",
@@ -4646,31 +4665,32 @@
     "esContrast": "PT-BR: 'apresentou-me'; PT-PT: 'apresentou-me à' + artículo",
     "type": "fill_blank",
     "data": {
-      "sentence": "O Pedro apresentou ___ à namorada.",
+      "sentence": "O Pedro apresentou-me ___ namorada.",
       "blanks": [
         {
           "position": 0,
-          "answer": "me",
+          "answer": "à",
           "alternatives": [
-            "me"
+            "à"
           ]
         }
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "O Pedro apresentou-me ___ namorada.",
+        "sentence": "O Pedro apresentou ___ à namorada.",
         "blanks": [
           {
             "position": 0,
-            "answer": "à",
+            "answer": "me",
             "alternatives": [
-              "à"
+              "me"
             ]
           }
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "ac8c38f0",
@@ -4701,7 +4721,8 @@
       "acceptedAlternatives": [
         "Piensas mucho en ella."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "adc0fd07",
@@ -4729,7 +4750,7 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "No presente, tem muita gente à espera na fila. Mas há só dois caixas abertos no banco.",
+      "audioText": "No presente, está muita gente à espera na fila. Mas há só dois balcões abertos no banco.",
       "question": "¿Cuántas cajas están abiertas ahora?",
       "options": [
         "Há muitas caixas abertas.",
@@ -4741,9 +4762,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "No presente, está muita gente à espera na fila. Mas há só dois balcões abertos no banco."
+        "audioText": "No presente, tem muita gente à espera na fila. Mas há só dois caixas abertos no banco."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "ae3499fa",
@@ -4771,7 +4793,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ae8344a9",
@@ -4799,7 +4822,8 @@
       "front": "¿Cómo se dice 'bebida' en portugués?",
       "back": "bebida",
       "example": "Quero uma bebida gelada."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b1c648ca",
@@ -4826,7 +4850,8 @@
         "por"
       ],
       "answer": "a"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b1d39f83",
@@ -4854,7 +4879,8 @@
       "front": "¿Cómo se dice 'postre' en portugués?",
       "back": "sobremesa",
       "example": "Para a sobremesa, quero pudim."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b4ebe21f",
@@ -4886,7 +4912,8 @@
       "acceptedAlternatives": [
         "Desejo fazer um pedido: eu como mariscos e ela come carne."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b54c7c7c",
@@ -4914,7 +4941,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b6f0abd6",
@@ -4950,11 +4978,7 @@
         "Mi abuelo dice que en Brasil no hay forma de ahorrar dinero con estos precios."
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "target": "Mi abuelo dice que en Brasil no hay manera de ahorrar dinero con estos precios."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "b7af63b9",
@@ -4986,7 +5010,8 @@
       "front": "Explica la diferencia: 'Há probleminha' vs 'Tem probleminha'.",
       "back": "En PT-BR coloquial, 'tem' es más natural y fluido. 'Há' suena más cuidado/formal. 'Probleminha' (diminutivo) refuerza el registro coloquial.",
       "example": "Tem probleminha com a entrega. / Há um probleminha com a entrega."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b7bc11e4",
@@ -5020,7 +5045,8 @@
       "acceptedAlternatives": [
         "Eles a conhecem bem"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b86752b7",
@@ -5049,28 +5075,29 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "O garçom pergunta: «O senhor deseja fazer um pedido agora?»",
+      "audioText": "O empregado pergunta: «O senhor deseja fazer um pedido agora?»",
       "question": "¿Qué pregunta el garçom?",
       "options": [
-        "Si quiere ver la cuenta",
-        "Si desea hacer un pedido ahora",
-        "Si está satisfecho",
-        "Si quiere la ementa"
+        "Se quer ver a conta",
+        "Se deseja fazer um pedido agora",
+        "Se está satisfeito",
+        "Se quer a ementa"
       ],
-      "answer": "Si desea hacer un pedido ahora"
+      "answer": "Se deseja fazer um pedido agora"
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "O empregado pergunta: «O senhor deseja fazer um pedido agora?»",
+        "audioText": "O garçom pergunta: «O senhor deseja fazer um pedido agora?»",
         "options": [
-          "Se quer ver a conta",
-          "Se deseja fazer um pedido agora",
-          "Se está satisfeito",
-          "Se quer a ementa"
+          "Si quiere ver la cuenta",
+          "Si desea hacer un pedido ahora",
+          "Si está satisfecho",
+          "Si quiere la ementa"
         ],
-        "answer": "Se deseja fazer um pedido agora"
+        "answer": "Si desea hacer un pedido ahora"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "b8e4ead8",
@@ -5104,18 +5131,18 @@
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Se não estiver satisfeito com o prato, pode devolvê-lo.",
-        "Se não está satisfeito com o seu prato, pode devolvê-lo."
+        "Se não estiver satisfeito com o teu prato, pode devolvê-lo."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Se não estás satisfeito com o teu prato, podes devolvê-lo.",
         "acceptedAlternatives": [
-          "Se não estiver satisfeito com o teu prato, pode devolvê-lo."
+          "Se não estiver satisfeito com o prato, pode devolvê-lo.",
+          "Se não está satisfeito com o seu prato, pode devolvê-lo."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "b9f10f09",
@@ -5148,7 +5175,8 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "bb6c4930",
@@ -5179,7 +5207,8 @@
       "front": "Conjuga 'comer' en presente (yo, tú, él):",
       "back": "eu como, tu comes, ele come",
       "example": "Eu como arroz todos os dias."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "bbdeff38",
@@ -5208,7 +5237,8 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "bdcd91ff",
@@ -5237,7 +5267,8 @@
       "front": "¿Qué significa 'à espera'?",
       "back": "A la espera de, esperando",
       "example": "Estou à espera de notícias tuas."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c16991df",
@@ -5268,7 +5299,8 @@
       "front": "Conjuga 'servir' en presente (yo, tú, él):",
       "back": "eu sirvo, tu serves, ele serve",
       "example": "O garçom serve a comida."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c1a0ab13",
@@ -5292,37 +5324,37 @@
           "position": 0,
           "answer": "Há",
           "alternatives": [
-            "Fazem"
+            "Faz"
           ]
         },
         {
           "position": 3,
-          "answer": "tive",
-          "alternatives": [
-            "houve"
-          ]
+          "answer": "houve",
+          "alternatives": []
         }
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "___ anos que moro nesta cidade e nunca ___ problemas.",
         "blanks": [
           {
             "position": 0,
             "answer": "Há",
             "alternatives": [
-              "Faz"
+              "Fazem"
             ]
           },
           {
             "position": 3,
-            "answer": "houve",
-            "alternatives": []
+            "answer": "tive",
+            "alternatives": [
+              "houve"
+            ]
           }
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "c2b2a414",
@@ -5353,7 +5385,8 @@
       "acceptedAlternatives": [
         "Nós fizemos um pedido de paella e eles pedem peixe."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c6f1c71d",
@@ -5389,7 +5422,8 @@
         "Hace muchos años que salgo con la misma chica.",
         "Estoy saliendo con la misma persona desde hace muchos años."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c753a69c",
@@ -5427,11 +5461,7 @@
       ],
       "answer": "nos"
     },
-    "variantOverrides": {
-      "pt-br": {
-        "audioText": "Ele está a pensar em nós e quer dar-nos uma surpresa."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "c804e438",
@@ -5457,7 +5487,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "cabff80f",
@@ -5478,27 +5509,27 @@
       "blanks": [
         {
           "position": 0,
-          "answer": "bebo",
+          "answer": "tomo",
           "alternatives": [
-            "tomo"
+            "bebo"
           ]
         }
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Eu ___ um café todas as manhãs.",
         "blanks": [
           {
             "position": 0,
-            "answer": "tomo",
+            "answer": "bebo",
             "alternatives": [
-              "bebo"
+              "tomo"
             ]
           }
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "cbbc02b3",
@@ -5527,20 +5558,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "___ paciente! Nem tudo sai como esperamos.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "Sê",
-            "alternatives": [
-              "Seja"
-            ]
-          }
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "ce546727",
@@ -5571,7 +5589,8 @@
       "front": "Qué significa 'fazer um pedido'?",
       "back": "Significa 'hacer un pedido' o 'realizar un encargo'.",
       "example": "Já fiz um pedido no restaurante."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ce8a3e5e",
@@ -5598,7 +5617,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d02cc3fd",
@@ -5625,7 +5645,8 @@
         "para"
       ],
       "answer": "com"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d032f477",
@@ -5655,7 +5676,8 @@
       "front": "¿Qué significa 'presentemente'?",
       "back": "Actualmente, en la actualidad. Cuidado: en español 'presentemente' significa 'enseguida'.",
       "example": "Presentemente, moro em São Paulo."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d0f4b305",
@@ -5673,27 +5695,28 @@
     "esContrast": "En PT-BR se usa 'tem' (existencial coloquial); en PT-PT se prefiere 'há' (más formal).",
     "type": "fill_blank",
     "data": {
-      "sentence": "No Brasil, a gente ___ muito trabalho esse mês.",
+      "sentence": "Em Portugal, ___ muito trabalho esse mês.",
       "blanks": [
         {
           "position": 0,
-          "answer": "tem",
+          "answer": "há",
           "alternatives": []
         }
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Em Portugal, ___ muito trabalho esse mês.",
+        "sentence": "No Brasil, a gente ___ muito trabalho esse mês.",
         "blanks": [
           {
             "position": 0,
-            "answer": "há",
+            "answer": "tem",
             "alternatives": []
           }
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "d272dbb3",
@@ -5729,11 +5752,7 @@
         "Si tienes tiempo, hay algo que quiero contarte sobre el regalo que compré."
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "target": "Si tienes tiempo, hay una cosa que quiero contarte sobre el regalo que compré."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "d5a1df41",
@@ -5760,20 +5779,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "___ mais devagar, por favor! Não há pressa.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "Fala",
-            "alternatives": [
-              "Fale"
-            ]
-          }
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "d6c3d464",
@@ -5803,7 +5809,8 @@
       "front": "¿Cuándo se usan 'o, a, os, as' y cuándo 'lhe, lhes'?",
       "back": "O, a, os, as = complemento directo / Lhe, lhes = complemento indirecto",
       "example": "Eu a vi. (Yo la vi - CD) / Eu lhe dei o livro. (Yo le di el libro - CI)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d762ba51",
@@ -5830,7 +5837,7 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "Actualmente não poupei muito, mas há uma razão: este mês tive de fazer um pedido urgente no restaurante.",
+      "audioText": "Atualmente não poupei muito, mas há uma razão: este mês tive de fazer um pedido urgente no restaurante.",
       "question": "¿Cuál es la razón por la que no ahorró?",
       "options": [
         "Não tem razão nenhuma.",
@@ -5842,9 +5849,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "Atualmente não poupei muito, mas há uma razão: este mês tive de fazer um pedido urgente no restaurante."
+        "audioText": "Actualmente não poupei muito, mas há uma razão: este mês tive de fazer um pedido urgente no restaurante."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "d7cc7d94",
@@ -5879,7 +5887,8 @@
         "Actualmente me habla sobre la novia.",
         "Él me habla actualmente sobre la novia."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d821dd14",
@@ -5908,7 +5917,8 @@
       "front": "¿Qué significa 'conta' en portugués?",
       "back": "la cuenta (el pago en restaurante)",
       "example": "A conta, por favor!"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d90b7e07",
@@ -5944,7 +5954,8 @@
         "lhe"
       ],
       "answer": "me"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d96c12d1",
@@ -5970,7 +5981,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "da94b053",
@@ -6005,7 +6017,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "dbd0465c",
@@ -6027,25 +6040,25 @@
       "blanks": [
         {
           "position": 0,
-          "answer": "tem",
-          "alternatives": [
-            "há"
-          ]
+          "answer": "há",
+          "alternatives": []
         }
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "No cardápio, ___ várias opções vegetarianas.",
         "blanks": [
           {
             "position": 0,
-            "answer": "há",
-            "alternatives": []
+            "answer": "tem",
+            "alternatives": [
+              "há"
+            ]
           }
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "dcdefb37",
@@ -6074,20 +6087,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "___ às sete horas! O concerto começa cedo.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "Levanta-te",
-            "alternatives": [
-              "Levante-se"
-            ]
-          }
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "dd479edd",
@@ -6108,27 +6108,27 @@
       "blanks": [
         {
           "position": 0,
-          "answer": "Não grite",
+          "answer": "Não grites",
           "alternatives": [
-            "Não grites"
+            "Não grite"
           ]
         }
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "___ tão alto! As pessoas estão a descansar.",
         "blanks": [
           {
             "position": 0,
-            "answer": "Não grites",
+            "answer": "Não grite",
             "alternatives": [
-              "Não grite"
+              "Não grites"
             ]
           }
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "de76d6ed",
@@ -6155,18 +6155,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "O João disse a verdade. Ele ___ disse a verdade.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "lhe",
-            "alternatives": []
-          }
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "dee85e0f",
@@ -6194,7 +6183,7 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "— Olá, Pedro! Você tem uma namorada agora? — Não, não tenho. Mas há três rapazes interessantes na festa.",
+      "audioText": "— Olá, Pedro! Tens uma namorada agora? — Não, não tenho. Mas há três rapazes interessantes na festa.",
       "question": "¿Pedro tiene novia actualmente?",
       "options": [
         "Sí, tiene una.",
@@ -6206,9 +6195,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "— Olá, Pedro! Tens uma namorada agora? — Não, não tenho. Mas há três rapazes interessantes na festa."
+        "audioText": "— Olá, Pedro! Você tem uma namorada agora? — Não, não tenho. Mas há três rapazes interessantes na festa."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "df433bdf",
@@ -6235,18 +6225,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "Dá-me o livro, por favor. Ele ___ deu o livro.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "me",
-            "alternatives": []
-          }
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "e04150e3",
@@ -6273,7 +6252,8 @@
         "∅"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e046a46f",
@@ -6302,7 +6282,8 @@
       "front": "¿Qué significa 'razoável'?",
       "back": "Razonable / justo / tolerable",
       "example": "O preço é razoável para a qualidade."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e1e393b7",
@@ -6332,7 +6313,8 @@
       "front": "¿Cómo se combinan los pronombres 'me' y 'te' con 'lhe'?",
       "back": "Me + lhe = me + lhe (se mantiene igual) / Te + lhe = te + lhe",
       "example": "Eu lhe dei o livro. (Yo le di el libro.)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e4f37e43",
@@ -6367,7 +6349,8 @@
       "acceptedAlternatives": [
         "Existem vários pedidos pendentes."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e724cfe9",
@@ -6402,7 +6385,8 @@
       "acceptedAlternatives": [
         "El camarero trae la cuenta."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e87ec3cb",
@@ -6420,27 +6404,28 @@
     "esContrast": "'Tu' exige 'pagas'; 'você' exige 'paga' — la formalidade cambia a conjugação.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Tu ___ a conta no final. (pagar)",
+      "sentence": "Você ___ a conta no final. (pagar)",
       "blanks": [
         {
           "position": 0,
-          "answer": "pagas",
+          "answer": "paga",
           "alternatives": []
         }
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Você ___ a conta no final. (pagar)",
+        "sentence": "Tu ___ a conta no final. (pagar)",
         "blanks": [
           {
             "position": 0,
-            "answer": "paga",
+            "answer": "pagas",
             "alternatives": []
           }
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "ea88503e",
@@ -6467,7 +6452,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "edd6a76b",
@@ -6501,7 +6487,8 @@
         "Nós"
       ],
       "answer": "Tu"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ee62a9b7",
@@ -6529,7 +6516,8 @@
         "para"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f055722c",
@@ -6557,15 +6545,16 @@
     "type": "flashcard",
     "data": {
       "front": "Imperativo AFIRMATIVO de SER: FALA (tú), FALE (usted), FALEMOS (nosotros)",
-      "back": "TÚ: SÊ | USTED: SEJA | NOSOTROS: SEJAMOS | USTEDES: SEJAM",
-      "example": "Sê honesto! Seja puntual! Sejamos amigos!"
+      "back": "TÚ: SÊ | O(A) SENHOR(A): SEJA | NÓS: SEJAMOS | VOCÊS: SEJAM",
+      "example": "Sê honesto! Seja pontual! Sejam disciplinados!"
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "TÚ: SÊ | O(A) SENHOR(A): SEJA | NÓS: SEJAMOS | VOCÊS: SEJAM",
-        "example": "Sê honesto! Seja pontual! Sejam disciplinados!"
+        "back": "TÚ: SÊ | USTED: SEJA | NOSOTROS: SEJAMOS | USTEDES: SEJAM",
+        "example": "Sê honesto! Seja puntual! Sejamos amigos!"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "f297792c",
@@ -6594,7 +6583,8 @@
       "front": "Conjuga FAZER en presente: EU, TU, ELE, NÓS, ELES",
       "back": "EU faço | TU fazes | ELE faz | NÓS fazemos | ELES fazem",
       "example": "O que você faz da vida? Eu faço pão."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f2cfb166",
@@ -6625,7 +6615,8 @@
       "acceptedAlternatives": [
         "Hago un pedido ahora."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f35480fc",
@@ -6647,25 +6638,25 @@
       "blanks": [
         {
           "position": 0,
-          "answer": "o",
-          "alternatives": [
-            "lo"
-          ]
+          "answer": "vi-o",
+          "alternatives": []
         }
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Eu vi o filme ontem. Eu ___ vi ontem.",
         "blanks": [
           {
             "position": 0,
-            "answer": "vi-o",
-            "alternatives": []
+            "answer": "o",
+            "alternatives": [
+              "lo"
+            ]
           }
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "f3b69d8c",
@@ -6700,7 +6691,8 @@
         "Eu espero a Maria",
         "Eu estou a esperar a Maria"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f50530e9",
@@ -6734,11 +6726,7 @@
       "targetLang": "es",
       "acceptedAlternatives": []
     },
-    "variantOverrides": {
-      "pt-br": {
-        "target": "No pienses en el pasado, piensa en el futuro."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "f6a6d387",
@@ -6765,7 +6753,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f77b2cc2",
@@ -6798,7 +6787,8 @@
       "acceptedAlternatives": [
         "Nós pensamos nela"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fa14b3b9",
@@ -6828,7 +6818,8 @@
       "front": "Traduce: 'Tienes razón, pero él no.'",
       "back": "Você tem razão, mas ele não.",
       "example": "Você tem toda a razão. / Raison d'être = razão de ser."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fd41fd3d",
@@ -6860,7 +6851,8 @@
       "front": "En un texto formal escrito, cuál forma existencial elegirías: 'há' o 'tem'?",
       "back": "En textos formales y escritos, 'há' es la norma. 'Tem' para existir es una marca oral/coloquial del português brasileiro.",
       "example": "Há registros históricos de 1750. / Existem registros históricos de 1750."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fe82d7d4",
@@ -6895,7 +6887,8 @@
         "Ela traz o café para nós.",
         "Ela traz-nos um café."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -6922,7 +6915,8 @@
     },
     "id": "d03061db",
     "blockId": 3,
-    "contentHash": "d03061db4fa38b2e9d13093df3af97f3b7d4c14f76ac8ffd3693a1dad22fc4a7"
+    "contentHash": "d03061db4fa38b2e9d13093df3af97f3b7d4c14f76ac8ffd3693a1dad22fc4a7",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -6944,7 +6938,8 @@
     },
     "id": "126423d7",
     "blockId": 3,
-    "contentHash": "126423d7d68dd07ae246cda4e6c428ed7c7edb2629740cd727bd3bb5b22b8ecc"
+    "contentHash": "126423d7d68dd07ae246cda4e6c428ed7c7edb2629740cd727bd3bb5b22b8ecc",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -6966,7 +6961,8 @@
     },
     "id": "120f539b",
     "blockId": 3,
-    "contentHash": "120f539b3af55770e043c5c2e8e31b1d69398ea2f745edd77f8cb98f5e0193bf"
+    "contentHash": "120f539b3af55770e043c5c2e8e31b1d69398ea2f745edd77f8cb98f5e0193bf",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -6988,7 +6984,8 @@
     },
     "id": "39eaf8d8",
     "blockId": 3,
-    "contentHash": "39eaf8d85567a31b177d3dc71fa4297502ca3301548fff061f78e9106f2e4ae7"
+    "contentHash": "39eaf8d85567a31b177d3dc71fa4297502ca3301548fff061f78e9106f2e4ae7",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -7015,7 +7012,8 @@
     },
     "id": "915dc048",
     "blockId": 3,
-    "contentHash": "915dc0485e8175e4adf5845ed0b44249bec65c77af9569926f00ab647a838d87"
+    "contentHash": "915dc0485e8175e4adf5845ed0b44249bec65c77af9569926f00ab647a838d87",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -7037,7 +7035,8 @@
     },
     "id": "ab0db0a4",
     "blockId": 3,
-    "contentHash": "ab0db0a465534f97324eec1ffb500be767c1ea2091e82c67c81bfe3ebee96925"
+    "contentHash": "ab0db0a465534f97324eec1ffb500be767c1ea2091e82c67c81bfe3ebee96925",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -7059,7 +7058,8 @@
     },
     "id": "0f765cf2",
     "blockId": 3,
-    "contentHash": "0f765cf23e03389367968301a93460449341695d026b3db74e80094baa6b15f9"
+    "contentHash": "0f765cf23e03389367968301a93460449341695d026b3db74e80094baa6b15f9",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -7086,7 +7086,8 @@
     },
     "id": "15c6e949",
     "blockId": 3,
-    "contentHash": "15c6e949fcb1e13eed013aaef7c80fcae06e3c79d07d7d9d49ca3abcefa2ea2b"
+    "contentHash": "15c6e949fcb1e13eed013aaef7c80fcae06e3c79d07d7d9d49ca3abcefa2ea2b",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -7108,7 +7109,8 @@
     },
     "id": "a18c9ce1",
     "blockId": 3,
-    "contentHash": "a18c9ce158e30217978de19d0303b53f6aa8b262c5b59d1a8aa42ccaba7b351b"
+    "contentHash": "a18c9ce158e30217978de19d0303b53f6aa8b262c5b59d1a8aa42ccaba7b351b",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -7130,7 +7132,8 @@
     },
     "id": "acb3a2f5",
     "blockId": 3,
-    "contentHash": "acb3a2f53981a9bb2cfe621a0eefc700f174cb8c8918995ea70bf2a0562624d8"
+    "contentHash": "acb3a2f53981a9bb2cfe621a0eefc700f174cb8c8918995ea70bf2a0562624d8",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -7152,7 +7155,8 @@
     },
     "id": "71175b10",
     "blockId": 3,
-    "contentHash": "71175b1096bb694d8c2c92603e4d980d069435c8ff2ce23dc0069be8147368bc"
+    "contentHash": "71175b1096bb694d8c2c92603e4d980d069435c8ff2ce23dc0069be8147368bc",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -7174,7 +7178,8 @@
     },
     "id": "a6f1f78d",
     "blockId": 3,
-    "contentHash": "a6f1f78d21be79a590e15224aaa3b32a62b58e9a996d722395efec7860331551"
+    "contentHash": "a6f1f78d21be79a590e15224aaa3b32a62b58e9a996d722395efec7860331551",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -7196,7 +7201,8 @@
     },
     "id": "ed89e4cf",
     "blockId": 3,
-    "contentHash": "ed89e4cf0f0066cdc9b78a54e6759eb14f11bc05a5fb10a06aca98057f32abd4"
+    "contentHash": "ed89e4cf0f0066cdc9b78a54e6759eb14f11bc05a5fb10a06aca98057f32abd4",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -7217,7 +7223,8 @@
     },
     "id": "9ab0b532",
     "blockId": 3,
-    "contentHash": "9ab0b532504b5dc7fa2772ef7621228002fd2a4a2c4ca309b50252febabedf28"
+    "contentHash": "9ab0b532504b5dc7fa2772ef7621228002fd2a4a2c4ca309b50252febabedf28",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -7238,7 +7245,8 @@
     },
     "id": "27f780d5",
     "blockId": 3,
-    "contentHash": "27f780d5b706b6e5ae7f9613a600a8e7bb6a2f5760bd897bb03ac80bda216f63"
+    "contentHash": "27f780d5b706b6e5ae7f9613a600a8e7bb6a2f5760bd897bb03ac80bda216f63",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -7259,7 +7267,8 @@
     },
     "id": "74821f0d",
     "blockId": 3,
-    "contentHash": "74821f0d5ab17b1344529864b4bbf0c9229ab7827736451f0b2dbf3c32adf236"
+    "contentHash": "74821f0d5ab17b1344529864b4bbf0c9229ab7827736451f0b2dbf3c32adf236",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -7280,7 +7289,8 @@
     },
     "id": "da56890d",
     "blockId": 3,
-    "contentHash": "da56890db38ef2b2c0349dc68e99c04809cc5894d52f2e6ae08e37af5ab5077a"
+    "contentHash": "da56890db38ef2b2c0349dc68e99c04809cc5894d52f2e6ae08e37af5ab5077a",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -7301,7 +7311,8 @@
     },
     "id": "a870aaf6",
     "blockId": 3,
-    "contentHash": "a870aaf6648f9ecce2779f757efefdfca4590ffc8ef8b4c927182345a1fde649"
+    "contentHash": "a870aaf6648f9ecce2779f757efefdfca4590ffc8ef8b4c927182345a1fde649",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -7323,7 +7334,8 @@
     },
     "id": "b3f99790",
     "blockId": 3,
-    "contentHash": "b3f99790bd1a803b6aec84bea53b07a1a3373dcfba722272cabb3e1e1a194f8f"
+    "contentHash": "b3f99790bd1a803b6aec84bea53b07a1a3373dcfba722272cabb3e1e1a194f8f",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -7344,7 +7356,8 @@
     },
     "id": "b330993d",
     "blockId": 3,
-    "contentHash": "b330993df47264346deab0f25daa05a664984674e06e7f6943850c684b717c43"
+    "contentHash": "b330993df47264346deab0f25daa05a664984674e06e7f6943850c684b717c43",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -7369,7 +7382,8 @@
     },
     "id": "345409b3",
     "blockId": 3,
-    "contentHash": "345409b3be0cc9e3adeb9eae1da138796e6058195230fd9080ac25f01d877603"
+    "contentHash": "345409b3be0cc9e3adeb9eae1da138796e6058195230fd9080ac25f01d877603",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -7396,7 +7410,8 @@
     },
     "id": "6fd4492c",
     "blockId": 3,
-    "contentHash": "6fd4492c18587f3065e55949183d32796e10248a0a55da1fc615961f7736e1c3"
+    "contentHash": "6fd4492c18587f3065e55949183d32796e10248a0a55da1fc615961f7736e1c3",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -7421,7 +7436,8 @@
     },
     "id": "b23c9747",
     "blockId": 3,
-    "contentHash": "b23c9747dbea180e6c756f3c2e73a11ade1b5b3f8c1aa38e480aaf397e010e5c"
+    "contentHash": "b23c9747dbea180e6c756f3c2e73a11ade1b5b3f8c1aa38e480aaf397e010e5c",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -7446,7 +7462,8 @@
     },
     "id": "f076b301",
     "blockId": 3,
-    "contentHash": "f076b3011e05438b81991189cb3b95f8d3f123163b47697637061f294355099f"
+    "contentHash": "f076b3011e05438b81991189cb3b95f8d3f123163b47697637061f294355099f",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -7471,7 +7488,8 @@
     },
     "id": "a8f34263",
     "blockId": 3,
-    "contentHash": "a8f34263b9268e281bfbc1d17edad2df48f6a758d4257e2aebd7e4ef9da6039e"
+    "contentHash": "a8f34263b9268e281bfbc1d17edad2df48f6a758d4257e2aebd7e4ef9da6039e",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -7496,7 +7514,8 @@
     },
     "id": "22073fb4",
     "blockId": 3,
-    "contentHash": "22073fb42faa72b2f68f663818575dc5bbe48424dd297f17d926d01f7bb3d94c"
+    "contentHash": "22073fb42faa72b2f68f663818575dc5bbe48424dd297f17d926d01f7bb3d94c",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -7521,6 +7540,7 @@
     },
     "id": "842c4750",
     "blockId": 3,
-    "contentHash": "842c4750882f9d11f2c28236cbdd135a31fa4d745aa6647c8eb2042b5dec435e"
+    "contentHash": "842c4750882f9d11f2c28236cbdd135a31fa4d745aa6647c8eb2042b5dec435e",
+    "variantStatus": "unchecked"
   }
 ]

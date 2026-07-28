@@ -29,7 +29,8 @@
       "acceptedAlternatives": [
         "Si yo tuviese más dinero, constituiría familia ahora."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "0361bfe7",
@@ -59,7 +60,8 @@
       "front": "Traduce 'esfuerzo'",
       "back": "esforço",
       "example": "Você precisa fazer um esforço maior."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "04629621",
@@ -94,7 +96,8 @@
       "acceptedAlternatives": [
         "¿Desejaría una taza de café, por favor?"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "04dbd6f1",
@@ -127,7 +130,8 @@
       "acceptedAlternatives": [
         "Em breve começarei a estudar para a prova."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "05965fa8",
@@ -157,7 +161,8 @@
       "front": "Conjuga 'ter' en futuro do presente (eu, você):",
       "back": "terei, terá",
       "example": "Terei muita sorte no vestibular."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "05f01070",
@@ -185,7 +190,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "084022b5",
@@ -221,7 +227,8 @@
         "Contar dinero"
       ],
       "answer": "Ahorrar dinero"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "09dbb582",
@@ -239,7 +246,7 @@
     "esContrast": "Em español diríamos 'me gustaría' — en portugués se dice 'Eu gostaria'.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu ___ de tomar um café com você amanhã.",
+      "sentence": "Eu ___ de tomar um café consigo amanhã.",
       "blanks": [
         {
           "position": 0,
@@ -252,18 +259,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Eu ___ de tomar um café consigo amanhã.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "gostaria",
-            "alternatives": [
-              "queria"
-            ]
-          }
-        ]
+        "sentence": "Eu ___ de tomar um café com você amanhã."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "0e18fa1f",
@@ -299,7 +298,8 @@
         "Un trabajo nuevo"
       ],
       "answer": "Un consejo sobre cómo realizar sus objetivos"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "0f0cc9ef",
@@ -329,7 +329,8 @@
       "front": "Conjuga 'poder' en futuro do presente (eu, ele):",
       "back": "poderei, poderá",
       "example": "Poderá contar comigo para o que precisar."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "0f32b6a4",
@@ -356,7 +357,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "100acbec",
@@ -383,7 +385,8 @@
         "em"
       ],
       "answer": "sobre"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "10ba2ec3",
@@ -411,7 +414,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1121d710",
@@ -445,7 +449,8 @@
       "acceptedAlternatives": [
         "Vamos a hacer una gran fiesta cuando empiecen las clases."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1204e6b3",
@@ -475,7 +480,8 @@
       "front": "Traduce 'realizar' (verbo)",
       "back": "realizar",
       "example": "Eu gostaria de realizar meu sonho de estudar abroad."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1210533a",
@@ -507,7 +513,8 @@
       "acceptedAlternatives": [
         "O que vais fazer neste fim de semana?"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "12da8b00",
@@ -544,7 +551,8 @@
         "Que cambie de trabajo"
       ],
       "answer": "Que haga un esfuerzo para realizar sus sueños"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "14991085",
@@ -574,7 +582,8 @@
       "front": "Conjuga 'partir' en futuro do presente (tu, eles):",
       "back": "partirão, partirás",
       "example": "Partirão para a Europa no próximo verão."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "15fbc062",
@@ -607,7 +616,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "16480631",
@@ -637,7 +647,8 @@
       "front": "Forma la primera persona del singular (eu) del futuro composto del verbo falar.",
       "back": "Eu vou falar",
       "example": "Eu vou falar com o gerente amanhã."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1c3cdbee",
@@ -671,7 +682,8 @@
       "acceptedAlternatives": [
         "Tú te vas a enfocar en los estudios para el examen de ingreso."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1c60178a",
@@ -701,7 +713,8 @@
       "front": "'Ele disse: Eu vou viajar amanhã.' → ¿Cómo queda en discurso indirecto?",
       "back": "Ele disse que ia viajar no dia seguinte.",
       "example": "Ela disse que faria um esforço para melhorar."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1e6d2540",
@@ -731,7 +744,8 @@
     "data": {
       "front": "Si llueve mañana, no iré a la playa.",
       "back": "Se chover amanhã, não vou à praia."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "212bec51",
@@ -761,7 +775,8 @@
       "front": "¿Cómo se dice 'soñador' en portugués?",
       "back": "sonhador",
       "example": "Ele é um sonhador que quer viajar pelo mundo."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "21b0ad61",
@@ -793,7 +808,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "21f96a77",
@@ -819,7 +835,8 @@
         "para"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "22d63b7d",
@@ -855,7 +872,8 @@
         "Segundo ela, eu deveria fazer mais esforços para estar contente.",
         "De acordo com ela, eu deveria realizar mais esforços para ser feliz."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2461d15f",
@@ -891,7 +909,8 @@
         "O professor disse que nós faríamos o exame na semana que vem.",
         "O professor informou que faríamos o exame na próxima semana."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "249eb9db",
@@ -925,7 +944,8 @@
       "acceptedAlternatives": [
         "Ela disse que podia vir amanhã."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "25184d93",
@@ -959,7 +979,8 @@
       "acceptedAlternatives": [
         "Formar una familia no es fácil si los precios siguen subiendo."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2581a678",
@@ -990,11 +1011,7 @@
       "back": "realizar",
       "example": "Vou realizar meu sonho de estudar em Portugal."
     },
-    "variantOverrides": {
-      "pt-br": {
-        "back": "realizar"
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "26ad74d2",
@@ -1017,7 +1034,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "291ff1e5",
@@ -1047,7 +1065,8 @@
       "front": "poupar (verbo)",
       "back": "ahorrar, guardar dinero",
       "example": "Preciso poupar dinheiro para a viagem."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2d8585af",
@@ -1084,7 +1103,8 @@
         "Será que seria possível realizar o projeto este ano?",
         "Seria viável realizar o projeto este ano?"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2e95a90c",
@@ -1116,7 +1136,8 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "307d79ee",
@@ -1150,7 +1171,8 @@
       "acceptedAlternatives": [
         "Yo me pondría muy contento si pudieras venir a la fiesta."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "30ef3472",
@@ -1182,7 +1204,8 @@
       "acceptedAlternatives": [
         "Vais a ahorrar dinheiro para a viagem este verão?"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "31f54963",
@@ -1214,7 +1237,8 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "32351ac9",
@@ -1240,7 +1264,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "361162f9",
@@ -1269,11 +1294,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "Disseram que ele ___ para a reunião amanhã."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "37befd01",
@@ -1303,7 +1324,8 @@
       "front": "Traduce 'contento' (adjetivo)",
       "back": "contente",
       "example": "Eu estaria contente com essa decisão."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "38f7c35c",
@@ -1333,17 +1355,17 @@
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Se constituísses uma família, terias muitos mais gastos."
+        "Se constituísses uma família, terias muitas mais despesas."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Se constituísses uma família, terias muitas mais despesas.",
         "acceptedAlternatives": [
-          "Se constituísses uma família, terias muitas mais despesas."
+          "Se constituísses uma família, terias muitos mais gastos."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "3917b328",
@@ -1374,7 +1396,8 @@
       "front": "Conjuga 'pôr' en condicional simple: eu, você, nós",
       "back": "eu poria, você poria, nós poríamos",
       "example": "Eu poria esse projeto em prática, se tivesse apoio."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3a0da41b",
@@ -1397,7 +1420,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3a5611e1",
@@ -1429,7 +1453,8 @@
       "acceptedAlternatives": [
         "Si hiciese más esfuerzo, conseguiría el trabajo."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3a886de7",
@@ -1452,7 +1477,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3cea424d",
@@ -1486,7 +1512,8 @@
       "acceptedAlternatives": [
         "Os preços vão subir no mês que vem."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3e18f681",
@@ -1513,7 +1540,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3eecb886",
@@ -1539,7 +1567,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3f3389ff",
@@ -1576,7 +1605,8 @@
         "Um mercado"
       ],
       "answer": "Uma padaria"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "408764e8",
@@ -1610,7 +1640,8 @@
       "acceptedAlternatives": [
         "Él es muy concreto, no pierde tiempo con fantasías."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4287a621",
@@ -1640,7 +1671,8 @@
       "front": "sonhador / sonhadora",
       "back": "soñador / soñadora",
       "example": "Ela é uma pessoa sonhadora que acredita nos seus planos."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "43ecd99f",
@@ -1676,7 +1708,8 @@
         "Una compra importante"
       ],
       "answer": "Un gran esfuerzo por aprender portugués"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "44d50878",
@@ -1703,7 +1736,8 @@
         "sobre"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "46224559",
@@ -1728,7 +1762,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "467170d9",
@@ -1762,7 +1797,8 @@
       "acceptedAlternatives": [
         "Ele sabe que a vida lhe trará novos desafios, mas estará pronto."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "49d7577e",
@@ -1796,7 +1832,8 @@
       "acceptedAlternatives": [
         "Quisiera hablar contigo sobre ese asunto."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4bf2e9a6",
@@ -1825,21 +1862,22 @@
     "type": "translation",
     "data": {
       "source": "Vocês vão adorar esta cidade!",
-      "target": "¡Ustedes van a adorar esta ciudad!",
+      "target": "¡Vosotros vais a adorar esta ciudad!",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "¡Van a adorar esta ciudad!"
+        "¡Vais a adorar esta ciudad!"
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "¡Vosotros vais a adorar esta ciudad!",
+        "target": "¡Ustedes van a adorar esta ciudad!",
         "acceptedAlternatives": [
-          "¡Vais a adorar esta ciudad!"
+          "¡Van a adorar esta ciudad!"
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "4dd7e3e8",
@@ -1869,7 +1907,8 @@
       "front": "¿Cómo expresarías 'Me gustaría un café' como deseo cortés en portugués?",
       "back": "Eu gostaria de um café",
       "example": "Eu gostaria de um café, por favor."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4e3d1e6d",
@@ -1896,7 +1935,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4fd3dc95",
@@ -1929,7 +1969,8 @@
       "acceptedAlternatives": [
         "Ela vai realizar os sonhos dela no próximo ano."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "50b03eb3",
@@ -1954,7 +1995,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "50b0c475",
@@ -1982,7 +2024,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "5112fc8c",
@@ -2017,7 +2060,8 @@
         "esse sonho"
       ],
       "answer": "vou realizar"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "5310ac04",
@@ -2046,25 +2090,26 @@
     "type": "translation",
     "data": {
       "source": "¿Podrías darme un consejo?",
-      "target": "Poderia me dar um conselho?",
+      "target": "Poderia dar-me um conselho?",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Poderia dar-me um conselho?",
-        "Será que poderia me dar um conselho?",
-        "Poderia me aconselhar?"
+        "Poderia me dar um conselho?",
+        "Será que poderia dar-me um conselho?",
+        "Poderia aconselhar-me?"
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Poderia dar-me um conselho?",
+        "target": "Poderia me dar um conselho?",
         "acceptedAlternatives": [
-          "Poderia me dar um conselho?",
-          "Será que poderia dar-me um conselho?",
-          "Poderia aconselhar-me?"
+          "Poderia dar-me um conselho?",
+          "Será que poderia me dar um conselho?",
+          "Poderia me aconselhar?"
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "532dfefb",
@@ -2094,7 +2139,8 @@
       "front": "Completa: Eu __ sair mais cedo hoje. (querer → condicional)",
       "back": "eu quereria",
       "example": "Eu quereria sair mais cedo hoje, se possível."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "53e21b7f",
@@ -2111,34 +2157,35 @@
     "esContrast": "'Ficar' = quedarse; 'ir embora' = irse. Cuidado: 'ir embora' no es 'irse aunque'.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu ___ ficar aqui mais um pouco, não me vou embora.",
+      "sentence": "Eu ___ ficar aqui mais um pouco, não me ___ embora.",
       "blanks": [
         {
           "position": 0,
           "answer": "vou",
           "alternatives": []
+        },
+        {
+          "position": 1,
+          "answer": "vou",
+          "alternatives": [
+            "me vou"
+          ]
         }
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Eu ___ ficar aqui mais um pouco, não me ___ embora.",
+        "sentence": "Eu ___ ficar aqui mais um pouco, não me vou embora.",
         "blanks": [
           {
             "position": 0,
             "answer": "vou",
             "alternatives": []
-          },
-          {
-            "position": 1,
-            "answer": "vou",
-            "alternatives": [
-              "me vou"
-            ]
           }
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "565689da",
@@ -2166,7 +2213,7 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "Se você fizesse mais esforço, os preços da padaria seriam mais acessíveis.",
+      "audioText": "Se fizesse mais esforço, os preços da padaria seriam mais acessíveis.",
       "question": "¿Qué pasaría si la persona hiciera más esfuerzo?",
       "options": [
         "A padaria fecharia",
@@ -2178,9 +2225,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "Se fizesse mais esforço, os preços da padaria seriam mais acessíveis."
+        "audioText": "Se você fizesse mais esforço, os preços da padaria seriam mais acessíveis."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "566554f3",
@@ -2212,7 +2260,8 @@
       "acceptedAlternatives": [
         "Se não existissem preços tão altos, constituirias uma família com mais facilidade."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "57dc2b62",
@@ -2240,7 +2289,8 @@
       "front": "¿Cuál es la diferencia entre 'nós vamos falar' y 'a gente vai falar'?",
       "back": "Significan lo mismo (vamos a hablar), pero 'nós vamos falar' usa el pronombre 'nós' con 'vamos + infinitivo', mientras que 'a gente vai falar' usa 'a gente' (tercera persona) con 'vai'.",
       "example": "Nós vamos falar com o professor. / A gente vai falar com o professor."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "5e60c6ab",
@@ -2270,7 +2320,8 @@
     "data": {
       "front": "Si voy a la panadería, compraré pan fresco.",
       "back": "Se eu for à padaria, vou comprar pão fresco."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "5f1d3ce3",
@@ -2304,25 +2355,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "Ela é muito ___, sempre ___ mudar de cidade sem aviso.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "sonhadora",
-            "alternatives": [
-              "sonhador"
-            ]
-          },
-          {
-            "position": 1,
-            "answer": "vai",
-            "alternatives": []
-          }
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "5f376912",
@@ -2350,7 +2383,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "5f96af67",
@@ -2380,7 +2414,8 @@
       "front": "Conjuga 'comer' en futuro do presente (eu, você, nós):",
       "back": "comerei, comerá, comeremos",
       "example": "Comerei uma pizza para comemorar minha aprovação."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "607946c2",
@@ -2406,7 +2441,8 @@
         "∅"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "63b88b5e",
@@ -2439,7 +2475,8 @@
       "acceptedAlternatives": [
         "Eles virão à cerimónia embora não possam ficar até ao final."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "63df3aeb",
@@ -2469,11 +2506,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "Eu sou um sonhador e ___ todos os meus objetivos em breve."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "6498a52a",
@@ -2506,7 +2539,8 @@
       "acceptedAlternatives": [
         "O que você fará quando terminar o curso?"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6702d71b",
@@ -2524,7 +2558,7 @@
     "esContrast": "Em português, 'terei' (não 'teréi'); em espanhol 'tendré' é regular.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu ___ uma casa na praia quando me aposentar.",
+      "sentence": "Eu ___ uma casa na praia quando me reformar.",
       "blanks": [
         {
           "position": 0,
@@ -2537,9 +2571,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Eu ___ uma casa na praia quando me reformar."
+        "sentence": "Eu ___ uma casa na praia quando me aposentar."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "6756a8a8",
@@ -2569,7 +2604,8 @@
       "front": "concreto / concreta",
       "back": "concreto / concreta (real, tangible, específico)",
       "example": "Preciso de um plano concreto para economizar."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "683fd7e6",
@@ -2605,7 +2641,8 @@
         "precisares"
       ],
       "answer": "poderás"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "69f46fd4",
@@ -2635,7 +2672,8 @@
     "data": {
       "front": "¿Cuál es la estructura de una oración condicional tipo 2?",
       "back": "Se + imperfeito do subjuntivo + condicional presente\n\nExemplo: Se eu tivesse dinheiro, viajaria."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6addddb2",
@@ -2665,7 +2703,8 @@
       "front": "Completa: Eu __ um novo emprego. (fazer → condicional)",
       "back": "eu faria",
       "example": "Eu faria um novo estágio, se houvesse vaga."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6c1a9bd9",
@@ -2698,7 +2737,8 @@
       "acceptedAlternatives": [
         "Nós veremos se o sonho do sonhador se cumprirá em breve."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6c6dc8b9",
@@ -2728,7 +2768,8 @@
       "front": "preços (sustantivo, plural)",
       "back": "precios",
       "example": "Os preços vão subir no mês que vem."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6c7d8450",
@@ -2758,7 +2799,8 @@
     "data": {
       "front": "Si constituyera familia, necesitaría una casa más grande.",
       "back": "Se constituisse família, precisaria de uma casa maior."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6cab85e4",
@@ -2793,7 +2835,8 @@
         "Eu ficaria contente se estudasses mais.",
         "Estaria contente se estudasses mais."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6dbdca01",
@@ -2821,7 +2864,8 @@
       "front": "Crea una frase con futuro composto usando 'concreto' y 'poupar'.",
       "back": "Modelo: Preciso ter objetivos concretos — vou poupar 500 reais por mês para a viagem.",
       "example": "Para realizar um sonho concreto, vou poupar uma quantia específica todo mês."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6e7c498c",
@@ -2856,7 +2900,8 @@
       "acceptedAlternatives": [
         "Si puedo, querré traerte conmigo."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6f5b01a2",
@@ -2883,7 +2928,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6f5b4044",
@@ -2917,7 +2963,8 @@
       "acceptedAlternatives": [
         "Yo voy a cumplir mi sueño de presentar el examen de ingreso."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6ff3f9a4",
@@ -2947,7 +2994,8 @@
     "data": {
       "front": "¿Cuál es la estructura de una oración condicional tipo 1?",
       "back": "Se + presente do indicativo + futuro do presente (ou presente simples)\n\nExemplo: Se eu tiver dinheiro, vou viajar."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "727eedd9",
@@ -2979,7 +3027,8 @@
       "acceptedAlternatives": [
         "Ela vai ser uma arquiteta muito concreta, sempre com os pés bem assentes."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "72894d13",
@@ -3009,7 +3058,8 @@
       "front": "¿Cómo pedirías algo cortésmente usando 'poder'?",
       "back": "você poderia + infinitivo",
       "example": "Você poderia me ajudar com isso?"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7446ec1e",
@@ -3035,7 +3085,8 @@
         "∅"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "74c980ba",
@@ -3069,7 +3120,8 @@
       "acceptedAlternatives": [
         "Não irás à padaria se não fizeres um esforço agora."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "77073b14",
@@ -3095,7 +3147,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7a321272",
@@ -3125,7 +3178,8 @@
       "front": "esforço",
       "back": "esfuerzo",
       "example": "O esforço valeu a pena: consegui o emprego!"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7a8432c3",
@@ -3160,7 +3214,8 @@
       "acceptedAlternatives": [
         "¿Podría usted darme un consejo sobre cómo resolver esto?"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7ac8e1d8",
@@ -3177,7 +3232,7 @@
     "esContrast": "Tipo 2 coloquial con 'a gente' en PT-BR; en PT-PT se usa 'nós'.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Se a gente ___ mais tempo, ia viajar juntos.",
+      "sentence": "Se a gente ___ mais tempo, íamos viajar juntos.",
       "blanks": [
         {
           "position": 0,
@@ -3188,16 +3243,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Se a gente ___ mais tempo, íamos viajar juntos.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "tivesse",
-            "alternatives": []
-          }
-        ]
+        "sentence": "Se a gente ___ mais tempo, ia viajar juntos."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "7b14b1d9",
@@ -3227,7 +3276,8 @@
       "front": "¿Cómo se conjuga 'falar' en tercera persona del condicional simple?",
       "back": "ele/ela/você falaria",
       "example": "Ela falaria com o gerente sobre isso."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7f1d8121",
@@ -3257,7 +3307,8 @@
       "front": "Traduce al portugués: '¿Cuánto vas a ahorrar este mes?'",
       "back": "Quanto é que vais poupar este mês?",
       "example": "Quanto é que vais poupar este mês? Vou poupar 200 reais."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7fc2782a",
@@ -3286,14 +3337,15 @@
     "type": "flashcard",
     "data": {
       "front": "¿En qué región se usa preferentemente el futuro composto como sustituto del futuro simple?",
-      "back": "En portugués brasileño (BR), el futuro composto reemplaza frecuentemente al futuro simple (fallar, falarei) en el habla cotidiana.",
+      "back": "En portugués europeo (PT), el futuro simples (farei) es más común en registros formales, aunque el futuro composto también se usa informalmente.",
       "example": "BR: Vou fazer → ES: Haré (no 'Voy a hacer' como traducción literal)"
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "En portugués europeo (PT), el futuro simples (farei) es más común en registros formales, aunque el futuro composto también se usa informalmente."
+        "back": "En portugués brasileño (BR), el futuro composto reemplaza frecuentemente al futuro simple (fallar, falarei) en el habla cotidiana."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "8125e2e5",
@@ -3321,7 +3373,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8237b53d",
@@ -3348,7 +3401,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "823a95c9",
@@ -3381,7 +3435,8 @@
       "acceptedAlternatives": [
         "Hablaré con ella mañana."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "825bf8a6",
@@ -3409,7 +3464,8 @@
       "front": "Usa el futuro composto con 'sonhador' para decir: 'Ella, como es soñadora, va a ahorrar para cumplir sus sueños.'",
       "back": "Ela, sendo sonhadora, vai poupar para realizar os seus sonhos.",
       "example": "Ela, sendo sonhadora, vai poupar para realizar os seus sonhos concretos."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "844d0dc0",
@@ -3435,7 +3491,8 @@
         "lembrarei sobre"
       ],
       "answer": "lembrarei de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "848f2e90",
@@ -3461,7 +3518,8 @@
         "∅"
       ],
       "answer": "com"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "84e35879",
@@ -3495,7 +3553,8 @@
       "acceptedAlternatives": [
         "Mi abuelo era soñador, siempre creyó en lo imposible."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8505a63c",
@@ -3523,7 +3582,7 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "Se você vier à minha padaria amanhã, vou te dar um desconto especial nos preços.",
+      "audioText": "Se vieres à minha padaria amanhã, vou dar-te um desconto especial nos preços.",
       "question": "¿Qué va a hacer la persona si el oyente viene a la panadería mañana?",
       "options": [
         "Cobrar mais caro",
@@ -3535,9 +3594,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "Se vieres à minha padaria amanhã, vou dar-te um desconto especial nos preços."
+        "audioText": "Se você vier à minha padaria amanhã, vou te dar um desconto especial nos preços."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "855588a1",
@@ -3572,7 +3632,8 @@
       "acceptedAlternatives": [
         "Él dijo que haría un gran esfuerzo para llevar a cabo el proyecto."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "85675188",
@@ -3602,7 +3663,8 @@
       "front": "Conjuga el verbo 'ir' en presente: eu, tu, ele/ela, nós, vós, eles/elas",
       "back": "eu vou, tu vais, ele/ela vai, nós vamos, vós ides, eles/elas vão",
       "example": "Eu vou, tu vais, ele vai, nós vamos, vós ides, eles vão."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "874c054b",
@@ -3633,7 +3695,8 @@
       "front": "preços",
       "back": "precios",
       "example": "Os preços dos imóveis subiram muito este ano."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "879e089d",
@@ -3668,7 +3731,8 @@
       "acceptedAlternatives": [
         "¡Esos precios son absurdos, voy a reclamar directamente al director!"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "89f74b9c",
@@ -3698,7 +3762,8 @@
     "data": {
       "front": "Conjuga 'ter' en imperfeito do subjuntivo: se eu ___, se tu ___, se ele ___",
       "back": "se eu tivesse, se tu tivesses, se ele tivesse\n(se nós tivéssemos, se vós tivésseis, se eles tivessem)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8a71ec94",
@@ -3725,7 +3790,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8accb60d",
@@ -3750,7 +3816,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8b7cfbdd",
@@ -3781,7 +3848,8 @@
       "front": "¿Qué alternativa cortés usaría un brasileño para 'eu quero' en una tienda?",
       "back": "Eu gostaria de / Eu ia querer (informal)",
       "example": "Eu ia querer aquele pão aí, por favor."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8be006d7",
@@ -3816,7 +3884,8 @@
       "acceptedAlternatives": [
         "La testigo afirmó que vería todo con claridad aquella noche."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8ccf5d3d",
@@ -3848,7 +3917,8 @@
       "acceptedAlternatives": [
         "Se constituísses uma família, terias necessidade de mais espaço em casa."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8dc0261c",
@@ -3876,7 +3946,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "90c3eec0",
@@ -3900,7 +3971,8 @@
         "∅"
       ],
       "answer": "a"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "90cfc018",
@@ -3931,7 +4003,8 @@
       "acceptedAlternatives": [
         "Si yo voy a la panadería mañana, compro pan fresco."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9294ae28",
@@ -3959,7 +4032,7 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "No Brasil, vai ter aula online amanhã por causa da chuva.",
+      "audioText": "Em Portugal, vai haver aula online amanhã por causa da chuva.",
       "question": "¿Qué va a pasar mañana en Brasil según el audio?",
       "options": [
         "Habrá clases presenciales",
@@ -3971,9 +4044,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "Em Portugal, vai haver aula online amanhã por causa da chuva."
+        "audioText": "No Brasil, vai ter aula online amanhã por causa da chuva."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "9463f5cc",
@@ -4009,11 +4083,7 @@
       ],
       "answer": "Soñadora y concreta"
     },
-    "variantOverrides": {
-      "pt-br": {
-        "audioText": "Vais perceber que sou uma pessoa sonhadora, mas também concreta."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "94729cbc",
@@ -4045,7 +4115,8 @@
       "acceptedAlternatives": [
         "Si él constituyese familia, tendría una vida más estable."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "94eaa8bc",
@@ -4079,7 +4150,8 @@
       "acceptedAlternatives": [
         "Vamos apresentar um plano concreto para ahorrar em preços de habitação."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "98a67a8e",
@@ -4109,7 +4181,8 @@
     "data": {
       "front": "Si los precios bajan, voy a comprar ese apartamento.",
       "back": "Se os preços caírem, vou comprar aquele apartamento."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "99114a7c",
@@ -4136,7 +4209,8 @@
         "sonhador/para"
       ],
       "answer": "sonhador/com"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "99980580",
@@ -4164,7 +4238,7 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "Se eu tivesse mais dinheiro, constituiria uma família e abriria minha própria padaria.",
+      "audioText": "Se eu tivesse mais dinheiro, constituiria uma família e abriria a minha própria padaria.",
       "question": "¿Qué haría la persona si tuviera más dinero?",
       "options": [
         "Comprar uma casa",
@@ -4176,9 +4250,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "Se eu tivesse mais dinheiro, constituiria uma família e abriria a minha própria padaria."
+        "audioText": "Se eu tivesse mais dinheiro, constituiria uma família e abriria minha própria padaria."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "9d5d938b",
@@ -4212,7 +4287,8 @@
       "acceptedAlternatives": [
         "Vou ahorrar para cumprir o meu sonho de viajar ao Brasil."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9fa31c61",
@@ -4239,7 +4315,8 @@
         "∅"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a1463326",
@@ -4271,17 +4348,17 @@
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Me diz o que você queria me dizer e eu te direi se poderei te ajudar."
+        "Dize-me o que querias dizer-me e eu dir-te-ei se poderei ajudar-te."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Diz-me o que querias dizer-me e eu dir-te-ei se poderei ajudar-te.",
         "acceptedAlternatives": [
-          "Dize-me o que querias dizer-me e eu dir-te-ei se poderei ajudar-te."
+          "Me diz o que você queria me dizer e eu te direi se poderei te ajudar."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "a4283e03",
@@ -4309,7 +4386,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a84de8ea",
@@ -4341,7 +4419,8 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a8952aee",
@@ -4367,18 +4446,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "Tu ___ comprar o presente para a Maria?",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "vais",
-            "alternatives": []
-          }
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "a906da0d",
@@ -4408,7 +4476,8 @@
       "front": "¿Cómo se forma el futuro composto en portugués?",
       "back": "ir + infinitivo: vou falar, vais falar, vai falar, vamo(s) falar, ides falar, vão falar",
       "example": "Vou viajar amanhã. (Voy a viajar mañana.)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "aab6acb1",
@@ -4440,7 +4509,8 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "aabee1c1",
@@ -4466,7 +4536,8 @@
         "gostar —"
       ],
       "answer": "gostar"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "aafe8217",
@@ -4497,7 +4568,8 @@
       "front": "padaria",
       "back": "panadería (establecimiento donde se vende pan y bollería)",
       "example": "Eu vou à padaria comprar pão fresco todos os dias."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "aba10b4e",
@@ -4530,7 +4602,8 @@
       "acceptedAlternatives": [
         "Voy a ser más concreta: necesitamos resultados."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "add8f276",
@@ -4560,7 +4633,8 @@
       "front": "¿Cómo se dice 'en breve' en portugués?",
       "back": "em breve",
       "example": "Em breve, vou começar a estudar para o vestibular."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "affe3489",
@@ -4577,7 +4651,7 @@
     "esContrast": "Em português usa-se o futuro do conjuntivo 'tiver', não 'teria' como no condicional espanhol.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Se eu ___ dinheiro suficiente, vou comprar um novo telemóvel.",
+      "sentence": "Se eu ___ dinheiro suficiente, vou comprar um novo celular.",
       "blanks": [
         {
           "position": 0,
@@ -4588,16 +4662,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Se eu ___ dinheiro suficiente, vou comprar um novo celular.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "tiver",
-            "alternatives": []
-          }
-        ]
+        "sentence": "Se eu ___ dinheiro suficiente, vou comprar um novo telemóvel."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "b052aa71",
@@ -4627,7 +4695,8 @@
     "data": {
       "front": "Condicional do verbo 'poder': eu ___, tu ___, ele ___",
       "back": "eu poderia, tu poderias, ele poderia\n(nós poderíamos, vós poderíeis, eles poderiam)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b1d793db",
@@ -4661,7 +4730,8 @@
       "acceptedAlternatives": [
         "Constituirias uma família mais próspera caso os preços fossem mais justos."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b2b04b9b",
@@ -4698,7 +4768,8 @@
         "Vão sair de casa"
       ],
       "answer": "Vão constituir família mais tarde"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b3bebf21",
@@ -4728,7 +4799,8 @@
       "front": "'Você poderia me dizer onde fica a estação?' → Identifica la estructura",
       "back": "Condicional de possibilidade + pergunta indireta",
       "example": "Você poderia me dizer qual é o seu conselho?"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b3c94153",
@@ -4758,7 +4830,8 @@
       "front": "Conjuga 'querer' en futuro do presente (nós, vocês):",
       "back": "quereremos, quererão",
       "example": "Quereremos muito que você venha nos visitar."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b54099b5",
@@ -4788,7 +4861,8 @@
       "front": "Explica por qué 'vou falar' no es exactamente igual a 'voy a hablar' en todos los contextos.",
       "back": "En PT-BR, 'vou falar' puede significar tanto 'voy a hablar' (intención inmediata) como 'hablaré' (futuro general). En español, 'voy a hablar' implica más inmediatez, mientras que 'hablaré' es más distante. En PT-BR, el futuro composto cubre ambos significados.",
       "example": "Vou falar com ela amanhã. (= Hablaré / Voy a hablar con ella mañana.)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b680faa2",
@@ -4819,7 +4893,8 @@
       "front": "Conjuga 'falar' en futuro do presente (todas as pessoas):",
       "back": "falarei, falarás, falará, falaremos, falarão",
       "example": "Falarei com ela amanhã sobre o projeto."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b8547c55",
@@ -4855,7 +4930,8 @@
         "quereres"
       ],
       "answer": "terás"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b887a7a8",
@@ -4882,7 +4958,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ba2402b2",
@@ -4916,7 +4993,8 @@
       "acceptedAlternatives": [
         "El gerente informó que la reunión se postergaría para el jueves."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ba9d2b66",
@@ -4953,7 +5031,8 @@
         "Perguntei se ele gostaria de dar-me um conselho antes de realizar o projeto.",
         "Questionei se ele quereria me dar um conselho antes de realizar o projeto."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "bc163004",
@@ -4988,7 +5067,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "bc3ef7c0",
@@ -5014,7 +5094,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "be2ce516",
@@ -5051,7 +5132,8 @@
         "De forma-irónica, los precios bajarán"
       ],
       "answer": "De forma concreta, los precios subirán"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "be776088",
@@ -5083,7 +5165,8 @@
       "acceptedAlternatives": [
         "Se o esforço que fizesses fosse maior, obterias melhores preços."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "bf9f60f9",
@@ -5116,7 +5199,8 @@
       "acceptedAlternatives": [
         "Teremos que focar no vestibular para conseguir entrar na universidade."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c0174025",
@@ -5149,7 +5233,8 @@
       "acceptedAlternatives": [
         "Ahorrarás mucho dinero así."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c092ca4e",
@@ -5181,7 +5266,8 @@
       "acceptedAlternatives": [
         "Se os preços são tão altos, vou ter de fazer um grande esforço."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c21084cf",
@@ -5209,7 +5295,8 @@
       "front": "Traduce: 'Los precios van a subir el próximo año.'",
       "back": "Os preços vão subir no próximo ano.",
       "example": "Os preços vão subir no próximo ano. Preciso poupar mais."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c4c353d8",
@@ -5239,7 +5326,8 @@
       "front": "'Maria disse: Eu quero este emprego.' → Transforma a discurso indirecto.",
       "back": "Maria disse que queria aquele emprego.",
       "example": "O gerente disse que queria realizar a entrevista logo."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c4d269ed",
@@ -5270,7 +5358,8 @@
       "front": "¿Qué es el 'vestibular' en Brasil?",
       "back": "É o exame de seleção para entrar na universidade",
       "example": "Muitos estudantes fazem cursinho para o vestibular."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c5991acb",
@@ -5303,7 +5392,8 @@
       "acceptedAlternatives": [
         "Los precios bajarán el próximo mes."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c80f3e0a",
@@ -5330,7 +5420,8 @@
         "a"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c8c73d70",
@@ -5360,7 +5451,8 @@
       "front": "Conjuga 'saber' en futuro do presente (você, elas):",
       "back": "saberá, saberão",
       "example": "Logo saberão a resposta do exame."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ca13ea5c",
@@ -5387,13 +5479,14 @@
     "data": {
       "front": "Traduce al portugués: '¿Tienes un plan concreto o solo estás soñando?'",
       "back": "Tens um plano concreto ou só estás a sonhar?",
-      "example": "Tens um plano concreto ou só estás a sonhar? Precisa ser mais realista."
+      "example": "Tens um plano concreto ou só estás a sonhar? → PT-BR: Você tem um plano concreto ou só está sonhando?"
     },
     "variantOverrides": {
       "pt-br": {
-        "example": "Tens um plano concreto ou só estás a sonhar? → PT-BR: Você tem um plano concreto ou só está sonhando?"
+        "example": "Tens um plano concreto ou só estás a sonhar? Precisa ser mais realista."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "ca40cfd1",
@@ -5420,7 +5513,8 @@
         "sonhar en"
       ],
       "answer": "sonhar"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ccdeaeaa",
@@ -5447,7 +5541,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d085cce7",
@@ -5481,7 +5576,8 @@
       "acceptedAlternatives": [
         "O meu irmão diz que vai ser um sonho, mas é muito sonhador."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d140e759",
@@ -5506,7 +5602,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d2a6e538",
@@ -5533,7 +5630,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d2f872f3",
@@ -5563,7 +5661,8 @@
       "front": "¿Cómo se conjuga 'falar' en primera persona del condicional simple?",
       "back": "eu falaria",
       "example": "Eu falaria português com você, se pudesse."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d795eee0",
@@ -5599,7 +5698,8 @@
         "projetos"
       ],
       "answer": "virá"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d8004a56",
@@ -5629,7 +5729,8 @@
       "front": "Traduce 'consejo' (sustantivo)",
       "back": "conselho",
       "example": "Posso te dar um conselho? Seja paciente."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d9283c9f",
@@ -5661,7 +5762,8 @@
       "acceptedAlternatives": [
         "Si vas a la panadería, me traes un pastel."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d962d247",
@@ -5699,7 +5801,8 @@
         "Eu faria um esforço para ajudá-lo.",
         "Quereria fazer um esforço para ajudá-lo."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "db0eb149",
@@ -5717,7 +5820,7 @@
     "esContrast": "'Faremos' vem de 'fazer' + '-emos', não de uma raiz diferente.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Na próxima semana, nós ___ no vestibular da USP.",
+      "sentence": "Na próxima semana, nós ___ no exame da universidade.",
       "blanks": [
         {
           "position": 0,
@@ -5730,9 +5833,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Na próxima semana, nós ___ no exame da universidade."
+        "sentence": "Na próxima semana, nós ___ no vestibular da USP."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "dc63d860",
@@ -5759,7 +5863,8 @@
         "para"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "dcda4a67",
@@ -5788,11 +5893,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "O professor disse que a prova ___ muito difícil."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "de11f97e",
@@ -5822,7 +5923,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e181706e",
@@ -5855,7 +5957,8 @@
       "acceptedAlternatives": [
         "Ella dijo que tendría mucho gusto en ayudarnos."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e269e14b",
@@ -5884,13 +5987,14 @@
     "type": "flashcard",
     "data": {
       "front": "Si me esforzara más, probablemente aprovaría el examen.",
-      "back": "Se eu me esforçasse mais, provavelmente aprovaria o exame."
+      "back": "Se eu me esforçasse mais, provavelmente aprovaria o exame.\n(En PT-PT: 'aprovar' funciona igual, pero en contextos de examen se dice más 'fazer o exame'.)"
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "Se eu me esforçasse mais, provavelmente aprovaria o exame.\n(En PT-PT: 'aprovar' funciona igual, pero en contextos de examen se dice más 'fazer o exame'.)"
+        "back": "Se eu me esforçasse mais, provavelmente aprovaria o exame."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "e579594d",
@@ -5926,7 +6030,8 @@
         "Subirlos"
       ],
       "answer": "Amarlos"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e9e65a9c",
@@ -5956,7 +6061,8 @@
       "front": "Conjuga 'ser' en futuro do presente (eu, nós):",
       "back": "serei, seremos",
       "example": "Serei médico quando crescer."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "eaf46532",
@@ -5990,7 +6096,8 @@
       "acceptedAlternatives": [
         "Vou falar com a minha mãe amanhã."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "eb0c8e2b",
@@ -6027,7 +6134,8 @@
         "Quatro"
       ],
       "answer": "Dois"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ef6b2728",
@@ -6061,7 +6169,8 @@
       "acceptedAlternatives": [
         "Si los precios siguen subiendo, muchos abandonarán el país."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f073e13a",
@@ -6084,7 +6193,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f0de9ef5",
@@ -6110,7 +6220,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f34b0817",
@@ -6141,7 +6252,8 @@
       "front": "constituir família",
       "back": "formar una familia (tener hijos, establecerse en familia)",
       "example": "Muitos jovens adiam constituiu família por questões econômicas."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f3712afa",
@@ -6175,7 +6287,8 @@
         "Que la persona trabajara más"
       ],
       "answer": "Que la persona realizara su deseo"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f37427f8",
@@ -6205,7 +6318,8 @@
       "front": "¿Cómo se dice 'enfocar' en portugués?",
       "back": "focar",
       "example": "Preciso focar nos estudos para passar no vestibular."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f5b1957d",
@@ -6235,7 +6349,8 @@
       "front": "Conjuga 'fazer' en futuro do presente (eu, vocês):",
       "back": "farei, farão",
       "example": "Farei tudo para realizar meus sonhos."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f78116a6",
@@ -6271,7 +6386,8 @@
         "Viajar sin su familia"
       ],
       "answer": "Cualquier esfuerzo"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f9cf63b7",
@@ -6302,7 +6418,8 @@
       "acceptedAlternatives": [
         "Si los precios bajan, compraremos más."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fbc0d0c6",
@@ -6332,7 +6449,8 @@
       "front": "Conjuga 'ir' en futuro do presente (tu, nós):",
       "back": "irás, iremos",
       "example": "Iremos à praia no fim de semana."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fbe83c11",
@@ -6358,7 +6476,8 @@
         "en"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fd774631",
@@ -6387,7 +6506,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fdaed120",
@@ -6421,7 +6541,8 @@
       "acceptedAlternatives": [
         "Se não fizeres esforço, não irás à padaria amanhã."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ff11961a",
@@ -6451,7 +6572,8 @@
     "data": {
       "front": "Si tuviera más dinero, compraría una casa.",
       "back": "Se eu tivesse mais dinheiro, compraria uma casa."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ff32ddbd",
@@ -6481,7 +6603,8 @@
     "data": {
       "front": "¿Cuál es la diferencia entre 'se' (condicional) y 'se' (reflexivo)?",
       "back": "Se condicional: conjunción que introduce una condición.\nEjemplo: Se chover, fico em casa.\n\nSe reflexivo: pronombre que indica ação do sujeito sobre si mesmo.\nEjemplo: Eu me esfuerzo todos os dias."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -6503,7 +6626,8 @@
     },
     "id": "dcc3f383",
     "blockId": 5,
-    "contentHash": "dcc3f383c404ea64ad48e02f2ab2711eddf530a8589663498baec8c418c75c35"
+    "contentHash": "dcc3f383c404ea64ad48e02f2ab2711eddf530a8589663498baec8c418c75c35",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -6525,7 +6649,8 @@
     },
     "id": "cd2409b8",
     "blockId": 5,
-    "contentHash": "cd2409b8037528cdd8204c8506f447148a92355d29a843fb8719a869aa515c11"
+    "contentHash": "cd2409b8037528cdd8204c8506f447148a92355d29a843fb8719a869aa515c11",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -6548,7 +6673,8 @@
     },
     "id": "e448128f",
     "blockId": 5,
-    "contentHash": "e448128f5d4b0be9b575ca251cb950be8bf561e2c80228de048b240e44dc2c51"
+    "contentHash": "e448128f5d4b0be9b575ca251cb950be8bf561e2c80228de048b240e44dc2c51",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -6571,7 +6697,8 @@
     },
     "id": "dc8aba2f",
     "blockId": 5,
-    "contentHash": "dc8aba2f2582abbc35e21bc94ced3ad45eb8b9c37a58c05c748691d1120889c8"
+    "contentHash": "dc8aba2f2582abbc35e21bc94ced3ad45eb8b9c37a58c05c748691d1120889c8",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -6594,7 +6721,8 @@
     },
     "id": "99014239",
     "blockId": 5,
-    "contentHash": "9901423934ce14392c418487cd3ca8ea1336bb37a01353fb3946cf1e8a2698fe"
+    "contentHash": "9901423934ce14392c418487cd3ca8ea1336bb37a01353fb3946cf1e8a2698fe",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -6621,7 +6749,8 @@
     },
     "id": "37740d01",
     "blockId": 5,
-    "contentHash": "37740d017fe7e70a01a447419d995b0f5b2fe5dda472a90f4b4df0066e40d852"
+    "contentHash": "37740d017fe7e70a01a447419d995b0f5b2fe5dda472a90f4b4df0066e40d852",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -6643,7 +6772,8 @@
     },
     "id": "7531c36d",
     "blockId": 5,
-    "contentHash": "7531c36d29b26a7092b084cec3f823f3736018b38aea395467c52a1d33fd034f"
+    "contentHash": "7531c36d29b26a7092b084cec3f823f3736018b38aea395467c52a1d33fd034f",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -6665,7 +6795,8 @@
     },
     "id": "2f68e579",
     "blockId": 5,
-    "contentHash": "2f68e5794be44835bf290fabf3537846f0869148250654928b933736370fd4e3"
+    "contentHash": "2f68e5794be44835bf290fabf3537846f0869148250654928b933736370fd4e3",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -6688,7 +6819,8 @@
     },
     "id": "b785e4db",
     "blockId": 5,
-    "contentHash": "b785e4db94a288419d4562536d70332688dc71bd6cf0e90d038f5307b424a1f8"
+    "contentHash": "b785e4db94a288419d4562536d70332688dc71bd6cf0e90d038f5307b424a1f8",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -6711,7 +6843,8 @@
     },
     "id": "55a0666f",
     "blockId": 5,
-    "contentHash": "55a0666fc16c547f8ba398d35cb99984fee56e8e9c853c03a0bbdeaa767124e2"
+    "contentHash": "55a0666fc16c547f8ba398d35cb99984fee56e8e9c853c03a0bbdeaa767124e2",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -6733,7 +6866,8 @@
     },
     "id": "4c7ac2f0",
     "blockId": 5,
-    "contentHash": "4c7ac2f05256b392622104a63988b70a6df21f21abb4f424451ec2f6f1e32519"
+    "contentHash": "4c7ac2f05256b392622104a63988b70a6df21f21abb4f424451ec2f6f1e32519",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -6755,7 +6889,8 @@
     },
     "id": "05449e18",
     "blockId": 5,
-    "contentHash": "05449e184dabc3cd079565ade9a1116673631dc045f73dbb394e7728c0f97e1f"
+    "contentHash": "05449e184dabc3cd079565ade9a1116673631dc045f73dbb394e7728c0f97e1f",
+    "variantStatus": "unchecked"
   },
   {
     "type": "conjugation",
@@ -6777,7 +6912,8 @@
     },
     "id": "b81e8fda",
     "blockId": 5,
-    "contentHash": "b81e8fda29ba46380a36275c417c445810cb66141bab0728f5bc5d0961a02887"
+    "contentHash": "b81e8fda29ba46380a36275c417c445810cb66141bab0728f5bc5d0961a02887",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -6798,7 +6934,8 @@
     },
     "id": "85396ad6",
     "blockId": 5,
-    "contentHash": "85396ad6d0d789b09f180e4bc5af118cb931d31cd0a18b60fec202d7e4cd3267"
+    "contentHash": "85396ad6d0d789b09f180e4bc5af118cb931d31cd0a18b60fec202d7e4cd3267",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -6820,7 +6957,8 @@
     },
     "id": "da0227bd",
     "blockId": 5,
-    "contentHash": "da0227bd3bbc11ce81c4f64ec26bd3cb84bb777383152265e327c87898924d0f"
+    "contentHash": "da0227bd3bbc11ce81c4f64ec26bd3cb84bb777383152265e327c87898924d0f",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -6841,7 +6979,8 @@
     },
     "id": "eb7f85c1",
     "blockId": 5,
-    "contentHash": "eb7f85c1c6b5365f23fa0895e165ed70f226ce39b9a12c45ce7f5ce4f3fa3f3b"
+    "contentHash": "eb7f85c1c6b5365f23fa0895e165ed70f226ce39b9a12c45ce7f5ce4f3fa3f3b",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -6862,7 +7001,8 @@
     },
     "id": "adab6a42",
     "blockId": 5,
-    "contentHash": "adab6a42a6025ad463f2f1640b205d9d9a74d0f76ccb462741a3c7c11ac1d475"
+    "contentHash": "adab6a42a6025ad463f2f1640b205d9d9a74d0f76ccb462741a3c7c11ac1d475",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -6883,7 +7023,8 @@
     },
     "id": "b2959079",
     "blockId": 5,
-    "contentHash": "b29590793755550dcaa79bdd4176c23c9992f2a9fc52338d9c08fa3f76f02e00"
+    "contentHash": "b29590793755550dcaa79bdd4176c23c9992f2a9fc52338d9c08fa3f76f02e00",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -6904,7 +7045,8 @@
     },
     "id": "dc5f73f8",
     "blockId": 5,
-    "contentHash": "dc5f73f8156c75ec0187fdf196572839c25a67c2e1757e7c96fe8b1ae081def2"
+    "contentHash": "dc5f73f8156c75ec0187fdf196572839c25a67c2e1757e7c96fe8b1ae081def2",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -6928,7 +7070,8 @@
     },
     "id": "7502f1c7",
     "blockId": 5,
-    "contentHash": "7502f1c7932ae272a38c50132a7062111d92146dbaf99a6cc630d5db86c1ff98"
+    "contentHash": "7502f1c7932ae272a38c50132a7062111d92146dbaf99a6cc630d5db86c1ff98",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -6953,7 +7096,8 @@
     },
     "id": "3dc6033d",
     "blockId": 5,
-    "contentHash": "3dc6033d1d93b3fc87b37d45bda32b389627d1a826761ef41e6d7c718885fed9"
+    "contentHash": "3dc6033d1d93b3fc87b37d45bda32b389627d1a826761ef41e6d7c718885fed9",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -6977,7 +7121,8 @@
     },
     "id": "73a4d2cb",
     "blockId": 5,
-    "contentHash": "73a4d2cb3c92ff4be09b9a8dbc3cbc5ee9ae592ecf7689b57006195d86c35c4a"
+    "contentHash": "73a4d2cb3c92ff4be09b9a8dbc3cbc5ee9ae592ecf7689b57006195d86c35c4a",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -7002,7 +7147,8 @@
     },
     "id": "4b100602",
     "blockId": 5,
-    "contentHash": "4b100602e9db36751880569cd188b35fbc0b50f3f3270012ee9f4bd54eedb27b"
+    "contentHash": "4b100602e9db36751880569cd188b35fbc0b50f3f3270012ee9f4bd54eedb27b",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -7027,7 +7173,8 @@
     },
     "id": "d4b0188a",
     "blockId": 5,
-    "contentHash": "d4b0188a60c4fbbe2b85945173b6201027f46e963724cb64a7e625a0ab5a0391"
+    "contentHash": "d4b0188a60c4fbbe2b85945173b6201027f46e963724cb64a7e625a0ab5a0391",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -7052,6 +7199,7 @@
     },
     "id": "707ac39c",
     "blockId": 5,
-    "contentHash": "707ac39c5c670ad445a64ac2903b67067438d27872c5295339673da3eba394e5"
+    "contentHash": "707ac39c5c670ad445a64ac2903b67067438d27872c5295339673da3eba394e5",
+    "variantStatus": "unchecked"
   }
 ]

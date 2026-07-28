@@ -2,11 +2,11 @@
 import { describe, it, expect } from "vitest";
 import { resolveExerciseData, resolveAudioHash } from "@/lib/exercise-resolver";
 
-// Phase 1: ptOverrides del contenido legacy se promueve a
-// variantOverrides["pt-br"] por el preprocessor. Estos tests asumen la
-// forma canónica (variantOverrides). El shim de compat con ptOverrides
-// se cubre en el test de preprocessor (zod-schemas-variant.test.ts).
-const exBr = {
+// Tras la inversión del 2026-07-28 (scripts/invert-variant-base.ts):
+//   data                      → portugués EUROPEO, la base
+//   variantOverrides['pt-br'] → portugués de Brasil, sólo lo que difiere
+// `autocarro` es la palabra portuguesa; `ônibus` la brasileña.
+const ex = {
   id: "abc",
   blockId: 1,
   lessonId: "b1-l1",
@@ -14,8 +14,8 @@ const exBr = {
   difficulty: 1 as const,
   concepts: [],
   tags: [],
-  data: { front: "ônibus", back: "ônibus" },
-  variantOverrides: { "pt-br": { back: "autocarro" } },
+  data: { front: "autobús", back: "autocarro" },       // base EUROPEA
+  variantOverrides: { "pt-br": { back: "ônibus" } },   // override brasileño
   audio: {
     br: { hash: "hbr", voice: "v" },
     pt: { hash: "hpt", voice: "v" },
@@ -23,77 +23,74 @@ const exBr = {
 };
 
 describe("resolveExerciseData", () => {
-  it("BR (legacy key) returns data unchanged (no override at 'br')", () => {
-    // Shim: la legacy key 'br' nunca recibe override (el preprocessor
-    // promueve ptOverrides a variantOverrides["pt-br"], no a "br").
-    // No hay fallback a "pt-br" en la legacy key 'br' para mantener
-    // el comportamiento original donde ptOverrides era solo para PT.
-    expect(resolveExerciseData(exBr, "br").back).toBe("ônibus");
+  it("pt-pt recibe la base europea, sin tocar overrides", () => {
+    expect(resolveExerciseData(ex, "pt-pt").back).toBe("autocarro");
   });
 
-  it("PT (legacy key) applies variantOverrides['pt-br'] (fallback)", () => {
-    // Shim: la legacy key 'pt' cae al DEFAULT_VARIANT ("pt-br").
-    expect(resolveExerciseData(exBr, "pt").back).toBe("autocarro");
+  it("la clave legacy 'pt' también es europea", () => {
+    expect(resolveExerciseData(ex, "pt").back).toBe("autocarro");
   });
 
-  it("pt-br does NOT apply the legacy 'pt-br'-keyed override (that key holds European text)", () => {
-    // The legacy migration stored European-PT overrides under "pt-br".
-    // pt-br users must receive the base data (BR), not the European text.
-    expect(resolveExerciseData(exBr, "pt-br").back).toBe("ônibus");
+  it("pt-br aplica el override brasileño", () => {
+    expect(resolveExerciseData(ex, "pt-br").back).toBe("ônibus");
   });
 
-  it("pt-pt falls back to the legacy 'pt-br' key (European override)", () => {
-    // pt-pt has no explicit "pt-pt" key, so it falls back to the legacy
-    // "pt-br"-keyed entry, which holds European text.
-    const noPtPtOverride = { ...exBr, variantOverrides: { "pt-br": { back: "autocarro" } } };
-    expect(resolveExerciseData(noPtPtOverride, "pt-pt").back).toBe("autocarro");
+  it("la clave legacy 'br' aplica el mismo override brasileño", () => {
+    expect(resolveExerciseData(ex, "br").back).toBe("ônibus");
   });
 
-  it("pt-pt with its own override applies it", () => {
-    const both = {
-      ...exBr,
-      variantOverrides: {
-        "pt-br": { back: "autocarro" },
-        "pt-pt": { back: "autocarro-pt" },
-      },
+  it("un usuario de PT-PT nunca recibe la palabra brasileña", () => {
+    // Regresión del bug que la inversión arregla: la base era brasileña y
+    // el europeo vivía en un override bajo una clave que decía "pt-br".
+    for (const v of ["pt-pt", "pt"]) {
+      expect(resolveExerciseData(ex, v).back).not.toBe("ônibus");
+    }
+  });
+
+  it("una variante desconocida usa su propio override si lo tiene", () => {
+    const angolano = {
+      ...ex,
+      variantOverrides: { "pt-br": { back: "ônibus" }, "pt-ao": { back: "machimbombo" } },
     };
-    expect(resolveExerciseData(both, "pt-pt").back).toBe("autocarro-pt");
+    expect(resolveExerciseData(angolano, "pt-ao").back).toBe("machimbombo");
   });
 
-  it("PT without overrides returns data", () => {
-    const noOverride = { ...exBr, variantOverrides: undefined };
-    expect(resolveExerciseData(noOverride, "pt").back).toBe("ônibus");
+  it("una variante desconocida sin override cae a la base europea", () => {
+    expect(resolveExerciseData(ex, "pt-ao").back).toBe("autocarro");
   });
 
-  it("re-validates with Zod: invalid variantOverrides type throws", () => {
-    // flashcard with chunk-typed variantOverrides["pt-br"] must fail when
-    // pt-pt resolves it via the legacy European-key fallback.
-    // The resolver validates the override against the strict per-type
-    // override schema (VariantOverrideByTypeSchema).
+  it("sin overrides devuelve la base para cualquier variante", () => {
+    const noOverride = { ...ex, variantOverrides: undefined };
+    expect(resolveExerciseData(noOverride, "pt-br").back).toBe("autocarro");
+    expect(resolveExerciseData(noOverride, "pt-pt").back).toBe("autocarro");
+  });
+
+  it("revalida con Zod: un override de otro tipo lanza", () => {
+    // El resolver valida el override contra el esquema estricto del tipo
+    // (VariantOverrideByTypeSchema) antes de mergear, para que un campo de
+    // otro tipo falle en vez de colarse silenciosamente.
     const bad = {
-      ...exBr,
+      ...ex,
       variantOverrides: { "pt-br": { chunk: "x", meaning: "y", examples: [{ sentence: "s" }] } },
     };
-    expect(() => resolveExerciseData(bad, "pt-pt")).toThrow();
+    expect(() => resolveExerciseData(bad, "pt-br")).toThrow();
   });
 
-  it("tolerates variantOverrides: empty record", () => {
-    // Phase 1: el preprocessor elimina variantOverrides: null, pero un
-    // record vacío es válido y se trata como "sin override".
-    const emptyOverrides = { ...exBr, variantOverrides: {} };
-    expect(resolveExerciseData(emptyOverrides, "pt-br").back).toBe("ônibus");
+  it("tolera variantOverrides como record vacío", () => {
+    const emptyOverrides = { ...ex, variantOverrides: {} };
+    expect(resolveExerciseData(emptyOverrides, "pt-br").back).toBe("autocarro");
   });
 });
 
 describe("resolveAudioHash", () => {
   it("returns the hash for each legacy variant key (matches b1.json shape)", () => {
-    expect(resolveAudioHash(exBr, "br")).toBe("hbr");
-    expect(resolveAudioHash(exBr, "pt")).toBe("hpt");
+    expect(resolveAudioHash(ex, "br")).toBe("hbr");
+    expect(resolveAudioHash(ex, "pt")).toBe("hpt");
   });
 
   it("returns the hash for the new variant keys", () => {
     const exNew = {
-      ...exBr,
+      ...ex,
       audio: {
         "pt-br": { hash: "hbr2", voice: "v" },
         "pt-pt": { hash: "hpt2", voice: "v" },
@@ -105,13 +102,13 @@ describe("resolveAudioHash", () => {
 
   it("maps the full variant key to the legacy short key (pt-br → br)", () => {
     // Audio is stored under "br"/"pt" but settings passes "pt-br"/"pt-pt".
-    expect(resolveAudioHash(exBr, "pt-br")).toBe("hbr");
-    expect(resolveAudioHash(exBr, "pt-pt")).toBe("hpt");
+    expect(resolveAudioHash(ex, "pt-br")).toBe("hbr");
+    expect(resolveAudioHash(ex, "pt-pt")).toBe("hpt");
   });
 
   it("falls back to another available variant when the requested one is missing", () => {
     const onlyBr = {
-      ...exBr,
+      ...ex,
       audio: { br: { hash: "hbr", voice: "v" } },
     };
     // No "pt"/"pt-pt" entry → fall back to the only audio present rather
@@ -120,7 +117,7 @@ describe("resolveAudioHash", () => {
   });
 
   it("returns null when there is no audio at all", () => {
-    const noAudio = { ...exBr, audio: undefined };
+    const noAudio = { ...ex, audio: undefined };
     expect(resolveAudioHash(noAudio, "pt-br")).toBeNull();
   });
 });

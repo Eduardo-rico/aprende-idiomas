@@ -34,7 +34,8 @@
         "embora"
       ],
       "answer": "por isso"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "005da0b5",
@@ -62,7 +63,8 @@
       "front": "Conector consecutivo: 'logo' (luego, por lo tanto)",
       "back": "logo (luego, por lo tanto, en consecuencia)",
       "example": "Estuda todos os dias, logo vais ter boas notas."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "0106ee6b",
@@ -92,7 +94,8 @@
       "front": "levar (no sentido de 'tirar', 'arrastar')",
       "back": "levar — tirar, arrastar, fazer seguir",
       "example": "A corrente levou o barco para longe."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "03013ffe",
@@ -122,7 +125,8 @@
       "front": "¿Qué es una oração subordinada adjetiva?",
       "back": "É uma oração que funciona como adjetivo — modifica um substantivo. Vem introduzida por pronome relativo (que, o qual, quem, onde).",
       "example": "O filme que eu assisti é ótimo."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "05b6f431",
@@ -154,7 +158,8 @@
       "acceptedAlternatives": [
         "João perguntou onde eu vivia."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "0e2df799",
@@ -183,22 +188,23 @@
     "type": "translation",
     "data": {
       "source": "Imagina cómo será la fiesta cuando llegue el verano.",
-      "target": "Imagina como vai ser a festa quando chegar o verão.",
+      "target": "Imagina como será a festa quando chegar o verão.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Imagina como será a festa quando chegar o verão.",
         "Imagina como vai ser a festa quando o verão chegar."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Imagina como será a festa quando chegar o verão.",
+        "target": "Imagina como vai ser a festa quando chegar o verão.",
         "acceptedAlternatives": [
+          "Imagina como será a festa quando chegar o verão.",
           "Imagina como vai ser a festa quando o verão chegar."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "102a053a",
@@ -234,7 +240,8 @@
         "Acho que consegues.",
         "Acho que irás conseguir."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "10b05f5a",
@@ -263,7 +270,8 @@
       "front": "conseguir",
       "back": "conseguir (lograr, conseguir)",
       "example": "Ele conseguiu terminar o trabalho a tempo."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "11849607",
@@ -297,7 +305,8 @@
       "acceptedAlternatives": [
         "Se lhe dessem essa oportunidade, ele aproveitá-la-ia."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "11927933",
@@ -323,7 +332,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "11d7b620",
@@ -353,7 +363,8 @@
       "front": "¿Qué verbo introductor se usa con discurso indirecto interrogativo?",
       "back": "Perguntar (perguntou se / perguntou o quê / perguntou por quê)",
       "example": "Ele me perguntou se eu queria sair. / Perguntou-me onde eu morava."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "12fea48b",
@@ -380,7 +391,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1312dd96",
@@ -416,7 +428,8 @@
         "Tem de-se de alimentar bem todos os dias.",
         "Deve-se alimentar-se bem todos os dias."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1352e0af",
@@ -446,7 +459,8 @@
       "front": "Subordinada substantiva introduzida por 'que'",
       "back": "Oração completiva com 'que' — funciona como sujeito ou objeto direto.",
       "example": "Eu sei que ele chegou. / É possível que chova."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "15492270",
@@ -476,7 +490,8 @@
       "front": "¿Qué significa 'achar graça' en portugués?",
       "back": "achar graça (encontrar gracioso/divertido)",
       "example": "Eu achei muita graça da história dele."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "18ab7858",
@@ -513,7 +528,8 @@
         "Pretérito imperfeito do indicativo"
       ],
       "answer": "Futuro simples do presente"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "18e1b7bb",
@@ -549,7 +565,8 @@
         "Uma vez que não existe outra opção, teremos de aceitar as suas condições.",
         "Visto que não existe outra opção, teremos de aceitar as suas condições."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1aaa2910",
@@ -576,7 +593,8 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1b5e2519",
@@ -599,27 +617,27 @@
           "position": 0,
           "answer": "Quando",
           "alternatives": [
-            "Assim que",
-            "Logo que"
+            "Logo que",
+            "Assim que"
           ]
         }
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "___ chegou a equipa, começámos a trabalhar.",
         "blanks": [
           {
             "position": 0,
             "answer": "Quando",
             "alternatives": [
-              "Logo que",
-              "Assim que"
+              "Assim que",
+              "Logo que"
             ]
           }
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "1eb6dfb6",
@@ -657,7 +675,8 @@
         "Se usa próclise porque el verbo está en infinitivo"
       ],
       "answer": "Se usa próclise porque hay una palabra negativa (não) antes del verbo"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1f6c7479",
@@ -694,7 +713,8 @@
         "Estaba muy nervioso, así que no pude dormir.",
         "Estaba muy nervioso, por lo tanto no pude dormir."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1f6e9408",
@@ -724,7 +744,8 @@
       "front": "Subordinada substantiva com 'se' (indireta)",
       "back": "Oração interrogativa indireta — pergunta sem '?'.",
       "example": "Eu perguntei se ele vinha à festa."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1f83ee26",
@@ -760,7 +781,8 @@
       "acceptedAlternatives": [
         "Apesar de tu não acreditares, ela consegue falar quatro idiomas."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "1fd04f2c",
@@ -785,7 +807,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "233bdabf",
@@ -821,7 +844,8 @@
       "acceptedAlternatives": [
         "A pesar de que me hizo gracia, no reí."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "23f3b01e",
@@ -850,7 +874,7 @@
     "type": "translation",
     "data": {
       "source": "El director cuyo guión ganaba premios era un estreante.",
-      "target": "O realizador cujo guião ganhava prémios era um estreante.",
+      "target": "O realizador cujo guião recebia prémios era um estreante.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
@@ -859,9 +883,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "O realizador cujo guião recebia prémios era um estreante."
+        "target": "O realizador cujo guião ganhava prémios era um estreante."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "24296ebd",
@@ -891,7 +916,8 @@
       "front": "¿Es correcto ‘Fala-me’ o ‘Me fala’?",
       "back": "Depende del contexto: ‘Fala-me’ (ênclise) es correcto en imperativo afirmativo; ‘Me fala’ (próclise) en otros contextos.",
       "example": "Fala-me a verdade! (imperativo) / Você me fala depois. (futuro)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "25b28172",
@@ -918,7 +944,8 @@
         "conseguimos / sobre"
       ],
       "answer": "conseguirmos / sobre"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "265e930f",
@@ -953,7 +980,8 @@
         "Vamos metê-lo em sarilhos.",
         "Vamos metê-lo em apuros."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "266fbd1a",
@@ -980,7 +1008,8 @@
         "Se lembre / —"
       ],
       "answer": "Lembre / de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "26820612",
@@ -1006,7 +1035,8 @@
         "∅"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "26b5b655",
@@ -1036,7 +1066,8 @@
       "front": "¿Qué significa ‘achar’ en portugués? Da un ejemplo con pronombre.",
       "back": "Significa ‘pensar, creer’. Ejemplo: Acho que está certo. (Creo que está bien.)",
       "example": "O que você acha disso?"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "26bfbdfc",
@@ -1071,7 +1102,8 @@
       "acceptedAlternatives": [
         "Ana se imaginó que él traería ese documento de allá."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2772c62b",
@@ -1099,7 +1131,8 @@
       "target": "Paramos el coche que estaba protegiendo la casa.",
       "sourceLang": "pt-br",
       "targetLang": "es"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "294ade1e",
@@ -1124,7 +1157,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2954b8b7",
@@ -1156,7 +1190,8 @@
       "target": "Nadie sabe quién se llevará el premio para el país, lo que deja a todo el equipo frustrado.",
       "sourceLang": "pt-br",
       "targetLang": "es"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "29e9fe7f",
@@ -1182,7 +1217,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2acce101",
@@ -1211,14 +1247,15 @@
     "type": "flashcard",
     "data": {
       "front": "¿Qué ocurre con la colocación en español con ‘vamos’? ¿ ‘Vamos nos informar’ o ‘Vamos nos informar’?",
-      "back": "Vamos nos informar / Vamos nos informar (próclise con ‘ir’). En PT-BR informal se acepta ‘a gente vai se informar’.",
+      "back": "Em Portugal diz-se ‘Vamos informar-nos’ (ênclise com infinitivo) ou ‘Vamos nos informar’.",
       "example": "Vamos nos informar sobre o assunto."
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "Em Portugal diz-se ‘Vamos informar-nos’ (ênclise com infinitivo) ou ‘Vamos nos informar’."
+        "back": "Vamos nos informar / Vamos nos informar (próclise con ‘ir’). En PT-BR informal se acepta ‘a gente vai se informar’."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "2dd077e3",
@@ -1253,7 +1290,8 @@
       "acceptedAlternatives": [
         "Si se lhes derem bem, vão conseguir."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2f7365a0",
@@ -1289,7 +1327,8 @@
       "acceptedAlternatives": [
         "Mesmo que tu não acredites, ela consegue falar quatro idiomas."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "2fb35ada",
@@ -1314,7 +1353,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3115213d",
@@ -1348,7 +1388,8 @@
       "acceptedAlternatives": [
         "Não me lembro de quem é que me recomendou esse realizador."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "315cc2f3",
@@ -1378,22 +1419,23 @@
     "type": "translation",
     "data": {
       "source": "Cuando consiga hablar contigo, te lo explicaré todo.",
-      "target": "Quando conseguir conversar contigo, vou explicar-te tudo.",
+      "target": "Quando conseguir falar contigo, explicar-te-ei tudo.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Quando conseguir falar contigo, explicar-te-ei tudo.",
-        "Quando eu conseguir conversar contigo, vou-te explicar tudo."
+        "Quando eu conseguir falar contigo, explicar-te-ei tudo."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Quando conseguir falar contigo, explicar-te-ei tudo.",
+        "target": "Quando conseguir conversar contigo, vou explicar-te tudo.",
         "acceptedAlternatives": [
-          "Quando eu conseguir falar contigo, explicar-te-ei tudo."
+          "Quando conseguir falar contigo, explicar-te-ei tudo.",
+          "Quando eu conseguir conversar contigo, vou-te explicar tudo."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "3241b631",
@@ -1410,7 +1452,7 @@
     "esContrast": "'Comigo' (conmigo), 'contigo', 'para ela'... son combinaciones fijas.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Conversou ___ (mim) sobre isso?",
+      "sentence": "Conversou ___ (com + mim) sobre isso?",
       "blanks": [
         {
           "position": 0,
@@ -1421,9 +1463,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Conversou ___ (com + mim) sobre isso?"
+        "sentence": "Conversou ___ (mim) sobre isso?"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "3343b3a0",
@@ -1453,7 +1496,8 @@
       "front": "parar",
       "back": "parar — cessar movimento, deter-se",
       "example": "O ônibus parou na esquina."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "33ab4365",
@@ -1470,7 +1514,7 @@
     "esContrast": "'Em vez de + infinitivo compuesto' indica contraste, diferente de 'a pesar de'.",
     "type": "fill_blank",
     "data": {
-      "sentence": "A prova foi adiada ___ terem feito greve.",
+      "sentence": "O exame foi adiado ___ terem feito greves.",
       "blanks": [
         {
           "position": 0,
@@ -1483,18 +1527,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "O exame foi adiado ___ terem feito greves.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "em vez de",
-            "alternatives": [
-              "por causa de"
-            ]
-          }
-        ]
+        "sentence": "A prova foi adiada ___ terem feito greve."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "33cf21fe",
@@ -1520,7 +1556,8 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "346483d6",
@@ -1556,7 +1593,8 @@
         "Na véspera, disseram-me que existia uma solução.",
         "No dia anterior, me disseram que existia uma solução."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "34d81602",
@@ -1585,7 +1623,8 @@
         "por"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "3718f712",
@@ -1614,7 +1653,8 @@
       "target": "La productora donde trabajamos desarrolló la película que nos dejó frustrados.",
       "sourceLang": "pt-br",
       "targetLang": "es"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "38c0760e",
@@ -1644,7 +1684,8 @@
       "front": "Coloca el pronombre: Ainda não ___ (ver) esse filme.",
       "back": "vi esse filme / ainda não o vi — próclise tras ‘ainda’",
       "example": "Ainda não o vi, quero assistir com você."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "38ca7fc2",
@@ -1673,21 +1714,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "Ainda não sei ___ vais fazer amanhã.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "o que",
-            "alternatives": [
-              "o quê",
-              "o que é que"
-            ]
-          }
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "38fd83bb",
@@ -1717,7 +1744,8 @@
       "front": "¿Qué significa 'existe' en portugués?",
       "back": "existe (existe, hay)",
       "example": "Existe um problema com o sistema."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "406abf88",
@@ -1747,7 +1775,8 @@
       "front": "realizador (cine)",
       "back": "realizador(a) — diretor(a) de cinema/teatro",
       "example": "O realizador estreou seu primeiro longa-metragem."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "407c3bde",
@@ -1782,7 +1811,8 @@
         "Dígame qué opinas.",
         "Dígame qué piensas."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "40d2b81d",
@@ -1813,7 +1843,8 @@
       "front": "Cambio deíctico: 'este/esta' (este/esta) → ¿qué en discurso indirecto?",
       "back": "Esse/essa (aquel/aquella, lo cercano al interlocutor)",
       "example": "Directo: 'Este livro é bom.' → Indireto: 'Ele disse que esse livro era bom.'"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4200fafc",
@@ -1843,7 +1874,8 @@
       "target": "El realizador cuyo última película fracasó fue contratado.",
       "sourceLang": "pt-br",
       "targetLang": "es"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "43a6d371",
@@ -1873,7 +1905,8 @@
       "front": "Conector causal: 'já que' (ya que, dado que)",
       "back": "já que (ya que, dado que, puesto que)",
       "example": "Já que você está aqui, ajude-me."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "455cee1d",
@@ -1904,7 +1937,8 @@
       "target": "El realizador debutante presentó el guión que escribió durante dos años.",
       "sourceLang": "pt-br",
       "targetLang": "es"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "45b2038a",
@@ -1940,7 +1974,8 @@
         "Dado que no quieres ir, nos quedamos en casa.",
         "Puesto que no quieres ir, nos quedamos en casa."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4b22579b",
@@ -1970,7 +2005,8 @@
       "front": "Coloca el pronombre: Todos os dias, eu ___ (levantar) cedo.",
       "back": "levanto-me — ênclise tras palabra monosilábica tónica",
       "example": "Todos os dias, levanto-me cedo."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4cb6af79",
@@ -1997,11 +2033,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "Não sei ___ ela vai ao cinema hoje."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "4cf47319",
@@ -2036,7 +2068,8 @@
       "acceptedAlternatives": [
         "Se habrían conocido los hechos si hubieran hecho el informe."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "4da6718a",
@@ -2064,7 +2097,8 @@
       "front": "¿Cuál es la regla de oro para recordar próclise, ênclise y mesóclise?",
       "back": "PRÓCLISE = palabra BANDEIRA antes del verbo. ÊNCLISE = verbo al inicio. MESÓCLISE = futuro/condicional en medio.",
       "example": "BANDEIRA: Basta (advérbios), Ainda, Não, etc."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "5137e032",
@@ -2094,7 +2128,8 @@
       "front": "¿Qué ocurre con el pretérito perfeito en discurso indirecto?",
       "back": "Se transforma en pretérito mais-que-perfeito simples",
       "example": "Directo: 'Ela disse: EU FIZ O TRABALHO.' → Indireto: 'Ela disse que fizera o trabalho.'"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "590eba9b",
@@ -2124,7 +2159,8 @@
       "front": "Pronome relativo 'cujo'",
       "back": "Indica posse — equivale a 'de quem', 'do qual'. Vem ANTES do substantivo possuído.",
       "example": "O realizador cujo filme estreou é estreante."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "59ec5980",
@@ -2151,11 +2187,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "A cidade ___ moro tem muitos cinemas."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "5b2f41d8",
@@ -2190,7 +2222,8 @@
         "Quando acordares, avisa-me.",
         "Quando te acordares, avisa-me."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "5c51b100",
@@ -2218,7 +2251,8 @@
       "front": "Conector concessivo: 'embora' (aunque, si bien)",
       "back": "embora (aunque, si bien, a pesar de que)",
       "example": "Embora estivesse doente, foi ao trabalho."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "5c666bbf",
@@ -2252,7 +2286,8 @@
       "acceptedAlternatives": [
         "Él dijo que vendría el día siguiente."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "5d581079",
@@ -2282,7 +2317,8 @@
       "front": "Subordinada substantiva com 'quem'",
       "back": "Oração que substitui um substantivo relacionado a pessoa — 'aquele que, aquele a quem'.",
       "example": "Não sei quem ganhou o prêmio."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "5e74382b",
@@ -2317,7 +2353,8 @@
       "acceptedAlternatives": [
         "¿Alguien podría decirme dónde queda la salida?"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "5fd0932e",
@@ -2345,7 +2382,8 @@
         "a"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "61c3096b",
@@ -2376,7 +2414,8 @@
       "front": "¿Qué significa ‘meter-se’ con pronombre? Da un ejemplo.",
       "back": "Significa ‘meterse, meterse en’ (situación). Ejemplo: Meteu-se em problemas.",
       "example": "Não se meta em confusão!"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "61cece5d",
@@ -2407,7 +2446,8 @@
       "front": "¿En qué posición va el pronombre cuando hay un adverbio negativo antes del verbo?",
       "back": "En próclise (antes del verbo) — não me diga, nunca te esqueças",
       "example": "Não me diga que você não sabe!"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "61e9dc90",
@@ -2443,7 +2483,8 @@
         "O relatório é completo; entretanto, falta rever as conclusões.",
         "O relatório é completo; porém, falta rever as conclusões."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "62974d0b",
@@ -2474,7 +2515,8 @@
       "target": "Que la película me haya dejado frustrado es innegable.",
       "sourceLang": "pt-br",
       "targetLang": "es"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "630329e4",
@@ -2504,7 +2546,8 @@
       "front": "proteger",
       "back": "proteger — defender, preservar de perigo",
       "example": "O herói tentou proteger a cidade."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "64a089d7",
@@ -2534,7 +2577,8 @@
       "front": "¿Qué es una oración subordinada substantiva?",
       "back": "É uma oração que funciona como um substantivo na frase: pode ser sujeito, objeto direto, objeto indireto ou complemento nominal.",
       "example": "É importante que você estude. (=subjecto)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "65bb4e5c",
@@ -2564,7 +2608,8 @@
       "front": "guião",
       "back": "roteiro (de cinema, peça, etc.)",
       "example": "O realizador escreveu o guião em três meses."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "667b9995",
@@ -2583,33 +2628,34 @@
     "esContrast": "'Como se' en subordinada modal siempre lleva subjuntivo imperfecto.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Falou ___ se não soubesse a verdade.",
+      "sentence": "Falou ___ não soubesse a verdade.",
       "blanks": [
         {
           "position": 0,
           "answer": "como se",
           "alternatives": [
-            "qual se",
-            "como"
+            "como",
+            "qual se"
           ]
         }
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Falou ___ não soubesse a verdade.",
+        "sentence": "Falou ___ se não soubesse a verdade.",
         "blanks": [
           {
             "position": 0,
             "answer": "como se",
             "alternatives": [
-              "como",
-              "qual se"
+              "qual se",
+              "como"
             ]
           }
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "68c3f8d4",
@@ -2645,7 +2691,8 @@
         "Quiero ir, sin embargo no tengo tiempo.",
         "Quiero ir, no obstante no tengo tiempo."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "698995bd",
@@ -2670,7 +2717,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6ac9398a",
@@ -2698,7 +2746,8 @@
       "front": "Conector concessivo: 'ainda que' (incluso si, aun cuando)",
       "back": "ainda que (incluso si, aun cuando, aunque)",
       "example": "Ainda que você não acredite, é verdade."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6bc826a5",
@@ -2725,7 +2774,8 @@
         "em / em"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6cc9019d",
@@ -2753,7 +2803,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6eb4b5cf",
@@ -2783,7 +2834,8 @@
       "front": "Conector adversativo: 'porém' (sin embargo, no obstante)",
       "back": "porém (sin embargo, no obstante, empero)",
       "example": "O filme é longo, porém muito interessante."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6f52477f",
@@ -2814,7 +2866,8 @@
       "front": "Cambio de pronombres: 'eu' en discurso directo → ¿qué en indirecto?",
       "back": "Ele (1ª persona se convierte en 3ª persona)",
       "example": "Directo: 'Eu quero ir.' → Indireto: 'Ele disse que queria ir.'"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6f8b7306",
@@ -2848,7 +2901,8 @@
       "acceptedAlternatives": [
         "Deixou-me frustrado que o realizador não tenha terminado o filme."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "6fa406f8",
@@ -2882,7 +2936,8 @@
       "acceptedAlternatives": [
         "Pedro dijo que no había ningún problema."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7137d211",
@@ -2916,7 +2971,8 @@
       "acceptedAlternatives": [
         "João dijo que el día anterior había dejado de fumar."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "71775d32",
@@ -2943,7 +2999,7 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "O realizador estreante não sabe se o guião precisa de mudanças.",
+      "audioText": "O realizador estreante não sabe se o guião precisa de alterações.",
       "question": "¿Qué elemento une la oración subordinada substantiva con la oración principal?",
       "options": [
         "Se",
@@ -2955,9 +3011,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "O realizador estreante não sabe se o guião precisa de alterações."
+        "audioText": "O realizador estreante não sabe se o guião precisa de mudanças."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "73018a82",
@@ -2988,7 +3045,8 @@
       "front": "¿Qué significa ‘conseguir’ en portugués? ¿Cómo se usa con pronombre?",
       "back": "Significa ‘lograr, poder’. Ejemplo: Não consigo dormir. (No puedo dormir.)",
       "example": "Consegui resolver o problema!"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "756235ff",
@@ -3014,18 +3072,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "Em Portugal, ele disse que ___ parar de conversar com aqueles amigos. (queria → reportado por outro)",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "queria",
-            "alternatives": []
-          }
-        ]
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "77538e3e",
@@ -3051,7 +3098,8 @@
         "por"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "78771689",
@@ -3080,7 +3128,8 @@
       "front": "conversar",
       "back": "conversar (hablar, conversar)",
       "example": "Precisamos conversar sobre isso amanhã."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7903e6e0",
@@ -3115,7 +3164,8 @@
       "acceptedAlternatives": [
         "El gerente preguntó qué pasaría si proporcionan los datos incorrectos."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "797d49dd",
@@ -3151,7 +3201,8 @@
         "Si se llevan bien, el equipo se alimenta mejor.",
         "Si se llevan bien, la equipe se alimenta melhor."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7a379c9b",
@@ -3182,7 +3233,8 @@
       "front": "¿Qué significa 'conseguir' en portugués?",
       "back": "conseguir (lograr, ser capaz de)",
       "example": "Consegui resolver o problema sozinho."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7d26539b",
@@ -3209,7 +3261,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7f1fb792",
@@ -3237,7 +3290,8 @@
         "∅"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7f33e7ee",
@@ -3266,7 +3320,8 @@
       "front": "levar",
       "back": "levar (llevar, tardar)",
       "example": "A reunião vai levar duas horas."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "7f3d2b42",
@@ -3303,7 +3358,8 @@
         "Hay un problema, entonces tenemos que resolverlo.",
         "Existe un problema, así que tenemos que resolverlo."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "80101b86",
@@ -3321,7 +3377,7 @@
     "esContrast": "'Por isso' es el equivalente más común de 'por eso', no 'por isso'.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Ele não trouxe guarda-chuva, ___ se molhou.",
+      "sentence": "Ele não trouxe guarda-chuva, ___ ficou molhado.",
       "blanks": [
         {
           "position": 0,
@@ -3335,19 +3391,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Ele não trouxe guarda-chuva, ___ ficou molhado.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "por isso",
-            "alternatives": [
-              "logo",
-              "então"
-            ]
-          }
-        ]
+        "sentence": "Ele não trouxe guarda-chuva, ___ se molhou."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "820036d8",
@@ -3378,7 +3425,8 @@
       "front": "Cambio deíctico: 'aqui' (aquí) → ¿qué en discurso indirecto?",
       "back": "Ali (allí, en el lugar donde está el narrador)",
       "example": "Directo: 'Vou ficar aqui.' → Indireto: 'Ele disse que ia ficar ali.'"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "82d8cdb5",
@@ -3412,7 +3460,8 @@
         "Subordinada adverbial temporal"
       ],
       "answer": "Subordinada adjetiva explicativa"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "83a9c448",
@@ -3429,7 +3478,7 @@
     "esContrast": "Aquí 'se' es CONJUNCIÓN condicional, no pronome: requiere próclise.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Se ___ (dar) tempo, consegue falar com ela?",
+      "sentence": "Se vos ___ (dar), consegue falar com ela?",
       "blanks": [
         {
           "position": 0,
@@ -3442,9 +3491,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Se vos ___ (dar), consegue falar com ela?"
+        "sentence": "Se ___ (dar) tempo, consegue falar com ela?"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "84eae918",
@@ -3474,7 +3524,8 @@
       "front": "Conector causal: 'pois' (porque, ya que)",
       "back": "pois (porque, ya que / puesto que)",
       "example": "Não fui à festa, pois estava cansado."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "891d30c2",
@@ -3500,7 +3551,8 @@
         "em"
       ],
       "answer": "da"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "89d7ecee",
@@ -3526,7 +3578,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8a92e893",
@@ -3563,7 +3616,8 @@
         "Pretérito Perfeito → Pretérito Mais-que-Perfeito"
       ],
       "answer": "Presente → Pretérito Imperfeito"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8b2bc437",
@@ -3594,7 +3648,8 @@
       "front": "¿Qué significa 'tocou-me' en portugués?",
       "back": "tocou-me (me tocó, me conmovió)",
       "example": "A música tocou-me profundamente."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8c10745a",
@@ -3619,7 +3674,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8cb5e279",
@@ -3648,7 +3704,8 @@
       "target": "El actor a quien le dieron el guión confirmó que dejaría de fumar para el papel.",
       "sourceLang": "pt-br",
       "targetLang": "es"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8e08a177",
@@ -3680,7 +3737,8 @@
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": []
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "8e9e8016",
@@ -3697,7 +3755,7 @@
     "esContrast": "'Aunque' en español puede ser indicativo o subjuntivo; en portugués siempre va en subjuntivo.",
     "type": "fill_blank",
     "data": {
-      "sentence": "___ tenha estudado muito, não passou no exame.",
+      "sentence": "...no exame.",
       "blanks": [
         {
           "position": 0,
@@ -3711,19 +3769,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "...no exame.",
-        "blanks": [
-          {
-            "position": 0,
-            "answer": "Embora",
-            "alternatives": [
-              "Ainda que",
-              "Mesmo que"
-            ]
-          }
-        ]
+        "sentence": "___ tenha estudado muito, não passou no exame."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "8ee01187",
@@ -3751,7 +3800,8 @@
         "de"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "92285bd5",
@@ -3779,7 +3829,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "93b5ad3c",
@@ -3813,7 +3864,8 @@
       "acceptedAlternatives": [
         "Él dijo que trabajaba cada día."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9528acd6",
@@ -3843,7 +3895,8 @@
       "front": "estreante",
       "back": "pessoa que estreou / que faz sua estreia",
       "example": "A atriz é estreante neste filme."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9571e77d",
@@ -3870,7 +3923,8 @@
         "por"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "95b42a5f",
@@ -3904,7 +3958,8 @@
       "acceptedAlternatives": [
         "Minha mãe disse-me que aquele livro era interessante."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "964eafa3",
@@ -3929,7 +3984,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "97adffbb",
@@ -3960,7 +4016,8 @@
       "front": "Cambio deíctico: 'agora' (ahora) → ¿qué en discurso indirecto?",
       "back": "Então (entonces) ou naquele momento",
       "example": "Directo: 'Preciso fazer isso agora.' → Indireto: 'Ele disse que precisava fazer aquilo então.'"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "980cedff",
@@ -3997,7 +4054,8 @@
         "Concesivo"
       ],
       "answer": "Adversativo"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9871c4d3",
@@ -4027,7 +4085,8 @@
       "front": "¿Qué ocurre con el futuro do indicativo (ir + inf) en discurso indirecto?",
       "back": "Se transforma en condicional simples",
       "example": "Directo: 'Ele disse: EU VOU VIAJAR.' → Indireto: 'Ele disse que viajaria.'"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "98ee4416",
@@ -4064,7 +4123,8 @@
         "No hay pronombre de colocación"
       ],
       "answer": "Próclise (pronombre antes del verbo)"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "99c7f051",
@@ -4095,7 +4155,8 @@
       "front": "se derem",
       "back": "se derem (si dieran, forma de subjuntivo de 'dar')",
       "example": "Se derem mais tempo, terminaremos o projeto."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9b65cc6f",
@@ -4121,7 +4182,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9b8358e3",
@@ -4150,7 +4212,7 @@
     "type": "translation",
     "data": {
       "source": "La situación era muy complicada; por eso, tuve que actuar con urgencia.",
-      "target": "A situação era muito complicada; por isso, tive de agir com urgência.",
+      "target": "A situação era muito complicada; por conseguinte, tive de agir com urgência.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
@@ -4160,9 +4222,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "A situação era muito complicada; por conseguinte, tive de agir com urgência."
+        "target": "A situação era muito complicada; por isso, tive de agir com urgência."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "9b8559a3",
@@ -4198,7 +4261,8 @@
         "Subordinada adjetiva explicativa"
       ],
       "answer": "Subordinada adjetiva restritiva"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9beb6ff0",
@@ -4226,7 +4290,8 @@
         "∅"
       ],
       "answer": "com"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "9ef5e4d2",
@@ -4253,7 +4318,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a02ffc72",
@@ -4270,7 +4336,7 @@
     "esContrast": "Condicional con mesóclise: dir-me-ia, dir-lhe-ia, dir-vos-ia.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Dir-___ (eu)-ia a verdade se pudesse.",
+      "sentence": "Dir-___ (eu)-a a verdade se pudesse.",
       "blanks": [
         {
           "position": 0,
@@ -4281,9 +4347,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Dir-___ (eu)-a a verdade se pudesse."
+        "sentence": "Dir-___ (eu)-ia a verdade se pudesse."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "a12c3597",
@@ -4311,21 +4378,22 @@
     "type": "translation",
     "data": {
       "source": "Dir-se-á que a solução existe.",
-      "target": "Se dirá que la solución existe.",
+      "target": "Se dirá que a solução existe.",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "Se diría que la solución existe."
+        "Se diría que a solução existe."
       ]
     },
     "variantOverrides": {
       "pt-br": {
-        "target": "Se dirá que a solução existe.",
+        "target": "Se dirá que la solución existe.",
         "acceptedAlternatives": [
-          "Se diría que a solução existe."
+          "Se diría que la solución existe."
         ]
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "a3ea04a7",
@@ -4356,7 +4424,8 @@
       "front": "¿‘Acordar’ es pronominal en portugués? Da un ejemplo.",
       "back": "Sí, como verbo intransitivo/pronominal: Acordei-me cedo. (Me desperté temprano.)",
       "example": "Acordou-se com o barulho."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a62e9f54",
@@ -4390,7 +4459,8 @@
       "acceptedAlternatives": [
         "Eu perguntei se tinham conseguido resolver o problema."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a67ee083",
@@ -4420,7 +4490,8 @@
       "front": "deixou-me frustrado",
       "back": "deixou-me frustrado (expressão com verbo deixar + pronome oblíquo)",
       "example": "O final do filme me deixou frustrado."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a6b9cf11",
@@ -4447,7 +4518,8 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a78be21d",
@@ -4484,7 +4556,8 @@
         "Porque hay una conjunción subordinada antes"
       ],
       "answer": "Porque hay una conjunción subordinada antes"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a8604510",
@@ -4513,7 +4586,8 @@
       "front": "imaginar",
       "back": "imaginar (imaginar)",
       "example": "Eu não imagino como seria isso."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "a914bb8f",
@@ -4548,7 +4622,8 @@
       "acceptedAlternatives": [
         "A cidade onde eles filmaram o filme é muito bonita."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "afe4ee62",
@@ -4578,7 +4653,8 @@
       "front": "¿Qué ocurre con el presente del indicativo en discurso indirecto?",
       "back": "Se transforma en pretérito imperfeito do indicativo",
       "example": "Directo: 'Ele diz: EU TENHO FOME.' → Indireto: 'Ele disse que tinha fome.'"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b2927a96",
@@ -4608,7 +4684,8 @@
       "front": "¿Qué significa 'contigo' en portugués?",
       "back": "contigo (contigo, contigo)",
       "example": "Quero viajar contigo nas férias."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b332868a",
@@ -4641,7 +4718,8 @@
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": []
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b37829ce",
@@ -4667,7 +4745,8 @@
         "para"
       ],
       "answer": "em"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b3974972",
@@ -4702,7 +4781,8 @@
       "acceptedAlternatives": [
         "Cuando llegaste, yo ya estaba dormido."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b68ed598",
@@ -4728,7 +4808,8 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b8c04a81",
@@ -4763,7 +4844,8 @@
         "Cuando nos acordemos de eso, conversaremos.",
         "Cuando nos acordemos de eso, vamos a conversar."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "b9978825",
@@ -4790,7 +4872,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "bb456065",
@@ -4820,7 +4903,8 @@
       "front": "Conector adversativo: 'contudo' (sin embargo, no obstante)",
       "back": "contudo (sin embargo, no obstante, con todo)",
       "example": "Quisemos ir, contudo a chuva nos impediu."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "bb80e103",
@@ -4855,7 +4939,8 @@
       "acceptedAlternatives": [
         "Diga-me o que pensa."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "bbc57636",
@@ -4887,7 +4972,8 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "bcf50c91",
@@ -4904,7 +4990,7 @@
     "esContrast": "En BR se usa más 'me diga'; en PT es más natural 'diga-me'.",
     "type": "fill_blank",
     "data": {
-      "sentence": "Me ___ (dizer) logo o que aconteceu!",
+      "sentence": "Diga-me logo o que aconteceu!",
       "blanks": [
         {
           "position": 0,
@@ -4917,9 +5003,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Diga-me logo o que aconteceu!"
+        "sentence": "Me ___ (dizer) logo o que aconteceu!"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "bd109311",
@@ -4947,7 +5034,8 @@
       "front": "¿Cuándo se usa MESÓCLISE?",
       "back": "Con verbo en futuro (á, ás, emos) o condicional (ia, ias) — dir-se-á, dar-me-ia",
       "example": "Esta situação dir-se-á complicada."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "bee35d9b",
@@ -4976,14 +5064,15 @@
     "type": "flashcard",
     "data": {
       "front": "¿Diferencia entre 'por isso' y 'então' como conectores consecutivos?",
-      "back": "por isso / então (por eso, por lo tanto) — Conectores consecutivos en PT-BR.",
+      "back": "portanto / então (por eso, por lo tanto) — Conectores consecutivos en PT-PT.",
       "example": "Fazia calor, por isso / então abrimos a janela."
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "portanto / então (por eso, por lo tanto) — Conectores consecutivos en PT-PT."
+        "back": "por isso / então (por eso, por lo tanto) — Conectores consecutivos en PT-BR."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "bf18cadd",
@@ -5013,7 +5102,8 @@
       "front": "¿Cómo se dice ‘Conversar’ con pronombre? Ejemplo con ‘conversar com alguém’.",
       "back": "Conversar com alguém = ‘falar com alguém’. Ejemplo: Conversei com ela sobre isso.",
       "example": "Preciso conversar contigo."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c1d7a2c4",
@@ -5038,7 +5128,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c21d89d9",
@@ -5072,7 +5163,8 @@
       "acceptedAlternatives": [
         "¡No me digas que lo lograste!"
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c246ac35",
@@ -5100,14 +5192,15 @@
     "type": "flashcard",
     "data": {
       "front": "Coloca el pronombre: É necessário que você ___ (dizer) a verdade.",
-      "back": "diga a verdade / que você diga a verdade — próclise tras ‘que’ conjunción",
+      "back": "É necessário que me digas a verdade.",
       "example": "É necessário que me digas a verdade. (PT-PT)"
     },
     "variantOverrides": {
       "pt-br": {
-        "back": "É necessário que me digas a verdade."
+        "back": "diga a verdade / que você diga a verdade — próclise tras ‘que’ conjunción"
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "c3c29288",
@@ -5143,7 +5236,8 @@
         "Eu achei muita graça ao filme, embora a ela não a tenha tocado tanto.",
         "Achei muita graça ao filme, apesar de a ela não ter tocado tanto."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c4e1cba3",
@@ -5172,7 +5266,8 @@
       "front": "existe",
       "back": "existe (existe, hay)",
       "example": "Existe uma solução para o problema?"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c611717a",
@@ -5202,7 +5297,8 @@
       "front": "Subordinada adjetiva com 'onde'",
       "back": "Pronome relativo que indica lugar — equivale a 'em que', 'no qual'.",
       "example": "O cinema onde vi o filme fica perto da minha casa."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c67fe4b6",
@@ -5229,7 +5325,7 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "O realizador cujo filme levou o prêmio está muito feliz.",
+      "audioText": "O realizador cujo filme levou o prémio está muito feliz.",
       "question": "¿Qué palabra introduce la oración subordinada adjetiva?",
       "options": [
         "Cujo",
@@ -5241,9 +5337,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "O realizador cujo filme levou o prémio está muito feliz."
+        "audioText": "O realizador cujo filme levou o prêmio está muito feliz."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "c6d0de20",
@@ -5272,7 +5369,8 @@
       "front": "parar",
       "back": "parar (parar, dejar de)",
       "example": "Ele parou de fumar no ano passado."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "c8270a85",
@@ -5306,7 +5404,8 @@
       "acceptedAlternatives": [
         "Imagina que iríamos parar de trabalhar amanhã."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ccc3ac65",
@@ -5342,7 +5441,8 @@
         "Não me digas a ninguém.",
         "Não me diga a ninguém."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d11905d4",
@@ -5368,7 +5468,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d4e7089f",
@@ -5398,7 +5499,8 @@
       "front": "Coloca el pronombre: A gente ___ (alimentar) de forma saudável.",
       "back": "se alimenta — ‘a gente’ usa el mismo conjugado que ‘ele/ela’ (3ª pessoa)",
       "example": "A gente se alimenta bem quando cozinha em casa."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d64ccc41",
@@ -5425,7 +5527,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d6eb0f27",
@@ -5450,7 +5553,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "d7bb9465",
@@ -5475,7 +5579,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "da371d96",
@@ -5513,7 +5618,8 @@
         "Conector concessivo"
       ],
       "answer": "Conector causal"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "da76a3f7",
@@ -5543,11 +5649,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "O guião no ___ aparece o acteur estreante foi adaptado."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "dc9ba1b0",
@@ -5577,11 +5679,7 @@
         }
       ]
     },
-    "variantOverrides": {
-      "pt-br": {
-        "sentence": "Diga-me ___ você quer para o jantar."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "dccde0eb",
@@ -5618,7 +5716,8 @@
       "acceptedAlternatives": [
         "No obstante, cabe señalar que ninguno de nosotros puede imaginar tal escenario."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "de63f43f",
@@ -5648,7 +5747,8 @@
       "front": "Subordinada adjetiva com 'que' (pronome relativo)",
       "back": "Pronome relativo mais comum — substitui 'o qual' e se refere a pessoas ou coisas.",
       "example": "A pessoa que me ajudou era simpática."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "de92b43d",
@@ -5675,7 +5775,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e0dffdcc",
@@ -5709,7 +5810,8 @@
       "acceptedAlternatives": [
         "Não sei se o guião vai levar a um bom filme."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e1a3013c",
@@ -5744,7 +5846,8 @@
       "acceptedAlternatives": [
         "Ella explicó que aquel libro le pertenecía."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e2d0f002",
@@ -5781,7 +5884,8 @@
         "'nós' pasó a 'ela'"
       ],
       "answer": "'eu' pasó a 'ela'"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e3298621",
@@ -5809,7 +5913,7 @@
     },
     "type": "listening",
     "data": {
-      "audioText": "Diga-me o que você acha sobre isso, por favor.",
+      "audioText": "Diga-me o que pensa sobre isso, por favor.",
       "question": "¿Dónde se coloca el pronombre en esta frase?",
       "options": [
         "Antes del verbo (próclise)",
@@ -5821,9 +5925,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "Diga-me o que pensa sobre isso, por favor."
+        "audioText": "Diga-me o que você acha sobre isso, por favor."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "e398994a",
@@ -5861,7 +5966,8 @@
         "Presente do Indicativo — una acción cierta"
       ],
       "answer": "Futuro do Pretérito (Condicional) — una acción hipotética"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e52f629a",
@@ -5895,7 +6001,8 @@
       "acceptedAlternatives": [
         "Ela disse que agora vivia em Lisboa."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e5950b9a",
@@ -5931,7 +6038,8 @@
       "acceptedAlternatives": [
         "Aunque estoy cansado, seguiré trabajando."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "e5ccb06b",
@@ -5968,11 +6076,7 @@
       ],
       "answer": "Adverbial concessiva"
     },
-    "variantOverrides": {
-      "pt-br": {
-        "audioText": "Embora exista muita diferença entre os dialetos, conseguimos conversar bem."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "id": "e943e6b3",
@@ -6009,7 +6113,8 @@
         "Existe → Existia (sin cambio)"
       ],
       "answer": "Existe → Existia"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "eb7d4755",
@@ -6043,7 +6148,8 @@
       "acceptedAlternatives": [
         "A verdade há de dizer-se."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ebedefb2",
@@ -6069,7 +6175,8 @@
         "a"
       ],
       "answer": "de"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ec1d811a",
@@ -6103,7 +6210,8 @@
       "acceptedAlternatives": [
         "Eles disseram que iriam vir amanhã."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ed23a32f",
@@ -6131,7 +6239,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "eeb0f6d7",
@@ -6165,7 +6274,8 @@
       "acceptedAlternatives": [
         "Se metieron en graves problemas."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f40fca17",
@@ -6182,7 +6292,7 @@
     "esContrast": "En futuro, el pronombre va EN MEDIO del verbo (mesóclise).",
     "type": "fill_blank",
     "data": {
-      "sentence": "O mistério ___ (se resolver) amanhã.",
+      "sentence": "O mistério ___ (resolver-se) amanhã.",
       "blanks": [
         {
           "position": 0,
@@ -6195,9 +6305,10 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "O mistério ___ (resolver-se) amanhã."
+        "sentence": "O mistério ___ (se resolver) amanhã."
       }
-    }
+    },
+    "variantStatus": "divergent"
   },
   {
     "id": "f692ec66",
@@ -6227,7 +6338,8 @@
       "front": "Conector adversativo: 'entretanto' (sin embargo, mientras tanto)",
       "back": "entretanto (sin embargo, no obstante, meanwhile)",
       "example": "Estudou muito, entretanto não passou no exame."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f717b064",
@@ -6258,7 +6370,8 @@
       "target": "El público decidió si el debutante llevaría el premio.",
       "sourceLang": "pt-br",
       "targetLang": "es"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f92f5c12",
@@ -6292,7 +6405,8 @@
       "acceptedAlternatives": [
         "Quero que me protejam."
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "f94bb677",
@@ -6320,7 +6434,8 @@
       "front": "Conector concessivo: 'apesar de' (a pesar de)",
       "back": "apesar de (a pesar de, no obstante)",
       "example": "Apesar de chover, saímos de casa."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fa57cc56",
@@ -6347,7 +6462,8 @@
         "me acordo"
       ],
       "answer": "me acordo"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fb9bfb23",
@@ -6384,7 +6500,8 @@
         "Mesóclise: el pronombre se intercala dentro del verbo en presente"
       ],
       "answer": "Mesóclise: el pronombre se intercala dentro del verbo en futuro o condicional"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fc4c9632",
@@ -6421,7 +6538,8 @@
         "porém"
       ],
       "answer": "porque"
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fc508283",
@@ -6452,7 +6570,8 @@
       "front": "¿Cuál es la colocación correcta? a) Se me derem b) Derem-se me c) Me derem se",
       "back": "Se me derem — próclise tras la conjunción ‘se’",
       "example": "Se me derem tempo, vou conseguir."
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fc634f55",
@@ -6478,7 +6597,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "fc9efc91",
@@ -6505,7 +6625,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantStatus": "unchecked"
   },
   {
     "id": "ffe3cde0",
@@ -6543,11 +6664,7 @@
       ],
       "answer": "Complemento directo del verbo 'diga'"
     },
-    "variantOverrides": {
-      "pt-br": {
-        "audioText": "Diga-me quem deixou o estreante frustrado."
-      }
-    }
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -6568,7 +6685,8 @@
     },
     "id": "c626c3c9",
     "blockId": 8,
-    "contentHash": "c626c3c974f98e4715675b944956716d94961d04fa6f83f72ca38e2b8f721930"
+    "contentHash": "c626c3c974f98e4715675b944956716d94961d04fa6f83f72ca38e2b8f721930",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -6590,7 +6708,8 @@
     },
     "id": "c17161d2",
     "blockId": 8,
-    "contentHash": "c17161d2b6194af5e04ebccc1feff1a3eceaec34ac0c2a5261bd9267bba3c520"
+    "contentHash": "c17161d2b6194af5e04ebccc1feff1a3eceaec34ac0c2a5261bd9267bba3c520",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -6611,7 +6730,8 @@
     },
     "id": "d69a8be6",
     "blockId": 8,
-    "contentHash": "d69a8be642a474494e5e98307e7cc4326a4dd9ada6d30b3ea208658bec26ac6b"
+    "contentHash": "d69a8be642a474494e5e98307e7cc4326a4dd9ada6d30b3ea208658bec26ac6b",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -6632,7 +6752,8 @@
     },
     "id": "24de03f2",
     "blockId": 8,
-    "contentHash": "24de03f2741d14447f54580e9815fa15411cdf145c954ddb2cb792360facd08e"
+    "contentHash": "24de03f2741d14447f54580e9815fa15411cdf145c954ddb2cb792360facd08e",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -6653,7 +6774,8 @@
     },
     "id": "d2eb33c6",
     "blockId": 8,
-    "contentHash": "d2eb33c6f65973246a67e9cbf425ce3fd8428c4a7253cc390b484554ed0499b7"
+    "contentHash": "d2eb33c6f65973246a67e9cbf425ce3fd8428c4a7253cc390b484554ed0499b7",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -6675,7 +6797,8 @@
     },
     "id": "fa684345",
     "blockId": 8,
-    "contentHash": "fa6843451f54befebc85196e3ba4447dd01895ab7811b73a9b589816af717c94"
+    "contentHash": "fa6843451f54befebc85196e3ba4447dd01895ab7811b73a9b589816af717c94",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -6696,7 +6819,8 @@
     },
     "id": "706cc57c",
     "blockId": 8,
-    "contentHash": "706cc57c7c14dc1e7c69a153c56a3b3f99e30a3813601c716f37dab3e0fe3db4"
+    "contentHash": "706cc57c7c14dc1e7c69a153c56a3b3f99e30a3813601c716f37dab3e0fe3db4",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -6717,7 +6841,8 @@
     },
     "id": "d9a7ac36",
     "blockId": 8,
-    "contentHash": "d9a7ac365b0c48e44684d82b3e79a6fd126548a135610bdfed030ce1d65d5952"
+    "contentHash": "d9a7ac365b0c48e44684d82b3e79a6fd126548a135610bdfed030ce1d65d5952",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -6738,7 +6863,8 @@
     },
     "id": "6271f983",
     "blockId": 8,
-    "contentHash": "6271f983bd3b41823aa3cb3ab792349b19e928587ff7cfca88831626a14a76d5"
+    "contentHash": "6271f983bd3b41823aa3cb3ab792349b19e928587ff7cfca88831626a14a76d5",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -6759,7 +6885,8 @@
     },
     "id": "5a721355",
     "blockId": 8,
-    "contentHash": "5a7213555a241c3f34d778bc4191eb781dd33af7f384c862d0dad0bac6c53a06"
+    "contentHash": "5a7213555a241c3f34d778bc4191eb781dd33af7f384c862d0dad0bac6c53a06",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -6780,7 +6907,8 @@
     },
     "id": "0f44db92",
     "blockId": 8,
-    "contentHash": "0f44db9261965cd5d1319ee460c81b4d4a18276e2c83212f51bcc31a4024c1cd"
+    "contentHash": "0f44db9261965cd5d1319ee460c81b4d4a18276e2c83212f51bcc31a4024c1cd",
+    "variantStatus": "unchecked"
   },
   {
     "type": "error_correction",
@@ -6802,7 +6930,8 @@
     },
     "id": "89d9cd61",
     "blockId": 8,
-    "contentHash": "89d9cd61b639c12986a5437a2641654edde694fe5b47479fbbbe953ec32fd410"
+    "contentHash": "89d9cd61b639c12986a5437a2641654edde694fe5b47479fbbbe953ec32fd410",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -6827,7 +6956,8 @@
     },
     "id": "e0aa80cf",
     "blockId": 8,
-    "contentHash": "e0aa80cfdbfa705d4368cb58cb7bd01af54833f05ef799a71982290b73dc8a7f"
+    "contentHash": "e0aa80cfdbfa705d4368cb58cb7bd01af54833f05ef799a71982290b73dc8a7f",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -6852,7 +6982,8 @@
     },
     "id": "5df58939",
     "blockId": 8,
-    "contentHash": "5df589390be8d65c812fe6bfbd0518cd07267edcb8a0b13428f607af4dcd2b6a"
+    "contentHash": "5df589390be8d65c812fe6bfbd0518cd07267edcb8a0b13428f607af4dcd2b6a",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -6876,7 +7007,8 @@
     },
     "id": "2440db88",
     "blockId": 8,
-    "contentHash": "2440db883cc977de62683c5f8fbf29beb89507da5cd9fc4c774e66d25c0d9a50"
+    "contentHash": "2440db883cc977de62683c5f8fbf29beb89507da5cd9fc4c774e66d25c0d9a50",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -6901,7 +7033,8 @@
     },
     "id": "c5d95688",
     "blockId": 8,
-    "contentHash": "c5d95688885be78aa95a0a4160c8727b99190b44d58ed97247d55ce9dc885c9b"
+    "contentHash": "c5d95688885be78aa95a0a4160c8727b99190b44d58ed97247d55ce9dc885c9b",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -6926,7 +7059,8 @@
     },
     "id": "916d035f",
     "blockId": 8,
-    "contentHash": "916d035fcabd59f4949d22083929e0fa7fbc5dc49a51b7e9c46840208fb8673b"
+    "contentHash": "916d035fcabd59f4949d22083929e0fa7fbc5dc49a51b7e9c46840208fb8673b",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -6951,7 +7085,8 @@
     },
     "id": "934ae377",
     "blockId": 8,
-    "contentHash": "934ae377ca6890aa8e7b55c92471f30422651fb14ccf1d579f481b3be1d66706"
+    "contentHash": "934ae377ca6890aa8e7b55c92471f30422651fb14ccf1d579f481b3be1d66706",
+    "variantStatus": "unchecked"
   },
   {
     "type": "multiple_choice",
@@ -6976,7 +7111,8 @@
     },
     "id": "10d4feb6",
     "blockId": 8,
-    "contentHash": "10d4feb6c6d0d3db17b6234fd5541da91d92476e4ac28a5c76b7733c892fac02"
+    "contentHash": "10d4feb6c6d0d3db17b6234fd5541da91d92476e4ac28a5c76b7733c892fac02",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -7001,7 +7137,8 @@
     },
     "id": "c95d14b1",
     "blockId": 8,
-    "contentHash": "c95d14b18dfac18b5e51692ee6cad8c310fdccb851f1414fa4a9754932157cff"
+    "contentHash": "c95d14b18dfac18b5e51692ee6cad8c310fdccb851f1414fa4a9754932157cff",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -7026,7 +7163,8 @@
     },
     "id": "28a83819",
     "blockId": 8,
-    "contentHash": "28a83819badca8d6e4b7e46df168ccb71703e97839288729e41554c37ca36d20"
+    "contentHash": "28a83819badca8d6e4b7e46df168ccb71703e97839288729e41554c37ca36d20",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -7051,7 +7189,8 @@
     },
     "id": "e75e296f",
     "blockId": 8,
-    "contentHash": "e75e296f16bd7d19e695153a5c047482cfa37aba1d1ff89a5610048e4a71cd62"
+    "contentHash": "e75e296f16bd7d19e695153a5c047482cfa37aba1d1ff89a5610048e4a71cd62",
+    "variantStatus": "unchecked"
   },
   {
     "type": "fill_blank",
@@ -7075,7 +7214,8 @@
     },
     "id": "95e39a7a",
     "blockId": 8,
-    "contentHash": "95e39a7a54018aa7dfc1461ca808004df90ea181d564ec4e1bfacd02dc4b2878"
+    "contentHash": "95e39a7a54018aa7dfc1461ca808004df90ea181d564ec4e1bfacd02dc4b2878",
+    "variantStatus": "unchecked"
   },
   {
     "type": "matching",
@@ -7109,6 +7249,7 @@
     },
     "id": "23fe61d0",
     "blockId": 8,
-    "contentHash": "23fe61d090bc555495faeb87126cf535a32a258f39567eeef7147e2507edeede"
+    "contentHash": "23fe61d090bc555495faeb87126cf535a32a258f39567eeef7147e2507edeede",
+    "variantStatus": "unchecked"
   }
 ]

@@ -44,37 +44,36 @@ export interface ResolvedData {
 }
 
 /**
- * Phase 1 (multi-idioma): `variantOverrides` es un record por VariantKey.
+ * Resolución de variante, tras la inversión del 2026-07-28.
  *
- * Reglas de fallback (mismas que `textsFor` en audio-collector):
- * - Variante canónica `pt-pt`: sin override propio → cae al override
- *   bajo `"pt-br"` (key legacy que almacenó el texto europeo PT). Si
- *   tampoco hay ese override, retorna datos base.
- * - Variante legacy `'pt'`: misma semántica europea; cae al override de
- *   `"pt-br"` (compat con contenido pre-Phase-1).
- * - Variante canónica `pt-br`: NO usa la key legacy `"pt-br"` como
- *   override (ese texto es europeo, mislabeled). Retorna datos base si
- *   no hay un override propio bajo otra key.
- * - Variante legacy `'br'` o cualquier otra desconocida: sin override.
+ * ANTES: `ex.data` era brasileño y `variantOverrides["pt-br"]` guardaba el
+ * texto EUROPEO bajo una clave que decía lo contrario. Esta función llevaba
+ * una capa de compensación (`LEGACY_EUROPEAN_KEY`) para deshacer esa mentira
+ * en cada lectura: para un usuario pt-pt buscaba el override de "pt-br", y
+ * para un usuario pt-br se negaba a aplicarlo.
  *
- * NOTE: La migración legacy (lib/data/variant.ts `ptOverridesToVariantOverrides`)
- * almacenó los overrides europeos bajo `"pt-br"`. Ese key ahora se trata
- * como EUROPEAN_LEGACY_KEY. La clave para texto BR real sería un override
- * distinto, pero el base data (ex.data) ya es BR, así que pt-br no necesita
- * override a menos que haya contenido nuevo.
+ * AHORA las claves dicen la verdad:
+ *   ex.data                      → portugués europeo (PT-PT), la base
+ *   variantOverrides["pt-br"]    → portugués de Brasil, sólo campos que difieren
+ *
+ * Así que la regla es la obvia y no hace falta compensar nada:
+ * - `pt-pt` / `pt` → datos base, tal cual.
+ * - `pt-br` / `br` → base + override brasileño si existe.
+ * - Cualquier otra clave (`pt-ao`, …) → base + su propio override si existe.
+ *
+ * Ver `scripts/invert-variant-base.ts` para la migración que lo hizo posible,
+ * y `variantStatus` en zod-schemas.ts para saber si `data` está verificado
+ * como europeo o sólo heredado del corpus brasileño original.
  */
-// The legacy migration (lib/data/variant.ts) stored European-PT overrides under
-// the "pt-br" key. So the "pt-br"-keyed override is actually European (pt-pt),
-// and BR is the base (ex.data). We must NOT apply it to pt-br/br users.
-const LEGACY_EUROPEAN_KEY = "pt-br";
-function europeanFallback(variant: VariantKey): boolean {
-  return variant === "pt-pt" || variant === "pt";
-}
+const BR_KEYS = new Set(["pt-br", "br"]);
+const PT_KEYS = new Set(["pt-pt", "pt"]);
 
 export function resolveExerciseData(ex: Exercise, variant: VariantKey): ResolvedData {
-  const direct = variant === LEGACY_EUROPEAN_KEY ? undefined : ex.variantOverrides?.[variant];
-  const overrides = direct
-    ?? (europeanFallback(variant) ? ex.variantOverrides?.[LEGACY_EUROPEAN_KEY] : undefined);
+  // La base YA es europea: un usuario de PT-PT no necesita override.
+  if (PT_KEYS.has(variant)) return ex.data as ResolvedData;
+
+  const key = BR_KEYS.has(variant) ? "pt-br" : variant;
+  const overrides = ex.variantOverrides?.[key];
   if (!overrides) return ex.data as ResolvedData;
 
   // Validate the override against the type's strict override schema first so
