@@ -59,10 +59,19 @@ const seccion = (k) => {
   <audio controls preload="none" data-seq="${k}" src="${esc(p.archivoFiltrado ?? p.archivo)}"></audio>
 </div>`;
   }).join('');
+  // Las dos versiones a la vista, no una elegida por mí: yo no puedo oír
+  // si la cama de ambiente ayuda o estorba, y esa comparación es el único
+  // modo de decidirlo.
   const player = mont
     ? `<div class="montado"><div class="mh"><span class="ml">Episodio montado</span>
         <span class="mn">silencios de la dirección · filtros de espacio aplicados</span></div>
-       <audio controls preload="none" src="${esc(mont.archivo)}"></audio></div>`
+       ${mont.archivoAmbiente ? `<div class="ab">
+         <div class="abcol"><span class="abl">con ambiente · ${esc(mont.ambiente)}</span>
+           <audio controls preload="none" src="${esc(mont.archivoAmbiente)}"></audio></div>
+         <div class="abcol"><span class="abl">seco</span>
+           <audio controls preload="none" src="${esc(mont.archivo)}"></audio></div>
+       </div>` : `<audio controls preload="none" src="${esc(mont.archivo)}"></audio>`}
+       </div>`
     : '';
   return `<section class="ep" id="${k}">
   <div class="eh"><h2>${k.startsWith('ep') ? 'Episodio ' + k.slice(2) : 'Pieza ' + k.slice(1)}</h2>
@@ -158,6 +167,11 @@ h2{font-family:var(--serif);font-size:23px;letter-spacing:-.02em;margin:0;font-w
 .mh{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:7px}
 .ml{font-family:var(--serif);font-size:16px;font-weight:600}
 .mn{font-family:var(--mono);font-size:10.5px;color:var(--ink-3)}
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.abcol{min-width:0}
+.abl{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);display:block;margin-bottom:4px}
+.abcol:first-child .abl{color:var(--cobalt)}
+@media (max-width:560px){.ab{grid-template-columns:1fr}}
 .pt{font-family:var(--serif);font-size:18.5px;line-height:1.42;margin:0 0 5px;letter-spacing:-.008em}
 .orienta .pt{font-style:italic;color:var(--ink-2);font-size:16.5px}
 .dir{font-size:12.5px;color:var(--ink-3);margin:0 0 6px;line-height:1.5}
@@ -221,7 +235,8 @@ ${piezas.map(seccion).join('')}
   <b>Cómo se controló la velocidad.</b> El primer piloto salió con la separación de capas <b>invertida</b>: narradora a 158 ppm y habla real a 154. La causa es que <code>speed</code> no controla los ppm de verdad —manda la puntuación— y 0,7 es el suelo de la API. La salida estaba escrita en las propias direcciones, que llevan las pausas anotadas desde el guion y que nadie estaba ejecutando: ahora las pausas son parte del texto. Y la Capa 1 nunca baja de su velocidad natural, porque frenar al hablante nativo por debajo de su ritmo destruye lo único que hace que la capa signifique algo.<br>
   <b>Todo medido con ffprobe</b>, nunca estimado por tamaño de archivo, y descartando las réplicas de menos de seis palabras: un «Hã?» de una palabra arruina cualquier media.<br>
   <b>Los filtros de espacio, aplicados.</b> Megafonía (pasa-banda 300-3400 Hz, compresión dura, reverb de sala), cristal, teléfono y fondo de sala — 19 réplicas, marcadas una a una abajo. Van por <b>quién está detrás del cristal, no por quién lo menciona</b>: un primer intento los detectó buscando palabras en la dirección y cazó a la narradora tres veces, porque su texto describe el vidrio sin estar detrás de él. Filtrarla habría sido el peor error del proyecto: su timbre tiene que ser idéntico en las trece piezas.<br>
-  <b>Lo que falta: el foley.</b> Las direcciones lo piden en casi todas las réplicas —loza, monedas sobre mármol, la campanilla, el trapo, el autocarro, la silla de plástico— y no hay biblioteca de sonido en el proyecto. Es lo único que queda entre esto y un episodio terminado.
+  <b>Las camas de ambiente son sintetizadas, y no son foley.</b> El foley son los efectos puntuales que las direcciones piden en casi cada réplica —la moneda cayendo sobre el mármol entre bloque y bloque, la campanilla encima de la última sílaba, los frenos en el segundo exacto— y ésos hay que grabarlos o comprarlos: sintetizados suenan a juguete y hacen más daño que el silencio. Lo que sí se sintetiza bien es la cama, porque un ambiente no tiene transitorios que imitar: es ruido filtrado y ya está. Resuelve el problema más gordo que tenía el audio, que era el <b>silencio digital absoluto</b> entre réplicas — no existe en ningún sitio del mundo real y delata que esto es TTS a los cuatro segundos.<br>
+  <b>Están al lado de la versión seca a propósito.</b> Yo no puedo oír si ayudan o estorban. Si una cama se nota, está mal puesta: tiene que echarse de menos cuando desaparece, no oírse cuando está. Medido: el diálogo no baja de nivel al mezclarlas (0,2-0,5 dB, que es pérdida de recodificación).
 </div></footer>
 
 <script>
