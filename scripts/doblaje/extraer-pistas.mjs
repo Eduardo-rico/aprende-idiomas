@@ -9,10 +9,27 @@ import fs from 'node:fs';
 const DOCS = [
   ['eps-nuevos', '/Users/lalo/idiomas/portugues-app/docs/contenido/2026-07-29-episodios-nuevos.md'],
   ['ep1', '/Users/lalo/idiomas/portugues-app/docs/contenido/2026-07-28-ep1-narrado.md'],
+  ['eps2-8', '/Users/lalo/idiomas/portugues-app/docs/contenido/2026-07-29-eps-2-8-narrados.md'],
 ];
 
-// El ep. 1 usa otro encabezado: | Capa | Quién | Portugués | Glosa | Función |
-const FILA_PISTA = /^\|\s*(0|N|1|2|español|narrador)\s*\|\s*([A-ZÁÉÍÓÚÂÊÔÃÕÇ][A-ZÁÉÍÓÚÂÊÔÃÕÇ ]*?)\s*\|\s*(.+?)\s*\|/u;
+// El ep. 1 usa otro encabezado (| Capa | Quién | Portugués | Glosa |
+// Función |) y otras etiquetas de capa: «habla real» y «manejable».
+//
+// La primera versión de este regex no las reconocía y DESCARTÓ EN
+// SILENCIO 23 réplicas de diálogo del ep. 1 — el episodio se dobló y se
+// montó con sólo la narradora, y el hueco no lo vio nadie hasta que otro
+// script fue a buscar una réplica de Fátima que debía existir. Por eso
+// ahora hay dos defensas: el mapa de capas es explícito, y una fila que
+// PARECE de pista pero trae una capa desconocida revienta el script en
+// vez de desaparecer.
+const CAPAS = {
+  '0': '0', N: 'N', '1': '1', '2': '2',
+  'español': '0', 'narrador': 'N', 'habla real': '1', 'manejable': '2',
+};
+const FILA_PISTA = /^\|\s*(0|N|1|2|español|narrador|habla real|manejable)\s*\|\s*([A-ZÁÉÍÓÚÂÊÔÃÕÇ][A-ZÁÉÍÓÚÂÊÔÃÕÇ ]*?)\s*\|\s*(.+?)\s*\|/u;
+// Caza el caso «fila de pista con capa que nadie mapeó»: misma forma,
+// primera celda corta y en minúsculas, personaje en mayúsculas.
+const FILA_SOSPECHOSA = /^\|\s*([a-záéíóúñ][a-záéíóúñ ]{0,15}?)\s*\|\s*[A-ZÁÉÍÓÚÂÊÔÃÕÇ][A-ZÁÉÍÓÚÂÊÔÃÕÇ ]*\s*\|/u;
 const TITULO = /^##+\s*(?:[✅🔒⛔]\s*)?(ep\.\s*\d+|P\d+)\s*·\s*«([^»]+)»/u;
 
 const pistas = [];
@@ -39,16 +56,29 @@ for (const [etiqueta, f] of DOCS) {
     if (enHistorial || !piezaActual) return;
 
     const m = linea.match(FILA_PISTA);
-    if (!m) return;
+    if (!m) {
+      const s = linea.match(FILA_SOSPECHOSA);
+      if (s && !(s[1] in CAPAS)) {
+        throw new Error(
+          `${f}:${i + 1} — fila con forma de pista y capa desconocida «${s[1]}». ` +
+          `Mapéala en CAPAS o corrige el documento; no se descarta en silencio.`,
+        );
+      }
+      return;
+    }
     let [, capa, quien, texto] = m;
-    if (capa === 'español') capa = '0';
-    if (capa === 'narrador') capa = 'N';
+    capa = CAPAS[capa];
     quien = quien.trim();
     if (!quien || quien === 'PERSONAJE' || quien === 'DÓNDE') return;
 
     // Limpia el markdown de énfasis y las acotaciones en cursiva
     const limpio = texto
       .replace(/\*\(español\)\*/g, '')
+      // Etiquetas de emoción de la era eleven_v3 ([shouting], [slowly]…):
+      // el doc del ep. 1 las conserva y multilingual_v2 NO las entiende —
+      // las lee en voz alta. Se descubrió porque el ep. 1 se redobló con
+      // «[shouting]» como texto literal. Fuera del texto, siempre.
+      .replace(/\[[a-z][a-z ]*\]\s*/gi, '')
       .replace(/\*\*/g, '')
       .replace(/^\s*«|»\s*$/g, '')
       .replace(/`/g, '')

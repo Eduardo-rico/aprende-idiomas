@@ -36,6 +36,8 @@ const VOCES = {
   ORIENTA:     ['lQFpy8cEH4bDaHre2DpA', 'JOSE es-MX — la voz del alumno'],
   MIGUE:       ['lQFpy8cEH4bDaHre2DpA', 'JOSE es-MX leyendo portugués'],
   FÁTIMA:      ['IZipF5JhqPlWzpduTV0E', 'Daniela — contralto con autoridad'],
+  // El doc del ep. 1 la escribe sin tilde; misma mujer, misma voz.
+  FATIMA:      ['IZipF5JhqPlWzpduTV0E', 'Daniela — alias sin tilde del ep. 1'],
   KILU:        ['HbqJvmNWS8QoO8r8Gs9F', 'Tchize — voz angoleña real'],
   MARTA:       ['NkpT2jezTenCDRKHkWiX', 'Benedita — joven'],
   ALMEIDA:     ['pjqwOzrEUZ3n3m4rMWWL', 'Vasco — barítono seco'],
@@ -61,6 +63,11 @@ const VOCES = {
   CIDÁLIA:     ['bBNhdwrIjl4fcVYiRbT2', 'Marta — madura'],
   FUNCIONÁRIA: ['JGnWZj684pcXmK2SxYIv', 'Claudia — ventanilla'],
   VOZ:         ['iLelOQ6m5mpSeNH8fRob', 'Maria — la señora de la sala de espera'],
+  // NO ES UNA VOZ. Es el fichero de Fátima del ep. 1 reproducido por el
+  // portátil de Marta en el ep. 4. La biblia lo exige idéntico — es la
+  // única prueba infalsificable de progreso: el material no cambió,
+  // cambió el alumno. Se copia, no se sintetiza; ver el caso especial.
+  GRAVAÇÃO:    ['(fichero del ep. 1)', 'la ráfaga de Fátima, reutilizada tal cual'],
 };
 
 const PPM_POR_DEFECTO = { N: 142, '2': 110, '1': 175, '0': 150 };
@@ -156,6 +163,22 @@ const trabajo = pistas.filter((p) => !SOLO || SOLO.has(p.pieza));
 const sinVoz = [...new Set(trabajo.map((p) => p.quien))].filter((q) => !VOCES[q]);
 if (sinVoz.length) { console.error('SIN VOZ ASIGNADA:', sinVoz.join(', ')); process.exit(1); }
 
+// La ráfaga del ep. 1 que el ep. 4 reproduce. Se localiza por contenido
+// en el manifiesto existente — no por número, que cambia con cada
+// reextracción (la lección de postproducir).
+const MANIFIESTO = path.join(OUT, 'manifiesto.json');
+const previo = fs.existsSync(MANIFIESTO)
+  ? JSON.parse(fs.readFileSync(MANIFIESTO, 'utf8'))
+  : { voces: {}, pistas: [] };
+
+function ficheroDeLaRafaga() {
+  const r = previo.pistas.find(
+    (p) => p.pieza === 'ep1' && (p.quien === 'FÁTIMA' || p.quien === 'FATIMA') && p.ok && p.texto.includes('Ó Zé!'),
+  );
+  if (!r) throw new Error('No encuentro la ráfaga de Fátima del ep. 1 en el manifiesto — dobla el ep. 1 primero.');
+  return r.archivo;
+}
+
 const totalChars = trabajo.reduce((a, p) => a + p.texto.length, 0);
 console.log(`${trabajo.length} réplicas · ${totalChars} caracteres · destino ${OUT}\n`);
 
@@ -172,14 +195,34 @@ for (const [i, p] of trabajo.entries()) {
   const stability = ESTABILIDAD[p.capa] ?? 0.5;
   const archivo = `${p.pieza}-${String(p.n).padStart(3, '0')}-${p.quien.toLowerCase().replace(/[^a-z]/g, '')}.mp3`;
 
-  const emitido = conPausas(p.texto, p.capa, p.direccion);
-  const r = await tts(emitido, voz, speed, stability, archivo);
-  Object.assign(p, { archivo, voz, ppm, speed, stability, emitido, ok: r.ok, motivo: r.motivo });
+  let r;
+  if (p.quien === 'GRAVAÇÃO') {
+    // Copiar, no sintetizar: el ep. 4 debe reproducir EL MISMO fichero
+    // del ep. 1. El filtro de altavoz se aplica en postproducción.
+    const origen = ficheroDeLaRafaga();
+    fs.copyFileSync(path.join(OUT, origen), path.join(OUT, archivo));
+    r = { ok: true };
+  } else {
+    const emitido = conPausas(p.texto, p.capa, p.direccion);
+    p.emitido = emitido;
+    r = await tts(emitido, voz, speed, stability, archivo);
+  }
+  Object.assign(p, { archivo, voz, ppm, speed, stability, ok: r.ok, motivo: r.motivo });
   if (r.ok) { ok++; process.stdout.write('.'); }
   else { fallos.push(`${archivo}: ${r.motivo}`); process.stdout.write('x'); }
   if ((i + 1) % 60 === 0) process.stdout.write(` ${i + 1}\n`);
 }
 
-fs.writeFileSync(path.join(OUT, 'manifiesto.json'), JSON.stringify({ voces: VOCES, pistas: trabajo }, null, 2));
+// FUSIONAR, no sobrescribir. Un run con SOLO=ep2 escribía antes un
+// manifiesto con únicamente esas pistas — borrando el registro de todo
+// lo ya doblado, del que dependen la página, la postproducción y la
+// reutilización de la ráfaga. Las piezas de este run reemplazan a sus
+// versiones previas; las demás se conservan.
+const piezasDeEsteRun = new Set(trabajo.map((p) => p.pieza));
+const conservadas = previo.pistas.filter((p) => !piezasDeEsteRun.has(p.pieza));
+fs.writeFileSync(
+  MANIFIESTO,
+  JSON.stringify({ voces: VOCES, pistas: [...conservadas, ...trabajo] }, null, 2),
+);
 console.log(`\n\n${ok}/${trabajo.length} pistas · ${totalChars} caracteres`);
 if (fallos.length) console.log('\nFALLOS:\n' + fallos.map((f) => '  ' + f).join('\n'));

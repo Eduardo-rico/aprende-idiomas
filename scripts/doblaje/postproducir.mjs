@@ -58,6 +58,13 @@ const FILTRAR = [
   ['ep10', 'FÁTIMA', 'Ó Zé! Ó Zé, isto hoje não abre', 'cristal'],
   ['ep10', 'FÁTIMA', 'Ao domingo está fechado!', 'cristal'],
   ['ep10', 'FÁTIMA', 'Está fechado! Ao domingo', 'cristal'],
+  // ep4 — la gravação suena por el altavoz del portátil de Marta.
+  ['ep4', 'GRAVAÇÃO', 'Ó Zé!', 'telefono'],
+  // ep6 — las cuatro llamadas de megafonía de la Loja do Cidadão.
+  ['ep6', 'MEGAFONE', 'Senha A quarenta', 'megafonia'],
+  ['ep6', 'MEGAFONE', 'Senha B dezasseis', 'megafonia'],
+  ['ep6', 'MEGAFONE', 'Senha B dezassete', 'megafonia'],
+  ['ep6', 'MEGAFONE', 'Senha B dezanove', 'megafonia'],
   // ep11 — la megafonía del autocarro.
   ['ep11', 'MEGAFONE', 'Próxima paragem: Alvalade', 'megafonia'],
   ['ep11', 'MEGAFONE', 'Próxima paragem: Campo Grande', 'megafonia'],
@@ -131,7 +138,7 @@ function silencio(seg) {
 }
 
 const pistas = m.pistas.filter((x) => x.ok);
-const ORDEN = ['ep1', 'ep9', 'ep10', 'ep11', 'ep13', 'ep14', 'ep15', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12'];
+const ORDEN = ['ep1', 'ep2', 'ep3', 'ep4', 'ep5', 'ep6', 'ep7', 'ep8', 'ep9', 'ep10', 'ep11', 'ep13', 'ep14', 'ep15', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12'];
 const piezas = ORDEN.filter((k) => pistas.some((p) => p.pieza === k));
 
 let filtradas = 0;

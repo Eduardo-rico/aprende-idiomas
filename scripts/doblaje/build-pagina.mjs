@@ -8,7 +8,7 @@ const bat = JSON.parse(fs.readFileSync(path.join(DIR, 'bateria', 'bateria.json')
 const esc = (t) => String(t ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const pistas = m.pistas.filter((p) => p.ok);
 
-const ORDEN = ['ep1', 'ep9', 'ep10', 'ep11', 'ep13', 'ep14', 'ep15', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12'];
+const ORDEN = ['ep1', 'ep2', 'ep3', 'ep4', 'ep5', 'ep6', 'ep7', 'ep8', 'ep9', 'ep10', 'ep11', 'ep13', 'ep14', 'ep15', 'P7', 'P8', 'P9', 'P10', 'P11', 'P12'];
 const piezas = ORDEN.filter((k) => pistas.some((p) => p.pieza === k));
 
 const CAPA = {

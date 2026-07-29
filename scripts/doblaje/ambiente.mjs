@@ -54,6 +54,18 @@ const CAMAS = {
 // domingo, que es silencio con textura.
 const POR_PIEZA = {
   ep1:  ['pastelaria', 0.16],
+  ep2:  ['pastelaria', 0.16],
+  // ep3 es la caja de escalera: la sala con eco es lo más cercano que
+  // hay sintetizado, a nivel bajo.
+  ep3:  ['sala', 0.10],
+  // ep4 es el cuarto a las once y media: casi nada, calle muy lejana.
+  ep4:  ['domingo', 0.08],
+  ep5:  ['pastelaria', 0.16],
+  ep6:  ['sala', 0.13],
+  // ep7 es la pastelaria VACÍA a las 7:30 — la mitad de nivel que llena:
+  // ese silencio relativo es el contenido de la escena.
+  ep7:  ['pastelaria', 0.09],
+  ep8:  ['pastelaria', 0.18],
   ep9:  ['pastelaria', 0.16],
   ep10: ['domingo', 0.13],
   ep11: ['autocarro', 0.15],
