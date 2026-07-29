@@ -548,7 +548,53 @@ Es una decisión de guion, no de lengua: cuesta cuatro réplicas cambiarla de vu
 | Capa 1, AURORA | «Longe. De autocarro.» | «**É** longe. **É** de autocarro.» | El escueto «Longe» contesta *cuánto*, no *dónde* |
 | Todas | `NARRADOR` | `NARRADORA` | Unificación |
 
-**Pendiente además:** la pieza tiene **2 `estar a + infinitivo`** y la regla dura pide ≥6. El sitio barato es un segundo `Estou a limpar` de Fátima detrás del cristal, y un `Estou a ler o horário` de Migue mientras lee el cartel — los dos sincronizados con foley que ya existe.
+**Pista completa** — escrita el 2026-07-29. El documento la había dejado fuera: mientras la pieza estuvo con candado sólo se publicaron sus correcciones, así que existía la ficha y no el guion. **Deuda de `estar a + infinitivo` saldada aquí**: la pieza pasa de 2 a **6**, y ninguno es relleno — los seis describen algo que está pasando en ese segundo y tienen foley debajo.
+
+**Lo que hace esta pieza.** La lección no es «los domingos cierran»: es que **`encerrado` se escribe y `fechado` se dice**. Migue sabe leer la palabra y no sabe oírla, y Fátima le grita la otra a través del cristal sin que él las conecte. Aurora las junta en cuatro palabras. Es la primera vez en la serie que el alumno ve que el portugués escrito y el hablado no eligen siempre la misma palabra — y llega como una anécdota de portal, no como una nota al pie.
+
+| Capa | Personaje | Portugués | Dirección de voz |
+|---|---|---|---|
+| 0 | ORIENTA | *(español)* «Domingo, nueve de la mañana. Bajé con las monedas contadas, porque el viernes aprendí lo que cuesta pagar con un billete grande. La pastelería está cerrada. Y doña Fátima está dentro.» | Español mexicano neutro, 150 ppm, primera persona. Tono de quien ya se ríe un poco de sí mismo. Portal, cerradura, escalón. Catorce segundos |
+| N | NARRADORA | Nove da manhã. Domingo. A pastelaria está fechada. | 142 ppm. Misma fórmula de apertura que los eps. 1 y 9. Calle de domingo: casi nada, una gaviota, un coche lejos |
+| 1 | MIGUE | Está fechada? Mas... está lá dentro. | 105 ppm, incrédulo, hablando contra el cristal. Se le oye la respiración en el vidrio |
+| N | NARRADORA | A porta está fechada. A Dona Fátima está lá dentro. Está a limpar. | 142 ppm, tres frases con 0,7 s. La tercera con el trapo debajo, sincronizada |
+| 1 | FÁTIMA | Ó Zé! Ó Zé, isto hoje não abre, estou aqui a limpar e ainda tenho a montra toda! | 178 ppm, gritada hacia dentro y **filtrada por el cristal**: pasa-banda estrecho, sin agudos. Debe entenderse la mitad, y ésa es la instrucción |
+| N | NARRADORA | Aquilo não era para nós. E há um vidro: não se percebe tudo. | 142 ppm. Su fórmula del ep. 1 con la explicación que esta escena necesita — no la entendiste porque hay un cristal |
+| 1 | MIGUE | Faz favor! Dona Fátima! | 120 ppm, alto, con dos golpes de nudillo en el cristal antes de la primera palabra |
+| 1 | FÁTIMA | Ao domingo está fechado! | 175 ppm, sin acercarse a la puerta, sin dejar de limpiar. Cristal de por medio |
+| 1 | MIGUE | Desculpe? | 95 ppm, pequeño, subiendo |
+| 1 | FÁTIMA | Está fechado! Ao domingo está fechado! | 175 ppm, **exactamente igual de rápido**, sólo más alto. No se ralentiza por él: eso es lo primero que hay que desaprender del método escolar |
+| N | NARRADORA | Fechado. Ao domingo está fechado. Hoje é domingo. | 142 ppm, tres frases cortas. La última un punto más lenta |
+| 1 | MIGUE | En... cer... ra... do. | 60 ppm, deletreando de verdad, con el dedo en el papel. Papel contra la puerta |
+| N | NARRADORA | Há um papel na porta. O Migue está a ler o papel. | 142 ppm |
+| 1 | AURORA | Estás a ler o quê, ó rapaz? | 155 ppm, entrando fuera de plano por detrás. Bolsa de tela, pasos lentos, llaves |
+| 1 | MIGUE | Encerrado. O que é encerrado? | 108 ppm, girándose, agradecido de que alguien le hable |
+| 1 | AURORA | É fechado. Encerrado é fechado. | 150 ppm, sin darle la menor importancia, ya buscando sus llaves |
+| N | NARRADORA | Encerrado é fechado. É a mesma coisa. Uma escreve-se, a outra diz-se. | 142 ppm, tres frases con 0,8 s. **La tercera es la pieza entera** y va un punto más lenta |
+| 1 | AURORA | Deixa ver. Horário: de segunda a sábado, das sete às vinte. Encerra ao domingo. | 158 ppm, leyendo el cartel en voz alta a velocidad de lectura real, sin didactismo. Papel |
+| 2 | AURORA | Segunda... a sábado. Das sete da manhã... às oito da noite. | 105 ppm, traduciendo el cartel a habla para sí misma. Tres bloques con pausa de 0,9 s |
+| N | NARRADORA | De segunda a sábado. Seis dias. O domingo não está no papel. | 142 ppm, plano. Ninguna moraleja: son tres datos |
+| 1 | MIGUE | E hoje? | 100 ppm, sabiendo ya la respuesta |
+| 1 | AURORA | Hoje é domingo. | 148 ppm, con toda la amabilidad del mundo y ninguna piedad |
+| 1 | MIGUE | Pois. | 90 ppm, una sílaba descendente. Ha aprendido la palabra de Fátima y la usa mal de puro desánimo |
+| 1 | AURORA | Estás aqui à porta da senhora e ela não te abre. Ao domingo não abre a ninguém. | 155 ppm, ya en confianza. `A senhora` y no `a mulher`: ambiguo y algo despectivo |
+| 1 | AURORA | Estou a ver que não percebeste nada. | 152 ppm, divertida, evaluándolo de arriba abajo |
+| 2 | AURORA | Não percebeste. Eu estou a ver. | 105 ppm, dos bloques, señalándose el ojo. Es una broma, no una corrección |
+| 1 | AURORA | Tens moedas? | 155 ppm, práctica, cambiando de tema sin transición |
+| 1 | MIGUE | Tenho. | 118 ppm, seguro. **La respuesta corta con el verbo repetido**, sembrada aquí para que en el ep. 11 le salga sola |
+| 1 | AURORA | Então vais ao supermercado. Esse abre. | 155 ppm, resolviéndole la vida en seis palabras |
+| 1 | MIGUE | É perto? | 100 ppm, esperanzado |
+| 1 | AURORA | É longe. É de autocarro. | 150 ppm, las dos frases pegadas. El `É` repetido contesta *dónde* y *cómo*, que es lo que él preguntó |
+| N | NARRADORA | O supermercado abre ao domingo. Mas é longe. É de autocarro. | 142 ppm, tres frases. Siembra el ep. 11 entero |
+| 1 | MIGUE | Obrigado, minha senhora! | 118 ppm, muy educado y muy equivocado |
+| 1 | AURORA | Aurora. Chamo-me Aurora. E não me chames senhora, que ainda não morri. | 150 ppm, seca y risueña a la vez, ya subiendo el escalón. `Chamo-me` con el clítico pegado, una sola palabra fonética |
+| N | NARRADORA | A vizinha chama-se Aurora. Não é «minha senhora». É a Dona Aurora. | 142 ppm. Misma construcción que el «O Kilu disse obrigado» del ep. 1: pone los datos uno al lado del otro y no explica nada |
+| 1 | AURORA | Despacha-te, que o autocarro passa e não espera. | 158 ppm, desde arriba, sin volverse. Puerta del portal cerrándose sobre la última palabra |
+| N | NARRADORA | São nove e cinco. O Migue já sabe que ao domingo está encerrado. Ainda não sabe apanhar o autocarro. | 142 ppm, 1 s antes de la última frase. Corte seco, sin cola y sin música |
+
+**Lengua nueva: 21 formas** — medidas contra las otras doce pistas publicadas (484 formas de corpus previo, 115 distintas en la pieza). El contador devolvió 24 y se descuentan tres: `en`, `cer` y `ra` son los fragmentos del deletreo `En... cer... ra... do.`, no palabras. La ficha anterior declaraba 35 sin pista escrita, o sea sin nada que contar.
+
+**`estar a + infinitivo`: 6** — `está a limpar` · `estou aqui a limpar` · `está a ler o papel` · `estás a ler o quê` · `estou a ver que não percebeste` · `eu estou a ver`. Los tres primeros van sincronizados con foley que la escena ya tenía (trapo, papel), y los tres de Aurora son la misma broma repetida, que es como habla ella. Ninguno es relleno: la regla se cumple reescribiendo, que era la condición.
 
 ---
 
