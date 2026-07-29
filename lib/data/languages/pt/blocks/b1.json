@@ -149,25 +149,14 @@
       "falso-amigo"
     ],
     "contentHash": "045fccecc23935a34fc874a921201bbda5c375532e2704bcd464ab7fa8e9ef88",
-    "esContrast": "'difícil' es esdrújula en PT (tilde), pero grave en ES (sin tilde).",
-    "audio": {
-      "br": {
-        "hash": "c91039d00d02f91de6659eab76364fe53262788af7d15de1ce62b47671722b44",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "d1b05559e7c9b06d2dccc33e58234e66ffba1f790ecd8ebc7578137ee0667c2d",
-        "voice": "Portuguese_Wiselady"
-      }
-    },
+    "esContrast": "«difícil» se acentúa IGUAL en las dos lenguas: es paroxítona (grave) terminada en -l, y las dos la marcan. No hay contraste que aprender aquí.",
     "type": "translation",
     "data": {
       "source": "Aquele livro é muito difícil.",
-      "target": "Aquella lectura es muy difícil.",
-      "sourceLang": "pt-br",
+      "target": "Aquel libro es muy difícil.",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "Aquella vez es muy difícil.",
         "Ese libro es muy difícil."
       ]
     },
@@ -486,50 +475,6 @@
     "variantStatus": "unchecked"
   },
   {
-    "id": "086de331",
-    "blockId": 1,
-    "lessonId": "b1-l2-silaba-tonica",
-    "difficulty": 2,
-    "concepts": [
-      "b1-silaba-tonica"
-    ],
-    "tags": [
-      "regional"
-    ],
-    "contentHash": "086de3319b3530596650426824253c8b76e08023b8b4072601ef27b1f4c42128",
-    "esContrast": "En español decimos 'abuela' sin tilde, pero en portugués cambia según la variante.",
-    "audio": {
-      "br": {
-        "hash": "d0a20486b7aba2128aa52445bac3077db4ee2a3b4d67c82d53a39499a879f760",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "6ebdf7fbd6cd14f132a7f0404f79d38153c650870a5a5eaffe2957f994160bef",
-        "voice": "Portuguese_Wiselady"
-      }
-    },
-    "type": "listening",
-    "data": {
-      "audioText": "Minha avó mora no Brasil. Minha avô mora em Lisboa.",
-      "question": "¿En qué país se dice 'avó' y en cuál se dice 'avô'?",
-      "options": [
-        "Brasil e Portugal",
-        "Portugal e Brasil",
-        "Espanha e Brasil",
-        "Brasil e México"
-      ],
-      "answer": "Brasil e Portugal"
-    },
-    "variantOverrides": {
-      "pt-br": {
-        "audioText": "Minha avô mora no Brasil. Minha avó mora em Lisboa.",
-        "question": "¿En qué país se dice 'avô' y en cuál se dice 'avó'?",
-        "answer": "Portugal e Brasil"
-      }
-    },
-    "variantStatus": "needs-human"
-  },
-  {
     "id": "08716d78",
     "blockId": 1,
     "lessonId": "b1-l5-pron-rr-s",
@@ -569,9 +514,10 @@
     "concepts": [
       "b1-silaba-tonica"
     ],
-    "tags": [],
+    "tags": [
+      "revisar-fonetica"
+    ],
     "contentHash": "098a851f264b27dcc7b92bd25a30d980aa2f9d9c09ca159aec743916beb06442",
-    "esContrast": "'Lápis' es palabra grave (LA-pis): termina en -is pero NO lleva tilde.",
     "type": "fill_blank",
     "data": {
       "sentence": "Gosto de escrever com o meu ___.",
@@ -583,7 +529,7 @@
         }
       ]
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "0d4c1972",
@@ -595,7 +541,7 @@
     ],
     "tags": [],
     "contentHash": "0d4c19726d87d1239f753117e31567c832a18a6ece4105f8083ab03a7de2dcc7",
-    "esContrast": "'Fábrica' es esdrújula (FÁ-bri-ca) y lleva tilde en portugués; en español es grave sin tilde.",
+    "esContrast": "«fábrica» es esdrújula y lleva tilde en las dos lenguas. La regla de las esdrújulas es idéntica en español y portugués — no hay nada que contrastar.",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela trabalha na ___ todos os dias.",
@@ -603,9 +549,7 @@
         {
           "position": 0,
           "answer": "fábrica",
-          "alternatives": [
-            "fabrica"
-          ]
+          "alternatives": []
         }
       ]
     },
@@ -750,22 +694,12 @@
       "falso-amigo"
     ],
     "contentHash": "133a98bd7637666e2039f943707b21edc89a55332b000d8f17d90a107850bebf",
-    "esContrast": "⚠️ 'Hábito' en español SÍ lleva tilde (HA-bi-to), pero en portugués NO. La terminación vocal no requiere tilde.",
-    "audio": {
-      "br": {
-        "hash": "f1df432de83ceb38e477998fabf9d3a36d37dc8b6facd47735ef2aa572cc5b6c",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "d3bb7078d1d0c841f19af14a8ea2586a40945f531fedfca5a940fc2ddb280304",
-        "voice": "Portuguese_Wiselady"
-      }
-    },
+    "esContrast": "«hábito» lleva tilde en las dos lenguas: es esdrújula, y ambas acentúan TODAS las esdrújulas sin excepción. Lo que sí conviene saber: «habito» sin tilde es el verbo, también en las dos.",
     "type": "flashcard",
     "data": {
-      "front": "¿Por qué 'hábito' NO lleva tilde pero 'fácil' SÍ?",
-      "back": "hábito = paroxítona terminada en vocal → sin tilde. fácil = paroxítona terminada en -l → CON tilde.",
-      "example": "Tenho o hábito de ler. / Este exercício é fácil."
+      "front": "¿Por qué «hábito» lleva tilde y «habito» no es la misma palabra?",
+      "back": "hábito es PROPAROXÍTONA (esdrújula) y en portugués todas la llevan, sin excepción. «habito» sin tilde es la 1.ª persona del verbo habitar. La regla: toda proparoxítona se acentúa; las paroxítonas sólo si terminan en -l, -r, -x, -n, -i, -u, -ã, -ão, -um.",
+      "example": "hábito, fábrica, médico, rápido (proparoxítonas, todas con tilde) · fácil, açúcar (paroxítonas acentuadas por su final)"
     },
     "variantStatus": "unchecked"
   },
@@ -778,10 +712,10 @@
       "b1-silaba-tonica"
     ],
     "tags": [
-      "falso-amigo"
+      "falso-amigo",
+      "revisar-fonetica"
     ],
     "contentHash": "15eab0ae71a17773a768de390083018a4533863f5b9eb5fc9338244b25a672a7",
-    "esContrast": "En pt se dice 'ônibus' (BR) o 'colectivo' (PT) para 'autobús'. La tilde en 'difícil' es obligatoria.",
     "audio": {
       "br": {
         "hash": "e14856fd0d1b698a8ed17cd49ab4f157576efe4fd9f33519712aa86a9ffb7275",
@@ -802,7 +736,7 @@
         "Esse colectivo é difícil de pegar."
       ]
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "182b84cf",
@@ -1428,10 +1362,10 @@
       "b1-silaba-tonica"
     ],
     "tags": [
-      "falso-amigo"
+      "falso-amigo",
+      "revisar-fonetica"
     ],
     "contentHash": "28aa88dca65eea7106b13a9a00386c38a964fd4a7d0c3c7ed6a4bff71369d0f8",
-    "esContrast": "'táxi' es esdrújula en PT (tildada); en ES es grave y no lleva tilde.",
     "audio": {
       "br": {
         "hash": "0e263012a5045cb707718a9268ae789cd472f51f2000763978070bc80931c75c",
@@ -1452,7 +1386,7 @@
         "Necesito un taxi para el aeropuerto."
       ]
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "2a5d3f34",
@@ -1574,10 +1508,10 @@
       "b1-silaba-tonica"
     ],
     "tags": [
-      "falso-amigo"
+      "falso-amigo",
+      "revisar-fonetica"
     ],
     "contentHash": "2bf4e946cd33eadf44fc56bd61ecaab3e3846c584af252170e80ae08caaddf30",
-    "esContrast": "'lápis' es esdrújula en PT; 'lápiz' es grave en ES. Plural: lápis vs lápices.",
     "audio": {
       "br": {
         "hash": "b3a94f14dfa3ac0062bac0b6bfcaf4d0317b10d2c7cc705cc6faca1dbf91625c",
@@ -1598,7 +1532,7 @@
         "Compré tres lápices nuevos."
       ]
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "2f00fa00",
@@ -1673,26 +1607,15 @@
     ],
     "tags": [],
     "contentHash": "32400dc758d615094631c4935b915bb0709bbc7920a32b69eb19a35887e364e0",
-    "esContrast": "Portugués usa 'alfabeto', no 'abecedário' (que también existe pero es menos común).",
-    "audio": {
-      "br": {
-        "hash": "adfbf0d70780f7bf2cd7a856236d4c0043e8c1612e09c0c16e908f1071d7394d",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "9e3567f8045c66a8b8a5163d394cc2707bf1bbcdc2498023638105059e8bc7e5",
-        "voice": "Portuguese_Wiselady"
-      }
-    },
+    "esContrast": "El alfabeto español tiene 27 letras (con la ñ); el portugués, 26 desde el Acordo de 1990, que reincorporó K, W e Y.",
     "type": "translation",
     "data": {
-      "source": "Português tem vinte e três letras no alfabeto.",
-      "target": "El portugués tiene veintitrés letras en el alfabeto.",
-      "sourceLang": "pt-br",
+      "source": "O alfabeto português tem vinte e seis letras, incluindo K, W e Y.",
+      "target": "El alfabeto portugués tiene veintiséis letras, incluidas K, W e Y.",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "El portugués tiene veintitrés letras en el abecedario.",
-        "El portugués tiene veintitrés letras en el alfabeto."
+        "El alfabeto portugués tiene 26 letras, incluidas K, W e Y."
       ]
     },
     "variantStatus": "unchecked"
@@ -1933,17 +1856,16 @@
       "regional"
     ],
     "contentHash": "3e26e656291bad64087b2d976e02054b88942513fbe1ebf619f44b7209dd02f5",
-    "esContrast": "En español se dice 'uve doble' o 'doble uve'; en portugués es 'dúplex'.",
+    "esContrast": "En español la W se llama «uve doble»; en portugués europeo, «duplo vê», y en brasileño «dâblio».",
     "type": "fill_blank",
     "data": {
-      "sentence": "Em português europeu, a letra W chama-se ___ , como no inglês.",
+      "sentence": "Em português europeu, a letra W chama-se ___ .",
       "blanks": [
         {
           "position": 0,
-          "answer": "dúplex",
+          "answer": "duplo vê",
           "alternatives": [
-            "doble",
-            "dâblio"
+            "duplo v"
           ]
         }
       ]
@@ -1953,7 +1875,7 @@
         "sentence": "Em português, a letra W se chama ___ , igual ao inglês."
       }
     },
-    "variantStatus": "needs-human"
+    "variantStatus": "unchecked"
   },
   {
     "id": "40dd6dd8",
@@ -2357,10 +2279,10 @@
       "b1-silaba-tonica"
     ],
     "tags": [
-      "regional"
+      "regional",
+      "revisar-fonetica"
     ],
     "contentHash": "4db8fa0842782071048df3ad22d7f4537066ed3bb2bcf6951cc094665ef471a4",
-    "esContrast": "PT-PT usa 'avô' con circumflexo; PT-BR acepta 'avó' también. En es es 'abuelo' con '-ab'.",
     "audio": {
       "br": {
         "hash": "650e58b32162ec528a5fcbb267efd33bb50ddb241702476030c789334049399a",
@@ -2381,7 +2303,7 @@
         "Meu avó já morreu."
       ]
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "4dd2b7ab",
@@ -2485,7 +2407,7 @@
       "paroxitona"
     ],
     "contentHash": "51a1ce6eb95c2acaf1ac28a198e25f8eef6ebef9aa3956ca615e2efdb85fbbe1",
-    "esContrast": "⚠️ En español es aguda (TA-xi) sin tilde. En portugués SÍ lleva tilde por terminar en -i.",
+    "esContrast": "AQUÍ SÍ hay contraste, y es el rentable: «táxi» es grave terminada en -i. El portugués acentúa las graves en -i y -u; el español no. Por eso táxi/júri/vírus llevan tilde en PT y taxi/jurado/virus no en ES.",
     "audio": {
       "br": {
         "hash": "f672cbb5450327261bdb1cda9bb5fd095f3bf56a5b2994c8b00c94a2f2f3f3b0",
@@ -2733,10 +2655,10 @@
     ],
     "tags": [
       "regional",
-      "falso-amigo"
+      "falso-amigo",
+      "revisar-fonetica"
     ],
     "contentHash": "5930c2c9b5d1c73013619130c7a6e7a48bff50d1cdb3f48a615a5488cb5d48f8",
-    "esContrast": "En pt se escribe 'táxi' con acento en la primera 'a'. En es es 'tá-xi' con tilde en la 'a' también.",
     "audio": {
       "br": {
         "hash": "fb4066894414d2619495cabda64ba2f33fa195dc8332de104aad5c1720ab1027",
@@ -2755,7 +2677,7 @@
       "targetLang": "pt-br",
       "acceptedAlternatives": []
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "59ae5c80",
@@ -2766,10 +2688,10 @@
       "b1-silaba-tonica"
     ],
     "tags": [
-      "falso-amigo"
+      "falso-amigo",
+      "revisar-fonetica"
     ],
     "contentHash": "59ae5c8042e4a910415cb8261935659b6715855a13fca7041211e2b97a3b62f6",
-    "esContrast": "'café' lleva tilde en ambos idiomas por ser esdrújula.",
     "audio": {
       "br": {
         "hash": "19e934924f599358729b2d1469bde163559dd128381d102a600effbec7c3d8b0",
@@ -2790,7 +2712,7 @@
         "Quiero tomar un café."
       ]
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "5b4c538b",
@@ -3167,10 +3089,10 @@
       "b1-silaba-tonica"
     ],
     "tags": [
-      "vocabulario"
+      "vocabulario",
+      "revisar-fonetica"
     ],
     "contentHash": "654c0b722ae8cb480e39a586fff26b3f8f162ccbc10bacc0bdfa36f518332b56",
-    "esContrast": "En español: ma-MA-mé (3 sílabas, esdrújula). El plural 'mães' tiene 2 sílabas en portugués.",
     "audio": {
       "br": {
         "hash": "c1a027de653c23ff71b41e4aa3672b5b767045d3c44113ffff5919ea408dd3cb",
@@ -3187,7 +3109,7 @@
       "back": "ma-mãe: 2 sílabas → oxítona. Termina en 'ã' (nasal), así que LLEVA tilde: mamãe.",
       "example": "A minha mamãe é muito carinhosa."
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "65a02894",
@@ -3231,10 +3153,10 @@
       "b1-silaba-tonica"
     ],
     "tags": [
-      "regional"
+      "regional",
+      "revisar-fonetica"
     ],
     "contentHash": "666eaeb9b92df3438012da9b4e6c600781389997bbe5e7b2f697fbceab75c4ef",
-    "esContrast": "PT-BR: avô (grave, tilde); PT-PT: avô (grave, sin tilde). Falso amigo de 'abuelo'.",
     "audio": {
       "br": {
         "hash": "c8e81934532aa9ef36cc600745e50040e53d60e45a2a9a0b30568b87c8cd1d7c",
@@ -3255,7 +3177,7 @@
         "Mi abuelo es portugués."
       ]
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "6a14a1d4",
@@ -3297,10 +3219,10 @@
       "b1-silaba-tonica"
     ],
     "tags": [
-      "falso-amigo"
+      "falso-amigo",
+      "revisar-fonetica"
     ],
     "contentHash": "6c6bb9ac7887c77fa8d68324d58ffab7f44ea0e8184176c9e8aff4f97b8269c2",
-    "esContrast": "En pt la tilde va en 'difícil' y la 'ú' suena diferente. En es se acentúa 'di-fí-cil'.",
     "audio": {
       "br": {
         "hash": "cc677d966ab610944b970bad50e88667e326ef4740de71aaaf14511662ca6384",
@@ -3319,7 +3241,7 @@
       "targetLang": "pt-br",
       "acceptedAlternatives": []
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "6d37d0a6",
@@ -3487,22 +3409,12 @@
       "basico"
     ],
     "contentHash": "7093d2de583d1979caa4e2757363e14b0aeb5914ef792ec6723bfb3e29035e04",
-    "esContrast": "Funciona igual que en español: indica sílaba tónica y sonido.",
-    "audio": {
-      "br": {
-        "hash": "5289e2317d97f747d9d59c18b6b4616d6f41d9421f1b3a55a41db0f2d37a22d5",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "d39ecf2a628de5cebf4854d8bdae5f1b1325db42f9d3d2f3467e78275b03dee4",
-        "voice": "Portuguese_Wiselady"
-      }
-    },
+    "esContrast": "El español NO tiene esta oposición: usa un solo acento gráfico. El portugués distingue agudo (vocal abierta) de circunflejo (cerrada), y con eso separa pares como avó/avô y pôde/pode.",
     "type": "flashcard",
     "data": {
-      "front": "Qué indica el acento agudo (´)?",
-      "back": "Vocal cerrada: á, é, í, ó, ú — indica tonicidad y sonido cerrado",
-      "example": "café /kaˈfɛ/, você /voˈse/."
+      "front": "¿Qué indica el acento agudo (´) frente al circunflejo (^)?",
+      "back": "El AGUDO marca vocal ABIERTA y tónica: á /a/, é /ɛ/, ó /ɔ/. El CIRCUNFLEJO marca vocal CERRADA y tónica: ê /e/, ô /o/. Es la oposición que distingue avó /ɔ/ (abuela) de avô /o/ (abuelo).",
+      "example": "café /kɐˈfɛ/ · pé /pɛ/ · avó /ɐˈvɔ/  ⇄  você /voˈse/ · pêssego /ˈpesegu/ · avô /ɐˈvo/"
     },
     "variantStatus": "unchecked"
   },
@@ -3635,7 +3547,7 @@
       "falso-amigo"
     ],
     "contentHash": "79125e5d3cf7302f3052e1c176f831a7ba0e69e48017785f7a8992269144e28e",
-    "esContrast": "'fácil' lleva tilde en PT por ser esdrújula; en ES es grave y no lleva tilde.",
+    "esContrast": "«fácil» es paroxítona (grave) en las dos lenguas, no esdrújula, y lleva tilde en las dos por terminar en -l. No hay contraste.",
     "audio": {
       "br": {
         "hash": "28ba4295e5184f755dd997ea64d2b7edc807bf7f3bd12b39148b644993b7e12b",
@@ -3897,22 +3809,12 @@
       "regional"
     ],
     "contentHash": "80945c47431be98d6805e5d68c65f47542db43a2218208f38d8061e93d773715",
-    "esContrast": "En español la cedilla (ç) ya no se usa; en portugués sí.",
-    "audio": {
-      "br": {
-        "hash": "80aef2356c2f73ccf8f042ed5dcb66693cf1dcc5021a7bef1f1b93336c62062a",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "0066c5f12c00f08db56a792d5531b06208a39f960132bf45d4b9a1bfa9ad75bc",
-        "voice": "Portuguese_Wiselady"
-      }
-    },
+    "esContrast": "El español ya no usa cedilla; el portugués sí, y sólo ante a, o, u — nunca ante e ni i.",
     "type": "flashcard",
     "data": {
-      "front": "Cómo se pronuncia la letra 'ç' en portugués?",
-      "back": "Como la 's' antes de e, i (sonido /s/)",
-      "example": "Açaí se pronuncia [asaˈi], no como 'çaí'."
+      "front": "¿Cuándo se escribe 'ç' en portugués?",
+      "back": "Sólo ante a, o, u — para que suene /s/ donde una c sola sonaría /k/. NUNCA ante e ni i: ahí basta con c (cedo, cinco), porque ya suena /s/.",
+      "example": "começar, açúcar, moço, faço  —  pero: cedo, cinema, cinco (nunca *çedo, *çinco)"
     },
     "variantStatus": "unchecked"
   },
@@ -3928,7 +3830,7 @@
       "falso-amigo"
     ],
     "contentHash": "81997b513c32149ea07a12061505212d9cab60a784ff46aace197128327edbcc",
-    "esContrast": "'Fácil' en portugués lleva tilde (esdrújula); en español es grave sin tilde.",
+    "esContrast": "«fácil» lleva tilde en español y en portugués, por la misma razón: grave terminada en -l. No es un contraste.",
     "type": "fill_blank",
     "data": {
       "sentence": "Este exercício é muito ___.",
@@ -4331,10 +4233,10 @@
     ],
     "tags": [
       "vocabulario",
-      "paroxitona"
+      "paroxitona",
+      "revisar-fonetica"
     ],
     "contentHash": "8b4f402c91c4e478a555345ca18c180cd0931673671cf76d2eefea6a46240cd3",
-    "esContrast": "En español 'lápiz' es esdrújula (LÁ-piz) y termina en -z. En portugués termina en -s y la tilde cambia de posición.",
     "audio": {
       "br": {
         "hash": "b1455f33298c20368cfd12bd25c3cba6c65697151a32a8e70bcf97fd325364ba",
@@ -4351,7 +4253,7 @@
       "back": "lápis — es paroxítona (acento en la penúltima: LÁ-pis)",
       "example": "Preciso de um lápis para escrever."
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "8b9118d0",
@@ -4365,7 +4267,7 @@
       "regional"
     ],
     "contentHash": "8b9118d07bffb0f8ad811200d6cb896466597141141579e8e1586df8217a2df0",
-    "esContrast": "En portugués, 'avó' (BR) o 'avô' (PT) lleva tilde; en español sería 'abuela' sin tilde.",
+    "esContrast": "«avó» /ɔ/ es la abuela y «avô» /o/ el abuelo, en Portugal y en Brasil por igual. No es una diferencia entre países: es de género, y el acento marca la altura de la vocal — agudo abierta, circunflejo cerrada.",
     "type": "fill_blank",
     "data": {
       "sentence": "A minha ___ mora em Lisboa e tem 80 anos.",
@@ -4601,10 +4503,10 @@
     ],
     "tags": [
       "regla",
-      "formal"
+      "formal",
+      "revisar-fonetica"
     ],
     "contentHash": "90adc730fb0236e4b07ac9151cccf45da83e190be35b31193fa897d2a1dc6949",
-    "esContrast": "En español, las palabras terminadas en -és también son agudas con tilde: café, marajá... Regla similar.",
     "audio": {
       "br": {
         "hash": "1ee3403589bf62989e1c6850319af5b83b572a1ff89060af0893a597377a5331",
@@ -4621,7 +4523,7 @@
       "back": "Son oxítonas y LLEVAN tilde: café, marajás, parabéns, vinténs",
       "example": "Ela é muito simpática, parabéns!"
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "9163a764",
@@ -4632,10 +4534,10 @@
       "b1-silaba-tonica"
     ],
     "tags": [
-      "falso-amigo"
+      "falso-amigo",
+      "revisar-fonetica"
     ],
     "contentHash": "9163a7645fa60a2dbd0aa265e518d6ec1b14acf0774f0ce12984b20e69a68171",
-    "esContrast": "En pt, 'fácil' se escribe igual pero la sílaba tónica cambia a 'fa-' (no 'fi-' como crees al hispanohablar).",
     "audio": {
       "br": {
         "hash": "028797632e7053649944e588003f5c2b642424d9fe9e18d1cb7fd3462d3317e6",
@@ -4654,7 +4556,7 @@
       "targetLang": "pt-br",
       "acceptedAlternatives": []
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "91a80ac4",
@@ -4702,10 +4604,10 @@
       "b1-silaba-tonica"
     ],
     "tags": [
-      "falso-amigo"
+      "falso-amigo",
+      "revisar-fonetica"
     ],
     "contentHash": "9472f3044d45e9206b607f545bf3ad168ba41c0756894a1040cde2dbe0b92268",
-    "esContrast": "En pt se escribe 'lápis' sin tilde y en plural es 'lápis' (igual). En es: 'lápiz/lápices' con tilde.",
     "audio": {
       "br": {
         "hash": "b3a94f14dfa3ac0062bac0b6bfcaf4d0317b10d2c7cc705cc6faca1dbf91625c",
@@ -4726,7 +4628,7 @@
         "Comprei três lápis de novo."
       ]
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "953797d5",
@@ -5167,9 +5069,10 @@
     "concepts": [
       "b1-silaba-tonica"
     ],
-    "tags": [],
+    "tags": [
+      "revisar-fonetica"
+    ],
     "contentHash": "a3d9f5a1fef72c337c4f6e88a876dcb1ebc8668eed69034c8ecf473a818424dd",
-    "esContrast": "'Táxi' es palabra esdrújula (TÁ-xi) y siempre lleva tilde en portugués.",
     "type": "fill_blank",
     "data": {
       "sentence": "Preciso de um ___ para ir ao aeroporto.",
@@ -5183,7 +5086,7 @@
         }
       ]
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "a6f95259",
@@ -5259,10 +5162,10 @@
     ],
     "tags": [
       "vocabulario",
-      "paroxitona"
+      "paroxitona",
+      "revisar-fonetica"
     ],
     "contentHash": "aba830a5cc7ea8df24ad6154fbd3e13a6a2cc4599bd82894f00adaa9a39c4c03",
-    "esContrast": "⚠️ En español es llana (di-FI-cil) SIN tilde. En portugués SÍ lleva tilde por terminar en -l.",
     "audio": {
       "br": {
         "hash": "008b90176a945a462ccea64a473e3d0aac3a8fc494bf0dbe3f4397535ecce39f",
@@ -5279,7 +5182,7 @@
       "back": "difícil — es paroxítona (acento en la penúltima: di-FÍ-cil)",
       "example": "A lição de hoje é difícil."
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "acbb1382",
@@ -5669,10 +5572,10 @@
       "b1-silaba-tonica"
     ],
     "tags": [
-      "irregular"
+      "irregular",
+      "revisar-fonetica"
     ],
     "contentHash": "baa408d78f80642be07526b70f713db43394276738653b953b5963751eb59783",
-    "esContrast": "'Gentil' en portugués es esdrújula (GEN-til) y lleva tilde; en español es grave sin tilde.",
     "type": "fill_blank",
     "data": {
       "sentence": "Aquele homem é muito ___.",
@@ -5684,7 +5587,7 @@
         }
       ]
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "bd843713",
@@ -5695,10 +5598,10 @@
       "b1-silaba-tonica"
     ],
     "tags": [
-      "irregular"
+      "irregular",
+      "revisar-fonetica"
     ],
     "contentHash": "bd843713ef3a43b1f3cf4a03d51257aa46bdeeb8875b5ece468712f42706850e",
-    "esContrast": "En español 'lápis' y 'fácil' SÍ llevan tilde, pero en portugués NO, por la regla de las palabras graves terminadas en -s, -l, -r, -n.",
     "audio": {
       "br": {
         "hash": "bd6656b5046dd330512264622bd71ab45b6e9a3421e3a0ed2b0f6d273634785b",
@@ -5721,7 +5624,7 @@
       ],
       "answer": "Porque terminan en consonantel consonante del grupo s, l, r, n"
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "bd87ddc1",
@@ -5791,10 +5694,10 @@
       "b1-silaba-tonica"
     ],
     "tags": [
-      "falso-amigo"
+      "falso-amigo",
+      "revisar-fonetica"
     ],
     "contentHash": "bdcff0e2f6cda4c192c0033ecbf5e1c343e8483b4a90cd02eedebe29bf5c9a9c",
-    "esContrast": "'Difícil' en portugués lleva tilde (esdrújula); en español es grave sin tilde.",
     "type": "fill_blank",
     "data": {
       "sentence": "O português é uma língua ___.",
@@ -5806,7 +5709,7 @@
         }
       ]
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "be3cd7cb",
@@ -6325,48 +6228,6 @@
     "variantStatus": "unchecked"
   },
   {
-    "id": "cb398595",
-    "blockId": 1,
-    "lessonId": "b1-l2-silaba-tonica",
-    "difficulty": 3,
-    "concepts": [
-      "b1-silaba-tonica"
-    ],
-    "tags": [
-      "irregular",
-      "regional"
-    ],
-    "contentHash": "cb39859536d624e29ca8d412787fe6f7bcbf9f42d50d9fa0f1f4763a39ede3c9",
-    "esContrast": "PT-PT prefiere 'por vezes' vs PT-BR 'às vezes'. El circumflexo en 'avô' es obligatorio en PT-PT.",
-    "audio": {
-      "br": {
-        "hash": "4d5bed0717c08a76877e79adf447abd826d635848c84a837b750017f25b0cc73",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "22da573c6b28eb5e1bc4b629264d97e672cd1982a65d672c15a8097747048b0a",
-        "voice": "Portuguese_Wiselady"
-      }
-    },
-    "type": "translation",
-    "data": {
-      "source": "En Portugal dicen 'avô' y en Brasil también, aunque a veces usan 'avó'.",
-      "target": "Em Portugal dizem 'avô' e no Brasil também, embora por vezes usem 'avó'.",
-      "sourceLang": "es",
-      "targetLang": "pt-br",
-      "acceptedAlternatives": [
-        "Em Portugal dizem 'avô' e no Brasil também, embora às vezes usem 'avó'."
-      ]
-    },
-    "variantOverrides": {
-      "pt-br": {
-        "target": "Em Portugal dizem 'avô' e no Brasil também, embora às vezes usem 'avó'.",
-        "acceptedAlternatives": []
-      }
-    },
-    "variantStatus": "needs-human"
-  },
-  {
     "id": "cd0da55a",
     "blockId": 1,
     "lessonId": "b1-l3-correspondencias-es-pt",
@@ -6607,10 +6468,10 @@
     ],
     "tags": [
       "vocabulario",
-      "paroxitona"
+      "paroxitona",
+      "revisar-fonetica"
     ],
     "contentHash": "d41c9b46531a9b8bc25f9e26e2295e89acad427bf5a6c42379bf0a7ff1a8bf17",
-    "esContrast": "⚠️ En español es grave (fa-CIL), ¡no caigas en la trampa! En portugués lleva tilde en la 'a'.",
     "audio": {
       "br": {
         "hash": "fca67d3811bf021005c86bf7be5f3d1e405fbcb750655d20646c6d3779868626",
@@ -6627,7 +6488,7 @@
       "back": "fácil — es paroxítona (acento en la penúltima: FÁ-cil)",
       "example": "Este exercício é muito fácil."
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "d4c69c92",
@@ -7305,10 +7166,10 @@
       "b1-silaba-tonica"
     ],
     "tags": [
-      "vocabulario"
+      "vocabulario",
+      "revisar-fonetica"
     ],
     "contentHash": "e6eae5d63ee111cf87d0c07b0e712cafa766ac277567480c6846747128a9b5a9",
-    "esContrast": "En español: 'ómnibus' es esdrújula con tilde. En portugués no lleva tilde: ô-ni-bus.",
     "audio": {
       "br": {
         "hash": "f10826a2beeca4f258ba450be053ade6423e953b5157adbc1c95820b5af206be",
@@ -7325,7 +7186,7 @@
       "back": "ô-ni-bus: 3 sílabas → paroxítona. Termina en -s → sin tilde (es llana terminada en consonante fuerte).",
       "example": "Vou de ônibus para o trabalho."
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "e6fb129d",
@@ -7465,10 +7326,10 @@
       "b1-silaba-tonica"
     ],
     "tags": [
-      "regla"
+      "regla",
+      "revisar-fonetica"
     ],
     "contentHash": "e91c13378b147a4f60bf0fb13a0c5fcda2f15c4c139e748a09757637225b768d",
-    "esContrast": "Regla MUY similar al español. Si termina en esses sonidos, es llana y lleva tilde.",
     "audio": {
       "br": {
         "hash": "de73cf7e8d3479acf8eafca30ba5791bdcf984965b8f5b06c529beb2e8e91ae6",
@@ -7485,7 +7346,7 @@
       "back": "Terminaciones que NO se pronuncian: -ns, -l, -r, -z, -x, -on, -ã, -ão (entre otras)",
       "example": "ácil, répter, cruz, Félix, melón, irmã, coração"
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "needs-human"
   },
   {
     "id": "eb00f539",
@@ -7869,10 +7730,10 @@
     ],
     "tags": [
       "vocabulario",
-      "regional"
+      "regional",
+      "revisar-fonetica"
     ],
     "contentHash": "f56d9fa69680ca15c9a34d32b59b805a1e77cd362d9f6044cbe36c71cdb58383",
-    "esContrast": "Ambos idiomas tienen la misma pronunciación /aˈvɔ/. En PT-BR se escribe con tilde; en PT-PT, con acento circunflejo.",
     "audio": {
       "br": {
         "hash": "e72131aacf3b37419b2b8862e7ccb265360914c58439d1606dfb2b50ef99e0a2",
@@ -7908,25 +7769,15 @@
       "regional"
     ],
     "contentHash": "f5a62aacbdd0abddc902eb0942c232e6dabbe242c71352d4ae0620d32f44f847",
-    "esContrast": "PT-BR: avó (grave, tilde); PT-PT: avô (grave, sin tilde). En ES: abuela.",
-    "audio": {
-      "br": {
-        "hash": "13e66cda5507a44f7867fcfeb3f9a1faa23f0b7e9cf19d94c56418ec19198211",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "91ae77ae7c4e312f39fc996fc676b7eebe29c40667c7bc4c5f234637154a0a8d",
-        "voice": "Portuguese_Wiselady"
-      }
-    },
+    "esContrast": "En Portugal el posesivo lleva artículo obligatorio: «a minha avó», no «minha avó». En Brasil se omite. Y avó es la abuela en los dos países.",
     "type": "translation",
     "data": {
-      "source": "Minha avó mora em Lisboa.",
+      "source": "A minha avó mora em Lisboa.",
       "target": "Mi abuela vive en Lisboa.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "Mi abuela mora en Lisboa."
+        "Mi abuela vive en Lisboa."
       ]
     },
     "variantStatus": "unchecked"
@@ -8228,5 +8079,97 @@
       }
     },
     "variantStatus": "needs-human"
+  },
+  {
+    "id": "b1-hf-01",
+    "blockId": 1,
+    "lessonId": "b1-l3-correspondencias-es-pt",
+    "difficulty": 1,
+    "concepts": [
+      "b1-corresp-h-f"
+    ],
+    "tags": [
+      "correspondencia"
+    ],
+    "type": "flashcard",
+    "esContrast": "La f- inicial del latín se conservó en portugués y se perdió en español. Es la correspondencia que más palabras genera.",
+    "data": {
+      "front": "La correspondencia que más rinde: h- española ⇄ f- portuguesa",
+      "back": "Donde el español tiene h- muda inicial, el portugués casi siempre tiene f-: hijo→filho, hacer→fazer, hablar→falar, harina→farinha, hierro→ferro, hoja→folha, hormiga→formiga, humo→fumo.",
+      "example": "hijo → filho · hacer → fazer · hablar → falar · hambre → fome"
+    },
+    "variantStatus": "unchecked"
+  },
+  {
+    "id": "b1-hf-02",
+    "blockId": 1,
+    "lessonId": "b1-l3-correspondencias-es-pt",
+    "difficulty": 1,
+    "concepts": [
+      "b1-corresp-h-f"
+    ],
+    "tags": [
+      "correspondencia"
+    ],
+    "type": "fill_blank",
+    "esContrast": "hablar → falar. La h- española corresponde a f- portuguesa.",
+    "data": {
+      "sentence": "Eu ___ português com a minha vizinha. (hablar)",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "falo",
+          "alternatives": []
+        }
+      ]
+    },
+    "variantStatus": "unchecked"
+  },
+  {
+    "id": "b1-hf-03",
+    "blockId": 1,
+    "lessonId": "b1-l3-correspondencias-es-pt",
+    "difficulty": 2,
+    "concepts": [
+      "b1-corresp-h-f"
+    ],
+    "tags": [
+      "correspondencia"
+    ],
+    "type": "fill_blank",
+    "esContrast": "hacer → fazer. Mismo patrón h- ⇄ f-.",
+    "data": {
+      "sentence": "O que é que vais ___ amanhã? (hacer)",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "fazer",
+          "alternatives": []
+        }
+      ]
+    },
+    "variantStatus": "unchecked"
+  },
+  {
+    "id": "b1-hf-04",
+    "blockId": 1,
+    "lessonId": "b1-l3-correspondencias-es-pt",
+    "difficulty": 2,
+    "concepts": [
+      "b1-corresp-h-f"
+    ],
+    "tags": [
+      "correspondencia"
+    ],
+    "type": "translation",
+    "esContrast": "hijo → filho, hija → filha.",
+    "data": {
+      "source": "Mi hijo habla portugués.",
+      "target": "O meu filho fala português.",
+      "sourceLang": "es",
+      "targetLang": "pt-pt",
+      "acceptedAlternatives": []
+    },
+    "variantStatus": "unchecked"
   }
 ]
