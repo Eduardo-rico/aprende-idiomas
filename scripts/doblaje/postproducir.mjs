@@ -44,21 +44,64 @@ const CADENAS = {
   fondo:     'lowpass=f=5200,aecho=0.85:0.6:75:0.32,volume=0.42',
 };
 
-// pieza → { filtro: [números de réplica] }
-const FILTRAR = {
-  ep10: { cristal: [280, 283, 285] },                  // Fátima, dentro. Migue NO: está fuera
-  ep11: { megafonia: [344, 346] },
-  ep15: { telefono: [125], megafonia: [159] },         // sólo la llamada, no el resto de Kilu
-  P10:  { telefono: [233, 235, 237, 239, 241, 243, 245] }, // la madre. Sónia NO: está en la calle
-  P12:  { cristal: [268, 270, 272, 273], fondo: [274] },   // la funcionária. Vítor NO: está delante
-};
+// Qué se filtra, anclado a CONTENIDO y no a números de réplica.
+//
+// La primera versión usaba el número global `n` del manifiesto — que
+// cambia entero en cuanto alguien edita un documento y reextrae las
+// pistas. Los filtros habrían caído en réplicas equivocadas sin ningún
+// aviso: exactamente la clase de acople silencioso que la revisión de
+// hoy encontró tres veces en el corpus. El ancla es (pieza, personaje,
+// arranque del texto): sobrevive a la renumeración, y si el texto cambia
+// lo bastante como para no casar, el script REVIENTA en vez de callar.
+const FILTRAR = [
+  // ep10 — Fátima dentro de la pastelaria; Migue NO: está en la calle.
+  ['ep10', 'FÁTIMA', 'Ó Zé! Ó Zé, isto hoje não abre', 'cristal'],
+  ['ep10', 'FÁTIMA', 'Ao domingo está fechado!', 'cristal'],
+  ['ep10', 'FÁTIMA', 'Está fechado! Ao domingo', 'cristal'],
+  // ep11 — la megafonía del autocarro.
+  ['ep11', 'MEGAFONE', 'Próxima paragem: Alvalade', 'megafonia'],
+  ['ep11', 'MEGAFONE', 'Próxima paragem: Campo Grande', 'megafonia'],
+  // ep15 — sólo la llamada de Kilu; el resto de sus réplicas son en persona.
+  ['ep15', 'KILU', 'Migue, sou eu. Olha, estou no centro', 'telefono'],
+  ['ep15', 'MEGAFONE', 'Fátima Andrade. Gabinete', 'megafonia'],
+  // P10 — la madre al otro lado del teléfono; Sónia NO: está en la calle.
+  ['P10', 'MÃE', 'Está lá? Ó Sónia?', 'telefono'],
+  ['P10', 'MÃE', 'Ó filha. Quanto tempo', 'telefono'],
+  ['P10', 'MÃE', 'Doze. Pronto.', 'telefono'],
+  ['P10', 'MÃE', 'Está tudo bem. Vai trabalhar.', 'telefono'],
+  ['P10', 'MÃE', 'Não é preciso.', 'telefono'],
+  ['P10', 'MÃE', 'Não é preciso, filha.', 'telefono'],
+  ['P10', 'MÃE', 'Vai. Vai trabalhar.', 'telefono'],
+  // P12 — la funcionária tras el vidrio; Vítor NO: está delante.
+  ['P12', 'FUNCIONÁRIA', 'O senhor tem senha?', 'cristal'],
+  ['P12', 'FUNCIONÁRIA', 'Tem de tirar senha', 'cristal'],
+  ['P12', 'FUNCIONÁRIA', 'Maria de Lurdes Pinto?', 'cristal'],
+  ['P12', 'FUNCIONÁRIA', 'Maria de Lurdes Pinto!', 'cristal'],
+  ['P12', 'VOZ', 'Sou eu.', 'fondo'],
+];
 
+const usados = new Set();
 const filtroDe = (p) => {
-  const tabla = FILTRAR[p.pieza];
-  if (!tabla) return null;
-  for (const [f, ns] of Object.entries(tabla)) if (ns.includes(p.n)) return f;
+  for (const [i, [pieza, quien, arranque, filtro]] of FILTRAR.entries()) {
+    if (p.pieza === pieza && p.quien === quien && p.texto.startsWith(arranque)) {
+      usados.add(i);
+      return filtro;
+    }
+  }
   return null;
 };
+
+// Al final del script se comprueba que TODAS las anclas casaron con
+// alguna réplica: un ancla huérfana significa que el guion cambió por
+// debajo, y eso debe parar el montaje, no degradarlo en silencio.
+function verificaAnclas() {
+  const huerfanas = FILTRAR.filter((_, i) => !usados.has(i));
+  if (huerfanas.length) {
+    console.error('\nANCLAS SIN RÉPLICA — el guion cambió por debajo de los filtros:');
+    for (const [pieza, quien, arranque] of huerfanas) console.error(`  ✗ ${pieza} ${quien} «${arranque}»`);
+    process.exit(1);
+  }
+}
 
 // ── Silencios entre réplicas ─────────────────────────────────────
 // La narradora necesita aire a los dos lados: es un cambio de plano, no
@@ -135,6 +178,7 @@ for (const pieza of piezas) {
   process.stdout.write(`${pieza} `);
 }
 
+verificaAnclas();
 fs.writeFileSync(path.join(DIR, 'manifiesto.json'), JSON.stringify(m, null, 2));
 fs.writeFileSync(path.join(FIN, 'episodios.json'), JSON.stringify(resumen, null, 2));
 

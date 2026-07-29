@@ -2285,15 +2285,11 @@
       "regional",
       "revisar-fonetica"
     ],
-    "contentHash": "453f39bb9e0ff713b88612a22f98bbfc3a067038c7b214262594507ad579f355",
+    "contentHash": "b3f832169f53a39ce20fd61b5c9f43eb3300390df933128d4dc788a562bb11ba",
     "audio": {
       "br": {
         "hash": "650e58b32162ec528a5fcbb267efd33bb50ddb241702476030c789334049399a",
         "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "bd63f99dabe7046798650e0d6edc2684a7d7087ccd58dd73dabaffb882eaeba9",
-        "voice": "Portuguese_Wiselady"
       }
     },
     "type": "translation",
@@ -5431,24 +5427,18 @@
       "regional",
       "falso-amigo"
     ],
-    "contentHash": "b61938cea9e1bc802d29963026f93fa0499447ae404741802a113f19c8af6d6f",
-    "audio": {
-      "br": {
-        "hash": "4583bb63425986a51b95f74005e72e80c23b4e61c275d8c32825acbf80823121",
-        "voice": "Portuguese_SentimentalLady"
-      },
-      "pt": {
-        "hash": "78a9f789f6e809d5f5fd5ed7d966f4f7c6a3072ebb87c1fc15cadfcff8d41086",
-        "voice": "Portuguese_Wiselady"
-      }
-    },
+    "contentHash": "a4a75381a9a63ab11e7af95b4461b1a888f6e42126d641b1cf78d915e1c4609f",
     "type": "flashcard",
     "data": {
-      "front": "Hay diferencia entre PT-BR y PT-PT en el uso del circunflexo?",
-      "back": "PT-PT usa más circunflexo: 'vôo' vs PT-BR 'voo'; 'pôo' vs 'poo' — en algunos casos PT-PT distingue lo que BR no marca",
-      "example": "PT-PT: vôo (vuelo) / PT-BR: voo"
+      "front": "¿Hay diferencia entre PT-PT y PT-BR en los acentos gráficos?",
+      "back": "Sí, y es sistemática: donde la vocal tónica es abierta en Portugal y cerrada en Brasil, PT-PT escribe AGUDO y PT-BR CIRCUNFLEJO. António/Antônio, económico/econômico, génio/gênio, ténis/tênis, bónus/bônus. El Acordo de 1990 mantiene las DOS grafías como oficiales — es de los pocos casos de doble ortografía legal.\n\nOjo con el mito inverso: «vôo» con circunflejo era grafía BRASILEÑA antigua (reglas de 1943), nunca portuguesa, y el Acordo la abolió: hoy los dos escriben «voo».",
+      "example": "PT-PT: António, económico, génio · PT-BR: Antônio, econômico, gênio · ambos: voo, enjoo"
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "neutral",
+    "esContrast": "El circunflejo distingue variantes al revés de lo que se suele creer: es BRASIL quien lo usa donde Portugal pone agudo, porque la vocal tónica es cerrada allí y abierta aquí.",
+    "audioExento": {
+      "motivo": "front y back en español: explica el contraste de acentos PT-PT/PT-BR"
+    }
   },
   {
     "id": "b8b56359",
@@ -8115,7 +8105,7 @@
       "example": "SÍ: hijo→filho (filial) · hablar→falar · hoja→folha (foliar)  ·  NO: hombre→homem (humano) · hoy→hoje · hora→hora"
     },
     "variantStatus": "unchecked",
-    "contentHash": "a13a24e5d8c29a29dd47e41912a1a44a65095f50b9cc3d1169b7e013520bbd13",
+    "contentHash": "19cec417beb0fb1127a5b0e58407c7207c410c5e3e637aa24a5a2dff80094c08",
     "audioExento": {
       "motivo": "front y back en español: explica la correspondencia h-/f-"
     }
@@ -8144,7 +8134,7 @@
       ]
     },
     "variantStatus": "unchecked",
-    "contentHash": "56417cba9bb2c5b33e9ff5290702130e4880b9ed45fcf89dc2be6a831db3aa96"
+    "contentHash": "16c7e94fff1e4d531c07307b5d228aad035f0f86f67a4cf201d59a322a5df385"
   },
   {
     "id": "b1-hf-03",
@@ -8170,7 +8160,7 @@
       ]
     },
     "variantStatus": "unchecked",
-    "contentHash": "f9cda58d9a307155acf3d5004a4dcd67ca08fb0f505d26d6398427d1896bc9c6"
+    "contentHash": "76b4d4904120714f277f872f5956d81cee5bece567cc81bfbfc97b51916b8c24"
   },
   {
     "id": "b1-hf-04",
@@ -8193,6 +8183,6 @@
       "acceptedAlternatives": []
     },
     "variantStatus": "unchecked",
-    "contentHash": "9bdb6a28fbe35611297f28ccba73cffb4fb50db38eb5bbbda7f5d3627d06fae6"
+    "contentHash": "d9eba7b7175b86eaa52c2af77912907f1c3252253f87711bf331668d04521320"
   }
 ]
