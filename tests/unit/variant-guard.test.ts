@@ -23,9 +23,17 @@ describe('detecta brasileño en el contenido base', () => {
     expect(h[0]?.europeo).toContain('estar a + infinitivo');
   });
 
-  it('caza «você» como segunda persona', () => {
+  it('caza «você» SINGULAR, que es el que ofende en Lisboa', () => {
     const h = revisarEjercicio(flash('Você pode ajudar?'));
-    expect(h.map((x) => x.marcador)).toContain('você como 2ª persona');
+    expect(h.map((x) => x.marcador)).toContain('você singular como 2ª persona');
+  });
+
+  it('NO marca «vocês» plural, que es europeo normal', () => {
+    // «Abraço grande para a equipa, vocês são fixe!» es portugués de
+    // Portugal de manual. Marcarlo inflaba el recuento con 44 falsos
+    // positivos y le quitaba autoridad al gate para lo que sí importa.
+    expect(revisarEjercicio(flash('Vocês são fixe!'))).toHaveLength(0);
+    expect(revisarEjercicio(flash('Vocês têm razão.'))).toHaveLength(0);
   });
 
   it('caza el léxico exclusivo de Brasil', () => {

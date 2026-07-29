@@ -57,8 +57,12 @@ export const MARCADORES: Marcador[] = [
   // Sintaxis — los dos que más delatan
   { re: /\b(estou|estás|está|estamos|estão|estava|estive)\s+\w+ndo\b/i,
     nombre: 'gerundio con estar', europeo: 'estar a + infinitivo (estou a fazer)', severidad: 'error' },
-  { re: b('voc[êe]s?'),
-    nombre: 'você como 2ª persona', europeo: 'tu (informal) o 3ª persona sin pronombre (deferencia)', severidad: 'error' },
+  // OJO: sólo el SINGULAR. `vocês` es la segunda persona del plural normal
+  // en Portugal («vocês são fixe!» es europeo de manual), y marcarlo como
+  // brasileñismo inflaba el recuento con 44 falsos positivos. El que
+  // ofende a un desconocido en Lisboa es `você`, no `vocês`.
+  { re: b('voc[êe]'),
+    nombre: 'você singular como 2ª persona', europeo: 'tu (informal) o 3ª persona sin pronombre (deferencia)', severidad: 'error' },
 
   // Léxico exclusivo de Brasil
   { re: b('[ôo]nibus'), nombre: 'ônibus', europeo: 'autocarro', severidad: 'error' },

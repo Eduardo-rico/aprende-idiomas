@@ -10,5 +10,491 @@
     "motivo": "el override cambia la frase, no la variante",
     "base": "{\"sentence\":\"Cordialmente ___ ,\",\"blanks\":[{\"position\":0,\"answer\":\"saúdo\",\"alternatives\":[\"saudação\",\"cumprimento\"]}]}",
     "override": "{\"sentence\":\"Com os melhores cumprimentos,\",\"blanks\":[{\"position\":0,\"answer\":\"saúdo\",\"alternatives\":[\"cumprimentos\"]}]}"
+  },
+  {
+    "id": "182b84cf",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Mês é mais.\",\"target\":\"El mes es más.\",\"sourceLang\":\"pt-br\",\"targetLang\":\"es\",\"acceptedAlternatives\":[\"El mes es más.\"]}",
+    "override": "{}"
+  },
+  {
+    "id": "194576a1",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"audioText\":\"Os meus olhos são verdes. Mais pessoas têm olhos castanhos em Portugal.\",\"question\":\"¿De qué color son los ojos del hablante?\",\"options\":[\"Azules\",\"Verdes\",\"Castaños\",\"Grises\"],\"answer\":\"Verdes\"}",
+    "override": "{\"audioText\":\"Meus olhos são verdes. Mais pessoas têm olhos castanhos no Brasil.\"}"
+  },
+  {
+    "id": "2a5d3f34",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"O ratão do carro correu mais rápido na rua.\",\"target\":\"El ratón grande del coche corrió más rápido en la calle.\",\"sourceLang\":\"pt-br\",\"targetLang\":\"es\"}",
+    "override": "{\"target\":\"El ratón grande del carro corrió más rápido en la calle.\"}"
+  },
+  {
+    "id": "3e26e656",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"sentence\":\"Em português europeu, a letra W chama-se ___ , como no inglês.\",\"blanks\":[{\"position\":0,\"answer\":\"dúplex\",\"alternatives\":[\"doble\",\"dâblio\"]}]}",
+    "override": "{\"sentence\":\"Em português, a letra W se chama ___ , igual ao inglês.\"}"
+  },
+  {
+    "id": "5be546f8",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"front\":\"¿Cómo se pronuncia la 'r' al inicio de palabra en PT-BR?\",\"back\":\"Como vibrante alveolar [ʁ]\",\"example\":\"rua → ['ʁua] | rato → ['ʁatu]\"}",
+    "override": "{\"back\":\"Como /h/ (aspiración suave)\",\"example\":\"rua → ['hua] | rato → ['hatu]\"}"
+  },
+  {
+    "id": "620b39dc",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"audioText\":\"Quantos meses ficou em Portugal? Fiquei três meses, mas foram os meses mais bons.\",\"question\":\"¿Cuánto tiempo estuvo la persona en Brasil?\",\"options\":[\"Un mes\",\"Dos meses\",\"Tres meses\",\"Cuatro meses\"],\"answer\":\"Tres meses\"}",
+    "override": "{\"audioText\":\"Quantos meses você ficou no Brasil? Fiquei três meses, mas foram os meses mais bons.\"}"
+  },
+  {
+    "id": "7d62650e",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Ella cantaba muy bien, pero ahora su voz está mala.\",\"target\":\"Ela cantava muito bem, mas agora a voz dela está má.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Ela cantava muito bem, porém a voz dela está má.\"]}",
+    "override": "{\"target\":\"Ela cantava muito bem, mas agora sua voz está ruim.\",\"acceptedAlternatives\":[\"Ela cantava muito bem, porém agora sua voz está ruim.\"]}"
+  },
+  {
+    "id": "91a80ac4",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"front\":\"¿Cómo se pronuncia la 's' al final de sílaba en PT-BR?\",\"back\":\"Como /ʃ/ (sonora alveopalatal)\",\"example\":\"dois → [dojʃ] | meses → [me.zɛʃ]\"}",
+    "override": "{\"back\":\"Como /s/ (sorda)\",\"example\":\"dois → [dojs] | meses → [me.zis]\"}"
+  },
+  {
+    "id": "aab55904",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"front\":\"¿Cómo se pronuncia la 'rr' en português brasileiro?\",\"back\":\"Como vibrante múltiplo alveolar ['ka.ʁu]\",\"example\":\"carro → ['ka.ʁu] ou ['ka.hu]\"}",
+    "override": "{\"back\":\"Como um 'h' aspirado suave ou vibrante múltiplo alveolar\"}"
+  },
+  {
+    "id": "b19dd2a9",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"O rato roeu a roupa.\",\"target\":\"El ratón royó la ropa.\",\"sourceLang\":\"pt-br\",\"targetLang\":\"es\",\"acceptedAlternatives\":[\"El ratón royó la ropa.\",\"El rata royó la ropa.\"]}",
+    "override": "{\"target\":\"El ratón rogó la ropa.\"}"
+  },
+  {
+    "id": "cb398595",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"En Portugal dicen 'avô' y en Brasil también, aunque a veces usan 'avó'.\",\"target\":\"Em Portugal dizem 'avô' e no Brasil também, embora por vezes usem 'avó'.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Em Portugal dizem 'avô' e no",
+    "override": "{\"target\":\"Em Portugal dizem 'avô' e no Brasil também, embora às vezes usem 'avó'.\",\"acceptedAlternatives\":[]}"
+  },
+  {
+    "id": "d5b76869",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"O carro está na rua.\",\"target\":\"El coche está en la calle.\",\"sourceLang\":\"pt-br\",\"targetLang\":\"es\"}",
+    "override": "{\"target\":\"El carro está en la calle.\"}"
+  },
+  {
+    "id": "e79c6e8d",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"sentence\":\"A minha ___ está no Brasil.\",\"blanks\":[{\"position\":0,\"answer\":\"mãe\",\"alternatives\":[]}]}",
+    "override": "{\"sentence\":\"Minha ___ está no Brasil.\"}"
+  },
+  {
+    "id": "f56d9fa6",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"front\":\"¿Cómo se escribe 'abuelo/a' en PT-BR? ¿Y en PT-PT?\",\"back\":\"PT-PT: avô (a-VÔ) — el circunflejo indica una sílaba que en PT-BR lleva tilde\",\"example\":\"Minha avó faz um bolo delicioso.\"}",
+    "override": "{\"back\":\"PT-BR: avó (a-VÓ) | PT-PT: avô (a-VÔ)\"}"
+  },
+  {
+    "id": "ff732558",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"La palavra mãe significa madre en português.\",\"target\":\"A palavra mãe significa mãe em português europeu.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"A palavra mãe quer dizer mãe em português europeu.\"]}",
+    "override": "{\"target\":\"A palavra mãe significa mãe em português.\",\"acceptedAlternatives\":[\"A palavra mãe quer dizer mãe em português.\"]}"
+  },
+  {
+    "id": "02ab9316",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"verb\":\"chegar\",\"sentence\":\"No Brasil, numa comunicação formal: \\\"O trem ___ à estação às nove.\\\"\",\"options\":[\"à\",\"em\",\"a\",\"para\"],\"answer\":\"à\"}",
+    "override": "{\"sentence\":\"Em Portugal, numa comunicação formal: \\\"O comboio ___ à estação às nove.\\\"\"}"
+  },
+  {
+    "id": "03b9ccb0",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"audioText\":\"Os contatos correspondem-se entre as duas variantes. Continuaram a usar o termo correio em Portugal e contato no Brasil.\",\"question\":\"Qual termo se usa no Brasil para se referir à comunicação escrita oficial?\",\"options\":[\"Correio\",\"Contato\",\"Cont",
+    "override": "{\"audioText\":\"Os contactos correspondem-se entre as duas variants. Continuaram a usar o termo correio em Portugal e contato no Brasil.\",\"question\":\"¿Qué término se usa en Portugal para referirse a la comunicación escrita oficial?\",\"options\":[\"Correio\",\"Contact"
+  },
+  {
+    "id": "08155994",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Segue em anexo a documentação solicitada. Fico ao dispor para quaisquer esclarecimentos.\",\"target\":\"Seguem em anexo os documentos solicitados. Remainho ao vosso dispor para quaisquer esclarecimentos.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"accepted",
+    "override": "{\"target\":\"Adjunto le remito la documentación solicitada. Quedo a su disposición para cualquier aclaración.\"}"
+  },
+  {
+    "id": "1e198e75",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Yo creo que tienes razón, pero no lo encuentro así.\",\"target\":\"Eu acho que tens razão, mas não o acho assim.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Acho que tens razão, mas não o acho assim.\"]}",
+    "override": "{\"target\":\"Eu acho que você tem razão, mas não acho assim.\",\"acceptedAlternatives\":[\"Eu acho que tens razão, mas não acho assim.\"]}"
+  },
+  {
+    "id": "1f7c93eb",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"audioText\":\"Em Portugal, o veículo de transporte urbano chama-se autocarro. No Brasil, chama-se ônibus. É uma diferença importante entre os dois países!\",\"question\":\"Como se diz 'ônibus' em Portugal?\",\"options\":[\"Autocarro\",\"Ônibus\",\"Comboio\",\"Táxi\"],\"answer",
+    "override": "{\"audioText\":\"No Brasil, o veículo de transporte urbano chama-se ônibus. Em Portugal, o mesmo veículo chama-se autocarro. São duas palavras diferentes para a mesma coisa!\",\"question\":\"¿Cómo se dice 'autobús' en Portugal?\",\"options\":[\"Ônibus\",\"Autocarro\",\"Combo"
+  },
+  {
+    "id": "2c640e11",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Formamos una fila enorme para entrar al concierto.\",\"target\":\"Formámos uma fila enorme para entrar no concerto.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Fizemos uma fila enorme para entrar no concerto.\"]}",
+    "override": "{\"target\":\"Formamos uma fila enorme para entrar no show.\",\"acceptedAlternatives\":[\"Fizemos uma fila enorme para entrar no show.\"]}"
+  },
+  {
+    "id": "2ee3583d",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Las cartas de mi abuelo continuaron llegando incluso después de su muerte.\",\"target\":\"As cartas do meu avô continuaram a chegar mesmo depois da morte dele.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"As cartas do meu avô continu",
+    "override": "{\"target\":\"As cartas do meu avô continuaram chegando mesmo depois da morte dele.\",\"acceptedAlternatives\":[\"As cartas do meu avô continuaram a chegar mesmo depois da morte dele.\"]}"
+  },
+  {
+    "id": "3dec5fb6",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Olá, próprio! Tudo bem contigo?\",\"target\":\"¡Hola, tío! ¿Qué tal estás?\",\"sourceLang\":\"pt-br\",\"targetLang\":\"es\",\"acceptedAlternatives\":[\"¡Hola, crack! ¿Qué tal estás?\",\"¡Hola, chico! ¿Qué tal estás?\"]}",
+    "override": "{\"target\":\"¡Hola, amigo! ¿Qué tal estás?\"}"
+  },
+  {
+    "id": "6424b51e",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"audioText\":\"No Brasil, achar significa encontrar. Em Portugal, achar significa parecer, creer. São verbos com uso diferente.\",\"question\":\"No Brasil, o que significa o verbo 'achar'?\",\"options\":[\"Parecer ou crer\",\"Encontrar\",\"Buscar\",\"Pensar\"],\"answer\":\"Encon",
+    "override": "{\"question\":\"En Portugal, ¿qué significa el verbo 'achar'?\",\"options\":[\"Encontrar algo\",\"Parecer o creer\",\"Pensar en voz alta\",\"Buscar información\"],\"answer\":\"Parecer o creer\"}"
+  },
+  {
+    "id": "80a3b750",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Las dos cartas se corresponden en contenido y en tono emocional.\",\"target\":\"As duas cartas correspondem-se em conteúdo e em tom emocional.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"As duas cartas se correspondem em conteúdo e ",
+    "override": "{\"target\":\"As duas cartas se correspondem em conteúdo e em tom emocional.\",\"acceptedAlternatives\":[\"As duas cartas correspondem-se em conteúdo e em tom emocional.\"]}"
+  },
+  {
+    "id": "882baba3",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Fiz fila de espera para pagar a conta do restaurante.\",\"target\":\"Hice cola para pagar la cuenta del restaurante.\",\"sourceLang\":\"pt-br\",\"targetLang\":\"es\",\"acceptedAlternatives\":[\"Me puse en la fila\",\"Hice fila\"]}",
+    "override": "{\"source\":\"Fiz fila para pagar a conta do restaurante.\"}"
+  },
+  {
+    "id": "a120b356",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"La saudade de Brasil es diferente de la saudade portuguesa.\",\"target\":\"A saudade brasileira é diferente da portuguesa.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"A saudade do Brasil é diferente da portuguesa.\"]}",
+    "override": "{\"target\":\"A saudade do Brasil é diferente da saudade portuguesa.\",\"acceptedAlternatives\":[\"A saudade brasileira é diferente da portuguesa.\"]}"
+  },
+  {
+    "id": "a2541a1f",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Voy al correo a enviar un paquete certificado.\",\"target\":\"Vou aos correios enviar uma encomenda registada.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Vou ao correio enviar uma encomenda registada.\"]}",
+    "override": "{\"target\":\"Vou ao correio enviar uma encomenda registrada.\",\"acceptedAlternatives\":[\"Vou aos correios enviar uma encomenda registrada.\"]}"
+  },
+  {
+    "id": "a32d2dc4",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Mandei uma carta pelo correio normal.\",\"target\":\"Envíe una carta por correo normal.\",\"sourceLang\":\"pt-br\",\"targetLang\":\"es\",\"acceptedAlternatives\":[\"Envíe una carta por correo normal.\"]}",
+    "override": "{\"target\":\"Envíe una carta por correo ordinario.\"}"
+  },
+  {
+    "id": "a38afcf6",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"sentence\":\"A norma culta escrita em Portugal e no Brasil ___ em aspetos gramaticais.\",\"blanks\":[{\"position\":0,\"answer\":\"diferem\",\"alternatives\":[\"divergem\"]}]}",
+    "override": "{\"sentence\":\"A norma culta escrita em Portugal e no Brasil ___ em aspectos gramaticais.\"}"
+  },
+  {
+    "id": "a3b9c993",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Fala-me quando puderes, preciso de falar contigo.\",\"target\":\"Fala comigo quando puderes, preciso falar contigo.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Me fala quando der, preciso te falar.\",\"Contacta-me quando puderes, prec",
+    "override": "{\"target\":\"Háblame cuando puedas, necesito hablar contigo.\"}"
+  },
+  {
+    "id": "c398eb39",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"front\":\"Palabra para 'afecto, cariño' en PT-BR\",\"back\":\"afecto / afeto\",\"example\":\"Ela tem muito afeto pelos alunos.\"}",
+    "override": "{\"back\":\"afecto\",\"example\":\"Ela tem muito afecto pelos alunos.\"}"
+  },
+  {
+    "id": "f35d479c",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Perdí todos mis contactos del trabajo cuando cambié de teléfono.\",\"target\":\"Perdi todos os meus contactos do trabalho quando mudei de telemóvel.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Perdi todos os meus contatos do trabalh",
+    "override": "{\"target\":\"Perdi todos os meus contatos do trabalho quando troquei de telefone.\",\"acceptedAlternatives\":[\"Perdi todos os meus contactos do trabalho quando mudei de telemóvel.\"]}"
+  },
+  {
+    "id": "fc80a430",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"front\":\"Traduce al PT-PT: 'Ela tem os contactos do escritório.'\",\"back\":\"Ela tem os contatos do escritório.\",\"example\":\"PT-PT usa 'ct' en lugar de 'c': contactos, afectivo, corretor.\"}",
+    "override": "{\"back\":\"Ela tem os contactos do escritório.\"}"
+  },
+  {
+    "id": "2d31b5e1",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"O cientista e a cientista apresentaram os resultados.\",\"target\":\"O cientista e a cientista apresentaram os resultados.\",\"sourceLang\":\"pt-br\",\"targetLang\":\"es\",\"acceptedAlternatives\":[\"O pesquisador e a pesquisadora apresentaram os resultados.\"]}",
+    "override": "{\"target\":\"El científico y la científica presentaron los resultados.\",\"acceptedAlternatives\":[]}"
+  },
+  {
+    "id": "4bd239bf",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Su contacto es muy importante para nosotros.\",\"target\":\"O vosso contacto é muito importante para nós.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"O contacto de vocês é muito importante para nós.\",\"O vosso contacto é muito import",
+    "override": "{\"target\":\"O contato de vocês é muito importante para nós.\",\"acceptedAlternatives\":[\"O vosso contato é muito importante para nós.\",\"O contato de vocês é muito importante para nós.\",\"O vosso contato é muito importante para nós.\"]}"
+  },
+  {
+    "id": "1c539301",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"front\":\"¿Cómo se dice 'menú' en portugués (PT-BR)?\",\"back\":\"ementa\",\"example\":\"Posso ver o cardápio, por favor?\"}",
+    "override": "{\"back\":\"cardápio\"}"
+  },
+  {
+    "id": "35aaf4d6",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Esto me parece razonable, pero dime qué sabes tú.\",\"target\":\"Isto parece-me razoável, mas diz-me o que sabes.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Isto parece-me razoável, mas conta-me o que sabes.\"]}",
+    "override": "{\"target\":\"Isto parece-me razoável, mas diz-me o que sabes tu.\",\"acceptedAlternatives\":[\"Isto me parece razoável, mas diz-me o que tu sabes.\"]}"
+  },
+  {
+    "id": "411fcf29",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"No pienses más en eso y trae el próximo informe.\",\"target\":\"Não pienses nisso e traz o relatório seguinte.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Não pienses nisso e tráia o relatório seguinte.\"]}",
+    "override": "{\"target\":\"Não penses mais nisso e traz o próximo relatório.\",\"acceptedAlternatives\":[\"Não penses nisso mais e traz o próximo relatório.\"]}"
+  },
+  {
+    "id": "4813e82c",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Sé honesto conmigo y dime si quieres ir.\",\"target\":\"Sê honesto comigo e diz-me se queres ir.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Tem honestidade comigo e diz-me se queres ir.\"]}",
+    "override": "{\"acceptedAlternatives\":[\"Seja honesto comigo e diga-me se quer ir.\"]}"
+  },
+  {
+    "id": "4bf4fdc2",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Esperen un momento, por favor.\",\"target\":\"Espere um momento, faça o favor.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Espere um momento, se faz favor.\"]}",
+    "override": "{\"target\":\"Esperem um momento, por favor.\",\"acceptedAlternatives\":[\"Aguarde um momento, por favor.\"]}"
+  },
+  {
+    "id": "521b1ea8",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"No venga mañana, por favor.\",\"target\":\"Não venha amanhã, faz o favor.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Não venha amanhã, se faz favor.\"]}",
+    "override": "{\"target\":\"Não venha amanhã, por favor.\",\"acceptedAlternatives\":[\"Não venha amanhã, por obséquio.\"]}"
+  },
+  {
+    "id": "60757158",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"front\":\"Qué significa 'poupar' dinero?\",\"back\":\"Significa 'ahorrar', guardar dinero para el futuro.\",\"example\":\"Estou a poupar para comprar um apartamento. (PT-PT) / Estou poupar para comprar um apartamento. (PT-BR informal)\"}",
+    "override": "{\"example\":\"Estou a poupar para comprar um apartamento.\"}"
+  },
+  {
+    "id": "6b1f353f",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"¿Me trae la cuenta, señor?\",\"target\":\"Traga-me a conta, se faz favor.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Poderia trazer-me a conta, se faz favor?\",\"A conta, se faz favor.\"]}",
+    "override": "{\"target\":\"Traga-me a conta, por favor.\",\"acceptedAlternatives\":[\"Poderia trazer-me a conta?\",\"A conta, por favor.\",\"Traga a conta, por favor.\"]}"
+  },
+  {
+    "id": "8c65ec46",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Presentemente hago lo que puedo.\",\"target\":\"Presentemente faço o que consigo.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Presentemente faço o que me é possível.\"]}",
+    "override": "{\"target\":\"Presentemente faço o que posso.\",\"acceptedAlternatives\":[\"Faço o que posso presentemente.\"]}"
+  },
+  {
+    "id": "9d033dc3",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"front\":\"En português brasileiro, cuál es la diferencia entre 'há' y 'tem' para expresar existencia?\",\"back\":\"Em PT-PT se usa quase só 'há' para existencial. 'Tem' para existir es muy coloquial.\",\"example\":\"Há três anos / Tem três anos = Hace tres años.\"}",
+    "override": "{\"back\":\"En PT-BR son interchangeables: 'Há' es más formal y 'tem' es más coloquial. Ambos significan 'existe/existen'.\"}"
+  },
+  {
+    "id": "a157534c",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Vocês estão satisfeitos com o jantar?\",\"target\":\"¿Estáis satisfechos con la cena?\",\"sourceLang\":\"pt-br\",\"targetLang\":\"es\",\"acceptedAlternatives\":[\"¿Están satisfechos con la cena?\",\"¿Ustedes están satisfechos con la cena?\"]}",
+    "override": "{\"target\":\"¿Están satisfechos con la cena?\",\"acceptedAlternatives\":[\"¿Ustedes están satisfechos con la cena?\"]}"
+  },
+  {
+    "id": "b8e4ead8",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Si no estás satisfecho con tu plato, puedes devolverlo.\",\"target\":\"Se não estás satisfeito com o teu prato, podes devolvê-lo.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Se não estiver satisfeito com o teu prato, pode devolvê-lo",
+    "override": "{\"acceptedAlternatives\":[\"Se não estiver satisfeito com o prato, pode devolvê-lo.\",\"Se não está satisfeito com o seu prato, pode devolvê-lo.\"]}"
+  },
+  {
+    "id": "d0f4b305",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"sentence\":\"Em Portugal, ___ muito trabalho esse mês.\",\"blanks\":[{\"position\":0,\"answer\":\"há\",\"alternatives\":[]}]}",
+    "override": "{\"sentence\":\"No Brasil, a gente ___ muito trabalho esse mês.\",\"blanks\":[{\"position\":0,\"answer\":\"tem\",\"alternatives\":[]}]}"
+  },
+  {
+    "id": "33979c62",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Me quedé en casa porque estaba lloviendo.\",\"target\":\"Fiquei em casa porque estava a chover.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Fiquei em casa porque estava a chover.\"]}",
+    "override": "{\"target\":\"Fiquei em casa porque estava chovendo.\"}"
+  },
+  {
+    "id": "4249e8ec",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"front\":\"Diferencia PT-BR vs PT-PT: 'nosotros cantamos' en pretérito\",\"back\":\"PT-BR: cantamos / PT-PT: cantámos (tilde en la 4ª persona)\",\"example\":\"PT-BR: Nós cantamos ontem / PT-PT: Nós cantámos ontem\"}",
+    "override": "{\"back\":\"PT-BR: cantamos / PT-PT: cantámos (con tilde)\"}"
+  },
+  {
+    "id": "811f720b",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Cuando éramos pequeños, nos hospedábamos en casa de nuestros abuelos cada verano.\",\"target\":\"Quando éramos pequenos, hospedávamo-nos na casa dos nossos avós todos os verões.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\"}",
+    "override": "{\"target\":\"Quando éramos pequenos, hospedávamo-nos em casa dos nossos avós todos os verões.\"}"
+  },
+  {
+    "id": "9995bd11",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"front\":\"¿Dónde se usa más el Pretérito mais-que-perfeito SIMPLES (-ra)?\",\"back\":\"Se usa más en PT-PT y en textos literarios. En PT-BR hablado se prefiere el composto.\",\"example\":\"PT-PT: Ele dissera a verdade. / PT-BR hablado: Ele tinha dito a verdade.\"}",
+    "override": "{\"back\":\"Se usa más en PT-PT (Portugal), en textos literarios, y en el habla formal de Brasil. En el habla coloquial brasileira se prefiere el compuesto.\"}"
+  },
+  {
+    "id": "eed20fe6",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"front\":\"Traduce: '¿Dónde quedaste en las vacaciones?'\",\"back\":\"Onde ficaste nas férias?\",\"example\":\"Onde ficaste nas férias?\"}",
+    "override": "{\"back\":\"Onde ficaste nas férias? (PT-PT) / Onde você ficou nas férias? (PT-BR)\",\"example\":\"PT-BR: Onde você ficou nas férias? / PT-PT: Onde ficaste nas férias?\"}"
+  },
+  {
+    "id": "38f7c35c",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Si constituyeras una família, tendrías muchos más gastos.\",\"target\":\"Se constituísses uma família, terias muitas mais despesas.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Se constituísses uma família, terias muitas mais despesa",
+    "override": "{\"acceptedAlternatives\":[\"Se constituísses uma família, terias muitos mais gastos.\"]}"
+  },
+  {
+    "id": "4bf2e9a6",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Vocês vão adorar esta cidade!\",\"target\":\"¡Vosotros vais a adorar esta ciudad!\",\"sourceLang\":\"pt-br\",\"targetLang\":\"es\",\"acceptedAlternatives\":[\"¡Vais a adorar esta ciudad!\"]}",
+    "override": "{\"target\":\"¡Ustedes van a adorar esta ciudad!\",\"acceptedAlternatives\":[\"¡Van a adorar esta ciudad!\"]}"
+  },
+  {
+    "id": "5310ac04",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"¿Podrías darme un consejo?\",\"target\":\"Poderia dar-me um conselho?\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Poderia me dar um conselho?\",\"Será que poderia dar-me um conselho?\",\"Poderia aconselhar-me?\"]}",
+    "override": "{\"target\":\"Poderia me dar um conselho?\",\"acceptedAlternatives\":[\"Poderia dar-me um conselho?\",\"Será que poderia me dar um conselho?\",\"Poderia me aconselhar?\"]}"
+  },
+  {
+    "id": "9294ae28",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"audioText\":\"Em Portugal, vai haver aula online amanhã por causa da chuva.\",\"question\":\"¿Qué va a pasar mañana en Brasil según el audio?\",\"options\":[\"Habrá clases presenciales\",\"No habrá clases\",\"Habrá clases online\",\"Se cancelarán los precios\"],\"answer\":\"Hab",
+    "override": "{\"audioText\":\"No Brasil, vai ter aula online amanhã por causa da chuva.\"}"
+  },
+  {
+    "id": "a1463326",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Dime lo que querías decirme y te diré si podré ayudarte.\",\"target\":\"Diz-me o que querias dizer-me e eu dir-te-ei se poderei ajudar-te.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Dize-me o que querias dizer-me e eu dir-te-ei se ",
+    "override": "{\"acceptedAlternatives\":[\"Me diz o que você queria me dizer e eu te direi se poderei te ajudar.\"]}"
+  },
+  {
+    "id": "ca13ea5c",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"front\":\"Traduce al portugués: '¿Tienes un plan concreto o solo estás soñando?'\",\"back\":\"Tens um plano concreto ou só estás a sonhar?\",\"example\":\"Tens um plano concreto ou só estás a sonhar? → PT-BR: Você tem um plano concreto ou só está sonhando?\"}",
+    "override": "{\"example\":\"Tens um plano concreto ou só estás a sonhar? Precisa ser mais realista.\"}"
+  },
+  {
+    "id": "e269e14b",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"front\":\"Si me esforzara más, probablemente aprovaría el examen.\",\"back\":\"Se eu me esforçasse mais, provavelmente aprovaria o exame.\\n(En PT-PT: 'aprovar' funciona igual, pero en contextos de examen se dice más 'fazer o exame'.)\"}",
+    "override": "{\"back\":\"Se eu me esforçasse mais, provavelmente aprovaria o exame.\"}"
+  },
+  {
+    "id": "442b94b3",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Es posible que al inicio no tengas confianza para expresarte.\",\"target\":\"É possível que no início não tenhas confiança para te expressares.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"É possível que no início não tenhas confianç",
+    "override": "{\"target\":\"É possível que no início não tenhas confiança para te expressar.\"}"
+  },
+  {
+    "id": "58cb5eb0",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"front\":\"Complete: Quando ele ___ (pôr) o formulário, saberemos o rumo do processo.\",\"back\":\"pôr (forma no futuro do conjuntivo) → puser (PT-PT) / puser (PT-BR)\",\"example\":\"Quando ele puser o formulário, saberemos o rumo do processo.\"}",
+    "override": "{\"back\":\"pôr\"}"
+  },
+  {
+    "id": "9de2263f",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Duvido que ele saiba lidar com essa situação.\",\"target\":\"Dudo que él sepa tratar con esa situación.\",\"sourceLang\":\"pt-br\",\"targetLang\":\"es\",\"acceptedAlternatives\":[\"Dudo que él sepa dealing con esa situación.\"]}",
+    "override": "{\"target\":\"Dudo que él sepa lidar con esa situación.\"}"
+  },
+  {
+    "id": "f086f74d",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Si nosotros hubiéramos sospechado algo, habríamos actuado antes.\",\"target\":\"Se nós tivéssemos suspeitado algo, teríamos agido antes.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Se nós tivéssemos suspectado algo, teríamos agido a",
+    "override": "{\"target\":\"Se nós tivéssemos suspectado algo, teríamos agido antes.\",\"acceptedAlternatives\":[\"Se nós tivéssemos suspeitado algo, teríamos atuado antes.\"]}"
+  },
+  {
+    "id": "1bf08752",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Ellos prefieren que ustedes trabajen desde casa.\",\"target\":\"Eles preferem vocês trabalharem em casa.\",\"sourceLang\":\"pt-br\",\"targetLang\":\"es\",\"acceptedAlternatives\":[]}",
+    "override": "{\"acceptedAlternatives\":[\"Ellos prefieren que ustedes trabajen desde casa.\"]}"
+  },
+  {
+    "id": "47e12b26",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Me despierto cada día pensando en lo mismo.\",\"target\":\"Acordo todos os dias a pensar na mesma coisa.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[]}",
+    "override": "{\"target\":\"Acordo todos os dias pensando na mesma coisa.\",\"acceptedAlternatives\":[\"Acordo todos os dias a pensar na mesma coisa.\"]}"
+  },
+  {
+    "id": "4e0d553f",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Estoy hablando con mi amiga.\",\"target\":\"Estou a falar com a minha amiga.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Estou a falar com a minha amiga.\"]}",
+    "override": "{\"target\":\"Estou falando com minha amiga.\",\"acceptedAlternatives\":[\"Estou a falar com minha amiga.\"]}"
+  },
+  {
+    "id": "5f90f678",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"front\":\"Usar HAVER en perfecto compuesto (PT-PT)\",\"back\":\"PT-PT: Haver + participio es la norma para perfecto compuesto\",\"example\":\"PT-PT: Eu hei feito a tarefa. / PT-BR: Eu tenho feito a tarefa.\"}",
+    "override": "{\"back\":\"PT-PT: Haver + participio = tiempo perfecto compuesto\"}"
+  },
+  {
+    "id": "77b1c4bb",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Ella está caminando por la playa.\",\"target\":\"Ela está a andar pela praia.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[]}",
+    "override": "{\"target\":\"Ela está andando pela praia.\",\"acceptedAlternatives\":[\"Ela está a andar pela praia.\"]}"
+  },
+  {
+    "id": "92a52ca0",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Estoy intentando encontrar la dirección correcta.\",\"target\":\"Estou a tentar encontrar o endereço certo.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[]}",
+    "override": "{\"target\":\"Estou tentando encontrar o endereço certo.\",\"acceptedAlternatives\":[\"Estou a tentar encontrar o endereço certo.\"]}"
+  },
+  {
+    "id": "a21205af",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Nos encontramos esperando el autobús cuando empezó a llover.\",\"target\":\"Estávamos a esperar o ônibus quando começou a chover.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[]}",
+    "override": "{\"target\":\"Estávamos esperando o ônibus quando começou a chover.\",\"acceptedAlternatives\":[\"Estávamos a esperar o ônibus quando começou a chover.\"]}"
+  },
+  {
+    "id": "fb2ebf43",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Necesito que vengas mañana.\",\"target\":\"Preciso que venha(s) amanhã.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"É preciso que venha(s) amanhã.\"]}",
+    "override": "{\"target\":\"Preciso que venhas amanhã.\",\"acceptedAlternatives\":[\"É preciso que venhas amanhã.\"]}"
+  },
+  {
+    "id": "0e2df799",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Imagina cómo será la fiesta cuando llegue el verano.\",\"target\":\"Imagina como será a festa quando chegar o verão.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Imagina como vai ser a festa quando o verão chegar.\"]}",
+    "override": "{\"target\":\"Imagina como vai ser a festa quando chegar o verão.\",\"acceptedAlternatives\":[\"Imagina como será a festa quando chegar o verão.\",\"Imagina como vai ser a festa quando o verão chegar.\"]}"
+  },
+  {
+    "id": "23f3b01e",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"El director cuyo guión ganaba premios era un estreante.\",\"target\":\"O realizador cujo guião recebia prémios era um estreante.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"O realizador cujo guião recebia prémios era um estreante.\"]",
+    "override": "{\"target\":\"O realizador cujo guião ganhava prémios era um estreante.\"}"
+  },
+  {
+    "id": "2acce101",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"front\":\"¿Qué ocurre con la colocación en español con ‘vamos’? ¿ ‘Vamos nos informar’ o ‘Vamos nos informar’?\",\"back\":\"Em Portugal diz-se ‘Vamos informar-nos’ (ênclise com infinitivo) ou ‘Vamos nos informar’.\",\"example\":\"Vamos nos informar sobre o assunto.\"}",
+    "override": "{\"back\":\"Vamos nos informar / Vamos nos informar (próclise con ‘ir’). En PT-BR informal se acepta ‘a gente vai se informar’.\"}"
+  },
+  {
+    "id": "315cc2f3",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Cuando consiga hablar contigo, te lo explicaré todo.\",\"target\":\"Quando conseguir falar contigo, explicar-te-ei tudo.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"Quando eu conseguir falar contigo, explicar-te-ei tudo.\"]}",
+    "override": "{\"target\":\"Quando conseguir conversar contigo, vou explicar-te tudo.\",\"acceptedAlternatives\":[\"Quando conseguir falar contigo, explicar-te-ei tudo.\",\"Quando eu conseguir conversar contigo, vou-te explicar tudo.\"]}"
+  },
+  {
+    "id": "9b8358e3",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"La situación era muy complicada; por eso, tuve que actuar con urgencia.\",\"target\":\"A situação era muito complicada; por conseguinte, tive de agir com urgência.\",\"sourceLang\":\"es\",\"targetLang\":\"pt-br\",\"acceptedAlternatives\":[\"A situação era muito com",
+    "override": "{\"target\":\"A situação era muito complicada; por isso, tive de agir com urgência.\"}"
+  },
+  {
+    "id": "a12c3597",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"source\":\"Dir-se-á que a solução existe.\",\"target\":\"Se dirá que a solução existe.\",\"sourceLang\":\"pt-br\",\"targetLang\":\"es\",\"acceptedAlternatives\":[\"Se diría que a solução existe.\"]}",
+    "override": "{\"target\":\"Se dirá que la solución existe.\",\"acceptedAlternatives\":[\"Se diría que la solución existe.\"]}"
+  },
+  {
+    "id": "bee35d9b",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"front\":\"¿Diferencia entre 'por isso' y 'então' como conectores consecutivos?\",\"back\":\"portanto / então (por eso, por lo tanto) — Conectores consecutivos en PT-PT.\",\"example\":\"Fazia calor, por isso / então abrimos a janela.\"}",
+    "override": "{\"back\":\"por isso / então (por eso, por lo tanto) — Conectores consecutivos en PT-BR.\"}"
+  },
+  {
+    "id": "c246ac35",
+    "motivo": "metalingüístico: el enunciado nombra una variedad, así que la inversión del 2026-07-28 pudo dejar el marco al revés. Hay que leerlo y decidir qué forma va en cada lado.",
+    "base": "{\"front\":\"Coloca el pronombre: É necessário que você ___ (dizer) a verdade.\",\"back\":\"É necessário que me digas a verdade.\",\"example\":\"É necessário que me digas a verdade. (PT-PT)\"}",
+    "override": "{\"back\":\"diga a verdade / que você diga a verdade — próclise tras ‘que’ conjunción\"}"
   }
 ]
