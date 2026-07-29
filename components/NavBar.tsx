@@ -21,6 +21,7 @@ export function NavBar() {
     { href: `/${lang}`, label: "Estudar" },
     { href: `/${lang}/blocks`, label: "Livro" },
     { href: `/${lang}/stories`, label: "Histórias" },
+    { href: `/${lang}/leer`, label: "Ler" },
     { href: `/${lang}/progreso`, label: "Progresso" },
     // A.6: nav item now points at the new /cuenta hub (Manual Lusitano
     // chrome) rather than the legacy /settings page. The /settings URL

@@ -59,13 +59,13 @@ async function main() {
         // El hash guardado debe corresponder a ALGUNO de los textos
         // actuales del ítem con la voz guardada. speed y model son los
         // por defecto del pipeline (speed 1, TTS_MODEL constante).
-        const esperados = textos.map((text) =>
+        const esperados = textos.map((text: string) =>
           ttsHash({ text, voiceId: ref.voice, variant: corta }),
         );
         if (!esperados.includes(ref.hash)) {
           caducos.push(
             `${f} ${ex.id} (${ex.type}, ${corta}): la grabación no corresponde al texto actual — ` +
-            `dice otra cosa que «${textos[0].slice(0, 60)}»`,
+            `dice otra cosa que «${textos[0]?.slice(0, 60) ?? ''}»`,
           );
         }
       }

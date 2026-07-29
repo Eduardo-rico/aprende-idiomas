@@ -272,6 +272,51 @@ export async function loadConcepts(lang: LanguageId): Promise<Concept[]> {
   }
 }
 
+// ─── Lecturas (biblioteca karaoke, Ola L) ────────────────────────
+//
+// Cada lectura es un JSON con procedencia (título, autor, año de muerte,
+// fuente — el gate del generador no deja entrar nada sin los cuatro) y
+// los párrafos con tiempos por palabra de /with-timestamps. El audio
+// vive en public/lecturas/{id}/pNNN.mp3. Fail-soft como todo lo demás:
+// idioma sin lecturas → lista vacía.
+
+export interface PalabraKaraoke { t: string; s: number; e: number }
+export interface ParrafoLectura { mp3: string; texto: string; palabras: PalabraKaraoke[] }
+export interface Lectura {
+  id: string; titulo: string; autor: string; muerteAutor: number;
+  fuente: string; fuenteUrl: string; licencia: string; nivel: string;
+  notaOrtografia?: string; parrafos: ParrafoLectura[];
+}
+
+function lecturasDir(lang: LanguageId): string {
+  return path.join(process.cwd(), 'lib/data/languages', lang, 'lecturas');
+}
+
+export async function loadLecturas(lang: LanguageId): Promise<Lectura[]> {
+  try {
+    const files = (await fs.readdir(lecturasDir(lang))).filter((f) => f.endsWith('.json'));
+    const out: Lectura[] = [];
+    for (const f of files.sort()) {
+      out.push(JSON.parse(await fs.readFile(path.join(lecturasDir(lang), f), 'utf-8')));
+    }
+    return out;
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === 'ENOENT') return [];
+    throw err;
+  }
+}
+
+export async function loadLectura(lang: LanguageId, id: string): Promise<Lectura | null> {
+  if (!/^[a-z0-9-]+$/.test(id)) return null; // defensa ?id=../../etc
+  try {
+    const raw = await fs.readFile(path.join(lecturasDir(lang), `${id}.json`), 'utf-8');
+    return JSON.parse(raw) as Lectura;
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === 'ENOENT') return null;
+    throw err;
+  }
+}
+
 // ─── Eje MCER (JSON) ─────────────────────────────────────────────
 //
 // Descriptores can-do y TaskSpecs por idioma. Fail-soft como el resto:
