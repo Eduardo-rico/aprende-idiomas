@@ -179,6 +179,32 @@ export interface DailyGoalRow {
   achievedMinutes: number;
 }
 
+/** v9: evidencia MCER.
+ *
+ *  Una fila por respuesta correcta a un ejercicio anclado a un descriptor
+ *  can-do. Es lo que hace que el eje de niveles se mueva con lo que el
+ *  alumno YA estudia, en vez de quedarse en cero esperando tareas que
+ *  todavía no existen.
+ *
+ *  Regla de recuento (lib/db/evidence.ts): cuentan los EJERCICIOS
+ *  DISTINTOS, no las respuestas — machacar la misma tarjeta diez veces es
+ *  una evidencia, no diez—, y para un umbral de 2 o más se exigen además
+ *  DOS DÍAS DISTINTOS. Acertar dos veces seguidas es memoria de trabajo;
+ *  acertar en dos días es haber aprendido. */
+export interface EvidenceRow {
+  id?: number;
+  descriptorId: string;
+  /** El ejercicio que produjo la evidencia. Clave de la deduplicación. */
+  exerciseId: string;
+  /** YYYY-MM-DD local, para exigir dispersión temporal sin recalcular fechas. */
+  day: string;
+  ts: Date;
+  language: string;
+  /** Sólo se guardan las correctas; el campo queda por si en el futuro se
+   *  quiere medir la curva de acierto por descriptor. */
+  correct: boolean;
+}
+
 class AppDB extends Dexie {
   cards!: EntityTable<Card, "id">;
   sessions!: EntityTable<Session, "id">;
@@ -198,6 +224,7 @@ class AppDB extends Dexie {
   uiState!: EntityTable<UiStateRow, "key">;
   telemetry!: EntityTable<TelemetryEvent, "id">;
   dailyGoals!: EntityTable<DailyGoalRow, "date">;
+  evidence!: EntityTable<EvidenceRow, "id">;
 
   constructor() {
     super("PortuguesAppDB");
@@ -271,6 +298,13 @@ class AppDB extends Dexie {
       conceptMastery: "conceptId, blockId, isMastered, lastReviewed",
     }).upgrade(async (tx) => {
       await v8UpgradeHook(tx);
+    });
+
+    // v9 · evidencia MCER. Tabla nueva y nada más: no toca ninguna tabla
+    // existente, así que no necesita hook de migración — Dexie la crea
+    // vacía y el usuario no pierde nada.
+    this.version(9).stores({
+      evidence: "++id, descriptorId, exerciseId, day, language, [descriptorId+exerciseId], [descriptorId+day]",
     });
   }
 }

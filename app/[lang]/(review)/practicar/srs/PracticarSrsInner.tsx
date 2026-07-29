@@ -134,6 +134,7 @@ export function PracticarSrsInner({ lang }: { lang: LanguageId }) {
         variant,
         conceptIds: ex.concepts ?? [],
         blockId: ex.blockId,
+        exerciseType: ex.type,
         sessionId: sessionId ?? undefined,
       });
     },

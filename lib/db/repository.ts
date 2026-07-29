@@ -7,6 +7,7 @@ import { resetLeech, isLeech, getLeechAction } from "../srs/leeches";
 import { recordAnswerForConcepts } from "../mastery/concept";
 import { currentStreak, didStudyToday, isStreakAlive } from "@/lib/streak/streak";
 import { levelFromXp } from "@/lib/xp/calculator";
+import { registrarEvidencia } from "./evidence";
 import { RULES, type AppState } from "@/lib/achievements/rules";
 import { DEFAULT_LANGUAGE, type LanguageId } from "@/lib/locales";
 import { type VariantKey, legacyVariantToKey } from "@/lib/data/variant";
@@ -158,6 +159,10 @@ export interface SubmitAnswerParams {
   conceptIds: string[];
   blockId: number;
   sessionId?: number;
+  /** Tipo de ejercicio. Determina qué DESTREZA evidencia la respuesta
+   *  (lib/data/anchor.ts). Opcional para no romper llamadas antiguas: sin
+   *  él simplemente no se registra evidencia MCER. */
+  exerciseType?: string;
 }
 
 export async function submitAnswer(p: SubmitAnswerParams): Promise<Card> {
@@ -208,6 +213,28 @@ export async function submitAnswer(p: SubmitAnswerParams): Promise<Card> {
         await db.cards.put(reset);
         updated = reset;
       }
+    }
+  }
+
+  // Ola 2b: la respuesta cuenta hacia el nivel MCER.
+  //
+  // Va FUERA de la transacción y con su propio try: perder una evidencia
+  // es molesto, perder la calificación FSRS por un fallo al anotarla sería
+  // absurdo. El eje de niveles no puede hacer daño al motor de repaso.
+  if (p.exerciseType) {
+    try {
+      await registrarEvidencia({
+        exerciseId: p.cardId,
+        type: p.exerciseType,
+        blockId: p.blockId,
+        correct: p.rating >= 3,
+        language: typeof p.variant === "string" && p.variant.startsWith("pt") ? "pt" : String(p.variant),
+      });
+    } catch (e) {
+      await logTelemetry("warn", "evidencia", "no se pudo registrar evidencia MCER", {
+        cardId: p.cardId,
+        error: e instanceof Error ? e.message : String(e),
+      });
     }
   }
 
