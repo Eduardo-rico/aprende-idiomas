@@ -5,6 +5,9 @@
 1. **Techo: C2** en los cuatro idiomas.
 2. **Lectura: 1,9M palabras** — el catálogo completo, dominio público (uso personal, ya confirmado).
 3. **Idiomas: los cuatro** — PT-PT (con sombra PT-BR), rumano, checo y ruso.
+4. **SECUENCIAL** (añadido el mismo día): «terminemos portugués y después hagamos los demás». PT completo 0→C2 + lectura ANTES de levantar el primer bloque de RO.
+5. **Inmersión nativa por idioma**: chistes del idioma —no traducidos—, comidas del país, mundo propio. Regla dura para TODO contenido cultural.
+6. **Lectura con karaoke**: el texto se resalta sincronizado con el audio, palabra a palabra.
 
 Este documento ordena; los diseños viven donde ya están: currículos en `2026-07-28-curriculos-completos.md` (corregidos dos veces), serie en `2026-07-28-serie-inmersiva-y-revision-material.md`, contenido narrado en `docs/contenido/`.
 
@@ -28,15 +31,16 @@ Este documento ordena; los diseños viven donde ya están: currículos en `2026-
 
 ## Las olas, en orden
 
-### Ola L — la biblioteca de lectura (PT primero) ← LA SIGUIENTE
+### Ola L — la biblioteca de lectura, SOLO PT ← LA SIGUIENTE
 
 Es la primera porque **desbloquea B2-C2 sin esperar a nadie**: la lectura extensiva es el único insumo de esos niveles que no necesita revisor nativo (los textos son de nativos muertos) ni generación por LLM (cero riesgo de inventar lengua).
 
 1. **Infraestructura** (la app): sección `/[lang]/leer` — catálogo por nivel, lector con diccionario emergente, progreso a la capa de evidencia MCER, audio TTS por capítulo con las voces aprobadas.
 2. **Curaduría PT** (~700k de los 1,9M): dominio público — Eça de Queirós, Camilo, Pessoa (bien muerto en 1935), Almeida Garrett; graduación por nivel medida con el vocabulario acumulado del alumno, no a ojo. Fábulas y cuentos cortos abajo, novela entera arriba (*Os Maias* es el techo C2 natural).
 3. **Gate de procedencia**: cada texto con fuente, autor, año de muerte del autor y URL de origen en un manifiesto — nada entra sin los cuatro campos.
-4. RO (~400k): Creangă, Eminescu, Caragiale, Slavici. CS (~400k): Němcová, Neruda (Jan), Hašek. RU (~400k): Chéjov, Pushkin, Tolstói corto, Zóshchenko si el corpus lo permite.
-5. **Chistes y poemas por nivel**: se escriben (no hay dominio público graduado) → pasan por el lingüista adversarial de su lengua ANTES de publicarse. Sin excepción: es la lección más cara ya pagada.
+4. **Lector karaoke** (requisito de Edu, no extra): audio generado con `/with-timestamps` de ElevenLabs (alineación por carácter) y resaltado sincronizado en el lector. Se pilota con UN texto antes del lote.
+5. **Chistes y poemas por nivel — nativos del idioma, jamás traducidos**: se escriben (no hay dominio público graduado) → pasan por el lingüista adversarial de su lengua ANTES de publicarse. Sin excepción: es la lección más cara ya pagada.
+6. RO/CS/RU **esperan a que PT esté terminado** (decisión secuencial). Cuando toquen: Creangă/Eminescu/Caragiale · Němcová/Hašek · Chéjov/Pushkin — y sus chistes, comidas y mundo PROPIOS.
 
 ### Ola V — verificación del corpus PT existente
 
