@@ -30,24 +30,46 @@ const nativa = (() => {
 const sep = Math.round((nativa / med('N') - 1) * 100);
 const totalMin = (pistas.reduce((a, p) => a + p.seg, 0) / 60).toFixed(1);
 
+// Los episodios montados: cada pieza en un solo audio continuo, con los
+// silencios de la dirección y los filtros de espacio aplicados. Es la
+// forma en que esto se escucha de verdad; la lista de réplicas de abajo
+// es para trabajar sobre ella, no para oírla del tirón.
+const montados = (() => {
+  const f = path.join(DIR, 'episodios', 'episodios.json');
+  if (!fs.existsSync(f)) return {};
+  return Object.fromEntries(JSON.parse(fs.readFileSync(f, 'utf8')).map((e) => [e.pieza, e]));
+})();
+
+const FILTRO_ETQ = {
+  megafonia: 'megafonía', cristal: 'tras el cristal', telefono: 'teléfono', fondo: 'al fondo',
+};
+
 const seccion = (k) => {
   const rs = pistas.filter((p) => p.pieza === k);
-  const min = (rs.reduce((a, p) => a + p.seg, 0) / 60).toFixed(1);
+  const mont = montados[k];
+  const min = mont ? mont.min.toFixed(1) : (rs.reduce((a, p) => a + p.seg, 0) / 60).toFixed(1);
   const filas = rs.map((p) => {
     const [cls, etq] = CAPA[p.capa] ?? ['real', '?'];
+    const filtro = p.filtro ? `<span class="flt">${FILTRO_ETQ[p.filtro] ?? p.filtro}</span>` : '';
     return `<div class="ln ${cls}">
-  <div class="meta"><span class="cap">${etq}</span><span class="who">${esc(p.quien)}</span>
+  <div class="meta"><span class="cap">${etq}</span><span class="who">${esc(p.quien)}</span>${filtro}
     <span class="ppm" title="ppm medidos con ffprobe · objetivo ${p.ppm}">${p.ppmReal} ppm</span></div>
   <p class="pt">${esc(p.texto)}</p>
   <p class="dir">${esc(p.direccion)}</p>
-  <audio controls preload="none" data-seq="${k}" src="${esc(p.archivo)}"></audio>
+  <audio controls preload="none" data-seq="${k}" src="${esc(p.archivoFiltrado ?? p.archivo)}"></audio>
 </div>`;
   }).join('');
+  const player = mont
+    ? `<div class="montado"><div class="mh"><span class="ml">Episodio montado</span>
+        <span class="mn">silencios de la dirección · filtros de espacio aplicados</span></div>
+       <audio controls preload="none" src="${esc(mont.archivo)}"></audio></div>`
+    : '';
   return `<section class="ep" id="${k}">
   <div class="eh"><h2>${k.startsWith('ep') ? 'Episodio ' + k.slice(2) : 'Pieza ' + k.slice(1)}</h2>
     <span class="et">«${esc(rs[0].titulo)}»</span>
     <span class="ec">${rs.length} réplicas · ${min} min</span>
-    <button class="play" data-ep="${k}">▶ Seguido</button></div>
+    <button class="play" data-ep="${k}">▶ Réplica a réplica</button></div>
+  ${player}
   ${filas}</section>`;
 };
 
@@ -130,6 +152,12 @@ h2{font-family:var(--serif);font-size:23px;letter-spacing:-.02em;margin:0;font-w
 .orienta .cap{background:var(--review-soft);color:var(--review)}
 .who{font-family:var(--serif);font-size:14.5px;font-weight:600}
 .ppm{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);margin-left:auto;font-variant-numeric:tabular-nums}
+.flt{font-family:var(--mono);font-size:9.5px;text-transform:uppercase;letter-spacing:.07em;padding:1px 6px;border-radius:3px;
+  background:var(--plum-soft);color:var(--plum)}
+.montado{background:var(--surface);border:1px solid var(--cobalt-line);border-radius:11px;padding:13px 15px;margin:0 0 14px}
+.mh{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:7px}
+.ml{font-family:var(--serif);font-size:16px;font-weight:600}
+.mn{font-family:var(--mono);font-size:10.5px;color:var(--ink-3)}
 .pt{font-family:var(--serif);font-size:18.5px;line-height:1.42;margin:0 0 5px;letter-spacing:-.008em}
 .orienta .pt{font-style:italic;color:var(--ink-2);font-size:16.5px}
 .dir{font-size:12.5px;color:var(--ink-3);margin:0 0 6px;line-height:1.5}
@@ -150,6 +178,7 @@ footer b{color:var(--ink-2);font-weight:500}
     <div class="st"><span class="v">${nativa}</span><span class="l">habla nativa ppm</span></div>
     <div class="st good"><span class="v">${sep}%</span><span class="l">separación · diseño 42%</span></div>
     <div class="st"><span class="v">${med('2')}</span><span class="l">capa manejable ppm</span></div>
+    <div class="st"><span class="v">${Object.keys(montados).length}</span><span class="l">episodios montados</span></div>
   </div>
   <nav class="chips">${navChips}</nav>
 </div></header>
@@ -191,7 +220,8 @@ ${piezas.map(seccion).join('')}
 <footer><div class="pg">
   <b>Cómo se controló la velocidad.</b> El primer piloto salió con la separación de capas <b>invertida</b>: narradora a 158 ppm y habla real a 154. La causa es que <code>speed</code> no controla los ppm de verdad —manda la puntuación— y 0,7 es el suelo de la API. La salida estaba escrita en las propias direcciones, que llevan las pausas anotadas desde el guion y que nadie estaba ejecutando: ahora las pausas son parte del texto. Y la Capa 1 nunca baja de su velocidad natural, porque frenar al hablante nativo por debajo de su ritmo destruye lo único que hace que la capa signifique algo.<br>
   <b>Todo medido con ffprobe</b>, nunca estimado por tamaño de archivo, y descartando las réplicas de menos de seis palabras: un «Hã?» de una palabra arruina cualquier media.<br>
-  <b>Lo que falta.</b> El foley, el filtro de megafonía (pasa-banda 300-3400 Hz sobre las pistas de MEGAFONE), el filtro de cristal del ep. 10 y el de teléfono de la MÃE en P10. Esto es el núcleo dramático, que es lo que hay que escribir a mano; el resto se monta encima.
+  <b>Los filtros de espacio, aplicados.</b> Megafonía (pasa-banda 300-3400 Hz, compresión dura, reverb de sala), cristal, teléfono y fondo de sala — 19 réplicas, marcadas una a una abajo. Van por <b>quién está detrás del cristal, no por quién lo menciona</b>: un primer intento los detectó buscando palabras en la dirección y cazó a la narradora tres veces, porque su texto describe el vidrio sin estar detrás de él. Filtrarla habría sido el peor error del proyecto: su timbre tiene que ser idéntico en las trece piezas.<br>
+  <b>Lo que falta: el foley.</b> Las direcciones lo piden en casi todas las réplicas —loza, monedas sobre mármol, la campanilla, el trapo, el autocarro, la silla de plástico— y no hay biblioteca de sonido en el proyecto. Es lo único que queda entre esto y un episodio terminado.
 </div></footer>
 
 <script>
