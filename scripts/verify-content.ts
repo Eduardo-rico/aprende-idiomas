@@ -127,8 +127,15 @@ async function main() {
       // GeneratedExercise: contentHash y audio son invariantes.
       const g = GeneratedExerciseSchema.safeParse(ex);
       if (!g.success) {
-        if (AUDIO_REQUIRED.has(ex.type) && !ex.audio) {
+        // La exención debe ser explícita y motivada (ver `audioExento` en
+        // zod-schemas). No se infiere del tipo ni del idioma del texto:
+        // una puerta trasera que se abre sola convierte el requisito en
+        // decoración.
+        if (AUDIO_REQUIRED.has(ex.type) && !ex.audio && !ex.audioExento) {
           errors.push(`${ex.id} (${ex.type}): audio required but missing.`);
+        }
+        if (ex.audio && ex.audioExento) {
+          errors.push(`${ex.id}: declara audioExento y además tiene audio — decide cuál.`);
         }
         if (!ex.contentHash) {
           errors.push(`${ex.id}: contentHash missing.`);

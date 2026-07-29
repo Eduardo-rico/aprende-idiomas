@@ -28,6 +28,15 @@
     "prereqs": []
   },
   {
+    "id": "b1-corresp-h-f",
+    "name": "Correspondencia h- → f-",
+    "blockId": 1,
+    "description": "Sólo donde la h- viene de F- latina; prueba del cultismo (hijo/filial)",
+    "prereqs": [
+      "b1-h-muda"
+    ]
+  },
+  {
     "id": "b1-corresp-on-ao",
     "name": "Correspondencia -ón → -ão",
     "blockId": 1,

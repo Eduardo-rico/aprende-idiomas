@@ -185,7 +185,7 @@ Retención a 7 días · velocidad de respuesta media (`responseMs`, ya capturado
 | C5 | `stories/b10-s2-cartas...json` | "número detelefone" | "número de telefone" |
 | C6 | `stories/b7-s2-um-dia-comum...json` | gerundio/pronombre incoherente | reescribir natural |
 | C7 | `stories/b4-s2-ana-conta...json` | "avião aterrou no hotel" (absurdo) | "chegou ao hotel" |
-| C8 | `lessons/b4.json:29` | caracteres chinos sueltos (高频) | quitar |
+| C8 | `lessons/b4.json:29` | caracteres chinos sueltos (高频) | quitar | <!-- bleed-ok: cita los caracteres ofensores como ejemplo -->
 
 > **Gate de audio:** la regeneración de TTS queda CONGELADA hasta que todos los fixes de texto pasen el checklist. Re-generar solo los hashes afectados (no los 5.451 MP3).
 

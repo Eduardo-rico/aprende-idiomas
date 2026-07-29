@@ -13,7 +13,7 @@ not just lessons:
 
 - ~23 exercise entries across 7 blocks (b1, b3, b4, b5, b6, b8, b10) — both in
   audio/display fields (`pt`, `front`, `target`) and in hint/`esContrast` fields.
-- Examples: `de砖om concreto`, `Moi相似的 mais non idéntico`, `região`→`регион`.
+- Examples: `de砖om concreto`, `Moi相似的 mais non idéntico`, `região`→`регион`. <!-- bleed-ok: cita los caracteres ofensores como ejemplo -->
 - 1 story (b10-s2), and 7 lessons (already hand-fixed in 7e9762b).
 
 Root cause: the `highspeed` model is unreliable, and nothing in the pipeline
@@ -36,7 +36,7 @@ rejects non-Latin output.
   pedagogically). Empty list = clean.
 - `assertLatinScript(text, label)` → throws if non-Latin found.
 - Unit-tested: accepts PT/ES accents (ã, ç, é…), IPA (ʃ), arrows (→); rejects
-  CJK (桥), Cyrillic (с), Hangul, etc.
+  CJK (桥), Cyrillic (с), Hangul, etc. <!-- bleed-ok: cita los caracteres ofensores como ejemplo -->
 
 ### 2. Wiring (prevention)
 - `prompt-runner.ts`: items whose string fields contain non-Latin go to

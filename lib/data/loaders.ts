@@ -73,15 +73,59 @@ function emptyCurriculum(): CurriculumModule {
 // ─── Blocks (per-block JSON files) ───────────────────────────────
 
 /**
+ * Cuarentena de contenido, añadida el 2026-07-29.
+ *
+ * `variantStatus: 'needs-human'` marca un ítem que SABEMOS defectuoso:
+ * la inversión de variante del 2026-07-28 le dio la vuelta al marco
+ * metalingüístico (el ítem dice "no Brasil… o trem" pero ahora vive como
+ * base europea), o la reparación del bloque 1 lo dejó a medias.
+ *
+ * Durante un día esa marca no hizo nada. Se escribía en el JSON, se
+ * declaraba en el schema y se describía en los informes como "ítems
+ * aparcados" — pero NINGÚN punto del runtime la leía, así que los 102
+ * ítems se seguían sirviendo exactamente igual que antes. Escribir una
+ * etiqueta no es filtrar; el filtro tiene que existir, y tiene que estar
+ * en el embudo por el que pasa todo, que es este.
+ *
+ * Coste medido (pt, 2026-07-29): 102 de 2039 ítems, un 5% del corpus,
+ * concentrado en b1 (35/258) y b10 (20/127).
+ *
+ * `divergent` y `unchecked` NO se filtran: el primero está verificado
+ * como divergencia real, y el segundo sólo significa "nadie lo ha
+ * mirado", que es el estado del 90% del corpus — filtrarlo dejaría la
+ * app vacía.
+ */
+const EN_CUARENTENA = new Set(['needs-human']);
+
+function esServible(item: unknown): boolean {
+  if (typeof item !== 'object' || item === null) return true;
+  const status = (item as { variantStatus?: unknown }).variantStatus;
+  return typeof status !== 'string' || !EN_CUARENTENA.has(status);
+}
+
+export interface OpcionesDeCarga {
+  /** Incluye los ítems en cuarentena. Sólo para scripts de auditoría y
+   *  para las herramientas de revisión — nunca para servir al alumno. */
+  incluirEnCuarentena?: boolean;
+}
+
+/**
  * Carga un bloque específico. Devuelve `null` si no existe. Solo acepta
  * `b{N}.json`; cualquier sidecar (`.audio-failures`, `.rejected`) se ignora.
+ * Los ítems en cuarentena se excluyen salvo petición explícita.
  */
-export async function loadBlock(lang: LanguageId, id: number): Promise<unknown[] | null> {
+export async function loadBlock(
+  lang: LanguageId,
+  id: number,
+  opts: OpcionesDeCarga = {},
+): Promise<unknown[] | null> {
   if (!/^\d+$/.test(String(id))) return null;
   const file = path.join(blocksDir(lang), `b${id}.json`);
   try {
     const raw = await fs.readFile(file, 'utf-8');
-    return JSON.parse(raw);
+    const parsed = JSON.parse(raw);
+    if (opts.incluirEnCuarentena || !Array.isArray(parsed)) return parsed;
+    return parsed.filter(esServible);
   } catch (err) {
     if ((err as NodeJS.ErrnoException).code === 'ENOENT') return null;
     throw err;
@@ -90,9 +134,13 @@ export async function loadBlock(lang: LanguageId, id: number): Promise<unknown[]
 
 /**
  * Carga todos los bloques del idioma (b1..bN). Devuelve `[]` si el dir
- * no existe o está vacío. Sidecars excluidos por pattern.
+ * no existe o está vacío. Sidecars excluidos por pattern, ítems en
+ * cuarentena excluidos salvo petición explícita.
  */
-export async function loadAllBlocks(lang: LanguageId): Promise<unknown[]> {
+export async function loadAllBlocks(
+  lang: LanguageId,
+  opts: OpcionesDeCarga = {},
+): Promise<unknown[]> {
   const dir = blocksDir(lang);
   try {
     const files = (await fs.readdir(dir)).filter((f) => /^b\d+\.json$/.test(f));
@@ -100,7 +148,8 @@ export async function loadAllBlocks(lang: LanguageId): Promise<unknown[]> {
     for (const f of files.sort()) {
       const raw = await fs.readFile(path.join(dir, f), 'utf-8');
       const arr = JSON.parse(raw);
-      if (Array.isArray(arr)) all.push(...arr);
+      if (!Array.isArray(arr)) continue;
+      all.push(...(opts.incluirEnCuarentena ? arr : arr.filter(esServible)));
     }
     return all;
   } catch (err) {

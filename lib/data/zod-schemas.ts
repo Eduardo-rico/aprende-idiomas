@@ -267,6 +267,18 @@ const BaseExercise = z.object({
   /** Ver VariantStatusSchema. Opcional para que el contenido anterior a la
    *  inversión siga parseando; el gate de verify-content lo exige. */
   variantStatus: VariantStatusSchema.optional(),
+  /** Exención declarada del requisito de audio.
+   *
+   *  `verify-content` exige audio para flashcard, listening, translation,
+   *  sentence_construction y chunk. La regla es correcta para el contenido
+   *  que el alumno debe OÍR, pero no para las tarjetas metalingüísticas,
+   *  cuyo front y back están en español: doblarlas sería pagar una locución
+   *  española dentro de un curso de portugués.
+   *
+   *  La exención se declara ítem a ítem y CON MOTIVO, nunca se infiere del
+   *  tipo ni del idioma detectado. Un requisito con puerta trasera silenciosa
+   *  deja de ser un requisito; uno con puerta trasera firmada sigue siéndolo. */
+  audioExento: z.object({ motivo: z.string().min(10) }).optional(),
 });
 
 const FlashcardEx = BaseExercise.extend({

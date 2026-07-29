@@ -29,6 +29,10 @@ const B1_CONCEPTS: Concept[] = [
   { id: 'b1-corresp-on-ao', name: 'Correspondencia -ón → -ão', blockId: 1, description: 'Pasaje sistemático ES→PT', prereqs: [] },
   { id: 'b1-corresp-ll-lh', name: 'Correspondencia -ll- → -lh-', blockId: 1, description: 'Pasaje sistemático ES→PT', prereqs: [] },
   { id: 'b1-corresp-nh-ny', name: 'Correspondencia -ñ → -nh-', blockId: 1, description: 'Pasaje sistemático ES→PT', prereqs: [] },
+  // Condicionada, no general: sólo vale donde la h- española viene de F-
+  // latina (hijo/filho), no donde ya era h- (hombre/homem). Enunciarla como
+  // regla sin condición fabrica *fomem, *fora, *foje.
+  { id: 'b1-corresp-h-f', name: 'Correspondencia h- → f-', blockId: 1, description: 'Sólo donde la h- viene de F- latina; prueba del cultismo (hijo/filial)', prereqs: ['b1-h-muda'] },
   { id: 'b1-h-muda', name: 'H muda', blockId: 1, description: 'H inicial siempre muda', prereqs: [] },
   { id: 'b1-vogais-nasais', name: 'Vocales nasales', blockId: 1, description: 'ã, õ, am, em, im, om, um', prereqs: [] },
   { id: 'b1-pron-rr-r', name: 'Pronunciación rr/r inicial', blockId: 1, description: 'En BR como /h/; en PT vibrante', prereqs: [] },
@@ -69,8 +73,9 @@ const B1_LESSONS: Lesson[] = [
     objectives: [
       'Aplicar las reglas -ón→-ão, -ll-→-lh-, -ñ-→-nh-',
       'Reconocer h muda',
+      'Aplicar h-→f- sólo donde procede, con la prueba del cultismo',
     ],
-    conceptIds: ['b1-corresp-on-ao', 'b1-corresp-ll-lh', 'b1-corresp-nh-ny', 'b1-h-muda'],
+    conceptIds: ['b1-corresp-on-ao', 'b1-corresp-ll-lh', 'b1-corresp-nh-ny', 'b1-h-muda', 'b1-corresp-h-f'],
     vocabKey: ['coração', 'canção', 'mulher', 'olho', 'manhã', 'banho', 'hotel', 'hora'] as const,
     conceptNotesPath: 'b1/l3-correspondencias.mdx',
     exerciseRefs: [],

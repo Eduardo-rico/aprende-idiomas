@@ -701,7 +701,10 @@
       "back": "hábito es PROPAROXÍTONA (esdrújula) y en portugués todas la llevan, sin excepción. «habito» sin tilde es la 1.ª persona del verbo habitar. La regla: toda proparoxítona se acentúa; las paroxítonas sólo si terminan en -l, -r, -x, -n, -i, -u, -ã, -ão, -um.",
       "example": "hábito, fábrica, médico, rápido (proparoxítonas, todas con tilde) · fácil, açúcar (paroxítonas acentuadas por su final)"
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "unchecked",
+    "audioExento": {
+      "motivo": "front y back en español: explica la regla de acentuación, no hay portugués que oír"
+    }
   },
   {
     "id": "15eab0ae",
@@ -2282,7 +2285,7 @@
       "regional",
       "revisar-fonetica"
     ],
-    "contentHash": "4db8fa0842782071048df3ad22d7f4537066ed3bb2bcf6951cc094665ef471a4",
+    "contentHash": "453f39bb9e0ff713b88612a22f98bbfc3a067038c7b214262594507ad579f355",
     "audio": {
       "br": {
         "hash": "650e58b32162ec528a5fcbb267efd33bb50ddb241702476030c789334049399a",
@@ -2296,14 +2299,21 @@
     "type": "translation",
     "data": {
       "source": "Mi abuelo ya murió.",
-      "target": "Meu avô já morreu.",
+      "target": "O meu avô já morreu.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
-        "Meu avó já morreu."
+        "O meu avô já faleceu.",
+        "Meu avô já morreu."
       ]
     },
-    "variantStatus": "needs-human"
+    "variantStatus": "divergent",
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Meu avô já morreu."
+      }
+    },
+    "esContrast": "avô (con circunflejo) es el abuelo; avó (con agudo) es la abuela. Y en Portugal el posesivo lleva artículo: «o meu avô», no «meu avô»."
   },
   {
     "id": "4dd2b7ab",
@@ -3416,7 +3426,10 @@
       "back": "El AGUDO marca vocal ABIERTA y tónica: á /a/, é /ɛ/, ó /ɔ/. El CIRCUNFLEJO marca vocal CERRADA y tónica: ê /e/, ô /o/. Es la oposición que distingue avó /ɔ/ (abuela) de avô /o/ (abuelo).",
       "example": "café /kɐˈfɛ/ · pé /pɛ/ · avó /ɐˈvɔ/  ⇄  você /voˈse/ · pêssego /ˈpesegu/ · avô /ɐˈvo/"
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "unchecked",
+    "audioExento": {
+      "motivo": "front y back en español + IPA: explica agudo vs circunflejo"
+    }
   },
   {
     "id": "71a149ad",
@@ -3816,7 +3829,10 @@
       "back": "Sólo ante a, o, u — para que suene /s/ donde una c sola sonaría /k/. NUNCA ante e ni i: ahí basta con c (cedo, cinco), porque ya suena /s/.",
       "example": "começar, açúcar, moço, faço  —  pero: cedo, cinema, cinco (nunca *çedo, *çinco)"
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "unchecked",
+    "audioExento": {
+      "motivo": "front y back en español: explica cuándo se escribe ç"
+    }
   },
   {
     "id": "81997b51",
@@ -8092,13 +8108,17 @@
       "correspondencia"
     ],
     "type": "flashcard",
-    "esContrast": "La f- inicial del latín se conservó en portugués y se perdió en español. Es la correspondencia que más palabras genera.",
+    "esContrast": "La F- inicial del latín se conservó en portugués y se perdió en español — pero sólo ahí. Las palabras cuya h- ya era h- en latín la mantienen en las dos lenguas.",
     "data": {
-      "front": "La correspondencia que más rinde: h- española ⇄ f- portuguesa",
-      "back": "Donde el español tiene h- muda inicial, el portugués casi siempre tiene f-: hijo→filho, hacer→fazer, hablar→falar, harina→farinha, hierro→ferro, hoja→folha, hormiga→formiga, humo→fumo.",
-      "example": "hijo → filho · hacer → fazer · hablar → falar · hambre → fome"
+      "front": "h- española ⇄ f- portuguesa: cuándo sí, y cómo saberlo sin etimología",
+      "back": "Sólo cuando la h- española viene de una F- latina. Ahí es sistemática: hijo→filho, hacer→fazer, hablar→falar, harina→farinha, hierro→ferro, hoja→folha, hormiga→formiga, humo→fumo, hambre→fome.\n\nNO se aplica a las que ya tenían h- en latín o vienen de otra lengua: hombre→homem, hora→hora, hoy→hoje, hospital→hospital, historia→história, honra→honra.\n\nLa prueba, sin saber latín: si el español tiene un cultismo con f- de la misma familia, el portugués lleva f-. hijo→filial, hacer→factible, hoja→foliar, hierro→férreo, hambre→famélico, humo→fumar. Y al revés: hombre→humano, hoy→hodierno — con h-, así que homem y hoje.",
+      "example": "SÍ: hijo→filho (filial) · hablar→falar · hoja→folha (foliar)  ·  NO: hombre→homem (humano) · hoy→hoje · hora→hora"
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "unchecked",
+    "contentHash": "a13a24e5d8c29a29dd47e41912a1a44a65095f50b9cc3d1169b7e013520bbd13",
+    "audioExento": {
+      "motivo": "front y back en español: explica la correspondencia h-/f-"
+    }
   },
   {
     "id": "b1-hf-02",
@@ -8123,7 +8143,8 @@
         }
       ]
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "unchecked",
+    "contentHash": "56417cba9bb2c5b33e9ff5290702130e4880b9ed45fcf89dc2be6a831db3aa96"
   },
   {
     "id": "b1-hf-03",
@@ -8148,7 +8169,8 @@
         }
       ]
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "unchecked",
+    "contentHash": "f9cda58d9a307155acf3d5004a4dcd67ca08fb0f505d26d6398427d1896bc9c6"
   },
   {
     "id": "b1-hf-04",
@@ -8170,6 +8192,7 @@
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "unchecked",
+    "contentHash": "9bdb6a28fbe35611297f28ccba73cffb4fb50db38eb5bbbda7f5d3627d06fae6"
   }
 ]
