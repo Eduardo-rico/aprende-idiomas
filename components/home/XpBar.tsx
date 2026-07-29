@@ -1,18 +1,27 @@
 // components/home/XpBar.tsx
-// XP progress bar shown on the home page. Tier label maps to CEFR level
-// (A1..C2) using a simple per-tier cap of 500 XP. The "current" and
-// "nextLevel" props are the XP floor/ceiling of the current level band;
-// we compute pct = current / nextLevel inside the component.
+// Barra de XP de la portada.
+//
+// Ola 2 (2026-07-28): esta barra decía «Nivel C2».
+//
+// La etiqueta salía de `levelFromXp()`, que repartía los seis niveles del
+// MCER a 500 XP por escalón: se llegaba a «C2» antes de terminar el Bloque
+// 3, sin haber producido una sola frase. No era una medida de competencia
+// sino una barra de progreso con nombres prestados — y era, además, la
+// única cifra de nivel que la app enseñaba.
+//
+// El nivel ahora vive en `lib/data/cefr.ts` y se mide por descriptores
+// can-do DEMOSTRADOS con evidencia, tomando el mínimo de las destrezas.
+// Aquí queda sólo lo que el XP sí puede decir con honestidad: cuánto has
+// trabajado. Que no es lo mismo que cuánto sabes, y por eso ya no se
+// disfraza de nivel.
 interface Props {
-  /** XP already earned within the current level band. */
+  /** XP ganado dentro del tramo actual. */
   current: number;
-  /** XP required to complete the current level (band ceiling). */
+  /** XP para completar el tramo. */
   nextLevel: number;
-  /** Total cumulative XP (used to derive the level label). */
+  /** XP acumulado total. */
   totalXp: number;
 }
-
-const TIERS = ["A1", "A2", "B1", "B2", "C1", "C2"];
 
 export function XpBar({ current, nextLevel, totalXp }: Props) {
   const pct = Math.min(Math.max(current / Math.max(nextLevel, 1), 0), 1) * 100;
@@ -20,10 +29,8 @@ export function XpBar({ current, nextLevel, totalXp }: Props) {
   return (
     <div className="mb-12">
       <div className="text-sm text-ink-muted mb-2 flex justify-between">
-        <span>
-          Nivel {levelFromXp(totalXp)} · {totalXp.toLocaleString("es")} XP
-        </span>
-        <span>próximo nivel en {remaining} XP</span>
+        <span>{totalXp.toLocaleString("es")} XP de trabajo</span>
+        <span>siguiente tramo en {remaining} XP</span>
       </div>
       <div className="h-2 bg-rule rounded-full overflow-hidden">
         <div
@@ -33,10 +40,4 @@ export function XpBar({ current, nextLevel, totalXp }: Props) {
       </div>
     </div>
   );
-}
-
-export function levelFromXp(xp: number): string {
-  // 500 XP per tier, capped at C2. Negative XP (shouldn't happen) → A1.
-  const idx = Math.min(Math.floor(Math.max(xp, 0) / 500), TIERS.length - 1);
-  return TIERS[idx] ?? "C2";
 }

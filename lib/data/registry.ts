@@ -72,3 +72,8 @@ export async function langExists(lang: LanguageId): Promise<boolean> {
     return false;
   }
 }
+
+/** `lib/data/languages/{lang}/cefr.json` — descriptores can-do y TaskSpecs. */
+export function cefrFile(lang: LanguageId): string {
+  return path.join(dataDir(lang), 'cefr.json');
+}

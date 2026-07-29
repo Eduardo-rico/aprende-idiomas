@@ -1,0 +1,1566 @@
+{
+  "language": "pt",
+  "generatedAt": "2026-07-28",
+  "note": "Generado desde docs/plans/2026-07-28-curriculos-completos.md. Los `taskSpecs` son los enunciados de los currículos VERBATIM — llevan números dentro, así que son tareas, no descriptores (plan §2.1). Los `descriptors` los escribimos nosotros: NINGUNO es verbatim del Companion Volume 2020, y por eso todos van con source:\"local\". Cambiarlos a \"cv2020\" para pasar un gate sería la misma mentira que este eje viene a eliminar. La destreza de cada TaskSpec se asignó por heurística: las marcadas skillConfidence:\"baja\" necesitan revisión humana.",
+  "descriptors": [
+    {
+      "id": "pt.A1.comprension_lectora",
+      "cefr": "A1",
+      "skill": "comprension_lectora",
+      "textEs": "Entiendo textos muy breves y sencillos sobre asuntos cotidianos, y localizo un dato concreto en un cartel, un menú o un horario.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "in_app",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.A1.comprension_oral",
+      "cefr": "A1",
+      "skill": "comprension_oral",
+      "textEs": "Reconozco palabras y expresiones muy básicas cuando se habla despacio, y distingo los sonidos del portugués europeo que el español no tiene.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "in_app",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.A1.produccion_escrita",
+      "cefr": "A1",
+      "skill": "produccion_escrita",
+      "textEs": "Escribo notas y mensajes muy breves, y relleno formularios con mis datos personales.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "in_app",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.A1.interaccion",
+      "cefr": "A1",
+      "skill": "interaccion",
+      "textEs": "Participo en una conversación muy básica si el otro repite o reformula, y pido lo que necesito en una tienda o un café.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "in_app",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.A1.mediacion",
+      "cefr": "A1",
+      "skill": "mediacion",
+      "textEs": "Transmito en español un dato muy simple que he entendido en portugués.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "in_app",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.A2.produccion_escrita",
+      "cefr": "A2",
+      "skill": "produccion_escrita",
+      "textEs": "Escribo notas y mensajes sencillos sobre asuntos cotidianos, y una descripción breve de algo conocido.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "in_app",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.A2.comprension_lectora",
+      "cefr": "A2",
+      "skill": "comprension_lectora",
+      "textEs": "Entiendo textos cortos y sencillos sobre temas familiares, y sigo instrucciones escritas de la vida diaria.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "in_app",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.A2.interaccion",
+      "cefr": "A2",
+      "skill": "interaccion",
+      "textEs": "Me desenvuelvo en intercambios sencillos y rutinarios, aunque no siempre entienda lo suficiente para seguir la conversación.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "in_app",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.A2.comprension_oral",
+      "cefr": "A2",
+      "skill": "comprension_oral",
+      "textEs": "Entiendo lo esencial de un mensaje breve y claro sobre asuntos de la vida diaria.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "in_app",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.A2.produccion_oral",
+      "cefr": "A2",
+      "skill": "produccion_oral",
+      "textEs": "Describo con frases sencillas mi entorno, mi rutina y experiencias pasadas.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "in_app",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.A2.mediacion",
+      "cefr": "A2",
+      "skill": "mediacion",
+      "textEs": "Explico en español lo esencial de un texto o aviso corto en portugués.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "in_app",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.B1.comprension_lectora",
+      "cefr": "B1",
+      "skill": "comprension_lectora",
+      "textEs": "Entiendo textos redactados en lengua corriente sobre temas que me son conocidos, y sigo el hilo de una narración.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "in_app",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.B1.comprension_oral",
+      "cefr": "B1",
+      "skill": "comprension_oral",
+      "textEs": "Entiendo las ideas principales cuando se habla con claridad sobre temas cotidianos, incluso a velocidad normal.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "in_app",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.B1.produccion_oral",
+      "cefr": "B1",
+      "skill": "produccion_oral",
+      "textEs": "Cuento una historia o experiencia de forma comprensible, y explico brevemente mis planes y opiniones.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "in_app",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.B1.produccion_escrita",
+      "cefr": "B1",
+      "skill": "produccion_escrita",
+      "textEs": "Escribo textos sencillos y cohesionados sobre temas conocidos, y cuento una experiencia explicando por qué me importó.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "in_app",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.B1.interaccion",
+      "cefr": "B1",
+      "skill": "interaccion",
+      "textEs": "Participo espontáneamente en conversaciones sobre temas cotidianos, y resuelvo un problema en una ventanilla.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "requires_human_hours",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.B1.mediacion",
+      "cefr": "B1",
+      "skill": "mediacion",
+      "textEs": "Resumo en español lo esencial de un texto en portugués para alguien que no lo entiende, señalando lo que importa.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "in_app",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.B2.comprension_lectora",
+      "cefr": "B2",
+      "skill": "comprension_lectora",
+      "textEs": "Entiendo artículos y textos de actualidad, y distingo la postura del autor de los hechos que expone.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "in_app",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.B2.interaccion",
+      "cefr": "B2",
+      "skill": "interaccion",
+      "textEs": "Converso con fluidez y naturalidad con nativos, y defiendo mi postura en una discusión.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "requires_human_hours",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.B2.produccion_escrita",
+      "cefr": "B2",
+      "skill": "produccion_escrita",
+      "textEs": "Escribo textos claros y detallados, y defiendo un punto de vista con argumentos y ejemplos.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "in_app",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.B2.mediacion",
+      "cefr": "B2",
+      "skill": "mediacion",
+      "textEs": "Medio entre dos personas o dos fuentes, reformulando para el destinatario y explicando lo que se pierde al traducir.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "in_app",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.C1.comprension_lectora",
+      "cefr": "C1",
+      "skill": "comprension_lectora",
+      "textEs": "Entiendo textos largos y complejos, incluidos literarios, y aprecio diferencias de estilo y registro.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "app_prepares_external_certifies",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.C1.produccion_escrita",
+      "cefr": "C1",
+      "skill": "produccion_escrita",
+      "textEs": "Escribo textos bien estructurados sobre temas complejos, con el registro adecuado al destinatario.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "app_prepares_external_certifies",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.C1.interaccion",
+      "cefr": "C1",
+      "skill": "interaccion",
+      "textEs": "Me expreso con fluidez y espontaneidad sin buscar las palabras, y uso la lengua con flexibilidad en lo social y lo profesional.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "requires_human_hours",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.C1.mediacion",
+      "cefr": "C1",
+      "skill": "mediacion",
+      "textEs": "Medio textos complejos adaptando registro y contenido al destinatario y al propósito.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "app_prepares_external_certifies",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.C2.comprension_lectora",
+      "cefr": "C2",
+      "skill": "comprension_lectora",
+      "textEs": "Entiendo sin esfuerzo cualquier texto escrito, incluidos los abstractos, idiomáticos o de estructura complicada.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "app_prepares_external_certifies",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.C2.mediacion",
+      "cefr": "C2",
+      "skill": "mediacion",
+      "textEs": "Medio con precisión en situaciones delicadas, incluidos matices culturales e implícitos.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "app_prepares_external_certifies",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.C2.produccion_escrita",
+      "cefr": "C2",
+      "skill": "produccion_escrita",
+      "textEs": "Escribo con soltura y precisión en el estilo que la situación pide, incluidos textos de estructura compleja.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "app_prepares_external_certifies",
+      "languages": [
+        "pt"
+      ]
+    },
+    {
+      "id": "pt.C2.interaccion",
+      "cefr": "C2",
+      "skill": "interaccion",
+      "textEs": "Participo sin esfuerzo en cualquier conversación, con buen conocimiento de expresiones idiomáticas y coloquiales.",
+      "source": "local",
+      "evidenceThreshold": 2,
+      "attainability": "requires_human_hours",
+      "languages": [
+        "pt"
+      ]
+    }
+  ],
+  "taskSpecs": [
+    {
+      "id": "pt.A1.t01",
+      "descriptorIds": [
+        "pt.A1.comprension_lectora"
+      ],
+      "language": "pt",
+      "cefr": "A1",
+      "statementEs": "Localiza precio, horario, morada y código postal en una ementa, un cartaz o un horário de comboios portugués reales, y acierta 8 de 10 preguntas de dato explícito.",
+      "skill": "comprension_lectora",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A1.t02",
+      "descriptorIds": [
+        "pt.A1.comprension_lectora"
+      ],
+      "language": "pt",
+      "cefr": "A1",
+      "statementEs": "Lee un texto de 120-180 palabras sobre rutina diaria y responde 5 preguntas de comprensión literal formuladas EN PORTUGUÉS, sin diccionario.",
+      "skill": "comprension_lectora",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A1.t03",
+      "descriptorIds": [
+        "pt.A1.comprension_oral"
+      ],
+      "language": "pt",
+      "cefr": "A1",
+      "statementEs": "Distingue de oído 18 de 20 pares mínimos PT-PT que un hispanohablante confunde: caro/carro, avó/avô, sede/sede, mal/mau, pá/pai, sê/se, avô/avó, mão/mau.",
+      "skill": "comprension_oral",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "headphones"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A1.t04",
+      "descriptorIds": [
+        "pt.A1.comprension_oral"
+      ],
+      "language": "pt",
+      "cefr": "A1",
+      "statementEs": "Transcribe al dictado 20 frases de 6-10 palabras leídas por voz portuguesa a 140 ppm con ≥80% de palabras correctas, incluidas las átonas reducidas ([ɨ], [ɐ], [u]).",
+      "skill": "comprension_oral",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "headphones"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A1.t05",
+      "descriptorIds": [
+        "pt.A1.comprension_oral"
+      ],
+      "language": "pt",
+      "cefr": "A1",
+      "statementEs": "Identifica el número de teléfono, la hora y el día que le dan en un mensaje de voz de 20 segundos, a la primera escucha.",
+      "skill": "comprension_oral",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "headphones"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A1.t06",
+      "descriptorIds": [
+        "pt.A1.produccion_escrita"
+      ],
+      "language": "pt",
+      "cefr": "A1",
+      "statementEs": "Rellena un formulário portugués (nome, apelido, morada, código postal, data de nascimento, nacionalidade, estado civil) sin errores de campo — sabiendo que 'apelido' no es 'apodo' en PT-PT.",
+      "skill": "produccion_escrita",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A1.t07",
+      "descriptorIds": [
+        "pt.A1.produccion_escrita"
+      ],
+      "language": "pt",
+      "cefr": "A1",
+      "statementEs": "Escribe 60-80 palabras presentándose, con concordancia de género y número correcta, usando 'estar a + infinitivo' y sin un solo gerundio.",
+      "skill": "produccion_escrita",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A1.t08",
+      "descriptorIds": [
+        "pt.A1.comprension_lectora"
+      ],
+      "language": "pt",
+      "cefr": "A1",
+      "statementEs": "Se presenta hablando 60 segundos sin leer, con la ⟨s⟩ final en [ʃ], las nasales audibles y la ⟨l⟩ final velarizada, evaluado a ≥70% de inteligibilidad por un evaluador portugués.",
+      "skill": "comprension_lectora",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A1.t09",
+      "descriptorIds": [
+        "pt.A1.interaccion"
+      ],
+      "language": "pt",
+      "cefr": "A1",
+      "statementEs": "Pide un café, un bilhete o una entrada usando 'se faz favor' y 'obrigado/obrigada' concordando con SU PROPIO género (no con el del interlocutor).",
+      "skill": "interaccion",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A1.t10",
+      "descriptorIds": [
+        "pt.A1.interaccion"
+      ],
+      "language": "pt",
+      "cefr": "A1",
+      "statementEs": "Sostiene un intercambio de 6 turnos sobre datos personales, alternando 'tu' con un igual y 3ª persona sin pronombre con un desconocido, SIN usar 'você' ni una sola vez.",
+      "skill": "interaccion",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A1.t11",
+      "descriptorIds": [
+        "pt.A1.interaccion"
+      ],
+      "language": "pt",
+      "cefr": "A1",
+      "statementEs": "Pide repetición o velocidad más lenta con las fórmulas portuguesas: 'Desculpe, pode repetir?', 'Não percebi', 'Pode falar mais devagar, se faz favor?'.",
+      "skill": "interaccion",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A1.t12",
+      "descriptorIds": [
+        "pt.A1.mediacion"
+      ],
+      "language": "pt",
+      "cefr": "A1",
+      "statementEs": "Transmite en español el contenido de un anuncio, un SMS o un aviso breve en portugués (precio, hora, lugar, condición) sin omitir ni añadir ningún dato — mediación semilla.",
+      "skill": "mediacion",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A1.t13",
+      "descriptorIds": [
+        "pt.A1.produccion_escrita"
+      ],
+      "language": "pt",
+      "cefr": "A1",
+      "statementEs": "Genera 30 palabras portuguesas correctas nunca vistas a partir de sus equivalentes españolas aplicando las correspondencias -ón→-ão, -ll-→-lh-, -ñ→-nh-, -ción→-ção, -dad→-dade y h muda.",
+      "skill": "produccion_escrita",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A2.t01",
+      "descriptorIds": [
+        "pt.A2.produccion_escrita"
+      ],
+      "language": "pt",
+      "cefr": "A2",
+      "statementEs": "Lee un correo personal o una publicación de 200-300 palabras y distingue hecho de opinión, acertando 8 de 10 preguntas.",
+      "skill": "produccion_escrita",
+      "skillConfidence": "baja",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A2.t02",
+      "descriptorIds": [
+        "pt.A2.comprension_lectora"
+      ],
+      "language": "pt",
+      "cefr": "A2",
+      "statementEs": "Localiza información específica en un texto funcional portugués real (bula de medicamento, folheto do centro de saúde, contrato de arrendamento simplificado, aviso de condomínio) de 300 palabras.",
+      "skill": "comprension_lectora",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A2.t03",
+      "descriptorIds": [
+        "pt.A2.interaccion"
+      ],
+      "language": "pt",
+      "cefr": "A2",
+      "statementEs": "Sigue una conversación entre dos hablantes de Lisboa a velocidad natural (160 ppm) de 90 segundos sobre tema cotidiano y responde 6 de 8 preguntas.",
+      "skill": "interaccion",
+      "skillConfidence": "baja",
+      "contextModes": [
+        "headphones"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A2.t04",
+      "descriptorIds": [
+        "pt.A2.comprension_oral"
+      ],
+      "language": "pt",
+      "cefr": "A2",
+      "statementEs": "Reconoce por el sonido si el hablante es portugués o brasileño en 9 de 10 muestras de 8 segundos, y nombra el rasgo que lo delató.",
+      "skill": "comprension_oral",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A2.t05",
+      "descriptorIds": [
+        "pt.A2.comprension_oral"
+      ],
+      "language": "pt",
+      "cefr": "A2",
+      "statementEs": "Transcribe al dictado 25 frases con elisión de [ɨ] y sândi ('as amigas', 'os homens', 'está a estudar') con ≥75% de palabras correctas.",
+      "skill": "comprension_oral",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "headphones"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A2.t06",
+      "descriptorIds": [
+        "pt.A2.produccion_escrita"
+      ],
+      "language": "pt",
+      "cefr": "A2",
+      "statementEs": "Narra por escrito 120-150 palabras en pretérito perfeito e imperfeito con contraste correcto en ≥85% de las formas verbales.",
+      "skill": "produccion_escrita",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A2.t07",
+      "descriptorIds": [
+        "pt.A2.produccion_escrita"
+      ],
+      "language": "pt",
+      "cefr": "A2",
+      "statementEs": "Escribe un correo informal de 100 palabras con abertura y cierre portugueses ('Olá', 'Um abraço', 'Beijinhos', 'Até breve') y tratamento coherente de principio a fin.",
+      "skill": "produccion_escrita",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A2.t08",
+      "descriptorIds": [
+        "pt.A2.comprension_lectora"
+      ],
+      "language": "pt",
+      "cefr": "A2",
+      "statementEs": "Narra oralmente 2 minutos sobre un fin de semana pasado, sin leer, con ≤3 interferencias léxicas del español por minuto.",
+      "skill": "comprension_lectora",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A2.t09",
+      "descriptorIds": [
+        "pt.A2.produccion_oral"
+      ],
+      "language": "pt",
+      "cefr": "A2",
+      "statementEs": "Describe una imagen durante 90 segundos usando 'estar a + infinitivo' y sin producir un solo gerundio.",
+      "skill": "produccion_oral",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A2.t10",
+      "descriptorIds": [
+        "pt.A2.interaccion"
+      ],
+      "language": "pt",
+      "cefr": "A2",
+      "statementEs": "Resuelve un encuentro de servicio en 8 turnos (devolver un artículo, cambiar una consulta, reclamar un cobro, pedir una fatura com contribuinte).",
+      "skill": "interaccion",
+      "skillConfidence": "baja",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A2.t11",
+      "descriptorIds": [
+        "pt.A2.interaccion"
+      ],
+      "language": "pt",
+      "cefr": "A2",
+      "statementEs": "Cambia de tratamento dentro de una misma conversación cuando cambia el interlocutor, sin errores en la conjugación de 'tu' (falas, comes, és, tens, fizeste, vais).",
+      "skill": "interaccion",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A2.t12",
+      "descriptorIds": [
+        "pt.A2.mediacion"
+      ],
+      "language": "pt",
+      "cefr": "A2",
+      "statementEs": "Resume en español, en 60-80 palabras, un texto portugués de 250 conservando los tres datos principales y sin añadir ninguno.",
+      "skill": "mediacion",
+      "skillConfidence": "baja",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A2.t13",
+      "descriptorIds": [
+        "pt.A2.mediacion"
+      ],
+      "language": "pt",
+      "cefr": "A2",
+      "statementEs": "Explica a otro hispanohablante qué significa realmente un falso amigo portugués en su contexto (embaraçada, apelido, propina, esquisito, borracha, oficina, salada, polvo, rato, aula) con un ejemplo propio.",
+      "skill": "mediacion",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.A2.t14",
+      "descriptorIds": [
+        "pt.A2.comprension_lectora"
+      ],
+      "language": "pt",
+      "cefr": "A2",
+      "statementEs": "Detecta y corrige 7 de 10 frases de portuñol plantadas en un texto, nombrando el tipo de error.",
+      "skill": "comprension_lectora",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B1.t01",
+      "descriptorIds": [
+        "pt.B1.comprension_lectora"
+      ],
+      "language": "pt",
+      "cefr": "B1",
+      "statementEs": "Lee un artículo de opinión sencillo de la prensa portuguesa (Público, Expresso, Observador) de 500-700 palabras y reconstruye la tesis y dos argumentos, distinguiéndolos de los ejemplos.",
+      "skill": "comprension_lectora",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B1.t02",
+      "descriptorIds": [
+        "pt.B1.comprension_lectora"
+      ],
+      "language": "pt",
+      "cefr": "B1",
+      "statementEs": "Lee 30 páginas seguidas de narrativa graduada sin diccionario y responde preguntas de INFERENCIA (por qué el personaje hizo X), no sólo literales.",
+      "skill": "comprension_lectora",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B1.t03",
+      "descriptorIds": [
+        "pt.B1.comprension_oral"
+      ],
+      "language": "pt",
+      "cefr": "B1",
+      "statementEs": "Sigue un episodio de podcast portugués de 10 minutos sobre tema conocido y responde 8 de 10 preguntas con una sola escucha.",
+      "skill": "comprension_oral",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "headphones"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B1.t04",
+      "descriptorIds": [
+        "pt.B1.produccion_oral"
+      ],
+      "language": "pt",
+      "cefr": "B1",
+      "statementEs": "Entiende un aviso público con audio degradado (megafonía de estação, mensaje grabado del SNS, drive-through) y extrae la instrucción operativa.",
+      "skill": "produccion_oral",
+      "skillConfidence": "baja",
+      "contextModes": [
+        "headphones"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B1.t05",
+      "descriptorIds": [
+        "pt.B1.comprension_oral"
+      ],
+      "language": "pt",
+      "cefr": "B1",
+      "statementEs": "Distingue de oído el grado de certeza que expresa el hablante ('de certeza', 'se calhar', 'pelos vistos', 'ao que parece', 'sei lá') y actúa en consecuencia.",
+      "skill": "comprension_oral",
+      "skillConfidence": "media",
+      "contextModes": [
+        "headphones"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B1.t06",
+      "descriptorIds": [
+        "pt.B1.produccion_escrita"
+      ],
+      "language": "pt",
+      "cefr": "B1",
+      "statementEs": "Escribe un texto argumentativo de 250-300 palabras usando ≥6 conectores portugueses distintos correctamente (embora, apesar de, contudo, por conseguinte, ainda assim, ora, todavia, aliás).",
+      "skill": "produccion_escrita",
+      "skillConfidence": "baja",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B1.t07",
+      "descriptorIds": [
+        "pt.B1.produccion_escrita"
+      ],
+      "language": "pt",
+      "cefr": "B1",
+      "statementEs": "Escribe una carta de reclamación semiformal de 200 palabras con tratamento por 3ª persona, sin un solo calco sintáctico del español.",
+      "skill": "produccion_escrita",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B1.t08",
+      "descriptorIds": [
+        "pt.B1.interaccion"
+      ],
+      "language": "pt",
+      "cefr": "B1",
+      "statementEs": "Sostiene un monólogo argumentado de 4 minutos con marcadores de hesitación PORTUGUESES ('pronto', 'quer dizer', 'sei lá', 'epá') y ninguno español ('este', 'o sea', 'digamos').",
+      "skill": "interaccion",
+      "skillConfidence": "baja",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B1.t09",
+      "descriptorIds": [
+        "pt.B1.produccion_oral"
+      ],
+      "language": "pt",
+      "cefr": "B1",
+      "statementEs": "Usa el futuro do conjuntivo espontáneamente tras 'quando', 'se', 'assim que', 'enquanto', 'logo que' en ≥70% de las ocasiones obligatorias — el marcador que separa a un hispanohablante entrenado de uno autodidacta.",
+      "skill": "produccion_oral",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B1.t10",
+      "descriptorIds": [
+        "pt.B1.interaccion"
+      ],
+      "language": "pt",
+      "cefr": "B1",
+      "statementEs": "Participa en una discusión de 10 turnos manteniendo su posición, cediendo el turno y discrepando con mitigación portuguesa ('Sim, mas olhe que...', 'Não sei se concordo', 'Lá isso é verdade, mas...').",
+      "skill": "interaccion",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B1.t11",
+      "descriptorIds": [
+        "pt.B1.mediacion"
+      ],
+      "language": "pt",
+      "cefr": "B1",
+      "statementEs": "Resume EN PORTUGUÉS, en 100 palabras, un texto español de 400, sin transferir la estructura sintáctica del original.",
+      "skill": "mediacion",
+      "skillConfidence": "baja",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B1.t12",
+      "descriptorIds": [
+        "pt.B1.mediacion"
+      ],
+      "language": "pt",
+      "cefr": "B1",
+      "statementEs": "Reformula un texto portugués formal a registro coloquial y viceversa, conservando el contenido proposicional íntegro.",
+      "skill": "mediacion",
+      "skillConfidence": "baja",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B1.t13",
+      "descriptorIds": [
+        "pt.B1.mediacion"
+      ],
+      "language": "pt",
+      "cefr": "B1",
+      "statementEs": "Explica a un tercero los datos de un gráfico, un horario o una factura portuguesa, y responde a dos preguntas de aclaración sin recurrir al español.",
+      "skill": "mediacion",
+      "skillConfidence": "baja",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B1.t14",
+      "descriptorIds": [
+        "pt.B1.produccion_escrita"
+      ],
+      "language": "pt",
+      "cefr": "B1",
+      "statementEs": "Produce 300 palabras espontáneas con ≤2% de tokens con interferencia del español, medido contra la taxonomía de 12 tipos.",
+      "skill": "produccion_escrita",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B2.t01",
+      "descriptorIds": [
+        "pt.B2.comprension_lectora"
+      ],
+      "language": "pt",
+      "cefr": "B2",
+      "statementEs": "Lee una crónica humorística portuguesa (Ricardo Araújo Pereira, Miguel Esteves Cardoso y afines) y explica dónde está la ironía y por qué funciona.",
+      "skill": "comprension_lectora",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B2.t02",
+      "descriptorIds": [
+        "pt.B2.comprension_lectora"
+      ],
+      "language": "pt",
+      "cefr": "B2",
+      "statementEs": "Lee un texto especializado de su campo de 1.000-1.500 palabras e identifica la postura del autor y su grado de compromiso con lo que afirma.",
+      "skill": "comprension_lectora",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B2.t03",
+      "descriptorIds": [
+        "pt.B2.comprension_lectora"
+      ],
+      "language": "pt",
+      "cefr": "B2",
+      "statementEs": "Lee 150 páginas de narrativa portuguesa contemporánea NO adaptada en un trimestre y sostiene una discusión sobre ella con preguntas de detalle.",
+      "skill": "comprension_lectora",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B2.t04",
+      "descriptorIds": [
+        "pt.B2.interaccion"
+      ],
+      "language": "pt",
+      "cefr": "B2",
+      "statementEs": "Sigue un debate televisivo portugués con tres hablantes que se solapan y reconstruye quién defendió qué y con qué argumento.",
+      "skill": "interaccion",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B2.t05",
+      "descriptorIds": [],
+      "language": "pt",
+      "cefr": "B2",
+      "statementEs": "Entiende a un hablante del Porto, del Alentejo y de los Açores en muestras de 2 minutos con ≥80% de comprensión.",
+      "skill": null,
+      "skillConfidence": "sin_asignar",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B2.t06",
+      "descriptorIds": [],
+      "language": "pt",
+      "cefr": "B2",
+      "statementEs": "Entiende portugués de Brasil coloquial de forma receptiva sin producirlo, y nombra los rasgos que lo distinguen (gerundio, próclise inicial, você, léxico, ⟨ti/di⟩ africado).",
+      "skill": null,
+      "skillConfidence": "sin_asignar",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B2.t07",
+      "descriptorIds": [
+        "pt.B2.produccion_escrita"
+      ],
+      "language": "pt",
+      "cefr": "B2",
+      "statementEs": "Escribe un ensayo de 400-500 palabras con tesis, concesión y refutación, con ≤5 errores por cada 100 palabras.",
+      "skill": "produccion_escrita",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B2.t08",
+      "descriptorIds": [
+        "pt.B2.produccion_escrita"
+      ],
+      "language": "pt",
+      "cefr": "B2",
+      "statementEs": "Escribe correo profesional portugués real: 'Exmo(a). Senhor(a)', 'Venho por este meio', 'Com os melhores cumprimentos', 'Fico a aguardar' — y usa el infinitivo pessoal donde toca ('antes de saírem', 'apesar de terem chegado').",
+      "skill": "produccion_escrita",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B2.t09",
+      "descriptorIds": [],
+      "language": "pt",
+      "cefr": "B2",
+      "statementEs": "Defiende una posición hablando 6 minutos con matización, sin cambiar de registro involuntariamente ni caer en la coloquialidad bajo presión.",
+      "skill": null,
+      "skillConfidence": "sin_asignar",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B2.t10",
+      "descriptorIds": [],
+      "language": "pt",
+      "cefr": "B2",
+      "statementEs": "Cuenta una anécdota con timing y colocación pronominal correcta en ≥90% de los clíticos, con ênclise natural.",
+      "skill": null,
+      "skillConfidence": "sin_asignar",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B2.t11",
+      "descriptorIds": [
+        "pt.B2.interaccion"
+      ],
+      "language": "pt",
+      "cefr": "B2",
+      "statementEs": "Negocia un desacuerdo en 15 turnos retomando lo dicho por el otro ('Como estava a dizer...', 'Se bem percebi...', 'Isso que disse leva-me a...').",
+      "skill": "interaccion",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B2.t12",
+      "descriptorIds": [
+        "pt.B2.mediacion"
+      ],
+      "language": "pt",
+      "cefr": "B2",
+      "statementEs": "Traduce oralmente a la vista un texto portugués de 200 palabras al español, a velocidad de conversación y sin bloqueos.",
+      "skill": "mediacion",
+      "skillConfidence": "baja",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B2.t13",
+      "descriptorIds": [],
+      "language": "pt",
+      "cefr": "B2",
+      "statementEs": "Media un malentendido real entre un hispanohablante y un portugués causado por un falso amigo o por una diferencia pragmática de cortesía, explicando ambos lados.",
+      "skill": null,
+      "skillConfidence": "sin_asignar",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.B2.t14",
+      "descriptorIds": [
+        "pt.B2.mediacion"
+      ],
+      "language": "pt",
+      "cefr": "B2",
+      "statementEs": "Sintetiza dos textos portugueses con posiciones opuestas en un resumen equilibrado de 200 palabras sin tomar partido.",
+      "skill": "mediacion",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C1.t01",
+      "descriptorIds": [
+        "pt.C1.comprension_lectora"
+      ],
+      "language": "pt",
+      "cefr": "C1",
+      "statementEs": "Lee un ensayo o un editorial denso de 2.000 palabras e identifica las presuposiciones que el autor no enuncia.",
+      "skill": "comprension_lectora",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C1.t02",
+      "descriptorIds": [
+        "pt.C1.comprension_lectora"
+      ],
+      "language": "pt",
+      "cefr": "C1",
+      "statementEs": "Lee literatura portuguesa del siglo XX (Pessoa en prosa, Saramago, Lobo Antunes en fragmento, Agustina) y comenta el efecto de las decisiones sintácticas del autor.",
+      "skill": "comprension_lectora",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C1.t03",
+      "descriptorIds": [
+        "pt.C1.comprension_lectora"
+      ],
+      "language": "pt",
+      "cefr": "C1",
+      "statementEs": "Lee indistintamente texto pre-AO90 y post-AO90 sin que la ortografía sea obstáculo, y sabe decir cuál es cuál y por qué.",
+      "skill": "comprension_lectora",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C1.t04",
+      "descriptorIds": [],
+      "language": "pt",
+      "cefr": "C1",
+      "statementEs": "Sigue una tertulia radiofónica portuguesa de 30 minutos con habla superpuesta, ironía y alusiones a la actualidad, y reconstruye las posiciones.",
+      "skill": null,
+      "skillConfidence": "sin_asignar",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C1.t05",
+      "descriptorIds": [],
+      "language": "pt",
+      "cefr": "C1",
+      "statementEs": "Entiende cine portugués sin subtítulos con ≥85% de comprensión, incluidos los diálogos rápidos y el habla dialectal.",
+      "skill": null,
+      "skillConfidence": "sin_asignar",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C1.t06",
+      "descriptorIds": [],
+      "language": "pt",
+      "cefr": "C1",
+      "statementEs": "Entiende a un hablante angoleño o mozambiqueño con ≥80% de comprensión y reconoce los rasgos que lo caracterizan.",
+      "skill": null,
+      "skillConfidence": "sin_asignar",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C1.t07",
+      "descriptorIds": [
+        "pt.C1.produccion_escrita"
+      ],
+      "language": "pt",
+      "cefr": "C1",
+      "statementEs": "Escribe un texto de 700-900 palabras adaptando la misma información a tres destinatarios distintos (un ministerio, un cliente, un amigo) con cambio real de registro, no sólo de fórmulas.",
+      "skill": "produccion_escrita",
+      "skillConfidence": "baja",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C1.t08",
+      "descriptorIds": [],
+      "language": "pt",
+      "cefr": "C1",
+      "statementEs": "Elige con precisión entre sinónimos de carga distinta y justifica la elección (chatear/aborrecer/incomodar; perceber/entender/compreender; giro/engraçado/bonito).",
+      "skill": null,
+      "skillConfidence": "sin_asignar",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C1.t09",
+      "descriptorIds": [],
+      "language": "pt",
+      "cefr": "C1",
+      "statementEs": "Presenta durante 15 minutos ante audiencia con estructura, señalización discursiva explícita y respuesta a preguntas hostiles sin perder registro.",
+      "skill": null,
+      "skillConfidence": "sin_asignar",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C1.t10",
+      "descriptorIds": [],
+      "language": "pt",
+      "cefr": "C1",
+      "statementEs": "Usa el registro irónico de forma deliberada y detecta cuándo se lo están usando a él.",
+      "skill": null,
+      "skillConfidence": "sin_asignar",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C1.t11",
+      "descriptorIds": [
+        "pt.C1.interaccion"
+      ],
+      "language": "pt",
+      "cefr": "C1",
+      "statementEs": "Participa en una reunión profesional portuguesa interrumpiendo, cediendo turno, resumiendo lo acordado y cerrando puntos.",
+      "skill": "interaccion",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C1.t12",
+      "descriptorIds": [
+        "pt.C1.interaccion"
+      ],
+      "language": "pt",
+      "cefr": "C1",
+      "statementEs": "Interpreta consecutivamente ES↔PT una conversación de 10 minutos sobre tema no técnico sin pérdida de contenido.",
+      "skill": "interaccion",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C1.t13",
+      "descriptorIds": [
+        "pt.C1.mediacion"
+      ],
+      "language": "pt",
+      "cefr": "C1",
+      "statementEs": "Explica a un portugués una realidad cultural hispanoamericana y a un mexicano una realidad portuguesa, adaptando el marco de referencia y no sólo el vocabulario.",
+      "skill": "mediacion",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C1.t14",
+      "descriptorIds": [
+        "pt.C1.produccion_escrita"
+      ],
+      "language": "pt",
+      "cefr": "C1",
+      "statementEs": "Redacta en portugués el acta de una reunión que se mantuvo en español.",
+      "skill": "produccion_escrita",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C2.t01",
+      "descriptorIds": [
+        "pt.C2.comprension_lectora"
+      ],
+      "language": "pt",
+      "cefr": "C2",
+      "statementEs": "Lee cualquier texto portugués, incluido el técnico de un campo ajeno y el literario denso, captando matices de estilo y no sólo de contenido.",
+      "skill": "comprension_lectora",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C2.t02",
+      "descriptorIds": [
+        "pt.C2.mediacion"
+      ],
+      "language": "pt",
+      "cefr": "C2",
+      "statementEs": "Detecta la voz del traductor: distingue un texto escrito originalmente en portugués de uno traducido del español, y señala en qué se nota.",
+      "skill": "mediacion",
+      "skillConfidence": "baja",
+      "contextModes": [
+        "headphones"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C2.t03",
+      "descriptorIds": [],
+      "language": "pt",
+      "cefr": "C2",
+      "statementEs": "Entiende cualquier variedad del portugués, incluidos hablantes con influencia de crioulo, habla muy rápida y habla desestructurada o interrumpida.",
+      "skill": null,
+      "skillConfidence": "sin_asignar",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C2.t04",
+      "descriptorIds": [],
+      "language": "pt",
+      "cefr": "C2",
+      "statementEs": "Capta la ironía, el sarcasmo y el humor portugueses en tiempo real, incluidos los que dependen de alusión histórica o de referencia compartida.",
+      "skill": null,
+      "skillConfidence": "sin_asignar",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C2.t05",
+      "descriptorIds": [
+        "pt.C2.comprension_lectora"
+      ],
+      "language": "pt",
+      "cefr": "C2",
+      "statementEs": "Escribe un texto publicable (artículo, informe, ensayo) que un lector nativo no identificaría como escrito por un extranjero, salvo a lo sumo en un rasgo.",
+      "skill": "comprension_lectora",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C2.t06",
+      "descriptorIds": [
+        "pt.C2.produccion_escrita"
+      ],
+      "language": "pt",
+      "cefr": "C2",
+      "statementEs": "Escribe imitando un registro dado —jurídico, periodístico, literario, burocrático portugués— con las convenciones reales de cada uno.",
+      "skill": "produccion_escrita",
+      "skillConfidence": "media",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C2.t07",
+      "descriptorIds": [],
+      "language": "pt",
+      "cefr": "C2",
+      "statementEs": "Habla con fluidez y precisión sostenidas durante 30 minutos, incluida la argumentación técnica, sin que su L1 emerja bajo carga cognitiva ni fatiga.",
+      "skill": null,
+      "skillConfidence": "sin_asignar",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C2.t08",
+      "descriptorIds": [],
+      "language": "pt",
+      "cefr": "C2",
+      "statementEs": "Produce y controla la ironía, el understatement y la descortesía calculada, y calibra su efecto sobre el interlocutor.",
+      "skill": null,
+      "skillConfidence": "sin_asignar",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C2.t09",
+      "descriptorIds": [
+        "pt.C2.interaccion"
+      ],
+      "language": "pt",
+      "cefr": "C2",
+      "statementEs": "Conduce una negociación o una entrevista difícil en portugués gestionando la cara del interlocutor y el ritmo del intercambio.",
+      "skill": "interaccion",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C2.t10",
+      "descriptorIds": [
+        "pt.C2.interaccion"
+      ],
+      "language": "pt",
+      "cefr": "C2",
+      "statementEs": "Participa en un intercambio entre nativos sin que su presencia modifique el registro del grupo — el test social real de C2.",
+      "skill": "interaccion",
+      "skillConfidence": "alta",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C2.t11",
+      "descriptorIds": [],
+      "language": "pt",
+      "cefr": "C2",
+      "statementEs": "Interpreta simultáneamente ES→PT un discurso semipreparado de 10 minutos.",
+      "skill": null,
+      "skillConfidence": "sin_asignar",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C2.t12",
+      "descriptorIds": [
+        "pt.C2.mediacion"
+      ],
+      "language": "pt",
+      "cefr": "C2",
+      "statementEs": "Traduce al portugués un texto español literario o de opinión conservando registro, ritmo y efecto, no sólo contenido.",
+      "skill": "mediacion",
+      "skillConfidence": "baja",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C2.t13",
+      "descriptorIds": [],
+      "language": "pt",
+      "cefr": "C2",
+      "statementEs": "Actúa como puente cultural: explica por qué una fórmula de cortesía brasileña resulta condescendiente en Portugal, y por qué la portuguesa resulta seca en Brasil, con ejemplos y con consecuencias.",
+      "skill": null,
+      "skillConfidence": "sin_asignar",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    },
+    {
+      "id": "pt.C2.t14",
+      "descriptorIds": [],
+      "language": "pt",
+      "cefr": "C2",
+      "statementEs": "En 2.000 palabras de producción espontánea, cero errores de interferencia del español de los 12 tipos de la taxonomía — el criterio duro.",
+      "skill": null,
+      "skillConfidence": "sin_asignar",
+      "contextModes": [
+        "anywhere"
+      ],
+      "minObservations": 2
+    }
+  ]
+}

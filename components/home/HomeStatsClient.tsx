@@ -9,7 +9,7 @@
 "use client";
 import { StreakRing } from "./StreakRing";
 import { MinutesRing } from "./MinutesRing";
-import { XpBar, levelFromXp } from "./XpBar";
+import { XpBar } from "./XpBar";
 import { OnboardingCtaClient } from "./OnboardingCtaClient";
 import { useStreakStatus } from "@/lib/hooks/useStreakStatus";
 import { useXpStatus } from "@/lib/hooks/useXpStatus";
@@ -61,10 +61,14 @@ export function HomeStatsClient({ lang }: Props) {
           Extracted into a client island that reads db independently. */}
       <OnboardingCtaClient lang={lang} />
 
-      {/* Hidden marker for tests + a11y — exposes the current level so
-          screen readers can announce it without scraping the bar. */}
-      <span className="sr-only" data-testid="user-level" data-level={levelFromXp(totalXp)}>
-        Nivel actual {levelFromXp(totalXp)}
+      {/* Ola 2: aquí se anunciaba «Nivel actual C2» a los lectores de
+          pantalla, derivado del XP a 500 puntos por escalón. Era la misma
+          mentira que la barra, pero dicha en voz alta a quien no puede
+          verificarla mirando. El nivel MCER real se mide por descriptores
+          demostrados (lib/data/cefr.ts) y se anunciará aquí cuando haya
+          evidencias que contar; hasta entonces no se afirma nada. */}
+      <span className="sr-only" data-testid="user-xp" data-xp={totalXp}>
+        {totalXp.toLocaleString("es")} XP de trabajo acumulado
       </span>
       {/* Level numeric for in-app hooks (0..5); not rendered visually. */}
       <span className="sr-only" data-testid="user-level-numeric" data-level={level}>

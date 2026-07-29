@@ -14,8 +14,9 @@ import { promises as fs } from 'node:fs';
 import type { LanguageId } from '@/lib/locales';
 import {
   blocksDir, storiesDir, manifestFile, vocabCatalogFile,
-  diagnosticFile, conceptsFile, langExists, lessonsDir,
+  diagnosticFile, conceptsFile, langExists, lessonsDir, cefrFile,
 } from '@/lib/data/registry';
+import type { DescriptorFile } from '@/lib/data/cefr';
 import {
   type Block, type Concept, type Lesson,
 } from '@/lib/data/curriculum-types';
@@ -218,6 +219,23 @@ export async function loadConcepts(lang: LanguageId): Promise<Concept[]> {
     return JSON.parse(raw) as Concept[];
   } catch (err) {
     if ((err as NodeJS.ErrnoException).code === 'ENOENT') return [];
+    throw err;
+  }
+}
+
+// ─── Eje MCER (JSON) ─────────────────────────────────────────────
+//
+// Descriptores can-do y TaskSpecs por idioma. Fail-soft como el resto:
+// un idioma sin `cefr.json` devuelve listas vacías, no revienta — es el
+// caso de checo, ruso y rumano hasta que se diseñen sus descriptores.
+
+export async function loadCefr(lang: LanguageId): Promise<DescriptorFile> {
+  const vacio: DescriptorFile = { language: lang, generatedAt: '', descriptors: [], taskSpecs: [] };
+  try {
+    const raw = await fs.readFile(cefrFile(lang), 'utf-8');
+    return JSON.parse(raw) as DescriptorFile;
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === 'ENOENT') return vacio;
     throw err;
   }
 }
