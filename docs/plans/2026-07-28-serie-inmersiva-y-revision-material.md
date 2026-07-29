@@ -1112,6 +1112,22 @@ Doce episodios de A1 a este molde son **~51 minutos de pista** y ~4.500 palabras
 
 # 5. Qué falta para doblarlo
 
+## 5.0 · Decidido tras escuchar el episodio 1 doblado (2026-07-28, tarde)
+
+El episodio 1 se dobló entero con ElevenLabs (29 réplicas, 991 caracteres) y Edu lo escuchó. Tres decisiones que dejan de ser propuesta:
+
+**La voz del alumno se hace con una voz MEXICANA leyendo el idioma meta.** No es una voz portuguesa fingiendo acento: es una voz `es-MX` leyendo texto portugués, y produce el acento sin actuarlo. Veredicto de Edu: *«es como se escucha un mexicano hablando portugués, me gusta»*. Es la única voz del reparto que no debe sonar nativa, y su acento es el temario.
+
+**El truco se extiende a los otros tres idiomas.** Se probó la misma voz `es-MX` leyendo rumano, checo y ruso —incluido cirílico, que funciona— contra una voz nativa de cada uno, y Edu lo dio por bueno. Consecuencia: **es el mismo personaje y la misma voz en las cuatro series.** Un solo aprendiz mexicano, cuatro idiomas, continuidad gratis entre cursos.
+
+> El criterio con el que se juzga esta voz no es «¿suena bien?» sino **«¿suena a un error que cometería una persona?»**. Si el acento del alumno no se parece a ningún hispanohablante real, deja de enseñar y sólo estorba.
+
+**Kilu se dobla con una voz angoleña real** (`Tchize`, en el catálogo bajo `pt-BR` pero angoleña). No es una elección estética: la función pedagógica del personaje es tener las vocales átonas plenas, que es lo que hace que un hispanohablante lo entienda mucho mejor que a un lisboeta. Eso no se actúa.
+
+**Pendiente que sigue abierto:** la batería de aceptación fonética (`cedo : medo`, `avó : avô`, reducción átona, `-s` final) está generada y a la espera de un oído nativo. Y falta el foley y la Capa 0 en español: lo doblado es sólo el núcleo dramático.
+
+---
+
 ## 5.1 · El lote de voces
 
 **Seis configuraciones para A1-A2, y sólo cinco personas.**
