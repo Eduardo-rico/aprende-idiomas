@@ -508,7 +508,7 @@ Es una decisión de guion, no de lengua: cuesta cuatro réplicas cambiarla de vu
 
 **Lo que la decisión abre para la temporada 2.** Que Aurora pueda firmar y no lo sepa nadie convierte un trámite en una relación: Migue tiene que volver a llamar a la puerta de una vecina de setenta y nueve años a la que sólo ha visto dos veces, y pedirle algo. Eso es una escena. El agujero no lo era.
 
-**Sigue sin contratarse su voz** hasta que las tres piezas donde aparece estén cerradas, que es a lo que apuntaba el candado original — no a la decisión, sino al gasto.
+**Su voz, decidida el 2026-07-29.** Las tres piezas se cerraron el mismo día, así que se dobló y se presentaron cuatro candidatas. Gana **`iLelOQ6m5mpSeNH8fRob` (Maria)**, con el veredicto de Edu: *«no suena muy anciana pero está bien»*. Queda constancia de que **no da los setenta y nueve años** —no existe ninguna voz femenina de portugués europeo mayor en la biblioteca— y de que se aceptó a sabiendas. La línea de la coda que se apoya en su edad se mantiene: la dice Marta, no Aurora, así que el dato viaja por el guion y no por el timbre.
 
 ---
 

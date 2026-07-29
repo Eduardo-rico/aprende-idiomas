@@ -103,6 +103,8 @@ Y **descarta las réplicas de menos de 6 palabras** al calcular ppm: un «Hã?»
 
 Cuando la edad es un dato de la trama —la coda del ep. 13 se apoya en «uma vizinha de setenta e nove anos»— hay que elegir entre aceptar que no suena, o recastear el personaje como hombre, que cuesta dos palabras. **No disimularlo.**
 
+**Precedente (2026-07-29):** para Aurora se eligió aceptarlo. Edu escuchó las cuatro candidatas y se quedó con `iLelOQ6m5mpSeNH8fRob` (Maria), con el veredicto exacto de «no suena muy anciana pero está bien». O sea que el umbral real no es que la voz clave la edad: es que no distraiga. Sirve de calibración para el próximo personaje mayor — presentar las opciones y dejar decidir, en vez de bloquear la pieza o falsear la ficha.
+
 Y una cosa que este método no puede hacer solo: **la batería fonética la juzga una persona.** Generarla no es aprobarla.
 
 ## Coste
