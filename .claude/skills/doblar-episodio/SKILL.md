@@ -25,6 +25,23 @@ description: Doblar guiones de AO BALCÃO (o cualquier contenido de audio del cu
 
 La voz del alumno se hace con una voz **del idioma nativo del alumno leyendo el idioma meta**. Probado y aprobado en portugués, rumano, checo y ruso — cirílico incluido.
 
+**Reparto extendido, batería APROBADA por Edu el 2026-07-29** (frase `Cedo e medo. A avó e o avô. Os livros dos pastéis. Vamos comer depressa.` — las diez pasaron a oído):
+
+| Voz | voice_id | Papeles |
+|---|---|---|
+| Maria | `iLelOQ6m5mpSeNH8fRob` | Aurora · VOZ (P12) |
+| Hugo Mendonça | `WgE8iWzGVoJYLb5V7l2d` | Motorista |
+| Tiago | `c0rzOw18hxEhaSybUod2` | Nico (P7) |
+| Claudia | `JGnWZj684pcXmK2SxYIv` | Vitória · Sónia · Funcionária |
+| Vicente | `xwVJ1SoRe0v1T88zEwBN` | Augusto (P8) — mayor de verdad |
+| Marta W&C | `bBNhdwrIjl4fcVYiRbT2` | Ilda · Mãe · Cidália |
+| Lourenço | `Fij0Q07RV232HQv4oaiV` | Lourenço (P9) |
+| Mariza | `zKjRewuiqTkXNUVAMwat` | Rita · Raquel |
+| Bruno | `a2m6tcgyJTe32Q3VSi6f` | Bruno (P11) |
+| Paulo | `aLFUti4k8YKvtQGXv0UO` | Vítor (P12) |
+
+**Las camas de ambiente sintetizadas también están aprobadas** (mismo día, comparación con/sin en la página): pastelaria, domingo, autocarro, sala, calle — `scripts/doblaje/ambiente.mjs`. No pedir nueva audición para estos ambientes ni estas voces.
+
 ## LA TRAMPA PRINCIPAL: la velocidad tampoco se controla con `speed`
 
 Van dos capas de esta misma trampa, y la segunda casi tira 23 minutos de audio.
