@@ -272,21 +272,28 @@ export async function loadConcepts(lang: LanguageId): Promise<Concept[]> {
   }
 }
 
-// ─── Lecturas (biblioteca karaoke, Ola L) ────────────────────────
+// ─── Lecturas (biblioteca, Ola L) ────────────────────────────────
 //
 // Cada lectura es un JSON con procedencia (título, autor, año de muerte,
-// fuente — el gate del generador no deja entrar nada sin los cuatro) y
-// los párrafos con tiempos por palabra de /with-timestamps. El audio
-// vive en public/lecturas/{id}/pNNN.mp3. Fail-soft como todo lo demás:
+// fuente — el gate del generador no deja entrar nada sin los cuatro).
+// Dos modos: «karaoke» (párrafos con tiempos por palabra de
+// /with-timestamps, audio en public/lecturas/{id}/pNNN.mp3) y «texto»
+// (texto puro, sin audio — así las novelas completas entran gratis; la
+// cuota TTS es el bien escaso). Los JSON karaoke existentes no declaran
+// `modo`: su ausencia significa karaoke. Fail-soft como todo lo demás:
 // idioma sin lecturas → lista vacía.
 
 export interface PalabraKaraoke { t: string; s: number; e: number }
 export interface ParrafoLectura { mp3: string; texto: string; palabras: PalabraKaraoke[] }
-export interface Lectura {
+export interface ParrafoTexto { texto: string }
+interface LecturaBase {
   id: string; titulo: string; autor: string; muerteAutor: number;
   fuente: string; fuenteUrl: string; licencia: string; nivel: string;
-  notaOrtografia?: string; parrafos: ParrafoLectura[];
+  notaOrtografia?: string;
 }
+export interface LecturaKaraoke extends LecturaBase { modo?: 'karaoke'; parrafos: ParrafoLectura[] }
+export interface LecturaTexto extends LecturaBase { modo: 'texto'; parrafos: ParrafoTexto[] }
+export type Lectura = LecturaKaraoke | LecturaTexto;
 
 function lecturasDir(lang: LanguageId): string {
   return path.join(process.cwd(), 'lib/data/languages', lang, 'lecturas');
