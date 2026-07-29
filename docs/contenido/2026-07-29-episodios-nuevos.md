@@ -5,7 +5,9 @@
 
 El filtro midió los doce guiones con `node`: **2.386 tokens de portugués, 18 clíticos, 0 `você`, 0 gerundios, 0 `ter que`, 0 `tem` existencial, 0 posesivos pelados, 0 errores de colocação pronominal.** Encontró **8 errores de lengua**, todos de una o dos palabras, y **siete de los ocho estaban en la Capa N o la Capa 2** — es decir, en la voz que el alumno imita y en la capa que responde las tareas. Ahí es donde salen más caros y donde son más baratos de arreglar antes de doblar.
 
-También encontró **tres bloqueos que no son de doblaje**: Dona Aurora como testigo disponible, el reloj de dos piezas consecutivas, y qué mercado de Lisboa abre domingo por la mañana. Dos piezas no salen de aquí como buenas por culpa de ellos.
+También encontró **tres bloqueos que no son de doblaje**: Dona Aurora como testigo disponible, el reloj de dos piezas consecutivas, y qué mercado de Lisboa abre domingo por la mañana.
+
+**Actualización del mismo día — los tres están resueltos.** Se tomó la decisión Aurora (sí puede firmar; eso es la temporada 2), lo que desbloquea el ep. 10 y la coda del ep. 13. Y el ep. 11 se **reescribió entero** en vez de parchearse: el remate ya no cuelga del reloj sino del botón del autocarro, con lo que caen de golpe el trayecto imposible, el mercado abierto en domingo y la hora que no encajaba con el ep. 10. **Las 12 piezas salen de aquí en pie.**
 
 ---
 
@@ -14,9 +16,9 @@ También encontró **tres bloqueos que no son de doblaje**: Dona Aurora como tes
 | # | Título | Nivel | Estado tras el filtro | Qué se le hizo |
 |---|---|---|---|---|
 | ep. 9 | **Não tenho troco** | A1 | ✅ **Doblable** | 1 artículo, `trocado`→`trocos` ×2, se rompe una contradicción de Kilu, +2 `estar a + infinitivo` |
-| ep. 10 | **Encerra ao domingo** | A1 | 🔒 **Con candado** | 2 palabras corregidas; el doblaje espera a la decisión Aurora |
-| ep. 11 | **Faz sinal** | A1 | ⛔ **En cuarentena — no publicada** | El reloj invalida el remate. No se dobla y no se publica la pista |
-| ep. 13 | **Duas testemunhas** | A2 | ✅ **Ventanilla doblable** · 🔒 coda con candado | 1 frase de la narradora reescrita, ficha de `consigo` corregida, recuento y duración rehechos |
+| ep. 10 | **Encerra ao domingo** | A1 | ✅ **Doblable** — desbloqueado | 6 correcciones de lengua; decisión Aurora tomada. Queda la deuda de `estar a + infinitivo` |
+| ep. 11 | **Faz sinal** | A1 | ✅ **Doblable** — reescrita entera | Remate nuevo: ya no depende del reloj sino del botón. 38 formas nuevas medidas |
+| ep. 13 | **Duas testemunhas** | A2 | ✅ **Doblable entera** — coda desbloqueada | 1 frase de la narradora reescrita, ficha de `consigo` corregida; coda con Aurora en la lista |
 | ep. 14 | **Ao balcão não posso** | A2 | ✅ **Doblable** | `Se ela assinar` ×2, se desambigua el `lá`, +2 `estar a + infinitivo` |
 | ep. 15 | **Tem número de utente?** | A2 | ✅ **Doblable** | 2 frases de Capa N reescritas (las dos eran la última palabra del arco), 2 idiomatismos |
 | P7 | **Espera um rato** | A1 | ✅ **Doblable** | `esperar` añadido ×2, se desambigua «sobe uma mesa» |
@@ -26,7 +28,8 @@ También encontró **tres bloqueos que no son de doblaje**: Dona Aurora como tes
 | P11 | **Passou duas vezes** | A2 | ✅ **Doblable** | 3 líneas: `Desculpe lá`, `O cartão`, `No sistema`; se añade el importe en escena |
 | P12 | **Só uma perguntinha** | A2 | ✅ **Doblable** | `ó minha senhora` |
 
-**Resultado: de 12 piezas, 10 salen doblables** (una de ellas sólo en su primera escena), **1 queda con candado a una decisión de guion** y **1 queda en cuarentena y no se publica**.
+**Resultado tras el filtro: 10 doblables, 1 con candado, 1 en cuarentena.**
+**Resultado tras el trabajo del mismo día: las 12 doblables**, con tres deudas nombradas y ninguna oculta — la voz de Aurora sin contratar hasta cerrar sus tres piezas, la realia lisboeta del ep. 11 sin verificar, y los `estar a + infinitivo` que le faltan al ep. 10.
 
 ---
 
@@ -483,11 +486,33 @@ Y se añade el importe en escena: era dato de tarea y sólo existía en la sinop
 
 ---
 
-# PARTE B · Con candado
+# PARTE B · Decisión tomada — candado abierto
 
-Estas dos no se doblan hasta que se cierre **una decisión de guion**. La lengua ya está corregida; lo que falta no es una palabra, es una decisión.
+## ✅ La decisión Aurora — resuelta el 2026-07-29
 
-## 🔒 La decisión Aurora
+**Se adopta la propuesta del filtro: Aurora sí puede firmar, y eso es la temporada 2.**
+
+Es una decisión de guion, no de lengua: cuesta cuatro réplicas cambiarla de vuelta y no hay un solo minuto de voz comprometido, así que se toma ahora y se deja escrita en vez de bloquear tres piezas indefinidamente. Si al leerla prefieres el agujero al arco, se revierte en diez minutos.
+
+**Por qué ésta y no taparlo.** El nudo del ep. 13 es que a Migue le falta una segunda testemunha. Aurora vive en Arroios, luego sirve, luego el nudo era falso. Las dos salidas eran mudarla de barrio —que no arregla nada, porque el requisito es la freguesia y no el portal— o inventarle un impedimento que habría que justificar en escena. La tercera es la que el filtro propuso: **que sí pueda, y que el problema pase a ser otro**. Migue todavía no lo sabe, y ahí está la temporada.
+
+**Consecuencias, ya aplicadas abajo:**
+
+| Pieza | Cambio |
+|---|---|
+| ep. 10 | Ninguno. Sale del candado tal cual, con las seis correcciones de lengua que ya tenía |
+| ep. 13, coda | `Mas ele não tem mais ninguém!` → **`Mas ele só conhece a senhoria e uma vizinha de setenta e nove anos!`** — dramáticamente mejor, y además cierto |
+| ep. 13, coda | Enumeración de Migue → `A Dona Fátima. A Dona Aurora. E o senhor do segundo.` |
+| ep. 13, ventanilla | Sin cambios: la línea de Marta ya se dejó en `Mas ele não conhece quase ninguém!`, verdadera en las dos resoluciones |
+| ep. 11 | Aurora deja de ser una vecina cualquiera y pasa a tener nombre en boca de Migue (`Obrigado, Dona Aurora!`) |
+
+**Lo que la decisión abre para la temporada 2.** Que Aurora pueda firmar y no lo sepa nadie convierte un trámite en una relación: Migue tiene que volver a llamar a la puerta de una vecina de setenta y nueve años a la que sólo ha visto dos veces, y pedirle algo. Eso es una escena. El agujero no lo era.
+
+**Sigue sin contratarse su voz** hasta que las tres piezas donde aparece estén cerradas, que es a lo que apuntaba el candado original — no a la decisión, sino al gasto.
+
+---
+
+## Nota histórica · el candado tal como estaba
 
 **El problema.** En el ep. 10 (`Encerra ao domingo`) entra Dona Aurora, 79 años, y dice: «**Moro no primeiro direito**». Vive en el edificio de Migue, en Arroios. En el ep. 13, Migue enumera a los residentes —«A Dona Fátima. E o senhor do segundo»— y Marta remata: «Mas ele não tem mais ninguém!».
 
@@ -504,9 +529,9 @@ Estas dos no se doblan hasta que se cierre **una decisión de guion**. La lengua
 
 ---
 
-## 🔒 ep. 10 · «Encerra ao domingo» — A1 · 125 s
+## ✅ ep. 10 · «Encerra ao domingo» — A1 · 125 s
 
-**Estado: lengua corregida, doblaje bloqueado por la decisión Aurora.**
+**Estado: desbloqueado. Lengua corregida y decisión Aurora tomada — doblable en cuanto se cierre la deuda de `estar a + infinitivo` de más abajo.**
 
 **Sinopsis.** Domingo a las nueve. Migue baja a desayunar con las monedas contadas y la pastelaria está cerrada, aunque Doña Fátima esté dentro limpiando y él la vea a través del cristal. Lee el horário pegado a la puerta sin entender la palabra que importa, y es una vecina de setenta y nueve años la que le explica —sin explicarle nada— por qué en Portugal seis días no son siete.
 
@@ -527,21 +552,93 @@ Estas dos no se doblan hasta que se cierre **una decisión de guion**. La lengua
 
 ---
 
-## 🔒 ep. 13 · «Duas testemunhas» — coda de la calle
+## ✅ ep. 13 · «Duas testemunhas» — coda de la calle
 
-**Estado: escena de ventanilla publicada arriba y doblable. La coda espera a la decisión Aurora.**
+**Estado: desbloqueado. Escena de ventanilla publicada arriba; la coda queda como sigue.**
 
 Son las nueve réplicas que van desde que salen de la Junta hasta el gancho final: la enumeración de residentes, `Falta uma`, `Quem é que mora no teu prédio?`, el descubrimiento de que Migue paga sin recibo, y la línea de Marta `Tu estás a pagar e ela não te dá nada?` — que es el segundo `estar a + infinitivo` de la pieza y su mejor uso durativo.
 
-Nada de eso tiene un problema de lengua. Todo depende de si Aurora existe y de qué se hace con ella.
+Con la decisión Aurora tomada, la coda cambia en dos réplicas:
+
+| Capa | Personaje | Portugués | Dirección de voz |
+|---|---|---|---|
+| 1 | MIGUE | A Dona Fátima. A Dona Aurora. E o senhor do segundo. | 112 ppm, enumerando con los dedos y cada vez más despacio, porque se le acaba la lista mientras la dice |
+| 1 | MARTA | Mas ele só conhece a senhoria e uma vizinha de setenta e nove anos! | 165 ppm, indignada y hacia Almeida, no hacia Migue. La frase entera de un tirón; el «setenta e nove» sin pausa, que es lo que la hace graciosa y triste a la vez |
+
+El resto de la coda no se toca. Y la línea de Marta, además de ser mejor, **ya no miente**: Migue conoce exactamente a dos personas en la freguesia, y una de ellas tiene setenta y nueve años.
 
 ---
 
-# PARTE C · En cuarentena — NO publicada
+# PARTE C · ep. 11 — reescrita el 2026-07-29
 
-## ⛔ ep. 11 · «Faz sinal» — A1
+## ✅ ep. 11 · «Faz sinal» — A1 · ≈2:40
 
-**El filtro la tumbó. No se dobla, y la pista no se publica en este documento como buena.**
+**Estado: reescrita entera, no parcheada. La versión anterior sigue documentada abajo como historial.**
+
+El filtro la había tumbado porque **el reloj invalidaba el remate, y el remate era la pieza**. Dos horas y veinte de trayecto entre dos paradas separadas 600 m, un mercado municipal abierto en domingo, y una salida a las 9:15 desde un episodio que acaba a las 9:05. Nada de eso se arregla cambiando palabras.
+
+**Lo que cambió, y por qué la pieza sale mejor.** El remate ya no depende del reloj: depende del **botón**. En Lisboa el autocarro no para si no haces señal para subir, y tampoco para si no pulsas el botón para bajar. Son la misma regla dos veces, y Migue sólo aprende la primera. Así que aprende a subir y se pasa de parada — lo cual, además de ser gracioso, deja el gancho puesto sin necesidad de inventar una hora.
+
+Con eso caen los cuatro problemas de golpe: no hay trayecto largo que justificar, no hay mercado que abra en domingo (es un supermercado, que sí abre), la salida encaja con las 9:05 del ep. 10, y `pára` desaparece porque la palabra ya no aparece con acento en ningún sitio.
+
+**Lengua nueva: 38 formas** — medidas, no estimadas: `scripts` de conteo sobre la columna de portugués de todas las pistas ya publicadas (456 formas de corpus previo, 104 distintas en esta pieza). Presupuesto A1: 40.
+
+**Lo que enseña.** El par `faz sinal` / `carrega no botão` con **la misma estructura de narración las dos veces** — «O passageiro faz sinal. Depois o autocarro para.» / «O passageiro carrega no botão. Depois o autocarro para.» El alumno oye la misma melodía con distinta acción, y cuando Migue falla la segunda ya sabe por qué. Gramática: imperativo de `tu` (`faz`, `levantas`, `carregas`, `pões`), la **respuesta corta con el verbo repetido** dentro de una pelea y no dentro de una tabla (`Vê, sim.` / `Não vê.`), `Tenho.` como eco del ep. 10, presente con valor de futuro (`Sais em Alvalade`), 2 `estar a + infinitivo`, y el contraste de tratamiento que nadie explica: Aurora tutea a Migue, el motorista le habla de 3.ª persona (`Tem de carregar`).
+
+| Capa | Personaje | Portugués | Dirección de voz |
+|---|---|---|---|
+| 0 | ORIENTA | *(español)* «Domingo. La pastelería cerrada, la despensa vacía, y una vecina de setenta y nueve años que me ha dicho que el supermercado está lejos y que hay que ir en autobús. Llevo diez minutos en la parada. Han pasado dos autobuses. Ninguno ha parado.» | Español mexicano neutro, 150 ppm, primera persona. Seco, sin autocompasión — está contando algo que todavía no entiende. Catorce segundos |
+| N | NARRADORA | Nove e um quarto. Domingo de manhã. O Migue está na paragem. Já passaram dois autocarros. | 142 ppm, cálida y neutra. Misma fórmula de apertura que los eps. 1 y 9: hora, sitio, situación. Tráfico de domingo debajo: escaso, con silencios largos |
+| 1 | MIGUE | Outra vez não... Passou outra vez! | 105 ppm, hacia nadie. La primera mitad para sí, la segunda alta. Motor alejándose por debajo |
+| N | NARRADORA | Passou. O autocarro passou e não parou. | 142 ppm. Dos frases; la segunda despliega la primera, no la corrige |
+| 1 | AURORA | Ó rapaz! Estás aí especado há bocado. | 155 ppm, voz de setenta y nueve años, sin fragilidad. Llega por detrás, así que entra fuera de plano. Bolsa de tela y pasos lentos |
+| 2 | AURORA | Especado. Estás especado. Não fazes nada. | 108 ppm, separando cada palabra, divertida y no didáctica. Es una señora repitiéndose, no una profesora |
+| 1 | MIGUE | O autocarro não para. | 108 ppm, defendiéndose |
+| 1 | AURORA | Não para? Fazes sinal? | 155 ppm, las dos preguntas pegadas, subiendo mucho la segunda. Auténtico desconcierto: para ella es como no saber abrir una puerta |
+| 1 | MIGUE | Sinal? | 95 ppm, pequeño, subiendo |
+| 1 | AURORA | Sinal! A mão. Levantas a mão. | 150 ppm. Y la levanta de verdad: la manga y la bolsa tienen que oírse |
+| N | NARRADORA | Fazer sinal é levantar a mão. O passageiro faz sinal. Depois o autocarro para. | 142 ppm, tres frases con 0,7 s. **Memorizar esta melodía exacta: vuelve idéntica cuando llegue el botón, y ahí está toda la lección** |
+| 1 | MIGUE | Mas o motorista vê-me. | 110 ppm, razonable, casi jurídico. `Vê-me` con el clítico pegado, una sola palabra fonética |
+| 1 | AURORA | Não vê. | 150 ppm, dos sílabas, plana, sin mirarle. Ni discute |
+| 1 | MIGUE | Vê, sim! | 118 ppm, subiendo, ofendido de verdad |
+| 1 | AURORA | Não vê, não. Faz sinal. | 152 ppm. La doble negación cerrando por arriba y por abajo, y el imperativo seco al final. Sin agresividad y sin negociación |
+| N | NARRADORA | O Migue disse: vê, sim. A Dona Aurora disse: não vê. As duas respostas têm o verbo ver. | 142 ppm, tres frases, ninguna moraleja en la voz. Es un informe. Misma construcción que el «O Kilu disse obrigado» del ep. 1 |
+| 1 | AURORA | Aí vem ele. Faz sinal! | 160 ppm, urgente, un punto más alta. Motor acercándose |
+| 1 | MIGUE | Estou a fazer sinal! | 122 ppm, alto y crispado. **Los frenos entran exactamente sobre la última sílaba**, no antes |
+| N | NARRADORA | O autocarro parou. | 142 ppm, sola, corta, con 1 s de aire después. Puertas |
+| 1 | AURORA | Tens trocos? No autocarro não se paga com notas. | 155 ppm, ya subiendo el escalón, sin volverse |
+| 1 | MIGUE | Tenho. | 115 ppm, seguro. Es la respuesta corta con el verbo repetido, y esta vez le sale sola — el ep. 10 la sembró |
+| 1 | AURORA | Sais em Alvalade. Depois, à direita. Sempre em frente. O supermercado é ali. | 158 ppm, rápido, mientras se sienta. Autobús en marcha por debajo, sin bajar la mezcla |
+| 2 | AURORA | Sais em Alvalade. À direita. Sempre em frente. | 105 ppm, girándose hacia él porque ve que no lo ha cogido. Tres bloques con pausa de 0,8 s. La ruta entera cabe aquí |
+| 1 | AURORA | E carregas no botão. Antes da paragem. | 152 ppm, como quien añade algo obvio al salir |
+| 1 | MIGUE | Botão? | 95 ppm, pequeño, subiendo. Igual que «Sinal?» — misma melodía a propósito |
+| 1 | AURORA | O botão vermelho. Pões o dedo. O autocarro para. | 148 ppm, tres bloques cortos. Señala el botón: hay que oír que se gira |
+| N | NARRADORA | Há um botão vermelho. O passageiro carrega no botão. Depois o autocarro para. | 142 ppm. **La misma melodía y las mismas pausas que la narración de `faz sinal`.** Si suena distinto, la pieza no enseña nada |
+| 1 | AURORA | Eu saio aqui. Bom domingo! | 155 ppm, ya de pie, alegre. Timbre del autobús, puertas |
+| 1 | MIGUE | Obrigado, Dona Aurora! | 120 ppm, alto, sincero, hacia la puerta que se cierra. Usa su nombre: ayer se lo dijo |
+| 1 | MEGAFONE | Próxima paragem: Alvalade. | Configuración de Almeida con filtro de megafonía, 150 ppm, plano y comprimido. Coste marginal cero |
+| 2 | MIGUE | À direita. Sempre em frente. À direita... | 100 ppm, para sí mismo, ensayando con los ojos cerrados. **No oye la megafonía, y el oyente sí** — ahí está el chiste |
+| 1 | MEGAFONE | Próxima paragem: Campo Grande. | Idéntica a la anterior, mismo filtro, mismo nivel. Sólo cambia el nombre |
+| 1 | MIGUE | Campo Grande? Mas... Alvalade? | 105 ppm, subiendo, alarma pura. Los ojos se abren en la primera palabra |
+| N | NARRADORA | O autocarro não parou em Alvalade. Ninguém carregou no botão. | 142 ppm, plano, sin la menor sorna. La segunda frase es la que duele |
+| 1 | MIGUE | Faz favor! Faz favor, eu queria sair! | 128 ppm, alto, de pie, agarrado a la barra |
+| 1 | MOTORISTA | Tem de carregar no botão, ó amigo. | 150 ppm, seco, sin girarse, sin malicia. **Tercera persona de deferencia**, en contraste con el `tu` de Aurora: el alumno oye los dos registros en la misma pieza y nadie se lo explica |
+| N | NARRADORA | O Migue já sabe fazer sinal. Ainda não sabe carregar no botão. E o supermercado ficou para trás. | 142 ppm, tres frases, 1 s antes de la última. Corte seco sobre el motor, sin cola y sin música |
+
+**Realia que hay que verificar antes de doblar** (no la doy por buena):
+- Que exista una carreira que pare en Arroios/Almirante Reis y haga **Alvalade → Campo Grande** en ese orden. Si el orden real es el inverso, se intercambian los dos nombres de la megafonía y no cambia nada más. **A propósito no se nombra ningún número de carreira**: inventar uno es exactamente el tipo de falsa precisión que un lisboeta caza en el segundo dos.
+- Que el supermercado de Alvalade abra domingo por la mañana. Las grandes superficies portuguesas sí, pero conviene confirmarlo antes de que sea audio.
+- Que `especado` suene natural en boca de una mujer de setenta y nueve años de Lisboa y no regional o anticuado.
+
+**Lo que sobrevivió de la versión tumbada:** `Vê, sim.` / `Não vê.` · `Faz sinal` como imperativo de `tu`, como título y como dato cultural que un personaje necesita ese día · `especado` · `Sais aqui` → `Sais em Alvalade` · `pões` · `Estou a fazer sinal!` en el segundo exacto · la megafonía reutilizando la configuración de Almeida · la ruta en catorce palabras. **Lo que se cayó:** todo el reloj, el mercado y el remate viejo.
+
+**Voz nueva que pide la pieza:** MOTORISTA, dos réplicas. No debe reutilizar la configuración de Almeida aunque salga gratis — el ep. 6 gasta su lección entera en que Almeida es dos personas con la misma voz, y repetir el truco aquí lo desactiva.
+
+---
+
+## Historial · la versión que el filtro tumbó
+
+**Se conserva porque el motivo del rechazo es más instructivo que la pieza.**
 
 Motivo: **el reloj invalida el remate**, y el remate es la pieza entera.
 
@@ -609,15 +706,15 @@ Motivo: **el reloj invalida el remate**, y el remate es la pieza entera.
 
 ## Bloqueantes — antes de contratar una sola voz
 
-1. **Decisión Aurora.** Bloquea el ep. 10 entero y la coda del ep. 13. Propuesta arriba; requiere OK. Mientras no se cierre, **no se contrata la voz de Aurora**, porque afecta a lo que dice en tres piezas.
-2. **El reloj de los eps. 10-11 y qué mercado de Lisboa abre domingo por la mañana.** Sin eso el ep. 11 no vuelve de cuarentena.
+1. ~~**Decisión Aurora.**~~ **Tomada el 2026-07-29**: sí puede firmar, y eso es la temporada 2. Ep. 10 y coda del ep. 13 desbloqueados. **Sigue sin contratarse su voz** hasta que las tres piezas donde aparece estén cerradas — el candado era sobre el gasto, no sobre la decisión.
+2. ~~**El reloj de los eps. 10-11 y qué mercado abre domingo.**~~ **Disuelto el 2026-07-29** reescribiendo el ep. 11 entero: el remate cuelga ahora del botón del autocarro y no del reloj, y el destino es un supermercado, que sí abre. Queda la realia lisboeta de la pieza nueva, en el punto 6.
 3. **La voz de Almeida.** Requisito duro: **la misma voz** en modo café y en modo ventanilla, dos configuraciones, mismo actor. Si salen como dos actores, la lección de registro del ep. 14 se pierde y no se recupera sin volver a doblar. Y el fichero de `Bom dia. Faz favor.` debe ser **el mismo** en los eps. 6, 13 y 14.
 
 ## Verificaciones de realia antes de doblar
 
 4. **El requisito de las dos testemunhas** para el atestado de residência sin contrato (ep. 13). Varía de junta a junta: hay que confirmarlo con alguien que lo haya tramitado.
 5. **La inscripción en el SNS con atestado de residência** (ep. 15). Misma advertencia.
-6. **La tarifa a bordo del autocarro** (ep. 11, en cuarentena). Y anotar que desde 2024 los residentes viajan gratis con el Navegante Municipal, lo que data el episodio.
+6. **Realia del ep. 11 reescrito.** La tarifa a bordo ya no se nombra en escena —Aurora sólo dice `no autocarro não se paga com notas`, que es cierto y no caduca—, pero quedan tres: que exista una carreira que pare en Almirante Reis y haga **Alvalade → Campo Grande** en ese orden (si es al revés, se intercambian los dos nombres de la megafonía y ya); que el supermercado de Alvalade abra domingo por la mañana; y que `especado` suene natural en una lisboeta de setenta y nueve años. **A propósito no se nombra ningún número de carreira.** Anotar además que desde 2024 los residentes viajan gratis con el Navegante Municipal, lo que data cualquier episodio que hable de pagar el billete.
 
 ## Deuda declarada, no resuelta
 
@@ -625,7 +722,7 @@ Motivo: **el reloj invalida el remate**, y el remate es la pieza entera.
 8. **`ó pá` en boca de Almeida** contradice la ficha de reparto de Marta («son suyas y de nadie más»), aunque la ficha del propio Almeida sí lo autoriza en modo café. **La ficha de Marta es la que está mal**: `ó pá` no es nortenho, es general y muy de Lisboa. **Hay que corregir la biblia, no la pieza.**
 9. **`balcão` sin desambiguar en el ep. 14.** Es el único episodio donde la palabra funciona en dos sentidos —el de la tasca y el de la ventanilla— sin que nadie los separe. Es deliberado y funciona, pero el ep. 6 se desambiguó por escrito porque un hispanohablante oye «balcón». Decidir si se deja.
 10. **`galão` frente a `meia de leite`.** El ep. 1 enseña una de las dos. Meter `meia de leite` antes de que el alumno pida un galão en una esplanada creyendo que es lo mismo.
-11. **`docs/contenido/2026-07-28-ep1-narrado.md` necesita la pasada de `NARRADOR`→`NARRADORA`** y las cuatro correcciones de la narradora que salieron del ataque adversarial: `fala com a cozinha` → `está a falar com o Zé`; `Em português não se diz «café con leche»` → `Aqui pede-se um galão`; `não sabe que chave é` → `não sabe de que chave ela está a falar`; `O Kilu pede todos os dias` → `O Kilu pede uma bica todos os dias`.
+11. ~~**`docs/contenido/2026-07-28-ep1-narrado.md`**~~ **Aplicado el 2026-07-29**: la pasada `NARRADOR`→`NARRADORA` en las ocho intervenciones y las cuatro correcciones de la narradora. **Consecuencia que hay que asumir: el audio ya generado del ep. 1 está caducado en cuatro pistas** y hay que volver a doblarlas. Es barato —cuatro réplicas cortas— y es exactamente el motivo por el que estas revisiones van antes del doblaje y no después.
 
 ---
 
