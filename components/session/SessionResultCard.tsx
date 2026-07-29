@@ -26,6 +26,18 @@ export type SessionResultCardProps =
       reviewed: number;
       subtitle?: ReactNode;
       actions: ReactNode;
+    }
+  | {
+      // Cola vacía: no hay nada que repasar. No lleva porcentaje porque no
+      // es una sesión terminada — enseñar "0 %" a quien va al día sería
+      // castigarlo por estar al día. Antes este estado no existía y la
+      // ruta hacía router.replace('/learn'), que redirige de vuelta aquí:
+      // un bucle infinito, y era el estado por defecto de todo usuario
+      // nuevo.
+      variant: "empty";
+      headline: string;
+      message: string;
+      actions: ReactNode;
     };
 
 export function SessionResultCard(props: SessionResultCardProps) {
@@ -42,6 +54,12 @@ export function SessionResultCard(props: SessionResultCardProps) {
             {props.action && (
               <div className="flex justify-center">{props.action}</div>
             )}
+          </>
+        ) : props.variant === "empty" ? (
+          <>
+            <h1 className="font-display text-3xl">{props.headline}</h1>
+            <p className="text-ink-muted">{props.message}</p>
+            <div className="flex justify-center gap-2 pt-2">{props.actions}</div>
           </>
         ) : (
           <>

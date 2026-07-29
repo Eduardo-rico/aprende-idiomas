@@ -6,15 +6,19 @@
 // summary card. Mirrors the data-fetching half of /review/page.tsx so
 // we don't duplicate the FSRS-cap logic.
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { db } from "@/lib/db/schema";
-import { getDueCards, getDueCardsByTag } from "@/lib/db/repository";
+import { getDueCards, getDueCardsByTag, submitAnswer } from "@/lib/db/repository";
 import { FSRS_CONFIG } from "@/lib/srs/config";
 import { interleave } from "@/lib/srs/interleave";
+import { previewIntervalMs } from "@/lib/srs/fsrs";
 import { useSession } from "@/lib/stores/session";
+import { useSettings } from "@/lib/stores/settings";
 import type { Exercise } from "@/lib/data/zod-schemas";
 import { SessionScreen } from "@/components/session/SessionScreen";
+import type { GradeRating } from "@/lib/hooks/useGradeKeyboard";
+import type { Card } from "@/lib/db/schema";
 import type { LanguageId } from "@/lib/locales";
 import { SessionResultCard } from "@/components/session/SessionResultCard";
 
@@ -28,10 +32,19 @@ export function PracticarSrsInner({ lang }: { lang: LanguageId }) {
     .split(",")
     .map((s) => s.trim())
     .filter((s) => s.length > 0);
+  const variant = useSettings((s) => s.variant);
   const [exercises, setExercises] = useState<Exercise[] | null>(null);
   const [sessionId, setSessionId] = useState<number | null>(null);
   const [done, setDone] = useState<{ reviewed: number; correct: number } | null>(null);
   const [err, setErr] = useState<string | null>(null);
+  // Cola vacía. Antes esto hacía router.replace('/learn'), y como /learn
+  // redirige a /practicar/srs con un 308, el resultado era un bucle
+  // infinito — y era el estado POR DEFECTO de todo usuario nuevo, porque
+  // una Dexie recién creada no tiene ninguna tarjeta vencida.
+  const [sinCola, setSinCola] = useState(false);
+  // Las Card de Dexie, para poder calcular los intervalos FSRS reales
+  // que se enseñan en los cuatro botones.
+  const cards = useRef<Map<string, Card>>(new Map());
   // Guard against React 19 StrictMode double-running this effect in dev.
   const sessionCreated = useRef(false);
 
@@ -55,9 +68,10 @@ export function PracticarSrsInner({ lang }: { lang: LanguageId }) {
                 options,
               );
         if (due.length === 0) {
-          router.replace(`/${lang}/learn`);
+          setSinCola(true);
           return;
         }
+        cards.current = new Map(due.map((c) => [c.id, c]));
         const allRes = await fetch(`/api/blocks?lang=${lang}`);
         if (!allRes.ok) throw new Error("No se pudo cargar el currículo");
         const { exercises: all } = (await allRes.json()) as {
@@ -77,7 +91,7 @@ export function PracticarSrsInner({ lang }: { lang: LanguageId }) {
           if (ex) ordered.push(ex);
         }
         if (ordered.length === 0) {
-          router.replace(`/${lang}/learn`);
+          setSinCola(true);
           return;
         }
         setExercises(ordered);
@@ -108,9 +122,64 @@ export function PracticarSrsInner({ lang }: { lang: LanguageId }) {
     });
   }, [done, sessionId]);
 
+  // Persiste la calificación. Esto es lo que faltaba: sin ello, FSRS, los
+  // eventos, la maestría por concepto y /progreso se quedaban congelados.
+  const persistirGrade = useCallback(
+    async (ex: Exercise, rating: GradeRating, responseMs: number) => {
+      await submitAnswer({
+        cardId: ex.id,
+        rating,
+        responseMs,
+        mode: "review",
+        variant,
+        conceptIds: ex.concepts ?? [],
+        blockId: ex.blockId,
+        sessionId: sessionId ?? undefined,
+      });
+    },
+    [variant, sessionId],
+  );
+
+  // Los intervalos REALES de esta tarjeta, no los de adorno.
+  const intervalsFor = useCallback((ex: Exercise) => {
+    const card = cards.current.get(ex.id);
+    if (!card) return null;
+    return {
+      again: previewIntervalMs(card, 1),
+      hard: previewIntervalMs(card, 2),
+      good: previewIntervalMs(card, 3),
+      easy: previewIntervalMs(card, 4),
+    };
+  }, []);
+
   if (err) {
     return (
       <SessionResultCard variant="error" message={err} />
+    );
+  }
+  if (sinCola) {
+    return (
+      <SessionResultCard
+        variant="empty"
+        headline="Hoy no tienes nada pendiente"
+        message="No hay tarjetas vencidas. Puedes seguir avanzando en el libro o dejarlo por hoy — el repaso vuelve cuando toque."
+        actions={
+          <>
+            <button
+              onClick={() => router.push(`/${lang}`)}
+              className="rounded-md border border-rule-strong px-4 py-2"
+            >
+              Inicio
+            </button>
+            <button
+              onClick={() => router.push(`/${lang}/libro`)}
+              className="rounded-md bg-lesson px-4 py-2 text-white"
+            >
+              Ir al libro
+            </button>
+          </>
+        }
+      />
     );
   }
   if (done) {
@@ -169,6 +238,8 @@ export function PracticarSrsInner({ lang }: { lang: LanguageId }) {
       )}
       <SessionScreen
         exercises={exercises}
+        onGrade={persistirGrade}
+        intervalsFor={intervalsFor}
         onFinish={setDone}
         onClose={() => router.push(`/${lang}`)}
         lang={lang}

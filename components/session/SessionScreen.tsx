@@ -2,17 +2,20 @@
 // Orchestrator for the SRS session: wires the chrome (TopBar + Head +
 // CardDisplay + GradePanel + Footer), manages the card index + reveal
 // state + counters, and connects useSessionTimer + useGradeKeyboard.
-// For A.3 the session tracks reviewed/correct totals and writes them
-// to Dexie at session close (handled by the page). Per-card FSRS
-// grading (submitAnswer) lands in a follow-up; the existing
-// ExerciseRunner keeps owning that machinery elsewhere. See
-// task-A.3-report.md concerns.
+//
+// Ola 1 (2026-07-28): la calificación por tarjeta YA SE GUARDA. Hasta
+// ahora este componente sólo llevaba los totales y el comentario decía
+// que el FSRS por tarjeta «lands in a follow-up» — el resultado era que
+// nada de lo que el alumno respondía en el repaso diario se recordaba:
+// ni intervalos, ni eventos, ni maestría por concepto, ni /progreso.
+// El componente sigue siendo presentacional: recibe `onGrade` y el
+// padre (PracticarSrsInner) es quien escribe en Dexie vía submitAnswer.
 //
 // D.9: exercises whose tags include "shadowing", "cloze", or "production"
 // are dispatched to their dedicated card components which handle grading
 // internally (no reveal/GradePanel step for those types).
 "use client";
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import type { Exercise } from "@/lib/data/zod-schemas";
 import type { LanguageId } from "@/lib/locales";
 import { useSessionTimer } from "@/lib/hooks/useSessionTimer";
@@ -45,11 +48,14 @@ const TYPE_ACCENT: Record<string, "lesson" | "info"> = {
   shadowing: "info",
 };
 
-// Placeholder intervals shown in the grade panel BEFORE grading. After
-// grade, the parent page rewrites the row in Dexie via submitAnswer
-// (per-card FSRS writes land in a follow-up). These are the values
-// shown while the user is staring at the card.
-const PLACEHOLDER_INTERVALS_MS = {
+// Intervalos de reserva: sólo se usan si el padre no sabe calcular los
+// reales (p. ej. una tarjeta que no está en Dexie todavía). Los de verdad
+// llegan por `intervalsFor`, que consulta `previewIntervalMs` con el
+// estado FSRS real de la tarjeta. Enseñar 1 min / 2 d / 4 d / 9 d a todo
+// el mundo y para toda tarjeta convertía los cuatro botones en decoración:
+// el alumno no puede calificarse con honestidad si el número que le
+// enseñas no es el que va a pasar.
+const INTERVALOS_DE_RESERVA = {
   again: 60_000,
   hard: 2 * 86_400_000,
   good: 4 * 86_400_000,
@@ -87,16 +93,27 @@ type LooseData = {
   prompt?: string;
 };
 
+export type IntervalsMs = { again: number; hard: number; good: number; easy: number };
+
 export function SessionScreen({
   exercises,
   onFinish,
   onClose,
   lang,
+  onGrade,
+  intervalsFor,
 }: {
   exercises: Exercise[];
   onFinish: (stats: { reviewed: number; correct: number }) => void;
   onClose: () => void;
   lang: LanguageId;
+  /** Persiste la calificación. El padre lo implementa con submitAnswer().
+   *  Se llama ANTES de avanzar de tarjeta, y si falla no se pierde la
+   *  sesión: se registra y se sigue, porque perder la tarjeta siguiente
+   *  por un error de escritura es peor que perder un intervalo. */
+  onGrade?: (ex: Exercise, rating: GradeRating, responseMs: number) => void | Promise<void>;
+  /** Intervalos FSRS reales de esta tarjeta. Sin esto se enseñan los de reserva. */
+  intervalsFor?: (ex: Exercise) => IntervalsMs | null;
 }) {
   const [idx, setIdx] = useState(0);
   const [reveal, setReveal] = useState(false);
@@ -104,6 +121,9 @@ export function SessionScreen({
   const [correct, setCorrect] = useState(0);
   const { label: timerLabel } = useSessionTimer(Date.now());
   const { variant: settingsVariant } = useSettings();
+  // Cuándo se mostró la tarjeta actual, para medir el tiempo de respuesta
+  // que alimenta la métrica de automatización de /progreso.
+  const shownAt = useRef<number>(Date.now());
 
   const ex = exercises[idx];
   const total = exercises.length;
@@ -112,6 +132,12 @@ export function SessionScreen({
   const handleGrade = useCallback(
     (rating: GradeRating) => {
       if (!ex) return;
+      const responseMs = Math.max(0, Date.now() - shownAt.current);
+      // Se dispara sin await a propósito: la escritura en Dexie no debe
+      // meter latencia entre que calificas y ves la tarjeta siguiente.
+      void Promise.resolve(onGrade?.(ex, rating, responseMs)).catch((e) => {
+        console.error("[sesión] no se pudo guardar la calificación", ex.id, e);
+      });
       const wasCorrect = rating >= 3;
       const nextReviewed = reviewed + 1;
       const nextCorrect = correct + (wasCorrect ? 1 : 0);
@@ -119,13 +145,14 @@ export function SessionScreen({
       setReviewed(nextReviewed);
       setCorrect(nextCorrect);
       const next = idx + 1;
+      shownAt.current = Date.now();
       if (next >= total) {
         onFinish({ reviewed: nextReviewed, correct: nextCorrect });
         return;
       }
       setIdx(next);
     },
-    [ex, idx, total, reviewed, correct, onFinish],
+    [ex, idx, total, reviewed, correct, onFinish, onGrade],
   );
 
   useGradeKeyboard({ enabled: reveal, onGrade: handleGrade });
@@ -203,7 +230,7 @@ export function SessionScreen({
         <GradePanel
           disabled={!reveal}
           onGrade={handleGrade}
-          intervals={PLACEHOLDER_INTERVALS_MS}
+          intervals={intervalsFor?.(ex) ?? INTERVALOS_DE_RESERVA}
         />
       </>
     );

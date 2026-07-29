@@ -13,18 +13,19 @@ import { useEffect, useMemo, useRef } from "react";
 import { tokenize } from "@/lib/text/portuguese-tokenize";
 import { WordSpan } from "./WordSpan";
 import { useSettings } from "@/lib/stores/settings";
+import { shortVariantKey } from "@/lib/data/variant";
 import type { Story } from "@/lib/data/zod-schemas";
 import type { LanguageId } from "@/lib/locales";
 
 export function StoryReader({ story, lang }: { story: Story; lang: LanguageId }) {
   const { variant } = useSettings();
-  // Phase 1: variants es un record libre. Fallback a 'br' o 'pt' si la
-  // variante activa no tiene entrada en este story.
-  const text = story.variants[variant]?.text
-    ?? (variant === "pt" ? story.variants.pt?.text : story.variants.br?.text)
-    ?? story.variants.br?.text
-    ?? story.variants.pt?.text
-    ?? "";
+  // Las historias guardan sus variantes bajo `br` / `pt`; los ajustes usan
+  // `pt-br` / `pt-pt`. La cadena de fallback anterior empezaba por
+  // `story.variants[variant]`, que para un usuario de PT-PT siempre era
+  // undefined, y acababa cayendo en `story.variants.br`: le enseñaba la
+  // historia BRASILEÑA a quien había elegido Portugal, en silencio.
+  const clave = shortVariantKey(variant);
+  const text = story.variants[clave]?.text ?? "";
   // Memoize the token list — the text is static for the lifetime of the page.
   const paragraphs = useMemo(() => text.split("\n\n"), [text]);
   const containerRef = useRef<HTMLDivElement | null>(null);

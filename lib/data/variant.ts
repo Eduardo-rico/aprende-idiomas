@@ -23,6 +23,22 @@ export function isVariantKey(s: string): s is VariantKey {
   return s.length > 0 && s.trim().length === s.length;
 }
 
+/** Historias y `ex.audio` guardan sus variantes bajo las claves CORTAS
+ *  `br` / `pt`; los ajustes del usuario y el resto de la app usan las
+ *  largas `pt-br` / `pt-pt`. Esa asimetría rompía dos sitios a la vez:
+ *
+ *  - `app/[lang]/(story)/stories/[id]/page.tsx` leía `variants["pt-br"]`
+ *    con un `!` no nulo sobre un objeto cuyas claves son `["br","pt"]`,
+ *    así que lanzaba un TypeError en el Server Component y **las 20
+ *    historias eran inalcanzables**.
+ *  - `components/stories/StoryReader.tsx` hacía lo mismo con `?.`, así
+ *    que no reventaba: simplemente no mostraba texto nunca.
+ *
+ *  Una sola función para que no vuelva a divergir. */
+export function shortVariantKey(variant: VariantKey): "br" | "pt" {
+  return variant === "pt-br" || variant === "br" ? "br" : "pt";
+}
+
 /** The two legacy keys used before Phase 1, mapped to their new form.
  *  Anything else passes through (already a new key, or unknown). */
 export function legacyVariantToKey(v: string): VariantKey {
