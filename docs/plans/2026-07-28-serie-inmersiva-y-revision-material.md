@@ -392,7 +392,7 @@ Cuatro sitios, y no hacen falta más: **el balcão** de la Pastelaria Flor de Ar
 > *Voz:* barítono cálido, 105-125 ppm, sonrisa audible, vocales españolas plenas (no reduce nada). **Dos configuraciones, no tres**: «acento marcado» (eps. 1-24) y «acento residual» (25 en adelante). Necesita además **una configuración en español** para la Capa 0.
 
 **2 · Dona Fátima Andrade, 68, Lisboa (Arroios).** Dueña de la pastelaria **y del edificio de encima**. Eso le da las dos palancas: el mostrador y el contrato. Trata en 3.ª persona sin pronombre a quien no conoce y espera lo mismo de vuelta. **Es el arco fonológico del curso hecho persona:** deliberadamente incomprensible en el ep. 1, perfectamente comprensible en el 40.
-> *Voz:* contralto grave, con grano y aire, autoridad total, 140-175 ppm según a quién le hable, redução vocálica máxima y silencios secos. **No es una viejita dulce: es una patrona.** Sus fórmulas de mostrador se repiten hasta la exactitud —`O seguinte, faz favor!`, `Faz favor?`, `Mais alguma coisa?`, `São dois e vinte`, `Quer talão?`— porque lo que hace aprendible el habla rápida es la **frecuencia, no la lentitud**.
+> *Voz:* contralto grave, con grano y aire, autoridad total, 140-175 ppm según a quién le hable, redução vocálica máxima y silencios secos. **No es una viejita dulce: es una patrona.** Sus fórmulas de mostrador se repiten hasta la exactitud —`Faz favor, quem se segue?`, `Faz favor?`, `Mais alguma coisa?`, `São dois e vinte`, `Quer talão?`— porque lo que hace aprendible el habla rápida es la **frecuencia, no la lentitud**.
 
 **3 · Kiluanji «Kilu» Neto, 33, Luanda.** Enfermero en el centro de saúde de Arroios, cliente diario a las 7:30. **Desde el episodio 1**, porque su función es ser la rampa y la rampa tiene que estar el primer día. Vocales átonas **plenas**, ritmo silábico: un hispanohablante lo entiende muchísimo mejor que a un lisboeta, y ése es su trabajo. Lleva el **40 % de las líneas en A1 → 25 % en A2 → 12 % en B1**: el subsidio se le retira al alumno sin avisarle. Gramática europea plena; léxico propio sin glosar (`machimbombo`, `candongueiro`, `bazar`, `estamos juntos`). Hoy el corpus tiene **0 ocurrencias de Angola**.
 > *Voz:* tenor medio, articulación separada y limpia, 125-145 ppm. **La más inteligible del reparto, y debe serlo de forma obvia.**
@@ -485,13 +485,13 @@ El diagnóstico del pedagogo sobre la primera tanda era correcto y es el defecto
 **Duración:** 4:30 de pista · núcleo dramático 1:15.
 **Sinopsis.** Migue entra por primera vez en la Pastelaria Flor de Arroios a las 7:30 y quiere un café. No sabe pedirlo. Kilu, que está a su lado todas las mañanas, pide el suyo primero y le presta la fórmula; la Dona Fátima no baja la velocidad ni una vez. Migue se rinde y dice «para levar» — Kilu no lo deja marcharse. Y al final, sin darse cuenta, hace algo bien.
 
-**Lengua nueva: 43 formas · 94 tokens · 571 caracteres.** De las 43, unas 15 son transparentes de oído para un hispanohablante (`favor`, `dia`, `um/uma`, `e`, `sim`, `é`, `para`, `aqui`, `ou`, `de`, `nada`, `dois`, `não`, `isso`, `que`): el coste real del primer episodio son **28 palabras**. Inventario: faz · favor · seguinte · bom · dia · uma · bica · se · um · galão · e · pastel · de · nata · sim · é · para · aqui · ou · levar · desculpe · ao · balcão · são · dois · setenta · obrigado · obrigada · nada · até · amanhã · ó · rapaz · chave · isso · fica · semana · ouviste · ainda · assinei · eu · que · o. **Fórmulas completas, no palabras sueltas:** `O seguinte, faz favor!` · `Faz favor?` · `se faz favor` · `É para aqui ou para levar?` · `Desculpe?` · `São dois e setenta` · `De nada`. **Cero `você`. Cero gerundios. Cero `estar a + infinitivo`** — imposible dentro de este presupuesto; entra en el ep. 2 y satura en el 4.
+**Lengua nueva: 43 formas · 94 tokens · 571 caracteres.** De las 43, unas 15 son transparentes de oído para un hispanohablante (`favor`, `dia`, `um/uma`, `e`, `sim`, `é`, `para`, `aqui`, `ou`, `de`, `nada`, `dois`, `não`, `isso`, `que`): el coste real del primer episodio son **28 palabras**. Inventario: faz · favor · seguinte · bom · dia · uma · bica · se · um · galão · e · pastel · de · nata · sim · é · para · aqui · ou · levar · desculpe · ao · balcão · são · dois · setenta · obrigado · obrigada · nada · até · amanhã · ó · rapaz · chave · isso · fica · semana · ouviste · ainda · assinei · eu · que · o. **Fórmulas completas, no palabras sueltas:** `Faz favor, quem se segue?` · `Faz favor?` · `se faz favor` · `É para aqui ou para levar?` · `Desculpe?` · `São dois e setenta` · `De nada`. **Cero `você`. Cero gerundios. Cero `estar a + infinitivo`** — imposible dentro de este presupuesto; entra en el ep. 2 y satura en el 4.
 
 | Personaje | Portugués | Indicación de voz |
 |---|---|---|
 | **FÁTIMA** *(Capa 1)* | Ó Zé! Ó Zé, isso fica para a semana, ouviste? Que eu ainda não assinei nada! | **El primer portugués que oye el alumno en su vida.** Contralto grave con grano, 175 ppm, ráfaga sin respiración, gritada hacia dentro (a la cocina), **no** al cliente. Volumen alto y mal articulado: redução al máximo, que se pierdan las átonas. **NO ralentizar, NO limpiar.** Debe sonar a pared. |
 | SOM *(não dobrar)* | *[máquina de café; chávenas no mármore; rádio ao fundo; a porta de vidro abre e corta a ráfaga]* | Foley. Entra **antes** de la primera voz y no para en todo el episodio. La puerta que abre es la señal diegética de que esa ráfaga no era para el oyente. |
-| **FÁTIMA** | O seguinte, faz favor! | Grito seco de mostrador, sin mirar a nadie, sin amabilidad. Es una llamada de turno. |
+| **FÁTIMA** | Faz favor, quem se segue? | Grito seco de mostrador, sin mirar a nadie, sin amabilidad. Es una llamada de turno. |
 | **KILU** | Bom dia, Dona Fátima. Uma bica, se faz favor. | Tenor angoleño, 140 ppm, articulación separada, vocales átonas **plenas**. Buen humor de cliente diario. **Cada palabra debe poder transcribirse a la primera.** |
 | **FÁTIMA** | Uma bica. | Repetición de comanda, monótona, hacia la máquina, ya de espaldas. 150 ppm. |
 | **KILU** | Bom dia. | Ahora hacia Migue: medio tono más arriba, sonrisa audible, **más lento** (125 ppm). Es un saludo a un desconocido con cara de perdido. |
@@ -524,7 +524,7 @@ El diagnóstico del pedagogo sobre la primera tanda era correcto y es el defecto
 | **FÁTIMA** | Isso. | **Dos sílabas, 150 ppm, sin volverse.** Es todo lo que ella da, y es aprobación. Corte seco sobre el ruido de la máquina. |
 
 **Qué cambió tras la revisión de Lisboa (y del panel).**
-1. `Faz favor!` como llamada de turno **no existe en Portugal** — ni en el corpus: las 6 ocurrencias del repo son todas `se faz favor`. Se sustituye por **`O seguinte, faz favor!`**, y `Faz favor?` ascendente se conserva porque es la función auténtica. La serie pasa de cuatro funciones (dos inventadas) a **dos reales bien contrastadas**.
+1. `Faz favor!` como llamada de turno **no existe en Portugal** — ni en el corpus: las 6 ocurrencias del repo son todas `se faz favor`. Se sustituye por **`Faz favor, quem se segue?`**, y `Faz favor?` ascendente se conserva porque es la función auténtica. La serie pasa de cuatro funciones (dos inventadas) a **dos reales bien contrastadas**.
 2. **`Ó?` interrogativo no es portugués:** `ó` es partícula vocativa y sólo eso. Sustituido por **`Hã?`**.
 3. **`É para aqui ou é para levar?`** → **`É para aqui ou para levar?`**, que es como se dice.
 4. **`E um pastel?`** en una pastelaria es ambiguo (nata / bacalhau) → **`E um pastel de nata?`**.
@@ -557,10 +557,6 @@ Hay dos líneas de Capa 1 y **ninguna tarea se responde con ellas**; la ráfaga 
 | **KILU** | Não? | Riéndose, subiendo mucho, 130 ppm, sin preocupación real. |
 | **FÁTIMA** | Ó rapaz. O nome. | Corta la risa. 160 ppm, plana, sin saludar. El bolígrafo ya está en la mano. |
 | **MIGUE** | Chamo-me Miguel. | 130 ppm, rápido, aliviado de que le pregunten algo fácil. Clítico pegado: una sola palabra fonética. |
-| **FÁTIMA** | Apelido. | Una sola palabra, 165 ppm, sin verbo, sin mirar, ya escribiendo. Es un formulario hecho persona. |
-| **MIGUE** | Migue. | Con total seguridad, hasta con simpatía, 120 ppm, ofreciendo confianza: cree que le preguntan cómo le dicen sus amigos. |
-| **FÁTIMA** | Hã? | **El bolígrafo PARA** (audible), tras tres segundos de silencio. Grave, corto, incrédulo. |
-| **MIGUE** | Migue. Os amigos... Migue. | Cada vez más pequeño, 100 ppm, con una pausa de duda. Se está dando cuenta de que algo no encaja, pero no de qué. |
 | **FÁTIMA** | O nome completo. | 150 ppm, plana, paciencia agotada, articulando un poco más de lo normal — que en ella es una humillación, no una ayuda. |
 | **MIGUE** | Ah! Chamo-me Miguel Ángel Rentería Salazar. | El «Ah!» explota. Después dispara el nombre entero a 170 ppm, a la mexicana, encadenado y orgulloso. |
 | **FÁTIMA** | Devagar. | Una palabra, 140 ppm, sin levantar la voz ni la vista. Corta el nombre por la mitad. |
@@ -577,7 +573,7 @@ Hay dos líneas de Capa 1 y **ninguna tarea se responde con ellas**; la ráfaga 
 | **MIGUE** | Mas você tem a morada. | Rápido, 140 ppm, casi enfadado, sin pensar. **Debe sonar razonable:** no está siendo grosero, está argumentando. |
 | SOM *(não dobrar)* | *[três segundos — a máquina continua, uma colher pára a meio, ninguém fala]* | Tres segundos exactos, con ambiente audible debajo. **Este silencio es el contenido pedagógico más caro del episodio: no se acorta en el montaje.** |
 | **FÁTIMA** | «Você»? | Muy baja, muy lenta (80 ppm), grave, **sin subir el volumen**. Le devuelve su palabra entre comillas audibles. Peor que un grito. |
-| **FÁTIMA** | O seguinte, faz favor! | Girándose a otro cliente, alto, 170 ppm. Da la conversación por terminada sin despedirse. |
+| **FÁTIMA** | Faz favor, quem se segue? | Girándose a otro cliente, alto, 170 ppm. Da la conversación por terminada sin despedirse. |
 | **KILU** *(bajito, a Fátima)* | Dona Fátima, o rapaz precisa da morada. | 120 ppm, discreto, sin dramatizar, mirándola a ella. **Es la misma petición de Migue, dicha bien.** |
 | **MIGUE** | Desculpe. Não percebi. | Muy bajito, hacia Kilu, 100 ppm, desconcertado de verdad. No es la fórmula de clase: es un hombre que no sabe qué acaba de pasar. |
 | **KILU** | Pois. | Deja de masticar antes de decirlo. Muy bajo, grave, 90 ppm, alargado, mirando el papel y no a Migue. Ya no está divertido. Corte dos segundos después. |
@@ -590,13 +586,30 @@ Hay dos líneas de Capa 1 y **ninguna tarea se responde con ellas**; la ráfaga 
 5. **La sanción del `você` cambia de forma.** `Eu?` devolvía el pronombre equivocado; la retranca lisboeta es **repetir el del otro**. Ahora es **`«Você»?`**, plano y lento — la única emisión portuguesa de la palabra en toda la serie, en cita y sancionadora.
 6. **Se añade la reparación que faltaba.** El pedagogo tenía razón: un castigo sin modelo no es una lección. Kilu dice **la misma proposición con la forma correcta**, tres segundos después, en 3.ª persona con título. Ahora el alumno oye qué *sí* se dice.
 7. **`Não percebi` → `Desculpe. Não percebi.`**, que es la fórmula completa del descriptor. Las dos tienen 0 ocurrencias en el corpus.
-8. **`faz favor` de expulsión → `O seguinte, faz favor!`**
+8. **`faz favor` de expulsión → `Faz favor, quem se segue?`**
 
 **Nota didáctica.** Registro **B (Risa)** en la rotación: el humor hace el trabajo pesado en la primera mitad y paga la factura dramática en la segunda. Descriptores servidos: rellenar un formulário portugués sabiendo que `apelido` no es apodo (el episodio **es** ese formulario, fallado en directo); sostener un intercambio sobre datos personales **sin usar `você`**, enseñado por contraejemplo castigado **y reparado**; pedir velocidad más lenta (`Devagar`, recibida antes que producida, que es la vez que un hispanohablante nunca la ha oído); y el primer `estar a + infinitivo`, **sincronizado con el sonido de la acción**.
 
 Lo que este episodio hace y un manual no puede: el sistema de tratamiento —el primer contenido pragmático del curso según el currículo, y hoy el peor enseñado del repo— se transmite entero en un silencio de tres segundos, una palabra entre comillas y una réplica de doce sílabas. No hay tabla, no hay `<Tip>`, no hay nota. Hay una señora de 68 años que deja de hablarte y un amigo que te enseña cómo se pide. **El gate de desfosilización de A1 —cero ocurrencias de `você` a un desconocido— se juega aquí, en el episodio 2, no en la semana 34.**
 
 ---
+
+
+> **Corregido tras la revisión lingüística (2026-07-28).** Este episodio abría
+> con un gag de falso amigo: Fátima pedía «Apelido.» y Migue contestaba
+> «Migue», creyendo que le preguntaban su apodo. **No funciona.** `apelido`
+> en portugués europeo es «apellido» — amigo verdadero, no falso; el sentido
+> 'apodo' es BRASILEÑO. Un mexicano al que le piden el `apelido` contesta
+> «Rentería», correctamente. El chiste descansaba en una confusión que este
+> alumno no puede cometer.
+>
+> Se retira, y el episodio se queda con el conflicto que sí funciona y ya
+> estaba escrito: **el mexicano lleva dos apellidos y en el formulario
+> portugués no caben** — «Dois? Eu tenho quatro. Isso não me cabe aqui.» Es
+> mejor gag, es verdad cultural, y da la información útil de verdad: el orden
+> portugués es nome + apelido(s), y el materno va ANTES del paterno, al revés
+> que en México.
+
 
 ## Episodio 3 · «Mais um»
 
@@ -743,7 +756,7 @@ Descriptores servidos: *«identifica el número, la hora y el día que le dan en
 
 | Personaje | Portugués | Indicación de voz |
 |---|---|---|
-| **FÁTIMA** | O seguinte, faz favor! | AMBIENTE: máquina, loza, calle. Grito de mostrador, no de enfado. 170 ppm, la frase en un solo golpe. Corta el ambiente en seco. |
+| **FÁTIMA** | Faz favor, quem se segue? | AMBIENTE: máquina, loza, calle. Grito de mostrador, no de enfado. 170 ppm, la frase en un solo golpe. Corta el ambiente en seco. |
 | **MIGUE** | Bom dia, Dona Fátima. Uma bica, se faz favor. | 115 ppm, sonrisa audible, acento mexicano marcado. **Ensayado**: separa «se faz favor» en tres palabras, como quien recita. |
 | **FÁTIMA** | Uma bica. Mais alguma coisa? | 165 ppm, ya apuntando. La pregunta dura 0,5 s. Ni calor ni frialdad: eficiencia. |
 | **MIGUE** | E um pastel de nata. | 118 ppm, contento. Alarga «nata» con gusto. |
@@ -789,7 +802,7 @@ Descriptores servidos: *«identifica el número, la hora y el día que le dan en
 | **MIGUE** | É para o NIF. Escreva aqui a morada. E assine. | 112 ppm, cuidadoso: ha ensayado esto. Marca «Escreva» y «assine» con respeto explícito, casi con miedo. |
 | **FÁTIMA** | Hoje não. | **Silencio de 3 s antes** — el más largo del episodio. Después 120 ppm, muy bajo, casi suave. Dos palabras y para. **No es un «no» de mostrador: es otra cosa, y tiene que oírse que es otra cosa.** |
 | **MIGUE** | Hoje não? | 105 ppm, sin entender absolutamente nada. |
-| **FÁTIMA** | O seguinte, faz favor! | 175 ppm, grito hacia otro cliente, idéntico al de la primera línea. Campanilla de la puerta encima. |
+| **FÁTIMA** | Faz favor, quem se segue? | 175 ppm, grito hacia otro cliente, idéntico al de la primera línea. Campanilla de la puerta encima. |
 | **KILU** | Migue. Guarda o papel. | 130 ppm, muy bajo, ya sin nada de risa. **Primera vez en el episodio que Kilu suena preocupado.** 2 s de ambiente y corte seco. |
 
 **Qué cambió tras la revisión de Lisboa (y del panel).**
@@ -799,7 +812,7 @@ Descriptores servidos: *«identifica el número, la hora y el día que le dan en
 4. **El mecanismo de la sanción deja de ser siempre el eco plano.** Con `esquisito` es eco; con el contribuinte es **silencio + tecla de caja + la risa de Kilu**; en el ep. 2 fue la cita; en el ep. 6 será la no-reacción burocrática. Cuatro mecanismos, cuatro episodios.
 5. **`mau/mal` completo:** faltaba un miembro del par. `Tu falaste mal` lo cierra, y de paso es otra forma de `tu`.
 6. **`Está aqui.` → `Aqui está.`** (servir) y **→ `Aqui tem.`** (entregar/pagar). `Está aqui` significa «está aquí», ubicación; era el calco más repetido de la temporada. El par `Aqui está` / `Aqui tem` es además un ítem A1 precioso.
-7. **`Uma bica. Mais?` → `Mais alguma coisa?`**; **`Diz assim` → `Diz antes`**; **`Pois.` → `Pois, pois.`**; **`Faz favor!` → `O seguinte, faz favor!`**; **precio a `dois e vinte`**.
+7. **`Uma bica. Mais?` → `Mais alguma coisa?`**; **`Diz assim` → `Diz antes`**; **`Pois.` → `Pois, pois.`**; **`Faz favor!` → `Faz favor, quem se segue?`**; **precio a `dois e vinte`**.
 8. **`Isto não é uma escola.` desaparece** con la propina que la motivaba; su función (el corte seco) la hace ahora `Então não há.`
 9. **Se añade `E o trabalho?` / `É hoje.`** — el alumno señaló que el reloj del ep. 4 se tiraba a la basura. Ahora sigue corriendo, y **cobra en el ep. 6**.
 
@@ -950,7 +963,7 @@ Descriptores servidos: *«identifica el número, la hora y el día que le dan en
 | **KILU** | Mas ele mora lá em cima. | 140 ppm, sube el volumen por primera vez en el episodio. Está discutiendo. |
 | **FÁTIMA** | Sei bem onde ele mora. Não me chateies. | 150 ppm la primera frase, cortante; después 1 s de pausa y la segunda a **118 ppm, muchísimo más lenta y más baja**. Casi una súplica, y por eso da más miedo. |
 | **KILU** | ...Está bem. | **Silencio de 3 s antes.** 120 ppm, dos palabras, sin ninguna convicción. Se oye que no le gusta. |
-| **FÁTIMA** | O seguinte, faz favor! | 175 ppm, grito de mostrador. Campanilla y ruido de calle entrando de golpe. Corte inmediato, sin cola. |
+| **FÁTIMA** | Faz favor, quem se segue? | 175 ppm, grito de mostrador. Campanilla y ruido de calle entrando de golpe. Corte inmediato, sin cola. |
 
 **Qué cambió tras la revisión de Lisboa (y del panel).**
 1. **El par ênclise/próclise que la nota anunciaba no existía.** En «Não digas nada» **no hay ningún clítico**: `nada` es un pronombre negativo. Era el mismo error metalingüístico de los 57 ítems de `b8-l3`, cometido en la biblia que iba a corregirlos. Ahora hay dos próclises reales —**`Não te metas nisso`** y **`Não me chateies`**— contra la ênclise de `Senta-te`, en la misma boca y con dos velocidades opuestas.
@@ -960,7 +973,7 @@ Descriptores servidos: *«identifica el número, la hora y el día que le dan en
 5. **`Está aqui.` → `Aqui está.`** y **`Depois, aqui, é o autocarro` → `Depois, cá, é de autocarro`**.
 6. **Se poda el pronombre sujeto explícito de Fátima:** `Eu sei onde ele mora` → **`Sei bem onde ele mora`**. Individualmente los sujetos explícitos pasan; en conjunto sonaban a traducción.
 7. **Se añade `pequeno-almoço`** —era el episodio del desayuno y faltaba la palabra, que está en la lista A1 obligatoria— **y `Chega dia dezassete`**, que da la segunda aparición del numeral y una fecha.
-8. **`Faz favor!` → `O seguinte, faz favor!`**
+8. **`Faz favor!` → `Faz favor, quem se segue?`**
 
 **Nota didáctica.** Registro **D (Gente)**: dos personas, sin trama aparente, hasta los últimos ocho segundos. Es el episodio que se puede oír con ruido —densidad baja, frases cortas, ninguna cifra que retener— y por eso cae siempre el mismo día de la semana.
 
@@ -1016,7 +1029,7 @@ Descriptores servidos: *«identifica el número, la hora y el día que le dan en
 | **KILU** | Se calhar não é nada. | 130 ppm, sin mirarle. **Es la frase de Fátima, en su boca, palabra por palabra.** |
 | **KILU** | Estamos juntos. | 128 ppm, ya de espaldas, la despedida angoleña de siempre, y hoy suena a excusa. |
 | **MIGUE** | Kilu! | 125 ppm, una sílaba, alto, con la voz rota. **Campanilla de la puerta y calle cortando la palabra por la mitad.** |
-| **FÁTIMA** | O seguinte, faz favor! | 175 ppm, desde el otro extremo del balcão, exactamente igual que en los eps. 5 y 7. **Corte inmediato sobre la campanilla, sin cola, sin música.** |
+| **FÁTIMA** | Faz favor, quem se segue? | 175 ppm, desde el otro extremo del balcão, exactamente igual que en los eps. 5 y 7. **Corte inmediato sobre la campanilla, sin cola, sin música.** |
 
 **Qué cambió tras la revisión de Lisboa (y del panel).**
 1. **`O que é que ela está a fazer na sexta-feira?` → `O que é que ela vai fazer na sexta?`** En portugués europeo el progresivo **no** proyecta al futuro: eso es inglés y español. Era la única de las diez ocurrencias de `estar a + infinitivo` de la tanda que estaba mal, y estaba mal justo donde la nota didáctica la canonizaba como «un uso que ninguna gramática menciona». Corregirla además regala `vai + infinitivo`.
@@ -1223,7 +1236,7 @@ Tres lectores: un nativo de Lisboa, un especialista en adquisición y el propio 
 | 1 | **«Aqui é um»** sobre los dos apellidos es **falso**: los portugueses llevan dos, tres o cuatro. Y el chiste se apoyaba en ello. | **Aceptada.** Ep. 2 → `Dois? Eu tenho quatro. Isso não me cabe aqui.` Conserva la queja logística, el chiste y el presupuesto, y es verdad. |
 | 2 | **`Quem mora no terceiro?`** — está preguntando por su propio piso; la puerta de la cinta métrica es el segundo. | **Aceptada.** Ep. 3 → `Quem mora no segundo?`, y el eco del ep. 4 corregido en cadena. |
 | 3 | **El par ênclise/próclise anunciado no existe:** en «Não digas nada» no hay clítico. Y en ocho episodios no había **ni una próclise**. | **Aceptada, y es la corrección más importante del panel.** Ep. 7 → `Não te metas nisso` y `Não me chateies`, contra `Senta-te`. Era el mismo error metalingüístico de los 57 ítems de `b8-l3`, cometido en la biblia que iba a corregirlos. |
-| 4 | **`Faz favor!` con cuatro funciones, dos inventadas:** no es llamada de turno ni se dice en una puerta. | **Aceptada.** `O seguinte, faz favor!` para el turno (eps. 1, 2, 5, 6, 7, 8) y `Dá licença?` en la puerta (ep. 3). Quedan **dos funciones auténticas** bien contrastadas: ofrecimiento ascendente y cierre de conversación. |
+| 4 | **`Faz favor!` con cuatro funciones, dos inventadas:** no es llamada de turno ni se dice en una puerta. | **Aceptada.** `Faz favor, quem se segue?` para el turno (eps. 1, 2, 5, 6, 7, 8) y `Dá licença?` en la puerta (ep. 3). Quedan **dos funciones auténticas** bien contrastadas: ofrecimiento ascendente y cierre de conversación. |
 | 5 | **`Ó?` interrogativo no es portugués**: `ó` es sólo vocativo. | **Aceptada.** → `Hã?` en los eps. 1 y 2. El uso del ep. 4 (Marta partiendo el vocativo) se conserva porque ahí sí es correcto. |
 | 6 | **`Está aqui` como «aquí tiene» es calco**, repetido cinco veces como fórmula fija. | **Aceptada.** `Aqui está` al servir (eps. 5, 7) y `Aqui tem` al entregar o pagar (eps. 5, 6, 8). El par es además un ítem A1 precioso. |
 | 7 | **`Não come mais`** no es imperativo negativo válido; exige conjuntivo. | **Aceptada.** → `Não coma mais`, y de regalo el contraste con `Coma` tres minutos después, en la misma boca. |
