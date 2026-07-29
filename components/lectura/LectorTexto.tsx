@@ -22,7 +22,7 @@ export function LectorTexto({ parrafos }: { parrafos: ParrafoTexto[] }) {
         ) : (
           <p
             key={i}
-            className="font-display text-[20px] leading-[1.75] mb-5"
+            className="font-display text-[20px] leading-[1.75] mb-5 whitespace-pre-line"
           >
             {p.texto}
           </p>

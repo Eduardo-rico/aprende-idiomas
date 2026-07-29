@@ -68,7 +68,8 @@ export default async function LeerIndexPage({
                 )}
               </div>
               <p className="text-sm text-ink-muted mt-1 italic">
-                {l.autor} († {l.muerteAutor}) ·{" "}
+                {l.autor}
+                {l.muerteAutor ? ` († ${l.muerteAutor})` : ""} ·{" "}
                 {l.modo === "texto"
                   ? `${l.parrafos
                       .reduce(

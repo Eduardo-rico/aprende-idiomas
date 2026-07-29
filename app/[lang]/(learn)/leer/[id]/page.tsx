@@ -47,7 +47,8 @@ export default async function LecturaPage({
         </Eyebrow>
         <h1 className="font-display text-5xl mt-2 mb-1">{lectura.titulo}</h1>
         <p className="font-display italic text-lg text-ink-muted">
-          {lectura.autor} († {lectura.muerteAutor})
+          {lectura.autor}
+          {lectura.muerteAutor ? ` († ${lectura.muerteAutor})` : ""}
         </p>
         <p className="font-mono text-[11px] leading-relaxed text-ink-faint mt-4">
           {lectura.fuente} · {lectura.licencia}

@@ -4,9 +4,13 @@
 // 1,9M palabras puede entrar sin esperar al karaoke, que queda para la
 // escalera graduada (decisión de Edu, 2026-07-29).
 //
-// GATE DE PROCEDENCIA (plan maestro, Ola L): idéntico al del karaoke —
-// el meta.json exige título, autor, año de muerte, URL de fuente y
-// nivel. Sin los cinco campos, no se escribe nada.
+// GATE DE PROCEDENCIA (plan maestro, Ola L), con dos vías:
+// - dominio público: título, autor, año de muerte, URL de fuente, nivel;
+// - original del curso (`original: true`): título, autor, nivel, y la
+//   constancia de revisión adversarial (revisadoPor + fechaRevision) —
+//   la lección más cara ya pagada: nada original se publica sin pasar
+//   por el lingüista adversarial de su lengua.
+// Sin los campos de su vía, no se escribe nada.
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -17,15 +21,22 @@ if (!entrada || !salidaJson) {
 }
 
 const META = JSON.parse(fs.readFileSync(path.join(path.dirname(entrada), 'meta.json'), 'utf8'));
-for (const campo of ['titulo', 'autor', 'muerteAutor', 'fuenteUrl', 'nivel']) {
+const campos = META.original === true
+  ? ['titulo', 'autor', 'nivel', 'revisadoPor', 'fechaRevision']
+  : ['titulo', 'autor', 'muerteAutor', 'fuenteUrl', 'nivel'];
+for (const campo of campos) {
   if (!META[campo]) { console.error(`meta.json sin «${campo}» — el gate de procedencia no negocia.`); process.exit(1); }
 }
 
 // Igual que el generador karaoke: bloques separados por línea en blanco,
-// con los cortes duros de ~70 columnas desenrollados.
+// con los cortes duros de ~70 columnas desenrollados. EXCEPTO cuando el
+// meta declara `versos: true` (poesía): ahí el salto de línea interno es
+// forma, no accidente de Gutenberg, y se conserva.
 const parrafos = fs.readFileSync(entrada, 'utf8')
   .split(/\n\s*\n/)
-  .map((p) => p.replace(/\s*\n\s*/g, ' ').trim())
+  .map((p) => META.versos === true
+    ? p.split('\n').map((l) => l.trim()).filter(Boolean).join('\n')
+    : p.replace(/\s*\n\s*/g, ' ').trim())
   .filter((p) => p.length > 0)
   .map((texto) => ({ texto }));
 

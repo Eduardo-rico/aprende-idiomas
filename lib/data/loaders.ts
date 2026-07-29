@@ -287,8 +287,12 @@ export interface PalabraKaraoke { t: string; s: number; e: number }
 export interface ParrafoLectura { mp3: string; texto: string; palabras: PalabraKaraoke[] }
 export interface ParrafoTexto { texto: string }
 interface LecturaBase {
-  id: string; titulo: string; autor: string; muerteAutor: number;
-  fuente: string; fuenteUrl: string; licencia: string; nivel: string;
+  id: string; titulo: string; autor: string; nivel: string;
+  fuente: string; licencia: string;
+  // dominio público: año de muerte del autor + URL de origen
+  muerteAutor?: number; fuenteUrl?: string;
+  // original del curso: constancia de la revisión adversarial
+  original?: true; revisadoPor?: string; fechaRevision?: string;
   notaOrtografia?: string;
 }
 export interface LecturaKaraoke extends LecturaBase { modo?: 'karaoke'; parrafos: ParrafoLectura[] }
