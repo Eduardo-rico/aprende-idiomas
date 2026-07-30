@@ -293,6 +293,10 @@ interface LecturaBase {
   muerteAutor?: number; fuenteUrl?: string;
   // original del curso: constancia de la revisión adversarial
   original?: true; revisadoPor?: string; fechaRevision?: string;
+  // pertenencia a una serie (libro por capítulos, colección de cuentos):
+  // el catálogo agrupa la serie en una tarjeta y el lector navega entre
+  // capítulos por `orden`.
+  serie?: { id: string; titulo: string; orden: number };
   notaOrtografia?: string;
 }
 export interface LecturaKaraoke extends LecturaBase { modo?: 'karaoke'; parrafos: ParrafoLectura[] }

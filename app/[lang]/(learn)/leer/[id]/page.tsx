@@ -5,7 +5,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { hasLocale, type LanguageId } from "@/lib/locales";
-import { loadLectura } from "@/lib/data/loaders";
+import { loadLectura, loadLecturas } from "@/lib/data/loaders";
 import { Eyebrow } from "@/components/ui";
 import { LectorKaraoke } from "@/components/lectura/LectorKaraoke";
 import { LectorTexto } from "@/components/lectura/LectorTexto";
@@ -23,6 +23,17 @@ export default async function LecturaPage({
   const lectura = await loadLectura(lang, id);
   if (!lectura) notFound();
 
+  // Vecinos dentro de la serie (capítulo anterior / seguinte).
+  let anterior = null, siguiente = null;
+  if (lectura.serie) {
+    const hermanas = (await loadLecturas(lang))
+      .filter((l) => l.serie?.id === lectura.serie!.id)
+      .sort((a, b) => a.serie!.orden - b.serie!.orden);
+    const idx = hermanas.findIndex((l) => l.id === lectura.id);
+    anterior = idx > 0 ? hermanas[idx - 1]! : null;
+    siguiente = idx >= 0 && idx + 1 < hermanas.length ? hermanas[idx + 1]! : null;
+  }
+
   const esTexto = lectura.modo === "texto";
   const detalle =
     lectura.modo === "texto"
@@ -36,10 +47,10 @@ export default async function LecturaPage({
   return (
     <main className={`mx-auto max-w-[680px] px-6 py-12 ${esTexto ? "pb-16" : "pb-28"}`}>
       <Link
-        href={`/${lang}/leer`}
+        href={lectura.serie ? `/${lang}/leer/serie/${lectura.serie.id}` : `/${lang}/leer`}
         className="font-mono text-[11px] uppercase tracking-wider text-ink-faint hover:text-cobalt"
       >
-        ← Biblioteca
+        ← {lectura.serie ? lectura.serie.titulo : "Biblioteca"}
       </Link>
       <header className="border-b border-rule pb-6 mt-6 mb-8">
         <Eyebrow>
@@ -67,6 +78,30 @@ export default async function LecturaPage({
           parrafos={lectura.parrafos}
           baseAudio={`/lecturas/${lectura.id}`}
         />
+      )}
+      {(anterior || siguiente) && (
+        <nav className="flex justify-between gap-4 border-t border-rule mt-10 pt-5">
+          {anterior ? (
+            <Link
+              href={`/${lang}/leer/${anterior.id}`}
+              className="font-mono text-[12px] text-ink-muted hover:text-cobalt"
+            >
+              ← {anterior.titulo}
+            </Link>
+          ) : (
+            <span />
+          )}
+          {siguiente ? (
+            <Link
+              href={`/${lang}/leer/${siguiente.id}`}
+              className="font-mono text-[12px] text-ink-muted hover:text-cobalt text-right"
+            >
+              {siguiente.titulo} →
+            </Link>
+          ) : (
+            <span />
+          )}
+        </nav>
       )}
     </main>
   );
