@@ -7407,5 +7407,437 @@
   "variantVerificacion": "Ola B2C2 piloto: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-piloto-b2c2-gj-mediacion.md)",
   "register": "neutro",
   "contentHash": "5302c46fce2daa8861d07055157e9bcaca292442c0d333b7c307ad992e92eb62"
+ },
+ {
+  "id": "b2c2-gj-l1-01",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Está a chover desde ontem.",
+   "verdict": true,
+   "explanationEs": "'Estar a + infinitivo' es el progresivo europeo — en Brasil sería 'está chovendo' y en español 'está lloviendo'. La frase es correcta tal cual."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "1a5e3eb9fa2944996ffaae291f2c0d61fee3887725ce2d2b835eded85da9c1c3"
+ },
+ {
+  "id": "b2c2-gj-l1-02",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Cheguei em casa muito tarde.",
+   "verdict": false,
+   "repair": "Cheguei a casa muito tarde.",
+   "explanationEs": "'Chegar' de movimiento rige A en el estándar europeo — y con la casa de uno, sin artículo: 'chegar a casa'. Este error NO viene del español (que también dice 'llegar A casa'): es interferencia del portugués de Brasil ('cheguei em casa', normal allí), que se pega por las series."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "73e967362c5d134cf81f2021e1e877bd63c354d46fbc9aa22a4b059d2f9910c1"
+ },
+ {
+  "id": "b2c2-gj-l1-03",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Trabalho numa oficina de advogados.",
+   "verdict": false,
+   "repair": "Trabalho num escritório de advogados.",
+   "explanationEs": "'Oficina' en portugués es el TALLER (mecánico, de reparaciones); el lugar de trabajo administrativo es 'escritório'. Falso amigo clásico del hispanohablante."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "793f678f4cc5217cd3bc3494274582431a4ee5d783efb58d13bf29dfcae4e27f"
+ },
+ {
+  "id": "b2c2-gj-l1-04",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Apaixonei-me por ela.",
+   "verdict": true,
+   "explanationEs": "'Enamorarse DE' se dice 'apaixonar-se POR' — aquí está bien. La ênclise 'apaixonei-me' también: frase afirmativa sin disparador de próclise."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "1c1a2c5c9872b8d68e1429b7f1f373e970cbbe21046d5eeff4f987df01d0a976"
+ },
+ {
+  "id": "b2c2-gj-l1-05",
+  "blockId": 8,
+  "lessonId": "b8-l2-subordinadas-substantivas-adjetivas",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Levo três anos a estudar português.",
+   "verdict": false,
+   "repair": "Estudo português há três anos.",
+   "explanationEs": "'Llevar + tiempo' no se traduce con 'levar': la duración en portugués es con 'há' ('há três anos que estudo' también vale). 'Levar' existe, pero para otras cosas (levar tempo A fazer algo = tardar)."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "0a0a8785630808beffce6d7cc50455ec88397696be30675fada9bcea8e63fbdd"
+ },
+ {
+  "id": "b2c2-gj-l1-06",
+  "blockId": 8,
+  "lessonId": "b8-l2-subordinadas-substantivas-adjetivas",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Vou perguntar-lhe se pode ajudar.",
+   "verdict": true,
+   "explanationEs": "'Perguntar se' (preguntar si) está perfecto, y la ênclise 'perguntar-lhe' es la colocación europea con infinitivo."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "5dbfedb2a2660eed457cf4fbfccd7107fc2f982ce371f23252ee95c93208ae61"
+ },
+ {
+  "id": "b2c2-gj-l1-07",
+  "blockId": 8,
+  "lessonId": "b8-l4-discurso-indireto",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Pedi-lhe uma pergunta.",
+   "verdict": false,
+   "repair": "Fiz-lhe uma pergunta.",
+   "explanationEs": "Como en español, las preguntas se HACEN: 'fazer uma pergunta' = 'hacer una pregunta'. 'Pedir uma pergunta' no viene del español (ahí también es agramatical): delata material traducido del inglés (to ask)."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "d2dd6ee039b5d8fc924caa46e19d8fe6d4637af7b98fc49ad3ffde7773d4d448"
+ },
+ {
+  "id": "b2c2-gj-l1-08",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Vou a pé até o centro.",
+   "verdict": false,
+   "repair": "Vou a pé até ao centro.",
+   "explanationEs": "En Portugal lo normal es contraer: 'até ao centro', 'até à praia'. 'Até o' es la norma de uso brasileña (y no agramatical en sentido estricto) — en un texto europeo, chirría."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "a8e4a5bff42a1c147d9a802be634e8905679cd591e99c62440ec285916ecdac3"
+ },
+ {
+  "id": "b2c2-gj-l1-09",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Faz muito calor em agosto.",
+   "verdict": true,
+   "explanationEs": "'Fazer calor/frio' existe en portugués igual que en español ('está calor' también se dice). Correcta tal cual."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "6b47110a49bf88a6d045db9a91449bd2567406f5d432d2c66e0ec1786e17555b"
+ },
+ {
+  "id": "b2c2-gj-l1-10",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Olvidei-me de trazer o livro.",
+   "verdict": false,
+   "repair": "Esqueci-me de trazer o livro.",
+   "explanationEs": "'Olvidar' solo sobrevive en portugués como arcaísmo literario ('votar ao olvido'); en la lengua de hoy es 'esquecer'. La estructura ('-me de + infinitivo') estaba impecable — el error es solo el verbo."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "750786afc649bd03d1f43bb44297654cdced282ac2f393ea62cbe8eae323b635"
+ },
+ {
+  "id": "b2c2-gj-l1-11",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Somos quatro na minha família.",
+   "verdict": true,
+   "explanationEs": "'Somos cuatro' funciona igual: 'ser + numeral' para el tamaño del grupo, y el posesivo con artículo ('na minha família') es el europeo de manual."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "1e53861a41ef0b601fb17e774f223ded9be2d40b629852c08a119dc206e504b1"
+ },
+ {
+  "id": "b2c2-gj-l1-12",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Se calhar vou ficar em casa.",
+   "verdict": true,
+   "explanationEs": "'Se calhar' (= a lo mejor) es europeo genuino y corriente — no existe en español y por eso suena 'sospechoso'. En Brasil se diría 'talvez' o 'pode ser'."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "179caf620fea55d7430bd4f132c1b0519e25684f26a844d87bd9c639a26c9e53"
+ },
+ {
+  "id": "b2c2-gj-l1-13",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Não deixes de visitar Sintra.",
+   "verdict": true,
+   "explanationEs": "'Deixar de + infinitivo' = 'dejar de': coincide con el español y está perfecto — no todo lo que suena igual es calco. El imperativo negativo se hace con el presente do conjuntivo: 'não deixes', no '*não deixa'."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "informal",
+  "address": "tu",
+  "contentHash": "3dae32cf722bf8717b89b8396799653b8a009cbf33eba7a1e30c540900c52e9f"
+ },
+ {
+  "id": "b2c2-gj-l1-14",
+  "blockId": 8,
+  "lessonId": "b8-l3-colocacao-pronominal",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "O filme parece-se ao livro.",
+   "verdict": false,
+   "repair": "O filme parece-se com o livro.",
+   "explanationEs": "'Parecerse A' se dice 'parecer-se COM'. La ênclise 'parece-se' está bien — el error está en la preposición."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "41d0e6b1b02fe0f1dc98dbf4be2c54ae24ac08ba66121f7a2d43282473b28ec7"
+ },
+ {
+  "id": "b2c2-gj-l1-15",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Sou aficionado ao futebol.",
+   "verdict": false,
+   "repair": "Sou adepto do futebol.",
+   "explanationEs": "'Aficionado' existe en portugués casi solo en el mundo de los toros (es préstamo del español); del fútbol se es 'adepto' (o 'fã'). Léxico, no gramática."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "297c51b1af0732e2b649427a7f7dbd8321381a4f775cbbb584722bdeb75951d1"
+ },
+ {
+  "id": "b2c2-gj-l1-16",
+  "blockId": 8,
+  "lessonId": "b8-l4-discurso-indireto",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Perguntou-me que hora era.",
+   "verdict": false,
+   "repair": "Perguntou-me que horas eram.",
+   "explanationEs": "La PREGUNTA de la hora va en plural: 'Que horas são?', 'que horas eram?' (la respuesta puede ser singular: 'é uma hora'). El singular '¿qué hora era?' del español peninsular no se traslada."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "c2f0fd35cbff24c8de13422eba764eea440dbfdd17bacd6a9a48b14e94eb1c26"
+ },
+ {
+  "id": "b2c2-gj-l1-17",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Quanto tempo demoraste a chegar?",
+   "verdict": true,
+   "explanationEs": "'Demorar A + infinitivo' (= tardar en) es la regência correcta, y 'demoraste' es el 2sg del tuteo europeo normal."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "informal",
+  "address": "tu",
+  "contentHash": "4c0223ab335a6b54335c9414986c6bcb092bb0eb5c0fdfa1f1b9fbcdfca10cac"
+ },
+ {
+  "id": "b2c2-gj-l1-18",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "A carne estava tão rica que repetimos.",
+   "verdict": false,
+   "repair": "A carne estava tão boa que repetimos.",
+   "explanationEs": "En posición predicativa, 'rico' es quien tiene dinero: la comida sabrosa 'está boa/saborosa'. (Delante del nombre sí existe un 'rico' afectivo: 'uma rica sopa' — otro uso.) '¡Qué rico!' de comida no se calca."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "a681e6c807d4a9fb152360d29a845430145aff76e61c69bf9ecdec52a866c757"
+ },
+ {
+  "id": "b2c2-gj-l1-19",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Ainda não me habituei a acordar cedo.",
+   "verdict": true,
+   "explanationEs": "'Habituar-se A' es la regência correcta, y la próclise ('não ME habituei') la exige la negación — aquí sí hay clítico que colocar."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "644d164652c90a1aa1d836026585a0014ca3c6041e0942aa9bea7df7ec1590b7"
+ },
+ {
+  "id": "b2c2-gj-l1-20",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Vou-me embora, que já é tarde.",
+   "verdict": true,
+   "explanationEs": "'Ir-se embora' y el 'que' causal coloquial ('…que ya es tarde') son europeos naturales. Nada que tocar."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "f161b054c10b686312607478821534d8401643cb384cfdfdd92dd4cc95dd412f"
  }
 ]

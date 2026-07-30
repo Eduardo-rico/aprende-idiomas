@@ -4271,5 +4271,221 @@
   "register": "formal",
   "address": "o_senhor",
   "contentHash": "ebc9b03b4001cb2ade2cb4740b0ab19c33cbffdd61397019ce877b4f4f7956c3"
+ },
+ {
+  "id": "b2c2-med-03",
+  "blockId": 10,
+  "lessonId": "b10-l1-registro-formal-informal",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "Os três irmãos de Medranhos, Rui, Guannes e Rostabal, eram então, em todo o Reino das Astúrias, os fidalgos mais famintos e os mais remendados. Nos Paços de Medranhos, a que o vento da serra levára vidraça e telha, passavam êles as tardes dêsse inverno, engelhados nos seus pelotes de camelão, batendo as solas rotas sôbre as lages da cozinha, diante da vasta lareira negra, onde desde muito não estalava lume, nem fervia a panela de ferro. Ao escurecer devoravam uma côdea de pão negro, esfregada com alho. Depois, sem candeia, através do pátio, fendendo a neve, iam dormir à estrebaria, para aproveitar o calor das três éguas lazarentas que, esfaimadas como êles, roíam as traves da mangedoura. E a miséria tornára êstes senhores mais bravios que lôbos.",
+   "sourceRef": "o-tesoiro",
+   "sourceLang": "pt",
+   "targetLang": "es",
+   "mediationType": "summarise",
+   "audience": "un amigo hispanohablante que no ha leído el cuento",
+   "instructionsEs": "Resume EN ESPAÑOL cómo viven los tres hermanos al empezar 'O Tesoiro' de Eça.",
+   "wordRange": {
+    "min": 25,
+    "max": 50
+   },
+   "rubric": [
+    "Menciona que son tres hermanos nobles arruinados",
+    "Transmite la miseria concreta (frío, hambre, dormir con las yeguas)",
+    "No inventa nada que el texto no diga",
+    "Cabe en el rango de palabras"
+   ],
+   "modelAnswer": "Son tres hermanos nobles de Asturias, los más pobres del reino: pasan el invierno con la ropa remendada, sin fuego ni comida caliente, y duermen en el establo para aprovechar el calor de sus tres yeguas, tan hambrientas como ellos."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "97a2d51e02f0f95072cc7ab2e224173e2f37045a5509458cebe37c7504ef7bfa"
+ },
+ {
+  "id": "b2c2-med-04",
+  "blockId": 10,
+  "lessonId": "b10-l1-registro-formal-informal",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "Exmos. Senhores, informamos que a reunião de sexta-feira foi adiada para segunda-feira, às 10h. Agradecemos a compreensão.",
+   "sourceLang": "pt",
+   "targetLang": "pt",
+   "mediationType": "reformulate_register",
+   "audience": "um colega que também é teu amigo, por mensagem",
+   "instructionsEs": "Reescribe el aviso como mensaje INFORMAL a tu colega: misma información (la reunión del viernes pasa al lunes a las 10), tuteo natural, sin fórmulas de oficina.",
+   "wordRange": {
+    "min": 10,
+    "max": 30
+   },
+   "rubric": [
+    "Trata de tu (o registro informal claro), sin Exmos./Agradecemos",
+    "Dice lo mismo: viernes → lunes 10h, sin inventar motivos",
+    "Empieza como mensaje (olá/olha/ei…), no por 'informamos'",
+    "Cabe en el rango de palabras"
+   ],
+   "modelAnswer": "Olá! Olha, a reunião de sexta passou para segunda às 10. Não te esqueças!"
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "informal",
+  "address": "tu",
+  "contentHash": "9bedcfabf3f18a948e90236e29885c55a479b5e3a144ac66b5b75308a4c87a28"
+ },
+ {
+  "id": "b2c2-med-05",
+  "blockId": 10,
+  "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+  "difficulty": 3,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "Você pode pegar o ônibus na frente do shopping. Desce no ponto perto da banca de jornal e me liga do seu celular quando chegar.",
+   "sourceLang": "pt",
+   "targetLang": "pt",
+   "mediationType": "cross_variety",
+   "audience": "um amigo de Lisboa, tratado por tu",
+   "instructionsEs": "Reescribe estas indicaciones EN PORTUGUÉS EUROPEO, tuteando: cambia lo que un lisboeta diría distinto (léxico, tratamiento y colocación de pronombres).",
+   "wordRange": {
+    "min": 15,
+    "max": 40
+   },
+   "rubric": [
+    "Léxico europeo: autocarro, telemóvel, paragem, quiosque (el 'shopping' puede quedarse: también se dice en Portugal)",
+    "Tuteo coherente (podes/apanhas…), ni un você",
+    "Colocación europea (liga-me / ligas-me, no 'me liga')",
+    "Misma información, en el rango"
+   ],
+   "modelAnswer": "Podes apanhar o autocarro em frente do centro comercial. Sais na paragem ao pé do quiosque e ligas-me do telemóvel quando chegares."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "informal",
+  "address": "tu",
+  "contentHash": "29690752b04d7c7ac927d5a1de2e4548f08c655dcc1a0507597a4b3c30e4a2f5"
+ },
+ {
+  "id": "b2c2-med-06",
+  "blockId": 10,
+  "lessonId": "b10-l1-registro-formal-informal",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "«Mamã, nem todas as creanças que morrem vão para o Paraizo. O outro dia vi levar para o cemiterio um menino que tinha morrido; o seu papá e as suas duas irmãsinhas acompanhavam o caixão, e choravam tanto que me fazia pena. Iam a chorar porque aquelle menino tinha sido mau, não é verdade?»\n\n«Não; naturalmente foi sempre bom, e a sua alma, emquanto choravam seus paes e suas irmãs, já estava vivendo feliz no Paraizo.»\n\n«A alma? mamã; não sei o que é; não comprehendo bem.»\n\n«Maria, acabas de me dizer que tiveste pena de ver chorar as duas pequerruchas.»\n\n«Tive sim, mamã, tive muita pena.»\n\n«Ora bem, o que é que no teu corpo estava desconsolado e triste? eram os braços?»\n\n«Não, mamã.»\n\n«Eram as orelhas?»\n\n«Oh! não mamã, era cá dentro.»\n\n«Esse lá dentro, Maria, é a tua alma que se alegra ou se entristece, que te reprehende quando fazes o mal, e que está satisfeita quando praticas o bem.",
+   "sourceRef": "junqueiro-a-alma",
+   "sourceLang": "pt",
+   "targetLang": "es",
+   "mediationType": "summarise",
+   "audience": "un amigo hispanohablante",
+   "instructionsEs": "Resume EN ESPAÑOL este mini-cuento de 'Contos para a infância': qué pregunta la niña y cómo se lo explica la madre.",
+   "wordRange": {
+    "min": 30,
+    "max": 55
+   },
+   "rubric": [
+    "Recoge lo que trae Maria (vio un entierro; cree que no todos los niños van al paraíso; pregunta qué es el alma)",
+    "Recoge la explicación de la madre (la pena que sintió 'ahí dentro' ES el alma)",
+    "No inventa nada",
+    "Cabe en el rango"
+   ],
+   "modelAnswer": "Maria vio el entierro de un niño y, convencida de que no todos los niños van al paraíso, pregunta si aquel había sido malo — y qué es eso del alma. La madre le responde con lo que la propia niña sintió: esa pena 'ahí dentro' al ver llorar a la familia es el alma."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "a1050441401bbcd8bdcfe5ef74b91115ec8d15575f281b475385e3c969ff07f3"
+ },
+ {
+  "id": "b2c2-med-07",
+  "blockId": 10,
+  "lessonId": "b10-l1-registro-formal-informal",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "Dois alentejanos estão deitados à sombra de uma oliveira. Passa um turista: — Bom dia! O que é que está a fazer? — Nada, nada. — E o seu amigo? — Está a ajudar-me.",
+   "sourceRef": "anedotas-e-quadras-a2-1",
+   "sourceLang": "pt",
+   "targetLang": "es",
+   "mediationType": "relay",
+   "audience": "un amigo español al que quieres contarle el chiste",
+   "instructionsEs": "Cuéntale el chiste EN ESPAÑOL, como se cuenta un chiste — corto y con el remate al final.",
+   "wordRange": {
+    "min": 25,
+    "max": 50
+   },
+   "rubric": [
+    "Escena: dos alentejanos tumbados a la sombra y un turista que pregunta",
+    "El remate es la última frase ('me está ayudando')",
+    "No explica el chiste, lo CUENTA",
+    "Cabe en el rango"
+   ],
+   "modelAnswer": "Dos del Alentejo están tumbados a la sombra de un olivo. Pasa un turista y le pregunta a uno: '¿qué hace usted?'. 'Nada, nada'. '¿Y su amigo?'. 'Me está ayudando.'"
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "informal",
+  "contentHash": "fab4cafd1f63a48e43319606ffec2163e8614b02cd803452b286526ec3efe20e"
+ },
+ {
+  "id": "b2c2-med-08",
+  "blockId": 10,
+  "lessonId": "b10-l1-registro-formal-informal",
+  "difficulty": 3,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote1",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "A professora diz: — Joãozinho, conjuga o verbo andar. — Eu ando… tu andas… ele anda… — Mais depressa! — Nós corremos, vós correis, eles correm!",
+   "sourceRef": "anedotas-e-quadras-a2-2",
+   "sourceLang": "pt",
+   "targetLang": "es",
+   "mediationType": "explain_concept",
+   "audience": "un amigo español que estudia portugués y no le ve la gracia",
+   "instructionsEs": "Explícale EN ESPAÑOL por qué tiene gracia: qué dos cosas puede significar la orden de la profesora y qué hace Joãozinho con el verbo.",
+   "wordRange": {
+    "min": 30,
+    "max": 60
+   },
+   "rubric": [
+    "Explica la ambigüedad de 'Mais depressa!' (recita más rápido / muévete más rápido)",
+    "Explica que Joãozinho responde cambiando 'andar' por 'correr' SIN salirse del paradigma",
+    "No traduce el chiste entero palabra a palabra: lo explica",
+    "Cabe en el rango"
+   ],
+   "modelAnswer": "La profesora le pide conjugar 'andar' y, cuando dice '¡más deprisa!', quiere que recite más rápido. Joãozinho entiende (o finge entender) que debe MOVERSE más rápido… y sigue la tabla donde iba, pero con 'correr': 'nós corremos, vós correis, eles correm'."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "5b77e89046eb23c7c832648c9a75efe634b53a0eb15aa1c4c7a19d67e4ecb18a"
  }
 ]
