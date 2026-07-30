@@ -8643,5 +8643,284 @@
   "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
   "register": "neutro",
   "contentHash": "01d29a309b95c38668e35cd3096359e188abd7dfe3b40b9113380ee1cdc215b6"
+ },
+ {
+  "id": "b2c2-gj-l4-01",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote4",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Lavei-me as mãos antes do jantar.",
+   "verdict": false,
+   "repair": "Lavei as mãos antes do jantar.",
+   "explanationEs": "El dativo posesivo del español ('me lavé las manos') NO se traslada: en portugués basta 'lavei as mãos' — el artículo ya marca la posesión. El '-me' sobra."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+  "register": "neutro",
+  "contentHash": "1684a9155e154fbe5fcff35d082b94743cbda17e90d4862f8bd9611a51c17792"
+ },
+ {
+  "id": "b2c2-gj-l4-02",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote4",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Ele foi um óptimo aluno.",
+   "verdict": false,
+   "repair": "Ele foi um ótimo aluno.",
+   "explanationEs": "El Acordo de 1990 eliminó la consonante muda: 'ótimo', 'objetivo'. 'Óptimo' es la grafía europea antigua — la verás en libros pre-2009 (y el español la conserva: doble imán). Ojo: 'facto' y 'contacto' CONSERVAN la c en Portugal — la regla es la pronunciación."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+  "register": "neutro",
+  "contentHash": "30a59d6e05196c45430966784fa993a30213282d2e189aaa062da6e916b3ebb6"
+ },
+ {
+  "id": "b2c2-gj-l4-03",
+  "blockId": 8,
+  "lessonId": "b8-l3-colocacao-pronominal",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote4",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Eu vi-o ontem no mercado.",
+   "verdict": true,
+   "explanationEs": "El sujeto expreso ('eu') NO dispara próclise: la ênclise 'vi-o' es la colocación normal. (Quien aprendió que 'ela me disse' está mal a veces sobrecorrige creyendo que todo pronombre delante cambia el clítico — no.)"
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+  "register": "neutro",
+  "contentHash": "f8a74c5994811bfe964d8c7d12042e3f341b3fb7024cfcf73ef20d37c4f2b378"
+ },
+ {
+  "id": "b2c2-gj-l4-04",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote4",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Vou ter contigo ao café às cinco.",
+   "verdict": true,
+   "explanationEs": "'Ir ter com alguém' (= reunirse con, ir a donde está) es idiomatismo europeo de primera necesidad. Suena imposible al hispanohablante — y es lo que dice toda Lisboa."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+  "register": "informal",
+  "address": "tu",
+  "contentHash": "5fa82df7edede4e0a1478f885e0a5ab92f5ab3358c27dda9d8f5a19879ff1ec8"
+ },
+ {
+  "id": "b2c2-gj-l4-06",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote4",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Estou farto desta chuva toda.",
+   "verdict": true,
+   "explanationEs": "'Estar farto de' (= estar harto de) funciona igual que en español — no todo lo parecido es calco."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+  "register": "neutro",
+  "contentHash": "2c135244ba64087f97c1e20a2836a9172a1f68ccd91eb4cf2214e595709261f8"
+ },
+ {
+  "id": "b2c2-gj-l4-07",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote4",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Ela ficou muito contenta com a notícia.",
+   "verdict": false,
+   "repair": "Ela ficou muito contente com a notícia.",
+   "explanationEs": "'Contente' es invariable en género: ele está contente, ela está contente (plural: contentes). El femenino '*contenta' es morfología española."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+  "register": "neutro",
+  "contentHash": "c4a4734a40c26d3ce12d224bf0c680fbcb76caa9247b82b6ba4fd2aeba9721ff"
+ },
+ {
+  "id": "b2c2-gj-l4-09",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote4",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Se faz favor, uma bica e um copo de água.",
+   "verdict": true,
+   "explanationEs": "'Se faz favor' es LA fórmula europea de cortesía (SFF en los letreros); 'bica' es el café solo lisboeta. Frase de manual de supervivencia en Lisboa."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+  "register": "neutro",
+  "contentHash": "f7677eab9ae519100cf14acb5e007fcd47eb8adfecbcff48ade9b4c1cca30f0b"
+ },
+ {
+  "id": "b2c2-gj-l4-10",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote4",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Vemo-nos logo à saída do trabalho.",
+   "verdict": true,
+   "explanationEs": "'Vemo-nos' — el -s de 'vemos' cae ante el clítico 'nos': morfología enclítica europea de manual. 'Nos vemos' a la española/brasileña no es la norma de acá."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+  "register": "neutro",
+  "contentHash": "835ac8f31c1b82af226d913ab5666d645fa90c7738d4d6338537a63265f071fe"
+ },
+ {
+  "id": "b2c2-gj-l4-12",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote4",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "A porta foi abrida pelo vento.",
+   "verdict": false,
+   "repair": "A porta foi aberta pelo vento.",
+   "explanationEs": "'Abrir' solo tiene un participio: 'aberto' — '*abrida' no existe. (Los de doble participio son otros: 'suspendido/suspenso', 'imprimido/impresso' — ahí ambas formas viven, cada una con su auxiliar.)"
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+  "register": "neutro",
+  "contentHash": "960fb260a4a654724ab011c9047c45712636120bd97b18dea02908af1af873ea"
+ },
+ {
+  "id": "b2c2-gj-l4-13",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote4",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Ele insistiu em que eu ficasse para jantar.",
+   "verdict": true,
+   "explanationEs": "'Insistir EM' — la regência coincide con el 'insistir en' español. Correcta tal cual, conjuntivo incluido."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+  "register": "neutro",
+  "contentHash": "1a39828110beb491fdb71b6c59c2d72d94782503487906943e92705ece5ed38e"
+ },
+ {
+  "id": "b2c2-gj-l4-15",
+  "blockId": 8,
+  "lessonId": "b8-l3-colocacao-pronominal",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote4",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Vou-lhe dizer a verdade hoje mesmo.",
+   "verdict": true,
+   "explanationEs": "La SUBIDA del clítico al auxiliar ('vou-lhe dizer') es tan correcta como 'vou dizer-lhe' — dos posiciones válidas en el europeo, ambas con guion."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+  "register": "neutro",
+  "contentHash": "94c7b3fc2f4c1de5bcd5a578f1977fd0ffce2c34d3e8a5cd0a196505db3635c8"
+ },
+ {
+  "id": "b2c2-gj-l4-16",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote4",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Disse-lhe para vir mais cedo amanhã.",
+   "verdict": true,
+   "explanationEs": "'Dizer (a alguém) para + infinitivo' es la manera europea normal de reportar una orden: 'disse-lhe para vir'. Nada que corregir."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+  "register": "neutro",
+  "contentHash": "a8507a23d9a74a140a099afe2875f397a5fc0438270bd47427d31b9fc96f9be0"
+ },
+ {
+  "id": "b2c2-gj-l4-19",
+  "blockId": 8,
+  "lessonId": "b8-l3-colocacao-pronominal",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote4",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Eles têm se encontrado com frequência.",
+   "verdict": false,
+   "repair": "Eles têm-se encontrado com frequência.",
+   "explanationEs": "En los tiempos compuestos europeos el clítico va ENCLÍTICO al auxiliar: 'têm-se encontrado'. El 'têm se encontrado' suelto es la colocación brasileña."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+  "register": "neutro",
+  "contentHash": "8ab20ca8846c5a33ef4b27c696484a8d5e67e06bf808b83c719af63d5d1bf70d"
  }
 ]

@@ -276,6 +276,7 @@ const B9: Block = {
 // --- Block 10: Registros y variación ---
 const B10_CONCEPTS: Concept[] = [
   { id: 'b10-registro', name: 'Registro formal/informal', blockId: 10, description: 'Marcadores de formalidad (vocabulario, tratamiento você/o senhor/a senhora, conectores, pronombres), cartas/e-mails vs conversación', prereqs: [] },
+  { id: 'b11-regencias', name: 'Regências que traem', blockId: 11, description: 'Regencias portuguesas que difieren del español (apaixonar-se por, preocupar-se com, assistir a) y la herencia de la preposición en las relativas', prereqs: [] },
   { id: 'b11-falsos-amigos', name: 'Falsos amigos C1', blockId: 11, description: 'Falsos amigos de alta frecuencia con sentido portugués divergente (esquisito, polvo, oficina, pelo, esperto, constipado) y sus pares resolutivos', prereqs: [] },
   { id: 'b10-variacao-diatopica', name: 'Variação diatópica + norma culta', blockId: 10, description: 'Diferencias BR↔PT (léxico, fonética, gramática), variantes regionales (norte/sul de BR, Açores/Madeira), norma culta escrita vs uso coloquial', prereqs: [] },
 ];
