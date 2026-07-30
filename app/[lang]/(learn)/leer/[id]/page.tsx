@@ -9,6 +9,7 @@ import { loadLectura, loadLecturas } from "@/lib/data/loaders";
 import { Eyebrow } from "@/components/ui";
 import { LectorKaraoke } from "@/components/lectura/LectorKaraoke";
 import { LectorTexto } from "@/components/lectura/LectorTexto";
+import { MarcarLida } from "@/components/lectura/MarcarLida";
 
 export const dynamic = "force-dynamic";
 
@@ -79,6 +80,7 @@ export default async function LecturaPage({
           baseAudio={`/lecturas/${lectura.id}`}
         />
       )}
+      <MarcarLida lecturaId={lectura.id} nivel={lectura.nivel} lang={lang} />
       {(anterior || siguiente) && (
         <nav className="flex justify-between gap-4 border-t border-rule mt-10 pt-5">
           {anterior ? (

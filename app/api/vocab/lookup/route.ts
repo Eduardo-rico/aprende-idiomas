@@ -17,6 +17,7 @@ import { NextResponse } from "next/server";
 import { lookupVocabInLang, initCatalog } from "@/lib/vocab/catalog";
 import { loadVocabCatalog } from "@/lib/vocab/catalog-server";
 import { loadFallbackDict } from "@/lib/data/loaders";
+import { candidatosSingular } from "@/lib/text/deflexion";
 import { hasLocale, type LanguageId } from "@/lib/locales";
 
 // One-time lazy init per language. The server keeps each catalog warm
@@ -80,6 +81,26 @@ export async function GET(req: Request) {
       meaning,
       source: "fallback",
     });
+  }
+
+  // Des-flexión: el lector manda formas flexionadas («gatos», «flores»)
+  // y los índices van por forma base. Reintenta con candidatos a
+  // singular contra entradas YA existentes — aquí no se inventa nada.
+  for (const cand of candidatosSingular(key)) {
+    const c = lookupVocabInLang(cand, lang);
+    if (c) {
+      return NextResponse.json({
+        word: c.word,
+        ptWord: c.ptWord,
+        meaning: c.meaning,
+        audioHash: c.audioHash,
+        source: "catalog",
+      });
+    }
+    const m = fallback[cand];
+    if (m) {
+      return NextResponse.json({ word: cand, meaning: m, source: "fallback" });
+    }
   }
 
   // 200 with null so the client doesn't have to handle 404 specially;

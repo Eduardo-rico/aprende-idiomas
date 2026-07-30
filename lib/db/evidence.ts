@@ -66,6 +66,61 @@ export async function registrarEvidencia(p: RegistrarParams): Promise<string | n
   return anclaje.descriptorId;
 }
 
+const NIVELES_MCER = new Set(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
+
+/** Evidencia por LECTURA terminada (Ola L): terminar una lectura de
+ *  nivel N es evidencia de comprensión lectora de N. Ancla directo al
+ *  descriptor `{lang}.{nivel}.comprension_lectora` — el nivel viene del
+ *  meta de la lectura, graduado con métricas medidas contra anclas.
+ *  Misma disciplina que el resto de la capa: idempotente por
+ *  (lectura, día); releer no infla el recuento porque el exerciseId es
+ *  la propia lectura. */
+export async function registrarLecturaTerminada(p: {
+  lecturaId: string;
+  nivel: string;
+  language?: string;
+  now?: Date;
+}): Promise<string | null> {
+  if (!NIVELES_MCER.has(p.nivel)) return null;
+  const lang = p.language ?? 'pt';
+  const descriptorId = `${lang}.${p.nivel}.comprension_lectora`;
+  const exerciseId = `lectura:${p.lecturaId}`;
+  const now = p.now ?? new Date();
+  const day = diaLocal(now);
+  const yaHoy = await db.evidence
+    .where('[descriptorId+day]')
+    .equals([descriptorId, day])
+    .filter((r) => r.exerciseId === exerciseId)
+    .count();
+  if (yaHoy > 0) return descriptorId;
+  await db.evidence.add({
+    descriptorId,
+    exerciseId,
+    day,
+    ts: now,
+    language: lang,
+    correct: true,
+  });
+  return descriptorId;
+}
+
+/** ¿Esta lectura ya se marcó como terminada alguna vez? Para pintar el
+ *  botón en su estado y no prometer evidencia doble. */
+export async function lecturaYaTerminada(
+  lecturaId: string,
+  nivel: string,
+  language = 'pt',
+): Promise<boolean> {
+  const descriptorId = `${language}.${nivel}.comprension_lectora`;
+  const exerciseId = `lectura:${lecturaId}`;
+  const n = await db.evidence
+    .where('descriptorId')
+    .equals(descriptorId)
+    .filter((r) => r.exerciseId === exerciseId)
+    .count();
+  return n > 0;
+}
+
 /** Recuento por descriptor, aplicando la regla de arriba.
  *  El valor devuelto es «evidencias válidas», que es lo que
  *  `levelProgress` compara contra `evidenceThreshold`. */
