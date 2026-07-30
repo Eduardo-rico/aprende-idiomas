@@ -73,6 +73,7 @@ const BLOQUE_A_NIVEL: Record<number, CefrLevel> = {
   8: 'B2',  // sintaxis y conectores (B1+B2+C1) — el tramo C1 son 57 ítems
   9: 'A2',  // léxico: campo abierto, sin nivel propio
   10: 'B1', // registros y variación (A2+B1+)
+  11: 'C1', // anti-calco C1 (Ola B2C2)
 };
 
 export interface Anclaje {

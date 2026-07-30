@@ -17,6 +17,7 @@ import b7Lessons from "./lessons/b7.json";
 import b8Lessons from "./lessons/b8.json";
 import b9Lessons from "./lessons/b9.json";
 import b10Lessons from "./lessons/b10.json";
+import b11Lessons from "./lessons/b11.json";
 
 import type { Block, Concept, Lesson, ConceptId, LessonId } from "@/lib/data/curriculum-types";
 export type { Block, Concept, Lesson, ConceptId, LessonId };
@@ -275,6 +276,7 @@ const B9: Block = {
 // --- Block 10: Registros y variación ---
 const B10_CONCEPTS: Concept[] = [
   { id: 'b10-registro', name: 'Registro formal/informal', blockId: 10, description: 'Marcadores de formalidad (vocabulario, tratamiento você/o senhor/a senhora, conectores, pronombres), cartas/e-mails vs conversación', prereqs: [] },
+  { id: 'b11-falsos-amigos', name: 'Falsos amigos C1', blockId: 11, description: 'Falsos amigos de alta frecuencia con sentido portugués divergente (esquisito, polvo, oficina, pelo, esperto, constipado) y sus pares resolutivos', prereqs: [] },
   { id: 'b10-variacao-diatopica', name: 'Variação diatópica + norma culta', blockId: 10, description: 'Diferencias BR↔PT (léxico, fonética, gramática), variantes regionales (norte/sul de BR, Açores/Madeira), norma culta escrita vs uso coloquial', prereqs: [] },
 ];
 
@@ -289,7 +291,22 @@ const B10: Block = {
   lessons: b10Lessons as Lesson[],
 };
 
-export const BLOCKS: Block[] = [B1, B2, B3, B4, B5, B6, B7, B8, B9, B10];
+// Bloque 11 (Ola B2C2, 2026-07-30): las lecciones PROPIAS del tramo
+// C1 — anti-calco y falsos amigos. Los ítems de juicio de los lotes
+// b2c2-* dejan de archivarse en lecciones prestadas conforme estas
+// existan. Los ejercicios propios del bloque llegarán con los lotes.
+const B11: Block = {
+  id: 11,
+  slug: 'anti-calco-c1',
+  name: 'Anti-calco C1',
+  description: 'Falsos amigos, regencias y perífrasis donde el español sabotea al C1: el reflejo de pararse cuando el contexto rechina.',
+  durationWeeks: 2,
+  prereqs: [8, 10],
+  freeDrill: false,
+  lessons: b11Lessons as Lesson[],
+};
+
+export const BLOCKS: Block[] = [B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, B11];
 
 export const ALL_CONCEPTS: Concept[] = [
   ...B1_CONCEPTS,
