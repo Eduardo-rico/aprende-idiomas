@@ -7839,5 +7839,440 @@
   "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
   "register": "neutro",
   "contentHash": "f161b054c10b686312607478821534d8401643cb384cfdfdd92dd4cc95dd412f"
+ },
+ {
+  "id": "b2c2-gj-l2-01",
+  "blockId": 8,
+  "lessonId": "b8-l3-colocacao-pronominal",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Nunca o vi tão feliz.",
+   "verdict": true,
+   "explanationEs": "La próclise ('o vi') la dispara 'nunca' — con un disparador delante, el clítico va ANTES del verbo también en el europeo."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "94ff8eba050836d884ab9e4976a23de6e28066591b902fb169f688af00bf94b9"
+ },
+ {
+  "id": "b2c2-gj-l2-02",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Si tivesse dinheiro, comprava a casa.",
+   "verdict": false,
+   "repair": "Se tivesse dinheiro, comprava a casa.",
+   "explanationEs": "El condicional se introduce con 'SE', no 'si' — la vocal delata al hispanohablante ('si' portugués es otra cosa: pronombre tónico, 'falou de si'). El resto estaba perfecto: 'tivesse' + 'comprava' con valor condicional, muy natural en el europeo hablado."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "1fbc6dff4b47f9c860012ecf19bd7ed6c8c6ddf6be89d3f4d4883b85c89b3789"
+ },
+ {
+  "id": "b2c2-gj-l2-03",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Tenho saudades tuas.",
+   "verdict": true,
+   "explanationEs": "'Saudades tuas' es la forma idiomática europea — lo que descoloca al hispanohablante es el posesivo POSPUESTO y sin artículo, que aquí es lo normal ('saudades de ti' también se dice)."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "informal",
+  "address": "tu",
+  "contentHash": "8dd8297be6192211cb9042f175228b96415b5675b0fd34ac219609b30d7d19d0"
+ },
+ {
+  "id": "b2c2-gj-l2-04",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Estou esperando o autocarro.",
+   "verdict": false,
+   "repair": "Estou a esperar o autocarro.",
+   "explanationEs": "El progresivo del ESTÁNDAR europeo es 'estar a + infinitivo' (con esperar, también el idiomático 'estar à espera de'). 'Estar + gerundio' es la norma brasileña — y sobrevive como rasgo dialectal en el sur de Portugal (Alentejo, Algarve), pero no en el estándar."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "4a7bebbacd2a77a81c1641d46aa401a50e50bc90353742b9bddaff348928f554"
+ },
+ {
+  "id": "b2c2-gj-l2-05",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Limpei o polvo dos móveis.",
+   "verdict": false,
+   "repair": "Limpei o pó dos móveis.",
+   "explanationEs": "'Polvo' en portugués es el PULPO; el polvo de limpiar es 'pó'. Uno de los falsos amigos más celebrados — la frase dice que limpiaste el pulpo de los muebles."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "c56d3f30b031d85214beeba904f8162db654661c9ef43caf50da65466810d6b6"
+ },
+ {
+  "id": "b2c2-gj-l2-06",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Vou tirar uma fotografia.",
+   "verdict": true,
+   "explanationEs": "Las fotos en portugués se TIRAN: 'tirar uma fotografia'. El 'sacar una foto' del español no se traslada — y no hace falta."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "4005e06b27f54dd70c335de830867525eebb80404f887910d4817b217b943c4a"
+ },
+ {
+  "id": "b2c2-gj-l2-07",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Podes emprestar-me o teu carregador?",
+   "verdict": true,
+   "explanationEs": "'Emprestar' es prestar (el falso rastro es que en portugués 'prestar' se usa para otras cosas: prestar atenção). La ênclise con 'podes emprestar-me' es la colocación normal."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "informal",
+  "address": "tu",
+  "contentHash": "356f8f58802f517b7dc47fa060e03b633311a8fd63847400dc5d05b291467620"
+ },
+ {
+  "id": "b2c2-gj-l2-08",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "A minha irmã tem o pelo comprido e castanho.",
+   "verdict": false,
+   "repair": "A minha irmã tem o cabelo comprido e castanho.",
+   "explanationEs": "'Pelo' en portugués es el pelo del cuerpo o de los animales; el de la cabeza es 'cabelo'. Dicho de tu hermana, suena a describir un animal."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "98f7d7e51ab299f34cdbf398ae0d35fe8028f7dff08f9e87acb3adc27b5bac80"
+ },
+ {
+  "id": "b2c2-gj-l2-09",
+  "blockId": 8,
+  "lessonId": "b8-l2-subordinadas-substantivas-adjetivas",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Responderam o meu email ontem.",
+   "verdict": false,
+   "repair": "Responderam ao meu email ontem.",
+   "explanationEs": "'Responder' rige A en el estándar europeo: 'responder a um email, a uma pergunta'. El objeto directo ('responder o email') es uso brasileño coloquial."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "e001a727dd63f475a3cc5f25c4ac2f8cc27596f721c0748e5b86ab87499daa4b"
+ },
+ {
+  "id": "b2c2-gj-l2-10",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Ligo-te logo à noite.",
+   "verdict": true,
+   "explanationEs": "'Logo à noite' = ESTA noche, más tarde hoy — 'logo' proyecta dentro del mismo día. Y 'ligar a alguém' es llamar por teléfono."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "informal",
+  "address": "tu",
+  "contentHash": "faeb9ce1fd96a51d3b5c0ef8d98359fd985b9753d8b36f19634ab725750d81b6"
+ },
+ {
+  "id": "b2c2-gj-l2-11",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Minha casa fica perto do centro.",
+   "verdict": false,
+   "repair": "A minha casa fica perto do centro.",
+   "explanationEs": "El posesivo lleva artículo en el estándar europeo: 'A minha casa', 'o meu carro'. Sin artículo es la norma brasileña — y encima coincide con el español 'mi casa': doble imán del error."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "190a5e92522b9406f60724d3b85cb4f658fb84c6bb745d67511571fb07f0f8a0"
+ },
+ {
+  "id": "b2c2-gj-l2-12",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Preciso de umas vacações.",
+   "verdict": false,
+   "repair": "Preciso de umas férias.",
+   "explanationEs": "Hoy nadie dice 'vacações': las vacaciones son 'férias'. (El diccionario conserva 'vacação' solo como tecnicismo — las ferias de los tribunales.) La regência 'preciso DE' estaba perfecta."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "f325f920319203124f7d749a6528e70212b02ec6d5aa1a07c15d4e8a181a77cc"
+ },
+ {
+  "id": "b2c2-gj-l2-13",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Apesar de estar cansado, fui à festa.",
+   "verdict": true,
+   "explanationEs": "'Apesar de + infinitivo' es la concesiva normal — paralela al 'a pesar de' español. Correcta tal cual."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "a1a206596db29fc445020584020275ac8ae628f669dee34bf30ee38424ef46ef"
+ },
+ {
+  "id": "b2c2-gj-l2-14",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Está uma bela tarde, não está?",
+   "verdict": true,
+   "explanationEs": "La coletilla europea repite el verbo ('…, não está?', '…, não é?') donde el español pone '¿verdad?'. Y 'estar' para el tiempo que hace es lo suyo."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "4bb4ae4b5167548e6191167b8e376505b582382fd2d2749f7c8042c020949596"
+ },
+ {
+  "id": "b2c2-gj-l2-15",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Quando chegares, liga-me.",
+   "verdict": true,
+   "explanationEs": "El 'cuando llegues' español (presente de subjuntivo) se dice con FUTURO DO CONJUNTIVO: 'quando chegares'. Al hispanohablante le suena a error — y es la forma correcta. La ênclise 'liga-me' del imperativo afirmativo, también."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "informal",
+  "address": "tu",
+  "contentHash": "27dfc83201c841b94a71dd210e6c9c87126f0d08fc002f9b44d9f3548dcaf2e3"
+ },
+ {
+  "id": "b2c2-gj-l2-16",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Parabéns à cozinheira: a sopa estava mesmo esquisita!",
+   "verdict": false,
+   "repair": "Parabéns à cozinheira: a sopa estava mesmo deliciosa!",
+   "explanationEs": "'Esquisito' en portugués es RARO, extraño — no exquisito. Felicitar a la cocinera por una sopa 'rarísima' delata el calco. Para elogiar: deliciosa, ótima, muito boa."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "eab75b95ce5bca1c62dd8dc0dcf5b38074f57ad43a0fe7e989d375c3c674f4f0"
+ },
+ {
+  "id": "b2c2-gj-l2-17",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Ele entrou na sala e sentou.",
+   "verdict": false,
+   "repair": "Ele entrou na sala e sentou-se.",
+   "explanationEs": "'Sentar' es pronominal en el estándar europeo: 'sentar-se'. Dejar caer el 'se' ('sentou', 'levantou') es habla brasileña coloquial — el español, con 'se sentó', aquí jugaba a favor."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "b0e5eccfcadbd516523ef5c698a601f80f892d0f8f3a8ae5e1741bf3de9afb7b"
+ },
+ {
+  "id": "b2c2-gj-l2-18",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Vou pôr-me a estudar depois do jantar.",
+   "verdict": true,
+   "explanationEs": "'Pôr-se a + infinitivo' (= ponerse a) funciona igual que en español, con la ênclise en su sitio: 'vou pôr-me a estudar'."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "fa7ffed470f03d58649e33b07a9e5e303961c612e782259d43aa3e53b6a8e272"
+ },
+ {
+  "id": "b2c2-gj-l2-19",
+  "blockId": 8,
+  "lessonId": "b8-l3-colocacao-pronominal",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Ela me disse que vinha.",
+   "verdict": false,
+   "repair": "Ela disse-me que vinha.",
+   "explanationEs": "Sin disparador (negación, 'que', 'nunca', interrogativo…), el clítico va DESPUÉS del verbo en el europeo de hoy: 'disse-me'. La próclise con sujeto ('ela me disse') es la norma brasileña — aunque la verás en la literatura del XIX de la Biblioteca (Camilo, Eça) y en fórmulas fijas ('Deus me livre'): ahí es lengua antigua, no error."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "d5c045fece10cfe826e9fb1afff76de5ddbb4c636c3abc249fa27ed67133b5db"
+ },
+ {
+  "id": "b2c2-gj-l2-20",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Gosto muito de ti.",
+   "verdict": true,
+   "explanationEs": "'Gostar DE' + pronombre tónico ('de ti') es la estructura portuguesa — nada de calcar el 'me gustas tú' español, que invierte quién hace qué."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "informal",
+  "address": "tu",
+  "contentHash": "3fff238e54c071b7956c56ab46d3c7a85d614100c7839d1521dbdbeaaae59b49"
  }
 ]

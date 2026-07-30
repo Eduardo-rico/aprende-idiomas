@@ -4487,5 +4487,220 @@
   "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
   "register": "neutro",
   "contentHash": "5b77e89046eb23c7c832648c9a75efe634b53a0eb15aa1c4c7a19d67e4ecb18a"
+ },
+ {
+  "id": "b2c2-med-09",
+  "blockId": 10,
+  "lessonId": "b10-l1-registro-formal-informal",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "Era êle, de todos os homens que conheci, o mais complexamente civilizado--ou antes aquele que se munira da mais vasta sôma de civilização material, ornamental e intelectual. Nesse palácio (floridamente chamado o Jasmineiro) que seu pai, tambêm Jacinto, construira sôbre uma honesta casa do século XVII, assoalhada a pinho e branqueada a cal--existia, creio eu, tudo quanto para bem do espírito ou da matéria os homens teem criado, através da incerteza e dor, desde que abandonaram o vale feliz de Septa-Sindu, a Terra das Águas Fáceis, o doce país Ariano. A biblioteca, que em duas salas, amplas e claras como praças, forrava as paredes, inteiramente, desde os tapetes de Caranânia até ao teto de onde, alternadamente, através de cristais, o sol e a electricidade vertiam uma luz estudiosa e calma--continha vinte e cinco mil volumes, instalados em ébano, magnificamente revestidos de marroquim escarlate. Só sistemas filosóficos (e com justa prudência, para poupar espaço, o bibliotecário apenas colecionára os que irreconciliavelmente se contradizem) havia mil oito centos e dezassete!",
+   "sourceRef": "civilizacao",
+   "sourceLang": "pt",
+   "targetLang": "es",
+   "mediationType": "summarise",
+   "audience": "un amigo hispanohablante que no ha leído el cuento",
+   "instructionsEs": "Resume EN ESPAÑOL cómo es Jacinto y de qué está hecho su mundo, según este párrafo de 'Civilização'.",
+   "wordRange": {
+    "min": 30,
+    "max": 55
+   },
+   "rubric": [
+    "Presenta a Jacinto como el hombre más 'civilizado' que el narrador conoce",
+    "Menciona su acumulación material/intelectual (el palacio y sus comodidades)",
+    "No inventa nada",
+    "Cabe en el rango"
+   ],
+   "modelAnswer": "Jacinto es, para el narrador, el hombre más civilizado que ha conocido en su vida: vive en un palacio equipado con todas las comodidades materiales, ornamentales e intelectuales que la civilización ha sabido juntar."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "a678a9497e549e562e68764ed4661cff556aa0f76e44f0ee1b589adb175610cc"
+ },
+ {
+  "id": "b2c2-med-10",
+  "blockId": 10,
+  "lessonId": "b10-l1-registro-formal-informal",
+  "difficulty": 3,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "É pequena a minha rua,\nmas o mar cabe-lhe ao fundo:\nquem tem o mar numa rua\nnão precisa de mais mundo.",
+   "sourceRef": "anedotas-e-quadras-a2-1",
+   "sourceLang": "pt",
+   "targetLang": "es",
+   "mediationType": "explain_concept",
+   "audience": "un amigo hispanohablante que no entiende la quadra",
+   "instructionsEs": "Explícale EN ESPAÑOL la imagen: qué significa que el mar 'quepa' al fondo de una calle pequeña, y qué dice el último verso.",
+   "wordRange": {
+    "min": 30,
+    "max": 60
+   },
+   "rubric": [
+    "Explica la imagen literal (la calle desemboca en el mar / el mar se ve al fondo)",
+    "Explica la vuelta del final (quien tiene el mar no necesita más mundo)",
+    "No traduce verso a verso: explica",
+    "Cabe en el rango"
+   ],
+   "modelAnswer": "La calle es diminuta, pero al fondo se ve el mar — como si el mar 'cupiera' dentro de ella. Y ahí está la vuelta: si tu calle ya contiene el mar, que es enorme, no te hace falta nada más grande: tienes el mundo entero al fondo de tu calle."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "1ea1e56f1c0684b7b3288524636a3f1514eb7bd55096b61bf804ef783568630f"
+ },
+ {
+  "id": "b2c2-med-11",
+  "blockId": 10,
+  "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+  "difficulty": 3,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "Prezado cliente, informamos que seu pedido já está disponível para retirada na loja. Em caso de dúvida, ligue do seu celular para a loja ou responda a esse e-mail. Atenciosamente, A equipe.",
+   "sourceLang": "pt",
+   "targetLang": "pt",
+   "mediationType": "cross_variety",
+   "audience": "um cliente português, por escrito e em registo formal",
+   "instructionsEs": "Reescribe el correo EN PORTUGUÉS EUROPEO formal: fórmulas de saludo/despedida, posesivos, léxico y deixis que un portugués usaría.",
+   "wordRange": {
+    "min": 25,
+    "max": 55
+   },
+   "rubric": [
+    "Saludo y despedida europeos (Estimado/Exmo. …, Com os melhores cumprimentos — no Prezado/Atenciosamente)",
+    "Posesivo con artículo y léxico europeo: a sua ENCOMENDA, levantamento, telemóvel, equipa",
+    "'esse e-mail' → 'este email' (deixis de lo que tienes delante)",
+    "Misma información, en el rango"
+   ],
+   "modelAnswer": "Estimado cliente, informamos que a sua encomenda já está disponível para levantamento na loja. Em caso de dúvida, ligue do seu telemóvel para a loja ou responda a este email. Com os melhores cumprimentos, A equipa."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "formal",
+  "contentHash": "08c79a51e1a605ecabb6ba019fe411281b66a4cdfe660137750843622d664e50"
+ },
+ {
+  "id": "b2c2-med-12",
+  "blockId": 10,
+  "lessonId": "b10-l1-registro-formal-informal",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "Era uma vez um rei, que, tendo achado no seu reino algumas minas d'ouro, empregou a maior parte dos vassallos a extrair o ouro d'essas minas; e o resultado foi que as terras ficaram por cultivar, e que houve uma grande fome no paiz.\n\nMas a rainha, que era prudente e que amava o povo, mandou fabricar em segredo frangos, pombos, gallinhas e outras iguarias todas de ouro fino; e quando o rei quiz jantar mandou-lhe servir essas iguarias de ouro, com que elle ficou todo satisfeito, porque não comprehendeu ao principio qual era o sentido da rainha; mas, vendo que não lhe traziam mais nada de comer, começou a zangar-se. Pediu-lhe então a rainha, que visse bem que o ouro não era alimento, e que seria melhor empregar os seus vassallos em cultivar a terra, que nunca se cansa de produzir, do que trazel-os nas minas á busca do ouro, que não mata a fome nem a sede, e que não tem outro valor além da estimação que lhe é dada pelos homens, estimação que havia de converter-se em desprezo, logo que ouro apparecesse em abundancia.\n\nA rainha tinha juizo.",
+   "sourceRef": "junqueiro-o-ouro",
+   "sourceLang": "pt",
+   "targetLang": "es",
+   "mediationType": "summarise",
+   "audience": "un amigo hispanohablante",
+   "instructionsEs": "Resume EN ESPAÑOL la fábula: qué hizo el rey, qué pasó, y qué hizo la reina.",
+   "wordRange": {
+    "min": 30,
+    "max": 60
+   },
+   "rubric": [
+    "El rey puso a los vasallos a sacar oro y los campos quedaron sin cultivar; vino el hambre",
+    "La reina le sirvió una cena toda de oro fino — que no se come — para mostrarle que el oro no alimenta",
+    "Le pidió emplear a los vasallos en cultivar la tierra",
+    "No inventa nada (ni que el rey rectificara: el cuento no lo dice)",
+    "Cabe en el rango"
+   ],
+   "modelAnswer": "Un rey puso a casi todos sus vasallos a sacar oro de unas minas; los campos quedaron sin cultivar y vino el hambre. La reina, con juicio, le sirvió una cena espléndida… toda de oro fino, incomible: el oro no alimenta. Y le pidió poner a los vasallos a cultivar la tierra."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "0c7bc504cb5bbd50c3db58b3f16605b98c0e3ebe4591398d42dd16778d6d26e6"
+ },
+ {
+  "id": "b2c2-med-13",
+  "blockId": 10,
+  "lessonId": "b10-l1-registro-formal-informal",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "Dois alentejanos, sentados à sombra de uma azinheira. Diz um: — Ó Zé, o que é que fazes amanhã? — Nada. — Mas isso fizeste tu hoje! — Pois. É que não acabei.",
+   "sourceRef": "anedotas-e-quadras-a2-2",
+   "sourceLang": "pt",
+   "targetLang": "es",
+   "mediationType": "relay",
+   "audience": "un amigo español al que quieres contarle el chiste",
+   "instructionsEs": "Cuéntale el chiste EN ESPAÑOL — corto y con el remate al final.",
+   "wordRange": {
+    "min": 20,
+    "max": 45
+   },
+   "rubric": [
+    "Escena: dos del Alentejo a la sombra",
+    "El diálogo mañana-nada / eso hiciste hoy",
+    "El remate es la última frase ('es que no terminé')",
+    "Cabe en el rango"
+   ],
+   "modelAnswer": "Dos del Alentejo, sentados a la sombra. Uno le pregunta al otro: '¿Y tú qué haces mañana?'. 'Nada'. '¡Pero eso es lo que hiciste hoy!'. 'Ya. Es que no terminé.'"
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "informal",
+  "contentHash": "0ce53b4e8e14c3cd130097ee738e4b7c523d3d361e282a4b3e88de841b180402"
+ },
+ {
+  "id": "b2c2-med-14",
+  "blockId": 10,
+  "lessonId": "b10-l1-registro-formal-informal",
+  "difficulty": 3,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote2",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "Olá! Olha, o pedido ainda não chegou e já passaram duas semanas. Podes ver o que se passa? Obrigado!",
+   "sourceLang": "pt",
+   "targetLang": "pt",
+   "mediationType": "reformulate_register",
+   "audience": "o serviço de apoio ao cliente de uma loja, por email formal",
+   "instructionsEs": "Convierte el mensaje en un email FORMAL de reclamación: mismo problema (pedido con dos semanas de retraso), sin tuteo, con apertura y cierre formales.",
+   "wordRange": {
+    "min": 25,
+    "max": 60
+   },
+   "rubric": [
+    "Ni un tu/podes/olha: 3.ª persona o impersonal",
+    "Mismo problema: dos semanas, pedido sin llegar, pide que lo miren — sin amenazas ni datos inventados",
+    "Abre y cierra como email formal",
+    "Cabe en el rango"
+   ],
+   "modelAnswer": "Exmos. Senhores, venho por este meio informar que a minha encomenda ainda não chegou, tendo já passado duas semanas desde a compra. Agradecia que verificassem o estado do envio. Com os melhores cumprimentos."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+  "register": "formal",
+  "contentHash": "d5ed5d62b8951b35ad96763fdf350c513ab959d9cf0b5c808ba898f20e874740"
  }
 ]
