@@ -31,7 +31,18 @@ Este documento ordena; los diseños viven donde ya están: currículos en `2026-
 
 ## Las olas, en orden
 
-### Ola L — la biblioteca de lectura, SOLO PT ← LA SIGUIENTE
+### Ola L — la biblioteca de lectura, SOLO PT ✅ CERRADA 2026-07-29
+
+**Cerrada el mismo día en tres sesiones** (commits hasta `6b2c597`). Lo entregado, medido:
+
+- **Catálogo: 224 lecturas · 10 series · 714.004 palabras** (objetivo ~700k ✅). Eça completo en Gutenberg (12 Contos + Cidade e as Serras + Padre Amaro + Os Maias), Camilo (Amor de Perdição + Novelas do Minho), Garrett (Viagens), Junqueiro (43 Contos para a infância), Braga (Contos Phantasticos), y 2 fornadas de anedotas/quadras originales con doble adversarial.
+- **Karaoke** (escalera graduada): A Aia (B1) + O Tesoiro (B1) + Civilização (C1) — los ~3 textos/mes de cuota. La cuota rinde ~2× lo presupuestado (34.437 créditos por 62.599 chars).
+- **Infra completa**: modo texto puro, series/capítulos con navegación, diccionario emergente con des-flexión nominal, «marcar como lida» → evidencia MCER (comprensión lectora por nivel, reglas anti-inflación heredadas), graduación por métricas medidas contra anclas (A Aia 22,7 / O Defunto 27,3 / Civilização 35). E2E con clics reales 4/4.
+- **Gates**: procedencia (2 vías: dominio público / original con constancia adversarial), segmentadores con cuenta exacta — todos probados en rojo.
+
+**Backlog que NO bloqueó el cierre**: engordar diccionario para literatura (gato/flor→null), capítulos de novela pesados (2,4MB HTML), Pessoa vía Orpheu (multiautor, Almada †1970), O Primo Basílio no está en Gutenberg, DISCUTIBLES de fornada 2 para fornada 3, karaoke de agosto.
+
+<details><summary>Diseño original de la ola</summary>
 
 Es la primera porque **desbloquea B2-C2 sin esperar a nadie**: la lectura extensiva es el único insumo de esos niveles que no necesita revisor nativo (los textos son de nativos muertos) ni generación por LLM (cero riesgo de inventar lengua).
 
@@ -42,7 +53,9 @@ Es la primera porque **desbloquea B2-C2 sin esperar a nadie**: la lectura extens
 5. **Chistes y poemas por nivel — nativos del idioma, jamás traducidos**: se escriben (no hay dominio público graduado) → pasan por el lingüista adversarial de su lengua ANTES de publicarse. Sin excepción: es la lección más cara ya pagada.
 6. RO/CS/RU **esperan a que PT esté terminado** (decisión secuencial). Cuando toquen: Creangă/Eminescu/Caragiale · Němcová/Hašek · Chéjov/Pushkin — y sus chistes, comidas y mundo PROPIOS.
 
-### Ola V — verificación del corpus PT existente
+</details>
+
+### Ola V — verificación del corpus PT existente ← LA SIGUIENTE
 
 1.827 `unchecked` no se verifican a mano uno a uno: se **triagean por regla** (los guards de variante ya existen: `scripts/lib/variant-guard.ts`) y lo que la regla no decide va a la cola humana que ya existe (`needs-human`). Meta realista: bajar `unchecked` a <500 por regla, y aceptar que la cola humana espera al nativo. **No bloquea nada más.**
 
