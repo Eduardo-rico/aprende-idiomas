@@ -244,8 +244,13 @@ export const VariantOverrideByTypeSchema = {
 //   'unchecked'   — nadie ha verificado que `data` sea válido en PT-PT.
 //                   NO debe servirse como pt-pt sin revisión humana.
 //   'needs-human' — el ítem está roto o el override no es una variante.
-//   'neutral'     — verificado idéntico en ambas. Reservado: hoy nada lo usa,
-//                   porque nadie ha hecho esa verificación todavía.
+//   'neutral'     — sin divergencia entre variantes, por UNA de dos vías
+//                   que `variantVerificacion` distingue para siempre:
+//                   verificado por nativo, o sin material divergente
+//                   según la regla determinista de la Ola V
+//                   (`regla-inerte-v2`). Lo sellado por regla PERMANECE
+//                   en la cola del nativo, detrás de los `unchecked`:
+//                   el sello ordena el trabajo, no lo cancela.
 export const VariantStatusSchema = z.enum([
   'neutral',
   'divergent',
@@ -267,6 +272,11 @@ const BaseExercise = z.object({
   /** Ver VariantStatusSchema. Opcional para que el contenido anterior a la
    *  inversión siga parseando; el gate de verify-content lo exige. */
   variantStatus: VariantStatusSchema.optional(),
+  /** Quién/qué respalda el variantStatus. La Ola V escribe aquí el sello
+   *  de la regla (`regla-inerte-v1`) al consagrar un `neutral` o el motivo
+   *  al cuarentenar: un `neutral` por regla queda PARA SIEMPRE
+   *  distinguible de uno verificado por nativo (que llevará otro texto). */
+  variantVerificacion: z.string().optional(),
   /** Exención declarada del requisito de audio.
    *
    *  `verify-content` exige audio para flashcard, listening, translation,

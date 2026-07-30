@@ -29,10 +29,26 @@ const CAMPOS_PT: Record<string, string[]> = {
   chunk: ['chunk', 'examples'],
   error_correction: ['sentence', 'correct'],
   conjugation: ['answer', 'example'],
-  matching: [],
-  multiple_choice: ['sentence'],
+  // matching y multiple_choice llevaban campos que NO existen en el
+  // schema real (`sentence` en MC, nada en matching): la Ola V los
+  // encontró CIEGOS — 42 ítems sin un solo carácter escaneado, con
+  // «café da manhã» vivo en `options`. La pregunta de MC es español;
+  // las opciones y los pares son portugués.
+  matching: ['pairs'],
+  multiple_choice: ['options'],
   shadowing: ['text'],
   lesson: [],
+};
+
+/** Campos DIDÁCTICOS: contienen material erróneo o contrastivo A
+ *  PROPÓSITO (la frase a corregir, los distractores de una elección
+ *  múltiple, los pares de un matching de variantes). Un marcador aquí
+ *  no prueba que el ítem esté roto — prueba que hay que mirarlo. El
+ *  triage los RETIENE en vez de cuarentenarlos. */
+export const CAMPOS_DIDACTICOS: Record<string, Set<string>> = {
+  error_correction: new Set(['sentence']),
+  multiple_choice: new Set(['options']),
+  matching: new Set(['pairs']),
 };
 
 export interface Marcador {
@@ -83,13 +99,112 @@ export const MARCADORES: Marcador[] = [
   { re: b('contato'), nombre: 'contato', europeo: 'contacto', severidad: 'error' },
   { re: /\bfato de que\b/i, nombre: 'fato (hecho)', europeo: 'facto', severidad: 'aviso' },
 
-  // Próclise en inicio absoluto: agramatical en Portugal
-  { re: /(^|[.!?»"]\s+)(me|te|se|lhe|nos|o|a)\s+(diga|dê|fale|conte|ajude|chamo|dou|digo)\b/i,
+  // Grafías BR pre-2009: nunca fueron válidas en Portugal y ya no lo
+  // son ni en Brasil — pero un LLM entrenado con texto viejo las emite.
+  // Cero falsos positivos posibles (Ola V, revisión adversarial).
+  { re: /\p{L}*ü\p{L}*/iu, nombre: 'trema (lingüiça, tranqüilo)', europeo: 'sin trema (linguiça, tranquilo)', severidad: 'error' },
+  { re: b('\\p{L}*ôo[s]?'), nombre: 'circunflejo -ôo (vôo, enjôo)', europeo: 'voo, enjoo', severidad: 'error' },
+  { re: b('\\p{L}*éia[s]?'), nombre: '-éia (idéia, assembléia)', europeo: 'ideia, assembleia', severidad: 'error' },
+
+  // Próclise en inicio absoluto: agramatical en Portugal. Generalizada
+  // en la Ola V — la lista cerrada de 7 verbos dejaba pasar «Me passa o
+  // sal». Sólo los clíticos inequívocos (se=conjunción y nos=contracción
+  // quedan fuera; o/a son homógrafos del artículo).
+  { re: /(^|[.!?»"]\s+)(me|te|lhe|lhes)\s+\p{L}+/iu,
     nombre: 'próclise en inicio de frase', europeo: 'ênclise (diga-me, chamo-me)', severidad: 'error' },
+
+  // Ênclise tras negación: agramatical en las DOS variantes.
+  { re: /(?<![\p{L}])não\s+\p{L}+-(me|te|se|lhe|lhes|nos|vos|o|a|os|as|lo|la|los|las|no|na)(?![\p{L}])/iu,
+    nombre: 'ênclise tras negación', europeo: 'próclise (não me diga)', severidad: 'error' },
 
   // Posesivo sin artículo delante de parentesco: marca brasileña muy frecuente
   { re: /(^|\s)(Minha|Meu)\s+(mãe|pai|irmã|irmão|avó|avô|filha|filho|casa|carro|amigo|amiga)\b/,
     nombre: 'posesivo sin artículo', europeo: 'a minha mãe, o meu pai', severidad: 'aviso' },
+
+  // ── Extensión léxica de la Ola V (2026-07-29, dos revisiones
+  // adversariales independientes convergentes). ERROR = en Portugal no
+  // se usa y no hay homógrafo europeo; AVISO = bifronte o defendible,
+  // el triage retiene para el nativo en vez de cuarentenar.
+  { re: b('suco[s]?'), nombre: 'suco', europeo: 'sumo', severidad: 'error' },
+  { re: b('esporte[s]?'), nombre: 'esporte', europeo: 'desporto', severidad: 'error' },
+  { re: b('planej\\p{L}*'), nombre: 'planejar', europeo: 'planear', severidad: 'error' },
+  { re: b('usu[áa]ri[oa]s?'), nombre: 'usuário', europeo: 'utilizador', severidad: 'error' },
+  { re: b('registro[s]?'), nombre: 'registro', europeo: 'registo', severidad: 'error' },
+  { re: b('equipe[s]?'), nombre: 'equipe', europeo: 'equipa', severidad: 'error' },
+  { re: b('gol|gols'), nombre: 'gol', europeo: 'golo', severidad: 'error' },
+  { re: b('gar[çc]o(m|ns)|gar[çc]onete[s]?'), nombre: 'garçom/garçonete', europeo: 'empregado/a de mesa', severidad: 'error' },
+  { re: b('caminh[ãa]o|caminh[õo]es'), nombre: 'caminhão', europeo: 'camião', severidad: 'error' },
+  { re: b('aluguel|alugu[ée]is'), nombre: 'aluguel', europeo: 'aluguer', severidad: 'error' },
+  { re: b('dezesseis|dezessete|dezenove'), nombre: 'dezesseis/dezessete/dezenove', europeo: 'dezasseis/dezassete/dezanove', severidad: 'error' },
+  { re: b('recep[çc]\\p{L}*|percep[çc]\\p{L}*|concep[çc]\\p{L}*|decep[çc]\\p{L}*|intercept\\p{L}*'),
+    nombre: 'recepção y familia', europeo: 'receção, perceção, conceção, deceção, intercetar', severidad: 'error' },
+  { re: b('torcida[s]?|torcedor\\p{L}*'), nombre: 'torcida/torcedor', europeo: 'adeptos/adepto', severidad: 'error' },
+  { re: b('vestibular\\p{L}*'), nombre: 'vestibular', europeo: 'exames nacionais / provas de acesso', severidad: 'error' },
+  { re: b('moletom|moletons'), nombre: 'moletom', europeo: 'camisola (com capuz)', severidad: 'error' },
+  { re: b('card[áa]pio[s]?'), nombre: 'cardápio', europeo: 'ementa', severidad: 'error' },
+  { re: b('todo mundo'), nombre: 'todo mundo', europeo: 'toda a gente', severidad: 'error' },
+  { re: b('beb[êe]s?'), nombre: 'bebê', europeo: 'bebé', severidad: 'error' },
+  { re: b('cad[êe]'), nombre: 'cadê', europeo: 'onde está', severidad: 'error' },
+  { re: b('mam[ãa]e|papai'), nombre: 'mamãe/papai', europeo: 'mamã/papá', severidad: 'error' },
+  { re: b('sobrenome[s]?'), nombre: 'sobrenome', europeo: 'apelido', severidad: 'error' },
+  { re: b('mouse'), nombre: 'mouse', europeo: 'rato', severidad: 'error' },
+  { re: b('delet\\p{L}*'), nombre: 'deletar', europeo: 'apagar', severidad: 'error' },
+  { re: b('carona[s]?'), nombre: 'carona', europeo: 'boleia', severidad: 'error' },
+  { re: b('metr[ôo]s?'), nombre: 'metrô', europeo: 'metro', severidad: 'error' },
+  { re: b('c[âa]ncer\\p{L}*'), nombre: 'câncer', europeo: 'cancro', severidad: 'error' },
+  { re: b('aeromo[çc]a[s]?'), nombre: 'aeromoça', europeo: 'assistente de bordo / hospedeira', severidad: 'error' },
+  { re: b('encanador\\p{L}*'), nombre: 'encanador', europeo: 'canalizador', severidad: 'error' },
+  { re: b('faxineir[oa]s?|faxina[s]?'), nombre: 'faxineira', europeo: 'empregada de limpeza', severidad: 'error' },
+  { re: b('lanchonete[s]?'), nombre: 'lanchonete', europeo: 'café / snack-bar', severidad: 'error' },
+  { re: b('sorveteria[s]?'), nombre: 'sorveteria', europeo: 'geladaria', severidad: 'error' },
+  { re: b('bilheteria[s]?'), nombre: 'bilheteria', europeo: 'bilheteira', severidad: 'error' },
+  { re: b('gerenci\\p{L}*'), nombre: 'gerenciar', europeo: 'gerir', severidad: 'error' },
+  { re: b('apostila[s]?'), nombre: 'apostila', europeo: 'sebenta', severidad: 'error' },
+  { re: b('grampeador\\p{L}*'), nombre: 'grampeador', europeo: 'agrafador', severidad: 'error' },
+  { re: b('gibi[s]?|quadrinhos'), nombre: 'gibi/quadrinhos', europeo: 'banda desenhada', severidad: 'error' },
+  { re: b('meia[s]?-cal[çc]a[s]?'), nombre: 'meia-calça', europeo: 'collants', severidad: 'error' },
+  { re: b('mam[ãa]o|mam[õo]es'), nombre: 'mamão', europeo: 'papaia', severidad: 'error' },
+  { re: b('xampu[s]?'), nombre: 'xampu', europeo: 'champô', severidad: 'error' },
+  { re: b('c[âa]mera[s]?'), nombre: 'câmera', europeo: 'câmara', severidad: 'error' },
+  { re: b('esparadrapo[s]?'), nombre: 'esparadrapo', europeo: 'penso (rápido)', severidad: 'error' },
+  { re: b('acostamento[s]?'), nombre: 'acostamento', europeo: 'berma', severidad: 'error' },
+  { re: b('ped[áa]gio[s]?'), nombre: 'pedágio', europeo: 'portagem', severidad: 'error' },
+  { re: b('pedestre[s]?'), nombre: 'pedestre', europeo: 'peão', severidad: 'error' },
+  { re: /\bcarteira de motorista\b/i, nombre: 'carteira de motorista', europeo: 'carta de condução', severidad: 'error' },
+  { re: /\bfaixa de pedestres\b/i, nombre: 'faixa de pedestres', europeo: 'passadeira', severidad: 'error' },
+  { re: /R\$/, nombre: 'R$ (moneda de Brasil)', europeo: 'euros — política de inmersión', severidad: 'error' },
+
+  // AVISOS: bifrontes (homógrafo europeo legítimo) o defendibles.
+  { re: b('legal'), nombre: 'legal (¿chévere?)', europeo: 'fixe/giro — legal jurídico es legítimo', severidad: 'aviso' },
+  { re: b('oi'), nombre: 'oi (¿saludo?)', europeo: 'olá — «oi?» europeo es extrañeza', severidad: 'aviso' },
+  { re: b('pra|pro|pros'), nombre: 'pra/pro', europeo: 'para a / para o', severidad: 'aviso' },
+  { re: b('t[áa]'), nombre: 'tá', europeo: 'está', severidad: 'aviso' },
+  { re: b('valeu'), nombre: 'valeu', europeo: 'obrigado', severidad: 'aviso' },
+  { re: b('vov[ôo]s?|vov[óo]s?'), nombre: 'vovô/vovó', europeo: 'avô/avó', severidad: 'aviso' },
+  { re: b('cal[çc]ada[s]?'), nombre: 'calçada (¿acera?)', europeo: 'passeio — calçada empedrada es legítima', severidad: 'aviso' },
+  { re: b('sandu[íi]che[s]?'), nombre: 'sanduíche', europeo: 'sandes', severidad: 'aviso' },
+  { re: b('cafezinho[s]?'), nombre: 'cafezinho', europeo: 'café / bica', severidad: 'aviso' },
+  { re: b('tela[s]?'), nombre: 'tela (¿pantalla?)', europeo: 'ecrã — tela=lienzo es legítima', severidad: 'aviso' },
+  { re: b('arquivo[s]?'), nombre: 'arquivo (¿fichero?)', europeo: 'ficheiro — arquivo=institución es legítimo', severidad: 'aviso' },
+  { re: b('salvar'), nombre: 'salvar (¿guardar?)', europeo: 'guardar — salvar=rescatar es legítimo', severidad: 'aviso' },
+  { re: b('bala[s]?'), nombre: 'bala (¿caramelo?)', europeo: 'rebuçado — bala=proyectil es legítima', severidad: 'aviso' },
+  { re: b('grama[s]?'), nombre: 'grama (¿césped?)', europeo: 'relva — grama=gramo es legítimo', severidad: 'aviso' },
+  { re: b('abacaxi[s]?'), nombre: 'abacaxi', europeo: 'ananás', severidad: 'aviso' },
+  { re: b('freezer[s]?'), nombre: 'freezer', europeo: 'congelador / arca', severidad: 'aviso' },
+  { re: b('esmalte[s]?'), nombre: 'esmalte (¿uñas?)', europeo: 'verniz', severidad: 'aviso' },
+  { re: b('calcinha[s]?'), nombre: 'calcinha', europeo: 'cuecas', severidad: 'aviso' },
+  { re: b('jaqueta[s]?'), nombre: 'jaqueta', europeo: 'blusão / casaco', severidad: 'aviso' },
+  { re: b('durex'), nombre: 'durex (cinta)', europeo: 'fita-cola — en PT es marca de preservativos', severidad: 'aviso' },
+  { re: b('bilh[ãa]o|bilh[õo]es'), nombre: 'bilhão', europeo: 'mil milhões / bilião (valores distintos)', severidad: 'aviso' },
+  { re: b('cachorro[s]?'), nombre: 'cachorro (¿perro genérico?)', europeo: 'cão — cachorro=cría es legítimo', severidad: 'aviso' },
+  { re: b('mo[çc][oa]s?'), nombre: 'moço/moça', europeo: 'rapaz/rapariga', severidad: 'aviso' },
+  { re: b('privada[s]?'), nombre: 'privada (¿retrete?)', europeo: 'sanita — privada adjetivo es legítimo', severidad: 'aviso' },
+  { re: b('controle[s]?'), nombre: 'controle (¿sustantivo?)', europeo: 'controlo — subjuntivo de controlar es legítimo', severidad: 'aviso' },
+  { re: b('reais'), nombre: 'reais (¿moneda?)', europeo: 'euros — reais adjetivo es legítimo', severidad: 'aviso' },
+  { re: /\bensino m[ée]dio\b/i, nombre: 'ensino médio', europeo: 'ensino secundário', severidad: 'aviso' },
+  { re: b('CEP'), nombre: 'CEP', europeo: 'código postal', severidad: 'aviso' },
+  { re: b('quatorze'), nombre: 'quatorze', europeo: 'catorze', severidad: 'aviso' },
+  { re: b('a gente'), nombre: 'a gente (¿sujeto?)', europeo: 'nós — «a gente»=la gente es legítimo', severidad: 'aviso' },
 ];
 
 export interface Hallazgo {
@@ -102,7 +217,7 @@ export interface Hallazgo {
 }
 
 type Json = Record<string, unknown>;
-interface Ex extends Json { id: string; type: string; data: Json; tags?: string[]; esContrast?: string; }
+export interface Ex extends Json { id: string; type: string; data: Json; tags?: string[]; esContrast?: string; }
 
 /** Un ítem queda exento cuando su trabajo ES enseñar la diferencia entre
  *  variantes: entonces necesita decir `trem` o `contato` para hacerlo.
@@ -120,9 +235,24 @@ export function exento(ex: Ex): boolean {
     /\bBrasil\b|\bbrasileir[oa]/i.test(contexto) ||
     // etiqueta contrastiva en el propio texto: «BR:», «PT:», «BR/PT»
     /\b(BR|PT|PT-PT|PT-BR)\s*[:\/]/.test(contexto) ||
+    // etiqueta parentética «(BR)»/«(PT)», viva en los matching de léxico
+    // («ônibus (BR) → autocarro») — la Ola V la encontró sin cubrir
+    /\((BR|PT)\)/.test(contexto) ||
     // banderas usadas como marca de variante
     /🇧🇷|🇵🇹/u.test(contexto)
   );
+}
+
+/** ¿El ítem contiene el equivalente europeo del marcador encontrado?
+ *  «Em Portugal, o 'ônibus' chama-se 'autocarro'» dispara `ônibus` pero
+ *  ES contraste didáctico: cuarentenarlo retiraría justo lo que este
+ *  curso quiere enseñar. Se comprueba la primera palabra portuguesa del
+ *  campo `europeo` del marcador contra TODO el ítem. */
+export function contrasteImplicito(ex: Ex, europeo: string): boolean {
+  const termino = europeo.match(/\p{L}{3,}/u)?.[0];
+  if (!termino) return false;
+  const contexto = JSON.stringify(ex.data);
+  return new RegExp(`(?<![\\p{L}])${termino}(?![\\p{L}])`, 'iu').test(contexto);
 }
 
 function camposPortugues(ex: Ex): string[] {
@@ -143,6 +273,16 @@ function texto(v: unknown): string {
   if (Array.isArray(v)) return v.map(texto).join(' · ');
   if (v && typeof v === 'object') return Object.values(v as Json).map(texto).join(' · ');
   return '';
+}
+
+/** Todo el portugués del ítem, aplanado — la MISMA extracción que usa el
+ *  gate, para que ningún consumidor (triage, informes) derive su propia
+ *  copia y se desincronice. */
+export function textoPortugues(ex: Ex): string {
+  return camposPortugues(ex)
+    .map((campo) => texto((ex.data as Json)[campo]))
+    .filter(Boolean)
+    .join(' ');
 }
 
 export function revisarEjercicio(ex: Ex): Hallazgo[] {

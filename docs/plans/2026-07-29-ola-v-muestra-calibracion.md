@@ -1,0 +1,124 @@
+# Muestra de calibración Ola V — 120 de 934 sellables por regla-inerte-v2
+
+Cada línea: `id · tipo · texto PT escaneado`. El auditor busca CUALQUIER material brasileño, español o roto.
+
+- `01bc77ff` · flashcard · ['ka.ʁu] o ['ka.hu] O carro está na garagem.
+- `0d4c1972` · fill_blank · Ela trabalha na ___ todos os dias.
+- `1a77897b` · fill_blank · A palavra 'história' tem ___ sílabas e dois acentos.
+- `2643a450` · translation · Essa canção é muito popular
+- `3b453da4` · listening · Agora escute: fácil, difícil, café, táxi, lápis.
+- `4a686123` · flashcard · bê, cê, dê (con sonido /e/ al final) Para soletrar: 'bê-cê-dê-ê'.
+- `6176ab3e` · fill_blank · Todos os dias faço ___ de manhã.
+- `77fd9df3` · fill_blank · A ___ que trabalha aqui é muito simpática.
+- `81d0ffea` · fill_blank · Na frase 'Vou à praia', a palavra 'à' combina o artigo com a preposição ___ .
+- `8de82d91` · listening · Eu vejo uma mãe.
+- `96c70ed7` · verb_preposition · Vamos começar ___ entender o problema.
+- `acbb1382` · fill_blank · O ___ é azul e muito bonito.
+- `bdad8a26` · fill_blank · Ela mora no ___ andar do prédio.
+- `cb0e1fda` · fill_blank · O meu irmão tem ___ verdes.
+- `df2f1d4e` · translation · Quero um café com leite, por favor.
+- `f05b417d` · flashcard · ano Feliz ano novo!
+- `f9968c54` · verb_preposition · Preciso ___ irmã para resolver o problema.
+- `6e8d5cdd` · translation · Cumprimentos respeitosos para toda a equipa.
+- `ad731478` · listening · Prezado cliente, agradecemos o seu contacto. Responderemos em breve.
+- `148c0447` · fill_blank · Para encerrar uma carta formal, escrevemos '___'.
+- `097e2a41` · translation · Vou encontrar minha irmã e dar um abraço nela.
+- `14cd02f3` · listening · Eu tenho uma irmã e dois filhos. A irmã mora perto da minha casa, no centro da cidade.
+- `376e5690` · flashcard · SÍ. A testemunha (fem) / O testemunha (masc) A testemunha viu o acidente. / O testemunha confirmou tudo.
+- `42ea165c` · fill_blank · Existem vários ___ na cidade nova.
+- `52c87804` · fill_blank · Fui ___ padaria comprar pão pela manhã.
+- `5e446349` · verb_preposition · Eu gosto ___ café pela manhã.
+- `659ad296` · translation · Embora festejas com muitos amigos, sinto saudade de outros.
+- `71a97c04` · verb_preposition · Nós precisamos ___ ajuda para organizar a festa.
+- `7dda7b4d` · flashcard · pela Passei pela janela. (= Passei por a janela)
+- `8a63e79c` · flashcard · os cães Os cães latem à noite no bairro.
+- `99f34da3` · translation · Ninguém respondeu nenhuma mensagem.
+- `a9b305e9` · listening · Na aula de hoje vamos estudar a regra do género e também fazer uma mistura de exercícios para practicar.
+- `bb336eb7` · flashcard · mezcla Essa receita tem uma mistura de ingredientes.
+- `c9b8e465` · verb_preposition · Esse filme deu ___ vontade de chorar, mas era só uma comédia.
+- `d9a5555b` · translation · Os nossos filhos querem encontrar os primos deles.
+- `e7acfb7e` · verb_preposition · Eu gosto ___ dos meus filhos.
+- `f6980db2` · translation · A casa do meu marido fica perto.
+- `fe319d4f` · listening · O abraço que dei ao meu primo fortaleceu nosso vínculo de família.
+- `f6f47168` · error_correction · Eu perdi meu chaves outra vez. Eu perdi minhas chaves outra vez.
+- `4cc388b7` · fill_blank · Eu trabalho ___ centro da cidade.
+- `cfa0de98` · fill_blank · As ___ de hoje são difíceis. (lição)
+- `0b88eddd` · fill_blank · Eu ___ um café todas as manhãs.
+- `2dbb88c9` · verb_preposition · Ela precisa ___ ajuda urgentemente.
+- `52dcaa95` · flashcard · Há dois anos que estudo português. Há dois anos que estudo português. / Faz dois anos que estudo português.
+- `727685df` · translation · Ele é o próximo da lista.
+- `865f596b` · listening · Não seja mentiroso, esteja presente e seja honesto.
+- `ae3499fa` · verb_preposition · Eu gosto ___ café, mas prefiro chá.
+- `c804e438` · fill_blank · Eu ___ café todas as manhãs. (beber)
+- `da94b053` · fill_blank · ___ de ___ um erro aqui, porque não fecha.
+- `f3b69d8c` · translation · Eu estou à espera da Maria
+- `0f765cf2` · conjugation · sou
+- `9ab0b532` · error_correction · Eu tengo dois irmãos. Eu tenho dois irmãos.
+- `00997267` · flashcard · eu dei Eu dei o livro para minha irmã.
+- `0b6b5821` · verb_preposition · Eu ___ em viajar para Portugal no ano passado, mas não pude.
+- `15419a29` · flashcard · trabalhava, trabalhavas, trabalhava, trabalhávamos, trabalháveis, trabalhavam
+- `2065194d` · translation · Nós vimos um filme muito estranho ontem à noite.
+- `2adb86ff` · flashcard · praia (playa) Eu fui à praia ontem.
+- `3083f34b` · listening · Eu adorei a praia nas férias.
+- `3dfcd780` · translation · Ontem, quase caí no chão quando caminhar pelo parque.
+- `47a165f4` · translation · Tinha pedido desculpa antes de eu perceber o erro.
+- `55e124a1` · fill_blank · Eu ___ (trazer) documentos importantes para a reunião.
+- `6b14d613` · fill_blank · Ele ___ desistir, mas decidiu tentar mais uma vez.
+- `70b6b91c` · translation · Tiveste que estudar muito?
+- `7e0ea7e2` · translation · Ela adorou o festival de música.
+- `8e9b7823` · translation · O menino era muito simpático.
+- `992a8bcf` · fill_blank · Quando eu ___ criança, adorava jogar bola.
+- `9e9d1fb8` · flashcard · Ver (eu/ele/ella) tinha visto = yo/él/ella había visto Eu tinha visto aquele filme antes.
+- `a739796c` · fill_blank · Eu ___ (tomar) café todas as manhãs quando era criança.
+- `ae68d6cb` · translation · Ela viajou nas férias.
+- `b9d073ee` · fill_blank · Ela ___ o relatório antes da reunião.
+- `c393d532` · flashcard · admirar Eu admirava as paisagens bonitas da cidade.
+- `c9ae7157` · flashcard · Quando eu era criança, eu jogava futebol todos os dias. Quando eu morava em São Paulo, eu tomava café às sete horas.
+- `d318c7bc` · translation · Ele pôs o livro sobre a mesa.
+- `dda0b611` · fill_blank · Eu ___ (fazer) a prova em uma hora e ___ (tirar) de letra!
+- `ec4dbf46` · flashcard · eu adorei Eu adorei o concerto!
+- `f5fb9f08` · translation · Eu adoro a praia.
+- `35cc02df` · conjugation · trabalhamos
+- `259a72a1` · conjugation · falava
+- `efe67f57` · error_correction · Antes nós comiamos juntos todos os domingos. Antes nós comíamos juntos todos os domingos.
+- `4462b966` · multiple_choice · ontem · sempre · antigamente
+- `16480631` · flashcard · Eu vou falar Eu vou falar com o gerente amanhã.
+- `2d8585af` · translation · Seria possível realizar o projeto este ano?
+- `408764e8` · translation · Ele é uma pessoa muito concreta, não perde tempo com fantasias.
+- `5f96af67` · flashcard · comerei, comerá, comeremos Comerei uma pizza para comemorar minha aprovação.
+- `8237b53d` · fill_blank · Nós ___ muito durante as férias de verão.
+- `8be006d7` · translation · A testemunha afirmou que veria tudo claramente naquela noite.
+- `aab6acb1` · translation · Em breve saberemos as novidades.
+- `c8c73d70` · flashcard · saberá, saberão Logo saberão a resposta do exame.
+- `de11f97e` · fill_blank · Este verão eu ___ viajar para Lisboa e ___ conhecer a família do meu pai.
+- `cd2409b8` · conjugation · serei
+- `b785e4db` · conjugation · faria
+- `eb7f85c1` · error_correction · Eu vou a falar com ela hoje. Eu vou falar com ela hoje.
+- `03b538f2` · translation · No início, ninguém sabia lidar com a situação.
+- `0cdd0085` · translation · Tenho medo de que eles venham a público revelar tudo.
+- `1ee66c76` · flashcard · início No início do ano, tudo era difícil.
+- `31477887` · flashcard · suspiar Ela suspirou de alívio quando soube a notícia.
+- `496c5452` · flashcard · apertado / apertada O sapato está muito apertado.
+- `63583190` · verb_preposition · O projeto vai começar ___ melhorar a confiança da equipa.
+- `73e6569c` · translation · Era necessário que eles fizessem a apresentação.
+- `7fa4ea72` · listening · Assim que o verão aquecer, vamos estabelecer um rumo para o projeto.
+- `96866205` · translation · Espero que possas lidar com o problema.
+- `b75d20c5` · verb_preposition · Eu gosto ___ café pela manhã.
+- `d0091d78` · flashcard · suspirar — ele suspirava Ela suspirava de saudade.
+- `dd057c9c` · flashcard · que ela faça Quero que ela faça a lição de casa.
+- `ee36d9cc` · flashcard · Digo que eles estejam de acordo. Digo que eles estejam de acordo, mas não tenho certeza.
+- `fc13ad89` · fill_blank · Embora eu ___ (aquecer) a sopa, ela ficou fria.
+- `69faec04` · conjugation · falasse
+- `ecc2b2aa` · conjugation · fizer
+- `03b92017` · flashcard · falar eu Falar eu assim foi um erro.
+- `1154b88e` · listening · Ele tem arrumado o quarto desde ontem e ainda não terminou.
+- `3ce601b9` · verb_preposition · Vou continuar ___ tentar encontrar uma solução.
+- `51820100` · fill_blank · ___ ela ___ sair mais cedo, não sei.
+- `79076c11` · translation · Sempre que é possível, saio para correr de manhã.
+- `8ed1afe5` · translation · Seguiam em frente com o projeto apesar de tudo.
+- `a46a9077` · translation · É necessário o professor corrigir os exames.
+- `c5ffec65` · listening · Tenho prazer em dizer que o relatório está carregado de erros importantes.
+- `e2d0dde2` · fill_blank · Ela foi ___ a verdade aos poucos.
+- `febc4d8a` · verb_preposition · Quando acordei, comecei ___ verificar as mensagens.
+- `89ecb8db` · conjugation · partirmos
+- `cc7715be` · error_correction · A porta está abrido desde manhã. A porta está aberta desde manhã.
