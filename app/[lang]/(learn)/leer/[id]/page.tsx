@@ -61,7 +61,7 @@ export default async function LecturaPage({
         </p>
       </header>
       {lectura.modo === "texto" ? (
-        <LectorTexto parrafos={lectura.parrafos} />
+        <LectorTexto parrafos={lectura.parrafos} lecturaId={lectura.id} lang={lang} />
       ) : (
         <LectorKaraoke
           parrafos={lectura.parrafos}
