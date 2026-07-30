@@ -77,6 +77,11 @@ export function textsFor(ex: Exercise, variant: VariantKey): string[] {
     case 'multiple_choice':
     case 'shadowing':
       return [];
+    // Ola B2C2-PT: tipos de solo-texto, sin audio por diseño (el juicio
+    // se lee; la fuente de mediación viene de la biblioteca).
+    case 'grammaticality_judgment':
+    case 'mediation':
+      return [];
   }
 }
 

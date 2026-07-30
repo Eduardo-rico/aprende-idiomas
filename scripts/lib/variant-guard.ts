@@ -38,6 +38,13 @@ const CAMPOS_PT: Record<string, string[]> = {
   multiple_choice: ['options'],
   shadowing: ['text'],
   lesson: [],
+  // Ola B2C2-PT: en el juicio de gramaticalidad, `sentence` puede estar
+  // mal A PROPÓSITO (didáctico) y `repair` es la forma canónica. En
+  // mediación, `sourceText` es CITA de la biblioteca (Eça trae grafía
+  // pre-Acordo legítima) y no se escanea; `modelAnswer` puede ser
+  // español si targetLang=es — tampoco se escanea por regla.
+  grammaticality_judgment: ['sentence', 'repair'],
+  mediation: [],
 };
 
 /** Campos DIDÁCTICOS: contienen material erróneo o contrastivo A
@@ -49,6 +56,7 @@ export const CAMPOS_DIDACTICOS: Record<string, Set<string>> = {
   error_correction: new Set(['sentence']),
   multiple_choice: new Set(['options']),
   matching: new Set(['pairs']),
+  grammaticality_judgment: new Set(['sentence']),
 };
 
 export interface Marcador {

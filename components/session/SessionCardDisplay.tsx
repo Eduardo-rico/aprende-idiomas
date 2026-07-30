@@ -53,6 +53,8 @@ const PROMPT: Record<string, string> = {
   multiple_choice: "Elige la opción correcta",
   shadowing: "Repite en voz alta",
   verb_preposition: "Elige la preposición correcta",
+  grammaticality_judgment: "¿Está bien formada?",
+  mediation: "Media el texto",
 };
 
 export function SessionCardDisplay({

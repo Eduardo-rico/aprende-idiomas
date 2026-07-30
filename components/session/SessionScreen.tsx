@@ -42,6 +42,8 @@ const TYPE_LABEL: Record<string, string> = {
   multiple_choice: "Opción múltiple",
   shadowing: "Shadowing",
   verb_preposition: "Verbo + preposición",
+  grammaticality_judgment: "Juicio de gramaticalidad",
+  mediation: "Mediación",
 };
 
 const TYPE_ACCENT: Record<string, "lesson" | "info"> = {

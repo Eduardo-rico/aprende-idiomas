@@ -12,6 +12,8 @@ import { ConjugationCard } from "./cards/ConjugationCard";
 import { MultipleChoiceCard } from "./cards/MultipleChoiceCard";
 import { MatchingCard } from "./cards/MatchingCard";
 import { ShadowingCard } from "./cards/ShadowingCard";
+import { GrammaticalityJudgmentCard } from "./cards/GrammaticalityJudgmentCard";
+import { MediationCard } from "./cards/MediationCard";
 import { LessonStep } from "./lessons/LessonStep";
 import { submitAnswer, getCardById, resetLeechCard } from "@/lib/db/repository";
 import { useSettings } from "@/lib/stores/settings";
@@ -271,6 +273,9 @@ function AnswerableCard({
   if (ex.type === "multiple_choice") return <MultipleChoiceCard ex={ex} onSubmit={onAnswer} />;
   if (ex.type === "matching") return <MatchingCard ex={ex} onSubmit={onAnswer} />;
   if (ex.type === "shadowing") return <ShadowingCard ex={ex} onSubmit={onAnswer} />;
+  if (ex.type === "grammaticality_judgment")
+    return <GrammaticalityJudgmentCard ex={ex} onSubmit={onAnswer} />;
+  if (ex.type === "mediation") return <MediationCard ex={ex} onSubmit={onAnswer} />;
   return null;
 }
 

@@ -45,6 +45,14 @@ const TIPO_A_DESTREZA: Record<string, Skill | null> = {
   listening: 'comprension_oral',
   shadowing: 'produccion_oral',
 
+  // Ola B2C2-PT (2026-07-29): el juicio de gramaticalidad es
+  // reconocimiento metalingüístico (se LEE y se juzga, no se produce);
+  // la mediación es la cuarta escala del Companion Volume y aquí por
+  // fin tiene tipo propio — a diferencia de translation (ver arriba),
+  // el tipo mediation SÍ declara destinatario, propósito y rúbrica.
+  grammaticality_judgment: 'comprension_lectora',
+  mediation: 'mediacion',
+
   // Sin destreza clara o sin contenido: no se ancla.
   lesson: null,
   chunk: null,

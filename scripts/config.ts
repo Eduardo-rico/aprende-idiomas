@@ -103,6 +103,10 @@ export const EXERCISES_PER_LESSON: Record<ExerciseType, number | null> = {
   matching: null,
   multiple_choice: null,
   shadowing: null,
+  // Ola B2C2-PT: se generan por su propio pipeline (con doble
+  // adversarial), no por este generador — null a propósito.
+  grammaticality_judgment: null,
+  mediation: null,
 };
 
 // Mapping de ExerciseType → nombre de archivo de prompt. `null` = no generar.
@@ -121,6 +125,8 @@ export const TYPE_TO_TEMPLATE: Record<ExerciseType, string | null> = {
   matching: null,
   multiple_choice: null,
   shadowing: null,
+  grammaticality_judgment: null,
+  mediation: null,
 };
 
 // Costo estimado (USD) por 1k tokens para el modelo LLM actual.
@@ -144,6 +150,8 @@ export const SCHEMA_VERSION: Record<ExerciseType, number> = {
   matching: 1,
   multiple_choice: 1,
   shadowing: 1,
+  grammaticality_judgment: 1,
+  mediation: 1,
 };
 
 export function requireApiKey(): string {

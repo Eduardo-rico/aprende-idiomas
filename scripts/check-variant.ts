@@ -2,13 +2,14 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { revisarEjercicio, type Hallazgo } from './lib/variant-guard';
+import { revisarRegistro } from './lib/check-registro';
 
 async function main() {
   const DIR = path.join(process.cwd(), 'lib/data/languages/pt/blocks');
   const all: Hallazgo[] = []; let tot = 0;
   for (const f of (await fs.readdir(DIR)).filter(x => x.endsWith('.json')).sort()) {
     const d = JSON.parse(await fs.readFile(path.join(DIR, f), 'utf8'));
-    for (const ex of (Array.isArray(d) ? d : d.exercises)) { tot++; all.push(...revisarEjercicio(ex)); }
+    for (const ex of (Array.isArray(d) ? d : d.exercises)) { tot++; all.push(...revisarEjercicio(ex), ...revisarRegistro(ex)); }
   }
   const err = all.filter(h => h.severidad === 'error');
   const av = all.filter(h => h.severidad === 'aviso');

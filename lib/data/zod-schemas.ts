@@ -26,6 +26,8 @@ export const ExerciseTypeEnum = z.enum([
   'matching',
   'multiple_choice',
   'shadowing',
+  'grammaticality_judgment',
+  'mediation',
 ]);
 export type ExerciseType = z.infer<typeof ExerciseTypeEnum>;
 
@@ -141,6 +143,53 @@ export const ShadowingData = z.object({
   selfChecks: z.array(z.string()).optional(),
 });
 
+// ─── Ola B2C2-PT: tipos nuevos (2026-07-29) ────────────────────
+// El plan maestro manda: schema y runner PRIMERO, contenido después.
+
+// Juicio de gramaticalidad — el instrumento del anti-calco (¿*vais a
+// poupar*? ¿*embora festejas*?). Determinista: verdict es la respuesta.
+// repair es obligatorio si la frase está mal (hay que mostrar la buena)
+// y prohibido si está bien (no hay nada que reparar).
+const GrammaticalityJudgmentBase = z.object({
+  sentence: z.string().min(1),
+  verdict: z.boolean(),
+  repair: z.string().min(1).optional(),
+  explanationEs: z.string().min(1),
+});
+export const GrammaticalityJudgmentData = GrammaticalityJudgmentBase
+  .refine((d) => d.verdict ? d.repair === undefined : typeof d.repair === 'string',
+    { message: 'repair es obligatorio con verdict=false y prohibido con verdict=true' });
+
+// Mediación (Companion Volume 2020): fuente + consigna + rúbrica. La
+// corrección v1 es AUTOEVALUACIÓN contra rúbrica (el alumno coteja su
+// texto criterio a criterio) — un juez LLM es decisión aparte, no
+// fingida. Los sourceText salen de la biblioteca de la Ola L: textos
+// reales, no inventados.
+export const MediationTypeSchema = z.enum([
+  'summarise', 'relay', 'explain_concept', 'reformulate_register',
+  'cross_variety', 'synthesise_sources',
+]);
+export const MediationData = z.object({
+  sourceText: z.string().min(1),
+  sourceRef: z.string().optional(), // id de lectura de la Ola L, si aplica
+  sourceLang: z.string().min(2),
+  targetLang: z.string().min(2),
+  mediationType: MediationTypeSchema,
+  audience: z.string().min(1),
+  instructionsEs: z.string().min(1),
+  wordRange: z.object({ min: z.number().int().positive(), max: z.number().int().positive() })
+    .refine((r) => r.min < r.max, { message: 'wordRange.min debe ser < max' }),
+  rubric: z.array(z.string().min(1)).min(1),
+  modelAnswer: z.string().optional(),
+});
+
+// Registro y tratamiento como rasgos de PRIMERA CLASE del ítem
+// (currículo §8: sin ellos no hay gate de coherencia ni ejercicios de
+// tratamento situado, y la adecuación de registro es criterio CAPLE
+// desde B1).
+export const RegisterSchema = z.enum(['intimo', 'informal', 'neutro', 'formal', 'solene']);
+export const AddressSchema = z.enum(['tu', 'terceira_sem_pronome', 'nome_cargo', 'o_senhor', 'V_Exa', 'voce_BR']);
+
 // LessonData: 1 lesson step por lección. Renderiza MDX (conceptNotesPath).
 // No tiene audio en data — los audio refs viven en un sidecar
 // `lib/data/languages/pt/lessons/audio-refs.json` (L2).
@@ -168,6 +217,8 @@ export const ExerciseDataByTypeSchema = {
   matching: MatchingData,
   multiple_choice: MultipleChoiceData,
   shadowing: ShadowingData,
+  grammaticality_judgment: GrammaticalityJudgmentData,
+  mediation: MediationData,
 } as const;
 
 // ─── variantOverrides por tipo (todos los campos opcionales) ────
@@ -227,6 +278,8 @@ export const VariantOverrideByTypeSchema = {
   matching: MatchingOverride,
   multiple_choice: MultipleChoiceOverride,
   shadowing: ShadowingOverride,
+  grammaticality_judgment: z.strictObject(GrammaticalityJudgmentBase.shape).partial(),
+  mediation: z.strictObject(MediationData.shape).partial(),
 } as const;
 
 // ─── Exercise: discriminated union sobre `type` ────────────────
@@ -277,6 +330,11 @@ const BaseExercise = z.object({
    *  al cuarentenar: un `neutral` por regla queda PARA SIEMPRE
    *  distinguible de uno verificado por nativo (que llevará otro texto). */
   variantVerificacion: z.string().optional(),
+  /** Registro y tratamiento (Ola B2C2-PT). Opcionales: el corpus viejo
+   *  no los declara; el contenido B2+ nuevo DEBE declararlos y el gate
+   *  de coherencia (check-registro) los cruza contra el texto. */
+  register: RegisterSchema.optional(),
+  address: AddressSchema.optional(),
   /** Exención declarada del requisito de audio.
    *
    *  `verify-content` exige audio para flashcard, listening, translation,
@@ -356,6 +414,16 @@ const ShadowingEx = BaseExercise.extend({
   data: ShadowingData,
   variantOverrides: z.record(z.string(), VariantOverrideValue).optional(),
 });
+const GrammaticalityJudgmentEx = BaseExercise.extend({
+  type: z.literal('grammaticality_judgment'),
+  data: GrammaticalityJudgmentData,
+  variantOverrides: z.record(z.string(), VariantOverrideValue).optional(),
+});
+const MediationEx = BaseExercise.extend({
+  type: z.literal('mediation'),
+  data: MediationData,
+  variantOverrides: z.record(z.string(), VariantOverrideValue).optional(),
+});
 
 export const ExerciseSchema = z.discriminatedUnion('type', [
   FlashcardEx, FillBlankEx, ListeningEx,
@@ -363,6 +431,7 @@ export const ExerciseSchema = z.discriminatedUnion('type', [
   VerbPrepositionEx, SentenceConstructionEx, ChunkEx,
   LessonEx,
   ErrorCorrectionEx, ConjugationEx, MatchingEx, MultipleChoiceEx, ShadowingEx,
+  GrammaticalityJudgmentEx, MediationEx,
 ]);
 export type Exercise = z.infer<typeof ExerciseSchema>;
 
