@@ -55,9 +55,27 @@ Es la primera porque **desbloquea B2-C2 sin esperar a nadie**: la lectura extens
 
 </details>
 
-### Ola V — verificación del corpus PT existente ← LA SIGUIENTE
+### Ola V — verificación del corpus PT existente ✅ EJECUTADA 2026-07-29, con resultado distinto al previsto
 
-1.827 `unchecked` no se verifican a mano uno a uno: se **triagean por regla** (los guards de variante ya existen: `scripts/lib/variant-guard.ts`) y lo que la regla no decide va a la cola humana que ya existe (`needs-human`). Meta realista: bajar `unchecked` a <500 por regla, y aceptar que la cola humana espera al nativo. **No bloquea nada más.**
+El diseño original («triagear por regla, unchecked <500») **murió en su
+calibración**: dos adversariales vetaron la v1 con evidencia de corpus, y
+el tercer auditor tumbó la v2 sobre una muestra de 120 (19 ERROR / 15
+AVISO; criterio 0/≤3). Una regla de superficie no valida lengua. Detalle
+completo en `2026-07-29-ola-v-triage-variante.md`.
+
+Lo aplicado: cuarentena +165 (146 por marcador inequívoco auditado + 19
+por auditoría directa) → corpus **1.661 unchecked · 266 needs-human ·
+110 divergent · 2 neutral**; guard de variante de 17 a ~90 marcadores y
+campos antes invisibles (`options`/`pairs`); clasificador de riesgos que
+ORDENA la cola humana sin cancelarla.
+
+**El hallazgo que redefine la siguiente ola**: ~16 % del cubo más limpio
+del corpus está roto o divergente (regencias BR, posesivo sin artículo,
+español incrustado, agramaticalidades). El corpus generado viene mezclado
+de las dos orillas. Camino real, a decidir por Edu: (a) revisión
+adversarial por lotes de los 1.661, o (b) regeneración por regla con el
+pipeline revisado + gates nuevos. Ninguna de las dos bloquea la Ola
+B2C2-PT, pero sí acota cuánto corpus viejo sobrevive.
 
 ### Ola B2C2-PT — el corpus alto de portugués
 
