@@ -4702,5 +4702,222 @@
   "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
   "register": "formal",
   "contentHash": "d5ed5d62b8951b35ad96763fdf350c513ab959d9cf0b5c808ba898f20e874740"
+ },
+ {
+  "id": "b2c2-med-15",
+  "blockId": 10,
+  "lessonId": "b10-l1-registro-formal-informal",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote3",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "Morreu uma vez um rei, deixando quatro filhos, e sem ter designado o successor. Reuniu-se a côrte, e decidiu-se que a corôa devia pertencer, não ao mais velho dos quatro filhos, mas sim ao mais digno.\n\nResolveram além d'isso que o cadaver do rei fosse posto de pé contra um muro, e que o principe que acertasse melhor com uma flecha n'aquelle alvo, seria o escolhido para successor.\n\nComeçou o mais velho. Esticou a corda do arco, apontou durante muito tempo, e a flecha foi atravessar a mão esquerda do defuncto. O principe soltou grito d'alegria, cuidando que seus irmãos atirariam peór, e que por conseguinte seria elle quem viria a reinar.\n\nO segundo acertou em cheio na cara do rei, soltando um grito ainda mais alegre do que o outro principe.\n\nO terceiro varou o coração de seu pae, e os seus gritos de triumpho quasi que chegavam ao céo, porque lhe parecia impossivel acertar melhor.\n\nQuando chegou a vez do quarto filho, tiveram de lhe metter nas mãos as flechas e o arco: mas, desde que olhou para o alvo, arrojou as armas longe de si, e desatou a chorar:\n\n--«Oh! meu pae! meu querido pae! exclamou elle, como poderei eu jámais consolar-me de ver o teu corpo crivado de flechas pela mão de teus proprios filhos!»\n\nOs grandes da côrte ouvindo isto proclamaram-n'o rei, como sendo o mais digno.",
+   "sourceRef": "junqueiro-qual-sera-rei",
+   "sourceLang": "pt",
+   "targetLang": "es",
+   "mediationType": "summarise",
+   "audience": "un amigo hispanohablante",
+   "instructionsEs": "Resume EN ESPAÑOL la fábula: qué prueba decide la corte para escoger rey, quién gana y por qué.",
+   "wordRange": {
+    "min": 30,
+    "max": 60
+   },
+   "rubric": [
+    "La corte decide la prueba (el rey murió sin sucesor): disparar una flecha al cadáver del rey; reinará el más digno",
+    "Los tres mayores aciertan (mano, cara, corazón) y celebran",
+    "El cuarto tira las armas y llora — y lo proclaman rey por ser el más digno",
+    "No inventa nada",
+    "Cabe en el rango"
+   ],
+   "modelAnswer": "Muere un rey sin nombrar sucesor y la corte decide que reine el más digno: pondrán el cadáver contra un muro y ganará quien mejor lo acierte con una flecha. Los tres mayores disparan — mano, cara, corazón — y celebran; el cuarto tira las armas y llora: no puede herir a su padre. Lo proclaman rey."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
+  "register": "neutro",
+  "contentHash": "95b082c661d2652840b7b7feb50d803f92a87175fb904579486bc822513e79f7"
+ },
+ {
+  "id": "b2c2-med-16",
+  "blockId": 10,
+  "lessonId": "b10-l1-registro-formal-informal",
+  "difficulty": 3,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote3",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "Quem parte leva no bolso\nmetade do seu lugar;\nmas a outra metade fica\nà janela, a esperar.",
+   "sourceRef": "anedotas-e-quadras-b1-1",
+   "sourceLang": "pt",
+   "targetLang": "es",
+   "mediationType": "explain_concept",
+   "audience": "un amigo hispanohablante que no entiende la quadra",
+   "instructionsEs": "Explícale EN ESPAÑOL la imagen de las dos mitades: qué se lleva el que se va y qué se queda esperando.",
+   "wordRange": {
+    "min": 30,
+    "max": 60
+   },
+   "rubric": [
+    "Explica qué son las mitades (el que parte se lleva la mitad de su lugar; la otra mitad queda en casa)",
+    "Interpreta, no traduce verso a verso",
+    "Cabe en el rango"
+   ],
+   "modelAnswer": "La quadra dice que irse parte a la persona en dos: una mitad — la vida que sigue, el camino — viaja en el bolsillo del que se va; la otra — la casa, los suyos — se queda en la ventana, esperando. No describe un viaje: describe quedar incompleto en dos lugares a la vez."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
+  "register": "neutro",
+  "contentHash": "536a0a56e5014b3a7f1283c70668a647886bc4a9d2283b61bab7cb224e231086"
+ },
+ {
+  "id": "b2c2-med-17",
+  "blockId": 10,
+  "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+  "difficulty": 3,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote3",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "A gente se encontra na frente do cinema às 8, beleza? Qualquer coisa me manda mensagem no zap.",
+   "sourceLang": "pt",
+   "targetLang": "pt",
+   "mediationType": "cross_variety",
+   "audience": "um amigo de Lisboa, tratado por tu",
+   "instructionsEs": "Reescribe EN PORTUGUÉS EUROPEO informal, tuteando: cambia lo que un lisboeta diría distinto.",
+   "wordRange": {
+    "min": 12,
+    "max": 30
+   },
+   "rubric": [
+    "'Encontramo-nos' o 'a gente encontra-se' (lo brasileño era la próclise 'se encontra' — 'a gente' con el verbo detrás es europeo vivo)",
+    "zap→WhatsApp, beleza→pode ser/combinado",
+    "Misma cita (cine, a las 8)",
+    "Cabe en el rango"
+   ],
+   "modelAnswer": "Encontramo-nos em frente ao cinema às 8, pode ser? Qualquer coisa, manda-me mensagem no WhatsApp."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
+  "register": "informal",
+  "address": "tu",
+  "contentHash": "c62aeed25c1ae608765bc597e854cf591829a2940411c19c5348aee59752efef"
+ },
+ {
+  "id": "b2c2-med-18",
+  "blockId": 10,
+  "lessonId": "b10-l1-registro-formal-informal",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote3",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "A Biblioteca Municipal informa os seus leitores de que, durante o mês de agosto, o horário de funcionamento será das 10h às 14h.",
+   "sourceLang": "pt",
+   "targetLang": "pt",
+   "mediationType": "reformulate_register",
+   "audience": "um amigo, por mensagem",
+   "instructionsEs": "Cuéntaselo a un amigo por mensaje, en informal.",
+   "wordRange": {
+    "min": 10,
+    "max": 28
+   },
+   "rubric": [
+    "Registro informal claro",
+    "Misma info (biblioteca, agosto, 10-14), sin inventar",
+    "Empieza como mensaje, no como aviso",
+    "Cabe en el rango"
+   ],
+   "modelAnswer": "Já sabes que em agosto a biblioteca abre das 10 às 14?"
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
+  "register": "informal",
+  "address": "tu",
+  "contentHash": "eff1459cc29794ce65696c7b30c40300b68ca115b493550de767d0b7c332d7ed"
+ },
+ {
+  "id": "b2c2-med-19",
+  "blockId": 10,
+  "lessonId": "b10-l1-registro-formal-informal",
+  "difficulty": 3,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote3",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "Folheando os livros de antigos assentamentos, no cartorio das cadêas da Relação do Porto, li, no das entradas dos presos desde 1803 a 1805, a folhas 232, o seguinte:\n\nSimão Antonio Botelho, que assim disse chamar-se, ser solteiro, e estudante na Universidade de Coimbra, natural da cidade de Lisboa, e assistente na occasião de sua prisão na cidade de Vizeu, idade de dezoito annos, filho de Domingos José Correia Botelho e de D. Rita Preciosa Caldeirão Castello-Branco, estatura ordinaria, cara redonda, olhos castanhos, cabello e barba preta, vestido com jaqueta de baetão azul, collête de fustão pintado e calça de panno pedrez. E fiz este assento, que assignei.\n\nFilippe Moreira Dias.\n\nÁ margem esquerda d'este assento está escripto:\n\nFoi para a India em 17 de Março de 1807.",
+   "sourceRef": "amor-de-perdicao-c00",
+   "sourceLang": "pt",
+   "targetLang": "es",
+   "mediationType": "summarise",
+   "audience": "un amigo hispanohablante",
+   "instructionsEs": "Resume EN ESPAÑOL qué documento encontró Camilo y qué dice de Simão Botelho — incluida la nota al margen.",
+   "wordRange": {
+    "min": 30,
+    "max": 55
+   },
+   "rubric": [
+    "Encontró un asiento en los libros de presos de la cárcel de Oporto",
+    "El asiento describe a Simão Botelho: soltero, estudiante de Coimbra, 18 años",
+    "La nota al margen: partió para la India en marzo de 1807",
+    "No inventa nada",
+    "Cabe en el rango"
+   ],
+   "modelAnswer": "Hojeando los libros de registro de presos de la cárcel de Oporto, Camilo encontró el asiento de Simão Botelho: soltero, estudiante de la Universidad de Coimbra, dieciocho años, con sus señas. Y al margen, una nota seca: partió para la India en marzo de 1807."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
+  "register": "neutro",
+  "contentHash": "a6a918db0d491985ba8e74c814b48b625317d4dc6f4cebb00f469aa35ccc6a0a"
+ },
+ {
+  "id": "b2c2-med-20",
+  "blockId": 10,
+  "lessonId": "b10-l1-registro-formal-informal",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-lote3",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "— Se faz favor! Este café está frio! — Ainda bem que me diz: o café frio custa mais cinquenta cêntimos. V",
+   "sourceRef": "anedotas-e-quadras-a2-1",
+   "sourceLang": "pt",
+   "targetLang": "es",
+   "mediationType": "relay",
+   "audience": "un amigo español al que quieres contarle el chiste",
+   "instructionsEs": "Cuéntale el chiste EN ESPAÑOL — corto, remate al final.",
+   "wordRange": {
+    "min": 20,
+    "max": 40
+   },
+   "rubric": [
+    "La queja del café frío",
+    "El remate del camarero cobrándolo más caro",
+    "Lo cuenta, no lo explica",
+    "Cabe en el rango"
+   ],
+   "modelAnswer": "Un cliente protesta: '¡oiga, este café está frío!'. Y el camarero: 'menos mal que me lo dice — el café frío cuesta cincuenta céntimos más'."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
+  "register": "informal",
+  "contentHash": "33e1ca83b387ef6a47ae8e60a4192c93fd63481ae8136c716043d33a02ea19a2"
  }
 ]

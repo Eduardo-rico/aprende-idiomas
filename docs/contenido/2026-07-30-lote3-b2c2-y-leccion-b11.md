@@ -1,6 +1,67 @@
-# Lote 3 B2C2 (20 GJ + 6 MED) + lección b11-l1 «Falsos amigos que doem» (BORRADOR para revisión adversarial)
+# Lote 3 B2C2 (20 GJ + 6 MED) + lección b11-l1 «Falsos amigos que doem»
 
-**Estado: NO PUBLICADO.** Molde v3 (con todas las enmiendas de los lotes
+**Estado: REVISADO Y PUBLICADO (2026-07-30)** — 17 GJ en b8 + 3 en b11
+(b2c2-gj-l3-01…20), 6 MED en b10 (b2c2-med-15…20), lección b11-l1 v2.
+Fuente de verdad: los JSON. Aquí el resultado; abajo el borrador.
+
+## Resultado de la revisión (2 informes independientes)
+
+- **RETIRADOS por Priberam (ambos)**: «gana» (diccionarizada del
+  español con el sentido exacto del estímulo) y «listo» (regionalismo
+  atestado de Trás-os-Montes). Entraron dos MAL GRAMATICALES vírgenes:
+  «Talvez ele vem» (→ venha) y el progresivo proyectado al futuro
+  «Estou a jantar com eles na sexta» (→ vou jantar) — respuesta directa
+  al hallazgo capital del revisor 2: la dieta del lote se resolvía con
+  un clasificador superficial («¿palabra española? → MAL», 19/20 sin
+  saber portugués). También «empleo» → «embarazada/grávida» (menos
+  vocal-delatora, alimenta la lección).
+- **El rey estaba MUERTO**: la consigna de MED-15 le atribuía la prueba
+  al rey; la decide la corte sobre su cadáver. Consigna, rúbrica y
+  modelo reescritos contra el texto (tercera reincidencia del pecado de
+  describir fuentes de memoria — ya es regla dura con historial).
+- **MED-19**: la India estaba FUERA del recorte declarado — fuente
+  ampliada a los párrafos 0-4 (128 palabras, incluye la nota al
+  margen); sourceRef corregido (amor-de-perdicao-c00, guion simple).
+- **La lección MDX v2**: reestructurada en DOS familias (falsos de
+  verdad / parecen-falsos-pero-amigos: apelido y constipado — el
+  pánico a constipado viene del INGLÉS, no del español normativo,
+  cazó el revisor 2); el «nunca» de regalo corregido (el lote 2 ya
+  pagó ese error y la lección lo repetía); filas C1 de verdad
+  añadidas (propina, aula, salsa, cena, embaraçada, largo);
+  perito+especialista; Examples 0-1 ya no reciclan repairs publicados.
+- **Infra cazada por el revisor 2**: LessonSchema limitaba blockId a 10
+  y vocabKey a 7 — la lección b11 lo violaba. Schema subido a 11 (con
+  nota de checklist), vocabKey recortado a 7. Los 3 GJ de falsos
+  amigos nacen EN b11 con lessonId b11-l1 (no en préstamo) y están en
+  exerciseRefs de la lección — verify-content en verde.
+- **Metadatos corregidos**: mesóclise sin «register informal» (es
+  culta/escrita; address tu), «fica descansado» declara informal+tu,
+  «importa-se» declara formal+3.ª sin pronombre.
+- **Explicaciones sin absolutos**: hei-de reconoce el «he de» vivo del
+  español de México (el público de este curso), cear/consoada añadidos,
+  dequeísmo explicado desde el vernáculo real, acostar=arrimar/recostar.
+- **MED-16**: modelo reescrito como interpretación (un revisor lo
+  elogió, el otro lo halló traducción verso a verso — se aplicó el
+  refuerzo); rúbrica alineada con «la mitad de su lugar».
+- **MED-17**: la rúbrica ya no condena «a gente encontra-se» (europeo
+  vivo — lo brasileño era la próclise) y la línea de colocación
+  re-puntuada se quitó. **MED-18**: modelo nuevo sin duplicar la
+  plantilla de MED-04 y sin el «só» que inventaba.
+- **Secuencia** MBBMBMMBMBBMBMBBMBMM: arranca en M (ningún lote previo),
+  última M en posición 20 (mata la deducción por conteo), runs ≤2.
+- **Sustituto de «se calhar» (colisión con L1, no L2 — errata mía)**:
+  «Diverti-me imenso» (el adverbial es lo marcadamente europeo; la
+  variante adjetival «imensa fome» es normal también en Brasil).
+- Gate post-publicación: CERO hallazgos en los 26 (ni siquiera
+  didácticos); modelos 12-57 palabras, todos en rango por script.
+- **Deuda declarada**: los modelos de MED-15/19 se redactaron
+  post-informes contra los JSON (validados contra las descripciones
+  independientes de ambos revisores); no pasaron un tercer round
+  propio. El molde exige en adelante redactarlo TODO antes del round.
+
+---
+
+## BORRADOR ORIGINAL (v1 pre-revisión, superado) Molde v3 (con todas las enmiendas de los lotes
 1-2): rúbricas/modelos CONTRA el JSON, puntos vírgenes verificados contra
 los 60 publicados, secuencia sin eco de lotes previos, repair mínimo,
 sin absolutos falsos, fugas separadas. NOVEDAD: este round incluye la
