@@ -29,6 +29,15 @@ const lineas = fs.readFileSync(entrada, 'utf8').replace(/\r\n/g, '\n').split('\n
 const fin = lineas.findIndex((l) => l.trim() === 'FIM.');
 if (fin < 0) { console.error('no encontré el FIM. que cierra el volumen'); process.exit(1); }
 
+// Los _guiones bajos_ de itálica Gutenberg son marcado, no texto — se
+// quitan y se reportan (la primera corrida NO lo hacía y publicó
+// «_cá dentro_» literal; cazado en la Ola B2C2 al citar «A alma»).
+let italicasQuitadas = 0;
+for (const [i, l] of lineas.entries()) {
+  const n = (l.match(/_/g) ?? []).length;
+  if (n > 0) { italicasQuitadas += n; lineas[i] = l.replace(/_/g, ''); }
+}
+
 const marcas = [];
 for (const [i, l] of lineas.entries()) {
   const m = l.trim().match(/^\*([^*]+)\*$/);
@@ -62,4 +71,4 @@ for (const [i, m] of marcas.entries()) {
   console.log(`${nombre.padEnd(52)} ${String(parrafos.length).padStart(4)} párrafos ${String(palabras).padStart(6)} palabras`);
 }
 fs.writeFileSync(path.join(salidaDir, 'manifiesto.json'), JSON.stringify(manifiesto, null, 1));
-console.log(`\n${marcas.length} cuentos · ${totalPalabras} palabras en total`);
+console.log(`\n${marcas.length} cuentos · ${totalPalabras} palabras en total · itálicas quitadas: ${italicasQuitadas}`);
