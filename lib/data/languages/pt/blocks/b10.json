@@ -4199,5 +4199,77 @@
   "blockId": 10,
   "contentHash": "9395a9c749986ae7003a2f7d78d1801a9a6c5087d412067a14303069aecfcd2a",
   "variantStatus": "unchecked"
+ },
+ {
+  "id": "b2c2-med-01",
+  "blockId": 10,
+  "lessonId": "b10-l1-registro-formal-informal",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-piloto",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "Era uma vez um rei, môço e valente, senhor de um reino abundante em cidades e searas, que partira a batalhar por terras distantes, deixando solitária e triste a sua raínha e um filhinho, que ainda vivia no seu berço, dentro das suas faixas.",
+   "sourceRef": "a-aia",
+   "sourceLang": "pt",
+   "targetLang": "es",
+   "mediationType": "summarise",
+   "audience": "un amigo hispanohablante que no ha leído el cuento",
+   "instructionsEs": "Resume este arranque de 'A Aia' de Eça de Queirós EN ESPAÑOL para tu amigo: qué situación queda planteada y quiénes importan.",
+   "wordRange": {
+    "min": 20,
+    "max": 40
+   },
+   "rubric": [
+    "Menciona al rey que parte a la guerra",
+    "Menciona a la reina y al hijo en la cuna que quedan solos",
+    "No inventa nada que el párrafo no diga",
+    "Cabe en el rango de palabras"
+   ],
+   "modelAnswer": "Es el arranque de un cuento: un rey joven se va a la guerra a tierras lejanas y deja solos a la reina, triste, y a su hijito, que aún está en la cuna."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 piloto: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-piloto-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "73f54b349fb3b1eba38ba4deb8cb1e43e97c076af8e96f98164d206e070c93ac"
+ },
+ {
+  "id": "b2c2-med-02",
+  "blockId": 10,
+  "lessonId": "b10-l1-registro-formal-informal",
+  "difficulty": 3,
+  "concepts": [],
+  "tags": [
+   "b2c2-piloto",
+   "mediacion"
+  ],
+  "type": "mediation",
+  "data": {
+   "sourceText": "Olá! Podes ver se o relatório já está pronto? É que preciso mesmo dele para amanhã. Obrigado!",
+   "sourceLang": "pt",
+   "targetLang": "pt",
+   "mediationType": "reformulate_register",
+   "audience": "o diretor da tua empresa, a quem tratas por 'o senhor'",
+   "instructionsEs": "Reescribe este mensaje informal como correo FORMAL al director: mismo pedido, tratamiento de 'o senhor' o 3.ª persona sin pronombre, sin tuteo.",
+   "wordRange": {
+    "min": 20,
+    "max": 60
+   },
+   "rubric": [
+    "Ni un solo 'tu/podes/teu': el tratamiento es 'o senhor' o 3.ª persona",
+    "Pide lo mismo (el informe para mañana), sin añadir pretextos inventados",
+    "Abre y cierra como un correo formal (Exmo./Com os melhores cumprimentos u equivalente)",
+    "Cabe en el rango de palabras"
+   ],
+   "modelAnswer": "Exmo. Senhor Diretor, Poderia o senhor confirmar se o relatório já está concluído? Precisaria dele até amanhã. Com os melhores cumprimentos."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 piloto: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-piloto-b2c2-gj-mediacion.md)",
+  "register": "formal",
+  "address": "o_senhor",
+  "contentHash": "ebc9b03b4001cb2ade2cb4740b0ab19c33cbffdd61397019ce877b4f4f7956c3"
  }
 ]

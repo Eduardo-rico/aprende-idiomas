@@ -92,10 +92,12 @@ describe('resumenAnclaje sobre el corpus real', () => {
     expect(destrezas.has('produccion_escrita')).toBe(true);
     expect(destrezas.has('comprension_lectora')).toBe(true);
     expect(destrezas.has('comprension_oral')).toBe(true);
-    // …y tres siguen a cero. Que este test falle algún día será una buena
+    // La buena noticia anunciada llegó el 2026-07-29: el piloto de la
+    // ola B2C2 estrenó la mediación (b2c2-med-01/02, doble adversarial).
+    expect(destrezas.has('mediacion')).toBe(true);
+    // …y dos siguen a cero. Que TAMBIÉN fallen algún día será otra buena
     // noticia: querrá decir que ya existe contenido que las ejercita.
     expect(destrezas.has('interaccion')).toBe(false);
-    expect(destrezas.has('mediacion')).toBe(false);
     expect(destrezas.has('produccion_oral')).toBe(false);
   });
 });

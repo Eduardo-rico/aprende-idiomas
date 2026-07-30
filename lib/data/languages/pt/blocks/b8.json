@@ -7275,5 +7275,137 @@
   "blockId": 8,
   "contentHash": "23fe61d090bc555495faeb87126cf535a32a258f39567eeef7147e2507edeede",
   "variantStatus": "unchecked"
+ },
+ {
+  "id": "b2c2-gj-01",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-piloto",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Vou a falar com ela amanhã.",
+   "verdict": false,
+   "repair": "Vou falar com ela amanhã.",
+   "explanationEs": "Con valor de futuro, 'ir a + infinitivo' es calco del español: el futuro próximo portugués es 'ir + infinitivo' directo, sin preposición."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 piloto: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-piloto-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "236fa0a46e2cf2ec779c314cdf9487c839692e9b8702affe79760c4e84199a52"
+ },
+ {
+  "id": "b2c2-gj-02",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-piloto",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Embora estejas cansado, vieste ajudar.",
+   "verdict": true,
+   "explanationEs": "'Embora' exige conjuntivo ('estejas') — aquí está bien. Con indicativo ('*embora estás') sería agramatical en las dos normas."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 piloto: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-piloto-b2c2-gj-mediacion.md)",
+  "register": "informal",
+  "address": "tu",
+  "contentHash": "d7c48a68a60a55da2c0391204b890dac4900ebc960d76816f3ad96d983f01827"
+ },
+ {
+  "id": "b2c2-gj-03",
+  "blockId": 8,
+  "lessonId": "b8-l2-subordinadas-substantivas-adjetivas",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-piloto",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Preciso o teu carro para amanhã.",
+   "verdict": false,
+   "repair": "Preciso do teu carro para amanhã.",
+   "explanationEs": "'Precisar' rige DE con sustantivo en portugués europeo: 'preciso de + cosa'. Sin 'de' es calco del español ('necesito tu coche'); en Brasil ante infinitivo la supresión es estándar."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 piloto: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-piloto-b2c2-gj-mediacion.md)",
+  "register": "informal",
+  "address": "tu",
+  "contentHash": "65e11677d71e9daacc0a2d36a3bb25ea322649c95a29d23ddf64c89592413827"
+ },
+ {
+  "id": "b2c2-gj-04",
+  "blockId": 8,
+  "lessonId": "b8-l2-subordinadas-substantivas-adjetivas",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-piloto",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Gosto muito de este bairro.",
+   "verdict": false,
+   "repair": "Gosto muito deste bairro.",
+   "explanationEs": "'De + este' contrae en 'deste' (aquí, obligatoriamente); solo queda sin contraer cuando 'este' es sujeto de un infinitivo: 'apesar de este bairro ser caro'."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 piloto: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-piloto-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "036b50db6a126727e63b6bedfb25822a8b3256a4ab35137db89206ea0b2a066e"
+ },
+ {
+  "id": "b2c2-gj-05",
+  "blockId": 8,
+  "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-piloto",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Há dois anos que moro em Lisboa.",
+   "verdict": true,
+   "explanationEs": "'Há + tiempo + que' es la forma europea normal de duración; contrasta con el español 'desde hace'."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 piloto: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-piloto-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "a7cd32e8d88bc9255742e319363859c684b73896e07cd924faa12585e6c0bd8b"
+ },
+ {
+  "id": "b2c2-gj-06",
+  "blockId": 8,
+  "lessonId": "b8-l3-colocacao-pronominal",
+  "difficulty": 2,
+  "concepts": [],
+  "tags": [
+   "b2c2-piloto",
+   "anti-calco"
+  ],
+  "type": "grammaticality_judgment",
+  "data": {
+   "sentence": "Conheço-a desde faz cinco anos.",
+   "verdict": false,
+   "repair": "Conheço-a há cinco anos.",
+   "explanationEs": "'Desde hace' español NO se traduce 'desde faz': la duración en portugués es con 'há'. Nota la ênclise 'conheço-a', correcta en europeo — el error no está ahí."
+  },
+  "variantStatus": "unchecked",
+  "variantVerificacion": "Ola B2C2 piloto: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-piloto-b2c2-gj-mediacion.md)",
+  "register": "neutro",
+  "contentHash": "5302c46fce2daa8861d07055157e9bcaca292442c0d333b7c307ad992e92eb62"
  }
 ]
