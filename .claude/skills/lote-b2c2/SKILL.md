@@ -5,8 +5,12 @@ description: Producir un lote del catálogo B2-C2 de portugués (juicios de gram
 
 # Lote B2C2 — el ciclo que se autocorrige
 
-Destilado de 4 ciclos ejecutados (piloto + lotes 1-3, 2026-07-29/30, 86
-ítems publicados). Cada regla tiene historial: no es teoría, es cicatriz.
+Destilado de 6 ciclos ejecutados (piloto + lotes 1-5, 2026-07-29 a
+08-11, **138 ítems publicados**). Cada regla tiene historial: no es
+teoría, es cicatriz. El lote 5 necesitó TRES rondas de doble revisión y
+aportó la mitad de las reglas de aquí abajo — fue el primero producido
+enteramente contra esta skill, así que sus errores son errores DE la
+skill.
 
 ## El ciclo
 
@@ -121,7 +125,7 @@ busca el LEMA (todas las personas y tiempos), no la forma que escribiste.
 - **Hay que probar más de un atajo.** Los tres conocidos, con su cifra
   del lote 5 v2 tras corregirlos: palabra española visible (11/20),
   **marca de día concreto (15/20 → 9/20)**, glosa cognada que da español
-  normal (16/20 → 13/20). El del día nació de un descuido que se repite
+  normal (16/20 → 14/20). El del día nació de un descuido que se repite
   solo: **si añades un rasgo por el bien de los MAL —un adverbio
   temporal, un contexto, una longitud— tiene que aparecer también en los
   BIEN.** Anclar temporalmente sólo los MAL hizo predecible el 75 % del
