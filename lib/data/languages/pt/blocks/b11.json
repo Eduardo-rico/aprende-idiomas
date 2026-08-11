@@ -1,223 +1,365 @@
 [
- {
-  "id": "b2c2-gj-l3-14",
-  "blockId": 11,
-  "lessonId": "b11-l1-falsos-amigos-que-doem",
-  "difficulty": 2,
-  "concepts": [],
-  "tags": [
-   "b2c2-lote3",
-   "anti-calco"
-  ],
-  "type": "grammaticality_judgment",
-  "data": {
-   "sentence": "Estou constipado e não paro de estornudar.",
-   "verdict": false,
-   "repair": "Estou constipado e não paro de espirrar.",
-   "explanationEs": "'Estornudar' es español: en portugués se 'espirra'. Y ojo: 'estou constipado' está BIEN — constipado en Portugal (y en el español normativo) es resfriado."
+  {
+    "id": "b2c2-gj-l3-14",
+    "blockId": 11,
+    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "difficulty": 2,
+    "concepts": [],
+    "tags": [
+      "b2c2-lote3",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Estou constipado e não paro de estornudar.",
+      "verdict": false,
+      "repair": "Estou constipado e não paro de espirrar.",
+      "explanationEs": "'Estornudar' es español: en portugués se 'espirra'. Y ojo: 'estou constipado' está BIEN — constipado en Portugal (y en el español normativo) es resfriado."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
+    "register": "neutro",
+    "contentHash": "7e70edff36e3c5dcac5e7f02134e49f972f889f25e0e048d528d9859cef6b825"
   },
-  "variantStatus": "unchecked",
-  "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
-  "register": "neutro",
-  "contentHash": "7e70edff36e3c5dcac5e7f02134e49f972f889f25e0e048d528d9859cef6b825"
- },
- {
-  "id": "b2c2-gj-l3-19",
-  "blockId": 11,
-  "lessonId": "b11-l1-falsos-amigos-que-doem",
-  "difficulty": 2,
-  "concepts": [],
-  "tags": [
-   "b2c2-lote3",
-   "anti-calco"
-  ],
-  "type": "grammaticality_judgment",
-  "data": {
-   "sentence": "Comi um bocadillo no comboio.",
-   "verdict": false,
-   "repair": "Comi uma sandes no comboio.",
-   "explanationEs": "'Bocadillo' no es portugués (y no lo confundas con 'bocadinho' = un poquito). El bocadillo es 'a sandes' (BR: sanduíche)."
+  {
+    "id": "b2c2-gj-l3-19",
+    "blockId": 11,
+    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "difficulty": 2,
+    "concepts": [],
+    "tags": [
+      "b2c2-lote3",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Comi um bocadillo no comboio.",
+      "verdict": false,
+      "repair": "Comi uma sandes no comboio.",
+      "explanationEs": "'Bocadillo' no es portugués (y no lo confundas con 'bocadinho' = un poquito). El bocadillo es 'a sandes' (BR: sanduíche)."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
+    "register": "neutro",
+    "contentHash": "7b13e0db3f4935ca17de328d97a3533be2e516853cb9d0bf9917323cea3724b2"
   },
-  "variantStatus": "unchecked",
-  "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
-  "register": "neutro",
-  "contentHash": "7b13e0db3f4935ca17de328d97a3533be2e516853cb9d0bf9917323cea3724b2"
- },
- {
-  "id": "b2c2-gj-l3-20",
-  "blockId": 11,
-  "lessonId": "b11-l1-falsos-amigos-que-doem",
-  "difficulty": 2,
-  "concepts": [],
-  "tags": [
-   "b2c2-lote3",
-   "anti-calco"
-  ],
-  "type": "grammaticality_judgment",
-  "data": {
-   "sentence": "A minha prima está embarazada.",
-   "verdict": false,
-   "repair": "A minha prima está grávida.",
-   "explanationEs": "'Embarazada' no existe en portugués; 'embaraçada' sí — pero es azorada o enredada. Embarazada es 'grávida'. El clásico que más caro cuesta."
+  {
+    "id": "b2c2-gj-l3-20",
+    "blockId": 11,
+    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "difficulty": 2,
+    "concepts": [],
+    "tags": [
+      "b2c2-lote3",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "A minha prima está embarazada.",
+      "verdict": false,
+      "repair": "A minha prima está grávida.",
+      "explanationEs": "'Embarazada' no existe en portugués; 'embaraçada' sí — pero es azorada o enredada. Embarazada es 'grávida'. El clásico que más caro cuesta."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
+    "register": "neutro",
+    "contentHash": "f646c08c74afca5c0f49018d20bfdd532a5862d80876206b60777389f6906fee"
   },
-  "variantStatus": "unchecked",
-  "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
-  "register": "neutro",
-  "contentHash": "f646c08c74afca5c0f49018d20bfdd532a5862d80876206b60777389f6906fee"
- },
- {
-  "id": "b2c2-gj-l4-05",
-  "blockId": 11,
-  "lessonId": "b11-l1-falsos-amigos-que-doem",
-  "difficulty": 2,
-  "concepts": [],
-  "tags": [
-   "b2c2-lote4",
-   "anti-calco"
-  ],
-  "type": "grammaticality_judgment",
-  "data": {
-   "sentence": "Deixei o carro no taller.",
-   "verdict": false,
-   "repair": "Deixei o carro na oficina.",
-   "explanationEs": "El taller es la 'oficina' — el falso amigo al revés: aquí es tu palabra española la que no existe en portugués, y la portuguesa la que te parecía sospechosa."
+  {
+    "id": "b2c2-gj-l4-05",
+    "blockId": 11,
+    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "difficulty": 2,
+    "concepts": [],
+    "tags": [
+      "b2c2-lote4",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Deixei o carro no taller.",
+      "verdict": false,
+      "repair": "Deixei o carro na oficina.",
+      "explanationEs": "El taller es la 'oficina' — el falso amigo al revés: aquí es tu palabra española la que no existe en portugués, y la portuguesa la que te parecía sospechosa."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+    "register": "neutro",
+    "contentHash": "f00c1a00bc73e3647e59a13049c3a34b3839567f2cedc9a2b6a554928583d2fd"
   },
-  "variantStatus": "unchecked",
-  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
-  "register": "neutro",
-  "contentHash": "f00c1a00bc73e3647e59a13049c3a34b3839567f2cedc9a2b6a554928583d2fd"
- },
- {
-  "id": "b2c2-gj-l4-08",
-  "blockId": 11,
-  "lessonId": "b11-l2-regencias-que-traem",
-  "difficulty": 2,
-  "concepts": [],
-  "tags": [
-   "b2c2-lote4",
-   "anti-calco"
-  ],
-  "type": "grammaticality_judgment",
-  "data": {
-   "sentence": "Preocupo-me muito por ti.",
-   "verdict": false,
-   "repair": "Preocupo-me muito contigo.",
-   "explanationEs": "Con persona o cosa, 'preocupar-se' rige COM en portugués: 'preocupo-me contigo/com isso'. El 'preocuparse por' del español no se traslada."
+  {
+    "id": "b2c2-gj-l4-08",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [],
+    "tags": [
+      "b2c2-lote4",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Preocupo-me muito por ti.",
+      "verdict": false,
+      "repair": "Preocupo-me muito contigo.",
+      "explanationEs": "Con persona o cosa, 'preocupar-se' rige COM en portugués: 'preocupo-me contigo/com isso'. El 'preocuparse por' del español no se traslada."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+    "register": "informal",
+    "address": "tu",
+    "contentHash": "4056ded37df7a9e8fb7e2dfb013fecfba434b16d8bbb3322dd687f523307d65e"
   },
-  "variantStatus": "unchecked",
-  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
-  "register": "informal",
-  "address": "tu",
-  "contentHash": "4056ded37df7a9e8fb7e2dfb013fecfba434b16d8bbb3322dd687f523307d65e"
- },
- {
-  "id": "b2c2-gj-l4-11",
-  "blockId": 11,
-  "lessonId": "b11-l1-falsos-amigos-que-doem",
-  "difficulty": 2,
-  "concepts": [],
-  "tags": [
-   "b2c2-lote4",
-   "anti-calco"
-  ],
-  "type": "grammaticality_judgment",
-  "data": {
-   "sentence": "Compra uma botella de vinho para o jantar.",
-   "verdict": false,
-   "repair": "Compra uma garrafa de vinho para o jantar.",
-   "explanationEs": "'Botella' no es portugués: es 'garrafa'. (Y la 'garrafa' española grande… en portugués es 'garrafão'.)"
+  {
+    "id": "b2c2-gj-l4-11",
+    "blockId": 11,
+    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "difficulty": 2,
+    "concepts": [],
+    "tags": [
+      "b2c2-lote4",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Compra uma botella de vinho para o jantar.",
+      "verdict": false,
+      "repair": "Compra uma garrafa de vinho para o jantar.",
+      "explanationEs": "'Botella' no es portugués: es 'garrafa'. (Y la 'garrafa' española grande… en portugués es 'garrafão'.)"
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+    "register": "informal",
+    "address": "tu",
+    "contentHash": "1e16f4476c6fd5c05e3bef73fe7f20e59e8e85930ebf33a351cb9197d5a6fea2"
   },
-  "variantStatus": "unchecked",
-  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
-  "register": "informal",
-  "address": "tu",
-  "contentHash": "1e16f4476c6fd5c05e3bef73fe7f20e59e8e85930ebf33a351cb9197d5a6fea2"
- },
- {
-  "id": "b2c2-gj-l4-14",
-  "blockId": 11,
-  "lessonId": "b11-l2-regencias-que-traem",
-  "difficulty": 2,
-  "concepts": [],
-  "tags": [
-   "b2c2-lote4",
-   "anti-calco"
-  ],
-  "type": "grammaticality_judgment",
-  "data": {
-   "sentence": "Os livros que preciso estão esgotados.",
-   "verdict": false,
-   "repair": "Os livros de que preciso estão esgotados.",
-   "explanationEs": "La relativa hereda la regência: 'preciso DE livros' → 'os livros DE QUE preciso'. Comerse la preposición en la relativa (la relativa cortadora) es tan tentador en portugués como en español — y tan incorrecto en la norma culta de ambos."
+  {
+    "id": "b2c2-gj-l4-14",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [],
+    "tags": [
+      "b2c2-lote4",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Os livros que preciso estão esgotados.",
+      "verdict": false,
+      "repair": "Os livros de que preciso estão esgotados.",
+      "explanationEs": "La relativa hereda la regência: 'preciso DE livros' → 'os livros DE QUE preciso'. Comerse la preposición en la relativa (la relativa cortadora) es tan tentador en portugués como en español — y tan incorrecto en la norma culta de ambos."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+    "register": "neutro",
+    "contentHash": "2fd0837133ef50e208371df48d607a90e503dfd6c70e4f4716729218844c486b"
   },
-  "variantStatus": "unchecked",
-  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
-  "register": "neutro",
-  "contentHash": "2fd0837133ef50e208371df48d607a90e503dfd6c70e4f4716729218844c486b"
- },
- {
-  "id": "b2c2-gj-l4-17",
-  "blockId": 11,
-  "lessonId": "b11-l2-regencias-que-traem",
-  "difficulty": 2,
-  "concepts": [],
-  "tags": [
-   "b2c2-lote4",
-   "anti-calco"
-  ],
-  "type": "grammaticality_judgment",
-  "data": {
-   "sentence": "Ontem assistimos o jogo todo na televisão.",
-   "verdict": false,
-   "repair": "Ontem assistimos ao jogo todo na televisão.",
-   "explanationEs": "'Assistir' (presenciar) rige A: 'assistir AO jogo'. El acusativo es colocación brasileña coloquial — y doble trampa para ti: el 'asistir' español aquí es 'ver/presenciar', no 'ayudar'."
+  {
+    "id": "b2c2-gj-l4-17",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [],
+    "tags": [
+      "b2c2-lote4",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Ontem assistimos o jogo todo na televisão.",
+      "verdict": false,
+      "repair": "Ontem assistimos ao jogo todo na televisão.",
+      "explanationEs": "'Assistir' (presenciar) rige A: 'assistir AO jogo'. El acusativo es colocación brasileña coloquial — y doble trampa para ti: el 'asistir' español aquí es 'ver/presenciar', no 'ayudar'."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+    "register": "neutro",
+    "contentHash": "417589351b8eb48d03709431c960f38627e2d1520d7e90780a94fba817d9d4f0"
   },
-  "variantStatus": "unchecked",
-  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
-  "register": "neutro",
-  "contentHash": "417589351b8eb48d03709431c960f38627e2d1520d7e90780a94fba817d9d4f0"
- },
- {
-  "id": "b2c2-gj-l4-18",
-  "blockId": 11,
-  "lessonId": "b11-l2-regencias-que-traem",
-  "difficulty": 2,
-  "concepts": [],
-  "tags": [
-   "b2c2-lote4",
-   "anti-calco"
-  ],
-  "type": "grammaticality_judgment",
-  "data": {
-   "sentence": "Esperei por ti mais de uma hora à porta do cinema.",
-   "verdict": true,
-   "explanationEs": "'Esperar POR alguém' es la regência europea corriente (también existe 'esperei-te'). El POR no es anglicismo ni error — es de casa."
+  {
+    "id": "b2c2-gj-l4-18",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [],
+    "tags": [
+      "b2c2-lote4",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Esperei por ti mais de uma hora à porta do cinema.",
+      "verdict": true,
+      "explanationEs": "'Esperar POR alguém' es la regência europea corriente (también existe 'esperei-te'). El POR no es anglicismo ni error — es de casa."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+    "register": "informal",
+    "address": "tu",
+    "contentHash": "625544c6fd35f3c91a758fa368bb554c471211df35236c29cfe4eb5e8dbc2edd"
   },
-  "variantStatus": "unchecked",
-  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
-  "register": "informal",
-  "address": "tu",
-  "contentHash": "625544c6fd35f3c91a758fa368bb554c471211df35236c29cfe4eb5e8dbc2edd"
- },
- {
-  "id": "b2c2-gj-l4-20",
-  "blockId": 11,
-  "lessonId": "b11-l2-regencias-que-traem",
-  "difficulty": 2,
-  "concepts": [],
-  "tags": [
-   "b2c2-lote4",
-   "anti-calco"
-  ],
-  "type": "grammaticality_judgment",
-  "data": {
-   "sentence": "Quando dei por ela, já era meia-noite.",
-   "verdict": true,
-   "explanationEs": "'Dar por' (= darse cuenta, reparar en) es idiomatismo europeo finísimo: 'nem dei por isso', 'quando dei por mim'. Al hispanohablante le suena a 'dar por (sentado)' y desconfía — sin motivo."
+  {
+    "id": "b2c2-gj-l4-20",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [],
+    "tags": [
+      "b2c2-lote4",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Quando dei por ela, já era meia-noite.",
+      "verdict": true,
+      "explanationEs": "'Dar por' (= darse cuenta, reparar en) es idiomatismo europeo finísimo: 'nem dei por isso', 'quando dei por mim'. Al hispanohablante le suena a 'dar por (sentado)' y desconfía — sin motivo."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+    "register": "neutro",
+    "contentHash": "bfa3e27f47f5b1bab79267a4962f21d7c61efa43bde555728a744f542245925c"
   },
-  "variantStatus": "unchecked",
-  "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
-  "register": "neutro",
-  "contentHash": "bfa3e27f47f5b1bab79267a4962f21d7c61efa43bde555728a744f542245925c"
- }
+  {
+    "id": "b2c2-gj-l5-14",
+    "blockId": 11,
+    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "difficulty": 3,
+    "concepts": [
+      "b11-falsos-amigos"
+    ],
+    "tags": [
+      "b2c2-lote5",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Ele é o mais novo de três irmãos.",
+      "verdict": true,
+      "explanationEs": "«Novo» es joven en portugués tanto como «nuevo»: «o mais novo» de unos hermanos es el menor de edad, no el recién llegado. Falso amigo que resulta ser amigo — y aquí está usado bien."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 5: 2 linguistas adversariais, 3 rondas 2026-08-11 (docs/contenido/2026-08-11-lote5-b2c2.md)",
+    "register": "neutro",
+    "contentHash": "ddbaed241ff2950e5dc871fb43592e03790e3d36f1515fe1d4870acd2e9027a0"
+  },
+  {
+    "id": "b2c2-gj-l5-15",
+    "blockId": 11,
+    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "difficulty": 3,
+    "concepts": [
+      "b11-falsos-amigos"
+    ],
+    "tags": [
+      "b2c2-lote5",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Ainda tenho duas asignaturas para fazer antes de acabar o curso.",
+      "verdict": false,
+      "explanationEs": "«Asignatura» no es palabra portuguesa. En la universidad portuguesa son «cadeiras» (o «disciplinas», igual de válido); en el secundario, sólo «disciplinas». Y «assinatura», que se le parece, es la firma o la suscripción.",
+      "repair": "Ainda tenho duas cadeiras para fazer antes de acabar o curso."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 5: 2 linguistas adversariais, 3 rondas 2026-08-11 (docs/contenido/2026-08-11-lote5-b2c2.md)",
+    "register": "neutro",
+    "contentHash": "b57401a58b8e3a8165470ca40f96af3e89f0b212af9c53e019190fa99d20cad6"
+  },
+  {
+    "id": "b2c2-gj-l5-16",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 3,
+    "concepts": [
+      "b11-morfologia-enganosa"
+    ],
+    "tags": [
+      "b2c2-lote5",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Ela disse-me-o e depois esqueceu-se.",
+      "verdict": false,
+      "explanationEs": "Cuando se juntan un clítico dativo y uno acusativo, el portugués los funde obligatoriamente: me + o = mo, te + a = ta, lhe + os = lhos, nos + o = no-lo. Dejarlos sueltos («disse-me-o») no es una opción del idioma. El español los deja separados y en el orden contrario («me lo dijo»), así que no hay de dónde sacar la forma por analogía. La forma fundida es de lengua cuidada: hablando se oye más «disse-me isso».",
+      "repair": "Ela disse-mo e depois esqueceu-se."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 5: 2 linguistas adversariais, 3 rondas 2026-08-11 (docs/contenido/2026-08-11-lote5-b2c2.md)",
+    "register": "neutro",
+    "contentHash": "6e64a5c28b9e4448958b7936c9361f245a3727d8dcb36cdbee0f78336cacfff7"
+  },
+  {
+    "id": "b2c2-gj-l5-18",
+    "blockId": 11,
+    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "difficulty": 3,
+    "concepts": [
+      "b11-morfologia-enganosa"
+    ],
+    "tags": [
+      "b2c2-lote5",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Esta casa é mais pequena do que a tua.",
+      "verdict": true,
+      "explanationEs": "En Portugal el comparativo corriente de «pequeno» es «mais pequeno»; «menor» también es correcto, pero suena más culto. Y no es error de principiante: el hispanohablante lo «corrige» creyendo que ha calcado «más pequeño», y estropea una frase que estaba bien. En la Biblioteca hay 12 «mais pequeno/a», Camilo y Eça incluidos."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 5: 2 linguistas adversariais, 3 rondas 2026-08-11 (docs/contenido/2026-08-11-lote5-b2c2.md)",
+    "register": "neutro",
+    "address": "tu",
+    "contentHash": "4a9d0a49ff0c31d5cad1bd0e08d78b70bc723ccbcb0988107e3ac543df9d7a20"
+  },
+  {
+    "id": "b2c2-gj-l5-19",
+    "blockId": 11,
+    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "difficulty": 3,
+    "concepts": [
+      "b11-falsos-amigos"
+    ],
+    "tags": [
+      "b2c2-lote5",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "A morada dela é na Rua Augusta.",
+      "verdict": true,
+      "explanationEs": "«Morada» es en Portugal la dirección postal (en Brasil, «endereço») — es lo que pide cualquier formulario portugués. El sentido de 'vivienda' también existe, y de hecho es el primero del diccionario («última morada» = el cementerio); pero en la lengua de hoy nadie te pregunta por tu morada pensando en la casa."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 5: 2 linguistas adversariais, 3 rondas 2026-08-11 (docs/contenido/2026-08-11-lote5-b2c2.md)",
+    "register": "neutro",
+    "contentHash": "aca6ca1e8235d4941d74a4069f58cb707f1f730bd299e4149bec11b083e688a5"
+  },
+  {
+    "id": "b2c2-gj-l5-20",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 3,
+    "concepts": [
+      "b11-regencias"
+    ],
+    "tags": [
+      "b2c2-lote5",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Ele foi o primeiro em chegar.",
+      "verdict": false,
+      "explanationEs": "Los ordinales, los superlativos y «único» rigen a + infinitivo: o primeiro a chegar, o último a sair, o único a perceber. El «el primero en llegar» español pone «en», y la preposición se traslada sola. En la Biblioteca hay seis casos del patrón, los seis con «a».",
+      "repair": "Ele foi o primeiro a chegar."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 5: 2 linguistas adversariais, 3 rondas 2026-08-11 (docs/contenido/2026-08-11-lote5-b2c2.md)",
+    "register": "neutro",
+    "contentHash": "fa99826492f1008b797fed2bf52f67387baf2c70a9a6f6d2c8790a7f750a1d38"
+  }
 ]
