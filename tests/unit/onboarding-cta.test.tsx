@@ -31,7 +31,7 @@ describe("OnboardingCtaClient", () => {
   it("shows diagnostic CTA when DB is empty (no cards, no onboarding)", async () => {
     render(<OnboardingCtaClient lang="pt" />);
     await waitFor(() => {
-      expect(screen.getByText(/Hacé el diagnóstico/)).toBeInTheDocument();
+      expect(screen.getByText(/Haz el diagnóstico/)).toBeInTheDocument();
     });
   });
 
@@ -40,7 +40,7 @@ describe("OnboardingCtaClient", () => {
     vi.mocked(db.cards.count).mockResolvedValue(5);
     render(<OnboardingCtaClient lang="pt" />);
     await waitFor(() => {
-      expect(screen.getByText(/Hacé el diagnóstico/)).toBeInTheDocument();
+      expect(screen.getByText(/Haz el diagnóstico/)).toBeInTheDocument();
     });
   });
 

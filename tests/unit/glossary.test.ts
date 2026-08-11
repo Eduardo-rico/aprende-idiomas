@@ -10,7 +10,11 @@ describe("glossary.json", () => {
     expect(glossary.length).toBeGreaterThanOrEqual(40);
   });
   it("ninguna entrada tabu sin nota", () => {
-    for (const e of glossary) {
+    // Se itera el resultado de `parse`, no el JSON crudo: hoy NINGUNA de las
+    // 49 entradas trae `tabu`, así que el tipo inferido del import no conoce
+    // el campo y `e.tabu` no compila. El schema sí lo declara (opcional), y
+    // este test es el guardián para cuando la primera entrada tabú entre.
+    for (const e of glossarySchema.parse(glossary)) {
       if (e.tabu) expect(e.note).toBeDefined();
     }
   });
