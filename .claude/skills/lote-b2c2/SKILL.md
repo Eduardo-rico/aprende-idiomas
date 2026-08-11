@@ -27,6 +27,17 @@ Destilado de 4 ciclos ejecutados (piloto + lotes 1-3, 2026-07-29/30, 86
      repite `b7/cc7715be`. Umbral útil 0,5; por debajo entra ruido de
      vocabulario común. Lo que marca no se retira automáticamente: se
      mira. Coincidir en «pão» es ruido; coincidir en el PUNTO es muerte.
+     **Audita al umbral DEL CÓDIGO, y mira todos los pares.** El lote 5
+     declaró «los pares a 0,5 son ruido» mientras el gate corría a 0,34,
+     y los tres que importaban vivían en 0,39-0,49. Un umbral elegido a
+     ojo DESPUÉS de ver los resultados es un descarte silencioso con
+     otro nombre.
+   - **Declara `concepts` en cada ítem nuevo.** Es el segundo eje del
+     gate: compara el PUNTO, no las palabras. Sin él, «Vou a telefonar
+     ao médico» pasa a 0,237 contra el publicado «Vou a falar com ela»,
+     que es el mismo ejercicio. Reenseñar un concepto de un bloque
+     anterior no es delito —refinar en C1 un punto de B1 es legítimo—
+     pero tiene que salir declarado en el doc, no por descuido.
 3. **DOS `linguista-adversarial-pt` EN PARALELO, sin verse** (si los
    agentes del repo no están registrados en la sesión: general-purpose
    con «lee y adopta .claude/agents/linguista-adversarial-pt.md»).
@@ -68,6 +79,17 @@ Un juicio binario se RETIRA si el verdict no es inequívoco. Han caído:
   («preferia saber que elle recolhera… --do que vel-o»). Norma explícita
   ≠ verdict inequívoco cuando la propia Biblioteca del curso lo
   desmiente (lote 5)
+
+**Para un par DISPUTADO, sólo la dirección BIEN admite verdict
+inequívoco.** Un BIEN afirma que la frase está bien formada; un MAL
+tiene que afirmar que la otra está mal, y ahí la autoridad falla.
+«Entre tu e eu» murió como MAL —Ciberdúvidas describe `entre` como la
+única preposición que admite nominativos— y renace como BIEN («A
+diferença entre mim e ti é essa»), enseñando el mismo contraste sin
+verdict disputado. Es por eso que sobreviven «mais pequena» y «morada»,
+que también son preferencias y no reglas. Cuando un par tenga artículo
+propio en Ciberdúvidas con los dos miembros en el título, dale la vuelta
+en vez de retirarlo.
 
 Regla: atestación de USO o de DICCIONARIO con el sentido condenado =
 fuera. Frecuencia no es gramaticalidad. Distinción fina del lote 2:
@@ -113,9 +135,25 @@ busca el LEMA (todas las personas y tiempos), no la forma que escribiste.
   palabra-por-palabra dé español **roto**: «Los ciudadanes votaron»,
   «Habían muchas personas», «Ayer he hablado», «Prometo hacer-lo».
 - **Un solo error por frase MAL, repair MÍNIMO** (corrige EL error, no
-  dos cosas — «estou a esperar», no «estou à espera de»).
+  dos cosas — «estou a esperar», no «estou à espera de»). **Prueba
+  operativa: borra el elemento culpable y mira qué queda.** Si lo que
+  queda ya es portugués correcto, ÉSE es el repair. «Não consegui
+  dormir-me» → el error es el clítico → «Não consegui dormir», no
+  «adormecer»: el alumno que borra el «-se» ha acertado, y con el repair
+  largo el modelo le habría dicho que no. Mismo fallo que «cadeiras» vs
+  «disciplinas» en el lote 3.
+- **Que tu propia atestación licencie tu frase.** Publiqué la
+  contracción de clíticos con «prometer» y mis siete atestaciones del
+  corpus eran cinco con verbos de decir y ninguna con «prometer»: la
+  frase era gramatical y sonaba a ejercicio justo por eso. Si citas
+  corpus para probar que un punto existe, escribe el ítem con el
+  anfitrión que el corpus te da.
 - **Sin absolutos falsos**: «no existe» / «obligatoriamente» / «nunca»
-  han caído TRECE veces. Olvidar/aficionado/regalo/gana/listo existen;
+  han caído CATORCE veces. **Y el más caro fue el décimo: «el portugués
+  no lo admite en ninguna variedad», desmentido por la MISMA cita de
+  Ciberdúvidas que sostenía el ítem** («ocorre na variedade
+  brasileira»). Antes de escribir un absoluto, relee tu propia fuente
+  buscando la cláusula que lo limita: suele estar en la misma frase. Olvidar/aficionado/regalo/gana/listo existen;
   ir a + inf de inminencia existe; la contracción tiene excepción;
   «morada» SÍ es morada de vivir (Priberam ac. 1); «menor» SÍ convive
   con «mais pequeno»; «não tenho a mínima ideia» SÍ se dice; «dar pena»
@@ -186,7 +224,17 @@ busca el LEMA (todas las personas y tiempos), no la forma que escribiste.
 - **cross_variety**: el BR de la fuente debe ser BR AUTÉNTICO y
   verosímil (nada de frases fabricadas al revés para forzar el léxico
   meta); cuidado con condenar europeo vivo en la rúbrica («a gente
-  encontra-se» es europeo; lo BR era la próclise).
+  encontra-se» es europeo; lo BR era la próclise; «tava» se escribe en
+  Portugal; «fila» es europea neutra). **Y comprueba las marcas de la
+  palabra que PRESCRIBES, no sólo de la que condenas**: la rúbrica del
+  lote 5 obligaba a cambiar «fila» —sin marca regional en Priberam— por
+  «bicha», que es [Portugal, informal] y, en el mismo diccionario,
+  homógrafo del insulto homófobo corriente. Estaríamos enseñándoselo a
+  alguien que lo va a decir en una estación de Lisboa.
+- **La mejor casilla del lote 5 exige DISCRIMINAR, no corregir en
+  bloque**: «pasa "Me liga" a "Liga-me" Y deja en paz "ainda me
+  esqueci", donde la próclise la dispara "ainda" y es europea». Eso
+  separa un ejercicio de C1 de uno de B1.
 - Variar taskType×fuente entre lotes: el tercer relay-de-anedota
   consecutivo ya es fórmula.
 
