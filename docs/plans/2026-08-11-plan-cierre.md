@@ -20,8 +20,9 @@ siguen vigentes y no se reabren.
 
 **PT terminado** cuando, con cifras medidas:
 - [ ] Lectura ≥ 1.900.000 palabras en el catálogo (hoy: 714.004).
-- [ ] Corpus según recuento del Paso 0 (ver E1), con **mediación
-      completa** — es el cuello: 32 de ~430 (7 %).
+- [ ] Corpus según recuento del Paso 0: **6.300 ejercicios** (7.000 del
+      currículo − 700 de motor runtime), con **mediación completa**:
+      1.580 ítems + 230 tareas — es el cuello: hay 32 (2 %).
 - [ ] Bloque 11 con sus ~6-8 lecciones y sus ítems.
 - [ ] **Cero `unchecked` sin triaje** en el corpus (hoy: 1.799) y cero
       `needs-human`/`divergent` sin resolver (hoy: 266+110).
@@ -48,9 +49,44 @@ techo (fase F), en ese orden.
 | lecciones b11 | 2 | 6-8 | ~30 |
 | corpus sin verificar | 1.799 unchecked + 376 marcados | 0 | — |
 
-\* Los 808 anclan a todos los niveles; el recuento del Paso 0 dirá
-cuántos valen para el tramo B2-C2. La cifra 830+430 del currículo
-original nunca se reconcilió con el corpus — ese recuento es lo primero.
+\* Los 808 anclan a todos los niveles.
+
+## Paso 0 — EJECUTADO 2026-08-11 (el recuento que nadie hizo)
+
+Reconciliación currículo (`2026-07-28-curriculos-completos.md` §Portugués)
+contra corpus, por script. **Tres hallazgos que redimensionan el plan:**
+
+**1. La cifra «~430 mediación» que se venía arrastrando era del RUSO**
+(línea 1512 del doc de currículos). El PT pide **1.580 ejercicios de
+mediación** (A2 200 · B1 280 · B2 400 · C1 400 · C2 300) más **230
+tareas de mediación** dentro de las 830 de producción. Hay 32.
+
+**2. El faltante real de ejercicios es 4.123**, no «~1.100 tareas»:
+
+| nivel | hay | pide | motor-runtime* | meta corpus | falta |
+|---|---:|---:|---:|---:|---:|
+| A1 | 258 | 900 | 0 | 900 | 642 |
+| A2 | 459 | 1.100 | 0 | 1.100 | 641 |
+| B1 | 668 | 1.400 | 200 | 1.200 | 532 |
+| B2 | 776 | 1.600 | 300 | 1.300 | 524 |
+| C1 | 16 | 1.200 | 200 | 1.000 | 984 |
+| C2 | 0 | 800 | 0 | 800 | 800 |
+| **Σ** | **2.177** | **7.000** | **700** | **6.300** | **4.123** |
+
+\* «motor-runtime» = desfosilización dirigida: el currículo la define
+sobre «los errores REALES del alumno» — no es corpus pre-producible, es
+un motor que se construye una vez. Excluirla del target no es recorte,
+es lectura correcta. (Mapeo nivel-por-bloque de anchor.ts, grueso y
+declarado: los ~57 de mesóclise de b8 cuentan como B2 aquí.)
+
+**3. Las 830 tareas de producción, con la decisión sin-oral aplicada:**
+escritas ~310 (+la parte de A1) · **orales 230 → EXCLUIDAS** ·
+mediación-tareas 230 (hay 32).
+
+**Cantera clave**: las 288 translations pt→es se pueden ASCENDER a
+mediación relay real añadiéndoles destinatario+propósito+rúbrica — el
+plan maestro §8.6 vetó reetiquetarlas sin eso, pero el upgrade sí es
+legítimo y cubre ~⅕ del faltante de mediación a costo mecánico.
 
 ---
 
@@ -77,26 +113,43 @@ cifra ~430 de mediación se confirma o corrige aquí.
 - `b2c2-med-20` («V» colado), flashcards `d4e7089f`/`2acce101`/
   `62b470e0`, MDX b8 «continuou trabalhando».
 - Regenerar las 11 grabaciones caducadas + 4 faltantes → `verify:content`
-  a cero. **[DECISIÓN EDU: proveedor — MiniMax (archivado, barato) vs
-  ElevenLabs (gasta cuota karaoke)]**.
+  a cero. Proveedor: **MiniMax** — key probada VIVA el 2026-08-11
+  (probe mínimo, 1 llamada, exit 0). No gasta cuota karaoke.
 
-## E2 · Corpus a escala, MED-pesado (~12-16 sesiones)
+## E2 · Corpus a escala — DOS líneas de producción (~18-22 sesiones)
 
-El lote cambia de composición: **12 MED + 10 GJ** por lote (antes 6+20)
-— la mediación es el cuello y los juicios van sobrados en proporción.
-A ~2 lotes/sesión ≈ **24 MED + 20 GJ por sesión** → las ~400 mediaciones
-restantes salen en ~16 sesiones; si el Paso 0 baja la meta, menos.
+El Paso 0 obliga a partir E2 en dos líneas con economías distintas:
+
+**Línea A — artesanal (el ciclo /lote-b2c2):** las ~200 tareas de
+mediación restantes (de 230; van 32) + los juicios C1 + las lecciones
+b11. Lotes de **12 MED-tarea + 10 GJ**, ~2 lotes/sesión → **~7-8
+sesiones**. Doble adversarial completo, como hasta ahora.
+
+**Línea B — industrial (el pipeline tipo Ola L):** los ~4.100 ejercicios
+faltantes, que son ítems (no tareas): los 1.580−230 de mediación-ítem
+(relay corto, fidelidad de contenido, cloze de mediación), precisión
+léxica, registro, inferencia, y el A1-B2 faltante. Método: plantilla por
+familia → piloto con doble adversarial → generación por lote con gates
+(virginidad 2 ejes + variant + registro) → **muestreo adversarial del
+10 % con freno** (la misma regla que los unchecked). Arranque: el
+upgrade de las 288 translations pt→es a relay. Throughput estimado
+~300-400 ítems/sesión una vez pilotada cada familia → **~11-14
+sesiones**. La reconversión del corpus viejo (~1.100 reescritura
+mecánica + ~450 a mano, según el destino bloque-por-bloque del
+currículo) se integra aquí.
+
+**C2 depende de E3**: sus fuentes (prensa, crónica, ensayo, ironía) no
+existen en el catálogo — las tranches de E3 deben incluir crónica/ensayo
+(As Farpas de Ramalho, Fialho) además de novela.
 
 Cada sesión E2 lleva además:
 - **1 lección b11 cada 2 sesiones** (hasta 6-8; los conceptos nuevos
   `b11-morfologia-enganosa` y `b11-aspecto-tempo` ya existen y tienen
   ítems esperando lección).
 - **Una cola de ~100 `unchecked`** del corpus viejo por el triage v2 +
-  muestreo adversarial del 10 % — así los 1.799 se agotan en las mismas
-  ~16 sesiones sin ola propia. **[DECISIÓN EDU: aceptar muestreo del
-  10 % con freno (si la muestra da >2 % de error ⇒ revisión completa de
-  esa cola) vs revisión exhaustiva (≈4× el costo) vs regenerar]**.
-  Recomendación: muestreo con freno.
+  muestreo adversarial del 10 % con freno (>2 % de error en la muestra ⇒
+  revisión completa de esa cola) — CERRADO por Edu 2026-08-11. Así los
+  1.799 se agotan dentro de las sesiones E2 sin ola propia.
 - Los 266 `needs-human` van aparte en 4 tandas de ~65 con doble
   adversarial (son los que el clasificador ya declaró no poder decidir).
   Los 110 `divergent` se regeneran mecánicamente (tienen forma europea
@@ -111,8 +164,7 @@ MBM/BMM/BMB/MBB/MMB/BBM; secuencia con `|solape−10| ≤ 4` contra CADA
 lote.
 
 *Mediación se corrige por autoevaluación contra rúbrica (v1 declarada).
-El juez LLM queda como mejora opcional — ya no bloquea nada.
-[DECISIÓN EDU, sin prisa].*
+Juez LLM: DIFERIDO a post-E5 (Edu, 2026-08-11).*
 
 ## E3 · Lectura a 1,9M (~5 sesiones, intercaladas con E2)
 
@@ -140,7 +192,7 @@ adversarial si alcanza.
 
 2-3 textos/mes de la escalera graduada. **Propuesta de tamaño total:
 ~14 textos** cubriendo A2→C1 (hoy: 3) ⇒ ~4-5 meses en paralelo con todo
-lo demás. **[DECISIÓN EDU: tamaño de la escalera]**. Cuota: ~60,5k
+lo demás — CERRADO por Edu 2026-08-11. Cuota: ~60,5k
 créditos hoy (rinden ~2×), reset **2026-08-28** (121k/mes). Piloto de 2
 párrafos antes de cada texto, como siempre. `/doblar-episodio` para
 cualquier audio de curso.
@@ -152,8 +204,12 @@ adjuntos; `next build`; smoke E2E; doc de cierre en `docs/plans/`;
 actualizar memoria. Si algo no pasa, no se declara — se lista y se
 vuelve.
 
-**Total PT: ~20-24 sesiones de trabajo** (16 E2 ∥ 5 E3 + E1 + E5),
-más la cadencia E4.
+**Total PT: ~26-30 sesiones de trabajo** (18-22 E2 ∥ 5 E3 + E1 + E5),
+más la cadencia E4. (Subió de ~20-24: el Paso 0 encontró que la meta de
+mediación era 3,7× la que se creía y que faltan 4.123 ejercicios, no
+~1.100 — a cambio, 700 «ejercicios» del currículo son un motor de
+runtime que no se produce como corpus, y 230 tareas orales quedan fuera
+por decisión.)
 
 ---
 
@@ -177,14 +233,14 @@ estimar, no medir.
 
 ---
 
-# Decisiones de Edu (las únicas abiertas)
+# Decisiones de Edu — TODAS CERRADAS (2026-08-11)
 
-| # | decisión | bloquea | recomendación |
-|---|---|---|---|
-| 1 | Proveedor audio ejercicios (MiniMax vs ElevenLabs) | E1 | MiniMax: no gasta cuota karaoke |
-| 2 | Unchecked: muestreo 10 % con freno vs exhaustivo vs regenerar | E2 | muestreo con freno |
-| 3 | Tamaño escalera karaoke (~14 textos propuestos) | E4 | 14 |
-| 4 | Juez LLM para mediación | nada (opcional) | diferir a post-E5 |
+| # | decisión | resolución |
+|---|---|---|
+| 1 | Proveedor audio ejercicios | **por probe**: se prueba la key de MiniMax en E1 — viva → MiniMax, muerta → ElevenLabs (~15 grabaciones, costo despreciable en cualquier caso) |
+| 2 | Unchecked | **muestreo 10 % con freno** (muestra >2 % de error ⇒ revisión completa de esa cola) |
+| 3 | Escalera karaoke | **~14 textos** A2→C1 |
+| 4 | Juez LLM mediación | **diferido a post-E5**; autoevaluación v1 declarada sigue |
 
 # Riesgos y notas
 
