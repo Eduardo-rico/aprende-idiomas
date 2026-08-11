@@ -29,6 +29,7 @@ export interface ExIndexable extends Json {
   id: string;
   type: string;
   blockId?: number;
+  concepts?: string[];
   data: Json;
 }
 
@@ -142,16 +143,22 @@ export interface IndiceCorpus {
   df: Map<string, number>;
   /** id → ítem, para poder devolver contexto en el hallazgo */
   items: Map<string, ExIndexable>;
+  /** concepto → ítems que lo declaran (el segundo eje) */
+  conceptos: Map<string, ExIndexable[]>;
   total: number;
   /** ids que no aportaron ni un token — declarados, no descartados */
   sinTexto: string[];
+  /** ids que no declaran `concepts` — el punto de estos no se puede comparar */
+  sinConceptos: string[];
 }
 
 export function indexarCorpus(corpus: ExIndexable[]): IndiceCorpus {
   const tokens = new Map<string, Set<string>>();
   const df = new Map<string, number>();
   const items = new Map<string, ExIndexable>();
+  const conceptos = new Map<string, ExIndexable[]>();
   const sinTexto: string[] = [];
+  const sinConceptos: string[] = [];
 
   for (const ex of corpus) {
     items.set(ex.id, ex);
@@ -159,8 +166,78 @@ export function indexarCorpus(corpus: ExIndexable[]): IndiceCorpus {
     if (t.size === 0) sinTexto.push(ex.id);
     tokens.set(ex.id, t);
     for (const w of t) df.set(w, (df.get(w) ?? 0) + 1);
+
+    const cs = ex.concepts ?? [];
+    if (cs.length === 0) sinConceptos.push(ex.id);
+    for (const c of cs) {
+      const arr = conceptos.get(c);
+      if (arr) arr.push(ex); else conceptos.set(c, [ex]);
+    }
   }
-  return { tokens, df, items, total: corpus.length, sinTexto };
+  return { tokens, df, items, conceptos, total: corpus.length, sinTexto, sinConceptos };
+}
+
+// ─── Segundo eje: reuso de PUNTO ────────────────────────────────────
+//
+// El eje por IDF mide palabras. No puede ver que «Vou a telefonar ao
+// médico» y «Vou a falar com ela» son el mismo ejercicio (0,237 entre
+// ellos). Pero el corpus YA declara el punto de cada ítem en `concepts`
+// — 2.030 de 2.151 lo traen — y un ítem del bloque 8 que declara
+// `b2-artigos` está reenseñando el bloque 2.
+//
+// Esto REPORTA, no mata: refinar en C1 un concepto de B1 es legítimo
+// (el `haver` existencial de b3 llevado a «no pluraliza»). Lo que no
+// puede pasar es que ocurra sin que nadie lo declare.
+
+export interface HallazgoConcepto {
+  concepto: string;
+  publicados: number;
+  bloques: number[];
+  bloquesAnteriores: number[];
+  ejemplos: Array<{ id: string; blockId?: number; texto: string }>;
+}
+
+/** Marcador de que el candidato no declara punto: no es comprobable. */
+export const SIN_DECLARAR = '(sin declarar)';
+
+export function revisarConceptos(
+  idx: IndiceCorpus,
+  candidato: ExIndexable,
+): HallazgoConcepto[] {
+  const cs = candidato.concepts ?? [];
+  if (cs.length === 0) {
+    return [{
+      concepto: SIN_DECLARAR, publicados: 0, bloques: [], bloquesAnteriores: [],
+      ejemplos: [],
+    }];
+  }
+
+  const bloqueCand = candidato.blockId ?? Number.POSITIVE_INFINITY;
+  const out: HallazgoConcepto[] = [];
+  for (const c of cs) {
+    const previos = (idx.conceptos.get(c) ?? []).filter((e) => e.id !== candidato.id);
+    if (previos.length === 0) continue;
+
+    const bloques = [...new Set(previos.map((e) => e.blockId ?? 0))].sort((a, b) => a - b);
+    const anteriores = bloques.filter((b) => b < bloqueCand);
+    // Vivir en el propio bloque es exactamente donde el ítem debe estar.
+    if (anteriores.length === 0) continue;
+
+    out.push({
+      concepto: c,
+      publicados: previos.length,
+      bloques,
+      bloquesAnteriores: anteriores,
+      ejemplos: previos
+        .filter((e) => (e.blockId ?? 0) < bloqueCand)
+        .slice(0, 3)
+        .map((e) => ({
+          id: e.id, blockId: e.blockId,
+          texto: enunciadosDe(e).join(' · ').slice(0, 90),
+        })),
+    });
+  }
+  return out.sort((a, b) => b.publicados - a.publicados);
 }
 
 /** IDF suavizado. Un token que sale en 1 de 2.151 ítems pesa ~7,7; uno

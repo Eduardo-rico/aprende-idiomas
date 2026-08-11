@@ -11,7 +11,10 @@
 // --strict sale con código 1 si hay hallazgos: así entra en un gate.
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
-import { indexarCorpus, buscarDuplicados, UMBRAL, type ExIndexable } from './lib/virginidad';
+import {
+  indexarCorpus, buscarDuplicados, revisarConceptos, UMBRAL, SIN_DECLARAR,
+  type ExIndexable,
+} from './lib/virginidad';
 
 function arg(nombre: string): string | undefined {
   const i = process.argv.indexOf(nombre);
@@ -59,10 +62,36 @@ async function main() {
     console.log(`auditados: ${candidatos.length}${prefijo ? ` (prefijo «${prefijo}»)` : ' (todo el corpus)'}`);
   }
 
+  // ── Eje 2: reuso de PUNTO (concepts). Va primero porque caza la clase
+  //    que el eje por palabras no puede ver.
+  console.log('\n── PUNTO (concepts) ──');
+  if (idx.sinConceptos.length) {
+    console.log(
+      `corpus sin declarar punto: ${idx.sinConceptos.length} de ${idx.total} ` +
+      `— su punto NO es comparable (declara \`concepts\` para que lo sea)`,
+    );
+  }
+  let puntos = 0, mudos = 0;
+  for (const c of candidatos) {
+    for (const h of revisarConceptos(idx, c)) {
+      if (h.concepto === SIN_DECLARAR) { mudos++; continue; }
+      puntos++;
+      console.log(
+        `  ${c.id} (b${c.blockId ?? '?'}) declara «${h.concepto}» — ` +
+        `ya lo enseñan ${h.publicados} ítems, bloques ${h.bloques.join(',')} ` +
+        `(ANTERIORES: ${h.bloquesAnteriores.join(',')})`,
+      );
+      for (const e of h.ejemplos) console.log(`      ${e.id} (b${e.blockId}): ${e.texto}`);
+    }
+  }
+  if (mudos) console.log(`  ${mudos} candidato(s) sin \`concepts\`: su punto no se pudo comparar`);
+  console.log(`puntos reenseñados desde un bloque anterior: ${puntos}`);
+
+  // ── Eje 1: reuso de PALABRAS (solape IDF).
   // Cada par sale UNA vez: si A caza a B, no volvemos a informar B↔A.
   const vistos = new Set<string>();
   let pares = 0;
-  console.log('');
+  console.log('\n── PALABRAS (solape IDF) ──');
   for (const c of candidatos) {
     for (const h of buscarDuplicados(idx, c, umbral)) {
       const clave = [c.id, h.id].sort().join('|');
@@ -78,7 +107,7 @@ async function main() {
       console.log(`         ${h.texto}`);
     }
   }
-  console.log(`\npares por encima del umbral: ${pares}`);
-  if (process.argv.includes('--strict') && pares > 0) process.exit(1);
+  console.log(`pares por encima del umbral: ${pares}`);
+  if (process.argv.includes('--strict') && (pares > 0 || puntos > 0)) process.exit(1);
 }
 main().catch((e) => { console.error(e); process.exit(1); });

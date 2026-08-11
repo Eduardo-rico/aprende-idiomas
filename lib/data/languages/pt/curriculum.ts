@@ -276,8 +276,6 @@ const B9: Block = {
 // --- Block 10: Registros y variación ---
 const B10_CONCEPTS: Concept[] = [
   { id: 'b10-registro', name: 'Registro formal/informal', blockId: 10, description: 'Marcadores de formalidad (vocabulario, tratamiento você/o senhor/a senhora, conectores, pronombres), cartas/e-mails vs conversación', prereqs: [] },
-  { id: 'b11-regencias', name: 'Regências que traem', blockId: 11, description: 'Regencias portuguesas que difieren del español (apaixonar-se por, preocupar-se com, assistir a) y la herencia de la preposición en las relativas', prereqs: [] },
-  { id: 'b11-falsos-amigos', name: 'Falsos amigos C1', blockId: 11, description: 'Falsos amigos de alta frecuencia con sentido portugués divergente (esquisito, polvo, oficina, pelo, esperto, constipado) y sus pares resolutivos', prereqs: [] },
   { id: 'b10-variacao-diatopica', name: 'Variação diatópica + norma culta', blockId: 10, description: 'Diferencias BR↔PT (léxico, fonética, gramática), variantes regionales (norte/sul de BR, Açores/Madeira), norma culta escrita vs uso coloquial', prereqs: [] },
 ];
 
@@ -296,6 +294,16 @@ const B10: Block = {
 // C1 — anti-calco y falsos amigos. Los ítems de juicio de los lotes
 // b2c2-* dejan de archivarse en lecciones prestadas conforme estas
 // existan. Los ejercicios propios del bloque llegarán con los lotes.
+// Conceptos del bloque 11. Vivían DENTRO de B10_CONCEPTS —funcionaban,
+// porque ALL_CONCEPTS los arrastraba en el spread, pero cualquiera que
+// añadiera un concepto de b11 lo habría puesto en el array equivocado.
+const B11_CONCEPTS: Concept[] = [
+  { id: 'b11-regencias', name: 'Regências que traem', blockId: 11, description: 'Regencias portuguesas que difieren del español (apaixonar-se por, preocupar-se com, assistir a) y la herencia de la preposición en las relativas', prereqs: [] },
+  { id: 'b11-falsos-amigos', name: 'Falsos amigos C1', blockId: 11, description: 'Falsos amigos de alta frecuencia con sentido portugués divergente (esquisito, polvo, oficina, pelo, esperto, constipado) y sus pares resolutivos', prereqs: [] },
+  { id: 'b11-morfologia-enganosa', name: 'Morfología que engaña', blockId: 11, description: 'Morfología portuguesa sin aviso desde el español: plurales en -ão (-ãos/-ães/-ões), clíticos -lo/-la tras -r/-s/-z, lhe dativo frente al leísmo, adjetivos invariables en género', prereqs: [] },
+  { id: 'b11-aspecto-tempo', name: 'Aspecto y tiempo sin calco', blockId: 11, description: 'Valores aspectuales que el español no traslada: pretérito perfeito composto durativo (no es "he hablado"), estar a + infinitivo frente a andar a + infinitivo, perífrasis de probabilidad', prereqs: [] },
+];
+
 const B11: Block = {
   id: 11,
   slug: 'anti-calco-c1',
@@ -320,6 +328,7 @@ export const ALL_CONCEPTS: Concept[] = [
   ...B8_CONCEPTS,
   // B9 is freeDrill — no Concept[] (it drills whatever vocab the catalog has).
   ...B10_CONCEPTS,
+  ...B11_CONCEPTS,
 ];
 
 export function getBlock(id: number): Block {
