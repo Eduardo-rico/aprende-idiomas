@@ -112,9 +112,23 @@ cifra ~430 de mediación se confirma o corrige aquí.
   re-glosar los existentes que vendan el gerundio como neutro.
 - `b2c2-med-20` («V» colado), flashcards `d4e7089f`/`2acce101`/
   `62b470e0`, MDX b8 «continuou trabalhando».
-- Regenerar las 11 grabaciones caducadas + 4 faltantes → `verify:content`
-  a cero. Proveedor: **MiniMax** — key probada VIVA el 2026-08-11
-  (probe mínimo, 1 llamada, exit 0). No gasta cuota karaoke.
+- Audio: **HECHO 2026-08-11, con ElevenLabs** (decisión final de Edu:
+  «no quiero minimax quiero elevenlabs» — la cuenta MiniMax se secó a
+  mitad de la primera corrida y no se recarga). Resultado:
+  `check-audio-stale` → **«Todo el audio corresponde a su texto
+  actual»** y `verify:content` → **0 errores, por primera vez**. Se
+  sintetizaron ~224 clips (~14k créditos; la deriva acumulada desde
+  junio, no 15) con Leonor, la narradora aprobada. Los clips de
+  variante br llevan voz `ElevenLabs_Leonor_brInterino`: la cuenta no
+  tiene voz brasileña — cuando Edu apruebe una a oído, regenerarlos es
+  un comando. De paso cayeron CINCO bugs de infraestructura: locks
+  fósiles silenciosos (el generador llevaba muerto desde el 22-jun),
+  mapeo de variante invertido (dos eras de archivos: 5.451 MP3 para
+  ~2.576 refs), attach con claves legacy («audio attached: 0» — los
+  refs jamás se escribían), MiniMax 1008 sin fail-fast, y el checker
+  ciego a ElevenLabs. Pendiente menor: gc de MP3 huérfanos (~2,5k
+  archivos de la era no referenciada) — se hace cuando el estado lleve
+  unas sesiones estable, no el mismo día.
 
 ## E2 · Corpus a escala — DOS líneas de producción (~18-22 sesiones)
 

@@ -16,6 +16,7 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { ttsHash } from './lib/minimax-tts';
+import { elevenTtsHash, EL_VOICES } from './lib/elevenlabs-tts';
 import { textsFor } from './lib/audio-collector';
 import { ExerciseInputSchema, type Exercise } from './lib/zod-schemas';
 
@@ -59,9 +60,17 @@ async function main() {
         // El hash guardado debe corresponder a ALGUNO de los textos
         // actuales del ítem con la voz guardada. speed y model son los
         // por defecto del pipeline (speed 1, TTS_MODEL constante).
-        const esperados = textos.map((text: string) =>
+        // Tres formulaciones válidas del mismo texto: MiniMax con la
+        // variante correcta, MiniMax de la era del mapeo invertido
+        // (pt-br→'pt', Phase 1 — ambas son grabaciones correctas del
+        // texto porque el hash lo incluye), y ElevenLabs (proveedor
+        // desde 2026-08-11, refs con voz «ElevenLabs_*»).
+        const otra = corta === 'br' ? 'pt' : 'br';
+        const esperados = textos.flatMap((text: string) => [
           ttsHash({ text, voiceId: ref.voice, variant: corta }),
-        );
+          ttsHash({ text, voiceId: ref.voice, variant: otra }),
+          elevenTtsHash({ text, variant: corta }),
+        ]);
         if (!esperados.includes(ref.hash)) {
           caducos.push(
             `${f} ${ex.id} (${ex.type}, ${corta}): la grabación no corresponde al texto actual — ` +

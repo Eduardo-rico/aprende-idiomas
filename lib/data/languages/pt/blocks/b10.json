@@ -12,6 +12,7 @@
     ],
     "contentHash": "02ab93162462f37c25c3efe35c614213a329ebd9f827b5c924e040b39b7a237a",
     "esContrast": "PT 'chegar a/em' vs ES 'llegar a'. Observe a contração com artigo em PT.",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "chegar",
@@ -28,8 +29,7 @@
       "pt-br": {
         "sentence": "Em Portugal, numa comunicação formal: \"O comboio ___ à estação às nove.\""
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "03b9ccb0",
@@ -43,18 +43,19 @@
       "regional",
       "formal"
     ],
-    "contentHash": "03b9ccb0873e29b1500152877621e7edbe0a878fa81dcdaf20819d92ef87f8bc",
+    "contentHash": "3351d0a6f6c9f3a465db44fc08a6f8172d030d7c7ec3b90652bdb9a33b65b2c9",
     "esContrast": "Portugal usa 'correio' para correo postal; Brasil usa 'contato' para comunicación, 'correio' para postal.",
     "audio": {
       "br": {
-        "hash": "5ebf4369a7533e7a38112da8ac3538e9fd360486c91b77ed17c3b2523185b608",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "bb158c394f061447c5b4d04dc2768afb6e7831d54a04989cd9d26842d25e5c74",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "c1745ad78c8c4609113088c88d4fc613eae20631808aca41f585e62a2207de7d",
-        "voice": "Portuguese_Wiselady"
+        "hash": "1b50124756f03beefe4b53c29a7384f4302d123ca6173f197600576d8b714ff6",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Os contatos correspondem-se entre as duas variantes. Continuaram a usar o termo correio em Portugal e contato no Brasil.",
@@ -79,8 +80,7 @@
         ],
         "answer": "Correio"
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "04452b00",
@@ -96,6 +96,7 @@
     ],
     "contentHash": "04452b007cee87437497f7488c87882a6c42c5092358ce236b2e54a7edc85454",
     "esContrast": "'Corresponder-se' existe en ambos, pero en PT-PT es más frecuente en la norma culta.",
+    "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
       "sentence": "As duas variantes do português ___ em muitos aspetos.",
@@ -108,8 +109,7 @@
           ]
         }
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "049c8477",
@@ -127,14 +127,15 @@
     "esContrast": "'Saudade' no es exactamente 'añoranza'; expresa un sentimiento mixto de nostalgia y deseo.",
     "audio": {
       "br": {
-        "hash": "d6bb332b448e8fbd9f0a340d780869d7d3f3f9344f0e197affe8a834716c43f8",
+        "hash": "ba261954cef6b4f74ee2c060c415fba63ba128fa62ecd6621e7d69396794c174",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "2008b6b9f29f330899dad74f2eeb81d31d57f96fe369e505ca7f1a8459524416",
+        "hash": "712150bd78a94ff1c646b628ba063c4e4723f794bb1d060da0c46e152cf1e831",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "listening",
     "data": {
       "audioText": "Eu tenho saudade de você, meu amigo. A palavra saudade é muito especial na cultura brasileira e portuguesa.",
@@ -146,8 +147,7 @@
         "Lembrar"
       ],
       "answer": "Saudade"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "08155994",
@@ -161,18 +161,19 @@
       "formal",
       "regional"
     ],
-    "contentHash": "08155994042e58cf8de27753186a734122d62d3c0590d046264b33dd5286daa4",
+    "contentHash": "ea84fb4f5c6db3f124c9c6c2ae598e37773d7409fbb31cc3ba7b1ff43b7c29a7",
     "esContrast": "'Ao vosso dispor' es más formal y típico de PT europeo; en BR se diría 'à disposição' o 'ao seu dispor'.",
     "audio": {
       "br": {
-        "hash": "f6de68f84a2e411582ff9e1adf1b4caabd5cf6ed370c8ecb8caf74f1d7f5fa38",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "23c237d1356e282dc2754531f395b35497117e4c7bb09820de42f45034bb100e",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "494273bd60463c7e6ef8208500d49e8811c1b737c1442ba383f05d7e32a9da9d",
-        "voice": "Portuguese_Wiselady"
+        "hash": "971081f723464415d04d0f078729c2222edbbb47164e8793cbc9c178ef5d603f",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Segue em anexo a documentação solicitada. Fico ao dispor para quaisquer esclarecimentos.",
@@ -188,8 +189,7 @@
       "pt-br": {
         "target": "Adjunto le remito la documentación solicitada. Quedo a su disposición para cualquier aclaración."
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "0acf94a3",
@@ -204,6 +204,7 @@
     ],
     "contentHash": "0acf94a348b67d5e651947affcb24508a2e15e2626fc56136744aeacf579beba",
     "esContrast": "En español 'gustar' no lleva preposición; en portugués 'gostar' rige 'de' obligatoriamente.",
+    "variantStatus": "unchecked",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
@@ -215,8 +216,7 @@
         "—"
       ],
       "answer": "de"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "0b091314",
@@ -231,21 +231,21 @@
     "esContrast": "'Abs' viene de 'abusivamente' en PT-BR, no existe en ES ni en PT-PT",
     "audio": {
       "br": {
-        "hash": "4562e0e62e51365b0f6aba181271cb23d78c8f080332c9b36a2040a1c09705c9",
+        "hash": "d5c77793594d6decdcea2f0bb0168600fdb928e0cbed25f9ebb42a67c70f6b58",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "0758e35eb4eaee12eec26dd05e2405d440aecb4f4472f700aa0caab062e32f2a",
+        "hash": "6e45bcee3848791c166b4ac858b1aa3d1c1f148f09eef50459a3ca386a315a60",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "Expresión informal de despedida entre amigos (= 'un abrazo')",
       "back": "abs / abraço / beijos",
       "example": "Abs, te vejo amanhã! (= ¡Un abrazo, te veo mañana!)"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "12c32016",
@@ -260,6 +260,7 @@
     ],
     "contentHash": "12c320167cfcdd69e4ed0176e2ea400b503231711670f6f6ef2858c97f5ae308",
     "esContrast": "'Tudo bem?' es la forma estándar, no 'tudo bom' como en español.",
+    "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
       "sentence": "Olá, João! Tudo ___?",
@@ -272,8 +273,7 @@
           ]
         }
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "18477503",
@@ -287,18 +287,19 @@
       "formal",
       "falso-amigo"
     ],
-    "contentHash": "184775030a06047e457aae23f5ed73310aadfa26af5c6086fc2c9705b36aabec",
+    "contentHash": "fc3cb63b3bd1eb3b2cd05fdf264d7e49a6a3da2cdeb9a9186c9b0c5029c7f8ef",
     "esContrast": "Cuidado: 'prezado' no es 'preciado'; es equivalente a 'estimado'.",
     "audio": {
       "br": {
-        "hash": "7186eaa921542bea3dd902780a0575cdc53d6dc76f9de4b130cdaab0136fbebe",
+        "hash": "78485a309007f8696952619dcfd315e27b9ee8894cb60496a278fb4961ae5c8d",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "8e1441947f4967c5fe4bc7c63051a2c6b88b9fd244c54ebc74a4f536980a1c28",
+        "hash": "590fa5aef9049e5d72586b112091cf71d8f666ad8f93743b73cbc1453c82d898",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "translation",
     "data": {
       "source": "Estimado senhor director, escrevo-lhe para solicitar uma reunião.",
@@ -308,8 +309,7 @@
       "acceptedAlternatives": [
         "Prezado senhor director, le escribo para solicitar uma reunião."
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "1993e06e",
@@ -328,14 +328,15 @@
     "esContrast": "El Acuerdo Ortográfico generó controversy porque algunos prefieren mantener las diferencias tradicionales.",
     "audio": {
       "br": {
-        "hash": "bcfb639f7821d84b54fe2a458dc1a0c792ac1801175d36f324c0ca6ecbb5686d",
+        "hash": "e6d59c2a446550f769e13b6e4f8c11d794f109b7a8cb261e7201cd69d4d2fdc5",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "03fb9b0b6f11d63f7244bf02b1aa37f2b9b29a006a0dccf196e672cde7ed52cc",
+        "hash": "4aea7b63c517ddffcbdf3604e0e64e7e96e2c72e17897c3c572eaa27454f8e0b",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "listening",
     "data": {
       "audioText": "A norma culta escrita em Portugal e no Brasil apresenta diferenças ortográficas. O Acordo Ortográfico de 1990 tentou unificar, mas o uso cotidiano continua variado.",
@@ -347,8 +348,7 @@
         "Imponer la norma culta brasileña"
       ],
       "answer": "Unificar la ortografía entre ambos países"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "1e198e75",
@@ -362,18 +362,19 @@
       "falso-amigo",
       "regional"
     ],
-    "contentHash": "1e198e75bacf55aaddedc07f42da6082c921ef3a02c19b2179e4067f6946613e",
+    "contentHash": "3155f99e06240f4d0063cc63386661b352dd7e7d403b8d0637d8c9650072c789",
     "esContrast": "«Achar» en BR = creer/opinar; en PT = encontrar. Evita confundir «acho que» con «encuentro que».",
     "audio": {
       "br": {
-        "hash": "b2d38c3a810950c36e98e316b4a9f80f163f8ae6861de6fe242350e1558171bd",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "51ad71cfdda9b0898fabc246d28382175965d685be237429f6d1691cc8b48ac6",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "f1e20813bb3c95dc353a529a15558a15173058d0715b65319a09c9adc12c51fe",
-        "voice": "Portuguese_Wiselady"
+        "hash": "397dedce687149faced3788de26f9a5c4056d5724420754b49403bb2b78282b6",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Yo creo que tienes razón, pero no lo encuentro así.",
@@ -391,8 +392,7 @@
           "Eu acho que tens razão, mas não acho assim."
         ]
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "1f7391d9",
@@ -407,22 +407,22 @@
     "esContrast": "En español 'usted' es único; en portugués hay tres niveles de formalidad según el contexto",
     "audio": {
       "br": {
-        "hash": "41270e9fdc8127cf5caddf03276e359952d6944a568befbe44484c31e22827f0",
+        "hash": "3891f7811f62ae9f2e42b09547d35b5eea0445d20eeaadd778989482ce69431e",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "4ed341849d9d165b491fed4b53cd85ffacd3b727ccf8c32452537e19cb5d1d03",
+        "hash": "aed2c126e9978f8e1d161cfbd2de80656886489065286c963aaeddbb70c766f4",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "needs-human",
+    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
     "type": "flashcard",
     "data": {
       "front": "Pronombre de tratamiento formal en portugués (equivalente a 'usted')",
       "back": "você / o senhor / a senhora",
       "example": "O senhor pode me ajudar? (= ¿Usted puede ayudarme?)"
-    },
-    "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona"
+    }
   },
   {
     "id": "1f7c93eb",
@@ -436,18 +436,19 @@
       "regional",
       "falso-amigo"
     ],
-    "contentHash": "1f7c93eb70bcd27b464714868b116f2bf03b9856c14c1d96297701068ffb3b48",
+    "contentHash": "098d767d019aeeb352818858c8c6d4ddb76fb273a9e43fab9a65721496991d8f",
     "esContrast": "El autobús se llama 'ônibus' en Brasil y 'autocarro' en Portugal. Mismo vehículo, palabras distintas.",
     "audio": {
       "br": {
-        "hash": "90e3a753ed31728a38f1eb02428b7eb1a4b02bbb7874655a502bcf3bc5e8a85c",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "57936e7d9e10d47aec2868d230339f0cac742ba9e06132c576660abd2916af2f",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "14b0b0d8f4ff1ed49b3a0b2846b502a90cef352fad659ca3b79c0faf3a1a768e",
-        "voice": "Portuguese_Wiselady"
+        "hash": "adb8a521ce43311399d7ff9a10d371ad1533f292be338bda40b05fbd02c44bca",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Em Portugal, o veículo de transporte urbano chama-se autocarro. No Brasil, chama-se ônibus. É uma diferença importante entre os dois países!",
@@ -471,8 +472,7 @@
           "Trolé"
         ]
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "2516e46a",
@@ -486,18 +486,19 @@
       "regional",
       "falso-amigo"
     ],
-    "contentHash": "2516e46a0de39174d8ad97056309d6239852aba1acda852a6dfb38066348ee28",
+    "contentHash": "3b4d9d65baa130f1660812c70ef5b9598c03c5d86550d7375b708b7e9b3c7cab",
     "esContrast": "'Achar' en PT-BR significa 'creer/pensar'; en ES 'achar' sería 'encontrar'.",
     "audio": {
       "br": {
-        "hash": "0f0d19bda9af64336ff225c612aa37c853ac3dfb5dc6d63c79749fd64dbb3f05",
+        "hash": "72db4fa52884410ede019ddc505212bb290c6bb9b2f7b0085e1ec1423201429f",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "65a57fb62040b0dbb3b5a38c7c0baabbe42b4c2bd844a0807f71048d0ecf03a5",
+        "hash": "604592671b8543001591249aef7c0a5f329154197a19e31e3d3eeef87a7e1e7c",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "translation",
     "data": {
       "source": "Eu acho que a variação diatópica é fascinante.",
@@ -508,8 +509,7 @@
         "Yo opino que la variación diatópica",
         "Me parece que la variación diatópica"
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "264c3a9f",
@@ -523,18 +523,19 @@
       "regional",
       "coloquial"
     ],
-    "contentHash": "264c3a9f0956e59e8cd7ab8d2b2e7c1dcc8a0dab571da8de81b761b307aa1a9c",
+    "contentHash": "f534a92bb66d0894a24688186b2f792c02213c291ec70f728a861ffecea401df",
     "esContrast": "Cuidado: 'bizarro' en español = 'valiente'; en BR = 'genial' (¡contrario!).",
     "audio": {
       "br": {
-        "hash": "67c7d93f95dbbe3420fc7426c4b2fe67730d522a3156e36414483e8630be3f79",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "51ef8e21a0ff223701d38d661c9dbcbef261630fd6f13c45dc442540cb5113f7",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "e0bf745730da407fed51e58925e76b5a2648a0e9a2f1c760fc4641386642478c",
-        "voice": "Portuguese_Wiselady"
+        "hash": "7406ca53ccd66580cf4fe4430b732d759c188e240927d5e6ce3e037e46c6ca5d",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "divergent",
     "type": "flashcard",
     "data": {
       "front": "¿Qué significa 'maluco' en Brasil? ¿Y 'bizarro'?",
@@ -545,8 +546,7 @@
       "pt-br": {
         "back": "🇧🇷 BR: 'maluco' = 'loco/chiflado' (coloquial); 'bizarro' = 'genial/increíble'. 🇵🇹 PT: 'bizarro' = 'valiente/extravagante' (más cercano al español); 'maluco' = mismo sentido."
       }
-    },
-    "variantStatus": "divergent"
+    }
   },
   {
     "id": "2aaa15ef",
@@ -563,21 +563,21 @@
     "contentHash": "2aaa15ef3ecaa7141494dc2973bc49a5983c5cca1b33b38a23f05c03dc87b65b",
     "audio": {
       "br": {
-        "hash": "fa798400f253ab56615123a9a10531f148d8151a323b41704bae8112021c405a",
+        "hash": "14b36522a1b7ffe7707c58fcb526e11090f94293e19245969d8ee05d7fb272af",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "b4a14c43dbb6f115472576db92ae6bf67952c884f77541bd338163c947aab197",
+        "hash": "3a7fd11e7eb8ac900fe3bda5c8b4054a2a5e43e1d828b692ec5ead7e918be94a",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "¿Qué forma de tratamiento es más común en Portugal en situaciones formales?",
       "back": "🇵🇹 En PT se usa más 'o senhor / a senhora' y 'você' (formal/informal). 🇧🇷 En BR predomina 'você' (informal) y 'o senhor' (formal). El 'tu' es regional (norte de PT, sur de BR).",
       "example": "PT formal: «O senhor sabe a hora?» / BR: «Você sabe que horas são?»"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "2c640e11",
@@ -591,18 +591,19 @@
       "falso-amigo",
       "regional"
     ],
-    "contentHash": "2c640e11c39456a8b7cbe5c92e0e2689ffd700e937c4f7c89a2084d90866414d",
+    "contentHash": "8750d230981cf71a009a0bd78848daaf8224af6fa038f3e3f3ca5aae2a4575d0",
     "esContrast": "«Bicha» en BR = fila/coloquial; en PT-PT es ofensivo (serpiente). Usa «fila» en Portugal.",
     "audio": {
       "br": {
-        "hash": "50b74d7dfccf9321e285428f61b1bef6076b3cc67c241dcdfed3fde42c95a030",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "b07fda5c888953f77b9dee1f4012ab1a4ec7dbaa280ac23ab8446e5fd20b0c5b",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "b9b3ee2384819e1a6d01a5e5eceba6942a55a031f9ba149ca84bcf9864143623",
-        "voice": "Portuguese_Wiselady"
+        "hash": "8b432915068f7601c6ec7418eb77f43c7a5160e4a5286daa992c0108ce1d2ffe",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Formamos una fila enorme para entrar al concierto.",
@@ -620,8 +621,7 @@
           "Fizemos uma fila enorme para entrar no show."
         ]
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "2e950460",
@@ -634,6 +634,7 @@
     "tags": [],
     "contentHash": "2e9504607c2f3a0a4d6c1bbd3fdca515ddceeba444135a87fbb7bb4344b943cc",
     "esContrast": "En español 'necesitar' no lleva preposición; en portugués 'precisar' rigen 'de'.",
+    "variantStatus": "unchecked",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
@@ -645,8 +646,7 @@
         "—"
       ],
       "answer": "de"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "2eac7ab2",
@@ -661,6 +661,7 @@
     ],
     "contentHash": "2eac7ab2d7f0b10077156b73541d3866ed6edcd4cfca81e7e45ac4181c38a246",
     "esContrast": "En contexto informal se usa 'que há de novo?' o 'que notícias?'.",
+    "variantStatus": "divergent",
     "type": "fill_blank",
     "data": {
       "sentence": "Ó lá! Que ___? Há muito tempo que não te vejo!",
@@ -679,8 +680,7 @@
       "pt-br": {
         "sentence": "Fala, cara! Que ___? Faz tempo que não te vejo!"
       }
-    },
-    "variantStatus": "divergent"
+    }
   },
   {
     "id": "2ee3583d",
@@ -694,18 +694,19 @@
       "irregular",
       "regional"
     ],
-    "contentHash": "2ee3583d9798732a7cf05c08a18c6ec1c117006ddfe27d06dc9b102d91cc566c",
+    "contentHash": "9b22df170840ceb595326ede16df711b364677eaf8cd12356f942ade1e2e32ee",
     "esContrast": "En PT-PT se prefiere «continuar a + infinitivo»; en BR se usa «continuar + gerúndio».",
     "audio": {
       "br": {
-        "hash": "8bb6526608ab9ee31fee71c113761f35d2f493db2faf76afef1a8b18a701a8b5",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "6fbac25a0d8dd95b2752ce403f1c19956f44cfcd893c9d9a67ff15165ee2fe61",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "d38759be6b4ca4f52ba636eac23858001c2bec2665450b9d1d845eb94d15f895",
-        "voice": "Portuguese_Wiselady"
+        "hash": "8927bcb07e640b06466d83cdd9abcbdff86bc1f6b5649065b254a22f761e26ee",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Las cartas de mi abuelo continuaron llegando incluso después de su muerte.",
@@ -723,8 +724,7 @@
           "As cartas do meu avô continuaram a chegar mesmo depois da morte dele."
         ]
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "3bf42d97",
@@ -738,18 +738,19 @@
       "regional",
       "coloquial"
     ],
-    "contentHash": "3bf42d9766c58d24c387c759a6b6613206f4329bfe2f152c76d2a01810558dca",
+    "contentHash": "a4f8953a11a2744d59408ee4c6902a90ea5601c20e8588b0a61bb05a63762926",
     "esContrast": "Portugal continental tiene variaciones regionales noticeable entre norte y sur.",
     "audio": {
       "br": {
-        "hash": "39043b1f1e27efd7f8b8d01a0c35be795270f12a1c615adb8ad7a73a4bc06464",
+        "hash": "86b15337dd0ee8df30eea675f5a25f9fe1dce31e2ae3f172a7f80a3218f4c7ff",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "8809fa26ddeaa08622eb0ead3e85404cb94f5253dc85a702a06792a7a01287ae",
+        "hash": "282e6bcbe4327eb76a2abc3b5215d6be24313c85401a1db2d55af81d6d43b637",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "translation",
     "data": {
       "source": "As pessoas do Norte são mais abertas e as do Sul são mais reservadas.",
@@ -757,8 +758,7 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": []
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "3dec5fb6",
@@ -772,18 +772,19 @@
       "informal",
       "coloquial"
     ],
-    "contentHash": "3dec5fb6fdeba9b6f34996ecfc332d68f653a59f9fa8c720e70f32006e1dd7f3",
+    "contentHash": "d06df7372a2de7d7a0221521541f2e4e237c583a7e2c74b963883a2a1b6add73",
     "esContrast": "'Próprio' es un vocativo afectuoso (coloquial BR); en España se diría 'chaval', 'tío' o 'colega'.",
     "audio": {
       "br": {
-        "hash": "e18a9f660d5095626bdf43d02454d5743f46c5c93a988b5d4944aa03352634d0",
+        "hash": "a98a5cac01383a0ef7a207d5a8c16a2b211af9d3a935ebfa035874b42a25493b",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "e24dddb45abf5ce73632877e2f6cff7d3ebd58b7a7bc3e7051599fd017b06d04",
+        "hash": "25d86abeefe414721470390b3eb04cc67280e19dfff08ecc5a14431eab31b597",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Olá, próprio! Tudo bem contigo?",
@@ -799,8 +800,7 @@
       "pt-br": {
         "target": "¡Hola, amigo! ¿Qué tal estás?"
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "3e4ec326",
@@ -816,6 +816,7 @@
     ],
     "contentHash": "3e4ec32690e7ac25aa6362219632e05f5f101408a5a27c7c0a1a2e671a0a6e15",
     "esContrast": "Pretérito perfeito vs presente: 'continuaram' (pasado) vs 'continuam' (presente).",
+    "variantStatus": "divergent",
     "type": "fill_blank",
     "data": {
       "sentence": "As tradições do Norte do Brasil ___ sendo preservadas.",
@@ -833,8 +834,7 @@
       "pt-br": {
         "sentence": "As tradições do Norte do Brasil ___ sendo preservadas pelos indígenas."
       }
-    },
-    "variantStatus": "divergent"
+    }
   },
   {
     "id": "3fc42791",
@@ -848,18 +848,19 @@
       "informal",
       "pt-br"
     ],
-    "contentHash": "3fc42791df4a15dcbddf6f6b359ad028529676c03bb9a40a326fceb50884da82",
+    "contentHash": "77bfde7881ff686826473ffa30d759e974cdaaa918298ba540e037bd0ad88363",
     "esContrast": "'E aí' es saludo informal (BR); 'meu irmão' y 'bora' son coloquiales y no existen en España.",
     "audio": {
       "br": {
-        "hash": "c1fd2f55669036ba5fcb31bb4e5d59a6807cc2ea64fb5e52bcb878837b918a63",
+        "hash": "52e22f220ab2ef3483c17ea7408f3bae162aeb97415c3d99740051371fe57bb3",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "f10491e14279ccaf1f7cd949d72af889ec9cc4ab8cace0df697c4c119990ddcd",
+        "hash": "18ab08b49456dac0eebae8ef46f56d008e061be7a54e7fa3d22515f7e041b2e2",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "translation",
     "data": {
       "source": "E aí, meu irmão! Bora tomar um café?",
@@ -870,8 +871,7 @@
         "¿Qué pasa, hermano! ¿Nos tomamos un café?",
         "¿Y eso, bro! ¿Nos tomamos un café?"
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "4581fc5e",
@@ -887,6 +887,7 @@
     ],
     "contentHash": "4581fc5e87963bb1f521eb738ae7ad7a7fe837c9f7472ab79abe57afcc5d5c1d",
     "esContrast": "La 'c' antes de 't' se mantiene en PT-PT: contactos (BR: contatos).",
+    "variantStatus": "divergent",
     "type": "fill_blank",
     "data": {
       "sentence": "Os meus ___ com o Brasil têm sido muito produtivos.",
@@ -912,8 +913,7 @@
           }
         ]
       }
-    },
-    "variantStatus": "divergent"
+    }
   },
   {
     "id": "4755f09a",
@@ -931,14 +931,15 @@
     "esContrast": "En portugués, 'senhor' es tratamiento formal, mientras que en español se usa 'señor' de forma más general.",
     "audio": {
       "br": {
-        "hash": "18c5c22c7c313cbcd64776e1896f8123f03971185e074e4be6476a14692dc4a1",
+        "hash": "c7a2ec2bfe2d30992944ecc0155e6d4608767765598b11d5d54b3e6f63aa277c",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "3c27b7a7f7a4f6c208c62b55382ab8408ede88fb73e9e1c29da73cb73c181962",
+        "hash": "1ceab34bc9a7b3b5508948052d5d99a95e28085fe627962834d30a61169dd0a2",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "listening",
     "data": {
       "audioText": "Bom dia, meu nome é Maria. Gostaria de falar com o senhor Silva, por favor.",
@@ -950,8 +951,7 @@
         "Registro afectivo"
       ],
       "answer": "Registro formal"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "4a1e949d",
@@ -966,6 +966,7 @@
     ],
     "contentHash": "4a1e949d258b47a69d630b0f37dbd2762e8c85e35f5501398d473917c630249b",
     "esContrast": "Fórmulas de cierre en e-mails formales: 'Atenciosamente' o 'Cumprimentos'.",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Cordialmente ___ ,",
@@ -993,8 +994,7 @@
           }
         ]
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "4fc10cfb",
@@ -1012,14 +1012,15 @@
     "esContrast": "En PT se usa 'contacto' como sustantivo; en ES se prefiere 'contacto' como adjetivo o 'contactar'.",
     "audio": {
       "br": {
-        "hash": "44fadc111b4b5fcd66c15ed34b633360c1d98e0143f8600b83893b8f795c0ab3",
+        "hash": "f8073cfe43c177370621510575662a2be4edd2f367a4cc2bd8af81135a9d1a56",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "21e7fe808697935e52cae279ff21ae20f8fbf2f0b72f861835b0906162bf9b2d",
+        "hash": "a9025ce81b6012471b5aa515f303b288eccd24f5d1c26d529a6abe12369cc33d",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "listening",
     "data": {
       "audioText": "Obrigado pela atenção. Aguardo o seu contacto telefónico para dar uma resposta.",
@@ -1031,8 +1032,7 @@
         "Teléfono de contacto"
       ],
       "answer": "Contacto telefónico"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "54df0897",
@@ -1048,6 +1048,7 @@
     ],
     "contentHash": "54df08976414832efe18bdf0bcaf395dafe43e91dcf55834667bab08d83e5de3",
     "esContrast": "'Meu filho' es cariñoso en PT-BR; en PT-PT se usa más 'filho' sin posesivo.",
+    "variantStatus": "divergent",
     "type": "fill_blank",
     "data": {
       "sentence": "Meu ___ , o almoço está na mesa. Quando puderes, vem comer.",
@@ -1076,8 +1077,7 @@
           }
         ]
       }
-    },
-    "variantStatus": "divergent"
+    }
   },
   {
     "id": "6424b51e",
@@ -1091,18 +1091,19 @@
       "falso-amigo",
       "irregular"
     ],
-    "contentHash": "6424b51e1a708a57525873f99dac99abbbbc20543db989074ba35937c018de72",
+    "contentHash": "abda15de1f6a2c1d2ff302e797dbe71466fc3fa4ada0eed295863c255e3a4a01",
     "esContrast": "'Achar' en BR = encontrar; 'achar' en PT = parecer/creer. Gran fuente de malentendidos.",
     "audio": {
       "br": {
-        "hash": "6472c3efa7d856f2a9c31ae1f029420380ff925b533fbfb6987a5852e2de15b6",
+        "hash": "157ca15eff9dcde4e32081516302efd6619185a8cd54aff417a05cc83ad2d9cb",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "68af063af9d2e1574527c7b9023ec7ebb58af9bcc41f05dfaa1aac59f657543c",
+        "hash": "db5edcc38516debd54a774e3c5256a66a742484fcfaafb2c27d57228c50765d9",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "No Brasil, achar significa encontrar. Em Portugal, achar significa parecer, creer. São verbos com uso diferente.",
@@ -1126,8 +1127,7 @@
         ],
         "answer": "Parecer o creer"
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "64b87fbb",
@@ -1141,24 +1141,24 @@
       "regional",
       "coloquial"
     ],
-    "contentHash": "64b87fbb34469c7057e7ed5d8a75ad08add4fd14d5d6f5b391b5359f0bd20f59",
+    "contentHash": "7d912b953170b8cfd19a31ce7740c997cbf1240b34d7bdd54041a15df2f46497",
     "audio": {
       "br": {
-        "hash": "c0be64142dc786474d0dd59c4660224017f24fd6240a82dc159e4e1c2645f807",
+        "hash": "96f53ab4e1f372545756dc25557ba2968e21191a89df40711b8ff6d104fe86e1",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "0400813d973d743bb047cf5910f3064436e4d764d1ba5e1b46937728a99b1808",
+        "hash": "c9ce80635983b20aa500c26751396840a5948933dc28208ddaa1e9a78af91bea",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "¿Qué es el 'carioca' y qué variante representa?",
       "back": "Carioca es lo relativo a la ciudad de Río de Janeiro. Variante del portugués brasileño con rasgos fonéticos propios: 'r' apical, reducción de 'di/ti'.",
       "example": "No Rio, diz-se «tchau» de forma diferente de São Paulo."
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "67b27d54",
@@ -1174,6 +1174,7 @@
     ],
     "contentHash": "67b27d54e49010600176fc7b2c34ad06d18f7205965dfb31bf69aedd45507abd",
     "esContrast": "'Saudade' es un palavra lusófona sin equivalente exacto; en BR también se usa.",
+    "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
       "sentence": "A ___ é um sentimento muito forte na cultura portuguesa.",
@@ -1186,8 +1187,7 @@
           ]
         }
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "6815b803",
@@ -1201,18 +1201,19 @@
       "formal",
       "falso-amigo"
     ],
-    "contentHash": "6815b803d183cbb0c35edcc7de4e4cc1323f6627117aff409bb4b6c0fbd8b62d",
+    "contentHash": "5a3ebe5830676491338dd4a89e0519d01f62785afef6be781ada58a0e7f725f1",
     "esContrast": "'Contacto telefónico' suena redundante en PT; se dice 'contacto' o 'número de telefone'. 'Cabeçalho' = 'encabezado' (no 'cabecera' de mesa).",
     "audio": {
       "br": {
-        "hash": "9dcabaa68b6fab8590ddbb6dee66758ff108e319978aec998787b1c438ac70ee",
+        "hash": "be8d645064b36441c65022d7fdfd37f1489f16d4093bb2bbb695c4f5a569651d",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "05a7f1fee9e3c793ec0069b5c0a51c645865e2259ac01a4d99787126129a50b3",
+        "hash": "5010bc0b754402ca1cb08088d8a629a132ce07006d5e65c8b0e81f43329a93fb",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "translation",
     "data": {
       "source": "O meu contacto telefónico é o número que consta no cabeçalho deste e-mail.",
@@ -1223,8 +1224,7 @@
         "O meu número de telefone encontra-se no cabeçalho deste e-mail.",
         "Pode contactar-me pelo número indicado no início deste e-mail."
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "6b460b14",
@@ -1238,21 +1238,21 @@
     "contentHash": "6b460b149ed8e00d2e285caf63efa8f832368108e2a00cdae9beccc8c106dd88",
     "audio": {
       "br": {
-        "hash": "76d68fd3b5e523e40c7d13ac63aa7e98ec5acd832ee7681b7a42b8442f08e851",
+        "hash": "c638ea9e1d18c71d56f6d9e438a8186d3998f52d5e30fd14f1c25082a3dc684b",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "d391dd6587a1a8a0b0e6eec5b39494e4561ea864b3e94a0010fee89b8185418d",
+        "hash": "093fde78799160d31273ad6071ed0c5a176c8d2ca2141b734220792bd352aa0c",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "Conector formal para añadir información (= 'además, igualmente')",
       "back": "ademais / outrossim / igualmente",
       "example": "Gostaria de agradecer e, igualmente, parabenizá-lo."
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "6e8d5cdd",
@@ -1266,18 +1266,20 @@
       "formal",
       "escrita"
     ],
-    "contentHash": "6e8d5cdd5e8c8fd2ba7e36fb8952bb7f6d7f4c2eb50130743668dcd37cbb95c2",
+    "contentHash": "0fadc1023d0771ddd756ed3c8d0357c849bcccb897d4f3cc990e4a1218f756a9",
     "esContrast": "'Cumprimentos' en PT equivale a 'saludos', pero en contexto formal va más allá de un simple saludo casual.",
     "audio": {
       "br": {
-        "hash": "f7b29975687d281d5baf44576cb0a7ef408e97cb32e32af9d3bbeee4918f2783",
+        "hash": "cfc3dc6bee3328ec8ad7902a0ed7001a5587cbc592642cd183a88d50e8b7e12b",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "33aaf5eeb7059f406d73236f51320fa3696a196ccdea25fb5fc123b368497dcd",
+        "hash": "dc5194729f41708d5c2392224806d2149c6b6b684e71c2e061849e6ea7845846",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "needs-human",
+    "variantVerificacion": "auditoría de calibración 2026-07-29: equipa es PT-PT: no es idéntico en ambas",
     "type": "translation",
     "data": {
       "source": "Cumprimentos respeitosos para toda a equipa.",
@@ -1288,9 +1290,7 @@
         "Respetuosos saludos para todo el equipo.",
         "Mis respetuosos saludos para todo el equipo."
       ]
-    },
-    "variantStatus": "needs-human",
-    "variantVerificacion": "auditoría de calibración 2026-07-29: equipa es PT-PT: no es idéntico en ambas"
+    }
   },
   {
     "id": "71ae42e8",
@@ -1305,6 +1305,7 @@
     ],
     "contentHash": "71ae42e8322346c5ba49ca1aa8ce5e207aaea99fca9bf14cd2eb2db821a3ec11",
     "esContrast": "'Antecipadamente' significa 'de antemano', no 'de forma antecipada'.",
+    "variantStatus": "divergent",
     "type": "fill_blank",
     "data": {
       "sentence": "Agradeço ___ pela atenção e aguardo resposta.",
@@ -1322,8 +1323,7 @@
       "pt-br": {
         "sentence": "Agradeço ___ pela atenção e aguardo retorno."
       }
-    },
-    "variantStatus": "divergent"
+    }
   },
   {
     "id": "71b4e921",
@@ -1339,21 +1339,21 @@
     "contentHash": "71b4e9212053e26d76a9440ce4e34d99c7afb24d3a9cf0ed191a0cf675dc1b33",
     "audio": {
       "br": {
-        "hash": "aa7322d5ea2b51af60a494575829d0c3a168821ee4c353aa5aeb6f3dd6bb4795",
+        "hash": "d7ca475337bd07dee83fed97a8c196f7413e819f0f5edf297a1640359f15686e",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "a862e0aa4df762c7a2c79dbaca28c4e8d610b803683eea7bb57cbf6f521b8238",
+        "hash": "b5cd4f67d57ab032bde4af3f8d62ad46eff2f96eefe5425617a6c6ab9c0d2f6b",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "Léxico diatópico: 'quarto' en PT vs. otras palabras en BR",
       "back": "🇵🇹 PT: 'quarto' puede ser cualquier habitación. 🇧🇷 BR: 'quarto' = habitación para dormir; 'sala' = sala de estar; 'quarto' no se usa para la sala.",
       "example": "PT: «O quarto da frente tem vista.» BR: «Moro num apartamento com dois quartos e uma sala.»"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "77269157",
@@ -1367,18 +1367,19 @@
       "cultural",
       "falso-amigo"
     ],
-    "contentHash": "772691574fac7152ee83e473aedd6bf34482e830502d22e60220aca9cde95d13",
+    "contentHash": "22dcd6ae846dab94151967ab6bf99f0ebaa2b2277bbd443546fe8106bb94942a",
     "esContrast": "«Saudade» no tiene equivalente directo en español; es un sentimiento típicamente portugués.",
     "audio": {
       "br": {
-        "hash": "6864babd8894a89f1c47035d15ef389115f0e7fe5ee756d96f515c1a7e19754e",
+        "hash": "db7451e09bca5fceb4b172c22717fe86932c746cc2c2bd15978242d05ac03092",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "6489ae5b71500979f7abd10ae5d8a13c62db5de5b1ceee49f29d9a7cc0e0fe9b",
+        "hash": "6d820ad0efc8d9564df73ce029d3caf853964d014a808977da029ac1d8120876",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "translation",
     "data": {
       "source": "Siento una saudade inexplicable por mi tierra natal.",
@@ -1388,8 +1389,7 @@
       "acceptedAlternatives": [
         "Sinto uma inexplicável saudade pela minha terra natal."
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "787c7d24",
@@ -1404,6 +1404,7 @@
     ],
     "contentHash": "787c7d2466ba3a8a2ef106e988ed8ff60fa528e7b679939693e92481d4c0ec15",
     "esContrast": "En español 'pensar' usa 'en' o 'sobre'; en PT-BR y PT-PT se construye con 'em'.",
+    "variantStatus": "unchecked",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
@@ -1415,8 +1416,7 @@
         "a"
       ],
       "answer": "em"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "7b17a7b6",
@@ -1430,18 +1430,19 @@
       "formal",
       "pt-eu"
     ],
-    "contentHash": "7b17a7b68e90d7b6839b940ae48e942b2d653d909e7fe0fd711b4fbcbf728b2c",
+    "contentHash": "4091736947aa67ea889097fded816f48d509cd31dea51e89fccc7c2a95fc1ca4",
     "esContrast": "'Consigo' en PT-PT es formal (equivalente a 'con usted'); en español sería 'contigo' (informal).",
     "audio": {
       "br": {
-        "hash": "d426bba76c00fc107b99d34fe907ff3dba181686e86742f58af0b237487e58ef",
+        "hash": "b6e1cff85adccc12735cd1706eab0e4efd1cfd07fdd59356a85508db154fcad8",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "77a37b9c83ec8c0b5ee757e44afa72bd6fb26d98e4f9156abc9da695bcf4cf0b",
+        "hash": "11020668f1c76e1b1cebdba41ba24f1b20db3e84d73804abd1569b0e8a9ceea1",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "translation",
     "data": {
       "source": "Gostaria de estabelecer contacto telefónico consigo amanhã.",
@@ -1452,8 +1453,7 @@
         "Quisiera establecer contacto telefónico con usted mañana.",
         "Me gustaría ponerme en contacto telefónico con usted mañana."
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "7b9b4b9e",
@@ -1467,18 +1467,19 @@
       "informal",
       "coloquial"
     ],
-    "contentHash": "7b9b4b9e0274bc41c2b7a25661d7a1d175422adb86a551500912d8491b869b96",
+    "contentHash": "37f39a276ee6bf6960795af157402fee15307409b5dc0923c7a928d483f6abad",
     "esContrast": "'E aí' es muy coloquial en BR; en PT se dice más 'Então' o 'Então, como estás?'.",
     "audio": {
       "br": {
-        "hash": "e95a8409bc10a52d438bb3db255860a5aa1be547b3624d16b090e30a6dfd95d2",
+        "hash": "650841139db0f57e1c703eafb10fe4463257d39ace77dbce83cdb1ff01795bd2",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "980112204a281432abd386315278852c78686254920eb994b16c1631f0e02fbc",
+        "hash": "a7d203260eb8e6bf47d8ee2c09efa5ec6c4cd2be4010d8d88a4abbada19f545e",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "translation",
     "data": {
       "source": "E aí, João? Tudo bem contigo?",
@@ -1489,8 +1490,7 @@
         "Qué tal, João? Tudo bem?",
         "E aí, João? Como estás?"
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "7d06ab4a",
@@ -1505,21 +1505,21 @@
     "esContrast": "En BR 'você' es informal; en ES 'tú' funciona para ambos registros. En PT-PT, 'tu' es informal y 'você' es formal.",
     "audio": {
       "br": {
-        "hash": "7fc6d932861d2959e9bb8ad79de1ed44b220fa93d9f41d07de76e7bee5a3349d",
+        "hash": "393bdc39699b81881fb2bb7638fdb2943bf3228c21c3832fb73a001e64563dbf",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "ddc352b21c0d827e7811c3356782c6fe4a94ff1c26dcbaec4bbe2ba47804f649",
+        "hash": "b7fc9eac99f6685d625a732684bbff5ade0723bcd8237014eb4f20bc962b1d4f",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "Pronombre informal usado en Brasil para 'tú'",
       "back": "você",
       "example": "Você quer café? (= ¿Quieres café?)"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "80a3b750",
@@ -1533,18 +1533,19 @@
       "regional",
       "formal"
     ],
-    "contentHash": "80a3b750ac3ab8df741af0bdc90db1f9587ef1688ebc9e8b222e36f42e28044f",
+    "contentHash": "03e499eab8f2fb8be46aae1456c6b1b1f79eeca4faad1fde65d18467ef68f4ba",
     "esContrast": "«Corresponder-se» en PT-PT usa más la forma pronominal «correspondem-se» que en BR.",
     "audio": {
       "br": {
-        "hash": "d59b1ae84118093afa7074bfb71cebb21468723bb7447f67c67ec28cd3b7e75e",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "ec8280ec5244712fe4e03c67b71de70fae4fb2376a2752a170fb10d029817f7f",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "6fb773d66f61caaf2fa4333cb66475cb621a6f45444beded5e017a064130c20b",
-        "voice": "Portuguese_Wiselady"
+        "hash": "168d5fa66720cf2ea9a0fb5061c2f43ed080234420d903b74b041681ca850b91",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Las dos cartas se corresponden en contenido y en tono emocional.",
@@ -1562,8 +1563,7 @@
           "As duas cartas correspondem-se em conteúdo e em tom emocional."
         ]
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "8568365f",
@@ -1577,18 +1577,19 @@
       "coloquial",
       "regional"
     ],
-    "contentHash": "8568365f449d4f63094876ebf5915630481a9d3e941151bcf29feaba0ad60fa5",
+    "contentHash": "ce24fc8f2ca6939a58565251bcb8eea39d181d9c365a081b1a0cbd5c62a9cf92",
     "esContrast": "En PT-BR se usa mucho 'tu' entre amigos; en España 'tú' también, pero 'você' es más formal allí.",
     "audio": {
       "br": {
-        "hash": "bac7fa66420826e51789b397f814c265e720bee5ad02ba4dd0ed1bbff638335c",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "a5b6fa5156be9adb2a9fe00b6d326dfaccd2a746c3e41cb2e10c6332fab0c747",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "61b61059eb07a4ac5019365e52efb5f83efd9fa1ab45bded6765cb945cd4c0e4",
-        "voice": "Portuguese_Wiselady"
+        "hash": "91523d1c65ee2f4fdf30c865f6e13cb91a6c82f5be8c256474a3a98cd5af8179",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "divergent",
     "type": "listening",
     "data": {
       "audioText": "Olá, meu amigo! Tudo bem? Vamos combinar de sair amanhã, está bem?",
@@ -1605,8 +1606,7 @@
       "pt-br": {
         "audioText": "Oi, meu amigo! Tudo bem? Vamos combinar de sair amanhã, tá?"
       }
-    },
-    "variantStatus": "divergent"
+    }
   },
   {
     "id": "85e396b1",
@@ -1620,25 +1620,25 @@
       "falso-amigo",
       "regional"
     ],
-    "contentHash": "85e396b1516d5c0ba07e3be23b1c1b5dc7eaa32a10691cb3d562e032865d0e5a",
+    "contentHash": "af07b44d669de3582e4aad5eaa64ff7bb16164ff64d280aed931fbdf83216cc0",
     "esContrast": "Lo que en España/Portugal es 'cola', en Brasil se dice 'fila'.",
     "audio": {
       "br": {
-        "hash": "217ddf839d34440f69ee5bd8d702ef9d859192df1009d645af119e67c6e3344a",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "b264c82bf57f61cf7f5a28bf51dc2ab45bd0407ae7b26d6f00e68cdaadc1deb6",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "c8efb12a5dec52fc104a01a359b726b7adc367ce48bb40b83b6faa243f7058d3",
-        "voice": "Portuguese_Wiselady"
+        "hash": "b264c82bf57f61cf7f5a28bf51dc2ab45bd0407ae7b26d6f00e68cdaadc1deb6",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'autobús' en PT-BR y en PT-PT?",
       "back": "🇧🇷 Brasil: 'ônibus'. 🇵🇹 Portugal: 'autocarro'. Misma cosa, palabras distintas.",
       "example": "BR: «Perdi o ônibus.» PT: «Perdi o autocarro.»"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "882baba3",
@@ -1652,18 +1652,19 @@
       "falso-amigo",
       "regional"
     ],
-    "contentHash": "882baba345dcec3f905cda3dd80695ae214daf55799a5ab040b4212e27aba492",
+    "contentHash": "3c4169e3300cb3ad5c09cc5336da675aadd08f40c2449c8c882f12433a0e5148",
     "esContrast": "En portugués 'fila' es universal para la cola; en PT-PT también se usa 'fila de espera'.",
     "audio": {
       "br": {
-        "hash": "2911c110631b408a870aa803ba7741069d22655a70f01ea2d853543049de7573",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "72056cfe6a579c969b35984c7f2cb4d1cf8a659bf17f74f70ec016e9561b5fba",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "c55763a38908739ad00038baf342a8a88b2ff18fb5fae10c294e89fe10b22d8d",
-        "voice": "Portuguese_Wiselady"
+        "hash": "d98c7804d437fd43f35f822fc8d5f237eb837f92d5d319d2f71f86888268d982",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Fiz fila de espera para pagar a conta do restaurante.",
@@ -1679,8 +1680,7 @@
       "pt-br": {
         "source": "Fiz fila para pagar a conta do restaurante."
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "887c4692",
@@ -1693,18 +1693,20 @@
     "tags": [
       "formal"
     ],
-    "contentHash": "887c4692d9dc76e0f635e30d4b7831adb935e0960f411702dcc23e6fdaca7af9",
+    "contentHash": "045361e0932e0da5d3a7b6502337b2fb6bc63d336af92ab7ba8ed8ee5894099d",
     "esContrast": "En PT formal se evita 'usted' (você); se usa construcciones impersonales o 'a direção' como sujeto.",
     "audio": {
       "br": {
-        "hash": "ef06386506b6a2ee33a9103bdc37ac643e6a6e363a2d217433cf1de72ba49a63",
+        "hash": "208bbec038ddb016eff5e8670414176d26d85f25ea9c74305e281d96b841c4fb",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "844c5dbaac09bf13259b35a719a1cd7cfb7c2660b7bb60d2ee712c5a81f8e4c6",
+        "hash": "656fd70c99217849dafbbcb799139c3e7a04d8fbdddc062f24931ff006b4063d",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "needs-human",
+    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: próclise en inicio de frase",
     "type": "translation",
     "data": {
       "source": "Venho informar que o projeto foi aprovado pela direção.",
@@ -1715,9 +1717,7 @@
         "Informo que o projeto foi aprovado pela direção.",
         "Cabe-me informar que o projeto foi aprovado."
       ]
-    },
-    "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: próclise en inicio de frase"
+    }
   },
   {
     "id": "8889b3d1",
@@ -1731,21 +1731,21 @@
     "contentHash": "8889b3d1e846f352d7de6ba766f613826b9c183fe74caea53cfcc36d2c9dd4cb",
     "audio": {
       "br": {
-        "hash": "4d3b27d2b7ef29b047de0d1a48bfe68ee41c25386313f98c5b0644c83ea68c19",
+        "hash": "be4dc7c7fd0a22afa10b6bbfbb11fe04cd90fc0e90a44f2c9a2dd5367527caae",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "b8b51b5fd636ffd1447a365215a6074a3bfb6002563624a9cce38194acd2d75f",
+        "hash": "455242f264d0c62588c4950f485d43b66f4fd67e9c30b5ab69bdabda8f21e82c",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "Expresión formal para iniciar una carta o e-mail ('Estimado/a...')",
       "back": "Prezado(a) / Caro(a)",
       "example": "Prezado Senhor Silva, (= Estimado Señor Silva,)"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "8aebdee1",
@@ -1760,6 +1760,7 @@
     ],
     "contentHash": "8aebdee170e363f7295d04828d25be30ded717f894fd87f188c8aa942b6ee0fc",
     "esContrast": "PT 'lembrar-se de' y ES 'recordar' comparten la preposición 'de'.",
+    "variantStatus": "unchecked",
     "type": "verb_preposition",
     "data": {
       "verb": "lembrar",
@@ -1771,8 +1772,7 @@
         "—"
       ],
       "answer": "de"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "8dc1d8a1",
@@ -1788,6 +1788,7 @@
     ],
     "contentHash": "8dc1d8a166dfe01bd909dc1d77e4ff0b73154467248824622c6ccb5463cf0565",
     "esContrast": "En español 'necesitar' no lleva preposición; en PT 'precisar' rige 'de'.",
+    "variantStatus": "unchecked",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
@@ -1799,8 +1800,7 @@
         "—"
       ],
       "answer": "de"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "93493258",
@@ -1813,6 +1813,7 @@
     "tags": [],
     "contentHash": "93493258fa429ce5413c1374fc43ab1fd8045ca68ac31b24578d76c8d05775cf",
     "esContrast": "En español 'corresponderse' es reflexivo recíproco; en PT es 'corresponder-se' sin preposición.",
+    "variantStatus": "unchecked",
     "type": "verb_preposition",
     "data": {
       "verb": "corresponder-se",
@@ -1824,8 +1825,7 @@
         "entre"
       ],
       "answer": "se"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "9c8d7ded",
@@ -1841,6 +1841,7 @@
     ],
     "contentHash": "9c8d7dedd7666c9a28a51fba06642459240049150533225a47ea702b9f2438e6",
     "esContrast": "'Achar' = encontrar en ambos, pero en BR se usa mucho más que 'encontrar'.",
+    "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu não ___ onde deixei as chaves do carro.",
@@ -1853,8 +1854,7 @@
           ]
         }
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "9c8f5ab6",
@@ -1867,17 +1867,18 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "9c8f5ab67bf46a26ea7606a6a7cce8c1b0dfae961549d1aceeb484eb82d9ff44",
+    "contentHash": "61b9e83abcd196c6cf2524ec7601a7a07003d51b4b5221a56bf2286322b295a2",
     "audio": {
       "br": {
-        "hash": "4af2d8b4790668f265d6164836b41178dbb4eea98fb9e302f124ba7935a61a9d",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "236bc7b41d9b2b3ba26f042f97dbe5aea64a77927043329fd590e1e8b1b97aaf",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "3fba871eb196bfe9bd0f3f4305a7ce2a8acaded90ab18641fac07d7950fd851d",
-        "voice": "Portuguese_Wiselady"
+        "hash": "803c056333588b091f027e4747027be78cdc59e2eaa16aeef1bab9648c6abd2c",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "divergent",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'gorro' en Portugal? ¿Y 'bufanda'?",
@@ -1888,8 +1889,7 @@
       "pt-br": {
         "back": "🇵🇹 PT: 'gorro' (gorro); 'cachecol' (bufanda). 🇧🇷 BR: 'boné' (gorra), 'bufanda' o 'cachecol'."
       }
-    },
-    "variantStatus": "divergent"
+    }
   },
   {
     "id": "9cbd4ae1",
@@ -1904,6 +1904,7 @@
     ],
     "contentHash": "9cbd4ae124cfd0d4ba8574b60debf79e3067ad71b38f6308f5f1053ffa3e477b",
     "esContrast": "Ambas lenguas usan preposición, pero diferente: PT 'em' vs ES 'en'.",
+    "variantStatus": "unchecked",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
@@ -1915,8 +1916,7 @@
         "para"
       ],
       "answer": "em"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "a120b356",
@@ -1930,18 +1930,19 @@
       "cultural",
       "regional"
     ],
-    "contentHash": "a120b356144309702debf72753d3a2418fe66918268e415035e4c0775526d55c",
+    "contentHash": "9a54da673c5dd88fd8b022731a12ff8f8f9795eaf176f839018ea0804dbbd20c",
     "esContrast": "«Saudade» en PT-BR se usa con artículo femenino (a saudade); en PT-PT puede variar su género.",
     "audio": {
       "br": {
-        "hash": "c00bc75b6d8a7353c238ed85360543cda4878897cdb89eb1d5bfb43874deeffc",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "9cf640a88e93f4f364f674fffe0543b882a09d144e86f8bf5a62a7b96f0c0711",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "367470e06b4987a56a39670863c1e8ee9ad2ab43926287772615815c906709b4",
-        "voice": "Portuguese_Wiselady"
+        "hash": "610403958228fa9920464455cf1d16d55ebdb6b90ff12a6daeeb850bea182715",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "La saudade de Brasil es diferente de la saudade portuguesa.",
@@ -1959,8 +1960,7 @@
           "A saudade brasileira é diferente da portuguesa."
         ]
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "a2541a1f",
@@ -1973,18 +1973,19 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "a2541a1fcabcb8d02bea85cb1c7adbba884fdfec4414deaf41ff416bf6bd74bc",
+    "contentHash": "ae3ef025385b036603f2d7a90a1f8c4d4baba46bee2e847db5a04fa32153736e",
     "esContrast": "«Correio(s)» en BR se pluraliza más; en PT-PT se usa «correio» o «correios» indistintamente.",
     "audio": {
       "br": {
-        "hash": "b68ae464e7cd963401d2c9818da143bfd4d6818ef35402dbf3ad13410248ca10",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "1d9639423e5c137ba09bf6cc8fc278d3b9a5b771a77293b824beea1a4aeeb248",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "7741a756a8f7bb8cb7dd33abf73f027824a8cab6be1a52787ad395976cd50b85",
-        "voice": "Portuguese_Wiselady"
+        "hash": "d990affc6916f1e0cf9f9e361a98ffa0d5ce1c1e21164f374b0042cc299e38ca",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Voy al correo a enviar un paquete certificado.",
@@ -2002,8 +2003,7 @@
           "Vou aos correios enviar uma encomenda registrada."
         ]
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "a32d2dc4",
@@ -2017,18 +2017,19 @@
       "formal",
       "regional"
     ],
-    "contentHash": "a32d2dc4497c86693c0e3a2448093b9eb19b7d814fd25d83fddf9a0be857ae7a",
+    "contentHash": "653c95ef064dbe700b124adebe4f27b5ca06d8d413dfa36989995f3dde608ac8",
     "esContrast": "En PT-PT 'correio' abarca todo el servicio postal; en BR también se usa 'correios'.",
     "audio": {
       "br": {
-        "hash": "44811bfb3ba807be13b14464c55b504ec469f545dc79de61889d72e78e5a11b4",
+        "hash": "260a7b61dc699a930b10a479002f6409e323b77e793b81f543024383706fd42b",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "8de087eaa837ef20c261af821f3616c59050190edf6166eee0aca68aaa287d30",
+        "hash": "e15b85b922056079105a9baa0030484cd72738566d0ad06b3320660ff7d79620",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Mandei uma carta pelo correio normal.",
@@ -2043,8 +2044,7 @@
       "pt-br": {
         "target": "Envíe una carta por correo ordinario."
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "a38afcf6",
@@ -2059,6 +2059,7 @@
     ],
     "contentHash": "a38afcf6eb2e45de98dedb9c03c76f4dbac56449760bfcfcc7def81f1d2a9398",
     "esContrast": "PT-PT usa 'aspetos', BR usa 'aspectos'.",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "A norma culta escrita em Portugal e no Brasil ___ em aspetos gramaticais.",
@@ -2076,8 +2077,7 @@
       "pt-br": {
         "sentence": "A norma culta escrita em Portugal e no Brasil ___ em aspectos gramaticais."
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "a398e02b",
@@ -2092,18 +2092,19 @@
       "escrita",
       "regional"
     ],
-    "contentHash": "a398e02b1fb7e055090fb7f0fb63b0bf53bb53932aebd629e1e2be004b9ed41b",
+    "contentHash": "dc3c1629ecc54e7ba45c147e9dac10a943da1f0a4cd3fe287779ba6c155ab3a9",
     "esContrast": "'V. Exa.' = 'Vuestra Excelencia' es archaic en español moderno; en PT aún se usa en registros muy formales.",
     "audio": {
       "br": {
-        "hash": "f19d19e80fe05b5276841e9b4571acbebaa344cf71990f4e91b1ac5e2ca8d70e",
+        "hash": "5a2158592dc6a12d748c5f4eb0b6167a145548e536c52596be719a019a9b3295",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "32d2e0fee6cc2e33051738ddf88fed7caeb270cae733cdd1373aa4d88394732b",
+        "hash": "b572018d7d3304d3419ee3ef9b5909d7db33d8fe8370f4969e295de1b088b76c",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "translation",
     "data": {
       "source": "Venho por este meio informar V. Exa. de que a reunião foi adiada.",
@@ -2114,8 +2115,7 @@
         "Les informo por este medio de que la reunión fue postergada.",
         "Por la presente, informo a usted de que la reunión fue aplazada."
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "a3b9c993",
@@ -2129,18 +2129,19 @@
       "informal",
       "regional"
     ],
-    "contentHash": "a3b9c99389370b3099713adbb443b9c074e30f3cdb84153e422a7fbfb6e454b7",
+    "contentHash": "a2e5d903ff61687fa7b9aac061c0146c4012fa4228f53210913e1b0294846278",
     "esContrast": "'Fala-me' usa 'me' enclítico; en BR puede ser más natural 'Me fala' en contexto informal.",
     "audio": {
       "br": {
-        "hash": "989163eddf978152eeb2c481e948a85a4f54054b738a778fe13b377ad3f2c94a",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "58083ab015131e9b6c0eb02d97f9c824b1958ef5668a88a9c8b8c48b108b9ac2",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "fb45dd48a89a7551396dbe86f99f1b71a746ab8c4fda3eac9a3a562173065cc5",
-        "voice": "Portuguese_Wiselady"
+        "hash": "c539ac745305f6770ff4227bcab3f50b15558bf11cfd24854510498fd77eb10d",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Fala-me quando puderes, preciso de falar contigo.",
@@ -2156,8 +2157,7 @@
       "pt-br": {
         "target": "Háblame cuando puedas, necesito hablar contigo."
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "a9ce69b5",
@@ -2172,6 +2172,7 @@
     ],
     "contentHash": "a9ce69b57072af3e2778aeccab1ad467c32b9c954a8e90881251e86bb9c15f8d",
     "esContrast": "'No meu entender' es una expresión fija; no se dice 'no minha opinião' en PT.",
+    "variantStatus": "divergent",
     "type": "fill_blank",
     "data": {
       "sentence": "No meu ___ , essa é a melhor opção.",
@@ -2198,8 +2199,7 @@
           }
         ]
       }
-    },
-    "variantStatus": "divergent"
+    }
   },
   {
     "id": "ab779905",
@@ -2213,18 +2213,19 @@
       "cultural",
       "coloquial"
     ],
-    "contentHash": "ab7799059fc1bc54c71201c0b880869dc116445b03d1f2603aa79ee8017d68bb",
+    "contentHash": "916b5d7e45063cc757ca72fb999e4dbe5724838d9e93f920d159e7a91ca8bcf4",
     "esContrast": "'Saudade' es un concepto portugués sin equivalente exacto en español.",
     "audio": {
       "br": {
-        "hash": "61a3b41acd4b21780bdc3ab05aec1e4a0e6d976ce74877e33ee75b3f2011164c",
+        "hash": "9d33371dac5dee8a815c26ed753112d51e5aa383d6425b2b655c6ec2fa705fce",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "02ff575fa4dbc1d5260ed1f8a35ea286de62ef4bb3f079873b34db55c9648dc6",
+        "hash": "6b2d160b76f1c03c5bc196246d197dff780ebdf0e796f770dae7b7c857820a6a",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "translation",
     "data": {
       "source": "A saudade que sinto de Portugal é impossível de descrever.",
@@ -2235,8 +2236,7 @@
         "La añoranza que siento de Portugal",
         "La nostalgia que siento de Portugal"
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "ac328f9f",
@@ -2253,21 +2253,21 @@
     "esContrast": "En español 'el abajo firmante' se usa en documentos oficiales; en PT-BR es similar",
     "audio": {
       "br": {
-        "hash": "f3adcd32752e5ae0e6ef57f742cfb0685c24caed28c2929444c53348637bd547",
+        "hash": "92fae7f5dce27b76733e2106a29cd1b35a17cb56381d9eb035cd0a48097bd4e0",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "fcef8c71b408caf2ce6f6516ac51728100c9be68d73a5250ebf990ecb791cbe0",
+        "hash": "8501abb9a402b913829a64a322e800fe123912d1a29c710a3fa5578eaf730643",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "Fórmula de cortesía para referirse a sí mismo en e-mails formales (= 'el abajo firmante')",
       "back": "o abaixo-assinado / Eu, abaixo-assinado",
       "example": "Eu, abaixo-assinado, declaro que... (= Yo, el abajo firmante, declaro que...)"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "ad731478",
@@ -2285,14 +2285,16 @@
     "esContrast": "'Prezado' significa 'querido' en PT formal, no 'preocupado' como podría pensar un hispanohablante.",
     "audio": {
       "br": {
-        "hash": "020e1b4b599ed9fe31d522dc23794cc7c478419f638b9889c7705e2587be8923",
+        "hash": "1149a3b75904f240454813295983df7058302eeeb790e7c7ef2db8a82b789ccd",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "7c493e50f71db3b893d63b4de14185cf80d5c3fbf73f302259ca24cd7e979873",
+        "hash": "86343b648f3f98cdb85971830e0fe7f1e01755fd0cf86e565824aa9d5e24adc4",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "needs-human",
+    "variantVerificacion": "auditoría de calibración 2026-07-29: Prezado (BR) + contacto (PT): quimera",
     "type": "listening",
     "data": {
       "audioText": "Prezado cliente, agradecemos o seu contacto. Responderemos em breve.",
@@ -2304,9 +2306,7 @@
         "Falow + abs"
       ],
       "answer": "Prezado + cliente"
-    },
-    "variantStatus": "needs-human",
-    "variantVerificacion": "auditoría de calibración 2026-07-29: Prezado (BR) + contacto (PT): quimera"
+    }
   },
   {
     "id": "addaefb6",
@@ -2317,17 +2317,18 @@
       "b10-registro"
     ],
     "tags": [],
-    "contentHash": "addaefb6765f27d5bed4802ea9905e17af7389f06df0ad8421ae301b44682631",
+    "contentHash": "ed96a19fb3d46b09d27ef57aa22bac823fc62cfd2a27c0a5d2f7b876369fba8a",
     "audio": {
       "br": {
-        "hash": "f422ce649c7c4d962e7486ce18bbe2726a9631609a59f238e835466dbe31567f",
+        "hash": "193e34457b2c3a5c4e7e52d7bab791a741454c4c8788dd3d4c6ae81b79122db5",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "287d3ed70ee446627e9a6a7bec426170fdcad716d7866312ac7e6319d8dc7424",
-        "voice": "Portuguese_Wiselady"
+        "hash": "b8d06dfed7a28c5ded3ba9d48d9a6c4fffde6e33edadb4c2ad51949b4a7a112a",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "divergent",
     "type": "flashcard",
     "data": {
       "front": "Saludo informal usado en Brasil (equivalente a 'hola')",
@@ -2339,8 +2340,7 @@
         "back": "oi",
         "example": "Oi, tudo bem? (= ¡Hola! ¿Qué tal?)"
       }
-    },
-    "variantStatus": "divergent"
+    }
   },
   {
     "id": "b21f2d27",
@@ -2356,21 +2356,21 @@
     "contentHash": "b21f2d271203cd1b0e3c6c761def80cf29acd3e38ee7beb2a61bc60b2c61804f",
     "audio": {
       "br": {
-        "hash": "eeb89f5b385eedb93f9673d5aec4b9f79816b942507b7c7318a8094b528c96f7",
+        "hash": "840d8a6c2a62fe2a594b58f3ddd0be7a5cb2b40a607d91e7c2f3322721a62c8b",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "b4d635bd0fd06c642eb3111953126c2fa6350e06dd506cba0a4a445854eb451a",
+        "hash": "bd72b60434329b654c23e46dfd2e04b585b0ecc6042c5f3e15f14487496b8811",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "Completa: 'As duas cidades ___ em contacto desde 1990.'",
       "back": "As duas cidades manteram-se em contacto desde 1990. / 🇧🇷 BR: se mantiveram em contato.",
       "example": "Continuaram correspondendo-se durante anos."
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "b52a9cd2",
@@ -2386,21 +2386,21 @@
     "contentHash": "b52a9cd2732f88a5cccfba39df9b1fa0296543dd4608e10c14b78d9c018ccd36",
     "audio": {
       "br": {
-        "hash": "2bc5b5e0a55eb19c0a9345f11bd23be33d0ab8761d7bf18256a3d3db753c5718",
+        "hash": "307923725a012e4fbbd697501605c2aeb854356da1eedcbfc2d564052ffb7cf7",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "8e37fed8351887419f62dfb60e5b378b35a4013ed981ab4e1dc25cde3901f86b",
+        "hash": "cf3550b40893298ae3907a38801441ce632800dcdd576bc84faeb85ad918191b",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "Traduce al BR: 'Fui aos correios enviar uma carta.'",
       "back": "Fui ao correio enviar uma carta. / Fui na agência dos correios enviar uma carta.",
       "example": "No Brasil se usa 'correio' en singular o 'agência dos correios'; en PT se dice 'correios'."
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "b646cfbb",
@@ -2415,6 +2415,7 @@
     ],
     "contentHash": "b646cfbb1f21ab0aad66c9fbd22f681723739f3a289264abb6249433b53c361a",
     "esContrast": "Se dice 'fazer o favor' (hacer el favor), no 'fazer favor'.",
+    "variantStatus": "divergent",
     "type": "fill_blank",
     "data": {
       "sentence": "Pode ___-me o favor de me dizer as horas?",
@@ -2432,8 +2433,7 @@
       "pt-br": {
         "sentence": "Pode me ___ o favor de me dizer as horas?"
       }
-    },
-    "variantStatus": "divergent"
+    }
   },
   {
     "id": "b82835d6",
@@ -2451,21 +2451,21 @@
     "esContrast": "En español 'soledad' no transmite el mismo matiz emocional que 'saudade' tiene en portugués.",
     "audio": {
       "br": {
-        "hash": "f1b4980f96efa129944492ae8a1f2f96b80894f1df0c95b52330fa064c6f71d7",
+        "hash": "68489948e2a989e37dc8a28ec235ab77a7fdface33b0589824835132ba04edd2",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "a274047b1e0e88b883a6e1d66391a67bb64e1253f09fd43aeb941f8d35e04358",
+        "hash": "3c700429582a4731b3551189d3f0ab3cfe51c2a90e7a5ac5761e7153d9e8ffc1",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "¿Qué es 'saudade' y en qué variante se usa más intensamente?",
       "back": "Saudade é um sentimento de nostalgia e longing por algo ou alguém ausente. É mais valorizado culturalmente no Brasil e Portugal, mas é central na cultura portuguesa.",
       "example": "Tenho saudade da minha avó."
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "ba018be3",
@@ -2478,17 +2478,18 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "ba018be3e2b8ce860ea21f51fb6e3b639557a349acef0733fe4cdf0d94899243",
+    "contentHash": "579bf50b11f0e4912d47144daa003b7a6e51fdd2eafa1659e53bec71e8f2a7b2",
     "audio": {
       "br": {
-        "hash": "b6eaf894d9f8ef52fadbb3a7e31b6991950ea873c0bec22e06cca47d717d98b2",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "37be9115819626099c907521d8b9cd25d15cd408a719bc684a0e55256afb74e0",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "abf6843eca919b760d94369381b363a12a0cb26bb4de440c4b3d2e55e7a85f93",
-        "voice": "Portuguese_Wiselady"
+        "hash": "28ec7b5597fc05630e597e8ee49b20e6af6cdbe3a80e6f03eb2f77012269947d",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "divergent",
     "type": "flashcard",
     "data": {
       "front": "Léxico diatópico: 'pastel' en Brasil vs. Portugal",
@@ -2499,8 +2500,7 @@
       "pt-br": {
         "back": "🇧🇷 BR: 'pastel' = empanada frita rellena (pastel de Belém es portugués); 'pastel de vento' = cruasan. 🇵🇹 PT: 'pastel' se refiere a pasteles en general."
       }
-    },
-    "variantStatus": "divergent"
+    }
   },
   {
     "id": "be0b2cf0",
@@ -2516,6 +2516,7 @@
     ],
     "contentHash": "be0b2cf0547b919d209134415acb7f68e5280121669c96b536bcfe50253c8048",
     "esContrast": "En portugués se dice 'o senhor' y 'a senhora' (artículo + sustantivo), no 'el senhor'.",
+    "variantStatus": "divergent",
     "type": "fill_blank",
     "data": {
       "sentence": "___ senhor, poderia dar-me essa informação?",
@@ -2533,8 +2534,7 @@
       "pt-br": {
         "sentence": "___ senhor, poderia me ajudar com esta informação?"
       }
-    },
-    "variantStatus": "divergent"
+    }
   },
   {
     "id": "c0623917",
@@ -2548,18 +2548,19 @@
       "informal",
       "falso-amigo"
     ],
-    "contentHash": "c0623917401ee8d0a6e05fad6bdef16c338560681bcf976a0cab1490ee211d53",
+    "contentHash": "aac7acc4e01b46af518860cbdfdb2179efcbef0b36b22d3df55ce97ccd7b8b7f",
     "esContrast": "'Fixe' es argot PT (cool/guay); no confundir con 'fijo'. 'Vocês' en PT se usa más que en BR.",
     "audio": {
       "br": {
-        "hash": "fe411f942e448f00d661880d63a4e806c4e9f51dba180e350eb0e06b8584ba9b",
+        "hash": "d3233971fc8139ff465ebe2e58d17c1cc402f691d231246dbaf0ecbf57277879",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "6a09426c62dbaaf6879ff6b98da65c05c679df07c6570e6cc258a5b0ae0c6c5e",
+        "hash": "7250c5b0a78d6d48441164712ac0d3f1cda19373ae6137d2a5327d00ba7020c1",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "translation",
     "data": {
       "source": "Abraço grande para a equipa, vocês são fixe!",
@@ -2570,8 +2571,7 @@
         "Um abraço grande para a equipa, vocês são fixe!",
         "Abraço para o pessoal, vocês são demais!"
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "c1c6623d",
@@ -2587,6 +2587,7 @@
     ],
     "contentHash": "c1c6623dea9e8fa311fd95b9d7fbff96fa73893b3aa0df37f1ef5fb5bcac13da",
     "esContrast": "En español 'gustar' no lleva preposición, pero en PT-BR y PT-PT 'gostar' siempre lleva 'de'.",
+    "variantStatus": "unchecked",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
@@ -2598,8 +2599,7 @@
         "para"
       ],
       "answer": "de"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "c2858eb6",
@@ -2615,21 +2615,21 @@
     "contentHash": "c2858eb6c23e1391388b5b00310b1bf02d85760e7c3dd88b2a54916ae3a0f1ed",
     "audio": {
       "br": {
-        "hash": "5bf458c5c8bc3440775191b084ba91f07dd1f10f7f36cb3691070e596c7a7f63",
+        "hash": "c869eeea4e884df6a3a5e8f2965dd31a7f605ad9baf35d29dea08c8442bdc768",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "511eda22f2b3d0db2496c2d1a0c081fdb4744404b5645fd57a5203f4201edbd4",
+        "hash": "f7b53fadf80eef058510b4ff3f5c2f1c2677b6948fda4f088f53cca5a923d298",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "¿Qué es la 'norma culta' en relación con la variación diatópica?",
       "back": "La norma culta es el estándar formal del idioma usado en medios de comunicación, documentos oficiales y educación. Coincide más entre BR y PT que el uso coloquial, pero aún hay diferencias léxicas y gramaticales.",
       "example": "En textos escritos formales, BR y PT se entienden fácilmente; en conversación coloquial, las diferencias son mayores."
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "c33c1ba3",
@@ -2645,6 +2645,7 @@
     ],
     "contentHash": "c33c1ba397d06c5cab50ea8f83e0f1849ff62c82eb08c2c79f02a3bca1703abd",
     "esContrast": "'Correio' en PT funciona como sustantivo independiente (correo postal).",
+    "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
       "sentence": "O serviço de ___ em Portugal é muito eficiente.",
@@ -2657,8 +2658,7 @@
           ]
         }
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "c398eb39",
@@ -2671,18 +2671,19 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "c398eb394178813b13db85a7266b182016fdf52f5e18cc109d044cfe4203b99c",
+    "contentHash": "31dfe20e9316a3748ef5bd41dc8fef4854a9fda75f83e194ef2a8cd213cf8add",
     "esContrast": "En PT-BR se escribe 'afecto' igual que en español, pero en PT-PT cambia a 'afeto'",
     "audio": {
       "br": {
-        "hash": "3ef4ed670fc3b9677c6259f343d3dd7887a2abdfe60d98103288fc1a0be758d5",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "bf1ac085c3c78dd876a8e542b31fe3d27e95a5ab3957902a18ccb0eeac0cec3a",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "fce994751be9d79e44c7825f12eea39af079dd1bac333082bddd10af9580093d",
-        "voice": "Portuguese_Wiselady"
+        "hash": "ed0eee7f68eac6678915ca3c7eb065e796d4b59aa22c2d02814c948dbfb7f8ff",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Palabra para 'afecto, cariño' en PT-BR",
@@ -2694,8 +2695,7 @@
         "back": "afecto",
         "example": "Ela tem muito afecto pelos alunos."
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "ca1b64bc",
@@ -2712,21 +2712,21 @@
     "esContrast": "En portugués significa 'saludos', no 'cumplidos' como en español (elogios = elogios)",
     "audio": {
       "br": {
-        "hash": "a4a56952abc4dbfe09a60fb8122a5ef9d001b7d4b6193efa6775309fc4b71181",
+        "hash": "a0cf14429cfeb8e4605ce696b0256c9f61c25458160483c9966643b79d891d8a",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "14a6b36ca32da779de4521fb1b680bf8959165902942c3a287193b9b2c8ece6c",
+        "hash": "3d5f5e2d2394595e5eb160480b1c2b11ceeac0a247dbef961c509c512830b0b4",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'cumplidos' en portugués (referido a saludos)?",
       "back": "cumprimentos",
       "example": "Enviei-lhe os meus cumprimentos. (= Le envié mis saludos)"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "cba7cf71",
@@ -2741,18 +2741,19 @@
       "coloquial",
       "falso-amigo"
     ],
-    "contentHash": "cba7cf71031bf9f05fd28ea7fc4e4903480bdd5f1a5759792c5684df76595eaa",
+    "contentHash": "259436d32ff743b62537cfeae76f36b07cad2f81a559f3a138f0bc4a786da3be",
     "esContrast": "'Vocês' = 'ustedes' (español), NO 'vocés'. Es falso amigo: PT 'vocês' = 3ª persona, no 2ª plural coloquial.",
     "audio": {
       "br": {
-        "hash": "82dca1ca7f64301cf381b9c58734d0a533cb7238cf7cb611a3241b8bb59c4da4",
+        "hash": "daa8fa8d9855291f93803b0152a8e231242a82742b71af4a8e441c75eac70ba0",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "2309e4f0e6441a004b7475f147140f0fd8fc7afb00e54621b70159068f39a4e0",
+        "hash": "268cdeead22782abb14147546669dd6031e9451688df4af65c54aba8a221beb8",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "translation",
     "data": {
       "source": "Vocês podem me ajudar com isso?",
@@ -2763,8 +2764,7 @@
         "¿Podéis ayudarme con eso?",
         "¿Podeis ayudarme con eso?"
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "ce44840f",
@@ -2780,6 +2780,7 @@
     ],
     "contentHash": "ce44840f8696db02599a96c57c769d95940c61797ecc4284c18fff0a37cc2fca",
     "esContrast": "PT-PT usa 'dialectais' (variación regional); BR prefiere 'dialetais'.",
+    "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
       "sentence": "Madeira e Açores ___ variantes dialectais próprias dentro do português europeu.",
@@ -2792,8 +2793,7 @@
           ]
         }
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "ce4df185",
@@ -2807,18 +2807,19 @@
       "informal",
       "afecto"
     ],
-    "contentHash": "ce4df185d095dbd945c332276fb8bc06f04b1c0e6427930493f8b4c3343de5f7",
+    "contentHash": "f23d5cf4c931364b6229a94b5aeea6565ffe7b336c6d0402d21d8fc9ac7ca1e2",
     "esContrast": "'Afecto' en PT significa 'cariño'; en español es menos común y suena más frío o formal.",
     "audio": {
       "br": {
-        "hash": "15ad22799fc01bcf3e5f6e3317bc064c84071f9cb0ea48f2e4146295a0b974b3",
+        "hash": "64d2b856043e28361a92e5ee4c0aec04a81bca13cc24cf3e940938893706368b",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "3840b534b92bbfc0babd4f8a13a2ae5b50e6559dd95d9b22108bb1a265e24db8",
+        "hash": "6b4732c7c00ca2a86dbf6ff411dfbf82ab9baa22fd4d892b0c83ab74a50aba16",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "translation",
     "data": {
       "source": "Minha filha, quero te dar um abraço com muito afecto.",
@@ -2829,8 +2830,7 @@
         "Hija mía, quiero darte un abrazo con mucho afecto.",
         "Hija querida, quiero darte un abrazo con mucho cariño."
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "d04ecaf7",
@@ -2845,6 +2845,7 @@
     ],
     "contentHash": "d04ecaf716c3c00cc9267cf8d3218531e50a5db921585626f356b4f19f5385cd",
     "esContrast": "'Prezado' y 'Caro' son saludos formales de apertura en e-mails.",
+    "variantStatus": "divergent",
     "type": "fill_blank",
     "data": {
       "sentence": "Caro ___ , Encaminho a presente mensagem para solicitar informações.",
@@ -2863,8 +2864,7 @@
       "pt-br": {
         "sentence": "Prezado ___ , Encaminho a presente mensagem para solicitar informações."
       }
-    },
-    "variantStatus": "divergent"
+    }
   },
   {
     "id": "d5cf7fdf",
@@ -2877,18 +2877,19 @@
     "tags": [
       "formal"
     ],
-    "contentHash": "d5cf7fdfa3cea9f281bffea13625c50e306c5e9d1494f10e1ae6812eb314fdb0",
+    "contentHash": "53e84b7f4647c40514b39c2bc82e8cce2c0b0d623c02ac2f85a905ba3702ec97",
     "esContrast": "'Cumprimentos' en PT es 'saludos', no confundir con 'felicitaciones'.",
     "audio": {
       "br": {
-        "hash": "c4f9632259b7967288db23e5ef2cec212870cccddc15815bdbbbe4b9e162245d",
+        "hash": "d9790f6d0ae73cbe158e7797cb30d875c4752db1948d45b2c8b9ecfedbdeb3fc",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "cfd86b54b2f958556c2b5d30eface6bad25cdf31cfca5c2e9cb3d627da9d42ac",
+        "hash": "3fa8f3bd0b720696882f698e2bd3f3ed30bab4ce5cf3df0001ecded3a999be07",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "translation",
     "data": {
       "source": "Com os meus cumprimentos cordiais, Maria.",
@@ -2899,8 +2900,7 @@
         "Atentamente, Maria.",
         "Com cordial abraço, Maria."
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "d84dde46",
@@ -2916,21 +2916,21 @@
     "contentHash": "d84dde46fc35410037ae0e72825d2d369a4c74c9f3fba62788a942948b6c3510",
     "audio": {
       "br": {
-        "hash": "6d602df74f702698b7ffe844846fc0eb327f92468487b9c1a8b0ec13ef5b05c5",
+        "hash": "cf1e66f455c15e2a9b861e4cdfbf37e4578505164b0478b90ba4c55d4fc30da4",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "9253c6f0b2bffa31a6fe0d2f84af3e8f33b983003ebe3988f16409108cfda935",
+        "hash": "12d46b0d468b49df35991adc49534b068dd1035baaf5e5aff1fab548a945e883",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "Léxico diatópico: ¿qué significa 'freguês' en Portugal?",
       "back": "🇵🇹 PT: 'freguês' = 'cliente habitual' de una tienda o restaurante. 🇧🇷 BR: se dice 'freguês' también, pero 'cliente' es más común.",
       "example": "«O freguês do café da esquina já conhece todos os empregados.»"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "de4c58ca",
@@ -2945,22 +2945,22 @@
     "esContrast": "En español 'registro' funciona igual; ambos idiomas usan este término en sociolingüística",
     "audio": {
       "br": {
-        "hash": "8c703651fdd4b1c76558fe15b6edd225a845bdf2022ad9a976746c4e4d48caea",
+        "hash": "4ed0fd539928104f1e3a66ab50182656277a534dfdb7847015641502499f4a2d",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "cdce8fedb0daa218383b2cf225665b46617d2db7e74b0499e08b3a34e66ef314",
+        "hash": "3bd67804b45f0e1bdd57df9f91d5f16ec145dc2f12704228b23d8ed5117f43b0",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "needs-human",
+    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: registro",
     "type": "flashcard",
     "data": {
       "front": "Término para 'registro' en el contexto lingüístico de formalidad",
       "back": "registro formal / registro informal",
       "example": "Devemos adaptar o nosso registro conforme o interlocutor."
-    },
-    "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: registro"
+    }
   },
   {
     "id": "dfe63849",
@@ -2974,21 +2974,21 @@
     "contentHash": "dfe63849578c8a46d90021e2bba47785ffce3dae366cfca3a4fc50df18561f08",
     "audio": {
       "br": {
-        "hash": "23963080e85ad9c913041d68bab35986baf0a1c05b1ef49df69572c355ae46eb",
+        "hash": "50c7666cbf283822cb414c732e62572adc2bf6cb9419c55953cfa76847bdc68f",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "8681ea3c340df4df02897c94120c55c1fb1a3894deacf7e23e5c69dc82b5ea64",
+        "hash": "3861feb411212a3b79fec53ed1b33b95b7f2b19d20cf2638db0fbd79359d34a5",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "Cierre formal para e-mails profesionales ('Atentamente')",
       "back": "Atenciosamente / Cumprimentos cordiais",
       "example": "Atenciosamente, João Silva."
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "e1594e44",
@@ -3004,6 +3004,7 @@
     ],
     "contentHash": "e1594e446def6dd087469a374097407096e4fc0a0e9dd61c63de708bf56df721",
     "esContrast": "En portugués 'fila' es la palabra estándar para la cola en ambas variedades.",
+    "variantStatus": "divergent",
     "type": "fill_blank",
     "data": {
       "sentence": "Tive de esperar uma hora na ___ para comprar os bilhetes.",
@@ -3021,8 +3022,7 @@
       "pt-br": {
         "sentence": "Tive que esperar uma hora na ___ para comprar os bilhetes."
       }
-    },
-    "variantStatus": "divergent"
+    }
   },
   {
     "id": "e16ba1ff",
@@ -3038,6 +3038,7 @@
     ],
     "contentHash": "e16ba1ffb063a2877f248485b37c275a9b9ea752537a74460f0fc994b35876db",
     "esContrast": "Las islas Açorianas preservan rasgos del português medieval.",
+    "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
       "sentence": "Nos Açores, o dialeto local ___ características do português antigo.",
@@ -3050,8 +3051,7 @@
           ]
         }
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "e4a0e2b0",
@@ -3066,21 +3066,21 @@
     "esContrast": "'Anexo' funciona igual en ambos idiomas para documentos adjuntos",
     "audio": {
       "br": {
-        "hash": "9a837eae39be4dca72fb86d008cb76e30221658abf97d907b4556812b48691d1",
+        "hash": "92af1bc04598b0cb9e2bd25fee040f7a869383876c3f35ccf90bfda58cd84b13",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "f9401bcf6556984d755d702e92bd2fce2f67b61e87a81a0c8284e8b8e26a74ae",
+        "hash": "7d646d9ad6b7116be8f7b75b5958b373b75862cff233f73cc2e93d756d37729f",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "Vocabulario de e-mail: 'archivo adjunto'",
       "back": "anexo",
       "example": "Segue em anexo o relatório. (= Sigo adjunta el informe / Se adjunta el informe)"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "e70c7f58",
@@ -3093,18 +3093,19 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "e70c7f5806010822609e0d63669f12d625625519bafa97511a343d4fcc462d1e",
+    "contentHash": "aaea632f8a37f9c5b3c4fda1fcb77f5b921cc9218eef8796dbc51571f53d4125",
     "esContrast": "En Portugal se escribe 'contactos'; en Brasil se prefiere 'contatos'.",
     "audio": {
       "br": {
-        "hash": "06bd738ceb910a1454c7a2d4d5a79990658572d3e6b335f979d78c991202f408",
+        "hash": "21a735a0afd58185981927e799ed017d353701e6d49d3395e5ceccfc7a8f8d81",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "297adb87159ef30a3780306e7a07ea1ac57a8d2707dfdd1034ca326c1691dd22",
+        "hash": "ac870ff13157f1e35e9c9a550a8f63551765b0f6f78d3af6edde261a8be432f0",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "translation",
     "data": {
       "source": "Tenho muitos contactos profissionais em Lisboa.",
@@ -3114,8 +3115,7 @@
       "acceptedAlternatives": [
         "Tengo muchos contactos profesionales en Lisboa."
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "ea284b97",
@@ -3132,21 +3132,21 @@
     "esContrast": "'Achacar' en español = 'extorsionar'. En BR se dice 'extorquir' ou 'chantagear'.",
     "audio": {
       "br": {
-        "hash": "0353f57885ba208765ce8fdacbb9087346d268adafd6084a309cb6b2080fff25",
+        "hash": "281f9b78bee8c8c053528f41ef99360590fe1545dfd5d6998c0e40aa61247fc2",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "51d3d32cf7a0c8b22845afb29f6d9c80aa95e511f21942f299a828c59347cefa",
+        "hash": "b3a039033926d6febf1c7ddeed50ca2f1fb14f6e755d8b0e0e4178f086c182cb",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "¿Qué significa 'achar' en portugués brasileiro?",
       "back": "Achar significa 'creer/pensar' o 'encontrar' en PT-BR. ⚠️ NO significa 'achacar' (acosar) como en español.",
       "example": "Eu acho que ele tem razão. / Vou achar as chaves."
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "ec9d8ba5",
@@ -3159,18 +3159,19 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "ec9d8ba5b4ebfc6d62e501134353ed78b209e4f531c0a979f5759ceae46895d4",
+    "contentHash": "0dcb6b6a409da7f08691484447f2b59b6201f5e2407b303fb0f096b6c7729ad3",
     "esContrast": "El verbo 'corresponder-se' se conjuga como reflexivo recíproco.",
     "audio": {
       "br": {
-        "hash": "72b8df41fa0fef197e8c19d91a9d4249814643f641e105151c48951c46ccdf2a",
+        "hash": "0a41bfcb6ed4c4c51bf235f8d0844017ac465f493fb3faa0c8697beac25ce0e9",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "bb9f834ce05c8fca97f7438f5832491ee963f6259b7de0346d0622c9c629f7a7",
+        "hash": "ca49c312e2690b3f09a93137cf98fbc81127d3cc626fa47b411d8fe2b25ecfe5",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "translation",
     "data": {
       "source": "Os conceitos de família correspondem-se nos dois países.",
@@ -3180,8 +3181,7 @@
       "acceptedAlternatives": [
         "Los conceptos de familia coinciden"
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "ed7ab9b0",
@@ -3195,18 +3195,19 @@
       "falso-amigo",
       "regional"
     ],
-    "contentHash": "ed7ab9b0a6e0b5a91af98a56b6b7f0af0caf73b31d506d32b12451d48e5864e0",
+    "contentHash": "56f06e4c00548cd9823d4568bbe6e74f5c8a892463184c734762f68b0670471e",
     "esContrast": "No traduzcas 'chica' como 'rapariga' en Brasil; puede resultar ofensivo o arcaico.",
     "audio": {
       "br": {
-        "hash": "c0c1bc904808408e4fa024a28863ead0ad4d73cd7f39f3d996158dff5013ad14",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "51af54aa82a7f8ca3ab229df46faa555e1e3d598e84da2fe9bfa3485601ee1a9",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "474c6b1af180f48c5a429ea9f397855fc92bd473e87409abcfa24baa8314d990",
-        "voice": "Portuguese_Wiselady"
+        "hash": "5e0da4c5607e65ce4b491318341bb7acd98ad287bec666e918dfdb7aab1ad747",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "divergent",
     "type": "flashcard",
     "data": {
       "front": "¿Qué significa 'rapariga' en Portugal vs. en Brasil?",
@@ -3217,8 +3218,7 @@
       "pt-br": {
         "back": "🇵🇹 Portugal: 'rapariga' = 'chica/chica joven'. 🇧🇷 Brasil: 'rapariga' es arcaico/vulgar (significaba 'prostituta'). En BR se dice 'menina', 'garota' o 'moça'."
       }
-    },
-    "variantStatus": "divergent"
+    }
   },
   {
     "id": "ee49ed34",
@@ -3232,18 +3232,19 @@
       "formal",
       "coloquial"
     ],
-    "contentHash": "ee49ed34e95d3173c75e237fbe08cdce1e34dd6bab225f458688af4389614967",
+    "contentHash": "ff8569c436cb2c0568e71d4a652564e004873bb399e1b923ace904f64da9c8fb",
     "esContrast": "'Caro' en PT formal significa 'querido', no 'costoso'. Es un falso amigo muy común.",
     "audio": {
       "br": {
-        "hash": "c746346c90431d5217f41e605edbd194bc354186a9fc097f7b33f8e4dece78be",
+        "hash": "8ba5933c90d96817e1357c47de3953a928ac7c3be56d51e44a80b31f8947d958",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "377a4709787eec8659186c2a84218404c8668e041d635a0968b7ea51e3170456",
+        "hash": "885ec499a07ca3573b1228f7860d57d1f5f0ffbe45a22c59d47037fc25162d18",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "listening",
     "data": {
       "audioText": "Caro director, venho por este meio solicitar uma reunião. Atenciosamente, João.",
@@ -3255,8 +3256,7 @@
         "Traducir 'meio' como 'medio'"
       ],
       "answer": "Traducir 'caro' como 'caro' (costoso)"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "ef332524",
@@ -3272,6 +3272,7 @@
     ],
     "contentHash": "ef3325242ec60dca2d3119a0327c92a4d1d919c66b286649b6b7f5f7d46a8a70",
     "esContrast": "En español 'acordarse de'; en PT el pronombre 'se' va entre el verbo: 'lembrar-se de'.",
+    "variantStatus": "unchecked",
     "type": "verb_preposition",
     "data": {
       "verb": "lembrar-se",
@@ -3283,8 +3284,7 @@
         "a"
       ],
       "answer": "de"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "f35d479c",
@@ -3297,18 +3297,19 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "f35d479ccd00ddfba18a5e5e42b5ba35b78d055b47f9238d48a53706c710c7c3",
+    "contentHash": "66394aa562168b62cdd013e36253f31f9b324ba4e1ac6fa651b68cbcda40ce25",
     "esContrast": "«Contatos» en BR vs «contactos» en PT. Ambos usan «telefone», pero BR también dice «mudar de».",
     "audio": {
       "br": {
-        "hash": "7a2ae1a86c12c736ad6b0ea20026622cf39b9fc54efd302ef215f0c47ea12240",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "a1e03ad64c6465e57202237d7c9a2ce2b869223a74f0d70858d823e0a0eca4e3",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "2f69bef88ea8d8ef7f14ecc38d1307a2a11514a862137aab934887d36bead86e",
-        "voice": "Portuguese_Wiselady"
+        "hash": "c5786b171f3e8d2370f3bd8fdc8361edb5dab8b9d2f2a87995a0372f39b636a8",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Perdí todos mis contactos del trabajo cuando cambié de teléfono.",
@@ -3326,8 +3327,7 @@
           "Perdi todos os meus contactos do trabalho quando mudei de telemóvel."
         ]
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "f3b0f549",
@@ -3340,18 +3340,19 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "f3b0f549860a53901559585b691539cc6e037ab00d8e1ab50aba427a2be0e984",
+    "contentHash": "eae47bc483f1675f9f127552025b22bfcf941179fe4b6170bf6e89e83c2d992b",
     "esContrast": "El pretérito 'continuaram' es tercera persona del plural del pretérito indefinido.",
     "audio": {
       "br": {
-        "hash": "8ea82020b8d947572f4130960c5e1fbca6ce5ff8b728202e9f0cae809802c04e",
+        "hash": "58dc425da0a3c1d8f9e87ee6df51f46fa753e12d65e8e7e829d2616ef627a617",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "292274bbb9a1b643193851dbb8e22ada60fde72002cc59ad2a6f891151d0aea5",
+        "hash": "f43847917625c0bb3bfd53191887183961b06ab0be268d23de58170217ba9389",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "translation",
     "data": {
       "source": "As duas famílias continuaram a escrever-se durante décadas.",
@@ -3359,8 +3360,7 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": []
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "f49512ee",
@@ -3374,18 +3374,19 @@
       "formal",
       "regional"
     ],
-    "contentHash": "f49512eebdc25c438b4ff4468c77b50c697ea1fc189ff9240e13e1fd5eecb382",
+    "contentHash": "085983312f87a1fd35544dffb9e285af4045dfa915c1d6056309c79d38e249da",
     "esContrast": "El tratamiento 'senhor/a senhora' + título profesional marca formalidad extrema en PT-BR.",
     "audio": {
       "br": {
-        "hash": "bba9ab5a0d57a28be70d427e6e00782409930b57f8c67f2c037a8852f08dff61",
+        "hash": "34d7bfaaba085e31caad53d4746d92f17f58a3e27f1c133ada933e90737f6fb2",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "54ce33ee9f5b2c1b891bdf29f8e29ff8b3312d5eacbbe9ebfab531d01bb5250c",
+        "hash": "27985339fec7a541f63b92f3b4b6f8438b993033d3869f65e169466e67d2c3b1",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "translation",
     "data": {
       "source": "A senhora Dra. Maria, poderia enviar o relatório por e-mail?",
@@ -3396,8 +3397,7 @@
         "La Dra. María, ¿podría enviar el informe por e-mail?",
         "La señora doctora María, ¿podría enviar el informe por correo electrónico?"
       ]
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "f6dd70a3",
@@ -3413,6 +3413,7 @@
     ],
     "contentHash": "f6dd70a328c3ab54243cfc6cb7790594e30f3ea8eb20f84147b1ed1e98d54caa",
     "esContrast": "'Comunicar' es más natural; 'manifestar' suena muy burocrático.",
+    "variantStatus": "divergent",
     "type": "fill_blank",
     "data": {
       "sentence": "Venho por este meio ___ a Vossa Senhoria sobre o assunto.",
@@ -3431,8 +3432,7 @@
       "pt-br": {
         "sentence": "Venho por meio desta ___ a Vossa Senhoria sobre o assunto."
       }
-    },
-    "variantStatus": "divergent"
+    }
   },
   {
     "id": "fa5682ad",
@@ -3447,21 +3447,21 @@
     "esContrast": "'Próprio' en PT puede equivaler a 'propio' o a 'mismo' según el contexto",
     "audio": {
       "br": {
-        "hash": "18cd470079320d213b4e617ef18185bc0fa309114527758708cd2c3192c2e7a2",
+        "hash": "59448113789d4bf4fa81b50ba56424111292c7906ba36f644e414b1aa7f88b36",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "4ba9d9d3c319e4fb46aa67cc3b1e33f6eb9647d68007d1ad223a9dcab48b9a0a",
+        "hash": "9adfbc98e80a5962acdd8a035ae76fb69a18f726a3082f4403ea0cf9578c6655",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "Adjetivo que significa 'propio' en contextos formales ('en su propia oficina')",
       "back": "próprio",
       "example": "Compareça pessoalmente no nosso escritório. (= Comparezca usted mismo en nuestra oficina)"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "fc80a430",
@@ -3474,17 +3474,18 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "d9dd9f839353abd912edac659938cc0ef1725a9f4dd6cc09510ada44906875d9",
+    "contentHash": "389e47d59d7a1493cab7fc8e678dfaeff2ec2c29b74b7f26b204fbeec1fc44ea",
     "audio": {
       "br": {
-        "hash": "70837ecd4bd23b5dff4a8e28353691dfa48a6fe1201a7f5edd40f9d89adb8e0c",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "8e2c162b92f927082c634e8b5b341f061161c7ab40e3ac1b4576cb56f994a25b",
+        "voice": "ElevenLabs_Leonor"
       },
       "pt": {
-        "hash": "932b66f35339c4c95c4531741b2a9cc84be11f0b5452eb7e7d1cf2fc0af6ec06",
-        "voice": "Portuguese_Wiselady"
+        "hash": "2050e2fedcddd2359769fc08627a10b9f3825c573298c83d531aa6f0d396e8e5",
+        "voice": "ElevenLabs_Leonor_brInterino"
       }
     },
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Traduce al PT-PT: 'Ela tem os contactos do escritório.'",
@@ -3495,8 +3496,7 @@
       "pt-br": {
         "back": "Ela tem os contactos do escritório."
       }
-    },
-    "variantStatus": "needs-human"
+    }
   },
   {
     "id": "fd6369b5",
@@ -3510,21 +3510,21 @@
     "contentHash": "fd6369b546c54d6a50a232b9717c0fe35e38ad0ebf9eedc82c81d4f489d45d13",
     "audio": {
       "br": {
-        "hash": "f1fedfefc363cfc8756f9decf330d2887130eba41e39e574ad4ccdb7c909bda3",
+        "hash": "2b7e077d23e784f168bac0746463e62ce55592eb290f188693797475399f8112",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "169867ae90303e2a94a2d3bf8e2777b9fd2c5c251db692a111573fc0b9b37907",
+        "hash": "000690893712da47fdb03510db68651e147874771e7b4c37a5a104c34bf1d4fd",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "Cómo preguntar por contacto telefónico en contexto formal",
       "back": "posso deixar meu telefone? / qual é o seu número?",
       "example": "Posso deixar meu telefone para contato? (= ¿Puedo dejar mi número de contacto?)"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "fec7c17f",
@@ -3541,24 +3541,25 @@
     "esContrast": "En ES 'ustedes' es solo formal; en BR 'vocês' es igual para ambos registros (formal e informal)",
     "audio": {
       "br": {
-        "hash": "5cb57b91045174279bbac9a9cd988c6bd43087601108a526a021eec2b0073a38",
+        "hash": "f0830642ad41dbedb31cdaeec3cbefab1ea97984fbbbec8649b7bd6661b0b8de",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "9c652964781f57fbe1ec3e76372973badd269ba691366d604d97fef995c247dc",
+        "hash": "7669c621774f14daf6d716b6ff5a847369e836cd828d5ac4cc5cb685b23a094e",
         "voice": "Portuguese_Wiselady"
       }
     },
+    "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "Plural de 'você' en Brasil (= 'ustedes')",
       "back": "vocês",
       "example": "Vocês podem ficar à vontade. (= Ustedes pueden quedarse cómodos)"
-    },
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "matching",
+    "id": "f6b6eab9",
+    "blockId": 10,
     "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
     "difficulty": 2,
     "concepts": [
@@ -3568,6 +3569,9 @@
       "lexico",
       "br-pt"
     ],
+    "contentHash": "f6b6eab9807b2b34acf26848f88b23c58ab7e5b86fd0871705763ef52a71a014",
+    "variantStatus": "unchecked",
+    "type": "matching",
     "data": {
       "pairs": [
         {
@@ -3587,14 +3591,11 @@
           "right": "frigorífico"
         }
       ]
-    },
-    "id": "f6b6eab9",
-    "blockId": 10,
-    "contentHash": "f6b6eab9807b2b34acf26848f88b23c58ab7e5b86fd0871705763ef52a71a014",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "matching",
+    "id": "98cbd62b",
+    "blockId": 10,
     "lessonId": "b10-l1-registro-formal-informal",
     "difficulty": 2,
     "concepts": [
@@ -3603,6 +3604,9 @@
     "tags": [
       "registro"
     ],
+    "contentHash": "98cbd62b0f217fcc1f55daa41ea0b2c9b5a2a1ca262672ab57fb799b39eba236",
+    "variantStatus": "unchecked",
+    "type": "matching",
     "data": {
       "pairs": [
         {
@@ -3622,14 +3626,11 @@
           "right": "para"
         }
       ]
-    },
-    "id": "98cbd62b",
-    "blockId": 10,
-    "contentHash": "98cbd62b0f217fcc1f55daa41ea0b2c9b5a2a1ca262672ab57fb799b39eba236",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "multiple_choice",
+    "id": "b63d821e",
+    "blockId": 10,
     "lessonId": "b10-l1-registro-formal-informal",
     "difficulty": 1,
     "concepts": [
@@ -3639,6 +3640,9 @@
       "registro",
       "formal"
     ],
+    "contentHash": "b63d821e499d91d7c75f0ab7671c9dd61f39aef453de58b58b25ae5983d77aa3",
+    "variantStatus": "unchecked",
+    "type": "multiple_choice",
     "data": {
       "question": "En registro formal, para dirigirse a un cliente se usa:",
       "options": [
@@ -3648,14 +3652,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "El tratamiento formal es 'o senhor / a senhora', con verbo en 3ª persona."
-    },
-    "id": "b63d821e",
-    "blockId": 10,
-    "contentHash": "b63d821e499d91d7c75f0ab7671c9dd61f39aef453de58b58b25ae5983d77aa3",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "multiple_choice",
+    "id": "52e1df16",
+    "blockId": 10,
     "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
     "difficulty": 1,
     "concepts": [
@@ -3665,6 +3666,9 @@
       "lexico",
       "pt"
     ],
+    "contentHash": "52e1df16e0f6cf751ac66da026a67cb669869d57908d0b9fc4577f3bd1d068a6",
+    "variantStatus": "unchecked",
+    "type": "multiple_choice",
     "data": {
       "question": "'Autocarro' es la palabra de:",
       "options": [
@@ -3674,14 +3678,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'Autocarro' es portuguesa de Portugal; en Brasil se dice 'ônibus'."
-    },
-    "id": "52e1df16",
-    "blockId": 10,
-    "contentHash": "52e1df16e0f6cf751ac66da026a67cb669869d57908d0b9fc4577f3bd1d068a6",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "multiple_choice",
+    "id": "c04e9290",
+    "blockId": 10,
     "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
     "difficulty": 1,
     "concepts": [
@@ -3691,6 +3692,9 @@
       "lexico",
       "br"
     ],
+    "contentHash": "c04e9290886a90d19d81271b5cedb0c71e71b3135abb9925efa425ce6cbc131b",
+    "variantStatus": "unchecked",
+    "type": "multiple_choice",
     "data": {
       "question": "'Trem' (tren) es más usado en:",
       "options": [
@@ -3699,14 +3703,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "En Brasil se dice 'trem'; en Portugal, 'comboio'."
-    },
-    "id": "c04e9290",
-    "blockId": 10,
-    "contentHash": "c04e9290886a90d19d81271b5cedb0c71e71b3135abb9925efa425ce6cbc131b",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "multiple_choice",
+    "id": "c4d2b750",
+    "blockId": 10,
     "lessonId": "b10-l1-registro-formal-informal",
     "difficulty": 2,
     "concepts": [
@@ -3716,6 +3717,9 @@
       "registro",
       "formal"
     ],
+    "contentHash": "c4d2b7500636543202466145fae95cfbf211047f0b22d25ed8c9a5e5bd9db11e",
+    "variantStatus": "unchecked",
+    "type": "multiple_choice",
     "data": {
       "question": "¿Cuál es más formal para cerrar una carta?",
       "options": [
@@ -3725,14 +3729,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'Atenciosamente' es formal; 'beijos' y 'falou' son informales."
-    },
-    "id": "c4d2b750",
-    "blockId": 10,
-    "contentHash": "c4d2b7500636543202466145fae95cfbf211047f0b22d25ed8c9a5e5bd9db11e",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "multiple_choice",
+    "id": "377d85d3",
+    "blockId": 10,
     "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
     "difficulty": 2,
     "concepts": [
@@ -3742,6 +3743,9 @@
       "lexico",
       "pt"
     ],
+    "contentHash": "377d85d3ccc6bd630df87e19f41ee99a4184bf4b41943bf51a0d947f8386abbd",
+    "variantStatus": "unchecked",
+    "type": "multiple_choice",
     "data": {
       "question": "'Pequeno-almoço' (desayuno) es propio de:",
       "options": [
@@ -3750,14 +3754,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "En Portugal el desayuno es 'pequeno-almoço'; en Brasil, 'café da manhã'."
-    },
-    "id": "377d85d3",
-    "blockId": 10,
-    "contentHash": "377d85d3ccc6bd630df87e19f41ee99a4184bf4b41943bf51a0d947f8386abbd",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "multiple_choice",
+    "id": "d2020dd1",
+    "blockId": 10,
     "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
     "difficulty": 1,
     "concepts": [
@@ -3767,6 +3768,9 @@
       "lexico",
       "br"
     ],
+    "contentHash": "d2020dd1dc48ee34c27ed3055c0978a79b9e2ce604f1dcacbdf31f26bccdac32",
+    "variantStatus": "unchecked",
+    "type": "multiple_choice",
     "data": {
       "question": "En Brasil, el desayuno se dice:",
       "options": [
@@ -3776,14 +3780,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "En Brasil es 'café da manhã'; 'pequeno-almoço' es de Portugal."
-    },
-    "id": "d2020dd1",
-    "blockId": 10,
-    "contentHash": "d2020dd1dc48ee34c27ed3055c0978a79b9e2ce604f1dcacbdf31f26bccdac32",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "multiple_choice",
+    "id": "6a31fb22",
+    "blockId": 10,
     "lessonId": "b10-l1-registro-formal-informal",
     "difficulty": 2,
     "concepts": [
@@ -3793,6 +3794,9 @@
       "registro",
       "a-gente"
     ],
+    "contentHash": "6a31fb22ae501b7e168a9a87dff6c93355c4fbfd783010c95b12c896341534f2",
+    "variantStatus": "unchecked",
+    "type": "multiple_choice",
     "data": {
       "question": "'A gente vai' equivale, en registro informal, a:",
       "options": [
@@ -3802,14 +3806,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'A gente' significa 'nosotros' (informal) y concuerda en 3ª persona singular: 'a gente vai'."
-    },
-    "id": "6a31fb22",
-    "blockId": 10,
-    "contentHash": "6a31fb22ae501b7e168a9a87dff6c93355c4fbfd783010c95b12c896341534f2",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "multiple_choice",
+    "id": "e6e74857",
+    "blockId": 10,
     "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
     "difficulty": 2,
     "concepts": [
@@ -3819,6 +3820,9 @@
       "gramatica",
       "progressivo"
     ],
+    "contentHash": "e6e748572367e1bc4b6e0cc3402c5f56ab5b13e8b6c2aa1f43cdd609bbea13b4",
+    "variantStatus": "unchecked",
+    "type": "multiple_choice",
     "data": {
       "question": "El progresivo 'estou fazendo' es típico de Brasil; en Portugal se dice:",
       "options": [
@@ -3828,14 +3832,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "Portugal prefiere 'estar a' + infinitivo: 'estou a fazer'."
-    },
-    "id": "e6e74857",
-    "blockId": 10,
-    "contentHash": "e6e748572367e1bc4b6e0cc3402c5f56ab5b13e8b6c2aa1f43cdd609bbea13b4",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "multiple_choice",
+    "id": "077c9838",
+    "blockId": 10,
     "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
     "difficulty": 2,
     "concepts": [
@@ -3844,6 +3845,9 @@
     "tags": [
       "tratamento"
     ],
+    "contentHash": "077c98384b92f1fa33d9369e5fb0123e1445f0d447f6dcab950476dd33a92f1c",
+    "variantStatus": "unchecked",
+    "type": "multiple_choice",
     "data": {
       "question": "Tratamiento informal de 2ª persona predominante en Portugal y el sur de Brasil:",
       "options": [
@@ -3853,14 +3857,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'tu' (con conjugación de 2ª persona) predomina en Portugal y en el sur de Brasil."
-    },
-    "id": "077c9838",
-    "blockId": 10,
-    "contentHash": "077c98384b92f1fa33d9369e5fb0123e1445f0d447f6dcab950476dd33a92f1c",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "multiple_choice",
+    "id": "eecfb214",
+    "blockId": 10,
     "lessonId": "b10-l1-registro-formal-informal",
     "difficulty": 1,
     "concepts": [
@@ -3870,6 +3871,9 @@
       "registro",
       "formal"
     ],
+    "contentHash": "eecfb214426529772b91f17fe33863793fcb8b54049501374a77a9e144572c06",
+    "variantStatus": "unchecked",
+    "type": "multiple_choice",
     "data": {
       "question": "¿A qué registro corresponde 'Prezado Senhor'?",
       "options": [
@@ -3879,14 +3883,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'Prezado Senhor' es un encabezamiento formal de cartas y documentos."
-    },
-    "id": "eecfb214",
-    "blockId": 10,
-    "contentHash": "eecfb214426529772b91f17fe33863793fcb8b54049501374a77a9e144572c06",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "multiple_choice",
+    "id": "00b74ff8",
+    "blockId": 10,
     "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
     "difficulty": 1,
     "concepts": [
@@ -3896,6 +3897,9 @@
       "lexico",
       "pt"
     ],
+    "contentHash": "00b74ff840ec42a98c8cb2ab0adb57c8c81e814c65f11d787117a55caf82ffa3",
+    "variantStatus": "unchecked",
+    "type": "multiple_choice",
     "data": {
       "question": "'Telemóvel' (celular) se usa en:",
       "options": [
@@ -3904,14 +3908,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "En Portugal es 'telemóvel'; en Brasil, 'celular'."
-    },
-    "id": "00b74ff8",
-    "blockId": 10,
-    "contentHash": "00b74ff840ec42a98c8cb2ab0adb57c8c81e814c65f11d787117a55caf82ffa3",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "multiple_choice",
+    "id": "d86dacc4",
+    "blockId": 10,
     "lessonId": "b10-l1-registro-formal-informal",
     "difficulty": 1,
     "concepts": [
@@ -3921,6 +3922,9 @@
       "registro",
       "formal"
     ],
+    "contentHash": "d86dacc45dc7d918ebede3e4c2bd5f68dc18fb8a13bfdca3a3771ee8fae84839",
+    "variantStatus": "unchecked",
+    "type": "multiple_choice",
     "data": {
       "question": "El tratamiento 'a senhora' es:",
       "options": [
@@ -3929,14 +3933,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'a senhora' es tratamiento formal y respetuoso, con verbo en 3ª persona."
-    },
-    "id": "d86dacc4",
-    "blockId": 10,
-    "contentHash": "d86dacc45dc7d918ebede3e4c2bd5f68dc18fb8a13bfdca3a3771ee8fae84839",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "error_correction",
+    "id": "3d979702",
+    "blockId": 10,
     "lessonId": "b10-l1-registro-formal-informal",
     "difficulty": 2,
     "concepts": [
@@ -3946,19 +3947,19 @@
       "registro",
       "a-gente"
     ],
+    "contentHash": "3d9797024f9c8809c2ea93928cc36d237ecc2b06909aebf5bca860dec6175192",
     "esContrast": "'a gente' concuerda en 3ª persona singular: 'a gente vai'.",
+    "variantStatus": "unchecked",
+    "type": "error_correction",
     "data": {
       "sentence": "A gente vamos ao cinema hoje à noite.",
       "correct": "A gente vai ao cinema hoje à noite.",
       "explanationEs": "'a gente' (= nosotros, informal) lleva el verbo en 3ª persona singular: 'a gente vai'."
-    },
-    "id": "3d979702",
-    "blockId": 10,
-    "contentHash": "3d9797024f9c8809c2ea93928cc36d237ecc2b06909aebf5bca860dec6175192",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "error_correction",
+    "id": "f441dd18",
+    "blockId": 10,
     "lessonId": "b10-l1-registro-formal-informal",
     "difficulty": 3,
     "concepts": [
@@ -3968,19 +3969,19 @@
       "registro",
       "tratamento"
     ],
+    "contentHash": "f441dd1828dd10a318f9a9ce52717c1d5fea10e374f6d58b6fc35ca85d5a28e1",
     "esContrast": "Con 'o senhor' se usa 3ª persona y no se mezcla con 'tu'.",
+    "variantStatus": "unchecked",
+    "type": "error_correction",
     "data": {
       "sentence": "O senhor pode me dizer onde tu mora?",
       "correct": "O senhor pode me dizer onde mora?",
       "explanationEs": "El tratamiento 'o senhor' exige 3ª persona; mezclarlo con 'tu' rompe la concordancia."
-    },
-    "id": "f441dd18",
-    "blockId": 10,
-    "contentHash": "f441dd1828dd10a318f9a9ce52717c1d5fea10e374f6d58b6fc35ca85d5a28e1",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "error_correction",
+    "id": "b227cb52",
+    "blockId": 10,
     "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
     "difficulty": 2,
     "concepts": [
@@ -3989,19 +3990,19 @@
     "tags": [
       "falso-amigo"
     ],
+    "contentHash": "b227cb52408bba733f839cf3ef1749ee9ba74436bc72969723425ab26e9d3ebe",
     "esContrast": "'embarazada' (ES) = 'grávida' (PT); 'embaraçada' significa avergonzada.",
+    "variantStatus": "unchecked",
+    "type": "error_correction",
     "data": {
       "sentence": "Minha irmã está embaraçada, vai ter um bebê.",
       "correct": "Minha irmã está grávida, vai ter um bebê.",
       "explanationEs": "Falso amigo: 'embarazada' en español es 'grávida' en portugués; 'embaraçada' = avergonzada."
-    },
-    "id": "b227cb52",
-    "blockId": 10,
-    "contentHash": "b227cb52408bba733f839cf3ef1749ee9ba74436bc72969723425ab26e9d3ebe",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "error_correction",
+    "id": "0847ef58",
+    "blockId": 10,
     "lessonId": "b10-l1-registro-formal-informal",
     "difficulty": 1,
     "concepts": [
@@ -4011,20 +4012,20 @@
       "registro",
       "concordancia"
     ],
+    "contentHash": "0847ef58dac9495b1e21ec50d74298aeb0e654e31f03b809eb544cdadb25d467",
     "esContrast": "'você' lleva 3ª persona también en registro cuidado: 'você sabe'.",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "type": "error_correction",
     "data": {
       "sentence": "Você sabes a resposta desta pergunta?",
       "correct": "Você sabe a resposta desta pergunta?",
       "explanationEs": "'você' concuerda en 3ª persona: 'você sabe'."
-    },
-    "id": "0847ef58",
-    "blockId": 10,
-    "contentHash": "0847ef58dac9495b1e21ec50d74298aeb0e654e31f03b809eb544cdadb25d467",
-    "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona"
+    }
   },
   {
-    "type": "error_correction",
+    "id": "6202b902",
+    "blockId": 10,
     "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
     "difficulty": 3,
     "concepts": [
@@ -4033,19 +4034,19 @@
     "tags": [
       "coerencia-variante"
     ],
+    "contentHash": "6202b90249b065a372274c7ebe54f9d504514056657f69f6fec2fde17b0e987a",
     "esContrast": "Conviene no mezclar léxico de Portugal y Brasil en una misma frase.",
+    "variantStatus": "unchecked",
+    "type": "error_correction",
     "data": {
       "sentence": "Eu tomo o pequeno-almoço e depois pego o ônibus.",
       "correct": "Eu tomo o café da manhã e depois pego o ônibus.",
       "explanationEs": "Mezcla de variantes: 'pequeno-almoço' es de Portugal y 'ônibus' de Brasil. En variante brasileña: 'café da manhã' + 'ônibus'."
-    },
-    "id": "6202b902",
-    "blockId": 10,
-    "contentHash": "6202b90249b065a372274c7ebe54f9d504514056657f69f6fec2fde17b0e987a",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "fill_blank",
+    "id": "148c0447",
+    "blockId": 10,
     "lessonId": "b10-l1-registro-formal-informal",
     "difficulty": 2,
     "concepts": [
@@ -4055,7 +4056,10 @@
       "registro",
       "formal"
     ],
+    "contentHash": "148c04472130919afec736c1bb66ccc18d3761d06e1a29047096875299404178",
     "esContrast": "Cierre formal de carta: 'Atenciosamente'.",
+    "variantStatus": "unchecked",
+    "type": "fill_blank",
     "data": {
       "sentence": "Para encerrar uma carta formal, escrevemos '___'.",
       "blanks": [
@@ -4064,14 +4068,11 @@
           "answer": "Atenciosamente"
         }
       ]
-    },
-    "id": "148c0447",
-    "blockId": 10,
-    "contentHash": "148c04472130919afec736c1bb66ccc18d3761d06e1a29047096875299404178",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "fill_blank",
+    "id": "00bc55b0",
+    "blockId": 10,
     "lessonId": "b10-l1-registro-formal-informal",
     "difficulty": 1,
     "concepts": [
@@ -4081,7 +4082,10 @@
       "registro",
       "a-gente"
     ],
+    "contentHash": "00bc55b054e911f9d407a8c616fc87d6f927a437101947f99eb9ef079251019c",
     "esContrast": "'a gente' + 3ª persona: 'a gente vai'.",
+    "variantStatus": "unchecked",
+    "type": "fill_blank",
     "data": {
       "sentence": "A gente ___ (ir) à praia no domingo de manhã.",
       "blanks": [
@@ -4090,14 +4094,11 @@
           "answer": "vai"
         }
       ]
-    },
-    "id": "00bc55b0",
-    "blockId": 10,
-    "contentHash": "00bc55b054e911f9d407a8c616fc87d6f927a437101947f99eb9ef079251019c",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "fill_blank",
+    "id": "9df296e0",
+    "blockId": 10,
     "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
     "difficulty": 1,
     "concepts": [
@@ -4107,7 +4108,10 @@
       "lexico",
       "br"
     ],
+    "contentHash": "9df296e07ca966ff1da6e037b9eb60d09a1659547fc5c4a95ddfc791ec628938",
     "esContrast": "Desayuno en Brasil: 'café da manhã'.",
+    "variantStatus": "unchecked",
+    "type": "fill_blank",
     "data": {
       "sentence": "No Brasil, a primeira refeição do dia é o '___ da manhã'.",
       "blanks": [
@@ -4116,14 +4120,11 @@
           "answer": "café"
         }
       ]
-    },
-    "id": "9df296e0",
-    "blockId": 10,
-    "contentHash": "9df296e07ca966ff1da6e037b9eb60d09a1659547fc5c4a95ddfc791ec628938",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "fill_blank",
+    "id": "b18478ee",
+    "blockId": 10,
     "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
     "difficulty": 2,
     "concepts": [
@@ -4133,7 +4134,10 @@
       "gramatica",
       "progressivo"
     ],
+    "contentHash": "b18478ee62a1c75c74e2d19d65fba7cabeb2d6cecf9fa3a4c64c0eb8482ea006",
     "esContrast": "Progresivo en Portugal: 'estar a' + infinitivo.",
+    "variantStatus": "unchecked",
+    "type": "fill_blank",
     "data": {
       "sentence": "Em Portugal diz-se: 'Estou ___ falar ao telefone.'",
       "blanks": [
@@ -4142,14 +4146,11 @@
           "answer": "a"
         }
       ]
-    },
-    "id": "b18478ee",
-    "blockId": 10,
-    "contentHash": "b18478ee62a1c75c74e2d19d65fba7cabeb2d6cecf9fa3a4c64c0eb8482ea006",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "fill_blank",
+    "id": "4e43ccae",
+    "blockId": 10,
     "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
     "difficulty": 2,
     "concepts": [
@@ -4159,7 +4160,10 @@
       "lexico",
       "pt"
     ],
+    "contentHash": "4e43ccaec7bc88ce15662d3b9e732a77475787daa649b4f63e3c66e0c73a0eb1",
     "esContrast": "'ônibus' (BR) = 'autocarro' (PT).",
+    "variantStatus": "unchecked",
+    "type": "fill_blank",
     "data": {
       "sentence": "Em Portugal, o 'ônibus' chama-se '___'.",
       "blanks": [
@@ -4168,14 +4172,11 @@
           "answer": "autocarro"
         }
       ]
-    },
-    "id": "4e43ccae",
-    "blockId": 10,
-    "contentHash": "4e43ccaec7bc88ce15662d3b9e732a77475787daa649b4f63e3c66e0c73a0eb1",
-    "variantStatus": "unchecked"
+    }
   },
   {
-    "type": "fill_blank",
+    "id": "9395a9c7",
+    "blockId": 10,
     "lessonId": "b10-l1-registro-formal-informal",
     "difficulty": 1,
     "concepts": [
@@ -4185,7 +4186,10 @@
       "registro",
       "formal"
     ],
+    "contentHash": "9395a9c749986ae7003a2f7d78d1801a9a6c5087d412067a14303069aecfcd2a",
     "esContrast": "Tratamiento formal masculino: 'o senhor'.",
+    "variantStatus": "unchecked",
+    "type": "fill_blank",
     "data": {
       "sentence": "Tratamento formal: 'O ___ deseja mais alguma coisa?'",
       "blanks": [
@@ -4194,11 +4198,7 @@
           "answer": "senhor"
         }
       ]
-    },
-    "id": "9395a9c7",
-    "blockId": 10,
-    "contentHash": "9395a9c749986ae7003a2f7d78d1801a9a6c5087d412067a14303069aecfcd2a",
-    "variantStatus": "unchecked"
+    }
   },
   {
     "id": "b2c2-med-01",
@@ -4210,6 +4210,10 @@
       "b2c2-piloto",
       "mediacion"
     ],
+    "contentHash": "73f54b349fb3b1eba38ba4deb8cb1e43e97c076af8e96f98164d206e070c93ac",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 piloto: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-piloto-b2c2-gj-mediacion.md)",
+    "register": "neutro",
     "type": "mediation",
     "data": {
       "sourceText": "Era uma vez um rei, môço e valente, senhor de um reino abundante em cidades e searas, que partira a batalhar por terras distantes, deixando solitária e triste a sua raínha e um filhinho, que ainda vivia no seu berço, dentro das suas faixas.",
@@ -4230,11 +4234,7 @@
         "Cabe en el rango de palabras"
       ],
       "modelAnswer": "Es el arranque de un cuento: un rey joven se va a la guerra a tierras lejanas y deja solos a la reina, triste, y a su hijito, que aún está en la cuna."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 piloto: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-piloto-b2c2-gj-mediacion.md)",
-    "register": "neutro",
-    "contentHash": "73f54b349fb3b1eba38ba4deb8cb1e43e97c076af8e96f98164d206e070c93ac"
+    }
   },
   {
     "id": "b2c2-med-02",
@@ -4246,6 +4246,11 @@
       "b2c2-piloto",
       "mediacion"
     ],
+    "contentHash": "ebc9b03b4001cb2ade2cb4740b0ab19c33cbffdd61397019ce877b4f4f7956c3",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 piloto: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-piloto-b2c2-gj-mediacion.md)",
+    "register": "formal",
+    "address": "o_senhor",
     "type": "mediation",
     "data": {
       "sourceText": "Olá! Podes ver se o relatório já está pronto? É que preciso mesmo dele para amanhã. Obrigado!",
@@ -4265,12 +4270,7 @@
         "Cabe en el rango de palabras"
       ],
       "modelAnswer": "Exmo. Senhor Diretor, Poderia o senhor confirmar se o relatório já está concluído? Precisaria dele até amanhã. Com os melhores cumprimentos."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 piloto: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-piloto-b2c2-gj-mediacion.md)",
-    "register": "formal",
-    "address": "o_senhor",
-    "contentHash": "ebc9b03b4001cb2ade2cb4740b0ab19c33cbffdd61397019ce877b4f4f7956c3"
+    }
   },
   {
     "id": "b2c2-med-03",
@@ -4282,6 +4282,10 @@
       "b2c2-lote1",
       "mediacion"
     ],
+    "contentHash": "97a2d51e02f0f95072cc7ab2e224173e2f37045a5509458cebe37c7504ef7bfa",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+    "register": "neutro",
     "type": "mediation",
     "data": {
       "sourceText": "Os três irmãos de Medranhos, Rui, Guannes e Rostabal, eram então, em todo o Reino das Astúrias, os fidalgos mais famintos e os mais remendados. Nos Paços de Medranhos, a que o vento da serra levára vidraça e telha, passavam êles as tardes dêsse inverno, engelhados nos seus pelotes de camelão, batendo as solas rotas sôbre as lages da cozinha, diante da vasta lareira negra, onde desde muito não estalava lume, nem fervia a panela de ferro. Ao escurecer devoravam uma côdea de pão negro, esfregada com alho. Depois, sem candeia, através do pátio, fendendo a neve, iam dormir à estrebaria, para aproveitar o calor das três éguas lazarentas que, esfaimadas como êles, roíam as traves da mangedoura. E a miséria tornára êstes senhores mais bravios que lôbos.",
@@ -4302,11 +4306,7 @@
         "Cabe en el rango de palabras"
       ],
       "modelAnswer": "Son tres hermanos nobles de Asturias, los más pobres del reino: pasan el invierno con la ropa remendada, sin fuego ni comida caliente, y duermen en el establo para aprovechar el calor de sus tres yeguas, tan hambrientas como ellos."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
-    "register": "neutro",
-    "contentHash": "97a2d51e02f0f95072cc7ab2e224173e2f37045a5509458cebe37c7504ef7bfa"
+    }
   },
   {
     "id": "b2c2-med-04",
@@ -4318,6 +4318,11 @@
       "b2c2-lote1",
       "mediacion"
     ],
+    "contentHash": "9bedcfabf3f18a948e90236e29885c55a479b5e3a144ac66b5b75308a4c87a28",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+    "register": "informal",
+    "address": "tu",
     "type": "mediation",
     "data": {
       "sourceText": "Exmos. Senhores, informamos que a reunião de sexta-feira foi adiada para segunda-feira, às 10h. Agradecemos a compreensão.",
@@ -4337,12 +4342,7 @@
         "Cabe en el rango de palabras"
       ],
       "modelAnswer": "Olá! Olha, a reunião de sexta passou para segunda às 10. Não te esqueças!"
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
-    "register": "informal",
-    "address": "tu",
-    "contentHash": "9bedcfabf3f18a948e90236e29885c55a479b5e3a144ac66b5b75308a4c87a28"
+    }
   },
   {
     "id": "b2c2-med-05",
@@ -4354,6 +4354,11 @@
       "b2c2-lote1",
       "mediacion"
     ],
+    "contentHash": "29690752b04d7c7ac927d5a1de2e4548f08c655dcc1a0507597a4b3c30e4a2f5",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+    "register": "informal",
+    "address": "tu",
     "type": "mediation",
     "data": {
       "sourceText": "Você pode pegar o ônibus na frente do shopping. Desce no ponto perto da banca de jornal e me liga do seu celular quando chegar.",
@@ -4373,12 +4378,7 @@
         "Misma información, en el rango"
       ],
       "modelAnswer": "Podes apanhar o autocarro em frente do centro comercial. Sais na paragem ao pé do quiosque e ligas-me do telemóvel quando chegares."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
-    "register": "informal",
-    "address": "tu",
-    "contentHash": "29690752b04d7c7ac927d5a1de2e4548f08c655dcc1a0507597a4b3c30e4a2f5"
+    }
   },
   {
     "id": "b2c2-med-06",
@@ -4390,6 +4390,10 @@
       "b2c2-lote1",
       "mediacion"
     ],
+    "contentHash": "a1050441401bbcd8bdcfe5ef74b91115ec8d15575f281b475385e3c969ff07f3",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+    "register": "neutro",
     "type": "mediation",
     "data": {
       "sourceText": "«Mamã, nem todas as creanças que morrem vão para o Paraizo. O outro dia vi levar para o cemiterio um menino que tinha morrido; o seu papá e as suas duas irmãsinhas acompanhavam o caixão, e choravam tanto que me fazia pena. Iam a chorar porque aquelle menino tinha sido mau, não é verdade?»\n\n«Não; naturalmente foi sempre bom, e a sua alma, emquanto choravam seus paes e suas irmãs, já estava vivendo feliz no Paraizo.»\n\n«A alma? mamã; não sei o que é; não comprehendo bem.»\n\n«Maria, acabas de me dizer que tiveste pena de ver chorar as duas pequerruchas.»\n\n«Tive sim, mamã, tive muita pena.»\n\n«Ora bem, o que é que no teu corpo estava desconsolado e triste? eram os braços?»\n\n«Não, mamã.»\n\n«Eram as orelhas?»\n\n«Oh! não mamã, era cá dentro.»\n\n«Esse lá dentro, Maria, é a tua alma que se alegra ou se entristece, que te reprehende quando fazes o mal, e que está satisfeita quando praticas o bem.",
@@ -4410,11 +4414,7 @@
         "Cabe en el rango"
       ],
       "modelAnswer": "Maria vio el entierro de un niño y, convencida de que no todos los niños van al paraíso, pregunta si aquel había sido malo — y qué es eso del alma. La madre le responde con lo que la propia niña sintió: esa pena 'ahí dentro' al ver llorar a la familia es el alma."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
-    "register": "neutro",
-    "contentHash": "a1050441401bbcd8bdcfe5ef74b91115ec8d15575f281b475385e3c969ff07f3"
+    }
   },
   {
     "id": "b2c2-med-07",
@@ -4426,6 +4426,10 @@
       "b2c2-lote1",
       "mediacion"
     ],
+    "contentHash": "fab4cafd1f63a48e43319606ffec2163e8614b02cd803452b286526ec3efe20e",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+    "register": "informal",
     "type": "mediation",
     "data": {
       "sourceText": "Dois alentejanos estão deitados à sombra de uma oliveira. Passa um turista: — Bom dia! O que é que está a fazer? — Nada, nada. — E o seu amigo? — Está a ajudar-me.",
@@ -4446,11 +4450,7 @@
         "Cabe en el rango"
       ],
       "modelAnswer": "Dos del Alentejo están tumbados a la sombra de un olivo. Pasa un turista y le pregunta a uno: '¿qué hace usted?'. 'Nada, nada'. '¿Y su amigo?'. 'Me está ayudando.'"
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
-    "register": "informal",
-    "contentHash": "fab4cafd1f63a48e43319606ffec2163e8614b02cd803452b286526ec3efe20e"
+    }
   },
   {
     "id": "b2c2-med-08",
@@ -4462,6 +4462,10 @@
       "b2c2-lote1",
       "mediacion"
     ],
+    "contentHash": "5b77e89046eb23c7c832648c9a75efe634b53a0eb15aa1c4c7a19d67e4ecb18a",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
+    "register": "neutro",
     "type": "mediation",
     "data": {
       "sourceText": "A professora diz: — Joãozinho, conjuga o verbo andar. — Eu ando… tu andas… ele anda… — Mais depressa! — Nós corremos, vós correis, eles correm!",
@@ -4482,11 +4486,7 @@
         "Cabe en el rango"
       ],
       "modelAnswer": "La profesora le pide conjugar 'andar' y, cuando dice '¡más deprisa!', quiere que recite más rápido. Joãozinho entiende (o finge entender) que debe MOVERSE más rápido… y sigue la tabla donde iba, pero con 'correr': 'nós corremos, vós correis, eles correm'."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 1: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-lote1-b2c2-gj-mediacion.md)",
-    "register": "neutro",
-    "contentHash": "5b77e89046eb23c7c832648c9a75efe634b53a0eb15aa1c4c7a19d67e4ecb18a"
+    }
   },
   {
     "id": "b2c2-med-09",
@@ -4498,6 +4498,10 @@
       "b2c2-lote2",
       "mediacion"
     ],
+    "contentHash": "a678a9497e549e562e68764ed4661cff556aa0f76e44f0ee1b589adb175610cc",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+    "register": "neutro",
     "type": "mediation",
     "data": {
       "sourceText": "Era êle, de todos os homens que conheci, o mais complexamente civilizado--ou antes aquele que se munira da mais vasta sôma de civilização material, ornamental e intelectual. Nesse palácio (floridamente chamado o Jasmineiro) que seu pai, tambêm Jacinto, construira sôbre uma honesta casa do século XVII, assoalhada a pinho e branqueada a cal--existia, creio eu, tudo quanto para bem do espírito ou da matéria os homens teem criado, através da incerteza e dor, desde que abandonaram o vale feliz de Septa-Sindu, a Terra das Águas Fáceis, o doce país Ariano. A biblioteca, que em duas salas, amplas e claras como praças, forrava as paredes, inteiramente, desde os tapetes de Caranânia até ao teto de onde, alternadamente, através de cristais, o sol e a electricidade vertiam uma luz estudiosa e calma--continha vinte e cinco mil volumes, instalados em ébano, magnificamente revestidos de marroquim escarlate. Só sistemas filosóficos (e com justa prudência, para poupar espaço, o bibliotecário apenas colecionára os que irreconciliavelmente se contradizem) havia mil oito centos e dezassete!",
@@ -4518,11 +4522,7 @@
         "Cabe en el rango"
       ],
       "modelAnswer": "Jacinto es, para el narrador, el hombre más civilizado que ha conocido en su vida: vive en un palacio equipado con todas las comodidades materiales, ornamentales e intelectuales que la civilización ha sabido juntar."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
-    "register": "neutro",
-    "contentHash": "a678a9497e549e562e68764ed4661cff556aa0f76e44f0ee1b589adb175610cc"
+    }
   },
   {
     "id": "b2c2-med-10",
@@ -4534,6 +4534,10 @@
       "b2c2-lote2",
       "mediacion"
     ],
+    "contentHash": "1ea1e56f1c0684b7b3288524636a3f1514eb7bd55096b61bf804ef783568630f",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+    "register": "neutro",
     "type": "mediation",
     "data": {
       "sourceText": "É pequena a minha rua,\nmas o mar cabe-lhe ao fundo:\nquem tem o mar numa rua\nnão precisa de mais mundo.",
@@ -4554,11 +4558,7 @@
         "Cabe en el rango"
       ],
       "modelAnswer": "La calle es diminuta, pero al fondo se ve el mar — como si el mar 'cupiera' dentro de ella. Y ahí está la vuelta: si tu calle ya contiene el mar, que es enorme, no te hace falta nada más grande: tienes el mundo entero al fondo de tu calle."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
-    "register": "neutro",
-    "contentHash": "1ea1e56f1c0684b7b3288524636a3f1514eb7bd55096b61bf804ef783568630f"
+    }
   },
   {
     "id": "b2c2-med-11",
@@ -4570,6 +4570,10 @@
       "b2c2-lote2",
       "mediacion"
     ],
+    "contentHash": "08c79a51e1a605ecabb6ba019fe411281b66a4cdfe660137750843622d664e50",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+    "register": "formal",
     "type": "mediation",
     "data": {
       "sourceText": "Prezado cliente, informamos que seu pedido já está disponível para retirada na loja. Em caso de dúvida, ligue do seu celular para a loja ou responda a esse e-mail. Atenciosamente, A equipe.",
@@ -4589,11 +4593,7 @@
         "Misma información, en el rango"
       ],
       "modelAnswer": "Estimado cliente, informamos que a sua encomenda já está disponível para levantamento na loja. Em caso de dúvida, ligue do seu telemóvel para a loja ou responda a este email. Com os melhores cumprimentos, A equipa."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
-    "register": "formal",
-    "contentHash": "08c79a51e1a605ecabb6ba019fe411281b66a4cdfe660137750843622d664e50"
+    }
   },
   {
     "id": "b2c2-med-12",
@@ -4605,6 +4605,10 @@
       "b2c2-lote2",
       "mediacion"
     ],
+    "contentHash": "0c7bc504cb5bbd50c3db58b3f16605b98c0e3ebe4591398d42dd16778d6d26e6",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+    "register": "neutro",
     "type": "mediation",
     "data": {
       "sourceText": "Era uma vez um rei, que, tendo achado no seu reino algumas minas d'ouro, empregou a maior parte dos vassallos a extrair o ouro d'essas minas; e o resultado foi que as terras ficaram por cultivar, e que houve uma grande fome no paiz.\n\nMas a rainha, que era prudente e que amava o povo, mandou fabricar em segredo frangos, pombos, gallinhas e outras iguarias todas de ouro fino; e quando o rei quiz jantar mandou-lhe servir essas iguarias de ouro, com que elle ficou todo satisfeito, porque não comprehendeu ao principio qual era o sentido da rainha; mas, vendo que não lhe traziam mais nada de comer, começou a zangar-se. Pediu-lhe então a rainha, que visse bem que o ouro não era alimento, e que seria melhor empregar os seus vassallos em cultivar a terra, que nunca se cansa de produzir, do que trazel-os nas minas á busca do ouro, que não mata a fome nem a sede, e que não tem outro valor além da estimação que lhe é dada pelos homens, estimação que havia de converter-se em desprezo, logo que ouro apparecesse em abundancia.\n\nA rainha tinha juizo.",
@@ -4626,11 +4630,7 @@
         "Cabe en el rango"
       ],
       "modelAnswer": "Un rey puso a casi todos sus vasallos a sacar oro de unas minas; los campos quedaron sin cultivar y vino el hambre. La reina, con juicio, le sirvió una cena espléndida… toda de oro fino, incomible: el oro no alimenta. Y le pidió poner a los vasallos a cultivar la tierra."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
-    "register": "neutro",
-    "contentHash": "0c7bc504cb5bbd50c3db58b3f16605b98c0e3ebe4591398d42dd16778d6d26e6"
+    }
   },
   {
     "id": "b2c2-med-13",
@@ -4642,6 +4642,10 @@
       "b2c2-lote2",
       "mediacion"
     ],
+    "contentHash": "0ce53b4e8e14c3cd130097ee738e4b7c523d3d361e282a4b3e88de841b180402",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+    "register": "informal",
     "type": "mediation",
     "data": {
       "sourceText": "Dois alentejanos, sentados à sombra de uma azinheira. Diz um: — Ó Zé, o que é que fazes amanhã? — Nada. — Mas isso fizeste tu hoje! — Pois. É que não acabei.",
@@ -4662,11 +4666,7 @@
         "Cabe en el rango"
       ],
       "modelAnswer": "Dos del Alentejo, sentados a la sombra. Uno le pregunta al otro: '¿Y tú qué haces mañana?'. 'Nada'. '¡Pero eso es lo que hiciste hoy!'. 'Ya. Es que no terminé.'"
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
-    "register": "informal",
-    "contentHash": "0ce53b4e8e14c3cd130097ee738e4b7c523d3d361e282a4b3e88de841b180402"
+    }
   },
   {
     "id": "b2c2-med-14",
@@ -4678,6 +4678,10 @@
       "b2c2-lote2",
       "mediacion"
     ],
+    "contentHash": "d5ed5d62b8951b35ad96763fdf350c513ab959d9cf0b5c808ba898f20e874740",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+    "register": "formal",
     "type": "mediation",
     "data": {
       "sourceText": "Olá! Olha, o pedido ainda não chegou e já passaram duas semanas. Podes ver o que se passa? Obrigado!",
@@ -4697,11 +4701,7 @@
         "Cabe en el rango"
       ],
       "modelAnswer": "Exmos. Senhores, venho por este meio informar que a minha encomenda ainda não chegou, tendo já passado duas semanas desde a compra. Agradecia que verificassem o estado do envio. Com os melhores cumprimentos."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
-    "register": "formal",
-    "contentHash": "d5ed5d62b8951b35ad96763fdf350c513ab959d9cf0b5c808ba898f20e874740"
+    }
   },
   {
     "id": "b2c2-med-15",
@@ -4713,6 +4713,10 @@
       "b2c2-lote3",
       "mediacion"
     ],
+    "contentHash": "95b082c661d2652840b7b7feb50d803f92a87175fb904579486bc822513e79f7",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
+    "register": "neutro",
     "type": "mediation",
     "data": {
       "sourceText": "Morreu uma vez um rei, deixando quatro filhos, e sem ter designado o successor. Reuniu-se a côrte, e decidiu-se que a corôa devia pertencer, não ao mais velho dos quatro filhos, mas sim ao mais digno.\n\nResolveram além d'isso que o cadaver do rei fosse posto de pé contra um muro, e que o principe que acertasse melhor com uma flecha n'aquelle alvo, seria o escolhido para successor.\n\nComeçou o mais velho. Esticou a corda do arco, apontou durante muito tempo, e a flecha foi atravessar a mão esquerda do defuncto. O principe soltou grito d'alegria, cuidando que seus irmãos atirariam peór, e que por conseguinte seria elle quem viria a reinar.\n\nO segundo acertou em cheio na cara do rei, soltando um grito ainda mais alegre do que o outro principe.\n\nO terceiro varou o coração de seu pae, e os seus gritos de triumpho quasi que chegavam ao céo, porque lhe parecia impossivel acertar melhor.\n\nQuando chegou a vez do quarto filho, tiveram de lhe metter nas mãos as flechas e o arco: mas, desde que olhou para o alvo, arrojou as armas longe de si, e desatou a chorar:\n\n--«Oh! meu pae! meu querido pae! exclamou elle, como poderei eu jámais consolar-me de ver o teu corpo crivado de flechas pela mão de teus proprios filhos!»\n\nOs grandes da côrte ouvindo isto proclamaram-n'o rei, como sendo o mais digno.",
@@ -4734,11 +4738,7 @@
         "Cabe en el rango"
       ],
       "modelAnswer": "Muere un rey sin nombrar sucesor y la corte decide que reine el más digno: pondrán el cadáver contra un muro y ganará quien mejor lo acierte con una flecha. Los tres mayores disparan — mano, cara, corazón — y celebran; el cuarto tira las armas y llora: no puede herir a su padre. Lo proclaman rey."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
-    "register": "neutro",
-    "contentHash": "95b082c661d2652840b7b7feb50d803f92a87175fb904579486bc822513e79f7"
+    }
   },
   {
     "id": "b2c2-med-16",
@@ -4750,6 +4750,10 @@
       "b2c2-lote3",
       "mediacion"
     ],
+    "contentHash": "536a0a56e5014b3a7f1283c70668a647886bc4a9d2283b61bab7cb224e231086",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
+    "register": "neutro",
     "type": "mediation",
     "data": {
       "sourceText": "Quem parte leva no bolso\nmetade do seu lugar;\nmas a outra metade fica\nà janela, a esperar.",
@@ -4769,11 +4773,7 @@
         "Cabe en el rango"
       ],
       "modelAnswer": "La quadra dice que irse parte a la persona en dos: una mitad — la vida que sigue, el camino — viaja en el bolsillo del que se va; la otra — la casa, los suyos — se queda en la ventana, esperando. No describe un viaje: describe quedar incompleto en dos lugares a la vez."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
-    "register": "neutro",
-    "contentHash": "536a0a56e5014b3a7f1283c70668a647886bc4a9d2283b61bab7cb224e231086"
+    }
   },
   {
     "id": "b2c2-med-17",
@@ -4785,6 +4785,11 @@
       "b2c2-lote3",
       "mediacion"
     ],
+    "contentHash": "c62aeed25c1ae608765bc597e854cf591829a2940411c19c5348aee59752efef",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
+    "register": "informal",
+    "address": "tu",
     "type": "mediation",
     "data": {
       "sourceText": "A gente se encontra na frente do cinema às 8, beleza? Qualquer coisa me manda mensagem no zap.",
@@ -4804,12 +4809,7 @@
         "Cabe en el rango"
       ],
       "modelAnswer": "Encontramo-nos em frente ao cinema às 8, pode ser? Qualquer coisa, manda-me mensagem no WhatsApp."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
-    "register": "informal",
-    "address": "tu",
-    "contentHash": "c62aeed25c1ae608765bc597e854cf591829a2940411c19c5348aee59752efef"
+    }
   },
   {
     "id": "b2c2-med-18",
@@ -4821,6 +4821,11 @@
       "b2c2-lote3",
       "mediacion"
     ],
+    "contentHash": "eff1459cc29794ce65696c7b30c40300b68ca115b493550de767d0b7c332d7ed",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
+    "register": "informal",
+    "address": "tu",
     "type": "mediation",
     "data": {
       "sourceText": "A Biblioteca Municipal informa os seus leitores de que, durante o mês de agosto, o horário de funcionamento será das 10h às 14h.",
@@ -4840,12 +4845,7 @@
         "Cabe en el rango"
       ],
       "modelAnswer": "Já sabes que em agosto a biblioteca abre das 10 às 14?"
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
-    "register": "informal",
-    "address": "tu",
-    "contentHash": "eff1459cc29794ce65696c7b30c40300b68ca115b493550de767d0b7c332d7ed"
+    }
   },
   {
     "id": "b2c2-med-19",
@@ -4857,6 +4857,10 @@
       "b2c2-lote3",
       "mediacion"
     ],
+    "contentHash": "a6a918db0d491985ba8e74c814b48b625317d4dc6f4cebb00f469aa35ccc6a0a",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
+    "register": "neutro",
     "type": "mediation",
     "data": {
       "sourceText": "Folheando os livros de antigos assentamentos, no cartorio das cadêas da Relação do Porto, li, no das entradas dos presos desde 1803 a 1805, a folhas 232, o seguinte:\n\nSimão Antonio Botelho, que assim disse chamar-se, ser solteiro, e estudante na Universidade de Coimbra, natural da cidade de Lisboa, e assistente na occasião de sua prisão na cidade de Vizeu, idade de dezoito annos, filho de Domingos José Correia Botelho e de D. Rita Preciosa Caldeirão Castello-Branco, estatura ordinaria, cara redonda, olhos castanhos, cabello e barba preta, vestido com jaqueta de baetão azul, collête de fustão pintado e calça de panno pedrez. E fiz este assento, que assignei.\n\nFilippe Moreira Dias.\n\nÁ margem esquerda d'este assento está escripto:\n\nFoi para a India em 17 de Março de 1807.",
@@ -4878,11 +4882,7 @@
         "Cabe en el rango"
       ],
       "modelAnswer": "Hojeando los libros de registro de presos de la cárcel de Oporto, Camilo encontró el asiento de Simão Botelho: soltero, estudiante de la Universidad de Coimbra, dieciocho años, con sus señas. Y al margen, una nota seca: partió para la India en marzo de 1807."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
-    "register": "neutro",
-    "contentHash": "a6a918db0d491985ba8e74c814b48b625317d4dc6f4cebb00f469aa35ccc6a0a"
+    }
   },
   {
     "id": "b2c2-med-20",
@@ -4894,6 +4894,10 @@
       "b2c2-lote3",
       "mediacion"
     ],
+    "contentHash": "6d4214ef26c57db86f129f739a49d95aa27e9f8e2ad85bde99adca7d3ae2e04d",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
+    "register": "informal",
     "type": "mediation",
     "data": {
       "sourceText": "— Se faz favor! Este café está frio! — Ainda bem que me diz: o café frio custa mais cinquenta cêntimos.",
@@ -4914,11 +4918,7 @@
         "Cabe en el rango"
       ],
       "modelAnswer": "Un cliente protesta: '¡oiga, este café está frío!'. Y el camarero: 'menos mal que me lo dice — el café frío cuesta cincuenta céntimos más'."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
-    "register": "informal",
-    "contentHash": "6d4214ef26c57db86f129f739a49d95aa27e9f8e2ad85bde99adca7d3ae2e04d"
+    }
   },
   {
     "id": "b2c2-med-21",
@@ -4930,6 +4930,10 @@
       "b2c2-lote4",
       "mediacion"
     ],
+    "contentHash": "30d5be736034c548943a1afcdf004956120b90c80acc0c23f3abd06aa04f46a4",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+    "register": "neutro",
     "type": "mediation",
     "data": {
       "sourceText": "D. Maria da Piedade era considerada em toda a vila como «uma senhora modêlo». O vélho Nunes, director do correio, sempre que se falava nela, dizia, acariciando com autoridade os quatro pêlos da calva:\n\n--É uma santa! É o que ela é!\n\nA vila tinha quási orgulho na sua beleza delicada e tocante; era uma loura, de perfil fino, a pele eburnea, e os olhos escuros de um tom de violeta, a que as pestanas longas escureciam mais o brilho sombrio e doce. Morava ao fim da estrada, numa casa azul de três sacadas; e era, para a gente que às tardes ia fazer o giro até ao moinho, um encanto sempre novo vê-la por trás da vidraça, entre as cortinas de cassa, curvada sôbre a sua costura, vestida de preto, recolhida e séria. Poucas vezes saía. O marido, mais vélho que ela, era um inválido, sempre de cama, inutilizado por uma doença de espinha; havia anos que não descia à rua; avistavam-no às vezes tambêm à janela murcho e trôpego, agarrado à bengala, encolhido na robe-de-chambre, com uma face macilenta, a barba desleixada e com um barretinho de sêda enterrado melancólicamente até ao cachaço. Os filhos, duas rapariguitas e um rapaz, eram tambêm doentes, crescendo pouco e com dificuldade, cheios de tumores nas orelhas, chorões e tristonhos. A casa, interiormente, parecia lúgubre. Andava-se nas pontas dos pés, porque o senhor, na excitação nervosa que lhe davam as insónias, irritava-se com o menor rumor; havia sôbre as cómodas alguma garrafada da botica, alguma malga com papas de linhaça; as mesmas flores com que ela, no seu arranjo e no seu gôsto de frescura, ornava as mesas, depressa murchavam naquele ar abafado de febre, nunca renovado por causa das correntes de ar; e era uma tristeza ver sempre algum dos pequenos ou de emplastro sôbre a orelha, ou a um canto do camapé, embrulhado em cobertores com uma amarelidão de hospital.",
@@ -4951,11 +4955,7 @@
         "Cabe en el rango"
       ],
       "modelAnswer": "Eça la presenta como la santa del pueblo: una mujer rubia y delicada, de belleza conmovedora, que vive en una casa azul al final del camino y a la que la gente admira al pasar, siempre curvada sobre su costura tras la ventana."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
-    "register": "neutro",
-    "contentHash": "30d5be736034c548943a1afcdf004956120b90c80acc0c23f3abd06aa04f46a4"
+    }
   },
   {
     "id": "b2c2-med-22",
@@ -4967,6 +4967,10 @@
       "b2c2-lote4",
       "mediacion"
     ],
+    "contentHash": "0d72d56428019d158816d823f368fbb0db444a113d38ee2969c3164c2110df32",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+    "register": "neutro",
     "type": "mediation",
     "data": {
       "sourceText": "Lisboa às sete da tarde\né uma laranja madura:\no rio guarda a luz toda\ne devolve-a com doçura.",
@@ -4987,11 +4991,7 @@
         "Cabe en el rango"
       ],
       "modelAnswer": "Al caer la tarde, la luz pone a Lisboa entera de color naranja — por eso el poema la llama fruta madura, a punto. Y el Tajo hace de espejo: guarda toda esa luz y la devuelve suavizada, como si endulzara la ciudad desde abajo."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
-    "register": "neutro",
-    "contentHash": "0d72d56428019d158816d823f368fbb0db444a113d38ee2969c3164c2110df32"
+    }
   },
   {
     "id": "b2c2-med-23",
@@ -5003,6 +5003,10 @@
       "b2c2-lote4",
       "mediacion"
     ],
+    "contentHash": "7baf7f9e4a862ea02efc1e22ab5e43bf6b3539087bdbfc27a08da37d80600f03",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+    "register": "neutro",
     "type": "mediation",
     "data": {
       "sourceText": "Aperte o botão vermelho e aguarde. Não esqueça de registrar sua senha no aplicativo antes de usar.",
@@ -5022,11 +5026,7 @@
         "Misma información, en el rango"
       ],
       "modelAnswer": "Carregue no botão vermelho e aguarde. Não se esqueça de registar a sua palavra-passe na aplicação antes de usar."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
-    "register": "neutro",
-    "contentHash": "7baf7f9e4a862ea02efc1e22ab5e43bf6b3539087bdbfc27a08da37d80600f03"
+    }
   },
   {
     "id": "b2c2-med-24",
@@ -5038,6 +5038,10 @@
       "b2c2-lote4",
       "mediacion"
     ],
+    "contentHash": "cb35fa1e836ecdc04e0b582fabc79441c2c6eaf9c9a1048d0e163371f88b689c",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+    "register": "neutro",
     "type": "mediation",
     "data": {
       "sourceText": "Ó Rita, olha, afinal não consigo ir buscar-te ao aeroporto. Desenrasca-te de táxi, sim? Desculpa lá!",
@@ -5057,11 +5061,7 @@
         "Cabe en el rango"
       ],
       "modelAnswer": "Rita, afinal não vou conseguir ir buscá-la ao aeroporto. Peço desculpa pelo transtorno — o mais prático será apanhar um táxi."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
-    "register": "neutro",
-    "contentHash": "cb35fa1e836ecdc04e0b582fabc79441c2c6eaf9c9a1048d0e163371f88b689c"
+    }
   },
   {
     "id": "b2c2-med-25",
@@ -5073,6 +5073,10 @@
       "b2c2-lote4",
       "mediacion"
     ],
+    "contentHash": "67e927e074345f17ba9d6ba532af6f3885369d48dbb1367cbfdb33a4c445ad35",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+    "register": "informal",
     "type": "mediation",
     "data": {
       "sourceText": "— Doctor, tengo una memoria malísima. — ¿Desde cuándo? — ¿Desde cuándo qué?",
@@ -5092,11 +5096,7 @@
         "Cabe en el rango"
       ],
       "modelAnswer": "— Senhor doutor, tenho uma memória péssima. — Desde quando? — Desde quando o quê?"
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
-    "register": "informal",
-    "contentHash": "67e927e074345f17ba9d6ba532af6f3885369d48dbb1367cbfdb33a4c445ad35"
+    }
   },
   {
     "id": "b2c2-med-26",
@@ -5108,6 +5108,10 @@
       "b2c2-lote4",
       "mediacion"
     ],
+    "contentHash": "75f4bd4e26da3e32bd61f20288ba8f4aea33a224defb9095f9456080b277b921",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+    "register": "neutro",
     "type": "mediation",
     "data": {
       "sourceText": "Era uma vez um rei, môço e valente, senhor de um reino abundante em cidades e searas, que partira a batalhar por terras distantes, deixando solitária e triste a sua raínha e um filhinho, que ainda vivia no seu berço, dentro das suas faixas.\n\nA lua cheia que o vira marchar, levado no seu sonho de conquista e de fama, começava a minguar--quando um dos seus cavaleiros apareceu, com as armas rôtas, negro do sangue sêco e do pó dos caminhos, trazendo a amarga nova de uma batalha perdida e da morte do rei, traspassado por sete lanças entre a flor da sua nobreza, à beira de um grande rio.\n\nA raínha chorou magníficamente o rei. Chorou ainda desoladamente o espôso, que era formoso e alegre. Mas, sobretudo, chorou ansiosamente o pai que assim deixava o filhinho desamparado, no meio de tantos inimigos da sua frágil vida e do reino que seria seu, sem um braço que o defendesse, forte pela fôrça e forte pelo amor.\n\nDêsses inimigos o mais temeroso era seu tio, irmão bastardo do rei, homem depravado e bravio, consumido de cobiças grosseiras, desejando só a rialeza por causa dos seus tesoiros, e que havia anos vivia num castelo sôbre os montes, com uma horda de rebeldes, à maneira de um lôbo que, de atalaia no seu fojo, espera a prêsa. Ai! a prêsa agora era aquela criancinha, rei de mama, senhor de tantas províncias, e que dormia no seu berço com seu guiso de oiro fechado na mão!\n\nAo lado dêle, outro menino dormia noutro berço. Mas êste era um escravosinho, filho da bela e robusta escrava que amamentava o príncipe. Ambos tinham nascido na mesma noite de verão. O mesmo seio os criava. Quando a raínha, antes de adormecer, vinha beijar o principesinho, que tinha o cabelo louro e fino, beijava tambêm por amor dêle o escravosinho, que tinha o cabelo negro e crespo. Os olhos de ambos reluziam como pedras preciosas. Sómente, o berço de um era magnífico e de marfim entre brocados--e o berço do outro pobre e de vêrga. A leal escrava, porêm, a ambos cercava de carinho igual, porque se um era o seu filho--o outro seria o seu rei.\n\nNascida naquela casa rial, ela tinha a paixão, a religião dos seus senhores. Nenhum pranto correra mais sentidamente do que o seu pelo rei morto à beira do grande rio. Pertencia, porêm, a uma raça que acredita que a vida da terra se continua no céu. O rei seu amo, de-certo, já estaria agora reinando num outro reino, para alêm das nuvens, abundante tambêm em searas e cidades. O seu cavalo de batalha, as suas armas, os seus pagens tinham subido com êle às alturas. Os seus vassalos, que fôssem morrendo, prontamente iriam, nesse reino celeste, retomar em tôrno dele a sua vassalagem. E ela um dia, por seu turno, remontaria num raio de luz a habitar o palácio do seu senhor, e a fiar de novo o linho das suas túnicas, e a acender de novo a caçoleta dos seus perfumes; seria no céu como fôra na terra, e feliz na sua servidão.\n\nTodavia, tambêm ela tremia pelo seu príncipesinho! Quantas vezes, com êle pendurado do peito, pensava na sua fragilidade, na sua longa infância, nos anos lentos que correriam antes que êle fôsse ao menos do tamanho de uma espada, e naquele tio cruel, de face mais escura que a noite e coração mais escuro que a face, faminto do trono, e espreitando de cima do seu rochedo entre os alfanges da sua horda! Pobre príncipesinho da sua alma! Com uma ternura maior o apertava então nos braços. Mas se o seu filho chalrava ao lado--era para êle que os seus braços corriam com um ardor mais feliz. Êsse, na sua indigência, nada tinha a recear da vida. Desgraças, assaltos da sorte má nunca o poderiam deixar mais despido das glórias e bens do mundo do que já estava ali no seu berço, sob o pedaço de linho branco que resguardava a sua nudez. A existência, na verdade, era para êle mais preciosa e digna de ser conservada que a do seu príncipe, porque nenhum dos duros cuidados com que ela ennegrece a alma dos senhores roçaria sequer a sua alma livre e simples de escravo. E, como se o amasse mais por aquela humildade ditosa, cobria o seu corpinho gordo de beijos pesados e devoradores--dos beijos que ela fazia ligeiros sôbre as mãos do seu príncipe.\n\nNo entanto um grande temor enchia o palácio, onde agora reinava uma mulher entre mulheres. O bastardo, o homem de rapina, que errava no cimo das serras, descera à planície com a sua horda, e já através de casais e aldeias felizes ia deixando um sulco de matança e ruínas. As portas da cidade tinham sido seguras com cadeias mais fortes. Nas atalaias ardiam lumes mais altos. Mas à defesa faltava disciplina viril. Uma roca não governa como uma espada. Toda a nobreza fiel perecera na grande batalha. E a raínha desventurosa apenas sabia correr a cada instante ao berço do seu filhinho e chorar sôbre êle a sua fraqueza de viuva. Só a ama leal parecia segura--como se os braços em que estreitava o seu príncipe fôssem muralhas de uma cidadela que nenhuma audácia pode transpôr.\n\nOra uma noite, noite de silêncio e de escuridão, indo ela a adormecer, já despida, no seu catre, entre os seus dois meninos, adivinhou, mais que sentiu, um curto rumor de ferro e de briga, longe, à entrada dos vergeis riais. Embrulhada à pressa num pano, atirando os cabelos para trás, escutou ansiosamente. Na terra areada, entre os jasmineiros, corriam passos pesados e rudes. Depois houve um gemido, um corpo tombando molemente, sôbre lages, como um fardo. Descerrou violentamente a cortina. E alêm, ao fundo da galeria, avistou homens, um clarão de lanternas, brilhos de armas... Num relance tudo compreendeu--o palácio surpreendido, o bastardo cruel vindo roubar, matar o seu príncipe! Então, rápidamente, sem uma vacilação, uma dúvida, arrebatou o príncipe do seu berço de marfim, atirou-o para o pobre berço de vêrga--e tirando o seu filho do berço servil, entre beijos desesperados, deitou-o no berço rial que cobriu com um brocado.\n\nBruscamente um homem enorme, de face flamejante, com um manto negro sôbre a cota de malha, surgiu à porta da câmara, entre outros, que erguiam lanternas. Olhou--correu ao berço de marfim onde os brocados luziam, arrancou a criança, como se arranca uma bôlsa de oiro, e abafando os seus gritos no manto, abalou furiosamente.\n\nO príncipe dormia no seu novo berço. A ama ficara imóvel no silêncio e na treva.\n\nMas brados de alarme atroaram de repente o palácio. Pelas janelas perpassou o longo flamejar das tochas. Os pátios ressoavam com o bater das armas. E desgrenhada, quási nua, a raínha invadiu a câmara, entre as aias, gritando pelo seu filho! Ao avistar o berço de marfim, com as roupas desmanchadas, vazio, caiu sôbre as lages, num choro, despedaçada. Então calada, muito lenta, muito pálida, a ama descobriu o pobre berço de vêrga... O príncipe lá estava quieto, adormecido, num sonho que o fazia sorrir, lhe iluminava toda a face entre os seus cabelos de oiro. A mãe caíu sôbre o berço, com um suspiro, como cai um corpo morto.\n\nE nesse instante um novo clamor abalou a galeria de mármore. Era o capitão das guardas, a sua gente fiel. Nos seus clamores havia, porêm, mais tristeza que triunfo. O bastardo morrera! Colhido, ao fugir, entre o palácio e a cidadela, esmagado pela forte legião de archeiros, sucumbira, êle e vinte da sua horda. O seu corpo lá ficara, com flechas no flanco, numa pôça de sangue. Mas, ai! dor sem nome! O corposinho tenro do príncipe lá ficara tambêm, envolto num manto, já frio, rôxo ainda das mãos ferozes que o tinham esganado! Assim tumultuosamente lançavam a nova cruel os homens de armas--quando a raínha, deslumbrada, com lágrimas entre risos, ergueu nos braços, para lho mostrar, o príncipe que despertara.\n\nFoi um espanto, uma aclamação. ¿Quem o salvara? Quem?... Lá estava junto do berço de marfim vazio, muda e hirta, aquela que o salvara! Serva sublimemente leal! Fôra ela que, para conservar a vida ao seu príncipe, mandara à morte o seu filho... Então, só então, a mãe ditosa, emergindo da sua alegria estática, abraçou apaixonadamente a mãe dolorosa, e a beijou, e lhe chamou irmã do seu coração... E de entre aquela multidão que se apertava na galeria veio uma nova, ardente aclamação, com súplicas de que fôsse recompensada magníficamente a serva admirável que salvara o rei e o reino.\n\nMas como? ¿Que bôlsas de oiro podem pagar um filho? Então um vélho de casta nobre lembrou que ela fôsse levada ao tesoiro rial, e escolhesse de entre essas riquezas, que eram como as maiores dos maiores tesoiros da Índia, todas as que o seu desejo apetecesse...\n\nA raínha tomou a mão da serva. E sem que a sua face de mármore perdesse a rigidez, com um andar de morta, como num sonho, ela foi assim conduzida para a Câmara dos Tesoiros. Senhores, aias, homens de armas, seguiam, num respeito tam comovido que apenas se ouvia o roçar das sandálias nas lages. As espessas portas do Tesoiro rodaram lentamente. E, quando um servo destrancou as janelas, a luz da madrugada, já clara e rósea, entrando pelos gradeamentos de ferro, acendeu um maravilhoso e faiscante incêndio de oiro e pedrarias! Do chão de rocha até às sombrias abóbadas, por toda a câmara, reluziam, scintilavam, refulgiam os escudos de oiro, as armas marchetadas, os montões de diamantes, as pilhas de moedas, os longos fios de pérolas, todas as riquezas daquele reino, acumuladas por cem reis durante vinte séculos. Um longo ah, lento e maravilhado, passou por sôbre a turba que emmudecera. Depois houve um silêncio ansioso. E no meio da câmara, envolta na refulgência preciosa, a ama não se movia... Apenas os seus olhos, brilhantes e secos, se tinham erguido para aquele céu que, alêm das grades, se tingia de rosa e de oiro. Era lá, nesse céu fresco de madrugada, que estava agora o seu menino. Estava lá, e já o sol se erguia, e era tarde, e o seu menino chorava de-certo, e procurava o seu peito!... E então a ama sorriu e estendeu a mão. Todos seguiam, sem respirar, aquele lento mover da sua mão aberta. ¿Que joia maravilhosa, que fio de diamantes, que punhado de rubís, ia ela escolher?\n\nA ama estendia a mão--e sôbre um escabelo ao lado, entre um molho de armas, agarrou um punhal. Era um punhal de um vélho rei, todo cravejado de esmeraldas, e que valia uma província.\n\nAgarrara o punhal, e com êle apertado fortemente na mão, apontando para o céu, onde subiam os primeiros raios do sol, encarou a raínha, a multidão, e gritou:\n\n--Salvei o meu príncipe, e agora--vou dar de mamar ao meu filho!\n\nE cravou o punhal no coração.",
@@ -5129,11 +5133,7 @@
         "Cabe en el rango"
       ],
       "modelAnswer": "Un rey muere en la guerra y su hermano bastardo asalta el palacio de noche para matar al príncipe heredero, aún bebé. La aia, que cría a los dos niños, los cambia de cuna: el usurpador se lleva al que cree príncipe y lo mata en la huida — y era el hijo de la aia. El reino se salva, quieren recompensarla… y ella se clava un puñal."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
-    "register": "neutro",
-    "contentHash": "75f4bd4e26da3e32bd61f20288ba8f4aea33a224defb9095f9456080b277b921"
+    }
   },
   {
     "id": "b2c2-med-27",
@@ -5147,9 +5147,15 @@
       "b2c2-lote5",
       "mediacao"
     ],
+    "contentHash": "def84afb5a0a7f36bab391a394243c4fcc3cd5a07f16d12630ae7ac68ffc76cc",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 5: 2 linguistas adversariais, 3 rondas 2026-08-11 (docs/contenido/2026-08-11-lote5-b2c2.md)",
+    "register": "informal",
+    "address": "tu",
     "type": "mediation",
     "data": {
       "sourceText": "TEXTO A — «O rico e o pobre»\n--Ficarias muito contente, não é verdade, meu rapaz, podendo trocar a minha sorte pela tua?»--Peço que me desculpe senhor, replicou Martinho córando, o que eu disse não foi por mal.»--Não estou zangado comtigo, replicou o fidalguinho, pelo contrario, desejo fazer a troca.»\n--Oh! está a divertir-se comigo! tornou Martinho, ninguem quereria estar no meu lugar, quanto mais um bello e rico menino como o senhor. Ando muitas leguas por dia, como pão secco e batatas, emquanto que o senhor anda n'uma carruagem, póde comer frangos e beber vinho.»--Pois bem, volveu o fidalguinho, se me queres dar tudo aquillo que tens e que eu não tenho, dou-te em troca de boa vontade tudo o que possuo.» Martinho ficou com os olhos espantados, sem saber o que havia de dizer; mas o preceptor continuou: «Acceitas a troca?»--Ora essa! exclamou Martinho, ainda m'o pergunta! Oh! como toda a gente d'aldeia vae ficar assombrada de me ver entrar n'esta bella carruagem!» E Martinho desatou a rir com a idéa da entrada triumphante na sua aldeia.\nO fidalguinho chamou os criados, que abriram a portinhola e o ajudaram a descer. Mas qual foi a surpreza de Martinho, vendo que elle tinha uma perna de pau e que a outra era tão fraca, que se via obrigado a andar em duas muletas: depois, olhando para elle de mais perto, Martinho observou que era muito pallido e que tinha cara de doente.\nSorriu para o rapazito com ar benevolo, e disse-lhe:--Então sempre desejas trocar? Querias porventura, se podesses, deixar as tuas pernas valentes e as tuas faces córadas, pelo prazer de ter uma carruagem e andar bem vestido?»--Oh! não, por coisa nenhuma! replicou Martinho.--«Eu, disse o fidalguinho, de boa vontade seria pobre, se tivesse saude. Mas, como Deus quiz que fosse aleijado e doente, soffro os meus males com paciencia e faço por ser alegre, dando graças a Deus pelos bens que me concedeu na sua infinita misericordia.\n«Faze o mesmo, meu amiguinho, e lembra-te que, se és pobre e comes mal, tens força e saude, coisas que valem mais que uma carroagem, e que não podem comprar-se com dinheiro.\n\nTEXTO B — «Inconveniente da riqueza»\n--Visto que foste caritativo, disse Jesus, visto que recebeste na tua pobreza o forasteiro que veiu ter comtigo como um pobre mendigo, serás recompensado. Foi Deus que entrou na tua fazenda, é Deus que te enriquece.»\nDito isto desappareceu.\nE a chuva dos grãos não parou em toda a noite, e fez um monte tão alto como a egreja.\nO camponez pagou as suas dividas, comprou terras, e construiu uma bella casa. Era rico, e tornou-se orgulhoso e altivo com os pobres. Elle e seus filhos adquiriram costumes perdularios, tanto e tanto fizeram, que se arruinaram, e, como tinham sido maus nos tempos em que eram ricos, ninguem os ajudou na sua miseria. Uma noite o velho camponez, que bebera enormemente, entrou no celleiro, e, recordando-se do milagre que o enriquecêra, imaginou que tambem elle o poderia fazer. Agarrou na candeia, approximou-a d'um feixe de palha, communicou-se o fogo, ardeu a casa e tudo o que lhe restava, e passado tempo morreu na miseria mais absoluta.",
+      "sourceRef": "junqueiro-o-rico-e-o-pobre+junqueiro-inconveniente-da-riqueza",
       "sourceLang": "pt",
       "targetLang": "pt",
       "mediationType": "synthesise_sources",
@@ -5167,14 +5173,8 @@
         "¿Evita copiar más de 6 palabras seguidas de cualquiera de los dos textos?",
         "¿Trata al destinatario por tu?"
       ],
-      "modelAnswer": "Olha, li dois contos do Junqueiro e não dizem bem a mesma coisa. No primeiro, um rapaz pobre inveja um fidalguinho rico e aceita trocar de vida com ele — mas quando o vê descer da carruagem, com uma perna de pau e duas muletas, recusa logo. O fidalguinho diz-lhe que trocaria de boa vontade, se tivesse saúde. No segundo, um camponês fica riquíssimo por milagre, torna-se orgulhoso, esbanja tudo e morre na miséria mais absoluta. Repara na diferença: o primeiro mede a riqueza contra a saúde; o segundo nem sequer fala de saúde — conta o que veio depois de o homem ficar rico.",
-      "sourceRef": "junqueiro-o-rico-e-o-pobre+junqueiro-inconveniente-da-riqueza"
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 5: 2 linguistas adversariais, 3 rondas 2026-08-11 (docs/contenido/2026-08-11-lote5-b2c2.md)",
-    "register": "informal",
-    "address": "tu",
-    "contentHash": "def84afb5a0a7f36bab391a394243c4fcc3cd5a07f16d12630ae7ac68ffc76cc"
+      "modelAnswer": "Olha, li dois contos do Junqueiro e não dizem bem a mesma coisa. No primeiro, um rapaz pobre inveja um fidalguinho rico e aceita trocar de vida com ele — mas quando o vê descer da carruagem, com uma perna de pau e duas muletas, recusa logo. O fidalguinho diz-lhe que trocaria de boa vontade, se tivesse saúde. No segundo, um camponês fica riquíssimo por milagre, torna-se orgulhoso, esbanja tudo e morre na miséria mais absoluta. Repara na diferença: o primeiro mede a riqueza contra a saúde; o segundo nem sequer fala de saúde — conta o que veio depois de o homem ficar rico."
+    }
   },
   {
     "id": "b2c2-med-28",
@@ -5188,9 +5188,14 @@
       "b2c2-lote5",
       "mediacao"
     ],
+    "contentHash": "332f599a91ec34ea3f529cefbee0423788b424c0003158e539b263bc4f395a85",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 5: 2 linguistas adversariais, 3 rondas 2026-08-11 (docs/contenido/2026-08-11-lote5-b2c2.md)",
+    "register": "neutro",
     "type": "mediation",
     "data": {
       "sourceText": "Um homem rico, mas avarento, tinha perdido dentro d'um alforge uma quantia em oiro bastante avultada. Annunciou que daria cem mil réis d'alviçaras a quem lh'a trouxesse. Apresentou-se-lhe em casa um honrado camponez levando o alforge. O nosso homem contou o dinheiro, e disse:\n--Deviam ser oitocentos mil réis, que foi a quantia que eu perdi; no alforge encontro apenas setecentos; vejo, meu amigo, que recebeste adiantados os cem mil réis d'alviçaras: estamos pagos por conseguinte.»\nO bom camponez, que nem por sombras tocara no dinheiro, não podia nem devia contentar-se com semelhantes agradecimentos. Foram ter com o juiz, que, vendo a má fé do avarento, deu a seguinte sentença:\n--Um de vós perdeu oitocentos mil réis; o outro encontrou um alforge apenas com setecentos: Resulta d'ahi claramente que o dinheiro que o ultimo encontrou não póde ser o mesmo a que o primeiro se julga com direito. Por consequencia tu, meu bom homem, leva o dinheiro que encontraste, e guarda-o até que appareça o individuo que perdeu sómente setecentos mil réis. E tu, o unico conselho que passo a dar-te, é que tenhas paciencia até que appareça alguem que tenha achado os teus oitocentos mil réis.",
+      "sourceRef": "junqueiro-boa-sentenca",
       "sourceLang": "pt",
       "targetLang": "es",
       "mediationType": "summarise",
@@ -5207,13 +5212,8 @@
         "¿Está en español y entre 40 y 70 palabras?",
         "¿Evita traducir palabra por palabra cualquier frase entera del original?"
       ],
-      "modelAnswer": "Un rico avaro pierde una alforja con oro y promete cien mil réis a quien se la devuelva. Un campesino se la entrega intacta, pero el avaro jura que faltan cien mil y da por cobrada la recompensa. El juez falla que ese dinero no puede ser el suyo: que lo guarde el campesino, y que el avaro espere a quien encuentre ochocientos.",
-      "sourceRef": "junqueiro-boa-sentenca"
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 5: 2 linguistas adversariais, 3 rondas 2026-08-11 (docs/contenido/2026-08-11-lote5-b2c2.md)",
-    "register": "neutro",
-    "contentHash": "332f599a91ec34ea3f529cefbee0423788b424c0003158e539b263bc4f395a85"
+      "modelAnswer": "Un rico avaro pierde una alforja con oro y promete cien mil réis a quien se la devuelva. Un campesino se la entrega intacta, pero el avaro jura que faltan cien mil y da por cobrada la recompensa. El juez falla que ese dinero no puede ser el suyo: que lo guarde el campesino, y que el avaro espere a quien encuentre ochocientos."
+    }
   },
   {
     "id": "b2c2-med-29",
@@ -5227,9 +5227,14 @@
       "b2c2-lote5",
       "mediacao"
     ],
+    "contentHash": "6921d559eaf3a79eea6c386bd315b559cbc30ecb86816e89a506ad340036fdc1",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 5: 2 linguistas adversariais, 3 rondas 2026-08-11 (docs/contenido/2026-08-11-lote5-b2c2.md)",
+    "register": "informal",
     "type": "mediation",
     "data": {
       "sourceText": "Dizem que em Portugal há mil maneiras de fazer bacalhau. É mentira: há mil e uma. A da tua avó, que é melhor do que todas as outras juntas.",
+      "sourceRef": "anedotas-e-quadras-b1-1",
       "sourceLang": "pt",
       "targetLang": "es",
       "mediationType": "explain_concept",
@@ -5245,13 +5250,8 @@
         "¿Dice que la gracia está en el orgullo familiar, no en el número?",
         "¿Está en español, entre 40 y 70 palabras, y traduce «bacalhau» y «avó» en vez de dejarlos en portugués?"
       ],
-      "modelAnswer": "El bacalao es el plato nacional de Portugal, y allí se repite como refrán que hay mil maneras de prepararlo. El chiste finge corregir el dato: no son mil, son mil y una. La que sobra es la de la abuela de quien escucha — porque el remate va dirigido a ti. La gracia está en poner la cocina de una abuela por encima de un tópico nacional.",
-      "sourceRef": "anedotas-e-quadras-b1-1"
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 5: 2 linguistas adversariais, 3 rondas 2026-08-11 (docs/contenido/2026-08-11-lote5-b2c2.md)",
-    "register": "informal",
-    "contentHash": "6921d559eaf3a79eea6c386bd315b559cbc30ecb86816e89a506ad340036fdc1"
+      "modelAnswer": "El bacalao es el plato nacional de Portugal, y allí se repite como refrán que hay mil maneras de prepararlo. El chiste finge corregir el dato: no son mil, son mil y una. La que sobra es la de la abuela de quien escucha — porque el remate va dirigido a ti. La gracia está en poner la cocina de una abuela por encima de un tópico nacional."
+    }
   },
   {
     "id": "b2c2-med-30",
@@ -5265,6 +5265,11 @@
       "b2c2-lote5",
       "mediacao"
     ],
+    "contentHash": "a4cb91a6411d958883cea2642738b7d4abbd755a0182944bbd78854eb746ef52",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 5: 2 linguistas adversariais, 3 rondas 2026-08-11 (docs/contenido/2026-08-11-lote5-b2c2.md)",
+    "register": "formal",
+    "address": "terceira_sem_pronome",
     "type": "mediation",
     "data": {
       "sourceText": "«Oye, al final no llegamos el viernes sino el sábado a mediodía: nos han cambiado el vuelo. Somos tres, no cuatro — Marta al final no viene. ¿Puedes avisar tú a la señora del piso? Y pregúntale si podemos dejar las maletas por la mañana aunque no esté lista la habitación.»",
@@ -5285,12 +5290,7 @@
         "¿La nombra como senhoria o a senhora, en vez de calcar «la señora del piso»?"
       ],
       "modelAnswer": "Boa tarde. Escrevo-lhe da parte dos meus amigos, que me pediram para avisar a senhoria: afinal já não chegam na sexta-feira, mas no sábado ao meio-dia — mudaram-lhes o voo. E passam a ser três pessoas, e não quatro. Queria também perguntar se, no sábado de manhã, se importa que deixem as malas aí, mesmo que o quarto ainda não esteja pronto. Muito obrigado pela compreensão."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 5: 2 linguistas adversariais, 3 rondas 2026-08-11 (docs/contenido/2026-08-11-lote5-b2c2.md)",
-    "register": "formal",
-    "address": "terceira_sem_pronome",
-    "contentHash": "a4cb91a6411d958883cea2642738b7d4abbd755a0182944bbd78854eb746ef52"
+    }
   },
   {
     "id": "b2c2-med-31",
@@ -5304,6 +5304,11 @@
       "b2c2-lote5",
       "mediacao"
     ],
+    "contentHash": "b6b6354fd312df69c4cf4bc6385b1d99002b08606514fda7504e325736d5ca81",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 5: 2 linguistas adversariais, 3 rondas 2026-08-11 (docs/contenido/2026-08-11-lote5-b2c2.md)",
+    "register": "formal",
+    "address": "V_Exa",
     "type": "mediation",
     "data": {
       "sourceText": "«Ó pá, isto assim não dá. Há três semanas que o candeeiro da Rua das Amoreiras está fundido e à noite não se vê nada. Já toda a gente se queixou e ninguém aparece. Alguém tem de fazer alguma coisa antes que aconteça uma desgraça.»",
@@ -5325,12 +5330,7 @@
         "¿Entre 55 y 110 palabras?"
       ],
       "modelAnswer": "Exmo. Senhor Presidente da Câmara Municipal,\nAssunto: Falta de iluminação pública na Rua das Amoreiras.\nVenho por este meio comunicar a V. Exa. que o candeeiro de iluminação pública da Rua das Amoreiras se encontra fundido há cerca de três semanas, ficando o troço completamente às escuras a partir do anoitecer. Vários moradores já apresentaram queixa, sem que até à data se tenha verificado qualquer intervenção. Solicito a V. Exa. que determine a reparação com a brevidade possível, atendendo ao risco que a falta de luz representa para quem ali circula a pé.\nCom os melhores cumprimentos,"
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 5: 2 linguistas adversariais, 3 rondas 2026-08-11 (docs/contenido/2026-08-11-lote5-b2c2.md)",
-    "register": "formal",
-    "address": "V_Exa",
-    "contentHash": "b6b6354fd312df69c4cf4bc6385b1d99002b08606514fda7504e325736d5ca81"
+    }
   },
   {
     "id": "b2c2-med-32",
@@ -5344,6 +5344,11 @@
       "b2c2-lote5",
       "mediacao"
     ],
+    "contentHash": "57777e8ce1ef09a03492eaeb791c2ce01179d3ce6f191bca888d3e31b8c2b823",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 5: 2 linguistas adversariais, 3 rondas 2026-08-11 (docs/contenido/2026-08-11-lote5-b2c2.md)",
+    "register": "informal",
+    "address": "tu",
     "type": "mediation",
     "data": {
       "sourceText": "«Oi, tudo bem? Ontem foi corrido: peguei o trem lotado, fiquei meia hora na fila do banco e ainda me esqueci do terno na tinturaria. Cheguei em casa morto, abri a geladeira e não tinha nada. Acabei tomando só uma xícara de café. Me liga quando puder.»",
@@ -5364,11 +5369,6 @@
         "¿Mantiene el tono informal, deja «fila» en paz —es portuguesa neutra, no brasileña— y se queda entre 45 y 85 palabras?"
       ],
       "modelAnswer": "Olá, tudo bem? Ontem foi uma correria: apanhei o comboio à cunha, estive meia hora na fila do banco e ainda me esqueci do fato na lavandaria. Cheguei a casa morto, abri o frigorífico e não havia lá nada. Acabei por tomar só uma chávena de café. Liga-me quando puderes."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 5: 2 linguistas adversariais, 3 rondas 2026-08-11 (docs/contenido/2026-08-11-lote5-b2c2.md)",
-    "register": "informal",
-    "address": "tu",
-    "contentHash": "57777e8ce1ef09a03492eaeb791c2ce01179d3ce6f191bca888d3e31b8c2b823"
+    }
   }
 ]

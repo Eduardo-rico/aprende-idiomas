@@ -675,7 +675,7 @@
           "voice": "Portuguese_SentimentalLady"
         },
         {
-          "hash": "d1207ece8efc927b1cacb3a9e74eb9953d3da757eaff98717019c35cd337ed32",
+          "hash": "d352ac4bb8db5bf9f7b907bccdb8c5b53d138e1f4548888987fca242e3bc32b8",
           "voice": "Portuguese_SentimentalLady"
         },
         {
@@ -689,7 +689,7 @@
           "voice": "Portuguese_Wiselady"
         },
         {
-          "hash": "9fd24c089e75074bc44b49fc5380d31ad11a22643da1ad87fac3eae05202a185",
+          "hash": "f01315c9602a760152b1cb53308c5f66264c075b2b709e45d79c7c89cc3f68ab",
           "voice": "Portuguese_Wiselady"
         },
         {
@@ -815,8 +815,8 @@
           "voice": "Portuguese_SentimentalLady"
         },
         {
-          "hash": "6ba96e43b294a7ef7045f617a431eeb51ed79bb42101548f9a632a717c8c3b7f",
-          "voice": "Portuguese_SentimentalLady"
+          "hash": "d5f072eaabf61df2bc4ee55e5bcb0801627df1bfb98892e08a348baa390f5254",
+          "voice": "ElevenLabs_Leonor"
         },
         {
           "hash": "833a1f149439c3bf801fafadfb01f284285e8f2f5f1f523008f7c65fff16f215",
@@ -829,8 +829,8 @@
           "voice": "Portuguese_Wiselady"
         },
         {
-          "hash": "973c3d0027e030b326e8907a72fee591fc3cf8c1f4b6b5d33dc1d3ef6d026315",
-          "voice": "Portuguese_Wiselady"
+          "hash": "d5f072eaabf61df2bc4ee55e5bcb0801627df1bfb98892e08a348baa390f5254",
+          "voice": "ElevenLabs_Leonor_brInterino"
         },
         {
           "hash": "ebf69e713ba72aa2c23a5e0c7989146d2db27ca4ff3f85c2ba7d5797ea8b83d7",
@@ -1064,8 +1064,8 @@
           "voice": "Portuguese_SentimentalLady"
         },
         {
-          "hash": "99541cd8816ef3af0b7a2b95724c48eee78791752317cff8554ab66e897cdaea",
-          "voice": "Portuguese_SentimentalLady"
+          "hash": "c8ca3df1d49febe0f2355c8873f02e863f0e300c168aef68d4a7393a57c1186e",
+          "voice": "ElevenLabs_Leonor"
         }
       ],
       "pt-pt": [
@@ -1078,8 +1078,8 @@
           "voice": "Portuguese_Wiselady"
         },
         {
-          "hash": "2a731149079a7820975a0a77040da42ff21043599673872e6f6dd4b7c9a17a4d",
-          "voice": "Portuguese_Wiselady"
+          "hash": "c8ca3df1d49febe0f2355c8873f02e863f0e300c168aef68d4a7393a57c1186e",
+          "voice": "ElevenLabs_Leonor_brInterino"
         }
       ]
     }
@@ -1255,6 +1255,92 @@
         {
           "hash": "de793b9494c1667ba20e0de71afb9679f691b77332fc5e7412c3d69920cc11f5",
           "voice": "Portuguese_Wiselady"
+        }
+      ]
+    }
+  },
+  "b11-l1-falsos-amigos-que-doem": {
+    "blockId": 11,
+    "title": "Falsos amigos que doem",
+    "exampleCount": 4,
+    "audioRefs": {
+      "pt-br": [
+        {
+          "hash": "a60db882ab5b1ce588d4efc0095248f8b6268edad69c7fe45de041d54eebc124",
+          "voice": "ElevenLabs_Leonor"
+        },
+        {
+          "hash": "fafe8d885df29045f0abca2857dfffe6f471f07aca6edd57218bb824e075ea93",
+          "voice": "ElevenLabs_Leonor"
+        },
+        {
+          "hash": "b13e07288c9af0fa9d958b9f9ab88cc877240ff4f4cea3f80eaf8c92d14af559",
+          "voice": "ElevenLabs_Leonor"
+        },
+        {
+          "hash": "90d98a89dde5838ad2075e58cfa5e4050ea54aa835fa456e0a0538a518527c0d",
+          "voice": "ElevenLabs_Leonor"
+        }
+      ],
+      "pt-pt": [
+        {
+          "hash": "a60db882ab5b1ce588d4efc0095248f8b6268edad69c7fe45de041d54eebc124",
+          "voice": "ElevenLabs_Leonor_brInterino"
+        },
+        {
+          "hash": "fafe8d885df29045f0abca2857dfffe6f471f07aca6edd57218bb824e075ea93",
+          "voice": "ElevenLabs_Leonor_brInterino"
+        },
+        {
+          "hash": "b13e07288c9af0fa9d958b9f9ab88cc877240ff4f4cea3f80eaf8c92d14af559",
+          "voice": "ElevenLabs_Leonor_brInterino"
+        },
+        {
+          "hash": "90d98a89dde5838ad2075e58cfa5e4050ea54aa835fa456e0a0538a518527c0d",
+          "voice": "ElevenLabs_Leonor_brInterino"
+        }
+      ]
+    }
+  },
+  "b11-l2-regencias-que-traem": {
+    "blockId": 11,
+    "title": "Regências que traem",
+    "exampleCount": 4,
+    "audioRefs": {
+      "pt-br": [
+        {
+          "hash": "41c9eee4bc81f37803f474644f22136bf6f89e9655067b6897e3c29d4126a8e8",
+          "voice": "ElevenLabs_Leonor"
+        },
+        {
+          "hash": "a127f01c193e2455e4f487510faefbbb791f10a1ffa1c90727792d443d91f699",
+          "voice": "ElevenLabs_Leonor"
+        },
+        {
+          "hash": "423ec748a9c999631a97da6e442a18451bb1e9be854282b23123c40f94fa80aa",
+          "voice": "ElevenLabs_Leonor"
+        },
+        {
+          "hash": "44ade6bc251ffc214d05edb76162bbcb89573959e8b1bf0030c952aaf2c76206",
+          "voice": "ElevenLabs_Leonor"
+        }
+      ],
+      "pt-pt": [
+        {
+          "hash": "41c9eee4bc81f37803f474644f22136bf6f89e9655067b6897e3c29d4126a8e8",
+          "voice": "ElevenLabs_Leonor_brInterino"
+        },
+        {
+          "hash": "a127f01c193e2455e4f487510faefbbb791f10a1ffa1c90727792d443d91f699",
+          "voice": "ElevenLabs_Leonor_brInterino"
+        },
+        {
+          "hash": "423ec748a9c999631a97da6e442a18451bb1e9be854282b23123c40f94fa80aa",
+          "voice": "ElevenLabs_Leonor_brInterino"
+        },
+        {
+          "hash": "44ade6bc251ffc214d05edb76162bbcb89573959e8b1bf0030c952aaf2c76206",
+          "voice": "ElevenLabs_Leonor_brInterino"
         }
       ]
     }

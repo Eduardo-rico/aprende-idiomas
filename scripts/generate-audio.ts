@@ -9,8 +9,40 @@ import {
   TTS_MODEL, LLM_MODEL,
 } from './config';
 import { collectAudioJobs, lessonExampleTexts, textsFor } from './lib/audio-collector';
-import { generateTts } from './lib/minimax-tts';
+import { ttsHash, type TtsRequest } from './lib/minimax-tts';
+import { generateElevenTts } from './lib/elevenlabs-tts';
 import { hashKey, normalizeForHash } from './lib/cache';
+import { TTS_OUTPUT } from './config';
+
+/** Proveedor con memoria histórica (2026-08-11, Edu: «quiero elevenlabs»).
+ *
+ *  Las 1.288 grabaciones MiniMax existentes se CONSERVAN: si el clip
+ *  MiniMax de este texto ya está en disco, se devuelve tal cual (mismo
+ *  hash, misma voz en el ref — cero drift, cero llamadas). Sólo lo que
+ *  no existe (texto nuevo o cambiado) se sintetiza, y eso va por
+ *  ElevenLabs. Nunca cambiar VOICES a voces ElevenLabs "globalmente":
+ *  el hash incluye la voz, y eso re-sintetizaría el corpus ENTERO
+ *  (~2× 1.288 clips) contra la cuota del curso. */
+async function ttsConFallback(
+  req: TtsRequest,
+): Promise<{ hash: string; cached: boolean; voice: string }> {
+  // El corpus tiene DOS eras de archivos MiniMax: la variante del hash
+  // estuvo invertida (pt-br→'pt') una temporada, así que el mismo texto
+  // puede vivir bajo dos nombres. Ambas son grabaciones correctas del
+  // texto (el hash incluye el texto): se acepta la que exista, en ese
+  // orden, y sólo si ninguna existe se sintetiza con ElevenLabs.
+  const candidatos = [
+    ttsHash(req),
+    ttsHash({ ...req, variant: req.variant === 'br' ? 'pt' : 'br' }), // era invertida
+  ];
+  for (const h of candidatos) {
+    try {
+      await fs.access(path.join(TTS_OUTPUT, `${h}.mp3`));
+      return { hash: h, cached: true, voice: req.voiceId };
+    } catch { /* siguiente candidato */ }
+  }
+  return generateElevenTts({ text: req.text, variant: req.variant });
+}
 import {
   ExerciseInputSchema,
   LessonAudioRefsFileSchema,
@@ -241,7 +273,14 @@ async function main() {
           }>[] = await Promise.allSettled(
             (['pt-br', 'pt-pt'] as const).map((variant) =>
               lessonLimit(async () => {
-                const ttsVariant: 'br' | 'pt' = variant === 'pt-br' ? 'pt' : 'br';
+                // OJO: este mapeo estuvo INVERTIDO (pt-br→'pt') desde la
+                // migración Phase 1. Como el hash lleva la variante, el
+                // corpus acumuló DOS juegos de archivos (5.451 MP3 para
+                // ~2.576 refs) y el attach del 2026-08-11 volteó todos
+                // los refs a la era invertida, disparando 2.594 falsos
+                // caducados en check-audio-stale (que usa el mapeo
+                // correcto). Corregido: pt-br→br, pt-pt→pt.
+                const ttsVariant: 'br' | 'pt' = variant === 'pt-br' ? 'br' : 'pt';
                 const voice =
                   VOICES[variant]?.[DEFAULT_VOICE] ??
                   VOICES[ttsVariant]?.[DEFAULT_VOICE] ??
@@ -249,8 +288,8 @@ async function main() {
                 if (TTS_DELAY_MS > 0) {
                   await new Promise((r) => setTimeout(r, TTS_DELAY_MS));
                 }
-                const r = await generateTts({ text, voiceId: voice, variant: ttsVariant });
-                return { variant, hash: r.hash, voice };
+                const r = await ttsConFallback({ text, voiceId: voice, variant: ttsVariant });
+                return { variant, hash: r.hash, voice: r.voice };
               }),
             ),
           );
@@ -295,13 +334,14 @@ async function main() {
         // Phase 1: AudioJob.variant es VariantKey (string), pero MiniMax
         // TTS espera 'br' | 'pt'. Los callers pasan esos dos valores
         // (collectAudioJobs usa 'pt-br' y 'pt-pt'); mapeamos aquí.
-        const ttsVariant: 'br' | 'pt' = j.variant === 'pt-br' ? 'pt' : 'br';
+        // Mapeo corregido (ver nota en el sitio de lecciones): pt-br→br.
+        const ttsVariant: 'br' | 'pt' = j.variant === 'pt-br' ? 'br' : 'pt';
         const voice = VOICES[j.variant]?.[DEFAULT_VOICE] ?? VOICES[ttsVariant]?.[DEFAULT_VOICE] ?? '';
         if (TTS_DELAY_MS > 0 && done > 0) await new Promise(r => setTimeout(r, TTS_DELAY_MS));
-        const result = await generateTts({ text: j.text, voiceId: voice, variant: ttsVariant });
+        const result = await ttsConFallback({ text: j.text, voiceId: voice, variant: ttsVariant });
         done++;
         if (done % 20 === 0) console.log(`  progress: ${done}/${jobs.length}`);
-        return { ...j, ...result, voice };
+        return { ...j, ...result, voice: result.voice };
       })));
 
       const successes: Array<{ text: string; variant: string; hash: string; voice: string; cached: boolean }> = [];
@@ -329,8 +369,14 @@ async function main() {
         const brText = textsFor(ex, 'br')[0];
         const ptText = textsFor(ex, 'pt')[0];
         if (!brText || !ptText) continue;
-        const brR = audioMap.get(`br::${brText}`);
-        const ptR = audioMap.get(`pt::${ptText}`);
+        // Los jobs llevan VariantKey ('pt-br'/'pt-pt') desde la migración
+        // Phase 1, pero este lookup se quedó con las claves legacy
+        // ('br::'/'pt::') → SIEMPRE undefined → «audio attached: 0» en
+        // todos los bloques. Los clips se generaban y los refs jamás se
+        // actualizaban. Invisible desde junio porque el generador tampoco
+        // corría (locks fósiles). Cazado 2026-08-11 en el primer run vivo.
+        const brR = audioMap.get(`pt-br::${brText}`);
+        const ptR = audioMap.get(`pt-pt::${ptText}`);
         if (brR && ptR) {
           ex.audio = {
             br: { hash: brR.hash, voice: brR.voice },
