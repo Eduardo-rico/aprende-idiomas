@@ -33,14 +33,14 @@ ini, fin = cfg.get('pagInicio', 0), cfg.get('pagFin', len(r.pages))
 re_titulo = re.compile(cfg.get('tituloRegex', '$^'))
 excluir = set(cfg.get('titulosExcluir', []))
 
-# ── 1. recolectar líneas con su página, quitando folios ──
+# ── 1. recolectar líneas con su página ──
+# Los folios (líneas de solo dígitos) se quitan DESPUÉS de coser
+# fragmentos: el «1970» de «Abril, no Rio, em 1970» y el «74» de «74
+# Degraus» son solo-dígitos y el filtro se los comía ANTES de que el
+# cosedor pudiera reconstruir el título (cicatriz de Fonseca).
 lineas, folios = [], 0
 for i in range(ini, min(fin, len(r.pages))):
     for ln in (r.pages[i].extract_text() or '').split('\n'):
-        ln = ln.rstrip()
-        if re.fullmatch(r'\s*\d{1,4}\s*', ln):
-            folios += 1
-            continue
         if ln.strip():
             lineas.append(ln.strip())
 
@@ -53,11 +53,47 @@ for i in range(ini, min(fin, len(r.pages))):
 modo = cfg.get('modoTitulo', 'regex')
 lista_titulos = cfg.get('titulosLista', [])
 
+# Con coserFragmentos, los títulos que el PDF parte en trocitos («O» /
+# «campeonato», «Nau» / «Catrineta») se re-unen ANTES de comparar contra
+# la lista: una racha de líneas cortas sin puntuación final se funde en
+# una sola línea candidata si el resultado casa (case-insensitive) con
+# algún título de la lista. Cicatriz de Fonseca (2026-08-12).
+if cfg.get('coserFragmentos') and lista_titulos:
+    lt_norm = {t.lower(): t for t in lista_titulos}
+    cosidas, i = [], 0
+    while i < len(lineas):
+        if len(lineas[i]) < 52 and lineas[i][-1:] not in '.!?»"':
+            for largo in (5, 4, 3, 2):
+                cand = ' '.join(lineas[i:i + largo])
+                if cand.lower() in lt_norm:
+                    cosidas.append(lt_norm[cand.lower()])
+                    i += largo
+                    break
+            else:
+                cosidas.append(lineas[i]); i += 1
+        else:
+            cosidas.append(lineas[i]); i += 1
+    lineas = cosidas
+
+# ahora sí: fuera folios (los dígitos que sobrevivieron al cosido)
+_sin = [l for l in lineas if not re.fullmatch(r'\d{1,4}', l)]
+folios = len(lineas) - len(_sin)
+lineas = _sin
+
+# El matching de lista es SECUENCIAL: el sumário es el orden del libro,
+# así que sólo se acepta el título que TOCA. Sin esto, un título citado
+# dentro del texto («…tia Olímpia declamar a Nau Catrineta…» como línea
+# suelta en itálicas) parte el cuento por la mitad — pasó con Fonseca.
+_esperado = [0]
+
 def es_titulo(ln, siguiente):
     if ln in excluir:
         return False
     if modo == 'lista':
-        return ln in lista_titulos
+        if _esperado[0] < len(lista_titulos) and ln == lista_titulos[_esperado[0]]:
+            _esperado[0] += 1
+            return True
+        return False
     if modo == 'antes-de-versales':
         return (len(ln) < 55 and not ln.isupper() and not ln[0] in '—–«'
                 and siguiente is not None
@@ -68,8 +104,12 @@ cuentos, actual, titulo = [], [], None
 for idx, ln in enumerate(lineas):
     siguiente = lineas[idx + 1] if idx + 1 < len(lineas) else None
     if es_titulo(ln, siguiente):
-        if titulo and actual:
-            cuentos.append((titulo, actual))
+        if titulo is not None:
+            if actual:
+                cuentos.append((titulo, actual))
+            else:
+                # sección estructural sin cuerpo (una «parte»): se reporta
+                print(f'  (sección sin cuerpo, no es cuento: «{titulo}»)')
         titulo, actual = ln, []
     elif titulo is not None:
         actual.append(ln)
@@ -116,6 +156,12 @@ for orden, (tit, ls) in enumerate(cuentos, 1):
         continue
     tope = cfg.get('maxCharsParrafo', 1800)  # Lispector legítimamente pasa de 1800
     gigantes = sum(1 for p in parrafos if len(p) > tope)
+    # Exención POR CUENTO, explícita en el config: hay relatos que SON un
+    # solo párrafo kilométrico (el monólogo de «Agruras de um jovem
+    # escritor» de Fonseca). Se declara título por título — nada de subir
+    # el tope del libro entero hasta dejar el gate ciego.
+    if tit in cfg.get('sinTopeParrafo', []):
+        gigantes = 0
     if gigantes / max(1, len(parrafos)) > 0.05:
         errores.append(f'«{tit}»: {gigantes}/{len(parrafos)} párrafos > {tope} chars — la heurística falló, ABORTADO')
         continue
