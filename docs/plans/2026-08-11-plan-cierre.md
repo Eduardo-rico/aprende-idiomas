@@ -197,6 +197,17 @@ Cantera PT-PT dominio público (autor †<1956, verificar cada uno):
   Coelho** (Os Meus Amores), **Cesário Verde** y **Antero** (poesía)
 - **Pessoa vía Orpheu**: multiautor — gate por autor (Almada †1970 NO
   entra; Sá-Carneiro †1916 sí; Pessoa †1935 sí)
+- **Estante BR (pedido de Edu 2026-08-12, etiquetado `pt-br`)**:
+  **Machado de Assis** (†1908, dominio público) — Papéis Avulsos con «O
+  Alienista» (Gutenberg #57001), y de ahí Dom Casmurro / Memórias
+  Póstumas si se quiere más. Entra marcado `pt-br`: NO cuenta para las
+  1,9M de inmersión PT-PT, y sirve además de fuente auténtica para las
+  mediaciones `cross_variety`. Los otros 8 autores pedidos NO tienen
+  fuente legal de dominio público (Lispector †1977, Guimarães Rosa
+  †1967, Fonseca †2020, Fagundes Telles †2022, Sophia de Mello †2004,
+  Abelaira †2003, Mário de Carvalho y Almeida Faria vivos): sólo entran
+  si Edu aporta sus propias copias (uso personal), vía carpeta de
+  ingesta con `licencia: 'copia personal'`.
 
 Reglas pagadas que aplican: normalizar CRLF, quitar `_itálicas_`,
 `parrafos[0]` puede ser numeral, fornada 3 de chistes/quadras con doble
