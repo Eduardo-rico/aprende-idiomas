@@ -298,6 +298,14 @@ interface LecturaBase {
   // capítulos por `orden`.
   serie?: { id: string; titulo: string; orden: number };
   notaOrtografia?: string;
+  // Estante privado (2026-08-12): obra con derechos que Edu posee como
+  // copia personal. Vive en `lecturas-privadas/` (gitignorado, jamás al
+  // repo — hay test de línea roja) y se funde con el catálogo público.
+  privada?: true;
+  // Variante de la obra: 'pt' (europeo, el default del curso) o 'pt-br'
+  // (estante brasileño — no cuenta para la meta de inmersión PT-PT y
+  // sirve de fuente para mediaciones cross_variety).
+  variante?: 'pt' | 'pt-br';
 }
 export interface LecturaKaraoke extends LecturaBase { modo?: 'karaoke'; parrafos: ParrafoLectura[] }
 export interface LecturaTexto extends LecturaBase { modo: 'texto'; parrafos: ParrafoTexto[] }
@@ -307,12 +315,18 @@ function lecturasDir(lang: LanguageId): string {
   return path.join(process.cwd(), 'lib/data/languages', lang, 'lecturas');
 }
 
-export async function loadLecturas(lang: LanguageId): Promise<Lectura[]> {
+/** Estante privado: copias personales con derechos. Gitignorado — el
+ *  test de «línea roja» revienta si git llega a trackear algo aquí. */
+function lecturasPrivadasDir(lang: LanguageId): string {
+  return path.join(process.cwd(), 'lib/data/languages', lang, 'lecturas-privadas');
+}
+
+async function leerLecturasDe(dir: string): Promise<Lectura[]> {
   try {
-    const files = (await fs.readdir(lecturasDir(lang))).filter((f) => f.endsWith('.json'));
+    const files = (await fs.readdir(dir)).filter((f) => f.endsWith('.json'));
     const out: Lectura[] = [];
     for (const f of files.sort()) {
-      out.push(JSON.parse(await fs.readFile(path.join(lecturasDir(lang), f), 'utf-8')));
+      out.push(JSON.parse(await fs.readFile(path.join(dir, f), 'utf-8')));
     }
     return out;
   } catch (err) {
@@ -321,15 +335,25 @@ export async function loadLecturas(lang: LanguageId): Promise<Lectura[]> {
   }
 }
 
+export async function loadLecturas(lang: LanguageId): Promise<Lectura[]> {
+  const publicas = await leerLecturasDe(lecturasDir(lang));
+  const privadas = await leerLecturasDe(lecturasPrivadasDir(lang));
+  // En colisión de id gana la PÚBLICA: es la revisada del catálogo.
+  const ids = new Set(publicas.map((l) => l.id));
+  return [...publicas, ...privadas.filter((l) => !ids.has(l.id))];
+}
+
 export async function loadLectura(lang: LanguageId, id: string): Promise<Lectura | null> {
   if (!/^[a-z0-9-]+$/.test(id)) return null; // defensa ?id=../../etc
-  try {
-    const raw = await fs.readFile(path.join(lecturasDir(lang), `${id}.json`), 'utf-8');
-    return JSON.parse(raw) as Lectura;
-  } catch (err) {
-    if ((err as NodeJS.ErrnoException).code === 'ENOENT') return null;
-    throw err;
+  for (const dir of [lecturasDir(lang), lecturasPrivadasDir(lang)]) {
+    try {
+      const raw = await fs.readFile(path.join(dir, `${id}.json`), 'utf-8');
+      return JSON.parse(raw) as Lectura;
+    } catch (err) {
+      if ((err as NodeJS.ErrnoException).code !== 'ENOENT') throw err;
+    }
   }
+  return null;
 }
 
 // ─── Eje MCER (JSON) ─────────────────────────────────────────────
