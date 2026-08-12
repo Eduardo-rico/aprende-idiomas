@@ -54,15 +54,35 @@ async function loadBlockExercises(blockId: number): Promise<Exercise[]> {
   });
 }
 
-/** Per-block lockfile via mkdir+rmdir (atomic on POSIX). Prevents concurrent runs corrupting b1.json. */
+/** Per-block lockfile via mkdir+rmdir (atomic on POSIX). Prevents concurrent runs corrupting b1.json.
+ *
+ *  Un lock huérfano (proceso muerto sin rmdir) bloqueaba esto PARA
+ *  SIEMPRE y EN SILENCIO: se encontraron locks fósiles del 22-jun y
+ *  30-jun que tuvieron el generador semanas sin correr, sin que nadie
+ *  lo supiera (2026-08-11). Ahora: se avisa por consola al esperar, y
+ *  un lock con más de 30 min se declara huérfano y se roba. */
+const LOCK_STALE_MS = 30 * 60 * 1000;
 async function withBlockLock<T>(blockId: number, fn: () => Promise<T>): Promise<T> {
   const lockDir = path.join(BLOCKS_DIR, `.b${blockId}.json.lock`);
+  let avisado = false;
   while (true) {
     try {
       await fs.mkdir(lockDir);
       break;
     } catch (err: any) {
       if (err?.code !== 'EEXIST') throw err;
+      try {
+        const st = await fs.stat(lockDir);
+        if (Date.now() - st.mtimeMs > LOCK_STALE_MS) {
+          console.warn(`[generate-audio] lock huérfano en b${blockId} (${st.mtime.toISOString()}) — robado`);
+          await fs.rmdir(lockDir).catch(() => {});
+          continue;
+        }
+      } catch { /* desapareció entre el mkdir y el stat: reintenta */ }
+      if (!avisado) {
+        console.warn(`[generate-audio] esperando lock de b${blockId}…`);
+        avisado = true;
+      }
       await new Promise(r => setTimeout(r, 100));
     }
   }

@@ -7689,20 +7689,21 @@
    "conector",
    "falso-amigo"
   ],
-  "contentHash": "e9764a9c158381ab84da1689470bbd14079dfd668b58d6f1d37053b130cbf5de",
+  "contentHash": "eb86b465f425be3d1fe036917f25e15479b1219997aa5188a43169f5cf1dc3b7",
   "esContrast": "El español usa 'si + presente de indicativo'; el portugués exige el conjuntivo tras 'se' de futuro.",
   "type": "fill_blank",
   "data": {
-   "sentence": "Se ele ___ (ter) tempo, nos encontraremos amanhã.",
+   "sentence": "Se ele ___ (ter) tempo, encontramo-nos amanhã.",
    "blanks": [
     {
      "position": 0,
-     "answer": "ter",
+     "answer": "tiver",
      "alternatives": []
     }
    ]
   },
-  "variantStatus": "unchecked"
+  "variantStatus": "unchecked",
+  "variantVerificacion": "E1 limpieza 2026-08-11: corregido determinista contra doctrina publicada (docs/plans/2026-08-11-plan-cierre.md)"
  },
  {
   "id": "ea635c56",

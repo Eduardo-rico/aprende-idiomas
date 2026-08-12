@@ -1235,7 +1235,7 @@
       "regional",
       "coloquial"
     ],
-    "contentHash": "2acce10160d800df89fc832ba348028069cb5b99f314e6b0e3c04a4758851b75",
+    "contentHash": "3d6875eba2c11fca02ff6e30e8e439accf92ddf4929b3e1df1d3e12ed43351aa",
     "esContrast": "En PT-BR se permite próclise con ‘ir + infinitivo’; en PT-PT es más frecuente la ênclise.",
     "audio": {
       "br": {
@@ -1249,16 +1249,17 @@
     },
     "type": "flashcard",
     "data": {
-      "front": "¿Qué ocurre con la colocación en español con ‘vamos’? ¿ ‘Vamos nos informar’ o ‘Vamos nos informar’?",
-      "back": "Em Portugal diz-se ‘Vamos informar-nos’ (ênclise com infinitivo) ou ‘Vamos nos informar’.",
-      "example": "Vamos nos informar sobre o assunto."
+      "front": "¿Cómo se coloca el pronombre en portugués con ‘vamos’ + infinitivo? ¿‘Vamos informar-nos’ o ‘Vamos nos informar’?",
+      "back": "Em Portugal diz-se ‘Vamos informar-nos’ (ênclise com o infinitivo) ou ‘vamo-nos informar’ (subida do clítico). ‘Vamos nos informar’ é a colocação brasileira.",
+      "example": "Vamos informar-nos sobre o assunto."
     },
     "variantOverrides": {
       "pt-br": {
         "back": "Vamos nos informar / Vamos nos informar (próclise con ‘ir’). En PT-BR informal se acepta ‘a gente vai se informar’."
       }
     },
-    "variantStatus": "needs-human"
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E1 limpieza 2026-08-11: corregido determinista contra doctrina publicada (docs/plans/2026-08-11-plan-cierre.md)"
   },
   {
     "id": "2dd077e3",
@@ -5503,7 +5504,7 @@
     "tags": [
       "coloquial"
     ],
-    "contentHash": "d4e7089fcc2dc05af6460e6ca2f33372cf8090b3048c8a6ea807e67b7c3179c6",
+    "contentHash": "c85f0a785630731f6b3d40e0fb9948934e1b41fc17ab2aedee80701f1fdac19b",
     "esContrast": "‘A gente’ en PT-BR se conjuga como ‘nós’ pero el verbo va en 3ª persona. En español ‘La gente’ funciona igual.",
     "audio": {
       "br": {
@@ -5518,10 +5519,11 @@
     "type": "flashcard",
     "data": {
       "front": "Coloca el pronombre: A gente ___ (alimentar) de forma saudável.",
-      "back": "se alimenta — ‘a gente’ usa el mismo conjugado que ‘ele/ela’ (3ª pessoa)",
-      "example": "A gente se alimenta bem quando cozinha em casa."
+      "back": "alimenta-se — ‘a gente’ usa el mismo conjugado que ‘ele/ela’ (3ª pessoa), y sin disparador el clítico va en ênclise",
+      "example": "A gente alimenta-se bem quando cozinha em casa."
     },
-    "variantStatus": "unchecked"
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E1 limpieza 2026-08-11: corregido determinista contra doctrina publicada (docs/plans/2026-08-11-plan-cierre.md)"
   },
   {
     "id": "d64ccc41",
@@ -7293,8 +7295,8 @@
       "repair": "Vou falar com ela amanhã.",
       "explanationEs": "Con valor de futuro, 'ir a + infinitivo' es calco del español: el futuro próximo portugués es 'ir + infinitivo' directo, sin preposición."
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 piloto: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-piloto-b2c2-gj-mediacion.md)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "E1 limpieza 2026-08-11: duplicado de punto ya publicado en el corpus (gate check-virginidad) — en cuarentena hasta que lote 6 reponga el hueco (docs/plans/2026-08-11-plan-cierre.md)",
     "register": "neutro",
     "contentHash": "236fa0a46e2cf2ec779c314cdf9487c839692e9b8702affe79760c4e84199a52"
   },
@@ -8292,8 +8294,8 @@
       "repair": "Talvez ele venha amanhã à reunião.",
       "explanationEs": "'Talvez' antepuesto exige CONJUNTIVO: 'talvez venha'. (Pospuesto al verbo sí admite indicativo: 'vem amanhã, talvez'.) El 'tal vez viene' del español no se traslada."
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 3: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote3-b2c2-y-leccion-b11.md)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "E1 limpieza 2026-08-11: duplicado de punto ya publicado en el corpus (gate check-virginidad) — en cuarentena hasta que lote 6 reponga el hueco (docs/plans/2026-08-11-plan-cierre.md)",
     "register": "neutro",
     "contentHash": "5b1fd73fcd086f4b7fc035038baa8a919e84819c03833a54395b9a42100ce9ac"
   },
@@ -8833,8 +8835,8 @@
       "repair": "A porta foi aberta pelo vento.",
       "explanationEs": "'Abrir' solo tiene un participio: 'aberto' — '*abrida' no existe. (Los de doble participio son otros: 'suspendido/suspenso', 'imprimido/impresso' — ahí ambas formas viven, cada una con su auxiliar.)"
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "E1 limpieza 2026-08-11: duplicado de punto ya publicado en el corpus (gate check-virginidad) — en cuarentena hasta que lote 6 reponga el hueco (docs/plans/2026-08-11-plan-cierre.md)",
     "register": "neutro",
     "contentHash": "960fb260a4a654724ab011c9047c45712636120bd97b18dea02908af1af873ea"
   },

@@ -3042,7 +3042,7 @@
   "tags": [
    "regular"
   ],
-  "contentHash": "62b470e0148e5023ca48f162743364cb098ca40efdb42b52f2413279856a1ae9",
+  "contentHash": "9ae2b5249ce7db739a6fbdd15ac6c4b2fd46c5e7ace97807a061423d8c4bc593",
   "audio": {
    "br": {
     "hash": "71d9b77d870613a0dc1eab4007a225f32e71d42ee3d8df678776956aeca85423",
@@ -3057,9 +3057,10 @@
   "data": {
    "front": "mañana",
    "back": "manhã",
-   "example": "Nos vemos amanhã de manhã."
+   "example": "Vemo-nos amanhã de manhã."
   },
-  "variantStatus": "unchecked"
+  "variantStatus": "unchecked",
+  "variantVerificacion": "E1 limpieza 2026-08-11: corregido determinista contra doctrina publicada (docs/plans/2026-08-11-plan-cierre.md)"
  },
  {
   "id": "6524706c",

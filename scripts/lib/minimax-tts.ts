@@ -72,9 +72,19 @@ async function fetchAndStore(hash: string, filePath: string, body: object): Prom
   if (!res.ok) {
     throw new Error(`TTS failed (${res.status}): ${await res.text()}`);
   }
-  const json = await res.json() as { data?: { audio?: string }; base_resp?: { status_msg?: string } };
+  const json = await res.json() as { data?: { audio?: string }; base_resp?: { status_code?: number; status_msg?: string } };
   const hex = json.data?.audio;
   if (!hex) {
+    // MiniMax responde 200 con el error DENTRO del body. El 1008
+    // (insufficient balance) no es reintentable: sin este fail-fast, el
+    // backoff lo reintentaba 5 veces POR ÍTEM y una corrida entera se
+    // convertía en un cuelgue de horas (2026-08-11: así se descubrió que
+    // la cuenta estaba seca — tras 22 clips, no en el primero).
+    if (json.base_resp?.status_code === 1008) {
+      const e = new Error(`TTS sin saldo (1008 insufficient balance) — recargar MiniMax o cambiar de proveedor`);
+      (e as any).status = 402; // 4xx → withBackoff hace fail-fast
+      throw e;
+    }
     throw new Error(`TTS missing audio in response: ${JSON.stringify(json.base_resp ?? json).slice(0, 300)}`);
   }
 
