@@ -171,7 +171,8 @@
    "acceptedAlternatives": [
     "Ese libro es muy difícil."
    ]
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "046a3fd1",
@@ -419,7 +420,8 @@
    "sourceLang": "es",
    "targetLang": "pt-br",
    "acceptedAlternatives": []
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "082f62e1",
@@ -565,7 +567,8 @@
      "alternatives": []
     }
    ]
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — Cloze abierto sin pista: «Ela trabalha na ___» admite escola/loja/padaria; con match exacto la primera exposición castiga injustamente"
  },
  {
   "id": "0de55e46",
@@ -625,7 +628,8 @@
    "front": "lleno",
    "back": "cheio",
    "example": "O restaurante está cheio."
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "1147ba5d",
@@ -638,7 +642,7 @@
   "tags": [
    "basico"
   ],
-  "contentHash": "1147ba5d7209415074816c13c3287920e04b842ed067c8f8e162c77749a9378b",
+  "contentHash": "d2100b5c24b3ed7741861c4071f525563e2a2e05a109f44a1104a45d3785cf75",
   "audio": {
    "br": {
     "hash": "4c53c9c0fe26ae70293286f69d9d32c97b100973686d2fd528278a412ed58627",
@@ -652,10 +656,11 @@
   "variantStatus": "unchecked",
   "type": "flashcard",
   "data": {
-   "front": "Cuál es la letra que aparece solo en portugués y no en español?",
+   "front": "¿Cuál es la letra que aparece solo en portugués y no en español?",
    "back": "ç (cê cedilhado)",
    "example": "A palavra 'ação' leva 'ç' em português."
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "12243a35",
@@ -691,7 +696,8 @@
     "Cuatro"
    ],
    "answer": "Una"
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — «Liste no alfabeto: A, B, C…» no es frase natural en PT; reescribir el audioText antes de doblar"
  },
  {
   "id": "133a98bd",
@@ -840,7 +846,7 @@
   "tags": [
    "vocabulário-chave"
   ],
-  "contentHash": "0ddd208fff24e83ac7c51dada9ccea88c28df0864b05a21daf27569f93905105",
+  "contentHash": "c149df69f8c82ad1f66f16f8e663ec764d34f5e9e5b0afc6070ab6d38cb41ebd",
   "audio": {
    "br": {
     "hash": "98371320dcba0277da5b89b0e7dc46ae4b4623d7a1b438b42de0fbf15c5120a7",
@@ -854,15 +860,12 @@
   "variantStatus": "unchecked",
   "type": "translation",
   "data": {
-   "source": "Que hora é? Não tenho hora.",
-   "target": "¿Qué hora es? No tengo hora.",
+   "source": "Que horas são? Não tenho relógio.",
+   "target": "¿Qué hora es? No tengo reloj.",
    "sourceLang": "pt-br",
-   "targetLang": "es",
-   "acceptedAlternatives": [
-    "¿Qué hora es? No tengo hora.",
-    "¿Qué hora es? No sé qué hora es."
-   ]
-  }
+   "targetLang": "es"
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "194576a1",
@@ -916,7 +919,7 @@
    "b1-h-muda"
   ],
   "tags": [],
-  "contentHash": "1e48400aa4ceee977eaefb5c772a9d8bfcb4a10f4448a005381fa88b1e02ca0b",
+  "contentHash": "d1e436c4ced00cda057f8c5a62ca1cda390aa5b40720c6bfdc4edba0a6509b6d",
   "esContrast": "Hotel y hora se escriben igual en PT; la H es muda en ambos.",
   "audio": {
    "br": {
@@ -931,11 +934,12 @@
   "variantStatus": "unchecked",
   "type": "translation",
   "data": {
-   "source": "El hotel tiene buena hora",
-   "target": "O hotel tem boa hora",
+   "source": "El hotel abre a esta hora",
+   "target": "O hotel abre a esta hora",
    "sourceLang": "es",
    "targetLang": "pt-br"
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "1a16ca62",
@@ -1088,7 +1092,8 @@
    "acceptedAlternatives": [
     "Mañana es día lunes."
    ]
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "2101d5d2",
@@ -1198,11 +1203,9 @@
   "concepts": [
    "b1-acentos"
   ],
-  "tags": [
-   "falso-amigo"
-  ],
-  "contentHash": "8b69c8f9dbf71d2158e9c1ac3aac203e42e94e058b4c7e96030ada8699f95e87",
-  "esContrast": "MÃE lleva tilde porque es esdrújula; en español 'madre' no lleva tilde.",
+  "tags": [],
+  "contentHash": "75978f7cf51a63c11ac00b4526e28e509db0d55de4e7e5c9f546b5ba966c982d",
+  "esContrast": "mãe lleva til (~), que marca NASALIDAD, no acento tónico: es un monosílabo con diptongo nasal. 'Madre' no tiene marca porque el español no tiene vocales nasales.",
   "audio": {
    "br": {
     "hash": "4a5c3aee2a39abf7784c5810550d618c75e971d614ac12e08e0b40d0f2f5df8b",
@@ -1223,7 +1226,8 @@
    "acceptedAlternatives": [
     "Esa madre está cansada."
    ]
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "24116203",
@@ -1250,7 +1254,8 @@
     "—"
    ],
    "answer": "de"
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "2465aa85",
@@ -1281,7 +1286,8 @@
    "front": "¿Cómo se dice 'perro' en portugués?",
    "back": "cão",
    "example": "O cão do meu vizinho é pequeno."
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "2643a450",
@@ -1312,7 +1318,8 @@
    "target": "Essa canção é muito popular",
    "sourceLang": "es",
    "targetLang": "pt-br"
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "26a3cf13",
@@ -1479,7 +1486,7 @@
     "voice": "Portuguese_Wiselady"
    }
   },
-  "variantStatus": "unchecked",
+  "variantStatus": "needs-human",
   "type": "listening",
   "data": {
    "audioText": "A canção do coração habla de amor.",
@@ -1490,7 +1497,8 @@
     "habla"
    ],
    "answer": "coração"
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: rehacer entero (informe-cola1-manual)"
  },
  {
   "id": "2b6d8e9b",
@@ -1726,7 +1734,8 @@
    "front": "¿Cómo se dice 'hermana' en portugués?",
    "back": "irmã",
    "example": "A minha irmã mais nova tem 15 anos."
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "37b772b1",
@@ -1753,7 +1762,8 @@
      "alternatives": []
     }
    ]
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — Cloze abierto: «O ___ fica na esquina» admite hotel/café/banco"
  },
  {
   "id": "389f9059",
@@ -1784,7 +1794,8 @@
    "front": "corazón",
    "back": "coração",
    "example": "O coração da cidade bate forte."
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "3b453da4",
@@ -1797,7 +1808,7 @@
   "tags": [
    "falso-amigo"
   ],
-  "contentHash": "3b453da43772bb4259aa47e94938a631b9effe4a92b31e1f9d3be4da3fc3f5f7",
+  "contentHash": "0528fe6d7ff92e825d8e3bbe593f4b75991c1e93807f44a5103dd4e9a2fb80af",
   "audio": {
    "br": {
     "hash": "acf504a36366151cb3c86c7d7eed036472e9f874b2f15d98d92a8402793c2cbd",
@@ -1816,11 +1827,11 @@
    "options": [
     "fácil",
     "difícil",
-    "café",
-    "táxi"
+    "café"
    ],
    "answer": "fácil"
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "3c91ed82",
@@ -1832,8 +1843,8 @@
    "b1-h-muda"
   ],
   "tags": [],
-  "contentHash": "77abea972d32af0e567de3423766e4e4b716b16846ccb6e3d31bc684b4739792",
-  "esContrast": "Ojo/ojos → olho/olhos (cambio -ll- > -lh-)",
+  "contentHash": "7f6c2ff8a38e4b50c5f0d665c00d445748f14fe4aa03b6d9756e9972bbfea682",
+  "esContrast": "ojo → olho: la -j- española corresponde a -lh- portuguesa (mujer/mulher, hoja/folha). La -ll- española corresponde a -l- (caballo/cavalo).",
   "audio": {
    "br": {
     "hash": "44d48a3953222d54659a0ea3cd6f507e81ae9dc9d68bcff7f2c00b469980bb0a",
@@ -1851,7 +1862,8 @@
    "target": "A mulher tem olhos belos",
    "sourceLang": "es",
    "targetLang": "pt-br"
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "3ce0b73e",
@@ -1991,20 +2003,21 @@
   "tags": [
    "irregular"
   ],
-  "contentHash": "43f944db5ee96e312d57760959be7f773c1d96a60baddb24d7f880abb6f9a4f6",
-  "esContrast": "La ã portuguesa es un sonido nasal único; el español usa 'añ' en su lugar.",
+  "contentHash": "7d640a52fd0ec0cefd780f347e16ef7098577896af0339f88cacbcbfd12b08aa",
+  "esContrast": "-an/-án español ↔ -ão portugués (pan→pão).",
   "variantStatus": "unchecked",
   "type": "fill_blank",
   "data": {
-   "sentence": "O pão é feito com farinha de trigo e ___ é deliciosa.",
+   "sentence": "O ___ é feito com farinha de trigo.",
    "blanks": [
     {
      "position": 0,
-     "answer": "ã",
+     "answer": "pão",
      "alternatives": []
     }
    ]
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "4626c4a6",
@@ -2068,7 +2081,8 @@
     "Esa canción es muy bonita.",
     "Esta canción es muy linda."
    ]
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "48c59fd3",
@@ -2121,21 +2135,22 @@
    "regência-verbal",
    "pronúncia"
   ],
-  "contentHash": "490078b00ff74930d8d5d7cc6d27aea25bd1a545d6c0a32aa60bc84bfae24717",
-  "esContrast": "En español 'acordarse de' es un verbo pronominal con 'de'; en PT se puede usar 'lembrar' sin pronombre con 'de'.",
+  "contentHash": "610fa673993676805d3f34a3c8ed077ffbaabe963d6b5b5b9ecd4bfa1cdd14f6",
+  "esContrast": "PT-PT: lembrar-SE DE; 'lembro da rua' sin pronombre es brasileño coloquial.",
   "variantStatus": "unchecked",
   "type": "verb_preposition",
   "data": {
    "verb": "lembrar",
-   "sentence": "Lembro ___ rua onde morávamos.",
+   "sentence": "Lembro-___ da rua onde morávamos.",
    "options": [
-    "da",
+    "me",
     "em",
     "a",
     "—"
    ],
-   "answer": "da"
-  }
+   "answer": "me"
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "49b99558",
@@ -2171,7 +2186,8 @@
     "tomou"
    ],
    "answer": "banho"
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "4a686123",
@@ -2237,7 +2253,8 @@
    "acceptedAlternatives": [
     "Cierra bien los ojos y descansa un poco."
    ]
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "4aeeb75d",
@@ -2572,7 +2589,8 @@
     "Está tudo bem, obrigado.",
     "Está tudo ok, obrigado."
    ]
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "537c9695",
@@ -2892,7 +2910,8 @@
    "front": "¿Cuál es el plural de 'pão'?",
    "back": "pães",
    "example": "Ontem comprei dois pães na padaria."
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "5e4bd926",
@@ -3009,12 +3028,12 @@
    "ortografia",
    "regular"
   ],
-  "contentHash": "6176ab3eddcff427abb1f27d4507fdad9695a42475e668e18230faafd52b9c42",
-  "esContrast": "'Baño' → 'banho' con -nh-. Fíjate en la -m- que sí se mantiene.",
+  "contentHash": "80561c4f4c132bde8430d15b7419c6b34ab7cc7c65212dec40e1d921ee904522",
+  "esContrast": "'Baño' → 'banho' con -nh-.",
   "variantStatus": "unchecked",
   "type": "fill_blank",
   "data": {
-   "sentence": "Todos os dias faço ___ de manhã.",
+   "sentence": "Todos os dias tomo ___ de manhã.",
    "blanks": [
     {
      "position": 0,
@@ -3022,7 +3041,8 @@
      "alternatives": []
     }
    ]
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "620b39dc",
@@ -3256,7 +3276,8 @@
    "front": "¿Cómo se dice 'madre' en portugués?",
    "back": "mãe",
    "example": "A minha mãe é muito carinhosa."
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "6c6bb9ac",
@@ -3350,7 +3371,8 @@
    "acceptedAlternatives": [
     "Quiero un pan con manteca."
    ]
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "6e92fc31",
@@ -3396,13 +3418,13 @@
    "regência-verbal",
    "pronúncia"
   ],
-  "contentHash": "6ee544e90abb97184244fcdf6e165b422973eaa61726a3856ac0626b84fa1d3e",
-  "esContrast": "En español 'pensar' puede llevar 'en' o 'sobre'; en PT solo se usa 'em'.",
+  "contentHash": "337dd8f4daef3345d5d50ef9f2a0673d568d1f9719e3acce7554e603e6fa1c87",
+  "esContrast": "pensar EM; 'pensar sobre' también existe para 'reflexionar sobre'.",
   "variantStatus": "unchecked",
   "type": "verb_preposition",
   "data": {
    "verb": "pensar",
-   "sentence": "Ela pensa ___ meses nesse problema.",
+   "sentence": "Ela pensa ___ ti todos os dias.",
    "options": [
     "em",
     "de",
@@ -3410,7 +3432,8 @@
     "a"
    ],
    "answer": "em"
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "7088d525",
@@ -3524,8 +3547,8 @@
   "tags": [
    "coloquial"
   ],
-  "contentHash": "f73f8ed147d8df9238e14449486a6e6f7acb49d7be231afab6918bbcae11dc50",
-  "esContrast": "Soldadillo → soldado (-ill- > -ilh-); morado → roxo (falso amigo: 'morado' en PT es 'roxo').",
+  "contentHash": "969c42b4849c08393e39e090d9b85ff3f6ea82871e8e2bec73f562e246c78157",
+  "esContrast": "soldadillo → soldado (el diminutivo -illo no se traduce); morado (color) = roxo.",
   "audio": {
    "br": {
     "hash": "da885736ddd9b9e5f59c55d612d8f90bffd9f4b9d49dc901b92a669915347e1d",
@@ -3543,7 +3566,8 @@
    "target": "O soldado tem um olho roxo",
    "sourceLang": "es",
    "targetLang": "pt-br"
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "770097dd",
@@ -3556,8 +3580,8 @@
   "tags": [
    "formal"
   ],
-  "contentHash": "770097dda988ba68d8a9829ff40c07950758d534b337120ae2b72913d3adcd54",
-  "esContrast": "En portugués 'óbvia' lleva circunflexo; en español 'obvia' es llana y no lleva tilde.",
+  "contentHash": "8f4a52cedc0d75c01f1a492dfe78c8f8f68d4dcf1b79f83b9fbbe8506eba8850",
+  "esContrast": "óbvia lleva acento AGUDO; el portugués acentúa las graves terminadas en diptongo (-ia): óbvia, história; el español no: obvia, historia.",
   "variantStatus": "unchecked",
   "type": "fill_blank",
   "data": {
@@ -3569,7 +3593,8 @@
      "alternatives": []
     }
    ]
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "77fd9df3",
@@ -3583,8 +3608,8 @@
    "ortografia",
    "regular"
   ],
-  "contentHash": "77fd9df32f3a7bb0fd0a8a4b02a4aa0c2e36d45c7c71e76dc6c6775e9071b50f",
-  "esContrast": "'Mujer' en portugués lleva -nh-, no -ñ-. La ñ española = nh portuguesa.",
+  "contentHash": "efd5787b70feaf30300f5497653c574eb47cc69a1f2df5f92a85621be0792d85",
+  "esContrast": "mujer → mulher: la -j- española ↔ -LH- portuguesa. La ñ ↔ nh es otro par: baño → banho.",
   "variantStatus": "unchecked",
   "type": "fill_blank",
   "data": {
@@ -3596,7 +3621,8 @@
      "alternatives": []
     }
    ]
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "79125e5d",
@@ -3631,7 +3657,8 @@
    "acceptedAlternatives": [
     "Este ejercicio es muy fácil."
    ]
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "798ef701",
@@ -3680,13 +3707,13 @@
    "b1-vogais-nasais"
   ],
   "tags": [],
-  "contentHash": "7a036ad666058fd981de9f7d278fe671539a2d9b966b7d28f6bccb98e1106bea",
+  "contentHash": "248b00e2ed91b2d9643ac433f9e5289109b825ac809c9880349306436da282c4",
   "esContrast": "ES 'soñar con' = PT 'sonhar COM' — la preposición coincide.",
   "variantStatus": "unchecked",
   "type": "verb_preposition",
   "data": {
    "verb": "sonhar",
-   "sentence": "O cão sonha ___ correr no parque.",
+   "sentence": "O cão sonha ___ um passeio no parque.",
    "options": [
     "com",
     "de",
@@ -3694,7 +3721,8 @@
     "por"
    ],
    "answer": "com"
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "7a7ac9fb",
@@ -3836,8 +3864,8 @@
    "b1-acentos"
   ],
   "tags": [],
-  "contentHash": "9f0378da4f66e720c732e42470255c79bacec145e5fa6d268b309d7dc9f26921",
-  "esContrast": "El circunflejo (ô) no es igual al acento español (ó); cambia el sonido.",
+  "contentHash": "6be71e9530c214f53bb681c6add46393bfb30ca6e11e5cf72cb085a0ee24cf50",
+  "esContrast": "coração lleva til (ã), que marca nasalidad — no lleva circunflejo (^).",
   "audio": {
    "br": {
     "hash": "9dad08992e1bb23cc1df015436b28eb2c2a4d4ed8944845572f42808d040aa1e",
@@ -3851,14 +3879,15 @@
   "variantStatus": "unchecked",
   "type": "translation",
   "data": {
-   "source": "La palavra coração leva acento circunflexo.",
-   "target": "A palavra coração leva acento circunflexo.",
+   "source": "La palabra 'coração' lleva til (virgulilla).",
+   "target": "A palavra 'coração' leva til.",
    "sourceLang": "es",
    "targetLang": "pt-br",
    "acceptedAlternatives": [
-    "A palavra coração tem acento circunflexo."
+    "A palavra 'coração' tem til."
    ]
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "80945c47",
@@ -3919,7 +3948,8 @@
      "alternatives": []
     }
    ]
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — Cloze abierto: «é muito ___» admite fácil/difícil/chato"
  },
  {
   "id": "81d0ffea",
@@ -3932,8 +3962,8 @@
   "tags": [
    "irregular"
   ],
-  "contentHash": "81d0ffeacc7a2283cded9e983b0adb35052a5b46fa8c2dd9e16288fdaac75337",
-  "esContrast": "El acento grave en 'à' es contracted; en español se dice 'a la' sin contracción.",
+  "contentHash": "f6ea6c52e63940bb7c6051c2eeabec5cd1e7176e3c83f6720bf950c6c2f765eb",
+  "esContrast": "'à' es la contracción de la preposición 'a' + artículo 'a'; en español no se contrae: 'a la'.",
   "variantStatus": "unchecked",
   "type": "fill_blank",
   "data": {
@@ -3942,12 +3972,11 @@
     {
      "position": 0,
      "answer": "a",
-     "alternatives": [
-      "em"
-     ]
+     "alternatives": []
     }
    ]
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "8213a892",
@@ -4025,21 +4054,22 @@
   "tags": [
    "falso-amigo"
   ],
-  "contentHash": "85451e7c9ff9343efee6f372827f98ee00614aed48c3337033f55b2b4e6a89c8",
+  "contentHash": "f5ada066b53449047e1217387b7360f7f0f3328a546ad4632d16b56de4226498",
   "esContrast": "En español 'gustar' no lleva preposición, en PT 'gostar' siempre rige DE.",
   "variantStatus": "unchecked",
   "type": "verb_preposition",
   "data": {
    "verb": "gostar",
-   "sentence": "Eu gosto ___ mãe.",
+   "sentence": "Eu gosto ___ minha mãe.",
    "options": [
+    "da",
     "de",
     "a",
-    "em",
-    "—"
+    "em"
    ],
-   "answer": "de"
-  }
+   "answer": "da"
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "85f61ce8",
@@ -4237,7 +4267,8 @@
    "sourceLang": "es",
    "targetLang": "pt-br",
    "acceptedAlternatives": []
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "88f4a544",
@@ -4268,7 +4299,8 @@
    "front": "hotel",
    "back": "hotel",
    "example": "O hotel fica no centro."
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "8978047a",
@@ -4403,7 +4435,8 @@
    "front": "¿Cómo se dice 'bien' en portugués?",
    "back": "bem",
    "example": "Eu estou bem, obrigado."
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "8c2626c7",
@@ -4508,7 +4541,8 @@
    "sourceLang": "es",
    "targetLang": "pt-br",
    "acceptedAlternatives": []
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "8f089cb7",
@@ -4558,7 +4592,7 @@
     "voice": "Portuguese_Wiselady"
    }
   },
-  "variantStatus": "unchecked",
+  "variantStatus": "needs-human",
   "type": "listening",
   "data": {
    "audioText": "Qual palavra é paroxítona: difíceis, café, táxi?",
@@ -4570,7 +4604,8 @@
     "lápis"
    ],
    "answer": "difíceis"
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: rehacer entero (informe-cola1-manual)"
  },
  {
   "id": "90adc730",
@@ -4740,7 +4775,8 @@
    "target": "O coração da canção",
    "sourceLang": "es",
    "targetLang": "pt-br"
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — Gloss circular y mal redactada: «Canção es 'canción' en PT» invierte qué palabra es de qué lengua; reescribir gloss"
  },
  {
   "id": "9675ecfe",
@@ -4768,7 +4804,8 @@
     "—"
    ],
    "answer": "de"
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "96860d5e",
@@ -4835,7 +4872,8 @@
    "acceptedAlternatives": [
     "Mi hermano mayor reside en Lisboa."
    ]
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "96c70ed7",
@@ -4848,13 +4886,13 @@
   "tags": [
    "formal"
   ],
-  "contentHash": "96c70ed7ed7a849bc18d6d04eb81ec1b049b04922c1abe75ad1ceea7037e0cfe",
+  "contentHash": "63ada95103f3913b8706cb0556542828d072b4b22360f7e95c15b0c60306d9da",
   "esContrast": "ES 'comenzar por' y PT 'começar POR' coinciden en este uso.",
   "variantStatus": "unchecked",
   "type": "verb_preposition",
   "data": {
    "verb": "começar",
-   "sentence": "Vamos começar ___ entender o problema.",
+   "sentence": "Vamos começar ___ rever os dados; só depois decidimos.",
    "options": [
     "por",
     "a",
@@ -4862,7 +4900,8 @@
     "em"
    ],
    "answer": "por"
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "97b042f2",
@@ -4892,7 +4931,8 @@
    "front": "mujer",
    "back": "mulher",
    "example": "Aquela mulher é minha mãe."
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "97eb196c",
@@ -4905,13 +4945,13 @@
   "tags": [
    "falso-amigo"
   ],
-  "contentHash": "97eb196c052175ebaadbb270af81214842a7dd6faee355460839f7a495d6e5bd",
+  "contentHash": "f60d422c46554cadd1c44ddef3b3c2f43cdb4f08c99641549a7e46977f1c730a",
   "esContrast": "ES dice 'pensar en', PT también 'pensar EM' — coinciden, pero hay que memorizarlo.",
   "variantStatus": "unchecked",
   "type": "verb_preposition",
   "data": {
    "verb": "pensar",
-   "sentence": "Penso ___ pão fresco toda manhã.",
+   "sentence": "Penso ___ pão fresco todas as manhãs.",
    "options": [
     "em",
     "de",
@@ -4919,7 +4959,8 @@
     "a"
    ],
    "answer": "em"
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "98b6061c",
@@ -5076,7 +5117,8 @@
     "—"
    ],
    "answer": "de"
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "a37da8d4",
@@ -5090,8 +5132,8 @@
    "acentos",
    "basico"
   ],
-  "contentHash": "145bfc38854c09add0683fc75663efdfbb1b001d3ee3fba6a36dea194e30a85c",
-  "esContrast": "El español tiene 5 vocales; el portugués tiene más por los acentos.",
+  "contentHash": "84ba4d69399cd3aec4363184ddc27c9fc0a3712e5db090bf3eb59fd5fddf7ede",
+  "esContrast": "El español tiene 5 vocales orales y ninguna nasal; el portugués añade vocales nasales /ã ẽ ĩ õ ũ/. Los acentos no crean vocales nuevas.",
   "audio": {
    "br": {
     "hash": "ccffe43d76eb502c43665caa58704a68a8c3cce9c0bd32453b2c0fe880ddbc2e",
@@ -5105,10 +5147,11 @@
   "variantStatus": "unchecked",
   "type": "flashcard",
   "data": {
-   "front": "Cuántas vocales tiene el portugués con acentos?",
-   "back": "7 vocales orales (a, e, i, o, u, é, ó) + 2 nasales (ã, õ) con tilde",
+   "front": "¿Cuántas vocales tiene el portugués con acentos?",
+   "back": "5 vocales nasales /ã ẽ ĩ õ ũ/ (maçã, bem, sim, bom, um) — se escriben con til (ã/õ) o con m/n; los acentos (´ ^) marcan timbre/tonicidad, no crean vocales nuevas.",
    "example": "casa, café, Lisboa, público, maçã, razão."
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "a3ba6f48",
@@ -5139,7 +5182,8 @@
    "front": "baño",
    "back": "banho",
    "example": "Vou tomar um banho."
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "a3d9f5a1",
@@ -5320,7 +5364,8 @@
    "front": "¿Cómo se dice 'bueno' en portugués?",
    "back": "bom",
    "example": "Este filme é muito bom!"
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "b18f6d5a",
@@ -5436,21 +5481,22 @@
    "falso-amigo",
    "coloquial"
   ],
-  "contentHash": "b3428df2c8c99e439f9def599615c6fea9699f8674cd55cd3b0b06f4cac25777",
+  "contentHash": "9dee0c8620ad10f9faa8cf8128acf1b5f9e4060719a92563a153aa0b05857136",
   "esContrast": "En español 'gustar' es intransitivo, en PT 'gostar de' requiere la preposición.",
   "variantStatus": "unchecked",
   "type": "verb_preposition",
   "data": {
    "verb": "gostar",
-   "sentence": "Eu gosto ___ canção que tocou no hotel ontem.",
+   "sentence": "Eu gosto ___ canção que tocou no hotel.",
    "options": [
+    "da",
     "de",
     "a",
-    "em",
-    "—"
+    "em"
    ],
-   "answer": "de"
-  }
+   "answer": "da"
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "b4a3724c",
@@ -5463,7 +5509,7 @@
   "tags": [
    "basico"
   ],
-  "contentHash": "b4a3724c0e080a7273d94fe1c95e5eaffbb570de9739ea39498dd2c8d2b91080",
+  "contentHash": "ca15690e5d7b6b12bc45f52ab7c6cf3f4908fd830a5e638e287f2eb33fb10f10",
   "audio": {
    "br": {
     "hash": "51e1930556586275cfa5f83079a6f2a0fca5c8a60dd0b06c78a157f7f9a1ea69",
@@ -5477,10 +5523,11 @@
   "variantStatus": "unchecked",
   "type": "flashcard",
   "data": {
-   "front": "Cómo se llama la letra 'A' en português?",
+   "front": "¿Cómo se llama la letra 'A' en portugués?",
    "back": "á (á: sonido /a/)",
    "example": "Quando dizemos o nome das letras, dizemos: 'á', 'bê', 'cê'..."
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "b61938ce",
@@ -5551,7 +5598,8 @@
     "Mi corazón está contento.",
     "Mi corazón está alegre."
    ]
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "b8bb9b51",
@@ -5754,8 +5802,8 @@
   "tags": [
    "falso-amigo"
   ],
-  "contentHash": "bdad8a26b9411b76af59ccae606a06df5cf77a9f342a96fbdc27334b95164efc",
-  "esContrast": "En portugués 'décimo' lleva circunflexo; en español 'décimo' no lleva tilde por ser palabra grave.",
+  "contentHash": "0883b2ffc952ccdd5272a8c8624069501c203cdbd09b8d6b2e612af91d3cee14",
+  "esContrast": "'décimo' se acentúa IGUAL en las dos lenguas: esdrújula/proparoxítona con acento agudo. No hay contraste.",
   "variantStatus": "unchecked",
   "type": "fill_blank",
   "data": {
@@ -5767,7 +5815,8 @@
      "alternatives": []
     }
    ]
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "bdcff0e2",
@@ -5804,8 +5853,8 @@
    "b1-vogais-nasais"
   ],
   "tags": [],
-  "contentHash": "4f1488f498cccd4e7d918535e8c9cacd39d4b38e8333ebef7008cd776fce64b0",
-  "esContrast": "'Cão' es más formal que 'cachorro' para perro.",
+  "contentHash": "701eb55850cf8bda153b024e1758c74365274495820a78068edd4b39d3a7adf1",
+  "esContrast": "PT europeo: perro = CÃO (cachorro = cría); en Brasil 'cachorro' es la palabra corriente. Diferencia de variante, no de formalidad.",
   "audio": {
    "br": {
     "hash": "85c24ce32ae4a51ab71b367c91fa3c4f0e61e0d5076bcb543f8f8efaca8603be",
@@ -5826,7 +5875,8 @@
    "acceptedAlternatives": [
     "O cachorro é bom."
    ]
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "be6d8a6e",
@@ -6057,7 +6107,8 @@
    "front": "león",
    "back": "leão",
    "example": "O leão é o rei da selva."
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK — dictamen repuesto (el informe omitió el ítem 100 de 100; verificado: leão correcto, ejemplo gramatical)"
  },
  {
   "id": "c5dab06e",
@@ -6170,7 +6221,7 @@
   "tags": [
    "vocabulário-chave"
   ],
-  "contentHash": "7c7fd40ae151bca8ef197a6582df9da141d810fac0ff6a41878901a8e8ab461a",
+  "contentHash": "c97bdf31002b13d3f5d2e98dee764de974601e9d53836f55cf00176f776fab95",
   "audio": {
    "br": {
     "hash": "8ff82a4b97906fca8c16a41529190476ad3c0923cd381318cb8c8f6030976ada",
@@ -6185,13 +6236,14 @@
   "type": "translation",
   "data": {
    "source": "O hotel fica no centro da cidade.",
-   "target": "El hotel fica en el centro de la ciudad.",
+   "target": "El hotel está en el centro de la ciudad.",
    "sourceLang": "pt-br",
    "targetLang": "es",
    "acceptedAlternatives": [
-    "El hotel está en el centro de la ciudad."
+    "El hotel queda en el centro de la ciudad."
    ]
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "c7eaa553",
@@ -6222,7 +6274,8 @@
    "front": "ojo",
    "back": "olho",
    "example": "Ela tem olhos verdes."
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "c83e79da",
@@ -6247,7 +6300,7 @@
     "voice": "Portuguese_Wiselady"
    }
   },
-  "variantStatus": "unchecked",
+  "variantStatus": "needs-human",
   "type": "listening",
   "data": {
    "audioText": "O hotel fica na hora certa.",
@@ -6258,7 +6311,8 @@
     "certa"
    ],
    "answer": "na hora"
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: rehacer entero (informe-cola1-manual)"
  },
  {
   "id": "c90e36c7",
@@ -6282,7 +6336,8 @@
      "alternatives": []
     }
    ]
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — Cloze abierto: «O meu ___ favorito fica na praça» admite hotel/café/museu/restaurante"
  },
  {
   "id": "cb0e1fda",
@@ -6322,7 +6377,7 @@
   "tags": [
    "vocabulário-chave"
   ],
-  "contentHash": "d2558af8218b10f9b26ef5afe8da30803f53bfd0758819e15a3cf0aa93324aac",
+  "contentHash": "02025902ab82239ebe2e69f244c5335b6ad7f01167edeabf84bfb4099548466f",
   "audio": {
    "br": {
     "hash": "c2c35800cff8711e61ebe5adfa0088f4b0425c9bf5d485ff9741ae416fb23464",
@@ -6337,13 +6392,14 @@
   "type": "translation",
   "data": {
    "source": "Vou tomar banho de manhã.",
-   "target": "Voy a tomar baño por la mañana.",
+   "target": "Voy a bañarme por la mañana.",
    "sourceLang": "pt-br",
    "targetLang": "es",
    "acceptedAlternatives": [
-    "Voy a bañarme por la mañana."
+    "Voy a darme un baño por la mañana."
    ]
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "d0321a11",
@@ -6506,7 +6562,8 @@
    "front": "¿Cómo se dice 'paloma' en portugués?",
    "back": "pombo",
    "example": "O pombo está no telhado."
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — paloma→pombo defendible, pero «pomba» es el equivalente más directo; merece nota en la carta o aceptar ambas"
  },
  {
   "id": "d32face7",
@@ -6633,7 +6690,8 @@
    "front": "¿Cuál es el plural de 'mão'?",
    "back": "mãos",
    "example": "Ela tem as mãos frias."
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "d5b76869",
@@ -6685,7 +6743,7 @@
   "tags": [
    "h-muda"
   ],
-  "contentHash": "d70fb1c6ff98f83a2c454d4bc5373cd377beb029ea9b60bd8cef93ea4201c531",
+  "contentHash": "b84e607fe9aeba0501406e77a1561161abcee840f0855237fbb5e37706a3fae3",
   "audio": {
    "br": {
     "hash": "c9bf9211d70fc5c0a1f34fa50b71a68e413e61f9c5643cd1954debe2fd0ec086",
@@ -6701,8 +6759,9 @@
   "data": {
    "front": "hora",
    "back": "hora",
-   "example": "Que hora são agora?"
-  }
+   "example": "Que horas são agora?"
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "d9f4120c",
@@ -6716,8 +6775,8 @@
   "tags": [
    "falso-amigo"
   ],
-  "contentHash": "5c7d375d6a4d8f8549e62164fcff5a4343f9c76ec705d7f188664e46ee5bf7b0",
-  "esContrast": "ÇÃO forma sílaba nasal; en español 'corazón' no lleva tilde porque es llana terminada en vocal.",
+  "contentHash": "20f2291f3795f5977571e680fd1ed1a682d51ff3174868331e82752b097380c5",
+  "esContrast": "'corazón' es AGUDA terminada en -n y SÍ lleva tilde en español; en portugués 'coração' lleva til nasal (ã), que no marca la tónica.",
   "audio": {
    "br": {
     "hash": "b9639c1124f9d7520124edd6c95d6a169b1d301a7216ce06612fdbf7dc59faa6",
@@ -6738,7 +6797,8 @@
    "acceptedAlternatives": [
     "El corazón tiene cuatro cavidades."
    ]
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "dbf3eee4",
@@ -6751,7 +6811,7 @@
   "tags": [
    "irregular"
   ],
-  "contentHash": "a2b6efde728856d0f764442c15f5857cfc43b14a94edeb94afab482d1e380cae",
+  "contentHash": "31c06f14293cbebbec792405e5caba56962a26e4cf1cabe3d81e931f276b8599",
   "esContrast": "'sílaba' y 'tónica' son esdrújulas en ambos idiomas y llevan tilde.",
   "audio": {
    "br": {
@@ -6768,12 +6828,13 @@
   "data": {
    "source": "Na aula, o professor falou sobre a sílaba tónica e as regras de acentuação.",
    "target": "En clase, el profesor habló sobre la sílaba tónica y las reglas de acentuación.",
-   "sourceLang": "pt-br",
+   "sourceLang": "pt-pt",
    "targetLang": "es",
    "acceptedAlternatives": [
     "En la clase, el profesor habló sobre la sílaba tónica y las reglas de acentuación."
    ]
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "dc037b95",
@@ -6937,12 +6998,12 @@
    "b1-silaba-tonica"
   ],
   "tags": [],
-  "contentHash": "df7bf7c6665c91c0beb622c6acbe51f56da1bfab704ae1483ca2cf5674319de6",
+  "contentHash": "db15f0ab246611d3015ee3a67eed7db8e9aad17afe4324d52009ee8275ceb847",
   "esContrast": "'Hospital' es aguda (hos-pi-TAL) pero en portugués NO lleva tilde porque termina en -l.",
   "variantStatus": "unchecked",
   "type": "fill_blank",
   "data": {
-   "sentence": "Na cidade há um ___ médico eficiente.",
+   "sentence": "Na cidade há um ___ muito eficiente.",
    "blanks": [
     {
      "position": 0,
@@ -6950,7 +7011,8 @@
      "alternatives": []
     }
    ]
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "dfa8ec4f",
@@ -7019,7 +7081,8 @@
    "acceptedAlternatives": [
     "La mujer labora todos los días."
    ]
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "dffba4cc",
@@ -7445,8 +7508,8 @@
    "b1-alfabeto"
   ],
   "tags": [],
-  "contentHash": "ec2e392543b38647c9b7758347f431fa44f1a71da3a5679baf44c099392f759d",
-  "esContrast": "La cedilha (ç) no existe en español; en francés se escribe avec cédille.",
+  "contentHash": "512b647e1426a9914aa50bba77bd2f3aaf2bdea1600c799aa9005ca81283db66",
+  "esContrast": "La cedilla (ç) no existe en español.",
   "audio": {
    "br": {
     "hash": "bf260b9ea730b15764bd0fb3059beb08ba15e02cda86bdcf5d96d31ea29b1939",
@@ -7460,14 +7523,15 @@
   "variantStatus": "unchecked",
   "type": "translation",
   "data": {
-   "source": "La letra C con cedilha se usa en palabras como façade.",
-   "target": "A letra C com cedilha é usada em palavras como façade.",
+   "source": "La letra C con cedilla se usa en palabras como 'ação' y 'maçã'.",
+   "target": "A letra c com cedilha usa-se em palavras como 'ação' e 'maçã'.",
    "sourceLang": "es",
    "targetLang": "pt-br",
    "acceptedAlternatives": [
-    "A letra c com cedilha é usada em palavras como façade."
+    "A letra c com cedilha é usada em palavras como 'ação' e 'maçã'."
    ]
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "ecddceb0",
@@ -7481,8 +7545,8 @@
    "acentos",
    "basico"
   ],
-  "contentHash": "ecddceb02b12b96055ae1fce892c3badb1637e3c43016a5fb0263811031049d1",
-  "esContrast": "OJO: 'manzana' se escribe con tilde (~ã), no con 'ñ'.",
+  "contentHash": "2d09cd5b7ab24589d688b953d53df33e57bf688cd012766e0c40ed9e459a4fde",
+  "esContrast": "maçã lleva ç y til (~) sobre la a; el portugués no tiene ñ.",
   "audio": {
    "br": {
     "hash": "8eae0011cb70534ce65970c31d4f97d1f7d2cfeffbbd83132294255eaccbf0ad",
@@ -7496,10 +7560,11 @@
   "variantStatus": "unchecked",
   "type": "flashcard",
   "data": {
-   "front": "Cómo se escribe 'manzana' en português?",
+   "front": "¿Cómo se escribe 'manzana' en portugués?",
    "back": "maçã (con tilde sobre la 'ã')",
    "example": "Eu gosto de comer maçã."
-  }
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "eeb37e3c",
@@ -7588,7 +7653,8 @@
    "front": "año",
    "back": "ano",
    "example": "Feliz ano novo!"
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "f0ae3fd6",
@@ -7676,7 +7742,8 @@
      "alternatives": []
     }
    ]
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — Cloze abierto: «O meu ___ mora em Lisboa» admite irmão/pai/tio/avô/amigo"
  },
  {
   "id": "f283ad9e",
@@ -7806,7 +7873,8 @@
    "front": "¿Cómo se dice 'nube' en portugués?",
    "back": "nuvem",
    "example": "Há muitas nuvens no céu hoje."
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "f56d9fa6",
@@ -7909,7 +7977,8 @@
    "front": "¿Cómo se dice 'pan' en portugués?",
    "back": "pão",
    "example": "Eu compro pão todas as manhãs."
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "f6cd6004",
@@ -7941,7 +8010,8 @@
    "acceptedAlternatives": [
     "O alfabeto português possui vinte e seis letras."
    ]
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "f77c3c24",
@@ -8050,21 +8120,22 @@
   "tags": [
    "falso-amigo"
   ],
-  "contentHash": "f9968c544cf023e03f55526788359ab61d161ec7c34a3eba9a506318447e931e",
+  "contentHash": "3b637d0b6359dbfe227aaed259437b69f57eb75ca0f57deb719d36e7d27edaf2",
   "esContrast": "'Necesitar' en ES no lleva prep; 'precisar' en PT siempre lleva DE.",
   "variantStatus": "unchecked",
   "type": "verb_preposition",
   "data": {
    "verb": "precisar",
-   "sentence": "Preciso ___ irmã para resolver o problema.",
+   "sentence": "Preciso ___ minha irmã para resolver o problema.",
    "options": [
+    "da",
     "de",
     "a",
-    "para",
-    "—"
+    "para"
    ],
-   "answer": "de"
-  }
+   "answer": "da"
+  },
+  "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
  },
  {
   "id": "fa9af65b",
@@ -8122,7 +8193,7 @@
     "voice": "Portuguese_Wiselady"
    }
   },
-  "variantStatus": "unchecked",
+  "variantStatus": "needs-human",
   "type": "listening",
   "data": {
    "audioText": "Horas de hotel, manhã de canção.",
@@ -8133,7 +8204,8 @@
     "Tres"
    ],
    "answer": "Dos"
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: rehacer entero (informe-cola1-manual)"
  },
  {
   "id": "ff732558",
@@ -8236,7 +8308,8 @@
      "alternatives": []
     }
    ]
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  },
  {
   "id": "b1-hf-03",
@@ -8295,6 +8368,7 @@
    "sourceLang": "es",
    "targetLang": "pt-pt",
    "acceptedAlternatives": []
-  }
+  },
+  "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
  }
 ]

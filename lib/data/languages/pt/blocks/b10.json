@@ -202,13 +202,13 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "0acf94a348b67d5e651947affcb24508a2e15e2626fc56136744aeacf579beba",
+    "contentHash": "7d4d0ab885d32f9606446f385df34820ea310e3ee7dfa3aaf9712f3852a44020",
     "esContrast": "En español 'gustar' no lleva preposición; en portugués 'gostar' rige 'de' obligatoriamente.",
     "variantStatus": "unchecked",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
-      "sentence": "Eu não gosto ___ desses livros.",
+      "sentence": "Eu não gosto ___ livros de terror.",
       "options": [
         "de",
         "a",
@@ -216,7 +216,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
   },
   {
     "id": "0b091314",
@@ -258,8 +259,8 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "12c320167cfcdd69e4ed0176e2ea400b503231711670f6f6ef2858c97f5ae308",
-    "esContrast": "'Tudo bem?' es la forma estándar, no 'tudo bom' como en español.",
+    "contentHash": "bc9d04087faaf03209ec0a74ccd277f46a8c130cf843f7d49eff51293969ac21",
+    "esContrast": "'Tudo bem?' coincide con el ES '¿todo bien?'; 'tudo bom?' también existe (sobre todo BR). No hay trampa aquí.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
@@ -273,7 +274,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
   },
   {
     "id": "18477503",
@@ -1008,8 +1010,8 @@
       "falso-amigo",
       "formal"
     ],
-    "contentHash": "4fc10cfbf82fd57aefab0b90b61493f27423fe6ac4d90488909fe5e551c7c1ad",
-    "esContrast": "En PT se usa 'contacto' como sustantivo; en ES se prefiere 'contacto' como adjetivo o 'contactar'.",
+    "contentHash": "e50a0803d47436e7eaf0dc05c975cf885be070f86f345f4c67662ab9f65f38ab",
+    "esContrast": "'contacto' es sustantivo en ambas lenguas; el contraste es con Brasil: PT-PT contacto / BR contato.",
     "audio": {
       "br": {
         "hash": "f8073cfe43c177370621510575662a2be4edd2f367a4cc2bd8af81135a9d1a56",
@@ -1032,7 +1034,8 @@
         "Teléfono de contacto"
       ],
       "answer": "Contacto telefónico"
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
   },
   {
     "id": "54df0897",
@@ -1367,7 +1370,7 @@
       "cultural",
       "falso-amigo"
     ],
-    "contentHash": "22dcd6ae846dab94151967ab6bf99f0ebaa2b2277bbd443546fe8106bb94942a",
+    "contentHash": "1c0338741d2110f33ddead59768fc3193374a6ad39db99adae96d890bd829a70",
     "esContrast": "«Saudade» no tiene equivalente directo en español; es un sentimiento típicamente portugués.",
     "audio": {
       "br": {
@@ -1383,13 +1386,14 @@
     "type": "translation",
     "data": {
       "source": "Siento una saudade inexplicable por mi tierra natal.",
-      "target": "Sinto uma saudade inexplicável pela minha terra natal.",
+      "target": "Sinto uma saudade inexplicável da minha terra natal.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Sinto uma inexplicável saudade pela minha terra natal."
+        "Sinto uma inexplicável saudade da minha terra natal."
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
   },
   {
     "id": "787c7d24",
@@ -1430,8 +1434,8 @@
       "formal",
       "pt-eu"
     ],
-    "contentHash": "4091736947aa67ea889097fded816f48d509cd31dea51e89fccc7c2a95fc1ca4",
-    "esContrast": "'Consigo' en PT-PT es formal (equivalente a 'con usted'); en español sería 'contigo' (informal).",
+    "contentHash": "ffaadd9dd47070c364f2fbdd413aa455506cabb093984c24b2c5a814b2d1a281",
+    "esContrast": "'consigo' cortés PT-PT = 'con usted'; ojo: en español 'consigo' significa 'con él mismo' (falso amigo). El informal sería 'contigo'.",
     "audio": {
       "br": {
         "hash": "b6e1cff85adccc12735cd1706eab0e4efd1cfd07fdd59356a85508db154fcad8",
@@ -1447,13 +1451,14 @@
     "data": {
       "source": "Gostaria de estabelecer contacto telefónico consigo amanhã.",
       "target": "Desearía establecer contacto telefónico con usted mañana.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Quisiera establecer contacto telefónico con usted mañana.",
         "Me gustaría ponerme en contacto telefónico con usted mañana."
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
   },
   {
     "id": "7b9b4b9e",
@@ -1825,7 +1830,8 @@
         "entre"
       ],
       "answer": "se"
-    }
+    },
+    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
   },
   {
     "id": "9c8d7ded",
@@ -2213,7 +2219,7 @@
       "cultural",
       "coloquial"
     ],
-    "contentHash": "916b5d7e45063cc757ca72fb999e4dbe5724838d9e93f920d159e7a91ca8bcf4",
+    "contentHash": "8fe104971200369061f2d889cd8ca302561ad9db6df5b26f205beb9f520b2dc5",
     "esContrast": "'Saudade' es un concepto portugués sin equivalente exacto en español.",
     "audio": {
       "br": {
@@ -2233,10 +2239,11 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "La añoranza que siento de Portugal",
-        "La nostalgia que siento de Portugal"
+        "La añoranza que siento de Portugal es imposible de describir.",
+        "La nostalgia que siento de Portugal es imposible de describir."
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
   },
   {
     "id": "ac328f9f",
@@ -2877,7 +2884,7 @@
     "tags": [
       "formal"
     ],
-    "contentHash": "53e84b7f4647c40514b39c2bc82e8cce2c0b0d623c02ac2f85a905ba3702ec97",
+    "contentHash": "bd2e8565562a732493f9e0710af4214bf82a4d187a7cee48856b09b449704a92",
     "esContrast": "'Cumprimentos' en PT es 'saludos', no confundir con 'felicitaciones'.",
     "audio": {
       "br": {
@@ -2893,14 +2900,15 @@
     "type": "translation",
     "data": {
       "source": "Com os meus cumprimentos cordiais, Maria.",
-      "target": "Reciba mis cordiales saludos, María.",
-      "sourceLang": "es",
-      "targetLang": "pt-br",
+      "target": "Con mis cordiales saludos, María.",
+      "sourceLang": "pt-pt",
+      "targetLang": "es",
       "acceptedAlternatives": [
-        "Atentamente, Maria.",
-        "Com cordial abraço, Maria."
+        "Reciba mis cordiales saludos, María.",
+        "Atentamente, María."
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
   },
   {
     "id": "d84dde46",
@@ -2988,7 +2996,8 @@
       "front": "Cierre formal para e-mails profesionales ('Atentamente')",
       "back": "Atenciosamente / Cumprimentos cordiais",
       "example": "Atenciosamente, João Silva."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
   },
   {
     "id": "e1594e44",
@@ -3729,7 +3738,8 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'Atenciosamente' es formal; 'beijos' y 'falou' son informales."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
   },
   {
     "id": "377d85d3",
@@ -3806,7 +3816,8 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'A gente' significa 'nosotros' (informal) y concuerda en 3ª persona singular: 'a gente vai'."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
   },
   {
     "id": "e6e74857",
@@ -3883,7 +3894,8 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'Prezado Senhor' es un encabezamiento formal de cartas y documentos."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
   },
   {
     "id": "00b74ff8",
@@ -3933,7 +3945,8 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'a senhora' es tratamiento formal y respetuoso, con verbo en 3ª persona."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
   },
   {
     "id": "3d979702",
@@ -4068,7 +4081,8 @@
           "answer": "Atenciosamente"
         }
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — Cloze abierto en input libre: «Atentamente» o «Com os melhores cumprimentos» se marcarían mal; el único answer (Atenciosamente) es el cierre más BR"
   },
   {
     "id": "00bc55b0",
@@ -4198,7 +4212,8 @@
           "answer": "senhor"
         }
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
   },
   {
     "id": "b2c2-med-01",
