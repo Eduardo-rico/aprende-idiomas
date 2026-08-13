@@ -24,7 +24,10 @@ function arg(nombre: string): string | undefined {
 async function cargarCorpus(): Promise<ExIndexable[]> {
   const DIR = path.join(process.cwd(), 'lib/data/languages/pt/blocks');
   const out: ExIndexable[] = [];
-  for (const f of (await fs.readdir(DIR)).filter((x) => x.endsWith('.json')).sort()) {
+  // SOLO los bloques reales: el directorio también acumula sidecars
+  // (b*.audio-failures.json del generador de audio) que no son corpus —
+  // 87 entradas sin type/id colaron aquí el 2026-08-12.
+  for (const f of (await fs.readdir(DIR)).filter((x) => /^b\d+\.json$/.test(x)).sort()) {
     const d = JSON.parse(await fs.readFile(path.join(DIR, f), 'utf8'));
     for (const ex of (Array.isArray(d) ? d : d.exercises)) out.push(ex as ExIndexable);
   }

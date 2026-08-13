@@ -193,6 +193,17 @@ busca el LEMA (todas las personas y tiempos), no la forma que escribiste.
   re-tecleado ni descrito de memoria. Tres reincidencias: el castillo
   inventado (piloto), las espigas en monedas (lote 2), el rey vivo
   (lote 3). La grafía antigua de Eça/Junqueiro NO se «corrige».
+- **Leer entero NO basta: el modelo se coteja contra el JSON en el
+  MISMO paso en que se escribe.** Sexta reincidencia (lote 6): con la
+  fuente leída ÍNTEGRA esa misma sesión, el resumen dijo que el lino
+  llega a libro (nunca llega — «os livros vão por esse mundo fóra» y el
+  papel se queda) y que cantan las silvas (cantan las crianças).
+  Redactar horas después de leer ES redactar de memoria.
+- **Todo número que se declare «medido» lleva la SALIDA PEGADA del
+  comando, no la cifra suelta.** En el lote 6 los doce «contadas por
+  script» eran números inventados en rango — los dos revisores los
+  recontaron y ninguno coincidía. La cifra sin su comando al lado vale
+  lo que una estimación.
 - **El recorte tiene que sostenerse solo.** El de la v1 del lote 5
   empezaba en «Dito isto desappareceu» — una anáfora cuyo antecedente
   (Jesús) quedaba fuera. Lee el primer párrafo del recorte preguntándote

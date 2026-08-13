@@ -361,5 +361,125 @@
       "repair": "Ele foi o primeiro a chegar.",
       "explanationEs": "Los ordinales, los superlativos y «único» rigen a + infinitivo: o primeiro a chegar, o último a sair, o único a perceber. El «el primero en llegar» español pone «en», y la preposición se traslada sola. En la Biblioteca hay seis casos del patrón, los seis con «a»."
     }
+  },
+  {
+    "id": "b2c2-gj-l6-01",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 3,
+    "concepts": [
+      "b11-morfologia-enganosa"
+    ],
+    "tags": [
+      "b2c2-lote6",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "A diferença entre mim e ti é essa.",
+      "verdict": true,
+      "explanationEs": "Tras preposición, el portugués usa el pronombre oblicuo: entre mim e ti, para mim, sem ti. Aquí el español dice justo lo contrario — «entre tú y yo» — así que el alumno «corrige» esta frase y la estropea; en «para mí» o «sin ti», en cambio, las dos lenguas coinciden. (Nota fina: con «entre» a veces se oye nominativo en compañía de tercera persona — «entre ela e eu» —, y «exceto/salvo/menos eu» van con «eu» porque ahí esas palabras funcionan como adverbios, no como preposiciones.)"
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "register": "neutro",
+    "address": "tu",
+    "contentHash": "5f7be1869517c7dbe9019a7c4d7be93dec6e6b9c833a4525659b234d2137d4a3"
+  },
+  {
+    "id": "b2c2-gj-l6-04",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 3,
+    "concepts": [
+      "b11-morfologia-enganosa"
+    ],
+    "tags": [
+      "b2c2-lote6",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Ela é mais alta do que mim.",
+      "verdict": false,
+      "explanationEs": "En la comparación, «do que» NO es preposición: lo que sigue es sujeto de una frase elidida («do que eu [sou]»), así que va «eu», no «mim». Es la sobrecorrección clásica del que ya aprendió «para mim» y «sem ti»: aplica el oblicuo donde no toca. Y fíjate que aquí el español AYUDA — «más alta que yo» calca exactamente a «do que eu» —; la trampa no viene de tu lengua, viene de la regla recién aprendida.",
+      "repair": "Ela é mais alta do que eu."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "register": "neutro",
+    "contentHash": "268b78f7229dcac9e780f1d5a9fc65e18ebe5f9a71f8a870a5f7d23c47b77a0b"
+  },
+  {
+    "id": "b2c2-gj-l6-07",
+    "blockId": 11,
+    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "difficulty": 3,
+    "concepts": [
+      "b11-falsos-amigos"
+    ],
+    "tags": [
+      "b2c2-lote6",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Vou exprimir umas laranjas para o sumo.",
+      "verdict": false,
+      "explanationEs": "«Exprimir» en portugués es expresar («exprimir uma ideia»); las naranjas se «espremem». El «exprimir» español del zumo no se traslada — y la frase entera es portuguesa impecable, solo que dice que vas a expresar unas naranjas.",
+      "repair": "Vou espremer umas laranjas para o sumo."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "register": "informal",
+    "contentHash": "676c99285f28614129c3255b37920461e00176ab93fc87104da0a6e30bb99097"
+  },
+  {
+    "id": "b2c2-gj-l6-09",
+    "blockId": 11,
+    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "difficulty": 3,
+    "concepts": [
+      "b11-falsos-amigos"
+    ],
+    "tags": [
+      "b2c2-lote6",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Bebi dois vasos de vinho ao jantar.",
+      "verdict": false,
+      "explanationEs": "«Vaso» en portugués es la maceta o el jarrón (y en Brasil, además, la taza del váter); de beber son «copos». El «vaso de vino» español no se traslada — y pedirlo así en Lisboa pinta una imagen bastante rara.",
+      "repair": "Bebi dois copos de vinho ao jantar."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "register": "informal",
+    "contentHash": "1327a2d99bf5edb9d97da2ab6aee3dd3c47f2fe89502a8e373fc3f801b56c028"
+  },
+  {
+    "id": "b2c2-gj-l6-10",
+    "blockId": 11,
+    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "difficulty": 3,
+    "concepts": [
+      "b11-falsos-amigos"
+    ],
+    "tags": [
+      "b2c2-lote6",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Temperei a salada só com aceite e vinagre.",
+      "verdict": false,
+      "explanationEs": "«Aceite» en portugués existe — pero es el participio de aceitar («o pedido foi aceite»). El aceite de oliva es «azeite» (y los demás aceites, «óleo»). Frase 100 % portuguesa que dice que aliñaste la ensalada con un «aceptado».",
+      "repair": "Temperei a salada só com azeite e vinagre."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "register": "informal",
+    "contentHash": "78e76cd461a69a00795c7192d8340107edc529976e34e4eeef16e5f92eebd8ae"
   }
 ]
