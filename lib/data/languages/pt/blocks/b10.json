@@ -5825,5 +5825,157 @@
     "register": "informal",
     "address": "tu",
     "contentHash": "a5b34174d0cf308e8407148cdbb02674695408fbce852230309a0064a6f44c6a"
+  },
+  {
+    "id": "b2c2-med-45",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 2,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-e2s2",
+      "mediacao",
+      "relay-semilla",
+      "ascenso:b3/2ab9b39d"
+    ],
+    "type": "mediation",
+    "data": {
+      "sourceText": "Não venhas tarde, senão não podes entrar.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu amigo español, que llega siempre tarde",
+      "instructionsEs": "El aviso te lo dieron en portugués en la puerta del local. Pásaselo a tu amigo en español — lo que importa es la condición.",
+      "wordRange": {
+        "min": 8,
+        "max": 25
+      },
+      "rubric": [
+        "¿Traslada la condición completa (llegar tarde ⇒ no entras)?",
+        "¿Está en español sin lusismos?",
+        "¿Entre 8 y 25 palabras?"
+      ],
+      "modelAnswer": "Oye, no llegues tarde: si llegas tarde, ya no te dejan entrar."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
+    "contentHash": "1a23912b177a2d0c5104924c5389281467cfc69e2e94eadd5e366a61df8d699e"
+  },
+  {
+    "id": "b2c2-med-46",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 2,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-e2s2",
+      "mediacao",
+      "relay-semilla",
+      "ascenso:b2/3d317f8d"
+    ],
+    "type": "mediation",
+    "data": {
+      "sourceText": "As reuniões serão nas manhãs de sábado.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu compañera española del grupo, que no estuvo",
+      "instructionsEs": "Anunciaron esto al final de la clase. Pásaselo.",
+      "wordRange": {
+        "min": 8,
+        "max": 25
+      },
+      "rubric": [
+        "¿Traslada el dato completo (reuniones + sábado + por la mañana)?",
+        "¿Está en español sin lusismos?",
+        "¿Entre 8 y 25 palabras?"
+      ],
+      "modelAnswer": "Dijeron que las reuniones serán los sábados por la mañana."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
+    "contentHash": "be0df458e2fb5401906a1c0583634742ebec807bd2e4278b417e9d16fdda1abe"
+  },
+  {
+    "id": "b2c2-med-47",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 2,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-e2s2",
+      "mediacao",
+      "relay-semilla",
+      "ascenso:b10/f49512ee"
+    ],
+    "type": "mediation",
+    "data": {
+      "sourceText": "A senhora Dra. Maria, poderia enviar o relatório por e-mail?",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu jefa española, que espera ese informe",
+      "instructionsEs": "Esto te lo pidió en portugués el socio de Lisboa, para la Dra. María — que es tu jefa. Trasládaselo con el respeto del original.",
+      "wordRange": {
+        "min": 10,
+        "max": 30
+      },
+      "rubric": [
+        "¿Traslada la petición (enviar el informe) y el canal (e-mail)?",
+        "¿Mantiene la cortesía del original (pregunta con «podría», tratamiento de usted)?",
+        "¿Entre 10 y 30 palabras?"
+      ],
+      "modelAnswer": "Doctora: el socio de Lisboa pregunta si podría usted enviarle el informe por correo electrónico, por favor."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "formal",
+    "contentHash": "cf38288410bb63690b74b10485e469017675dd308bcec8b7698e3eef6366c131"
+  },
+  {
+    "id": "b2c2-med-48",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 2,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-e2s2",
+      "mediacao",
+      "relay-semilla",
+      "ascenso:b10/7b17a7b6"
+    ],
+    "type": "mediation",
+    "data": {
+      "sourceText": "Gostaria de estabelecer contacto telefónico consigo amanhã.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu padre, que vende su piso y no lee portugués",
+      "instructionsEs": "El mensaje llegó al buzón de tu padre. Dile qué quieren, sin burocratés.",
+      "wordRange": {
+        "min": 8,
+        "max": 25
+      },
+      "rubric": [
+        "¿Traslada quién-qué-cuándo (quieren llamarle mañana)?",
+        "¿Sin calcos («establecer contacto telefónico» → «llamar»)?",
+        "¿Entre 8 y 25 palabras?"
+      ],
+      "modelAnswer": "Papá, dicen que quieren llamarte mañana por teléfono para hablar contigo."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
+    "contentHash": "76efc3d3c9b02ec54b9997d09fd1af662f09f27b016ffcbaebe544e91a092009"
   }
 ]

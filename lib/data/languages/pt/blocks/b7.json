@@ -268,7 +268,8 @@
       "front": "¿Qué verbo auxiliar se usa en PT-BR para formar el presente progresivo?",
       "back": "ESTAR + gerúndio",
       "example": "Estou falando português agora. (Estoy hablando portugués ahora.)"
-    }
+    },
+    "esContrast": "El gerundio con este auxiliar es la forma brasileña; en Portugal: estar a + infinitivo."
   },
   {
     "id": "0f7e4333",
@@ -716,7 +717,7 @@
       "regular"
     ],
     "contentHash": "fedb40577fbbb01dd6834f7c199d5f210e215df18633e48e73cad552af5f558f",
-    "esContrast": "El gerundio regular en -ando/-endo es similar en ambos idiomas.",
+    "esContrast": "El gerundio regular en -ando/-endo es similar en ambos idiomas — forma brasileña; en Portugal: estar a + infinitivo.",
     "audio": {
       "br": {
         "hash": "ab1b7210fa4adac911c0ed8deec01daa55f3482e59088687a2c5a29cdf267e20",
@@ -1038,7 +1039,8 @@
       "front": "¿Cuál es el gerúndio de 'poder'? ¿Y de 'fazer'?",
       "back": "podendo / fazendo (son regulares: -er + -endo)",
       "example": "Estou podendo sair agora. (Estoy pudiendo salir ahora.)"
-    }
+    },
+    "esContrast": "El gerundio con este auxiliar es la forma brasileña; en Portugal: estar a + infinitivo."
   },
   {
     "id": "356e7362",
@@ -1392,7 +1394,8 @@
       "front": "Traduce: 'Estoy intentando encontrar la solución.'",
       "back": "Estou tentando encontrar a solução.",
       "example": "Estou tentando encontrar a solução para o problema."
-    }
+    },
+    "esContrast": "El gerundio con este auxiliar es la forma brasileña; en Portugal: estar a + infinitivo."
   },
   {
     "id": "43fb54c2",
@@ -4400,7 +4403,7 @@
       "formal"
     ],
     "contentHash": "eb2651dee3c5adafe86b5b677c0dbe5b780733f9228f939f703d13579d744878",
-    "esContrast": "En español también se dice 'estoy hablando', pero en portugués se dice 'estou falando'.",
+    "esContrast": "En español también se dice 'estoy hablando', pero en portugués se dice 'estou falando' — forma brasileña; en Portugal: estar a + infinitivo.",
     "audio": {
       "br": {
         "hash": "0a64d9198fb09a3102e2465ca6dbdf2f58720bfb7eaab1c16ca0f8b67b055857",
@@ -5396,6 +5399,388 @@
       ],
       "correctIndex": 0,
       "explanationEs": "Brasil usa 'estar' + gerúndio ('estou falando'); Portugal prefiere 'estar a' + infinitivo ('estou a falar')."
-    }
+    },
+    "esContrast": "El gerundio con este auxiliar es la forma brasileña; en Portugal: estar a + infinitivo."
+  },
+  {
+    "id": "b7-ep-01",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio"
+    ],
+    "tags": [
+      "e2s2-reequilibrio",
+      "progressivo-europeu"
+    ],
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Não faças barulho: o bebé está ___ (dormir).",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "a dormir"
+        }
+      ]
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
+    "contentHash": "82d146b7c0edb8ce8e1b3c7e2536a336a7fbb7fe0e096157446f7e111472db26"
+  },
+  {
+    "id": "b7-ep-02",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio"
+    ],
+    "tags": [
+      "e2s2-reequilibrio",
+      "progressivo-europeu"
+    ],
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Ando ___ (pensar) em mudar de casa.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "a pensar"
+        }
+      ]
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
+    "contentHash": "b24f40ceb9b994355e6bc7b1ec614d12332fbce37ae89beee819b675c4132da8"
+  },
+  {
+    "id": "b7-ep-03",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio"
+    ],
+    "tags": [
+      "e2s2-reequilibrio",
+      "progressivo-europeu"
+    ],
+    "type": "error_correction",
+    "data": {
+      "sentence": "Estou escrevendo a ata da reunião.",
+      "correct": "Estou a escrever a ata da reunião.",
+      "explanationEs": "El progresivo del estándar europeo es 'estar a + infinitivo'; 'estar + gerundio' es la norma brasileña."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
+    "contentHash": "e1a8aa411834b04a45c7666622ca20c7de75f764d7210ca02503a5e9d0ade066"
+  },
+  {
+    "id": "b7-ep-04",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio"
+    ],
+    "tags": [
+      "e2s2-reequilibrio",
+      "progressivo-europeu"
+    ],
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Eles continuam ___ (morar) no Porto.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "a morar"
+        }
+      ]
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
+    "contentHash": "758d974cec4627f584fd858aa5b9c646018ad3443cb6a752621fd20160ad411a"
+  },
+  {
+    "id": "b7-ep-05",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio"
+    ],
+    "tags": [
+      "e2s2-reequilibrio",
+      "progressivo-europeu"
+    ],
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ela ficou esperando na paragem.",
+      "correct": "Ela ficou a esperar na paragem.",
+      "explanationEs": "'Ficar a + infinitivo' es la forma europea; 'ficar + gerundio' es brasileña."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
+    "contentHash": "b178d186f8dfdcbfc9e8e532583a4b013ac7791522c5670b32523de36cb67fa5"
+  },
+  {
+    "id": "b7-ep-06",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio"
+    ],
+    "tags": [
+      "e2s2-reequilibrio",
+      "progressivo-europeu"
+    ],
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Passei a tarde ___ (arrumar) o escritório.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "a arrumar"
+        }
+      ]
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
+    "contentHash": "ab7b9dacd682401100b8159c0db1bbed427d72173a79da38663f2fd0654f2ddc"
+  },
+  {
+    "id": "b7-ep-07",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio"
+    ],
+    "tags": [
+      "e2s2-reequilibrio",
+      "progressivo-europeu"
+    ],
+    "type": "error_correction",
+    "data": {
+      "sentence": "O que estás fazendo aí em cima?",
+      "correct": "O que estás a fazer aí em cima?",
+      "explanationEs": "'Estar a + infinitivo' — el gerundio con estar es la norma brasileña."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
+    "contentHash": "c3b85b1f154b0f5cdd724f5130d2efdaf2bdff14d4abe1c059fe3865d7ec6657"
+  },
+  {
+    "id": "b7-ep-08",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio"
+    ],
+    "tags": [
+      "e2s2-reequilibrio",
+      "progressivo-europeu"
+    ],
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Desculpa, estava ___ (falar) com outra pessoa.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "a falar"
+        }
+      ]
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
+    "contentHash": "ac6245dafb263fa1dcc1123e34fb46567d348ee83b9358560b12a46cf4c931e5"
+  },
+  {
+    "id": "b7-ep-09",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio"
+    ],
+    "tags": [
+      "e2s2-reequilibrio",
+      "progressivo-europeu"
+    ],
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Ficámos ___ (conversar) até à meia-noite.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "a conversar"
+        }
+      ]
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
+    "contentHash": "259265a5d93a740d4796a79a484bbfe7567f4075025d5be8523da3e840045fe6"
+  },
+  {
+    "id": "b7-ep-10",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio"
+    ],
+    "tags": [
+      "e2s2-reequilibrio",
+      "progressivo-europeu"
+    ],
+    "type": "error_correction",
+    "data": {
+      "sentence": "Vocês estão entendendo a explicação?",
+      "correct": "Vocês estão a entender a explicação?",
+      "explanationEs": "'Estar a + infinitivo' también con vocês: 'estão a entender'."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
+    "contentHash": "4ad65e48071de1c25756d7470aacdf4d81aa08418882cdc16b876f916049283f"
+  },
+  {
+    "id": "b7-ep-11",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio"
+    ],
+    "tags": [
+      "e2s2-reequilibrio",
+      "progressivo-europeu"
+    ],
+    "type": "fill_blank",
+    "data": {
+      "sentence": "A situação anda ___ (piorar) de mês para mês.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "a piorar"
+        }
+      ]
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
+    "contentHash": "bd74f3333edcdf944c6727f0b3a426ce799722a84584f7c56a221dfb886460ad"
+  },
+  {
+    "id": "b7-ep-12",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio"
+    ],
+    "tags": [
+      "e2s2-reequilibrio",
+      "progressivo-europeu"
+    ],
+    "type": "error_correction",
+    "data": {
+      "sentence": "Continuo achando que foi um erro.",
+      "correct": "Continuo a achar que foi um erro.",
+      "explanationEs": "'Continuar a + infinitivo' es la forma europea; 'continuar + gerundio' es brasileña."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
+    "contentHash": "c8fcab0770765be7534227dd40fbfc71a500c91a509408ae8c218d88fcdc4633"
+  },
+  {
+    "id": "b7-ep-13",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio"
+    ],
+    "tags": [
+      "e2s2-reequilibrio",
+      "progressivo-europeu"
+    ],
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Quando cheguei, já todos estavam ___ (jantar).",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "a jantar"
+        }
+      ]
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
+    "contentHash": "778f00a39994a7d820a533b02c27d23640803bfa0cc16c61eced656f3cb68135"
+  },
+  {
+    "id": "b7-ep-14",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio"
+    ],
+    "tags": [
+      "e2s2-reequilibrio",
+      "progressivo-europeu"
+    ],
+    "type": "error_correction",
+    "data": {
+      "sentence": "Estamos tentando resolver o problema.",
+      "correct": "Estamos a tentar resolver o problema.",
+      "explanationEs": "'Estar a + infinitivo': 'estamos a tentar'. El gerundio con estar es la norma brasileña."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
+    "contentHash": "1c4d7a7a5000f7b1b856ffdc85c7325e99027e6d632bc7b975a1378967e4a2ad"
+  },
+  {
+    "id": "b7-ep-15",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio"
+    ],
+    "tags": [
+      "e2s2-reequilibrio",
+      "progressivo-europeu"
+    ],
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Ele passa o dia ___ (ver) vídeos no telemóvel.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "a ver"
+        }
+      ]
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
+    "contentHash": "9589b6f064ff2c46215d95fa5870ec3a0f11e367b2d5bae09b0056fac65dda2e"
   }
 ]
