@@ -28,7 +28,7 @@ import {
   type Ex,
 } from './variant-guard';
 
-export const SELLO = 'regla-inerte-v2 (2026-07-29)';
+export const SELLO = 'regla-inerte-v3 (2026-08-13)';
 
 // ── Lista blanca nasal ──
 // `[êô]` ante m/n sugiere grafía BR (gênio, econômico, Antônio), PERO:
@@ -124,6 +124,71 @@ export type Destino =
   | { destino: 'neutral'; sello: typeof SELLO }
   | { destino: 'unchecked'; riesgos: string[] };
 
+// ── v3 (2026-08-13): los chequeos del FRENO ────────────────────────
+//
+// El muestreo de E2#2 halló 4/10 errores reales en la primera cola de
+// inertes, y los cuatro vivían donde la regla no miraba. Estos chequeos
+// MECÁNICOS cazan tres de las cuatro clases; la cuarta (falsedad
+// semántica de la glosa) no es mecanizable — por eso el muestreo
+// adversarial sigue siendo obligatorio: la regla propone, la muestra
+// dispone.
+
+/** Options con duplicados (9f57a67b tenía «em» dos veces). */
+function optionsRotas(ex: Ex): string | null {
+  const ops = (ex.data as any)?.options;
+  if (!Array.isArray(ops)) return null;
+  const vistos = new Set<string>();
+  for (const o of ops) {
+    const k = String(o).trim().toLowerCase();
+    if (vistos.has(k)) return `options-duplicada:«${o}»`;
+    vistos.add(k);
+  }
+  return null;
+}
+
+/** Ensamblado roto: la respuesta insertada en el hueco queda pegada a
+ *  una copia de sí misma («sonhou ___ com» + answer «com» → «com com»),
+ *  la clase que la Ola V encontró a mano en b4/b5. */
+function ensambladoRoto(ex: Ex): string | null {
+  const d = ex.data as any;
+  const sent: string | undefined = d?.sentence;
+  const answer: string | undefined = d?.answer ?? d?.blanks?.[0]?.answer;
+  if (!sent || !answer || !sent.includes('___')) return null;
+  const ens = sent.replace('___', String(answer));
+  const w = String(answer).trim().toLowerCase();
+  // Normaliza a palabras separadas por un espacio y busca la respuesta
+  // pegada a una copia de sí misma. Sin lookbehind: los escapes de \p
+  // ya se perdieron una vez entre generadores de código.
+  const palabras = ens.toLowerCase().replace(/[^a-záéíóúâêôãõçü\s-]/gi, ' ').split(/\s+/);
+  for (let i = 0; i + 1 < palabras.length; i++) {
+    if (palabras[i] === w && palabras[i + 1] === w) return `ensamblado-duplica:«${w} ${w}»`;
+  }
+  return null;
+}
+
+/** Glosa que atribuye a la palabra rasgos que NO tiene: fragmentos
+ *  citados en el esContrast («-ão», «nh») que no aparecen en el texto
+ *  portugués del ítem (185d89ba decía «manhã con -ão»; 273b3166 citaba
+ *  un «nh» que irmão no contiene). Sólo fragmentos CORTOS sin espacios:
+ *  los largos son ejemplos legítimos de otra cosa. */
+function glosaContradice(ex: Ex): string | null {
+  const glosa = (ex as any).esContrast;
+  if (typeof glosa !== 'string' || !glosa) return null;
+  const pt = textoPortugues(ex).toLowerCase();
+  if (!pt.trim()) return null;
+  const citas = [
+    // fragmentos entre comillas: 'nh', «ão»
+    ...[...glosa.matchAll(/[«'‘"]-?([a-záéíóúâêôãõçü]{2,4})[»'’"]/gi)].map((m) => m[1]!),
+    // fragmentos con guion SIN comillas: «con -ão», «termina en -nh»
+    ...[...glosa.matchAll(/\s-([a-záéíóúâêôãõçü]{2,4})(?=[\s.,;)]|$)/gi)].map((m) => m[1]!),
+  ].map((c) => c.toLowerCase());
+  for (const c of citas) {
+    if (c.length < 2) continue;
+    if (!pt.includes(c)) return `glosa-cita-ausente:«${c}»`;
+  }
+  return null;
+}
+
 export function triage(ex: Ex): Destino {
   // Un ítem exento ENSEÑA la diferencia de variantes: contiene material
   // divergente por diseño, así que ni se consagra ni se cuarentena.
@@ -146,6 +211,11 @@ export function triage(ex: Ex): Destino {
       continue;
     }
     return { destino: 'needs-human', motivo: `marcador: ${h.marcador}` };
+  }
+
+  // v3: los chequeos del freno — cualquiera de los tres retiene el ítem.
+  for (const chk of [optionsRotas(ex), ensambladoRoto(ex), glosaContradice(ex)]) {
+    if (chk) return { destino: 'unchecked', riesgos: [chk] };
   }
 
   const t = textoPortugues(ex);
