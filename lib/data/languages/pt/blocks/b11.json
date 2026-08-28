@@ -481,5 +481,172 @@
     "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md) · revisión manual E2#4 2026-08-28: OK (informe-cola2-manual)",
     "register": "informal",
     "contentHash": "78e76cd461a69a00795c7192d8340107edc529976e34e4eeef16e5f92eebd8ae"
+  },
+  {
+    "id": "b2c2-gj-l7-02",
+    "blockId": 11,
+    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "difficulty": 3,
+    "concepts": [
+      "b11-falsos-amigos"
+    ],
+    "tags": [
+      "b2c2-lote7",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 7: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-lote7-b2c2.md)",
+    "register": "neutro",
+    "contentHash": "b82e6bde584c601f0d182c7b292e6537714f5569281d9b89236426733ebed777",
+    "data": {
+      "sentence": "A polícia ainda procura o presunto assaltante do multibanco.",
+      "verdict": false,
+      "explanationEs": "«Presunto» en portugués es, ante todo, el jamón. El adjetivo español («presunto ladrón») se dice «presumível», «suposto» o «alegado». La frase, tal cual, pone a la policía a buscar un jamón asaltante.",
+      "repair": "A polícia ainda procura o presumível assaltante do multibanco."
+    }
+  },
+  {
+    "id": "b2c2-gj-l7-03",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 3,
+    "concepts": [
+      "b11-regencias"
+    ],
+    "tags": [
+      "b2c2-lote7",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 7: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-lote7-b2c2.md)",
+    "register": "informal",
+    "contentHash": "277fb4fa82d5785678fdaa3e3df111ddef5b80d9a8a8221e6da516ef01d710b3",
+    "address": "tu",
+    "data": {
+      "sentence": "Ainda bem: a tua proposta vai de encontro ao que eu tinha pensado.",
+      "verdict": false,
+      "explanationEs": "Son casi gemelas y dicen lo contrario: «ir AO encontro DE» es coincidir, satisfacer, venir al encuentro; «ir DE encontro A» es chocar CONTRA. Celebrar que una propuesta «vai de encontro» a lo que pensabas es decir que lo atropella. En el corpus del curso, el encuentro es siempre «ao encontro de» («indo rapidamente ao encontro de Natario») y el choque «de encontro á» («de encontro á luz»). Hasta los periódicos portugueses tropiezan con este par — por eso es de C1.",
+      "repair": "Ainda bem: a tua proposta vai ao encontro do que eu tinha\npensado."
+    }
+  },
+  {
+    "id": "b2c2-gj-l7-04",
+    "blockId": 11,
+    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "difficulty": 3,
+    "concepts": [
+      "b11-falsos-amigos"
+    ],
+    "tags": [
+      "b2c2-lote7",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 7: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-lote7-b2c2.md)",
+    "register": "neutro",
+    "contentHash": "e250ddd66ad2a016f73af670373a3b2207103cfae452aaa6d80cfcf657beb188",
+    "data": {
+      "sentence": "O meu apelido é Ferreira, como o da minha mãe.",
+      "verdict": true,
+      "explanationEs": "En Portugal, «apelido» ES el apellido (Priberam, acepción 1, marcada [Portugal]: «nome de família»). El pánico viene de Brasil, donde «apelido» es el apodo. Es de la segunda familia de la lección: los que parecen falsos y son amigos — no lo esquives. Eça: «uma família… que tinha o apelido de Macário»."
+    }
+  },
+  {
+    "id": "b2c2-gj-l7-05",
+    "blockId": 11,
+    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "difficulty": 3,
+    "concepts": [
+      "b11-morfologia-enganosa"
+    ],
+    "tags": [
+      "b2c2-lote7",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 7: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-lote7-b2c2.md)",
+    "register": "neutro",
+    "contentHash": "bd16aae7fb7c563db6e8b9ada6f83793785f01a4a319c895e20f1ce567e976e4",
+    "data": {
+      "sentence": "Achei o segundo capítulo mais bem escrito do que o primeiro.",
+      "verdict": true,
+      "explanationEs": "«Mais bem» delante de participio es el canon culto: mais bem escrito, mais bem pago, mais bem feito. Al hispanohablante («mejor escrito») le suena redundante y tiende a «corregirlo» — y estropea la frase más cuidada de las dos. La otra forma también se oye y hasta Garrett la escribió («o tinham por melhor escripto e mais bem guardado» — ¡las dos en la misma línea!); esta, la de «mais bem», es la que nadie te va a corregir a ti. *(Vuelta del MAL de la v1 por convergencia: Garrett/Camilo atestan «melhor + participio» y Ciberdúvidas 3247 trae el par en el título — sólo la dirección BIEN admite verdict.)*"
+    }
+  },
+  {
+    "id": "b2c2-gj-l7-07",
+    "blockId": 11,
+    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "difficulty": 3,
+    "concepts": [
+      "b11-falsos-amigos"
+    ],
+    "tags": [
+      "b2c2-lote7",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 7: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-lote7-b2c2.md)",
+    "register": "informal",
+    "contentHash": "1359b909ea936092676de3afc6e897eff8cb18d770fe920839016503473db4a9",
+    "address": "tu",
+    "data": {
+      "sentence": "Recebeste a carta de despido no fim do mês?",
+      "verdict": false,
+      "explanationEs": "«Despido» en portugués es desnudo (participio de «despir»): «já despida» (Eça, A Aia). El despido laboral es «o despedimento» (el verbo «despedir» sí coincide; lo que cambia es el sustantivo). Tal cual, preguntas si la carta llegó… desnuda.",
+      "repair": "Recebeste a carta de despedimento no fim do mês?"
+    }
+  },
+  {
+    "id": "b2c2-gj-l7-08",
+    "blockId": 11,
+    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "difficulty": 3,
+    "concepts": [
+      "b11-falsos-amigos"
+    ],
+    "tags": [
+      "b2c2-lote7",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 7: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-lote7-b2c2.md)",
+    "register": "formal",
+    "contentHash": "b4dafb1944d4223e5f6e4e5bcb2a6ec01cf68968fb3a5498ed3dc0ed7b6ac35d",
+    "data": {
+      "sentence": "Prometeram acabar as obras em maio; todavia, o prédio continua na\nmesma.",
+      "verdict": true,
+      "explanationEs": "«Todavia» en portugués es «sin embargo» (de la familia de contudo, no entanto), registro cuidado y perfectamente vivo — Eça lo usa a cada página. No es el «todavía» temporal del español (ese es «ainda»). La frase está impecable; quien la «corrige» está traduciendo, no leyendo."
+    }
+  },
+  {
+    "id": "b2c2-gj-l7-10",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 3,
+    "concepts": [
+      "b11-regencias"
+    ],
+    "tags": [
+      "b2c2-lote7",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 7: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-lote7-b2c2.md)",
+    "register": "informal",
+    "contentHash": "56898e02a8f3c51460918296f5d351d31d0819e0c1cef4409e59dea4db75e69e",
+    "address": "tu",
+    "data": {
+      "sentence": "Sonhei contigo ontem à noite — estávamos outra vez em Coimbra.",
+      "verdict": true,
+      "explanationEs": "«Sonhar COM» coincide con el español «soñar con»: aquí el único error posible es la paranoia del calco. La lección de regencias avisa: no todas traicionan. (Y en la relativa, la preposición se hereda: «a pessoa com quem sonhei».) Camilo: «Sonhava com as delicias do desterro»; Garrett: «sonhava com aquillo em que so penso… em ti»."
+    }
   }
 ]
