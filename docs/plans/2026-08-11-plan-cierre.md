@@ -213,14 +213,19 @@ Reglas pagadas que aplican: normalizar CRLF, quitar `_itálicas_`,
 `parrafos[0]` puede ser numeral, fornada 3 de chistes/quadras con doble
 adversarial si alcanza.
 
-## E4 · Escalera karaoke (cadencia mensual, no bloquea)
+## E4 · Escalera karaoke — ✅ CERRADA 2026-08-28 (129aadb)
 
-2-3 textos/mes de la escalera graduada. **Propuesta de tamaño total:
-~14 textos** cubriendo A2→C1 (hoy: 3) ⇒ ~4-5 meses en paralelo con todo
-lo demás — CERRADO por Edu 2026-08-11. Cuota: ~60,5k
-créditos hoy (rinden ~2×), reset **2026-08-28** (121k/mes). Piloto de 2
-párrafos antes de cada texto, como siempre. `/doblar-episodio` para
-cualquier audio de curso.
+**14/14 textos, de una vez** (decisión de Edu al renovarse la cuota:
+«tranche de karaoke E4 para ya terminar»): a los 3 de la Ola L se
+sumaron 11 — anedotas a2-1/a2-2/b1-1 (A2-B1, vía original del gate),
+João Pateta, Carlos Magno e o Abade, O Rabequista (Junqueiro B1-B2),
+O Suave Milagre, Frei Genebro, No Moinho (Eça B2), Um Poeta Lírico
+(Eça C1) y Viagens na Minha Terra cap. I (Garrett C1). Medido: 336
+párrafos-MP3 · 127,0 min · 102.297 chars · 56.019 créditos de 174.357
+(ratio 0,55 confirmado); quedan 118.338 este mes. Herramienta nueva:
+`scripts/lectura/karaoke-desde-catalogo.mjs` (upgrade in place de una
+lectura publicada, gate de procedencia con las dos vías). El plan
+original (2-3/mes × ~4-5 meses) quedó obsoleto por presupuesto real.
 
 ## E5 · Gate de cierre PT (1 sesión)
 
