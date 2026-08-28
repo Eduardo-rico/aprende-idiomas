@@ -47,12 +47,12 @@
     "esContrast": "Portugal usa 'correio' para correo postal; Brasil usa 'contato' para comunicación, 'correio' para postal.",
     "audio": {
       "br": {
-        "hash": "bb158c394f061447c5b4d04dc2768afb6e7831d54a04989cd9d26842d25e5c74",
-        "voice": "ElevenLabs_Leonor"
+        "hash": "5ebf4369a7533e7a38112da8ac3538e9fd360486c91b77ed17c3b2523185b608",
+        "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "1b50124756f03beefe4b53c29a7384f4302d123ca6173f197600576d8b714ff6",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "hash": "c1745ad78c8c4609113088c88d4fc613eae20631808aca41f585e62a2207de7d",
+        "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "needs-human",
@@ -127,11 +127,11 @@
     "esContrast": "'Saudade' no es exactamente 'añoranza'; expresa un sentimiento mixto de nostalgia y deseo.",
     "audio": {
       "br": {
-        "hash": "ba261954cef6b4f74ee2c060c415fba63ba128fa62ecd6621e7d69396794c174",
+        "hash": "d6bb332b448e8fbd9f0a340d780869d7d3f3f9344f0e197affe8a834716c43f8",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "712150bd78a94ff1c646b628ba063c4e4723f794bb1d060da0c46e152cf1e831",
+        "hash": "2008b6b9f29f330899dad74f2eeb81d31d57f96fe369e505ca7f1a8459524416",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -165,12 +165,12 @@
     "esContrast": "'Ao vosso dispor' es más formal y típico de PT europeo; en BR se diría 'à disposição' o 'ao seu dispor'.",
     "audio": {
       "br": {
-        "hash": "23c237d1356e282dc2754531f395b35497117e4c7bb09820de42f45034bb100e",
-        "voice": "ElevenLabs_Leonor"
+        "hash": "f6de68f84a2e411582ff9e1adf1b4caabd5cf6ed370c8ecb8caf74f1d7f5fa38",
+        "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "971081f723464415d04d0f078729c2222edbbb47164e8793cbc9c178ef5d603f",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "hash": "494273bd60463c7e6ef8208500d49e8811c1b737c1442ba383f05d7e32a9da9d",
+        "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "needs-human",
@@ -205,6 +205,7 @@
     "contentHash": "7d4d0ab885d32f9606446f385df34820ea310e3ee7dfa3aaf9712f3852a44020",
     "esContrast": "En español 'gustar' no lleva preposición; en portugués 'gostar' rige 'de' obligatoriamente.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
@@ -216,8 +217,7 @@
         "—"
       ],
       "answer": "de"
-    },
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
+    }
   },
   {
     "id": "0b091314",
@@ -232,11 +232,11 @@
     "esContrast": "'Abs' viene de 'abusivamente' en PT-BR, no existe en ES ni en PT-PT",
     "audio": {
       "br": {
-        "hash": "d5c77793594d6decdcea2f0bb0168600fdb928e0cbed25f9ebb42a67c70f6b58",
+        "hash": "4562e0e62e51365b0f6aba181271cb23d78c8f080332c9b36a2040a1c09705c9",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "6e45bcee3848791c166b4ac858b1aa3d1c1f148f09eef50459a3ca386a315a60",
+        "hash": "0758e35eb4eaee12eec26dd05e2405d440aecb4f4472f700aa0caab062e32f2a",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -262,6 +262,7 @@
     "contentHash": "bc9d04087faaf03209ec0a74ccd277f46a8c130cf843f7d49eff51293969ac21",
     "esContrast": "'Tudo bem?' coincide con el ES '¿todo bien?'; 'tudo bom?' también existe (sobre todo BR). No hay trampa aquí.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Olá, João! Tudo ___?",
@@ -274,8 +275,7 @@
           ]
         }
       ]
-    },
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
+    }
   },
   {
     "id": "18477503",
@@ -293,11 +293,11 @@
     "esContrast": "Cuidado: 'prezado' no es 'preciado'; es equivalente a 'estimado'.",
     "audio": {
       "br": {
-        "hash": "78485a309007f8696952619dcfd315e27b9ee8894cb60496a278fb4961ae5c8d",
+        "hash": "7186eaa921542bea3dd902780a0575cdc53d6dc76f9de4b130cdaab0136fbebe",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "590fa5aef9049e5d72586b112091cf71d8f666ad8f93743b73cbc1453c82d898",
+        "hash": "8e1441947f4967c5fe4bc7c63051a2c6b88b9fd244c54ebc74a4f536980a1c28",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -330,11 +330,11 @@
     "esContrast": "El Acuerdo Ortográfico generó controversy porque algunos prefieren mantener las diferencias tradicionales.",
     "audio": {
       "br": {
-        "hash": "e6d59c2a446550f769e13b6e4f8c11d794f109b7a8cb261e7201cd69d4d2fdc5",
+        "hash": "bcfb639f7821d84b54fe2a458dc1a0c792ac1801175d36f324c0ca6ecbb5686d",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "4aea7b63c517ddffcbdf3604e0e64e7e96e2c72e17897c3c572eaa27454f8e0b",
+        "hash": "03fb9b0b6f11d63f7244bf02b1aa37f2b9b29a006a0dccf196e672cde7ed52cc",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -368,12 +368,12 @@
     "esContrast": "«Achar» en BR = creer/opinar; en PT = encontrar. Evita confundir «acho que» con «encuentro que».",
     "audio": {
       "br": {
-        "hash": "51ad71cfdda9b0898fabc246d28382175965d685be237429f6d1691cc8b48ac6",
-        "voice": "ElevenLabs_Leonor"
+        "hash": "b2d38c3a810950c36e98e316b4a9f80f163f8ae6861de6fe242350e1558171bd",
+        "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "397dedce687149faced3788de26f9a5c4056d5724420754b49403bb2b78282b6",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "hash": "f1e20813bb3c95dc353a529a15558a15173058d0715b65319a09c9adc12c51fe",
+        "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "needs-human",
@@ -409,11 +409,11 @@
     "esContrast": "En español 'usted' es único; en portugués hay tres niveles de formalidad según el contexto",
     "audio": {
       "br": {
-        "hash": "3891f7811f62ae9f2e42b09547d35b5eea0445d20eeaadd778989482ce69431e",
+        "hash": "41270e9fdc8127cf5caddf03276e359952d6944a568befbe44484c31e22827f0",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "aed2c126e9978f8e1d161cfbd2de80656886489065286c963aaeddbb70c766f4",
+        "hash": "4ed341849d9d165b491fed4b53cd85ffacd3b727ccf8c32452537e19cb5d1d03",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -443,11 +443,11 @@
     "audio": {
       "br": {
         "hash": "57936e7d9e10d47aec2868d230339f0cac742ba9e06132c576660abd2916af2f",
-        "voice": "ElevenLabs_Leonor"
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
         "hash": "adb8a521ce43311399d7ff9a10d371ad1533f292be338bda40b05fbd02c44bca",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
@@ -492,11 +492,11 @@
     "esContrast": "'Achar' en PT-BR significa 'creer/pensar'; en ES 'achar' sería 'encontrar'.",
     "audio": {
       "br": {
-        "hash": "72db4fa52884410ede019ddc505212bb290c6bb9b2f7b0085e1ec1423201429f",
+        "hash": "0f0d19bda9af64336ff225c612aa37c853ac3dfb5dc6d63c79749fd64dbb3f05",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "604592671b8543001591249aef7c0a5f329154197a19e31e3d3eeef87a7e1e7c",
+        "hash": "65a57fb62040b0dbb3b5a38c7c0baabbe42b4c2bd844a0807f71048d0ecf03a5",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -529,12 +529,12 @@
     "esContrast": "Cuidado: 'bizarro' en español = 'valiente'; en BR = 'genial' (¡contrario!).",
     "audio": {
       "br": {
-        "hash": "51ef8e21a0ff223701d38d661c9dbcbef261630fd6f13c45dc442540cb5113f7",
-        "voice": "ElevenLabs_Leonor"
+        "hash": "67c7d93f95dbbe3420fc7426c4b2fe67730d522a3156e36414483e8630be3f79",
+        "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "7406ca53ccd66580cf4fe4430b732d759c188e240927d5e6ce3e037e46c6ca5d",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "hash": "e0bf745730da407fed51e58925e76b5a2648a0e9a2f1c760fc4641386642478c",
+        "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "divergent",
@@ -565,11 +565,11 @@
     "contentHash": "2aaa15ef3ecaa7141494dc2973bc49a5983c5cca1b33b38a23f05c03dc87b65b",
     "audio": {
       "br": {
-        "hash": "14b36522a1b7ffe7707c58fcb526e11090f94293e19245969d8ee05d7fb272af",
+        "hash": "fa798400f253ab56615123a9a10531f148d8151a323b41704bae8112021c405a",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "3a7fd11e7eb8ac900fe3bda5c8b4054a2a5e43e1d828b692ec5ead7e918be94a",
+        "hash": "b4a14c43dbb6f115472576db92ae6bf67952c884f77541bd338163c947aab197",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -598,11 +598,11 @@
     "audio": {
       "br": {
         "hash": "b07fda5c888953f77b9dee1f4012ab1a4ec7dbaa280ac23ab8446e5fd20b0c5b",
-        "voice": "ElevenLabs_Leonor"
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "8b432915068f7601c6ec7418eb77f43c7a5160e4a5286daa992c0108ce1d2ffe",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "hash": "b9b3ee2384819e1a6d01a5e5eceba6942a55a031f9ba149ca84bcf9864143623",
+        "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "needs-human",
@@ -700,12 +700,12 @@
     "esContrast": "En PT-PT se prefiere «continuar a + infinitivo»; en BR se usa «continuar + gerúndio».",
     "audio": {
       "br": {
-        "hash": "6fbac25a0d8dd95b2752ce403f1c19956f44cfcd893c9d9a67ff15165ee2fe61",
-        "voice": "ElevenLabs_Leonor"
+        "hash": "8bb6526608ab9ee31fee71c113761f35d2f493db2faf76afef1a8b18a701a8b5",
+        "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "8927bcb07e640b06466d83cdd9abcbdff86bc1f6b5649065b254a22f761e26ee",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "hash": "d38759be6b4ca4f52ba636eac23858001c2bec2665450b9d1d845eb94d15f895",
+        "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "needs-human",
@@ -744,11 +744,11 @@
     "esContrast": "Portugal continental tiene variaciones regionales noticeable entre norte y sur.",
     "audio": {
       "br": {
-        "hash": "86b15337dd0ee8df30eea675f5a25f9fe1dce31e2ae3f172a7f80a3218f4c7ff",
+        "hash": "39043b1f1e27efd7f8b8d01a0c35be795270f12a1c615adb8ad7a73a4bc06464",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "282e6bcbe4327eb76a2abc3b5215d6be24313c85401a1db2d55af81d6d43b637",
+        "hash": "8809fa26ddeaa08622eb0ead3e85404cb94f5253dc85a702a06792a7a01287ae",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -778,11 +778,11 @@
     "esContrast": "'Próprio' es un vocativo afectuoso (coloquial BR); en España se diría 'chaval', 'tío' o 'colega'.",
     "audio": {
       "br": {
-        "hash": "a98a5cac01383a0ef7a207d5a8c16a2b211af9d3a935ebfa035874b42a25493b",
+        "hash": "e18a9f660d5095626bdf43d02454d5743f46c5c93a988b5d4944aa03352634d0",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "25d86abeefe414721470390b3eb04cc67280e19dfff08ecc5a14431eab31b597",
+        "hash": "e24dddb45abf5ce73632877e2f6cff7d3ebd58b7a7bc3e7051599fd017b06d04",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -854,11 +854,11 @@
     "esContrast": "'E aí' es saludo informal (BR); 'meu irmão' y 'bora' son coloquiales y no existen en España.",
     "audio": {
       "br": {
-        "hash": "52e22f220ab2ef3483c17ea7408f3bae162aeb97415c3d99740051371fe57bb3",
+        "hash": "c1fd2f55669036ba5fcb31bb4e5d59a6807cc2ea64fb5e52bcb878837b918a63",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "18ab08b49456dac0eebae8ef46f56d008e061be7a54e7fa3d22515f7e041b2e2",
+        "hash": "f10491e14279ccaf1f7cd949d72af889ec9cc4ab8cace0df697c4c119990ddcd",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -933,11 +933,11 @@
     "esContrast": "En portugués, 'senhor' es tratamiento formal, mientras que en español se usa 'señor' de forma más general.",
     "audio": {
       "br": {
-        "hash": "c7a2ec2bfe2d30992944ecc0155e6d4608767765598b11d5d54b3e6f63aa277c",
+        "hash": "18c5c22c7c313cbcd64776e1896f8123f03971185e074e4be6476a14692dc4a1",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "1ceab34bc9a7b3b5508948052d5d99a95e28085fe627962834d30a61169dd0a2",
+        "hash": "3c27b7a7f7a4f6c208c62b55382ab8408ede88fb73e9e1c29da73cb73c181962",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -1014,15 +1014,16 @@
     "esContrast": "'contacto' es sustantivo en ambas lenguas; el contraste es con Brasil: PT-PT contacto / BR contato.",
     "audio": {
       "br": {
-        "hash": "f8073cfe43c177370621510575662a2be4edd2f367a4cc2bd8af81135a9d1a56",
+        "hash": "44fadc111b4b5fcd66c15ed34b633360c1d98e0143f8600b83893b8f795c0ab3",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "a9025ce81b6012471b5aa515f303b288eccd24f5d1c26d529a6abe12369cc33d",
+        "hash": "21e7fe808697935e52cae279ff21ae20f8fbf2f0b72f861835b0906162bf9b2d",
         "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
     "type": "listening",
     "data": {
       "audioText": "Obrigado pela atenção. Aguardo o seu contacto telefónico para dar uma resposta.",
@@ -1034,8 +1035,7 @@
         "Teléfono de contacto"
       ],
       "answer": "Contacto telefónico"
-    },
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
+    }
   },
   {
     "id": "54df0897",
@@ -1098,11 +1098,11 @@
     "esContrast": "'Achar' en BR = encontrar; 'achar' en PT = parecer/creer. Gran fuente de malentendidos.",
     "audio": {
       "br": {
-        "hash": "157ca15eff9dcde4e32081516302efd6619185a8cd54aff417a05cc83ad2d9cb",
+        "hash": "6472c3efa7d856f2a9c31ae1f029420380ff925b533fbfb6987a5852e2de15b6",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "db5edcc38516debd54a774e3c5256a66a742484fcfaafb2c27d57228c50765d9",
+        "hash": "68af063af9d2e1574527c7b9023ec7ebb58af9bcc41f05dfaa1aac59f657543c",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -1208,11 +1208,11 @@
     "esContrast": "'Contacto telefónico' suena redundante en PT; se dice 'contacto' o 'número de telefone'. 'Cabeçalho' = 'encabezado' (no 'cabecera' de mesa).",
     "audio": {
       "br": {
-        "hash": "be8d645064b36441c65022d7fdfd37f1489f16d4093bb2bbb695c4f5a569651d",
+        "hash": "9dcabaa68b6fab8590ddbb6dee66758ff108e319978aec998787b1c438ac70ee",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "5010bc0b754402ca1cb08088d8a629a132ce07006d5e65c8b0e81f43329a93fb",
+        "hash": "05a7f1fee9e3c793ec0069b5c0a51c645865e2259ac01a4d99787126129a50b3",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -1241,11 +1241,11 @@
     "contentHash": "6b460b149ed8e00d2e285caf63efa8f832368108e2a00cdae9beccc8c106dd88",
     "audio": {
       "br": {
-        "hash": "c638ea9e1d18c71d56f6d9e438a8186d3998f52d5e30fd14f1c25082a3dc684b",
+        "hash": "76d68fd3b5e523e40c7d13ac63aa7e98ec5acd832ee7681b7a42b8442f08e851",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "093fde78799160d31273ad6071ed0c5a176c8d2ca2141b734220792bd352aa0c",
+        "hash": "d391dd6587a1a8a0b0e6eec5b39494e4561ea864b3e94a0010fee89b8185418d",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -1273,11 +1273,11 @@
     "esContrast": "'Cumprimentos' en PT equivale a 'saludos', pero en contexto formal va más allá de un simple saludo casual.",
     "audio": {
       "br": {
-        "hash": "cfc3dc6bee3328ec8ad7902a0ed7001a5587cbc592642cd183a88d50e8b7e12b",
+        "hash": "f7b29975687d281d5baf44576cb0a7ef408e97cb32e32af9d3bbeee4918f2783",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "dc5194729f41708d5c2392224806d2149c6b6b684e71c2e061849e6ea7845846",
+        "hash": "33aaf5eeb7059f406d73236f51320fa3696a196ccdea25fb5fc123b368497dcd",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -1342,11 +1342,11 @@
     "contentHash": "71b4e9212053e26d76a9440ce4e34d99c7afb24d3a9cf0ed191a0cf675dc1b33",
     "audio": {
       "br": {
-        "hash": "d7ca475337bd07dee83fed97a8c196f7413e819f0f5edf297a1640359f15686e",
+        "hash": "aa7322d5ea2b51af60a494575829d0c3a168821ee4c353aa5aeb6f3dd6bb4795",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "b5cd4f67d57ab032bde4af3f8d62ad46eff2f96eefe5425617a6c6ab9c0d2f6b",
+        "hash": "a862e0aa4df762c7a2c79dbaca28c4e8d610b803683eea7bb57cbf6f521b8238",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -1374,15 +1374,16 @@
     "esContrast": "«Saudade» no tiene equivalente directo en español; es un sentimiento típicamente portugués.",
     "audio": {
       "br": {
-        "hash": "db7451e09bca5fceb4b172c22717fe86932c746cc2c2bd15978242d05ac03092",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "2ac13acfe351d7674ab7de92d36e16f84c6c139aba803611177a4f25cd07beff",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "6d820ad0efc8d9564df73ce029d3caf853964d014a808977da029ac1d8120876",
-        "voice": "Portuguese_Wiselady"
+        "hash": "2ac13acfe351d7674ab7de92d36e16f84c6c139aba803611177a4f25cd07beff",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
     "type": "translation",
     "data": {
       "source": "Siento una saudade inexplicable por mi tierra natal.",
@@ -1392,8 +1393,7 @@
       "acceptedAlternatives": [
         "Sinto uma inexplicável saudade da minha terra natal."
       ]
-    },
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
+    }
   },
   {
     "id": "787c7d24",
@@ -1438,15 +1438,16 @@
     "esContrast": "'consigo' cortés PT-PT = 'con usted'; ojo: en español 'consigo' significa 'con él mismo' (falso amigo). El informal sería 'contigo'.",
     "audio": {
       "br": {
-        "hash": "b6e1cff85adccc12735cd1706eab0e4efd1cfd07fdd59356a85508db154fcad8",
+        "hash": "d426bba76c00fc107b99d34fe907ff3dba181686e86742f58af0b237487e58ef",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "11020668f1c76e1b1cebdba41ba24f1b20db3e84d73804abd1569b0e8a9ceea1",
+        "hash": "77a37b9c83ec8c0b5ee757e44afa72bd6fb26d98e4f9156abc9da695bcf4cf0b",
         "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
     "type": "translation",
     "data": {
       "source": "Gostaria de estabelecer contacto telefónico consigo amanhã.",
@@ -1457,8 +1458,7 @@
         "Quisiera establecer contacto telefónico con usted mañana.",
         "Me gustaría ponerme en contacto telefónico con usted mañana."
       ]
-    },
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
+    }
   },
   {
     "id": "7b9b4b9e",
@@ -1476,11 +1476,11 @@
     "esContrast": "'E aí' es muy coloquial en BR; en PT se dice más 'Então' o 'Então, como estás?'.",
     "audio": {
       "br": {
-        "hash": "650841139db0f57e1c703eafb10fe4463257d39ace77dbce83cdb1ff01795bd2",
+        "hash": "e95a8409bc10a52d438bb3db255860a5aa1be547b3624d16b090e30a6dfd95d2",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "a7d203260eb8e6bf47d8ee2c09efa5ec6c4cd2be4010d8d88a4abbada19f545e",
+        "hash": "980112204a281432abd386315278852c78686254920eb994b16c1631f0e02fbc",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -1510,11 +1510,11 @@
     "esContrast": "En BR 'você' es informal; en ES 'tú' funciona para ambos registros. En PT-PT, 'tu' es informal y 'você' es formal.",
     "audio": {
       "br": {
-        "hash": "393bdc39699b81881fb2bb7638fdb2943bf3228c21c3832fb73a001e64563dbf",
+        "hash": "7fc6d932861d2959e9bb8ad79de1ed44b220fa93d9f41d07de76e7bee5a3349d",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "b7fc9eac99f6685d625a732684bbff5ade0723bcd8237014eb4f20bc962b1d4f",
+        "hash": "ddc352b21c0d827e7811c3356782c6fe4a94ff1c26dcbaec4bbe2ba47804f649",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -1542,12 +1542,12 @@
     "esContrast": "«Corresponder-se» en PT-PT usa más la forma pronominal «correspondem-se» que en BR.",
     "audio": {
       "br": {
-        "hash": "ec8280ec5244712fe4e03c67b71de70fae4fb2376a2752a170fb10d029817f7f",
-        "voice": "ElevenLabs_Leonor"
+        "hash": "d59b1ae84118093afa7074bfb71cebb21468723bb7447f67c67ec28cd3b7e75e",
+        "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "168d5fa66720cf2ea9a0fb5061c2f43ed080234420d903b74b041681ca850b91",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "hash": "6fb773d66f61caaf2fa4333cb66475cb621a6f45444beded5e017a064130c20b",
+        "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "needs-human",
@@ -1586,12 +1586,12 @@
     "esContrast": "En PT-BR se usa mucho 'tu' entre amigos; en España 'tú' también, pero 'você' es más formal allí.",
     "audio": {
       "br": {
-        "hash": "a5b6fa5156be9adb2a9fe00b6d326dfaccd2a746c3e41cb2e10c6332fab0c747",
-        "voice": "ElevenLabs_Leonor"
+        "hash": "bac7fa66420826e51789b397f814c265e720bee5ad02ba4dd0ed1bbff638335c",
+        "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "91523d1c65ee2f4fdf30c865f6e13cb91a6c82f5be8c256474a3a98cd5af8179",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "hash": "61b61059eb07a4ac5019365e52efb5f83efd9fa1ab45bded6765cb945cd4c0e4",
+        "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "divergent",
@@ -1630,11 +1630,11 @@
     "audio": {
       "br": {
         "hash": "b264c82bf57f61cf7f5a28bf51dc2ab45bd0407ae7b26d6f00e68cdaadc1deb6",
-        "voice": "ElevenLabs_Leonor"
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
         "hash": "b264c82bf57f61cf7f5a28bf51dc2ab45bd0407ae7b26d6f00e68cdaadc1deb6",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
@@ -1662,11 +1662,11 @@
     "audio": {
       "br": {
         "hash": "72056cfe6a579c969b35984c7f2cb4d1cf8a659bf17f74f70ec016e9561b5fba",
-        "voice": "ElevenLabs_Leonor"
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
         "hash": "d98c7804d437fd43f35f822fc8d5f237eb837f92d5d319d2f71f86888268d982",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
@@ -1702,11 +1702,11 @@
     "esContrast": "En PT formal se evita 'usted' (você); se usa construcciones impersonales o 'a direção' como sujeto.",
     "audio": {
       "br": {
-        "hash": "208bbec038ddb016eff5e8670414176d26d85f25ea9c74305e281d96b841c4fb",
+        "hash": "ef06386506b6a2ee33a9103bdc37ac643e6a6e363a2d217433cf1de72ba49a63",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "656fd70c99217849dafbbcb799139c3e7a04d8fbdddc062f24931ff006b4063d",
+        "hash": "844c5dbaac09bf13259b35a719a1cd7cfb7c2660b7bb60d2ee712c5a81f8e4c6",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -1736,11 +1736,11 @@
     "contentHash": "8889b3d1e846f352d7de6ba766f613826b9c183fe74caea53cfcc36d2c9dd4cb",
     "audio": {
       "br": {
-        "hash": "be4dc7c7fd0a22afa10b6bbfbb11fe04cd90fc0e90a44f2c9a2dd5367527caae",
+        "hash": "4d3b27d2b7ef29b047de0d1a48bfe68ee41c25386313f98c5b0644c83ea68c19",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "455242f264d0c62588c4950f485d43b66f4fd67e9c30b5ab69bdabda8f21e82c",
+        "hash": "b8b51b5fd636ffd1447a365215a6074a3bfb6002563624a9cce38194acd2d75f",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -1819,6 +1819,7 @@
     "contentHash": "93493258fa429ce5413c1374fc43ab1fd8045ca68ac31b24578d76c8d05775cf",
     "esContrast": "En español 'corresponderse' es reflexivo recíproco; en PT es 'corresponder-se' sin preposición.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "corresponder-se",
@@ -1830,8 +1831,7 @@
         "entre"
       ],
       "answer": "se"
-    },
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
+    }
   },
   {
     "id": "9c8d7ded",
@@ -1876,12 +1876,12 @@
     "contentHash": "61b9e83abcd196c6cf2524ec7601a7a07003d51b4b5221a56bf2286322b295a2",
     "audio": {
       "br": {
-        "hash": "236bc7b41d9b2b3ba26f042f97dbe5aea64a77927043329fd590e1e8b1b97aaf",
-        "voice": "ElevenLabs_Leonor"
+        "hash": "4af2d8b4790668f265d6164836b41178dbb4eea98fb9e302f124ba7935a61a9d",
+        "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "803c056333588b091f027e4747027be78cdc59e2eaa16aeef1bab9648c6abd2c",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "hash": "3fba871eb196bfe9bd0f3f4305a7ce2a8acaded90ab18641fac07d7950fd851d",
+        "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "divergent",
@@ -1940,12 +1940,12 @@
     "esContrast": "«Saudade» en PT-BR se usa con artículo femenino (a saudade); en PT-PT puede variar su género.",
     "audio": {
       "br": {
-        "hash": "9cf640a88e93f4f364f674fffe0543b882a09d144e86f8bf5a62a7b96f0c0711",
-        "voice": "ElevenLabs_Leonor"
+        "hash": "c00bc75b6d8a7353c238ed85360543cda4878897cdb89eb1d5bfb43874deeffc",
+        "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "610403958228fa9920464455cf1d16d55ebdb6b90ff12a6daeeb850bea182715",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "hash": "367470e06b4987a56a39670863c1e8ee9ad2ab43926287772615815c906709b4",
+        "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "needs-human",
@@ -1983,12 +1983,12 @@
     "esContrast": "«Correio(s)» en BR se pluraliza más; en PT-PT se usa «correio» o «correios» indistintamente.",
     "audio": {
       "br": {
-        "hash": "1d9639423e5c137ba09bf6cc8fc278d3b9a5b771a77293b824beea1a4aeeb248",
-        "voice": "ElevenLabs_Leonor"
+        "hash": "b68ae464e7cd963401d2c9818da143bfd4d6818ef35402dbf3ad13410248ca10",
+        "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "d990affc6916f1e0cf9f9e361a98ffa0d5ce1c1e21164f374b0042cc299e38ca",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "hash": "7741a756a8f7bb8cb7dd33abf73f027824a8cab6be1a52787ad395976cd50b85",
+        "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "needs-human",
@@ -2027,11 +2027,11 @@
     "esContrast": "En PT-PT 'correio' abarca todo el servicio postal; en BR también se usa 'correios'.",
     "audio": {
       "br": {
-        "hash": "260a7b61dc699a930b10a479002f6409e323b77e793b81f543024383706fd42b",
+        "hash": "44811bfb3ba807be13b14464c55b504ec469f545dc79de61889d72e78e5a11b4",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "e15b85b922056079105a9baa0030484cd72738566d0ad06b3320660ff7d79620",
+        "hash": "8de087eaa837ef20c261af821f3616c59050190edf6166eee0aca68aaa287d30",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -2102,11 +2102,11 @@
     "esContrast": "'V. Exa.' = 'Vuestra Excelencia' es archaic en español moderno; en PT aún se usa en registros muy formales.",
     "audio": {
       "br": {
-        "hash": "5a2158592dc6a12d748c5f4eb0b6167a145548e536c52596be719a019a9b3295",
+        "hash": "f19d19e80fe05b5276841e9b4571acbebaa344cf71990f4e91b1ac5e2ca8d70e",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "b572018d7d3304d3419ee3ef9b5909d7db33d8fe8370f4969e295de1b088b76c",
+        "hash": "32d2e0fee6cc2e33051738ddf88fed7caeb270cae733cdd1373aa4d88394732b",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -2139,12 +2139,12 @@
     "esContrast": "'Fala-me' usa 'me' enclítico; en BR puede ser más natural 'Me fala' en contexto informal.",
     "audio": {
       "br": {
-        "hash": "58083ab015131e9b6c0eb02d97f9c824b1958ef5668a88a9c8b8c48b108b9ac2",
-        "voice": "ElevenLabs_Leonor"
+        "hash": "989163eddf978152eeb2c481e948a85a4f54054b738a778fe13b377ad3f2c94a",
+        "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "c539ac745305f6770ff4227bcab3f50b15558bf11cfd24854510498fd77eb10d",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "hash": "fb45dd48a89a7551396dbe86f99f1b71a746ab8c4fda3eac9a3a562173065cc5",
+        "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "needs-human",
@@ -2223,15 +2223,16 @@
     "esContrast": "'Saudade' es un concepto portugués sin equivalente exacto en español.",
     "audio": {
       "br": {
-        "hash": "9d33371dac5dee8a815c26ed753112d51e5aa383d6425b2b655c6ec2fa705fce",
+        "hash": "61a3b41acd4b21780bdc3ab05aec1e4a0e6d976ce74877e33ee75b3f2011164c",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "6b2d160b76f1c03c5bc196246d197dff780ebdf0e796f770dae7b7c857820a6a",
+        "hash": "02ff575fa4dbc1d5260ed1f8a35ea286de62ef4bb3f079873b34db55c9648dc6",
         "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
     "type": "translation",
     "data": {
       "source": "A saudade que sinto de Portugal é impossível de descrever.",
@@ -2242,8 +2243,7 @@
         "La añoranza que siento de Portugal es imposible de describir.",
         "La nostalgia que siento de Portugal es imposible de describir."
       ]
-    },
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
+    }
   },
   {
     "id": "ac328f9f",
@@ -2260,11 +2260,11 @@
     "esContrast": "En español 'el abajo firmante' se usa en documentos oficiales; en PT-BR es similar",
     "audio": {
       "br": {
-        "hash": "92fae7f5dce27b76733e2106a29cd1b35a17cb56381d9eb035cd0a48097bd4e0",
+        "hash": "f3adcd32752e5ae0e6ef57f742cfb0685c24caed28c2929444c53348637bd547",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "8501abb9a402b913829a64a322e800fe123912d1a29c710a3fa5578eaf730643",
+        "hash": "fcef8c71b408caf2ce6f6516ac51728100c9be68d73a5250ebf990ecb791cbe0",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -2292,11 +2292,11 @@
     "esContrast": "'Prezado' significa 'querido' en PT formal, no 'preocupado' como podría pensar un hispanohablante.",
     "audio": {
       "br": {
-        "hash": "1149a3b75904f240454813295983df7058302eeeb790e7c7ef2db8a82b789ccd",
+        "hash": "020e1b4b599ed9fe31d522dc23794cc7c478419f638b9889c7705e2587be8923",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "86343b648f3f98cdb85971830e0fe7f1e01755fd0cf86e565824aa9d5e24adc4",
+        "hash": "7c493e50f71db3b893d63b4de14185cf80d5c3fbf73f302259ca24cd7e979873",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -2327,12 +2327,12 @@
     "contentHash": "ed96a19fb3d46b09d27ef57aa22bac823fc62cfd2a27c0a5d2f7b876369fba8a",
     "audio": {
       "br": {
-        "hash": "193e34457b2c3a5c4e7e52d7bab791a741454c4c8788dd3d4c6ae81b79122db5",
+        "hash": "f422ce649c7c4d962e7486ce18bbe2726a9631609a59f238e835466dbe31567f",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "b8d06dfed7a28c5ded3ba9d48d9a6c4fffde6e33edadb4c2ad51949b4a7a112a",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "hash": "287d3ed70ee446627e9a6a7bec426170fdcad716d7866312ac7e6319d8dc7424",
+        "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "divergent",
@@ -2363,11 +2363,11 @@
     "contentHash": "b21f2d271203cd1b0e3c6c761def80cf29acd3e38ee7beb2a61bc60b2c61804f",
     "audio": {
       "br": {
-        "hash": "840d8a6c2a62fe2a594b58f3ddd0be7a5cb2b40a607d91e7c2f3322721a62c8b",
+        "hash": "eeb89f5b385eedb93f9673d5aec4b9f79816b942507b7c7318a8094b528c96f7",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "bd72b60434329b654c23e46dfd2e04b585b0ecc6042c5f3e15f14487496b8811",
+        "hash": "b4d635bd0fd06c642eb3111953126c2fa6350e06dd506cba0a4a445854eb451a",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -2393,11 +2393,11 @@
     "contentHash": "b52a9cd2732f88a5cccfba39df9b1fa0296543dd4608e10c14b78d9c018ccd36",
     "audio": {
       "br": {
-        "hash": "307923725a012e4fbbd697501605c2aeb854356da1eedcbfc2d564052ffb7cf7",
+        "hash": "2bc5b5e0a55eb19c0a9345f11bd23be33d0ab8761d7bf18256a3d3db753c5718",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "cf3550b40893298ae3907a38801441ce632800dcdd576bc84faeb85ad918191b",
+        "hash": "8e37fed8351887419f62dfb60e5b378b35a4013ed981ab4e1dc25cde3901f86b",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -2458,11 +2458,11 @@
     "esContrast": "En español 'soledad' no transmite el mismo matiz emocional que 'saudade' tiene en portugués.",
     "audio": {
       "br": {
-        "hash": "68489948e2a989e37dc8a28ec235ab77a7fdface33b0589824835132ba04edd2",
+        "hash": "f1b4980f96efa129944492ae8a1f2f96b80894f1df0c95b52330fa064c6f71d7",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "3c700429582a4731b3551189d3f0ab3cfe51c2a90e7a5ac5761e7153d9e8ffc1",
+        "hash": "a274047b1e0e88b883a6e1d66391a67bb64e1253f09fd43aeb941f8d35e04358",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -2488,12 +2488,12 @@
     "contentHash": "579bf50b11f0e4912d47144daa003b7a6e51fdd2eafa1659e53bec71e8f2a7b2",
     "audio": {
       "br": {
-        "hash": "37be9115819626099c907521d8b9cd25d15cd408a719bc684a0e55256afb74e0",
-        "voice": "ElevenLabs_Leonor"
+        "hash": "b6eaf894d9f8ef52fadbb3a7e31b6991950ea873c0bec22e06cca47d717d98b2",
+        "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "28ec7b5597fc05630e597e8ee49b20e6af6cdbe3a80e6f03eb2f77012269947d",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "hash": "abf6843eca919b760d94369381b363a12a0cb26bb4de440c4b3d2e55e7a85f93",
+        "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "divergent",
@@ -2559,11 +2559,11 @@
     "esContrast": "'Fixe' es argot PT (cool/guay); no confundir con 'fijo'. 'Vocês' en PT se usa más que en BR.",
     "audio": {
       "br": {
-        "hash": "d3233971fc8139ff465ebe2e58d17c1cc402f691d231246dbaf0ecbf57277879",
+        "hash": "fe411f942e448f00d661880d63a4e806c4e9f51dba180e350eb0e06b8584ba9b",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "7250c5b0a78d6d48441164712ac0d3f1cda19373ae6137d2a5327d00ba7020c1",
+        "hash": "6a09426c62dbaaf6879ff6b98da65c05c679df07c6570e6cc258a5b0ae0c6c5e",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -2622,11 +2622,11 @@
     "contentHash": "c2858eb6c23e1391388b5b00310b1bf02d85760e7c3dd88b2a54916ae3a0f1ed",
     "audio": {
       "br": {
-        "hash": "c869eeea4e884df6a3a5e8f2965dd31a7f605ad9baf35d29dea08c8442bdc768",
+        "hash": "5bf458c5c8bc3440775191b084ba91f07dd1f10f7f36cb3691070e596c7a7f63",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "f7b53fadf80eef058510b4ff3f5c2f1c2677b6948fda4f088f53cca5a923d298",
+        "hash": "511eda22f2b3d0db2496c2d1a0c081fdb4744404b5645fd57a5203f4201edbd4",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -2682,12 +2682,12 @@
     "esContrast": "En PT-BR se escribe 'afecto' igual que en español, pero en PT-PT cambia a 'afeto'",
     "audio": {
       "br": {
-        "hash": "bf1ac085c3c78dd876a8e542b31fe3d27e95a5ab3957902a18ccb0eeac0cec3a",
-        "voice": "ElevenLabs_Leonor"
+        "hash": "3ef4ed670fc3b9677c6259f343d3dd7887a2abdfe60d98103288fc1a0be758d5",
+        "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "ed0eee7f68eac6678915ca3c7eb065e796d4b59aa22c2d02814c948dbfb7f8ff",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "hash": "fce994751be9d79e44c7825f12eea39af079dd1bac333082bddd10af9580093d",
+        "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "needs-human",
@@ -2719,11 +2719,11 @@
     "esContrast": "En portugués significa 'saludos', no 'cumplidos' como en español (elogios = elogios)",
     "audio": {
       "br": {
-        "hash": "a0cf14429cfeb8e4605ce696b0256c9f61c25458160483c9966643b79d891d8a",
+        "hash": "a4a56952abc4dbfe09a60fb8122a5ef9d001b7d4b6193efa6775309fc4b71181",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "3d5f5e2d2394595e5eb160480b1c2b11ceeac0a247dbef961c509c512830b0b4",
+        "hash": "14a6b36ca32da779de4521fb1b680bf8959165902942c3a287193b9b2c8ece6c",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -2752,11 +2752,11 @@
     "esContrast": "'Vocês' = 'ustedes' (español), NO 'vocés'. Es falso amigo: PT 'vocês' = 3ª persona, no 2ª plural coloquial.",
     "audio": {
       "br": {
-        "hash": "daa8fa8d9855291f93803b0152a8e231242a82742b71af4a8e441c75eac70ba0",
+        "hash": "82dca1ca7f64301cf381b9c58734d0a533cb7238cf7cb611a3241b8bb59c4da4",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "268cdeead22782abb14147546669dd6031e9451688df4af65c54aba8a221beb8",
+        "hash": "2309e4f0e6441a004b7475f147140f0fd8fc7afb00e54621b70159068f39a4e0",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -2818,11 +2818,11 @@
     "esContrast": "'Afecto' en PT significa 'cariño'; en español es menos común y suena más frío o formal.",
     "audio": {
       "br": {
-        "hash": "64d2b856043e28361a92e5ee4c0aec04a81bca13cc24cf3e940938893706368b",
+        "hash": "15ad22799fc01bcf3e5f6e3317bc064c84071f9cb0ea48f2e4146295a0b974b3",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "6b4732c7c00ca2a86dbf6ff411dfbf82ab9baa22fd4d892b0c83ab74a50aba16",
+        "hash": "3840b534b92bbfc0babd4f8a13a2ae5b50e6559dd95d9b22108bb1a265e24db8",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -2888,15 +2888,16 @@
     "esContrast": "'Cumprimentos' en PT es 'saludos', no confundir con 'felicitaciones'.",
     "audio": {
       "br": {
-        "hash": "d9790f6d0ae73cbe158e7797cb30d875c4752db1948d45b2c8b9ecfedbdeb3fc",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "ebcd2882f09a2ed76b685e56f0d1f6676dd05cc206877bfa251e4f0bfdca94b7",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "3fa8f3bd0b720696882f698e2bd3f3ed30bab4ce5cf3df0001ecded3a999be07",
-        "voice": "Portuguese_Wiselady"
+        "hash": "ebcd2882f09a2ed76b685e56f0d1f6676dd05cc206877bfa251e4f0bfdca94b7",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
     "type": "translation",
     "data": {
       "source": "Com os meus cumprimentos cordiais, Maria.",
@@ -2907,8 +2908,7 @@
         "Reciba mis cordiales saludos, María.",
         "Atentamente, María."
       ]
-    },
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)"
+    }
   },
   {
     "id": "d84dde46",
@@ -2924,11 +2924,11 @@
     "contentHash": "d84dde46fc35410037ae0e72825d2d369a4c74c9f3fba62788a942948b6c3510",
     "audio": {
       "br": {
-        "hash": "cf1e66f455c15e2a9b861e4cdfbf37e4578505164b0478b90ba4c55d4fc30da4",
+        "hash": "6d602df74f702698b7ffe844846fc0eb327f92468487b9c1a8b0ec13ef5b05c5",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "12d46b0d468b49df35991adc49534b068dd1035baaf5e5aff1fab548a945e883",
+        "hash": "9253c6f0b2bffa31a6fe0d2f84af3e8f33b983003ebe3988f16409108cfda935",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -2953,11 +2953,11 @@
     "esContrast": "En español 'registro' funciona igual; ambos idiomas usan este término en sociolingüística",
     "audio": {
       "br": {
-        "hash": "4ed0fd539928104f1e3a66ab50182656277a534dfdb7847015641502499f4a2d",
+        "hash": "8c703651fdd4b1c76558fe15b6edd225a845bdf2022ad9a976746c4e4d48caea",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "3bd67804b45f0e1bdd57df9f91d5f16ec145dc2f12704228b23d8ed5117f43b0",
+        "hash": "cdce8fedb0daa218383b2cf225665b46617d2db7e74b0499e08b3a34e66ef314",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -2982,22 +2982,22 @@
     "contentHash": "dfe63849578c8a46d90021e2bba47785ffce3dae366cfca3a4fc50df18561f08",
     "audio": {
       "br": {
-        "hash": "50c7666cbf283822cb414c732e62572adc2bf6cb9419c55953cfa76847bdc68f",
+        "hash": "23963080e85ad9c913041d68bab35986baf0a1c05b1ef49df69572c355ae46eb",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "3861feb411212a3b79fec53ed1b33b95b7f2b19d20cf2638db0fbd79359d34a5",
+        "hash": "8681ea3c340df4df02897c94120c55c1fb1a3894deacf7e23e5c69dc82b5ea64",
         "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
     "type": "flashcard",
     "data": {
       "front": "Cierre formal para e-mails profesionales ('Atentamente')",
       "back": "Atenciosamente / Cumprimentos cordiais",
       "example": "Atenciosamente, João Silva."
-    },
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
+    }
   },
   {
     "id": "e1594e44",
@@ -3075,11 +3075,11 @@
     "esContrast": "'Anexo' funciona igual en ambos idiomas para documentos adjuntos",
     "audio": {
       "br": {
-        "hash": "92af1bc04598b0cb9e2bd25fee040f7a869383876c3f35ccf90bfda58cd84b13",
+        "hash": "9a837eae39be4dca72fb86d008cb76e30221658abf97d907b4556812b48691d1",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "7d646d9ad6b7116be8f7b75b5958b373b75862cff233f73cc2e93d756d37729f",
+        "hash": "f9401bcf6556984d755d702e92bd2fce2f67b61e87a81a0c8284e8b8e26a74ae",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -3106,11 +3106,11 @@
     "esContrast": "En Portugal se escribe 'contactos'; en Brasil se prefiere 'contatos'.",
     "audio": {
       "br": {
-        "hash": "21a735a0afd58185981927e799ed017d353701e6d49d3395e5ceccfc7a8f8d81",
+        "hash": "06bd738ceb910a1454c7a2d4d5a79990658572d3e6b335f979d78c991202f408",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "ac870ff13157f1e35e9c9a550a8f63551765b0f6f78d3af6edde261a8be432f0",
+        "hash": "297adb87159ef30a3780306e7a07ea1ac57a8d2707dfdd1034ca326c1691dd22",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -3141,11 +3141,11 @@
     "esContrast": "'Achacar' en español = 'extorsionar'. En BR se dice 'extorquir' ou 'chantagear'.",
     "audio": {
       "br": {
-        "hash": "281f9b78bee8c8c053528f41ef99360590fe1545dfd5d6998c0e40aa61247fc2",
+        "hash": "0353f57885ba208765ce8fdacbb9087346d268adafd6084a309cb6b2080fff25",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "b3a039033926d6febf1c7ddeed50ca2f1fb14f6e755d8b0e0e4178f086c182cb",
+        "hash": "51d3d32cf7a0c8b22845afb29f6d9c80aa95e511f21942f299a828c59347cefa",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -3172,11 +3172,11 @@
     "esContrast": "El verbo 'corresponder-se' se conjuga como reflexivo recíproco.",
     "audio": {
       "br": {
-        "hash": "0a41bfcb6ed4c4c51bf235f8d0844017ac465f493fb3faa0c8697beac25ce0e9",
+        "hash": "72b8df41fa0fef197e8c19d91a9d4249814643f641e105151c48951c46ccdf2a",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "ca49c312e2690b3f09a93137cf98fbc81127d3cc626fa47b411d8fe2b25ecfe5",
+        "hash": "bb9f834ce05c8fca97f7438f5832491ee963f6259b7de0346d0622c9c629f7a7",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -3208,12 +3208,12 @@
     "esContrast": "No traduzcas 'chica' como 'rapariga' en Brasil; puede resultar ofensivo o arcaico.",
     "audio": {
       "br": {
-        "hash": "51af54aa82a7f8ca3ab229df46faa555e1e3d598e84da2fe9bfa3485601ee1a9",
-        "voice": "ElevenLabs_Leonor"
+        "hash": "c0c1bc904808408e4fa024a28863ead0ad4d73cd7f39f3d996158dff5013ad14",
+        "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "5e0da4c5607e65ce4b491318341bb7acd98ad287bec666e918dfdb7aab1ad747",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "hash": "474c6b1af180f48c5a429ea9f397855fc92bd473e87409abcfa24baa8314d990",
+        "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "divergent",
@@ -3245,11 +3245,11 @@
     "esContrast": "'Caro' en PT formal significa 'querido', no 'costoso'. Es un falso amigo muy común.",
     "audio": {
       "br": {
-        "hash": "8ba5933c90d96817e1357c47de3953a928ac7c3be56d51e44a80b31f8947d958",
+        "hash": "c746346c90431d5217f41e605edbd194bc354186a9fc097f7b33f8e4dece78be",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "885ec499a07ca3573b1228f7860d57d1f5f0ffbe45a22c59d47037fc25162d18",
+        "hash": "377a4709787eec8659186c2a84218404c8668e041d635a0968b7ea51e3170456",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -3310,12 +3310,12 @@
     "esContrast": "«Contatos» en BR vs «contactos» en PT. Ambos usan «telefone», pero BR también dice «mudar de».",
     "audio": {
       "br": {
-        "hash": "a1e03ad64c6465e57202237d7c9a2ce2b869223a74f0d70858d823e0a0eca4e3",
-        "voice": "ElevenLabs_Leonor"
+        "hash": "7a2ae1a86c12c736ad6b0ea20026622cf39b9fc54efd302ef215f0c47ea12240",
+        "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "c5786b171f3e8d2370f3bd8fdc8361edb5dab8b9d2f2a87995a0372f39b636a8",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "hash": "2f69bef88ea8d8ef7f14ecc38d1307a2a11514a862137aab934887d36bead86e",
+        "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "needs-human",
@@ -3353,11 +3353,11 @@
     "esContrast": "El pretérito 'continuaram' es tercera persona del plural del pretérito indefinido.",
     "audio": {
       "br": {
-        "hash": "58dc425da0a3c1d8f9e87ee6df51f46fa753e12d65e8e7e829d2616ef627a617",
+        "hash": "8ea82020b8d947572f4130960c5e1fbca6ce5ff8b728202e9f0cae809802c04e",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "f43847917625c0bb3bfd53191887183961b06ab0be268d23de58170217ba9389",
+        "hash": "292274bbb9a1b643193851dbb8e22ada60fde72002cc59ad2a6f891151d0aea5",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -3387,11 +3387,11 @@
     "esContrast": "El tratamiento 'senhor/a senhora' + título profesional marca formalidad extrema en PT-BR.",
     "audio": {
       "br": {
-        "hash": "34d7bfaaba085e31caad53d4746d92f17f58a3e27f1c133ada933e90737f6fb2",
+        "hash": "bba9ab5a0d57a28be70d427e6e00782409930b57f8c67f2c037a8852f08dff61",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "27985339fec7a541f63b92f3b4b6f8438b993033d3869f65e169466e67d2c3b1",
+        "hash": "54ce33ee9f5b2c1b891bdf29f8e29ff8b3312d5eacbbe9ebfab531d01bb5250c",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -3456,11 +3456,11 @@
     "esContrast": "'Próprio' en PT puede equivaler a 'propio' o a 'mismo' según el contexto",
     "audio": {
       "br": {
-        "hash": "59448113789d4bf4fa81b50ba56424111292c7906ba36f644e414b1aa7f88b36",
+        "hash": "18cd470079320d213b4e617ef18185bc0fa309114527758708cd2c3192c2e7a2",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "9adfbc98e80a5962acdd8a035ae76fb69a18f726a3082f4403ea0cf9578c6655",
+        "hash": "4ba9d9d3c319e4fb46aa67cc3b1e33f6eb9647d68007d1ad223a9dcab48b9a0a",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -3486,12 +3486,12 @@
     "contentHash": "389e47d59d7a1493cab7fc8e678dfaeff2ec2c29b74b7f26b204fbeec1fc44ea",
     "audio": {
       "br": {
-        "hash": "8e2c162b92f927082c634e8b5b341f061161c7ab40e3ac1b4576cb56f994a25b",
-        "voice": "ElevenLabs_Leonor"
+        "hash": "70837ecd4bd23b5dff4a8e28353691dfa48a6fe1201a7f5edd40f9d89adb8e0c",
+        "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "2050e2fedcddd2359769fc08627a10b9f3825c573298c83d531aa6f0d396e8e5",
-        "voice": "ElevenLabs_Leonor_brInterino"
+        "hash": "932b66f35339c4c95c4531741b2a9cc84be11f0b5452eb7e7d1cf2fc0af6ec06",
+        "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "needs-human",
@@ -3519,11 +3519,11 @@
     "contentHash": "fd6369b546c54d6a50a232b9717c0fe35e38ad0ebf9eedc82c81d4f489d45d13",
     "audio": {
       "br": {
-        "hash": "2b7e077d23e784f168bac0746463e62ce55592eb290f188693797475399f8112",
+        "hash": "f1fedfefc363cfc8756f9decf330d2887130eba41e39e574ad4ccdb7c909bda3",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "000690893712da47fdb03510db68651e147874771e7b4c37a5a104c34bf1d4fd",
+        "hash": "169867ae90303e2a94a2d3bf8e2777b9fd2c5c251db692a111573fc0b9b37907",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -3550,11 +3550,11 @@
     "esContrast": "En ES 'ustedes' es solo formal; en BR 'vocês' es igual para ambos registros (formal e informal)",
     "audio": {
       "br": {
-        "hash": "f0830642ad41dbedb31cdaeec3cbefab1ea97984fbbbec8649b7bd6661b0b8de",
+        "hash": "5cb57b91045174279bbac9a9cd988c6bd43087601108a526a021eec2b0073a38",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "7669c621774f14daf6d716b6ff5a847369e836cd828d5ac4cc5cb685b23a094e",
+        "hash": "9c652964781f57fbe1ec3e76372973badd269ba691366d604d97fef995c247dc",
         "voice": "Portuguese_Wiselady"
       }
     },
@@ -3728,6 +3728,7 @@
     ],
     "contentHash": "c4d2b7500636543202466145fae95cfbf211047f0b22d25ed8c9a5e5bd9db11e",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
     "type": "multiple_choice",
     "data": {
       "question": "¿Cuál es más formal para cerrar una carta?",
@@ -3738,8 +3739,7 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'Atenciosamente' es formal; 'beijos' y 'falou' son informales."
-    },
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
+    }
   },
   {
     "id": "377d85d3",
@@ -3806,6 +3806,7 @@
     ],
     "contentHash": "6a31fb22ae501b7e168a9a87dff6c93355c4fbfd783010c95b12c896341534f2",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
     "type": "multiple_choice",
     "data": {
       "question": "'A gente vai' equivale, en registro informal, a:",
@@ -3816,8 +3817,7 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'A gente' significa 'nosotros' (informal) y concuerda en 3ª persona singular: 'a gente vai'."
-    },
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
+    }
   },
   {
     "id": "e6e74857",
@@ -3884,6 +3884,7 @@
     ],
     "contentHash": "eecfb214426529772b91f17fe33863793fcb8b54049501374a77a9e144572c06",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
     "type": "multiple_choice",
     "data": {
       "question": "¿A qué registro corresponde 'Prezado Senhor'?",
@@ -3894,8 +3895,7 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'Prezado Senhor' es un encabezamiento formal de cartas y documentos."
-    },
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
+    }
   },
   {
     "id": "00b74ff8",
@@ -3936,6 +3936,7 @@
     ],
     "contentHash": "d86dacc45dc7d918ebede3e4c2bd5f68dc18fb8a13bfdca3a3771ee8fae84839",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
     "type": "multiple_choice",
     "data": {
       "question": "El tratamiento 'a senhora' es:",
@@ -3945,8 +3946,7 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'a senhora' es tratamiento formal y respetuoso, con verbo en 3ª persona."
-    },
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
+    }
   },
   {
     "id": "3d979702",
@@ -4072,6 +4072,7 @@
     "contentHash": "148c04472130919afec736c1bb66ccc18d3761d06e1a29047096875299404178",
     "esContrast": "Cierre formal de carta: 'Atenciosamente'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — Cloze abierto en input libre: «Atentamente» o «Com os melhores cumprimentos» se marcarían mal; el único answer (Atenciosamente) es el cierre más BR",
     "type": "fill_blank",
     "data": {
       "sentence": "Para encerrar uma carta formal, escrevemos '___'.",
@@ -4081,8 +4082,7 @@
           "answer": "Atenciosamente"
         }
       ]
-    },
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — Cloze abierto en input libre: «Atentamente» o «Com os melhores cumprimentos» se marcarían mal; el único answer (Atenciosamente) es el cierre más BR"
+    }
   },
   {
     "id": "00bc55b0",
@@ -4203,6 +4203,7 @@
     "contentHash": "9395a9c749986ae7003a2f7d78d1801a9a6c5087d412067a14303069aecfcd2a",
     "esContrast": "Tratamiento formal masculino: 'o senhor'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Tratamento formal: 'O ___ deseja mais alguma coisa?'",
@@ -4212,8 +4213,7 @@
           "answer": "senhor"
         }
       ]
-    },
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)"
+    }
   },
   {
     "id": "b2c2-med-01",
@@ -5398,9 +5398,14 @@
       "b2c2-lote6",
       "mediacao"
     ],
+    "contentHash": "f5288c85de66ea7bbb4f9f261b5092b001ebef6f3a5e8aa23432a2c3586a5b08",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "register": "neutro",
     "type": "mediation",
     "data": {
       "sourceText": "Era uma vez um pinheiro, que não estava contente com a sua sorte. «Oh! dizia elle, como são horrorosas estas linhas uniformes de agulhas verdes, que se estendem ao longo dos meus ramos! Sou um pouco mais orgulhoso que os meus visinhos, e sinto que fui feito para andar vestido de outro modo. Ah! se as minhas folhas fossem de oiro!»\nO Genio da montanha ouviu-o, e no dia seguinte pela manhã acordou o pinheiro com folhas de oiro. Ficou radiante de alegria, e admirou-se, pavoneou-se todo, olhando com altivez para os outros pinheiros, que, mais sensatos do que elle, não invejavam a sua rapida fortuna. Á noite passou por alli um judeu, arrancou-lhe todas as folhas, metteu-as n'um sacco, e foi-se embora, deixando-o inteiramente nu dos pés á cabeça.\n«Oh! disse elle, que doido que eu fui! não me tinha lembrado da cobiça dos homens. Fiquei completamente despido. Não ha agora em toda a floresta uma planta tão pobre como eu. Fiz mal em pedir folhas de oiro; o oiro attrae as ambições.\nAh! se eu arranjasse um vestuario de vidro! Era deslumbrante, e o judeu avarento não me teria despido.»\nNo dia seguinte acordou o pinheiro com folhas de vidro, que reluziam ao sol como pequeninos espelhos. Ficou outra vez todo contente e orgulhoso, fitando desdenhosamente os seus visinhos. Mas n'isto o ceo cobriu-se de nuvens, e o vento rugindo, estallando, quebrou com a sua aza negra as folhas de cristal.\n«Enganei-me ainda, disse o joven pinheiro, vendo por terra todo feito em pedaços o seu manto cristalino. O oiro e o vidro não servem para vestir as florestas. Se eu tivesse a folhagem assetinada das avelleiras, seria menos brilhante, mas viveria descansado.»\nCumpriu-se o seu ultimo desejo, e, apesar de ter renunciado ás vaidades primitivas, julgava-se ainda assim mais bem vestido do que todos os outros pinheiros seus irmãos. Mas passou por ali um rebanho de cabras, e vendo as folhas acabadas de nascer, tenrinhas e frescas, comeram-lh'as todas sem deixar uma unica.\nO pobre pinheiro, envergonhado e arrependido, já queria voltar á sua fórma natural. Conseguiu ainda este favor, e nunca mais se queixou da sua sorte.",
+      "sourceRef": "junqueiro-o-pinheiro-ambicioso",
       "sourceLang": "pt",
       "targetLang": "es",
       "mediationType": "summarise",
@@ -5416,13 +5421,8 @@
         "¿Está en español, entre 45 y 80 palabras?",
         "¿Evita traducir literalmente frases enteras del original?"
       ],
-      "modelAnswer": "Un pino descontento con sus agujas pide hojas de oro: esa misma noche un hombre codicioso se las arranca todas. Pide entonces hojas de vidrio, y el viento se las quiebra. Escarmentado, pide hojas tiernas como las del avellano — y un rebaño de cabras se las come. Al final ruega volver a su forma natural, se la conceden, y nunca más se queja de su suerte.",
-      "sourceRef": "junqueiro-o-pinheiro-ambicioso"
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
-    "register": "neutro",
-    "contentHash": "f5288c85de66ea7bbb4f9f261b5092b001ebef6f3a5e8aa23432a2c3586a5b08"
+      "modelAnswer": "Un pino descontento con sus agujas pide hojas de oro: esa misma noche un hombre codicioso se las arranca todas. Pide entonces hojas de vidrio, y el viento se las quiebra. Escarmentado, pide hojas tiernas como las del avellano — y un rebaño de cabras se las come. Al final ruega volver a su forma natural, se la conceden, y nunca más se queja de su suerte."
+    }
   },
   {
     "id": "b2c2-med-34",
@@ -5436,9 +5436,14 @@
       "b2c2-lote6",
       "mediacao"
     ],
+    "contentHash": "880ce757c576a4f6a86879779ea0e244bc5b4a26d33482676f64d1b80e14d72d",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "register": "neutro",
     "type": "mediation",
     "data": {
       "sourceText": "Estava uma mãe muito afflicta, sentada ao pé do berço do seu filho, com medo que lhe morresse. A creancinha pallida tinha os olhos fechados. Respírava com difficuldade, e ás vezes tão profundamente, que parecia gemer; mas a mãe causava ainda mais lastima do que o pequenino moribundo.\nN'isto bateram á porta, e entrou um pobre homem muito velho, embuçado n'uma manta d'arrieiro. Era no inverno. Lá fóra estava tudo coberto de neve e de gêlo, e o vento cortava como uma navalha.\nO pobre homem tremia de frio; a creança adormecêra por alguns instantes, e a mãe levantou-se a pôr ao lume uma caneca com cerveja. O velho começou a embalar a creança, e a mãe, pegando n'uma cadeira, sentou-se ao lado d'elle. E contemplando o seu filhinho doente, que respirava cada vez com mais difficuldade, pegou-lhe na mãosinha descarnada e disse para o velho:\n--Oh! Nosso Senhor não m'o hade levar! não é verdade?--\nE o velho, que era a Morte, meneou a cabeça d'uma maneira extranha, em ar de duvida. A mãe deixou pender a fronte para o chão, e as lagrimas corriam-lhe em fio pela cara. Sentiu-se estonteada com um grande peso de cabeça; estava sem dormir havia tres dias e tres noites. Passou ligeiramente pelo somno, durante um minuto, e despertou sobresaltada a tremer de frio.\n--Que é isto! exclamou, lançando á volta de si o olhar hallucinado. O berço estava vasio. O velho tinha-se ido embora, roubando-lhe a creança.\nA pobre mãe saiu precipitadamente, gritando pelo filho. Encontrou uma mulher sentada no meio da neve, vestida de luto. «A Morte entrou-te em casa, disse-lhe ella. Via sair a correr levando teu filho. Anda mais depressa que o vento, e o que ella furta nunca o torna a entregar.»\n--Por onde foi ella? gritou a mãe. Dize-m'o pelo amor de Deus!»\n--Sei o caminho por onde ella foi, respondeu a mulher vestida de preto. Mas só t'o ensino, se me cantares primeiro todas as canções que cantavas ao teu filho. São lindas, e tens uma voz harmoniosa. Eu sou a Noite e muitas vezes t'as ouvi cantar, debulhada em lagrimas.\n--Cantar-t'as-hei todas, todas, mas logo, disse a mãe. Agora não me demores, porque quero encontrar o meu filho.--\nA Noite ficou silenciosa. A mãe então, desfeita em lagrimas, começou a cantar. Cantou muitas canções, mas as lagrimas foram mais do que as palavras.\nNo fim disse-lhe a Noite: «Toma á direita, pela floresta escura de pinheiros. Foi por ahi que a Morte fugiu com o teu filho.»\nA mãe correu para a floresta; mas no meio dividia-se o caminho, e não sabia que direcção havia de seguir. Diante d'ella havia um mattagal, cheio de silvas, sem folhas nem flores, de cujos ramos pendia a neve cristallisada.\n--Não viste a Morte que levava o meu filho?» perguntou-lhe a mãe.\n--Vi, respondeu o mattagal, mas não te ensino o caminho, senão com a condição de me aqueceres no teu seio, porque estou gelado.»\nE a mãe estreitou o mattagal contra o coração; os espinhos dilaceraram-lhe o peito, d'onde corria sangue. Mas o mattagal vestiu-se de folhas frescas e verdejantes, e cobriu-se de flores n'uma noite d'inverno frigidissima, tal é o calor febricitante do seio d'uma mãe angustiosa.\nE o mattagal ensinou-lhe o caminho que devia seguir. Foi andando, andando, até que chegou á margem d'um grande lago, onde não havia nem barcos, nem navios. Não estava sufficientemente gelado para se andar por elle, e era demasiadamente profundo para o passar a váo. Comtudo, querendo encontrar o seu filho, era necessario atravessal-o. No delirio do seu amor, atirou-se de bruços a ver se poderia beber toda a agua do lago. Era impossivel, mas lembrava-se que Deus, por compaixão, faria talvez um milagre.\n--Não! não és capaz de me esgotar, disse o lago. Socega, e entendamo-nos amigavelmente. Gosto de vêr perolas no fundo das minhas aguas, e os teus olhos são d'um brilho mais suave do que as perolas mais ricas que eu tenho possuido. Se queres, arranca-os das orbitas á força de chorar, e levar-te-hei á estufa grandiosa, que está do outro lado: essa estufa é a habitação da Morte; e as flores e as arvores que estão lá dentro, é ella quem as cultiva; cada flor e cada arvore é a vida d'uma creatura humana.»\n--Oh! o que não darei eu, para rehaver o meu filho!» disse a mãe. E apesar de ter já chorado tantas lagrimas, chorou com mais amargura do que nunca, e os seus olhos destacaram-se das orbitas e cairam no fundo do lago, transformando-se em duas perolas, como ainda as não teve no mundo uma rainha.\nO lago então ergueu-a, e com um movimento de ondulação depositou-a na outra margem, aonde havia um maravilhoso edificio, com mais d'uma legua de comprido. De longe não se sabia se era uma construcção artistica ou uma montanha com grutas e florestas. Mas a pobre mãe não podia ver nada; tinha dado os seus olhos.\n--Como heide eu reconhecer a Morte que me roubou o meu filho!» bradou ella desesperada.\n--A Morte ainda não chegou, respondeu-lhe uma boa velha, que andava d'um lado para o outro, inspeccionando a estufa e cuidando das plantas. Como vieste tu aqui parar? quem te ensinou o caminho?»\n--Deus auxiliou-me, respondeu ella. Deus é misericordioso. Compadece-te de mim, e dize-me onde está o meu filho.»\n--Eu não o conheço, e tu és cega, disse a velha. Ha aqui muitas plantas e muitas arvores, que murcharam esta noite: a Morte não tarda ahi para as tirar da estufa. Deves saber, que toda a creatura humana tem n'este sitio uma arvore ou uma flor, que representam a sua vida e que morrem com ella. Parecem plantas como quaesquer outras, mas tocando-lhes, sente-se bater um coração. Guia-te por isto, e talvez reconheças as pulsações do coração de teu filho. E que davas tu por eu te ensinar o que tens ainda de fazer?»\n--Já não tenho nada que te dar, disse a pobre mãe. Mas irei até ao fim do mundo buscar o que tu quizeres.--«Fóra d'aqui não preciso de nada, respondeu a velha. Dá-me os teus longos cabellos negros; tu sabes que são bellos, e agradam-me. Trocal-os-hei pelos meus cabellos brancos.»--Não pedes mais nada do que isso? disse a mãe. Ahi os tens, dou-t'os de boa vontade.»\nE arrancou os seus magnificos cabellos, que tinham sido outr'ora o seu orgulho de rapariga, recebendo em troca os cabellos curtos e inteiramente brancos da velha.\nEsta levou-a pela mão á grande estufa, onde crescia exhuberantemente uma vegetação maravilhosa.\nViam-se debaixo de campanulas de cristal jacinthos mimosissimos ao lado de peonias inchadas e ordinarias. Havia tambem plantas aquaticas, umas cheias de seiva, outras meio murchas, e em cujas raizes se ennovelavam cobras asquerosas.\nMais longe erguiam-se palmeiras soberbas, carvalhos e platanos frondosos; depois n'um outro sitio isolado havia canteiros de salsa, tomilho, ortelã e outras plantas humildes que representavam o genero de utilidade das pessoas que ellas symbolisavam.\nHavia ainda grandes arbustos em vasos demasiadamente estreitos, que pareciam rebentar; mas viam-se tambem floresitas insignificantes, em vasos de porcelana, na melhor terra, circumdadas de musgo, tratadas com esmero delicadissimo. Tudo isso representava a vida dos homens, que a essa hora existiam no mundo, desde a China até à Groenlandia.\nA velha queria mostrar-lhe todas estas cousas mysteriosas, mas a mãe impacientada pediu-lhe que a levasse ao sitio onde estavam as plantas pequeninas; tacteava-as, apalpava-as, para lhes sentir o bater do coração, e, depois de ter tocado em milhares d'ellas, reconheceu as pulsações do coração do seu filho.\n--É elle!» exclamou, lançando a mão a um açafroeiro, que, pendido sobre a terra, parecia completamente estiolado.\n--Não lhe toques, disse a velha. Fica n'este sitio; e quando a Morte vier, que não tarda, prohibe-lhe que arranque esta planta; ameaça-a de arrancar todas as flores que estão aqui. A Morte terá medo, porque tem de dar conta d'ellas a Deus. Nenhuma póde ser arrancada sem o seu consentimento.»\nN'isto sentiu-se um vento glacial, e a mãe adivinhou que era a Morte, que se approximava.\n--Como é què deste com o caminho? perguntou-lhe a Morte. Chegar ainda primeiro do que eu! Como o conseguiste?--«Sou mãe» respondeu ella.\nE a Morte estendeu a sua mão ganchosa para o pequenino açafroeiro.\nMas a mãe protegia-o violentamente com ambas as mãos, tendo o cuidado de não ferir uma só das pequeninas petalas. Então a Morte soprou-lhe nas mãos, fazendo-lh'as cair inanimadas. O halito da Morte era mais frio do que os ventos enregelados do inverno.\n--Não pódes nada comigo!» disse a Morte.--Mas Deus tem mais força do que tu, respondeu a mãe.»--«É verdade, mas eu não faço senão aquillo que elle manda. Sou o seu jardineiro. Todas estas plantas, arvores e arbustos, quando começam a murchar, transplanto-as para outros jardins, um dos quaes é o grande jardim do Paraizo. São regiões desconhecidas; ninguém sabe o que se lá passa.»\n--Misericordia! misericordia! soluçou a mãe. Não me roubem o meu filho, agora que acabo de o encontrar!» Supplicava e gemia. A Morte conservava-se impassivel; agarrou então instantaneamente em duas flores lindissimas e disse á Morte: «Tu despresas-me, mas olha, vou arrancar, despedaçar não só esta, mas todas as flores que estão aqui!\n--Não as arranques, não as mates, bradou a Morte. Dizes que és desgraçada, e querias ir partir o coração de outra mãe!--«Outra mãe!» disse a pobre mulher, largando as flores immediatamente.--Toma, aqui tens os teus olhos, disse a Morte. Brilhavam tão suavemente que os tirei do lago. Não sabia que eram teus. Mette-os nas orbitas, e olha para o fundo d'este poço; vê o que ias destruir, se arrancasses estas flores. Verás passar nos reflexos da agua, como n'uma miragem, a sorte destinada a cada uma d'essas duas flores, e a que teria tido o teu filho, se porventura vivesse.»\nDebruçou-se no poço, e viu passar imagens de felicidade e alegria, quadros risonhos e deliciosos, e logo depois scenas terriveis de miseria, d'angustias e de desolação.\n--N'isto que eu vejo, disse a mãe afflictissima, não distingo qual era a sorte que Deus destinava ao meu filho.»\n--Não posso dizer-t'o, respondeu a Morte. Mas repito-te, em tudo isto que te appareceu viste o que no mundo havia de succeder ao teu filho.»\nA mãe desvairada, lançou-se de joelhos exclamando: Supplico-te, dize-me: era a sorte infeliz a que lhe estava reservada? Não é verdade! Falla! Não me respondes? Oh! na duvida, leva-o, leva-o, não vá elle soffrer desgraças tão horriveis. O meu querido filho! Quero-lho mais que á minha vida. As angustias que sejam para mim. Leva-o para o reino dos ceos. Esquece as minhas lagrimas, as minhas supplicas, esquece tudo o que fiz e tudo o que disse.»\n--Não te comprehendo, respondeu a Morte: Queres que te entregue o teu filho ou que o leve para a região desconhecida de que não posso fallar-te!» Então a mãe allucinada, convulsa, torcendo os braços, deitou-se de joelhos e dirigindo-se a Deus exclamou: «Não me ouças, Senhor, se reclamo no fundo do meu coração contra a tua vontade que é sempre justa! Não me attendas meu Deus!»\nE deixou cair a cabeça sobre o peito, mergulhada na sua agonia dilacerante.\nE a Morte arrancou o pequenino açafroeiro, e foi transplantal-o no jardim do paraiso.",
+      "sourceRef": "junqueiro-a-mae",
       "sourceLang": "pt",
       "targetLang": "es",
       "mediationType": "summarise",
@@ -5454,13 +5459,8 @@
         "¿Recoge el final tal cual es: ante el pozo que muestra los destinos posibles, la madre pide a Dios que no la escuche y deja que la Muerte se lleve al niño al jardín del paraíso?",
         "¿Está en español, entre 60 y 110 palabras, sin inventar nada que el texto no diga?"
       ],
-      "modelAnswer": "La Muerte, con forma de viejo, se lleva al hijo enfermo de una madre que se durmió un instante. Ella sale a buscarlo y va pagando el camino: canta sus canciones a la Noche, abraza un zarzal helado hasta sangrar, entrega los ojos al lago y sus cabellos a la vieja del invernadero donde cada vida es una planta. Cuando encuentra la flor de su hijo, la Muerte le enseña en un pozo los destinos que podrían esperarle. Aterrada, la madre pide a Dios que no atienda sus propias súplicas — y deja que la Muerte se lleve la pequeña flor al jardín del paraíso.",
-      "sourceRef": "junqueiro-a-mae"
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
-    "register": "neutro",
-    "contentHash": "880ce757c576a4f6a86879779ea0e244bc5b4a26d33482676f64d1b80e14d72d"
+      "modelAnswer": "La Muerte, con forma de viejo, se lleva al hijo enfermo de una madre que se durmió un instante. Ella sale a buscarlo y va pagando el camino: canta sus canciones a la Noche, abraza un zarzal helado hasta sangrar, entrega los ojos al lago y sus cabellos a la vieja del invernadero donde cada vida es una planta. Cuando encuentra la flor de su hijo, la Muerte le enseña en un pozo los destinos que podrían esperarle. Aterrada, la madre pide a Dios que no atienda sus propias súplicas — y deja que la Muerte se lleve la pequeña flor al jardín del paraíso."
+    }
   },
   {
     "id": "b2c2-med-35",
@@ -5474,9 +5474,15 @@
       "b2c2-lote6",
       "mediacao"
     ],
+    "contentHash": "93d13c698ef914f48babc3c994082784d6c310c2e1659230aa25cc41a8bb6be0",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "register": "informal",
+    "address": "tu",
     "type": "mediation",
     "data": {
       "sourceText": "O linho estava coberto de flores admiravelmente bellas, mais delicadas e transparentes do que azas de moscas. O sol espalhava os seus raios sobre elle, e as nuvens regavam-n'o, o que lhe causava tanto prazer, como o d'um filho quando a mãe o lava e lhe dá um beijo.\n--Segundo dizem sou bem bonito, murmurou o linho, estou muito crescido, e serei brevemente uma rica peça de panno. Sinto-me feliz. Não ha ninguem que seja mais feliz do que eu sou. Tenho saude e um bello futuro. A luz acaricia-me, e a chuva encanta-me e refresca-me. Sim, sou feliz, feliz a mais não poder ser!»\n--Como és ingenuo! disseram as silvas do vallado; tu não conheces o mundo, de que nós outras temos uma larga experiencia.»\nE rangendo lastimosamente, cantaram:\n--Cric, crac! cric, crac! crac! --Acabou-se! acabou-se! acabou-se!\n--Não tão cedo como vocês imaginam, respondeu o linho; está uma bella manhã, o sol resplandece, e a chuva faz-me bem; sinto-me crescer e florir. Sou muitissimo feliz.»\nMas um bello dia vieram uns homens que agarraram no linho pela cabelleira, arrancaram-n'o com raizes e tudo, e deram-lhe tratos de polé. Primeiro mergulharam-n'o em agua, como se o quizessem afogal-o, e depois metteram-n'o no lume para o assar. Que crueldade!\n--Não se póde ser mais feliz, pensou o linho de si para si; é necessario soffrer, o soffrimento é a mãe da experiencia.»\nMas as coisas iam de mal para peor. Partiram-n'o, assedaram-n'o, cardaram-n'o, e elle sem comprehender o que lhe queriam. Depois, puzeram-n'o n'uma roca, e então perdeu a cabeça inteiramente.\n--Era feliz de mais, pensava o desgraçado linho no meio d'aquellas torturas; devemo-nos regosijar, mesmo com as felicidades perdidas.»\nE ainda estava dizendo--perdidas, e já o estavam a metter no tear e a transformal-o n'uma peça de panno.\n--Isto é extraordinario, nunca o imaginei; que boa sorte a minha, e que grandes tolas aquellas silvas quando cantavam:\nCric, crac! cric, crac! crac! Acabou-se! acabou-se! acabou-se!\nAgora é que eu principio a viver. Padeci muito, é verdade, mas por isso tambem agora sou mais feliz do que nunca. Sinto-me tão forte, tão alto, tão macio! Ah! isto é bem melhor do que ser planta, mesmo florida, ninguem trata da gente, e não bebemos outra agua a não ser a da chuva. Agora é o contrario: que cuidados! As raparigas estendem-me todas as manhãs, e á noite tomo o meu banho com um regador. A creada do sr. cura fez um discurso a meu respeito, e provou perfeitamente que era eu a melhor peça da parochia. Não posso ser mais feliz.»\nLevaram o panno para casa, e entregaram-n'o ás thesouras. Cortaram-n'o e picaram-n'o com uma agulha. Não era lá muito agradavel, mas em compensação fizeram d'elle uma duzia de camizas magnificas.\n--Agora decididamente começo a valer alguma coisa. O meu destino é abençoado, porque sou util n'este mundo. É preciso isso para se viver em paz, e ser-se feliz. Somos hoje doze pedaços, é verdade, mas formamos um só grupo, uma duzia. Que incomparavel felicidade!\nO panno das camisas foi-se gastando com o tempo.\n--Tudo tem fim, murmurou elle. Eu estava disposto a durar ainda, mas não se fazem impossiveis.»\nE as camisas foram reduzidas a farrapos, a trapos, e imaginaram que era finalmente a sua morte, porque foram rasgados, amaçados, fervidos, sem adivinharem o que lhes queriam. Mas de repente transformaram-se em papel branco magnifico.\n--Oh que agradável surpreza! exclamou o papel, agora sou muito mais fino do que d'antes, e vão cobrir-me de letras. O que não escreverão em cima de mim! Tenho uma fortuna maravilhosa!»\nE escreveram n'elle as mais bellas historias, que foram lidas deante de numeros ouvintes, e os tornaram mais sabios e melhores.\n--Ora aqui está uma cousa muito superior a tudo que eu tinha imaginado, quando vivia na terra, coberto de flores. Como poderia eu imaginar que ainda havia de servir para alegrar e instruir os homens! Não sei explicar o que me está acontecendo, mas é verdade. Deus sabe perfeitamente que nunca fui ambicioso, e que nunca me queixei da minha sorte; foi Elle que gradualmente me elevou, até chegar á maior gloria. Cada vez que me lembro da cantiga das silvas: «Acabou-se, acabou-se» tudo pelo contrario se me apresenta debaixo do aspecto mais risonho. Vou viajar, percorrer o mundo inteiro, para que todos me possam ler e instruir-se. Antigamente eu estava carregado de florinhas azues; agora as minhas flores são os mais elevados pensamentos. Sinto-me feliz, immensamente feliz!»\nMas o papel não foi viajar; entregaram-n'o ao typographo, e tudo que lá estava escripto, foi impresso para fazer um livro, milhares de livros, que recrearam e instruiram uma infinidade de pessoas. O nosso bocado de papel não teria prestado o mesmo serviço, ainda que desse a volta á roda do mundo. A meio caminho já estaria gasto.\n--É justo, disse o papel, não tinha pensado n'isso. Fico em casa, e vou ser considerado como um velho avô! fui eu que recebi as letras, as palavras cahiram directamente da pena sobre mim, fico no meu logar, e os livros vão por esse mundo fóra. A sua missão é realmente bella, e eu estou contente, e julgo-me feliz.\nO papel foi empacotado, e lançado para uma estante.\n--Depois do trabalho é agradável o descanço, pensou elle. É n'este isolamento que a gente aprende a conhecer-se. Só d'hoje em diante é que eu sei o que contenho, e conhecermo-nos a nós mesmo é a verdadeira perfeição. Que me irá ainda acontecer? Progredir, está claro.»\nPassados tempos, o papel foi atirado ao fogão para o queimarem, porque o que o não queriam vender ao merceeiro para embrulhar assucar. E todas as creanças da casa se pozeram á roda; queriam vel-o arder, e ver também, depois da lavareda, as milhares de faiscas vermelhas, que parecem fugir, e se apagam instantaneamente uma apoz outra. O masso inteiro de papel foi atirado ao lume. Oh! como elle ardia! Tornara-se n'uma grande chamma, que se erguia tão alto, tão alto como o linho nunca erguêra as suas flores azues; a peça de panno nunca tinha tido um brilho semilhante.\nTodas as letras, durante um segundo, se tornaram vermelhas: todas as palavras, todas as idèas desappareceram em linguas de fogo.\n--«Vou subir até ao sol;» dizia uma voz no meio da lavareda, que pareciam mil vozes reunidas n'uma só. A chamma saiu pela chaminé, e no meio d'ella volteavam pequeninos seres invisiveis para os olhos do homem. Eram tantos quantos tinham sido as flores que o linho tinha dado. Mais leves que a chamma, de quem eram filhos, quando ella se extinguiu, quando não restava do papel senão a cinza negra, ainda elles dançavam sobre essa cinza, e formavam, tocando-a, pequeninas scentelhas encarnadas.\nAs creanças cantavam á roda da cinza inanimada:\nCric, crac! cric, crac! crac! Acabou-se! acabou-se! acabou-se!\nMas cada um dos pequeninos seres dizia: «Não, não se acabou; agora é que é o melhor da festa. Sei-o, e julgo-me feliz.»\nAs creanças não poderam ouvir, nem comprehender estas palavras; mas tambem não era necessario, porque as creanças não devem saber tudo.",
+      "sourceRef": "junqueiro-o-linho",
       "sourceLang": "pt",
       "targetLang": "pt",
       "mediationType": "summarise",
@@ -5493,14 +5499,8 @@
         "¿Está en portugués, entre 55 y 95 palabras, CON marcas de tuteo dirigidas al amigo?",
         "¿Evita copiar más de 6 palabras seguidas del original?"
       ],
-      "modelAnswer": "Olha, é a história de um linho que nunca se queixa. Arrancam-no, molham-no, batem-no — e ele acha que sofrer é aprender. Vira pano, camisas, trapos e por fim papel onde se escrevem belas histórias, que correm mundo em livros; o papel fica na estante, feliz por as ter recebido primeiro. Um dia atiram-no ao lume e as crianças cantam «acabou-se, acabou-se». Repara: das chamas sobem faíscas que dizem que não — que o melhor da festa vem agora. Vê tu: cada fim é outra transformação.",
-      "sourceRef": "junqueiro-o-linho"
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
-    "register": "informal",
-    "address": "tu",
-    "contentHash": "93d13c698ef914f48babc3c994082784d6c310c2e1659230aa25cc41a8bb6be0"
+      "modelAnswer": "Olha, é a história de um linho que nunca se queixa. Arrancam-no, molham-no, batem-no — e ele acha que sofrer é aprender. Vira pano, camisas, trapos e por fim papel onde se escrevem belas histórias, que correm mundo em livros; o papel fica na estante, feliz por as ter recebido primeiro. Um dia atiram-no ao lume e as crianças cantam «acabou-se, acabou-se». Repara: das chamas sobem faíscas que dizem que não — que o melhor da festa vem agora. Vê tu: cada fim é outra transformação."
+    }
   },
   {
     "id": "b2c2-med-36",
@@ -5514,9 +5514,14 @@
       "b2c2-lote6",
       "mediacao"
     ],
+    "contentHash": "d9f34b8a7f1c2324d6ef4d30858613f4c72fb65ffe25690495c095f522daefbb",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "register": "informal",
     "type": "mediation",
     "data": {
       "sourceText": "Caiu a noite; não estava ali ninguem, para trazer uma gotta d'agua á desditosa cotovia; Estendeu então as suas bellas azas, sacudindo-as convulsivamente, e poz-se a cantar uma cançãosinha melancolica; a sua cabecinha inclinou-se para a flor, e o seu coração quebrado de desejos e d'angustias cessou de bater. Vendo este triste espectaculo, o malmequer não pôde como na vespera fechar as suas folhas para dormir; curvou-se para o chão, doente de tristeza.\nOs rapazitos só voltaram no dia seguinte, e, vendo o passarinho morto, rebentaram-lhe as lagrimas e abriram uma cova. Metteram o cadaver dentro d'uma caixa vermelha, lindissima, fizeram-lhe um enterro de principe, e cobriram o tumulo com folhas de rosas.\nPobre passarinho! Emquanto vivia e cantava, esqueceram-se d'elle e deixaram-n'o morrer de fome na gaiola; depois de morto é que o choraram e lhe fizeram honrarias pomposissimas.\nA relva e o malmequer lançaram-as para a poeira da estrada; d'aquelle que com tanta ternura tinha amado a cotovia, ninguem se lembrou.",
+      "sourceRef": "junqueiro-o-malmequer",
       "sourceLang": "pt",
       "targetLang": "es",
       "mediationType": "explain_concept",
@@ -5531,13 +5536,8 @@
         "¿Recoge el segundo filo: la margarita — la única que lo acompañó y lo quiso — acaba tirada al polvo del camino, y de ella nadie se acuerda?",
         "¿Está en español, entre 45 y 75 palabras, sin moralina añadida que el texto no tenga?"
       ],
-      "modelAnswer": "La ironía es doble. Al pájaro lo dejaron morir olvidado en la jaula, sin agua y sin comida; solo muerto lo lloran, con caja preciosa y entierro de príncipe — los honores llegan cuando ya no sirven. Y la margarita, la única que lo acompañó hasta el final, acaba tirada al polvo del camino: del que quiso de verdad no se acuerda nadie.",
-      "sourceRef": "junqueiro-o-malmequer"
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
-    "register": "informal",
-    "contentHash": "d9f34b8a7f1c2324d6ef4d30858613f4c72fb65ffe25690495c095f522daefbb"
+      "modelAnswer": "La ironía es doble. Al pájaro lo dejaron morir olvidado en la jaula, sin agua y sin comida; solo muerto lo lloran, con caja preciosa y entierro de príncipe — los honores llegan cuando ya no sirven. Y la margarita, la única que lo acompañó hasta el final, acaba tirada al polvo del camino: del que quiso de verdad no se acuerda nadie."
+    }
   },
   {
     "id": "b2c2-med-37",
@@ -5551,9 +5551,15 @@
       "b2c2-lote6",
       "mediacao"
     ],
+    "contentHash": "71f43a3d1b9e7cda6707b0d5ff3bb30d16c61054f33c671d44f1ff0b826b3f86",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "register": "informal",
+    "address": "tu",
     "type": "mediation",
     "data": {
       "sourceText": "TEXTO A — «O pinheiro ambicioso»\nEra uma vez um pinheiro, que não estava contente com a sua sorte. «Oh! dizia elle, como são horrorosas estas linhas uniformes de agulhas verdes, que se estendem ao longo dos meus ramos! Sou um pouco mais orgulhoso que os meus visinhos, e sinto que fui feito para andar vestido de outro modo. Ah! se as minhas folhas fossem de oiro!»\nO Genio da montanha ouviu-o, e no dia seguinte pela manhã acordou o pinheiro com folhas de oiro. Ficou radiante de alegria, e admirou-se, pavoneou-se todo, olhando com altivez para os outros pinheiros, que, mais sensatos do que elle, não invejavam a sua rapida fortuna. Á noite passou por alli um judeu, arrancou-lhe todas as folhas, metteu-as n'um sacco, e foi-se embora, deixando-o inteiramente nu dos pés á cabeça.\n«Oh! disse elle, que doido que eu fui! não me tinha lembrado da cobiça dos homens. Fiquei completamente despido. Não ha agora em toda a floresta uma planta tão pobre como eu. Fiz mal em pedir folhas de oiro; o oiro attrae as ambições.\nAh! se eu arranjasse um vestuario de vidro! Era deslumbrante, e o judeu avarento não me teria despido.»\nNo dia seguinte acordou o pinheiro com folhas de vidro, que reluziam ao sol como pequeninos espelhos. Ficou outra vez todo contente e orgulhoso, fitando desdenhosamente os seus visinhos. Mas n'isto o ceo cobriu-se de nuvens, e o vento rugindo, estallando, quebrou com a sua aza negra as folhas de cristal.\n«Enganei-me ainda, disse o joven pinheiro, vendo por terra todo feito em pedaços o seu manto cristalino. O oiro e o vidro não servem para vestir as florestas. Se eu tivesse a folhagem assetinada das avelleiras, seria menos brilhante, mas viveria descansado.»\nCumpriu-se o seu ultimo desejo, e, apesar de ter renunciado ás vaidades primitivas, julgava-se ainda assim mais bem vestido do que todos os outros pinheiros seus irmãos. Mas passou por ali um rebanho de cabras, e vendo as folhas acabadas de nascer, tenrinhas e frescas, comeram-lh'as todas sem deixar uma unica.\nO pobre pinheiro, envergonhado e arrependido, já queria voltar á sua fórma natural. Conseguiu ainda este favor, e nunca mais se queixou da sua sorte.\n\nTEXTO B — «O linho»\nO linho estava coberto de flores admiravelmente bellas, mais delicadas e transparentes do que azas de moscas. O sol espalhava os seus raios sobre elle, e as nuvens regavam-n'o, o que lhe causava tanto prazer, como o d'um filho quando a mãe o lava e lhe dá um beijo.\n--Segundo dizem sou bem bonito, murmurou o linho, estou muito crescido, e serei brevemente uma rica peça de panno. Sinto-me feliz. Não ha ninguem que seja mais feliz do que eu sou. Tenho saude e um bello futuro. A luz acaricia-me, e a chuva encanta-me e refresca-me. Sim, sou feliz, feliz a mais não poder ser!»\nMas um bello dia vieram uns homens que agarraram no linho pela cabelleira, arrancaram-n'o com raizes e tudo, e deram-lhe tratos de polé. Primeiro mergulharam-n'o em agua, como se o quizessem afogal-o, e depois metteram-n'o no lume para o assar. Que crueldade!\n--Não se póde ser mais feliz, pensou o linho de si para si; é necessario soffrer, o soffrimento é a mãe da experiencia.»\nMas as coisas iam de mal para peor. Partiram-n'o, assedaram-n'o, cardaram-n'o, e elle sem comprehender o que lhe queriam. Depois, puzeram-n'o n'uma roca, e então perdeu a cabeça inteiramente.\n--Era feliz de mais, pensava o desgraçado linho no meio d'aquellas torturas; devemo-nos regosijar, mesmo com as felicidades perdidas.»\nE ainda estava dizendo--perdidas, e já o estavam a metter no tear e a transformal-o n'uma peça de panno.\nLevaram o panno para casa, e entregaram-n'o ás thesouras. Cortaram-n'o e picaram-n'o com uma agulha. Não era lá muito agradavel, mas em compensação fizeram d'elle uma duzia de camizas magnificas.\nE as camisas foram reduzidas a farrapos, a trapos, e imaginaram que era finalmente a sua morte, porque foram rasgados, amaçados, fervidos, sem adivinharem o que lhes queriam. Mas de repente transformaram-se em papel branco magnifico.\n--Oh que agradável surpreza! exclamou o papel, agora sou muito mais fino do que d'antes, e vão cobrir-me de letras. O que não escreverão em cima de mim! Tenho uma fortuna maravilhosa!»\nE escreveram n'elle as mais bellas historias, que foram lidas deante de numeros ouvintes, e os tornaram mais sabios e melhores.\n--Ora aqui está uma cousa muito superior a tudo que eu tinha imaginado, quando vivia na terra, coberto de flores. Como poderia eu imaginar que ainda havia de servir para alegrar e instruir os homens! Não sei explicar o que me está acontecendo, mas é verdade. Deus sabe perfeitamente que nunca fui ambicioso, e que nunca me queixei da minha sorte; foi Elle que gradualmente me elevou, até chegar á maior gloria. Cada vez que me lembro da cantiga das silvas: «Acabou-se, acabou-se» tudo pelo contrario se me apresenta debaixo do aspecto mais risonho. Vou viajar, percorrer o mundo inteiro, para que todos me possam ler e instruir-se. Antigamente eu estava carregado de florinhas azues; agora as minhas flores são os mais elevados pensamentos. Sinto-me feliz, immensamente feliz!»\nPassados tempos, o papel foi atirado ao fogão para o queimarem, porque o que o não queriam vender ao merceeiro para embrulhar assucar. E todas as creanças da casa se pozeram á roda; queriam vel-o arder, e ver também, depois da lavareda, as milhares de faiscas vermelhas, que parecem fugir, e se apagam instantaneamente uma apoz outra. O masso inteiro de papel foi atirado ao lume. Oh! como elle ardia! Tornara-se n'uma grande chamma, que se erguia tão alto, tão alto como o linho nunca erguêra as suas flores azues; a peça de panno nunca tinha tido um brilho semilhante.\n--«Vou subir até ao sol;» dizia uma voz no meio da lavareda, que pareciam mil vozes reunidas n'uma só. A chamma saiu pela chaminé, e no meio d'ella volteavam pequeninos seres invisiveis para os olhos do homem. Eram tantos quantos tinham sido as flores que o linho tinha dado. Mais leves que a chamma, de quem eram filhos, quando ella se extinguiu, quando não restava do papel senão a cinza negra, ainda elles dançavam sobre essa cinza, e formavam, tocando-a, pequeninas scentelhas encarnadas.\nAs creanças cantavam á roda da cinza inanimada:\nCric, crac! cric, crac! crac! Acabou-se! acabou-se! acabou-se!\nMas cada um dos pequeninos seres dizia: «Não, não se acabou; agora é que é o melhor da festa. Sei-o, e julgo-me feliz.»",
+      "sourceRef": "junqueiro-o-pinheiro-ambicioso+junqueiro-o-linho",
       "sourceLang": "pt",
       "targetLang": "pt",
       "mediationType": "synthesise_sources",
@@ -5570,14 +5576,8 @@
         "¿Está en portugués, entre 75 y 125 palabras, por tu?",
         "¿Evita copiar más de 6 palabras seguidas de cualquiera de los dos?"
       ],
-      "modelAnswer": "Olha, são duas fábulas do Junqueiro sobre a felicidade, e quase opostas no método. O pinheiro vive descontente: pede folhas de ouro e roubam-lhas, pede vidro e o vento parte-o, pede folhas tenras e as cabras comem-nas. Só sossega quando volta à forma que tinha — e nunca mais se queixa. O linho é o contrário: nunca se queixa de nada. Arrancam-no, fiam-no, rasgam-no, fazem dele papel — e por fim queimam-no. E em cada etapa declara-se feliz, até nas faíscas que respondem às crianças que não, que não se acabou. Repara na diferença: um aprende a não querer ser outro; o outro diz que sim a todas as mudanças. A lição não é a mesma.",
-      "sourceRef": "junqueiro-o-pinheiro-ambicioso+junqueiro-o-linho"
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
-    "register": "informal",
-    "address": "tu",
-    "contentHash": "71f43a3d1b9e7cda6707b0d5ff3bb30d16c61054f33c671d44f1ff0b826b3f86"
+      "modelAnswer": "Olha, são duas fábulas do Junqueiro sobre a felicidade, e quase opostas no método. O pinheiro vive descontente: pede folhas de ouro e roubam-lhas, pede vidro e o vento parte-o, pede folhas tenras e as cabras comem-nas. Só sossega quando volta à forma que tinha — e nunca mais se queixa. O linho é o contrário: nunca se queixa de nada. Arrancam-no, fiam-no, rasgam-no, fazem dele papel — e por fim queimam-no. E em cada etapa declara-se feliz, até nas faíscas que respondem às crianças que não, que não se acabou. Repara na diferença: um aprende a não querer ser outro; o outro diz que sim a todas as mudanças. A lição não é a mesma."
+    }
   },
   {
     "id": "b2c2-med-38",
@@ -5591,6 +5591,11 @@
       "b2c2-lote6",
       "mediacao"
     ],
+    "contentHash": "a3d492be7b88d378ab922da1d4214025bf96dd1f97e91c947671248c7487fda2",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "register": "informal",
+    "address": "tu",
     "type": "mediation",
     "data": {
       "sourceText": "«Oye, ¿me haces un favor? Dile a Rui que la reunión del jueves se pasa al viernes a las 10, en la sala pequeña. Que traiga los presupuestos impresos, que el proyector sigue roto. Y si no puede el viernes, que me escriba hoy mismo.»",
@@ -5610,12 +5615,7 @@
         "¿Entre 35 y 65 palabras?"
       ],
       "modelAnswer": "Olá Rui! Recado da nossa colega: a reunião de quinta passa para sexta às 10, na sala pequena. Pede-te que leves os orçamentos impressos, porque o projetor continua avariado. E se não puderes na sexta, escreve-lhe ainda hoje, está bem? Qualquer coisa, diz-me."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
-    "register": "informal",
-    "address": "tu",
-    "contentHash": "a3d492be7b88d378ab922da1d4214025bf96dd1f97e91c947671248c7487fda2"
+    }
   },
   {
     "id": "b2c2-med-39",
@@ -5629,6 +5629,10 @@
       "b2c2-lote6",
       "mediacao"
     ],
+    "contentHash": "bd4f93feec34257cc34576c2b4e66d2c5032481ed711982f17e259de683cacb6",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "register": "informal",
     "type": "mediation",
     "data": {
       "sourceText": "«Informam-se os moradores de que, na próxima terça-feira, dia 19, a água será cortada entre as 9h e as 17h para obras na conduta principal. Recomenda-se o armazenamento prévio de água para consumo. O elevador ficará igualmente fora de serviço durante a manhã.»",
@@ -5647,11 +5651,7 @@
         "¿Entre 30 y 60 palabras?"
       ],
       "modelAnswer": "Oye, avisan en el portal: el martes 19 cortan el agua de 9 a 17 por obras en la tubería principal — conviene que guardemos agua la noche antes. Y el ascensor estará parado toda la mañana, así que tocará escalera."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
-    "register": "informal",
-    "contentHash": "bd4f93feec34257cc34576c2b4e66d2c5032481ed711982f17e259de683cacb6"
+    }
   },
   {
     "id": "b2c2-med-40",
@@ -5665,6 +5665,11 @@
       "b2c2-lote6",
       "mediacao"
     ],
+    "contentHash": "033aa2469bdf8f2e886745f82d61327a3722c343bf8317845608e1e2741ad3cd",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "register": "formal",
+    "address": "nome_cargo",
     "type": "mediation",
     "data": {
       "sourceText": "«Isto é uma vergonha! Terceira semana sem aulas de música porque não substituem o professor. Os miúdos passam a tarde na sala de estudo a fazer nada. Pagamos atividades para isto? Alguém que diga qualquer coisa à direção, porque eu já não tenho paciência.»",
@@ -5685,12 +5690,7 @@
         "¿Entre 50 y 90 palabras?"
       ],
       "modelAnswer": "Exma. Senhora Diretora,\nVenho expor uma preocupação dos encarregados de educação: as aulas de música estão suspensas há três semanas, por falta de substituição do professor, e as crianças passam essas tardes na sala de estudo sem atividade. Tratando-se de uma atividade paga pelas famílias, agradecia que a Senhora Diretora nos informasse do prazo previsto para a substituição e das alternativas entretanto disponíveis.\nCom os melhores cumprimentos,"
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
-    "register": "formal",
-    "address": "nome_cargo",
-    "contentHash": "033aa2469bdf8f2e886745f82d61327a3722c343bf8317845608e1e2741ad3cd"
+    }
   },
   {
     "id": "b2c2-med-41",
@@ -5704,6 +5704,10 @@
       "b2c2-lote6",
       "mediacao"
     ],
+    "contentHash": "f03c7a47dcbd16a1b93b8fc82016ede8ad6fd627e706d214d3fc565fbad59258",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "register": "informal",
     "type": "mediation",
     "data": {
       "sourceText": "«Exmos. Senhores Condóminos: informa-se que, por deliberação da assembleia, se procederá à pintura integral das zonas comuns entre os dias 2 e 6, período durante o qual se solicita a remoção de vasos, tapetes e demais objetos dos patamares, sob pena de danificação.»",
@@ -5722,11 +5726,7 @@
         "¿Entre 25 y 55 palabras?"
       ],
       "modelAnswer": "Pessoal, aviso do condomínio: de 2 a 6 vêm pintar as zonas comuns. Tirem dos patamares os vasos, tapetes e o que lá tiverem, senão arriscam-se a ficar com tudo salpicado de tinta. Passem palavra!"
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
-    "register": "informal",
-    "contentHash": "f03c7a47dcbd16a1b93b8fc82016ede8ad6fd627e706d214d3fc565fbad59258"
+    }
   },
   {
     "id": "b2c2-med-42",
@@ -5740,6 +5740,11 @@
       "b2c2-lote6",
       "mediacao"
     ],
+    "contentHash": "5d8bd45aa92b0759c0c61ddaf4be3ccb2ecdd9f53c4c077b6dcc469dbc66e185",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "register": "informal",
+    "address": "tu",
     "type": "mediation",
     "data": {
       "sourceText": "«Amanhã de manhã passo no açougue e compro carne pro churrasco. Você traz sobremesa? Tem uma sorveteria ótima na esquina, do lado da banca. Ah, e usa o banheiro de baixo quando chegar, o de cima tá com a descarga quebrada. Te espero por volta do meio-dia!»",
@@ -5759,12 +5764,7 @@
         "¿Mantiene el tono informal, entre 40 y 75 palabras?"
       ],
       "modelAnswer": "Amanhã de manhã passo no talho e compro carne para o churrasco. Trazes tu a sobremesa? Há uma gelataria ótima na esquina, ao lado do quiosque. Ah, e quando chegares usa a casa de banho de baixo — a de cima está com o autoclismo avariado. Espero-te por volta do meio-dia!"
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
-    "register": "informal",
-    "address": "tu",
-    "contentHash": "5d8bd45aa92b0759c0c61ddaf4be3ccb2ecdd9f53c4c077b6dcc469dbc66e185"
+    }
   },
   {
     "id": "b2c2-med-43",
@@ -5778,6 +5778,11 @@
       "b2c2-lote6",
       "mediacao"
     ],
+    "contentHash": "346394a352a51850f1497c1992723ec2530778ce2255f13839548b6db4f0a0c5",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "register": "informal",
+    "address": "voce_BR",
     "type": "mediation",
     "data": {
       "sourceText": "«Estou à espera do autocarro há vinte minutos, isto hoje está um caos. Se calhar apanho antes o comboio. Quando chegar a casa ligo-te do telemóvel, o fixo está avariado. Deixa-me só passar primeiro na farmácia, que a miúda está constipada.»",
@@ -5797,12 +5802,7 @@
         "¿Entre 40 y 75 palabras, tono informal?"
       ],
       "modelAnswer": "Estou esperando o ônibus faz vinte minutos, hoje tá um caos. Talvez eu pegue o trem. Quando chegar em casa te ligo do celular, que o fixo tá quebrado. Só deixa eu passar primeiro na farmácia, que a menina tá resfriada."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
-    "register": "informal",
-    "address": "voce_BR",
-    "contentHash": "346394a352a51850f1497c1992723ec2530778ce2255f13839548b6db4f0a0c5"
+    }
   },
   {
     "id": "b2c2-med-44",
@@ -5816,6 +5816,11 @@
       "b2c2-lote6",
       "mediacao"
     ],
+    "contentHash": "a5b34174d0cf308e8407148cdbb02674695408fbce852230309a0064a6f44c6a",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "register": "informal",
+    "address": "tu",
     "type": "mediation",
     "data": {
       "sourceText": "«— Doctor, vengo a que me quite la cicatriz de la operación.\n— ¿Y esa prisa?\n— Es que mi mujer dice que cada vez que la ve, le entran ganas de operarme otra vez.»",
@@ -5834,12 +5839,7 @@
         "¿Está en portugués, entre 35 y 65 palabras, por tu?"
       ],
       "modelAnswer": "Repara no que a mulher não diz. Ao ver a cicatriz, «dá-lhe vontade de o operar outra vez» — e ela não é médica: é vontade de o abrir, de lhe fazer mal. Percebes a pressa dele? Apagar a cicatriz é tirar-lhe a ela o lembrete. Não é vaidade, é medo."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
-    "register": "informal",
-    "address": "tu",
-    "contentHash": "a5b34174d0cf308e8407148cdbb02674695408fbce852230309a0064a6f44c6a"
+    }
   },
   {
     "id": "b2c2-med-45",
@@ -5855,6 +5855,10 @@
       "relay-semilla",
       "ascenso:b3/2ab9b39d"
     ],
+    "contentHash": "1a23912b177a2d0c5104924c5389281467cfc69e2e94eadd5e366a61df8d699e",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
     "type": "mediation",
     "data": {
       "sourceText": "Não venhas tarde, senão não podes entrar.",
@@ -5873,11 +5877,7 @@
         "¿Entre 8 y 25 palabras?"
       ],
       "modelAnswer": "Oye, no llegues tarde: si llegas tarde, ya no te dejan entrar."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
-    "register": "informal",
-    "contentHash": "1a23912b177a2d0c5104924c5389281467cfc69e2e94eadd5e366a61df8d699e"
+    }
   },
   {
     "id": "b2c2-med-46",
@@ -5893,6 +5893,10 @@
       "relay-semilla",
       "ascenso:b2/3d317f8d"
     ],
+    "contentHash": "be0df458e2fb5401906a1c0583634742ebec807bd2e4278b417e9d16fdda1abe",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
     "type": "mediation",
     "data": {
       "sourceText": "As reuniões serão nas manhãs de sábado.",
@@ -5911,11 +5915,7 @@
         "¿Entre 8 y 25 palabras?"
       ],
       "modelAnswer": "Dijeron que las reuniones serán los sábados por la mañana."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
-    "register": "informal",
-    "contentHash": "be0df458e2fb5401906a1c0583634742ebec807bd2e4278b417e9d16fdda1abe"
+    }
   },
   {
     "id": "b2c2-med-47",
@@ -5931,6 +5931,10 @@
       "relay-semilla",
       "ascenso:b10/f49512ee"
     ],
+    "contentHash": "cf38288410bb63690b74b10485e469017675dd308bcec8b7698e3eef6366c131",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "formal",
     "type": "mediation",
     "data": {
       "sourceText": "A senhora Dra. Maria, poderia enviar o relatório por e-mail?",
@@ -5949,11 +5953,7 @@
         "¿Entre 10 y 30 palabras?"
       ],
       "modelAnswer": "Doctora: el socio de Lisboa pregunta si podría usted enviarle el informe por correo electrónico, por favor."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
-    "register": "formal",
-    "contentHash": "cf38288410bb63690b74b10485e469017675dd308bcec8b7698e3eef6366c131"
+    }
   },
   {
     "id": "b2c2-med-48",
@@ -5969,6 +5969,10 @@
       "relay-semilla",
       "ascenso:b10/7b17a7b6"
     ],
+    "contentHash": "76efc3d3c9b02ec54b9997d09fd1af662f09f27b016ffcbaebe544e91a092009",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
+    "register": "informal",
     "type": "mediation",
     "data": {
       "sourceText": "Gostaria de estabelecer contacto telefónico consigo amanhã.",
@@ -5987,10 +5991,6 @@
         "¿Entre 8 y 25 palabras?"
       ],
       "modelAnswer": "Papá, dicen que quieren llamarte mañana por teléfono para hablar contigo."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "E2#2 2026-08-12: 2 linguistas adversariais (docs/contenido/2026-08-12-e2s2-triple.md)",
-    "register": "informal",
-    "contentHash": "76efc3d3c9b02ec54b9997d09fd1af662f09f27b016ffcbaebe544e91a092009"
+    }
   }
 ]

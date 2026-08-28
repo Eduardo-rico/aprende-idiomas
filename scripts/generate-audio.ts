@@ -41,6 +41,11 @@ async function ttsConFallback(
       return { hash: h, cached: true, voice: req.voiceId };
     } catch { /* siguiente candidato */ }
   }
+  // El delay anti-RPM vive AQUÍ y no en el bucle de jobs: un cache-hit
+  // no toca el API, y dormir 1,5s por cada uno convertía un corpus casi
+  // todo cacheado (~2.600 jobs) en una hora de sueño — un run que
+  // parecía colgado (2026-08-28).
+  if (TTS_DELAY_MS > 0) await new Promise(r => setTimeout(r, TTS_DELAY_MS));
   return generateElevenTts({ text: req.text, variant: req.variant });
 }
 import {
@@ -285,9 +290,6 @@ async function main() {
                   VOICES[variant]?.[DEFAULT_VOICE] ??
                   VOICES[ttsVariant]?.[DEFAULT_VOICE] ??
                   '';
-                if (TTS_DELAY_MS > 0) {
-                  await new Promise((r) => setTimeout(r, TTS_DELAY_MS));
-                }
                 const r = await ttsConFallback({ text, voiceId: voice, variant: ttsVariant });
                 return { variant, hash: r.hash, voice: r.voice };
               }),
@@ -337,7 +339,6 @@ async function main() {
         // Mapeo corregido (ver nota en el sitio de lecciones): pt-br→br.
         const ttsVariant: 'br' | 'pt' = j.variant === 'pt-br' ? 'br' : 'pt';
         const voice = VOICES[j.variant]?.[DEFAULT_VOICE] ?? VOICES[ttsVariant]?.[DEFAULT_VOICE] ?? '';
-        if (TTS_DELAY_MS > 0 && done > 0) await new Promise(r => setTimeout(r, TTS_DELAY_MS));
         const result = await ttsConFallback({ text: j.text, voiceId: voice, variant: ttsVariant });
         done++;
         if (done % 20 === 0) console.log(`  progress: ${done}/${jobs.length}`);
@@ -478,4 +479,12 @@ async function main() {
   console.log(`\nManifest ${changed ? 'updated' : 'unchanged'}: ${path.relative(process.cwd(), manifestPath)}`);
 }
 
-main().catch(err => { console.error(err); process.exit(1); });
+// Solo como script, JAMÁS al importar: los tests importan este módulo
+// (mergeAndWriteLessonsAudioRefs) y un main() a nivel de módulo lanzaba
+// un run de audio REAL dentro del worker de vitest — tomaba el lock de
+// b1 y el worker moría orfanándolo (visto 2026-08-28; explica también
+// los locks fósiles que E1 encontró el 2026-08-11).
+import { pathToFileURL } from 'node:url';
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch(err => { console.error(err); process.exit(1); });
+}
