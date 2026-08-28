@@ -6451,5 +6451,333 @@
       ],
       "modelAnswer": "La idea: tus hijos serán contigo como tú seas con tus padres, porque\nlos niños imitan. Dos ejemplos. Un labrador alegre divide su jornal\nen tres: vivir, «pagar deudas» — mantener a sus padres viejos — y\n«ahorrar» — criar a los hijos que lo cuidarán; un príncipe lo premia.\nY un padre maltratado acaba pidiendo que lo lleven al hospital de\ncaridad; pide unas sábanas de limosna y el hijo le manda las más\nviejas con su niño de diez años — que esconde una: le servirá el día\nque le toque mandarlo a él."
     }
+  },
+  {
+    "id": "b2c2-med-61",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1",
+      "genero:portal-infra",
+      "datos:dia+franja+accion+condicion",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B plantilla aviso-v1 piloto: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-plantilla-avisos-v1.md)",
+    "register": "informal",
+    "contentHash": "d90ba5769577391156f373c605cdb60ae5015c8accb607beb9345dde53db8c03",
+    "data": {
+      "sourceText": "Aviso — corte de energia elétrica: quinta-feira, dia 4, das 14h às\n18h, para substituição do quadro geral do prédio. Recomenda-se\ndesligar os aparelhos sensíveis. Caso o corte se prolongue para além\ndas 18h, os moradores devem contactar a EDP pelo 216 999 000.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu compañero de piso español, que no lee portugués",
+      "instructionsEs": "El aviso apareció en el portal. Cuéntaselo en español con todo lo que le afecta.",
+      "wordRange": {
+        "min": 30,
+        "max": 65
+      },
+      "rubric": [
+        "¿Traslada el día (jueves 4)?",
+        "¿Traslada la franja (corte de luz de 14 a 18) y el motivo (cambio del cuadro eléctrico)?",
+        "¿Traslada la acción (desenchufar los aparatos delicados)?",
+        "¿Traslada la condición (si pasa de las 18h, llamar a la eléctrica al 216 999 000)?",
+        "¿Español natural, sin lusismos («moradores», «quadro geral»), entre 30 y 65 palabras?"
+      ],
+      "modelAnswer": "Oye, aviso del portal: el jueves 4 cortan la luz de dos a seis de\nla tarde, que cambian el cuadro eléctrico del edificio. Conviene\ndesenchufar los aparatos delicados. Y si a las seis no ha vuelto,\nhay que llamar a la eléctrica: 216 999 000."
+    }
+  },
+  {
+    "id": "b2c2-med-62",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1",
+      "genero:sms-servicio",
+      "datos:objeto+lugar+franja+condicion",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B plantilla aviso-v1 piloto: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-plantilla-avisos-v1.md)",
+    "register": "informal",
+    "contentHash": "6d926558ce806470fa308988c8698247b8580984f2ce78ccb0f5f627353915e7",
+    "data": {
+      "sourceText": "Lab. Clínico Silva & Matos [ref.ª 2026-08-1147]: os resultados das\nsuas análises já se encontram disponíveis. Podem ser levantados na\nreceção do laboratório, das 8h às 19h, mediante apresentação do\ncartão de cidadão. Após 30 dias serão arquivados.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu madre, española, que fue quien se hizo los análisis\nen su visita",
+      "instructionsEs": "El SMS llegó a tu móvil portugués, pero los análisis son de tu madre. Pásaselo en español. (No todo lo que trae el SMS le hace falta.)",
+      "wordRange": {
+        "min": 30,
+        "max": 65
+      },
+      "rubric": [
+        "¿Traslada el objeto (los resultados de sus análisis, listos)?",
+        "¿Traslada el lugar (recepción del laboratorio) y la franja (de 8 a 19)?",
+        "¿Traslada la condición doble (llevar el documento de identidad; a los 30 días los archivan)?",
+        "¿La respuesta NO incluye la referencia interna (2026-08-1147)? (La instrucción ya avisa: «No todo lo que trae el SMS le hace falta».)",
+        "¿Español natural, sin lusismos («levantar» por recoger, «cartão de cidadão» sin traducir), entre 30 y 65 palabras?"
+      ],
+      "modelAnswer": "Mamá, ya están tus análisis. Los recogen en la recepción del\nlaboratorio, de ocho de la mañana a siete de la tarde — llévate el\nDNI, que lo piden. Y no lo dejes pasar: a los treinta días los\narchivan."
+    }
+  },
+  {
+    "id": "b2c2-med-63",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1",
+      "genero:recado-voz",
+      "datos:objeto+accion+franja+contacto",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B plantilla aviso-v1 piloto: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-plantilla-avisos-v1.md)",
+    "register": "formal",
+    "contentHash": "c71f5e5186487298ba0aa6d90c85dec6149791e8b80e2a143674f89efd90d3c6",
+    "data": {
+      "sourceText": "Boa tarde, daqui é da oficina. O carro do senhor Navarro está\npronto: mudámos as pastilhas dos travões e o óleo. Pode passar a\nlevantá-lo hoje até às 19h; paga com multibanco à saída. Qualquer\ncoisa, é ligar para a oficina e perguntar pelo Álvaro.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu jefe español, el señor Navarro, al que tratas de\nusted",
+      "instructionsEs": "Llevaste el coche de tu jefe al taller y el mensaje te llegó a ti. Dale el recado en español, de usted.",
+      "wordRange": {
+        "min": 35,
+        "max": 70
+      },
+      "rubric": [
+        "¿Traslada el objeto y lo hecho (el coche está listo: pastillas de freno y aceite)?",
+        "¿Traslada la acción con su límite (puede recogerlo hoy hasta las 19h)?",
+        "¿Traslada el pago (con tarjeta / en el datáfono a la salida)?",
+        "¿Traslada el contacto (llamar al taller y preguntar por Álvaro)?",
+        "¿Español natural, sin lusismos («oficina» por taller, «levantar» por recoger, «multibanco» sin resolver), de usted, entre 35 y 70 palabras?"
+      ],
+      "modelAnswer": "Señor Navarro: han llamado del taller. Su coche ya está listo — le\ncambiaron las pastillas de freno y el aceite. Puede pasar a\nrecogerlo hoy hasta las siete de la tarde; se paga con tarjeta a la\nsalida. Si necesita cualquier cosa, que llame al taller y pregunte\npor Álvaro."
+    }
+  },
+  {
+    "id": "b2c2-med-64",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1",
+      "genero:cartel",
+      "datos:dia+dia+lugar+accion (3 tipos)",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B plantilla aviso-v1 piloto: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-plantilla-avisos-v1.md)",
+    "register": "informal",
+    "contentHash": "07750c1e06c6ead589f844a318a66127c57b6b76c99aa6ce50b5e69a7c15e6a7",
+    "data": {
+      "sourceText": "A biblioteca municipal encerra de 15 a 19 de setembro para\ninventário. Reabrimos segunda-feira, dia 22. Durante o encerramento,\nas devoluções podem ser feitas na caixa exterior, junto à porta\nprincipal. Os prazos de empréstimo ficam suspensos.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu amiga española de intercambio, que tiene libros\nprestados",
+      "instructionsEs": "El cartel está en la puerta de la biblioteca. Cuéntaselo en español — a ella le afectan los libros que tiene en casa.",
+      "wordRange": {
+        "min": 30,
+        "max": 65
+      },
+      "rubric": [
+        "¿Traslada el cierre con sus fechas (del 15 al 19 de septiembre, por inventario)?",
+        "¿Traslada la reapertura (lunes 22)?",
+        "¿Traslada el lugar alternativo (devoluciones en el buzón exterior, junto a la puerta principal)?",
+        "¿Traslada la acción/tranquilidad (los plazos de préstamo quedan suspendidos — no corren)?",
+        "¿Español natural, sin lusismos («encerra», «empréstimo»), entre 30 y 65 palabras?"
+      ],
+      "modelAnswer": "La biblioteca cierra del 15 al 19 de septiembre por inventario;\nvuelven a abrir el lunes 22. Si quieres devolver los libros esos\ndías, hay un buzón fuera, junto a la puerta principal. Y tranquila\ncon los plazos: quedan congelados mientras esté cerrada."
+    }
+  },
+  {
+    "id": "b2c2-med-65",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1",
+      "genero:aviso-escolar",
+      "datos:dia+objeto+accion+condicion",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B plantilla aviso-v1 piloto: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-plantilla-avisos-v1.md)",
+    "register": "informal",
+    "contentHash": "0e1459ff0d2797487e9b752a9bd1dbc0ecdc7ca5526c8a2ca912e5e4369d0e11",
+    "data": {
+      "sourceText": "Exmos. Encarregados de Educação: a visita de estudo ao Oceanário\nrealiza-se na sexta-feira, dia 12. Cada aluno deve trazer 9 euros e\na autorização assinada até quarta-feira, dia 10. Sem autorização, o\naluno permanece na escola em atividades alternativas.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu pareja española — el niño es de los dos, pero el\nportugués lo llevas tú",
+      "instructionsEs": "La circular llegó en la mochila. Cuéntale a tu pareja qué hay que hacer y para cuándo.",
+      "wordRange": {
+        "min": 30,
+        "max": 65
+      },
+      "rubric": [
+        "¿Traslada el día de la excursión (viernes 12, al Oceanário)?",
+        "¿Traslada el objeto (9 euros)?",
+        "¿Traslada la acción con su plazo (autorización firmada hasta el miércoles 10)?",
+        "¿Traslada la condición (sin autorización se queda en la escuela)?",
+        "¿Español natural, sin lusismos («encarregados de educação», «visita de estudo» literal), entre 30 y 65 palabras?"
+      ],
+      "modelAnswer": "Amor, circular del cole: el viernes 12 llevan a los niños de\nexcursión al Oceanário. Hay que mandar 9 euros y la autorización\nfirmada como muy tarde el miércoles 10 — si no la entregamos, el\nniño se queda en el colegio con actividades alternativas."
+    }
+  },
+  {
+    "id": "b2c2-med-66",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1",
+      "genero:portal-infra",
+      "datos:dia+franja+accion",
+      "mod:corregido (dos avisos)"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B plantilla aviso-v1 piloto: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-plantilla-avisos-v1.md)",
+    "register": "informal",
+    "contentHash": "c6f4d730492fca3ab7375235ce59d66982c3448748c5efc4cb0bf5fdcb143f4b",
+    "data": {
+      "sourceText": "[Aviso afixado ontem] Desinfestação das zonas comuns: terça-feira,\ndia 9, das 10h às 12h. Pede-se aos moradores que fechem as janelas e\nnão deixem animais nas zonas comuns.\n\n[Aviso de hoje] RETIFICAÇÃO: no aviso de ontem, onde se lê\n“terça-feira, dia 9”, deve ler-se “QUARTA-feira, dia 10”. O horário\ne as restantes indicações mantêm-se.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu compañero de piso español, que no lee portugués y no\nsabe nada de esto",
+      "instructionsEs": "Los dos avisos están hoy en el portal, uno al lado del otro. Escríbele UN solo mensaje con el estado final — que no quede ni rastro del dato viejo como vigente.",
+      "wordRange": {
+        "min": 25,
+        "max": 60
+      },
+      "rubric": [
+        "¿El mensaje presenta como día vigente el MIÉRCOLES 10 (el martes 9 no aparece, o aparece solo como cancelado)?",
+        "¿Confirma el horario (de 10 a 12)?",
+        "¿Conserva las dos acciones (cerrar ventanas; no dejar animales en las zonas comunes)?",
+        "¿Español natural, sin lusismos («desinfestação» sin resolver, «moradores»), entre 25 y 60 palabras?"
+      ],
+      "modelAnswer": "Aviso del portal: el miércoles 10 fumigan las zonas comunes, de diez\na doce — lo habían puesto para el martes, pero lo han pasado. Ese\ndía deja las ventanas cerradas, y nada de dejar al gato por la\nescalera."
+    }
+  },
+  {
+    "id": "b2c2-med-67",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1",
+      "genero:sms-servicio",
+      "datos:dia+franja+lugar+condicion",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B plantilla aviso-v1 piloto: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-plantilla-avisos-v1.md)",
+    "register": "informal",
+    "contentHash": "72f89b3f384786e99dfbd1e2f0dca45c382e9a30c7037b18925704f0b25b94f4",
+    "address": "tu",
+    "data": {
+      "sourceText": "Clínica Dental Aranda: le recordamos su cita el lunes 15 a las 9:40\nen nuestra consulta de la calle Mayor, 28. Si no puede asistir,\nresponda NO a este mensaje con 24 h de antelación; de lo contrario\nse facturará la visita.",
+      "sourceLang": "es",
+      "targetLang": "pt",
+      "mediationType": "relay",
+      "audience": "o teu colega de casa português — a consulta é dele, mas\ndeu o teu número espanhol",
+      "instructionsEs": "El SMS te llegó a ti en español. Pásaselo a tu compañero en portugués, por mensaje.",
+      "wordRange": {
+        "min": 30,
+        "max": 65
+      },
+      "rubric": [
+        "¿Traslada el día y la hora (lunes 15, 9:40)?",
+        "¿Traslada el lugar (la consulta de la calle Mayor, 28)?",
+        "¿Traslada la condición completa (avisar respondiendo NO con 24 horas de antelación; si no, cobran la visita)?",
+        "¿Portugués sin españolismos — se conservan «calle Mayor, 28» (nombre propio de vía) y el «NO» literal (comando del sistema) —, tratando al colega por tu, entre 30 y 65 palabras?"
+      ],
+      "modelAnswer": "Chegou-me um SMS do teu dentista: lembram-te a consulta de\nsegunda-feira, dia 15, às 9h40, no consultório da calle Mayor, 28.\nSe não puderes ir, tens de responder NO com 24 horas de\nantecedência — senão cobram-te a consulta na mesma."
+    }
+  },
+  {
+    "id": "b2c2-med-68",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1",
+      "genero:recado-voz",
+      "datos:objeto+lugar+franja+contacto",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B plantilla aviso-v1 piloto: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-plantilla-avisos-v1.md)",
+    "register": "informal",
+    "contentHash": "51729598c40f3a4568ef3c5c53355c0202edd3cd60e0d2ff47c31c0ba20f770b",
+    "address": "tu",
+    "data": {
+      "sourceText": "Hola, guapo, soy Maruja, la del tercero. Que os ha llegado un\npaquete grandote y lo tengo yo, que el cartero no quería dejarlo en\nel portal. Pasaos a por él cuando queráis, pero antes de las nueve,\nque luego me acuesto. Si no estoy, me llamáis al 611 22 33 44.",
+      "sourceLang": "es",
+      "targetLang": "pt",
+      "mediationType": "relay",
+      "audience": "o teu colega de casa português, que não percebe o\nespanhol falado da D. Maruja",
+      "instructionsEs": "El paquete es de tu compañero. Déjale el recado en portugués, por mensaje escrito.",
+      "wordRange": {
+        "min": 30,
+        "max": 65
+      },
+      "rubric": [
+        "¿Traslada el objeto (un paquete grande vuestro/tuyo)?",
+        "¿Traslada el lugar-persona (lo tiene la vecina del tercero, la D. Maruja)?",
+        "¿Traslada la franja (pasar a por él antes de las nueve)?",
+        "¿Traslada el contacto (si no está, llamarla al 611 22 33 44)?",
+        "¿Portugués natural por tu (sin calcos de «grandote», «pasaos a por él»), entre 30 y 65 palabras?"
+      ],
+      "modelAnswer": "Tens uma encomenda grande à tua espera! Está com a D. Maruja, a\nvizinha do terceiro andar — o carteiro não a quis deixar no portal.\nPassa por lá quando quiseres, mas antes das nove, que depois ela se\ndeita. Se não estiver, liga-lhe: 611 22 33 44."
+    }
   }
 ]
