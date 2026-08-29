@@ -9450,5 +9450,100 @@
       "explanationEs": "«Caso» rige PRESENTE do conjuntivo: caso precises, caso possas, caso venha. El futuro do conjuntivo («precisares») es la sobrecorrección del que acaba de dominar «se precisares» y decide que caso funciona igual — casi: comparten el si condicional, no el tiempo. Ciberdúvidas lo ejemplifica a la letra: «Empresta-me esse livro, caso possas».",
       "repair": "Caso precises de ajuda com a mudança, liga-me."
     }
+  },
+  {
+    "id": "b2c2-gj-l8-01",
+    "blockId": 8,
+    "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+    "difficulty": 3,
+    "concepts": [
+      "b8-conectores"
+    ],
+    "tags": [
+      "b2c2-lote8",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
+    "register": "neutro",
+    "contentHash": "a091a9dff311663209507a783db16d85a6161f6fe0deee60101f6cac66c91314",
+    "data": {
+      "sentence": "Ao sábado, o mercado enche-se de gente.",
+      "verdict": true,
+      "explanationEs": "«Ao + día» en singular expresa lo habitual: ao sábado (= los sábados), à segunda, ao domingo. Al hispanohablante le suena a artículo mal puesto («¿EL sábado?»); es idioma europeo corriente — el corpus lo trae una decena larga de veces, y Eça llega a juntar los dos: «Faço um d'esses espantosos queijos por semana, ao sabbado, para o comermos nós ambos ao domingo!». El plural «aos sábados» también vale (y es clásico); esta forma en singular es la que el alumno no se atreve a usar."
+    }
+  },
+  {
+    "id": "b2c2-gj-l8-04",
+    "blockId": 8,
+    "lessonId": "b8-l3-colocacao-pronominal",
+    "difficulty": 3,
+    "concepts": [
+      "b8-colocacao-pronominal"
+    ],
+    "tags": [
+      "b2c2-lote8",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
+    "register": "informal",
+    "contentHash": "37aaa98b9cc5e8fda451d4c21f82ff08c93268150fbf741a6d91d8cac4fdd4c3",
+    "address": "tu",
+    "data": {
+      "sentence": "Saí em bicos de pés para te não acordar.",
+      "verdict": true,
+      "explanationEs": "En europeo culto el clítico puede subir DELANTE de la negación del infinitivo: «para te não acordar», «para o não ver» — el corpus del curso lo trae en más de cien pasajes («para lhe não dar fé», «de o não ser», y hasta dos en una línea: «Como o não serviria eu… se me não houvessem apagado»). Al hispanohablante le parece un imposible; en portugués las dos órdenes valen («para não te acordar» también), y esta es la que delata lector de Camilo. De regalo: «em bicos de pés» = de puntillas."
+    }
+  },
+  {
+    "id": "b2c2-gj-l8-05",
+    "blockId": 8,
+    "lessonId": "b8-l2-subordinadas-substantivas-adjetivas",
+    "difficulty": 3,
+    "concepts": [
+      "b8-oracoes-subordinadas"
+    ],
+    "tags": [
+      "b2c2-lote8",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
+    "register": "formal",
+    "contentHash": "edad2337417ff2690e97b29f63791f1794d0b0f0ee29579a706770a127a81acd",
+    "data": {
+      "sentence": "Tratam-se de obras urgentes, segundo a câmara.",
+      "verdict": false,
+      "explanationEs": "Cuando «tratar-se de» es IMPERSONAL (= 'son', 'es cuestión de') va en singular aunque lo que siga sea plural: trata-se de obras, tratava-se de erros. La concordancia es la hipercorrección de periódico, frecuentísima también en nativos. Ojo, que el RECÍPROCO es otro verbo a todos los efectos: «tratam-se por tu» y hasta «tratavam-se de pulhas» (¡llamarse sinvergüenzas!) concuerdan con su sujeto — el corpus trae los dos. Aquí no hay quién se trate de nada: es el impersonal, y el impersonal no concuerda.",
+      "repair": "Trata-se de obras urgentes, segundo a câmara."
+    }
+  },
+  {
+    "id": "b2c2-gj-l8-10",
+    "blockId": 8,
+    "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
+    "difficulty": 3,
+    "concepts": [
+      "b8-conectores"
+    ],
+    "tags": [
+      "b2c2-lote8",
+      "anti-calco"
+    ],
+    "type": "grammaticality_judgment",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
+    "register": "informal",
+    "contentHash": "8b0382fb5b6fc59ef827ce26f17dc27796180d369d0cd6130a325fe9bac71601",
+    "address": "tu",
+    "data": {
+      "sentence": "Enquanto não acabares os trabalhos de casa, não sais.",
+      "verdict": true,
+      "explanationEs": "Con referencia al futuro, «enquanto» pide futuro do conjuntivo — y el corpus lo dice mejor que nadie: «não socega emquanto não souber quem escreveu o Communicado» (Eça), «Emquanto se não liquidar o que lhe pertence…» (Os Maias). El hispanohablante espera «acabes» («mientras no acabes») y tiende a «corregir» la frase buena. (El presente tras «enquanto não» también asoma — Torga lo escribió, y Ciberdúvidas se niega a condenarlo — pero es regional o de otra época; la forma que nadie te discutirá es esta.) Es el espejo de «caso»: caso pide presente; enquanto — como quando y se — futuro."
+    }
   }
 ]

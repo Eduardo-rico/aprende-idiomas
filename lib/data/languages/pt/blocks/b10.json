@@ -1625,8 +1625,8 @@
       "falso-amigo",
       "regional"
     ],
-    "contentHash": "af07b44d669de3582e4aad5eaa64ff7bb16164ff64d280aed931fbdf83216cc0",
-    "esContrast": "Lo que en España/Portugal es 'cola', en Brasil se dice 'fila'.",
+    "contentHash": "2a9c200ab4b77274fdf4b831fe60889c9a9bb6777975f857635f892e5cceda0b",
+    "esContrast": "La cola del autobús es 'a fila' en las dos variantes — 'cola' en portugués es el pegamento (o el rabo).",
     "audio": {
       "br": {
         "hash": "b264c82bf57f61cf7f5a28bf51dc2ab45bd0407ae7b26d6f00e68cdaadc1deb6",
@@ -1638,6 +1638,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según convergencia lote 8 E2#5 2026-08-29: glosa falsa («en Portugal es 'cola'») sustituida por la aprobada por ambos revisores, atada al tema de la tarjeta (Priberam: cola = pegamento/cauda; sin acepción de fila)",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'autobús' en PT-BR y en PT-PT?",
@@ -2555,27 +2556,28 @@
       "informal",
       "falso-amigo"
     ],
-    "contentHash": "aac7acc4e01b46af518860cbdfdb2179efcbef0b36b22d3df55ce97ccd7b8b7f",
-    "esContrast": "'Fixe' es argot PT (cool/guay); no confundir con 'fijo'. 'Vocês' en PT se usa más que en BR.",
+    "contentHash": "8d451b805714c9042bf1abceb3dc8b31949cd8a82ef119b1dcd14e65cbb06b62",
+    "esContrast": "'Fixe' es argot europeo (cool/guay) y concuerda: 'vocês são fixes'. No confundir con 'fijo'.",
     "audio": {
       "br": {
-        "hash": "fe411f942e448f00d661880d63a4e806c4e9f51dba180e350eb0e06b8584ba9b",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "cd8161cd87b1942b0677a9380631cf853546a2894a2d7b5a9b2a07a8225c0c96",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "6a09426c62dbaaf6879ff6b98da65c05c679df07c6570e6cc258a5b0ae0c6c5e",
-        "voice": "Portuguese_Wiselady"
+        "hash": "cd8161cd87b1942b0677a9380631cf853546a2894a2d7b5a9b2a07a8225c0c96",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según convergencia lote 8 E2#5 2026-08-29 (informe R1-E4): source/target y langs desinvertidos, concordancia «são fixes» repuesta (source Y alternatives), claim falso sobre 'vocês' retirado",
     "type": "translation",
     "data": {
-      "source": "Abraço grande para a equipa, vocês são fixe!",
-      "target": "Un abrazo fuerte para el equipo, ¡sois geniales!",
+      "source": "Un abrazo fuerte para el equipo, ¡sois geniales!",
+      "target": "Abraço grande para a equipa, vocês são fixes!",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt",
       "acceptedAlternatives": [
-        "Um abraço grande para a equipa, vocês são fixe!",
+        "Um abraço grande para a equipa, vocês são fixes!",
         "Abraço para o pessoal, vocês são demais!"
       ]
     }
@@ -6796,11 +6798,11 @@
       "datos:dia+franja+condicion+contacto",
       "mod:condicional"
     ],
-    "type": "mediation",
+    "contentHash": "6a40bbf3438072fabb43ea39c6534f416ed8c4bbeed8a72d90e00cfdaec63230",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "6a40bbf3438072fabb43ea39c6534f416ed8c4bbeed8a72d90e00cfdaec63230",
+    "type": "mediation",
     "data": {
       "sourceText": "Inspeção periódica obrigatória da rede de gás: quinta-feira, dia\n11, entre as 9h e as 13h, os técnicos visitarão todas as frações. É\nindispensável a presença de um adulto. Caso não possa estar\npresente, reagende até dia 9 pelo 210 340 500; a segunda visita é\ncobrada ao morador.",
       "sourceLang": "pt",
@@ -6836,11 +6838,11 @@
       "datos:dia+dia+accion",
       "mod:corregido"
     ],
-    "type": "mediation",
+    "contentHash": "35dca658a253a6ef28d6d4dbc28f8f9266ccebed169aad289390a43a4d585d54",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "35dca658a253a6ef28d6d4dbc28f8f9266ccebed169aad289390a43a4d585d54",
+    "type": "mediation",
     "data": {
       "sourceText": "[Aviso de segunda-feira] A partir da próxima semana, a recolha de\nlixo indiferenciado passa de terças e sábados para QUARTAS e\nsábados. Os contentores devem ir para a rua só depois das 20h.\n\n[Aviso de hoje] RETIFICAÇÃO: mantém-se a recolha de terça-feira. A\nalteração é só ao sábado, que passa para DOMINGO de manhã.",
       "sourceLang": "pt",
@@ -6875,11 +6877,11 @@
       "datos:dia+franja+lugar+accion",
       "mod:simple"
     ],
-    "type": "mediation",
+    "contentHash": "9be4bc46ef244f9e19bdedec03fec2b3d1becc60db50b55b433c1c602779b240",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "9be4bc46ef244f9e19bdedec03fec2b3d1becc60db50b55b433c1c602779b240",
+    "type": "mediation",
     "data": {
       "sourceText": "Por motivos de segurança, a fechadura da porta principal será\nsubstituída na segunda-feira, dia 15. As chaves novas podem ser\nlevantadas na portaria, das 17h às 20h, mediante assinatura. A\nchave antiga deixa de funcionar às 22h desse dia.",
       "sourceLang": "pt",
@@ -6915,11 +6917,11 @@
       "datos:dia+franja+accion+condicion",
       "mod:simple"
     ],
-    "type": "mediation",
+    "contentHash": "8e8abb3bc71c964c5f8461733a194f5f30dc234de8b670e249be492d2c365e6d",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "8e8abb3bc71c964c5f8461733a194f5f30dc234de8b670e249be492d2c365e6d",
+    "type": "mediation",
     "data": {
       "sourceText": "Obras na via — Rua das Flores encerrada ao trânsito de terça a\nsexta, dias 12 a 15, das 8h às 18h. Proibido estacionar em toda a\nextensão a partir das 7h; as viaturas em infração serão removidas a\nexpensas do proprietário.",
       "sourceLang": "pt",
@@ -6955,11 +6957,11 @@
       "datos:dia+franja+objeto",
       "mod:simple"
     ],
-    "type": "mediation",
+    "contentHash": "152bc3a97e3e685b910476e0f09e886082b024bc01a95f7dee0ee1f3da811d90",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "152bc3a97e3e685b910476e0f09e886082b024bc01a95f7dee0ee1f3da811d90",
+    "type": "mediation",
     "data": {
       "sourceText": "Museu da Cidade — horário de verão: terça a domingo, das 10h às\n18h. Entrada gratuita aos domingos até às 13h. Encerrado às\nsegundas-feiras e feriados.",
       "sourceLang": "pt",
@@ -6995,11 +6997,11 @@
       "datos:dia+dia+lugar",
       "mod:simple"
     ],
-    "type": "mediation",
+    "contentHash": "1b72300dff38fa91a88cfab7f62876354f0033e3b1237c0242a4505ba5206fdf",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "1b72300dff38fa91a88cfab7f62876354f0033e3b1237c0242a4505ba5206fdf",
+    "type": "mediation",
     "data": {
       "sourceText": "Informa-se que o Mercado Municipal estará encerrado na\nquinta-feira, dia 8, por ser feriado municipal. A banca de peixe\nreabre só no sábado; as restantes bancas funcionam normalmente na\nsexta-feira.",
       "sourceLang": "pt",
@@ -7037,11 +7039,11 @@
       "flag:reordenar",
       "flag:señuelo"
     ],
-    "type": "mediation",
+    "contentHash": "12c3a420e2d7c730ad7edc0935867a320ecd4a6356fba99cb907bdd577cc4061",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "12c3a420e2d7c730ad7edc0935867a320ecd4a6356fba99cb907bdd577cc4061",
+    "type": "mediation",
     "data": {
       "sourceText": "NOS informa: intervenção programada na rede de fibra da sua zona\n[incidência TK-58201]. Esta noite, entre as 23h e as 6h, o serviço\nde internet e televisão poderá ficar intermitente. Recomenda-se\ndescarregar antecipadamente conteúdos importantes. Após as 6h, se o\nserviço não voltar, reinicie o router; persistindo, ligue 16990.",
       "sourceLang": "pt",
@@ -7078,11 +7080,11 @@
       "datos:objeto+lugar+franja+condicion",
       "mod:simple"
     ],
-    "type": "mediation",
+    "contentHash": "090d4bc4982da8ce7524ba7163db1d3e21049041ac9d267b27a95d5dad500be6",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "090d4bc4982da8ce7524ba7163db1d3e21049041ac9d267b27a95d5dad500be6",
+    "type": "mediation",
     "data": {
       "sourceText": "Lavandaria Sol: a sua roupa está pronta. Pode levantá-la no balcão\nda Rua Nova até sábado, das 9h às 19h30. Peças não levantadas no\nprazo de 30 dias revertem para doação.",
       "sourceLang": "pt",
@@ -7119,11 +7121,11 @@
       "mod:simple",
       "flag:señuelo"
     ],
-    "type": "mediation",
+    "contentHash": "e936ce7ba833cc36efd3c9afa237cf0c3e7cc9671b84288044e7970310c01dbc",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "e936ce7ba833cc36efd3c9afa237cf0c3e7cc9671b84288044e7970310c01dbc",
+    "type": "mediation",
     "data": {
       "sourceText": "Clínica Veterinária Bicho Feliz [ficha 44-C]: lembramos a vacina\nanual do Tico, agendada para quarta-feira, dia 17, às 18h30. O\nanimal deve vir em jejum desde o almoço. Traga o boletim de\nvacinas.",
       "sourceLang": "pt",
@@ -7160,11 +7162,11 @@
       "datos:objeto+lugar+franja",
       "mod:simple"
     ],
-    "type": "mediation",
+    "contentHash": "98e33a99850a1c6b21b10a3eeac72f5e6355a8108c2d9840a07476b838ad2f8d",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "98e33a99850a1c6b21b10a3eeac72f5e6355a8108c2d9840a07476b838ad2f8d",
+    "type": "mediation",
     "data": {
       "sourceText": "Olá vizinho, é a Manuela do segundo. Olhe, começou a chover forte\ne tirei a vossa roupa do estendal — está cá em casa, dobradinha.\nPassem quando quiserem até às dez, ou amanhã de manhã a partir das\noito.",
       "sourceLang": "pt",
@@ -7200,11 +7202,11 @@
       "datos:dia+accion+condicion+contacto",
       "mod:simple"
     ],
-    "type": "mediation",
+    "contentHash": "0577874a775f1feddd8386544d097ff81a267549b888acd54ae3113aad503b03",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "0577874a775f1feddd8386544d097ff81a267549b888acd54ae3113aad503b03",
+    "type": "mediation",
     "data": {
       "sourceText": "Fala o míster do Tomás. No sábado há torneio em Setúbal e\nprecisamos de pais voluntários para o transporte — faltam dois\ncarros. Quem puder, que se inscreva na folha do pavilhão até\nquinta; sem carros suficientes, os miúdos do escalão B ficam de\nfora. Dúvidas, 969 111 222.",
       "sourceLang": "pt",
@@ -7241,11 +7243,11 @@
       "datos:franja+accion+condicion",
       "mod:simple"
     ],
-    "type": "mediation",
+    "contentHash": "a1c4bdc8fe49899ef58491741f9c98c339d99d2c493f97de666be4461907d5fd",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "a1c4bdc8fe49899ef58491741f9c98c339d99d2c493f97de666be4461907d5fd",
+    "type": "mediation",
     "data": {
       "sourceText": "Boa tarde, é a D. Amélia, a administradora. Recebemos queixas do\npiano depois das dez da noite. O regulamento permite instrumentos\nsó até às 22h; durante a semana, idealmente até às 21h. Se precisarem\nde mais horas, falem comigo antes de sexta e vemos a sala do rés\ndo chão.",
       "sourceLang": "pt",
@@ -7281,11 +7283,11 @@
       "datos:accion+condicion+contacto",
       "mod:simple"
     ],
-    "type": "mediation",
+    "contentHash": "e9fd98b871569f96104de655df95d6ce2fa7f722516bfe5350f057af05b76891",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "e9fd98b871569f96104de655df95d6ce2fa7f722516bfe5350f057af05b76891",
+    "type": "mediation",
     "data": {
       "sourceText": "Exmos. Encarregados de Educação: foram detetados casos de\npediculose na turma do 2.º B. Pede-se a verificação diária da\ncabeça das crianças durante duas semanas e o aviso à professora\ntitular em caso de deteção. A criança pode frequentar as aulas\ndesde que inicie o tratamento.",
       "sourceLang": "pt",
@@ -7321,11 +7323,11 @@
       "datos:dia+objeto+accion",
       "mod:simple"
     ],
-    "type": "mediation",
+    "contentHash": "9a0884a9e479ee420a2eea0b0befccf0df852750badd618916e100198dfebbc0",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "9a0884a9e479ee420a2eea0b0befccf0df852750badd618916e100198dfebbc0",
+    "type": "mediation",
     "data": {
       "sourceText": "Informa-se que na sexta-feira, dia 20, a cantina estará encerrada\npor assembleia de pessoal. Os alunos devem trazer almoço frio de\ncasa; haverá micro-ondas disponível no refeitório. As aulas\ndecorrem normalmente.",
       "sourceLang": "pt",
@@ -7362,11 +7364,11 @@
       "mod:simple",
       "flag:reordenar"
     ],
-    "type": "mediation",
+    "contentHash": "908ecc6c78ccdd76bbd50a0cf9aa8f9eb7abeaf2c5e3d66703c9dae5a532cd5d",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "908ecc6c78ccdd76bbd50a0cf9aa8f9eb7abeaf2c5e3d66703c9dae5a532cd5d",
+    "type": "mediation",
     "data": {
       "sourceText": "Caro sócio: informamos que HOJE, quinta-feira, o ginásio encerra\nexcecionalmente às 17h por evento privado. As aulas de grupo da\ntarde ficam canceladas. Amanhã retomamos o horário habitual\n(6h30–23h). Pedimos desculpa pelo incómodo.",
       "sourceLang": "pt",
@@ -7403,11 +7405,11 @@
       "mod:simple",
       "flag:señuelo"
     ],
-    "type": "mediation",
+    "contentHash": "10f56002ddda796ad2777a049ef3c5d95033bdb6345863d52eea309ed5e1a316",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "10f56002ddda796ad2777a049ef3c5d95033bdb6345863d52eea309ed5e1a316",
+    "type": "mediation",
     "data": {
       "sourceText": "Caro cliente [contrato n.º 0033-88-41]: o seu novo cartão de\ndébito está disponível para levantamento no balcão da agência da\nAvenida, a partir de terça-feira, dia 16. Traga um documento de\nidentificação. O cartão anterior será desativado 10 dias após a\nemissão.",
       "sourceLang": "pt",
@@ -7445,11 +7447,11 @@
       "mod:simple",
       "flag:señuelo"
     ],
-    "type": "mediation",
+    "contentHash": "d4cfd72a74ae0ec019bd886afb67ed2cd62e971a65bd748eee481e0710dfb121",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "d4cfd72a74ae0ec019bd886afb67ed2cd62e971a65bd748eee481e0710dfb121",
+    "type": "mediation",
     "data": {
       "sourceText": "Seguro automóvel — renovação [apólice AT-77-190]: a sua apólice\nrenova-se a 1 de outubro. Para manter o desconto de bom condutor,\nenvie o certificado de sinistralidade atualizado até dia 25 de\nsetembro. Sem esse documento, o prémio sobe 12 %.",
       "sourceLang": "pt",
@@ -7486,12 +7488,12 @@
       "datos:lugar+objeto+franja",
       "mod:simple"
     ],
-    "type": "mediation",
+    "contentHash": "aae9180d2f981520845322f64abf55a2efd516e50ab35755f170c6340640c3da",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "aae9180d2f981520845322f64abf55a2efd516e50ab35755f170c6340640c3da",
     "address": "tu",
+    "type": "mediation",
     "data": {
       "sourceText": "¡Hola! Me voy corriendo al aeropuerto. Te dejo las llaves del\ntrastero en el buzón, dentro de un sobre. La cena está en el horno:\ncaliéntala 15 min a 180. ¡No me riegues el cactus, que lo ahogas!\nVuelvo el jueves.",
       "sourceLang": "es",
@@ -7527,12 +7529,12 @@
       "datos:dia+accion+accion",
       "mod:simple"
     ],
-    "type": "mediation",
+    "contentHash": "0819a85b7405d1a3cff6d7cbe5966d4a89c9025600296613f385d81cc6d50e36",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "0819a85b7405d1a3cff6d7cbe5966d4a89c9025600296613f385d81cc6d50e36",
     "address": "tu",
+    "type": "mediation",
     "data": {
       "sourceText": "Chicos: el martes pasan a por el vidrio — dejad las botellas en el\ncontenedor verde del patio antes de las 8. Y por favor, no dejéis\nlos cartones en el rellano, que la del tercero ya se ha quejado dos\nveces. Los cartones, doblados y al azul de la calle.",
       "sourceLang": "es",
@@ -7568,12 +7570,12 @@
       "mod:simple",
       "flag:reordenar"
     ],
-    "type": "mediation",
+    "contentHash": "da3c5fd4c2e7ac034b685c4164a2c1c77af49f635405c7b77e01977b0ca59bc7",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "da3c5fd4c2e7ac034b685c4164a2c1c77af49f635405c7b77e01977b0ca59bc7",
     "address": "tu",
+    "type": "mediation",
     "data": {
       "sourceText": "Cambio de puerta: su vuelo IB3116 a Lisboa embarca ahora por la\npuerta K42 (antes J15). Embarque adelantado: comienza a las 14:10 y\ncierra a las 14:35. Diríjase a la nueva puerta con antelación.",
       "sourceLang": "es",
@@ -7609,12 +7611,12 @@
       "mod:simple",
       "flag:señuelo"
     ],
-    "type": "mediation",
+    "contentHash": "c65425dcd55178c2540e52d4aac83c67048f26f12916a4b1a3c6a627c9b20dd5",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "c65425dcd55178c2540e52d4aac83c67048f26f12916a4b1a3c6a627c9b20dd5",
     "address": "tu",
+    "type": "mediation",
     "data": {
       "sourceText": "Su pedido nº 88012 llega mañana viernes entre las 18:00 y las\n20:00. Recuerde: los congelados van en bolsa térmica. Si no hay\nnadie, el repartidor lo deja en conserjería. Código descuento para\nsu próxima compra: AHORRA5.",
       "sourceLang": "es",
@@ -7650,12 +7652,12 @@
       "datos:dia+accion+condicion",
       "mod:simple"
     ],
-    "type": "mediation",
+    "contentHash": "dcbbd8ea794dffa960ca1a7d8306320b19a08f2269c2b283b982280ca58fd931",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "dcbbd8ea794dffa960ca1a7d8306320b19a08f2269c2b283b982280ca58fd931",
     "address": "tu",
+    "type": "mediation",
     "data": {
       "sourceText": "Estimadas familias: el miércoles 24 el personal de comedor\nsecunda la huelga general. No habrá servicio de comedor ni de\ndesayuno matinal. Los alumnos que se queden a mediodía deberán\ntraer comida de casa; también pueden recogerse a las 13:00 sin necesidad de justificar la falta.",
       "sourceLang": "es",
@@ -7690,12 +7692,12 @@
       "datos:accion+contacto+franja",
       "mod:simple"
     ],
-    "type": "mediation",
+    "contentHash": "8a7ea99701aa776b401fe7ddeb623aed0af9a4041b79d999a20c9da22e511381",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "formal",
-    "contentHash": "8a7ea99701aa776b401fe7ddeb623aed0af9a4041b79d999a20c9da22e511381",
     "address": "o_senhor",
+    "type": "mediation",
     "data": {
       "sourceText": "Cuando llegues: llama de mi parte al Sr. Fonseca, el proveedor de\nBraga (912 555 010). Dile que aceptamos su último presupuesto y que\nmande el contrato. Mejor antes de las 11, que luego entra en\nreunión. Gracias.",
       "sourceLang": "es",
@@ -7733,12 +7735,12 @@
       "flag:reordenar",
       "flag:señuelo"
     ],
-    "type": "mediation",
+    "contentHash": "6ce1fa1b108e26f1c9e8c35393209d29c6f5eb42f3a1c1c3b9007f49555268e5",
     "variantStatus": "unchecked",
     "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
     "register": "informal",
-    "contentHash": "6ce1fa1b108e26f1c9e8c35393209d29c6f5eb42f3a1c1c3b9007f49555268e5",
     "address": "tu",
+    "type": "mediation",
     "data": {
       "sourceText": "Aviso a los clientes: el vehículo matrícula 23-XM-71 se encuentra\nestacionado en la zona de carga y descarga del nivel -1. Rogamos lo\nretiren de inmediato; en 15 minutos será retirado por la grúa\n(tasa: 90 €). Aprovechen hoy 3×2 en perfumería.",
       "sourceLang": "es",
@@ -7757,6 +7759,465 @@
         "¿Portugués natural por tu, entre 25 y 55 palabras?"
       ],
       "modelAnswer": "Sai já do provador: o reboque leva-te o carro em 15 minutos — 90\neuros de taxa! Anunciaram a matrícula, é o teu: 23-XM-71,\nestacionado na zona de cargas do piso -1. Vai lá a correr, eu\nguardo-te as compras."
+    }
+  },
+  {
+    "id": "b2c2-med-93",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-lote8",
+      "anti-calco"
+    ],
+    "contentHash": "7eb216a60b8e550c01acebe726a4bac8af92d00c155654590057ef859b0a9744",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
+    "register": "neutro",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Era uma vez um sultão, que dispendia em vestuario todo o seu rendimento.\n\nQuando passara revista ao exercito, quando ia aos passeios ou ao theatro, não tinha outro fim senão mostrar os seus fatos novos. Mudava de traje a todos os instantes, e como se diz d'um rei: Está no conselho; dizia-se d'elle: Está-se a vestir. A capital do seu reino era uma cidade muito alegre, graças á quantidade d'estrangeiros que por ali passavam; mas chegaram lá um dia dois larapios, que, dando-se por tecelões, disseram que sabiam fabricar o estofo mais rico que havia no mundo. Não só eram extraordinariamente bellos os desenhos e as cores, mas além d'isso os vestuarios feitos com esse estofo, possuiam uma qualidade maravilhosa: tornavam-se invisiveis para os idiotas e para todos aquelles que não exercessem bem o seu emprego.\n\n--São vestuarios impagaveis, disse comsigo o sultão; graças a elles, saberei distinguir os intelligentes dos tolos, e reconhecer a capacidade dos ministros. Preciso d'esse estofo!»\n\nE mandou em seguida adiantar aos dois charlatães uma quantia avultada, para que podessem começar os trabalhos immediatamente.\n\nOs homens levantaram com effeito dois teares, e fingiram que trabalhavam, apesar de não haver absolutamente nada nas lançadeiras. Requisitavam seda e oiro fino a todo o instante; mas guardavam tudo isso muito bem guardado, trabalhando até á meia noite com os teares vasios.\n\n--«Preciso saber se a obra vae adiantada».\n\nMas tremia de medo ao lembrar-se que o estofo não podia ser visto pelos idiotas. E, apesar de ter confiança na sua intelligencia, achou prudente em todo o caso mandar alguem adiante.\n\nTodos os habitantes da cidade, conheciam a propriedade maravilhosa do estofo, e ardiam em desejos de verificar se seria exacto.\n\n--Vou mandar aos tecelões o meu velho ministro, pensou o sultão; tem um grande talento, e por isso ninguem póde melhor do que elle avaliar o estofo.\n\nO honrado ministro entrou na sala em que os dois impostores trabalhavam com os teares vasios.\n\n--Meu Deus! disse elle comsigo arregalando os olhos, não vejo absolutamente nada!» Mas no entanto calou-se. Os dois tecelões convidaram-n'o a aproximar-se, pedindo-lhe a sua opinião sobre os desenhos e as côres. Mostraram-lhe tudo, e o velho ministro olhava, olhava, mas não via nada, pela rasão simplicissima de nada lá existir.\n\n--Meu Deus! pensou elle, serei realmente estupido? É necessario que ninguém o saiba!... Ora esta! pois serei tolo realmente! Mas lá confessar que não vejo nada, isso é que eu não confesso.»\n\n--«Então que lhe parece?» perguntou um dos tecelões:\n\n--«Encantador, admiravel! respondeu o ministro, pondo os oculos. Este desenho... estas cores... magnifico!... Direi ao sultão que fiquei completamente satisfeito.»\n\n--«Muito agradecido, muito agradecido», disseram os tecelões; e mostraram-lhe cores e desenhos imaginarios, fazendo-lhe d'elles uma descripção minuciosa. O ministro ouviu attentamente, para ir depois repetir tudo ao sultão.\n\nOs impostores requisitavam cada vez mais seda, mais prata e mais oiro; precisavam-se quantidades enormes para este tecido. Mettiam tudo no bolso, é claro; o tear continuava vasio, e apesar d'isso trabalhavam sempre.\n\nPassado algum tempo, mandou o sultão um novo funccionario, homem honrado, a examinar o estofo, e ver quando estaria prompto. Aconteceu a este enviado o que tinha acontecido ao ministro: olhava, olhava e não via nada.\n\n--Não acha um tecido admiravel?» perguntaram os tratantes, mostrando o magnifico desenho e as bellas cores, que tinham apenas o inconveniente de não existir.\n\n--Mas que diabo! eu não sou tolo! dizia o homem comsigo. Pois não serei eu capaz de desempenhar o meu lugar? É exquisito! mas deixal-o, não o deixo eu.»\n\nEm seguida elogiou o estofo, significando-lhes toda a sua admiração pelo desenho e o bem combinado das cores.\n\n--É d'uma magnificencia incomparavel, disse elle ao sultão. E toda a cidade começou a fallar d'esse tecido extraordinario.\n\nEmfim o proprio sultão quiz vel-o emquanto estava no tear. Com um grande acompanhamento de pessoas distinctas, entre as quaes se contavam os dois honrados funccionarios, dirigiu-se para as officinas, em que os dois velhacos teciam continuamente, mas sem fios de seda, nem d'oiro, nem de especie alguma.\n\n--Não acha magnifico? disseram os dois honrados funccionarios. O desenho e as cores são dignos de vossa alteza.»\n\nE apontaram para o tear vasio, como se as outras pessoas que ali estavam podessem ver alguma cousa.\n\n--Que é isto! disse comsigo mesmo o sultão, não vejo nada! É horrível! serei eu tolo, incapaz de governar os meus, estados? Que desgraça que me acontece!» Depois de repente exclamou: «É magnifico! Testemunho-vos a minha satisfação.»\n\nE meneou a cabeça com um ar satisfeito, e olhou para o tear, sem se atrever a declarar a verdade. Todas as pessoas de seu sequito olharam do mesmo modo, uns atraz dos outros, mas sem ver cousa alguma, e no entanto repetiam como o sultão: «É magnifico!» Até lhe aconselharam a que se apresentasse com o fato novo no dia da grande procissão. «É magnifico! é encantador! é admirável!» exclamavam todas as bocas, e a satisfação era geral.\n\nOs dois impostores foram condecorados e receberam o titulo de fidalgos tecelões.\n\nNa vespera do dia da procissão passaram a noite em claro, trabalhando à luz de dezeseis velas. Finalmente fingiram tirar o estofo do tear, cortaram-o com umas grandes tesouras, coseram-o com uma agulha sem fio, e declararam, depois d'isto, que estava o vestuario concluido.\n\nO sultão com os seus ajudantes de campo foi examinal-o, e os impostores levantando um braço, como para sustentar alguma cousa, disseram:\n\n«Eis as calças, eis a casaca, eis o manto. Leve como uma teia d'aranha; ó a principal virtude d'este tecido.»\n\n--Decerto, respondiam os ajudantes de campo, sem ver coisa alguma.\n\n--Se vossa alteza se dignasse despir-se, disseram os larapios, provar-lhe-iamos o fato deante do espelho.»\n\nO sultão despiu-se, e os tratantes fingiram apresentar-lhe as calças, depois a casaca, depois o manto. O sultão tudo era voltar-se defronte do espelho.\n\n--Como lhe fica bem! que talhe elegante! exclamaram todos os cortezãos. Que desenho! que cores! que vestuário incomparavel!»\n\nNisto entrou o grão-mestre de ceremonias.\n\n--Está á porta o docel sobre que vossa alteza deve assistir á procissão, disse elle.»\n\n--Bom! estou prompto, respondeu o sultão. Parece-me que não vou mal.»\n\nE voltou-se ainda uma vez deante do espelho, para ver bem o effeito do seu esplendor. Os camaristas que deviam levar a cauda do manto, não querendo confessar que não viam absolutamente nada, fingiam arregaçal-a.\n\nE, emquanto o sultão caminhava altivo sob um docel deslumbrante, toda a gente na rua e ás janellas exclamava: «Que vestuario magnifico! Que cauda tão graciosa! Que talhe elegante!» Ninguem queria dar a perceber, que não via nada, porque isso equivalia a confessar que se era tolo. Nunca os fatos do sultão tinham sido tão admirados.\n\n--Mas parece que vae em cuecas», observou um pequerrucho, ao collo do pae.\n\n--É a voz da innocencia, disse o pae.\n\n--Ha ali uma creança que diz que o sultão vae em cuecas.\n\n«Vae em cuecas! vae em cuecas!» exclamou o povo finalmente.\n\nO sultão ficou muito afflicto porque lhe pareceu que realmente era verdade. Entretanto tomou a energica resolução de ir até ao fim, e os camaristas submissos continuaram a levar com respeito a cauda imaginaria.",
+      "sourceRef": "junqueiro-o-fato-novo-do-sultao",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "summarise",
+      "audience": "un amigo hispanohablante que no ha leído esta versión",
+      "instructionsEs": "Resume el cuento en español. La versión de Junqueiro tiene sus detalles: no te los inventes ni los suavices — y el final no es donde crees.",
+      "wordRange": {
+        "min": 60,
+        "max": 100
+      },
+      "rubric": [
+        "¿Recoge la estafa: dos pícaros venden al sultán una tela que dicen invisible para los tontos y para quien no sirve en su cargo — y tejen con telares vacíos?",
+        "¿Recoge la cadena del miedo: ministro, funcionario, el propio sultán y toda la corte alaban lo que no ven, por no pasar por tontos o incapaces?",
+        "¿Recoge el final A LA LETRA: un niño dice que va en calzoncillos, el pueblo lo corea — y el sultán, afligido, DECIDE seguir hasta el final, con los chambelanes sujetando la cola imaginaria?",
+        "¿Está en español, entre 60 y 100 palabras, sin traducir literalmente frases enteras?"
+      ],
+      "modelAnswer": "Dos pícaros se hacen pasar por tejedores y venden al sultán una tela\nmaravillosa: invisible para los tontos y para quien no sirva en su\ncargo. Tejen con los telares vacíos, y nadie — ni el viejo ministro,\nni el funcionario, ni el propio sultán — se atreve a confesar que no\nve nada, por no pasar por tonto o incapaz. El día de la procesión,\nun niño suelta que el sultán va en calzoncillos y el pueblo entero\nlo corea; el sultán, afligido, decide seguir hasta el final, con los\nchambelanes sujetando con respeto la cola que no existe."
+    }
+  },
+  {
+    "id": "b2c2-med-94",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-lote8",
+      "anti-calco"
+    ],
+    "contentHash": "cf32427bf07f87cbd4546a95a6f2e7bee6b8fe119719a6b83fed203333a607d6",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Era uma vez vinte e cinco soldados de chumbo, todos irmãos, por todos terem nascido da mesma colher de chumbo. Vêde-os: que attitude marcial, d'espingarda ao hombro, olhar fixo, e ricos uniformes azues e vermelhos! A primeira coisa que ouviram n'este mundo, quando se levantou a tampa da caixa em que elles estavam, foi este grito: «Olha soldados de chumbo!» que soltou um rapazito, batendo as palmas d'alegria. Tinham-lh'os dado de presente no dia dos annos, e o seu divertimento era formal-os sobre a mesa, em linha de batalha. Todos os soldados se pareciam maravilhosamente uns com os outros, excepto um, que tinha uma perna de menos, porque o tinham deitado na fôrma em ultimo lugar, e já não havia chumbo sufficiente. Apesar d'este defeito, os outros não estavam mais firmes nas duas pernas do que elle na sua unica, e é este o que precisamente nos interessa.\n\nSobre a meza em que os nossos soldados estavam formados havia mil outros brinquedos, mas o mais bonito de todos, era um lindissimo castello de papel. Pelas suas pequeninas janellas via-se-lhe o interior dos salões. Á volta era circumdado d'uma floresta em miniatura, que se reflectia poeticamente n'um pedaço d'espelho que fingia um lago, onde nadavam pequeninos cysnes de cêra. Tudo isto era encantador, mas não tanto como uma menina que estava á porta, e que era tambem de papel, vestida com um lindo vestido de cassa, apertado com um cinto de fivela azul. A menina tinha os braços arqueados, porque era dançarina, e tinha uma perninha levantada a tal altura, que o soldado de chumbo não a podia ver, e imaginou que, como elle, não tinha senão uma perna.\n\n--Ali está a mulher que me convém, pensou elle, mas é uma grande fidalga. Mora n'um palacio, eu n'uma caixa em companhia de vinte e quatro camaradas, e não haveria cá lugar pura ella. No entantanto preciso conhecel-a.»\n\nDeitou-se atraz d'uma caixa de tabaco, e d'ali podia ver á sua vontade a elegante dançarina, que estava sempre n'um pé só, sem perder o equilibrio.\n\nÁ noite todos os outros soldados foram mettidos na caixa, e as pessoas da casa foram deitar-se. Apenas os brinquedos perceberam isto, começaram a divertir-se, fizeram guerras, e a final deram um baile. Os soldados de chumbo mexiam-se, e remexiam-se na sua caixa, porque queriam lá ir; mas como haviam elles tirar a tampa? O quebra-nozes começou a dar cabriolas e saltos mortaes, o lapis traçou mil arabescos phantasticos n'uma louza, emfim o barulho tornou-se tal que o canario accordou, e poz-se a cantar. Os unicos que estavam quietos eram o soldado de chumbo e a dançarinasinha. Ella no bico do pé, e elle n'uma perna só, a espreital-a.\n\nDeu meia noite, e zás, a tampa da caixa de rapé levanta-se, e em lugar de rapé, saiu um feiticeirosinho preto. Era um brinquedo de surpreza.\n\n--Soldado de chumbo, disse o feiticeiro, trata de olhar para outro sitio.»\n\nMas o soldado fez que não ouvia.\n\n--Espera até ámanhã, e verás o que te acontece, continuou o feiticeiro.»\n\nNo dia seguinte, quando os pequenos se levantaram, puzeram o soldado de chumbo á janella, mas de repente ou por influencia do feiticeiro ou por causa do vento caiu á rua de cabeça para baixo. Que tombo! Ficou com a perna no ar, o peso do corpo todo sobre a barretina, e com a bayoneta enterrada entre duas lages.\n\nA creada e o rapazito foram lá abaixo procural-o, mas estiveram quasi a esmagal-o, sem darem por elle. Se o soldado tivesse gritado: «Cautella!» tel-o-íam achado, mas elle julgou que seria deshonrar a farda. A chuva começou a cair em torrentes, e tornou-se n'um verdadeiro diluvio. Depois do aguaceiro passaram dois garotos.\n\n--Olà! disse um d'elles, um soldado de chumbo por aqui! Vamos fazel-o navegar.»\n\nConstruiram um barco d'um bocado de jornal velho, metteram o soldado de chumbo dentro, e obrigaram-n'o a descer pelo regato abaixo. Os dois garotos corriam ao lado, e davam grito de prazer. Que ondas! Santo Deus! Que força de corrente! Mas tambem tinha chovido tanto! O barco jogava d'uma maneira horrorosa, mas o soldado de chumbo conservava-se impassivel, com os olhos fixos e a espingarda ao hombro.\n\nDe repente o barco foi levado para um cano, onde era tão grande a escuridão como na caixa dos soldados.\n\n--Onde irei eu parar? pensou elle. Foi o tratante do feiticeiro que me metteu n'estes trabalhos. Se, apesar de tudo, aquella linda menina estivesse no barco, não importava, ainda que a escuridão fosse duas vezes maior.»\n\nD'ali a pouco apresentou-se um enorme rato d'agua; era um habitante do cano.\n\n--Venha o teu passaporte.»\n\nMas o soldado de chumbo não disse nada, e agarrou com mais força na espingarda. O barco continuava o seu caminho, e o rato perseguia-o, rangendo os dentes, e gritando ás palhas, e aos cavacos:--Façam-n'o parar, façam-n'o parar! Não pagou a passagem, não mostrou o passaporte.»\n\nMas a corrente era cada vez maior, o soldado via já a luz do dia, e sentia ao mesmo tempo um barulho capaz d'assustar o homem mais valente. Havia na extremidade do cano uma queda d'agua tão perigosa para elle, como é para nós uma catarata. Aproximava-se d'ella cada vez mais, sem poder parar, com uma rapidez vertiginosa. O barco lançou-se sobre a queda d'agua, e o pobre soldado firmava-se o mais possivel, e ninguem se atreveria a dizer que o tinha visto fechar os olhos com o susto.\n\nO barco, depois de ter andado á roda durante muito tempo, encheu-se d'agua, e estava a ponto de naufragar. A agua já chegava ao pescoço do soldado, e o barco afundava-se cada vez mais. O papel desdobrou-se, e a agua passou por cima da cabeça do nosso heroe. N'esse momento supremo, pensou na gentil dançarinasinha, e pareceu-lhe ouvir uma voz que dizia:\n\n--Soldado: o perigo é enorme, a morte espera-te.»\n\nO papel rasgou-se, e o soldado passou atravez d'elle. N'esse momento foi devorado por um grande peixe.\n\nLá é que era escuro, ainda mais que dentro do cano. E além d'isso, que talas em que elle estava mettido! Mas, sempre intrepido, o soldado estendeu-se ao comprido com a espingarda ao hombro.\n\nO peixe mexia-se e remexia-se, dava saltos de metter medo, até que emfim parou, e pareceu que o atravessava um relampago. Appareceu a luz do dia, e alguem exclamou:\n\n--Olha um soldado de chumbo!»\n\nO peixe tinha sido pescado, exposto na praça, vendido, e levado para a cosinha, e a cosinheira tinha-o aberto com uma enorme faca. Pegou no soldado de chumbo com dois dedos, e levou-o para a sala, onde toda a gente quiz admirar esse homem extraordinario, que tinha viajado na barriga d'um peixe. No entretanto o soldado não se sentia orgulhoso. Collocaram-n'o em cima da meza, e ali--tanto é verdade que acontecem cousas extraordinarias n'este mundo--achou-se na mesma sala, de cuja janella tinha caido. Reconheceu os pequenos e os brinquedos que estavam em cima da meza, o lindo palacio, e a adoravel dançarina sempre de perna no ar. O soldado de chumbo ficou tão commovido, que de boa vontade teria derramado lagrimas de chumbo, mas não era conveniente. Olhou para ella, ella olhou para elle, mas não disseram uma palavra um ao outro.\n\nDe repente um dos pequenos pegou n'elle, e sem motivo algum deitou-o no fogão; eram obras do feiticeiro da caixa do rapé.\n\nO soldado de chumbo lá estava perfilado, allumiado por um clarão sinistro, e soffrendo um calor terrivel. Todas as côres lhe tinham desapparecido, sem que se podesse dizer, se era por causa das suas viagens, ou por causa dos seus desgostos. Continuava a olhar para a dançarina, que tambem olhava para elle. Sentia-se derreter, mas, sempre intrepido, conservava a espingarda ao hombro. De repente abriu-se uma porta, o vento arremeçou a dançarina ao fogão para junto do soldado, que desappareceu no meio das lavaredas. O soldado de chumbo, já não era mais que uma pequena massa informe.\n\nNo dia seguinte, quando a creada veiu tirar a cinza, encontrou um objecto que tinha o feitio d'um pequeno coração de chumbo, e tudo o que restava da dançarina era a fivela do cinto azul que o lume tinha ennegrecido.",
+      "sourceRef": "junqueiro-o-valente-soldado-de-chumbo",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "summarise",
+      "audience": "um amigo teu, português, que não leu o conto",
+      "instructionsEs": "Cuéntale la historia en portugués — el viaje entero y lo que queda al final, que es lo que no se puede perder.",
+      "wordRange": {
+        "min": 55,
+        "max": 95
+      },
+      "rubric": [
+        "¿Recoge el arranque: el soldadito de una sola pierna se enamora de la bailarina de papel (y se convence de que ella también tiene una sola)?",
+        "¿Recoge el viaje: cae de la ventana, navega en un barco de papel, un ratón le exige el pasaporte en el caño, lo traga un pez — y el pez acaba en la cocina de la MISMA casa?",
+        "¿Recoge el final a la letra: un niño lo tira a la estufa sin motivo, el viento arroja a la bailarina tras él, y quedan un corazoncito de plomo y la hebilla ennegrecida?",
+        "¿Está en portugués, entre 55 y 95 palabras, con tuteo?",
+        "¿Evita copiar más de 6 palabras seguidas del original?"
+      ],
+      "modelAnswer": "Olha, é um soldadinho de chumbo com uma perna só que se apaixona\npela bailarina de papel — convence-se de que ela também só tem uma.\nCai da janela, desce o regato num barquinho de papel, um rato do\ncano exige-lhe o passaporte, um peixe engole-o… e o peixe vai parar\nà cozinha da MESMA casa. No fim, um miúdo atira-o ao fogão sem razão\nnenhuma e o vento manda a bailarina atrás dele — e sabes o que fica?\nUm coraçãozinho de chumbo; dela, a fivela enegrecida."
+    }
+  },
+  {
+    "id": "b2c2-med-95",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-lote8",
+      "anti-calco"
+    ],
+    "contentHash": "7f5d872e9028eac5920571ccf1d67c73a10d904c5fba9455bbd31c47fdb9b898",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
+    "register": "informal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "João era filho d'uma pobre viuva, bom rapaz, mas um pouco simplorio. A gente da aldeia chamava-lhe por brincadeira João Pateta. Um dia sua mãe mandou-o á feira comprar uma foice. Á volta, começou a andar com a foice á roda, de maneira que a foice caiu em cima d'uma ovelha, e matou-a.\n\n--Pateta, disse-lhe sua mãe, o que deverias ter feito era pôr a foice em um dos carros de palha ou de feno d'algum dos visinhos.»\n\n--Perdão, mãe, respondeu humildemente João, para a outra vez serei mais esperto.»\n\nNa semana seguinte mandaram-n'o comprar agulhas, recommendando-lhe que as não perdesse.\n\n--Fique descançada. E voltou todo orgulhoso.»\n\n--Então, João, onde estão as agulhas?»\n\n--Ah! estão em lugar seguro. Quando sahi da loja em que as comprei, ia a passar o carro do visinho carregado de palha; metti lá as agulhas, não podem estar em sitio melhor.»\n\n--De certo, estão em lugar de tal modo seguro, que não ha meio de as tornar a ver. Devias tel-as espetado no chapéo.»\n\n--Perdão, respondeu João, para a outra vez, heide ser mais esperto.»\n\nNa outra semana, por um dia de calor, João foi d'ali uma legua comprar uma pouca de manteiga. Lembrando-se do ultimo conselho de sua mãe, poz a manteiga dentro do chapéo e o chapéo na cabeça. Imagine-se o estado em que voltou para casa, com a cara a escorrer manteiga derretida.\n\nA mãe já tinha medo de o mandar fazer qualquer recado. No entanto um dia resolveu-se a mandal-o á feira vender duas gallinhas.\n\n--Ouve bem, não vendas pelo primeiro preço. Espera que te offereçam outro.»\n\n--Está entendido, respondeu João.»\n\nFoi para a feira. Um freguez chegou-se a elle.\n\n--Queres seis tostões por essas gallinhas?»\n\n--Ora adeus! minha mãe recommendou-me, que não acceitasse o primeiro preço, mas que esperasse o segundo.»\n\n--E tens muita rasão. Dou-te um cruzado.»\n\n--Está bem. Parece-me que tinha feito melhor em acceitar o primeiro, mas, como cumpro as ordens de minha mãe, ella não tem que me ralhar.»\n\nDepois d'isto, João foi condemnado a ficar em casa. Sua mãe sabia que mangavam com elle, e se riam d'ella. Uma manhã quiz fazer uma experiencia, e disse-lhe:\n\n--Vae vender este carneiro á feira. Mas não te deixes enganar. Não o entregues senão a quem te der o preço mais elevado.»\n\n--Está bem, agora entendo, e sei o que hei de fazer.»\n\n--Quanto queres por esse carneiro?\n\n--Minha mãe disse-me que o não vendesse senão pelo preço mais elevado.\n\n--Quatro mil réis?»\n\n--É o preço mais elevado?»\n\n--Pouco mais ou menos.»\n\n--É minha a lã e o carneiro, disse um rapaz que trepára a uma escada.\n\n--Quanto?»\n\n--Dez tostões:»\n\n--É menos, respondeu timidamente o João.»\n\n--Sim, mas vês até onde chega esta escada. Em toda a feira não ha um preço mais elevado.»\n\n--Tem rasão. É seu o carneiro.»\n\nDesde esse dia o João Pateta não tornou a ser encarregado de vender ou comprar cousa alguma.",
+      "sourceRef": "junqueiro-joao-pateta",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "un amigo hispanohablante que leyó el cuento traducido y no pilla el final del carnero",
+      "instructionsEs": "Explícale en español dónde está la gracia del final — qué entendió João y qué quería decir la madre.",
+      "wordRange": {
+        "min": 45,
+        "max": 80
+      },
+      "rubric": [
+        "¿Explica el malentendido: la madre pide vender «al precio más elevado» (= la mejor oferta) y João lo entiende FÍSICAMENTE?",
+        "¿Recoge al chico de la escalera: ofrece MENOS dinero (diez tostones contra los cuatro mil reales) pero desde lo alto — «en toda la feria no hay precio más elevado»?",
+        "¿Remata con el patrón del cuento: João aplica cada consejo al pie de la letra, justo en el contexto donde ya no vale?",
+        "¿Está en español, entre 45 y 80 palabras?"
+      ],
+      "modelAnswer": "La gracia está en «preço mais elevado»: la madre quiere decir la\nmejor oferta, y João lo entiende al pie de la letra — altura física.\nPor eso «gana» el chaval subido a la escalera: ofrece menos dinero,\ndiez tostones contra los cuatro mil reales del otro, pero desde lo\nalto: «en toda la feria no hay precio más elevado». Y ese es el\ncuento entero: João aplica cada consejo, literal, justo donde ya no\nvale."
+    }
+  },
+  {
+    "id": "b2c2-med-96",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-lote8",
+      "anti-calco"
+    ],
+    "contentHash": "4a06888df49ca57af1afec502e2ee36e2707bc3dc5208eaaf6fa5796dbd26748",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Que frio! a neve cahia, e a noite aproximava-se; era o ultimo de dezembro, vespera de Anno Bom. No meio d'este frio e d'esta escuridão passou na rua uma desgracada pequerrucha, com a cabeça descoberta e os pés descalços. É verdade que trazia sapatos ao sair de casa, mas tinham-lhe servido pouco tempo: eram uns grandes sapatos, que sua mãe já tinha usado, tão grandes, que a pequenita perdeu-os ao atravessar a rua a correr, entre duas carruagens. Um dos sapatos perdeu-o realmente; quanto ao outro fugiu-lhe com elle um garotito, com a intenção de fazer d'elle um terço para o seu primeiro filho.\n\nA pequenita caminhava com os pésinhos nús, arroxeados pelo frio; tinha no seu velho avental uma grande quantidade de phosphoros, e levava na mão um masso d'elles. O dia correra-lhe mal; não tinha havido compradores, e por isso não apurára cinco réis.\n\nPobre pequerrucha! que frio e que fome! Os flocos de neve caiam-lhe nos longor cabellos loiros, adoravelmente annelados em volta do pescoço; mas pensava ella porventura nos seus cabellos annelados?\n\nAs luzes brilhavam nas janellas, e sentia-se na rua o cheiro dos manjares; era a vespera de dia de Anno Bom: eis no que ella pensava.\n\nDeixou-se cair a um canto, entre dois muros. O frio enregelava-a cada vez mais, mas não se atrevia a voltar para casa: o pae bater-lhe-ia, porque não tinha vendido os seus phosphoros. Além d'isso em sua casa fazia tanto frio como na rua. Moravam debaixo de um telheiro que o vento atravessava, apezar de o terem calafetado com palha e farrapos. As suas mãosinhas já quasi que as não sentia. Ai! como um phosphorosinho acceso lhe faria bem! Se tirasse do masso apenas um, um unico, e accendendo-o aquecesse os dedos enregelados! Tirou um: ritche! como estoirou! como ardeu! Era uma chamma tepida e clara, como uma pequena lamparina. Que luz exquisita! Parecia-lhe estar sentada defronte de um enorme brazeiro de ferro, cujo lume magnifico aquecia tão suavemente, que era um regalo.\n\nA pequerrucha ia já a estender os pésitos para os aquecer tambem, quando a chamma se apagou repentinamente: achou-se sentada, tendo na mão uma pontita de phosphoro consumido.\n\nAccendeu segundo phosphoro, que ardeu, que brilhou, e o muro onde bateu a sua chamma tornou-se transparente como vidro. Olhando atravez d'esse muro, a pequerrucha viu uma sala com uma meza cobertta de uma toalha alvissima, deslumbrante de finas porcelanas, e sobre a qual uma gallinha assada com recheio de ameixas e de batatas fumegava exhalando um perfume delicioso. Oh surpreza! oh felicidade! De repente a gallinha saltou do prato, e caíu no chão ao pé da pequerrucha, com o garfo e a faca espetada no lombo. N'isto apagou-se o phosphoro, e viu apenas diante de si a parede fria e tenebrosa.\n\nAccendeu terceiro phosphoro, e achou-se immediatamente sentada debaixo de uma magnifica arvore do Natal; era ainda mais rica e maior do que a que tinha visto no anno passado atravez dos vidros de um armazem sumptuoso.\n\nNos ramos verdes brilhavam centenares de balões accesos, e as estampas coloridas, como as que ha ás portas das lojas, pareciam sorrir-lhe. Quando ia agarral-as com as duas mãos, apagou-se o phosphoro; todos os balões da arvore do Natal começaram a subir, a subir, e viu então que se tinha enganado, porque eram estrellas. Caiu uma d'ellas, deixando no ceo um longo rasto de fogo.\n\n--É alguém que está a morrer, disse a pequerrucha; porque a sua avó, que lhe queria tanto, mas que já morrera, dissera-lhe muitas vezes: «Quando cae uma estrella, sobe para Deus uma alma.»\n\nAccendeu ainda outro phosphoro: deu uma grande luz, no meio da qual lhe appareceu sua avó, de pé, com um ar radioso e suavissimo.\n\n--Minha avó, exclamou a pequenita, leva-me comtigo. Eu sei que te vaes embora quando se apagar o phosphoro. Desapparecerás como a panella de ferro, a galinha assada, e a bella arvore do Natal.\n\nAccendeu o rosto do masso, porque não queria que sua avó lhe fugisse, e os phosphoros espalharam um clarão mais vivo que a luz do dia. Nunca sua avó tinha sido tão formosa. Poz ao colo a pequerruchinha, e ambas alegres, no meio d'este deslumbramento, voáram tão alto, tão alto, que já não tinha nem frio, nem fome, nem agonias: haviam chegado ao Paraiso.\n\nMas quando rompeu a fria madrugada, encontráram a pequerrucha, entre os dois muros, ao canto, com as faces incendiadas, o sorriso nos labios... morta, morta de frio na ultima noite do anno. O dia de Anno Bom veiu alumiar o pequenino cadaver, sentado ali com os seus phosphoros, a que faltava um masso, que tinha ardido quasi inteiramente.--Quiz aquecer-se, disse um homem que passou.» E ninguem soube nunca as lindas coisas que ella tinha visto, e no meio de que esplendor tinha entrado com a sua velha avó no dia do Anno Novo.",
+      "sourceRef": "junqueiro-a-rapariguinha-e-os-phosphoros",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "synthesise_sources",
+      "audience": "um amigo teu, português, que não leu nenhum dos dois",
+      "instructionsEs": "Los dos cuentos acaban en el fuego — pero el fuego no cuenta lo mismo. Explícale qué pasa en cada uno y en qué se separan.",
+      "wordRange": {
+        "min": 75,
+        "max": 125
+      },
+      "rubric": [
+        "¿Recoge la cerillera: vende fósforos descalza la última noche del año; cada fósforo le da una visión (el brasero, la cena, el árbol, la abuela) y al alba la encuentran muerta de frío — partió con la abuela, y nadie supo lo que ella vio?",
+        "¿Recoge el soldado: fiel e impasible por caños, peces y crecidas, acaba en la estufa CON la bailarina — y de ellos quedan un corazoncito de plomo y una hebilla?",
+        "¿Señala el contraste: en uno el fuego consuela y se lleva (las visiones, la abuela); en el otro funde a los dos en un único resto de amor?",
+        "¿Está en portugués, entre 75 y 125 palabras, por tu?",
+        "¿Evita copiar más de 6 palabras seguidas de cualquiera de los dos?"
+      ],
+      "modelAnswer": "São dois contos que acabam no lume, mas o lume não diz o mesmo. A\nrapariguinha dos fósforos vende fósforos descalça na última noite do\nano; risca-os um a um e cada chama traz-lhe uma visão — a braseira,\no jantar, a árvore, a avó — até que de madrugada a encontram morta\nde frio, a sorrir: partiu com a avó, e ninguém soube o que ela viu.\nO soldadinho de chumbo atravessa canos, cheias e a barriga de um\npeixe sempre impassível, e acaba atirado ao fogão; o vento manda-lhe\na bailarina, e deles ficam um coraçãozinho de chumbo e uma fivela\nenegrecida. Vês a diferença? Num conto o fogo consola e leva; no\noutro, funde os dois num só resto de amor."
+    }
+  },
+  {
+    "id": "b2c2-med-97",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-lote8",
+      "anti-calco"
+    ],
+    "contentHash": "1c1f891f01c283b3174d57f0a8a33725d2456e54e5fb32ed24576518315e8ddd",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "¡Gracias por quedarte con Kiko! Comida: dos cucharaditas de mixtura\npor la mañana y una hoja de lechuga a mediodía — nada de aguacate,\nque para él es veneno. Cámbiale el agua a diario. Si lo ves embolado\ny quieto mucho rato, llama al veterinario de la esquina, que ya lo\nconoce.",
+      "sourceLang": "es",
+      "targetLang": "pt",
+      "mediationType": "relay",
+      "audience": "a tua irmã portuguesa, que vai tomar conta do periquito contigo",
+      "instructionsEs": "La nota está en español y tu hermana no lo lee. Pásale las instrucciones en portugués — completas: hay una que es de vida o muerte.",
+      "wordRange": {
+        "min": 35,
+        "max": 70
+      },
+      "rubric": [
+        "¿Traslada la comida (dos cucharaditas de mixtura por la mañana + hoja de lechuga a mediodía)?",
+        "¿Traslada la prohibición vital (nada de aguacate — es veneno para él)?",
+        "¿Traslada el agua a diario?",
+        "¿Traslada la condición (si está con las plumas erizadas y muy quieto → llamar al veterinario de la esquina, que lo conoce)?",
+        "¿Portugués natural por tu, entre 35 y 70 palabras?"
+      ],
+      "modelAnswer": "O dono do Kiko deixou instruções: duas colherinhas de mistura de\nmanhã e uma folha de alface ao meio-dia — e nada de abacate, que\npara ele é veneno. Muda-lhe a água todos os dias. E se o vires de\npenas eriçadas e quieto muito tempo, liga ao veterinário da esquina,\nque já o conhece."
+    }
+  },
+  {
+    "id": "b2c2-med-98",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-lote8",
+      "anti-calco"
+    ],
+    "contentHash": "15ba001f4997c642f850a5b479ce8c38d8fdf84ad998b37cf2526bf010a05606",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
+    "register": "informal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Ex.mos inquilinos: nos termos do contrato, comunico a atualização\nanual da renda em 6,92 %, de 650 € para 695 €, com efeitos a 1 de\nnovembro. Caso não pretendam renovar, o contrato prevê comunicação\ncom 60 dias de antecedência. Qualquer esclarecimento, contactem-me\npor esta via.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu compañera de piso española",
+      "instructionsEs": "La carta llegó a tu nombre. Cuéntaselo — los números exactos importan.",
+      "wordRange": {
+        "min": 35,
+        "max": 70
+      },
+      "rubric": [
+        "¿Traslada la subida exacta (6,92 %: de 650 a 695 €, desde el 1 de noviembre)?",
+        "¿Traslada la alternativa con su plazo (si no queremos renovar, hay que avisar con 60 días de antelación)?",
+        "¿Español natural, sin lusismos («renda», «atualização», «inquilinos»), entre 35 y 70 palabras?"
+      ],
+      "modelAnswer": "Carta del casero: nos sube el alquiler un 6,92 % — de 650 a 695\neuros — a partir del 1 de noviembre. Y si no quisiéramos renovar,\nsegún el contrato hay que avisarle con sesenta días de antelación.\nDice que le escribamos por lo que haga falta aclarar. ¿Lo hablamos\nesta noche?"
+    }
+  },
+  {
+    "id": "b2c2-med-99",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-lote8",
+      "anti-calco"
+    ],
+    "contentHash": "d07635e2001d40e4886a9b8873cbd3ba57d3d7b39b9c58a60cd5084619060cd5",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
+    "register": "formal",
+    "address": "V_Exa",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Escreve-lhes tu, que tens melhor mão: que a esplanada do bar aí de\nbaixo agora fecha à uma, que antes era à meia-noite, e que com o\nbarulho não há quem durma de semana. Que ponham outra vez a\nmeia-noite, ou pelo menos que tirem as colunas de fora. E assina\npelos dois.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a Câmara Municipal, no formulário de reclamações, por escrito",
+      "instructionsEs": "Convierte el dictado en la reclamación que se puede enviar de verdad: mismos hechos, registro entero, las DOS peticiones, firmada en nombre de los dos.",
+      "wordRange": {
+        "min": 55,
+        "max": 95
+      },
+      "rubric": [
+        "¿Conserva los hechos: la terraza cierra ahora a la 1h (antes a medianoche) y el ruido impide descansar entre semana?",
+        "¿Formula las DOS peticiones (reponer la medianoche o, en su defecto, retirar los altavoces del exterior)?",
+        "¿Registro formal de reclamación (sin desahogo, impersonal o V. Ex.as), firmada por los dos vecinos?",
+        "¿Cierra con fórmula de cortesía portuguesa?",
+        "¿Entre 55 y 95 palabras?"
+      ],
+      "modelAnswer": "Exmos. Senhores:\nVimos por este meio expor que a esplanada do estabelecimento situado\nna nossa rua encerra atualmente à 1h — anteriormente encerrava à\nmeia-noite — e que o ruído resultante impede o descanso dos\nmoradores durante a semana. Solicitamos que seja reposto o horário\nde encerramento à meia-noite ou, em alternativa, que seja\ndeterminada a remoção das colunas de som do exterior. Subscrevem\nesta reclamação os dois moradores da fração.\nCom os melhores cumprimentos,"
+    }
+  },
+  {
+    "id": "b2c2-med-100",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-lote8",
+      "anti-calco"
+    ],
+    "contentHash": "700f74de608700127f0a1c071d721103433eeb421f6f04a86b743befcf6e128e",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Ata da assembleia de condóminos: 1) aprovada a atualização das\nquotas mensais de 35 € para 38 €, com efeitos a partir de janeiro;\n2) adjudicado o serviço de limpeza à empresa Brilho Norte, com\npassagem às terças e sextas; 3) deliberado que os objetos pessoais\ndepositados na garagem comum devem ser removidos até 30 de novembro,\nsob pena de remoção pelos serviços.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "o teu colega de casa — paga ele as quotas e tem a bicicleta na garagem; a limpeza não lhe toca",
+      "instructionsEs": "Del acta, cuéntale SOLO lo que le afecta, en mensaje normal. Ojo con el plazo: dilo como es.",
+      "wordRange": {
+        "min": 30,
+        "max": 65
+      },
+      "rubric": [
+        "¿Traslada las cuotas (de 35 a 38 € desde enero — le toca pagarlas)?",
+        "¿Traslada el garaje con el plazo INCLUSIVO (la bici puede estar hasta el 30 de noviembre; después se la llevan los servicios)?",
+        "¿OMITE lo que no le afecta (la empresa de limpieza y sus días)?",
+        "¿Portugués coloquial por tu, entre 30 y 65 palabras?"
+      ],
+      "modelAnswer": "Duas coisas da assembleia que têm que ver contigo: as quotas sobem\nde 35 para 38 euros a partir de janeiro. E a tua bicicleta pode\nficar na garagem até 30 de novembro — a partir daí, os serviços\nlevam o que lá estiver. O resto da ata não é contigo."
+    }
+  },
+  {
+    "id": "b2c2-med-101",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-lote8",
+      "anti-calco"
+    ],
+    "contentHash": "99d7982aaf1d8b99f1527757831b4d5e890ee6517cf6844a3f715cef905a64e4",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Levei as crianças pra correr na grama do parque, depois sentamos\nnum banco da calçada e paramos numa lanchonete pra tomar um café.\nMuito legal a tarde, viu? Amanhã a gente combina de novo.",
+      "sourceLang": "pt-br",
+      "targetLang": "pt",
+      "mediationType": "cross_variety",
+      "audience": "um amigo teu de Lisboa, tratado por tu",
+      "instructionsEs": "Reescríbelo como lo contaría un lisboeta — mismo contenido, mismo tono.",
+      "wordRange": {
+        "min": 30,
+        "max": 65
+      },
+      "rubric": [
+        "¿Cambia los CUATRO de léxico: grama→**relva**, calçada→**passeio**, lanchonete→**café** (o «pastelaria»), legal→**fixe** (o equivalente europeo)?",
+        "¿Resuelve los coloquiales en forma europea («pra»→para, «sentamos»→sentámo-nos, «a gente combina»→combinamos)?",
+        "¿Mantiene el tono, entre 30 y 65 palabras?"
+      ],
+      "modelAnswer": "Levei as crianças a correr na relva do parque, depois sentámo-nos\nnum banco do passeio e parámos num café para beber qualquer coisa.\nFoi mesmo fixe, a tarde! Amanhã combinamos outra vez, pode ser?"
+    }
+  },
+  {
+    "id": "b2c2-med-102",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-lote8",
+      "anti-calco"
+    ],
+    "contentHash": "446533500a8bb6d22e8da9ad004e7b76f4b06ed43f61234a490832fe1e7fdc3c",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
+    "register": "informal",
+    "address": "voce_BR",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Está tudo tratado para o casamento do Nuno. Apanhamos a autoestrada\nàs nove — leva dinheiro para as portagens — e dou-te boleia até\nÉvora; se te cansares, paramos na berma um bocadinho. A matrícula do\ncarro novo é 22-AB-33, para me reconheceres no parque.",
+      "sourceLang": "pt",
+      "targetLang": "pt-br",
+      "mediationType": "cross_variety",
+      "audience": "o teu primo brasileiro, que também vai ao casamento",
+      "instructionsEs": "Tu primo no entiende medio mensaje. Reescríbeselo en brasileño coloquial — mismo contenido.",
+      "wordRange": {
+        "min": 30,
+        "max": 70
+      },
+      "rubric": [
+        "¿Cambia los CUATRO de léxico: portagens→**pedágios**, boleia→**carona**, matrícula→**placa**, berma→**acostamento** (y de propina, autoestrada→rodovia y parque→estacionamento)?",
+        "¿Adapta tratamiento y colocación a BR («dou-te boleia»→«te dou uma carona», «para me reconheceres»→forma BR natural)?",
+        "¿Coloquial brasileño operativo (você/te, «pra/pro» al menos una vez), entre 30 y 70 palabras?"
+      ],
+      "modelAnswer": "Tá tudo certo pro casamento do Nuno. A gente pega a rodovia às nove\n— leva dinheiro pros pedágios — e te dou uma carona até Évora; se\nvocê cansar, a gente para no acostamento um pouquinho. A placa do\ncarro novo é 22-AB-33, pra você me reconhecer no estacionamento."
+    }
+  },
+  {
+    "id": "b2c2-med-103",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-lote8",
+      "anti-calco"
+    ],
+    "contentHash": "efcdf69c75f57912aba40ab542704e3c2c7ab7a6e1ea65ad5595ce1aea4dd17a",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "— ¿Doce uvas a medianoche? ¿Y eso?\n— En España, con cada campanada del 31 te comes una uva. Si llegas a\nlas doce, dicen que el año entra con suerte.",
+      "sourceLang": "es",
+      "targetLang": "pt",
+      "mediationType": "explain_concept",
+      "audience": "uma amiga portuguesa que vai passar a passagem de ano a Madrid",
+      "instructionsEs": "Explícale EN PORTUGUÉS el ritual — qué se hace, qué significa, y un consejo práctico de quien lo ha vivido.",
+      "wordRange": {
+        "min": 35,
+        "max": 65
+      },
+      "rubric": [
+        "¿Explica el ritual (doce uvas, una por campanada, a medianoche del 31)?",
+        "¿Explica el sentido (terminarlas = suerte para el año que entra)?",
+        "¿Da un consejo práctico (uvas pequeñas o sin pepitas, tenerlas listas antes — las campanadas no esperan)?",
+        "¿Está en portugués, entre 35 y 65 palabras, por tu?"
+      ],
+      "modelAnswer": "Em Espanha, na noite de 31, comem-se doze uvas ao ritmo das doze\nbadaladas da meia-noite — uma por badalada. Quem as conseguir acabar\ntodas, diz-se, entra no ano com sorte. Vai preparada: uvas pequenas\ne sem grainhas, já contadas no copo, porque as badaladas não esperam\npor ninguém."
+    }
+  },
+  {
+    "id": "b2c2-med-104",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-registro"
+    ],
+    "tags": [
+      "b2c2-lote8",
+      "anti-calco"
+    ],
+    "contentHash": "9e203b0ec915c4f1d230eb97a1c4d0640eb45c52d5d8008031e644748f750d82",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
+    "register": "neutro",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Deixe-me agora, leitor, contar-lhe uma historia--a historia d'uma boneca!\n\nNão ha muitos annos, mas ainda não era a cordoaria do Porto o ameno jardim, onde a infancia folga por entre macissos de flores e sob o sorriso do sol, sem que lhe ennegreça o espirito a vista dos dois monumentos, que a meu ver symbolisam as duas mais horriveis calamidades, que podem aniquillar um homem--o hospital e a cadeia!--ainda não ha muitos annos, repito, estava eu, uma noite, encostado a uma barraca da feira, divertindo-me a meu modo.\n\nCançado das innumeras figuras, que tinha visto passar por aquella especie de lanterna magica, dispunha-me a dar por findo o espectaculo, quando novos personagens me chamaram a attenção.\n\nEram os meus visinhos ricos.\n\nAqui é preciso uma rapida explicação.\n\nDas famílias da minha visinhança, só conheço tres.\n\nQual d'estas tres familias será mais feliz?...\n\nPelo que tenho notado, não tem que invejar umas ás outras.\n\nSão todas felizes; cada qual a seu modo.\n\nVi, pois, chegar os meus visinhos ricos.\n\nParou o carro, o creado saltou da almofada e veio, de chapéu na mão e dorso ligeiramente curvado, abrir a portinhola; o meu visinho saltou, tomou nos braços a filhinha e depol-a no chão, e offerecendo, em seguida, a mão á esposa, para a ajudar a apeiar, dirigiu-se com ella e com a menina para a barraca onde eu estava.\n\nNão havia ali segredo a surprehender.\n\nHavia um homem, exemplar como marido, rico, doido pela filha, e que parecia agradecer áquella formosa criança a manifestação de qualquer desejo.\n\nNo fim de meia hora possuia a minha pequena, visinha com que fazer a felicidade de dez crianças menos abastadas.\n\nTinha o necessario para montar completamente a casa d'uma boneca... rica.\n\nFaltava apenas a dona da casa--a boneca.\n\nTodo risos e attenções, o logista apresentou o que tinha de melhor.\n\nDepois de muita hesitação e de, já com os olhos, já com a voz, consultar a mamã, a gentil creança acabou por escolher uma magnifica boneca de dois palmos d'altura, com cabello em bandeaux e olhos azues.\n\nUma boneca como as outras: cabeça e collo de massa, corpo de pellica recheada, braços e pernas de páu.\n\nUma vive na loja da casa, que habito. É uma tribu de crianças, que fazem o martyrio e a alegria da pobre mãe, e tem por chefe um honrado sapateiro.\n\nAlguns d'elles, se andassem limpos, seriam encantadores; assim, parecem anjos, caidos do céo sobre um monte de lama.\n\nSão os meus visinhos pobres.\n\nA segunda compõe-se de marido, mulher e filha, e occupa a casa immediata.\n\nÉ como se costuma dizer, gente que vae muito bem com a sua vida.\n\nA filha que terá dez annos, tem d'estas faces rosadas, rijas e carnudas, cuja solidez a gente gosta de experimentar com o dedo, e que resistem à pressão.\n\nSão os meus visinhos remediados.\n\nA terceira é a dos meus visinhos ricos.\n\nCasa nobre, jardim espaçoso, cavallos, creados, nome inscripto nas listas dos accionistas de todos os bancos e no rol dos credores do estado--nada falta áquella ditosa gente!\n\nCompõe-se egualmente de marido, mulher e filha.\n\nQue formosa criança!... Terá oito annos.\n\nFranzina e pallida, com os cabellos negros, os olhos grandes e scismadores, nunca lhe contemplo as pequeninas mãos de dedos compridos e esguios, terminados por unhas d'uma côr de rosa transparente, que não sinta antecipada inveja do feliz namorado--provavelmente ainda a crescer--que hade um dia ter o direito de lh'as cobrir de beijos.\n\nFeita a compra, o pai pagou, chamou o creado, e este mudou todas aquellas preciosidades de sobre o balcão da barraca para dentro do carro.\n\nA boneca teve a honra de ser transportada pela aristocratica criança.\n\nSaí d'ali, logo que o trem rodou, e fui fazendo até casa variadissimas considerações, suggeridas pela quasi indiferença, com que aquella menina recebèra brinquedos, que representavam um par de moedas.\n\nQue contraste com os olhares de cubiça, com que outras raparigas da mesma idade namoravam uma d'estas bonecas de cabeça de panno, horrivel artefacto portuguez, em que os olhos são representados por dois pontos de linha azul, o nariz por um alinhavo de retroz cor de rosa, a boca por outro de fio vermelho, e os cabellos por flocos de lã preta!\n\nQuando cheguei a casa, já na dos meus visinhos remediados não havia luz.\n\nNa dos meus visinhos pobres, o pai batia a sola, cantando ao som de tres assobios e duas campainhas de barro, com que os anjos, por lavar, provocavam os ralhos da mãe.\n\nQuando, no dia seguinte, cheguei á janella, seriam onze horas da manhã.\n\nNa rua agenciavam nova camada de immundicie os filhos do sapateiro; na casa immediata não se via ninguem--estava a pequena na mestra; no palacio, sentada n'um tapete estendido sobre a ampla pedra da varanda, divertia-se a minha pequena milionaria fazendo rodar, com auxilio d'uma linha, uma magnifica caleche descoberta, puxada por cavallos brancos.\n\nDentro da caleche pavoneava-se a boneca opulentamente vestida.\n\n--«Ahi está a tua caricatura, minha feiticeira!...»--disse eu de mim para mim. «Ensaias nas bonecas o que vês no mundo a que pertences!... Estás a aprender a copiar... Sempre este mundo!...»\n\nRetirei-me da janella.\n\nDurante uma semana vi muitas vezes repetida a mesma scena.\n\nA boneca ostentava todos os dias novas galas, e havia dia em que se vestia tres e quatro vezes!\n\nAo que eu, porém, achava mais graça, era ao respeito com que a dona a tratava!\n\nChamava-lhe sr.ª D. Luiza; dava-lhe excellencia; sustentava finalmente com a boneca um d'estes dialogos de senhoras da alta sociedade, em que se falla de tudo, sem se dizer coisa alguma.\n\nUm dia,--estava eu de costas voltadas para a janella dos meus visinhos ricos--ouvi um grito de susto.\n\nEra devido a um accidente, a que está sujeito quem anda de carro.\n\nVoltára-se este, e a boneca caíra, ferindo a fronte na pedra da janella.\n\nO primeiro movimento da pequena foi beijar e prantear a victima; vendo, porém, que a ferida havia forçosamente de deixar cicatriz, e lembrando-se de que só lhe bastava querer, para que lhe dessem outra nova, agarrou-a pelos pés e ia atiral-a com despeito á rua, quando mais perto de mim bradou voz timida e suplicante:\n\n«Não atire!... Dê-m'a.»\n\nEra a minha pequena visinha da casa pegada, de quem eu não déra fé até então.\n\nAssim invocada, a menina rica franziu levemente as sobrancelhas e lançou um olhar de rainha para o sitio d'onde vinha a supplica.\n\nVendo uma criança, pouco mais ou menos da sua idade, serenou e, encolhendo os hombros, respondeu:\n\n--«Já não presta!... Está esmurrada!...»\n\n--É o mesmo!... Dá-m'a?...--bradou a outra, cujos olhos brilhavam de cubiça.\n\n--«Dou...»--volveu a rica, encolhendo novamente os hombros.\n\nE, caminhando para o canto da varanda, deixou cair a boneca nas mãos da visinha, que tremia, receiosa de que aquelle thesouro fosse despedaçar-se nas lages da rua.\n\nFugiram ambas as pequenas a um tempo: a rica para exigir nova boneca; a outra, para mostrar á mãe a que ella ainda não podia acreditar, que fosse sua!\n\nPor espaço de mezes foi a boneca a principal occupação da nova dona.\n\nA pobre perdêra na troca. Ia longe o tempo em ella se vestia quatro vezes em quatro horas!... Já lhe não davam excellencia! Chamavam-lhe sr.ª D. Anna; fallavam-lhe de arranjos domesticos, do desmazello da creada, da missa das almas, de coisas finalmente, completamente estranhas para ella!\n\nE a desgraçada perdia as côres; os olhos tornavam-se-lhe cada vez menos azues; mas o que mais a desfigurava era a cicatriz, que de dia para dia se tornava mais escura: parecia uma nodoa, um estygma!\n\nNos primeiros tempos, emquanto durou o vestido, que trouxera no corpo, ainda não poderia enganar olhos pouco conhecedores.\n\nNão tardou, porém, que arrebiques de máo gosto, fitas velhas, rendas amarelladas, chapéos impossiveis, viessem contrastar com a elegancia do vestido. Dava ares de se ter equipado ao acaso, na loja d'uma adeleira.\n\nMas o vestido foi-se tornando velho; desappareceu o brilho, e com elle as ondulações do moiré, até que, um bello dia, vi a boneca vestida de cassa---no inverno!--chaile e manta na cabeça.\n\nMuito mal lhe ficava aquillo!... Áquella boneca custava-lhe de certo o vêr-se tão mal arranjada.\n\nEu retirei-me da janella soltando um suspiro, e balbuciei:\n\n--É justo!... Cada qual segundo as suas posses.»\n\nPor esse tempo, entrei em relações com o meu visinho sapateiro.\n\nO honrado homem soubera, que eu me queixara da bulha, que os filhos faziam logo ao amanhecer, e aproveitàra a primeira occasião, para me pedir desculpa.\n\nVendo-me conversar com o honrado pai, tinham-se os filhos animado a aproximar-se de nós e, desde então, nunca saio de casa nem entro, sem grave risco de soffrer as consequencias da sua travessa familiaridade.\n\nEntre os filhos do sapateiro, porém, ha uma pequenita d'onze annos, com quem sympathisei logo á primeira vista.\n\nChama-se Maria.\n\nPor um d'estes acasos da Providencia, que parece ás vezes comprazer-se em crear contrastes, Maria destaca no meio de todos os irmãos.\n\nAcostumado ás travessuras e desalinho dos outros filhos do sapateiro, fiquei devéras pasmado quando o pai m'a apresentou.\n\nE bem verdade que elle conhecia o valor d'aquella criança, porque havia verdadeiro orgulho no olhar do pobre homem quando me disse: «Esta é a minha Maria!»\n\nE tinha razão!\n\nNão podia ser mais discreta do que já n'esse tempo era.\n\n--É quem vale á mãe!...--accrescentou o velho.»--Ali, onde a vê, faz o serviço d'uma mulher!... Ha seis mezes, quando a minha santa esteve doente--bem pensei que não arribasse!--a pequena era quem cosinhava e olhava pelos irmãos!... E caridade como ella tem!?... Olhe que aquella pequena esteve tres dias sem se deitar... ali... ao pé da mãe! Foi preciso eu obrigal-a, que ella não a queria deixar!...»\n\nE o desvanecido pai enxugou, com a manga da camisa, uma lagrima, que, havia muito, hesitava sobre se sim ou não se devia despenhar.\n\nFazia gosto ver aquella pequena com o seu vestidinho de chita escura e a cabeça coberta por um lenço branco.\n\nDesde que o pai me deu tão boas informações da rapariga, nunca mais passei por defronte da porta da loja, sem dar pelo menos os bons dias á pequena.\n\nUma vez recolhia eu para jantar, quando vi a Mariquitas, com uma boneca deitada nos joelhos.\n\n--Eu conheço aquella boneca!...--disse eu de mim para mim.\n\nE, não podendo resistir á curiosidade, bradei:\n\n--Ó Maricas!... Quem te deu a boneca?...\n\nFoi ali a menina da visinha!--respondeu a pequenita, córando de prazer.\n\nEra escusado dizer-m'o.\n\nMaria pegara na boneca e voltára-a de face para mim. Não podia duvidar... Era ella; lá estava a mancha, o estygma cada vez mais visivel na fronte.\n\nDe tempos a tempos, nas raras horas de descanço, Maria entretinha-se com ella.\n\n--Quem te viu e quem te vê!...--pensava eu.\n\nÁs vezes, se Maria se descuidava e os irmãos lh'a podiam apanhar, que tratos que sofria a desgraçada!\n\nRoçada por aquellas mãos, de que um carvoeiro se envergonharia, empregada como pella, submettida a torturas, era, ainda assim, singularissimo o aspecto da triste!\n\nDava ares d'uma duqueza que, por necessidade, houve sido levada a fraternisar com o povo.\n\nA misera mudára mais uma vez de nome!...\n\nDe sr.ª D. Anna passara a ser sr.ª Rosinha e tratavam-n'a por vocemecê.\n\nTrajava vestido de chita, capote velho de panno verde e lenço na cabeça.\n\nEra um prazer para mim o escutar as conversas, que Maria sustentava com a boneca.\n\nEsta, umas vezes, representava o papel de mulher casada, e Maria, encarregando-se de perguntar e responder por ella, obrigava a pobre boneca a lastimar-se por estar tudo tão caro, por haver falta de trabalho, por ter os filhos doentes, todos os assumptos, finalmente, que mais familiares eram á pequena.\n\nOutra vezes passava a boneca a ser creada de servir. Reprehendiam-n'a, mandavam-n'a buscar agua á fonte, pagavam-lhe, regateando, a soldada, e acabavam por a despedir.\n\nJá o leitor vê que, apesar da bondade Maria, deixára de ser feliz.\n\nIam longe os bons tempos em que ella, rica, morava no palacio visinho!\n\nDesmaiada de côres, quasi perdido o cabello, semi-apagados os olhos, desfeito o carmim dos labios, a boneca não promettia longa duração.\n\nFoi este pelo menos, o prognostico que fiz a ultima vez que a vi, tentando em vão agradar á ultima dona que o seu destino lhe dera.\n\nCoitada!... Bem longe estava de lhe imaginar o fim!\n\nUm dia chovia a cantaros!--o enxurro, mal cabendo nas valetas da rua, espadanava em cachão para cima dos passeios, arastando na passagem mil immundicies.\n\nEu estava á porta de casa, esperando que a chuva cessasse, e olhava melancolicamente para a agua negra, que corria. Nisto ouvi um grito, que partia da loja do sapateiro. Voltei machinalmente o rosto... Um objecto, arremessado de dentro da loja, atravessou o espaço voando, e foi cair no leito do enxurro...\n\nOlhei... Era a boneca!...\n\nA misera, arrastada pela agua, vogou rua abaixo até esbarrar n'uma pedra; mas o redemoinho envolveu-a, e, depois de a fazer girar tres ou quatro vezes, obrigou-a a passar pelo estreito, traçado entre a pedra e o passeio, e a triste seguiu no fio da corrente, até ir sumir-se nas profundezas da primeira boca de lobo, que encontrou na passagem!\n\nSerá pieguice, será o que o leitor quizer; mas, confesso-lhe, que me impressionou o fim da pobre boneca.\n\nMal passou a chuva, desci o degrau da porta e, chegado á vidraça do sapateiro, perguntei com voz involuntariamente severa:\n\n--Porque deitaste fóra a boneca, Maricas!?\n\n--Não fui eu...--balbuciou a pequena, chorando.--Foi ali o Joaquim!...\n\n--E porque fizeste tu aquillo, Joaquim?...\n\n--Ora!...--respondeu o garoto com enfado.--Ora!... Estava velha... e feia!...\n\nCurvei a cabeça ante aquella razão, e segui o meu caminho.\n\nPobre boneca!",
+      "sourceRef": "junqueiro-a-boneca",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "summarise",
+      "audience": "un amigo hispanohablante que no ha leído el cuento",
+      "instructionsEs": "Resume la historia de la muñeca — el viaje entre casas, cómo cambia lo que le llaman, y el final tal cual es.",
+      "wordRange": {
+        "min": 60,
+        "max": 100
+      },
+      "rubric": [
+        "¿Recoge el viaje de la muñeca por las tres familias vecinas: la niña rica la compra, y tras la caída la regala; acaba con Maria, la hija del zapatero?",
+        "¿Recoge que el TRATO baja con ella A LA LETRA: de «señora doña Luiza» con excelencia, a «señora doña Ana» a secas, y al final «señora Rosinha», de vocemecê (el «señora» no lo pierde nunca; pierde la excelencia y luego el «doña»)?",
+        "¿Recoge la cicatriz de la frente como marca/estigma que se va oscureciendo?",
+        "¿Recoge el final a la letra: su hermanito Joaquim la tira a la riada — «estaba vieja… y fea» — y la corriente se la traga por la alcantarilla?",
+        "¿Está en español, entre 60 y 100 palabras, sin inventar nada?"
+      ],
+      "modelAnswer": "Un vecino observador cuenta la vida de una muñeca. La niña rica la\ncompra; una caída le deja cicatriz y la regala con desdén a la\nvecina, y de ahí acaba con Maria, la hija del zapatero. Con cada\ncasa baja hasta en el nombre: de «señora doña Luiza», con\nexcelencia, a «señora doña Ana» a secas, y al final «señora\nRosinha», de vocemecê. Con el estigma cada día más oscuro, termina\ncuando el hermanito de Maria, Joaquim, la tira a la riada — «estaba\nvieja… y fea» — y la corriente se la traga por la alcantarilla."
     }
   }
 ]
