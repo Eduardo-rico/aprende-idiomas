@@ -6780,5 +6780,983 @@
       ],
       "modelAnswer": "Tens uma encomenda grande à tua espera! Está com a D. Maruja, a\nvizinha do terceiro andar — o carteiro não a quis deixar no portal.\nPassa por lá quando quiseres, mas antes das nove, que depois ela se\ndeita. Se não estiver, liga-lhe: 611 22 33 44."
     }
+  },
+  {
+    "id": "b2c2-med-69",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:portal-infra",
+      "datos:dia+franja+condicion+contacto",
+      "mod:condicional"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "6a40bbf3438072fabb43ea39c6534f416ed8c4bbeed8a72d90e00cfdaec63230",
+    "data": {
+      "sourceText": "Inspeção periódica obrigatória da rede de gás: quinta-feira, dia\n11, entre as 9h e as 13h, os técnicos visitarão todas as frações. É\nindispensável a presença de um adulto. Caso não possa estar\npresente, reagende até dia 9 pelo 210 340 500; a segunda visita é\ncobrada ao morador.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu compañera de piso española",
+      "instructionsEs": "El aviso está en el portal. Cuéntaselo — uno de los dos tiene que estar ese día.",
+      "wordRange": {
+        "min": 35,
+        "max": 70
+      },
+      "rubric": [
+        "¿Traslada el día y la franja (jueves 11, de 9 a 13, revisión obligatoria del gas piso por piso)?",
+        "¿Traslada que tiene que haber un adulto en casa?",
+        "¿Traslada la condición completa (si no podemos, reagendar hasta el día 9 al 210 340 500; la segunda visita se cobra)?",
+        "¿Español natural, sin lusismos («frações», «morador»), entre 35 y 70 palabras?"
+      ],
+      "modelAnswer": "Oye, el jueves 11 pasan los técnicos del gas por todos los pisos,\nentre las nueve y la una — es la revisión obligatoria y tiene que\nhaber un adulto en casa. Si ese día no podemos ninguno, hay que\nreagendar como muy tarde el día 9 llamando al 210 340 500; si no, la\nsegunda visita nos la cobran."
+    }
+  },
+  {
+    "id": "b2c2-med-70",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:portal-infra",
+      "datos:dia+dia+accion",
+      "mod:corregido"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "35dca658a253a6ef28d6d4dbc28f8f9266ccebed169aad289390a43a4d585d54",
+    "data": {
+      "sourceText": "[Aviso de segunda-feira] A partir da próxima semana, a recolha de\nlixo indiferenciado passa de terças e sábados para QUARTAS e\nsábados. Os contentores devem ir para a rua só depois das 20h.\n\n[Aviso de hoje] RETIFICAÇÃO: mantém-se a recolha de terça-feira. A\nalteração é só ao sábado, que passa para DOMINGO de manhã.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu compañero de piso español, que saca la basura",
+      "instructionsEs": "Los dos avisos están en el tablón. UN solo mensaje con el estado final — sin rastro del dato caducado como vigente.",
+      "wordRange": {
+        "min": 30,
+        "max": 65
+      },
+      "rubric": [
+        "¿El estado final es el correcto: se mantiene el MARTES y el sábado pasa a DOMINGO por la mañana (el «miércoles» del primer aviso no aparece como vigente)?",
+        "¿Conserva la acción (contenedores a la calle solo después de las 20h)?",
+        "¿Español natural, sin lusismos («recolha», «indiferenciado», «contentores»), entre 30 y 65 palabras?"
+      ],
+      "modelAnswer": "Al final la basura queda así: martes como siempre, y lo del sábado\npasa al domingo por la mañana — olvídate del miércoles que pusieron\nprimero, lo han rectificado. Y sigue igual lo de sacar los cubos\nsolo a partir de las ocho de la tarde."
+    }
+  },
+  {
+    "id": "b2c2-med-71",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:portal-infra",
+      "datos:dia+franja+lugar+accion",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "9be4bc46ef244f9e19bdedec03fec2b3d1becc60db50b55b433c1c602779b240",
+    "data": {
+      "sourceText": "Por motivos de segurança, a fechadura da porta principal será\nsubstituída na segunda-feira, dia 15. As chaves novas podem ser\nlevantadas na portaria, das 17h às 20h, mediante assinatura. A\nchave antiga deixa de funcionar às 22h desse dia.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu amiga española, que llega esa noche de viaje",
+      "instructionsEs": "Ella vuelve el lunes por la noche. Cuéntale lo que le afecta — y en qué orden.",
+      "wordRange": {
+        "min": 30,
+        "max": 65
+      },
+      "rubric": [
+        "¿Traslada que la llave vieja DEJA de funcionar el lunes 15 a las 22h (lo que a ella le afecta primero)?",
+        "¿Traslada dónde y cuándo se recoge la nueva (portería, de 17 a 20, firmando)?",
+        "¿Traslada el motivo/el hecho (cambian la cerradura del portal por seguridad)?",
+        "¿Español natural, sin lusismos («fechadura», «levantar», «portaria» sin resolver), entre 30 y 65 palabras?"
+      ],
+      "modelAnswer": "Importante para el lunes 15: tu llave del portal deja de funcionar esa\nnoche a las diez — cambian la cerradura por seguridad. Las llaves\nnuevas se recogen en portería de cinco a ocho de la tarde, firmando.\nSi llegas más tarde, avísame y te bajo yo la mía."
+    }
+  },
+  {
+    "id": "b2c2-med-72",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:cartel",
+      "datos:dia+franja+accion+condicion",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "8e8abb3bc71c964c5f8461733a194f5f30dc234de8b670e249be492d2c365e6d",
+    "data": {
+      "sourceText": "Obras na via — Rua das Flores encerrada ao trânsito de terça a\nsexta, dias 12 a 15, das 8h às 18h. Proibido estacionar em toda a\nextensão a partir das 7h; as viaturas em infração serão removidas a\nexpensas do proprietário.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu prima española, que aparca ahí su coche de alquiler",
+      "instructionsEs": "El cartel está en la esquina. Cuéntaselo con todo lo que le toca.",
+      "wordRange": {
+        "min": 30,
+        "max": 65
+      },
+      "rubric": [
+        "¿Traslada los días y la franja (calle cerrada al tráfico de martes 12 a viernes 15, de 8 a 18)?",
+        "¿Traslada la prohibición con su hora (prohibido aparcar desde las 7h)?",
+        "¿Traslada la consecuencia (se llevan el coche y lo paga el dueño)?",
+        "¿Español natural, sin lusismos («viaturas», «a expensas» como calco), entre 30 y 65 palabras?"
+      ],
+      "modelAnswer": "Prima, mueve el coche: la Rua das Flores va a estar cerrada por\nobras de martes a viernes (del 12 al 15), de ocho a seis. Y desde\nlas siete de la mañana está prohibido aparcar en toda la calle — al\nque lo deje se lo lleva la grúa y la paga él."
+    }
+  },
+  {
+    "id": "b2c2-med-73",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:cartel",
+      "datos:dia+franja+objeto",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "152bc3a97e3e685b910476e0f09e886082b024bc01a95f7dee0ee1f3da811d90",
+    "data": {
+      "sourceText": "Museu da Cidade — horário de verão: terça a domingo, das 10h às\n18h. Entrada gratuita aos domingos até às 13h. Encerrado às\nsegundas-feiras e feriados.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tus padres, de visita, que quieren ir al museo",
+      "instructionsEs": "El cartel está en la puerta. Diles cuándo pueden ir — y cuándo sale gratis.",
+      "wordRange": {
+        "min": 25,
+        "max": 60
+      },
+      "rubric": [
+        "¿Traslada el horario (de martes a domingo, de 10 a 18)?",
+        "¿Traslada lo gratis (domingos hasta las 13)?",
+        "¿Traslada el cierre (lunes y festivos)?",
+        "¿Español natural, sin lusismos («encerrado», «feriados»), entre 25 y 60 palabras?"
+      ],
+      "modelAnswer": "El museo abre de martes a domingo, de diez a seis. Los lunes y los\nfestivos está cerrado. Y un truco: el domingo por\nla mañana, hasta la una, la entrada es gratis — si vamos pronto nos\nlo ahorramos."
+    }
+  },
+  {
+    "id": "b2c2-med-74",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:cartel",
+      "datos:dia+dia+lugar",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "1b72300dff38fa91a88cfab7f62876354f0033e3b1237c0242a4505ba5206fdf",
+    "data": {
+      "sourceText": "Informa-se que o Mercado Municipal estará encerrado na\nquinta-feira, dia 8, por ser feriado municipal. A banca de peixe\nreabre só no sábado; as restantes bancas funcionam normalmente na\nsexta-feira.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu madre, que está de visita y cocina el jueves",
+      "instructionsEs": "Ella quería comprar pescado el jueves. Cuéntale el cartel — que no haga el viaje en balde.",
+      "wordRange": {
+        "min": 25,
+        "max": 60
+      },
+      "rubric": [
+        "¿Traslada el cierre (mercado cerrado el jueves 8, festivo local)?",
+        "¿Traslada el matiz del pescado (la pescadería no vuelve hasta el SÁBADO)?",
+        "¿Traslada que el resto de puestos abre el viernes con normalidad?",
+        "¿Español natural, sin lusismos («encerrado», «bancas» sin resolver), entre 25 y 60 palabras?"
+      ],
+      "modelAnswer": "Mamá, el jueves 8 ni vayas al mercado: está cerrado por fiesta local.\nY ojo con el pescado — la pescadería no abre hasta el sábado; los\ndemás puestos sí vuelven el viernes normal. Si quieres pescado para\nel jueves, hay que comprarlo antes."
+    }
+  },
+  {
+    "id": "b2c2-med-75",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:sms-servicio",
+      "datos:franja+accion+accion+contacto",
+      "mod:simple",
+      "flag:reordenar",
+      "flag:señuelo"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "12c3a420e2d7c730ad7edc0935867a320ecd4a6356fba99cb907bdd577cc4061",
+    "data": {
+      "sourceText": "NOS informa: intervenção programada na rede de fibra da sua zona\n[incidência TK-58201]. Esta noite, entre as 23h e as 6h, o serviço\nde internet e televisão poderá ficar intermitente. Recomenda-se\ndescarregar antecipadamente conteúdos importantes. Após as 6h, se o\nserviço não voltar, reinicie o router; persistindo, ligue 16990.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu compañera de piso española, que tiene una entrega a medianoche",
+      "instructionsEs": "Le va a pillar de lleno. Lo urgente, primero.",
+      "wordRange": {
+        "min": 35,
+        "max": 70
+      },
+      "rubric": [
+        "¿La PRIMERA frase contiene lo urgente (esta noche, de 23 a 6, el internet puede caerse a ratos)?",
+        "¿Traslada la recomendación (descargar antes lo importante)?",
+        "¿Traslada el después (a partir de las 6, reiniciar el router; si sigue mal, llamar al 16990)?",
+        "¿La respuesta NO incluye el código de incidencia (TK-58201)?",
+        "¿Español natural, sin lusismos («intervenção», «descarregar» como 'descargar' vale), entre 35 y 70 palabras?"
+      ],
+      "modelAnswer": "¡Esta noche se te puede caer internet a ratos entre las once y las seis —\navisa la compañía, obras en la fibra! Con tu entrega a medianoche,\ndescárgate antes todo lo que necesites. Y mañana, si a partir de\nlas seis sigue sin ir, reinicia el router; si ni con esas, hay que\nllamar al 16990."
+    }
+  },
+  {
+    "id": "b2c2-med-76",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:sms-servicio",
+      "datos:objeto+lugar+franja+condicion",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "090d4bc4982da8ce7524ba7163db1d3e21049041ac9d267b27a95d5dad500be6",
+    "data": {
+      "sourceText": "Lavandaria Sol: a sua roupa está pronta. Pode levantá-la no balcão\nda Rua Nova até sábado, das 9h às 19h30. Peças não levantadas no\nprazo de 30 dias revertem para doação.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu padre, que dejó allí las camisas en su visita",
+      "instructionsEs": "El SMS llegó a tu número. Pásaselo — él vuelve a España el domingo.",
+      "wordRange": {
+        "min": 25,
+        "max": 60
+      },
+      "rubric": [
+        "¿Traslada el objeto (su ropa/las camisas, listas)?",
+        "¿Traslada lugar y franja (mostrador de la Rua Nova, hasta el sábado, de 9 a 19:30) — con el apremio de que él se va el domingo?",
+        "¿Traslada la condición (a los 30 días la donan)?",
+        "¿Español natural, sin lusismos («levantar», «peças»), entre 25 y 60 palabras?"
+      ],
+      "modelAnswer": "Papá, tus camisas ya están listas en la lavandería. Tienes que\nrecogerlas como muy tarde el sábado — abren de nueve a siete y\nmedia, en la Rua Nova — porque el domingo ya vuelas. Si se te pasa,\na los treinta días las donan."
+    }
+  },
+  {
+    "id": "b2c2-med-77",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:sms-servicio",
+      "datos:dia+franja+accion+objeto",
+      "mod:simple",
+      "flag:señuelo"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "e936ce7ba833cc36efd3c9afa237cf0c3e7cc9671b84288044e7970310c01dbc",
+    "data": {
+      "sourceText": "Clínica Veterinária Bicho Feliz [ficha 44-C]: lembramos a vacina\nanual do Tico, agendada para quarta-feira, dia 17, às 18h30. O\nanimal deve vir em jejum desde o almoço. Traga o boletim de\nvacinas.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu novia española — el gato es suyo",
+      "instructionsEs": "El SMS llegó a tu móvil. Pásale lo que hay que hacer.",
+      "wordRange": {
+        "min": 25,
+        "max": 60
+      },
+      "rubric": [
+        "¿Traslada la cita (vacuna anual del Tico, miércoles 17, 18:30)?",
+        "¿Traslada la preparación (en ayunas desde la comida)?",
+        "¿Traslada el objeto (llevar la cartilla de vacunas)?",
+        "¿La respuesta NO incluye el número de ficha (44-C)?",
+        "¿Español natural, sin lusismos («boletim», «agendada» vale), entre 25 y 60 palabras?"
+      ],
+      "modelAnswer": "Amor, la vacuna del Tico es el miércoles 17 a las seis y media. Del\nveterinario dicen que no le demos nada de comer desde el mediodía —\ntiene que ir en ayunas — y que llevemos la cartilla de vacunas. ¿Lo\nllevas tú o lo llevo yo?"
+    }
+  },
+  {
+    "id": "b2c2-med-78",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:recado-voz",
+      "datos:objeto+lugar+franja",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "98e33a99850a1c6b21b10a3eeac72f5e6355a8108c2d9840a07476b838ad2f8d",
+    "data": {
+      "sourceText": "Olá vizinho, é a Manuela do segundo. Olhe, começou a chover forte\ne tirei a vossa roupa do estendal — está cá em casa, dobradinha.\nPassem quando quiserem até às dez, ou amanhã de manhã a partir das\noito.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu compañera de piso española, que tendió esa ropa",
+      "instructionsEs": "El recado llegó a tu móvil. Pásaselo.",
+      "wordRange": {
+        "min": 25,
+        "max": 60
+      },
+      "rubric": [
+        "¿Traslada el objeto y el porqué (la vecina recogió nuestra ropa del tendedero porque llovía; la tiene doblada)?",
+        "¿Traslada quién y dónde (Manuela, la del segundo, en su casa)?",
+        "¿Traslada la franja (pasar hasta las 10 de hoy, o mañana desde las 8)?",
+        "¿Español natural, sin lusismos («estendal», «cá»), entre 25 y 60 palabras?"
+      ],
+      "modelAnswer": "¡Qué maja Manuela, la del segundo! Se puso a llover fuerte y nos\nrecogió la ropa del tendedero — la tiene en su casa, doblada y\ntodo. Podemos pasar a buscarla hoy hasta las diez, o mañana por la mañana, a"
+    }
+  },
+  {
+    "id": "b2c2-med-79",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:recado-voz",
+      "datos:dia+accion+condicion+contacto",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "0577874a775f1feddd8386544d097ff81a267549b888acd54ae3113aad503b03",
+    "data": {
+      "sourceText": "Fala o míster do Tomás. No sábado há torneio em Setúbal e\nprecisamos de pais voluntários para o transporte — faltam dois\ncarros. Quem puder, que se inscreva na folha do pavilhão até\nquinta; sem carros suficientes, os miúdos do escalão B ficam de\nfora. Dúvidas, 969 111 222.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu mujer, española — el Tomás es vuestro hijo",
+      "instructionsEs": "El recado del entrenador llegó a tu móvil. Cuéntaselo entero.",
+      "wordRange": {
+        "min": 35,
+        "max": 70
+      },
+      "rubric": [
+        "¿Traslada el qué y el día (torneo en Setúbal el sábado; faltan dos coches de padres voluntarios)?",
+        "¿Traslada la acción con plazo (apuntarse en la hoja del pabellón hasta el jueves)?",
+        "¿Traslada la consecuencia (sin coches, los del grupo B no van)?",
+        "¿Traslada el contacto (dudas al 969 111 222)?",
+        "¿Español natural, sin lusismos («míster» vale como 'entrenador', «escalão», «miúdos»), entre 35 y 70 palabras?"
+      ],
+      "modelAnswer": "Cariño, ha llamado el entrenador del Tomás: el sábado hay torneo en\nSetúbal y faltan dos coches de padres para llevarlos. El que pueda\ntiene que apuntarse en la hoja del pabellón como muy tarde el jueves — si\nno juntan coches, los del grupo B se quedan fuera. Dudas,\nal 969 111 222. ¿Podemos uno de los dos?"
+    }
+  },
+  {
+    "id": "b2c2-med-80",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:recado-voz",
+      "datos:franja+accion+condicion",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "a1c4bdc8fe49899ef58491741f9c98c339d99d2c493f97de666be4461907d5fd",
+    "data": {
+      "sourceText": "Boa tarde, é a D. Amélia, a administradora. Recebemos queixas do\npiano depois das dez da noite. O regulamento permite instrumentos\nsó até às 22h; durante a semana, idealmente até às 21h. Se precisarem\nde mais horas, falem comigo antes de sexta e vemos a sala do rés\ndo chão.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu compañera de piso española, la del piano",
+      "instructionsEs": "El recado es sobre ella. Pásaselo sin dramatizar — trae una salida.",
+      "wordRange": {
+        "min": 30,
+        "max": 65
+      },
+      "rubric": [
+        "¿Traslada la queja y el límite (quejas por el piano después de las diez; el reglamento lo permite solo hasta las 22h, ideal 21h entre semana)?",
+        "¿Traslada la salida (hablar con la administradora antes del viernes; hay una sala en la planta baja)?",
+        "¿Mantiene el tono no dramático que pide la consigna?",
+        "¿Español natural, sin lusismos («rés do chão», «regulamento» vale), entre 30 y 65 palabras?"
+      ],
+      "modelAnswer": "Nada grave: la administradora dice que ha habido quejas por el piano\na partir de las diez. La norma es hasta las diez, y entre semana\nmejor hasta las nueve. Lo bueno: si necesitas más horas, hablas con\nella antes del viernes y os miran lo de la sala de la planta baja."
+    }
+  },
+  {
+    "id": "b2c2-med-81",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:aviso-escolar",
+      "datos:accion+condicion+contacto",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "e9fd98b871569f96104de655df95d6ce2fa7f722516bfe5350f057af05b76891",
+    "data": {
+      "sourceText": "Exmos. Encarregados de Educação: foram detetados casos de\npediculose na turma do 2.º B. Pede-se a verificação diária da\ncabeça das crianças durante duas semanas e o aviso à professora\ntitular em caso de deteção. A criança pode frequentar as aulas\ndesde que inicie o tratamento.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu pareja española — el niño va al 2.º B",
+      "instructionsEs": "Circular en la mochila. Cuéntale qué hay que hacer.",
+      "wordRange": {
+        "min": 30,
+        "max": 65
+      },
+      "rubric": [
+        "¿Traslada el hecho (piojos en la clase del niño, 2.º B)?",
+        "¿Traslada la acción (revisarle la cabeza a diario dos semanas y avisar a la tutora si aparece algo)?",
+        "¿Traslada la condición (puede ir a clase siempre que empiece el tratamiento)?",
+        "¿Español natural, sin lusismos («pediculose» resuelto como piojos, «professora titular»), entre 30 y 65 palabras?"
+      ],
+      "modelAnswer": "Aviso del cole: hay piojos en la clase del peque, el 2.º B. Toca\nrevisarle la cabeza todos los días durante dos semanas, y si le\nencontramos algo, avisar a la tutora. Puede seguir yendo a clase\nsin problema, siempre que empecemos el tratamiento."
+    }
+  },
+  {
+    "id": "b2c2-med-82",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:aviso-escolar",
+      "datos:dia+objeto+accion",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "9a0884a9e479ee420a2eea0b0befccf0df852750badd618916e100198dfebbc0",
+    "data": {
+      "sourceText": "Informa-se que na sexta-feira, dia 20, a cantina estará encerrada\npor assembleia de pessoal. Os alunos devem trazer almoço frio de\ncasa; haverá micro-ondas disponível no refeitório. As aulas\ndecorrem normalmente.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu pareja española, que prepara las mochilas",
+      "instructionsEs": "Circular del colegio. Lo práctico, claro.",
+      "wordRange": {
+        "min": 25,
+        "max": 60
+      },
+      "rubric": [
+        "¿Traslada el día y el hecho (viernes 20, comedor cerrado por asamblea)?",
+        "¿Traslada la acción (llevar comida fría de casa; hay microondas en el comedor)?",
+        "¿Traslada que hay clase normal?",
+        "¿Español natural, sin lusismos («cantina» vale, «encerrada», «decorrem»), entre 25 y 60 palabras?"
+      ],
+      "modelAnswer": "Para el viernes 20: el comedor del cole cierra por asamblea del\npersonal, así que hay que mandarle comida de casa — algo frío,\naunque tienen microondas allí. Las clases son normales, solo cambia\nlo de la comida. Lo apunto en el calendario."
+    }
+  },
+  {
+    "id": "b2c2-med-83",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:email-servicio",
+      "datos:dia+franja+accion",
+      "mod:simple",
+      "flag:reordenar"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "908ecc6c78ccdd76bbd50a0cf9aa8f9eb7abeaf2c5e3d66703c9dae5a532cd5d",
+    "data": {
+      "sourceText": "Caro sócio: informamos que HOJE, quinta-feira, o ginásio encerra\nexcecionalmente às 17h por evento privado. As aulas de grupo da\ntarde ficam canceladas. Amanhã retomamos o horário habitual\n(6h30–23h). Pedimos desculpa pelo incómodo.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu hermana española, que va hoy a la clase de las 19h",
+      "instructionsEs": "El email llegó a mediodía. Lo urgente, primero.",
+      "wordRange": {
+        "min": 25,
+        "max": 60
+      },
+      "rubric": [
+        "¿La PRIMERA frase mata su plan (hoy el gimnasio cierra a las 17h — su clase de las 19h no existe)?",
+        "¿Traslada el porqué breve (evento privado; clases de tarde canceladas)?",
+        "¿Traslada la vuelta a la normalidad (mañana, horario de siempre)?",
+        "¿Español natural, sin lusismos («sócio», «incómodo» como calco), entre 25 y 60 palabras?"
+      ],
+      "modelAnswer": "¡No vayas al gimnasio esta tarde: hoy cierran a las cinco y tu\nclase de las siete está cancelada! Lo cierran por un\nevento privado. Mañana ya abren con el horario normal, de seis y\nmedia a once."
+    }
+  },
+  {
+    "id": "b2c2-med-84",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:email-servicio",
+      "datos:dia+lugar+accion+objeto",
+      "mod:simple",
+      "flag:señuelo"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "10f56002ddda796ad2777a049ef3c5d95033bdb6345863d52eea309ed5e1a316",
+    "data": {
+      "sourceText": "Caro cliente [contrato n.º 0033-88-41]: o seu novo cartão de\ndébito está disponível para levantamento no balcão da agência da\nAvenida, a partir de terça-feira, dia 16. Traga um documento de\nidentificação. O cartão anterior será desativado 10 dias após a\nemissão.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu padre español — la cuenta es suya, tú eres el autorizado",
+      "instructionsEs": "El email llegó a tu correo. Dile qué tiene que hacer.",
+      "wordRange": {
+        "min": 25,
+        "max": 60
+      },
+      "rubric": [
+        "¿Traslada el qué y desde cuándo (su tarjeta nueva, en la sucursal de la Avenida, desde el martes 16)?",
+        "¿Traslada la acción (ir con un documento de identidad)?",
+        "¿Traslada el plazo implícito (la vieja se desactiva a los 10 días de la emisión — que no lo deje pasar)?",
+        "¿La respuesta NO incluye el número de contrato (0033-88-41)?",
+        "¿Español natural, sin lusismos («levantamento», «balcão»), entre 25 y 60 palabras?"
+      ],
+      "modelAnswer": "Papá, tu tarjeta nueva del banco ya se puede recoger en la sucursal\nde la Avenida, a partir del martes 16 — llévate el DNI. No lo dejes\nmucho: la vieja se desactiva a los diez días de emitir la nueva,\nasí que mejor ve esa misma semana."
+    }
+  },
+  {
+    "id": "b2c2-med-85",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:email-servicio",
+      "datos:dia+objeto+accion+condicion",
+      "mod:simple",
+      "flag:señuelo"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "d4cfd72a74ae0ec019bd886afb67ed2cd62e971a65bd748eee481e0710dfb121",
+    "data": {
+      "sourceText": "Seguro automóvel — renovação [apólice AT-77-190]: a sua apólice\nrenova-se a 1 de outubro. Para manter o desconto de bom condutor,\nenvie o certificado de sinistralidade atualizado até dia 25 de\nsetembro. Sem esse documento, o prémio sobe 12 %.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "relay",
+      "audience": "tu tío español — el coche asegurado es el suyo",
+      "instructionsEs": "El email llegó a tu correo porque tú hiciste de intermediario. Pásale lo que tiene que hacer.",
+      "wordRange": {
+        "min": 25,
+        "max": 60
+      },
+      "rubric": [
+        "¿Traslada la renovación (el seguro del coche se renueva el 1 de octubre)?",
+        "¿Traslada la acción con plazo (mandar el certificado de siniestralidad actualizado hasta el 25 de septiembre)?",
+        "¿Traslada la consecuencia (sin el papel, la prima sube un 12 %)?",
+        "¿La respuesta NO incluye el número de póliza (AT-77-190)?",
+        "¿Español natural, sin lusismos («apólice», «prémio» resuelto como prima), entre 25 y 60 palabras?"
+      ],
+      "modelAnswer": "Tío, lo del seguro del coche: se renueva el 1 de octubre. Para que\nno pierdas el descuento de buen conductor tienes que mandar el\ncertificado de siniestralidad actualizado como muy tarde el 25 de\nseptiembre — si no llega, la prima te sube un doce por ciento."
+    }
+  },
+  {
+    "id": "b2c2-med-86",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:nota-manuscrita",
+      "datos:lugar+objeto+franja",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "aae9180d2f981520845322f64abf55a2efd516e50ab35755f170c6340640c3da",
+    "address": "tu",
+    "data": {
+      "sourceText": "¡Hola! Me voy corriendo al aeropuerto. Te dejo las llaves del\ntrastero en el buzón, dentro de un sobre. La cena está en el horno:\ncaliéntala 15 min a 180. ¡No me riegues el cactus, que lo ahogas!\nVuelvo el jueves.",
+      "sourceLang": "es",
+      "targetLang": "pt",
+      "mediationType": "relay",
+      "audience": "o teu colega de casa português, que chega logo à noite",
+      "instructionsEs": "La nota la dejó tu amiga española para los dos, pero él no lee español. Pásasela en portugués.",
+      "wordRange": {
+        "min": 30,
+        "max": 65
+      },
+      "rubric": [
+        "¿Traslada las llaves (las del trastero, en el buzón, dentro de un sobre)?",
+        "¿Traslada la cena (en el horno, 15 min a 180)?",
+        "¿Traslada el no-hacer y la vuelta (no regar el cactus; vuelve el jueves)?",
+        "¿Portugués natural por tu (trastero→arrecadação, buzón→caixa do correio), entre 30 y 65 palabras?"
+      ],
+      "modelAnswer": "A Sara foi a correr para o aeroporto e deixou recado: as chaves da\narrecadação estão na caixa do correio, dentro de um envelope. O\njantar está no forno — aquece 15 minutos a 180. E não regues o\ncato, que ela diz que o afogas! Volta quinta-feira."
+    }
+  },
+  {
+    "id": "b2c2-med-87",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:nota-manuscrita",
+      "datos:dia+accion+accion",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "0819a85b7405d1a3cff6d7cbe5966d4a89c9025600296613f385d81cc6d50e36",
+    "address": "tu",
+    "data": {
+      "sourceText": "Chicos: el martes pasan a por el vidrio — dejad las botellas en el\ncontenedor verde del patio antes de las 8. Y por favor, no dejéis\nlos cartones en el rellano, que la del tercero ya se ha quejado dos\nveces. Los cartones, doblados y al azul de la calle.",
+      "sourceLang": "es",
+      "targetLang": "pt",
+      "mediationType": "relay",
+      "audience": "o teu colega de casa português",
+      "instructionsEs": "La nota es de la casera española. Pásasela en portugués — a él le toca el vidrio esta semana.",
+      "wordRange": {
+        "min": 30,
+        "max": 65
+      },
+      "rubric": [
+        "¿Traslada el vidrio (martes; botellas al contenedor verde del patio antes de las 8)?",
+        "¿Traslada la queja y la acción (nada de cartones en el rellano — doblados y al contenedor azul de la calle)?",
+        "¿Portugués natural por tu (rellano→patamar, contenedor→contentor o ecoponto), entre 30 y 65 palabras?"
+      ],
+      "modelAnswer": "Recado da senhoria: na terça levam o vidro — as garrafas têm de\nestar no contentor verde do pátio antes das oito, e esta semana és\ntu. E nada de deixar as caixas de cartão no patamar, que a vizinha do terceiro\njá se queixou duas vezes: dobradas e para o contentor azul da rua."
+    }
+  },
+  {
+    "id": "b2c2-med-88",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:app-notificacion",
+      "datos:lugar+franja+accion",
+      "mod:simple",
+      "flag:reordenar"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "da3c5fd4c2e7ac034b685c4164a2c1c77af49f635405c7b77e01977b0ca59bc7",
+    "address": "tu",
+    "data": {
+      "sourceText": "Cambio de puerta: su vuelo IB3116 a Lisboa embarca ahora por la\npuerta K42 (antes J15). Embarque adelantado: comienza a las 14:10 y\ncierra a las 14:35. Diríjase a la nueva puerta con antelación.",
+      "sourceLang": "es",
+      "targetLang": "pt",
+      "mediationType": "relay",
+      "audience": "o teu amigo português, que foi comprar água e não tem a app",
+      "instructionsEs": "Estáis en el aeropuerto. Mándale el mensaje — lo urgente primero.",
+      "wordRange": {
+        "min": 25,
+        "max": 60
+      },
+      "rubric": [
+        "¿La PRIMERA frase contiene lo urgente (el embarque empieza YA a las 14:10 y cierra 14:35)?",
+        "¿Traslada la puerta nueva (K42, ya no la J15)?",
+        "¿Portugués natural por tu (puerta→porta de embarque), entre 25 y 60 palabras?"
+      ],
+      "modelAnswer": "Despacha-te: o embarque foi antecipado — começa às 14h10 e fecha às\n14h35! E mudaram a porta: agora é a K42, já não é a J15. Vem já\npara cá, eu guardo-te lugar na fila."
+    }
+  },
+  {
+    "id": "b2c2-med-89",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:app-notificacion",
+      "datos:dia+franja+objeto+accion",
+      "mod:simple",
+      "flag:señuelo"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "c65425dcd55178c2540e52d4aac83c67048f26f12916a4b1a3c6a627c9b20dd5",
+    "address": "tu",
+    "data": {
+      "sourceText": "Su pedido nº 88012 llega mañana viernes entre las 18:00 y las\n20:00. Recuerde: los congelados van en bolsa térmica. Si no hay\nnadie, el repartidor lo deja en conserjería. Código descuento para\nsu próxima compra: AHORRA5.",
+      "sourceLang": "es",
+      "targetLang": "pt",
+      "mediationType": "relay",
+      "audience": "o teu colega de casa português — a encomenda do supermercado é dele",
+      "instructionsEs": "La notificación llegó a tu móvil porque el pedido va a tu nombre. Pásale lo que le toca — no todo hace falta.",
+      "wordRange": {
+        "min": 25,
+        "max": 60
+      },
+      "rubric": [
+        "¿Traslada la entrega (mañana viernes, entre las 18 y las 20)?",
+        "¿Traslada el detalle útil (congelados en bolsa térmica; si no hay nadie, lo dejan en la portería)?",
+        "¿La respuesta NO incluye el código de descuento (AHORRA5) ni el número de pedido?",
+        "¿Portugués natural por tu, entre 25 y 60 palabras?"
+      ],
+      "modelAnswer": "A tua encomenda do supermercado chega amanhã, sexta, ao fim do dia, entre as seis\ne as oito. Os congelados vêm em saco térmico; se não\nestiver ninguém em casa, o estafeta deixa tudo na portaria. Fica\natento ao telemóvel a essa hora, pode ser?"
+    }
+  },
+  {
+    "id": "b2c2-med-90",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:aviso-escolar",
+      "datos:dia+accion+condicion",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "dcbbd8ea794dffa960ca1a7d8306320b19a08f2269c2b283b982280ca58fd931",
+    "address": "tu",
+    "data": {
+      "sourceText": "Estimadas familias: el miércoles 24 el personal de comedor\nsecunda la huelga general. No habrá servicio de comedor ni de\ndesayuno matinal. Los alumnos que se queden a mediodía deberán\ntraer comida de casa; también pueden recogerse a las 13:00 sin necesidad de justificar la falta.",
+      "sourceLang": "es",
+      "targetLang": "pt",
+      "mediationType": "relay",
+      "audience": "o pai português do melhor amigo do teu filho — os miúdos estão juntos no colégio espanhol",
+      "instructionsEs": "El padre portugués no lee bien el español administrativo. Pásale la circular en portugués.",
+      "wordRange": {
+        "min": 30,
+        "max": 65
+      },
+      "rubric": [
+        "¿Traslada el día y el hecho (miércoles 24, huelga del personal de comedor: no hay comedor ni desayuno)?",
+        "¿Traslada las dos opciones (mandar comida de casa, o recogerlos a las 13:00 sin que cuente como falta)?",
+        "¿Portugués natural por tu (comedor→cantina/refeitório, huelga→greve), entre 30 y 65 palabras?"
+      ],
+      "modelAnswer": "Aviso do colégio: na quarta, dia 24, o pessoal da cantina adere à\ngreve geral — não há almoço nem pequeno-almoço. Ou mandamos comida\nde casa para os miúdos, ou podemos ir buscá-los às 13h sem contar\ncomo falta. Combinamos entre nós quem os vai buscar?"
+    }
+  },
+  {
+    "id": "b2c2-med-91",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:nota-manuscrita",
+      "datos:accion+contacto+franja",
+      "mod:simple"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "formal",
+    "contentHash": "8a7ea99701aa776b401fe7ddeb623aed0af9a4041b79d999a20c9da22e511381",
+    "address": "o_senhor",
+    "data": {
+      "sourceText": "Cuando llegues: llama de mi parte al Sr. Fonseca, el proveedor de\nBraga (912 555 010). Dile que aceptamos su último presupuesto y que\nmande el contrato. Mejor antes de las 11, que luego entra en\nreunión. Gracias.",
+      "sourceLang": "es",
+      "targetLang": "pt",
+      "mediationType": "relay",
+      "audience": "o senhor Fonseca, fornecedor de Braga, ao telefone — mas primeiro escreves-lhe a mensagem, formal",
+      "instructionsEs": "Tu jefe español te dejó la nota. Redacta EN PORTUGUÉS el mensaje formal que le mandarás al Sr. Fonseca (por si no coge el teléfono antes de las 11).",
+      "wordRange": {
+        "min": 30,
+        "max": 65
+      },
+      "rubric": [
+        "¿Traslada la decisión (aceptamos su último presupuesto)?",
+        "¿Traslada la acción (que envíe el contrato)?",
+        "¿Es un mensaje formal correcto en portugués (tratamiento «o senhor Fonseca» / 3.ª persona, saludo y despedida), sin españolismos?",
+        "¿Entre 30 y 65 palabras?"
+      ],
+      "modelAnswer": "Bom dia, senhor Fonseca. Escrevo-lhe da parte do meu diretor:\naceitamos o seu último orçamento e agradecíamos que nos enviasse o\ncontrato para assinatura. Se precisar de falar connosco, estamos\ndisponíveis até às 11h de hoje. Com os melhores cumprimentos."
+    }
+  },
+  {
+    "id": "b2c2-med-92",
+    "blockId": 10,
+    "lessonId": "b10-l3-avisos-e-recados",
+    "difficulty": 3,
+    "concepts": [
+      "b10-relay-avisos"
+    ],
+    "tags": [
+      "b2c2-linea-b",
+      "plantilla:aviso-v1.2",
+      "genero:app-notificacion",
+      "datos:objeto+lugar+accion",
+      "mod:simple",
+      "flag:reordenar",
+      "flag:señuelo"
+    ],
+    "type": "mediation",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Línea B aviso-v1.2 lote industrial 1: plantilla + muestreo adversarial 12,5% 2026-08-29 (docs/contenido/2026-08-29-lote-industrial-avisos-1.md)",
+    "register": "informal",
+    "contentHash": "6ce1fa1b108e26f1c9e8c35393209d29c6f5eb42f3a1c1c3b9007f49555268e5",
+    "address": "tu",
+    "data": {
+      "sourceText": "Aviso a los clientes: el vehículo matrícula 23-XM-71 se encuentra\nestacionado en la zona de carga y descarga del nivel -1. Rogamos lo\nretiren de inmediato; en 15 minutos será retirado por la grúa\n(tasa: 90 €). Aprovechen hoy 3×2 en perfumería.",
+      "sourceLang": "es",
+      "targetLang": "pt",
+      "mediationType": "relay",
+      "audience": "o teu amigo português — o carro é dele e ele está no provador",
+      "instructionsEs": "Mándale el mensaje YA. Lo urgente primero — y no todo hace falta.",
+      "wordRange": {
+        "min": 25,
+        "max": 55
+      },
+      "rubric": [
+        "¿La PRIMERA frase saca a tu amigo del probador (la grúa se lleva su coche en 15 minutos — 90 € de tasa)?",
+        "¿Traslada el dónde (zona de carga y descarga del nivel -1) y la matrícula para que sepa que es el suyo?",
+        "¿La respuesta NO incluye la oferta de perfumería?",
+        "¿Portugués natural por tu, entre 25 y 55 palabras?"
+      ],
+      "modelAnswer": "Sai já do provador: o reboque leva-te o carro em 15 minutos — 90\neuros de taxa! Anunciaram a matrícula, é o teu: 23-XM-71,\nestacionado na zona de cargas do piso -1. Vai lá a correr, eu\nguardo-te as compras."
+    }
   }
 ]
