@@ -42,6 +42,19 @@ skill.
      que es el mismo ejercicio. Reenseñar un concepto de un bloque
      anterior no es delito —refinar en C1 un punto de B1 es legítimo—
      pero tiene que salir declarado en el doc, no por descuido.
+   - **El gate NO ve clones estructurales — los caza el round (o un
+     gate de molde).** En E2#4 el MED-53 del borrador era el publicado
+     med-38 con los nombres cambiados: mismo género, misma dirección,
+     mismos tipos de dato y la rúbrica calcada casilla a casilla hasta
+     el rango — y el gate dio CERO pares (palabras distintas = ningún
+     solape IDF; concepts solo dijo «familia b10-registro»). Ninguno de
+     los dos ejes compara la ESTRUCTURA. Antes de gastar revisor,
+     coteja cada ítem nuevo A MANO contra los publicados de su misma
+     clase (género × dirección × tipos de dato); para clases seriadas
+     (avisos de la línea B), corre además los gates de molde del
+     contrato v1.1 (arranques únicos, n-grama ≥6 de sourceText contra
+     publicados). Y el registro de dominios por ETIQUETA no basta:
+     «reunión» ≠ «visita de cliente» camufló el clon.
 3. **DOS `linguista-adversarial-pt` EN PARALELO, sin verse** (si los
    agentes del repo no están registrados en la sesión: general-purpose
    con «lee y adopta .claude/agents/linguista-adversarial-pt.md»).

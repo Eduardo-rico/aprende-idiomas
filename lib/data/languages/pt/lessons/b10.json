@@ -1,52 +1,78 @@
 [
-  {
-    "id": "b10-l1-registro-formal-informal",
-    "blockId": 10,
-    "name": "Registro formal e informal en portugués",
-    "objectives": [
-      "Reconocer los marcadores léxicos y morfosintácticos que diferencian el registro formal del informal",
-      "Distinguir los tratamientos você, o senhor y a senhora según el contexto comunicativo",
-      "Producir textos formales (e-mails, cartas) aplicando el vocabulario y la estructura apropiados",
-      "Identificar errores frecuentes de hispanohablantes al abordar la formalidad en portugués"
-    ],
-    "conceptIds": [
-      "b10-registro"
-    ],
-    "vocabKey": [
-      "cumprimentos",
-      "registro formal",
-      "vocês",
-      "e-mail",
-      "contacto telefónico",
-      "próprio",
-      "afecto"
-    ],
-    "conceptNotesPath": "b10/l1-registro-formal-informal.mdx",
-    "exerciseRefs": []
-  },
-  {
-    "id": "b10-l2-variacao-diatopica-brasil-portugal",
-    "blockId": 10,
-    "name": "Variación diatópica: Brasil y Portugal",
-    "objectives": [
-      "Identificar diferencias léxicas fundamentales entre el portugués brasileiro y el português europeu",
-      "Reconocer diferencias fonéticas y morfosintácticas relevantes entre ambas variedades",
-      "Distinguir la norma culta escrita del uso coloquial en ambas variantes",
-      "Aplicar estrategias para comprender ambas variedades en contextos auténticos"
-    ],
-    "conceptIds": [
-      "b10-variacao-diatopica"
-    ],
-    "vocabKey": [
-      "saudade",
-      "achar",
-      "correspondem-se",
-      "continuaram",
-      "bicha",
-      "correio",
-      "contactos"
-    ],
-    "conceptNotesPath": "b10/l2-variacao-diatopica-brasil-portugal.mdx",
-    "exerciseRefs": []
-  }
+ {
+  "id": "b10-l1-registro-formal-informal",
+  "blockId": 10,
+  "name": "Registro formal e informal en portugués",
+  "objectives": [
+   "Reconocer los marcadores léxicos y morfosintácticos que diferencian el registro formal del informal",
+   "Distinguir los tratamientos você, o senhor y a senhora según el contexto comunicativo",
+   "Producir textos formales (e-mails, cartas) aplicando el vocabulario y la estructura apropiados",
+   "Identificar errores frecuentes de hispanohablantes al abordar la formalidad en portugués"
+  ],
+  "conceptIds": [
+   "b10-registro"
+  ],
+  "vocabKey": [
+   "cumprimentos",
+   "registro formal",
+   "vocês",
+   "e-mail",
+   "contacto telefónico",
+   "próprio",
+   "afecto"
+  ],
+  "conceptNotesPath": "b10/l1-registro-formal-informal.mdx",
+  "exerciseRefs": []
+ },
+ {
+  "id": "b10-l2-variacao-diatopica-brasil-portugal",
+  "blockId": 10,
+  "name": "Variación diatópica: Brasil y Portugal",
+  "objectives": [
+   "Identificar diferencias léxicas fundamentales entre el portugués brasileiro y el português europeu",
+   "Reconocer diferencias fonéticas y morfosintácticas relevantes entre ambas variedades",
+   "Distinguir la norma culta escrita del uso coloquial en ambas variantes",
+   "Aplicar estrategias para comprender ambas variedades en contextos auténticos"
+  ],
+  "conceptIds": [
+   "b10-variacao-diatopica"
+  ],
+  "vocabKey": [
+   "saudade",
+   "achar",
+   "correspondem-se",
+   "continuaram",
+   "bicha",
+   "correio",
+   "contactos"
+  ],
+  "conceptNotesPath": "b10/l2-variacao-diatopica-brasil-portugal.mdx",
+  "exerciseRefs": []
+ },
+ {
+  "id": "b10-l3-avisos-e-recados",
+  "blockId": 10,
+  "name": "Avisos e recados: mediar la información práctica",
+  "objectives": [
+   "Reconocer los géneros del aviso portugués (aviso de portal, SMS de servicio, recado de voz, cartel, circular) y su fórmula",
+   "Extraer los datos transmisibles de un aviso: día, franja, lugar, acción, condición y contacto",
+   "Decidir qué datos viajan para cada destinatario: filtrar lo irrelevante y anteponer lo urgente",
+   "Trasladar avisos entre portugués y español sin calcos (levantar, moradores, encerra) y sin inventar datos",
+   "Discriminar el dato vigente del caducado en rectificaciones («onde se lê… deve ler-se»)"
+  ],
+  "conceptIds": [
+   "b10-relay-avisos"
+  ],
+  "vocabKey": [
+   "aviso",
+   "recado",
+   "levantar",
+   "prazo",
+   "morador",
+   "retificação",
+   "encerrado"
+  ],
+  "conceptNotesPath": "b10/l3-avisos-e-recados.mdx",
+  "exerciseRefs": []
+ }
 ]

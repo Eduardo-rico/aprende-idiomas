@@ -1,321 +1,330 @@
 [
-  {
-    "id": "b1-acentos",
-    "name": "Acentos diacríticos",
-    "blockId": 1,
-    "description": "Agudo, grave, circunflejo, tilde, cedilha",
-    "prereqs": []
-  },
-  {
-    "id": "b1-alfabeto",
-    "name": "Alfabeto portugués",
-    "blockId": 1,
-    "description": "Letras y nombres en portugués",
-    "prereqs": []
-  },
-  {
-    "id": "b1-corresp-ll-lh",
-    "name": "Correspondencia -ll- → -lh-",
-    "blockId": 1,
-    "description": "Pasaje sistemático ES→PT",
-    "prereqs": []
-  },
-  {
-    "id": "b1-corresp-nh-ny",
-    "name": "Correspondencia -ñ → -nh-",
-    "blockId": 1,
-    "description": "Pasaje sistemático ES→PT",
-    "prereqs": []
-  },
-  {
-    "id": "b1-corresp-h-f",
-    "name": "Correspondencia h- → f-",
-    "blockId": 1,
-    "description": "Sólo donde la h- viene de F- latina; prueba del cultismo (hijo/filial)",
-    "prereqs": [
-      "b1-h-muda"
-    ]
-  },
-  {
-    "id": "b1-corresp-on-ao",
-    "name": "Correspondencia -ón → -ão",
-    "blockId": 1,
-    "description": "Pasaje sistemático ES→PT",
-    "prereqs": []
-  },
-  {
-    "id": "b1-h-muda",
-    "name": "H muda",
-    "blockId": 1,
-    "description": "H inicial siempre muda",
-    "prereqs": []
-  },
-  {
-    "id": "b1-pron-rr-r",
-    "name": "Pronunciación rr/r inicial",
-    "blockId": 1,
-    "description": "En BR como /h/; en PT vibrante",
-    "prereqs": []
-  },
-  {
-    "id": "b1-pron-s-final",
-    "name": "Pronunciación de \"s\" final",
-    "blockId": 1,
-    "description": "BR /s/; PT /ʃ/",
-    "prereqs": []
-  },
-  {
-    "id": "b1-silaba-tonica",
-    "name": "Sílaba tónica",
-    "blockId": 1,
-    "description": "Reglas de acentuación tónica",
-    "prereqs": [
-      "b1-acentos"
-    ]
-  },
-  {
-    "id": "b1-vogais-nasais",
-    "name": "Vocales nasales",
-    "blockId": 1,
-    "description": "ã, õ, am, em, im, om, um",
-    "prereqs": []
-  },
-  {
-    "id": "b10-registro",
-    "name": "Registro formal/informal",
-    "blockId": 10,
-    "description": "Marcadores de formalidad (vocabulario, tratamiento você/o senhor/a senhora, conectores, pronombres), cartas/e-mails vs conversación",
-    "prereqs": []
-  },
-  {
-    "id": "b10-variacao-diatopica",
-    "name": "Variação diatópica + norma culta",
-    "blockId": 10,
-    "description": "Diferencias BR↔PT (léxico, fonética, gramática), variantes regionales (norte/sul de BR, Açores/Madeira), norma culta escrita vs uso coloquial",
-    "prereqs": []
-  },
-  {
-    "id": "b2-artigos",
-    "name": "Artigos",
-    "blockId": 2,
-    "description": "Definidos (o, a, os, as), indefinidos (um, uma, uns, umas) y contracciones (ao, à, do, da, no, na, pelo, pela)",
-    "prereqs": []
-  },
-  {
-    "id": "b2-demonstrativos",
-    "name": "Demonstrativos",
-    "blockId": 2,
-    "description": "este/esta, esse/essa, aquele/aquela + formas plural; uso para señalar distancia",
-    "prereqs": []
-  },
-  {
-    "id": "b2-genero",
-    "name": "Gênero gramatical",
-    "blockId": 2,
-    "description": "Reglas de masculino/femenino: terminación -o/-a, sustantivos comunes en cuanto a género, excepciones",
-    "prereqs": []
-  },
-  {
-    "id": "b2-indefinidos",
-    "name": "Indefinidos",
-    "blockId": 2,
-    "description": "todo, muito, pouco, algum, nenhum, certo, vários, qualquer",
-    "prereqs": []
-  },
-  {
-    "id": "b2-numero",
-    "name": "Número (singular/plural)",
-    "blockId": 2,
-    "description": "Reglas de plural: -s, -es, -ões, -ães, casos irregulares",
-    "prereqs": []
-  },
-  {
-    "id": "b2-possessivos",
-    "name": "Pronomes possessivos",
-    "blockId": 2,
-    "description": "meu/minha, teu/tua, seu/sua, nosso/nossa, vosso/vossa, seu/sua (3ª persona), posicionamento pre/postnominal",
-    "prereqs": []
-  },
-  {
-    "id": "b3-existenciais",
-    "name": "Existenciales (haver/ter)",
-    "blockId": 3,
-    "description": "Há = existe(n) (impersonal) vs tem = tiene (también existencial en BR). Distribución y registros.",
-    "prereqs": []
-  },
-  {
-    "id": "b3-imperativo",
-    "name": "Imperativo",
-    "blockId": 3,
-    "description": "Afirmativo (fala, fale, falemos) y negativo (não fales, não fale) — irregulares y reflexivos",
-    "prereqs": []
-  },
-  {
-    "id": "b3-presente-irregular",
-    "name": "Presente irregular frecuente",
-    "blockId": 3,
-    "description": "ser, estar, ter, ir, fazer, dizer, vir, ver, poder, querer, saber, dar, traer",
-    "prereqs": []
-  },
-  {
-    "id": "b3-presente-regular",
-    "name": "Presente do indicativo regular",
-    "blockId": 3,
-    "description": "Conjugación regular de verbos en -ar, -er, -ir",
-    "prereqs": []
-  },
-  {
-    "id": "b3-pronomes",
-    "name": "Pronomes pessoais",
-    "blockId": 3,
-    "description": "Retos (eu, tu, ele/ela, nós, vós, eles/elas) y oblícuos (me, te, se, o, a, lhe, nos, vos, os, as, lhes)",
-    "prereqs": []
-  },
-  {
-    "id": "b4-contraste-passado",
-    "name": "Contraste perfeito/imperfeito",
-    "blockId": 4,
-    "description": "Perfeito = evento puntual/cerrado; imperfeito = descripción/hábito/fondo. Marcadores temporales (ontem, sempre, enquanto)",
-    "prereqs": []
-  },
-  {
-    "id": "b4-imperfeito",
-    "name": "Pretérito imperfeito",
-    "blockId": 4,
-    "description": "Conjugación regular: -ava, -avas, -ava, -ávamos, -áveis, -avam (-ar); -ia, -ias, -ia, -íamos, -íeis, -iam (-er/-ir). Irregular: ser, ir, ver",
-    "prereqs": []
-  },
-  {
-    "id": "b4-mais-que-perfeito",
-    "name": "Pretérito mais-que-perfeito",
-    "blockId": 4,
-    "description": "Composto (tinha + particípio) y simples (falara) — uso literario",
-    "prereqs": []
-  },
-  {
-    "id": "b4-perfeito-irregular",
-    "name": "Pretérito perfeito irregular",
-    "blockId": 4,
-    "description": "ir, ser, estar, ter, fazer, dizer, vir, ver, poder, querer, saber, dar, trazer, pôr",
-    "prereqs": []
-  },
-  {
-    "id": "b4-perfeito-regular",
-    "name": "Pretérito perfeito regular",
-    "blockId": 4,
-    "description": "Conjugación regular: -ei, -aste, -ou, -amos, -astes, -aram (verbos en -ar); -i, -este, -eu, -emos, -estes, -eram (-er/-ir)",
-    "prereqs": []
-  },
-  {
-    "id": "b5-condicional",
-    "name": "Condicional simple",
-    "blockId": 5,
-    "description": "Conjugación de falaria, falarias...; irregulares; uso para deseo cortés y reporte de discurso indirecto",
-    "prereqs": []
-  },
-  {
-    "id": "b5-futuro-composto",
-    "name": "Futuro composto (ir + infinitivo)",
-    "blockId": 5,
-    "description": "Vou falar, vais falar, vai falar...; uso informal/coloquial y como sustituto del futuro simple en BR",
-    "prereqs": []
-  },
-  {
-    "id": "b5-futuro-presente",
-    "name": "Futuro do presente (simples)",
-    "blockId": 5,
-    "description": "Conjugación de falarei, falarás...; irregulares (ser, estar, ter, ir, fazer, dizer, vir, ver, poder, querer, saber, dar, trazer, pôr)",
-    "prereqs": []
-  },
-  {
-    "id": "b5-se-condicional",
-    "name": "Se + futuro/condicional",
-    "blockId": 5,
-    "description": "Oraciones condicionales tipo 1 (si presente, futuro) y tipo 2 (si imperfeito subjuntivo, condicional)",
-    "prereqs": []
-  },
-  {
-    "id": "b6-contraste-indicativo-subjuntivo",
-    "name": "Contraste indicativo/conjuntivo",
-    "blockId": 6,
-    "description": "Certeza/hecho (indicativo) vs deseo/duda/temor/emotion (conjuntivo); expresiones impessoales (é importante que, é possível que)",
-    "prereqs": []
-  },
-  {
-    "id": "b6-futuro-subj",
-    "name": "Futuro do conjuntivo",
-    "blockId": 6,
-    "description": "Derivación del perfeito (-ar → -ar; -er/-ir → -er); uso con quando, se, assim que, como se",
-    "prereqs": []
-  },
-  {
-    "id": "b6-imperfeito-subj",
-    "name": "Imperfeito do conjuntivo",
-    "blockId": 6,
-    "description": "Derivación del imperfeito (-ar → -asse; -er/-ir → -esse); irregulares (ser, estar, ter, ir, fazer, ver, vir)",
-    "prereqs": []
-  },
-  {
-    "id": "b6-presente-subj",
-    "name": "Presente do conjuntivo",
-    "blockId": 6,
-    "description": "Conjugación regular e irregular (ser, estar, ter, ir, fazer, dizer, vir, ver, poder, querer, saber, dar, trazer, pôr)",
-    "prereqs": []
-  },
-  {
-    "id": "b6-se-subjuntivo",
-    "name": "Se + conjuntivo",
-    "blockId": 6,
-    "description": "Condicionales tipo 3 (imperfeito subj) y 4 (mais-que-perfeito subj) — hipótesis improbable/irreal",
-    "prereqs": []
-  },
-  {
-    "id": "b7-gerundio",
-    "name": "Gerúndio",
-    "blockId": 7,
-    "description": "Conjugación regular (-ando, -endo, -indo); uso con estar, andar, ir, vir (estar falando); construcción progresiva",
-    "prereqs": []
-  },
-  {
-    "id": "b7-infinitivo-pessoal",
-    "name": "Infinitivo pessoal",
-    "blockId": 7,
-    "description": "Forma portuguesa única: falar (general) vs falar eu, falares tu, falar ele; uso en lugar de conjuntivo/infinitivo compuesto",
-    "prereqs": []
-  },
-  {
-    "id": "b7-participio",
-    "name": "Particípio",
-    "blockId": 7,
-    "description": "Regular (-ado, -ido) e irregulares (feito, dito, escrito, visto, posto, ganho, morto, nado); uso con ter/haver y como adjetivo",
-    "prereqs": []
-  },
-  {
-    "id": "b8-colocacao-pronominal",
-    "name": "Colocação pronominal",
-    "blockId": 8,
-    "description": "Próclise (conjunción + verbo: não me diga), ênclise (verbo + pronombre: diga-me), mesóclise (futuro/cnj + pronombre: dir-se-á)",
-    "prereqs": []
-  },
-  {
-    "id": "b8-conectores",
-    "name": "Conectores",
-    "blockId": 8,
-    "description": "Causales (porque, pois, já que), consecutivos (por isso, então, logo), adversativos (porém, contudo, entretanto, mas), concessivos (embora, apesar de, ainda que)",
-    "prereqs": []
-  },
-  {
-    "id": "b8-discurso-indireto",
-    "name": "Discurso indireto",
-    "blockId": 8,
-    "description": "Transformación de tiempos: presente→imperfeito, perfeito→mais-que-perfeito, futuro→condicional; cambios pronominales y deícticos",
-    "prereqs": []
-  },
-  {
-    "id": "b8-oracoes-subordinadas",
-    "name": "Orações subordinadas",
-    "blockId": 8,
-    "description": "Substantivas (que, se, quem, qual), adjetivas (que, cujo, onde, quem), adverbiais (quando, onde, como, porque)",
-    "prereqs": []
-  }
+ {
+  "id": "b1-acentos",
+  "name": "Acentos diacríticos",
+  "blockId": 1,
+  "description": "Agudo, grave, circunflejo, tilde, cedilha",
+  "prereqs": []
+ },
+ {
+  "id": "b1-alfabeto",
+  "name": "Alfabeto portugués",
+  "blockId": 1,
+  "description": "Letras y nombres en portugués",
+  "prereqs": []
+ },
+ {
+  "id": "b1-corresp-ll-lh",
+  "name": "Correspondencia -ll- → -lh-",
+  "blockId": 1,
+  "description": "Pasaje sistemático ES→PT",
+  "prereqs": []
+ },
+ {
+  "id": "b1-corresp-nh-ny",
+  "name": "Correspondencia -ñ → -nh-",
+  "blockId": 1,
+  "description": "Pasaje sistemático ES→PT",
+  "prereqs": []
+ },
+ {
+  "id": "b1-corresp-h-f",
+  "name": "Correspondencia h- → f-",
+  "blockId": 1,
+  "description": "Sólo donde la h- viene de F- latina; prueba del cultismo (hijo/filial)",
+  "prereqs": [
+   "b1-h-muda"
+  ]
+ },
+ {
+  "id": "b1-corresp-on-ao",
+  "name": "Correspondencia -ón → -ão",
+  "blockId": 1,
+  "description": "Pasaje sistemático ES→PT",
+  "prereqs": []
+ },
+ {
+  "id": "b1-h-muda",
+  "name": "H muda",
+  "blockId": 1,
+  "description": "H inicial siempre muda",
+  "prereqs": []
+ },
+ {
+  "id": "b1-pron-rr-r",
+  "name": "Pronunciación rr/r inicial",
+  "blockId": 1,
+  "description": "En BR como /h/; en PT vibrante",
+  "prereqs": []
+ },
+ {
+  "id": "b1-pron-s-final",
+  "name": "Pronunciación de \"s\" final",
+  "blockId": 1,
+  "description": "BR /s/; PT /ʃ/",
+  "prereqs": []
+ },
+ {
+  "id": "b1-silaba-tonica",
+  "name": "Sílaba tónica",
+  "blockId": 1,
+  "description": "Reglas de acentuación tónica",
+  "prereqs": [
+   "b1-acentos"
+  ]
+ },
+ {
+  "id": "b1-vogais-nasais",
+  "name": "Vocales nasales",
+  "blockId": 1,
+  "description": "ã, õ, am, em, im, om, um",
+  "prereqs": []
+ },
+ {
+  "id": "b10-registro",
+  "name": "Registro formal/informal",
+  "blockId": 10,
+  "description": "Marcadores de formalidad (vocabulario, tratamiento você/o senhor/a senhora, conectores, pronombres), cartas/e-mails vs conversación",
+  "prereqs": []
+ },
+ {
+  "id": "b10-variacao-diatopica",
+  "name": "Variação diatópica + norma culta",
+  "blockId": 10,
+  "description": "Diferencias BR↔PT (léxico, fonética, gramática), variantes regionales (norte/sul de BR, Açores/Madeira), norma culta escrita vs uso coloquial",
+  "prereqs": []
+ },
+ {
+  "id": "b2-artigos",
+  "name": "Artigos",
+  "blockId": 2,
+  "description": "Definidos (o, a, os, as), indefinidos (um, uma, uns, umas) y contracciones (ao, à, do, da, no, na, pelo, pela)",
+  "prereqs": []
+ },
+ {
+  "id": "b2-demonstrativos",
+  "name": "Demonstrativos",
+  "blockId": 2,
+  "description": "este/esta, esse/essa, aquele/aquela + formas plural; uso para señalar distancia",
+  "prereqs": []
+ },
+ {
+  "id": "b2-genero",
+  "name": "Gênero gramatical",
+  "blockId": 2,
+  "description": "Reglas de masculino/femenino: terminación -o/-a, sustantivos comunes en cuanto a género, excepciones",
+  "prereqs": []
+ },
+ {
+  "id": "b2-indefinidos",
+  "name": "Indefinidos",
+  "blockId": 2,
+  "description": "todo, muito, pouco, algum, nenhum, certo, vários, qualquer",
+  "prereqs": []
+ },
+ {
+  "id": "b2-numero",
+  "name": "Número (singular/plural)",
+  "blockId": 2,
+  "description": "Reglas de plural: -s, -es, -ões, -ães, casos irregulares",
+  "prereqs": []
+ },
+ {
+  "id": "b2-possessivos",
+  "name": "Pronomes possessivos",
+  "blockId": 2,
+  "description": "meu/minha, teu/tua, seu/sua, nosso/nossa, vosso/vossa, seu/sua (3ª persona), posicionamento pre/postnominal",
+  "prereqs": []
+ },
+ {
+  "id": "b3-existenciais",
+  "name": "Existenciales (haver/ter)",
+  "blockId": 3,
+  "description": "Há = existe(n) (impersonal) vs tem = tiene (también existencial en BR). Distribución y registros.",
+  "prereqs": []
+ },
+ {
+  "id": "b3-imperativo",
+  "name": "Imperativo",
+  "blockId": 3,
+  "description": "Afirmativo (fala, fale, falemos) y negativo (não fales, não fale) — irregulares y reflexivos",
+  "prereqs": []
+ },
+ {
+  "id": "b3-presente-irregular",
+  "name": "Presente irregular frecuente",
+  "blockId": 3,
+  "description": "ser, estar, ter, ir, fazer, dizer, vir, ver, poder, querer, saber, dar, traer",
+  "prereqs": []
+ },
+ {
+  "id": "b3-presente-regular",
+  "name": "Presente do indicativo regular",
+  "blockId": 3,
+  "description": "Conjugación regular de verbos en -ar, -er, -ir",
+  "prereqs": []
+ },
+ {
+  "id": "b3-pronomes",
+  "name": "Pronomes pessoais",
+  "blockId": 3,
+  "description": "Retos (eu, tu, ele/ela, nós, vós, eles/elas) y oblícuos (me, te, se, o, a, lhe, nos, vos, os, as, lhes)",
+  "prereqs": []
+ },
+ {
+  "id": "b4-contraste-passado",
+  "name": "Contraste perfeito/imperfeito",
+  "blockId": 4,
+  "description": "Perfeito = evento puntual/cerrado; imperfeito = descripción/hábito/fondo. Marcadores temporales (ontem, sempre, enquanto)",
+  "prereqs": []
+ },
+ {
+  "id": "b4-imperfeito",
+  "name": "Pretérito imperfeito",
+  "blockId": 4,
+  "description": "Conjugación regular: -ava, -avas, -ava, -ávamos, -áveis, -avam (-ar); -ia, -ias, -ia, -íamos, -íeis, -iam (-er/-ir). Irregular: ser, ir, ver",
+  "prereqs": []
+ },
+ {
+  "id": "b4-mais-que-perfeito",
+  "name": "Pretérito mais-que-perfeito",
+  "blockId": 4,
+  "description": "Composto (tinha + particípio) y simples (falara) — uso literario",
+  "prereqs": []
+ },
+ {
+  "id": "b4-perfeito-irregular",
+  "name": "Pretérito perfeito irregular",
+  "blockId": 4,
+  "description": "ir, ser, estar, ter, fazer, dizer, vir, ver, poder, querer, saber, dar, trazer, pôr",
+  "prereqs": []
+ },
+ {
+  "id": "b4-perfeito-regular",
+  "name": "Pretérito perfeito regular",
+  "blockId": 4,
+  "description": "Conjugación regular: -ei, -aste, -ou, -amos, -astes, -aram (verbos en -ar); -i, -este, -eu, -emos, -estes, -eram (-er/-ir)",
+  "prereqs": []
+ },
+ {
+  "id": "b5-condicional",
+  "name": "Condicional simple",
+  "blockId": 5,
+  "description": "Conjugación de falaria, falarias...; irregulares; uso para deseo cortés y reporte de discurso indirecto",
+  "prereqs": []
+ },
+ {
+  "id": "b5-futuro-composto",
+  "name": "Futuro composto (ir + infinitivo)",
+  "blockId": 5,
+  "description": "Vou falar, vais falar, vai falar...; uso informal/coloquial y como sustituto del futuro simple en BR",
+  "prereqs": []
+ },
+ {
+  "id": "b5-futuro-presente",
+  "name": "Futuro do presente (simples)",
+  "blockId": 5,
+  "description": "Conjugación de falarei, falarás...; irregulares (ser, estar, ter, ir, fazer, dizer, vir, ver, poder, querer, saber, dar, trazer, pôr)",
+  "prereqs": []
+ },
+ {
+  "id": "b5-se-condicional",
+  "name": "Se + futuro/condicional",
+  "blockId": 5,
+  "description": "Oraciones condicionales tipo 1 (si presente, futuro) y tipo 2 (si imperfeito subjuntivo, condicional)",
+  "prereqs": []
+ },
+ {
+  "id": "b6-contraste-indicativo-subjuntivo",
+  "name": "Contraste indicativo/conjuntivo",
+  "blockId": 6,
+  "description": "Certeza/hecho (indicativo) vs deseo/duda/temor/emotion (conjuntivo); expresiones impessoales (é importante que, é possível que)",
+  "prereqs": []
+ },
+ {
+  "id": "b6-futuro-subj",
+  "name": "Futuro do conjuntivo",
+  "blockId": 6,
+  "description": "Derivación del perfeito (-ar → -ar; -er/-ir → -er); uso con quando, se, assim que, como se",
+  "prereqs": []
+ },
+ {
+  "id": "b6-imperfeito-subj",
+  "name": "Imperfeito do conjuntivo",
+  "blockId": 6,
+  "description": "Derivación del imperfeito (-ar → -asse; -er/-ir → -esse); irregulares (ser, estar, ter, ir, fazer, ver, vir)",
+  "prereqs": []
+ },
+ {
+  "id": "b6-presente-subj",
+  "name": "Presente do conjuntivo",
+  "blockId": 6,
+  "description": "Conjugación regular e irregular (ser, estar, ter, ir, fazer, dizer, vir, ver, poder, querer, saber, dar, trazer, pôr)",
+  "prereqs": []
+ },
+ {
+  "id": "b6-se-subjuntivo",
+  "name": "Se + conjuntivo",
+  "blockId": 6,
+  "description": "Condicionales tipo 3 (imperfeito subj) y 4 (mais-que-perfeito subj) — hipótesis improbable/irreal",
+  "prereqs": []
+ },
+ {
+  "id": "b7-gerundio",
+  "name": "Gerúndio",
+  "blockId": 7,
+  "description": "Conjugación regular (-ando, -endo, -indo); uso con estar, andar, ir, vir (estar falando); construcción progresiva",
+  "prereqs": []
+ },
+ {
+  "id": "b7-infinitivo-pessoal",
+  "name": "Infinitivo pessoal",
+  "blockId": 7,
+  "description": "Forma portuguesa única: falar (general) vs falar eu, falares tu, falar ele; uso en lugar de conjuntivo/infinitivo compuesto",
+  "prereqs": []
+ },
+ {
+  "id": "b7-participio",
+  "name": "Particípio",
+  "blockId": 7,
+  "description": "Regular (-ado, -ido) e irregulares (feito, dito, escrito, visto, posto, ganho, morto, nado); uso con ter/haver y como adjetivo",
+  "prereqs": []
+ },
+ {
+  "id": "b8-colocacao-pronominal",
+  "name": "Colocação pronominal",
+  "blockId": 8,
+  "description": "Próclise (conjunción + verbo: não me diga), ênclise (verbo + pronombre: diga-me), mesóclise (futuro/cnj + pronombre: dir-se-á)",
+  "prereqs": []
+ },
+ {
+  "id": "b8-conectores",
+  "name": "Conectores",
+  "blockId": 8,
+  "description": "Causales (porque, pois, já que), consecutivos (por isso, então, logo), adversativos (porém, contudo, entretanto, mas), concessivos (embora, apesar de, ainda que)",
+  "prereqs": []
+ },
+ {
+  "id": "b8-discurso-indireto",
+  "name": "Discurso indireto",
+  "blockId": 8,
+  "description": "Transformación de tiempos: presente→imperfeito, perfeito→mais-que-perfeito, futuro→condicional; cambios pronominales y deícticos",
+  "prereqs": []
+ },
+ {
+  "id": "b8-oracoes-subordinadas",
+  "name": "Orações subordinadas",
+  "blockId": 8,
+  "description": "Substantivas (que, se, quem, qual), adjetivas (que, cujo, onde, quem), adverbiais (quando, onde, como, porque)",
+  "prereqs": []
+ },
+ {
+  "id": "b10-relay-avisos",
+  "name": "Relay de avisos e recados",
+  "blockId": 10,
+  "description": "Mediación de información práctica: extraer los datos de un aviso/SMS/recado (día, franja, lugar, acción, condición, contacto), decidir cuáles viajan para cada destinatario y trasladarlos entre pt y es sin calcos ni datos inventados",
+  "prereqs": [
+   "b10-registro"
+  ]
+ }
 ]

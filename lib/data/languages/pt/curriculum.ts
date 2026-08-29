@@ -277,6 +277,10 @@ const B9: Block = {
 const B10_CONCEPTS: Concept[] = [
   { id: 'b10-registro', name: 'Registro formal/informal', blockId: 10, description: 'Marcadores de formalidad (vocabulario, tratamiento você/o senhor/a senhora, conectores, pronombres), cartas/e-mails vs conversación', prereqs: [] },
   { id: 'b10-variacao-diatopica', name: 'Variação diatópica + norma culta', blockId: 10, description: 'Diferencias BR↔PT (léxico, fonética, gramática), variantes regionales (norte/sul de BR, Açores/Madeira), norma culta escrita vs uso coloquial', prereqs: [] },
+  // Ancla propia de la línea B industrial (E2#5): sin ella, cientos de
+  // relays de aviso colgarían de b10-registro y cegarían el eje de
+  // concepts del gate de virginidad dentro de su propia clase.
+  { id: 'b10-relay-avisos', name: 'Relay de avisos e recados', blockId: 10, description: 'Mediación de información práctica: extraer los datos de un aviso/SMS/recado (día, franja, lugar, acción, condición, contacto), decidir cuáles viajan para cada destinatario y trasladarlos entre pt y es sin calcos ni datos inventados', prereqs: ['b10-registro'] },
 ];
 
 const B10: Block = {
