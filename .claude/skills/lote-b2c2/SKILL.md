@@ -118,7 +118,15 @@ verdad («fósil jurídico», no «no existe»).
 tiene que ser ancho.** En el lote 5 di por virgen «preferir do que»
 porque busqué `prefiro … do que` — 1.ª persona, presente. El uso
 atestado estaba en `preferia`. Un grep estrecho no absuelve a nadie:
-busca el LEMA (todas las personas y tiempos), no la forma que escribiste.
+busca el LEMA (todas las personas y tiempos), no la forma que
+escribiste. **Y con GRAFÍA ANTIGUA**: la Biblioteca escribe
+ortografía del XIX y ya escondió hits tres veces — «melhor escripto»
+(Garrett) mató un verdict del lote 7 que el grep moderno daba por
+limpio, y «emquanto» escondió en el lote 8 las atestaciones de las DOS
+direcciones de un ítem («emquanto não souber», «n'um instante»).
+Variantes a probar siempre: -pt-→-ppt-/-pct- (escripto/aceite),
+em-/en- (emquanto), ph (phosphoro), c' y n'/d' con apóstrofo, -mm-,
+th, y (systema).
 
 ## El molde de los juicios
 
