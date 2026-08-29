@@ -121,7 +121,8 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "0676a439",
@@ -154,9 +155,11 @@
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Você tem razão."
+        "Você tem razão.",
+        "Tens razão."
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "079718bd",
@@ -184,7 +187,8 @@
         "∅"
       ],
       "answer": "de"
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "07d20060",
@@ -199,12 +203,12 @@
       "irregular"
     ],
     "contentHash": "07d20060e8babfab06ea4e7240f30d2b83b64dbef3da0e81a911016a12b6be99",
-    "esContrast": "'Lembrar-se de' leva DE; em espanhol 'recordar' pode usar preposição diferente.",
+    "esContrast": "'Lembrar-se DE' lleva DE. En español 'acordarse DE' coincide; 'recordar' va sin preposición.",
     "variantStatus": "unchecked",
     "type": "verb_preposition",
     "data": {
       "verb": "lembrar",
-      "sentence": "Eu sempre lembro ___ chamar minha avó aos domingos.",
+      "sentence": "Eu lembro-me sempre ___ ligar à minha avó aos domingos.",
       "options": [
         "de",
         "a",
@@ -212,7 +216,13 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Eu sempre me lembro ___ ligar para a minha avó aos domingos."
+      }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "08689563",
@@ -365,7 +375,7 @@
       "restaurante"
     ],
     "contentHash": "0adafc0dc4d4b62cb5c29fd17494d6d1633478b6b6f08552a026dd513ee1cabc",
-    "esContrast": "'Prato' es igual, pero atención: 'plato' en PT-BR suena muy diferente a 'prato'.",
+    "esContrast": "'Prato' lleva R: 'plato' no existe en portugués — no calques.",
     "audio": {
       "br": {
         "hash": "f3a4a91f28b5ca415dd62e21d3d0303b2d51f7a9e5677ba8b8373d779cb6a8af",
@@ -382,7 +392,8 @@
       "front": "¿Cómo se dice 'plato' (comida) en portugués?",
       "back": "prato",
       "example": "Esse prato está delicioso!"
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "0b88eddd",
@@ -396,7 +407,7 @@
       "irregular"
     ],
     "contentHash": "0b88eddd26b836790c036601d153b8174c2c2a17a55ee2fa61c244cde2cf8496",
-    "esContrast": "Cuidado: 'fazer café' ≠ 'hacer café' en uso",
+    "esContrast": "'Fazer um café' = prepararlo; 'tomar um café' = beberlo (aquí se aceptan ambos). El uso es paralelo al español.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
@@ -410,7 +421,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "0e1ebe54",
@@ -509,7 +521,8 @@
       "front": "Traduce: 'Hay un problema.'",
       "back": "Há um problema.",
       "example": "Há um problema com o seu pedido."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "106f67a3",
@@ -538,7 +551,8 @@
       "front": "¿Cómo se dice 'cubiertos' en portugués?",
       "back": "talheres",
       "example": "Os talheres estão na mesa."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "11acbc7f",
@@ -584,20 +598,33 @@
       "coloquial"
     ],
     "contentHash": "12cceab2b61a56101e3577771da43f732340e9d097aacf0655d13dfaaf9e908c",
-    "esContrast": "Em PT usa-se 'brincar DE', em ES é 'jugar AL'. Cuidado com a preposição!",
+    "esContrast": "En PT-PT: 'brincar AOS médicos'; en PT-BR: 'brincar DE médico'. En español: 'jugar AL'.",
     "variantStatus": "unchecked",
     "type": "verb_preposition",
     "data": {
       "verb": "brincar",
-      "sentence": "As crianças brincam ___ médico o dia inteiro.",
+      "sentence": "As crianças brincam ___ médicos o dia inteiro.",
       "options": [
+        "aos",
         "de",
-        "a",
         "com",
-        "ao"
+        "em"
       ],
-      "answer": "de"
-    }
+      "answer": "aos"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "As crianças brincam ___ médico o dia inteiro.",
+        "options": [
+          "de",
+          "a",
+          "com",
+          "ao"
+        ],
+        "answer": "de"
+      }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "15626836",
@@ -645,7 +672,7 @@
     ],
     "tags": [],
     "contentHash": "f84e747b8b234e47a53596c3badab1a3e3ebc05a0a7c6d24358325982fb703b4",
-    "esContrast": "'Presentemente' ≈ 'actualmente/presentemente'. La estructura 'estar a + infinitivo' es exclusively portuguesa.",
+    "esContrast": "'Presentemente' ≈ 'actualmente'. 'Estar a + infinitivo' es exclusiva del portugués europeo (Brasil usa gerundio).",
     "audio": {
       "br": {
         "hash": "be3a8f2eeedbf0bc6e7e722d803f9089f162150c21b5f7c80e5df11dd694af09",
@@ -660,13 +687,14 @@
     "type": "translation",
     "data": {
       "source": "Presentemente estou a trabalhar num projeto novo.",
-      "target": "Presentemente estoy trabajando en un proyecto nuevo.",
+      "target": "Actualmente estoy trabajando en un proyecto nuevo.",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "Actualmente estoy trabajando en un proyecto nuevo."
+        "Presentemente estoy trabajando en un proyecto nuevo."
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "17d127aa",
@@ -717,7 +745,7 @@
       "vocabulário"
     ],
     "contentHash": "1a7ec3f34b63e4e50e305b3494b7ae5fdfdf45c2ac30f62eace05ce22120ace3",
-    "esContrast": "'Namorada' es igual al español. El posesivo se usa con artículo: 'a minha namorada'.",
+    "esContrast": "'Namorada' = 'novia' (no existe en español). El posesivo lleva artículo: 'a minha namorada'.",
     "audio": {
       "br": {
         "hash": "545041751bff37138e26c9f604145f812d275a6852fd0f5b7f2f5d8af8a25432",
@@ -734,7 +762,8 @@
       "front": "Traduce: 'Mi novia vive en São Paulo.'",
       "back": "A minha namorada mora em São Paulo.",
       "example": "A minha namorada é de São Paulo."
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "1c539301",
@@ -997,7 +1026,8 @@
       "front": "Conjuga: EU penso, TU pensas, ELE pensa... ¿Cómo se dice 'nosotros pensamos'?",
       "back": "Nós pensamos",
       "example": "Nós pensamos que é uma boa ideia."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "2a2931a0",
@@ -1181,7 +1211,7 @@
       "frequente"
     ],
     "contentHash": "2dbb88c9f8e2e5b456167fa76d369b9b582cb9ef5cd5744b97646183f53675a0",
-    "esContrast": "Em espanhol 'necesitar' não leva preposição; em PT-BR, 'precisar' exige DE.",
+    "esContrast": "En español 'necesitar' no lleva preposición; en portugués 'precisar' exige DE.",
     "variantStatus": "unchecked",
     "type": "verb_preposition",
     "data": {
@@ -1194,7 +1224,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "3076ada3",
@@ -1460,7 +1491,8 @@
       "acceptedAlternatives": [
         "Nosotros pedimos café y pastel."
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "3df42b79",
@@ -1768,7 +1800,8 @@
       "acceptedAlternatives": [
         "Hubo un momento en que había muchos problemas con esa traducción, pero ya no queda ninguno."
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: DUDA — Glosa desalineada con la frase: los 'houve/havia' del ejemplo son EXISTENCIALES ('hubo una época en que había…'), no el 'há' temporal ('hace tiempo') que la glosa explica; el 'en BR se diría faz/fazia' no aplica a esta f (informe-cola3-manual)"
   },
   {
     "id": "4813e82c",
@@ -1826,7 +1859,7 @@
       "falso-amigo"
     ],
     "contentHash": "059cad00c85f6e3a6c105c727f5ac0405f7648b2443c745a81ecfccfb72c6272",
-    "esContrast": "'Presente' en pt es sustantivo o adjetivo; 'atualmente' ≠ 'presentemente'.",
+    "esContrast": "'Atualmente' = 'actualmente'; 'presentemente' es su sinónimo culto. Ojo: 'presente' también es 'regalo'.",
     "audio": {
       "br": {
         "hash": "612852c058eaea802afd33a771de09065f4abe55c48f687eba76b9d2042b039e",
@@ -1847,7 +1880,8 @@
       "acceptedAlternatives": [
         "No presente, tenho uma namorada."
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "4a3bcc22",
@@ -1973,19 +2007,20 @@
       "irregular"
     ],
     "contentHash": "4db88ca6bfc46b2ac5f7905c4573188cdc22a395a65b18b36851f4a1c5f839a9",
-    "esContrast": "'Querer alguém' = 'echar de menos a alguien', no 'querer'",
+    "esContrast": "'Querer (bem) a alguém' = tenerle cariño ('Quero-lhe muito'); 'echar de menos' = 'ter saudades de'.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu ___ muito a minha avó. Ela é especial.",
+      "sentence": "Eu ___ muito à minha avó. Ela é especial. (querer)",
       "blanks": [
         {
           "position": 0,
-          "answer": "querho",
+          "answer": "quero",
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "4fef5e1e",
@@ -2098,7 +2133,8 @@
       "front": "Traduce: 'Hace dos años que estudio portugués.'",
       "back": "Há dois anos que estudo português.",
       "example": "Há dois anos que estudo português. / Faz dois anos que estudo português."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "531ed81b",
@@ -2667,12 +2703,24 @@
         {
           "position": 0,
           "answer": "há",
-          "alternatives": [
-            "tem"
-          ]
+          "alternatives": []
         }
       ]
-    }
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "blanks": [
+          {
+            "position": 0,
+            "answer": "há",
+            "alternatives": [
+              "tem"
+            ]
+          }
+        ]
+      }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "65658bb2",
@@ -2686,7 +2734,7 @@
       "irregular"
     ],
     "contentHash": "65658bb2d28a3f9e14bc87954438a97ce7a037579e93cf13dbe26824ea21a27c",
-    "esContrast": "Fique atento: 'faça' es imperativo negativo de 'fazer', y 'pense' es imperativo de 'pensar'. Não confunda com o español.",
+    "esContrast": "Con 'você' el imperativo usa la forma del subjuntivo, afirmativa o negativa: '(não) faça', '(não) pense' — como 'haga/piense'. Con 'tu': 'não faças'.",
     "audio": {
       "br": {
         "hash": "9b9708a198dc9fc15beb3ea2c10ae31a7136ffc71747e4b8e950152b90385e65",
@@ -2709,7 +2757,8 @@
         "Comer"
       ],
       "answer": "Pensar"
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "673ed3a8",
@@ -2735,7 +2784,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "6881454f",
@@ -2856,7 +2906,7 @@
       "existencial"
     ],
     "contentHash": "757631aa044bb3f9918f98365969c314a45ca4c0a818ec95cef5d05db2fdd6d3",
-    "esContrast": "En pt se evita 'há que' impersonal; se prefiere 'é preciso' o 'é necessário'.",
+    "esContrast": "'Hay que' = 'há que' (corriente en PT-PT) o 'é preciso / é necessário'. En BR coloquial: 'tem que'.",
     "audio": {
       "br": {
         "hash": "56a4c3e8dbaa0043675595486ff774cdff560c5127dea20f41e522e418952442",
@@ -2875,10 +2925,18 @@
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Há que poupar dinheiro.",
-        "Tem que poupar dinheiro."
+        "Há que poupar dinheiro."
       ]
-    }
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "acceptedAlternatives": [
+          "Há que poupar dinheiro.",
+          "Tem que poupar dinheiro."
+        ]
+      }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "6deff224",
@@ -3052,7 +3110,7 @@
     ],
     "tags": [],
     "contentHash": "a3f0a23c392baf7086b16c6e448d8fa37e522933264d1e83aa2d9825f0967f8c",
-    "esContrast": "'Estar a + infinitivo' es la forma progresiva portuguesa; en español usamos 'estar + gerundio'.",
+    "esContrast": "'Estar a + infinitivo' es el progresivo del portugués europeo; Brasil, como el español, usa gerundio.",
     "audio": {
       "br": {
         "hash": "06cc9c07dcf0f015d1eaec27283896aeac06b4c384fa1880079f0ac9e1f5c036",
@@ -3071,10 +3129,10 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "Está ahorrando el dinero para nosotros.",
-        "Ella nos está ahorrando el dinero."
+        "Está ahorrando el dinero para nosotros."
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "76bcc25a",
@@ -3355,7 +3413,7 @@
       "coloquial"
     ],
     "contentHash": "2283ee592db91828655239895354921af3195da5dadd24f76f986af4b5eca68b",
-    "esContrast": "'À espera' lleva acento; 'espera' sin él cambia de significado.",
+    "esContrast": "La crase está en 'à' (a+a): 'à espera' = 'esperando/a la espera'; 'a espera' sin acento = 'la espera'.",
     "audio": {
       "br": {
         "hash": "da8cc25001b1794bfc97fd186b7c5b907458d619b726cfc2544fde08905df2a7",
@@ -3374,10 +3432,18 @@
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Tem alguém à espera.",
-        "Alguém está esperando."
+        "Está alguém à espera."
       ]
-    }
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "acceptedAlternatives": [
+          "Tem alguém à espera.",
+          "Alguém está esperando."
+        ]
+      }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "817a7e55",
@@ -3405,7 +3471,8 @@
         "para"
       ],
       "answer": "em"
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "82a8a691",
@@ -3426,13 +3493,14 @@
       "verb": "pensar",
       "sentence": "Ela pensa ___ namorada todos os dias.",
       "options": [
-        "em",
+        "na",
         "de",
         "sobre",
         "∅"
       ],
-      "answer": "em"
-    }
+      "answer": "na"
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "83e2a8d8",
@@ -3526,7 +3594,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: DUDA — Estructural (cloze-sin-pista): 'Quando ___ vejo, fico nervoso' acepta solo 'te', pero 'o'/'a' ('cuando lo/la veo') son igual de válidas y se castigan. La próclise con 'quando' sí es correcta y la glosa exacta. Sugerencia (informe-cola3-manual)"
   },
   {
     "id": "84b944b6",
@@ -3569,7 +3638,7 @@
     ],
     "tags": [],
     "contentHash": "b4c9a8fc136a314a39e2fd83872a3d0dcda9b838d12357d7c186528cb543b289",
-    "esContrast": "En portugués 'à espera' equivale a 'esperando', no a 'a la espera' (que sería 'em espera').",
+    "esContrast": "'Estar à espera de' = 'estar esperando a' / 'a la espera de'. No inventes 'em espera' (eso es la llamada en espera).",
     "audio": {
       "br": {
         "hash": "dfdbb1cbd8b37eb1c3fd984a5daf67d2ac3546ac4543e15db094aeaf7fe0c301",
@@ -3591,7 +3660,8 @@
         "Yo la estoy esperando a ella.",
         "Estoy esperándola."
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "865f596b",
@@ -3721,13 +3791,14 @@
       "verb": "pensar",
       "sentence": "A Maria pensa ___ namorada todos os dias.",
       "options": [
-        "em",
+        "na",
         "de",
         "a",
         "sobre"
       ],
-      "answer": "em"
-    }
+      "answer": "na"
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "895496ad",
@@ -3858,7 +3929,8 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "8c65ec46",
@@ -3952,7 +4024,7 @@
       "irregular"
     ],
     "contentHash": "b2f03d60709fcd89d9469004223a8b896588670391713b716b40fdf9b2b01d66",
-    "esContrast": "'Fazer sentido' es impersonal en pt; 'no tiene sentido' = 'não faz sentido'.",
+    "esContrast": "'No tiene sentido' = 'não faz sentido' — con 'fazer', no con 'ter'; el sujeto es lo que (no) tiene sentido.",
     "audio": {
       "br": {
         "hash": "72491d7126059eb4c2067db3851ea7e7d5a932f01cc8a6073df0e7f87035e1c2",
@@ -3973,7 +4045,8 @@
       "acceptedAlternatives": [
         "Não tem sentido fazer um pedido agora."
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "9185fccd",
@@ -4151,7 +4224,7 @@
     ],
     "tags": [],
     "contentHash": "7594bf0d39cfc18f3fe007e5fade76de3c5026608b563cc5ef45f3647706484d",
-    "esContrast": "Estructura progresiva 'estar a + infinitivo' para acciones en desarrollo; 'se' sería reflexivo incorrecto aquí",
+    "esContrast": "Progresivo europeo: 'estar a + infinitivo' ('estão a poupar'); en Brasil, gerundio ('estão poupando').",
     "audio": {
       "br": {
         "hash": "f2c71af224041768525b34f10d40644beadb5d276c37e283f344a3005d0b57ce",
@@ -4165,14 +4238,15 @@
     "variantStatus": "unchecked",
     "type": "translation",
     "data": {
-      "source": "Ellos se están ahorrando dinero presentemente",
+      "source": "Ellos están ahorrando dinero actualmente.",
       "target": "Eles estão a poupar dinheiro presentemente",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
         "Eles estão a economizar dinheiro presentemente"
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "996e9eb4",
@@ -4273,7 +4347,8 @@
       "front": "'Hacer un pedido' en portugués",
       "back": "fazer um pedido",
       "example": "Eu quero fazer um pedido agora."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "9d033dc3",
@@ -4810,7 +4885,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "ae8344a9",
@@ -4822,7 +4898,7 @@
       "vocabulario"
     ],
     "contentHash": "ae8344a9efd5d9a8f8c327c531c866da9a8d3856f7be1fdb83473c1b8dc3e14b",
-    "esContrast": "'Bebida' es igual en ambos idiomas, pero en PT se pronuncia diferente [beh-BEE-dah].",
+    "esContrast": "'Bebida' se escribe igual; en PT-PT las vocales átonas se reducen: suena [bɨˈβidɐ], no [beˈbida].",
     "audio": {
       "br": {
         "hash": "18710cf4ae02c50a4ffaeebf6e160640a6364691052fc1eb352749fb5c24cc1a",
@@ -4839,7 +4915,8 @@
       "front": "¿Cómo se dice 'bebida' en portugués?",
       "back": "bebida",
       "example": "Quero uma bebida gelada."
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "b1c648ca",
@@ -4896,7 +4973,8 @@
       "front": "¿Cómo se dice 'postre' en portugués?",
       "back": "sobremesa",
       "example": "Para a sobremesa, quero pudim."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "b4ebe21f",
@@ -4929,7 +5007,8 @@
       "acceptedAlternatives": [
         "Desejo fazer um pedido: eu como mariscos e ela come carne."
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "b54c7c7c",
@@ -4945,7 +5024,7 @@
       "básico"
     ],
     "contentHash": "b54c7c7c3b4c473fe52924a2fc08a7b369b4a44db002176dc29b6140b6e610b7",
-    "esContrast": "'Gostar' leva DE, mas em espanhol 'gustar' não leva preposição.",
+    "esContrast": "En portugués 'gostar' exige DE; en español 'gustar' no lleva preposición.",
     "variantStatus": "unchecked",
     "type": "verb_preposition",
     "data": {
@@ -4958,7 +5037,8 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "b6f0abd6",
@@ -5255,7 +5335,8 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "bdcd91ff",
@@ -5402,9 +5483,10 @@
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Nós fizemos um pedido de paella e eles pedem peixe."
+        "Nós pedimos uma paella e eles pedem peixe."
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "c6f1c71d",
@@ -5506,7 +5588,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "cabff80f",
@@ -5605,10 +5688,11 @@
     "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
-      "front": "Qué significa 'fazer um pedido'?",
+      "front": "¿Qué significa 'fazer um pedido'?",
       "back": "Significa 'hacer un pedido' o 'realizar un encargo'.",
       "example": "Já fiz um pedido no restaurante."
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "ce8a3e5e",
@@ -5664,7 +5748,8 @@
         "para"
       ],
       "answer": "com"
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: DUDA — Pragmática incoherente: «Vocês ficam com a conta ou preferem pagar juntos?» opone dos opciones con el MISMO sujeto — si 'vocês' se quedan con la cuenta, ya pagan juntos; la disyuntiva se anula. Gramática y regência ('fic (informe-cola3-manual)"
   },
   {
     "id": "d032f477",
@@ -5797,7 +5882,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: DUDA — Estructural (cloze-sin-pista): '___ mais devagar, por favor! Não há pressa.' — 'Anda/Vai/Conduz mais devagar' son tan válidas como 'Fala' y se castigan. Sugerencia: añadir '(falar)'. Las dos formas aceptadas (Fala tu / F (informe-cola3-manual)"
   },
   {
     "id": "d6c3d464",
@@ -5985,10 +6071,10 @@
       "b3-pronomes"
     ],
     "tags": [
-      "regular"
+      "irregular"
     ],
     "contentHash": "d96c12d12afccfd49ca570ff6ef552953e629990b10787318caa352284e56c81",
-    "esContrast": "'Estar' es irregular en presente: 'estou, estás, está...' No es regular '-er'.",
+    "esContrast": "'Estar' es irregular: estou, estás, está, estamos, estão — no sigue el patrón regular de -AR.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
@@ -6000,7 +6086,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "da94b053",
@@ -6015,7 +6102,7 @@
       "coloquial"
     ],
     "contentHash": "da94b053a9453425d453e1cc1c12ef202b66b21a764aa3ee6ff293ee9e554302",
-    "esContrast": "'Deve ter' indica probabilidad existencial ('debe haber'). Diferente de 'dever + infinitivo' de obligación.",
+    "esContrast": "'Deve (de) ter/haver um erro' = 'debe de haber un error' (probabilidad). El 'de' es legítimo en PT-PT; para obligación se usa 'ter de/que'.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
@@ -6024,9 +6111,7 @@
         {
           "position": 0,
           "answer": "Deve",
-          "alternatives": [
-            "Pode"
-          ]
+          "alternatives": []
         },
         {
           "position": 2,
@@ -6036,7 +6121,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "dbd0465c",
@@ -6091,11 +6177,11 @@
       "informal"
     ],
     "contentHash": "dcdefb3738a5aceb920bec62422ce4d8ad0642b24385717d075770f811743508",
-    "esContrast": "Imperativo reflexivo: 'Levanta-te' ≠ 'Levántate' (sin pronombre)",
+    "esContrast": "'Levanta-te' = 'Levántate': mismo pronombre; en portugués va con guion (ênclise). Con 'você': 'Levante-se'.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
-      "sentence": "___ às sete horas! O concerto começa cedo.",
+      "sentence": "___ às sete horas! O concerto começa cedo. (levantar-se)",
       "blanks": [
         {
           "position": 0,
@@ -6105,7 +6191,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "dd479edd",
@@ -6301,7 +6388,8 @@
       "front": "¿Qué significa 'razoável'?",
       "back": "Razonable / justo / tolerable",
       "example": "O preço é razoável para a qualidade."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "e1e393b7",
@@ -6347,7 +6435,7 @@
       "formal"
     ],
     "contentHash": "e4b382e006532fde6dfeaa7d65ad0354515f2c681cef23e0efcdd6f45a1b159c",
-    "esContrast": "En pt formal se usa 'há' con valor impersonal, no 'existe' como en es.",
+    "esContrast": "'Hay' = 'há' (invariable). También vale 'existem', que concuerda en plural.",
     "audio": {
       "br": {
         "hash": "b640f56123b5c64dc76329a4b2fa675ab7aaaca9c5ef110939bf25f58106574b",
@@ -6368,7 +6456,8 @@
       "acceptedAlternatives": [
         "Existem vários pedidos pendentes."
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "e724cfe9",
@@ -6635,7 +6724,8 @@
       "acceptedAlternatives": [
         "Hago un pedido ahora."
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "f35480fc",
@@ -6689,7 +6779,7 @@
       "falso-amigo"
     ],
     "contentHash": "93b96774bfe4e7673b407629e3d390c99a00689b699b269ae4aed73f2866c175",
-    "esContrast": "Frase idiomática: 'à espera' no se traduce como 'a la espera'",
+    "esContrast": "'Estar à espera de' (PT-PT) = 'estar esperando a' / 'a la espera de'; en Brasil: 'estar esperando'.",
     "audio": {
       "br": {
         "hash": "771dc34acf1a321639ec4d429112636b1086ac82057d9e4dc0acf688eb621d5b",
@@ -6709,9 +6799,11 @@
       "targetLang": "pt-br",
       "acceptedAlternatives": [
         "Eu espero a Maria",
-        "Eu estou a esperar a Maria"
+        "Eu estou a esperar a Maria",
+        "Eu estou esperando a Maria"
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "f50530e9",
@@ -6759,7 +6851,7 @@
       "irregular"
     ],
     "contentHash": "f6a6d3873f7e7a48a26a06897bd1b562556e5080bb2a778d3c0d1c240728a6f6",
-    "esContrast": "'Dizer a verdade' = 'decir la verdad'; observe o 'a'",
+    "esContrast": "'Dizer a verdade' = 'decir la verdad'.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
@@ -6768,12 +6860,11 @@
         {
           "position": 0,
           "answer": "diz",
-          "alternatives": [
-            "dizia"
-          ]
+          "alternatives": []
         }
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "f77b2cc2",
@@ -6927,16 +7018,19 @@
     "type": "conjugation",
     "data": {
       "infinitive": "falar",
-      "person": "você",
+      "person": "tu",
       "tense": "presente do indicativo",
-      "answer": "fala",
-      "hintEs": "tú/usted habla(s)"
+      "answer": "falas",
+      "hintEs": "tú hablas"
     },
     "variantOverrides": {
-      "pt-pt": {
-        "answer": "falas"
+      "pt-br": {
+        "person": "você",
+        "answer": "fala",
+        "hintEs": "usted habla / tú hablas"
       }
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "126423d7",
@@ -6959,7 +7053,8 @@
       "tense": "presente do indicativo",
       "answer": "comemos",
       "hintEs": "nosotros comemos"
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "120f539b",
@@ -6982,7 +7077,8 @@
       "tense": "presente do indicativo",
       "answer": "abrem",
       "hintEs": "ellos/ellas abren"
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "39eaf8d8",
@@ -7005,7 +7101,8 @@
       "tense": "presente do indicativo",
       "answer": "trabalho",
       "hintEs": "yo trabajo"
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "915dc048",
@@ -7021,18 +7118,20 @@
     ],
     "contentHash": "915dc0485e8175e4adf5845ed0b44249bec65c77af9569926f00ab647a838d87",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: bebê",
+    "variantVerificacion": "corregido según revisión adversarial E2#5 2026-08-29 (informe-cola3: clon de la clase d03061db/15c6e949 «você+2sg», fuera de la cola determinista)",
     "type": "conjugation",
     "data": {
       "infinitive": "beber",
-      "person": "você",
+      "person": "tu",
       "tense": "presente do indicativo",
-      "answer": "bebe",
-      "hintEs": "tú/usted bebe(s)"
+      "answer": "bebes",
+      "hintEs": "tú bebes"
     },
     "variantOverrides": {
-      "pt-pt": {
-        "answer": "bebes"
+      "pt-br": {
+        "person": "você",
+        "answer": "bebe",
+        "hintEs": "usted bebe / tú bebes"
       }
     }
   },
@@ -7057,7 +7156,8 @@
       "tense": "presente do indicativo",
       "answer": "partimos",
       "hintEs": "nosotros partimos/salimos"
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "0f765cf2",
@@ -7080,7 +7180,8 @@
       "tense": "presente do indicativo",
       "answer": "sou",
       "hintEs": "yo soy"
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "15c6e949",
@@ -7099,16 +7200,19 @@
     "type": "conjugation",
     "data": {
       "infinitive": "estar",
-      "person": "você",
+      "person": "tu",
       "tense": "presente do indicativo",
-      "answer": "está",
-      "hintEs": "tú/usted está(s)"
+      "answer": "estás",
+      "hintEs": "tú estás"
     },
     "variantOverrides": {
-      "pt-pt": {
-        "answer": "estás"
+      "pt-br": {
+        "person": "você",
+        "answer": "está",
+        "hintEs": "usted está / tú estás"
       }
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "a18c9ce1",
@@ -7131,7 +7235,8 @@
       "tense": "presente do indicativo",
       "answer": "tenho",
       "hintEs": "yo tengo"
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "acb3a2f5",
@@ -7154,7 +7259,8 @@
       "tense": "presente do indicativo",
       "answer": "vamos",
       "hintEs": "nosotros vamos"
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "71175b10",

@@ -5758,7 +5758,7 @@
     "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
-      "sentence": "Os ___ da minha mulher são muytrabalhadores.",
+      "sentence": "Os ___ da minha mulher são muito trabalhadores.",
       "blanks": [
         {
           "position": 0,
@@ -5768,7 +5768,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "df4b9ea9",
@@ -5792,12 +5793,11 @@
         {
           "position": 0,
           "answer": "do",
-          "alternatives": [
-            "de o"
-          ]
+          "alternatives": []
         }
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "e1a485b5",
@@ -5811,7 +5811,7 @@
       "falso-amigo"
     ],
     "contentHash": "eb0ec9c9fab71d9cb43b2d1a9cf3b294c37fcd20a2e58566ca057fe0ccb76356",
-    "esContrast": "mistura y costumes son femenina y masculina respectivamente; attention aux terminaisons!",
+    "esContrast": "'mistura' es femenina y 'costume' masculino; ¡atención a las terminaciones!",
     "audio": {
       "br": {
         "hash": "ab7f654882a40e8ddc9a6fb1cd92b2efa072e1258dd3fd73d444df74594c06ea",
@@ -5832,7 +5832,8 @@
       "acceptedAlternatives": [
         "Essa mistura de costumes é fascinante."
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "e24696f7",
@@ -5882,11 +5883,11 @@
       "plural"
     ],
     "contentHash": "e29490a1d3d27d7d41aba198f977250cb00b33f656716124ecb12ba2d93926ef",
-    "esContrast": "capitão→capitães (ão→ães). También 'pão→pães', 'cristão→cristãos' en PT-BR.",
+    "esContrast": "capitão→capitães (ão→ães), como pão→pães; pero cristão→cristãos (ão→ãos). Igual en PT-PT y PT-BR.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
-      "sentence": "Os capitães ___ seus barcos para o porto.",
+      "sentence": "Os capitães ___ os seus barcos para o porto. (trazer)",
       "blanks": [
         {
           "position": 0,
@@ -5894,7 +5895,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "e7acfb7e",
@@ -5913,15 +5915,16 @@
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
-      "sentence": "Eu gosto ___ dos meus filhos.",
+      "sentence": "Eu gosto ___ meus filhos.",
       "options": [
-        "de",
-        "a",
-        "em",
+        "dos",
+        "aos",
+        "nos",
         "∅"
       ],
-      "answer": "de"
-    }
+      "answer": "dos"
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "e9714aba",
@@ -5956,7 +5959,8 @@
       "acceptedAlternatives": [
         "Tengo hijos muy simpáticos."
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "ebe4d4b9",
@@ -5982,7 +5986,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Quiero visitar a mi prima y a mi primo.",
@@ -5992,7 +5996,8 @@
       "acceptedAlternatives": [
         "Tenho vontade de visitar minha prima e meu primo."
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: rehacer entero (informe-cola3-manual)"
   },
   {
     "id": "ed3c76d7",
@@ -6021,10 +6026,11 @@
     "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
-      "front": "Cuál es la contracción de \"em + a\"?",
+      "front": "¿Cuál es la contracción de \"em + a\"?",
       "back": "na",
       "example": "Estudo na universidade. (= Estudo em a universidade)"
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "edd5778b",
@@ -6053,7 +6059,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "ee2f355d",
@@ -6131,7 +6138,7 @@
       "formal"
     ],
     "contentHash": "f007905de83863556bfff98e1be27a486dba7b98f99da6d9384af1de1479ba89",
-    "esContrast": "Esse/esse = 'ese/ese' según la distancia (no 'essar')",
+    "esContrast": "Este/esse/aquele = este/ese/aquel, según la distancia.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
@@ -6145,7 +6152,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "f02099fd",
@@ -6176,7 +6184,8 @@
       "front": "costumes",
       "back": "costumbres",
       "example": "Cada país tem seus costumes."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "f0ad7702",
@@ -6384,8 +6393,9 @@
     "data": {
       "front": "¿Cuál es la diferencia entre 'certo' y 'alguns'?",
       "back": "Certo = cierto, específico pero no dicho; Alguns = algunos, varios.",
-      "example": "Certas pessoas não entendem. / Alguns amigos vieram na festa."
-    }
+      "example": "Certas pessoas não entendem. / Alguns amigos vieram à festa."
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "f9cecc9c",
@@ -6432,7 +6442,7 @@
       "artículo-indefinido"
     ],
     "contentHash": "fa8863a256a66cb3cc61661f50f3b776c1ea499ce26fa0bf7e6e2780513de923",
-    "esContrast": "En plural, \"uns\" y \"umas\" se traducen como 'algunos/as', no 'unos/unas'.",
+    "esContrast": "En plural, 'uns/umas' = 'unos/unas' (o 'algunos/as'): 'uns filhos' = 'unos hijos'.",
     "audio": {
       "br": {
         "hash": "395157c4e8011b22b1cdfa02dd3772ecb54b70f89e08aa3a103feffeae16ee66",
@@ -6446,10 +6456,11 @@
     "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
-      "front": "Cuáles son los artículos indefinidos en portugués?",
+      "front": "¿Cuáles son los artículos indefinidos en portugués?",
       "back": "um, uma, uns, umas",
       "example": "Um livro / uma casa / uns amigos / umas flores"
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "fc50090f",
@@ -6514,7 +6525,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Tenho poucos contatos profissionais.",
@@ -6524,7 +6535,8 @@
       "acceptedAlternatives": [
         "Tengo pocos contactos de trabajo."
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: rehacer entero (informe-cola3-manual)"
   },
   {
     "id": "fd0eb5d6",
@@ -6548,12 +6560,11 @@
         {
           "position": 0,
           "answer": "pela",
-          "alternatives": [
-            "por a"
-          ]
+          "alternatives": []
         }
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "fe319d4f",
@@ -6585,10 +6596,11 @@
         "Meu primo",
         "Nosso vínculo",
         "Família",
-        "Não há posesivo posposto"
+        "Não há possessivo posposto"
       ],
-      "answer": "Não há posesivo posposto"
-    }
+      "answer": "Não há possessivo posposto"
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "fec8080e",
@@ -6617,10 +6629,11 @@
     "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
-      "front": "Cuál es la contracción de \"de + o\"?",
+      "front": "¿Cuál es la contracción de \"de + o\"?",
       "back": "do",
       "example": "A casa do João. (= A casa de o João)"
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "ffb4fc2a",
@@ -6680,7 +6693,8 @@
       "sentence": "A problema é muito difícil.",
       "correct": "O problema é muito difícil.",
       "explanationEs": "En PT 'problema' es masculino (o problema); el -a final no marca femenino como en español."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "2a484dc4",
@@ -6702,7 +6716,8 @@
       "sentence": "O viagem foi muito longo.",
       "correct": "A viagem foi muito longa.",
       "explanationEs": "'viagem' es femenino en PT; arrastra la concordancia: a viagem... longa."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "2ad0c58f",
@@ -6724,7 +6739,8 @@
       "sentence": "A leite já está quente.",
       "correct": "O leite já está quente.",
       "explanationEs": "'leite' es masculino en PT (o leite), aunque 'leche' sea femenino en español."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "c550419f",
@@ -6787,7 +6803,8 @@
       "sentence": "Este é o carro de o meu pai.",
       "correct": "Este é o carro do meu pai.",
       "explanationEs": "'de' + 'o' se contrae en 'do' de forma obligatoria en PT."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "5a092cc8",
@@ -6809,7 +6826,8 @@
       "sentence": "Todas as manhãs vou a a praia.",
       "correct": "Todas as manhãs vou à praia.",
       "explanationEs": "'a' (preposición) + 'a' (artículo) se funden en 'à' (crase)."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "f6f47168",
@@ -6829,9 +6847,10 @@
     "type": "error_correction",
     "data": {
       "sentence": "Eu perdi meu chaves outra vez.",
-      "correct": "Eu perdi minhas chaves outra vez.",
+      "correct": "Eu perdi as minhas chaves outra vez.",
       "explanationEs": "En PT el posesivo concuerda con lo poseído: 'chave' es femenino y está en plural, así que 'minhas chaves'."
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "4345f6ea",
@@ -6852,7 +6871,8 @@
       "sentence": "Os pão da padaria estão frescos.",
       "correct": "Os pães da padaria estão frescos.",
       "explanationEs": "Muchos sustantivos en '-ão' forman el plural en '-ães': pão → pães."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "93d20b71",
@@ -6873,7 +6893,8 @@
       "sentence": "No zoológico há muitos animal exóticos.",
       "correct": "No zoológico há muitos animais exóticos.",
       "explanationEs": "Los sustantivos en '-al' hacen el plural en '-ais': animal → animais."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "674fe02c",
@@ -6898,7 +6919,8 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'coração' pertenece al grupo '-ão' → '-ões': corações."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "be8743ad",
@@ -6924,7 +6946,8 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'de' + 'a' se contrae en 'da'. 'dela' (de+ela) significa 'de ella', distinto."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "1bea0f05",
@@ -6949,7 +6972,8 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'árvore' es femenino: a árvore."
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "c90cae18",
@@ -6984,7 +7008,8 @@
           "right": "papéis"
         }
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "08c13f51",
@@ -7040,7 +7065,8 @@
           "answer": "no"
         }
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "72ae98a9",
@@ -7065,7 +7091,8 @@
           "answer": "do"
         }
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "d931d23e",
@@ -7091,7 +7118,8 @@
           "answer": "à"
         }
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: DUDA — Estructural (cloze-sin-pista): input libre donde 'para a' ('Ela vai para a escola de bicicleta') es perfectamente válida y sería castigada; solo se acepta 'à'. Sugerencia: blanks[0].alternatives = ['para a'] o pedir expl (informe-cola3-manual)"
   },
   {
     "id": "3317f030",
@@ -7116,7 +7144,8 @@
           "answer": "na"
         }
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "c49e03fd",
@@ -7141,7 +7170,8 @@
           "answer": "dos"
         }
       ]
-    }
+    },
+    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)"
   },
   {
     "id": "a092e856",
@@ -7159,14 +7189,15 @@
     "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
-      "sentence": "Estes são ___ livros favoritos. (meu)",
+      "sentence": "Estes são os ___ livros favoritos. (meu)",
       "blanks": [
         {
           "position": 0,
           "answer": "meus"
         }
       ]
-    }
+    },
+    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)"
   },
   {
     "id": "208d6710",
