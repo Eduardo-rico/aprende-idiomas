@@ -270,7 +270,7 @@
   {
     "id": "b2c2-gj-l5-16",
     "blockId": 11,
-    "lessonId": "b11-l2-regencias-que-traem",
+    "lessonId": "b11-l3-morfologia-enganosa",
     "difficulty": 3,
     "concepts": [
       "b11-morfologia-enganosa"
@@ -294,7 +294,7 @@
   {
     "id": "b2c2-gj-l5-18",
     "blockId": 11,
-    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "lessonId": "b11-l3-morfologia-enganosa",
     "difficulty": 3,
     "concepts": [
       "b11-morfologia-enganosa"
@@ -365,7 +365,7 @@
   {
     "id": "b2c2-gj-l6-01",
     "blockId": 11,
-    "lessonId": "b11-l2-regencias-que-traem",
+    "lessonId": "b11-l3-morfologia-enganosa",
     "difficulty": 3,
     "concepts": [
       "b11-morfologia-enganosa"
@@ -374,22 +374,22 @@
       "b2c2-lote6",
       "anti-calco"
     ],
+    "contentHash": "5f7be1869517c7dbe9019a7c4d7be93dec6e6b9c833a4525659b234d2137d4a3",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "register": "neutro",
+    "address": "tu",
     "type": "grammaticality_judgment",
     "data": {
       "sentence": "A diferença entre mim e ti é essa.",
       "verdict": true,
       "explanationEs": "Tras preposición, el portugués usa el pronombre oblicuo: entre mim e ti, para mim, sem ti. Aquí el español dice justo lo contrario — «entre tú y yo» — así que el alumno «corrige» esta frase y la estropea; en «para mí» o «sin ti», en cambio, las dos lenguas coinciden. (Nota fina: con «entre» a veces se oye nominativo en compañía de tercera persona — «entre ela e eu» —, y «exceto/salvo/menos eu» van con «eu» porque ahí esas palabras funcionan como adverbios, no como preposiciones.)"
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
-    "register": "neutro",
-    "address": "tu",
-    "contentHash": "5f7be1869517c7dbe9019a7c4d7be93dec6e6b9c833a4525659b234d2137d4a3"
+    }
   },
   {
     "id": "b2c2-gj-l6-04",
     "blockId": 11,
-    "lessonId": "b11-l2-regencias-que-traem",
+    "lessonId": "b11-l3-morfologia-enganosa",
     "difficulty": 3,
     "concepts": [
       "b11-morfologia-enganosa"
@@ -398,17 +398,17 @@
       "b2c2-lote6",
       "anti-calco"
     ],
+    "contentHash": "268b78f7229dcac9e780f1d5a9fc65e18ebe5f9a71f8a870a5f7d23c47b77a0b",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md) · revisión manual E2#4 2026-08-28: OK (informe-cola2-manual)",
+    "register": "neutro",
     "type": "grammaticality_judgment",
     "data": {
       "sentence": "Ela é mais alta do que mim.",
       "verdict": false,
-      "explanationEs": "En la comparación, «do que» NO es preposición: lo que sigue es sujeto de una frase elidida («do que eu [sou]»), así que va «eu», no «mim». Es la sobrecorrección clásica del que ya aprendió «para mim» y «sem ti»: aplica el oblicuo donde no toca. Y fíjate que aquí el español AYUDA — «más alta que yo» calca exactamente a «do que eu» —; la trampa no viene de tu lengua, viene de la regla recién aprendida.",
-      "repair": "Ela é mais alta do que eu."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md) · revisión manual E2#4 2026-08-28: OK (informe-cola2-manual)",
-    "register": "neutro",
-    "contentHash": "268b78f7229dcac9e780f1d5a9fc65e18ebe5f9a71f8a870a5f7d23c47b77a0b"
+      "repair": "Ela é mais alta do que eu.",
+      "explanationEs": "En la comparación, «do que» NO es preposición: lo que sigue es sujeto de una frase elidida («do que eu [sou]»), así que va «eu», no «mim». Es la sobrecorrección clásica del que ya aprendió «para mim» y «sem ti»: aplica el oblicuo donde no toca. Y fíjate que aquí el español AYUDA — «más alta que yo» calca exactamente a «do que eu» —; la trampa no viene de tu lengua, viene de la regla recién aprendida."
+    }
   },
   {
     "id": "b2c2-gj-l6-07",
@@ -422,17 +422,17 @@
       "b2c2-lote6",
       "anti-calco"
     ],
+    "contentHash": "676c99285f28614129c3255b37920461e00176ab93fc87104da0a6e30bb99097",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md) · revisión manual E2#4 2026-08-28: OK (informe-cola2-manual)",
+    "register": "informal",
     "type": "grammaticality_judgment",
     "data": {
       "sentence": "Vou exprimir umas laranjas para o sumo.",
       "verdict": false,
-      "explanationEs": "«Exprimir» en portugués es expresar («exprimir uma ideia»); las naranjas se «espremem». El «exprimir» español del zumo no se traslada — y la frase entera es portuguesa impecable, solo que dice que vas a expresar unas naranjas.",
-      "repair": "Vou espremer umas laranjas para o sumo."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md) · revisión manual E2#4 2026-08-28: OK (informe-cola2-manual)",
-    "register": "informal",
-    "contentHash": "676c99285f28614129c3255b37920461e00176ab93fc87104da0a6e30bb99097"
+      "repair": "Vou espremer umas laranjas para o sumo.",
+      "explanationEs": "«Exprimir» en portugués es expresar («exprimir uma ideia»); las naranjas se «espremem». El «exprimir» español del zumo no se traslada — y la frase entera es portuguesa impecable, solo que dice que vas a expresar unas naranjas."
+    }
   },
   {
     "id": "b2c2-gj-l6-09",
@@ -446,17 +446,17 @@
       "b2c2-lote6",
       "anti-calco"
     ],
+    "contentHash": "1327a2d99bf5edb9d97da2ab6aee3dd3c47f2fe89502a8e373fc3f801b56c028",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "register": "informal",
     "type": "grammaticality_judgment",
     "data": {
       "sentence": "Bebi dois vasos de vinho ao jantar.",
       "verdict": false,
-      "explanationEs": "«Vaso» en portugués es la maceta o el jarrón (y en Brasil, además, la taza del váter); de beber son «copos». El «vaso de vino» español no se traslada — y pedirlo así en Lisboa pinta una imagen bastante rara.",
-      "repair": "Bebi dois copos de vinho ao jantar."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
-    "register": "informal",
-    "contentHash": "1327a2d99bf5edb9d97da2ab6aee3dd3c47f2fe89502a8e373fc3f801b56c028"
+      "repair": "Bebi dois copos de vinho ao jantar.",
+      "explanationEs": "«Vaso» en portugués es la maceta o el jarrón (y en Brasil, además, la taza del váter); de beber son «copos». El «vaso de vino» español no se traslada — y pedirlo así en Lisboa pinta una imagen bastante rara."
+    }
   },
   {
     "id": "b2c2-gj-l6-10",
@@ -470,17 +470,17 @@
       "b2c2-lote6",
       "anti-calco"
     ],
+    "contentHash": "78e76cd461a69a00795c7192d8340107edc529976e34e4eeef16e5f92eebd8ae",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md) · revisión manual E2#4 2026-08-28: OK (informe-cola2-manual)",
+    "register": "informal",
     "type": "grammaticality_judgment",
     "data": {
       "sentence": "Temperei a salada só com aceite e vinagre.",
       "verdict": false,
-      "explanationEs": "«Aceite» en portugués existe — pero es el participio de aceitar («o pedido foi aceite»). El aceite de oliva es «azeite» (y los demás aceites, «óleo»). Frase 100 % portuguesa que dice que aliñaste la ensalada con un «aceptado».",
-      "repair": "Temperei a salada só com azeite e vinagre."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md) · revisión manual E2#4 2026-08-28: OK (informe-cola2-manual)",
-    "register": "informal",
-    "contentHash": "78e76cd461a69a00795c7192d8340107edc529976e34e4eeef16e5f92eebd8ae"
+      "repair": "Temperei a salada só com azeite e vinagre.",
+      "explanationEs": "«Aceite» en portugués existe — pero es el participio de aceitar («o pedido foi aceite»). El aceite de oliva es «azeite» (y los demás aceites, «óleo»). Frase 100 % portuguesa que dice que aliñaste la ensalada con un «aceptado»."
+    }
   },
   {
     "id": "b2c2-gj-l7-02",
@@ -494,16 +494,16 @@
       "b2c2-lote7",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "b82e6bde584c601f0d182c7b292e6537714f5569281d9b89236426733ebed777",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 7: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-lote7-b2c2.md) · revisión manual E2#5 2026-08-29: OK (informe-cola3-manual)",
     "register": "neutro",
-    "contentHash": "b82e6bde584c601f0d182c7b292e6537714f5569281d9b89236426733ebed777",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "A polícia ainda procura o presunto assaltante do multibanco.",
       "verdict": false,
-      "explanationEs": "«Presunto» en portugués es, ante todo, el jamón. El adjetivo español («presunto ladrón») se dice «presumível», «suposto» o «alegado». La frase, tal cual, pone a la policía a buscar un jamón asaltante.",
-      "repair": "A polícia ainda procura o presumível assaltante do multibanco."
+      "repair": "A polícia ainda procura o presumível assaltante do multibanco.",
+      "explanationEs": "«Presunto» en portugués es, ante todo, el jamón. El adjetivo español («presunto ladrón») se dice «presumível», «suposto» o «alegado». La frase, tal cual, pone a la policía a buscar un jamón asaltante."
     }
   },
   {
@@ -518,17 +518,17 @@
       "b2c2-lote7",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "277fb4fa82d5785678fdaa3e3df111ddef5b80d9a8a8221e6da516ef01d710b3",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 7: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-lote7-b2c2.md)",
     "register": "informal",
-    "contentHash": "277fb4fa82d5785678fdaa3e3df111ddef5b80d9a8a8221e6da516ef01d710b3",
     "address": "tu",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "Ainda bem: a tua proposta vai de encontro ao que eu tinha pensado.",
       "verdict": false,
-      "explanationEs": "Son casi gemelas y dicen lo contrario: «ir AO encontro DE» es coincidir, satisfacer, venir al encuentro; «ir DE encontro A» es chocar CONTRA. Celebrar que una propuesta «vai de encontro» a lo que pensabas es decir que lo atropella. En el corpus del curso, el encuentro es siempre «ao encontro de» («indo rapidamente ao encontro de Natario») y el choque «de encontro á» («de encontro á luz»). Hasta los periódicos portugueses tropiezan con este par — por eso es de C1.",
-      "repair": "Ainda bem: a tua proposta vai ao encontro do que eu tinha\npensado."
+      "repair": "Ainda bem: a tua proposta vai ao encontro do que eu tinha\npensado.",
+      "explanationEs": "Son casi gemelas y dicen lo contrario: «ir AO encontro DE» es coincidir, satisfacer, venir al encuentro; «ir DE encontro A» es chocar CONTRA. Celebrar que una propuesta «vai de encontro» a lo que pensabas es decir que lo atropella. En el corpus del curso, el encuentro es siempre «ao encontro de» («indo rapidamente ao encontro de Natario») y el choque «de encontro á» («de encontro á luz»). Hasta los periódicos portugueses tropiezan con este par — por eso es de C1."
     }
   },
   {
@@ -543,11 +543,11 @@
       "b2c2-lote7",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "e250ddd66ad2a016f73af670373a3b2207103cfae452aaa6d80cfcf657beb188",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 7: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-lote7-b2c2.md)",
     "register": "neutro",
-    "contentHash": "e250ddd66ad2a016f73af670373a3b2207103cfae452aaa6d80cfcf657beb188",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "O meu apelido é Ferreira, como o da minha mãe.",
       "verdict": true,
@@ -557,7 +557,7 @@
   {
     "id": "b2c2-gj-l7-05",
     "blockId": 11,
-    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "lessonId": "b11-l3-morfologia-enganosa",
     "difficulty": 3,
     "concepts": [
       "b11-morfologia-enganosa"
@@ -566,11 +566,11 @@
       "b2c2-lote7",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "bd16aae7fb7c563db6e8b9ada6f83793785f01a4a319c895e20f1ce567e976e4",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 7: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-lote7-b2c2.md) · empaque corregido E2#5 2026-08-29: nota editorial del doc filtrada al explanationEs / salto de línea en sentence (hallazgo cola 3, bug del parser del publicador)",
     "register": "neutro",
-    "contentHash": "bd16aae7fb7c563db6e8b9ada6f83793785f01a4a319c895e20f1ce567e976e4",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "Achei o segundo capítulo mais bem escrito do que o primeiro.",
       "verdict": true,
@@ -589,17 +589,17 @@
       "b2c2-lote7",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "1359b909ea936092676de3afc6e897eff8cb18d770fe920839016503473db4a9",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 7: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-lote7-b2c2.md) · revisión manual E2#5 2026-08-29: OK (informe-cola3-manual)",
     "register": "informal",
-    "contentHash": "1359b909ea936092676de3afc6e897eff8cb18d770fe920839016503473db4a9",
     "address": "tu",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "Recebeste a carta de despido no fim do mês?",
       "verdict": false,
-      "explanationEs": "«Despido» en portugués es desnudo (participio de «despir»): «já despida» (Eça, A Aia). El despido laboral es «o despedimento» (el verbo «despedir» sí coincide; lo que cambia es el sustantivo). Tal cual, preguntas si la carta llegó… desnuda.",
-      "repair": "Recebeste a carta de despedimento no fim do mês?"
+      "repair": "Recebeste a carta de despedimento no fim do mês?",
+      "explanationEs": "«Despido» en portugués es desnudo (participio de «despir»): «já despida» (Eça, A Aia). El despido laboral es «o despedimento» (el verbo «despedir» sí coincide; lo que cambia es el sustantivo). Tal cual, preguntas si la carta llegó… desnuda."
     }
   },
   {
@@ -614,11 +614,11 @@
       "b2c2-lote7",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "b4dafb1944d4223e5f6e4e5bcb2a6ec01cf68968fb3a5498ed3dc0ed7b6ac35d",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 7: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-lote7-b2c2.md) · empaque corregido E2#5 2026-08-29: nota editorial del doc filtrada al explanationEs / salto de línea en sentence (hallazgo cola 3, bug del parser del publicador)",
     "register": "formal",
-    "contentHash": "b4dafb1944d4223e5f6e4e5bcb2a6ec01cf68968fb3a5498ed3dc0ed7b6ac35d",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "Prometeram acabar as obras em maio; todavia, o prédio continua na mesma.",
       "verdict": true,
@@ -637,12 +637,12 @@
       "b2c2-lote7",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "56898e02a8f3c51460918296f5d351d31d0819e0c1cef4409e59dea4db75e69e",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 7: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-lote7-b2c2.md)",
     "register": "informal",
-    "contentHash": "56898e02a8f3c51460918296f5d351d31d0819e0c1cef4409e59dea4db75e69e",
     "address": "tu",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "Sonhei contigo ontem à noite — estávamos outra vez em Coimbra.",
       "verdict": true,
@@ -661,12 +661,12 @@
       "b2c2-lote8",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "41a75b5a1452ad8232eeacb00f43a8d2e103a94d2ccbb20387b1c3746771318a",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
     "register": "informal",
-    "contentHash": "41a75b5a1452ad8232eeacb00f43a8d2e103a94d2ccbb20387b1c3746771318a",
     "address": "tu",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "Que casaco tão giro! Onde é que o compraste?",
       "verdict": true,
@@ -685,16 +685,16 @@
       "b2c2-lote8",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "5329b61a3a97d852bbc421d1c9818ff80a3d770e4de4a8792870b4d12fa3ebc0",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
     "register": "neutro",
-    "contentHash": "5329b61a3a97d852bbc421d1c9818ff80a3d770e4de4a8792870b4d12fa3ebc0",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "Ontem varri a cozinha de fio a pavio com a escova nova.",
       "verdict": false,
-      "explanationEs": "«Escova» es el cepillo (de dentes, do cabelo, da roupa); se barre con la **vassoura**. La «escoba» española no se traslada — y la frase es portuguesa impecable (hasta con su «de fio a pavio», de arriba abajo) diciendo que barriste la cocina con un cepillo. («Varrer», en cambio, sí es barrer: el falso amigo es solo la escoba.)",
-      "repair": "Ontem varri a cozinha de fio a pavio com a vassoura nova."
+      "repair": "Ontem varri a cozinha de fio a pavio com a vassoura nova.",
+      "explanationEs": "«Escova» es el cepillo (de dentes, do cabelo, da roupa); se barre con la **vassoura**. La «escoba» española no se traslada — y la frase es portuguesa impecable (hasta con su «de fio a pavio», de arriba abajo) diciendo que barriste la cocina con un cepillo. («Varrer», en cambio, sí es barrer: el falso amigo es solo la escoba.)"
     }
   },
   {
@@ -709,22 +709,22 @@
       "b2c2-lote8",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "8c732f7a671ac9729ba0bde3ee628d97c4f47d216121a7455951afa5bceb9cb9",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
     "register": "neutro",
-    "contentHash": "8c732f7a671ac9729ba0bde3ee628d97c4f47d216121a7455951afa5bceb9cb9",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "Fiz uma sopa de berros à moda da minha avó.",
       "verdict": false,
-      "explanationEs": "«Berro» en portugués es el grito (Priberam: grito, rugido); la planta de las sopas es **o agrião**. La «sopa de berros» española se dice «sopa de agriões» — tal cual, la tuya lleva gritos.",
-      "repair": "Fiz uma sopa de agriões à moda da minha avó."
+      "repair": "Fiz uma sopa de agriões à moda da minha avó.",
+      "explanationEs": "«Berro» en portugués es el grito (Priberam: grito, rugido); la planta de las sopas es **o agrião**. La «sopa de berros» española se dice «sopa de agriões» — tal cual, la tuya lleva gritos."
     }
   },
   {
     "id": "b2c2-gj-l8-07",
     "blockId": 11,
-    "lessonId": "b11-l1-falsos-amigos-que-doem",
+    "lessonId": "b11-l3-morfologia-enganosa",
     "difficulty": 3,
     "concepts": [
       "b11-morfologia-enganosa"
@@ -733,11 +733,11 @@
       "b2c2-lote8",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "929ab02b536da98a851923e76ba6041f47d06276d99968947c0c1d100b12b60e",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
     "register": "neutro",
-    "contentHash": "929ab02b536da98a851923e76ba6041f47d06276d99968947c0c1d100b12b60e",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "Esse guarda-chuva é meu, tenho a certeza.",
       "verdict": true,
@@ -756,17 +756,17 @@
       "b2c2-lote8",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "4a60c9d209ef1ec26564e4af1bc96e5b2b4b7c04699642e6bbac534b7d48acb9",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
     "register": "informal",
-    "contentHash": "4a60c9d209ef1ec26564e4af1bc96e5b2b4b7c04699642e6bbac534b7d48acb9",
     "address": "tu",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "Porque é que lhe chamaste de mentiroso?",
       "verdict": false,
-      "explanationEs": "En el europeo actual, «chamar» + lhe + el nombre va SIN «de»: «chamando-lhes traidores», «chamava-lhes canalhas», «Chamava-lhe sr.ª D. Luiza» — el corpus lo trae a decenas y ni una vez con «de». El «de» pegado al clítico viene del brasileño («chamar alguém DE mentiroso»); la gramática de referencia aún registra esa variante (es antigua — ya está en Gil Vicente), pero hoy en Portugal sobra. Y el español tampoco lo lleva: «le llamaste mentiroso».",
-      "repair": "Porque é que lhe chamaste mentiroso?"
+      "repair": "Porque é que lhe chamaste mentiroso?",
+      "explanationEs": "En el europeo actual, «chamar» + lhe + el nombre va SIN «de»: «chamando-lhes traidores», «chamava-lhes canalhas», «Chamava-lhe sr.ª D. Luiza» — el corpus lo trae a decenas y ni una vez con «de». El «de» pegado al clítico viene del brasileño («chamar alguém DE mentiroso»); la gramática de referencia aún registra esa variante (es antigua — ya está en Gil Vicente), pero hoy en Portugal sobra. Y el español tampoco lo lleva: «le llamaste mentiroso»."
     }
   },
   {
@@ -781,16 +781,16 @@
       "b2c2-lote8",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "13b3d03b13f1d35a2b0419baccb123a9d5404dee3ba6fa00b8cc54b9edd35ca1",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
     "register": "neutro",
-    "contentHash": "13b3d03b13f1d35a2b0419baccb123a9d5404dee3ba6fa00b8cc54b9edd35ca1",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "Deixei as chaves no meu despacho, vou lá buscá-las num instante.",
       "verdict": false,
-      "explanationEs": "«Despacho» en portugués es la resolución o el nombramiento (Priberam; el corpus: «Foi a Lisboa receber o seu despacho» — recibir el CARGO, no entrar en una sala); la habitación de trabajo es «o escritório» (o «o gabinete», si es de un cargo). El «despacho» español de cuatro paredes no se traslada. «Num instante», en cambio, es europeo de ley — el corpus lo trae siete veces.",
-      "repair": "Deixei as chaves no meu escritório, vou lá buscá-las num instante."
+      "repair": "Deixei as chaves no meu escritório, vou lá buscá-las num instante.",
+      "explanationEs": "«Despacho» en portugués es la resolución o el nombramiento (Priberam; el corpus: «Foi a Lisboa receber o seu despacho» — recibir el CARGO, no entrar en una sala); la habitación de trabajo es «o escritório» (o «o gabinete», si es de un cargo). El «despacho» español de cuatro paredes no se traslada. «Num instante», en cambio, es europeo de ley — el corpus lo trae siete veces."
     }
   }
 ]
