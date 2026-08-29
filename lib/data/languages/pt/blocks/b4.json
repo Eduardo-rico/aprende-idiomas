@@ -74,8 +74,8 @@
       "irregular",
       "conjugação"
     ],
-    "contentHash": "010d242a1a619e06456ef6aa3ba94efde9a6f8e3aa2258b0468a295947a84008",
-    "esContrast": "Irregular: 'era' en vez de '*seria' como esperarías de la raíz",
+    "contentHash": "022f21b4a69376472679192ae301c5b6407d8932b0305bcfd452ad38b3cb90bc",
+    "esContrast": "Irregular: el imperfeito de «ser» es «era, eras, era…», no la forma regular en -ia (*«sia»). Coincide con el español «era, eras, era…». (Cuidado: «seria» sí existe, pero es el condicional.)",
     "audio": {
       "br": {
         "hash": "f3eba0c2c41d82a8875d618084c7bd5ccf6aa24ee9fc5c3ef9752d135aa54d7f",
@@ -87,6 +87,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'ser' en Pretérito Imperfeito",
@@ -167,8 +168,8 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "0380a51243038732993dffc1977cad80f1b87df0efb5e3164d95d7e1ab116c5e",
-    "esContrast": "En PT-BR se dice 'tinha feito'; en ES se diría 'había hecho'. La estructura es casi idéntica, pero el auxiliar cambia.",
+    "contentHash": "34c9252e8426a0e9e90683e9347db0a7f7c8da47386af4e4f9e3abe7f2c4564b",
+    "esContrast": "En portugués —europeo y brasileño— el auxiliar del pluscuamperfecto es TER: «tinha feito»; en español es HABER: «había hecho». Misma estructura, auxiliar distinto.",
     "audio": {
       "br": {
         "hash": "2a1354b8cce9e2360dbe643ad9030c62b738457fac25b9418f0c4dd015525b5a",
@@ -180,6 +181,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "listening",
     "data": {
       "audioText": "Eu tinha feito todos os exercícios antes da aula começar.",
@@ -205,8 +207,8 @@
       "regular",
       "verbos -ar"
     ],
-    "contentHash": "c6bd4561f1d0f4049cb19e99fe8776ff38cbea9026dffd697c10700e14309a2a",
-    "esContrast": "PT-BR \"curtimos\" vs PT-PT \"aproveitamos\" — ambos válidos, ambos regulares.",
+    "contentHash": "729758ccb2c2b0810157ad89380effd45ccafe771e1980d0054fb40c14ea5b15",
+    "esContrast": "PT-BR «curtimos» vs PT-PT «aproveitámos» (en Portugal el perfeito de 1.ª plural en -ar lleva acento: -ámos) o «divertimo-nos», que es lo que usa la versión europea de este ítem.",
     "audio": {
       "br": {
         "hash": "1817c11fc0f8fdd94c5d87493e9f560e278f35c5abc015bf321a232fd916f95e",
@@ -218,6 +220,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Durante las vacaciones, no hicimos nada especial, pero disfrutamos mucho.",
@@ -314,8 +317,8 @@
       "hábito",
       "emocion"
     ],
-    "contentHash": "957c304f1b9c5ae7f6328a7a2a686d6a1fc6e7bf1a2c36072ad91698d0404859",
-    "esContrast": "Falso amigo: 'ficar' ≠ 'fichar'; aquí significa 'quedarse/permanecer'.",
+    "contentHash": "0a016182f27c55b202022ca643a383849826813982fd00acc2727b4b810a8710",
+    "esContrast": "«Ficar» no tiene un solo equivalente español: aquí es 'quedarse/permanecer'; con sujeto de cosa es 'estar situado' («a casa fica perto»).",
     "audio": {
       "br": {
         "hash": "5275743a9d2a5e56817486b4357f037fbe8540e62a49d75506d64fe82dc551ab",
@@ -327,6 +330,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Todos os verões, os turistas ficavam e admiravam o pôr do sol na praia.",
@@ -334,8 +338,8 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "quedaban",
-        "permanecían"
+        "Todos los veranos, los turistas permanecían y admiraban el atardecer en la playa.",
+        "Todos los veranos, los turistas se quedaban y contemplaban el atardecer en la playa."
       ]
     }
   },
@@ -455,6 +459,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "listening",
     "data": {
       "audioText": "Enquanto eu caminhava, ela chegou de surpresa.",
@@ -479,27 +484,33 @@
     "tags": [
       "regular"
     ],
-    "contentHash": "4823fea7964adb31e886988fd18793a7136104f364535f7bfb9b0f352956166c",
+    "contentHash": "3d874a1041eb14df893733fa7cf2cd53b25649aa1f9d2911a9276cf12748f26d",
     "audio": {
       "br": {
         "hash": "8dba2bd8059c3cc40731f3364d1d58bf11d13331c08a4ee1e571b9c52299c517",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "ce21d50578ff5617827c1430c505000b70922492ceb2de3419aa73150465616a",
-        "voice": "Portuguese_Wiselady"
+        "hash": "66a5299be923863a3ebfc59ab841279a9af11a74f739df46ab4d8afc6a83c1ea",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 — audio regenerado (informe-cola4-manual)",
     "type": "translation",
     "data": {
-      "source": "Viajamos, ficamos, descansamos e voltamos. Foi perfeito!",
+      "source": "Viajámos, ficámos, descansámos e voltámos. Foi perfeito!",
       "target": "Viajamos, nos quedamos, descansamos y volvimos. ¡Fue perfecto!",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Viajamos, estuvimos, descansamos y volvimos. ¡Fue perfecto!"
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "source": "Viajamos, ficamos, descansamos e voltamos. Foi perfeito!"
+      }
     }
   },
   {
@@ -545,12 +556,13 @@
       "falso-amigo"
     ],
     "contentHash": "0b6b582177eafb21c5d94bce8b2981156425212d295977d2cd89cc481df93a5e",
-    "esContrast": "PENSAR en PT siempre rige EM. En ES puede decirse 'pensé ir' sin preposición.",
+    "esContrast": "Con el sentido de 'darle vueltas a algo', «pensar» rige EM: «pensei em viajar». (No siempre: «o que pensas disto?» va con DE.) En español, «pensé ir» puede ir sin preposición.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
-      "sentence": "Eu ___ em viajar para Portugal no ano passado, mas não pude.",
+      "sentence": "Eu ___ viajar para Portugal no ano passado, mas não pude.",
       "options": [
         "pensei",
         "pensei de",
@@ -585,6 +597,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "listening",
     "data": {
       "audioText": "Elas adoraram as férias porque viajaram e ficaram na praia todos os dias.",
@@ -623,6 +636,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "La carta que él escribiera llegó demasiado tarde.",
@@ -657,6 +671,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: DUDA — La alternativa «Cuando era niño, sabía correr muy rápido» se acepta como correcta y no traduce «conseguia»: «saber correr» es tener la destreza; «conseguir correr» es lograrlo. Defendible en registro coloquial, pero prem (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Quando era criança, conseguia correr muito depressa.",
@@ -691,6 +706,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "Todas las personas de 'vender' en pretérito perfeito",
@@ -709,24 +725,30 @@
     "tags": [
       "regular"
     ],
-    "contentHash": "0f9bd5a55dbaa1ddcf06614774b626e34d565c75d10b1221fc6c357a559102ab",
-    "esContrast": "El '-amos' portugués suena diferente al español: cantamos (portugués) ≠ cantamos (español)",
+    "contentHash": "e6e0873a29cf991af37018b4e060e4ebabb2b4f6d975a57e03e2cfd2270bbf25",
+    "esContrast": "En portugués europeo la 1.ª persona del plural del perfeito lleva acento y así se distingue del presente: «cantámos» (ayer) ≠ «cantamos» (ahora). En Brasil las dos se escriben igual.",
     "audio": {
       "br": {
         "hash": "5bae5806d7bac64e1e77294cc66f883c7939220de7db9092e17a9e3e75fdae88",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "6bc4a3d4051023a4e28cc67b53ff6a08b7adb94c9d9112a04a1e7516c0e99c3e",
-        "voice": "Portuguese_Wiselady"
+        "hash": "51f0a3aa6aa3e718cd07403166212e6fecd247335d17659b39ad8578fd974653",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 — audio regenerado (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "Todas las personas de 'cantar' en pretérito perfeito",
-      "back": "cantei, cantaste, cantou, cantamos, cantastes, cantaram",
+      "back": "cantei, cantaste, cantou, cantámos, cantastes, cantaram",
       "example": "Eu cantei uma música bonita."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "cantei, cantaste, cantou, cantamos, cantastes, cantaram"
+      }
     }
   },
   {
@@ -849,6 +871,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'trabalhar' en Pretérito Imperfeito (yo, tú, él/ela, nosotros, vosotros, ellos)",
@@ -866,7 +889,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "16ce6a34562c1f40c6ba3a55d3f8944ad0dae27b6a762ad366c2b369a5585b09",
+    "contentHash": "13a1e0db1670669635dcee9ca2466ac491c0a97b65c95c871f6b84d2cd5a90df",
     "audio": {
       "br": {
         "hash": "47375e8349e005d0b8cd9dacbdbfee994740b1cb88dcddeb0ffe1fab7e210dff",
@@ -878,11 +901,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se conjuga 'ter' en Pretérito Perfeito? (yo)",
       "back": "eu tive",
-      "example": "Eu tive muito trabalho semana passada."
+      "example": "Eu tive muito trabalho na semana passada."
     }
   },
   {
@@ -942,6 +966,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: DUDA — «responder todas as perguntas» con objeto directo es el uso brasileño: Priberam define «responder» como «dar resposta A» y la norma europea pide «responder A todas as perguntas». Y «prova» = examen es más brasileño que e (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Los niños respondieron todas las preguntas del examen.",
@@ -978,6 +1003,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "listening",
     "data": {
       "audioText": "Quando eu era criança, ficava horas no computador e conseguia aprender rápido.",
@@ -1034,18 +1060,17 @@
       "falso-amigo"
     ],
     "contentHash": "1822099ab547e1658a3a2c97f4947a0c802c501ed957b4536a9d68c3973b53bd",
-    "esContrast": "'Dar-se bem' no imperfeito descreve uma relação habitual no passado, não um evento único.",
+    "esContrast": "«Dar-se bem» en imperfeito describe una relación habitual del pasado, no un hecho único. Sin disparador de próclise, el europeo pone el clítico detrás: «dávamo-nos» (la -s de «dávamos» cae ante «-nos»).",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Naquela época, nós ___ muito bem juntos.",
       "blanks": [
         {
           "position": 0,
-          "answer": "nos dávamos",
-          "alternatives": [
-            "nos demos"
-          ]
+          "answer": "dávamo-nos",
+          "alternatives": []
         }
       ]
     }
@@ -1093,8 +1118,8 @@
       "irregular",
       "composto"
     ],
-    "contentHash": "4cffbb65a62aa7c81d473b4bc02e6f76ca946132e252e778c1bcf07772d4dcbd",
-    "esContrast": "'Ter/tinha visto' = 'had seen' en inglés. El pretérito perfeito composto expresa acción pasada anterior a otro momento pasado.",
+    "contentHash": "4e9b870fe226ead047eb71c2a4ee043e1bdd6066ae0520a2e4192385e75b8d90",
+    "esContrast": "«Tinha visto» es el mais-que-perfeito composto (ter en imperfeito + participio) y expresa una acción anterior a otro momento pasado: español «había visto». No lo confundas con el pretérito perfeito composto «tenho visto», que es iterativo ('llevo viéndolo / lo he estado viendo').",
     "audio": {
       "br": {
         "hash": "aa62b43d28aa78ba994c77a007813d35a2dce327149855fb2b28540c8540c34d",
@@ -1106,6 +1131,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Ella había visto aquella obra al menos tres veces.",
@@ -1168,8 +1194,9 @@
       "literario"
     ],
     "contentHash": "1d7f97475a3e7323d36abff778786d84e0b85b8fe50810c389d0b600c46fe8ff",
-    "esContrast": "En español diríamos 'había escrito', pero en portugués antiguo se usa 'escrevera'.",
+    "esContrast": "«Escrevera» es el mais-que-perfeito simples: no es portugués antiguo, sino la forma culta y literaria de «había escrito» (frecuentísima en Eça y Camilo). En el habla corriente se dice «tinha escrito».",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Quando cheguei, ele já ___ a carta.",
@@ -1243,6 +1270,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Nós vimos um filme muito estranho ontem à noite.",
@@ -1308,6 +1336,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Mientras ella cocinaba, yo leí el periódico.",
@@ -1334,6 +1363,7 @@
     "contentHash": "22a4e3b3ae43c6f742b1096f34ae45ec2e3b015e5632869911627d2023589d83",
     "esContrast": "Dos imperfectos en la misma frase: uno irregular (tinha) y uno regular (estudava).",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: DUDA — Contenido correcto —tinha/estudava— y la glosa acierta al llamar irregular al imperfeito de ter (el regular sería *«tia»). Duda ESTRUCTURAL: el ítem declara dos huecos y FillBlankCard pinta UN solo input y valida con `bl (informe-cola4-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Quando eu ___ (ter) vinte anos, ___ (estudar) em Coimbra.",
@@ -1363,19 +1393,20 @@
       "falso-amigo"
     ],
     "contentHash": "257d899898e93eae865da6b172d47c67c3a0bafa85a6e880f92355906c0b3aed",
-    "esContrast": "En español 'recordar' no lleva prep, PT-BR 'lembrar DE' exige la preposición.",
+    "esContrast": "El español «recordar algo» va sin preposición; el portugués europeo usa el pronominal «lembrar-se DE algo», como «acordarse de». «Lembrar de» sin pronombre es brasileño.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "lembrar",
-      "sentence": "Eu lembrei ___ da reunião na segunda-feira.",
+      "sentence": "Eu lembrei-me ___ reunião na segunda-feira.",
       "options": [
-        "de",
+        "da",
         "a",
-        "em",
+        "na",
         "—"
       ],
-      "answer": "de"
+      "answer": "da"
     }
   },
   {
@@ -1392,6 +1423,7 @@
     ],
     "contentHash": "26fc9273a9c7535ab04bca858afb2da31fc27ba6d804620d29467865004ddb35",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ para a Europa no verão passado.",
@@ -1415,8 +1447,8 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "27f9978a6b6eb12a748868df83882508b0b91289ab2fd5645bf1a70be4119df7",
-    "esContrast": "Ver → vi (yo vi), pero también vi es Pretérito Perfeito de ver.",
+    "contentHash": "6d8ea46741885377a49da478f0cbacec518660b878e77d231ddebd9909bde492",
+    "esContrast": "«Vi» es el perfeito de VER, igual que el español «vi». Cuidado con el vecino: el perfeito de VIR es «vim», y «vimos» sirve para el perfeito de ver y para el presente de vir.",
     "audio": {
       "br": {
         "hash": "f075890e0d9ca1d80526638ae1043e9fc68fcf04669b44553624c9d0fab93af7",
@@ -1428,6 +1460,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se conjuga 'ver' en Pretérito Perfeito? (yo)",
@@ -1459,6 +1492,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: DUDA — Tarjeta degenerada: anverso «praia (sustantivo)», reverso «praia (playa)» — el anverso ya contiene la respuesta, así que no hay nada que recordar; lo único útil es el ejemplo. Y vive en b4-l1-perfeito-regular, una lecció (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "praia (sustantivo)",
@@ -1476,18 +1510,17 @@
     ],
     "tags": [],
     "contentHash": "2ae6a2e6a583bcbef67dd5b4e67eb67f3d3168a6089b1572404e4d32b6e983da",
-    "esContrast": "Ação de fundo (caminhar) = imperfeito; ação breve que a interrompe (encontrei) = perfeito.",
+    "esContrast": "Acción de fondo (caminhar) = imperfeito; acción breve que la interrumpe (encontrei) = perfeito.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu ___ pelo parque quando encontrei minha velha amiga.",
+      "sentence": "Eu ___ pelo parque quando encontrei a minha velha amiga.",
       "blanks": [
         {
           "position": 0,
           "answer": "caminhava",
-          "alternatives": [
-            "caminhei"
-          ]
+          "alternatives": []
         }
       ]
     }
@@ -1507,6 +1540,7 @@
     ],
     "contentHash": "2d14007fd2651bebe50124ea5723c16c9eada3f6778323186d923a6e017b2877",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela não ___ dinheiro no mercado ontem.",
@@ -1545,6 +1579,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Elas vieram de surpresa para a festa.",
@@ -1580,6 +1615,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se conjuga 'saber' en Pretérito Perfeito? (yo)",
@@ -1626,8 +1662,9 @@
       "composto"
     ],
     "contentHash": "2e76f3792d6a42103402b7edfae3a690849d1b336a4dd4a6bb80bad41d990931",
-    "esContrast": "El mais-que-perfeito composto usa 'tinha + particípio', equivalent al español 'había intentado'.",
+    "esContrast": "El mais-que-perfeito composto usa «tinha + participio», equivalente al español «había intentado».",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ muitas vezes antes de desistir.",
@@ -1666,6 +1703,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se conjuga 'pôr' en Pretérito Perfeito? (yo)",
@@ -1728,6 +1766,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "listening",
     "data": {
       "audioText": "Eu adorei a praia nas férias.",
@@ -1799,6 +1838,7 @@
     "contentHash": "33c3ca0e9eed3ceada7ff773abdba769e5a859806ac9929a39f75da8db9d20ae",
     "esContrast": "'Hospedar-se' es reflexivo. Sin 'se' sería transitivo (hospedar a alguien). Aquí indica hábito.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: DUDA — La respuesta «se hospedavam» es la CORRECTA en portugués europeo porque «sempre» es disparador de próclise —en la biblioteca: «sempre o dissera», «sempre se fez», «sempre se erguia», frente a apenas un par de ênclises tr (informe-cola4-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Durante as férias, vocês sempre ___ (hospedar) naquele hotel à beira-mar.",
@@ -1865,6 +1905,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Ele disse que não podia vir naquela noite.",
@@ -1889,8 +1930,9 @@
       "-er"
     ],
     "contentHash": "352576cac08451a378ddfaea88c8404eed07e0f65fa768950d0ac8723a2b7007",
-    "esContrast": "'Saudade' es una emoción típicamente portuguesa. 'Sentir saudade' = extrañar/yer añoranza.",
+    "esContrast": "«Saudade» es la añoranza de lo ausente. «Sentir saudade(s) de» = echar de menos, extrañar; en Portugal se oye casi siempre en plural: «tenho saudades da minha cidade».",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu sempre ___ (sentir) ___ (saudade) da minha cidade natal.",
@@ -2013,8 +2055,8 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "37f6efe797ff0f4ef261add4b3d27ea43b398b24f440edff3fa8c34350369543",
-    "esContrast": "Decir → dije (español), pero dizer → disse (portugués). Vocablo diferente.",
+    "contentHash": "248d2de8ab7c49968b1e40f51f3914f4a7a58e6c593dbe8cb3809f04ce00c9f3",
+    "esContrast": "«Dizer» y «decir» son la misma palabra latina, y «disse»/«dije» vienen las dos de dixi: lo que cambia es la forma irregular, no el vocablo.",
     "audio": {
       "br": {
         "hash": "360834c6dbf5b250f766a93584387906a0fd9f83039b39f4eaf28be8b5b84615",
@@ -2026,11 +2068,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se conjuga 'dizer' en Pretérito Perfeito? (yo)",
       "back": "eu disse",
-      "example": "Eu disse a verdade para ela."
+      "example": "Eu disse-lhe a verdade."
     }
   },
   {
@@ -2117,6 +2160,7 @@
     "contentHash": "3e86a3171bd6ab045548f2c4616533fb90a4260c4fce4ed71db439c10ea45761",
     "esContrast": "Quis = quise; soube = supe. Dos irregulares seguidos en una frase.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: DUDA — Contenido correcto (quis, soube) y glosa verdadera. Duda ESTRUCTURAL, como 22a4e3b3: dos huecos declarados y un solo input en FillBlankCard, que valida con `blanks.some(...)` — el segundo hueco es incontestable. (informe-cola4-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ (querer) estudar português, mas não ___ (saber) por onde começar.",
@@ -2157,6 +2201,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "listening",
     "data": {
       "audioText": "Ela ficou na praia o dia inteiro.",
@@ -2394,6 +2439,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: DUDA — El target pierde el objeto del original: «cuando la llamé» → «quando eu liguei», sin clítico. En portugués europeo sería «quando lhe liguei / lhe telefonei». El ejercicio no evalúa clíticos y tocar el target obliga a reg (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Ella casi conseguía terminar cuando la llamé.",
@@ -2486,7 +2532,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "543241a8eba89bf8958b4dfd87a9be9b16b6e9bb019b8b5a6fffbc2e3a038d79",
+    "contentHash": "27bf0eadde0048ec2f0f4a5ad951788d00b3f116e3fa5a377c28a7d24f94d515",
     "audio": {
       "br": {
         "hash": "c96410f73f680040f5259ca1d549ee116be212bff5a010cabb4579f6f656b7f3",
@@ -2498,6 +2544,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Eu tinha feito o jantar quando ele telefonou.",
@@ -2505,7 +2552,7 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "Yo había hecho la cena cuando él telefoneara."
+        "Yo había hecho la cena cuando él telefoneó."
       ]
     }
   },
@@ -2520,7 +2567,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "c4cc604e75743e677ec8074b30c3a5e455c7a68df1fb7d800f4267390c3eff72",
+    "contentHash": "69a0d604896fc7bff80871856fd394e172737fadbe1cb6816e19f3454e0ce961",
     "esContrast": "Cuidado: 'perceber' no es 'percibir' en el sentido estricto; suele equivaler a 'darse cuenta'.",
     "audio": {
       "br": {
@@ -2533,14 +2580,16 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Tinha pedido desculpa antes de eu perceber o erro.",
-      "target": "Había pedido disculpas antes de que yo percibiera el error.",
+      "target": "Había pedido disculpas antes de que yo me diera cuenta del error.",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "Había pedido disculpas antes de que yo me diera cuenta del error."
+        "Había pedido perdón antes de que yo me diera cuenta del error.",
+        "Había pedido disculpas antes de que yo entendiera el error."
       ]
     }
   },
@@ -2556,7 +2605,7 @@
       "ejemplo",
       "completo"
     ],
-    "contentHash": "480056d29fdddcd258f19ce0727eb4a277736ab89bfb193b59733b99e8479bb0",
+    "contentHash": "f83f084e3f7c69d7187d21be51acb9efce14364a67d0734a3a71180a841c2b22",
     "audio": {
       "br": {
         "hash": "f84e3f55807d906e9cf953b66be4c92ebb1d581c25f51cfc4a67171bc5aa95da",
@@ -2568,11 +2617,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "Traduce al português: 'Ella había pedido la cuenta antes de que llegáramos'",
       "back": "Ela tinha pedido a conta antes de nós chegarmos.",
-      "example": "Ela tinha pedido a conta antes de nós chegarmos, então o garçon já tinha ido embora."
+      "example": "Ela tinha pedido a conta antes de nós chegarmos, por isso o empregado já se tinha ido embora."
     }
   },
   {
@@ -2673,6 +2723,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Eles ficaram encantados com a viagem.",
@@ -2772,22 +2823,23 @@
       "irregular",
       "vocabulario"
     ],
-    "contentHash": "4f82effda7875f1c636336b65c5cc54a502cbbe6be2359244e8c6083d93479d9",
+    "contentHash": "0d39864b5d5cf5044afa79d3436c69bbe39a08bfad8b85317710d3fc8de49861",
     "audio": {
       "br": {
-        "hash": "57227bcd67557e594e44653c7d2c6055e975b9cf3b1aa75419c4ddbca0c137be",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "a665d4dfe94b3f1716bae8740a203c9f63235fcfe045f509051f756f258da66a",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "f719760d2bacd470dad20a3bb50fb7a02d6ba0c74aaccad516305c0d20db6d4c",
-        "voice": "Portuguese_Wiselady"
+        "hash": "a665d4dfe94b3f1716bae8740a203c9f63235fcfe045f509051f756f258da66a",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 — audio regenerado (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "Forma compuesta: 'tinha pedido' — ¿Qué infinitivo y persona?",
-      "back": "Pedir (eu/ele/ella) tinha pedido = yo/él/ella había pedido/pidido",
+      "back": "Pedir: (eu / ele / ela) tinha pedido = yo/él/ella había pedido.",
       "example": "Ela tinha pedido desculpas, mas ele não aceitou."
     }
   },
@@ -2803,8 +2855,8 @@
       "regular",
       "descrição"
     ],
-    "contentHash": "50d7ffd35613d7a8335e26e6197c63803904be8853cb543be8dd432120d9b950",
-    "esContrast": "Cuidado: 'simpatía' no es 'simpatia' en PT. Ser es 'era' en imperfecto.",
+    "contentHash": "fa3b4f68029a02f49678b36c274381f6dee3aefef26d6f8479d81d709267a021",
+    "esContrast": "«Simpático» y «simpatia» son cognados fieles del español. Lo que hay que retener aquí es el imperfeito de ser: «era», idéntico al español.",
     "audio": {
       "br": {
         "hash": "304c80a09587de32dafc1abfc31cee1e975bd3601f8c5c7218b8ecf1550a174f",
@@ -2816,6 +2868,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "listening",
     "data": {
       "audioText": "Ele era encantador e simpático. Todos o admiravam quando o conheciam.",
@@ -2873,8 +2926,9 @@
       "irregular"
     ],
     "contentHash": "529e0740f2d87d7ba36cb85d578c41a5ce9f5302b1215e28220e02db7ce82873",
-    "esContrast": "Primeira ação puntual (viu) = perfeito; segunda descreve opinião geral sobre o filme = imperfeito.",
+    "esContrast": "Primera acción puntual (viu) = perfeito; la segunda describe una opinión general sobre la película = imperfeito.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela ___ o filme e disse que ___ muito bom.",
@@ -2973,8 +3027,9 @@
       "irregular"
     ],
     "contentHash": "55e124a1ceaf94784406aeb0f195ff13ac3f17cb06b52f9ec282cbd15a469bfa",
-    "esContrast": "Traxe/trouxe es irregular. La raíz cambia de 'traz-' a 'troux-'.",
+    "esContrast": "Español «traje», portugués «trouxe»: las dos lenguas irregularizan. En portugués la raíz pasa de «traz-» a «troux-».",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ (trazer) documentos importantes para a reunião.",
@@ -3033,8 +3088,8 @@
       "regular",
       "descripcion"
     ],
-    "contentHash": "9c945661d99c90d59fd976a71a5390f4a43a19373c2257495b72f839007bf3aa",
-    "esContrast": "Cuidado: 'ficar' en imperfecto = 'quedar/estar', no confundir con 'ficher' del español.",
+    "contentHash": "71bad1e37ede90c582fa015cc4e7ab5588e42bd486da52f141f09718060a53e5",
+    "esContrast": "«Ficar» con sujeto de cosa es 'estar situado': «a casa ficava perto do mar» = quedaba/estaba cerca del mar.",
     "audio": {
       "br": {
         "hash": "47da3037acc460217b9fa7c975868ea048d41fce5da6d6c82dbe97f3640c89ea",
@@ -3046,6 +3101,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "A casa era encantadora e ficava perto do mar.",
@@ -3053,8 +3109,8 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "estaba cerca del mar",
-        "se encontraba cerca del mar"
+        "La casa era encantadora y estaba cerca del mar.",
+        "La casa era encantadora y se encontraba cerca del mar."
       ]
     }
   },
@@ -3145,6 +3201,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "Forma negativa: 'No escribí la carta'",
@@ -3210,6 +3267,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "El soldado había muerto antes de que el médico llegara.",
@@ -3245,6 +3303,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: DUDA — Tarjeta degenerada, como 2adb86ff: anverso «férias (sustantivo, plural)», reverso «férias (vacaciones)». El ejemplo («As férias foram incríveis») es correcto y es lo único que enseña. (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "férias (sustantivo, plural)",
@@ -3402,17 +3461,18 @@
     "contentHash": "65d717859517d365fa545303d45e07a0d953bd3db729789385144508325f4aeb",
     "esContrast": "Aunque 'depender de' existe en español, muchos hispanos olvidan la preposición en portugués.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "depender",
-      "sentence": "Antigamente, a decisão final sempre ___ dos professores.",
+      "sentence": "Antigamente, a decisão final sempre dependia ___ professores.",
       "options": [
-        "de",
-        "em",
-        "por",
+        "dos",
+        "nos",
+        "pelos",
         "∅"
       ],
-      "answer": "de"
+      "answer": "dos"
     }
   },
   {
@@ -3438,6 +3498,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Vocês viajaram juntos no verão passado.",
@@ -3462,17 +3523,18 @@
       "composto"
     ],
     "contentHash": "6b14d613fccb9edbb72c1abb3cf6d3543014a17e0863706a5fbcf621a7e166fc",
-    "esContrast": "'Quase + mais-que-perfeito' indica una acción que casi ocurra en el pasado.",
+    "esContrast": "«Quase + mais-que-perfeito» indica una acción que estuvo a punto de ocurrir en el pasado y no llegó a ocurrir.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Ele ___ desistir, mas decidiu tentar mais uma vez.",
+      "sentence": "Ele ___, mas decidiu tentar mais uma vez.",
       "blanks": [
         {
           "position": 0,
-          "answer": "quase tinha feito",
+          "answer": "quase tinha desistido",
           "alternatives": [
-            "quase fizera"
+            "quase desistira"
           ]
         }
       ]
@@ -3501,6 +3563,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se conjuga 'poder' en Pretérito Perfeito? (yo)",
@@ -3548,7 +3611,7 @@
       "regular",
       "descripcion"
     ],
-    "contentHash": "bc9d9882bb093a3c76b6ba90f51bfa8dad72e3d6b6ae27d8d777b0a5ccb72933",
+    "contentHash": "56da4460ffc38806186861ce649d512e18ad866742a201e9233a347726da85aa",
     "audio": {
       "br": {
         "hash": "06fcefb130e76ba9ea9ee36ec9c4ec88d193c6496fff2116bcdd6ca34d84f344",
@@ -3560,6 +3623,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Ele parecia simpático, mas nunca falava muito.",
@@ -3567,8 +3631,8 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "no hablaba nunca",
-        "nunca hablaba demasiado"
+        "Él parecía simpático, pero nunca hablaba demasiado.",
+        "Él parecía simpático, pero casi no hablaba."
       ]
     }
   },
@@ -3586,6 +3650,7 @@
     ],
     "contentHash": "6f453781416ee55055aef397174cca02e832618880ecfe8fe510d3e9c9253743",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Nós ___ de casa às oito da manhã.",
@@ -3673,8 +3738,8 @@
       "verbal",
       "contrast"
     ],
-    "contentHash": "15aef83601c24a2f86fe55a131e80472496e344d7646d6345f2385fddaa192cb",
-    "esContrast": "En PT-BR, 'pela/pra' fusiona preposición + artigo (pela = por + a).",
+    "contentHash": "caefffc5f4874bcdd6fccc445b9e4dd4909f644c3e3e0a5f7aa1a4ea20bf4cd5",
+    "esContrast": "En portugués la preposición se contrae con el artículo: «pela» = por + a, «pelo» = por + o. («Pra» es otra cosa: la reducción coloquial de «para», sobre todo en Brasil.)",
     "audio": {
       "br": {
         "hash": "11b1d20c1e2da49603584ee0f2afb59e7b2505627440c9d282cac29daf4c3309",
@@ -3686,6 +3751,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Ayer caminé por la playa.",
@@ -3802,19 +3868,20 @@
       "coloquial"
     ],
     "contentHash": "72b535f617c97d4cc67be4dd25c909bb509da0a8cd988c7769558906ef604c76",
-    "esContrast": "LEMBRAR DE en PT equivale a 'acordarse de' en ES. Ambas rigen preposición.",
+    "esContrast": "«Lembrar-se DE» equivale a «acordarse DE»: las dos son pronominales y rigen preposición. Sin el pronombre («lembrei de») es brasileño.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "lembrar",
-      "sentence": "Eu ___ de comprar o pão e a manteiga ontem.",
+      "sentence": "Eu ___ comprar o pão e a manteiga ontem.",
       "options": [
-        "lembrei",
-        "lembrei de",
-        "lembrei em",
-        "lembrei a"
+        "lembrei-me de",
+        "lembrei-me",
+        "lembrei-me em",
+        "lembrei-me a"
       ],
-      "answer": "lembrei de"
+      "answer": "lembrei-me de"
     }
   },
   {
@@ -3858,23 +3925,24 @@
       "literario",
       "uso"
     ],
-    "contentHash": "73288d4c041360a4ef1e4e8d6452d42b081613cb3aec9e165ac76295138199e3",
-    "esContrast": "El participio de 'ir' en portugués es 'ido' (irregular), no '*ido' como esperarías.",
+    "contentHash": "12d3b41a0f1df69c8e8e9f1fb797082bd5628d1ae08c6299222fd1de3f84353d",
+    "esContrast": "El participio de «ir» es regular: «ido», igual que el español «ido». Lo que no existe es formar el compuesto con «ser» (*«era ido»): siempre con «ter».",
     "audio": {
       "br": {
-        "hash": "235682fe45ebc98eb10fdb1a77f1b6553b5dec47e67e9cd3eef37a58fea7c0ff",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "9d26701457aeeee9d3a8a6090d24a1015c20e2ecb0bea639a3924bf8b7844f4d",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "6ba691439b329e381426736698715ef77ee75ad0388328b234eb52a4fb848c8d",
-        "voice": "Portuguese_Wiselady"
+        "hash": "9d26701457aeeee9d3a8a6090d24a1015c20e2ecb0bea639a3924bf8b7844f4d",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 — audio regenerado (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "Ejemplo literario: 'Cheguei, mas ele já _____ (ir)'",
-      "back": "Cheguei, mas ele já tinha ido / era ido (mais-que-perfeito composto de 'ir' = tinha ido).",
+      "back": "Cheguei, mas ele já tinha ido. (Mais-que-perfeito composto de «ir»: tinha + ido.)",
       "example": "Cheguei ao cinema, mas ele já tinha ido embora. Que pena!"
     }
   },
@@ -3902,6 +3970,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Eu adorei as férias na praia.",
@@ -4098,7 +4167,7 @@
       "irregular",
       "formal"
     ],
-    "contentHash": "7d53129f946ac7ef0e1d9ae0964dbb8a4d169ecb1f055d6ae0ad2702d10a7315",
+    "contentHash": "7061e4d399ad9afa0745fa8ef5a20b2163f2c442bafb8e64177ac7c2317c6063",
     "esContrast": "'Tinha trazido' / 'tinha visto' = pluscuamperfecto con ter (irregulares: trazer → trouxe, ver → vi).",
     "audio": {
       "br": {
@@ -4111,10 +4180,11 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "listening",
     "data": {
       "audioText": "Ela tinha trazido os documentos e tinha visto todos os detalhes antes da reunião.",
-      "question": "¿Qué actions había realizado ella antes de la reunión?",
+      "question": "¿Qué acciones había realizado ella antes de la reunión?",
       "options": [
         "Había traído documentos y había visto detalles",
         "Había pedido documentos y había hecho detalles",
@@ -4149,6 +4219,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Ella adoró el festival de música.",
@@ -4169,8 +4240,8 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "53d6618ad0fa277e9cf74d6b06bca684c6867d3605f660ac074822b71d754d84",
-    "esContrast": "En portugués se puede repetir 'tinha' para cada verbo, pero en español se sobreentiende el auxiliar.",
+    "contentHash": "42967155999ede5691a5aed00a2686f6fc33b018952b8246d6a1f9d000311dd6",
+    "esContrast": "Tanto en portugués como en español el auxiliar puede repetirse u omitirse: «tinha visto e (tinha) feito» / «había visto y (había) hecho». Fíjate más bien en el orden «já ele tinha visto», normal en portugués europeo.",
     "audio": {
       "br": {
         "hash": "3aab1508d2498aa724a2277c508d8224d678be6d6cfc512db90dd52797f59f34",
@@ -4182,6 +4253,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Quando vim, já ele tinha visto o relatório e tinha feito anotações.",
@@ -4205,8 +4277,8 @@
       "regular",
       "descrição"
     ],
-    "contentHash": "c7440c25a2f7a58b2ab4a2d0220d6d9852e3af1ff0a4fdc939ed4d52f0db764d",
-    "esContrast": "Pousada es palabra diferente en PT-BR y PT-PT, pero aquí es igual.",
+    "contentHash": "849c2d6eb76e04be9fb8c67017f553363c41199fe4dfa97d91056808af4d6098",
+    "esContrast": "«Pousada» es hospedaje/posada en todo el portugués; en Portugal, además, las Pousadas son la red de hoteles históricos del Estado.",
     "audio": {
       "br": {
         "hash": "c67da1dd3348595071831bf58a1752f1918ea405f14322437e6cae9d8b79d937",
@@ -4218,6 +4290,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "listening",
     "data": {
       "audioText": "A dona da pousada era simpática. Os quartos eram encantadores.",
@@ -4226,7 +4299,7 @@
         "Era simpática; eran encantadores",
         "Era antipática; eran feos",
         "Era joven; eran antiguos",
-        "Era velho; eram novos"
+        "Era vieja; eran nuevos"
       ],
       "answer": "Era simpática; eran encantadores"
     }
@@ -4255,6 +4328,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Ellos abrieron las maletas en el hotel.",
@@ -4379,6 +4453,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "Completa: Eu ____ (viajar) muito no ano passado.",
@@ -4500,8 +4575,8 @@
       "coloquial",
       "falso-amigo"
     ],
-    "contentHash": "8c60f8827ad5488c490d78fad941f5f4c1736bca72aaf05d6d126d602dbdec01",
-    "esContrast": "Falso amigo: 'letra' no significa solo 'carta' sino también 'letra (caligrafía)'. Es regional BR.",
+    "contentHash": "25d7f644d8b3d57aaea67acaccb4cf8eda035d56d1c6b0397e0d6822df07fe5f",
+    "esContrast": "«Tirar de letra» = resolver algo con facilidad. Es coloquial BRASILEÑO: en Portugal no se dice (allí, «foi canja» o «foi um instante»). Y «letra» en portugués nunca es 'carta': es la letra del abecedario, la caligrafía o la letra de una canción.",
     "audio": {
       "br": {
         "hash": "792731b32949bc10b35a9c85d7f377f3fcd9e3ccbd8c7dcdefe32f82b82e36b6",
@@ -4513,9 +4588,10 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
-      "front": "Traduce: 'Sacar algo de letra' (resolver con facilidad)",
+      "front": "Traduce: 'Resolver algo con toda facilidad' (modismo brasileño)",
       "back": "tirar de letra",
       "example": "Esse problema foi fácil, tirei de letra."
     }
@@ -4574,6 +4650,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "El niño era muy simpático.",
@@ -4642,6 +4719,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Ontem, quase não consegui dormir porque o vizinho ficou a fazer barulho a noite toda.",
@@ -4705,10 +4783,11 @@
     "contentHash": "8ff16eda94f0de9dccece611b74ca3799050005f4b6bf54a65bc08c34cde71c8",
     "esContrast": "En español 'gustar' no lleva preposición; en portugués 'gostar' siempre lleva DE.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
-      "sentence": "Quando eu era criança, eu ___ chocolate.",
+      "sentence": "Quando eu era criança, eu gostava ___ chocolate.",
       "options": [
         "de",
         "a",
@@ -4729,23 +4808,24 @@
     "tags": [
       "conjugação"
     ],
-    "contentHash": "919f8c083c264218fda28706d4d66be706615aa11e1043c57b30dc42228c95d7",
-    "esContrast": "Terminación -ia para -er/-ir, similar a español pero con 'i' intermedia",
+    "contentHash": "3b1027e6ec6d8fe348998be6ed8ee0c8697d3f2503c878b0392b8fb216b514c5",
+    "esContrast": "Terminación -ia para los verbos en -er/-ir, como el español «vendía»; la diferencia está en la tilde: el portugués solo la lleva en «vendíamos» y «vendíeis».",
     "audio": {
       "br": {
-        "hash": "de8398a896a1999908659e48b6fd9395b7d55c0fb24a35e74f2a304abafec257",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "7d54358079792a2d146c44995eb610c756f78c0503f6e2ceae399871cd657d45",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "30d2f619b190bb74abfce154486cc72213773ae46359ab780c32d5657633fb96",
-        "voice": "Portuguese_Wiselady"
+        "hash": "7d54358079792a2d146c44995eb610c756f78c0503f6e2ceae399871cd657d45",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 — audio regenerado (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'vender' en Pretérito Imperfeito (yo, tú, él/ella, nosotros, vosotros, ellos)",
-      "back": "vindia, vendias, vendia, vendíamos, vendíeis, vendiam"
+      "back": "vendia, vendias, vendia, vendíamos, vendíeis, vendiam"
     }
   },
   {
@@ -4859,8 +4939,8 @@
     "tags": [
       "vocabulário"
     ],
-    "contentHash": "92a0e8efd5e1ade4ecf8b244a962519d7ce03873cdbe09c0663eec6975436273",
-    "esContrast": "Cognado del español 'encantador', meaningo similar: charming/lovely",
+    "contentHash": "c94c8fc2ca94cb52dd5a9881342d32241ac8afaeb1f12d9356bd07666f07f10b",
+    "esContrast": "Cognado exacto del español «encantador(a)»: encantador, delicioso, con encanto.",
     "audio": {
       "br": {
         "hash": "49d80b0b1d93ddaf45cd57eb92c23501791f9d264162c9cfd9e079f8e85fa367",
@@ -4872,6 +4952,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "encantador(a)",
@@ -4893,10 +4974,11 @@
     "contentHash": "94284e7d33b2ccfa016ff49c61aa0d11ba52388b30ee7d5260eac9ef1daa5d4d",
     "esContrast": "En ES 'necesitar' no lleva preposición. En PT PRECISAR DE es obligatorio.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
-      "sentence": "Ela ___ de ajuda para resolver aquele problema complicado.",
+      "sentence": "Ela ___ ajuda para resolver aquele problema complicado.",
       "options": [
         "precisou",
         "precisou de",
@@ -4994,6 +5076,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Eu dei um abraço nela antes de sair.",
@@ -5031,6 +5114,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: DUDA — «sempre caminhava para a escola» traduce «caminaba al colegio» palabra por palabra; en portugués europeo el hábito se dice «ia a pé para a escola» — «caminhar» se entiende más como pasear o andar de ejercicio. No es agra (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "De niño, siempre caminaba al colegio.",
@@ -5130,6 +5214,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Eu adorava aquele filme quando tinha dez anos.",
@@ -5155,9 +5240,10 @@
     "contentHash": "9c635ab0feba6a07f35acb7b02b99b76cd4b4c7ae1f67620c9b5ff920142f6ef",
     "esContrast": "Puderam (3ª pessoa plural) tiene 'e' cerrada, no 'é'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Vocês ___ (poder) resolver aquele problema sozinho?",
+      "sentence": "Vocês ___ (poder) resolver aquele problema sozinhos?",
       "blanks": [
         {
           "position": 0,
@@ -5184,6 +5270,7 @@
     "contentHash": "9ca75852a2b1377405b74e8f8d97c2fe53f3e34d88935cbfb19034656b1866e0",
     "esContrast": "'Viviam' de 'viver' (-er). Usamos 'antigamente' como pista de que es imperfecto (descripción del pasado).",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Antigamente, as pessoas ___ (viver) mais tranquilas e com menos pressa.",
@@ -5240,22 +5327,23 @@
       "irregular",
       "vocabulario"
     ],
-    "contentHash": "9e9d1fb819dcfaa79f93be8c61866327576952cbe39826c55e9ee71ea3174b66",
+    "contentHash": "0bd0ba14c9bc6348b218d1759c64b6658d895aa181ca6f59831216c27647aa66",
     "audio": {
       "br": {
-        "hash": "f6dbe6836f7d33645c9b7ad2a54dd85650448731fa47bb3b265fa287b6af49e6",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "5548f7dff8515da67aec9c766c6fef7f310a3b63f7db5d535cf6e8872afacfb5",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "299b16c441bf80e1315e333f72ba64294dae8bbe0ada49d51c1d48a23dac464f",
-        "voice": "Portuguese_Wiselady"
+        "hash": "5548f7dff8515da67aec9c766c6fef7f310a3b63f7db5d535cf6e8872afacfb5",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 — audio regenerado (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "Forma compuesta: 'tinha visto' — ¿Qué infinitivo y persona?",
-      "back": "Ver (eu/ele/ella) tinha visto = yo/él/ella había visto",
+      "back": "Ver: (eu / ele / ela) tinha visto = yo/él/ella había visto",
       "example": "Eu tinha visto aquele filme antes."
     }
   },
@@ -5282,6 +5370,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se conjuga 'querer' en Pretérito Perfeito? (yo)",
@@ -5329,7 +5418,7 @@
       "irregular",
       "descripcion"
     ],
-    "contentHash": "183ad2638cd5a8c9d1cb402dd0fbb4ad56c42a8a38dfaac949fe517345a46eea",
+    "contentHash": "0174a8e4631900a33e02d5186ec1adea24dd258c656d2136ba4677672d3d3f3f",
     "audio": {
       "br": {
         "hash": "40ec0d7fcee9e99f1be2c213989a674bb7821a4057c48a1f016cde22533ef74c",
@@ -5341,6 +5430,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "O quarto onde ficávamos hospedados era muito confortável.",
@@ -5348,8 +5438,8 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "donde nos hospedábamos",
-        "donde nos quedábamos"
+        "La habitación donde nos hospedábamos era muy cómoda.",
+        "La habitación donde nos quedábamos era muy cómoda."
       ]
     }
   },
@@ -5377,6 +5467,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: DUDA — Tarjeta degenerada (anverso = reverso = «simpático(a)») y glosa que vende léxico brasileño en un curso europeo: «en PT-BR se usa 'legal' más que 'simpático'» — en Brasil es cierto a medias («legal» es 'chulo/guay', no su (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "simpático(a)",
@@ -5395,8 +5486,8 @@
     "tags": [
       "regular"
     ],
-    "contentHash": "a505699bfeb97b46b61971eeb31231bc25601f3b9625c3047658d3aa2696d261",
-    "esContrast": "Para interrogar, invierte o añade 'não' al inicio: 'Não abriu ela a porta?' (menos común)",
+    "contentHash": "76e54da6d3328db1292e8f0a3d6d92d177fd6ea7a22829b95ec332cff8bd44de",
+    "esContrast": "En portugués la interrogativa total no invierte nada: se marca con la entonación («Ela abriu a porta?») o con el refuerzo «É que ela abriu a porta?». Para negar, «não» va delante del verbo.",
     "audio": {
       "br": {
         "hash": "bc21c81b6af223f4a61cd7944777a17871e2e7bff70b571e9c11b795d9d79a21",
@@ -5408,11 +5499,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "flashcard",
     "data": {
       "front": "Pon en negativo e interrogativo: 'Ela abriu a porta'",
       "back": "Negativo: Ela não abriu a porta / Interrogativo: Ela abriu a porta?",
-      "example": "Ela não abriu a porta. / A porta? / A porta foi aberta por ela?"
+      "example": "Ela não abriu a porta. / Ela abriu a porta?"
     }
   },
   {
@@ -5427,7 +5519,7 @@
       "regular",
       "hábito"
     ],
-    "contentHash": "8e2ca3bca493fcc8865a37579c5dbf4445f920acf5340e6fd29da17a72757d3c",
+    "contentHash": "d23c808a19e917a3febfb430d2baea3b95ae70c686d5f3f9187cc892d703c694",
     "audio": {
       "br": {
         "hash": "a5df86b0ca3df43bff99c7f4dffa62da5f2e429f0ad8d5b50a908545f773a5ff",
@@ -5439,6 +5531,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "A vizinha cantava todos os dias enquanto cozinhava.",
@@ -5446,7 +5539,7 @@
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "mientras ella cocinaba"
+        "La vecina cantaba todos los días mientras ella cocinaba."
       ]
     }
   },
@@ -5525,17 +5618,18 @@
     "contentHash": "a804065ac5e813f22872e1f055bbdaf76c71c11facc0d486df39fb051b927927",
     "esContrast": "En español 'gustar' no lleva preposición, en portugués 'gostar' exige DE.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
-      "sentence": "Eu gostei ___ do novo filme.",
+      "sentence": "Eu gostei ___ novo filme.",
       "options": [
-        "de",
-        "a",
-        "em",
+        "do",
+        "ao",
+        "no",
         "—"
       ],
-      "answer": "de"
+      "answer": "do"
     }
   },
   {
@@ -5561,6 +5655,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "translation",
     "data": {
       "source": "Cuando era niño, admiraba a mi abuelo.",
@@ -5581,7 +5676,7 @@
       "verbal-pasados",
       "contraste-perfeito-imperfeito"
     ],
-    "contentHash": "ab260c7c3599f7fe5888a3143c3c4922386d7758048478edd314dfe5687510fe",
+    "contentHash": "ff24378517c8ea04e9821d9894733065d02a48990622d98c8defdee01cb4b31d",
     "audio": {
       "br": {
         "hash": "afc4bfea61e12b59d3f3cc2d63c398a76eaa152d48ae8b38fe90c734a7b497c0",
@@ -5593,17 +5688,18 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "listening",
     "data": {
       "audioText": "Sempre adorei fazer bolo com minha mãe aos domingos.",
-      "question": "¿Qué hacía el hablante siempre los domingos?",
+      "question": "¿Qué dice el hablante sobre los domingos?",
       "options": [
         "Iba al cine.",
-        "Adoraba hacer pastel con su madre.",
+        "Siempre le ha encantado hacer pastel con su madre.",
         "Jugaba con amigos.",
         "Estudiaba portugués."
       ],
-      "answer": "Adoraba hacer pastel con su madre."
+      "answer": "Siempre le ha encantado hacer pastel con su madre."
     }
   },
   {
@@ -5621,10 +5717,11 @@
     "contentHash": "aba188e756c6c403ef53a176d22d91e8e503f945bb009e415f3a32ad17634baf",
     "esContrast": "TRATAR DE = encargarse de / ocuparse de. No confundir con TRATAR que en ES no lleva prep.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "tratar",
-      "sentence": "O médico ___ de muitos pacientes diferentes na semana passada.",
+      "sentence": "O médico ___ muitos pacientes diferentes na semana passada.",
       "options": [
         "tratou",
         "tratou de",
