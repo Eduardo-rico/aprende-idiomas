@@ -4230,7 +4230,7 @@
     ],
     "contentHash": "73f54b349fb3b1eba38ba4deb8cb1e43e97c076af8e96f98164d206e070c93ac",
     "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 piloto: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-piloto-b2c2-gj-mediacion.md)",
+    "variantVerificacion": "Ola B2C2 piloto: 2 linguistas adversariais 2026-07-29 (docs/contenido/2026-07-29-piloto-b2c2-gj-mediacion.md) · auditado E2#7 2026-08-30 con el gate de MOLDE: comparte texto fuente con su par, pero la operación difiere (escala de compresión / síntesis con segunda fuente) — progresión deliberada, no clon; el eje 3 lo reportará siempre",
     "register": "neutro",
     "type": "mediation",
     "data": {
@@ -4660,9 +4660,9 @@
       "b2c2-lote2",
       "mediacion"
     ],
-    "contentHash": "0ce53b4e8e14c3cd130097ee738e4b7c523d3d361e282a4b3e88de841b180402",
+    "contentHash": "afd0c8918e06441ff5b4e50e1bcf27981e5bb404d200dad1f44c73133df305d2",
     "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 2: 2 linguistas adversariais 2026-07-29/30 (docs/contenido/2026-07-29-lote2-b2c2-gj-mediacion.md)",
+    "variantVerificacion": "rediseñado en E2#7 2026-08-30: el gate de MOLDE (eje 3) lo emparejó a 0,585 con b2c2-med-07 — misma audiencia palabra por palabra, misma instrucción y misma rúbrica (escena/diálogo/remate/rango): era med-07 con otro chiste. Se conserva la fuente y cambia la OPERACIÓN (mediar el referente cultural), el destinatario y el rango",
     "register": "informal",
     "type": "mediation",
     "data": {
@@ -4671,19 +4671,19 @@
       "sourceLang": "pt",
       "targetLang": "es",
       "mediationType": "relay",
-      "audience": "un amigo español al que quieres contarle el chiste",
-      "instructionsEs": "Cuéntale el chiste EN ESPAÑOL — corto y con el remate al final.",
+      "audience": "uma amiga mexicana que não faz ideia da fama que os alentejanos têm em Portugal",
+      "instructionsEs": "Cuéntale el chiste en español. Ojo: sin el tópico del alentejano tranquilo no hay gracia, así que tienes que darle esa pieza ANTES del remate y sin estropearlo.",
       "wordRange": {
-        "min": 20,
-        "max": 45
+        "min": 30,
+        "max": 60
       },
       "rubric": [
-        "Escena: dos del Alentejo a la sombra",
-        "El diálogo mañana-nada / eso hiciste hoy",
-        "El remate es la última frase ('es que no terminé')",
-        "Cabe en el rango"
+        "¿Da el marco cultural antes del chiste (en Portugal los alentejanos tienen fama de tomarse la vida con mucha calma)?",
+        "¿Cuenta la escena y el diálogo (qué haces mañana — nada — ¡pero eso hiciste hoy!)?",
+        "¿Deja el remate al final y SIN explicarlo («es que no terminé»)?",
+        "¿Está en español natural, entre 30 y 60 palabras?"
       ],
-      "modelAnswer": "Dos del Alentejo, sentados a la sombra. Uno le pregunta al otro: '¿Y tú qué haces mañana?'. 'Nada'. '¡Pero eso es lo que hiciste hoy!'. 'Ya. Es que no terminé.'"
+      "modelAnswer": "Te sitúo primero: en Portugal, los del Alentejo tienen fama de tomarse la vida con una calma santa. Pues eso: dos alentejanos a la sombra. Uno pregunta: «¿Qué haces mañana?». «Nada». «¡Pero eso es lo que hiciste hoy!». Y el otro: «Ya, es que no terminé»."
     }
   },
   {
@@ -5128,7 +5128,7 @@
     ],
     "contentHash": "75f4bd4e26da3e32bd61f20288ba8f4aea33a224defb9095f9456080b277b921",
     "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md)",
+    "variantVerificacion": "Ola B2C2 lote 4: 2 linguistas adversariais 2026-07-30 (docs/contenido/2026-07-30-lote4-b2c2-y-leccion-b11-l2.md) · auditado E2#7 2026-08-30 con el gate de MOLDE: comparte texto fuente con su par, pero la operación difiere (escala de compresión / síntesis con segunda fuente) — progresión deliberada, no clon; el eje 3 lo reportará siempre",
     "register": "neutro",
     "type": "mediation",
     "data": {
@@ -5403,7 +5403,7 @@
     ],
     "contentHash": "f5288c85de66ea7bbb4f9f261b5092b001ebef6f3a5e8aa23432a2c3586a5b08",
     "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md) · auditado E2#7 2026-08-30 con el gate de MOLDE: comparte texto fuente con su par, pero la operación difiere (escala de compresión / síntesis con segunda fuente) — progresión deliberada, no clon; el eje 3 lo reportará siempre",
     "register": "neutro",
     "type": "mediation",
     "data": {
@@ -5556,7 +5556,7 @@
     ],
     "contentHash": "71f43a3d1b9e7cda6707b0d5ff3bb30d16c61054f33c671d44f1ff0b826b3f86",
     "variantStatus": "unchecked",
-    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md)",
+    "variantVerificacion": "Ola B2C2 lote 6: 2 linguistas adversariais + mini-round 2026-08-12 (docs/contenido/2026-08-12-lote6-b2c2.md) · auditado E2#7 2026-08-30 con el gate de MOLDE: comparte texto fuente con su par, pero la operación difiere (escala de compresión / síntesis con segunda fuente) — progresión deliberada, no clon; el eje 3 lo reportará siempre",
     "register": "informal",
     "address": "tu",
     "type": "mediation",

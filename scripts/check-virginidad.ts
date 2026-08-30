@@ -15,6 +15,7 @@ import {
   indexarCorpus, buscarDuplicados, revisarConceptos, UMBRAL, SIN_DECLARAR,
   type ExIndexable,
 } from './lib/virginidad';
+import { buscarClonesMolde, mediacionesDe } from './lib/molde-mediacion';
 
 function arg(nombre: string): string | undefined {
   const i = process.argv.indexOf(nombre);
@@ -94,6 +95,7 @@ async function main() {
   // Cada par sale UNA vez: si A caza a B, no volvemos a informar B↔A.
   const vistos = new Set<string>();
   let pares = 0;
+  let moldes = 0;
   console.log('\n── PALABRAS (solape IDF) ──');
   for (const c of candidatos) {
     for (const h of buscarDuplicados(idx, c, umbral)) {
@@ -111,6 +113,33 @@ async function main() {
     }
   }
   console.log(`pares por encima del umbral: ${pares}`);
-  if (process.argv.includes('--strict') && (pares > 0 || puntos > 0)) process.exit(1);
+
+  // ── Eje 3: MOLDE de las mediaciones ──
+  // Los dos ejes anteriores son ciegos a la plantilla: en E2#6 dieron 0
+  // pares para doce mediaciones de las que DOS eran clones. Este mira lo
+  // que el clon conserva (esqueleto enmascarado, firma de rúbrica, tupla
+  // de clase, fuente compartida) en vez de lo que cambia.
+  console.log('\n── MOLDE (mediaciones) ──');
+  const medCorpus = mediacionesDe(corpus as any);
+  const medCand = mediacionesDe(candidatos as any);
+  if (!medCand.length) {
+    console.log('sin mediaciones entre los candidatos — nada que comparar');
+  } else {
+    const clones = buscarClonesMolde(medCorpus, medCand);
+    const vistosM = new Set<string>();
+    let n = 0;
+    for (const p of clones) {
+      const clave = [p.id, p.contra].sort().join('|');
+      if (vistosM.has(clave)) continue;
+      vistosM.add(clave);
+      n++;
+      console.log(`${String(p.score).padStart(5)}  ${p.id}  ↔  ${p.contra}   [${p.motivos.join(', ')}]`);
+      console.log(`         esqueleto ${p.desglose.esqueleto} · rúbrica ${p.desglose.rubrica} · tupla ${p.desglose.tupla} · audiencia ${p.desglose.audiencia}`);
+    }
+    console.log(`mediaciones comparadas: ${medCand.length} contra ${medCorpus.length} · clones de molde: ${n}`);
+    moldes = n;
+  }
+
+  if (process.argv.includes('--strict') && (pares > 0 || puntos > 0 || moldes > 0)) process.exit(1);
 }
 main().catch((e) => { console.error(e); process.exit(1); });
