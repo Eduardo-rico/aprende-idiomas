@@ -42,6 +42,14 @@ skill.
      que es el mismo ejercicio. Reenseñar un concepto de un bloque
      anterior no es delito —refinar en C1 un punto de B1 es legítimo—
      pero tiene que salir declarado en el doc, no por descuido.
+   - **El gate NO protege a las MEDIACIONES.** Medido en el lote 9 por
+     los dos revisores por separado: **0 pares para las doce MED** al
+     umbral del código. No es que estuvieran limpias — dos eran clones
+     (una ⊂ otra por fuente y frase; otra calcaba la rúbrica de un
+     publicado casilla a casilla) — es que el solape IDF se diluye en
+     textos largos y nunca llega a 0,34. Para las MED, el cotejo A MANO
+     contra los publicados de su clase es el ÚNICO gate que existe:
+     misma fuente, mismos párrafos, misma rúbrica, misma bisagra.
    - **El gate NO ve clones estructurales — los caza el round (o un
      gate de molde).** En E2#4 el MED-53 del borrador era el publicado
      med-38 con los nombres cambiados: mismo género, misma dirección,
@@ -133,8 +141,18 @@ th, y (systema).
 - **Ratio ~10/10 con la última MAL en posición 19-20** (mata el conteo),
   runs ≤3, sin alternancia mecánica, arranque DISTINTO de todos los
   lotes previos (el lote 2 calcó 17/20 posiciones del 1; el 3 calcó el
-  arranque — ambos se rehicieron). Arranques quemados: MBM, BMM, BMB,
-  MBB, MMB, BBM.
+  arranque — ambos se rehicieron). **Los ocho arranques de 3 están
+  quemados desde el lote 7** (MBM, BMM, BMB, MBB, MMB, BBM, BBB, MMM):
+  desde el lote 8 la regla es **prefijo de CUATRO no visto** — quemados
+  MBMM (piloto), BMMB, BMBM, MBBM, MMBB, BBMM, BBBM, MMMB, BBMB, BMBB.
+  Con 16 prefijos posibles y uno por lote, esta regla también se agota:
+  al llegar al lote 15 hay que cambiar de criterio (p. ej. exigir sólo
+  el vector de solapes cerca del azar), no improvisarlo por lote.
+- **El anti-andamio se busca por LEMA, no por cadena.** El lote 9 pasó
+  un `grep "Repara:"` y traía «O senhor **repare** na diferença:» — la
+  misma bisagra conjugada. Dato que lo explica: de 128 modelos
+  publicados, cinco usan «Repara» y **tres de esos cinco son tres de
+  los cuatro `synthesise_sources`**: la muletilla está pegada al tipo.
 - **El solape con los lotes previos se busca cerca del AZAR (≈10/20), no
   al mínimo.** Corrección del lote 5: presenté un 2/20 contra el lote 4
   como virtud y está a 3,6σ — es la casi-complementaria de ese lote,
