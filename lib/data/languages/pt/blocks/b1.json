@@ -1474,30 +1474,30 @@
     "tags": [
       "regular"
     ],
-    "contentHash": "2a707b3f87b10ebdc4282db2cb1525ec1bfa52afd4863eecefe89ab5d7f7fcf3",
+    "contentHash": "60b91b40f59d18cd08d938832df60b907f9c16593118c75f32793d448b6e19a0",
     "esContrast": "-ón en español se convierte en -ão en portugués: canción → canção.",
     "audio": {
       "br": {
-        "hash": "47bc50cea6f647cac3469328ac7e60b8c1b4920a2fb83b88cede5649aeba98d1",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "227756f14750454fdeb7ac6b955af6d3906e57b85385f11cf5558926fff433e8",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "95e10555afd257aeda6c316b0b9662a9766ee3b1779aa9dfad6de5dd66b1bc1d",
-        "voice": "Portuguese_Wiselady"
+        "hash": "227756f14750454fdeb7ac6b955af6d3906e57b85385f11cf5558926fff433e8",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "needs-human",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: rehacer entero (informe-cola1-manual)",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
     "type": "listening",
     "data": {
-      "audioText": "A canção do coração habla de amor.",
-      "question": "¿Qué palabra contiene la terminación -ão?",
+      "audioText": "A canção do coração fala de amor.",
+      "question": "¿Cuál de estas palabras NO termina en -ão?",
       "options": [
         "canção",
         "coração",
-        "habla"
+        "fala"
       ],
-      "answer": "coração"
+      "answer": "fala"
     }
   },
   {
@@ -4581,30 +4581,31 @@
       "b1-silaba-tonica"
     ],
     "tags": [],
-    "contentHash": "8f97e91737025068faccf8c9cd9dd0f04588b22bbbdd9a79468df1b07636479a",
+    "contentHash": "094e4f3cf6a9a1b09fc410ead8b73e6e89439d4fbc0ce7d1e99316661ca43891",
+    "esContrast": "Esdrújula = proparoxítona: el acento cae en la antepenúltima sílaba (mú-si-ca). «Difíceis» y «táxi» son llanas; «café», aguda.",
     "audio": {
       "br": {
-        "hash": "dd51292d91cd4239dd4b6d0e39b814dde11c565d8f8f0d41432ed4a1687ef318",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "bc4de5ccdc6dec827edb99b4b419acde37954a49ec279f5477716a728ed51206",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "3975282a65c8f8c1a30f8bed48b6a6278bada65130466ca3f367773d7caf366f",
-        "voice": "Portuguese_Wiselady"
+        "hash": "bc4de5ccdc6dec827edb99b4b419acde37954a49ec279f5477716a728ed51206",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "needs-human",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: rehacer entero (informe-cola1-manual)",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
     "type": "listening",
     "data": {
-      "audioText": "Qual palavra é paroxítona: difíceis, café, táxi?",
-      "question": "¿Cuál de estas palabras es esdrújula (sobreesdrújula en portugués)?",
+      "audioText": "Qual destas palavras é esdrúxula: difíceis, música, café?",
+      "question": "¿Cuál de estas palabras es esdrújula (proparoxítona)?",
       "options": [
         "difíceis",
+        "música",
         "café",
-        "táxi",
-        "lápis"
+        "táxi"
       ],
-      "answer": "difíceis"
+      "answer": "música"
     }
   },
   {
@@ -6288,30 +6289,30 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "c83e79da740c12d8083eac14c9b1b84f4af6a5bcf0f4acd6225d0a193f8dd3b8",
-    "esContrast": "Hotel y hora se pronuncian igual, pero hora en español es 'hora' y en portugués también.",
+    "contentHash": "33bf78045b2844d3044a0b74b808fce303be804807164f0c86d764b235afb86f",
+    "esContrast": "En portugués la h inicial es siempre muda — homem, hotel, hora —, igual que en español. Sólo suena dentro de los dígrafos ch, lh, nh.",
     "audio": {
       "br": {
-        "hash": "79b5a6947af5972824460c040b62e816372bf78c6330fa38fd7f2c07a938e5dd",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "967b0cb9e0d083b64444c3a40780a41f2441554a8be1a7c12c267639c42696df",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "cac80e8f68bbe407c6d4bc0795373f9339dec7a03f7abf1e0ad44aa27310b960",
-        "voice": "Portuguese_Wiselady"
+        "hash": "967b0cb9e0d083b64444c3a40780a41f2441554a8be1a7c12c267639c42696df",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "needs-human",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: rehacer entero (informe-cola1-manual)",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
     "type": "listening",
     "data": {
-      "audioText": "O hotel fica na hora certa.",
-      "question": "¿Qué palabra NO suena como en español?",
+      "audioText": "O homem do hotel chegou a horas.",
+      "question": "¿Qué tienen en común «homem», «hotel» y «horas»?",
       "options": [
-        "O hotel",
-        "na hora",
-        "certa"
+        "La h inicial no se pronuncia",
+        "La h suena como una j",
+        "Todas son esdrújulas"
       ],
-      "answer": "na hora"
+      "answer": "La h inicial no se pronuncia"
     }
   },
   {
@@ -8181,30 +8182,30 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "fe42aac14ac7b306deb11a034b3f3651a286387eb1e2986d0f4996312e6e125f",
-    "esContrast": "En portugués, la h inicial es siempre muda: hotel y horas.",
+    "contentHash": "ec0262039fd4751f97e41a3189b412b17e4562a37a1891d0a4e4b5e872604632",
+    "esContrast": "Tres haches mudas: homem, hotel, horas. En portugués la h inicial no se pronuncia nunca.",
     "audio": {
       "br": {
-        "hash": "6d19c7755018eb150055951b19d1521b4fb795ea507b777fad56565d32a71f1e",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "967b0cb9e0d083b64444c3a40780a41f2441554a8be1a7c12c267639c42696df",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "8f03e435b4c3eafe11774c58170f4c6414e0887bb1e470d5c773625a5626cbcd",
-        "voice": "Portuguese_Wiselady"
+        "hash": "967b0cb9e0d083b64444c3a40780a41f2441554a8be1a7c12c267639c42696df",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "needs-human",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: rehacer entero (informe-cola1-manual)",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
     "type": "listening",
     "data": {
-      "audioText": "Horas de hotel, manhã de canção.",
-      "question": "¿Cuántas letras 'h' hay en la frase que se escriben pero no se pronuncian?",
+      "audioText": "O homem do hotel chegou a horas.",
+      "question": "¿Cuántas haches mudas hay en la frase?",
       "options": [
         "Una",
         "Dos",
         "Tres"
       ],
-      "answer": "Dos"
+      "answer": "Tres"
     }
   },
   {

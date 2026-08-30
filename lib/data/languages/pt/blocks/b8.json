@@ -4286,14 +4286,14 @@
       "regência-verbal",
       "frequente"
     ],
-    "contentHash": "9beb6ff003fc7df750e0b3c6aca8d74a495d6e600dcbc5ad084007b92b5cd5fd",
-    "esContrast": "Conversar COM = conversar con (PT y ES comparten la preposición).",
-    "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "contentHash": "043b8f306455684a793db840d745b32779d2bdaa5e17fa3ef2951a4e96b12893",
+    "esContrast": "«Conversar COM» = conversar con (PT y ES comparten la preposición). Y con «ontem» el verbo va en pretérito: «conversámos».",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "corregido en E2#7 2026-08-30 por el barrido mecánico de «-ámos» (paradigma brasileño servido como base europea)",
     "type": "verb_preposition",
     "data": {
       "verb": "conversar",
-      "sentence": "Conversamos ___ você ontem à noite.",
+      "sentence": "Conversámos ___ o teu irmão ontem à noite.",
       "options": [
         "de",
         "com",
@@ -9391,16 +9391,16 @@
       "b2c2-lote7",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "4ac7241a356b2443539afcdaff10ca15f17d1465b4274b8d864d6bbebff6245d",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 7: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-lote7-b2c2.md) · empaque corregido E2#5 2026-08-29: nota editorial del doc filtrada al explanationEs / salto de línea en sentence (hallazgo cola 3, bug del parser del publicador)",
     "register": "neutro",
-    "contentHash": "4ac7241a356b2443539afcdaff10ca15f17d1465b4274b8d864d6bbebff6245d",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "Se calhar chegue atrasado à reunião das nove.",
       "verdict": false,
-      "explanationEs": "«Se calhar» pide INDICATIVO: se calhar chego, se calhar vou. El conjuntivo aquí es la sobrecorrección del que aprendió «talvez + conjuntivo» y extiende la regla al primo coloquial. Es justo al revés: «talvez chegue», pero «se calhar chego» — mismo sentido, dos gramáticas.",
-      "repair": "Se calhar chego atrasado à reunião das nove."
+      "repair": "Se calhar chego atrasado à reunião das nove.",
+      "explanationEs": "«Se calhar» pide INDICATIVO: se calhar chego, se calhar vou. El conjuntivo aquí es la sobrecorrección del que aprendió «talvez + conjuntivo» y extiende la regla al primo coloquial. Es justo al revés: «talvez chegue», pero «se calhar chego» — mismo sentido, dos gramáticas."
     }
   },
   {
@@ -9415,11 +9415,11 @@
       "b2c2-lote7",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "6de399d5e7cc824f5f975dd9421a0a66208e9861791ca5af6f12788c430c24d9",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 7: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-lote7-b2c2.md)",
     "register": "informal",
-    "contentHash": "6de399d5e7cc824f5f975dd9421a0a66208e9861791ca5af6f12788c430c24d9",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "Cá em casa, quem cozinha sou eu.",
       "verdict": true,
@@ -9438,17 +9438,17 @@
       "b2c2-lote7",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "6852840b2a31ab7fec7708ecda4b4997ced83055a59a68c4a028f261c265cfbf",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 7: 2 linguistas adversariais 2026-08-28 (docs/contenido/2026-08-28-lote7-b2c2.md) · empaque corregido E2#5 2026-08-29: nota editorial del doc filtrada al explanationEs / salto de línea en sentence (hallazgo cola 3, bug del parser del publicador)",
     "register": "informal",
-    "contentHash": "6852840b2a31ab7fec7708ecda4b4997ced83055a59a68c4a028f261c265cfbf",
     "address": "tu",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "Caso precisares de ajuda com a mudança, liga-me.",
       "verdict": false,
-      "explanationEs": "«Caso» rige PRESENTE do conjuntivo: caso precises, caso possas, caso venha. El futuro do conjuntivo («precisares») es la sobrecorrección del que acaba de dominar «se precisares» y decide que caso funciona igual — casi: comparten el si condicional, no el tiempo. Ciberdúvidas lo ejemplifica a la letra: «Empresta-me esse livro, caso possas».",
-      "repair": "Caso precises de ajuda com a mudança, liga-me."
+      "repair": "Caso precises de ajuda com a mudança, liga-me.",
+      "explanationEs": "«Caso» rige PRESENTE do conjuntivo: caso precises, caso possas, caso venha. El futuro do conjuntivo («precisares») es la sobrecorrección del que acaba de dominar «se precisares» y decide que caso funciona igual — casi: comparten el si condicional, no el tiempo. Ciberdúvidas lo ejemplifica a la letra: «Empresta-me esse livro, caso possas»."
     }
   },
   {
@@ -9463,11 +9463,11 @@
       "b2c2-lote8",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "a091a9dff311663209507a783db16d85a6161f6fe0deee60101f6cac66c91314",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
     "register": "neutro",
-    "contentHash": "a091a9dff311663209507a783db16d85a6161f6fe0deee60101f6cac66c91314",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "Ao sábado, o mercado enche-se de gente.",
       "verdict": true,
@@ -9486,12 +9486,12 @@
       "b2c2-lote8",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "37aaa98b9cc5e8fda451d4c21f82ff08c93268150fbf741a6d91d8cac4fdd4c3",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
     "register": "informal",
-    "contentHash": "37aaa98b9cc5e8fda451d4c21f82ff08c93268150fbf741a6d91d8cac4fdd4c3",
     "address": "tu",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "Saí em bicos de pés para te não acordar.",
       "verdict": true,
@@ -9510,16 +9510,16 @@
       "b2c2-lote8",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "edad2337417ff2690e97b29f63791f1794d0b0f0ee29579a706770a127a81acd",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
     "register": "formal",
-    "contentHash": "edad2337417ff2690e97b29f63791f1794d0b0f0ee29579a706770a127a81acd",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "Tratam-se de obras urgentes, segundo a câmara.",
       "verdict": false,
-      "explanationEs": "Cuando «tratar-se de» es IMPERSONAL (= 'son', 'es cuestión de') va en singular aunque lo que siga sea plural: trata-se de obras, tratava-se de erros. La concordancia es la hipercorrección de periódico, frecuentísima también en nativos. Ojo, que el RECÍPROCO es otro verbo a todos los efectos: «tratam-se por tu» y hasta «tratavam-se de pulhas» (¡llamarse sinvergüenzas!) concuerdan con su sujeto — el corpus trae los dos. Aquí no hay quién se trate de nada: es el impersonal, y el impersonal no concuerda.",
-      "repair": "Trata-se de obras urgentes, segundo a câmara."
+      "repair": "Trata-se de obras urgentes, segundo a câmara.",
+      "explanationEs": "Cuando «tratar-se de» es IMPERSONAL (= 'son', 'es cuestión de') va en singular aunque lo que siga sea plural: trata-se de obras, tratava-se de erros. La concordancia es la hipercorrección de periódico, frecuentísima también en nativos. Ojo, que el RECÍPROCO es otro verbo a todos los efectos: «tratam-se por tu» y hasta «tratavam-se de pulhas» (¡llamarse sinvergüenzas!) concuerdan con su sujeto — el corpus trae los dos. Aquí no hay quién se trate de nada: es el impersonal, y el impersonal no concuerda."
     }
   },
   {
@@ -9534,12 +9534,12 @@
       "b2c2-lote8",
       "anti-calco"
     ],
-    "type": "grammaticality_judgment",
+    "contentHash": "8b0382fb5b6fc59ef827ce26f17dc27796180d369d0cd6130a325fe9bac71601",
     "variantStatus": "unchecked",
     "variantVerificacion": "Ola B2C2 lote 8: 2 linguistas adversariais 2026-08-29 (docs/contenido/2026-08-29-lote8-b2c2.md)",
     "register": "informal",
-    "contentHash": "8b0382fb5b6fc59ef827ce26f17dc27796180d369d0cd6130a325fe9bac71601",
     "address": "tu",
+    "type": "grammaticality_judgment",
     "data": {
       "sentence": "Enquanto não acabares os trabalhos de casa, não sais.",
       "verdict": true,

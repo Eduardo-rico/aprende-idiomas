@@ -124,6 +124,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
     "type": "translation",
     "data": {
       "source": "En breve comenzaré a estudiar para el examen.",
@@ -207,22 +208,23 @@
     "tags": [
       "coloquial"
     ],
-    "contentHash": "084022b57e6c5a89352d5b0edc0e86d76d6fd6454fbfae74f3465124af7b7f9c",
+    "contentHash": "8e1c3163b3388a6ac0e7271ab201d0c3bae405130ffad2e12ac9c853466aeea5",
     "esContrast": "En portugués, 'poupar' significa 'ahorrar'; en español 'poupar' no existe con ese sentido.",
     "audio": {
       "br": {
-        "hash": "e962b9be9ada7fa5d532072f8ffb4ca4f30e349642a9e2f98f285c7b71fe2b1e",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "c02a941f1d250955d0f014620563a23dde1ec51d06cfdcec84faaf59ab9597df",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "314929e3aa5e5381d1a2bbe69deb3e7659fed98597b01705445e0173bd5afec6",
-        "voice": "Portuguese_Wiselady"
+        "hash": "c02a941f1d250955d0f014620563a23dde1ec51d06cfdcec84faaf59ab9597df",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#7 2026-08-30 — audio regenerado (informe-cola5-manual)",
     "type": "listening",
     "data": {
-      "audioText": "Vou poupar dinheiro todos os meses para realizar meu sonho.",
+      "audioText": "Vou poupar dinheiro todos os meses para realizar o meu sonho.",
       "question": "¿Qué va a hacer la persona todos los meses?",
       "options": [
         "Gastar dinero",
@@ -328,6 +330,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'poder' en futuro do presente (eu, ele):",
@@ -444,6 +447,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
     "type": "translation",
     "data": {
       "source": "Faremos uma grande festa quando as aulas começarem.",
@@ -466,7 +470,7 @@
     "tags": [
       "vocabulario"
     ],
-    "contentHash": "1204e6b331a17a6ff9ef5df6d1ebab9b81b45ccc00092ff28f31bc5c2fcf8d03",
+    "contentHash": "f8da5ae77bd4ddfcdc0b12427f96bf99feaf5e716fc6c081573d701ccc06604f",
     "esContrast": "Igual en español. Equivale a 'hacer realidad' o 'llevar a cabo'.",
     "audio": {
       "br": {
@@ -479,11 +483,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#7 2026-08-30 (informe-cola5-manual)",
     "type": "flashcard",
     "data": {
       "front": "Traduce 'realizar' (verbo)",
       "back": "realizar",
-      "example": "Eu gostaria de realizar meu sonho de estudar abroad."
+      "example": "Eu gostaria de realizar o meu sonho de estudar no estrangeiro."
     }
   },
   {
@@ -569,22 +574,23 @@
       "verbo-regular",
       "-ir"
     ],
-    "contentHash": "14991085d40fc38b584b0dbd3363099c9d4bcfd81f24ee399d8c10426a1ead83",
+    "contentHash": "1c58c3097f16423fa0a59c39d4e0fa3e374459995b984b8d29ea08b403ea2111",
     "audio": {
       "br": {
-        "hash": "5fb85c3a6e9c94c5b02ab2412a393b57066a1726bd539f4d851a83d2fee6d165",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "b554157874b25d4a34df9ef48825b72c7ffff0d68b78c4602238e5e7feb01fb4",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "34b178383566882318b69d6716c395e3c1ed1f5aff1a0f472b1b8162993d5688",
-        "voice": "Portuguese_Wiselady"
+        "hash": "b554157874b25d4a34df9ef48825b72c7ffff0d68b78c4602238e5e7feb01fb4",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#7 2026-08-30 — audio regenerado (informe-cola5-manual)",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'partir' en futuro do presente (tu, eles):",
-      "back": "partirão, partirás",
+      "back": "partirás, partirão",
       "example": "Partirão para a Europa no próximo verão."
     }
   },
@@ -700,8 +706,8 @@
     "tags": [
       "discurso-indireto"
     ],
-    "contentHash": "1c60178a981c59758bae337e7a352248f378fd9416f8041d985e7b1b131a9fba",
-    "esContrast": "En discurso indirecto, el condicional reemplaza el futuro del presente: 'ia' → 'ia' (ambos cambian según tiempo).",
+    "contentHash": "5a0f1f3746d79aaf2a617eab664993123f4bae09c4275657666088f16f5f5e09",
+    "esContrast": "En estilo indirecto tras verbo en pasado, 'vou viajar' pasa a 'ia viajar' (o 'viajaria') y 'amanhã' a 'no dia seguinte'.",
     "audio": {
       "br": {
         "hash": "6464a6fd256333c79983858d0af9759031e77ffa0ca39cb0cebeefa3437518ff",
@@ -713,6 +719,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#7 2026-08-30 (informe-cola5-manual)",
     "type": "flashcard",
     "data": {
       "front": "'Ele disse: Eu vou viajar amanhã.' → ¿Cómo queda en discurso indirecto?",
@@ -775,6 +782,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'soñador' en portugués?",
@@ -854,8 +862,8 @@
       "discurso-relatado",
       "formal"
     ],
-    "contentHash": "1800fb841328d227c996e9bf9580a2bdc02cd6e8f526eeb00f26fff7ad8ef85f",
-    "esContrast": "Esfuerzos = esforços (plural); devrait = deveria (irregular: dever → deveria)",
+    "contentHash": "d87c8f99a39ceb34eaaf563d1be0f9aea5755103b920450422b9759a294bcc29",
+    "esContrast": "'Esfuerzos' = 'esforços'. El condicional de 'dever' es regular: dever + -ia → deveria.",
     "audio": {
       "br": {
         "hash": "b72280ee6f99c892098b26feee550a4bf9cdea9a8b9f23fc4e2f9723b4f855ff",
@@ -867,6 +875,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#7 2026-08-30 (informe-cola5-manual)",
     "type": "translation",
     "data": {
       "source": "Según ella, yo debería realizar más esfuerzos para estar contenta.",
@@ -904,6 +913,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
     "type": "translation",
     "data": {
       "source": "El profesor afirmó que nosotros haríamos el examen la próxima semana.",
@@ -940,6 +950,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#7 2026-08-30: DUDA — El ítem se contradice: la glosa insiste en que «poderia ≠ podia» y a renglón seguido `acceptedAlternatives` valida «Ela disse que podia vir amanhã» como traducción correcta de «podría». Una de las dos cosas sobra; hay qu (informe-cola5-manual)",
     "type": "translation",
     "data": {
       "source": "Ella dijo que podría venir mañana.",
@@ -998,7 +1009,7 @@
       "vocabulario",
       "verbo"
     ],
-    "contentHash": "bd97b3d8c59bf2e7c44069059c2a30af861ffe42710f933256a9812a49621e81",
+    "contentHash": "7cb4347fb05c1185cd70ff4de32cca429a13c68822e1da8a2ca72d6ff7164dcf",
     "audio": {
       "br": {
         "hash": "ec3da4b87938b6b863b0351686f5ef2a58998f9a8a5b9b45d0acf49a13dd88cd",
@@ -1010,11 +1021,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#7 2026-08-30 (informe-cola5-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'realizar' en portugués?",
       "back": "realizar",
-      "example": "Vou realizar meu sonho de estudar em Portugal."
+      "example": "Vou realizar o meu sonho de estudar em Portugal."
     }
   },
   {
@@ -1084,8 +1096,8 @@
       "irregular",
       "desejo-cortês"
     ],
-    "contentHash": "f34ff2e7f9d09c905196823105d54b388d93fefbf91bd83a8a2dd57faf06d24e",
-    "esContrast": "Seria = conditional de 'ser'; sería = conditional de 'ser' en español (coinciden)",
+    "contentHash": "fca26a018f248ad71af7a1a9336d23f22db2593b43ea2847b8c96ccf4f783e45",
+    "esContrast": "'Seria' es el condicional de 'ser' en portugués; el español dice 'sería', con tilde.",
     "audio": {
       "br": {
         "hash": "873c63dc0618e0b78abb732eb25807ab449a03547bda46c6c25d15daf4267125",
@@ -1097,6 +1109,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#7 2026-08-30 (informe-cola5-manual)",
     "type": "translation",
     "data": {
       "source": "¿Sería posible realizar el proyecto este año?",
@@ -1104,7 +1117,6 @@
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Seria possível realizar o projeto este ano?",
         "Será que seria possível realizar o projeto este ano?",
         "Seria viável realizar o projeto este ano?"
       ]
@@ -1134,6 +1146,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
     "type": "translation",
     "data": {
       "source": "Eu porei em prática tudo o que aprendi.",
@@ -1236,6 +1249,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
     "type": "translation",
     "data": {
       "source": "O menino sonhador dirá a verdade.",
@@ -1260,6 +1274,7 @@
     "contentHash": "32351ac98ce1a32a4c2c14ed5eb8df8ded50455dc6ca22db7665333c827a78be",
     "esContrast": "Igual que 'voy a hablar', pero el futuro compuesto es más natural en PT-BR que el futuro simple.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ falar com ela amanhã.",
@@ -1510,6 +1525,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
     "type": "translation",
     "data": {
       "source": "Los precios van a subir el próximo mes.",
@@ -1536,6 +1552,7 @@
     "contentHash": "3e18f681a54facf5d277f9b891b9e9f7b3cd3377fc8f41c437a78487628dd147",
     "esContrast": "En español 'gustar' no lleva preposición; en portugués 'gostar' siempre rige DE.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
@@ -1639,6 +1656,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#7 2026-08-30: DUDA — Doble duda. (a) El ítem está en `b5-l2-futuro-composto` y no contiene ningún futuro: «Ele é uma pessoa muito concreta» es presente. (b) «uma pessoa concreta» con el sentido de 'con los pies en la tierra' es marginal en p (informe-cola5-manual)",
     "type": "translation",
     "data": {
       "source": "Ele é uma pessoa muito concreta, não perde tempo com fantasias.",
@@ -1912,6 +1930,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo expresarías 'Me gustaría un café' como deseo cortés en portugués?",
@@ -1971,6 +1990,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
     "type": "translation",
     "data": {
       "source": "Ella realizará sus sueños el próximo año.",
@@ -1996,6 +2016,7 @@
     "contentHash": "50b03eb33a5800fdf02d5da44740462faa2c0635b00b20659771933584244b9b",
     "esContrast": "'Vão subir' equivale a 'van a subir'. El uso del compuesto es muy frecuente en BR.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Os preços ___ subir no próximo mês, então é melhor comprar agora.",
@@ -2048,7 +2069,7 @@
     "tags": [
       "regular"
     ],
-    "contentHash": "5112fc8cedcf7310c1ecd79562e699aa0b2ac6f01b55d9e10aa124b42cb08b9c",
+    "contentHash": "8b26eca9f940d8050c5b8ec3c1ab7c47affd6d8cfb8d8ae862104220389de07c",
     "audio": {
       "br": {
         "hash": "2c8088f3d2bf53010b1df2d3ae0472d47f672f22d23387aae3fa531e6295c99f",
@@ -2060,10 +2081,11 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#7 2026-08-30 (informe-cola5-manual)",
     "type": "listening",
     "data": {
       "audioText": "Eu sonhava em estudar medicina e agora vou realizar esse sonho em breve.",
-      "question": "¿Qué verbo está en futuro del presente?",
+      "question": "¿Qué forma verbal expresa el futuro?",
       "options": [
         "sonhava",
         "vou realizar",
@@ -2348,6 +2370,7 @@
     "contentHash": "5f1d3ce32e8afe9a3605fe53b8fa7a5fb96a094cd9cdfac01a4613d48d20762e",
     "esContrast": "'Sonhador/a' = soñador/a. 'Vai mudar' = 'va a cambiar'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#7 2026-08-30 (informe-cola5-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela é muito ___, sempre ___ mudar de cidade sem aviso.",
@@ -2355,9 +2378,7 @@
         {
           "position": 0,
           "answer": "sonhadora",
-          "alternatives": [
-            "sonhador"
-          ]
+          "alternatives": []
         },
         {
           "position": 1,
@@ -2382,6 +2403,7 @@
     "contentHash": "5f376912770f6d8d266f60abea19d8a2afceab1bb030fdfde5bd3cd89aeb5bd1",
     "esContrast": "'Queria' es más suave que 'quero' para pedidos corteses.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ um copo de água, por favor.",
@@ -2408,7 +2430,7 @@
       "verbo-regular",
       "-er"
     ],
-    "contentHash": "5f96af6757bc64d2e756fb0f93ce5ffbde95e4725cc2a69a4804188df124e29c",
+    "contentHash": "fe2d7fb24bae2c37020117517585dc11e98cdbe1044750d51073960eafcf413a",
     "audio": {
       "br": {
         "hash": "a5279137905061bac063e4ce96ef9efdee5cbf7b28d2e83af24cfb4f29236ab2",
@@ -2420,11 +2442,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#7 2026-08-30 (informe-cola5-manual)",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'comer' en futuro do presente (eu, você, nós):",
       "back": "comerei, comerá, comeremos",
-      "example": "Comerei uma pizza para comemorar minha aprovação."
+      "example": "Comerei uma pizza para comemorar a minha aprovação."
     }
   },
   {
@@ -2502,8 +2525,9 @@
       "vestibular"
     ],
     "contentHash": "63df3aeb036d7ffba19784094c83513081572a23a91859d92a9cc3232468df14",
-    "esContrast": "'Realizar' é regular no futuro: realizarei (igual ao es 'realizaré').",
+    "esContrast": "'Realizar' es regular en el futuro: 'realizarei' (igual que el español 'realizaré').",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#7 2026-08-30 (informe-cola5-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu sou um sonhador e ___ todos os meus objetivos em breve.",
@@ -2597,8 +2621,8 @@
     "tags": [
       "vocabulario"
     ],
-    "contentHash": "6756a8a872ca2be9e23e71e3e23f41666b6263b57c93c74e785ff6bf5656daa5",
-    "esContrast": "Muy similar al español 'concreto/a'. Puede ser adjetivo o sustantivo masculino (o concreto).",
+    "contentHash": "4c2cff98f3ac40945ce12ec328c64394f204c6d9a4609d96fff5ec6917d5e7f5",
+    "esContrast": "Muy similar al español 'concreto/a'. Ojo: el material de construcción en Portugal es 'o betão'; 'o concreto' con ese sentido es de Brasil.",
     "audio": {
       "br": {
         "hash": "01f13217fb18b8f310231119742d25489d876912b1a48174475ee9ec49ac44f4",
@@ -2610,6 +2634,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#7 2026-08-30 (informe-cola5-manual)",
     "type": "flashcard",
     "data": {
       "front": "concreto / concreta",
@@ -2641,6 +2666,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
     "type": "listening",
     "data": {
       "audioText": "Sei que poderás contar comigo quando precisares de ajuda no trabalho.",
@@ -2774,6 +2800,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
     "type": "flashcard",
     "data": {
       "front": "preços (sustantivo, plural)",
@@ -3020,27 +3047,28 @@
       "b5-futuro-composto"
     ],
     "tags": [],
-    "contentHash": "08bcfeabd0c8263badb77759e57b75ee183a40d1daa022559745aece1eb73894",
-    "esContrast": "'Concreta' se escribe igual, pero 'concreto' ≠ 'prático'; en PT puede referirse a lo material.",
+    "contentHash": "7aeda1795079a957c8c2cf2839141e570ba6b8e17c89fbfe52cc95381e87ccfd",
+    "esContrast": "'Concreta' se escribe igual que en español. Ojo: el material de construcción en Portugal es 'betão'; 'concreto' con ese sentido es de Brasil.",
     "audio": {
       "br": {
-        "hash": "3d750c5ef9a47e7a78e03bfa562cc3d03073018816bb81b505e2bfc1e5a2865c",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "1040e17d1d31f4481fe89962143bafdb6823171569b1f6ff1e8fb5db5eb986d7",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "0a4f964b074d498cd9ecf0a140ed15419453e5354adf581eee68320ca95a025f",
-        "voice": "Portuguese_Wiselady"
+        "hash": "1040e17d1d31f4481fe89962143bafdb6823171569b1f6ff1e8fb5db5eb986d7",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#7 2026-08-30 — audio regenerado (informe-cola5-manual)",
     "type": "translation",
     "data": {
       "source": "Ella va a ser una arquitecta muy concreta, siempre con los pies en la tierra.",
-      "target": "Ela vai ser uma arquiteta muito concreta, sempre com os pés na terra.",
+      "target": "Ela vai ser uma arquitecta muito concreta, sempre com os pés na terra.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Ela vai ser uma arquiteta muito concreta, sempre com os pés bem assentes."
+        "Ela vai ser uma arquitecta muito concreta, sempre com os pés bem assentes."
       ]
     }
   },
@@ -3090,10 +3118,11 @@
     "contentHash": "7446ec1e841fde6e375ec84e048f7709fd324f41436e7c5303c55c4f7a58c5f5",
     "esContrast": "En español 'necesitar' no lleva preposición, en PT 'precisar' lleva DE.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#7 2026-08-30 (informe-cola5-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
-      "sentence": "Vou ___ precisar de poupar dinheiro para viajar.",
+      "sentence": "Vou precisar ___ poupar dinheiro para viajar.",
       "options": [
         "de",
         "a",
@@ -3404,8 +3433,9 @@
       "regular"
     ],
     "contentHash": "8237b53d69158f283c54f7edf73311c6c469ca1973153ab65de3ab10c8e8aa08",
-    "esContrast": "Em pt, futuro simples de 'viajar': viajaremos (não 'viajaremos' como em es).",
+    "esContrast": "El futuro simple de 'viajar' es 'viajaremos', idéntico al español 'viajaremos'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#7 2026-08-30 (informe-cola5-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Nós ___ muito durante as férias de verão.",
@@ -3443,6 +3473,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
     "type": "translation",
     "data": {
       "source": "Vou falar com ela amanhã.",
