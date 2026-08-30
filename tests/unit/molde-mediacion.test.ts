@@ -244,6 +244,21 @@ describe('similitudMolde: lo que NO puede marcar', () => {
 });
 
 describe('buscarClonesMolde: el barrido', () => {
+  // Cicatriz de E2#7: el gate se corrió candidatos-CONTRA-CORPUS y dejó
+  // pasar dos mediaciones del MISMO lote que compartían fuente
+  // (MED-132 y MED-135, las dos sobre `um-poeta-lirico`) — la misma
+  // regla con la que se había obligado a MED-133 a cambiar de fuente.
+  // Un lote se compara también consigo mismo.
+  it('compara los candidatos ENTRE SÍ, no sólo contra el corpus', () => {
+    const a: MedIndexable = { ...MED_132, id: 'CAND-A' };
+    const b: MedIndexable = {
+      ...MED_133, id: 'CAND-B',
+      data: { ...MED_133.data, sourceRef: 'um-poeta-lirico' },
+    };
+    const pares = buscarClonesMolde([a, b], [a, b]);
+    expect(pares.some((p) => p.motivos.includes('fuente-compartida'))).toBe(true);
+  });
+
   it('encuentra el clon dentro de un corpus con ruido y lo ordena por score', () => {
     const corpus = [MED_38, MED_64, MED_96, MED_113];
     const pares = buscarClonesMolde(corpus, [MED_53_V1]);

@@ -125,7 +125,11 @@ async function main() {
   if (!medCand.length) {
     console.log('sin mediaciones entre los candidatos — nada que comparar');
   } else {
-    const clones = buscarClonesMolde(medCorpus, medCand);
+    // Los candidatos se comparan también ENTRE SÍ: un lote puede traer
+    // dos mediaciones clonadas la una de la otra, y compararlas sólo
+    // contra lo publicado las deja pasar (cicatriz del lote 9).
+    const universo = [...medCorpus, ...medCand.filter((c) => !medCorpus.some((x) => x.id === c.id))];
+    const clones = buscarClonesMolde(universo, medCand);
     const vistosM = new Set<string>();
     let n = 0;
     for (const p of clones) {
