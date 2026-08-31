@@ -1,120 +1,147 @@
 [
- {
-  "id": "b11-l1-falsos-amigos-que-doem",
-  "blockId": 11,
-  "name": "Falsos amigos que doem",
-  "objectives": [
-   "Reconocer los falsos amigos de alta frecuencia cuyo sentido portugués difiere del español (esquisito, polvo, oficina, pelo, esperto, constipado)",
-   "Distinguir los pares resolutivos (pó/polvo, cabelo/pelo, escritório/oficina, perito/esperto)",
-   "Desarrollar el reflejo C1 de detenerse cuando el contexto rechina",
-   "Aplicar el criterio en juicios de gramaticalidad con estímulos contradictorios"
-  ],
-  "conceptIds": [
-   "b11-falsos-amigos"
-  ],
-  "vocabKey": [
-   "esquisito",
-   "polvo",
-   "oficina",
-   "pelo",
-   "esperto",
-   "propina",
-   "embaraçada"
-  ],
-  "conceptNotesPath": "b11/l1-falsos-amigos-que-doem.mdx",
-  "exerciseRefs": [
-   "b2c2-gj-l1-03",
-   "b2c2-gj-l2-05",
-   "b2c2-gj-l2-08",
-   "b2c2-gj-l2-16",
-   "b2c2-gj-l3-14",
-   "b2c2-gj-l3-19",
-   "b2c2-gj-l3-20",
-   "b2c2-gj-l4-05",
-   "b2c2-gj-l4-11"
-  ]
- },
- {
-  "id": "b11-l2-regencias-que-traem",
-  "blockId": 11,
-  "name": "Regências que traem",
-  "objectives": [
-   "Dominar las regencias portuguesas que difieren del español (apaixonar-se por, parecer-se com, preocupar-se com, assistir a)",
-   "Usar 'esperar por' y 'dar por' como idiomatismos europeos vivos",
-   "Heredar la preposición del verbo en las relativas (de que / com quem) sin caer en la relativa cortadora",
-   "Distinguir las regencias que coinciden (sonhar com) para no hipercorregir"
-  ],
-  "conceptIds": [
-   "b11-regencias"
-  ],
-  "vocabKey": [
-   "apaixonar-se por",
-   "parecer-se com",
-   "preocupar-se com",
-   "assistir a",
-   "esperar por",
-   "dar por",
-   "com quem"
-  ],
-  "conceptNotesPath": "b11/l2-regencias-que-traem.mdx",
-  "exerciseRefs": [
-   "b2c2-gj-l4-08",
-   "b2c2-gj-l4-14",
-   "b2c2-gj-l4-17",
-   "b2c2-gj-l4-18",
-   "b2c2-gj-l4-20"
-  ]
- },
- {
-  "id": "b11-l3-morfologia-enganosa",
-  "blockId": 11,
-  "name": "Morfología engañosa: la palabra existe, la forma te traiciona",
-  "objectives": [
-   "Usar los comparativos europeos sin hipercorregir: «mais pequeno» convive con «menor»; delante de participio, «mais bem/mais mal»",
-   "Formar y reconocer las combinaciones de clíticos (mo, to, lho) sin desarmarlas",
-   "Distinguir el posesivo predicativo sin artículo («é meu») del identificador con artículo («é o meu»)",
-   "Repartir los tres plurales de -ão (-ões, -ãos, -ães) sin regularizar",
-   "Desconfiar de las formas que existen con otra función (poderes, sede, como)"
-  ],
-  "conceptIds": [
-   "b11-morfologia-enganosa"
-  ],
-  "vocabKey": [
-   "mais pequeno",
-   "mais bem",
-   "mo/to/lho",
-   "é meu",
-   "-ões/-ãos/-ães",
-   "puder",
-   "menor"
-  ],
-  "conceptNotesPath": "b11/l3-morfologia-enganosa.mdx",
-  "exerciseRefs": []
- },
- {
-  "id": "b11-l4-aspecto-e-tempo",
-  "blockId": 11,
-  "name": "Aspecto y tiempo: las formas coinciden, el reparto no",
-  "objectives": [
-   "Usar «estar a + infinitivo» como progresivo y reconocer que «ir + gerúndio» (avance gradual) sí es europeo",
-   "Repartir pretérito perfeito simples y composto por el marcador, no por el español («tenho viajado» = hasta hoy)",
-   "Manejar las perífrasis que el español no tiene: haver de, ficar a, estar para, vir a",
-   "Colocar el clítico en la perífrasis sobre el infinitivo, no sobre el auxiliar («veio a saber-se»)",
-   "Distinguir «acabar de» pasado inmediato (pretérito) del habitual (presente)"
-  ],
-  "conceptIds": [
-   "b11-aspecto-tempo"
-  ],
-  "vocabKey": [
-   "estar a + inf",
-   "acabar de",
-   "costumar",
-   "haver de",
-   "ficar a",
-   "estar para",
-   "vir a"
-  ],
-  "conceptNotesPath": "b11/l4-aspecto-e-tempo.mdx",
-  "exerciseRefs": []
- }
+  {
+    "id": "b11-l1-falsos-amigos-que-doem",
+    "blockId": 11,
+    "name": "Falsos amigos que doem",
+    "objectives": [
+      "Reconocer los falsos amigos de alta frecuencia cuyo sentido portugués difiere del español (esquisito, polvo, oficina, pelo, esperto, constipado)",
+      "Distinguir los pares resolutivos (pó/polvo, cabelo/pelo, escritório/oficina, perito/esperto)",
+      "Desarrollar el reflejo C1 de detenerse cuando el contexto rechina",
+      "Aplicar el criterio en juicios de gramaticalidad con estímulos contradictorios"
+    ],
+    "conceptIds": [
+      "b11-falsos-amigos"
+    ],
+    "vocabKey": [
+      "esquisito",
+      "polvo",
+      "oficina",
+      "pelo",
+      "esperto",
+      "propina",
+      "embaraçada"
+    ],
+    "conceptNotesPath": "b11/l1-falsos-amigos-que-doem.mdx",
+    "exerciseRefs": [
+      "b2c2-gj-l1-03",
+      "b2c2-gj-l2-05",
+      "b2c2-gj-l2-08",
+      "b2c2-gj-l2-16",
+      "b2c2-gj-l3-14",
+      "b2c2-gj-l3-19",
+      "b2c2-gj-l3-20",
+      "b2c2-gj-l4-05",
+      "b2c2-gj-l4-11"
+    ]
+  },
+  {
+    "id": "b11-l2-regencias-que-traem",
+    "blockId": 11,
+    "name": "Regências que traem",
+    "objectives": [
+      "Dominar las regencias portuguesas que difieren del español (apaixonar-se por, parecer-se com, preocupar-se com, assistir a)",
+      "Usar 'esperar por' y 'dar por' como idiomatismos europeos vivos",
+      "Heredar la preposición del verbo en las relativas (de que / com quem) sin caer en la relativa cortadora",
+      "Distinguir las regencias que coinciden (sonhar com) para no hipercorregir"
+    ],
+    "conceptIds": [
+      "b11-regencias"
+    ],
+    "vocabKey": [
+      "apaixonar-se por",
+      "parecer-se com",
+      "preocupar-se com",
+      "assistir a",
+      "esperar por",
+      "dar por",
+      "com quem"
+    ],
+    "conceptNotesPath": "b11/l2-regencias-que-traem.mdx",
+    "exerciseRefs": [
+      "b2c2-gj-l4-08",
+      "b2c2-gj-l4-14",
+      "b2c2-gj-l4-17",
+      "b2c2-gj-l4-18",
+      "b2c2-gj-l4-20"
+    ]
+  },
+  {
+    "id": "b11-l3-morfologia-enganosa",
+    "blockId": 11,
+    "name": "Morfología engañosa: la palabra existe, la forma te traiciona",
+    "objectives": [
+      "Usar los comparativos europeos sin hipercorregir: «mais pequeno» convive con «menor»; delante de participio, «mais bem/mais mal»",
+      "Formar y reconocer las combinaciones de clíticos (mo, to, lho) sin desarmarlas",
+      "Distinguir el posesivo predicativo sin artículo («é meu») del identificador con artículo («é o meu»)",
+      "Repartir los tres plurales de -ão (-ões, -ãos, -ães) sin regularizar",
+      "Desconfiar de las formas que existen con otra función (poderes, sede, como)"
+    ],
+    "conceptIds": [
+      "b11-morfologia-enganosa"
+    ],
+    "vocabKey": [
+      "mais pequeno",
+      "mais bem",
+      "mo/to/lho",
+      "é meu",
+      "-ões/-ãos/-ães",
+      "puder",
+      "menor"
+    ],
+    "conceptNotesPath": "b11/l3-morfologia-enganosa.mdx",
+    "exerciseRefs": []
+  },
+  {
+    "id": "b11-l4-aspecto-e-tempo",
+    "blockId": 11,
+    "name": "Aspecto y tiempo: las formas coinciden, el reparto no",
+    "objectives": [
+      "Usar «estar a + infinitivo» como progresivo y reconocer que «ir + gerúndio» (avance gradual) sí es europeo",
+      "Repartir pretérito perfeito simples y composto por el marcador, no por el español («tenho viajado» = hasta hoy)",
+      "Manejar las perífrasis que el español no tiene: haver de, ficar a, estar para, vir a",
+      "Colocar el clítico en la perífrasis sobre el infinitivo, no sobre el auxiliar («veio a saber-se»)",
+      "Distinguir «acabar de» pasado inmediato (pretérito) del habitual (presente)"
+    ],
+    "conceptIds": [
+      "b11-aspecto-tempo"
+    ],
+    "vocabKey": [
+      "estar a + inf",
+      "acabar de",
+      "costumar",
+      "haver de",
+      "ficar a",
+      "estar para",
+      "vir a"
+    ],
+    "conceptNotesPath": "b11/l4-aspecto-e-tempo.mdx",
+    "exerciseRefs": []
+  },
+  {
+    "id": "b11-l5-eleccion-c1",
+    "blockId": 11,
+    "name": "Elección: infinitivo pessoal, conjuntivo y el reparto de ser/estar",
+    "objectives": [
+      "Elegir entre infinitivo pessoal, conjuntivo e infinitivo simples por el sujeto y la conjunción, no por el oído",
+      "Reconocer que «antes de que» es el español asomando y resolverlo con «antes de + infinitivo» o «antes que + conjuntivo»",
+      "Usar SER con los eventos aunque se diga dónde y cuándo ocurren",
+      "Usar «ficar» para la localización de lo que no se mueve, que el español no tiene",
+      "Separar la cualidad (ser) del estado resultante (estar) cuando el español elige al revés"
+    ],
+    "conceptIds": [
+      "b11-alternancia-infinitivo",
+      "b11-ser-estar-divergente"
+    ],
+    "vocabKey": [
+      "perceberem",
+      "saírem",
+      "esperarmos",
+      "ficar",
+      "tem lugar",
+      "esgotada",
+      "remodelado"
+    ],
+    "conceptNotesPath": "b11/l5-eleccion-c1.mdx",
+    "exerciseRefs": []
+  }
 ]

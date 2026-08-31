@@ -36,15 +36,33 @@ juzgado no sea detectable por una regla superficial distinta de la
 destreza. Cada par declara en `rasgo` qué se juzga: un rasgo que detecte
 ESO es legítimo, cualquier otro es un atajo.
 
+## Nota del autor — un fallo que cazó el dry-run del publicador
+
+La v1 de este lote tenía **tres pares rotos en sus DOS direcciones**, y ni
+el generador ni el preflight los vieron. P-03, P-04 y P-05 llevaban un
+clítico **acusativo** en el hueco y un objeto directo explícito en el
+esqueleto, así que salían frases como «A direção comunicá-lo-á **o
+resultado**»: el clítico y el sintagma duplicados. Lo destapó leer la
+salida del publicador ítem a ítem, que es la regla de «diff semántico
+antes de commitear», no un gate.
+
+Es el límite honesto del método: los pares mínimos garantizan que **el
+BIEN y el MAL sólo difieran en el rasgo juzgado**; no garantizan que el
+esqueleto sea gramatical. Reconstruidos los tres con un antecedente
+explícito en la primera cláusula («O recurso está pendente e…», «O
+presidente já sabe do caso e…», «O programa já está fechado e…»), que
+además arregla un segundo defecto del que nadie se había quejado: el
+clítico acusativo no tenía antecedente ninguno.
+
 ## Los seis pares, antes de barajar
 
 | par | esqueleto | BIEN | MAL | rasgo juzgado |
 |---|---|---|---|---|
 | P-01 | Não **___** a verdade toda enquanto o processo não estiver encerrado. | `lhe direi` | `dir-lhe-ei` | con «não» delante, atractor de próclise, la mesóclise es imposible |
 | P-02 | Ninguém **___** o que se passou naquela reunião de dezembro. | `lhes contará` | `contar-lhes-á` | con «ninguém» sujeto, atractor de próclise, la mesóclise es imposible |
-| P-03 | A comissão nunca **___** sem ouvir primeiro as duas partes. | `o decidirá` | `decidi-lo-á` | con el adverbio «nunca», atractor de próclise, la mesóclise es imposible |
-| P-04 | A direção **___** o resultado assim que a comissão terminar a votação. | `comunicá-lo-á` | `o comunicará` | sin atractor y con el verbo abriendo la oración, la próclise es brasileña |
-| P-05 | O secretariado **___** o programa definitivo na semana que vem. | `enviá-lo-á` | `o enviará` | sin atractor y con el verbo abriendo la oración, la próclise es brasileña |
+| P-03 | O recurso está pendente e a comissão nunca **___** sem ouvir as duas partes. | `o decidirá` | `decidi-lo-á` | con el adverbio «nunca», atractor de próclise, la mesóclise es imposible |
+| P-04 | O presidente já sabe do caso e a direção **___** do resultado esta semana. | `informá-lo-á` | `o informará` | sin atractor y con el verbo abriendo la oración, la próclise es brasileña |
+| P-05 | O programa já está fechado e o secretariado **___** aos sócios amanhã. | `enviá-lo-á` | `o enviará` | sin atractor y con el verbo abriendo la oración, la próclise es brasileña |
 | P-06 | Quando o prazo terminar, **___** os documentos por correio registado. | `enviar-te-ei` | `te enviarei` | tras una subordinada antepuesta y coma, el clítico no puede abrir la oración principal |
 
 ---
@@ -81,15 +99,15 @@ Solape con los 10 lotes publicados (el objetivo es el AZAR, no el mínimo — la
 | rasgo | acierto | dirección | presente en | p |
 |---|---:|---|---:|---:|
 | posición par en el lote (alternancia mecánica) | **8/12** (67 %) | presente⇒MAL | 6 | 0.194 |
+| más corta que la mediana (palabras) | **7/12** (58 %) | presente⇒MAL | 5 | 0.387 |
+| más corta que la mediana (caracteres) | **7/12** (58 %) | presente⇒MAL | 5 | 0.387 |
 | arranca con adjunto o subordinada, no con el sujeto o el verbo | **6/12** (50 %) | presente⇒BIEN | 2 | 0.613 |
-| más corta que la mediana (palabras) | **6/12** (50 %) | presente⇒BIEN | 4 | 0.613 |
-| más corta que la mediana (caracteres) | **6/12** (50 %) | presente⇒BIEN | 6 | 0.613 |
 | lleva una coma (frase con coleta) | **6/12** (50 %) | presente⇒BIEN | 2 | 0.613 |
-| lleva marcador temporal | **6/12** (50 %) | presente⇒BIEN | 4 | 0.613 |
+| lleva marcador temporal | **6/12** (50 %) | presente⇒BIEN | 6 | 0.613 |
 | lleva una palabra visiblemente española | **6/12** (50 %) | presente⇒BIEN | 2 | 0.613 |
 | lleva verbo en primera persona | **6/12** (50 %) | presente⇒BIEN | 0 | 0.613 |
 | lleva clítico con guion (ênclise/mesóclise) | **6/12** (50 %) | presente⇒BIEN | 6 | 0.613 |
-| lleva preposición contraída (do/da/no/na/ao/à/pelo) | **6/12** (50 %) | presente⇒BIEN | 2 | 0.613 |
+| lleva preposición contraída (do/da/no/na/ao/à/pelo) | **6/12** (50 %) | presente⇒BIEN | 4 | 0.613 |
 | lleva dos o más oraciones (punto o punto y coma interior) | **6/12** (50 %) | presente⇒BIEN | 0 | 0.613 |
 
 ## Virginidad — 12 candidatos (+12 sondas de núcleo) contra 2431 publicados + entre sí (umbral 0.34)
@@ -123,8 +141,8 @@ Ninguna.
 
 ### GJ-03 · **BIEN**
 **par:** `P-05`
-**sentence:** «O secretariado enviá-lo-á o programa definitivo na semana que vem.»
-**explicación:** Mismo caso que el anterior con otro verbo, para que se vea que la regla no depende del léxico: «enviará» + «o» da «enviá-lo-á», con caída de la -r y el clítico en -l-.
+**sentence:** «O programa já está fechado e o secretariado enviá-lo-á aos sócios amanhã.»
+**explicación:** Mismo caso que el anterior con otro verbo: «enviará» + «o» (= «o programa») da «enviá-lo-á», con caída de la -r y el clítico en -l-. Se repite el patrón con otro léxico para que se vea que la regla no depende del verbo.
 
 ### GJ-04 · **MAL**
 **par:** `P-02`
@@ -134,19 +152,19 @@ Ninguna.
 
 ### GJ-05 · **MAL**
 **par:** `P-04`
-**sentence:** «A direção o comunicará o resultado assim que a comissão terminar a votação.»
-**repair:** «A direção comunicá-lo-á o resultado assim que a comissão terminar a votação.»
-**explicación:** La próclise sin atractor es la colocación brasileña. En portugués europeo, con el sujeto delante y nada más, el clítico no se antepone: la forma es «comunicá-lo-á» (o, en registro llano, otra construcción entera). Es el calco que sobrevive a todo porque se entiende igual.
+**sentence:** «O presidente já sabe do caso e a direção o informará do resultado esta semana.»
+**repair:** «O presidente já sabe do caso e a direção informá-lo-á do resultado esta semana.»
+**explicación:** La próclise sin atractor es la colocación brasileña. En portugués europeo, con el sujeto delante y nada más, el clítico no se antepone: la forma es «informá-lo-á». Es el calco que sobrevive a todo porque se entiende igual.
 
 ### GJ-06 · **BIEN**
 **par:** `P-03`
-**sentence:** «A comissão nunca o decidirá sem ouvir primeiro as duas partes.»
+**sentence:** «O recurso está pendente e a comissão nunca o decidirá sem ouvir as duas partes.»
 **explicación:** Los adverbios de negación y de frecuencia negativa —«nunca», «jamais», «raramente»— son atractores. Con ellos el futuro no se parte: «nunca o decidirá».
 
 ### GJ-07 · **MAL**
 **par:** `P-05`
-**sentence:** «O secretariado o enviará o programa definitivo na semana que vem.»
-**repair:** «O secretariado enviá-lo-á o programa definitivo na semana que vem.»
+**sentence:** «O programa já está fechado e o secretariado o enviará aos sócios amanhã.»
+**repair:** «O programa já está fechado e o secretariado enviá-lo-á aos sócios amanhã.»
 **explicación:** Sin atractor delante, «o enviará» es brasileño. La marca del portugués europeo culto aquí es partir el futuro, y es justo lo que un hispanohablante no produce nunca solo, porque el español antepone siempre.
 
 ### GJ-08 · **MAL**
@@ -163,13 +181,13 @@ Ninguna.
 
 ### GJ-10 · **BIEN**
 **par:** `P-04`
-**sentence:** «A direção comunicá-lo-á o resultado assim que a comissão terminar a votação.»
-**explicación:** Sin nada que atraiga el clítico, el futuro se parte y el pronombre se mete dentro: «comunicá-lo-á». En la norma europea escrita ésta es la colocación por defecto, y a C2 es una elección de registro — culta, no obligatoria.
+**sentence:** «O presidente já sabe do caso e a direção informá-lo-á do resultado esta semana.»
+**explicación:** Sin nada que atraiga el clítico —«e» coordina, no atrae—, el futuro se parte y el pronombre se mete dentro: «informá-lo-á», con «o» = «o presidente». En la norma europea escrita ésta es la colocación por defecto, y a C2 es una elección de registro — culta, no obligatoria.
 
 ### GJ-11 · **MAL**
 **par:** `P-03`
-**sentence:** «A comissão nunca decidi-lo-á sem ouvir primeiro as duas partes.»
-**repair:** «A comissão nunca o decidirá sem ouvir primeiro as duas partes.»
+**sentence:** «O recurso está pendente e a comissão nunca decidi-lo-á sem ouvir as duas partes.»
+**repair:** «O recurso está pendente e a comissão nunca o decidirá sem ouvir as duas partes.»
 **explicación:** La mesóclise pide que el verbo no tenga atractor a su izquierda, y «nunca» lo es. Nótese que la forma «decidi-lo-á» está bien construida —la -r cae y el clítico toma la -l-—: lo que falla no es la morfología sino el sitio.
 
 ### GJ-12 · **BIEN**

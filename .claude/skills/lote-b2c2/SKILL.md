@@ -275,6 +275,19 @@ todavía no se le ha ocurrido a nadie. Medido en el lote 12: los once
 rasgos de texto dan **6/12 clavado**, incluido «lleva clítico con guion»,
 que está presente en 6 ítems y no predice nada.
 
+**Y el límite que el primer lote por pares pagó a la primera: los pares
+garantizan que el BIEN y el MAL sólo difieran en el rasgo juzgado; NO
+garantizan que el ESQUELETO sea gramatical.** Tres de los seis pares del
+lote 12 salieron rotos en sus DOS direcciones — el hueco llevaba un
+clítico acusativo y el esqueleto ya traía el objeto directo, así que el
+BIEN decía «A direção comunicá-lo-á **o resultado**», con el objeto
+duplicado. Ni `verificarPar()` ni el preflight lo vieron: lo cazó leer la
+salida del publicador ítem a ítem, que es la regla del **diff semántico
+antes de commitear**. Con un esqueleto compartido, un solo descuido se
+multiplica por dos y se ve la mitad de bien, porque los dos ítems
+comparten el defecto y ninguno hace de control del otro. Antes de dar un
+lote de pares por bueno: lee las N frases ENSAMBLADAS, no los pares.
+
 Lo que los pares NO resuelven, y por eso sigue habiendo round: que el
 veredicto sea inequívoco, que el contexto determine la respuesta, y que
 el rasgo juzgado no sea detectable por una regla superficial distinta de

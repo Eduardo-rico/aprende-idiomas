@@ -66,7 +66,7 @@ export const PARES: ParMinimo[] = [
   {
     id: 'P-03', concepto: CONCEPTO,
     rasgo: 'con el adverbio «nunca», atractor de próclise, la mesóclise es imposible',
-    esqueleto: 'A comissão nunca {} sem ouvir primeiro as duas partes.',
+    esqueleto: 'O recurso está pendente e a comissão nunca {} sem ouvir as duas partes.',
     bien: 'o decidirá', mal: 'decidi-lo-á',
     explicacionBien:
       'Los adverbios de negación y de frecuencia negativa —«nunca», «jamais», ' +
@@ -82,28 +82,30 @@ export const PARES: ParMinimo[] = [
   {
     id: 'P-04', concepto: CONCEPTO,
     rasgo: 'sin atractor y con el verbo abriendo la oración, la próclise es brasileña',
-    esqueleto: 'A direção {} o resultado assim que a comissão terminar a votação.',
-    bien: 'comunicá-lo-á', mal: 'o comunicará',
+    esqueleto: 'O presidente já sabe do caso e a direção {} do resultado esta semana.',
+    bien: 'informá-lo-á', mal: 'o informará',
     explicacionBien:
-      'Sin nada que atraiga el clítico, el futuro se parte y el pronombre se ' +
-      'mete dentro: «comunicá-lo-á». En la norma europea escrita ésta es la ' +
+      'Sin nada que atraiga el clítico —«e» coordina, no atrae—, el futuro se ' +
+      'parte y el pronombre se mete dentro: «informá-lo-á», con «o» = «o ' +
+      'presidente». En la norma europea escrita ésta es la ' +
       'colocación por defecto, y a C2 es una elección de registro — culta, no ' +
       'obligatoria.',
     explicacionMal:
       'La próclise sin atractor es la colocación brasileña. En portugués ' +
       'europeo, con el sujeto delante y nada más, el clítico no se antepone: ' +
-      'la forma es «comunicá-lo-á» (o, en registro llano, otra construcción ' +
-      'entera). Es el calco que sobrevive a todo porque se entiende igual.',
+      'la forma es «informá-lo-á». Es el calco que sobrevive a todo porque se ' +
+      'entiende igual.',
   },
   {
     id: 'P-05', concepto: CONCEPTO,
     rasgo: 'sin atractor y con el verbo abriendo la oración, la próclise es brasileña',
-    esqueleto: 'O secretariado {} o programa definitivo na semana que vem.',
+    esqueleto: 'O programa já está fechado e o secretariado {} aos sócios amanhã.',
     bien: 'enviá-lo-á', mal: 'o enviará',
     explicacionBien:
-      'Mismo caso que el anterior con otro verbo, para que se vea que la regla ' +
-      'no depende del léxico: «enviará» + «o» da «enviá-lo-á», con caída de la ' +
-      '-r y el clítico en -l-.',
+      'Mismo caso que el anterior con otro verbo: «enviará» + «o» (= «o ' +
+      'programa») da «enviá-lo-á», con caída de la -r y el clítico en -l-. Se ' +
+      'repite el patrón con otro léxico para que se vea que la regla no ' +
+      'depende del verbo.',
     explicacionMal:
       'Sin atractor delante, «o enviará» es brasileño. La marca del portugués ' +
       'europeo culto aquí es partir el futuro, y es justo lo que un ' +
