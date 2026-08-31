@@ -691,11 +691,21 @@ construcción, a mano**, y eso hay que escribirlo en el procedimiento del lote 1
 
 > «Consecuencia declarada: `b11-aspecto-tempo` se queda a **uno** del piso.»
 
-No. Se queda **a cinco** (§3): 3 publicados + 3 ítems que realmente enseñan el
-punto (GJ-03, GJ-05, GJ-06; 4 si se cuenta GJ-08, que es más `b7-gerundio`) = **6
-de 12**. Y de esos, GJ-05, GJ-06 y GJ-08 refinan puntos ya publicados
-(`b2c2-gj-l3-03`, `b2c2-gj-l9-07`/`b7-ep-05`, `10c85d3c`): en ítems **nuevos** de
-verdad, el punto suma **uno**, GJ-03.
+No, por dos motivos que van en direcciones opuestas y ninguno de los cuales es
+«uno».
+
+**Contando lo que los ítems del lote enseñan de verdad, se queda a CINCO**
+(§3): 3 etiquetados + 3 que realmente enseñan el punto (GJ-03, GJ-05, GJ-06; 4
+si se cuenta GJ-08, que es más `b7-gerundio`) = **6 de 12**. Y de esos tres,
+GJ-05 y GJ-06 refinan puntos ya publicados (`b2c2-gj-l3-03`,
+`b2c2-gj-l9-07`/`b7-ep-05`): en ítems **nuevos** de verdad, el punto suma **uno**,
+GJ-03.
+
+**Y contando lo que el corpus ya tiene, puede que no falte nada**: hay once
+juicios publicados de aspecto/tiempo y sólo tres lo declaran (§3). Las dos cosas
+son ciertas a la vez, y juntas dicen lo único que importa: **con las etiquetas de
+hoy, la cifra «11 de 12» no significa nada** — ni la que el doc escribe ni la que
+yo escribo. Lo que hay que publicar no es un número, es la manera de obtenerlo.
 
 **¿Merece la pena publicar así? Sí, con dos condiciones.**
 
@@ -750,9 +760,13 @@ lote no tiene y que no se arregla con etiquetas.
   que la regla se lea como «en portugués europeo nunca hay gerundio», que así
   enunciada es falsa. Hedge con verdad.
 - **Las tres lápidas están bien argumentadas y con sus cifras** (0,674 / 0,515 /
-  la atestación de Camilo). El instinto de no aflojar un gate para que pase el
-  propio lote —dicho explícitamente en la lápida de GJ-07— es exactamente el
-  criterio correcto.
+  la atestación de Camilo), y **la decisión aguanta una auditoría independiente**:
+  escribí siete reposiciones más y murieron las siete (§5). El instinto de no
+  aflojar un gate para que pase el propio lote —dicho explícitamente en la lápida
+  de GJ-07— es exactamente el criterio correcto, y es lo mejor del documento.
+- **El banco explícito para el lote siguiente** («Tenho dormido mal estas últimas
+  semanas…», con el motivo de por qué no entra hoy: dejaría el molde en
+  desequilibrio 3) es la forma correcta de no perder trabajo entre rondas.
 - **El molde pasa entero**, incluido el criterio nuevo de solape con los lotes
   publicados que apareció esta misma tarde (l8 en el filo, 3,0 de 3,0).
 

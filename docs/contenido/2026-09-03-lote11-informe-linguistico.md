@@ -278,8 +278,9 @@ literario?»—. **No lo está, y la autoridad es explícita.**
 - **Corpus: 0 casos** de `antes de que` en 4,27 M de caracteres. Los dos hits
   del primer barrido eran cortes de palabra («dardej-antes de que…»,
   «vacill-antes de que…»), leídos y descartados. Tampoco hay `depois de que`.
-  Enfrente: **19** «antes que» + conjuntivo («antes que **seja** bello» — Eça,
-  *A Cidade e as Serras* c09; «antes que a borrasca **rebentasse**») y **67**
+  Enfrente: **19** «antes que» + conjuntivo («Trinta annos, antes que **seja**
+  bello!» — Eça, *A Cidade e as Serras* c09 §148; «antes que a borrasca
+  **rebentasse** de chofre» — Teófilo Braga, *As azas brancas* §74) y **67**
   «antes de» + infinitivo.
 - **Ciberdúvidas, *«Antes que» vs. «antes de»* (Carlos Rocha, 9 de junho de
   2006):** «**Não é, pois, possível escrever "antes de que"**.»
@@ -415,11 +416,11 @@ Correcto: estado resultante con ESTAR y pretérito perfeito por periodo cerrado.
 Que coincida con el español es una virtud declarada, y la comparto.
 
 *Nit:* el corpus prefiere de largo **«toda a noite» (29)** a **«a noite toda»
-(2)**, pero las dos están atestiguadas y las dos son europeas — «Não podia
-accusal-o… a noite toda» (Teófilo Braga, *A adega de Funck* §137); «O vento da
-noite refrescava… a noite toda» (íd., *Beijos por facadas* §19). No toco el
-ítem: el orden pospuesto es el que enfatiza la duración, que es lo que la frase
-quiere.
+(2)**, pero las dos están atestiguadas y las dos son europeas — «assim
+permaneceu **a noite toda**, até que ao outro dia deram com elle regelado»
+(Teófilo Braga, *A adega de Funck* §137); «orou **a noite toda** ante o retabulo
+de Santa Maria d'Atocha» (íd., *Beijos por facadas* §19). No toco el ítem: el
+orden pospuesto es el que enfatiza la duración, que es lo que la frase quiere.
 
 ## GJ-17 · «Estou português…» → **CORRIGE-ASÍ** (bloqueante)
 

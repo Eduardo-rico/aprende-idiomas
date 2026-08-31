@@ -288,6 +288,17 @@ multiplica por dos y se ve la mitad de bien, porque los dos ítems
 comparten el defecto y ninguno hace de control del otro. Antes de dar un
 lote de pares por bueno: lee las N frases ENSAMBLADAS, no los pares.
 
+**Y el atajo que los pares NO neutralizan, porque mira DENTRO del hueco:
+la GLOSA COGNADA.** Su garantía cubre todo rasgo que no mira el tramo
+juzgado; la glosa sí lo mira. Si el hueco es «é»/«está» y el español
+elige igual que el portugués, traducir palabra por palabra y juzgar con
+intuición española resuelve el par. **La única defensa es de contenido:
+que el punto sea de verdad divergente del español.** Si no lo es, ese
+punto no se puede examinar con juicios binarios — hay que cambiar de
+formato, no de frases. Y si el rasgo juzgado produce glosas rotas por sí
+mismo (la mesóclise no existe en español), hay que **repartirlo mitad y
+mitad** entre BIEN y MAL, igual que el guion.
+
 Lo que los pares NO resuelven, y por eso sigue habiendo round: que el
 veredicto sea inequívoco, que el contexto determine la respuesta, y que
 el rasgo juzgado no sea detectable por una regla superficial distinta de
@@ -341,6 +352,35 @@ igual contra todo el corpus publicado.
   sobre los MAL.** El lote 5 presumió de «1/20» comparándolo con el
   «19/20» del lote 3: manzanas y peras, 10 puntos de mejora inflada. El
   acierto real era 11/20.
+- **LA GLOSA COGNADA es el rasgo 12 y ahora BLOQUEA.** La skill la
+  nombraba desde el lote 3 y `atajos.ts` no la tenía, porque es el único
+  de los tres atajos históricos que **no sale de un regex**: se quedó
+  fuera por ser el que exige juicio, que es exactamente la razón por la
+  que hacía falta. Medida por el round del lote 11: **20/24, p=0,0008**
+  en el lote entero y **12/12, p=0,0002** en su sección de ser/estar —
+  un hispanohablante que no sabe portugués resolvía media batería
+  traduciendo. No se calcula: **se declara**, con una línea
+  `**glosa-es:** «…» · español CORRECTO|INCORRECTO` por ítem, y el
+  preflight bloquea si falta. Sin declararla el campo queda `undefined`,
+  el rasgo sale en el azar y pasa en silencio.
+- **Un detector de atajos con falsos positivos es peor que no tenerlo.**
+  El rasgo «palabra visiblemente española» traía en su lista `desde`,
+  `nunca` y `aje\b` — portugués corriente los tres («Está a chover
+  **desde** ontem» está publicado; `aje\b` casa con «o traje»). No medía
+  hispanismos: medía la palabra «desde», y que sus tres apariciones
+  cayeran del mismo lado le inflaba la cifra. Gasta atención y contamina
+  su propia cifra para el día que haya un hispanismo de verdad.
+- **El gate de virginidad indexa TAMBIÉN los `<Example>` de las
+  lecciones.** Abría un solo directorio, `blocks/`, y nunca `mdx/`:
+  cuatro de las ocho frases de una sección del lote 10 eran ejemplos
+  literales de la lección que ese mismo lote sirve, con una coleta
+  detrás, **y las cuatro eran BIEN**. Es el mecanismo de la coleta que
+  diluía el IDF un piso más abajo: allí el solape se diluía, aquí la
+  fuente ni siquiera estaba indexada.
+- **El sello de vigencia cubre los TRES ficheros que deciden la salida**
+  (`atajos.ts`, `pares-minimos.ts`, `preflight-lote.ts`), no sólo la
+  batería: un revisor cazó que el preflight había cambiado después de
+  pegarse su salida y el sello seguía dando luz verde.
 - **Hay que probar más de un atajo.** Los tres conocidos, con su cifra
   del lote 5 v2 tras corregirlos: palabra española visible (11/20),
   **marca de día concreto (15/20 → 9/20)**, glosa cognada que da español
