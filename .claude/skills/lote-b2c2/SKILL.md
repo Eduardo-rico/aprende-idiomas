@@ -42,6 +42,20 @@ skill.
      que es el mismo ejercicio. Reenseñar un concepto de un bloque
      anterior no es delito —refinar en C1 un punto de B1 es legítimo—
      pero tiene que salir declarado en el doc, no por descuido.
+   - **Un gate nuevo se prueba TAMBIÉN dentro del conjunto candidato.**
+     El eje de molde nació en E2#7 comparando candidatos contra el
+     corpus publicado, y por eso fue ciego a dos mediaciones del MISMO
+     lote que compartían fuente (MED-132 ↔ MED-135) — la misma regla
+     con la que ese lote había obligado a otra a cambiar de fuente. Lo
+     cazó un revisor a mano. Un lote se compara consigo mismo.
+   - **Un barrido mecánico ENUMERA y TRIAJA todas las ocurrencias.**
+     El de «-ámos» (E2#7) filtró por «contexto de pasado», y como la
+     mayoría de ítems no lleva marcador temporal explícito, cazó 3 de
+     los 10 casos reales: el revisor humano encontró los otros 7. Un
+     filtro por un rasgo que la mayoría de la población no tiene no es
+     un barrido, es una muestra disfrazada de barrido. Enumera el
+     universo (las 433 formas), triaja con criterios declarados, y
+     declara cuántas revisaste y cuántas cayeron.
    - **El gate NO protege a las MEDIACIONES.** Medido en el lote 9 por
      los dos revisores por separado: **0 pares para las doce MED** al
      umbral del código. No es que estuvieran limpias — dos eran clones
@@ -70,20 +84,27 @@ skill.
    Priberam, corpus de la propia biblioteca), al #2 el pedagógico
    (diseño del lote, patrones explotables, fugas, nivel real).
    Pídeles cotejar fuentes contra los JSON y responder tus notas.
-4. **Convergencia**: lo convergente se aplica; lo de un solo revisor se
+4. **REGLA DE CORTE (decisión de Edu, E2#8): un ítem que no pasa el
+   round en TRES rondas se mata o se degrada a un lote futuro con su
+   diagnóstico escrito. El lote no se retiene por él, y no hay ronda
+   5.** El lote 9 consumió tres sesiones enteras por tres ítems; a
+   partir de ahí deja de ser rigor y es un bucle. Publicar el lote sin
+   ellos es la decisión correcta: lo que muere queda documentado y
+   puede renacer verificado en otro lote.
+5. **Convergencia**: lo convergente se aplica; lo de un solo revisor se
    aplica SOLO si es verificable de plano (una próclise sin clítico, un
    fichero que no existe) — si no, queda anotado para el siguiente
    lote. Conflicto directo entre revisores → gana el refuerzo
    estrictamente superior si existe; si no, queda el original, anotado.
-5. **Publicar por script** (scratchpad .mts): construye los ítems,
+6. **Publicar por script** (scratchpad .mts): construye los ítems,
    `contentHash` de `scripts/lib/staged-validate`, sello
    `variantVerificacion` con fecha y doc, y VALIDA ANTES de escribir
    (el lote 3 escribió y validó después: un modelo salió 61/60).
-6. **Gates**: barrido de `revisarEjercicio` + `revisarRegistro` sobre
+7. **Gates**: barrido de `revisarEjercicio` + `revisarRegistro` sobre
    los ítems nuevos (hallazgos didácticos esperados se declaran),
    `npm run verify:content` (los 4 errores de audio en translations son
    preexistentes), suite completa, y recuentos de modelo por script.
-7. **Doc a estado PUBLICADO** con la tabla de resultado (qué se retiró,
+8. **Doc a estado PUBLICADO** con la tabla de resultado (qué se retiró,
    qué convergió, qué quedó en conflicto) — el borrador se conserva
    debajo como historia. Commit por hito, push.
 

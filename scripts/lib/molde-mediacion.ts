@@ -168,7 +168,12 @@ export function similitudMolde(a: MedIndexable, b: MedIndexable): ResultadoMolde
   // otro asunto) o la rúbrica entera distinta (mismo texto, otra tarea),
   // y un único umbral sobre la media deja pasar los dos casos.
   const clonDeRubrica = rubrica >= 0.5 && tupla >= 0.8;   // 53v1 ↔ med-38
-  const clonDeEsqueleto = esqueleto >= 0.25 && tupla >= 0.6; // 108v1 ↔ med-64
+  // tupla ≥ 0.8, no 0.6: con 0.6 el eje marcaba pares sin ninguna
+  // relación real (una síntesis de dos cuentos ↔ una invitación de
+  // boda, sólo por ser los dos pt→pt y largos). El fixture real
+  // 108v1 ↔ med-64 tiene tupla 0.8, así que la regla se estrecha sin
+  // perderlo — calibrado con los datos del lote 9, no a ojo.
+  const clonDeEsqueleto = esqueleto >= 0.25 && tupla >= 0.8; // 108v1 ↔ med-64
   if (clonDeRubrica) motivos.push('clon-de-rubrica');
   if (clonDeEsqueleto) motivos.push('clon-de-esqueleto');
 
