@@ -130,6 +130,59 @@ cifra ~430 de mediación se confirma o corrige aquí.
   archivos de la era no referenciada) — se hace cuando el estado lleve
   unas sesiones estable, no el mismo día.
 
+## Paso 0 — RE-EJECUTADO 2026-08-30 (E2#8), ahora por script repetible
+
+`npx tsx scripts/recuento-paso0.ts` — el cálculo que en E1 se hizo a
+mano y por eso no se podía repetir. Salida pegada:
+
+```
+| nivel |    hay |   pide | motor* |   meta |  falta |    %   |
+|-------|--------|--------|--------|--------|--------|--------|
+| A1    |    258 |    900 |      0 |    900 |    642 |    29% |
+| A2    |    459 |   1100 |      0 |   1100 |    641 |    42% |
+| B1    |    775 |   1400 |    200 |   1200 |    425 |    65% |
+| B2    |    807 |   1600 |    300 |   1300 |    493 |    62% |
+| C1    |     40 |   1200 |    200 |   1000 |    960 |     4% |
+| C2    |      0 |    800 |      0 |    800 |    800 |     0% |
+| Σ     |   2339 |   7000 |    700 |   6300 |   3961 |    37% |
+
+Mediación:
+  mediación-TAREAS   139 / 230   (60 %)   ← va bien
+  mediación-ÍTEMS      0 / 1350  ( 0 %)   ← el bucket grande, intacto
+  total mediación    139 / 1580  ( 9 %)
+```
+
+**Burn-down real contra E1** (2026-08-11 → 2026-08-30, siete sesiones
+E2): el corpus pasó de 2.177 a **2.339** ejercicios. Son **162 en
+siete sesiones**, ~23 por sesión — y eso incluye la sesión de hoy, que
+con 65 (21 artesanales + 44 industriales) es la más productiva de la
+serie. El faltante son **3.961**.
+
+**El hallazgo que cambia la decisión, y que la línea industrial no
+estaba atacando**: de los 3.961 que faltan, **1.350 son
+mediación-ÍTEM** — el 34 % del total — y están a CERO. Los avisos que
+produce la línea B son mediación-TAREA (rúbrica de 4-5 casillas,
+respuesta libre de 25-65 palabras): por eso el bucket de tareas va al
+60 % y el de ítems no se ha movido nunca. Son productos distintos: el
+ítem de mediación del currículo es corto y de respuesta acotada
+(relay de una frase, fidelidad de contenido, cloze de mediación), y
+cuesta una fracción de lo que cuesta una tarea.
+
+**Las tres palancas, con su aritmética** (para decisión de Edu, no
+del ejecutor):
+1. **Generalizar la línea industrial a familias de ÍTEM**, no sólo de
+   tarea: una plantilla por tipo (cloze de mediación, fidelidad de
+   contenido, relay corto). Es lo que ataca los 1.350 y lo que más
+   mueve la aguja; el protocolo (matriz, rúbrica derivada, muestreo
+   con freno, gate de molde) ya está probado y se hereda entero.
+2. **Subir el tamaño de lote**, que hoy quedó demostrado que se puede:
+   44 avisos en una sesión con freno pasado. Pero a 65/sesión el
+   faltante sigue pidiendo ~60 sesiones.
+3. **Recortar la meta**. Los 6.300 salen del currículo que fijó Edu, no
+   de una ley externa: C2 (800, a cero) y la mitad de C1 (960) son
+   dos tercios del faltante de los niveles altos, y son justamente los
+   que menos alumno tienen delante.
+
 ## E2 · Corpus a escala — DOS líneas de producción (~18-22 sesiones)
 
 El Paso 0 obliga a partir E2 en dos líneas con economías distintas:
