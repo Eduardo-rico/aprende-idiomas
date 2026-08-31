@@ -1,10 +1,45 @@
-# Lote industrial de avisos #3 (plantilla v1.3) — **NO PUBLICADO** (publica el script)
+# Lote industrial de avisos #3 (plantilla v1.3) — **PUBLICADO 2026-08-31, tras FRENO y DOS RONDAS**
 
-Sesión E2#8, 2026-08-30. **Primer lote escalado: 44 relays**
+Sesión E2#8, 2026-08-30/31. **Primer lote escalado: 44 relays**
 (`b2c2-med-141…184`), ancla `b10-l3-avisos-e-recados` · concepts
 `[b10-relay-avisos]`. Casi el doble que los dos anteriores (24), con el
 MISMO protocolo: matriz género×dato, rúbrica derivada por
 construcción, plantilla-id en tags, muestreo 10 % con FRENO (>2 %).
+
+## Resultado: el escalado salió mal, y el freno hizo su trabajo
+
+**Muestreo** (145, 155, 165, 175, 179): **2 errores reales de 5** ⇒ FRENO.
+**Ronda 1**, tres revisores adversariales en paralelo que no se veían
+entre sí, los 44 a mano: **20 ERROR · 12 DUDA · 12 OK = 45 % de error**,
+ninguno para matar, 42 correcciones aplicadas.
+**Ronda 2**, ojos frescos verificando las 30 correcciones: **28 PASA · 2
+SIGUE_ROTO · 0 NUEVO_FALLO**, 3 correcciones más. Publicado con 44/44.
+
+La comparación que importa, toda medida por revisión completa:
+
+| lote | tamaño | muestreo | freno | error real |
+|---|---:|---|---|---:|
+| industrial 1 | 24 | 1/3 | SÍ | **4/24 = 17 %** |
+| industrial 2 | 24 | 0/3 | no | *sin medir* |
+| industrial 3 | **44** | 2/5 | SÍ | **20/44 = 45 %** |
+
+**La clase dominante no fue de lengua**: 12 de los 20 errores son
+trasvase roto rúbrica↔gold — la casilla nombra un dato que la respuesta
+modelo no dice, o exige uno que la fuente no da. Es el fallo propio de
+escribir 44 rúbricas y 44 golds a la vez: se separan. Los **modificadores
+nuevos quedan absueltos** (`contradictorio` y `parcial` pasaron muestreo y
+revisión), así que el sospechoso que queda es el tamaño.
+
+**Nota de calibración, medida y NO actuada**: el eje `clon-de-esqueleto`
+del gate de molde marca 29 pares que tocan este lote (5 internos, 24
+contra lo publicado), todos entre 0,33 y 0,39 — por debajo del umbral
+0,6, y disparados sólo por la regla combinada esqueleto ≥0,25 + tupla
+≥0,8. Triados los 5 internos: los cinco son **ruido de familia**, no
+clones (un móvil reparado frente a un niño perdido; un gimnasio frente a
+un paquete; contadores frente a un cerrajero). La línea industrial tiene
+molde por diseño y hace saltar esa regla de forma sistemática. Se deja
+anotado con los números; **no se recalibra a ojo después de ver los
+resultados**, que es una cicatriz ya pagada — pide ejemplos etiquetados.
 
 ## Por qué se puede escalar ahora, y qué hubo que ampliar antes
 
@@ -105,9 +140,9 @@ nuevos, ninguno en el registro acumulado.
 
 ### MED-141 · portal-infra · pt→es · simple
 **sourceText:**
-> «Limpeza dos depósitos de água: terça-feira, dia 7, das 9h às 14h. Não
-> haverá água nas torneiras durante esse período. Recomenda-se encher
-> garrafões na véspera.»
+> «Limpeza dos depósitos de água: terça-feira, dia 7, das 9h às 14h.
+> Não haverá água nas torneiras durante esse período. Recomenda-se
+> encher garrafões na véspera.»
 **audience:** «tu compañera de piso española»
 **instructionsEs:** «El aviso está en el portal. Cuéntaselo.»
 **wordRange:** 25–55 · **register:** informal
@@ -119,16 +154,16 @@ nuevos, ninguno en el registro acumulado.
    55 palabras?
 
 **modelAnswer**:
-> El martes 7, de nueve a dos, limpian los depósitos y nos quedamos sin
-> agua en los grifos. Conviene que llenemos garrafas de agua el día antes —
-> yo me encargo si quieres.
+> El martes 7, de nueve a dos, limpian los depósitos y nos quedamos
+> sin agua en los grifos. Conviene que llenemos garrafas de agua el
+> día antes — yo me encargo si quieres.
 
 ### MED-142 · portal-infra · pt→es · condicional
 **sourceText:**
-> «Substituição dos contadores de eletricidade na quinta-feira, dia 16.
-> O técnico passará por todas as frações. Caso não possa estar presente,
-> deixe a chave na portaria até às 8h desse dia; sem acesso, a
-> substituição fica adiada para dezembro.»
+> «Substituição dos contadores de eletricidade na quinta-feira, dia
+> 16. O técnico passará por todas as frações. Caso não possa estar
+> presente, deixe a chave na portaria até às 8h desse dia; sem acesso,
+> a substituição fica adiada para dezembro.»
 **audience:** «tu compañero de piso español, que ese día trabaja fuera»
 **instructionsEs:** «El aviso está en el tablón. Cuéntaselo — a él le
 toca decidir.»
@@ -146,15 +181,15 @@ toca decidir.»
 **modelAnswer**:
 > El jueves 16 vienen a cambiar los contadores de la luz en todos los
 > pisos. Como tú trabajas fuera, tendrías que dejar la llave en
-> portería como muy tarde a las ocho de la mañana de ese día. Si no entran, no
-> te lo cambian hasta diciembre.
+> portería como muy tarde a las ocho de la mañana de ese día. Si no
+> entran, no te lo cambian hasta diciembre.
 
 ### MED-143 · portal-infra · pt→es · señuelo
 **sourceText:**
-> «Desratização preventiva [processo interno DZ-4471]: quarta-feira, dia
-> 22, das 10h às 13h, nas caves e zonas comuns. Pede-se que retirem
-> sacos de lixo e alimentos para animais das garagens. As frações
-> habitadas não são intervencionadas.»
+> «Desratização preventiva [processo interno DZ-4471]: quarta-feira,
+> dia 22, das 10h às 13h, nas caves e zonas comuns. Pede-se que
+> retirem sacos de lixo e alimentos para animais das garagens. As
+> frações habitadas não são intervencionadas.»
 **audience:** «tu compañera de piso española, que guarda el pienso del
 gato en el trastero»
 **instructionsEs:** «El aviso está en el portal. Cuéntaselo — lo que
@@ -172,15 +207,14 @@ importa es qué tiene que quitar.»
 
 **modelAnswer**:
 > El miércoles 22, de diez a una, hacen desratización en los sótanos y
-> las zonas comunes. Hay que sacar de los garajes las bolsas de basura y la
-> comida de animales, así que sube el pienso del gato. En los pisos no
-> entran, tranquila.
+> las zonas comunes. Hay que sacar de los garajes las bolsas de basura
+> y la comida de animales, así que sube el pienso del gato. En los
+> pisos no entran, tranquila.
 
 ### MED-144 · portal-infra · pt→es · corregido (DOS avisos)
 **sourceText:**
 > «[Aviso de terça] Recolha de monos e mobílias velhas: sábado, dia 3,
 > a partir das 8h. Deixar junto ao contentor, sem obstruir a passagem.
->
 > [Aviso de hoje] RETIFICAÇÃO: a recolha de monos passa para DOMINGO,
 > dia 4, à mesma hora. Quem já tenha deixado mobília à porta deve
 > recolhê-la até sábado à noite.»
@@ -192,22 +226,23 @@ el estado final — y con lo que le toca hacer ahora.»
 1. ¿El día vigente es el DOMINGO 4 (el sábado 3 no aparece como
    vigente)?
 2. ¿Traslada lo que le toca por haber bajado ya el sofá (volver a
-   subirlo o retirarlo antes del sábado por la noche)?
+   subirlo o retirarlo el sábado por la noche como muy tarde)?
 3. ¿Conserva la hora y la instrucción original (desde las 8, junto al
    contenedor, sin bloquear el paso)?
 4. ¿Español natural, sin lusismos («monos», «recolha»), entre 30 y 65
    palabras?
 
 **modelAnswer**:
-> Cambio: la recogida de muebles no es el sábado 3 sino el domingo 4, a
-> la misma hora, desde las ocho. Y ojo, que tú ya bajaste el sofá: hay
-> que subirlo o apartarlo antes del sábado por la noche, porque si no
-> se queda ahí un día entero. El domingo, junto al contenedor y sin bloquear el paso.
+> Cambio: la recogida de muebles no es el sábado 3 sino el domingo 4,
+> a la misma hora, desde las ocho. Y ojo, que tú ya bajaste el sofá:
+> hay que subirlo o apartarlo el sábado por la noche como muy tarde,
+> porque si no se queda ahí un día entero. El domingo, junto al
+> contenedor y sin bloquear el paso.
 
 ### MED-145 · cartel · pt→es · simple
 **sourceText:**
-> «Farmácia de serviço permanente esta semana: Farmácia Central, Rua da
-> Sé, n.º 12. Atendimento noturno das 22h às 9h pelo postigo. Fora
+> «Farmácia de serviço permanente esta semana: Farmácia Central, Rua
+> da Sé, n.º 12. Atendimento noturno das 22h às 9h pelo postigo. Fora
 > desse horário, funcionamento normal.»
 **audience:** «tu madre, de visita, que puede necesitar algo de noche»
 **instructionsEs:** «El cartel está en la puerta de la farmacia del
@@ -248,14 +283,14 @@ Pásaselo — él es el que más calle pisa a esas horas.»
 **modelAnswer**:
 > Tú que corres de madrugada: se ha escapado una gata siamesa del
 > número 14 de la Travessa do Forno, la noche del viernes. Es delgada,
-> lleva collar rojo sin chapa y responde a Mia. Si la ves, llama al 962
-> 118 340; dan recompensa.
+> lleva collar rojo sin chapa y responde a Mia. Si la ves, llama al
+> 962 118 340; dan recompensa.
 
 ### MED-147 · cartel · pt→es · reordenar
 **sourceText:**
-> «Ecocentro municipal — novo horário de inverno: encerra às 17h (antes
-> 20h). Encerrado aos domingos. Não são aceites resíduos de obra sem
-> guia de transporte.»
+> «Ecocentro municipal — novo horário de inverno: encerra às 17h
+> (antes 20h). Encerrado aos domingos. Não são aceites resíduos de
+> obra sem guia de transporte.»
 **audience:** «tu compañera de piso española, que sale hoy a las 18h
 con el maletero lleno de escombros»
 **instructionsEs:** «Le va a pillar de lleno. Lo urgente primero.»
@@ -278,8 +313,8 @@ con el maletero lleno de escombros»
 ### MED-148 · cartel · es→pt · simple
 **sourceText** (cartel en español, en el portal):
 > «Recogida solidaria de alimentos: los sábados de octubre, en el
-> vestíbulo del centro cívico. Se necesita sobre todo aceite, legumbres
-> y leche. No se admiten productos frescos ni abiertos.»
+> vestíbulo del centro cívico. Se necesita sobre todo aceite,
+> legumbres y leche. No se admiten productos frescos ni abiertos.»
 **audience:** «o teu colega de casa português, que quer colaborar»
 **instructionsEs:** «El cartel está en español y él no lo entiende.
 Pásaselo en portugués.»
@@ -292,10 +327,10 @@ Pásaselo en portugués.»
 4. ¿Portugués natural por tu, entre 25 y 60 palabras?
 
 **modelAnswer**:
-> Há uma recolha solidária de alimentos aos sábados de outubro, no átrio
-> do centro cívico. O que faz mais falta é óleo alimentar, leguminosas e leite.
-> Não aceitam nada fresco nem embalagens já abertas — se quiseres,
-> levamos juntos no sábado.
+> Há uma recolha solidária de alimentos aos sábados de outubro, no
+> átrio do centro cívico. O que faz mais falta é óleo alimentar,
+> leguminosas e leite. Não aceitam nada fresco nem embalagens já
+> abertas — se quiseres, levamos juntos no sábado.
 
 ### MED-149 · sms-servicio · pt→es · simple
 **sourceText:**
@@ -315,14 +350,15 @@ Pásaselo en portugués.»
 
 **modelAnswer**:
 > Ya tenemos cita del pediatra para Tomás: el lunes 9 a las once y
-> veinte, en la consulta 4. Hay que llevar la cartilla de salud infantil. Y si
-> ese día amanece con fiebre, dicen que llamemos antes al 217 445 900.
+> veinte, en la consulta 4. Hay que llevar la cartilla de salud
+> infantil. Y si ese día amanece con fiebre, dicen que llamemos antes
+> al 217 445 900.
 
 ### MED-150 · sms-servicio · pt→es · señuelo
 **sourceText:**
-> «TecnoFix [OS 2026/8812]: o seu telemóvel está reparado. Levantamento
-> na loja do Saldanha, com o comprovativo ou o documento de
-> identificação. Garantia da reparação: 90 dias.»
+> «TecnoFix [OS 2026/8812]: o seu telemóvel está reparado.
+> Levantamento na loja do Saldanha, com o comprovativo ou o documento
+> de identificação. Garantia da reparação: 90 dias.»
 **audience:** «tu hermana española, que te dejó el móvil para
 arreglarlo»
 **instructionsEs:** «El SMS llegó a tu número. Dile lo que necesita
@@ -340,15 +376,15 @@ saber.»
 
 **modelAnswer**:
 > Tu móvil ya está arreglado. Se recoge en la tienda del Saldanha
-> llevando el resguardo o el DNI. La reparación
-> tiene noventa días de garantía, así que guarda el papel que te den.
+> llevando el resguardo o el DNI. La reparación tiene noventa días de
+> garantía, así que guarda el papel que te den.
 
 ### MED-151 · sms-servicio · pt→es · condicional
 **sourceText:**
 > «Ginásio Ritmo: a sua inscrição renova automaticamente a 1 de
 > outubro, com a mensalidade em vigor. Caso não pretenda renovar,
-> comunique por escrito até 20 de setembro, inclusive. Após essa data, a
-> renovação é anual.»
+> comunique por escrito até 20 de setembro, inclusive. Após essa data,
+> a renovação é anual.»
 **audience:** «tu primo español, que se va de Lisboa en noviembre»
 **instructionsEs:** «El SMS llegó a tu móvil porque tú lo apuntaste.
 Dile qué tiene que hacer y para cuándo.»
@@ -365,15 +401,15 @@ Dile qué tiene que hacer y para cuándo.»
 
 **modelAnswer**:
 > Ojo con el gimnasio: si no dices nada, el 1 de octubre te renueva
-> solo, con la cuota que esté en vigor. Como te vas en noviembre, tienes que avisar por escrito como
-> muy tarde el 20 de septiembre — ese día todavía vale. Si se te pasa,
-> te atan un año entero.
+> solo, con la cuota que esté en vigor. Como te vas en noviembre,
+> tienes que avisar por escrito como muy tarde el 20 de septiembre —
+> ese día todavía vale. Si se te pasa, te atan un año entero.
 
 ### MED-152 · sms-servicio · es→pt · reordenar
 **sourceText** (SMS en español):
 > «Gestoría Ramos: su cita para la declaración se adelanta al jueves a
-> las 9:15 (antes 12:30). Traiga los certificados de retenciones. Si no
-> puede, responda a este SMS.»
+> las 9:15 (antes 12:30). Traiga los certificados de retenciones. Si
+> no puede, responda a este SMS.»
 **audience:** «o teu sócio português, que na quinta de manhã ia estar
 noutro sítio»
 **instructionsEs:** «Mándale el mensaje en portugués — lo urgente
@@ -387,17 +423,17 @@ primero, que la hora cambió.»
 4. ¿Portugués natural por tu, entre 30 y 65 palabras?
 
 **modelAnswer**:
-> Atenção que mudaram a hora: a reunião na contabilidade passou para quinta
-> às 9h15, já não é às 12h30. Tens de levar os certificados de
+> Atenção que mudaram a hora: a reunião na contabilidade passou para
+> quinta às 9h15, já não é às 12h30. Tens de levar os certificados de
 > retenções. Se a essa hora não puderes mesmo, responde ao SMS deles e
 > remarcam.
 
 ### MED-153 · recado-voz · pt→es · simple
 **sourceText** (mensaje de voz):
 > «Boa tarde, é da assistência informática. O portátil está pronto:
-> mudámos o disco e ficou com o sistema novo. Pode passar amanhã até às
-> 18h; são 95 euros, e aceitamos multibanco. Traga a fatura antiga, se a
-> tiver.»
+> mudámos o disco e ficou com o sistema novo. Pode passar amanhã até
+> às 18h; são 95 euros, e aceitamos multibanco. Traga a fatura antiga,
+> se a tiver.»
 **audience:** «tu padre español — el portátil es suyo»
 **instructionsEs:** «El recado llegó a tu móvil. Pásaselo con los
 datos.»
@@ -414,16 +450,16 @@ datos.»
 
 **modelAnswer**:
 > Papá, ya está el portátil: le han cambiado el disco y le han puesto
-> el sistema nuevo. Puedes recogerlo mañana hasta las seis; son noventa
-> y cinco euros y aceptan tarjeta. Si encuentras la factura vieja,
-> llévala, aunque dicen que no es imprescindible.
+> el sistema nuevo. Puedes recogerlo mañana hasta las seis; son
+> noventa y cinco euros y aceptan tarjeta. Si encuentras la factura
+> vieja, llévala, aunque dicen que no es imprescindible.
 
 ### MED-154 · recado-voz · pt→es · señuelo
 **sourceText** (mensaje de voz):
-> «É do chaveiro da Praça Nova [serviço n.º 77]. Passei por sua casa às
-> onze e não estava ninguém. Volto quinta-feira de manhã; se ninguém
-> puder estar, deixe recado no 213 660 004 e combinamos outro dia. A
-> chave nova fica pronta no próprio dia.»
+> «É do chaveiro da Praça Nova [serviço n.º 77]. Passei por sua casa
+> às onze e não estava ninguém. Volto quinta-feira de manhã; se
+> ninguém puder estar, deixe recado no 213 660 004 e combinamos outro
+> dia. A chave nova fica pronta no próprio dia.»
 **audience:** «tu compañera de piso española, que teletrabaja el
 jueves»
 **instructionsEs:** «El recado llegó a tu móvil. Dile lo que necesita
@@ -439,15 +475,15 @@ saber.»
 5. ¿Español natural, entre 30 y 65 palabras?
 
 **modelAnswer**:
-> Ha venido el cerrajero a las once y no había nadie en casa. Vuelve el
-> jueves por la mañana — como tú teletrabajas, te pilla bien. Si al
-> final no puedes estar, hay que llamar al 213 660 004 para quedar otro
-> día. La llave nueva la hacen el mismo día.
+> Ha venido el cerrajero a las once y no había nadie en casa. Vuelve
+> el jueves por la mañana — como tú teletrabajas, te pilla bien. Si al
+> final no puedes estar, hay que llamar al 213 660 004 para quedar
+> otro día. La llave nueva la hacen el mismo día.
 
 ### MED-155 · recado-voz · pt→es · simple
 **sourceText** (mensaje de voz):
-> «É o eletricista. Não consigo trocar o quadro sem cortar a luz a todo
-> o prédio, e isso só pode ser das 14h às 16h, com autorização do
+> «É o eletricista. Não consigo trocar o quadro sem cortar a luz a
+> todo o prédio, e isso só pode ser das 14h às 16h, com autorização do
 > condomínio. Falem com o administrador e digam-me qualquer coisa. Se
 > não der, faço só a tomada da cozinha.»
 **audience:** «tu casera española, a la que tratas de usted»
@@ -466,17 +502,17 @@ Cuéntaselo de usted.»
 
 **modelAnswer**:
 > Ha llamado el electricista. Dice que no puede cambiar el cuadro sin
-> cortar la luz de todo el edificio, y que eso sólo se permite de dos a
-> cuatro y con autorización de la comunidad, así que tendría usted que hablar
-> con el administrador. Si no se puede, deja hecho
-> sólo el enchufe de la cocina.
+> cortar la luz de todo el edificio, y que eso sólo se permite de dos
+> a cuatro y con autorización de la comunidad, así que tendría usted
+> que hablar con el administrador. Si no se puede, deja hecho sólo el
+> enchufe de la cocina.
 
 ### MED-156 · recado-voz · es→pt · simple
 **sourceText** (mensaje de voz en español):
-> «Hola, soy Carmen, de la coral. Que el ensayo del martes lo pasamos al
-> miércoles, misma hora, porque el local está ocupado. Traed la carpeta
-> azul, que empezamos con el repertorio nuevo. Y decidme quién viene,
-> que necesito saber si somos suficientes.»
+> «Hola, soy Carmen, de la coral. Que el ensayo del martes lo pasamos
+> al miércoles, misma hora, porque el local está ocupado. Traed la
+> carpeta azul, que empezamos con el repertorio nuevo. Y decidme quién
+> viene, que necesito saber si somos suficientes.»
 **audience:** «a tua amiga portuguesa da coral, que não percebe o
 espanhol falado»
 **instructionsEs:** «Pásale el recado en portugués, entero.»
@@ -516,10 +552,10 @@ para cuándo.»
    «comprovativo»), entre 30 y 65 palabras?
 
 **modelAnswer**:
-> Lo del campamento de julio: hay que apuntarlo como muy tarde el 15 de junio,
-> ese día todavía vale, y sólo cogen a treinta niños. Piden la ficha de
-> inscripción firmada y el justificante del seguro escolar. Lo bueno es
-> que se puede pagar en dos veces.
+> Lo del campamento de julio: hay que apuntarlo como muy tarde el 15
+> de junio, ese día todavía vale, y sólo cogen a treinta niños. Piden
+> la ficha de inscripción firmada y el justificante del seguro
+> escolar. Lo bueno es que se puede pagar en dos veces.
 
 ### MED-158 · aviso-escolar · pt→es · simple
 **sourceText:**
@@ -539,8 +575,8 @@ para cuándo.»
 **modelAnswer**:
 > Reunión de padres del 3.º B el jueves 12 a las seis y media, en el
 > aula 7. Van a hablar de tres cosas: la excursión, la evaluación de
-> mitad de curso y la elección del representante de los padres. ¿Vas tú
-> o voy yo?
+> mitad de curso y la elección del representante de los padres. ¿Vas
+> tú o voy yo?
 
 ### MED-159 · aviso-escolar · pt→es · **parcial** (el aviso no lo dice todo)
 **sourceText:**
@@ -563,8 +599,8 @@ también qué NO dice, que es lo que nos falta para comprar.»
 **modelAnswer**:
 > Desde octubre, la clase de gimnasia pasa a los lunes, y piden
 > equipación completa y zapatillas de suela clara, que en el pabellón
-> son obligatorias. Lo que no dicen es desde qué lunes empieza ni a qué
-> hora, así que habrá que preguntarlo antes de comprar nada.
+> son obligatorias. Lo que no dicen es desde qué lunes empieza ni a
+> qué hora, así que habrá que preguntarlo antes de comprar nada.
 
 ### MED-160 · aviso-escolar · es→pt · simple
 **sourceText** (circular del colegio español):
@@ -585,10 +621,10 @@ la circular en portugués.»
 4. ¿Portugués natural por tu, entre 25 y 60 palabras?
 
 **modelAnswer**:
-> Chegou uma circular: na quarta, dia 19, a enfermagem vai dar a vacina
-> da gripe, mas só aos alunos cujos pais tenham assinado a autorização.
-> Quem não assinar o papel fica na aula na mesma, sem problema
-> nenhum. Assinaste o teu?
+> Chegou uma circular: na quarta, dia 19, a enfermagem vai dar a
+> vacina da gripe, mas só aos alunos cujos pais tenham assinado a
+> autorização. Quem não assinar o papel fica na aula na mesma, sem
+> problema nenhum. Assinaste o teu?
 
 ### MED-161 · email-servicio · pt→es · señuelo
 **sourceText:**
@@ -612,10 +648,10 @@ qué puede hacer.»
    entre 30 y 65 palabras?
 
 **modelAnswer**:
-> Mamá, el seguro de la casa se renueva el 30 de septiembre. Si quieres
-> cambiar el capital asegurado, tienes que decirlo como muy tarde el 15. Y
-> avisan de algo que pasa igual: desde octubre la franquicia sube de
-> ciento cincuenta a doscientos euros.
+> Mamá, el seguro de la casa se renueva el 30 de septiembre. Si
+> quieres cambiar el capital asegurado, tienes que decirlo como muy
+> tarde el 15. Y avisan de algo que pasa igual: desde octubre la
+> franquicia sube de ciento cincuenta a doscientos euros.
 
 ### MED-162 · email-servicio · pt→es · simple
 **sourceText:**
@@ -638,15 +674,15 @@ portugués. Cuéntaselo.»
    25 y 60 palabras?
 
 **modelAnswer**:
-> El sábado de madrugada, entre las dos y las seis, el portal de clientes
-> estará caído por mantenimiento. Los pagos que tengas programados en
-> esa franja se procesan a las siete. Sobre todo, no los repitas
-> pensando que han fallado.
+> El sábado de madrugada, entre las dos y las seis, el portal de
+> clientes estará caído por mantenimiento. Los pagos que tengas
+> programados en esa franja se procesan a las siete. Sobre todo, no
+> los repitas pensando que han fallado.
 
 ### MED-163 · email-servicio · pt→es · condicional
 **sourceText:**
-> «Renovação de passaporte: pode renovar a partir de seis meses antes da
-> validade. Caso viaje para fora do espaço Schengen nos próximos 90
+> «Renovação de passaporte: pode renovar a partir de seis meses antes
+> da validade. Caso viaje para fora do espaço Schengen nos próximos 90
 > dias, deve pedir marcação urgente, com custo adicional de 40 €. O
 > prazo normal de entrega é de 12 dias úteis.»
 **audience:** «tu hermano español, residente aquí, que vuela a Londres
@@ -666,9 +702,10 @@ en tres semanas»
 
 **modelAnswer**:
 > Lo del pasaporte: se puede renovar desde seis meses antes de que
-> caduque, y tardan doce días hábiles. Pero como tú vuelas a Londres en
-> tres semanas — dentro de esos noventa días — y eso está fuera de Schengen, te toca pedir cita urgente
-> — cuesta cuarenta euros más, pero llegas.
+> caduque, y tardan doce días hábiles. Pero como tú vuelas a Londres
+> en tres semanas — dentro de esos noventa días — y eso está fuera de
+> Schengen, te toca pedir cita urgente — cuesta cuarenta euros más,
+> pero llegas.
 
 ### MED-164 · email-servicio · es→pt · simple
 **sourceText** (email en español):
@@ -690,16 +727,16 @@ apuntarse.»
 4. ¿Portugués natural por tu, entre 25 y 60 palabras?
 
 **modelAnswer**:
-> Há um curso de cozinha com produtos da época: quatro sessões, às terças de
-> novembro, das 19h às 21h, na cozinha-escola do mercado. São só 12
-> lugares. Os materiais estão incluídos e cada um leva para casa o que
-> cozinhar. Queres que nos inscrevamos juntas?
+> Há um curso de cozinha com produtos da época: quatro sessões, às
+> terças de novembro, das 19h às 21h, na cozinha-escola do mercado.
+> São só 12 lugares. Os materiais estão incluídos e cada um leva para
+> casa o que cozinhar. Queres que nos inscrevamos juntas?
 
 ### MED-165 · nota-manuscrita · es→pt · simple
 **sourceText** (nota de la vecina, en español):
-> «¡Hola! Me voy diez días. Te dejo la llave para que riegues: las de la
-> terraza, cada dos días; el ficus del salón, sólo una vez por semana y
-> poca agua. El correo lo recoge mi hijo, no te preocupes.»
+> «¡Hola! Me voy diez días. Te dejo la llave para que riegues: las de
+> la terraza, cada dos días; el ficus del salón, sólo una vez por
+> semana y poca agua. El correo lo recoge mi hijo, no te preocupes.»
 **audience:** «o teu colega de casa português, que vai tratar das
 plantas contigo»
 **instructionsEs:** «La nota es de la vecina y él no lee español.
@@ -715,17 +752,17 @@ Pásasela en portugués.»
 4. ¿Portugués natural por tu, entre 30 y 65 palabras?
 
 **modelAnswer**:
-> A vizinha foi-se embora por dez dias e deixou a chave para regarmos. As
-> plantas da varanda, de dois em dois dias; o fícus da sala só uma vez
-> por semana e com pouca água — vê lá que esse morre afogado. O
+> A vizinha foi-se embora por dez dias e deixou a chave para regarmos.
+> As plantas da varanda, de dois em dois dias; o fícus da sala só uma
+> vez por semana e com pouca água — vê lá que esse morre afogado. O
 > correio não é connosco, vem cá o filho dela.
 
 ### MED-166 · nota-manuscrita · es→pt · simple
 **sourceText** (nota en el buzón, en español):
-> «Vecinos: mi perro está recién operado y no puede subir escaleras. Si
-> lo veis atado abajo un rato por las mañanas, es que estoy subiendo la
-> compra. Cualquier cosa, llamadme al 655 40 12 88. Perdonad las
-> molestias.»
+> «Vecinos: mi perro está recién operado y no puede subir escaleras.
+> Si lo veis atado abajo un rato por las mañanas, es que estoy
+> subiendo la compra. Cualquier cosa, llamadme al 655 40 12 88.
+> Perdonad las molestias.»
 **audience:** «o teu colega de casa português, que se assusta com o
 cão»
 **instructionsEs:** «La nota es del vecino del bajo. Pásasela en
@@ -740,17 +777,17 @@ portugués — para que no se preocupe.»
 4. ¿Portugués natural por tu, entre 30 y 65 palabras?
 
 **modelAnswer**:
-> O vizinho do rés do chão deixou um recado: o cão foi operado há pouco
-> e não pode subir escadas. Se o vires amarrado lá em baixo de manhã,
-> não te assustes — é só enquanto ele sobe as compras. Qualquer coisa,
-> o número dele é 655 40 12 88.
+> O vizinho do rés do chão deixou um recado: o cão foi operado há
+> pouco e não pode subir escadas. Se o vires amarrado lá em baixo de
+> manhã, não te assustes — é só enquanto ele sobe as compras. Qualquer
+> coisa, o número dele é 655 40 12 88.
 
 ### MED-167 · nota-manuscrita · pt→es · señuelo
 **sourceText** (nota del tinte, grapada al ticket):
 > «Recolha: casaco de lã e duas camisas [talão 3391]. Prazo normal:
 > quinta-feira. As nódoas do casaco saíram todas menos a da manga, que
-> precisa de tratamento especial — mais 8 €, se autorizar. Diga-nos até
-> quarta.»
+> precisa de tratamento especial — mais 8 €, se autorizar. Diga-nos
+> até quarta.»
 **audience:** «tu compañera de piso española, que dejó el abrigo»
 **instructionsEs:** «La nota estaba en la puerta. Dile lo que hay y lo
 que tiene que decidir.»
@@ -766,10 +803,10 @@ que tiene que decidir.»
    palabras?
 
 **modelAnswer**:
-> En la tintorería te dejan recado: el abrigo de lana y las dos camisas
-> estarán el jueves. Le han salido todas las manchas menos la de la
-> manga, que necesita un tratamiento aparte y cuesta ocho euros más.
-> Tienes hasta el miércoles incluido para decirles si lo hacen.
+> En la tintorería te dejan recado: el abrigo de lana y las dos
+> camisas estarán el jueves. Le han salido todas las manchas menos la
+> de la manga, que necesita un tratamiento aparte y cuesta ocho euros
+> más. Tienes hasta el miércoles incluido para decirles si lo hacen.
 
 ### MED-168 · nota-manuscrita · pt→es · simple
 **sourceText** (nota en la caseta del huerto comunitario):
@@ -811,14 +848,14 @@ YA, primero.»
 2. ¿Traslada el aviso y su franja (alerta naranja por viento, rachas
    de hasta 90 km/h, de las 22h de hoy a las 6h de mañana)?
 3. ¿Traslada la segunda recomendación (no aparcar debajo de árboles)?
-4. ¿Español natural, sin lusismos («rajadas» vale, «recolha»), entre 25
+4. ¿Español natural, sin lusismos («rajadas» resuelto, «recolha»), entre 25
    y 60 palabras?
 
 **modelAnswer**:
 > Mete ya las macetas y lo que tengas suelto en la terraza: hay alerta
-> naranja por viento, con rachas de hasta noventa por hora, desde las diez de
-> esta noche hasta las seis de la mañana. Y no dejes el coche debajo de
-> los árboles.
+> naranja por viento, con rachas de hasta noventa por hora, desde las
+> diez de esta noche hasta las seis de la mañana. Y no dejes el coche
+> debajo de los árboles.
 
 ### MED-170 · app-notificacion · pt→es · simple
 **sourceText:**
@@ -841,8 +878,8 @@ YA, primero.»
 **modelAnswer**:
 > Tu paquete no cabía en la taquilla y lo han dejado en el punto de
 > recogida de la papelería Lopes, en la Rua Direita 8. Puedes ir hasta
-> el domingo incluido, de nueve a siete, con el código que te llegó por
-> SMS.
+> el domingo incluido, de nueve a siete, con el código que te llegó
+> por SMS.
 
 ### MED-171 · app-notificacion · es→pt · reordenar
 **sourceText** (notificación en español):
@@ -913,10 +950,10 @@ Lo urgente primero.»
    palabras?
 
 **modelAnswer**:
-> Han cambiado la dársena: el autobús de las cuatro y media a Faro sale
-> de la 9, no de la 4. Y cierran el embarque diez minutos antes, o sea
-> a las cuatro y veinte. Como llevas maletas para la bodega, hay que
-> pasar antes por el mostrador.
+> Han cambiado la dársena: el autobús de las cuatro y media a Faro
+> sale de la 9, no de la 4. Y cierran el embarque diez minutos antes,
+> o sea a las cuatro y veinte. Como llevas maletas para la bodega, hay
+> que pasar antes por el mostrador.
 
 ### MED-174 · megafonia · pt→es · simple · **género nuevo**
 **sourceText** (megafonía del centro comercial):
@@ -938,9 +975,9 @@ Lo urgente primero.»
 
 **modelAnswer**:
 > ¡Está en información, en la planta baja! Han dicho por megafonía que
-> tienen a un niño de unos cuatro años, con jersey azul, que responde a
-> Rodrigo. Corre para allá y avisa a sus padres, que piden que vayan ellos
-> con documento de identidad.
+> tienen a un niño de unos cuatro años, con jersey azul, que responde
+> a Rodrigo. Corre para allá y avisa a sus padres, que piden que vayan
+> ellos con documento de identidad.
 
 ### MED-175 · megafonia · pt→es · simple · **género nuevo**
 **sourceText** (megafonía del supermercado):
@@ -961,14 +998,15 @@ datos.»
 
 **modelAnswer**:
 > Mamá, que cierran en un cuarto de hora. Las cajas 1 y 2 las están
-> cerrando ya; la 5 se queda abierta hasta que salga el último cliente. Coge lo que lleves y
-> vamos — mañana domingo abren de nueve a una si falta algo.
+> cerrando ya; la 5 se queda abierta hasta que salga el último
+> cliente. Coge lo que lleves y vamos — mañana domingo abren de nueve
+> a una si falta algo.
 
 ### MED-176 · megafonia · es→pt · simple · **género nuevo**
 **sourceText** (megafonía en español, edificio de oficinas):
 > «Atención: se trata de un simulacro de evacuación. Abandonen el
-> edificio por las escaleras, sin usar los ascensores, y reúnanse en el
-> aparcamiento exterior. No recojan efectos personales.»
+> edificio por las escaleras, sin usar los ascensores, y reúnanse en
+> el aparcamiento exterior. No recojan efectos personales.»
 **audience:** «o teu colega português, que está numa reunião no 4.º
 andar»
 **instructionsEs:** «Mándale el mensaje en portugués, ya.»
@@ -987,9 +1025,9 @@ andar»
 
 ### MED-177 · factura-recibo · pt→es · simple · **género nuevo**
 **sourceText** (recibo del agua):
-> «Fatura n.º 2026/114 — Água e saneamento. Consumo do bimestre: 14 m³.
-> Total a pagar: 38,60 €. Débito direto na conta terminada em 4471, a
-> 5 de outubro. Reclamações no prazo de 30 dias.»
+> «Fatura n.º 2026/114 — Água e saneamento. Consumo do bimestre: 14
+> m³. Total a pagar: 38,60 €. Débito direto na conta terminada em
+> 4471, a 5 de outubro. Reclamações no prazo de 30 dias.»
 **audience:** «tu compañera de piso española, con la que divides los
 gastos»
 **instructionsEs:** «El recibo llegó al buzón. Cuéntaselo — os lo
@@ -1004,10 +1042,10 @@ repartís.»
    y 60 palabras?
 
 **modelAnswer**:
-> Ha llegado el recibo del agua y el saneamiento: 38,60 euros por el bimestre, catorce
-> metros cúbicos. Lo pasan por el banco el 5 de octubre, así que te
-> paso la mitad ese día. Si algo no cuadra, hay treinta días para
-> reclamar.
+> Ha llegado el recibo del agua y el saneamiento: 38,60 euros por el
+> bimestre, catorce metros cúbicos. Lo pasan por el banco el 5 de
+> octubre, así que te paso la mitad ese día. Si algo no cuadra, hay
+> treinta días para reclamar.
 
 ### MED-178 · factura-recibo · pt→es · señuelo · **género nuevo**
 **sourceText** (recibo del condominio):
@@ -1029,10 +1067,10 @@ mensaje — ella paga desde España.»
    y 60 palabras?
 
 **modelAnswer**:
-> Ha llegado la cuota de la comunidad de octubre: cuarenta y dos euros,
-> de los cuales cuatro veinte van al fondo de reserva. Hay que pagarla
-> como muy tarde el día 8, que si no cobran intereses. Dime si quieres
-> que la pague yo y me la descuentas.
+> Ha llegado la cuota de la comunidad de octubre: cuarenta y dos
+> euros, de los cuales cuatro veinte van al fondo de reserva. Hay que
+> pagarla como muy tarde el día 8, que si no cobran intereses. Dime si
+> quieres que la pague yo y me la descuentas.
 
 ### MED-179 · factura-recibo · pt→es · **contradictorio** · **género nuevo**
 **sourceText** (factura de la luz):
@@ -1063,9 +1101,10 @@ no cuadra, sin decidir tú.»
 
 ### MED-180 · factura-recibo · es→pt · simple · **género nuevo**
 **sourceText** (recibo de matrícula, en español):
-> «Matrícula curso 2026/27. Importe: 310 €. Fraccionamiento: dos plazos
-> de 155 € (octubre y enero). El impago del segundo plazo supone la baja
-> automática. Justificante disponible en la secretaría virtual.»
+> «Matrícula curso 2026/27. Importe: 310 €. Fraccionamiento: dos
+> plazos de 155 € (octubre y enero). El impago del segundo plazo
+> supone la baja automática. Justificante disponible en la secretaría
+> virtual.»
 **audience:** «o teu colega português, que se matriculou contigo»
 **instructionsEs:** «El recibo está en español. Pásaselo en portugués
 con lo importante.»
@@ -1079,17 +1118,17 @@ con lo importante.»
 4. ¿Portugués natural por tu, entre 25 y 60 palabras?
 
 **modelAnswer**:
-> A propina do curso são 310 euros, que podes pagar em duas
-> prestações de 155 — uma em outubro, outra em janeiro. Atenção a esta:
-> se falhares a segunda, anulam-te a matrícula automaticamente. O comprovativo está
-> na secretaria virtual.
+> A propina do curso são 310 euros, que podes pagar em duas prestações
+> de 155 — uma em outubro, outra em janeiro. Atenção a esta: se
+> falhares a segunda, anulam-te a matrícula automaticamente. O
+> comprovativo está na secretaria virtual.
 
 ### MED-181 · chat-grupo · pt→es · simple · **género nuevo**
 **sourceText** (grupo de vecinos):
-> «— Malta, o jantar do prédio fica marcado para sábado, dia 25, às 20h,
-> no pátio.
-> — Cada um leva um prato para partilhar; as bebidas paga o condomínio.
-> — Quem tiver mesas dobráveis, avise que ajudamos a descer.»
+> «— Malta, o jantar do prédio fica marcado para sábado, dia 25, às
+> 20h, no pátio. — Cada um leva um prato para partilhar; as bebidas
+> paga o condomínio. — Quem tiver mesas dobráveis, avise que ajudamos
+> a descer.»
 **audience:** «tu compañera de piso española»
 **instructionsEs:** «El grupo es un caos. Resúmele lo que hay que
 saber.»
@@ -1111,11 +1150,10 @@ saber.»
 
 ### MED-182 · chat-grupo · pt→es · **contradictorio** · **género nuevo**
 **sourceText** (grupo de vecinos):
-> «— Aviso: as obras do 4.º direito começam segunda e o senhorio diz que
-> duram duas semanas.
-> — O empreiteiro disse-me ontem que são seis semanas, no mínimo.
-> — Seja como for, o barulho é das 8h às 17h e não haverá elevador nas
-> tardes de quarta.»
+> «— Aviso: as obras do 4.º direito começam segunda e o senhorio diz
+> que duram duas semanas. — O empreiteiro disse-me ontem que são seis
+> semanas, no mínimo. — Seja como for, o barulho é das 8h às 17h e não
+> haverá elevador nas tardes de quarta.»
 **audience:** «tu compañero de piso español, que teletrabaja»
 **instructionsEs:** «Resúmele el hilo — incluida la parte en la que no
 se ponen de acuerdo.»
@@ -1130,16 +1168,15 @@ se ponen de acuerdo.»
 
 **modelAnswer**:
 > Empiezan las obras del cuarto el lunes. El ruido será de ocho a
-> cinco, y los miércoles por la tarde nos quedamos sin ascensor. Lo que
-> no está nada claro es cuánto duran: el casero dice dos semanas y el
-> contratista le dijo a otro vecino que seis como mínimo. Tú que
+> cinco, y los miércoles por la tarde nos quedamos sin ascensor. Lo
+> que no está nada claro es cuánto duran: el casero dice dos semanas y
+> el contratista le dijo a otro vecino que seis como mínimo. Tú que
 > teletrabajas, hazte a la idea larga.
 
 ### MED-183 · chat-grupo · pt→es · **parcial** · **género nuevo**
 **sourceText** (grupo de padres):
 > «— Vamos juntar dinheiro para a prenda da professora, como no ano
-> passado.
-> — Eu trato de comprar; podem transferir para o meu MB WAY.
+> passado. — Eu trato de comprar; podem transferir para o meu MB WAY.
 > — Fica combinado até ao fim da semana!»
 **audience:** «tu pareja española, que va a poner el dinero»
 **instructionsEs:** «Resúmele el hilo — y dile qué falta por saber
@@ -1157,18 +1194,17 @@ antes de mandar nada.»
 
 **modelAnswer**:
 > En el grupo de padres van a juntar dinero para el regalo de la
-> profesora, como el año pasado: una madre lo compra y se le transfiere
-> por móvil, hasta el final de la semana. Pero no dicen cuánto pone cada
-> uno ni dan el número, así que habrá que preguntarlo.
+> profesora, como el año pasado: una madre lo compra y se le
+> transfiere por móvil, hasta el final de la semana. Pero no dicen
+> cuánto pone cada uno ni dan el número, así que habrá que
+> preguntarlo.
 
 ### MED-184 · chat-grupo · es→pt · señuelo · **género nuevo**
 **sourceText** (grupo de amigos, en español):
-> «— Quedada mañana en el parque del Retiro, junto al estanque, de 11 a
-> 14.
-> — Llevo yo la manta y el frisbee. ¡El que llegue tarde paga los
-> helados!
-> — Por cierto, ¿alguien sabe si abrieron ya el bar nuevo de la calle
-> Huertas?»
+> «— Quedada mañana en el parque del Retiro, junto al estanque, de 11
+> a 14. — Llevo yo la manta y el frisbee. ¡El que llegue tarde paga
+> los helados! — Por cierto, ¿alguien sabe si abrieron ya el bar nuevo
+> de la calle Huertas?»
 **audience:** «o teu amigo português, que está de visita e não percebe
 o grupo»
 **instructionsEs:** «Pásale en portugués lo que necesita para ir. No
@@ -1185,9 +1221,9 @@ todo el hilo hace falta.»
 
 **modelAnswer**:
 > Amanhã há encontro no parque do Retiro, ao pé do lago, das 11h às
-> 14h. Um deles leva a manta e o frisbee, não precisas de levar nada. E
-> atenção à regra: quem chegar atrasado paga os gelados a todos — por
-> isso não te atrases!
+> 14h. Um deles leva a manta e o frisbee, não precisas de levar nada.
+> E atenção à regra: quem chegar atrasado paga os gelados a todos —
+> por isso não te atrases!
 
 ---
 
