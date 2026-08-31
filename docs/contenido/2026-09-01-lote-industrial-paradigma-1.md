@@ -70,7 +70,7 @@ forma que el conjugador calcula, el ítem, y el defecto de cada distractor.
 
 ### PAR-01 · fill_blank · sin atractor
 **derivación:** `futuroComposto('terminar', 'eu')` → **terei terminado**
-**frase:** «Antes do almoço já ___ a apresentação. (terminar)»
+**frase:** «Antes do almoço já ___ a minha apresentação. (terminar)»
 **respuesta:** `terei terminado`
 **glosa:** El futuro composto marca lo que estará ACABADO antes de otro
 momento futuro. En español, «habré terminado».
@@ -80,11 +80,11 @@ momento futuro. En español, «habré terminado».
 **frase:** «Quando o autocarro passar, os miúdos já ___ de casa. (sair)»
 **respuesta:** `terão saído`
 **glosa:** «Ya habrán salido»: acabado ANTES de que pase el autobús, no a
-la vez. Y «quando passar» es futuro do conjuntivo, que el español no tiene.
+la vez. Y «quando passar» es futuro do conjuntivo, que el español conserva sólo fosilizado («sea lo que fuere») y que en portugués está vivo y es obligatorio.
 
 ### PAR-03 · fill_blank · sin atractor · irregular
 **derivación:** `futuroComposto('fazer', 'nós')` → **teremos feito**
-**frase:** «Quando o chefe voltar de viagem, já ___ tudo o que ficou pendente. (fazer)»
+**frase:** «Quando o chefe voltar de viagem, nós já ___ tudo o que ficou pendente. (fazer)»
 **respuesta:** `teremos feito`
 **glosa:** Participio irregular: «feito», no *«fazido»*. El «já» y
 «quando voltar» (futuro do conjuntivo) son los que piden el compuesto:
@@ -110,9 +110,9 @@ composto sobra: basta el simple.
 
 ### PAR-06 · multiple_choice · CONTRASTE, gana el futuro simple
 **derivación:** `futuro('vender', 'eu')` → **venderei**
-**frase:** «Se calhar ___ o carro no próximo verão.»
-**opciones:** [0] terei vendido · [1] venderá · [2] vendo · [3] **venderei** ✅
-**defecto:** [0] no hay anterioridad; [1] persona equivocada; [2] presente por futuro.
+**frase:** «Se calhar eu ___ o carro no próximo verão.»
+**opciones:** [0] terei vendido · [1] venderá · [2] tinha vendido · [3] **venderei** ✅
+**defecto:** [0] no hay anterioridad; [1] persona equivocada; [2] pretérito mais-que-perfeito, imposible con «no próximo verão».
 **glosa:** «Se calhar» es la mitigación europea de «quizá», y no cambia
 el tiempo: aquí la acción es simplemente futura.
 
@@ -133,19 +133,19 @@ película ya habrá empezado.
 que es lo contrario; [1] presente; [3] repetición en el pasado reciente.
 **glosa:** El «já» y la subordinada de futuro piden anterioridad. Y el
 participio de «pagar» con «ter» es «pago»: es de los tres verbos
-(pagar, ganhar, gastar) donde el irregular desplazó al regular también
+(pagar, ganhar, gastar) donde el irregular se impuso también
 con el auxiliar «ter».
 
 ### PAR-09 · fill_blank · sin atractor
 **derivación:** `futuroComposto('escrever', 'tu')` → **terás escrito**
-**frase:** «Antes de o sol se pôr, já ___ o discurso todo. (escrever)»
+**frase:** «Antes de o sol se pôr, já ___ o teu discurso todo. (escrever)»
 **respuesta:** `terás escrito`
 **glosa:** Participio irregular: «escrito». Y «antes de o sol se pôr» es
-infinitivo pessoal con sujeto propio, que es lo que el europeo usa aquí.
+infinitivo pessoal con sujeto propio, la salida que el europeo prefiere aquí (aunque «antes que o sol se ponha» también sea correcto).
 
 ### PAR-10 · fill_blank · sin atractor
 **derivación:** `futuroComposto('ver', 'nós')` → **teremos visto**
-**frase:** «No fim da viagem ___ cinco cidades diferentes. (ver)»
+**frase:** «No fim da viagem nós já ___ cinco cidades diferentes. (ver)»
 **respuesta:** `teremos visto`
 **glosa:** Participio irregular: «visto». Ojo: «ver» es regular en el
 futuro simple (veremos) e irregular sólo en el participio.
@@ -171,7 +171,7 @@ pasada.
 
 ### PAR-13 · multiple_choice · sin atractor
 **derivación:** `mesoclise('dizer', 'te', 'eu')` → **dir-te-ei**
-**frase:** «___ o resultado assim que souber alguma coisa.»
+**frase:** «___ o resultado do concurso por escrito, assim que o júri decidir.»
 **opciones:** [0] **Dir-te-ei** ✅ · [1] Direi-te · [2] Te direi · [3] Dir-te-ia
 **defecto:** [1] ênclise sobre el futuro — el calco español, que coloca
 el clítico detrás de la forma entera; [2] próclise sin atractor que la
@@ -207,7 +207,7 @@ igual que la negación.
 
 ### PAR-17 · fill_blank · sin atractor · clítico de 3.ª
 **derivación:** `mesoclise('comprar', 'o', 'ele')` → **comprá-lo-á**
-**frase:** «Se o preço descer, ele ___ sem hesitar. (comprar + o)»
+**frase:** «O terreno já está avaliado; se o preço descer, ele ___ sem hesitar. (comprar + o)»
 **respuesta:** `comprá-lo-á`
 **glosa:** Con clítico de 3.ª persona cae la -r del infinitivo, el
 clítico pasa a «-lo» y el tema se acentúa: comprar + o + á =
@@ -215,10 +215,11 @@ clítico pasa a «-lo» y el tema se acentúa: comprar + o + á =
 
 ### PAR-18 · fill_blank · sin atractor · la EXCEPCIÓN de los -ir
 **derivación:** `mesoclise('partir', 'o', 'ele')` → **parti-lo-á**
-**frase:** «O bolo é enorme; o pai ___ à mesa. (partir + o)»
+**frase:** «O diamante é grande de mais para a montagem; o joalheiro ___ em duas pedras. (partir + o)»
 **respuesta:** `parti-lo-á`
-**glosa:** También cae la -r y aparece «-lo», **pero los verbos en -ir NO
-se acentúan**: «parti-lo-á», no *«partí-lo-á»*. Es la excepción que la
+**glosa:** También cae la -r y aparece «-lo», **pero en la 3.ª conjugación sólo se acentúa la i que hace
+HIATO**: «parti-lo-á», «abri-la-á» sin acento porque la i va con consonante,
+frente a «construí-lo-á», «possuí-lo-á», donde la i forma sílaba sola. Es la excepción que la
 regla de «tras -r el verbo se acentúa» esconde, porque los ejemplos que
 se citan siempre son de -ar y -er.
 
@@ -231,10 +232,10 @@ donde la prótasis pide condicional.
 **glosa:** La mesóclise también funciona en condicional: dar + lhe + ia.
 
 ### PAR-20 · multiple_choice · CON ATRACTOR, gana la próclise
-**frase:** «**Talvez** ___ a casa mais cedo do que pensas.»
-**opciones:** [0] vender-se-á · [1] **se venda** ✅ · [2] vendê-la-á · [3] venderá-se
-**defecto:** [0] mesóclise cancelada por «talvez», que además pide
-conjuntivo; [2] mismo problema y otro clítico; [3] ênclise.
+**frase:** «A casa **só** ___ depois do verão, quando o mercado recuperar.»
+**opciones:** [0] vender-se-á · [1] **se venderá** ✅ · [2] vender-se-ia · [3] venderá-se
+**defecto:** [0] la mesóclise es correcta en abstracto pero «só» la cancela — y
+ahora es lo ÚNICO que la distingue de la clave; [2] condicional; [3] ênclise.
 **glosa:** «Talvez» antepuesto exige conjuntivo **y** atrae el clítico:
 dos cosas a la vez. Pospuesto («Vende-se, talvez») llevaría indicativo.
 
@@ -247,23 +248,23 @@ dos cosas a la vez. Pospuesto («Vende-se, talvez») llevaría indicativo.
 
 ### PAR-22 · fill_blank · sin atractor · plural
 **derivación:** `mesoclise('escrever', 'lhes', 'eles')` → **escrever-lhes-ão**
-**frase:** «Os professores ___ assim que houver vagas. (escrever + lhes)»
+**frase:** «Os serviços académicos ___ assim que houver vagas no curso. (escrever + lhes)»
 **respuesta:** `escrever-lhes-ão`
 **glosa:** Con clítico de 1.ª o 2.ª persona (y con «lhe/lhes») el tema
 queda intacto: escrever + lhes + ão.
 
 ### PAR-23 · multiple_choice · CON ATRACTOR, gana la próclise
-**frase:** «Ela disse **que** ___ o dinheiro na segunda-feira.»
+**frase:** «Ela diz **que** ___ o dinheiro na segunda-feira.»
 **opciones:** [0] entregar-nos-á · [1] entregará-nos · [2] **nos entregará** ✅ · [3] entregar-nos-ia
 **defecto:** [0] mesóclise cancelada por la subordinada; [1] ênclise; [3]
-condicional donde la principal pide futuro.
+mesóclise en subordinada — el condicional en sí no es el problema, «nos entregaria» sería correcto.
 **glosa:** La conjunción «que» de una subordinada es atractor: dentro de
 la subordinada el clítico va delante.
 
 ### PAR-24 · multiple_choice · sin atractor · condicional irregular
-**derivación:** `mesoclise('trazer', 'me', 'nós', 'condicional')` → **trar-me-íamos**
+**derivación:** `mesoclise('trazer', 'lhe', 'nós', 'condicional')` → **trar-lhe-íamos**
 **frase:** «Se soubéssemos que era urgente, ___ os documentos hoje mesmo.»
-**opciones:** [0] **trar-me-íamos** ✅ · [1] traríamos-me · [2] me traríamos · [3] trar-me-á
+**opciones:** [0] **trar-lhe-íamos** ✅ · [1] traríamos-lhe · [2] lhe traríamos · [3] trar-lhe-á
 **defecto:** [1] ênclise; [2] próclise sin atractor; [3] futuro y persona
 equivocadas.
 **glosa:** «Trazer» es el tercer irregular: tema «trar-». Y en

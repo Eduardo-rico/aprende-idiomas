@@ -137,6 +137,32 @@ producción traducen mal «até»). El 45 % fue del lote, no de la línea.
    qué convergió, qué quedó en conflicto) — el borrador se conserva
    debajo como historia. Commit por hito, push.
 
+## Un gate que deriva la respuesta NO comprueba que la pregunta la determine
+
+**Cicatriz de E2#11, y la más cara de la sesión.** La familia industrial
+de PARADIGMA calcula la forma correcta con un conjugador y el gate la
+recalcula y compara: derivación por construcción llevada al extremo, sin
+juicio del autor. El gate salió limpio en los 24 ítems.
+
+Y el round encontró **8 errores de 24**, casi todos de la misma clase que
+el gate **no puede ver por diseño**: en cinco de los seis `fill_blank`
+**nada en la frase fijaba la persona**. «Antes do almoço já ___ o
+relatório» admite las cinco —terei, terás, terá, teremos, terão— y el
+campo llevaba `alternatives: []`, así que sólo una puntuaba. El ítem era
+inresoluble y el gate lo bendecía, porque la forma declarada SÍ salía del
+paradigma.
+
+**La regla: verificar que la respuesta es derivable es la mitad. La otra
+mitad es que el CONTEXTO la determine — sujeto explícito, antecedente
+para el clítico, ancla temporal.** Un hueco cuya respuesta depende de un
+dato que la frase no da no es un ejercicio difícil: es uno roto.
+
+Las otras tres de la misma sesión, todas invisibles al gate: un clítico
+`-o` cuyo único antecedente masculino de la frase era el sujeto
+equivocado; un sujeto «nós» con clítico «me» («nosotros me traeríamos»);
+y dos distractores que resultaron ser portugués correcto porque la frase
+no expresaba sujeto. Ninguna es de forma; todas son de contexto.
+
 ## La barra de retirada (jurisprudencia)
 
 Un juicio binario se RETIRA si el verdict no es inequívoco. Han caído:
