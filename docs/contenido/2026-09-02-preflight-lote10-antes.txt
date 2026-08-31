@@ -1,0 +1,72 @@
+# Preflight — 2026-09-01-lote10-b2c2.md
+
+Ítems: **16** · BIEN 8 · MAL 8
+
+## Molde
+
+Patrón: `MMBMBBMBMBMMBBMB` · prefijo de 4: `MMBM` · racha máxima: 2 · desequilibrio: 0
+
+## Atajos — acierto SOBRE N (16), nunca recall sobre los MAL
+
+| rasgo | acierto | dirección | presente en | p |
+|---|---:|---|---:|---:|
+| más corta que la mediana (palabras) ⚠ | **12/16** (75 %) | presente⇒MAL | 6 | 0.038 |
+| más corta que la mediana (caracteres) ⚠ | **12/16** (75 %) | presente⇒MAL | 8 | 0.038 |
+| lleva preposición contraída (do/da/no/na/ao/à/pelo) ⚠ | **12/16** (75 %) | presente⇒BIEN | 10 | 0.038 |
+| lleva marcador temporal | **11/16** (69 %) | presente⇒MAL | 7 | 0.105 |
+| lleva una coma (frase con coleta) | **10/16** (63 %) | presente⇒BIEN | 6 | 0.227 |
+| lleva verbo en primera persona | **9/16** (56 %) | presente⇒BIEN | 5 | 0.402 |
+| lleva clítico con guion (ênclise/mesóclise) | **9/16** (56 %) | presente⇒BIEN | 3 | 0.402 |
+| lleva una palabra visiblemente española | **8/16** (50 %) | presente⇒BIEN | 0 | 0.598 |
+| lleva dos o más oraciones (punto o punto y coma interior) | **8/16** (50 %) | presente⇒BIEN | 0 | 0.598 |
+
+## Virginidad — 16 candidatos contra 2431 publicados + entre sí (umbral 0.34)
+
+- `GJ-01` ↔ `e6e74857` — 0.598 · comparten: fazendo, estou, fazer
+  > estou a fazer · estou faço · fazendo estou
+- `GJ-01` ↔ `b7-ep-07` — 0.413 · comparten: fazendo, fazer
+  > O que estás fazendo aí em cima? · O que estás a fazer aí em cima?
+- `GJ-01` ↔ `b2c2-gj-l3-07` — 0.39 · comparten: jantar, estou
+  > Estou a jantar com eles na sexta-feira. · Vou jantar com eles na sexta-feira.
+- `GJ-06` ↔ `ea8b0d49` — 0.49 · comparten: fiquei, ontem
+  > eu fiquei · Eu fiquei em casa ontem.
+- `GJ-06` ↔ `739a89f3` — 0.356 · comparten: noite, ontem
+  > Tu ___ muito bem ontem à noite?
+- `GJ-08` ↔ `b9f10f09` — 0.453 · comparten: levanta, vai
+  > Ele se levanta e vai embora.
+- `GJ-09` ↔ `92285bd5` — 0.516 · comparten: veio, doente, estava
+  > Ela não veio à festa ___ estava doente.
+- `GJ-10` ↔ `b2c2-gj-l4-17` — 0.579 · comparten: assistimo, jogo, todo
+  > Ontem assistimos o jogo todo na televisão. · Ontem assistimos ao jogo todo na televisão.
+- `GJ-11` ↔ `abe27690` — 0.358 · comparten: chegámo
+  > Tinha feito o bolo quando nós chegámos.
+- `GJ-11` ↔ `fd817890` — 0.341 · comparten: chegámo
+  > Eles já tinham pedido a informação quando chegámos.
+- `GJ-15` ↔ `b2c2-gj-l4-16` — 0.342 · comparten: vir, cedo
+  > Disse-lhe para vir mais cedo amanhã.
+
+**11 pares fiables** + 0 contra ítems de texto ínfimo (score no fiable).
+
+## Frases idénticas a algo publicado
+
+Ninguna.
+
+## Veredicto
+
+Avisos (8), no bloquean:
+- virginidad: GJ-01 ↔ b7-ep-07 a 0.413
+- virginidad: GJ-01 ↔ b2c2-gj-l3-07 a 0.39
+- virginidad: GJ-06 ↔ ea8b0d49 a 0.49
+- virginidad: GJ-06 ↔ 739a89f3 a 0.356
+- virginidad: GJ-08 ↔ b9f10f09 a 0.453
+- virginidad: GJ-11 ↔ abe27690 a 0.358
+- virginidad: GJ-11 ↔ fd817890 a 0.341
+- virginidad: GJ-15 ↔ b2c2-gj-l4-16 a 0.342
+
+**6 BLOQUEANTES — el round NO se abre:**
+- atajo «más corta que la mediana (palabras)»: acierta 12/16 (p=0.038) — se resuelve el lote sin saber portugués
+- atajo «más corta que la mediana (caracteres)»: acierta 12/16 (p=0.038) — se resuelve el lote sin saber portugués
+- atajo «lleva preposición contraída (do/da/no/na/ao/à/pelo)»: acierta 12/16 (p=0.038) — se resuelve el lote sin saber portugués
+- virginidad: GJ-01 ↔ e6e74857 a 0.598 — hay que mirarlo antes del round
+- virginidad: GJ-09 ↔ 92285bd5 a 0.516 — hay que mirarlo antes del round
+- virginidad: GJ-10 ↔ b2c2-gj-l4-17 a 0.579 — hay que mirarlo antes del round

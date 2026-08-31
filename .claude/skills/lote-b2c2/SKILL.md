@@ -48,7 +48,35 @@ producción traducen mal «até»). El 45 % fue del lote, no de la línea.
    «se redacta en build» (deuda del lote 3: dos modelos salieron sin
    tercer round). Con notas del autor: las dudas se confiesan, los
    revisores las responden mejor que tú.
-2. **Los dos gates de máquina, antes de gastar un revisor:**
+2. **PREFLIGHT EJECUTABLE — sin su salida no se abre el round.**
+
+   ```
+   npx tsx scripts/preflight-lote.ts docs/contenido/<doc>.md
+   ```
+
+   Corre los gates, mide la batería de atajos EN CÓDIGO y sale con
+   código 1 si algo bloquea. **Su salida se pega en el documento del
+   lote.** Existe porque el fallo del lote 10 (E2#11) no fue de juicio
+   sino de proceso: se repitió una cicatriz que ya estaba escrita —
+   presentar un **recall sobre los MAL** como si fuera **acierto sobre
+   N**—, se calcularon a mano tres cifras anti-atajo y las tres salieron
+   mal, y **no se corrió el gate de virginidad**, que ya era obligatorio.
+   Un procedimiento que depende de recordar falla.
+
+   Corrido a posteriori sobre aquel lote, lo habría **bloqueado con seis
+   razones**, entre ellas las tres que un revisor encontró a mano: el
+   atajo de la **LONGITUD** (12/16, p=0,038 — las frases más cortas eran
+   las MAL), y dos choques de virginidad a 0,598 y 0,579, uno de ellos
+   el ítem que era el *repair* textual de uno ya publicado.
+
+   La batería no es una lista de atajos conocidos: es un marco que mide,
+   para cada rasgo binario, cuánto acierta la regla «predice MAL si el
+   rasgo está» y su contraria, y marca lo que supere el azar por
+   binomial. **Un rasgo cualquiera que prediga la etiqueta es un atajo,
+   se le hubiera ocurrido a alguien o no.** Añadir un rasgo a
+   `scripts/lib/atajos.ts` lo mete en la batería para siempre.
+
+3. **Los dos gates de máquina, antes de gastar un revisor:**
    - `npx tsx scripts/check-bleed-docs.ts <doc>` (escrituras ajenas).
    - `npx tsx scripts/check-virginidad.ts --nuevos <candidatos.json>`
      — **el barrido de virginidad ya no se hace a ojo**. Compara cada
@@ -106,34 +134,34 @@ producción traducen mal «até»). El 45 % fue del lote, no de la línea.
      contrato v1.1 (arranques únicos, n-grama ≥6 de sourceText contra
      publicados). Y el registro de dominios por ETIQUETA no basta:
      «reunión» ≠ «visita de cliente» camufló el clon.
-3. **DOS `linguista-adversarial-pt` EN PARALELO, sin verse** (si los
+4. **DOS `linguista-adversarial-pt` EN PARALELO, sin verse** (si los
    agentes del repo no están registrados en la sesión: general-purpose
    con «lee y adopta .claude/agents/linguista-adversarial-pt.md»).
    Prompts distintos: al #1 dale el ángulo lingüístico (verdicts,
    Priberam, corpus de la propia biblioteca), al #2 el pedagógico
    (diseño del lote, patrones explotables, fugas, nivel real).
    Pídeles cotejar fuentes contra los JSON y responder tus notas.
-4. **REGLA DE CORTE (decisión de Edu, E2#8): un ítem que no pasa el
+5. **REGLA DE CORTE (decisión de Edu, E2#8): un ítem que no pasa el
    round en TRES rondas se mata o se degrada a un lote futuro con su
    diagnóstico escrito. El lote no se retiene por él, y no hay ronda
    5.** El lote 9 consumió tres sesiones enteras por tres ítems; a
    partir de ahí deja de ser rigor y es un bucle. Publicar el lote sin
    ellos es la decisión correcta: lo que muere queda documentado y
    puede renacer verificado en otro lote.
-5. **Convergencia**: lo convergente se aplica; lo de un solo revisor se
+6. **Convergencia**: lo convergente se aplica; lo de un solo revisor se
    aplica SOLO si es verificable de plano (una próclise sin clítico, un
    fichero que no existe) — si no, queda anotado para el siguiente
    lote. Conflicto directo entre revisores → gana el refuerzo
    estrictamente superior si existe; si no, queda el original, anotado.
-6. **Publicar por script** (scratchpad .mts): construye los ítems,
+7. **Publicar por script** (scratchpad .mts): construye los ítems,
    `contentHash` de `scripts/lib/staged-validate`, sello
    `variantVerificacion` con fecha y doc, y VALIDA ANTES de escribir
    (el lote 3 escribió y validó después: un modelo salió 61/60).
-7. **Gates**: barrido de `revisarEjercicio` + `revisarRegistro` sobre
+8. **Gates**: barrido de `revisarEjercicio` + `revisarRegistro` sobre
    los ítems nuevos (hallazgos didácticos esperados se declaran),
    `npm run verify:content` (los 4 errores de audio en translations son
    preexistentes), suite completa, y recuentos de modelo por script.
-8. **Doc a estado PUBLICADO** con la tabla de resultado (qué se retiró,
+9. **Doc a estado PUBLICADO** con la tabla de resultado (qué se retiró,
    qué convergió, qué quedó en conflicto) — el borrador se conserva
    debajo como historia. Commit por hito, push.
 
