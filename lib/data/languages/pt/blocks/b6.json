@@ -113,8 +113,8 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "5e01548a4904f952fa4a6c3237d9d235adbc33eec1d327d61528615f7c01c716",
-    "esContrast": "'Lidar com' significa 'manejar/hacer frente a', no 'lidiar con' como en español.",
+    "contentHash": "c25f5eeaa54d18fdf599766f6d975dad1d9f5ec3f7eb82a61d0c86ccfb8b7dd2",
+    "esContrast": "'Lidar com' es el equivalente exacto del español 'lidiar con' (también 'manejar', 'vérselas con').",
     "audio": {
       "br": {
         "hash": "ace77df661e64a33eee8f2a8cd171f7e46428facfccdb8b0876b7afd32d0861d",
@@ -126,6 +126,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "No início, ninguém sabia lidar com a situação.",
@@ -148,7 +149,7 @@
     "tags": [
       "sustantivo"
     ],
-    "contentHash": "3db3132411aae09e255cababee692101ce71f613e30eb6d8d6cece188f1c4519",
+    "contentHash": "4ab5ba01609e64e03864ca2374d872994368f170a17c9daed5255b58dcb4261c",
     "esContrast": "Falso amigo: PT 'ligar' = llamar por teléfono / encender; ES 'ligar' = ligar/atar. 'ligação' = llamada o conexión.",
     "audio": {
       "br": {
@@ -161,9 +162,10 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
-      "front": "Traduce: 'conexión, ligação'",
+      "front": "Traduce: 'conexión; llamada telefónica'",
       "back": "ligação",
       "example": "Há uma ligação entre os dois eventos."
     }
@@ -180,24 +182,25 @@
       "gramática",
       "colocação"
     ],
-    "contentHash": "056ccbeacdcadf180249f2bd758f54b6e1be357c1435bd5ce4eb8802eb7150fb",
-    "esContrast": "En español también funciona igual: 'Quizás venga'.",
+    "contentHash": "fdb30005ed544b98902cfc546c2c27202829ed4cfaeffe6b1d4d971fc986d2be",
+    "esContrast": "No funcionan igual: el español admite 'Quizá viene' (indicativo); el portugués, con 'talvez' antepuesto, exige conjuntivo — 'Talvez ele venha', nunca '*Talvez ele vem'.",
     "audio": {
       "br": {
-        "hash": "d893f45146ef57b5fa4e81170b052218cce6fb43aa81eabaf76ba9a91acfd4eb",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "6964bab9bbb26553c162da67d60f37bae49e4d2156be4bd9792dfebf2273f097",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "9398fccd48e0d48d391221cf91f85021c8ce686738fe525b0e80370aa7fa6848",
-        "voice": "Portuguese_Wiselady"
+        "hash": "6964bab9bbb26553c162da67d60f37bae49e4d2156be4bd9792dfebf2273f097",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 — audio regenerado (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Dónde va 'talvez' con subjuntivo?",
-      "back": "Antes ou depois do verbo no subjuntivo",
-      "example": "Talvez ele venha. / Ele talvez venha amanhã."
+      "back": "Antes do verbo: 'talvez' anteposto exige conjuntivo. Posposto ao verbo, usa-se o indicativo.",
+      "example": "Talvez ele venha. / Ele vem, talvez."
     }
   },
   {
@@ -214,8 +217,9 @@
       "verbo"
     ],
     "contentHash": "064a533b0fb717bc284090abeaa8faa08ebb843f680c5cedb6ef7fda978d7e2d",
-    "esContrast": "Em português, 'tomar' café é mais natural que em espanhol.",
+    "esContrast": "Con 'café' el portugués admite 'tomar' y 'beber'; el hueco va en presente de indicativo porque enuncia un hábito, no un deseo.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ um café todas as manhãs. (hábito/fato)",
@@ -246,10 +250,11 @@
     "contentHash": "078656698031dfbfaf2eaf5566c04acd8740ed496cdfd4ff1279d30818e9e586",
     "esContrast": "En ES 'gustar' no lleva preposición; en PT 'gostar' siempre rige DE.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
-      "sentence": "Quero que ela ___ mim.",
+      "sentence": "Quero que ela goste ___ mim.",
       "options": [
         "de",
         "a",
@@ -314,6 +319,7 @@
     ],
     "contentHash": "0a649f0c3988e88820d20bfc0d9d6ffbd00276e4d88ca4e1dcbeb943a9ace264",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Ninguém esperava que vocês ___ (ter) essa reação.",
@@ -338,22 +344,23 @@
       "coloquial",
       "falso-amigo"
     ],
-    "contentHash": "754c8bb60fe7feb8acdeaea67253c1ea9cf1768b45cf9691ebf0bf1e34eb0b60",
+    "contentHash": "bedd774b3f16c405e0216e33a20ad98c9b17d907d5b67af5d5d8f92796cb0f64",
     "esContrast": "'É possível que' funciona igual que 'Es posible que' en español: siempre lleva subjuntivo.",
     "audio": {
       "br": {
-        "hash": "ae4c5611a0110cb77a287d3a0fe1a43321f763499eb7b7b89d2698d4a4c0ef19",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "ca9037494083b24198371b0b037e2b7ffce1d8e87a37e22fa2b9e681f81c4d2c",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "485257fffd50b047ac5513a7b03323d89017b9ca62605c4da8b4fbf19cdc7bff",
-        "voice": "Portuguese_Wiselady"
+        "hash": "ca9037494083b24198371b0b037e2b7ffce1d8e87a37e22fa2b9e681f81c4d2c",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 — audio regenerado (informe-cola6-manual)",
     "type": "listening",
     "data": {
-      "audioText": "É possível que eles suspirem de tão grande que é a confiança.",
+      "audioText": "É possível que eles cheguem mais tarde, mas eu tenho confiança neles.",
       "question": "¿Qué tipo de expresión introduce el subjuntivo en esta frase?",
       "options": [
         "Expresión de deseo",
@@ -361,7 +368,7 @@
         "Expresión impersonal de posibilidad",
         "Expresión de duda"
       ],
-      "answer": "Expresión impersonal de possibilidade"
+      "answer": "Expresión impersonal de posibilidad"
     }
   },
   {
@@ -405,7 +412,7 @@
       "b6-contraste-indicativo-subjuntivo"
     ],
     "tags": [],
-    "contentHash": "7a95570f5236f62f2e2c236a0763cf2f5cf7dc6f537d1e941acf5be309bbb55f",
+    "contentHash": "131ebbe6372122dbf9777b04957cc471dd961a4b76b3b7118289b3d32b3d3aff",
     "esContrast": "'Tenho medo de que' requiere subjuntivo, igual que 'tengo miedo de que'.",
     "audio": {
       "br": {
@@ -418,14 +425,15 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "Tenho medo de que eles venham a público revelar tudo.",
-      "target": "Tengo miedo de que ellos vengan a público revelar todo.",
+      "target": "Tengo miedo de que lo hagan público todo.",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "Me da miedo que ellos vengan a público revelar todo."
+        "Me da miedo que salgan a la luz pública y lo cuenten todo."
       ]
     }
   },
@@ -546,6 +554,7 @@
     ],
     "contentHash": "14654ef2a62b5ea2086749c095d105dc1541ce55c826caeed91e6f8068142754",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu duvidava que ele ___ (perder) tanto tempo assim.",
@@ -754,7 +763,7 @@
       "subjuntivo",
       "temor"
     ],
-    "contentHash": "1a95c0df24058192a2a2fa51145ed288ea8f998270eaadee1fd499393d101516",
+    "contentHash": "69f96bcb5406e0fc76be90625c5a455a14521853246298f2d2c62d06e664bf9e",
     "esContrast": "Expresión de temor + subjuntivo: 'possa' (de 'poder'), 'venha' (de 'vir')",
     "audio": {
       "br": {
@@ -767,9 +776,10 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
-      "front": "Tengo miedo de que él no pueda venir. (traduce al PT-BR)",
+      "front": "Tengo miedo de que él no pueda venir. (traduce al portugués)",
       "back": "Tenho medo de que ele não possa vir.",
       "example": "Tenho medo de que ele não possa vir à reunião amanhã."
     }
@@ -785,8 +795,8 @@
     "tags": [
       "verbo"
     ],
-    "contentHash": "1c3050fc2889463321e135005ba844d25317ced334dbbb4043db84927f75f807",
-    "esContrast": "Comparten la misma raíz, pero 'apertar' es regulares (-ar).",
+    "contentHash": "d726b3f874eb49b8791078118ed3593fe95c6246ee6e9b14e7c69de6ec740133",
+    "esContrast": "El español 'apretar' diptonga (aprieto, apriete); el portugués 'apertar' no: eu aperto, que eu aperte.",
     "audio": {
       "br": {
         "hash": "d02a35e8a808d60e80b8e483347d20934a46626a7e73fe98ee1c92d949ef17c2",
@@ -798,6 +808,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
       "front": "Traduce: 'apretar, apretar la mano'",
@@ -829,6 +840,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "Espero que haya una buena conexión entre nosotros.",
@@ -864,6 +876,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: DUDA — La ficha es correcta (que eu fale) y usa el término europeo «presente do conjuntivo». La glosa, en cambio, no dice nada: «el presente del subjuntivo en portugués reemplaza al presente de subjuntivo español» es circular.  (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'falar' en presente do conjuntivo: Eu",
@@ -894,6 +907,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "listening",
     "data": {
       "audioText": "O professor pediu que vocês estudassem o início da lição.",
@@ -931,6 +945,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
       "front": "Traduce: 'inicio'",
@@ -1161,8 +1176,8 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "c68ef647b70a0190c7997021503662beb905de6cd8e5665c860f861c60dfaf57",
-    "esContrast": "'Confiança' = confianza (sustantivo); 'confiar' = confiar (verbo). No confundas con 'confianza' del español.",
+    "contentHash": "66f955dfeebd0a3fece972df40f03a55ed3f6131f75138242732de0b71e2a29d",
+    "esContrast": "'Confiança' es el cognado exacto de 'confianza'; lo único que cambia es la grafía del sufijo: -ança frente a -anza.",
     "audio": {
       "br": {
         "hash": "6d811cacd2f945d3ec8efce86445e77023d8f2ae7e3a002936ecd96a5bccdf02",
@@ -1174,6 +1189,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "No creo que ellos tengan la confianza necesaria.",
@@ -1226,23 +1242,24 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "29f2e9d3eb127dde553564ba01719d925ada369d4577467e5047c4bb6def9b52",
-    "esContrast": "'Lidar com' requiere 'com' aunque en español se diga simplemente 'lidiar'.",
+    "contentHash": "2ddc93629d096986ccbbe83ffbc0937b2d3e44d6b2e49ca9a7420c4f99d87552",
+    "esContrast": "'Lidar com' se construye igual que el español 'lidiar con'. Ojo a la forma: 'duvido' va sin acento gráfico.",
     "audio": {
       "br": {
-        "hash": "29a071442182fd185e636cbc57d3aafa743d665b6689a76211b43ebab7da8726",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "e92e0e7cfaee58bcc9b87c51a3930dc377f4c046bc0427593c9741037c27e8e3",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "f0b0a644337d13b370399416b8b1eb17a3ba672599f9599f56651e65afb6dac5",
-        "voice": "Portuguese_Wiselady"
+        "hash": "e92e0e7cfaee58bcc9b87c51a3930dc377f4c046bc0427593c9741037c27e8e3",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 — audio regenerado (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "Dudo que él sepa lidiar con este problema.",
-      "target": "Dúvido que ele saiba lidar com este problema.",
+      "target": "Duvido que ele saiba lidar com este problema.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
@@ -1289,8 +1306,9 @@
       "verbo-desejo"
     ],
     "contentHash": "299f77963db784f0539c06748fce7f5ca39ed8ff05ae68f66d1e5de5f1aed4d5",
-    "esContrast": "O subjuntivo em português funciona como em espanhol neste contexto.",
+    "esContrast": "El disparador va en indicativo ('quero') y es la subordinada la que va en conjuntivo ('que ela volte'), igual que en español.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ que ela volte logo. (desejo)",
@@ -1408,23 +1426,24 @@
     "tags": [
       "conector"
     ],
-    "contentHash": "2cd4cb671d26a0235ecaf59c67946087a21dc624da93182a34716cc9bc2b62f6",
+    "contentHash": "c8fdee9a11f3e56124ad262c34e44b4b1df540283ccb0984efac3c8a7628a188",
     "esContrast": "Equivale a 'En cuanto / Tan pronto como + subjuntivo' en español.",
     "audio": {
       "br": {
-        "hash": "87bd72edee5b44c0666138faf1fdcf2b06bf9f8a4b0c8392ccddc99628838cf3",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "8708b4f0934bc78c6afeb94e4e4a72dcf3f943a60c06cdf54090082c74aa31ec",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "a832eedeaeb518cd1c5cd81501b89290b1fc19cf9bbb6224e98eb1a48a9aecbf",
-        "voice": "Portuguese_Wiselady"
+        "hash": "8708b4f0934bc78c6afeb94e4e4a72dcf3f943a60c06cdf54090082c74aa31ec",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 — audio regenerado (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
       "front": "Conector ASSIM QUE + futuro do conjuntivo",
-      "back": "Indica ação que ocurrirá imediatamente após outra no futuro: Assim que + [verbo no futuro do conjuntivo]...",
+      "back": "Indica uma ação que ocorrerá imediatamente após outra no futuro: Assim que + [verbo no futuro do conjuntivo]...",
       "example": "Assim que a ligação terminar, vou aquecer o jantar."
     }
   },
@@ -2049,22 +2068,23 @@
       "b6-contraste-indicativo-subjuntivo"
     ],
     "tags": [],
-    "contentHash": "002a52a41fd47c4f31a4efc8420f850313d6a7134f44cbc51683038fe07cc122",
+    "contentHash": "f10350c8caf38c96dfffb2bb2d7c2b237fffbb8e8bd33b98bc19886ef9c63132",
     "esContrast": "Subjuntivo tras 'não ter certeza de que' porque expresa duda o inseguridad.",
     "audio": {
       "br": {
-        "hash": "a33372a2a717bba73f12a3bf3a383ad0f86116e459ff8d76b369570739a2d9ca",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "81ef0e1d93fcf27b547fb6bcbe1831e63ea9d345fb91bd1097d739f51d4ef808",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "4ccfc84fae6dd0c597282877b082721cf5cc50cf7839474f27420223c99ba5b6",
-        "voice": "Portuguese_Wiselady"
+        "hash": "81ef0e1d93fcf27b547fb6bcbe1831e63ea9d345fb91bd1097d739f51d4ef808",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 — audio regenerado (informe-cola6-manual)",
     "type": "translation",
     "data": {
-      "source": "Não tenho certeza de que eles saibam a resposta certa.",
+      "source": "Não tenho a certeza de que eles saibam a resposta certa.",
       "target": "No estoy seguro de que ellos sepan la respuesta correcta.",
       "sourceLang": "pt-br",
       "targetLang": "es",
@@ -2084,8 +2104,8 @@
     "tags": [
       "vocabulário"
     ],
-    "contentHash": "419a2f15885a84b9e589c28b8bcac701207caaab2b41711244934eb2923bb3d0",
-    "esContrast": "En PT-BR significa 'puesto de trabajo vacante', no 'vago/incierto'",
+    "contentHash": "9c61ba5c60aebca0a09c897a26581b4d81a9562ce5a0d6c558ae61871840b10f",
+    "esContrast": "'Vaga' es la vacante o la plaza, en Portugal y en Brasil; el adjetivo español 'vago/impreciso' se dice también 'vago'.",
     "audio": {
       "br": {
         "hash": "538ea62c4323cef8435313307d8b0a3ef02b10a13264994ff9ee7c2255ef74ae",
@@ -2097,9 +2117,10 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
-      "front": "vaga (substantivo - emprego)",
+      "front": "Traduce: 'vacante, plaza (de trabajo)'",
       "back": "vaga",
       "example": "Vi uma vaga de emprego interessante."
     }
@@ -2119,10 +2140,11 @@
     "contentHash": "41a169d972caef538142c2a868f5df3d73a3fd213da574acf6ba5b4652607f67",
     "esContrast": "En español 'necesitar' no lleva preposición. En PT 'precisar' exige DE.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
-      "sentence": "Assim que vocês ___ ___ ajuda, liguem para mim.",
+      "sentence": "Assim que vocês ___ ___ ajuda, liguem-me.",
       "options": [
         "precisarem de",
         "precisarem a",
@@ -2276,8 +2298,9 @@
       "frequente"
     ],
     "contentHash": "43b7e44d34cf7867802a4911271e57cc529faf3b5b6cf6af79fee87f320d4372",
-    "esContrast": "En español 'venir' no lleva prep; en PT 'vir DE' indica origen.",
+    "esContrast": "Igual que en español, 'vir de' indica origen; lo que cambia es la contracción obligatoria con el artículo: de + a = 'da galeria'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "vir",
@@ -2315,6 +2338,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: DUDA — No es falso, pero «Tenho confiança em que» es una construcción libresca que un portugués no usa: lo natural es «Estou confiante de que…» o «Tenho a certeza de que…». Cero apariciones de «confiança em que» en el corpus de (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "Tenho confiança em que ele vai resolver isso.",
@@ -2420,27 +2444,28 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "ed257eadfcdc0a79ff1548c945a1416e9026a25a7b1e2c163c29cfbd471cf358",
-    "esContrast": "'Saber' en subjuntivo: eu saiba, tu saibas, ele saiba. Presente do conjunctivo, no imperfecto.",
+    "contentHash": "11d35a19d7abf30de66bbb3081302b7d7ed70f8f7b1265249d65641d83f54a2d",
+    "esContrast": "'Saber' en presente do conjuntivo: eu saiba, tu saibas, ele saiba (no el imperfecto 'soubesse').",
     "audio": {
       "br": {
-        "hash": "a241cdf9b95a77a5bbfb3cf562ce652a409b82bcd24b9e85acb3e54ff99aabe9",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "ebe6f5d5aec8fbf967eba6f41817850bfcc5c788bbe212fe007724909540923d",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "4dc049bd9af2298c2f01568a7fa3754bafb5bb12d2676c27f0a4ba01ccb117a0",
-        "voice": "Portuguese_Wiselady"
+        "hash": "ebe6f5d5aec8fbf967eba6f41817850bfcc5c788bbe212fe007724909540923d",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 — audio regenerado (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "Dudo que él sepa lo que pasó.",
-      "target": "Dúvido que ele saiba o que aconteceu.",
+      "target": "Duvido que ele saiba o que aconteceu.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Dúvido que ele soubesse o que passou."
+        "Duvido que ele saiba o que se passou."
       ]
     }
   },
@@ -2556,7 +2581,7 @@
       "vocabulário",
       "adjetivo"
     ],
-    "contentHash": "496c54520beb90d53951d9c18e7ec2a46f81f40ca9747615a1d143d8d11c2a0f",
+    "contentHash": "114caa31e3c3a6555c129e7ee9453729cc8124b5c0d77dd9e32df923526cd01d",
     "audio": {
       "br": {
         "hash": "c1bb6a9c678cfd2cb6f15c2517b11e188c93fab5908ae3e9207f9c5e258fe7dd",
@@ -2568,9 +2593,10 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
-      "front": "apertado (adjetivo)",
+      "front": "Traduce: 'apretado, ajustado' (adjetivo)",
       "back": "apertado / apertada",
       "example": "O sapato está muito apertado."
     }
@@ -2751,8 +2777,9 @@
       "irregular"
     ],
     "contentHash": "4c1c9fb638c3ecd14940ec7d062bf5dabc54b6ac584d75d0bf985aa842bf3e3a",
-    "esContrast": "'Venir' en subjuntivo: pt 'venha' vs es 'venga'. Fíjate en la 'j'.",
+    "esContrast": "'Venir' en conjuntivo: pt 'venha' frente a es 'venga' — donde el español pone 'ng', el portugués pone 'nh'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Talvez ele ___ mais cedo hoje.",
@@ -2779,8 +2806,8 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "f1dd29b4b81da72bfb0e17e4b9dc70ef8508616c4f5b1d8d3715a94a6109c750",
-    "esContrast": "En portugués se usa conjunctivo después de 'talvez' (no indicativo como a veces se dice en español coloquial).",
+    "contentHash": "943785ba08254658bf44f9803f3eaa97526f66ca2c44ea01fb7145329f5d108a",
+    "esContrast": "Tras 'talvez' antepuesto el portugués exige conjuntivo; el español coloquial admite además el indicativo ('Quizá lo sabe').",
     "audio": {
       "br": {
         "hash": "d1eb6e7422965c529f30f9781f83b4d9973da257977378193243076d5be3d78f",
@@ -2792,6 +2819,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "Quizás él sepa la verdad mañana.",
@@ -2818,10 +2846,11 @@
     "contentHash": "4fd214c62c694bac2857c1ade5970e19eb7ac05e0b48895bd7c5eda6288cdbd5",
     "esContrast": "En ES 'necesitar' no lleva prep; en PT 'precisar' rige DE.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
-      "sentence": "É possível que nós ___ ajuda.",
+      "sentence": "É possível que nós precisemos ___ ajuda.",
       "options": [
         "de",
         "a",
@@ -2844,8 +2873,9 @@
       "subjuntivo"
     ],
     "contentHash": "5048626ca060c76a838c46437c212478e9289971d968880d144e4d6c355ffe88",
-    "esContrast": "'Duvidar' exige subjuntivo na subordinada; compare: 'não duvidar' exige indicativo.",
+    "esContrast": "'Duvidar' rige conjuntivo en la subordinada ('duvido que ele venha'); en negativa caben los dos modos. Aquí el hueco es el verbo principal y va en indicativo.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ que ele venha amanhã. (duvidar)",
@@ -2870,6 +2900,7 @@
     "contentHash": "520df8fd13d377eca2849351030add03754ee6ea2d5cf2e6d75373322361b388",
     "esContrast": "'Poder' en subjuntivo tras 'duvidar': pt 'possam' vs es 'puedan'. Ojo con la estructura.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Duvido que eles ___ lidar com essa situação difícil.",
@@ -3020,23 +3051,24 @@
     "tags": [
       "conector"
     ],
-    "contentHash": "566d289ad89ecb5f501022f2b79272a49ab43f9293087a1d572e4d2ea8f1e577",
+    "contentHash": "11ac24f5cdf089969568b086b7d2c6d9efdf301d67f84511fd83799232b094d4",
     "esContrast": "Equivale a 'Cuando + subjuntivo' en español. Estructura idéntica.",
     "audio": {
       "br": {
-        "hash": "26fe12718e7277ac7b244877a5ed88b7e4ac791fca903f7b72e1c674d821c7e0",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "5888868d123f89ebcc134a7c30ee96f5a1ce37037c02f39f465038d4100a2fb9",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "5580b8cb0de6d64c366c258707fa6e0442a6e83904e017db1d3600a13314cf7e",
-        "voice": "Portuguese_Wiselady"
+        "hash": "5888868d123f89ebcc134a7c30ee96f5a1ce37037c02f39f465038d4100a2fb9",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 — audio regenerado (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
       "front": "Conector QUANDO + futuro do conjuntivo",
-      "back": "Indica ação futura que ocurrirá no futuro: Quando + [sujeito] + [verbo no futuro do conjuntivo]...",
+      "back": "Indica uma ação futura ainda não realizada: Quando + [sujeito] + [verbo no futuro do conjuntivo]...",
       "example": "Quando eu conseguir a vaga, vou mudar de cidade."
     }
   },
@@ -3431,6 +3463,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Indicativo o conjuntivo? 'Talvez ele ___ a verdade.' (dizer)",
@@ -3480,8 +3513,8 @@
       "b6-contraste-indicativo-subjuntivo"
     ],
     "tags": [],
-    "contentHash": "5179c21b10df95b599f99fb4d3d1954948531e062218d7306bfd123f559f3d2c",
-    "esContrast": "Indicativo tras 'espero' en PT-BR cuando hay expectativa positiva directa.",
+    "contentHash": "d161c5c379afd1f081d9839e9bffc670cf6e854b49b020d34de3d729d43e9637",
+    "esContrast": "Tanto 'é estranho que' como 'espero que' rigen conjuntivo ('tenha ligado', 'esteja'), exactamente igual que en español.",
     "audio": {
       "br": {
         "hash": "c0825828a3a02da6e8580fa85b406b590ce1901123d3908bf7e2e6ad37c0e6cd",
@@ -3493,6 +3526,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "É estranho que ele não tenha ligado ainda; espero que esteja bem.",
@@ -3660,6 +3694,7 @@
     ],
     "contentHash": "682e66e263367c2f0607aac6062e9509dcabbec915183b63463a707431b51769",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Era impossível que ele ___ (ser) tão descuidado.",
@@ -3814,8 +3849,9 @@
       "emoção"
     ],
     "contentHash": "6cc037364f05661499eabfb68cd9989c19003dd6860945ffea0b8faeed7cdf21",
-    "esContrast": "'Lidar com' leva preposição 'com', que se mantém na subordinada.",
+    "esContrast": "'Lidar' rige 'com', igual que el español 'lidiar con', y la preposición se mantiene en la subordinada en conjuntivo: 'que ele lide com…'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Tenho medo de que ele ___ com o formulário. (lidar)",
@@ -3839,8 +3875,8 @@
     "tags": [
       "imperiosal"
     ],
-    "contentHash": "6d873e0e97d145d747240873ab71357321b4da6b6831e5bf6a23a5d0fe5a540f",
-    "esContrast": "Ojo: 'É importante que' exige subjuntivo en portugués, pero en español we'd say 'Es importante que' con subjuntivo también.",
+    "contentHash": "edfffc7b6afb38a7693236c2df0fc49bd713a5c6a90790774c925e195f9a31f5",
+    "esContrast": "'É importante que' rige conjuntivo, exactamente igual que el español 'es importante que'.",
     "audio": {
       "br": {
         "hash": "ca058749f0d3ece08c40c392f3fde2132766a6e634eb20be04f545bac2b9dfb3",
@@ -3852,6 +3888,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "listening",
     "data": {
       "audioText": "É importante que vocês preencham o formulário com confiança no início da ligação.",
@@ -4000,8 +4037,8 @@
     "tags": [
       "vocabulário"
     ],
-    "contentHash": "72151956f5a563899529ad460774a60feaf4b3c0a3df047c103c5aabc5fe3d96",
-    "esContrast": "Se escribe igual pero en PT-BR se usa con indicativo o conjuntivo según el contexto",
+    "contentHash": "5e79c970c0f0362ca18a08c1dd1d97d9ae0d1c9e26b292b845af20dc540ff34f",
+    "esContrast": "El español lo escribe separado ('tal vez') y admite indicativo; el portugués lo escribe junto y, antepuesto al verbo, exige conjuntivo: 'Talvez eu vá'.",
     "audio": {
       "br": {
         "hash": "e7a24ce4b2b1ae18b40686001a209ee1172c5782c529ae6765a3a4a34d7cb623",
@@ -4013,9 +4050,10 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
-      "front": "talvez",
+      "front": "Traduce: 'tal vez, quizá'",
       "back": "talvez",
       "example": "Talvez eu vá à festa amanhã."
     }
@@ -4113,6 +4151,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "Era necesario que ellos hicieran la presentación.",
@@ -4146,6 +4185,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "Talvez eu vá à reunião amanhã.",
@@ -4301,6 +4341,7 @@
     "contentHash": "7ae4955216a9897dc21058f0da6dd59f2764cccf5c6da2dec803d81ba4ae7946",
     "esContrast": "Español 'aprender' lleva 'a' (igual que PT); la estructura es idéntica.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "aprender",
@@ -4327,8 +4368,9 @@
       "formal"
     ],
     "contentHash": "7b8f1ddba4dfe7e56b97aeda1f7615b12576f1ea2b9eb8d29b2e30f88425e78c",
-    "esContrast": "Cuidado: 'ir' no imperfeito do conjuntivo é 'fosse/fôssemos/fossem', não 'fuese'.",
+    "esContrast": "El imperfecto de conjuntivo de 'ir' es 'fosse/fôssemos/fossem' — coincide con el de 'ser' —, no el español 'fuese'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "O gerente pediu que todos ___ (ir) para o exterior imediatamente.",
@@ -4448,26 +4490,27 @@
     "tags": [
       "regular"
     ],
-    "contentHash": "645e861ba5ea76a69e940493e6b88a3a8326120ae0b2576c8ae56e028400563a",
+    "contentHash": "ab2ebb7a48fd6ed10f5af30f5f3a53c39cd819671117bd639b15217b24a12b0b",
     "audio": {
       "br": {
-        "hash": "167b553fe39353180a1d87d9937f4a92201ffa903d4c29aa4d57be4811fa81ee",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "966b8b14a90bb2f517fffb2aaf61deaa7575a5de7d4e5f555a21ec8da9b1751e",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "8ed0a4286e9e337c623cb74910690e3ffa785dc08cf9722336d251828022b754",
-        "voice": "Portuguese_Wiselady"
+        "hash": "966b8b14a90bb2f517fffb2aaf61deaa7575a5de7d4e5f555a21ec8da9b1751e",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 — audio regenerado (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "Ojalá ella viviera más cerca de nosotros.",
-      "target": "Tomara que ela vivesse mais perto de nós.",
+      "target": "Oxalá ela vivesse mais perto de nós.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Oxalá ela vivesse mais perto de nós."
+        "Quem me dera que ela vivesse mais perto de nós."
       ]
     }
   },
@@ -4483,8 +4526,8 @@
       "conectores",
       "formal"
     ],
-    "contentHash": "7fa4ea72a1aa11b47dee276d7e880dcf0c7205b9066605db45e64513b22a6a4a",
-    "esContrast": "'Aquecer' se conjuga en subjuntivo futuro: eu aquecer, no confundir con 'calentar' español.",
+    "contentHash": "e53a8684dfec78be870f17ff563ce595b8e6a779479213a94b7752cf70d3e7a6",
+    "esContrast": "Tras 'assim que' va el futuro do conjuntivo, que en los verbos regulares coincide con el infinitivo: 'aquecer' = 'caliente' (español, presente de subjuntivo).",
     "audio": {
       "br": {
         "hash": "2462d244f0162b3dd12ae860ab9497ffad1069543f0a7dd7b2818319e7518026",
@@ -4496,6 +4539,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "listening",
     "data": {
       "audioText": "Assim que o verão aquecer, vamos estabelecer um rumo para o projeto.",
@@ -4722,6 +4766,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'comer' en presente do conjuntivo: Ele",
@@ -4741,7 +4786,7 @@
       "irregular",
       "falso-amigo"
     ],
-    "contentHash": "735458392c8a0af1cb07ac99ca3cf92446f4de6b0b1e4d235e0b1aa28091560f",
+    "contentHash": "f254dc83600ebc6b138fd00445fe42e9b284eba435f3365b7b6d0a6b6fc421f6",
     "esContrast": "'ligação' es sustantivo (conexión/llamada); 'ligar' es verbo (llamar / encender). En español 'ligar' significa flirtear o atar.",
     "audio": {
       "br": {
@@ -4754,6 +4799,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "Es importante que hagas la conexión correcta.",
@@ -4761,7 +4807,7 @@
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "É importante que facças a ligação correta."
+        "É importante que tu faças a ligação correta."
       ]
     }
   },
@@ -4855,6 +4901,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "Talvez ele venha amanhã.",
@@ -4911,8 +4958,9 @@
       "contraste-afirmação-negação"
     ],
     "contentHash": "8d514b7ee8b070856281581e0a0cf54b7c9fbcaa7ca529e2c9e2c0216abd1eae",
-    "esContrast": "'Achar' no indicativo expressa opinião; 'duvidar' exige subjuntivo na subordinada.",
+    "esContrast": "'Achar' introduce opinión y va con indicativo ('acho que ela está'); 'duvidar' exige conjuntivo ('duvido que esteja').",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ que ela está doente. Mas ___ que ___ mesmo. (achar / duvidar / estar)",
@@ -4924,15 +4972,13 @@
         },
         {
           "position": 1,
-          "answer": "não duvido",
+          "answer": "duvido",
           "alternatives": []
         },
         {
           "position": 2,
-          "answer": "está",
-          "alternatives": [
-            "esteja"
-          ]
+          "answer": "esteja",
+          "alternatives": []
         }
       ]
     }
@@ -5012,8 +5058,8 @@
       "vocabulário",
       "expressão"
     ],
-    "contentHash": "93088d54f3b52d547fc9cb86a6663282816486a2833b1a1736d4e726f523a5b0",
-    "esContrast": "Significa 'lidiar con/manejar', no solo 'tocar' como podría sugerir 'lidar'",
+    "contentHash": "4b5e7f76da657b835fe3fde94f3e79b44df31a651e0be38daf4409df0f427b67",
+    "esContrast": "'Lidar com' equivale al español 'lidiar con' / 'manejar'; con personas y problemas, no con objetos.",
     "audio": {
       "br": {
         "hash": "afab14e6eb47f2d13c71f97b7b34932764762b605052ef5f106787e0efa65e5a",
@@ -5025,9 +5071,10 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
-      "front": "lidar com (verbo)",
+      "front": "Traduce: 'lidiar con, vérselas con'",
       "back": "lidar com",
       "example": "Ela sabe lidar com situações difíceis."
     }
@@ -5112,7 +5159,7 @@
     "tags": [
       "coloquial"
     ],
-    "contentHash": "fa08a94de12682fa25216cd063bae3f6a9ddb1810a8949441290201ed3bd63c5",
+    "contentHash": "4df108bca8080c28c18f4ca3cc2a6b2f1b41fc69b35dd8261ee3780bc1ed9a2a",
     "esContrast": "'Lidar com' = lidiar con, ocuparse de. Verbo muy usado en portugués.",
     "audio": {
       "br": {
@@ -5125,9 +5172,10 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "translation",
     "data": {
-      "source": "Espero que puedas lidar con el problema.",
+      "source": "Espero que puedas lidiar con el problema.",
       "target": "Espero que possas lidar com o problema.",
       "sourceLang": "es",
       "targetLang": "pt-br",
@@ -5147,7 +5195,7 @@
     "tags": [
       "coloquial"
     ],
-    "contentHash": "980326fdbbc2a092dd4464c3249917461ec9c527792cb562b2136996958c4041",
+    "contentHash": "0b786ea4e5b05e3e5ed7eb26e9305a18f47436379d663af70e057734412496c4",
     "esContrast": "Saber = hecho conocido = indicativo. Con 'talvez' sería diferente.",
     "audio": {
       "br": {
@@ -5160,9 +5208,10 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
-      "front": "¿Indicativo o conjuntivo? 'Eu sei que ele ___ aqui.' (está)",
+      "front": "¿Indicativo o conjuntivo? 'Eu sei que ele ___ aqui.' (estar)",
       "back": "está (indicativo)",
       "example": "Eu sei que ele está aqui."
     }
@@ -5414,7 +5463,8 @@
       "vocabulário",
       "conjunção"
     ],
-    "contentHash": "9fce0ceb1d287f6323b5c5b9cb5c9a8a524461aa415225bf348fce85348c2d14",
+    "contentHash": "623a52b8aca9ab38cb309ecae05f1c02a5001d234989c207119c0f96d79f9286",
+    "esContrast": "El español lo escribe separado ('tal vez'); el portugués, junto, y antepuesto al verbo exige conjuntivo.",
     "audio": {
       "br": {
         "hash": "e7a24ce4b2b1ae18b40686001a209ee1172c5782c529ae6765a3a4a34d7cb623",
@@ -5426,9 +5476,10 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
-      "front": "talvez (adverbio)",
+      "front": "Traduce: 'tal vez, quizá' (adverbio)",
       "back": "talvez",
       "example": "Talvez ele venha amanhã."
     }
@@ -5476,7 +5527,7 @@
       "vocabulário",
       "substantivo"
     ],
-    "contentHash": "a3b799c6ffeb028b64b7b6f345c42b95ae93e7be54e93a0b8dfbd8d201a333c0",
+    "contentHash": "7df9573f7b089b712768db689fc419493f9414db4f106ee375bd6c5a87f332f3",
     "audio": {
       "br": {
         "hash": "d475c17690f8f77d2b945a2c9e9508deaafa0b52af2ca17072ecf700ef8e29c9",
@@ -5488,9 +5539,10 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
-      "front": "rumo (substantivo)",
+      "front": "Traduce: 'rumbo' (sustantivo)",
       "back": "rumo",
       "example": "O navio seguia rumo ao sul."
     }
@@ -5712,6 +5764,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
       "front": "Traduce: 'Es posible que...'",

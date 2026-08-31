@@ -3528,10 +3528,11 @@
     "contentHash": "844d0dc08949f0d4555633aa097519df1eba02d08538b98039a8d89d77ac458a",
     "esContrast": "En español 'recordar' puede ser directo; en PT se dice 'lembrar DE algo/alguém'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "lembrar",
-      "sentence": "Quando estiver no exterior, eu sempre ___ de nossas conversas sobre o futuro.",
+      "sentence": "Quando estiver no estrangeiro, eu sempre me ___ ti e das nossas conversas sobre o futuro.",
       "options": [
         "lembrarei",
         "lembrarei de",
@@ -3555,10 +3556,11 @@
     "contentHash": "848f2e9007e022e6dbffdb4cbbe52a0704729773ec922d14c0226444a454dcd4",
     "esContrast": "En español 'soñar CON', en PT se usa 'sonhar COM' (no con DE).",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "sonhar",
-      "sentence": "Sou sonhador, sempre vou ___ sonhar com preços baixos.",
+      "sentence": "Sou sonhador, sempre vou sonhar ___ preços baixos.",
       "options": [
         "com",
         "de",
@@ -3579,22 +3581,23 @@
     "tags": [
       "informal"
     ],
-    "contentHash": "264338930f26809bdb7b4433c2d1e8fcfc986b2a4bc91ac872a5101c658ab68d",
-    "esContrast": "sonhador ≠ soñador (cambia la 'h' por 'ñ')",
+    "contentHash": "b84214c929c243087329c401bcd2cfc3581bbbca0b74f4b95c78f4db74931ef4",
+    "esContrast": "'Sonhador' es el cognado exacto de 'soñador': al grupo 'nh' portugués le corresponde la 'ñ' española.",
     "audio": {
       "br": {
-        "hash": "01e1c608f51e627b53dca9207213149faed0368b7fc433143ed4ba96dd9fdb06",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "a2ac803799328836e00f67f576754f39434154bb709f67b9e2fe2f4728f86904",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "c137b5eb7314f66f477005b2fe833e9f853f32f441b5b8e3f36ba666f13d7a33",
-        "voice": "Portuguese_Wiselady"
+        "hash": "a2ac803799328836e00f67f576754f39434154bb709f67b9e2fe2f4728f86904",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 — audio regenerado (informe-cola6-manual)",
     "type": "translation",
     "data": {
-      "source": "O meu avô era um sonhador, sempre acreditou em impossível.",
+      "source": "O meu avô era um sonhador, sempre acreditou no impossível.",
       "target": "Mi abuelo era un soñador, siempre creyó en lo imposible.",
       "sourceLang": "pt-br",
       "targetLang": "es",
@@ -3671,6 +3674,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "Ele contou que faria um grande esforço para realizar o projeto.",
@@ -3738,6 +3742,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
       "front": "preços",
@@ -3911,8 +3916,8 @@
       "discurso-relatado",
       "irregular"
     ],
-    "contentHash": "bed847a71b64406a2d39d5ea17d418c3f00a1b3efe2e9817683423c7fba55669",
-    "esContrast": "'Veria' de 'ver' (irregular) equivale a 'vería' de 'ver' — ambos mantienen la irregularidad en condicional.",
+    "contentHash": "2d50d064a65d3ba8b96d5aafe2059511cc0932e51a608ee87e944dceca85f0e2",
+    "esContrast": "'Veria' se forma sobre el infinitivo (ver + ia), como en español. En portugués sólo dizer, fazer y trazer son irregulares en futuro y condicional: diria, faria, traria.",
     "audio": {
       "br": {
         "hash": "f8e16eed13c20a98e1426260dfc076574c4186eab64273ea980325311ee94a23",
@@ -3924,6 +3929,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "A testemunha afirmou que veria tudo claramente naquela noite.",
@@ -3983,6 +3989,7 @@
     "contentHash": "8dc0261c66796ad9d2a60be990312e69d14f75a30c99c8590f4572ae858f5871",
     "esContrast": "'Faria' es el condicional de 'fazer'. En discurso indirecto, el futuro se convierte en condicional.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela disse que ___ a viagem no mês que vem.",
@@ -4177,8 +4184,8 @@
     "tags": [
       "formal"
     ],
-    "contentHash": "164fa4d05caa7f28cdf5e8672bf6536c4fbf0ef3cdde42676c999ab3da436f0e",
-    "esContrast": "'Poupar' ≠ 'economizar' en PT (aunque 'economizar' también existe).",
+    "contentHash": "57337f29b18fc9af5524955c6631ed78a5806ad54c0a61df45210bbe25fe7a14",
+    "esContrast": "'Ahorrar' se dice 'poupar' (también vale 'economizar'); 'ahorrar' no existe en portugués.",
     "audio": {
       "br": {
         "hash": "2061838930bd6a064c305ba07d8ce512d98d583f4728d24f49817e2607886900",
@@ -4190,6 +4197,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "Vamos a presentar un plan concreto para ahorrar en precios de vivienda.",
@@ -4197,7 +4205,7 @@
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Vamos apresentar um plano concreto para ahorrar em preços de habitação."
+        "Vamos apresentar um plano concreto para poupar nos preços da habitação."
       ]
     }
   },
@@ -4421,8 +4429,9 @@
       "falso-amigo"
     ],
     "contentHash": "a4283e03a693a6daabdb5ecf99c81f18fe7fdc51301155af2eb12adb83f47a3b",
-    "esContrast": "'Trarei' parece 'traería' mas significa 'vou trazer'. Atenção ao acento!",
+    "esContrast": "El futuro de 'trazer' es irregular, como fazer y dizer: 'trarei' (no '*trazerei'). Equivale al español 'traeré'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ os documentos para a reunião na segunda-feira.",
@@ -4461,6 +4470,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "Quando vierem, já terá terminado.",
@@ -4551,6 +4561,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "Em breve saberemos as novidades.",
@@ -4642,6 +4653,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "Vou ser mais concreta: precisamos de resultados.",
@@ -4997,8 +5009,9 @@
       "discurso-relatado"
     ],
     "contentHash": "b887a7a8aa8f98e601e2c2b33f4c277ef045dbbd2853a6b90cf9b1356b7959b1",
-    "esContrast": "En portugués se dice 'faria esforço', no 'faría esfuerzo'.",
+    "esContrast": "'Faria' es el condicional de 'fazer' y equivale a 'haría': ambas lenguas acortan la raíz (far- / har-).",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "O João disse que ___ mais esforço para passar no exame.",
@@ -5037,6 +5050,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: DUDA — Frase y traducción correctas, pero la glosa llama «futuro del pretérito» a lo que el propio bloque llama «condicional» (b5-l3-condicional): nomenclatura brasileña dentro de una base europea. Sugerido: «'Seria adiada' es  (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "O gerente informou que a reunião seria adiada para quinta-feira.",
@@ -5362,8 +5376,8 @@
     "tags": [
       "discurso-indireto"
     ],
-    "contentHash": "c4c353d837832dc74224c12d35ab119003e2d4c8015f7a3058ab5946074974d7",
-    "esContrast": "Querer → queria en discurso indirecto (condicional imperfecto).",
+    "contentHash": "83fe1e0ade0b333d954c79830fa55ec8f22a271c1dbeb1171337eaa85e1176a3",
+    "esContrast": "En el discurso indirecto 'quero' pasa a 'queria' (pretérito imperfeito do indicativo), igual que el español 'quiero' → 'quería'.",
     "audio": {
       "br": {
         "hash": "0ee8b4d908de6b40aa05d8f6fcdd7970065e936e7e45aa79df70b9170ec59fce",
@@ -5375,9 +5389,10 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
-      "front": "'Maria disse: Eu quero este emprego.' → Transforma a discurso indirecto.",
+      "front": "'Maria disse: Eu quero este emprego.' → Transforma em discurso indireto.",
       "back": "Maria disse que queria aquele emprego.",
       "example": "O gerente disse que queria realizar a entrevista logo."
     }
@@ -5437,6 +5452,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "Os preços vão baixar no próximo mês.",
@@ -5500,6 +5516,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: DUDA — La glosa es de las buenas del bloque («saberá», no «sabrá»; raíz sabe-) y el back es correcto. Dos reservas de variante: la etiqueta «futuro do presente» es la brasileña (en Portugal, «futuro do indicativo»; el mismo blo (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'saber' en futuro do presente (você, elas):",
@@ -5584,10 +5601,11 @@
     "contentHash": "ccdeaeaa72565905a0264cac5abcb6502299b769dd02d47afc1594f4881c0c03",
     "esContrast": "En español 'gustar' es intransitivo, en PT 'gostar' requiere la preposición DE.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
-      "sentence": "No próximo ano, eu ___ muito deste curso de português.",
+      "sentence": "No próximo ano, eu vou gostar muito ___ estudar português.",
       "options": [
         "de",
         "a",
@@ -5621,6 +5639,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "Mi hermano dice que va a ser un sueño, pero es muy soñador.",
@@ -5670,8 +5689,9 @@
       "regular"
     ],
     "contentHash": "d2a6e5384575a4739e3f7b5bc35242772b52284f770c6a9fc2b2604caff2b0b4",
-    "esContrast": "Lembre-se: em pt, a terminação do futuro é '-á' na 3ª pessoa, não '-á' como em es.",
+    "esContrast": "En la 3.ª persona el futuro portugués coincide con el español ('resolverá'); donde se separan es en la 1.ª: 'resolverei' frente a 'resolveré'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela ___ os exercícios de matemática amanhã.",
@@ -5729,8 +5749,8 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "d795eee06680c0d872757d4e78d9935ee9c2a2623fac481126ed1ab946d869bc",
-    "esContrast": "En español 'vendrá'; en portugués cambia la raíz: vir.",
+    "contentHash": "e868370ed2024e9a9b46180da3ec9b4a92635848f7391dabe1f6eefcdc5c2d8c",
+    "esContrast": "El español cambia la raíz en el futuro de 'venir' ('vendrá'); el portugués la conserva: 'vir' → 'virá'.",
     "audio": {
       "br": {
         "hash": "9622b4ceb39407aac655dd375d480f717f9713d3020425f68ee0f50962b1dc8a",
@@ -5742,10 +5762,11 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "listening",
     "data": {
       "audioText": "O professor disse que virá à reunião amanhã para falar sobre os projetos.",
-      "question": "¿Qué verbo tiene una forma irregular en futuro?",
+      "question": "¿Qué verbo está en futuro?",
       "options": [
         "disse",
         "virá",
@@ -5964,6 +5985,7 @@
     "contentHash": "de11f97eaa3ceda5618d22840e49915dd1dd7971e630ae675d60d8f6912aa8a5",
     "esContrast": "Dos acciones futuras en secuencia: 'voy a viajar... voy a conocer'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Este verão eu ___ viajar para Lisboa e ___ conhecer a família do meu pai.",
@@ -6130,8 +6152,8 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "951c57d95ba31d1acc4c8c42ab6925117cfd4d79dcfb44adfc6ebd82b484bb4a",
-    "esContrast": "'Concretar' ≠ 'concreto': el primero requiere 'concretizar' en PT.",
+    "contentHash": "c7d9423c7ca3bf5514646186ef9e278720ab32ca6b8903a3ebd3b67745606db4",
+    "esContrast": "El futuro perifrástico portugués no lleva 'a': 'vou falar', nunca '*vou a falar'. Y el posesivo va con artículo: 'a minha mãe'.",
     "audio": {
       "br": {
         "hash": "3e1bb84497356a22584c4aec3852a984fe09db7c3645c16cbb264b101fc50646",
@@ -6143,6 +6165,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "translation",
     "data": {
       "source": "Voy a hablar con mi madre mañana.",
@@ -6503,6 +6526,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: DUDA — Formas correctas (irás, iremos) y ejemplo europeo. Dos reservas: la etiqueta «futuro do presente» es brasileña, y el tag «verbo-irregular» es falso — «ir» es perfectamente regular en el futuro (irei, irás, irá). Sugerido (informe-cola6-manual)",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'ir' en futuro do presente (tu, nós):",
@@ -6553,15 +6577,18 @@
     "contentHash": "fd774631f54d29e0a61fb587ba96ab07012077233ac23667a930abb78bafe2c2",
     "esContrast": "'Deveria' es condicional de 'dever' = 'debería'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "A médica disse que eu ___ mais atenção à minha saúde.",
       "blanks": [
         {
           "position": 0,
-          "answer": "deveria",
+          "answer": "deveria dar",
           "alternatives": [
-            "teria que dar"
+            "teria que dar",
+            "deveria prestar",
+            "devia dar"
           ]
         }
       ]
@@ -6678,6 +6705,7 @@
     ],
     "contentHash": "dcc3f383c404ea64ad48e02f2ab2711eddf530a8589663498baec8c418c75c35",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: DUDA — Conjugación de «falar» correcta (verificada) y pista española exacta. La reserva es de nomenclatura: «futuro do presente» es el término escolar BRASILEÑO; en Portugal es «futuro do indicativo». El corpus ya usa los térmi (informe-cola6-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "falar",
@@ -6701,6 +6729,7 @@
     ],
     "contentHash": "cd2409b8037528cdd8204c8506f447148a92355d29a843fb8719a869aa515c11",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: DUDA — Conjugación de «ser» correcta (verificada) y pista española exacta. La reserva es de nomenclatura: «futuro do presente» es el término escolar BRASILEÑO; en Portugal es «futuro do indicativo». El corpus ya usa los término (informe-cola6-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "ser",
@@ -6725,6 +6754,7 @@
     ],
     "contentHash": "e448128f5d4b0be9b575ca251cb950be8bf561e2c80228de048b240e44dc2c51",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: DUDA — Conjugación de «fazer» correcta (verificada) y pista española exacta. La reserva es de nomenclatura: «futuro do presente» es el término escolar BRASILEÑO; en Portugal es «futuro do indicativo». El corpus ya usa los térmi (informe-cola6-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "fazer",
@@ -6749,6 +6779,7 @@
     ],
     "contentHash": "dc8aba2f2582abbc35e21bc94ced3ad45eb8b9c37a58c05c748691d1120889c8",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: DUDA — Conjugación de «dizer» correcta (verificada) y pista española exacta. La reserva es de nomenclatura: «futuro do presente» es el término escolar BRASILEÑO; en Portugal es «futuro do indicativo». El corpus ya usa los térmi (informe-cola6-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "dizer",
@@ -6773,6 +6804,7 @@
     ],
     "contentHash": "9901423934ce14392c418487cd3ca8ea1336bb37a01353fb3946cf1e8a2698fe",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: DUDA — Conjugación de «trazer» correcta (verificada) y pista española exacta. La reserva es de nomenclatura: «futuro do presente» es el término escolar BRASILEÑO; en Portugal es «futuro do indicativo». El corpus ya usa los térm (informe-cola6-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "trazer",
@@ -6796,17 +6828,20 @@
     ],
     "contentHash": "37740d017fe7e70a01a447419d995b0f5b2fe5dda472a90f4b4df0066e40d852",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual) · etiqueta «futuro do presente» NO tocada: es DUDA pendiente de Edu para los 7 ítems a la vez",
     "type": "conjugation",
     "data": {
       "infinitive": "ter",
-      "person": "você",
+      "person": "tu",
       "tense": "futuro do presente",
-      "answer": "terá",
-      "hintEs": "tú/usted tendrá(s)"
+      "answer": "terás",
+      "hintEs": "tú tendrás"
     },
     "variantOverrides": {
-      "pt-pt": {
-        "answer": "terás"
+      "pt-br": {
+        "person": "você",
+        "answer": "terá",
+        "hintEs": "usted tendrá"
       }
     }
   },
@@ -6824,6 +6859,7 @@
     ],
     "contentHash": "7531c36d29b26a7092b084cec3f823f3736018b38aea395467c52a1d33fd034f",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: DUDA — Conjugación de «ir» correcta (verificada) y pista española exacta. La reserva es de nomenclatura: «futuro do presente» es el término escolar BRASILEÑO; en Portugal es «futuro do indicativo». El corpus ya usa los términos (informe-cola6-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "ir",
@@ -6847,6 +6883,7 @@
     ],
     "contentHash": "2f68e5794be44835bf290fabf3537846f0869148250654928b933736370fd4e3",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "falar",
@@ -6871,6 +6908,7 @@
     ],
     "contentHash": "b785e4db94a288419d4562536d70332688dc71bd6cf0e90d038f5307b424a1f8",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "fazer",
@@ -6895,6 +6933,7 @@
     ],
     "contentHash": "55a0666fc16c547f8ba398d35cb99984fee56e8e9c853c03a0bbdeaa767124e2",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "dizer",
@@ -6918,6 +6957,7 @@
     ],
     "contentHash": "4c7ac2f05256b392622104a63988b70a6df21f21abb4f424451ec2f6f1e32519",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "ser",
@@ -6941,6 +6981,7 @@
     ],
     "contentHash": "05449e184dabc3cd079565ade9a1116673631dc045f73dbb394e7728c0f97e1f",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "gostar",
@@ -6964,6 +7005,7 @@
     ],
     "contentHash": "b81e8fda29ba46380a36275c417c445810cb66141bab0728f5bc5d0961a02887",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "ver",
@@ -6988,6 +7030,7 @@
     "contentHash": "85396ad6d0d789b09f180e4bc5af118cb931d31cd0a18b60fec202d7e4cd3267",
     "esContrast": "Calco del acento español ('hablaré'); el futuro en PT hace la 1ª persona en '-ei': 'falarei'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "error_correction",
     "data": {
       "sentence": "Amanhã eu falaré com o chefe.",
@@ -7011,6 +7054,7 @@
     "contentHash": "da0227bd3bbc11ce81c4f64ec26bd3cb84bb777383152265e327c87898924d0f",
     "esContrast": "'fazer' tiene futuro irregular: 'farei', no la forma regular 'fazerei'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "error_correction",
     "data": {
       "sentence": "Eu fazerei isso amanhã de manhã.",
@@ -7033,6 +7077,7 @@
     "contentHash": "eb7f85c1c6b5365f23fa0895e165ed70f226ce39b9a12c45ce7f5ce4f3fa3f3b",
     "esContrast": "El futuro perifrástico en PT es 'ir + infinitivo' SIN 'a' (vou falar), a diferencia del español 'ir a + infinitivo'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "error_correction",
     "data": {
       "sentence": "Eu vou a falar com ela hoje.",
@@ -7100,6 +7145,7 @@
     "contentHash": "dc5f73f8156c75ec0187fdf196572839c25a67c2e1757e7c96fe8b1ae081def2",
     "esContrast": "El discurso indirecto en pasado convierte el futuro en condicional: 'chegaria'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: DUDA — El ítem exige corregir una frase que NO es agramatical: «Ele disse que chegará tarde à reunião» es perfectamente correcto si la reunión sigue siendo futura respecto al momento de hablar (igual que «dijo que llegará tarde (informe-cola6-manual)",
     "type": "error_correction",
     "data": {
       "sentence": "Ele disse que chegará tarde à reunião.",
@@ -7121,6 +7167,7 @@
     "contentHash": "7502f1c7932ae272a38c50132a7062111d92146dbaf99a6cc630d5db86c1ff98",
     "esContrast": "Futuro de 'viajar' en 'nós': 'viajaremos'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Amanhã nós ___ (viajar) para o Rio de Janeiro.",
@@ -7198,6 +7245,7 @@
     ],
     "contentHash": "4b100602e9db36751880569cd188b35fbc0b50f3f3270012ee9f4bd54eedb27b",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: DUDA — Opciones y explicación correctas («fazerei» no existe, «faço» es presente). Misma reserva de nomenclatura: la pregunta dice «futuro do presente» (brasileño) en una base europea. (informe-cola6-manual)",
     "type": "multiple_choice",
     "data": {
       "question": "¿Cuál es el futuro do presente de 'fazer' (eu)?",
@@ -7224,6 +7272,7 @@
     ],
     "contentHash": "d4b0188a60c4fbbe2b85945173b6201027f46e963724cb64a7e625a0ab5a0391",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
     "type": "multiple_choice",
     "data": {
       "question": "En portugués brasileño coloquial, ¿cómo se expresa más a menudo el futuro?",
@@ -7250,16 +7299,17 @@
     ],
     "contentHash": "707ac39c5c670ad445a64ac2903b67067438d27872c5295339673da3eba394e5",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
     "type": "multiple_choice",
     "data": {
       "question": "'Se eu tivesse dinheiro, ___ uma casa.' ¿Cuál completa correctamente?",
       "options": [
         "compraria",
         "comprarei",
-        "comprava"
+        "comprei"
       ],
       "correctIndex": 0,
-      "explanationEs": "Condición irreal: la principal va en condicional ('compraria')."
+      "explanationEs": "Condición irreal: la principal va en condicional ('compraria'). En portugués europeo coloquial también se usa el imperfecto de indicativo ('comprava'), pero nunca el pretérito perfecto ('comprei')."
     }
   }
 ]
