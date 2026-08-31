@@ -12,7 +12,7 @@
 // de la clave, proporción de ítems de CONTRASTE (donde la forma marcada
 // es la incorrecta), y que ningún distractor sea la respuesta.
 import fs from 'node:fs';
-import { futuro, condicional, futuroComposto, mesoclise, participio, type Persona, type Clitico } from './lib/paradigma-pt';
+import { futuro, condicional, futuroComposto, mesoclise, participio, proclise, type Persona, type Clitico } from './lib/paradigma-pt';
 
 const DOC = process.argv[2];
 if (!DOC) { console.error('uso: check-paradigma.ts <doc.md>'); process.exit(2); }
@@ -69,6 +69,10 @@ function recalcular(expr: string): string {
     case 'participio': return participio(args[0]!);
     case 'futuroComposto': return futuroComposto(args[0]!, args[1] as Persona);
     case 'mesoclise': return mesoclise(args[0]!, args[1] as Clitico, args[2] as Persona, (args[3] as 'futuro' | 'condicional') ?? 'futuro');
+    // Los ítems de CONTRASTE también tienen forma derivable: la próclise
+    // que el atractor impone. Sin esto el gate los saltaba —4 de los 10
+    // que decía haber cerrado— porque no declaraban derivación.
+    case 'proclise': return proclise(args[0]! as Clitico, futuro(args[1]!, args[2] as Persona));
     default: throw new Error(`derivación desconocida: ${fn}`);
   }
 }

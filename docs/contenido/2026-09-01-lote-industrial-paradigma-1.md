@@ -189,6 +189,7 @@ justifique; [3] condicional, otro tiempo.
 y la desinencia del futuro.
 
 ### PAR-15 · multiple_choice · CON ATRACTOR, gana la próclise
+**derivación:** `proclise('me', 'dizer', 'ele')` → **me dirá**
 **frase:** «Ele **não** ___ o preço antes de ver a casa toda.»
 **opciones:** [0] dir-me-á · [1] dirá-me · [2] **me dirá** ✅ · [3] dir-me-ia
 **defecto:** [0] la mesóclise es correcta en abstracto, **pero la
@@ -198,6 +199,7 @@ condicional.
 sobre la mesóclise**. Con «não», el clítico va delante: «não me dirá».
 
 ### PAR-16 · multiple_choice · CON ATRACTOR, gana la próclise
+**derivación:** `proclise('te', 'dar', 'ele')` → **te dará**
 **frase:** «**Quem** ___ a notícia primeiro?»
 **opciones:** [0] **te dará** ✅ · [1] dar-te-á · [2] dará-te · [3] dar-te-ia
 **defecto:** [1] mesóclise cancelada por el interrogativo; [2] ênclise;
@@ -254,6 +256,7 @@ dos cosas a la vez. Pospuesto («Vende-se, talvez») llevaría indicativo.
 queda intacto: escrever + lhes + ão.
 
 ### PAR-23 · multiple_choice · CON ATRACTOR, gana la próclise
+**derivación:** `proclise('nos', 'entregar', 'ele')` → **nos entregará**
 **frase:** «Ela diz **que** ___ o dinheiro na segunda-feira.»
 **opciones:** [0] entregar-nos-á · [1] entregará-nos · [2] **nos entregará** ✅ · [3] entregar-nos-ia
 **defecto:** [0] mesóclise cancelada por la subordinada; [1] ênclise; [3]

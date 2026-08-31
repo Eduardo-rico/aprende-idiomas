@@ -69,7 +69,13 @@ function fundirConR(tema: string, c: Clitico): string {
   const l = `l${c}`;
   if (tema.endsWith('ar')) return `${sinR.slice(0, -1)}á-${l}`;
   if (tema.endsWith('er')) return `${sinR.slice(0, -1)}ê-${l}`;
-  if (tema.endsWith('ir')) return `${sinR}-${l}`;   // sin acento: parti-lo
+  if (tema.endsWith('ir')) {
+    // …salvo con HIATO, que es la misma excepción del participio de aquí
+    // arriba y que esta función olvidaba: constru-í-lo, possu-í-lo.
+    const antes = sinR.slice(0, -1);
+    const hiato = /[aeo]$/.test(antes) || (/u$/.test(antes) && !/[qg]u$/.test(antes));
+    return hiato ? `${antes}í-${l}` : `${sinR}-${l}`;   // parti-lo, pero construí-lo
+  }
   return `${sinR}-${l}`;
 }
 

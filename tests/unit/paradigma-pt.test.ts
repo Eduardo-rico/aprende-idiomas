@@ -86,6 +86,17 @@ describe('mesóclise — el clítico va DENTRO', () => {
     expect(mesoclise('abrir', 'a', 'eu')).toBe('abri-la-ei');
   });
 
+  // …salvo cuando hay HIATO, que es la misma excepción que el participio
+  // ya conocía tres funciones más arriba y que `fundirConR` olvidaba:
+  // constru-í-lo, possu-í-lo, atra-í-lo. Bug latente, cazado por el round
+  // del lote — ningún ítem lo ejercía, pero la glosa de uno documentaba
+  // la regla falsa que el bug implementaba.
+  it('pero SÍ los -ir con hiato: construí-lo, possuí-la, atraí-lo', () => {
+    expect(mesoclise('construir', 'o', 'ele')).toBe('construí-lo-á');
+    expect(mesoclise('possuir', 'a', 'eu')).toBe('possuí-la-ei');
+    expect(mesoclise('atrair', 'o', 'eles')).toBe('atraí-lo-ão');
+  });
+
   it('los tres irregulares mesoclizan sobre su raíz corta', () => {
     expect(mesoclise('dizer', 'te', 'eu')).toBe('dir-te-ei');
     expect(mesoclise('fazer', 'lhe', 'ele')).toBe('far-lhe-á');
