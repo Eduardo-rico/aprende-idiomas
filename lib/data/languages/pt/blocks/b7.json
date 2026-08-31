@@ -11,24 +11,25 @@
       "gramática",
       "conjugação"
     ],
-    "contentHash": "03b92017533a626f539196c8f759c06f9384983075d924877aa6be7f072941b5",
-    "esContrast": "En español diríamos 'hablar yo', pero no existe: solo 'hablar'.",
+    "contentHash": "aca98b31f6943b7f6806a03024b26e2082eb1e0d25e5e6b14b763fa7bfa04848",
+    "esContrast": "En la 1.ª del singular el infinitivo pessoal no lleva desinencia: la forma es «falar», idéntica al infinitivo, y el sujeto va delante («é importante eu falar»). Donde sí se ve la flexión es en falares (tu), falarmos (nós), falarem (eles). En español el infinitivo no flexiona nunca.",
     "audio": {
       "br": {
-        "hash": "ceaaaf35b62fe44963cfa69c19a473c49ecbc376666f45769aefb06e33c1ac36",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "680d842d24ec78067076be5065f0b39265f65cc6e16b6ef822129829aaf54dcd",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "1b0a134cb6dcff50f4b7a55a0567be2cca54b2bf061aa518316a8e545b2cb43c",
-        "voice": "Portuguese_Wiselady"
+        "hash": "680d842d24ec78067076be5065f0b39265f65cc6e16b6ef822129829aaf54dcd",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 — audio regenerado (informe-cola7-manual)",
     "type": "flashcard",
     "data": {
-      "front": "Conjuga o infinitivo pessoal de 'falar' na 1ª pessoa do singular",
-      "back": "falar eu",
-      "example": "Falar eu assim foi um erro."
+      "front": "Infinitivo pessoal de «falar» en 1.ª persona del singular (eu)",
+      "back": "falar",
+      "example": "Foi um erro eu falar assim."
     }
   },
   {
@@ -40,8 +41,8 @@
       "b7-infinitivo-pessoal"
     ],
     "tags": [],
-    "contentHash": "b8a961d15abd77c85c8d0a895bf9878ba49dc4d03e6a637854bcfc34a1ead579",
-    "esContrast": "El portugués puede usar 'sem + infinitivo pessoal' donde el español requiere 'sin + infinitivo compuesto'.",
+    "contentHash": "b6e39a5cf452a35f9449430e7bcaba917868da71590c558d29590b255fc67195",
+    "esContrast": "El portugués mete el sujeto delante del infinitivo: «sem eu perceber». El español no puede, y tiene que abrir una subordinada: «sin que yo lo percibiera».",
     "audio": {
       "br": {
         "hash": "3aa7325de11df9112b81c7af8ecd9d3fe79f483c834cda6cb8b89ab2d3d60929",
@@ -53,6 +54,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "Sem eu perceber, ela já tinha decidido tudo.",
@@ -75,15 +77,16 @@
     "tags": [],
     "contentHash": "04c90f64050511c0a5060254dde66b8f5d8b6a15db040d37dc8b1ce436d2e42a",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Ele ficou ___ enquanto esperava a resposta.",
+      "sentence": "Ele ficou a ___ enquanto esperava a resposta.",
       "blanks": [
         {
           "position": 0,
-          "answer": "pensando",
+          "answer": "pensar",
           "alternatives": [
-            "refletindo"
+            "refletir"
           ]
         }
       ]
@@ -99,17 +102,18 @@
     ],
     "tags": [],
     "contentHash": "04e647496c92f18e5c9f89c2be21723d76318afd94f31fb2ae13d9ae96374307",
-    "esContrast": "'Desistir vocês' = 'Que ustedes desistieran'. Español usaría subjuntivo imperfecto.",
+    "esContrast": "«Desistirem vocês» = 'Que ustedes desistan'. Con sujeto de 3.ª del plural el infinitivo pessoal lleva -em; el español, que no tiene esta forma, recurre al subjuntivo.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
-      "sentence": "___ vocês, é mais difícil do que parece.",
+      "sentence": "___ vocês é mais difícil do que parece.",
       "blanks": [
         {
           "position": 0,
-          "answer": "Desistir",
+          "answer": "Desistirem",
           "alternatives": [
-            "desistir"
+            "desistirem"
           ]
         }
       ]
@@ -227,6 +231,7 @@
     "contentHash": "0e2d8fc1aa852f81461d8d14a098f5b31e6585e08e1507c12ae5e558f0c4c347",
     "esContrast": "En español 'gustar' no lleva preposición, en PT 'gostar' exige DE.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
@@ -343,22 +348,23 @@
       "haver",
       "valepena"
     ],
-    "contentHash": "0fc266bad34dda32918e0bbd2d217682939e7b3b4c9b492c7253ea0c58af2e5b",
-    "esContrast": "'Vale a pena' + infinitivo significa 'vale la pena'. Não se dice 'vale a pena fazer'.",
+    "contentHash": "9a9e57e3a34c6663eec87bb275c1236438664391f14a6a50275312d20791d317",
+    "esContrast": "«Valer a pena» va con infinitivo: «vale a pena ler». Y cuidado con el compuesto: «tenho lido» significa 'he estado leyendo (repetidamente)', así que para un hecho contado y acabado el portugués usa el simple: «já o li duas vezes».",
     "audio": {
       "br": {
-        "hash": "0de46d22b858db0da44cdaebf27fa77cd9b6b87f6b162471355e38bed382e16e",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "cf40629afecfa83a99d3cdd11f6e8c3ca8ea6381adc7ab8124f3d77edce632f5",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "02891220f096f9796c98c2287dd4bcbccd7c285dffcda4f87db28c98212dac34",
-        "voice": "Portuguese_Wiselady"
+        "hash": "cf40629afecfa83a99d3cdd11f6e8c3ca8ea6381adc7ab8124f3d77edce632f5",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 — audio regenerado (informe-cola7-manual)",
     "type": "listening",
     "data": {
-      "audioText": "Vale a pena ler este livro. Eu já tenho lido duas vezes.",
+      "audioText": "Vale a pena ler este livro. Eu já o li duas vezes.",
       "question": "¿Qué ha hecho la persona con el libro?",
       "options": [
         "Lo ha comprado",
@@ -418,7 +424,7 @@
       "ter",
       "arrumar"
     ],
-    "contentHash": "980843d5dcd991a38fc7c9773fe6113cebe099116d9404287513aa310986f2ab",
+    "contentHash": "afefe87eb78ae0790a0771031cedc2e0e5d0a427452a43a588dbfa9cddaa0c43",
     "esContrast": "'Arrumar' significa 'ordenar/organizar', no 'arreglar' como en español.",
     "audio": {
       "br": {
@@ -431,17 +437,18 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "listening",
     "data": {
       "audioText": "Ele tem arrumado o quarto desde ontem e ainda não terminou.",
       "question": "¿Qué ha estado haciendo él desde ayer?",
       "options": [
-        "limpando a casa",
-        "arrumando el cuarto",
-        "lavando la ropa",
-        "estudiando"
+        "Limpiando la casa",
+        "Ordenando el cuarto",
+        "Lavando la ropa",
+        "Estudiando"
       ],
-      "answer": "arrumando o quarto"
+      "answer": "Ordenando el cuarto"
     }
   },
   {
@@ -525,18 +532,17 @@
       "ter/haver"
     ],
     "contentHash": "1be8b94d2d0167a4968dfaf6d7d8dc22ce966aeb6a172e9763f6a4c2ae1f3b37",
-    "esContrast": "O particípio de 'ganhar' é irregular: 'ganho', não 'ganhado' como en español 'ganado'.",
+    "esContrast": "«Ganhar» tiene participio corto: con ter/haver el portugués europeo dice «tenho ganho» («ganhado» suena arcaico). El español sólo tiene «ganado».",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu já ___ o jogo!",
+      "sentence": "Eu já tenho ___ muitos jogos este ano!",
       "blanks": [
         {
           "position": 0,
           "answer": "ganho",
-          "alternatives": [
-            "ganhado"
-          ]
+          "alternatives": []
         }
       ]
     }
@@ -590,6 +596,7 @@
     "contentHash": "1df4e6e353b6a6bfd94be760d308d1077ad7b4b07ed233b08bbdf832e6de7a24",
     "esContrast": "Vir + gerúndio indica ação que continua até o momento presente.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: DUDA — «Ele vem tendo problemas» se entiende y la perífrasis vir + gerundio existe, pero en el corpus europeo del repo aparece casi siempre con verbos de movimiento («vem trotando a vacca», «vinha chorando a filha»). Para 'llev (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Ele vem ___ problemas desde que chegou.",
@@ -794,6 +801,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "Ella ha visto muchas películas este mes.",
@@ -889,6 +897,7 @@
     "contentHash": "30edcef490a83922b050497cd8c3dc39606998b68e1b05f370297ba44d749c3f",
     "esContrast": "PT 'desistir de' coincide con ES 'desistir de', pero la forma verbal del infinitivo pessoal varía: desistir eu, desistires tu…",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: DUDA — El ejercicio de régimen es correcto («desistiu de tentar»). La glosa, en cambio, presenta «desistir eu» como si fuera una forma flexionada: en 1.ª del singular el infinitivo pessoal no flexiona. Es la confusión que produ (informe-cola7-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "desistir",
@@ -998,6 +1007,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "Sempre que possível, sigo em frente.",
@@ -1053,27 +1063,28 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "700a8ea178f3b62a881871a1b99e1a8ba5ed1cf5dd5891a2fa3ecdd567617258",
+    "contentHash": "7378bf6e0990a31458227b3313e9f9f04aee1db35597bf2ddc9c5f7a99fa7907",
     "esContrast": "El participio de 'poner' es irregular en portugués: 'posto'. No uses 'ponido'.",
     "audio": {
       "br": {
-        "hash": "cdb5090cf39e9489e24dbf97cfd03cb8868ebb661786129ef7dc4aafe4d6ffef",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "116f87771be15ed473ab673d6545e751ee605ef5345acde6ee77d39b7d67dba4",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "9616c2af99e1298caff5265f174c6aafaa89830d25d027985274ff05bc4106dc",
-        "voice": "Portuguese_Wiselady"
+        "hash": "116f87771be15ed473ab673d6545e751ee605ef5345acde6ee77d39b7d67dba4",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 — audio regenerado (informe-cola7-manual)",
     "type": "translation",
     "data": {
-      "source": "Ella ha puesto los libros en la mesa.",
-      "target": "Ela tem posto os livros na mesa.",
+      "source": "Ella ha estado poniendo los libros en la mesa toda la semana.",
+      "target": "Ela tem posto os livros na mesa toda a semana.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Ela pôs os livros na mesa."
+        "Ela tem colocado os livros na mesa toda a semana."
       ]
     }
   },
@@ -1195,17 +1206,19 @@
       "regular"
     ],
     "contentHash": "3e112d474b3ab0f050f165de4d8e8702cd5193d83476666f7a11ab68cd755039",
-    "esContrast": "Revisar em português é 'revisar', diferente de 'revisar' em espanhol.",
+    "esContrast": "El progresivo europeo es «estar a + infinitivo»: «estamos a rever». «Estamos revisando» es la forma brasileña.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Nós estamos ___ os documentos.",
+      "sentence": "Nós estamos a ___ os documentos.",
       "blanks": [
         {
           "position": 0,
-          "answer": "revisando",
+          "answer": "rever",
           "alternatives": [
-            "checando"
+            "revisar",
+            "verificar"
           ]
         }
       ]
@@ -1261,6 +1274,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: DUDA — «Ele recomenda eu desistir» es forzado en portugués europeo: con verbos de influencia se abre subordinada («recomenda que eu desista») o se usa «aconselha-me a desistir». Lo que sí sobra es que la glosa lo canonice dicie (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "Ele recomenda eu desistir antes de perder mais tempo.",
@@ -1315,12 +1329,13 @@
       "falso-amigo"
     ],
     "contentHash": "42c051e120a3941fe303bf724204b012d7417a7bc8733f2adb34de6eaa58ab45",
-    "esContrast": "En español 'pensar' se construye con infinitivo directo; en PT requiere EM + gerundio.",
+    "esContrast": "El español construye «pensar + infinitivo» sin preposición; el portugués exige EM: «penso em seguir». Y el posesivo va con artículo: «os meus estudos».",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
-      "sentence": "Penso ___ seguir em frente com meus estudos.",
+      "sentence": "Penso ___ seguir em frente com os meus estudos.",
       "options": [
         "em",
         "de",
@@ -1341,8 +1356,8 @@
     "tags": [
       "infinitivo pessoal"
     ],
-    "contentHash": "f04cd9c0046145671ef41ca86fdabf1d0674ce85843d78a14416fa56136ead21",
-    "esContrast": "En portugués el infinitivo pessoal puede reemplazar al infinitivo compuesto: 'depois de o ver' equivale a 'habiendo visto'.",
+    "contentHash": "0a3587bdab3dbf6667f7bd8f7058164d7c3db7540583f463ad15c038920036cb",
+    "esContrast": "Fíjate en el clítico: «depois de o ver» = 'después de verlo' — la «o» es el objeto, no el sujeto. Para marcar la anterioridad el portugués añade «ter»: «depois de o ter visto».",
     "audio": {
       "br": {
         "hash": "dea9673ec4bc0248b00ba8a85a2fd12eae105d793475b360f3e2c53339169849",
@@ -1354,6 +1369,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "Después de haberlo visto, desistí.",
@@ -1515,10 +1531,11 @@
     "contentHash": "4aebcaf69933f8f9800e8f552ee32de3cba3cec35c583ebee4b647a656aad34d",
     "esContrast": "En español 'gustar' no lleva preposición, pero en PT-BR y PT-PT 'gostar' exige DE.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
-      "sentence": "Estou ___ aprender português.",
+      "sentence": "Eu gosto ___ aprender português.",
       "options": [
         "de",
         "a",
@@ -1683,15 +1700,16 @@
       "regular"
     ],
     "contentHash": "4ffb57cc58d75346fc5ad7a474b3d1912d6b49c1d66fa9e8ef06e69ceb0485df",
-    "esContrast": "Em português o gerúndio não leva acento, diferentemente do español 'estudiando'.",
+    "esContrast": "El progresivo europeo es «estar a + infinitivo»: «estou a estudar». «Estou estudando» es brasileño; el gerundio europeo se reserva para otras construcciones («foi descobrindo»).",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu estou ___ português agora.",
+      "sentence": "Eu estou a ___ português agora.",
       "blanks": [
         {
           "position": 0,
-          "answer": "estudando",
+          "answer": "estudar",
           "alternatives": []
         }
       ]
@@ -1707,24 +1725,18 @@
     ],
     "tags": [],
     "contentHash": "51820100e39fbc8e5d715a58bd58780beeb0b25ca476d42411637f6cd5060198",
-    "esContrast": "Estructura portuguesa: 'Poder ela sair' en lugar del español 'Que ella pueda salir' (subjuntivo).",
+    "esContrast": "El portugués pone el sujeto delante del infinitivo: «é bom ela sair». El español necesita subordinada con subjuntivo: «es bueno que ella salga».",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
-      "sentence": "___ ela ___ sair mais cedo, não sei.",
+      "sentence": "É bom ela ___ mais cedo, não achas?",
       "blanks": [
         {
           "position": 0,
-          "answer": "Poder",
+          "answer": "sair",
           "alternatives": [
-            "Querer"
-          ]
-        },
-        {
-          "position": 1,
-          "answer": "ela",
-          "alternatives": [
-            "querer sair"
+            "ir-se embora"
           ]
         }
       ]
@@ -1774,26 +1786,27 @@
       "irregular",
       "falso-amigo"
     ],
-    "contentHash": "9219aa88254824243ffc211492ce9b9abd4e3728aceb59facc656c92b1e5406e",
+    "contentHash": "82086b310e72345f7d98dc5095c839daa40c97f56a4fbdad43f052942813fb99",
     "audio": {
       "br": {
-        "hash": "63646c51928515e5d23fa773df977537635685df68e85d0edf890a8475baa2ac",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "d1304ab212a07167eae601aaccdd2ba4bb1d6a48d2caea98b4f5ffce77db038b",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "3f970192ccd24715118bb5f7deb3e7afb82b067d68e4a445da6567b323c84002",
-        "voice": "Portuguese_Wiselady"
+        "hash": "d1304ab212a07167eae601aaccdd2ba4bb1d6a48d2caea98b4f5ffce77db038b",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 — audio regenerado (informe-cola7-manual)",
     "type": "translation",
     "data": {
-      "source": "He escrito tres cartas esta semana.",
-      "target": "Tenho escrito três cartas esta semana.",
+      "source": "He escrito muchas cartas esta semana.",
+      "target": "Tenho escrito muitas cartas esta semana.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Escrevi três cartas esta semana."
+        "Esta semana tenho escrito muitas cartas."
       ]
     }
   },
@@ -1874,7 +1887,7 @@
     "tags": [
       "formal"
     ],
-    "contentHash": "c8210d56632b634cbe91ea931ec8c3cf901414bec921decb229d0233a11265fb",
+    "contentHash": "8a99a8ec95e7c9701e7ae524376765b0564e2a831b5df70ac001a76ffc6d3d6c",
     "esContrast": "El español necesita 'haya desistido' (subjuntivo compuesto). El portugués puede reemplazar eso con 'ele ter desistido' (infinitivo pessoal).",
     "audio": {
       "br": {
@@ -1887,10 +1900,11 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "listening",
     "data": {
       "audioText": "Espero que ele tenha desistido. / Espero ele ter desistido.",
-      "question": "¿En qué situación se puede usar el infinitivo pessoal en lugar del infinitivo composto?",
+      "question": "¿Cuándo puede el portugués sustituir «que ele tenha desistido» por «ele ter desistido»?",
       "options": [
         "Cuando los sujetos son iguales en ambas frases.",
         "Cuando hay cambio de sujeto entre la oración principal y la subordinada.",
@@ -1911,15 +1925,16 @@
     "tags": [],
     "contentHash": "5dcb8dfc79b2e19efccd6a5632e27cd4726c18754871dab413211eff5e18cc81",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Estamos ___ para seguir em frente.",
+      "sentence": "Estamos a ___ para seguir em frente.",
       "blanks": [
         {
           "position": 0,
-          "answer": "lutando",
+          "answer": "lutar",
           "alternatives": [
-            "tentando"
+            "tentar"
           ]
         }
       ]
@@ -1949,6 +1964,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "flashcard",
     "data": {
       "front": "Participio de VER y PÔR",
@@ -2094,7 +2110,7 @@
       "b7-participio"
     ],
     "tags": [],
-    "contentHash": "394a5d401496a2207d4967e391ccedad3aa570a0f283484725e4a77d1b352204",
+    "contentHash": "50bab6eee329900c3d44d6845950b0538e39c99ed4f2eaee11bfc7823e3363ec",
     "audio": {
       "br": {
         "hash": "516ac980e23794cb0ca66c05f9a3cd8f19351f915456073267c59c92f989b32d",
@@ -2106,14 +2122,16 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "Ele tem prazer em ajudar os outros.",
-      "target": "Él tiene placer en ayudar a los demás.",
+      "target": "Disfruta ayudando a los demás.",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "Él tiene el placer de ayudar a los demás."
+        "Le gusta ayudar a los demás.",
+        "Le da gusto ayudar a los demás."
       ]
     }
   },
@@ -2170,6 +2188,7 @@
     "contentHash": "73e19881274e2ef866a812828831a1efd0114415422d8cf521fb52c85f821a4f",
     "esContrast": "A expressão é 'vale a pena' (vale + a + pena), não 'hace falta' ni 'vale la pena'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: DUDA — El ejercicio es correcto («Não vale a pena ficar triste por isso»). La glosa, escrita en portugués, es confusa: «A expressão é 'vale a pena' …, não 'hace falta' ni 'vale la pena'» puede leerse como que «vale la pena» no  (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Não ___ a pena ficar triste por isso.",
@@ -2234,8 +2253,8 @@
     "tags": [
       "progresivo"
     ],
-    "contentHash": "f04bc44296870fbf1677b1ce829bcad1a821ebb5264a748aa141b97a424667be",
-    "esContrast": "'Sempre que possível' se escribe todo junto, sin coma tras 'possível'.",
+    "contentHash": "8231e45cbe0d4c65c80d72b639362e6330de881256e64c922f4af76feb05cb7e",
+    "esContrast": "«Sempre que possível» es la fórmula elíptica (sin «é»), y la coma ante la principal se mantiene. Cuidado con «sair a correr»: en portugués es 'salir corriendo'; para el deporte se dice «sair para correr» o «ir correr».",
     "audio": {
       "br": {
         "hash": "21931b653e289d4fd27e11a03e06629828509947070a30944f8c716ddb01d2bf",
@@ -2247,6 +2266,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "Siempre que es posible, salgo a correr por la mañana.",
@@ -2254,7 +2274,7 @@
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Sempre que possível, saio a correr de manhã."
+        "Sempre que possível, saio para correr de manhã."
       ]
     }
   },
@@ -2281,6 +2301,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "Es importante hablar con él.",
@@ -2345,6 +2366,7 @@
     "contentHash": "7b5321b18f5a0f6b14db49819fe5c64cb692cf30d699a87d0085910ff73f832e",
     "esContrast": "'Pensar' en español lleva 'en' (similar), pero cuidado: 'pensar de' tiene otro matiz (opinión).",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
@@ -2379,6 +2401,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "Eu tenho feito a tarefa todos os dias.",
@@ -2434,8 +2457,9 @@
       "adjetivo"
     ],
     "contentHash": "82e31db59b33443d1b99254e09bed6f3bc5ac39e68d66c7a11d160adee3e47fa",
-    "esContrast": "'Carregado' aquí es adjetivo (loaded/strong), no participio. Es igual en español, pero cuidado: 'cargado' en português puede significar también 'loaded'.",
+    "esContrast": "Dicho de un café, «carregado» es 'fuerte, muy cargado' — el español «cargado» vale igual, así que aquí NO hay falso amigo. Es el participio de «carregar» usado como adjetivo.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "O café está muito ___.",
@@ -2443,7 +2467,9 @@
         {
           "position": 0,
           "answer": "carregado",
-          "alternatives": []
+          "alternatives": [
+            "forte"
+          ]
         }
       ]
     }
@@ -2461,18 +2487,17 @@
       "ter/haver"
     ],
     "contentHash": "832480f1a8ec53e853ccdce78493adeacb0a74086b8df030d34adfcb7b29ab96",
-    "esContrast": "O particípio de 'matar' é irregular: 'morto', não 'matado'.",
+    "esContrast": "«Matar» tiene doble participio: «matado» con ter/haver («tinha matado o homem») y «morto» con ser/estar («o homem foi morto»). El español conserva el reparto sólo en fórmulas como «fue muerto a tiros».",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
-      "sentence": "O sol ___ muitas plantas no jardim.",
+      "sentence": "O sol tem ___ muitas plantas no jardim.",
       "blanks": [
         {
           "position": 0,
-          "answer": "morto",
-          "alternatives": [
-            "matado"
-          ]
+          "answer": "matado",
+          "alternatives": []
         }
       ]
     }
@@ -2488,7 +2513,7 @@
     "tags": [
       "regular"
     ],
-    "contentHash": "863fc5a68e83d713e9a4e81a54b3148e2d8c7c06ee9dfff0110db78458e56bec",
+    "contentHash": "c67bc70521c88eab88d13c0fd2a030590c27486429a760d6d800e893d8c4e42a",
     "esContrast": "Igual que en español: comer → comido, dormir → dormido.",
     "audio": {
       "br": {
@@ -2501,11 +2526,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "flashcard",
     "data": {
       "front": "Participio regular de verbos -ER/-IR (comer, dormir)",
       "back": "comer → comido; dormir → dormido (con -ido)",
-      "example": "Já we've comido naquele restaurante."
+      "example": "Já temos comido naquele restaurante."
     }
   },
   {
@@ -2722,23 +2748,24 @@
       "coloquial",
       "progresivo"
     ],
-    "contentHash": "0ded96f19a771caa4696e5654d3a043eb5bf70a51f7b838b1a494e13108bd90f",
+    "contentHash": "ce17dc5b532d8c617bde17d9097796bb05b4b0b864ee20625a956ae6a5ce8e27",
     "esContrast": "'Seguir em frente' es la forma correcta; no se dice 'seguir adelante' en portugués.",
     "audio": {
       "br": {
-        "hash": "2e431106c1fa4ad00aa7d121d3fec02c02ab3b8312bfc8a3ca1e887d920bdfd2",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "72f2a836b9e5b839e4b5a1b8fe0aabb05b4d71bd0a093587817d2fe35f258490",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "479b92828bd457f76d360cc7418fdbee1b7209498b46c670fb7bac154c1ee7b7",
-        "voice": "Portuguese_Wiselady"
+        "hash": "72f2a836b9e5b839e4b5a1b8fe0aabb05b4d71bd0a093587817d2fe35f258490",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 — audio regenerado (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "Seguía adelante con el proyecto a pesar de todo.",
-      "target": "Seguiam em frente com o projeto apesar de tudo.",
+      "target": "Seguia em frente com o projeto apesar de tudo.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
@@ -2868,21 +2895,22 @@
     "tags": [
       "basico"
     ],
-    "contentHash": "23d684778ca22a1c9a69f76fc231cd032c0bd54f1b940a3e42aa68c37c184bfb",
+    "contentHash": "7230d9860ecaabebf34483b92a420c55abf31d9b7f39cf732d50fcc954aebf88",
     "audio": {
       "br": {
-        "hash": "e3813edfb338b4644415a233af99133549b1c2cb5750db6293d387951a3e2b2c",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "d8078564ac3173e4ecd34c5b92597da64baf44ea63035f310cda70fb512f25b8",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "5857e8a9401e94c182a7177c9bd5fc4285a3c856c30e964e1ad24b71b0948a4a",
-        "voice": "Portuguese_Wiselady"
+        "hash": "d8078564ac3173e4ecd34c5b92597da64baf44ea63035f310cda70fb512f25b8",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 — audio regenerado (informe-cola7-manual)",
     "type": "translation",
     "data": {
-      "source": "É importante falar eu com ela sobre isso.",
+      "source": "É importante eu falar com ela sobre isso.",
       "target": "Es importante que yo hable con ella sobre eso.",
       "sourceLang": "pt-br",
       "targetLang": "es",
@@ -2969,6 +2997,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "A vida útil deste equipamento é de cinco anos.",
@@ -3004,6 +3033,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "Es mejor que salgamos ahora.",
@@ -3024,26 +3054,27 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "c080f4042c5a65255dc362a587a76b62e8e0944433fa81edf5495bd94d1b0920",
+    "contentHash": "9dfb63fa0a806b5cafc6d7e7b82291c7afc6d6ffd6fcea0046eab7623f8c21f5",
     "audio": {
       "br": {
-        "hash": "699393d21e332b45e09206afd86a339cff09ec20f4a7a07dac5c33749c4975b8",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "02935132c48a5d2499147f9888403178c3897602eb29e7b46b1ee31b40b64de4",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "c96729ff65b73efaa0c4b8eef2983b851167509b8a0f9598a315c153062f7ef2",
-        "voice": "Portuguese_Wiselady"
+        "hash": "02935132c48a5d2499147f9888403178c3897602eb29e7b46b1ee31b40b64de4",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 — audio regenerado (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "He hecho la tarea con mucho placer.",
-      "target": "Tenho feito a lição com muito prazer.",
+      "target": "Fiz os trabalhos de casa com muito prazer.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Fiz a lição com muito prazer."
+        "Fiz o trabalho de casa com muito prazer."
       ]
     }
   },
@@ -3059,24 +3090,25 @@
       "gramática",
       "conjugação"
     ],
-    "contentHash": "99790b7d0018e5a35e090ec6d0f86dd09c16d37eed22fe6e6fc82275b87f81e2",
-    "esContrast": "En español el infinitivo no se flexiona: 'hablar nosotros' no existe.",
+    "contentHash": "55ab316243aba38aff543c07cc98f042693a948525a9f5364c0364d4bc7342a0",
+    "esContrast": "En español el infinitivo no se flexiona ('hablar nosotros' no existe); en portugués sí: «falarmos». «Falar nós» no es portugués.",
     "audio": {
       "br": {
-        "hash": "ca2a5a26baaa2374d2ce7d227049c3b8258c7cee83b98cfedc226a5fa847ae1e",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "cacfd7c38a81441dc520f130ac26bb5c4e7b74d0ef6de2743805f53f6562ddfe",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "4f0fad6be6f05c2111d9397bf363228317363ed313c1ade943ec263104a79ae8",
-        "voice": "Portuguese_Wiselady"
+        "hash": "cacfd7c38a81441dc520f130ac26bb5c4e7b74d0ef6de2743805f53f6562ddfe",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 — audio regenerado (informe-cola7-manual)",
     "type": "flashcard",
     "data": {
-      "front": "Conjuga o infinitivo pessoal de 'falar' na 1ª pessoa do plural",
-      "back": "falar nós",
-      "example": "Falar nós português ajuda muito."
+      "front": "Infinitivo pessoal de «falar» en 1.ª persona del plural (nós)",
+      "back": "falarmos",
+      "example": "Falarmos português ajuda muito."
     }
   },
   {
@@ -3239,6 +3271,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "flashcard",
     "data": {
       "front": "Traduce: 'Siempre que sea posible, sigo adelante.'",
@@ -3332,6 +3365,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "A empresa tem ganho muito dinheiro este ano.",
@@ -3572,13 +3606,14 @@
     ],
     "contentHash": "bbb6c2a015f6906bbca3b694a88019567085f99d2a9d335f03d417bb82e90949",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Ela está ___ com o namorado.",
+      "sentence": "Ela está a ___ com o namorado.",
       "blanks": [
         {
           "position": 0,
-          "answer": "saindo",
+          "answer": "sair",
           "alternatives": []
         }
       ]
@@ -3606,6 +3641,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "O café está carregado, prefiro mais suave.",
@@ -3639,6 +3675,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: DUDA — El ejercicio es correcto. La glosa, en cambio, está mal escrita: ««Vale a pena» se traducen estas tres palabras» no es una oración española, y el aviso final («no se dice 'vale a pena' en español») sólo se entiende si el (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "Vale a pena ler este livro pelo menos uma vez.",
@@ -3690,30 +3727,31 @@
       "prazer",
       "carregado"
     ],
-    "contentHash": "c5ffec655bb030573ec37695f6faee32626561525a557eef84887aaaa098778e",
+    "contentHash": "72db5d4398e5aa9149e3f3f64301148221677f9fce66b4fa14ca3f655e225e30",
     "esContrast": "'Carregado de' = 'lleno de/cargado de'. Oposición 'carregado' (adj) vs 'carregado' (participio de 'carregar').",
     "audio": {
       "br": {
-        "hash": "6046fc5474a62aa734942eb51e162917d1f4f4cbce59afe8117023a37538ed77",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "bc000e97c94d86a1284522861efc9fa8e14f732cb42fc9bd23d724c9767802aa",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "b2209ae7af214e04fae110518f35f8ef353c2048ac5946e3981037cdaeddd3ef",
-        "voice": "Portuguese_Wiselady"
+        "hash": "bc000e97c94d86a1284522861efc9fa8e14f732cb42fc9bd23d724c9767802aa",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 — audio regenerado (informe-cola7-manual)",
     "type": "listening",
     "data": {
-      "audioText": "Tenho prazer em dizer que o relatório está carregado de erros importantes.",
+      "audioText": "Lamento dizer que o relatório está carregado de erros graves.",
       "question": "¿Según el audio, qué contiene el informe según la persona?",
       "options": [
         "Datos correctos",
-        "Erros importantes",
+        "Errores graves",
         "Información útil",
         "Contenido simple"
       ],
-      "answer": "Erros importantes"
+      "answer": "Errores graves"
     }
   },
   {
@@ -3728,28 +3766,28 @@
       "regular",
       "coloquial"
     ],
-    "contentHash": "311386deb467ae85a4655c07d11c038afc8b77e18c52580020e9aa4166297177",
+    "contentHash": "25c8dd0cec2789aac32b908cfb178e87d00ebb6a7b0db9e82c8b4658e49687f1",
     "esContrast": "'Arrumar' en PT-BR significa arreglar/ordenar; en PT-PT puede significar también 'guardar' o 'preparar'.",
     "audio": {
       "br": {
-        "hash": "a180506eeb6db6ffa5994bf60e98d80d6cdc5adaab8b3d57415441dcd4df0346",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "d54c483facb9252ad9159c5520601288755f4526524faa4a88773c09f1a52313",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "ce6260e3edc5e5a30f1a557a819287868f0402075724bade323eebd077418c21",
-        "voice": "Portuguese_Wiselady"
+        "hash": "d54c483facb9252ad9159c5520601288755f4526524faa4a88773c09f1a52313",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 — audio regenerado (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "Ya he arreglado la casa para la visita.",
-      "target": "Tenho arrumado a casa para a visita.",
+      "target": "Já arrumei a casa para a visita.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
-        "Arrumiei a casa para a visita.",
-        "Já arrumei a casa para a visita."
+        "Arrumei a casa para a visita."
       ]
     }
   },
@@ -3788,18 +3826,18 @@
       "formal"
     ],
     "contentHash": "cc28fb3fa29d142be93bf1abea59e0b18784f04102d51b703113b42e18470381",
-    "esContrast": "En registros formales, portugués prefiere 'tomares tu' al subjuntivo español 'tomes'. Ambos son correctos en PT.",
+    "esContrast": "Sin «que», el portugués puede flexionar el infinitivo: «É fundamental tomares decisões» = 'Es fundamental que (tú) tomes decisiones'. Con «que» sólo cabe el conjuntivo: «que tomes». Lo que no existe es «que tomares».",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
-      "sentence": "É fundamental que ___ decisões sem hesitar.",
+      "sentence": "É fundamental ___ decisões sem hesitar.",
       "blanks": [
         {
           "position": 0,
           "answer": "tomares",
           "alternatives": [
-            "tomar",
-            "tomar tu"
+            "tomar"
           ]
         }
       ]
@@ -3866,6 +3904,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "listening",
     "data": {
       "audioText": "A vida útil deste aparelho já terminou. Ele está todo gasto.",
@@ -4022,6 +4061,7 @@
     "contentHash": "d8371e83edccc4379638ea0d20a74ef56ddd378964fc8891073225ac6572ed66",
     "esContrast": "'É melhor falares' = 'Es mejor que hables (tú)'. En español: subjuntivo. En portugués: infinitivo pessoal.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "É melhor ___ mais devagar.",
@@ -4061,6 +4101,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "La vida útil de este aparato ha terminado.",
@@ -4150,6 +4191,7 @@
     "tags": [],
     "contentHash": "e2d0dde2435c57c95ad650d2f423c0bbcd1806ef9aaea9982bc9d6ee9bbc8a77",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: DUDA — «Ela foi descobrindo» es europeo legítimo: el corpus del repo atesta ir + gerundio de sobra («foi indo», «foi repetindo o recado», «se foi definhando»). Lo que chirría es «aos poucos», de preferencia brasileña: el corpus (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela foi ___ a verdade aos poucos.",
@@ -4213,6 +4255,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: DUDA — La frase es gramatical y el infinitivo flexionado tras «para» está bien empleado, pero «para resolverem» se queda sin referente: en ningún punto se dice quiénes resuelven. Explicitar el sujeto arregla la frase sin tocar  (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "É necessário eu ir pessoalmente para resolverem este assunto.",
@@ -4245,6 +4288,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "No es necesario correr.",
@@ -4470,6 +4514,7 @@
     "contentHash": "eedbf026e51985df6c82a7a65c5cceb33371bac8548a7b5fb0c9a507586bc2b9",
     "esContrast": "'Precisar' en español usa DE, pero muchos hispanohablantes lo olvidan en PT.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",

@@ -5847,6 +5847,7 @@
     ],
     "contentHash": "b27edcea69765b4591adfc18d31b6bee1eee92b5ffbfc02181ce6d37749b0082",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu gostaria que ela ___ (ver) a exposição na galeria.",
@@ -5938,6 +5939,7 @@
     "contentHash": "b75d20c599d63d15df481ce5a33f2f2ac7b0f7e9a62a2668518c4ea8581bd66e",
     "esContrast": "En español 'gustar' no lleva preposición, pero en PT 'gostar' requiere DE.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
@@ -5995,19 +5997,20 @@
       "formal"
     ],
     "contentHash": "b82f612d08865ef283c9292d452cd187fdc8890c730ec7958c7df53cbd04031f",
-    "esContrast": "Ambos rigen DE, pero con subjuntivo en PT tras expresiones impersonales.",
+    "esContrast": "«Depender de» rige DE en las dos lenguas; lo que cambia es que el portugués CONTRAE la preposición con el artículo: de + o = do («depende do início»).",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "depender",
-      "sentence": "É provável que tudo ___ do início do projeto.",
+      "sentence": "É provável que tudo dependa ___ início do projeto.",
       "options": [
-        "de",
-        "a",
-        "em",
-        "para"
+        "do",
+        "ao",
+        "no",
+        "para o"
       ],
-      "answer": "de"
+      "answer": "do"
     }
   },
   {
@@ -6242,21 +6245,15 @@
       "indicativo"
     ],
     "contentHash": "c2f0740cdb4fc87eb2a7f16c2cb2a746e54620d3c49419cb52ccc2c7eae4d3bf",
-    "esContrast": "'Saber que' e expressões de certeza usam indicativo, não subjuntivo.",
+    "esContrast": "«Saber que» y las expresiones de certeza piden INDICATIVO, igual que en español: «sei que é», «sé que es». El conjuntivo entra con la duda («talvez seja»).",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu ___ que essa ligação ___ muito importante. (saber / ser)",
+      "sentence": "Eu sei que essa ligação ___ muito importante. (ser)",
       "blanks": [
         {
           "position": 0,
-          "answer": "sei",
-          "alternatives": [
-            "sei bem"
-          ]
-        },
-        {
-          "position": 1,
           "answer": "é",
           "alternatives": []
         }
@@ -6274,8 +6271,8 @@
     "tags": [
       "vocabulário"
     ],
-    "contentHash": "c3039dc666ca3e103c2856ffec3d782a7a36b60b6ee28aa3e9cbb9cc8c3022d5",
-    "esContrast": "En PT-BR se escribe con acento agudo: início (no inicio como en ES)",
+    "contentHash": "660ad6bd61ea1074df1fd1ddb7a11e976e39264810025029ff2e439c020b5e24",
+    "esContrast": "«Inicio» en español tiene tres sílabas (i-nicio) y es llana: sin tilde. «Início» en portugués tiene cuatro (i-ní-ci-o) y es esdrújula: por eso exige acento agudo — en Portugal y en Brasil por igual.",
     "audio": {
       "br": {
         "hash": "ce54d54b632b57902bc605c03805d61a04355473afe0b17bd19be5a11b9c8f13",
@@ -6287,9 +6284,10 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "flashcard",
     "data": {
-      "front": "início (substantivo)",
+      "front": "Traduce: 'el inicio' (sustantivo)",
       "back": "início",
       "example": "O início do curso foi muito difícil."
     }
@@ -6592,7 +6590,7 @@
       "vocabulário",
       "verbo"
     ],
-    "contentHash": "d0091d7853aabb7599cc629905059c184d4f0a678a9ec48194834fbd83dbd12e",
+    "contentHash": "2b8c41d4a1643ab469a12b89cf3e865fddf26d4825f0a9c7a15bda96ce0a56b1",
     "audio": {
       "br": {
         "hash": "42f8b508223d858f5d821c24d728e9588e9f541fd219e760cdb5268595e55830",
@@ -6604,9 +6602,10 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "flashcard",
     "data": {
-      "front": "suspirar",
+      "front": "Traduce: 'suspirar' (y su imperfecto 'suspiraba')",
       "back": "suspirar — ele suspirava",
       "example": "Ela suspirava de saudade."
     }
@@ -6793,7 +6792,7 @@
       "indicativo",
       "hecho"
     ],
-    "contentHash": "d3dc059de2f41d68fcfc52551483c42b7c2108165c679f83a4e7c9e2930dfa35",
+    "contentHash": "14b299e90ce8296f2e19b93d2b239c70d94b7e58394b119fbfed36ecabb00c03",
     "esContrast": "'É certo que' + indicativo porque expresa certeza, no duda",
     "audio": {
       "br": {
@@ -6806,9 +6805,10 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "flashcard",
     "data": {
-      "front": "Es cierto que ella trabaja mucho. (traduce al PT-BR)",
+      "front": "Es cierto que ella trabaja mucho. (traduce al portugués)",
       "back": "É certo que ela trabalha muito. (INDICATIVO - certeza)",
       "example": "É certo que ela trabalha muito, sempre entrega os projetos no prazo."
     }
@@ -6890,10 +6890,11 @@
     "contentHash": "d62089ce1e1e1109d035064c587758af40f15630f7d84e482bf28a28c2311918",
     "esContrast": "En español 'pensar' puede ir sin prep; en PT rige EM obligatoriamente.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
-      "sentence": "Ela pensava ___ início de tudo com frequência.",
+      "sentence": "Ela pensava ___ tudo com muita frequência.",
       "options": [
         "em",
         "de",
@@ -6950,6 +6951,7 @@
     "contentHash": "d635cdd648b5df3c2278be544d1c6bb8ab12cca06893c422e4a01c55b412c35b",
     "esContrast": "Español 'pensar' puede ir sin preposición; PT 'pensar' exige EM para expresar intención.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
@@ -7076,6 +7078,7 @@
     "contentHash": "d791616298b92ed530990454a70d9f1048443f2ba67541f2ad9b40486b8f9f6d",
     "esContrast": "En español 'necesitar' no lleva prep, en PT 'precisar' rige DE.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
@@ -7103,8 +7106,9 @@
       "formal"
     ],
     "contentHash": "da2090190eabb2f80c89b0ee6374ea0169cecf95ac7619d11688eedda6fe7075",
-    "esContrast": "'Poner' en subjuntivo: pt 'preste' (irregular) vs es 'ponga'. Son completamente diferentes.",
+    "esContrast": "La colocación es la misma en las dos lenguas: «prestar atenção» / «prestar atención», y el conjuntivo «preste» es regular en ambas. Lo que cambia es la contracción: atenção A + as dúvidas = «às dúvidas».",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "É fundamental que o professor ___ atenção às dúvidas dos alunos.",
@@ -7299,7 +7303,8 @@
       "vocabulário",
       "adjetivo"
     ],
-    "contentHash": "dd01dacfc1b7fdc50fbeae63f5e1c2d4a4ff1d165264695550c35f577befefc8",
+    "contentHash": "279589ac5fed4fe570c40189db568815fe42644950b3ac8dff79f0978fce1c66",
+    "esContrast": "Como adjetivo, «vago/vaga» significa lo mismo que en español. Ojo con el sustantivo: «uma vaga» en portugués es una plaza libre o una ola, no un vago.",
     "audio": {
       "br": {
         "hash": "8d67ad174f7a5f5920c3e27c56f6ff79780f59c42e9ebd715cfb1d8fb2a5aeeb",
@@ -7311,9 +7316,10 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "flashcard",
     "data": {
-      "front": "vaga (adjetivo)",
+      "front": "Traduce: 'vago / vaga' (impreciso, difuso)",
       "back": "vago / vaga",
       "example": "Ele tinha uma lembrança vaga do passado."
     }
@@ -7483,8 +7489,8 @@
     "tags": [
       "vocabulário"
     ],
-    "contentHash": "e3d20fd07add977dec418496521f8195593597abbe9697cc69cd8181c6c0b006",
-    "esContrast": "En español sería 'llamada', pero en PT se usa 'ligação'",
+    "contentHash": "5c32a67ed3c69bfd6e177283692af7cf3be3bdaa157305617d4e012abbcbebf4",
+    "esContrast": "En Portugal «ligação» es conexión o vínculo (uma ligação amorosa, a ligação à internet). La llamada telefónica es «uma chamada» o «um telefonema» — «fazer uma ligação» con ese sentido es brasileño.",
     "audio": {
       "br": {
         "hash": "f55e645b5e7b076d7d1ef33b5fe1838b96476f7ebe6962bd503d6058c8a78805",
@@ -7496,9 +7502,10 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "flashcard",
     "data": {
-      "front": "ligação (substantivo)",
+      "front": "Traduce: 'la conexión / el vínculo'",
       "back": "ligação",
       "example": "Fiz uma ligação importante ontem."
     }
@@ -7516,17 +7523,18 @@
       "subjuntivo"
     ],
     "contentHash": "e453e88dbf5cf5aa2f9f92e5692a785002b50cd9d3a06f6959a937a993cce230",
-    "esContrast": "'É importante que' exige subjuntivo em português, igual que em espanhol.",
+    "esContrast": "«É importante que» exige conjuntivo, igual que el español «es importante que»: desenvolvam / desarrollen.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "É importante que vocês ___ confiança um no outro. (desenvolver)",
       "blanks": [
         {
           "position": 0,
-          "answer": "tenham",
+          "answer": "desenvolvam",
           "alternatives": [
-            "desenvolvam"
+            "tenham"
           ]
         }
       ]
@@ -7577,23 +7585,24 @@
       "irregular",
       "coloquial"
     ],
-    "contentHash": "120f1c1872e29bd9958da8ffa5652433da6447b9081b778e5078ab988c08c453",
-    "esContrast": "'Apertar' = 'apretar' / 'oprimir'; 'suspirar' se escribe igual pero se pronuncia diferente.",
+    "contentHash": "a886aa2b87a35703a6b36b7e78f820d80eb78dda9b1a31e77e24ff86c725465a",
+    "esContrast": "«Apertar» es 'apretar/oprimir'. «Suspirar» se escribe igual en las dos lenguas, pero en portugués europeo la -s- ante consonante sorda suena /ʃ/: su[ʃ]pirar.",
     "audio": {
       "br": {
-        "hash": "c514bfc658a2c728818febb0906b7662887a94fc23580d85dd1650b3298c7866",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "7ea45c2eb352c104d0f46f602956c56cb47040a16e81c8f22d5a7d30800a03c8",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "2da31b0bffdaaa42ca0a8ae0cf50b8eb844f9ac9a9764e58e4d476823e23d328",
-        "voice": "Portuguese_Wiselady"
+        "hash": "7ea45c2eb352c104d0f46f602956c56cb47040a16e81c8f22d5a7d30800a03c8",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 — audio regenerado (informe-cola7-manual)",
     "type": "translation",
     "data": {
-      "source": "Apertar a vida de alguém é pesado, mas suspio de alívio quando acaba.",
-      "target": "Aprieta la vida de alguien es pesado, pero suspiro de alivio cuando acaba.",
+      "source": "Apertar a vida de alguém é pesado, mas suspiro de alívio quando acaba.",
+      "target": "Apretar la vida de alguien es pesado, pero suspiro de alivio cuando acaba.",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
@@ -7719,6 +7728,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "Yo esperaba que él llegara temprano.",
@@ -7815,6 +7825,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: DUDA — «raíz cambia completamente» es una exageración (t- → tenh-, no hay supleción), y la glosa desaprovecha el contraste útil: el español hace exactamente lo mismo con «tener → tenga», así que aquí no hay dificultad nueva sal (informe-cola7-manual)",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'ter' en presente do conjuntivo: Nós",
@@ -7833,8 +7844,8 @@
     "tags": [
       "coloquial"
     ],
-    "contentHash": "7afaf01f2e1838bcf169b7ce3685078c7073e82e6eb010a6d57ccb55d60fb2bd",
-    "esContrast": "'Talvez' puede ir antes o después del verbo; 'vago' y 'início' mantienen la misma forma en portugués.",
+    "contentHash": "2d131ed1f5f6938217b977556f1670a46d0ae05a2768d74770bb9b0093d30634",
+    "esContrast": "«Talvez» delante del verbo exige conjuntivo: «Talvez tudo pareça vago». Pospuesto, en cambio, va con indicativo: «Tudo parece vago, talvez». Y ojo con la ortografía: «vago» es idéntico al español, pero «início» lleva acento agudo que «inicio» no lleva.",
     "audio": {
       "br": {
         "hash": "91b5ca638daf332e7d6ce0f662b79d8fdad9ca5a9476d9cc4c746b12810f92d5",
@@ -7846,6 +7857,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "Quizás al inicio todo parezca vago.",
@@ -7934,7 +7946,7 @@
       "expressão impessoal",
       "irregular"
     ],
-    "contentHash": "ee56978e4b50c115e78492dd9a5e5fa4abdb0574476c08b571af8d7d1d1f8c2d",
+    "contentHash": "6da5ee5287893433e32bb4092e80dd3d7637e239e64b6756afeb8d7159e5d4e1",
     "esContrast": "'Possível' + subjuntivo, 'saber' → 'saiba' (irregular: sei/saiba)",
     "audio": {
       "br": {
@@ -7947,9 +7959,10 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "flashcard",
     "data": {
-      "front": "Es posible que él sepa la respuesta. (traduce al PT-BR)",
+      "front": "Es posible que él sepa la respuesta. (traduce al portugués)",
       "back": "É possível que ele saiba a resposta.",
       "example": "É possível que ele saiba a resposta correta."
     }
@@ -7963,8 +7976,8 @@
       "b6-contraste-indicativo-subjuntivo"
     ],
     "tags": [],
-    "contentHash": "7c0291aadb5f7da0a0b2969a9c1a45dfd59ded2dfa5f25c4ee673691c1f1713d",
-    "esContrast": "Both languages use subjunctive after 'é possível que' / 'es posible que'.",
+    "contentHash": "76166fdc7a5936c2dd046aa99dfa5597ce0bfc20d5e080b59ebaa8db6fd9c41b",
+    "esContrast": "Las dos lenguas usan subjuntivo tras «é possível que» / «es posible que»: possamos / podamos.",
     "audio": {
       "br": {
         "hash": "c447a189c7d16bfb42a3876a516f9ef11c7868b3dd2b3c50e291715c3d78526a",
@@ -7976,6 +7989,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "translation",
     "data": {
       "source": "É possível que nós não possamos resolver isso hoje.",
@@ -8075,7 +8089,7 @@
       "subjuntivo",
       "desejo"
     ],
-    "contentHash": "f1903f8dd234ad2139ee66410429ef9a83e851b7043bb56982d749462a3bcb75",
+    "contentHash": "e89f0393a35c2c064f39d4cff0ea1815cbc6130ca1d66ab7918988cc8a133f06",
     "esContrast": "'Esperar' (emoción) + subjuntivo, 'chegar' → 'chegue'",
     "audio": {
       "br": {
@@ -8088,9 +8102,10 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "flashcard",
     "data": {
-      "front": "Espero que ella llegue a tiempo. (traduce al PT-BR)",
+      "front": "Espero que ella llegue a tiempo. (traduce al portugués)",
       "back": "Espero que ela chegue a tempo.",
       "example": "Espero que ela chegue a tempo para a apresentação."
     }
@@ -8242,6 +8257,7 @@
     "contentHash": "f8056a17b1462ba1eee156c5f82be6753bac608382d0b30034d7c059b463ce1a",
     "esContrast": "Español 'necesitar' no lleva preposición; PT 'precisar' lleva DE.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
@@ -8292,8 +8308,8 @@
     "tags": [
       "adverbio"
     ],
-    "contentHash": "fab768241c76dd930b484643ebd7e2ecf087cf183b0081ebda4ecca67cd927f1",
-    "esContrast": "No confundas con 'talvez' que en español también es 'quizás'.",
+    "contentHash": "d1aa2f12db52b9010dcf13eab41f73a6d9c676b578dc9eee36c604e742ce6af4",
+    "esContrast": "«Talvez» delante del verbo exige conjuntivo: «Talvez eu vá ao cinema amanhã». Pospuesto, en cambio, va con indicativo: «Eu vou ao cinema amanhã, talvez».",
     "audio": {
       "br": {
         "hash": "e7a24ce4b2b1ae18b40686001a209ee1172c5782c529ae6765a3a4a34d7cb623",
@@ -8305,6 +8321,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'quizás' en portugués?",
@@ -8364,6 +8381,7 @@
     "contentHash": "fc13ad89a6295cd7dbe085b571c56d0e9beac653c19fc00df356bffd3f787e2e",
     "esContrast": "Em espanhol: 'aunque yo calentara' (imperfeito do subjuntivo); em português: 'aquecesse'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: DUDA — «Embora eu aquecesse a sopa, ela ficou fria» no es incorrecto, pero con un hecho puntual y acabado en la principal («ficou») el portugués prefiere el compuesto: «Embora eu tivesse aquecido / tenha aquecido a sopa». Apart (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Embora eu ___ (aquecer) a sopa, ela ficou fria.",
@@ -8389,8 +8407,9 @@
       "falso-amigo"
     ],
     "contentHash": "fda162e1909e3ff9240590192c54cdc1b1ad37116740f9c45356a2322f705621",
-    "esContrast": "En español sería 'practique' (misma forma), pero la conjugación es diferente: pt 'pratique' vs es 'practique'.",
+    "esContrast": "Misma desinencia en las dos lenguas; lo que cambia es el lema: es «practicar → practique», pt «praticar → pratique», sin la -c-.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "É importante que ela ___ português todos os dias.",
@@ -8519,6 +8538,7 @@
     ],
     "contentHash": "95e5ca55f011ad8483b962e85131129961da4d5aae6af06618f1a071ccc1ecea",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "falar",
@@ -8544,6 +8564,7 @@
     ],
     "contentHash": "b45fa0f30846dea5f52992c6134312aa07da0d22584c97f9eaf5d049536c15dc",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "ser",
@@ -8569,6 +8590,7 @@
     ],
     "contentHash": "5c846c711a335ca3958b41bc4d364f7c39a552a4ba2b3a119551c4ebee915472",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "ter",
@@ -8594,6 +8616,7 @@
     ],
     "contentHash": "cf1dbde8e6b6799a9532cec0ffdac022a4ae8a191d6cdc700a1a7313cd997c14",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "fazer",
@@ -8619,6 +8642,7 @@
     ],
     "contentHash": "ec38f0d232f85d3a6a602063f1aea4485f64e2862d144b3c51bf109af544fc7f",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "ir",
@@ -8643,6 +8667,7 @@
     ],
     "contentHash": "69faec0411a30807cb38ea99ae30f500457d7f78726a96e5c8ca66bf29c6d511",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "falar",
@@ -8668,6 +8693,7 @@
     ],
     "contentHash": "3cbc3aa06f687586ac32d4c29a1d58e54b2a5286efff9b604b8784bb02735d30",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "ter",
@@ -8693,6 +8719,7 @@
     ],
     "contentHash": "739d4742f6495a492a79d7ad0bc17fcf6b5b66c9a3bd4ac1bb4e84c956f99d9c",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "ser",
@@ -8718,6 +8745,7 @@
     ],
     "contentHash": "6b92f74f7350899147e023494ec4fdd0dfc9020c9c22a5b990f86a84448b7871",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "fazer",
@@ -8743,6 +8771,7 @@
     "contentHash": "61332de7e31cde3159094b972af9612270dbcc4cb418f62c9b585e491a53df9a",
     "esContrast": "El futuro do conjuntivo regular coincide con el infinitivo: 'falar'. No existe en español.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: DUDA — La forma («falar») y la pista son correctas, pero «No existe en español» es falso en rigor: el español TIENE futuro de subjuntivo («hablare», «fuere»), hoy fosilizado en refranes y lenguaje jurídico. Decir que no existe  (informe-cola7-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "falar",
@@ -8768,6 +8797,7 @@
     ],
     "contentHash": "d46bc441bcc2551a1fd206c52ea39a5ccf247efceb6bdcfce3d65b6940d46dfe",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "ter",
@@ -8793,6 +8823,7 @@
     ],
     "contentHash": "307fac3e2bc637249af153a533fe02e4b64cfe1a47f863f540f187d89d9a1bef",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "ser",
@@ -8818,6 +8849,7 @@
     ],
     "contentHash": "ecc2b2aae08ff4f283d20691d399bfd54a1fd6e70dc21637891a7bfac1ba7bd3",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "conjugation",
     "data": {
       "infinitive": "fazer",
@@ -8864,6 +8896,7 @@
     "contentHash": "31da58c85795639767e4b58641cd736587880560bcfab364d29fc889e70a90c0",
     "esContrast": "'talvez' (quizás) pide conjuntivo: 'esteja'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "error_correction",
     "data": {
       "sentence": "Talvez ele está em casa agora.",
@@ -9056,6 +9089,7 @@
     ],
     "contentHash": "71807a5f4bc9814cc8a4b8af6aa03391e82799c51efe638608f4d2a4e60cb8a0",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: DUDA — La clave es correcta (talvez es la única de las tres que rige conjuntivo), pero la explicación repite la simplificación peligrosa de este bloque: «talvez» sólo exige conjuntivo ANTEPUESTO al verbo. Pospuesto lleva indica (informe-cola7-manual)",
     "type": "multiple_choice",
     "data": {
       "question": "¿Cuál expresión exige conjuntivo?",
@@ -9083,6 +9117,7 @@
     ],
     "contentHash": "db27b3bf23524754dd823881bef5ec2a4ebeec2f02e93e879f12ac309b95f2be",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
     "type": "multiple_choice",
     "data": {
       "question": "¿Cuál es el futuro do conjuntivo de 'ser' (eu)?",
@@ -9109,6 +9144,7 @@
     ],
     "contentHash": "b9809b25feb119a32df7bb284865a260127e27a3e727a337a2c95be3169762bb",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#9 2026-08-31: DUDA — La regla que enseña (achar que en afirmativo → indicativo) es correcta, pero el ejemplo escogido no es la manera portuguesa de decirlo: para 'tener razón' el corpus del repo da 21 «tem razão» frente a 1 solo «está certo» (informe-cola7-manual)",
     "type": "multiple_choice",
     "data": {
       "question": "'Acho que ele ___ certo.' (creo que tiene razón) ¿Qué forma corresponde?",

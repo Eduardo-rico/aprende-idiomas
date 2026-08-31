@@ -283,12 +283,34 @@ function texto(v: unknown): string {
   return '';
 }
 
+
+/** El texto de UN campo, listo para escanear.
+ *
+ *  Caso especial `fill_blank`: la frase se ENSAMBLA con sus respuestas
+ *  antes de mirarla. Medido en E2#9 sobre los 407 fill_blank del corpus:
+ *  ocho llevan un progresivo en gerundio («Eu estou ___ português» +
+ *  answer «estudando») y **sólo uno** era visible escaneando `sentence`
+ *  a secas, porque las dos mitades del brasileñismo nunca están en la
+ *  misma cadena y el regex no puede casar. Los otros siete los encontró
+ *  a mano una cola humana. */
+function textoDeCampo(ex: Ex, campo: string): string {
+  const d = ex.data as Json;
+  if (ex.type === 'fill_blank' && campo === 'sentence') {
+    let s = String(d.sentence ?? '');
+    for (const b of (Array.isArray(d.blanks) ? d.blanks : []) as Json[]) {
+      s = s.replace('___', String((b as Json).answer ?? ''));
+    }
+    return s;
+  }
+  return texto(d[campo]);
+}
+
 /** Todo el portugués del ítem, aplanado — la MISMA extracción que usa el
  *  gate, para que ningún consumidor (triage, informes) derive su propia
  *  copia y se desincronice. */
 export function textoPortugues(ex: Ex): string {
   return camposPortugues(ex)
-    .map((campo) => texto((ex.data as Json)[campo]))
+    .map((campo) => textoDeCampo(ex, campo))
     .filter(Boolean)
     .join(' ');
 }
@@ -297,7 +319,7 @@ export function revisarEjercicio(ex: Ex): Hallazgo[] {
   if (exento(ex)) return [];
   const out: Hallazgo[] = [];
   for (const campo of camposPortugues(ex)) {
-    const t = texto((ex.data as Json)[campo]);
+    const t = textoDeCampo(ex, campo);
     if (!t) continue;
     for (const m of MARCADORES) {
       const hit = t.match(m.re);

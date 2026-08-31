@@ -281,6 +281,7 @@ const B10_CONCEPTS: Concept[] = [
   // relays de aviso colgarían de b10-registro y cegarían el eje de
   // concepts del gate de virginidad dentro de su propia clase.
   { id: 'b10-relay-avisos', name: 'Relay de avisos e recados', blockId: 10, description: 'Mediación de información práctica: extraer los datos de un aviso/SMS/recado (día, franja, lugar, acción, condición, contacto), decidir cuáles viajan para cada destinatario y trasladarlos entre pt y es sin calcos ni datos inventados', prereqs: ['b10-registro'] },
+  { id: 'b10-fidelidad-relay', name: 'Fidelidade de relay', blockId: 10, description: 'Fidelidad de relay: auditar un recado ya escrito contra su aviso y nombrar qué le pasa — plazo adelantado («até X» incluye X), dato omitido, dato inventado, valor alterado o agente reasignado —, o reconocer que es fiel', prereqs: ['b10-relay-avisos'] },
 ];
 
 const B10: Block = {

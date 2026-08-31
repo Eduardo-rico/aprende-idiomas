@@ -5,7 +5,7 @@
 // pase sobre el corpus: un gate que grita en falso acaba desactivado, así que
 // se testean tanto los aciertos como las exenciones.
 import { describe, it, expect } from 'vitest';
-import { revisarEjercicio, exento } from '@/scripts/lib/variant-guard';
+import { revisarEjercicio, exento, textoPortugues } from '@/scripts/lib/variant-guard';
 
 const base = {
   id: 'x', blockId: 1, lessonId: 'b1-l1', difficulty: 1 as const,
@@ -95,5 +95,36 @@ describe('sólo mira los campos que llevan portugués', () => {
       data: { audioText: 'Estou a estudar.', question: '¿Qué está haciendo?', options: ['a'], answer: 'a' },
     } as never;
     expect(revisarEjercicio(ex)).toHaveLength(0);
+  });
+});
+
+// ── E2#9: el gate era ciego a lo que vive partido entre `sentence` y
+// `blanks[*].answer`. Medido sobre los 407 fill_blank del corpus: ocho
+// ítems con progresivo en gerundio («Eu estou ___ português» + answer
+// «estudando»), y SÓLO UNO visible escaneando `sentence` a secas. El
+// regex no puede casar porque las dos mitades nunca están en la misma
+// cadena. La cola 7 los encontró a mano; no debería haber tenido que.
+describe('fill_blank: el gate ensambla la frase antes de escanear', () => {
+  const ex = {
+    id: 'x', type: 'fill_blank',
+    data: { sentence: 'Eu estou ___ português agora.', blanks: [{ position: 0, answer: 'estudando' }] },
+  } as any;
+
+  it('caza el brasileñismo repartido entre sentence y answer', () => {
+    const h = revisarEjercicio(ex);
+    expect(h.map((x) => x.marcador)).toContain('gerundio con estar');
+  });
+
+  it('no inventa hallazgos cuando la frase ensamblada es europea', () => {
+    const bueno = {
+      id: 'y', type: 'fill_blank',
+      data: { sentence: 'Eu estou ___ português agora.', blanks: [{ position: 0, answer: 'a estudar' }] },
+    } as any;
+    expect(revisarEjercicio(bueno).map((x) => x.marcador)).not.toContain('gerundio con estar');
+  });
+
+  it('textoPortugues devuelve la frase ya ensamblada, no la del hueco', () => {
+    expect(textoPortugues(ex)).toContain('estou estudando');
+    expect(textoPortugues(ex)).not.toContain('___');
   });
 });

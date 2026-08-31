@@ -326,5 +326,14 @@
   "prereqs": [
    "b10-registro"
   ]
+ },
+ {
+  "id": "b10-fidelidad-relay",
+  "name": "Fidelidade de relay",
+  "blockId": 10,
+  "description": "Fidelidad de relay: auditar un recado ya escrito contra su aviso y nombrar qué le pasa — plazo adelantado («até X» incluye X), dato omitido, dato inventado, valor alterado o agente reasignado —, o reconocer que es fiel",
+  "prereqs": [
+   "b10-relay-avisos"
+  ]
  }
 ]
