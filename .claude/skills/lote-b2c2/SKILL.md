@@ -12,6 +12,35 @@ aportó la mitad de las reglas de aquí abajo — fue el primero producido
 enteramente contra esta skill, así que sus errores son errores DE la
 skill.
 
+## El tamaño del lote es 24 — medido, no supuesto
+
+**Regla (Edu, E2#8): el lote industrial es de 24. Si hace falta más
+volumen son DOS lotes de 24 en pasadas separadas, nunca uno de 44.**
+
+Las tres tandas industriales, con su tasa de error medida por revisión
+completa a mano (no por muestreo):
+
+| lote | tamaño | muestreo | freno | error real |
+|---|---:|---|---|---:|
+| industrial 1 | 24 | 1/3 | SÍ | **4/24 = 17 %** |
+| industrial 2 | 24 | 0/3 | no | *sin medir* |
+| industrial 3 | **44** | 2/5 | SÍ | **20/44 = 45 %** |
+
+Casi triplicar el error borra la ventaja: el lote grande costó una
+revisión a mano de 44 más una ronda de verificación, que es más trabajo
+humano que dos lotes de 24. Y la clase dominante **no fue de lengua**:
+12 de los 20 errores fueron **trasvase roto rúbrica↔gold** — la casilla
+nombra un dato que la respuesta modelo no dice, o exige uno que la
+fuente no da. Ése es el mecanismo, y explica por qué el tamaño importa:
+la rúbrica y su modelo se escriben en paralelo y **se separan cuando se
+escriben 44 de un tirón**. No es fatiga del autor, es que el lote grande
+no cabe en una sola cabeza a la vez.
+
+Lo que NO fue la causa, también medido: los modificadores nuevos del
+lote 3 (`contradictorio`, `parcial`) pasaron limpios el muestreo y la
+revisión, y lo ya publicado aguanta (0 de 15 mediaciones industriales en
+producción traducen mal «até»). El 45 % fue del lote, no de la línea.
+
 ## El ciclo
 
 1. **Borrador** en `docs/contenido/AAAA-MM-DD-loteN-….md`, marcado

@@ -1,0 +1,106 @@
+# 1 · Puntos de enseñanza que ENUMERA el currículo (conteo auditable)
+
+Un punto = un segmento de la enumeración de esa sección. El
+separador se elige por sección («;» si hay dos o más, si no «,»)
+y se declara abajo, porque el currículo no enumera igual en todas.
+
+| nivel | GRAMÁTICA  | LÉXICO     | FONOLOGÍA  | PRAGMÁTICA | MEDIACIÓN  | TOTAL |
+|-------|------------|------------|------------|------------|------------|-------|
+| A1    |         11 |          2 |          7 |         11 |          0 |    31 |
+| A2    |         10 |          7 |          5 |          6 |          3 |    31 |
+| B1    |          9 |          2 |          5 |          6 |          5 |    27 |
+| B2    |         10 |          5 |          5 |          5 |          6 |    31 |
+| C1    |         11 |          5 |          4 |          5 |          7 |    32 |
+| C2    |          9 |          5 |          4 |          5 |         11 |    34 |
+| **Σ** |         60 |         26 |         30 |         38 |         32 |   186 |
+
+Separador usado en cada sección (para auditar el conteo):
+  A1/GRAMÁTICA: «;» → 11 · A1/LÉXICO: «,» → 2 · A1/FONOLOGÍA: «;» → 7 · A1/PRAGMÁTICA: «,» → 11 · A2/GRAMÁTICA: «;» → 10 · A2/LÉXICO: «,» → 7 · A2/FONOLOGÍA: «;» → 5 · A2/PRAGMÁTICA: «;» → 6 · A2/MEDIACIÓN: «,» → 2 · A2/MEDIACIÓN: «,» → 1 · B1/GRAMÁTICA: «;» → 9 · B1/LÉXICO: «,» → 2 · B1/FONOLOGÍA: «;» → 5 · B1/PRAGMÁTICA: «;» → 6 · B1/MEDIACIÓN: «,» → 4 · B1/MEDIACIÓN: «,» → 1 · B2/GRAMÁTICA: «;» → 10 · B2/LÉXICO: «,» → 5 · B2/FONOLOGÍA: «;» → 5 · B2/PRAGMÁTICA: «;» → 5 · B2/MEDIACIÓN: «;» → 4 · B2/MEDIACIÓN: «,» → 2 · C1/GRAMÁTICA: «;» → 11 · C1/LÉXICO: «,» → 5 · C1/FONOLOGÍA: «;» → 4 · C1/PRAGMÁTICA: «;» → 5 · C1/MEDIACIÓN: «;» → 5 · C1/MEDIACIÓN: «,» → 2 · C2/GRAMÁTICA: «,» → 9 · C2/LÉXICO: «,» → 5 · C2/FONOLOGÍA: «;» → 4 · C2/PRAGMÁTICA: «;» → 5 · C2/MEDIACIÓN: «;» → 4 · C2/MEDIACIÓN: «,» → 2 · C2/MEDIACIÓN: «,» → 5
+A1 no tiene sección MEDIACIÓN en el currículo: la mediación arranca en A2 por diseño.
+
+
+# 2 · Ítems por concepto HOY — distribución
+
+| nivel | conceptos | a CERO | <6 | mín | mediana | máx | media | ítems |
+|-------|----------:|-------:|---:|----:|--------:|----:|------:|------:|
+| A1    |        11 |      0 |  1 |   4 |      22 |  51 |    26 |   289 |
+| A2    |        11 |      0 |  0 |  26 |      44 |  84 |    46 |   511 |
+| B1    |        12 |      0 |  0 |  52 |      60 | 125 |    67 |   798 |
+| B2    |        12 |      0 |  0 |  40 |      61 |  90 |    63 |   754 |
+| C1    |         4 |      0 |  2 |   3 |      11 |  20 |    10 |    39 |
+| C2    |         0 |      0 |  0 |   0 |       0 |   0 |     0 |     0 |
+| **Σ** |        50 |      0 |  3 |   3 |      53 | 125 |    48 |  2391 |
+
+Conceptos declarados en concepts.json: 46 · usados por algún ítem pero NO declarados: 4 (b11-falsos-amigos, b11-morfologia-enganosa, b11-regencias, b11-aspecto-tempo)
+Ejercicios sin ningún concept declarado: 121 de 2383 (5 %)
+
+Los 10 conceptos con más ítems (la media miente sin esto):
+   125  b10-registro  [B1]
+   100  b10-relay-avisos  [B1]
+    90  b6-contraste-indicativo-subjuntivo  [B2]
+    86  b8-oracoes-subordinadas  [B2]
+    84  b3-pronomes  [A2]
+    73  b7-gerundio  [B2]
+    64  b10-variacao-diatopica  [B1]
+    64  b8-colocacao-pronominal  [B2]
+    62  b5-futuro-presente  [B1]
+    61  b6-imperfeito-subj  [B2]
+
+
+# 3 · La meta bajo N ítems por concepto
+
+
+**(a) conceptos DECLARADOS hoy en concepts.json**
+
+| nivel | base | N=6 | N=8 | N=10 | meta hoy |
+|-------|-----:|----:|----:|-----:|---------:|
+| A1    |   11 |  66 |  88 |  110 |      900 |
+| A2    |   11 |  66 |  88 |  110 |     1100 |
+| B1    |   12 |  72 |  96 |  120 |     1200 |
+| B2    |   12 |  72 |  96 |  120 |     1300 |
+| C1    |    4 |  24 |  32 |   40 |     1000 |
+| C2    |    0 |   0 |   0 |    0 |      800 |
+| **Σ** |   50 | **300** | **400** | **500** | **6300** |
+
+**(b) puntos que ENUMERA el currículo (tabla 1)**
+
+| nivel | base | N=6 | N=8 | N=10 | meta hoy |
+|-------|-----:|----:|----:|-----:|---------:|
+| A1    |   31 | 186 | 248 |  310 |      900 |
+| A2    |   31 | 186 | 248 |  310 |     1100 |
+| B1    |   27 | 162 | 216 |  270 |     1200 |
+| B2    |   31 | 186 | 248 |  310 |     1300 |
+| C1    |   32 | 192 | 256 |  320 |     1000 |
+| C2    |   34 | 204 | 272 |  340 |      800 |
+| **Σ** |  186 | **1116** | **1488** | **1860** | **6300** |
+
+
+# 3-bis · La inversión: qué inventario de conceptos implica cada meta
+
+| meta | N=6 | N=8 | N=10 |
+|------|----:|----:|-----:|
+| 6300 | 1050 | 788 |  630 |
+| 4200 | 700 | 525 |  420 |
+| 3000 | 500 | 375 |  300 |
+| 2000 | 334 | 250 |  200 |
+
+Hoy hay **50** conceptos y **2391** ítems asignados:
+densidad real **48 ítems por concepto** (mediana 53, máx 125).
+Sostener la meta de 6300 a N=8 pide 788 conceptos: **15.8× el inventario actual**.
+Los 186 puntos que enumera el currículo son 3.7× el inventario actual — ni de lejos suficientes para 6300 a N=8.
+
+Dicho de otro modo: **la meta y el inventario de conceptos no son
+independientes.** Elegir 6.300 con 50 conceptos declarados obliga a 126
+ítems por concepto, que es 2,4× la densidad que el propio corpus tiene hoy
+(48). O baja la meta, o sube el inventario, o se acepta esa densidad.
+
+
+# 4 · Mediación, con la cifra CORREGIDA
+
+| bucket | hay | pide | falta |
+|---|---:|---:|---:|
+| mediación-ÍTEM (dentro de los 6300 de ejercicios) | 0 | 1580 | 1580 |
+| mediación-TAREA (dentro de las 830 de producción) | 183 | 230 | 47 |
+
+El recuento de E2#8 daba 1.350 al bucket de ítems restando las 230 tareas.
+Son buckets separados: el faltante de mediación-ÍTEM es 1580, no 1350.

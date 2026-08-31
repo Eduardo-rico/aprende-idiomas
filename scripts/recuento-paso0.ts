@@ -49,13 +49,20 @@ console.log(fila('Σ', [tHay, tPide, tMotor, tMeta, tFalta, `${Math.round((tHay 
 
 // ── Mediación: el cuello declarado del plan ──
 const med = items.filter((x) => x.type === 'mediation');
-const MED_ITEMS = 1580 - 230, MED_TAREAS = 230;
+// CORREGIDO en E2#9: la v1 calculaba MED_ITEMS = 1580 − 230, y eso está
+// mal. Son buckets SEPARADOS, de líneas distintas del currículo:
+//   · EJERCICIOS de mediación   A2 200 · B1 280 · B2 400 · C1 400 · C2 300 = 1.580,
+//     dentro de los 7.000 ejercicios;
+//   · PRODUCCIÓN de mediación   A2  20 · B1  40 · B2  60 · C1  60 · C2  50 =   230,
+//     dentro de las 830 tareas de producción.
+// Restar una de la otra desaparecía 230 ítems del faltante.
+const MED_ITEMS = 1580, MED_TAREAS = 230;
 console.log(`\n## Mediación (el cuello del plan)\n`);
 console.log(`| bucket | hay | pide | falta | % |`);
 console.log(`|---|---:|---:|---:|---:|`);
 console.log(`| mediación-TAREAS (dentro de las 830 de producción) | ${med.length} | ${MED_TAREAS} | ${Math.max(0, MED_TAREAS - med.length)} | ${Math.round(med.length / MED_TAREAS * 100)}% |`);
 console.log(`| mediación-ÍTEMS (ejercicios del currículo) | 0 | ${MED_ITEMS} | ${MED_ITEMS} | 0% |`);
-console.log(`| **total mediación** | **${med.length}** | **1580** | **${1580 - med.length}** | **${Math.round(med.length / 1580 * 100)}%** |`);
+console.log(`| **total mediación** | **${med.length}** | **${MED_ITEMS + MED_TAREAS}** | **${MED_ITEMS + MED_TAREAS - med.length}** | **${Math.round(med.length / (MED_ITEMS + MED_TAREAS) * 100)}%** |`);
 
 // ── Ritmo real medido, para la proyección ──
 const b2c2 = items.filter((x) => String(x.id).startsWith('b2c2-'));
