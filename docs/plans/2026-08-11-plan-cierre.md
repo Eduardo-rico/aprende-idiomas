@@ -175,9 +175,37 @@ del ejecutor):
    contenido, relay corto). Es lo que ataca los 1.350 y lo que más
    mueve la aguja; el protocolo (matriz, rúbrica derivada, muestreo
    con freno, gate de molde) ya está probado y se hereda entero.
-2. **Subir el tamaño de lote**, que hoy quedó demostrado que se puede:
-   44 avisos en una sesión con freno pasado. Pero a 65/sesión el
-   faltante sigue pidiendo ~60 sesiones.
+2. **Subir el tamaño de lote — MEDIDO Y DESACONSEJADO.** Se probó hoy y
+   salió mal. Las tres tandas industriales, con su tasa de error medida
+   por revisión completa a mano:
+
+   | lote | tamaño | muestreo | freno | error real |
+   |---|---:|---|---|---:|
+   | industrial 1 | 24 | 1/3 | SÍ | **4/24 = 17 %** |
+   | industrial 2 | 24 | 0/3 | no | *sin medir* (publicó sin revisión completa) |
+   | industrial 3 | **44** | 2/5 | SÍ | **20/44 = 45 %** |
+
+   Casi triplicar la tasa de error al pasar de 24 a 44 borra la ventaja:
+   el lote grande costó una revisión completa a mano de 44 ítems más una
+   ronda de verificación, que es más trabajo humano que dos lotes de 24.
+   La clase dominante del lote 3 **no fue de lengua sino de trasvase
+   rúbrica↔gold** (la casilla nombra un dato que el gold no dice): 12 de
+   los 20 errores. Es el fallo típico de producir en masa — la rúbrica y
+   la respuesta modelo se separan cuando se escriben 44 a la vez.
+
+   Aviso metodológico: el tamaño va confundido con dos cambios más
+   (3 géneros nuevos y 2 modificadores nuevos). Pero los modificadores
+   quedan absueltos por medición — `contradictorio` y `parcial` pasaron
+   limpios el muestreo y la revisión —, así que el tamaño es el
+   sospechoso que queda.
+
+   **Contrapeso, también medido**: la calidad de lo YA PUBLICADO aguanta.
+   Sobre las 56 mediaciones industriales en producción, 0 de 15 traducen
+   mal «até» (la clase que frenó el lote 1: todas dicen «hasta» y cuatro
+   explicitan «incluido»), y del barrido de anclas rúbrica↔gold salieron
+   11 sospechosas de las que, triadas 5, **4 eran falsos positivos** del
+   propio barrido y 1 real y menor (`b2c2-med-125` pide «sábado 28» y el
+   gold dice sólo «el sábado»). El 45 % es del lote 3, no de la línea.
 3. **Recortar la meta**. Los 6.300 salen del currículo que fijó Edu, no
    de una ley externa: C2 (800, a cero) y la mitad de C1 (960) son
    dos tercios del faltante de los niveles altos, y son justamente los

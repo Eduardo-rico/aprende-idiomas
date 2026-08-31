@@ -120,8 +120,8 @@ nuevos, ninguno en el registro acumulado.
 
 **modelAnswer**:
 > El martes 7, de nueve a dos, limpian los depósitos y nos quedamos sin
-> agua en los grifos. Conviene que llenemos botellas la noche antes —
-> yo me encargo si quieres, que tú entras a trabajar pronto.
+> agua en los grifos. Conviene que llenemos garrafas de agua el día antes —
+> yo me encargo si quieres.
 
 ### MED-142 · portal-infra · pt→es · condicional
 **sourceText:**
@@ -137,7 +137,7 @@ toca decidir.»
 1. ¿Traslada el día y el qué (jueves 16, cambian los contadores de la
    luz, piso por piso)?
 2. ¿Traslada la condición completa (si no puede estar, dejar la llave
-   en portería antes de las 8 de ese día)?
+   en portería como muy tarde a las 8 de ese día)?
 3. ¿Traslada la consecuencia de no hacerlo (el cambio se aplaza a
    diciembre)?
 4. ¿Español natural, sin lusismos («frações», «portaria» sin
@@ -146,7 +146,7 @@ toca decidir.»
 **modelAnswer**:
 > El jueves 16 vienen a cambiar los contadores de la luz en todos los
 > pisos. Como tú trabajas fuera, tendrías que dejar la llave en
-> portería antes de las ocho de la mañana de ese día. Si no entran, no
+> portería como muy tarde a las ocho de la mañana de ese día. Si no entran, no
 > te lo cambian hasta diciembre.
 
 ### MED-143 · portal-infra · pt→es · señuelo
@@ -172,8 +172,8 @@ importa es qué tiene que quitar.»
 
 **modelAnswer**:
 > El miércoles 22, de diez a una, hacen desratización en los sótanos y
-> las zonas comunes. Hay que sacar de ahí las bolsas de basura y la
-> comida de animales, así que baja el pienso del gato. En los pisos no
+> las zonas comunes. Hay que sacar de los garajes las bolsas de basura y la
+> comida de animales, así que sube el pienso del gato. En los pisos no
 > entran, tranquila.
 
 ### MED-144 · portal-infra · pt→es · corregido (DOS avisos)
@@ -202,7 +202,7 @@ el estado final — y con lo que le toca hacer ahora.»
 > Cambio: la recogida de muebles no es el sábado 3 sino el domingo 4, a
 > la misma hora, desde las ocho. Y ojo, que tú ya bajaste el sofá: hay
 > que subirlo o apartarlo antes del sábado por la noche, porque si no
-> se queda ahí un día entero bloqueando.
+> se queda ahí un día entero. El domingo, junto al contenedor y sin bloquear el paso.
 
 ### MED-145 · cartel · pt→es · simple
 **sourceText:**
@@ -224,7 +224,7 @@ barrio. Explícaselo.»
 **modelAnswer**:
 > Esta semana la farmacia de guardia es la Central, en la Rua da Sé
 > número 12. De diez de la noche a nueve de la mañana atienden por la
-> ventanilla, llamando al timbre. El resto del día abren normal.
+> ventanilla. El resto del día abren normal.
 
 ### MED-146 · cartel · pt→es · simple
 **sourceText:**
@@ -293,7 +293,7 @@ Pásaselo en portugués.»
 
 **modelAnswer**:
 > Há uma recolha solidária de alimentos aos sábados de outubro, no átrio
-> do centro cívico. O que faz mais falta é azeite, leguminosas e leite.
+> do centro cívico. O que faz mais falta é óleo alimentar, leguminosas e leite.
 > Não aceitam nada fresco nem embalagens já abertas — se quiseres,
 > levamos juntos no sábado.
 
@@ -302,7 +302,7 @@ Pásaselo en portugués.»
 > «Centro de Saúde: consulta de pediatria do Tomás marcada para
 > segunda-feira, dia 9, às 11h20, gabinete 4. Traga o boletim de saúde
 > infantil. Em caso de febre, contacte antes pelo 217 445 900.»
-**audience:** «tu pareja española — el Tomás es vuestro hijo»
+**audience:** «tu pareja española — Tomás es vuestro hijo»
 **instructionsEs:** «El SMS llegó a tu móvil. Pásaselo con todo.»
 **wordRange:** 25–60 · **register:** informal
 **Rúbrica:**
@@ -314,8 +314,8 @@ Pásaselo en portugués.»
    60 palabras?
 
 **modelAnswer**:
-> Ya tenemos cita del pediatra para el Tomás: el lunes 9 a las once y
-> veinte, en la consulta 4. Hay que llevar la cartilla de salud. Y si
+> Ya tenemos cita del pediatra para Tomás: el lunes 9 a las once y
+> veinte, en la consulta 4. Hay que llevar la cartilla de salud infantil. Y si
 > ese día amanece con fiebre, dicen que llamemos antes al 217 445 900.
 
 ### MED-150 · sms-servicio · pt→es · señuelo
@@ -340,7 +340,7 @@ saber.»
 
 **modelAnswer**:
 > Tu móvil ya está arreglado. Se recoge en la tienda del Saldanha
-> llevando el resguardo o, si lo has perdido, el DNI. La reparación
+> llevando el resguardo o el DNI. La reparación
 > tiene noventa días de garantía, así que guarda el papel que te den.
 
 ### MED-151 · sms-servicio · pt→es · condicional
@@ -365,7 +365,7 @@ Dile qué tiene que hacer y para cuándo.»
 
 **modelAnswer**:
 > Ojo con el gimnasio: si no dices nada, el 1 de octubre te renueva
-> solo. Como te vas en noviembre, tienes que avisar por escrito como
+> solo, con la cuota que esté en vigor. Como te vas en noviembre, tienes que avisar por escrito como
 > muy tarde el 20 de septiembre — ese día todavía vale. Si se te pasa,
 > te atan un año entero.
 
@@ -387,7 +387,7 @@ primero, que la hora cambió.»
 4. ¿Portugués natural por tu, entre 30 y 65 palabras?
 
 **modelAnswer**:
-> Atenção que mudaram a hora: a reunião na gestora passou para quinta
+> Atenção que mudaram a hora: a reunião na contabilidade passou para quinta
 > às 9h15, já não é às 12h30. Tens de levar os certificados de
 > retenções. Se a essa hora não puderes mesmo, responde ao SMS deles e
 > remarcam.
@@ -442,7 +442,7 @@ saber.»
 > Ha venido el cerrajero a las once y no había nadie en casa. Vuelve el
 > jueves por la mañana — como tú teletrabajas, te pilla bien. Si al
 > final no puedes estar, hay que llamar al 213 660 004 para quedar otro
-> día. La llave nueva la hacen en el momento.
+> día. La llave nueva la hacen el mismo día.
 
 ### MED-155 · recado-voz · pt→es · simple
 **sourceText** (mensaje de voz):
@@ -467,8 +467,8 @@ Cuéntaselo de usted.»
 **modelAnswer**:
 > Ha llamado el electricista. Dice que no puede cambiar el cuadro sin
 > cortar la luz de todo el edificio, y que eso sólo se permite de dos a
-> cuatro y con autorización de la comunidad, así que habría que hablar
-> con el administrador. Si usted prefiere no complicarlo, deja hecho
+> cuatro y con autorización de la comunidad, así que tendría usted que hablar
+> con el administrador. Si no se puede, deja hecho
 > sólo el enchufe de la cocina.
 
 ### MED-156 · recado-voz · es→pt · simple
@@ -494,7 +494,7 @@ espanhol falado»
 > A Carmen deixou recado da coral: o ensaio de terça passa para
 > quarta-feira, à mesma hora, porque a sala está ocupada. Leva a pasta
 > azul, que vão começar o repertório novo. E ela pede que digas se
-> podes ir — precisa de saber se são gente que chegue.
+> podes ir — precisa de saber se são suficientes.
 
 ### MED-157 · aviso-escolar · pt→es · simple
 **sourceText:**
@@ -516,7 +516,7 @@ para cuándo.»
    «comprovativo»), entre 30 y 65 palabras?
 
 **modelAnswer**:
-> Lo del campamento de julio: hay que apuntarlo antes del 15 de junio,
+> Lo del campamento de julio: hay que apuntarlo como muy tarde el 15 de junio,
 > ese día todavía vale, y sólo cogen a treinta niños. Piden la ficha de
 > inscripción firmada y el justificante del seguro escolar. Lo bueno es
 > que se puede pagar en dos veces.
@@ -526,7 +526,7 @@ para cuándo.»
 > «Reunião de encarregados de educação do 3.º B: quinta-feira, dia 12,
 > às 18h30, na sala 7. Ordem de trabalhos: visita de estudo, avaliação
 > intercalar e eleição do representante dos pais.»
-**audience:** «tu pareja española, que va a ir a la reunión»
+**audience:** «tu pareja española, que tendría que ir a la reunión»
 **instructionsEs:** «Circular del cole. Cuéntale cuándo es y de qué va.»
 **wordRange:** 25–55 · **register:** informal
 **Rúbrica:**
@@ -587,7 +587,7 @@ la circular en portugués.»
 **modelAnswer**:
 > Chegou uma circular: na quarta, dia 19, a enfermagem vai dar a vacina
 > da gripe, mas só aos alunos cujos pais tenham assinado a autorização.
-> Quem não entregar o papel fica na aula na mesma, sem problema
+> Quem não assinar o papel fica na aula na mesma, sem problema
 > nenhum. Assinaste o teu?
 
 ### MED-161 · email-servicio · pt→es · señuelo
@@ -604,7 +604,7 @@ qué puede hacer.»
 1. ¿Traslada la renovación (el seguro de hogar se renueva el 30 de
    septiembre)?
 2. ¿Traslada la opción con plazo (si quiere cambiar el capital
-   asegurado, avisar antes del 15 de septiembre)?
+   asegurado, avisar como muy tarde el 15 de septiembre)?
 3. ¿Traslada el cambio que viene igualmente (la franquicia sube de 150
    a 200 € desde octubre)?
 4. ¿La respuesta NO incluye el número de póliza (HM-55021)?
@@ -613,7 +613,7 @@ qué puede hacer.»
 
 **modelAnswer**:
 > Mamá, el seguro de la casa se renueva el 30 de septiembre. Si quieres
-> cambiar el capital asegurado, tienes que decirlo antes del 15. Y
+> cambiar el capital asegurado, tienes que decirlo como muy tarde el 15. Y
 > avisan de algo que pasa igual: desde octubre la franquicia sube de
 > ciento cincuenta a doscientos euros.
 
@@ -638,7 +638,7 @@ portugués. Cuéntaselo.»
    25 y 60 palabras?
 
 **modelAnswer**:
-> El sábado de madrugada, entre las dos y las seis, el portal del banco
+> El sábado de madrugada, entre las dos y las seis, el portal de clientes
 > estará caído por mantenimiento. Los pagos que tengas programados en
 > esa franja se procesan a las siete. Sobre todo, no los repitas
 > pensando que han fallado.
@@ -667,7 +667,7 @@ en tres semanas»
 **modelAnswer**:
 > Lo del pasaporte: se puede renovar desde seis meses antes de que
 > caduque, y tardan doce días hábiles. Pero como tú vuelas a Londres en
-> tres semanas y eso está fuera de Schengen, te toca pedir cita urgente
+> tres semanas — dentro de esos noventa días — y eso está fuera de Schengen, te toca pedir cita urgente
 > — cuesta cuarenta euros más, pero llegas.
 
 ### MED-164 · email-servicio · es→pt · simple
@@ -690,7 +690,7 @@ apuntarse.»
 4. ¿Portugués natural por tu, entre 25 y 60 palabras?
 
 **modelAnswer**:
-> Há um curso de cozinha de época: quatro sessões, às terças de
+> Há um curso de cozinha com produtos da época: quatro sessões, às terças de
 > novembro, das 19h às 21h, na cozinha-escola do mercado. São só 12
 > lugares. Os materiais estão incluídos e cada um leva para casa o que
 > cozinhar. Queres que nos inscrevamos juntas?
@@ -715,9 +715,9 @@ Pásasela en portugués.»
 4. ¿Portugués natural por tu, entre 30 y 65 palabras?
 
 **modelAnswer**:
-> A vizinha foi-se por dez dias e deixou a chave para regarmos. As
+> A vizinha foi-se embora por dez dias e deixou a chave para regarmos. As
 > plantas da varanda, de dois em dois dias; o fícus da sala só uma vez
-> por semana e com pouca água — cuidado que esse morre afogado. O
+> por semana e com pouca água — vê lá que esse morre afogado. O
 > correio não é connosco, vem cá o filho dela.
 
 ### MED-166 · nota-manuscrita · es→pt · simple
@@ -760,7 +760,7 @@ que tiene que decidir.»
    camisas, el jueves)?
 2. ¿Traslada la decisión que le toca (la mancha de la manga necesita
    tratamiento especial: 8 € más, si autoriza)?
-3. ¿Traslada el plazo para decidir (avisar antes del miércoles)?
+3. ¿Traslada el plazo para decidir (avisar como muy tarde el miércoles)?
 4. ¿La respuesta NO incluye el número de resguardo (3391)?
 5. ¿Español natural, sin lusismos («nódoas», «talão»), entre 30 y 65
    palabras?
@@ -769,7 +769,7 @@ que tiene que decidir.»
 > En la tintorería te dejan recado: el abrigo de lana y las dos camisas
 > estarán el jueves. Le han salido todas las manchas menos la de la
 > manga, que necesita un tratamiento aparte y cuesta ocho euros más.
-> Tienes que decirles si lo hacen antes del miércoles.
+> Tienes hasta el miércoles incluido para decirles si lo hacen.
 
 ### MED-168 · nota-manuscrita · pt→es · simple
 **sourceText** (nota en la caseta del huerto comunitario):
@@ -816,7 +816,7 @@ YA, primero.»
 
 **modelAnswer**:
 > Mete ya las macetas y lo que tengas suelto en la terraza: hay alerta
-> naranja por viento, con rachas de hasta noventa, desde las diez de
+> naranja por viento, con rachas de hasta noventa por hora, desde las diez de
 > esta noche hasta las seis de la mañana. Y no dejes el coche debajo de
 > los árboles.
 
@@ -873,7 +873,7 @@ primero.»
 > autobuses 3 y 12 desvían por la avenida. Se recomienda no aparcar en
 > la zona desde las 6:00.»
 **audience:** «o teu colega de casa português, que costuma deixar o
-carro no paseo»
+carro na marginal»
 **instructionsEs:** «Mándale el aviso en portugués — con lo que le
 toca.»
 **wordRange:** 30–65 · **register:** informal · **address:** tu
@@ -908,7 +908,7 @@ Lo urgente primero.»
    Faro sale por la dársena 9, no la 4)?
 2. ¿Traslada el cierre de embarque (diez minutos antes de la salida)?
 3. ¿Traslada lo que le toca por llevar maletas (pasar antes por el
-   mostrador para facturar)?
+   mostrador)?
 4. ¿Español natural, sin lusismos («cais», «porão»), entre 30 y 65
    palabras?
 
@@ -931,7 +931,7 @@ Lo urgente primero.»
 1. ¿Traslada dónde está el niño (mostrador de información, planta 0)?
 2. ¿Traslada la descripción (unos cuatro años, jersey azul, responde
    al nombre de Rodrigo)?
-3. ¿Traslada el requisito para recogerlo (ir con documento de
+3. ¿Traslada el requisito para recogerlo (que vayan los padres con documento de
    identidad)?
 4. ¿Español natural, sin lusismos («camisola», «balcão»), entre 25 y
    55 palabras?
@@ -939,8 +939,8 @@ Lo urgente primero.»
 **modelAnswer**:
 > ¡Está en información, en la planta baja! Han dicho por megafonía que
 > tienen a un niño de unos cuatro años, con jersey azul, que responde a
-> Rodrigo. Corre para allá, pero llévate el DNI, que sin documento no
-> te lo entregan.
+> Rodrigo. Corre para allá y avisa a sus padres, que piden que vayan ellos
+> con documento de identidad.
 
 ### MED-175 · megafonia · pt→es · simple · **género nuevo**
 **sourceText** (megafonía del supermercado):
@@ -961,7 +961,7 @@ datos.»
 
 **modelAnswer**:
 > Mamá, que cierran en un cuarto de hora. Las cajas 1 y 2 las están
-> cerrando ya; la única que se queda es la 5. Coge lo que lleves y
+> cerrando ya; la 5 se queda abierta hasta que salga el último cliente. Coge lo que lleves y
 > vamos — mañana domingo abren de nueve a una si falta algo.
 
 ### MED-176 · megafonia · es→pt · simple · **género nuevo**
@@ -1004,7 +1004,7 @@ repartís.»
    y 60 palabras?
 
 **modelAnswer**:
-> Ha llegado el recibo del agua: 38,60 euros por el bimestre, catorce
+> Ha llegado el recibo del agua y el saneamiento: 38,60 euros por el bimestre, catorce
 > metros cúbicos. Lo pasan por el banco el 5 de octubre, así que te
 > paso la mitad ese día. Si algo no cuadra, hay treinta días para
 > reclamar.
@@ -1081,7 +1081,7 @@ con lo importante.»
 **modelAnswer**:
 > A propina do curso são 310 euros, que podes pagar em duas
 > prestações de 155 — uma em outubro, outra em janeiro. Atenção a esta:
-> se falhares a segunda, dão-te baixa automática. O comprovativo está
+> se falhares a segunda, anulam-te a matrícula automaticamente. O comprovativo está
 > na secretaria virtual.
 
 ### MED-181 · chat-grupo · pt→es · simple · **género nuevo**
@@ -1148,7 +1148,7 @@ antes de mandar nada.»
 **Rúbrica:**
 1. ¿Traslada el plan (juntar dinero para el regalo de la profesora,
    como el año pasado; una madre lo compra y se le transfiere)?
-2. ¿Traslada el plazo (antes de fin de semana)?
+2. ¿Traslada el plazo INCLUSIVO (hasta el final de la semana)?
 3. ¿SEÑALA EL HUECO: en el hilo no dicen CUÁNTO pone cada uno ni el
    número de la persona, así que hay que preguntarlo antes de
    transferir?
@@ -1158,7 +1158,7 @@ antes de mandar nada.»
 **modelAnswer**:
 > En el grupo de padres van a juntar dinero para el regalo de la
 > profesora, como el año pasado: una madre lo compra y se le transfiere
-> por móvil, antes del fin de semana. Pero no dicen cuánto pone cada
+> por móvil, hasta el final de la semana. Pero no dicen cuánto pone cada
 > uno ni dan el número, así que habrá que preguntarlo.
 
 ### MED-184 · chat-grupo · es→pt · señuelo · **género nuevo**
