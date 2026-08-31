@@ -14,7 +14,11 @@ export function MultipleChoiceCard({ ex, onSubmit }: Props) {
   const pick = (i: number) => { if (picked !== null) return; setPicked(i); onSubmit(d.options[i] ?? "", i === d.correctIndex); };
   return (
     <div className="p-8 border-2 border-border rounded-2xl space-y-6">
-      <div className="text-xl text-center">{d.question}</div>
+      {/* Los ítems de fidelidad de mediación traen la fuente y el recado en
+          líneas separadas: sin `whitespace-pre-line` se pegan en un solo
+          párrafo. Los 37 multiple_choice anteriores no tienen ni un salto,
+          así que siguen centrados y se ven exactamente igual. */}
+      <div className={`text-xl whitespace-pre-line ${d.question.includes("\n") ? "text-left" : "text-center"}`}>{d.question}</div>
       <OptionsGrid options={d.options} onPick={pick} disabled={picked !== null} />
       {picked !== null && (
         <div className="text-center text-sm text-muted-foreground">{d.explanationEs}</div>
