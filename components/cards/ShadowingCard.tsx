@@ -74,8 +74,12 @@ export function ShadowingCard({ ex, onSubmit }: Props) {
           <button onClick={() => onSubmit("", true)} className="w-full px-4 py-2 bg-primary rounded-md font-medium">Listo — calificar</button>
         </div>
       )}
+      {/* Saltar NO puntúa como acierto: el alumno no ha producido nada, y
+          darlo por bueno mete en el FSRS evidencia que no existe. Mismo
+          defecto que FillBlankCard tenía con `blanks.some()`, encontrado
+          en el mismo barrido (E2#11). */}
       {phase === "idle" && !modelUrl && (
-        <button onClick={() => onSubmit("", true)} className="w-full text-sm text-muted-foreground underline">Saltar grabación</button>
+        <button onClick={() => onSubmit("", false)} className="w-full text-sm text-muted-foreground underline">Saltar grabación</button>
       )}
     </div>
   );

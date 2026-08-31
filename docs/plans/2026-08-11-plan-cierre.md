@@ -20,9 +20,17 @@ siguen vigentes y no se reabren.
 
 **PT terminado** cuando, con cifras medidas:
 - [ ] Lectura ≥ 1.900.000 palabras en el catálogo (hoy: 714.004).
-- [ ] Corpus según recuento del Paso 0: **6.300 ejercicios** (7.000 del
-      currículo − 700 de motor runtime), con **mediación completa**:
-      1.580 ítems + 230 tareas — es el cuello: hay 32 (2 %).
+- [ ] **COBERTURA, no total** (decisión de Edu, 2026-09-01): **≥12 ítems
+      en cada uno de los 186 puntos del currículo**, ~3.900 ejercicios.
+      **El total de 6.300 queda DEROGADO**: salía de una extrapolación por
+      horas, y la partición de conceptos de E2#10 midió que sostenerlo
+      pedía 788 conceptos (15,8× el inventario) o 126 ítems por concepto
+      (2,4× la densidad real). Faltan **1.513**: 761 de C1+C2 y 578 de
+      sub-puntos flacos de A2/B1/B2.
+- [ ] **Mediación: composición, no bucket.** Las **230 TAREAS** siguen
+      (183 hechas, 80 %). Los **ÍTEMS** de mediación salen como ~30 % de
+      los 1.513, **no encima**: el bucket de 1.580 venía de la misma
+      extrapolación por horas que queda derogada.
 - [ ] Bloque 11 con sus ~6-8 lecciones y sus ítems.
 - [ ] **Cero `unchecked` sin triaje** en el corpus (hoy: 1.799) y cero
       `needs-human`/`divergent` sin resolver (hoy: 266+110).
@@ -417,3 +425,35 @@ si el criterio se adopta, el trabajo previo es partir los conceptos
 gruesos — que es trabajo de currículo, no de contenido.
 
 Sin recomendación de recorte: la decisión es de Edu.
+
+---
+
+## E2#11 (2026-09-01) — las tres decisiones que gobiernan hasta el final
+
+Fijadas por Edu con la tabla de cobertura de E2#10 delante. **No se
+re-litigan.**
+
+**1 · La meta es COBERTURA.** ≥12 ítems por cada uno de los 186 puntos
+(~3.900 ejercicios). Faltan 1.513. Los 6.300 quedan derogados.
+
+**2 · La mediación es composición, no un bucket aparte.** 230 tareas
+(183 hechas) + los ítems de mediación como ~30 % de los 1.513.
+
+**3 · NINGÚN LOTE ELIGE TEMA.** Cada lote toma sus puntos de la tabla de
+déficit (`npx tsx scripts/split-conceptos.ts`), y su reporte dice qué
+puntos cerró y cuánto bajó el déficit. La prueba de por qué, medida en
+E2#10: producir por tema llevó a enseñar la regência con DE **87 veces
+en 9 bloques** mientras la mesóclise —el rasgo más característico del
+portugués europeo culto— tiene **2 ítems**, y a que un punto llamado
+`b5-futuro-composto` acumule 54 ítems donde el futuro composto **no
+aparece ni una vez**.
+
+**Calendario**: ~25 sesiones de producción, unos dos meses y medio. Luego
+E3 (lectura, barata) y E5. Cuando el déficit baje de ~400, E3 entra en
+paralelo.
+
+**Una cicatriz de Edu, anotada por él**: su reparto proporcional daba
+A2/B1/B2 por cerrados y la partición fina demostró lo contrario —
+medianas de 8, 11 y 11, con 89 puntos bajo el piso entre los tres. Es
+exactamente para lo que servía partir los conceptos: **un concepto gordo
+bien surtido esconde sub-puntos famélicos.**
