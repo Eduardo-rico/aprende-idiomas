@@ -221,7 +221,7 @@ b11. Lotes de **12 MED-tarea + 10 GJ**, ~2 lotes/sesión → **~7-8
 sesiones**. Doble adversarial completo, como hasta ahora.
 
 **Línea B — industrial (el pipeline tipo Ola L):** los ~4.100 ejercicios
-faltantes, que son ítems (no tareas): los 1.580−230 de mediación-ítem
+faltantes, que son ítems (no tareas): los **1.580** de mediación-ítem
 (relay corto, fidelidad de contenido, cloze de mediación), precisión
 léxica, registro, inferencia, y el A1-B2 faltante. Método: plantilla por
 familia → piloto con doble adversarial → generación por lote con gates
@@ -367,3 +367,53 @@ estimar, no medir.
 - Interacción/producción oral quedan a cero **por decisión**, no por
   olvido: el test de anchor lo vigila y este plan lo hereda. Si algún
   día entra, es una fase nueva con su propio diseño.
+
+---
+
+## E2#9 (2026-08-31) — dos correcciones al propio plan, y la medición para el re-corte
+
+**1 · El bucket de mediación-ítem es 1.580, no 1.350.** El recuento de
+E2#8 calculaba `1580 − 230`. Está mal: son buckets separados, de líneas
+distintas del currículo. **EJERCICIOS** de mediación (A2 200 · B1 280 ·
+B2 400 · C1 400 · C2 300) = **1.580**, dentro de los 7.000 de ejercicios.
+**PRODUCCIÓN** de mediación (20 · 40 · 60 · 60 · 50) = **230**, dentro de
+las 830 tareas. Este plan tenía las dos versiones —§«Estado medido hoy»
+correcta, línea de la línea B con la resta— y el script heredó la mala.
+Corregidos los dos scripts y esa línea. **El hallazgo de E2#8 se hace más
+grande, no menor: el bucket a cero es de 1.580, un 40 % del faltante.**
+
+**2 · Subir el tamaño de lote queda descartado y es ahora regla de la
+skill:** el lote industrial es de **24**. A 44 el error pasó de 17 % a
+45 %, y la clase dominante fue trasvase roto rúbrica↔gold — la casilla y
+el gold se separan cuando se escriben 44 de un tirón. Si hace falta más
+volumen, dos lotes de 24 en pasadas separadas.
+
+**3 · La medición para el re-corte de la meta** está en
+`scripts/recuento-conceptos.ts`, con la salida pegada en
+`2026-08-31-medicion-conceptos.txt`. Tres tablas y una inversión:
+
+- El currículo **enumera 186 puntos** de enseñanza (A1 31 · A2 31 · B1 27
+  · B2 31 · C1 32 · C2 34). Conteo auditable: se declara qué separador se
+  usó en cada sección.
+- Hoy hay **50 conceptos** y 2.391 asignaciones: **densidad 48 ítems por
+  concepto**, mediana 53, mín 3, máx 125, ninguno a cero. C2 tiene 0
+  conceptos declarados y C1 sólo 4.
+- **La meta bajo N ítems por concepto**: con los 50 conceptos de hoy,
+  300 / 400 / 500 para N = 6 / 8 / 10. Con los 186 puntos del currículo,
+  **1.116 / 1.488 / 1.860**. Los 6.300 actuales están entre 3× y 21× por
+  encima.
+- **La inversión, que es el número que decide**: sostener 6.300 a N=8
+  pide **788 conceptos, 15,8× el inventario actual**; los 186 puntos del
+  currículo son sólo 3,7×. Dicho al revés: 6.300 con 50 conceptos obliga
+  a **126 ítems por concepto**, 2,4× la densidad que el corpus ya tiene.
+
+**La cautela que hay que leer junto a la tabla**: el inventario de
+conceptos es GRUESO. `b10-registro` tiene 125 ítems y
+`b6-contraste-indicativo-subjuntivo` 90, no porque sobren sino porque no
+son un punto de enseñanza sino familias enteras. Con esa granularidad,
+«N por concepto» mide el inventario tanto como el curso. Las dos bases
+acotan la respuesta; **la meta y el inventario no son independientes**, y
+si el criterio se adopta, el trabajo previo es partir los conceptos
+gruesos — que es trabajo de currículo, no de contenido.
+
+Sin recomendación de recorte: la decisión es de Edu.
