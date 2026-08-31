@@ -89,3 +89,25 @@ describe('pValor', () => {
     expect(pValor(16, 16)).toBeCloseTo(1 / 2 ** 16, 8);
   });
 });
+
+// La alternancia mecánica la prohíbe la skill desde el lote 2, pero
+// nadie la medía: con MBMBMB… basta mirar si la posición es par. El
+// lote 11 de E2#12 salió exactamente así y la batería no lo vio, porque
+// sólo tenía rasgos del TEXTO.
+describe('la posición también es un rasgo', () => {
+  it('caza la alternancia mecánica perfecta', () => {
+    const alterno: ItemJuicio[] = Array.from({ length: 12 }, (_, i) => ({
+      id: `x${i}`, verdict: i % 2 === 1, sentence: `frase número ${i} con unas cuantas palabras`,
+    }));
+    const a = bateria(alterno).find((r) => r.nombre.includes('alternancia'))!;
+    expect(a.acierto).toBe(1);
+    expect(pValor(a.aciertos, a.n)).toBeLessThan(SOSPECHOSO);
+  });
+
+  it('no marca un patrón sin regularidad posicional', () => {
+    const patron = [true, true, false, true, false, false, true, false, false, true, true, false];
+    const items: ItemJuicio[] = patron.map((v, i) => ({ id: `y${i}`, verdict: v, sentence: `frase ${i} con palabras suficientes` }));
+    const a = bateria(items).find((r) => r.nombre.includes('alternancia'))!;
+    expect(pValor(a.aciertos, a.n)).toBeGreaterThan(SOSPECHOSO);
+  });
+});

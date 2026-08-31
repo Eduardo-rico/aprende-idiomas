@@ -22,6 +22,8 @@
 
 export interface ItemJuicio {
   id: string;
+  /** posición en el lote, 0-based. La rellena `bateria()` si falta. */
+  pos?: number;
   /** true = la frase está BIEN formada */
   verdict: boolean;
   sentence: string;
@@ -41,6 +43,15 @@ export interface Atajo {
 
 /** Rasgos binarios. Añadir uno aquí lo mete en la batería para siempre. */
 export const RASGOS: { nombre: string; f: (x: ItemJuicio, todos: ItemJuicio[]) => boolean }[] = [
+  {
+    // La skill prohíbe la «alternancia mecánica» desde el lote 2, pero
+    // nadie la medía: un patrón MBMBMB… se resuelve al 100 % mirando si
+    // la posición es par. El lote 11 salió así y la batería no lo veía,
+    // porque yo sólo había puesto rasgos del TEXTO. La posición también
+    // es un rasgo.
+    nombre: 'posición par en el lote (alternancia mecánica)',
+    f: (x) => (x.pos ?? 0) % 2 === 0,
+  },
   {
     nombre: 'más corta que la mediana (palabras)',
     f: (x, todos) => {
@@ -107,7 +118,8 @@ export function medirRasgo(nombre: string, presente: (x: ItemJuicio) => boolean,
   };
 }
 
-export function bateria(items: ItemJuicio[]): Atajo[] {
+export function bateria(itemsCrudos: ItemJuicio[]): Atajo[] {
+  const items = itemsCrudos.map((x, i) => ({ ...x, pos: x.pos ?? i }));
   return RASGOS
     .map((r) => medirRasgo(r.nombre, (x) => r.f(x, items), items))
     .sort((a, b) => b.acierto - a.acierto);

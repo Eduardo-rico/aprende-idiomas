@@ -335,5 +335,26 @@
   "prereqs": [
    "b10-relay-avisos"
   ]
+ },
+ {
+  "id": "b11-alternancia-infinitivo",
+  "name": "Alternancia infinitivo pessoal / conjuntivo / infinitivo simples",
+  "blockId": 11,
+  "description": "La elección entre las tres, que en C1 ya no es de forma sino de criterio: sujeto propio y expreso pide infinitivo pessoal; sujeto distinto tras conjunción pide conjuntivo; mismo sujeto y sin conjunción, infinitivo simple",
+  "prereqs": []
+ },
+ {
+  "id": "b11-conectores-discursivos",
+  "name": "Conectores de nivel discursivo",
+  "blockId": 11,
+  "description": "Los que ordenan el texto y no la oración (não obstante, com efeito, isto é, ora bem, de resto, aliás, quando muito, tanto mais que): su régimen sintáctico y su registro, que el español reparte de otra manera",
+  "prereqs": []
+ },
+ {
+  "id": "b11-ser-estar-divergente",
+  "name": "Ser y estar donde el español elige distinto",
+  "blockId": 11,
+  "description": "Los usos en que la elección portuguesa no coincide con la española: los eventos van con SER (a reunião é às três), la nacionalidad y la profesión con SER aunque sean temporales, y el estado resultante con ESTAR",
+  "prereqs": []
  }
 ]
