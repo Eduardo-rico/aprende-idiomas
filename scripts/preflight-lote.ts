@@ -19,13 +19,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { indexarCorpus, buscarDuplicados, UMBRAL, type ExIndexable } from './lib/virginidad';
 import { bateria, pValor, SOSPECHOSO, RASGOS, type ItemJuicio } from './lib/atajos';
+import { evaluarMolde, patronDe, patronesPublicados } from './lib/pares-minimos';
 import crypto from 'node:crypto';
 
 const DOC = process.argv[2];
 if (!DOC) { console.error('uso: preflight-lote.ts <doc.md>'); process.exit(2); }
 const txt = fs.readFileSync(DOC, 'utf8');
 
-interface Item extends ItemJuicio { repair?: string; explicacion: string }
+interface Item extends ItemJuicio { repair?: string; explicacion: string; par?: string }
 const items: Item[] = [];
 for (const sec of txt.split(/\n### /).slice(1)) {
   const cab = sec.split('\n')[0]!;
@@ -37,9 +38,21 @@ for (const sec of txt.split(/\n### /).slice(1)) {
     verdict: m[2] === 'BIEN',
     sentence: campo('sentence'),
     repair: campo('repair') || undefined,
+    // Los lotes hechos con `pares-minimos.ts` declaran a qué par mínimo
+    // pertenece cada ítem. Los dos miembros de un par SON casi la misma
+    // frase por diseño, así que no se comparan entre sí — pero sí, cada
+    // uno por su cuenta, contra todo el corpus publicado.
+    par: (sec.match(/\*\*par:\*\*\s*`?([\w-]+)`?/)?.[1] ?? undefined),
     explicacion: (sec.match(/\*\*explicación:\*\*\s*([\s\S]*?)(?=\n\n|\n### |$)/)?.[1] ?? '').replace(/\s+/g, ' ').trim(),
   });
 }
+
+// El corpus publicado se carga arriba porque lo necesitan DOS gates: el
+// del molde (para los patrones de los lotes previos) y el de virginidad.
+const DIR_BLOQUES = path.join(process.cwd(), 'lib/data/languages/pt/blocks');
+const corpus: ExIndexable[] = [];
+for (const f of fs.readdirSync(DIR_BLOQUES).filter((x) => /^b\d+\.json$/.test(x)).sort())
+  for (const ex of JSON.parse(fs.readFileSync(path.join(DIR_BLOQUES, f), 'utf8'))) corpus.push(ex as ExIndexable);
 
 const bloqueantes: string[] = [];
 const avisos: string[] = [];
@@ -62,15 +75,31 @@ for (const x of items) {
 }
 
 // ── 2 · El molde ─────────────────────────────────────────────────────
-const patron = items.map((x) => (x.verdict ? 'B' : 'M')).join('');
+//
+// El criterio del «prefijo de CUATRO no visto» SE AGOTA: 16 prefijos, uno
+// por lote, y de los cinco que quedaban tres violan la regla de rachas.
+// Lo sustituye `evaluarMolde`, que no enumera sino que mide — equilibrio,
+// rachas, y solape con CADA lote publicado cerca del azar, contra el
+// patrón y contra su complementario. Espacio 2^N en vez de 16 casillas.
+const patron = patronDe(items);
 const nB = items.filter((x) => x.verdict).length;
-const desequilibrio = Math.abs(nB - (items.length - nB));
 let rachaMax = 1, racha = 1;
 for (let i = 1; i < patron.length; i++) { racha = patron[i] === patron[i - 1] ? racha + 1 : 1; rachaMax = Math.max(rachaMax, racha); }
+const previos = patronesPublicados(corpus as { id: string; type: string; data: unknown }[]);
 console.log(`## Molde\n`);
-console.log(`Patrón: \`${patron}\` · prefijo de 4: \`${patron.slice(0, 4)}\` · racha máxima: ${rachaMax} · desequilibrio: ${desequilibrio}\n`);
-if (desequilibrio > 2) bloqueantes.push(`molde: ${nB} BIEN contra ${items.length - nB} MAL, desequilibrio ${desequilibrio}`);
-if (rachaMax > 3) bloqueantes.push(`molde: racha de ${rachaMax} iguales seguidos`);
+console.log(`Patrón: \`${patron}\` · racha máxima: ${rachaMax} · desequilibrio: ${Math.abs(nB - (items.length - nB))}\n`);
+console.log(`Solape con los ${previos.size} lotes publicados (el objetivo es el AZAR, no el mínimo — la casi-complementaria es un calco igual que la copia):\n`);
+console.log('| lote | patrón | solape | azar | desvío | tope |');
+console.log('|---|---|---:|---:|---:|---:|');
+for (const [lote, q] of [...previos].sort((a, b) => a[0].localeCompare(b[0]))) {
+  const L = Math.min(patron.length, q.length);
+  if (L < 8) continue;
+  let ig = 0;
+  for (let i = 0; i < L; i++) if (patron[i] === q[i]) ig++;
+  console.log(`| ${lote} | \`${q.slice(0, L)}\` | ${ig}/${L} | ${(L / 2).toFixed(1)} | ${Math.abs(ig - L / 2).toFixed(1)} | ${Math.floor(Math.sqrt(L))} |`);
+}
+console.log('');
+bloqueantes.push(...evaluarMolde(patron, [...previos.values()]));
 
 // ── 3 · LA BATERÍA DE ATAJOS, en código ──────────────────────────────
 console.log(`## Atajos — acierto SOBRE N (${items.length}), nunca recall sobre los MAL\n`);
@@ -84,11 +113,6 @@ for (const a of bateria(items)) {
 }
 
 // ── 4 · Virginidad, contra el corpus Y contra sí mismo ───────────────
-const DIR = path.join(process.cwd(), 'lib/data/languages/pt/blocks');
-const corpus: ExIndexable[] = [];
-for (const f of fs.readdirSync(DIR).filter((x) => /^b\d+\.json$/.test(x)).sort())
-  for (const ex of JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8'))) corpus.push(ex as ExIndexable);
-
 const candidatos: ExIndexable[] = items.map((x) => ({
   id: x.id, type: 'grammaticality_judgment', blockId: 11, concepts: [],
   data: { sentence: x.sentence, repair: x.repair ?? '' },
@@ -118,6 +142,13 @@ for (const c of [...candidatos, ...nucleos]) {
     if (h.id === c.id) continue;
     // un candidato contra su propio núcleo no es un hallazgo
     if (h.id.replace('·núcleo', '') === c.id.replace('·núcleo', '')) continue;
+    // los dos miembros de un PAR MÍNIMO declarado son la misma frase con
+    // el rasgo juzgado volteado: comparar uno con otro no dice nada. La
+    // exención es sólo entre ellos — cada uno se compara igual contra
+    // todo el corpus publicado.
+    const parDe = (id: string) => items.find((x) => x.id === id.replace('·núcleo', ''))?.par;
+    const pa = parDe(c.id), pb = parDe(h.id);
+    if (pa && pb && pa === pb) continue;
     const clave = [c.id, h.id].sort().join('|');
     if (vistos.has(clave)) continue;
     vistos.add(clave);

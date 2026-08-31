@@ -18,6 +18,7 @@ import b8Lessons from "./lessons/b8.json";
 import b9Lessons from "./lessons/b9.json";
 import b10Lessons from "./lessons/b10.json";
 import b11Lessons from "./lessons/b11.json";
+import b12Lessons from "./lessons/b12.json";
 
 import type { Block, Concept, Lesson, ConceptId, LessonId } from "@/lib/data/curriculum-types";
 export type { Block, Concept, Lesson, ConceptId, LessonId };
@@ -323,7 +324,46 @@ const B11: Block = {
   lessons: b11Lessons as Lesson[],
 };
 
-export const BLOCKS: Block[] = [B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, B11];
+
+// ── BLOQUE 12 · C2 ──────────────────────────────────────────────────
+// Nace en E2#13 (2026-09-03). Hasta aquí C2 eran **408 unidades de
+// déficit inalcanzables**: el currículo enumera 34 puntos de C2 y no
+// había ni un concepto declarado ni un bloque donde aterrizar un ítem,
+// porque `LessonSchema.blockId` topaba en 11.
+//
+// Se declaran los OCHO puntos de la línea de GRAMÁTICA del currículo de
+// C2, que son los que un juicio de gramaticalidad puede atacar hoy. Los
+// otros (léxico opaco, fonología, pragmática, mediación profesional) se
+// declararán cuando exista el formato que los ejercita — declararlos
+// antes sería fingir cobertura.
+//
+// Declararlos NO crea trabajo: lo hace visible. En la tabla de déficit
+// pasan de la columna «sin empezar» a la de «declarados con cero», que
+// es la que la línea de reconciliación vigila, y el total no se mueve.
+// Es la lección de E2#12: un punto a cero era invisible para la métrica.
+const B12_CONCEPTS: Concept[] = [
+  { id: 'b12-borde-gramaticalidad', name: 'El borde de la gramaticalidad ES/PT', blockId: 12, description: 'Las estructuras que el español permite y el portugués no, y al revés: duplicación del clítico, neutro «lo», infinitivo flexionado con sujeto propio, sujeto de infinitivo, orden de constituyentes admisible en una lengua y no en la otra', prereqs: ['b11-alternancia-infinitivo'] },
+  { id: 'b12-concordancia-discutida', name: 'Concordancia en casos discutidos', blockId: 12, description: 'Los casos que la propia norma portuguesa debate: «fazer» impersonal con expresiones de tiempo, «um dos que» + singular o plural, concordancia del participio con ter y con ser, sujeto colectivo, porcentajes y cuantificadores partitivos', prereqs: [] },
+  { id: 'b12-regencia-rara', name: 'Régimen de verbos de baja frecuencia', blockId: 12, description: 'La regência de los verbos que no aparecen en el uso corriente y para los que el hablante avanzado ya no tiene modelo: aludir a, obstar a, precaver-se contra, imiscuir-se em, arrogar-se, comprazer-se em', prereqs: ['b11-regencias'] },
+  { id: 'b12-arcaismo-juridico', name: 'Arcaísmos vivos del registro jurídico y notarial', blockId: 12, description: 'Las formas que están muertas en la lengua corriente y vivas en su registro (outrossim, porquanto, destarte, conquanto, doravante, amiúde) y, sobre todo, la destreza de saber cuándo NO usarlas', prereqs: ['b10-registro'] },
+  { id: 'b12-sintaxe-literaria', name: 'Sintaxis literaria', blockId: 12, description: 'Hipérbaton, anteposición del complemento, encabalgamiento sintáctico y otras licencias de la prosa literaria portuguesa: reconocerlas al leer y calibrarlas al escribir', prereqs: [] },
+  { id: 'b12-mesoclise-estilistica', name: 'La mesóclise como recurso de estilo', blockId: 12, description: 'La mesóclise a C2 ya no es una forma obligada sino una elección de registro: cuándo un futuro o un condicional con clítico pide mesóclise, cuándo la próclise por atractor la desactiva y cuándo usarla suena a impostura', prereqs: ['b8-coloc-mesoclise'] },
+  { id: 'b12-mqp-simples-literario', name: 'Mais-que-perfeito simples en narración', blockId: 12, description: 'El «falara» de la narración literaria frente al «tinha falado» corriente: valor, registro y los contextos en que el simples es la única forma natural', prereqs: [] },
+  { id: 'b12-modo-pragmatico', name: 'Alternancias de modo con valor pragmático', blockId: 12, description: 'Los casos en que indicativo y conjuntivo son los dos gramaticales y lo que cambia es lo que el hablante da por sabido, por dudoso o por cortés — el modo como acto de habla, no como concordancia', prereqs: ['b6-contraste-indicativo-subjuntivo'] },
+];
+
+const B12: Block = {
+  id: 12,
+  slug: 'passar-por-portugues-c2',
+  name: 'Pasar por portugués (C2)',
+  description: 'Precisión, matiz y control del registro sin que el español asome: el borde de la gramaticalidad, la concordancia discutida y lo que a este nivel ya es estilo y no regla.',
+  durationWeeks: 3,
+  prereqs: [11],
+  freeDrill: false,
+  lessons: b12Lessons as Lesson[],
+};
+
+export const BLOCKS: Block[] = [B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, B11, B12];
 
 import { CONCEPTOS_FINOS } from './conceptos-finos.generated';
 
@@ -342,6 +382,7 @@ export const ALL_CONCEPTS: Concept[] = [
   // B9 is freeDrill — no Concept[] (it drills whatever vocab the catalog has).
   ...B10_CONCEPTS,
   ...B11_CONCEPTS,
+  ...B12_CONCEPTS,
 ];
 
 export function getBlock(id: number): Block {

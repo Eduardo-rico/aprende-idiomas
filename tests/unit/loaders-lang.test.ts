@@ -8,9 +8,9 @@ import {
 } from '@/lib/data/loaders';
 
 describe('loadCurriculum("pt")', () => {
-  it('retorna 11 bloques y ALL_CONCEPTS no vacío', async () => {
+  it('retorna 12 bloques y ALL_CONCEPTS no vacío', async () => {
     const c = await loadCurriculum('pt');
-    expect(c.BLOCKS).toHaveLength(11);
+    expect(c.BLOCKS).toHaveLength(12);
     expect(c.ALL_CONCEPTS.length).toBeGreaterThan(0);
   });
 

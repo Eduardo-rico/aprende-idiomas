@@ -32,13 +32,15 @@ rompió el lote 10 (13 de 16) y ahora se mide en el preflight.
 
 ## Preflight — salida pegada (sin ella no se abre el round)
 
-El primer intento salió con alternancia perfecta `MBMBMB…`, y **la
+**Re-corrido en E2#13** con la batería de 11 rasgos y el sondeo de núcleo: la salida de E2#12 había caducado y bloqueaba por `GJ-11·núcleo ↔ 2d3b8e62` a 0,526 — la coleta «uma festa de anos surpresa» chocaba con un publicado, y se cambió por «os pais trataram de tudo numa só tarde». El primer intento salió con alternancia perfecta `MBMBMB…`, y **la
 batería no lo vio** porque sólo tenía rasgos del TEXTO. Añadido el rasgo
 de POSICIÓN, lo cazó al **24/24**. Reordenado a `MBBB…`, éste es el
 resultado:
 
 ```
 # Preflight — 2026-09-02-lote11-c1-eleccion.md
+
+Batería de atajos: **11 rasgos**, rev `4cc7a606`. Si esta rev no es la del repo, la salida está caducada.
 
 Ítems: **24** · BIEN 12 · MAL 12
 
@@ -52,33 +54,54 @@ Patrón: `MBBBMMBMBMMBBMBBMMBMMBMB` · prefijo de 4: `MBBB` · racha máxima: 3 
 |---|---:|---|---:|---:|
 | lleva marcador temporal | **15/24** (63 %) | presente⇒BIEN | 9 | 0.154 |
 | lleva una palabra visiblemente española | **15/24** (63 %) | presente⇒MAL | 3 | 0.154 |
-| lleva clítico con guion (ênclise/mesóclise) | **14/24** (58 %) | presente⇒MAL | 2 | 0.271 |
-| lleva preposición contraída (do/da/no/na/ao/à/pelo) | **14/24** (58 %) | presente⇒BIEN | 14 | 0.271 |
+| arranca con adjunto o subordinada, no con el sujeto o el verbo | **14/24** (58 %) | presente⇒MAL | 8 | 0.271 |
 | más corta que la mediana (palabras) | **13/24** (54 %) | presente⇒BIEN | 3 | 0.419 |
 | más corta que la mediana (caracteres) | **13/24** (54 %) | presente⇒MAL | 9 | 0.419 |
+| lleva clítico con guion (ênclise/mesóclise) | **13/24** (54 %) | presente⇒MAL | 1 | 0.419 |
+| lleva preposición contraída (do/da/no/na/ao/à/pelo) | **13/24** (54 %) | presente⇒BIEN | 15 | 0.419 |
 | posición par en el lote (alternancia mecánica) | **12/24** (50 %) | presente⇒BIEN | 12 | 0.581 |
 | lleva una coma (frase con coleta) | **12/24** (50 %) | presente⇒BIEN | 16 | 0.581 |
 | lleva verbo en primera persona | **12/24** (50 %) | presente⇒BIEN | 2 | 0.581 |
 | lleva dos o más oraciones (punto o punto y coma interior) | **12/24** (50 %) | presente⇒BIEN | 0 | 0.581 |
 
-## Virginidad — 24 candidatos contra 2431 publicados + entre sí (umbral 0.34)
+## Virginidad — 24 candidatos (+24 sondas de núcleo) contra 2431 publicados + entre sí (umbral 0.34)
 
-- `GJ-05` ↔ `b7-ep-06` — 0.389 · comparten: arrumar, escritório
+- `GJ-05` ↔ `b7-ep-06` — 0.387 · comparten: arrumar, escritório
   > Passei a tarde ___ (arrumar) o escritório.
-- `GJ-11` ↔ `2d3b8e62` — 0.359 · comparten: surpresa, festa
-  > Elas vieram de surpresa para a festa.
 - `GJ-15` ↔ `37b772b1` — 0.349 · comparten: fica, rua
   > O ___ fica na esquina da rua.
-- `GJ-16` ↔ `72ae98a9` — 0.378 · comparten: aberta, porta
+- `GJ-16` ↔ `72ae98a9` — 0.379 · comparten: aberta, porta
   > A porta ___ quarto está aberta.
 - `GJ-18` ↔ `16ce6a34` — 0.368 · comparten: passada, semana
   > eu tive · Eu tive muito trabalho na semana passada.
-- `GJ-23` ↔ `07d20060` — 0.391 · comparten: avó, domingo, minha
+- `GJ-23` ↔ `07d20060` — 0.393 · comparten: avó, domingo, minha
   > Eu lembro-me sempre ___ ligar à minha avó aos domingos.
-- `GJ-23` ↔ `33844252` — 0.359 · comparten: sobrinha
+- `GJ-23` ↔ `33844252` — 0.344 · comparten: sobrinha
+  > Eu tenho dois ___ e três sobrinhas.
+- `GJ-01·núcleo` ↔ `c1d7a2c4` — 0.342 · comparten: explicou, professor
+  > O professor explicou que ___ não existe vida em Marte. (aqui → ele explicou)
+- `GJ-05·núcleo` ↔ `b7-ep-06` — 0.417 · comparten: arrumar, escritório
+  > Passei a tarde ___ (arrumar) o escritório.
+- `GJ-08·núcleo` ↔ `25589965` — 0.422 · comparten: opinião, difícil
+  > Há quem diga que poupar é difícil, mas eu não tenho essa mesma opinião.
+- `GJ-15·núcleo` ↔ `37b772b1` — 0.466 · comparten: fica, rua
+  > O ___ fica na esquina da rua.
+- `GJ-16·núcleo` ↔ `72ae98a9` — 0.379 · comparten: aberta, porta
+  > A porta ___ quarto está aberta.
+- `GJ-18·núcleo` ↔ `16ce6a34` — 0.368 · comparten: passada, semana
+  > eu tive · Eu tive muito trabalho na semana passada.
+- `GJ-19·núcleo` ↔ `b2c2-gj-02` — 0.36 · comparten: esteja, embora
+  > Embora estejas cansado, vieste ajudar.
+- `GJ-19·núcleo` ↔ `fa684345` — 0.354 · comparten: esteja, embora
+  > Embora ele está cansado, continuou trabalhando. · Embora ele esteja cansado, continuou trabalhando.
+- `GJ-19·núcleo` ↔ `90ad9daa` — 0.344 · comparten: ano, este
+  > Ela já ___ três livros este ano.
+- `GJ-23·núcleo` ↔ `07d20060` — 0.393 · comparten: avó, domingo, minha
+  > Eu lembro-me sempre ___ ligar à minha avó aos domingos.
+- `GJ-23·núcleo` ↔ `33844252` — 0.344 · comparten: sobrinha
   > Eu tenho dois ___ e três sobrinhas.
 
-**7 pares fiables** + 2 contra ítems de texto ínfimo (score no fiable).
+**17 pares fiables** + 9 contra ítems de texto ínfimo (score no fiable).
 
 ## Frases idénticas a algo publicado
 
@@ -86,14 +109,24 @@ Ninguna.
 
 ## Veredicto
 
-Avisos (7), no bloquean:
-- virginidad: GJ-05 ↔ b7-ep-06 a 0.389
-- virginidad: GJ-11 ↔ 2d3b8e62 a 0.359
+Avisos (17), no bloquean:
+- virginidad: GJ-05 ↔ b7-ep-06 a 0.387
 - virginidad: GJ-15 ↔ 37b772b1 a 0.349
-- virginidad: GJ-16 ↔ 72ae98a9 a 0.378
+- virginidad: GJ-16 ↔ 72ae98a9 a 0.379
 - virginidad: GJ-18 ↔ 16ce6a34 a 0.368
-- virginidad: GJ-23 ↔ 07d20060 a 0.391
-- virginidad: GJ-23 ↔ 33844252 a 0.359
+- virginidad: GJ-23 ↔ 07d20060 a 0.393
+- virginidad: GJ-23 ↔ 33844252 a 0.344
+- virginidad: GJ-01·núcleo ↔ c1d7a2c4 a 0.342
+- virginidad: GJ-05·núcleo ↔ b7-ep-06 a 0.417
+- virginidad: GJ-08·núcleo ↔ 25589965 a 0.422
+- virginidad: GJ-15·núcleo ↔ 37b772b1 a 0.466
+- virginidad: GJ-16·núcleo ↔ 72ae98a9 a 0.379
+- virginidad: GJ-18·núcleo ↔ 16ce6a34 a 0.368
+- virginidad: GJ-19·núcleo ↔ b2c2-gj-02 a 0.36
+- virginidad: GJ-19·núcleo ↔ fa684345 a 0.354
+- virginidad: GJ-19·núcleo ↔ 90ad9daa a 0.344
+- virginidad: GJ-23·núcleo ↔ 07d20060 a 0.393
+- virginidad: GJ-23·núcleo ↔ 33844252 a 0.344
 
 **Preflight limpio.** El round puede abrirse con esta salida pegada en el documento.
 ```
@@ -176,8 +209,8 @@ diferencia que el punto enseña.
 que salgas» y de ahí sale el híbrido.
 
 ### GJ-11 · **MAL**
-**sentence:** «Sem os miúdos souberem de nada, prepararam-lhes uma festa de anos surpresa.»
-**repair:** «Sem os miúdos saberem de nada, prepararam-lhes uma festa de anos surpresa.»
+**sentence:** «Sem os miúdos souberem de nada, os pais trataram de tudo numa só tarde.»
+**repair:** «Sem os miúdos saberem de nada, os pais trataram de tudo numa só tarde.»
 **explicación:** «Souberem» es futuro do conjuntivo, y tras «sem» va el
 infinitivo pessoal: «saberem». Las dos formas se parecen mucho y ésta es
 la confusión más fina del punto, porque las dos existen.

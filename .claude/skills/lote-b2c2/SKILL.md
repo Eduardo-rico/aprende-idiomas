@@ -220,6 +220,19 @@ que también son preferencias y no reglas. Cuando un par tenga artículo
 propio en Ciberdúvidas con los dos miembros en el título, dale la vuelta
 en vez de retirarlo.
 
+**Y el corolario que E2#13 pagó tres veces seguidas: NO se inventa un MAL
+bajo presión.** Al reponer los dos ítems que la ronda 2 del lote 10 había
+tumbado, las TRES reposiciones murieron antes del round — dos las cazó el
+gate de virginidad por estar **ya publicadas casi literales** (0,674
+contra `b2c2-gj-l5-10`, que ya trae «Ontem tenho falado com o teu pai»; y
+0,515 contra `b2c2-gj-l4-17`, que ya trae «Ontem assistimos o jogo todo»),
+y la tercera la desmintió el corpus (`apaixonar-se de` por `por`: Camilo
+escribe «apaixonado **de** Thereza»). Un cuarto candidato, `esquecer-se
+DE`, también cayó al grep ancho: Eça trae «esquecia-me **o cognac**».
+El lote salió con 14 en vez de 16 y un punto se quedó a **uno** del piso.
+Publicar corto y declarado es correcto; inventar un quinto MAL con el
+contexto agotado es cómo se fabricaron los siete que ya murieron.
+
 Regla: atestación de USO o de DICCIONARIO con el sentido condenado =
 fuera. Frecuencia no es gramaticalidad. Distinción fina del lote 2:
 «vacações» sobrevivió porque es entrada fósil SIN uso vivo — atestación
@@ -240,18 +253,68 @@ Variantes a probar siempre: -pt-→-ppt-/-pct- (escripto/aceite),
 em-/en- (emquanto), ph (phosphoro), c' y n'/d' con apóstrofo, -mm-,
 th, y (systema).
 
+## LOS JUICIOS SE ESCRIBEN POR PARES MÍNIMOS (E2#13)
+
+**Regla: un lote de juicios nuevo se construye con
+`scripts/lib/pares-minimos.ts`.** El BIEN y el MAL salen del MISMO
+esqueleto y difieren SÓLO en el tramo que se juzga: misma longitud,
+mismo arranque, mismo léxico, misma coleta.
+
+El bucle que esto rompe, medido tres sesiones seguidas: **cada atajo que
+se arreglaba fabricaba otro del mismo calibre.** Se mató la LONGITUD
+(13/16) alargando los MAL «con su propia coleta» — y como se alargaron
+por DELANTE nació el ARRANQUE (12/16, p=0,038). Y esa misma coleta CEGÓ
+el gate de virginidad, porque envolver una frase publicada en una
+subordinada diluye el solape IDF: **el arreglo de la v1 desactivó el
+gate que había cazado el fallo de la v1.**
+
+Eso no se gana midiendo, se gana por construcción. Con pares, todo rasgo
+que no mire el hueco vale igual en los dos miembros: aporta un acierto y
+un fallo, o sea 50 % exacto, **sea el rasgo que sea** — incluido el que
+todavía no se le ha ocurrido a nadie. Medido en el lote 12: los once
+rasgos de texto dan **6/12 clavado**, incluido «lleva clítico con guion»,
+que está presente en 6 ítems y no predice nada.
+
+Lo que los pares NO resuelven, y por eso sigue habiendo round: que el
+veredicto sea inequívoco, que el contexto determine la respuesta, y que
+el rasgo juzgado no sea detectable por una regla superficial distinta de
+la destreza. **Cada par declara en `rasgo` qué se juzga**: un rasgo que
+detecte ESO es la destreza; cualquier otro es un atajo.
+
+Reglas del generador, todas comprobadas por `verificarPar`: un solo
+hueco, arranque idéntico, ≤1 palabra y ≤8 caracteres de diferencia entre
+los rellenos, y el resto del texto literalmente igual. La posición
+BIEN/MAL va **barajada con semilla** (reproducible: un barajado que no se
+puede repetir no se puede auditar) y los dos miembros de un par nunca a
+menos de tres posiciones. Y el equilibrio que el par no da solo: si en
+todos los pares el rasgo cae del mismo lado —p. ej. la mesóclise siempre
+en el BIEN—, ese rasgo vuelve a discriminar; hay que repartirlo mitad y
+mitad.
+
+El preflight exime a los dos miembros de un par DECLARADO de compararse
+entre sí en el gate de virginidad. Sólo entre ellos: cada uno se compara
+igual contra todo el corpus publicado.
+
 ## El molde de los juicios
 
 - **Ratio ~10/10 con la última MAL en posición 19-20** (mata el conteo),
-  runs ≤3, sin alternancia mecánica, arranque DISTINTO de todos los
-  lotes previos (el lote 2 calcó 17/20 posiciones del 1; el 3 calcó el
-  arranque — ambos se rehicieron). **Los ocho arranques de 3 están
-  quemados desde el lote 7** (MBM, BMM, BMB, MBB, MMB, BBM, BBB, MMM):
-  desde el lote 8 la regla es **prefijo de CUATRO no visto** — quemados
-  MBMM (piloto), BMMB, BMBM, MBBM, MMBB, BBMM, BBBM, MMMB, BBMB, BMBB.
-  Con 16 prefijos posibles y uno por lote, esta regla también se agota:
-  al llegar al lote 15 hay que cambiar de criterio (p. ej. exigir sólo
-  el vector de solapes cerca del azar), no improvisarlo por lote.
+  runs ≤3, sin alternancia mecánica. El lote 2 calcó 17/20 posiciones
+  del 1 y el 3 calcó el arranque; ambos se rehicieron.
+- **El criterio del arranque ya no es una lista, es una medida** —
+  `evaluarMolde()` en `scripts/lib/pares-minimos.ts`, y lo corre el
+  preflight. Un patrón vale si está equilibrado (≤2), sin rachas >3, no
+  es idéntico a ninguno publicado, y **su solape con CADA lote publicado
+  está cerca del azar**: |solape − L/2| ≤ floor(√L), que para L=20 da el
+  «|solape−10| ≤ 4» que esta skill ya traía escrito. Se mide contra el
+  patrón **y contra su complementario**, porque la casi-complementaria
+  es un calco igual que la copia (cicatriz del lote 5: presenté un 2/20
+  como virtud y estaba a 3,6σ).
+- **Por qué se cambió**: la regla vieja era «prefijo de CUATRO no visto»,
+  y con 16 prefijos y uno por lote **se agota por construcción**. La
+  skill decía «al llegar al lote 15»; al recontarlo en E2#13 quedaban
+  **cinco**, y tres violaban la regla de rachas. Se agotaba en dos lotes,
+  no en diez. El criterio nuevo mide en un espacio de 2^N y cada lote
+  publicado sólo excluye una cáscara fina: no se agota.
 - **El anti-andamio se busca por LEMA, no por cadena.** El lote 9 pasó
   un `grep "Repara:"` y traía «O senhor **repare** na diferença:» — la
   misma bisagra conjugada. Dato que lo explica: de 128 modelos
@@ -403,9 +466,23 @@ th, y (systema).
   vocabKey) + `<Example>` + `<Tip>`.
 - Checklist de bloque nuevo: `LessonSchema` en zod-schemas tiene
   `blockId max()` y `vocabKey max(7)` — subir el tope o revienta;
-  `BLOQUE_A_NIVEL` en anchor.ts; BLOCKS en curriculum.ts; el test
-  `loaders-lang` cuenta los bloques; `verify-content` exige que el
-  lessonId de cada ítem exista EN SU bloque.
+  `BLOQUE_A_NIVEL` en anchor.ts; BLOCKS **y los `*_CONCEPTS` en
+  `ALL_CONCEPTS`** en curriculum.ts; `lessons/bN.json` + su MDX +
+  `blocks/bN.json` (aunque sea `[]`); el test `loaders-lang` cuenta los
+  bloques; `verify-content` exige que el lessonId de cada ítem exista EN
+  SU bloque.
+- **Un mapa duplicado es una métrica que miente en silencio.** Al abrir
+  el bloque 12 (E2#13) todo salió verde y los ocho puntos de C2 recién
+  declarados **desaparecieron de la tabla de déficit**: cayeron en el
+  nivel «?» porque `scripts/split-conceptos.ts` tenía su propia COPIA de
+  `BLOQUE_A_NIVEL` en vez de importarla. Nada falló; la cifra
+  simplemente dejó de contar 96 unidades. Ahora se importa de
+  `lib/data/anchor.ts`, que es la fuente única.
+- **Declarar un punto no crea trabajo: lo hace visible.** Al declararlo,
+  las unidades pasan de la columna «sin empezar» a la de «declarados con
+  cero», que es la que vigila la línea de reconciliación; el total no se
+  mueve y el residuo sigue en cero. Es el corolario de la cicatriz de
+  E2#12 (un punto a cero era invisible).
 - Los ítems que la lección enseña nacen en su bloque con su lessonId y
   en `exerciseRefs`. Examples no reciclan repairs publicados verbatim.
 - Dos familias en falsos amigos: los de verdad Y los que parecen falsos

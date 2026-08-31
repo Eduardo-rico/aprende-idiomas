@@ -628,10 +628,13 @@ export type DiagnosticQuestion = z.infer<typeof DiagnosticQuestionSchema>;
 // rejected; conceptNotesPath must be a future MDX route.
 export const LessonSchema = z.object({
   id: z.string().regex(/^b\d+-l\d+-[\w-]+$/, "lesson id must be b{N}-l{N}-{slug}"),
-  // max(11) desde la Ola B2C2 (2026-07-30): nació el bloque 11
-  // «Anti-calco C1». Subir el tope al crear un bloque nuevo es parte
-  // del checklist — la revisión adversarial cazó que b11 violaba el 10.
-  blockId: z.number().int().min(1).max(11),
+  // max(12) desde E2#13 (2026-09-03): nació el bloque 12 «Pasar por
+  // portugués (C2)». Antes max(11) por el bloque 11 «Anti-calco C1», y
+  // antes 10. Subir el tope al crear un bloque nuevo es parte del
+  // checklist — la revisión adversarial cazó que b11 violaba el 10.
+  // C2 eran 408 unidades de déficit INALCANZABLES mientras este número
+  // dijera 11: no había dónde aterrizar un ítem de C2.
+  blockId: z.number().int().min(1).max(12),
   name: z.string().min(1).max(80),
   objectives: z.array(z.string().min(1)).min(1).max(6),
   conceptIds: z.array(z.string().min(1)).min(1).max(8),

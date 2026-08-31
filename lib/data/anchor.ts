@@ -62,7 +62,12 @@ const TIPO_A_DESTREZA: Record<string, Skill | null> = {
 /** Bloque → nivel MCER. Del mapeo del plan §3.1, hecho concepto a concepto.
  *  Un bloque puede abarcar dos niveles; se toma el MÁS ALTO que toca,
  *  porque una tarea que exige B1 evidencia B1 aunque también repase A2. */
-const BLOQUE_A_NIVEL: Record<number, CefrLevel> = {
+/** Nivel MCER de cada bloque. **Fuente única**: `scripts/split-conceptos.ts`
+ *  tenía una copia suya y al abrir el bloque 12 en E2#13 la copia no se
+ *  actualizó, así que los ocho puntos de C2 recién declarados cayeron en
+ *  el nivel «?» y desaparecieron de la tabla de déficit sin que nada lo
+ *  dijera. Un mapa duplicado es una métrica que miente en silencio. */
+export const BLOQUE_A_NIVEL: Record<number, CefrLevel> = {
   1: 'A1',  // fonética y ortografía
   2: 'A2',  // morfología nominal (A1+A2)
   3: 'A2',  // presente e imperativo (A1+A2)
@@ -74,6 +79,7 @@ const BLOQUE_A_NIVEL: Record<number, CefrLevel> = {
   9: 'A2',  // léxico: campo abierto, sin nivel propio
   10: 'B1', // registros y variación (A2+B1+)
   11: 'C1', // anti-calco C1 (Ola B2C2)
+  12: 'C2', // pasar por portugués (E2#13) — el primer bloque de C2
 };
 
 export interface Anclaje {

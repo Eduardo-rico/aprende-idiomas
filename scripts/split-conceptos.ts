@@ -20,14 +20,13 @@ import { PARTICIONES, TRANSVERSALES } from './lib/conceptos-finos';
 import { CONCEPTOS_FINOS } from '../lib/data/languages/pt/conceptos-finos.generated';
 import { ALL_CONCEPTS } from '../lib/data/languages/pt/curriculum';
 import { reconciliar, informe, type PorPunto } from './lib/reconciliar-deficit';
+// Importado, NO copiado: la copia local no se enteró de que nacía el
+// bloque 12 y los ocho puntos de C2 se evaporaron de la tabla.
+import { BLOQUE_A_NIVEL } from '../lib/data/anchor';
 
 const WRITE = process.argv.includes('--write');
 const PISO = Number(process.env.PISO ?? 12);
 
-const BLOQUE_A_NIVEL: Record<number, string> = {
-  1: 'A1', 2: 'A2', 3: 'A2', 4: 'B1', 5: 'B1', 6: 'B2',
-  7: 'B2', 8: 'B2', 9: 'A2', 10: 'B1', 11: 'C1',
-};
 const NIVELES = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
 /** El texto que se mira para decidir el sub-punto: la frase ENSAMBLADA
