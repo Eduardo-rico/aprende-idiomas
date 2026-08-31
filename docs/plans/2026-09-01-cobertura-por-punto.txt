@@ -91,15 +91,29 @@ No es basura: es la lista de lo que probablemente esté mal etiquetado de origen
 
 | nivel | puntos | ítems | mín | mediana | máx | puntos <12 | faltan para el piso |
 |-------|-------:|------:|----:|--------:|----:|----------:|--------------------:|
-| A1    |     22 |   258 |   1 |      12 |  28 |        11 |                  66 |
-| A2    |     53 |   643 |   1 |       8 |  88 |        33 |                 231 |
-| B1    |     51 |   779 |   1 |      11 | 100 |        27 |                 161 |
-| B2    |     57 |   698 |   1 |      11 |  39 |        29 |                 185 |
+| A1    |     23 |   258 |   0 |      11 |  28 |        12 |                  78 |
+| A2    |     60 |   643 |   0 |       7 |  88 |        40 |                 315 |
+| B1    |     54 |   779 |   0 |      10 | 100 |        30 |                 197 |
+| B2    |     60 |   698 |   0 |      10 |  39 |        32 |                 221 |
 | C1    |      4 |    39 |   3 |      11 |  20 |         3 |                  17 |
 | C2    |      0 |     0 |   0 |       0 |   0 |         0 |                   0 |
-| **Σ** |    187 |  2417 | | | |       103 |                 660 |
+| **Σ** |    201 |  2417 | | | |       117 |                 828 |
 
-Puntos por debajo del piso (103), con lo que le falta a cada uno:
+Puntos por debajo del piso (117), con lo que le falta a cada uno:
+    0/12  [A1] b1-tonica-desplazamiento-verbal   (faltan 12)
+    0/12  [A2] b2-art-com-nome   (faltan 12)
+    0/12  [A2] b2-genero-agem-dade   (faltan 12)
+    0/12  [A2] b3-pron-contracoes   (faltan 12)
+    0/12  [A2] b3-pron-directo   (faltan 12)
+    0/12  [A2] b3-exist-ficar   (faltan 12)
+    0/12  [A2] b3-exist-ser-estar   (faltan 12)
+    0/12  [A2] b3-imper-tu   (faltan 12)
+    0/12  [B1] b4-imperf-cortesia   (faltan 12)
+    0/12  [B1] b5-fut-suposicao   (faltan 12)
+    0/12  [B1] b5-se-irreal   (faltan 12)
+    0/12  [B2] b6-pres-subj-er-ir   (faltan 12)
+    0/12  [B2] b6-se-real   (faltan 12)
+    0/12  [B2] b8-con-adicao   (faltan 12)
     1/12  [A1] b1-nasal-n-interior   (faltan 11)
     1/12  [B1] b10-var-gerundio   (faltan 11)
     1/12  [B1] b10-reg-mitigacao   (faltan 11)
@@ -209,16 +223,32 @@ Puntos por debajo del piso (103), con lo que le falta a cada uno:
 
 | nivel | puntos currículo | puntos con corpus | puntos SIN empezar | déficit de los empezados | × piso los nuevos | FALTA |
 |-------|-----------------:|------------------:|-------------------:|-------------------------:|------------------:|------:|
-| A1    |               31 |                22 |                  9 |                       66 |               108 |   174 |
-| A2    |               31 |                53 |                  0 |                      231 |                 0 |   231 |
-| B1    |               27 |                51 |                  0 |                      161 |                 0 |   161 |
-| B2    |               31 |                57 |                  0 |                      185 |                 0 |   185 |
+| A1    |               31 |                23 |                  8 |                       78 |                96 |   174 |
+| A2    |               31 |                60 |                  0 |                      315 |                 0 |   315 |
+| B1    |               27 |                54 |                  0 |                      197 |                 0 |   197 |
+| B2    |               31 |                60 |                  0 |                      221 |                 0 |   221 |
 | C1    |               32 |                 4 |                 28 |                       17 |               336 |   353 |
 | C2    |               34 |                 0 |                 34 |                        0 |               408 |   408 |
-| **Σ** |              186 |               187 | | | | **1512** |
+| **Σ** |              186 |               201 | | | | **1668** |
 
 B1 y B2 tienen MÁS puntos que los que el currículo enumera: la partición
 salió más fina que la prosa del currículo, así que ahí no hay puntos sin
 empezar y el trabajo es sólo llenar los que están por debajo del piso.
+
+
+## Reconciliación del déficit (piso 12)
+
+| concepto | unidades |
+|---|---:|
+| déficit anterior | 828 |
+| puntos NUEVOS que entran bajo el piso | +0 |
+| puntos que DESAPARECEN | 0 |
+| ítems ganados o perdidos por los puntos que siguen | +0 |
+| **déficit actual** | **828** |
+| **residuo (tiene que ser 0)** | **0** |
+
+Ítems etiquetados: 2417 → 2417 (+0).
+
+(foto anterior: 2026-08-31 — cierre de E2#11, con la métrica ya corregida (los puntos a cero cuentan))
 
 DRY-RUN: el corpus no se ha tocado.

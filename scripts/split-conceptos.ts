@@ -19,6 +19,7 @@ import path from 'node:path';
 import { PARTICIONES, TRANSVERSALES } from './lib/conceptos-finos';
 import { CONCEPTOS_FINOS } from '../lib/data/languages/pt/conceptos-finos.generated';
 import { ALL_CONCEPTS } from '../lib/data/languages/pt/curriculum';
+import { reconciliar, informe, type PorPunto } from './lib/reconciliar-deficit';
 
 const WRITE = process.argv.includes('--write');
 const PISO = Number(process.env.PISO ?? 12);
@@ -124,6 +125,21 @@ const nivelDe = (id: string): string => {
   const b = BLOQUE_DE.get(id) ?? Number(id.match(/^b(\d+)-/)?.[1] ?? 0);
   return BLOQUE_A_NIVEL[b] ?? '?';
 };
+// EL INVENTARIO DE PUNTOS son los conceptos DECLARADOS, no los que
+// resultan tener ítems. La v1 medía el déficit sobre `cuenta`, que sólo
+// contiene conceptos con al menos una asignación, así que **un punto a
+// cero era invisible**: no aparecía en la lista de déficit ni sumaba sus
+// 12. Medido en E2#12: 15 puntos declarados están a cero y valían 180
+// unidades que la tabla no veía.
+//
+// Ése es el motivo de que E2#11 publicara 24 ítems, cerrara dos puntos
+// (uno de 0→12 y otro de 1→13, −23 de déficit real) y el total sólo
+// bajara 1: el punto que iba de CERO nunca había estado contado, así que
+// llenarlo no descontó nada. Un indicador que no ve el trabajo que se
+// hace convierte el calendario en ficción.
+const PUNTOS_DECLARADOS = [...new Set([...ALL_CONCEPTS, ...CONCEPTOS_FINOS].map((c) => c.id))];
+for (const id of PUNTOS_DECLARADOS) if (!cuenta.has(id)) cuenta.set(id, 0);
+
 const stats = (xs: number[]) => {
   if (!xs.length) return { min: 0, p50: 0, max: 0 };
   const s = [...xs].sort((a, b) => a - b);
@@ -155,6 +171,13 @@ for (const [id, n] of [...cuenta.entries()].filter(([, v]) => v < PISO).sort((a,
 // La tabla de arriba mide los puntos que el corpus TIENE. Falta la otra
 // mitad: los que el currículo declara y el corpus no tiene siquiera
 // empezados — que es donde vive C1 y C2 entero.
+// «SIN EMPEZAR» son los puntos que el currículo enumera y para los que
+// **ni siquiera hay un concepto declarado** — no los que tienen cero
+// ítems, que ahora sí entran en la tabla de arriba con su déficit
+// completo. Mezclarlos era la segunda mitad del descuadre: el término
+// `max(0, currículo − puntosConItems)` daba 0 para A2/B1/B2 (la
+// partición hizo más puntos que los que el currículo enumera) y por eso
+// cerrar un punto a cero en B1 no descontaba nada por ninguna vía.
 const PUNTOS_CURRICULO: Record<string, number> = { A1: 31, A2: 31, B1: 27, B2: 31, C1: 32, C2: 34 };
 console.log(`\n\n# LO QUE FALTA PARA CUBRIR — piso ${PISO}, contra los puntos que enumera el currículo\n`);
 console.log('| nivel | puntos currículo | puntos con corpus | puntos SIN empezar | déficit de los empezados | × piso los nuevos | FALTA |');
@@ -165,6 +188,8 @@ for (const n of NIVELES) {
   const vs = ids.map((id) => cuenta.get(id)!);
   const deficit = vs.filter((v) => v < PISO).reduce((a, v) => a + (PISO - v), 0);
   const pc = PUNTOS_CURRICULO[n] ?? 0;
+  // `ids` ya son los DECLARADOS del nivel (los ceros incluidos), así que
+  // esto cuenta sólo lo que falta por declarar.
   const sinEmpezar = Math.max(0, pc - ids.length);
   const nuevos = sinEmpezar * PISO;
   const falta = deficit + nuevos;
@@ -175,6 +200,37 @@ console.log(`| **Σ** | ${String(Object.values(PUNTOS_CURRICULO).reduce((a, b) =
 console.log(`\nB1 y B2 tienen MÁS puntos que los que el currículo enumera: la partición`);
 console.log(`salió más fina que la prosa del currículo, así que ahí no hay puntos sin`);
 console.log(`empezar y el trabajo es sólo llenar los que están por debajo del piso.`);
+
+// ── Informe 4 · RECONCILIACIÓN, obligatoria ──────────────────────────
+// Cada sesión tiene que cerrar la cuenta: cuánto había, qué entró, qué
+// puntos nacieron o murieron, y cuánto queda. Con `--registrar` se
+// guarda la foto para que la próxima sesión reconcilie contra ella.
+const HIST = path.join(process.cwd(), 'docs/plans/deficit-historico.json');
+const porPuntoAhora: PorPunto = Object.fromEntries(cuenta);
+const historico: { fecha: string; nota?: string; porPunto: PorPunto }[] =
+  fs.existsSync(HIST) ? JSON.parse(fs.readFileSync(HIST, 'utf8')) : [];
+
+console.log('\n');
+if (historico.length) {
+  const ultima = historico[historico.length - 1]!;
+  const r = reconciliar(ultima.porPunto, porPuntoAhora, PISO);
+  console.log(informe(r, PISO));
+  console.log(`\n(foto anterior: ${ultima.fecha}${ultima.nota ? ' — ' + ultima.nota : ''})`);
+  if (r.residuo !== 0) {
+    console.log(`\n✗ RESIDUO ${r.residuo}: hay déficit sin explicar. No se cierra la sesión así.`);
+    process.exitCode = 1;
+  }
+} else {
+  console.log('## Reconciliación del déficit\n');
+  console.log('No hay foto anterior: ésta es la primera. Se registra con `--registrar`.');
+}
+
+if (process.argv.includes('--registrar')) {
+  const nota = process.argv[process.argv.indexOf('--registrar') + 1];
+  historico.push({ fecha: new Date().toISOString().slice(0, 10), nota: nota && !nota.startsWith('--') ? nota : undefined, porPunto: porPuntoAhora });
+  fs.writeFileSync(HIST, JSON.stringify(historico, null, 1) + '\n');
+  console.log(`\nFoto registrada en ${path.relative(process.cwd(), HIST)} (${historico.length} en el histórico).`);
+}
 
 // ── Escritura ────────────────────────────────────────────────────────
 if (!WRITE) { console.log('\nDRY-RUN: el corpus no se ha tocado.'); process.exit(0); }
