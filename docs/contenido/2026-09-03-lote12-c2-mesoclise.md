@@ -54,6 +54,31 @@ presidente já sabe do caso e…», «O programa já está fechado e…»), que
 además arregla un segundo defecto del que nadie se había quejado: el
 clítico acusativo no tenía antecedente ninguno.
 
+## Atestación del autor contra la Biblioteca (para que el round la audite)
+
+Buscada la mesóclise en las 224 obras. **El grep moderno devolvió CERO**,
+y es la quinta vez que la ortografía del XIX esconde hits: la mesóclise
+se escribía con el auxiliar suelto y con h —`tornal-o-hia`, `Tel-a-hei`,
+`escrever-lhe-hia`, `Ver-nos-hemos`, `trazel-o-hia`—, así que hay que
+buscar `-h?ei|-h?á|-h?ia` y con la `l` de `tel-o`. Con el patrón bueno
+salen decenas.
+
+**Contraejemplos a P-01/02/03** (mesóclise bajo atractor, que los
+tumbaría): dos candidatos, **cero supervivientes** al leer la frase
+entera.
+
+- «se não acceitasse, **obrigal-o-ia**» — el `não` está en la
+  subordinada; la mesóclise está en la principal, tras la coma.
+- «que não tornasse ali a apparecer, **quando não ver-se-hia** obrigado a
+  empregar meios violentos» (Junqueiro, *Os Animaes Agradecidos*) —
+  `quando não` es la locución 'de lo contrario', no una negación del
+  verbo. Es la misma clase de falso positivo que el round del lote 10 ya
+  documentó con `senão`.
+
+**Y el primero de los dos ATESTA P-06** en vez de tumbarlo: subordinada
+antepuesta, coma, y la principal con mesóclise. Es exactamente lo que el
+par afirma, escrito por un nativo del XIX.
+
 ## Los seis pares, antes de barajar
 
 | par | esqueleto | BIEN | MAL | rasgo juzgado |
@@ -72,7 +97,7 @@ clítico acusativo no tenía antecedente ninguno.
 ```
 # Preflight — 2026-09-03-lote12-c2-mesoclise.md
 
-Batería de atajos: **11 rasgos**, rev `4cc7a606`. Si esta rev no es la del repo, la salida está caducada.
+Batería de atajos: **12 rasgos**, rev `eb2f75bf`. Si esta rev no es la del repo, la salida está caducada.
 
 Ítems: **12** · BIEN 6 · MAL 6
 
@@ -101,16 +126,17 @@ Solape con los 10 lotes publicados (el objetivo es el AZAR, no el mínimo — la
 | posición par en el lote (alternancia mecánica) | **8/12** (67 %) | presente⇒MAL | 6 | 0.194 |
 | más corta que la mediana (palabras) | **7/12** (58 %) | presente⇒MAL | 5 | 0.387 |
 | más corta que la mediana (caracteres) | **7/12** (58 %) | presente⇒MAL | 5 | 0.387 |
+| la glosa palabra-por-palabra al español es español correcto | **6/12** (50 %) | presente⇒BIEN | 6 | 0.613 |
 | arranca con adjunto o subordinada, no con el sujeto o el verbo | **6/12** (50 %) | presente⇒BIEN | 2 | 0.613 |
 | lleva una coma (frase con coleta) | **6/12** (50 %) | presente⇒BIEN | 2 | 0.613 |
 | lleva marcador temporal | **6/12** (50 %) | presente⇒BIEN | 6 | 0.613 |
-| lleva una palabra visiblemente española | **6/12** (50 %) | presente⇒BIEN | 2 | 0.613 |
+| lleva una palabra visiblemente española | **6/12** (50 %) | presente⇒BIEN | 0 | 0.613 |
 | lleva verbo en primera persona | **6/12** (50 %) | presente⇒BIEN | 0 | 0.613 |
 | lleva clítico con guion (ênclise/mesóclise) | **6/12** (50 %) | presente⇒BIEN | 6 | 0.613 |
 | lleva preposición contraída (do/da/no/na/ao/à/pelo) | **6/12** (50 %) | presente⇒BIEN | 4 | 0.613 |
 | lleva dos o más oraciones (punto o punto y coma interior) | **6/12** (50 %) | presente⇒BIEN | 0 | 0.613 |
 
-## Virginidad — 12 candidatos (+12 sondas de núcleo) contra 2431 publicados + entre sí (umbral 0.34)
+## Virginidad — 12 candidatos (+12 sondas de núcleo) contra 2431 publicados + 140 <Example> de lecciones + entre sí (umbral 0.34)
 
 Sin pares fiables por encima del umbral.
 
@@ -132,65 +158,77 @@ Ninguna.
 ### GJ-01 · **BIEN**
 **par:** `P-02`
 **sentence:** «Ninguém lhes contará o que se passou naquela reunião de dezembro.»
+**glosa-es:** «Nadie les contará lo que se pasó en aquella reunión de diciembre.» · español CORRECTO
 **explicación:** Los cuantificadores negativos —«ninguém», «nada», «nenhum»— atraen el clítico igual que «não». Con «ninguém» de sujeto, próclise: «ninguém lhes contará».
 
 ### GJ-02 · **BIEN**
 **par:** `P-06`
 **sentence:** «Quando o prazo terminar, enviar-te-ei os documentos por correio registado.»
+**glosa-es:** «Cuando el plazo termine, enviar-te-é los documentos por correo certificado.» · español INCORRECTO
 **explicación:** La subordinada de delante NO es atractor: acabada la coma, la principal empieza otra vez y el clítico no puede abrirla. De ahí la mesóclise, «enviar-te-ei». Es el caso que más se falla, porque parece que el «quando» gobierna toda la frase y no gobierna más que su cláusula.
 
 ### GJ-03 · **BIEN**
 **par:** `P-05`
 **sentence:** «O programa já está fechado e o secretariado enviá-lo-á aos sócios amanhã.»
+**glosa-es:** «El programa ya está cerrado y el secretariado enviar-lo-á a los socios mañana.» · español INCORRECTO
 **explicación:** Mismo caso que el anterior con otro verbo: «enviará» + «o» (= «o programa») da «enviá-lo-á», con caída de la -r y el clítico en -l-. Se repite el patrón con otro léxico para que se vea que la regla no depende del verbo.
 
 ### GJ-04 · **MAL**
 **par:** `P-02`
 **sentence:** «Ninguém contar-lhes-á o que se passou naquela reunião de dezembro.»
 **repair:** «Ninguém lhes contará o que se passou naquela reunião de dezembro.»
+**glosa-es:** «Nadie contar-les-á lo que se pasó en aquella reunión de diciembre.» · español INCORRECTO
 **explicación:** «Ninguém» es atractor de próclise, así que la mesóclise queda excluida. La prueba es fácil de hacer en la cabeza: si delante del verbo hay una palabra negativa, el clítico se va delante y ya no hay dónde partir el futuro.
 
 ### GJ-05 · **MAL**
 **par:** `P-04`
 **sentence:** «O presidente já sabe do caso e a direção o informará do resultado esta semana.»
 **repair:** «O presidente já sabe do caso e a direção informá-lo-á do resultado esta semana.»
-**explicación:** La próclise sin atractor es la colocación brasileña. En portugués europeo, con el sujeto delante y nada más, el clítico no se antepone: la forma es «informá-lo-á». Es el calco que sobrevive a todo porque se entiende igual.
+**glosa-es:** «El presidente ya sabe del caso y la dirección lo informará del resultado esta semana.» · español CORRECTO
+**explicación:** En el estándar europeo de hoy, con futuro o condicional y sin atractor delante, la colocación es la mesóclise: «informá-lo-á». La próclise ahí suena brasileña. (Hedge con verdad: en la prosa del XIX el sujeto nominal admitía próclise con más libertad —Camilo escribe «Um estranho **lhe** esmolou a subsistencia»—, pero eso es con pretérito y es lengua literaria antigua, no la norma escrita de hoy con futuro.)
 
 ### GJ-06 · **BIEN**
 **par:** `P-03`
 **sentence:** «O recurso está pendente e a comissão nunca o decidirá sem ouvir as duas partes.»
+**glosa-es:** «El recurso está pendiente y la comisión nunca lo decidirá sin oír a las dos partes.» · español CORRECTO
 **explicación:** Los adverbios de negación y de frecuencia negativa —«nunca», «jamais», «raramente»— son atractores. Con ellos el futuro no se parte: «nunca o decidirá».
 
 ### GJ-07 · **MAL**
 **par:** `P-05`
 **sentence:** «O programa já está fechado e o secretariado o enviará aos sócios amanhã.»
 **repair:** «O programa já está fechado e o secretariado enviá-lo-á aos sócios amanhã.»
-**explicación:** Sin atractor delante, «o enviará» es brasileño. La marca del portugués europeo culto aquí es partir el futuro, y es justo lo que un hispanohablante no produce nunca solo, porque el español antepone siempre.
+**glosa-es:** «El programa ya está cerrado y el secretariado lo enviará a los socios mañana.» · español CORRECTO
+**explicación:** Sin atractor delante y con el verbo en futuro, la marca del portugués europeo escrito de hoy es partirlo: «enviá-lo-á». «O enviará» es la colocación brasileña, y es justo la que un hispanohablante produce sola porque el español antepone siempre.
 
 ### GJ-08 · **MAL**
 **par:** `P-06`
 **sentence:** «Quando o prazo terminar, te enviarei os documentos por correio registado.»
 **repair:** «Quando o prazo terminar, enviar-te-ei os documentos por correio registado.»
+**glosa-es:** «Cuando el plazo termine, te enviaré los documentos por correo certificado.» · español CORRECTO
 **explicación:** El portugués europeo no admite el pronombre átono abriendo oración, y tras la coma la principal empieza de cero. «Te enviarei» sólo sería posible con un atractor DENTRO de la principal, que aquí no hay.
 
 ### GJ-09 · **MAL**
 **par:** `P-01`
 **sentence:** «Não dir-lhe-ei a verdade toda enquanto o processo não estiver encerrado.»
 **repair:** «Não lhe direi a verdade toda enquanto o processo não estiver encerrado.»
+**glosa-es:** «No decir-le-é la verdad toda mientras el proceso no esté cerrado.» · español INCORRECTO
 **explicación:** La mesóclise sólo cabe cuando el futuro o el condicional abren la oración sin atractor delante. Aquí hay «não», que es atractor de próclise, así que la única colocación posible es «não lhe direi». Es el error del que ha aprendido la mesóclise y la aplica como regla mecánica.
 
 ### GJ-10 · **BIEN**
 **par:** `P-04`
 **sentence:** «O presidente já sabe do caso e a direção informá-lo-á do resultado esta semana.»
+**glosa-es:** «El presidente ya sabe del caso y la dirección informar-lo-á del resultado esta semana.» · español INCORRECTO
 **explicación:** Sin nada que atraiga el clítico —«e» coordina, no atrae—, el futuro se parte y el pronombre se mete dentro: «informá-lo-á», con «o» = «o presidente». En la norma europea escrita ésta es la colocación por defecto, y a C2 es una elección de registro — culta, no obligatoria.
 
 ### GJ-11 · **MAL**
 **par:** `P-03`
 **sentence:** «O recurso está pendente e a comissão nunca decidi-lo-á sem ouvir as duas partes.»
 **repair:** «O recurso está pendente e a comissão nunca o decidirá sem ouvir as duas partes.»
+**glosa-es:** «El recurso está pendiente y la comisión nunca decidir-lo-á sin oír a las dos partes.» · español INCORRECTO
 **explicación:** La mesóclise pide que el verbo no tenga atractor a su izquierda, y «nunca» lo es. Nótese que la forma «decidi-lo-á» está bien construida —la -r cae y el clítico toma la -l-—: lo que falla no es la morfología sino el sitio.
 
 ### GJ-12 · **BIEN**
 **par:** `P-01`
 **sentence:** «Não lhe direi a verdade toda enquanto o processo não estiver encerrado.»
+**glosa-es:** «No le diré la verdad toda mientras el proceso no esté cerrado.» · español CORRECTO
 **explicación:** Con «não» delante, el clítico va OBLIGATORIAMENTE proclítico, y eso desactiva la mesóclise: «não lhe direi», nunca «não dir-lhe-ei». A C2 la mesóclise ya no es una forma que se aplique porque el verbo esté en futuro, sino una que se elige cuando NADA la impide.

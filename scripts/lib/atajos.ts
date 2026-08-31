@@ -27,6 +27,13 @@ export interface ItemJuicio {
   /** true = la frase está BIEN formada */
   verdict: boolean;
   sentence: string;
+  /** LA GLOSA COGNADA, declarada. ¿La traducción palabra por palabra al
+   *  español es español bien formado? No hay regex que lo calcule —es
+   *  juicio— y por eso se declara en el doc del lote con la glosa escrita
+   *  al lado, y el preflight BLOQUEA si falta: sin declararlo el campo se
+   *  queda `undefined`, el rasgo sale en el azar y pasa en silencio, que
+   *  es justo el modo de fallo que esta batería existe para impedir. */
+  glosaEsCorrecta?: boolean;
 }
 
 export interface Atajo {
@@ -43,6 +50,28 @@ export interface Atajo {
 
 /** Rasgos binarios. Añadir uno aquí lo mete en la batería para siempre. */
 export const RASGOS: { nombre: string; f: (x: ItemJuicio, todos: ItemJuicio[]) => boolean }[] = [
+  {
+    // EL RASGO 12, y el que más caro sale. La skill lo nombra desde el
+    // lote 3 —«glosa cognada que da español normal», 16/20— y la batería
+    // en código NUNCA lo tuvo, porque es el único de los tres atajos
+    // históricos que no sale de un regex. Se quedó fuera por ser el que
+    // exige juicio, que es exactamente la razón por la que hacía falta.
+    //
+    // Medido por el round del lote 11: **20/24 (p=0,0008)** en el lote
+    // entero y **12/12 (p=0,0002)** en su sección de ser/estar. Un
+    // hispanohablante que no sepa una palabra de portugués resolvía media
+    // batería traduciendo.
+    //
+    // Y la parte que importa: **los PARES MÍNIMOS no lo neutralizan.** La
+    // garantía de `pares-minimos.ts` es que todo rasgo que NO mira el
+    // hueco vale igual en los dos miembros del par. Éste SÍ mira el hueco.
+    // La única defensa es de contenido: que el punto sea de verdad
+    // divergente del español. Si el español elige igual que el portugués,
+    // el punto no se puede examinar con juicios binarios — hay que
+    // cambiar de formato, no de frases.
+    nombre: 'la glosa palabra-por-palabra al español es español correcto',
+    f: (x) => x.glosaEsCorrecta === true,
+  },
   {
     // La skill prohíbe la «alternancia mecánica» desde el lote 2, pero
     // nadie la medía: un patrón MBMBMB… se resuelve al 100 % mirando si
@@ -91,9 +120,19 @@ export const RASGOS: { nombre: string; f: (x: ItemJuicio, todos: ItemJuicio[]) =
   },
   {
     nombre: 'lleva una palabra visiblemente española',
-    // grafías que el portugués no tiene: ñ, ll, -ción, -dad, -aje, y las
-    // palabras españolas que se cuelan por descuido
-    f: (x) => /ñ|ll[aeiou]|ción\b|dad\b|aje\b|(?<![\p{L}])(pero|entonces|ahora|siempre|nunca|muy|desde|hasta|aunque)(?![\p{L}])/iu.test(x.sentence),
+    // grafías que el portugués no tiene: ñ, ll, -ción, -dad, y las
+    // palabras españolas que se cuelan por descuido.
+    //
+    // BUG CORREGIDO (round del lote 11): la lista traía `desde`, `nunca` y
+    // `aje\b`, que son **portugués corriente** — «Está a chover desde
+    // ontem» está publicado, «nunca» es idéntico en las dos lenguas y
+    // `aje\b` casa con «o traje». El rasgo no medía hispanismos: medía la
+    // palabra «desde», y que sus tres apariciones cayeran en MAL le
+    // inflaba la cifra a 15/24. Un detector de atajos con falsos
+    // positivos es peor que no tenerlo: gasta atención y contamina su
+    // propia cifra para el día que haya un hispanismo de verdad.
+    // Entra `antes de que`, que es el calco que el rasgo quiere cazar.
+    f: (x) => /ñ|ll[aeiou]|ción\b|dad\b|(?<![\p{L}])(pero|entonces|ahora|siempre|muy|hasta|aunque|antes de que)(?![\p{L}])/iu.test(x.sentence),
   },
   {
     nombre: 'lleva verbo en primera persona',

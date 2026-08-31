@@ -24,7 +24,7 @@
 // El diseño: seis pares, y en TRES el BIEN lleva mesóclise mientras en
 // los otros TRES la lleva el MAL. Sin ese equilibrio, «¿hay un guion?»
 // resolvería el lote sin saber portugués.
-import { expandir, patronesPublicados, type ParMinimo } from '../lib/pares-minimos';
+import { expandir, patronesPublicados, rellenar, type ParMinimo } from '../lib/pares-minimos';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -34,6 +34,7 @@ export const PARES: ParMinimo[] = [
   // ── Con atractor ⇒ la próclise es obligatoria y la mesóclise imposible
   {
     id: 'P-01', concepto: CONCEPTO,
+    glosaBien: 'No le diré la verdad toda mientras el proceso no esté cerrado.', glosaMal: 'No decir-le-é la verdad toda mientras el proceso no esté cerrado.',
     rasgo: 'con «não» delante, atractor de próclise, la mesóclise es imposible',
     esqueleto: 'Não {} a verdade toda enquanto o processo não estiver encerrado.',
     bien: 'lhe direi', mal: 'dir-lhe-ei',
@@ -50,6 +51,7 @@ export const PARES: ParMinimo[] = [
   },
   {
     id: 'P-02', concepto: CONCEPTO,
+    glosaBien: 'Nadie les contará lo que se pasó en aquella reunión de diciembre.', glosaMal: 'Nadie contar-les-á lo que se pasó en aquella reunión de diciembre.',
     rasgo: 'con «ninguém» sujeto, atractor de próclise, la mesóclise es imposible',
     esqueleto: 'Ninguém {} o que se passou naquela reunião de dezembro.',
     bien: 'lhes contará', mal: 'contar-lhes-á',
@@ -65,6 +67,7 @@ export const PARES: ParMinimo[] = [
   },
   {
     id: 'P-03', concepto: CONCEPTO,
+    glosaBien: 'El recurso está pendiente y la comisión nunca lo decidirá sin oír a las dos partes.', glosaMal: 'El recurso está pendiente y la comisión nunca decidir-lo-á sin oír a las dos partes.',
     rasgo: 'con el adverbio «nunca», atractor de próclise, la mesóclise es imposible',
     esqueleto: 'O recurso está pendente e a comissão nunca {} sem ouvir as duas partes.',
     bien: 'o decidirá', mal: 'decidi-lo-á',
@@ -81,6 +84,7 @@ export const PARES: ParMinimo[] = [
   // ── Sin atractor ⇒ la mesóclise es la forma culta y la próclise es brasileña
   {
     id: 'P-04', concepto: CONCEPTO,
+    glosaBien: 'El presidente ya sabe del caso y la dirección informar-lo-á del resultado esta semana.', glosaMal: 'El presidente ya sabe del caso y la dirección lo informará del resultado esta semana.',
     rasgo: 'sin atractor y con el verbo abriendo la oración, la próclise es brasileña',
     esqueleto: 'O presidente já sabe do caso e a direção {} do resultado esta semana.',
     bien: 'informá-lo-á', mal: 'o informará',
@@ -91,13 +95,16 @@ export const PARES: ParMinimo[] = [
       'colocación por defecto, y a C2 es una elección de registro — culta, no ' +
       'obligatoria.',
     explicacionMal:
-      'La próclise sin atractor es la colocación brasileña. En portugués ' +
-      'europeo, con el sujeto delante y nada más, el clítico no se antepone: ' +
-      'la forma es «informá-lo-á». Es el calco que sobrevive a todo porque se ' +
-      'entiende igual.',
+      'En el estándar europeo de hoy, con futuro o condicional y sin atractor ' +
+      'delante, la colocación es la mesóclise: «informá-lo-á». La próclise ahí ' +
+      'suena brasileña. (Hedge con verdad: en la prosa del XIX el sujeto ' +
+      'nominal admitía próclise con más libertad —Camilo escribe «Um estranho ' +
+      '**lhe** esmolou a subsistencia»—, pero eso es con pretérito y es lengua ' +
+      'literaria antigua, no la norma escrita de hoy con futuro.)',
   },
   {
     id: 'P-05', concepto: CONCEPTO,
+    glosaBien: 'El programa ya está cerrado y el secretariado enviar-lo-á a los socios mañana.', glosaMal: 'El programa ya está cerrado y el secretariado lo enviará a los socios mañana.',
     rasgo: 'sin atractor y con el verbo abriendo la oración, la próclise es brasileña',
     esqueleto: 'O programa já está fechado e o secretariado {} aos sócios amanhã.',
     bien: 'enviá-lo-á', mal: 'o enviará',
@@ -107,13 +114,14 @@ export const PARES: ParMinimo[] = [
       'repite el patrón con otro léxico para que se vea que la regla no ' +
       'depende del verbo.',
     explicacionMal:
-      'Sin atractor delante, «o enviará» es brasileño. La marca del portugués ' +
-      'europeo culto aquí es partir el futuro, y es justo lo que un ' +
-      'hispanohablante no produce nunca solo, porque el español antepone ' +
-      'siempre.',
+      'Sin atractor delante y con el verbo en futuro, la marca del portugués ' +
+      'europeo escrito de hoy es partirlo: «enviá-lo-á». «O enviará» es la ' +
+      'colocación brasileña, y es justo la que un hispanohablante produce sola ' +
+      'porque el español antepone siempre.',
   },
   {
     id: 'P-06', concepto: CONCEPTO,
+    glosaBien: 'Cuando el plazo termine, enviar-te-é los documentos por correo certificado.', glosaMal: 'Cuando el plazo termine, te enviaré los documentos por correo certificado.',
     rasgo: 'tras una subordinada antepuesta y coma, el clítico no puede abrir la oración principal',
     esqueleto: 'Quando o prazo terminar, {} os documentos por correio registado.',
     bien: 'enviar-te-ei', mal: 'te enviarei',
@@ -139,6 +147,28 @@ const items = expandir(PARES, {
   semilla: 'lote12-c2-mesoclise-e2-13',
   publicados: [...patronesPublicados(corpus).values()],
 });
+
+// LA GLOSA COGNADA, declarada ítem a ítem — el rasgo 12, que los pares
+// mínimos NO neutralizan porque mira DENTRO del hueco. Aquí se deriva
+// del propio contraste: la mesóclise no existe en español, así que toda
+// frase con mesóclise glosa a español roto y toda frase con próclise
+// glosa a español correcto. Por eso el equilibrio 3/3 del lote —tres
+// pares con la mesóclise en el BIEN y tres con ella en el MAL— no sólo
+// mata el rasgo del guion: mata también el de la glosa. Sin ese
+// equilibrio, este lote se resolvería traduciendo, 12 de 12.
+const GLOSAS: Record<string, { es: string; ok: boolean }> = {};
+for (const p of PARES) {
+  // `\p{L}` y no `[a-zç]`: la mesóclise de los verbos de 1.ª conjugación
+  // deja una VOCAL ACENTUADA delante del clítico —«informá-lo-á»,
+  // «enviá-lo-á»—, y con la clase ASCII dos ítems se clasificaban al
+  // revés y su glosa se declaraba falsa. Es la misma familia de fallo que
+  // el `\b` que no casa tras vocal acentuada, ya pagada en E2#9.
+  const conMesoclise = (t: string) => /[\p{L}]-(o|a|os|as|lo|la|los|las|lhe|lhes|me|te|nos|se)-(ei|á|ás|ão|emos|ia|iam)(?![\p{L}])/iu.test(t);
+  for (const [relleno, glosa] of [[p.bien, p.glosaBien], [p.mal, p.glosaMal]] as [string, string][]) {
+    const frase = rellenar(p.esqueleto, relleno);
+    GLOSAS[frase] = { es: glosa, ok: !conMesoclise(frase) };
+  }
+}
 
 const L: string[] = [];
 L.push('# Lote 12 — C2, la mesóclise como ELECCIÓN · **primer lote por pares mínimos**');
@@ -203,6 +233,7 @@ for (const x of items) {
   L.push(`**par:** \`${x.parId}\``);
   L.push(`**sentence:** «${x.sentence}»`);
   if (x.repair) L.push(`**repair:** «${x.repair}»`);
+  L.push(`**glosa-es:** «${GLOSAS[x.sentence]!.es}» · español ${GLOSAS[x.sentence]!.ok ? 'CORRECTO' : 'INCORRECTO'}`);
   L.push(`**explicación:** ${x.explicacion}`);
   L.push('');
 }

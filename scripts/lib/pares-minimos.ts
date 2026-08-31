@@ -48,6 +48,11 @@ export interface ParMinimo {
   mal: string;
   explicacionBien: string;
   explicacionMal: string;
+  /** La glosa palabra-por-palabra al español de cada miembro. Alimenta el
+   *  rasgo 12 de la batería, que es el único que los pares NO neutralizan
+   *  porque mira DENTRO del hueco. */
+  glosaBien?: string;
+  glosaMal?: string;
 }
 
 export interface ItemGenerado {

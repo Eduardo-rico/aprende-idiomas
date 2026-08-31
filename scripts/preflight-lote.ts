@@ -43,6 +43,12 @@ for (const sec of txt.split(/\n### /).slice(1)) {
     // frase por diseño, así que no se comparan entre sí — pero sí, cada
     // uno por su cuenta, contra todo el corpus publicado.
     par: (sec.match(/\*\*par:\*\*\s*`?([\w-]+)`?/)?.[1] ?? undefined),
+    // El rasgo 12 no se calcula: se DECLARA, con la glosa escrita al lado.
+    glosaEsCorrecta: /\*\*glosa-es:\*\*[\s\S]*?·\s*español\s+CORRECTO/i.test(sec)
+      ? true
+      : /\*\*glosa-es:\*\*[\s\S]*?·\s*español\s+INCORRECTO/i.test(sec)
+        ? false
+        : undefined,
     explicacion: (sec.match(/\*\*explicación:\*\*\s*([\s\S]*?)(?=\n\n|\n### |$)/)?.[1] ?? '').replace(/\s+/g, ' ').trim(),
   });
 }
@@ -59,8 +65,16 @@ const avisos: string[] = [];
 // La salida se pega en el documento, así que tiene que decir CONTRA QUÉ
 // batería se corrió: en E2#12 se añadió un rasgo mientras un revisor
 // auditaba, y la salida pegada caducó sin que nada lo indicara.
+// El sello cubre los TRES ficheros que deciden la salida, no sólo la
+// batería: en E2#13 un revisor cazó que `preflight-lote.ts` había
+// cambiado después de pegarse la salida y el sello seguía dando luz
+// verde, con la sección de molde ya caducada.
 const revBateria = crypto.createHash('sha256')
-  .update(fs.readFileSync(path.join(process.cwd(), 'scripts/lib/atajos.ts'), 'utf8'))
+  .update([
+    'scripts/lib/atajos.ts',
+    'scripts/lib/pares-minimos.ts',
+    'scripts/preflight-lote.ts',
+  ].map((f) => fs.readFileSync(path.join(process.cwd(), f), 'utf8')).join('\u0000'))
   .digest('hex').slice(0, 8);
 console.log(`# Preflight — ${path.basename(DOC)}\n`);
 console.log(`Batería de atajos: **${RASGOS.length} rasgos**, rev \`${revBateria}\`. Si esta rev no es la del repo, la salida está caducada.\n`);
@@ -72,6 +86,8 @@ for (const x of items) {
   if (!x.verdict && !x.repair) bloqueantes.push(`${x.id}: un MAL sin repair`);
   if (x.verdict && x.repair) bloqueantes.push(`${x.id}: un BIEN con repair`);
   if (!x.explicacion) bloqueantes.push(`${x.id}: sin explicación`);
+  if (x.glosaEsCorrecta === undefined)
+    bloqueantes.push(`${x.id}: sin **glosa-es:** — el rasgo de la glosa cognada no se puede medir, y sin medirlo la batería miente por omisión`);
 }
 
 // ── 2 · El molde ─────────────────────────────────────────────────────
@@ -132,9 +148,32 @@ const nucleos: ExIndexable[] = items
     data: { sentence: nucleo(x.sentence), repair: x.repair ? nucleo(x.repair) : '' },
   }) as ExIndexable);
 
+// Y TAMBIÉN contra los <Example> de las LECCIONES. El gate abría un solo
+// directorio, `blocks/`, y nunca `mdx/`: en el lote 10 v3 cuatro de las
+// ocho frases de una sección eran <Example> literales de la lección que
+// ese mismo lote sirve, con una coleta pegada detrás, y las cuatro eran
+// BIEN — 10/14 de acierto, por encima de los once rasgos medidos. Es el
+// mismo mecanismo que la coleta que diluía el IDF, un piso más abajo:
+// aquí no es que el solape se diluya, es que la fuente no estaba
+// indexada.
+const MDX = path.join(process.cwd(), 'lib/data/languages/pt/mdx');
+const ejemplos: ExIndexable[] = [];
+const recorrer = (d: string) => {
+  for (const e of fs.readdirSync(d, { withFileTypes: true })) {
+    const f = path.join(d, e.name);
+    if (e.isDirectory()) { recorrer(f); continue; }
+    if (!e.name.endsWith('.mdx')) continue;
+    const rel = path.relative(MDX, f).replace(/\.mdx$/, '');
+    let i = 0;
+    for (const m of fs.readFileSync(f, 'utf8').matchAll(/<Example[^>]*\bpt="([^"]+)"/g))
+      ejemplos.push({ id: `mdx:${rel}#${i++}`, type: 'grammaticality_judgment', blockId: 0, concepts: [], data: { sentence: m[1], repair: '' } } as ExIndexable);
+  }
+};
+if (fs.existsSync(MDX)) recorrer(MDX);
+
 // El lote se compara TAMBIÉN consigo mismo: la cicatriz de E2#7.
-const idx = indexarCorpus([...corpus, ...candidatos, ...nucleos]);
-console.log(`\n## Virginidad — ${candidatos.length} candidatos (+${nucleos.length} sondas de núcleo) contra ${corpus.length} publicados + entre sí (umbral ${UMBRAL})\n`);
+const idx = indexarCorpus([...corpus, ...ejemplos, ...candidatos, ...nucleos]);
+console.log(`\n## Virginidad — ${candidatos.length} candidatos (+${nucleos.length} sondas de núcleo) contra ${corpus.length} publicados + ${ejemplos.length} <Example> de lecciones + entre sí (umbral ${UMBRAL})\n`);
 let pares = 0, artefactos = 0;
 const vistos = new Set<string>();
 for (const c of [...candidatos, ...nucleos]) {
