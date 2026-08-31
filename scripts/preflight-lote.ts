@@ -18,7 +18,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { indexarCorpus, buscarDuplicados, UMBRAL, type ExIndexable } from './lib/virginidad';
-import { bateria, pValor, SOSPECHOSO, type ItemJuicio } from './lib/atajos';
+import { bateria, pValor, SOSPECHOSO, RASGOS, type ItemJuicio } from './lib/atajos';
+import crypto from 'node:crypto';
 
 const DOC = process.argv[2];
 if (!DOC) { console.error('uso: preflight-lote.ts <doc.md>'); process.exit(2); }
@@ -42,7 +43,14 @@ for (const sec of txt.split(/\n### /).slice(1)) {
 
 const bloqueantes: string[] = [];
 const avisos: string[] = [];
+// La salida se pega en el documento, así que tiene que decir CONTRA QUÉ
+// batería se corrió: en E2#12 se añadió un rasgo mientras un revisor
+// auditaba, y la salida pegada caducó sin que nada lo indicara.
+const revBateria = crypto.createHash('sha256')
+  .update(fs.readFileSync(path.join(process.cwd(), 'scripts/lib/atajos.ts'), 'utf8'))
+  .digest('hex').slice(0, 8);
 console.log(`# Preflight — ${path.basename(DOC)}\n`);
+console.log(`Batería de atajos: **${RASGOS.length} rasgos**, rev \`${revBateria}\`. Si esta rev no es la del repo, la salida está caducada.\n`);
 console.log(`Ítems: **${items.length}** · BIEN ${items.filter((x) => x.verdict).length} · MAL ${items.filter((x) => !x.verdict).length}\n`);
 
 // ── 1 · Higiene ──────────────────────────────────────────────────────
@@ -86,14 +94,30 @@ const candidatos: ExIndexable[] = items.map((x) => ({
   data: { sentence: x.sentence, repair: x.repair ?? '' },
 }) as ExIndexable);
 
+/** El NÚCLEO de la frase: su oración más larga entre comas. Se sonda
+ *  aparte porque envolver una frase publicada en una subordinada delante
+ *  y una coleta detrás DILUYE el solape IDF y ciega el gate — medido en
+ *  el lote 10 v2, donde un ítem era `b2c2-gj-l1-02` con adorno y pasaba
+ *  desapercibido, mientras su núcleo puntúa 0,617. El arreglo de la v1
+ *  había desactivado el gate que cazó el fallo de la v1. */
+const nucleo = (s: string) => s.split(/[,;]/).map((t) => t.trim()).sort((a, b) => b.length - a.length)[0] ?? s;
+const nucleos: ExIndexable[] = items
+  .filter((x) => nucleo(x.sentence) !== x.sentence.trim().replace(/[.!?]$/, ''))
+  .map((x) => ({
+    id: `${x.id}·núcleo`, type: 'grammaticality_judgment', blockId: 11, concepts: [],
+    data: { sentence: nucleo(x.sentence), repair: x.repair ? nucleo(x.repair) : '' },
+  }) as ExIndexable);
+
 // El lote se compara TAMBIÉN consigo mismo: la cicatriz de E2#7.
-const idx = indexarCorpus([...corpus, ...candidatos]);
-console.log(`\n## Virginidad — ${candidatos.length} candidatos contra ${corpus.length} publicados + entre sí (umbral ${UMBRAL})\n`);
+const idx = indexarCorpus([...corpus, ...candidatos, ...nucleos]);
+console.log(`\n## Virginidad — ${candidatos.length} candidatos (+${nucleos.length} sondas de núcleo) contra ${corpus.length} publicados + entre sí (umbral ${UMBRAL})\n`);
 let pares = 0, artefactos = 0;
 const vistos = new Set<string>();
-for (const c of candidatos) {
+for (const c of [...candidatos, ...nucleos]) {
   for (const h of buscarDuplicados(idx, c)) {
     if (h.id === c.id) continue;
+    // un candidato contra su propio núcleo no es un hallazgo
+    if (h.id.replace('·núcleo', '') === c.id.replace('·núcleo', '')) continue;
     const clave = [c.id, h.id].sort().join('|');
     if (vistos.has(clave)) continue;
     vistos.add(clave);

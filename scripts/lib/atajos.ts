@@ -53,6 +53,19 @@ export const RASGOS: { nombre: string; f: (x: ItemJuicio, todos: ItemJuicio[]) =
     f: (x) => (x.pos ?? 0) % 2 === 0,
   },
   {
+    // Arreglar un atajo puede FABRICAR otro del mismo tamaño. El lote 10
+    // v2 neutralizó la longitud alargando los MAL «con su propia coleta»
+    // — y los alargó POR DELANTE, con adjuntos y subordinadas
+    // antepuestas. Resultado medido: la longitud murió (10/16, p=0,227) y
+    // nació «arranca con algo que no es el verbo», **13/16, p=0,011**,
+    // exactamente el mismo tamaño que el atajo que había matado.
+    //
+    // Y explica por qué la batería tiene que mirar también la POSICIÓN
+    // dentro de la frase: hasta aquí era toda bolsa de palabras.
+    nombre: 'arranca con adjunto o subordinada, no con el sujeto o el verbo',
+    f: (x) => /^\s*(?:ontem|hoje|amanhã|agora|depois|antes|quando|se|sem|para|com|na|no|nesta|neste|nos|nas|à|ao|em|por|durante|apesar|embora|assim|logo|então|até)(?![\p{L}])/iu.test(x.sentence),
+  },
+  {
     nombre: 'más corta que la mediana (palabras)',
     f: (x, todos) => {
       const largos = todos.map((y) => y.sentence.trim().split(/\s+/).length).sort((a, b) => a - b);

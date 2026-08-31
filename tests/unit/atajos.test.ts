@@ -111,3 +111,24 @@ describe('la posición también es un rasgo', () => {
     expect(pValor(a.aciertos, a.n)).toBeGreaterThan(SOSPECHOSO);
   });
 });
+
+// Arreglar un atajo puede FABRICAR otro del mismo tamaño: el lote 10 v2
+// mató la longitud alargando los MAL por DELANTE, con adjuntos
+// antepuestos, y creó «arranca con algo que no es el verbo» a 13/16.
+describe('el arranque de la frase también es un rasgo', () => {
+  it('caza el atajo que fabricó el arreglo de la longitud', () => {
+    const items: ItemJuicio[] = [
+      { id: '1', verdict: false, sentence: 'Ontem à noite não disse-me nada sobre a reunião de ontem.' },
+      { id: '2', verdict: false, sentence: 'Se eu seria mais novo, ainda iria convosco à serra amanhã.' },
+      { id: '3', verdict: false, sentence: 'Na segunda-feira vou a levar o carro à oficina do costume.' },
+      { id: '4', verdict: false, sentence: 'Quando eu chegar em casa esta noite, ligo-te para combinarmos.' },
+      { id: '5', verdict: true, sentence: 'Costumo levantar-me às sete, mesmo ao fim de semana, e leio.' },
+      { id: '6', verdict: true, sentence: 'Deram-me os parabéns pelo trabalho, mas eu sei quem o fez.' },
+      { id: '7', verdict: true, sentence: 'Repara na camisola nova dele, deve ter custado uma fortuna.' },
+      { id: '8', verdict: true, sentence: 'Casou-se com uma arquiteta que conheceu durante o mestrado.' },
+    ];
+    const a = bateria(items).find((r) => r.nombre.includes('arranca'))!;
+    expect(a.acierto).toBe(1);
+    expect(a.direccion).toBe('presente⇒MAL');
+  });
+});
