@@ -64,6 +64,11 @@ export interface Marcador {
   nombre: string;
   europeo: string;
   severidad: 'error' | 'aviso';
+  /** el marcador aparece SÓLO citado como palabra, nunca usado: no es
+   *  brasileñismo del contenido. El gate lo sigue reportando —el triaje
+   *  lo necesita para pedir revisión del contraste implícito— pero quien
+   *  cuenta la deuda debe excluirlo. */
+  mencion?: boolean;
 }
 
 /** Límite de palabra Unicode.
@@ -221,6 +226,11 @@ export interface Hallazgo {
   marcador: string;
   europeo: string;
   severidad: 'error' | 'aviso';
+  /** el marcador aparece SÓLO citado como palabra, nunca usado: no es
+   *  brasileñismo del contenido. El gate lo sigue reportando —el triaje
+   *  lo necesita para pedir revisión del contraste implícito— pero quien
+   *  cuenta la deuda debe excluirlo. */
+  mencion?: boolean;
   texto: string;
 }
 
@@ -235,6 +245,34 @@ export interface Ex extends Json { id: string; type: string; data: Json; tags?: 
  *  propósito, con bandera— y el gate lo marcaba como error. Un gate que
  *  grita en falso acaba desactivado, así que esto importa tanto como
  *  detectar los verdaderos. */
+/** ¿El marcador aparece SÓLO mencionado como palabra, nunca usado?
+ *
+ *  Una ficha de fonética que ilustra la vocal cerrada con «você /voˈse/»
+ *  no está tratando a nadie de «você»: está citando la palabra. Y una que
+ *  enseña el inventario de tratamiento —«tu / você / o senhor»— tiene que
+ *  nombrarlo para enseñarlo. Marcarlas es exactamente el ruido que acaba
+ *  desactivando un gate. Medido en E2#10: de 112 hallazgos de «você», al
+ *  menos dos eran mención pura.
+ *
+ *  Se comprueba que TODAS las apariciones estén entre comillas, junto a
+ *  una transcripción IPA, o en una enumeración con barras. Si una sola
+ *  está suelta en una frase, el ítem NO queda exento. */
+export function soloMencionado(texto: string, re: RegExp): boolean {
+  const global = new RegExp(re.source, re.flags.includes('g') ? re.flags : re.flags + 'g');
+  const apariciones = [...texto.matchAll(global)];
+  if (!apariciones.length) return false;
+  return apariciones.every((m) => {
+    const i = m.index ?? 0;
+    const antes = texto.slice(Math.max(0, i - 3), i);
+    const despues = texto.slice(i + m[0].length, i + m[0].length + 12);
+    return /['"«‘]\s?$/.test(antes)            // entrecomillado
+      || /^\s?['"»’]/.test(despues)            // cierra comilla
+      || /^\s*\/[^/]+\//.test(despues)         // seguido de IPA
+      || /\/\s?$/.test(antes)                  // dentro de una enumeración con barras
+      || /^\s*\//.test(despues);
+  });
+}
+
 export function exento(ex: Ex): boolean {
   if (ex.tags?.includes('regional')) return true;
   const contexto = `${ex.esContrast ?? ''} ${JSON.stringify(ex.data)}`;
@@ -324,9 +362,16 @@ export function revisarEjercicio(ex: Ex): Hallazgo[] {
     for (const m of MARCADORES) {
       const hit = t.match(m.re);
       if (!hit) continue;
+      // Mención ≠ uso: citar la palabra no es escribir en brasileño. NO
+      // se suprime ni se degrada el hallazgo —el triaje lo necesita para
+      // pedir revisión del contraste implícito («Em Portugal, o 'ônibus'
+      // chama-se '___'»), y un test que ya existía lo cazó las dos veces
+      // que lo intenté—: se MARCA, y quien cuenta la deuda decide.
+      const mencion = soloMencionado(t, m.re);
       out.push({
         id: ex.id, campo, marcador: m.nombre, europeo: m.europeo,
         severidad: m.severidad,
+        mencion,
         texto: t.length > 120 ? t.slice(0, 117) + '…' : t,
       });
     }

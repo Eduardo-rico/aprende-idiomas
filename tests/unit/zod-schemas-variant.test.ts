@@ -27,7 +27,9 @@ const baseCommon = {
 
 describe('zod schemas — multi-language variant keys', () => {
   describe('translation type collapse', () => {
-    it('translation_es_pt normalizes to translation with sourceLang=es, targetLang=pt-br', () => {
+    // E2#10: el lado portugués es pt-pt, no pt-br — la base es europea
+    // desde la inversión del 2026-07-28 y este test clavaba el default viejo.
+    it('translation_es_pt normalizes to translation with sourceLang=es, targetLang=pt-pt', () => {
       const r = ExerciseInputSchema.safeParse({
         ...baseCommon,
         type: 'translation_es_pt',
@@ -38,11 +40,11 @@ describe('zod schemas — multi-language variant keys', () => {
         expect(r.data.type).toBe('translation');
         const d = r.data.data as { source: string; target: string; sourceLang: string; targetLang: string };
         expect(d.sourceLang).toBe('es');
-        expect(d.targetLang).toBe('pt-br');
+        expect(d.targetLang).toBe('pt-pt');
       }
     });
 
-    it('translation_pt_es normalizes to translation with sourceLang=pt-br, targetLang=es', () => {
+    it('translation_pt_es normalizes to translation with sourceLang=pt-pt, targetLang=es', () => {
       const r = ExerciseInputSchema.safeParse({
         ...baseCommon,
         type: 'translation_pt_es',
@@ -52,7 +54,7 @@ describe('zod schemas — multi-language variant keys', () => {
       if (r.success) {
         expect(r.data.type).toBe('translation');
         const d = r.data.data as { sourceLang: string; targetLang: string };
-        expect(d.sourceLang).toBe('pt-br');
+        expect(d.sourceLang).toBe('pt-pt');
         expect(d.targetLang).toBe('es');
       }
     });
@@ -252,7 +254,7 @@ describe('zod schemas — multi-language variant keys', () => {
       const r = normalizeExerciseInput({ type: 'translation_es_pt', data: { source: 'Hola', target: 'Olá' } });
       expect(r).toEqual({
         type: 'translation',
-        data: { source: 'Hola', target: 'Olá', sourceLang: 'es', targetLang: 'pt-br' },
+        data: { source: 'Hola', target: 'Olá', sourceLang: 'es', targetLang: 'pt-pt' },
       });
     });
 
@@ -260,7 +262,7 @@ describe('zod schemas — multi-language variant keys', () => {
       const r = normalizeExerciseInput({ type: 'translation_pt_es', data: { source: 'Olá', target: 'Hola' } });
       expect(r).toEqual({
         type: 'translation',
-        data: { source: 'Olá', target: 'Hola', sourceLang: 'pt-br', targetLang: 'es' },
+        data: { source: 'Olá', target: 'Hola', sourceLang: 'pt-pt', targetLang: 'es' },
       });
     });
 
@@ -279,3 +281,29 @@ describe('zod schemas — multi-language variant keys', () => {
     });
   });
 });
+
+// E2#10: el normalizador de tipos legacy etiquetaba el lado portugués como
+// `pt-br`, resto de cuando la base del corpus era brasileña. Tras la
+// inversión del 2026-07-28 la base es EUROPEA por contrato, y la etiqueta
+// se pinta en pantalla (`TranslationCard.tsx:28`), así que 567 de las 576
+// traducciones le decían «PT-BR → ES» al alumno de un curso europeo.
+describe('normalizeExerciseInput: el lado portugués de una traducción legacy es pt-pt', () => {
+  it('translation_pt_es normaliza a sourceLang pt-pt', () => {
+    const out = normalizeExerciseInput({
+      id: 'x', type: 'translation_pt_es', blockId: 1, lessonId: 'b1-l1', difficulty: 1,
+      concepts: [], tags: [], data: { source: 'Bom dia.', target: 'Buenos días.' },
+    }) as any;
+    expect(out.type).toBe('translation');
+    expect(out.data.sourceLang).toBe('pt-pt');
+    expect(out.data.targetLang).toBe('es');
+  });
+
+  it('translation_es_pt normaliza a targetLang pt-pt', () => {
+    const out = normalizeExerciseInput({
+      id: 'y', type: 'translation_es_pt', blockId: 1, lessonId: 'b1-l1', difficulty: 1,
+      concepts: [], tags: [], data: { source: 'Buenos días.', target: 'Bom dia.' },
+    }) as any;
+    expect(out.data.sourceLang).toBe('es');
+    expect(out.data.targetLang).toBe('pt-pt');
+  });
+})

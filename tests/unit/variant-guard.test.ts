@@ -128,3 +128,32 @@ describe('fill_blank: el gate ensambla la frase antes de escanear', () => {
     expect(textoPortugues(ex)).not.toContain('___');
   });
 });
+
+// E2#10: el gate marcaba «você» cuando el ítem lo CITA como palabra —una
+// ficha de fonética que ilustra la vocal cerrada con «você /voˈse/», o una
+// que enseña el inventario de tratamiento «tu / você / o senhor»—. Un gate
+// que grita sobre lo que el curso existe para enseñar acaba desactivado.
+describe('mención frente a uso', () => {
+  const voce = (ex: any) => revisarEjercicio(ex).find((h) => h.marcador === 'você singular como 2ª persona');
+
+  it('marca como MENCIÓN el «você» entrecomillado como palabra citada', () => {
+    const ex = { id: 'b', type: 'flashcard', data: { back: 'Vogal fechada: «você», pêssego, avô.' } } as any;
+    expect(voce(ex)?.mencion).toBe(true);
+  });
+
+  it('marca como MENCIÓN el «você» que va con su transcripción IPA', () => {
+    const ex = { id: 'b2', type: 'flashcard', data: { back: 'Vogal fechada: você /voˈse/ e pêssego.' } } as any;
+    expect(voce(ex)?.mencion).toBe(true);
+  });
+
+  it('NO es mención cuando se usa de verdad en la frase', () => {
+    const ex = { id: 'c', type: 'flashcard', data: { back: 'Quando você volta ao hotel?' } } as any;
+    expect(voce(ex)?.mencion).toBe(false);
+  });
+
+  it('NO es mención si una aparición está citada pero otra está suelta', () => {
+    // sin la palabra «brasileiro», que dispara otra exención ya existente
+    const ex = { id: 'd', type: 'flashcard', data: { back: 'O pronome «você»: você fala muito depressa.' } } as any;
+    expect(voce(ex)?.mencion).toBe(false);
+  });
+});

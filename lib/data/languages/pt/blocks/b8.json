@@ -24,6 +24,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: DUDA — El ítem funciona: la answer «por isso» figura entre las options, el audio contiene los dos conectores y «passar no exame» es normal en PT-PT. Errata en el enunciado español que lee el alumno: «el conector consecutivos». (informe-cola8-manual)",
     "type": "listening",
     "data": {
       "audioText": "Ele não estudou, por isso não conseguiu passar no exame, porém não desistiu.",
@@ -77,23 +78,24 @@
     "tags": [
       "vocabulario"
     ],
-    "contentHash": "0106ee6b26c3b4ba5c791241bf59a4812a260318d28d433292bbceaa3876e5b6",
+    "contentHash": "8b57e2b0000d0b3c195f0c28bbcced06050672d0fef3e473d88faf3d210d978c",
     "esContrast": "Similar al ES, pero en PT también se usa mucho 'levar' en sentido figurado: 'levar a sério'.",
     "audio": {
       "br": {
-        "hash": "771b2661a140699a559bec1a20bbbd3bc3150ef5037cae439d39dcbc46bba5d9",
+        "hash": "912ad20922bd9eb8b84c2a5611cf386c73a83d4a803b24c1f58c5acdb74e36ba",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "e8bc08ceccd8a134b9a9241350a3b77ce34d85375b0863219ceb1da165a7b51b",
+        "hash": "02a4d6a1ab748c067751da0d84cb1ca40e24e33218957613aab9a17f75f93740",
         "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 — audio regenerado (informe-cola8-manual)",
     "type": "flashcard",
     "data": {
-      "front": "levar (no sentido de 'tirar', 'arrastar')",
-      "back": "levar — tirar, arrastar, fazer seguir",
+      "front": "llevarse, arrastrar (algo o a alguien)",
+      "back": "levar",
       "example": "A corrente levou o barco para longe."
     }
   },
@@ -108,8 +110,8 @@
     "tags": [
       "subordinada-adjetiva"
     ],
-    "contentHash": "03013ffe00c166c80e76ec373250fba41abcedcef2fb8e793659ca2cc20eabe4",
-    "esContrast": "Igual que en ES: 'La película que vi es ótima' = 'O filme que eu assisti é ótimo'.",
+    "contentHash": "29fad4b0088653ab897190b8b894519bbc252b5af5fdad3558f2821fdab2bb03",
+    "esContrast": "En portugués europeo 'assistir' (= ver algo) rige la preposición 'a': 'o filme A QUE assisti'. El español 'ver' no lleva preposición: 'la película que vi'.",
     "audio": {
       "br": {
         "hash": "d9b5ff24afb5a04de29a877a203341cc85ffb21ccf6f9513a35e77509c488819",
@@ -121,11 +123,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Qué es una oração subordinada adjetiva?",
       "back": "É uma oração que funciona como adjetivo — modifica um substantivo. Vem introduzida por pronome relativo (que, o qual, quem, onde).",
-      "example": "O filme que eu assisti é ótimo."
+      "example": "O filme a que assisti é ótimo."
     }
   },
   {
@@ -137,7 +140,7 @@
       "b8-discurso-indireto"
     ],
     "tags": [],
-    "contentHash": "9f7ba1c375b549be59de13abe097785b7ad30e9a9170fbeee7d51af18f9f54dd",
+    "contentHash": "16a0e7553b708ced1387f1c7ccff8ceb26300d449387e45d6e3c8919e6da4a70",
     "esContrast": "En portugués europeo es más común usar 'onde eu vivia' (imperfeito), mientras que en brasileiro se puede mantener 'moro' según el contexto.",
     "audio": {
       "br": {
@@ -155,7 +158,7 @@
       "source": "Juan preguntó dónde yo vivía.",
       "target": "João perguntou onde eu morava.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "João perguntou onde eu vivia."
       ]
@@ -173,7 +176,7 @@
       "temporal",
       "coloquial"
     ],
-    "contentHash": "efaa0f18dd92307a8f0bf3b44693bbfc1a0c565818f9035ff383e6bd4dfffdbe",
+    "contentHash": "4cd0b960cae98659e14f5e33a20f48424ed5d956f956c3fe9cdb36924ba67d62",
     "esContrast": "«Imaginar» se escribe igual en ambos idiomas; la subordinada temporal con «quando» no lleva preposición.",
     "audio": {
       "br": {
@@ -191,7 +194,7 @@
       "source": "Imagina cómo será la fiesta cuando llegue el verano.",
       "target": "Imagina como será a festa quando chegar o verão.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Imagina como vai ser a festa quando o verão chegar."
       ]
@@ -218,8 +221,8 @@
       "próclise",
       "falso-amigo"
     ],
-    "contentHash": "441172231621688668b402861bf1b1e2b72c664219f5354aef436dfd421bf136",
-    "esContrast": "'Achar' no significa 'achar' (encontrar), sino 'creer/pensar'. En español: 'creo que lo lograrás'.",
+    "contentHash": "4a0e5b7e1ef322cdb62ae1a63fd9728bb6a6ed4f1d2217bfcd2ec09eb3236026",
+    "esContrast": "'Achar' significa las dos cosas: 'encontrar/hallar' (Priberam, acep. 1) y 'creer/pensar'. Aquí es 'creer'. Fíjate además en la colocación: tras 'que' el pronombre va DELANTE ('que o conseguirás').",
     "audio": {
       "br": {
         "hash": "8550fc9cdefea6267ff04039f9f46ae5ed35d340bf02f6492df123235841225e",
@@ -231,12 +234,13 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
     "type": "translation",
     "data": {
       "source": "Creo que lo conseguirás.",
       "target": "Acho que o conseguirás.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Acho que consegues.",
         "Acho que irás conseguir."
@@ -254,22 +258,23 @@
     "tags": [
       "vocabulario"
     ],
-    "contentHash": "10b05f5af17054361a636a865c25f548e3e352e3c60e2e0d4d36a879ab6e9e4b",
+    "contentHash": "78bc0359f6563a2c3616b946dc8cc653e24a7b106067bdd2d25d739235f29ee9",
     "audio": {
       "br": {
-        "hash": "7229d67c526da2690c1bf8f082e4e4fecabdbb2770b8d89751cc2e7e58804aa1",
+        "hash": "c2ebc95512527f8a611f47efac4cc39b53c9d6889f3712d980297007e3bad9aa",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "7ca8a794b66bdc78d06819f9901aec2a55ebf9e726139dd609a2cbacf5e4654d",
+        "hash": "69d98cea8e79ffbb91aee3d5cc360c3464de132e0beacc030af6e8ab9d54d3e1",
         "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 — audio regenerado (informe-cola8-manual)",
     "type": "flashcard",
     "data": {
-      "front": "conseguir",
-      "back": "conseguir (lograr, conseguir)",
+      "front": "lograr / ser capaz de (hacer algo)",
+      "back": "conseguir",
       "example": "Ele conseguiu terminar o trabalho a tempo."
     }
   },
@@ -284,7 +289,7 @@
     "tags": [
       "mesóclise"
     ],
-    "contentHash": "50ec35c88ebfc3660358945eb94141e483b0df36a0049d90a7abbbcd0e78f596",
+    "contentHash": "75f81a08072dced0320018202fb265fde04321c80c4add901e541d09245be702",
     "esContrast": "El condicional con pronombre (aproveitá-la-ia) usa mesóclise en portugués, inexistente en español.",
     "audio": {
       "br": {
@@ -302,7 +307,7 @@
       "source": "Si le dieran esa oportunidad, la aprovecharía.",
       "target": "Se lhe dessem essa oportunidade, aproveitá-la-ia.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Se lhe dessem essa oportunidade, ele aproveitá-la-ia."
       ]
@@ -406,7 +411,7 @@
       "próclise",
       "irregular"
     ],
-    "contentHash": "67d152be70f5bbf8a6fe01b3c790b9a746bfa37c347ab26a65073cb516f11806",
+    "contentHash": "1242e901b1e7a40874555a31ad25ab185689f3f74d19772363762e0c280b717b",
     "esContrast": "Las formas impersonales con 'se' exigen próclise en el verbo siguiente en portugués.",
     "audio": {
       "br": {
@@ -424,7 +429,7 @@
       "source": "Hay que alimentarse bien todos los días.",
       "target": "Precisa-se de alimentar-se bem todos os dias.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Tem de-se de alimentar bem todos os dias.",
         "Deve-se alimentar-se bem todos os dias."
@@ -442,8 +447,8 @@
     "tags": [
       "subordinada-substantiva"
     ],
-    "contentHash": "1352e0afa2e33447b85edeac4cfbd8a7d35a28e3bd1da5853d364d0f266f6bc8",
-    "esContrast": "Similar al ES: 'Yo sé que él llegó' = 'Eu sei que ele chegou'. Pero en PT-BR se usa más el subjuntivo en la subordinada.",
+    "contentHash": "a6217e52ee05fe8cf8ce8613a3e941301a5f69f90da5698369c9593a1d7178e4",
+    "esContrast": "Igual que en español: 'Yo sé que él llegó' = 'Eu sei que ele chegou'. El modo lo decide el verbo principal: 'sei que chegou' (indicativo) frente a 'é possível que chova' (conjuntivo).",
     "audio": {
       "br": {
         "hash": "8fc597c44ab5ccf66bf7a7c3b3bddb83cff4af4fec2128c2c8d9f7d150348248",
@@ -455,6 +460,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
     "type": "flashcard",
     "data": {
       "front": "Subordinada substantiva introduzida por 'que'",
@@ -473,8 +479,8 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "15492270ad76bee65582d8a7d3f2f611b012046f65c29ac7c217f7bcfd7995fb",
-    "esContrast": "No confundas com 'achar' = pensar. 'Achar graça' = encontrar divertido.",
+    "contentHash": "6271512ae1483c33ce8c59fe249266c0a86ac5ee9d6d04769d26400308fafeb5",
+    "esContrast": "No lo confundas con 'achar' = creer. 'Achar graça A algo' = encontrarlo gracioso; el régimen con 'de' es brasileño.",
     "audio": {
       "br": {
         "hash": "b40bb6c290e1e9f0dff3d631f649dea763a5b87be2266d2d31a725ce301a83c1",
@@ -486,11 +492,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Qué significa 'achar graça' en portugués?",
       "back": "achar graça (encontrar gracioso/divertido)",
-      "example": "Eu achei muita graça da história dele."
+      "example": "Achei muita graça à história dele."
     }
   },
   {
@@ -543,7 +550,7 @@
       "causal",
       "coloquial"
     ],
-    "contentHash": "d7053ed1221a2ad6d0e7397db4587a1ea41aa1991fda37ad1b713f65b1aec510",
+    "contentHash": "616a37d7071700d54ec49191f59f948e1f82a29141b5e3c80ab3abb50b62b166",
     "esContrast": "«Ya que» tiene varios equivalentes: «já que», «uma vez que», «visto que».",
     "audio": {
       "br": {
@@ -556,12 +563,13 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: OK ítem a ítem (informe-cola8-manual)",
     "type": "translation",
     "data": {
       "source": "Ya que no existe otra opción, tendremos que aceptar sus condiciones.",
       "target": "Já que não existe outra opção, teremos de aceitar as suas condições.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Uma vez que não existe outra opção, teremos de aceitar as suas condições.",
         "Visto que não existe outra opção, teremos de aceitar as suas condições."
@@ -583,6 +591,7 @@
     "contentHash": "1aaa291088b075ac3a46291a4b6640a483185a8192929e54eab240010b08924e",
     "esContrast": "En español 'gustar' no lleva preposición; en portugués 'gostar' siempre rige DE.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: DUDA — Correcto: «Eu gosto de aprender novas expressões». El reparo es de curación: ítem de régimen preposicional etiquetado con b8-oracoes-subordinadas, concepto que no ejercita. (informe-cola8-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
@@ -691,7 +700,7 @@
       "consecutivo",
       "conector"
     ],
-    "contentHash": "ef2684a2c0d510e235e08313af7e5633fb0ee83cad57638b18efcf3401f9c9c0",
+    "contentHash": "e4fd36a0951ff798379bf26b2da5e60c919757ab1caad9249e058bce3bc1567d",
     "esContrast": "'por isso' = 'por eso', conector consecutivo muy frecuente.",
     "audio": {
       "br": {
@@ -704,11 +713,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: OK ítem a ítem (informe-cola8-manual)",
     "type": "translation",
     "data": {
       "source": "Estava muito nervoso, por isso não consegui dormir.",
       "target": "Estaba muy nervioso, por eso no pude dormir.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Estaba muy nervioso, así que no pude dormir.",
@@ -760,7 +770,7 @@
       "concesivo",
       "coloquial"
     ],
-    "contentHash": "cba8a1e487d9f2b348b84badbb076986079d96c463b0cc8a6ab3ca88c145d0ca",
+    "contentHash": "9be83d1e6503b88d606cae3dafff03feee2291355ff1b334bfa0322a104e7047",
     "esContrast": "«Apesar de» + infinitivo o «apesar de que» + subjuntivo; en PT se mantiene el subjuntivo.",
     "audio": {
       "br": {
@@ -778,7 +788,7 @@
       "source": "A pesar de que tú no lo creas, ella consigue hablar cuatro idiomas.",
       "target": "Apesar de que tu não acredites, ela consegue falar quatro idiomas.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Apesar de tu não acreditares, ela consegue falar quatro idiomas."
       ]
@@ -823,7 +833,7 @@
       "concesivo",
       "subordinada-adverbial"
     ],
-    "contentHash": "0d3fc1766472520920209cce41fc389db882786871a457b9a628b1ec65433bf4",
+    "contentHash": "3620a83937e9aa478b9b8a2bb998dc267ed985c6efd1cf704f81ccdbc7f5f200",
     "esContrast": "'achar graça' = 'hacer gracia', conjugado como 'aché' en pt-BR.",
     "audio": {
       "br": {
@@ -840,7 +850,7 @@
     "data": {
       "source": "Apesar de eu achar graça, não ri.",
       "target": "A pesar de que me dio risa, no reí.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "A pesar de que me hizo gracia, no reí."
@@ -859,7 +869,7 @@
       "cujo",
       "subordinada-adjetiva"
     ],
-    "contentHash": "2c16d9930930423e14b0e954b217928eed069a0cb8c7ebe4a16c1ca4ad727551",
+    "contentHash": "79f76214a5ce7265c88713e46690c7273ab906e812df915b791189d5bb738acf",
     "esContrast": "Cuyo/cuja concuerda en género y número con lo poseído, no con el poseedor.",
     "audio": {
       "br": {
@@ -877,7 +887,7 @@
       "source": "El director cuyo guión ganaba premios era un estreante.",
       "target": "O realizador cujo guião recebia prémios era um estreante.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "O realizador cujo guião recebia prémios era um estreante."
       ]
@@ -959,7 +969,7 @@
     "tags": [
       "ênclise"
     ],
-    "contentHash": "c67396b20df0a983a57a6c1fbcac220ca977ceb068522f158fe6c789e4041e41",
+    "contentHash": "1c01bde1c01a13cbf8286e87a6fd37c0041bf4dbd4787490941f736f2d04ed26",
     "esContrast": "Tras verbo en infinitivo precedido de 'a', se usa ênclise (metê-lo), mientras en español sería enclisis o no.",
     "audio": {
       "br": {
@@ -977,7 +987,7 @@
       "source": "Vamos a meterlo en problemas.",
       "target": "Vamos metê-lo em problemas.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Vamos metê-lo em sarilhos.",
         "Vamos metê-lo em apuros."
@@ -1084,7 +1094,7 @@
       "deixis",
       "avançado"
     ],
-    "contentHash": "69102c4dfe8d10b42650656479e296b40230a558cbe7e5fe331e44283ececab0",
+    "contentHash": "2271fba39de8055d7544172fb896af60baecf7f65abe14b6c4dbb3de121500a0",
     "esContrast": "El demostrativo 'aquele' y 'lá' señalan lejanía en el discurso referido, equivalente a 'aquel' y 'allí'.",
     "audio": {
       "br": {
@@ -1101,7 +1111,7 @@
     "data": {
       "source": "Ana imaginou que ele traria aquele documento de lá.",
       "target": "Ana imaginó que él traería aquel documento de allí.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Ana se imaginó que él traería ese documento de allá."
@@ -1117,7 +1127,7 @@
       "b8-sub-adjetivas-que"
     ],
     "tags": [],
-    "contentHash": "9d35d2522a70c63c9ff75da3216d77221f0b18d778cda8c38e0ddf8b554d6995",
+    "contentHash": "6a67491acc25a4e2b130f6e0b29ed5db21e5323735e8916c0f8161a7e5e78719",
     "audio": {
       "br": {
         "hash": "d1eca30c61e37f5c6018d4c151dbcdbdec6bce14aed6a2d1bceccb903374c43c",
@@ -1129,11 +1139,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: DUDA — Gramaticalmente impecable y bien europeo («Parámos» con acento y «estava a proteger»), lo que deja en evidencia que la etiqueta sourceLang «pt-br» es falsa. El reparo real es semántico: un coche que «protege una casa» so (informe-cola8-manual)",
     "type": "translation",
     "data": {
       "source": "Parámos o carro que estava a proteger a casa.",
       "target": "Paramos el coche que estaba protegiendo la casa.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es"
     }
   },
@@ -1149,11 +1160,12 @@
       "irregular"
     ],
     "contentHash": "294ade1eee06bb7079c560fc0ecf97aece4dda50ae0ad6079bf9d904c2854835",
-    "esContrast": "Verbo irregular: \"imaginar\" → \"imaginasse\" (subjuntivo imperfecto), como \"falar\" → \"falasse\".",
+    "esContrast": "'Imaginar' es regular: el imperfecto de conjuntivo se forma sobre la 3.ª pl. del perfecto (imaginaram → imaginasse), igual que 'falar' → 'falasse'. En estilo indirecto, el imperativo del original pasa a conjuntivo.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Imagina que ele ___ que não existe nada para imaginar. (imagina → pergunta indireta)",
+      "sentence": "Ele pediu que eu ___ (imaginar) outro final. («Imagina outro final», disse ele)",
       "blanks": [
         {
           "position": 0,
@@ -1175,7 +1187,7 @@
       "regional",
       "coloquial"
     ],
-    "contentHash": "4090980af8227e77ef7cd59d1bdd755be335e7e9101d675224359d77adb35ba8",
+    "contentHash": "85560ba8f9c1b6fcd6bfe8f29ff6e6900ee1147531f97e0606d4d1e851c1cfdb",
     "esContrast": "'O que' como relativo compuesto = 'lo que'; 'quem vai levar' = 'quién se llevará'.",
     "audio": {
       "br": {
@@ -1192,7 +1204,7 @@
     "data": {
       "source": "Ninguém sabe quem vai levar o prémio para o país, o que deixa toda a equipa frustrada.",
       "target": "Nadie sabe quién se llevará el premio para el país, lo que deja a todo el equipo frustrado.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es"
     }
   },
@@ -1211,6 +1223,7 @@
     "contentHash": "29e9fe7f1af40da7ebe312bbfdd95313eabe4e15e6fb883bba5147df03b02cf6",
     "esContrast": "Ojo: 'que' también existe en español, pero aquí introduce una subordinada substantiva, no una coordinación.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: OK ítem a ítem (informe-cola8-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu sei ___ ele vai chegar amanhã.",
@@ -1273,7 +1286,7 @@
       "coloquial",
       "falso-amigo"
     ],
-    "contentHash": "e697dd50431e724b70745bd300fc32dc940318a8fa2031e98158957cd085a550",
+    "contentHash": "25cb28ba1ab3278b9a461099ec96bbaff1b0a0648eb35f5cd56f8bebffedbc88",
     "esContrast": "En PT-BR se usa 'se derem' con sujeito indefinido; en PT-PT es más común 'se lhes derem'. La traducción al español requiere reconstruir la subordinada condicional.",
     "audio": {
       "br": {
@@ -1291,7 +1304,7 @@
       "source": "Si se derem bem, vão conseguir.",
       "target": "Si se dan bien, van a conseguir.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Si se lhes derem bem, vão conseguir."
       ]
@@ -1310,7 +1323,7 @@
       "concesivo",
       "coloquial"
     ],
-    "contentHash": "a6eb4bfa67a04995ad4260190c4203562a9edab35a2b5c87c4f3f8f45509319d",
+    "contentHash": "516195419b2f49766d45563eb8621f30fbfb5374561160865c8067c342d9a8a7",
     "esContrast": "Cuidado: «aunque» se traduce por «embora» o «mesmo que», no por «embora que».",
     "audio": {
       "br": {
@@ -1328,7 +1341,7 @@
       "source": "Aunque tú no lo creas, ella consegue hablar cuatro idiomas.",
       "target": "Embora tu não acredites, ela consegue falar quatro idiomas.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Mesmo que tu não acredites, ela consegue falar quatro idiomas."
       ]
@@ -1346,6 +1359,7 @@
     "contentHash": "2fb35adafab995effe5892d03e9fd109cc70edc1b58fbba77dad9f2d305392aa",
     "esContrast": "Pretérito perfecto → Pluscuamperfecto: \"ya leí\" → \"había leído\".",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela contou que já ___ o livro. (eu já li → ela disse)",
@@ -1353,9 +1367,7 @@
         {
           "position": 0,
           "answer": "tinha lido",
-          "alternatives": [
-            "já tinha lido"
-          ]
+          "alternatives": []
         }
       ]
     }
@@ -1372,7 +1384,7 @@
       "subordinada-substantiva",
       "quem"
     ],
-    "contentHash": "d8f4e87a3eab30670827987f3619d9685e83e73942ed465f0c912d542d6c929d",
+    "contentHash": "03a5d6f00b39ff3646bf5697242547043dcffaa9206f2cb984b1dbd16ae6fea8",
     "audio": {
       "br": {
         "hash": "6f2b8b803b04d5d0b73ff6d653096dc7d5d35755d3f0d298b7d6c211c8877fa8",
@@ -1389,7 +1401,7 @@
       "source": "No recuerdo quién me recomendó ese realizador.",
       "target": "Não me lembro de quem me recomendou esse realizador.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Não me lembro de quem é que me recomendou esse realizador."
       ]
@@ -1408,7 +1420,7 @@
       "temporal",
       "formal"
     ],
-    "contentHash": "01618b812682fae59827a716edbc9280c4eac6ab8be51f8147a7eefdc608f946",
+    "contentHash": "db7920b23c1bf86c76709396518a6edbc576bb1e9fc75b6af05ea06784bda053",
     "esContrast": "«Hablar» se traduce por «falar» en PT; «consiguir» se conjuga igual pero sin «i»: consigo, consegues.",
     "audio": {
       "br": {
@@ -1426,7 +1438,7 @@
       "source": "Cuando consiga hablar contigo, te lo explicaré todo.",
       "target": "Quando conseguir falar contigo, explicar-te-ei tudo.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Quando eu conseguir falar contigo, explicar-te-ei tudo."
       ]
@@ -1551,6 +1563,7 @@
     "contentHash": "33cf21fed936fa8928a97820fc52980d4eb9eb6c2bdb890ba5a309ffc734a152",
     "esContrast": "En español 'necesitar' no lleva preposición; en portugués 'precisar' rige DE.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: DUDA — Correcto: «precisamos de ajuda» es el régimen europeo, y «guião» es la palabra de Portugal. Reparo de curación: régimen preposicional etiquetado como b8-oracoes-subordinadas. (informe-cola8-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
@@ -1576,7 +1589,7 @@
       "formal",
       "falso-amigo"
     ],
-    "contentHash": "46c4cf23cdf6425e582effb6a9cbd1783ea3c2e995d5051ee3dc0ab4f530b383",
+    "contentHash": "73cab335f3ef5ab4f56dc210e4e20a7eecfe9d7ab27340b30d5817aa70af2286",
     "esContrast": "Referencia temporal cambiada: 'ayer'→'no dia anterior' o 'na véspera'. El presente 'existe'→'existia'. El pronombre se mueve: 'me dijeron'→'disseram-me'.",
     "audio": {
       "br": {
@@ -1594,7 +1607,7 @@
       "source": "Ayer me dijeron que existe una solución.",
       "target": "No dia anterior, disseram-me que existia uma solução.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Na véspera, disseram-me que existia uma solução.",
         "No dia anterior, me disseram que existia uma solução."
@@ -1640,7 +1653,7 @@
       "b8-sub-adjetivas-que"
     ],
     "tags": [],
-    "contentHash": "0428772ac9690b10a6d3e5c14380121921ade826ffbd4ab5be2cfcd76d528fa2",
+    "contentHash": "86e481e3ec1719d38e00719a961228524c1abd4aedd91ba84074a5250e113b94",
     "esContrast": "'Onde' = 'donde' para indicar lugar; 'nos deixou frustrados' concuerda en plural.",
     "audio": {
       "br": {
@@ -1657,7 +1670,7 @@
     "data": {
       "source": "A produtora onde trabalhámos desenvolveu o filme que nos deixou frustrados.",
       "target": "La productora donde trabajamos desarrolló la película que nos dejó frustrados.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es"
     }
   },
@@ -1733,23 +1746,24 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "38fd83bb6d648649006ea5761b65652f1bb579cf20bce9dc9846fe3e9ca4f271",
-    "esContrast": "'Existe' es casi idéntico al español, pero sin tilde en PT-BR. También existe → há (alternativa informal).",
+    "contentHash": "1a2302d40469c21a0b6c1e867f535207eb04499e733fd5b43245919158fba16b",
+    "esContrast": "'Existe' se escribe igual que en español. En portugués europeo el existencial corriente es 'há' ('há um problema'); 'existe' suena más formal o escrito.",
     "audio": {
       "br": {
-        "hash": "b949d7b8cb32ad91f76c73b21832dbd326119c7002b79ab40bca83d945681e58",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "e7d5f81f11d2ce6a138409792b376cd88de3752986899a7fdf281a911cc14efd",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "6fa00c4d4b556975fa24f73560112d3b84aa6488947264022eed30c4f349cfde",
-        "voice": "Portuguese_Wiselady"
+        "hash": "e7d5f81f11d2ce6a138409792b376cd88de3752986899a7fdf281a911cc14efd",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 — audio regenerado (informe-cola8-manual)",
     "type": "flashcard",
     "data": {
-      "front": "¿Qué significa 'existe' en portugués?",
-      "back": "existe (existe, hay)",
+      "front": "hay / existe (registro formal)",
+      "back": "existe",
       "example": "Existe um problema com o sistema."
     }
   },
@@ -1764,24 +1778,25 @@
     "tags": [
       "vocabulario"
     ],
-    "contentHash": "406abf88bc30738acdbf1053764551b630ef760d14db22c24204f9c398e0f711",
+    "contentHash": "e9af50372aa7b226c510ed0191c6bad25c4e5897b7348bed1f0be47c64e2d3f0",
     "esContrast": "'Realizador' en PT tiene el mismo sentido, pero en ES 'realizador' es menos común; se dice 'director'.",
     "audio": {
       "br": {
-        "hash": "74f92a93e361be4a7c8770b714b144787c0d2bd96c561af5613732e2a95f5dd5",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "e0e26b0a0cace2510883b9843e5df048765b134cb3e7109d4aac4f6b40f7b30b",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "ffeb74314951660ecba09ff24e1ed82ff8e776a4979a36694a868430a93b0004",
-        "voice": "Portuguese_Wiselady"
+        "hash": "e0e26b0a0cace2510883b9843e5df048765b134cb3e7109d4aac4f6b40f7b30b",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 — audio regenerado (informe-cola8-manual)",
     "type": "flashcard",
     "data": {
-      "front": "realizador (cine)",
-      "back": "realizador(a) — diretor(a) de cinema/teatro",
-      "example": "O realizador estreou seu primeiro longa-metragem."
+      "front": "director / directora (de cine o teatro)",
+      "back": "o realizador, a realizadora",
+      "example": "O realizador estreou o seu primeiro filme."
     }
   },
   {
@@ -1864,7 +1879,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "4307bc503fb51b299d3b376073bfacba6f9c271f9ea9888fc97a93d2cf1ddef3",
+    "contentHash": "9e079d6b8ae55d5cf05bc50eb3742f337a94f0caa90e8bdfc4d66dc2c32d72d2",
     "audio": {
       "br": {
         "hash": "02c35f77f0f2f61b2ff34ef4beb5c9b5fcfb822f462b98d9442dd71234a55f22",
@@ -1876,11 +1891,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
     "type": "translation",
     "data": {
       "source": "O realizador cujo último filme fracassou foi contratado.",
-      "target": "El realizador cuyo última película fracasó fue contratado.",
-      "sourceLang": "pt-br",
+      "target": "El realizador cuya última película fracasó fue contratado.",
+      "sourceLang": "pt-pt",
       "targetLang": "es"
     }
   },
@@ -1927,7 +1943,7 @@
     "tags": [
       "formal"
     ],
-    "contentHash": "30f1b444a38bf229ffeee1323c053593051250d77791aec50b110307c41e676f",
+    "contentHash": "9b5250caab32fc87301cec6041a551fc367b7fa06bdc7bf96bc9e446818833e3",
     "esContrast": "El pronombre relativo 'que' funciona igual en ambos idiomas para subordinadas adjetivas.",
     "audio": {
       "br": {
@@ -1940,11 +1956,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: OK ítem a ítem (informe-cola8-manual)",
     "type": "translation",
     "data": {
       "source": "O realizador estreante apresentou o guião que escreveu durante dois anos.",
       "target": "El realizador debutante presentó el guión que escribió durante dos años.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es"
     }
   },
@@ -2056,7 +2073,7 @@
       "próclise",
       "formal"
     ],
-    "contentHash": "9751935e325cbe1e1c89188d8eb4ebca34610d95037ca37397b78788517f6b03",
+    "contentHash": "5344e52b57a860ad330b52c26aa1c75a75067a8ceaebe72f31acdc4b9cbf90d3",
     "esContrast": "El condicional con mesóclise en portugués equivale a 'se conocerían'; en español no existe forma equivalente con pronombre.",
     "audio": {
       "br": {
@@ -2073,7 +2090,7 @@
     "data": {
       "source": "Conhecer-se-iam os factos se fizessem o relatório.",
       "target": "Se conocerían los hechos si hicieran el informe.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Se habrían conocido los hechos si hubieran hecho el informe."
@@ -2209,7 +2226,7 @@
     "tags": [
       "próclise"
     ],
-    "contentHash": "e49141ea5692d30d9beedb1d21c5a60d503772226ba5c7f87a47007e85261b8a",
+    "contentHash": "d3d6ffd6cefe65353e1515c518edfebd9f3798ef823963ef783369c6ce2373d4",
     "esContrast": "Tras conjunción temporal se usa próclise en portugués (te acordares), diferente al español que usa enclisis o tuteo.",
     "audio": {
       "br": {
@@ -2227,7 +2244,7 @@
       "source": "Cuando te despiertes, avísame.",
       "target": "Quando te acordares, avisa-me.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Quando acordares, avisa-me.",
         "Quando te acordares, avisa-me."
@@ -2243,23 +2260,24 @@
       "b8-conectores"
     ],
     "tags": [],
-    "contentHash": "5c51b1008a258fb37a0c3ba25ad5d3434602c108d9e651850128287041efec89",
-    "esContrast": "Igual que 'aunque' en español. Introduce una concessión real o hipotética.",
+    "contentHash": "aae91cacad621c56bf54e4d35d8c918967aae9ba851d86557e292e2aef8d9ec3",
+    "esContrast": "Ojo, no es igual que 'aunque': el español admite indicativo ('aunque estaba enfermo'), pero 'embora' exige SIEMPRE conjuntivo ('embora estivesse doente'). Para el hecho real el portugués prefiere 'apesar de' + infinitivo.",
     "audio": {
       "br": {
-        "hash": "bd1b17f32be100b51502879c348a2bd342cef04df42785240e6db707f21ed203",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "c8e6cc0f8823d71075f16ea977b810af1de65148a16d0b5b7b8b47218b693a67",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "09a8e4f7c3d0552fbbb976b769fe9e0871d703b5562361be83d25e2428c26be3",
-        "voice": "Portuguese_Wiselady"
+        "hash": "c8e6cc0f8823d71075f16ea977b810af1de65148a16d0b5b7b8b47218b693a67",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 — audio regenerado (informe-cola8-manual)",
     "type": "flashcard",
     "data": {
-      "front": "Conector concessivo: 'embora' (aunque, si bien)",
-      "back": "embora (aunque, si bien, a pesar de que)",
+      "front": "aunque / si bien (conector concesivo)",
+      "back": "embora + conjuntivo",
       "example": "Embora estivesse doente, foi ao trabalho."
     }
   },
@@ -2275,7 +2293,7 @@
       "deixis",
       "temporal"
     ],
-    "contentHash": "415485536758948ec3a136620b11b53dd96c1f3882659473aab2c0dab3dee750",
+    "contentHash": "1cb9dacdf610a81208dab4e8183e3486d2bd021981d3a3c158e1191aa01d644d",
     "audio": {
       "br": {
         "hash": "b3984bb823f353d3f08a7d1e34d3a68241e881c6671a22068f80fe5969821235",
@@ -2287,11 +2305,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: OK ítem a ítem (informe-cola8-manual)",
     "type": "translation",
     "data": {
       "source": "Ele disse que viria no dia seguinte.",
       "target": "Él dijo que vendría al día siguiente.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Él dijo que vendría el día siguiente."
@@ -2341,7 +2360,7 @@
       "próclise",
       "formal"
     ],
-    "contentHash": "59c2f666b007026f89d64314d9b6d43d6a6e37b96ec276c9deee6f6f43e7733b",
+    "contentHash": "75360836315cfefd8c94b8212ea1b4063a7bf223255a6c4086c87bd97927a88d",
     "esContrast": "'Poder + pron' en portugués exige próclise; en español, la colocación del pronombre con 'poder' es más flexible.",
     "audio": {
       "br": {
@@ -2358,7 +2377,7 @@
     "data": {
       "source": "Alguém me poderia dizer onde fica a saída?",
       "target": "¿Alguien podría decirme dónde está la salida?",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "¿Alguien podría decirme dónde queda la salida?"
@@ -2380,6 +2399,7 @@
     "contentHash": "5fd0932ea7e758fd5ff6efa2a37ad95dc216a2d00b6578c859fc5450c16eca30",
     "esContrast": "Precisar DE = necesitar (en PT se añade 'de', en ES no).",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: DUDA — La respuesta es la europea: «Preciso DE descansar» (el brasileño suprime el «de»), y la answer figura entre las options. El reparo es de interfaz: VerbPrepositionCard solo traduce el glifo «—» a «(sin preposición)»; «∅»  (informe-cola8-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
@@ -2469,7 +2489,7 @@
       "adversativo",
       "formal"
     ],
-    "contentHash": "850290ecc57f0b71a0877155fbb47ae7553a4ee707973cc676060a2baf1d2f5c",
+    "contentHash": "7b29ab11219b61fde29597fbe4a22e9d6ade01ccc8a3d080eab015037bcef9cb",
     "esContrast": "«Sin embargo» se traduce por «contudo», «entretanto» o «porém» (este último más literario).",
     "audio": {
       "br": {
@@ -2482,12 +2502,13 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: DUDA — No es error: Priberam registra «entretanto» como conjunción adversativa, sin marca de Brasil, así que no puedo llamarlo brasileñismo. Pero en portugués europeo la lectura dominante es temporal —en el corpus del repo las  (informe-cola8-manual)",
     "type": "translation",
     "data": {
       "source": "El informe es completo; sin embargo, falta revisar las conclusiones.",
       "target": "O relatório é completo; contudo, falta rever as conclusões.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "O relatório é completo; entretanto, falta rever as conclusões.",
         "O relatório é completo; porém, falta rever as conclusões."
@@ -2505,7 +2526,7 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "9d5016fe1d5f0b6aa8bc56ba951b7336bdd41315eeef3c15e893304a9de9c82c",
+    "contentHash": "abfec78e7c647bfee9fde844e0b7527c11fb984be38efcb45826b52eb5483019",
     "esContrast": "En 'Que o filme...' el 'que' es conjunción, no pronombre (equivale a 'el que' o 'el hecho de que').",
     "audio": {
       "br": {
@@ -2522,7 +2543,7 @@
     "data": {
       "source": "Que o filme me tenha deixado frustrado é inegável.",
       "target": "Que la película me haya dejado frustrado es innegable.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es"
     }
   },
@@ -2537,23 +2558,24 @@
     "tags": [
       "vocabulario"
     ],
-    "contentHash": "630329e413c499382890b58cf71fc7c575a6c899a5e123e68529f77d3d9fc6b7",
+    "contentHash": "d09162c6d8a62d0a2151aa6b2a23bcc14ecf4ba65a5de1203271af877db09a6a",
     "esContrast": "Cognado perfecto: 'proteger' en PT = 'proteger' en ES.",
     "audio": {
       "br": {
-        "hash": "9f1d791b37523c39a3418c2254fe14abb9fbc94e794dd629d70c1acc840dbbbc",
+        "hash": "3ade0ae6b1a8d2a5c3f02c95be27cf77c00d81a68428c752292ac3eca6912c52",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "d8943185bb98cfab9a187cd45625be71e19c594b6f24f126a9c77387048420f7",
+        "hash": "7399b15d98b394ed2ae5f126060a2851b00100de2dc579b187ea2c4779c2f265",
         "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 — audio regenerado (informe-cola8-manual)",
     "type": "flashcard",
     "data": {
-      "front": "proteger",
-      "back": "proteger — defender, preservar de perigo",
+      "front": "proteger, resguardar del peligro",
+      "back": "proteger",
       "example": "O herói tentou proteger a cidade."
     }
   },
@@ -2678,7 +2700,7 @@
       "adversativo",
       "conector"
     ],
-    "contentHash": "5877fb27eda50ea80a321eccbe22892d9a5f79874ade18a8e7b6561e6d0eddb1",
+    "contentHash": "3269166eda0d9a0d28a5ad0490fbba1197cfc48751d4ebb035b46ffdaaf74e1e",
     "esContrast": "'porém' es más formal que 'mas'; similar a 'sin embargo'.",
     "audio": {
       "br": {
@@ -2695,7 +2717,7 @@
     "data": {
       "source": "Quero ir, porém não tenho tempo.",
       "target": "Quiero ir, pero no tengo tiempo.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Quiero ir, sin embargo no tengo tiempo.",
@@ -2772,8 +2794,9 @@
       "próclise"
     ],
     "contentHash": "6bc826a5b684e2f1051c4ecb272b08838b1e980e443fa7019f8de051d2dc4f5e",
-    "esContrast": "'Pensar en' se dice 'pensar EM' en PT, no 'pensar em' que ya es así.",
+    "esContrast": "El español 'pensar en' se corresponde con 'pensar EM'. Ojo con 'pensar DE', que en portugués significa 'opinar sobre': 'O que pensas dele?'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
@@ -2782,7 +2805,7 @@
         "em",
         "de",
         "para",
-        "em / em"
+        "com"
       ],
       "answer": "em"
     }
@@ -2827,23 +2850,24 @@
     "tags": [
       "formal"
     ],
-    "contentHash": "6eb4b5cff948b7a50a3ff0a9a1cab16ce3fd6486668b8d5b3633a9fa46aaa024",
-    "esContrast": "Equivale a 'pero' con tono más formal. No lleva acento en PT-BR.",
+    "contentHash": "58da0d963250e29f360aba6424fae5cd2ad8936b92bab796d875a3405cc07e7b",
+    "esContrast": "Equivale a 'sin embargo', más formal que 'mas'. Lleva acento agudo —'porém'— en las dos variantes.",
     "audio": {
       "br": {
-        "hash": "8ccab8e5400dce2322d0da81af9e358d9e0bbab10bfa58ea7c99dd229c7ff4d9",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "b1399d9ea37ac1827ed9eedd34410177af31c3cccc1dd715233c0ee5fc904270",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "8acc7753a4fac2bae8653824b4435b1edbccb1cd55b4451d9b8a63837e0cc871",
-        "voice": "Portuguese_Wiselady"
+        "hash": "b1399d9ea37ac1827ed9eedd34410177af31c3cccc1dd715233c0ee5fc904270",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 — audio regenerado (informe-cola8-manual)",
     "type": "flashcard",
     "data": {
-      "front": "Conector adversativo: 'porém' (sin embargo, no obstante)",
-      "back": "porém (sin embargo, no obstante, empero)",
+      "front": "sin embargo / no obstante (conector adversativo)",
+      "back": "porém",
       "example": "O filme é longo, porém muito interessante."
     }
   },
@@ -2891,7 +2915,7 @@
       "subordinada-substantiva",
       "oracao-sujeito"
     ],
-    "contentHash": "b1836344fa488bd72009a80c92d90486b2c3fd0375210309cc6388013a632b00",
+    "contentHash": "156b7ddbc297ee5b97a44052bf45c9878088e825238188a6d59638f4b9cfc5fb",
     "audio": {
       "br": {
         "hash": "61a101c3a85f38c97e9fc96d29fd82cd38cfdcf924403880005928563c496441",
@@ -2908,7 +2932,7 @@
       "source": "Me dejó frustrado que el realizador no terminara la película.",
       "target": "Deixou-me frustrado que o realizador não terminasse o filme.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Deixou-me frustrado que o realizador não tenha terminado o filme."
       ]
@@ -2926,7 +2950,7 @@
       "verbo-falhar",
       "estructura"
     ],
-    "contentHash": "bd3a0425f0d1f123444badfcdf13eefa3e9caf5f779c7e5d822ecfe9cd0ecdc3",
+    "contentHash": "5257c20ca2f86eedbbc1a663c2edc01ad074494a91ebb63a0e59414b3491fea1",
     "audio": {
       "br": {
         "hash": "a863bd9fe19baee0353489dc608a378d45b888b3cbd4a32b07ca4a6e64d20ed5",
@@ -2938,11 +2962,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: OK ítem a ítem (informe-cola8-manual)",
     "type": "translation",
     "data": {
       "source": "Pedro disse que não existia nenhum problema.",
       "target": "Pedro dijo que no existía ningún problema.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Pedro dijo que no había ningún problema."
@@ -2961,7 +2986,7 @@
       "tiempos",
       "deixis"
     ],
-    "contentHash": "cc52329d17b1866984b103358ab3df482f645877eb60b049c6424cd9678605e7",
+    "contentHash": "dee3b61759fdcd11d4ffb37f40e3d524755d50e481f87c19028e3cda2a957a28",
     "audio": {
       "br": {
         "hash": "2a616e5ef3a7b6ac9ed6f7964f7f3b87f8ba3c2fa0c5eb27a2fd125ba0c39b54",
@@ -2973,11 +2998,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
     "type": "translation",
     "data": {
       "source": "João contou que no dia anterior tinha parado de fumar.",
-      "target": "João contou que no día anterior había dejado de fumar.",
-      "sourceLang": "pt-br",
+      "target": "João contó que el día anterior había dejado de fumar.",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "João dijo que el día anterior había dejado de fumar."
@@ -3038,23 +3064,24 @@
       "falso-amigo",
       "coloquial"
     ],
-    "contentHash": "73018a82f7588f2df4cba3cdbac41eca9971f11725663b66b2e3fa9cb62bceb2",
-    "esContrast": "¡OJO! ‘Conseguir’ en español = ‘obter, alcançar’ en portugués. ‘Conseguir’ solo = lograr.",
+    "contentHash": "e2ce362a2becea918b6744affc248036537efd4a5902722e488d8869d5698bec",
+    "esContrast": "'Conseguir' no es falso amigo: en los dos idiomas vale 'obtener' y 'lograr'. Lo que cambia es la construcción — en portugués es constante 'conseguir + infinitivo' ('não consigo dormir').",
     "audio": {
       "br": {
-        "hash": "212c994b81c30584418c06ce64ce0d188aa4a6a3e58b1d1d355f41c517256a75",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "6a7d36217d1b2423eb13ab54bbbefbd9d08d65d672d62c89f53c678f524b4913",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "018b96f70294bbb6265f48f0d1ece0acb34eafcc209b7afefdf2b80da42ded08",
-        "voice": "Portuguese_Wiselady"
+        "hash": "6a7d36217d1b2423eb13ab54bbbefbd9d08d65d672d62c89f53c678f524b4913",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 — audio regenerado (informe-cola8-manual)",
     "type": "flashcard",
     "data": {
-      "front": "¿Qué significa ‘conseguir’ en portugués? ¿Cómo se usa con pronombre?",
-      "back": "Significa ‘lograr, poder’. Ejemplo: Não consigo dormir. (No puedo dormir.)",
+      "front": "lograr / poder (hacer algo)",
+      "back": "conseguir — não consigo dormir",
       "example": "Consegui resolver o problema!"
     }
   },
@@ -3098,6 +3125,7 @@
     "contentHash": "77538e3e06eb4b9dba43b136d487c1cc505156168060d461a5cc2a1929e2de8e",
     "esContrast": "En portugués 'tratar de + infinitivo' significa 'ocuparse de'; en español 'tratar de' significa 'intentar'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: DUDA — Régimen y glosa correctos («tratar de + infinitivo»). El enunciado, en cambio, queda colgando: «antes de parar» — ¿de parar qué? Es una coletilla sin referente, otra huella de recombinación mecánica. (informe-cola8-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "tratar",
@@ -3153,7 +3181,7 @@
       "conjunçao-se",
       "subjuntivo"
     ],
-    "contentHash": "8a8f4ac5036d0284a2b1d0bc8a7707b5ee1e77984e7b340d6d47ce32c6f74f2b",
+    "contentHash": "515f74b94b3307dead9a8cb555d49264db771baec24fd1ffbe01cb55ebb183a6",
     "esContrast": "El subjuntivo imperfecto 'se derem' se mantiene en el discurso indirecto al reportar una hipótesis.",
     "audio": {
       "br": {
@@ -3170,7 +3198,7 @@
     "data": {
       "source": "O gerente perguntou o que aconteceria se derem as informações erradas.",
       "target": "El gerente preguntó qué pasaría si dan la información equivocada.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "El gerente preguntó qué pasaría si proporcionan los datos incorrectos."
@@ -3189,7 +3217,7 @@
       "próclise",
       "coloquial"
     ],
-    "contentHash": "e4ad41ba4fc2734f089581b87a56b98a6e2df4fa6674fef47a716622593fbf4b",
+    "contentHash": "7d998f0ca5509e5acf141dbcbb859774096e5e583c219ed47f900a5249042ef9",
     "esContrast": "La próclise tras 'se' en contexto condicional es obligatoria en portugués; en español, el 'se' reflexivo funciona igual pero no se considera próclise por ser diferente la estructura.",
     "audio": {
       "br": {
@@ -3206,7 +3234,7 @@
     "data": {
       "source": "Se se derem bem, a equipa alimenta-se melhor.",
       "target": "Si se llevan bien, el equipo se alimenta mejor.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Si se llevan bien, el equipo se alimenta mejor.",
@@ -3226,8 +3254,8 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "7a379c9b9311c19d5849a443d7ef7b14b9382f139ed25ef48c1490a6eedfc7b3",
-    "esContrast": "'Conseguir' en español significa obtener. En PT se usa también para 'lograr' (conseguir fazer algo).",
+    "contentHash": "dd2a9698774e95a87e28ba584b36a20788b949d2399ea20e9631100cee915223",
+    "esContrast": "'Conseguir' no es falso amigo: en los dos idiomas vale 'obtener' y 'lograr'. Lo que cambia es la construcción: en portugués es muy frecuente 'conseguir + infinitivo' ('consegui resolver').",
     "audio": {
       "br": {
         "hash": "86ccd2cdfa3d4db3c8478e37a485f4b5861eda87f6f348efab0064af90909324",
@@ -3239,6 +3267,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Qué significa 'conseguir' en portugués?",
@@ -3290,6 +3319,7 @@
     "contentHash": "7f1fb792bdcc351aa9e4227f4d6ef7816b3274d796ebf2ec8776406b6cf57a10",
     "esContrast": "En español se dice 'gustar café' sin preposición; en portugués se usa 'gostar DE'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: DUDA — Correcto, pero es la TERCERA copia de la misma frase en esta cola («Eu gosto ___ café pela manhã», igual que f00f5169 en b7 y b9978825 en b8), y usa el glifo «∅», que VerbPrepositionCard pinta crudo en vez de «(sin prepo (informe-cola8-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
@@ -3314,22 +3344,23 @@
     "tags": [
       "vocabulario"
     ],
-    "contentHash": "7f33e7eedef2aa423f36e0752e6eb019da2ae4debcff96d0095803410db6af16",
+    "contentHash": "e4bb810aac9b5b633c0893eccc587a60373c87b4a6c8c00f4b6f3aa125e11c3d",
     "audio": {
       "br": {
-        "hash": "0f0b79e01e672f59fe6559eada182c612cb25e9a8d01509de4c743ce58cb4972",
+        "hash": "912ad20922bd9eb8b84c2a5611cf386c73a83d4a803b24c1f58c5acdb74e36ba",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "814653a1674833d388265a0356aa6e89f4d461ec0d5c9b2b87835c24632902f5",
+        "hash": "02a4d6a1ab748c067751da0d84cb1ca40e24e33218957613aab9a17f75f93740",
         "voice": "Portuguese_Wiselady"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 — audio regenerado (informe-cola8-manual)",
     "type": "flashcard",
     "data": {
-      "front": "levar",
-      "back": "levar (llevar, tardar)",
+      "front": "llevar / tardar (cierto tiempo)",
+      "back": "levar",
       "example": "A reunião vai levar duas horas."
     }
   },
@@ -3346,7 +3377,7 @@
       "consecutivo",
       "conector"
     ],
-    "contentHash": "d7cbed8eff01f97d7a07f2b0daf4ba975352a5cd1ab58625d2e41277eb2361bc",
+    "contentHash": "d7f893427fcc88356cfbfde258e408ed72b6ad4a111a4ff9869d4972415bc068",
     "esContrast": "'logo' = 'por lo tanto', conector consecutivo formal.",
     "audio": {
       "br": {
@@ -3363,7 +3394,7 @@
     "data": {
       "source": "Existe um problema, logo temos que resolvê-lo.",
       "target": "Existe un problema, por lo tanto tenemos que resolverlo.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Hay un problema, entonces tenemos que resolverlo.",
@@ -3517,23 +3548,24 @@
     "tags": [
       "formal"
     ],
-    "contentHash": "84eae9189a00f8d4098876475e927929b3e393885dcf221133ab5f136686665a",
-    "esContrast": "Se coloca después del verbo en PT-BR, al inicio de la oración o detrás del sujeto.",
+    "contentHash": "cfc8fb08ad08789064720205725fd80a2fbe830c15418f4ecb9baccec8fbc81e",
+    "esContrast": "Como conjunción causal, 'pois' encabeza siempre su oración y nunca abre el período: 'Não fui à festa, pois estava cansado'. Intercalado entre comas ('Vamos, pois, começar') ya no es causal, sino conclusivo.",
     "audio": {
       "br": {
-        "hash": "6fa6b7d78625d8b9ea690805e3e7f414d72ca0f138e1ac74283296385b788507",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "d26996ee4b88e9df45cdfc9f73941dd6493851da403eeaad42b28856669e2ffd",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "62b47e35f109b82917ac61a35931503d11830363f9ca3aaf23958601327a597e",
-        "voice": "Portuguese_Wiselady"
+        "hash": "d26996ee4b88e9df45cdfc9f73941dd6493851da403eeaad42b28856669e2ffd",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 — audio regenerado (informe-cola8-manual)",
     "type": "flashcard",
     "data": {
-      "front": "Conector causal: 'pois' (porque, ya que)",
-      "back": "pois (porque, ya que / puesto que)",
+      "front": "porque / ya que (conector causal)",
+      "back": "pois",
       "example": "Não fui à festa, pois estava cansado."
     }
   },
@@ -3616,6 +3648,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: OK ítem a ítem (informe-cola8-manual)",
     "type": "listening",
     "data": {
       "audioText": "A empresa disse que os funcionários conseguiam trabalhar de casa.",
@@ -3675,6 +3708,7 @@
     "contentHash": "8c10745a7a46584018d83125298e836a2afa5a68bdeea9a826b73fa904f76544",
     "esContrast": "En español \"yo bebo\" → \"él decía que bebía\". En portugués el imperfecto funciona igual.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: OK ítem a ítem (informe-cola8-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Ele disse que ___ um café todas as manhãs. (eu bebo → ele disse)",
@@ -3696,7 +3730,7 @@
       "b8-oracoes-subordinadas"
     ],
     "tags": [],
-    "contentHash": "274871322c9e681b16d9290137bca8b93cb91cefb31c75af64b3cca60b3b20fb",
+    "contentHash": "37a298038ec6328c3e02131934930997cd9d76448226d58d2db0d686bf532cee",
     "esContrast": "'A quem' equivale a 'a quien'; 'pararia' es condicional simple (futuro del pasado).",
     "audio": {
       "br": {
@@ -3709,11 +3743,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: DUDA — Frase y traducción correctas, incluida «a quem deram» y el condicional «pararia». El reparo es ortográfico: «actor» es grafía anterior al Acordo de 1990 —hoy «ator»— en un bloque que ya escribe «diretor» y «ótimo». El re (informe-cola8-manual)",
     "type": "translation",
     "data": {
       "source": "O actor a quem deram o guião confirmou que pararia de fumar para o papel.",
       "target": "El actor a quien le dieron el guión confirmó que dejaría de fumar para el papel.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es"
     }
   },
@@ -3729,7 +3764,7 @@
       "subordinada-adjetiva",
       "pronome-relativo"
     ],
-    "contentHash": "c8c2307bb7f98a74f30a04127952030b8a87fec7ce817aecd89da4a9caa603d6",
+    "contentHash": "ebc15b50165776c4c4b5454d95fc85624033fa1531745a12cd1aea318b2d8ba0",
     "audio": {
       "br": {
         "hash": "2725735689402165b655f075f02809c825e83d783b34d05724b7a5630ab23b3c",
@@ -3741,12 +3776,13 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: OK ítem a ítem (informe-cola8-manual)",
     "type": "translation",
     "data": {
       "source": "El guión que leí era muy interesante.",
       "target": "O guião que li era muito interessante.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": []
     }
   },
@@ -3849,7 +3885,7 @@
       "tiempos",
       "estructura-basica"
     ],
-    "contentHash": "aab664fc82e1ba39c96d225cf102213cd0a63b776fb6a30e066f4819909671ea",
+    "contentHash": "68f4242ecaa89462396626eed8f749bfaef8224941b9095d1485f31007a175ff",
     "audio": {
       "br": {
         "hash": "342d7d3f6884848a042b59cce7df85c7e7d9250d0e8281ca72e86460303f2966",
@@ -3861,11 +3897,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: OK ítem a ítem (informe-cola8-manual)",
     "type": "translation",
     "data": {
       "source": "Ele disse que trabalhava todos os dias.",
       "target": "Él dijo que trabajaba todos los días.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Él dijo que trabajaba cada día."
@@ -3883,23 +3920,24 @@
     "tags": [
       "vocabulario"
     ],
-    "contentHash": "50c663a9575ac18cc32d803accda96974b678e64ef0d358357e23e2edff3b39b",
+    "contentHash": "ed4411e55a5c0e32f418553b00eba64a538528cb7098ee9b6fb796810c88094b",
     "esContrast": "En PT se usa 'estreante' para quien debuta; en ES se dice 'debutante'.",
     "audio": {
       "br": {
-        "hash": "a02c9cf3c9a6544ad5fd006c8efbba1d2fabdc02e193d12ca1fd3c84c7015ae3",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "53c5588067d90d36a02378e6f28a620270a771e158512c77b111e5ecd38d4a83",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "982692e2538c81c7ca1473aaa5bc31ebd74486b0e20dc6014c5f582200c37319",
-        "voice": "Portuguese_Wiselady"
+        "hash": "53c5588067d90d36a02378e6f28a620270a771e158512c77b111e5ecd38d4a83",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 — audio regenerado (informe-cola8-manual)",
     "type": "flashcard",
     "data": {
-      "front": "estreante",
-      "back": "pessoa que estreou / que faz sua estreia",
+      "front": "debutante (quien debuta)",
+      "back": "estreante — quem faz a sua estreia",
       "example": "A atriz é estreante neste filme."
     }
   },
@@ -3942,7 +3980,7 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "5c69e31d17485651abd548eec0a79067c2c72c55cb5418657943b189c0ba4b83",
+    "contentHash": "4ff739b9cdc1fbc2b3f71384fa83bee23c178448072594ef91cb50bc7cd0800a",
     "esContrast": "Los demostrativos cambian en discurso indirecto: 'este'→'aquele'. El presente 'es'→'era'.",
     "audio": {
       "br": {
@@ -3960,7 +3998,7 @@
       "source": "Mi madre me dijo que este libro es interesante.",
       "target": "Minha mãe me disse que aquele livro era interessante.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Minha mãe disse-me que aquele livro era interessante."
       ]
@@ -4202,7 +4240,7 @@
       "consecutivo",
       "formal"
     ],
-    "contentHash": "235bde3e835df86f43944c61182b548a387701528a8735e0e639785e4434eddf",
+    "contentHash": "9e66355b0e5727167144934fb50109091ce01ec4730db758e786f7ee9c8af255",
     "esContrast": "«Por eso» = «por isso» en PT; «logo» también funciona como consecutor, aunque es más formal.",
     "audio": {
       "br": {
@@ -4220,7 +4258,7 @@
       "source": "La situación era muy complicada; por eso, tuve que actuar con urgencia.",
       "target": "A situação era muito complicada; por conseguinte, tive de agir com urgência.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "A situação era muito complicada; logo, tive de agir com urgência.",
         "A situação era muito complicada; por conseguinte, tive de agir com urgência."
@@ -4243,8 +4281,8 @@
     "tags": [
       "coloquial"
     ],
-    "contentHash": "9b8559a3ed371a2b470970bb18029fe0456b3d2754f1c2a4c5cd47515c3bd90f",
-    "esContrast": "'Quem' como pronombre relativo significa 'quien/los que' en español; funciona igual en ambos idiomas.",
+    "contentHash": "39384971166c4128ebc3a633f35e429c9faacbf181b4241463a0f9e33d475e56",
+    "esContrast": "'Quem' sin antecedente equivale a 'quien / la persona que' y la oración entera funciona como un nombre: aquí es complemento directo de 'proteger'. Por eso no es adjetiva.",
     "audio": {
       "br": {
         "hash": "ecff6b902cbe0c42babd9279eaaf4edd9630283a8ef875cb759ea8c4c5f64ec5",
@@ -4256,17 +4294,18 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
     "type": "listening",
     "data": {
       "audioText": "Parou de trabalhar para proteger quem ama.",
       "question": "¿Qué tipo de oración subordinada introduce 'quem ama'?",
       "options": [
+        "Subordinada substantiva relativa (sem antecedente)",
         "Subordinada adjetiva restritiva",
-        "Subordinada substantiva completiva nominal",
         "Subordinada adverbial causal",
         "Subordinada adjetiva explicativa"
       ],
-      "answer": "Subordinada adjetiva restritiva"
+      "answer": "Subordinada substantiva relativa (sem antecedente)"
     }
   },
   {
@@ -4368,7 +4407,7 @@
     "tags": [
       "mesóclise"
     ],
-    "contentHash": "6ab46f6a8762fd37a05ec8876aa4a5d778542416a8261c07dc61e407d51353dd",
+    "contentHash": "6844770b524eeba57f77dc9c987dde0d4c7cc02f4b13ebbd73962c0c6e46bad5",
     "esContrast": "La mesóclise es única del portugués; en español solo existe la forma 'se dirá' (próclisis imposible en futuro).",
     "audio": {
       "br": {
@@ -4385,7 +4424,7 @@
     "data": {
       "source": "Dir-se-á que a solução existe.",
       "target": "Se dirá que a solução existe.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Se diría que a solução existe."
@@ -4443,7 +4482,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "46ffdbac940655846eb38991d1c2beed3c0206959936b537b014b914a1dd6fd7",
+    "contentHash": "3a46d458923c1b1870af0e049d18543dd3fb02749292d1b0cd4e7a4714241928",
     "esContrast": "No hay cambio temporal aquí porque es un perfecto en ambos idiomas, pero la concordancia de tiempos con el verbo principal sigue reglas específicas.",
     "audio": {
       "br": {
@@ -4461,7 +4500,7 @@
       "source": "Pregunté si habían conseguido resolver el problema.",
       "target": "Perguntei se tinham conseguido resolver o problema.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Eu perguntei se tinham conseguido resolver o problema."
       ]
@@ -4575,22 +4614,23 @@
     "tags": [
       "vocabulario"
     ],
-    "contentHash": "a860451053d8099fdc497584db2d6c6af041cbfba8f3d89ee204c1af4af7a583",
+    "contentHash": "df9f0b54c3ec8d8cd93c7e3030c1b69d047796c12f69a67a1c0b643235ec19bc",
     "audio": {
       "br": {
-        "hash": "18eddf4fa396a47880f61e0b077afaa2644c48498b44f50e899e8223c9df19cb",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "17668fbf13ac066cd20b44326340ab5b2d0d85235629fa2449e69bf2d0622b25",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "02fdc531f738e15b0ccc4995fd93e07a842240f9e729658f62ad7e52b26a9b60",
-        "voice": "Portuguese_Wiselady"
+        "hash": "17668fbf13ac066cd20b44326340ab5b2d0d85235629fa2449e69bf2d0622b25",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 — audio regenerado (informe-cola8-manual)",
     "type": "flashcard",
     "data": {
-      "front": "imaginar",
-      "back": "imaginar (imaginar)",
+      "front": "imaginar, figurarse",
+      "back": "imaginar",
       "example": "Eu não imagino como seria isso."
     }
   },
@@ -4606,7 +4646,7 @@
       "subordinada-adjetiva",
       "onde"
     ],
-    "contentHash": "53e39dc8f7d46f6ea8bf4839749ad7081ac958b6eb79599022cc453d2148e1c7",
+    "contentHash": "3aa96ecbc9eee7a5274eae70789a66b81731760a9ded8adccbd97f67f6d5901e",
     "esContrast": "Onde en portugués = 'donde' para lugares. No confundas con 'aonde' (movimiento).",
     "audio": {
       "br": {
@@ -4619,12 +4659,13 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: DUDA — La solución principal es correcta y la glosa sobre onde/aonde también. El reparo está en la alternativa aceptada, «A cidade onde eles filmaram o filme», con sujeto expreso innecesario y la repetición «filmaram o filme». (informe-cola8-manual)",
     "type": "translation",
     "data": {
       "source": "La ciudad donde rodaron la película es muy bonita.",
       "target": "A cidade onde rodaram o filme é muito bonita.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "A cidade onde eles filmaram o filme é muito bonita."
       ]
@@ -4704,8 +4745,8 @@
       "subordinada-adjetiva",
       "explicativa"
     ],
-    "contentHash": "bb7f1ba474ea5719595af5b254af6aa3483e509bafff3d6005e3740ebc573684",
-    "esContrast": "Las explicativas (con comas) son aposiciones que no restrictivas: puramente informativas.",
+    "contentHash": "0f6ec2b14fb6ea1b387c597d8754bdd8d70a0ce749aa4084cf94a4a41351d397",
+    "esContrast": "Las explicativas van entre comas y no restringen al antecedente: solo añaden información. Las restrictivas, sin comas, seleccionan de entre varios.",
     "audio": {
       "br": {
         "hash": "636d6195c73636fccd3c3fbad62f081f738b7f8428a230d0a44e10d00eabf805",
@@ -4717,12 +4758,13 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
     "type": "translation",
     "data": {
       "source": "El guión, que ya estaba terminado, fue rechazado.",
       "target": "O guião, que já estava terminado, foi rejeitado.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": []
     }
   },
@@ -4829,7 +4871,7 @@
     "tags": [
       "próclise"
     ],
-    "contentHash": "c8d39bb2ac0a228ad09c3d6e2d3ed1f529ee434daab9e49a3c519606e6897b26",
+    "contentHash": "b7f0c3ef4f6d122896fafcd135de584a1836da9c3830a7af4bc3ef08cb20b219",
     "esContrast": "Tras 'quando', el portugués prefiere próclise (nos lembrarmos), mientras que en español usamos el pronombre pospuesto al verbo.",
     "audio": {
       "br": {
@@ -4846,7 +4888,7 @@
     "data": {
       "source": "Quando nos lembrarmos disso, vamos conversar.",
       "target": "Cuando nos acordemos de eso, vamos a conversar.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Cuando nos acordemos de eso, conversaremos.",
@@ -4869,6 +4911,7 @@
     "contentHash": "b9978825353c63831468c1ebbe32ac127f70b21465ee4b46e3090a4f0f91a8d7",
     "esContrast": "En español 'gustar' no lleva preposición; en PT-BR y PT-PT 'gostar' rige siempre DE.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: DUDA — Correcto (y este sí usa el glifo «—», que la tarjeta traduce a «(sin preposición)»). El problema es que es la tercera copia literal de «Eu gosto ___ café pela manhã» dentro de la misma cola, junto a f00f5169 y 7f1fb792. (informe-cola8-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
@@ -4925,7 +4968,7 @@
       "ênclise",
       "formal"
     ],
-    "contentHash": "1c923793b3511c6d88f11e6486c9a795ac62aac4e50594500ed7ab7805670fe3",
+    "contentHash": "d750fe35e93f24224441e24077c3ec53e3b7bbf6d24d1fb546b4bc5ec767ade3",
     "esContrast": "En portugués, al inicio de oración con verbo conjugado se usa ênclise (diga-me), no próclise como en español ('dígame').",
     "audio": {
       "br": {
@@ -4943,7 +4986,7 @@
       "source": "Dígame qué piensa.",
       "target": "Diga-me o que pensa.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Diga-me o que pensa."
       ]
@@ -4961,7 +5004,7 @@
       "tiempos",
       "irregular"
     ],
-    "contentHash": "6717eeacd9c5f104aa73a7e7a17ef26863e2be2cca5da893e85dc8631e699c41",
+    "contentHash": "23470d1c4c53bf9fc28e009e39582d92d6c59b286d555a9d71a2e6bf8af83c1f",
     "audio": {
       "br": {
         "hash": "e9dc12dc07cfca4ead9dee0293721c47afba7d13baafa5565f2d990413b43249",
@@ -4973,11 +5016,12 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: OK ítem a ítem (informe-cola8-manual)",
     "type": "translation",
     "data": {
       "source": "Maria afirmou que tinha conseguido o emprego.",
       "target": "María afirmó que había conseguido el empleo.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
     }
@@ -5231,7 +5275,7 @@
       "concesivo",
       "irregular"
     ],
-    "contentHash": "8551ab79a2815be283fc7b68d6992a6c0dbeb489bf87d030541be7d5d34219dd",
+    "contentHash": "3be3440d2e28782258dc22ab0dfa646990d7f610600e22936d2ae1cad4bef881",
     "esContrast": "«Hacer gracia» = «achar graça» (construt. «achar graça a algo»); «tocó» = «tocou», sin «i» intermedia.",
     "audio": {
       "br": {
@@ -5249,7 +5293,7 @@
       "source": "A mí me hizo mucha gracia la película, aunque a ella no le tocó tanto.",
       "target": "A mim achou-me muita graça o filme, embora a ela não a tenha tocado tanto.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Eu achei muita graça ao filme, embora a ela não a tenha tocado tanto.",
         "Achei muita graça ao filme, apesar de a ela não ter tocado tanto."
@@ -5279,6 +5323,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
     "type": "flashcard",
     "data": {
       "front": "existe",
@@ -5400,7 +5445,7 @@
     "tags": [
       "formal"
     ],
-    "contentHash": "854e1e37c76749a1313f2428f3ed61628c28666c04991b68ef4d01574b5c10d4",
+    "contentHash": "b9e979fb5d3028b61ff492f7d44a6033d76551e9bad3aaef5e1df94ebccc534e",
     "esContrast": "El futuro del infinitivo 'pararíamos' se convierte en condicional 'pararíamos' en portugués. La estructura es más directa en PT.",
     "audio": {
       "br": {
@@ -5418,7 +5463,7 @@
       "source": "Imagina que pararíamos de trabajar mañana.",
       "target": "Imagina que pararíamos de trabalhar amanhã.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Imagina que iríamos parar de trabalhar amanhã."
       ]
@@ -5436,7 +5481,7 @@
       "próclise",
       "coloquial"
     ],
-    "contentHash": "157271b06e74cc4e81f25ecc6bcbf52f5a4d55a38e181d20932fae4fb6d329b8",
+    "contentHash": "58175163af69280c7d81ae1ffb843765a523aa58e9b02505106250158c12a8d2",
     "esContrast": "En portugués, el pronombre se coloca ANTES del verbo tras negación (no me digas), mientras que en español es 'no me lo digas'.",
     "audio": {
       "br": {
@@ -5454,7 +5499,7 @@
       "source": "No me lo digas a nadie.",
       "target": "Não me digas a ninguém.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Não me digas a ninguém.",
         "Não me diga a ninguém."
@@ -5715,7 +5760,7 @@
       "conector",
       "formal"
     ],
-    "contentHash": "90abc18c4dd4d7530c7d81245e966dbff8d299344b128bd0b887ca4f9633b0d8",
+    "contentHash": "69e535a05e3a4fd07ec3280c31aa30603d95943f0fcd4ea6d8ef2019a8f9f6b3",
     "esContrast": "'contudo' es más formal que 'mas'; equivale a 'sin embargo'.",
     "audio": {
       "br": {
@@ -5732,7 +5777,7 @@
     "data": {
       "source": "Contudo, importa salientar que nenhum de nós consegue imaginar tal cenário.",
       "target": "Sin embargo, cabe destacar que ninguno de nosotros puede imaginar tal escenario.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "No obstante, cabe señalar que ninguno de nosotros puede imaginar tal escenario."
@@ -5810,7 +5855,7 @@
       "subordinada-substantiva",
       "se-interrogativa"
     ],
-    "contentHash": "546c11aad28a9b83c52257580edf90ac5ab20b775df3085b65ffa3e2966d2d9f",
+    "contentHash": "ccd089afe1eb57fe42acfa83635890b98ac9f11bf57f1ecfe22c8fe75fe3688b",
     "audio": {
       "br": {
         "hash": "cc2c8e8eba6fd9af3ccfdbdcb5dc3fe11a8cf79cf1c8609a1003af25bb748704",
@@ -5827,7 +5872,7 @@
       "source": "No sé si el guión llevará a una buena película.",
       "target": "Não sei se o guião levará a um bom filme.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Não sei se o guião vai levar a um bom filme."
       ]
@@ -5845,7 +5890,7 @@
       "deixis",
       "pronombres"
     ],
-    "contentHash": "970e9537a146195931e57a0e2850a6a7a09d741ea56e870f2e88e39f6a90fdb2",
+    "contentHash": "a8fe53bb930324a503bbd30fc428eeb11338754172d0f96966a56f44ad7c1e50",
     "esContrast": "En portugués se usa 'seu' referenciando al sujeto del discurso indirecto, no 'de él' como en español directo.",
     "audio": {
       "br": {
@@ -5862,7 +5907,7 @@
     "data": {
       "source": "Ela explicou que aquele livro era seu.",
       "target": "Ella explicó que aquel libro era suyo.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Ella explicó que aquel libro le pertenecía."
@@ -6000,7 +6045,7 @@
     "tags": [
       "formal"
     ],
-    "contentHash": "794b4e9218675cf9779e6061164f5f7f68947d290407191cdcae9d43cd2855b2",
+    "contentHash": "cad353372e0b77bbb2694175ed0a924f77084cfbe5488d6339ba5b0f0acdacf3",
     "esContrast": "En portugués, 'agora' puede mantenerse, pero el verbo cambia de presente a imperfeito: vive→vivia.",
     "audio": {
       "br": {
@@ -6018,7 +6063,7 @@
       "source": "Ella dijo que ahora vive en Lisboa.",
       "target": "Ela disse que agora vive em Lisboa.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Ela disse que agora vivia em Lisboa."
       ]
@@ -6037,7 +6082,7 @@
       "concesivo",
       "subordinada-adverbial"
     ],
-    "contentHash": "61dbba3cc47342fe87e3b0373b4470b7a88041d719c7781c0692d0689773ccec",
+    "contentHash": "9d1b0b870fc92b1c01d879076f7e8b5361ee57ff2832678d792af0d9ed0d6662",
     "esContrast": "'embora' exige subjuntivo en portugués: 'aunque + subjuntivo'.",
     "audio": {
       "br": {
@@ -6054,7 +6099,7 @@
     "data": {
       "source": "Embora esteja cansado, vou continuar trabalhando.",
       "target": "Aunque estoy cansado, voy a seguir trabajando.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Aunque estoy cansado, seguiré trabajando."
@@ -6147,7 +6192,7 @@
     "tags": [
       "mesóclise"
     ],
-    "contentHash": "40b8a970e7f98076e70de95086a37a92af8c1dabce47a07803c21ac9f8b67d6d",
+    "contentHash": "9558aa7a7fe458c9475a9bc2b2832b94970ffd933701e117791b796eafaa9ac2",
     "esContrast": "El futuro con pronombre en portugués requiere mesóclise (dir-se-á), imposible en español ('se dirá').",
     "audio": {
       "br": {
@@ -6165,7 +6210,7 @@
       "source": "La verdad se dirá tarde o temprano.",
       "target": "A verdade dir-se-á mais cedo ou mais tarde.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "A verdade há de dizer-se."
       ]
@@ -6209,7 +6254,7 @@
     "tags": [
       "formal"
     ],
-    "contentHash": "6ad5d293e397dc5d8e67649d0365da09995821f68a7da173b9b4e9a27e9eb024",
+    "contentHash": "2d1533cdd4e9ce74a8d6a76180a938914ba2d8659b5f6daa247574d6f5157f7e",
     "esContrast": "El futuro 'vendrán' se transforma en condicional 'viriam'. 'Amanhã' puede mantenerse o cambiar a 'no dia seguinte' según el contexto.",
     "audio": {
       "br": {
@@ -6227,7 +6272,7 @@
       "source": "Ellos dijeron que vendrían mañana.",
       "target": "Eles disseram que viriam amanhã.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Eles disseram que iriam vir amanhã."
       ]
@@ -6273,7 +6318,7 @@
     "tags": [
       "ênclise"
     ],
-    "contentHash": "5d89cc8ed4679d274ceb4d9ff7974089c3dcd3213e7795f3c2db7766c1017284",
+    "contentHash": "329ac9a5bb7381f051aa0781f8ab2140ba3ee985fa3712418d045eefa79900f0",
     "esContrast": "En portugués la ênclise es obligatoria tras el verbo conjugado; en español usamos 'se' sin problema porque lo admite en esa posición.",
     "audio": {
       "br": {
@@ -6290,7 +6335,7 @@
     "data": {
       "source": "Meteram-se em problemas sérios.",
       "target": "Se metieron en problemas serios.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Se metieron en graves problemas."
@@ -6372,7 +6417,7 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "92c371c985e531d76f00307e5d208bf0b199448d87a5289d85d88f17d212dc77",
+    "contentHash": "133c89dcc9c9fcf3ef9d72f0bc1311299952ec493ea38fa4e3fbfac268b0513f",
     "esContrast": "'Se' como conjunción introduce una subordinada substantiva (equivale a 'si' español), no al pronombre/reflexivo.",
     "audio": {
       "br": {
@@ -6389,7 +6434,7 @@
     "data": {
       "source": "O público decidiu se o estreante levaria o prémio.",
       "target": "El público decidió si el debutante llevaría el premio.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es"
     }
   },
@@ -6405,7 +6450,7 @@
       "subordinada-substantiva",
       "complemento-verbal"
     ],
-    "contentHash": "678ebf5e4baa1615278133f1bf945f1bc7e6fdef34bbc80a5d74b1f8b570665e",
+    "contentHash": "2c1a245e8759a95f007e6ba6333ea865691501e46be9ff06309bc6ceb91cb5f9",
     "audio": {
       "br": {
         "hash": "c9d519ae3c36ba8ed30f874803013e5c5c6dffb0ce68cbe6671fa41ef2b47aef",
@@ -6422,7 +6467,7 @@
       "source": "Quiero que me protejan de las críticas.",
       "target": "Quero que me protejam das críticas.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Quero que me protejam."
       ]

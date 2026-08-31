@@ -165,7 +165,7 @@
       "b2-indef-todo-tudo"
     ],
     "tags": [],
-    "contentHash": "62536c69c82fe556481ea2248443a7d45aa65c14ebdf66b8cd5a370dda5dd0c4",
+    "contentHash": "fd3f46090c04772967bc89b76333fe6098b4ce337ac33b505f9961c53366f5ba",
     "esContrast": "'quase' = casi.",
     "audio": {
       "br": {
@@ -173,14 +173,15 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "39de9f2bbfb697e6d33c4eec8f4b745039e34c0a318bb132a627f4f172fa91aa",
-        "voice": "Portuguese_Wiselady"
+        "hash": "0ff340193f24550a4f725acb65393b1b504cab084a035f975619b0a620ebe500",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "E2#10 2026-09-01: léxico BR→EP por swap mecánico, forma BR movida a variantOverrides['pt-br']",
     "type": "listening",
     "data": {
-      "audioText": "Todo aquele contato com saudade quase me fez chorar.",
+      "audioText": "Todo aquele contacto com saudade quase me fez chorar.",
       "question": "¿Qué sintió el hablante casi al tener ese contacto?",
       "options": [
         "Alegría extrema",
@@ -189,6 +190,11 @@
         "Sorpresa agradable"
       ],
       "answer": "Tristeza casi llorando"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "Todo aquele contato com saudade quase me fez chorar."
+      }
     }
   },
   {
@@ -256,7 +262,7 @@
       "regular",
       "coloquial"
     ],
-    "contentHash": "71aadc636977bd06023c5eb7b45e2e7670fc93dc3f282c9f50cee8a693a4f78a",
+    "contentHash": "54026546f78cd96e429b8e5bb5292ce3a1889ce2fa1344aa7b032c245dde082b",
     "esContrast": "En portugués se dice 'dar um abraço em alguém'; en español se prefiere 'dar un abrazo a alguien'.",
     "audio": {
       "br": {
@@ -274,7 +280,7 @@
     "data": {
       "source": "Vou encontrar minha irmã e dar um abraço nela.",
       "target": "Voy a encontrar a mi hermana y darle un abrazo.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Voy a encontrar a mi hermana y abrazarla."
@@ -419,7 +425,7 @@
     "tags": [
       "basico"
     ],
-    "contentHash": "7f80b4e81d9963e1ba9199dacc9ebb4fcb076fb2e29a1f79cb7f8a0b5d0138e2",
+    "contentHash": "7f28c09d494d378b0f5ac55b604961b9f5ed12d1e72ed4fb704f59c076a47fa6",
     "audio": {
       "br": {
         "hash": "bea136c1944f5e0a258d823c373547f1fd0c6396fe495084a931f1955fcae876",
@@ -436,7 +442,7 @@
     "data": {
       "source": "O marido da Ana trabalha muito.",
       "target": "El marido de Ana trabaja mucho.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
     }
@@ -454,7 +460,7 @@
       "demostrativo",
       "indefinido"
     ],
-    "contentHash": "34df9abd5f71eb210f435d842c9cde24ba2b04881f4ddc665b672103785eba6a",
+    "contentHash": "135d3b3996ed97507ca4c1906cd1421b62014eb5ebb76edeefad43f320b188d9",
     "esContrast": "«Trás» (con t) = 'detrás'; «três» (con s) = 'tres'. Cuidado con la ortografía.",
     "audio": {
       "br": {
@@ -472,7 +478,7 @@
       "source": "Essa pessoa ai trás não fala português.",
       "target": "Esa persona de atrás no habla portugués.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": []
     }
   },
@@ -489,7 +495,7 @@
       "regional",
       "coloquial"
     ],
-    "contentHash": "87dd1ae8ebdb30b934e87b3f3b72b6e8b05791ddcbd81654e472d4f040dd22a4",
+    "contentHash": "2d2823614b51f2f4df9148d5f3ef5bd7ba5175a638616dfd125f447aa462dd85",
     "esContrast": "En PT-PT se prefiere «este» para lo presente y «convosco» (formal/coloquial europeo); en PT-BR se usa «esse» más ampliamente y «com vocês».",
     "audio": {
       "br": {
@@ -507,7 +513,7 @@
       "source": "Este año no voy a poder festejar con ustedes.",
       "target": "Esse ano não vou poder festejar com vocês.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Este ano não vou poder festejar convosco."
       ]
@@ -555,7 +561,7 @@
       "b2-art-contr-de"
     ],
     "tags": [],
-    "contentHash": "bf0822ccdfcc75832ab2b760836e4eade710b488976a4a4c6bc9cf364fbf807f",
+    "contentHash": "026023c6ae1ca9c9f4c294e0bdbc7dc20f9b033dc08b7c258d0dced99942b2bf",
     "esContrast": "'Del' se contrae: de + o = do; de + a = da.",
     "audio": {
       "br": {
@@ -573,7 +579,7 @@
       "source": "El libro del niño.",
       "target": "O livro do menino.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "O livro da criança."
       ]
@@ -628,7 +634,7 @@
     "tags": [
       "coloquial"
     ],
-    "contentHash": "bc735413e9adfab3662946c75d7029c39d4bf1ec394690f8c03e3e6511a30cd0",
+    "contentHash": "575669412df4e45f535cdad0c20d343d0f64da54dc5ef60c6f94189b399ec789",
     "audio": {
       "br": {
         "hash": "36581e249df242fcbda64ec98673d901b889343108fa2abc73edfd96564da794",
@@ -645,7 +651,7 @@
     "data": {
       "source": "Ele é bom de cozinha, mas ela é melhor.",
       "target": "Él es bueno en la cocina, pero ella es mejor.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Él cocina bien, pero ella cocina mejor."
@@ -696,10 +702,10 @@
     "contentHash": "213ff87c240f3bbb00a4d09511aeb8e234bed098257d6d5945efd7e4de10bea3",
     "esContrast": "seu puede ser posesivo de él/ella o reflexivo. Cuidado: en PT-BR se usa mucho 'dele' para evitar ambigüedad.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: celular",
+    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: celular · E2#10 2026-09-01: léxico BR→EP por swap mecánico, forma BR movida a variantOverrides['pt-br']",
     "type": "fill_blank",
     "data": {
-      "sentence": "O João perdeu o ___ contato no celular.",
+      "sentence": "O João perdeu o ___ contacto no telemóvel.",
       "blanks": [
         {
           "position": 0,
@@ -707,6 +713,11 @@
           "alternatives": []
         }
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "O João perdeu o ___ contato no celular."
+      }
     }
   },
   {
@@ -751,7 +762,7 @@
     "tags": [
       "demostrativo"
     ],
-    "contentHash": "9ef81ee0b87b0bb488bf933efc200e5568fda8d61a80b75895a070dcff2d7157",
+    "contentHash": "78accd26bcd360c7b0a34cc07e06fe16cc807320a5a841ad393f3e904fbc5432",
     "esContrast": "Esse/essa = 'ese/esa', no 'este/esta'. Indica distancia media.",
     "audio": {
       "br": {
@@ -768,7 +779,7 @@
     "data": {
       "source": "Preciso falar com essa pessoa.",
       "target": "Necesito hablar con esa persona.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Necesito hablar con esa."
@@ -815,7 +826,7 @@
       "basico",
       "excepcion"
     ],
-    "contentHash": "b79740f17ea52abdfd2ac668f9e841368b78c9a28de6561e75281a974fd0ec52",
+    "contentHash": "c71bf4df2cc033675f2547ca25886805df99c86756ee62bd1a624ce8c462f71b",
     "esContrast": "'estudante' es común en cuanto al género en portugués.",
     "audio": {
       "br": {
@@ -834,7 +845,7 @@
       "source": "La estudiante portuguesa estudió mucho.",
       "target": "A estudante portuguesa estudou muito.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": []
     }
   },
@@ -917,7 +928,7 @@
       "formal",
       "regional"
     ],
-    "contentHash": "a1f178b20e09c3aafbd77ec2636270433e779b0b6dbb296ecace8e78899c237a",
+    "contentHash": "1c197c9b09ec4ccb442d49b8843777bf98af0d617b48261332da7821f63a2a4e",
     "esContrast": "En portugués europeo se prefiere 'cientista'; en español se usa 'científico'.",
     "audio": {
       "br": {
@@ -934,7 +945,7 @@
     "data": {
       "source": "O cientista e a cientista apresentaram os resultados.",
       "target": "O cientista e a cientista apresentaram os resultados.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "O pesquisador e a pesquisadora apresentaram os resultados."
@@ -1219,7 +1230,7 @@
       "b2-art-contr-em"
     ],
     "tags": [],
-    "contentHash": "229159c336c1b788da8ee46d66067f37407c94944becd2c9a36ee0867a4929fd",
+    "contentHash": "2d336abac1f10ac0bdbfd6b9f67ba8a01d351611b0ee62a0ec9e829eb474d198",
     "esContrast": "em + a = na; em + o = no; em + as = nas; em + os = nos.",
     "audio": {
       "br": {
@@ -1238,7 +1249,7 @@
       "source": "Las hermanas viven en la playa.",
       "target": "As irmãs moram na praia.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "As irmãs vivem na praia."
       ]
@@ -1255,7 +1266,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "a7b5175070af8d8bf44f6c21bb304e5dcb5f8a55d5cf8eaeddf1f71f2ce4acbf",
+    "contentHash": "b9edc5d48ccd22388adc95cf00704eaab912d34ea7761ce9c371642a6db880ab",
     "esContrast": "El plural '-ões' es frecuente y a veces se traduce con '-onas' (reuniões → reuniones) o con palabras diferentes (mãos → manos).",
     "audio": {
       "br": {
@@ -1272,7 +1283,7 @@
     "data": {
       "source": "As reuniões serão nas manhãs de sábado.",
       "target": "Las reuniones serán en las mañanas de sábado.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Las asambleas serán los sábados por la mañana."
@@ -1318,7 +1329,7 @@
       "b2-numero"
     ],
     "tags": [],
-    "contentHash": "98b29e547136955b2679af45d674bf8e7c80e56d60dfc10fb66b0ba13d2dfa9b",
+    "contentHash": "04ec5b42957772d0dd051d26d108f3ea6a018f14da3ff8592420d10f30d19f10",
     "audio": {
       "br": {
         "hash": "de96c365c2c3263e6539dd5b1d7023e04d3f0afc73e03b06f28eda69683c27d5",
@@ -1335,7 +1346,7 @@
       "source": "¿Quieres visitar a nuestros amigos?",
       "target": "Queres visitar os nossos amigos?",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Queres ir visitar os nossos amigos?"
       ]
@@ -1353,7 +1364,7 @@
       "indefinido",
       "coloquial"
     ],
-    "contentHash": "2abbe425734c4bdcc6f7a9397a9d15d696f8e8e8e64c87f7fc78ebfd6e5c489c",
+    "contentHash": "f4546eae00b3487f26e456ccaf57d039be765b4d1f06a291a1305512669e40cb",
     "esContrast": "«Embora» + conjuntivo es la estructura portuguesa para «aunque + subjuntivo». Ojo: «vou à reunião» — «vou ir» no se dice.",
     "audio": {
       "br": {
@@ -1372,7 +1383,7 @@
       "source": "Aunque tengo pocas ganas, voy a la reunión.",
       "target": "Embora eu tenha pouca vontade, vou à reunião.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Apesar de ter pouca vontade, vou à reunião."
       ]
@@ -1447,7 +1458,7 @@
     "tags": [
       "basico"
     ],
-    "contentHash": "facddfefd54fd1c2c06c0df461f7d5a52013a3e358ea070ea5f0c5f86d9233d9",
+    "contentHash": "54781a8d5c2641c7ffa2fb5ee7926be0c9278fcbeb79e3d31b19e75121de93ca",
     "audio": {
       "br": {
         "hash": "15c0f8908b45c028e0380c56c2c2c56080beaffefbc848e56ed729e3b258a363",
@@ -1464,7 +1475,7 @@
     "data": {
       "source": "Um colega e uma colega participaram do evento.",
       "target": "Un colega y una colega participaron en el evento.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
     }
@@ -1547,7 +1558,7 @@
     "tags": [
       "basico"
     ],
-    "contentHash": "e92a7f238c14ba49a7bc7a75d4bb7ca4509486ede09476a29052df25dad6f9e9",
+    "contentHash": "ab2686a98c9130f5b22dfaac01cb1d795ba68756af154e3fd7ff721656dfe098",
     "esContrast": "marido = marido/esposo. 'A irmã' con artículo = 'su hermana': ante parentesco, el artículo portugués hace de posesivo.",
     "audio": {
       "br": {
@@ -1565,7 +1576,7 @@
     "data": {
       "source": "O marido mora com a irmã.",
       "target": "El marido vive con la hermana.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "El esposo vive con la hermana."
@@ -1584,7 +1595,7 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "6924f2d5144f50a1cf2c0c4eb856f118dd9e784a70b5a72d95bed9d30130152a",
+    "contentHash": "c9f68fe530fe56e951d53fe7df54c59f5cf60bc47a47017c1de8ddfef9c263f7",
     "esContrast": "'Contacto' en PT es 'contato' (BR) o 'contacto' (PT), nunca 'contack'.",
     "audio": {
       "br": {
@@ -1602,7 +1613,7 @@
       "source": "Su contacto es muy importante para nosotros.",
       "target": "O vosso contacto é muito importante para nós.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "O contacto de vocês é muito importante para nós.",
         "O vosso contacto é muito importante para nós."
@@ -1658,7 +1669,7 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "812a757553fd3b7b0aa7e23cd220d8554c1d834ffa871f03c2bb8d979f3ae096",
+    "contentHash": "1d813c0de3fea7f7a49008381d67fc0600a8152d9f84b8704b0d3b457746c410",
     "esContrast": "Género cruzado: pt 'costume' es masculino (os bons costumes); es 'costumbre' es femenina (las buenas costumbres).",
     "audio": {
       "br": {
@@ -1677,7 +1688,7 @@
       "source": "El marido de la hermana tiene buenas costumbres.",
       "target": "O marido da irmã tem bons costumes.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "O esposo da irmã tem bons costumes."
       ]
@@ -1782,7 +1793,7 @@
       "b2-art-contr-em"
     ],
     "tags": [],
-    "contentHash": "6065bce9855b76e99176f5609b78d908f4f65f87b19dadbc6509582cc4848e57",
+    "contentHash": "a20b907e5f5612e2f60c61de6bc5f99c36086fb5591863b262e19a77a0c0a65e",
     "esContrast": "'En Brasil' se contrae: no + o = no Brasil.",
     "audio": {
       "br": {
@@ -1800,7 +1811,7 @@
       "source": "La familia vive en Brasil.",
       "target": "A família mora no Brasil.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "A família mora no Brasil.",
         "Minha família mora no Brasil."
@@ -1819,7 +1830,7 @@
       "falso-amigo",
       "regional"
     ],
-    "contentHash": "731e18216d3ee21ea642a9cfe8222ad79f9a4742a8653c23e8bfce36d725d7a8",
+    "contentHash": "47edd77444742955c71f2a78970bbe6c5f1cc3017b734bb5446c3fc85bd1c7e0",
     "esContrast": "'mão' es femenino (mão, não 'mao'); 'menino' es masculino, 'pequena' concuerda con mão.",
     "audio": {
       "br": {
@@ -1837,7 +1848,7 @@
       "source": "La mano del niño es muy pequeña.",
       "target": "A mão do menino é muito pequena.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "A mão do rapaz é muito pequena."
       ]
@@ -2012,7 +2023,7 @@
     "tags": [
       "basico"
     ],
-    "contentHash": "dfddec2a2617bb43e1e4d036472cdef7d09f27a206fb57422e5c5b7d85101ca4",
+    "contentHash": "0829c843abc578be4c9b017e2fcda4fb5abcf77e201df6f4203aa7354344a123",
     "esContrast": "costume = costumbre, pero MASCULINO: o costume, os costumes antigos (es 'costumbre' es femenina). Ambos tienen singular y plural.",
     "audio": {
       "br": {
@@ -2030,7 +2041,7 @@
     "data": {
       "source": "Os costumes da região são muito antigos.",
       "target": "Las costumbres de la región son muy antiguas.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
     }
@@ -2049,7 +2060,7 @@
       "formal",
       "posnominal"
     ],
-    "contentHash": "167a1df454448d69c4e06e8ae9d1dff4b6babfc534ce8706bc820850ad2c4f08",
+    "contentHash": "5d1843e5b9c978952e1acce138c6f138757edf5ca5d7074cd91357834db2a36a",
     "esContrast": "«Ficar unidos» = permanecer unidos. El orden natural es verbo + adjetivo; «devem unidos ficar» sólo se ve en verso.",
     "audio": {
       "br": {
@@ -2067,7 +2078,7 @@
     "data": {
       "source": "Os amigos presentes nesta reunião devem ficar unidos.",
       "target": "Los amigos presentes en esta reunión deben permanecer unidos.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Los amigos que están en esta reunión deben mantenerse unidos."
@@ -2234,7 +2245,7 @@
       "indefinido",
       "irregular"
     ],
-    "contentHash": "74147eed41fba8e56090f549ca21f9d495ec384ab7526b3144677b5ec5900dc0",
+    "contentHash": "8c73e140bff7f33be2ab905ab80eac780c8fd956335ccfdbb1e4abc6262bbc57",
     "esContrast": "«Ningún» se convierte en «nenhum» (sin -o final) tanto en PT-BR como PT-PT.",
     "audio": {
       "br": {
@@ -2253,7 +2264,7 @@
       "source": "No tengo ningún dato sobre eso.",
       "target": "Não tenho nenhum dado sobre isso.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Não tenho nenhum dado a esse respeito."
       ]
@@ -2300,7 +2311,7 @@
     "tags": [
       "comun-en-genero"
     ],
-    "contentHash": "6634492f45c2b8ee6288d64dd0d5f525d95cfad25df1b4f9497b53937e522ff5",
+    "contentHash": "5d89f5f40ec2c8a7f201f36364687d171c2d983fe30ed03598fe22c92a7cf3bd",
     "esContrast": "'artista' es común en cuanto al género: dice 'o artista' o 'a artista' según el sexo.",
     "audio": {
       "br": {
@@ -2319,7 +2330,7 @@
       "source": "El artista argentino visitará el museo mañana.",
       "target": "O artista argentino visitará o museu amanhã.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": []
     }
   },
@@ -2335,7 +2346,7 @@
       "contraccion",
       "formal"
     ],
-    "contentHash": "5113cb4b33c880182c2a56ed405a47f0caf6b4ffa6b143702c2a125656cf521e",
+    "contentHash": "a195c681e1ba2995361df7d9aaa61fc9cbccf9459542b7eea2090436e684d151",
     "esContrast": "'Pela' = 'por' + 'a'. Indica motivo o paso por un lugar.",
     "audio": {
       "br": {
@@ -2352,7 +2363,7 @@
     "data": {
       "source": "Pela janela, vejo o mar e os costumes locais.",
       "target": "Por la ventana, veo el mar y las costumbres locales.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
     }
@@ -2371,7 +2382,7 @@
       "indefinido",
       "falso-amigo"
     ],
-    "contentHash": "d0dcbfa06e8572f6d0e76450be5a7b028972ddb40aa50b9d8fe312f3d4ed1ec5",
+    "contentHash": "158d311909ab75186e3c16a6aabbd6894f8b4824a393996ad5f272e805ac6ff1",
     "esContrast": "ATENCIÓN: Embora aquí NO es 'aunque' (concesivo), sino 'ya que/puesto que' (causal).",
     "audio": {
       "br": {
@@ -2389,7 +2400,7 @@
     "data": {
       "source": "Embora festejas com muitos amigos, sinto saudade de outros.",
       "target": "Ya que celebras con muchos amigos, extraño a otros.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Puesto que celebras con muchos amigos, extraño a otros."
@@ -2445,7 +2456,7 @@
       "basico",
       "vocabulario"
     ],
-    "contentHash": "47df79e1563ad6b167c9092e9b9d734fa45e6c2525d8d5bd56b9171c70dde188",
+    "contentHash": "f185f89a15d45cd0b0d11cc8c52c121475972f27823ab0055036dfb4205369e2",
     "esContrast": "irmã es femenina: usa 'minha irmã', no 'meu irmã'.",
     "audio": {
       "br": {
@@ -2464,7 +2475,7 @@
       "source": "Mi hermana vive en Río de Janeiro.",
       "target": "Minha irmã vive no Rio de Janeiro.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "A minha irmã vive no Rio de Janeiro."
       ]
@@ -2514,7 +2525,7 @@
       "contraccion",
       "articulos"
     ],
-    "contentHash": "ebd6066bed74c7f44c91927648e9382abb626a3009be9b0fd368b66bc219ee54",
+    "contentHash": "0205f1d6b5e8f6d8f2960d46627654c21a51c3102c275079fde397a8e530bd70",
     "esContrast": "Combinación: 'de' + 'os' = 'dos'; 'em' + 'a' = 'na'.",
     "audio": {
       "br": {
@@ -2531,7 +2542,7 @@
     "data": {
       "source": "Uns dos meus filhos moram na Europa.",
       "target": "Algunos de mis hijos viven en Europa.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Unos de mis hijos viven en Europa."
@@ -2580,7 +2591,7 @@
       "excepcion",
       "terminacion-ir"
     ],
-    "contentHash": "29cab0f4a4905ba934a57085094104797073b3369b6874ed86dfe151b341fcbd",
+    "contentHash": "473340e75a611d4b4ec6ebea3119ab82829a3fe72273a051a5fba0eedaf9ebe1",
     "esContrast": "«Testemunha» es SIEMPRE femenino en portugués, se hable de un hombre o de una mujer: «a testemunha». El género se marca fuera de la palabra.",
     "audio": {
       "br": {
@@ -2599,7 +2610,7 @@
       "source": "El testigo vio todo, pero la otra testigo no dijo nada.",
       "target": "A testemunha viu tudo, mas a outra testemunha não disse nada.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": []
     }
   },
@@ -2891,7 +2902,7 @@
     "tags": [
       "basico"
     ],
-    "contentHash": "d94f97426d8da586f98145aec80c2646b36633dd5ea4c1131ee83b88432b1a8a",
+    "contentHash": "0bb64c39fdd6b305ce1bfe2b9d47cee164b93548997d8d1091f7d29a48b484bc",
     "audio": {
       "br": {
         "hash": "244b9f7cf986d9629e2d5a2855e994ada6a8b192f304a80c551e4afc81187b3e",
@@ -2907,7 +2918,7 @@
     "data": {
       "source": "A minha irmã é brasileira.",
       "target": "Mi hermana es brasileña.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Mi hermana es brasilera."
@@ -2961,7 +2972,7 @@
       "b2-art-contr-de"
     ],
     "tags": [],
-    "contentHash": "f53b096345bfe5f8524d66af8871923af75fef87ebbb15f06c40804fae16c491",
+    "contentHash": "4e30ec0efa9bdc1f72abe1db8186ed096a5e3415aeab81979c28876bfc550b10",
     "esContrast": "por + as = pelas; por + os = pelos. Indica distribución o movimiento por lugares.",
     "audio": {
       "br": {
@@ -2980,7 +2991,7 @@
       "source": "Los hijos viven por las calles del barrio.",
       "target": "Os filhos moram pelas ruas do bairro.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Os filhos vivem pelas ruas do bairro."
       ]
@@ -2999,7 +3010,7 @@
       "regular",
       "frequente"
     ],
-    "contentHash": "9a10747fdb498806f927edeff2e334def42a040beefc6567ea09371d9aed8916",
+    "contentHash": "729ea1e121d2a53b1287e3b6fb656f98929ff8e4632cee3fb8300956566eb8e8",
     "esContrast": "'Minhas irmãs' siempre es plural, aunque en español a veces se omite 'mis' si ya se sobrentiende.",
     "audio": {
       "br": {
@@ -3016,7 +3027,7 @@
     "data": {
       "source": "Minhas irmãs moram no centro.",
       "target": "Mis hermanas viven en el centro.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Mis hermanas viven en el centro de la ciudad."
@@ -3382,7 +3393,7 @@
       "b2-numero"
     ],
     "tags": [],
-    "contentHash": "3cc2ffda97f7ffcc0a96b09c4bf16063f95af4af74649b5078373b87c40766c2",
+    "contentHash": "200a80b9a683c15acd2af187a0d2cc347c2960c6c09d9984f68d3baad8dbd24c",
     "audio": {
       "br": {
         "hash": "67307a6adb4bed4758ff8135efb996f03e9f1ba8c94dbe36ca7afb2d81724fb9",
@@ -3399,7 +3410,7 @@
       "source": "Tu hermana vive aquí.",
       "target": "Tua irmã mora aqui.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "A tua irmã mora aqui."
       ]
@@ -3570,7 +3581,7 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "f69cadbbfef709538fb101163b521b4f3a958b4560f99d7a12098b0e85278155",
+    "contentHash": "df6f26b9761648e6d0381cc567882b9c7e37ad242c71794d48cfefb3c598bcad",
     "esContrast": "'Dar um abraço' es la expresión natural en PT para 'abrazar'.",
     "audio": {
       "br": {
@@ -3588,7 +3599,7 @@
       "source": "Encontré a mi hermana y la abracé.",
       "target": "Encontrei a minha irmã e dei-lhe um abraço.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Encontrei minha irmã e dei-lhe um abraço.",
         "Achei a minha irmã e dei-lhe um abraço."
@@ -3606,7 +3617,7 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "045b41ecf5d773a7572967b8887475553b0aafd6b57fb3ce4aa911e194adc541",
+    "contentHash": "10d03a3707031067d95b8d13f3398439c7c3a08656096bd711253235885f1e1d",
     "esContrast": "hermana = irmã, hermano = irmão: sin h- inicial y con vocal nasal final (el til de -ã/-ão marca nasalidad, no sílaba tónica).",
     "audio": {
       "br": {
@@ -3625,7 +3636,7 @@
       "source": "El niño vive con la hermana.",
       "target": "O menino mora com a irmã.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "O rapaz mora com a irmã."
       ]
@@ -3742,7 +3753,7 @@
       "b2-art-contr-em"
     ],
     "tags": [],
-    "contentHash": "adeaa835ced390fa3e11ec39f9f63d42cf0aae0a430e326c374aae48a3f1565b",
+    "contentHash": "b9e7fdd1e46e42566c9e70123ea7495016663770b5e42352ece99bb79ec9b0a6",
     "esContrast": "Usa 'um/uma' como artículo indefinido, no la estructura española 'un/una' sin más.",
     "audio": {
       "br": {
@@ -3761,7 +3772,7 @@
       "source": "Un hijo es suficiente.",
       "target": "Um filho é suficiente.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Um filho já basta.",
         "Um filho basta."
@@ -3778,7 +3789,7 @@
       "b2-possessivos"
     ],
     "tags": [],
-    "contentHash": "f6a9c07f82bff6486201fa93f82efe5d95ab568bc26bdbb233ae3cf1b2cd5a57",
+    "contentHash": "d2df63c6da39552b0589cc2ca142df02f0cc6b5079de818d312279f94a438fdc",
     "audio": {
       "br": {
         "hash": "550c9600929c1383263b2149e3c87721a0059c7e69c452402b49b951bf258da5",
@@ -3796,7 +3807,7 @@
       "source": "Mis hijos son cariñosos.",
       "target": "Meus filhos são carinhosos.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Meus filhos são afetuosos."
       ]
@@ -3842,7 +3853,7 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "267127b5dd0ce68970a7be6de218ea0da4849cb7b543995dc361be8678dadb11",
+    "contentHash": "d98360fa562e5beda4e88cebefa58f522d3b6e90dc0938d33aaff2639d2c5b48",
     "esContrast": "mistura = mezcla; misturar = mezclar. No existe *mezcla en portugués.",
     "audio": {
       "br": {
@@ -3860,7 +3871,7 @@
     "data": {
       "source": "Esta mistura de culturas é interessante.",
       "target": "Esta mezcla de culturas es interesante.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
     }
@@ -3876,7 +3887,7 @@
     "tags": [
       "contraccion"
     ],
-    "contentHash": "a83f1230389fd17557f94c2de9ea50db19ed3d53973654382d042e5275f6805d",
+    "contentHash": "893522fc326e1d66ab12cf5146b7432a206bc0e0ab1d6d23cb4bd3166bf0b9cf",
     "esContrast": "'Vou à' = 'voy a la'. 'Casa da irmã' = 'casa de la hermana'.",
     "audio": {
       "br": {
@@ -3894,7 +3905,7 @@
     "data": {
       "source": "Vou à casa da minha irmã.",
       "target": "Voy a la casa de mi hermana.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
     }
@@ -3912,7 +3923,7 @@
       "demostrativo",
       "indefinido"
     ],
-    "contentHash": "b98548824e4dce2a74d4d05bc9a799f68fee26d16c3df2551cdd13ec5980825f",
+    "contentHash": "08bc653d60184318e0b45cc11117c56e00f94a0f526eaebddff600fae7a0549b",
     "esContrast": "Aquela = 'aquella', señala lo lejano. Saudade se mantiene igual en español.",
     "audio": {
       "br": {
@@ -3930,7 +3941,7 @@
     "data": {
       "source": "Aquela saudade nunca vai passar.",
       "target": "Aquella saudade nunca va a pasar.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Esa nostalgia nunca va a pasar.",
@@ -3949,7 +3960,7 @@
     "tags": [
       "indefinido"
     ],
-    "contentHash": "3fafb2b36501eb3ef3b80497f28f92df7bfc7802ffaf4df083b2c2b01f75f003",
+    "contentHash": "fd02d576e238233c6519c7f1349446bb924e44f8ad592925ba1f881952a375e0",
     "esContrast": "Ninguém = 'nadie', nenhum = 'ningún'. Coinciden con el español.",
     "audio": {
       "br": {
@@ -3967,7 +3978,7 @@
     "data": {
       "source": "Ninguém respondeu nenhuma mensagem.",
       "target": "Nadie respondió ningún mensaje.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Nadie le respondió a ningún mensaje."
@@ -4047,7 +4058,7 @@
       "falso-amigo",
       "regional"
     ],
-    "contentHash": "4c724d0834631b48d10dac1b37b8500a007b24513809a523b7c460ecc28151cc",
+    "contentHash": "11e6beecf6af4de3f40399c0d4ae64f8bec75f79626c1f883cfb2608574efada",
     "esContrast": "\"Vizitar\" es la forma estándar en portugués europeo; en español se dice 'visitar'.",
     "audio": {
       "br": {
@@ -4064,7 +4075,7 @@
     "data": {
       "source": "Gostaria de vizitar Lisboa no verão.",
       "target": "Me gustaría visitar Lisboa en verano.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
     }
@@ -4140,7 +4151,7 @@
       "demostrativo",
       "falso-amigo"
     ],
-    "contentHash": "a9f37dec1f8fb6924d6255c231b1e714e92e7e3c279b32c5c7d95f76c554df8a",
+    "contentHash": "30116ea5a73d2d53c42195dbc625c5302938ee3b3eb6667068c6dd1a0c5f73cf",
     "esContrast": "Lo idiomático es «deixar saudades»: quien las siente es la persona, no el lugar. Y suele ir en plural: «muitas saudades».",
     "audio": {
       "br": {
@@ -4159,7 +4170,7 @@
       "source": "Aquella ciudad deja mucha nostalgia.",
       "target": "Aquela cidade deixa muitas saudades.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Aquela cidade deixa muita saudade."
       ]
@@ -4209,7 +4220,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "7b86434395df5420a1351344448b4a2495920b3c013af9f332e11ecc6b004df7",
+    "contentHash": "d7a8338c695797e928dbb87776093ac2187b0ef6b1b224a7397d1bdba64b8b7e",
     "audio": {
       "br": {
         "hash": "2a04260e20ebc6dde7110e429e377dcd45318a3cbb795a61306121c1af152b61",
@@ -4226,7 +4237,7 @@
       "source": "Los corazones de los niños se unieron.",
       "target": "Os corações das crianças se uniram.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Os corações das crianças uniram-se."
       ]
@@ -4244,7 +4255,7 @@
       "contraccion",
       "avanzado"
     ],
-    "contentHash": "d2e109db353ee26a3674547a9a5aca0cf660f865028160a6d6372b0c7b8baac6",
+    "contentHash": "24cc87923b047b3dce8445a2ebc693e2e20faf9a3bd9e4bdc20418d3f2c75655",
     "esContrast": "'Pelo' = 'por' + 'o' (por + el). Indica motivo o medio.",
     "audio": {
       "br": {
@@ -4261,7 +4272,7 @@
     "data": {
       "source": "O menino foi pelo caminho errado.",
       "target": "El niño fue por el camino equivocado.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "El chico fue por el camino equivocado."
@@ -4382,7 +4393,7 @@
       "basico",
       "articulo"
     ],
-    "contentHash": "155c989b87fec597899840b2dc6cff6b374936e68291d43ec071fe10dc5ba839",
+    "contentHash": "b1582404b433f8ce059c80c18f67632ab3e697b8323dc657b2b6b418119b7a39",
     "esContrast": "marido es masculino; en español 'marido' coincide en género.",
     "audio": {
       "br": {
@@ -4401,7 +4412,7 @@
       "source": "El marido de Carla es abogado.",
       "target": "O marido de Carla é advogado.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "O esposo de Carla é advogado."
       ]
@@ -4482,7 +4493,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "7f222335ed0800bd97b97e0b0783ea1c22aec482b47a1ec71c67b00551b7fa31",
+    "contentHash": "cd376c3d18c963e1794bec56a602ce882dd7363f3678aaec50e64cc0a27c565b",
     "esContrast": "'Naciones' → 'nações' con 'ç'; 'pueblos' → 'povos'.",
     "audio": {
       "br": {
@@ -4501,7 +4512,7 @@
       "source": "Las naciones aliadas celebraron la unión de sus pueblos con abrazos fraternales.",
       "target": "As nações aliadas celebraram a união dos seus povos com abraços fraternais.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "As nações aliadas celebraram a união de seus povos com abraços fraternais."
       ]
@@ -4558,7 +4569,7 @@
       "irregular",
       "regional"
     ],
-    "contentHash": "127e3ef7f473682fe23bcf2adc5f1a77bc0c5484e44e5defa779ce14ca8b70ec",
+    "contentHash": "7d446cff9abb1a5f098c16aa8b26070de36e7e4c6457acd6025365c503acbb09",
     "esContrast": "El plural portugués '-ãos' a menudo corresponde al español '-anos' (cidadãos → ciudadanos), pero no siempre: 'irmãos' → 'hermanos'.",
     "audio": {
       "br": {
@@ -4575,7 +4586,7 @@
     "data": {
       "source": "Os cidadãos devem votar nas eleições.",
       "target": "Los ciudadanos deben votar en las elecciones.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Los ciudadanos tienen que votar en las elecciones."
@@ -4622,7 +4633,7 @@
       "indefinido",
       "formal"
     ],
-    "contentHash": "e0ab4f325bfc73dd1f0dad996a065516cc859748f82b15a69360f8c76dd43c35",
+    "contentHash": "af4e20a9cecb2b0b4bb825ff55826cfef6c60b287ded77bd766732d54a43cc28",
     "esContrast": "«Cierto» como adjetivo se traduce por «certo». Como adverbio expresivo («ciertamente»), también se puede usar «certamente» o «com certeza».",
     "audio": {
       "br": {
@@ -4641,7 +4652,7 @@
       "source": "Cierto es que casi todo depende del contexto.",
       "target": "Certo é que quase tudo depende do contexto.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "É certo que quase tudo depende do contexto."
       ]
@@ -4752,7 +4763,7 @@
       "indefinido",
       "coloquial"
     ],
-    "contentHash": "5491622e03b30a6f0a137bc6f73fa024273cc9a120a5766c4206f36818240d33",
+    "contentHash": "670245ac148ea1cd1f5efaac1db737a569d497d5c018781becfb9ee1e45025b6",
     "esContrast": "Quase = 'casi' (casi no se usa en español en este contexto). Trás = 'detrás/atrás'.",
     "audio": {
       "br": {
@@ -4760,21 +4771,26 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "eb9270c3635db599ea1318cfd65fc9f8a76ae34996c8032c1e781c62c314f617",
-        "voice": "Portuguese_Wiselady"
+        "hash": "0da433fbf6efc9fa80306b2e3fca7edc382a7c1ae8a57be6e89e05fb4b9a1b0a",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: todo mundo",
+    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: todo mundo · E2#10 2026-09-01: léxico BR→EP por swap mecánico, forma BR movida a variantOverrides['pt-br']",
     "type": "translation",
     "data": {
-      "source": "Quase todo mundo ficou para trás.",
+      "source": "Quase toda a gente ficou para trás.",
       "target": "Casi todo el mundo se quedó atrás.",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Casi todos se quedaron atrás."
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "source": "Quase todo mundo ficou para trás."
+      }
     }
   },
   {
@@ -4790,7 +4806,7 @@
       "regular",
       "formal"
     ],
-    "contentHash": "2c36009c925b300b49a1eadd79af7b27c64888cda5c2bb872e3f22b66a6dc52e",
+    "contentHash": "5bef76d356f9d02e6a9f31734e3c5fa5448e434e09ae3baa8885f89352df5453",
     "esContrast": "'Nosso' (nosotros) y 'nossa' (nosotras) distinguen género en portugués; en español 'nuestro/a' también concuerda.",
     "audio": {
       "br": {
@@ -4798,20 +4814,26 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "09848bc34490fa9646e3758e9e1ff6181ac5f87db48efa79bc7faf485913908e",
-        "voice": "Portuguese_Wiselady"
+        "hash": "99d2ccf0976cb13e94444d4f47bfaa3b0cb2eb1ff9f5d538deb7638ed2265966",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "E2#10 2026-09-01: léxico BR→EP por swap mecánico, forma BR movida a variantOverrides['pt-br']",
     "type": "translation",
     "data": {
-      "source": "Nosso contato profissional é por e-mail.",
+      "source": "Nosso contacto profissional é por e-mail.",
       "target": "Nuestro contacto profesional es por correo electrónico.",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Nuestro contacto de trabajo es por correo electrónico."
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "source": "Nosso contato profissional é por e-mail."
+      }
     }
   },
   {
@@ -4858,7 +4880,7 @@
     "tags": [
       "contraccion"
     ],
-    "contentHash": "20bfd3cc83f77665fd43c36d2461f68b37cbfd6e3c072211060bd2fe262bb847",
+    "contentHash": "741888d524379199ff4b398d3db456c5018812253728913e53378510c1056daf",
     "esContrast": "'No' = 'em' + 'o' (en + el). Contracción muy frecuente.",
     "audio": {
       "br": {
@@ -4875,7 +4897,7 @@
     "data": {
       "source": "No Brasil, os costumes são diferentes.",
       "target": "En Brasil, las costumbres son diferentes.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
     }
@@ -5120,7 +5142,7 @@
     "tags": [
       "formal"
     ],
-    "contentHash": "c632958950ce7a4327a7a7c10a8230a7613eaf2342400363cf5e02b97f4f1442",
+    "contentHash": "4324415714869fc94982d6e29a1e921704c0cb3687b3ed950ea35543447c602d",
     "esContrast": "'Esse relatório não serve' = ese informe no sirve; 'qualquer' = cualquier, sin importar cuál.",
     "audio": {
       "br": {
@@ -5128,15 +5150,15 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "39517880b136b85d22dca6fab3eddbe82db1c4a978bf523f4b9f1d46a6f9f3a3",
-        "voice": "Portuguese_Wiselady"
+        "hash": "3f0cbcf1e544611ba94faedcc38aa61036fe200bb223d9fff9db980791b1586f",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: equipe",
+    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: equipe · E2#10 2026-09-01: léxico BR→EP por swap mecánico, forma BR movida a variantOverrides['pt-br']",
     "type": "listening",
     "data": {
-      "audioText": "Esse relatório aqui não serve, mas qualquer um outro pode festejas a equipe.",
+      "audioText": "Esse relatório aqui não serve, mas qualquer um outro pode festejas a equipa.",
       "question": "¿Qué pasó con el informe mencionado?",
       "options": [
         "Sirvió perfectamente",
@@ -5145,6 +5167,11 @@
         "Festejó al equipo"
       ],
       "answer": "Fue rechazado"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "Esse relatório aqui não serve, mas qualquer um outro pode festejas a equipe."
+      }
     }
   },
   {
@@ -5217,7 +5244,7 @@
       "indefinido",
       "falso-amigo"
     ],
-    "contentHash": "c835f9b22d731b83de32ab44386d6f6360ab5a941d5fc31dd77f693fca5f4f6b",
+    "contentHash": "055adbcc43f9a30017b7957c49da8ce87e574a3efc9de8130f361ea2568f50df",
     "esContrast": "Certas = 'ciertas/algunas', no 'certificadas'. Mismo uso que en español.",
     "audio": {
       "br": {
@@ -5235,7 +5262,7 @@
     "data": {
       "source": "Certas pessoas sempre voltam.",
       "target": "Ciertas personas siempre vuelven.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Algunas personas siempre vuelven.",
@@ -5252,7 +5279,7 @@
       "b2-art-contr-a-por"
     ],
     "tags": [],
-    "contentHash": "0f1237226194e67ecbee4b1960ccbb76b9ec94626c36c891063f85b1096a9ad3",
+    "contentHash": "da467c03f3305de8bc78aefff61ac42d5f905e62d2ba96b837475d0138f6febb",
     "esContrast": "'Al' se contrae: a + o = ao; a + a = à.",
     "audio": {
       "br": {
@@ -5270,7 +5297,7 @@
       "source": "Fui al mercado.",
       "target": "Fui ao mercado.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Eu fui ao mercado."
       ]
@@ -5482,7 +5509,7 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "d83540163cf67b7633ffb65fc955e844c6d51a6f2f077444a8715441483201e8",
+    "contentHash": "f1514a05c35f46a0320da1d8ea66c4b64569e8b759aa9d9e0ba8d7b0b13a9b8d",
     "esContrast": "Cuidado: 'seu' en portugués puede ser de él, ella o usted, a diferencia del español donde cambia.",
     "audio": {
       "br": {
@@ -5490,14 +5517,15 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "38d324547112fc4ad8802f2b65f9677711ae60605823852c66d18cfc4d9e3d5b",
-        "voice": "Portuguese_Wiselady"
+        "hash": "509dc25f769e852fc7532c6d63790e09cc2d7b804e85578fb613c25e9fc758e2",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "E2#10 2026-09-01: léxico BR→EP por swap mecánico, forma BR movida a variantOverrides['pt-br']",
     "type": "listening",
     "data": {
-      "audioText": "Preciso muito do seu contato para organizar a reunião da família.",
+      "audioText": "Preciso muito do seu contacto para organizar a reunião da família.",
       "question": "¿De quién es el contacto que necesita?",
       "options": [
         "Suyo (de él/ella)",
@@ -5506,6 +5534,11 @@
         "De ustedes"
       ],
       "answer": "Suyo (de él/ella)"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "Preciso muito do seu contato para organizar a reunião da família."
+      }
     }
   },
   {
@@ -5556,25 +5589,31 @@
     "tags": [
       "indefinido"
     ],
-    "contentHash": "51d6029937a91e9556da1a2122134e999ec437dcaee7382c10797a46a4159663",
+    "contentHash": "eca0e92b1e4e325fe62574ad38ec4d08dc005dffc7dc98c401d9262d82e8e810",
     "audio": {
       "br": {
         "hash": "e7a4665c8c65d11574fc7f3490f8b96b02518b3512975eb98bed8595b99375b4",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "61b153523c76e1ce7c853e396285f17b3f2ae207ca888f10c59ac811107f714d",
-        "voice": "Portuguese_Wiselady"
+        "hash": "9b638d2ecc8cbf82446c7ce11ebbeee574a7c400eef8429dee54962b1734e62a",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "E2#10 2026-09-01: léxico BR→EP por swap mecánico, forma BR movida a variantOverrides['pt-br']",
     "type": "translation",
     "data": {
       "source": "Algunos contactos no me dejaron buena impresión.",
-      "target": "Alguns contatos não me deixaram boa impressão.",
+      "target": "Alguns contactos não me deixaram boa impressão.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": []
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Alguns contatos não me deixaram boa impressão."
+      }
     }
   },
   {
@@ -5615,7 +5654,7 @@
       "b2-numero"
     ],
     "tags": [],
-    "contentHash": "7aa11c0b8b43316340341ca11bb60eb08cfadc6fbeaa9fd9c8c13dc2b9108bf8",
+    "contentHash": "1d094f0e171c6f97f39cace040649e9f8a0146c0bbe3db21bfc580b9e8d76853",
     "esContrast": "En PT, el posesivo 3ª persona se usa con valor reflexivo o no reflexivo; aquí se prefiere 'deles' para claridad.",
     "audio": {
       "br": {
@@ -5634,7 +5673,7 @@
       "source": "Nuestros hijos quieren encontrar a sus primos.",
       "target": "Os nossos filhos querem encontrar os primos deles.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Os nossos filhos querem encontrar os primos deles.",
         "Nossos filhos querem encontrar os primos deles."
@@ -5715,7 +5754,7 @@
       "regular",
       "ambiguo"
     ],
-    "contentHash": "183cad3f3ac33f7f789287d3c21d4ce5b0f3869fb4585c2f06a769bcb102b38d",
+    "contentHash": "5bb018ba90beab6dd45fe6364157772204165edb847e993d3baf15d328cef0de",
     "esContrast": "'Seu/sua' en 3ª persona (su/sus) puede significar 'de él', 'de ella' o 'de usted'. El contexto lo determina.",
     "audio": {
       "br": {
@@ -5733,7 +5772,7 @@
     "data": {
       "source": "Seus filhos são muito simpáticos.",
       "target": "Sus hijos son muy simpáticos.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Tus hijos son muy simpáticos."
@@ -5809,7 +5848,7 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "53e7dd535bfb3acd0ef3b3e5ee458789b2e5c060d2b933422b1f6ea70c939c05",
+    "contentHash": "7774312f54aadc1affd607983c759afbc76b0ce11e17fe992f2375912a507719",
     "esContrast": "'mistura' es femenina y 'costume' masculino; ¡atención a las terminaciones!",
     "audio": {
       "br": {
@@ -5828,7 +5867,7 @@
       "source": "Esta mezcla de costumbres es fascinante.",
       "target": "Esta mistura de costumes é fascinante.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Essa mistura de costumes é fascinante."
       ]
@@ -5937,7 +5976,7 @@
       "basico",
       "articulo-indefinido"
     ],
-    "contentHash": "010ca4b48fd38f5c0d96fc3b2f3d0fbb6a9ab251b438eb77db72d7bfd9b8ad5c",
+    "contentHash": "fe73045ba066a2ae64f8dfa1155e0f4f106a9cf6b7bf232c56023bae1bae97d4",
     "audio": {
       "br": {
         "hash": "79867aaf3146d79d92df11005a97b2280bc44622e601c06377a1eee53880c4da",
@@ -5954,7 +5993,7 @@
     "data": {
       "source": "Tenho uns filhos muito simpáticos.",
       "target": "Tengo unos hijos muy simpáticos.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Tengo hijos muy simpáticos."
@@ -5973,7 +6012,7 @@
       "irregular",
       "excepcion"
     ],
-    "contentHash": "acf58b16b9112667c0f50df90e72f87de2c05ddceb72916e4a6a288f58282a04",
+    "contentHash": "6b1e4baa303a995eef9994c996ddd2f59acf6363eed507bb3a8318f934ffd20d",
     "esContrast": "En portugués europeo el posesivo lleva artículo: «a minha prima», «o meu primo».",
     "audio": {
       "br": {
@@ -5992,7 +6031,7 @@
       "source": "Quiero visitar a mi prima y a mi primo.",
       "target": "Quero visitar a minha prima e o meu primo.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Tenho vontade de visitar a minha prima e o meu primo."
       ]
@@ -6258,7 +6297,7 @@
       "contraccion",
       "falso-amigo"
     ],
-    "contentHash": "1c2e4d7bd62609c57175bdcde9f7a01d4911b4f317e56dfd8823fbcd0f942b1b",
+    "contentHash": "255af03de0b896eaf12c2c62e8cdbacf30a7782b2f3594f132c78239d30aed19",
     "esContrast": "'Do' = 'de' + 'o' (del). Cuidado: 'ficar' = 'quedar/estar', no 'ficar'.",
     "audio": {
       "br": {
@@ -6275,7 +6314,7 @@
     "data": {
       "source": "A casa do meu marido fica perto.",
       "target": "La casa de mi marido queda cerca.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "La casa de mi esposo queda cerca."
@@ -6350,8 +6389,9 @@
       "terminacion-o"
     ],
     "contentHash": "f7df9e85a66efa0446c9fd4a197f40559ac1305a032198974367e1bb866ea694",
-    "esContrast": "'Mão' termina en -o pero es femenina: a mão, diferente del español.",
+    "esContrast": "'Mão' acaba en -ão y es femenina: a mão. El paralelo con el español se mantiene ('la mano' también es femenina); lo que cambia es la terminación.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "A ___ humana tem 27 ossos.",
@@ -6359,9 +6399,7 @@
         {
           "position": 0,
           "answer": "mão",
-          "alternatives": [
-            "mão"
-          ]
+          "alternatives": []
         }
       ]
     }
@@ -6513,7 +6551,7 @@
     "tags": [
       "indefinido"
     ],
-    "contentHash": "e3a0f513d56dabb79749235067e9143b2579f953e6436f33f6a0dbd023a5872b",
+    "contentHash": "e2e1cfe68c8e400f9eaddc72faf38f0a1680ea0df4d4ca95cc3386ff7d2c9a60",
     "esContrast": "Grafía europea: «contacto» con c. La brasileña es «contato».",
     "audio": {
       "br": {
@@ -6531,7 +6569,7 @@
     "data": {
       "source": "Tenho poucos contactos profissionais.",
       "target": "Tengo pocos contactos profesionales.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Tengo pocos contactos de trabajo."
@@ -7218,6 +7256,7 @@
     "contentHash": "208d6710c9797376ff1a32175ae1c7c32218b7f8d2d4dd84da3ec8c446a42fba",
     "esContrast": "Plural '-l' → '-is': papel → papéis.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: OK ítem a ítem (informe-cola8-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Os ___ estão em cima da mesa. (papel)",
@@ -7243,6 +7282,7 @@
     "contentHash": "cfa0de98014f869caaebe83b1b483ad52a809a47435d646d0b0c81dc6fac2212",
     "esContrast": "Plural '-ão' → '-ões': lição → lições.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: OK ítem a ítem (informe-cola8-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "As ___ de hoje são difíceis. (lição)",

@@ -452,13 +452,26 @@ export function normalizeExerciseInput(v: unknown): unknown {
   if (!v || typeof v !== "object") return v;
   const obj = { ...(v as Record<string, unknown>) };
 
-  // (1, 2) Normalizar tipos de traducción legacy
+  // (1, 2) Normalizar tipos de traducción legacy.
+  //
+  // El lado portugués es **pt-pt**, no pt-br. Ponía pt-br porque el tipo
+  // legacy es anterior a la inversión del 2026-07-28, cuando la base del
+  // corpus era brasileña; después de la inversión la base es europea por
+  // contrato y este default se quedó atrás. Es el MISMO bug que ya se
+  // arregló en la ruta hermana de aquí abajo (`ptOverrides` → "pt-pt"):
+  // se corrigió una y se dejó la otra.
+  //
+  // No era metadato invisible: `TranslationCard.tsx:28` PINTA la etiqueta
+  // en pantalla, así que 567 de las 576 traducciones del corpus le decían
+  // «PT-BR → ES» al alumno de un curso europeo. Medido antes de tocar
+  // nada: de esas 567, **527 (93 %) no tienen ni un marcador brasileño**
+  // en su portugués — la etiqueta estaba mal, no el contenido.
   if (obj.type === "translation_es_pt" || obj.type === "translation_pt_es") {
     const data = obj.data;
     if (data && typeof data === "object") {
       const direction = obj.type === "translation_es_pt"
-        ? { sourceLang: "es", targetLang: "pt-br" }
-        : { sourceLang: "pt-br", targetLang: "es" };
+        ? { sourceLang: "es", targetLang: "pt-pt" }
+        : { sourceLang: "pt-pt", targetLang: "es" };
       obj.type = "translation";
       obj.data = { ...(data as Record<string, unknown>), ...direction };
     }

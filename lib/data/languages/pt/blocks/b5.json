@@ -8,7 +8,7 @@
       "b5-se-imperfeito-conj"
     ],
     "tags": [],
-    "contentHash": "0216821d1f8d9a07c23442df3f0add72d77a30fc3b4f16f60119da47855f79ce",
+    "contentHash": "fd569a3dfe4ebdd4e9b724ba6863cc2ab901cac224897e9595a1264165bca8f8",
     "esContrast": "Tipo 2: apódose com condicional simples: constituiria = constituiría.",
     "audio": {
       "br": {
@@ -25,7 +25,7 @@
     "data": {
       "source": "Se eu tivesse mais dinheiro, constituiria família agora.",
       "target": "Si yo tuviera más dinero, constituiría familia ahora.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Si yo tuviese más dinero, constituiría familia ahora."
@@ -76,7 +76,7 @@
       "desejo-cortes",
       "irregular"
     ],
-    "contentHash": "17061640cb4bb79e69266b2b32fa5f0710823ed6a740313f24f561a6dc1e8c99",
+    "contentHash": "e6ee44042c3aa0618a201ab09458eec3ca24af4a0e5d4f210a16f5146f5b4a03",
     "esContrast": "'Quereria' es condicional de 'querer' (irregular), menos común que 'gostaria' pero más enfático para peticiones.",
     "audio": {
       "br": {
@@ -84,21 +84,26 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "3a2539e87a237d1e0b44feddd3805e8e62c45e53b1a2c07d1c139b9bb328610e",
-        "voice": "Portuguese_Wiselady"
+        "hash": "d5f3ac185d7411cc68133b08efa178cc55f2adea9d01c85d0d5b6d5ac8c902de",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: xícara",
+    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: xícara · E2#10 2026-09-01: léxico BR→EP por swap mecánico, forma BR movida a variantOverrides['pt-br']",
     "type": "translation",
     "data": {
-      "source": "Quereria uma xícara de café, por favor?",
+      "source": "Quereria uma chávena de café, por favor?",
       "target": "¿Querría una taza de café, por favor?",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
         "¿Desejaría una taza de café, por favor?"
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "source": "Quereria uma xícara de café, por favor?"
+      }
     }
   },
   {
@@ -112,7 +117,7 @@
     "tags": [
       "regular"
     ],
-    "contentHash": "a092c0c9343b9a02f3c009865bea4495fb8c8daa4994bb7741c16ba62205f87b",
+    "contentHash": "41c6363922dc6ef7cf9cfe312daa692f3cb025a0cb88f35bf21ba177da9a8c1b",
     "audio": {
       "br": {
         "hash": "a608e4baab7849c0fa93dc82bd67a3dad5a0a7b0fd7f02acb984578608b68c98",
@@ -130,7 +135,7 @@
       "source": "En breve comenzaré a estudiar para el examen.",
       "target": "Em breve começarei a estudar para o exame.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Em breve começarei a estudar para a prova."
       ]
@@ -435,7 +440,7 @@
       "irregular",
       "futuro"
     ],
-    "contentHash": "131b0794f33696add539c4a5a79c8269be5bb53dec5961b7bd82428a6b8a47f1",
+    "contentHash": "dae42e3609134bfdd45910e52e1e6cd551845c46729536a94cf641422be8be65",
     "audio": {
       "br": {
         "hash": "b3bde39dc248579f84c139def52a327a28135b01e4e73b8243edc5eb82a20217",
@@ -452,7 +457,7 @@
     "data": {
       "source": "Faremos uma grande festa quando as aulas começarem.",
       "target": "Haremos una gran fiesta cuando empiecen las clases.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Vamos a hacer una gran fiesta cuando empiecen las clases."
@@ -500,7 +505,7 @@
       "b5-perifrastico-ir"
     ],
     "tags": [],
-    "contentHash": "125453662c5025aedc3b614398f1e68f19ba5191c039d755827e3910f0697399",
+    "contentHash": "7cc0c72f092d26850a608aa597f6817f0f20590bb1d5faefededceca87fee3c0",
     "esContrast": "En PT-BR se diría 'O que você vai fazer...' o 'você vai...'",
     "audio": {
       "br": {
@@ -518,7 +523,7 @@
       "source": "¿Qué vas a hacer este fin de semana?",
       "target": "O que vais fazer este fim de semana?",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "O que vais fazer neste fim de semana?"
       ]
@@ -862,7 +867,7 @@
       "discurso-relatado",
       "formal"
     ],
-    "contentHash": "d87c8f99a39ceb34eaaf563d1be0f9aea5755103b920450422b9759a294bcc29",
+    "contentHash": "4104847ad9c778a1765388c2f6c901639366d29c43f2678d31a0af574e30dbf5",
     "esContrast": "'Esfuerzos' = 'esforços'. El condicional de 'dever' es regular: dever + -ia → deveria.",
     "audio": {
       "br": {
@@ -881,7 +886,7 @@
       "source": "Según ella, yo debería realizar más esfuerzos para estar contenta.",
       "target": "Segundo ela, eu deveria realizar mais esforços para estar contente.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Segundo ela, eu deveria fazer mais esforços para estar contente.",
         "De acordo com ela, eu deveria realizar mais esforços para ser feliz."
@@ -900,7 +905,7 @@
       "discurso-relatado",
       "irregular"
     ],
-    "contentHash": "01a83ffb3179ac8fb08667c58a4bbd1aa4ca83d77f9ffa69213864adcb028080",
+    "contentHash": "1130b7f0b8c0eca85fd954c287a5318d6a5c43727ff5e02fcc5f426fa37d027a",
     "esContrast": "Haríamos = faríamos (irregular: fazer → faria)",
     "audio": {
       "br": {
@@ -919,7 +924,7 @@
       "source": "El profesor afirmó que nosotros haríamos el examen la próxima semana.",
       "target": "O professor afirmou que nós faríamos o exame na próxima semana.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "O professor disse que nós faríamos o exame na semana que vem.",
         "O professor informou que faríamos o exame na próxima semana."
@@ -937,7 +942,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "f18bfa32c5ce502017f7ad9eb346ff8ef9bdda99131ea37843886f72709d3980",
+    "contentHash": "fb02e114a526ed7d427c720c63ad21c768afcf2f587eea42e975c3219bb0b8a0",
     "esContrast": "Podría (condicional) se traduce como poderia; poderia (condicional) ≠ podia (imperfecto de poder)",
     "audio": {
       "br": {
@@ -956,7 +961,7 @@
       "source": "Ella dijo que podría venir mañana.",
       "target": "Ela disse que poderia vir amanhã.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Ela disse que podia vir amanhã."
       ]
@@ -973,7 +978,7 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "06cdcc8d1234f47843fc1e2c9bf4e99d24f616d22562a546ea294bef648b934e",
+    "contentHash": "c468b9f7025b373663e2d7f3b6297899af6733bb7e379f40817a2c017614fd1d",
     "esContrast": "'Constituir' en PT puede traducirse como 'constituir' o 'formar' en ES.",
     "audio": {
       "br": {
@@ -990,7 +995,7 @@
     "data": {
       "source": "Constituir família não é fácil se os preços continuarem a subir.",
       "target": "Constituir familia no es fácil si los precios siguen subiendo.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Formar una familia no es fácil si los precios siguen subiendo."
@@ -1096,7 +1101,7 @@
       "irregular",
       "desejo-cortês"
     ],
-    "contentHash": "fca26a018f248ad71af7a1a9336d23f22db2593b43ea2847b8c96ccf4f783e45",
+    "contentHash": "dbe1182b8c2413fecc8fb8c194940ea4981d624e54c91a2c1db5021b8a6b6d5f",
     "esContrast": "'Seria' es el condicional de 'ser' en portugués; el español dice 'sería', con tilde.",
     "audio": {
       "br": {
@@ -1115,7 +1120,7 @@
       "source": "¿Sería posible realizar el proyecto este año?",
       "target": "Seria possível realizar o projeto este ano?",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Será que seria possível realizar o projeto este ano?",
         "Seria viável realizar o projeto este ano?"
@@ -1134,7 +1139,7 @@
       "irregular",
       "futuro"
     ],
-    "contentHash": "5bf8da9c573f443617ca9d7f89ac7e7bccbd6a555a37fe0857e6675904bd7519",
+    "contentHash": "e34a249399da981d054cb609c0d6f397192e7f0cfbe1f773b95a7718b553758f",
     "audio": {
       "br": {
         "hash": "9d50027a295f9d09281cf99dedd86c7881a0ec818d7b6376417dfcf1a68819c8",
@@ -1151,7 +1156,7 @@
     "data": {
       "source": "Eu porei em prática tudo o que aprendi.",
       "target": "Yo pondré en práctica todo lo que aprendí.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
     }
@@ -1201,7 +1206,7 @@
       "b5-perifrastico-ir"
     ],
     "tags": [],
-    "contentHash": "8b78b2a6d02f1f4892cbed8778eab6537583ce50b43765fcee30e388c8ac4246",
+    "contentHash": "6d5467013d20ec25848097f8c83b960f766e5decfafa115cf3bbc21f04c42e71",
     "esContrast": "'Ahorrar' se dice 'poupar' en PT, no 'economizar'.",
     "audio": {
       "br": {
@@ -1219,7 +1224,7 @@
       "source": "¿Vas a ahorrar dinero para el viaje este verano?",
       "target": "Vais a poupar dinheiro para a viagem este verão?",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Vais a ahorrar dinheiro para a viagem este verão?"
       ]
@@ -1237,7 +1242,7 @@
       "irregular",
       "futuro"
     ],
-    "contentHash": "8c20817dee9710d6bc4e015142384c669cac14974b6aa12f6ccc25b220aac0b6",
+    "contentHash": "b8343f56eacd29d6d8d5daac8303e117d5aa965c1445ff82c9a15b4cea8b3d56",
     "audio": {
       "br": {
         "hash": "c7bcf4ca2ae15bc18ba4e91a903d2348ffcd5a8b2dd755075c7fe2860a232b94",
@@ -1254,7 +1259,7 @@
     "data": {
       "source": "O menino sonhador dirá a verdade.",
       "target": "El niño soñador dirá la verdad.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
     }
@@ -1300,8 +1305,9 @@
       "formal"
     ],
     "contentHash": "361162f9edde5e889e92ac905aa48d8db1998725efa4ad19adf2bbb821843776",
-    "esContrast": "'Vir' → 'virá' no futuro. Em es seria 'vendrá', mas o acento é igual.",
+    "esContrast": "'Vir' hace 'virá' en el futuro simple; el español cambia de radical y dice 'vendrá'. Las dos formas son agudas y llevan tilde.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Disseram que ele ___ para a reunião amanhã.",
@@ -1356,7 +1362,7 @@
       "b5-se-condicional"
     ],
     "tags": [],
-    "contentHash": "604cd883f3fbf548ad077f2404adfc789db60927ae74ab934f0a4ba2207b4265",
+    "contentHash": "5eaa959a343eabcc5df3c7c9bb47e6ce0beb2abf7b2af7b237acc024ae5220a5",
     "esContrast": "Tipo 2: imperfeito do conjuntivo (constituísses) + condicional (terias).",
     "audio": {
       "br": {
@@ -1374,7 +1380,7 @@
       "source": "Si constituyeras una família, tendrías muchos más gastos.",
       "target": "Se constituísses uma família, terias muitas mais despesas.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Se constituísses uma família, terias muitas mais despesas."
       ]
@@ -1453,7 +1459,7 @@
       "b5-se-imperfeito-conj"
     ],
     "tags": [],
-    "contentHash": "4ecf15abd57711acdb5aeabf7ab70f1f6ff09f6007a74936887262b1f0865e2f",
+    "contentHash": "b706700cfdf628072e395909425eb718f6f292e04c2e730fa163f246ad998c66",
     "esContrast": "Tipo 2: se + imperfeito do subjuntivo → se + imperfecto de subjuntivo.",
     "audio": {
       "br": {
@@ -1470,7 +1476,7 @@
     "data": {
       "source": "Se fizesse mais esforço, conseguiria o emprego.",
       "target": "Si hiciera más esfuerzo, conseguiría el trabajo.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Si hiciese más esfuerzo, conseguiría el trabajo."
@@ -1512,7 +1518,7 @@
     "tags": [
       "coloquial"
     ],
-    "contentHash": "a13d18af4c0cb11dc6417f6f01728b767b91c60ada3aa55338ac32962b1a9747",
+    "contentHash": "ea1f3e7ccbd9d5bca06e8f5c9ca142b4946441251843879ea8f75fabe68a5b66",
     "esContrast": "En BR es común 'subir' con 'preços'; en PT-PT también se dice 'subir'.",
     "audio": {
       "br": {
@@ -1531,7 +1537,7 @@
       "source": "Los precios van a subir el próximo mes.",
       "target": "Os preços vão subir no próximo mês.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Os preços vão subir no mês que vem."
       ]
@@ -1643,7 +1649,7 @@
     "tags": [
       "informal"
     ],
-    "contentHash": "f597d7a08ea1f8ec3b70c62cf0439109570d62c12d508c4c224d52f0a199d77e",
+    "contentHash": "16bfc48baefe6bf6823f1cbd88ed84c675725a7e4c9b7f9dd6603fd44f08cab4",
     "esContrast": "concreto/concreta cambia según el género del sujeto",
     "audio": {
       "br": {
@@ -1661,7 +1667,7 @@
     "data": {
       "source": "Ele é uma pessoa muito concreta, não perde tempo com fantasias.",
       "target": "Él es una persona muy concreta, no pierde tiempo con fantasías.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Él es muy concreto, no pierde tiempo con fantasías."
@@ -1803,7 +1809,7 @@
       "irregular",
       "regional"
     ],
-    "contentHash": "e1a3aa979bb54f6c8166a1bef23924841cdd72439f587d5fd49feb65319fa318",
+    "contentHash": "a09aeac7d48782ef48e55fa6aaa03809594faa96922935d33ded399d845b2696",
     "audio": {
       "br": {
         "hash": "a8367f5b4cf472e26a1efe435894e91c2bb5c973c6d05c321b67c4d0c099327a",
@@ -1820,7 +1826,7 @@
       "source": "El sabe que la vida le traerá nuevos desafíos, pero estará preparado.",
       "target": "Ele sabe que a vida lhe trará novos desafios, mas estará preparado.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Ele sabe que a vida lhe trará novos desafios, mas estará pronto."
       ]
@@ -1874,7 +1880,7 @@
       "informal",
       "regional"
     ],
-    "contentHash": "e9e321a23317b9c7584b8a2ba82fd12aad21eb20bd00742f6a31c8e9e4eadeb3",
+    "contentHash": "09a098bfdda9c9a3fc44a4b536bb29e0b7ef9c2e0da2c09cc239c34645cc99d8",
     "esContrast": "Vocês = ustedes (BR) / vosotros (PT-PT)",
     "audio": {
       "br": {
@@ -1891,7 +1897,7 @@
     "data": {
       "source": "Vocês vão adorar esta cidade!",
       "target": "¡Vosotros vais a adorar esta ciudad!",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "¡Vais a adorar esta ciudad!"
@@ -1978,7 +1984,7 @@
     "tags": [
       "regular"
     ],
-    "contentHash": "fbfc12a360f58b401b33cc22194ad2840622af26ebcef94cd561913e2e000851",
+    "contentHash": "84f6318548b45fc18d91984354e3297c33d8e5851dabebfa5da139c0eb4c7a34",
     "audio": {
       "br": {
         "hash": "e6516ecc5c61710ea7b10f09fb72a7df98b8d89ffb004a9bfd70f9cdd0c7e3f4",
@@ -1996,7 +2002,7 @@
       "source": "Ella realizará sus sueños el próximo año.",
       "target": "Ela realizará os seus sonhos no próximo ano.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Ela vai realizar os sonhos dela no próximo ano."
       ]
@@ -2107,7 +2113,7 @@
       "formal",
       "desejo-cortês"
     ],
-    "contentHash": "423a5214a44face4bae6050a68095ee0c36be229d4a1a305b34e6b64f4ead21d",
+    "contentHash": "139b0107205eee91ed2f9347c500969d51b60fb336ed4f7d7979806ef043a876",
     "esContrast": "En PT-BR: me dar; en PT-PT: dar-me (colocación del pronombre)",
     "audio": {
       "br": {
@@ -2125,7 +2131,7 @@
       "source": "¿Podrías darme un consejo?",
       "target": "Poderia dar-me um conselho?",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Poderia me dar um conselho?",
         "Será que poderia dar-me um conselho?",
@@ -2271,7 +2277,7 @@
       "b5-se-condicional"
     ],
     "tags": [],
-    "contentHash": "e2b2787923bb8dc811711ca3209b1e9fe394f23d3f41c0c718a58f11f78d8697",
+    "contentHash": "11b98656ea8ebe5a78fbc526e1634217cb28caddee185aaba706cba28cfc7724",
     "esContrast": "Tipo 2: imperfeito do conjuntivo (houvesse) + condicional (constituirias).",
     "audio": {
       "br": {
@@ -2289,7 +2295,7 @@
       "source": "Si no hubiera preços tão altos, constituirías una família con más facilidad.",
       "target": "Se não houvesse preços tão altos, constituirias uma família com mais facilidade.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Se não existissem preços tão altos, constituirias uma família com mais facilidade."
       ]
@@ -2488,7 +2494,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "358e103cc02a355f21b8d239f48ed7fd6248278b20f855b7194c84ff10311402",
+    "contentHash": "97fcf49e38e39492a667a838941e126d1231faae9aa4f06eb6cd9d57c9071e49",
     "audio": {
       "br": {
         "hash": "94bd35151eb0936949e671f842fe88ae7ba5dc01a1c5237840329a66b52fa962",
@@ -2505,7 +2511,7 @@
       "source": "Ellos vendrán a la ceremonia aunque no puedan quedarse hasta el final.",
       "target": "Eles virão à cerimônia embora não possam ficar até o final.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Eles virão à cerimónia embora não possam ficar até ao final."
       ]
@@ -2553,7 +2559,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "ab601c35b2d8209eb22d764b4c36c7ee9605d6ea44cf60d7d16c8db1e370d798",
+    "contentHash": "f6edcd056921a5a604aab4d4d0dc158d0388160f2e286f89c3ae55ea9571430f",
     "audio": {
       "br": {
         "hash": "6895b77fe2b844c232037eda5b8c785934d4b5df3f121d1167376e60e4a27175",
@@ -2570,7 +2576,7 @@
       "source": "¿Qué harás tú cuando termines el curso?",
       "target": "O que farás tu quando terminares o curso?",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "O que você fará quando terminar o curso?"
       ]
@@ -2753,7 +2759,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "91285ccf5ab734144ac05c50b45d10d9664c8d9b751144427730f35314a9b16c",
+    "contentHash": "e815b912a7d5603324afa061fcf29c4902a166f4b5992d64e078209d5b14a46c",
     "audio": {
       "br": {
         "hash": "1a64e9c8a7278e3b4e8e8dd60ac8cc97d0cef9dffd3cf8d9176b0353463b9906",
@@ -2770,7 +2776,7 @@
       "source": "Nosotros veremos si el sueño del joven se cumplirá pronto.",
       "target": "Nós veremos se o sonho do jovem se cumprirá em breve.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Nós veremos se o sonho do sonhador se cumprirá em breve."
       ]
@@ -3047,7 +3053,7 @@
       "b5-perifrastico-formas"
     ],
     "tags": [],
-    "contentHash": "7aeda1795079a957c8c2cf2839141e570ba6b8e17c89fbfe52cc95381e87ccfd",
+    "contentHash": "5887d01f664871b4532aa590ef1be68ea966d2c82839278292a5047abce86d62",
     "esContrast": "'Concreta' se escribe igual que en español. Ojo: el material de construcción en Portugal es 'betão'; 'concreto' con ese sentido es de Brasil.",
     "audio": {
       "br": {
@@ -3066,7 +3072,7 @@
       "source": "Ella va a ser una arquitecta muy concreta, siempre con los pies en la tierra.",
       "target": "Ela vai ser uma arquitecta muito concreta, sempre com os pés na terra.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Ela vai ser uma arquitecta muito concreta, sempre com os pés bem assentes."
       ]
@@ -3143,7 +3149,7 @@
     "tags": [
       "coloquial"
     ],
-    "contentHash": "338d8d3acbfcb37940ac8a7162696acf077118b60f5e8bc9b2c5c6dd9b5e2ad7",
+    "contentHash": "0c15482b783892b487385a45cad5e0dc70062bfa6890ffd73eaffd4dc0944248",
     "esContrast": "Tipo 1 con 'si' tras negación: presente (fizeres) + futuro (irás).",
     "audio": {
       "br": {
@@ -3161,7 +3167,7 @@
       "source": "No irás a la panadería si no haces esfuerzo ahora.",
       "target": "Não irás à padaria se não fizeres esforço agora.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Não irás à padaria se não fizeres um esforço agora."
       ]
@@ -3237,7 +3243,7 @@
       "irregular",
       "desejo-cortes"
     ],
-    "contentHash": "c76956284e0b73b0d4e53e25e27ea0eaf6ebe375c67047464ccf7cf6533ca9c9",
+    "contentHash": "eec8193c46eec37f3e6ddd7c807e7118519dca39d8fe1cd9fe2f16436da690d3",
     "esContrast": "PT 'poderia' vs ES 'podría' — formas casi idénticas, pero el PT es condicional de 'poder'.",
     "audio": {
       "br": {
@@ -3254,7 +3260,7 @@
     "data": {
       "source": "Poderia me dar um conselho sobre como resolver isso?",
       "target": "¿Podría darme un consejo sobre cómo resolver esto?",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "¿Podría usted darme un consejo sobre cómo resolver esto?"
@@ -3461,7 +3467,7 @@
     "tags": [
       "informal"
     ],
-    "contentHash": "79f5a65e52656a9c4b1d9f423bcb4941ab6be134fcdae9e6e5a09dbc0698e897",
+    "contentHash": "7a69442093b5917d3523227c1a38adc5eed77a6d4bdfbaa6bdefaa716219429f",
     "audio": {
       "br": {
         "hash": "d19260ced8a7776dec5027fcc69001b01e72e18d2241103642cd199ca24b613c",
@@ -3478,7 +3484,7 @@
     "data": {
       "source": "Vou falar com ela amanhã.",
       "target": "Voy a hablar con ella mañana.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Hablaré con ella mañana."
@@ -3581,7 +3587,7 @@
     "tags": [
       "informal"
     ],
-    "contentHash": "b84214c929c243087329c401bcd2cfc3581bbbca0b74f4b95c78f4db74931ef4",
+    "contentHash": "43eb0160502e95d91d23b9d9067907a62d9471ae397d6935ab1f9973476b36a6",
     "esContrast": "'Sonhador' es el cognado exacto de 'soñador': al grupo 'nh' portugués le corresponde la 'ñ' española.",
     "audio": {
       "br": {
@@ -3599,7 +3605,7 @@
     "data": {
       "source": "O meu avô era um sonhador, sempre acreditou no impossível.",
       "target": "Mi abuelo era un soñador, siempre creyó en lo imposible.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Mi abuelo era soñador, siempre creyó en lo imposible."
@@ -3661,7 +3667,7 @@
       "discurso-relatado",
       "irregular"
     ],
-    "contentHash": "5394fc3cb1366ce8547ae6285da0bdf955779da29cc06467257279fe24e615ea",
+    "contentHash": "7d924123118943d9b5590a0be924c518637b4184f6ab4b8c7eb0105d85b2abb1",
     "esContrast": "'Faria' viene de 'fazer' (irregular) y equivale a 'haría' de 'hacer' — misma irregularidad en ambos idiomas.",
     "audio": {
       "br": {
@@ -3679,7 +3685,7 @@
     "data": {
       "source": "Ele contou que faria um grande esforço para realizar o projeto.",
       "target": "Él contó que haría un gran esfuerzo para realizar el proyecto.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Él dijo que haría un gran esfuerzo para llevar a cabo el proyecto."
@@ -3762,7 +3768,7 @@
       "informal",
       "coloquial"
     ],
-    "contentHash": "0190e7b3cbfbac8d97616ee694dad9db35fc1451a0d8c69b0b17358c618a7d2b",
+    "contentHash": "a2fec5b5ea834ec316d0c210ebd693aa6cefe18c52d4d37f55fec591a7ebb00b",
     "esContrast": "reclamar = reclamar/quejarse en contexto informal",
     "audio": {
       "br": {
@@ -3779,7 +3785,7 @@
     "data": {
       "source": "Esses preços estão absurdos, vou reclamar directamente com o director!",
       "target": "¡Esos precios son absurdos, voy a quejarme directamente con el director!",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "¡Esos precios son absurdos, voy a reclamar directamente al director!"
@@ -3916,7 +3922,7 @@
       "discurso-relatado",
       "irregular"
     ],
-    "contentHash": "2d50d064a65d3ba8b96d5aafe2059511cc0932e51a608ee87e944dceca85f0e2",
+    "contentHash": "12691f675a25b9f7800c9c9e4ff6f9b5f165bfa065f355994c19ef5c4e8f7b89",
     "esContrast": "'Veria' se forma sobre el infinitivo (ver + ia), como en español. En portugués sólo dizer, fazer y trazer son irregulares en futuro y condicional: diria, faria, traria.",
     "audio": {
       "br": {
@@ -3934,7 +3940,7 @@
     "data": {
       "source": "A testemunha afirmou que veria tudo claramente naquela noite.",
       "target": "El testigo afirmó que vería todo claramente aquella noche.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "La testigo afirmó que vería todo con claridad aquella noche."
@@ -3950,7 +3956,7 @@
       "b5-se-condicional"
     ],
     "tags": [],
-    "contentHash": "df0b057e9f84552ce6e640e35af9b0bd597761a175de0f28937a54c8dd106384",
+    "contentHash": "05ada4761749a9f0ee866c9b30e20995682477190a0ae48a13d0373b85ee7f51",
     "esContrast": "Tipo 2 PT usa imperfeito do conjuntivo (constituísses), no 'si constituyeras' que en ES ya es subjuntivo imperfecto.",
     "audio": {
       "br": {
@@ -3968,7 +3974,7 @@
       "source": "Si constituyeras una familia, necesitarías más espacio en casa.",
       "target": "Se constituísses uma família, precisarias de mais espaço em casa.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Se constituísses uma família, terias necessidade de mais espaço em casa."
       ]
@@ -4038,7 +4044,7 @@
       "b5-se-futuro-conj"
     ],
     "tags": [],
-    "contentHash": "c6384f3ef5cb21f01dda46a261bcae9ebd68bba1cfb77a6add74b6e2a1871a10",
+    "contentHash": "b3e7b68a3b5eb05ba31a94ebd1c85f8fbfe08249a0afad31995b7375ad7299c6",
     "audio": {
       "br": {
         "hash": "6282a32ae28f42efcc24e18c36bbb26bc7bf9797cbf5872b2ee0bcfd4a56c2b2",
@@ -4054,7 +4060,7 @@
     "data": {
       "source": "Se eu for à padaria amanhã, compro pão fresco.",
       "target": "Si voy a la panadería mañana, compro pan fresco.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Si yo voy a la panadería mañana, compro pan fresco."
@@ -4149,7 +4155,7 @@
       "b5-se-imperfeito-conj"
     ],
     "tags": [],
-    "contentHash": "dec27757759bb21d32615bad228d64900ce8d82dd3bac89b67cae3483892360e",
+    "contentHash": "1f1e5b7a2ebc8a6fa0ead421c61b1cbdb85fc1d29bfbb33609057c1636608aeb",
     "esContrast": "Tipo 2: se + imperfeito do subjuntivo + condicional. En español puedes usar subjuntivo imperfecto.",
     "audio": {
       "br": {
@@ -4166,7 +4172,7 @@
     "data": {
       "source": "Se ele constituisse família, teria uma vida mais estável.",
       "target": "Si él constituyera familia, tendría una vida más estable.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Si él constituyese familia, tendría una vida más estable."
@@ -4184,7 +4190,7 @@
     "tags": [
       "formal"
     ],
-    "contentHash": "57337f29b18fc9af5524955c6631ed78a5806ad54c0a61df45210bbe25fe7a14",
+    "contentHash": "e7df7d894b6af3564ef02127ad38536a5d514b5b7c0ca0f3da60e32ec9b5aa4e",
     "esContrast": "'Ahorrar' se dice 'poupar' (también vale 'economizar'); 'ahorrar' no existe en portugués.",
     "audio": {
       "br": {
@@ -4203,7 +4209,7 @@
       "source": "Vamos a presentar un plan concreto para ahorrar en precios de vivienda.",
       "target": "Vamos apresentar um plano concreto para poupar em preços de habitação.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Vamos apresentar um plano concreto para poupar nos preços da habitação."
       ]
@@ -4322,7 +4328,7 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "39eb9b3f82b9ab008e266e043d16858bf8296833677011fba20995a969ec018d",
+    "contentHash": "bfef877e91d1c4c584e3a8a85b9a0d1aab71f086826d6e00afd27598157fd73e",
     "esContrast": "'Sonhador' en PT puede ser positivo (visionario) o negativo (quimeras); contexto importa.",
     "audio": {
       "br": {
@@ -4340,7 +4346,7 @@
       "source": "Voy a ahorrar para cumplir mi sueño de viajar a Brasil.",
       "target": "Vou poupar para cumprir o meu sonho de viajar ao Brasil.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Vou ahorrar para cumprir o meu sonho de viajar ao Brasil."
       ]
@@ -4385,7 +4391,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "03ceed90ab886e6fa89ad413c307e11431f32ad247f61b3af238ced732e42ddc",
+    "contentHash": "2b7d59bb99e785531e654826e1435497268a24a773b7512b96858023b739d3fc",
     "esContrast": "En PT-BR se usa 'me' como pronombre átono, mientras PT-PT conserva la enclisis 'dir-te-ei' en oración principal afirmativa.",
     "audio": {
       "br": {
@@ -4403,7 +4409,7 @@
       "source": "Dime lo que querías decirme y te diré si podré ayudarte.",
       "target": "Diz-me o que querias dizer-me e eu dir-te-ei se poderei ajudar-te.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Dize-me o que querias dizer-me e eu dir-te-ei se poderei ajudar-te."
       ]
@@ -4458,7 +4464,7 @@
       "irregular",
       "futuro"
     ],
-    "contentHash": "888cb1f7f3abeb42451ea7ebeaeaae5354104d99bc85597a6126b4c9b53b2637",
+    "contentHash": "64f9877789a73860166c13bcc1d65f61b0b3148024cd625e5fddee3d37ddedce",
     "audio": {
       "br": {
         "hash": "f8f64c8386215bc36d0be379c586b286c9b7096d586accce76bf2d5be4ba1734",
@@ -4475,7 +4481,7 @@
     "data": {
       "source": "Quando vierem, já terá terminado.",
       "target": "Cuando vengan, ya habrá terminado.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
     }
@@ -4549,7 +4555,7 @@
       "irregular",
       "futuro"
     ],
-    "contentHash": "0c266fefb6c0a98c1e67ccebb1158632e3d1c0bcd26d58aa983ce6c4f08b0cf3",
+    "contentHash": "4557a2389a6a03de878e67e7f4a55bbc08335826b9b794b6525c9930255bae5a",
     "audio": {
       "br": {
         "hash": "5b6998b6ae2ec554698506ed8a30b12ac2a90775ea58f5fdbc73f218f37700a3",
@@ -4566,7 +4572,7 @@
     "data": {
       "source": "Em breve saberemos as novidades.",
       "target": "Pronto sabremos las novedades.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
     }
@@ -4641,7 +4647,7 @@
     "tags": [
       "informal"
     ],
-    "contentHash": "bb8e486996d68074f8bb1728a2c9b8cc94d41102dc45bd899b2375ce83dfe9b3",
+    "contentHash": "9ea31bd19acaca94e1ffd7ff04c4f847acf224ca2d159db1b2ac2b33c56efee4",
     "audio": {
       "br": {
         "hash": "32b5cfcf72a99706e0e7928454f38bee1234582d5167d1f33ae4e8e3eafe4f55",
@@ -4658,7 +4664,7 @@
     "data": {
       "source": "Vou ser mais concreta: precisamos de resultados.",
       "target": "Voy a ser más concreta: necesitamos resultados.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Voy a ser más concreta: necesitamos resultados."
@@ -4711,9 +4717,10 @@
     "contentHash": "affe348990bae9f08937570e3fab14582a1b77215d3885dd449e869ebbc5bbdd",
     "esContrast": "Em português usa-se o futuro do conjuntivo 'tiver', não 'teria' como no condicional espanhol.",
     "variantStatus": "divergent",
+    "variantVerificacion": "E2#10 2026-09-01: léxico BR→EP por swap mecánico, forma BR movida a variantOverrides['pt-br']",
     "type": "fill_blank",
     "data": {
-      "sentence": "Se eu ___ dinheiro suficiente, vou comprar um novo celular.",
+      "sentence": "Se eu ___ dinheiro suficiente, vou comprar um novo telemóvel.",
       "blanks": [
         {
           "position": 0,
@@ -4724,7 +4731,7 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "sentence": "Se eu ___ dinheiro suficiente, vou comprar um novo telemóvel."
+        "sentence": "Se eu ___ dinheiro suficiente, vou comprar um novo celular."
       }
     }
   },
@@ -4770,7 +4777,7 @@
     "tags": [
       "formal"
     ],
-    "contentHash": "3db75c7fc134f41f4c624ced4029053ede509dfbc5636f60823d92e0414db2fe",
+    "contentHash": "e44ee854e694b667b30b7929e1cbe25dae6d95a337fec8e66a1c69c658c6d367",
     "esContrast": "Tipo 2: imperfeito do conjuntivo (fossem) tras 'se' inversionado.",
     "audio": {
       "br": {
@@ -4788,7 +4795,7 @@
       "source": "Constituirías una família más próspera si los preços fueran más justos.",
       "target": "Constituirias uma família mais próspera se os preços fossem mais justos.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Constituirias uma família mais próspera caso os preços fossem mais justos."
       ]
@@ -5037,7 +5044,7 @@
     "tags": [
       "discurso-relatado"
     ],
-    "contentHash": "78950d222ef577eed5eb3433d53a6c22082b6d0844ab6b5541e22c200be3aaaa",
+    "contentHash": "1e1da642c2717393671eeeb5c4e13dfdd0682b3a6871cb7d77bc8e7fc1af245b",
     "esContrast": "'Seria adiada' (futuro del pretérito pasivo de 'adiar') equivale a 'sería pospuesta' en español.",
     "audio": {
       "br": {
@@ -5055,7 +5062,7 @@
     "data": {
       "source": "O gerente informou que a reunião seria adiada para quinta-feira.",
       "target": "El gerente informó que la reunión sería pospuesta para el jueves.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "El gerente informó que la reunión se postergaría para el jueves."
@@ -5075,7 +5082,7 @@
       "desejo-cortês",
       "irregular"
     ],
-    "contentHash": "ecca4afde2f78f6a8b19450fb93aa3034b7731763dc4c53e8de41bfe560ac141",
+    "contentHash": "46ccdb3f3c7b843e9499ebd8ba6c1e8e842bcead23eeb2ec33cab213a143bb08",
     "esContrast": "Querría = querereria/quereria; el condicional de querer es irregular",
     "audio": {
       "br": {
@@ -5093,7 +5100,7 @@
       "source": "Pregunté si él querría darme un consejo antes de realizar el proyecto.",
       "target": "Perguntei se ele querereria dar-me um conselho antes de realizar o projeto.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Perguntei se ele gostaria de dar-me um conselho antes de realizar o projeto.",
         "Questionei se ele quereria me dar um conselho antes de realizar o projeto."
@@ -5210,7 +5217,7 @@
       "b5-se-condicional"
     ],
     "tags": [],
-    "contentHash": "91c7e112715fd0938695332e40029ddbf9625e13463ceb7c89da1e4c3a7c8f1e",
+    "contentHash": "6b0ce696df9a6edfe1c89832ae7ce68b6fad2b22d888b4735e9bac4efb4bc45b",
     "esContrast": "Tipo 2 con subjuntivo: 'que fizesses' (imperfeito) dentro de la condicional.",
     "audio": {
       "br": {
@@ -5228,7 +5235,7 @@
       "source": "Si el esfuerzo que haces fuera maior, tendrías melhores preços.",
       "target": "Se o esforço que fizesses fosse maior, terias melhores preços.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Se o esforço que fizesses fosse maior, obterias melhores preços."
       ]
@@ -5280,7 +5287,7 @@
     "tags": [
       "informal"
     ],
-    "contentHash": "5e2bfcf1ac7db4242d0c68a151a267691dc88afd0e895b1279016e439fee4cd7",
+    "contentHash": "780428f08728d7bbc4dd203da1ae553b6e62c0f5392813c2620725e24ee73a29",
     "audio": {
       "br": {
         "hash": "6985e4a89e642fbf1c56cca5febf98f89c6aded39b25397bba93b923e76ebf56",
@@ -5296,7 +5303,7 @@
     "data": {
       "source": "Vais poupar muito dinheiro assim.",
       "target": "Vas a ahorrar mucho dinero así.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Ahorrarás mucho dinero así."
@@ -5312,7 +5319,7 @@
       "b5-se-condicional"
     ],
     "tags": [],
-    "contentHash": "c3dc4b542136685976901059b82494decba3845b7fa8087ef66d95a361670002",
+    "contentHash": "75e239c3fca9d74242b40eed5c9f0fc682b7cb1429c491463c5c1bcde0999a51",
     "esContrast": "Tipo 1: 'si + presente' (são), no 'si sean' con subjuntivo.",
     "audio": {
       "br": {
@@ -5330,7 +5337,7 @@
       "source": "Si los precios son tan altos, tendré que hacer un gran esfuerzo.",
       "target": "Se os preços são tão altos, terei de fazer um grande esforço.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Se os preços são tão altos, vou ter de fazer um grande esforço."
       ]
@@ -5440,7 +5447,7 @@
     "tags": [
       "informal"
     ],
-    "contentHash": "00be6e10869ae9a80586b876964368dba9eff123d13c3167744b1bdeb3e412df",
+    "contentHash": "51a97a057f9bd3135202aa716d12c079f1dc0bf837f22017ec7cee71420a148a",
     "audio": {
       "br": {
         "hash": "078dcf5b575d924cccf1aec492c249c12e6ae88aaa10333be00c9b71710f36fd",
@@ -5457,7 +5464,7 @@
     "data": {
       "source": "Os preços vão baixar no próximo mês.",
       "target": "Los precios van a bajar el próximo mes.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Los precios bajarán el próximo mes."
@@ -5626,7 +5633,7 @@
     "tags": [
       "coloquial"
     ],
-    "contentHash": "817a0ac95ecdc13c46052a4a998ae3aaa0b22fe3b1f7baa2ca9255405bbde8b4",
+    "contentHash": "854c763fc4fd4f11822e1d8916aacb168e038f849a08816c551fb29ebd725c6b",
     "esContrast": "'Soñador' = 'sonhador' en PT, funciona igual.",
     "audio": {
       "br": {
@@ -5645,7 +5652,7 @@
       "source": "Mi hermano dice que va a ser un sueño, pero es muy soñador.",
       "target": "O meu irmão diz que vai ser um sonho, mas é muito sonhador.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "O meu irmão diz que vai ser um sonho, mas é muito sonhador."
       ]
@@ -5665,6 +5672,7 @@
     "contentHash": "d140e7593a7917e22342c7787f5c0530cf1f7767e9e9f51fe21b89b16d2ecdd7",
     "esContrast": "'Caso' funciona como 'se' con el mismo valor de tipo 2.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "revisión manual E2#10 2026-09-01: DUDA — Lengua correcta: «Caso os preços subissem demais, muitos clientes não comprariam» es gramatical (caso + imperfeito do conjuntivo). Dos reparos de estilo: la glosa habla de «tipo 2», jerga heredada de los manuales de ingl (informe-cola8-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Caso os preços ___ demais, muitos clientes não comprariam.",
@@ -5816,7 +5824,7 @@
       "b5-se-futuro-conj"
     ],
     "tags": [],
-    "contentHash": "c6c41885d5f04fcee61a76e3be5f296d593a72954004fc23e4cfec26f27f71a8",
+    "contentHash": "976ba071dccc87b6ce1ab990b1a6cc6e5e4ff8f79191bfc83303df90d5284382",
     "esContrast": "Tipo 1: prótase com futuro do indicativo (fores) = futuro simple en español.",
     "audio": {
       "br": {
@@ -5833,7 +5841,7 @@
     "data": {
       "source": "Se fores à padaria, traz-me um bolo.",
       "target": "Si vas a la panadería, tráeme un pastel.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Si vas a la panadería, me traes un pastel."
@@ -5853,7 +5861,7 @@
       "desejo-cortês",
       "formal"
     ],
-    "contentHash": "88e345e23735f090101490f0f69443c652704184ab4fa739714a3f66035aec82",
+    "contentHash": "784a46f698da20b44d8a462744b3fc888de8830bf51e1c455d3237d1dadc2d0a",
     "esContrast": "Esfuerzo = esforço (con 'ç'); ayudarte = ajudá-lo en PT formal",
     "audio": {
       "br": {
@@ -5871,7 +5879,7 @@
       "source": "Me gustaría hacer un esfuerzo para ayudarte.",
       "target": "Eu gostaria de fazer um esforço para ajudá-lo.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Gostaria de fazer um esforço para ajudá-lo.",
         "Eu faria um esforço para ajudá-lo.",
@@ -5955,8 +5963,9 @@
       "formal"
     ],
     "contentHash": "dcda4a67f0dec8f17387ffe0f38f6c9bdfdda7b94ff81e269c3f00d653586063",
-    "esContrast": "'Será' parece 'será' em es, mas usa-se para futuro, não só para conjetura.",
+    "esContrast": "'Será' se escribe igual que en español y, como en español, sirve tanto para el futuro real como para la conjetura; aquí es futuro.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "O professor disse que a prova ___ muito difícil.",
@@ -6014,7 +6023,7 @@
     "tags": [
       "discurso-relatado"
     ],
-    "contentHash": "6bf3e48f76e9f2cd3fab6adafd642efe237179b72d70b41653dc1cc3b553cac2",
+    "contentHash": "cc461a52027d1dc0d38d85782b3e4411a446e2f8fea2f3b5a7990f069204ec42",
     "audio": {
       "br": {
         "hash": "56bdba9cd9ff3629a600f5f30d4e01c13ed6487a9b99c75a7fc04257e5c201cc",
@@ -6030,7 +6039,7 @@
     "data": {
       "source": "Ela disse que teria muito prazer em nos ajudar.",
       "target": "Ella dijo que tendría mucho placer en ayudarnos.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Ella dijo que tendría mucho gusto en ayudarnos."
@@ -6152,7 +6161,7 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "c7d9423c7ca3bf5514646186ef9e278720ab32ca6b8903a3ebd3b67745606db4",
+    "contentHash": "ef051684657fde7ab48bb1c1ae516b2a6660d80fc0dd627ccaed4a157ca4c6bc",
     "esContrast": "El futuro perifrástico portugués no lleva 'a': 'vou falar', nunca '*vou a falar'. Y el posesivo va con artículo: 'a minha mãe'.",
     "audio": {
       "br": {
@@ -6171,7 +6180,7 @@
       "source": "Voy a hablar con mi madre mañana.",
       "target": "Vou falar com a minha mãe amanhã.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Vou falar com a minha mãe amanhã."
       ]
@@ -6226,7 +6235,7 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "cea9db3fdc24df0c156cf5515f3d656436f9e7ff2ea86c19ae70f8dae9645e48",
+    "contentHash": "8dc1ba5ca69fe909c6e189db8e7b9fbaa921c4c153b39803666b0469d4bce7a1",
     "esContrast": "PT-BR usa 'continuar a + infinitivo'; ES usa 'continuar + gerundio'.",
     "audio": {
       "br": {
@@ -6243,7 +6252,7 @@
     "data": {
       "source": "Se os preços continuarem a aumentar, muitos vão embora do país.",
       "target": "Si los precios continúan aumentando, muchos se van del país.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Si los precios siguen subiendo, muchos abandonarán el país."
@@ -6479,7 +6488,7 @@
       "b5-se-condicional"
     ],
     "tags": [],
-    "contentHash": "05adba15017240501e26455220801338e59d74b1e821818eabf9e91e4aa8206f",
+    "contentHash": "53004a25d5709353a9dfc6e40826e4917e5c7bab33e110f055a9f754b1d9d2f9",
     "audio": {
       "br": {
         "hash": "257aaf85906d2c76e8056bbfa4b92dd0a0fe594dd506e65845ec6a1a0b3cf3c5",
@@ -6495,7 +6504,7 @@
     "data": {
       "source": "Se os preços baixarem, vamos comprar mais.",
       "target": "Si los precios bajan, vamos a comprar más.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Si los precios bajan, compraremos más."
@@ -6605,7 +6614,7 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "f8fd9a2e49cda06aa4ae43937350707fefe660f01e4ce41b953012ebda1b00f5",
+    "contentHash": "149d64b231a303eff21dd99902e4b4428b52283f00371a141c7153f69cab0c11",
     "esContrast": "En PT tipo 1: 'si + presente' (não subjuntivo), no 'si + subjuntivo' como en ES.",
     "audio": {
       "br": {
@@ -6623,7 +6632,7 @@
       "source": "Si no haces un esfuerzo, no irás a la panadería mañana.",
       "target": "Se não fizeres um esforço, não irás à padaria amanhã.",
       "sourceLang": "es",
-      "targetLang": "pt-br",
+      "targetLang": "pt-pt",
       "acceptedAlternatives": [
         "Se não fizeres esforço, não irás à padaria amanhã."
       ]
