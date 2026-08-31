@@ -1,0 +1,224 @@
+# Partición de conceptos — 37 conceptos gruesos → 143 sub-puntos
+
+ítems del corpus: 2407 · asignaciones movidas a un sub-punto: 180 (de ellas 0 sólo casan mirando la explicación, no el contenido: más débiles)
+
+| concepto padre | ítems | → sub-puntos | residuo |
+|---|---:|---|---:|
+| b1-vogais-nasais | 46 | nasal-ao-oes:18 · nasal-til:3 · nasal-m-final:14 · nasal-n-interior:1 | 10 |
+| b1-silaba-tonica | 44 | tonica-desplazamiento-verbal:0 · tonica-oxitona:16 · tonica-proparoxitona:3 · tonica-paroxitona:12 | 13 |
+| b1-acentos | 34 | acento-agudo:10 · acento-circunflexo:6 · acento-crase:3 · acento-cedilha:8 | 7 |
+| b2-artigos | 55 | art-contr-de:22 · art-contr-em:12 · art-contr-a-por:13 · art-com-posesivo:1 · art-com-nome:0 | 7 |
+| b2-genero | 51 | genero-divergente:6 · genero-agem-dade:0 · genero-comum:6 | 39 |
+| b2-numero | 38 | plural-ao:12 · plural-l:3 · plural-m-r-s:1 | 22 |
+| b2-possessivos | 33 | poss-com-artigo:8 · poss-seu-ambiguo:3 · poss-formas:10 | 12 |
+| b2-demonstrativos | 24 | dem-contracciones:3 · dem-neutros:1 · dem-tres-graus:19 | 1 |
+| b2-indefinidos | 31 | indef-algum-nenhum:9 · indef-todo-tudo:6 · indef-cada-qualquer:2 · indef-outro-mesmo:2 | 12 |
+| b3-presente-regular | 40 | pres-alternancia:1 · pres-ar:3 · pres-er:7 · pres-ir:1 | 28 |
+| b3-presente-irregular | 39 | pres-irr-ser-estar:8 · pres-irr-ter-vir:6 · pres-irr-ir-dar-ver:6 · pres-irr-fazer-dizer:13 | 6 |
+| b3-pronomes | 74 | pron-contracoes:0 · pron-preposicionado:6 · pron-indirecto:11 · pron-reflexivo:23 · pron-directo:0 · pron-sujeito:27 | 7 |
+| b3-existenciais | 50 | exist-haver:35 · exist-ter-br:3 · exist-ficar:0 · exist-ser-estar:0 | 12 |
+| b3-imperativo | 28 | imper-negativo:12 · imper-formal:13 · imper-tu:0 | 3 |
+| b4-perfeito-regular | 52 | perf-amos-europeo:9 · perf-ar:27 · perf-er:4 · perf-ir:6 | 6 |
+| b4-perfeito-irregular | 55 | perf-irr-ser-ir:4 · perf-irr-z:18 · perf-irr-ive:5 · perf-irr-u:6 · perf-irr-monos:14 | 8 |
+| b4-imperfeito | 51 | imperf-irregulares:25 · imperf-habitual:9 · imperf-cortesia:0 · imperf-formas:5 | 12 |
+| b4-contraste-passado | 50 | contr-marcador-perfeito:14 · contr-marcador-imperfeito:11 · contr-narrativa:4 | 21 |
+| b4-mais-que-perfeito | 47 | mqp-simples:10 · mqp-composto:31 · mqp-anterioridade:1 | 5 |
+| b5-futuro-presente | 57 | fut-irregulares:13 · fut-perifrastico:14 · fut-suposicao:0 · fut-regular:15 | 15 |
+| b5-condicional | 55 | cond-irregulares:12 · cond-cortesia:7 · cond-hipotetico:4 · cond-regular:22 | 10 |
+| b5-futuro-composto | 49 | futcomp-composto-real:0 · perifrastico-ir:39 · perifrastico-formas:4 | 6 |
+| b5-se-condicional | 48 | se-futuro-conj:6 · se-imperfeito-conj:14 · se-irreal:0 | 28 |
+| b6-presente-subj | 36 | pres-subj-irregulares:9 · pres-subj-disparadores:20 · pres-subj-ar:1 · pres-subj-er-ir:0 | 6 |
+| b6-imperfeito-subj | 56 | imperf-subj-irregulares:27 · imperf-subj-correlacao:5 · imperf-subj-formacao:18 | 6 |
+| b6-futuro-subj | 53 | fut-subj-irregulares:15 · fut-subj-quando:22 · fut-subj-se:6 · fut-subj-formacao:2 | 8 |
+| b6-contraste-indicativo-subjuntivo | 81 | contr-talvez:12 · contr-duvida:5 · contr-certeza-indicativo:7 · contr-impessoais:21 · contr-emocao:11 | 25 |
+| b6-se-subjuntivo | 47 | se-irreal-passado:9 · se-hipotetico:17 · se-real:0 | 21 |
+| b7-gerundio | 68 | estar-a-infinitivo:17 · gerundio-brasileiro:16 · gerundio-aspectual:4 · gerundio-adverbial:22 | 9 |
+| b7-infinitivo-pessoal | 56 | inf-pess-preposicao:4 · inf-pess-impessoais:2 · inf-pess-formas:22 · inf-pess-contraste:22 | 6 |
+| b7-participio | 49 | part-duplos:5 · part-composto-duracion:14 · part-passiva:5 | 25 |
+| b8-colocacao-pronominal | 59 | coloc-mesoclise:1 · coloc-proclise-negacao:12 · coloc-proclise-adverbio:9 · coloc-infinitivo:1 · coloc-enclise:18 | 18 |
+| b8-oracoes-subordinadas | 76 | sub-relativas-cujo:12 · sub-concessivas:6 · sub-adverbiais-tempo:4 · sub-substantivas:7 · sub-adjetivas-que:8 | 39 |
+| b8-conectores | 55 | con-contraste:13 · con-causa:12 · con-consequencia:6 · con-adicao:0 | 24 |
+| b8-discurso-indireto | 50 | indireto-deicticos:6 · indireto-interrogativa:4 · indireto-correlacao:22 · indireto-imperativo:0 | 18 |
+| b10-registro | 120 | reg-tratamento:61 · reg-formulas:7 · reg-mitigacao:1 · reg-anti-calco:21 | 30 |
+| b10-variacao-diatopica | 59 | var-colocacao:10 · var-tratamento:3 · var-gerundio:1 · var-lexico:11 | 34 |
+
+**Residuo total: 559** — ítems que no casan con ningún sub-punto de su concepto.
+No es basura: es la lista de lo que probablemente esté mal etiquetado de origen.
+
+  b2-genero — 39 sin sub-punto
+     0b964e23: A irmã é portuguesa e mora no Brasil. · minha irmã · En portugués, 'irmã' es femenina, no se di
+     0dd66b96: O marido da Ana trabalha muito. · El marido de Ana trabaja mucho. · pt-br · es · basico
+     1f1198ae: Ele é bom de cozinha, mas ela é melhor. · Él es bueno en la cocina, pero ella es mejor. · pt-br
+     2d31b5e1: O cientista e a cientista apresentaram os resultados. · O cientista e a cientista apresentaram 
+  b8-oracoes-subordinadas — 39 sin sub-punto
+     0106ee6b: levar (no sentido de 'tirar', 'arrastar') · levar — tirar, arrastar, fazer seguir · A corrente 
+     11927933: Não sei quem foi que deixou-me frustrado. · 'Quem' funciona como 'quién' pero puede aparecer du
+     1f6c7479: Estava muito nervoso, por isso não consegui dormir. · Estaba muy nervioso, por eso no pude dorm
+     1f6e9408: Subordinada substantiva com 'se' (indireta) · Oração interrogativa indireta — pergunta sem '?'.
+  b10-variacao-diatopica — 34 sin sub-punto
+     1993e06e: A norma culta escrita em Portugal e no Brasil apresenta diferenças ortográficas. O Acordo Ortog
+     1e198e75: Yo creo que tienes razón, pero no lo encuentro así. · Eu acho que tens razão, mas não o acho as
+     2516e46a: Eu acho que a variação diatópica é fascinante. · Yo creo que la variación diatópica es fascinan
+     264c3a9f: ¿Qué significa 'maluco' en Brasil? ¿Y 'bizarro'? · 🇧🇷 BR: 'maluco' = 'loco'; 'bizarro' = 'gen
+  b10-registro — 30 sin sub-punto
+     08155994: Segue em anexo a documentação solicitada. Fico ao dispor para quaisquer esclarecimentos. · Segu
+     0b091314: Expresión informal de despedida entre amigos (= 'un abrazo') · abs / abraço / beijos · Abs, te 
+     2eac7ab2: Ó lá! Que novidades? Há muito tempo que não te vejo! · diga · ouve · En contexto informal se us
+     3dec5fb6: Olá, próprio! Tudo bem contigo? · ¡Hola, tío! ¿Qué tal estás? · pt-br · es · ¡Hola, crack! ¿Qué
+  b3-presente-regular — 28 sin sub-punto
+     1f6cb389: Ela diz: «Nós não ficamos satisfeitos com o serviço.» · ¿Cuál es la forma verbal correcta en «n
+     21f8b4a9: Nós fazemos um pedido ao garçom. (fazer) · La desinência '-imos' de 'fazer' cambia a '-emos', u
+     2ac7040f: ¿El garçon puede traernos el cardápio, por favor? · O garçom pode trazer-nos a ementa, por favo
+     3aae2fbc: Nós pedimos café e bolo. · Pedimos café y pastel. · pt-br · es · Nosotros pedimos café y pastel
+  b5-se-condicional — 28 sin sub-punto
+     0f32b6a4: Nós íamos à padaria se os preços estiverem mais baixos. · iremos · Tipo 1: si los precios están
+     1e6d2540: Si llueve mañana, no iré a la playa. · Se chover amanhã, não vou à praia. · Observa: 'chover' (
+     25184d93: Constituir família não é fácil se os preços continuarem a subir. · Constituir familia no es fác
+     38f7c35c: Si constituyeras una família, tendrías muchos más gastos. · Se constituísses uma família, teria
+  b6-contraste-indicativo-subjuntivo — 25 sin sub-punto
+     03b538f2: No início, ninguém sabia lidar com a situação. · Al principio, nadie sabía manejar la situación
+     04421012: Traduce: 'conexión; llamada telefónica' · ligação · Há uma ligação entre os dois eventos. · Fal
+     064a533b: Eu tomo um café todas as manhãs. (hábito/fato) · bebo · Con 'café' el portugués admite 'tomar' 
+     08a7c6a1: É incrível que tu tenhas tanta confiança para lidar com situações difíceis no início. · ¿Qué ex
+  b7-participio — 25 sin sub-punto
+     0b0c9571: Vocês já arrumado as malas para a viagem? · arrumado · 'Arrumar' pode significar 'ordenar' ou '
+     0f7e4333: Eu já visitado muitas cidades no Brasil. · O particípio de 'visitar' é regular em português (-a
+     20c6e6a6: Participio de NASGER (BR) vs NASCER (PT) · Nascer → nascido (PT-BR); nado (PT-PT) · Nasci em Sã
+     3ecb638b: Eu te ligado muitas vezes, mas você nunca atendeu. · O particípio de 'ligar' es 'ligado' (regul
+
+
+# COBERTURA — piso de 12 ítems por punto
+
+| nivel | puntos | ítems | mín | mediana | máx | puntos <12 | faltan para el piso |
+|-------|-------:|------:|----:|--------:|----:|----------:|--------------------:|
+| A1    |     22 |   258 |   1 |      12 |  28 |        11 |                  66 |
+| A2    |     53 |   643 |   1 |       8 |  88 |        33 |                 231 |
+| B1    |     50 |   767 |   1 |      11 | 100 |        27 |                 161 |
+| B2    |     56 |   686 |   1 |      11 |  39 |        29 |                 186 |
+| C1    |      4 |    39 |   3 |      11 |  20 |         3 |                  17 |
+| C2    |      0 |     0 |   0 |       0 |   0 |         0 |                   0 |
+| **Σ** |    185 |  2393 | | | |       103 |                 661 |
+
+Puntos por debajo del piso (103), con lo que le falta a cada uno:
+    1/12  [A1] b1-nasal-n-interior   (faltan 11)
+    1/12  [B1] b10-var-gerundio   (faltan 11)
+    1/12  [B1] b10-reg-mitigacao   (faltan 11)
+    1/12  [A2] b2-dem-neutros   (faltan 11)
+    1/12  [A2] b2-art-com-posesivo   (faltan 11)
+    1/12  [A2] b2-demonstrativos   (faltan 11)
+    1/12  [A2] b2-plural-m-r-s   (faltan 11)
+    1/12  [A2] b3-pres-alternancia   (faltan 11)
+    1/12  [A2] b3-pres-ir   (faltan 11)
+    1/12  [B1] b4-mqp-anterioridade   (faltan 11)
+    1/12  [B2] b6-pres-subj-ar   (faltan 11)
+    1/12  [B2] b8-coloc-infinitivo   (faltan 11)
+    1/12  [B2] b8-coloc-mesoclise   (faltan 11)
+    2/12  [A2] reg-verbal-por-para   (faltan 10)
+    2/12  [A2] b2-indef-outro-mesmo   (faltan 10)
+    2/12  [A2] b2-indef-cada-qualquer   (faltan 10)
+    2/12  [B2] b6-fut-subj-formacao   (faltan 10)
+    2/12  [B2] b7-inf-pess-impessoais   (faltan 10)
+    3/12  [A1] b1-nasal-til   (faltan 9)
+    3/12  [A1] b1-tonica-proparoxitona   (faltan 9)
+    3/12  [A1] b1-acento-crase   (faltan 9)
+    3/12  [B1] b10-var-tratamento   (faltan 9)
+    3/12  [A2] b2-poss-seu-ambiguo   (faltan 9)
+    3/12  [A2] b2-dem-contracciones   (faltan 9)
+    3/12  [A2] b2-plural-l   (faltan 9)
+    3/12  [A2] b3-pres-ar   (faltan 9)
+    3/12  [A2] b3-exist-ter-br   (faltan 9)
+    3/12  [A2] b3-imperativo   (faltan 9)
+    3/12  [C1] b11-aspecto-tempo   (faltan 9)
+    4/12  [A1] b1-corresp-h-f   (faltan 8)
+    4/12  [B1] b4-perf-er   (faltan 8)
+    4/12  [B1] b4-contr-narrativa   (faltan 8)
+    4/12  [B1] b4-perf-irr-ser-ir   (faltan 8)
+    4/12  [B1] b5-cond-hipotetico   (faltan 8)
+    4/12  [B1] b5-perifrastico-formas   (faltan 8)
+    4/12  [B2] b7-gerundio-aspectual   (faltan 8)
+    4/12  [B2] b7-inf-pess-preposicao   (faltan 8)
+    4/12  [B2] b8-sub-adverbiais-tempo   (faltan 8)
+    4/12  [B2] b8-indireto-interrogativa   (faltan 8)
+    5/12  [C1] b11-regencias   (faltan 7)
+    5/12  [B1] b4-mais-que-perfeito   (faltan 7)
+    5/12  [B1] b4-imperf-formas   (faltan 7)
+    5/12  [B1] b4-perf-irr-ive   (faltan 7)
+    5/12  [B2] b6-imperf-subj-correlacao   (faltan 7)
+    5/12  [B2] b6-contr-duvida   (faltan 7)
+    5/12  [B2] b7-part-duplos   (faltan 7)
+    5/12  [B2] b7-part-passiva   (faltan 7)
+    6/12  [A1] b1-acento-circunflexo   (faltan 6)
+    6/12  [A2] b2-indef-todo-tudo   (faltan 6)
+    6/12  [A2] reg-verbal-zero   (faltan 6)
+    6/12  [A2] b2-genero-comum   (faltan 6)
+    6/12  [A2] b2-genero-divergente   (faltan 6)
+    6/12  [A2] b3-pres-irr-ir-dar-ver   (faltan 6)
+    6/12  [A2] b3-pron-preposicionado   (faltan 6)
+    6/12  [A2] b3-presente-irregular   (faltan 6)
+    6/12  [A2] b3-pres-irr-ter-vir   (faltan 6)
+    6/12  [B1] b4-perfeito-regular   (faltan 6)
+    6/12  [B1] b4-perf-irr-u   (faltan 6)
+    6/12  [B1] b4-perf-ir   (faltan 6)
+    6/12  [B1] b5-futuro-composto   (faltan 6)
+    6/12  [B1] b5-se-futuro-conj   (faltan 6)
+    6/12  [B2] b6-presente-subj   (faltan 6)
+    6/12  [B2] b6-fut-subj-se   (faltan 6)
+    6/12  [B2] b6-imperfeito-subj   (faltan 6)
+    6/12  [B2] b7-infinitivo-pessoal   (faltan 6)
+    6/12  [B2] b8-con-consequencia   (faltan 6)
+    6/12  [B2] b8-sub-concessivas   (faltan 6)
+    6/12  [B2] b8-indireto-deicticos   (faltan 6)
+    7/12  [A1] b1-acentos   (faltan 5)
+    7/12  [B1] b10-reg-formulas   (faltan 5)
+    7/12  [A2] b2-artigos   (faltan 5)
+    7/12  [A2] b3-pronomes   (faltan 5)
+    7/12  [A2] b3-pres-er   (faltan 5)
+    7/12  [B1] b5-cond-cortesia   (faltan 5)
+    7/12  [B2] b6-contr-certeza-indicativo   (faltan 5)
+    7/12  [B2] b8-sub-substantivas   (faltan 5)
+    8/12  [A1] b1-acento-cedilha   (faltan 4)
+    8/12  [A2] b2-poss-com-artigo   (faltan 4)
+    8/12  [A2] b3-pres-irr-ser-estar   (faltan 4)
+    8/12  [B1] b4-perfeito-irregular   (faltan 4)
+    8/12  [B2] b6-futuro-subj   (faltan 4)
+    8/12  [B2] b8-sub-adjetivas-que   (faltan 4)
+    9/12  [A2] reg-verbal-a   (faltan 3)
+    9/12  [A2] b2-indef-algum-nenhum   (faltan 3)
+    9/12  [B1] b4-perf-amos-europeo   (faltan 3)
+    9/12  [B1] b4-imperf-habitual   (faltan 3)
+    9/12  [B2] b6-se-irreal-passado   (faltan 3)
+    9/12  [B2] b6-pres-subj-irregulares   (faltan 3)
+    9/12  [B2] b7-gerundio   (faltan 3)
+    9/12  [B2] b8-coloc-proclise-adverbio   (faltan 3)
+   10/12  [A1] b1-vogais-nasais   (faltan 2)
+   10/12  [A1] b1-acento-agudo   (faltan 2)
+   10/12  [B1] b10-var-colocacao   (faltan 2)
+   10/12  [A2] b2-poss-formas   (faltan 2)
+   10/12  [B1] b4-mqp-simples   (faltan 2)
+   10/12  [B1] b5-condicional   (faltan 2)
+   11/12  [A1] b1-corresp-ll-lh   (faltan 1)
+   11/12  [A2] reg-verbal-com   (faltan 1)
+   11/12  [B1] b10-var-lexico   (faltan 1)
+   11/12  [C1] b11-morfologia-enganosa   (faltan 1)
+   11/12  [A2] b3-pron-indirecto   (faltan 1)
+   11/12  [B1] b4-contr-marcador-imperfeito   (faltan 1)
+   11/12  [B2] b6-contr-emocao   (faltan 1)
+
+
+# LO QUE FALTA PARA CUBRIR — piso 12, contra los puntos que enumera el currículo
+
+| nivel | puntos currículo | puntos con corpus | puntos SIN empezar | déficit de los empezados | × piso los nuevos | FALTA |
+|-------|-----------------:|------------------:|-------------------:|-------------------------:|------------------:|------:|
+| A1    |               31 |                22 |                  9 |                       66 |               108 |   174 |
+| A2    |               31 |                53 |                  0 |                      231 |                 0 |   231 |
+| B1    |               27 |                50 |                  0 |                      161 |                 0 |   161 |
+| B2    |               31 |                56 |                  0 |                      186 |                 0 |   186 |
+| C1    |               32 |                 4 |                 28 |                       17 |               336 |   353 |
+| C2    |               34 |                 0 |                 34 |                        0 |               408 |   408 |
+| **Σ** |              186 |               185 | | | | **1513** |
+
+B1 y B2 tienen MÁS puntos que los que el currículo enumera: la partición
+salió más fina que la prosa del currículo, así que ahí no hay puntos sin
+empezar y el trabajo es sólo llenar los que están por debajo del piso.
+
+DRY-RUN: el corpus no se ha tocado.

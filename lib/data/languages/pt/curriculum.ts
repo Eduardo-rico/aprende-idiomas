@@ -322,7 +322,12 @@ const B11: Block = {
 
 export const BLOCKS: Block[] = [B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, B11];
 
+import { CONCEPTOS_FINOS } from './conceptos-finos.generated';
+
 export const ALL_CONCEPTS: Concept[] = [
+  // Los sub-puntos en que se parten los conceptos gruesos (E2#10).
+  // Generados desde scripts/lib/conceptos-finos.ts.
+  ...CONCEPTOS_FINOS,
   ...B1_CONCEPTS,
   ...B2_CONCEPTS,
   ...B3_CONCEPTS,
