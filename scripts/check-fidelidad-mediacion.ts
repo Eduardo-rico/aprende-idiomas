@@ -8,7 +8,7 @@
 // Sale con código 1 si algo cae: es un gate, no un informe.
 import fs from 'node:fs';
 import path from 'node:path';
-import { auditarLote, validarItem, type ItemFidelidad, type Transformacion } from './lib/fidelidad-mediacion';
+import { auditarLote, validarItem, anclasPerdidas, type ItemFidelidad, type Transformacion } from './lib/fidelidad-mediacion';
 import { indexarCorpus, buscarDuplicados, UMBRAL, type ExIndexable } from './lib/virginidad';
 
 const DOC = process.argv[2];
@@ -68,6 +68,30 @@ for (const x of items) {
     for (const f of r.fallos) console.log(`      ${f}`);
   }
 }
+
+// ── Gate 7 · el recado FIEL contra la FUENTE ─────────────────────────
+// Si la línea base ya pierde un dato, la transformación se aplicó sobre
+// algo que no era fiel y el ítem entero está podrido. Es el hueco que el
+// muestreo del lote 1 encontró: 2 de 5 perdían el emisor.
+// NO cuenta para el veredicto: es una LISTA DE TRIAJE, y se dice por qué.
+// Medido sobre el lote 1: dispara en 10 de 24 y la mayoría son artefactos
+// suyos — «piso 2» rendido como «del segundo», «Natal» como «Navidad»,
+// «DNI» como «bilhete de identidade». Caza uno de los dos casos reales
+// que encontró el muestreo (MFID-03, «Centro de Saúde da Lapa») y se le
+// escapa el otro, porque «Aviso de la comunidad» va en minúsculas. Un
+// gate con esa precisión, si tumbara el build, acabaría desactivado —
+// como los 112 «você» que el gate de variante lleva gritando sin que
+// nadie atienda. Así que informa, y el round decide.
+console.log(`\n── gate 7 · TRIAJE: anclas de la fuente ausentes del recado FIEL ──`);
+console.log('   (no tumba el lote: tiene falsos positivos medidos; es prior para el round)');
+let sinAncla = 0;
+for (const x of items) {
+  const p = anclasPerdidas(x.fuente, x.fiel);
+  if (!p.length) continue;
+  sinAncla++;
+  console.log(`  · ${x.id}: revisar ${p.map((y) => `«${y}»`).join(', ')}`);
+}
+if (!sinAncla) console.log('  ✔ todas las líneas base trasladan las anclas de su fuente');
 
 // ── Gate 6 · VIRGINIDAD DE LAS FUENTES ───────────────────────────────
 // El gate compartido (`check-virginidad`) indexa de un `multiple_choice`

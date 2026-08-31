@@ -352,10 +352,10 @@ cuatro etiquetas con la clave marcada, y la explicación.
 **recado fiel:**
 > «Han avisado de la farmacia: ya está tu pedido. Te lo guardan hasta el viernes 18 incluido; después lo devuelven al proveedor. Abren de nueve a siete.»
 **recado mostrado:**
-> «Han avisado de la farmacia: ya está tu pedido. Te lo guardan hasta el jueves 17; después lo devuelven al proveedor. Abren de nueve a siete.»
+> «Han avisado de la farmacia: ya está tu pedido. Te lo guardan antes del viernes 18; después lo devuelven al proveedor. Abren de nueve a siete.»
 **transformación:** PLAZO sobre «até sexta-feira, dia 18»
 **opciones:** [0] Falta qué pasa después · [1] Cambia el horario de la farmacia · [2] **Se adelanta el plazo** ✅ · [3] No falla nada
-**explicación:** Un día de menos en un plazo de medicamentos que se devuelven. Aquí el error no se disfraza de «antes de»: cambia directamente el día, que es la versión burda de la misma clase.
+**explicación:** «Até sexta-feira, dia 18» incluye el viernes: ese día el pedido todavía está. «Antes del viernes 18» lo excluye, y en una farmacia que devuelve al proveedor lo que no se recoge, ese día es el que separa llevarse los medicamentos de quedarse sin ellos.
 
 ### MFID-15 · recado-voz · pt→es · **OMISIÓN**
 **fuente:**
@@ -489,11 +489,11 @@ cuatro etiquetas con la clave marcada, y la explicación.
 > trasteros. Quien tenga trastero cerrado con candado, que avise.»
 **datos:** día y franja (jueves 14, de 10 a 13) · qué (revisión de extintores) · no hace falta estar en casa, sí en los trasteros · quien tenga candado, que avise
 **recado fiel:**
-> «Na quinta-feira, dia 14, das 10h às 13h, vêm rever os extintores do prédio todo. Não é preciso estar ninguém em casa, só nas arrecadações; quem tiver a arrecadação fechada com cadeado que avise.»
+> «Na quinta-feira, dia 14, das 10h às 13h, vêm fazer a manutenção aos extintores do prédio todo. Não é preciso estar ninguém em casa, só nas arrecadações; quem tiver a arrecadação fechada com cadeado que avise.»
 **recado mostrado:** *(idéntico al fiel)*
 **transformación:** ninguna
 **opciones:** [0] Falta a franja horária · [1] Acrescenta algo que o aviso não diz · [2] Muda quem tem de avisar · [3] **Não falha nada** ✅
-**explicación:** Os quatro dados estão, incluída a distinção entre casa e arrecadação, que é a que se costuma perder. «Trastero» resolve-se como «arrecadação», que é o termo europeu.
+**explicación:** Os quatro dados estão, incluída a distinção entre casa e arrecadação, que é a que se costuma perder. «Trastero» resolve-se como «arrecadação» e «revisar los extintores» como «fazer a manutenção aos extintores»: *rever* em português é 'voltar a ver', não inspecionar equipamento.
 
 ---
 

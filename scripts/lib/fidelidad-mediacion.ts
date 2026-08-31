@@ -162,6 +162,67 @@ export function tramoCambiado(fiel: string, mostrado: string): Tramo {
   };
 }
 
+
+// ── Gate 7 · el recado FIEL contra la FUENTE ─────────────────────────
+// Los gates 1-5 diffean fiel↔mostrado y validan los datos DECLARADOS, de
+// modo que lo que el autor no meta en `datos` es invisible: si la línea
+// base ya pierde algo, la transformación se aplica sobre una base que no
+// era fiel y el ítem entero está podrido. Medido en el muestreo del lote
+// 1: 2 de 5 ítems perdían el emisor en su propio recado fiel.
+//
+// Se comparan sólo ANCLAS —cifras y nombres propios—, que son las que
+// una máquina puede seguir de una lengua a otra sin fingir que traduce.
+
+const PAL_NUM: Record<string, string[]> = {
+  '1': ['una', 'uno', 'um', 'uma'], '2': ['dos', 'duas', 'dois'], '3': ['tres', 'três'],
+  '4': ['cuatro', 'quatro'], '5': ['cinco'], '6': ['seis'], '7': ['siete', 'sete'],
+  '8': ['ocho', 'oito'], '9': ['nueve', 'nove'], '10': ['diez', 'dez'], '11': ['once', 'onze'],
+  '12': ['doce', 'doze', 'mediodia'], '13': ['una', 'uma'], '14': ['dos', 'duas'],
+  '15': ['tres', 'três', 'quince'], '16': ['cuatro'], '17': ['cinco'], '18': ['seis'],
+  '19': ['siete', 'sete'], '20': ['ocho', 'oito', 'veinte'], '21': ['nueve'], '22': ['diez'],
+  '23': ['once'], '24': ['medianoche', 'meia-noite'], '30': ['treinta', 'media', 'trinta'],
+};
+// Días y meses: el ancla viaja traducida, así que se emparejan por índice.
+const DIAS_PAR = [['segunda', 'lunes'], ['terça', 'martes'], ['quarta', 'miércoles'],
+  ['quinta', 'jueves'], ['sexta', 'viernes'], ['sábado', 'sabado'], ['domingo']];
+const MESES_PAR = [['janeiro', 'enero'], ['fevereiro', 'febrero'], ['março', 'marzo'],
+  ['abril'], ['maio', 'mayo'], ['junho', 'junio'], ['julho', 'julio'], ['agosto'],
+  ['setembro', 'septiembre'], ['outubro', 'octubre'], ['novembro', 'noviembre'], ['dezembro', 'diciembre']];
+
+/** Anclas de la fuente que NO aparecen en el recado fiel, ni como cifra,
+ *  ni escritas con letra, ni traducidas si son día o mes. Devuelve la
+ *  lista para TRIAJE — no todas son fallo: un aviso puede traer un
+ *  número de expediente que el recado deba omitir (los señuelos). */
+export function anclasPerdidas(fuente: string, fiel: string): string[] {
+  const f = norm(fiel);
+  const perdidas: string[] = [];
+
+  const equivale = (grupo: string[]) => grupo.some((w) => f.includes(norm(w)));
+
+  // 1 · cifras
+  for (const m of fuente.matchAll(/(?<![\p{L}])(\d{1,4})(?:[.,]\d{2})?/gu)) {
+    const n = m[1]!;
+    if (new RegExp(`(?<![\\p{L}\\d])${n}(?![\\d])`, 'u').test(f)) continue;
+    if (equivale(PAL_NUM[n] ?? [])) continue;
+    // una hora como «17h» puede venir rendida como «cinco»
+    const h = Number(n);
+    if (h > 12 && h <= 24 && equivale(PAL_NUM[String(h - 12)] ?? [])) continue;
+    perdidas.push(n);
+  }
+  // 2 · días y meses, emparejados por traducción
+  for (const grupo of [...DIAS_PAR, ...MESES_PAR]) {
+    if (!grupo.some((w) => norm(fuente).includes(norm(w)))) continue;
+    if (!equivale(grupo)) perdidas.push(grupo[0]!);
+  }
+  // 3 · nombres propios: mayúscula que no abre frase ni sigue a punto
+  for (const m of fuente.matchAll(/(?<![.!?¿¡«]\s?)(?<=[a-záéíóúâêôãõç,;]\s)([A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wáéíóúâêôãõç]{2,})/gu)) {
+    const w = m[1]!;
+    if (/^(Aviso|Informamos|Recibo|Fatura|Consumo|Total|Prémio|Pagamento|Levantamento|Entrega|Horário|Ordem|Saída|Obras|Corte|Biblioteca|Centro|Reunião|Fotografia|Renovação|Visita)$/.test(w)) continue;
+    if (!f.includes(norm(w))) perdidas.push(w);
+  }
+  return [...new Set(perdidas)];
+}
+
 const CONTENIDO = (s: string) => norm(s).match(/[\p{L}\p{N}]+/gu)?.filter((w) => w.length > 3) ?? [];
 
 export interface Veredicto { fallos: string[]; tramo: Tramo }
@@ -197,8 +258,21 @@ export function validarItem(x: ItemFidelidad): Veredicto {
       fallos.push(`${x.id}: declarado INVENCIÓN pero todo lo añadido ya está en la fuente (${yaEstaban.join(', ')}): eso no es inventar`);
     }
   }
-  if (x.transformacion === 'PLAZO' && !MARCAS.PLAZO!.test(x.fuente)) {
-    fallos.push(`${x.id}: declarado PLAZO pero la fuente no tiene ningún marcador inclusivo («até», «hasta», «inclusive»)`);
+  if (x.transformacion === 'PLAZO') {
+    if (!MARCAS.PLAZO!.test(x.fuente)) {
+      fallos.push(`${x.id}: declarado PLAZO pero la fuente no tiene ningún marcador inclusivo («até», «hasta», «inclusive»)`);
+    }
+    // PLAZO es MOVER LA INCLUSIVIDAD, no cambiar el valor. Cambiar
+    // «viernes 18» por «jueves 17» es ALTERACIÓN, y el gate 2 lo daba por
+    // bueno porque la clave contenía la palabra «plazo». Fuga medida en
+    // el muestreo del lote 1 (MFID-14).
+    const INCL = /hasta|até|inclusive|incluid|antes de|antes del|como muy tarde|no m[áa]s tarde/i;
+    const tocaInclusividad = INCL.test(tramo.quitado) || INCL.test(tramo.puesto);
+    const cambiaValor = /\d/.test(tramo.quitado) && /\d/.test(tramo.puesto)
+      && tramo.quitado.match(/\d+/)?.[0] !== tramo.puesto.match(/\d+/)?.[0];
+    if (!tocaInclusividad || cambiaValor) {
+      fallos.push(`${x.id}: declarado PLAZO pero el cambio «${tramo.quitado}» → «${tramo.puesto}» no mueve la inclusividad: cambia el VALOR, y eso es ALTERACIÓN`);
+    }
   }
 
   // Gate 3 · los datos declarados existen en la fuente.

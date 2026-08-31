@@ -7,7 +7,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   tramoCambiado, tiposDeEtiqueta, tiposDeclarados, coherenciaDatosFuente,
-  validarItem, type ItemFidelidad,
+  validarItem, anclasPerdidas, type ItemFidelidad,
 } from '@/scripts/lib/fidelidad-mediacion';
 
 // ── Fixtures reales del lote ─────────────────────────────────────────
@@ -191,5 +191,63 @@ describe('gates de lote — los atajos que se miden sobre los 24', () => {
     const cuenta = [0, 0, 0, 0];
     for (const x of lote) cuenta[x.correctIndex]!++;
     expect(Math.max(...cuenta) - Math.min(...cuenta)).toBeLessThanOrEqual(2);
+  });
+});
+
+// ── Gates 7 y 8: los dos huecos que el muestreo del lote 1 encontró ──
+// (1) Nada comparaba el recado FIEL con la FUENTE: los cinco gates
+//     diffean fiel↔mostrado y validan sólo los datos DECLARADOS, así que
+//     lo que el autor no meta en `datos` es invisible. Medido: 2 de 5
+//     ítems muestreados perdían el emisor en su propia línea base.
+// (2) La etiqueta PLAZO se fugaba con ALTERACIÓN: cambiar «viernes 18»
+//     por «jueves 17» es alterar un valor, no mover la inclusividad, y
+//     el gate 2 lo daba por bueno porque la clave contenía «plazo».
+describe('gate 7 — el recado FIEL contra la FUENTE', () => {
+  it('avisa cuando la línea base pierde un ancla de la fuente', () => {
+    const r = anclasPerdidas(
+      'Centro de Saúde da Lapa: a sua consulta passou para quarta, dia 9, às 11h20.',
+      'Te han cambiado la consulta al miércoles 9 a las once y veinte.',
+    );
+    expect(r).toContain('Lapa');
+  });
+
+  it('no avisa cuando el ancla está rendida en la otra lengua', () => {
+    const r = anclasPerdidas(
+      'A reunião é na quarta-feira, dia 9, às 11h.',
+      'La reunión es el miércoles 9 a las once.',
+    );
+    expect(r).toEqual([]);
+  });
+
+  it('reconoce las cifras escritas con letra', () => {
+    expect(anclasPerdidas('Volta às 17h.', 'Vuelve a las cinco.')).toEqual([]);
+  });
+});
+
+describe('gate 8 — PLAZO es mover la inclusividad, no cambiar el valor', () => {
+  it('acepta PLAZO cuando el cambio toca el marcador inclusivo', () => {
+    const r = validarItem({
+      id: 'T1', fuente: 'Levantamento até domingo, dia 20, inclusive.',
+      datos: ['plazo (hasta el domingo 20 incluido)'],
+      fiel: 'Lo puedes recoger hasta el domingo 20 incluido.',
+      mostrado: 'Lo puedes recoger antes del domingo 20.',
+      transformacion: 'PLAZO',
+      opciones: ['Se adelanta el plazo', 'Cambia el día', 'No falla nada', 'Añade algo que no dice'],
+      correctIndex: 0,
+    });
+    expect(r.fallos.filter((f) => /PLAZO/.test(f))).toEqual([]);
+  });
+
+  it('rechaza PLAZO cuando lo que cambia es el valor del día: eso es ALTERACIÓN', () => {
+    const r = validarItem({
+      id: 'T2', fuente: 'Guardamo-la até sexta-feira, dia 18.',
+      datos: ['plazo (hasta el viernes 18)'],
+      fiel: 'Te lo guardan hasta el viernes 18 incluido.',
+      mostrado: 'Te lo guardan hasta el jueves 17.',
+      transformacion: 'PLAZO',
+      opciones: ['Se adelanta el plazo', 'Cambia el día', 'No falla nada', 'Añade algo que no dice'],
+      correctIndex: 0,
+    });
+    expect(r.fallos.join(' ')).toMatch(/ALTERACIÓN/);
   });
 });
