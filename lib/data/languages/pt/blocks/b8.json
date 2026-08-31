@@ -1036,11 +1036,11 @@
     "contentHash": "2682061210370fbc18d5221163910fd21739089b67d0bf3cbce1f21e5661e8d6",
     "esContrast": "En español 'gustar' no lleva preposición; en PT-BR 'gostar' exige 'de'.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
-      "sentence": "Ela gosta ___ você, mas não quer admitir.",
+      "sentence": "Ela gosta ___ ti, mas não quer admitir.",
       "options": [
         "de",
         "a",
@@ -1048,6 +1048,11 @@
         "∅"
       ],
       "answer": "de"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Ela gosta ___ você, mas não quer admitir."
+      }
     }
   },
   {
@@ -1061,7 +1066,7 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "26b5b65566836ca842756aa2c005954b44da35e568ea5e2e22ecdaf3339184ce",
+    "contentHash": "62c1117162e177e16491ac7aff9e3a7f4599e3a1074b539437415e09a93c825a",
     "esContrast": "¡FALSO AMIGO! ‘Achar’ en español = ‘encontrar’ en portugués. ‘Achar’ en portugués = ‘creer, pensar’.",
     "audio": {
       "br": {
@@ -1074,12 +1079,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "¿Qué significa ‘achar’ en portugués? Da un ejemplo con pronombre.",
       "back": "Significa ‘pensar, creer’. Ejemplo: Acho que está certo. (Creo que está bien.)",
-      "example": "O que você acha disso?"
+      "example": "O que acha disso?"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "O que você acha disso?"
+      }
     }
   },
   {
@@ -1630,11 +1640,11 @@
     "contentHash": "34d81602fe79ee5f896dfad90968fd851b0a1234db2c650db3aa448ca6e4a36b",
     "esContrast": "Achar graça DE = encontrar gracioso (en ES no lleva preposición).",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "achar graça",
-      "sentence": "Achei muita graça ___ história que você contou.",
+      "sentence": "Achei muita graça ___ história que contaste.",
       "options": [
         "∅",
         "de",
@@ -1642,6 +1652,11 @@
         "por"
       ],
       "answer": "de"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Achei muita graça ___ história que você contou."
+      }
     }
   },
   {
@@ -1685,7 +1700,7 @@
     "tags": [
       "coloquial"
     ],
-    "contentHash": "38c0760eb328874479cc0fb71763e9009d9ee04c7604016e275c0b760e5067fb",
+    "contentHash": "7a1c10d182d09f044259f0647e52e9c6ca098061af0be74865a8e01702cc768f",
     "esContrast": "‘Ainda não o vi’ es correcto, pero más natural en PT-BR coloquial es ‘Ainda não vi’ (sin pronombre) en oraciones sin factor de próclise.",
     "audio": {
       "br": {
@@ -1698,12 +1713,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "Coloca el pronombre: Ainda não ___ (ver) esse filme.",
       "back": "vi esse filme / ainda não o vi — próclise tras ‘ainda’",
-      "example": "Ainda não o vi, quero assistir com você."
+      "example": "Ainda não o vi, quero assistir contigo."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Ainda não o vi, quero assistir com você."
+      }
     }
   },
   {
@@ -1810,7 +1830,7 @@
     "tags": [
       "ênclise"
     ],
-    "contentHash": "d77749857a1716f4cf837ce4f940ccbb0707b46844409087ab9a922ada657675",
+    "contentHash": "4437e6d2634396da5a6201dc0c1c8f13fd21b8793333e36258d9a88e699800d3",
     "esContrast": "La ênclise en posición de inicio de oración es imposible en español; el pronombre debe ir detrás del verbo en portugués, pero en español funciona igual.",
     "audio": {
       "br": {
@@ -1818,15 +1838,15 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "d88ed3ed7a3f242680b1e13b8e8ce0465762c478b693aaa69ccfb29d52901a8e",
-        "voice": "Portuguese_Wiselady"
+        "hash": "aa97f6b988135cc294ae3f553ad6468ec26a9f3049603d6b5517c1d924f13bdf",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) — audio regenerado (informe-voce)",
     "type": "translation",
     "data": {
-      "source": "Diga-me o que você acha.",
+      "source": "Diga-me o que acha.",
       "target": "Dígame qué piensa.",
       "sourceLang": "pt-br",
       "targetLang": "es",
@@ -1834,6 +1854,11 @@
         "Dígame qué opinas.",
         "Dígame qué piensas."
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "source": "Diga-me o que você acha."
+      }
     }
   },
   {
@@ -1911,7 +1936,7 @@
     "tags": [
       "formal"
     ],
-    "contentHash": "43a6d371645a3e69279b31a63b25ef80fcbc87eb5f2d4095edfb1812f70609e0",
+    "contentHash": "bc9cb5503205519581f6cf402db9e451b5e0c97eeae230c91adf2ab4bbedaae7",
     "esContrast": "Igual que en español. Indica causa conocida o evidente.",
     "audio": {
       "br": {
@@ -1924,12 +1949,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "Conector causal: 'já que' (ya que, dado que)",
       "back": "já que (ya que, dado que, puesto que)",
-      "example": "Já que você está aqui, ajude-me."
+      "example": "Já que está aqui, ajude-me."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Já que você está aqui, ajude-me."
+      }
     }
   },
   {
@@ -1977,7 +2007,7 @@
       "subordinada-adverbial",
       "causal"
     ],
-    "contentHash": "6e2dc8fc2f956dcff6f745013e18fdeea64b90e6c7ccedf7e312e7b5196f8793",
+    "contentHash": "430227683a4789c1cf056ba2b72ebef71c83a239621c2764da2c70334f7a0925",
     "esContrast": "'já que' = 'ya que', 'dado que', indica causa conocida.",
     "audio": {
       "br": {
@@ -1985,15 +2015,15 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "f51665537cd9ab885c4a929c5773ae1f763e1db3cda7cb14442ebb9aa8c26f2f",
-        "voice": "Portuguese_Wiselady"
+        "hash": "75579e7fdc2a6806b9fb00458204eff5602c1fc7e9ecf976af66eb049fbc75d9",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) — audio regenerado (informe-voce)",
     "type": "translation",
     "data": {
-      "source": "Já que você não quer ir, vamos ficar em casa.",
+      "source": "Já que não queres ir, vamos ficar em casa.",
       "target": "Ya que no quieres ir, nos quedamos en casa.",
       "sourceLang": "pt-br",
       "targetLang": "es",
@@ -2001,6 +2031,11 @@
         "Dado que no quieres ir, nos quedamos en casa.",
         "Puesto que no quieres ir, nos quedamos en casa."
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "source": "Já que você não quer ir, vamos ficar em casa."
+      }
     }
   },
   {
@@ -2590,8 +2625,8 @@
     "tags": [
       "subordinada-substantiva"
     ],
-    "contentHash": "64a089d7a2ff2ac6d5c71b1330da43b3d6f4e4ad3b427fc039a19f6a778aae64",
-    "esContrast": "Funcionan igual que en ES: 'Es importante que estudies' = 'É importante que você estude'.",
+    "contentHash": "8658b4da7d1b3fe974770a5fdffc01638d27fbb5dec6a308fca7752323df5f89",
+    "esContrast": "Funcionan igual que en ES: 'Es importante que estudies' = 'É importante que estudes' (Portugal) / 'que você estude' (Brasil).",
     "audio": {
       "br": {
         "hash": "5206e950c84e50ac4bbc3c65b6cf70a38b3576ff882c227ef47b7b36220aa1b5",
@@ -2603,12 +2638,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "¿Qué es una oración subordinada substantiva?",
       "back": "É uma oração que funciona como um substantivo na frase: pode ser sujeito, objeto direto, objeto indireto ou complemento nominal.",
-      "example": "É importante que você estude. (=subjecto)"
+      "example": "É importante que estudes. (=subjecto)"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "É importante que você estude. (=subjecto)"
+      }
     }
   },
   {
@@ -2760,7 +2800,7 @@
       "b8-conectores"
     ],
     "tags": [],
-    "contentHash": "6ac9398a8c2a0b2870ab65a35d81201912492288873844aadaeb58536cf3af93",
+    "contentHash": "2f76047a50a4e43c8ea4d159766c2ba1acc91708567fa470d69d25e322af859b",
     "esContrast": "Indica concesión hipotética o real. Equivale a 'aun cuando' o 'aunque'.",
     "audio": {
       "br": {
@@ -2773,12 +2813,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "Conector concessivo: 'ainda que' (incluso si, aun cuando)",
       "back": "ainda que (incluso si, aun cuando, aunque)",
-      "example": "Ainda que você não acredite, é verdade."
+      "example": "Ainda que não acredite, é verdade."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Ainda que você não acredite, é verdade."
+      }
     }
   },
   {
@@ -3289,10 +3334,10 @@
     "contentHash": "7d26539b5ce8c0cf12e184a3028d6ca19ed6b940a234654659d22d7555f29847",
     "esContrast": "Tras 'quando', el pronombre va ANTES del verbo (próclise).",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Quando você se ___ (acordar), me liga.",
+      "sentence": "Quando se ___ (acordar), ligue-me.",
       "blanks": [
         {
           "position": 0,
@@ -3302,6 +3347,11 @@
           ]
         }
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Quando você se ___ (acordar), me liga."
+      }
     }
   },
   {
@@ -4807,29 +4857,34 @@
       "subordinada-adverbial",
       "temporal"
     ],
-    "contentHash": "2e04dcf8312fb463ebf8541131bc0fb9b0d2047ca5f649b0a207572b809503b2",
-    "esContrast": "En pt-BR se usa 'dormindo' con gerúndio; en es se puede decir 'dormido/a'.",
+    "contentHash": "6e9b111cbdd834c7d4ecda959b5ebd88bd32084677d8f6ee2c6d8f28d6bb734c",
+    "esContrast": "En PT-PT el progresivo es 'estar A + infinitivo' ('estava a dormir'); el gerundio 'dormindo' es brasileño.",
     "audio": {
       "br": {
         "hash": "e1cd1687243d5b518e57c7afe4d498824d3271f2272e05b4d22f2398d700a9a3",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "d428ba8b01a61c49e0afd3dc1baa02fbd02c6eaa5b5f12e2ad56624f0f635563",
-        "voice": "Portuguese_Wiselady"
+        "hash": "839cfd9da1868e0f174bc22660d52c5185dc249dcbed32be6de4d4bf400c041f",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: gerundio con estar",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) — audio regenerado (informe-voce)",
     "type": "translation",
     "data": {
-      "source": "Quando você chegou, eu já estava dormindo.",
+      "source": "Quando chegaste, eu já estava a dormir.",
       "target": "Cuando llegaste, yo ya estaba durmiendo.",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Cuando llegaste, yo ya estaba dormido."
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "source": "Quando você chegou, eu já estava dormindo."
+      }
     }
   },
   {
@@ -4846,11 +4901,11 @@
     "contentHash": "b68ed598ef5900249ae3b48ce12a91865139e705f6b5895b36c904ddb6be9d19",
     "esContrast": "Igual en ambos idiomas: 'depender de'. Cuidado con la duplicación.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "depender",
-      "sentence": "Tudo depende ___ de como você se preparar para a prova.",
+      "sentence": "Tudo depende ___ de como se preparar para a prova.",
       "options": [
         "∅",
         "de",
@@ -4858,6 +4913,11 @@
         "para"
       ],
       "answer": "de"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Tudo depende ___ de como você se preparar para a prova."
+      }
     }
   },
   {
@@ -5202,7 +5262,7 @@
     "tags": [
       "próclise"
     ],
-    "contentHash": "fffcb7152e8360258938fb04869d8c58b0e13de330dd4b4b85f091aa591d8e49",
+    "contentHash": "17c3ea71bf9307bc73150431f194a1824d86dc031032d29743439681298ab907",
     "esContrast": "En portugués la próclise (me) es obligatoria tras 'não', mientras que en español puedes decir 'No me digas' sin problema.",
     "audio": {
       "br": {
@@ -5210,21 +5270,26 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "72664b321e51b7d64d6aa4e3a661e50857bfebe48a45964c7047d13a17ffc879",
-        "voice": "Portuguese_Wiselady"
+        "hash": "e88bbf3e39221d7b474d56db5a0160fb882dc3fd5aba5e1b6cd0cc9d72193eb1",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) — audio regenerado (informe-voce)",
     "type": "translation",
     "data": {
-      "source": "Não me diga que você conseguiu!",
+      "source": "Não me digas que conseguiste!",
       "target": "¡No me digas que lo conseguiste!",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
         "¡No me digas que lo lograste!"
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "source": "Não me diga que você conseguiu!"
+      }
     }
   },
   {
@@ -5605,12 +5670,12 @@
       "coloquial"
     ],
     "contentHash": "d6eb0f2771bea0a611b615edd2100611e4a068171ac2a94f4cf45490d13f1ad5",
-    "esContrast": "No confundas 'te' (pronombre) con 'ti' español: 'te quiero' = 'eu te amo'.",
+    "esContrast": "No confundas 'te' (pronombre) con 'ti' español: 'te quiero' = 'amo-te'.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu te ___ (alimentar) sempre que você precisar.",
+      "sentence": "Eu ___-te (alimentar) sempre que precisares.",
       "blanks": [
         {
           "position": 0,
@@ -5618,6 +5683,11 @@
           "alternatives": []
         }
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Eu te ___ (alimentar) sempre que você precisar."
+      }
     }
   },
   {
@@ -5730,10 +5800,10 @@
     "contentHash": "dc9ba1b04a609ee139dee2728c8a74aba9800d4ec941410de0740bbdadcca3e2",
     "esContrast": "En PT-BR se dice 'o que' o 'quê'; en PT-PT se prefiere 'o que' o 'que'. Nunca 'si' como en español.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Diga-me ___ você quer para o jantar.",
+      "sentence": "Diga-me ___ quer para o jantar.",
       "blanks": [
         {
           "position": 0,
@@ -5744,6 +5814,11 @@
           ]
         }
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Diga-me ___ você quer para o jantar."
+      }
     }
   },
   {
@@ -9692,6 +9767,9 @@
       "punto:b8-coloc-mesoclise",
       "directo"
     ],
+    "contentHash": "f3565d88c0e0b7cc3215b7d852881dca2288a493665140ffd8f9315ae52711a9",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
       "question": "___ o resultado assim que souber alguma coisa.",
@@ -9703,10 +9781,7 @@
       ],
       "correctIndex": 0,
       "explanationEs": "En futuro y condicional el clítico va DENTRO: entre la raíz (dir-) y la desinencia (-ei). Es la mesóclise, y es europea culta."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "f3565d88c0e0b7cc3215b7d852881dca2288a493665140ffd8f9315ae52711a9"
+    }
   },
   {
     "id": "b2c2-par-14",
@@ -9721,6 +9796,9 @@
       "punto:b8-coloc-mesoclise",
       "directo"
     ],
+    "contentHash": "511bfec1261cb40f72403a6637b9bcb28bdc6ffd06f8258ae81874b009591f34",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
       "question": "O advogado ___ do processo assim que houver novidades.",
@@ -9732,10 +9810,7 @@
       ],
       "correctIndex": 3,
       "explanationEs": "«Falar» + «me» + «-á»: el clítico se mete entre el infinitivo y la desinencia del futuro."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "511bfec1261cb40f72403a6637b9bcb28bdc6ffd06f8258ae81874b009591f34"
+    }
   },
   {
     "id": "b2c2-par-15",
@@ -9750,6 +9825,9 @@
       "punto:b8-coloc-mesoclise",
       "contraste"
     ],
+    "contentHash": "d3b177cf3f551821d9a5f6e38445eeaf8b1eb358298f85e23b3402dd85f4cd34",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
       "question": "Ele não ___ o preço antes de ver a casa toda.",
@@ -9761,10 +9839,7 @@
       ],
       "correctIndex": 2,
       "explanationEs": "La negación es un atractor de próclise, y el atractor manda sobre la mesóclise. Con «não», el clítico va delante: «não me dirá»."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "d3b177cf3f551821d9a5f6e38445eeaf8b1eb358298f85e23b3402dd85f4cd34"
+    }
   },
   {
     "id": "b2c2-par-16",
@@ -9779,6 +9854,9 @@
       "punto:b8-coloc-mesoclise",
       "contraste"
     ],
+    "contentHash": "123aa35a3e893f0f5e8f5434e5a6c48ac576b45e3e763b0c7293f3047bf19060",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
       "question": "Quem ___ a notícia primeiro?",
@@ -9790,10 +9868,7 @@
       ],
       "correctIndex": 0,
       "explanationEs": "Los interrogativos («quem», «que», «onde») atraen el clítico igual que la negación."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "123aa35a3e893f0f5e8f5434e5a6c48ac576b45e3e763b0c7293f3047bf19060"
+    }
   },
   {
     "id": "b2c2-par-17",
@@ -9808,6 +9883,10 @@
       "punto:b8-coloc-mesoclise",
       "directo"
     ],
+    "contentHash": "fb4a124fc436df9ac5653827878f4b2533ea58abd677b372b9aa572f33052604",
+    "esContrast": "Con clítico de 3.ª persona cae la -r del infinitivo, el clítico pasa a «-lo» y el tema se acentúa: comprar + o + á = «comprá-lo-á».",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "fill_blank",
     "data": {
       "sentence": "Se o preço descer, ele ___ sem hesitar. (comprar + o)",
@@ -9818,11 +9897,7 @@
           "alternatives": []
         }
       ]
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "esContrast": "Con clítico de 3.ª persona cae la -r del infinitivo, el clítico pasa a «-lo» y el tema se acentúa: comprar + o + á = «comprá-lo-á».",
-    "contentHash": "fb4a124fc436df9ac5653827878f4b2533ea58abd677b372b9aa572f33052604"
+    }
   },
   {
     "id": "b2c2-par-18",
@@ -9837,6 +9912,10 @@
       "punto:b8-coloc-mesoclise",
       "directo"
     ],
+    "contentHash": "68b365b4e2d81321aa31ecd14d5731154cba17c245393b9e80789e62aba375f8",
+    "esContrast": "También cae la -r y aparece «-lo», pero los verbos en -ir NO se acentúan: «parti-lo-á», no *«partí-lo-á»*. Es la excepción que la regla de «tras -r el verbo se acentúa» esconde, porque los ejemplos que se citan siempre son de -ar y -er.",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "fill_blank",
     "data": {
       "sentence": "O bolo é enorme; o pai ___ à mesa. (partir + o)",
@@ -9847,11 +9926,7 @@
           "alternatives": []
         }
       ]
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "esContrast": "También cae la -r y aparece «-lo», pero los verbos en -ir NO se acentúan: «parti-lo-á», no *«partí-lo-á»*. Es la excepción que la regla de «tras -r el verbo se acentúa» esconde, porque los ejemplos que se citan siempre son de -ar y -er.",
-    "contentHash": "68b365b4e2d81321aa31ecd14d5731154cba17c245393b9e80789e62aba375f8"
+    }
   },
   {
     "id": "b2c2-par-19",
@@ -9866,6 +9941,9 @@
       "punto:b8-coloc-mesoclise",
       "directo"
     ],
+    "contentHash": "8cc19adda6dde044c4b1ac5fd9b698f276210f95d69431f865368454eb1cbd95",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
       "question": "Se pudesse, ___ um conselho, mas não me compete.",
@@ -9877,10 +9955,7 @@
       ],
       "correctIndex": 2,
       "explanationEs": "La mesóclise también funciona en condicional: dar + lhe + ia."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "8cc19adda6dde044c4b1ac5fd9b698f276210f95d69431f865368454eb1cbd95"
+    }
   },
   {
     "id": "b2c2-par-20",
@@ -9895,6 +9970,9 @@
       "punto:b8-coloc-mesoclise",
       "contraste"
     ],
+    "contentHash": "171b557fda0ee6f62b4b505751d21984446f202dd03a5950bf4296fd30e81211",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
       "question": "Talvez ___ a casa mais cedo do que pensas.",
@@ -9906,10 +9984,7 @@
       ],
       "correctIndex": 1,
       "explanationEs": "«Talvez» antepuesto exige conjuntivo y atrae el clítico: dos cosas a la vez. Pospuesto («Vende-se, talvez») llevaría indicativo."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "171b557fda0ee6f62b4b505751d21984446f202dd03a5950bf4296fd30e81211"
+    }
   },
   {
     "id": "b2c2-par-21",
@@ -9924,6 +9999,10 @@
       "punto:b8-coloc-mesoclise",
       "directo"
     ],
+    "contentHash": "102f86d9e58d6e606563249f1ee6f5be9698fbed54916f0aeb476ab9a4a43993",
+    "esContrast": "«Fazer» es uno de los tres irregulares: el tema del futuro es «far-», y la mesóclise se construye sobre él: far + lhe + á.",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "fill_blank",
     "data": {
       "sentence": "O médico ___ alguns exames antes de decidir. (fazer + lhe)",
@@ -9934,11 +10013,7 @@
           "alternatives": []
         }
       ]
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "esContrast": "«Fazer» es uno de los tres irregulares: el tema del futuro es «far-», y la mesóclise se construye sobre él: far + lhe + á.",
-    "contentHash": "102f86d9e58d6e606563249f1ee6f5be9698fbed54916f0aeb476ab9a4a43993"
+    }
   },
   {
     "id": "b2c2-par-22",
@@ -9953,6 +10028,10 @@
       "punto:b8-coloc-mesoclise",
       "directo"
     ],
+    "contentHash": "d1dd5df09ad32d106b88f028152bd431d6bf3e1934a55530a8547d52e7edd316",
+    "esContrast": "Con clítico de 1.ª o 2.ª persona (y con «lhe/lhes») el tema queda intacto: escrever + lhes + ão.",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "fill_blank",
     "data": {
       "sentence": "Os professores ___ assim que houver vagas. (escrever + lhes)",
@@ -9963,11 +10042,7 @@
           "alternatives": []
         }
       ]
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "esContrast": "Con clítico de 1.ª o 2.ª persona (y con «lhe/lhes») el tema queda intacto: escrever + lhes + ão.",
-    "contentHash": "d1dd5df09ad32d106b88f028152bd431d6bf3e1934a55530a8547d52e7edd316"
+    }
   },
   {
     "id": "b2c2-par-23",
@@ -9982,6 +10057,9 @@
       "punto:b8-coloc-mesoclise",
       "contraste"
     ],
+    "contentHash": "13d84c92e8e51f55e55f4afaecb185f474508fc47ec64244c46a075d54ed9e08",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
       "question": "Ela disse que ___ o dinheiro na segunda-feira.",
@@ -9993,10 +10071,7 @@
       ],
       "correctIndex": 2,
       "explanationEs": "La conjunción «que» de una subordinada es atractor: dentro de la subordinada el clítico va delante."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "13d84c92e8e51f55e55f4afaecb185f474508fc47ec64244c46a075d54ed9e08"
+    }
   },
   {
     "id": "b2c2-par-24",
@@ -10011,6 +10086,9 @@
       "punto:b8-coloc-mesoclise",
       "directo"
     ],
+    "contentHash": "2b0ff5339bb3032dc7a122613958b102e38d378c15df7b453f6158944be610e0",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
       "question": "Se soubéssemos que era urgente, ___ os documentos hoje mesmo.",
@@ -10022,9 +10100,6 @@
       ],
       "correctIndex": 0,
       "explanationEs": "«Trazer» es el tercer irregular: tema «trar-». Y en condicional la desinencia de «nós» es «-íamos»."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "2b0ff5339bb3032dc7a122613958b102e38d378c15df7b453f6158944be610e0"
+    }
   }
 ]

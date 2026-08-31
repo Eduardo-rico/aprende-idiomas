@@ -921,7 +921,7 @@
       "irregular",
       "coloquial"
     ],
-    "contentHash": "171f16b3449dab0a13d9ef0da51232a83f1d0d0426c5adfffce172decaca46a9",
+    "contentHash": "976bdba72121896d934ad887bbdf90eabd2bdc0836e03c9ee825a6a8e2707931",
     "esContrast": "En español 'abrazar', en portugués 'abraçar' con -çar. Ojo: es 'abraço', no 'abracio'.",
     "audio": {
       "br": {
@@ -934,12 +934,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "Traduce: 'Dar un abrazo'",
       "back": "dar um abraço",
-      "example": "Posso dar um abraço em você?"
+      "example": "Posso dar-te um abraço?"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Posso dar um abraço em você?"
+      }
     }
   },
   {
@@ -3214,7 +3219,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "5fe6d699a2d4e9766dc74d9d934727972672112155d5f49c1dfc4ad7433b95e5",
+    "contentHash": "398c584de9c5a43f74dc06e561c3afb7c11391a343ecd04ffafe4d09c8cca806",
     "esContrast": "Traer → traje (español), trazer → trouxe (portugués). Usan raíces distintas.",
     "audio": {
       "br": {
@@ -3227,12 +3232,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se conjuga 'trazer' en Pretérito Perfeito? (yo)",
       "back": "eu trouxe",
-      "example": "Eu trouxe um presente para você."
+      "example": "Eu trouxe um presente para ti."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Eu trouxe um presente para você."
+      }
     }
   },
   {
@@ -3894,11 +3904,11 @@
     "contentHash": "72e788029cfba7a5c9d84f588f975855f5e47ff960d73e767d517e4abf42e9c5",
     "esContrast": "En español 'pensar en' también lleva preposición, pero muchos hispanos olvidan que en PT se dice 'pensar em' (no 'de').",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
-      "sentence": "Enquanto eu ___ pensar ___ você, o tempo passou rápido.",
+      "sentence": "Enquanto eu ___ pensar ___ ti, o tempo passou rápido.",
       "options": [
         "em",
         "de",
@@ -3906,6 +3916,11 @@
         "∅"
       ],
       "answer": "em"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Enquanto eu ___ pensar ___ você, o tempo passou rápido."
+      }
     }
   },
   {
@@ -4130,7 +4145,7 @@
       "irregular",
       "vocabulario"
     ],
-    "contentHash": "7bbe3d889899662b931f482de052b3bcdb3563b4acc96df9237c3566d5f68464",
+    "contentHash": "6c00973c2705278342b64b8eae46928f377cfc1630748b6abc0e13edea99e7a2",
     "audio": {
       "br": {
         "hash": "b3867282b2381485cd418b12eebf4e49f0dedcc4221f9c4ab58f4eac88d28221",
@@ -4142,12 +4157,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "Forma compuesta: 'tinha feito' — ¿Qué infinitivo y persona?",
       "back": "Fazer (eu/ele/ela) tinha feito = yo/él/ella había hecho",
-      "example": "Eu tinha feito o jantar quando você chegou."
+      "example": "Eu tinha feito o jantar quando chegaste."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Eu tinha feito o jantar quando você chegou."
+      }
     }
   },
   {
@@ -5295,24 +5315,30 @@
       "gramática",
       "irregular"
     ],
-    "contentHash": "9cc3099fd367818e6585d9ee4041505e607a9cd9ae366223b636612f188bdc3c",
+    "contentHash": "19381dee62323e881adc1e1a81e00be1eec72419a8ebf8c558df7dda15a17f48",
     "audio": {
       "br": {
         "hash": "238659f815fb141f3fff8a27281e559f5e1ad6ed0945efe57faa9380c2b9b673",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "76d5dac889abd81e0922c43175e804a15b9b8f1d303720c9cdbed719b3f05936",
-        "voice": "Portuguese_Wiselady"
+        "hash": "ee3d06d2b797ab4e895c180b19d8e37c5c6c626f7e5609adc122d0ae107205dc",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) — audio regenerado (informe-voce)",
     "type": "flashcard",
     "data": {
-      "front": "Conjuga 'ter' en Pretérito mais-que-perfeito composto: eu, você, nós",
-      "back": "Eu tinha, você tinha, nós tínhamos",
+      "front": "Conjuga 'ter' en Pretérito mais-que-perfeito composto: eu, tu, nós",
+      "back": "Eu tinha, tu tinhas, nós tínhamos",
       "example": "Nós tínhamosido ao médico ontem."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "front": "Conjuga 'ter' en Pretérito mais-que-perfeito composto: eu, você, nós",
+        "back": "Eu tinha, você tinha, nós tínhamos"
+      }
     }
   },
   {
@@ -8303,11 +8329,11 @@
     "contentHash": "fac545dd87ed822b70a4d46b82e43b70dc2f349b82a582c585d6c25ffbe8bf69",
     "esContrast": "En español 'necesitar' no lleva preposición; en portugués 'precisar' exige 'de'.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
-      "sentence": "Eu ___ ___ de ajuda quando você chegou.",
+      "sentence": "Eu ___ ___ de ajuda quando chegaste.",
       "options": [
         "tinha precisado",
         "tinha pedido",
@@ -8315,6 +8341,11 @@
         "havia feito"
       ],
       "answer": "tinha precisado"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Eu ___ ___ de ajuda quando você chegou."
+      }
     }
   },
   {

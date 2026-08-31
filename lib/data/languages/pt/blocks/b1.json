@@ -342,11 +342,11 @@
     "contentHash": "0693557ac92394b3e3f42a35f011173006f47c57f811018f90541aa3fe00dcc2",
     "esContrast": "En español 'volver al hotel', en PT 'voltar ao hotel' (contracción obligatoria).",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "voltar",
-      "sentence": "Quando você volta ___ hotel amanhã de manhã?",
+      "sentence": "Quando volta ___ hotel amanhã de manhã?",
       "options": [
         "ao",
         "de",
@@ -354,6 +354,11 @@
         "—no"
       ],
       "answer": "ao"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Quando você volta ___ hotel amanhã de manhã?"
+      }
     }
   },
   {
@@ -4106,7 +4111,7 @@
       "basico",
       "irregular"
     ],
-    "contentHash": "8695dcff8e77e7b82a7994d6c33999bab4327265dcfb54cc12612aaca21d81fe",
+    "contentHash": "26700a9843025ee196c782179458c75c9d9a66ef73c693995402bb648f6374fc",
     "esContrast": "En español 'para' nunca lleva acento; en portugués 'pará' es una forma verbal.",
     "audio": {
       "br": {
@@ -4119,12 +4124,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "Cuál es la diferencia entre 'para' y 'pará'?",
       "back": "'para' es preposición; 'pará' (con acento) es verbo 'parar' en 3ª persona del singular del presente de indicativo",
-      "example": "Ele pará de chorar. / Isso é para você."
+      "example": "Ele pará de chorar. / Isso é para ti."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Ele pará de chorar. / Isso é para você."
+      }
     }
   },
   {
@@ -4544,11 +4554,11 @@
     "contentHash": "8f089cb73be02b7cde4536c7933659e4c15d25e05f566108828e7bc9d73cedd6",
     "esContrast": "En español 'recordar' no lleva preposición; en PT 'lembrar-se DE'.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "lembrar",
-      "sentence": "Você se ___ da letra 'ã' no português?",
+      "sentence": "Ainda se ___ da letra 'ã' no português?",
       "options": [
         "de",
         "a",
@@ -4556,6 +4566,11 @@
         "sobre"
       ],
       "answer": "de"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Você se ___ da letra 'ã' no português?"
+      }
     }
   },
   {
@@ -6401,11 +6416,11 @@
     "contentHash": "d0321a11add0c968c5919723c5fc85523e532abc57597bb5d98914d5151ea639",
     "esContrast": "En español se dice 'pensar en' o 'pensar de'; en PT solo 'pensar EM'.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
-      "sentence": "Quando você ouve a palavra 'pâo', em que você ___?",
+      "sentence": "Quando ouve a palavra 'pâo', em que ___?",
       "options": [
         "em",
         "de",
@@ -6413,6 +6428,11 @@
         "sobre"
       ],
       "answer": "em"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Quando você ouve a palavra 'pâo', em que você ___?"
+      }
     }
   },
   {
@@ -6633,11 +6653,11 @@
     "contentHash": "d4c69c924a93fdbb1703a5a7414463c0a63e32dd786fd7683cbfbb1b8dbc74e9",
     "esContrast": "En español 'necesitar' no lleva preposición; en PT 'precisar' rige DE.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
-      "sentence": "Você ___ de uma letra 'ç' para escrever 'caça'.",
+      "sentence": "Tu ___ de uma letra 'ç' para escrever 'caça'.",
       "options": [
         "de",
         "a",
@@ -6645,6 +6665,11 @@
         "em"
       ],
       "answer": "de"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Você ___ de uma letra 'ç' para escrever 'caça'."
+      }
     }
   },
   {
@@ -7135,7 +7160,7 @@
       "b1-acento-agudo"
     ],
     "tags": [],
-    "contentHash": "e02417752232bd4e770c9619248248c1054ece3c7de7c7f8fb864a420ec08d26",
+    "contentHash": "28920f99a8e17ccfd7b1c217fc7322e47bc2d887e11b3e65b78410cf97168f27",
     "esContrast": "El acento agudo en portugués funciona similar al español, pero en 'café' cambia la pronunciación.",
     "audio": {
       "br": {
@@ -7143,15 +7168,15 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "e9be64fbd00abb68e07b4c49e43dbeac40d3fb17f9c41f0a089868192bc0558d",
-        "voice": "Portuguese_Wiselady"
+        "hash": "d056af8c26eb8f09b5b3c6914058ebeaa2835448ac3136b537b85f0260747f86",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) — audio regenerado (informe-voce)",
     "type": "listening",
     "data": {
-      "audioText": "A palavra 'café' tem acento agudo. Você ouviu o acento?",
+      "audioText": "A palavra 'café' tem acento agudo. Ouviu o acento?",
       "question": "¿Qué tipo de acento tiene la palabra 'café'?",
       "options": [
         "Agudo (´)",
@@ -7160,6 +7185,11 @@
         "Tilde (~)"
       ],
       "answer": "Agudo (´)"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "A palavra 'café' tem acento agudo. Você ouviu o acento?"
+      }
     }
   },
   {

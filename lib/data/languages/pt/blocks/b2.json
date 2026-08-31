@@ -3171,7 +3171,7 @@
     "tags": [
       "vocabulario"
     ],
-    "contentHash": "7d5f6f8ade0e2a55134b416a1e6bfdfbda3cd28de9e27eac18e7a4740b971583",
+    "contentHash": "0a44ac0c2bacb8dae8f7e5c275bafc2ba4af8c4f50f9c99d97f81b83b3245e21",
     "esContrast": "\"Morar\" se construye con \"em\": morar em + lugar. En español se dice 'vivir en'.",
     "audio": {
       "br": {
@@ -3184,12 +3184,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "¿Qué significa \"morar\"?",
       "back": "residir, vivir (en un lugar)",
-      "example": "Eu moro em São Paulo. / Onde você mora?"
+      "example": "Eu moro em São Paulo. / Onde mora?"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Eu moro em São Paulo. / Onde você mora?"
+      }
     }
   },
   {
@@ -4673,11 +4678,11 @@
     "contentHash": "b3758d78ac129612d01770592ea0455d6c77b46aa115dc6702da0f027c93393c",
     "esContrast": "Em PT 'precisar' pede DE; em ES se dice 'necesitar' sin preposición.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
-      "sentence": "Você precisa ___ ajuda com esse exercício?",
+      "sentence": "Precisa ___ ajuda com esse exercício?",
       "options": [
         "de",
         "a",
@@ -4685,6 +4690,11 @@
         "—"
       ],
       "answer": "de"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Você precisa ___ ajuda com esse exercício?"
+      }
     }
   },
   {
@@ -6111,7 +6121,7 @@
     "tags": [
       "coloquial"
     ],
-    "contentHash": "ee2f355de4d324ef44022f4298aef01322538c610390cb121d3ac15822b39a4b",
+    "contentHash": "818b8041a6ca4eef3c6230568fa66b3c705d1e27700ef60999b5763f529fd97a",
     "esContrast": "En español 'cualquier' cambia, pero en portugués es siempre 'qualquer'.",
     "audio": {
       "br": {
@@ -6124,12 +6134,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "¿Qué significa 'qualquer' y cómo se usa?",
       "back": "Significa 'cualquiera/cualquier'. Es invariable: qualquer pessoa, quaisquer pessoas.",
-      "example": "Você pode chegar a qualquer hora, não tem problema."
+      "example": "Pode chegar a qualquer hora, não tem problema."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Você pode chegar a qualquer hora, não tem problema."
+      }
     }
   },
   {

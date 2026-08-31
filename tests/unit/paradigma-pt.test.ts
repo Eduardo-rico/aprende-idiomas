@@ -89,7 +89,15 @@ describe('mesóclise — el clítico va DENTRO', () => {
   it('los tres irregulares mesoclizan sobre su raíz corta', () => {
     expect(mesoclise('dizer', 'te', 'eu')).toBe('dir-te-ei');
     expect(mesoclise('fazer', 'lhe', 'ele')).toBe('far-lhe-á');
-    expect(mesoclise('dizer', 'o', 'eles')).toBe('dir-lo-ão');
+  });
+
+  // La v1 afirmaba «dir-lo-ão» y el test la bendecía: forma inexistente,
+  // suite en verde. A los irregulares les aplica la MISMA regla que a los
+  // demás, porque dir-, far- y trar- acaban en -r los tres.
+  it('y con clítico de 3.ª también pierden la -r: di-lo, fá-lo, trá-lo', () => {
+    expect(mesoclise('dizer', 'o', 'eles')).toBe('di-lo-ão');
+    expect(mesoclise('fazer', 'o', 'ele')).toBe('fá-lo-á');
+    expect(mesoclise('trazer', 'as', 'nós', 'condicional')).toBe('trá-las-íamos');
   });
 
   it('también en condicional', () => {

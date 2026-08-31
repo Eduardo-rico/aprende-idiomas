@@ -206,7 +206,7 @@ export function triage(ex: Ex): Destino {
     }
     // Contraste sin etiqueta: el ítem trae también la forma europea
     // («Em Portugal, o 'ônibus' chama-se 'autocarro'») — retener.
-    if (contrasteImplicito(ex, h.europeo)) {
+    if (contrasteImplicito(ex, h.terminoEuropeo === undefined ? h.europeo : h.terminoEuropeo)) {
       riesgos.push(`contraste-implicito:${h.marcador}`);
       continue;
     }

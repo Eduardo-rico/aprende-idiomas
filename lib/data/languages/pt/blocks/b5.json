@@ -43,7 +43,7 @@
     "tags": [
       "vocabulario"
     ],
-    "contentHash": "0361bfe7acdb4d3940bb7bde3d2556e2732b646eb65e16d0b1991f9b20319b9c",
+    "contentHash": "b13a231d505f2f351f4ef7785e1896b3eb51465c562e4071dd5466166645a515",
     "esContrast": "Con 'c' en portugués: esforço (con effort en inglés).",
     "audio": {
       "br": {
@@ -56,12 +56,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "Traduce 'esfuerzo'",
       "back": "esforço",
-      "example": "Você precisa fazer um esforço maior."
+      "example": "Precisa de fazer um esforço maior."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Você precisa fazer um esforço maior."
+      }
     }
   },
   {
@@ -676,28 +681,33 @@
       "regular",
       "futuro"
     ],
-    "contentHash": "2227588ad1586e7f60db21d801b03edaeb4bfb42f7d0a8a2e3ad655fae6dd4c6",
+    "contentHash": "459bd813e260fa5fb83c3f5fa46366e125dcffd1a5faa74b884d6f14b49a3a28",
     "audio": {
       "br": {
         "hash": "ac0fb29151e89f11f4e550d82cc9753d2f8f90b6d5b7cac038cc4c6af36496d3",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "44c54933f64a7ba01e3399f5cda4ff79f1935c03197187bdce44ec3c2679a16a",
-        "voice": "Portuguese_Wiselady"
+        "hash": "11c7675593627d741cdd113d837b9e57975d1cf7e95c22afdce3e82af65a3a1b",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) — audio regenerado (informe-voce)",
     "type": "translation",
     "data": {
-      "source": "Você vai focar nos estudos para o vestibular.",
+      "source": "Vais focar-te nos estudos para o vestibular.",
       "target": "Tú vas a enfocarte en los estudios para el examen de ingreso.",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Tú te vas a enfocar en los estudios para el examen de ingreso."
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "source": "Você vai focar nos estudos para o vestibular."
+      }
     }
   },
   {
@@ -1172,7 +1182,7 @@
     "tags": [
       "desejo-cortes"
     ],
-    "contentHash": "41e0ea147f22bf5b20ffffd635d0b00f69f19c9e72936f6922c8f78f0cd70345",
+    "contentHash": "9d14b132f3f7d641979d33edd2e06c4c77780c6d86e779106fca336511a8c86a",
     "esContrast": "PT 'ficaria contente' vs ES 'estaría contento' — el uso de 'ficar' para estados es muy portugués.",
     "audio": {
       "br": {
@@ -1180,21 +1190,26 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "c0cd67bd7c8567637deb1af6b6aaaebe0b1f2996ad303496ff58881f5e14bb65",
-        "voice": "Portuguese_Wiselady"
+        "hash": "8b329c812753a9caf4593f3793f39586e224100e5bd2e16248cf0c619592b0e3",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) — audio regenerado (informe-voce)",
     "type": "translation",
     "data": {
-      "source": "Eu ficaria muito contente se você pudesse vir à festa.",
+      "source": "Eu ficaria muito contente se pudesses vir à festa.",
       "target": "Yo estaría muy contento si pudieras venir a la fiesta.",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Yo me pondría muy contento si pudieras venir a la fiesta."
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "source": "Eu ficaria muito contente se você pudesse vir à festa."
+      }
     }
   },
   {
@@ -1405,7 +1420,7 @@
       "irregular",
       "conjugacao"
     ],
-    "contentHash": "3917b328323796ec137a1f5b7a8abbeadd699d680222d3112055c258b779f44a",
+    "contentHash": "91867a0fce6fb8daadf76d248b2e9c7e2527fb9dadd6eae00225541d769714a0",
     "esContrast": "Pôr es irregular: no sigue el patrón -ar. Equivale a 'yo pondría'.",
     "audio": {
       "br": {
@@ -1413,17 +1428,23 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "5b750cfa1735b62f1c4f2fb1593f80d2a64ab7fd270a88bf0b462c412799fcc7",
-        "voice": "Portuguese_Wiselady"
+        "hash": "999aacb40143903aa6bf64e1eed7defa205f4fed299e5774e1c389c57a367723",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) — audio regenerado (informe-voce)",
     "type": "flashcard",
     "data": {
-      "front": "Conjuga 'pôr' en condicional simple: eu, você, nós",
-      "back": "eu poria, você poria, nós poríamos",
+      "front": "Conjuga 'pôr' en condicional simple: eu, tu, nós",
+      "back": "eu poria, tu porias, nós poríamos",
       "example": "Eu poria esse projeto em prática, se tivesse apoio."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "front": "Conjuga 'pôr' en condicional simple: eu, você, nós",
+        "back": "eu poria, você poria, nós poríamos"
+      }
     }
   },
   {
@@ -1757,11 +1778,11 @@
     "contentHash": "44d508781ebc2be6a73dfaa915a44c87b708b5da933f79861a585c61d7f558fd",
     "esContrast": "En español 'pensar' usa 'en', pero en portugués se usa 'pensar EM'.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
-      "sentence": "Eu pensaria ___ você enquanto estivesse fora.",
+      "sentence": "Eu pensaria ___ ti enquanto estivesse fora.",
       "options": [
         "em",
         "de",
@@ -1769,6 +1790,11 @@
         "sobre"
       ],
       "answer": "em"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Eu pensaria ___ você enquanto estivesse fora."
+      }
     }
   },
   {
@@ -1843,7 +1869,7 @@
     "tags": [
       "desejo-cortes"
     ],
-    "contentHash": "6b52672902e95b5c0b369b62905c093d5ff66e6a65b215f69893f6eacedc2120",
+    "contentHash": "6e168b961a93090ed60839c2d040a27ce735b3e1bff5bf5dc8ed5d8089794dbc",
     "esContrast": "En PT se usa 'gostaria' (de 'gostar') y en ES 'gustaría' (de 'gustar') — coinciden en forma, pero el verbo base es diferente.",
     "audio": {
       "br": {
@@ -1851,21 +1877,26 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "0561e0dc712900ff3683ae6c72dfa1cffb8d063120c548119baa69286d8fc5c7",
-        "voice": "Portuguese_Wiselady"
+        "hash": "97d106c5d42d95d562a7c3f9afd09f9b370fdac6c2aeed228de347b8b05cb317",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) — audio regenerado (informe-voce)",
     "type": "translation",
     "data": {
-      "source": "Eu gostaria de falar com você sobre esse assunto.",
+      "source": "Eu gostaria de falar contigo sobre esse assunto.",
       "target": "Me gustaría hablar contigo sobre ese asunto.",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Quisiera hablar contigo sobre ese asunto."
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "source": "Eu gostaria de falar com você sobre esse assunto."
+      }
     }
   },
   {
@@ -1959,11 +1990,11 @@
     "contentHash": "4e3d1e6d054f22d74541dd17dbbd376d01f614d825b90cd3984ce04f04a4802d",
     "esContrast": "En español 'necesitar' es transitivo directo; en portugués 'precisar' exige DE.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
-      "sentence": "Você precisaria ___ ajuda com isso?",
+      "sentence": "Precisaria ___ ajuda com isso?",
       "options": [
         "de",
         "a",
@@ -1971,6 +2002,11 @@
         "—"
       ],
       "answer": "de"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Você precisaria ___ ajuda com isso?"
+      }
     }
   },
   {
@@ -2856,7 +2892,7 @@
     "tags": [
       "regular"
     ],
-    "contentHash": "36db42bcd111ea83dfce683af17dde6591a871891e20112a28704e1815516b4a",
+    "contentHash": "29f2f360a073d9c3182faf8f6204610250f6178ea183cfec0116e5d7aa17763d",
     "esContrast": "Contente se escribe con 'e' en portugués, no con 't' como en español 'contento'",
     "audio": {
       "br": {
@@ -2864,22 +2900,27 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "f58eff3476b82e967d0ee3a0a5618f9fcd014bcac90f95fee443443ba5b21b20",
-        "voice": "Portuguese_Wiselady"
+        "hash": "0cf8434c86631593ab0909a3178efb6470df854edd3459e51f8f6e452ae80263",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) — audio regenerado (informe-voce)",
     "type": "translation",
     "data": {
       "source": "Yo estaría contento si estudiaras más.",
-      "target": "Eu estaria contente se você estudasse mais.",
+      "target": "Eu estaria contente se estudasses mais.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
         "Eu ficaria contente se estudasses mais.",
         "Estaria contente se estudasses mais."
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Eu estaria contente se você estudasse mais."
+      }
     }
   },
   {
@@ -2924,28 +2965,33 @@
       "futuro",
       "coloquial"
     ],
-    "contentHash": "22654a0c8d334609a234d0c759fd31d344e706f3f4b596cbc726fc7f0a2ede0f",
+    "contentHash": "2570d1a6274109f488cc3a1c741bc9cf4274bb7d53ca58eeeb121deeddd200df",
     "audio": {
       "br": {
         "hash": "a26681f49ebbd1220f6c58d03c90383cafc6eb256a164aa65b36d8f923aba9b6",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "ee62c75b9723a1f954da18db201553be81d38b9b85e55ff6a0e4461e326fec35",
-        "voice": "Portuguese_Wiselady"
+        "hash": "e2d8bedd05ccb1ab9c553548d7f9e9836b673d5c2aded55ceeeefd3ec9372608",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) — audio regenerado (informe-voce)",
     "type": "translation",
     "data": {
-      "source": "Se eu puder, vou querer trazer você comigo.",
+      "source": "Se eu puder, vou querer trazer-te comigo.",
       "target": "Si yo puedo, voy a querer traerte conmigo.",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Si puedo, querré traerte conmigo."
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "source": "Se eu puder, vou querer trazer você comigo."
+      }
     }
   },
   {
@@ -2962,10 +3008,10 @@
     "contentHash": "6f5b01a2c53b1bb1a048f9a26a89354b425b83f1dc44c0c0c27da72783e37c5e",
     "esContrast": "'Estaria' de 'estar' se usa para estados temporales.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu ___ muito contente se você viesse à minha festa.",
+      "sentence": "Eu ___ muito contente se viesses à minha festa.",
       "blanks": [
         {
           "position": 0,
@@ -2975,6 +3021,11 @@
           ]
         }
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Eu ___ muito contente se você viesse à minha festa."
+      }
     }
   },
   {
@@ -3089,7 +3140,7 @@
     "tags": [
       "desejo-cortes"
     ],
-    "contentHash": "72894d1351b0263a5133ec839f602895adb5d53a4658f7f07764e792fdd643b2",
+    "contentHash": "23d94db30cd18f0f28c4a5bb65339dd144705cd4cb7e946859c8d520e7c58ad9",
     "esContrast": "'Podrías ayudarme' se traduce igual: 'Você poderia me ajudar'.",
     "audio": {
       "br": {
@@ -3108,6 +3159,12 @@
       "front": "¿Cómo pedirías algo cortésmente usando 'poder'?",
       "back": "você poderia + infinitivo",
       "example": "Você poderia me ajudar com isso?"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "você poderia + infinitivo",
+        "example": "Você poderia me ajudar com isso?"
+      }
     }
   },
   {
@@ -3837,10 +3894,10 @@
     "contentHash": "8a71ec9487fb932d8b17fa7e5fcaea2c21dc387ae9504f913fee87acad6b84ef",
     "esContrast": "'Poderia' es más cortés que 'pode'.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Você ___ me dar um conselho sobre isso?",
+      "sentence": "___ dar-me um conselho sobre isso?",
       "blanks": [
         {
           "position": 0,
@@ -3850,6 +3907,11 @@
           ]
         }
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Você ___ me dar um conselho sobre isso?"
+      }
     }
   },
   {
@@ -4850,7 +4912,7 @@
     "tags": [
       "discurso-indireto"
     ],
-    "contentHash": "b3bebf21227a0fef0a8b1a690b4c6bdcb44269bb12872d7d1842d3a2990dfd7b",
+    "contentHash": "1016dc848949d6121d23e7da072e0a42c9c80a87967822daba73988e9c17c237",
     "esContrast": "Se mantiene 'poderia' para cortesía, igual que 'podría' en español.",
     "audio": {
       "br": {
@@ -4863,12 +4925,18 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "flashcard",
     "data": {
-      "front": "'Você poderia me dizer onde fica a estação?' → Identifica la estructura",
+      "front": "'Poderia dizer-me onde fica a estação?' → Identifica la estructura",
       "back": "Condicional de possibilidade + pergunta indireta",
-      "example": "Você poderia me dizer qual é o seu conselho?"
+      "example": "Poderia dizer-me qual é o seu conselho?"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "front": "'Você poderia me dizer onde fica a estação?' → Identifica la estructura",
+        "example": "Você poderia me dizer qual é o seu conselho?"
+      }
     }
   },
   {
@@ -4882,7 +4950,7 @@
     "tags": [
       "verbo-irregular"
     ],
-    "contentHash": "b3c94153eccb7f49f9b6b88325f559c39bd0b2d4782e463ba170511603f4d20f",
+    "contentHash": "1fa98ed22e25bb365374e389884339f924f64cd1883b5b587b2fb4790b2935b1",
     "esContrast": "Es 'quereremos', no 'querremos' como en español. La raíz es 'quere-'.",
     "audio": {
       "br": {
@@ -4895,12 +4963,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'querer' en futuro do presente (nós, vocês):",
       "back": "quereremos, quererão",
-      "example": "Quereremos muito que você venha nos visitar."
+      "example": "Quereremos muito que venhas visitar-nos."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Quereremos muito que você venha nos visitar."
+      }
     }
   },
   {
@@ -5725,7 +5798,7 @@
     "tags": [
       "conjugacao"
     ],
-    "contentHash": "d2f872f3b8f5c4de72eaca1e06e9f41da59c655f91b52b76aa61fb9a2137eebf",
+    "contentHash": "f4eeaebb8a1465eb3394de56b4a4c5ce0db71f71aea63d5adde277d14d07680d",
     "esContrast": "Similar a 'yo hablaría', pero sin tilde en la terminación.",
     "audio": {
       "br": {
@@ -5738,12 +5811,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se conjuga 'falar' en primera persona del condicional simple?",
       "back": "eu falaria",
-      "example": "Eu falaria português com você, se pudesse."
+      "example": "Eu falaria português contigo, se pudesse."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Eu falaria português com você, se pudesse."
+      }
     }
   },
   {
@@ -5936,11 +6014,11 @@
     "contentHash": "dc63d860e6fe2feaa52c279cb632ae3ba68ba459ff5e68372d41c49e9a1623fd",
     "esContrast": "En español se dice 'pensar en', pero en PT se usa 'pensar EM'.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
-      "sentence": "Em breve, eu ___ em você quando resolvermos este problema.",
+      "sentence": "Em breve, eu ___ em ti quando resolvermos este problema.",
       "options": [
         "em",
         "de",
@@ -5948,6 +6026,11 @@
         "para"
       ],
       "answer": "em"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Em breve, eu ___ em você quando resolvermos este problema."
+      }
     }
   },
   {
@@ -6298,10 +6381,10 @@
     "contentHash": "f0de9ef510e4378ed18b2b071b939bd909833740377d5873e23f89835a755f21",
     "esContrast": "Irregular: 'saber' → 'souber' no futuro. Cuidado: 'souber' também é subjuntivo.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Se você não ___ a tempo, perderá a vaga.",
+      "sentence": "Se não ___ a tempo, perderá a vaga.",
       "blanks": [
         {
           "position": 0,
@@ -6309,6 +6392,11 @@
           "alternatives": []
         }
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Se você não ___ a tempo, perderá a vaga."
+      }
     }
   },
   {
@@ -6352,7 +6440,7 @@
       "b5-cond-regular"
     ],
     "tags": [],
-    "contentHash": "f3712afa4e6980c9056c697d1de4363a69624f940a9a47a958821630d9776571",
+    "contentHash": "6de3a1d79f2ac5873f185c43211687e865831c09c1ca6d8d242967041235625b",
     "esContrast": "Cuidado: 'contente' significa 'contento/a', no 'contente' como en español.",
     "audio": {
       "br": {
@@ -6360,15 +6448,15 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "003e495aa44c6eb546bcd965957ae317b491fa5763e0135b7bc0a42d6a4e5e0a",
-        "voice": "Portuguese_Wiselady"
+        "hash": "c991b44527f6166212bd118a292d7bf74c65fa7ddaa355d2e3bf8c49691f7c5f",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) — audio regenerado (informe-voce)",
     "type": "listening",
     "data": {
-      "audioText": "Ela disse que ficaria muito contente se você realizasse seu desejo.",
+      "audioText": "Ela disse que ficaria muito contente se realizasses o teu desejo.",
       "question": "¿Qué condición la haría estar contenta?",
       "options": [
         "Que la persona realizara su deseo",
@@ -6377,6 +6465,11 @@
         "Que la persona trabajara más"
       ],
       "answer": "Que la persona realizara su deseo"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "Ela disse que ficaria muito contente se você realizasse seu desejo."
+      }
     }
   },
   {
@@ -7109,12 +7202,18 @@
     "contentHash": "adab6a42a6025ad463f2f1640b205d9d9a74d0f76ccb462741a3c7c11ac1d475",
     "esContrast": "El condicional de 'poder' es 'poderia' (sin tilde, distinto del español 'podría').",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "error_correction",
     "data": {
-      "sentence": "Você podería me ajudar com isto?",
-      "correct": "Você poderia me ajudar com isto?",
+      "sentence": "Podería ajudar-me com isto?",
+      "correct": "Poderia ajudar-me com isto?",
       "explanationEs": "El condicional de 'poder' en PT es 'poderia'."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Você podería me ajudar com isto?",
+        "correct": "Você poderia me ajudar com isto?"
+      }
     }
   },
   {
@@ -7203,16 +7302,21 @@
     "contentHash": "3dc6033d1d93b3fc87b37d45bda32b389627d1a826761ef41e6d7c718885fed9",
     "esContrast": "Petición cortés con condicional: 'poderia'.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Você ___ (poder) me ajudar, por favor?",
+      "sentence": "___ (poder) ajudar-me, por favor?",
       "blanks": [
         {
           "position": 0,
           "answer": "poderia"
         }
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Você ___ (poder) me ajudar, por favor?"
+      }
     }
   },
   {
@@ -7334,6 +7438,10 @@
       "punto:b5-futcomp-composto-real",
       "directo"
     ],
+    "contentHash": "24a2c504154b701c16bfb4338f092be630c3116efae1966141bdcbcacb71c359",
+    "esContrast": "El futuro composto marca lo que estará ACABADO antes de otro momento futuro. En español, «habré terminado».",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "fill_blank",
     "data": {
       "sentence": "Antes do almoço já ___ a apresentação. (terminar)",
@@ -7344,11 +7452,7 @@
           "alternatives": []
         }
       ]
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "esContrast": "El futuro composto marca lo que estará ACABADO antes de otro momento futuro. En español, «habré terminado».",
-    "contentHash": "24a2c504154b701c16bfb4338f092be630c3116efae1966141bdcbcacb71c359"
+    }
   },
   {
     "id": "b2c2-par-02",
@@ -7363,6 +7467,10 @@
       "punto:b5-futcomp-composto-real",
       "directo"
     ],
+    "contentHash": "fcb8c86de8c0cbcfab2a59b317fc9769f5ad19fb8a0517560920d2c085727d3c",
+    "esContrast": "«Ya habrán salido»: acabado ANTES de que pase el autobús, no a la vez. Y «quando passar» es futuro do conjuntivo, que el español no tiene.",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "fill_blank",
     "data": {
       "sentence": "Quando o autocarro passar, os miúdos já ___ de casa. (sair)",
@@ -7373,11 +7481,7 @@
           "alternatives": []
         }
       ]
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "esContrast": "«Ya habrán salido»: acabado ANTES de que pase el autobús, no a la vez. Y «quando passar» es futuro do conjuntivo, que el español no tiene.",
-    "contentHash": "fcb8c86de8c0cbcfab2a59b317fc9769f5ad19fb8a0517560920d2c085727d3c"
+    }
   },
   {
     "id": "b2c2-par-03",
@@ -7392,9 +7496,13 @@
       "punto:b5-futcomp-composto-real",
       "directo"
     ],
+    "contentHash": "2c84c8818f59e6083fe6a4c2a544e4ae870f0930acc55ba4c7552e0655cd680e",
+    "esContrast": "Participio irregular: «feito», no *«fazido»*. El «já» y «quando voltar» (futuro do conjuntivo) son los que piden el compuesto: sin ellos, «faremos» valdría igual.",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Até sexta ___ tudo o que ficou pendente. (fazer)",
+      "sentence": "Quando o chefe voltar de viagem, já ___ tudo o que ficou pendente. (fazer)",
       "blanks": [
         {
           "position": 0,
@@ -7402,11 +7510,7 @@
           "alternatives": []
         }
       ]
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "esContrast": "Participio irregular: «feito», no *«fazido»*. Y «até sexta» incluye el viernes.",
-    "contentHash": "7048625d913d5e1ef509517afbfb511b017f0bd5029a7ec794f675d7e344f110"
+    }
   },
   {
     "id": "b2c2-par-04",
@@ -7421,6 +7525,10 @@
       "punto:b5-futcomp-composto-real",
       "directo"
     ],
+    "contentHash": "e96a32c445345591cdda2e10cd617f5f4761f4d6a7c9cf260175e46eb98af5ee",
+    "esContrast": "«Dito», no *«dizido»*. Es uno de los tres verbos que también son irregulares en el futuro simple (dirá).",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "fill_blank",
     "data": {
       "sentence": "Quando o julgamento acabar, a testemunha já ___ tudo. (dizer)",
@@ -7431,11 +7539,7 @@
           "alternatives": []
         }
       ]
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "esContrast": "«Dito», no *«dizido»*. Es uno de los tres verbos que también son irregulares en el futuro simple (dirá).",
-    "contentHash": "e96a32c445345591cdda2e10cd617f5f4761f4d6a7c9cf260175e46eb98af5ee"
+    }
   },
   {
     "id": "b2c2-par-05",
@@ -7450,6 +7554,9 @@
       "punto:b5-futcomp-composto-real",
       "contraste"
     ],
+    "contentHash": "17dc6ee42603fd990d113742cc9b76668dbea72c62a7212a1633520ac5f0fb54",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
       "question": "Amanhã de manhã ___ com o teu chefe sobre o aumento.",
@@ -7461,10 +7568,7 @@
       ],
       "correctIndex": 0,
       "explanationEs": "Sin un segundo momento futuro al que anticiparse, el futuro composto sobra: basta el simple."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "17dc6ee42603fd990d113742cc9b76668dbea72c62a7212a1633520ac5f0fb54"
+    }
   },
   {
     "id": "b2c2-par-06",
@@ -7479,6 +7583,9 @@
       "punto:b5-futcomp-composto-real",
       "contraste"
     ],
+    "contentHash": "42d25c19275eee9f77224d1ad89390bf1db1b6fc7a58195821ba612e58ab4d00",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
       "question": "Se calhar ___ o carro no próximo verão.",
@@ -7490,10 +7597,7 @@
       ],
       "correctIndex": 3,
       "explanationEs": "«Se calhar» es la mitigación europea de «quizá», y no cambia el tiempo: aquí la acción es simplemente futura."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "42d25c19275eee9f77224d1ad89390bf1db1b6fc7a58195821ba612e58ab4d00"
+    }
   },
   {
     "id": "b2c2-par-07",
@@ -7508,6 +7612,9 @@
       "punto:b5-futcomp-composto-real",
       "directo"
     ],
+    "contentHash": "3f33da597a02e2051bae25faa2714bb76e64e9979cef7026f3cbc14e5440416f",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
       "question": "Quando vocês chegarem ao cinema, o filme já ___.",
@@ -7519,10 +7626,7 @@
       ],
       "correctIndex": 1,
       "explanationEs": "El «já» y la subordinada de futuro piden anterioridad: la película ya habrá empezado."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "3f33da597a02e2051bae25faa2714bb76e64e9979cef7026f3cbc14e5440416f"
+    }
   },
   {
     "id": "b2c2-par-08",
@@ -7537,9 +7641,12 @@
       "punto:b5-futcomp-composto-real",
       "directo"
     ],
+    "contentHash": "17df7cdd48e6be721ada7ac106b41321c15e47351a2e4b05d1b81577358e4830",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
-      "question": "Até ao fim do mês ___ todas as facturas. (pagar)",
+      "question": "Quando o senhorio vier no dia 30, eu já ___ todas as faturas.",
       "options": [
         "pagarei",
         "pago",
@@ -7547,11 +7654,8 @@
         "tenho pago"
       ],
       "correctIndex": 2,
-      "explanationEs": "Participio irregular: «pago», no *«pagado»*. «Até ao fim do mes» incluye el último día."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "5b8365cbd98bd45d2a57475de8155c9ed4c9c15b3f19cf6ce5668ce5bc4182a9"
+      "explanationEs": "El «já» y la subordinada de futuro piden anterioridad. Y el participio de «pagar» con «ter» es «pago»: es de los tres verbos (pagar, ganhar, gastar) donde el irregular desplazó al regular también con el auxiliar «ter»."
+    }
   },
   {
     "id": "b2c2-par-09",
@@ -7566,6 +7670,10 @@
       "punto:b5-futcomp-composto-real",
       "directo"
     ],
+    "contentHash": "63a37412d41d5adf5f0052a83201a6e0fc32827eefb0d04fa19de5a580cff16f",
+    "esContrast": "Participio irregular: «escrito». Y «antes de o sol se pôr» es infinitivo pessoal con sujeto propio, que es lo que el europeo usa aquí.",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "fill_blank",
     "data": {
       "sentence": "Antes de o sol se pôr, já ___ o discurso todo. (escrever)",
@@ -7576,11 +7684,7 @@
           "alternatives": []
         }
       ]
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "esContrast": "Participio irregular: «escrito». Y «antes de o sol se pôr» es infinitivo pessoal con sujeto propio, que es lo que el europeo usa aquí.",
-    "contentHash": "63a37412d41d5adf5f0052a83201a6e0fc32827eefb0d04fa19de5a580cff16f"
+    }
   },
   {
     "id": "b2c2-par-10",
@@ -7595,6 +7699,10 @@
       "punto:b5-futcomp-composto-real",
       "directo"
     ],
+    "contentHash": "937a02ca6d1de7fe5ff248529ef1b89b405d6763186931c74f7f64faaf09b9f0",
+    "esContrast": "Participio irregular: «visto». Ojo: «ver» es regular en el futuro simple (veremos) e irregular sólo en el participio.",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "fill_blank",
     "data": {
       "sentence": "No fim da viagem ___ cinco cidades diferentes. (ver)",
@@ -7605,11 +7713,7 @@
           "alternatives": []
         }
       ]
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "esContrast": "Participio irregular: «visto». Ojo: «ver» es regular en el futuro simple (veremos) e irregular sólo en el participio.",
-    "contentHash": "937a02ca6d1de7fe5ff248529ef1b89b405d6763186931c74f7f64faaf09b9f0"
+    }
   },
   {
     "id": "b2c2-par-11",
@@ -7624,6 +7728,9 @@
       "punto:b5-futcomp-composto-real",
       "directo"
     ],
+    "contentHash": "28709de175fa0c8509588329ff2f1b9b827a72d71c7528c89ef3eb9eb6412d78",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
       "question": "Daqui a dez anos esta empresa já ___ de dono três vezes.",
@@ -7635,10 +7742,7 @@
       ],
       "correctIndex": 3,
       "explanationEs": "Con un plazo futuro y un recuento («três vezes»), el compuesto es el que hace el balance."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "28709de175fa0c8509588329ff2f1b9b827a72d71c7528c89ef3eb9eb6412d78"
+    }
   },
   {
     "id": "b2c2-par-12",
@@ -7653,6 +7757,9 @@
       "punto:b5-futcomp-composto-real",
       "contraste"
     ],
+    "contentHash": "49f084821dedb03a672ffcbeff074ac539fda2233d5685256cd8b90147927580",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
       "question": "Não te preocupes: eu ___ contigo à consulta.",
@@ -7664,9 +7771,6 @@
       ],
       "correctIndex": 0,
       "explanationEs": "Es una promesa, no un balance: futuro simple."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "49f084821dedb03a672ffcbeff074ac539fda2233d5685256cd8b90147927580"
+    }
   }
 ]

@@ -1436,7 +1436,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "368bd63947f4edb10fea64c955c2519d56a867f3b242ca49cfb333ba5445e485",
+    "contentHash": "bf3f357bf1094aa9077b584f76b3ba78cf261167dfc9e989b5fbb563bd8f86a6",
     "audio": {
       "br": {
         "hash": "9422b28b12d62df0e04fc4a9d0f6d586e195d11ab1fee1c9021c18765b815077",
@@ -1448,12 +1448,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "Conjuga ESTAR en presente: EU, TU, ELE, NÓS, ELES",
       "back": "EU estou | TU estás | ELE está | NÓS estamos | ELES estão",
-      "example": "Como você está hoje? Estou bem, obrigado."
+      "example": "Como estás hoje? Estou bem, obrigado."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Como você está hoje? Estou bem, obrigado."
+      }
     }
   },
   {
@@ -1890,22 +1895,22 @@
     "tags": [
       "coloquial"
     ],
-    "contentHash": "586f39699355b23940a0776f248e1a73dafb7fcb75e6cf686e090e6d7d63467c",
+    "contentHash": "b951fb0861c99c85bd1171e274c06ef059fb52dc9c1d18e31fa552fa9f255f08",
     "audio": {
       "br": {
         "hash": "d81158c69533f5a2097aac3ef4989e8aac246f0274cf6cafcdb01709b799457d",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "6b2869adf3ac1736b5f94cd6952650d8fe35e8e689592e5e61ef7219c3e061ac",
+        "hash": "e89b50b181bfaa4e611dd42fdbd23a9dff7645c89aa717e41f742de0c3764f56",
         "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona · E2#10 2026-09-01: léxico BR→EP por swap mecánico, forma BR movida a variantOverrides['pt-br']",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) — audio regenerado (informe-voce)",
     "type": "translation",
     "data": {
-      "source": "Você gostaria de ver o ementa?",
+      "source": "Gostarias de ver a ementa?",
       "target": "¿Te gustaría ver el menú?",
       "sourceLang": "pt-br",
       "targetLang": "es",
@@ -2446,10 +2451,10 @@
     "contentHash": "591aec46ce7d964adb435b7d5a2bb9d89c188f9388aaa2fc45eb1be180cff1f2",
     "esContrast": "'Ter razão' ≠ 'tener razón'. Aquí 'ter' es posesivo, no existencial.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu ___ razão, você não percebeu o problema.",
+      "sentence": "Eu ___ razão, tu não percebeste o problema.",
       "blanks": [
         {
           "position": 0,
@@ -2457,6 +2462,11 @@
           "alternatives": []
         }
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Eu ___ razão, você não percebeu o problema."
+      }
     }
   },
   {
@@ -3390,11 +3400,11 @@
     "contentHash": "801648faff3d4cb17e9a5bc6d334c24bc1a98d63de47a1a2f2b7f267472217bb",
     "esContrast": "'Pensar EM' e 'pensar DE' existem em PT-BR com matizes diferentes.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
-      "sentence": "Nós pensamos ___ você todos os dias.",
+      "sentence": "Nós pensamos ___ ti todos os dias.",
       "options": [
         "em",
         "de",
@@ -3402,6 +3412,11 @@
         "a"
       ],
       "answer": "em"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Nós pensamos ___ você todos os dias."
+      }
     }
   },
   {
@@ -4433,24 +4448,24 @@
     "tags": [
       "coloquial"
     ],
-    "contentHash": "62b47acbff07896a2894972003c325efd5793379e85dfdbcf671125973cdf293",
-    "esContrast": "«Você» equivale a «tú» en ES, pero es tercera persona gramatical.",
+    "contentHash": "6338796813448bb4bf9241b2e2ab97bbd823c4cbd229156d7580cbbc3e9c272e",
+    "esContrast": "En PT-PT el tuteo lleva 2.ª persona y el clítico va detrás del verbo: «trazes-me». En Brasil «você» equivale a «tú» pero rige 3.ª persona: «você me traz».",
     "audio": {
       "br": {
         "hash": "6b9fdda117530bfbd5b481f9fe4aa7f715523a531f5d5aa6f9563c586a3c4c2a",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "7928ce023bea71eeecd6e9b52adba5580adb8e91befe1cce31002a280b3f62cd",
+        "hash": "27e84d6cb65add6cb94d6fa313519f30a9fab6cb1c9128731fb384b56d3946e7",
         "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona · E2#10 2026-09-01: léxico BR→EP por swap mecánico, forma BR movida a variantOverrides['pt-br']",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (otro) — audio regenerado (informe-voce)",
     "type": "listening",
     "data": {
-      "audioText": "Eu quero o ementa, por favor. Você me traz logo?",
-      "question": "¿Qué persona gramatical usa «você me traz»?",
+      "audioText": "Eu quero a ementa, por favor. Trazes-me logo?",
+      "question": "¿Qué persona gramatical usa «trazes-me»?",
       "options": [
         "Primeira pessoa do singular",
         "Segunda pessoa do singular",
@@ -4461,7 +4476,9 @@
     },
     "variantOverrides": {
       "pt-br": {
-        "audioText": "Eu quero o cardápio, por favor. Você me traz logo?"
+        "audioText": "Eu quero o cardápio, por favor. Você me traz logo?",
+        "question": "¿Qué persona gramatical usa «você me traz»?",
+        "answer": "Terceira pessoa do singular"
       }
     }
   },
@@ -4477,7 +4494,7 @@
       "vocabulário",
       "presente"
     ],
-    "contentHash": "a0542d091fdca3c5420cd1b85739e74becaac4a3273d9cbd92564970d58632ee",
+    "contentHash": "95ff6ebee4a7f77d46439fcb8baa8a9d7ae861fcdbf16b6d96398fde5d204516",
     "esContrast": "Igual que en español, pero también se usa como sustantivo = regalo.",
     "audio": {
       "br": {
@@ -4490,12 +4507,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "Qué significa 'presente' en portugués?",
       "back": "Significa 'presente' (opuesto de ausente) o 'regalo' (gift).",
-      "example": "Ele está presente na reunião. (está presente) / Esse livro é um presente para você. (un regalo)"
+      "example": "Ele está presente na reunião. (está presente) / Esse livro é um presente para ti. (un regalo)"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Ele está presente na reunião. (está presente) / Esse livro é um presente para você. (un regalo)"
+      }
     }
   },
   {
@@ -6685,7 +6707,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "f297792c6c94325900492997e46514f23eca74c24a7cb81f1c7c192624404694",
+    "contentHash": "17bb17d6d49017ce8c001db79f52c47e891dc9cbc7ddffd53b5285bd6ee7e42f",
     "audio": {
       "br": {
         "hash": "6d68d6cbac87815be4c01b731889a0e53ac1d682b5246020ad2787e8eb6e84c2",
@@ -6697,12 +6719,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "Conjuga FAZER en presente: EU, TU, ELE, NÓS, ELES",
       "back": "EU faço | TU fazes | ELE faz | NÓS fazemos | ELES fazem",
-      "example": "O que você faz da vida? Eu faço pão."
+      "example": "O que fazes da vida? Eu faço pão."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "O que você faz da vida? Eu faço pão."
+      }
     }
   },
   {
@@ -6922,7 +6949,7 @@
     "tags": [
       "vocabulário"
     ],
-    "contentHash": "fa14b3b935440416a450538c7a6ec1661b6421d9fdba52df7d6431dc8e07c687",
+    "contentHash": "1a3580456e4553441abcdab7bb8fcdc9b92f8eb06fb6522a94ddcc6b47674443",
     "esContrast": "'Ter razão' = estar en lo cierto. 'Ter razoes' = tener razones.",
     "audio": {
       "br": {
@@ -6930,17 +6957,23 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "1870af5bfd6f8c6993de29d3474ed8f331566e1c1a95efbc1959605e030832d2",
-        "voice": "Portuguese_Wiselady"
+        "hash": "f39f9ad3177f78f35719c6b25d523782efd1c25515bb8933ec8d914707a5880f",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) — audio regenerado (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "Traduce: 'Tienes razón, pero él no.'",
-      "back": "Você tem razão, mas ele não.",
-      "example": "Você tem toda a razão. / Raison d'être = razão de ser."
+      "back": "Tens razão, mas ele não.",
+      "example": "Tens toda a razão. / Raison d'être = razão de ser."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "back": "Você tem razão, mas ele não.",
+        "example": "Você tem toda a razão. / Raison d'être = razão de ser."
+      }
     }
   },
   {
@@ -7382,7 +7415,7 @@
     "contentHash": "27f780d5b706b6e5ae7f9613a600a8e7bb6a2f5760bd897bb03ac80bda216f63",
     "esContrast": "'você' lleva 3ª persona (como 'usted'), no 2ª.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona · E2#11 2026-09-01: «você» revisado, correcto aquí (ensena-tratamento)",
     "type": "error_correction",
     "data": {
       "sentence": "Você falas português muito bem.",
@@ -7677,7 +7710,7 @@
     "contentHash": "842c4750882f9d11f2c28236cbdd135a31fa4d745aa6647c8eb2042b5dec435e",
     "esContrast": "Imperativo formal (você) de 'abrir': 'Abra' (forma del conjuntivo).",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona · E2#11 2026-09-01: «você» revisado, correcto aquí (ensena-tratamento)",
     "type": "fill_blank",
     "data": {
       "sentence": "___ (abrir) a porta, por favor! (imperativo formal, você)",

@@ -1238,10 +1238,10 @@
     "contentHash": "3ecb638bde382d71186df998d7725272c4d61e1ef5b2bdd898054d8959c62a83",
     "esContrast": "O particípio de 'ligar' es 'ligado' (regular), pero cuidado: algunos verbos en -ar tienen participios irregulares en español.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu te ___ muitas vezes, mas você nunca atendeu.",
+      "sentence": "Eu já te ___ muitas vezes, mas nunca atendeste.",
       "blanks": [
         {
           "position": 0,
@@ -1249,6 +1249,11 @@
           "alternatives": []
         }
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Eu te ___ muitas vezes, mas você nunca atendeu."
+      }
     }
   },
   {
@@ -4485,11 +4490,11 @@
     "contentHash": "ee77cd22db2badb6677d867f0f79b9244816d6f90a99d1d30ea2c4eebdd534b9",
     "esContrast": "'Ter que + infinitivo' (obligación), pero con participio perfecto se usa solo: 'tenho feito'.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "ter (haver) que",
-      "sentence": "Você tem ___ fazer isso hoje? — Sim, já tenho ___ feito.",
+      "sentence": "Tem ___ fazer isso hoje? — Sim, já tenho ___ feito.",
       "options": [
         "de / —",
         "que / —",
@@ -4497,6 +4502,11 @@
         "em / —"
       ],
       "answer": "que / —"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Você tem ___ fazer isso hoje? — Sim, já tenho ___ feito."
+      }
     }
   },
   {

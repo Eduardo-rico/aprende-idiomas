@@ -88,7 +88,12 @@ for (const x of items) {
     if (calc && x.respuesta && !mismaForma(calc, x.respuesta)) {
       problemas.push(`la respuesta dice «${x.respuesta}» pero el paradigma da «${calc}»`);
     }
-    if (calc && x.opciones.length && x.correctIndex >= 0 && !mismaForma(x.opciones[x.correctIndex] ?? '', calc) && !x.contraste) {
+    // Antes esta comprobación se saltaba en los ítems de CONTRASTE, y por
+    // ese hueco entraron los dos errores reales que el muestreo encontró:
+    // **10 de los 24 no pasaban por el conjugador**. Ahora, si el ítem
+    // declara su derivación, se comprueba siempre — un ítem de contraste
+    // también tiene una forma correcta, sólo que de otra función.
+    if (calc && x.opciones.length && x.correctIndex >= 0 && !mismaForma(x.opciones[x.correctIndex] ?? '', calc)) {
       problemas.push(`la clave es «${x.opciones[x.correctIndex]}» y el paradigma da «${calc}»`);
     }
   }

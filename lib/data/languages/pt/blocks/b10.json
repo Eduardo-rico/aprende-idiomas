@@ -2597,10 +2597,11 @@
     "contentHash": "c1c6623dea9e8fa311fd95b9d7fbff96fa73893b3aa0df37f1ef5fb5bcac13da",
     "esContrast": "En español 'gustar' no lleva preposición, pero en PT-BR y PT-PT 'gostar' siempre lleva 'de'.",
     "variantStatus": "unchecked",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
-      "sentence": "No registo informal, dizemos: \"Eu ___ você.\"",
+      "sentence": "No registo informal, dizemos: \"Eu ___ ti.\"",
       "options": [
         "de",
         "a",
@@ -2608,6 +2609,11 @@
         "para"
       ],
       "answer": "de"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "No registo informal, dizemos: \"Eu ___ você.\""
+      }
     }
   },
   {
@@ -3660,6 +3666,7 @@
     ],
     "contentHash": "b63d821e499d91d7c75f0ab7671c9dd61f39aef453de58b58b25ae5983d77aa3",
     "variantStatus": "unchecked",
+    "variantVerificacion": "E2#11 2026-09-01: «você» revisado, correcto aquí (ensena-tratamento)",
     "type": "multiple_choice",
     "data": {
       "question": "En registro formal, para dirigirse a un cliente se usa:",
@@ -4037,7 +4044,7 @@
     "contentHash": "0847ef58dac9495b1e21ec50d74298aeb0e654e31f03b809eb544cdadb25d467",
     "esContrast": "'você' lleva 3ª persona también en registro cuidado: 'você sabe'.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona · E2#11 2026-09-01: «você» revisado, correcto aquí (ensena-tratamento)",
     "type": "error_correction",
     "data": {
       "sentence": "Você sabes a resposta desta pergunta?",

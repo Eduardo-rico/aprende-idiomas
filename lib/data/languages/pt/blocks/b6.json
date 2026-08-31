@@ -382,7 +382,7 @@
       "vocabulário",
       "expressão"
     ],
-    "contentHash": "0b68f903f7cf8debdac02d36fd86dca818b105e582bec955080d09ede18e8cd2",
+    "contentHash": "00e963ef36b3f37fb175650d092e62fafce54f17ea24d734dd0fcccd1260243e",
     "audio": {
       "br": {
         "hash": "1ebfbdde60a979d9a141570e502ae167cc29c10d0e0e3473ade5253236a84f81",
@@ -394,12 +394,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "¿Qué significa 'Se por um acaso...'?",
       "back": "'Si por casualidad...' — condición remota e improvável",
-      "example": "Se por um acaso você o vir, me avise."
+      "example": "Se por um acaso o vir, avise-me."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Se por um acaso você o vir, me avise."
+      }
     }
   },
   {
@@ -736,11 +741,11 @@
     "contentHash": "19c89d2163c36177aeed0330dcfaf2ca317c6f1600f84421d21b9fa5763d79e5",
     "esContrast": "En español 'pensar en'. En PT se mantiene la preposición EM, no DE.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
-      "sentence": "Se ela ___ ___ você, vai ligar na hora.",
+      "sentence": "Se ela ___ ___ ti, vai ligar na hora.",
       "options": [
         "pensar em",
         "pensar de",
@@ -748,6 +753,11 @@
         "pensar —"
       ],
       "answer": "pensar em"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Se ela ___ ___ você, vai ligar na hora."
+      }
     }
   },
   {
@@ -1215,10 +1225,10 @@
     "contentHash": "278e78fca25d009b8b64847218513beb189fbd50051182513622534bf46adbbb",
     "esContrast": "'Haverbir' se conjuga como 'ter': 'houver', 'ouver' (forma arcaica aceita).",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Assim que ___ (haver) mais informações, informarei você.",
+      "sentence": "Assim que ___ (haver) mais informações, informo-te.",
       "blanks": [
         {
           "position": 0,
@@ -1228,6 +1238,11 @@
           ]
         }
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Assim que ___ (haver) mais informações, informarei você."
+      }
     }
   },
   {
@@ -2275,11 +2290,11 @@
     "contentHash": "435a79ffa3c1299c9b2e7f6ebc751fffa37deae0899084c20fbb26f232a9d6aa",
     "esContrast": "Ambos idiomas rigen DE, pero en PT se omite a veces en contexto informal.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "depender",
-      "sentence": "Quando ___ ___ você, tudo vai melhorar.",
+      "sentence": "Quando ___ ___ ti, tudo vai melhorar.",
       "options": [
         "depender de",
         "depender a",
@@ -2287,6 +2302,11 @@
         "depender —"
       ],
       "answer": "depender de"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Quando ___ ___ você, tudo vai melhorar."
+      }
     }
   },
   {
@@ -2484,7 +2504,7 @@
     "tags": [
       "formal"
     ],
-    "contentHash": "d9b1ff9a5483a456c4897720e0810a4b598aea9fb074da0035ed104ec2152d2a",
+    "contentHash": "3e3d267b7cc2bdc647f90be4fd18ca80e6186e27e4675ab520ab92c2e67a28fb",
     "esContrast": "Las expresiones impersonales siempre van con subjuntivo en portugués.",
     "audio": {
       "br": {
@@ -2492,21 +2512,26 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "bf6cc83267fe2473b5ddddab5fbb511a92e43dc4bba7eccf205860fa8934107e",
-        "voice": "Portuguese_Wiselady"
+        "hash": "41c3ce7949444c1801de3e8209787db6a6a98f8499c7d81d9eb34b34c143e065",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) — audio regenerado (informe-voce)",
     "type": "translation",
     "data": {
       "source": "Es importante que llenes el formulario.",
-      "target": "É importante que você preencha o formulário.",
+      "target": "É importante que preenchas o formulário.",
       "sourceLang": "es",
       "targetLang": "pt-br",
       "acceptedAlternatives": [
         "É importante que preencha o formulário."
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "É importante que você preencha o formulário."
+      }
     }
   },
   {
@@ -2614,7 +2639,7 @@
       "b6-contr-impessoais"
     ],
     "tags": [],
-    "contentHash": "f998abb5ef51bad9b3780418dc756d9f8ba0b28ce66c23615d525762593b332b",
+    "contentHash": "1b9e111a2be249de1350a2622346402ccce636642e2fd12d71c93f3d3b2907a9",
     "esContrast": "En español 'tener confianza' usa subjuntivo en la subordinada, pero la estructura es similar.",
     "audio": {
       "br": {
@@ -2622,19 +2647,24 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "29c4981a7ce91d2a6f8eb4ca55ce7ccf8f58835a375a4fdaf6712b44655bcc1e",
-        "voice": "Portuguese_Wiselady"
+        "hash": "4ac0344ba3542c8ead19c60c62f8a4207530db5020eeaffc1dbf615e30955948",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) — audio regenerado (informe-voce)",
     "type": "translation",
     "data": {
-      "source": "É importante que você tenha confiança em si mesmo.",
+      "source": "É importante que tenhas confiança em ti mesmo.",
       "target": "Es importante que tengas confianza en ti mismo.",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": []
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "source": "É importante que você tenha confiança em si mesmo."
+      }
     }
   },
   {
@@ -2744,7 +2774,7 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "eb7638e51be0b745812d91958c07b0479a311aefb7f2f1acfb2343adcb8140f8",
+    "contentHash": "a857ef6590f3c133d70bf2050c62d4e1a470c95bc80c45f12b36cb1945b327d3",
     "esContrast": "En portugués 'confiança' nunca lleva tilde, a diferencia del español 'confianza'.",
     "audio": {
       "br": {
@@ -2767,6 +2797,11 @@
       "acceptedAlternatives": [
         "Penso que você tem confiança em mim."
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "target": "Acredito que você tem confiança em mim."
+      }
     }
   },
   {
@@ -3267,10 +3302,10 @@
     "contentHash": "5d724b79501b092af7598bb127e4495b3e456533fb4136708b4de8dbb9930e74",
     "esContrast": "En español 'cuando + futuro simple' es posible; en portugués se prefiere el conjuntivo.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Quando eu ___ (chegar) ao escritório, ligarei para você.",
+      "sentence": "Quando eu ___ (chegar) ao escritório, ligarei para ti.",
       "blanks": [
         {
           "position": 0,
@@ -3278,6 +3313,11 @@
           "alternatives": []
         }
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Quando eu ___ (chegar) ao escritório, ligarei para você."
+      }
     }
   },
   {
@@ -3325,7 +3365,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "c8cc635b5373fdfb7608a194f8106f2e4ef0d2e2763cee0c96189d81195031d3",
+    "contentHash": "276352b6a630601ee4652528b205dc7948d93c45ce727274017fd680317194ed",
     "esContrast": "'Ver' es irregular en subjuntivo: veja/vejas/veja/vejamos/vejais/vejam.",
     "audio": {
       "br": {
@@ -3333,21 +3373,26 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "d6c0c481f020dec74ebbf3dc96c9ce32438d1099252e75f2ad178fd4e193b18d",
-        "voice": "Portuguese_Wiselady"
+        "hash": "992e18fec4458b2fa436e933ee438c93090eb37748b728d270577a4ab36e9fc7",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) — audio regenerado (informe-voce)",
     "type": "translation",
     "data": {
-      "source": "Espero que você veja o erro antes de continuar.",
+      "source": "Espero que vejas o erro antes de continuar.",
       "target": "Espero que tú veas el error antes de continuar.",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Espero que veas el error antes de continuar."
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "source": "Espero que você veja o erro antes de continuar."
+      }
     }
   },
   {
@@ -3489,10 +3534,10 @@
     "contentHash": "643ed58b306a5aca821355ad2552d19ab25b4cb5e960009eceeda6b4caf3c5b9",
     "esContrast": "En español 'advocacia' no existe; se dice 'abogacía'.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Se você ___ (preencher) o formulário, podemos começar o processo de ___ (advocacia).",
+      "sentence": "Se ___ (preencher) o formulário, podemos começar o processo de ___ (advocacia).",
       "blanks": [
         {
           "position": 0,
@@ -3505,6 +3550,11 @@
           "alternatives": []
         }
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Se você ___ (preencher) o formulário, podemos começar o processo de ___ (advocacia)."
+      }
     }
   },
   {
@@ -3556,11 +3606,11 @@
     "contentHash": "65045f37a1216ce5e9017598c9d3d4f0a776292d6caff4c2b2c2729adea8c078",
     "esContrast": "En español 'gustar' no lleva preposición, en PT 'gostar' rige DE.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
-      "sentence": "Eu gostaria ___ tomar um café com você.",
+      "sentence": "Eu gostaria ___ tomar um café contigo.",
       "options": [
         "de",
         "a",
@@ -3568,6 +3618,11 @@
         "—"
       ],
       "answer": "de"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Eu gostaria ___ tomar um café com você."
+      }
     }
   },
   {
@@ -3721,7 +3776,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "694d343bd2a08483e2c30cc9861ecc52cd935b8ec3711b7d0a071d547322d613",
+    "contentHash": "e0f2c060c7cb5ae64d323593c082b3f4f003d92bc24ccd1bd48248efdf48b428",
     "esContrast": "Ojo: en español diríamos 'hablara', pero en portugués se usa -ASSE para el presente del subjuntivo.",
     "audio": {
       "br": {
@@ -3734,12 +3789,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se forma el imperfeito do conjuntivo de los verbos terminados en -AR?",
       "back": "Se toma la raíz del pretérito imperfeito do indicativo y se añade -ASSE: falar → falasse",
-      "example": "Se eu falasse mais devagar, você entenderia melhor."
+      "example": "Se eu falasse mais devagar, entenderias melhor."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Se eu falasse mais devagar, você entenderia melhor."
+      }
     }
   },
   {
@@ -3823,11 +3883,11 @@
     "contentHash": "6ca730078c9166108a6453e269b5c12d2c4f0895293de15b0a9c8b1bb5531860",
     "esContrast": "En ES se dice 'pensar en'; en PT es 'pensar EM'.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
-      "sentence": "Talvez ele ___ em você quando receber a ligação.",
+      "sentence": "Talvez ele ___ em ti quando receber a ligação.",
       "options": [
         "de",
         "a",
@@ -3835,6 +3895,11 @@
         "por"
       ],
       "answer": "em"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Talvez ele ___ em você quando receber a ligação."
+      }
     }
   },
   {
@@ -4210,7 +4275,7 @@
     "tags": [
       "desejo"
     ],
-    "contentHash": "7823cae61b42c42af2ae5e40b4efb872eb9f9651c8c54b70fa2b7c11e7faa233",
+    "contentHash": "009afe5b51b9405233eaa3db18e13bb6bd61ad7063bd865fce0307391e846b26",
     "esContrast": "'Quero que' exige subjuntivo en portugués. No confundas con 'Quiero que' + subjuntivo en español.",
     "audio": {
       "br": {
@@ -4218,15 +4283,15 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "ab04d0e089ab6550aa5c126979b598c81ac84d5615dc855e8a5a4c60dc444b23",
-        "voice": "Portuguese_Wiselady"
+        "hash": "bd0942faccd4cf9a4d22066beab70c465e82fddca202a02ecb7280108a07973f",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) — audio regenerado (informe-voce)",
     "type": "listening",
     "data": {
-      "audioText": "Quero que você tenha confiança no início do formulário, mesmo que a ligação pareça vaga.",
+      "audioText": "Quero que tenhas confiança no início do formulário, mesmo que a ligação pareça vaga.",
       "question": "¿Qué desea el hablante?",
       "options": [
         "Que el interlocutor llame al final",
@@ -4235,6 +4300,11 @@
         "Que el interlocutor se preocupe"
       ],
       "answer": "Que el interlocutor tenga confianza desde el inicio"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "Quero que você tenha confiança no início do formulário, mesmo que a ligação pareça vaga."
+      }
     }
   },
   {
@@ -4321,7 +4391,7 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona · E2#11 2026-09-01: «você» revisado, correcto aquí (otro)",
     "type": "flashcard",
     "data": {
       "front": "Es importante que tú vengas mañana. (traduce al PT-BR)",
@@ -4828,11 +4898,11 @@
     "contentHash": "86e213b11e21cd5863224501ba234cad5c6c3edffdbc9b88dd624e402c14e4dd",
     "esContrast": "En español se dice 'conocer', sin preposición. En PT se dice 'gostar de'.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
-      "sentence": "Quando eu ___ ___ você, vou apresentar minha família.",
+      "sentence": "Quando eu ___ ___ ti, vou apresentar a minha família.",
       "options": [
         "gostar de",
         "gostar a",
@@ -4840,6 +4910,11 @@
         "gostar —"
       ],
       "answer": "gostar de"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Quando eu ___ ___ você, vou apresentar minha família."
+      }
     }
   },
   {
@@ -5560,7 +5635,7 @@
     "tags": [
       "coloquial"
     ],
-    "contentHash": "a6c2ee3ccceecc946e6c625707190da9b24e5d5c45f6c13dd347e15dec6a6457",
+    "contentHash": "11d9938170636fc86befc6a851b25bb51f980e26a4eb9a94df407aa02a0f0cf8",
     "esContrast": "Regla similar al español: 'Quería que vinieras' (imperfecto) vs 'Quiero que vengas' (presente).",
     "audio": {
       "br": {
@@ -5573,12 +5648,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "¿Cuándo se usa el imperfeito do conjuntivo en lugar del presente do conjuntivo?",
       "back": "Cuando la oración principal está en pretérito imperfecto, pluscuamperfecto o condicional.",
-      "example": "Eu queria que você viesse (pasado) / Eu quero que você venha (presente)."
+      "example": "Eu queria que viesses (pasado) / Eu quero que venhas (presente)."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Eu queria que você viesse (pasado) / Eu quero que você venha (presente)."
+      }
     }
   },
   {
@@ -6212,7 +6292,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "bf8cd8d34224b027bd2d8ce5c584279c0327bd38c66f7e4d121d84b42d7c75d1",
+    "contentHash": "ba29ad621ff9f46a27bdfd337bda9882e06d40a81ccacd7147abcc646c832ca0",
     "esContrast": "Irregular: 'ser' → 'sej-' (diferente de 'ser' en indicativo).",
     "audio": {
       "br": {
@@ -6225,12 +6305,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'ser' en presente do conjuntivo: Eu",
       "back": "que eu seja",
-      "example": "É bom que eu seja honesto com você."
+      "example": "É bom que eu seja honesto contigo."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "É bom que eu seja honesto com você."
+      }
     }
   },
   {
@@ -6521,7 +6606,7 @@
     "tags": [
       "vocabulário"
     ],
-    "contentHash": "cdb2ca2d87aae44af9fae7be5db97a2106a6a17839bce8ae62d0c902f80eea39",
+    "contentHash": "0e2b8cc6933b7ca18b6432f601f071298e78af5a3488389f3109376d76d69861",
     "esContrast": "Se escribe igual pero en PT-BR se pronuncia con la 'ã' nasal",
     "audio": {
       "br": {
@@ -6534,12 +6619,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "confiança (substantivo)",
       "back": "confiança",
-      "example": "Ele tem muita confiança em você."
+      "example": "Ele tem muita confiança em ti."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Ele tem muita confiança em você."
+      }
     }
   },
   {
@@ -6553,7 +6643,7 @@
     "tags": [
       "formação"
     ],
-    "contentHash": "cefb1b0789f998139c715905f45b523e4a12e9fa96d66e289e0a6dba4a6ed338",
+    "contentHash": "b0deefd561a4d6673a5fce2ae840a04281bf0ed93af19595d84238e4e485b2ce",
     "esContrast": "La derivación es -er → -er: ter → tiver. El español usa 'tenga' del subjuntivo presente.",
     "audio": {
       "br": {
@@ -6561,15 +6651,15 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "9a86842593f2e98b897eda3e1171e89b0618ba8c2285b227d92241e8046fab2e",
-        "voice": "Portuguese_Wiselady"
+        "hash": "2f2bfe549786c11b9dcc9eeba0ef089c54acf6eb38c351d2face297385a98f8b",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) — audio regenerado (informe-voce)",
     "type": "listening",
     "data": {
-      "audioText": "Quando você tiver a vaga confirmada, me avise por telefone.",
+      "audioText": "Quando tiver a vaga confirmada, avise-me por telefone.",
       "question": "¿Cuál es la forma verbal correcta de 'ter' en futuro del subjuntivo?",
       "options": [
         "Ter",
@@ -6578,6 +6668,11 @@
         "Tinha"
       ],
       "answer": "Tiver"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "Quando você tiver a vaga confirmada, me avise por telefone."
+      }
     }
   },
   {
@@ -6628,10 +6723,10 @@
     "contentHash": "d24421bccfe72b023c90fe01a9c0aa46656f3661363d4ca346c963cfca17cbb9",
     "esContrast": "'Decir' en subjuntivo: pt 'diga' vs es 'diga'. Fíjate en la 'g' vs 'gu'.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Quero que você me ___ a verdade sobre o que aconteceu.",
+      "sentence": "Quero que me ___ a verdade sobre o que aconteceu.",
       "blanks": [
         {
           "position": 0,
@@ -6641,6 +6736,11 @@
           ]
         }
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Quero que você me ___ a verdade sobre o que aconteceu."
+      }
     }
   },
   {
@@ -6689,28 +6789,33 @@
     "tags": [
       "formal"
     ],
-    "contentHash": "fe90fe4b73e5f15bcebeb4c7737c2858ac6932ae4b333bb6da7734bd39e0f66d",
+    "contentHash": "2c88b94e59a511273cd58c2fd3514a187442853dfd755a671ff9c631b66c333e",
     "audio": {
       "br": {
         "hash": "78bb0e6d7f6201e9881e404bf6d102d6e14683694d6648c446f159fcf6bd22ff",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "0b2215a22792d6aaefc7ad880b5dbc67fba00512d90b88f31f6283a76c20fb2d",
-        "voice": "Portuguese_Wiselady"
+        "hash": "86df3bfb302408357a1c82db0321ee9774ed049d1ee8f28cadd8bb14e8111324",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) — audio regenerado (informe-voce)",
     "type": "translation",
     "data": {
-      "source": "É importante que você preencha o formulário corretamente.",
+      "source": "É importante que preencha o formulário corretamente.",
       "target": "Es importante que usted complete el formulario correctamente.",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Es importante que completes el formulario correctamente."
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "source": "É importante que você preencha o formulário corretamente."
+      }
     }
   },
   {
@@ -7150,7 +7255,7 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona · E2#11 2026-09-01: «você» revisado, correcto aquí (otro)",
     "type": "flashcard",
     "data": {
       "front": "Me alegra que tú estés aquí. (traduce al PT-BR)",
@@ -7169,22 +7274,22 @@
     "tags": [
       "regular"
     ],
-    "contentHash": "daa1df7640df5e561c6b963f393ea6122870dd7a535b8e107f8851e97c928574",
+    "contentHash": "b00463a76836a066d48ea899c95a3198732e25e2bf061c608b56dac031f697b3",
     "audio": {
       "br": {
         "hash": "16fded2d7714b9038879ba63c35736dea9268781f60bcb2a7961a7d9771f2c33",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "6de44ac63161e7c44fc393647ba532c5031ae4065ef8f0c01d78ce34c1074a1f",
-        "voice": "Portuguese_Wiselady"
+        "hash": "258ba7161bae37018e40a8ff13aab8f7a2c1e6da47618213603df80ed5041ec8",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) — audio regenerado (informe-voce)",
     "type": "listening",
     "data": {
-      "audioText": "Eu queria que você aquecesse o café antes de tomarmos.",
+      "audioText": "Eu queria que aquecesses o café antes de tomarmos.",
       "question": "¿Qué tiempo verbal usa la frase en la parte subrayada?",
       "options": [
         "Pretérito perfeito do indicativo",
@@ -7193,6 +7298,11 @@
         "Presente do conjuntivo"
       ],
       "answer": "Imperfeito do conjuntivo"
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "audioText": "Eu queria que você aquecesse o café antes de tomarmos."
+      }
     }
   },
   {
@@ -7553,7 +7663,7 @@
     "tags": [
       "sustantivo"
     ],
-    "contentHash": "e4a808b59921b432ad801b535b62c84f4109bfebde2ab0b063975f717c67ce5a",
+    "contentHash": "77d17977685ac67f6def69a7cb1ede5ed4d90635c832835ace80a82693f0cfb0",
     "esContrast": "Cuidado: se escribe con 'n', no con 'ñ' como 'confianza'.",
     "audio": {
       "br": {
@@ -7566,12 +7676,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "Traduce: 'confianza'",
       "back": "confiança",
-      "example": "Tenho confiança em você."
+      "example": "Tenho confiança em ti."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Tenho confiança em você."
+      }
     }
   },
   {
@@ -7627,10 +7742,10 @@
     "contentHash": "e552df71ec5c8b6757beace6eb1e483e541cdbc45d4e8245eacae022c2f1dfe4",
     "esContrast": "'Saber' en subjuntivo: pt 'saiba' vs es 'sepa'. Muy parecido, pero la primera vocal cambia.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Espero que você ___ a resposta correta.",
+      "sentence": "Espero que ___ a resposta correta.",
       "blanks": [
         {
           "position": 0,
@@ -7638,6 +7753,11 @@
           "alternatives": []
         }
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Espero que você ___ a resposta correta."
+      }
     }
   },
   {
@@ -7882,7 +8002,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "edd55a170321f5979507a962aab697331c6de40722d4d5847166a1c327103122",
+    "contentHash": "7742bfd983a828b3bae03d3285004c4e871f579dd0d6de123c94a20f89918f96",
     "esContrast": "Se forma a partir de 'tiv' + -esse, no confundas con 'tener' español.",
     "audio": {
       "br": {
@@ -7895,12 +8015,17 @@
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) (informe-voce)",
     "type": "flashcard",
     "data": {
       "front": "Forma el imperfeito do conjuntivo de TER (irregular)",
       "back": "tivesse, tivesses, tivesse, tivéssemos, tivessem",
-      "example": "Se você tivesse estudado, teria passado no exame."
+      "example": "Se tivesses estudado, terias passado no exame."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "example": "Se você tivesse estudado, teria passado no exame."
+      }
     }
   },
   {
@@ -8343,7 +8468,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "2c84d22f0822821f75d5c08edc9c9cd17cc97e9398a8dd131000b8c659799094",
+    "contentHash": "3aaa09528f70de568332e4694cb99a6fc679a7481f451cebe21f87d058c53e0c",
     "esContrast": "Falso amigo: PT 'ligar' = llamar por teléfono / encender; ES 'ligar' = ligar/atar. 'ligação' = llamada o conexión.",
     "audio": {
       "br": {
@@ -8351,21 +8476,26 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "a858d6a42ea13c8ffb741ed2fdee2b9c74f36fd618459c8743afe34dac306005",
-        "voice": "Portuguese_Wiselady"
+        "hash": "159294e2de94abe6c534627deb355a9c153854bbecc0cc15a4b387804b9fcb52",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (tuteo) — audio regenerado (informe-voce)",
     "type": "translation",
     "data": {
-      "source": "Quero que você faça essa ligação no início da reunião.",
+      "source": "Quero que faças essa ligação no início da reunião.",
       "target": "Quiero que hagas esa llamada al inicio de la reunión.",
       "sourceLang": "pt-br",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Quiero que hagas esa ligação al inicio de la reunión."
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "source": "Quero que você faça essa ligação no início da reunião."
+      }
     }
   },
   {
@@ -8944,12 +9074,18 @@
     "contentHash": "4dbd621aaf38e32d3ea8f00ab9141a1c0dc4230b205a9e796bfeb13877844770",
     "esContrast": "El imperfeito do conjuntivo de 'vir' es 'viesse', no la forma española 'viniera'.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "error_correction",
     "data": {
-      "sentence": "Eu queria que você viniera à minha festa.",
-      "correct": "Eu queria que você viesse à minha festa.",
+      "sentence": "Eu queria que viniera à minha festa.",
+      "correct": "Eu queria que viesse à minha festa.",
       "explanationEs": "'queria que' pide imperfeito do conjuntivo; la forma portuguesa es 'viesse', no el español 'viniera'."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Eu queria que você viniera à minha festa.",
+        "correct": "Eu queria que você viesse à minha festa."
+      }
     }
   },
   {
@@ -8967,12 +9103,18 @@
     "contentHash": "830d1cfb42a0e7b04d8c3f99e4b70bad909d24e4f4887468d7ddb5eb71cbf220",
     "esContrast": "El conjuntivo de 'estudar' es 'estude', no la forma española 'estudie'.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "error_correction",
     "data": {
-      "sentence": "É importante que você estudie todos os dias.",
-      "correct": "É importante que você estude todos os dias.",
+      "sentence": "É importante que estudie todos os dias.",
+      "correct": "É importante que estude todos os dias.",
       "explanationEs": "'é importante que' pide conjuntivo; la forma portuguesa es 'estude', no el español 'estudie'."
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "É importante que você estudie todos os dias.",
+        "correct": "É importante que você estude todos os dias."
+      }
     }
   },
   {
@@ -9012,16 +9154,21 @@
     "contentHash": "f77c998235c66f7c9c2c022464254121056a1632cc992cb3809683dc9de2975c",
     "esContrast": "Tras 'espero que' va conjuntivo: 'tenha'.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Espero que você ___ (ter) um bom dia.",
+      "sentence": "Espero que ___ (ter) um bom dia.",
       "blanks": [
         {
           "position": 0,
           "answer": "tenha"
         }
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Espero que você ___ (ter) um bom dia."
+      }
     }
   },
   {
@@ -9065,16 +9212,21 @@
     "contentHash": "0bdb4c365200c090eec5d6c2ed5f6ed87c63c081b9e1e552d6c78e6f9ddc2ada",
     "esContrast": "El futuro do conjuntivo de 'chegar' coincide con el infinitivo: 'chegar'.",
     "variantStatus": "needs-human",
-    "variantVerificacion": "regla-inerte-v2 (2026-07-29): marcador: você singular como 2ª persona",
+    "variantVerificacion": "corregido según dictamen E2#11 2026-09-01: «você» → base europea (elidir) (informe-voce)",
     "type": "fill_blank",
     "data": {
-      "sentence": "Quando você ___ (chegar) em casa, me avise.",
+      "sentence": "Quando ___ (chegar) a casa, avise-me.",
       "blanks": [
         {
           "position": 0,
           "answer": "chegar"
         }
       ]
+    },
+    "variantOverrides": {
+      "pt-br": {
+        "sentence": "Quando você ___ (chegar) em casa, me avise."
+      }
     }
   },
   {

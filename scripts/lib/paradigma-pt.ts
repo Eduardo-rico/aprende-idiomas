@@ -78,10 +78,17 @@ function fundirConR(tema: string, c: Clitico): string {
 export function mesoclise(inf: string, c: Clitico, p: Persona, tiempo: 'futuro' | 'condicional' = 'futuro'): string {
   const tema = raiz(inf);
   const des = tiempo === 'futuro' ? DES_FUTURO[p] : DES_COND[p];
-  // El tema de un irregular ya no acaba en -r («dir-»), así que ahí el
-  // clítico de 3.ª no se funde.
-  const izquierda = RAIZ_IRREGULAR[inf] ? `${tema}-${c === 'o' || c === 'a' || c === 'os' || c === 'as' ? `l${c}` : c}` : fundirConR(tema, c);
-  return `${izquierda}-${des}`;
+  // Los irregulares NO son un caso especial. La v1 los excluía de la
+  // fusión alegando que su tema «ya no acaba en -r» — pero `dir-`,
+  // `far-` y `trar-` acaban en -r los tres, y la regla les aplica igual:
+  // da «di-lo-ão», «fá-lo-á», «trá-las-íamos», no *«dir-lo-ão»*.
+  //
+  // Lo peor no fue el error sino que **un test verde lo consagraba**:
+  // `expect(mesoclise('dizer','o','eles')).toBe('dir-lo-ão')` afirmaba
+  // una forma inexistente y los 14 tests pasaban. Lo cazó el muestreo
+  // adversarial del lote, no la suite. Un oráculo que se prueba contra
+  // sí mismo no prueba nada.
+  return `${fundirConR(tema, c)}-${des}`;
 }
 
 /** ÊNCLISE simple, para construir el distractor honesto: la forma que un

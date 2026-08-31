@@ -64,6 +64,11 @@ export interface Marcador {
   nombre: string;
   europeo: string;
   severidad: 'error' | 'aviso';
+  /** Término europeo DISTINTIVO cuya presencia prueba que el ítem enseña
+   *  el contraste. `null` desactiva la heurística para ese marcador,
+   *  porque su forma europea es una palabra demasiado común para probar
+   *  nada — es el caso de «você», cuyo europeo es «tu». */
+  terminoEuropeo?: string | null;
   /** el marcador aparece SÓLO citado como palabra, nunca usado: no es
    *  brasileñismo del contenido. El gate lo sigue reportando —el triaje
    *  lo necesita para pedir revisión del contraste implícito— pero quien
@@ -91,7 +96,14 @@ export const MARCADORES: Marcador[] = [
   // brasileñismo inflaba el recuento con 44 falsos positivos. El que
   // ofende a un desconocido en Lisboa es `você`, no `vocês`.
   { re: b('voc[êe]'),
-    nombre: 'você singular como 2ª persona', europeo: 'tu (informal) o 3ª persona sin pronombre (deferencia)', severidad: 'error' },
+    nombre: 'você singular como 2ª persona', europeo: 'tu (informal) o 3ª persona sin pronombre (deferencia)', severidad: 'error',
+    // Sin heurística de contraste implícito: la forma europea es «tu», y
+    // que un ítem contenga «tu» no prueba que enseñe el contraste — con
+    // ese criterio quedaban exentos 237. Con la v1, que se quedaba con
+    // «informal», quedaban exentos 26 que no debían. Para este marcador
+    // la exención tiene que venir de una etiqueta explícita (BR/PT,
+    // bandera, «Brasil»), que es lo que `exento()` ya mira.
+    terminoEuropeo: null },
 
   // Léxico exclusivo de Brasil
   { re: b('[ôo]nibus'), nombre: 'ônibus', europeo: 'autocarro', severidad: 'error' },
@@ -226,6 +238,8 @@ export interface Hallazgo {
   marcador: string;
   europeo: string;
   severidad: 'error' | 'aviso';
+  /** copiado del marcador: `null` = sin heurística de contraste implícito */
+  terminoEuropeo?: string | null;
   /** el marcador aparece SÓLO citado como palabra, nunca usado: no es
    *  brasileñismo del contenido. El gate lo sigue reportando —el triaje
    *  lo necesita para pedir revisión del contraste implícito— pero quien
@@ -294,8 +308,17 @@ export function exento(ex: Ex): boolean {
  *  ES contraste didáctico: cuarentenarlo retiraría justo lo que este
  *  curso quiere enseñar. Se comprueba la primera palabra portuguesa del
  *  campo `europeo` del marcador contra TODO el ítem. */
-export function contrasteImplicito(ex: Ex, europeo: string): boolean {
-  const termino = europeo.match(/\p{L}{3,}/u)?.[0];
+export function contrasteImplicito(ex: Ex, europeo: string | null | undefined): boolean {
+  if (europeo === null) return false;
+  if (!europeo) return false;
+  // El campo `europeo` es prosa bilingüe y lleva glosas entre paréntesis.
+  // La v1 tomaba la primera palabra de tres letras o más, y para el
+  // marcador «você» —cuyo europeo es «tu (informal) o 3ª persona…»— eso
+  // daba **«informal»**: cualquier ítem que contuviera esa palabra
+  // quedaba exento. Medido: 26 ítems. Lo cazó un revisor, no la suite.
+  // Se quitan los paréntesis primero y se admiten palabras de dos letras,
+  // que es donde vive el término de verdad: «tu».
+  const termino = europeo.replace(/\([^)]*\)/g, ' ').match(/\p{L}{3,}/u)?.[0];
   if (!termino) return false;
   const contexto = JSON.stringify(ex.data);
   return new RegExp(`(?<![\\p{L}])${termino}(?![\\p{L}])`, 'iu').test(contexto);
@@ -371,6 +394,7 @@ export function revisarEjercicio(ex: Ex): Hallazgo[] {
       out.push({
         id: ex.id, campo, marcador: m.nombre, europeo: m.europeo,
         severidad: m.severidad,
+        terminoEuropeo: m.terminoEuropeo,
         mencion,
         texto: t.length > 120 ? t.slice(0, 117) + '…' : t,
       });

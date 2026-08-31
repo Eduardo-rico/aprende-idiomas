@@ -5,7 +5,7 @@
 // pase sobre el corpus: un gate que grita en falso acaba desactivado, así que
 // se testean tanto los aciertos como las exenciones.
 import { describe, it, expect } from 'vitest';
-import { revisarEjercicio, exento, textoPortugues } from '@/scripts/lib/variant-guard';
+import { revisarEjercicio, exento, textoPortugues, contrasteImplicito } from '@/scripts/lib/variant-guard';
 
 const base = {
   id: 'x', blockId: 1, lessonId: 'b1-l1', difficulty: 1 as const,
@@ -155,5 +155,35 @@ describe('mención frente a uso', () => {
     // sin la palabra «brasileiro», que dispara otra exención ya existente
     const ex = { id: 'd', type: 'flashcard', data: { back: 'O pronome «você»: você fala muito depressa.' } } as any;
     expect(voce(ex)?.mencion).toBe(false);
+  });
+});
+
+// El campo `europeo` del marcador «você» es «tu (informal) o 3ª persona
+// sin pronombre (deferencia)». La v1 de contrasteImplicito tomaba la
+// primera palabra de 3+ letras y se quedaba con «informal», de modo que
+// cualquier ítem que dijera «informal» quedaba exento: 26 en el corpus.
+describe('contrasteImplicito: el término europeo no sale de la glosa entre paréntesis', () => {
+  const EUROPEO_VOCE = 'tu (informal) o 3ª persona sin pronombre (deferencia)';
+
+  it('NO exime un ítem sólo porque diga «informal»', () => {
+    const ex = { id: 'a', type: 'flashcard', data: { back: 'No registo informal, dizemos: «Eu gosto de você».' } } as any;
+    expect(contrasteImplicito(ex, EUROPEO_VOCE)).toBe(false);
+  });
+
+  // Para «você» la heurística queda DESACTIVADA (`terminoEuropeo: null`):
+  // su forma europea es «tu», y que un ítem contenga «tu» no prueba nada
+  // — con ese criterio quedaban exentos 237 de 2.431. La exención de este
+  // marcador tiene que venir de una etiqueta explícita, que es lo que
+  // `exento()` ya mira.
+  it('desactivada: null nunca exime', () => {
+    const ex = { id: 'b', type: 'flashcard', data: { back: 'Em Portugal «tu pagas»; no Brasil «você paga».' } } as any;
+    expect(contrasteImplicito(ex, null)).toBe(false);
+    // …pero ese ítem SÍ queda exento por la vía buena: nombra Brasil.
+    expect(exento(ex)).toBe(true);
+  });
+
+  it('sigue funcionando con los marcadores de una sola palabra', () => {
+    const ex = { id: 'c', type: 'flashcard', data: { back: 'Em Portugal o ônibus chama-se autocarro.' } } as any;
+    expect(contrasteImplicito(ex, 'autocarro')).toBe(true);
   });
 });

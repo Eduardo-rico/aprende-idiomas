@@ -48,9 +48,10 @@ interrogativo) → la forma marcada es la INCORRECTA y gana la otra.
 Si en los doce ítems de mesóclise la respuesta fuera siempre la
 mesóclise, el alumno aprendería «elige la rara» y no habría aprendido la
 regla. **Cuatro de los doce llevan atractor y su respuesta es próclise**;
-la mesóclise ahí es el distractor. Lo mismo en futuro composto:
-**cuatro de los doce se resuelven con futuro simple**, porque no hay
-anterioridad que marcar.
+la mesóclise ahí es el distractor. En futuro composto son **tres de los
+doce** los que se resuelven con futuro simple, porque no hay
+anterioridad que marcar. (El documento prometía cuatro y eran tres: lo
+cazó el muestreo, y la cifra queda corregida contra el conteo del gate.)
 
 Eso convierte el lote en un ejercicio de DISCRIMINAR, que es lo que
 separa un ítem de C1 de uno de B1, y no de reconocer una forma.
@@ -83,10 +84,11 @@ la vez. Y «quando passar» es futuro do conjuntivo, que el español no tiene.
 
 ### PAR-03 · fill_blank · sin atractor · irregular
 **derivación:** `futuroComposto('fazer', 'nós')` → **teremos feito**
-**frase:** «Até sexta ___ tudo o que ficou pendente. (fazer)»
+**frase:** «Quando o chefe voltar de viagem, já ___ tudo o que ficou pendente. (fazer)»
 **respuesta:** `teremos feito`
-**glosa:** Participio irregular: «feito», no *«fazido»*. Y «até sexta»
-incluye el viernes.
+**glosa:** Participio irregular: «feito», no *«fazido»*. El «já» y
+«quando voltar» (futuro do conjuntivo) son los que piden el compuesto:
+sin ellos, «faremos» valdría igual.
 
 ### PAR-04 · fill_blank · sin atractor · irregular
 **derivación:** `futuroComposto('dizer', 'ele')` → **terá dito**
@@ -96,6 +98,7 @@ incluye el viernes.
 son irregulares en el futuro simple (dirá).
 
 ### PAR-05 · multiple_choice · CONTRASTE, gana el futuro simple
+**derivación:** `futuro('falar', 'tu')` → **falarás**
 **frase:** «Amanhã de manhã ___ com o teu chefe sobre o aumento.»
 **opciones:** [0] **falarás** ✅ · [1] terás falado · [2] falará · [3] tens falado
 **defecto de cada distractor:** [1] futuro composto sin anterioridad que
@@ -106,6 +109,7 @@ repetición, no futuro.
 composto sobra: basta el simple.
 
 ### PAR-06 · multiple_choice · CONTRASTE, gana el futuro simple
+**derivación:** `futuro('vender', 'eu')` → **venderei**
 **frase:** «Se calhar ___ o carro no próximo verão.»
 **opciones:** [0] terei vendido · [1] venderá · [2] vendo · [3] **venderei** ✅
 **defecto:** [0] no hay anterioridad; [1] persona equivocada; [2] presente por futuro.
@@ -113,6 +117,7 @@ composto sobra: basta el simple.
 el tiempo: aquí la acción es simplemente futura.
 
 ### PAR-07 · multiple_choice · gana el compuesto
+**derivación:** `futuroComposto('começar', 'ele')` → **terá começado**
 **frase:** «Quando vocês chegarem ao cinema, o filme já ___.»
 **opciones:** [0] começará · [1] **terá começado** ✅ · [2] começa · [3] tinha começado
 **defecto:** [0] futuro simple: dice que empieza DESPUÉS de que lleguen,
@@ -121,12 +126,15 @@ que es lo contrario; [2] presente; [3] pasado.
 película ya habrá empezado.
 
 ### PAR-08 · multiple_choice · gana el compuesto · irregular
-**frase:** «Até ao fim do mês ___ todas as facturas. (pagar)»
+**derivación:** `futuroComposto('pagar', 'eu')` → **terei pago**
+**frase:** «Quando o senhorio vier no dia 30, eu já ___ todas as faturas.»
 **opciones:** [0] pagarei · [1] pago · [2] **terei pago** ✅ · [3] tenho pago
-**defecto:** [0] no marca que quede acabado ANTES del plazo; [1]
-presente; [3] repetición en el pasado reciente.
-**glosa:** Participio irregular: «pago», no *«pagado»*. «Até ao fim do
-mes» incluye el último día.
+**defecto:** [0] futuro simple: dice que las pagará DESPUÉS de que venga,
+que es lo contrario; [1] presente; [3] repetición en el pasado reciente.
+**glosa:** El «já» y la subordinada de futuro piden anterioridad. Y el
+participio de «pagar» con «ter» es «pago»: es de los tres verbos
+(pagar, ganhar, gastar) donde el irregular desplazó al regular también
+con el auxiliar «ter».
 
 ### PAR-09 · fill_blank · sin atractor
 **derivación:** `futuroComposto('escrever', 'tu')` → **terás escrito**
@@ -143,6 +151,7 @@ infinitivo pessoal con sujeto propio, que es lo que el europeo usa aquí.
 futuro simple (veremos) e irregular sólo en el participio.
 
 ### PAR-11 · multiple_choice · gana el compuesto
+**derivación:** `futuroComposto('mudar', 'ele')` → **terá mudado**
 **frase:** «Daqui a dez anos esta empresa já ___ de dono três vezes.»
 **opciones:** [0] mudará · [1] muda · [2] mudou · [3] **terá mudado** ✅
 **defecto:** [0] futuro simple: no marca el balance acumulado; [1]
@@ -151,6 +160,7 @@ presente; [2] pasado.
 compuesto es el que hace el balance.
 
 ### PAR-12 · multiple_choice · CONTRASTE, gana el futuro simple
+**derivación:** `futuro('ir', 'eu')` → **irei**
 **frase:** «Não te preocupes: eu ___ contigo à consulta.»
 **opciones:** [0] **irei** ✅ · [1] terei ido · [2] irá · [3] tenho ido
 **defecto:** [1] anterioridad inexistente; [2] persona; [3] repetición
