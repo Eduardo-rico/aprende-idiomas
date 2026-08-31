@@ -1,0 +1,186 @@
+[
+  {
+    "id": "MFID-01",
+    "veredicto": "DUDA",
+    "motivo": "Fuente PT-PT limpia (canos, na vespera, se faz favor, 'Encham' como imperativo de cortesia) y sin emisor nombrado, asi que la linea base no pierde a nadie. La transformacion es PLAZO de manual: 'ate as 17h' (incluye las cinco) rendido como 'antes de las cinco', un solo tramo, y el mostrado suena tan natural como el fiel. Reparo unico y toca la LINEA BASE: 'na vespera' es 'el dia antes' y el fiel lo estrecha a 'la noche antes', que fija una hora del dia que el aviso no da. No cambia la clave, pero es la fuga del Patron 1. IMPORTANTE: el anadido esta en las DOS versiones, asi que la correccion hay que aplicarla al fiel Y al mostrado o el diff deja de ser un solo tramo (gate 1). Nota sin correccion: 'Dicen de llenar' es coloquial de Espana; en un recado hablado lo acepto.",
+    "correcciones": [
+      {
+        "campo": "fiel",
+        "de": "Vuelve como muy tarde a las cinco. Dicen de llenar botellas la noche antes.",
+        "a": "Vuelve como muy tarde a las cinco. Dicen de llenar botellas el día antes."
+      },
+      {
+        "campo": "mostrado",
+        "de": "Vuelve antes de las cinco. Dicen de llenar botellas la noche antes.",
+        "a": "Vuelve antes de las cinco. Dicen de llenar botellas el día antes."
+      }
+    ],
+    "matar": false
+  },
+  {
+    "id": "MFID-02",
+    "veredicto": "ERROR",
+    "motivo": "La linea base de un item FIEL -el que se certifica como modelo de fidelidad- pierde dos cosas de la fuente. (1) El nombre del establecimiento: 'Talho Silva' se convierte en 'La carniceria'. Es el mismo fallo que el muestreo documento en MFID-03 y MFID-24 (perdida del emisor) y aqui es mas caro, porque la clave 'No falla nada' lo certifica como correcto. (2) El 'ja' de 'ja se podem deixar', que es justo el matiz que hace inteligible que un cartel de agosto hable de encargos de Navidad. Ninguna opcion apunta a esas dos perdidas, asi que el alumno sigue pudiendo contestar, pero la explicacion afirma 'Estan los tres datos y ninguno de mas', y eso hoy es falso. AMBAS correcciones tocan un recado FIEL: hay que aplicarlas a las DOS versiones (el mostrado es 'identico al fiel') o salta el gate 5. Salvedad honesta: si la familia decide que el emisor NO es dato, entonces 02, 03 y 24 quedan absueltos de golpe; la decision sigue sin tomarse y el lote se contradice (08, 09 y 14 si trasladan el emisor). El portugues es correcto: talho, mercearia, encerrado para ferias, reabrimos.",
+    "correcciones": [
+      {
+        "campo": "fiel",
+        "de": "La carnicería cierra por vacaciones del 1 al 15 de agosto",
+        "a": "La carnicería Silva cierra por vacaciones del 1 al 15 de agosto"
+      },
+      {
+        "campo": "fiel",
+        "de": "Los encargos de Navidad se pueden dejar por escrito en la tienda de al lado.",
+        "a": "Los encargos de Navidad ya se pueden dejar por escrito en la tienda de al lado."
+      }
+    ],
+    "matar": false
+  },
+  {
+    "id": "MFID-03",
+    "veredicto": "ERROR",
+    "motivo": "Confirmado el hallazgo del muestreo, y lo subo de DISCUTIBLE a ERROR: el recado fiel pierde 'Centro de Saude da Lapa', que en este SMS no es un adorno sino el emisor Y el lugar. Agravante especifico: la clave del item es 'Falta el lugar', asi que la linea base ya falla de lugar y, respecto de la fuente, el mostrado esta a dos omisiones y no a una. La transformacion declarada (quitar 'no gabinete 3') si esta bien ejecutada y el hueco cierra sin costura. La correccion toca el recado FIEL: hay que aplicarla tambien al mostrado, o el diff deja de ser un solo tramo (gate 1). Sigo la doctrina de MFID-20 (se traduce el tipo de institucion, se conserva el toponimo): 'del centro de salud de la Lapa'. Notas menores sin correccion: 'gabinete' en espanol peninsular seria 'consulta', defendible como etiqueta de puerta portuguesa; y 'si no puedes' introduce una condicion que el SMS no enuncia, aunque 'desmarcar' la implica.",
+    "correcciones": [
+      {
+        "campo": "fiel",
+        "de": "Te han cambiado la consulta de enfermería al miércoles 9 a las once y veinte, en el gabinete 3.",
+        "a": "Te han cambiado la consulta de enfermería del centro de salud de la Lapa al miércoles 9 a las once y veinte, en el gabinete 3."
+      },
+      {
+        "campo": "mostrado",
+        "de": "Te han cambiado la consulta de enfermería al miércoles 9 a las once y veinte. Hay que llevar",
+        "a": "Te han cambiado la consulta de enfermería del centro de salud de la Lapa al miércoles 9 a las once y veinte. Hay que llevar"
+      }
+    ],
+    "matar": false
+  },
+  {
+    "id": "MFID-04",
+    "veredicto": "DUDA",
+    "motivo": "Linea base completa: los tres datos pasan y el emisor SI se traslada ('Ha llamado el fontanero'), al contrario que en 02 y 03. La INVENCION es un solo tramo, verosimil y en espanol impecable; la clave es unica. Dos reparos. (a) DISENO: la etiqueta [2] dice 'Anade algo que el recado no dice', pero en esta familia 'el recado' es precisamente el texto que se audita, y aqui la fuente TAMBIEN es un recado (genero recado-voz): la opcion se muerde la cola. Los otros once items nombran el genero de la fuente ('el cartel', 'el SMS', 'el aviso', 'el recibo'); la propia explicacion dice 'El fontanero no dice nada de presupuesto'. (b) PORTUGUES: 'deixe a chave na vizinha' - el regimen europeo natural es dativo ('deixe a chave A vizinha') o locativo explicito ('em casa da vizinha'); 'na + persona' es el patron que el EP evita y que suena brasileno. No lo declaro error: no hay atestacion en el corpus del repo (224 lecturas, cero ocurrencias de 'na vizinha' y de 'a vizinha') ni entrada dirimente en Priberam, pero en material PLE conviene la forma inequivoca. El resto del portugues es EP de primera: canalizador, torneira, 2.o direito, 'Se nao estiver ninguem'.",
+    "correcciones": [
+      {
+        "campo": "opciones[2]",
+        "de": "Añade algo que el recado no dice",
+        "a": "Añade algo que el fontanero no dice"
+      },
+      {
+        "campo": "fuente",
+        "de": "na vizinha do 2.º direito",
+        "a": "à vizinha do 2.º direito"
+      }
+    ],
+    "matar": false
+  },
+  {
+    "id": "MFID-05",
+    "veredicto": "ERROR",
+    "motivo": "El item esta bien construido -fuente EP correcta (manuais escolares, pavilhao, saco, turma), base fiel completa, ALTERACION de un solo valor ('das 14h' -> 'de tres') y clave unica- pero la EXPLICACION razona al reves y por tanto ensena mal el dano. Dice: 'quien llegue a las dos y cuarto se encontrara la puerta abierta y creera que se ha equivocado de dia'. Quien se fia del recado defectuoso NO llega a las dos y cuarto: llega a las tres. Y encontrarse la puerta abierta no lleva a nadie a pensar que se ha equivocado de dia; esa es la consecuencia del error contrario (que el recado adelantara la hora). El dano real es el que la primera mitad de la explicacion ya enuncia bien: la franja pierde su primera hora, de modo que quien solo podia pasar entre las dos y las tres se queda sin entregar los libros. La aritmetica previa si es correcta (14h-16h30 son dos horas y media; empezar a las tres se come una).",
+    "correcciones": [
+      {
+        "campo": "explicacion",
+        "de": "quien llegue a las dos y cuarto se encontrará la puerta abierta y creerá que se ha equivocado de día",
+        "a": "quien sólo pueda pasar entre las dos y las tres se quedará sin entregar los libros, convencido de que aún no han abierto"
+      }
+    ],
+    "matar": false
+  },
+  {
+    "id": "MFID-06",
+    "veredicto": "DUDA",
+    "motivo": "Comprobado y descartado lo que mas me olia: 'loja do cidadao' NO es error - es la designacion corriente y oficial de la red (lojacidadao.pt; las camaras municipales la usan asi), y conservarla en portugues dentro del recado espanol es coherente con la doctrina de MFID-20. La REASIGNACION es limpia, de un solo tramo, y el mostrado ('puede ir cualquiera de la familia') es espanol impecable, no peor que el fiel. Dos reparos de linea base, los dos de generalizacion. (a) El fiel rinde 'o titular tem de comparecer pessoalmente' como 'tienes que ir tu en persona': da por hecho que el destinatario del recado es el titular. En un item cuya clave es precisamente QUIEN debe hacerlo, la base no deberia personalizar al agente por su cuenta; 'tiene que ir el titular en persona' lo dice sin suponer nada, y como el cambio cae DENTRO del tramo transformado, el gate 1 aguanta sin tocar el mostrado. (b) 'cartao de cidadao' se rinde como 'el carne' (que en Espana se lee por defecto como el de conducir) mientras 'loja do cidadao' se conserva en portugues: la doctrina de nombres propios que el muestreo pidio decidir de una vez (NOTA 1) sigue sin decidir, y este item usa las dos a la vez. 'atraves do portal' -> 'por internet' lo acepto.",
+    "correcciones": [
+      {
+        "campo": "fiel",
+        "de": "Para renovar el carné tienes que ir tú en persona",
+        "a": "Para renovar el carné tiene que ir el titular en persona"
+      }
+    ],
+    "matar": false
+  },
+  {
+    "id": "MFID-07",
+    "veredicto": "DUDA",
+    "motivo": "Item FIEL con un punto de apoyo discutible, y en un control eso pesa mas que en un item con defecto. La fuente dice 'paga-se la, sao 12 euros' y el recado lo rinde como 'se paga en el momento'. 'La' admite dos lecturas: particula discursiva ('paga-se la' = se paga ahi mismo, al recibirlo) o adverbio de lugar ('se paga alli' = en la farmacia). La segunda lectura convertiria el recado fiel en una ALTERACION, y entonces la clave 'No falla nada' seria falsa. Lo delata la propia ficha: la linea de datos del autor escribe 'se paga alli' -literal de 'la'- mientras el recado escribe 'en el momento'; el documento no dice lo mismo en dos sitios. El contexto (entrega a domicilio con cobro a la puerta) resuelve a favor del recado, por eso es DUDA y no ERROR, pero un item FIEL no debe depender de una lectura que hay que argumentar: basta desambiguar la fuente. Aviso: si se cambia la fuente NO hay que tocar los recados (los dos ya dicen 'en el momento'), pero si la linea de datos. Lo demas es EP excelente: frigorifico, guisado, 'e so aquecer', 'Se tocarem a porta', encomenda; y 'pelas 13h' -> 'sobre la una' conserva bien la aproximacion.",
+    "correcciones": [
+      {
+        "campo": "fuente",
+        "de": "paga-se lá, são 12 euros",
+        "a": "paga-se na entrega, são 12 euros"
+      },
+      {
+        "campo": "datos",
+        "de": "el paquete (farmacia, se paga allí, 12 euros)",
+        "a": "el paquete (farmacia, se paga a la entrega, 12 euros)"
+      }
+    ],
+    "matar": false
+  },
+  {
+    "id": "MFID-08",
+    "veredicto": "DUDA",
+    "motivo": "Reviso lo que el muestreo dejo abierto y coincido en las tres cosas, ninguna de freno. (a) PORTUGUES: 'prazo de entrega' para devolver un libro; los regulamentos portugueses dicen 'prazo de devolucao' ('entrega' colocaciona con mercancia o con trabajos). (b) ESPANOL, el que roza el paragrafo 6: 'El nuevo plazo para devolverlo ES ANTES DEL miercoles 22' cruza categorias -un plazo termina EN una fecha, lo que va 'antes de' es la accion-, de modo que el recado defectuoso es medio punto menos idiomatico que el fiel y el alumno puede empezar a sospechar por el oido. La reescritura que propongo deja los dos igual de naturales y mantiene un solo tramo de diff ('como muy tarde el' / 'antes del'), y 'Ahora' conserva el dato 'nuevo plazo'. Hay que aplicarla a las DOS versiones. (c) El juego de opciones ofrece a la vez [1] 'Cambia el dia de entrega' y [3] 'Se adelanta el plazo', que son las dos etiquetas que el lote usa de forma contradictoria (MFID-14 llama PLAZO a un cambio literal de dia). Aqui [3] es estrictamente mejor porque el recado sigue imprimiendo 'miercoles 22', asi que la clave se sostiene. La fuente es de las mejores del bloque: 'foi aceite' (participio europeo), 'requisitou', 'inclusive'. Base fiel completa, con el emisor trasladado ('de la biblioteca').",
+    "correcciones": [
+      {
+        "campo": "fuente",
+        "de": "prazo de entrega é até quarta-feira",
+        "a": "prazo de devolução é até quarta-feira"
+      },
+      {
+        "campo": "fiel",
+        "de": "El nuevo plazo para devolverlo es hasta el miércoles 22 incluido",
+        "a": "Ahora hay que devolverlo como muy tarde el miércoles 22"
+      },
+      {
+        "campo": "mostrado",
+        "de": "El nuevo plazo para devolverlo es antes del miércoles 22",
+        "a": "Ahora hay que devolverlo antes del miércoles 22"
+      },
+      {
+        "campo": "opciones[1]",
+        "de": "Cambia el día de entrega",
+        "a": "Cambia el día de devolución"
+      }
+    ],
+    "matar": false
+  },
+  {
+    "id": "MFID-09",
+    "veredicto": "OK",
+    "motivo": "El mejor item del bloque y el mas facil de defender. Fuente EP sin una grieta: 'Informamos os senhores clientes DE QUE' (regimen correcto, sin queismo), 'seccao' con la grafia europea del AO90 (Brasil 'secao'), 'peixaria', 'encerra', 'ate AO fecho' con contraccion europea. Comparado dato a dato, el recado fiel traslada los cuatro y ademas el emisor ('por megafonia'): que cierra, a que hora, la comparacion de la media hora y la excepcion de las cajas. La OMISION es un tramo contiguo y el espanol resultante no deja costura -'la pescaderia cierra a las siete, media hora antes que el resto de la tienda' es una frase tan natural como la completa-, asi que el atajo del oido queda cerrado. Los tres distractores nombran datos que la fuente contiene (hora, adicion, control FIEL): gate 4 cumplido. Unico apunte, sin correccion y solo en el fiel (que nunca se muestra): 'hasta el final' es un pelin mas vago que 'ate ao fecho' ('hasta la hora de cierre').",
+    "correcciones": [],
+    "matar": false
+  },
+  {
+    "id": "MFID-10",
+    "veredicto": "DUDA",
+    "motivo": "El invento esta bien elegido y la clave es unica, pero la EXPLICACION comete el pecado que el item castiga: afirma 'alguien se creera cubierto de algo que no ha contratado', y eso la fuente no lo dice. El recibo nombra una cobertura, no dice que sea la unica; verificado que en Portugal un seguro de recheio cubre normalmente furto/roubo ademas de danos por agua, asi que el enunciado no solo excede la fuente, es probablemente falso en el mundo. El argumento correcto -y suficiente- es que el recado AFIRMA algo que el recibo no dice, no que el seguro no lo cubra. Dos apuntes menores de linea base, sin correccion: el fiel pierde el numero del recibo (88/2026), que la lista de datos tampoco declara, y rinde 'seguro de recheio' como 'seguro de la casa' (recheio es el contenido, no el continente; en un recado familiar lo doy por aceptable). Portugues correcto: premio (grafia europea), apolice, 'pagamento unico a 30 de setembro'.",
+    "correcciones": [
+      {
+        "campo": "explicacion",
+        "de": "alguien se creerá cubierto de algo que no ha contratado",
+        "a": "quien lo lea dará por cubierto algo de lo que el recibo no dice ni una palabra"
+      }
+    ],
+    "matar": false
+  },
+  {
+    "id": "MFID-11",
+    "veredicto": "OK",
+    "motivo": "Control FIEL que si aguanta la comparacion dato a dato con la fuente, al reves que 02. Portugues de chat vivo y europeo: 'Malta', 'jantar de turma', 'no restaurante do costume', 'Quem nao puder que avise' (futuro do conjuntivo bien usado). Los cuatro datos pasan enteros -sabado 27, las ocho por '20h', el restaurante de siempre, 25 euros con bebidas incluidas- y el plazo se rinde con la inclusividad intacta ('ate quinta' -> 'como muy tarde el jueves'), que es justo lo que la familia quiere modelar. No se anade nada: lo unico que no viaja es el vocativo 'Malta', que no es dato. La fuente es un chat de grupo sin firma, asi que no hay emisor que perder. Los tres distractores nombran datos presentes (precio, sitio, adicion). Nada que corregir.",
+    "correcciones": [],
+    "matar": false
+  },
+  {
+    "id": "MFID-12",
+    "veredicto": "DUDA",
+    "motivo": "La ALTERACION es de libro y el par Amoreiras/Amendoeiras esta bien escogido: son dos arboles distintos (morera / almendro) y dos calles distintas, y el corpus del repo atestigua las dos formas ('o largo das Amoreiras' en Os Maias, 'as amendoeiras em flor' en O Suave Milagre). Fuente EP correcta (contentores, recolha, 'passa a ser as segundas'). Base fiel completa y sin emisor que perder. Dos reparos. (a) El distractor [2] 'Se retrasa el plazo' nombra una clase que esta fuente no puede instanciar: el paragrafo 3 define PLAZO como el intercambio de inclusividad de 'ate X', y aqui no hay ningun 'ate', solo una fecha de inicio ('a partir do dia 3'). Se salva a duras penas porque hay fecha, pero es el flanco que el gate 4 existe para cerrar, y encima refuerza la confusion PLAZO/ALTERACION del Patron 2; 'Cambia los dias de recogida' usa un dato presente y no gastado. (b) HALLAZGO DE LOTE, no del item: el reparto real de la clave no es 6/6/6/6 como afirma la tabla final, sino 7/5/6/6 -[0] tiene siete y [1] cinco- y la tabla ademas coloca mal a 11, 12, 14, 15 y 24 (11 esta en [3], 12 en [0], 14 en [2], 15 en [1], 24 en [3]). La correccion que propongo hace las dos cosas de un golpe: cambia el distractor y mueve la clave de [0] a [1], con lo que el lote queda en el 6/6/6/6 que exige el paragrafo 6.",
+    "correcciones": [
+      {
+        "campo": "opciones",
+        "de": "[0] **Cambia el sitio** ✅ · [1] Falta lo que NO se mueve · [2] Se retrasa el plazo · [3] No falla nada",
+        "a": "[0] Falta lo que NO se mueve · [1] **Cambia el sitio** ✅ · [2] Cambia los días de recogida · [3] No falla nada"
+      }
+    ],
+    "matar": false
+  }
+]

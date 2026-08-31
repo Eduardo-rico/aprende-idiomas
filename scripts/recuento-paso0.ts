@@ -49,6 +49,13 @@ console.log(fila('Σ', [tHay, tPide, tMotor, tMeta, tFalta, `${Math.round((tHay 
 
 // ── Mediación: el cuello declarado del plan ──
 const med = items.filter((x) => x.type === 'mediation');
+// El ÍTEM de mediación no es del tipo `mediation` — ése es la TAREA con
+// rúbrica. El ítem es cerrado y usa el tipo que le convenga
+// (`multiple_choice` en la familia «fidelidad de relay», E2#9), así que
+// se cuenta por CONCEPTO. Sin esto el bucket marcaría 0 para siempre
+// mientras se llena, que es el peor fallo que puede tener un recuento.
+const CONCEPTOS_MED_ITEM = ['b10-fidelidad-relay'];
+const medItems = items.filter((x) => (x.concepts ?? []).some((c: string) => CONCEPTOS_MED_ITEM.includes(c)));
 // CORREGIDO en E2#9: la v1 calculaba MED_ITEMS = 1580 − 230, y eso está
 // mal. Son buckets SEPARADOS, de líneas distintas del currículo:
 //   · EJERCICIOS de mediación   A2 200 · B1 280 · B2 400 · C1 400 · C2 300 = 1.580,
@@ -61,8 +68,8 @@ console.log(`\n## Mediación (el cuello del plan)\n`);
 console.log(`| bucket | hay | pide | falta | % |`);
 console.log(`|---|---:|---:|---:|---:|`);
 console.log(`| mediación-TAREAS (dentro de las 830 de producción) | ${med.length} | ${MED_TAREAS} | ${Math.max(0, MED_TAREAS - med.length)} | ${Math.round(med.length / MED_TAREAS * 100)}% |`);
-console.log(`| mediación-ÍTEMS (ejercicios del currículo) | 0 | ${MED_ITEMS} | ${MED_ITEMS} | 0% |`);
-console.log(`| **total mediación** | **${med.length}** | **${MED_ITEMS + MED_TAREAS}** | **${MED_ITEMS + MED_TAREAS - med.length}** | **${Math.round(med.length / (MED_ITEMS + MED_TAREAS) * 100)}%** |`);
+console.log(`| mediación-ÍTEMS (ejercicios del currículo) | ${medItems.length} | ${MED_ITEMS} | ${MED_ITEMS - medItems.length} | ${Math.round(medItems.length / MED_ITEMS * 100)}% |`);
+console.log(`| **total mediación** | **${med.length + medItems.length}** | **${MED_ITEMS + MED_TAREAS}** | **${MED_ITEMS + MED_TAREAS - med.length - medItems.length}** | **${Math.round((med.length + medItems.length) / (MED_ITEMS + MED_TAREAS) * 100)}%** |`);
 
 // ── Ritmo real medido, para la proyección ──
 const b2c2 = items.filter((x) => String(x.id).startsWith('b2c2-'));

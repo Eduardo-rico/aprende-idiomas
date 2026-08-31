@@ -1,0 +1,185 @@
+[
+  {
+    "id": "MFID-13",
+    "veredicto": "OK",
+    "motivo": "El rehecho funciona. Fuente PT-PT impecable («Quem precisar» futuro do conjuntivo, «avisar o porteiro» transitivo, «até às 11h»). La base traslada los cuatro datos sin añadir ni perder («até às 11h» → «como muy tarde a las once» conserva la inclusividad). El tramo es uno solo, «al portero» → «a la administración», y la clave [3] es la única defendible: [0] es falsa (las bolsas están), [1] es falsa (el plazo no se toca), [2] es falsa. Sobre la objeción del revisor anterior: NO se contradice sola y NO es resoluble sin la fuente. Avisar a la administración y que las bolsas queden en portería es operativamente coherente (la administración organiza, el conserje deja la compra abajo); nada en el recado mostrado revela a quién nombraba el cartel, así que el alumno tiene que ir a la fuente. Única nota menor, no accionable: «Obras no elevador» → «arreglan el ascensor» añade la implicatura de avería (obras ≠ reparación), pero está en las dos versiones y no toca el eje del ítem.",
+    "correcciones": [],
+    "matar": false
+  },
+  {
+    "id": "MFID-14",
+    "veredicto": "DUDA",
+    "motivo": "El arreglo de PLAZO es CORRECTO y verificado: el diff de máquina da «hasta el ... incluido» → «antes del», con el valor «viernes 18» intacto en las dos versiones, o sea inclusividad y no valor; la explicación acompaña palabra por palabra. Dos reservas, ninguna mortal. (1) El aviso del gate 7 sobre «Central» NO es artefacto: la fuente dice «Farmácia Central» y la base sólo «de la farmacia». No mata el ítem (no es FIEL y ninguna opción nombra el emisor), pero contradice la doctrina que el propio lote enseña en MFID-12 («en mediación, un nombre propio se copia, no se recuerda») y en MFID-20 («traduzir o nome próprio ... seria alterar um dado»), y es dato accionable: sin el nombre no sabes a qué farmacia ir. (2) «Te lo guardan ANTES del viernes 18» es español forzado: «guardar» es durativo y su tope se marca con «hasta», no con «antes de» — el recado defectuoso suena peor que el fiel y eso invita a acertar por el oído (§6). Me quedo en DUDA y no en ERROR porque la frase admite lectura puntual («te lo apartan antes del viernes»), no es agramatical. Las dos correcciones de recado van juntas y hay que aplicarlas a las DOS versiones para que el único tramo siga siendo el del plazo.",
+    "correcciones": [
+      {
+        "campo": "fiel",
+        "de": "«Han avisado de la farmacia: ya está tu pedido. Te lo guardan hasta el viernes 18 incluido;",
+        "a": "«Han avisado de la Farmacia Central: ya está tu pedido. Lo puedes recoger hasta el viernes 18 incluido;"
+      },
+      {
+        "campo": "mostrado",
+        "de": "«Han avisado de la farmacia: ya está tu pedido. Te lo guardan antes del viernes 18;",
+        "a": "«Han avisado de la Farmacia Central: ya está tu pedido. Lo puedes recoger antes del viernes 18;"
+      },
+      {
+        "campo": "datos",
+        "de": "**datos:** qué (el pedido de medicamentos, llegado)",
+        "a": "**datos:** quién avisa (la Farmacia Central) · qué (el pedido de medicamentos, llegado)"
+      }
+    ],
+    "matar": false
+  },
+  {
+    "id": "MFID-15",
+    "veredicto": "ERROR",
+    "motivo": "La línea **transformación** declara el tramo equivocado. Dice «OMISIÓN de la primera opción («Pode levantá-lo hoje e voltar»)», pero lo que desaparece es la SEGUNDA opción: el diff de máquina (check-fidelidad-mediacion.ts) imprime «, o dejarlo allí hasta entonces» → ∅, que rinde «deixá-lo cá até quinta». La primera opción es justo la que SOBREVIVE en el recado mostrado. El gate 3 no lo caza por construcción: sólo comprueba que el dato nombrado EXISTA en la fuente, y las dos opciones existen, así que un intercambio entre dos datos presentes es invisible para él. El ítem se salva con la corrección de metadato porque la etiqueta clave es genérica («Falta una de las dos opciones») y la explicación sigue siendo válida. Lo demás está limpio y es de lo mejor del tramo: portugués europeo excelente («a inspeção só a podemos fazer» con próclise disparada por «só» y objeto topicalizado con retomada, «levantá-lo», «deixá-lo cá», «Diga qualquer coisa»), español peninsular natural («la ITV no se la pueden hacer», «Han llamado del taller»), base fiel a los cuatro datos y recado mostrado impecable, sin pista de lengua. Aviso lateral: la tabla del §Reparto sitúa este ítem en la posición [3]; la clave real es [1].",
+    "correcciones": [
+      {
+        "campo": "transformacion",
+        "de": "OMISIÓN de la primera opción («Pode levantá-lo hoje e voltar»)",
+        "a": "OMISIÓN de la segunda opción («ou deixá-lo cá até quinta»)"
+      }
+    ],
+    "matar": false
+  },
+  {
+    "id": "MFID-16",
+    "veredicto": "DUDA",
+    "motivo": "Construcción correcta: fuente PT-PT buena («vêm com a camisola do uniforme», «fazem-se online» con énclise, «o código que vai na caderneta»), base fiel a los cuatro datos con la inclusividad conservada («até dia 20» → «como muy tarde el día 20»), invención de un solo tramo («y bien peinados»), verosímil y en español impecable, y distractores todos anclados en datos que la fuente trae. Las dos reservas son de léxico de trasvase y viven en las DOS versiones, así que cualquier cambio hay que aplicarlo a ambas o se rompe el gate 1. (1) «caderneta» → «la libreta»: Priberam da para caderneta «livrinho de apontamentos» y la colocación escolar portuguesa es «caderneta do aluno», el cuadernillo de comunicación con las familias; en España eso es «la agenda (escolar)», mientras que «libreta» se lee como cuaderno de clase y manda al padre a buscar donde no es. (2) «camisola» → «camiseta»: Priberam define camisola como «peça de roupa, geralmente com mangas, que se veste pela cabeça e que cobre o tronco» y en el corpus del repo aparece como prenda de abrigo («camisola de lã», Eça/Castelo Branco), es decir cubre desde la camiseta hasta el jersey; «camiseta» estrecha el referente. Riesgo bajo, lo dejo como preferencia.",
+    "correcciones": [
+      {
+        "campo": "fiel",
+        "de": "uniforme. Los encargos se hacen por internet como muy tarde el día 20, con el código que viene en la libreta.»",
+        "a": "uniforme. Los encargos se hacen por internet como muy tarde el día 20, con el código que viene en la agenda del colegio.»"
+      },
+      {
+        "campo": "mostrado",
+        "de": "peinados. Los encargos se hacen por internet como muy tarde el día 20, con el código que viene en la libreta.»",
+        "a": "peinados. Los encargos se hacen por internet como muy tarde el día 20, con el código que viene en la agenda del colegio.»"
+      },
+      {
+        "campo": "datos",
+        "de": "**datos:** día (martes 7) · qué se ponen (la camiseta del uniforme) · encargos (por internet, hasta el día 20) · código (viene en la libreta)",
+        "a": "**datos:** día (martes 7) · qué se ponen (la camiseta del uniforme) · encargos (por internet, hasta el día 20) · código (viene en la agenda del colegio)"
+      }
+    ],
+    "matar": false
+  },
+  {
+    "id": "MFID-17",
+    "veredicto": "ERROR",
+    "motivo": "Es un ítem FIEL cuya línea base ya pierde un dato, que es exactamente la podredumbre que el round venía a buscar. La fuente abre «A sua reserva na Pousada da Serra» y el recado fiel dice sólo «La reserva está confirmada»: se cae el único nombre propio del aviso, que además es el dato accionable (DÓNDE es la reserva). El gate 7 lo señaló con las dos anclas, «Pousada» y «Serra», y no son artefactos. La explicación del ítem enumera «las tres noches, el régimen, la hora de entrada y el plazo» — es decir, exactamente la lista **datos:**, que nunca incluyó el alojamiento: el autor comprueba su propia lista, no la fuente. Y contradice de frente la doctrina que el lote enseña en MFID-12 («un nombre propio se copia, no se recuerda») y en la explicación de MFID-20 («traduzir o nome próprio de uma via seria, isso sim, alterar um dado»). Con la clave «No falla nada» eso es insostenible: en un control FIEL el listón es que no se pierda NADA. La corrección TOCA UN RECADO FIEL: como el mostrado es «idéntico al fiel», hay que asegurarse de que el JSON generado lleve la frase corregida en las DOS cadenas, o salta el gate 5. Lo demás está bien: PT-PT correcto, aritmética coherente (12→15 son 3 noches), «Cancelamento gratuito até 5 de junho» rendido con «hasta el 5 de junio incluido», y los tres distractores anclados en datos reales.",
+    "correcciones": [
+      {
+        "campo": "fiel",
+        "de": "«La reserva está confirmada: tres noches,",
+        "a": "«La reserva de la Pousada da Serra está confirmada: tres noches,"
+      },
+      {
+        "campo": "datos",
+        "de": "**datos:** noches (3, del 12 al 15 de junio)",
+        "a": "**datos:** alojamiento (Pousada da Serra) · noches (3, del 12 al 15 de junio)"
+      }
+    ],
+    "matar": false
+  },
+  {
+    "id": "MFID-18",
+    "veredicto": "DUDA",
+    "motivo": "La fuente es portugués europeo de primera («rego-lhe as plantas» con énclise, «precisa DE água», «de três em três dias», «caixa do correio», «depois levo-a comigo»), la base traslada los cuatro datos sin añadidos y la transformación es PLAZO de verdad: mueve la inclusividad y no toca ningún valor. La reserva es que «La llave la deja en el buzón ANTES del domingo por la noche» tiene una segunda lectura, y más natural que la buscada: se entiende «la depositará en algún momento antes del domingo», no «el domingo por la noche ya no está». La coleta «a partir de ahí se la lleva» rescata la lectura de tope, así que la clave [1] sigue siendo la única defendible y no lo subo a ERROR; pero un predicado de plazo puro dejaría el contraste limpio en las dos versiones («Puedes coger la llave del buzón hasta el domingo por la noche» / «... antes del domingo por la noche»). Es la misma fricción que MFID-14: «hasta X» → «antes de X» sobre un verbo durativo degrada el español justo donde §6 avisa que el alumno puede acertar por el oído. Si se toca, hay que tocar las dos versiones.",
+    "correcciones": [
+      {
+        "campo": "fiel",
+        "de": "La llave la deja en el buzón hasta el domingo por la noche",
+        "a": "La llave la puedes coger del buzón hasta el domingo por la noche"
+      },
+      {
+        "campo": "mostrado",
+        "de": "La llave la deja en el buzón antes del domingo por la noche",
+        "a": "La llave la puedes coger del buzón antes del domingo por la noche"
+      }
+    ],
+    "matar": false
+  },
+  {
+    "id": "MFID-19",
+    "veredicto": "DUDA",
+    "motivo": "El portugués del recado —que aquí es el producto— es de lo mejor del lote: «cave» para «sótano» esquiva el falso amigo caro (PT «sótão» es el desván), «Entra-se pela» lleva énclise correcta, «continuam A SER feitos» evita el gerundio brasileño, «balcão do costume» está atestiguado en el corpus del repo con el sentido de mostrador de tienda (Eça, «mandou-o para o balcão») y el nombre de la calle se mantiene en español, coherente con MFID-20. La omisión es un tramo único y limpio (la frase entera de los préstamos) y el mostrado no delata nada. Reserva: la base pierde el encabezado «Biblioteca municipal», y el gate 7 no puede verlo por dos motivos acumulados — el lookbehind del detector exige minúscula antes de la mayúscula (así que ignora todo lo que abre frase) y además «Biblioteca» está en la lista negra explícita de anclasPerdidas. O sea: el gate es estructuralmente ciego justo a la clase de pérdida que motivó su creación (el emisor de MFID-24, «Centro de Saúde da Lapa» en MFID-03). Aquí no mata el ítem porque no es FIEL y ninguna opción nombra el emisor, pero es la misma familia que MFID-14 y MFID-17. Si se arregla, va en las DOS versiones. Segunda nota, menor, sobre la fuente española: «Los préstamos se siguen atendiendo» es burocrático y algo forzado — «se siguen haciendo» (que es justo lo que el portugués ya dice: «continuam a ser feitos») sonaría a cartel real.",
+    "correcciones": [
+      {
+        "campo": "fiel",
+        "de": "«Durante as obras, a sala de estudo passa para a cave. Entra-se pela porta lateral da calle Mayor e o horário é reduzido, das 10h às 14h. Os empréstimos",
+        "a": "«Na biblioteca municipal, durante as obras, a sala de estudo passa para a cave. Entra-se pela porta lateral da calle Mayor e o horário é reduzido, das 10h às 14h. Os empréstimos"
+      },
+      {
+        "campo": "mostrado",
+        "de": "«Durante as obras, a sala de estudo passa para a cave. Entra-se pela porta lateral da calle Mayor e o horário é reduzido, das 10h às 14h.»",
+        "a": "«Na biblioteca municipal, durante as obras, a sala de estudo passa para a cave. Entra-se pela porta lateral da calle Mayor e o horário é reduzido, das 10h às 14h.»"
+      }
+    ],
+    "matar": false
+  },
+  {
+    "id": "MFID-20",
+    "veredicto": "DUDA",
+    "motivo": "Como FIEL se sostiene: los cuatro datos están con sus valores y no hay ni uno de más. El portugués es excelente y muy europeo — infinitivo pessoal en «para renovares» y «Se não puderes», «marcação», «esquadra» para comisaría, «Tens de levar», «liga PARA o» (no «ao»), y el cambio de usted a tu es el propio del relay familiar, no una infidelidad. De los avisos del gate 7, «40» es artefacto puro (está en «9h40»; el lookbehind falla porque le precede una letra). El que sí merece mirada es «DNI» → «bilhete de identidade», por dos razones que se suman: (1) el bilhete de identidade dejó de existir en Portugal — sustituido por el cartão de cidadão, con caducidad total a finales de 2016 —, así que para un lector portugués de hoy es un referente fechado, y el propio lote usa «cartão de cidadão» correctamente en MFID-06; (2) contradice la doctrina que este mismo ítem predica en su explicación (el nombre propio extranjero no se traduce) y lo que MFID-06 hace en sentido inverso, donde «loja do cidadão» se queda intacto dentro del recado español. No lo llamo ERROR porque «bilhete de identidade» sigue siendo el genérico entendido por cualquier portugués y el dato operativo se conserva. Si se cambia (a «o DNI» o «o documento de identidade»), OJO: es un recado FIEL, así que la frase tiene que quedar idéntica en las DOS versiones, y convendría que la explicación dijera por qué el documento sí se traduce y la calle no.",
+    "correcciones": [],
+    "matar": false
+  },
+  {
+    "id": "MFID-21",
+    "veredicto": "DUDA",
+    "motivo": "Ítem sólido. La fuente es español peninsular impecable («el del gas», «la llave de paso», «el fregadero», «Me llevo el coche, que tengo que ir a...»), y el trasvase al portugués resuelve bien lo difícil: «torneira de segurança» está atestiguada en fuentes portuguesas de seguridad de gas («feche as torneiras de segurança do contador e dos aparelhos a gás»), «lava-loiça» es la forma europea, «Se vier» es futuro do conjuntivo correcto y «para lhe pagares» combina próclise tras preposición con infinitivo pessoal, que es exactamente lo que pide el europeo. La ALTERACIÓN es un tramo único («na gaveta» → «em cima da mesa»), el mostrado es portugués impecable y no delata nada, y los distractores están anclados. Única reserva, de estilo y en las DOS versiones: «volta por volta das sete» encadena el verbo «volta» con la locución «por volta de» y suena a trabalenguas; un revisor portugués escribiría «volta pelas sete» o «volta lá para as sete» — y de hecho la fuente de MFID-07 ya usa «volto pelas 13h».",
+    "correcciones": [
+      {
+        "campo": "fiel",
+        "de": "e volta por volta das sete. Se vier o homem do gás, a torneira de segurança está debaixo do lava-loiça, e deixou 20 euros na gaveta",
+        "a": "e volta pelas sete. Se vier o homem do gás, a torneira de segurança está debaixo do lava-loiça, e deixou 20 euros na gaveta"
+      },
+      {
+        "campo": "mostrado",
+        "de": "e volta por volta das sete. Se vier o homem do gás, a torneira de segurança está debaixo do lava-loiça, e deixou 20 euros em cima da mesa",
+        "a": "e volta pelas sete. Se vier o homem do gás, a torneira de segurança está debaixo do lava-loiça, e deixou 20 euros em cima da mesa"
+      }
+    ],
+    "matar": false
+  },
+  {
+    "id": "MFID-22",
+    "veredicto": "DUDA",
+    "motivo": "Fuente española impecable de chat («han dado lluvia», «Quedamos», «Llevad») y recado portugués casi todo muy bueno: «Encontramo-nos» con la caída de -s correcta (no «encontramos-nos»), «parque de estacionamento», «miradouro», «percurso curto», e imperativo «Levem» para vocês, que en europeo es lo normal y no hay que marcar. Base fiel a los cuatro datos (el vocativo «Chicos» no es dato), invención de un tramo único y verosímil, y mostrado impecable. La reserva es una sola y la doy como NO VERIFICADA, no como error: no he conseguido atestiguar «dar chuva» como fórmula de pronóstico en portugués europeo — ni en Priberam, ni en el corpus del repo, ni en búsquedas restringidas a dominios .pt (lo que sale es todo brasileño o titulares de IPMA) —, y calca letra por letra el «han dado lluvia» de la fuente española, que es la silueta típica del hispanismo. Mi oído dice que en Portugal se oye («deram chuva para amanhã»), pero no lo afirmo sin prueba. No propongo corrección para no romper lo que quizá esté bien: que lo confirme un nativo, y si no aguanta, la salida segura es «porque anunciaram chuva para a tarde» en las DOS versiones.",
+    "correcciones": [],
+    "matar": false
+  },
+  {
+    "id": "MFID-23",
+    "veredicto": "ERROR",
+    "motivo": "El recado mostrado aplica DOS cambios donde la familia sólo admite uno: «A secretaria RECEBE-a» → «O professor RECOLHE-a». La reasignación del agente es la transformación declarada; el cambio de verbo es gratuito, porque «O professor recebe-a até quarta-feira às 13h» es portugués perfectamente natural. El gate 1 lo deja pasar por un artefacto medible: los dos cambios son contiguos, así que el LCS los ve como un solo tramo (el script imprime literalmente «A secretaria recebe-a» → «O professor recolhe-a», saltos = 1). Es la misma clase de defecto que obligó a rehacer MFID-13 —reescribir en vez de transformar—, sólo que más pequeña, y contradice el §4.3 («UNA transformación sobre UN dato»), que es el argumento entero por el que esta familia se dice verificable por construcción. Con el arreglo, además, la etiqueta clave («Muda quem recebe a ficha») pasa a coincidir literalmente con el texto. Lo demás está bien: fuente española correcta, portugués europeo cuidado — «a secretaria» sin acento es la oficina y no la secretaria (trampa esquivada), «que não tenham entregado» es el participio regular que la norma pide con «ter» —, y el aviso «00» del gate 7 es artefacto (13:00 → «13h» es la convención europea).",
+    "correcciones": [
+      {
+        "campo": "mostrado",
+        "de": "O professor recolhe-a até quarta-feira às 13h.",
+        "a": "O professor recebe-a até quarta-feira às 13h."
+      }
+    ],
+    "matar": false
+  },
+  {
+    "id": "MFID-24",
+    "veredicto": "DUDA",
+    "motivo": "EL ARREGLO DEL HISPANISMO ES BUENO, y lo he verificado en las dos direcciones. Priberam da para «rever» sólo 'tornar a ver', 'examinar cuidadosamente', 'fazer a revisão de (provas)' y acepciones de rezumar: ninguna sirve para equipamiento, así que «rever os extintores» era calco. Y el sustituto no es sólo aceptable, es el término del oficio en Portugal: la verificación periódica obligatoria de extintores se llama literalmente «manutenção» (NP 4413, empresas registadas na ANEPC), y el régimen dativo está atestiguado en fuentes portuguesas («a não realização da manutenção AOS extintores nos prazos estabelecidos pela NP 4413»). «Arrecadação» para trastero y «cadeado» también son los términos europeos. Quedan dos cosas. (1) La base SIGUE perdiendo el emisor «Aviso de la comunidad» — el hallazgo del muestreo no se aplicó, sólo se aplicó el léxico. Lo dejo en DUDA y no en ERROR (a diferencia de MFID-17) porque lo que se pierde es un encabezado de género, no el referente accionable, y «do prédio todo» conserva el alcance comunitario; pero en un control FIEL el listón es «ni un matiz», así que yo lo pondría. La corrección TOCA UN RECADO FIEL: el mostrado es «idéntico al fiel», o sea que la frase tiene que quedar igual en las DOS cadenas del JSON o salta el gate 5. (2) La glosa de la explicación es reduccionista: «rever» no es sólo 'voltar a ver' (Priberam le da también 'examinar cuidadosamente'); lo falso es aplicarlo a equipamiento. Mejor: «rever é 'voltar a ver' ou 'rever um texto', nunca inspecionar equipamento». Aviso lateral: la tabla del §Reparto coloca este ítem en la posición [2]; la clave real es [3].",
+    "correcciones": [
+      {
+        "campo": "fiel",
+        "de": "«Na quinta-feira, dia 14, das 10h às 13h, vêm fazer a manutenção aos extintores do prédio todo.",
+        "a": "«O condomínio avisa que na quinta-feira, dia 14, das 10h às 13h, vêm fazer a manutenção aos extintores do prédio todo."
+      },
+      {
+        "campo": "datos",
+        "de": "**datos:** día y franja (jueves 14, de 10 a 13)",
+        "a": "**datos:** emisor (aviso de la comunidad) · día y franja (jueves 14, de 10 a 13)"
+      }
+    ],
+    "matar": false
+  }
+]

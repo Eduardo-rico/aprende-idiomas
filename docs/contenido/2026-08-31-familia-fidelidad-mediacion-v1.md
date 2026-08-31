@@ -156,7 +156,30 @@ las dos mitades del contrato.
 
 ---
 
-# Lote 1 de la familia — 24 ítems
+# Lote 1 de la familia — 24 ítems · **PUBLICADO 2026-08-31, tras FRENO y round completo**
+
+**Resultado medido.** Muestreo del 10 % (03, 08, 13, 20, 24): **1 error
+real de 5 ⇒ FRENO**. Round completo a mano de los 24, dos revisores en
+paralelo: **6 ERROR · 15 DUDA · 3 OK = 25 % de error**, ninguno para
+matar, 36 correcciones aplicadas. Contra el 45 % del lote industrial de
+44 y el 17 % del de 24 con plantilla ya madura, **25 % en el estreno de
+una familia nueva**.
+
+La clase dominante fue la que el muestreo predijo y ningún gate veía:
+**la línea base pierde el emisor del aviso** (MFID-02, 03, 17, y 14/19/24
+como duda). De ahí salieron los gates 7 y 8 — y el gate 7 nació **ciego a
+la mitad**: pedía minúscula antes de la mayúscula, así que ignoraba todo
+lo que abre frase, y encima llevaba una lista negra con
+`Aviso|Biblioteca|Centro`, justo la clase de emisor que se perdía. Lo
+encontró un revisor del round, no yo. Reescrito por la estructura del
+género: **el emisor es lo que precede a los dos puntos**.
+
+Decisión que el lote obligó a tomar y que queda como regla de la familia:
+**el emisor es un dato**. El lote se contradecía —unos ítems lo
+trasladaban y otros no— y ahora va declarado en la línea `datos:` de cada
+ítem que lo tenga.
+
+---
 
 Formato de cada ficha: la fuente, su lista de datos, el **recado fiel**
 (línea base), el **recado mostrado**, la transformación aplicada, las
@@ -171,9 +194,9 @@ cuatro etiquetas con la clave marcada, y la explicación.
 > se faz favor.»
 **datos:** día (martes 14) · motivo (cambio de tuberías, piso 2) · plazo de regreso (hasta las 17h, incluidas) · recomendación (llenar botellas la víspera)
 **recado fiel:**
-> «El martes 14 cortan el agua para cambiar unas tuberías del segundo. Vuelve como muy tarde a las cinco. Dicen de llenar botellas la noche antes.»
+> «El martes 14 cortan el agua para cambiar unas tuberías del segundo. Vuelve como muy tarde a las cinco. Dicen de llenar botellas el día antes.»
 **recado mostrado:**
-> «El martes 14 cortan el agua para cambiar unas tuberías del segundo. Vuelve antes de las cinco. Dicen de llenar botellas la noche antes.»
+> «El martes 14 cortan el agua para cambiar unas tuberías del segundo. Vuelve antes de las cinco. Dicen de llenar botellas el día antes.»
 **transformación:** PLAZO sobre «até às 17h»
 **opciones:** [0] Falta el motivo del corte · [1] **Se adelanta el plazo** ✅ · [2] Cambia el día · [3] No falla nada
 **explicación:** «Até às 17h» incluye las cinco: a esa hora el agua ya está. «Antes de las cinco» promete que vuelve *antes*, que es otra cosa y más optimista. La fórmula fiel es «como muy tarde a las cinco».
@@ -185,7 +208,7 @@ cuatro etiquetas con la clave marcada, y la explicación.
 > mercearia do lado.»
 **datos:** cierre (1 al 15 de agosto) · reapertura (día 16 a las 8h) · encargos (de Navidad, por escrito, en la tienda de al lado)
 **recado fiel:**
-> «La carnicería cierra por vacaciones del 1 al 15 de agosto y abre otra vez el 16 a las ocho. Los encargos de Navidad se pueden dejar por escrito en la tienda de al lado.»
+> «La carnicería Silva cierra por vacaciones del 1 al 15 de agosto y abre otra vez el 16 a las ocho. Los encargos de Navidad ya se pueden dejar por escrito en la tienda de al lado.»
 **recado mostrado:** *(idéntico al fiel)*
 **transformación:** ninguna
 **opciones:** [0] Falta la hora de reapertura · [1] Cambia las fechas del cierre · [2] **No falla nada** ✅ · [3] Añade algo que el cartel no dice
@@ -193,30 +216,30 @@ cuatro etiquetas con la clave marcada, y la explicación.
 
 ### MFID-03 · sms-servicio · pt→es · **OMISIÓN**
 **fuente:**
-> «Centro de Saúde da Lapa: a sua consulta de enfermagem passou para
-> quarta, dia 9, às 11h20, no gabinete 3. Traga a lista da medicação.
+> «Escola de Condução Rumo: a sua aula de código passou para quarta, dia
+> 9, às 11h20, na sala 2 do primeiro andar. Traga a licença de aprendizagem.
 > Para desmarcar, responda ANULAR.»
-**datos:** día (miércoles 9) · hora (11h20) · lugar (gabinete 3) · qué llevar (la lista de medicación) · cómo anular (responder ANULAR)
+**datos:** emisor (la autoescuela Rumo) · día (miércoles 9) · hora (11h20) · lugar (sala 2, primera planta) · qué llevar (la licencia de aprendizaje) · cómo anular (responder ANULAR)
 **recado fiel:**
-> «Te han cambiado la consulta de enfermería al miércoles 9 a las once y veinte, en el gabinete 3. Hay que llevar la lista de la medicación, y si no puedes, se anula respondiendo ANULAR.»
+> «Te han cambiado la clase de teórica de la autoescuela Rumo al miércoles 9 a las once y veinte, en la sala 2 de la primera planta. Hay que llevar la licencia de aprendizaje, y si no puedes, se anula respondiendo ANULAR.»
 **recado mostrado:**
-> «Te han cambiado la consulta de enfermería al miércoles 9 a las once y veinte. Hay que llevar la lista de la medicación, y si no puedes, se anula respondiendo ANULAR.»
-**transformación:** OMISIÓN de «no gabinete 3»
+> «Te han cambiado la clase de teórica de la autoescuela Rumo al miércoles 9 a las once y veinte. Hay que llevar la licencia de aprendizaje, y si no puedes, se anula respondiendo ANULAR.»
+**transformación:** OMISIÓN de «na sala 2 do primeiro andar»
 **opciones:** [0] **Falta el lugar** ✅ · [1] Cambia la hora · [2] Añade algo que el SMS no dice · [3] No falla nada
-**explicación:** El SMS dice «no gabinete 3» y el recado no lo traslada. En un centro de salud con varios gabinetes, ése es el dato que decide si llegas o no: una omisión que parece menor no lo es si es la que te deja en el pasillo.
+**explicación:** El SMS dice «na sala 2 do primeiro andar» y el recado no lo traslada. En una autoescuela con varias salas, ése es el dato que decide si llegas a tu clase o te sientas en otra: una omisión que parece menor no lo es si es la que te deja en el pasillo.
 
 ### MFID-04 · recado-voz · pt→es · **INVENCIÓN**
 **fuente:**
 > «É o canalizador. Passo amanhã de manhã, entre as nove e o meio-dia,
 > para ver a torneira da cozinha. Se não estiver ninguém, deixe a chave
-> na vizinha do 2.º direito.»
+> à vizinha do 2.º direito.»
 **datos:** cuándo (mañana por la mañana, de nueve a doce) · qué (el grifo de la cocina) · condición (si no hay nadie, llave a la vecina del 2.º derecha)
 **recado fiel:**
 > «Ha llamado el fontanero. Viene mañana por la mañana, entre las nueve y las doce, a mirar el grifo de la cocina. Si no hay nadie, que dejes la llave a la vecina del segundo derecha.»
 **recado mostrado:**
 > «Ha llamado el fontanero. Viene mañana por la mañana, entre las nueve y las doce, a mirar el grifo de la cocina y a darte el presupuesto. Si no hay nadie, que dejes la llave a la vecina del segundo derecha.»
 **transformación:** INVENCIÓN de «y a darte el presupuesto»
-**opciones:** [0] Falta la condición de la llave · [1] Cambia la franja horaria · [2] **Añade algo que el recado no dice** ✅ · [3] No falla nada
+**opciones:** [0] Falta la condición de la llave · [1] Cambia la franja horaria · [2] **Añade algo que el fontanero no dice** ✅ · [3] No falla nada
 **explicación:** El fontanero no dice nada de presupuesto: sólo que viene a ver el grifo. Añadir un dato verosímil es tan infiel como perder uno — y más peligroso, porque nadie lo echa de menos.
 
 ### MFID-05 · aviso-escolar · pt→es · **ALTERACIÓN**
@@ -231,7 +254,7 @@ cuatro etiquetas con la clave marcada, y la explicación.
 > «El lunes 8 se entregan los libros de texto usados, de tres a cuatro y media, en el pabellón. Cada alumno lleva los libros en una bolsa con su nombre y su clase.»
 **transformación:** ALTERACIÓN de «das 14h» → «de tres»
 **opciones:** [0] Falta lo que hay que llevar · [1] Cambia el sitio · [2] No falla nada · [3] **Cambia la hora** ✅
-**explicación:** El aviso abre a las 14h, o sea a las dos. «De tres a cuatro y media» se come la primera hora de las dos y media que había: quien llegue a las dos y cuarto se encontrará la puerta abierta y creerá que se ha equivocado de día.
+**explicación:** El aviso abre a las 14h, o sea a las dos. «De tres a cuatro y media» se come la primera hora de las dos y media que había: quien sólo pueda pasar entre las dos y las tres se quedará sin entregar los libros, convencido de que aún no han abierto.
 
 ### MFID-06 · email-servicio · pt→es · **REASIGNACIÓN**
 **fuente:**
@@ -240,7 +263,7 @@ cuatro etiquetas con la clave marcada, y la explicación.
 > pode ser feito por terceiros através do portal.»
 **datos:** quién comparece (el titular, en persona) · dónde (loja do cidadão) · qué lleva (el carné antiguo) · quién puede pedir cita (terceros, por el portal)
 **recado fiel:**
-> «Para renovar el carné tienes que ir tú en persona a la loja do cidadão con el carné viejo. La cita sí te la puede pedir otra persona por internet.»
+> «Para renovar el carné tiene que ir el titular en persona a la loja do cidadão con el carné viejo. La cita sí te la puede pedir otra persona por internet.»
 **recado mostrado:**
 > «Para renovar el carné puede ir cualquiera de la familia a la loja do cidadão con el carné viejo. La cita sí te la puede pedir otra persona por internet.»
 **transformación:** REASIGNACIÓN de «o titular tem de comparecer pessoalmente»
@@ -251,8 +274,8 @@ cuatro etiquetas con la clave marcada, y la explicación.
 **fuente:**
 > «Fui às compras, volto pelas 13h. O guisado está no frigorífico, é só
 > aquecer 5 minutos. Se tocarem à porta, é a encomenda da farmácia —
-> paga-se lá, são 12 euros.»
-**datos:** dónde va y cuándo vuelve (compras, hacia las 13h) · comida (guiso en la nevera, calentar 5 min) · el paquete (farmacia, se paga allí, 12 euros)
+> paga-se na entrega, são 12 euros.»
+**datos:** dónde va y cuándo vuelve (compras, hacia las 13h) · comida (guiso en la nevera, calentar 5 min) · el paquete (farmacia, se paga a la entrega, 12 euros)
 **recado fiel:**
 > «Se ha ido a comprar y vuelve sobre la una. El guiso está en la nevera, se calienta cinco minutos. Si llaman a la puerta es el pedido de la farmacia: se paga en el momento, son doce euros.»
 **recado mostrado:** *(idéntico al fiel)*
@@ -263,15 +286,15 @@ cuatro etiquetas con la clave marcada, y la explicación.
 ### MFID-08 · app-notificacion · pt→es · **PLAZO**
 **fuente:**
 > «Biblioteca: a renovação do livro que requisitou foi aceite. O novo
-> prazo de entrega é até quarta-feira, dia 22, inclusive. Não são
+> prazo de devolução é até quarta-feira, dia 22, inclusive. Não são
 > permitidas mais renovações.»
 **datos:** qué (la renovación aceptada) · nuevo plazo (hasta el miércoles 22 incluido) · condición (no se puede renovar más)
 **recado fiel:**
-> «Te han renovado el libro de la biblioteca. El nuevo plazo para devolverlo es hasta el miércoles 22 incluido, y ya no se puede renovar más veces.»
+> «Te han renovado el libro de la biblioteca. Ahora hay que devolverlo como muy tarde el miércoles 22, y ya no se puede renovar más veces.»
 **recado mostrado:**
-> «Te han renovado el libro de la biblioteca. El nuevo plazo para devolverlo es antes del miércoles 22, y ya no se puede renovar más veces.»
+> «Te han renovado el libro de la biblioteca. Ahora hay que devolverlo antes del miércoles 22, y ya no se puede renovar más veces.»
 **transformación:** PLAZO sobre «até quarta-feira, dia 22, inclusive»
-**opciones:** [0] Falta la condición de no renovar más · [1] Cambia el día de entrega · [2] No falla nada · [3] **Se adelanta el plazo** ✅
+**opciones:** [0] Falta la condición de no renovar más · [1] Cambia el día de devolución · [2] No falla nada · [3] **Se adelanta el plazo** ✅
 **explicación:** El aviso dice «inclusive» con todas las letras: el miércoles 22 todavía vale. «Antes del miércoles 22» le quita un día entero, y en una biblioteca que ya no admite más renovaciones ese día es el que separa devolver de pagar multa.
 
 ### MFID-09 · megafonia · pt→es · **OMISIÓN**
@@ -300,7 +323,7 @@ cuatro etiquetas con la clave marcada, y la explicación.
 > «Ha llegado el recibo del seguro de la casa: 96,40 euros al año, que se pagan de una vez el 30 de septiembre. Desde ese día cubre los daños por agua y los robos.»
 **transformación:** INVENCIÓN de «y los robos»
 **opciones:** [0] Falta la fecha del pago · [1] **Añade algo que el recibo no dice** ✅ · [2] Cambia el importe · [3] No falla nada
-**explicación:** El recibo nombra una sola cobertura, la de daños por agua. Añadir los robos es el invento más caro posible: alguien se creerá cubierto de algo que no ha contratado, y sólo lo descubrirá el día que le entren en casa.
+**explicación:** El recibo nombra una sola cobertura, la de daños por agua. Añadir los robos es el invento más caro posible: quien lo lea dará por cubierto algo de lo que el recibo no dice ni una palabra, y sólo lo descubrirá el día que le entren en casa.
 
 ### MFID-11 · chat-grupo · pt→es · **FIEL**
 **fuente:**
@@ -326,7 +349,7 @@ cuatro etiquetas con la clave marcada, y la explicación.
 **recado mostrado:**
 > «Desde el día 3, los contenedores pasan a la Rua das Amendoeiras; los del orgánico se quedan donde están. Y la recogida cambia a lunes, miércoles y viernes.»
 **transformación:** ALTERACIÓN de «Rua das Amoreiras» → «Rua das Amendoeiras»
-**opciones:** [0] **Cambia el sitio** ✅ · [1] Falta lo que NO se mueve · [2] Se retrasa el plazo · [3] No falla nada
+**opciones:** [0] Falta lo que NO se mueve · [1] **Cambia el sitio** ✅ · [2] Cambia los días de recogida · [3] No falla nada
 **explicación:** «Amoreiras» (moreras) y «Amendoeiras» (almendros) se parecen lo bastante como para colarse, y son dos calles distintas. El parecido no es una excusa: en mediación, un nombre propio se copia, no se recuerda.
 
 ### MFID-13 · cartel · pt→es · **REASIGNACIÓN**
@@ -348,11 +371,11 @@ cuatro etiquetas con la clave marcada, y la explicación.
 > «Farmácia Central: a sua encomenda de medicamentos chegou. Guardamo-la
 > até sexta-feira, dia 18. Depois disso volta ao fornecedor. Horário:
 > 9h-19h.»
-**datos:** qué (el pedido de medicamentos, llegado) · plazo de guarda (hasta el viernes 18) · qué pasa después (vuelve al proveedor) · horario (9h-19h)
+**datos:** quién avisa (la Farmacia Central) · qué (el pedido de medicamentos, llegado) · plazo de guarda (hasta el viernes 18) · qué pasa después (vuelve al proveedor) · horario (9h-19h)
 **recado fiel:**
-> «Han avisado de la farmacia: ya está tu pedido. Te lo guardan hasta el viernes 18 incluido; después lo devuelven al proveedor. Abren de nueve a siete.»
+> «Han avisado de la Farmacia Central: ya está tu pedido. Lo puedes recoger hasta el viernes 18 incluido; después lo devuelven al proveedor. Abren de nueve a siete.»
 **recado mostrado:**
-> «Han avisado de la farmacia: ya está tu pedido. Te lo guardan antes del viernes 18; después lo devuelven al proveedor. Abren de nueve a siete.»
+> «Han avisado de la Farmacia Central: ya está tu pedido. Lo puedes recoger antes del viernes 18; después lo devuelven al proveedor. Abren de nueve a siete.»
 **transformación:** PLAZO sobre «até sexta-feira, dia 18»
 **opciones:** [0] Falta qué pasa después · [1] Cambia el horario de la farmacia · [2] **Se adelanta el plazo** ✅ · [3] No falla nada
 **explicación:** «Até sexta-feira, dia 18» incluye el viernes: ese día el pedido todavía está. «Antes del viernes 18» lo excluye, y en una farmacia que devuelve al proveedor lo que no se recoge, ese día es el que separa llevarse los medicamentos de quedarse sin ellos.
@@ -367,7 +390,7 @@ cuatro etiquetas con la clave marcada, y la explicación.
 > «Han llamado del taller: el coche ya está, pero la ITV no se la pueden hacer hasta el jueves. Puedes recogerlo hoy y volver el jueves, o dejarlo allí hasta entonces. Quieren que les digas algo.»
 **recado mostrado:**
 > «Han llamado del taller: el coche ya está, pero la ITV no se la pueden hacer hasta el jueves. Puedes recogerlo hoy y volver el jueves. Quieren que les digas algo.»
-**transformación:** OMISIÓN de la primera opción («Pode levantá-lo hoje e voltar»)
+**transformación:** OMISIÓN de la segunda opción («ou deixá-lo cá até quinta»)
 **opciones:** [0] Cambia el día de la inspección · [1] **Falta una de las dos opciones** ✅ · [2] Añade algo que el taller no dice · [3] No falla nada
 **explicación:** El taller ofrece elegir y el recado convierte la elección en obligación. Comerse una de dos alternativas no es acortar: es decidir por el otro, que es el fallo de mediación más silencioso que hay.
 
@@ -376,11 +399,11 @@ cuatro etiquetas con la clave marcada, y la explicación.
 > «Fotografia escolar na terça-feira, dia 7. Os alunos vêm com a camisola
 > do uniforme. As encomendas fazem-se online até dia 20, com o código que
 > vai na caderneta.»
-**datos:** día (martes 7) · qué se ponen (la camiseta del uniforme) · encargos (por internet, hasta el día 20) · código (viene en la libreta)
+**datos:** día (martes 7) · qué se ponen (la camiseta del uniforme) · encargos (por internet, hasta el día 20) · código (viene en la agenda del colegio)
 **recado fiel:**
-> «El martes 7 hacen la foto del colegio. Los niños van con la camiseta del uniforme. Los encargos se hacen por internet como muy tarde el día 20, con el código que viene en la libreta.»
+> «El martes 7 hacen la foto del colegio. Los niños van con la camiseta del uniforme. Los encargos se hacen por internet como muy tarde el día 20, con el código que viene en la agenda del colegio.»
 **recado mostrado:**
-> «El martes 7 hacen la foto del colegio. Los niños van con la camiseta del uniforme y bien peinados. Los encargos se hacen por internet como muy tarde el día 20, con el código que viene en la libreta.»
+> «El martes 7 hacen la foto del colegio. Los niños van con la camiseta del uniforme y bien peinados. Los encargos se hacen por internet como muy tarde el día 20, con el código que viene en la agenda del colegio.»
 **transformación:** INVENCIÓN de «y bien peinados»
 **opciones:** [0] **Añade algo que el aviso no dice** ✅ · [1] Falta el código de los encargos · [2] Cambia el día · [3] No falla nada
 **explicación:** El aviso sólo pide la camiseta del uniforme. «Y bien peinados» es lo que el mediador supone que se sobreentiende, y por eso es el añadido más fácil de colar: nadie lo cuestiona porque suena a sentido común. Sigue siendo un dato que el colegio no ha pedido.
@@ -390,9 +413,9 @@ cuatro etiquetas con la clave marcada, y la explicación.
 > «A sua reserva na Pousada da Serra está confirmada para 3 noites, de 12
 > a 15 de junho, quarto duplo com pequeno-almoço. Check-in a partir das
 > 15h. Cancelamento gratuito até 5 de junho.»
-**datos:** noches (3, del 12 al 15 de junio) · habitación (doble con desayuno) · check-in (a partir de las 15h) · cancelación (gratis hasta el 5 de junio)
+**datos:** alojamiento (Pousada da Serra) · noches (3, del 12 al 15 de junio) · habitación (doble con desayuno) · check-in (a partir de las 15h) · cancelación (gratis hasta el 5 de junio)
 **recado fiel:**
-> «La reserva está confirmada: tres noches, del 12 al 15 de junio, habitación doble con desayuno. Se puede entrar a partir de las tres y se cancela gratis hasta el 5 de junio incluido.»
+> «La reserva de la Pousada da Serra está confirmada: tres noches, del 12 al 15 de junio, habitación doble con desayuno. Se puede entrar a partir de las tres y se cancela gratis hasta el 5 de junio incluido.»
 **recado mostrado:** *(idéntico al fiel)*
 **transformación:** ninguna
 **opciones:** [0] Falta el desayuno · [1] Cambia el número de noches · [2] **No falla nada** ✅ · [3] Se adelanta el plazo de cancelación
@@ -405,9 +428,9 @@ cuatro etiquetas con la clave marcada, y la explicación.
 > domingo à noite, depois levo-a comigo.»
 **datos:** qué hace (regar las plantas) · cuál necesita más (la del recibidor, cada tres días) · dónde deja la llave (buzón) · hasta cuándo (domingo por la noche)
 **recado fiel:**
-> «La vecina te riega las plantas mientras no estás. La del recibidor hay que regarla cada tres días. La llave la deja en el buzón hasta el domingo por la noche; a partir de ahí se la lleva.»
+> «La vecina te riega las plantas mientras no estás. La del recibidor hay que regarla cada tres días. La llave la puedes coger del buzón hasta el domingo por la noche; a partir de ahí se la lleva.»
 **recado mostrado:**
-> «La vecina te riega las plantas mientras no estás. La del recibidor hay que regarla cada tres días. La llave la deja en el buzón antes del domingo por la noche; a partir de ahí se la lleva.»
+> «La vecina te riega las plantas mientras no estás. La del recibidor hay que regarla cada tres días. La llave la puedes coger del buzón antes del domingo por la noche; a partir de ahí se la lleva.»
 **transformación:** PLAZO sobre «até domingo à noite»
 **opciones:** [0] Falta cada cuánto se riega · [1] **Se adelanta el plazo de la llave** ✅ · [2] Cambia dónde deja la llave · [3] No falla nada
 **explicación:** «Hasta el domingo por la noche» significa que el domingo por la noche la llave todavía está. «Antes del domingo por la noche» deja fuera justo el momento en que uno vuelve de viaje.
@@ -420,9 +443,9 @@ cuatro etiquetas con la clave marcada, y la explicación.
 > mostrador de siempre.»
 **datos:** traslado (sala de estudio al sótano) · entrada (puerta lateral, calle Mayor) · horario (10-14) · préstamos (en el mostrador de siempre)
 **recado fiel:**
-> «Durante as obras, a sala de estudo passa para a cave. Entra-se pela porta lateral da calle Mayor e o horário é reduzido, das 10h às 14h. Os empréstimos continuam a ser feitos no balcão do costume.»
+> «Na biblioteca municipal, durante as obras, a sala de estudo passa para a cave. Entra-se pela porta lateral da calle Mayor e o horário é reduzido, das 10h às 14h. Os empréstimos continuam a ser feitos no balcão do costume.»
 **recado mostrado:**
-> «Durante as obras, a sala de estudo passa para a cave. Entra-se pela porta lateral da calle Mayor e o horário é reduzido, das 10h às 14h.»
+> «Na biblioteca municipal, durante as obras, a sala de estudo passa para a cave. Entra-se pela porta lateral da calle Mayor e o horário é reduzido, das 10h às 14h.»
 **transformación:** OMISIÓN de la frase de los préstamos
 **opciones:** [0] Cambia o horário · [1] Acrescenta algo que o cartaz não diz · [2] **Falta o que acontece com os empréstimos** ✅ · [3] Não falha nada
 **explicación:** O cartaz tem quatro informações e o recado só dá três. A dos empréstimos é a que evita uma viagem à cave para nada — e é a última do cartaz, que é onde a omissão passa mais despercebida.
@@ -447,9 +470,9 @@ cuatro etiquetas con la clave marcada, y la explicación.
 > dejado 20 euros en el cajón para pagarle.»
 **datos:** adónde va (a Setúbal, en coche) · vuelve (sobre las siete) · llave de paso (debajo del fregadero) · dinero (20 euros en el cajón)
 **recado fiel:**
-> «Levou o carro porque tem de ir a Setúbal e volta por volta das sete. Se vier o homem do gás, a torneira de segurança está debaixo do lava-loiça, e deixou 20 euros na gaveta para lhe pagares.»
+> «Levou o carro porque tem de ir a Setúbal e volta pelas sete. Se vier o homem do gás, a torneira de segurança está debaixo do lava-loiça, e deixou 20 euros na gaveta para lhe pagares.»
 **recado mostrado:**
-> «Levou o carro porque tem de ir a Setúbal e volta por volta das sete. Se vier o homem do gás, a torneira de segurança está debaixo do lava-loiça, e deixou 20 euros em cima da mesa para lhe pagares.»
+> «Levou o carro porque tem de ir a Setúbal e volta pelas sete. Se vier o homem do gás, a torneira de segurança está debaixo do lava-loiça, e deixou 20 euros em cima da mesa para lhe pagares.»
 **transformación:** ALTERACIÓN de «en el cajón» → «em cima da mesa»
 **opciones:** [0] Falta para onde vai · [1] Muda a hora de regresso · [2] Não falha nada · [3] **Muda onde está o dinheiro** ✅
 **explicación:** A nota diz «en el cajón» e o recado põe o dinheiro em cima da mesa. Parece um pormenor até ao momento em que alguém tem de pagar ao homem do gás e o dinheiro não está onde lhe disseram.
@@ -477,7 +500,7 @@ cuatro etiquetas con la clave marcada, y la explicación.
 **recado fiel:**
 > «Os alunos que não tenham entregado a ficha médica não podem ir à piscina na sexta-feira. A secretaria recebe-a até quarta-feira às 13h.»
 **recado mostrado:**
-> «Os alunos que não tenham entregado a ficha médica não podem ir à piscina na sexta-feira. O professor recolhe-a até quarta-feira às 13h.»
+> «Os alunos que não tenham entregado a ficha médica não podem ir à piscina na sexta-feira. O professor recebe-a até quarta-feira às 13h.»
 **transformación:** REASIGNACIÓN de «la secretaría» → «o professor»
 **opciones:** [0] **Muda quem recebe a ficha** ✅ · [1] Falta o prazo · [2] Muda o dia da piscina · [3] Não falha nada
 **explicación:** O aviso diz que a ficha se entrega na secretaria. Trocar o destinatário por «o professor» é o tipo de erro que só se descobre na quinta-feira, quando já não há remédio.
@@ -487,9 +510,9 @@ cuatro etiquetas con la clave marcada, y la explicación.
 > «Aviso de la comunidad: el jueves 14 revisan los extintores de todo el
 > edificio, de 10 a 13. No hace falta que haya nadie en casa, sólo en los
 > trasteros. Quien tenga trastero cerrado con candado, que avise.»
-**datos:** día y franja (jueves 14, de 10 a 13) · qué (revisión de extintores) · no hace falta estar en casa, sí en los trasteros · quien tenga candado, que avise
+**datos:** emisor (aviso de la comunidad) · día y franja (jueves 14, de 10 a 13) · qué (revisión de extintores) · no hace falta estar en casa, sí en los trasteros · quien tenga candado, que avise
 **recado fiel:**
-> «Na quinta-feira, dia 14, das 10h às 13h, vêm fazer a manutenção aos extintores do prédio todo. Não é preciso estar ninguém em casa, só nas arrecadações; quem tiver a arrecadação fechada com cadeado que avise.»
+> «O condomínio avisa que na quinta-feira, dia 14, das 10h às 13h, vêm fazer a manutenção aos extintores do prédio todo. Não é preciso estar ninguém em casa, só nas arrecadações; quem tiver a arrecadação fechada com cadeado que avise.»
 **recado mostrado:** *(idéntico al fiel)*
 **transformación:** ninguna
 **opciones:** [0] Falta a franja horária · [1] Acrescenta algo que o aviso não diz · [2] Muda quem tem de avisar · [3] **Não falha nada** ✅

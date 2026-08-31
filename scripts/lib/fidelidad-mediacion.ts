@@ -214,10 +214,34 @@ export function anclasPerdidas(fuente: string, fiel: string): string[] {
     if (!grupo.some((w) => norm(fuente).includes(norm(w)))) continue;
     if (!equivale(grupo)) perdidas.push(grupo[0]!);
   }
-  // 3 · nombres propios: mayúscula que no abre frase ni sigue a punto
-  for (const m of fuente.matchAll(/(?<![.!?¿¡«]\s?)(?<=[a-záéíóúâêôãõç,;]\s)([A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wáéíóúâêôãõç]{2,})/gu)) {
+  // 3 · el EMISOR. La v1 exigía una minúscula ANTES de la mayúscula —o
+  //     sea, ignoraba todo lo que abre frase— y encima llevaba una lista
+  //     negra con «Aviso|Biblioteca|Centro|…». Entre las dos cosas era
+  //     ciega justo a lo que existía para ver: el emisor, que en un aviso
+  //     va al principio. Lo encontró un revisor del round, no yo.
+  //
+  //     Quitar la restricción sin más metía ruido («Volta às 17h» daba
+  //     «Volta» por nombre propio), así que se usa la ESTRUCTURA del
+  //     género: en un aviso el emisor es lo que precede a los dos puntos
+  //     («Escola de Condução Rumo:», «Biblioteca municipal:»). Si no hay
+  //     dos puntos al principio, no se reclama emisor.
+  const dosPuntos = fuente.replace(/^[«"']/, '').match(/^([^:.!?]{3,45}):/);
+  let finEmisor = 0;
+  if (dosPuntos) {
+    finEmisor = fuente.indexOf(':') + 1;
+    const emisor = dosPuntos[1]!;
+    const claves = (emisor.match(/[\p{L}]{4,}/gu) ?? []).filter((w) => !/^(municipal|nacional|central|geral)$/i.test(norm(w)));
+    // se reporta el emisor ENTERO, no una palabra suelta: para triar
+    // hace falta ver qué se perdió, no un token descontextualizado
+    if (claves.length && !claves.some((w) => f.includes(norm(w)))) perdidas.push(emisor.trim());
+  }
+
+  // 4 · nombres propios en mitad de la frase: ahí la mayúscula sí es
+  //     señal por sí sola.
+  for (const m of fuente.matchAll(/(?<=[\p{Ll},;]\s)([A-ZÁÉÍÓÚÂÊÔÃÕÇÑ][\p{L}]{2,})/gu)) {
+    // dentro del emisor ya decidió la regla 3: no se cuenta dos veces
+    if ((m.index ?? 0) < finEmisor) continue;
     const w = m[1]!;
-    if (/^(Aviso|Informamos|Recibo|Fatura|Consumo|Total|Prémio|Pagamento|Levantamento|Entrega|Horário|Ordem|Saída|Obras|Corte|Biblioteca|Centro|Reunião|Fotografia|Renovação|Visita)$/.test(w)) continue;
     if (!f.includes(norm(w))) perdidas.push(w);
   }
   return [...new Set(perdidas)];

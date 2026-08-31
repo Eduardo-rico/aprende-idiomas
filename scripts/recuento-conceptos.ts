@@ -209,11 +209,18 @@ console.log(`(${Math.round(todos.reduce((a, b) => a + b, 0) / porConcepto.size)}
 const MED_ITEMS_NIVEL: Record<string, number> = { A1: 0, A2: 200, B1: 280, B2: 400, C1: 400, C2: 300 };
 const MED_TAREAS = 230;
 const med = items.filter((x) => x.type === 'mediation');
+// El ÍTEM de mediación no es del tipo `mediation` — ése es la TAREA con
+// rúbrica. El ítem es cerrado y usa el tipo que le convenga
+// (`multiple_choice` en la familia «fidelidad de relay», E2#9), así que
+// se cuenta por CONCEPTO. Sin esto el bucket marcaría 0 para siempre
+// mientras se llena, que es el peor fallo que puede tener un recuento.
+const CONCEPTOS_MED_ITEM = ['b10-fidelidad-relay'];
+const medItems = items.filter((x) => (x.concepts ?? []).some((c: string) => CONCEPTOS_MED_ITEM.includes(c)));
 const MED_ITEMS = NIVELES.reduce((a, n) => a + (MED_ITEMS_NIVEL[n] ?? 0), 0);
 console.log('\n\n# 4 · Mediación, con la cifra CORREGIDA\n');
 console.log(`| bucket | hay | pide | falta |`);
 console.log(`|---|---:|---:|---:|`);
-console.log(`| mediación-ÍTEM (dentro de los ${sumaMetaHoy} de ejercicios) | 0 | ${MED_ITEMS} | ${MED_ITEMS} |`);
+console.log(`| mediación-ÍTEM (dentro de los ${sumaMetaHoy} de ejercicios) | ${medItems.length} | ${MED_ITEMS} | ${MED_ITEMS - medItems.length} |`);
 console.log(`| mediación-TAREA (dentro de las 830 de producción) | ${med.length} | ${MED_TAREAS} | ${Math.max(0, MED_TAREAS - med.length)} |`);
 console.log(`\nEl recuento de E2#8 daba 1.350 al bucket de ítems restando las 230 tareas.`);
 console.log(`Son buckets separados: el faltante de mediación-ÍTEM es ${MED_ITEMS}, no 1350.`);

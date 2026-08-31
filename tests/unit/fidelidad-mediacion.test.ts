@@ -208,7 +208,7 @@ describe('gate 7 — el recado FIEL contra la FUENTE', () => {
       'Centro de Saúde da Lapa: a sua consulta passou para quarta, dia 9, às 11h20.',
       'Te han cambiado la consulta al miércoles 9 a las once y veinte.',
     );
-    expect(r).toContain('Lapa');
+    expect(r.join(' ')).toContain('Lapa');   // reporta el emisor entero, no un token suelto
   });
 
   it('no avisa cuando el ancla está rendida en la otra lengua', () => {
@@ -249,5 +249,33 @@ describe('gate 8 — PLAZO es mover la inclusividad, no cambiar el valor', () =>
       correctIndex: 0,
     });
     expect(r.fallos.join(' ')).toMatch(/ALTERACIÓN/);
+  });
+});
+
+// El gate 7 nació CIEGO a la mitad de lo que existía para ver: pedía una
+// minúscula antes de la mayúscula (así que ignoraba todo lo que abre
+// frase) y encima llevaba una lista negra con «Aviso|Biblioteca|Centro»,
+// que es justo la clase de emisor que se estaba perdiendo. Lo encontró
+// un revisor del round, no yo.
+describe('gate 7 · el emisor que abre la frase también cuenta', () => {
+  it('ve el nombre propio que abre el aviso', () => {
+    expect(anclasPerdidas(
+      'Pousada da Serra: a sua reserva está confirmada para 3 noites.',
+      'La reserva está confirmada: tres noches.',
+    ).join(' ')).toContain('Pousada da Serra');
+  });
+
+  it('ve un emisor que la lista negra tapaba', () => {
+    expect(anclasPerdidas(
+      'Biblioteca municipal: durante as obras, a sala passa para a cave.',
+      'Durante las obras, la sala pasa al sótano.',
+    ).join(' ')).toContain('Biblioteca');
+  });
+
+  it('y sigue callando cuando el emisor SÍ viaja', () => {
+    expect(anclasPerdidas(
+      'Biblioteca municipal: durante as obras, a sala passa para a cave.',
+      'En la biblioteca municipal, durante las obras, la sala pasa al sótano.',
+    ).join(' ')).not.toContain('Biblioteca');
   });
 });
