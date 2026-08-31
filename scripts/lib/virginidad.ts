@@ -260,7 +260,17 @@ export interface HallazgoVirginidad {
   /** los tokens raros que comparten, ordenados por peso — la PRUEBA */
   compartidos: string[];
   texto: string;
+  /** el ítem del corpus tiene tan poco texto (una ficha de conjugación es
+   *  UNA palabra: «direi») que cualquier candidato que use esa forma
+   *  puntúa alto contra él. El par se REPORTA —dos fichas de conjugación
+   *  gemelas sí serían un duplicado— pero no se cuenta como hallazgo:
+   *  medido en E2#11, 20 de 22 pares de un lote eran esto. */
+  pocosTokens?: boolean;
 }
+
+/** Por debajo de esto, el score del IDF no es fiable: el denominador lo
+ *  domina un puñado de tokens. */
+export const MIN_TOKENS_FIABLE = 3;
 
 /** Umbral por defecto. Calibrado contra los cuatro duplicados reales
  *  conocidos (los dos ya publicados y los dos del lote 5): todos quedan
@@ -310,6 +320,7 @@ export function buscarDuplicados(
       score: Number(score.toFixed(3)),
       blockId: ex.blockId,
       type: ex.type,
+      pocosTokens: (idx.tokens.get(id)?.size ?? 0) < MIN_TOKENS_FIABLE,
       compartidos: compartidos.sort((a, b) => b[1] - a[1]).map(([w]) => w),
       texto: enunciadosDe(ex).join(' · ').slice(0, 120),
     });

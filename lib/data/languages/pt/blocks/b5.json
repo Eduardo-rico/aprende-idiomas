@@ -7320,5 +7320,353 @@
       "correctIndex": 0,
       "explanationEs": "Condición irreal: la principal va en condicional ('compraria'). En portugués europeo coloquial también se usa el imperfecto de indicativo ('comprava'), pero nunca el pretérito perfecto ('comprei')."
     }
+  },
+  {
+    "id": "b2c2-par-01",
+    "blockId": 5,
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 3,
+    "concepts": [
+      "b5-futcomp-composto-real"
+    ],
+    "tags": [
+      "familia:paradigma-v1",
+      "punto:b5-futcomp-composto-real",
+      "directo"
+    ],
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Antes do almoço já ___ a apresentação. (terminar)",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "terei terminado",
+          "alternatives": []
+        }
+      ]
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "esContrast": "El futuro composto marca lo que estará ACABADO antes de otro momento futuro. En español, «habré terminado».",
+    "contentHash": "24a2c504154b701c16bfb4338f092be630c3116efae1966141bdcbcacb71c359"
+  },
+  {
+    "id": "b2c2-par-02",
+    "blockId": 5,
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 3,
+    "concepts": [
+      "b5-futcomp-composto-real"
+    ],
+    "tags": [
+      "familia:paradigma-v1",
+      "punto:b5-futcomp-composto-real",
+      "directo"
+    ],
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Quando o autocarro passar, os miúdos já ___ de casa. (sair)",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "terão saído",
+          "alternatives": []
+        }
+      ]
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "esContrast": "«Ya habrán salido»: acabado ANTES de que pase el autobús, no a la vez. Y «quando passar» es futuro do conjuntivo, que el español no tiene.",
+    "contentHash": "fcb8c86de8c0cbcfab2a59b317fc9769f5ad19fb8a0517560920d2c085727d3c"
+  },
+  {
+    "id": "b2c2-par-03",
+    "blockId": 5,
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 3,
+    "concepts": [
+      "b5-futcomp-composto-real"
+    ],
+    "tags": [
+      "familia:paradigma-v1",
+      "punto:b5-futcomp-composto-real",
+      "directo"
+    ],
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Até sexta ___ tudo o que ficou pendente. (fazer)",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "teremos feito",
+          "alternatives": []
+        }
+      ]
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "esContrast": "Participio irregular: «feito», no *«fazido»*. Y «até sexta» incluye el viernes.",
+    "contentHash": "7048625d913d5e1ef509517afbfb511b017f0bd5029a7ec794f675d7e344f110"
+  },
+  {
+    "id": "b2c2-par-04",
+    "blockId": 5,
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 3,
+    "concepts": [
+      "b5-futcomp-composto-real"
+    ],
+    "tags": [
+      "familia:paradigma-v1",
+      "punto:b5-futcomp-composto-real",
+      "directo"
+    ],
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Quando o julgamento acabar, a testemunha já ___ tudo. (dizer)",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "terá dito",
+          "alternatives": []
+        }
+      ]
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "esContrast": "«Dito», no *«dizido»*. Es uno de los tres verbos que también son irregulares en el futuro simple (dirá).",
+    "contentHash": "e96a32c445345591cdda2e10cd617f5f4761f4d6a7c9cf260175e46eb98af5ee"
+  },
+  {
+    "id": "b2c2-par-05",
+    "blockId": 5,
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 3,
+    "concepts": [
+      "b5-futcomp-composto-real"
+    ],
+    "tags": [
+      "familia:paradigma-v1",
+      "punto:b5-futcomp-composto-real",
+      "contraste"
+    ],
+    "type": "multiple_choice",
+    "data": {
+      "question": "Amanhã de manhã ___ com o teu chefe sobre o aumento.",
+      "options": [
+        "falarás",
+        "terás falado",
+        "falará",
+        "tens falado"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "Sin un segundo momento futuro al que anticiparse, el futuro composto sobra: basta el simple."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "contentHash": "17dc6ee42603fd990d113742cc9b76668dbea72c62a7212a1633520ac5f0fb54"
+  },
+  {
+    "id": "b2c2-par-06",
+    "blockId": 5,
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 3,
+    "concepts": [
+      "b5-futcomp-composto-real"
+    ],
+    "tags": [
+      "familia:paradigma-v1",
+      "punto:b5-futcomp-composto-real",
+      "contraste"
+    ],
+    "type": "multiple_choice",
+    "data": {
+      "question": "Se calhar ___ o carro no próximo verão.",
+      "options": [
+        "terei vendido",
+        "venderá",
+        "vendo",
+        "venderei"
+      ],
+      "correctIndex": 3,
+      "explanationEs": "«Se calhar» es la mitigación europea de «quizá», y no cambia el tiempo: aquí la acción es simplemente futura."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "contentHash": "42d25c19275eee9f77224d1ad89390bf1db1b6fc7a58195821ba612e58ab4d00"
+  },
+  {
+    "id": "b2c2-par-07",
+    "blockId": 5,
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 3,
+    "concepts": [
+      "b5-futcomp-composto-real"
+    ],
+    "tags": [
+      "familia:paradigma-v1",
+      "punto:b5-futcomp-composto-real",
+      "directo"
+    ],
+    "type": "multiple_choice",
+    "data": {
+      "question": "Quando vocês chegarem ao cinema, o filme já ___.",
+      "options": [
+        "começará",
+        "terá começado",
+        "começa",
+        "tinha começado"
+      ],
+      "correctIndex": 1,
+      "explanationEs": "El «já» y la subordinada de futuro piden anterioridad: la película ya habrá empezado."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "contentHash": "3f33da597a02e2051bae25faa2714bb76e64e9979cef7026f3cbc14e5440416f"
+  },
+  {
+    "id": "b2c2-par-08",
+    "blockId": 5,
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 3,
+    "concepts": [
+      "b5-futcomp-composto-real"
+    ],
+    "tags": [
+      "familia:paradigma-v1",
+      "punto:b5-futcomp-composto-real",
+      "directo"
+    ],
+    "type": "multiple_choice",
+    "data": {
+      "question": "Até ao fim do mês ___ todas as facturas. (pagar)",
+      "options": [
+        "pagarei",
+        "pago",
+        "terei pago",
+        "tenho pago"
+      ],
+      "correctIndex": 2,
+      "explanationEs": "Participio irregular: «pago», no *«pagado»*. «Até ao fim do mes» incluye el último día."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "contentHash": "5b8365cbd98bd45d2a57475de8155c9ed4c9c15b3f19cf6ce5668ce5bc4182a9"
+  },
+  {
+    "id": "b2c2-par-09",
+    "blockId": 5,
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 3,
+    "concepts": [
+      "b5-futcomp-composto-real"
+    ],
+    "tags": [
+      "familia:paradigma-v1",
+      "punto:b5-futcomp-composto-real",
+      "directo"
+    ],
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Antes de o sol se pôr, já ___ o discurso todo. (escrever)",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "terás escrito",
+          "alternatives": []
+        }
+      ]
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "esContrast": "Participio irregular: «escrito». Y «antes de o sol se pôr» es infinitivo pessoal con sujeto propio, que es lo que el europeo usa aquí.",
+    "contentHash": "63a37412d41d5adf5f0052a83201a6e0fc32827eefb0d04fa19de5a580cff16f"
+  },
+  {
+    "id": "b2c2-par-10",
+    "blockId": 5,
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 3,
+    "concepts": [
+      "b5-futcomp-composto-real"
+    ],
+    "tags": [
+      "familia:paradigma-v1",
+      "punto:b5-futcomp-composto-real",
+      "directo"
+    ],
+    "type": "fill_blank",
+    "data": {
+      "sentence": "No fim da viagem ___ cinco cidades diferentes. (ver)",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "teremos visto",
+          "alternatives": []
+        }
+      ]
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "esContrast": "Participio irregular: «visto». Ojo: «ver» es regular en el futuro simple (veremos) e irregular sólo en el participio.",
+    "contentHash": "937a02ca6d1de7fe5ff248529ef1b89b405d6763186931c74f7f64faaf09b9f0"
+  },
+  {
+    "id": "b2c2-par-11",
+    "blockId": 5,
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 3,
+    "concepts": [
+      "b5-futcomp-composto-real"
+    ],
+    "tags": [
+      "familia:paradigma-v1",
+      "punto:b5-futcomp-composto-real",
+      "directo"
+    ],
+    "type": "multiple_choice",
+    "data": {
+      "question": "Daqui a dez anos esta empresa já ___ de dono três vezes.",
+      "options": [
+        "mudará",
+        "muda",
+        "mudou",
+        "terá mudado"
+      ],
+      "correctIndex": 3,
+      "explanationEs": "Con un plazo futuro y un recuento («três vezes»), el compuesto es el que hace el balance."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "contentHash": "28709de175fa0c8509588329ff2f1b9b827a72d71c7528c89ef3eb9eb6412d78"
+  },
+  {
+    "id": "b2c2-par-12",
+    "blockId": 5,
+    "lessonId": "b5-l1-futuro-presente",
+    "difficulty": 3,
+    "concepts": [
+      "b5-futcomp-composto-real"
+    ],
+    "tags": [
+      "familia:paradigma-v1",
+      "punto:b5-futcomp-composto-real",
+      "contraste"
+    ],
+    "type": "multiple_choice",
+    "data": {
+      "question": "Não te preocupes: eu ___ contigo à consulta.",
+      "options": [
+        "irei",
+        "terei ido",
+        "irá",
+        "tenho ido"
+      ],
+      "correctIndex": 0,
+      "explanationEs": "Es una promesa, no un balance: futuro simple."
+    },
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "contentHash": "49f084821dedb03a672ffcbeff074ac539fda2233d5685256cd8b90147927580"
   }
 ]

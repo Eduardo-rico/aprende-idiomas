@@ -95,6 +95,7 @@ async function main() {
   // Cada par sale UNA vez: si A caza a B, no volvemos a informar B↔A.
   const vistos = new Set<string>();
   let pares = 0;
+  let artefactos = 0;
   let moldes = 0;
   console.log('\n── PALABRAS (solape IDF) ──');
   for (const c of candidatos) {
@@ -102,17 +103,18 @@ async function main() {
       const clave = [c.id, h.id].sort().join('|');
       if (vistos.has(clave)) continue;
       vistos.add(clave);
-      pares++;
+      if (h.pocosTokens) artefactos++; else pares++;
       const a = idx.items.get(c.id);
       console.log(
         `${String(h.score).padStart(5)}  ${c.id} (b${a?.blockId ?? '?'} ${c.type})` +
-        `  ↔  ${h.id} (b${h.blockId ?? '?'} ${h.type})`,
+        `  ↔  ${h.id} (b${h.blockId ?? '?'} ${h.type})${h.pocosTokens ? '  [texto ínfimo: score no fiable]' : ''}`,
       );
       console.log(`         comparten: ${h.compartidos.join(', ')}`);
       console.log(`         ${h.texto}`);
     }
   }
-  console.log(`pares por encima del umbral: ${pares}`);
+  console.log(`pares por encima del umbral: **${pares} fiables** + ${artefactos} contra ítems de texto ínfimo`);
+  if (artefactos) console.log(`   (una ficha de conjugación es UNA palabra: cualquier ítem que use esa forma puntúa alto contra ella)`);
 
   // ── Eje 3: MOLDE de las mediaciones ──
   // Los dos ejes anteriores son ciegos a la plantilla: en E2#6 dieron 0
