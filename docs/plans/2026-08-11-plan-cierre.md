@@ -658,3 +658,71 @@ forma de un verbo, hay que nombrar el verbo.
 cuales **356 son puntos de C1 y C2 sin concepto declarado** (× piso): ésos
 no se llenan escribiendo cloze, se llenan declarándolos primero. El
 déficit de lo ya declarado son **203**, que a este ritmo son dos sesiones.
+
+
+---
+
+## E2#18 · el déficit deja de ser una estimación, y la mediación se produce en serie
+
+**FALTA 392 → 256**, residuo 0 en las cinco reconciliaciones. Y por
+primera vez la cifra es **enteramente medida**: cero puntos «sin empezar»
+en todos los niveles, así que FALTA y déficit son ya el mismo número.
+
+**1 · A1: los 8 puntos «sin empezar» eran 5.** Mismo método que C1/C2 —
+sacar el texto de los 31 segmentos y leerlos. 21 ya estaban declarados, 2
+son metas de vocabulario, 3 son colas de frase. Y lo que la aritmética
+tapaba: **la redução vocálica átona tiene CERO menciones en todo el
+corpus**, y lo dice el propio currículo. Es lo que separa oír portugués
+europeo de oír una sopa. Los cuatro puntos de fonología estrenan el
+formato **`escucha`**, porque meterlos en cualquiera de los cuatro
+formatos escritos habría sido fingir que se enseñan.
+
+**2 · 112 mediaciones publicadas en cinco pasadas, 15 puntos cerrados.**
+Dimensionadas siempre por el hueco medido: 24, 22, 24, 22, 20. Nunca un
+número redondo.
+
+**3 · Y HUBO QUE CONSTRUIR LA SEGUNDA MÁQUINA.** A mitad del bucket, los
+puntos que quedaban dejaron de ser transposición de registro: en «ironía y
+understatement» no hay marcador que sustituir, hay un efecto que explicar.
+`explicar-mediacion.ts` mantiene el principio —la rúbrica se DERIVA de lo
+declarado— y cambia lo declarado: puntos clave en vez de marcadores.
+
+Su primer diseño falló en 26 de 18 ítems, y el fallo enseña algo: buscaba
+la frase de la casilla dentro del modelo, y una explicación de ochenta
+palabras parafrasea por definición. Exigirlo obliga a escribir **modelos
+peores para que el gate esté contento**. La solución es la del cloze:
+separar lo que la casilla DICE de lo que el script COMPRUEBA.
+
+### Las tres cosas que la revisión encontró, y que ningún gate veía
+
+**El dato inventado.** Ocho en las dos primeras pasadas: «sem resposta há
+duas semanas» donde la fuente no da plazo, «senhor Manuel» donde no hay
+nombre, un motivo de indeferimento que nadie escribió. Uno era peor que un
+descuido: **su consigna se contradecía con su rúbrica** —invitaba a
+explicar el porqué y la casilla negativa lo prohíbe—, y se arregló la
+consigna, no la casilla.
+
+**La rúbrica agramatical**, que destapó una auditoría externa. Tres
+casillas ya publicadas proponían «Informam-se que…», que no es gramatical,
+mientras sus propios modelos escribían «Informa-se». **El alumno que
+obedecía la rúbrica escribía mal y la casilla lo aprobaba.** Se cerró por
+construcción: `rubricaDe` propone ahora la forma que el modelo USA.
+
+**Y dos veces la misma lección sobre los gates**: el comparador
+rúbrica↔modelo marcaba 43 de 70, y la primera versión del detector de
+datos nuevos listaba todas las palabras de contenido. Los dos eran
+correctos y los dos eran inservibles. **Un gate ruidoso es un gate
+apagado**, así que uno se acotó a números y nombres y el otro se sustituyó
+por un invariante en la suite.
+
+### Dónde vive lo que queda
+
+| formato | unidades | máquina |
+|---|---:|---|
+| juicio | 97 | **bajo moratoria** |
+| transformación | 76 | **sin construir** |
+| escucha | 32 | **sin construir** (audio A/B) |
+| mediación | 28 | las dos hechas |
+| cloze | 23 | hecha |
+
+De las 23 de cloze, 7 son `b3-pron-directo`, que necesita transformación.
