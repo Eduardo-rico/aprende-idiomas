@@ -174,7 +174,7 @@ function marcasMayusculas(lineas, min) {
  *  títulos, y partían los contos en trozos. El índice sí sabe cuáles son
  *  los contos: se leen sus entradas y se busca cada una en el cuerpo. Si
  *  alguna no aparece, es gate rojo — el volumen entraría incompleto. */
-function marcasPorIndice(lineas) {
+function marcasPorIndice(lineas, omitir = []) {
   const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
     .replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, ' ').trim();
   const iIndice = lineas.findIndex((l) => /^(Í|I)NDICE\.?$|^SUM[MÁA]RIO\.?$|^INDEX\.?$/i.test(l.trim()));
@@ -195,8 +195,19 @@ function marcasPorIndice(lineas) {
       // «vij» y «xiij» incluidos: la numeración romana de imprenta usa j final)
       const m = l.match(/^(.+?)[\s.]{2,}(?:\d+|[ivxlcdmj]+)\.?$/i) ?? l.match(/^(.+?)\s+(\d{1,4})$/);
       const bruto = m ? m[1] : conPagina ? null : l;
-      const t = bruto === null ? '' : bruto.replace(/[\s.]+$/, '').trim();
-      if (!t) { if (titulos.length) break; continue; }
+      // El índice numera («III. D. Beatriz de Portugal», «VIII—O guarda
+      // do cemiterio») y el cuerpo no. Fuera la numeración de cabecera.
+      const t = bruto === null ? '' : bruto
+        .replace(/^\s*(?:[IVXLCDM]+|\d{1,3})\s*(?:[.\-—:)]\s*|\s+(?=[A-ZÀ-Ýa-zà-ÿ]))/, '')
+        .replace(/\s*\(\s*\d[\d\s\-–—?]*\)\s*$/, '')   // «O BISPO NEGRO (1130)»
+        .replace(/[\s.]+$/, '').trim();
+      // Una línea que queda vacía tras limpiarla era numeración de
+      // sección («I», «IV») o datación suelta («(590--961)»): es parte
+      // del índice, no su final. El índice se acaba cuando aparece PROSA.
+      if (!t) { if (titulos.length && /[a-zà-ÿA-ZÀ-Ý]{3}/.test(l)) break; continue; }
+      // «(590--961)» es la datación de la entrada anterior, no un título
+      if (!/[a-zà-ÿA-ZÀ-Ý]{3}/.test(t)) continue;
+      if (omitir.some((o) => norm(o) === norm(t))) { finIndice = i; continue; }
       if (t.length >= 3 && t.length <= 70) { titulos.push(t); finIndice = i; }
       else if (titulos.length) break;
     }
@@ -219,6 +230,20 @@ function marcasPorIndice(lineas) {
     const n = norm(t);
     let hallada = -1;
     for (let i = previa + 1; i < lineas.length; i++) if (fuera(i) && norm(lineas[i]) === n) { hallada = i; break; }
+    if (hallada < 0 && n.length >= 8) {
+      // El encabezado del cuerpo lleva a veces la datación que el índice
+      // no repite: «O ALCAIDE DE SANTAREM (1148)». Se acepta el prefijo,
+      // y se reporta.
+      for (let i = previa + 1; i < lineas.length; i++) {
+        if (!fuera(i)) continue;
+        const c = norm(lineas[i]);
+        if (!c) continue;
+        const prefijo = c.length <= n.length + 24 && c.startsWith(n);
+        const sufijo = c.length >= 8 && (n.startsWith(c) || n.endsWith(c)) && n.length <= c.length + 24;
+        if (!prefijo && !sufijo) continue;
+        hallada = i; aproximados.push(`«${t}» ≈ «${lineas[i].trim()}»`); break;
+      }
+    }
     if (hallada < 0) {
       // El índice y el cuerpo no siempre traen la MISMA grafía
       // pre-Acordo: «MANUSCRIPTO DE UM SACRISTÃO» en el índice,
@@ -306,7 +331,10 @@ async function ingerir(obra) {
       return i;
     }).sort((a, b) => a - b);
   } else if (obra.modo === 'indice') {
-    marcas = marcasPorIndice(lineas);
+    // `omitirEntradas`: entradas del índice que NO son pieza (dedicatorias,
+    // «Notas»). Se declaran por obra y a mano — el gate sigue exigiendo que
+    // todo lo demás aparezca en el cuerpo.
+    marcas = marcasPorIndice(lineas, obra.omitirEntradas ?? []);
   } else if (obra.modo === 'mayusculas') {
     marcas = marcasMayusculas(lineas, min);
     if (marcas.length < 2) throw new Error(`${obra.slug}: 0-1 encabezados en mayúsculas — segmentación imposible`);
@@ -371,7 +399,12 @@ async function ingerir(obra) {
     preambulo = { marcador: obra.tituloPreambulo ?? 'Prefácio', parrafos: preParrafos, palabras: prePalabras, pre: true };
   }
 
-  // 4) portadillas: sólo se toleran al PRINCIPIO y se reportan
+  // 4) portadillas: sólo se toleran al PRINCIPIO y se reportan.
+  //    Excepción: un trozo de CERO palabras es un encabezado seguido de
+  //    otro encabezado (el título de la novela con sus capítulos debajo,
+  //    en Lendas e Narrativas). No se pierde texto al quitarlo.
+  let vacias = 0;
+  for (let k = piezas.length - 1; k >= 0; k--) if (piezas[k].palabras === 0) { piezas.splice(k, 1); vacias += 1; }
   let fuera = 0, fueraPiezas = 0;
   while (piezas.length && piezas[0].palabras < min) { fuera += piezas[0].palabras; fueraPiezas += 1; piezas.shift(); }
   while (piezas.length && piezas.at(-1).palabras < min) { fuera += piezas.at(-1).palabras; fueraPiezas += 1; piezas.pop(); }
@@ -438,7 +471,7 @@ async function ingerir(obra) {
     fs.writeFileSync(path.join(CACHE, `preambulo-${obra.slug}.txt`), preParrafos.map((p) => p.texto).join('\n\n'));
   }
 
-  return { obra, piezas: piezas.length, total, nivel, indice, porDensidad, piso, detectado, italicas, prePalabras, preambulo: !!preambulo, fuera, fueraPiezas, cortadas, escritos, dp };
+  return { obra, piezas: piezas.length, total, nivel, indice, porDensidad, piso, detectado, italicas, prePalabras, preambulo: !!preambulo, fuera, fueraPiezas, vacias, cortadas, escritos, dp };
 }
 
 /** «O SEGREDO DO BONZO[1]» → «O segredo do bonzo»; «D. BENEDICTA» →
@@ -463,6 +496,7 @@ for (const obra of tanda) {
       `${r.nivel}${obra.nivel ? '·decl' : `·dens ${r.indice.toFixed(1)}→${r.porDensidad}/piso ${r.piso}`}  [${r.detectado}]` +
       `${r.preambulo ? '  +preámbulo publicado' : (r.prePalabras ? `  preámbulo fuera ${r.prePalabras} pal` : '')}` +
       `${r.fueraPiezas ? `  portadillas fuera ${r.fueraPiezas}/${r.fuera} pal` : ''}` +
+      `${r.vacias ? `  encabezados sin cuerpo fuera ${r.vacias}` : ''}` +
       `${r.cortadas ? `  cortadas por «corte» ${r.cortadas} pal` : ''}`,
     );
   } catch (e) {
