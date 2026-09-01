@@ -18,27 +18,47 @@ siguen vigentes y no se reabren.
 
 ## Definición de TERMINADO
 
+> **Esta lista se ejecuta, no se lee**: `npx tsx scripts/gate-e5.ts`
+> imprime cada línea con su cifra medida, su meta y el comando que la
+> produce, y sale con código 1 si alguna medible falla. Las cifras «hoy»
+> de abajo son de la última corrida y envejecen; la del script no.
+
 **PT terminado** cuando, con cifras medidas:
-- [ ] Lectura ≥ 1.900.000 palabras en el catálogo (hoy: 714.004).
-- [ ] **COBERTURA, no total** (decisión de Edu, 2026-09-01): **≥12 ítems
-      en cada uno de los 186 puntos del currículo**, ~3.900 ejercicios.
-      **El total de 6.300 queda DEROGADO**: salía de una extrapolación por
-      horas, y la partición de conceptos de E2#10 midió que sostenerlo
-      pedía 788 conceptos (15,8× el inventario) o 126 ítems por concepto
-      (2,4× la densidad real). Faltan **1.513**: 761 de C1+C2 y 578 de
-      sub-puntos flacos de A2/B1/B2.
-- [ ] **Mediación: composición, no bucket.** Las **230 TAREAS** siguen
-      (183 hechas, 80 %). Los **ÍTEMS** de mediación salen como ~30 % de
-      los 1.513, **no encima**: el bucket de 1.580 venía de la misma
-      extrapolación por horas que queda derogada.
-- [ ] Bloque 11 con sus ~6-8 lecciones y sus ítems.
-- [ ] **Cero `unchecked` sin triaje** en el corpus (hoy: 1.799) y cero
-      `needs-human`/`divergent` sin resolver (hoy: 266+110).
+- [x] Lectura ≥ 1.900.000 palabras en el catálogo (**hoy: 3.219.799 en 967
+      lecturas**, tras la ola L de E3).
+- [ ] **COBERTURA, no total** (decisión de Edu, 2026-09-01): **≥8 ítems en
+      cada punto declarado, 6 en C2** (hoy: 241 puntos, 3.065 ejercicios;
+      **3 bajo el piso, faltan 24**).
+      **El piso es 8, no 12.** El 12 era un número redondo elegido a ojo y
+      Edu lo bajó en E2#15 razonando que con FSRS repitiendo ocho variados
+      sobran; sólo esa decisión bajó el déficit de 1.615 a 862. Esta línea
+      dijo 12 hasta E2#22 — **una checklist de cierre que mide contra una
+      meta derogada es la peor clase de gate**, porque el trabajo que pide
+      de más parece pendiente y el que ya está hecho no se acredita.
+      Tampoco son «186 puntos»: la partición de E2#10 los dejó en 241, y
+      B1/B2 tienen más puntos que los que la prosa del currículo enumera.
+      **El total de 6.300 sigue DEROGADO**: salía de una extrapolación por
+      horas, y la partición midió que sostenerlo pedía 788 conceptos
+      (3,3× el inventario) o 126 ítems por concepto (2,4× la densidad).
+      Y ojo con las dos cifras que NO son intercambiables: los puntos de
+      **piso cero declarado** (`docs/plans/puntos-piso-cero.json`) no
+      cuentan como déficit — el piso de un punto enterrado es 0, no 8.
+- [x] **Mediación: composición, no bucket.** Las **230 TAREAS** (hoy:
+      **347**). Los **ÍTEMS** de mediación salen dentro de la cobertura,
+      **no encima**: el bucket de 1.580 venía de la misma extrapolación
+      por horas que queda derogada.
+- [ ] Bloque 11 con sus ~6-8 lecciones y sus ítems (hoy: **5**).
+- [ ] **Cero `unchecked` sin triaje** en el corpus (hoy: **2.682**) y cero
+      `needs-human`/`divergent` sin resolver (hoy: **381**). El criterio
+      nació en la Ola V para la verificación de VARIANTE del corpus viejo;
+      antes de trabajarlo hay que medir cuánto de esos 2.682 es producción
+      nueva con sus gates en verde y cuánto es corpus generado a ojo.
 - [ ] Backlog de producción a cero (duplicados, b7-gerundio, med-20,
       flashcards viejos, MDX b8).
-- [ ] Audio de ejercicios sin errores en `verify:content` (hoy: 4
-      preexistentes) y escalera karaoke completa (ver E4).
-- [ ] Suite verde, typecheck 0, los dos gates de virginidad en el ciclo.
+- [x] Audio de ejercicios sin errores en `verify:content` (hoy: **0
+      errores**, 5 avisos) y `check-audio-stale` limpio; escalera karaoke
+      completa (ver E4) sigue pendiente.
+- [x] Suite verde, typecheck 0, los dos gates de virginidad en el ciclo.
 
 **Proyecto terminado** cuando además: RO, CS y RU replicados al mismo
 techo (fase F), en ese orden.

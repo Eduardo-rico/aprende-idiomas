@@ -70,12 +70,6 @@ L.push({ eje: 'Cobertura (piso 8, C2 6)', medido: `${n.size} puntos · ${items.l
   meta: 'cero bajo el piso', pasa: bajoPiso.length === 0, comando: 'npx tsx scripts/split-conceptos.ts',
   nota: `FALTA ${falta} unidades. Los ${cero.size} puntos de piso cero declarado NO cuentan, por decisión escrita en docs/plans/puntos-piso-cero.json. Ojo: «${items.length} ejercicios» no es la Σ de \`split-conceptos\` (3.182), que suma por PUNTO y un ejercicio puede enseñar varios.` });
 
-// El piso de la checklist escrita dice 12 y la decisión de Edu de E2#15
-// lo bajó a 8 (C2 6). Se dice, en vez de elegir en silencio.
-L.push({ eje: 'Piso vigente', medido: '8 (C2: 6), decisión de Edu en E2#15',
-  meta: 'el doc de cierre todavía dice 12', pasa: null, comando: 'docs/plans/2026-08-11-plan-cierre.md:22',
-  nota: 'la checklist escrita está desfasada en este punto; manda la decisión, no el doc.' });
-
 // ── 3 · Mediación: TAREAS ────────────────────────────────────────────
 const tareas = items.filter((x) => x.type === 'mediation').length;
 L.push({ eje: 'Mediación (tareas)', medido: `${tareas}`, meta: '230', pasa: tareas >= 230,
