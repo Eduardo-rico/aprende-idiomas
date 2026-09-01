@@ -2200,5 +2200,497 @@
       ],
       "modelAnswer": "Ninguna de las dos está mal: las dos son portugués correcto y las dicen personas instruidas. Lo que cambia es dónde se coloca cada hablante. «A gente» con verbo en singular es el habla corriente, la de todos los días; «nós» con futuro sintético pertenece al registro cuidado y suena a escrito incluso dicho en voz alta. Y la fórmula final, que pide permiso al interlocutor tratándolo de usted, acaba de situar a quien habla: alguien que se dirige hacia arriba y lo marca."
     }
+  },
+  {
+    "id": "b2c2-exp-l18-09",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-concordancia-discutida"
+    ],
+    "tags": [
+      "lote18",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "bdcb19ef0a2a911c3f5e4ce2846954f818c557860e7eca2211af065dbdee82f7",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 18 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Houve problemas na entrega. / Houveram problemas na entrega.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "un estudiante que oyó la segunda forma a un portugués y cree que la gramática se equivoca",
+      "instructionsEs": "Explícale qué dice la norma, por qué se oye la otra y qué debe escribir él.",
+      "wordRange": {
+        "min": 50,
+        "max": 120
+      },
+      "rubric": [
+        "¿Dice que «haver» existencial es impersonal y va en singular?",
+        "¿Dice que la forma con plural se oye porque el hablante la reinterpreta como sujeto?",
+        "¿Dice que por escrito debe usar el singular?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "La norma es clara y la primera es la buena: cuando «haver» significa existir es impersonal, no tiene sujeto, y por eso se queda en singular por muchos problemas que hubiera. La otra se oye, y a hablantes cultos, porque quien la dice reinterpreta «problemas» como sujeto y le hace concordar el verbo — es un cambio en marcha, no un descuido. Tú por escrito usa el singular; oírla no te obliga a escribirla."
+    }
+  },
+  {
+    "id": "b2c2-exp-l18-10",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-concordancia-discutida"
+    ],
+    "tags": [
+      "lote18",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "6b4dad53732be04a9e37365be20522a2f05f11cf9dd44b255d21a5c40d3b114e",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 18 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "A maioria dos alunos faltou. / A maioria dos alunos faltaram.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "una correctora que quiere marcar una de las dos como error",
+      "instructionsEs": "Explícale por qué no puede marcar ninguna y qué cambia entre una y otra.",
+      "wordRange": {
+        "min": 50,
+        "max": 115
+      },
+      "rubric": [
+        "¿Dice que las dos están admitidas?",
+        "¿Dice que el singular concuerda con el núcleo y el plural con el sentido?",
+        "¿Dice que lo que cambia es el foco, no la corrección?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "No marques ninguna: las dos están admitidas y aparecen en autores cuidados. El singular concuerda con el núcleo del sujeto, que es «a maioria»; el plural concuerda con el sentido, porque quien falta son los alumnos. Lo que cambia no es la corrección sino el foco: la primera mira al grupo como bloque, la segunda a los individuos. Lo único exigible es no alternar las dos dentro del mismo texto."
+    }
+  },
+  {
+    "id": "b2c2-exp-l18-11",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-concordancia-discutida"
+    ],
+    "tags": [
+      "lote18",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "b3e06b7297c27ffef62dfab0844c66ddaabb71aa9d9f141575459105adab490d",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 18 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "formal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Vossa Excelência está enganado. / Vossa Excelência está enganada.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "explain_concept",
+      "audience": "um colega que vai escrever a um deputado e não sabe qual usar",
+      "instructionsEs": "Explica-lhe em português de que depende a escolha e porque é que a forma de tratamento não decide nada.",
+      "wordRange": {
+        "min": 55,
+        "max": 125
+      },
+      "rubric": [
+        "¿Dice que a forma de tratamento é feminina mas não manda no adjetivo?",
+        "¿Dice que o adjetivo concorda com o sexo da pessoa tratada?",
+        "¿Dice que o verbo vai na terceira pessoa em qualquer caso?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "A forma de tratamento é feminina, mas isso não decide nada: quem manda no adjetivo é a pessoa a quem se escreve. Se for homem, «enganado»; se for mulher, «enganada». O verbo, esse, vai sempre na terceira pessoa do singular, seja quem for — é aí que a maioria dos hispanofalantes tropeça, porque em espanhol o tratamento equivalente também leva terceira pessoa mas o adjetivo costuma alinhar-se de outra maneira. Confirma o nome antes de enviar."
+    }
+  },
+  {
+    "id": "b2c2-exp-l18-12",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-concordancia-discutida"
+    ],
+    "tags": [
+      "lote18",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "ac01eb0eb3f0d4c23b0d1c4613ff9682b53c0508e5f3da5c77d0a3428431f6e3",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 18 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "É proibido entrada. / É proibida a entrada.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "un traductor que quiere poner un cartel y no sabe cuál es correcto",
+      "instructionsEs": "Explícale de qué depende y por qué el cartel de la calle suele llevar la primera.",
+      "wordRange": {
+        "min": 50,
+        "max": 115
+      },
+      "rubric": [
+        "¿Dice que sin artículo la expresión queda invariable?",
+        "¿Dice que con artículo el adjetivo concuerda?",
+        "¿Dice que las dos son correctas si se respeta esa condición?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Depende del artículo, y las dos son correctas si respetas la condición. Sin artículo, la expresión funciona como una fórmula fija y queda invariable, que es por lo que los carteles llevan la primera: son breves por diseño. En cuanto pones el artículo, el sustantivo se vuelve determinado y el adjetivo concuerda con él. Lo que no puedes escribir es mezclar las dos cosas — artículo con adjetivo invariable."
+    }
+  },
+  {
+    "id": "b2c2-exp-l18-13",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-concordancia-discutida"
+    ],
+    "tags": [
+      "lote18",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "28a74f36dae168688ed464039879bb6cf871c04be87beaf9df3c95b55795a858",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 18 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Faz dois anos que não o vejo. / Fazem dois anos que não o vejo.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "un estudiante que dice que en Brasil oye la segunda todo el tiempo",
+      "instructionsEs": "Explícale por qué la norma prefiere una y qué hace la otra tan común.",
+      "wordRange": {
+        "min": 50,
+        "max": 115
+      },
+      "rubric": [
+        "¿Dice que «fazer» de tiempo transcurrido es impersonal?",
+        "¿Dice que por eso la norma pide el singular?",
+        "¿Dice que el plural es frecuente en el habla y sobre todo en Brasil?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Cuando «fazer» indica tiempo transcurrido es impersonal —no hay nadie ni nada que haga— y por eso la norma pide el singular por muchos años que sean. El plural es frecuentísimo en el habla, y más en Brasil, porque el hablante toma «dos años» por sujeto: la misma reinterpretación que ocurre con «haver». Reconócelo cuando lo oigas y escribe el singular, sobre todo si escribes para Portugal."
+    }
+  },
+  {
+    "id": "b2c2-exp-l18-14",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-concordancia-discutida"
+    ],
+    "tags": [
+      "lote18",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "fda008abc7bfb5c0d50f6d7056b4df6fd85d94c68ba1bbe3ba83c26af2d64e08",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 18 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Foi um dos que mais trabalhou. / Foi um dos que mais trabalharam.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "una editora que tiene que elegir una para un texto que va a imprenta",
+      "instructionsEs": "Explícale qué defiende cada forma y cuál elegiría un texto cuidado.",
+      "wordRange": {
+        "min": 55,
+        "max": 125
+      },
+      "rubric": [
+        "¿Dice que el relativo puede referirse a «um» o al grupo?",
+        "¿Dice que la tradición gramatical prefiere el plural?",
+        "¿Dice que el singular está extendido y no se considera error grave?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "La duda está en a qué se refiere el relativo: puede apuntar a «um», y entonces el verbo va en singular, o al grupo del que se le extrae, y entonces va en plural. La tradición gramatical prefiere el plural, porque los que trabajaron fueron varios y él es uno de ellos. El singular está muy extendido y no se considera error grave, pero para imprenta yo iría al plural: es la forma que nadie te va a discutir."
+    }
+  },
+  {
+    "id": "b2c2-exp-l18-15",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-sintaxe-literaria"
+    ],
+    "tags": [
+      "lote18",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "882b69be6ef77433884c8051a4ba35d3fb175ea427fce7b393a3875f6f0dcc4a",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 18 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "De sua mãe recebera o nome; do pai, a teimosia e as dívidas.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "un estudiante que quiere saber por qué la segunda mitad no tiene verbo",
+      "instructionsEs": "Explícale qué figura hay ahí y qué gana la frase con ella.",
+      "wordRange": {
+        "min": 50,
+        "max": 115
+      },
+      "rubric": [
+        "¿Dice que el verbo se elide porque se recupera del primer miembro?",
+        "¿Dice que la coma marca el hueco del verbo?",
+        "¿Dice que la construcción crea paralelismo y da peso al final?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "El verbo no falta: se elide porque el lector lo recupera del primer miembro, y la coma que ves después de «do pai» marca exactamente su hueco. Es un recurso corriente en la prosa cuidada portuguesa. Lo que gana la frase es paralelismo —dos herencias enfrentadas con la misma estructura— y, sobre todo, peso en el final: al no repetir el verbo, la última palabra queda desnuda y golpea."
+    }
+  },
+  {
+    "id": "b2c2-exp-l18-16",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-sintaxe-literaria"
+    ],
+    "tags": [
+      "lote18",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "f81a5a53ba54f27fdc1630e0d28d835dc989881dec06265937cdd03266e33612",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 18 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Longa foi a espera, e inútil.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "una traductora que quiere reordenarla para que suene natural",
+      "instructionsEs": "Explícale qué se pierde si la reordena y por qué el adjetivo va delante.",
+      "wordRange": {
+        "min": 50,
+        "max": 115
+      },
+      "rubric": [
+        "¿Dice que el adjetivo antepuesto es enfático, no descriptivo?",
+        "¿Dice que el segundo adjetivo llega después como remate?",
+        "¿Dice que reordenarla la vuelve neutra y le quita el efecto?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "El adjetivo va delante porque no describe: enfatiza. Puesto detrás, informaría de cuánto duró la espera; puesto delante, la valora antes de nombrarla. Y el segundo llega separado, después de la coma, como un remate que corrige el sentido de todo lo anterior. Si la reordenas a sujeto-verbo-adjetivos, la frase queda neutra y le quitas el efecto — pierdes justamente aquello por lo que el autor la escribió así."
+    }
+  },
+  {
+    "id": "b2c2-exp-l18-17",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-sintaxe-literaria"
+    ],
+    "tags": [
+      "lote18",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "be6d9d74ff684676e415fcde7c476a2848b489fb3d33b2c40daf214608b43a62",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 18 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Ao velho, que de tudo se ria, coube a única coisa de que ninguém ri.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "explain_concept",
+      "audience": "um colega que não percebe porque é que a frase começa pelo complemento",
+      "instructionsEs": "Explica-lhe em português o que a anteposição faz e como se lê a frase.",
+      "wordRange": {
+        "min": 55,
+        "max": 125
+      },
+      "rubric": [
+        "¿Dice que o complemento indireto foi anteposto para criar contraste?",
+        "¿Dice que a relativa encaixada suspende a frase antes do verbo?",
+        "¿Dice que o verbo só chega no fim e por isso pesa?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "O complemento foi anteposto de propósito, para pôr o velho no início e criar contraste com o que lhe acontece. A relativa que vem a seguir suspende a frase: quem lê já tem o velho e a sua maneira de estar no mundo, mas ainda não sabe o que lhe coube. O verbo só chega no fim, e por isso pesa — a informação que interessa fica guardada até à última linha, que é o que a anteposição serve para fazer."
+    }
+  },
+  {
+    "id": "b2c2-exp-l18-18",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-sintaxe-literaria"
+    ],
+    "tags": [
+      "lote18",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "169665b15898fa1f9bfa919861f5c3f41fa7e09bfc4640748133c457198d47c6",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 18 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Não que lhe faltasse coragem: faltava-lhe, isso sim, quem a visse.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "un lector que se pierde en la doble negación y cree que hay un error",
+      "instructionsEs": "Explícale cómo se articula la frase y qué papel juega cada parte.",
+      "wordRange": {
+        "min": 55,
+        "max": 125
+      },
+      "rubric": [
+        "¿Dice que «não que» abre una negación anticipada de una lectura posible?",
+        "¿Dice que los dos puntos introducen la corrección?",
+        "¿Dice que «isso sim» refuerza el miembro que sí se afirma?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "No hay error: la frase adelanta una lectura para descartarla. Ese «não que» con subjuntivo niega algo que el lector podría estar suponiendo —que le faltara valor— sin llegar a afirmarlo nunca. Los dos puntos introducen la corrección, es decir lo que sí faltaba. Y el «isso sim», intercalado, refuerza ese segundo miembro por contraste con el primero. Leída así, la frase no es oscura: está construida para que el matiz llegue en dos tiempos."
+    }
+  },
+  {
+    "id": "b2c2-exp-l18-19",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-sintaxe-literaria"
+    ],
+    "tags": [
+      "lote18",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "0c23b94c3bcd6ea7a6541366c75328fa92cf94c5c9e34143cc0879fd3118f524",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 18 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "E dizia-o com uma calma — a calma de quem já perdeu tudo — que ninguém lhe conhecia.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "un estudiante que no sabe qué hacen los guiones ahí",
+      "instructionsEs": "Explícale la función del inciso y por qué la frase se entiende igual si se quita.",
+      "wordRange": {
+        "min": 50,
+        "max": 120
+      },
+      "rubric": [
+        "¿Dice que el inciso amplía el sustantivo sin romper la sintaxis?",
+        "¿Dice que al quitarlo la frase sigue completa?",
+        "¿Dice que los guiones separan más que las comas y por eso se usan aquí?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "El inciso amplía el sustantivo sin romper la sintaxis: si lo tapas con el dedo, la frase sigue completa y la relativa final sigue enganchada a «uma calma». Ésa es la prueba. Los guiones, en vez de comas, marcan una separación mayor: avisan de que lo de dentro pertenece a otro plano, casi a otra voz. Con comas se leería como una simple aposición; con guiones, como una intromisión del narrador."
+    }
+  },
+  {
+    "id": "b2c2-exp-l18-20",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-sintaxe-literaria"
+    ],
+    "tags": [
+      "lote18",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "a56cab7a8c938cc16bc2e6fc717f08521e1edaed4c95f66cf891424ef2b75a4b",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 18 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Chegaram as cartas. Não as que esperava.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "una traductora que quiere unir las dos frases en una",
+      "instructionsEs": "Explícale qué hace el punto y qué se pierde al unirlas.",
+      "wordRange": {
+        "min": 50,
+        "max": 120
+      },
+      "rubric": [
+        "¿Dice que el punto crea una pausa que retrasa la corrección?",
+        "¿Dice que la segunda frase es un fragmento sin verbo, deliberado?",
+        "¿Dice que unirlas con «pero» las vuelve neutras?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "El punto no es un descuido de puntuación: crea una pausa que retrasa la corrección y deja al lector un instante creyendo la buena noticia. La segunda es un fragmento sin verbo, y lo es a propósito — el verbo se recupera de la anterior y su ausencia acelera el golpe. Si las unes con un «pero», las vuelves neutras: la información es la misma y el efecto desaparece, que era lo único que justificaba escribirlo así."
+    }
   }
 ]
