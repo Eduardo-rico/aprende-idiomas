@@ -32,6 +32,8 @@
 // par: el campo `rasgo` dice qué se juzga, y un rasgo que lo detecte es
 // legítimo. Cualquier otro no.
 
+import { separablePorPosicion } from './atajos';
+
 /** Un par mínimo: un esqueleto y los dos rellenos del hueco. */
 export interface ParMinimo {
   /** id del par, p. ej. 'P-01' */
@@ -224,7 +226,9 @@ export function expandir(pares: ParMinimo[], opts: OpcionesExpansion): ItemGener
     base.push({ id: `${p.id}M`, parId: p.id, concepto: p.concepto, verdict: false, sentence: sMal, repair: sBien, explicacion: p.explicacionMal });
   }
 
-  const intentos = opts.intentos ?? 5000;
+  // 200k y no 5k: la invariante del repair hace que la mayoría de los
+  // barajados no valgan, y con doce pares el rechazo simple no llega.
+  const intentos = opts.intentos ?? 200000;
   const rnd = mulberry32(semillaDe(opts.semilla));
   for (let k = 0; k < intentos; k++) {
     const orden = base.slice();
@@ -232,11 +236,24 @@ export function expandir(pares: ParMinimo[], opts: OpcionesExpansion): ItemGener
       const j = Math.floor(rnd() * (i + 1));
       [orden[i], orden[j]] = [orden[j]!, orden[i]!];
     }
-    if (separacionOk(orden) && !evaluarMolde(patronDe(orden), opts.publicados ?? []).length) {
+    // La invariante del repair se CONSTRUYE, no se sortea: la
+    // probabilidad de que doce pares salgan solos con el BIEN delante es
+    // 1/4096, y el muestreo por rechazo no llega. Tras barajar, se
+    // intercambian las posiciones de los dos miembros de cada par que
+    // hayan salido al revés — el orden sigue siendo el del barajado, y
+    // sólo se corrige la dirección dentro de cada par.
+    enderezarPares(orden);
+    if (separacionOk(orden)
+        && sinFugaDeRepair(orden)
+        && !separablePorPosicion(patronDe(orden))
+        && !evaluarMolde(patronDe(orden), opts.publicados ?? []).length) {
       return orden.map((x, i) => ({ ...x, id: `GJ-${String(i + 1).padStart(2, '0')}` }));
     }
   }
-  throw new Error(`no se encontró un orden válido en ${intentos} intentos con la semilla «${opts.semilla}»`);
+  throw new Error(
+    `no se encontró un orden válido en ${intentos} intentos con la semilla «${opts.semilla}». ` +
+    `Con ${pares.length} pares puede que NO EXISTA: con dos, cero de los 24 órdenes evitan a la vez ` +
+    `la fuga del repair y la separabilidad por posición. El suelo del método son tres pares.`);
 }
 
 /** La separación exigible en un lote de N: la mínima, pero nunca más de
@@ -244,6 +261,37 @@ export function expandir(pares: ParMinimo[], opts: OpcionesExpansion): ItemGener
  *  y exigirla dejaría el generador en un bucle infinito. */
 export const separacionExigible = (n: number) =>
   Math.min(SEPARACION_MINIMA, Math.max(1, Math.floor(n / 4)));
+
+/** El `repair` de un MAL **es** la frase del BIEN de su par, y la tarjeta
+ *  lo imprime como forma correcta. Si el MAL va delante, su feedback
+ *  contesta el BIEN antes de que el alumno lo vea. Medido en el lote 13:
+ *  **2 de 4 ítems regalados**.
+ *
+ *  Y el corolario duro, que fija el suelo del método: con DOS pares no
+ *  existe ningún orden que evite la fuga y no sea a la vez resoluble por
+ *  posición — de los 24 órdenes posibles, cero cumplen las dos cosas.
+ *  **Un lote de pares mínimos necesita TRES pares como mínimo.** */
+/** Pone el BIEN delante del MAL en cada par, intercambiándolos donde
+ *  hayan salido al revés. No reordena el lote: sólo corrige la dirección
+ *  dentro de cada par, así que el barajado sigue gobernando el patrón. */
+function enderezarPares(orden: ItemGenerado[]): void {
+  const primera = new Map<string, number>();
+  for (let i = 0; i < orden.length; i++) {
+    const p = orden[i]!.parId;
+    if (!primera.has(p)) { primera.set(p, i); continue; }
+    const j = primera.get(p)!;
+    if (!orden[j]!.verdict) { const t = orden[i]!; orden[i] = orden[j]!; orden[j] = t; }
+  }
+}
+
+function sinFugaDeRepair(orden: ItemGenerado[]): boolean {
+  const vistos = new Set<string>();
+  for (const x of orden) {
+    if (x.verdict) { vistos.add(x.parId); continue; }
+    if (!vistos.has(x.parId)) return false;
+  }
+  return true;
+}
 
 function separacionOk(orden: ItemGenerado[]): boolean {
   const minima = separacionExigible(orden.length);

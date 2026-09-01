@@ -18,13 +18,20 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { indexarCorpus, buscarDuplicados, UMBRAL, type ExIndexable } from './lib/virginidad';
-import { bateria, pValor, SOSPECHOSO, RASGOS, type ItemJuicio } from './lib/atajos';
+import {
+  bateria, pValor, SOSPECHOSO, RASGOS, type ItemJuicio,
+  N_SUELO_DEL_GATE, N_MINIMO_PARA_CERTIFICAR, umbralAcierto, potenciaGate,
+  fuerzaMinimaDetectable, techoBajoPares, monocultivoDeClase, separablePorPosicion,
+} from './lib/atajos';
+import { formatoDe } from './lib/formato-punto';
 import { evaluarMolde, patronDe, patronesPublicados, LIMITE_TRAMO } from './lib/pares-minimos';
 import crypto from 'node:crypto';
 
 const DOC = process.argv[2];
 if (!DOC) { console.error('uso: preflight-lote.ts <doc.md>'); process.exit(2); }
 const txt = fs.readFileSync(DOC, 'utf8');
+
+const normPar = (t: string) => t.toLowerCase().replace(/\s+/g, ' ').trim();
 
 interface Item extends ItemJuicio { repair?: string; explicacion: string; par?: string; concepto?: string }
 const items: Item[] = [];
@@ -59,6 +66,9 @@ for (const sec of trozos.slice(1)) {
     // frase por diseño, así que no se comparan entre sí — pero sí, cada
     // uno por su cuenta, contra todo el corpus publicado.
     par: (sec.match(/\*\*par:\*\*\s*`?([\w-]+)`?/)?.[1] ?? undefined),
+    // El rasgo 14 tampoco se calcula: se DECLARA.
+    espejoEs: /\*\*espejo-es:\*\*\s*(sí|si)\b/i.test(sec) ? true
+      : /\*\*espejo-es:\*\*\s*no\b/i.test(sec) ? false : undefined,
     // El rasgo 12 no se calcula: se DECLARA, con la glosa escrita al lado.
     glosaEsCorrecta: /\*\*glosa-es:\*\*[\s\S]*?·\s*español\s+CORRECTO/i.test(sec)
       ? true
@@ -99,6 +109,22 @@ console.log(`Batería de atajos: **${RASGOS.length} rasgos**, rev \`${revBateria
 const sinConcepto = items.filter((x) => !x.concepto).map((x) => x.id);
 if (sinConcepto.length) bloqueantes.push(`sin punto declarado (cabecera de sección con \`id-del-punto\`): ${sinConcepto.join(', ')} — el segundo eje del gate no puede correr`);
 console.log(`Puntos declarados: ${[...new Set(items.map((x) => x.concepto).filter(Boolean))].map((c) => `\`${c}\``).join(', ') || '(ninguno)'}\n`);
+// LA POTENCIA DEL GATE, y va antes que cualquier tabla. El lote 13 salió
+// «Preflight limpio» con cuatro ítems, y a N=4 ningún rasgo puede bajar
+// de p=0,05 ni acertando el 100 %: aquel «limpio» era una tautología.
+// «No dispara» y «no puede disparar» se imprimían igual.
+{
+  const n = items.length;
+  const q = fuerzaMinimaDetectable(n);
+  const u = umbralAcierto(n);
+  console.log(`**Potencia del gate a N=${n}:** ${q === null
+    ? '**NO PUEDE RECHAZAR NADA** — ni un rasgo que acierte el 100 %. Cualquier «limpio» a este tamaño es una tautología.'
+    : `sólo detecta con fiabilidad (0,80) atajos que acierten **≥ ${Math.round(q * 100)} %**; umbral ${u}/${n}.`}\n`);
+  if (n < N_SUELO_DEL_GATE)
+    bloqueantes.push(`N=${n}: pValor(${n},${n})=${pValor(n, n).toFixed(4)} — ningún rasgo puede bloquear. «Preflight limpio» a este tamaño no es un resultado, es una tautología.`);
+  else if (n < N_MINIMO_PARA_CERTIFICAR)
+    bloqueantes.push(`N=${n}: el gate exige ${u}/${n} y su potencia frente a un atajo del 83 % es ${(potenciaGate(n, 5 / 6) * 100).toFixed(0)} %. El lote no está verificado: está sin medir.`);
+}
 console.log(`Ítems: **${items.length}** · BIEN ${items.filter((x) => x.verdict).length} · MAL ${items.filter((x) => !x.verdict).length}\n`);
 
 // ── 1 · Higiene ──────────────────────────────────────────────────────
@@ -109,6 +135,8 @@ for (const x of items) {
   if (!x.explicacion) bloqueantes.push(`${x.id}: sin explicación`);
   if (x.glosaEsCorrecta === undefined)
     bloqueantes.push(`${x.id}: sin **glosa-es:** — el rasgo de la glosa cognada no se puede medir, y sin medirlo la batería miente por omisión`);
+  if (x.espejoEs === undefined)
+    bloqueantes.push(`${x.id}: sin **espejo-es:** — sin declarar si la frase es la que un hispanohablante produce transfiriendo, el rasgo 14 sale en el azar y pasa en silencio`);
 }
 
 // ── 2 · El molde ─────────────────────────────────────────────────────
@@ -137,6 +165,10 @@ for (const [lote, q] of [...previos].sort((a, b) => a[0].localeCompare(b[0]))) {
 }
 console.log('');
 bloqueantes.push(...evaluarMolde(patron, [...previos.values()]));
+// `evaluarMolde` mira equilibrio, rachas y solape; ninguno ve `MMBB`,
+// que se resuelve entero con «¿estoy en la primera mitad?».
+const sep = separablePorPosicion(patron);
+if (sep) bloqueantes.push(sep);
 
 // ── 3 · LA BATERÍA DE ATAJOS, en código ──────────────────────────────
 console.log(`## Atajos — acierto SOBRE N (${items.length}), nunca recall sobre los MAL\n`);
@@ -146,7 +178,45 @@ for (const a of bateria(items)) {
   const p = pValor(a.aciertos, a.n);
   const marca = p < SOSPECHOSO ? ' ⚠' : '';
   console.log(`| ${a.nombre}${marca} | **${a.aciertos}/${a.n}** (${Math.round(a.acierto * 100)} %) | ${a.direccion} | ${a.presentes} | ${p.toFixed(3)} |`);
-  if (p < SOSPECHOSO) bloqueantes.push(`atajo «${a.nombre}»: acierta ${a.aciertos}/${a.n} (p=${p.toFixed(3)}) — se resuelve el lote sin saber portugués`);
+  // LOS RASGOS DE POSICIÓN NO BLOQUEAN, y hay que decir por qué: miden
+  // el orden del JSON, y el alumno no lo ve. `lib/srs/interleave.ts`
+  // reordena la sesión eligiendo en cada paso la carta cuyo concepto y
+  // tipo más difieren de la anterior — y los dos miembros de un par
+  // mínimo comparten concepto Y tipo, así que el runner los SEPARA
+  // activamente. Son un olor de diseño (la skill prohíbe la alternancia
+  // mecánica desde el lote 2), no un atajo explotable.
+  //
+  // Esto importa porque los dos gates entran en conflicto real: la
+  // invariante «el BIEN nunca después de su MAL» —que existe para que el
+  // `repair` no regale la respuesta— empuja las B al principio y las M
+  // al final POR CONSTRUCCIÓN, y eso dispara «primera mitad» a 18/24
+  // (p=0,011). Bloquear por ahí sería exigir dos cosas incompatibles.
+  // Lo que sí bloquea es la separabilidad al 100 %, que ningún barajado
+  // honesto produce.
+  const dePosicion = /posición par|primera mitad/.test(a.nombre);
+  if (p < SOSPECHOSO && dePosicion)
+    avisos.push(`atajo posicional «${a.nombre}»: ${a.aciertos}/${a.n} (p=${p.toFixed(3)}) — mide el orden del JSON, que el runner reordena (interleave). No bloquea; es olor de diseño.`);
+  else if (p < SOSPECHOSO) bloqueantes.push(`atajo «${a.nombre}»: acierta ${a.aciertos}/${a.n} (p=${p.toFixed(3)}) — se resuelve el lote sin saber portugués`);
+}
+
+// ── 3 ter · EL MONOCULTIVO Y EL TECHO DE CADA RASGO ─────────────────
+{
+  const mono = monocultivoDeClase(items.map((x) => (x.concepto ? [x.concepto] : [])), (c) => formatoDe(c).clase);
+  if (mono) bloqueantes.push(mono);
+  // Un rasgo cuyo TECHO bajo este diseño está por debajo del umbral no
+  // es una comprobación: es una fila de la tabla que se lee como
+  // comprobación. Con pares, un rasgo que no difiere dentro del par
+  // tiene techo N/2 y no puede disparar nunca.
+  const techos = techoBajoPares(items, (x) => (x as Item).par);
+  const ciegos = techos.filter((t) => !t.puedeDisparar);
+  if (ciegos.length && techos.some((t) => t.pares > 0)) {
+    console.log(`\n## Techo de los rasgos bajo este diseño\n`);
+    console.log(`${ciegos.length} de ${techos.length} rasgos **no pueden disparar** con este molde de pares (techo por debajo del umbral ${umbralAcierto(items.length)}/${items.length}):\n`);
+    for (const t of ciegos) {
+      console.log(`- ${t.nombre} — techo ${t.techo}/${items.length}, difiere en ${t.difiereEn}/${t.pares} pares`);
+      avisos.push(`rasgo «${t.nombre}»: techo ${t.techo}/${items.length}, NO puede disparar bajo este diseño`);
+    }
+  }
 }
 
 // ── 3 bis · LOS PARES DECLARADOS SE VERIFICAN, no se creen ───────────
@@ -162,7 +232,6 @@ for (const a of bateria(items)) {
 // Ahora la exención no se concede por etiqueta sino por VERIFICACIÓN: se
 // re-deriva la propiedad desde las dos frases, con el mismo invariante
 // que `verificarPar` impone al generar.
-const normPar = (t: string) => t.toLowerCase().replace(/\s+/g, ' ').trim();
 const paresValidos = new Set<string>();
 {
   const grupos = new Map<string, Item[]>();
@@ -187,6 +256,20 @@ const paresValidos = new Set<string>();
     paresValidos.add(par);
     console.log(`- \`${par}\`: difiere sólo en «${dBien}» / «${dMal}» (${Math.max(dBien.length, dMal.length)} car.) — exención CONCEDIDA`);
   }
+}
+
+// ── 3 quater · LA FUGA DEL `repair`, propia del método de pares ─────
+// El `repair` de un MAL ES la frase del BIEN de su par, y la tarjeta lo
+// imprime como «forma correcta». Si el MAL va delante, su feedback
+// contesta el BIEN antes de que el alumno lo vea. Medido en el lote 13:
+// 2 de 4 ítems regalados. Y el corolario duro: con DOS pares no existe
+// ningún orden que evite la fuga y no sea resoluble por posición — el
+// suelo del método son TRES pares.
+for (const x of items) {
+  if (x.verdict || !x.repair) continue;
+  const iM = items.indexOf(x);
+  const iB = items.findIndex((y) => normPar(y.sentence) === normPar(x.repair!));
+  if (iB > iM) bloqueantes.push(`${x.id} (MAL, posición ${iM + 1}) imprime como forma correcta la frase de ${items[iB]!.id}, que es la carta ${iB + 1}: el ítem se regala`);
 }
 
 // ── 4 · Virginidad, contra el corpus Y contra sí mismo ───────────────

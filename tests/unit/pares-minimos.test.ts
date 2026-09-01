@@ -70,9 +70,12 @@ describe('verificarPar — un par que no es mínimo no pasa', () => {
   });
 
   it('el repair de un MAL es, por construcción, el BIEN del par', () => {
-    const items = expandir([par({})], { semilla: 'x' });
+    // Tres pares y no uno: desde que existe la invariante «el BIEN nunca
+    // después de su MAL», un lote de menos de tres pares no tiene ningún
+    // orden que evite a la vez la fuga y la separabilidad por posición.
+    const items = expandir(DOCE.slice(0, 3), { semilla: 'x' });
     const mal = items.find((x) => !x.verdict)!;
-    const bien = items.find((x) => x.verdict)!;
+    const bien = items.find((x) => x.parId === mal.parId && x.verdict)!;
     expect(mal.repair).toBe(bien.sentence);
     expect(rellenar('A {} B', 'x')).toBe('A x B');
   });
@@ -86,11 +89,29 @@ describe('LA PROPIEDAD: ningún rasgo de la batería predice la etiqueta', () =>
     expect(items.filter((x) => x.verdict)).toHaveLength(12);
   });
 
-  it('NINGÚN rasgo de la batería real llega a ser sospechoso', () => {
+  it('ningún rasgo DE TEXTO llega a ser sospechoso', () => {
+    // La afirmación fuerte —«ningún rasgo de la batería»— era falsa y la
+    // sesión E2#14 la midió: los rasgos de POSICIÓN sí disparan, y no por
+    // descuido sino **por construcción**. La invariante que impide que el
+    // `repair` de un MAL regale la respuesta de su BIEN («el BIEN nunca
+    // después de su MAL») empuja las B al principio y las M al final. Los
+    // dos gates son incompatibles y hay que elegir con los ojos abiertos:
+    // se conserva la invariante, y los rasgos posicionales pasan a AVISO
+    // en el preflight porque miden el orden del JSON, que `interleave`
+    // reordena antes de servirlo — los dos miembros de un par comparten
+    // concepto y tipo, así que el runner los separa activamente.
     const sospechosos = bateria(items)
+      .filter((a) => !/posición|primera mitad/.test(a.nombre))
       .map((a) => ({ ...a, p: pValor(a.aciertos, a.n) }))
       .filter((a) => a.p < SOSPECHOSO);
     expect(sospechosos.map((a) => `${a.nombre} ${a.aciertos}/${a.n} p=${a.p.toFixed(3)}`)).toEqual([]);
+  });
+
+  it('y el sesgo posicional que la invariante fabrica queda MEDIDO, no supuesto', () => {
+    const pos = bateria(items).find((a) => a.nombre.includes('primera mitad'))!;
+    // Es la cuarta vez que un arreglo fabrica el atajo siguiente. La
+    // diferencia es que ahora sale en la tabla antes de publicar.
+    expect(pos.aciertos).toBeGreaterThan(items.length / 2);
   });
 
   it('y los rasgos de TEXTO caen exactamente en el azar, no «cerca»', () => {
@@ -101,7 +122,11 @@ describe('LA PROPIEDAD: ningún rasgo de la batería predice la etiqueta', () =>
     // los dos de longitud relativa a la mediana, que pueden cruzarla si
     // los rellenos no miden lo mismo.
     const deTexto = bateria(items).filter(
-      (a) => !/posición|más corta/.test(a.nombre),
+      // Fuera los dos de POSICIÓN (que el barajado gobierna), los dos de
+      // longitud relativa a la mediana (que pueden cruzarla) y los dos
+      // DECLARADOS —glosa y espejo—, que sin declaración valen `false`
+      // en todos y por tanto miden la clase mayoritaria, no el texto.
+      (a) => !/posición|primera mitad|más corta|glosa|espejo/.test(a.nombre),
     );
     expect(deTexto.length).toBeGreaterThan(5);
     for (const a of deTexto) expect(a.aciertos, a.nombre).toBe(12);
@@ -241,5 +266,30 @@ describe('objetoDuplicado — el gate estrecho que ese fallo obligó a escribir'
     };
     expect(verificarPar(roto).length).toBeGreaterThan(0);
     expect(verificarPar({ ...roto, permiteSNPosterior: true })).toEqual([]);
+  });
+});
+
+// El `repair` de un MAL ES la frase del BIEN de su par y la tarjeta lo
+// imprime: si el MAL va delante, su feedback contesta el BIEN. Medido en
+// el lote 13: 2 de 4 ítems regalados. Y el corolario que fija el suelo
+// del método: con DOS pares, cero de los 24 órdenes evitan a la vez la
+// fuga y la separabilidad por posición.
+describe('el suelo del método: la fuga del repair y la posición', () => {
+  it('el BIEN de un par nunca sale después de su MAL', () => {
+    const items = expandir(DOCE, { semilla: 'lote-12-c2' });
+    const vistos = new Set<string>();
+    for (const x of items) {
+      if (x.verdict) { vistos.add(x.parId); continue; }
+      expect(vistos.has(x.parId), `${x.id} (MAL) va antes que el BIEN de ${x.parId}`).toBe(true);
+    }
+  });
+
+  it('CON DOS PARES no existe orden válido, y el error lo dice', () => {
+    expect(() => expandir(DOCE.slice(0, 2), { semilla: 'x' }))
+      .toThrow(/suelo del método son tres pares/);
+  });
+
+  it('con tres pares sí existe', () => {
+    expect(expandir(DOCE.slice(0, 3), { semilla: 'tres' })).toHaveLength(6);
   });
 });
