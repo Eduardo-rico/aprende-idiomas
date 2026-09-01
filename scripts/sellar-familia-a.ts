@@ -30,6 +30,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { BLOCKS_DIR } from './config';
+import { selladoDeVariante } from './lib/estado-item';
 import { revisarEjercicio, CAMPOS_DIDACTICOS } from './lib/variant-guard';
 import { revisarRegistro } from './lib/check-registro';
 

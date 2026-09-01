@@ -20,6 +20,7 @@ import path from 'node:path';
 import { ALL_CONCEPTS } from '../lib/data/languages/pt/curriculum';
 import { CONCEPTOS_FINOS } from '../lib/data/languages/pt/conceptos-finos.generated';
 import { BLOCKS_DIR } from './config';
+import { servibleAlAlumno, selladoDeVariante, esDeEscucha } from './lib/estado-item';
 import { contarPuntos, padreCubierto, pisoCero, conPisoCero } from './lib/conceptos-finos';
 
 const APLICAR = process.argv.includes('--aplicar');
@@ -30,16 +31,16 @@ const ficheros = fs.readdirSync(BLOCKS_DIR).filter((x) => /^b\d+\.json$/.test(x)
 const porFichero = new Map(ficheros.map((f) => [f, JSON.parse(fs.readFileSync(path.join(BLOCKS_DIR, f), 'utf8')) as any[]]));
 const items = [...porFichero.values()].flat();
 
-const servible = (x: any) => x.variantStatus !== 'needs-human';
+const servible = servibleAlAlumno;
 // SELLADO tiene que significar lo MISMO aquí que en `sellar-familia-a.ts`
 // y `sellar-familia-b.ts`. Tener `variantVerificacion` ya no basta: las
 // colas 1 y 2 lo tienen y NO se sellaron, porque su dictamen no cubría
 // variante. Si los tres scripts no comparten el criterio, uno manda a
 // cuarentena lo que otro cuenta como cobertura.
-const sellado = (x: any) => x.variantStatus === 'neutral' || x.variantStatus === 'divergent';
+const sellado = selladoDeVariante;
 // ESCUCHA va por otra vía: espera el oído de Edu, no un dictamen de cola.
 // Ni se sella ni se cuarentena aquí.
-const esEscucha = (x: any) => /par mínimo|Escucha/i.test(String(x.variantVerificacion ?? ''));
+const esEscucha = esDeEscucha;
 const piso = conPisoCero((id: string) => (id.startsWith('b12') ? 6 : 8), pisoCero());
 
 const cuentaDe = (xs: any[]) => {

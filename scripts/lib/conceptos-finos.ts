@@ -530,7 +530,8 @@ export interface Conteo {
  *  La cuenta decía 24 unidades cuando la de contenido SERVIBLE eran 72.
  *  Es la misma familia que el piso cero que no se aplicaba: la etiqueta
  *  existe, alguien la lee para una cosa y nadie para la otra. */
-export const servibleAlAlumno = (x: any) => x?.variantStatus !== 'needs-human';
+export { servibleAlAlumno } from './estado-item';
+import { servibleAlAlumno } from './estado-item';
 
 export function contarPuntos(items: any[], opciones: { incluirCuarentena?: boolean } = {}): Conteo {
   if (!opciones.incluirCuarentena) items = items.filter(servibleAlAlumno);

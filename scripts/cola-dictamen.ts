@@ -17,15 +17,16 @@ import path from 'node:path';
 import { ALL_CONCEPTS } from '../lib/data/languages/pt/curriculum';
 import { CONCEPTOS_FINOS } from '../lib/data/languages/pt/conceptos-finos.generated';
 import { BLOCKS_DIR } from './config';
+import { servibleAlAlumno, selladoDeVariante, esDeEscucha } from './lib/estado-item';
 import { contarPuntos, padreCubierto, pisoCero, conPisoCero, conPadreCubierto } from './lib/conceptos-finos';
 
 const N = Number(process.argv[2] ?? 0);
 const items = fs.readdirSync(BLOCKS_DIR).filter((x) => /^b\d+\.json$/.test(x)).sort()
   .flatMap((f) => JSON.parse(fs.readFileSync(path.join(BLOCKS_DIR, f), 'utf8')) as any[]);
-const servible = (x: any) => x.variantStatus !== 'needs-human';
-const sellado = (x: any) => x.variantStatus === 'neutral' || x.variantStatus === 'divergent';
+const servible = servibleAlAlumno;
+const sellado = selladoDeVariante;
 // ESCUCHA no entra en una cola de dictamen: espera el oído de Edu.
-const esEscucha = (x: any) => /par mínimo|Escucha/i.test(String(x.variantVerificacion ?? ''));
+const esEscucha = esDeEscucha;
 
 const cuentaDe = (xs: any[]) => {
   const { cuenta } = contarPuntos(xs);

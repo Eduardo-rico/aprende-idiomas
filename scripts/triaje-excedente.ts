@@ -14,6 +14,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { ALL_CONCEPTS } from '../lib/data/languages/pt/curriculum';
 import { BLOCKS_DIR } from './config';
+import { servibleAlAlumno, selladoDeVariante, esDeEscucha } from './lib/estado-item';
 import { contarPuntos, padreCubierto, pisoCero, conPisoCero } from './lib/conceptos-finos';
 
 const items = fs.readdirSync(BLOCKS_DIR).filter((x) => /^b\d+\.json$/.test(x))
@@ -21,10 +22,10 @@ const items = fs.readdirSync(BLOCKS_DIR).filter((x) => /^b\d+\.json$/.test(x))
 
 // SERVIBLE: lo que el alumno puede ver. `needs-human` está filtrado en el
 // embudo de `lib/data/loaders.ts`, así que no cuenta como cobertura.
-const servible = (x: any) => x.variantStatus !== 'needs-human';
+const servible = servibleAlAlumno;
 // SELLADO: alguien escribió QUÉ se le hizo. `divergent` cuenta: está
 // verificado como divergencia real, no pendiente.
-const sellado = (x: any) => Boolean(x.variantVerificacion) || x.variantStatus === 'divergent' || x.variantStatus === 'neutral';
+const sellado = selladoDeVariante;
 
 const piso0 = (id: string) => (id.startsWith('b12') ? 6 : 8);
 const piso = conPisoCero(piso0, pisoCero());
