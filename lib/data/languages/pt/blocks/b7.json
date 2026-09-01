@@ -6706,5 +6706,63 @@
       "hintEs": "«a» + infinitivo, y el resto de la frase no cambia",
       "espejoEs": false
     }
+  },
+  {
+    "id": "cl29-008",
+    "blockId": 7,
+    "lessonId": "b7-l3-participio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-part-passiva"
+    ],
+    "tags": [
+      "e2-29",
+      "cloze-con-pista"
+    ],
+    "contentHash": "8605bea74b272ca960ba25a86aea2b2e5a48f588b8318dcc28fa91ac185ebe9e",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-29: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "As cartas ___ (enviar) na semana passada pelo correio azul.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "foram enviadas",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "voz pasiva en pretérito: el auxiliar «ser» conjugado más el participio, que concuerda con «as cartas»"
+    }
+  },
+  {
+    "id": "cl29-009",
+    "blockId": 7,
+    "lessonId": "b7-l3-participio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-part-passiva"
+    ],
+    "tags": [
+      "e2-29",
+      "cloze-con-pista"
+    ],
+    "contentHash": "9be4c55c33884e1137df874d00d8090bedd207337e7314f64bcd660bcd8508ce",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-29: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "A ponte ___ (construir) no século XIX por um engenheiro francês.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "foi construída",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "voz pasiva en pretérito, singular: el auxiliar «ser» más el participio concordando con «a ponte»"
+    }
   }
 ]

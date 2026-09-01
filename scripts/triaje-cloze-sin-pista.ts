@@ -20,6 +20,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { BLOCKS_DIR } from './config';
 import { servibleAlAlumno, determinacionDictaminada } from './lib/estado-item';
+import { esClaseCerrada } from './lib/clase-cerrada';
 
 const items = fs.readdirSync(BLOCKS_DIR).filter((x) => /^b\d+\.json$/.test(x)).sort()
   .flatMap((f) => JSON.parse(fs.readFileSync(path.join(BLOCKS_DIR, f), 'utf8')) as any[])
@@ -34,18 +35,9 @@ const SUJETO = /(?<![\p{L}])(eu|tu|ele|ela|nós|eles|elas|você|vocês|a gente|o
 const SN_ANTES = /^(?:[Oo]s?|[Aa]s?|[MmTtSs]eu|[MmTtSs]inha|[Nn]osso|[Nn]ossa|Aquele|Aquela|Este|Esta|Esse|Essa)\s+\p{L}+\s+___/u;
 // Marcador que fija el tiempo.
 const TIEMPO = /(?<![\p{L}])(ontem|amanhã|hoje|agora|sempre|nunca|já|ainda|antigamente|naquele|naquela|no ano passado|na semana passada|todos os dias|quando|enquanto|assim que|logo que|depois de|antes de|se)(?![\p{L}])/iu;
-// Clases CERRADAS: la respuesta sale del sistema, no del léxico.
-const CERRADA = new Set([
-  'o','a','os','as','um','uma','uns','umas','no','na','nos','nas','num','numa','do','da','dos','das',
-  'ao','à','aos','às','pelo','pela','pelos','pelas','de','em','a','por','para','com','sem','sobre',
-  'me','te','lhe','nos','vos','se','lho','lha','mo','ma','to','ta','o','lo','la','los','las',
-  'este','esta','isto','esse','essa','isso','aquele','aquela','aquilo','deste','desta','disto',
-  'desse','dessa','disso','daquele','daquela','daquilo','neste','nesta','nisto','nesse','nessa',
-  'nisso','naquele','naquela','naquilo','àquele','àquela','àquilo',
-  'meu','minha','teu','tua','seu','sua','nosso','nossa','vosso','vossa','dele','dela','deles','delas',
-  'mais','menos','muito','pouco','todo','toda','tudo','nada','algum','alguma','nenhum','nenhuma',
-  'que','quem','onde','quando','como','porque','porquê','qual','quais','cujo','cuja','cujos','cujas',
-]);
+// Clases CERRADAS: la respuesta sale del sistema, no del léxico. La
+// lista vive en `lib/clase-cerrada.ts` porque el gate del generador la
+// necesita igual, y una regla copiada se desincroniza en la copia N+1.
 
 type Clase = 'verbal determinado' | 'verbal SIN persona o SIN tiempo' | 'clase cerrada' | 'léxico abierto';
 const clasificar = (x: any): Clase => {
@@ -56,7 +48,7 @@ const clasificar = (x: any): Clase => {
     const fijaTiempo = TIEMPO.test(s);
     return fijaPersona && fijaTiempo ? 'verbal determinado' : 'verbal SIN persona o SIN tiempo';
   }
-  if (CERRADA.has(r)) return 'clase cerrada';
+  if (esClaseCerrada(r)) return 'clase cerrada';
   return 'léxico abierto';
 };
 

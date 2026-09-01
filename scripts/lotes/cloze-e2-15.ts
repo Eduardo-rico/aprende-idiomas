@@ -24,6 +24,7 @@
 // respuesta es derivable NO verifica que la pregunta la determine.**
 // Cada ítem declara su ANCLA, el trozo del contexto que excluye las
 // alternativas, y el gate comprueba que esté literalmente en la frase.
+import { esClaseCerrada } from '../lib/clase-cerrada';
 import { conjugar, futuro, condicional, imperfeitoConjuntivo, futuroConjuntivo, mqpComposto, infinitivoPessoal, type Persona, type Tiempo } from '../lib/paradigma-pt';
 
 export interface Cloze {
@@ -315,7 +316,11 @@ export function verificar(items: Cloze[]): string[] {
     // «vestido».
     const VERBAL = /(aste|este|iste|ámos|êmos|íamos|aram|eram|iram|ava|avas|avam|arei|erei|irei|aremos|eremos|iremos|arão|erão|irão|aria|eria|iria|aríamos|eríamos|iríamos|asse|esse|isse|ássemos|êssemos|íssemos|assem|essem|issem|ando|endo|indo|rem|res|rmos)$/i;
     const PARADIGMA = /(presente|pretérito|preterito|imperfeito|futuro|condicional|conjuntivo|subjuntivo|infinitivo|particípio|participio|imperativo|gerúndio|gerundio|mais-que-perfeito|auxiliar)/i;
-    if (VERBAL.test(r) && !/\([^)]*\)/.test(x.s) && !PARADIGMA.test(x.pista ?? '')) {
+    // La CLASE CERRADA no entra: la regla dispara por terminación, y
+    // «-esse» es a la vez el imperfeito do conjuntivo («fizesse») y la
+    // contracción «nesse». Sin esta salvedad, un cloze de deícticos se
+    // rechazaba por «verbo indeterminado».
+    if (VERBAL.test(r) && !esClaseCerrada(r) && !/\([^)]*\)/.test(x.s) && !PARADIGMA.test(x.pista ?? '')) {
       v.push(`${id}: hueco verbal sin lema en el molde ni paradigma en la pista — «${r}» no está determinado, porque media docena de verbos encajan igual en esa frase`);
     }
 
