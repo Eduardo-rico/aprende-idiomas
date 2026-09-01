@@ -140,6 +140,11 @@ const REGLAS: Regla[] = [
     // y «faço». El alumno acierta uno y falla el otro escribiendo lo
     // mismo, y el FSRS registra las dos cosas. Una anécdota así merece
     // barrido: si pasó una vez, la pregunta es cuántas.
+    //
+    // Respuesta medida: **era el único par**. Hoy da 0 sobre 643
+    // examinados, y en todo el corpus no hay ni una frase repetida —ni
+    // siquiera con la misma clave—. Ese 0 significa «resuelto», no «no he
+    // mirado», que es la distinción para la que existe el denominador.
     nombre: 'misma frase publicada con respuestas incompatibles',
     aplica: (x) => x.type === 'fill_blank' && x.data?.blanks?.length === 1 && typeof x.data?.sentence === 'string',
     falla: (x) => {
