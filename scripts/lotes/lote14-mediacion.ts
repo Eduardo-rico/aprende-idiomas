@@ -20,7 +20,7 @@
 // LAS DOS DIRECCIONES son obligatorias por gate y no por gusto: un punto
 // de ELECCIÓN al que sólo se le pide una dirección vuelve a ser una
 // regla, que es de lo que se le sacó.
-import { rubricaDe, verificar, type ItemMed } from './lote12-mediacion';
+import { rubricaDe, verificar, inventadosProbables, type ItemMed } from './lote12-mediacion';
 
 const COL = 'b11-coloc-registro';
 const NOR = 'b11-norma-culta-oral';
@@ -297,6 +297,14 @@ if (process.argv[1]?.includes('lote14-mediacion')) {
       dirs.set(k, (dirs.get(k) ?? 0) + 1);
     }
     console.log(`| \`${c}\` | ${xs.length} | ${[...dirs].map(([d, n]) => `${d} ×${n}`).join(' · ')} |`);
+  }
+  // AVISO, no bloqueo: números y nombres que el modelo trae y la fuente
+  // no. La casilla negativa de la rúbrica es humana; esto es la parte de
+  // ella que un script sí puede mirar.
+  const sospechosos = ITEMS.map((x) => [x.id, inventadosProbables(x)] as const).filter(([, w]) => w.length);
+  if (sospechosos.length) {
+    console.log(`\n## Aviso · cifras y nombres del modelo que no están en la fuente\n`);
+    for (const [id, w] of sospechosos) console.log(`- ${id}: ${w.join(' · ')}`);
   }
   console.log(`\n## Gates\n`);
   if (v.length) { console.log(`**${v.length} PROBLEMAS:**`); for (const s of v) console.log(`- ${s}`); process.exit(1); }

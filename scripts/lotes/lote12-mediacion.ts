@@ -337,6 +337,38 @@ export function copiaLarga(fuente: string, modelo: string, n = 7): string | null
   return null;
 }
 
+/** NÚMEROS y NOMBRES PROPIOS que el modelo inventa: los que aparecen en
+ *  el modelo y no en la fuente, ni en la audiencia, ni en la consigna.
+ *
+ *  Está acotado a propósito. La primera versión listaba todas las
+ *  palabras de contenido nuevas y era inservible: una mediación buena
+ *  reformula, así que el 90 % de esa lista eran sinónimos legítimos y
+ *  nadie la habría leído. Un gate ruidoso es un gate apagado.
+ *
+ *  Lo que un script SÍ puede juzgar es esto: si el modelo dice «há duas
+ *  semanas» y la fuente no da plazo, o llama «senhor Manuel» a quien no
+ *  tiene nombre, eso es un dato inventado y no hay reformulación que lo
+ *  explique. Los motivos inventados —«o prazo de garantia tinha
+ *  terminado»— siguen necesitando ojos: la casilla negativa de la rúbrica
+ *  es humana y lo seguirá siendo.
+ *
+ *  En E2#18 se colaron ocho datos inventados en dos pasadas; de esos,
+ *  éste caza los que llevan cifra o nombre. */
+export function inventadosProbables(x: ItemMed): string[] {
+  const fuente = `${x.sourceText} ${x.audience} ${x.instruccion} ` +
+    x.marcadores.flatMap(([, ...a]) => a).join(' ') + ' ' +
+    x.datos.flatMap((d) => acepta(d)).join(' ');
+  const NUM = /(?<![\p{L}])(um|uma|dois|duas|tr[eê]s|quatro|cinco|seis|sete|oito|nove|dez|quinze|vinte|trinta|quarenta|cinquenta|cem|mil|meia|meio|\d+)(?![\p{L}])/giu;
+  const out: string[] = [];
+  const enFuente = norm(fuente);
+  for (const m of x.modelo.matchAll(NUM))
+    if (!new RegExp(`(?<![\\p{L}])${norm(m[0])}(?![\\p{L}])`, 'u').test(enFuente) && !out.includes(m[0])) out.push(m[0]);
+  // Nombres propios: mayúscula que no abre frase.
+  for (const m of x.modelo.matchAll(/(?<=[^.!?—]\s)\p{Lu}\p{Ll}{2,}/gu))
+    if (!enFuente.includes(norm(m[0])) && !out.includes(m[0])) out.push(m[0]);
+  return out;
+}
+
 // ── Los gates: el MODELO cumple su propia rúbrica, casilla a casilla ──
 export function verificar(items: ItemMed[]): string[] {
   const v: string[] = [];

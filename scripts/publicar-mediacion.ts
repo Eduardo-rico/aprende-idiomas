@@ -16,8 +16,9 @@ import { BLOCKS, ALL_CONCEPTS } from '../lib/data/languages/pt/curriculum';
 import { BLOCKS_DIR } from './config';
 import { rubricaDe, verificar, type ItemMed } from './lotes/lote12-mediacion';
 import { ITEMS as L14 } from './lotes/lote14-mediacion';
+import { ITEMS as L15 } from './lotes/lote15-mediacion';
 
-const LOTES: Record<string, ItemMed[]> = { '14': L14 };
+const LOTES: Record<string, ItemMed[]> = { '14': L14, '15': L15 };
 
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
 const lote = arg('--lote') ?? '';
