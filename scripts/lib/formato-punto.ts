@@ -61,6 +61,7 @@ export type Formato =
   | 'cloze-con-pista'   // fill_blank cuyo contexto DETERMINA la respuesta
   | 'transformacion'    // dar una forma y pedir la otra (conjugation, sentence_construction)
   | 'mediacion'         // mediation: registro, variedad, efecto
+  | 'correccion'        // error_correction: se da la frase mala y se pide la buena
   | 'flashcard'         // léxico puro
   // E2#18: los cuatro puntos de FONOLOGÍA de A1 no se examinan por
   // escrito. Un par mínimo /ɐj/ vs /ej/ o la elisión de la átona se
@@ -68,9 +69,35 @@ export type Formato =
   // formatos de arriba sería fingir que se enseñan.
   | 'escucha';          // listening: discriminación por pares mínimos, audio A/B
 
+// ── E2#20 · EL JUICIO SE DECLARA MUERTO PARA ESTE PROYECTO ───────────
+//
+// La clase `trampa` apuntaba a `juicio` desde el principio, y el intento
+// único acordado con Edu lo midió: en un lote de 24 ítems construido con
+// TODO el instrumental —doce pares mínimos desde el mismo esqueleto,
+// posición barajada, molde validado contra lo publicado— catorce de los
+// quince rasgos de la batería quedaron en el azar. El decimoquinto no:
+//
+//   «la glosa palabra-por-palabra al español es español correcto»
+//   **19 aciertos de 24 (79 %)**, dirección presente⇒MAL, umbral 17.
+//
+// Y no es un defecto del lote, es la estructura del formato. Un juicio
+// binario entre una frase portuguesa y su calco español pone la respuesta
+// EN LA GLOSA siempre: si el punto es `trampa`, la glosa correcta marca
+// el MAL; si es `coincide`, marca el BIEN. El par mínimo neutraliza todo
+// rasgo que no mire dentro del hueco —y neutralizó catorce— pero éste
+// mira justamente ahí, porque el rasgo juzgado ES la divergencia con el
+// español. Equilibrarlo exigiría que la mitad del lote fuera resoluble
+// traduciendo, que es la misma enfermedad repartida.
+//
+// Cuatro sesiones habían muerto aquí sin saber por qué. Ahora se sabe.
+//
+// La clase `trampa` pasa a `correccion`: se da la frase que el
+// hispanohablante produce y se pide la portuguesa. No hay dos opciones
+// entre las que elegir, así que no hay glosa que consultar — hay que
+// PRODUCIR la forma, que es lo que el punto quería enseñar.
 export const FORMATO_DE_CLASE: Record<Clase, Formato> = {
   fonologico: 'escucha',
-  trampa: 'juicio',
+  trampa: 'correccion',
   coincide: 'cloze-con-pista',
   'sin-equivalente': 'transformacion',
   pragmatico: 'mediacion',

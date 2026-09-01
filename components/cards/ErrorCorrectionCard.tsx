@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { Exercise } from "@/lib/exercise-resolver";
 import { resolveExerciseData } from "@/lib/exercise-resolver";
 import { useSettings } from "@/lib/stores/settings";
-import { answersMatch } from "@/lib/exercises/normalize";
+import { answersMatchFinal } from "@/lib/exercises/normalize";
 
 interface Props { ex: Exercise; onSubmit: (answer: string, correct: boolean) => void; }
 export function ErrorCorrectionCard({ ex, onSubmit }: Props) {
@@ -12,7 +12,9 @@ export function ErrorCorrectionCard({ ex, onSubmit }: Props) {
   const data = resolveExerciseData(ex, variant) as { sentence: string; correct: string; explanationEs: string };
   const [input, setInput] = useState("");
   const [revealed, setRevealed] = useState(false);
-  const submit = () => { const ok = answersMatch(input, data.correct); setRevealed(true); onSubmit(input, ok); };
+  const submit = () => { // `answersMatchFinal`: su `correct` es una FRASE ENTERA, así que
+    // tenía el mismo agujero del punto final que las otras tres tarjetas.
+    const ok = answersMatchFinal(input, data.correct); setRevealed(true); onSubmit(input, ok); };
   return (
     <div className="p-8 border-2 border-border rounded-2xl space-y-6">
       <div className="text-sm text-muted-foreground text-center">Corrige el error:</div>
