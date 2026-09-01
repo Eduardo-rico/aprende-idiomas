@@ -23,6 +23,7 @@ import { reconciliar, informe, type PorPunto } from './lib/reconciliar-deficit';
 // Importado, NO copiado: la copia local no se enteró de que nacía el
 // bloque 12 y los ocho puntos de C2 se evaporaron de la tabla.
 import { BLOQUE_A_NIVEL } from '../lib/data/anchor';
+import { formatoDe } from './lib/formato-punto';
 
 const WRITE = process.argv.includes('--write');
 const PISO = Number(process.env.PISO ?? 12);
@@ -160,9 +161,45 @@ for (const n of NIVELES) {
 }
 console.log(`| **Σ** | ${String(tPuntos).padStart(6)} | ${String(tItems).padStart(5)} | | | | ${String(tBajo).padStart(9)} | ${String(tFaltan).padStart(19)} |`);
 
-console.log(`\nPuntos por debajo del piso (${tBajo}), con lo que le falta a cada uno:`);
+console.log(`\nPuntos por debajo del piso (${tBajo}), con lo que le falta a cada uno y CON QUÉ FORMATO se examina:`);
 for (const [id, n] of [...cuenta.entries()].filter(([, v]) => v < PISO).sort((a, b) => a[1] - b[1])) {
-  console.log(`  ${String(n).padStart(3)}/${PISO}  [${nivelDe(id)}] ${id}   (faltan ${PISO - n})`);
+  const f = formatoDe(id);
+  console.log(`  ${String(n).padStart(3)}/${PISO}  [${nivelDe(id)}] ${id.padEnd(34)} faltan ${String(PISO - n).padStart(2)}  →  ${f.formato.padEnd(15)} (${f.clase}, ${f.confianza})`);
+}
+
+// ── Informe 2 bis · EL REPARTO POR FORMATO ───────────────────────────
+// El criterio, en una línea: un punto se examina con JUICIO BINARIO si y
+// sólo si el error que enseña produce, traducido palabra por palabra,
+// español BIEN FORMADO. Si el calco también rompe el español, el alumno
+// acierta traduciendo y el ítem no mide portugués.
+console.log(`\n\n# CON QUÉ FORMATO SE EXAMINA CADA PUNTO\n`);
+console.log('Criterio: **juicio binario si y sólo si el calco produce español bien formado.**');
+console.log('Si el error rompe también el español, la glosa cognada lo caza y el ítem');
+console.log('mide español, no portugués — medido tres veces: 20/24, 12/12 y 11/14.\n');
+const porFormato = new Map<string, { total: number; deficit: number; medidos: number; defecto: number }>();
+for (const [id, n] of cuenta) {
+  const f = formatoDe(id);
+  const o = porFormato.get(f.formato) ?? { total: 0, deficit: 0, medidos: 0, defecto: 0 };
+  o.total++; o.deficit += Math.max(0, PISO - n);
+  if (f.confianza === 'medido') o.medidos++;
+  if (f.confianza === 'defecto') o.defecto++;
+  porFormato.set(f.formato, o);
+}
+console.log('| formato | puntos | déficit que arrastra | medidos con cifras | por defecto de bloque |');
+console.log('|---|---:|---:|---:|---:|');
+for (const [f, o] of [...porFormato].sort((a, b) => b[1].deficit - a[1].deficit))
+  console.log(`| ${f} | ${o.total} | ${o.deficit} | ${o.medidos} | ${o.defecto} |`);
+console.log(`\n**Honestidad de la columna**: ${[...porFormato.values()].reduce((a, o) => a + o.defecto, 0)} de ${cuenta.size} puntos llevan el valor por DEFECTO de su bloque, sin mirar el punto.`);
+console.log('Un defecto no es una medición: es el punto de partida que los overrides corrigen.');
+
+// Y la vista que decide QUÉ LÍNEA produce lo que queda de C1 y C2, que
+// es la mitad del déficit y donde el corpus está vacío.
+console.log(`\n## C1 y C2 declarados — la columna que decide quién los produce\n`);
+console.log('| punto | nivel | tiene | falta | formato | por qué |');
+console.log('|---|---|---:|---:|---|---|');
+for (const [id, n] of [...cuenta].filter(([id]) => ['C1', 'C2'].includes(nivelDe(id))).sort()) {
+  const f = formatoDe(id);
+  console.log(`| \`${id}\` | ${nivelDe(id)} | ${n} | ${Math.max(0, PISO - n)} | **${f.formato}** | ${f.motivo} |`);
 }
 
 
