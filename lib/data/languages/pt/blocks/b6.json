@@ -2458,22 +2458,23 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "0f4547089e94ea0996cb28c85dfffce296f0a0dbb81ef82a7a1ff7d11a7052cb",
+    "contentHash": "69cd466fb6d666b009523888d38fcd97a0ac45f97e21ed4dc333fca6a666ccb2",
     "esContrast": "En español diríamos 'si supiera... habría traído', pero en PT-BR se mantiene el imperfeito em ambas partes.",
     "audio": {
       "br": {
-        "hash": "8a7f891e5a9fd531494781ac5435e7e66b347abfba0322adbce0885ff842f2f5",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "a73360850e8514bee939fb62ce2fa7a9c6fafa69abcce3ffac099a97194fe1f2",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "c5f25c456b46775424517084548a665c07748d698635cffd5bfbd150e92b4b0c",
-        "voice": "Portuguese_Wiselady"
+        "hash": "a73360850e8514bee939fb62ce2fa7a9c6fafa69abcce3ffac099a97194fe1f2",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
+    "variantVerificacion": "barrido retroactivo E2#29: corregido — la respuesta declarada estaba en PORTUGUÉS y las opciones en español, así que ninguna casaba y el ítem no tenía solución; y el audio decía «tivesse trazida», con el participio concordado, cuando con «ter» es invariable",
     "type": "listening",
     "data": {
-      "audioText": "Se eu soubesse que ia chover, talvez tivesse trazida a capa.",
+      "audioText": "Se eu soubesse que ia chover, talvez tivesse trazido a capa.",
       "question": "¿Qué tipo de hipótesis presenta la oración?",
       "options": [
         "Hipótesis probable en el presente",
@@ -2481,7 +2482,7 @@
         "Condición futura cierta",
         "Hipótesis irreal del pasado (tipo 4)"
       ],
-      "answer": "Hipótese improvável ou irreal presente/futura"
+      "answer": "Hipótesis improbable o irreal presente/futura"
     },
     "variantOverrides": {
       "pt-br": {
@@ -4799,7 +4800,7 @@
       "coloquial",
       "regional"
     ],
-    "contentHash": "93024687bfa62b54acab7f1c3e2783800766ea69774ffb6f81600fa2d81ee995",
+    "contentHash": "0667ae6fef0a7d844de7e49bbe7939a25c311c16c67060b97ba08e607af48c1b",
     "esContrast": "Tipo 4 usa 'Se + mais-que-perfeito do conjuntivo + teria/poderia + infinitivo'. Equivale a 'Si hubiera/hubiese + participio... habría/podría + infinitivo'.",
     "audio": {
       "br": {
@@ -4807,14 +4808,15 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "bd86f82124055cc0c3aa6efee5fb3e0cc4d70ca73019b0448a06251234759384",
-        "voice": "Portuguese_Wiselady"
+        "hash": "2ff988b54f26e655cde458f1e30b4c2218c312b22225743ba344ddd7b5ee77ae",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
+    "variantVerificacion": "barrido retroactivo E2#29: corregido — misma rotura —respuesta en portugués contra opciones en español, sin solución posible— y además el audio decía «suspado», que no es una palabra",
     "type": "listening",
     "data": {
-      "audioText": "Se eu tivesse suspado que o tempo ia ficar assim, teria ficado em casa.",
+      "audioText": "Se eu tivesse suspeitado que o tempo ia ficar assim, teria ficado em casa.",
       "question": "La oración expresa una hipótesis sobre el pasado que NO se cumplió. ¿Qué tipo de condicional es?",
       "options": [
         "Condicional tipo 3 (hipótesis improbable presente)",
@@ -4822,7 +4824,7 @@
         "Condicional tipo 2 (hipótesis improbable futura)",
         "Condicional tipo 1 (hipótesis provável)"
       ],
-      "answer": "Condicional tipo 4 (hipótese irreal passada)"
+      "answer": "Condicional tipo 4 (hipótesis irreal pasada)"
     },
     "variantOverrides": {
       "pt-br": {

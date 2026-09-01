@@ -305,8 +305,17 @@ export function verificar(items: Cloze[]): string[] {
     // al escribirla. La salida no es quitar la pista: es **describir la
     // cosa en vez de traducirla** («el sitio donde se duerme cuando se
     // viaja») o **nombrar la regla** («la forma preposicional de tu»).
-    if (new RegExp(`(?<![\\p{L}])${r}(?![\\p{L}])`, 'iu').test(norm(x.pista))) {
-      const coincide = new RegExp(`(?<![\\p{L}])${r}(?![\\p{L}])`, 'iu').test(norm(x.pista.split('—')[0] ?? ''));
+    // La respuesta se normaliza IGUAL que la pista. Durante toda la ola se
+    // comparó `r` en crudo contra `norm(pista)`, y como `norm` quita los
+    // acentos, el regex «fácil» no casaba nunca con «facil»: **el gate
+    // estaba mudo para toda respuesta con tilde**, que en portugués son
+    // muchísimas. Lo destapó el barrido retroactivo, encontrando cuatro
+    // ítems míos publicados el mismo día con la pista deletreando la
+    // respuesta. Cuarta vez que una normalización asimétrica tapa el rasgo
+    // que se examina.
+    const rn = norm(r);
+    if (new RegExp(`(?<![\\p{L}])${rn}(?![\\p{L}])`, 'iu').test(norm(x.pista))) {
+      const coincide = new RegExp(`(?<![\\p{L}])${rn}(?![\\p{L}])`, 'iu').test(norm(x.pista.split('—')[0] ?? ''));
       v.push(`${id}: la pista deletrea la respuesta «${r}»` + (coincide
         ? ' — el español y el portugués coinciden aquí, así que traducir es deletrear: DESCRIBE la cosa o nombra la regla en vez de glosar'
         : ''));

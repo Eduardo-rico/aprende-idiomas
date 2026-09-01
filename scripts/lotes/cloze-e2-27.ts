@@ -48,7 +48,7 @@ export const ITEMS: Cloze[] = [
   // ══ b8-con-contraste (5) — los conectores adversativos, cada uno
   // identificado por su forma para que la pista determine cuál es.
   { p: 'b8-con-contraste', pasada: 1, r: 'contrário',
-    s: 'Não é caro; pelo ___, é dos mais baratos da loja.', pista: 'al contrario — la palabra que cierra la locución «pelo …»', ancla: 'é dos mais baratos da loja' },
+    s: 'Não é caro; pelo ___, é dos mais baratos da loja.', pista: 'al revés de lo dicho — completa la locución «pelo …»', ancla: 'é dos mais baratos da loja' },
   { p: 'b8-con-contraste', pasada: 1, r: 'porém',
     s: 'A casa é pequena; ___, tem uma vista magnífica.', pista: 'sin embargo — el adversativo culto de dos sílabas', ancla: 'tem uma vista magnífica' },
   { p: 'b8-con-contraste', pasada: 1, r: 'no entanto',

@@ -6861,17 +6861,19 @@
     ],
     "contentHash": "f35480fcf3402e474dd9180c62cdf56ac6b271686801458885bcfc17c42247c6",
     "esContrast": "En PT el OD 'o filme' se pronominaliza al inicio (proclise)",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
+    "variantVerificacion": "barrido retroactivo E2#29: corregido — con la respuesta puesta, la frase salía «Eu vi-o vi ontem»: el molde traía un «vi» de más, así que el ítem era irresoluble",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu vi o filme ontem. Eu ___ vi ontem.",
+      "sentence": "Eu vi o filme ontem. Eu ___ ontem.",
       "blanks": [
         {
           "position": 0,
           "answer": "vi-o",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "lo vi — el clítico de objeto directo pegado al verbo con guion"
     },
     "variantOverrides": {
       "pt-br": {
