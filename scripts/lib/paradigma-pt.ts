@@ -97,9 +97,47 @@ export function mesoclise(inf: string, c: Clitico, p: Persona, tiempo: 'futuro' 
   return `${fundirConR(tema, c)}-${des}`;
 }
 
-/** ÊNCLISE simple, para construir el distractor honesto: la forma que un
- *  hispanohablante produce por calco («dirá-me» en vez de «dir-me-á»). */
+/** ÊNCLISE INGENUA — pega el clítico con guion y ya. **No produce la
+ *  forma correcta y no debe usarse para generar contenido**: existe para
+ *  construir el DISTRACTOR de un juicio, la forma que un hispanohablante
+ *  produce por calco («dirá-me» en vez de «dir-me-á»).
+ *
+ *  Para la forma buena está `encliseReal`, más abajo. Se conserva el
+ *  nombre por los ítems que ya la usan como distractor, pero la
+ *  advertencia va aquí porque en E2#19 estuve a punto de generar con ella
+ *  un lote entero de transformación: `enclise('fez','o')` da «fez-o»,
+ *  que no existe. */
 export const enclise = (formaConjugada: string, c: Clitico) => `${formaConjugada}-${c}`;
+
+/** ÊNCLISE REAL. Tres reglas, y las tres son obligatorias:
+ *
+ *  1. Verbo terminado en -r, -s o -z: cae la consonante y el clítico de
+ *     3.ª toma la forma -lo/-la/-los/-las, con el acento que la
+ *     conjugación pida — «fez» → **fê-lo**, «fizemos» → **fizemo-lo**,
+ *     «comprar» → **comprá-lo**.
+ *  2. Verbo terminado en nasal (-m, -ão, -õe): el clítico toma
+ *     -no/-na/-nos/-nas — «tem» → **tem-no**, «dão» → **dão-no**.
+ *  3. En cualquier otro caso, guion simple: «comprei-o», «dá-lhe».
+ *
+ *  Las dos primeras no valen para los clíticos que no son de 3.ª
+ *  persona objeto: «fez-me» es correcto tal cual. */
+export function encliseReal(formaConjugada: string, c: Clitico): string {
+  const f = formaConjugada.normalize('NFC');
+  if (!['o', 'a', 'os', 'as'].includes(c)) return `${f}-${c}`;
+  const l = `l${c}`;
+  if (/[rsz]$/i.test(f)) {
+    const sin = f.slice(0, -1);
+    // El acento aparece si la vocal final queda tónica y desnuda: fê-lo,
+    // comprá-lo, vendê-lo. No aparece tras -i ni tras vocal ya acentuada.
+    const v = sin.slice(-1);
+    if (/[áéíóúâêô]/.test(v)) return `${sin}-${l}`;
+    if (v === 'a') return `${sin.slice(0, -1)}á-${l}`;
+    if (v === 'e') return `${sin.slice(0, -1)}ê-${l}`;
+    return `${sin}-${l}`;                       // parti-lo, fizemo-lo
+  }
+  if (/(m|ão|õe|õem)$/i.test(f)) return `${f}-n${c}`;
+  return `${f}-${c}`;
+}
 
 /** PRÓCLISE, que es lo que un atractor impone y CANCELA la mesóclise:
  *  «não me dirá», nunca «não dir-me-á». */
@@ -424,6 +462,35 @@ const DES_FUT_SUBJ: Record<Persona, string> = {
   eu: 'r', tu: 'res', ele: 'r', 'nós': 'rmos', eles: 'rem',
 };
 
+/** El acento de la 1.ª del plural en los tiempos que se forman sobre el
+ *  tema de pretérito (imperfeito do conjuntivo, mais-que-perfeito
+ *  simples). La vocal tónica se acentúa, y **el acento no es siempre el
+ *  mismo**:
+ *
+ *  - tema REGULAR de -ar → agudo:      falássemos, faláramos
+ *  - tema REGULAR de -er → CIRCUNFLEJO: comêssemos, comêramos
+ *  - tema REGULAR de -ir → agudo:      partíssemos, partíramos
+ *  - tema IRREGULAR en -e → agudo:     fizéssemos, fizéramos, puséramos
+ *  - tema IRREGULAR en -o → circunflejo: fôssemos, fôramos
+ *
+ *  Las dos funciones lo tenían cada una a su manera y las dos fallaban en
+ *  la mitad de los casos: el conjuntivo daba *coméssemos* y el
+ *  mais-que-perfeito *fizêramos*. Eran errores en ESPEJO, cada uno
+ *  correcto donde el otro se equivocaba — la señal más clara de que la
+ *  regla estaba escrita dos veces. Ahora está escrita una. */
+function acentuarNos(forma: string, inf: string, des: string): string {
+  const irregular = Boolean(TEMA_PRETERITO[inf]);
+  const re = new RegExp(`([aeio])(${des})$`);
+  return forma.replace(re, (_m, v: string, d: string) => {
+    if (v === 'a') return `á${d}`;
+    if (v === 'i') return `í${d}`;
+    if (v === 'o') return `ô${d}`;
+    // la -e: aguda si el tema es irregular, circunfleja si es la vocal
+    // temática de un -er regular.
+    return `${irregular ? 'é' : 'ê'}${d}`;
+  });
+}
+
 export function imperfeitoConjuntivo(inf: string, p: Persona): string | null {
   const t0 = temaPret(inf);
   if (!t0) return null;
@@ -432,10 +499,7 @@ export function imperfeitoConjuntivo(inf: string, p: Persona): string | null {
   const t = !TEMA_PRETERITO[inf] && hiatoEnI(inf) ? t0.replace(/i$/, 'í') : t0;
   // «nós» lleva acento: falássemos, fizéssemos, puséssemos.
   const forma = t + DES_IMPERF_SUBJ[p];
-  if (p !== 'nós') return forma;
-  return forma
-    .replace(/a(ssemos)$/, 'á$1').replace(/e(ssemos)$/, 'é$1')
-    .replace(/i(ssemos)$/, 'í$1').replace(/o(ssemos)$/, 'ô$1');
+  return p === 'nós' ? acentuarNos(forma, inf, 'ssemos') : forma;
 }
 
 export function futuroConjuntivo(inf: string, p: Persona): string | null {
@@ -448,5 +512,20 @@ export function futuroConjuntivo(inf: string, p: Persona): string | null {
 }
 
 /** Mais-que-perfeito composto: «tinha falado». Se compone, no se declara. */
+/** Mais-que-perfeito SIMPLES: «falara», el de la narración literaria. Se
+ *  forma sobre el mismo tema de pretérito que el imperfeito do conjuntivo
+ *  —falá-, fize-, fo-— con las desinencias -ra/-ras/-ra/-ramos/-ram, y
+ *  «nós» lleva acento igual que allí. */
+const DES_MQP_SIMPLES: Record<Persona, string> = {
+  eu: 'ra', tu: 'ras', ele: 'ra', 'nós': 'ramos', eles: 'ram',
+};
+export function mqpSimples(inf: string, p: Persona): string | null {
+  const t0 = temaPret(inf);
+  if (!t0) return null;
+  const t = !TEMA_PRETERITO[inf] && hiatoEnI(inf) ? t0.replace(/i$/, 'í') : t0;
+  const forma = t + DES_MQP_SIMPLES[p];
+  return p === 'nós' ? acentuarNos(forma, inf, 'ramos') : forma;
+}
+
 export const mqpComposto = (inf: string, p: Persona) =>
   `${conjugar('ter', 'imperfeito', p)} ${participio(inf)}`;

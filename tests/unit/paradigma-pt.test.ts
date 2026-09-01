@@ -5,7 +5,7 @@
 // bendice. Así que se prueba contra las formas canónicas, incluidas las
 // que la regla ingenua rompe.
 import { describe, it, expect } from 'vitest';
-import { futuro, condicional, participio, futuroComposto, mesoclise, enclise, proclise , infinitivoPessoal, conjugar, imperfeitoConjuntivo, futuroConjuntivo, hiatoEnI } from '@/scripts/lib/paradigma-pt';
+import { futuro, condicional, participio, futuroComposto, mesoclise, enclise, encliseReal, proclise , infinitivoPessoal, conjugar, imperfeitoConjuntivo, futuroConjuntivo, hiatoEnI, mqpSimples } from '@/scripts/lib/paradigma-pt';
 
 describe('futuro y condicional', () => {
   it('se forman sobre el infinitivo ENTERO', () => {
@@ -303,5 +303,56 @@ describe('presente do conjuntivo · el cambio ortográfico ante -e', () => {
     // pero los certificados como regulares siguen saliendo
     expect(conjugar('beber', 'presente', 'eu')).toBe('bebo');
     expect(conjugar('escrever', 'presente', 'ele')).toBe('escreve');
+  });
+
+  // E2#19 · la ênclise REAL, que el formato de transformación necesita.
+  // `enclise` es la INGENUA y se conserva sólo como distractor: da
+  // «fez-o», que no existe. Con ella se habría generado un lote entero.
+  it('funde el clítico de 3.ª tras -r, -s, -z', () => {
+    expect(encliseReal('fez', 'o')).toBe('fê-lo');
+    expect(encliseReal('fizemos', 'o')).toBe('fizemo-lo');
+    expect(encliseReal('comprar', 'o')).toBe('comprá-lo');
+    expect(encliseReal('vender', 'o')).toBe('vendê-lo');
+    expect(encliseReal('partir', 'o')).toBe('parti-lo');
+  });
+
+  it('usa -no/-na tras nasal', () => {
+    expect(encliseReal('tem', 'o')).toBe('tem-no');
+    expect(encliseReal('dão', 'o')).toBe('dão-no');
+    expect(encliseReal('põe', 'a')).toBe('põe-na');
+  });
+
+  it('no toca los clíticos que no son de 3.ª ni los verbos sin final marcado', () => {
+    expect(encliseReal('fez', 'me')).toBe('fez-me');
+    expect(encliseReal('comprei', 'a')).toBe('comprei-a');
+    expect(encliseReal('entregou', 'os')).toBe('entregou-os');
+    expect(encliseReal('dá', 'lhe')).toBe('dá-lhe');
+    // y la ingenua sigue siendo ingenua, que es su trabajo
+    expect(enclise('fez', 'o')).toBe('fez-o');
+  });
+
+  // E2#19 · QUINTA clase: el acento de la 1.ª del plural sobre el tema de
+  // pretérito. Las dos funciones lo tenían cada una a su manera y fallaban
+  // en ESPEJO — el conjuntivo daba *coméssemos* y el mais-que-perfeito
+  // *fizêramos*, cada uno correcto donde el otro erraba. La señal más
+  // clara posible de que la regla estaba escrita dos veces.
+  it('acentúa «nós» según el tema, no según el tiempo', () => {
+    expect(imperfeitoConjuntivo('comer', 'nós')).toBe('comêssemos');
+    expect(mqpSimples('comer', 'nós')).toBe('comêramos');
+    expect(imperfeitoConjuntivo('fazer', 'nós')).toBe('fizéssemos');
+    expect(mqpSimples('fazer', 'nós')).toBe('fizéramos');
+    expect(imperfeitoConjuntivo('falar', 'nós')).toBe('falássemos');
+    expect(mqpSimples('falar', 'nós')).toBe('faláramos');
+    expect(imperfeitoConjuntivo('ser', 'nós')).toBe('fôssemos');
+    expect(mqpSimples('ser', 'nós')).toBe('fôramos');
+    expect(mqpSimples('partir', 'nós')).toBe('partíramos');
+  });
+
+  it('forma el mais-que-perfeito simples', () => {
+    expect(mqpSimples('falar', 'ele')).toBe('falara');
+    expect(mqpSimples('fazer', 'ele')).toBe('fizera');
+    expect(mqpSimples('ser', 'ele')).toBe('fora');
+    expect(mqpSimples('ver', 'ele')).toBe('vira');
+    expect(mqpSimples('sair', 'ele')).toBe('saíra');
   });
 });

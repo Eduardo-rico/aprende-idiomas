@@ -107,6 +107,9 @@ export const EXERCISES_PER_LESSON: Record<ExerciseType, number | null> = {
   // adversarial), no por este generador — null a propósito.
   grammaticality_judgment: null,
   mediation: null,
+  // La transformación se escribe a mano con gates, como el cloze y la
+  // mediación: nunca ha pasado por el generador y no va a empezar ahora.
+  transformation: null,
 };
 
 // Mapping de ExerciseType → nombre de archivo de prompt. `null` = no generar.
@@ -127,6 +130,7 @@ export const TYPE_TO_TEMPLATE: Record<ExerciseType, string | null> = {
   shadowing: null,
   grammaticality_judgment: null,
   mediation: null,
+  transformation: null,
 };
 
 // Costo estimado (USD) por 1k tokens para el modelo LLM actual.
@@ -152,6 +156,7 @@ export const SCHEMA_VERSION: Record<ExerciseType, number> = {
   shadowing: 1,
   grammaticality_judgment: 1,
   mediation: 1,
+  transformation: 1,
 };
 
 export function requireApiKey(): string {

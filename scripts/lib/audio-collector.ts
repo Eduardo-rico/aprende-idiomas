@@ -81,6 +81,11 @@ export function textsFor(ex: Exercise, variant: VariantKey): string[] {
     // se lee; la fuente de mediación viene de la biblioteca).
     case 'grammaticality_judgment':
     case 'mediation':
+    // E2#19: la transformación tampoco lleva audio. Es un ejercicio de
+    // ESCRITURA — se lee una frase y se escribe la otra— y locutar la
+    // fuente daría la respuesta a medias en los puntos de colocación
+    // pronominal, que son justo los que este formato existe para enseñar.
+    case 'transformation':
       return [];
   }
 }

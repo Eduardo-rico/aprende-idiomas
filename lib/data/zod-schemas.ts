@@ -28,6 +28,13 @@ export const ExerciseTypeEnum = z.enum([
   'shadowing',
   'grammaticality_judgment',
   'mediation',
+  // E2#19: transformación. `conjugation` sólo sirve para verbos
+  // (infinitivo + persona + tiempo); esto es la transformación general —
+  // se da una frase y se pide la otra— y es el formato que 15 puntos del
+  // currículo llevaban esperando, incluido `b3-pron-directo`, que el
+  // cloze no puede examinar porque el clítico de OD es homógrafo del
+  // artículo que lo precede.
+  'transformation',
 ]);
 export type ExerciseType = z.infer<typeof ExerciseTypeEnum>;
 
@@ -145,6 +152,24 @@ export const ConjugationData = z.object({
   infinitive: z.string().min(1), person: z.string().min(1), tense: z.string().min(1),
   answer: z.string().min(1), hintEs: z.string().min(1),
 });
+/** TRANSFORMACIÓN. Se da una frase y una instrucción, y se pide la otra
+ *  frase. La respuesta es ÚNICA por diseño: si la instrucción admite dos
+ *  salidas igual de buenas, o se acota la instrucción o se declaran las
+ *  dos en `alternatives`. Un ejercicio de producción con salida ambigua
+ *  cobra fallos falsos, y el fallo falso entra en el FSRS.
+ *
+ *  `espejoEs` NO es decorativo: declara si el español hace la misma
+ *  transformación. Es el atajo mayor de este formato —el alumno traduce,
+ *  transforma en español y traduce de vuelta— y sólo se puede medir si
+ *  cada ítem lo dice. El preflight imprime la proporción del lote. */
+export const TransformationData = z.object({
+  source: z.string().min(1),
+  instructionEs: z.string().min(1),
+  answer: z.string().min(1),
+  alternatives: z.array(z.string()).default([]),
+  hintEs: z.string().optional(),
+  espejoEs: z.boolean().optional(),
+});
 export const MatchingData = z.object({
   pairs: z.array(z.object({ left: z.string().min(1), right: z.string().min(1) })).min(3).max(6),
 });
@@ -230,6 +255,7 @@ export const ExerciseDataByTypeSchema = {
   lesson: LessonDataSchema,
   error_correction: ErrorCorrectionData,
   conjugation: ConjugationData,
+  transformation: TransformationData,
   matching: MatchingData,
   multiple_choice: MultipleChoiceData,
   shadowing: ShadowingData,
@@ -257,6 +283,7 @@ const ChunkOverride = z.strictObject(ChunkData.shape).partial();
 const LessonOverride = z.strictObject(LessonDataSchema.shape).partial();
 const ErrorCorrectionOverride = z.strictObject(ErrorCorrectionData.shape).partial();
 const ConjugationOverride = z.strictObject(ConjugationData.shape).partial();
+const TransformationOverride = z.strictObject(TransformationData.shape).partial();
 const MatchingOverride = z.strictObject(MatchingData.shape).partial();
 const MultipleChoiceOverride = z.strictObject(MultipleChoiceData.shape).partial();
 const ShadowingOverride = z.strictObject(ShadowingData.shape).partial();
@@ -291,6 +318,7 @@ export const VariantOverrideByTypeSchema = {
   lesson: LessonOverride,
   error_correction: ErrorCorrectionOverride,
   conjugation: ConjugationOverride,
+  transformation: TransformationOverride,
   matching: MatchingOverride,
   multiple_choice: MultipleChoiceOverride,
   shadowing: ShadowingOverride,
@@ -435,6 +463,11 @@ const GrammaticalityJudgmentEx = BaseExercise.extend({
   data: GrammaticalityJudgmentData,
   variantOverrides: z.record(z.string(), VariantOverrideValue).optional(),
 });
+const TransformationEx = BaseExercise.extend({
+  type: z.literal('transformation'),
+  data: TransformationData,
+  variantOverrides: z.record(z.string(), VariantOverrideValue).optional(),
+});
 const MediationEx = BaseExercise.extend({
   type: z.literal('mediation'),
   data: MediationData,
@@ -447,7 +480,7 @@ export const ExerciseSchema = z.discriminatedUnion('type', [
   VerbPrepositionEx, SentenceConstructionEx, ChunkEx,
   LessonEx,
   ErrorCorrectionEx, ConjugationEx, MatchingEx, MultipleChoiceEx, ShadowingEx,
-  GrammaticalityJudgmentEx, MediationEx,
+  GrammaticalityJudgmentEx, MediationEx, TransformationEx,
 ]);
 export type Exercise = z.infer<typeof ExerciseSchema>;
 
