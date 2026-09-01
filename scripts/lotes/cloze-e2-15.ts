@@ -298,7 +298,19 @@ export function verificar(items: Cloze[]): string[] {
     if (!x.ancla.trim()) v.push(`${id}: sin ancla declarada`);
     else if (!x.s.includes(x.ancla)) v.push(`${id}: el ancla «${x.ancla}» no está en la frase`);
     // La pista no puede deletrear la respuesta portuguesa.
-    if (new RegExp(`(?<![\\p{L}])${r}(?![\\p{L}])`, 'iu').test(norm(x.pista))) v.push(`${id}: la pista deletrea la respuesta «${r}»`);
+    //
+    // El caso que se repitió TRES veces antes de escribirse aquí: cuando
+    // el español y el portugués COINCIDEN —«de ti», «contigo», «hotel»,
+    // «papel»—, dar la glosa española ES deletrear, aunque no lo parezca
+    // al escribirla. La salida no es quitar la pista: es **describir la
+    // cosa en vez de traducirla** («el sitio donde se duerme cuando se
+    // viaja») o **nombrar la regla** («la forma preposicional de tu»).
+    if (new RegExp(`(?<![\\p{L}])${r}(?![\\p{L}])`, 'iu').test(norm(x.pista))) {
+      const coincide = new RegExp(`(?<![\\p{L}])${r}(?![\\p{L}])`, 'iu').test(norm(x.pista.split('—')[0] ?? ''));
+      v.push(`${id}: la pista deletrea la respuesta «${r}»` + (coincide
+        ? ' — el español y el portugués coinciden aquí, así que traducir es deletrear: DESCRIBE la cosa o nombra la regla en vez de glosar'
+        : ''));
+    }
     // Ni la frase, fuera del hueco.
     if (new RegExp(`(?<![\\p{L}])${r}(?![\\p{L}])`, 'iu').test(x.s.replace('___', ''))) v.push(`${id}: la respuesta «${r}» ya está escrita en la frase`);
     // EL SUJETO POSPUESTO. Lo destapó el muestreo del 20 %: cuatro de
