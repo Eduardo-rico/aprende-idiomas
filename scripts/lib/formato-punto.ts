@@ -180,6 +180,42 @@ const OVERRIDES: Record<string, { clase: Clase; motivo: string; formato?: Format
 // rellenos son igual de aceptables en la glosa española.** Si uno glosa
 // bien y el otro mal, el par mete señal de la glosa y hay que
 // compensarlo con otro par que la meta al revés.
+// ── LA CORRECCIÓN QUE EL ROUND DEL LOTE 11 v2 FUERZA, y va contra el
+// criterio de arriba ────────────────────────────────────────────────
+//
+// El mapa mandó CLOZE para `b11-ser-estar-divergente` razonando que un
+// cloze no tiene etiqueta BIEN/MAL y por tanto mata el atajo de la
+// glosa. **Eso es falso, y está medido**: la sección salió resoluble
+// **12/12 por transferencia literal de lema del español**. El cloze mata
+// el atajo de ETIQUETA; no mata el de TRADUCCIÓN, que es el que un punto
+// llamado «divergente» existe para derrotar.
+//
+// Dicho con precisión: cambiar de formato no arregla un punto que
+// coincide con el español. **Lo que decide no es el formato sino el
+// CONTENIDO** — si «la reunião É às três» se traduce a «la reunión ES a
+// las tres», da igual si preguntas juzgando o rellenando.
+//
+// De ahí la regla que sí sirve, y que es más dura que la anterior:
+//
+//   `coincide` NO significa «cámbiale el formato». Significa **elige
+//   otras frases**: dentro de casi todo punto hay un subconjunto que sí
+//   diverge, y es el único que da ítems. Si el subconjunto no existe, el
+//   punto no es examinable para un hispanohablante y hay que decirlo en
+//   vez de llenarlo.
+//
+// Ejemplo medido, del mismo round: `b11-ser-estar-divergente` NO diverge
+// en eventos («a reunião é» / «la reunión es»), en nacionalidad, en
+// profesión ni en el estado resultante — que es de donde salieron once
+// de los doce ítems. Sí diverge en `ficar` + adjetivo como cambio de
+// estado (41 casos en el corpus: «ficou calado», «ficou triste», donde
+// el español usa *ponerse/quedarse*, sin cognado), en `ser vivo`
+// («emquanto eu fôr vivo», Eça) y en `ser casado`. Ahí hay lote; en el
+// resto del punto, no.
+export const REGLA_DE_CONTENIDO_DIVERGENTE =
+  'Un punto `coincide` no se arregla cambiando el formato: se arregla eligiendo el ' +
+  'subconjunto del punto que SÍ diverge del español. Si ese subconjunto no existe, ' +
+  'el punto no es examinable para este alumno y hay que declararlo, no llenarlo.';
+
 export const REGLA_DE_LOTE_JUICIO =
   'Un lote de juicios necesita que las glosas españolas se equilibren dentro del lote: ' +
   'con pares mínimos, elegir pares cuyos dos rellenos glosen a español igual de bien ' +

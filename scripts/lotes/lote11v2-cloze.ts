@@ -73,7 +73,7 @@ export const ITEMS: ItemCloze[] = [
     answer: 'porem', alternatives: [], ancla: 'para os senhores',
     hintEs: 'pôr — para que ustedes pongan la firma' },
   { id: 'CL-06', concepto: A, lema: 'ser', persona: 'eles', construccion: 'pessoal',
-    sentence: 'É difícil os alunos ___ (ser) todos pontuais logo à primeira aula.',
+    sentence: 'É difícil os alunos ___ (ser) todos pontuais logo na primeira aula.',
     answer: 'serem', alternatives: [], ancla: 'os alunos',
     hintEs: 'ser — es difícil que los alumnos sean' },
   // Las cinco frases que siguen NO son las que escribí primero. El gate
@@ -107,8 +107,8 @@ export const ITEMS: ItemCloze[] = [
     answer: 'vires', alternatives: [], ancla: 'Quando tu',
     hintEs: 'ver — cuando veas a tu hermano (futuro)' },
   { id: 'CL-11', concepto: A, lema: 'querer', persona: 'eles', construccion: 'conjuntivo-futuro',
-    sentence: 'Se eles ___ (querer) vir connosco no domingo, ainda há lugar no carro.',
-    answer: 'quiserem', alternatives: [], ancla: 'Se eles',
+    sentence: 'Se um dia eles ___ (querer) vir connosco, ainda há lugar no carro.',
+    answer: 'quiserem', alternatives: [], ancla: 'Se um dia eles',
     hintEs: 'querer — si quieren venir (futuro)' },
   { id: 'CL-12', concepto: A, lema: 'saber', persona: 'nós', construccion: 'conjuntivo-futuro',
     sentence: 'Assim que nós ___ (saber) alguma coisa de concreto, avisamos toda a gente.',
@@ -121,51 +121,51 @@ export const ITEMS: ItemCloze[] = [
   // suponerlos» — de los doce ítems que se escribieron suponiendo,
   // once coincidían con el español.
   { id: 'CL-13', concepto: B,
-    sentence: 'O jantar de despedida ___ (ser / estar / ficar) na quinta-feira, num sítio ainda por combinar.',
+    sentence: 'O jantar de despedida ___ (ser, estar ou ficar?) na quinta-feira, num sítio ainda por combinar.',
     answer: 'é', alternatives: [], ancla: 'O jantar de despedida',
     hintEs: 'un evento OCURRE: en portugués va con ser' },
   { id: 'CL-14', concepto: B,
-    sentence: 'O concerto ___ (ser / estar / ficar) no Coliseu no próximo sábado, às nove e meia.',
+    sentence: 'O concerto ___ (ser, estar ou ficar?) no Coliseu no próximo sábado, às nove e meia.',
     answer: 'é', alternatives: [], ancla: 'O concerto',
     hintEs: 'otro evento con lugar y fecha: sigue siendo ser' },
   { id: 'CL-15', concepto: B,
-    sentence: 'A festa de anos da minha sobrinha ___ (ser / estar / ficar) no domingo em casa dos avós.',
+    sentence: 'A festa de anos da minha sobrinha ___ (ser, estar ou ficar?) no domingo em casa dos avós.',
     answer: 'é', alternatives: [], ancla: 'A festa',
     hintEs: 'si el sujeto se puede sustituir por «tem lugar», va con ser' },
   { id: 'CL-16', concepto: B,
-    sentence: 'O António ___ (ser / estar / ficar) doente e hoje não vem, mas na segunda já cá anda.',
+    sentence: 'O António ___ (ser, estar ou ficar?) doente e hoje não vem, mas na segunda já cá anda.',
     answer: 'está', alternatives: [], ancla: 'na segunda já cá anda',
     hintEs: 'estado pasajero — la segunda mitad dice que se le pasa' },
   { id: 'CL-17', concepto: B,
-    sentence: 'A comida ___ (ser / estar / ficar) fria, ninguém se lembrou de a tapar quando saímos.',
+    sentence: 'A comida ___ (ser, estar ou ficar?) fria, ninguém se lembrou de a tapar quando saímos.',
     answer: 'está', alternatives: [], ancla: 'ninguém se lembrou de a tapar',
     hintEs: 'se ha enfriado: estado resultante, no cualidad' },
   { id: 'CL-18', concepto: B,
-    sentence: 'O tribunal ___ (ser / estar / ficar) mesmo ao lado da estação, num prédio dos anos trinta.',
+    sentence: 'O tribunal ___ (ser, estar ou ficar?) mesmo ao lado da estação, num prédio dos anos trinta.',
     answer: 'fica', alternatives: ['está'], ancla: 'num prédio dos anos trinta',
     hintEs: 'la localización de un edificio prefiere ficar, que el español no tiene en este uso' },
   { id: 'CL-19', concepto: B,
-    sentence: 'Eu ___ (ser / estar / ficar) português, mas vivo em Espanha desde os dezoito anos.',
+    sentence: 'Eu ___ (ser, estar ou ficar?) português, mas vivo em Espanha desde os dezoito anos.',
     answer: 'sou', alternatives: [], ancla: 'português',
     hintEs: 'nacionalidad con ser, por muy temporal que sea la situación' },
   { id: 'CL-20', concepto: B,
-    sentence: 'Ela ___ (ser / estar / ficar) professora de História, embora este ano esteja a dar Português.',
+    sentence: 'Ela ___ (ser, estar ou ficar?) professora de História, embora este ano esteja a dar Português.',
     answer: 'é', alternatives: [], ancla: 'professora de História',
     hintEs: 'profesión con ser, y el contraste con «esteja a dar» en la misma frase' },
   { id: 'CL-21', concepto: B,
-    sentence: 'A porta ___ (ser / estar / ficar) aberta a noite toda e entrou frio pela casa dentro.',
+    sentence: 'A porta ___ (ser, estar ou ficar?) aberta a noite toda e entrou frio pela casa dentro.',
     answer: 'esteve', alternatives: [], ancla: 'a noite toda',
     hintEs: 'estado resultante en un periodo cerrado' },
   { id: 'CL-22', concepto: B,
-    sentence: 'A entrada ___ (ser / estar / ficar) gratuita para os sócios durante todo o mês de agosto.',
+    sentence: 'A entrada ___ (ser, estar ou ficar?) gratuita para os sócios durante todo o mês de agosto.',
     answer: 'é', alternatives: [], ancla: 'gratuita para os sócios',
     hintEs: 'característica del billete, no estado de hoy' },
   { id: 'CL-23', concepto: B,
-    sentence: 'O prédio ___ (ser / estar / ficar) do século dezanove, mas está todo remodelado por dentro.',
+    sentence: 'O prédio ___ (ser, estar ou ficar?) do século dezanove, mas está todo remodelado por dentro.',
     answer: 'é', alternatives: [], ancla: 'do século dezanove',
     hintEs: 'lo que el edificio ES —su época— frente a cómo está ahora' },
   { id: 'CL-24', concepto: B,
-    sentence: 'Como ___ (ser / estar / ficar) o tempo aí no Porto? Aqui o céu não abre há uma semana.',
+    sentence: 'Como ___ (ser, estar ou ficar?) o tempo aí no Porto? Aqui o céu não abre há uma semana.',
     answer: 'está', alternatives: [], ancla: 'o céu não abre há uma semana',
     hintEs: 'el tiempo de hoy: estar' },
 ];
@@ -212,10 +212,24 @@ export function verificar(items: ItemCloze[]): string[] {
   // Reparto: si una sola respuesta domina, el lote se resuelve por
   // frecuencia. No es un atajo de la batería —un cloze no tiene
   // etiqueta— pero es el equivalente en este formato.
+  //
+  // AGUJERO CORREGIDO por el round: contaba FORMAS donde el alumno elige
+  // LEMAS. Con la pista «(ser, estar ou ficar?)» delante, lo que el
+  // alumno decide es el lema, no la flexión: por forma «é» salía 6/12 =
+  // 50,0 % y no disparaba por un ítem; por lema, `ser` es 7/12 = 58,3 %
+  // y sí dispara. El gate medía la variable equivocada.
+  const LEMA: Record<string, string> = {
+    é: 'ser', sou: 'ser', és: 'ser', são: 'ser', foi: 'ser', era: 'ser', será: 'ser',
+    está: 'estar', estou: 'estar', esteve: 'estar', estava: 'estar', estão: 'estar',
+    fica: 'ficar', ficou: 'ficar', ficam: 'ficar', ficava: 'ficar',
+  };
   const porPunto = new Map<string, Map<string, number>>();
   for (const x of items) {
     const m = porPunto.get(x.concepto) ?? new Map();
-    m.set(x.answer, (m.get(x.answer) ?? 0) + 1);
+    // Se agrupa por lema SÓLO cuando la pista enumera lemas: es entonces
+    // cuando la elección del alumno es entre lemas.
+    const clave = /\([^)]*\bou\b[^)]*\)/.test(x.sentence) ? (LEMA[x.answer] ?? x.answer) : x.answer;
+    m.set(clave, (m.get(clave) ?? 0) + 1);
     porPunto.set(x.concepto, m);
   }
   for (const [c, m] of porPunto) {
