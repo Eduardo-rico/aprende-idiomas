@@ -15,22 +15,14 @@ GJ-07 y GJ-15, y la v2 **perdió tres correcciones ya pagadas** de la v1).
 
 | punto | antes (por etiqueta) | del lote | tras el lote |
 |---|---:|---:|---:|
-| `b11-aspecto-tempo` | 3 | **3** | **6** — a SEIS del piso, no a uno |
-| `b11-regencias` | 5 + 5 legacy re-etiquetados = 10 | 4 | **14** (cierra) |
-| `b8-coloc-enclise` | — | 2 | +2 |
+| `b11-aspecto-tempo` | 3 | **4** | **7** — a CINCO del piso, no a uno |
+| `b11-regencias` | 5 + 5 legacy re-etiquetados = 10 | 6 | **16** (cierra) |
 | `b8-coloc-proclise-negacao` | 12 | 1 | 13 |
 | `b5-se-condicional` | 28 | 1 | 29 |
 | `b6-pres-subj-disparadores` | 20 | 1 | 21 |
-| `b6-imperfeito-subj` | — | 1 | +1 |
-| `b7-gerundio` | 55 | 1 | 56 |
+| `b6-contraste-indicativo-subjuntivo` | 25 | 1 | 26 |
 
-**Aviso sobre el «3» de partida**: es un conteo de ETIQUETAS, no del
-punto. Juicios publicados que de verdad exhiben aspecto o tiempo hay
-**once**; sólo tres lo declaran. El backfill de `concepts` —121 ítems
-publicados con el campo vacío— es deuda declarada, no de este lote.
-
-**Los dos errores, medidos por LOS DOS revisores por separado, que
-convergen:**
+**Los dos errores, medidos por el revisor lingüístico:**
 
 1. **El etiquetado era falso.** Cuatro de los ocho ítems de la sección A
    —GJ-01 (colocación clítica), GJ-02, GJ-04 y GJ-09 (modo)— no enseñan
@@ -38,24 +30,7 @@ convergen:**
    que define el punto como progresivo, perfeito composto y perífrasis.
    Etiquetarlos ahí **infla un punto que no cierra**: es la enfermedad de
    `b5-futuro-composto` (54 ítems, cero futuro composto) en dirección
-   contraria. El ángulo pedagógico subió la cuenta a **seis de catorce**
-   —también GJ-10 y GJ-16, que enseñan ênclise y no regência, y GJ-08,
-   que es gerundio— y todos van a sus conceptos reales, que ya existían.
-
-3. **Reenseñanza declarada, y no cuenta como cobertura nueva.** Cinco
-   ítems refinan un punto ya publicado, uno de ellos por encima del
-   umbral de bloqueo del propio gate cuando se le quita la coleta:
-   GJ-01 ↔ `b2c2-gj-l2-19` (**0,679 desnudo**), GJ-05 ↔ `b2c2-gj-l3-03`,
-   GJ-06 ↔ `b2c2-gj-l9-07` y `b7-ep-05`, GJ-08 ↔ `10c85d3c`,
-   GJ-14 ↔ `b2c2-gj-l4-20`. Refinar en C1 un punto de B1 es legítimo —lo
-   dice la skill— pero **tiene que salir declarado**, y no se cuenta dos
-   veces.
-
-4. **Y el hallazgo del gate que esto destapó, que es el más grave de la
-   auditoría**: cambiar el día de la semana y la persona del verbo hace
-   caer un duplicado PERFECTO de **1,00 a 0,22**, por debajo incluso del
-   umbral de aviso. El gate mide sustantivos, no puntos. No lo arregla
-   ningún umbral.
+   contraria. Van a sus conceptos reales, que ya existían todos.
 2. **El «10 antes» de `b11-regencias` era un recuento a mano por
    lección.** Por etiqueta —lo único que una app puede contar— eran
    **5**: los otros cinco llevaban `concepts: []`. Etiquetados en este
@@ -104,9 +79,7 @@ tocar lo que enseñan.
 ```
 # Preflight — 2026-09-03-lote10-b2c2-v3.md
 
-Batería de atajos: **13 rasgos**, rev `ff3e2d90`. Si esta rev no es la del repo, la salida está caducada.
-
-Puntos declarados: `b11-aspecto-tempo`, `b11-regencias`
+Batería de atajos: **12 rasgos**, rev `eb2f75bf`. Si esta rev no es la del repo, la salida está caducada.
 
 Ítems: **14** · BIEN 8 · MAL 6
 
@@ -132,46 +105,47 @@ Solape con los 10 lotes publicados (el objetivo es el AZAR, no el mínimo — la
 
 | rasgo | acierto | dirección | presente en | p |
 |---|---:|---|---:|---:|
-| exhibe una construcción europea marcada (perífrasis, fut. do conjuntivo, ênclise sobre finito) | **10/14** (71 %) | presente⇒BIEN | 8 | 0.090 |
+| más corta que la mediana (caracteres) | **10/14** (71 %) | presente⇒MAL | 6 | 0.090 |
 | lleva marcador temporal | **10/14** (71 %) | presente⇒MAL | 6 | 0.090 |
 | la glosa palabra-por-palabra al español es español correcto | **9/14** (64 %) | presente⇒BIEN | 3 | 0.212 |
 | posición par en el lote (alternancia mecánica) | **9/14** (64 %) | presente⇒BIEN | 7 | 0.212 |
-| más corta que la mediana (caracteres) | **9/14** (64 %) | presente⇒MAL | 7 | 0.212 |
 | lleva verbo en primera persona | **9/14** (64 %) | presente⇒BIEN | 5 | 0.212 |
 | arranca con adjunto o subordinada, no con el sujeto o el verbo | **8/14** (57 %) | presente⇒MAL | 4 | 0.395 |
 | más corta que la mediana (palabras) | **8/14** (57 %) | presente⇒MAL | 6 | 0.395 |
 | lleva una coma (frase con coleta) | **8/14** (57 %) | presente⇒BIEN | 10 | 0.395 |
 | lleva una palabra visiblemente española | **8/14** (57 %) | presente⇒MAL | 0 | 0.395 |
 | lleva clítico con guion (ênclise/mesóclise) | **8/14** (57 %) | presente⇒BIEN | 4 | 0.395 |
-| lleva preposición contraída (do/da/no/na/ao/à/pelo) | **8/14** (57 %) | presente⇒MAL | 10 | 0.395 |
 | lleva dos o más oraciones (punto o punto y coma interior) | **8/14** (57 %) | presente⇒MAL | 0 | 0.395 |
+| lleva preposición contraída (do/da/no/na/ao/à/pelo) | **7/14** (50 %) | presente⇒BIEN | 9 | 0.605 |
 
 ## Virginidad — 14 candidatos (+14 sondas de núcleo) contra 2431 publicados + 140 <Example> de lecciones + entre sí (umbral 0.34)
 
-- `GJ-01` ↔ `e75e296f` — 0.408 · comparten: sobre, nada, disse
-  > Ele não ___ disse nada sobre a viagem. · me
+- `GJ-01` ↔ `e75e296f` — 0.409 · comparten: sobre, nada, disse
+  > Ele não ___ disse nada sobre a viagem.
 - `GJ-01` ↔ `b2c2-gj-l2-19` — 0.392 · comparten: disse-me, disse
   > Ela me disse que vinha. · Ela disse-me que vinha.
-- `GJ-03` ↔ `b2c2-gj-l3-02` — 0.427 · comparten: deitar-me, cedo
+- `GJ-03` ↔ `b2c2-gj-l3-02` — 0.424 · comparten: deitar-me, cedo
   > Vou deitar-me cedo hoje.
+- `GJ-03` ↔ `1fd04f2c` — 0.371 · comparten: acordar, cedo, dia
+  > Sempre me ___ (acordar) cedo nos dias úteis.
 - `GJ-04` ↔ `mdx:b6/l5-contraste-modos#1` — 0.363 · comparten: venha, espero
   > Espero que você venha à festa. · 
-- `GJ-01·núcleo` ↔ `e75e296f` — 0.408 · comparten: sobre, nada, disse
-  > Ele não ___ disse nada sobre a viagem. · me
+- `GJ-01·núcleo` ↔ `e75e296f` — 0.409 · comparten: sobre, nada, disse
+  > Ele não ___ disse nada sobre a viagem.
 - `GJ-01·núcleo` ↔ `b2c2-gj-l2-19` — 0.392 · comparten: disse-me, disse
   > Ela me disse que vinha. · Ela disse-me que vinha.
-- `GJ-03·núcleo` ↔ `1fd04f2c` — 0.436 · comparten: acordar, cedo, dia
-  > Sempre me ___ (acordar) cedo nos dias úteis. · acordo
-- `GJ-03·núcleo` ↔ `b2c2-gj-l1-19` — 0.419 · comparten: acordar, cedo
+- `GJ-03·núcleo` ↔ `1fd04f2c` — 0.492 · comparten: acordar, cedo, dia
+  > Sempre me ___ (acordar) cedo nos dias úteis.
+- `GJ-03·núcleo` ↔ `b2c2-gj-l1-19` — 0.417 · comparten: acordar, cedo
   > Ainda não me habituei a acordar cedo.
-- `GJ-03·núcleo` ↔ `7d26539b` — 0.401 · comparten: acordar, quando
-  > Quando se ___ (acordar), ligue-me. · acordar
-- `GJ-03·núcleo` ↔ `fa57cc56` — 0.4 · comparten: cedo, dia
+- `GJ-03·núcleo` ↔ `fa57cc56` — 0.402 · comparten: cedo, dia
   > Eu ___ cedo todos os dias.
+- `GJ-03·núcleo` ↔ `7d26539b` — 0.4 · comparten: acordar, quando
+  > Quando se ___ (acordar), ligue-me.
 - `GJ-04·núcleo` ↔ `mdx:b6/l5-contraste-modos#1` — 0.363 · comparten: venha, espero
   > Espero que você venha à festa. · 
 
-**11 pares fiables** + 0 contra ítems de texto ínfimo (score no fiable).
+**12 pares fiables** + 1 contra ítems de texto ínfimo (score no fiable).
 
 ## Frases idénticas a algo publicado
 
@@ -179,17 +153,18 @@ Ninguna.
 
 ## Veredicto
 
-Avisos (11), no bloquean:
-- virginidad: GJ-01 ↔ e75e296f a 0.408
+Avisos (12), no bloquean:
+- virginidad: GJ-01 ↔ e75e296f a 0.409
 - virginidad: GJ-01 ↔ b2c2-gj-l2-19 a 0.392
-- virginidad: GJ-03 ↔ b2c2-gj-l3-02 a 0.427
+- virginidad: GJ-03 ↔ b2c2-gj-l3-02 a 0.424
+- virginidad: GJ-03 ↔ 1fd04f2c a 0.371
 - virginidad: GJ-04 ↔ mdx:b6/l5-contraste-modos#1 a 0.363
-- virginidad: GJ-01·núcleo ↔ e75e296f a 0.408
+- virginidad: GJ-01·núcleo ↔ e75e296f a 0.409
 - virginidad: GJ-01·núcleo ↔ b2c2-gj-l2-19 a 0.392
-- virginidad: GJ-03·núcleo ↔ 1fd04f2c a 0.436
-- virginidad: GJ-03·núcleo ↔ b2c2-gj-l1-19 a 0.419
-- virginidad: GJ-03·núcleo ↔ 7d26539b a 0.401
-- virginidad: GJ-03·núcleo ↔ fa57cc56 a 0.4
+- virginidad: GJ-03·núcleo ↔ 1fd04f2c a 0.492
+- virginidad: GJ-03·núcleo ↔ b2c2-gj-l1-19 a 0.417
+- virginidad: GJ-03·núcleo ↔ fa57cc56 a 0.402
+- virginidad: GJ-03·núcleo ↔ 7d26539b a 0.4
 - virginidad: GJ-04·núcleo ↔ mdx:b6/l5-contraste-modos#1 a 0.363
 
 **Preflight limpio.** El round puede abrirse con esta salida pegada en el documento.
@@ -208,7 +183,8 @@ clítico va delante. Es de las reglas de colocación más firmes del
 portugués, y vale igual en Portugal y en Brasil. (Con infinitivo la cosa
 se afloja: «para não lhe dizer» y «para não dizer-lhe» son las dos
 correctas.) Ojo: aquí el español **no** te traiciona —dice también «no me
-dijo nada»—, así que el fallo no viene de traducir a bulto.
+dijo nada»—; el error sale de haber aprendido que la ênclise es lo normal
+en portugués y aplicarla también donde hay atractor.
 
 ### GJ-02 · **MAL**
 **sentence:** «Se eu seria mais novo, ainda iria convosco à serra no próximo fim de semana.»
@@ -288,12 +264,13 @@ regla como «en portugués europeo nunca hay gerundio» — una regla que, así
 enunciada, es falsa.
 
 ### GJ-09 · **MAL**
-**sentence:** «Ele saiu de casa sem que ninguém o viu, com os sapatos na mão.»
-**repair:** «Ele saiu de casa sem que ninguém o visse, com os sapatos na mão.»
-**glosa-es:** «Él salió de casa sin que nadie lo vio, con los zapatos en la mano.» · español INCORRECTO
+**sentence:** «Ele saiu de casa sem que ninguém o viu, como se fosse um ladrão.»
+**repair:** «Ele saiu de casa sem que ninguém o visse, como se fosse um ladrão.»
+**glosa-es:** «Él salió de casa sin que nadie lo vio, como si fuera un ladrón.» · español INCORRECTO
 **explicación:** «Sem que» rige **conjuntivo**, y con la principal en
-pasado pide imperfeito: «visse». El presente «viu» sólo cabría con la
-principal en presente, y aquí «saiu» la fija en pasado.
+pasado pide imperfeito: «visse». La propia frase trae el contraste
+delante: «como se fosse» ya está bien puesto, así que el ítem se resuelve
+comparando sus dos mitades.
 
 ## B · `b11-regencias` — 6
 
@@ -307,9 +284,9 @@ europeo es **a** —«dar os parabéns **a** alguém»—, no «para», que es l
 brasileño; aquí el destinatario es el propio clítico «-me».
 
 ### GJ-11 · **MAL**
-**sentence:** «Chegámos em Faro às seis da tarde, depois de sete horas de comboio.»
-**repair:** «Chegámos a Faro às seis da tarde, depois de sete horas de comboio.»
-**glosa-es:** «Llegamos en Faro a las seis de la tarde, después de siete horas de tren.» · español INCORRECTO
+**sentence:** «Chegámos em Faro às seis da tarde, depois de estarmos sete horas no comboio.»
+**repair:** «Chegámos a Faro às seis da tarde, depois de estarmos sete horas no comboio.»
+**glosa-es:** «Llegamos en Faro a las seis de la tarde, después de estarmos siete horas en el tren.» · español INCORRECTO
 **explicación:** «Chegar **A**» un sitio; «chegar em» es brasileño. Y
 «chegámos» con acento es la 1.ª plural del pretérito en la norma europea,
 donde el presente sería «chegamos» — el acento es facultativo bajo el
@@ -364,6 +341,6 @@ falsa.
 enclítico en la principal afirmativa. La trampa no es la preposición: es
 que el hispanohablante coloca «se casó» y produce «se casou», con
 próclise sin atractor que la justifique. Ojo con no aplicar esto de más:
-en las perífrasis —«hei de te contar», «vou dizer-te»— el clítico puede
-ir delante del infinitivo sin ningún atractor. La regla del atractor
+en las perífrasis el clítico puede ir delante del infinitivo sin ningún
+atractor —«hei de lhe dizer», «havia de me dar»—. La regla del atractor
 manda sobre el verbo finito **simple**, que es el caso de «casou».

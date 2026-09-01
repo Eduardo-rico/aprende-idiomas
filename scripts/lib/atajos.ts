@@ -51,6 +51,40 @@ export interface Atajo {
 /** Rasgos binarios. Añadir uno aquí lo mete en la batería para siempre. */
 export const RASGOS: { nombre: string; f: (x: ItemJuicio, todos: ItemJuicio[]) => boolean }[] = [
   {
+    // EL RASGO 13, encontrado por el round del lote 10 v3. Los doce
+    // anteriores miran el TEXTO (bolsa de palabras, longitud), la
+    // POSICIÓN (en la frase, en el lote) o la GLOSA. **Ninguno mira QUÉ
+    // GRAMÁTICA EXHIBE la frase.** Y un lote puede repartirla de una sola
+    // manera: si el portugués europeo marcado —las perífrasis
+    // aspectuales, el «haver de», el futuro do conjuntivo, la ênclise
+    // sobre verbo finito— sólo aparece en los BIEN, entonces «si la frase
+    // LUCE portugués europeo ⇒ está bien» acierta sin evaluar una sola
+    // vez si la frase es gramatical. Medido en el lote 10 v3: **11 de 14,
+    // p=0,029**.
+    //
+    // Y la comprobación que lo convierte en hallazgo y no en casualidad:
+    // la tasa base sobre los 146 juicios YA publicados es **53 %**, y
+    // ningún lote pasa del 60 %. No es un artefacto de la lengua: es del
+    // lote.
+    nombre: 'exhibe una construcción europea marcada (perífrasis, fut. do conjuntivo, ênclise sobre finito)',
+    f: (x) => {
+      const s = x.sentence;
+      // ênclise/mesóclise sobre verbo FINITO: el español sólo tiene
+      // enclisis en infinitivo, gerundio e imperativo, así que
+      // «disse-me» está marcado y «levantar-me» no.
+      for (const m of s.matchAll(/(?<![\p{L}])([\p{L}]{3,})-(?:me|te|se|lhe|nos|lhes|o|a|os|as|lo|la|los|las)(?![\p{L}-])/giu))
+        if (!/(?:ar|er|ir|ôr|or|ndo)$/i.test(m[1]!)) return true;
+      return [
+        /(?<![\p{L}])(?:hei|hás|há|havemos|hão|havia|havias|havíamos|haviam)\s+d[eo](?![\p{L}])/iu,
+        /(?<![\p{L}])costum(?:o|as|a|amos|am|ava|avas|ávamos|avam)(?![\p{L}])/iu,
+        /(?<![\p{L}])(?:est(?:ou|ás|á|amos|ão|ava|avas|ávamos|avam|ive|eve)|fic(?:o|as|a|amos|am|ava|avam|uei|ou|aram|ámos)|and(?:o|as|a|amos|am|ava|avam|ei|ou)|continu(?:o|a|amos|am|ava|ou)|começ(?:o|a|amos|am|ava|ei|ou)|volt(?:o|a|amos|am|ei|ou))\s+a\s+[\p{L}]+(?:ar|er|ir|ôr)(?![\p{L}])/iu,
+        /(?<![\p{L}])(?:vou|vais|vai|vamos|vão|ia|ias|íamos|iam|vem|vêm|vinha|anda|andam|andava)\s+[\p{L}]+ndo(?![\p{L}])/iu,
+        /(?<![\p{L}])(?:for|fores|formos|forem|tiver|tiveres|tivermos|tiverem|puder|puderes|pudermos|puderem|quiser|quiseres|quisermos|quiserem|vier|vieres|viermos|vierem|fizer|fizeres|fizermos|fizerem|souber|soubermos|souberem|estiver|estivermos|estiverem|vir|vires|virmos|virem|[\p{L}]{3,}(?:armos|ermos|irmos|arem|erem|irem|ares|eres|ires))(?![\p{L}])/iu,
+        /(?<![\p{L}])(?:dei|deu|deram|dou|dá|dão|dava|davam)\s+por(?![\p{L}])/iu,
+      ].some((re) => re.test(s));
+    },
+  },
+  {
     // EL RASGO 12, y el que más caro sale. La skill lo nombra desde el
     // lote 3 —«glosa cognada que da español normal», 16/20— y la batería
     // en código NUNCA lo tuvo, porque es el único de los tres atajos

@@ -946,5 +946,335 @@
       "repair": "Perguntei à professora se havia teste na sexta.",
       "explanationEs": "«Perguntar» rige **a**: perguntei à professora, pergunta ao teu pai. «Perguntar para alguém» es corriente en el Brasil coloquial y las gramáticas lo registran; en el portugués europeo el complemento va con «a»: en el corpus del curso hay 22 «perguntou ao/à» y 97 «perguntou- lhe», y ni un solo «perguntar para alguém» (el único «perguntou para» es otra cosa: «perguntou para que eram aquellas trevas» = 'para qué'). Y ojo, que la regência hermana «dizer para + persona» SÍ está atestada siete veces en la propia Biblioteca — el «para» no está prohibido en europeo; lo que no se dice es «perguntar para alguém». Y ojo con la vecina: «perguntar POR alguém» sí existe, pero significa interesarse por esa persona, no dirigirle la pregunta."
     }
+  },
+  {
+    "id": "b2c2-gj-l10-01",
+    "blockId": 11,
+    "lessonId": "b11-l4-aspecto-e-tempo",
+    "difficulty": 2,
+    "concepts": [
+      "b8-coloc-proclise-negacao"
+    ],
+    "tags": [
+      "b2c2-lote10",
+      "anti-calco"
+    ],
+    "contentHash": "8bfd19cef597cd7b7fd5e7c1b5e7f41edde73a3f251d404ef18dcf19eef4daf2",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 10: 2 linguistas adversariais 2026-09-03 (docs/contenido/2026-09-03-lote10-b2c2-v3.md)",
+    "register": "neutro",
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Ontem à noite não disse-me nada sobre o que tinha acontecido na reunião.",
+      "verdict": false,
+      "explanationEs": "Con el verbo **finito**, «não» obliga a la próclise: el clítico va delante. Es de las reglas de colocación más firmes del portugués, y vale igual en Portugal y en Brasil. (Con infinitivo la cosa se afloja: «para não lhe dizer» y «para não dizer-lhe» son las dos correctas.) Ojo: aquí el español **no** te traiciona —dice también «no me dijo nada»—, así que el fallo no viene de traducir a bulto.",
+      "repair": "Ontem à noite não me disse nada sobre o que tinha acontecido na reunião."
+    }
+  },
+  {
+    "id": "b2c2-gj-l10-02",
+    "blockId": 11,
+    "lessonId": "b11-l4-aspecto-e-tempo",
+    "difficulty": 2,
+    "concepts": [
+      "b5-se-condicional"
+    ],
+    "tags": [
+      "b2c2-lote10",
+      "anti-calco"
+    ],
+    "contentHash": "c4d94be6c73d7d36f456292807bbcc09701820bf7eecbe1be8c2f4e737a8d0c3",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 10: 2 linguistas adversariais 2026-09-03 (docs/contenido/2026-09-03-lote10-b2c2-v3.md)",
+    "register": "informal",
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Se eu seria mais novo, ainda iria convosco à serra no próximo fim de semana.",
+      "verdict": false,
+      "explanationEs": "La prótasis de una condición hipotética va en **imperfeito do conjuntivo**, nunca en condicional: «se eu fosse». El condicional se queda para la apódosis («iria»). El español estándar tampoco admite «si yo sería», así que aquí el calco no viene de la lengua materna sino de la simetría aparente entre las dos mitades.",
+      "repair": "Se eu fosse mais novo, ainda iria convosco à serra no próximo fim de semana."
+    },
+    "address": "tu"
+  },
+  {
+    "id": "b2c2-gj-l10-03",
+    "blockId": 11,
+    "lessonId": "b11-l4-aspecto-e-tempo",
+    "difficulty": 2,
+    "concepts": [
+      "b11-aspecto-tempo"
+    ],
+    "tags": [
+      "b2c2-lote10",
+      "anti-calco"
+    ],
+    "contentHash": "8b9c3704f805e376925a81b96340acb50050a8f5bbaceed7048a4709f5237ff1",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 10: 2 linguistas adversariais 2026-09-03 (docs/contenido/2026-09-03-lote10-b2c2-v3.md)",
+    "register": "neutro",
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Costumo deitar-me tarde, mesmo quando tenho de acordar cedo no dia seguinte.",
+      "verdict": true,
+      "explanationEs": "«Costumar + infinitivo» es la manera europea corriente de decir la habitualidad. Y la ênclise «levantar-me» es la colocación por defecto, sin atractor que la mueva."
+    }
+  },
+  {
+    "id": "b2c2-gj-l10-04",
+    "blockId": 11,
+    "lessonId": "b11-l4-aspecto-e-tempo",
+    "difficulty": 2,
+    "concepts": [
+      "b6-pres-subj-disparadores"
+    ],
+    "tags": [
+      "b2c2-lote10",
+      "anti-calco"
+    ],
+    "contentHash": "950a2fbce6d8cfd3b9c4e5d1631071f856c32bf1e9bf6ec49a00fd2357bd69bf",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 10: 2 linguistas adversariais 2026-09-03 (docs/contenido/2026-09-03-lote10-b2c2-v3.md)",
+    "register": "informal",
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Espero que o teu irmão vem connosco ao casamento no sábado que vem.",
+      "verdict": false,
+      "explanationEs": "«Esperar que» rige **conjuntivo** en portugués igual que en español («espero que venga»). El error es de los que delatan que el alumno reconoce el conjuntivo pero no lo dispara, porque «vem» y «venha» suenan cerca y la frase parece completa sin él. (Con futuro y valor de convicción firme aparece a veces el indicativo —«espero que virá»—, pero es uso marginal; con el presente simple, como aquí, la norma no lo admite.)",
+      "repair": "Espero que o teu irmão venha connosco ao casamento no sábado que vem."
+    },
+    "address": "tu"
+  },
+  {
+    "id": "b2c2-gj-l10-05",
+    "blockId": 11,
+    "lessonId": "b11-l4-aspecto-e-tempo",
+    "difficulty": 2,
+    "concepts": [
+      "b11-aspecto-tempo"
+    ],
+    "tags": [
+      "b2c2-lote10",
+      "anti-calco"
+    ],
+    "contentHash": "5e5f0a7636fd5c0c92a529780c2c6782758554ddaa5fb58827d56219125f990b",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 10: 2 linguistas adversariais 2026-09-03 (docs/contenido/2026-09-03-lote10-b2c2-v3.md)",
+    "register": "neutro",
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Hei de lhe pedir desculpa quando estivermos os dois mais calmos, que isto assim não pode ficar.",
+      "verdict": true,
+      "explanationEs": "«Haver de + infinitivo» es la perífrasis europea de intención firme, que el español no tiene con ese valor; en predicado complejo el clítico sale del dominio del verbo finito («Has de te lembrar», Eça). Y «quando nos virmos» es futuro do conjuntivo, obligatorio tras «quando» **en oración subordinada temporal** de futuro (en la interrogativa no: «Quando nos vemos?» está bien)."
+    }
+  },
+  {
+    "id": "b2c2-gj-l10-06",
+    "blockId": 11,
+    "lessonId": "b11-l4-aspecto-e-tempo",
+    "difficulty": 2,
+    "concepts": [
+      "b11-aspecto-tempo"
+    ],
+    "tags": [
+      "b2c2-lote10",
+      "anti-calco"
+    ],
+    "contentHash": "fd4bb0079f879e7361635eae7bb384df56f48e47b1875e671f2914d840737aa2",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 10: 2 linguistas adversariais 2026-09-03 (docs/contenido/2026-09-03-lote10-b2c2-v3.md)",
+    "register": "neutro",
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Depois daquele telefonema fiquei a remoer o assunto a noite inteira e não preguei olho.",
+      "verdict": true,
+      "explanationEs": "«Ficar a + infinitivo» expresa que la acción CONTINÚA a partir de un punto, y es de lo más corriente en Portugal. El español lo resuelve con «me quedé pensando»: la norma europea de hoy prefiere el infinitivo, «ficar a pensar» (en Eça y en Camilo todavía encontrarás «ficou pensando»)."
+    }
+  },
+  {
+    "id": "b2c2-gj-l10-08",
+    "blockId": 11,
+    "lessonId": "b11-l4-aspecto-e-tempo",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio"
+    ],
+    "tags": [
+      "b2c2-lote10",
+      "anti-calco"
+    ],
+    "contentHash": "353b56d1ea55fd645775d41c22bc405608bd3d6ae82f438c932b3aca887c01f5",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 10: 2 linguistas adversariais 2026-09-03 (docs/contenido/2026-09-03-lote10-b2c2-v3.md)",
+    "register": "neutro",
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "O meu avô vai perdendo a memória devagar, mas ainda se lembra de todas as cantigas da tropa.",
+      "verdict": true,
+      "explanationEs": "«Ir + gerúndio» **sí** es europeo: marca el avance gradual, y no es el progresivo. Es el contraejemplo que impide leer la regla como «en portugués europeo nunca hay gerundio» — una regla que, así enunciada, es falsa."
+    }
+  },
+  {
+    "id": "b2c2-gj-l10-09",
+    "blockId": 11,
+    "lessonId": "b11-l4-aspecto-e-tempo",
+    "difficulty": 2,
+    "concepts": [
+      "b6-imperfeito-subj"
+    ],
+    "tags": [
+      "b2c2-lote10",
+      "anti-calco"
+    ],
+    "contentHash": "be1d437fe38bc091d7d74bea66c7f1cdc8eda6635285d5333b5e3cb53f4eaa69",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 10: 2 linguistas adversariais 2026-09-03 (docs/contenido/2026-09-03-lote10-b2c2-v3.md)",
+    "register": "neutro",
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Ele saiu de casa sem que ninguém o viu, com os sapatos na mão.",
+      "verdict": false,
+      "explanationEs": "«Sem que» rige **conjuntivo**, y con la principal en pasado pide imperfeito: «visse». El presente «viu» sólo cabría con la principal en presente, y aquí «saiu» la fija en pasado.",
+      "repair": "Ele saiu de casa sem que ninguém o visse, com os sapatos na mão."
+    }
+  },
+  {
+    "id": "b2c2-gj-l10-10",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [
+      "b8-coloc-enclise"
+    ],
+    "tags": [
+      "b2c2-lote10",
+      "anti-calco"
+    ],
+    "contentHash": "f9e875e1f80733b304d7f79e01d7a854bca3e62e6f0d4e6b1d2af3899e1a7774",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 10: 2 linguistas adversariais 2026-09-03 (docs/contenido/2026-09-03-lote10-b2c2-v3.md)",
+    "register": "neutro",
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Deram-me os parabéns pelo trabalho, mas eu bem sei quem fez a parte difícil.",
+      "verdict": true,
+      "explanationEs": "Ênclise en oración afirmativa iniciada por el verbo: «Deram-me» es la colocación por defecto. El motivo va con **por** («pelo trabalho» = por + o). Y cuando aparece el destinatario, el régimen europeo es **a** —«dar os parabéns **a** alguém»—, no «para», que es lo brasileño; aquí el destinatario es el propio clítico «-me»."
+    }
+  },
+  {
+    "id": "b2c2-gj-l10-11",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [
+      "b11-regencias"
+    ],
+    "tags": [
+      "b2c2-lote10",
+      "anti-calco"
+    ],
+    "contentHash": "e13f82fda8d6c5ae5328f7f275515bdd4a975a23069aa976a479bc8e0c04c4be",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 10: 2 linguistas adversariais 2026-09-03 (docs/contenido/2026-09-03-lote10-b2c2-v3.md)",
+    "register": "neutro",
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Chegámos em Faro às seis da tarde, depois de sete horas de comboio.",
+      "verdict": false,
+      "explanationEs": "«Chegar **A**» un sitio; «chegar em» es brasileño. Y «chegámos» con acento es la 1.ª plural del pretérito en la norma europea, donde el presente sería «chegamos» — el acento es facultativo bajo el AO90, pero la oposición sigue viva.",
+      "repair": "Chegámos a Faro às seis da tarde, depois de sete horas de comboio."
+    }
+  },
+  {
+    "id": "b2c2-gj-l10-12",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [
+      "b11-regencias"
+    ],
+    "tags": [
+      "b2c2-lote10",
+      "anti-calco"
+    ],
+    "contentHash": "b86181268a8fa1e22d3d2144063fc96441c57de307247efc1e3030e9e86179f5",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 10: 2 linguistas adversariais 2026-09-03 (docs/contenido/2026-09-03-lote10-b2c2-v3.md)",
+    "register": "neutro",
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Os miúdos costumam obedecer os avós sem discutir, o que já é raro nesta idade.",
+      "verdict": false,
+      "explanationEs": "«Obedecer **A** alguém», con preposición. El error sale de suponer que «obedecer» lleva objeto directo, como en el portugués de Brasil — o de acordarse de que el portugués no tiene «a» personal («Vejo o meu pai») y borrarla también aquí, donde no es personal sino régimen del verbo.",
+      "repair": "Os miúdos costumam obedecer aos avós sem discutir, o que já é raro nesta idade."
+    }
+  },
+  {
+    "id": "b2c2-gj-l10-13",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [
+      "b11-regencias"
+    ],
+    "tags": [
+      "b2c2-lote10",
+      "anti-calco"
+    ],
+    "contentHash": "6c97661c7f0a912b88430626481947e88f5f343096873ef62f4c340a4eff0d99",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 10: 2 linguistas adversariais 2026-09-03 (docs/contenido/2026-09-03-lote10-b2c2-v3.md)",
+    "register": "neutro",
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Repara na camisola nova dele, deve ter custado uma fortuna naquela loja.",
+      "verdict": true,
+      "explanationEs": "«Reparar **EM**» = fijarse en. Con complemento nominal la preposición es la que asegura el sentido de 'fijarse': «reparar **na** camisola». Sin ella, «reparar a camisola» se entiende como arreglarla. (Con oración completiva no hace falta: «Reparei **que** estava rota» también es 'me di cuenta'.)"
+    }
+  },
+  {
+    "id": "b2c2-gj-l10-14",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [
+      "b11-regencias"
+    ],
+    "tags": [
+      "b2c2-lote10",
+      "anti-calco"
+    ],
+    "contentHash": "7f881ab02c0599a5f83e8be33f0a82d7ed0a5e8f88f2da72994ad841478be1ba",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 10: 2 linguistas adversariais 2026-09-03 (docs/contenido/2026-09-03-lote10-b2c2-v3.md)",
+    "register": "neutro",
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Quando entrei na sala sem bater à porta, ele nem sequer deu por mim.",
+      "verdict": true,
+      "explanationEs": "«Entrar **em**» es como el «entrar **en**» de España, pero choca con el «entrar **a**» de América, que es el que te va a salir solo. Y en «bater **à** porta» la preposición es la misma del español («llamar **a** la puerta»); lo que cambia es el verbo y la *contração* con el artículo."
+    }
+  },
+  {
+    "id": "b2c2-gj-l10-16",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [
+      "b8-coloc-enclise"
+    ],
+    "tags": [
+      "b2c2-lote10",
+      "anti-calco"
+    ],
+    "contentHash": "f37e021e67b00d795fbd462da2bf795c031e7b57afea7e86dc379b9ea852265e",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Ola B2C2 lote 10: 2 linguistas adversariais 2026-09-03 (docs/contenido/2026-09-03-lote10-b2c2-v3.md)",
+    "register": "neutro",
+    "type": "grammaticality_judgment",
+    "data": {
+      "sentence": "Casou-se com uma arquiteta que conheceu em Coimbra durante o mestrado.",
+      "verdict": true,
+      "explanationEs": "«Casar-se **COM**», como en español, con el clítico enclítico en la principal afirmativa. La trampa no es la preposición: es que el hispanohablante coloca «se casó» y produce «se casou», con próclise sin atractor que la justifique. Ojo con no aplicar esto de más: en las perífrasis —«hei de te contar», «vou dizer-te»— el clítico puede ir delante del infinitivo sin ningún atractor. La regla del atractor manda sobre el verbo finito **simple**, que es el caso de «casou»."
+    }
   }
 ]
