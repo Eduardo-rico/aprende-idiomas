@@ -7485,5 +7485,1005 @@
       "hintEs": "esdrújula: la -l cae y el acento se queda donde estaba",
       "espejoEs": false
     }
+  },
+  {
+    "id": "co21a-001",
+    "blockId": 2,
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 2,
+    "concepts": [
+      "b2-art-com-nome"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "d6645ef8da9701a3b55b993f822a0d1ac85f62b8473baec0ee4602b72a010be5",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «Juan llegó tarde otra vez.». El gate de variante MUERDE por diseño (la frase mala es la brasileña/española: sin artículo) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "João chegou atrasado outra vez.",
+      "correct": "O João chegou atrasado outra vez.",
+      "alternatives": [],
+      "calcoEs": "Juan llegó tarde otra vez.",
+      "explanationEs": "En portugués europeo el nombre propio de persona lleva artículo cuando se habla de alguien conocido: «o João», «a Maria». El español lo omite, y de ahí sale el error."
+    }
+  },
+  {
+    "id": "co21a-002",
+    "blockId": 2,
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 2,
+    "concepts": [
+      "b2-art-com-nome"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "f7e05d443bf5980fc3b843e7d4dd9c34b020e303f8c9f7cf85216d46dfa87a1d",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «Encontré a Rita en el mercado.». El gate de variante MUERDE por diseño (sin artículo delante del nombre) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Encontrei Rita no mercado.",
+      "correct": "Encontrei a Rita no mercado.",
+      "alternatives": [],
+      "calcoEs": "Encontré a Rita en el mercado.",
+      "explanationEs": "Con nombre propio de persona hace falta el artículo, y aquí además desaparece la «a» de complemento directo que el español pone y el portugués no."
+    }
+  },
+  {
+    "id": "co21a-003",
+    "blockId": 2,
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 2,
+    "concepts": [
+      "b2-art-com-nome"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "e01f4e254034c4698e22fd8bb696555c2ce61744cbcc452d4f985dbf131dffeb",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «Hablé con Pedro sobre el asunto.». El gate de variante MUERDE por diseño (sin artículo tras preposición) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Falei com Pedro sobre o assunto.",
+      "correct": "Falei com o Pedro sobre o assunto.",
+      "alternatives": [],
+      "calcoEs": "Hablé con Pedro sobre el asunto.",
+      "explanationEs": "La preposición no basta: el nombre propio sigue pidiendo artículo. En Portugal «falar com Pedro» marca al hablante como extranjero."
+    }
+  },
+  {
+    "id": "co21a-004",
+    "blockId": 2,
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 2,
+    "concepts": [
+      "b2-art-com-nome"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "ae764a740d230baf358e5173fe2129dfa482b22cd4cb4c8d4692c7deea041b77",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «El libro es de Ana.». El gate de variante MUERDE por diseño (sin contracción, porque falta el artículo) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "O livro é de Ana.",
+      "correct": "O livro é da Ana.",
+      "alternatives": [],
+      "calcoEs": "El libro es de Ana.",
+      "explanationEs": "Con artículo, la preposición se contrae: de + a = «da». Sin él no hay contracción y la frase queda con el molde español."
+    }
+  },
+  {
+    "id": "co21a-005",
+    "blockId": 2,
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 2,
+    "concepts": [
+      "b2-art-com-nome"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "afe6464459f5be373d680e88ea0d1ab13a4bfb00489d1184d7088efbe521f7c1",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «Le pregunté a Sofía si venía.». El gate de variante MUERDE por diseño (sin crase, porque falta el artículo) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Perguntei a Sofia se vinha.",
+      "correct": "Perguntei à Sofia se vinha.",
+      "alternatives": [],
+      "calcoEs": "Le pregunté a Sofía si venía.",
+      "explanationEs": "a + a = «à», con acento grave. El español tiene la misma preposición pero no el artículo, así que la contracción no aparece nunca al traducir literalmente."
+    }
+  },
+  {
+    "id": "co21a-006",
+    "blockId": 2,
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 2,
+    "concepts": [
+      "b2-art-com-nome"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "80cf1ce08f117bc5fd36a40c6a2a04ca819f269a07376b2f43f296f5e3b6b7e1",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «Vamos con Carlos y Teresa.». El gate de variante MUERDE por diseño (dos nombres propios sin artículo) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Vamos com Carlos e Teresa.",
+      "correct": "Vamos com o Carlos e a Teresa.",
+      "alternatives": [],
+      "calcoEs": "Vamos con Carlos y Teresa.",
+      "explanationEs": "Cada nombre propio lleva su artículo, y cada uno el suyo por género. En una enumeración el error se duplica."
+    }
+  },
+  {
+    "id": "co21a-007",
+    "blockId": 2,
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 2,
+    "concepts": [
+      "b2-art-com-nome"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "03fd07d1f935e609c38e02ab43ee2de3a119c5028c9c770e9120b5224aeb0140",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «Le di el recado a Miguel ayer.». El gate de variante MUERDE por diseño (sin contracción por falta de artículo) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Dei o recado a Miguel ontem.",
+      "correct": "Dei o recado ao Miguel ontem.",
+      "alternatives": [],
+      "calcoEs": "Le di el recado a Miguel ayer.",
+      "explanationEs": "a + o = «ao». La contracción sólo aparece si se pone el artículo que el portugués exige delante del nombre."
+    }
+  },
+  {
+    "id": "co21a-008",
+    "blockId": 2,
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 2,
+    "concepts": [
+      "b2-art-com-nome"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "f85a6a66acf8e950c5fbdec1aeccdb21c374cac448e294c4c598dba46c3e305f",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «La casa de Manuel queda allí.». El gate de variante MUERDE por diseño (sin contracción por falta de artículo) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "A casa de Manuel fica ali.",
+      "correct": "A casa do Manuel fica ali.",
+      "alternatives": [],
+      "calcoEs": "La casa de Manuel queda allí.",
+      "explanationEs": "de + o = «do». El español dice «de Manuel» y el portugués «do Manuel», porque el nombre propio va determinado."
+    }
+  },
+  {
+    "id": "co21a-009",
+    "blockId": 2,
+    "lessonId": "b2-l2-genero-gramatical",
+    "difficulty": 2,
+    "concepts": [
+      "b2-genero-agem-dade"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "26b638909f0bb3bc32cec2291fa30884328d906d05aafb8df7fc8ce05486ed70",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «Aplazamos el viaje por culpa del tiempo.». El gate de variante MUERDE por diseño (género calcado del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Adiámos o viagem por causa do tempo.",
+      "correct": "Adiámos a viagem por causa do tempo.",
+      "alternatives": [],
+      "calcoEs": "Aplazamos el viaje por culpa del tiempo.",
+      "explanationEs": "Los sustantivos en -agem son femeninos en portugués. El masculino viene del español «el viaje», que es donde nace el error."
+    }
+  },
+  {
+    "id": "co21a-010",
+    "blockId": 2,
+    "lessonId": "b2-l2-genero-gramatical",
+    "difficulty": 2,
+    "concepts": [
+      "b2-genero-agem-dade"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "1e9e7cad77d36000104ca4a91b1aac51edb20679dbd9ccfaf8cf67319607f1da",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «Dejamos el coche en el garaje.». El gate de variante MUERDE por diseño (contracción masculina por género calcado) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Deixámos o carro no garagem.",
+      "correct": "Deixámos o carro na garagem.",
+      "alternatives": [],
+      "calcoEs": "Dejamos el coche en el garaje.",
+      "explanationEs": "Como «a garagem» es femenino, la contracción es «na» y no «no». El error de género arrastra al de contracción."
+    }
+  },
+  {
+    "id": "co21a-011",
+    "blockId": 2,
+    "lessonId": "b2-l2-genero-gramatical",
+    "difficulty": 2,
+    "concepts": [
+      "b2-genero-agem-dade"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "d42868ea9a31746110d5944fd0135a2e6f35d692b0e0da7b87bb9bc512f7f696",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «El masaje estuvo muy bueno.». El gate de variante MUERDE por diseño (adjetivo en masculino por calco) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "A massagem foi muito bom.",
+      "correct": "A massagem foi muito boa.",
+      "alternatives": [],
+      "calcoEs": "El masaje estuvo muy bueno.",
+      "explanationEs": "El adjetivo tiene que concordar con «a massagem», que es femenino como todo sustantivo en -agem. El español «el masaje» empuja al masculino."
+    }
+  },
+  {
+    "id": "co21a-012",
+    "blockId": 2,
+    "lessonId": "b2-l2-genero-gramatical",
+    "difficulty": 2,
+    "concepts": [
+      "b2-genero-agem-dade"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "8c6cbfb6030b87274c5d563789fb848d060a15bfdf5de6a14a0c7e0c814c4c16",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «El paisaje es muy bonito.». El gate de variante MUERDE por diseño (adjetivo en masculino por calco) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "A paisagem é muito bonito.",
+      "correct": "A paisagem é muito bonita.",
+      "alternatives": [],
+      "calcoEs": "El paisaje es muy bonito.",
+      "explanationEs": "El artículo ya iba bien, pero el adjetivo se quedó en masculino por el español «el paisaje». Con -agem todo concuerda en femenino."
+    }
+  },
+  {
+    "id": "co21a-013",
+    "blockId": 2,
+    "lessonId": "b2-l2-genero-gramatical",
+    "difficulty": 2,
+    "concepts": [
+      "b2-genero-agem-dade"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "2e23d3d9c76d0dd87923c4b6572be375334d88279289b7c8bcad571c30a13f9b",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «Visitamos la ciudad entera en un día.». El gate de variante MUERDE por diseño (género equivocado del sufijo -dade) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Visitámos o cidade inteiro num dia.",
+      "correct": "Visitámos a cidade inteira num dia.",
+      "alternatives": [],
+      "calcoEs": "Visitamos la ciudad entera en un día.",
+      "explanationEs": "Los sustantivos en -dade son femeninos. Aquí el español no ayuda ni estorba —«la ciudad» también lo es— así que el error es del sufijo, no del calco."
+    }
+  },
+  {
+    "id": "co21a-014",
+    "blockId": 2,
+    "lessonId": "b2-l2-genero-gramatical",
+    "difficulty": 2,
+    "concepts": [
+      "b2-genero-agem-dade"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "b94cb0f340d6eaba6a28bd988c16f35fcb8ad0a9bc2de36a0e73f94f015cd13d",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «Nadie dudó de la verdad.». El gate de variante MUERDE por diseño (contracción masculina con sustantivo femenino) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ninguém duvidou do verdade.",
+      "correct": "Ninguém duvidou da verdade.",
+      "alternatives": [],
+      "calcoEs": "Nadie dudó de la verdad.",
+      "explanationEs": "de + a = «da», porque «a verdade» es femenino como todos los sustantivos en -dade."
+    }
+  },
+  {
+    "id": "co21a-015",
+    "blockId": 2,
+    "lessonId": "b2-l2-genero-gramatical",
+    "difficulty": 2,
+    "concepts": [
+      "b2-genero-agem-dade"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "762bd9f11f70cdb04ec8c85cb9adbebf904db28dd92803d05cf0d57d58849d1a",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «La universidad está cerrado hoy.». El gate de variante MUERDE por diseño (participio sin concordar) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "A universidade está fechado hoje.",
+      "correct": "A universidade está fechada hoje.",
+      "alternatives": [],
+      "calcoEs": "La universidad está cerrado hoy.",
+      "explanationEs": "El participio concuerda con «a universidade», femenino como todos los sustantivos en -dade. Aquí el descuido no viene del español, que también lo tiene femenino: viene de no aplicar el sufijo."
+    }
+  },
+  {
+    "id": "co21a-016",
+    "blockId": 2,
+    "lessonId": "b2-l2-genero-gramatical",
+    "difficulty": 2,
+    "concepts": [
+      "b2-genero-agem-dade"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "9646aa780e6c9298acbe30af55ca6a3288276442a087a085a4fc350f62a37b4b",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «Hicimos un reportaje sobre el mismo tema, muy completo.». El gate de variante MUERDE por diseño (concordancia a distancia calcada) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Fizemos uma reportagem sobre o mesmo tema, muito completo.",
+      "correct": "Fizemos uma reportagem sobre o mesmo tema, muito completa.",
+      "alternatives": [],
+      "calcoEs": "Hicimos un reportaje sobre el mismo tema, muy completo.",
+      "explanationEs": "El adjetivo final describe la reportagem, que es femenina; el español «un reportaje» empuja al masculino y arrastra la concordancia a distancia."
+    }
+  },
+  {
+    "id": "co21a-017",
+    "blockId": 2,
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 2,
+    "concepts": [
+      "b2-art-com-posesivo"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "79911a11c74839d0f04d2daa68106e0aad925a00d90338fe8e4e82ff730a8691",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «Mi casa queda cerca de la estación.». El gate de variante MUERDE por diseño (posesivo sin artículo: forma brasileña) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Minha casa fica perto da estação.",
+      "correct": "A minha casa fica perto da estação.",
+      "alternatives": [],
+      "calcoEs": "Mi casa queda cerca de la estación.",
+      "explanationEs": "El portugués europeo pone artículo delante del posesivo. Sin él la frase es española o brasileña, pero no de Lisboa."
+    }
+  },
+  {
+    "id": "co21a-018",
+    "blockId": 2,
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 2,
+    "concepts": [
+      "b2-art-com-posesivo"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "656da34a1800c2862a1c67f7c6cd98e2f18e42523e655b172355a9cc71ca2b74",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «Dejé tus llaves encima de la mesa.». El gate de variante MUERDE por diseño (posesivo sin artículo) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Deixei tuas chaves em cima da mesa.",
+      "correct": "Deixei as tuas chaves em cima da mesa.",
+      "alternatives": [],
+      "calcoEs": "Dejé tus llaves encima de la mesa.",
+      "explanationEs": "También en plural: «as tuas chaves». El artículo va delante del posesivo, no se elige."
+    }
+  },
+  {
+    "id": "co21a-019",
+    "blockId": 2,
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 2,
+    "concepts": [
+      "b2-art-com-posesivo"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "68e3b849354163d9906b5e827014b50ae86f0a8a9ba7ec007eec83a3bffc2bab",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «Perdí mi paraguas en el tren.». El gate de variante MUERDE por diseño (posesivo sin artículo) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Perdi meu guarda-chuva no comboio.",
+      "correct": "Perdi o meu guarda-chuva no comboio.",
+      "alternatives": [],
+      "calcoEs": "Perdí mi paraguas en el tren.",
+      "explanationEs": "Artículo y posesivo van juntos: «o meu guarda-chuva». Es de las marcas que más rápido delatan a un hispanohablante en Portugal."
+    }
+  },
+  {
+    "id": "co21a-020",
+    "blockId": 2,
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 2,
+    "concepts": [
+      "b2-art-com-posesivo"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "c6266b5f8edf1f6ae66f8e82724dee4202d51be1294a66e0b64969f4d427dde8",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «Hablamos con tus padres el domingo.». El gate de variante MUERDE por diseño (posesivo sin artículo) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Falámos com teus pais no domingo.",
+      "correct": "Falámos com os teus pais no domingo.",
+      "alternatives": [],
+      "calcoEs": "Hablamos con tus padres el domingo.",
+      "explanationEs": "Ni siquiera los nombres de parentesco en plural se libran: «os teus pais»."
+    }
+  },
+  {
+    "id": "co21a-021",
+    "blockId": 2,
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 2,
+    "concepts": [
+      "b2-art-com-posesivo"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "02a8269c3e45628cf9147dbf041329037fc09e3094be15b03a4d42c9afbe95ae",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «Me gusta mucho su idea.». El gate de variante MUERDE por diseño (sin contracción por falta de artículo) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Gosto muito de sua ideia.",
+      "correct": "Gosto muito da sua ideia.",
+      "alternatives": [],
+      "calcoEs": "Me gusta mucho su idea.",
+      "explanationEs": "Con artículo la preposición se contrae: de + a = «da sua ideia». Sin él, la contracción desaparece y queda el molde español."
+    }
+  },
+  {
+    "id": "co21a-022",
+    "blockId": 2,
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 2,
+    "concepts": [
+      "b2-art-com-posesivo"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "816dfd768de154d1ac7548b388f2e2582ec38f55778cbdae97143f0e30fdc368",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «En nuestra oficina trabajan ocho personas.». El gate de variante MUERDE por diseño (sin contracción por falta de artículo) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Em nosso escritório trabalham oito pessoas.",
+      "correct": "No nosso escritório trabalham oito pessoas.",
+      "alternatives": [],
+      "calcoEs": "En nuestra oficina trabajan ocho personas.",
+      "explanationEs": "em + o = «no». El artículo que el posesivo exige es el que permite la contracción."
+    }
+  },
+  {
+    "id": "co21a-023",
+    "blockId": 2,
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 2,
+    "concepts": [
+      "b2-art-com-posesivo"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "86c0e50adc4508d631179acb78b5a6ff5552e7d5f707dc5cd761af25c1c57ee5",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «Traje esto para vuestro hijo.». El gate de variante MUERDE por diseño (posesivo sin artículo) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Trouxe isto para vosso filho.",
+      "correct": "Trouxe isto para o vosso filho.",
+      "alternatives": [],
+      "calcoEs": "Traje esto para vuestro hijo.",
+      "explanationEs": "Con «para» no hay contracción, pero el artículo sigue haciendo falta: «para o vosso filho»."
+    }
+  },
+  {
+    "id": "co21a-024",
+    "blockId": 2,
+    "lessonId": "b2-l1-artigos-contracoes",
+    "difficulty": 2,
+    "concepts": [
+      "b2-artigos"
+    ],
+    "tags": [
+      "e2-21a",
+      "correccion"
+    ],
+    "contentHash": "14ea082b56e08f813463e5c23db00f6e2a4624e0ca5024bfa96a03064b098378",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21A: la frase mala es el calco de «Portugal es país pequeño pero variado.». El gate de variante MUERDE por diseño (predicado nominal sin artículo, calcado) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Portugal é país pequeno mas variado.",
+      "correct": "Portugal é um país pequeno mas variado.",
+      "alternatives": [],
+      "calcoEs": "Portugal es país pequeño pero variado.",
+      "explanationEs": "El español admite el predicado nominal sin artículo en este giro; el portugués pide el indefinido: «é um país»."
+    }
+  },
+  {
+    "id": "co21b-009",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-dem-neutros"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "fc74ad3f16f101e9e4ad03ff970ec430a9f9c9417b2ee7551d88ede604516752",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «No me gusta esto.». El gate de variante MUERDE por diseño (preposición sin contraer) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Não gosto de isto.",
+      "correct": "Não gosto disto.",
+      "alternatives": [],
+      "calcoEs": "No me gusta esto.",
+      "explanationEs": "La preposición se contrae obligatoriamente con el demostrativo neutro: de + isto = «disto». El español los deja separados y por eso el calco no contrae."
+    }
+  },
+  {
+    "id": "co21b-010",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-dem-neutros"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "c503a836aea71961413959bc24db320b62581014e6c54f8af41dc102f9a13512",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «Nadie habló de eso en la reunión.». El gate de variante MUERDE por diseño (preposición sin contraer) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ninguém falou de isso na reunião.",
+      "correct": "Ninguém falou disso na reunião.",
+      "alternatives": [],
+      "calcoEs": "Nadie habló de eso en la reunión.",
+      "explanationEs": "de + isso = «disso». La contracción no es opcional ni de registro: es obligatoria."
+    }
+  },
+  {
+    "id": "co21b-011",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-dem-neutros"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "ffb755a0ed8fea8dea6b383a605b8bed43604fff4cf5997959287ef3df847559",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «No quiero pensar en aquello ahora.». El gate de variante MUERDE por diseño (preposición sin contraer) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Não quero pensar em aquilo agora.",
+      "correct": "Não quero pensar naquilo agora.",
+      "alternatives": [],
+      "calcoEs": "No quiero pensar en aquello ahora.",
+      "explanationEs": "em + aquilo = «naquilo». El español mantiene «en aquello» separado, y el calco copia esa separación."
+    }
+  },
+  {
+    "id": "co21b-012",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-dem-neutros"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "dab9c7c5f6f58ed74ee7608bc971cb2c50c0a7b02d2eae0d6c8d11dbfcb5ec4d",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «En esto estamos todos de acuerdo.». El gate de variante MUERDE por diseño (preposición sin contraer) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Em isto estamos todos de acordo.",
+      "correct": "Nisto estamos todos de acordo.",
+      "alternatives": [],
+      "calcoEs": "En esto estamos todos de acuerdo.",
+      "explanationEs": "em + isto = «nisto», también al principio de la frase."
+    }
+  },
+  {
+    "id": "co21b-013",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-dem-neutros"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "860e4e0b2004965c21fbbbcba750421fd7bfcac811a026dea5db644f9386504d",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «Él nunca se acuerda de aquello que promete.». El gate de variante MUERDE por diseño (preposición sin contraer) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ele nunca se lembra de aquilo que promete.",
+      "correct": "Ele nunca se lembra daquilo que promete.",
+      "alternatives": [],
+      "calcoEs": "Él nunca se acuerda de aquello que promete.",
+      "explanationEs": "de + aquilo = «daquilo». La contracción se mantiene aunque siga una relativa."
+    }
+  },
+  {
+    "id": "co21b-014",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-dem-neutros"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "146cec0bd5036f096b96c4a19a4154c1dfe193111123951201f4fd6a0e762bb3",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «No me refiero a esto, me refiero a aquello.». El gate de variante MUERDE por diseño (sin crase con «aquilo») — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Não me refiro a isto, refiro-me a aquilo.",
+      "correct": "Não me refiro a isto, refiro-me àquilo.",
+      "alternatives": [],
+      "calcoEs": "No me refiero a esto, me refiero a aquello.",
+      "explanationEs": "a + aquilo = «àquilo», con acento grave. Con «isto» y «isso» la preposición «a» no se contrae, y por eso la primera mitad de la frase se queda como está: la contracción sólo ocurre con el grado lejano."
+    }
+  },
+  {
+    "id": "co21b-015",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-dem-neutros"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "c9db0d9de9e4c8d4dd41bbfc3ababe2604545e4f090242c845f86e58a30c86ba",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «Eso es lo que yo decía, eso mismo.». El gate de variante MUERDE por diseño (masculino donde el portugués pide neutro) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Isso é o que eu dizia, este mesmo.",
+      "correct": "Isso é o que eu dizia, isso mesmo.",
+      "alternatives": [],
+      "calcoEs": "Eso es lo que yo decía, eso mismo.",
+      "explanationEs": "El neutro no tiene forma masculina: para referirse a una idea, y no a un objeto de género conocido, se repite «isso» y no «este»."
+    }
+  },
+  {
+    "id": "co21b-016",
+    "blockId": 2,
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-plural-m-r-s"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "e19d6f7c938d4f0323b6299eb56de002f94ed993ade35ab826f7ff7c8d9786c0",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «Vinieron tres hombres a la puerta.». El gate de variante MUERDE por diseño (plural formado a la española) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Vieram três homems à porta.",
+      "correct": "Vieram três homens à porta.",
+      "alternatives": [],
+      "calcoEs": "Vinieron tres hombres a la puerta.",
+      "explanationEs": "Las palabras acabadas en -m hacen el plural en -ns: «homem» → «homens». El español no tiene esa alternancia y el calco añade la -s directamente."
+    }
+  },
+  {
+    "id": "co21b-017",
+    "blockId": 2,
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-plural-m-r-s"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "0cbd77c4968f2d6838f050a8854dd008d5117fd978c2ed0fe95f00fd45d3248b",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «La ciudad tiene muchos jardines.». El gate de variante MUERDE por diseño (plural formado a la española) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "A cidade tem muitos jardims.",
+      "correct": "A cidade tem muitos jardins.",
+      "alternatives": [],
+      "calcoEs": "La ciudad tiene muchos jardines.",
+      "explanationEs": "-m → -ns: «jardim» → «jardins». La regla no admite excepciones útiles."
+    }
+  },
+  {
+    "id": "co21b-018",
+    "blockId": 2,
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-plural-m-r-s"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "d5d7725c893dab922768f0855785121f7f7aaec2253f602de84105f947906fe3",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «Faltan dos viajes en el informe.». El gate de variante MUERDE por diseño (género y plural calcados) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Faltam dois viagems no relatório.",
+      "correct": "Faltam duas viagens no relatório.",
+      "alternatives": [],
+      "calcoEs": "Faltan dos viajes en el informe.",
+      "explanationEs": "Doble error de calco: «viagem» es femenino y su plural es «viagens», con -ns."
+    }
+  },
+  {
+    "id": "co21b-019",
+    "blockId": 2,
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-plural-m-r-s"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "df74a35632657438137c20d2f7a88186138fb1ce32d0641d95b5438eba9b5668",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «Conozco a dos mujeres de esta tierra.». El gate de variante MUERDE por diseño (plural formado a la española) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Conheço duas mulhers desta terra.",
+      "correct": "Conheço duas mulheres desta terra.",
+      "alternatives": [],
+      "calcoEs": "Conozco a dos mujeres de esta tierra.",
+      "explanationEs": "Las acabadas en -r añaden -es: «mulher» → «mulheres». El calco pone sólo la -s, como en español."
+    }
+  },
+  {
+    "id": "co21b-020",
+    "blockId": 2,
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-plural-m-r-s"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "ccc80e2b6959ca6578a93531346ee7c9ddeaa81d821ce2d5fad03ae2f640237f",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «Visitamos dos países vecinos y tres mares.». El gate de variante MUERDE por diseño (plural formado a la española) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Visitámos dois países vizinhos e três mars.",
+      "correct": "Visitámos dois países vizinhos e três mares.",
+      "alternatives": [],
+      "calcoEs": "Visitamos dos países vecinos y tres mares.",
+      "explanationEs": "«Mar» → «mares», con -es como todas las acabadas en -r."
+    }
+  },
+  {
+    "id": "co21b-021",
+    "blockId": 2,
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-plural-m-r-s"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "2fa621c38e0ac808107b05544530ddf006a98fd83b76560a3772048cdb1562c7",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «Pasaron seis meses desde entonces.». El gate de variante MUERDE por diseño (acento conservado en plural) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Passaram-se seis mêses desde então.",
+      "correct": "Passaram-se seis meses desde então.",
+      "alternatives": [],
+      "calcoEs": "Pasaron seis meses desde entonces.",
+      "explanationEs": "«Mês» pierde el acento en plural: «meses». El circunflejo sólo hace falta en singular, donde marca la tónica final."
+    }
+  },
+  {
+    "id": "co21b-022",
+    "blockId": 2,
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-plural-m-r-s"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "7668e131036eeebe0d728dc9503af58919bc11b4a63c86d939d8e9987642a2fe",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «Compré dos lápices azules.». El gate de variante MUERDE por diseño (plural inventado sobre invariable) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Comprei dois lápises azuis.",
+      "correct": "Comprei dois lápis azuis.",
+      "alternatives": [],
+      "calcoEs": "Compré dos lápices azules.",
+      "explanationEs": "Las palabras esdrújulas acabadas en -s son invariables: «o lápis» / «os lápis». El español las pluraliza y el calco inventa una forma que no existe."
+    }
+  },
+  {
+    "id": "co21b-023",
+    "blockId": 2,
+    "lessonId": "b2-l2-genero-gramatical",
+    "difficulty": 2,
+    "concepts": [
+      "b2-genero-divergente"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "917e9ade782afe4f9a8e56028db093acbbcf05f469ee3bc356cc8eeb203e8cd3",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «La leche está fría.». El gate de variante MUERDE por diseño (género calcado del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "A leite está fria.",
+      "correct": "O leite está frio.",
+      "alternatives": [],
+      "calcoEs": "La leche está fría.",
+      "explanationEs": "«O leite» es masculino en portugués y femenino en español. El calco arrastra el artículo y el adjetivo."
+    }
+  },
+  {
+    "id": "co21b-024",
+    "blockId": 2,
+    "lessonId": "b2-l2-genero-gramatical",
+    "difficulty": 2,
+    "concepts": [
+      "b2-genero-divergente"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "51d21e240c77bd14ac5921f5f341d01b5e25c8067707ceac7fd9085ac6019260",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «Cruzamos el puente a pie.». El gate de variante MUERDE por diseño (género calcado del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Atravessámos o ponte a pé.",
+      "correct": "Atravessámos a ponte a pé.",
+      "alternatives": [],
+      "calcoEs": "Cruzamos el puente a pie.",
+      "explanationEs": "«A ponte» es femenino en portugués y «el puente» masculino en español: es de los pares de género que más se fallan."
+    }
   }
 ]

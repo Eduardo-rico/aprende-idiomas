@@ -9965,5 +9965,209 @@
       "hintEs": "con «não» delante, el pronombre se adelanta al verbo",
       "espejoEs": false
     }
+  },
+  {
+    "id": "co21b-001",
+    "blockId": 3,
+    "lessonId": "b3-l2-pronombres-personales",
+    "difficulty": 2,
+    "concepts": [
+      "b3-interrogativos"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "ed3208b7bfcbfa513ccf54c771d8f7fa8428b93b570e2eede3afe638509327fa",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «¿Qué hora es ahora?». El gate de variante MUERDE por diseño (singular calcado del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Que hora é agora?",
+      "correct": "Que horas são agora?",
+      "alternatives": [],
+      "calcoEs": "¿Qué hora es ahora?",
+      "explanationEs": "El portugués pregunta la hora en PLURAL: «que horas são». El español lo hace en singular y de ahí sale el calco, que además arrastra el verbo."
+    }
+  },
+  {
+    "id": "co21b-002",
+    "blockId": 3,
+    "lessonId": "b3-l2-pronombres-personales",
+    "difficulty": 2,
+    "concepts": [
+      "b3-interrogativos"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "1e13082e8935f2603e01113bc9a3a0f9a5762f08d3c083497eb08ae40ddb12cf",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «¿Qué es esto que está aquí?». El gate de variante MUERDE por diseño («que» sin el artículo que el portugués exige) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Que é isto que está aqui?",
+      "correct": "O que é isto que está aqui?",
+      "alternatives": [
+        "O que é que é isto que está aqui?"
+      ],
+      "calcoEs": "¿Qué es esto que está aquí?",
+      "explanationEs": "Cuando «que» va solo, sin sustantivo detrás, el portugués corriente pide «o que». El español no tiene ese artículo y el calco lo deja desnudo."
+    }
+  },
+  {
+    "id": "co21b-003",
+    "blockId": 3,
+    "lessonId": "b3-l2-pronombres-personales",
+    "difficulty": 2,
+    "concepts": [
+      "b3-interrogativos"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "5b0de79b0dd1e62629437538bf3281e47e96062db18c4bde4a9ef81f14945592",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «No sé qué hacer con esto.». El gate de variante MUERDE por diseño («que» sin artículo) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Não sei que fazer com isto.",
+      "correct": "Não sei o que fazer com isto.",
+      "alternatives": [],
+      "calcoEs": "No sé qué hacer con esto.",
+      "explanationEs": "También en interrogativa indirecta: «não sei o que fazer». El artículo no es opcional cuando «que» va sin sustantivo."
+    }
+  },
+  {
+    "id": "co21b-004",
+    "blockId": 3,
+    "lessonId": "b3-l2-pronombres-personales",
+    "difficulty": 2,
+    "concepts": [
+      "b3-interrogativos"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "ec9789791686a0fee47c73410e9941687b6f642e405eb2d171085d0f028c6409",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «¿Por qué no viniste ayer?». El gate de variante MUERDE por diseño (separación calcada del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Por que não vieste ontem?",
+      "correct": "Porque não vieste ontem?",
+      "alternatives": [
+        "Por que razão não vieste ontem?"
+      ],
+      "calcoEs": "¿Por qué no viniste ayer?",
+      "explanationEs": "En la pregunta directa el portugués europeo escribe «porque» junto y sin acento. El español separa «por qué» y el calco copia la separación."
+    }
+  },
+  {
+    "id": "co21b-005",
+    "blockId": 3,
+    "lessonId": "b3-l2-pronombres-personales",
+    "difficulty": 2,
+    "concepts": [
+      "b3-interrogativos"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "a0d32403b022d6716976e9d9707f2b54c61ab5f763aaee2e857a5d5620a30791",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «No viniste y no sé por qué.». El gate de variante MUERDE por diseño (forma separada donde el portugués usa la tónica) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Não vieste e não sei por que.",
+      "correct": "Não vieste e não sei porquê.",
+      "alternatives": [],
+      "calcoEs": "No viniste y no sé por qué.",
+      "explanationEs": "Al final de la frase, aislado, el portugués usa «porquê» junto y con acento. Es la forma tónica, y el español no tiene esa distinción gráfica."
+    }
+  },
+  {
+    "id": "co21b-006",
+    "blockId": 3,
+    "lessonId": "b3-l2-pronombres-personales",
+    "difficulty": 2,
+    "concepts": [
+      "b3-interrogativos"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "a0863272a05682a69171cd6cfbdd5da272c1e42421e883f24068544110350100",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «Me explicó el porqué de la decisión.». El gate de variante MUERDE por diseño (sustantivo escrito separado) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Explicou-me o por que da decisão.",
+      "correct": "Explicou-me o porquê da decisão.",
+      "alternatives": [],
+      "calcoEs": "Me explicó el porqué de la decisión.",
+      "explanationEs": "Como sustantivo lleva artículo y va junto y con acento: «o porquê». El español también lo escribe junto aquí, pero el calco arrastra la forma separada de las otras posiciones."
+    }
+  },
+  {
+    "id": "co21b-007",
+    "blockId": 3,
+    "lessonId": "b3-l2-pronombres-personales",
+    "difficulty": 2,
+    "concepts": [
+      "b3-interrogativos"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "e8467ce14add1db7ee9400376ddf17a7c034925387379b41942f6b20cf886205",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «No fui porque estaba enfermo.». El gate de variante MUERDE por diseño (acento donde no toca) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Não fui porquê estava doente.",
+      "correct": "Não fui porque estava doente.",
+      "alternatives": [],
+      "calcoEs": "No fui porque estaba enfermo.",
+      "explanationEs": "La conjunción causal va junta y SIN acento: «porque». El acento es sólo de la forma tónica, la que va aislada o sustantivada."
+    }
+  },
+  {
+    "id": "co21b-008",
+    "blockId": 3,
+    "lessonId": "b3-l2-pronombres-personales",
+    "difficulty": 2,
+    "concepts": [
+      "b3-interrogativos"
+    ],
+    "tags": [
+      "e2-21b",
+      "correccion"
+    ],
+    "contentHash": "b6468066cc3273501c54255745ba539ede2f0e516627bf7bf416f935bc2a35a7",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21B: la frase mala es el calco de «¿Por qué camino vamos hoy?». El gate de variante MUERDE por diseño (forma junta donde el portugués separa) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Porque caminho vamos hoje?",
+      "correct": "Por que caminho vamos hoje?",
+      "alternatives": [],
+      "calcoEs": "¿Por qué camino vamos hoy?",
+      "explanationEs": "Cuando «por que» va seguido de un sustantivo se escribe SEPARADO: «por que caminho», «por que motivo». Es la cuarta forma del paradigma, y la que se pierde en cuanto uno aprende que la pregunta suelta va junta."
+    }
   }
 ]

@@ -147,6 +147,16 @@ const ChunkData = z.object({
 // ─── Plan 5a: new text-only exercise types ─────────────────────
 export const ErrorCorrectionData = z.object({
   sentence: z.string().min(1), correct: z.string().min(1), explanationEs: z.string().min(1),
+  // E2#21: `alternatives` no existía, y una corrección admite más de una
+  // salida válida más veces de lo que parece. Sin declararlas, la tarjeta
+  // suspende a quien corrige bien de otra manera — la misma familia del
+  // punto final que se cerró en E2#19, y el fallo falso entra en el FSRS.
+  alternatives: z.array(z.string()).default([]),
+  // El CALCO del que sale la frase mala: la oración española que el
+  // alumno traduce literalmente. Va en el dato porque es lo que hace
+  // legítimo el ejercicio — si el error no es el que un hispanohablante
+  // comete de verdad, el ítem no mide su interlengua, mide otra cosa.
+  calcoEs: z.string().optional(),
 });
 export const ConjugationData = z.object({
   infinitive: z.string().min(1), person: z.string().min(1), tense: z.string().min(1),

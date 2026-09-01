@@ -9,12 +9,20 @@ import { answersMatchFinal } from "@/lib/exercises/normalize";
 interface Props { ex: Exercise; onSubmit: (answer: string, correct: boolean) => void; }
 export function ErrorCorrectionCard({ ex, onSubmit }: Props) {
   const { variant } = useSettings();
-  const data = resolveExerciseData(ex, variant) as { sentence: string; correct: string; explanationEs: string };
+  const data = resolveExerciseData(ex, variant) as {
+    sentence: string; correct: string; explanationEs: string; alternatives?: string[];
+  };
   const [input, setInput] = useState("");
   const [revealed, setRevealed] = useState(false);
-  const submit = () => { // `answersMatchFinal`: su `correct` es una FRASE ENTERA, así que
-    // tenía el mismo agujero del punto final que las otras tres tarjetas.
-    const ok = answersMatchFinal(input, data.correct); setRevealed(true); onSubmit(input, ok); };
+  const submit = () => {
+    // `answersMatchFinal`: el `correct` es una FRASE ENTERA, así que tenía
+    // el mismo agujero del punto final que las otras tres tarjetas. Y las
+    // alternativas cuentan: una corrección admite más de una salida buena.
+    const aceptadas = [data.correct, ...(data.alternatives ?? [])];
+    const ok = aceptadas.some((a) => answersMatchFinal(input, a));
+    setRevealed(true);
+    onSubmit(input, ok);
+  };
   return (
     <div className="p-8 border-2 border-border rounded-2xl space-y-6">
       <div className="text-sm text-muted-foreground text-center">Corrige el error:</div>
