@@ -24,7 +24,7 @@
 // respuesta es derivable NO verifica que la pregunta la determine.**
 // Cada ítem declara su ANCLA, el trozo del contexto que excluye las
 // alternativas, y el gate comprueba que esté literalmente en la frase.
-import { conjugar, futuro, type Persona, type Tiempo } from '../lib/paradigma-pt';
+import { conjugar, futuro, condicional, imperfeitoConjuntivo, futuroConjuntivo, mqpComposto, infinitivoPessoal, type Persona, type Tiempo } from '../lib/paradigma-pt';
 
 export interface Cloze {
   p: string;            // punto
@@ -33,7 +33,7 @@ export interface Cloze {
   pista: string;        // hintEs: la pista que DETERMINA
   ancla: string;        // el trozo que excluye las alternativas
   /** derivada: lema + tiempo + persona; el gate recalcula */
-  lema?: string; t?: Tiempo | 'futuro'; per?: Persona;
+  lema?: string; t?: Tiempo | 'futuro' | 'condicional' | 'imperfSubj' | 'futSubj' | 'mqp' | 'infPess'; per?: Persona;
   /** declarada, donde el paradigma no llega */
   r?: string;
   alt?: string[];
@@ -262,7 +262,15 @@ export const ITEMS: Cloze[] = [
 export function respuestaDe(x: Cloze): string | null {
   if (x.r) return x.r;
   if (!x.lema || !x.t || !x.per) return null;
-  return x.t === 'futuro' ? futuro(x.lema, x.per) : conjugar(x.lema, x.t as Tiempo, x.per);
+  switch (x.t) {
+    case 'futuro': return futuro(x.lema, x.per);
+    case 'condicional': return condicional(x.lema, x.per);
+    case 'imperfSubj': return imperfeitoConjuntivo(x.lema, x.per);
+    case 'futSubj': return futuroConjuntivo(x.lema, x.per);
+    case 'mqp': return mqpComposto(x.lema, x.per);
+    case 'infPess': return infinitivoPessoal(x.lema, x.per);
+    default: return conjugar(x.lema, x.t as Tiempo, x.per);
+  }
 }
 
 const norm = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
@@ -277,7 +285,14 @@ export function verificar(items: Cloze[]): string[] {
 
     const huecos = x.s.split('___').length - 1;
     if (huecos !== 1) v.push(`${id}: ${huecos} huecos, tiene que haber 1`);
-    if (!/\([^)]+\)/.test(x.s)) v.push(`${id}: sin pista entre paréntesis en la frase — la tarjeta no muestra otra cosa`);
+    // El paréntesis existe para NOMBRAR EL LEMA: si se pide una forma de
+    // un verbo, hay que decir de cuál. Cuando escribí este gate la
+    // tarjeta aún no pintaba `hintEs` y el paréntesis era el único canal;
+    // desde E2#13 lo pinta (`FillBlankCard`, `data-testid="pista"`), así
+    // que exigirlo a un ítem de respuesta DECLARADA —«la parte del cuerpo
+    // con la que se saluda» → `mão`— pedía un paréntesis vacío de
+    // contenido. Sigue siendo obligatorio donde el ítem lo necesita.
+    if (x.lema && !/\([^)]+\)/.test(x.s)) v.push(`${id}: pide una forma de «${x.lema}» y no nombra el verbo entre paréntesis`);
     if (!x.pista.trim()) v.push(`${id}: sin hintEs`);
     // LA CICATRIZ: el contexto tiene que DETERMINAR la respuesta.
     if (!x.ancla.trim()) v.push(`${id}: sin ancla declarada`);

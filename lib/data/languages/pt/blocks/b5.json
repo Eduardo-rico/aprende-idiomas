@@ -2857,23 +2857,23 @@
       "exemplo",
       "cotidiano"
     ],
-    "contentHash": "6c7d84502b78ab0718a8be7548f439bb06e797b63a49fc592c479f473b24305f",
+    "contentHash": "0ec205e3ebc6cb3ed84be580736211b5d58c9909483cc985cecc615e58469600",
     "esContrast": "'Precisaria' = necesitaría (sinónimo de 'teria necessidade de').",
     "audio": {
       "br": {
-        "hash": "a42855767c9002af18d366add47e97d16a88810ea9a1d96505d433f2e0787aa9",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "b7f9951e96c8a2a382aca76105bcb8ce43b21ebfddb56f6ba9b3b13f70197177",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "0562681cab4db6c41b0dcce8eece8e2d29b7d421ceb6aab8e457a5ee92b6fa32",
-        "voice": "Portuguese_Wiselady"
+        "hash": "b7f9951e96c8a2a382aca76105bcb8ce43b21ebfddb56f6ba9b3b13f70197177",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
     "type": "flashcard",
     "data": {
       "front": "Si constituyera familia, necesitaría una casa más grande.",
-      "back": "Se constituisse família, precisaria de uma casa maior."
+      "back": "Se constituísse família, precisaria de uma casa maior."
     }
   },
   {
@@ -4212,22 +4212,22 @@
       "b5-se-imperfeito-conj"
     ],
     "tags": [],
-    "contentHash": "1f1e5b7a2ebc8a6fa0ead421c61b1cbdb85fc1d29bfbb33609057c1636608aeb",
+    "contentHash": "d245a413fc97254539c06ccfdd5f96c60684c0bf63a5706379b79bb09ba93b97",
     "esContrast": "Tipo 2: se + imperfeito do subjuntivo + condicional. En español puedes usar subjuntivo imperfecto.",
     "audio": {
       "br": {
-        "hash": "d006806877af2720cc9b2d6c3c5050530e5e50a3889ae17a91439a98eddec3ee",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "34f6beae01e1d26c12cbedb875c88ec05d166af794e0287aa507bc3c5e8e6ffa",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "954585215acf374fdebc5213d094728de107ca8dc6c05ec4a59a8d5ab5743182",
-        "voice": "Portuguese_Wiselady"
+        "hash": "34f6beae01e1d26c12cbedb875c88ec05d166af794e0287aa507bc3c5e8e6ffa",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "unchecked",
     "type": "translation",
     "data": {
-      "source": "Se ele constituisse família, teria uma vida mais estável.",
+      "source": "Se ele constituísse família, teria uma vida mais estável.",
       "target": "Si él constituyera familia, tendría una vida más estable.",
       "sourceLang": "pt-pt",
       "targetLang": "es",
@@ -7433,6 +7433,10 @@
       "punto:b5-futcomp-composto-real",
       "directo"
     ],
+    "contentHash": "3779c049b6340cfc5ce3d6f31233c86023b0f30d3ca311128e9bdb7349537135",
+    "esContrast": "El futuro composto marca lo que estará ACABADO antes de otro momento futuro. En español, «habré terminado».",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "fill_blank",
     "data": {
       "sentence": "Antes do almoço já ___ a minha apresentação. (terminar)",
@@ -7443,11 +7447,7 @@
           "alternatives": []
         }
       ]
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "esContrast": "El futuro composto marca lo que estará ACABADO antes de otro momento futuro. En español, «habré terminado».",
-    "contentHash": "3779c049b6340cfc5ce3d6f31233c86023b0f30d3ca311128e9bdb7349537135"
+    }
   },
   {
     "id": "b2c2-par-02",
@@ -7462,6 +7462,10 @@
       "punto:b5-futcomp-composto-real",
       "directo"
     ],
+    "contentHash": "fcb8c86de8c0cbcfab2a59b317fc9769f5ad19fb8a0517560920d2c085727d3c",
+    "esContrast": "«Ya habrán salido»: acabado ANTES de que pase el autobús, no a la vez. Y «quando passar» es futuro do conjuntivo, que el español conserva sólo fosilizado («sea lo que fuere») y que en portugués está vivo y es obligatorio.",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "fill_blank",
     "data": {
       "sentence": "Quando o autocarro passar, os miúdos já ___ de casa. (sair)",
@@ -7472,11 +7476,7 @@
           "alternatives": []
         }
       ]
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "esContrast": "«Ya habrán salido»: acabado ANTES de que pase el autobús, no a la vez. Y «quando passar» es futuro do conjuntivo, que el español conserva sólo fosilizado («sea lo que fuere») y que en portugués está vivo y es obligatorio.",
-    "contentHash": "fcb8c86de8c0cbcfab2a59b317fc9769f5ad19fb8a0517560920d2c085727d3c"
+    }
   },
   {
     "id": "b2c2-par-03",
@@ -7491,6 +7491,10 @@
       "punto:b5-futcomp-composto-real",
       "directo"
     ],
+    "contentHash": "09bb5e8f58dc307a2d68ee98c93a25b6e981eeaca19c9d1ac20203dfb1b0a8e0",
+    "esContrast": "Participio irregular: «feito», no *«fazido»*. El «já» y «quando voltar» (futuro do conjuntivo) son los que piden el compuesto: sin ellos, «faremos» valdría igual.",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "fill_blank",
     "data": {
       "sentence": "Quando o chefe voltar de viagem, nós já ___ tudo o que ficou pendente. (fazer)",
@@ -7501,11 +7505,7 @@
           "alternatives": []
         }
       ]
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "esContrast": "Participio irregular: «feito», no *«fazido»*. El «já» y «quando voltar» (futuro do conjuntivo) son los que piden el compuesto: sin ellos, «faremos» valdría igual.",
-    "contentHash": "09bb5e8f58dc307a2d68ee98c93a25b6e981eeaca19c9d1ac20203dfb1b0a8e0"
+    }
   },
   {
     "id": "b2c2-par-04",
@@ -7520,6 +7520,10 @@
       "punto:b5-futcomp-composto-real",
       "directo"
     ],
+    "contentHash": "e96a32c445345591cdda2e10cd617f5f4761f4d6a7c9cf260175e46eb98af5ee",
+    "esContrast": "«Dito», no *«dizido»*. Es uno de los tres verbos que también son irregulares en el futuro simple (dirá).",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "fill_blank",
     "data": {
       "sentence": "Quando o julgamento acabar, a testemunha já ___ tudo. (dizer)",
@@ -7530,11 +7534,7 @@
           "alternatives": []
         }
       ]
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "esContrast": "«Dito», no *«dizido»*. Es uno de los tres verbos que también son irregulares en el futuro simple (dirá).",
-    "contentHash": "e96a32c445345591cdda2e10cd617f5f4761f4d6a7c9cf260175e46eb98af5ee"
+    }
   },
   {
     "id": "b2c2-par-05",
@@ -7549,6 +7549,9 @@
       "punto:b5-futcomp-composto-real",
       "contraste"
     ],
+    "contentHash": "17dc6ee42603fd990d113742cc9b76668dbea72c62a7212a1633520ac5f0fb54",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
       "question": "Amanhã de manhã ___ com o teu chefe sobre o aumento.",
@@ -7560,10 +7563,7 @@
       ],
       "correctIndex": 0,
       "explanationEs": "Sin un segundo momento futuro al que anticiparse, el futuro composto sobra: basta el simple."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "17dc6ee42603fd990d113742cc9b76668dbea72c62a7212a1633520ac5f0fb54"
+    }
   },
   {
     "id": "b2c2-par-06",
@@ -7578,6 +7578,9 @@
       "punto:b5-futcomp-composto-real",
       "contraste"
     ],
+    "contentHash": "dc3f3b35ddb0fbc4ee1ecffc03a2c2772e9c4ea1c8ce5bfe528a0d553cc9c394",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
       "question": "Se calhar eu ___ o carro no próximo verão.",
@@ -7589,10 +7592,7 @@
       ],
       "correctIndex": 3,
       "explanationEs": "«Se calhar» es la mitigación europea de «quizá», y no cambia el tiempo: aquí la acción es simplemente futura."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "dc3f3b35ddb0fbc4ee1ecffc03a2c2772e9c4ea1c8ce5bfe528a0d553cc9c394"
+    }
   },
   {
     "id": "b2c2-par-07",
@@ -7607,6 +7607,9 @@
       "punto:b5-futcomp-composto-real",
       "directo"
     ],
+    "contentHash": "3f33da597a02e2051bae25faa2714bb76e64e9979cef7026f3cbc14e5440416f",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
       "question": "Quando vocês chegarem ao cinema, o filme já ___.",
@@ -7618,10 +7621,7 @@
       ],
       "correctIndex": 1,
       "explanationEs": "El «já» y la subordinada de futuro piden anterioridad: la película ya habrá empezado."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "3f33da597a02e2051bae25faa2714bb76e64e9979cef7026f3cbc14e5440416f"
+    }
   },
   {
     "id": "b2c2-par-08",
@@ -7636,6 +7636,9 @@
       "punto:b5-futcomp-composto-real",
       "directo"
     ],
+    "contentHash": "0bde943910f465ea1e751be422633fd0751162d5aa1cfec1317e1411d2d4ff0c",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
       "question": "Quando o senhorio vier no dia 30, eu já ___ todas as faturas.",
@@ -7647,10 +7650,7 @@
       ],
       "correctIndex": 2,
       "explanationEs": "El «já» y la subordinada de futuro piden anterioridad. Y el participio de «pagar» con «ter» es «pago»: es de los tres verbos (pagar, ganhar, gastar) donde el irregular se impuso también con el auxiliar «ter»."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "0bde943910f465ea1e751be422633fd0751162d5aa1cfec1317e1411d2d4ff0c"
+    }
   },
   {
     "id": "b2c2-par-09",
@@ -7665,6 +7665,10 @@
       "punto:b5-futcomp-composto-real",
       "directo"
     ],
+    "contentHash": "9d27d63aef8308b8110696cf96aa47bba24157980001ecb3c25214806ff473a2",
+    "esContrast": "Participio irregular: «escrito». Y «antes de o sol se pôr» es infinitivo pessoal con sujeto propio, la salida que el europeo prefiere aquí (aunque «antes que o sol se ponha» también sea correcto).",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "fill_blank",
     "data": {
       "sentence": "Antes de o sol se pôr, já ___ o teu discurso todo. (escrever)",
@@ -7675,11 +7679,7 @@
           "alternatives": []
         }
       ]
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "esContrast": "Participio irregular: «escrito». Y «antes de o sol se pôr» es infinitivo pessoal con sujeto propio, la salida que el europeo prefiere aquí (aunque «antes que o sol se ponha» también sea correcto).",
-    "contentHash": "9d27d63aef8308b8110696cf96aa47bba24157980001ecb3c25214806ff473a2"
+    }
   },
   {
     "id": "b2c2-par-10",
@@ -7694,6 +7694,10 @@
       "punto:b5-futcomp-composto-real",
       "directo"
     ],
+    "contentHash": "b3d3e6932a325e5b9f5ee7a34bc381be7c08034cbcd1d3c7f1a07ee349c52e92",
+    "esContrast": "Participio irregular: «visto». Ojo: «ver» es regular en el futuro simple (veremos) e irregular sólo en el participio.",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "fill_blank",
     "data": {
       "sentence": "No fim da viagem nós já ___ cinco cidades diferentes. (ver)",
@@ -7704,11 +7708,7 @@
           "alternatives": []
         }
       ]
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "esContrast": "Participio irregular: «visto». Ojo: «ver» es regular en el futuro simple (veremos) e irregular sólo en el participio.",
-    "contentHash": "b3d3e6932a325e5b9f5ee7a34bc381be7c08034cbcd1d3c7f1a07ee349c52e92"
+    }
   },
   {
     "id": "b2c2-par-11",
@@ -7723,6 +7723,9 @@
       "punto:b5-futcomp-composto-real",
       "directo"
     ],
+    "contentHash": "28709de175fa0c8509588329ff2f1b9b827a72d71c7528c89ef3eb9eb6412d78",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
       "question": "Daqui a dez anos esta empresa já ___ de dono três vezes.",
@@ -7734,10 +7737,7 @@
       ],
       "correctIndex": 3,
       "explanationEs": "Con un plazo futuro y un recuento («três vezes»), el compuesto es el que hace el balance."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "28709de175fa0c8509588329ff2f1b9b827a72d71c7528c89ef3eb9eb6412d78"
+    }
   },
   {
     "id": "b2c2-par-12",
@@ -7752,6 +7752,9 @@
       "punto:b5-futcomp-composto-real",
       "contraste"
     ],
+    "contentHash": "49f084821dedb03a672ffcbeff074ac539fda2233d5685256cd8b90147927580",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "type": "multiple_choice",
     "data": {
       "question": "Não te preocupes: eu ___ contigo à consulta.",
@@ -7763,10 +7766,7 @@
       ],
       "correctIndex": 0,
       "explanationEs": "Es una promesa, no un balance: futuro simple."
-    },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "49f084821dedb03a672ffcbeff074ac539fda2233d5685256cd8b90147927580"
+    }
   },
   {
     "id": "cl15-032",
@@ -7998,6 +7998,557 @@
         }
       ],
       "hintEs": "futuro de conjetura, 3.ª del plural — supone, no anuncia"
+    }
+  },
+  {
+    "id": "cl16-001",
+    "blockId": 5,
+    "lessonId": "b5-l4-se-futuro-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-se-irreal"
+    ],
+    "tags": [
+      "e2-16",
+      "cloze-con-pista"
+    ],
+    "contentHash": "6ad61a4d4cd2c4aef1e0fd01a4fc59918bebd7d6a87ea605e714125daabd3211",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Cloze con pista E2#16 2026-09-05: derivado del paradigma + muestreo 20 % con freno",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Se eu ___ (ter) mais tempo, ia contigo à exposição.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "tivesse",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "imperfeito do conjuntivo, 1.ª persona"
+    }
+  },
+  {
+    "id": "cl16-002",
+    "blockId": 5,
+    "lessonId": "b5-l4-se-futuro-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-se-irreal"
+    ],
+    "tags": [
+      "e2-16",
+      "cloze-con-pista"
+    ],
+    "contentHash": "f1073f00a5f2dfd03f05507c3f3dac5132b3fe71fea9d9a635587bb6ec82e448",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Cloze con pista E2#16 2026-09-05: derivado del paradigma + muestreo 20 % con freno",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Se ele ___ (ser) mais atencioso, as pessoas gostavam mais dele.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "fosse",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "imperfeito do conjuntivo, 3.ª persona"
+    }
+  },
+  {
+    "id": "cl16-003",
+    "blockId": 5,
+    "lessonId": "b5-l4-se-futuro-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-se-irreal"
+    ],
+    "tags": [
+      "e2-16",
+      "cloze-con-pista"
+    ],
+    "contentHash": "6c721776cbaa3464d2a480be572ae617610b0c64ef544b399d521ddebc830761",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Cloze con pista E2#16 2026-09-05: derivado del paradigma + muestreo 20 % con freno",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Se ___ (poder) escolher, ficávamos os dois em casa.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "pudéssemos",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "imperfeito do conjuntivo, 1.ª del plural"
+    }
+  },
+  {
+    "id": "cl16-004",
+    "blockId": 5,
+    "lessonId": "b5-l4-se-futuro-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-se-irreal"
+    ],
+    "tags": [
+      "e2-16",
+      "cloze-con-pista"
+    ],
+    "contentHash": "9fed6be024eafeec2464e23de57047bed4e72f74f230f745aba12b46afc01dab",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Cloze con pista E2#16 2026-09-05: derivado del paradigma + muestreo 20 % con freno",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Se tu ___ (saber) o que eu sei, não dizias isso.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "soubesses",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "imperfeito do conjuntivo, 2.ª persona"
+    }
+  },
+  {
+    "id": "cl16-005",
+    "blockId": 5,
+    "lessonId": "b5-l4-se-futuro-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-se-irreal"
+    ],
+    "tags": [
+      "e2-16",
+      "cloze-con-pista"
+    ],
+    "contentHash": "f1af7e98f9255fb92e2b833423a3e05ecec0b84be8c26567d8690ab4fffe3892",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Cloze con pista E2#16 2026-09-05: derivado del paradigma + muestreo 20 % con freno",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Se eles ___ (morar) mais perto, víamo-nos todas as semanas.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "morassem",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "imperfeito do conjuntivo, 3.ª del plural"
+    }
+  },
+  {
+    "id": "cl16-006",
+    "blockId": 5,
+    "lessonId": "b5-l4-se-futuro-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-se-irreal"
+    ],
+    "tags": [
+      "e2-16",
+      "cloze-con-pista"
+    ],
+    "contentHash": "a0aaa86e7a1131a64853256af8f1b7467e9d479a1bc169c1ca238acf08422668",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Cloze con pista E2#16 2026-09-05: derivado del paradigma + muestreo 20 % con freno",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Se eu ___ (fazer) tudo outra vez, mudava só uma coisa.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "fizesse",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "imperfeito do conjuntivo, 1.ª persona"
+    }
+  },
+  {
+    "id": "cl16-007",
+    "blockId": 5,
+    "lessonId": "b5-l4-se-futuro-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-se-irreal"
+    ],
+    "tags": [
+      "e2-16",
+      "cloze-con-pista"
+    ],
+    "contentHash": "1780cc0994163163be59e89507e6323edb8b42a7a54353fd23c67e2f88686385",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Cloze con pista E2#16 2026-09-05: derivado del paradigma + muestreo 20 % con freno",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Se ela ___ (estar) cá, resolvia isto num instante.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "estivesse",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "imperfeito do conjuntivo, 3.ª persona"
+    }
+  },
+  {
+    "id": "cl16-008",
+    "blockId": 5,
+    "lessonId": "b5-l4-se-futuro-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-se-irreal"
+    ],
+    "tags": [
+      "e2-16",
+      "cloze-con-pista"
+    ],
+    "contentHash": "fa91f7fc00374fb33371d82f85648f3646ff6f0372e07631f04de0362a709e64",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Cloze con pista E2#16 2026-09-05: derivado del paradigma + muestreo 20 % con freno",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Se tu ___ (querer), ainda íamos a tempo de apanhar o barco.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "quisesses",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "imperfeito do conjuntivo, 2.ª persona"
+    }
+  },
+  {
+    "id": "cl16-024",
+    "blockId": 5,
+    "lessonId": "b5-l3-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-cond-hipotetico"
+    ],
+    "tags": [
+      "e2-16",
+      "cloze-con-pista"
+    ],
+    "contentHash": "26bd08b9b3fc599a2abcabb98664497a4df23af25902ad54c67a7aac2544974e",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Cloze con pista E2#16 2026-09-05: derivado del paradigma + muestreo 20 % con freno",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Com esse dinheiro, eu ___ (comprar) a casa da esquina.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "compraria",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "condicional, 1.ª persona"
+    }
+  },
+  {
+    "id": "cl16-025",
+    "blockId": 5,
+    "lessonId": "b5-l3-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-cond-hipotetico"
+    ],
+    "tags": [
+      "e2-16",
+      "cloze-con-pista"
+    ],
+    "contentHash": "17766ab8711eced84e4f9b0257a1ca8371209105d9f02fe8a9f68a288731eb31",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Cloze con pista E2#16 2026-09-05: derivado del paradigma + muestreo 20 % con freno",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Sem o trânsito da ponte, nós ___ (ficar) a meia hora daqui.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "ficaríamos",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "condicional, 1.ª del plural"
+    }
+  },
+  {
+    "id": "cl16-026",
+    "blockId": 5,
+    "lessonId": "b5-l3-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-cond-hipotetico"
+    ],
+    "tags": [
+      "e2-16",
+      "cloze-con-pista"
+    ],
+    "contentHash": "03e44df1ca77c386eb10864797e4500ca41e025277752edd5ef264f8906ed766",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Cloze con pista E2#16 2026-09-05: derivado del paradigma + muestreo 20 % con freno",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Na tua situação, eles ___ (dizer) exatamente a mesma coisa.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "diriam",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "condicional, 3.ª del plural — raíz irregular"
+    }
+  },
+  {
+    "id": "cl16-027",
+    "blockId": 5,
+    "lessonId": "b5-l3-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-cond-hipotetico"
+    ],
+    "tags": [
+      "e2-16",
+      "cloze-con-pista"
+    ],
+    "contentHash": "972e77bf1605b6e73afdaa8f6e43b8c13a2a417a1da5e5089c329bf14048341a",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Cloze con pista E2#16 2026-09-05: derivado del paradigma + muestreo 20 % con freno",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "O que ___ (fazer) tu com uma semana livre e sem planos?",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "farias",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "condicional, 2.ª persona — raíz irregular"
+    }
+  },
+  {
+    "id": "cl16-046",
+    "blockId": 5,
+    "lessonId": "b5-l2-futuro-composto",
+    "difficulty": 2,
+    "concepts": [
+      "b5-perifrastico-formas"
+    ],
+    "tags": [
+      "e2-16",
+      "cloze-con-pista"
+    ],
+    "contentHash": "f4abb4e6433c119ccf879c8a269c8d13079dd00f1cd9f8195dbdb979fdb33823",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Cloze con pista E2#16 2026-09-05: derivado del paradigma + muestreo 20 % con freno",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Amanhã nós ___ (ir) ver a exposição antes que feche.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "vamos",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "presente de «ir», 1.ª del plural — sin «a» delante del infinitivo"
+    }
+  },
+  {
+    "id": "cl16-047",
+    "blockId": 5,
+    "lessonId": "b5-l2-futuro-composto",
+    "difficulty": 2,
+    "concepts": [
+      "b5-perifrastico-formas"
+    ],
+    "tags": [
+      "e2-16",
+      "cloze-con-pista"
+    ],
+    "contentHash": "355b57e8fb83519a62de47cbb07c9aba858969521e6e5386bc7950e3315b1004",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Cloze con pista E2#16 2026-09-05: derivado del paradigma + muestreo 20 % con freno",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "___ (ir) tu falar com ele ou prefires que eu ligue?",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "vais",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "presente de «ir», 2.ª persona"
+    }
+  },
+  {
+    "id": "cl16-048",
+    "blockId": 5,
+    "lessonId": "b5-l2-futuro-composto",
+    "difficulty": 2,
+    "concepts": [
+      "b5-perifrastico-formas"
+    ],
+    "tags": [
+      "e2-16",
+      "cloze-con-pista"
+    ],
+    "contentHash": "d21b198dbe0643d87e1c8789b5abf5f208cf3d29a2f3586d3b08485f2acc516d",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Cloze con pista E2#16 2026-09-05: derivado del paradigma + muestreo 20 % con freno",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Os miúdos ___ (ir) dormir mais cedo hoje, que amanhã há escola.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "vão",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "presente de «ir», 3.ª del plural"
+    }
+  },
+  {
+    "id": "cl16-049",
+    "blockId": 5,
+    "lessonId": "b5-l2-futuro-composto",
+    "difficulty": 2,
+    "concepts": [
+      "b5-perifrastico-formas"
+    ],
+    "tags": [
+      "e2-16",
+      "cloze-con-pista"
+    ],
+    "contentHash": "90bbc0b5d95ce3173ca71475e2e314ae02937164fa947be8b2fb56a84711ecf6",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Cloze con pista E2#16 2026-09-05: derivado del paradigma + muestreo 20 % con freno",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Eu ___ (ir) telefonar-te, mas depois não tive tempo nenhum.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "ia",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "imperfeito de «ir», 1.ª persona"
+    }
+  },
+  {
+    "id": "cl16-147",
+    "blockId": 5,
+    "lessonId": "b5-l2-futuro-composto",
+    "difficulty": 2,
+    "concepts": [
+      "b5-futuro-composto"
+    ],
+    "tags": [
+      "e2-16",
+      "cloze-con-pista"
+    ],
+    "contentHash": "b60c1c490a8dfcfd25fdb61240427ba820e18a18467c514c5b18217add8715f8",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Cloze con pista E2#16 2026-09-05: respuesta declarada + muestreo 20 % con freno",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Até ao fim do mês nós já ___ (terminar) as obras da cozinha.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "teremos terminado",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "futuro composto, 1.ª del plural: «ter» en futuro + particípio"
+    }
+  },
+  {
+    "id": "cl16-148",
+    "blockId": 5,
+    "lessonId": "b5-l2-futuro-composto",
+    "difficulty": 2,
+    "concepts": [
+      "b5-futuro-composto"
+    ],
+    "tags": [
+      "e2-16",
+      "cloze-con-pista"
+    ],
+    "contentHash": "38537e1e71c0e89dfee5e07330f2ffabe0a791ca154ac85d40938746356d39e0",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Cloze con pista E2#16 2026-09-05: respuesta declarada + muestreo 20 % con freno",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Quando chegares, eles já ___ (sair) para o aeroporto.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "terão saído",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "futuro composto, 3.ª del plural: «ter» en futuro + particípio"
+    }
+  },
+  {
+    "id": "cl16-149",
+    "blockId": 5,
+    "lessonId": "b5-l3-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-cond-cortesia"
+    ],
+    "tags": [
+      "e2-16",
+      "cloze-con-pista"
+    ],
+    "contentHash": "a57f5bcdf212a5c509a13fcc24d82068587ecc2923ebccb28af2ae89e1ff4164",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Cloze con pista E2#16 2026-09-05: derivado del paradigma + muestreo 20 % con freno",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "___ (poder) o senhor repetir a última frase, se faz favor?",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "poderia",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "condicional, 3.ª persona — la forma de cortesía"
     }
   }
 ]

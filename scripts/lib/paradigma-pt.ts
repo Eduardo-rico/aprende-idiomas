@@ -132,7 +132,7 @@ export function infinitivoPessoal(inf: string, p: Persona): string {
   // acento, porque ahí no hay hiato). Sin esto el conjugador producía
   // *sairem* y un ítem del lote lo habría publicado — la misma familia
   // de fallo que el `dir-lo-ão` que un test verde consagró en E2#11.
-  if (/[aeou]ir$/i.test(raizBase) && (p === 'tu' || p === 'eles')) raizBase = raizBase.replace(/ir$/i, 'ír');
+  if (hiatoEnI(raizBase) && (p === 'tu' || p === 'eles')) raizBase = raizBase.replace(/ir$/i, 'ír');
   return raizBase + d;
 }
 
@@ -146,6 +146,22 @@ export function infinitivoPessoal(inf: string, p: Persona): string {
 // Sólo lo regular, más una tabla CERRADA de irregulares. Un conjugador
 // que adivina es peor que no tenerlo: si un verbo no está en la tabla y
 // no es regular, el gate lo dice y el ítem no se publica.
+
+/** ¿La desinencia abre HIATO sobre la i del tema? sa-í-sse, constru-í-do,
+ *  pero segu-ido no, porque la u de «gu» es muda.
+ *
+ *  Ésta es la misma pregunta que ya se hacían el particípio, el clítico
+ *  `-lo` y el infinitivo pessoal — cada uno con su propia copia del
+ *  regex. Las copias no se actualizan juntas: cuando E2#15 añadió los
+ *  dos conjuntivos, ninguno la llevaba, y el muestreo del 20 % de E2#16
+ *  cazó «saissem» por *sa-í-ssem*. El fallo no fue el regex, fue tenerlo
+ *  cinco veces; ahora está aquí y sólo aquí. */
+export function hiatoEnI(inf: string): boolean {
+  const v = inf.normalize('NFC');
+  if (!/ir$/i.test(v)) return false;
+  const tema = v.slice(0, -2);
+  return /[aeo]$/.test(tema) || (/u$/.test(tema) && !/[qg]u$/.test(tema));
+}
 
 type Conj = 'ar' | 'er' | 'ir';
 const conjDe = (inf: string): Conj | null =>
@@ -221,11 +237,59 @@ export type Tiempo = 'presente' | 'imperfeito' | 'presSubj' | 'imperativoTu';
  *  tabla cerrada. Devolver `null` es la parte importante: un conjugador
  *  que adivina consagra formas falsas, como el `dir-lo-ão` que un test
  *  verde dio por bueno en E2#11. */
+/** -IR CON ALTERNANCIA VOCÁLICA. `subir` no da *sube* sino «sobe», y
+ *  `servir` no da *servo* sino «sirvo»: la vocal del tema sube o baja
+ *  según la persona. NO es predecible por la forma —«unir» no alterna—,
+ *  así que va en tabla, como manda la doctrina del módulo.
+ *
+ *  Lo encontró la revisión del lote ENTERO en E2#16, no el muestreo: el
+ *  ítem del 20 % que cayó aquí fue otro. Antes de esto el conjugador
+ *  devolvía *sube*, *dormo*, *sirvo*→*servo*, *prefero*, *seguo* — cinco
+ *  formas falsas con cara de derivadas. */
+const ALTERNANCIA_IR: Record<string, Partial<Record<Persona, string>>> = {
+  subir:    { eu: 'subo',     tu: 'sobes',     ele: 'sobe',     'nós': 'subimos',    eles: 'sobem' },
+  dormir:   { eu: 'durmo',    tu: 'dormes',    ele: 'dorme',    'nós': 'dormimos',   eles: 'dormem' },
+  fugir:    { eu: 'fujo',     tu: 'foges',     ele: 'foge',     'nós': 'fugimos',    eles: 'fogem' },
+  cobrir:   { eu: 'cubro',    tu: 'cobres',    ele: 'cobre',    'nós': 'cobrimos',   eles: 'cobrem' },
+  servir:   { eu: 'sirvo',    tu: 'serves',    ele: 'serve',    'nós': 'servimos',   eles: 'servem' },
+  vestir:   { eu: 'visto',    tu: 'vestes',    ele: 'veste',    'nós': 'vestimos',   eles: 'vestem' },
+  preferir: { eu: 'prefiro',  tu: 'preferes',  ele: 'prefere',  'nós': 'preferimos', eles: 'preferem' },
+  sentir:   { eu: 'sinto',    tu: 'sentes',    ele: 'sente',    'nós': 'sentimos',   eles: 'sentem' },
+  mentir:   { eu: 'minto',    tu: 'mentes',    ele: 'mente',    'nós': 'mentimos',   eles: 'mentem' },
+  seguir:   { eu: 'sigo',     tu: 'segues',    ele: 'segue',    'nós': 'seguimos',   eles: 'seguem' },
+  repetir:  { eu: 'repito',   tu: 'repetes',   ele: 'repete',   'nós': 'repetimos',  eles: 'repetem' },
+  engolir:  { eu: 'engulo',   tu: 'engoles',   ele: 'engole',   'nós': 'engolimos',  eles: 'engolem' },
+  tossir:   { eu: 'tusso',    tu: 'tosses',    ele: 'tosse',    'nós': 'tossimos',   eles: 'tossem' },
+  sumir:    { eu: 'sumo',     tu: 'somes',     ele: 'some',     'nós': 'sumimos',    eles: 'somem' },
+};
+
+/** -ir CERTIFICADOS como regulares. La lista existe para que el guardián
+ *  de abajo pueda decir «no sé» sin bloquear los verbos que sí sé. */
+const IR_REGULARES = new Set([
+  'partir', 'abrir', 'decidir', 'dividir', 'unir', 'permitir', 'insistir',
+  'existir', 'assistir', 'discutir', 'imprimir', 'garantir', 'resistir',
+  'admitir', 'desistir', 'proibir', 'dirigir', 'exigir', 'confundir',
+  'resumir', 'assumir', 'presumir', 'reunir', 'incluir', 'construir', 'atribuir',
+]);
+
 export function conjugar(inf: string, tiempo: Tiempo, p: Persona): string | null {
   const irr = IRREGULARES[inf]?.[tiempo]?.[p];
   if (irr) return irr;
   const c = conjDe(inf);
   if (!c) return null;
+  // La alternancia sólo se ve en presente (y en el imperativo de tu, que
+  // sale de la 3.ª sg). El imperfeito y el conjuntivo no la tienen.
+  if (c === 'ir' && (tiempo === 'presente' || tiempo === 'imperativoTu')) {
+    const alt = ALTERNANCIA_IR[inf];
+    if (alt) return tiempo === 'imperativoTu' ? (alt.ele ?? null) : (alt[p] ?? null);
+    // GUARDIÁN: un -ir con e/o/u en la última vocal del tema que no esté
+    // en ninguna de las dos listas PUEDE alternar, y el conjugador no
+    // tiene forma de saberlo. Devuelve null y el gate para el ítem: es
+    // exactamente la regla que el módulo ya se había puesto —«un
+    // conjugador que adivina es peor que no tenerlo»— y que la
+    // desinencia regular se estaba saltando en silencio.
+    if (!IR_REGULARES.has(inf) && /[eou][a-zç]*$/.test(raizReg(inf))) return null;
+  }
   if (IRREGULARES[inf] && !IRREGULARES[inf]![tiempo]) {
     // Verbo con irregularidades declaradas pero no en ESTE tiempo: se
     // deja pasar al regular sólo si el tiempo no depende de la 1.ª sg.
@@ -250,3 +314,62 @@ export function conjugar(inf: string, tiempo: Tiempo, p: Persona): string | null
   if (tiempo === 'imperativoTu') return r + DES_PRESENTE[c].ele;
   return null;
 }
+
+// ── FUTURO E IMPERFEITO DO CONJUNTIVO ───────────────────────────────
+//
+// Los dos se construyen sobre el mismo tema: el de la 3.ª plural del
+// pretérito perfeito (falaram → fala-, fizeram → fize-). En los
+// regulares ese tema es predecible; en los irregulares es una lista
+// CERRADA, y fuera de ella `conjugar` devuelve null en vez de adivinar.
+//
+// Nota que importa para escribir ítems: en los REGULARES el futuro do
+// conjuntivo es homógrafo del infinitivo pessoal (falar/falares/falar…),
+// así que un ítem que quiera distinguirlos necesita un verbo IRREGULAR
+// —«vires» frente a «veres»—. Es la cicatriz de E2#14, aquí escrita
+// donde se usa.
+const TEMA_PRETERITO: Record<string, string> = {
+  ser: 'fo', ir: 'fo', ter: 'tive', estar: 'estive', fazer: 'fize', dizer: 'disse',
+  poder: 'pude', querer: 'quise', saber: 'soube', vir: 'vie', ver: 'vi', dar: 'de',
+  'pôr': 'puse', haver: 'houve', trazer: 'trouxe', 'ficar': 'fica',
+};
+const temaPret = (inf: string): string | null => {
+  if (TEMA_PRETERITO[inf]) return TEMA_PRETERITO[inf]!;
+  const c = conjDe(inf);
+  return c ? raizReg(inf) + { ar: 'a', er: 'e', ir: 'i' }[c] : null;
+};
+
+const DES_IMPERF_SUBJ: Record<Persona, string> = {
+  eu: 'sse', tu: 'sses', ele: 'sse', 'nós': 'ssemos', eles: 'ssem',
+};
+/** El futuro do conjuntivo del IRREGULAR se forma sobre el mismo tema:
+ *  fize→fizer, vie→vier, vi→vir, fo→for. */
+const DES_FUT_SUBJ: Record<Persona, string> = {
+  eu: 'r', tu: 'res', ele: 'r', 'nós': 'rmos', eles: 'rem',
+};
+
+export function imperfeitoConjuntivo(inf: string, p: Persona): string | null {
+  const t0 = temaPret(inf);
+  if (!t0) return null;
+  // El hiato acentúa la i en TODAS las personas: saísse, saísses,
+  // saíssem — no sólo en «nós», que además ya salía bien de rebote.
+  const t = !TEMA_PRETERITO[inf] && hiatoEnI(inf) ? t0.replace(/i$/, 'í') : t0;
+  // «nós» lleva acento: falássemos, fizéssemos, puséssemos.
+  const forma = t + DES_IMPERF_SUBJ[p];
+  if (p !== 'nós') return forma;
+  return forma
+    .replace(/a(ssemos)$/, 'á$1').replace(/e(ssemos)$/, 'é$1')
+    .replace(/i(ssemos)$/, 'í$1').replace(/o(ssemos)$/, 'ô$1');
+}
+
+export function futuroConjuntivo(inf: string, p: Persona): string | null {
+  // En los REGULARES el futuro do conjuntivo y el infinitivo pessoal son
+  // la misma forma («falares», «saíres»). No se parecen: son idénticos,
+  // así que se delega en vez de reimplementar — que reimplementarlo fue
+  // justamente lo que dejó fuera el acento de hiato y produjo *sairem*.
+  if (!TEMA_PRETERITO[inf]) return conjDe(inf) ? infinitivoPessoal(inf, p) : null;
+  return TEMA_PRETERITO[inf]! + DES_FUT_SUBJ[p];
+}
+
+/** Mais-que-perfeito composto: «tinha falado». Se compone, no se declara. */
+export const mqpComposto = (inf: string, p: Persona) =>
+  `${conjugar('ter', 'imperfeito', p)} ${participio(inf)}`;

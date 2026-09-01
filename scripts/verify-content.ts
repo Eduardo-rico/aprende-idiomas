@@ -141,6 +141,23 @@ async function main() {
           errors.push(`${ex.id}: contentHash missing.`);
         }
       }
+      // El IDIOMA DECLARADO de una mediación tiene que ser el idioma que
+      // el texto REALMENTE está. `b2c2-med-220` se publicó con la fuente
+      // en español y `sourceLang: 'pt'`; su propio `instructionsEs` decía
+      // que la fuente era española, así que la intención estaba bien y lo
+      // que mentía era el metadato — y cualquier gate que se fíe del
+      // campo escanea español como si fuera portugués. Lo cazó una
+      // auditoría externa, no un gate: por eso ahora hay gate.
+      if (ex.type === 'mediation') {
+        const d = ex.data as Record<string, unknown> | undefined;
+        const fuente = typeof d?.sourceText === 'string' ? d.sourceText : '';
+        // Palabras que existen en español y NO en portugués. Con tres o
+        // más, el texto no es portugués por mucho que el campo lo diga.
+        const SOLO_ES = /(?<![\p{L}])(y|el|los|las|del|con|sin|muy|pero|hoy|hasta|desde|ellos|hacia|aunque|entonces|siempre|puerta|calle)(?![\p{L}])/giu;
+        const golpes = new Set((fuente.match(SOLO_ES) ?? []).map((w) => w.toLowerCase()));
+        if (golpes.size >= 3 && String(d?.sourceLang ?? '').startsWith('pt'))
+          errors.push(`${ex.id}: declara sourceLang «${d?.sourceLang}» pero la fuente es español (${[...golpes].slice(0, 5).join(', ')}…).`);
+      }
       // Si tiene audio, validar que el MP3 existe y es válido.
       // Phase 1: audio es record libre; iteramos las keys presentes.
       if (ex.audio) {

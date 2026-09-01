@@ -5,7 +5,7 @@
 // bendice. Así que se prueba contra las formas canónicas, incluidas las
 // que la regla ingenua rompe.
 import { describe, it, expect } from 'vitest';
-import { futuro, condicional, participio, futuroComposto, mesoclise, enclise, proclise , infinitivoPessoal, conjugar } from '@/scripts/lib/paradigma-pt';
+import { futuro, condicional, participio, futuroComposto, mesoclise, enclise, proclise , infinitivoPessoal, conjugar, imperfeitoConjuntivo, futuroConjuntivo, hiatoEnI } from '@/scripts/lib/paradigma-pt';
 
 describe('futuro y condicional', () => {
   it('se forman sobre el infinitivo ENTERO', () => {
@@ -186,5 +186,61 @@ describe('presente do conjuntivo · el cambio ortográfico ante -e', () => {
   it('y los que no acaban así no se tocan', () => {
     expect(conjugar('falar', 'presSubj', 'ele')).toBe('fale');
     expect(conjugar('estudar', 'presSubj', 'eu')).toBe('estude');
+  });
+
+  // E2#16 · el acento de hiato vivía copiado en tres funciones y faltaba
+  // en los dos conjuntivos. El muestreo del 20 % cazó «saissem». La regla
+  // está ahora en `hiatoEnI` y estos casos la fijan en los cinco sitios.
+  it('acentúa el hiato de -air/-uir en los dos conjuntivos', () => {
+    expect(imperfeitoConjuntivo('sair', 'eles')).toBe('saíssem');
+    expect(imperfeitoConjuntivo('sair', 'eu')).toBe('saísse');
+    expect(imperfeitoConjuntivo('sair', 'nós')).toBe('saíssemos');
+    expect(imperfeitoConjuntivo('construir', 'eles')).toBe('construíssem');
+    expect(futuroConjuntivo('sair', 'eles')).toBe('saírem');
+    expect(futuroConjuntivo('sair', 'tu')).toBe('saíres');
+  });
+
+  it('NO lo acentúa donde no hay hiato: la u muda de «gu» y las raíces en consonante', () => {
+    expect(hiatoEnI('seguir')).toBe(false);
+    expect(hiatoEnI('partir')).toBe(false);
+    expect(hiatoEnI('sair')).toBe(true);
+    expect(imperfeitoConjuntivo('seguir', 'eles')).toBe('seguissem');
+    expect(imperfeitoConjuntivo('partir', 'eles')).toBe('partissem');
+    // y «nós» sin hiato sigue llevando SU acento, que es otro
+    expect(imperfeitoConjuntivo('falar', 'nós')).toBe('falássemos');
+  });
+
+  it('en los regulares el futuro do conjuntivo ES el infinitivo pessoal', () => {
+    for (const v of ['falar', 'comer', 'partir', 'sair', 'construir'])
+      for (const p of ['eu', 'tu', 'ele', 'nós', 'eles'] as const)
+        expect(futuroConjuntivo(v, p)).toBe(infinitivoPessoal(v, p));
+    // pero en los IRREGULARES no: fizer ≠ fazer, for ≠ ser
+    expect(futuroConjuntivo('fazer', 'eu')).toBe('fizer');
+    expect(futuroConjuntivo('ser', 'ele')).toBe('for');
+  });
+
+  // E2#16 · la alternancia vocálica de -ir. La cazó la revisión del lote
+  // ENTERO (el muestreo del 20 % no cayó en ella), y el conjugador daba
+  // cinco formas falsas con cara de derivadas.
+  it('conjuga los -ir con alternancia vocálica', () => {
+    expect(conjugar('subir', 'presente', 'ele')).toBe('sobe');
+    expect(conjugar('subir', 'imperativoTu', 'tu')).toBe('sobe');
+    expect(conjugar('subir', 'presente', 'eu')).toBe('subo');
+    expect(conjugar('dormir', 'presente', 'eu')).toBe('durmo');
+    expect(conjugar('servir', 'presente', 'eu')).toBe('sirvo');
+    expect(conjugar('preferir', 'presente', 'eu')).toBe('prefiro');
+    expect(conjugar('seguir', 'presente', 'eu')).toBe('sigo');
+    // y el imperfeito NO alterna
+    expect(conjugar('subir', 'imperfeito', 'ele')).toBe('subia');
+  });
+
+  it('RECHAZA el -ir desconocido que podría alternar, en vez de inventarlo', () => {
+    // «sortir» no está en ninguna de las dos listas: el conjugador dice
+    // que no sabe y el gate para el ítem. Es la regla del módulo.
+    expect(conjugar('sortir', 'presente', 'ele')).toBeNull();
+    // pero los certificados como regulares siguen saliendo
+    expect(conjugar('partir', 'presente', 'ele')).toBe('parte');
+    expect(conjugar('resumir', 'presente', 'tu')).toBe('resumes');
+    expect(conjugar('unir', 'presente', 'eu')).toBe('uno');
   });
 });
