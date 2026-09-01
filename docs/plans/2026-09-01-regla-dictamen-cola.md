@@ -33,6 +33,10 @@ colas anteriores cerraron entre 5 y 16 dudas cada una; forzarlas a una de
 las otras dos salidas es lo que fabrica correcciones falsas — «corregir
 algo que no está mal» ya ha mordido tres veces en esta ola.
 
+**Y se CUENTAN.** Un montón de DUDA que crece no es prudencia: es señal de
+que el criterio no está afinado, y eso sólo se ve si el número existe y se
+reporta junto a los otros dos.
+
 ## Lo que va a pasar con el número de producción, dicho antes
 
 **Los 101 a producir van a CRECER**, porque cada ítem que salga por la

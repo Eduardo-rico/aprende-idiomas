@@ -21,6 +21,8 @@ import { servibleAlAlumno, selladoDeVariante, esDeEscucha } from './lib/estado-i
 import { contarPuntos, padreCubierto, pisoCero, conPisoCero, conPadreCubierto } from './lib/conceptos-finos';
 
 const N = Number(process.argv[2] ?? 0);
+const CON_TEXTO = process.argv.includes('--texto');
+const DESDE = Number(process.argv[process.argv.indexOf('--desde') + 1] ?? 0) || 0;
 const items = fs.readdirSync(BLOCKS_DIR).filter((x) => /^b\d+\.json$/.test(x)).sort()
   .flatMap((f) => JSON.parse(fs.readFileSync(path.join(BLOCKS_DIR, f), 'utf8')) as any[]);
 const servible = servibleAlAlumno;
@@ -56,10 +58,37 @@ for (;;) {
   for (const p of mejorPts) { const v = pend.get(p)!; if (v <= 1) pend.delete(p); else pend.set(p, v - 1); }
 }
 
-const tramo = N ? cola.slice(0, N) : cola;
+const tramo = N ? cola.slice(DESDE, DESDE + N) : cola.slice(DESDE);
 console.log(`# Cola de dictamen — ${cola.length} ítems${N ? ` (tramo de ${tramo.length})` : ''}\n`);
 console.log(`Cubren **${[...falta.values()].reduce((a, b) => a + b, 0) - [...pend.values()].reduce((a, b) => a + b, 0)}** unidades de déficit en ${falta.size} puntos.`);
 console.log(`Quedan **${[...pend.values()].reduce((a, b) => a + b, 0)}** unidades que ningún ítem viejo cubre: hay que producirlas.\n`);
-console.log('| # | id | tipo | bloque | puntos que desbloquea |');
-console.log('|---:|---|---|---:|---|');
-tramo.forEach((c, i) => console.log(`| ${i + 1} | \`${c.x.id}\` | ${c.x.type} | ${c.x.blockId} | ${c.cubre.join(', ')} |`));
+if (!CON_TEXTO) {
+  console.log('| # | id | tipo | bloque | puntos que desbloquea |');
+  console.log('|---:|---|---|---:|---|');
+  tramo.forEach((c, i) => console.log(`| ${DESDE + i + 1} | \`${c.x.id}\` | ${c.x.type} | ${c.x.blockId} | ${c.cubre.join(', ')} |`));
+} else {
+  // Con `--texto`, el ítem ENSAMBLADO: la frase con el hueco relleno y sin
+  // el infinitivo del molde. Leer la plantilla en vez de lo que el alumno
+  // ve es cómo dos barridos de esta ola dieron 0 hallazgos.
+  const texto = (x: any) => {
+    const d = x.data ?? {};
+    let s2 = d.sentence ?? '';
+    // El hueco se marca con «‹…›», no con corchetes: el volcado se copia a
+    // mano al corregir, y un `[daquele]` pegado en `sentence` rompe la
+    // cuenta de huecos. Lo cazó `verify:content` en el primer tramo.
+    for (const b2 of (d.blanks ?? [])) s2 = s2.replace('___', `‹${b2.answer}›`);
+    // TODOS los campos de texto, con su nombre. Volcar una selección fija
+    // dejaba fuera `source` y `audioText`, y una traducción sin su origen
+    // o una escucha sin su locución no se pueden dictaminar: se estaría
+    // juzgando media frase.
+    const partes: string[] = [];
+    if (s2) partes.push(`sentence: ${s2}`);
+    for (const [k, v] of Object.entries(d)) {
+      if (k === 'sentence' || k === 'blanks') continue;
+      if (typeof v === 'string' && v.trim()) partes.push(`${k}: ${v}`);
+      else if (Array.isArray(v) && v.every((z) => typeof z === 'string') && v.length) partes.push(`${k}: [${v.join(' | ')}]`);
+    }
+    return partes.join('  ⟡  ').replace(/\s+/g, ' ').slice(0, 420);
+  };
+  tramo.forEach((c, i) => console.log(`${String(DESDE + i + 1).padStart(3)}. ${c.x.id} [${c.x.type}] {${c.cubre.join(', ')}}\n     ${texto(c.x)}\n`));
+}

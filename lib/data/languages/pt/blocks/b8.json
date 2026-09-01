@@ -911,7 +911,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
     "type": "translation",
     "data": {
       "source": "Apesar de eu achar graça, não ri.",
@@ -925,7 +925,8 @@
     "__nuevos": [
       "b8-con-causa",
       "b8-sub-concessivas"
-    ]
+    ],
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: OK — traducción correcta de la concesiva"
   },
   {
     "id": "23f3b01e",
@@ -5992,10 +5993,7 @@
       "front": "Coloca el pronombre: A gente ___ (alimentar) de forma saudável.",
       "back": "alimenta-se — ‘a gente’ usa el mismo conjugado que ‘ele/ela’ (3ª pessoa), y sin disparador el clítico va en ênclise",
       "example": "A gente alimenta-se bem quando cozinha em casa."
-    },
-    "__nuevos": [
-      "b8-coloc-enclise"
-    ]
+    }
   },
   {
     "id": "d64ccc41",
@@ -6221,8 +6219,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "needs-human",
-    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-con-contraste, b8-oracoes-subordinadas",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-con-contraste, b8-oracoes-subordinadas · RESCATADO en E2#22: su punto volvió a bajar del piso al retirarse un ítem roto",
     "type": "translation",
     "data": {
       "source": "Contudo, importa salientar que nenhum de nós consegue imaginar tal cenário.",
@@ -7066,8 +7064,7 @@
     "lessonId": "b8-l1-conectores-subordinadas-adverbiais",
     "difficulty": 1,
     "concepts": [
-      "b8-con-contraste",
-      "b8-sub-concessivas"
+      "b8-con-causa"
     ],
     "tags": [
       "formal"
@@ -7084,7 +7081,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: re-etiquetado — enseña un conector CAUSAL, no contraste ni concesiva",
     "type": "listening",
     "data": {
       "audioText": "Consegui falar contigo porque o meu português melhorou muito este ano.",
@@ -7098,8 +7096,7 @@
       "answer": "porque"
     },
     "__nuevos": [
-      "b8-con-contraste",
-      "b8-sub-concessivas"
+      "b8-con-causa"
     ]
   },
   {

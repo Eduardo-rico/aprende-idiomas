@@ -22,7 +22,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: RETIRADO, arreglo caro — «A rua do meu carro» no significa nada, y la respuesta declarada («el carro») contradice al audio, que sitúa la CALLE cerca de la esquina · puntos que dejaba cubiertos: b1-pron-rr-r",
     "type": "listening",
     "data": {
       "audioText": "A rua do meu carro fica perto da esquina. Você conhece a rua?",
@@ -34,10 +35,7 @@
         "El ratón"
       ],
       "answer": "El carro"
-    },
-    "__nuevos": [
-      "b1-pron-rr-r"
-    ]
+    }
   },
   {
     "id": "01bc77ff",
@@ -92,8 +90,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "needs-human",
-    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-alfabeto",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-alfabeto · RESCATADO en E2#22: su punto volvió a bajar del piso al retirarse un ítem roto",
     "type": "listening",
     "data": {
       "audioText": "Meu nome começa com a letra A. Qual é a primeira letra do meu nome?",
@@ -166,8 +164,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: OK — traducción correcta",
     "type": "translation",
     "data": {
       "source": "Aquele livro é muito difícil.",
@@ -294,22 +292,23 @@
       "regional",
       "falso-amigo"
     ],
-    "contentHash": "31716fa8cb38be89eca64c4f5b9824b637f51ea0b187deaec7b06038df6016d6",
+    "contentHash": "52132d6d35f89046090517db0e2bd7664cdfa25f06367673c09f3879f68328cf",
     "esContrast": "En BR 'correu' suena /koˈhew/; en PT-PT es /koˈʁew/. Similar a español, pero el sonido del 'r' es diferente.",
     "audio": {
       "br": {
-        "hash": "38c7c06d0889d9b7af8f7e6917e88f9c2ceef1bee429c6f91a2964f0ee16239a",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "9a5ebb3dd9708d4e98d4bd38b853247687603f9c2f890c55cfce78fbdc36d91b",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "298bc3cc64553825a384c752811356c197e9702315666a5f0dfaed0d8d1e7664",
-        "voice": "Portuguese_Wiselady"
+        "hash": "9a5ebb3dd9708d4e98d4bd38b853247687603f9c2f890c55cfce78fbdc36d91b",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: corregido — «quilômetros» es la grafía brasileña; la europea lleva agudo",
     "type": "translation",
     "data": {
-      "source": "Rosa correu três quilômetros.",
+      "source": "Rosa correu três quilómetros.",
       "target": "Rosa corrió tres kilómetros.",
       "sourceLang": "pt-pt",
       "targetLang": "es"
@@ -394,7 +393,7 @@
     "tags": [
       "regular"
     ],
-    "contentHash": "06f92d255f75a34e922b957f08455bebd0516374fa889de9b03a72ae5a6189b7",
+    "contentHash": "05f47d1d0bc2eca256c788f1a36c6b2890c0777e27196a51bc5869cdd5c04c40",
     "esContrast": "La ll española se convierte en lh portuguesa: ojo → olho.",
     "audio": {
       "br": {
@@ -406,15 +405,16 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: corregido — la opción correcta estaba DUPLICADA en las tres opciones",
     "type": "listening",
     "data": {
       "audioText": "A mulher de olho verde mora ali.",
       "question": "¿Cómo se escribe 'ojo' en portugués?",
       "options": [
         "olho",
-        "olle",
-        "olho"
+        "ollo",
+        "olio"
       ],
       "answer": "olho"
     },
@@ -442,8 +442,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: OK — traducción correcta",
     "type": "translation",
     "data": {
       "source": "Quiero tomar un café ahora.",
@@ -735,8 +735,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — «Liste no alfabeto: A, B, C…» no es frase natural en PT; reescribir el audioText antes de doblar",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: OK — audio y respuesta coherentes: sólo Ç lleva diacrítico",
     "type": "listening",
     "data": {
       "audioText": "Liste no alfabeto: A, B, C, Ç, D, E. Repita as letras que têm cedilha ou acento.",
@@ -1087,10 +1087,11 @@
     ],
     "contentHash": "1ba19350d4439d3fa0b472e876d9b7a442f2dd6392480a4dcad61724621937fe",
     "esContrast": "En español no existe la cedilha (ç), solo la 'c' normal.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: corregido — próclise sin atractor: la norma europea pide ênclise, «escreve-se»",
     "type": "fill_blank",
     "data": {
-      "sentence": "A letra ___ se escreve com cedilha, como em maçã.",
+      "sentence": "A letra ___ escreve-se com cedilha, como em maçã.",
       "blanks": [
         {
           "position": 0,
@@ -1344,10 +1345,7 @@
         "—"
       ],
       "answer": "de"
-    },
-    "__nuevos": [
-      "reg-verbal-de"
-    ]
+    }
   },
   {
     "id": "2465aa85",
@@ -1406,8 +1404,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: OK — traducción correcta, sin marcas brasileñas",
     "type": "translation",
     "data": {
       "source": "Esa canción es muy popular",
@@ -1986,8 +1984,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: OK — traducción correcta; «belos» es literario pero válido",
     "type": "translation",
     "data": {
       "source": "La mujer tiene ojos hermosos",
@@ -2176,8 +2174,8 @@
     ],
     "contentHash": "4626c4a6f31efd5ab0b873b738c6546d84c6341553a555ebfa505d8bb1fa3dab",
     "esContrast": "En BR se pronuncia /kaʁu/ (el 'r' final es /ʁ/), mientras que en PT es /kaʁu/ con vibrante alveolar múltiple.",
-    "variantStatus": "needs-human",
-    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-rr-r",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-rr-r · RESCATADO en E2#22: su punto volvió a bajar del piso al retirarse un ítem roto",
     "type": "fill_blank",
     "data": {
       "sentence": "O ___ correu pela estrada.",
@@ -2256,7 +2254,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
     "type": "listening",
     "data": {
       "audioText": "Tenho dois ratos brancos em casa. Eles moram atrás do carro.",
@@ -2272,7 +2270,8 @@
     "__nuevos": [
       "b1-pron-rr-r",
       "b1-pron-s-final"
-    ]
+    ],
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: OK — audio y respuesta coherentes"
   },
   {
     "id": "490078b0",
@@ -2301,10 +2300,7 @@
         "—"
       ],
       "answer": "me"
-    },
-    "__nuevos": [
-      "reg-verbal-otras"
-    ]
+    }
   },
   {
     "id": "49b99558",
@@ -2710,7 +2706,7 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "93b818a22bbbfe1f9dfffe2c5d10a2b90d46e24fd484f8f651f4696cda3056fb",
+    "contentHash": "f11d623ab74965bb6570996113c3588b907b3214e34751859c6aa7d171fdceb9",
     "esContrast": "Pão lleva tilde (ã), Nós es diferente de 'nos' español; â es circunflejo.",
     "audio": {
       "br": {
@@ -2722,16 +2718,14 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: corregido — la fuente española llevaba portugués dentro («pão para nós») y la alternativa era la clave repetida",
     "type": "translation",
     "data": {
-      "source": "El padre de João fue a São Paulo y trajo pão para nós.",
+      "source": "El padre de Juan fue a São Paulo y trajo pan para nosotros.",
       "target": "O pai de João foi a São Paulo e trouxe pão para nós.",
       "sourceLang": "es",
-      "targetLang": "pt-pt",
-      "acceptedAlternatives": [
-        "O pai de João foi a São Paulo e trouxe pão para nós."
-      ]
+      "targetLang": "pt-pt"
     },
     "__nuevos": [
       "b1-acento-circunflexo",
@@ -2799,7 +2793,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
     "type": "translation",
     "data": {
       "source": "Los meses pasaron rápido.",
@@ -2813,7 +2807,8 @@
     "__nuevos": [
       "b1-pron-rr-r",
       "b1-pron-s-final"
-    ]
+    ],
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: OK — «rápido» adverbial cubierto por la alternativa «depressa»"
   },
   {
     "id": "54bd1670",
@@ -3657,10 +3652,7 @@
         "a"
       ],
       "answer": "em"
-    },
-    "__nuevos": [
-      "reg-verbal-em"
-    ]
+    }
   },
   {
     "id": "7088d525",
@@ -3777,24 +3769,24 @@
     "tags": [
       "coloquial"
     ],
-    "contentHash": "952dc3cecd62032124377c04837d0bc872d70ff0ee32fa040ceb3e242a88f05e",
+    "contentHash": "4fa29f21234696f371baab1e826623d94b6ee21bb795230d691ee62176d0cb25",
     "esContrast": "soldadillo → soldado (el diminutivo -illo no se traduce); morado (color) = roxo.",
     "audio": {
       "br": {
-        "hash": "da885736ddd9b9e5f59c55d612d8f90bffd9f4b9d49dc901b92a669915347e1d",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "98470044b7a9e7e069581fbf7429de16047f6232c037ccbc3b1f86a669927c9b",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "914fc7f4f2f78391a88125a4c9b1e89cbda81c016e3f1023aaae36c0e58cf66f",
-        "voice": "Portuguese_Wiselady"
+        "hash": "98470044b7a9e7e069581fbf7429de16047f6232c037ccbc3b1f86a669927c9b",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: corregido — el diminutivo -illo/-inho es lo que el ítem enseña y se había perdido en «soldado»",
     "type": "translation",
     "data": {
       "source": "El soldadillo tiene un ojo morado",
-      "target": "O soldado tem um olho roxo",
+      "target": "O soldadinho tem um olho roxo",
       "sourceLang": "es",
       "targetLang": "pt-pt"
     },
@@ -4323,10 +4315,7 @@
         "em"
       ],
       "answer": "da"
-    },
-    "__nuevos": [
-      "reg-verbal-de"
-    ]
+    }
   },
   {
     "id": "85f61ce8",
@@ -4573,10 +4562,7 @@
       "front": "hotel",
       "back": "hotel",
       "example": "O hotel fica no centro."
-    },
-    "__nuevos": [
-      "b1-h-muda"
-    ]
+    }
   },
   {
     "id": "8978047a",
@@ -5076,8 +5062,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — Gloss circular y mal redactada: «Canção es 'canción' en PT» invierte qué palabra es de qué lengua; reescribir gloss",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: OK — traducción correcta",
     "type": "translation",
     "data": {
       "source": "El corazón de la canción",
@@ -5117,10 +5103,7 @@
         "—"
       ],
       "answer": "de"
-    },
-    "__nuevos": [
-      "reg-verbal-de"
-    ]
+    }
   },
   {
     "id": "96860d5e",
@@ -5287,10 +5270,7 @@
         "a"
       ],
       "answer": "em"
-    },
-    "__nuevos": [
-      "reg-verbal-em"
-    ]
+    }
   },
   {
     "id": "98b6061c",
@@ -5452,10 +5432,7 @@
         "—"
       ],
       "answer": "de"
-    },
-    "__nuevos": [
-      "reg-verbal-de"
-    ]
+    }
   },
   {
     "id": "a37da8d4",
@@ -5523,10 +5500,7 @@
       "front": "baño",
       "back": "banho",
       "example": "Vou tomar um banho."
-    },
-    "__nuevos": [
-      "b1-h-muda"
-    ]
+    }
   },
   {
     "id": "a3d9f5a1",
@@ -5854,10 +5828,7 @@
         "em"
       ],
       "answer": "da"
-    },
-    "__nuevos": [
-      "reg-verbal-de"
-    ]
+    }
   },
   {
     "id": "b4a3724c",
@@ -6148,7 +6119,7 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "ff901b052127c2a297ff3d34d7f220b9cc9913960f33a3665dcc53a40f93ead0",
+    "contentHash": "ffe7c6d5d64e6728c1c22bdeece2747e9216632bdfee34f76586695b49056a26",
     "esContrast": "Diminutivo -illa → -inha; mujer → mulher, ojo → olh- en composiciones.",
     "audio": {
       "br": {
@@ -6160,10 +6131,11 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: corregido — errata en la fuente: «mujercillla»",
     "type": "translation",
     "data": {
-      "source": "Ella es una mujercillla",
+      "source": "Ella es una mujercilla",
       "target": "Ela é uma mulherzinha",
       "sourceLang": "es",
       "targetLang": "pt-pt"
@@ -6359,7 +6331,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: RETIRADO, arreglo caro — «Cê» es brasileño, la cedilla va bajo la c y no bajo la s, y la respuesta declarada es falsa (ç va ante a/o/u, no ante e/i) · puntos que dejaba cubiertos: b1-alfabeto, b1-acento-agudo",
     "type": "listening",
     "data": {
       "audioText": "Cê sabe escrever a letra Ç? O 's' com cedilha é importante em português.",
@@ -6371,11 +6344,7 @@
         "El sonido 'z'"
       ],
       "answer": "El sonido 's' antes de e, i, o, u"
-    },
-    "__nuevos": [
-      "b1-alfabeto",
-      "b1-acento-agudo"
-    ]
+    }
   },
   {
     "id": "c052bca1",
@@ -6658,10 +6627,7 @@
       "acceptedAlternatives": [
         "El hotel queda en el centro de la ciudad."
       ]
-    },
-    "__nuevos": [
-      "b1-h-muda"
-    ]
+    }
   },
   {
     "id": "c7eaa553",
@@ -6693,10 +6659,7 @@
       "front": "ojo",
       "back": "olho",
       "example": "Ela tem olhos verdes."
-    },
-    "__nuevos": [
-      "b1-corresp-nh-ny"
-    ]
+    }
   },
   {
     "id": "c83e79da",
@@ -6733,10 +6696,7 @@
         "Todas son esdrújulas"
       ],
       "answer": "La h inicial no se pronuncia"
-    },
-    "__nuevos": [
-      "b1-h-muda"
-    ]
+    }
   },
   {
     "id": "c90e36c7",
@@ -6828,10 +6788,7 @@
       "acceptedAlternatives": [
         "Voy a darme un baño por la mañana."
       ]
-    },
-    "__nuevos": [
-      "b1-corresp-nh-ny"
-    ]
+    }
   },
   {
     "id": "d0321a11",
@@ -7216,10 +7173,7 @@
       "front": "hora",
       "back": "hora",
       "example": "Que horas são agora?"
-    },
-    "__nuevos": [
-      "b1-h-muda"
-    ]
+    }
   },
   {
     "id": "d9f4120c",
@@ -7245,8 +7199,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: OK — pt→es correcta, con la cedilha en «coração» que el punto pide",
     "type": "translation",
     "data": {
       "source": "O coração tem quatro câmaras.",
@@ -8180,10 +8134,7 @@
       "front": "año",
       "back": "ano",
       "example": "Feliz ano novo!"
-    },
-    "__nuevos": [
-      "b1-corresp-nh-ny"
-    ]
+    }
   },
   {
     "id": "f0ae3fd6",
@@ -8522,10 +8473,7 @@
       "front": "¿Cómo se dice 'pan' en portugués?",
       "back": "pão",
       "example": "Eu compro pão todas as manhãs."
-    },
-    "__nuevos": [
-      "b1-nasal-ao-oes"
-    ]
+    }
   },
   {
     "id": "f6cd6004",
@@ -8558,10 +8506,7 @@
       "acceptedAlternatives": [
         "O alfabeto português possui vinte e seis letras."
       ]
-    },
-    "__nuevos": [
-      "b1-alfabeto"
-    ]
+    }
   },
   {
     "id": "f77c3c24",
@@ -8694,10 +8639,7 @@
         "para"
       ],
       "answer": "da"
-    },
-    "__nuevos": [
-      "reg-verbal-de"
-    ]
+    }
   },
   {
     "id": "fa9af65b",
@@ -8768,10 +8710,7 @@
         "Tres"
       ],
       "answer": "Tres"
-    },
-    "__nuevos": [
-      "b1-h-muda"
-    ]
+    }
   },
   {
     "id": "ff732558",

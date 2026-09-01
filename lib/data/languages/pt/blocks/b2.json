@@ -134,10 +134,7 @@
         "para"
       ],
       "answer": "no"
-    },
-    "__nuevos": [
-      "reg-verbal-em"
-    ]
+    }
   },
   {
     "id": "0478585d",
@@ -194,7 +191,7 @@
       }
     },
     "variantStatus": "unchecked",
-    "variantVerificacion": "E2#10 2026-09-01: léxico BR→EP por swap mecánico, forma BR movida a variantOverrides['pt-br']",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: DUDA: «Todo aquele contacto com saudade» es semánticamente extraño; no es agramatical pero nadie diría eso",
     "type": "listening",
     "data": {
       "audioText": "Todo aquele contacto com saudade quase me fez chorar.",
@@ -347,10 +344,7 @@
         "Ninguno"
       ],
       "answer": "Dos"
-    },
-    "__nuevos": [
-      "b2-numero"
-    ]
+    }
   },
   {
     "id": "0a2f6c45",
@@ -446,10 +440,7 @@
         "para"
       ],
       "answer": "de"
-    },
-    "__nuevos": [
-      "reg-verbal-de"
-    ]
+    }
   },
   {
     "id": "0dd66b96",
@@ -500,23 +491,24 @@
       "demostrativo",
       "indefinido"
     ],
-    "contentHash": "135d3b3996ed97507ca4c1906cd1421b62014eb5ebb76edeefad43f320b188d9",
+    "contentHash": "66d16e06853e142c4e3ef3d97010cb462677cf5105fe39319f380dd4caab79f1",
     "esContrast": "«Trás» (con t) = 'detrás'; «três» (con s) = 'tres'. Cuidado con la ortografía.",
     "audio": {
       "br": {
-        "hash": "44c39bdada6142bc385b4122dc562e7dc99043d50e7b8684d4035da5842af4bf",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "8bba65f9fc2e3b5cea73d55469ac361a2bfef20d69268c002151c0b43237811a",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "57c2071295f3f6db67424a571779d649f2235322bcedb753dbadd2de407502fc",
-        "voice": "Portuguese_Wiselady"
+        "hash": "8bba65f9fc2e3b5cea73d55469ac361a2bfef20d69268c002151c0b43237811a",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: corregido — lenguas invertidas y «ai trás» por «aí atrás»",
     "type": "translation",
     "data": {
-      "source": "Essa pessoa ai trás não fala português.",
-      "target": "Esa persona de atrás no habla portugués.",
+      "source": "Esa persona de atrás no habla portugués.",
+      "target": "Essa pessoa aí atrás não fala português.",
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
@@ -670,10 +662,7 @@
         "Nenhum filho"
       ],
       "answer": "Dois filhos"
-    },
-    "__nuevos": [
-      "b2-art-contr-de"
-    ]
+    }
   },
   {
     "id": "1f1198ae",
@@ -1057,10 +1046,7 @@
           "alternatives": []
         }
       ]
-    },
-    "__nuevos": [
-      "b2-genero"
-    ]
+    }
   },
   {
     "id": "2e2c9d52",
@@ -1245,10 +1231,7 @@
       "front": "¿Qué son 'isto', 'isso' y 'aquilo'?",
       "back": "Pronombres demostrativos neutros: isto (esto/this), isso (eso/that), aquilo (aquello/that).",
       "example": "Isso é muito interessante! Aquilo que ele disse não é verdade."
-    },
-    "__nuevos": [
-      "b2-dem-neutros"
-    ]
+    }
   },
   {
     "id": "3c93369c",
@@ -1371,8 +1354,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "needs-human",
-    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b2-plural-ao",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b2-plural-ao · RESCATADO en E2#22: su punto volvió a bajar del piso al retirarse un ítem roto",
     "type": "translation",
     "data": {
       "source": "As reuniões serão nas manhãs de sábado.",
@@ -1437,8 +1420,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "needs-human",
-    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b2-possessivos, b2-numero",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b2-possessivos, b2-numero · RESCATADO en E2#22: su punto volvió a bajar del piso al retirarse un ítem roto",
     "type": "translation",
     "data": {
       "source": "¿Quieres visitar a nuestros amigos?",
@@ -1655,10 +1638,7 @@
         "El padre"
       ],
       "answer": "La hermana"
-    },
-    "__nuevos": [
-      "b2-genero"
-    ]
+    }
   },
   {
     "id": "4937be04",
@@ -1812,10 +1792,7 @@
       "acceptedAlternatives": [
         "O esposo da irmã tem bons costumes."
       ]
-    },
-    "__nuevos": [
-      "b2-art-contr-de"
-    ]
+    }
   },
   {
     "id": "4eb38e01",
@@ -1844,10 +1821,7 @@
         "com aquela"
       ],
       "answer": "naquela"
-    },
-    "__nuevos": [
-      "reg-verbal-otras"
-    ]
+    }
   },
   {
     "id": "4ef1772b",
@@ -2154,10 +2128,7 @@
           ]
         }
       ]
-    },
-    "__nuevos": [
-      "b2-art-contr-de"
-    ]
+    }
   },
   {
     "id": "5a704517",
@@ -2202,7 +2173,6 @@
     "lessonId": "b2-l3-numero-possessivos",
     "difficulty": 3,
     "concepts": [
-      "b2-possessivos",
       "b2-numero"
     ],
     "tags": [
@@ -2222,8 +2192,8 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: re-etiquetado — no contiene ningún posesivo: se queda con el punto que sí ejercita",
     "type": "translation",
     "data": {
       "source": "Os amigos presentes nesta reunião devem ficar unidos.",
@@ -2235,7 +2205,6 @@
       ]
     },
     "__nuevos": [
-      "b2-possessivos",
       "b2-numero"
     ]
   },
@@ -2299,10 +2268,7 @@
         "∅"
       ],
       "answer": "de"
-    },
-    "__nuevos": [
-      "reg-verbal-de"
-    ]
+    }
   },
   {
     "id": "5f1630a3",
@@ -2664,10 +2630,7 @@
       "acceptedAlternatives": [
         "A minha irmã vive no Rio de Janeiro."
       ]
-    },
-    "__nuevos": [
-      "b2-genero"
-    ]
+    }
   },
   {
     "id": "6b50efa1",
@@ -2805,10 +2768,7 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    },
-    "__nuevos": [
-      "b2-genero"
-    ]
+    }
   },
   {
     "id": "7010bbda",
@@ -2969,10 +2929,7 @@
           "alternatives": []
         }
       ]
-    },
-    "__nuevos": [
-      "b2-genero"
-    ]
+    }
   },
   {
     "id": "71a97c04",
@@ -3000,10 +2957,7 @@
         "para"
       ],
       "answer": "de"
-    },
-    "__nuevos": [
-      "reg-verbal-de"
-    ]
+    }
   },
   {
     "id": "7308b457",
@@ -3035,10 +2989,7 @@
       "front": "irmã",
       "back": "hermana",
       "example": "Minha irmã estuda medicina."
-    },
-    "__nuevos": [
-      "b2-genero"
-    ]
+    }
   },
   {
     "id": "7438d8e0",
@@ -3176,7 +3127,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: RETIRADO, arreglo caro — la respuesta declarada («irmãs») no aparece en el audio, que dice «irmã»; y «dar um abraço na irmã» es brasileño · puntos que dejaba cubiertos: b2-plural-ao, b2-possessivos",
     "type": "listening",
     "data": {
       "audioText": "Vou visitar vocês no sábado para dar um abraço na irmã mais velha.",
@@ -3188,11 +3140,7 @@
         "irmãs"
       ],
       "answer": "irmãs"
-    },
-    "__nuevos": [
-      "b2-plural-ao",
-      "b2-possessivos"
-    ]
+    }
   },
   {
     "id": "7a242a72",
@@ -3226,10 +3174,7 @@
       "acceptedAlternatives": [
         "Os filhos vivem pelas ruas do bairro."
       ]
-    },
-    "__nuevos": [
-      "b2-art-contr-de"
-    ]
+    }
   },
   {
     "id": "7ae1f0bd",
@@ -3256,8 +3201,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "needs-human",
-    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b2-possessivos, b2-numero",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b2-possessivos, b2-numero · RESCATADO en E2#22: su punto volvió a bajar del piso al retirarse un ítem roto",
     "type": "translation",
     "data": {
       "source": "Minhas irmãs moram no centro.",
@@ -3338,10 +3283,7 @@
         }
       ],
       "hintEs": "mi hermana y mi esposo"
-    },
-    "__nuevos": [
-      "b2-genero"
-    ]
+    }
   },
   {
     "id": "7cc59eb2",
@@ -3371,10 +3313,7 @@
       "front": "¿Cuál es el plural de 'jaleco'?",
       "back": "jalecos",
       "example": "Os médicos usam jalecos brancos no hospital."
-    },
-    "__nuevos": [
-      "b2-numero"
-    ]
+    }
   },
   {
     "id": "7cfd6a89",
@@ -3474,10 +3413,7 @@
       "front": "Cuál es la contracción de \"por + a\"?",
       "back": "pela",
       "example": "Passei pela janela. (= Passei por a janela)"
-    },
-    "__nuevos": [
-      "b2-art-contr-a-por"
-    ]
+    }
   },
   {
     "id": "7e240953",
@@ -3504,17 +3440,14 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: RETIRADO, arreglo caro — enseña el uso de PT-BR como material, con ejemplo brasileño («vamos nos encontrar»), en un curso de norma europea · puntos que dejaba cubiertos: b2-numero, b2-poss-formas",
     "type": "flashcard",
     "data": {
       "front": "¿Se dice 'meu amigos' o 'meus amigos' en PT-BR coloquial?",
       "back": "meus amigos",
       "example": "Meus amigos, vamos nos encontrar amanhã!"
-    },
-    "__nuevos": [
-      "b2-numero",
-      "b2-poss-formas"
-    ]
+    }
   },
   {
     "id": "7fd9b9c3",
@@ -3546,10 +3479,7 @@
       "front": "¿Cómo se escribe: 'vizitar' o 'visitar'?",
       "back": "visitar",
       "example": "Quero visitar Portugal no verão."
-    },
-    "__nuevos": [
-      "b2-genero"
-    ]
+    }
   },
   {
     "id": "804dd3af",
@@ -3616,10 +3546,7 @@
       "front": "Cuál es la contracción de \"de + a\"?",
       "back": "da",
       "example": "A filha da Maria. (= A filha de a Maria)"
-    },
-    "__nuevos": [
-      "b2-art-contr-de"
-    ]
+    }
   },
   {
     "id": "824a38ab",
@@ -3661,27 +3588,25 @@
       "b2-numero"
     ],
     "tags": [],
-    "contentHash": "200a80b9a683c15acd2af187a0d2cc347c2960c6c09d9984f68d3baad8dbd24c",
+    "contentHash": "7be54474c216b4e4ee3164f44b285e92826ac8de363f699770564c56d8086d98",
     "audio": {
       "br": {
-        "hash": "67307a6adb4bed4758ff8135efb996f03e9f1ba8c94dbe36ca7afb2d81724fb9",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "f7203ee78847eab744dc8fb369b01d84dc7c6f506b5806e303a672acd8090c2f",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "dc98a377395beb0c81f3e95a7c386cece0debed8631cf19d7fbc59b2d3ad3776",
-        "voice": "Portuguese_Wiselady"
+        "hash": "f7203ee78847eab744dc8fb369b01d84dc7c6f506b5806e303a672acd8090c2f",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: corregido — el punto es el posesivo CON artículo y la clave era la forma sin él",
     "type": "translation",
     "data": {
       "source": "Tu hermana vive aquí.",
-      "target": "Tua irmã mora aqui.",
+      "target": "A tua irmã mora aqui.",
       "sourceLang": "es",
-      "targetLang": "pt-pt",
-      "acceptedAlternatives": [
-        "A tua irmã mora aqui."
-      ]
+      "targetLang": "pt-pt"
     },
     "__nuevos": [
       "b2-poss-com-artigo",
@@ -3789,10 +3714,7 @@
         "∅"
       ],
       "answer": "em"
-    },
-    "__nuevos": [
-      "reg-verbal-em"
-    ]
+    }
   },
   {
     "id": "87c3220e",
@@ -3866,7 +3788,7 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "df6f26b9761648e6d0381cc567882b9c7e37ad242c71794d48cfefb3c598bcad",
+    "contentHash": "f57a48337b92254fc4e816b2d5862ed3add1b3b40684f85b79931e0a1f25dbff",
     "esContrast": "'Dar um abraço' es la expresión natural en PT para 'abrazar'.",
     "audio": {
       "br": {
@@ -3878,7 +3800,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: corregido — la alternativa sin artículo desmontaba el punto que el ítem enseña",
     "type": "translation",
     "data": {
       "source": "Encontré a mi hermana y la abracé.",
@@ -3886,7 +3809,6 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": [
-        "Encontrei minha irmã e dei-lhe um abraço.",
         "Achei a minha irmã e dei-lhe um abraço."
       ]
     },
@@ -4091,32 +4013,32 @@
       "b2-possessivos"
     ],
     "tags": [],
-    "contentHash": "d2df63c6da39552b0589cc2ca142df02f0cc6b5079de818d312279f94a438fdc",
+    "contentHash": "66f6f9f5309fc542f83fd1163af60b0e5f456246faf3fa952ea9c22766c8fcc1",
     "audio": {
       "br": {
-        "hash": "550c9600929c1383263b2149e3c87721a0059c7e69c452402b49b951bf258da5",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "11a57792ddb7dc89b89ef2e831018c2b3b919ea18fffc943d17441f9194f149e",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "ac62f4cef6b941f1dc6888f06ea01043151b0cf18afffd3299ccab7b091ef893",
-        "voice": "Portuguese_Wiselady"
+        "hash": "11a57792ddb7dc89b89ef2e831018c2b3b919ea18fffc943d17441f9194f149e",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: corregido — posesivo sin artículo: forma brasileña",
     "type": "translation",
     "data": {
       "source": "Mis hijos son cariñosos.",
-      "target": "Meus filhos são carinhosos.",
+      "target": "Os meus filhos são carinhosos.",
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": [
-        "Meus filhos são afetuosos."
+        "Os meus filhos são afetuosos."
       ]
     },
     "__nuevos": [
       "b2-numero",
-      "b2-possessivos"
+      "b2-poss-com-artigo"
     ]
   },
   {
@@ -4181,10 +4103,7 @@
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
-    },
-    "__nuevos": [
-      "b2-genero"
-    ]
+    }
   },
   {
     "id": "98c187ff",
@@ -4218,10 +4137,7 @@
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
-    },
-    "__nuevos": [
-      "b2-art-contr-de"
-    ]
+    }
   },
   {
     "id": "98c6f708",
@@ -4236,7 +4152,7 @@
       "demostrativo",
       "indefinido"
     ],
-    "contentHash": "08bc653d60184318e0b45cc11117c56e00f94a0f526eaebddff600fae7a0549b",
+    "contentHash": "4e083f838dc7d555304564f938a2cddc5ffd3ba8ca8e53e21ba758227037654d",
     "esContrast": "Aquela = 'aquella', señala lo lejano. Saudade se mantiene igual en español.",
     "audio": {
       "br": {
@@ -4248,16 +4164,16 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: corregido — la clave de una traducción AL español dejaba «saudade» sin traducir",
     "type": "translation",
     "data": {
       "source": "Aquela saudade nunca vai passar.",
-      "target": "Aquella saudade nunca va a pasar.",
+      "target": "Esa nostalgia nunca va a pasar.",
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "Esa nostalgia nunca va a pasar.",
+        "Aquella nostalgia nunca va a pasar.",
         "Ese anhelo nunca va a pasar."
       ]
     },
@@ -4364,10 +4280,7 @@
       "front": "¿Cuál es el plural de 'cidadão'?",
       "back": "cidadãos",
       "example": "Os cidadãos têm direitos e deveres."
-    },
-    "__nuevos": [
-      "b2-numero"
-    ]
+    }
   },
   {
     "id": "9ca6f9b4",
@@ -4429,10 +4342,7 @@
           "alternatives": []
         }
       ]
-    },
-    "__nuevos": [
-      "b2-genero"
-    ]
+    }
   },
   {
     "id": "9e23f8fa",
@@ -4502,10 +4412,7 @@
       "acceptedAlternatives": [
         "Aquela cidade deixa muita saudade."
       ]
-    },
-    "__nuevos": [
-      "b2-dem-tres-graus"
-    ]
+    }
   },
   {
     "id": "a391011a",
@@ -4563,8 +4470,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "needs-human",
-    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b2-plural-ao, b2-possessivos",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b2-plural-ao, b2-possessivos · RESCATADO en E2#22: su punto volvió a bajar del piso al retirarse un ítem roto",
     "type": "translation",
     "data": {
       "source": "Los corazones de los niños se unieron.",
@@ -4644,10 +4551,7 @@
       "front": "Cuál es la contracción de \"a + a\"?",
       "back": "à",
       "example": "Vou à escola. (= Vou a a escola)"
-    },
-    "__nuevos": [
-      "b2-art-contr-a-por"
-    ]
+    }
   },
   {
     "id": "a84c3808",
@@ -4756,10 +4660,7 @@
       "acceptedAlternatives": [
         "O esposo de Carla é advogado."
       ]
-    },
-    "__nuevos": [
-      "b2-genero"
-    ]
+    }
   },
   {
     "id": "acd58cf9",
@@ -4789,10 +4690,7 @@
         "para"
       ],
       "answer": "de"
-    },
-    "__nuevos": [
-      "reg-verbal-de"
-    ]
+    }
   },
   {
     "id": "ad2ff781",
@@ -4819,7 +4717,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo funciona 'debaixo/detrás/diante de' con demostrativos?",
@@ -4829,7 +4727,8 @@
     "__nuevos": [
       "b2-dem-contracciones",
       "b2-indefinidos"
-    ]
+    ],
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: OK — contenido correcto sobre preposición + demostrativo"
   },
   {
     "id": "ad4364cb",
@@ -4855,8 +4754,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: OK — clave con artículo; la alternativa sin él es admisible en registro formal",
     "type": "translation",
     "data": {
       "source": "Las naciones aliadas celebraron la unión de sus pueblos con abrazos fraternales.",
@@ -4908,10 +4807,7 @@
         "Numa loja"
       ],
       "answer": "Numa escola"
-    },
-    "__nuevos": [
-      "b2-art-contr-de"
-    ]
+    }
   },
   {
     "id": "af356d45",
@@ -5116,10 +5012,7 @@
         "para aquele"
       ],
       "answer": "daquele"
-    },
-    "__nuevos": [
-      "reg-verbal-otras"
-    ]
+    }
   },
   {
     "id": "b49b214b",
@@ -5308,10 +5201,7 @@
       "front": "mistura",
       "back": "mezcla",
       "example": "Essa receita tem uma mistura de ingredientes."
-    },
-    "__nuevos": [
-      "b2-genero"
-    ]
+    }
   },
   {
     "id": "bba546a2",
@@ -5325,11 +5215,11 @@
     "tags": [],
     "contentHash": "bba546a2df45e16a96deb6b244bde04cf857a6e7ae776959ea8fa8b367728d05",
     "esContrast": "Aquele momento = 'aquel momento' (distancia emocional/temporal)",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: corregido — «passamos» por «passámos»: la 1.ª plural del pretérito europeo",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu tenho saudade ___ momento que passamos juntos.",
+      "sentence": "Eu tenho saudades ___ momento que passámos juntos.",
       "blanks": [
         {
           "position": 2,
@@ -5451,10 +5341,7 @@
         "Al abuelo"
       ],
       "answer": "A la madre y a la hermana"
-    },
-    "__nuevos": [
-      "b2-genero"
-    ]
+    }
   },
   {
     "id": "c494839d",
@@ -5779,10 +5666,7 @@
         "Ar"
       ],
       "answer": "Balões"
-    },
-    "__nuevos": [
-      "b2-numero"
-    ]
+    }
   },
   {
     "id": "d25f2485",
@@ -5816,10 +5700,7 @@
       "front": "Qual é o gênero de 'problema' em português?",
       "back": "PROBLEMA é MASCULINO (o problema)",
       "example": "O problema foi resolvido."
-    },
-    "__nuevos": [
-      "b2-genero"
-    ]
+    }
   },
   {
     "id": "d3e11929",
@@ -6496,10 +6377,7 @@
       "acceptedAlternatives": [
         "Tenho vontade de visitar a minha prima e o meu primo."
       ]
-    },
-    "__nuevos": [
-      "b2-genero"
-    ]
+    }
   },
   {
     "id": "ed3c76d7",
@@ -6763,6 +6641,7 @@
       }
     },
     "variantStatus": "unchecked",
+    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: DUDA: «é logo aquele» sí es idiomático, pero «ora este» como demostrativo enfático no está claro que lo sea",
     "type": "flashcard",
     "data": {
       "front": "¿Cuándo usas 'logo este' o 'ora este' como demostrativos enfáticos?",
@@ -7084,10 +6963,7 @@
       "pt-br": {
         "source": "Tenho poucos contatos profissionais."
       }
-    },
-    "__nuevos": [
-      "b2-indefinidos"
-    ]
+    }
   },
   {
     "id": "fd0eb5d6",
