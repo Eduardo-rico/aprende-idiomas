@@ -297,6 +297,28 @@ export function verificar(items: Cloze[]): string[] {
     // LA CICATRIZ: el contexto tiene que DETERMINAR la respuesta.
     if (!x.ancla.trim()) v.push(`${id}: sin ancla declarada — el ancla es el trozo de la frase que EXCLUYE las otras respuestas posibles; si no lo encuentras, el ítem no está determinado`);
     else if (!x.s.includes(x.ancla)) v.push(`${id}: el ancla «${x.ancla}» no está en la frase — cópiala literal de la frase, que si no no excluye nada`);
+    // ── UN HUECO VERBAL EXIGE LEMA O PISTA QUE NOMBRE EL PARADIGMA ──
+    //
+    // No es un defecto de ítems concretos: es una propiedad del formato.
+    // «Eu ___ os documentos para a reunião» admite «trarei» y «levarei»
+    // igual de bien, y ninguna frase razonable fija cuál. Medido sobre los
+    // 182 cloze publicados sin pista: en los bloques de verbo —b4 y b5—
+    // catorce de cada veintidós necesitaban pista, frente a ocho en los de
+    // artículo y demostrativo.
+    //
+    // Así que la clase se cierra por construcción en vez de barrerse cada
+    // seis semanas: o el molde trae el lema entre paréntesis, o la pista
+    // nombra el paradigma. Las terminaciones son las que un sustantivo NO
+    // comparte —«-aste», «-ávamos», «-asse», «-rem»—; se dejan fuera los
+    // infinitivos en -ar/-er/-ir, que chocan con «lugar», «mulher» y
+    // «prazer», y los participios en -ado/-ido, que chocan con «mercado» y
+    // «vestido».
+    const VERBAL = /(aste|este|iste|ámos|êmos|íamos|aram|eram|iram|ava|avas|avam|arei|erei|irei|aremos|eremos|iremos|arão|erão|irão|aria|eria|iria|aríamos|eríamos|iríamos|asse|esse|isse|ássemos|êssemos|íssemos|assem|essem|issem|ando|endo|indo|rem|res|rmos)$/i;
+    const PARADIGMA = /(presente|pretérito|preterito|imperfeito|futuro|condicional|conjuntivo|subjuntivo|infinitivo|particípio|participio|imperativo|gerúndio|gerundio|mais-que-perfeito|auxiliar)/i;
+    if (VERBAL.test(r) && !/\([^)]*\)/.test(x.s) && !PARADIGMA.test(x.pista ?? '')) {
+      v.push(`${id}: hueco verbal sin lema en el molde ni paradigma en la pista — «${r}» no está determinado, porque media docena de verbos encajan igual en esa frase`);
+    }
+
     // La pista no puede deletrear la respuesta portuguesa.
     //
     // El caso que se repitió TRES veces antes de escribirse aquí: cuando

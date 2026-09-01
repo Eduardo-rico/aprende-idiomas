@@ -1975,17 +1975,18 @@
     ],
     "contentHash": "3d44b94690820488e89478c2732f6b27a2a38bd215d7dd020c9fb1d30c198e1f",
     "esContrast": "El subjuntivo de 'querer' es irregular: 'quisesse' en BR, 'quissesse' en PT-EU.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Se vocês ___ ir ao concerto, teríamos ido juntos.",
       "blanks": [
         {
           "position": 0,
-          "answer": "quissessem",
+          "answer": "quisessem",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "imperfeito do conjuntivo de «querer», 3.ª del plural — irregular"
     },
     "variantOverrides": {
       "pt-br": {
@@ -1999,7 +2000,8 @@
           }
         ]
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — «quissessem» NO EXISTE: la forma es «quisessem», con una sola ese en la raíz"
   },
   {
     "id": "3e0e742e",
@@ -2856,7 +2858,7 @@
     "contentHash": "4c1c9fb638c3ecd14940ec7d062bf5dabc54b6ac584d75d0bf985aa842bf3e3a",
     "esContrast": "'Venir' en conjuntivo: pt 'venha' frente a es 'venga' — donde el español pone 'ng', el portugués pone 'nh'.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — el hueco es verbal y sin lema no está determinado",
     "type": "fill_blank",
     "data": {
       "sentence": "Talvez ele ___ mais cedo hoje.",
@@ -2868,7 +2870,8 @@
             "chegue"
           ]
         }
-      ]
+      ],
+      "hintEs": "presente do conjuntivo de «vir», 3.ª persona — lo pide «talvez»"
     }
   },
   {
@@ -2976,7 +2979,7 @@
     "contentHash": "520df8fd13d377eca2849351030add03754ee6ea2d5cf2e6d75373322361b388",
     "esContrast": "'Poder' en subjuntivo tras 'duvidar': pt 'possam' vs es 'puedan'. Ojo con la estructura.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — el infinitivo «lidar» detrás fija que el hueco es un modal",
     "type": "fill_blank",
     "data": {
       "sentence": "Duvido que eles ___ lidar com essa situação difícil.",
@@ -4193,10 +4196,10 @@
     ],
     "contentHash": "72679e9265c62c8737064a763305c81e074617c35d901f87a67dd8ef6b52509c",
     "esContrast": "Pluscuamperfecto de subjuntivo: tivesse + participio = condicional compuesto en la oración principal.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
-      "sentence": "Se ele não ___ a decisão, teria logrado o sucesso.",
+      "sentence": "Se ele não ___, teria alcançado o sucesso que procurava.",
       "blanks": [
         {
           "position": 0,
@@ -4205,13 +4208,15 @@
             "desistisse"
           ]
         }
-      ]
+      ],
+      "hintEs": "mais-que-perfeito do conjuntivo de «desistir», 3.ª persona — el auxiliar y el participio"
     },
     "variantOverrides": {
       "pt-br": {
         "sentence": "Se ele não ___ a decisão, teria logrado o éxito."
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — «desistir a decisão» no rige, y «logrado o sucesso» es castellanismo: en portugués es «alcançar o sucesso»"
   },
   {
     "id": "73224b27",
@@ -7319,7 +7324,7 @@
     "contentHash": "da2090190eabb2f80c89b0ee6374ea0169cecf95ac7619d11688eedda6fe7075",
     "esContrast": "La colocación es la misma en las dos lenguas: «prestar atenção» / «prestar atención», y el conjuntivo «preste» es regular en ambas. Lo que cambia es la contracción: atenção A + as dúvidas = «às dúvidas».",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — la colocación «prestar atenção» lo fija",
     "type": "fill_blank",
     "data": {
       "sentence": "É fundamental que o professor ___ atenção às dúvidas dos alunos.",
@@ -8017,7 +8022,7 @@
     ],
     "contentHash": "ea635c56a55f1e89809ba787a23a0ddf48b9161aab240ce454edde497902397a",
     "esContrast": "No Brasil, 'haver' como impessoal pode manter-se; em Portugal, 'haver' é mais comum neste contexto.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "É possível que no ___ haja mais vagas.",
@@ -8027,13 +8032,15 @@
           "answer": "início",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "el comienzo de algo — el sustantivo que va con «no ___» para decir «al principio»"
     },
     "variantOverrides": {
       "pt-br": {
         "sentence": "É possível que no ___ haja mais vagas. (início)"
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — el hueco es verbal y sin lema no está determinado"
   },
   {
     "id": "ea7f1371",
@@ -8660,7 +8667,7 @@
     "contentHash": "fda162e1909e3ff9240590192c54cdc1b1ad37116740f9c45356a2322f705621",
     "esContrast": "Misma desinencia en las dos lenguas; lo que cambia es el lema: es «practicar → practique», pt «praticar → pratique», sin la -c-.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es el disparador del conjuntivo, que se ve con cualquier verbo",
     "type": "fill_blank",
     "data": {
       "sentence": "É importante que ela ___ português todos os dias.",
@@ -8669,7 +8676,9 @@
           "position": 0,
           "answer": "pratique",
           "alternatives": [
-            "estude"
+            "estude",
+            "fale",
+            "leia"
           ]
         }
       ]

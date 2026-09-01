@@ -389,7 +389,7 @@
     ],
     "contentHash": "12fea48b0063641c6e773438a71f11566a9d1f3e4e6547d6ccca6bcaf8ab4d90",
     "esContrast": "En 'cujo trabalho', 'cujo' concuerda con 'trabalho' (masculino singular). En español sería 'con cuyo trabajo'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "O realizador com ___ trabalho eu colaboro é brasileiro.",
@@ -400,7 +400,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — la relativa con posesivo lo fija: sólo un relativo funciona ahí"
   },
   {
     "id": "1312dd96",
@@ -622,7 +623,7 @@
     ],
     "contentHash": "1b5e25198977f8b873356c8f6f2050c5555ed14e0bd69165f8ec34326a5614bf",
     "esContrast": "'Logo que' en PT-PT expresa inmediatez, diferente del español.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "___ chegou a equipa, começámos a trabalhar.",
@@ -631,8 +632,9 @@
           "position": 0,
           "answer": "Quando",
           "alternatives": [
+            "Assim que",
             "Logo que",
-            "Assim que"
+            "Mal"
           ]
         }
       ]
@@ -650,7 +652,8 @@
           }
         ]
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es la subordinada temporal, que admite varios conectores"
   },
   {
     "id": "1eb6dfb6",
@@ -1556,25 +1559,27 @@
     ],
     "contentHash": "33ab4365677558c9e77dadaed54195b917329536aa5259cfc316f4553065fcbf",
     "esContrast": "'Em vez de + infinitivo compuesto' indica contraste, diferente de 'a pesar de'.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "O exame foi adiado ___ terem feito greves.",
       "blanks": [
         {
           "position": 0,
-          "answer": "em vez de",
+          "answer": "por",
           "alternatives": [
-            "por causa de"
+            "devido a"
           ]
         }
-      ]
+      ],
+      "hintEs": "la preposición causal que va con infinitivo personal: «___ terem feito»"
     },
     "variantOverrides": {
       "pt-br": {
         "sentence": "A prova foi adiada ___ terem feito greve."
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — «adiado em vez de terem feito greves» no significa nada: la relación es causal, no de sustitución"
   },
   {
     "id": "33cf21fe",
@@ -2728,7 +2733,7 @@
     ],
     "contentHash": "667b9995bdf5f7326c8d0d98e506a39fcd758023e733f475dca8e91949c6de47",
     "esContrast": "'Como se' en subordinada modal siempre lleva subjuntivo imperfecto.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Falou ___ não soubesse a verdade.",
@@ -2757,7 +2762,8 @@
           }
         ]
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — el imperfeito do conjuntivo detrás lo fija"
   },
   {
     "id": "68c3f8d4",
@@ -3505,7 +3511,7 @@
     ],
     "contentHash": "80101b86540cba8603227232ad72209170e8b9fb51be4f99532fc0995a08d34b",
     "esContrast": "'Por isso' es el equivalente más común de 'por eso', no 'por isso'.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Ele não trouxe guarda-chuva, ___ ficou molhado.",
@@ -3514,8 +3520,9 @@
           "position": 0,
           "answer": "por isso",
           "alternatives": [
+            "então",
             "logo",
-            "então"
+            "portanto"
           ]
         }
       ]
@@ -3524,7 +3531,8 @@
       "pt-br": {
         "sentence": "Ele não trouxe guarda-chuva, ___ se molhou."
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es la consecuencia, no el conector concreto"
   },
   {
     "id": "820036d8",
@@ -3702,18 +3710,20 @@
     ],
     "contentHash": "89d7eceea26bbb2fe0af98682bda8e4f45f9df29d11576199a04f286679f65b6",
     "esContrast": "'Cujo' es un falso amigo parcial: en portugués concuerda en género/número con el sustantivo siguiente, NO con el poseedor.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
-      "sentence": "A realizadora ___ o prêmio ganhou é estreante.",
+      "sentence": "A realizadora ___ filme ganhou o prémio é estreante.",
       "blanks": [
         {
           "position": 0,
           "answer": "cujo",
           "alternatives": []
         }
-      ]
-    }
+      ],
+      "hintEs": "cuyo — el relativo posesivo, que concuerda con lo poseído y NUNCA lleva artículo"
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — dos defectos: «prêmio» es la grafía brasileña —la europea es «prémio»— y la sintaxis era imposible, porque «cujo» no admite artículo detrás y la frase dejaba el poseído sin aparecer"
   },
   {
     "id": "8a92e893",
@@ -3906,7 +3916,8 @@
           ]
         }
       ]
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — el conjuntivo detrás y el contraste con «não passou» lo fijan"
   },
   {
     "id": "8ee01187",
@@ -3950,7 +3961,7 @@
     ],
     "contentHash": "92285bd5a28bba77f2018e9901acefdc9ea09dec9da9963ef49fa5adf4b36c82",
     "esContrast": "En portugués se usa más 'pois' que en español, y 'já que' es más enfático que 'porque'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela não veio à festa ___ estava doente.",
@@ -3959,12 +3970,14 @@
           "position": 0,
           "answer": "porque",
           "alternatives": [
+            "já que",
             "pois",
-            "já que"
+            "porquanto"
           ]
         }
       ]
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es la causa; «pois» es igual de europeo"
   },
   {
     "id": "93b5ad3c",
@@ -6462,7 +6475,7 @@
     ],
     "contentHash": "ed23a32f6c2dc76823ea862a1427904a5823fe6bf04b18869777c26c9b4e635f",
     "esContrast": "'Então' como conector consecutivos es más natural en portugués que su equivalente español 'entonces'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Estava cansado, ___ decidi dormir cedo.",
@@ -6472,11 +6485,13 @@
           "answer": "então",
           "alternatives": [
             "logo",
-            "por isso"
+            "por isso",
+            "portanto"
           ]
         }
       ]
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es la consecuencia"
   },
   {
     "id": "eeb0f6d7",

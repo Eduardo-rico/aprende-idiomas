@@ -5831,7 +5831,7 @@
     "contentHash": "d140e7593a7917e22342c7787f5c0530cf1f7767e9e9f51fe21b89b16d2ecdd7",
     "esContrast": "'Caso' funciona como 'se' con el mismo valor de tipo 2.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#10 2026-09-01: DUDA — Lengua correcta: «Caso os preços subissem demais, muitos clientes não comprariam» es gramatical (caso + imperfeito do conjuntivo). Dos reparos de estilo: la glosa habla de «tipo 2», jerga heredada de los manuales de ingl (informe-cola8-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — el hueco es verbal y sin lema no está determinado",
     "type": "fill_blank",
     "data": {
       "sentence": "Caso os preços ___ demais, muitos clientes não comprariam.",
@@ -5841,7 +5841,8 @@
           "answer": "subissem",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "imperfeito do conjuntivo de «subir», 3.ª del plural — lo pide «caso»"
     }
   },
   {
@@ -5858,7 +5859,7 @@
     "contentHash": "d2a6e5384575a4739e3f7b5bc35242772b52284f770c6a9fc2b2604caff2b0b4",
     "esContrast": "En la 3.ª persona el futuro portugués coincide con el español ('resolverá'); donde se separan es en la 1.ª: 'resolverei' frente a 'resolveré'.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — el hueco es verbal y sin lema no está determinado",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela ___ os exercícios de matemática amanhã.",
@@ -5870,7 +5871,8 @@
             "vai resolver"
           ]
         }
-      ]
+      ],
+      "hintEs": "futuro de «resolver», 3.ª persona"
     }
   },
   {
@@ -6067,10 +6069,10 @@
     ],
     "contentHash": "db0eb1494d011c14808f043d93d06e61dcbfe90b0df411a365fc4bea7c00b8a8",
     "esContrast": "'Faremos' vem de 'fazer' + '-emos', não de uma raiz diferente.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
-      "sentence": "Na próxima semana, nós ___ no exame da universidade.",
+      "sentence": "Na próxima semana, nós ___ o exame da universidade.",
       "blanks": [
         {
           "position": 0,
@@ -6079,13 +6081,15 @@
             "vamos fazer"
           ]
         }
-      ]
+      ],
+      "hintEs": "futuro de «fazer», 1.ª del plural — irregular"
     },
     "variantOverrides": {
       "pt-br": {
         "sentence": "Na próxima semana, nós ___ no vestibular da USP."
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — «___ no exame» dejaba la frase agramatical con su propia respuesta: «faremos no exame» no rige"
   },
   {
     "id": "dc63d860",
@@ -6136,7 +6140,7 @@
     "contentHash": "dcda4a67f0dec8f17387ffe0f38f6c9bdfdda7b94ff81e269c3f00d653586063",
     "esContrast": "'Será' se escribe igual que en español y, como en español, sirve tanto para el futuro real como para la conjetura; aquí es futuro.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — el hueco es verbal y sin lema no está determinado",
     "type": "fill_blank",
     "data": {
       "sentence": "O professor disse que a prova ___ muito difícil.",
@@ -6148,7 +6152,8 @@
             "vai ser"
           ]
         }
-      ]
+      ],
+      "hintEs": "futuro de «ser», 3.ª persona — futuro dentro del discurso referido"
     }
   },
   {
@@ -6778,7 +6783,7 @@
     "contentHash": "fd774631f54d29e0a61fb587ba96ab07012077233ac23667a930abb78bafe2c2",
     "esContrast": "'Deveria' es condicional de 'dever' = 'debería'.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — el hueco es verbal y sin lema no está determinado",
     "type": "fill_blank",
     "data": {
       "sentence": "A médica disse que eu ___ mais atenção à minha saúde.",
@@ -6792,7 +6797,8 @@
             "devia dar"
           ]
         }
-      ]
+      ],
+      "hintEs": "condicional de «dever» + «dar» — la recomendación referida de la médica"
     }
   },
   {

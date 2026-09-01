@@ -77,7 +77,7 @@
     "tags": [],
     "contentHash": "04c90f64050511c0a5060254dde66b8f5d8b6a15db040d37dc8b1ce436d2e42a",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es «ficar a + infinitivo», no el verbo que la rellena",
     "type": "fill_blank",
     "data": {
       "sentence": "Ele ficou a ___ enquanto esperava a resposta.",
@@ -86,6 +86,9 @@
           "position": 0,
           "answer": "pensar",
           "alternatives": [
+            "esperar",
+            "ler",
+            "olhar",
             "refletir"
           ]
         }
@@ -604,7 +607,7 @@
     "contentHash": "1df4e6e353b6a6bfd94be760d308d1077ad7b4b07ed233b08bbdf832e6de7a24",
     "esContrast": "Vir + gerúndio indica ação que continua até o momento presente.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#9 2026-08-31: DUDA — «Ele vem tendo problemas» se entiende y la perífrasis vir + gerundio existe, pero en el corpus europeo del repo aparece casi siempre con verbos de movimiento («vem trotando a vacca», «vinha chorando a filha»). Para 'llev (informe-cola7-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — «vem ___ problemas» fija la perífrasis de gerundio con «ter»",
     "type": "fill_blank",
     "data": {
       "sentence": "Ele vem ___ problemas desde que chegou.",
@@ -1219,7 +1222,7 @@
     "contentHash": "3e112d474b3ab0f050f165de4d8e8702cd5193d83476666f7a11ab68cd755039",
     "esContrast": "El progresivo europeo es «estar a + infinitivo»: «estamos a rever». «Estamos revisando» es la forma brasileña.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es «estar a + infinitivo»",
     "type": "fill_blank",
     "data": {
       "sentence": "Nós estamos a ___ os documentos.",
@@ -1228,6 +1231,9 @@
           "position": 0,
           "answer": "rever",
           "alternatives": [
+            "corrigir",
+            "ler",
+            "preparar",
             "revisar",
             "verificar"
           ]
@@ -1725,7 +1731,7 @@
     "contentHash": "4ffb57cc58d75346fc5ad7a474b3d1912d6b49c1d66fa9e8ef06e69ceb0485df",
     "esContrast": "El progresivo europeo es «estar a + infinitivo»: «estou a estudar». «Estou estudando» es brasileño; el gerundio europeo se reserva para otras construcciones («foi descobrindo»).",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es «estar a + infinitivo»",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu estou a ___ português agora.",
@@ -1733,7 +1739,10 @@
         {
           "position": 0,
           "answer": "estudar",
-          "alternatives": []
+          "alternatives": [
+            "aprender",
+            "falar"
+          ]
         }
       ]
     }
@@ -1954,7 +1963,7 @@
     "tags": [],
     "contentHash": "5dcb8dfc79b2e19efccd6a5632e27cd4726c18754871dab413211eff5e18cc81",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es «estar a + infinitivo»",
     "type": "fill_blank",
     "data": {
       "sentence": "Estamos a ___ para seguir em frente.",
@@ -1963,7 +1972,8 @@
           "position": 0,
           "answer": "lutar",
           "alternatives": [
-            "tentar"
+            "tentar",
+            "trabalhar"
           ]
         }
       ]
@@ -2221,7 +2231,7 @@
     "contentHash": "73e19881274e2ef866a812828831a1efd0114415422d8cf521fb52c85f821a4f",
     "esContrast": "A expressão é 'vale a pena' (vale + a + pena), não 'hace falta' ni 'vale la pena'.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#9 2026-08-31: DUDA — El ejercicio es correcto («Não vale a pena ficar triste por isso»). La glosa, escrita en portugués, es confusa: «A expressão é 'vale a pena' …, não 'hace falta' ni 'vale la pena'» puede leerse como que «vale la pena» no  (informe-cola7-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — la locución «valer a pena» lo fija",
     "type": "fill_blank",
     "data": {
       "sentence": "Não ___ a pena ficar triste por isso.",
@@ -2360,7 +2370,7 @@
     ],
     "contentHash": "7b126b91345f7095b4eac8fc5322125a2aa96e9144ec8af04b4afcc09edf88a6",
     "esContrast": "'Nascido' es irregular (de 'nascer'). En PT-PT se usa más 'nascido'; en PT-BR también se dice 'nascido', pero 'nado' es arcaico.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Ele é ___ em Lisboa, não em São Paulo.",
@@ -2384,7 +2394,8 @@
           }
         ]
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — el contraste «em Lisboa, não em São Paulo» fija el participio de nacer"
   },
   {
     "id": "7b5321b1",
@@ -2494,7 +2505,7 @@
     "contentHash": "82e31db59b33443d1b99254e09bed6f3bc5ac39e68d66c7a11d160adee3e47fa",
     "esContrast": "Dicho de un café, «carregado» es 'fuerte, muy cargado' — el español «cargado» vale igual, así que aquí NO hay falso amigo. Es el participio de «carregar» usado como adjetivo.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — el hueco es verbal y sin lema no está determinado",
     "type": "fill_blank",
     "data": {
       "sentence": "O café está muito ___.",
@@ -2506,7 +2517,8 @@
             "forte"
           ]
         }
-      ]
+      ],
+      "hintEs": "cargado, de café fuerte — el participio que describe la concentración"
     }
   },
   {
@@ -2524,7 +2536,7 @@
     "contentHash": "832480f1a8ec53e853ccdce78493adeacb0a74086b8df030d34adfcb7b29ab96",
     "esContrast": "«Matar» tiene doble participio: «matado» con ter/haver («tinha matado o homem») y «morto» con ser/estar («o homem foi morto»). El español conserva el reparto sólo en fórmulas como «fue muerto a tiros».",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — con «ter» el participio de «matar» es el regular, y el contraste con «morto» es el punto",
     "type": "fill_blank",
     "data": {
       "sentence": "O sol tem ___ muitas plantas no jardim.",
@@ -3663,7 +3675,7 @@
     ],
     "contentHash": "bbb6c2a015f6906bbca3b694a88019567085f99d2a9d335f03d417bb82e90949",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es «estar a + infinitivo»",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela está a ___ com o namorado.",
@@ -3671,7 +3683,11 @@
         {
           "position": 0,
           "answer": "sair",
-          "alternatives": []
+          "alternatives": [
+            "discutir",
+            "falar",
+            "viver"
+          ]
         }
       ]
     }
@@ -3889,7 +3905,7 @@
     "contentHash": "cc28fb3fa29d142be93bf1abea59e0b18784f04102d51b703113b42e18470381",
     "esContrast": "Sin «que», el portugués puede flexionar el infinitivo: «É fundamental tomares decisões» = 'Es fundamental que (tú) tomes decisiones'. Con «que» sólo cabe el conjuntivo: «que tomes». Lo que no existe es «que tomares».",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin sujeto expreso, el infinitivo pessoal no fija la persona",
     "type": "fill_blank",
     "data": {
       "sentence": "É fundamental ___ decisões sem hesitar.",
@@ -3901,7 +3917,8 @@
             "tomar"
           ]
         }
-      ]
+      ],
+      "hintEs": "infinitivo pessoal de «tomar», 2.ª persona — el sujeto es «tu», implícito en el consejo"
     }
   },
   {
@@ -4116,7 +4133,7 @@
     "contentHash": "d8371e83edccc4379638ea0d20a74ef56ddd378964fc8891073225ac6572ed66",
     "esContrast": "'É melhor falares' = 'Es mejor que hables (tú)'. En español: subjuntivo. En portugués: infinitivo pessoal.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin sujeto expreso, el infinitivo pessoal no fija la persona",
     "type": "fill_blank",
     "data": {
       "sentence": "É melhor ___ mais devagar.",
@@ -4128,7 +4145,8 @@
             "falar"
           ]
         }
-      ]
+      ],
+      "hintEs": "infinitivo pessoal de «falar», 2.ª persona — el sujeto es «tu», implícito en el consejo"
     }
   },
   {
@@ -4248,7 +4266,7 @@
     "tags": [],
     "contentHash": "e2d0dde2435c57c95ad650d2f423c0bbcd1806ef9aaea9982bc9d6ee9bbc8a77",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#9 2026-08-31: DUDA — «Ela foi descobrindo» es europeo legítimo: el corpus del repo atesta ir + gerundio de sobra («foi indo», «foi repetindo o recado», «se foi definhando»). Lo que chirría es «aos poucos», de preferencia brasileña: el corpus (informe-cola7-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — «aos poucos» fija la perífrasis de avance gradual",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela foi ___ a verdade aos poucos.",
