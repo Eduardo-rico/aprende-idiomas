@@ -324,6 +324,29 @@ function distancia(a, b) {
   return prev[n];
 }
 
+const ROMANOS = { i: 1, v: 5, x: 10, l: 50, c: 100, d: 500, m: 1000 };
+function valorNumeral(s) {
+  const t = s.trim().replace(/^cap[ií]tulos?\s+/i, '').replace(/\.$/, '');
+  if (/^\d{1,3}$/.test(t)) return Number(t);
+  if (!/^[ivxlcdm]+$/i.test(t)) return null;
+  const v = [...t.toLowerCase()].map((c) => ROMANOS[c]);
+  return v.reduce((a, x, i) => a + (i + 1 < v.length && x < v[i + 1] ? -x : x), 0);
+}
+
+/** Poda el preludio: marcas numéricas ANTES del capítulo 1.
+ *
+ *  La portada de A Morgadinha dos Canaviais lleva un «XXIII» (el número
+ *  de la colección) 67 líneas antes del capítulo I. Sin podar, ese
+ *  «XXIII» era el capítulo 1 y toda la novela iba numerada de menos.
+ *  Lo podado NO se pierde: pasa a ser preámbulo. */
+function podarPreludio(marcas, lineas) {
+  const vals = marcas.map((m) => valorNumeral(lineas[m]));
+  if (vals.some((v) => v === null)) return { marcas, podadas: 0 };
+  const k = vals.indexOf(1);
+  if (k <= 0) return { marcas, podadas: 0 };
+  return { marcas: marcas.slice(k), podadas: k };
+}
+
 /** Agrupa capítulos consecutivos hasta juntar `objetivo` palabras.
  *  Machado escribió novelas de 160 capítulos de 300 palabras: publicar
  *  cada uno suelto da unidades de lectura que no son lectura. Nada se
@@ -359,6 +382,7 @@ async function ingerir(obra) {
   if (!dp.libre) throw new Error(`${obra.slug}: NO libre — UE ${dp.ue} · MX ${dp.mx} · US ${dp.us ?? '?'}`);
 
   // 1) marcas
+  const esConto = obra.modo === 'titulos' || obra.modo === 'mayusculas' || obra.modo === 'indice';
   let marcas, detectado = obra.patron ?? obra.modo;
   if (obra.modo === 'entero') marcas = [-1];
   else if (obra.modo === 'titulos') {
@@ -381,6 +405,11 @@ async function ingerir(obra) {
     const d = autodetectar(lineas);
     marcas = d.marcas; detectado = d.nombre;
   }
+  let podadas = 0;
+  if (!esConto && obra.modo !== 'entero' && marcas.length > 2) {
+    const p = podarPreludio(marcas, lineas);
+    marcas = p.marcas; podadas = p.podadas;
+  }
   if (obra.esperados && marcas.length !== obra.esperados) {
     throw new Error(`${obra.slug}: esperaba ${obra.esperados} piezas y encontré ${marcas.length} — me niego.`);
   }
@@ -393,7 +422,6 @@ async function ingerir(obra) {
   const iAparato = recorteFinal(lineas, Math.max(marcas[0], 0));
   const fin = Math.min(iCorte >= 0 ? iCorte : lineas.length, iAparato);
   const cortadas = palabrasEntre(lineas, fin, lineas.length);
-  const esConto = obra.modo === 'titulos' || obra.modo === 'mayusculas' || obra.modo === 'indice';
   const objetivo = obra.agrupar ?? 0;
 
   const grupos = objetivo > 0

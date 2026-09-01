@@ -50,6 +50,10 @@ export function construirParrafos(texto, meta) {
       ? p.split('\n').map((l) => l.trim()).filter(Boolean).join('\n')
       : p.replace(/\s*\n\s*/g, ' ').trim()))
     .filter((p) => p.length > 0)
+    // «[Figura 01]», «[Illustration: ...]»: hueco de una imagen que el
+    // texto plano no trae. Como párrafo es ruido — abría el capítulo 1
+    // de O Ateneu.
+    .filter((p) => !/^\[\s*(figura|imagem|ilustra|illustration|image)\b[^\]]*\]$/i.test(p))
     .map((texto) => ({ texto }));
 }
 

@@ -37,10 +37,10 @@ const palabras = (l: Pieza) =>
 describe('catálogo de lectura PT', () => {
   it('tiene el tamaño medido de la Ola E3 (piso, no igualdad: crecer está bien)', () => {
     const total = catalogo.reduce((a, x) => a + palabras(x.l), 0);
-    // Medido 2026-09-01 tras E3: 967 lecturas · 52 series · 3.220.386
-    // palabras (pt 2.092.187 · pt-br 1.128.199).
+    // Medido 2026-09-01 al cierre de E3: 967 lecturas · 52 series ·
+    // 3.219.799 palabras (pt 2.091.688 · pt-br 1.128.111).
     expect(catalogo.length).toBeGreaterThanOrEqual(967);
-    expect(total).toBeGreaterThanOrEqual(3_220_386);
+    expect(total).toBeGreaterThanOrEqual(3_219_799);
     const pt = catalogo.filter((x) => (x.l.variante ?? 'pt') === 'pt').reduce((a, x) => a + palabras(x.l), 0);
     // La meta de inmersión del plan es PT-PT: el estante brasileño no la paga.
     expect(pt).toBeGreaterThanOrEqual(1_900_000);
