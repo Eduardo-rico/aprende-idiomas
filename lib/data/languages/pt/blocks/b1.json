@@ -78,23 +78,23 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "023c2c90ac15a0fa596a39cd64560f60a2a7cc3dc61b48eeff655759cc82df13",
+    "contentHash": "351d2631ba8d8f3e87205d86f86bf403198564577ce8511e3a45f439fd9c2efc",
     "esContrast": "En portugués, el nombre de la letra 'a' suena diferente que en español.",
     "audio": {
       "br": {
-        "hash": "f59b9a14ededc1dd329833f26abe6f0755b43bc8a6440fb6789b8a36d0be6c41",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "e89136548c7f8362f2a1ff9c7e2d51641469934e91aecb6a49ef35308bbcbaa4",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "f40f3609285a719e10a0a9933e00c271eb14b03ff33172afe17369831cc890c5",
-        "voice": "Portuguese_Wiselady"
+        "hash": "e89136548c7f8362f2a1ff9c7e2d51641469934e91aecb6a49ef35308bbcbaa4",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-alfabeto · RESCATADO en E2#22: su punto volvió a bajar del piso al retirarse un ítem roto",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28: corregido — posesivo sin artículo («Meu nome»), que es brasileño; el europeo lleva «O meu»",
     "type": "listening",
     "data": {
-      "audioText": "Meu nome começa com a letra A. Qual é a primeira letra do meu nome?",
+      "audioText": "O meu nome começa com a letra A. Qual é a primeira letra do meu nome?",
       "question": "¿Con qué letra empieza el nombre mencionado en el audio?",
       "options": [
         "A",
@@ -103,7 +103,10 @@
         "O"
       ],
       "answer": "A"
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto"
+    ]
   },
   {
     "id": "02615cb8",
@@ -175,7 +178,10 @@
       "acceptedAlternatives": [
         "Ese libro es muy difícil."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-paroxitona"
+    ]
   },
   {
     "id": "046a3fd1",
@@ -211,7 +217,10 @@
       "pt-br": {
         "sentence": "Minha ___ cantou uma canção bonita."
       }
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-til"
+    ]
   },
   {
     "id": "0560d6c5",
@@ -269,7 +278,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-vogais-nasais"
+    ]
   },
   {
     "id": "058511dc",
@@ -303,7 +315,10 @@
       "target": "Rosa corrió tres kilómetros.",
       "sourceLang": "pt-pt",
       "targetLang": "es"
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r"
+    ]
   },
   {
     "id": "065e9aee",
@@ -405,7 +420,10 @@
         "olio"
       ],
       "answer": "olho"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-ll-lh"
+    ]
   },
   {
     "id": "082b70a7",
@@ -436,7 +454,10 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-oxitona"
+    ]
   },
   {
     "id": "082f62e1",
@@ -528,7 +549,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "dictamen dirigido E2#28: RETIRADO, arreglo caro — declara enseñar PT-BR en un curso europeo Y la fonética es falsa: la «r» intervocálica de «caro» y «duro» es un TAP /ɾ/, no la vibrante /ʁ/ que el ítem transcribe · puntos que dejaba cubiertos: b1-pron-rr-r",
     "type": "flashcard",
     "data": {
       "front": "¿Cuál es la regla de pronunciación de 'r' en posición media en PT-BR?",
@@ -574,8 +596,8 @@
     "tags": [],
     "contentHash": "0d4c19726d87d1239f753117e31567c832a18a6ece4105f8083ab03a7de2dcc7",
     "esContrast": "«fábrica» es esdrújula y lleva tilde en las dos lenguas. La regla de las esdrújulas es idéntica en español y portugués — no hay nada que contrastar.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — Cloze abierto sin pista: «Ela trabalha na ___» admite escola/loja/padaria; con match exacto la primera exposición castiga injustamente",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28: OK, leído entero",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela trabalha na ___ todos os dias.",
@@ -586,7 +608,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-proparoxitona"
+    ]
   },
   {
     "id": "0de55e46",
@@ -641,8 +666,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b1-corresp-ll-lh · sello anterior: revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
     "type": "flashcard",
     "data": {
       "front": "lleno",
@@ -672,14 +697,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28: OK, leído entero",
     "type": "flashcard",
     "data": {
       "front": "¿Cuál es la letra que aparece solo en portugués y no en español?",
       "back": "ç (cê cedilhado)",
       "example": "A palavra 'ação' leva 'ç' em português."
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto"
+    ]
   },
   {
     "id": "12243a35",
@@ -716,7 +744,11 @@
         "Cuatro"
       ],
       "answer": "Una"
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto",
+      "b1-acento-cedilha"
+    ]
   },
   {
     "id": "133a98bd",
@@ -742,7 +774,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28: OK, leído entero",
     "audioExento": {
       "motivo": "front y back en español: explica la regla de acentuación, no hay portugués que oír"
     },
@@ -751,7 +784,10 @@
       "front": "¿Por qué «hábito» lleva tilde y «habito» no es la misma palabra?",
       "back": "hábito es PROPAROXÍTONA (esdrújula) y en portugués todas la llevan, sin excepción. «habito» sin tilde es la 1.ª persona del verbo habitar. La regla: toda proparoxítona se acentúa; las paroxítonas sólo si terminan en -l, -r, -x, -n, -i, -u, -ã, -ão, -um.",
       "example": "hábito, fábrica, médico, rápido (proparoxítonas, todas con tilde) · fácil, açúcar (paroxítonas acentuadas por su final)"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-proparoxitona"
+    ]
   },
   {
     "id": "15eab0ae",
@@ -878,15 +914,18 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28: OK, leído entero",
     "type": "translation",
     "data": {
       "source": "Que horas são? Não tenho relógio.",
       "target": "¿Qué hora es? No tengo reloj.",
       "sourceLang": "pt-pt",
       "targetLang": "es"
-    }
+    },
+    "__nuevos": [
+      "b1-h-muda"
+    ]
   },
   {
     "id": "194576a1",
@@ -953,15 +992,18 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28: OK, leído entero",
     "type": "translation",
     "data": {
       "source": "El hotel abre a esta hora",
       "target": "O hotel abre a esta hora",
       "sourceLang": "es",
       "targetLang": "pt-pt"
-    }
+    },
+    "__nuevos": [
+      "b1-h-muda"
+    ]
   },
   {
     "id": "1a16ca62",
@@ -1056,7 +1098,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto",
+      "b1-acento-cedilha"
+    ]
   },
   {
     "id": "1cf5bb47",
@@ -1087,7 +1133,10 @@
         }
       ],
       "hintEs": "bueno (de sabor)"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ]
   },
   {
     "id": "1ea185c8",
@@ -1157,7 +1206,10 @@
       "acceptedAlternatives": [
         "Minha mãe é doutora."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-vogais-nasais"
+    ]
   },
   {
     "id": "21733ca4",
@@ -1211,7 +1263,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-acento-circunflexo",
     "type": "translation",
     "data": {
       "source": "Elena tiene tres manzanas rojas.",
@@ -1242,8 +1295,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28: OK, leído entero",
     "type": "translation",
     "data": {
       "source": "Aquela mãe está cansada.",
@@ -1253,7 +1306,10 @@
       "acceptedAlternatives": [
         "Esa madre está cansada."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-acentos"
+    ]
   },
   {
     "id": "24116203",
@@ -1313,7 +1369,10 @@
       "front": "¿Cómo se dice 'perro' en portugués?",
       "back": "cão",
       "example": "O cão do meu vizinho é pequeno."
-    }
+    },
+    "__nuevos": [
+      "b1-vogais-nasais"
+    ]
   },
   {
     "id": "2643a450",
@@ -1345,7 +1404,11 @@
       "target": "Essa canção é muito popular",
       "sourceLang": "es",
       "targetLang": "pt-pt"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao",
+      "b1-h-muda"
+    ]
   },
   {
     "id": "26a3cf13",
@@ -1379,7 +1442,10 @@
       "pt-br": {
         "back": "[majs]"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ]
   },
   {
     "id": "273b3166",
@@ -1663,7 +1729,10 @@
       "pt-br": {
         "sentence": "Meu avô diz que o computador é muit___ útil para aprender."
       }
-    }
+    },
+    "__nuevos": [
+      "b1-acento-agudo"
+    ]
   },
   {
     "id": "32400dc7",
@@ -1736,7 +1805,10 @@
           }
         ]
       }
-    }
+    },
+    "__nuevos": [
+      "b1-vogais-nasais"
+    ]
   },
   {
     "id": "350526ca",
@@ -1761,14 +1833,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28: OK, leído entero",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'hermana' en portugués?",
       "back": "irmã",
       "example": "A minha irmã mais nova tem 15 anos."
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-til"
+    ]
   },
   {
     "id": "37b772b1",
@@ -1784,8 +1859,8 @@
     ],
     "contentHash": "ae13545b35b9bdea87c876c7ccd90f7f4764001c0f4ba2e897c079e1c6c2bdee",
     "esContrast": "'Hotel' se escribe igual pero la h es muda: se pronuncia /o'tel/.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — Cloze abierto: «O ___ fica na esquina» admite hotel/café/banco",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28: OK, leído entero",
     "type": "fill_blank",
     "data": {
       "sentence": "O ___ fica na esquina da rua.",
@@ -1797,7 +1872,10 @@
         }
       ],
       "hintEs": "donde se duerme cuando se viaja"
-    }
+    },
+    "__nuevos": [
+      "b1-h-muda"
+    ]
   },
   {
     "id": "389f9059",
@@ -1853,8 +1931,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b1-tonica-oxitona · sello anterior: corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
     "type": "listening",
     "data": {
       "audioText": "Agora escute: fácil, difícil, café, táxi, lápis.",
@@ -1897,7 +1975,11 @@
       "target": "A mulher tem olhos belos",
       "sourceLang": "es",
       "targetLang": "pt-pt"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-ll-lh",
+      "b1-h-muda"
+    ]
   },
   {
     "id": "3ce0b73e",
@@ -1994,7 +2076,10 @@
       "pt-br": {
         "sentence": "Três ___ para você."
       }
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ]
   },
   {
     "id": "41573acf",
@@ -2041,8 +2126,8 @@
     ],
     "contentHash": "7d640a52fd0ec0cefd780f347e16ef7098577896af0339f88cacbcbfd12b08aa",
     "esContrast": "-an/-án español ↔ -ão portugués (pan→pão).",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b1-acento-agudo · sello anterior: corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "O ___ é feito com farinha de trigo.",
@@ -2069,8 +2154,8 @@
     ],
     "contentHash": "4626c4a6f31efd5ab0b873b738c6546d84c6341553a555ebfa505d8bb1fa3dab",
     "esContrast": "En BR se pronuncia /kaʁu/ (el 'r' final es /ʁ/), mientras que en PT es /kaʁu/ con vibrante alveolar múltiple.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-rr-r · RESCATADO en E2#22: su punto volvió a bajar del piso al retirarse un ítem roto",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28: corregido — cloze sin pista: «O ___ correu pela estrada» admitía cavalo, rapaz y media docena más",
     "type": "fill_blank",
     "data": {
       "sentence": "O ___ correu pela estrada.",
@@ -2082,8 +2167,12 @@
             "carro"
           ]
         }
-      ]
-    }
+      ],
+      "hintEs": "el vehículo de cuatro ruedas — con «rr», la vibrante fuerte"
+    },
+    "__nuevos": [
+      "b1-pron-rr-r"
+    ]
   },
   {
     "id": "48956949",
@@ -2159,7 +2248,11 @@
         "Un ratón debajo del carro"
       ],
       "answer": "Dos ratones detrás del carro"
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r",
+      "b1-pron-s-final"
+    ]
   },
   {
     "id": "490078b0",
@@ -2281,8 +2374,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b1-corresp-ll-lh · sello anterior: revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
     "type": "translation",
     "data": {
       "source": "Fecha bem os olhos e descansa.",
@@ -2318,7 +2411,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28: OK, leído entero",
     "type": "translation",
     "data": {
       "source": "O menino comeu pão com mel.",
@@ -2328,7 +2422,10 @@
       "acceptedAlternatives": [
         "El chico comió pan con miel."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-acentos"
+    ]
   },
   {
     "id": "4d0b69ee",
@@ -2353,8 +2450,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "needs-human",
-    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-rr-r",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-rr-r · RESCATADO en E2#22: su punto volvió a bajar del piso al retirarse un ítem roto",
     "type": "translation",
     "data": {
       "source": "El carro es rojo.",
@@ -2406,7 +2503,10 @@
       "pt-br": {
         "target": "Meu avô já morreu."
       }
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-oxitona"
+    ]
   },
   {
     "id": "4dd2b7ab",
@@ -2485,7 +2585,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-tonica-oxitona",
     "type": "listening",
     "data": {
       "audioText": "Ouvindo: café, táxi, fácil.",
@@ -2529,7 +2630,10 @@
       "front": "¿Dónde está la sílaba tónica en 'táxi'?",
       "back": "táxi — es paroxítona (acento en la penúltima: TÁ-xi)",
       "example": "Vou de táxi para o aeroporto."
-    }
+    },
+    "__nuevos": [
+      "b1-silaba-tonica"
+    ]
   },
   {
     "id": "51b532fd",
@@ -2596,7 +2700,11 @@
       "target": "O pai de João foi a São Paulo e trouxe pão para nós.",
       "sourceLang": "es",
       "targetLang": "pt-pt"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-circunflexo",
+      "b1-alfabeto"
+    ]
   },
   {
     "id": "52b5b890",
@@ -2667,7 +2775,11 @@
       "acceptedAlternatives": [
         "Os meses passaram depressa."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r",
+      "b1-pron-s-final"
+    ]
   },
   {
     "id": "54bd1670",
@@ -3022,7 +3134,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-acento-agudo",
     "type": "flashcard",
     "data": {
       "front": "Cuál es la diferencia entre 'papel' y 'papél'?",
@@ -3332,7 +3445,10 @@
       "front": "¿Cómo se dice 'madre' en portugués?",
       "back": "mãe",
       "example": "A minha mãe é muito carinhosa."
-    }
+    },
+    "__nuevos": [
+      "b1-vogais-nasais"
+    ]
   },
   {
     "id": "6c6bb9ac",
@@ -3455,7 +3571,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-tonica-oxitona",
     "type": "flashcard",
     "data": {
       "front": "¿En qué sílaba cae el acento en 'café'?",
@@ -3625,7 +3742,12 @@
       "target": "O soldadinho tem um olho roxo",
       "sourceLang": "es",
       "targetLang": "pt-pt"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-nh-ny",
+      "b1-corresp-ll-lh",
+      "b1-h-muda"
+    ]
   },
   {
     "id": "770097dd",
@@ -3640,8 +3762,8 @@
     ],
     "contentHash": "8f4a52cedc0d75c01f1a492dfe78c8f8f68d4dcf1b79f83b9fbbe8506eba8850",
     "esContrast": "óbvia lleva acento AGUDO; el portugués acentúa las graves terminadas en diptongo (-ia): óbvia, história; el español no: obvia, historia.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b1-acento-agudo · sello anterior: corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "O professor disse que a resposta é ___ .",
@@ -3705,8 +3827,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b1-tonica-paroxitona · sello anterior: revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
     "type": "translation",
     "data": {
       "source": "Este exercício é muito fácil.",
@@ -3741,7 +3863,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ]
   },
   {
     "id": "7a036ad6",
@@ -3754,8 +3879,8 @@
     "tags": [],
     "contentHash": "248b00e2ed91b2d9643ac433f9e5289109b825ac809c9880349306436da282c4",
     "esContrast": "ES 'soñar con' = PT 'sonhar COM' — la preposición coincide.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28: OK, leído entero",
     "type": "verb_preposition",
     "data": {
       "verb": "sonhar",
@@ -3767,7 +3892,10 @@
         "por"
       ],
       "answer": "com"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-com"
+    ]
   },
   {
     "id": "7a7ac9fb",
@@ -3870,7 +3998,10 @@
       "front": "¿Cuántas sílabas tiene ' Brasil'? ¿Es aguda, grave o esdrújula?",
       "back": "Brasil: 2 sílabas (Bra-sil) → oxítona, porque la tónica es la última. Termina en -l, y las oxítonas en -l no llevan tilde: Brasil, papel, anel.",
       "example": "Eu amo o Brasil."
-    }
+    },
+    "__nuevos": [
+      "b1-silaba-tonica"
+    ]
   },
   {
     "id": "7f2bd6e8",
@@ -3984,8 +4115,8 @@
     ],
     "contentHash": "0bffee68da879e3d241b7924ac752a0565b8d446d3fdc5f6030328f2c6825177",
     "esContrast": "«fácil» lleva tilde en español y en portugués, por la misma razón: grave terminada en -l. No es un contraste.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — Cloze abierto: «é muito ___» admite fácil/difícil/chato",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b1-tonica-paroxitona · sello anterior: revisión manual E2#3 2026-08-13: DUDA — Cloze abierto: «é muito ___» admite fácil/difícil/chato",
     "type": "fill_blank",
     "data": {
       "sentence": "Este exercício é muito ___.",
@@ -4012,11 +4143,11 @@
     ],
     "contentHash": "f6ea6c52e63940bb7c6051c2eeabec5cd1e7176e3c83f6720bf950c6c2f765eb",
     "esContrast": "'à' es la contracción de la preposición 'a' + artículo 'a'; en español no se contrae: 'a la'.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28: corregido — el enunciado era circular: preguntaba por «a» dando «a» dos veces en la propia frase",
     "type": "fill_blank",
     "data": {
-      "sentence": "Na frase 'Vou à praia', a palavra 'à' combina o artigo com a preposição ___ .",
+      "sentence": "Na frase 'Vou à praia', o acento grave marca a contração da preposição «a» com o ___ feminino.",
       "blanks": [
         {
           "position": 0,
@@ -4024,7 +4155,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-acento-crase"
+    ]
   },
   {
     "id": "8213a892",
@@ -4155,7 +4289,10 @@
         "Mi mamá es brasileña.",
         "Mi madre es brasilera."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-vogais-nasais"
+    ]
   },
   {
     "id": "8695dcff",
@@ -4230,7 +4367,10 @@
       "pt-br": {
         "back": "también / también"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ]
   },
   {
     "id": "86c358b8",
@@ -4466,7 +4606,10 @@
           }
         ]
       }
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-oxitona"
+    ]
   },
   {
     "id": "8c01145d",
@@ -4560,7 +4703,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28: OK, leído entero",
     "type": "listening",
     "data": {
       "audioText": "Eu vejo uma mãe.",
@@ -4572,7 +4716,10 @@
         "mãe"
       ],
       "answer": "mãe"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-til"
+    ]
   },
   {
     "id": "8e638d6e",
@@ -4597,8 +4744,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b1-acento-circunflexo · sello anterior: revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
     "type": "translation",
     "data": {
       "source": "El acento grave indica contracción en portugués.",
@@ -4662,8 +4809,8 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b1-tonica-oxitona · sello anterior: reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
     "type": "listening",
     "data": {
       "audioText": "Qual destas palavras é esdrúxula: difíceis, música, café?",
@@ -4850,7 +4997,11 @@
       "target": "O coração da canção",
       "sourceLang": "es",
       "targetLang": "pt-pt"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao",
+      "b1-h-muda"
+    ]
   },
   {
     "id": "9675ecfe",
@@ -4914,7 +5065,10 @@
       "acceptedAlternatives": [
         "El can del vecino ladra mucho."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-vogais-nasais"
+    ]
   },
   {
     "id": "96bfd62c",
@@ -4962,8 +5116,8 @@
     ],
     "contentHash": "63ada95103f3913b8706cb0556542828d072b4b22360f7e95c15b0c60306d9da",
     "esContrast": "ES 'comenzar por' y PT 'começar POR' coinciden en este uso.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28: OK, leído entero",
     "type": "verb_preposition",
     "data": {
       "verb": "começar",
@@ -4975,7 +5129,10 @@
         "em"
       ],
       "answer": "por"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-por-para"
+    ]
   },
   {
     "id": "97b042f2",
@@ -5100,7 +5257,10 @@
       "pt-br": {
         "back": "['hua] en BR, ['ʁua] en PT"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r"
+    ]
   },
   {
     "id": "99c0eaf2",
@@ -5219,8 +5379,8 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b1-acento-agudo · sello anterior: corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Cuántas vocales tiene el portugués con acentos?",
@@ -5402,7 +5562,8 @@
     ],
     "contentHash": "038d074e635ad6ad11384e8149330dc5ebb8e1421987d994caf325d391bf2fbf",
     "esContrast": "'Ojo' en español se escribe 'olho' en portugués, con -lh-.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-corresp-ll-lh",
     "type": "fill_blank",
     "data": {
       "sentence": "O ___ é azul e muito bonito.",
@@ -5604,14 +5765,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28: OK, leído entero",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se llama la letra 'A' en portugués?",
       "back": "á (á: sonido /a/)",
       "example": "Quando dizemos o nome das letras, dizemos: 'á', 'bê', 'cê'..."
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto"
+    ]
   },
   {
     "id": "b61938ce",
@@ -5647,7 +5811,10 @@
       "front": "¿Hay diferencia entre PT-PT y PT-BR en los acentos gráficos?",
       "back": "Sí, y es sistemática: donde la vocal tónica es abierta en Portugal y cerrada en Brasil, PT-PT escribe AGUDO y PT-BR CIRCUNFLEJO. António/Antônio, económico/econômico, génio/gênio, ténis/tênis, bónus/bônus. El Acordo de 1990 mantiene las DOS grafías como oficiales — es de los pocos casos de doble ortografía legal.\n\nOjo con el mito inverso: «vôo» con circunflejo era grafía BRASILEÑA antigua (reglas de 1943), nunca portuguesa, y el Acordo la abolió: hoy los dos escriben «voo».",
       "example": "PT-PT: António, económico, génio · PT-BR: Antônio, econômico, gênio · ambos: voo, enjoo"
-    }
+    },
+    "__nuevos": [
+      "b1-acentos"
+    ]
   },
   {
     "id": "b8b56359",
@@ -5743,7 +5910,10 @@
       "pt-br": {
         "sentence": "Preciso de água. Tenho muit___ sede."
       }
-    }
+    },
+    "__nuevos": [
+      "b1-acentos"
+    ]
   },
   {
     "id": "ba9de48e",
@@ -5879,7 +6049,11 @@
       "target": "Ela é uma mulherzinha",
       "sourceLang": "es",
       "targetLang": "pt-pt"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-ll-lh",
+      "b1-h-muda"
+    ]
   },
   {
     "id": "bdad8a26",
@@ -5894,8 +6068,8 @@
     ],
     "contentHash": "0883b2ffc952ccdd5272a8c8624069501c203cdbd09b8d6b2e612af91d3cee14",
     "esContrast": "'décimo' se acentúa IGUAL en las dos lenguas: esdrújula/proparoxítona con acento agudo. No hay contraste.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28: corregido — cloze sin pista: «no ___ andar» admitía cualquier ordinal",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela mora no ___ andar do prédio.",
@@ -5905,8 +6079,12 @@
           "answer": "décimo",
           "alternatives": []
         }
-      ]
-    }
+      ],
+      "hintEs": "el ordinal que sigue al noveno — esdrújula, y por eso con tilde"
+    },
+    "__nuevos": [
+      "b1-acentos"
+    ]
   },
   {
     "id": "bdcff0e2",
@@ -6026,7 +6204,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-acento-circunflexo",
     "type": "translation",
     "data": {
       "source": "La palabra emoción se escribe com acento en portugués.",
@@ -6167,7 +6346,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-tonica-paroxitona",
     "type": "flashcard",
     "data": {
       "front": "¿Por qué 'pôr' (verbo) y 'por' (preposición) se escriben diferente?",
@@ -6274,7 +6454,10 @@
       "pt-br": {
         "back": "[dojs] en BR"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ]
   },
   {
     "id": "c7a2263e",
@@ -6305,7 +6488,10 @@
       "front": "¿Cuántas sílabas tiene 'regráfico'? ¿Dónde está la tilde?",
       "back": "re-grá-fi-co: 4 sílabas (proparoxítona). Tilde en 'grá'. Todas las esdrújulas llevan tilde.",
       "example": "A língua portuguesa é muito regráfica."
-    }
+    },
+    "__nuevos": [
+      "b1-silaba-tonica"
+    ]
   },
   {
     "id": "c7d20bab",
@@ -6435,7 +6621,10 @@
         }
       ],
       "hintEs": "el sitio donde se duerme al viajar"
-    }
+    },
+    "__nuevos": [
+      "b1-silaba-tonica"
+    ]
   },
   {
     "id": "cb0e1fda",
@@ -6599,7 +6788,10 @@
       "pt-br": {
         "back": "r inicial: /h/ | rr intervocálica: /ʁ/ | r final: /χ/"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r"
+    ]
   },
   {
     "id": "d17e3dc1",
@@ -6669,7 +6861,10 @@
       "front": "¿Cómo se dice 'paloma' en portugués?",
       "back": "pombo",
       "example": "O pombo está no telhado."
-    }
+    },
+    "__nuevos": [
+      "b1-vogais-nasais"
+    ]
   },
   {
     "id": "d32face7",
@@ -6911,7 +7106,11 @@
       "acceptedAlternatives": [
         "El corazón tiene cuatro cavidades."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto",
+      "b1-acento-cedilha"
+    ]
   },
   {
     "id": "dbf3eee4",
@@ -6947,7 +7146,10 @@
       "acceptedAlternatives": [
         "En la clase, el profesor habló sobre la sílaba tónica y las reglas de acentuación."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-silaba-tonica"
+    ]
   },
   {
     "id": "dc037b95",
@@ -6973,7 +7175,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "dictamen dirigido E2#28: RETIRADO, arreglo caro — «ruim» es brasileño; el europeo para «malo» es «mau», y el ejemplo entero está en norma brasileña · puntos que dejaba cubiertos: b1-nasal-n-interior",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'malo' en portugués?",
@@ -7009,7 +7212,10 @@
       "pt-br": {
         "sentence": "Ontem comprei um ___ na padaria."
       }
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ]
   },
   {
     "id": "dce0e9c9",
@@ -7039,7 +7245,10 @@
       "pt-br": {
         "sentence": "Eu me sinto muito ___ hoje."
       }
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ]
   },
   {
     "id": "dce24b0f",
@@ -7053,7 +7262,7 @@
       "regla",
       "irregular"
     ],
-    "contentHash": "dce24b0ff9d3d518e1b9d015668efcdbe696a6c64bfde4193f196e5216fcedba",
+    "contentHash": "dcd475a8267baf70a4416b02e2119f01390aae35378e305520d79bc2ac6bd013",
     "esContrast": "Igual que en español: todas las esdrújulas llevan tilde. Esta regla es idéntica.",
     "audio": {
       "br": {
@@ -7065,13 +7274,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28: corregido — «cômodo» es la grafía brasileña; en un ítem sobre acentuación europea el ejemplo tenía que ser «cómodo»",
     "type": "flashcard",
     "data": {
       "front": "¿Todas las palabras esdrújulas (proparoxítonas) llevan tilde?",
       "back": "SÍ. En portugués, TODAS las palabras con acento en la antepenúltima sílaba LLEVAN tilde.",
-      "example": "cômodo, rápido, música, político"
-    }
+      "example": "cómodo, rápido, música, político"
+    },
+    "__nuevos": [
+      "b1-tonica-proparoxitona"
+    ]
   },
   {
     "id": "df2f1d4e",
@@ -7116,8 +7329,8 @@
     "tags": [],
     "contentHash": "47ac93a8c1ce52f132c14cbf5d72f33dfbd3c1c63a4f756ccf940e1dda4dfd9a",
     "esContrast": "'Hospital' es aguda (hos-pi-TAL) pero en portugués NO lleva tilde porque termina en -l.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b1-tonica-paroxitona · sello anterior: corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Na cidade há um ___ muito eficiente.",
@@ -7189,8 +7402,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b1-corresp-ll-lh · sello anterior: revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
     "type": "translation",
     "data": {
       "source": "A mulher trabalha todos os dias.",
@@ -7364,7 +7577,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-acento-circunflexo",
     "type": "flashcard",
     "data": {
       "front": "Qué indica el acento circunflexo (^)?",
@@ -7436,7 +7650,10 @@
       "pt-br": {
         "sentence": "Quantos ___ você tem?"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ]
   },
   {
     "id": "e6eae5d6",
@@ -7502,7 +7719,10 @@
       "pt-br": {
         "back": "[me.zis]"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ]
   },
   {
     "id": "e79c6e8d",
@@ -7666,7 +7886,10 @@
       "acceptedAlternatives": [
         "A letra c com cedilha é usada em palavras como 'ação' e 'maçã'."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto"
+    ]
   },
   {
     "id": "ecddceb0",
@@ -7761,7 +7984,10 @@
         }
       ],
       "hintEs": "la bebida negra del desayuno"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-oxitona"
+    ]
   },
   {
     "id": "f05b417d",
@@ -7817,7 +8043,8 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-acento-agudo",
     "type": "flashcard",
     "data": {
       "front": "Cuáles son los tres tipos de acentos en português?",
@@ -7853,7 +8080,11 @@
         }
       ],
       "hintEs": "el plural de «canção»"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao",
+      "b1-corresp-nh-ny"
+    ]
   },
   {
     "id": "f273fa62",
@@ -8193,7 +8424,11 @@
       "pt-br": {
         "sentence": "Seus ___ são muito ___."
       }
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r",
+      "b1-pron-s-final"
+    ]
   },
   {
     "id": "f7f71601",
@@ -8420,7 +8655,8 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-corresp-h-f",
     "audioExento": {
       "motivo": "front y back en español: explica la correspondencia h-/f-"
     },
@@ -8444,8 +8680,8 @@
     ],
     "contentHash": "16c7e94fff1e4d531c07307b5d228aad035f0f86f67a4cf201d59a322a5df385",
     "esContrast": "hablar → falar. La h- española corresponde a f- portuguesa.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b1-corresp-h-f · sello anterior: revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ português com a minha vizinha. (hablar)",
@@ -8471,7 +8707,8 @@
     ],
     "contentHash": "76b4d4904120714f277f872f5956d81cee5bece567cc81bfbfc97b51916b8c24",
     "esContrast": "hacer → fazer. Mismo patrón h- ⇄ f-.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-corresp-h-f",
     "type": "fill_blank",
     "data": {
       "sentence": "O que é que vais ___ amanhã? (hacer)",
@@ -8507,8 +8744,8 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b1-corresp-h-f · sello anterior: revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
     "type": "translation",
     "data": {
       "source": "Mi hijo habla portugués.",
@@ -8545,7 +8782,10 @@
         }
       ],
       "hintEs": "imperfeito, 1.ª del plural — la sílaba tónica se mueve y pide tilde"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-desplazamiento-verbal"
+    ]
   },
   {
     "id": "cl15-061",
@@ -8574,7 +8814,10 @@
         }
       ],
       "hintEs": "imperfeito, 1.ª del plural — con tilde en la í"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-desplazamiento-verbal"
+    ]
   },
   {
     "id": "cl15-062",
@@ -8603,7 +8846,10 @@
         }
       ],
       "hintEs": "imperfeito, 1.ª del plural — esdrújula, con tilde"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-desplazamiento-verbal"
+    ]
   },
   {
     "id": "cl15-063",
@@ -8632,7 +8878,10 @@
         }
       ],
       "hintEs": "imperfeito, 1.ª del plural — con tilde en la í"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-desplazamiento-verbal"
+    ]
   },
   {
     "id": "cl15-064",
@@ -8661,7 +8910,10 @@
         }
       ],
       "hintEs": "imperfeito, 1.ª del plural — esdrújula, con tilde"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-desplazamiento-verbal"
+    ]
   },
   {
     "id": "cl15-065",
@@ -8690,7 +8942,10 @@
         }
       ],
       "hintEs": "imperfeito, 1.ª del plural — con tilde en la í"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-desplazamiento-verbal"
+    ]
   },
   {
     "id": "cl15-066",
@@ -8719,7 +8974,10 @@
         }
       ],
       "hintEs": "imperfeito, 1.ª del plural — esdrújula, con tilde"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-desplazamiento-verbal"
+    ]
   },
   {
     "id": "cl15-067",
@@ -8748,7 +9006,10 @@
         }
       ],
       "hintEs": "imperfeito, 1.ª del plural — con tilde en la í"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-desplazamiento-verbal"
+    ]
   },
   {
     "id": "cl16-087",
@@ -8777,7 +9038,10 @@
         }
       ],
       "hintEs": "la institución donde se deposita el dinero — nasal escrita con n"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-n-interior"
+    ]
   },
   {
     "id": "cl16-088",
@@ -8806,7 +9070,10 @@
         }
       ],
       "hintEs": "lo que cruza un río de orilla a orilla"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-n-interior"
+    ]
   },
   {
     "id": "cl16-089",
@@ -8835,7 +9102,10 @@
         }
       ],
       "hintEs": "el aire en movimiento"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-n-interior"
+    ]
   },
   {
     "id": "cl16-090",
@@ -8864,7 +9134,10 @@
         }
       ],
       "hintEs": "el líquido con que escribe una pluma"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-n-interior"
+    ]
   },
   {
     "id": "cl16-091",
@@ -8893,7 +9166,10 @@
         }
       ],
       "hintEs": "el día anterior a hoy"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-n-interior"
+    ]
   },
   {
     "id": "cl16-092",
@@ -8922,7 +9198,10 @@
         }
       ],
       "hintEs": "el número que sigue a cuatro"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-n-interior"
+    ]
   },
   {
     "id": "cl16-093",
@@ -8951,7 +9230,10 @@
         }
       ],
       "hintEs": "el papel que se pide al final de una comida en el restaurante"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-n-interior"
+    ]
   },
   {
     "id": "cl16-094",
@@ -8980,7 +9262,10 @@
         }
       ],
       "hintEs": "la parte del cuerpo con la que se saluda — lleva tilde ondulada"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-til"
+    ]
   },
   {
     "id": "cl16-095",
@@ -9009,7 +9294,10 @@
         }
       ],
       "hintEs": "la primera parte del día"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-til"
+    ]
   },
   {
     "id": "cl16-096",
@@ -9038,7 +9326,10 @@
         }
       ],
       "hintEs": "lo que se hace con harina y se compra en la panadería"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-til"
+    ]
   },
   {
     "id": "cl16-097",
@@ -9067,7 +9358,10 @@
         }
       ],
       "hintEs": "cada una de las unidades en que se divide un curso"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-til"
+    ]
   },
   {
     "id": "cl16-098",
@@ -9096,7 +9390,10 @@
         }
       ],
       "hintEs": "el plural de «limão»"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-til"
+    ]
   },
   {
     "id": "cl16-099",
@@ -9125,7 +9422,10 @@
         }
       ],
       "hintEs": "quien receta los medicamentos — esdrújula, siempre acentuada"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-proparoxitona"
+    ]
   },
   {
     "id": "cl16-100",
@@ -9154,7 +9454,10 @@
         }
       ],
       "hintEs": "lo que se oye en la radio — esdrújula"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-proparoxitona"
+    ]
   },
   {
     "id": "cl16-101",
@@ -9183,7 +9486,10 @@
         }
       ],
       "hintEs": "el día anterior al domingo — esdrújula"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-proparoxitona"
+    ]
   },
   {
     "id": "cl16-102",
@@ -9212,7 +9518,10 @@
         }
       ],
       "hintEs": "lo contrario de lento — esdrújula"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-proparoxitona"
+    ]
   },
   {
     "id": "cl16-103",
@@ -9241,7 +9550,10 @@
         }
       ],
       "hintEs": "el final de una serie — esdrújula"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-proparoxitona"
+    ]
   },
   {
     "id": "cl16-104",
@@ -9270,7 +9582,10 @@
         }
       ],
       "hintEs": "el hijo — la h inicial del español es f en portugués"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-h-f"
+    ]
   },
   {
     "id": "cl16-105",
@@ -9299,7 +9614,10 @@
         }
       ],
       "hintEs": "la harina — h del español, f del portugués"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-h-f"
+    ]
   },
   {
     "id": "cl16-106",
@@ -9328,7 +9646,10 @@
         }
       ],
       "hintEs": "la hoja — h del español, f del portugués"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-h-f"
+    ]
   },
   {
     "id": "cl16-107",
@@ -9357,7 +9678,10 @@
         }
       ],
       "hintEs": "el hierro — h del español, f del portugués"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-h-f"
+    ]
   },
   {
     "id": "cl16-108",
@@ -9386,7 +9710,10 @@
         }
       ],
       "hintEs": "preposición «a» + artículo femenino: contracción con acento grave"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-crase"
+    ]
   },
   {
     "id": "cl16-109",
@@ -9415,7 +9742,10 @@
         }
       ],
       "hintEs": "preposición «a» + artículo femenino: contracción con acento grave"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-crase"
+    ]
   },
   {
     "id": "cl16-110",
@@ -9444,7 +9774,10 @@
         }
       ],
       "hintEs": "preposición «a» + artículo femenino: contracción con acento grave"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-crase"
+    ]
   },
   {
     "id": "cl16-111",
@@ -9473,7 +9806,10 @@
         }
       ],
       "hintEs": "preposición sola, sin artículo: no lleva acento grave"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-crase"
+    ]
   },
   {
     "id": "cl16-112",
@@ -9502,7 +9838,10 @@
         }
       ],
       "hintEs": "preposición sola delante de infinitivo: no lleva acento grave"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-crase"
+    ]
   },
   {
     "id": "cl16-113",
@@ -9531,7 +9870,10 @@
         }
       ],
       "hintEs": "preposición «a» + artículo femenino PLURAL, con acento grave"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-crase"
+    ]
   },
   {
     "id": "cl16-114",
@@ -9560,7 +9902,10 @@
         }
       ],
       "hintEs": "el padre del padre — con acento circunflejo, no agudo"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-circunflexo"
+    ]
   },
   {
     "id": "cl16-115",
@@ -9589,7 +9934,10 @@
         }
       ],
       "hintEs": "cada una de las doce partes del año — con acento circunflejo"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-circunflexo"
+    ]
   },
   {
     "id": "cl16-116",
@@ -9618,7 +9966,10 @@
         }
       ],
       "hintEs": "el establecimiento donde se sirve la bebida negra del desayuno — acento agudo final"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-agudo"
+    ]
   },
   {
     "id": "cl19-013",
@@ -9647,7 +9998,10 @@
         }
       ],
       "hintEs": "hasta — lleva acento agudo en la última sílaba"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-crase"
+    ]
   },
   {
     "id": "es20-001",
@@ -9685,7 +10039,10 @@
         "avó"
       ],
       "answer": "avô"
-    }
+    },
+    "__nuevos": [
+      "b1-inventario-vocalico"
+    ]
   },
   {
     "id": "es20-002",
@@ -9723,7 +10080,10 @@
         "avó"
       ],
       "answer": "avó"
-    }
+    },
+    "__nuevos": [
+      "b1-inventario-vocalico"
+    ]
   },
   {
     "id": "es20-003",
@@ -9761,7 +10121,10 @@
         "pode"
       ],
       "answer": "pôde"
-    }
+    },
+    "__nuevos": [
+      "b1-inventario-vocalico"
+    ]
   },
   {
     "id": "es20-004",
@@ -9799,7 +10162,10 @@
         "lã"
       ],
       "answer": "lã"
-    }
+    },
+    "__nuevos": [
+      "b1-inventario-vocalico"
+    ]
   },
   {
     "id": "es20-005",
@@ -9837,7 +10203,10 @@
         "mundo"
       ],
       "answer": "mundo"
-    }
+    },
+    "__nuevos": [
+      "b1-inventario-vocalico"
+    ]
   },
   {
     "id": "es20-006",
@@ -9875,7 +10244,10 @@
         "vim"
       ],
       "answer": "vim"
-    }
+    },
+    "__nuevos": [
+      "b1-inventario-vocalico"
+    ]
   },
   {
     "id": "es20-007",
@@ -9913,7 +10285,10 @@
         "canto"
       ],
       "answer": "canto"
-    }
+    },
+    "__nuevos": [
+      "b1-inventario-vocalico"
+    ]
   },
   {
     "id": "es20-008",
@@ -9951,7 +10326,10 @@
         "tampa"
       ],
       "answer": "tapa"
-    }
+    },
+    "__nuevos": [
+      "b1-inventario-vocalico"
+    ]
   },
   {
     "id": "cl27b-001",
@@ -9980,7 +10358,10 @@
         }
       ],
       "hintEs": "señor — la ñ española se escribe «nh»"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-nh-ny"
+    ]
   },
   {
     "id": "cl27b-002",
@@ -10009,7 +10390,10 @@
         }
       ],
       "hintEs": "mañana (la parte del día) — ñ → nh, y la nasal final lleva til"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-nh-ny"
+    ]
   },
   {
     "id": "cl27b-003",
@@ -10038,7 +10422,10 @@
         }
       ],
       "hintEs": "montaña — ñ → nh"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-nh-ny"
+    ]
   },
   {
     "id": "cl27b-004",
@@ -10067,7 +10454,10 @@
         }
       ],
       "hintEs": "sueño — ñ → nh"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-nh-ny"
+    ]
   },
   {
     "id": "cl27b-005",
@@ -10096,7 +10486,10 @@
         }
       ],
       "hintEs": "baño — ñ → nh"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-nh-ny"
+    ]
   },
   {
     "id": "cl27b-006",
@@ -10125,7 +10518,10 @@
         }
       ],
       "hintEs": "castañas — ñ → nh, en plural"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-nh-ny"
+    ]
   },
   {
     "id": "cl27b-007",
@@ -10154,7 +10550,10 @@
         }
       ],
       "hintEs": "razones — el plural de «razão», que no es -ãos"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ]
   },
   {
     "id": "cl27b-008",
@@ -10183,7 +10582,10 @@
         }
       ],
       "hintEs": "canciones — el plural de «canção»"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ]
   },
   {
     "id": "cl27b-009",
@@ -10212,7 +10614,10 @@
         }
       ],
       "hintEs": "opciones — el plural de «opção»"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ]
   },
   {
     "id": "cl27b-010",
@@ -10241,7 +10646,10 @@
         }
       ],
       "hintEs": "condiciones — el plural de «condição»"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ]
   },
   {
     "id": "cl27b-011",
@@ -10270,7 +10678,10 @@
         }
       ],
       "hintEs": "comidas (las del día) — el plural de «refeição»"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ]
   },
   {
     "id": "cl27b-012",
@@ -10299,7 +10710,10 @@
         }
       ],
       "hintEs": "estaciones — el plural de «estação»"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ]
   },
   {
     "id": "cl27b-013",
@@ -10328,7 +10742,10 @@
         }
       ],
       "hintEs": "azúcar — lleva cedilla, porque va ante «ú»"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-cedilha"
+    ]
   },
   {
     "id": "cl27b-014",
@@ -10357,7 +10774,10 @@
         }
       ],
       "hintEs": "plaza — cedilla ante «a»"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-cedilha"
+    ]
   },
   {
     "id": "cl27b-015",
@@ -10386,7 +10806,10 @@
         }
       ],
       "hintEs": "la comida del mediodía — cedilla ante «o»"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-cedilha"
+    ]
   },
   {
     "id": "cl27b-016",
@@ -10415,7 +10838,10 @@
         }
       ],
       "hintEs": "cabeza — cedilla ante «a»"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-cedilha"
+    ]
   },
   {
     "id": "cl27b-017",
@@ -10444,7 +10870,10 @@
         }
       ],
       "hintEs": "fuerza — cedilla ante «a»"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-cedilha"
+    ]
   },
   {
     "id": "cl27b-018",
@@ -10473,7 +10902,10 @@
         }
       ],
       "hintEs": "bien — la nasal final se escribe con «m»"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ]
   },
   {
     "id": "cl27b-019",
@@ -10502,7 +10934,10 @@
         }
       ],
       "hintEs": "también — nasal final con «m», y con acento en la última"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ]
   },
   {
     "id": "cl27b-020",
@@ -10531,7 +10966,10 @@
         }
       ],
       "hintEs": "alguien — nasal final con «m», con acento en la última"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ]
   },
   {
     "id": "cl27b-021",
@@ -10560,7 +10998,10 @@
         }
       ],
       "hintEs": "ayer — nasal final con «m»"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ]
   },
   {
     "id": "cl27b-022",
@@ -10589,7 +11030,10 @@
         }
       ],
       "hintEs": "hombre — nasal final con «m»"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ]
   },
   {
     "id": "cl27b-023",
@@ -10618,7 +11062,10 @@
         }
       ],
       "hintEs": "corazón — la terminación española -ón da «-ão»"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao"
+    ]
   },
   {
     "id": "cl27b-024",
@@ -10647,7 +11094,10 @@
         }
       ],
       "hintEs": "solución — -ón da «-ão»"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao"
+    ]
   },
   {
     "id": "cl27b-025",
@@ -10676,7 +11126,10 @@
         }
       ],
       "hintEs": "información — -ón da «-ão»"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao"
+    ]
   },
   {
     "id": "cl27b-026",
@@ -10705,7 +11158,10 @@
         }
       ],
       "hintEs": "televisión — -ón da «-ão»"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao"
+    ]
   },
   {
     "id": "cl27b-027",
@@ -10734,6 +11190,969 @@
         }
       ],
       "hintEs": "atención — -ón da «-ão»"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao"
+    ]
+  },
+  {
+    "id": "cl28-001",
+    "blockId": 1,
+    "lessonId": "b1-l2-silaba-tonica",
+    "difficulty": 2,
+    "concepts": [
+      "b1-tonica-paroxitona"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "dc5eabd4cda0f10c5f41610564d3ad40347dcae6335ff090d570d498b1232ef8",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Este exercício é ___ de fazer, não te preocupes.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "fácil",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "fácil — llana terminada en -l, y por eso lleva tilde"
+    },
+    "__nuevos": [
+      "b1-tonica-paroxitona"
+    ]
+  },
+  {
+    "id": "cl28-002",
+    "blockId": 1,
+    "lessonId": "b1-l2-silaba-tonica",
+    "difficulty": 2,
+    "concepts": [
+      "b1-tonica-paroxitona"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "74395d811e575e1b4ae47dcc510a828dc41b3f6be510f999ecbf0e88cd38a24e",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Este dicionário é muito ___ para quem traduz.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "útil",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "útil — llana terminada en -l, lleva tilde"
+    },
+    "__nuevos": [
+      "b1-tonica-paroxitona"
+    ]
+  },
+  {
+    "id": "cl28-003",
+    "blockId": 1,
+    "lessonId": "b1-l2-silaba-tonica",
+    "difficulty": 2,
+    "concepts": [
+      "b1-tonica-paroxitona"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "09e5e6e143e1850085440ecb66038f0476c7b3f7a5b8233480947db94217b2c4",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Trouxe o ___ de fotografias da viagem.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "álbum",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "álbum — llana terminada en -m, lleva tilde"
+    },
+    "__nuevos": [
+      "b1-tonica-paroxitona"
+    ]
+  },
+  {
+    "id": "cl28-004",
+    "blockId": 1,
+    "lessonId": "b1-l2-silaba-tonica",
+    "difficulty": 2,
+    "concepts": [
+      "b1-tonica-paroxitona"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "e5928960ca9aa5841d88499719ad8d6fcaea77d68c700efc53c970f2f4d8deff",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Chamámos um ___ para ir ao aeroporto.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "táxi",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "taxi — llana terminada en -i, lleva tilde"
+    },
+    "__nuevos": [
+      "b1-tonica-paroxitona"
+    ]
+  },
+  {
+    "id": "cl28-005",
+    "blockId": 1,
+    "lessonId": "b1-l2-silaba-tonica",
+    "difficulty": 2,
+    "concepts": [
+      "b1-tonica-paroxitona"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "505ac3c41941bf3cf42d0d43dfe5607dec1f6f2500bbca312e502ee967765bd2",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Empresta-me um ___, que o meu não escreve.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "lápis",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "lápiz — llana terminada en -s, lleva tilde"
+    },
+    "__nuevos": [
+      "b1-tonica-paroxitona"
+    ]
+  },
+  {
+    "id": "cl28-006",
+    "blockId": 1,
+    "lessonId": "b1-l2-silaba-tonica",
+    "difficulty": 2,
+    "concepts": [
+      "b1-tonica-paroxitona"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "3751eb5c4d3dc8d588e3a3ff83502448173a3b974dbb2e91a6c6e78494e26372",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Comprei uns ___ novos para correr de manhã.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "ténis",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "zapatillas — llana terminada en -s, lleva tilde; y en Portugal el acento es agudo"
+    },
+    "__nuevos": [
+      "b1-tonica-paroxitona"
+    ]
+  },
+  {
+    "id": "cl28-007",
+    "blockId": 1,
+    "lessonId": "b1-l2-silaba-tonica",
+    "difficulty": 2,
+    "concepts": [
+      "b1-tonica-paroxitona"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "d88c54d6b822b96206d6a9beb4fd9909b88b93d9ca4d72845b4361823285edb6",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Foi muito ___ da tua parte teres vindo.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "amável",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "amable — llana terminada en -l, lleva tilde"
+    },
+    "__nuevos": [
+      "b1-tonica-paroxitona"
+    ]
+  },
+  {
+    "id": "cl28-008",
+    "blockId": 1,
+    "lessonId": "b1-l1-alfabeto-acentos",
+    "difficulty": 2,
+    "concepts": [
+      "b1-acento-agudo"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "a620b7ab969cc7143662477fba1c09bc98eb8ffb5780ffaa0016a6d017101266",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "A minha ___ faz o melhor bolo de laranja do mundo.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "avó",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "abuela — el agudo abre la «o»; con circunflejo sería el abuelo"
+    },
+    "__nuevos": [
+      "b1-acento-agudo"
+    ]
+  },
+  {
+    "id": "cl28-009",
+    "blockId": 1,
+    "lessonId": "b1-l1-alfabeto-acentos",
+    "difficulty": 2,
+    "concepts": [
+      "b1-acento-agudo"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "8da88aa46e907c6f7c21893dc2188719f9536e34929251ef58aa15be918ce695",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Torci o ___ a descer as escadas do metro.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "pé",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "pie — el agudo abre la «e»"
+    },
+    "__nuevos": [
+      "b1-acento-agudo"
+    ]
+  },
+  {
+    "id": "cl28-010",
+    "blockId": 1,
+    "lessonId": "b1-l1-alfabeto-acentos",
+    "difficulty": 2,
+    "concepts": [
+      "b1-acento-agudo"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "f68166773472a613911fd765bd7da6d1fc713e4a037522c55ea8bb5b65e274cf",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Portugal é um ___ pequeno mas com muita costa.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "país",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "país — aquí el agudo no abre nada: rompe el diptongo"
+    },
+    "__nuevos": [
+      "b1-acento-agudo"
+    ]
+  },
+  {
+    "id": "cl28-011",
+    "blockId": 1,
+    "lessonId": "b1-l1-alfabeto-acentos",
+    "difficulty": 2,
+    "concepts": [
+      "b1-acento-agudo"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "d08a126d1e02614de5ab4e952ef17881de68d6ac1ba541449efc5f2c7a5a141f",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Ela mora ___ desde que os filhos saíram de casa.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "só",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "sola — con acento agudo"
+    },
+    "__nuevos": [
+      "b1-acento-agudo"
+    ]
+  },
+  {
+    "id": "cl28-012",
+    "blockId": 1,
+    "lessonId": "b1-l1-alfabeto-acentos",
+    "difficulty": 2,
+    "concepts": [
+      "b1-acento-agudo"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "e35bed029cf374b043f67914ada163c0184e911bb6423eeec71b5e302a3f6972",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Ficámos ___ ao fim do concerto, já de madrugada.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "até",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "hasta — con acento agudo en la última"
+    },
+    "__nuevos": [
+      "b1-acento-agudo"
+    ]
+  },
+  {
+    "id": "cl28-013",
+    "blockId": 1,
+    "lessonId": "b1-l1-alfabeto-acentos",
+    "difficulty": 2,
+    "concepts": [
+      "b1-acento-agudo"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "5a2b44c91715d87e2aa1e2c5efdbd6a918591f5d6231ec00f8cd5502b739a931",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Traz uma garrafa de ___ da cozinha, se faz favor.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "água",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "agua — el agudo marca la tónica sobre la «a»"
+    },
+    "__nuevos": [
+      "b1-acento-agudo"
+    ]
+  },
+  {
+    "id": "cl28-014",
+    "blockId": 1,
+    "lessonId": "b1-l1-alfabeto-acentos",
+    "difficulty": 2,
+    "concepts": [
+      "b1-acento-circunflexo"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "96bc818b3d70d5622f2e05d13fb18bddd895978152c3157cc83784e73e41663a",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "O meu ___ tem noventa anos e ainda anda de bicicleta.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "avô",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "abuelo — el circunflejo cierra la «o»; con agudo sería la abuela"
+    },
+    "__nuevos": [
+      "b1-acento-circunflexo"
+    ]
+  },
+  {
+    "id": "cl28-015",
+    "blockId": 1,
+    "lessonId": "b1-l1-alfabeto-acentos",
+    "difficulty": 2,
+    "concepts": [
+      "b1-acento-circunflexo"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "49e61ffd6c92b03b96723c80e3a634d43bae6cef8ff89572254ab6e6eb67a4e6",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "O ___ de agosto foi o mais quente de sempre.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "mês",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "mes — el circunflejo cierra la «e»"
+    },
+    "__nuevos": [
+      "b1-acento-circunflexo"
+    ]
+  },
+  {
+    "id": "cl28-016",
+    "blockId": 1,
+    "lessonId": "b1-l1-alfabeto-acentos",
+    "difficulty": 2,
+    "concepts": [
+      "b1-acento-circunflexo"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "cd202f3380c95e0d96065dd9127f0a44fd1d3c3eb6d9c151bd812ba64091f160",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Tenho ___ irmãos mais novos do que eu.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "três",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "tres — el circunflejo cierra la «e»"
+    },
+    "__nuevos": [
+      "b1-acento-circunflexo"
+    ]
+  },
+  {
+    "id": "cl28-017",
+    "blockId": 1,
+    "lessonId": "b1-l1-alfabeto-acentos",
+    "difficulty": 2,
+    "concepts": [
+      "b1-acento-circunflexo"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "139928635d22af5af4228a867baf539ef1c1a870fabb1ae3fe8c1fdfed4fb23d",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Estou a aprender ___ há quase dois anos.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "português",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "portugués — circunflejo en la última sílaba"
+    },
+    "__nuevos": [
+      "b1-acento-circunflexo"
+    ]
+  },
+  {
+    "id": "cl28-018",
+    "blockId": 1,
+    "lessonId": "b1-l1-alfabeto-acentos",
+    "difficulty": 2,
+    "concepts": [
+      "b1-acento-circunflexo"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "081b2c0d88183a23cb0ca16dcc2648175cefd0d9ff3bec16b32a4cd3ddc4afbb",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Comprei ___ maduros no mercado da praça.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "pêssegos",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "melocotones — con circunflejo"
+    },
+    "__nuevos": [
+      "b1-acento-circunflexo"
+    ]
+  },
+  {
+    "id": "cl28-019",
+    "blockId": 1,
+    "lessonId": "b1-l3-correspondencias-es-pt",
+    "difficulty": 2,
+    "concepts": [
+      "b1-corresp-ll-lh"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "4b01be9422f260655d273d8990407de972d73b840acd601b47fb1106cb001b62",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Passa-me uma ___ para as mãos, que estão molhadas.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "toalha",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "toalla — la «ll» española da «lh»"
+    },
+    "__nuevos": [
+      "b1-corresp-ll-lh"
+    ]
+  },
+  {
+    "id": "cl28-020",
+    "blockId": 1,
+    "lessonId": "b1-l3-correspondencias-es-pt",
+    "difficulty": 2,
+    "concepts": [
+      "b1-corresp-ll-lh"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "3e9865d8771780585f685b365732e3929a26310ec21526f1a66d47e9c2b7079c",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Ganhou a ___ de ouro na natação.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "medalha",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "medalla — ll → lh"
+    },
+    "__nuevos": [
+      "b1-corresp-ll-lh"
+    ]
+  },
+  {
+    "id": "cl28-021",
+    "blockId": 1,
+    "lessonId": "b1-l3-correspondencias-es-pt",
+    "difficulty": 2,
+    "concepts": [
+      "b1-corresp-ll-lh"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "9828be7b1eeef7371052161bf87a2a2a8ed3ec4951cc0a5a5dd7b2ff668d7fd6",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Estudámos a ___ de Aljubarrota na escola primária.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "batalha",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "batalla — ll → lh"
+    },
+    "__nuevos": [
+      "b1-corresp-ll-lh"
+    ]
+  },
+  {
+    "id": "cl28-022",
+    "blockId": 1,
+    "lessonId": "b1-l3-correspondencias-es-pt",
+    "difficulty": 2,
+    "concepts": [
+      "b1-corresp-ll-lh"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "c2c985bc8b0ba35d7bce8e33188896dda20245a031dd63433728049cb67b4ff3",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "A vista daqui de cima é uma ___.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "maravilha",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "maravilla — ll → lh"
+    },
+    "__nuevos": [
+      "b1-corresp-ll-lh"
+    ]
+  },
+  {
+    "id": "cl28-023",
+    "blockId": 1,
+    "lessonId": "b1-l2-silaba-tonica",
+    "difficulty": 2,
+    "concepts": [
+      "b1-tonica-oxitona"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "100c8de5ff34e7b9f69270c3893e983ba18611f9d3c44b10c5f1a5ca2b0c5d95",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Ficámos num ___ pequeno perto da praia.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "hotel",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "el sitio donde se duerme cuando se viaja — aguda terminada en -l, y por eso NO lleva tilde en portugués"
+    },
+    "__nuevos": [
+      "b1-tonica-oxitona"
+    ]
+  },
+  {
+    "id": "cl28-024",
+    "blockId": 1,
+    "lessonId": "b1-l2-silaba-tonica",
+    "difficulty": 2,
+    "concepts": [
+      "b1-tonica-oxitona"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "a6f445be23c7ca6c2a584a1ea3c1ed6ecfc4600ea616edf4a67a6bc90ac6de3d",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Preciso de uma folha de ___ para apontar isto.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "papel",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "la hoja sobre la que se escribe — aguda en -l, sin tilde"
+    },
+    "__nuevos": [
+      "b1-tonica-oxitona"
+    ]
+  },
+  {
+    "id": "cl28-025",
+    "blockId": 1,
+    "lessonId": "b1-l2-silaba-tonica",
+    "difficulty": 2,
+    "concepts": [
+      "b1-tonica-oxitona"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "0e9a133cdf5b8b66d7cc2d37d812370ec131e94548970a9ce7ae84e740632edc",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Aquele ___ é o filho da vizinha do terceiro.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "rapaz",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "chico — aguda terminada en -z, sin tilde"
+    },
+    "__nuevos": [
+      "b1-tonica-oxitona"
+    ]
+  },
+  {
+    "id": "cl28-026",
+    "blockId": 1,
+    "lessonId": "b1-l2-silaba-tonica",
+    "difficulty": 2,
+    "concepts": [
+      "b1-tonica-oxitona"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "39c4f6404d49f1239865eae1e2a4d4d6d9ce10ab15f326616a9ac6ba6d0b5582",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Temos um ___ pequeno nas traseiras da casa.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "jardim",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "jardín — aguda terminada en -m, y en portugués no lleva tilde"
+    },
+    "__nuevos": [
+      "b1-tonica-oxitona"
+    ]
+  },
+  {
+    "id": "cl28-027",
+    "blockId": 1,
+    "lessonId": "b1-l3-correspondencias-es-pt",
+    "difficulty": 2,
+    "concepts": [
+      "b1-corresp-h-f"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "0c12edb3adbbff06f330c31b4e63060e5fb3d0bcfca9b9a2ccb6b2d7901bd78b",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "O meu ___ mais velho está a estudar medicina.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "filho",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "hijo — la «h» muda española corresponde a «f» en portugués"
+    },
+    "__nuevos": [
+      "b1-corresp-h-f"
+    ]
+  },
+  {
+    "id": "cl28-028",
+    "blockId": 1,
+    "lessonId": "b1-l3-correspondencias-es-pt",
+    "difficulty": 2,
+    "concepts": [
+      "b1-corresp-h-f"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "6b3c3be383147045078e7ffbe7f66ae9e0b138ec559f8d73cbabbd7bb18b1f99",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Vamos ___ com o professor amanhã de manhã.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "falar",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "hablar — h muda → f"
+    },
+    "__nuevos": [
+      "b1-corresp-h-f"
+    ]
+  },
+  {
+    "id": "cl28-029",
+    "blockId": 1,
+    "lessonId": "b1-l3-correspondencias-es-pt",
+    "difficulty": 2,
+    "concepts": [
+      "b1-corresp-h-f"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "9154b46faef19aff05f6f20031a332840814d58ddbb234876179fe6111861887",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Preciso de ___ o jantar antes das oito.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "fazer",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "hacer — h muda → f"
+    },
+    "__nuevos": [
+      "b1-corresp-h-f"
+    ]
+  },
+  {
+    "id": "cl28-030",
+    "blockId": 1,
+    "lessonId": "b1-l3-correspondencias-es-pt",
+    "difficulty": 2,
+    "concepts": [
+      "b1-corresp-h-f"
+    ],
+    "tags": [
+      "e2-28",
+      "cloze-con-pista"
+    ],
+    "contentHash": "a2448d4847f5d5b8fcb182e71122653c5e6cc11d080deaac2382f3d6b47c6ccd",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-28: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Comprei ___ e fermento para o pão de domingo.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "farinha",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "harina — h muda → f"
+    },
+    "__nuevos": [
+      "b1-corresp-h-f"
+    ]
   }
 ]
