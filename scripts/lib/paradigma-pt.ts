@@ -15,6 +15,28 @@
 
 export type Persona = 'eu' | 'tu' | 'ele' | 'nós' | 'eles';
 
+/** Las cinco personas del paradigma, para poder comprobarlo EN EJECUCIÓN.
+ *
+ *  El tipo sólo protege a quien compila. Un lote con `per: 'vocês'` —que
+ *  es una persona real del idioma pero no una clave del paradigma— pasó
+ *  los gates del lote, pasó el publicador y llegó al corpus con la
+ *  respuesta «trouxeundefined»: el tema concatenado con la desinencia
+ *  inexistente. Cinco ítems servidos así.
+ *
+ *  Y el gate que RECALCULA la respuesta no lo vio, porque recalculaba lo
+ *  mismo y coincidía consigo mismo. Un derivador que no comprueba que la
+ *  derivación SALIÓ es un gate que se da la razón. */
+export const PERSONAS: readonly Persona[] = ['eu', 'tu', 'ele', 'nós', 'eles'];
+export const esPersona = (p: unknown): p is Persona => PERSONAS.includes(p as Persona);
+
+/** Toda forma derivada pasa por aquí antes de salir: si la persona no es
+ *  del paradigma, o si la concatenación produjo `undefined`, se devuelve
+ *  null y quien llama decide — en vez de servir una palabra inventada. */
+export function formaValida(forma: string | null | undefined): string | null {
+  if (typeof forma !== 'string' || !forma) return null;
+  return /undefined|null|NaN/.test(forma) ? null : forma;
+}
+
 /** Los únicos tres irregulares del futuro y del condicional. La regla se
  *  enuncia con la excepción delante a propósito: el resto se forma sobre
  *  el infinitivo entero, sin excepciones. */
@@ -363,6 +385,7 @@ const IR_REGULARES = new Set([
 ]);
 
 export function conjugar(inf: string, tiempo: Tiempo, p: Persona): string | null {
+  if (!esPersona(p)) return null;
   const irr = IRREGULARES[inf]?.[tiempo]?.[p];
   if (irr) return irr;
   const c = conjDe(inf);
@@ -492,6 +515,7 @@ function acentuarNos(forma: string, inf: string, des: string): string {
 }
 
 export function imperfeitoConjuntivo(inf: string, p: Persona): string | null {
+  if (!esPersona(p)) return null;
   const t0 = temaPret(inf);
   if (!t0) return null;
   // El hiato acentúa la i en TODAS las personas: saísse, saísses,
@@ -499,16 +523,17 @@ export function imperfeitoConjuntivo(inf: string, p: Persona): string | null {
   const t = !TEMA_PRETERITO[inf] && hiatoEnI(inf) ? t0.replace(/i$/, 'í') : t0;
   // «nós» lleva acento: falássemos, fizéssemos, puséssemos.
   const forma = t + DES_IMPERF_SUBJ[p];
-  return p === 'nós' ? acentuarNos(forma, inf, 'ssemos') : forma;
+  return formaValida(p === 'nós' ? acentuarNos(forma, inf, 'ssemos') : forma);
 }
 
 export function futuroConjuntivo(inf: string, p: Persona): string | null {
+  if (!esPersona(p)) return null;
   // En los REGULARES el futuro do conjuntivo y el infinitivo pessoal son
   // la misma forma («falares», «saíres»). No se parecen: son idénticos,
   // así que se delega en vez de reimplementar — que reimplementarlo fue
   // justamente lo que dejó fuera el acento de hiato y produjo *sairem*.
   if (!TEMA_PRETERITO[inf]) return conjDe(inf) ? infinitivoPessoal(inf, p) : null;
-  return TEMA_PRETERITO[inf]! + DES_FUT_SUBJ[p];
+  return formaValida(TEMA_PRETERITO[inf]! + DES_FUT_SUBJ[p]);
 }
 
 /** Mais-que-perfeito composto: «tinha falado». Se compone, no se declara. */

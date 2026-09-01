@@ -27,7 +27,7 @@ export const ITEMS: Cloze[] = [
     s: 'Quando eles ___ (fazer) as contas, avisam-nos logo.', pista: 'futuro do conjuntivo, 3.ª del plural — irregular', ancla: 'avisam-nos logo' },
   { p: 'b6-futuro-subj', pasada: 1, lema: 'ver', t: 'futSubj', per: 'tu',
     s: 'Se tu ___ (ver) o António, diz-lhe que me ligue.', pista: 'futuro do conjuntivo, 2.ª persona — irregular', ancla: 'diz-lhe que me ligue' },
-  { p: 'b6-futuro-subj', pasada: 1, lema: 'trazer', t: 'futSubj', per: 'vocês',
+  { p: 'b6-futuro-subj', pasada: 1, lema: 'trazer', t: 'futSubj', per: 'eles',
     s: 'Assim que vocês ___ (trazer) os papéis, tratamos disso.', pista: 'futuro do conjuntivo, 3.ª del plural — irregular', ancla: 'tratamos disso' },
   { p: 'b6-futuro-subj', pasada: 1, lema: 'pôr', t: 'futSubj', per: 'nós',
     s: 'Logo que nós ___ (pôr) tudo no sítio, fechamos a loja.', pista: 'futuro do conjuntivo, 1.ª del plural — irregular', ancla: 'fechamos a loja' },
@@ -35,14 +35,14 @@ export const ITEMS: Cloze[] = [
     s: 'Enquanto ele ___ (querer) continuar, ninguém o impede.', pista: 'futuro do conjuntivo, 3.ª persona — irregular', ancla: 'ninguém o impede' },
   { p: 'b6-futuro-subj', pasada: 1, lema: 'dizer', t: 'futSubj', per: 'eu',
     s: 'Quando eu ___ (dizer) que sim, podem começar a servir.', pista: 'futuro do conjuntivo, 1.ª persona — irregular', ancla: 'podem começar a servir' },
-  { p: 'b6-futuro-subj', pasada: 1, lema: 'estar', t: 'futSubj', per: 'elas',
+  { p: 'b6-futuro-subj', pasada: 1, lema: 'estar', t: 'futSubj', per: 'eles',
     s: 'Se elas ___ (estar) prontas às oito, saímos todos juntos.', pista: 'futuro do conjuntivo, 3.ª del plural — irregular', ancla: 'saímos todos juntos' },
 
   // ══ b6-imperfeito-subj (6) — fuera de la condicional, disparado por el
   // verbo de la principal.
   { p: 'b6-imperfeito-subj', pasada: 1, lema: 'vir', t: 'imperfSubj', per: 'tu',
     s: 'Ela pediu que tu ___ (vir) mais cedo do que o costume.', pista: 'imperfeito do conjuntivo, 2.ª persona — irregular', ancla: 'do que o costume' },
-  { p: 'b6-imperfeito-subj', pasada: 1, lema: 'dar', t: 'imperfSubj', per: 'vocês',
+  { p: 'b6-imperfeito-subj', pasada: 1, lema: 'dar', t: 'imperfSubj', per: 'eles',
     s: 'Era bom que vocês ___ (dar) uma resposta ainda esta semana.', pista: 'imperfeito do conjuntivo, 3.ª del plural — irregular', ancla: 'ainda esta semana' },
   { p: 'b6-imperfeito-subj', pasada: 1, lema: 'poder', t: 'imperfSubj', per: 'ele',
     s: 'Não havia ali ninguém que ___ (poder) resolver aquilo.', pista: 'imperfeito do conjuntivo, 3.ª persona — irregular', ancla: 'Não havia ali ninguém' },
@@ -64,7 +64,7 @@ export const ITEMS: Cloze[] = [
     s: 'Se ___ (haver) mais lugares, levávamos os miúdos também.', pista: 'imperfeito do conjuntivo del existencial, 3.ª persona', ancla: 'levávamos os miúdos também' },
   { p: 'b6-se-hipotetico', pasada: 1, lema: 'conseguir', t: 'imperfSubj', per: 'nós',
     s: 'Se nós ___ (conseguir) o desconto, comprávamos os dois.', pista: 'imperfeito do conjuntivo, 1.ª del plural', ancla: 'comprávamos os dois' },
-  { p: 'b6-se-hipotetico', pasada: 1, lema: 'ler', t: 'imperfSubj', per: 'vocês',
+  { p: 'b6-se-hipotetico', pasada: 1, lema: 'ler', t: 'imperfSubj', per: 'eles',
     s: 'Se vocês ___ (ler) o contrato todo, percebiam o problema.', pista: 'imperfeito do conjuntivo, 3.ª del plural', ancla: 'percebiam o problema' },
   { p: 'b6-se-hipotetico', pasada: 1, lema: 'ir', t: 'imperfSubj', per: 'eles',
     s: 'Se eles ___ (ir) de comboio, chegavam mesmo à hora.', pista: 'imperfeito do conjuntivo, 3.ª del plural — irregular', ancla: 'chegavam mesmo à hora' },
@@ -81,9 +81,9 @@ export const ITEMS: Cloze[] = [
     s: 'Se eles ___ (ter) avisado, tínhamos mudado o plano todo.', pista: 'auxiliar en imperfeito do conjuntivo, 3.ª del plural', ancla: 'tínhamos mudado o plano todo' },
   { p: 'b6-se-irreal-passado', pasada: 1, lema: 'ter', t: 'imperfSubj', per: 'tu',
     s: 'Se tu ___ (ter) ficado mais um dia, conhecias a minha irmã.', pista: 'auxiliar en imperfeito do conjuntivo, 2.ª persona', ancla: 'conhecias a minha irmã' },
-  { p: 'b6-se-irreal-passado', pasada: 1, lema: 'ter', t: 'imperfSubj', per: 'ela',
+  { p: 'b6-se-irreal-passado', pasada: 1, lema: 'ter', t: 'imperfSubj', per: 'ele',
     s: 'Se ela ___ (ter) estudado mais, tinha passado no exame.', pista: 'auxiliar en imperfeito do conjuntivo, 3.ª persona', ancla: 'tinha passado no exame' },
-  { p: 'b6-se-irreal-passado', pasada: 1, lema: 'ter', t: 'imperfSubj', per: 'vocês',
+  { p: 'b6-se-irreal-passado', pasada: 1, lema: 'ter', t: 'imperfSubj', per: 'eles',
     s: 'Se vocês ___ (ter) dito alguma coisa, eu tinha ajudado.', pista: 'auxiliar en imperfeito do conjuntivo, 3.ª del plural', ancla: 'eu tinha ajudado' },
 
   // ══ b3-pron-indirecto (4) — el clítico de OI. Declarados: aquí no hay
