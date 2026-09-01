@@ -557,3 +557,34 @@ sospechosos de ser inresolubles**, y de una muestra de 20 dictaminada a
 mano, **nueve lo son (45 %)** — el freno muerde. Es el gemelo del
 multi-hueco: aquél cobraba aciertos de más, éste cobra **fallos** de más.
 Repararlos es ahora una línea por ítem.
+
+
+---
+
+## E2#15 (2026-09-05) — dos decisiones de Edu, y la primera sesión que publica de verdad
+
+**1 · El piso baja de 12 a 8 ítems por punto (C2: 6).** El 12 se eligió a
+ojo hace tres sesiones porque era redondo; con FSRS repitiendo, ocho
+ítems variados por punto sobran, y en C2 lo que de verdad enseña es leer
+—para eso está la Biblioteca—. **Sólo ese cambio: déficit 1.615 → 862.**
+
+**2 · Un solo formato y revisión por muestreo.** Se produce en **cloze
+con pista derivado**, y la doble revisión adversarial ítem por ítem se
+sustituye por **muestreo del 20 % con el freno de siempre**. Es lo que
+convertía 24 ítems en una sesión entera.
+
+**3 · MORATORIA sobre los juicios de gramaticalidad.** Cuatro sesiones
+seguidas murieron ahí y el formato cubre 41 de 213 puntos. Los lotes 11 y
+13 quedan en el banco con sus descartes escritos; se retoman cuando haya
+holgura y toda la cicatriz acumulada juegue a favor.
+
+**Resultado: 100 ítems publicados y 14 puntos cerrados**, déficit
+**862 → 762** con residuo 0. Ritmo medido: **100 por sesión**, o sea unas
+ocho sesiones para lo que queda, no cuatro meses.
+
+**Y el muestreo se ganó su sitio**: las tres muestras encontraron
+**clases, no instancias** — un artificio de redacción repetido en 22
+ítems (el sujeto pospuesto), un bug del conjugador que afectaba a todos
+los verbos en -car/-gar/-çar, y un conector fuera de su marco. Como el
+freno mordió las tres veces, los 100 acabaron revisados a mano igual;
+pero lo que la revisión encontró fueron **causas**, y eso sí escala.
