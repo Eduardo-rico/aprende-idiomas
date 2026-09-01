@@ -830,7 +830,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b3-pron-preposicionado",
     "type": "translation",
     "data": {
       "source": "Se ele nos disser a verdade, eu lhe acredito.",
@@ -1742,7 +1743,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b3-pron-preposicionado",
     "type": "flashcard",
     "data": {
       "front": "¿Cuál es la diferencia entre 'te' (español) y 'te' (portugués)?",
@@ -2711,7 +2713,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b3-pron-preposicionado",
     "type": "translation",
     "data": {
       "source": "A namorada está a pensar em ti presentemente.",
@@ -10495,6 +10498,151 @@
         }
       ],
       "hintEs": "a nosotros — clítico de complemento indirecto, enclítico"
+    }
+  },
+  {
+    "id": "cl27b-028",
+    "blockId": 3,
+    "lessonId": "b3-l1-presente-regular",
+    "difficulty": 2,
+    "concepts": [
+      "b3-pron-preposicionado"
+    ],
+    "tags": [
+      "e2-27b",
+      "cloze-con-pista"
+    ],
+    "contentHash": "918e1db8ca4cff6c1d1e2d93132022c4f13f177c067f4dd23f33b7d4cec5c412",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-27B: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Este presente é para ___, não para o teu irmão.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "mim",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "a mí — la forma que va detrás de preposición, que no es «eu»"
+    }
+  },
+  {
+    "id": "cl27b-029",
+    "blockId": 3,
+    "lessonId": "b3-l1-presente-regular",
+    "difficulty": 2,
+    "concepts": [
+      "b3-pron-preposicionado"
+    ],
+    "tags": [
+      "e2-27b",
+      "cloze-con-pista"
+    ],
+    "contentHash": "cf53ccee073d5efe1e364cc41719a9ef9eacb1802b69044154a213f55c121cda",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-27B: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Queres vir ___ ao cinema logo à noite?",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "comigo",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "conmigo — «com» + el pronombre, fundidos en una sola palabra"
+    }
+  },
+  {
+    "id": "cl27b-030",
+    "blockId": 3,
+    "lessonId": "b3-l1-presente-regular",
+    "difficulty": 2,
+    "concepts": [
+      "b3-pron-preposicionado"
+    ],
+    "tags": [
+      "e2-27b",
+      "cloze-con-pista"
+    ],
+    "contentHash": "14224a17c325d58f646f43f91164c4a4bb6a4660cf5b17556d459288d434e01c",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-27B: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Ele falou de ___ durante todo o jantar.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "ti",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "la forma preposicional de «tu», la que va detrás de «de», «para» o «sem»"
+    }
+  },
+  {
+    "id": "cl27b-031",
+    "blockId": 3,
+    "lessonId": "b3-l1-presente-regular",
+    "difficulty": 2,
+    "concepts": [
+      "b3-pron-preposicionado"
+    ],
+    "tags": [
+      "e2-27b",
+      "cloze-con-pista"
+    ],
+    "contentHash": "17739fbcf170809dc841101e59d2202f7c1e67788225acff69d45a8257c77830",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-27B: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Vamos ___ à praia, se ainda houver lugar no carro.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "convosco",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "con vosotros — «com» + el pronombre, en una sola palabra"
+    }
+  },
+  {
+    "id": "cl27b-032",
+    "blockId": 3,
+    "lessonId": "b3-l1-presente-regular",
+    "difficulty": 2,
+    "concepts": [
+      "b3-pron-preposicionado"
+    ],
+    "tags": [
+      "e2-27b",
+      "cloze-con-pista"
+    ],
+    "contentHash": "b5439523ecc671416d58414e7ee0d51fe52692b54c6545557c10958b45ca3bc7",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Cloze con pista E2-27B: respuesta declarada + revisión completa del lote a mano",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Ela disse que contava ___ para a mudança.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "contigo",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "«com» + la forma preposicional de «tu», fundidos en una sola palabra"
     }
   }
 ]

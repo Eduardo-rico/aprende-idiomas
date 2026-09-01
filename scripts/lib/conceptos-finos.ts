@@ -665,10 +665,31 @@ export function conPadreCubierto(
   //
   // Un padre cuyos sub-puntos están TODOS vacíos sigue deficitario, que es
   // lo correcto: ahí el área no se enseña por ninguna vía.
+  // Excepción declarada: un padre cuya partición NO es exhaustiva enseña
+  // algo que ningún hijo recoge, así que su déficit propio es real y
+  // heredar lo borraría. Se comprobó leyendo los huérfanos de los 26
+  // afectados —casi todos son ítems mal etiquetados o fallos del regex, no
+  // contenido del padre— y los que sí lo son están en
+  // `docs/plans/padres-con-huerfanos.json` con lo que enseñan de propio.
+  const conHuerfanos = padresConHuerfanos();
   const total = (p: (typeof PARTICIONES)[number]) =>
     (cuenta.get(p.padre) ?? 0) + p.subs.reduce((a, s) => a + (cuenta.get(s.id) ?? 0), 0);
   const cubiertos = new Set(
-    PARTICIONES.filter((p) => padreCubierto(p.padre, cuenta, piso) || total(p) >= piso(p.padre)).map((p) => p.padre),
+    PARTICIONES.filter((p) =>
+      padreCubierto(p.padre, cuenta, piso) ||
+      (!conHuerfanos.has(p.padre) && total(p) >= piso(p.padre)),
+    ).map((p) => p.padre),
   );
   return (id: string) => (cubiertos.has(id) ? 0 : piso(id));
+}
+
+/** Padres cuya partición no es exhaustiva y por eso NO heredan la
+ *  cobertura de sus sub-puntos. Viven en un JSON con lo que enseñan de
+ *  propio, por el mismo motivo que el piso cero: una excepción a una regla
+ *  de conteo tiene que ser visible y auditable, no un `if` en el código. */
+export function padresConHuerfanos(): Set<string> {
+  const f = path.join(process.cwd(), 'docs/plans/padres-con-huerfanos.json');
+  if (!fs.existsSync(f)) return new Set();
+  const d = JSON.parse(fs.readFileSync(f, 'utf8')) as Record<string, unknown>;
+  return new Set(Object.keys(d).filter((k) => !k.startsWith('_')));
 }

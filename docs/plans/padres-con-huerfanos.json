@@ -1,0 +1,11 @@
+{
+  "_": "Puntos PADRE cuya partición NO es exhaustiva: enseñan algo que ningún sub-punto recoge, así que su déficit propio es real y NO heredan la cobertura de sus hijos. Condición puesta por el par al aprobar la herencia en E2#27, y comprobada leyendo los ítems huérfanos de los 26 padres afectados: la inmensa mayoría de esos huérfanos son ítems MAL ETIQUETADOS (vocabulario bajo un punto de gramática) o fallos del regex de la partición, no contenido del padre. Éstos son los que sí lo son.",
+  "b2-artigos": {
+    "huerfano": "el artículo INDEFINIDO (um, uma, uns, umas). Los cinco sub-puntos cubren las contracciones y el artículo con posesivo y con nombre propio, todos definidos: nada recoge «uns filhos» ni el inventario de indefinidos.",
+    "que_hacer": "o se declara un sub-punto de indefinidos, o el padre conserva su déficit. Mientras tanto, lo conserva."
+  },
+  "b1-acentos": {
+    "huerfano": "el contraste PT-PT / PT-BR de los acentos gráficos como sistema —dónde uno pone agudo y el otro circunflexo—, que no es ninguno de los cuatro signos por separado.",
+    "que_hacer": "es contenido de nivel de padre por naturaleza: la comparación es entre los sub-puntos, no dentro de uno."
+  }
+}
