@@ -1872,5 +1872,333 @@
       ],
       "modelAnswer": "Peço que verifiquem hoje os acessos: houve um descuido de configuração e já produziu efeitos. Digam-me até ao fim do dia o que encontraram."
     }
+  },
+  {
+    "id": "b2c2-exp-l17-11",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-humor-jogo-palavras"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "cd4720e978d52a9e70c19395d4e10e5b780ce41d4d2635a9fc680b2a2d2366b8",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "— O meu marido é um santo. — Coitada, também tenho um em casa que não faz nada.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "un amigo colombiano que no le ve la gracia",
+      "instructionsEs": "Explícale dónde está el chiste: qué dos lecturas tiene la palabra y cómo la segunda mujer aprovecha una para responder a la otra.",
+      "wordRange": {
+        "min": 50,
+        "max": 110
+      },
+      "rubric": [
+        "¿Dice que «santo» significa a la vez hombre bondadoso e imagen de yeso?",
+        "¿Dice que la segunda mujer contesta a la lectura literal?",
+        "¿Dice que el chiste está en pasar de una lectura a la otra?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "La palabra tiene dos lecturas: un hombre bondadoso y una figura de yeso de las que hay en las iglesias. La primera mujer usa la primera; la segunda le contesta agarrándose a la otra, y de ahí sale que en su casa también hay uno y que no hace nada — que es lo que hacen las figuras. El salto de un sentido al otro es todo el chiste, y por eso no sobrevive traducido si la palabra elegida no tiene las dos lecturas."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-12",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-humor-jogo-palavras"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "718b668159d4c9519c81c367cd24154838be104202143fc027569514d1fb45ba",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Ao balcão: — Um copo de água, se faz favor. — Com gás? — Não, com pressa.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "una amiga que tradujo el diálogo y le quedó sin gracia",
+      "instructionsEs": "Explícale qué estructura hace el chiste y por qué su traducción lo pierde.",
+      "wordRange": {
+        "min": 50,
+        "max": 115
+      },
+      "rubric": [
+        "¿Dice que el camarero pregunta por el tipo de agua?",
+        "¿Dice que el cliente responde a la preposición y no a la pregunta?",
+        "¿Dice que el chiste depende de que las dos respuestas empiecen igual?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "El camarero pregunta qué tipo de agua quiere, y la respuesta esperada es sí o no. El cliente, en cambio, se agarra a la preposición: mantiene el «com» y le cuelga otra cosa, de modo que deja de hablar del agua y pasa a hablar de sí mismo. El chiste vive de que las dos respuestas empiecen exactamente igual, así que sólo funciona en una lengua donde esa preposición sirva para las dos cosas — si al traducir cambias una de las dos, se cae."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-13",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-humor-jogo-palavras"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "f02e2f0e734ce24e10a1cd3f31f509260fafd04b77c09a8cb6e62e728c486ca0",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "A professora perguntou o que era um paradoxo. O aluno respondeu: dois médicos.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "explain_concept",
+      "audience": "uma colega espanhola que não percebeu a resposta do aluno",
+      "instructionsEs": "Explica-lhe em português como o aluno partiu a palavra e porque é que a piada não passa para espanhol.",
+      "wordRange": {
+        "min": 50,
+        "max": 115
+      },
+      "rubric": [
+        "¿Dice que o aluno partiu a palavra em duas?",
+        "¿Dice que a segunda parte soa como a palavra que designa quem cura?",
+        "¿Dice que em espanhol a palavra não se parte da mesma maneira?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "O aluno não respondeu à pergunta: partiu a palavra ao meio e leu cada metade como se fosse outra coisa. A primeira metade dá a ideia de par, de dois, e a segunda soa como a palavra que designa quem cura. Juntando as duas leituras saem os dois médicos. Em espanhol a palavra existe, mas não se deixa partir assim, e por isso a piada não passa — teria de se procurar outra que se partisse do mesmo modo."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-14",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-humor-jogo-palavras"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "8f10cffd8fc0ef61293fd6bd4c6c4c59e67a79222d2e62a99ef01ac3a552b6dd",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Reclamação no livro amarelo: «O empregado foi impecável. O peixe também tinha sido, em vida.»",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "un lector español que leyó la frase como un elogio doble",
+      "instructionsEs": "Explícale qué hace el «tinha sido» y contra qué va la queja.",
+      "wordRange": {
+        "min": 50,
+        "max": 115
+      },
+      "rubric": [
+        "¿Dice que la segunda frase es una queja, no un elogio?",
+        "¿Dice que el pluscuamperfecto sitúa la calidad en el pasado?",
+        "¿Dice que la queja va contra la frescura del pescado, no contra el camarero?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Sólo la primera es un elogio. En la segunda, el tiempo verbal hace todo el trabajo: al decir que el pescado también lo había sido, y añadir «en vida», el cliente coloca esa cualidad en un pasado que ya terminó. Es decir, que llegó a la mesa en un estado que no invita a hablar de frescura. La queja va contra la cocina y no contra el camarero, a quien de paso deja bien parado — que es lo que la vuelve elegante."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-15",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-ler-posicao-social"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "ae283286eb63ca25f6c1d9a31e9741e08442bbef85855c5f4de21861ac69a426",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "— O senhor doutor deseja mais alguma coisa? — Não, obrigado, minha senhora. Traga só a conta, se não se importa.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "un estudiante que cree que los dos se tratan con la misma cortesía",
+      "instructionsEs": "Explícale qué dice cada tratamiento sobre quién es cada uno y por qué no es simétrico.",
+      "wordRange": {
+        "min": 50,
+        "max": 120
+      },
+      "rubric": [
+        "¿Dice que «senhor doutor» marca respeto hacia arriba?",
+        "¿Dice que «minha senhora» es cortés pero no reconoce título?",
+        "¿Dice que la relación es asimétrica pese a ser cordial?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Los dos son corteses, pero no están al mismo nivel. Ella le da «senhor doutor», que en Portugal se usa con quien tiene estudios superiores y funciona como reconocimiento de posición, no sólo como educación. Él responde con «minha senhora», que es amable y no le atribuye ningún título ni oficio. Ahí está la asimetría: uno recibe un tratamiento que sitúa, el otro recibe uno que sólo respeta. El «se não se importa» suaviza la orden, pero no iguala nada."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-16",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-ler-posicao-social"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "fe3cd6618c7979e383ac367782f3ea66fe1ba23f2619cc31ac40fd7dca304db2",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "— Ó menina, isso é para levar? — Se faz favor, trate-me por você ou pelo meu nome.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "una lectora que cree que la segunda persona se enfadó sin motivo",
+      "instructionsEs": "Explícale qué hace el «menina» aquí y por qué la respuesta no es una exageración.",
+      "wordRange": {
+        "min": 50,
+        "max": 120
+      },
+      "rubric": [
+        "¿Dice que «menina» aplicado a una adulta la coloca en posición inferior?",
+        "¿Dice que se usa sobre todo hacia mujeres jóvenes en el trabajo?",
+        "¿Dice que pedir otro tratamiento es reclamar posición, no enfadarse?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "No es una exageración: es una corrección precisa. Llamar «menina» a una mujer adulta la coloca en una posición inferior, y en Portugal eso se oye sobre todo dirigido a empleadas jóvenes en tiendas y oficinas. Quien lo dice puede no pretender ofender, pero el tratamiento sitúa igual. Al pedir otro, ella no está molesta por la forma sino reclamando el lugar que le corresponde en la conversación — y lo hace con la fórmula más cortés que existe."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-17",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-ler-posicao-social"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "642abed1a19fc71bf7c458aaf52e576574b3aa44339e8cc4f3ded4aca76d9eaf",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "— Ele disse que «havemos de nos encontrar», e eu fiquei sem perceber se era um convite.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "explain_concept",
+      "audience": "um colega que quer saber se deve marcar o encontro ou esperar",
+      "instructionsEs": "Explica-lhe em português o que essa fórmula diz sobre quem a usa e se é ou não um convite.",
+      "wordRange": {
+        "min": 50,
+        "max": 110
+      },
+      "rubric": [
+        "¿Dice que a fórmula é cordial mas não compromete?",
+        "¿Dice que pertence a um registo cuidado, de gente que evita recusar?",
+        "¿Dice que não se deve tratar como convite firme?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Não marques nada com base nisso. A fórmula é cordial e serve precisamente para não comprometer: diz que seria bom e não diz quando. Pertence a um registo cuidado, o de quem prefere deixar a porta encostada a fechá-la na cara de alguém — em vez de recusar, adia sem data. Se ele quisesse mesmo encontrar-se contigo, teria proposto um dia. Trata aquilo como uma amabilidade e não como um convite."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-18",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 3,
+    "concepts": [
+      "b12-ler-posicao-social"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "86af47bd14650abe3e5fd4afa764cb272f063d9db707ff54249a6f0e3dbdf96c",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "— A gente vai lá amanhã. — Nós iremos amanhã, se o senhor não vir inconveniente.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "un estudiante que cree que las dos frases dicen lo mismo con otras palabras",
+      "instructionsEs": "Explícale qué distingue a quien habla en cada una, sin dar a entender que una sea incorrecta.",
+      "wordRange": {
+        "min": 55,
+        "max": 120
+      },
+      "rubric": [
+        "¿Dice que las dos son portugués correcto?",
+        "¿Dice que «a gente» pertenece al habla corriente y «nós» al registro cuidado?",
+        "¿Dice que el futuro y la fórmula de cortesía sitúan al segundo hablante?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Ninguna de las dos está mal: las dos son portugués correcto y las dicen personas instruidas. Lo que cambia es dónde se coloca cada hablante. «A gente» con verbo en singular es el habla corriente, la de todos los días; «nós» con futuro sintético pertenece al registro cuidado y suena a escrito incluso dicho en voz alta. Y la fórmula final, que pide permiso al interlocutor tratándolo de usted, acaba de situar a quien habla: alguien que se dirige hacia arriba y lo marca."
+    }
   }
 ]

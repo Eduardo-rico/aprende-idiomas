@@ -332,11 +332,11 @@ export function rubricaDe(x: ItemMed): string[] {
   return r;
 }
 
-const palabras = (s: string) => s.trim().split(/\s+/).filter(Boolean);
-const norm = (s: string) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^\p{L}\p{N} ]/gu, ' ').replace(/\s+/g, ' ').trim();
-const contiene = (texto: string, aguja: string) => norm(texto).includes(norm(aguja));
-const literal = (d: string | string[]) => (Array.isArray(d) ? d[0]! : d);
-const acepta = (d: string | string[]) => (Array.isArray(d) ? d : [d]);
+export const palabras = (s: string) => s.trim().split(/\s+/).filter(Boolean);
+export const norm = (s: string) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^\p{L}\p{N} ]/gu, ' ').replace(/\s+/g, ' ').trim();
+export const contiene = (texto: string, aguja: string) => norm(texto).includes(norm(aguja));
+export const literal = (d: string | string[]) => (Array.isArray(d) ? d[0]! : d);
+export const acepta = (d: string | string[]) => (Array.isArray(d) ? d : [d]);
 
 /** n-gramas de 7 palabras compartidos entre modelo y fuente: la casilla
  *  verificable por script, que «vale por tres de juicio». */

@@ -18,13 +18,23 @@ import { rubricaDe, verificar, type ItemMed } from './lotes/lote12-mediacion';
 import { ITEMS as L14 } from './lotes/lote14-mediacion';
 import { ITEMS as L15 } from './lotes/lote15-mediacion';
 import { ITEMS as L16 } from './lotes/lote16-mediacion';
+import { rubricaDe as rubricaExplica, verificar as verificarExplica, type ItemExplica } from './lib/explicar-mediacion';
+import { ITEMS as L17 } from './lotes/lote17-explicar';
 
 const LOTES: Record<string, ItemMed[]> = { '14': L14, '15': L15, '16': L16 };
+// La familia EXPLICAR tiene otra forma y otros gates. Se publica por la
+// misma puerta —el orden del contrato es el mismo, validar todo antes de
+// escribir nada— pero no se le fuerza la plantilla de registro.
+const LOTES_EXPLICA: Record<string, ItemExplica[]> = { '17': L17 };
 
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
 const lote = arg('--lote') ?? '';
 const ITEMS = LOTES[lote];
-if (!ITEMS) { console.error(`Usa --lote con uno de: ${Object.keys(LOTES).join(', ')}`); process.exit(2); }
+const EXPLICA = LOTES_EXPLICA[lote];
+if (!ITEMS && !EXPLICA) {
+  console.error(`Usa --lote con uno de: ${[...Object.keys(LOTES), ...Object.keys(LOTES_EXPLICA)].join(', ')}`);
+  process.exit(2);
+}
 const write = process.argv.includes('--write');
 
 // El `address` es un ENUM del esquema, no texto libre. Se valida aquí
@@ -34,7 +44,7 @@ const write = process.argv.includes('--write');
 const ADDRESS_VALIDOS = new Set(['tu', 'terceira_sem_pronome', 'nome_cargo', 'o_senhor', 'V_Exa', 'voce_BR']);
 
 const CONCEPTO = new Map(ALL_CONCEPTS.map((c) => [c.id, c]));
-const problemas: string[] = [...verificar(ITEMS)];
+const problemas: string[] = EXPLICA ? [...verificarExplica(EXPLICA)] : [...verificar(ITEMS!)];
 const porDefecto: string[] = [];
 
 // Virginidad barata y la que importa: una fuente idéntica a una ya
@@ -48,7 +58,54 @@ for (const f of fs.readdirSync(BLOCKS_DIR).filter((x) => /^b\d+\.json$/.test(x))
 
 const porBloque = new Map<number, unknown[]>();
 const usados = new Set<string>();
-for (const x of ITEMS) {
+
+const leccionDe = (concepto: string, id: string) => {
+  const c = CONCEPTO.get(concepto);
+  if (!c) { problemas.push(`${id}: el punto «${concepto}» no existe en ALL_CONCEPTS`); return null; }
+  const bloque = BLOCKS.find((b) => b.id === (c as any).blockId);
+  if (!bloque) { problemas.push(`${id}: el bloque ${(c as any).blockId} no existe`); return null; }
+  const padres = new Set<string>([concepto, ...(((c as any).prereqs ?? []) as string[])]);
+  const leccion = bloque.lessons.find((l) => (l.conceptIds ?? []).some((k: string) => padres.has(k))) ?? bloque.lessons[0];
+  if (!leccion) { problemas.push(`${id}: el bloque ${bloque.id} no tiene lecciones`); return null; }
+  if (!(leccion.conceptIds ?? []).some((k: string) => padres.has(k))) porDefecto.push(`${id} (${concepto}) → ${leccion.id}`);
+  return { bloque, leccion };
+};
+
+if (EXPLICA) {
+  for (const x of EXPLICA) {
+    const d = leccionDe(x.concepto, x.id);
+    if (!d) continue;
+    const clave = x.sourceText.toLowerCase().replace(/\s+/g, ' ').trim();
+    if (yaEnCorpus.has(clave)) problemas.push(`${x.id}: la fuente ya está publicada en ${yaEnCorpus.get(clave)}`);
+    usados.add(clave);
+    const ex = {
+      id: `b2c2-exp-l${lote}-${x.id.split('-').pop()}`,
+      blockId: d.bloque.id, lessonId: d.leccion.id, difficulty: 3,
+      concepts: [x.concepto], tags: [`lote${lote}`, 'mediacao', 'explicar'],
+      contentHash: crypto.createHash('sha256').update(`${x.sourceText}|${x.modelo}`).digest('hex'),
+      variantStatus: 'unchecked',
+      variantVerificacion: `Mediación EXPLICAR lote ${lote} (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano`,
+      register: x.register,
+      ...(x.address ? { address: x.address } : {}),
+      type: 'mediation',
+      data: {
+        sourceText: x.sourceText,
+        sourceLang: 'pt',
+        targetLang: x.lenguaExplicacion,
+        mediationType: 'explain_concept',
+        audience: x.audience,
+        instructionsEs: x.instruccion,
+        wordRange: { min: x.wordRange[0], max: x.wordRange[1] },
+        rubric: rubricaExplica(x),
+        modelAnswer: x.modelo,
+      },
+    };
+    if (!porBloque.has(d.bloque.id)) porBloque.set(d.bloque.id, []);
+    porBloque.get(d.bloque.id)!.push(ex);
+  }
+}
+
+for (const x of EXPLICA ? [] : ITEMS!) {
   if (x.address && !ADDRESS_VALIDOS.has(x.address))
     problemas.push(`${x.id}: address «${x.address}» no está en el enum del esquema (${[...ADDRESS_VALIDOS].join(' | ')})`);
   const c = CONCEPTO.get(x.concepto);
@@ -96,7 +153,7 @@ for (const x of ITEMS) {
   porBloque.get(bloque.id)!.push(ex);
 }
 
-console.log(`# Publicar mediación lote ${lote} — ${ITEMS.length} ítems\n`);
+console.log(`# Publicar mediación lote ${lote} — ${(EXPLICA ?? ITEMS!).length} ítems${EXPLICA ? ' (familia EXPLICAR)' : ''}\n`);
 for (const [b, xs] of [...porBloque].sort((a, c) => a[0] - c[0])) console.log(`- b${b}: ${xs.length}`);
 if (porDefecto.length) {
   console.log(`\n**${porDefecto.length} ítems caen en la lección por DEFECTO:**`);

@@ -3840,5 +3840,579 @@
       ],
       "modelAnswer": "Analisámos a sua reclamação com atenção. Lamentamos, mas não é possível atender o pedido apresentado. Damos assim por encerrado o processo, e agradecemos a sua compreensão."
     }
+  },
+  {
+    "id": "b2c2-exp-l17-01",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-ironia-understatement"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "8d3a51435347d71aff08aeddb4e4cd1e4f9718648fa3168a64c0f019a464a834",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "— Então, gostaste do jantar? — Olha, não estava mau.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "un amigo mexicano que se quedó preocupado, porque cree que la comida estuvo regular",
+      "instructionsEs": "Explícale por qué su lectura es la contraria de la que se dijo, y qué habría dicho un portugués si la cena hubiera estado regular de verdad.",
+      "wordRange": {
+        "min": 45,
+        "max": 100
+      },
+      "rubric": [
+        "¿Dice que «não estava mau» es un elogio, no una queja?",
+        "¿Dice que el portugués atenúa el elogio en vez de exagerarlo?",
+        "¿Dice que para decir que estuvo mal se diría otra cosa?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Cuidado, que te lo tomaste al revés: «não estava mau» es un elogio y bastante claro. El portugués rebaja el elogio en lugar de subirlo, así que decir que algo «no estaba mal» equivale a decir que estaba muy bueno. Si la cena hubiera estado regular de verdad, tu amigo no habría dicho eso: habría cambiado de tema o habría hablado del sitio y no de la comida."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-02",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-ironia-understatement"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "edc377d82a2d0ee3c3e725f51fa68aaabb93c789641ab1e5069f108a83230d77",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Estivemos três horas à espera. Enfim, uma tarde muito bem passada.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "una compañera que está traduciendo el texto y lo va a poner en positivo",
+      "instructionsEs": "Explícale qué hace el «enfim» y por qué traducir la frase literalmente destruiría el sentido.",
+      "wordRange": {
+        "min": 45,
+        "max": 100
+      },
+      "rubric": [
+        "¿Dice que la frase es irónica y significa lo contrario?",
+        "¿Dice que el «enfim» es la señal que marca la ironía?",
+        "¿Dice que traducirla en positivo perdería el sentido?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "No la pongas en positivo: la frase dice justo lo contrario de lo que parece. Después de tres horas de espera, llamar a eso una tarde bien aprovechada es sarcasmo, y el «enfim» es la señal que lo marca — funciona como un «en fin» resignado que avisa de que viene la puñalada. Si lo traduces literal, el lector entiende que lo pasaron bien."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-03",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-ironia-understatement"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "d9658e5cc5fd1d349d1518d69c3e4c62ece8db58b13d5859f64722d8150931f7",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "— O relatório está pronto? — Está quase, quase. Falta só passá-lo a limpo, e escrevê-lo.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "explain_concept",
+      "audience": "um colega brasileiro que ficou tranquilo, porque entendeu que falta pouco",
+      "instructionsEs": "Explica-lhe em português onde está a piada e o que a frase realmente informa sobre o estado do relatório.",
+      "wordRange": {
+        "min": 40,
+        "max": 95
+      },
+      "rubric": [
+        "¿Dice que o relatório não está começado?",
+        "¿Dice que a ordem das duas tarefas é o que faz a piada?",
+        "¿Dice que quem responde está a admitir isso sem o dizer?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Não te fiques pelo «está quase». Repara na ordem: primeiro passá-lo a limpo e só depois escrevê-lo — ora, se ainda falta escrever, não há nada para passar a limpo. A piada está aí, e serve para confessar sem confessar: o relatório nem começou. Quem responde sabe-o e prefere dizê-lo a rir."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-04",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-ironia-understatement"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "9585a7ad3d87bab36fe5da8f2cc886a93673c2a786ad100943c0a2d9b7d97d4e",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "O senhor engenheiro, com a sua reconhecida paciência, esperou vinte minutos antes de desligar o telefone à cliente.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "un lector español que entendió que el ingeniero se portó bien",
+      "instructionsEs": "Explícale qué hace el elogio dentro de esa frase y contra quién va.",
+      "wordRange": {
+        "min": 45,
+        "max": 100
+      },
+      "rubric": [
+        "¿Dice que el elogio es irónico y va contra el ingeniero?",
+        "¿Dice que colgar el teléfono contradice la paciencia elogiada?",
+        "¿Dice que la ironía nace del choque entre el elogio y el hecho?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "El elogio no es un elogio: el narrador se está riendo del ingeniero. Fíjate en el choque — lo alaba por su reconocida paciencia y a renglón seguido cuenta que le colgó el teléfono a una clienta. Una cosa desmiente a la otra, y ahí está la crítica: cuanto más solemne suena la alabanza, más dura es. En español haría falta marcarlo, porque leído en serio parece un cumplido."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-05",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-ironia-understatement"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "f93483c54d44ff7e1470dc76aef025ab339a3b669cb7023c606843f1b2f30da1",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "— Correu bem a reunião? — Correu. Não me mandaram embora.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "explain_concept",
+      "audience": "uma colega que quer saber se pode contar com a aprovação do projeto",
+      "instructionsEs": "Explica-lhe em português o que a resposta diz de verdade sobre a reunião, e porquê.",
+      "wordRange": {
+        "min": 40,
+        "max": 90
+      },
+      "rubric": [
+        "¿Dice que a reunião correu mal?",
+        "¿Dice que baixar a fasquia ao mínimo é a forma de o dizer?",
+        "¿Dice que não há aprovação nenhuma?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Não contes com a aprovação. Repara no que ele dá como bom: não ter sido posto na rua. Quando alguém baixa a fasquia até esse ponto para dizer que correu bem, está a dizer que correu mal e a poupar-te o relatório. Se houvesse aprovação, seria a primeira coisa que diria."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-06",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-ironia-understatement"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "70365ac93a9e4c78f802adf36f69e508258caa7941677a202283a3ce5580d947",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Foi uma obra rápida: só levou dois anos mais do que estava previsto.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "un periodista español que quiere citar la frase como dato",
+      "instructionsEs": "Explícale por qué no puede citarla como dato y qué información sí contiene.",
+      "wordRange": {
+        "min": 45,
+        "max": 100
+      },
+      "rubric": [
+        "¿Dice que la frase es irónica y no un dato neutro?",
+        "¿Dice que el «só» es la señal de la ironía?",
+        "¿Dice que el dato real es el retraso, no la rapidez?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "No la cites como si fuera una valoración: es una pulla. Llamar rápida a una obra y añadir a continuación que se pasó del plazo es lo contrario de un elogio, y el «só» —ese «sólo» minimizador— es la señal que lo marca. El único dato citable de ahí es el retraso; la rapidez es exactamente lo que el autor está negando."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-07",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-alusao-cultural"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "fbdaef534b4a83139e061d1657b47029822ddf3404dd014f365e33b4d93b0205",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Depois do 25 de Abril, a avó dela deixou de guardar o açúcar no fundo do armário.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "un lector mexicano que no sabe qué pasó ese día ni por qué guardaba azúcar",
+      "instructionsEs": "Explícale la alusión y qué dice el detalle del azúcar sobre la vida anterior.",
+      "wordRange": {
+        "min": 55,
+        "max": 120
+      },
+      "rubric": [
+        "¿Dice que el 25 de Abril de 1974 es la revolución que acabó con la dictadura?",
+        "¿Dice que antes había escasez y se escondían los alimentos?",
+        "¿Dice que el detalle del azúcar muestra el cambio sin nombrarlo?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "El 25 de Abril es el 25 de abril de 1974, el día en que un golpe militar sin apenas sangre acabó con casi cincuenta años de dictadura en Portugal. Cualquier lector portugués lo tiene incorporado, igual que tú tienes otras fechas. Y el azúcar no es un capricho: en aquellos años había escasez y la gente escondía lo que conseguía. Por eso el detalle vale por un párrafo entero — cuenta que la abuela dejó de tener miedo sin decir nunca la palabra miedo."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-08",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-alusao-cultural"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "f97cb9955bac246c8a744cab9077ead41d82ddf6587aecc63c90a6eb6a704031",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Cantava fado como quem paga uma dívida antiga, e ninguém no Bairro Alto lhe pedia bis.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "una lectora española que entendió que cantaba mal",
+      "instructionsEs": "Explícale la alusión al fado y por qué nadie pide bis, que no es lo que ella cree.",
+      "wordRange": {
+        "min": 50,
+        "max": 115
+      },
+      "rubric": [
+        "¿Dice que el fado no es un espectáculo que se aplauda a mitad?",
+        "¿Dice que no pedir bis es respeto, no rechazo?",
+        "¿Dice que el Bairro Alto es un barrio de Lisboa donde se canta fado?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "No cantaba mal: al revés. El fado se escucha en silencio y no se interrumpe — en las casas de fado hasta se apagan las luces y se calla el que habla. Que nadie le pidiera bis no es un desaire sino lo contrario, la señal de que se respetó lo que hizo. El Bairro Alto, además, es el barrio de Lisboa donde eso ocurre cada noche, así que la frase sitúa a la cantante entre quien sabe escuchar."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-09",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-alusao-cultural"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "ac062b4411f69e61bef39517fbf4901a65f37ab5af0a940ac2b4108ced233055",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "O tio voltou de Angola em setenta e cinco, com duas malas e sem uma palavra sobre o que lá deixou.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "un lector argentino que no sabe por qué volvió ni de dónde",
+      "instructionsEs": "Explícale qué ocurrió y por qué el silencio del tío es parte de lo que la frase cuenta.",
+      "wordRange": {
+        "min": 55,
+        "max": 120
+      },
+      "rubric": [
+        "¿Dice que Angola fue colonia portuguesa hasta su independencia?",
+        "¿Dice que en esos años volvieron a Portugal cientos de miles de personas?",
+        "¿Dice que el silencio es un rasgo reconocible de esa generación?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Angola fue colonia portuguesa hasta que se independizó, y en aquellos meses regresaron a Portugal cientos de miles de personas que habían nacido o vivido allí toda su vida. Se les llama retornados y llegaron casi sin nada, como el tío con sus dos maletas. El silencio tampoco es un rasgo suyo: es el de toda esa generación, que rehízo su vida sin contar lo que había perdido. La frase se apoya en eso y por eso no necesita explicarlo a un lector portugués."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-10",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-alusao-cultural"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "7d4c4f2cb0688786c7c68c6f4b3e6e371fa0cde0b2642a3cea4b96be8ec87004",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Explicou-lhe tudo com aquela paciência de quem já esteve do outro lado do balcão da troika.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "explain_concept",
+      "audience": "um colega brasileiro que não sabe o que foi a troika em Portugal",
+      "instructionsEs": "Explica-lhe em português a alusão e o que ela diz sobre a personagem.",
+      "wordRange": {
+        "min": 50,
+        "max": 110
+      },
+      "rubric": [
+        "¿Dice que a troika foi o resgate financeiro e a austeridade que se lhe seguiu?",
+        "¿Dice que «do outro lado do balcão» significa ter sofrido as medidas?",
+        "¿Dice que por isso a personagem tem paciência com quem passa por isso?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "A troika foi o conjunto de credores que entrou em Portugal com o resgate financeiro, e o nome ficou a designar os anos de austeridade que se lhe seguiram: cortes, desemprego, filas. Dizer que alguém esteve do outro lado do balcão é dizer que sofreu essas medidas em vez de as aplicar. É daí que vem a paciência: quem passou por aquilo reconhece quem está a passar agora."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-19",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-alusao-cultural"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "52c3d46d6118b8744311d42e6abcc5352f62babcee8947227cd2274b96528a54",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Leu-lhe o poema do menino da sua mãe e nenhum dos dois conseguiu acabar o jantar.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "un lector chileno que no entiende por qué un poema arruina una cena",
+      "instructionsEs": "Explícale de qué poema se trata, qué cuenta y por qué la alusión basta para producir ese efecto.",
+      "wordRange": {
+        "min": 55,
+        "max": 120
+      },
+      "rubric": [
+        "¿Dice que es un poema de Pessoa sobre un soldado muerto?",
+        "¿Dice que el poema está dicho desde la madre que no sabe que murió?",
+        "¿Dice que la alusión funciona porque el lector portugués lo tiene memorizado?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "El poema es de Fernando Pessoa y trata de un soldado muy joven que yace muerto en un llano, con la sangre marcándole el uniforme y, caída del bolsillo, la pitillera que le había dado su madre. El título lo llama el niño de su madre, y el peso del poema está ahí: en la casa donde lo esperan todavía. En Portugal se estudia en la escuela y muchos adultos lo saben de memoria, así que nombrarlo trae encima todo eso sin citar un verso — por eso a los dos se les quita el hambre."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-20",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-alusao-cultural"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "f8059a1f95f1f5226210036fe35e6bbff472de349f98bc09c8aea0772edcedcc",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "O pai fazia contas em escudos até morrer, e ninguém em casa se atrevia a corrigi-lo.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "una lectora joven que no sabe qué es un escudo ni por qué nadie le corregía",
+      "instructionsEs": "Explícale qué era el escudo y qué dice de ese hombre seguir contando así.",
+      "wordRange": {
+        "min": 50,
+        "max": 115
+      },
+      "rubric": [
+        "¿Dice que el escudo era la moneda portuguesa antes del euro?",
+        "¿Dice que mucha gente mayor siguió calculando en escudos durante años?",
+        "¿Dice que no corregirle es una forma de respeto, no de descuido?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "El escudo era la moneda portuguesa antes del euro, que entró en 2002. Mucha gente mayor siguió calculando en escudos durante años, sobre todo para las cosas grandes: una casa, un coche, un sueldo. Que nadie en casa le corrigiera no es descuido — es una forma de respeto muy reconocible, la de dejar a alguien vivir en su medida del mundo. La frase cuenta eso sin decirlo."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-21",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-alusao-cultural"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "3b4fb3e93c5ed6c8d54db8c166dd1ac594d70b0f73fa089ad2d49ca6892b3558",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Chamavam-lhe o engenheiro, embora nunca tivesse acabado o curso, e ele nunca desmentiu ninguém.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "explain_concept",
+      "audience": "um colega brasileiro que não percebe porque é que o tratamento importa tanto",
+      "instructionsEs": "Explica-lhe em português o que os títulos fazem em Portugal e o que o silêncio da personagem revela.",
+      "wordRange": {
+        "min": 55,
+        "max": 120
+      },
+      "rubric": [
+        "¿Dice que em Portugal os títulos académicos se usam como tratamento diário?",
+        "¿Dice que o título dá posição social e não só profissão?",
+        "¿Dice que não desmentir é aceitar essa posição sem a reclamar?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Em Portugal os títulos académicos usam-se como tratamento no dia a dia: chama-se doutor ou engenheiro a alguém em vez do nome, e isso ouve-se no café e ao balcão. O título não indica só a profissão — dá posição social, e quem o recebe fica situado acima de quem o dá. Por isso o silêncio dele diz tanto: ao não desmentir, está a aceitar essa posição sem a reclamar, que é a maneira mais cómoda de a manter."
+    }
+  },
+  {
+    "id": "b2c2-exp-l17-22",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-alusao-cultural"
+    ],
+    "tags": [
+      "lote17",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "6cca9aa0aa48aebb864f5e8c9e00e0defa475e3da2197b29b20b3cb36f86c297",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 17 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Voltaram da emigração com a casa feita na aldeia e ninguém para a habitar.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "un lector peruano que no ve qué tiene de particular esa casa",
+      "instructionsEs": "Explícale a qué emigración alude la frase y por qué esas casas están vacías.",
+      "wordRange": {
+        "min": 55,
+        "max": 120
+      },
+      "rubric": [
+        "¿Dice que entre los años sesenta y setenta emigraron cientos de miles de portugueses?",
+        "¿Dice que muchos construían una casa en el pueblo con lo ahorrado fuera?",
+        "¿Dice que los hijos ya no volvieron a vivir allí?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Alude a la emigración de los años sesenta y setenta, cuando cientos de miles de portugueses se fueron a Francia y a Alemania, muchos de ellos a pie y sin papeles. Casi todos construían una casa en el pueblo con lo ahorrado fuera, y esas casas se levantaron para una vuelta que se fue aplazando. Los hijos crecieron allá y ya no volvieron a vivir aquí. Por eso hay pueblos enteros de casas nuevas y cerradas, y la frase cuenta esa historia en una línea."
+    }
   }
 ]
