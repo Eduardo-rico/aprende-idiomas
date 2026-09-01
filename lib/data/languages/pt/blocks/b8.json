@@ -4502,22 +4502,22 @@
     "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
-      "sentence": "Dir-___-ia a verdade se pudesse.",
+      "sentence": "Ontem encontrei o João e ___ a verdade toda. (dizer + lhe)",
       "blanks": [
         {
           "position": 0,
-          "answer": "lhe",
+          "answer": "disse-lhe",
           "alternatives": []
         }
       ],
-      "hintEs": "a él/ella — el clítico va DENTRO del condicional, entre la raíz y la terminación"
+      "hintEs": "pretérito de «dizer» con el clítico DETRÁS y unido por guion: la ênclise, que es el orden por defecto"
     },
     "variantOverrides": {
       "pt-br": {
         "sentence": "Dir-___ (eu)-ia a verdade se pudesse."
       }
     },
-    "variantVerificacion": "calibración del triaje E2#29: corregido — el molde estaba roto: «Dir-___ (eu)-a a verdade» ponía un pronombre de sujeto como si fuera lema y dejaba una «-a» suelta que no es terminación de nada"
+    "variantVerificacion": "barrido «no mide su punto», E2#29: corregido — el ítem exhibía una MESÓCLISIS —«Dir-lhe-ia»— en el punto de la ênclise, y encima el hueco era el clítico y no su colocación. Reescrito como ênclise de verdad, con el hueco en la forma entera"
   },
   {
     "id": "a12c3597",

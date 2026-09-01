@@ -20,6 +20,7 @@ import path from 'node:path';
 import { BLOCKS, ALL_CONCEPTS } from '../lib/data/languages/pt/curriculum';
 import { BLOCKS_DIR } from './config';
 import { contarPuntos, pisoCero, conPisoCero, conPadreCubierto, servibleAlAlumno } from './lib/conceptos-finos';
+import { selladoDeVariante } from './lib/estado-item';
 
 const LECTURAS = path.join(process.cwd(), 'lib/data/languages/pt/lecturas');
 
@@ -56,26 +57,42 @@ const items = fs.readdirSync(BLOCKS_DIR).filter((x) => /^b\d+\.json$/.test(x))
   .flatMap((f) => JSON.parse(fs.readFileSync(path.join(BLOCKS_DIR, f), 'utf8')) as any[]);
 // `contarPuntos` descuenta la cuarentena: un punto «cubierto» con ocho
 // ítems que el alumno no ve no está cubierto.
-const { cuenta: n } = contarPuntos(items);
+// DOS CIFRAS, y las dos son ciertas porque responden a preguntas
+// distintas. Se imprimen las DOS con su nombre, porque cuando sólo se
+// imprimía la fácil el par se la dio a Edu sin la otra al lado:
+//
+//   · SERVIBLE — lo que el alumno puede ver hoy. Cuenta los 124 ítems que
+//     nadie ha dictaminado todavía. Es verdad HOY y deja de serlo en
+//     cuanto el trabajo avanza, igual que la cuarentena cuando contaba
+//     como cobertura.
+//   · SELLADO — lo que alguien ha mirado. Es la que gobierna la
+//     planificación, porque es la única que no puede empeorar sola.
+//
+// Y no se pasa de una a otra restando: `conPadreCubierto` depende de las
+// cuentas, así que cubrir un punto puede liberar el piso de su padre. Por
+// eso se calculan las dos enteras y no una como corrección de la otra.
+const medir = (xs: any[]) => {
+  const { cuenta } = contarPuntos(xs);
+  for (const c of ALL_CONCEPTS) if (!cuenta.has(c.id)) cuenta.set(c.id, 0);
+  const piso = conPadreCubierto(conPisoCero((id: string) => (id.startsWith('b12') ? 6 : 8), pisoCero()), cuenta);
+  const bajo = [...cuenta].filter(([id]) => cuenta.get(id)! < piso(id));
+  return { cuenta, bajo, falta: bajo.reduce((a, [id, hay]) => a + piso(id) - hay, 0) };
+};
 const servibles = items.filter(servibleAlAlumno);
-for (const c of ALL_CONCEPTS) if (!n.has(c.id)) n.set(c.id, 0);
-// El piso pasa por `conPisoCero`: el de un punto enterrado ES cero. Con
-// el piso crudo, este script decía 5 puntos bajo el piso mientras
-// `split-conceptos` decía 3 — dos cuentas de lo mismo que no coinciden es
-// exactamente el defecto que este gate existe para no repetir.
+const SERV = medir(items);          // `contarPuntos` ya descuenta la cuarentena
+const SELL = medir(items.filter(selladoDeVariante));
+const n = SERV.cuenta;
 const cero = pisoCero();
-// Mismo piso que `split-conceptos.ts`: cero para los enterrados y cero
-// para los padres cubiertos. Los dos BAJAN el piso; ninguno sube la
-// cuenta, para que ni la foto ni este informe cuenten ítems inexistentes.
-const piso = conPadreCubierto(conPisoCero((id: string) => (id.startsWith('b12') ? 6 : 8), cero), n);
-const bajoPiso = [...n].filter(([id]) => n.get(id)! < piso(id));
-const falta = bajoPiso.reduce((a, [id, hay]) => a + piso(id) - hay, 0);
+const sinSellar = servibles.length - items.filter(selladoDeVariante).length;
 
-L.push({ eje: 'Cobertura (piso 8, C2 6)', medido: `${n.size} puntos · ${servibles.length} ejercicios servibles de ${items.length} · ${bajoPiso.length} bajo el piso`,
-  meta: 'cero bajo el piso', pasa: bajoPiso.length === 0, comando: 'npx tsx scripts/split-conceptos.ts',
-  nota: `FALTA ${falta} unidades. Los ${cero.size} puntos de piso cero declarado NO cuentan, por decisión escrita en docs/plans/puntos-piso-cero.json. Los ${items.length - servibles.length} restantes están en cuarentena y no se sirven ni cuentan. Y ojo: el recuento de ejercicios no es la Σ por PUNTO de \`split-conceptos\`, donde un ejercicio puede enseñar varios.` });
+// El gate PASA por la estricta. Un ítem servible sin dictaminar es una
+// promesa, no cobertura: la lectura de los 60 midió 36 % de defectuosos
+// entre los que nadie había mirado.
+L.push({ eje: 'Cobertura (piso 8, C2 6)',
+  medido: `SELLADO: ${SELL.bajo.length} puntos bajo el piso · SERVIBLE HOY: ${SERV.bajo.length}`,
+  meta: 'cero bajo el piso (sellado)', pasa: SELL.bajo.length === 0, comando: 'npx tsx scripts/split-conceptos.ts',
+  nota: `**FALTA ${SELL.falta} contando SELLADO · ${SERV.falta} contando SERVIBLE HOY.** Las dos son ciertas y responden a preguntas distintas; la que gobierna la planificación es la de SELLADO, porque la otra cuenta ${sinSellar} ítems que nadie ha dictaminado y deja de ser verdad en cuanto se dictaminan. Medido: de los ítems que han pasado por dictamen manual, el dictamen declaró irreparable al **0,7 %** —la política es corregir, no cuarentenar—, así que la distancia entre las dos cifras se cierra casi entera LEYENDO, no escribiendo: \`cola-dictamen.ts\` dice cuántas unidades cubre cada ítem viejo. Los ${cero.size} puntos de piso cero declarado NO cuentan (docs/plans/puntos-piso-cero.json); los ${items.length - servibles.length} en cuarentena no se sirven ni cuentan. Y ojo: el recuento de ejercicios no es la Σ por PUNTO de \`split-conceptos\`, donde un ejercicio puede enseñar varios.` });
 
-// ── 3 · Mediación: TAREAS ────────────────────────────────────────────
 const tareas = servibles.filter((x) => x.type === 'mediation').length;
 L.push({ eje: 'Mediación (tareas)', medido: `${tareas}`, meta: '230', pasa: tareas >= 230,
   comando: 'npx tsx scripts/recuento-conceptos.ts' });

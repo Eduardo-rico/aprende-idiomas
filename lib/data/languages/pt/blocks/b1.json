@@ -1719,17 +1719,15 @@
     "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
-      "sentence": "Este filme é ___ — não gostei nada.",
+      "sentence": "O ___ deste filme é péssimo — não se ouve nada.",
       "blanks": [
         {
           "position": 0,
-          "answer": "mau",
-          "alternatives": [
-            "horrível",
-            "péssimo"
-          ]
+          "answer": "som",
+          "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "lo que se oye; su vocal va nasalizada por la «m» final"
     },
     "variantOverrides": {
       "pt-br": {
@@ -1742,7 +1740,7 @@
         ]
       }
     },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto no es la palabra: cualquier adjetivo negativo sirve"
+    "variantVerificacion": "barrido «no mide su punto», E2#29: corregido — CASO PROPIO Y CONFESADO: el sello que le puse hoy dice «el punto no es la palabra: cualquier adjetivo negativo sirve» — y el punto declarado son las vocales nasales. Cerré la pregunta de la determinación y no llegué a hacer la del punto"
   },
   {
     "id": "350526ca",
@@ -3742,17 +3740,18 @@
     "contentHash": "798ef7011c40cee6bacf6444e3960b009e8c08da478c5e7e0f621f77ec064f7c",
     "esContrast": "'Um' (masc.) y 'uma' (fem.) son indefinitos; /ũ/ nasal oral, no confundir.",
     "variantStatus": "neutral",
-    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — el paralelismo «um pão, um café e ___ laranja» fija el indefinido, y el género de «laranja» fija la forma",
+    "variantVerificacion": "barrido «no mide su punto», E2#29: corregido — el hueco caía en «uma» mientras el punto declarado es el plural nasal en «-ão». Movido al sustantivo",
     "type": "fill_blank",
     "data": {
-      "sentence": "Na mesa, há um pão, um café e ___ laranja.",
+      "sentence": "Na mesa, há dois ___, um café e uma laranja. (pão)",
       "blanks": [
         {
           "position": 0,
-          "answer": "uma",
+          "answer": "pães",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "plural de un nombre en «-ão» que lo hace en «-ães»"
     }
   },
   {

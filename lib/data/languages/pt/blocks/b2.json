@@ -3619,19 +3619,18 @@
     "contentHash": "88549f33394413e92e7defb5507d2fbc3db761c7c1ea02b76c00e97f0c9ae258",
     "esContrast": "Qualquer outra = 'cualquier otra' (elección indiferente)",
     "variantStatus": "neutral",
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — el marco «do que de ___ outra» lo fija",
+    "variantVerificacion": "barrido «no mide su punto», E2#29: corregido — el hueco caía en «qualquer» mientras la contracción demostrativa —el punto— venía dada en la frase. Intercambiados",
     "type": "fill_blank",
     "data": {
-      "sentence": "Gosto muito mais desta cidade do que de ___ outra.",
+      "sentence": "Gosto muito mais ___ cidade do que de qualquer outra. (de + esta)",
       "blanks": [
         {
-          "position": 6,
-          "answer": "qualquer",
-          "alternatives": [
-            "toda"
-          ]
+          "position": 0,
+          "answer": "desta",
+          "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "la preposición «de» fundida con el demostrativo de primer grado"
     }
   },
   {
@@ -5893,22 +5892,18 @@
     "contentHash": "b97d37c707bfc5eb3cdc998b35f6eb4ca3e6f2e103175acfe785519b71a18b55",
     "esContrast": "Os = Los (artículo definido masculino plural)",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)",
+    "variantVerificacion": "barrido «no mide su punto», E2#29: corregido — el hueco caía en «filhos» —con «filhos» repetido además entre las alternativas— mientras la contracción con «de», que es el punto, venía dada",
     "type": "fill_blank",
     "data": {
-      "sentence": "Os ___ da minha mulher são muito trabalhadores.",
+      "sentence": "Os filhos ___ minha mulher são muito trabalhadores. (de + a)",
       "blanks": [
         {
           "position": 0,
-          "answer": "filhos",
-          "alternatives": [
-            "filhos",
-            "irmãos",
-            "pais"
-          ]
+          "answer": "da",
+          "alternatives": []
         }
       ],
-      "hintEs": "los hijos"
+      "hintEs": "la preposición «de» fundida con el artículo femenino"
     }
   },
   {
@@ -7412,16 +7407,18 @@
     "contentHash": "cfa0de98014f869caaebe83b1b483ad52a809a47435d646d0b0c81dc6fac2212",
     "esContrast": "Plural '-ão' → '-ões': lição → lições.",
     "variantStatus": "neutral",
-    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — el lema y «As» fijan el plural",
+    "variantVerificacion": "barrido «no mide su punto», E2#29: corregido — la respuesta era «lições», un plural en «-ões», en el punto del plural en «-l». Medía el punto de al lado",
     "type": "fill_blank",
     "data": {
-      "sentence": "As ___ de hoje são difíceis. (lição)",
+      "sentence": "Os ___ de hoje trazem más notícias. (jornal)",
       "blanks": [
         {
           "position": 0,
-          "answer": "lições"
+          "answer": "jornais",
+          "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "plural de un nombre en «-l», que pierde la ele y hace «-is»"
     }
   },
   {
