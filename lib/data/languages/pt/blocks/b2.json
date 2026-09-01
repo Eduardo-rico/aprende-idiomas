@@ -878,6 +878,7 @@
     "contentHash": "2a43d82d50cd9dd59c70c962d7056b6e487a3e37c10c18edb889dd18937b5aaf",
     "esContrast": "Tener en portugués es 'ter', que se convierte en 'têm' con acento en la 3ª persona plural.",
     "variantStatus": "neutral",
+    "variantVerificacion": "calibración del triaje E2#29: corregido — con la respuesta puesta la frase salía «têm de uma reunião», agramatical: faltaba el infinitivo que «ter de» rige",
     "type": "fill_blank",
     "data": {
       "sentence": "As organizações têm ___ marcar uma reunião importante.",
@@ -903,8 +904,7 @@
           }
         ]
       }
-    },
-    "variantVerificacion": "calibración del triaje E2#29: corregido — con la respuesta puesta la frase salía «têm de uma reunião», agramatical: faltaba el infinitivo que «ter de» rige"
+    }
   },
   {
     "id": "2cbec901",
@@ -1601,8 +1601,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — artículos definidos con nombres de parentesco, correctos en europeo; «morar» se usa en las dos variantes",
     "type": "translation",
     "data": {
       "source": "O marido mora com a irmã.",
@@ -1675,12 +1675,12 @@
     ],
     "contentHash": "4cfe4e7eb5e1c250c63f2d9a3e7884b28aac30b1eac6c356a52df988590a717a",
     "esContrast": "En español 'soñar' se construye con CON; en PT-BR se usa COM, que coincide, pero hay que memorizarlo.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — BRASILEÑISMO: «meus filhos» sin artículo. El europeo exige «os meus filhos», y el posesivo desnudo es de las marcas que más rápido delatan la variante",
     "type": "verb_preposition",
     "data": {
       "verb": "sonhar",
-      "sentence": "Sempre sonho ___ meus filhos, mesmo longe.",
+      "sentence": "Sempre sonho ___ os meus filhos, mesmo longe.",
       "options": [
         "com",
         "de",
@@ -1797,24 +1797,25 @@
       "vocabulario",
       "falso-amigo"
     ],
-    "contentHash": "50174eb9275f07c221cb26bfa11dd7fe38df10f259a357072d68b9c63afb9494",
+    "contentHash": "9bc89e16c82650e4b1b676cc5613457ad7e942af444ad98b5b677404ce9dff87",
     "esContrast": "\"Marido\" en PT significa 'esposo/a', no solo 'marido' como en español peninsular.",
     "audio": {
       "br": {
-        "hash": "6d5ec17ace960866f955e3fbe96b412724d1de6978dcd1f6d5f32fa136d1a795",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "34b0c9b5630f103a7eb9d96bc27ad3f8f5a0b9211c5e837bc7cdc0bc61ec67ec",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "05728726f2b79f7efa46b29c23e7e9c9d2c1e9cae89f64cfe6b46f8ea5785d91",
-        "voice": "Portuguese_Wiselady"
+        "hash": "34b0c9b5630f103a7eb9d96bc27ad3f8f5a0b9211c5e837bc7cdc0bc61ec67ec",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — la tarjeta preguntaba por el portugués BRASILEÑO en un curso europeo, y su ejemplo era «Minha marido é engenheira» — sin artículo (brasileño) y con el género descuadrado. Y el punto declarado es justo el artículo con el posesivo",
     "type": "flashcard",
     "data": {
-      "front": "¿Qué significa \"marido\" en portugués brasileiro?",
-      "back": "esposo/a (cônjuge)",
-      "example": "O meu marido trabalha muito. / Minha marido é engenheira."
+      "front": "¿Qué significa \"marido\" en portugués europeo?",
+      "back": "esposo (cônjuge) — y en europeo va SIEMPRE con artículo: «o meu marido»",
+      "example": "O meu marido trabalha muito. / A minha mulher é engenheira."
     }
   },
   {
@@ -1996,7 +1997,7 @@
       "b2-poss-formas"
     ],
     "tags": [],
-    "contentHash": "592672b866db3bfc15582fc6f4224951bcfe7e4fe0131c1c19191962690f2093",
+    "contentHash": "8ddf2a9a437963eb6a1e0064e33069b68e0da3f6a039a111f613953a4dc11f0d",
     "esContrast": "En español 'nuestro/nuestra'; en PT es nosso/nossa.",
     "audio": {
       "br": {
@@ -2008,13 +2009,13 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: DUDA — El front pide el posesivo 'en femenino singular' y el back contesta con las dos formas ('nosso (masc.) / nossa (fem.)'): pregunta y respuesta desalineadas. Contenido correcto. (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — los dos ejemplos iban sin artículo, que es la forma brasileña, en la tarjeta que enseña las formas del posesivo",
     "type": "flashcard",
     "data": {
       "front": "¿Cuál es el posesivo de 'nós' en femenino singular?",
       "back": "nosso (masc.) / nossa (fem.)",
-      "example": "Nossa casa fica no centro. Nosso projeto é grande."
+      "example": "A nossa casa fica no centro. O nosso projeto é grande."
     }
   },
   {
@@ -2071,8 +2072,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — «o costume» masculino frente a «la costumbre» femenina: la divergencia que el punto enseña, y en europeo",
     "type": "translation",
     "data": {
       "source": "Os costumes da região são muito antigos.",
@@ -2226,18 +2227,16 @@
     "tags": [],
     "contentHash": "43aa9821076b293d31fd1f93ad841f30bc51870fd3b30a6406526dbb31a481a3",
     "esContrast": "Ojo: en PT-BR coloquial 'seu' = 'de você'; para 'sus (de ellos)' el brasileño prefiere 'os livros deles'. En PT-PT 'os seus livros' (con artículo) mantiene la 3.ª persona.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — «trouxeram seus livros» es brasileño: el europeo pone el artículo delante del posesivo. Con «os» en la frase, el hueco sigue siendo el posesivo y la frase pasa a ser europea",
     "type": "fill_blank",
     "data": {
-      "sentence": "Os alunos trouxeram ___ livros para a biblioteca.",
+      "sentence": "Os alunos trouxeram os ___ livros para a biblioteca.",
       "blanks": [
         {
           "position": 0,
           "answer": "seus",
-          "alternatives": [
-            "os seus"
-          ]
+          "alternatives": []
         }
       ],
       "hintEs": "sus (de ellos)"
@@ -2295,8 +2294,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — «nenhum dado sobre isso» es igual en las dos variantes",
     "type": "translation",
     "data": {
       "source": "No tengo ningún dato sobre eso.",
@@ -2611,8 +2610,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — paradigma de «algum», sin rasgo de variante",
     "type": "flashcard",
     "data": {
       "front": "¿Cuáles son las cuatro formas de 'algum' (género y número)?",
@@ -2664,7 +2663,7 @@
       "b2-poss-seu-ambiguo"
     ],
     "tags": [],
-    "contentHash": "7010bbda2fe8e197094706aaa4026e83d8ec0c20a4468b09028edfa943e4e579",
+    "contentHash": "7eb773ed6e7e2d3d5d903d2c84fc38638aefc46f17694a87e5c5c51924f318c6",
     "esContrast": "teus (masculino plural); teu es singular, tua es femenino singular.",
     "audio": {
       "br": {
@@ -2676,12 +2675,13 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — las dos frases llevaban el posesivo desnudo. En europeo, «os teus pais»",
     "type": "flashcard",
     "data": {
-      "front": "Completa: 'A irmã mora com _____ pais.' (tus)",
+      "front": "Completa: 'A irmã mora com os _____ pais.' (tus)",
       "back": "teus",
-      "example": "A irmã dele mora com teus pais?"
+      "example": "A irmã dele mora com os teus pais?"
     }
   },
   {
@@ -2708,8 +2708,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — la contracción «por + o» es igual en las dos variantes",
     "type": "flashcard",
     "data": {
       "front": "Cuál es la contracción de \"por + o\"?",
@@ -2884,21 +2884,19 @@
     ],
     "contentHash": "0d6aa339e41434139bbf816a83162019d1f375bf9f64577857ade9abb2af48df",
     "esContrast": "Los sustantivos terminados en -r, -z forman plural en -es: cadela→cadelES, flor→florES.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — DOS AVERÍAS. El punto es el plural de los nombres en «-m/-r/-s» y la respuesta era «cadeiras», plural de un nombre en «-a»: no medía su punto. Y «Precisamos comprar» es brasileño — el europeo dice «precisamos DE comprar»",
     "type": "fill_blank",
     "data": {
-      "sentence": "Precisamos comprar ___ novas para a casa.",
+      "sentence": "Nesta rua há três ___ com flores. (jardim)",
       "blanks": [
         {
           "position": 0,
-          "answer": "cadeiras",
-          "alternatives": [
-            "mesas",
-            "camas"
-          ]
+          "answer": "jardins",
+          "alternatives": []
         }
       ],
-      "hintEs": "sillas"
+      "hintEs": "plural de un nombre acabado en «-m», que lo cambia por «-ns»"
     }
   },
   {
@@ -3364,6 +3362,7 @@
     "contentHash": "804dd3aff0c2f71dc25188f4043ab63625975fbd0e3562149da9a7db155f49e3",
     "esContrast": "Certa pessoa = 'cierta persona' (no 'certa' = 'cierta' en port.)",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es el indefinido; «certa», «uma» y «a» encajan las tres",
     "type": "fill_blank",
     "data": {
       "sentence": "___ pessoa que me telefonou disse que voltaria a contactar.",
@@ -3383,8 +3382,7 @@
       "pt-br": {
         "sentence": "___ pessoa que me ligou disse que voltaria a contatar."
       }
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es el indefinido; «certa», «uma» y «a» encajan las tres"
+    }
   },
   {
     "id": "80ce4cb9",
@@ -3721,6 +3719,7 @@
     "contentHash": "8a4300e2d9e288092d57618b82c4c61a0eb70bd3e544b3c64254dd0883a53714",
     "esContrast": "'Marido' en portugués es masculino; en español 'marido' es común.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es el género, y cualquier masculino de parentesco lo ejercita",
     "type": "fill_blank",
     "data": {
       "sentence": "O ___ da Ana é médico.",
@@ -3751,8 +3750,7 @@
           }
         ]
       }
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es el género, y cualquier masculino de parentesco lo ejercita"
+    }
   },
   {
     "id": "8a63e79c",
@@ -3793,7 +3791,7 @@
       "b2-dem-tres-graus"
     ],
     "tags": [],
-    "contentHash": "09fc44375c3b5f56f05d944096fe737fd0b7cd52787f2e998fb162b6b4586f25",
+    "contentHash": "55cba796e27fb9130e6484f3cada5dbc7ae260040b791ededce466178b35b672",
     "esContrast": "'Aquela' se usa para lo más lejano, como 'aquella' en español.",
     "audio": {
       "br": {
@@ -3805,13 +3803,13 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — «no morro» es brasileño para «en la colina»; en europeo se dice «na colina» o «no monte»",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'Aquella casa es muy grande' (muy lejos)?",
       "back": "Aquela casa é muito grande.",
-      "example": "Aquela casa no morro é dos meus avós."
+      "example": "Aquela casa na colina é dos meus avós."
     }
   },
   {
@@ -4078,7 +4076,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — «A Maria mora com os filhos»: artículo ante nombre propio y ante el sustantivo, los dos europeos",
     "type": "flashcard",
     "data": {
       "front": "¿Qué significa \"filhos\"?",
@@ -4294,27 +4293,27 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "d7a8338c695797e928dbb87776093ac2187b0ef6b1b224a7397d1bdba64b8b7e",
+    "contentHash": "f157fe3ab8b1ce10aeb5cc28486d993eb02d1f24d508da8e0772a8342b61a200",
     "audio": {
       "br": {
-        "hash": "2a04260e20ebc6dde7110e429e377dcd45318a3cbb795a61306121c1af152b61",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "f6f160f6b0273e5d72c06cab85b29458428b666a62fcb95fa55d773865728386",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "e4c68865ee58f82f1e90d24fb2b01125364c7ecb464cef73d175c571726cfe52",
-        "voice": "Portuguese_Wiselady"
+        "hash": "f6f160f6b0273e5d72c06cab85b29458428b666a62fcb95fa55d773865728386",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b2-plural-ao, b2-possessivos · RESCATADO en E2#22: su punto volvió a bajar del piso al retirarse un ítem roto",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — la respuesta PRIMARIA era «se uniram», próclise sin disparador, que es brasileña — y la europea «uniram-se» estaba relegada a simple alternativa. Intercambiadas",
     "type": "translation",
     "data": {
       "source": "Los corazones de los niños se unieron.",
-      "target": "Os corações das crianças se uniram.",
+      "target": "Os corações das crianças uniram-se.",
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": [
-        "Os corações das crianças uniram-se."
+        "Os corações dos meninos uniram-se."
       ]
     }
   },
@@ -4890,7 +4889,7 @@
       "regular",
       "formal"
     ],
-    "contentHash": "5bef76d356f9d02e6a9f31734e3c5fa5448e434e09ae3baa8885f89352df5453",
+    "contentHash": "a2ac85ec5c44ad41f491448694567899bb201ecd699fa62352f29c21cb1fa4db",
     "esContrast": "'Nosso' (nosotros) y 'nossa' (nosotras) distinguen género en portugués; en español 'nuestro/a' también concuerda.",
     "audio": {
       "br": {
@@ -4898,17 +4897,17 @@
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "99d2ccf0976cb13e94444d4f47bfaa3b0cb2eb1ff9f5d538deb7638ed2265966",
+        "hash": "4457ecb2981e267c589c248341b1cc54e290943d5a4db0854c75137f1ca48b79",
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "E2#10 2026-09-01: léxico BR→EP por swap mecánico, forma BR movida a variantOverrides['pt-br']",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — declaraba `pt-br` mientras escribía «contacto» con la grafía europea: la etiqueta y el texto no coincidían. Puesto entero en europeo, con el artículo delante del posesivo que es lo que el punto enseña",
     "type": "translation",
     "data": {
-      "source": "Nosso contacto profissional é por e-mail.",
+      "source": "O nosso contacto profissional é por e-mail.",
       "target": "Nuestro contacto profesional es por correo electrónico.",
-      "sourceLang": "pt-br",
+      "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
         "Nuestro contacto de trabajo es por correo electrónico."
@@ -5276,22 +5275,19 @@
     ],
     "contentHash": "be831c8224f9efdefb5660acb069475c80f430f11c8aa5d702388c93b0d0f23d",
     "esContrast": "um/uma = un/una (artículo indefinido)",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: DUDA — Cloze sin pista en estado puro: nada en 'Tenho ___ filhos e uma filha' determina 'dois' frente a 'três' (ambos aceptados como correctos) ni excluye 'quatro' o 'muitos' (castigados). Y la glosa habla de um/una, que no es  (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — el punto declarado son los ARTÍCULOS y el hueco caía en el numeral «dois». Movido al indefinido, que es lo que el punto enseña",
     "type": "fill_blank",
     "data": {
-      "sentence": "Tenho ___ filhos e uma filha.",
+      "sentence": "Tenho dois filhos e ___ filha.",
       "blanks": [
         {
           "position": 0,
-          "answer": "dois",
-          "alternatives": [
-            "três",
-            "quatro"
-          ]
+          "answer": "uma",
+          "alternatives": []
         }
       ],
-      "hintEs": "dos"
+      "hintEs": "artículo indefinido femenino singular"
     }
   },
   {
@@ -5616,8 +5612,8 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "E2#10 2026-09-01: léxico BR→EP por swap mecánico, forma BR movida a variantOverrides['pt-br']",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — «contacto» y «do seu» con artículo: europeo en los dos rasgos",
     "type": "listening",
     "data": {
       "audioText": "Preciso muito do seu contacto para organizar a reunião da família.",
@@ -5751,7 +5747,7 @@
       "b2-numero"
     ],
     "tags": [],
-    "contentHash": "1d094f0e171c6f97f39cace040649e9f8a0146c0bbe3db21bfc580b9e8d76853",
+    "contentHash": "b4db7af9c7c726654649279452feee2c72ca729e8c3c78dd4973b14801007123",
     "esContrast": "En PT, el posesivo 3ª persona se usa con valor reflexivo o no reflexivo; aquí se prefiere 'deles' para claridad.",
     "audio": {
       "br": {
@@ -5763,8 +5759,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: DUDA — Datos sucios + intolerancia del match exacto: la primera alternativa aceptada DUPLICA el target carácter a carácter, y variantes perfectamente válidas ('Nossos filhos querem encontrar seus primos', '...os seus primos') s (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — aceptaba como correcta «NOSSOS filhos», el posesivo sin artículo — la forma brasileña— en el punto que enseña justo eso. Y la otra alternativa era idéntica a la respuesta",
     "type": "translation",
     "data": {
       "source": "Nuestros hijos quieren encontrar a sus primos.",
@@ -5772,8 +5768,7 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": [
-        "Os nossos filhos querem encontrar os primos deles.",
-        "Nossos filhos querem encontrar os primos deles."
+        "Os nossos filhos querem encontrar os primos dela."
       ]
     }
   },
@@ -5852,23 +5847,23 @@
       "regular",
       "ambiguo"
     ],
-    "contentHash": "5bb018ba90beab6dd45fe6364157772204165edb847e993d3baf15d328cef0de",
+    "contentHash": "ffa5807ece8dfb8dff7ac1de97853f18a8a9238f682401335bf414861c5998c6",
     "esContrast": "'Seu/sua' en 3ª persona (su/sus) puede significar 'de él', 'de ella' o 'de usted'. El contexto lo determina.",
     "audio": {
       "br": {
-        "hash": "52ba4dc80b357a443d28014f9e2d97a2b6c1c499d67eeece19731dc8c31b375c",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "d94d7cbd66f0cde5d4ac50f3ef5cadd05d18be7e3917e403b603d6df3d82a5ec",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "e16aaeacccd17c99ef6b7b141bfc845aadf937e5c41dd14cd9531784e837e2a4",
-        "voice": "Portuguese_Wiselady"
+        "hash": "d94d7cbd66f0cde5d4ac50f3ef5cadd05d18be7e3917e403b603d6df3d82a5ec",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — declaraba `pt-pt` con el posesivo desnudo, que es brasileño. En europeo, «os seus filhos»",
     "type": "translation",
     "data": {
-      "source": "Seus filhos são muito simpáticos.",
+      "source": "Os seus filhos são muito simpáticos.",
       "target": "Sus hijos son muy simpáticos.",
       "sourceLang": "pt-pt",
       "targetLang": "es",
@@ -6912,7 +6907,8 @@
     ],
     "contentHash": "c550419f872ce8d67b1c56fee724e83d3036c67f5605b8c881e23bcc3a6cf9fe",
     "esContrast": "'árvore' es femenino en PT (a árvore).",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — el género de «árvore» es la divergencia que el punto enseña, y la frase es europea",
     "type": "error_correction",
     "data": {
       "sentence": "O árvore do jardim é antiga.",
@@ -9779,6 +9775,106 @@
       "explanationEs": "En la lengua corriente el portugués dice «alguma coisa» donde el español dice «algo». «Algo» a secas existe, pero es de registro escrito y suena raro en una pregunta así.",
       "alternatives": [],
       "calcoEs": "¿Quieres algo para beber antes de salir?"
+    }
+  },
+  {
+    "id": "co29b-001",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-outro-mesmo"
+    ],
+    "tags": [
+      "e2-29b",
+      "correccion"
+    ],
+    "contentHash": "e54d38a96395dafb0e36b1b690ae955ccd6b3e1e1b807ac2f8d6db14baf3c0dd",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-29B: la frase mala es el calco de «Necesito un día más para terminar esto.». El gate de variante MUERDE por diseño (dos indefinidos amontonados) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Preciso de mais um outro dia para acabar isto.",
+      "correct": "Preciso de mais um dia para acabar isto.",
+      "alternatives": [],
+      "calcoEs": "Necesito un día más para terminar esto.",
+      "explanationEs": "«Mais um outro» amontona dos indefinidos donde el portugués sólo pone uno: «mais um dia». La forma «um outro» existe, pero sirve para contraponer —«um outro caminho», otro distinto—, no para sumar."
+    }
+  },
+  {
+    "id": "co29b-002",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-outro-mesmo"
+    ],
+    "tags": [
+      "e2-29b",
+      "correccion"
+    ],
+    "contentHash": "88e04a72ba5c2786492457b390b9008da9e415d9b5caa2dfaadec1eb2b2f89ef",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-29B: la frase mala es el calco de «Ella dijo lo mismo que yo, palabra por palabra.». El gate de variante MUERDE por diseño (el neutro «lo» del español, que el portugués no tiene) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ela disse mesmo que eu, palavra por palavra.",
+      "correct": "Ela disse o mesmo que eu, palavra por palavra.",
+      "alternatives": [],
+      "calcoEs": "Ella dijo lo mismo que yo, palabra por palabra.",
+      "explanationEs": "El español «lo mismo» se dice en portugués «o mesmo», con artículo masculino: el portugués no tiene el neutro «lo», así que lo resuelve con «o»."
+    }
+  },
+  {
+    "id": "co29b-003",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-cada-qualquer"
+    ],
+    "tags": [
+      "e2-29b",
+      "correccion"
+    ],
+    "contentHash": "51813cc4bc9b351574f7c65658edd937ff52651979bb542afe1cf347702a8f99",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-29B: la frase mala es el calco de «Cada quien trajo su propia bebida para la fiesta.». El gate de variante MUERDE por diseño (locución española sin equivalente) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Cada quem trouxe a sua própria bebida para a festa.",
+      "correct": "Cada um trouxe a sua própria bebida para a festa.",
+      "alternatives": [],
+      "calcoEs": "Cada quien trajo su propia bebida para la fiesta.",
+      "explanationEs": "El español «cada quien» no tiene equivalente en portugués: «cada quem» no existe. Se dice «cada um» —o «cada pessoa»—, y el verbo va en singular."
+    }
+  },
+  {
+    "id": "co29b-004",
+    "blockId": 2,
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-poss-formas"
+    ],
+    "tags": [
+      "e2-29b",
+      "correccion"
+    ],
+    "contentHash": "1e0bd6397e9308c9b86cdf8fe668029c670e29d46020e3f8cf3ec9dee644856c",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-29B: la frase mala es el calco de «Mi hermana trabaja en un hospital cerca de aquí.». El gate de variante MUERDE por diseño (posesivo sin artículo, que es la forma brasileña) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Minha irmã trabalha num hospital perto daqui.",
+      "correct": "A minha irmã trabalha num hospital perto daqui.",
+      "alternatives": [],
+      "calcoEs": "Mi hermana trabaja en un hospital cerca de aquí.",
+      "explanationEs": "El portugués europeo pone el artículo DELANTE del posesivo: «a minha irmã», «o meu carro». El español no lo lleva, y el portugués de Brasil tampoco, así que el hispanohablante lo omite por partida doble."
     }
   }
 ]

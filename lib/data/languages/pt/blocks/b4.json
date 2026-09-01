@@ -1044,23 +1044,24 @@
     "tags": [
       "contraste"
     ],
-    "contentHash": "175cd23ffff83698107a14f5637476a1591cd18eb370a31d0644a88b9f627433",
+    "contentHash": "1ed37502671e4e121bbd4a21b0f4da587c1dfd38017bb793a557421b4e6fe44b",
     "esContrast": "En español ambas pueden traducirse como 'jugaba', pero en PT-BR hay distinción clara",
     "audio": {
       "br": {
-        "hash": "da2b55890412cd6f86fd919f701b7c5c130eeacca42d9129ca12374da5a4b44f",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "0646cdbd41543ab04dfb04ad83aa2acc5f4777b786f4461e5d3c353e2ec9383a",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "bd392f8e2f789a56a29e31d043d09a0ea5f53834204efb0fd281180c35afcbfe",
-        "voice": "Portuguese_Wiselady"
+        "hash": "0646cdbd41543ab04dfb04ad83aa2acc5f4777b786f4461e5d3c353e2ec9383a",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — la glosa española decía «acción completa passada», con la palabra portuguesa dentro del español",
     "type": "flashcard",
     "data": {
       "front": "¿Cuál es la diferencia entre 'Eu jogava' e 'Eu joguei'?",
-      "back": "Jogava = hábito pasado (imperfeito), Joguei = acción completa passada (pretérito perfeito)",
+      "back": "Jogava = hábito pasado (imperfeito); joguei = acción completa y acabada (pretérito perfeito).",
       "example": "Eu jogava futebol (todos os dias). Eu joguei futebol (uma vez só, ontem)."
     }
   },
@@ -1666,6 +1667,7 @@
     "contentHash": "2e4e72ced223c4e524f08fdd548cc3af99d5c72aed7d43a16cdfbc4f1467c063",
     "esContrast": "Cuidado: 'vi' en portugués es 'vi' en español, pero no confundas con 'ví'.",
     "variantStatus": "neutral",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — «ontem à noite» fija el pretérito y «Eu» la persona",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ (ver) aquele filme ontem à noite.",
@@ -1676,8 +1678,7 @@
           "alternatives": []
         }
       ]
-    },
-    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — «ontem à noite» fija el pretérito y «Eu» la persona"
+    }
   },
   {
     "id": "2e76f379",
@@ -2068,7 +2069,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — «Ficavas ali… enquanto eu quase desfalecia»: imperfecto europeo sin rasgo brasileño",
     "type": "translation",
     "data": {
       "source": "Ficavas ali, parado, sem saber o que fazer enquanto eu quase desfalecia de cansaço.",
@@ -3388,7 +3390,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — «A minha avó» con artículo delante del posesivo: europeo",
     "type": "translation",
     "data": {
       "source": "Mi abuela siempre preparaba una comida deliciosa cuando nos visitaba.",
@@ -3640,6 +3643,7 @@
     "contentHash": "6d00a1c0fe7d268258ecda3b71ad434650db02e541e13f2d59c83abf4d30c5da",
     "esContrast": "'Ver' no imperfeito é 'via', diferente do es 'veía'. Ação em progresso no passado.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos",
     "type": "fill_blank",
     "data": {
       "sentence": "Enquanto ela ___ o filme, eu adormeci.",
@@ -3653,8 +3657,7 @@
         }
       ],
       "hintEs": "imperfeito de «ver», 3.ª persona — la acción larga que la otra interrumpe"
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos"
+    }
   },
   {
     "id": "6d17883a",
@@ -4064,6 +4067,7 @@
     ],
     "contentHash": "739a89f3261db47df176fdd87799116e477000c086da887560950cee1dcf673d",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos",
     "type": "fill_blank",
     "data": {
       "sentence": "Tu ___ muito bem ontem à noite?",
@@ -4075,8 +4079,7 @@
         }
       ],
       "hintEs": "pretérito de «dormir», 2.ª persona"
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos"
+    }
   },
   {
     "id": "7453b417",
@@ -4627,22 +4630,23 @@
       "regular",
       "hábito"
     ],
-    "contentHash": "873de4f24e16431d92041c9b74ef8f875f368c613a806da321eda7770eaa0d3e",
+    "contentHash": "cc7eeab5bb066a889e918176f551d97386d4da5f169a7a8b3ad1dad822e92881",
     "esContrast": "Hospedar-se se conjuga como regulares: hospedava, hospedavas...",
     "audio": {
       "br": {
-        "hash": "be826bcfc83b7896b888a79b4ed27abdac31700cb73512e1757d1e2c6cf63072",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "34fe2b0d63a1343900653c13f1506576cfc157672275bf04cb6670b5d75d2955",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "0f5e55201f62ebed5e9fbdad5bbe031ab271bf23db5a99fd6f8b73593ac06c68",
-        "voice": "Portuguese_Wiselady"
+        "hash": "34fe2b0d63a1343900653c13f1506576cfc157672275bf04cb6670b5d75d2955",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — «Eu ME hospedava» es próclise sin disparador, que es brasileña. En europeo el clítico va detrás: «hospedava-me»",
     "type": "listening",
     "data": {
-      "audioText": "Eu me hospedava naquele hotel todas as semanas quando trabalhava ali.",
+      "audioText": "Eu hospedava-me naquele hotel todas as semanas quando trabalhava ali.",
       "question": "¿Dónde se hospedaba y con qué frecuencia?",
       "options": [
         "En aquel hotel, todas las semanas",
@@ -6386,7 +6390,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — «insistiram em voltar» es el pretérito regular de -ir que el punto enseña, igual en las dos variantes",
     "type": "translation",
     "data": {
       "source": "Ustedes insistieron en volver temprano.",
@@ -6839,7 +6844,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — «eu fui» es igual en las dos variantes",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se conjuga 'ser' en Pretérito Perfeito? (yo)",

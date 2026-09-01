@@ -59,7 +59,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — «logo» consecutivo, igual en las dos variantes",
     "type": "flashcard",
     "data": {
       "front": "Conector consecutivo: 'logo' (luego, por lo tanto)",
@@ -390,6 +391,7 @@
     "contentHash": "12fea48b0063641c6e773438a71f11566a9d1f3e4e6547d6ccca6bcaf8ab4d90",
     "esContrast": "En 'cujo trabalho', 'cujo' concuerda con 'trabalho' (masculino singular). En español sería 'con cuyo trabajo'.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — la relativa con posesivo lo fija: sólo un relativo funciona ahí",
     "type": "fill_blank",
     "data": {
       "sentence": "O realizador com ___ trabalho eu colaboro é brasileiro.",
@@ -400,8 +402,7 @@
           "alternatives": []
         }
       ]
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — la relativa con posesivo lo fija: sólo un relativo funciona ahí"
+    }
   },
   {
     "id": "1312dd96",
@@ -517,22 +518,23 @@
       "gramática",
       "coloquial"
     ],
-    "contentHash": "18ab78584ece9398c675aa6a6dcf57fb4dcdfae635fab7606957871e29edd6b9",
+    "contentHash": "8a40c43fbf69d6be1407d3a5a2ff5f5e4310a530f12b004a4d2a83fc0a1b159e",
     "esContrast": "En español: 'dijo que levaría dos horas' (condicional) ← futuro simple.",
     "audio": {
       "br": {
-        "hash": "954cf0aba0a2fb310ffba68669309ae45d191dffa111db4d9e69ce6fad423e90",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "f1a99989bfb65630b039672f57b1e77396996c6bdeca855d2e0349d0ad1bf18f",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "ff6f5c4b62ac4c3201500a99522cdad8ddf2d02aad996a4ae027c6beb9a4fe83",
-        "voice": "Portuguese_Wiselady"
+        "hash": "f1a99989bfb65630b039672f57b1e77396996c6bdeca855d2e0349d0ad1bf18f",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — «Minha mãe» sin artículo es brasileño; en europeo, «A minha mãe»",
     "type": "listening",
     "data": {
-      "audioText": "Minha mãe contou que levaria duas horas para eu conseguir a vaga.",
+      "audioText": "A minha mãe contou que levaria duas horas para eu conseguir a vaga.",
       "question": "¿De qué tiempo verbal proviene el condicional 'levaria'?",
       "options": [
         "Futuro simples do presente",
@@ -624,6 +626,7 @@
     "contentHash": "1b5e25198977f8b873356c8f6f2050c5555ed14e0bd69165f8ec34326a5614bf",
     "esContrast": "'Logo que' en PT-PT expresa inmediatez, diferente del español.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es la subordinada temporal, que admite varios conectores",
     "type": "fill_blank",
     "data": {
       "sentence": "___ chegou a equipa, começámos a trabalhar.",
@@ -652,8 +655,7 @@
           }
         ]
       }
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es la subordinada temporal, que admite varios conectores"
+    }
   },
   {
     "id": "1eb6dfb6",
@@ -1287,8 +1289,8 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "E1 limpieza 2026-08-11: corregido determinista contra doctrina publicada (docs/plans/2026-08-11-plan-cierre.md)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — la tarjeta ya declara cuál es la colocación brasileña y cuál la europea: el contraste ES su contenido",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se coloca el pronombre en portugués con ‘vamos’ + infinitivo? ¿‘Vamos informar-nos’ o ‘Vamos nos informar’?",
@@ -1500,6 +1502,7 @@
     "contentHash": "3241b631d858618c7b78ca57fcde635cd2955292747c0558dcefca3bcaf9ef49",
     "esContrast": "'Comigo' (conmigo), 'contigo', 'para ela'... son combinaciones fijas.",
     "variantStatus": "neutral",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — el molde da la suma literal —«com + mim»—, y sólo hay una forma en que se funden",
     "type": "fill_blank",
     "data": {
       "sentence": "Conversou ___ (com + mim) sobre isso?",
@@ -1515,8 +1518,7 @@
       "pt-br": {
         "sentence": "Conversou ___ (mim) sobre isso?"
       }
-    },
-    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — el molde da la suma literal —«com + mim»—, y sólo hay una forma en que se funden"
+    }
   },
   {
     "id": "3343b3a0",
@@ -1564,6 +1566,7 @@
     "contentHash": "33ab4365677558c9e77dadaed54195b917329536aa5259cfc316f4553065fcbf",
     "esContrast": "'Em vez de + infinitivo compuesto' indica contraste, diferente de 'a pesar de'.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — «adiado em vez de terem feito greves» no significa nada: la relación es causal, no de sustitución",
     "type": "fill_blank",
     "data": {
       "sentence": "O exame foi adiado ___ terem feito greves.",
@@ -1582,8 +1585,7 @@
       "pt-br": {
         "sentence": "A prova foi adiada ___ terem feito greve."
       }
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — «adiado em vez de terem feito greves» no significa nada: la relación es causal, no de sustitución"
+    }
   },
   {
     "id": "33cf21fe",
@@ -2247,7 +2249,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — «cujo» delante del sustantivo y sin artículo detrás; «realizador» es además el término europeo para el director de cine",
     "type": "flashcard",
     "data": {
       "front": "Pronome relativo 'cujo'",
@@ -2738,6 +2741,7 @@
     "contentHash": "667b9995bdf5f7326c8d0d98e506a39fcd758023e733f475dca8e91949c6de47",
     "esContrast": "'Como se' en subordinada modal siempre lleva subjuntivo imperfecto.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — el imperfeito do conjuntivo detrás lo fija",
     "type": "fill_blank",
     "data": {
       "sentence": "Falou ___ não soubesse a verdade.",
@@ -2766,8 +2770,7 @@
           }
         ]
       }
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — el imperfeito do conjuntivo detrás lo fija"
+    }
   },
   {
     "id": "68c3f8d4",
@@ -3488,7 +3491,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — «logo» consecutivo con ênclise en «resolvê-lo»: europeo",
     "type": "translation",
     "data": {
       "source": "Existe um problema, logo temos que resolvê-lo.",
@@ -3516,6 +3520,7 @@
     "contentHash": "80101b86540cba8603227232ad72209170e8b9fb51be4f99532fc0995a08d34b",
     "esContrast": "'Por isso' es el equivalente más común de 'por eso', no 'por isso'.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es la consecuencia, no el conector concreto",
     "type": "fill_blank",
     "data": {
       "sentence": "Ele não trouxe guarda-chuva, ___ ficou molhado.",
@@ -3535,8 +3540,7 @@
       "pt-br": {
         "sentence": "Ele não trouxe guarda-chuva, ___ se molhou."
       }
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es la consecuencia, no el conector concreto"
+    }
   },
   {
     "id": "820036d8",
@@ -3621,6 +3625,7 @@
     "contentHash": "83a9c448ebb3da977c094c4d5912472ad93f5d431625e20d6d3c925747f977ea",
     "esContrast": "Aquí 'se' es CONJUNCIÓN condicional, no pronome: requiere próclise.",
     "variantStatus": "neutral",
+    "variantVerificacion": "calibración del triaje E2#29: corregido — la frase no significaba nada: «Se vos derem, consegue falar com ela?» no tiene sujeto ni objeto, y mezclaba el tratamiento «vos» con «consegue»",
     "type": "fill_blank",
     "data": {
       "sentence": "Se eles vos ___ (dar) a informação, consegues falar com ela?",
@@ -3637,8 +3642,7 @@
       "pt-br": {
         "sentence": "Se ___ (dar) tempo, consegue falar com ela?"
       }
-    },
-    "variantVerificacion": "calibración del triaje E2#29: corregido — la frase no significaba nada: «Se vos derem, consegue falar com ela?» no tiene sujeto ni objeto, y mezclaba el tratamiento «vos» con «consegue»"
+    }
   },
   {
     "id": "84eae918",
@@ -3715,6 +3719,7 @@
     "contentHash": "89d7eceea26bbb2fe0af98682bda8e4f45f9df29d11576199a04f286679f65b6",
     "esContrast": "'Cujo' es un falso amigo parcial: en portugués concuerda en género/número con el sustantivo siguiente, NO con el poseedor.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — dos defectos: «prêmio» es la grafía brasileña —la europea es «prémio»— y la sintaxis era imposible, porque «cujo» no admite artículo detrás y la frase dejaba el poseído sin aparecer",
     "type": "fill_blank",
     "data": {
       "sentence": "A realizadora ___ filme ganhou o prémio é estreante.",
@@ -3726,8 +3731,7 @@
         }
       ],
       "hintEs": "cuyo — el relativo posesivo, que concuerda con lo poseído y NUNCA lleva artículo"
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — dos defectos: «prêmio» es la grafía brasileña —la europea es «prémio»— y la sintaxis era imposible, porque «cujo» no admite artículo detrás y la frase dejaba el poseído sin aparecer"
+    }
   },
   {
     "id": "8a92e893",
@@ -3907,6 +3911,7 @@
     "contentHash": "bcc135c4da5ccbe2095395381f29c24f8e6ae1d300424ff67cea49906aaaa5d9",
     "esContrast": "'Aunque' en español puede ser indicativo o subjuntivo; en portugués siempre va en subjuntivo.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — el conjuntivo detrás y el contraste con «não passou» lo fijan",
     "type": "fill_blank",
     "data": {
       "sentence": "___ tenha estudado muito, não passou no exame.",
@@ -3920,8 +3925,7 @@
           ]
         }
       ]
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — el conjuntivo detrás y el contraste con «não passou» lo fijan"
+    }
   },
   {
     "id": "8ee01187",
@@ -3966,6 +3970,7 @@
     "contentHash": "92285bd5a28bba77f2018e9901acefdc9ea09dec9da9963ef49fa5adf4b36c82",
     "esContrast": "En portugués se usa más 'pois' que en español, y 'já que' es más enfático que 'porque'.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es la causa; «pois» es igual de europeo",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela não veio à festa ___ estava doente.",
@@ -3980,8 +3985,7 @@
           ]
         }
       ]
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es la causa; «pois» es igual de europeo"
+    }
   },
   {
     "id": "93b5ad3c",
@@ -4442,8 +4446,8 @@
     ],
     "contentHash": "043b8f306455684a793db840d745b32779d2bdaa5e17fa3ef2951a4e96b12893",
     "esContrast": "«Conversar COM» = conversar con (PT y ES comparten la preposición). Y con «ontem» el verbo va en pretérito: «conversámos».",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido en E2#7 2026-08-30 por el barrido mecánico de «-ámos» (paradigma brasileño servido como base europea)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — «Conversámos» con el acento de la 1.ª del plural europea",
     "type": "verb_preposition",
     "data": {
       "verb": "conversar",
@@ -4500,6 +4504,7 @@
     "contentHash": "a02ffc72265442bdeb3d93bb2c2ec0e2ee3d2d2a4162d38b212a17e2eedbb397",
     "esContrast": "Condicional con mesóclise: dir-me-ia, dir-lhe-ia, dir-vos-ia.",
     "variantStatus": "neutral",
+    "variantVerificacion": "barrido «no mide su punto», E2#29: corregido — el ítem exhibía una MESÓCLISIS —«Dir-lhe-ia»— en el punto de la ênclise, y encima el hueco era el clítico y no su colocación. Reescrito como ênclise de verdad, con el hueco en la forma entera",
     "type": "fill_blank",
     "data": {
       "sentence": "Ontem encontrei o João e ___ a verdade toda. (dizer + lhe)",
@@ -4516,8 +4521,7 @@
       "pt-br": {
         "sentence": "Dir-___ (eu)-ia a verdade se pudesse."
       }
-    },
-    "variantVerificacion": "barrido «no mide su punto», E2#29: corregido — el ítem exhibía una MESÓCLISIS —«Dir-lhe-ia»— en el punto de la ênclise, y encima el hueco era el clítico y no su colocación. Reescrito como ênclise de verdad, con el hueco en la forma entera"
+    }
   },
   {
     "id": "a12c3597",
@@ -5185,6 +5189,7 @@
     "contentHash": "9efc667bf750036d6d04f18556407c2cce08f49eb70c14eef359a09107de4a6c",
     "esContrast": "Colocação pronominal: en Portugal la ênclise es la forma no marcada (diga-me, diz-me); en Brasil la próclise (me diga). El español sólo admite el orden brasileño con el imperativo negativo.",
     "variantStatus": "neutral",
+    "variantVerificacion": "muestra de los 60, E2#29: pista escrita — el lema estaba en el molde pero nada fijaba el tiempo, así que el presente encajaba igual",
     "type": "fill_blank",
     "data": {
       "sentence": "___ logo o que aconteceu! (dizer)",
@@ -5212,8 +5217,7 @@
           }
         ]
       }
-    },
-    "variantVerificacion": "muestra de los 60, E2#29: pista escrita — el lema estaba en el molde pero nada fijaba el tiempo, así que el presente encajaba igual"
+    }
   },
   {
     "id": "bd109311",
@@ -5973,23 +5977,24 @@
     "tags": [
       "subordinada-adjetiva"
     ],
-    "contentHash": "de63f43f120b82bc2d257452975813c7f091edf9d90ed21ae05169883b314de8",
+    "contentHash": "8487c5873054ddf3553256d37fb68a08df3f8aea764da674d77a3f0b6ed6207d",
     "esContrast": "Similar al ES: 'La persona que me ayudó...' = 'A pessoa que me ajudou...'",
     "audio": {
       "br": {
-        "hash": "98f91bad5fe1602f5e63435bd6ce94f78c766a8d11d112ee8c73190d954dad81",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "9fc93fe67f89defc458d5ee524dbca1a42cb424ce090b544e4c6f3d77ef6f388",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "859ca1f7ef2f14bf46cee3584414de2f5b966308e53424d6c07cbe5d15d770da",
-        "voice": "Portuguese_Wiselady"
+        "hash": "9fc93fe67f89defc458d5ee524dbca1a42cb424ce090b544e4c6f3d77ef6f388",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — «SE refere» es próclise sin disparador, que es brasileña. En europeo, «refere-se»",
     "type": "flashcard",
     "data": {
       "front": "Subordinada adjetiva com 'que' (pronome relativo)",
-      "back": "Pronome relativo mais comum — substitui 'o qual' e se refere a pessoas ou coisas.",
+      "back": "Pronome relativo mais comum — substitui «o qual» e refere-se a pessoas ou coisas.",
       "example": "A pessoa que me ajudou era simpática."
     }
   },
@@ -6482,6 +6487,7 @@
     "contentHash": "ed23a32f6c2dc76823ea862a1427904a5823fe6bf04b18869777c26c9b4e635f",
     "esContrast": "'Então' como conector consecutivos es más natural en portugués que su equivalente español 'entonces'.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es la consecuencia",
     "type": "fill_blank",
     "data": {
       "sentence": "Estava cansado, ___ decidi dormir cedo.",
@@ -6496,8 +6502,7 @@
           ]
         }
       ]
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es la consecuencia"
+    }
   },
   {
     "id": "eeb0f6d7",
@@ -6549,6 +6554,7 @@
     "contentHash": "f40fca17ba859ebeddfd0e94b5eb3d510feaa3e36917333e769cd0302d6bf7fd",
     "esContrast": "En futuro, el pronombre va EN MEDIO del verbo (mesóclise).",
     "variantStatus": "neutral",
+    "variantVerificacion": "muestra de los 60, E2#29: sin pista y CORRECTO — «amanhã» y el pronominal fijan la mesóclisis",
     "type": "fill_blank",
     "data": {
       "sentence": "O mistério ___ (resolver-se) amanhã.",
@@ -6566,8 +6572,7 @@
       "pt-br": {
         "sentence": "O mistério ___ (se resolver) amanhã."
       }
-    },
-    "variantVerificacion": "muestra de los 60, E2#29: sin pista y CORRECTO — «amanhã» y el pronominal fijan la mesóclisis"
+    }
   },
   {
     "id": "f692ec66",

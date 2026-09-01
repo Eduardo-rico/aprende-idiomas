@@ -729,7 +729,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — «está a poupar» y «disse-me» con ênclise: europeo en los dos rasgos",
     "type": "listening",
     "data": {
       "audioText": "Ela está a poupar dinheiro e disse-me que presentemente não tem pressa.",
@@ -968,7 +969,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — paradigma con «tu», que es la 2.ª persona europea",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'falar' en presente (yo, tú, él):",
@@ -1098,7 +1100,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — imperativo negativo de «tu» con conjuntivo, igual en las dos variantes",
     "type": "translation",
     "data": {
       "source": "Não venhas tarde, senão não podes entrar.",
@@ -1191,7 +1194,7 @@
       "irregular",
       "regional"
     ],
-    "contentHash": "a54d085c164e267ebdb6febba227353e42b5c41be7b6dea25360fe81a2234904",
+    "contentHash": "80405c755484a03f20d2d0170f2d2065c25c3dffcd31967b2e0b201209f90350",
     "esContrast": "PT-PT: imperativo negativo 'não digas' (tu). PT-BR: 'não diga' (você). En presente: 'digo, dizes, diz'.",
     "audio": {
       "br": {
@@ -1203,7 +1206,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — la alternativa española estaba en voseo rioplatense —«contame»—, que no es la L1 del alumno",
     "type": "translation",
     "data": {
       "source": "Não me digas mentiras, diz-me só a verdade.",
@@ -1211,7 +1215,7 @@
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "No me cuentes mentiras, contame solo la verdad."
+        "No me cuentes mentiras, cuéntame solo la verdad."
       ]
     }
   },
@@ -1349,24 +1353,25 @@
       "existencial",
       "contraste"
     ],
-    "contentHash": "329035d265baecddcb383542e5e595b921226b178f9b6cf920cb2c4b3066ab72",
+    "contentHash": "49b7dc65dfb317809f68e097ffddae8ce871ede6764829b947ecabb78df2f90b",
     "esContrast": "En español diferenciamos con contexto; en PT-BR la posición del sujeto marca la diferencia.",
     "audio": {
       "br": {
-        "hash": "41feb897beed3a4fd26ea29b478e67546d1144f50b8c74164558048f3fde926d",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "d27b84691898a1248bd949766e892abaa03f0f6af7714b74401241f187c4b698",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "38601675e51feb07742e5fd6b4b915e6662592f6b8ec283a37f5d38ae4780610",
-        "voice": "Portuguese_Wiselady"
+        "hash": "d27b84691898a1248bd949766e892abaa03f0f6af7714b74401241f187c4b698",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — la tarjeta enseñaba el existencial «ter» como si fuera regla general del portugués —«cuando \"tem\" aparece solo, funciona como existencial»— sin decir que es BRASILEÑO, en un curso europeo donde eso es «haver». El punto se llama `b3-exist-ter-br` justo porque el rasgo es el contraste, y la tarjeta se lo comía",
     "type": "flashcard",
     "data": {
-      "front": "Cuál es la diferencia entre 'Ele tem 30 anos' (posesivo) y 'Tem 30 anos' (existencial)?",
-      "back": "Cuando 'tem' aparece solo, sin sujeto antes, funciona como existencial: 'Tem 30 anos' = 'Existem 30 anos' (pasaron 30 años). Con sujeto es posesivo.",
-      "example": "Tem dois anos que me mudei. (existencial: hace dos años) / Eu tenho dois filhos. (posesivo: tengo dos hijos)"
+      "front": "¿Cómo se dice «hace dos años que me mudé» en portugués europeo, y en qué se diferencia del brasileño?",
+      "back": "Europeo: «Há dois anos que me mudei» — el existencial es HAVER. El brasileño usa «ter»: «Tem dois anos que me mudei», que en europeo no se dice.",
+      "example": "Há muita gente à espera. (europeo) / Tem muita gente esperando. (brasileño)"
     }
   },
   {
@@ -2183,27 +2188,28 @@
       "b3-pron-indirecto"
     ],
     "tags": [],
-    "contentHash": "74e5971b2fd5ad7bc46644809617cf35104a47f4e3490d40f9aa4b803aa9f5b1",
+    "contentHash": "190592206f79e792e1ea4b92badeeeaf55c1931756243525456d56e439f2a68f",
     "esContrast": "'Lhe' reemplaza a 'a él/ella' como pronombre de complemento indirecto",
     "audio": {
       "br": {
-        "hash": "5f137222df616f4831bed7f297673dfabcd415401f2a81ff54a7014c00308bfb",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "a9d8f61cb84196b41920424750bf7587f80ad0237f603daf9414fc96dfecbbcf",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "8898ce2b1e61aa44f6a0c14180c916bf82ace9793af4696d6c4b14433effe60e",
-        "voice": "Portuguese_Wiselady"
+        "hash": "a9d8f61cb84196b41920424750bf7587f80ad0237f603daf9414fc96dfecbbcf",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — la respuesta era «Nós LHE demos», próclise sin disparador, que es brasileña. En europeo el clítico va detrás: «demos-lhe»",
     "type": "translation",
     "data": {
       "source": "Nosotros le dimos un regalo",
-      "target": "Nós lhe demos um presente",
+      "target": "Nós demos-lhe um presente.",
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": [
-        "Nós demos um presente a ele"
+        "Demos-lhe um presente."
       ]
     }
   },
@@ -2253,6 +2259,7 @@
     "contentHash": "53a11afb241f0b5208621a7dfbc08ffe10c6bd1a48348483b162a77b04a3db68",
     "esContrast": "Futuro simple permite mesóclise (te darei / dar-te-ei)",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — con la respuesta puesta la frase salía «Dar-te-ei darei o livro»: el molde dejaba el verbo escrito además del hueco",
     "type": "fill_blank",
     "data": {
       "sentence": "___ o livro amanhã, prometo.",
@@ -2278,8 +2285,7 @@
           }
         ]
       }
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — con la respuesta puesta la frase salía «Dar-te-ei darei o livro»: el molde dejaba el verbo escrito además del hueco"
+    }
   },
   {
     "id": "5451c0a7",
@@ -2333,27 +2339,28 @@
       "b3-pron-indirecto"
     ],
     "tags": [],
-    "contentHash": "dac1a76c68aac547cc18c72772af0273dc491872f887d55c05ad0f59c734ce5a",
+    "contentHash": "3b45effaaaa03179b80acd7383d4df8a13f67e83e02c25c77bf0adb0c871d02c",
     "esContrast": "La estructura progresiva 'estar a + inf' lleva pronombres entre el auxiliar y la preposición",
     "audio": {
       "br": {
-        "hash": "c537ee5cd378f8aed8267ca6a654b188f0028edbbda05969c86b96acacee7ee0",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "898536fbf254c2cf204552050c740038abe1c2ab0f328e2a00c40c18d61edbae",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "bbf09718ae36e2f4581372f73579621c79389ff3ddb40f313a9339e19bc3881f",
-        "voice": "Portuguese_Wiselady"
+        "hash": "898536fbf254c2cf204552050c740038abe1c2ab0f328e2a00c40c18d61edbae",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — el español decía «se lo» —dativo MÁS acusativo— y el portugués sólo traía el dativo «lhe», así que la traducción perdía un pronombre. Igualados: el punto es el objeto indirecto, y las dos colocaciones europeas quedan aceptadas",
     "type": "translation",
     "data": {
-      "source": "Ella se lo está contando ahora",
-      "target": "Ela está-lhe a contar agora",
+      "source": "Ella le está contando la historia ahora.",
+      "target": "Ela está-lhe a contar a história agora.",
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": [
-        "Ela está a contar-lhe agora"
+        "Ela está a contar-lhe a história agora."
       ]
     }
   },
@@ -2599,27 +2606,28 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "98a3e671ea121336351582ab78a4eda2847e8751aed7dc54d17cde94f8c0c459",
+    "contentHash": "492a02f42c53700e8e8d3755e3e34181731fd80bced2690f7e659a976ec5927e",
     "esContrast": "En BR, 'tem' = 'tiene' posesivo Y existencial; en PT se distingue: 'tem' = posesivo, 'há' = existencial.",
     "audio": {
       "br": {
-        "hash": "f2807cdfe578284e884548e59cc549ec5b9e0fdca37ec62f2ea675f6454e94ed",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "9b25ebd4e06ce7d028c85d578998cddf73dc9e46fb37db9708446bb1ba025b23",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "f4ef0208c9f8e778d740e0af0783efa829ee26882ca0e14bae39ccf987909f92",
-        "voice": "Portuguese_Wiselady"
+        "hash": "9b25ebd4e06ce7d028c85d578998cddf73dc9e46fb37db9708446bb1ba025b23",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — NO MEDÍA SU PUNTO: el punto es el existencial «ter» brasileño y la frase usaba «ter» dos veces, las dos POSESIVO. Reescrita para que el contraste esté donde el punto dice",
     "type": "translation",
     "data": {
-      "source": "Tu tens razão, o meu pai também tem uma namorada nova.",
-      "target": "Tú tienes razón, mi padre también tiene una novia nueva.",
+      "source": "Tens razão: em Portugal diz-se «há muita gente», e no Brasil diz-se «tem muita gente».",
+      "target": "Tienes razón: en Portugal se dice «há muita gente», y en Brasil «tem muita gente».",
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "Tienes razón, mi padre también tiene una novia nueva."
+        "Tienes razón: en Portugal se dice «há muita gente» y en Brasil «tem muita gente»."
       ]
     }
   },
@@ -3309,23 +3317,24 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "794a0d838d1cc880d3211131caea36bcb9e1c0a1802dbc98e1443166aa525819",
+    "contentHash": "3620fc25acf491ef41c78ce815a0d79f7ef00347f287c19d1fc401bfee91698e",
     "audio": {
       "br": {
-        "hash": "9b4d073bbf628572cdad0d2dcbaf0c884fc858694980a357f6cf68e43b7c5986",
+        "hash": "9422b28b12d62df0e04fc4a9d0f6d586e195d11ab1fee1c9021c18765b815077",
         "voice": "Portuguese_SentimentalLady"
       },
       "pt": {
-        "hash": "577ceb543002b603f6838e12655f06daba8c10618b09a296547480ab3fb51d1c",
+        "hash": "682e80cd5e8fd9c2241760a16cd7a332b2c7bcc2072690218bb29eaf7169588e",
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — NO MEDÍA SU PUNTO: el punto es «ser y estar» y la tarjeta conjugaba DIZER. Cambiada a «estar», que es la mitad del punto que faltaba —la otra, «ser», ya la cubre `956de100`",
     "type": "flashcard",
     "data": {
-      "front": "Conjuga DIZER en presente: EU, TU, ELE, NÓS, ELES",
-      "back": "EU digo | TU dizes | ELE diz | NÓS dizemos | ELES dizem",
-      "example": "Ela diz que está cansada."
+      "front": "Conjuga ESTAR en presente: EU, TU, ELE, NÓS, ELES",
+      "back": "EU estou | TU estás | ELE está | NÓS estamos | ELES estão",
+      "example": "Ela está cansada, mas nós estamos bem."
     }
   },
   {
@@ -4135,6 +4144,7 @@
     "contentHash": "9185fccdcf953b6de5fb1f92a9630dcc1b5e882bfd7c943688b528e437a01989",
     "esContrast": "'Ter dois filhos' = 'tener dos hijos', no 'es'\n    ",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — el verbo de posesión con complemento directo lo fija",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela ___ dois filhos e mora no Rio de Janeiro.",
@@ -4145,8 +4155,7 @@
           "alternatives": []
         }
       ]
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — el verbo de posesión con complemento directo lo fija"
+    }
   },
   {
     "id": "92181969",
@@ -4210,7 +4219,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — MENCIONA el «ter» existencial brasileño en vez de usarlo, y lo atribuye a Brasil: la frase que lo dice es europea",
     "type": "translation",
     "data": {
       "source": "No Brasil, tem muita gente que prefere usar 'ter' no lugar de 'haver'.",
@@ -4244,7 +4254,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — paradigma de «ser» con «tu és», que es el europeo",
     "type": "flashcard",
     "data": {
       "front": "Conjuga SER en presente: EU, TU, ELE, NÓS, ELES",
@@ -4739,6 +4750,7 @@
     "contentHash": "a75af754ad768150d12262ecc57c9d4de83bdac68fd392abfe03cc88950f0788",
     "esContrast": "'Vós' é arcaico em PT-BR; em PT-PT ainda se usa. 'Vocês' (= eles/elas) é o normal no Brasil.",
     "variantStatus": "neutral",
+    "variantVerificacion": "muestra de los 60, E2#29: corregido — «Vocês apercebem a escolha» no es portugués: «aperceber-se» es pronominal y rige «de». Y el ítem declaraba enseñar el reflexivo mientras su respuesta no llevaba ninguno",
     "type": "fill_blank",
     "data": {
       "sentence": "Vocês ___ da escolha correta a tempo. (aperceber-se)",
@@ -4764,8 +4776,7 @@
           }
         ]
       }
-    },
-    "variantVerificacion": "muestra de los 60, E2#29: corregido — «Vocês apercebem a escolha» no es portugués: «aperceber-se» es pronominal y rige «de». Y el ítem declaraba enseñar el reflexivo mientras su respuesta no llevaba ninguno"
+    }
   },
   {
     "id": "a9255b44",
@@ -4857,6 +4868,7 @@
     "contentHash": "ac5dd4c32fe3a857e30a707935cc05f1eb77288279a359e8b00cacd9ccec9419",
     "esContrast": "PT-BR: 'apresentou-me'; PT-PT: 'apresentou-me à' + artículo",
     "variantStatus": "neutral",
+    "variantVerificacion": "lectura de los 60, E2#29: corregido — doblemente roto: «apresentou-me a namorada» (me la presentó) y «apresentou-me à namorada» (me presentó a ella) son las dos correctas y significan cosas distintas, y encima la única alternativa declarada era «à», idéntica a la respuesta. Y el punto es el reflexivo, que no aparecía por ningún lado",
     "type": "fill_blank",
     "data": {
       "sentence": "O Pedro apresentou-___ à nova chefe na segunda-feira.",
@@ -4882,8 +4894,7 @@
           }
         ]
       }
-    },
-    "variantVerificacion": "lectura de los 60, E2#29: corregido — doblemente roto: «apresentou-me a namorada» (me la presentó) y «apresentou-me à namorada» (me presentó a ella) son las dos correctas y significan cosas distintas, y encima la única alternativa declarada era «à», idéntica a la respuesta. Y el punto es el reflexivo, que no aparecía por ningún lado"
+    }
   },
   {
     "id": "ac8c38f0",
@@ -5033,11 +5044,12 @@
     ],
     "contentHash": "b1c648ca817d371234928d26b1a29a5f992937f9a73507c8d12dadbb30c819f3",
     "esContrast": "Igual que en español: 'ajudar A' + infinitivo. Coincidencia útil.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — «garçom» es brasileño; en europeo es «empregado de mesa»",
     "type": "verb_preposition",
     "data": {
       "verb": "ajudar",
-      "sentence": "O garçom ajuda-nos ___ fazer o pedido.",
+      "sentence": "O empregado de mesa ajuda-nos ___ fazer o pedido.",
       "options": [
         "a",
         "em",
@@ -5409,7 +5421,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — paradigma con «tu comes», que es el europeo",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'comer' en presente (yo, tú, él):",
@@ -5717,6 +5730,7 @@
     "contentHash": "cabff80fc479862704b7a28f42b49a04a071216dc620dd1566c97da55f5601d0",
     "esContrast": "En PT se puede 'beber' o 'tomar' café; en ES solo 'tomar'",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — compartía frase LITERAL con `0b88eddd` —«Eu ___ um café todas as manhãs»— y las dos declaraban respuestas distintas, «tomo» y «faço». Dos ítems servidos con el mismo enunciado y claves incompatibles",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ um café e uma torrada ao pequeno-almoço.",
@@ -5743,8 +5757,7 @@
           }
         ]
       }
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — compartía frase LITERAL con `0b88eddd` —«Eu ___ um café todas as manhãs»— y las dos declaraban respuestas distintas, «tomo» y «faço». Dos ítems servidos con el mismo enunciado y claves incompatibles"
+    }
   },
   {
     "id": "cbbc02b3",
@@ -6260,6 +6273,7 @@
     "contentHash": "dbd0465c4d749a120f5e780239891014dcdc39fbf56850c27736456bf63209c8",
     "esContrast": "En PT-BR se acepta 'tem' para existencial coloquial; en PT-PT se usa 'há'.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — «cardápio» es brasileño; en Portugal es «ementa»",
     "type": "fill_blank",
     "data": {
       "sentence": "Na ementa, ___ várias opções vegetarianas.",
@@ -6284,8 +6298,7 @@
           }
         ]
       }
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — «cardápio» es brasileño; en Portugal es «ementa»"
+    }
   },
   {
     "id": "dcdefb37",
@@ -6332,6 +6345,7 @@
     ],
     "contentHash": "dd479edd7ec8dbba7f8d5094b4eec6ac43782b07222d3fbe3d277e27a46b951e",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es el imperativo negativo, que se ve con cualquier verbo",
     "type": "fill_blank",
     "data": {
       "sentence": "___ tão alto! As pessoas estão a descansar.",
@@ -6359,8 +6373,7 @@
           }
         ]
       }
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es el imperativo negativo, que se ve con cualquier verbo"
+    }
   },
   {
     "id": "de76d6ed",
@@ -6641,6 +6654,7 @@
     "contentHash": "e87ec3cb49d9e298ec9c4cacc99da9ac25304b8145f8777a31c8036520fcd896",
     "esContrast": "'Tu' exige 'pagas'; 'você' exige 'paga' — la formalidade cambia a conjugação.",
     "variantStatus": "neutral",
+    "variantVerificacion": "muestra de los 60, E2#29: sin pista y CORRECTO — el sujeto expreso fija la persona",
     "type": "fill_blank",
     "data": {
       "sentence": "Você ___ a conta no final. (pagar)",
@@ -6663,8 +6677,7 @@
           }
         ]
       }
-    },
-    "variantVerificacion": "muestra de los 60, E2#29: sin pista y CORRECTO — el sujeto expreso fija la persona"
+    }
   },
   {
     "id": "ea88503e",
@@ -7501,7 +7514,8 @@
     ],
     "contentHash": "9ab0b532504b5dc7fa2772ef7621228002fd2a4a2c4ca309b50252febabedf28",
     "esContrast": "'tener' → 'ter'; la 1ª persona es 'tenho', no el español 'tengo'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — el error a corregir es un castellanismo —«tengo»—, y la frase buena es europea",
     "type": "error_correction",
     "data": {
       "sentence": "Eu tengo dois irmãos.",

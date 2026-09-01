@@ -10,7 +10,7 @@
     "tags": [
       "frequente"
     ],
-    "contentHash": "e9aed44bd19d0778975802584cc731e9dffe3ce5fc0821475fad01a98dc90c4f",
+    "contentHash": "bf1517e4c85a3e84a2a6e81175d0405c5ab5c069019216fc573ffba6af501683",
     "esContrast": "O português usa 'vaga' (puesto), nunca 'vaga' como em espanhol.",
     "audio": {
       "br": {
@@ -22,7 +22,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — la primera alternativa era idéntica a la respuesta: ruido que no acepta nada nuevo",
     "type": "translation",
     "data": {
       "source": "Cuando encuentre la vaga, te llamaré.",
@@ -30,7 +31,6 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": [
-        "Quando encontrar a vaga, ligo-te.",
         "Assim que encontrar a vaga, ligo-te.",
         "Quando achar a vaga, ligo-te."
       ]
@@ -1587,10 +1587,11 @@
     ],
     "contentHash": "2fbb364c0b1ca181fce813b270d03d1c5d2c3c87c2566a291bc44a7ad07e118e",
     "esContrast": "Indicativo: 'diz que há' (hecho). Conjuntivo: 'espero que melhore' (deseo). Dos estructuras diferentes.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — «Meu amigo» sin artículo es brasileño; en europeo, «O meu amigo»",
     "type": "fill_blank",
     "data": {
-      "sentence": "Meu amigo diz que ___ muito stress no trabalho, mas espero que a situação ___ logo.",
+      "sentence": "O meu amigo diz que ___ muito stress no trabalho, mas espero que a situação ___ logo.",
       "blanks": [
         {
           "position": 0,
@@ -1620,7 +1621,7 @@
     "tags": [
       "formal"
     ],
-    "contentHash": "2ff1704f2ebdcba9402634e49d86400e519f2db92c67a37206b2a9322904eeda",
+    "contentHash": "1ad24a88722524bc008c7e6433a6f8796159a2331d33399239dd79184ba2928b",
     "esContrast": "'Aquecer' → imperfeito do conjuntivo: 'aquecesse' (recuerda: -ER → -esse).",
     "audio": {
       "br": {
@@ -1632,12 +1633,13 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — «experimento» es brasileño; en europeo, «a experiência»",
     "type": "flashcard",
     "data": {
       "front": "Traduce al portugués: 'Era necesario que el agua se calentara antes de usar.'",
       "back": "Era necessário que a água se aquecesse antes de usar.",
-      "example": "Era necessário que a água se aquecesse a 40 graus para o experimento."
+      "example": "Era necessário que a água se aquecesse a 40 graus para a experiência."
     }
   },
   {
@@ -1836,7 +1838,7 @@
       "frequente",
       "formal"
     ],
-    "contentHash": "f313002e061fd6082d6ad3e5063ca0a61170f395c6431c56b5749967e341d130",
+    "contentHash": "8c324d30034822b3740184683d2dbe50d64eaf638a2be6601da9d679a58bae60",
     "audio": {
       "br": {
         "hash": "e84d4dbd7941e1775f6db9c287881c69228bc30003c3d13a4c88e51dd987a3cd",
@@ -1847,10 +1849,11 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — el español de partida decía «Si TOMES la decisión correcta», que no es español: el subjuntivo ahí es agramatical. Y como el punto es el futuro do conjuntivo portugués, la frase española tiene que llevar presente de indicativo para que el contraste se vea",
     "type": "translation",
     "data": {
-      "source": "Si tomes la decisión correcta, tu rumbo cambiará.",
+      "source": "Si tomas la decisión correcta, tu rumbo cambiará.",
       "target": "Se tomares a decisão correta, o teu rumo mudará.",
       "sourceLang": "es",
       "targetLang": "pt-pt",
@@ -1972,6 +1975,7 @@
     "contentHash": "3d44b94690820488e89478c2732f6b27a2a38bd215d7dd020c9fb1d30c198e1f",
     "esContrast": "El subjuntivo de 'querer' es irregular: 'quisesse' en BR, 'quissesse' en PT-EU.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — «quissessem» NO EXISTE: la forma es «quisessem», con una sola ese en la raíz",
     "type": "fill_blank",
     "data": {
       "sentence": "Se vocês ___ ir ao concerto, teríamos ido juntos.",
@@ -1996,8 +2000,7 @@
           }
         ]
       }
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — «quissessem» NO EXISTE: la forma es «quisessem», con una sola ese en la raíz"
+    }
   },
   {
     "id": "3e0e742e",
@@ -3688,26 +3691,19 @@
     ],
     "contentHash": "659e6191670c57d5fc6601134bafcb4d64fb5594069874d0d41d0a504c82fa74",
     "esContrast": "'Ter' irregular en subjuntivo: pt 'tenha' vs es 'tenga'. Y 'suspirar' = 'suspirar' en pt también.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — TRES AVERÍAS a la vez: «suspie» no es una palabra portuguesa, la frase no significaba nada —«é possível que ela suspie de volta»—, y el punto es la CERTEZA con indicativo mientras sus dos huecos eran conjuntivos. Reescrito con un solo hueco y con el indicativo que el punto pide",
     "type": "fill_blank",
     "data": {
-      "sentence": "Embora eu não ___ a ligação no início, acho que é possível que ela ___ de volta.",
+      "sentence": "Tenho a certeza de que ela ___ à festa amanhã. (vir)",
       "blanks": [
         {
           "position": 0,
-          "answer": "tenha",
-          "alternatives": [
-            "consiga"
-          ]
-        },
-        {
-          "position": 1,
-          "answer": "suspie",
-          "alternatives": [
-            "telefone"
-          ]
+          "answer": "vem",
+          "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "presente de indicativo de «vir», 3.ª persona — la certeza NO arrastra conjuntivo"
     }
   },
   {
@@ -4193,6 +4189,7 @@
     "contentHash": "72679e9265c62c8737064a763305c81e074617c35d901f87a67dd8ef6b52509c",
     "esContrast": "Pluscuamperfecto de subjuntivo: tivesse + participio = condicional compuesto en la oración principal.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — «desistir a decisão» no rige, y «logrado o sucesso» es castellanismo: en portugués es «alcançar o sucesso»",
     "type": "fill_blank",
     "data": {
       "sentence": "Se ele não ___, teria alcançado o sucesso que procurava.",
@@ -4211,8 +4208,7 @@
       "pt-br": {
         "sentence": "Se ele não ___ a decisão, teria logrado o éxito."
       }
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — «desistir a decisão» no rige, y «logrado o sucesso» es castellanismo: en portugués es «alcançar o sucesso»"
+    }
   },
   {
     "id": "73224b27",
@@ -6863,7 +6859,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — «Se te dedicares» con futuro do conjuntivo y «precisar DE»: europeo en los dos rasgos",
     "type": "translation",
     "data": {
       "source": "Si te dedicas a la abogacía, necesitarás paciencia.",
@@ -8017,6 +8014,7 @@
     "contentHash": "ea635c56a55f1e89809ba787a23a0ddf48b9161aab240ce454edde497902397a",
     "esContrast": "No Brasil, 'haver' como impessoal pode manter-se; em Portugal, 'haver' é mais comum neste contexto.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — el hueco es verbal y sin lema no está determinado",
     "type": "fill_blank",
     "data": {
       "sentence": "É possível que no ___ haja mais vagas.",
@@ -8033,8 +8031,7 @@
       "pt-br": {
         "sentence": "É possível que no ___ haja mais vagas. (início)"
       }
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — el hueco es verbal y sin lema no está determinado"
+    }
   },
   {
     "id": "ea7f1371",
@@ -9129,7 +9126,8 @@
     ],
     "contentHash": "0057f79d110c72ca52e82456f405c6274d740d11e760193cca18e529b50c00c9",
     "esContrast": "El conjuntivo de 'vir' es 'venha', no la forma española 'venga'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — el error a corregir es un castellanismo —«venga»—, y la frase buena es europea",
     "type": "error_correction",
     "data": {
       "sentence": "Espero que ele venga à festa amanhã.",

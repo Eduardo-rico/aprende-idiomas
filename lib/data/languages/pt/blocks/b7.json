@@ -395,7 +395,7 @@
       "progresivo",
       "irregular"
     ],
-    "contentHash": "bb00267ab025ec135f2e3e7e59c9568e5089ec2b994a3f6c485ddb1b888ed0a1",
+    "contentHash": "c12550378a640692275f73ce4a61a346d8dbf6ac42ea35a6bfccf432153dc088",
     "esContrast": "'Ir + gerúndio' expresa un proceso gradual. En español usamos 'ir entrando'; en portugués es idéntico.",
     "audio": {
       "br": {
@@ -407,7 +407,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — la única alternativa era idéntica a la respuesta: no aceptaba nada nuevo",
     "type": "translation",
     "data": {
       "source": "Él viene entrando poco a poco en confianza.",
@@ -415,7 +416,7 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": [
-        "Ele vai entrando aos poucos em confiança."
+        "Ele vai ficando à vontade aos poucos."
       ]
     }
   },
@@ -667,22 +668,23 @@
     "tags": [
       "andar+gerundio"
     ],
-    "contentHash": "8321a7c6e348836739c196559e386049c81f2d477be58afc6add435a4bc4869d",
+    "contentHash": "c6c6487de114fac329cb4e2223702fc6fbdd8ea123efddacc3d2f576e2cef7bd",
     "esContrast": "'Andar + gerundio' indica acción repetida o habitual; no tiene equivalente directo en español.",
     "audio": {
       "br": {
-        "hash": "f21b7151aefe1f4a9fc8bbff5ebe75989e2b46c97f6cd10e505a09fe0e16fa18",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "625850a95b6c350a65be589c42bfa0b50b592c95af390128998baf54a91fa123",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "9173343b2df10eb0771600b0fb1e4f320c957cb7a48b7ddfc600ddb5a905807d",
-        "voice": "Portuguese_Wiselady"
+        "hash": "625850a95b6c350a65be589c42bfa0b50b592c95af390128998baf54a91fa123",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — BRASILEÑISMO en el punto que más lo sufre: «andar + gerúndio» es brasileño y el europeo dice «andar A + infinitivo». El gerundio aspectual es justo donde el corpus llevaba nueve a uno a favor de la forma brasileña",
     "type": "translation",
     "data": {
-      "source": "Os alunos andam perguntando muito.",
+      "source": "Os alunos andam a perguntar muito.",
       "target": "Los alumnos andan preguntando mucho.",
       "sourceLang": "pt-pt",
       "targetLang": "es",
@@ -771,24 +773,25 @@
       "expressão",
       "coloquial"
     ],
-    "contentHash": "2958554e2926e89ff8c1887bffc3520b3cd7065aa6b7e9ef4e0131cf5567355f",
+    "contentHash": "5ad78e8339acfaa3d381ae1ac6e87c3c7399a7bddba7c535432cac95351a5bfb",
     "esContrast": "En español: ganar → ganado. En PT-BR: ganhar → ganho. ¡No confundas!",
     "audio": {
       "br": {
-        "hash": "9d4be35167ee6bba128a1a7fdf0886de95524f8a7afdf60e162c343e52338266",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "72b33ed23152a86f4969b038119effe04eb028d1baac7cf452411861450663fb",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "3d5d3ea7af37997b48e9e31c4ac03b1cdce8be8c8bad8a16b63ba9b1caeddd4a",
-        "voice": "Portuguese_Wiselady"
+        "hash": "72b33ed23152a86f4969b038119effe04eb028d1baac7cf452411861450663fb",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — NO MEDÍA SU PUNTO: el punto son los participios DOBLES y la tarjeta daba uno solo, el de «ganhar». Reescrita con un verbo que sí tiene los dos, y que además trae la divergencia europea «aceite» frente a la brasileña «aceito»",
     "type": "flashcard",
     "data": {
-      "front": "Ganhar → participio irregular",
-      "back": "ganhar → ganho (NO 'ganado' como en español)",
-      "example": "Tenho ganho muito com esse novo emprego."
+      "front": "Aceitar tiene DOS participios: ¿cuáles, y cuándo va cada uno?",
+      "back": "Con «ter/haver», el regular: «tinha aceitado». Con «ser/estar», el corto: «foi aceite» — y «aceite» es la forma EUROPEA, frente a la brasileña «aceito».",
+      "example": "O convite foi aceite por todos, mas eu já tinha aceitado o outro."
     }
   },
   {
@@ -2202,7 +2205,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: leído entero, sin rasgo brasileño — infinitivo pessoal «sairmos», que es el rasgo del punto y no divide variantes",
     "type": "listening",
     "data": {
       "audioText": "É melhor sairmos agora do que ficar aqui sem fazer nada.",
@@ -2371,6 +2375,7 @@
     "contentHash": "7b126b91345f7095b4eac8fc5322125a2aa96e9144ec8af04b4afcc09edf88a6",
     "esContrast": "'Nascido' es irregular (de 'nascer'). En PT-PT se usa más 'nascido'; en PT-BR también se dice 'nascido', pero 'nado' es arcaico.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — el contraste «em Lisboa, não em São Paulo» fija el participio de nacer",
     "type": "fill_blank",
     "data": {
       "sentence": "Ele é ___ em Lisboa, não em São Paulo.",
@@ -2394,8 +2399,7 @@
           }
         ]
       }
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — el contraste «em Lisboa, não em São Paulo» fija el participio de nacer"
+    }
   },
   {
     "id": "7b5321b1",
@@ -2592,21 +2596,22 @@
     "tags": [
       "basico"
     ],
-    "contentHash": "81d9ce100d03864fe2527a8162636444e6a956ae96ab7553fb768269282a4c45",
+    "contentHash": "95ef9999f17afb8c182f53a4b2ab3f802d20fb3405a28d238b5feecc91f19116",
     "audio": {
       "br": {
-        "hash": "6857df705270b2f2c6bcebddcf8a75ed23be22fe8f45010574b708ef253ba853",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "9ecc89c8d3953e5204ce8916b19a2380cc9696b795e17fbb6e5295bd9b852461",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "2c4b88732ff75ca873f8d82e56970afee091ac73152483e6efa7651f37a24533",
-        "voice": "Portuguese_Wiselady"
+        "hash": "9ecc89c8d3953e5204ce8916b19a2380cc9696b795e17fbb6e5295bd9b852461",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — DOS RASGOS: «precisam perguntar» sin la preposición es brasileño —el europeo exige «precisar DE»— y «directamente» conserva una «c» que no se pronuncia y que la ortografía vigente ya no escribe",
     "type": "translation",
     "data": {
-      "source": "Para saberem a verdade, precisam perguntar directamente.",
+      "source": "Para saberem a verdade, precisam de perguntar diretamente.",
       "target": "Para que sepan la verdad, necesitan preguntar directamente.",
       "sourceLang": "pt-pt",
       "targetLang": "es",
@@ -4765,23 +4770,24 @@
     "tags": [
       "construcción"
     ],
-    "contentHash": "f9b547749f4055741fd95ce6ec7efdff137f85aad2db82123de65b8398c76ab8",
+    "contentHash": "727633d847247a59738ec6211751d0f30e23c5561f8a52037aa92543f44d8015",
     "audio": {
       "br": {
-        "hash": "8c5ee49324c842208f22462b9b6957fe01ad325067ec4182d82f66638e54285b",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "270d9f1510a004f1586505b6343faf4c2c5bfbe2c40f74564aa157804d5df98a",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "8f4f3bd4a4ab613471ddbacc32e3017fcb6bb58a9d0251bbf6637fbc30fec5cb",
-        "voice": "Portuguese_Wiselady"
+        "hash": "270d9f1510a004f1586505b6343faf4c2c5bfbe2c40f74564aa157804d5df98a",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — la tarjeta enseñaba «ANDAR + gerúndio» como si fuera LA regla del portugués, y es la brasileña. En europeo es «andar a + infinitivo», que es justo lo que el bloque tiene infrarrepresentado",
     "type": "flashcard",
     "data": {
-      "front": "¿Qué verbo se usa con gerúndio para expresar una acción continua o persistente?",
-      "back": "ANDAR + gerúndio",
-      "example": "Ele anda dizendo que vai sair da empresa. (Él anda diciendo que va a salir de la empresa.)"
+      "front": "¿Qué construcción usa el portugués EUROPEO para una acción continua o insistente?",
+      "back": "ANDAR A + infinitivo. El gerundio —«andar dizendo»— es la forma brasileña.",
+      "example": "Ele anda a dizer que vai sair da empresa."
     }
   },
   {

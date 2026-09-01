@@ -194,6 +194,7 @@
     "contentHash": "05f010704ff163034ad9c453636dc163fd2556548b5e90c40ba2228466cb1223",
     "esContrast": "'Teríamos' es condicional de 'ter', diferente de 'haver'.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos",
     "type": "fill_blank",
     "data": {
       "sentence": "Ele perguntou se nós ___ a reunião na segunda-feira.",
@@ -207,8 +208,7 @@
         }
       ],
       "hintEs": "condicional de «ter», 1.ª del plural — futuro del pasado tras «perguntou»"
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos"
+    }
   },
   {
     "id": "084022b5",
@@ -263,6 +263,7 @@
     "contentHash": "09dbb582403a1e625d14f55e2e47fa4bdf347f65e632038a7b8abc14131f1e41",
     "esContrast": "Em español diríamos 'me gustaría' — en portugués se dice 'Eu gostaria'.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — la petición cortés con «de tomar» detrás lo fija",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ de tomar um café consigo amanhã.",
@@ -280,8 +281,7 @@
       "pt-br": {
         "sentence": "Eu ___ de tomar um café com você amanhã."
       }
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — la petición cortés con «de tomar» detrás lo fija"
+    }
   },
   {
     "id": "0e18fa1f",
@@ -294,22 +294,23 @@
     "tags": [
       "formal"
     ],
-    "contentHash": "0e18fa1f2e856724b53ebe42599d8c52bb9fd66a0ecb9cb6bcb2314978790649",
+    "contentHash": "22db4a4d0dfa756014138a1e5c9bb004e89a70e509fbe0808ffe8ecf4d70feef",
     "esContrast": "'Poderia' + infinitivo expresa cortesía más formal que 'poderia falar'.",
     "audio": {
       "br": {
-        "hash": "e98d443c33c224e423ba10db42180f5c6a2bf16c8078e1036ca6398e1005b935",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "5ccae134f6911c35c4022f39180363f38d3efa4294e034cd880d07b022a1a2e9",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "830bd48d71fbe0b47f19038442b04a93cfb834bb13a274ad2601b712fbf39d93",
-        "voice": "Portuguese_Wiselady"
+        "hash": "5ccae134f6911c35c4022f39180363f38d3efa4294e034cd880d07b022a1a2e9",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — «seus objetivos» sin artículo es brasileño; en europeo, «os seus objetivos»",
     "type": "listening",
     "data": {
-      "audioText": "Eu poderia dar-lhe um conselho sobre como realizar seus objetivos de vida?",
+      "audioText": "Eu poderia dar-lhe um conselho sobre como realizar os seus objetivos de vida?",
       "question": "¿Qué está pidiendo la persona?",
       "options": [
         "Un consejo sobre cómo realizar sus objetivos",
@@ -425,6 +426,7 @@
     "contentHash": "10ba2ec3aad3646d0096fa092e84cb0cbdac209acd177d4a2c25b0499e180fba",
     "esContrast": "'Falaria' es el condicional regular de 'falar'.",
     "variantStatus": "neutral",
+    "variantVerificacion": "barrido del lema repetido, E2#29: corregido — con la respuesta puesta salía «Eu falaria falar português»: el molde dejó el infinitivo escrito además del hueco. TERCERO de esta clase",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ português perfeitamente se praticasse mais.",
@@ -438,8 +440,7 @@
         }
       ],
       "hintEs": "condicional de «falar», 1.ª persona — lo pide la condición con «se … praticasse»"
-    },
-    "variantVerificacion": "barrido del lema repetido, E2#29: corregido — con la respuesta puesta salía «Eu falaria falar português»: el molde dejó el infinitivo escrito además del hueco. TERCERO de esta clase"
+    }
   },
   {
     "id": "1121d710",
@@ -2666,6 +2667,7 @@
     "contentHash": "6702d71b7c061621b0178cf30327e53e72a8ad3be39edde84a86866881869b13",
     "esContrast": "Em português, 'terei' (não 'teréi'); em espanhol 'tendré' é regular.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ uma casa na praia quando me reformar.",
@@ -2684,8 +2686,7 @@
       "pt-br": {
         "sentence": "Eu ___ uma casa na praia quando me aposentar."
       }
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos"
+    }
   },
   {
     "id": "6756a8a8",
@@ -3383,6 +3384,7 @@
     "contentHash": "7ac8e1d8cc8b845055a2f42066c49662de1d348d92005388a5d8922d2aacd77e",
     "esContrast": "Tipo 2 coloquial con 'a gente' en PT-BR; en PT-PT se usa 'nós'.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — la correlación con «íamos» fija el imperfeito do conjuntivo",
     "type": "fill_blank",
     "data": {
       "sentence": "Se a gente ___ mais tempo, íamos viajar juntos.",
@@ -3398,8 +3400,7 @@
       "pt-br": {
         "sentence": "Se a gente ___ mais tempo, ia viajar juntos."
       }
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — la correlación con «íamos» fija el imperfeito do conjuntivo"
+    }
   },
   {
     "id": "7b14b1d9",
@@ -3810,24 +3811,25 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "856751880d89ed8a26ee69acf4e8ad5da540ca69cfddb585688204406d7cd097",
+    "contentHash": "824c6e2f5c7e7daf430d5aea96ec6c5621d7b7803c75e482b0c48ed399246ae0",
     "esContrast": "Atención: 'vais' con 'i' (no 'vayas'), 'ides' con 'i', 'vamos' = 'vamos'.",
     "audio": {
       "br": {
-        "hash": "fb22fd1ba8d19edd1a8e6c96cd2dab6cd75783e2d7be7b5f71687ff611acafd7",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "15e7f0f9e554872134f2190a247ea2be490f086115b3ad995b12eaac6a047fd5",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "c96feeeae9ddb6f4441f0ed06470e234df7cd72ee1a8aa4bc8d203bd7148cff3",
-        "voice": "Portuguese_Wiselady"
+        "hash": "15e7f0f9e554872134f2190a247ea2be490f086115b3ad995b12eaac6a047fd5",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — metía «vós ides» en el paradigma sin decir que es arcaico —el curso conjuga eu/tu/ele/nós/eles y el alumno no lo ve en ningún otro sitio—, y el ejemplo repetía la respuesta palabra por palabra en vez de ser una frase",
     "type": "flashcard",
     "data": {
       "front": "Conjuga el verbo 'ir' en presente: eu, tu, ele/ela, nós, vós, eles/elas",
-      "back": "eu vou, tu vais, ele/ela vai, nós vamos, vós ides, eles/elas vão",
-      "example": "Eu vou, tu vais, ele vai, nós vamos, vós ides, eles vão."
+      "back": "eu vou, tu vais, ele/ela vai, nós vamos, eles/elas vão (la forma «vós ides» sobrevive sólo en el norte y en textos antiguos)",
+      "example": "Eu vou ao mercado e tu vais à escola."
     }
   },
   {
@@ -4005,24 +4007,25 @@
       "desejo-cortes",
       "regional"
     ],
-    "contentHash": "8b7cfbddceb3b5697e0dde12e13946bcddf26a938b3578362d4035ffe0eecf5b",
+    "contentHash": "fcef3b158f53f5fd9cee50599c015bc6e0758c64af9d03a4510e4f945466f4ee",
     "esContrast": "En PT-BR coloquial se usa 'Eu ia querer' en lugar de 'gostaria'.",
     "audio": {
       "br": {
-        "hash": "f5f93fd290ab45dbdf39bd4eeb69c4848ffbfe23f2c070b6d541db2a44950e89",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "43c697505f2fa47f04d22f383d3bf23ef96b72452b2974ae9d24d303432a610e",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "e96d415d76404ebca0552d21063888cbb93d8713251eca136ca0820230119fec",
-        "voice": "Portuguese_Wiselady"
+        "hash": "43c697505f2fa47f04d22f383d3bf23ef96b72452b2974ae9d24d303432a610e",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — la tarjeta preguntaba qué diría un BRASILEÑO en un curso europeo, y su respuesta —«Eu ia querer aquele pão aí»— es brasileña de arriba abajo. En europeo la cortesía se hace con el imperfecto, y «se faz favor» en vez de «por favor»",
     "type": "flashcard",
     "data": {
-      "front": "¿Qué alternativa cortés usaría un brasileño para 'eu quero' en una tienda?",
-      "back": "Eu gostaria de / Eu ia querer (informal)",
-      "example": "Eu ia querer aquele pão aí, por favor."
+      "front": "¿Qué alternativa cortés usaría un portugués para «eu quero» en una tienda?",
+      "back": "«Queria…» — el imperfecto de cortesía, que es lo más corriente en europeo; también «Gostaria de…», más formal.",
+      "example": "Queria um pão, se faz favor."
     }
   },
   {
@@ -5231,28 +5234,28 @@
       "desejo-cortês",
       "irregular"
     ],
-    "contentHash": "46ccdb3f3c7b843e9499ebd8ba6c1e8e842bcead23eeb2ec33cab213a143bb08",
+    "contentHash": "bd2fc41e31d7d0cf6eac6583b24b5ad2649e0f91234bd962aa378049c7eb7000",
     "esContrast": "Querría = querereria/quereria; el condicional de querer es irregular",
     "audio": {
       "br": {
-        "hash": "32b0204568f87cc4f243148a666a850556b283a094d3d270642ae3fd76de2117",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "679a53faa162a7dccd63407decbfa5df681895940832d831ce1c52d69044e2ee",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "24173d4273ae384ebe1be32732286735650cc93d9288ba69e0e182ffa1142624",
-        "voice": "Portuguese_Wiselady"
+        "hash": "679a53faa162a7dccd63407decbfa5df681895940832d831ce1c52d69044e2ee",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "cola de dictamen E2#29: corregido a europeo — la respuesta decía «quereRERia», que no es una palabra: el condicional de «querer» es «quereria». Y la alternativa traía «quereria ME dar», próclise brasileña",
     "type": "translation",
     "data": {
       "source": "Pregunté si él querría darme un consejo antes de realizar el proyecto.",
-      "target": "Perguntei se ele querereria dar-me um conselho antes de realizar o projeto.",
+      "target": "Perguntei se ele quereria dar-me um conselho antes de realizar o projeto.",
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": [
-        "Perguntei se ele gostaria de dar-me um conselho antes de realizar o projeto.",
-        "Questionei se ele quereria me dar um conselho antes de realizar o projeto."
+        "Perguntei se ele gostaria de dar-me um conselho antes de realizar o projeto."
       ]
     }
   },
@@ -6070,6 +6073,7 @@
     "contentHash": "db0eb1494d011c14808f043d93d06e61dcbfe90b0df411a365fc4bea7c00b8a8",
     "esContrast": "'Faremos' vem de 'fazer' + '-emos', não de uma raiz diferente.",
     "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — «___ no exame» dejaba la frase agramatical con su propia respuesta: «faremos no exame» no rige",
     "type": "fill_blank",
     "data": {
       "sentence": "Na próxima semana, nós ___ o exame da universidade.",
@@ -6088,8 +6092,7 @@
       "pt-br": {
         "sentence": "Na próxima semana, nós ___ no vestibular da USP."
       }
-    },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — «___ no exame» dejaba la frase agramatical con su propia respuesta: «faremos no exame» no rige"
+    }
   },
   {
     "id": "dc63d860",
