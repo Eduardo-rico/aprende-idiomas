@@ -19,10 +19,11 @@ import { respuestaDe, verificar, type Cloze } from './lotes/cloze-e2-15';
 import { ITEMS as E2_16 } from './lotes/cloze-e2-16';
 import { ITEMS as E2_17 } from './lotes/cloze-e2-17';
 import { ITEMS as E2_19 } from './lotes/cloze-e2-19';
+import { ITEMS as E2_22 } from './lotes/cloze-e2-22';
 
 // Registro estático: `tsx` compila a CJS y un `await import()` de nivel
 // superior no arranca. Un lote nuevo se añade con una línea aquí.
-const LOTES: Record<string, Cloze[]> = { 'e2-16': E2_16, 'e2-17': E2_17, 'e2-19': E2_19 };
+const LOTES: Record<string, Cloze[]> = { 'e2-16': E2_16, 'e2-17': E2_17, 'e2-19': E2_19, 'e2-22': E2_22 };
 
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
 const lote = arg('--lote') ?? '';
