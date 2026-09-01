@@ -41,6 +41,48 @@ lote 3 (`contradictorio`, `parcial`) pasaron limpios el muestreo y la
 revisión, y lo ya publicado aguanta (0 de 15 mediaciones industriales en
 producción traducen mal «até»). El 45 % fue del lote, no de la línea.
 
+## UN GATE NO PUEDE VER LO QUE N NO LE DEJA VER
+
+**Regla de E2#14, y va antes que todas las demás porque las gobierna.**
+El preflight imprime la POTENCIA antes que cualquier tabla, y **bloquea
+por debajo de N=5**:
+
+| N | umbral | fuerza mínima que detecta (potencia 0,80) |
+|---:|---|---|
+| 4 | — | **ninguna: no puede rechazar nada** |
+| 6 | 6/6 | 96 % |
+| 12 | 10/12 | 87 % |
+| 16 | 12/16 | 80 % |
+| 24 | 17/24 | 76 % |
+
+A N=4, `pValor(4,4)=0,0625`: un rasgo que prediga el lote entero **sin un
+solo fallo** sale «no sospechoso». El lote 13 se publicó con «Preflight
+limpio» y cuatro ítems, y ese «limpio» no era un resultado sino una
+tautología — **«no dispara» y «no puede disparar» se imprimían igual**.
+Por debajo de 12 el preflight avisa: *el lote no está verificado, está
+sin medir.*
+
+Y el corolario para los pares mínimos: **el suelo son TRES pares.** Con
+dos, cero de los 24 órdenes posibles evitan a la vez la fuga del `repair`
+y la separabilidad por posición.
+
+## LOS DOS GATES QUE SE CONTRADICEN, y cómo se eligió
+
+El `repair` de un MAL **es** la frase del BIEN de su par y la tarjeta lo
+imprime como forma correcta: si el MAL va delante, regala el ítem (2 de 4
+en el lote 13). La invariante «el BIEN nunca después de su MAL» lo
+arregla — **y fabrica un gradiente posicional**, porque empuja las B al
+principio y las M al final: 18/24, p=0,011. Es la **cuarta vez** que un
+arreglo fabrica el atajo siguiente.
+
+Se conserva la invariante y los rasgos de posición pasan a **AVISO**, con
+su motivo: miden el orden del JSON, y `lib/srs/interleave.ts` reordena la
+sesión eligiendo en cada paso la carta cuyo concepto y tipo más difieren
+de la anterior — que es exactamente lo que comparten los dos miembros de
+un par, así que el runner los separa activamente. Son olor de diseño, no
+atajo explotable. Lo que sí bloquea es la separabilidad al **100 %**, que
+ningún barajado honesto produce.
+
 ## CADA FORMATO TIENE SUS PROPIOS ATAJOS, Y CAMBIAR DE FORMATO NO SALVA UN PUNTO
 
 **Regla de E2#14.** El mapa `scripts/lib/formato-punto.ts` dice con qué

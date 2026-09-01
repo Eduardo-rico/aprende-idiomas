@@ -507,3 +507,53 @@ las veces.
 once bloqueantes aplicados. Lotes 11 y 12: **NO publican**, y por la
 misma razón de fondo — un punto que no diverge del español no se puede
 examinar con juicios binarios. Déficit **1.668 → 1.656**, residuo 0.
+
+
+---
+
+## E2#14 (2026-09-04) — la sesión que borró trabajo del calendario y descubrió que el gate mentía a N pequeño
+
+**Ningún lote publica**, y por cuarta vez seguida. Pero el déficit baja
+**1.650 → 1.615** sin escribir un solo ítem, que es la primera vez que
+eso pasa.
+
+**1 · El barrido de etiquetado, la única tarea que BORRA trabajo.**
+109 ejercicios publicados (4,5 % del corpus) tenían `concepts: []`, y el
+bucle de asignación itera `x.concepts`: **eran invisibles para la tabla
+que gobierna el calendario**. Causa limpia — los lotes 1-4 y el piloto
+son anteriores a la regla, del 5 en adelante hay cero. Resultado: 79
+etiquetados, 30 declarados sin punto a propósito, **cinco puntos cerrados
+sin escribir nada** (`b10-var-lexico`, `b11-morfologia-enganosa`,
+`b3-pron-indirecto`, `reg-verbal-com`, `reg-verbal-a`) y un punto nuevo
+que nace cubierto: `b9-lexico-anti-calco`, que catorce juicios llevaban
+desde el lote 1 enseñando sin tener dónde vivir. Puerta cerrada con
+`npm run check:concepts` + 3 tests.
+
+**2 · El mapa formato↔punto, y su corrección en la misma sesión.**
+Criterio: *juicio binario si y sólo si el error que enseña produce,
+traducido palabra por palabra, español bien formado*. Reparto sobre los
+213 puntos: **cloze 130 · juicio 41 · transformación 24 · mediación 18**
+— la línea artesanal de juicios sólo puede atacar el 19 % del faltante.
+
+Y la corrección, que el round del lote 11 v2 forzó: **cambiar de formato
+NO arregla un punto que coincide con el español.** El cloze mata el atajo
+de etiqueta, no el de traducción; la sección de ser/estar salió resoluble
+12/12 poniendo el verbo español. `coincide` significa **elige otras
+frases**, no «cámbiale el formato».
+
+**3 · «Preflight limpio» era una tautología a N pequeño.** A N=4,
+`pValor(4,4)=0,0625`: ningún rasgo puede bloquear ni acertando el 100 %.
+El preflight imprime ahora la POTENCIA antes que nada y bloquea por
+debajo de N=5. Con ello salieron siete gates más: el rasgo 14 (espejo del
+español), el 15 (primera mitad), `monocultivoDeClase`,
+`separablePorPosicion`, `techoBajoPares`, la invariante del `repair` y —
+medido y resuelto con los ojos abiertos— **el conflicto entre esa
+invariante y el gradiente posicional que fabrica**.
+
+**4 · Y el runner, que llevaba tiempo cobrando mal.** `FillBlankCard` no
+pintaba la pista **y el esquema la tiraba en silencio** (`z.object`
+descarta lo que no declara). Auditados los 417 `fill_blank`: **70
+sospechosos de ser inresolubles**, y de una muestra de 20 dictaminada a
+mano, **nueve lo son (45 %)** — el freno muerde. Es el gemelo del
+multi-hueco: aquél cobraba aciertos de más, éste cobra **fallos** de más.
+Repararlos es ahora una línea por ítem.
