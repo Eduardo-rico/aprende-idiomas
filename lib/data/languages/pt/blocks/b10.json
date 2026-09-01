@@ -12176,5 +12176,495 @@
       "correctIndex": 3,
       "explanationEs": "Os quatro dados estão, incluída a distinção entre casa e arrecadação, que é a que se costuma perder. «Trastero» resolve-se como «arrecadação» e «revisar los extintores» como «fazer a manutenção aos extintores»: *rever* em português é 'voltar a ver', não inspecionar equipamento."
     }
+  },
+  {
+    "id": "b2c2-med-l16-01",
+    "blockId": 10,
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-var-gerundio"
+    ],
+    "tags": [
+      "lote16",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "b97846a1e837e883b7fef5f670de9323cb20cc80c652678c130698e0d3c39a24",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 16 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Oi! Estou chegando agora no escritório. Já estou vendo os arquivos que você mandou e vou te responder ainda hoje.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "um colega de Lisboa, no mesmo canal de trabalho",
+      "instructionsEs": "Reescríbelo como lo escribiría un lisboeta. No es corregir: es cambiar de variedad, y el progresivo europeo no usa gerundio.",
+      "wordRange": {
+        "min": 14,
+        "max": 40
+      },
+      "rubric": [
+        "¿Sustituye «Estou chegando» por «Estou a chegar» (o un equivalente del registro de destino)?",
+        "¿Sustituye «estou vendo» por «estou a ver» (o un equivalente del registro de destino)?",
+        "¿Sustituye «você mandou» por «me mandaste» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «escritório»?",
+        "¿Traslada el dato «hoje»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Olá! Estou a chegar agora ao escritório. Já estou a ver os ficheiros que me mandaste e respondo-te ainda hoje."
+    }
+  },
+  {
+    "id": "b2c2-med-l16-02",
+    "blockId": 10,
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-var-gerundio"
+    ],
+    "tags": [
+      "lote16",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "54bc8fc57d016dd840a91f5804fcd6e4dea743d09638eecd82ea427e7f0be521",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 16 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "A gente tá esperando o técnico desde as oito. Ele ficou de vir, mas não tá atendendo o telefone.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a administração do prédio, em Lisboa, por mensagem",
+      "instructionsEs": "Pásalo a portugués europeo. Cambian el progresivo y el pronombre de sujeto, no la queja.",
+      "wordRange": {
+        "min": 12,
+        "max": 40
+      },
+      "rubric": [
+        "¿Sustituye «tá esperando» por «estamos à espera» (o un equivalente del registro de destino)?",
+        "¿Sustituye «não tá atendendo» por «não atende» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «técnico»?",
+        "¿Traslada el dato «oito»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Estamos à espera do técnico desde as oito. Ficou de vir e agora não atende o telemóvel."
+    }
+  },
+  {
+    "id": "b2c2-med-l16-03",
+    "blockId": 10,
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-var-gerundio"
+    ],
+    "tags": [
+      "lote16",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "6b934bc3a06145052732c3f644b4852c9609925704de65c24f2c2968419db46f",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 16 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "neutro",
+    "type": "mediation",
+    "data": {
+      "sourceText": "O sistema está rodando devagar desde ontem. Os usuários estão reclamando e a equipe está tentando entender o que aconteceu.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a direção de uma empresa portuguesa, numa nota de incidente",
+      "instructionsEs": "Reescríbelo para la nota portuguesa. Además del progresivo, dos palabras del texto son brasileñas y tienen equivalente europeo.",
+      "wordRange": {
+        "min": 14,
+        "max": 40
+      },
+      "rubric": [
+        "¿Sustituye «está rodando» por «está a funcionar» (o un equivalente del registro de destino)?",
+        "¿Sustituye «estão reclamando» por «têm reclamado» (o un equivalente del registro de destino)?",
+        "¿Sustituye «equipe» por «equipa» (o un equivalente del registro de destino)?",
+        "¿Sustituye «usuários» por «utilizadores» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «ontem»?",
+        "¿Traslada el dato «sistema»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "O sistema está a funcionar devagar desde ontem. Os utilizadores têm reclamado e a equipa está a tentar perceber o que se passou."
+    }
+  },
+  {
+    "id": "b2c2-med-l16-04",
+    "blockId": 10,
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-var-gerundio"
+    ],
+    "tags": [
+      "lote16",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "3df45866890e6c81b88ce043f0ada81a2f4ba644d24afaebf50a187a339139cf",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 16 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Estamos organizando o evento e vamos precisar de mais cadeiras. Você consegue trazer as suas?",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "uma amiga de Coimbra, a quem tratas por tu",
+      "instructionsEs": "Dilo en europeo. El «você» de la fuente no es de tuteo portugués: en Portugal, a una amiga, se le habla de tú.",
+      "wordRange": {
+        "min": 12,
+        "max": 35
+      },
+      "rubric": [
+        "¿Sustituye «Estamos organizando» por «Estamos a organizar» (o un equivalente del registro de destino)?",
+        "¿Sustituye «Você consegue» por «Consegues» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «cadeiras»?",
+        "¿Traslada el dato «evento»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Estamos a organizar o evento e vamos precisar de mais cadeiras. Consegues trazer as tuas?"
+    }
+  },
+  {
+    "id": "b2c2-med-l16-05",
+    "blockId": 10,
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-var-gerundio"
+    ],
+    "tags": [
+      "lote16",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "0046a7d94816a0ec8e76ff6298dc7ea6baf5ea1ae78dff862568aa43fd1916f6",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 16 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "informal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Estou a acabar o relatório e depois estou a pensar em passar por aí. Estás a trabalhar até tarde?",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "um colega de São Paulo, no chat da equipa",
+      "instructionsEs": "Reescríbelo como lo diría él. Mismo mensaje, la otra variedad.",
+      "wordRange": {
+        "min": 12,
+        "max": 35
+      },
+      "rubric": [
+        "¿Sustituye «Estou a acabar» por «Estou terminando» (o un equivalente del registro de destino)?",
+        "¿Sustituye «estou a pensar» por «estou pensando» (o un equivalente del registro de destino)?",
+        "¿Sustituye «Estás a trabalhar» por «Você está trabalhando» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «relatório»?",
+        "¿Traslada el dato «tarde»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Estou terminando o relatório e depois estou pensando em passar aí. Você está trabalhando até tarde?"
+    }
+  },
+  {
+    "id": "b2c2-med-l16-06",
+    "blockId": 10,
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-var-gerundio"
+    ],
+    "tags": [
+      "lote16",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "33dda1c2f2f3b7955a6763809af9bd305a4cbf8298c0cc4593d2abd724148c84",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 16 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "informal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "A malta está a preparar a apresentação, mas o ficheiro não está a abrir. Estamos à espera do informático.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a equipa do Rio, que vai assistir à mesma apresentação",
+      "instructionsEs": "Pásalo a brasileño para que lo entiendan sin tropiezos. Tres palabras además del progresivo.",
+      "wordRange": {
+        "min": 12,
+        "max": 35
+      },
+      "rubric": [
+        "¿Sustituye «A malta» por «O pessoal» (o un equivalente del registro de destino)?",
+        "¿Sustituye «está a preparar» por «está preparando» (o un equivalente del registro de destino)?",
+        "¿Sustituye «ficheiro» por «arquivo» (o un equivalente del registro de destino)?",
+        "¿Sustituye «não está a abrir» por «não está abrindo» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «apresentação»?",
+        "¿Traslada el dato «informático»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "O pessoal está preparando a apresentação, mas o arquivo não está abrindo. Estamos esperando o suporte."
+    }
+  },
+  {
+    "id": "b2c2-med-l16-07",
+    "blockId": 10,
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-var-gerundio"
+    ],
+    "tags": [
+      "lote16",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "aa35773642ed919a67f21244f00b7693b04bb01aaa1141f5bf07627742c61c02",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 16 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "neutro",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Estamos a receber muitas chamadas sobre o mesmo assunto. O que está a acontecer com a vossa plataforma?",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "o serviço de apoio de uma empresa brasileira, por escrito",
+      "instructionsEs": "Escríbelo para el soporte brasileño. El progresivo y el posesivo de segunda persona cambian los dos.",
+      "wordRange": {
+        "min": 12,
+        "max": 35
+      },
+      "rubric": [
+        "¿Sustituye «Estamos a receber» por «Estamos recebendo» (o un equivalente del registro de destino)?",
+        "¿Sustituye «está a acontecer» por «está acontecendo» (o un equivalente del registro de destino)?",
+        "¿Sustituye «vossa» por «de vocês» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «chamadas»?",
+        "¿Traslada el dato «plataforma»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Estamos recebendo muitas ligações sobre o mesmo tema. Podem nos dizer o que está acontecendo com a plataforma de vocês?"
+    }
+  },
+  {
+    "id": "b2c2-med-l16-20",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-reg-mitigacao"
+    ],
+    "tags": [
+      "lote16",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "016ea6431b41966912bd6b4a32c62b0eed1818a405357a3abb047f6237c272f9",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 16 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Está errado. Faz outra vez.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "um estagiário no primeiro mês, que se esforçou",
+      "instructionsEs": "Tiene que rehacerlo igual. Mitiga sin volverlo ambiguo: si acaba sin saber que hay que rehacerlo, la mitigación falló.",
+      "wordRange": {
+        "min": 14,
+        "max": 45
+      },
+      "rubric": [
+        "¿Sustituye «Está errado» por «há aqui um problema» (o un equivalente del registro de destino)?",
+        "¿Sustituye «Faz outra vez» por «obriga a refazer» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «outra vez»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Olha, há aqui um problema que obriga a refazer — não é do teu esforço, é do método. Explico-te já e repetes com calma."
+    }
+  },
+  {
+    "id": "b2c2-med-l16-21",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-reg-mitigacao"
+    ],
+    "tags": [
+      "lote16",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "b650ee6affcf5320cb01f2304c103a01a3553ad2479d7e9d2df4e7662ce69694",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 16 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Não vamos comprar isso. É caro e não serve.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "o fornecedor que passou a manhã a apresentar a proposta",
+      "instructionsEs": "La respuesta sigue siendo no. Mitiga la forma sin dejar dudas sobre el fondo.",
+      "wordRange": {
+        "min": 16,
+        "max": 45
+      },
+      "rubric": [
+        "¿Sustituye «Não vamos comprar isso» por «não vamos avançar» (o un equivalente del registro de destino)?",
+        "¿Sustituye «É caro e não serve» por «nem o preço nem o âmbito» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «caro»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Agradeço a apresentação, que foi detalhada. Não vamos avançar: nem o preço nem o âmbito se ajustam ao que precisamos este ano. Se isso mudar, falamos."
+    }
+  },
+  {
+    "id": "b2c2-med-l16-22",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-reg-mitigacao"
+    ],
+    "tags": [
+      "lote16",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "1a61f4fd25cb4b8f2c3d0ce9ce054435b5555172b1504bba279bbdcca17e1fcc",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 16 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Chegaste tarde três vezes esta semana. Não pode ser.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a colaboradora, numa conversa a sós",
+      "instructionsEs": "El aviso tiene que llegar. Mitiga la entrada, no la consecuencia.",
+      "wordRange": {
+        "min": 20,
+        "max": 55
+      },
+      "rubric": [
+        "¿Sustituye «Não pode ser» por «tem de deixar de acontecer» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «três vezes»?",
+        "¿Traslada el dato «semana»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Queria falar contigo um bocadinho. Tenho reparado que esta semana chegaste tarde três vezes — não sei se se passa alguma coisa. Seja o que for, tem de deixar de acontecer, e prefiro dizer-to agora e a sós."
+    }
+  },
+  {
+    "id": "b2c2-med-l16-23",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-reg-mitigacao"
+    ],
+    "tags": [
+      "lote16",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "0ca630d4963b50783bf26910edd3b56c12be65f8e37e09a9fc0876f470015740",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 16 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "neutro",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Não sei se me estou a explicar bem, e talvez seja impressão minha, mas parece-me que se calhar convinha ver isso com algum cuidado, se não for incómodo.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a equipa de urgência, que tem dois minutos e uma fuga de água",
+      "instructionsEs": "Hay una fuga. Quita todas las capas de mitigación: aquí atenuar es esconder.",
+      "wordRange": {
+        "min": 6,
+        "max": 25
+      },
+      "rubric": [
+        "¿Sustituye «Não sei se me estou a explicar bem» por «Há uma fuga» (o un equivalente del registro de destino)?",
+        "¿Sustituye «talvez seja impressão minha» por «já» (o un equivalente del registro de destino)?",
+        "¿Sustituye «se não for incómodo» por «venham já» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «cuidado»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Há uma fuga de água. Venham já verificar, é urgente."
+    }
+  },
+  {
+    "id": "b2c2-med-l16-24",
+    "blockId": 10,
+    "lessonId": "b10-l1-registro-formal-informal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-reg-mitigacao"
+    ],
+    "tags": [
+      "lote16",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "b91d6f0ce560c3eb5d4a2bae6ab27e4c8bdf4003e1d4c53a06b4d57b5e328fd7",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 16 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Se calhar, e sem querer estar a incomodar, talvez pudesses ver, quando tiveres um bocadinho, se por acaso aquilo do pagamento ficou tratado.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "o mesmo colega, mas o prazo era ontem e a fatura vai a multa",
+      "instructionsEs": "El plazo pasó. Quita la atenuación entera y deja el dato y la consecuencia.",
+      "wordRange": {
+        "min": 12,
+        "max": 40
+      },
+      "rubric": [
+        "¿Sustituye «Se calhar» por «O prazo» (o un equivalente del registro de destino)?",
+        "¿Sustituye «sem querer estar a incomodar» por «era ontem» (o un equivalente del registro de destino)?",
+        "¿Sustituye «quando tiveres um bocadinho» por «hoje» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «pagamento»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "O prazo do pagamento era ontem e a partir de agora conta multa. Preciso que trates disso hoje e que me digas quando estiver feito."
+    }
   }
 ]

@@ -313,8 +313,19 @@ export const ITEMS: ItemMed[] = [
 // ── La rúbrica, DERIVADA ─────────────────────────────────────────────
 export function rubricaDe(x: ItemMed): string[] {
   const r: string[] = [];
-  for (const [de, a] of x.marcadores)
+  for (const [de, ...alt] of x.marcadores) {
+    // La casilla propone LA FORMA QUE EL MODELO USA, no la primera que yo
+    // declaré. Antes proponía `alt[0]`, y eso publicó tres casillas con
+    // «Informam-se que…» —agramatical: la pasiva impersonal con completiva
+    // va en singular— mientras sus propios modelos escribían «Informa-se».
+    // El alumno que obedecía la rúbrica escribía mal y la casilla lo
+    // aprobaba, que es el peor sitio donde puede estar un error.
+    //
+    // Derivarla del modelo hace esa clase IMPOSIBLE, en vez de vigilarla:
+    // el modelo es la respuesta trabajada y ya pasa todos los gates.
+    const a = alt.find((o) => contiene(x.modelo, o)) ?? alt[0];
     r.push(`¿Sustituye «${de}» por «${a}» (o un equivalente del registro de destino)?`);
+  }
   for (const d of x.datos) r.push(`¿Traslada el dato «${literal(d)}»?`);
   r.push('¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)');
   r.push('¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)');

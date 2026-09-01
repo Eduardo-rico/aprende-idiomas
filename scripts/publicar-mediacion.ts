@@ -17,8 +17,9 @@ import { BLOCKS_DIR } from './config';
 import { rubricaDe, verificar, type ItemMed } from './lotes/lote12-mediacion';
 import { ITEMS as L14 } from './lotes/lote14-mediacion';
 import { ITEMS as L15 } from './lotes/lote15-mediacion';
+import { ITEMS as L16 } from './lotes/lote16-mediacion';
 
-const LOTES: Record<string, ItemMed[]> = { '14': L14, '15': L15 };
+const LOTES: Record<string, ItemMed[]> = { '14': L14, '15': L15, '16': L16 };
 
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
 const lote = arg('--lote') ?? '';
