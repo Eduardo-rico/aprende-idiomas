@@ -224,7 +224,22 @@ for (const [id, n] of [...cuenta].filter(([id]) => ['C1', 'C2'].includes(nivelDe
 // `max(0, currículo − puntosConItems)` daba 0 para A2/B1/B2 (la
 // partición hizo más puntos que los que el currículo enumera) y por eso
 // cerrar un punto a cero en B1 no descontaba nada por ninguna vía.
-const PUNTOS_CURRICULO: Record<string, number> = { A1: 31, A2: 31, B1: 27, B2: 31, C1: 32, C2: 34 };
+// C1 y C2 NO llevan la cuenta del regex (32 y 34) sino la DICTAMINADA.
+// El recuento parte la prosa del currículo por comas y puntos y comas, y
+// en C1/C2 eso produce segmentos que no son puntos de enseñanza: ocho
+// comprensiones o producciones ORALES —a cero por decisión de Edu—,
+// nueve metas de vocabulario que se cubren leyendo, tres colas de frase
+// partidas por una coma («evaluada sobre transcripción.»), un objetivo
+// profesional y **cuatro trozos de prosa técnica del propio documento**
+// («'relay'|'summarise'|…», «fidelityAnchors: string[]}`»). Contarlos
+// metía **188 unidades de déficit inexistentes**, el 31 % del total.
+// El dictamen, punto a punto, en docs/plans/puntos-c1c2-dictamen.json;
+// el recuento, en `npx tsx scripts/dictamen-c1c2.ts`.
+// PENDIENTE: A1 declara 8 puntos sin empezar (64 unidades) y su
+// enumeración NO está dictaminada — puede tener el mismo sesgo.
+const DICT = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'docs/plans/puntos-c1c2-dictamen.json'), 'utf8'));
+const reales = (n: string) => (DICT[n] as { clase: string }[]).filter((x) => ['declarado', 'nuevo'].includes(x.clase)).length;
+const PUNTOS_CURRICULO: Record<string, number> = { A1: 31, A2: 31, B1: 27, B2: 31, C1: reales('C1'), C2: reales('C2') };
 console.log(`\n\n# LO QUE FALTA PARA CUBRIR — piso ${PISO}, contra los puntos que enumera el currículo\n`);
 console.log('| nivel | puntos currículo | puntos con corpus | puntos SIN empezar | déficit de los empezados | × piso los nuevos | FALTA |');
 console.log('|-------|-----------------:|------------------:|-------------------:|-------------------------:|------------------:|------:|');
@@ -260,8 +275,8 @@ const historico: { fecha: string; nota?: string; porPunto: PorPunto }[] =
 console.log('\n');
 if (historico.length) {
   const ultima = historico[historico.length - 1]!;
-  const r = reconciliar(ultima.porPunto, porPuntoAhora, PISO);
-  console.log(informe(r, PISO));
+  const r = reconciliar(ultima.porPunto, porPuntoAhora, (id) => pisoDe(nivelDe(id)));
+  console.log(informe(r, '8, C2 6'));
   console.log(`\n(foto anterior: ${ultima.fecha}${ultima.nota ? ' — ' + ultima.nota : ''})`);
   if (r.residuo !== 0) {
     console.log(`\n✗ RESIDUO ${r.residuo}: hay déficit sin explicar. No se cierra la sesión así.`);

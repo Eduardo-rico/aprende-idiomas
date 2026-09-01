@@ -327,6 +327,28 @@ const B11_CONCEPTS: Concept[] = [
   { id: 'b11-conectores-discursivos', name: 'Conectores de nivel discursivo', blockId: 11, description: 'Los que ordenan el texto y no la oración (não obstante, com efeito, isto é, ora bem, de resto, aliás, quando muito, tanto mais que): su régimen sintáctico y su registro, que el español reparte de otra manera', prereqs: [] },
   { id: 'b11-ser-estar-divergente', name: 'Ser y estar donde el español elige distinto', blockId: 11, description: 'Los usos en que la elección portuguesa no coincide con la española: los eventos van con SER (a reunião é às três), la nacionalidad y la profesión con SER aunque sean temporales, y el estado resultante con ESTAR', prereqs: [] },
   { id: 'b11-aspecto-tempo', name: 'Aspecto y tiempo sin calco', blockId: 11, description: 'Valores aspectuales que el español no traslada: pretérito perfeito composto durativo (no es "he hablado"), estar a + infinitivo frente a andar a + infinitivo, perífrasis de probabilidad', prereqs: [] },
+
+  // ── E2#17 · los puntos de C1 que el currículo enumera y nadie había
+  // declarado. NO son los 25 que decía la resta «32 − 7»: sacado el texto
+  // de cada segmento, ocho son comprensión o producción ORAL (a cero por
+  // decisión), cinco son metas de vocabulario que se cubren leyendo, y uno
+  // era la cola de una frase partida por una coma. Quedan éstos, que sí se
+  // enseñan y sí se ejercitan. Dictamen en docs/plans/puntos-c1c2-dictamen.json.
+  { id: 'b11-coloc-registro', name: 'Colocación como recurso de registro', blockId: 11, description: 'A C1 la colocación ya no se acierta, se ELIGE: cuándo la ênclise suena culta y cuándo pedante, cuándo la próclise sin atractor marca oralidad, y qué dice de un texto la mesóclise que nadie usa al hablar', prereqs: ['b8-colocacao-pronominal'] },
+  { id: 'b11-ordem-foco', name: 'Orden de constituyentes y foco', blockId: 11, description: 'El portugués coloca para informar: qué se antepone, qué se pospone y qué queda al final porque es lo nuevo — la ventaja del hispanohablante, cuya lengua ya lo hace, y las diferencias que le traicionan', prereqs: [] },
+  { id: 'b11-topico', name: 'Construcciones de tópico', blockId: 11, description: 'Sacar un elemento al frente como tema del que se habla («Esse livro, já o li»), con o sin retomada por clítico, y la frontera con la dislocación que el portugués no admite', prereqs: ['b11-ordem-foco'] },
+  { id: 'b11-imperfeito-valores', name: 'Valores del imperfeito', blockId: 11, description: 'Más allá del hábito y de la descripción: el imperfeito de cortesía, el lúdico, el de contrafactual coloquial («se soubesse, ia») y el narrativo — valores en los que el español no siempre acompaña', prereqs: ['b4-imperfeito'] },
+  { id: 'b11-haver-ter-existir', name: 'haver / ter / existir', blockId: 11, description: 'Los tres existenciales en el registro culto: «há» neutro, «existe» con concordancia y sabor escrito, «tem» brasileño — y por qué la elección es de registro y de variedad antes que de gramática', prereqs: ['b3-existenciais'] },
+  { id: 'b11-nominalizacao', name: 'Nominalización y estilo denso', blockId: 11, description: 'Convertir el verbo en nombre para comprimir la frase, que es como escribe la prensa y la administración portuguesas — y saber deshacerlo al leer', prereqs: [] },
+  { id: 'b11-pontuacao-sintatica', name: 'Puntuación como recurso sintáctico', blockId: 11, description: 'La coma que el portugués prohíbe entre sujeto y verbo, la que separa una explicativa de una especificativa, y los dos puntos y el punto y coma como articulación del período largo', prereqs: [] },
+  { id: 'b11-norma-culta-oral', name: 'Norma culta escrita frente a uso oral culto', blockId: 11, description: 'Lo que un portugués instruido escribe pero no dice, y lo que dice pero no escribiría: concordancias, clíticos, «a gente», y saber en qué lado del par está cada forma', prereqs: [] },
+  { id: 'b11-ironia-understatement', name: 'Ironía y understatement portugueses', blockId: 11, description: 'La atenuación que dice menos para significar más, el elogio que es reproche y el «não está mau» que es un elogio — leerlo y explicarlo, que es donde el hispanohablante se pierde', prereqs: [] },
+  { id: 'b11-alusao-cultural', name: 'Alusión cultural mínima', blockId: 11, description: 'Las referencias que un texto adulto da por sabidas: 25 de Abril, Estado Novo, o Império y la descolonización, saudade y fado, Camões, Pessoa, Saramago, Amália, a troika, a diáspora', prereqs: [] },
+  { id: 'b11-humor-autodepreciativo', name: 'Humor autodepreciativo', blockId: 11, description: 'Reírse de uno mismo y del propio país como forma de vínculo, y por qué responderlo con consuelo o con acuerdo entusiasta son las dos maneras de equivocarse', prereqs: [] },
+  { id: 'b11-descortesia-calculada', name: 'Descortesía calculada', blockId: 11, description: 'Ser cortante a propósito y con precisión: qué recursos marcan distancia deliberada sin ser groseros, y cómo se reconoce que lo son', prereqs: ['b10-registro'] },
+  { id: 'b11-jerarquias-profissionais', name: 'Gestión de jerarquías profesionales', blockId: 11, description: 'Cómo se dirige uno hacia arriba, hacia abajo y en horizontal en una empresa portuguesa: tratamiento, atenuación, quién escribe primero y qué se pide por escrito', prereqs: ['b10-reg-tratamento'] },
+  { id: 'b11-mediacao-especializada', name: 'Mediación de textos especializados', blockId: 11, description: 'Trasladar un texto técnico, jurídico o médico a alguien que no es del campo, sin perder el dato que importa ni fingir una precisión que no se tiene', prereqs: [] },
+  { id: 'b11-mediacao-intercultural', name: 'Mediación intercultural ES↔PT', blockId: 11, description: 'Mediar sabiendo cómo se percibe al hispanohablante en Portugal y que su español es a la vez ventaja y ruido: anticipar el malentendido y desactivarlo antes de que ocurra', prereqs: [] },
 ];
 
 const B11: Block = {
@@ -366,6 +388,20 @@ const B12_CONCEPTS: Concept[] = [
   { id: 'b12-mesoclise-estilistica', name: 'La mesóclise como recurso de estilo', blockId: 12, description: 'La mesóclise a C2 ya no es una forma obligada sino una elección de registro: cuándo un futuro o un condicional con clítico pide mesóclise, cuándo la próclise por atractor la desactiva y cuándo usarla suena a impostura', prereqs: ['b8-coloc-mesoclise'] },
   { id: 'b12-mqp-simples-literario', name: 'Mais-que-perfeito simples en narración', blockId: 12, description: 'El «falara» de la narración literaria frente al «tinha falado» corriente: valor, registro y los contextos en que el simples es la única forma natural', prereqs: [] },
   { id: 'b12-modo-pragmatico', name: 'Alternancias de modo con valor pragmático', blockId: 12, description: 'Los casos en que indicativo y conjuntivo son los dos gramaticales y lo que cambia es lo que el hablante da por sabido, por dudoso o por cortés — el modo como acto de habla, no como concordancia', prereqs: ['b6-contraste-indicativo-subjuntivo'] },
+
+  // ── E2#17 · los de C2, por el mismo dictamen. De los 26 que decía la
+  // resta «34 − 8» quedan ocho: siete eran orales, cuatro metas de
+  // vocabulario, dos colas de frase, uno un objetivo profesional — y
+  // CUATRO eran prosa técnica del propio documento que el separador
+  // convirtió en «puntos» («'relay'|'summarise'|…», «fidelityAnchors»).
+  { id: 'b12-derivacao-produtiva', name: 'Derivación productiva', blockId: 12, description: 'Crear palabra con los sufijos vivos del portugués —-agem, -ada, -ório, -ez, -ice— y que suene natural, que es lo que separa al que sabe la lengua del que sabe sus palabras', prereqs: [] },
+  { id: 'b12-repertorio-sociolinguistico', name: 'Repertorio sociolingüístico completo', blockId: 12, description: 'Moverse por todos los registros a voluntad y sostener cada uno: del despacho al café y del café al despacho, sin arrastrar marcas del anterior', prereqs: ['b10-registro'] },
+  { id: 'b12-humor-jogo-palavras', name: 'Humor y juego de palabras', blockId: 12, description: 'El chiste que vive en la doble lectura de una palabra o de una sintaxis, y la capacidad de explicarlo — que es la prueba de que se entendió', prereqs: [] },
+  { id: 'b12-descortesia-precisa', name: 'Descortesía con precisión', blockId: 12, description: 'Ofender exactamente lo que se quiere ofender y nada más: la diferencia entre el corte medido y el exabrupto, que a C2 ya es una elección técnica', prereqs: ['b11-descortesia-calculada'] },
+  { id: 'b12-ler-posicao-social', name: 'Leer la posición social por el habla', blockId: 12, description: 'Deducir origen, edad, clase y grado de instrucción de un hablante por sus marcas — y saber qué se hace con esa información y qué no', prereqs: [] },
+  { id: 'b12-cortesia-pt-br-es', name: 'Cortesía PT / BR / hispanoamericana, explicada', blockId: 12, description: 'La competencia específica del hispanohablante experto: no sólo cambiar de variedad sino EXPLICAR en qué se diferencian los tres sistemas de cortesía, como objeto de mediación profesional', prereqs: ['b10-var-tratamento'] },
+  { id: 'b12-traducao-literaria', name: 'Traducción literaria y de opinión', blockId: 12, description: 'Trasladar registro y efecto además de contenido: el texto que se juzga por cómo suena, no sólo por lo que dice', prereqs: [] },
+  { id: 'b12-mediacao-de-textos', name: 'Mediación de textos', blockId: 12, description: 'Mediación de textos en el sentido del Companion Volume: resumir, sintetizar fuentes que se contradicen y trasladar lo que importa a un destinatario concreto', prereqs: [] },
 ];
 
 const B12: Block = {

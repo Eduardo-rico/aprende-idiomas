@@ -46,7 +46,14 @@ export interface Reconciliacion {
 
 const deficitDe = (n: number, piso: number) => Math.max(0, piso - n);
 
-export function reconciliar(antes: PorPunto, ahora: PorPunto, piso = 12): Reconciliacion {
+/** `piso` acepta un número o una función POR PUNTO. La segunda forma
+ *  existe porque el proyecto tiene dos pisos desde E2#15 (C2 va a 6) y
+ *  esta función se llamaba con el plano: la reconciliación llevaba desde
+ *  entonces informando contra un piso que el resto del script no usa —
+ *  27 unidades de diferencia en E2#17, y creciendo con cada punto de C2.
+ *  El mismo defecto que el mapa bloque→nivel duplicado de E2#13. */
+export function reconciliar(antes: PorPunto, ahora: PorPunto, piso: number | ((id: string) => number) = 12): Reconciliacion {
+  const pisoDe = typeof piso === 'function' ? piso : () => piso;
   const ids = new Set([...Object.keys(antes), ...Object.keys(ahora)]);
   const puntosNuevos: Reconciliacion['puntosNuevos'] = [];
   const puntosDesaparecidos: Reconciliacion['puntosDesaparecidos'] = [];
@@ -55,17 +62,17 @@ export function reconciliar(antes: PorPunto, ahora: PorPunto, piso = 12): Reconc
   for (const id of [...ids].sort()) {
     const a = antes[id], b = ahora[id];
     if (a === undefined && b !== undefined) {
-      puntosNuevos.push({ id, items: b, deficit: deficitDe(b, piso) });
+      puntosNuevos.push({ id, items: b, deficit: deficitDe(b, pisoDe(id)) });
     } else if (a !== undefined && b === undefined) {
-      puntosDesaparecidos.push({ id, deficit: deficitDe(a, piso) });
+      puntosDesaparecidos.push({ id, deficit: deficitDe(a, pisoDe(id)) });
     } else if (a !== undefined && b !== undefined && a !== b) {
-      movidos.push({ id, antes: a, ahora: b, delta: deficitDe(b, piso) - deficitDe(a, piso) });
+      movidos.push({ id, antes: a, ahora: b, delta: deficitDe(b, pisoDe(id)) - deficitDe(a, pisoDe(id)) });
     }
   }
 
   const suma = (xs: number[]) => xs.reduce((x, y) => x + y, 0);
-  const deficitAntes = suma(Object.values(antes).map((n) => deficitDe(n, piso)));
-  const deficitAhora = suma(Object.values(ahora).map((n) => deficitDe(n, piso)));
+  const deficitAntes = suma(Object.entries(antes).map(([id, n]) => deficitDe(n, pisoDe(id))));
+  const deficitAhora = suma(Object.entries(ahora).map(([id, n]) => deficitDe(n, pisoDe(id))));
   const aporte = {
     nuevos: suma(puntosNuevos.map((p) => p.deficit)),
     desaparecidos: -suma(puntosDesaparecidos.map((p) => p.deficit)),
@@ -86,7 +93,7 @@ export function reconciliar(antes: PorPunto, ahora: PorPunto, piso = 12): Reconc
 
 /** El informe que la sesión tiene que pegar. Si el residuo no es cero,
  *  la línea lo grita: no se cierra una sesión con déficit sin explicar. */
-export function informe(r: Reconciliacion, piso = 12): string {
+export function informe(r: Reconciliacion, piso: number | string = 12): string {
   const L: string[] = [];
   L.push(`## Reconciliación del déficit (piso ${piso})`);
   L.push('');

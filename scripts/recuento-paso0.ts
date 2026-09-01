@@ -1,6 +1,23 @@
-// scripts/recuento-paso0.ts — el recuento del Paso 0 (E1), ahora repetible.
+// scripts/recuento-paso0.ts — DEROGADO. Mide contra dos metas que ya no
+// son las del proyecto, y sus cifras («faltan 3.604», «1.580 de
+// mediación») invitan a un plan que Edu descartó.
 //
-//   npx tsx scripts/recuento-paso0.ts
+//   npx tsx scripts/recuento-paso0.ts --historico
+//
+// **La meta vigente es COBERTURA, no volumen**: ≥8 ítems por punto
+// (C2: 6). El número del proyecto es FALTA, y sale de
+// `npx tsx scripts/split-conceptos.ts`. Este script sigue aquí porque su
+// burn-down por destreza es el único que existe y sirve para mirar atrás,
+// pero **no se usa para decidir**.
+//
+// Se deroga por un tropiezo real: en E2#17 el coordinador lo corrió y por
+// un momento se creyó el 3.604. Un script que imprime una cifra derogada
+// sin decirlo es una trampa con fecha de caducidad.
+//
+// AVISO ADEMÁS: su `BLOQUE_A_NIVEL` es una COPIA y le falta el bloque 12,
+// así que todo C2 cae fuera de sus tablas. Es la tercera copia de ese
+// mapa que se desincroniza (E2#13: split-conceptos; E2#16: la regla de
+// hiato). Si alguien lo reactiva, que lo importe del currículo.
 //
 // Compara el corpus real contra lo que pide el currículo
 // (docs/plans/2026-07-28-curriculos-completos.md §Portugués, ya
@@ -10,6 +27,17 @@
 // dependa de que alguien rehaga el cálculo.
 import fs from 'node:fs';
 import path from 'node:path';
+
+if (!process.argv.includes('--historico')) {
+  console.log('\n  ⚠  `recuento-paso0.ts` está DEROGADO.\n');
+  console.log('  Mide contra la meta de VOLUMEN (6.300 ejercicios) y contra el bucket');
+  console.log('  de 1.580 de mediación. Las dos las descartó Edu en E2#15: la meta');
+  console.log('  vigente es COBERTURA — ≥8 ítems por punto, C2 6.\n');
+  console.log('  El número del proyecto es FALTA:  npx tsx scripts/split-conceptos.ts\n');
+  console.log('  Si aun así quieres el burn-down histórico por destreza, repite con');
+  console.log('  --historico y trata sus cifras como arqueología, no como plan.\n');
+  process.exit(0);
+}
 
 const BLOQUE_A_NIVEL: Record<number, string> = {
   1: 'A1', 2: 'A2', 3: 'A2', 4: 'B1', 5: 'B1', 6: 'B2',

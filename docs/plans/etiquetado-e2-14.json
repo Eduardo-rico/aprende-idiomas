@@ -1,126 +1,276 @@
 {
-  "_criterio": "E2#14 · barrido de etiquetado. Cada ítem se decide por lo que ENSEÑA, no por su lección ni por la propuesta automática. En un juicio de gramaticalidad el punto es el TRAMO QUE CAMBIA entre sentence y repair; en un BIEN, la construcción que exhibe. `null` = revisado y sin punto declarado que le corresponda: es una decisión, no un olvido.",
-
-  "_mal_hispanismo_lexico": "doce juicios que condenan una palabra española inexistente en portugués. Motivaron declarar b9-lexico-anti-calco.",
-  "b2c2-gj-l3-14": ["b9-lexico-anti-calco"],
-  "b2c2-gj-l3-19": ["b9-lexico-anti-calco"],
-  "b2c2-gj-l3-20": ["b9-lexico-anti-calco"],
-  "b2c2-gj-l4-05": ["b9-lexico-anti-calco"],
-  "b2c2-gj-l4-11": ["b9-lexico-anti-calco"],
-  "b2c2-gj-l1-10": ["b9-lexico-anti-calco"],
-  "b2c2-gj-l1-15": ["b9-lexico-anti-calco"],
-  "b2c2-gj-l2-02": ["b9-lexico-anti-calco"],
-  "b2c2-gj-l2-12": ["b9-lexico-anti-calco"],
-  "b2c2-gj-l3-04": ["b9-lexico-anti-calco"],
-  "b2c2-gj-l3-06": ["b9-lexico-anti-calco"],
-  "b2c2-gj-l3-09": ["b9-lexico-anti-calco"],
-  "b2c2-gj-l3-17": ["b9-lexico-anti-calco"],
-  "b2c2-gj-l1-07": ["b9-lexico-anti-calco"],
-
-  "_mal_falso_amigo": "la palabra SÍ existe en portugués, con otro sentido — el punto los nombra uno a uno",
-  "b2c2-gj-l1-03": ["b11-falsos-amigos"],
-  "b2c2-gj-l1-18": ["b11-falsos-amigos"],
-  "b2c2-gj-l2-05": ["b11-falsos-amigos"],
-  "b2c2-gj-l2-08": ["b11-falsos-amigos"],
-  "b2c2-gj-l2-16": ["b11-falsos-amigos"],
-
-  "_mal_gramatica": "el tramo que el repair corrige dice el punto",
-  "b2c2-gj-01": ["b5-perifrastico-ir"],
-  "b2c2-gj-03": ["reg-verbal-de"],
-  "b2c2-gj-04": ["b2-dem-contracciones"],
-  "b2c2-gj-l1-02": ["reg-verbal-a"],
-  "b2c2-gj-l1-08": ["b2-art-contr-a-por"],
-  "b2c2-gj-l1-14": ["reg-verbal-com"],
-  "b2c2-gj-l1-16": ["b8-indireto-interrogativa"],
-  "b2c2-gj-l2-09": ["reg-verbal-a"],
-  "b2c2-gj-l2-11": ["b2-poss-com-artigo"],
-  "b2c2-gj-l2-17": ["b3-pron-reflexivo"],
-  "b2c2-gj-l2-19": ["b8-coloc-enclise"],
-  "b2c2-gj-l3-01": ["b6-contr-talvez"],
-  "b2c2-gj-l3-12": ["b8-sub-substantivas"],
-  "b2c2-gj-l4-01": ["b3-pron-reflexivo"],
-  "b2c2-gj-l4-07": ["b11-morfologia-enganosa"],
-  "b2c2-gj-l4-12": ["b7-part-passiva"],
-  "b2c2-gj-l4-19": ["b10-var-colocacao"],
-  "b2c2-gj-l4-02": null,
-
-  "_bien": "la construcción que exhiben; los tres que no la exhiben con claridad van a null",
-  "b2c2-gj-02": ["b8-sub-concessivas"],
-  "b2c2-gj-l1-04": ["reg-verbal-por-para"],
-  "b2c2-gj-l1-06": ["b8-coloc-infinitivo"],
-  "b2c2-gj-l1-11": ["b2-poss-com-artigo"],
-  "b2c2-gj-l1-12": ["b10-reg-mitigacao"],
-  "b2c2-gj-l1-13": ["b3-imper-negativo"],
-  "b2c2-gj-l1-17": ["reg-verbal-a"],
-  "b2c2-gj-l1-19": ["reg-verbal-a"],
-  "b2c2-gj-l1-20": ["b8-coloc-enclise"],
-  "b2c2-gj-l2-01": ["b8-coloc-proclise-adverbio"],
-  "b2c2-gj-l2-03": ["b2-poss-formas"],
-  "b2c2-gj-l2-06": ["b5-perifrastico-ir"],
-  "b2c2-gj-l2-07": ["b8-coloc-infinitivo"],
-  "b2c2-gj-l2-10": ["b8-coloc-enclise"],
-  "b2c2-gj-l2-13": ["b8-sub-concessivas"],
-  "b2c2-gj-l2-14": ["b3-exist-ser-estar"],
-  "b2c2-gj-l2-15": ["b6-fut-subj-quando"],
-  "b2c2-gj-l2-18": ["b8-coloc-infinitivo"],
-  "b2c2-gj-l2-20": ["reg-verbal-de"],
-  "b2c2-gj-l3-02": ["b8-coloc-infinitivo"],
-  "b2c2-gj-l3-05": ["b6-imperf-subj-correlacao"],
-  "b2c2-gj-l3-08": ["b7-inf-pess-impessoais"],
-  "b2c2-gj-l3-11": ["reg-verbal-de"],
-  "b2c2-gj-l3-13": ["b8-coloc-mesoclise"],
-  "b2c2-gj-l3-16": ["b10-reg-mitigacao"],
-  "b2c2-gj-l3-18": ["b3-pron-reflexivo"],
-  "b2c2-gj-l4-03": ["b3-pron-directo"],
-  "b2c2-gj-l4-04": ["reg-verbal-com"],
-  "b2c2-gj-l4-06": ["b2-dem-contracciones"],
-  "b2c2-gj-l4-09": ["b10-reg-formulas"],
-  "b2c2-gj-l4-10": ["b8-coloc-enclise"],
-  "b2c2-gj-l4-13": ["reg-verbal-em"],
-  "b2c2-gj-l4-15": ["b8-coloc-infinitivo"],
-  "b2c2-gj-l4-16": ["b3-pron-indirecto"],
-  "b2c2-gj-l1-09": null,
-  "b2c2-gj-l3-10": null,
-  "b2c2-gj-l3-15": null,
-
-  "_mediacion_que_SI_enseña_un_punto": "reformulate_register y cross_variety: lo que piden al alumno ES el punto",
-  "b2c2-med-02": ["b10-reg-tratamento"],
-  "b2c2-med-04": ["b10-reg-tratamento"],
-  "b2c2-med-14": ["b10-reg-formulas"],
-  "b2c2-med-18": ["b10-reg-tratamento"],
-  "b2c2-med-24": ["b10-reg-tratamento"],
-  "b2c2-med-05": ["b10-var-lexico"],
-  "b2c2-med-11": ["b10-var-tratamento"],
-  "b2c2-med-17": ["b10-var-tratamento"],
-  "b2c2-med-23": ["b10-var-lexico"],
-
-  "_mediacion_sin_punto_de_gramatica": "summarise, relay y explain_concept sobre fuente literaria: son tareas de MEDIACIÓN, que el proyecto cuenta en otro bucket (139/230). No cubren ningún punto de los 186 y etiquetarlas en uno sería inflarlo.",
-  "b2c2-med-01": null,
-  "b2c2-med-03": null,
-  "b2c2-med-06": null,
-  "b2c2-med-07": null,
-  "b2c2-med-08": null,
-  "b2c2-med-09": null,
-  "b2c2-med-10": null,
-  "b2c2-med-12": null,
-  "b2c2-med-13": null,
-  "b2c2-med-15": null,
-  "b2c2-med-16": null,
-  "b2c2-med-19": null,
-  "b2c2-med-20": null,
-  "b2c2-med-21": null,
-  "b2c2-med-22": null,
-  "b2c2-med-25": null,
-  "b2c2-med-26": null,
-
-  "_flashcards_lexico_tematico": "vocabulario de restaurante. El eje de conceptos LÉXICOS no existe (E2#10 ya midió 559 ítems así). Declararlas en un punto gramatical sería la enfermedad de b5-futuro-composto.",
-  "0adafc0d": null,
-  "106f67a3": null,
-  "1c539301": null,
-  "43a7d809": null,
-  "6881454f": null,
-  "9ad13402": null,
-  "ae8344a9": null,
-  "b1d39f83": null,
-  "d821dd14": null
+ "_criterio": "E2#14 · barrido de etiquetado. Cada ítem se decide por lo que ENSEÑA, no por su lección ni por la propuesta automática. En un juicio de gramaticalidad el punto es el TRAMO QUE CAMBIA entre sentence y repair; en un BIEN, la construcción que exhibe. `null` = revisado y sin punto declarado que le corresponda: es una decisión, no un olvido.",
+ "_mal_hispanismo_lexico": "doce juicios que condenan una palabra española inexistente en portugués. Motivaron declarar b9-lexico-anti-calco.",
+ "b2c2-gj-l3-14": [
+  "b9-lexico-anti-calco"
+ ],
+ "b2c2-gj-l3-19": [
+  "b9-lexico-anti-calco"
+ ],
+ "b2c2-gj-l3-20": [
+  "b9-lexico-anti-calco"
+ ],
+ "b2c2-gj-l4-05": [
+  "b9-lexico-anti-calco"
+ ],
+ "b2c2-gj-l4-11": [
+  "b9-lexico-anti-calco"
+ ],
+ "b2c2-gj-l1-10": [
+  "b9-lexico-anti-calco"
+ ],
+ "b2c2-gj-l1-15": [
+  "b9-lexico-anti-calco"
+ ],
+ "b2c2-gj-l2-02": [
+  "b9-lexico-anti-calco"
+ ],
+ "b2c2-gj-l2-12": [
+  "b9-lexico-anti-calco"
+ ],
+ "b2c2-gj-l3-04": [
+  "b9-lexico-anti-calco"
+ ],
+ "b2c2-gj-l3-06": [
+  "b9-lexico-anti-calco"
+ ],
+ "b2c2-gj-l3-09": [
+  "b9-lexico-anti-calco"
+ ],
+ "b2c2-gj-l3-17": [
+  "b9-lexico-anti-calco"
+ ],
+ "b2c2-gj-l1-07": [
+  "b9-lexico-anti-calco"
+ ],
+ "_mal_falso_amigo": "la palabra SÍ existe en portugués, con otro sentido — el punto los nombra uno a uno",
+ "b2c2-gj-l1-03": [
+  "b11-falsos-amigos"
+ ],
+ "b2c2-gj-l1-18": [
+  "b11-falsos-amigos"
+ ],
+ "b2c2-gj-l2-05": [
+  "b11-falsos-amigos"
+ ],
+ "b2c2-gj-l2-08": [
+  "b11-falsos-amigos"
+ ],
+ "b2c2-gj-l2-16": [
+  "b11-falsos-amigos"
+ ],
+ "_mal_gramatica": "el tramo que el repair corrige dice el punto",
+ "b2c2-gj-01": [
+  "b5-perifrastico-ir"
+ ],
+ "b2c2-gj-03": [
+  "reg-verbal-de"
+ ],
+ "b2c2-gj-04": [
+  "b2-dem-contracciones"
+ ],
+ "b2c2-gj-l1-02": [
+  "reg-verbal-a"
+ ],
+ "b2c2-gj-l1-08": [
+  "b2-art-contr-a-por"
+ ],
+ "b2c2-gj-l1-14": [
+  "reg-verbal-com"
+ ],
+ "b2c2-gj-l1-16": [
+  "b8-indireto-interrogativa"
+ ],
+ "b2c2-gj-l2-09": [
+  "reg-verbal-a"
+ ],
+ "b2c2-gj-l2-11": [
+  "b2-poss-com-artigo"
+ ],
+ "b2c2-gj-l2-17": [
+  "b3-pron-reflexivo"
+ ],
+ "b2c2-gj-l2-19": [
+  "b8-coloc-enclise"
+ ],
+ "b2c2-gj-l3-01": [
+  "b6-contr-talvez"
+ ],
+ "b2c2-gj-l3-12": [
+  "b8-sub-substantivas"
+ ],
+ "b2c2-gj-l4-01": [
+  "b3-pron-reflexivo"
+ ],
+ "b2c2-gj-l4-07": [
+  "b11-morfologia-enganosa"
+ ],
+ "b2c2-gj-l4-12": [
+  "b7-part-passiva"
+ ],
+ "b2c2-gj-l4-19": [
+  "b10-var-colocacao"
+ ],
+ "b2c2-gj-l4-02": null,
+ "_bien": "la construcción que exhiben; los tres que no la exhiben con claridad van a null",
+ "b2c2-gj-02": [
+  "b8-sub-concessivas"
+ ],
+ "b2c2-gj-l1-04": [
+  "reg-verbal-por-para"
+ ],
+ "b2c2-gj-l1-06": [
+  "b8-coloc-infinitivo"
+ ],
+ "b2c2-gj-l1-11": [
+  "b2-poss-com-artigo"
+ ],
+ "b2c2-gj-l1-12": [
+  "b10-reg-mitigacao"
+ ],
+ "b2c2-gj-l1-13": [
+  "b3-imper-negativo"
+ ],
+ "b2c2-gj-l1-17": [
+  "reg-verbal-a"
+ ],
+ "b2c2-gj-l1-19": [
+  "reg-verbal-a"
+ ],
+ "b2c2-gj-l1-20": [
+  "b8-coloc-enclise"
+ ],
+ "b2c2-gj-l2-01": [
+  "b8-coloc-proclise-adverbio"
+ ],
+ "b2c2-gj-l2-03": [
+  "b2-poss-formas"
+ ],
+ "b2c2-gj-l2-06": [
+  "b5-perifrastico-ir"
+ ],
+ "b2c2-gj-l2-07": [
+  "b8-coloc-infinitivo"
+ ],
+ "b2c2-gj-l2-10": [
+  "b8-coloc-enclise"
+ ],
+ "b2c2-gj-l2-13": [
+  "b8-sub-concessivas"
+ ],
+ "b2c2-gj-l2-14": [
+  "b3-exist-ser-estar"
+ ],
+ "b2c2-gj-l2-15": [
+  "b6-fut-subj-quando"
+ ],
+ "b2c2-gj-l2-18": [
+  "b8-coloc-infinitivo"
+ ],
+ "b2c2-gj-l2-20": [
+  "reg-verbal-de"
+ ],
+ "b2c2-gj-l3-02": [
+  "b8-coloc-infinitivo"
+ ],
+ "b2c2-gj-l3-05": [
+  "b6-imperf-subj-correlacao"
+ ],
+ "b2c2-gj-l3-08": [
+  "b7-inf-pess-impessoais"
+ ],
+ "b2c2-gj-l3-11": [
+  "reg-verbal-de"
+ ],
+ "b2c2-gj-l3-13": [
+  "b8-coloc-mesoclise"
+ ],
+ "b2c2-gj-l3-16": [
+  "b10-reg-mitigacao"
+ ],
+ "b2c2-gj-l3-18": [
+  "b3-pron-reflexivo"
+ ],
+ "b2c2-gj-l4-03": [
+  "b3-pron-directo"
+ ],
+ "b2c2-gj-l4-04": [
+  "reg-verbal-com"
+ ],
+ "b2c2-gj-l4-06": [
+  "b2-dem-contracciones"
+ ],
+ "b2c2-gj-l4-09": [
+  "b10-reg-formulas"
+ ],
+ "b2c2-gj-l4-10": [
+  "b8-coloc-enclise"
+ ],
+ "b2c2-gj-l4-13": [
+  "reg-verbal-em"
+ ],
+ "b2c2-gj-l4-15": [
+  "b8-coloc-infinitivo"
+ ],
+ "b2c2-gj-l4-16": [
+  "b3-pron-indirecto"
+ ],
+ "b2c2-gj-l1-09": null,
+ "b2c2-gj-l3-10": null,
+ "b2c2-gj-l3-15": null,
+ "_mediacion_que_SI_enseña_un_punto": "reformulate_register y cross_variety: lo que piden al alumno ES el punto",
+ "b2c2-med-02": [
+  "b10-reg-tratamento"
+ ],
+ "b2c2-med-04": [
+  "b10-reg-tratamento"
+ ],
+ "b2c2-med-14": [
+  "b10-reg-formulas"
+ ],
+ "b2c2-med-18": [
+  "b10-reg-tratamento"
+ ],
+ "b2c2-med-24": [
+  "b10-reg-tratamento"
+ ],
+ "b2c2-med-05": [
+  "b10-var-lexico"
+ ],
+ "b2c2-med-11": [
+  "b10-var-tratamento"
+ ],
+ "b2c2-med-17": [
+  "b10-var-tratamento"
+ ],
+ "b2c2-med-23": [
+  "b10-var-lexico"
+ ],
+ "_mediacion_sin_punto_de_gramatica": "summarise, relay y explain_concept sobre fuente literaria: son tareas de MEDIACIÓN, que el proyecto cuenta en otro bucket (139/230). No cubren ningún punto de los 186 y etiquetarlas en uno sería inflarlo.",
+ "b2c2-med-01": null,
+ "b2c2-med-03": null,
+ "b2c2-med-06": null,
+ "b2c2-med-07": null,
+ "b2c2-med-09": null,
+ "b2c2-med-10": null,
+ "b2c2-med-12": null,
+ "b2c2-med-13": null,
+ "b2c2-med-15": null,
+ "b2c2-med-16": null,
+ "b2c2-med-19": null,
+ "b2c2-med-20": null,
+ "b2c2-med-21": null,
+ "b2c2-med-22": null,
+ "b2c2-med-25": null,
+ "b2c2-med-26": null,
+ "_flashcards_lexico_tematico": "vocabulario de restaurante. El eje de conceptos LÉXICOS no existe (E2#10 ya midió 559 ítems así). Declararlas en un punto gramatical sería la enfermedad de b5-futuro-composto.",
+ "0adafc0d": null,
+ "106f67a3": null,
+ "1c539301": null,
+ "43a7d809": null,
+ "6881454f": null,
+ "9ad13402": null,
+ "ae8344a9": null,
+ "b1d39f83": null,
+ "d821dd14": null
 }
