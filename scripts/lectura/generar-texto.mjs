@@ -11,8 +11,13 @@
 //   la lección más cara ya pagada: nada original se publica sin pasar
 //   por el lingüista adversarial de su lengua.
 // Sin los campos de su vía, no se escribe nada.
+//
+// El gate y la construcción de párrafos viven en `gate-procedencia.mjs`
+// desde la Ola E3: la ingesta por tandas usa EXACTAMENTE los mismos, y
+// dos copias de un gate son dos gates.
 import fs from 'node:fs';
 import path from 'node:path';
+import { verificarProcedencia, construirParrafos } from './gate-procedencia.mjs';
 
 const [, , entrada, salidaJson] = process.argv;
 if (!entrada || !salidaJson) {
@@ -21,24 +26,10 @@ if (!entrada || !salidaJson) {
 }
 
 const META = JSON.parse(fs.readFileSync(path.join(path.dirname(entrada), 'meta.json'), 'utf8'));
-const campos = META.original === true
-  ? ['titulo', 'autor', 'nivel', 'revisadoPor', 'fechaRevision']
-  : ['titulo', 'autor', 'muerteAutor', 'fuenteUrl', 'nivel'];
-for (const campo of campos) {
-  if (!META[campo]) { console.error(`meta.json sin «${campo}» — el gate de procedencia no negocia.`); process.exit(1); }
-}
+try { verificarProcedencia(META); }
+catch (e) { console.error(e.message.replace('meta sin', 'meta.json sin')); process.exit(1); }
 
-// Igual que el generador karaoke: bloques separados por línea en blanco,
-// con los cortes duros de ~70 columnas desenrollados. EXCEPTO cuando el
-// meta declara `versos: true` (poesía): ahí el salto de línea interno es
-// forma, no accidente de Gutenberg, y se conserva.
-const parrafos = fs.readFileSync(entrada, 'utf8')
-  .split(/\n\s*\n/)
-  .map((p) => META.versos === true
-    ? p.split('\n').map((l) => l.trim()).filter(Boolean).join('\n')
-    : p.replace(/\s*\n\s*/g, ' ').trim())
-  .filter((p) => p.length > 0)
-  .map((texto) => ({ texto }));
+const parrafos = construirParrafos(fs.readFileSync(entrada, 'utf8'), META);
 
 if (parrafos.length === 0) { console.error('el TXT no tiene párrafos — nada que publicar.'); process.exit(1); }
 
