@@ -98,6 +98,7 @@ for (const [eje, comando] of [
   ['Suite + typecheck', 'npx vitest run && npx tsc --noEmit'],
   ['Contenido y audio', 'npx tsx scripts/verify-content.ts && npx tsx scripts/check-audio-stale.ts'],
   ['Gates de virginidad', 'npx tsx scripts/check-virginidad.ts --strict'],
+  ['Glosas de acentuación', 'npx tsx scripts/check-acentuacion.ts --strict'],
   ['Build real', 'npx next build'],
   ['Smoke E2E', 'npx playwright test'],
   ['Backlog de producción', 'a mano: duplicados, b7-gerundio, med-20, flashcards viejos, MDX b8'],
