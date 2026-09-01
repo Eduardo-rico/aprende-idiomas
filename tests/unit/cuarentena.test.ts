@@ -11,6 +11,8 @@
 // no usa fixtures.
 import { describe, it, expect } from 'vitest';
 import { loadBlock, loadAllBlocks } from '@/lib/data/loaders';
+import fs from 'node:fs';
+import path from 'node:path';
 
 interface ItemConEstado {
   id?: string;
@@ -101,5 +103,34 @@ describe('cuarentena — puerta de servicio', () => {
     const servidos = (await loadAllBlocks('pt')) as ItemConEstado[];
     expect(servidos.some((x) => x?.variantStatus === 'unchecked')).toBe(true);
     expect(servidos.some((x) => x?.variantStatus === 'divergent')).toBe(true);
+  });
+});
+
+// ── E2#29: retirar algo exige DECIR POR QUÉ ───────────────────────────
+//
+// El gate de cierre pedía «cero needs-human», y esa meta quedó derogada
+// cuando Edu aprobó la cuarentena por excedente en E2#22: 1.161 ítems
+// retirados a propósito no son deuda, son la decisión funcionando. Pero al
+// re-etiquetar la línea hay que sustituir el número por un INVARIANTE que
+// no se pueda ganar cuarentenando — y ése es que cada retirada lleve su
+// motivo escrito EN EL PROPIO ÍTEM.
+//
+// Es lo que hizo falta cuando la reversibilidad se probó y salieron 100
+// ítems de la cuarentena vieja SIN motivo: la razón vivía en un comentario
+// de `loaders.ts` y no se podían deshacer caso a caso.
+describe('nada se retira ni se aparca sin decir por qué', () => {
+  const dir = path.join(process.cwd(), 'lib/data/languages/pt/blocks');
+  const todos = fs.readdirSync(dir).filter((f) => /^b\d+\.json$/.test(f))
+    .flatMap((f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')) as
+      { id: string; variantStatus?: string; variantVerificacion?: string }[]);
+  const conMotivo = (x: { variantVerificacion?: string }) => String(x.variantVerificacion ?? '').trim() !== '';
+
+  it('todo ítem en cuarentena lleva su motivo', () => {
+    const mudos = todos.filter((x) => x.variantStatus === 'needs-human' && !conMotivo(x));
+    expect(mudos.slice(0, 5).map((x) => x.id)).toEqual([]);
+  });
+  it('todo ítem sin dictaminar lleva escrito a qué espera', () => {
+    const mudos = todos.filter((x) => (x.variantStatus ?? 'unchecked') === 'unchecked' && !conMotivo(x));
+    expect(mudos.slice(0, 5).map((x) => x.id)).toEqual([]);
   });
 });

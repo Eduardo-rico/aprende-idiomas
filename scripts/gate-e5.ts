@@ -103,12 +103,39 @@ L.push({ eje: 'Lecciones de b11', medido: `${b11?.lessons.length ?? 0}`, meta: '
   pasa: (b11?.lessons.length ?? 0) >= 6, comando: 'npx tsx scripts/gate-e5.ts' });
 
 // ── 5 · Triaje de variante ───────────────────────────────────────────
-const est = new Map<string, number>();
-for (const x of items) if (x.variantStatus) est.set(x.variantStatus, (est.get(x.variantStatus) ?? 0) + 1);
-const unchecked = est.get('unchecked') ?? 0;
-const sinResolver = (est.get('needs-human') ?? 0) + (est.get('divergent') ?? 0);
-L.push({ eje: 'Corpus sin triar', medido: `${unchecked} unchecked · ${sinResolver} needs-human/divergent`,
-  meta: 'cero de los dos', pasa: unchecked === 0 && sinResolver === 0, comando: 'npx tsx scripts/triage-variante.ts' });
+//
+// LA META «CERO needs-human» QUEDÓ DEROGADA cuando Edu aprobó la
+// cuarentena por excedente en E2#22: **1.161 ítems retirados a propósito
+// no son deuda, son la decisión funcionando**. Un gate que los cuenta como
+// pendientes dice que faltan mil ciento sesenta y un arreglos, y eso es
+// falso. Es el tercer caso de la misma familia en este proyecto —
+// `recuento-paso0` midiendo contra los 6.300 derogados, y esta misma
+// checklist pidiendo un piso de 12 que llevaba semanas en 8—, y se cura
+// igual: **no se borra la línea, se re-etiqueta**.
+//
+// Y `divergent` no pintaba nada aquí: son divergencias VERIFICADAS con su
+// override, o sea selladas. Contarlas como «sin triar» era falso de
+// entrada, no sólo desactualizado.
+//
+// El veredicto pasa a colgar del único número que significa «esto no lo ha
+// mirado nadie»: **ítems sin estado resuelto Y SIN MOTIVO ESCRITO**. Es un
+// invariante que no se puede ganar cuarentenando, porque cuarentenar exige
+// escribir el porqué — y si alguien retira algo sin decir por qué, salta.
+const conMotivo = (x: any) => String(x.variantVerificacion ?? '').trim() !== '';
+const enCuarentena = items.filter((x) => x.variantStatus === 'needs-human');
+const porMotivo = (re: RegExp) => enCuarentena.filter((x) => re.test(String(x.variantVerificacion ?? ''))).length;
+const excedente = porMotivo(/excedente/i);
+const rotos = porMotivo(/rehacer|roto|irreparable/i);
+const olasPrevias = enCuarentena.length - excedente - rotos;
+const sinDictamen = items.filter((x) => (x.variantStatus ?? 'unchecked') === 'unchecked');
+const esperandoAEdu = sinDictamen.filter(conMotivo).length;
+// Lo ÚNICO que cuenta para el veredicto.
+const sinMirar = sinDictamen.filter((x) => !conMotivo(x)).length + enCuarentena.filter((x) => !conMotivo(x)).length;
+
+L.push({ eje: 'Triaje de variante',
+  medido: `sin mirar: ${sinMirar} · parados en el oído de Edu: ${esperandoAEdu} · retirados por decisión: ${enCuarentena.length}`,
+  meta: 'cero sin mirar', pasa: sinMirar === 0, comando: 'npx tsx scripts/triage-variante.ts',
+  nota: `**Los ${enCuarentena.length} retirados NO son deuda: son decisiones, y cada uno lleva su motivo escrito en el propio ítem.** ${excedente} son el excedente que Edu aprobó retirar en E2#22 —sobraban para su punto, y su tasa medida de error era ~45 %—, ${olasPrevias} vienen de la cuarentena de olas anteriores (Ola V, el dictamen de «você» de E2#11, la regla-inerte) y ${rotos} son irreparables declarados. La meta «cero needs-human» quedó derogada con la decisión de E2#22 y contarlos como pendientes hace leer que faltan mil arreglos. Los ${esperandoAEdu} parados son los pares mínimos de \`escucha\`: **no se sellan a propósito**, porque la pregunta es si la VOZ realiza el rasgo europeo y eso sólo lo contesta el oído de Edu — sellarlos afirmaría justo lo que está en duda. Su déficit ya sale, una sola vez, en la línea de cobertura. Y los ${items.filter((x: any) => x.variantStatus === 'divergent').length} \`divergent\` no aparecen aquí porque están SELLADOS: son divergencias verificadas con su override.` });
 
 // ── 6 · Lo que este script no mide ───────────────────────────────────
 for (const [eje, comando] of [
