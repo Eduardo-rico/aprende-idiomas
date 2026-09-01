@@ -24,12 +24,13 @@ import { rubricaDe as rubricaExplica, verificar as verificarExplica, type ItemEx
 import { ITEMS as L17 } from './lotes/lote17-explicar';
 import { ITEMS as L18 } from './lotes/lote18-explicar';
 import { ITEMS as L20 } from './lotes/lote20-explicar';
+import { ITEMS as L29 } from './lotes/lote29-explicar';
 
 const LOTES: Record<string, ItemMed[]> = { '14': L14, '15': L15, '16': L16, '19': L19, '21': L21 };
 // La familia EXPLICAR tiene otra forma y otros gates. Se publica por la
 // misma puerta —el orden del contrato es el mismo, validar todo antes de
 // escribir nada— pero no se le fuerza la plantilla de registro.
-const LOTES_EXPLICA: Record<string, ItemExplica[]> = { '17': L17, '18': L18, '20': L20 };
+const LOTES_EXPLICA: Record<string, ItemExplica[]> = { '17': L17, '18': L18, '20': L20, '29': L29 };
 
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
 const lote = arg('--lote') ?? '';
