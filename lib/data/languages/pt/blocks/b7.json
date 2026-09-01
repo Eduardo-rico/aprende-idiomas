@@ -2816,12 +2816,12 @@
       "irregular",
       "ter/haver"
     ],
-    "contentHash": "90ad9daaf970ad2ce9fc4a2de3909b48c974d520b0e62b2c0a1f87e109bcd86e",
+    "contentHash": "7eb5f306e7274b16a485cd6c647ea398797e7d7f5ddcb9a70595e7baadd1ad4f",
     "esContrast": "Em PT-BR, o particípio com ter é invariável; em PT-PT, concorda em número.",
     "variantStatus": "divergent",
     "type": "fill_blank",
     "data": {
-      "sentence": "Ela já ___ três livros este ano.",
+      "sentence": "Ela já tem ___ três livros este ano.",
       "blanks": [
         {
           "position": 0,
@@ -2830,7 +2830,8 @@
             "escrita"
           ]
         }
-      ]
+      ],
+      "hintEs": "particípio de «escrever», concordando con «três livros»"
     },
     "variantOverrides": {
       "pt-br": {
@@ -3700,7 +3701,7 @@
       "b7-inf-pess-contraste"
     ],
     "tags": [],
-    "contentHash": "c51d084bb1171d1bf1229e4d70bf6b6ef0c65b4a678542edb5618a7bfaba388a",
+    "contentHash": "1afba287caa4bc90023bd8909780d560ae26e91d91fb17912182bc1eae1aa38f",
     "esContrast": "En español usarías subjuntivo: 'si ir o no'. En portugués puedes decir 'sei se ir' con infinitivo pessoal.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
@@ -3711,10 +3712,12 @@
           "position": 0,
           "answer": "ir",
           "alternatives": [
-            "ir eu"
+            "ir eu",
+            "vou"
           ]
         }
-      ]
+      ],
+      "hintEs": "«¿voy o no voy?» — en infinitivo"
     }
   },
   {

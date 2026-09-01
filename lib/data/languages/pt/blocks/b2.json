@@ -136,7 +136,7 @@
       "b2-possessivos"
     ],
     "tags": [],
-    "contentHash": "0478585d030ea20910bd9eb383a43ba3fe7fe6133ace9ca1d169a3efbc4ede1f",
+    "contentHash": "4752d5df8fb1f94925efaac3efb9327504e5a7f96347daa718c38e70a8bfd9a7",
     "esContrast": "nossos = nuestros. En PT-PT el posesivo lleva artículo ('visitar os nossos avós'); en PT-BR puede omitirse.",
     "variantStatus": "unchecked",
     "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
@@ -152,7 +152,8 @@
             "visitar nossos"
           ]
         }
-      ]
+      ],
+      "hintEs": "visitar a nuestros abuelos"
     }
   },
   {
@@ -368,7 +369,7 @@
     "tags": [
       "basico"
     ],
-    "contentHash": "0b964e2306a8fc15858d4e666d4616df9b7a5cb2e49e5af77731d26433533796",
+    "contentHash": "ed5a6310eb3e745aa131c5fa6f080af96eab92c89106cb9bd71f410705ae658f",
     "esContrast": "En portugués, 'irmã' es femenina, no se dice 'irmão'.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
@@ -379,10 +380,13 @@
           "position": 0,
           "answer": "irmã",
           "alternatives": [
-            "minha irmã"
+            "minha irmã",
+            "prima",
+            "tia"
           ]
         }
-      ]
+      ],
+      "hintEs": "la hermana"
     }
   },
   {
@@ -1025,7 +1029,7 @@
       "regular",
       "plural"
     ],
-    "contentHash": "33844252cf750e254a690ae057ee1526927547e707bf58ac14803f15fe45fae5",
+    "contentHash": "2b5fcf17a23bd56a6255c86cbdd49c26f89f9b62a84e99324ea9eb509740ec00",
     "esContrast": "En portugués, los sustantivos terminados en -ol, -el, -il forman plural en -óis, -éis, -is.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
@@ -1034,10 +1038,11 @@
       "blanks": [
         {
           "position": 0,
-          "answer": "filhos",
+          "answer": "sobrinhos",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "lo que hace juego con «sobrinhas»"
     }
   },
   {
@@ -1431,7 +1436,7 @@
       "irregular",
       "plural"
     ],
-    "contentHash": "42ea165ce436568f038e95bdb0b239e2cd46cafd1a4c934383b103f4d2f2e1b0",
+    "contentHash": "4c60e52a4974f6f82250c67808da14d5564214ab10b22a2d44da88bddbffce7f",
     "esContrast": "cidadão → cidadãos (único plural correcto; *cidadões es error frecuente). Los nombres en -ão reparten tres plurales: -ãos (cidadãos, mãos), -ães (alemães, pães), -ões (balões, nações).",
     "variantStatus": "unchecked",
     "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
@@ -1444,7 +1449,8 @@
           "answer": "cidadãos",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "ciudadanos — el plural de «cidadão»"
     }
   },
   {
@@ -2154,7 +2160,7 @@
       "b2-numero"
     ],
     "tags": [],
-    "contentHash": "5f1630a384700e86f971f2edee67f7e84447f25b983cbf9771720dc4cc079d39",
+    "contentHash": "715f32410f83596d217f3462f69dbc723df605bc7e4bd4bfdc9f174ab2a04d06",
     "esContrast": "Diferencia singular/plural: filho/filha (hijo/hija) vs filhos/filhas (hijos/hijas).",
     "variantStatus": "divergent",
     "type": "fill_blank",
@@ -2171,7 +2177,8 @@
           "answer": "filhas",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "hijos · hijas"
     },
     "variantOverrides": {
       "pt-br": {
@@ -2188,7 +2195,7 @@
       "b2-poss-seu-ambiguo"
     ],
     "tags": [],
-    "contentHash": "616d8804357c65139a25b4a89e9872d7539f4ce372461051524fa6dd5c227675",
+    "contentHash": "43aa9821076b293d31fd1f93ad841f30bc51870fd3b30a6406526dbb31a481a3",
     "esContrast": "Ojo: en PT-BR coloquial 'seu' = 'de você'; para 'sus (de ellos)' el brasileño prefiere 'os livros deles'. En PT-PT 'os seus livros' (con artículo) mantiene la 3.ª persona.",
     "variantStatus": "unchecked",
     "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
@@ -2203,7 +2210,8 @@
             "os seus"
           ]
         }
-      ]
+      ],
+      "hintEs": "sus (de ellos)"
     }
   },
   {
@@ -2840,7 +2848,7 @@
       "regular",
       "plural"
     ],
-    "contentHash": "7438d8e088bafd9adbb13c7bd6b836cb06a7c293bcb6ab3f5bcff90a99ff5efa",
+    "contentHash": "0d6aa339e41434139bbf816a83162019d1f375bf9f64577857ade9abb2af48df",
     "esContrast": "Los sustantivos terminados en -r, -z forman plural en -es: cadela→cadelES, flor→florES.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
@@ -2850,9 +2858,13 @@
         {
           "position": 0,
           "answer": "cadeiras",
-          "alternatives": []
+          "alternatives": [
+            "mesas",
+            "camas"
+          ]
         }
-      ]
+      ],
+      "hintEs": "sillas"
     }
   },
   {
@@ -2864,7 +2876,7 @@
       "b2-poss-com-artigo"
     ],
     "tags": [],
-    "contentHash": "7649388ec9e5b26080544b6aada4ed142686abdee9a6423aca2b32e289b7b4df",
+    "contentHash": "93908402feb7761bac5f24c4f1532abab40f48b8d3d87e09716b31c94661e5cb",
     "esContrast": "minha (fem.) = mi; meu (masc.). En español solo hay 'mi' invariable.",
     "variantStatus": "divergent",
     "type": "fill_blank",
@@ -2874,9 +2886,13 @@
         {
           "position": 0,
           "answer": "irmã",
-          "alternatives": []
+          "alternatives": [
+            "filha",
+            "prima"
+          ]
         }
-      ]
+      ],
+      "hintEs": "la hermana"
     },
     "variantOverrides": {
       "pt-br": {
@@ -3076,7 +3092,7 @@
       "articulo",
       "posesivo"
     ],
-    "contentHash": "7b812527f4e2fb8dd0503a1dad0eff59ce41cf6a78587749e6c58eb682fc048b",
+    "contentHash": "db9820407fef94b8a01b4d9dea08f396f64a17938ca8a26c6dcacebf430cb60d",
     "esContrast": "Mi hermana = minha irmã; mi marido = meu marido. ¡Cuidado con 'meu'!",
     "variantStatus": "unchecked",
     "variantVerificacion": "revisión manual E2#4 2026-08-28: DUDA — Dos huecos con un solo campo de respuesta en el runner: ítem incontestable tal como se muestra (mismo defecto estructural que 713256cd). La glosa '¡Cuidado con meu!' no dice con qué hay que tener cuidado. Nada falso afir (informe-cola2-manual)",
@@ -3098,7 +3114,8 @@
             "irmão"
           ]
         }
-      ]
+      ],
+      "hintEs": "mi hermana y mi esposo"
     }
   },
   {
@@ -5195,7 +5212,7 @@
     "tags": [
       "indefinido"
     ],
-    "contentHash": "c8481647037e06d4747ff59f364ce68daffb0e9e7b38fec9b4b4c1eee1d9546c",
+    "contentHash": "be831c8224f9efdefb5660acb069475c80f430f11c8aa5d702388c93b0d0f23d",
     "esContrast": "um/uma = un/una (artículo indefinido)",
     "variantStatus": "unchecked",
     "variantVerificacion": "revisión manual E2#4 2026-08-28: DUDA — Cloze sin pista en estado puro: nada en 'Tenho ___ filhos e uma filha' determina 'dois' frente a 'três' (ambos aceptados como correctos) ni excluye 'quatro' o 'muitos' (castigados). Y la glosa habla de um/una, que no es  (informe-cola2-manual)",
@@ -5207,10 +5224,12 @@
           "position": 0,
           "answer": "dois",
           "alternatives": [
-            "três"
+            "três",
+            "quatro"
           ]
         }
-      ]
+      ],
+      "hintEs": "dos"
     }
   },
   {
@@ -5801,7 +5820,7 @@
       "definido",
       "plural"
     ],
-    "contentHash": "ded613b6bce9335616188a5789074047b6a2a7af6b0141e2be5e30f448fe76c7",
+    "contentHash": "b97d37c707bfc5eb3cdc998b35f6eb4ca3e6f2e103175acfe785519b71a18b55",
     "esContrast": "Os = Los (artículo definido masculino plural)",
     "variantStatus": "unchecked",
     "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)",
@@ -5813,10 +5832,13 @@
           "position": 0,
           "answer": "filhos",
           "alternatives": [
-            "filhos"
+            "filhos",
+            "irmãos",
+            "pais"
           ]
         }
-      ]
+      ],
+      "hintEs": "los hijos"
     }
   },
   {

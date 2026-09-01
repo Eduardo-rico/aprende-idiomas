@@ -74,3 +74,51 @@ pista que determina la respuesta, sin tocar la frase ni el audio.
 
 Ése es el trabajo de E2#15, y es barato. Lo que no era barato era
 descubrir que hacía falta.
+
+
+---
+
+## E2#15 · dictaminados y reparados los 70, y la sorpresa está en la OTRA clase
+
+**Los 70, uno a uno** (`docs/plans/cloze-dictamen-e2-15.json`):
+
+| veredicto | n | reparación |
+|---|---:|---|
+| ROTOS (frase que no se sostiene) | 5 | frase reescrita |
+| INRESOLUBLES | 39 | pista que determina + alternativas |
+| PASAN (el contexto sí determina) | 26 | sin tocar |
+
+Aplicado: **44 pistas nuevas, 18 listas de alternativas, 5 frases**, sin
+tocar audio. Los sospechosos bajan de **70 (16,8 %) a 26 (6,2 %)**, y los
+26 son exactamente los que dictaminé PASA.
+
+**Una nota de método que costó una vuelta**: mi propio gate rechazó doce
+pistas por contener la respuesta. En un par de lenguas cognadas, una
+pista que DETERMINA suele ser la respuesta escrita («el hotel» →
+`hotel`). Y sin embargo esos ítems son legítimos: su punto es
+**ortográfico** —`b1-tonica-oxitona`, `b1-silaba-tonica`, `b1-h-muda`— y
+el sustantivo es sólo el vehículo, así que la pista debe fijar el
+significado y dejar que el alumno produzca la grafía. La salida no fue
+aflojar el gate sino escribir la pista como **definición**: «donde se
+duerme cuando se viaja», «la bebida negra del desayuno».
+
+## Y la clase que daba por buena tampoco lo está
+
+Muestra de 15 de los **220 «sin pista pero derivables»** —la clase que la
+criba absolvía— dictaminada a mano:
+
+- **`655a7e71` es FALSO y estaba publicado**: «Eu ___ café todas as
+  manhãs quando vivia em Lisboa», con respuesta primaria **«toma»**. «Eu
+  toma» es agramatical, y la tarjeta lo imprimía como «respuesta
+  correcta»; la forma buena, «tomava», estaba de simple alternativa.
+- **`d5a1df41` se contradice con su propio punto**: concepto
+  `b3-imper-formal` y respuesta primaria **«Fala»**, que es el imperativo
+  INFORMAL. La formal estaba de alternativa.
+- **`acbb1382`** «O ___ é azul e muito bonito» → `olho`, pero también
+  céu, carro, vestido.
+
+**Dos errores duros de quince (13 %) y siete con problemas (47 %).** Los
+tres se han arreglado. La conclusión incómoda: **la criba absolvía a 220
+ítems que nadie había mirado**, y «derivable por la forma» no implica
+«determinado por el enunciado» — un verbo puede ser derivable y estar en
+la persona equivocada.

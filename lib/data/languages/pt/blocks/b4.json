@@ -1064,7 +1064,7 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "1822099ab547e1658a3a2c97f4947a0c802c501ed957b4536a9d68c3973b53bd",
+    "contentHash": "e4d9f1ef0fed7b9279cb0f5428fa7bebe9f80af7e454e9313de3ae5b9fede1bb",
     "esContrast": "«Dar-se bem» en imperfeito describe una relación habitual del pasado, no un hecho único. Sin disparador de próclise, el europeo pone el clítico detrás: «dávamo-nos» (la -s de «dávamos» cae ante «-nos»).",
     "variantStatus": "unchecked",
     "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
@@ -1077,7 +1077,8 @@
           "answer": "dávamo-nos",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "nos llevábamos — imperfeito de «dar-se»"
     }
   },
   {
@@ -3419,7 +3420,7 @@
       "b4-contraste-passado"
     ],
     "tags": [],
-    "contentHash": "655a7e71b9bfa3a4b9a762051b5170c3bc97a3ab878ad68447cf26666602b237",
+    "contentHash": "7345927f641a967513f7035137d66ffb31c0bb1254ae35bd69c01eb931a45fe9",
     "esContrast": "Hábito passado = imperfeito em pt. Em es dirías 'tomaba', misma lógica.",
     "variantStatus": "divergent",
     "type": "fill_blank",
@@ -3428,12 +3429,11 @@
       "blanks": [
         {
           "position": 0,
-          "answer": "toma",
-          "alternatives": [
-            "tomava"
-          ]
+          "answer": "tomava",
+          "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "tomaba — imperfeito, la costumbre de entonces"
     },
     "variantOverrides": {
       "pt-br": {
@@ -3652,7 +3652,7 @@
       "regular",
       "-ir"
     ],
-    "contentHash": "6f453781416ee55055aef397174cca02e832618880ecfe8fe510d3e9c9253743",
+    "contentHash": "31882c4a6707bb384efe8f7827318f3fe0fb2f175a3c0c843a7da313c427f734",
     "variantStatus": "unchecked",
     "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
     "type": "fill_blank",
@@ -3664,7 +3664,8 @@
           "answer": "saímos",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "salimos — de «sair»"
     }
   },
   {
@@ -4118,7 +4119,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "7b6493e74e07a6a09f1b6afc9049503c64892f61f41a728ea39dc05ce85075ca",
+    "contentHash": "6f57edd56705498b20de64ec8198ca8a651f2a5aa218ac6cb7625e8ea3050540",
     "esContrast": "Em pt: 'li' vem de 'ler', não 'lei' como em es. Foco no pretérito perfeito.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
@@ -4130,7 +4131,8 @@
           "answer": "li",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "leí — pretérito perfeito de «ler»"
     }
   },
   {
@@ -6612,7 +6614,7 @@
       "regular",
       "-er"
     ],
-    "contentHash": "c63fc7f444b2b51cb05b5bfebbd4a25f997a6574d1ff0fac465c067ba158714d",
+    "contentHash": "eae47c5c2c2bba07e623787ecf9c143c9f372a97e7cefda5349f37c924ca5b82",
     "variantStatus": "unchecked",
     "variantVerificacion": "revisión manual E2#7 2026-08-30: DUDA — Cloze sin pista: «Eu ___ um bolo de chocolate na festa» admite comi / fiz / trouxe / provei / cortei. Sólo «comi» se acepta. (informe-cola5-manual)",
     "type": "fill_blank",
@@ -6622,9 +6624,13 @@
         {
           "position": 0,
           "answer": "comi",
-          "alternatives": []
+          "alternatives": [
+            "fiz",
+            "trouxe"
+          ]
         }
-      ]
+      ],
+      "hintEs": "comí — pretérito perfeito"
     }
   },
   {
@@ -7330,7 +7336,7 @@
       "regular",
       "-ar"
     ],
-    "contentHash": "da8efb7c1f061d4072a78e7ea4c39f811d90cabc76ebc86ab9e1306f71507551",
+    "contentHash": "f3b63c2553c2731fc6bb52d03e23214908dff229b5e6c92e967d9d2900491430",
     "variantStatus": "divergent",
     "type": "fill_blank",
     "data": {
@@ -7339,9 +7345,13 @@
         {
           "position": 0,
           "answer": "ficámos",
-          "alternatives": []
+          "alternatives": [
+            "passámos",
+            "estivemos"
+          ]
         }
-      ]
+      ],
+      "hintEs": "estuvimos / pasamos"
     },
     "variantOverrides": {
       "pt-br": {

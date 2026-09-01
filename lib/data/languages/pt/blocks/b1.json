@@ -185,7 +185,7 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "046a3fd18b4d71c4403458408b70e935f480c14d06462f2729cc3a19b9cb988b",
+    "contentHash": "3eb1b8187887484ce4c81e8d934d3dac4cbb344a89de6f5489e068077c5e3c2c",
     "esContrast": "'Irmã' (hermana) vs 'irmão' (hermano): la tilde marca la diferencia de género.",
     "variantStatus": "divergent",
     "type": "fill_blank",
@@ -196,10 +196,13 @@
           "position": 0,
           "answer": "irmã",
           "alternatives": [
-            "mãe"
+            "mãe",
+            "prima",
+            "avó"
           ]
         }
-      ]
+      ],
+      "hintEs": "la hermana"
     },
     "variantOverrides": {
       "pt-br": {
@@ -535,7 +538,7 @@
     "tags": [
       "revisar-fonetica"
     ],
-    "contentHash": "098a851f264b27dcc7b92bd25a30d980aa2f9d9c09ca159aec743916beb06442",
+    "contentHash": "cdd4abf8f770a141f005269477090080fece780b70e0377c4258a3a18da87e24",
     "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
@@ -546,7 +549,8 @@
           "answer": "lápis",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "el lápiz — ojo a la -s final"
     }
   },
   {
@@ -1049,7 +1053,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "1cf5bb4773080120dbd0c17f7147eca9a890a3d17b4f3d0f931623052af3d463",
+    "contentHash": "397183e415b1b33f729ced153accedc079a3cea766e94a801f8d6ad00a935ebe",
     "esContrast": "'Bom' se pronuncia /bõ/, con vocal nasal. El español no tiene ese sonido: compara con 'buen/bueno'.",
     "variantStatus": "unchecked",
     "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
@@ -1060,9 +1064,13 @@
         {
           "position": 0,
           "answer": "bom",
-          "alternatives": []
+          "alternatives": [
+            "doce",
+            "saboroso"
+          ]
         }
-      ]
+      ],
+      "hintEs": "bueno (de sabor)"
     }
   },
   {
@@ -1144,26 +1152,22 @@
       "b1-nasal-ao-oes"
     ],
     "tags": [],
-    "contentHash": "21733ca4eeefd55295f0bd06cfdebc089512f22f7b56298be8e5b8f04ff498a4",
+    "contentHash": "ed2874a5779ead50eacacb07662b619a74f0105c65d57984d34d67067d9da5b9",
     "esContrast": "El diptongo nasal /-ão/ suena distinto de la terminación '-an' en español.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
-      "sentence": "Os ___ de ___ caramujo são incríveis.",
+      "sentence": "Os ___ de pão saem do forno às seis da manhã.",
       "blanks": [
         {
           "position": 0,
-          "answer": "caramões",
+          "answer": "pães",
           "alternatives": [
             "caramujões"
           ]
-        },
-        {
-          "position": 1,
-          "answer": "pão",
-          "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "el plural de «pão»"
     }
   },
   {
@@ -1755,7 +1759,7 @@
       "ortografia",
       "falso-amigo"
     ],
-    "contentHash": "37b772b192bd00d6ca735d5457f5c6a0c2315916ab98dab404f59e6785abc568",
+    "contentHash": "ae13545b35b9bdea87c876c7ccd90f7f4764001c0f4ba2e897c079e1c6c2bdee",
     "esContrast": "'Hotel' se escribe igual pero la h es muda: se pronuncia /o'tel/.",
     "variantStatus": "unchecked",
     "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — Cloze abierto: «O ___ fica na esquina» admite hotel/café/banco",
@@ -1768,7 +1772,8 @@
           "answer": "hotel",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "donde se duerme cuando se viaja"
     }
   },
   {
@@ -1943,7 +1948,7 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "40dd6dd81bf80a4ce02e82e9bff829814f835b32144194a2496c270d1a6d801f",
+    "contentHash": "0f1b87d973ab54c4f95d4ef1224304527b8bf292c4b5a6a106f1b4c679a88047",
     "esContrast": "En BR la 's' final de 'vezes' se pronuncia /z/; en PT se debilita a /ʒ/ entre vocales.",
     "variantStatus": "divergent",
     "type": "fill_blank",
@@ -1957,7 +1962,8 @@
             "vezes"
           ]
         }
-      ]
+      ],
+      "hintEs": "veces — el plural de «vez»"
     },
     "variantOverrides": {
       "pt-br": {
@@ -3926,7 +3932,7 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "81997b513c32149ea07a12061505212d9cab60a784ff46aace197128327edbcc",
+    "contentHash": "0bffee68da879e3d241b7924ac752a0565b8d446d3fdc5f6030328f2c6825177",
     "esContrast": "«fácil» lleva tilde en español y en portugués, por la misma razón: grave terminada en -l. No es un contraste.",
     "variantStatus": "unchecked",
     "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — Cloze abierto: «é muito ___» admite fácil/difícil/chato",
@@ -3939,7 +3945,8 @@
           "answer": "fácil",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "que no cuesta esfuerzo — ojo a la sílaba tónica"
     }
   },
   {
@@ -4372,7 +4379,7 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "8b9118d07bffb0f8ad811200d6cb896466597141141579e8e1586df8217a2df0",
+    "contentHash": "14250ae06fdebe889d37b5efc1e3bc51591cf0840c04b71172a404fa61454b49",
     "esContrast": "«avó» /ɔ/ es la abuela y «avô» /o/ el abuelo, en Portugal y en Brasil por igual. No es una diferencia entre países: es de género, y el acento marca la altura de la vocal — agudo abierta, circunflejo cerrada.",
     "variantStatus": "divergent",
     "type": "fill_blank",
@@ -4382,9 +4389,13 @@
         {
           "position": 0,
           "answer": "avó",
-          "alternatives": []
+          "alternatives": [
+            "bisavó",
+            "tia"
+          ]
         }
-      ]
+      ],
+      "hintEs": "la abuela"
     },
     "variantOverrides": {
       "pt-br": {
@@ -5197,7 +5208,7 @@
     "tags": [
       "revisar-fonetica"
     ],
-    "contentHash": "a3d9f5a1fef72c337c4f6e88a876dcb1ebc8668eed69034c8ecf473a818424dd",
+    "contentHash": "27a6e76efdb9e6103f7d1fe848398be749a1945b0581794d77fbb4954654cd99",
     "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
@@ -5210,7 +5221,8 @@
             "taxi"
           ]
         }
-      ]
+      ],
+      "hintEs": "el coche que se toma con taxímetro — ojo al acento"
     }
   },
   {
@@ -5321,7 +5333,7 @@
       "ortografia",
       "regular"
     ],
-    "contentHash": "acbb1382fb8029b64eab9a8562dabbe6c89cf4080559441b33de7bd9cfd69517",
+    "contentHash": "038d074e635ad6ad11384e8149330dc5ebb8e1421987d994caf325d391bf2fbf",
     "esContrast": "'Ojo' en español se escribe 'olho' en portugués, con -lh-.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
@@ -5333,7 +5345,8 @@
           "answer": "olho",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "el ojo"
     }
   },
   {
@@ -5708,7 +5721,7 @@
       "irregular",
       "revisar-fonetica"
     ],
-    "contentHash": "baa408d78f80642be07526b70f713db43394276738653b953b5963751eb59783",
+    "contentHash": "6dfbc3eb759f4d53f4de9dc443eec88eb46707a34877f90ef55f0898dda22c27",
     "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
@@ -5719,7 +5732,8 @@
           "answer": "gentil",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "amable"
     }
   },
   {
@@ -5831,7 +5845,7 @@
       "falso-amigo",
       "revisar-fonetica"
     ],
-    "contentHash": "bdcff0e2f6cda4c192c0033ecbf5e1c343e8483b4a90cd02eedebe29bf5c9a9c",
+    "contentHash": "65d4f53f1b543e88d3023df3284e4f04e00719bce19b0c4afd0395ea90993da8",
     "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
@@ -5842,7 +5856,8 @@
           "answer": "difícil",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "que cuesta esfuerzo — ojo a la sílaba tónica"
     }
   },
   {
@@ -6324,7 +6339,7 @@
       "b1-silaba-tonica"
     ],
     "tags": [],
-    "contentHash": "c90e36c75e3d234f6ea8b37cc0efc3985ce340e6085c54496cdc50ee1fa1f9bb",
+    "contentHash": "b62fb331db81711adda603be488560499322d24d5c7be1677a2c065579faabf0",
     "esContrast": "'Hotel' es aguda (ho-TEL) pero termina en -l, así que no lleva tilde en portugués.",
     "variantStatus": "unchecked",
     "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — Cloze abierto: «O meu ___ favorito fica na praça» admite hotel/café/museu/restaurante",
@@ -6337,7 +6352,8 @@
           "answer": "hotel",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "el sitio donde se duerme al viajar"
     }
   },
   {
@@ -7009,7 +7025,7 @@
       "b1-tonica-paroxitona"
     ],
     "tags": [],
-    "contentHash": "db15f0ab246611d3015ee3a67eed7db8e9aad17afe4324d52009ee8275ceb847",
+    "contentHash": "47ac93a8c1ce52f132c14cbf5d72f33dfbd3c1c63a4f756ccf940e1dda4dfd9a",
     "esContrast": "'Hospital' es aguda (hos-pi-TAL) pero en portugués NO lleva tilde porque termina en -l.",
     "variantStatus": "unchecked",
     "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
@@ -7022,7 +7038,8 @@
           "answer": "hospital",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "donde se atiende a los enfermos"
     }
   },
   {
@@ -7134,7 +7151,7 @@
       "regional",
       "formal"
     ],
-    "contentHash": "e003d3931b4d3de816f3db6070859aede2ff2c45039947cc2296327157fc697e",
+    "contentHash": "b3096cfb594c15af4b567fc186ace14b71c7ff2b9bbfb24ba8d18f95f43d29b4",
     "esContrast": "En BR el 'r' de 'será' es elidido (/se.ˈa/); en PT se mantiene como /sɨ.ˈɾa/ con vibrante alveolar.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
@@ -7145,10 +7162,13 @@
           "position": 0,
           "answer": "será",
           "alternatives": [
-            "será"
+            "será",
+            "vai ser",
+            "é"
           ]
         }
-      ]
+      ],
+      "hintEs": "futuro de «ser»"
     }
   },
   {
@@ -7301,7 +7321,7 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "e679d0636f488c5214bbbfe29b65f8b4463f1a113d49050145e92ae73d1d4056",
+    "contentHash": "12fb747d7a50310cb575549be3ea5eb35c1323f6647575d063f113d9ac6a4136",
     "esContrast": "En BR la 's' final se pronuncia /s/; en PT se convierte en /ʃ/ cuando es sílaba final absoluta.",
     "variantStatus": "divergent",
     "type": "fill_blank",
@@ -7315,7 +7335,8 @@
             "meses"
           ]
         }
-      ]
+      ],
+      "hintEs": "el plural de «mês»"
     },
     "variantOverrides": {
       "pt-br": {
@@ -7624,7 +7645,7 @@
       "b1-tonica-oxitona"
     ],
     "tags": [],
-    "contentHash": "f02234b9fdadfac857070796ed233d5519641853f884ed4fa31ed415cdce5bc2",
+    "contentHash": "e9417b3a6596827d3eb8fa7019f28b133084ed2546613633365ac1e2c08300b3",
     "esContrast": "'Café' es aguda en portugués y lleva tilde; fíjate en la sílaba tónica: ca-FÉ.",
     "variantStatus": "unchecked",
     "variantVerificacion": "revisión manual E2#10 2026-09-01: OK ítem a ítem (informe-cola8-manual)",
@@ -7637,7 +7658,8 @@
           "answer": "café",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "la bebida negra del desayuno"
     }
   },
   {
@@ -7715,20 +7737,21 @@
       "ortografia",
       "combinado"
     ],
-    "contentHash": "f1b10ccbb1971efd91725bb2af8241b337b091f1549597c5a6e86b6400a96a75",
+    "contentHash": "8ee234fb198d8c2089b5656705712cb4e37bf6dd070cce73d12c6af638876eb7",
     "esContrast": "Plural de 'canção' → 'canções' (-ão + -s = -ões). 'Baño' → 'banho'.",
     "variantStatus": "unchecked",
     "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
     "type": "fill_blank",
     "data": {
-      "sentence": "As ___ novas e o banho da manhã.",
+      "sentence": "As ___ novas da rádio acordam-me todas as manhãs.",
       "blanks": [
         {
           "position": 0,
           "answer": "canções",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "el plural de «canção»"
     }
   },
   {
@@ -8036,7 +8059,7 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "f77c3c24fa9cedc2271a9d69332ed759414b10c284b4b59e66ff6b3efe599a37",
+    "contentHash": "4602d59a8b08c0ab365ca8257ce1deccf108510a5110400bc39db8da0bc26725",
     "esContrast": "En 'olhos' la 's' intervocálica es /z/ en BR; en PT puede ser /ʒ/. El 'r' inicial no aplica aquí.",
     "variantStatus": "divergent",
     "type": "fill_blank",
@@ -8057,7 +8080,8 @@
             "bonitos"
           ]
         }
-      ]
+      ],
+      "hintEs": "los ojos · guapos"
     },
     "variantOverrides": {
       "pt-br": {
@@ -8076,7 +8100,7 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "f7f716013b830bffb6e517e0a1523eccb7450892381a4f4ae30f7026760a825c",
+    "contentHash": "3616b070ae87c2006dba69c7e00a5a4bb8557f9ea05d5c8e44fe12dab1276858",
     "esContrast": "En BR la 's' final se mantiene como /z/ por ser enlace a otra sílaba; en PT puede variar según el hablante.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
@@ -8087,10 +8111,12 @@
           "position": 0,
           "answer": "feriados",
           "alternatives": [
-            "feriados"
+            "feriados",
+            "férias"
           ]
         }
-      ]
+      ],
+      "hintEs": "días festivos"
     }
   },
   {

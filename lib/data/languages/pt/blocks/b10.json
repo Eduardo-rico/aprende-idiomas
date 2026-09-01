@@ -661,7 +661,7 @@
     "tags": [
       "coloquial"
     ],
-    "contentHash": "2eac7ab2d7f0b10077156b73541d3866ed6edcd4cfca81e7e45ac4181c38a246",
+    "contentHash": "867e1553975a7e12a9829e0fec3e470885ce3f8597fc17f1b497124950de941d",
     "esContrast": "En contexto informal se usa 'que há de novo?' o 'que notícias?'.",
     "variantStatus": "divergent",
     "type": "fill_blank",
@@ -676,7 +676,8 @@
             "ouve"
           ]
         }
-      ]
+      ],
+      "hintEs": "¿qué hay de nuevo?"
     },
     "variantOverrides": {
       "pt-br": {
@@ -887,7 +888,7 @@
       "regional",
       "coloquial"
     ],
-    "contentHash": "4581fc5e87963bb1f521eb738ae7ad7a7fe837c9f7472ab79abe57afcc5d5c1d",
+    "contentHash": "52f4df4e34b7078cc85e6bd0c145f80796843f25fd60ad437ebe9aa2288deabf",
     "esContrast": "La 'c' antes de 't' se mantiene en PT-PT: contactos (BR: contatos).",
     "variantStatus": "divergent",
     "type": "fill_blank",
@@ -898,10 +899,12 @@
           "position": 0,
           "answer": "contactos",
           "alternatives": [
-            "contatos"
+            "contatos",
+            "negócios"
           ]
         }
-      ]
+      ],
+      "hintEs": "el trato, la relación de trabajo"
     },
     "variantOverrides": {
       "pt-br": {
@@ -3053,7 +3056,7 @@
       "regional",
       "falso-amigo"
     ],
-    "contentHash": "e16ba1ffb063a2877f248485b37c275a9b9ea752537a74460f0fc994b35876db",
+    "contentHash": "abed5e540a5c124b429041fb48af6e37779631f93afe8f3fcea973a4a22c4e84",
     "esContrast": "Las islas Açorianas preservan rasgos del português medieval.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
@@ -3064,10 +3067,12 @@
           "position": 0,
           "answer": "mantém",
           "alternatives": [
-            "conserva"
+            "conserva",
+            "guarda"
           ]
         }
-      ]
+      ],
+      "hintEs": "mantiene"
     }
   },
   {

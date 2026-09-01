@@ -2482,7 +2482,7 @@
       "negativo",
       "formal"
     ],
-    "contentHash": "5bfa275dae4a6a526ff295b6e79a76ad603763caf4cbc4fb0439fa5a30d1f40d",
+    "contentHash": "75faaf992286915c24890f8dffa07301931d526bc438e00e0fd06639a4ce6c3f",
     "esContrast": "No se olvide ≈ Não se esqueça (formal PT-BR) / Não te esqueças (informal PT-PT)",
     "variantStatus": "divergent",
     "type": "fill_blank",
@@ -2493,10 +2493,12 @@
           "position": 0,
           "answer": "Não te esqueças",
           "alternatives": [
-            "Não se esqueça"
+            "Não se esqueça",
+            "Lembra-te"
           ]
         }
-      ]
+      ],
+      "hintEs": "no te olvides"
     },
     "variantOverrides": {
       "pt-br": {
@@ -4278,7 +4280,7 @@
       "regional",
       "coloquial"
     ],
-    "contentHash": "996e9eb48595eb55f6be9716b25fb3bfd016c04912f154783e7621cdd1063dfe",
+    "contentHash": "6eba08200d3e94bd860576e93f7e08e94cd3cd840bacd7d25d7672999a6ba0f4",
     "esContrast": "'Ter vontade' es posesivo (tengo ganas). En PT-BR se usa 'tem' o 'tenho' también para existencial; en PT-PT se usa 'há'.",
     "variantStatus": "divergent",
     "type": "fill_blank",
@@ -4288,9 +4290,12 @@
         {
           "position": 0,
           "answer": "Há",
-          "alternatives": []
+          "alternatives": [
+            "Tenho"
+          ]
         }
-      ]
+      ],
+      "hintEs": "hay (existencial)"
     },
     "variantOverrides": {
       "pt-br": {
@@ -4641,19 +4646,20 @@
       "falso-amigo",
       "formal"
     ],
-    "contentHash": "a75517f79215161975a94ff013c32355d007def9e4c4934fb528441f3509db46",
+    "contentHash": "5baed9e7e3280115232bdb56e163a1f95b7d6b2ad426edb4c631e45e74fd1346",
     "esContrast": "El 'se' es partícula apassivadora, no pronombre. 'Não há como' = 'no hay manera de'.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
-      "sentence": "Não se ___ como negar essa verdade.",
+      "sentence": "Não ___ como negar essa verdade.",
       "blanks": [
         {
           "position": 0,
           "answer": "há",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "no hay manera de"
     }
   },
   {
@@ -5900,7 +5906,7 @@
     "tags": [
       "informal"
     ],
-    "contentHash": "d5a1df41309316487c5e16b38db3ba8ac2dda6ca029467b228385b0a0a9100dc",
+    "contentHash": "43baa640c0a083eaa683838349a8653c6333ca6b96372a8cef4f14f5d53aa0ed",
     "variantStatus": "unchecked",
     "variantVerificacion": "revisión manual E2#5 2026-08-29: DUDA — Estructural (cloze-sin-pista): '___ mais devagar, por favor! Não há pressa.' — 'Anda/Vai/Conduz mais devagar' son tan válidas como 'Fala' y se castigan. Sugerencia: añadir '(falar)'. Las dos formas aceptadas (Fala tu / F (informe-cola3-manual)",
     "type": "fill_blank",
@@ -5909,12 +5915,11 @@
       "blanks": [
         {
           "position": 0,
-          "answer": "Fala",
-          "alternatives": [
-            "Fale"
-          ]
+          "answer": "Fale",
+          "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "imperativo formal, tratando de «o senhor»"
     }
   },
   {
