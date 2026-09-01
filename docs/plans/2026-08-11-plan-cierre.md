@@ -784,3 +784,56 @@ interrogativa frente a la afirmativa, y ahí el «?» es la respuesta.
 
 Y un punto que no se produce por decisión: `b11-nominalizacao` (8) es casi
 todo espejo del español y en este formato no discrimina.
+
+
+---
+
+## E2#20 · transformación a cero, y el juicio muere con la causa escrita
+
+**Déficit 169 → 137.** Quedan **corrección (97)** y **escucha (24)**.
+
+**1 · Dos puntos enterrados con las dos condiciones cumplidas.**
+`docs/plans/puntos-piso-cero.json`: el punto no desaparece, deja de contar,
+y cada entrada dice **dónde se enseña lo que tenía de propio**.
+`b11-nominalizacao` tiene una divergencia real —el infinitivo personal
+donde el español va a subjuntivo— pero **ya la enseña `b7-inf-pess-contraste`
+con 22 ítems**. `b11-pontuacao-sintatica` no tiene ninguna.
+
+**2 · Transformación a cero.** 48 unidades en dos lotes. El que más enseña
+es `b11-ordem-foco`, que parece espejo hasta que se ve que **anteponer el
+foco fuerza la próclise** y el español no tiene nada que mover.
+
+**3 · Escucha: 8 publicados, 24 que no se escriben.** No hizo falta tipo
+nuevo. Lo que hubo que decidir es cuáles de los cuatro puntos admiten un
+ítem PUNTUABLE, y es uno: `b1-inventario-vocalico`, donde /o/–/ɔ/ y
+oral–nasal separan palabras distintas con grafías distintas. Los otros
+tres son realización fonética fina, y el proyecto no puede garantizarla:
+`config.ts` avisa de que «el language_boost NO diferencia BR/PT» y
+`EL_VOICES` usa **la misma voz para las dos variantes**.
+
+**4 · EL JUICIO, INTENTO ÚNICO: NO PUBLICA.** Doce pares mínimos, molde
+validado, posición barajada, potencia impresa. **Catorce de los quince
+rasgos quedaron en el azar** — el par mínimo cumplió lo que promete. El
+decimoquinto no:
+
+    la glosa palabra-por-palabra es español correcto → 19/24 (79 %)
+    umbral con N=24: 17
+
+**Y es estructural, no del lote.** Un juicio binario entre una frase
+portuguesa y su calco español pone la respuesta en la glosa siempre: si el
+punto es `trampa`, la glosa correcta marca el MAL; si es `coincide`, marca
+el BIEN. El par neutraliza todo rasgo que no mire dentro del hueco, y el
+rasgo juzgado ES la divergencia con el español, que está justamente ahí.
+
+Cuatro sesiones murieron aquí sin saberlo. Ahora está medido.
+
+**Los 19 puntos se reasignan**: la clase `trampa` pasa a `correccion`. Se
+da la frase que el hispanohablante produce y se pide la portuguesa; sin dos
+opciones no hay glosa que consultar, hay que PRODUCIR la forma.
+
+### Lo que queda para cerrar el corpus
+
+| formato | unidades | estado |
+|---|---:|---|
+| corrección | 97 | formato existente, sin producir |
+| escucha | 24 | bloqueado en una voz que nadie ha validado a oído |
