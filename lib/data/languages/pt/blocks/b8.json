@@ -5180,7 +5180,7 @@
     ],
     "contentHash": "9efc667bf750036d6d04f18556407c2cce08f49eb70c14eef359a09107de4a6c",
     "esContrast": "Colocação pronominal: en Portugal la ênclise es la forma no marcada (diga-me, diz-me); en Brasil la próclise (me diga). El español sólo admite el orden brasileño con el imperativo negativo.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "___ logo o que aconteceu! (dizer)",
@@ -5192,7 +5192,8 @@
             "Diz-me"
           ]
         }
-      ]
+      ],
+      "hintEs": "imperativo formal de «dizer» con el clítico enclítico: «a mí», detrás del verbo y con guion"
     },
     "variantOverrides": {
       "pt-br": {
@@ -5207,7 +5208,8 @@
           }
         ]
       }
-    }
+    },
+    "variantVerificacion": "muestra de los 60, E2#29: pista escrita — el lema estaba en el molde pero nada fijaba el tiempo, así que el presente encajaba igual"
   },
   {
     "id": "bd109311",
@@ -6542,7 +6544,7 @@
     ],
     "contentHash": "f40fca17ba859ebeddfd0e94b5eb3d510feaa3e36917333e769cd0302d6bf7fd",
     "esContrast": "En futuro, el pronombre va EN MEDIO del verbo (mesóclise).",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "O mistério ___ (resolver-se) amanhã.",
@@ -6560,7 +6562,8 @@
       "pt-br": {
         "sentence": "O mistério ___ (se resolver) amanhã."
       }
-    }
+    },
+    "variantVerificacion": "muestra de los 60, E2#29: sin pista y CORRECTO — «amanhã» y el pronominal fijan la mesóclisis"
   },
   {
     "id": "f692ec66",
@@ -10187,7 +10190,7 @@
     "contentHash": "e4c06bfb7261c3300019a02d0083267311bcee78f84c271aa7c632643feaff09",
     "esContrast": "Con clítico de 3.ª persona cae la -r del infinitivo, el clítico pasa a «-lo» y el tema se acentúa: comprar + o + á = «comprá-lo-á».",
     "variantStatus": "neutral",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "variantVerificacion": "muestra de los 60, E2#29: sin pista y CORRECTO — el molde trae lema y clítico, y «se o preço descer» fija el futuro",
     "type": "fill_blank",
     "data": {
       "sentence": "O terreno já está avaliado; se o preço descer, ele ___ sem hesitar. (comprar + o)",

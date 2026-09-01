@@ -2044,17 +2044,18 @@
     "contentHash": "4db88ca6bfc46b2ac5f7905c4573188cdc22a395a65b18b36851f4a1c5f839a9",
     "esContrast": "'Querer (bem) a alguém' = tenerle cariño ('Quero-lhe muito'); 'echar de menos' = 'ter saudades de'.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)",
+    "variantVerificacion": "muestra de los 60, E2#29: corregido — CASTELLANISMO: «querer a alguien» con sentido de amar es español. El portugués dice «gosto muito da minha avó» o «quero muito bem à minha avó»",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu ___ muito à minha avó. Ela é especial. (querer)",
+      "sentence": "Eu ___ muito da minha avó. Ela é especial. (gostar)",
       "blanks": [
         {
           "position": 0,
-          "answer": "quero",
+          "answer": "gosto",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "presente de «gostar», 1.ª persona — el verbo del cariño rige «de»"
     }
   },
   {
@@ -4736,17 +4737,20 @@
     ],
     "contentHash": "a75af754ad768150d12262ecc57c9d4de83bdac68fd392abfe03cc88950f0788",
     "esContrast": "'Vós' é arcaico em PT-BR; em PT-PT ainda se usa. 'Vocês' (= eles/elas) é o normal no Brasil.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
-      "sentence": "Vocês ___ a escolha correta. (aperceber)",
+      "sentence": "Vocês ___ da escolha correta a tempo. (aperceber-se)",
       "blanks": [
         {
           "position": 0,
-          "answer": "apercebem",
-          "alternatives": []
+          "answer": "aperceberam-se",
+          "alternatives": [
+            "aperceberam‑se"
+          ]
         }
-      ]
+      ],
+      "hintEs": "pretérito de «aperceber-se», 3.ª del plural — es pronominal y rige «de»"
     },
     "variantOverrides": {
       "pt-br": {
@@ -4759,7 +4763,8 @@
           }
         ]
       }
-    }
+    },
+    "variantVerificacion": "muestra de los 60, E2#29: corregido — «Vocês apercebem a escolha» no es portugués: «aperceber-se» es pronominal y rige «de». Y el ítem declaraba enseñar el reflexivo mientras su respuesta no llevaba ninguno"
   },
   {
     "id": "a9255b44",
@@ -6632,7 +6637,7 @@
     ],
     "contentHash": "e87ec3cb49d9e298ec9c4cacc99da9ac25304b8145f8777a31c8036520fcd896",
     "esContrast": "'Tu' exige 'pagas'; 'você' exige 'paga' — la formalidade cambia a conjugação.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Você ___ a conta no final. (pagar)",
@@ -6655,7 +6660,8 @@
           }
         ]
       }
-    }
+    },
+    "variantVerificacion": "muestra de los 60, E2#29: sin pista y CORRECTO — el sujeto expreso fija la persona"
   },
   {
     "id": "ea88503e",
