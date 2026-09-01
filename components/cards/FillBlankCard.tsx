@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { Exercise } from "@/lib/exercise-resolver";
 import { resolveExerciseData } from "@/lib/exercise-resolver";
 import { useSettings } from "@/lib/stores/settings";
+import { answersMatchFinal } from "@/lib/exercises/normalize";
 
 interface Props { ex: Exercise; onSubmit: (answer: string, correct: boolean) => void; }
 
@@ -13,10 +14,14 @@ interface Props { ex: Exercise; onSubmit: (answer: string, correct: boolean) => 
  *  acertar el más fácil para puntuar correcto: 33 ejercicios del corpus
  *  tienen más de uno. No era cosmético — el acierto entra en el FSRS y
  *  subía el mastery de un punto que el alumno no había demostrado. */
-const aciertaHueco = (b: { answer: string; alternatives?: string[] }, valor: string) => {
-  const v = valor.trim().toLowerCase();
-  return b.answer.toLowerCase() === v || (b.alternatives ?? []).some((a) => a.toLowerCase() === v);
-};
+const aciertaHueco = (b: { answer: string; alternatives?: string[] }, valor: string) =>
+  // Comparaba en crudo. Aquí el signo final no aparece —las respuestas de
+  // hueco son palabras— pero sí faltaban la normalización NFC y el
+  // recorte de la CLAVE: un acento descompuesto o un espacio sobrante en
+  // el JSON suspendían a quien había acertado. Es el mismo agujero que
+  // `TranslationCard` tenía en 560 ítems.
+  answersMatchFinal(valor, b.answer) ||
+  (b.alternatives ?? []).some((a) => answersMatchFinal(valor, a));
 
 /** El ancho del input es CONSTANTE a propósito. Estaba calculado sobre
  *  `answer.length`, así que la caja se ensanchaba con la respuesta y

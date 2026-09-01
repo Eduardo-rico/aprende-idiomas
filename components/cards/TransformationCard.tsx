@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { Exercise } from "@/lib/exercise-resolver";
 import { resolveExerciseData } from "@/lib/exercise-resolver";
 import { useSettings } from "@/lib/stores/settings";
-import { answersMatch } from "@/lib/exercises/normalize";
+import { answersMatchFinal } from "@/lib/exercises/normalize";
 
 interface Props { ex: Exercise; onSubmit: (answer: string, correct: boolean) => void; }
 
@@ -13,10 +13,13 @@ interface Props { ex: Exercise; onSubmit: (answer: string, correct: boolean) => 
  *  Tres decisiones que vienen de cicatrices de esta ola, y por eso van
  *  escritas aquí:
  *
- *  1. Pasa por `answersMatch`, no por `===`. `FillBlankCard` y
+ *  1. Pasa por `answersMatchFinal`, no por `===`. `FillBlankCard` y
  *     `TranslationCard` no lo hacen, y 563 de 1.121 respuestas del corpus
  *     exigen un diacrítico: comparar en crudo suspende a quien escribe
- *     bien sin acento en un teclado que no lo pone fácil.
+ *     bien sin acento en un teclado que no lo pone fácil. Y el signo
+ *     FINAL de la clave es opcional: cuando la respuesta es una frase
+ *     entera, el punto no es lengua — pero sólo ese signo, porque en una
+ *     transformación a interrogativa el «?» sí es la respuesta.
  *  2. Acepta `alternatives`. Cuando la instrucción admite dos salidas
  *     igual de buenas, el ítem las declara — y el gate del lote obliga a
  *     que sean de verdad equivalentes.
@@ -34,7 +37,7 @@ export function TransformationCard({ ex, onSubmit }: Props) {
   const aceptadas = [d.answer, ...(d.alternatives ?? [])];
 
   const submit = () => {
-    const ok = aceptadas.some((a) => answersMatch(input, a));
+    const ok = aceptadas.some((a) => answersMatchFinal(input, a));
     setRevealed(true);
     onSubmit(input, ok);
   };

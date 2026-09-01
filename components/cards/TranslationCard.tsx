@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { Exercise } from "@/lib/exercise-resolver";
 import { resolveExerciseData } from "@/lib/exercise-resolver";
 import { useSettings } from "@/lib/stores/settings";
+import { answersMatchFinal } from "@/lib/exercises/normalize";
 
 interface Props { ex: Exercise; onSubmit: (answer: string, correct: boolean) => void; }
 export function TranslationCard({ ex, onSubmit }: Props) {
@@ -14,9 +15,21 @@ export function TranslationCard({ ex, onSubmit }: Props) {
   const [input, setInput] = useState("");
   const [revealed, setRevealed] = useState(false);
 
+  // Comparaba en crudo: `target.toLowerCase() === value.trim().toLowerCase()`.
+  // Tres agujeros en una línea, y los tres cobran fallos falsos que entran
+  // en el FSRS:
+  //   · no normalizaba a NFC, así que un acento descompuesto —lo que
+  //     escribe media configuración de teclado— no casaba nunca;
+  //   · no recortaba el `target`, así que un espacio en el JSON suspendía
+  //     a todo el mundo;
+  //   · exigía el SIGNO FINAL, y **560 de estas traducciones lo llevan**:
+  //     quien traducía perfecto y no ponía el punto quedaba suspendido.
+  // `answersMatchFinal` cierra los tres, y hace opcional sólo el signo que
+  // la clave lleva — no cualquiera, porque en una pregunta el «?» es
+  // parte de la respuesta.
   const check = (value: string) =>
-    target.toLowerCase() === value.trim().toLowerCase() ||
-    (data.acceptedAlternatives?.some(a => a.toLowerCase() === value.trim().toLowerCase()) ?? false);
+    answersMatchFinal(value, target) ||
+    (data.acceptedAlternatives?.some((a) => answersMatchFinal(value, a)) ?? false);
 
   const submit = () => {
     setRevealed(true);

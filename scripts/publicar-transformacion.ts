@@ -14,8 +14,9 @@ import { BLOCKS, ALL_CONCEPTS } from '../lib/data/languages/pt/curriculum';
 import { BLOCKS_DIR } from './config';
 import { verificar, respuestaDe, informeEspejo, type ItemTrans } from './lib/transformacion';
 import { ITEMS as E2_19 } from './lotes/trans-e2-19';
+import { ITEMS as E2_19B } from './lotes/trans-e2-19b';
 
-const LOTES: Record<string, ItemTrans[]> = { 'e2-19': E2_19 };
+const LOTES: Record<string, ItemTrans[]> = { 'e2-19': E2_19, 'e2-19b': E2_19B };
 
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
 const lote = arg('--lote') ?? '';

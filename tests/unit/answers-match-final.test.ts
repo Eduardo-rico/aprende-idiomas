@@ -1,0 +1,50 @@
+// tests/unit/answers-match-final.test.ts
+//
+// EL SIGNO FINAL DE LA CLAVE ES OPCIONAL, y sólo ése.
+//
+// Lo destapó una auditoría del primer lote de transformación: 7 de 24
+// respuestas eran frases enteras terminadas en punto, y la comparación lo
+// exigía. Quien hacía la transformación PERFECTA sin poner el punto
+// quedaba suspendido, y ese fallo entra en el FSRS y hunde el mastery de
+// un punto que el alumno sí sabe — la misma familia que el cloze sin
+// pista y el multi-hueco.
+//
+// El barrido posterior encontró que el agujero era mucho mayor: **560
+// traducciones publicadas** tienen la clave terminada en signo y
+// `TranslationCard` comparaba en crudo, sin NFC ni recorte de la clave.
+import { describe, it, expect } from 'vitest';
+import { answersMatchFinal, answersMatch } from '@/lib/exercises/normalize';
+
+describe('answersMatchFinal', () => {
+  it('acepta la respuesta con y sin el punto final de la clave', () => {
+    expect(answersMatchFinal('Comprei-a na estação.', 'Comprei-a na estação.')).toBe(true);
+    expect(answersMatchFinal('Comprei-a na estação', 'Comprei-a na estação.')).toBe(true);
+    expect(answersMatchFinal('comprei-a na estação', 'Comprei-a na estação.')).toBe(true);
+  });
+
+  it('NO acepta un signo terminal distinto del de la clave', () => {
+    // Si se ignorara todo signo final, una transformación de afirmativa a
+    // interrogativa dejaría de medirse: ahí el «?» ES la respuesta.
+    expect(answersMatchFinal('Comprei-a na estação?', 'Comprei-a na estação.')).toBe(false);
+    expect(answersMatchFinal('Comprei-a na estação!', 'Comprei-a na estação.')).toBe(false);
+    expect(answersMatchFinal('Vieste.', 'Vieste?')).toBe(false);
+    expect(answersMatchFinal('Vieste', 'Vieste?')).toBe(true);
+  });
+
+  it('sigue exigiendo los acentos, que en portugués son lengua', () => {
+    expect(answersMatchFinal('falara', 'falará')).toBe(false);
+    expect(answersMatchFinal('estao', 'estão')).toBe(false);
+  });
+
+  it('normaliza NFC y recorta las dos partes', () => {
+    // «ã» descompuesto (a + tilde combinante) es lo que escriben algunas
+    // configuraciones de teclado y lo que `===` rechazaba.
+    expect(answersMatchFinal('estão'.normalize('NFD'), 'estão')).toBe(true);
+    expect(answersMatchFinal('  estão  ', 'estão ')).toBe(true);
+  });
+
+  it('coincide con answersMatch cuando la clave no lleva signo final', () => {
+    for (const [a, b] of [['falo', 'falo'], ['falo', 'falas'], ['estão', 'estao']])
+      expect(answersMatchFinal(a!, b!)).toBe(answersMatch(a!, b!));
+  });
+});
