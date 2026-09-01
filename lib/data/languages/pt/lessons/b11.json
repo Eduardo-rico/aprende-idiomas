@@ -127,24 +127,13 @@
       "Reconocer que «antes de que» es el español asomando y resolverlo con «antes de + infinitivo» o «antes que + conjuntivo»",
       "Usar SER con los eventos aunque se diga dónde y cuándo ocurren",
       "Usar «ficar» para la localización de lo que no se mueve, que el español no tiene",
-      "Separar la cualidad (ser) del estado resultante (estar) cuando el español elige al revés"
+      "Separar la cualidad (ser) del estado resultante (estar) cuando el español elige al revés",
+      "Usar «há» impersonal —que no concuerda— frente a «existir», que sí, y reconocer «ter» existencial como brasileño"
     ],
     "conceptIds": [
       "b11-alternancia-infinitivo",
       "b11-ser-estar-divergente",
-      "b11-haver-ter-existir",
-      "b11-coloc-registro",
-      "b11-norma-culta-oral",
-      "b11-conectores-discursivos",
-      "b11-jerarquias-profissionais",
-      "b11-descortesia-calculada",
-      "b11-ironia-understatement",
-      "b11-alusao-cultural",
-      "b11-humor-autodepreciativo",
-      "b11-mediacao-especializada",
-      "b11-mediacao-intercultural",
-      "b11-topico",
-      "b11-ordem-foco"
+      "b11-haver-ter-existir"
     ],
     "vocabKey": [
       "perceberem",
@@ -153,9 +142,97 @@
       "ficar",
       "tem lugar",
       "esgotada",
-      "remodelado"
+      "remodelado",
+      "há",
+      "houve",
+      "existem",
+      "haver de"
     ],
     "conceptNotesPath": "b11/l5-eleccion-c1.mdx",
+    "exerciseRefs": []
+  },
+  {
+    "id": "b11-l6-ordem-topico-e-foco",
+    "blockId": 11,
+    "name": "El orden dice qué importa: tópico y foco",
+    "objectives": [
+      "Preguntar con «é que» sin invertir, que es la forma corriente y neutra del portugués europeo",
+      "Construir clivadas con «que» invariable, donde el español reparte entre quien, cuando y donde",
+      "Sacar el tópico al frente rellenando su hueco con el clítico que le corresponde",
+      "Reconocer que un elemento destacado al frente atrae el clítico delante del verbo"
+    ],
+    "conceptIds": [
+      "b11-topico",
+      "b11-ordem-foco"
+    ],
+    "vocabKey": [
+      "é que",
+      "foi… que",
+      "quanto a",
+      "é aí que",
+      "é por isso que"
+    ],
+    "conceptNotesPath": "b11/l6-ordem-topico-e-foco.mdx",
+    "exerciseRefs": []
+  },
+  {
+    "id": "b11-l7-o-que-nao-se-traduz",
+    "blockId": 11,
+    "name": "Lo que no se traduce: entender menos de lo que se dice",
+    "objectives": [
+      "Leer el understatement europeo en su valor real: «não estava mau» es un elogio, no una tibieza",
+      "Reconocer «lá» y «cá» como atenuadores sin equivalente español y no perderlos al traducir",
+      "Interpretar el humor autodepreciativo como acercamiento y no como confesión de incompetencia",
+      "Manejar la alusión cultural (el 25 de Abril, desenrascanço, saudade) como contenido y no como adorno",
+      "Mediar conservando la atenuación, porque quitarla convierte una sugerencia en una orden"
+    ],
+    "conceptIds": [
+      "b11-ironia-understatement",
+      "b11-humor-autodepreciativo",
+      "b11-alusao-cultural",
+      "b11-mediacao-intercultural",
+      "b11-mediacao-especializada"
+    ],
+    "vocabKey": [
+      "não está mau",
+      "se calhar",
+      "lá me desenrasquei",
+      "cá para mim",
+      "desenrascanço",
+      "o 25 de Abril"
+    ],
+    "conceptNotesPath": "b11/l7-o-que-nao-se-traduz.mdx",
+    "exerciseRefs": []
+  },
+  {
+    "id": "b11-l8-norma-culta-oral",
+    "blockId": 11,
+    "name": "La norma culta oral: hablar bien sin hablar como un libro",
+    "objectives": [
+      "Dirigirse a alguien en tercera persona con su nombre o su título, que es la cortesía europea corriente",
+      "Usar los títulos (Doutor, Engenheiro, Professor) donde el español no los usaría",
+      "Elegir los conectores del habla culta —de facto, aliás, no fundo, pronto— y no los del papel",
+      "Colocar el clítico según la norma europea y reconocer la próclise inicial como marca brasileña",
+      "Negar y discrepar con firmeza mediante fórmulas, no mediante léxico duro"
+    ],
+    "conceptIds": [
+      "b11-norma-culta-oral",
+      "b11-conectores-discursivos",
+      "b11-coloc-registro",
+      "b11-jerarquias-profissionais",
+      "b11-descortesia-calculada"
+    ],
+    "vocabKey": [
+      "o senhor doutor",
+      "de facto",
+      "aliás",
+      "no fundo",
+      "ora bem",
+      "pronto",
+      "lamento, mas",
+      "não me parece"
+    ],
+    "conceptNotesPath": "b11/l8-norma-culta-oral.mdx",
     "exerciseRefs": []
   }
 ]
