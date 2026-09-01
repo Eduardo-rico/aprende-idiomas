@@ -98,7 +98,8 @@
     ],
     "contentHash": "04452b007cee87437497f7488c87882a6c42c5092358ce236b2e54a7edc85454",
     "esContrast": "'Corresponder-se' existe en ambos, pero en PT-PT es más frecuente en la norma culta.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28b: corregido — cloze sin pista: nada fijaba el verbo ni la persona",
     "type": "fill_blank",
     "data": {
       "sentence": "As duas variantes do português ___ em muitos aspetos.",
@@ -110,7 +111,8 @@
             "se correspondem"
           ]
         }
-      ]
+      ],
+      "hintEs": "se corresponden — presente, 3.ª del plural, con el pronombre enclítico"
     }
   },
   {
@@ -137,7 +139,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "dictamen dirigido E2#28b: RETIRADO — el audio es brasileño («tenho saudade de você, meu amigo») y se sirve como europeo; y el punto declarado es tratamiento, que el ítem no toca · puntos que dejaba cubiertos: b10-var-tratamento",
     "type": "listening",
     "data": {
       "audioText": "Eu tenho saudade de você, meu amigo. A palavra saudade é muito especial na cultura brasileira e portuguesa.",
@@ -571,22 +574,23 @@
       "regional",
       "formal"
     ],
-    "contentHash": "2aaa15ef3ecaa7141494dc2973bc49a5983c5cca1b33b38a23f05c03dc87b65b",
+    "contentHash": "8e1dba501f5e8b7e97c9615d4b24ac98f0e026437ef0db9fe7ce53acddd4661e",
     "audio": {
       "br": {
-        "hash": "fa798400f253ab56615123a9a10531f148d8151a323b41704bae8112021c405a",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "000476b73894aca6c31244bf2c9605938cdc255af46410e5af9b8f9e80fdd88a",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "b4a14c43dbb6f115472576db92ae6bf67952c884f77541bd338163c947aab197",
-        "voice": "Portuguese_Wiselady"
+        "hash": "000476b73894aca6c31244bf2c9605938cdc255af46410e5af9b8f9e80fdd88a",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28b: corregido — decía que «tu» es regional en Portugal, que es FALSO: es el informal general del país. Y presentaba «você» como equivalente neutro del formal portugués, que es justo donde incomoda",
     "type": "flashcard",
     "data": {
       "front": "¿Qué forma de tratamiento es más común en Portugal en situaciones formales?",
-      "back": "🇵🇹 En PT se usa más 'o senhor / a senhora' y 'você' (formal/informal). 🇧🇷 En BR predomina 'você' (informal) y 'o senhor' (formal). El 'tu' es regional (norte de PT, sur de BR).",
+      "back": "🇵🇹 En Portugal: «tu» es el trato informal general —no es regional— y «o senhor / a senhora» el formal. «Você» existe pero es delicado: con un superior o un desconocido puede sonar áspero, y muchos lo evitan usando el nombre o el título. 🇧🇷 En Brasil: «você» es el informal corriente y «o senhor» el formal; el «tu» sí es regional (sur y nordeste).",
       "example": "PT formal: «O senhor sabe a hora?» / BR: «Você sabe que horas são?»"
     }
   },
@@ -1030,7 +1034,7 @@
       "falso-amigo",
       "formal"
     ],
-    "contentHash": "e50a0803d47436e7eaf0dc05c975cf885be070f86f345f4c67662ab9f65f38ab",
+    "contentHash": "2e961a79d4b09b6a711c75c88f2689c48d2f8e97a35aa181be44e7afdb383e9a",
     "esContrast": "'contacto' es sustantivo en ambas lenguas; el contraste es con Brasil: PT-PT contacto / BR contato.",
     "audio": {
       "br": {
@@ -1042,19 +1046,19 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28b: corregido — la pregunta pedía traducir «contacto telefónico» y la respuesta era la misma expresión: no medía la escucha ni nada",
     "type": "listening",
     "data": {
       "audioText": "Obrigado pela atenção. Aguardo o seu contacto telefónico para dar uma resposta.",
-      "question": "¿Cuál es el equivalente más adecuado en español para 'contacto telefónico'?",
+      "question": "¿Qué pide quien habla antes de dar una respuesta?",
       "options": [
-        "Contacto telefónico",
-        "Llamada de contacto",
-        "Contacto teléfono",
-        "Teléfono de contacto"
+        "Que lo llamen por teléfono",
+        "Que le escriban un correo",
+        "Que le manden el contrato",
+        "Que pasen por la oficina"
       ],
-      "answer": "Contacto telefónico"
+      "answer": "Que lo llamen por teléfono"
     }
   },
   {
@@ -1176,7 +1180,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "dictamen dirigido E2#28b: RETIRADO — dos errores fonéticos: la «r» carioca es glotal/uvular, no apical, y lo que pasa con «di/ti» es africación, no reducción. Misma clase que la tarjeta del tap de «caro» · puntos que dejaba cubiertos: b10-var-colocacao",
     "type": "flashcard",
     "data": {
       "front": "¿Qué es el 'carioca' y qué variante representa?",
@@ -1666,8 +1671,8 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según convergencia lote 8 E2#5 2026-08-29: glosa falsa («en Portugal es 'cola'») sustituida por la aprobada por ambos revisores, atada al tema de la tarjeta (Priberam: cola = pegamento/cauda; sin acepción de fila)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28b: OK, leído entero",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'autobús' en PT-BR y en PT-PT?",
@@ -2403,22 +2408,23 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "b21f2d271203cd1b0e3c6c761def80cf29acd3e38ee7beb2a61bc60b2c61804f",
+    "contentHash": "6162216b349b4d89696c40d0b7ad2c8d544c32641158573ccad029683035a2fd",
     "audio": {
       "br": {
-        "hash": "eeb89f5b385eedb93f9673d5aec4b9f79816b942507b7c7318a8094b528c96f7",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "f657c901cd7aeb08d46532d098f7680642c9977e91a576fe0ec95aba4c27b570",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "b4d635bd0fd06c642eb3111953126c2fa6350e06dd506cba0a4a445854eb451a",
-        "voice": "Portuguese_Wiselady"
+        "hash": "f657c901cd7aeb08d46532d098f7680642c9977e91a576fe0ec95aba4c27b570",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28b: corregido — «manteram-se» no existe: el pretérito de «manter» es «mantiveram-se»",
     "type": "flashcard",
     "data": {
       "front": "Completa: 'As duas cidades ___ em contacto desde 1990.'",
-      "back": "As duas cidades manteram-se em contacto desde 1990. / 🇧🇷 BR: se mantiveram em contato.",
+      "back": "As duas cidades mantiveram-se em contacto desde 1990. / 🇧🇷 BR: se mantiveram em contato.",
       "example": "Continuaram correspondendo-se durante anos."
     }
   },
@@ -3050,8 +3056,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28b: OK, leído entero",
     "type": "flashcard",
     "data": {
       "front": "Cierre formal para e-mails profesionales ('Atentamente')",
@@ -3246,7 +3252,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#28b: OK, leído entero",
     "type": "translation",
     "data": {
       "source": "Os conceitos de família correspondem-se nos dois países.",

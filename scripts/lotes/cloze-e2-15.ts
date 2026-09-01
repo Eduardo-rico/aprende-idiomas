@@ -284,7 +284,7 @@ export function verificar(items: Cloze[]): string[] {
     if (!r) { v.push(`${id}: el paradigma no cubre «${x.lema}» en ${x.t}/${x.per} y no hay respuesta declarada — un conjugador que adivina consagra formas falsas`); continue; }
 
     const huecos = x.s.split('___').length - 1;
-    if (huecos !== 1) v.push(`${id}: ${huecos} huecos, tiene que haber 1`);
+    if (huecos !== 1) v.push(`${id}: ${huecos} huecos, tiene que haber 1 — deja uno solo y lleva el resto a otro ítem: la tarjeta validaba con blanks.some() y 33 ejercicios se aprobaban tecleando uno de tres`);
     // El paréntesis existe para NOMBRAR EL LEMA: si se pide una forma de
     // un verbo, hay que decir de cuál. Cuando escribí este gate la
     // tarjeta aún no pintaba `hintEs` y el paréntesis era el único canal;
@@ -293,10 +293,10 @@ export function verificar(items: Cloze[]): string[] {
     // con la que se saluda» → `mão`— pedía un paréntesis vacío de
     // contenido. Sigue siendo obligatorio donde el ítem lo necesita.
     if (x.lema && !/\([^)]+\)/.test(x.s)) v.push(`${id}: pide una forma de «${x.lema}» y no nombra el verbo entre paréntesis`);
-    if (!x.pista.trim()) v.push(`${id}: sin hintEs`);
+    if (!x.pista.trim()) v.push(`${id}: sin hintEs — sin pista el hueco casi siempre admite varias formas; escribe una que DETERMINE la respuesta, no que la sugiera`);
     // LA CICATRIZ: el contexto tiene que DETERMINAR la respuesta.
-    if (!x.ancla.trim()) v.push(`${id}: sin ancla declarada`);
-    else if (!x.s.includes(x.ancla)) v.push(`${id}: el ancla «${x.ancla}» no está en la frase`);
+    if (!x.ancla.trim()) v.push(`${id}: sin ancla declarada — el ancla es el trozo de la frase que EXCLUYE las otras respuestas posibles; si no lo encuentras, el ítem no está determinado`);
+    else if (!x.s.includes(x.ancla)) v.push(`${id}: el ancla «${x.ancla}» no está en la frase — cópiala literal de la frase, que si no no excluye nada`);
     // La pista no puede deletrear la respuesta portuguesa.
     //
     // El caso que se repitió TRES veces antes de escribirse aquí: cuando
@@ -312,7 +312,7 @@ export function verificar(items: Cloze[]): string[] {
         : ''));
     }
     // Ni la frase, fuera del hueco.
-    if (new RegExp(`(?<![\\p{L}])${r}(?![\\p{L}])`, 'iu').test(x.s.replace('___', ''))) v.push(`${id}: la respuesta «${r}» ya está escrita en la frase`);
+    if (new RegExp(`(?<![\\p{L}])${r}(?![\\p{L}])`, 'iu').test(x.s.replace('___', ''))) v.push(`${id}: la respuesta «${r}» ya está escrita en la frase — cambia la FRASE, no la respuesta: el alumno la copia de al lado y el FSRS registra un acierto falso`);
     // EL SUJETO POSPUESTO. Lo destapó el muestreo del 20 %: cuatro de
     // veinte ítems decían «comíamos nós», «aceitavas tu» — orden marcado
     // que en declarativa suena a ejercicio y no a portugués. Era un
@@ -337,7 +337,7 @@ export function verificar(items: Cloze[]): string[] {
   for (const [p, m] of porPunto) {
     const n = [...m.values()].reduce((a, b) => a + b, 0);
     const [top, k] = [...m].sort((a, b) => b[1] - a[1])[0]!;
-    if (n >= 4 && k / n > 0.5) v.push(`${p}: la respuesta «${top}» sale ${k} de ${n} veces — se resuelve por frecuencia`);
+    if (n >= 4 && k / n > 0.5) v.push(`${p}: la respuesta «${top}» sale ${k} de ${n} veces — se resuelve por frecuencia: varía el verbo o la persona entre los ítems del punto, que si no se aprende la moda y no la regla`);
   }
   return v;
 }

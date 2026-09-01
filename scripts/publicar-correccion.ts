@@ -15,8 +15,9 @@ import { ITEMS as A } from './lotes/corr-e2-21a';
 import { ITEMS as B } from './lotes/corr-e2-21b';
 import { ITEMS as C } from './lotes/corr-e2-21c';
 import { ITEMS as D } from './lotes/corr-e2-21d';
+import { ITEMS as E } from './lotes/corr-e2-28';
 
-const LOTES: Record<string, ItemCorreccion[]> = { 'e2-21a': A, 'e2-21b': B, 'e2-21c': C, 'e2-21d': D };
+const LOTES: Record<string, ItemCorreccion[]> = { 'e2-21a': A, 'e2-21b': B, 'e2-21c': C, 'e2-21d': D, 'e2-28': E };
 
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
 const lote = arg('--lote') ?? '';

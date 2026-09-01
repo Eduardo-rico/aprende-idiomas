@@ -5864,5 +5864,80 @@
       "alternatives": [],
       "calcoEs": "Traté de explicarle todo con calma."
     }
+  },
+  {
+    "id": "co28-018",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [
+      "reg-verbal-zero"
+    ],
+    "tags": [
+      "e2-28",
+      "correccion"
+    ],
+    "contentHash": "45306432459a1b710df564a89f44baa3e8c6e97ddbdbae864590738f64a5d2a2",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-28: la frase mala es el calco de «Amenazó con irse si no lo escuchaban.». El gate de variante MUERDE por diseño (preposición espuria del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ameaçou com ir-se embora se não o ouvissem.",
+      "correct": "Ameaçou ir-se embora se não o ouvissem.",
+      "explanationEs": "«Ameaçar» rige infinitivo sin preposición. El «con» viene del español, que sí la pide.",
+      "alternatives": [],
+      "calcoEs": "Amenazó con irse si no lo escuchaban."
+    }
+  },
+  {
+    "id": "co28-019",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [
+      "reg-verbal-zero"
+    ],
+    "tags": [
+      "e2-28",
+      "correccion"
+    ],
+    "contentHash": "9ec206d7b188c98c86074cd93b0afd291e01203f6a7cf87347e1d6539bc4ec92",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-28: la frase mala es el calco de «Esperamos a que llegara para empezar.». El gate de variante MUERDE por diseño (preposición espuria del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Esperámos a que ele chegasse para começar.",
+      "correct": "Esperámos que ele chegasse para começar.",
+      "explanationEs": "«Esperar que» va sin preposición cuando lleva subordinada. El «a» es el del español «esperar a que».",
+      "alternatives": [],
+      "calcoEs": "Esperamos a que llegara para empezar."
+    }
+  },
+  {
+    "id": "co28-020",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [
+      "reg-verbal-zero"
+    ],
+    "tags": [
+      "e2-28",
+      "correccion"
+    ],
+    "contentHash": "0be2dfe3630fc00feea718cc7a86a71751538d22ffa07e0b3db71eb9a362a6e0",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-28: la frase mala es el calco de «Voy a llevar el coche al taller mañana.». El gate de variante MUERDE por diseño (preposición espuria del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Vou a levar o carro à oficina amanhã.",
+      "correct": "Vou levar o carro à oficina amanhã.",
+      "explanationEs": "La perífrasis de futuro es «ir + infinitivo», sin «a». El español la construye con «a» y ahí se cuela.",
+      "alternatives": [],
+      "calcoEs": "Voy a llevar el coche al taller mañana."
+    }
   }
 ]

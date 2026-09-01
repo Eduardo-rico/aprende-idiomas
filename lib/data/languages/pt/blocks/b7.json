@@ -269,7 +269,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-brasileiro",
     "type": "flashcard",
     "data": {
       "front": "¿Qué verbo auxiliar se usa en PT-BR para formar el presente progresivo?",
@@ -1448,7 +1449,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-brasileiro",
     "type": "translation",
     "data": {
       "source": "O problema vem piorando com o tempo.",
@@ -1881,7 +1883,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-brasileiro",
     "type": "listening",
     "data": {
       "audioText": "O João está andando pensando na vida dele.",
@@ -2015,7 +2018,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-brasileiro",
     "type": "listening",
     "data": {
       "audioText": "Ela está tentando encontrar as chaves do carro.",
@@ -2998,7 +3002,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-brasileiro",
     "type": "flashcard",
     "data": {
       "front": "¿Qué significa 'ESTAR + gerúndio' y cómo se compara con el español?",
@@ -3267,7 +3272,8 @@
     ],
     "contentHash": "a4bfac2a11187af37c3405cbefa98cde3a25349af079d61f08a7eccb9ebc4d70",
     "esContrast": "'Saber que' no lleva preposición en PT, a diferencia de 'saber de' (conocer algo de algo). En ES se diría 'sé que viene'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-zero",
     "type": "verb_preposition",
     "data": {
       "verb": "saber",
@@ -4504,7 +4510,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-brasileiro",
     "type": "listening",
     "data": {
       "audioText": "Estou falando ao telefone quando ele chega.",
@@ -5171,7 +5178,8 @@
     ],
     "contentHash": "451780c227feddb404876befb5059f460a81f8750be5d68f7d72a1d264388831",
     "esContrast": "La perífrasis progresiva brasileña usa 'estar' + gerúndio: 'está comendo'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-brasileiro",
     "type": "error_correction",
     "data": {
       "sentence": "Ele está comer agora, não pode atender.",
@@ -6362,6 +6370,183 @@
       "alternatives": [],
       "hintEs": "con ter va el largo, aunque con ser vaya el corto",
       "espejoEs": false
+    }
+  },
+  {
+    "id": "co28-008",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio-brasileiro"
+    ],
+    "tags": [
+      "e2-28",
+      "correccion"
+    ],
+    "contentHash": "4a72f05bfc37875a2789cacdb36978bf3b5668d549c637f867ee379f2bb8ebf7",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-28: la frase mala es el calco de «Estoy comiendo ahora, te llamo dentro de un rato.». El gate de variante MUERDE por diseño (la frase de partida es portugués de Brasil correcto: aquí se corrige a la norma europea) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Estou comendo agora, ligo-te daqui a bocado.",
+      "correct": "Estou a comer agora, ligo-te daqui a bocado.",
+      "explanationEs": "El progresivo del estándar europeo es «estar a + infinitivo». El gerundio con «estar» es la norma brasileña, y coincide con la española: por eso sale solo.",
+      "alternatives": [],
+      "calcoEs": "Estoy comiendo ahora, te llamo dentro de un rato."
+    }
+  },
+  {
+    "id": "co28-009",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio-brasileiro"
+    ],
+    "tags": [
+      "e2-28",
+      "correccion"
+    ],
+    "contentHash": "35943dd5f8f217bed0c5ab4baa37fc1966c2fc458024505aa7dc1ec052720c6e",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-28: la frase mala es el calco de «Está estudiando para el examen del viernes.». El gate de variante MUERDE por diseño (la frase de partida es portugués de Brasil correcto: aquí se corrige a la norma europea) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ela está estudando para o exame de sexta.",
+      "correct": "Ela está a estudar para o exame de sexta.",
+      "explanationEs": "«Estar a + infinitivo», no «estar + gerúndio».",
+      "alternatives": [],
+      "calcoEs": "Está estudiando para el examen del viernes."
+    }
+  },
+  {
+    "id": "co28-010",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio-brasileiro"
+    ],
+    "tags": [
+      "e2-28",
+      "correccion"
+    ],
+    "contentHash": "1827b1f55c9bd80ac601672d1d10943b69cdc8e26db9c7e366e2aeb0b4fa9ffb",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-28: la frase mala es el calco de «Llevamos más de una hora esperando.». El gate de variante MUERDE por diseño (la frase de partida es portugués de Brasil correcto: aquí se corrige a la norma europea) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Estamos esperando há mais de uma hora.",
+      "correct": "Estamos à espera há mais de uma hora.",
+      "explanationEs": "Con «esperar», el europeo prefiere la locución «estar à espera»; «estar a esperar» también corre. Lo que no corre es el gerundio.",
+      "alternatives": [
+        "Estamos a esperar há mais de uma hora."
+      ],
+      "calcoEs": "Llevamos más de una hora esperando."
+    }
+  },
+  {
+    "id": "co28-011",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio-brasileiro"
+    ],
+    "tags": [
+      "e2-28",
+      "correccion"
+    ],
+    "contentHash": "faa097eb8645556f7d622f146516ba97ccb7c445eea5dd1f9968bb4cc3806b34",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-28: la frase mala es el calco de «Están trabajando en el jardín de atrás.». El gate de variante MUERDE por diseño (la frase de partida es portugués de Brasil correcto: aquí se corrige a la norma europea) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Eles estão trabalhando no jardim das traseiras.",
+      "correct": "Eles estão a trabalhar no jardim das traseiras.",
+      "explanationEs": "«Estar a + infinitivo» también en plural: el auxiliar concuerda y el infinitivo no cambia.",
+      "alternatives": [],
+      "calcoEs": "Están trabajando en el jardín de atrás."
+    }
+  },
+  {
+    "id": "co28-012",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio-brasileiro"
+    ],
+    "tags": [
+      "e2-28",
+      "correccion"
+    ],
+    "contentHash": "b3cd0f8f798ee242831e05ef5c74a8761197fffe0833efa749558de4f64076f8",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-28: la frase mala es el calco de «Estaba lloviendo cuando salimos de casa.». El gate de variante MUERDE por diseño (la frase de partida es portugués de Brasil correcto: aquí se corrige a la norma europea) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Estava chovendo quando saímos de casa.",
+      "correct": "Estava a chover quando saímos de casa.",
+      "explanationEs": "La perífrasis funciona igual en pasado: «estava a chover».",
+      "alternatives": [],
+      "calcoEs": "Estaba lloviendo cuando salimos de casa."
+    }
+  },
+  {
+    "id": "co28-013",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio-brasileiro"
+    ],
+    "tags": [
+      "e2-28",
+      "correccion"
+    ],
+    "contentHash": "ca4b9761432f58a1977235d89b6b58c8821c98d67d3f5ee13b368db5fbdada81",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-28: la frase mala es el calco de «Estoy leyendo un libro muy bueno sobre Lisboa.». El gate de variante MUERDE por diseño (la frase de partida es portugués de Brasil correcto: aquí se corrige a la norma europea) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Estou lendo um livro muito bom sobre Lisboa.",
+      "correct": "Estou a ler um livro muito bom sobre Lisboa.",
+      "explanationEs": "Con verbos en -er es igual: «estou a ler».",
+      "alternatives": [],
+      "calcoEs": "Estoy leyendo un libro muy bueno sobre Lisboa."
+    }
+  },
+  {
+    "id": "co28-014",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio-brasileiro"
+    ],
+    "tags": [
+      "e2-28",
+      "correccion"
+    ],
+    "contentHash": "76254eb0c40eea55859ff06a64903133ba89f248b046c4ad79df6fd6a4832e70",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-28: la frase mala es el calco de «Está durmiendo, no hagas ruido.». El gate de variante MUERDE por diseño (la frase de partida es portugués de Brasil correcto: aquí se corrige a la norma europea) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ele está dormindo, não faças barulho.",
+      "correct": "Ele está a dormir, não faças barulho.",
+      "explanationEs": "Y con verbos en -ir: «está a dormir».",
+      "alternatives": [],
+      "calcoEs": "Está durmiendo, no hagas ruido."
     }
   }
 ]
