@@ -3835,7 +3835,7 @@
       "regional",
       "irregular"
     ],
-    "contentHash": "7f2bd6e843a9cfa185dbd2c62aac571ed13d780be0adfa9b6fe5aa0867c2866f",
+    "contentHash": "af2e48d779bd584e4376cab19e9c0da6adb0730e84b1c21bf471b089fbbe7761",
     "esContrast": "En BR el 'r' inicial de 'rua' suena /h/; en PT es una vibrante alveolar /ʁ/.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
@@ -3845,11 +3845,10 @@
         {
           "position": 0,
           "answer": "rua",
-          "alternatives": [
-            "rua"
-          ]
+          "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "la calle"
     }
   },
   {
@@ -6904,7 +6903,7 @@
       "b1-nasal-ao-oes"
     ],
     "tags": [],
-    "contentHash": "dca2a9429cb884d10ef849bf3ca6b33fd79469bd20ebe4fdbb32a6edaae16e60",
+    "contentHash": "1880bd74dd0b25cb73ecd400f4008b7d175a737a27c0805f50efc06ee7e309ff",
     "esContrast": "'Pão' se pronuncia con la nasal /ã/, no como 'pan' en español.",
     "variantStatus": "divergent",
     "type": "fill_blank",
@@ -6916,7 +6915,8 @@
           "answer": "pão",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "el pan"
     },
     "variantOverrides": {
       "pt-br": {
@@ -6933,7 +6933,7 @@
       "b1-nasal-m-final"
     ],
     "tags": [],
-    "contentHash": "dce0e9c908b530ce6fb46987cc80c4b83f1bb93b8388388c51d7fb81343f978d",
+    "contentHash": "0a3cc40092a8888b3cef2a33accc8111a31faf288109042c5fd91dfdc8713b0f",
     "esContrast": "'Bem' se pronuncia /bẽj/; la e es nasal y la m es final.",
     "variantStatus": "divergent",
     "type": "fill_blank",
@@ -6945,7 +6945,8 @@
           "answer": "bem",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "bien — el adverbio"
     },
     "variantOverrides": {
       "pt-br": {
@@ -7420,7 +7421,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "e79c6e8d641e008d514226ada0503ba5b418f67a54e831dbbef71be132e6a7c7",
+    "contentHash": "e0554f2ad8f36e96de309aca6dbf552ca8bb5e8ac7d4c05b5daddf481c3a45c6",
     "esContrast": "No confundas 'mãe' con 'mae' (sin tilde); en español no existe esta palabra.",
     "variantStatus": "needs-human",
     "type": "fill_blank",
@@ -7432,7 +7433,8 @@
           "answer": "mãe",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "la madre"
     },
     "variantOverrides": {
       "pt-br": {

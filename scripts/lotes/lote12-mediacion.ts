@@ -79,7 +79,7 @@ export const ITEMS: ItemMed[] = [
     sourceText: 'A direção informa que encerrar-se-ão os serviços administrativos no dia 2 de maio. Os pedidos pendentes tratar-se-ão na semana seguinte, por ordem de entrada.',
     audience: 'um colega que entregou um pedido na semana passada e está à espera',
     instruccion: 'Dile lo que le toca, en tono de colega. El verbo partido del aviso suena a circular: usa la forma normal.',
-    marcadores: [['encerrar-se-ão', 'fecham'], ['tratar-se-ão', 'tratam']],
+    marcadores: [['encerrar-se-ão', 'fecham', 'fecha'], ['tratar-se-ão', 'tratam', 'vão tratando', 'tratam-se']],
     datos: ['2 de maio', ['ordem de entrada', 'por ordem de entrada']],
     modelo: 'Olha, a parte administrativa fecha no dia 2 de maio. O que já entrou fica para a semana a seguir e vão tratando por ordem de entrada — o teu não se perde, só anda mais devagar.',
     wordRange: [28, 55], register: 'informal', address: 'tu',

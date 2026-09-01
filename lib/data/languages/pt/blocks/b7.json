@@ -3859,30 +3859,20 @@
       "b7-infinitivo-pessoal"
     ],
     "tags": [],
-    "contentHash": "cc58abe2f48565e3c20279a814046c8c89a9d70ad2d9fdb0c25a0e8858302e10",
+    "contentHash": "de34803164ad494fca5812e921b081b7f835b191c8dacd3e3a6be34afa04d627",
     "esContrast": "Observa las dos personas diferentes: 'vir tu' (2ª) y 'vir ela' (3ª). En español dirías subjuntivo para ambas.",
     "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
-      "sentence": "___ tu, não sei se ela ___ também.",
+      "sentence": "No caso de ___ tu, avisa-me com tempo. (vir)",
       "blanks": [
         {
           "position": 0,
-          "answer": "Vir",
-          "alternatives": [
-            "vir",
-            "Vir tu"
-          ]
-        },
-        {
-          "position": 1,
-          "answer": "vir",
-          "alternatives": [
-            "poder vir",
-            "vir também"
-          ]
+          "answer": "vires",
+          "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "infinitivo pessoal, 2.ª persona"
     }
   },
   {
