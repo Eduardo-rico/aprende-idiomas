@@ -1623,14 +1623,15 @@
     "variantStatus": "divergent",
     "type": "fill_blank",
     "data": {
-      "sentence": "O computador é muit___ útil para a familia.",
+      "sentence": "O computador é muito ___ para a família.",
       "blanks": [
         {
           "position": 0,
           "answer": "útil",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "lo contrario de «inútil» — y lleva acento agudo"
     },
     "variantOverrides": {
       "pt-br": {
@@ -2675,16 +2676,15 @@
     "variantStatus": "unchecked",
     "type": "fill_blank",
     "data": {
-      "sentence": "Quero dois ___ de pão.",
+      "sentence": "Quero dois ___, se faz favor.",
       "blanks": [
         {
           "position": 0,
           "answer": "pães",
-          "alternatives": [
-            "pães"
-          ]
+          "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "el plural de «pão»"
     }
   },
   {
