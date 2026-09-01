@@ -404,7 +404,14 @@ export const PARTICIONES: Particion[] = [
     padre: 'b8-colocacao-pronominal',
     criterio: 'ênclise por defecto y próclise por ATRACTOR: el punto es reconocer el atractor, no memorizar posiciones',
     subs: [
-      { id: 'b8-coloc-mesoclise', nombre: 'Mesóclise (dir-te-ei), culta, futuro y condicional', re: /[a-záéíóúâêôãõç]+-(?:me|te|lhe|nos|lhes|o|a|os|as)-(?:ei|ás|á|emos|ão|ia|ias|íamos|iam)(?![\p{L}])/iu },
+      { id: 'b8-coloc-mesoclise', nombre: 'Mesóclise (dir-te-ei), culta, futuro y condicional',
+        // Los ALOMORFOS -lo-/-la-/-los-/-las- faltaban: tras -r el clítico
+        // toma la ele («comunicá-LO-á», «enviá-LA-ei»), que es la mitad de
+        // las mesóclises reales. Medido en E2#13: de las 30 del corpus la
+        // partición sólo reconocía 18. Y la clase de la izquierda tiene que
+        // ser \p{L}, no [a-z…]: la 1.ª conjugación deja VOCAL ACENTUADA
+        // delante del guion.
+        re: /[\p{L}]+-(?:me|te|lhe|nos|lhes|o|a|os|as|lo|la|los|las|no|na|nos|nas)-(?:ei|ás|á|emos|ão|ia|ias|íamos|iam)(?![\p{L}])/iu },
       { id: 'b8-coloc-proclise-negacao', nombre: 'Próclise por negación (não me disse)', re: /(?<![\p{L}])(?:não|nunca|nada|ninguém|nenhum|jamais)\s+(?:me|te|se|lhe|nos|lhes|o|a|os|as)\s/iu },
       { id: 'b8-coloc-proclise-adverbio', nombre: 'Próclise por adverbio o cuantificador (já me, também se)', re: /(?<![\p{L}])(?:já|também|sempre|ainda|só|talvez|todos|tudo|quem|que|onde|quando)\s+(?:me|te|se|lhe|nos|lhes)\s/iu },
       { id: 'b8-coloc-infinitivo', nombre: 'Con infinitivo y perífrasis (vou dizer-te / vou te dizer)', re: /(?<![\p{L}])(?:vou|vais|vai|vamos|quero|posso|tenho de|preciso de)\s+[a-záéíóúâêôãõç]+-(?:me|te|lhe|nos|lhes|o|a|los|las)(?![\p{L}])/iu },

@@ -52,21 +52,26 @@ consultorio con firma y fecha.
 
 # PUBLICA-CON-CORRECCIONES
 
-**Bloqueantes: 7** (1 frase que muere + 5 explicaciones que no pueden
-publicarse como están + 1 bloque de metadata que falta entero).
+**Bloqueantes: 7** (1 frase que muere + 4 explicaciones con frases falsas + 1
+bloque de metadata que falta entero + 1 preflight caducado).
 
 Ningún veredicto MAL de los doce cae por condenar una forma atestiguada —
 **salvo uno**, GJ-18, y cae por la razón exacta que el encargo sospechaba. Los
 otros once aguantan la verificación con corpus y con fuente externa. El fallo se
-ha mudado, como en el lote 10 v2, a las **explicaciones**: cinco dicen cosas
-falsas, y dos de ellas enseñan justo lo contrario de lo que el lote castiga en
-otros ítems.
+ha mudado, como en el lote 10 v2, a las **explicaciones**: cuatro dicen cosas
+falsas —dos de ellas enseñan justo lo contrario de lo que el lote castiga en
+otros ítems— y una se pasa de absoluta sin llegar a ser falsa.
+
+Separo **ERROR** (falso, agramatical, inexistente) de **DISCUTIBLE** (defendible
+pero yo lo haría distinto), porque confundirlos quita autoridad a lo que
+importa. Los siete bloqueantes son todos ERROR o hueco verificable; GJ-17 y los
+demás matices van abajo, en menores, aunque el encargo los sospechara.
 
 | veredicto | ítems | n |
 |---|---|---:|
 | **MUERE** (la frase, no la explicación) | GJ-18 | **1** |
-| **CORRIGE-ASÍ** (bloqueante: la explicación no puede salir así) | GJ-02, GJ-03, GJ-12, GJ-15, GJ-17 | **5** |
-| **CORRIGE-ASÍ** (menor) | GJ-04, GJ-09, GJ-21, GJ-22 | **4** |
+| **CORRIGE-ASÍ** (bloqueante: la explicación dice algo falso) | GJ-02, GJ-03, GJ-12, GJ-15 | **4** |
+| **CORRIGE-ASÍ** (menor) | GJ-04, GJ-09, GJ-17, GJ-21, GJ-22 | **5** |
 | **PASA** (con nit, sin bloqueo) | GJ-06, GJ-16 | **2** |
 | **PASA** | GJ-01, GJ-05, GJ-07, GJ-08, GJ-10, GJ-11, GJ-13, GJ-14, GJ-19, GJ-20, GJ-23, GJ-24 | **12** |
 
@@ -422,31 +427,35 @@ permaneceu **a noite toda**, até que ao outro dia deram com elle regelado»
 de Santa Maria d'Atocha» (íd., *Beijos por facadas* §19). No toco el ítem: el
 orden pospuesto es el que enfatiza la duración, que es lo que la frase quiere.
 
-## GJ-17 · «Estou português…» → **CORRIGE-ASÍ** (bloqueante)
+## GJ-17 · «Estou português…» → **CORRIGE-ASÍ** (menor)
 
 Era la sexta sospecha: **¿hay algún uso vivo o dialectal de `estar` +
-nacionalidad?** No lo encontré: **0** casos de `estar` (en cualquier persona y
-tiempo) + gentilicio en 4,27 M de caracteres, y ninguna fuente que lo autorice.
-**El veredicto MAL aguanta.**
+nacionalidad?** **No lo encontré**: 0 casos de `estar` —en cualquier persona y
+tiempo— con gentilicio (`portuguez/português`, `hespanhol/espanhol`,
+`francez/francês`, `inglez/inglês`, `italiano`, `brazileiro`) en 4,27 M de
+caracteres, y ninguna fuente que lo autorice. **El veredicto MAL aguanta, y con
+holgura.**
 
-**Pero el absoluto no puede publicarse.**
+**El absoluto, en cambio, es DISCUTIBLE — y lo marco como tal, no como error,
+porque no tengo contraejemplo.**
 
 > «Nacionalidad con SER, **sin excepción**, por muy temporal que sea la
 > situación.»
 
-`estar` **coacciona** predicados normalmente permanentes hacia una lectura
-transitoria, y el corpus lo hace continuamente: «**Estou muito velho**, Zé
-Fernandes…» (Eça, *A Cidade e as Serras* c14 §44); «**Está fria** a tua mão
-hoje! E hontem tam quente estava!» (Garrett, *Viagens* c24 §19); «Balthazar
-Coutinho **estava senhor** do segredo de Thereza» (Camilo, *Gracejos que
-Matam*). Con un gentilicio ese mecanismo produce lecturas de *comportamiento*,
-no de nacionalidad («hoje estás muito português» = te estás portando como…), y
-un alumno C1 se topará con ellas. El ítem no las excluye, y basta con acotarlo.
+Lo que sí está documentado es el **mecanismo**: `estar` coacciona predicados
+normalmente permanentes hacia una lectura transitoria, y el corpus lo hace sin
+parar — «**Estou muito velho**, Zé Fernandes…» (Eça, *A Cidade e as Serras* c14
+§44); «**Está fria** a tua mão hoje! E hontem tam quente estava!» (Garrett,
+*Viagens* c24 §19); «Visivel é que Balthazar Coutinho **estava senhor** do
+segredo de Thereza» (Camilo, *Amor de Perdição* c03 §35). Con un gentilicio ese
+mecanismo daría una lectura de *comportamiento*, no de nacionalidad. **No
+afirmo que exista**: afirmo que un «sin excepción» sobre una clase entera es
+justo la clase de absoluto que ya ha caído catorce veces en este proyecto, y que
+cuesta una palabra acotarlo.
 
 > **Sustituir la primera frase por:** «La **nacionalidad** va con SER, por muy
 > temporal que sea la situación: "sou português" aunque vivas fuera desde los
-> dieciocho. (Lo que sí existe con "estar" es otra cosa: un juicio sobre cómo te
-> comportas hoy —"hoje estás muito português"—, que no dice de dónde eres.)»
+> dieciocho. Con "estar" la frase no dice de dónde eres.»
 
 ## GJ-18 · «O António é doente desde a semana passada…» → **MUERE**
 
@@ -530,10 +539,11 @@ Coliseu es referencia europea real.
 **El veredicto MAL sobrevive**, y sobrevive *por la coleta*. Hay que decirlo
 mejor, porque tal como está la explicación se puede leer como que «Este café é
 frio» está mal por sí solo, y no lo está: el corpus usa `ser` + `frio` con
-objetos sin ningún problema («eram frias e rígidas as pedras», «a noite não era
-fria» — Eça). Lo que hace imposible la frase es que la segunda mitad **explica
-la causa** del frío, y una causa episódica es incompatible con una cualidad
-definitoria.
+objetos sin ningún problema — «a sensação de quanto **eram frias e rígidas as
+pedras** sôbre que ajoelhara» (Eça, *O Defunto* §8), «porque **a noite não era
+fria**» (Garrett, *Viagens* c20 §9). Lo que hace imposible la frase es que la
+segunda mitad **explica la causa** del frío, y una causa episódica es
+incompatible con una cualidad definitoria.
 
 > **Sustituir la última frase por:** «Aislada, "Este café é frio" sería una
 > frase buena —hablaría de un café que se sirve frío—. Lo que la rompe es la
@@ -570,8 +580,9 @@ Era la última sospecha del encargo. **Comprobado y limpio.**
 - Ninguna mezcla de variantes: «prédio» (EP para el edificio de pisos),
   «remodelado», «por dentro» — todo europeo, ninguna forma brasileña.
 - *Curiosidad que conviene conocer antes de que la levante otro:* el corpus del
-  curso escribe **«dezenove» seis veces** (Camilo, Eça, Garrett) y «dezanove»
-  **una** (Garrett, *Viagens* c05). No es contraejemplo: es la grafía del XIX,
+  curso escribe **«dezenove» seis veces** (Camilo *Amor de Perdição* c19, Eça
+  *Amaro* c01 y c14 y *Os Maias* c01, Garrett *Viagens* c16, Teófilo Braga) y
+  «dezanove» **una** (Garrett, *Viagens* c05). No es contraejemplo: es la grafía del XIX,
   anterior a la fijación de la forma portuguesa moderna. Si alguien grepea el
   corpus para «verificar» este ítem, va a encontrar lo contrario de lo que
   espera.
@@ -589,10 +600,11 @@ Era la última sospecha del encargo. **Comprobado y limpio.**
 | `address` | **37 / 146** (25 %) | **109** |
 
 O sea: **la regla que el catálogo practica es "`register` siempre; `address`
-sólo donde hay tratamiento realizado en el texto"**. El `register` por defecto
-es `neutro` (109 ítems), y los ejercicios *anteriores* a la ola B2C2 no llevan
-ninguno de los dos campos — de ahí puede venir la impresión de que se omiten los
-dos.
+sólo donde hay tratamiento realizado en el texto"**. El reparto exacto en esos
+146: `register` = `neutro` 99, `informal` 44, `formal` 3; `address` = `tu` 36,
+`terceira_sem_pronome` 1, **omitido 109**. Y los ejercicios *anteriores* a la
+ola B2C2 no llevan ninguno de los dos campos — de ahí puede venir la impresión
+de que se omiten los dos.
 
 **El lote 11 no declara ni uno ni otro en 24/24 ítems.** Eso rompe la convención
 en `register` para los 24 y deja sin marcar los tres ítems que sí realizan
@@ -617,6 +629,42 @@ doctrina —la mesóclise es culta, no informal— ya está aplicada en el catá
 `b2c2-gj-l3-13` «Dir-te-ei amanhã, prometo» está publicado con **`register:
 neutro`** y `address: tu`, que es la corrección que se hizo en el lote 3. Nada
 que arreglar por este lado.
+
+---
+
+# Apéndice · el preflight pegado en el documento está **caducado**
+
+No es mi ángulo, pero toca a mi evidencia y se comprueba en diez segundos, así
+que lo dejo escrito.
+
+El documento pega la salida con el sello **rev `4cc7a606`** y la advertencia «Si
+esta rev no es la del repo, la salida está caducada». **La rev del repo ahora
+es `eb2f75bf`.** El sello cubre `scripts/lib/atajos.ts`,
+`scripts/lib/pares-minimos.ts` y `scripts/preflight-lote.ts`; lo recalculé con
+el mismo algoritmo del script (SHA-256 de los tres ficheros unidos por `NUL`,
+ocho primeros caracteres).
+
+**Y sé qué cambió, porque está comentado en el código.** `scripts/lib/atajos.ts`
+lleva ahora una nota «BUG CORREGIDO (round del lote 11)»: la lista de «palabra
+visiblemente española» traía **`desde`, `nunca` y `aje\b`**, que son portugués
+corriente. Eso afecta justo al rasgo que la tabla pegada da como segundo mejor
+atajo del lote:
+
+| rasgo | tabla pegada | con la batería corregida |
+|---|---|---|
+| lleva una palabra visiblemente española | **15/24 (63 %)**, presente en **3** | presente en **1** |
+
+Comprobado ítem a ítem: los **tres** que la lista con el bug marcaba son
+**GJ-17, GJ-18 y GJ-21**, y en los tres el detonante es la palabra **«desde»** —
+que el propio catálogo publica en `b2c2-gj-l1-01` («Está a chover desde
+ontem»). Con la batería corregida queda **uno solo, GJ-10**, y ahí el hispanismo
+(«antes de que») es el contenido intencional del ítem, no un descuido. O sea:
+ese 63 % no medía hispanismos, medía la palabra «desde», y los tres casos caían
+en MAL por casualidad.
+
+**Consecuencia:** la salida pegada no puede quedarse en el documento tal cual —
+ni para abrir el round ni para cerrarlo. Hay que re-correrla con la rev actual,
+cosa que de todos modos toca porque GJ-18 cambia de texto.
 
 ---
 
@@ -646,24 +694,29 @@ que arreglar por este lado.
 5. **GJ-02 — la contrastiva con el español es falsa.** Con sujeto único el
    español usa infinitivo («antes de salir de casa»), no subjuntivo. Es la falla
    del lote 10 v2 reintroducida. Texto de sustitución dado.
-6. **GJ-17 — el absoluto «sin excepción».** El veredicto aguanta (0
-   atestaciones), pero «estar» coacciona predicados permanentes y con gentilicio
-   da lecturas de comportamiento. Acotar con el texto dado.
-7. **Metadata — falta entera.** Añadir `register` a los **24** ítems (`neutro`
+6. **Metadata — falta entera.** Añadir `register` a los **24** ítems (`neutro`
    salvo GJ-04 `formal` y GJ-10 `informal`), y `address` sólo a **GJ-04**
    (`o_senhor`) y **GJ-10** (`tu`). GJ-02 lleva tratamiento pero **sin
    `address`**, por el precedente MED-41.
+7. **El preflight pegado está caducado** — sello `4cc7a606` contra `eb2f75bf` en
+   el repo, y el rasgo «palabra visiblemente española» pasa de 3 ítems a 1 con
+   la batería ya corregida. Re-correrlo (ver apéndice).
 
-**Obligatorios menores (quitar lo que no es verdad):**
+**Obligatorios menores (quitar lo que no es verdad, o acotarlo):**
 
 8. **GJ-04** — la próclise no la dispara «estar dentro de la subordinada»; es la
    colocación normal de la infinitiva preposicionada, y la ênclise también es
    correcta (corpus 404 a 31).
-9. **GJ-21** — decir *por qué* muere la frase: la coleta es **causal**. Aislada,
+9. **GJ-17** — el absoluto «sin excepción». **DISCUTIBLE, no error**: no tengo
+   contraejemplo, y el veredicto MAL aguanta con 0 atestaciones. Pero `estar`
+   coacciona predicados permanentes («Estou muito velho», Eça) y un «sin
+   excepción» sobre una clase entera es la forma exacta de los catorce absolutos
+   caídos. Acotar con el texto dado; cuesta una palabra.
+10. **GJ-21** — decir *por qué* muere la frase: la coleta es **causal**. Aislada,
    «Este café é frio» sería buena.
-10. **GJ-22** — «el mismo sujeto de fondo» es falso: son «a entrada» y «a
+11. **GJ-22** — «el mismo sujeto de fondo» es falso: son «a entrada» y «a
     lotação».
-11. **GJ-09** — blindar «el infinitivo pessoal no cabe» con el caso que sí cabe:
+12. **GJ-09** — blindar «el infinitivo pessoal no cabe» con el caso que sí cabe:
     «Convém a proposta ser entregue».
 
 **Sin bloqueo, para decidir:** GJ-06, «tarde **de mais**» viaja en el *repair* y
@@ -715,6 +768,7 @@ No es cortesía. Es lo que se pierde si alguien «arregla» el lote entero.
   «ficámos», «torneira do gás», «festa de anos», «dezanove», «lá para as oito»,
   «ao telefone», «estar a dar», «Coliseu». Ni un brasileirismo, ni un gerundio
   progresivo, ni un posesivo sin artículo. Y ningún MAL se detecta por el ojo:
-  no hay una sola palabra visiblemente española en las doce frases condenadas —
-  los errores son de flexión, de rección y de elección de cópula, que es lo que
-  el nivel pide.
+  **ninguna de las doce frases condenadas mete una palabra española de
+  contrabando** —el único hispanismo del lote es «antes de que» en GJ-10, y ahí
+  es el contenido del ítem, no un descuido—; los errores son de flexión, de
+  rección y de elección de cópula, que es lo que el nivel pide.

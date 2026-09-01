@@ -1,3 +1,38 @@
+# Lote 12 — C2 · **NO PUBLICA. Ronda 1 de 3.**
+
+> **Veredicto de la ronda 1 (E2#13): los dos revisores convergen en NO.**
+>
+> **Lo que lo impide, en una línea:** el punto se llama «la mesóclise como
+> recurso de **estilo**» y en los seis pares la mesóclise es obligatoria o
+> imposible — nunca una elección; es `b5-futuro-composto` otra vez, y el
+> generador eligió ese punto *porque* daba veredictos inequívocos, que es
+> exactamente lo contrario de lo que el punto declara.
+>
+> **Qué lo desbloquea:** ítems donde las dos colocaciones sean posibles y
+> lo que cambie sea el registro — que es la tercera pata del punto y hoy
+> tiene cero ítems—, y con formato no binario, porque un juicio de
+> gramaticalidad no puede examinar una elección estilística.
+>
+> **Y dos hallazgos que corrigen mi propia tesis de esta sesión:**
+>
+> 1. **P-04 y P-05 caen por lengua.** «e a direção **o** informará» no es
+>    brasileño: Camilo escribe «e o carcereiro **lhe disse**» (*Amor de
+>    Perdição* c12) y «e na primeira **te direi**» (c02), próclise en
+>    futuro incluida. Mi hedge no bastaba: un MAL tiene que afirmar que la
+>    otra forma está mal.
+> 2. **La tesis de los pares mínimos prueba menos de lo que le atribuí.**
+>    Una bolsa de tres atractores (`não`/`nunca`/`ninguém` XOR guion)
+>    resuelve el lote **12/12, p=0,0002** — cuatro veces más significativo
+>    que el atajo de la longitud que motivó el cambio de método. Con la
+>    lista real de 17 atractores cae a 6/12: el atajo es la destreza
+>    amputada a su tercio fácil. Y los `repair` son verbatim otros seis
+>    ítems del lote, que la tarjeta imprime, así que la estrategia sin
+>    portugués sube del 50 % al 75 %.
+>
+> **La grafía antigua, quinta vez:** el grep moderno da 16 mesóclises en
+> la Biblioteca; con `-h-` (`dir-lhe-hei`, `far-se-ha`) da **89**. El 82 %
+> de la evidencia estaba escondida.
+
 # Lote 12 — C2, la mesóclise como ELECCIÓN · **primer lote por pares mínimos**
 
 **Sesión E2#13, 2026-09-03.** Dos primicias en el mismo lote: es el

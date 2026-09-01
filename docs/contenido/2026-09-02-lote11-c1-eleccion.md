@@ -1,3 +1,38 @@
+# Lote 11 — C1, «se aprende ELECCIÓN» · **NO PUBLICA. Ronda 1 de 3.**
+
+> **Veredicto de la ronda 1 (E2#13).** Los dos revisores NO convergen en
+> el veredicto global —el lingüístico dice PUBLICA-CON-CORRECCIONES con 7
+> bloqueantes, el pedagógico dice NO con 8— y gana el NO, porque los
+> bloqueantes del pedagógico **no son de redacción sino de diseño**: no se
+> arreglan corrigiendo frases.
+>
+> **Lo que lo impide, en una línea:** la sección B declara enseñar dónde
+> el portugués NO coincide con el español y **once de sus doce ítems
+> coinciden**, así que la glosa cognada resuelve el lote entero — 20/24 en
+> el lote y **12/12 en esa sección, p=0,0002**— y sólo 3 de los 24 ítems
+> son de nivel C1.
+>
+> **Qué lo desbloquea:** rehacer la sección B con las seis familias que sí
+> divergen de verdad (las enumera el informe pedagógico), escritas como
+> pares mínimos y con la línea `**glosa-es:**` declarada ítem a ítem, que
+> ahora el preflight exige.
+>
+> **Lo que el lote deja aunque no publique, y vale más que él:** el
+> hallazgo del **rasgo nº 12**, la glosa cognada, que la skill nombraba
+> desde el lote 3 y que la batería en código nunca tuvo. Ya está en
+> `scripts/lib/atajos.ts` y bloquea. Más el bug del rasgo «palabra
+> visiblemente española», que disparaba con «desde» —portugués
+> corriente—, y el del sello de vigencia, que no cubría al propio
+> preflight.
+>
+> Del lado lingüístico, para la ronda 2: muere GJ-18 (el adjunto temporal
+> no hace inequívoca la elección: «Era orfão **desde** 1832», Camilo) y
+> hay cuatro explicaciones con frases falsas — GJ-03, GJ-15 (Ciberdúvidas
+> da `estar`/`ficar` intercambiables justo para edificios, y el catálogo
+> publica «A morada dela **é** na Rua Augusta» como BIEN), GJ-12 y GJ-02.
+> Aguantan GJ-06, GJ-10, GJ-11, GJ-17, GJ-21 y GJ-24, las seis sospechas
+> que yo mismo había confesado.
+
 # Lote 11 — C1, «se aprende ELECCIÓN» · dirigido por déficit
 
 **Sesión E2#12, 2026-09-02.** Primer lote que ataca los puntos de **C1

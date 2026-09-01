@@ -200,3 +200,46 @@ describe('patronesPublicados — lee los lotes del corpus', () => {
     expect(m.size).toBe(2);
   });
 });
+
+// El par mínimo compra validez DIFERENCIAL y cero validez ABSOLUTA: todo
+// defecto COMPARTIDO por los dos miembros es invisible por construcción,
+// y la batería lo puntúa 6/12 —«limpio»— sea inocuo o letal. El objeto
+// duplicado del lote 12 v1 es la instancia canónica: estaba en el BIEN
+// **y** en el MAL, y el preflight firmó limpio con 4 ítems agramaticales.
+describe('objetoDuplicado — el gate estrecho que ese fallo obligó a escribir', () => {
+  const base = {
+    concepto: 'b12-mesoclise-estilistica', rasgo: 'colocación',
+    explicacionBien: 'a', explicacionMal: 'b',
+  };
+
+  it('caza el caso real de la v1: clítico acusativo + objeto directo en el esqueleto', () => {
+    const v = verificarPar({
+      ...base, id: 'v1P-04',
+      esqueleto: 'A direção {} o resultado assim que a comissão terminar a votação.',
+      bien: 'comunicá-lo-á', mal: 'o comunicará',
+    });
+    expect(v.join()).toMatch(/objeto duplicado/);
+  });
+
+  it('no dispara con la v2, que resolvió el objeto con preposición', () => {
+    expect(verificarPar({
+      ...base, id: 'P-04',
+      esqueleto: 'O presidente já sabe do caso e a direção {} do resultado esta semana.',
+      bien: 'informá-lo-á', mal: 'o informará',
+    })).toEqual([]);
+  });
+
+  it('cero falsos positivos sobre los doce pares sanos de ser/estar', () => {
+    for (const p of DOCE) expect(verificarPar(p), p.id).toEqual([]);
+  });
+
+  it('la válvula es EXPLÍCITA y hay que justificarla, no un `if` silencioso', () => {
+    const roto = {
+      ...base, id: 'P-X',
+      esqueleto: 'A direção {} o resultado assim que a comissão terminar a votação.',
+      bien: 'comunicá-lo-á', mal: 'o comunicará',
+    };
+    expect(verificarPar(roto).length).toBeGreaterThan(0);
+    expect(verificarPar({ ...roto, permiteSNPosterior: true })).toEqual([]);
+  });
+});

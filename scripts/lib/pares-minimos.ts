@@ -53,6 +53,11 @@ export interface ParMinimo {
    *  porque mira DENTRO del hueco. */
   glosaBien?: string;
   glosaMal?: string;
+  /** Válvula EXPLÍCITA del gate de objeto duplicado, para los casos en
+   *  que el sintagma que sigue al hueco es legítimo (sujeto pospuesto,
+   *  adjunto temporal sin preposición, predicativo). Obliga a
+   *  justificarlo por escrito en vez de esconderlo en un `if`. */
+  permiteSNPosterior?: boolean;
 }
 
 export interface ItemGenerado {
@@ -111,11 +116,62 @@ export function verificarPar(p: ParMinimo): string[] {
   if (cola && (!sBien.endsWith(cola) || !sMal.endsWith(cola)))
     v.push(`${p.id}: la coleta posterior al hueco no se conserva`);
 
+  const dup = objetoDuplicado(p);
+  if (dup) v.push(dup);
+
   return v;
 }
 
 /** Diferencia máxima en caracteres entre los dos miembros de un par. */
 export const LIMITE_CHARS = 8;
+
+/** Tramo máximo (en caracteres) que puede diferir entre los dos miembros
+ *  de un par al re-derivarlo desde las frases. Lo usa el preflight para
+ *  no fiarse de la ETIQUETA `**par:**` del markdown. */
+export const LIMITE_TRAMO = 24;
+
+// ── El gate que el fallo de la v1 del lote 12 obligó a escribir ──────
+//
+// EL ENUNCIADO GENERAL, y es la advertencia que acompaña al método para
+// siempre: **el par mínimo compra validez DIFERENCIAL y no compra ni un
+// gramo de validez ABSOLUTA.** Garantiza que los dos miembros difieren
+// sólo en el tramo juzgado; no dice nada sobre si alguno de los dos es
+// un ítem bueno. Y todo defecto COMPARTIDO por los dos miembros es, por
+// construcción, invisible tanto para `verificarPar()` como para la
+// batería — que lo puntúa 6/12, «limpio», tanto si el rasgo compartido
+// es inocuo como si es letal.
+//
+// El objeto duplicado de la v1 es la instancia canónica: estaba en el
+// BIEN **y** en el MAL, la batería le dio 6/12 y firmó «preflight
+// limpio» mientras cuatro ítems eran agramaticales por una razón que el
+// ítem no juzga. El gate no falló por descuido: hizo lo que sabe hacer.
+
+const ACUSATIVO = /(?:^|[\s-])(?:o|a|os|as|lo|la|los|las|no|na|nos|nas)(?:$|[\s-])/iu;
+const DETERMINANTE = /^(?:o|a|os|as|um|uma|uns|umas|este|esta|estes|estas|esse|essa|esses|essas|aquele|aquela|aqueles|aquelas|meu|minha|seu|sua|nosso|nossa|todo|toda|todos|todas)$/iu;
+
+/** El hueco aporta un clítico acusativo y el esqueleto ya realiza el
+ *  objeto directo: «comunicá-lo-á **o resultado**».
+ *
+ *  Medido: caza 2 de 2 de los pares rotos de la v1 del lote 12, con 0
+ *  falsos positivos sobre la v2 y sobre el banco de siete pares de
+ *  ser/estar del test.
+ *
+ *  DOS AVISOS DE HONESTIDAD. (1) Va a dar falsos positivos con sujetos
+ *  pospuestos, con sintagmas temporales sin preposición («…{} a semana
+ *  passada») y con predicativos: por eso la válvula es explícita
+ *  (`permiteSNPosterior`) y obliga a justificarlo por escrito, no un
+ *  `if` silencioso. (2) Es un gate ESTRECHO, no «el gate de
+ *  gramaticalidad»: cubre el caso medido y nada más. */
+export function objetoDuplicado(p: ParMinimo): string | null {
+  if (p.permiteSNPosterior) return null;
+  for (const relleno of [p.bien, p.mal]) {
+    if (!ACUSATIVO.test(relleno)) continue;
+    const w = (p.esqueleto.split(HUECO)[1] ?? '').trim().split(/\s+/).filter(Boolean);
+    if (w.length >= 2 && DETERMINANTE.test(w[0]!.replace(/[.,;:]/g, '')) && /^[\p{L}]{3,}[.,;:]?$/u.test(w[1]!))
+      return `${p.id}: el relleno «${relleno}» aporta un clítico ACUSATIVO y el esqueleto sigue con «${w[0]} ${w[1]}» sin preposición — objeto duplicado`;
+  }
+  return null;
+}
 
 // ─── El barajado, con semilla ────────────────────────────────────────
 //

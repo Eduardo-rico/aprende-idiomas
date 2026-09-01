@@ -19,19 +19,35 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { indexarCorpus, buscarDuplicados, UMBRAL, type ExIndexable } from './lib/virginidad';
 import { bateria, pValor, SOSPECHOSO, RASGOS, type ItemJuicio } from './lib/atajos';
-import { evaluarMolde, patronDe, patronesPublicados } from './lib/pares-minimos';
+import { evaluarMolde, patronDe, patronesPublicados, LIMITE_TRAMO } from './lib/pares-minimos';
 import crypto from 'node:crypto';
 
 const DOC = process.argv[2];
 if (!DOC) { console.error('uso: preflight-lote.ts <doc.md>'); process.exit(2); }
 const txt = fs.readFileSync(DOC, 'utf8');
 
-interface Item extends ItemJuicio { repair?: string; explicacion: string; par?: string }
+interface Item extends ItemJuicio { repair?: string; explicacion: string; par?: string; concepto?: string }
 const items: Item[] = [];
-for (const sec of txt.split(/\n### /).slice(1)) {
+// El PUNTO de cada ítem: sale de la cabecera de sección que lo precede
+// (`## A · \`b11-regencias\` — 6`). Sin esto el preflight construía los
+// candidatos con `concepts: []` y **el segundo eje del gate de
+// virginidad —el que compara el PUNTO en vez de las palabras— estaba
+// apagado**, que es justo el eje que existe para cazar «Vou a telefonar
+// ao médico» contra «Vou a falar com ela». Lo levantó el round del lote
+// 11 y explica por qué un lote podía declarar «antes: 0» para un punto
+// que ya tenía seis ítems publicados.
+const trozos = txt.split(/\n### /);
+// La cabecera de sección vive al FINAL del trozo anterior al ítem, así
+// que se lee del trozo 0 antes de empezar y se actualiza DESPUÉS de
+// empujar cada ítem. Leerla antes ponía a cada ítem el punto de la
+// sección SIGUIENTE — un desfase de uno que habría etiquetado mal el
+// lote entero.
+const puntoDe = (t: string) => [...t.matchAll(/^##+ .*?`([\w-]+)`/gm)].pop()?.[1];
+let conceptoActual: string | undefined = puntoDe(trozos[0] ?? '');
+for (const sec of trozos.slice(1)) {
   const cab = sec.split('\n')[0]!;
   const m = cab.match(/^GJ-(\d+)\s+·\s+\*\*(MAL|BIEN)\*\*/);
-  if (!m) continue;
+  if (!m) { conceptoActual = puntoDe(sec) ?? conceptoActual; continue; }
   const campo = (etq: string) => (sec.match(new RegExp(`\\*\\*${etq}:\\*\\*\\s*«([\\s\\S]*?)»`))?.[1] ?? '').replace(/\s+/g, ' ').trim();
   items.push({
     id: `GJ-${m[1]}`,
@@ -50,7 +66,9 @@ for (const sec of txt.split(/\n### /).slice(1)) {
         ? false
         : undefined,
     explicacion: (sec.match(/\*\*explicación:\*\*\s*([\s\S]*?)(?=\n\n|\n### |$)/)?.[1] ?? '').replace(/\s+/g, ' ').trim(),
+    concepto: conceptoActual,
   });
+  conceptoActual = puntoDe(sec) ?? conceptoActual;
 }
 
 // El corpus publicado se carga arriba porque lo necesitan DOS gates: el
@@ -78,6 +96,9 @@ const revBateria = crypto.createHash('sha256')
   .digest('hex').slice(0, 8);
 console.log(`# Preflight — ${path.basename(DOC)}\n`);
 console.log(`Batería de atajos: **${RASGOS.length} rasgos**, rev \`${revBateria}\`. Si esta rev no es la del repo, la salida está caducada.\n`);
+const sinConcepto = items.filter((x) => !x.concepto).map((x) => x.id);
+if (sinConcepto.length) bloqueantes.push(`sin punto declarado (cabecera de sección con \`id-del-punto\`): ${sinConcepto.join(', ')} — el segundo eje del gate no puede correr`);
+console.log(`Puntos declarados: ${[...new Set(items.map((x) => x.concepto).filter(Boolean))].map((c) => `\`${c}\``).join(', ') || '(ninguno)'}\n`);
 console.log(`Ítems: **${items.length}** · BIEN ${items.filter((x) => x.verdict).length} · MAL ${items.filter((x) => !x.verdict).length}\n`);
 
 // ── 1 · Higiene ──────────────────────────────────────────────────────
@@ -128,9 +149,49 @@ for (const a of bateria(items)) {
   if (p < SOSPECHOSO) bloqueantes.push(`atajo «${a.nombre}»: acierta ${a.aciertos}/${a.n} (p=${p.toFixed(3)}) — se resuelve el lote sin saber portugués`);
 }
 
+// ── 3 bis · LOS PARES DECLARADOS SE VERIFICAN, no se creen ───────────
+//
+// La exención del gate de virginidad se concedía por una CADENA DE TEXTO
+// parseada del markdown (`**par:** \`P-01\``), sin comprobar nada. Y no
+// estaba limitada a dos miembros: etiquetando los doce ítems con el
+// mismo `par`, `pa === pb` para todas las parejas y **la
+// auto-comparación del lote —la cicatriz de E2#7— quedaba desactivada
+// entera por un copy-paste**. No hace falta mala fe: así se escribieron
+// a mano los lotes 1 a 11.
+//
+// Ahora la exención no se concede por etiqueta sino por VERIFICACIÓN: se
+// re-deriva la propiedad desde las dos frases, con el mismo invariante
+// que `verificarPar` impone al generar.
+const normPar = (t: string) => t.toLowerCase().replace(/\s+/g, ' ').trim();
+const paresValidos = new Set<string>();
+{
+  const grupos = new Map<string, Item[]>();
+  for (const x of items) if (x.par) grupos.set(x.par, [...(grupos.get(x.par) ?? []), x]);
+  if (grupos.size) console.log(`\n## Pares mínimos declarados — ${grupos.size}, verificados uno a uno\n`);
+  for (const [par, xs] of [...grupos].sort()) {
+    if (xs.length !== 2) { bloqueantes.push(`par «${par}»: ${xs.length} miembros — un par tiene exactamente 2, y un par gordo desactiva la auto-comparación del lote`); continue; }
+    const [a, b] = xs as [Item, Item];
+    if (a.verdict === b.verdict) { bloqueantes.push(`par «${par}»: sus dos miembros son ${a.verdict ? 'BIEN' : 'MAL'} — un par es 1 BIEN + 1 MAL`); continue; }
+    const bien = a.verdict ? a : b, mal = a.verdict ? b : a;
+    let i = 0; while (i < bien.sentence.length && i < mal.sentence.length && bien.sentence[i] === mal.sentence[i]) i++;
+    let j = 0; while (j < bien.sentence.length - i && j < mal.sentence.length - i
+                   && bien.sentence.at(-1 - j) === mal.sentence.at(-1 - j)) j++;
+    const dBien = bien.sentence.slice(i, bien.sentence.length - j);
+    const dMal = mal.sentence.slice(i, mal.sentence.length - j);
+    if (dBien.length > LIMITE_TRAMO || dMal.length > LIMITE_TRAMO) {
+      bloqueantes.push(`par «${par}»: el tramo que difiere mide ${Math.max(dBien.length, dMal.length)} caracteres (tope ${LIMITE_TRAMO}) — «${dBien}» / «${dMal}». No es un par mínimo: NO se exime`);
+      continue;
+    }
+    if (mal.repair && normPar(mal.repair) !== normPar(bien.sentence))
+      bloqueantes.push(`par «${par}»: el repair del MAL no es el BIEN del par — o no son un par, o el repair está mal`);
+    paresValidos.add(par);
+    console.log(`- \`${par}\`: difiere sólo en «${dBien}» / «${dMal}» (${Math.max(dBien.length, dMal.length)} car.) — exención CONCEDIDA`);
+  }
+}
+
 // ── 4 · Virginidad, contra el corpus Y contra sí mismo ───────────────
 const candidatos: ExIndexable[] = items.map((x) => ({
-  id: x.id, type: 'grammaticality_judgment', blockId: 11, concepts: [],
+  id: x.id, type: 'grammaticality_judgment', blockId: 11, concepts: x.concepto ? [x.concepto] : [],
   data: { sentence: x.sentence, repair: x.repair ?? '' },
 }) as ExIndexable);
 
@@ -144,7 +205,7 @@ const nucleo = (s: string) => s.split(/[,;]/).map((t) => t.trim()).sort((a, b) =
 const nucleos: ExIndexable[] = items
   .filter((x) => nucleo(x.sentence) !== x.sentence.trim().replace(/[.!?]$/, ''))
   .map((x) => ({
-    id: `${x.id}·núcleo`, type: 'grammaticality_judgment', blockId: 11, concepts: [],
+    id: `${x.id}·núcleo`, type: 'grammaticality_judgment', blockId: 11, concepts: x.concepto ? [x.concepto] : [],
     data: { sentence: nucleo(x.sentence), repair: x.repair ? nucleo(x.repair) : '' },
   }) as ExIndexable);
 
@@ -187,7 +248,7 @@ for (const c of [...candidatos, ...nucleos]) {
     // todo el corpus publicado.
     const parDe = (id: string) => items.find((x) => x.id === id.replace('·núcleo', ''))?.par;
     const pa = parDe(c.id), pb = parDe(h.id);
-    if (pa && pb && pa === pb) continue;
+    if (pa && pb && pa === pb && paresValidos.has(pa)) continue;
     const clave = [c.id, h.id].sort().join('|');
     if (vistos.has(clave)) continue;
     vistos.add(clave);

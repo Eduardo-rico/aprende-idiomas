@@ -275,6 +275,28 @@ todavía no se le ha ocurrido a nadie. Medido en el lote 12: los once
 rasgos de texto dan **6/12 clavado**, incluido «lleva clítico con guion»,
 que está presente en 6 ítems y no predice nada.
 
+**EL ENUNCIADO GENERAL, que hay que leer antes que cualquier otra cosa
+de esta sección: el par mínimo compra validez DIFERENCIAL y no compra ni
+un gramo de validez ABSOLUTA.** Garantiza que los dos miembros difieren
+sólo en el tramo juzgado; no dice nada sobre si alguno de los dos es un
+ítem bueno. Y **todo defecto COMPARTIDO por los dos miembros es invisible
+por construcción** — tanto para `verificarPar()` como para la batería,
+que lo puntúa 6/12, «limpio», sea inocuo o letal.
+
+Corolarios medidos, los tres del lote 12:
+- **El rasgo juzgado puede seguir siendo un atajo.** Si los MAL usan sólo
+  tres de los diecisiete atractores de próclise, una bolsa de palabras con
+  esos tres resuelve el lote **12/12, p=0,0002**. El atajo es la destreza
+  amputada a su tercio fácil, y matarlo exige **sustituir** pares, no
+  añadirlos.
+- **Los pares suben el techo de la estrategia sin portugués del 50 % al
+  75 %**: el `repair` de cada MAL es verbatim el BIEN de su par, que está
+  en el mismo lote y que la tarjeta imprime.
+- **A N pequeño el gate casi no puede detectar nada**: con 12 ítems el
+  binomial exige 10/12 para bajar de p=0,05, así que un atajo al 75 % se
+  escapa el 61 % de las veces. Un lote de pares por debajo de ~20 ítems
+  no está verificado, está sin medir.
+
 **Y el límite que el primer lote por pares pagó a la primera: los pares
 garantizan que el BIEN y el MAL sólo difieran en el rasgo juzgado; NO
 garantizan que el ESQUELETO sea gramatical.** Tres de los seis pares del

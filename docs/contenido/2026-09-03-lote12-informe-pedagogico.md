@@ -80,11 +80,13 @@ tres esqueletos.
 ```
 
 Y la frontera es más frágil de lo que el 7/12 sugiere. Medido sobre la v2
-(salida pegada abajo, § 1.6): cambiar el desempate de `<` a `≤` mueve el
-rasgo de 7/12 a 7/12 pero le cambia la DIRECCIÓN (`presente⇒MAL` →
-`presente⇒BIEN`), es decir el rasgo no está midiendo nada estable, está
-midiendo dónde cayó la mediana. Un rasgo relativo al lote **no es un rasgo
-del ítem**, y la garantía del par no le aplica. Está bien que el test lo
+(salida pegada en § 1.6): cambiar el desempate de `<` a `≤` en la versión de
+PALABRAS le da la vuelta a la dirección del rasgo —`presente⇒MAL` pasa a
+`presente⇒BIEN`, con el mismo 7/12— y le cambia el reparto de presentes de 5
+a 7. Un rasgo cuya dirección depende de si la mediana se cuenta abierta o
+cerrada no está midiendo una propiedad del ítem: está midiendo dónde cayó la
+mediana del lote. **Un rasgo relativo al lote no es un rasgo del ítem**, y la
+garantía del par no le aplica. Está bien que el test lo
 excluya explícitamente; está mal que el documento del lote lo incluya en el
 «todo rasgo que no mire ese tramo vale exactamente igual».
 
@@ -149,11 +151,33 @@ y NO gobierne, de modo que la mesóclise sea la forma buena:
 }
 ```
 
-Con ese par en el lote, A1 baja de 14/14 a 12/14 (p = 0,0065 → 0,0287) y con
-dos pares así a 10/14 (p = 0,090): deja de ser significativo. **Y no hay que
-inventar el gate: el rasgo A1 hay que meterlo en `atajos.ts` como rasgo
-número doce**, porque un lote que se resuelve con una lista cerrada de tres
-palabras es exactamente lo que la batería existe para cazar y hoy no lo caza.
+Cuánto señuelo hace falta, medido (en un par-señuelo A1 falla en **los dos**
+miembros, así que cada uno resta dos aciertos):
+
+```
+| escenario | ítems | aciertos de A1 | p |
+|---|---:|---:|---:|
+| hoy — 6 pares, 0 señuelos | 12 | 12/12 | 0.0002 |
+| AÑADIR 1 par-señuelo → 7 pares | 14 | 12/14 | 0.0065 |
+| AÑADIR 2 pares-señuelo → 8 pares | 16 | 12/16 | 0.0384 |
+| SUSTITUIR 1 par por un señuelo → 6 pares | 12 | 10/12 | 0.0193 |
+| SUSTITUIR 2 pares por señuelos → 6 pares | 12 | 8/12 | 0.1938 |
+| 12 pares (24 ítems), 3 señuelos | 24 | 18/24 | 0.0113 |
+| 12 pares (24 ítems), 4 señuelos | 24 | 16/24 | 0.0758 |
+| 12 pares (24 ítems), 5 señuelos | 24 | 14/24 | 0.2706 |
+```
+
+La lectura importa y no es la intuitiva: **añadir señuelos no basta, hay que
+sustituir.** Con un solo señuelo añadido A1 sigue en p = 0,0065. Para matar
+el atajo hace falta que **un tercio largo de los pares sean señuelos**: 2 de
+6 (p = 0,19) o 4 de 12 (p = 0,076). Es una restricción de diseño, no un
+parche: *en un lote de colocação, un tercio de los pares tiene que llevar un
+atractor que no gobierna.*
+
+**Y no hay que inventar el gate: el rasgo A1 hay que meterlo en `atajos.ts`
+como rasgo número doce**, porque un lote que se resuelve con una lista
+cerrada de tres palabras es exactamente lo que la batería existe para cazar
+y hoy no lo caza.
 
 ```ts
 // scripts/lib/atajos.ts — RASGOS, añadir:
@@ -840,8 +864,10 @@ desajuste no es un matiz: es el punto entero.
 Hay bastante, y conviene no perderlo en la reescritura.
 
 1. **El preflight es honesto y reproducible.** Lo he vuelto a correr sobre la
-   v2 y sale byte a byte igual a lo pegado, `EXIT=0`, y el `shasum` de
-   `atajos.ts` da `4cc7a606`, que es la rev declarada. El mecanismo de
+   v2 y sale byte a byte igual a lo pegado, con `EXIT REAL DEL PREFLIGHT = 0`
+   (comprobado sin tubería, para que el código de salida sea el del script y
+   no el de `tail`), y el `shasum -a 256 scripts/lib/atajos.ts` da
+   `4cc7a606`, que es la rev declarada. El mecanismo de
    caducidad de la salida pegada funciona. Es la primera vez en el proyecto
    que una cifra «medida» de un lote se puede auditar sin volver a
    calcularla a mano, y es un avance real.
@@ -915,14 +941,16 @@ Hay bastante, y conviene no perderlo en la reescritura.
 No hay que tirar nada. Con esto el lote sale, y sale mejor de lo que entró:
 
 1. Conservar P-01, P-02, P-06 y **uno** de P-04/P-05.
-2. Sustituir el otro y P-03 por: **(a)** un par con atractor **no negativo**
-   (`só`, `talvez`, `que`); **(b)** el par-señuelo de § 1.3, que mata el
-   atajo A1.
+2. **Sustituir** —no añadir; la aritmética de § 1.3 es tajante— el otro y
+   P-03 por: **(a)** un par con atractor **no negativo** (`só`, `talvez`,
+   `que`); **(b)** el par-señuelo de § 1.3. Con esas dos sustituciones A1
+   cae de 12/12 (p = 0,0002) a 8/12 (p = 0,194) y deja de resolver el lote.
 3. Añadir dos pares nuevos que cubran lo que falta: **condicional**
    (`dir-lhe-ia`) y **mesóclise con `-se-`** (`dir-se-á`), que es la que se
    lee de verdad.
 4. Reescribir las cuatro glosas del «já» (B-6).
-5. Subir a 24 ítems / 12 pares (A-1).
+5. Subir a 24 ítems / 12 pares (A-1), con **4 de los 12 pares señuelo**
+   (§ 1.3: con 3 el atajo sigue en p = 0,011; con 4 baja a p = 0,076).
 6. Y para el componente que un juicio no puede enseñar —la impostura—
    abrir un lote aparte del tipo correcto. **Hasta que exista, este punto no
    se declara cerrado**, aunque tenga 24 ítems.

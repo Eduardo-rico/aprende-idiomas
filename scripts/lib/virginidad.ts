@@ -42,7 +42,12 @@ export interface ExIndexable extends Json {
  *  justamente los que un duplicado repite. */
 const CAMPOS: Record<string, string[]> = {
   flashcard: ['back', 'example', 'audioText'],
-  fill_blank: ['sentence'],
+  // `blanks` entra desde E2#13: el gate indexaba sólo la frase con el
+  // hueco vacío, así que `b2c2-par-17` («ele ___ sem hesitar», respuesta
+  // «comprá-lo-á») era invisible para un candidato que enseñaba
+  // exactamente esa forma. Es la misma cicatriz que el gate de variante
+  // ya había pagado en E2#9: hay que mirar la frase ENSAMBLADA.
+  fill_blank: ['sentence', 'blanks'],
   listening: ['audioText'],
   verb_preposition: ['sentence'],
   sentence_construction: ['words'],
@@ -50,7 +55,13 @@ const CAMPOS: Record<string, string[]> = {
   error_correction: ['sentence', 'correct'],
   conjugation: ['answer', 'example'],
   matching: ['pairs'],
-  multiple_choice: ['options'],
+  // `question` entra desde E2#13. E2#9 documentó que indexar sólo
+  // `options` dejaba ciego al gate para la familia de mediación-ítem, y
+  // se arregló SÓLO dentro de esa familia; el indexador general se quedó
+  // igual. Consecuencia medida: `b2c2-par-15` («Ele não ___ o preço»,
+  // con «dir-me-á» de distractor) enseña exactamente el punto de un
+  // candidato del lote 12 y el gate devolvía 0 pares.
+  multiple_choice: ['question', 'options'],
   shadowing: ['text'],
   grammaticality_judgment: ['sentence', 'repair'],
   mediation: ['sourceText', 'modelAnswer'],
