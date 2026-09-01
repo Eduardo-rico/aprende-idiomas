@@ -43,3 +43,6 @@ public/audio/*.mp3.tmp
 # Copias personales con derechos: JAMÁS al repo (2026-08-12)
 ingesta-privada/
 lib/data/languages/pt/lecturas-privadas/
+
+# worktrees de agentes en paralelo: territorio ajeno, nunca al índice
+.claude/worktrees/
