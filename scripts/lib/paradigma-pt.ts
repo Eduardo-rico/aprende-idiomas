@@ -155,7 +155,14 @@ export function infinitivoPessoal(inf: string, p: Persona): string {
  *  regex. Las copias no se actualizan juntas: cuando E2#15 añadió los
  *  dos conjuntivos, ninguno la llevaba, y el muestreo del 20 % de E2#16
  *  cazó «saissem» por *sa-í-ssem*. El fallo no fue el regex, fue tenerlo
- *  cinco veces; ahora está aquí y sólo aquí. */
+ *  cinco veces; ahora está aquí y sólo aquí.
+ *
+ *  DÓNDE APLICA, enumerado porque extraer la regla y no barrer sus sitios
+ *  es cómo se volvió a colar: (1) particípio, (2) el clítico `-lo`,
+ *  (3) infinitivo pessoal, (4) imperfeito do conjuntivo, (5) imperfeito
+ *  de indicativo. El futuro do conjuntivo no aparece porque DELEGA en el
+ *  infinitivo pessoal. Si se añade un tiempo con desinencia en -i o -e
+ *  detrás del tema, pertenece a esta lista hasta que se demuestre que no. */
 export function hiatoEnI(inf: string): boolean {
   const v = inf.normalize('NFC');
   if (!/ir$/i.test(v)) return false;
@@ -211,6 +218,10 @@ const IRREGULARES: Record<string, Partial<Record<string, Partial<Record<Persona,
            presSubj: { eu: 'diga', tu: 'digas', ele: 'diga', 'nós': 'digamos', eles: 'digam' },
            imperativoTu: { tu: 'diz' } },
   vir:   { presente: { eu: 'venho', tu: 'vens', ele: 'vem', 'nós': 'vimos', eles: 'vêm' },
+           // Sin esto la desinencia regular daba «via», que ADEMÁS es una
+           // palabra real —el imperfeito de «ver»—, o sea el peor tipo de
+           // forma falsa: la que no se ve.
+           imperfeito: { eu: 'vinha', tu: 'vinhas', ele: 'vinha', 'nós': 'vínhamos', eles: 'vinham' },
            presSubj: { eu: 'venha', tu: 'venhas', ele: 'venha', 'nós': 'venhamos', eles: 'venham' },
            imperativoTu: { tu: 'vem' } },
   poder: { presente: { eu: 'posso', tu: 'podes', ele: 'pode', 'nós': 'podemos', eles: 'podem' },
@@ -226,6 +237,11 @@ const IRREGULARES: Record<string, Partial<Record<string, Partial<Record<Persona,
            presSubj: { eu: 'veja', tu: 'vejas', ele: 'veja', 'nós': 'vejamos', eles: 'vejam' },
            imperativoTu: { tu: 'vê' } },
   pôr:   { presente: { eu: 'ponho', tu: 'pões', ele: 'põe', 'nós': 'pomos', eles: 'põem' },
+           // «punha», no *ponia*. Iba en una segunda clave `'pôr'` que el
+           // literal de objeto descartaba en silencio quedándose con
+           // ésta: dos declaraciones de la misma cosa y sólo una viva, sin
+           // aviso ni de TypeScript ni de ESLint.
+           imperfeito: { eu: 'punha', tu: 'punhas', ele: 'punha', 'nós': 'púnhamos', eles: 'punham' },
            presSubj: { eu: 'ponha', tu: 'ponhas', ele: 'ponha', 'nós': 'ponhamos', eles: 'ponham' },
            imperativoTu: { tu: 'põe' } },
   haver: { presente: { ele: 'há' }, imperfeito: { ele: 'havia' }, presSubj: { ele: 'haja' } },
@@ -294,6 +310,13 @@ export function conjugar(inf: string, tiempo: Tiempo, p: Persona): string | null
     // Verbo con irregularidades declaradas pero no en ESTE tiempo: se
     // deja pasar al regular sólo si el tiempo no depende de la 1.ª sg.
     if (tiempo === 'presSubj' || tiempo === 'imperativoTu') return null;
+  }
+  // El hiato también cae en el imperfeito de los -air/-uir: sa-í-a,
+  // ca-í-a, constru-í-a. La desinencia de «nós» (-íamos) ya trae el
+  // acento y sale bien sola; las otras cuatro no.
+  if (c === 'ir' && tiempo === 'imperfeito' && hiatoEnI(inf)) {
+    const d = DES_IMPERFEITO.ir[p];
+    return raizReg(inf) + (d.startsWith('i') && !d.startsWith('í') ? 'í' + d.slice(1) : d);
   }
   const r = raizReg(inf);
   // CAMBIO ORTOGRÁFICO ante desinencia en -e: la raíz conserva el SONIDO

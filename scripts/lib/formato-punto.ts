@@ -93,6 +93,40 @@ const POR_BLOQUE: Record<number, { clase: Clase; motivo: string }> = {
 // formato depende de si el punto examina una FORMA (transformación) o
 // una ELECCIÓN (cloze cuyo contexto decide).
 const OVERRIDES: Record<string, { clase: Clase; motivo: string; formato?: Formato }> = {
+  // ── E2#17 · los 23 puntos de C1/C2 declarados esta sesión. Sin
+  // override heredaban el defecto de su bloque, que es `trampa` ⇒
+  // JUICIO, y eso ponía **222 de las 242 unidades de juicio** —el 74 %
+  // del déficit— bajo una moratoria que nadie había decidido aplicarles.
+  // Leer la lista con el defecto puesto lo delata solo: un juicio binario
+  // de gramaticalidad sobre «alusión cultural» o sobre «descortesía
+  // calculada» no significa nada, porque las dos opciones son
+  // gramaticales. El criterio del mapa lo dice desde E2#13: **un punto en
+  // el que las dos formas son correctas no se examina con un binario**;
+  // lo que cambia es el efecto, y eso se examina mediando o transformando.
+  'b11-coloc-registro': { clase: 'pragmatico', motivo: 'ênclise y próclise son las DOS gramaticales aquí: lo que cambia es el registro, no la corrección' },
+  'b11-ordem-foco': { clase: 'sin-equivalente', motivo: 'los dos órdenes son gramaticales y difieren en qué se pone en foco: se pide reescribir, no juzgar', formato: 'transformacion' },
+  'b11-topico': { clase: 'sin-equivalente', motivo: '«Esse livro, já o li» se produce, no se reconoce', formato: 'transformacion' },
+  'b11-imperfeito-valores': { clase: 'coincide', motivo: 'la forma es la misma y lo que se elige es el VALOR: un hueco con la pista que lo nombra' },
+  'b11-haver-ter-existir': { clase: 'coincide', motivo: 'tres formas posibles y la pista fija el registro: hueco, no juicio' },
+  'b11-nominalizacao': { clase: 'sin-equivalente', motivo: 'convertir el verbo en nombre es una transformación, y como tal se pide', formato: 'transformacion' },
+  'b11-pontuacao-sintatica': { clase: 'sin-equivalente', motivo: 'el español comparte casi todas estas reglas, así que la glosa cazaría el error: hay que puntuar, no juzgar', formato: 'transformacion' },
+  'b11-norma-culta-oral': { clase: 'pragmatico', motivo: 'las dos formas son correctas y el punto es SABER EN QUÉ LADO está cada una' },
+  'b11-ironia-understatement': { clase: 'pragmatico', motivo: 'no hay error que juzgar: hay un efecto que explicar' },
+  'b11-alusao-cultural': { clase: 'pragmatico', motivo: 'la alusión se explica a alguien que no la tiene; un binario no mide nada' },
+  'b11-humor-autodepreciativo': { clase: 'pragmatico', motivo: 'ídem: el punto es reconocer el movimiento y responderlo' },
+  'b11-descortesia-calculada': { clase: 'pragmatico', motivo: 'la descortesía deliberada es gramatical por definición' },
+  'b11-jerarquias-profissionais': { clase: 'pragmatico', motivo: 'tratamiento y atenuación según la posición: registro, no gramática' },
+  'b11-mediacao-especializada': { clase: 'pragmatico', motivo: 'es mediación por definición del punto' },
+  'b11-mediacao-intercultural': { clase: 'pragmatico', motivo: 'ídem' },
+  'b12-derivacao-produtiva': { clase: 'sin-equivalente', motivo: 'crear la palabra con el sufijo vivo es producción pura', formato: 'transformacion' },
+  'b12-repertorio-sociolinguistico': { clase: 'pragmatico', motivo: 'sostener un registro se demuestra produciéndolo' },
+  'b12-humor-jogo-palavras': { clase: 'pragmatico', motivo: 'explicar dónde está el chiste ES la prueba de que se entendió' },
+  'b12-descortesia-precisa': { clase: 'pragmatico', motivo: 'ídem que b11-descortesia-calculada, un grado más fino' },
+  'b12-ler-posicao-social': { clase: 'pragmatico', motivo: 'se deduce del habla y se explica; no hay forma incorrecta que señalar' },
+  'b12-cortesia-pt-br-es': { clase: 'pragmatico', motivo: 'el punto pide EXPLICAR la diferencia entre tres sistemas, no aplicarla' },
+  'b12-traducao-literaria': { clase: 'pragmatico', motivo: 'se juzga por registro y efecto, que es lo que una rúbrica de mediación mide' },
+  'b12-mediacao-de-textos': { clase: 'pragmatico', motivo: 'mediación de textos del Companion Volume: es el formato, literalmente' },
+
   // ── b2: donde el español coincide y el defecto «trampa» sobra
   'b2-plural-ao': { clase: 'sin-equivalente', motivo: 'los plurales en -ão/-ães/-ões no tienen paralelo español: hay que producirlos' },
   'b2-plural-l': { clase: 'sin-equivalente', motivo: 'ídem: «-l» → «-is» no existe en español' },

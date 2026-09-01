@@ -1,9 +1,11 @@
-// scripts/publicar-cloze-e2-16.ts
+// scripts/publicar-cloze.ts
 //
-//   npx tsx scripts/publicar-cloze-e2-16.ts            # dry-run
-//   npx tsx scripts/publicar-cloze-e2-16.ts --write    # escribe
+//   npx tsx scripts/publicar-cloze.ts --lote e2-17            # dry-run
+//   npx tsx scripts/publicar-cloze.ts --lote e2-17 --write    # escribe
 //
-// Publica el lote de E2#16 en `blocks/bN.json`. El orden importa y es el
+// Publica un lote de cloze en `blocks/bN.json`. Es genérico desde E2#17:
+// la versión anterior estaba pegada al lote de E2#16 y copiarla para el
+// siguiente habría sido la quinta duplicación de la sesión. El orden importa y es el
 // del contrato: **valida TODO antes de escribir NADA**. Un publicador que
 // escribe mientras valida deja el corpus a medias cuando el ítem 90 falla,
 // y entonces la reparación es peor que el lote.
@@ -12,8 +14,20 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { BLOCKS, ALL_CONCEPTS } from '../lib/data/languages/pt/curriculum';
 import { BLOCKS_DIR } from './config';
-import { ITEMS } from './lotes/cloze-e2-16';
-import { respuestaDe, verificar } from './lotes/cloze-e2-15';
+import { respuestaDe, verificar, type Cloze } from './lotes/cloze-e2-15';
+
+import { ITEMS as E2_16 } from './lotes/cloze-e2-16';
+import { ITEMS as E2_17 } from './lotes/cloze-e2-17';
+
+// Registro estático: `tsx` compila a CJS y un `await import()` de nivel
+// superior no arranca. Un lote nuevo se añade con una línea aquí.
+const LOTES: Record<string, Cloze[]> = { 'e2-16': E2_16, 'e2-17': E2_17 };
+
+const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
+const lote = arg('--lote') ?? '';
+const ITEMS = LOTES[lote];
+if (!ITEMS) { console.error(`Usa --lote con uno de: ${Object.keys(LOTES).join(', ')}`); process.exit(2); }
+const prefijo = `cl${lote.replace('e2-', '')}`;
 
 const write = process.argv.includes('--write');
 const CONCEPTO = new Map(ALL_CONCEPTS.map((c) => [c.id, c]));
@@ -35,7 +49,7 @@ for (const f of fs.readdirSync(BLOCKS_DIR).filter((x) => /^b\d+\.json$/.test(x))
 
 const usados = new Set<string>();
 ITEMS.forEach((x, i) => {
-  const id = `cl16-${String(i + 1).padStart(3, '0')}`;
+  const id = `${prefijo}-${String(i + 1).padStart(3, '0')}`;
   const c = CONCEPTO.get(x.p);
   if (!c) { problemas.push(`${id}: el punto «${x.p}» no existe en ALL_CONCEPTS`); return; }
   const bloque = BLOCKS.find((b) => b.id === (c as any).blockId);
@@ -65,10 +79,10 @@ ITEMS.forEach((x, i) => {
     lessonId: leccion.id,
     difficulty: 2,
     concepts: [x.p],
-    tags: ['e2-16', 'cloze-con-pista'],
+    tags: [lote, 'cloze-con-pista'],
     contentHash: crypto.createHash('sha256').update(`${x.s}|${answer}`).digest('hex'),
     variantStatus: 'unchecked',
-    variantVerificacion: `Cloze con pista E2#16 2026-09-05: ${x.lema ? 'derivado del paradigma' : 'respuesta declarada'} + muestreo 20 % con freno`,
+    variantVerificacion: `Cloze con pista ${lote.toUpperCase()}: ${x.lema ? 'derivado del paradigma' : 'respuesta declarada'} + revisión completa del lote a mano`,
     register: 'neutro',
     type: 'fill_blank',
     data: {
@@ -81,7 +95,7 @@ ITEMS.forEach((x, i) => {
   porBloque.get(bloque.id)!.push(ex);
 });
 
-console.log(`# Publicar cloze E2#16 — ${ITEMS.length} ítems en ${porBloque.size} bloques\n`);
+console.log(`# Publicar cloze ${lote} — ${ITEMS.length} ítems en ${porBloque.size} bloques\n`);
 for (const [b, xs] of [...porBloque].sort((a, c) => a[0] - c[0])) console.log(`- b${b}: ${xs.length}`);
 
 if (porDefecto.length) {

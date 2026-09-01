@@ -243,4 +243,31 @@ describe('presente do conjuntivo · el cambio ortográfico ante -e', () => {
     expect(conjugar('resumir', 'presente', 'tu')).toBe('resumes');
     expect(conjugar('unir', 'presente', 'eu')).toBe('uno');
   });
+
+  // E2#17 · el imperfeito traía DOS clases falsas, y las dos salieron al
+  // verificar las formas de un lote antes de escribirlo.
+  it('conjuga el imperfeito irregular de vir y pôr', () => {
+    // «via» es el imperfeito de VER: la desinencia regular daba para
+    // «vir» una forma que existe y significa otra cosa — la peor clase de
+    // forma falsa, porque no se ve.
+    expect(conjugar('vir', 'imperfeito', 'ele')).toBe('vinha');
+    expect(conjugar('vir', 'imperfeito', 'nós')).toBe('vínhamos');
+    expect(conjugar('ver', 'imperfeito', 'ele')).toBe('via');
+    expect(conjugar('pôr', 'imperfeito', 'ele')).toBe('punha');
+    expect(conjugar('pôr', 'imperfeito', 'nós')).toBe('púnhamos');
+    // y que la entrada de «pôr» sigue completa: la irregularidad del
+    // imperfeito vivía en una SEGUNDA clave que el literal descartaba.
+    expect(conjugar('pôr', 'presente', 'ele')).toBe('põe');
+  });
+
+  it('acentúa el hiato también en el imperfeito de -air/-uir', () => {
+    expect(conjugar('sair', 'imperfeito', 'ele')).toBe('saía');
+    expect(conjugar('cair', 'imperfeito', 'eles')).toBe('caíam');
+    expect(conjugar('construir', 'imperfeito', 'ele')).toBe('construía');
+    // «nós» ya traía el acento en la desinencia y salía bien solo
+    expect(conjugar('sair', 'imperfeito', 'nós')).toBe('saíamos');
+    // y donde no hay hiato, no se toca
+    expect(conjugar('seguir', 'imperfeito', 'ele')).toBe('seguia');
+    expect(conjugar('partir', 'imperfeito', 'ele')).toBe('partia');
+  });
 });
