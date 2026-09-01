@@ -343,6 +343,58 @@ export async function loadLecturas(lang: LanguageId): Promise<Lectura[]> {
   return [...publicas, ...privadas.filter((l) => !ids.has(l.id))];
 }
 
+/** Los metadatos de una lectura SIN sus párrafos. `palabras` y
+ *  `nParrafos` vienen precalculados porque las tres páginas del catálogo
+ *  los pintan y son lo único que necesitaban del cuerpo del texto. */
+export type LecturaMeta = Pick<Lectura,
+  'id' | 'titulo' | 'autor' | 'nivel' | 'modo' | 'serie' | 'muerteAutor' |
+  'fuente' | 'licencia' | 'fuenteUrl' | 'notaOrtografia' | 'variante' | 'privada'> & {
+  palabras: number;
+  nParrafos: number;
+};
+
+// El catálogo pasó de 224 lecturas a 967 y de ~5 MB a 25 MB con la ola
+// E3, y las tres páginas de `/leer` son `force-dynamic`: leían y
+// parseaban los 967 ficheros ENTEROS en cada request — 481 ms y 63 MB
+// medidos, contra ~110 ms antes. Ninguna necesitaba los párrafos: sólo
+// título, autor, nivel, serie y dos números que se derivan de ellos.
+//
+// La memoria se invalida por mtime del directorio, no por confianza: un
+// `Map` que no caduca convierte «añadí una lectura» en «reinicia el
+// servidor», y el catálogo lo escriben scripts.
+const metaCache = new Map<string, { mtimeMs: number; datos: LecturaMeta[] }>();
+
+const metaDe = (l: Lectura): LecturaMeta => ({
+  id: l.id, titulo: l.titulo, autor: l.autor, nivel: l.nivel, modo: l.modo,
+  serie: l.serie, muerteAutor: l.muerteAutor, fuente: l.fuente, licencia: l.licencia,
+  fuenteUrl: l.fuenteUrl, notaOrtografia: l.notaOrtografia,
+  // `variante` va tal cual: desde E2#17 todas las lecturas del catálogo
+  // público la declaran y el test la exige, así que aquí no hay default
+  // que copiar — que es como debe ser.
+  variante: l.variante, privada: l.privada,
+  nParrafos: l.parrafos.length,
+  palabras: l.parrafos.reduce((a, p) => a + p.texto.split(/\s+/).filter(Boolean).length, 0),
+});
+
+async function selloDe(dirs: string[]): Promise<number> {
+  let m = 0;
+  for (const d of dirs) {
+    try { m = Math.max(m, (await fs.stat(d)).mtimeMs); }
+    catch (err) { if ((err as NodeJS.ErrnoException).code !== 'ENOENT') throw err; }
+  }
+  return m;
+}
+
+export async function loadLecturasMeta(lang: LanguageId): Promise<LecturaMeta[]> {
+  const dirs = [lecturasDir(lang), lecturasPrivadasDir(lang)];
+  const sello = await selloDe(dirs);
+  const hit = metaCache.get(lang);
+  if (hit && hit.mtimeMs === sello) return hit.datos;
+  const datos = (await loadLecturas(lang)).map(metaDe);
+  metaCache.set(lang, { mtimeMs: sello, datos });
+  return datos;
+}
+
 export async function loadLectura(lang: LanguageId, id: string): Promise<Lectura | null> {
   if (!/^[a-z0-9-]+$/.test(id)) return null; // defensa ?id=../../etc
   for (const dir of [lecturasDir(lang), lecturasPrivadasDir(lang)]) {

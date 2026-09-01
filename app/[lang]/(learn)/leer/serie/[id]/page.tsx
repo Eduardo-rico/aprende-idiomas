@@ -4,13 +4,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { hasLocale, type LanguageId } from "@/lib/locales";
-import { loadLecturas, type Lectura } from "@/lib/data/loaders";
+import { loadLecturasMeta, type LecturaMeta } from "@/lib/data/loaders";
 import { Eyebrow } from "@/components/ui";
 
 export const dynamic = "force-dynamic";
 
-const palabrasDe = (l: Lectura) =>
-  l.parrafos.reduce((a, p) => a + p.texto.split(/\s+/).filter(Boolean).length, 0);
+const palabrasDe = (l: LecturaMeta) => l.palabras;
 
 export default async function SeriePage({
   params,
@@ -20,7 +19,7 @@ export default async function SeriePage({
   const { lang: rawLang, id } = await params;
   if (!hasLocale(rawLang)) notFound();
   const lang: LanguageId = rawLang;
-  const piezas = (await loadLecturas(lang))
+  const piezas = (await loadLecturasMeta(lang))
     .filter((l) => l.serie?.id === id)
     .sort((a, b) => a.serie!.orden - b.serie!.orden);
   if (piezas.length === 0) notFound();

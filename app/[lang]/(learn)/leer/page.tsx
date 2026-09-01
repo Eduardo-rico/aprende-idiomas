@@ -7,7 +7,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { hasLocale, type LanguageId } from "@/lib/locales";
-import { loadLecturas, type Lectura } from "@/lib/data/loaders";
+import { loadLecturasMeta, type LecturaMeta } from "@/lib/data/loaders";
 import { Eyebrow } from "@/components/ui";
 
 export const dynamic = "force-dynamic";
@@ -15,8 +15,9 @@ export const dynamic = "force-dynamic";
 const ORDEN_NIVEL = ["A1", "A2", "B1", "B2", "C1", "C2"];
 const nivelIdx = (n: string) => ORDEN_NIVEL.indexOf(n);
 
-const palabrasDe = (l: Lectura) =>
-  l.parrafos.reduce((a, p) => a + p.texto.split(/\s+/).filter(Boolean).length, 0);
+// `palabras` viene ya calculado por `loadLecturasMeta`: la página no
+// carga los párrafos, que eran 25 MB por request.
+const palabrasDe = (l: LecturaMeta) => l.palabras;
 
 export default async function LeerIndexPage({
   params,
@@ -26,7 +27,7 @@ export default async function LeerIndexPage({
   const { lang: rawLang } = await params;
   if (!hasLocale(rawLang)) notFound();
   const lang: LanguageId = rawLang;
-  const lecturas = await loadLecturas(lang);
+  const lecturas = await loadLecturasMeta(lang);
 
   if (lecturas.length === 0) {
     return (
@@ -43,7 +44,7 @@ export default async function LeerIndexPage({
   }
 
   const sueltas = lecturas.filter((l) => !l.serie);
-  const series = new Map<string, Lectura[]>();
+  const series = new Map<string, LecturaMeta[]>();
   for (const l of lecturas) {
     if (!l.serie) continue;
     const grupo = series.get(l.serie.id) ?? [];
@@ -54,8 +55,8 @@ export default async function LeerIndexPage({
   // Una fila por lectura suelta y una por serie, ordenadas por nivel
   // (el nivel de una serie es el mínimo de sus piezas) y título.
   type Fila =
-    | { tipo: "lectura"; nivel: string; titulo: string; l: Lectura }
-    | { tipo: "serie"; nivel: string; nivelMax: string; titulo: string; id: string; piezas: Lectura[] };
+    | { tipo: "lectura"; nivel: string; titulo: string; l: LecturaMeta }
+    | { tipo: "serie"; nivel: string; nivelMax: string; titulo: string; id: string; piezas: LecturaMeta[] };
   const filas: Fila[] = [
     ...sueltas.map((l) => ({ tipo: "lectura" as const, nivel: l.nivel, titulo: l.titulo, l })),
     ...[...series.entries()].map(([id, piezas]) => {
@@ -106,7 +107,7 @@ export default async function LeerIndexPage({
                   {f.l.muerteAutor ? ` († ${f.l.muerteAutor})` : ""} ·{" "}
                   {f.l.modo === "texto"
                     ? `${palabrasDe(f.l).toLocaleString("es")} palabras`
-                    : `${f.l.parrafos.length} párrafos con audio`}
+                    : `${f.l.nParrafos} párrafos con audio`}
                 </p>
               </Link>
             </li>

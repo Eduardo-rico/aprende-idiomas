@@ -5,7 +5,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { hasLocale, type LanguageId } from "@/lib/locales";
-import { loadLectura, loadLecturas } from "@/lib/data/loaders";
+import { loadLectura, loadLecturasMeta } from "@/lib/data/loaders";
 import { Eyebrow } from "@/components/ui";
 import { LectorKaraoke } from "@/components/lectura/LectorKaraoke";
 import { LectorTexto } from "@/components/lectura/LectorTexto";
@@ -27,7 +27,7 @@ export default async function LecturaPage({
   // Vecinos dentro de la serie (capítulo anterior / seguinte).
   let anterior = null, siguiente = null;
   if (lectura.serie) {
-    const hermanas = (await loadLecturas(lang))
+    const hermanas = (await loadLecturasMeta(lang))
       .filter((l) => l.serie?.id === lectura.serie!.id)
       .sort((a, b) => a.serie!.orden - b.serie!.orden);
     const idx = hermanas.findIndex((l) => l.id === lectura.id);

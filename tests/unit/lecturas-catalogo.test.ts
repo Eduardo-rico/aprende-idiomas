@@ -41,7 +41,7 @@ describe('catálogo de lectura PT', () => {
     // 3.219.799 palabras (pt 2.091.688 · pt-br 1.128.111).
     expect(catalogo.length).toBeGreaterThanOrEqual(967);
     expect(total).toBeGreaterThanOrEqual(3_219_799);
-    const pt = catalogo.filter((x) => (x.l.variante ?? 'pt') === 'pt').reduce((a, x) => a + palabras(x.l), 0);
+    const pt = catalogo.filter((x) => x.l.variante === 'pt').reduce((a, x) => a + palabras(x.l), 0);
     // La meta de inmersión del plan es PT-PT: el estante brasileño no la paga.
     expect(pt).toBeGreaterThanOrEqual(1_900_000);
   });
@@ -74,9 +74,15 @@ describe('catálogo de lectura PT', () => {
     }
   });
 
-  it('la variante declarada es pt o pt-br (la fija el origen del autor)', () => {
+  // E2#17: el campo pasa a ser OBLIGATORIO. Las 224 de la Ola L no lo
+  // declaraban y heredaban 'pt' por un `?? 'pt'` copiado en tres sitios;
+  // el default acertaba, que es justo lo que hace peligroso un valor
+  // implícito — acierta hasta que deja de acertar y nadie lo nota. Ahora
+  // las 967 lo estampan y el gate exige el campo, no el default.
+  it('TODA lectura declara su variante, y es pt o pt-br', () => {
     for (const { archivo, l } of catalogo) {
-      expect(['pt', 'pt-br', undefined], archivo).toContain(l.variante);
+      expect(l.variante, `${archivo} no declara variante`).toBeDefined();
+      expect(['pt', 'pt-br'], archivo).toContain(l.variante);
     }
   });
 

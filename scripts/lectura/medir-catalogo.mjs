@@ -24,7 +24,10 @@ for (const f of archivos) {
   const n = l.parrafos.reduce((a, p) => a + p.texto.split(/\s+/).filter(Boolean).length, 0);
   palabras += n;
   const nivel = l.nivel ?? '??';
-  const variante = l.variante ?? 'pt';
+  // Sin `?? 'pt'`: desde E2#17 el campo es obligatorio y el gate del
+  // catálogo lo exige, así que un undefined aquí es un fallo que hay que
+  // ver, no un default que lo tape.
+  const variante = l.variante;
   porNivel.set(nivel, { piezas: (porNivel.get(nivel)?.piezas ?? 0) + 1, palabras: (porNivel.get(nivel)?.palabras ?? 0) + n });
   porVariante.set(variante, { piezas: (porVariante.get(variante)?.piezas ?? 0) + 1, palabras: (porVariante.get(variante)?.palabras ?? 0) + n });
   if (l.serie) {
