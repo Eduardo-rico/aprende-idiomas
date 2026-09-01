@@ -1665,7 +1665,7 @@
     ],
     "contentHash": "2e4e72ced223c4e524f08fdd548cc3af99d5c72aed7d43a16cdfbc4f1467c063",
     "esContrast": "Cuidado: 'vi' en portugués es 'vi' en español, pero no confundas con 'ví'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ (ver) aquele filme ontem à noite.",
@@ -1676,7 +1676,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — «ontem à noite» fija el pretérito y «Eu» la persona"
   },
   {
     "id": "2e76f379",
@@ -1869,7 +1870,7 @@
     "contentHash": "33c3ca0e9eed3ceada7ff773abdba769e5a859806ac9929a39f75da8db9d20ae",
     "esContrast": "'Hospedar-se' es reflexivo. Sin 'se' sería transitivo (hospedar a alguien). Aquí indica hábito.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#6 2026-08-29: DUDA — La respuesta «se hospedavam» es la CORRECTA en portugués europeo porque «sempre» es disparador de próclise —en la biblioteca: «sempre o dissera», «sempre se fez», «sempre se erguia», frente a apenas un par de ênclises tr (informe-cola4-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: pista escrita — el lema estaba en el molde pero nada fijaba el tiempo",
     "type": "fill_blank",
     "data": {
       "sentence": "Durante as férias, vocês sempre ___ (hospedar) naquele hotel à beira-mar.",
@@ -1881,7 +1882,8 @@
             "hospedavam-se"
           ]
         }
-      ]
+      ],
+      "hintEs": "imperfeito de «hospedar-se», 3.ª del plural — el hábito de aquellos veranos"
     }
   },
   {
@@ -3071,7 +3073,7 @@
     "contentHash": "55e124a1ceaf94784406aeb0f195ff13ac3f17cb06b52f9ec282cbd15a469bfa",
     "esContrast": "Español «traje», portugués «trouxe»: las dos lenguas irregularizan. En portugués la raíz pasa de «traz-» a «troux-».",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: pista escrita — el lema estaba en el molde pero nada fijaba el tiempo",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ (trazer) documentos importantes para a reunião.",
@@ -3081,7 +3083,8 @@
           "answer": "trouxe",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "pretérito perfecto simple de «trazer», 1.ª persona — el irregular con «-x-»"
     }
   },
   {
@@ -5335,17 +5338,15 @@
     "contentHash": "9c635ab0feba6a07f35acb7b02b99b76cd4b4c7ae1f67620c9b5ff920142f6ef",
     "esContrast": "Puderam (3ª pessoa plural) tiene 'e' cerrada, no 'é'.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: corregido — sin marca temporal, «podem» valía igual que «puderam». Añadida «No mês passado», queda sin pista y CORRECTO. Y retirada la alternativa «conseguiram»: el molde nombra «poder», así que aceptar otro verbo contradice al propio molde",
     "type": "fill_blank",
     "data": {
-      "sentence": "Vocês ___ (poder) resolver aquele problema sozinhos?",
+      "sentence": "No mês passado, vocês ___ (poder) resolver aquele problema sozinhos?",
       "blanks": [
         {
           "position": 0,
           "answer": "puderam",
-          "alternatives": [
-            "conseguiram"
-          ]
+          "alternatives": []
         }
       ]
     }
@@ -5365,7 +5366,7 @@
     "contentHash": "9ca75852a2b1377405b74e8f8d97c2fe53f3e34d88935cbfb19034656b1866e0",
     "esContrast": "'Viviam' de 'viver' (-er). Usamos 'antigamente' como pista de que es imperfecto (descripción del pasado).",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — «Antigamente» fija el imperfeito y «as pessoas» la persona",
     "type": "fill_blank",
     "data": {
       "sentence": "Antigamente, as pessoas ___ (viver) mais tranquilas e com menos pressa.",
@@ -5887,10 +5888,10 @@
     "contentHash": "ac1c679fad2b1d2eaee9b8c346bb3dd97e2a0469be4d87306e132d07ed70ba61",
     "esContrast": "'Ler' es irregular en portugués (presente: leio, lês, lê, lemos, leem). En el pretérito perfeito, en cambio, sigue el patrón regular: li, leste, leu, lemos, lestes, leram.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: corregido — la calibración de E2#29 ya lo había marcado: «Vocês leem as notícias de hoje?» es igual de válida, y más natural. Con «já» delante y «de hoje» detrás sólo cabe el pretérito, así que queda sin pista y CORRECTO",
     "type": "fill_blank",
     "data": {
-      "sentence": "Vocês ___ as notícias de hoje? (ler)",
+      "sentence": "Vocês já ___ as notícias de hoje? (ler)",
       "blanks": [
         {
           "position": 0,

@@ -1602,7 +1602,7 @@
     "contentHash": "3f6b80fb201c191c1283eb4cf1e8389468b024aa45db44e2c42d1b299bd6c30d",
     "esContrast": "Dos verbos regulares en una sola frase: '-emos' (escolher) e '-amos' (confirmar) suenan parecido pero se escriben diferente.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — en los verbos en -er la 1.ª del plural es la MISMA en presente y pretérito, así que la ambigüedad de tiempo no cambia la cadena",
     "type": "fill_blank",
     "data": {
       "sentence": "Nós ___ a ementa e depois confirmamos o pedido. (escolher)",
@@ -3650,17 +3650,18 @@
     "contentHash": "849bc051dd869f33fa90812a4d2abcada81e0bc451939d7b0890dd7ad8dc464c",
     "esContrast": "En subordinadas con 'quando', se usa proclise obligatoria",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#5 2026-08-29: DUDA — Estructural (cloze-sin-pista): 'Quando ___ vejo, fico nervoso' acepta solo 'te', pero 'o'/'a' ('cuando lo/la veo') son igual de válidas y se castigan. La próclise con 'quando' sí es correcta y la glosa exacta. Sugerencia (informe-cola3-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: corregido — la cola-3 lo marcó DUDA y tenía razón: «Quando o/a vejo» es igual de válida. Y además el «te» de la respuesta no era reflexivo sino objeto directo, con el punto declarado siendo el reflexivo. Reescrito con «levantar-se», que fija la persona y sí es reflexivo",
     "type": "fill_blank",
     "data": {
-      "sentence": "Quando ___ vejo, fico nervoso.",
+      "sentence": "Quando ___ levanto cedo, fico bem disposto.",
       "blanks": [
         {
           "position": 0,
-          "answer": "te",
+          "answer": "me",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "pronombre reflexivo de 1.ª persona; «quando» atrae el clítico delante del verbo"
     }
   },
   {
@@ -4855,19 +4856,18 @@
     ],
     "contentHash": "ac5dd4c32fe3a857e30a707935cc05f1eb77288279a359e8b00cacd9ccec9419",
     "esContrast": "PT-BR: 'apresentou-me'; PT-PT: 'apresentou-me à' + artículo",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
-      "sentence": "O Pedro apresentou-me ___ namorada.",
+      "sentence": "O Pedro apresentou-___ à nova chefe na segunda-feira.",
       "blanks": [
         {
           "position": 0,
-          "answer": "à",
-          "alternatives": [
-            "à"
-          ]
+          "answer": "se",
+          "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "reflexivo de 3.ª persona, enclítico y con guion tras el verbo"
     },
     "variantOverrides": {
       "pt-br": {
@@ -4882,7 +4882,8 @@
           }
         ]
       }
-    }
+    },
+    "variantVerificacion": "lectura de los 60, E2#29: corregido — doblemente roto: «apresentou-me a namorada» (me la presentó) y «apresentou-me à namorada» (me presentó a ella) son las dos correctas y significan cosas distintas, y encima la única alternativa declarada era «à», idéntica a la respuesta. Y el punto es el reflexivo, que no aparecía por ningún lado"
   },
   {
     "id": "ac8c38f0",
@@ -5689,7 +5690,7 @@
     ],
     "contentHash": "c804e438ee35ebb8f3f20d1a6b27507a2c8377088bb4a8f6105dfe8a476cc0e2",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — «Eu» y «todas as manhãs» fijan el presente habitual",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ café todas as manhãs. (beber)",
@@ -6195,7 +6196,7 @@
     "contentHash": "d96c12d12afccfd49ca570ff6ef552953e629990b10787318caa352284e56c81",
     "esContrast": "'Estar' es irregular: estou, estás, está, estamos, estão — no sigue el patrón regular de -AR.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: pista escrita — el lema estaba en el molde pero nada fijaba el tiempo",
     "type": "fill_blank",
     "data": {
       "sentence": "Elas ___ satisfeitas com o serviço. (estar)",
@@ -6205,7 +6206,8 @@
           "answer": "estão",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "presente de «estar», 3.ª del plural — el estado de ahora, no el de entonces"
     }
   },
   {
@@ -6300,7 +6302,7 @@
     "contentHash": "dcdefb3738a5aceb920bec62422ce4d8ad0642b24385717d075770f811743508",
     "esContrast": "'Levanta-te' = 'Levántate': mismo pronombre; en portugués va con guion (ênclise). Con 'você': 'Levante-se'.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: corregido — nada en la frase dice a quién se manda: «Levantem-se» (vocês) es tan válida como las dos declaradas, y se castigaba. Declarada la tercera. Queda por alternativas declaradas",
     "type": "fill_blank",
     "data": {
       "sentence": "___ às sete horas! O concerto começa cedo. (levantar-se)",
@@ -6309,7 +6311,8 @@
           "position": 0,
           "answer": "Levanta-te",
           "alternatives": [
-            "Levante-se"
+            "Levante-se",
+            "Levantem-se"
           ]
         }
       ]
@@ -6679,7 +6682,7 @@
     "contentHash": "ea88503ef425db684edef51042dafbe8cdd32446661b18a8f07e2034f7e87cbf",
     "esContrast": "'Estudar' es cognado de 'estudiar', pero su conjugación en -ar es regular: '-am' para vocês/eles.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: pista escrita — el lema estaba en el molde pero nada fijaba el tiempo",
     "type": "fill_blank",
     "data": {
       "sentence": "Vocês ___ a ementa com atenção. (estudar)",
@@ -6689,7 +6692,8 @@
           "answer": "estudam",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "presente de «estudar», 3.ª del plural — lo que hacen habitualmente"
     }
   },
   {

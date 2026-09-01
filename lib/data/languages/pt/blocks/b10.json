@@ -2586,25 +2586,25 @@
     ],
     "contentHash": "be0b2cf0547b919d209134415acb7f68e5280121669c96b536bcfe50253c8048",
     "esContrast": "En portugués se dice 'o senhor' y 'a senhora' (artículo + sustantivo), no 'el senhor'.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
-      "sentence": "___ senhor, poderia dar-me essa informação?",
+      "sentence": "Desculpe, ___ senhor poderia dar-me essa informação?",
       "blanks": [
         {
           "position": 0,
-          "answer": "O",
-          "alternatives": [
-            "Senhor"
-          ]
+          "answer": "o",
+          "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "artículo definido: el trato formal europeo es «o senhor» con el verbo en 3.ª persona"
     },
     "variantOverrides": {
       "pt-br": {
         "sentence": "___ senhor, poderia me ajudar com esta informação?"
       }
-    }
+    },
+    "variantVerificacion": "lectura de los 60, E2#29: corregido — con la coma detrás de «senhor» la frase pedía el vocativo «Ó senhor», no el sujeto «o senhor» — y la alternativa «Senhor» a secas también valía. Sin la coma, y con «Desculpe» abriendo, sólo queda el artículo"
   },
   {
     "id": "c0623917",

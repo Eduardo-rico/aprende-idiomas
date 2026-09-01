@@ -1188,7 +1188,7 @@
     "contentHash": "294ade1eee06bb7079c560fc0ecf97aece4dda50ae0ad6079bf9d904c2854835",
     "esContrast": "'Imaginar' es regular: el imperfecto de conjuntivo se forma sobre la 3.ª pl. del perfecto (imaginaram → imaginasse), igual que 'falar' → 'falasse'. En estilo indirecto, el imperativo del original pasa a conjuntivo.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — «pediu» arrastra el imperfeito do conjuntivo, «eu» fija la persona y la cita da el verbo",
     "type": "fill_blank",
     "data": {
       "sentence": "Ele pediu que eu ___ (imaginar) outro final. («Imagina outro final», disse ele)",
@@ -1250,7 +1250,7 @@
     "contentHash": "29e9fe7f1af40da7ebe312bbfdd95313eabe4e15e6fb883bba5147df03b02cf6",
     "esContrast": "Ojo: 'que' también existe en español, pero aquí introduce una subordinada substantiva, no una coordinación.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#10 2026-09-01: OK ítem a ítem (informe-cola8-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — una completiva de «saber» con indicativo sólo admite «que»",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu sei ___ ele vai chegar amanhã.",
@@ -1387,7 +1387,7 @@
     "contentHash": "2fb35adafab995effe5892d03e9fd109cc70edc1b58fbba77dad9f2d305392aa",
     "esContrast": "Pretérito perfecto → Pluscuamperfecto: \"ya leí\" → \"había leído\".",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: corregido — el portugués europeo tiene TRES pluscuamperfectos y sólo se aceptaba uno: «havia lido» y el sintético «lera» son igual de correctos. Queda por alternativas declaradas",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela contou que já ___ o livro. (eu já li → ela disse)",
@@ -1395,7 +1395,10 @@
         {
           "position": 0,
           "answer": "tinha lido",
-          "alternatives": []
+          "alternatives": [
+            "havia lido",
+            "lera"
+          ]
         }
       ]
     }
@@ -1496,7 +1499,7 @@
     ],
     "contentHash": "3241b631d858618c7b78ca57fcde635cd2955292747c0558dcefca3bcaf9ef49",
     "esContrast": "'Comigo' (conmigo), 'contigo', 'para ela'... son combinaciones fijas.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Conversou ___ (com + mim) sobre isso?",
@@ -1512,7 +1515,8 @@
       "pt-br": {
         "sentence": "Conversou ___ (mim) sobre isso?"
       }
-    }
+    },
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — el molde da la suma literal —«com + mim»—, y sólo hay una forma en que se funden"
   },
   {
     "id": "3343b3a0",
@@ -3811,7 +3815,7 @@
     "contentHash": "8c10745a7a46584018d83125298e836a2afa5a68bdeea9a826b73fa904f76544",
     "esContrast": "En español \"yo bebo\" → \"él decía que bebía\". En portugués el imperfecto funciona igual.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#10 2026-09-01: OK ítem a ítem (informe-cola8-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — el molde declara la transformación —«eu bebo → ele disse»—, así que la persona y el tiempo salen de ahí",
     "type": "fill_blank",
     "data": {
       "sentence": "Ele disse que ___ um café todas as manhãs. (eu bebo → ele disse)",
@@ -5676,7 +5680,7 @@
     "contentHash": "d11905d4e56debdf18908b3fc6349d3d070e08f611884d508c85f03a54de990f",
     "esContrast": "Si la pregunta original era \"voy a viajar\", al reportado se convierte en \"si iba a viajar\".",
     "variantStatus": "neutral",
-    "variantVerificacion": "experimento leer-vs-producir E2#28, brazo LEER: OK, leído entero",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — el molde declara la transformación y las dos formas compuestas van declaradas como alternativas",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela perguntou se eu ___ viajar no mês passado. (eu vou → ela perguntou)",
@@ -7505,7 +7509,7 @@
     "contentHash": "95e39a7a54018aa7dfc1461ca808004df90ea181d564ec4e1bfacd02dc4b2878",
     "esContrast": "Pregunta indirecta en pasado: presente → imperfeito 'queria'.",
     "variantStatus": "neutral",
-    "variantVerificacion": "experimento leer-vs-producir E2#28, brazo LEER: OK, leído entero",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — «perguntou» arrastra el pasado, «eu» fija la persona y el lema el verbo",
     "type": "fill_blank",
     "data": {
       "sentence": "Ele perguntou se eu ___ (querer) ir ao cinema com ele.",
@@ -10219,7 +10223,7 @@
     "contentHash": "c01818723510ff901121c7050852ebe7fe76278d76510b3ede92be6488fdde44",
     "esContrast": "También cae la -r y aparece «-lo», pero en la 3.ª conjugación sólo se acentúa la i que hace HIATO: «parti-lo-á», «abri-la-á» sin acento porque la i va con consonante, frente a «construí-lo-á», «possuí-lo-á», donde la i forma sílaba sola. Es la excepción que la regla de «tras -r el verbo se acentúa» esconde, porque los ejemplos que se citan siempre son de -ar y -er.",
     "variantStatus": "neutral",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "variantVerificacion": "lectura de los 60, E2#29: corregido — nada fijaba el tiempo: «o joalheiro partiu-o em duas pedras» es igual de correcto, y entonces no hay mesóclisis ninguna. La pista nombra el tiempo, que es justo lo que el punto enseña",
     "type": "fill_blank",
     "data": {
       "sentence": "O diamante é grande de mais para a montagem; o joalheiro ___ em duas pedras. (partir + o)",
@@ -10229,7 +10233,8 @@
           "answer": "parti-lo-á",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "futuro simple con el clítico encajado DENTRO del verbo: la mesóclisis, que sólo existe en futuro y condicional"
     }
   },
   {
@@ -10306,7 +10311,7 @@
     "contentHash": "102f86d9e58d6e606563249f1ee6f5be9698fbed54916f0aeb476ab9a4a43993",
     "esContrast": "«Fazer» es uno de los tres irregulares: el tema del futuro es «far-», y la mesóclise se construye sobre él: far + lhe + á.",
     "variantStatus": "neutral",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "variantVerificacion": "lectura de los 60, E2#29: corregido — mismo caso: «fez-lhe alguns exames antes de decidir» es igual de correcto. El sello de PARADIGMA respondía a la FORMA, no a la determinación",
     "type": "fill_blank",
     "data": {
       "sentence": "O médico ___ alguns exames antes de decidir. (fazer + lhe)",
@@ -10316,7 +10321,8 @@
           "answer": "far-lhe-á",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "futuro simple con el clítico encajado DENTRO del verbo: la mesóclisis, que sólo existe en futuro y condicional"
     }
   },
   {
@@ -10335,7 +10341,7 @@
     "contentHash": "93f672e89097eff16ef0a821f42a43d0fd9f530642a27ff1a63b45b7852fdfa8",
     "esContrast": "Con clítico de 1.ª o 2.ª persona (y con «lhe/lhes») el tema queda intacto: escrever + lhes + ão.",
     "variantStatus": "neutral",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — «assim que houver» es futuro do conjuntivo y exige el futuro en la principal",
     "type": "fill_blank",
     "data": {
       "sentence": "Os serviços académicos ___ assim que houver vagas no curso. (escrever + lhes)",

@@ -73,3 +73,39 @@ nada.**
 **Lo que esto dice del triaje**: los tres primeros están en la clase
 «verbal determinado», la que el clasificador daba por segura. Ya sabíamos
 que aprobaba de más; ahora está medido dos veces.
+
+## Lectura de los 60 — resultado
+
+Leídos los 60 en cuatro tandas. **23 defectuosos = 38 %**, por encima del
+30 % de la muestra y muy por encima del 15 % que habría permitido sellar.
+Con los 6 de la muestra: **29 de 80 = 36 %**.
+
+| tanda | leídos | defectuosos |
+|---|---:|---:|
+| muestra | 20 | 6 |
+| 1 | 15 | 6 |
+| 2 | 15 | 9 |
+| 3 | 15 | 5 |
+| 4 | 15 | 3 |
+
+Dos familias, y la segunda no la vio venir nadie:
+
+1. **El tiempo sin fijar** (la mayoría). El lema está en el molde y nada
+   dice si va presente o pretérito: «Eu ___ (trazer) documentos para a
+   reunião» admite «trago» y «trouxe». Se cierra con una pista que NOMBRA
+   el tiempo. La regla nueva del generador ya no deja pasar ninguno.
+2. **El ítem que no mide su punto.** «Os capitães ___ (trazer) os seus
+   barcos» tenía el hueco en el verbo mientras su punto declarado es el
+   plural en «-ão»; «Eu ___ um café todas as manhãs. (hábito/fato)» ponía
+   una ETIQUETA donde va el lema, y así el hueco quedaba léxicamente
+   abierto. Estos no los caza ninguna pista: hay que mover el hueco.
+
+Y tres brasileñismos de paso —«fato» por «facto», «essa ligação» por
+«esta chamada», y el «(hábito/fato)» que los traía—, que suman a la cuenta
+de la interferencia castellana la otra interferencia, la de la otra
+variante.
+
+**Lo que esto dice del triaje por superficie**: de los 15 de «verbal
+determinado» —su clase más segura— la calibración ya había encontrado 3 no
+determinados y 2 rotos. La lectura completa lo confirma: **ordena, no
+filtra**. Ningún cloze se sella por pertenecer a una clase.

@@ -1934,8 +1934,8 @@
     ],
     "contentHash": "52c878046cb201b62582782bfa8946dbed5f71db56eed0da3d64fa0d2770e063",
     "esContrast": "à = a la (preposición a + artigo a). Se usa con femeninos.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — «ir a» con vuelta —comprar el pan y volver— fija la crase frente a «para a»",
     "type": "fill_blank",
     "data": {
       "sentence": "Fui ___ padaria comprar pão pela manhã.",
@@ -2256,18 +2256,19 @@
     ],
     "contentHash": "61a585cfe31c83eec6d2175c6663adc8c0cc8545217a9dda0d47c3c5c43b3dfd",
     "esContrast": "ao = al (preposición a + artigo o). Equivale a 'al' en español.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "lectura de los 60, E2#29: corregido — «Vou ___ escritório falar com o gerente» admitía «para o» tan bien como «ao». «Chegar» rige «a» y cierra el hueco sin renunciar a la contracción, que es el punto",
     "type": "fill_blank",
     "data": {
-      "sentence": "Vou ___ escritório falar com o gerente agora.",
+      "sentence": "Cheguei ___ escritório às nove em ponto.",
       "blanks": [
         {
           "position": 0,
           "answer": "ao",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "la preposición «a» fundida con el artículo masculino; «chegar» la rige, y no admite «para»"
     }
   },
   {
@@ -6024,17 +6025,18 @@
     "contentHash": "e29490a1d3d27d7d41aba198f977250cb00b33f656716124ecb12ba2d93926ef",
     "esContrast": "capitão→capitães (ão→ães), como pão→pães; pero cristão→cristãos (ão→ãos). Igual en PT-PT y PT-BR.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: corregido — el hueco estaba en el verbo —«Os capitães ___ (trazer)», que admite presente y pretérito por igual— mientras el punto declarado es el plural en «-ão». Movido al sustantivo: ahora está determinado Y mide lo que dice medir",
     "type": "fill_blank",
     "data": {
-      "sentence": "Os capitães ___ os seus barcos para o porto. (trazer)",
+      "sentence": "Os ___ trazem os seus barcos para o porto. (capitão)",
       "blanks": [
         {
           "position": 0,
-          "answer": "trazem",
+          "answer": "capitães",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "plural de un nombre en «-ão» que lo hace en «-ães», como «pão/pães»"
     }
   },
   {
@@ -7225,7 +7227,7 @@
     "contentHash": "4cc388b742e0245a09f214c717dfef16853e19438d26353379085c23ebd01f36",
     "esContrast": "em + o = no.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — «no centro da cidade» es fórmula fija",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu trabalho ___ centro da cidade.",
@@ -7251,7 +7253,7 @@
     "contentHash": "72ae98a91ecf6046f021af28aec98ac951f03fb1d9c6bf2cfe7f9471904ca79d",
     "esContrast": "de + o = do.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — sin marca deíctica, la contracción del artículo es la única lectura por defecto",
     "type": "fill_blank",
     "data": {
       "sentence": "A porta ___ quarto está aberta.",
@@ -7278,16 +7280,18 @@
     "contentHash": "d931d23e23e37c9c9b00c4acc46a01f6e74d0caac669aa612acd8b646cdfe467",
     "esContrast": "a + a = à (crase).",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#5 2026-08-29: DUDA — Estructural (cloze-sin-pista): input libre donde 'para a' ('Ela vai para a escola de bicicleta') es perfectamente válida y sería castigada; solo se acepta 'à'. Sugerencia: blanks[0].alternatives = ['para a'] o pedir expl (informe-cola3-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: corregido — la cola-3 ya lo había marcado DUDA: «Ela vai para a escola» es igual de válida y el input libre la castigaba. «Chegar» rige «a» y no acepta «para»",
     "type": "fill_blank",
     "data": {
-      "sentence": "Ela vai ___ escola de bicicleta.",
+      "sentence": "Ela chega ___ escola de bicicleta todos os dias.",
       "blanks": [
         {
           "position": 0,
-          "answer": "à"
+          "answer": "à",
+          "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "la preposición «a» fundida con el artículo femenino, con el acento grave que marca la fusión"
     }
   },
   {
@@ -7356,7 +7360,7 @@
     "contentHash": "a092e856222451835b709077a3254b58f7d645051cfbaf3910924d99a97869bb",
     "esContrast": "Posesivo plural concordando: meus.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — el lema, «os» y el plural de «livros» fijan la forma",
     "type": "fill_blank",
     "data": {
       "sentence": "Estes são os ___ livros favoritos. (meu)",
@@ -7382,7 +7386,7 @@
     "contentHash": "208d6710c9797376ff1a32175ae1c7c32218b7f8d2d4dd84da3ec8c446a42fba",
     "esContrast": "Plural '-l' → '-is': papel → papéis.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#10 2026-09-01: OK ítem a ítem (informe-cola8-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — el lema y «Os» fijan el plural",
     "type": "fill_blank",
     "data": {
       "sentence": "Os ___ estão em cima da mesa. (papel)",
@@ -7408,7 +7412,7 @@
     "contentHash": "cfa0de98014f869caaebe83b1b483ad52a809a47435d646d0b0c81dc6fac2212",
     "esContrast": "Plural '-ão' → '-ões': lição → lições.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#10 2026-09-01: OK ítem a ítem (informe-cola8-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — el lema y «As» fijan el plural",
     "type": "fill_blank",
     "data": {
       "sentence": "As ___ de hoje são difíceis. (lição)",

@@ -7391,7 +7391,7 @@
     "contentHash": "7502f1c7932ae272a38c50132a7062111d92146dbaf99a6cc630d5db86c1ff98",
     "esContrast": "Futuro de 'viajar' en 'nós': 'viajaremos'.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: pista escrita — el lema estaba en el molde pero nada fijaba el tiempo",
     "type": "fill_blank",
     "data": {
       "sentence": "Amanhã nós ___ (viajar) para o Rio de Janeiro.",
@@ -7400,7 +7400,8 @@
           "position": 0,
           "answer": "viajaremos"
         }
-      ]
+      ],
+      "hintEs": "futuro simple sintético de «viajar», 1.ª del plural — la forma de una sola palabra, no la perífrasis con «ir»"
     }
   },
   {
@@ -7558,10 +7559,10 @@
     "contentHash": "3779c049b6340cfc5ce3d6f31233c86023b0f30d3ca311128e9bdb7349537135",
     "esContrast": "El futuro composto marca lo que estará ACABADO antes de otro momento futuro. En español, «habré terminado».",
     "variantStatus": "neutral",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "variantVerificacion": "lectura de los 60, E2#29: corregido — el único de los cinco del lote PARADIGMA sin disparador de futuro: «Antes do almoço já terminei a minha apresentação» es perfectamente correcto. Con «de amanhã» queda sin pista y CORRECTO. El sello de PARADIGMA respondía a la FORMA, no a la determinación",
     "type": "fill_blank",
     "data": {
-      "sentence": "Antes do almoço já ___ a minha apresentação. (terminar)",
+      "sentence": "Antes do almoço de amanhã já ___ a minha apresentação. (terminar)",
       "blanks": [
         {
           "position": 0,
@@ -7616,7 +7617,7 @@
     "contentHash": "09bb5e8f58dc307a2d68ee98c93a25b6e981eeaca19c9d1ac20203dfb1b0a8e0",
     "esContrast": "Participio irregular: «feito», no *«fazido»*. El «já» y «quando voltar» (futuro do conjuntivo) son los que piden el compuesto: sin ellos, «faremos» valdría igual.",
     "variantStatus": "neutral",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — «Quando … voltar» es futuro do conjuntivo y «já» exige el composto",
     "type": "fill_blank",
     "data": {
       "sentence": "Quando o chefe voltar de viagem, nós já ___ tudo o que ficou pendente. (fazer)",
@@ -7645,7 +7646,7 @@
     "contentHash": "e96a32c445345591cdda2e10cd617f5f4761f4d6a7c9cf260175e46eb98af5ee",
     "esContrast": "«Dito», no *«dizido»*. Es uno de los tres verbos que también son irregulares en el futuro simple (dirá).",
     "variantStatus": "neutral",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — «Quando … acabar» es futuro do conjuntivo y «já» exige el composto",
     "type": "fill_blank",
     "data": {
       "sentence": "Quando o julgamento acabar, a testemunha já ___ tudo. (dizer)",
@@ -7790,7 +7791,7 @@
     "contentHash": "9d27d63aef8308b8110696cf96aa47bba24157980001ecb3c25214806ff473a2",
     "esContrast": "Participio irregular: «escrito». Y «antes de o sol se pôr» es infinitivo pessoal con sujeto propio, la salida que el europeo prefiere aquí (aunque «antes que o sol se ponha» también sea correcto).",
     "variantStatus": "neutral",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — «Antes de o sol se pôr» proyecta al futuro, «já» exige el composto y «o teu» fija la persona",
     "type": "fill_blank",
     "data": {
       "sentence": "Antes de o sol se pôr, já ___ o teu discurso todo. (escrever)",
@@ -7819,7 +7820,7 @@
     "contentHash": "b3d3e6932a325e5b9f5ee7a34bc381be7c08034cbcd1d3c7f1a07ee349c52e92",
     "esContrast": "Participio irregular: «visto». Ojo: «ver» es regular en el futuro simple (veremos) e irregular sólo en el participio.",
     "variantStatus": "neutral",
-    "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — «No fim da viagem» proyecta al futuro y «já» exige el composto",
     "type": "fill_blank",
     "data": {
       "sentence": "No fim da viagem nós já ___ cinco cidades diferentes. (ver)",

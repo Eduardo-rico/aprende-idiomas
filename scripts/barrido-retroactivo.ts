@@ -23,7 +23,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { BLOCKS_DIR } from './config';
 import { answersMatchCard } from '@/lib/exercises/normalize';
-import { servibleAlAlumno } from './lib/estado-item';
+import { servibleAlAlumno, determinacionDictaminada } from './lib/estado-item';
 import { textoAnalizable, palabrasAnalizables } from './lib/texto-cloze';
 
 const MUESTRA = process.argv.includes('--muestra');
@@ -83,9 +83,8 @@ const REGLAS: Regla[] = [
     // determinado. Filtrar por `variantStatus` mezclaba las dos preguntas
     // y bajaba el número de 178 a 39 sin haber arreglado nada.
     nombre: 'cloze sin pista y sin dictaminar la determinación',
-    aplica: (x) => x.type === 'fill_blank' && x.data?.blanks?.length === 1 &&
-      !/sin pista y CORRECTO|alternativas declaradas/.test(String(x.variantVerificacion ?? '')),
-    falla: (x) => (String(x.data.hintEs ?? '').trim() ? null : `«${x.data.sentence}»`),
+    aplica: (x) => x.type === 'fill_blank' && x.data?.blanks?.length === 1,
+    falla: (x) => (determinacionDictaminada(x) ? null : `«${x.data.sentence}»`),
   },
   {
     // INFORMATIVA, no un defecto. Se listó como backlog y era falso: desde

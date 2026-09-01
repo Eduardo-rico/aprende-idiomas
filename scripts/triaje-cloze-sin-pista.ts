@@ -19,7 +19,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { BLOCKS_DIR } from './config';
-import { servibleAlAlumno } from './lib/estado-item';
+import { servibleAlAlumno, determinacionDictaminada } from './lib/estado-item';
 
 const items = fs.readdirSync(BLOCKS_DIR).filter((x) => /^b\d+\.json$/.test(x)).sort()
   .flatMap((f) => JSON.parse(fs.readFileSync(path.join(BLOCKS_DIR, f), 'utf8')) as any[])
@@ -73,7 +73,12 @@ if (process.argv.includes('--muestra') && filtro) {
   for (const x of xs.slice(0, 25)) console.log(`- \`${x.id}\` [${(x.concepts ?? []).join(', ')}] «${x.data.sentence}» → «${x.data.blanks[0].answer}»`);
 } else {
   console.log('# Triaje de los cloze publicados sin pista\n');
-  console.log(`Total: **${items.length}**\n`);
+  // «Sin pista» y «sin dictaminar» NO son lo mismo, y confundirlos manda a
+  // releer lo ya leído: los 113 sin pista de hoy están dictaminados los
+  // 113. Por eso el total va acompañado de lo que de verdad queda.
+  const pend = items.filter((x) => !determinacionDictaminada(x)).length;
+  console.log(`Total sin pista: **${items.length}** · de ellos SIN DICTAMINAR: **${pend}**\n`);
+  if (!pend) console.log(`> Los ${items.length} se leyeron uno a uno en E2#29. Sin pista no es indeterminado:\n> el sello dice por qué cada frase fija su respuesta sola.\n`);
   console.log('| clase | ítems | ¿está determinado? |');
   console.log('|---|---:|---|');
   const juicio: Record<Clase, string> = {

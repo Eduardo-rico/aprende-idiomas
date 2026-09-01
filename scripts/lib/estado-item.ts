@@ -37,3 +37,16 @@ export const esDeEscucha = (x: any) => /par mínimo|Escucha/i.test(String(x?.var
 
 /** EN CUARENTENA: retirado de servicio, con su motivo escrito. */
 export const enCuarentena = (x: any) => x?.variantStatus === 'needs-human';
+
+/** DETERMINACIÓN DICTAMINADA — pregunta DISTINTA de la de variante, y hay
+ *  que insistir porque ya se confundieron una vez: `neutral` dice que la
+ *  forma es europea, no que el hueco tenga una sola respuesta. Filtrar la
+ *  determinación por `variantStatus` bajó el número de 178 a 39 sin haber
+ *  arreglado nada. Ver [[gotcha: un sello responde a UNA pregunta]].
+ *
+ *  Un cloze está dictaminado si tiene pista —que fija la respuesta— o si
+ *  alguien lo leyó y dejó por escrito cuál de las dos salidas eligió. */
+export const SELLO_DETERMINACION = /sin pista y CORRECTO|alternativas declaradas/;
+export const determinacionDictaminada = (x: any) =>
+  String(x?.data?.hintEs ?? '').trim() !== '' ||
+  SELLO_DETERMINACION.test(String(x?.variantVerificacion ?? ''));

@@ -220,17 +220,15 @@
     "contentHash": "064a533b0fb717bc284090abeaa8faa08ebb843f680c5cedb6ef7fda978d7e2d",
     "esContrast": "Con 'café' el portugués admite 'tomar' y 'beber'; el hueco va en presente de indicativo porque enuncia un hábito, no un deseo.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: corregido — el paréntesis no era un lema sino una etiqueta —«(hábito/fato)»—, así que el hueco quedaba léxicamente abierto: «bebo», «peço», «preparo» valían igual. Y no medía su punto, que es el contraste indicativo/conjuntivo: ahora «É verdade que» exige el indicativo. De paso se va «fato», que es grafía brasileña y en europeo significa «traje». Queda sin pista y CORRECTO",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu ___ um café todas as manhãs. (hábito/fato)",
+      "sentence": "É verdade que eu ___ um café todas as manhãs. (tomar)",
       "blanks": [
         {
           "position": 0,
           "answer": "tomo",
-          "alternatives": [
-            "bebo"
-          ]
+          "alternatives": []
         }
       ]
     }
@@ -562,7 +560,7 @@
     ],
     "contentHash": "14654ef2a62b5ea2086749c095d105dc1541ce55c826caeed91e6f8068142754",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — «duvidava» arrastra el imperfeito do conjuntivo y «ele» fija la persona",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu duvidava que ele ___ (perder) tanto tempo assim.",
@@ -1336,17 +1334,15 @@
     "contentHash": "299f77963db784f0539c06748fce7f5ca39ed8ff05ae68f66d1e5de5f1aed4d5",
     "esContrast": "El disparador va en indicativo ('quero') y es la subordinada la que va en conjuntivo ('que ela volte'), igual que en español.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: corregido — misma avería: «(desejo)» era etiqueta y no lema, y «espero», «peço» o «prefiro» disparan el conjuntivo igual de bien. Con el lema en el molde queda sin pista y CORRECTO",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu ___ que ela volte logo. (desejo)",
+      "sentence": "Eu ___ que ela volte logo. (querer)",
       "blanks": [
         {
           "position": 0,
           "answer": "quero",
-          "alternatives": [
-            "desejo"
-          ]
+          "alternatives": []
         }
       ]
     }
@@ -2954,7 +2950,7 @@
     "contentHash": "5048626ca060c76a838c46437c212478e9289971d968880d144e4d6c355ffe88",
     "esContrast": "'Duvidar' rige conjuntivo en la subordinada ('duvido que ele venha'); en negativa caben los dos modos. Aquí el hueco es el verbo principal y va en indicativo.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — el lema, «Eu» y el «venha» de la subordinada fijan el presente",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ que ele venha amanhã. (duvidar)",
@@ -3805,7 +3801,7 @@
     ],
     "contentHash": "682e66e263367c2f0607aac6062e9509dcabbec915183b63463a707431b51769",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — «Era impossível que» arrastra el imperfeito do conjuntivo y «ele» fija la persona",
     "type": "fill_blank",
     "data": {
       "sentence": "Era impossível que ele ___ (ser) tão descuidado.",
@@ -4504,7 +4500,7 @@
     "contentHash": "7b8f1ddba4dfe7e56b97aeda1f7615b12576f1ea2b9eb8d29b2e30f88425e78c",
     "esContrast": "El imperfecto de conjuntivo de 'ir' es 'fosse/fôssemos/fossem' — coincide con el de 'ser' —, no el español 'fuese'.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — «pediu» arrastra el imperfeito do conjuntivo y «todos» fija la persona",
     "type": "fill_blank",
     "data": {
       "sentence": "O gerente pediu que todos ___ (ir) para o exterior imediatamente.",
@@ -6017,7 +6013,7 @@
     ],
     "contentHash": "b27edcea69765b4591adfc18d31b6bee1eee92b5ffbfc02181ce6d37749b0082",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#9 2026-08-31: OK ítem a ítem (informe-cola7-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: sin pista y CORRECTO — «gostaria que» arrastra el imperfeito do conjuntivo y «ela» fija la persona",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu gostaria que ela ___ (ver) a exposição na galeria.",
@@ -6429,10 +6425,10 @@
     "contentHash": "c2f0740cdb4fc87eb2a7f16c2cb2a746e54620d3c49419cb52ccc2c7eae4d3bf",
     "esContrast": "«Saber que» y las expresiones de certeza piden INDICATIVO, igual que en español: «sei que é», «sé que es». El conjuntivo entra con la duda («talvez seja»).",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: corregido — «Eu sei que essa ligação era muito importante» es igual de correcto: nada fijaba el tiempo. «De amanhã» lo cierra. Y «essa ligação» era brasileño por partida doble —el demostrativo y el sustantivo—: en europeo, «chamada» o «telefonema». Queda sin pista y CORRECTO",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu sei que essa ligação ___ muito importante. (ser)",
+      "sentence": "Eu sei que a reunião de amanhã ___ muito importante. (ser)",
       "blanks": [
         {
           "position": 0,
@@ -7752,7 +7748,7 @@
     "contentHash": "e453e88dbf5cf5aa2f9f92e5692a785002b50cd9d3a06f6959a937a993cce230",
     "esContrast": "«É importante que» exige conjuntivo, igual que el español «es importante que»: desenvolvam / desarrollen.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: corregido — la alternativa «tenham» contradecía al molde, que nombra «desenvolver». Retirada, queda sin pista y CORRECTO: «É importante que» exige el presente do conjuntivo y «vocês» fija la persona",
     "type": "fill_blank",
     "data": {
       "sentence": "É importante que vocês ___ confiança um no outro. (desenvolver)",
@@ -7760,9 +7756,7 @@
         {
           "position": 0,
           "answer": "desenvolvam",
-          "alternatives": [
-            "tenham"
-          ]
+          "alternatives": []
         }
       ]
     }
@@ -8639,10 +8633,10 @@
     "contentHash": "fc13ad89a6295cd7dbe085b571c56d0e9beac653c19fc00df356bffd3f787e2e",
     "esContrast": "Em espanhol: 'aunque yo calentara' (imperfeito do subjuntivo); em português: 'aquecesse'.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#9 2026-08-31: DUDA — «Embora eu aquecesse a sopa, ela ficou fria» no es incorrecto, pero con un hecho puntual y acabado en la principal («ficou») el portugués prefiere el compuesto: «Embora eu tivesse aquecido / tenha aquecido a sopa». Apart (informe-cola7-manual)",
+    "variantVerificacion": "lectura de los 60, E2#29: corregido — la cola-7 lo marcó DUDA con razón: con «ficou» —hecho puntual y acabado— el portugués prefiere el compuesto «tivesse aquecido», así que la forma simple no era la única. Pasado a hábito con «todos os dias» y «ficava», donde el imperfecto simple es el correlato natural. Queda sin pista y CORRECTO",
     "type": "fill_blank",
     "data": {
-      "sentence": "Embora eu ___ (aquecer) a sopa, ela ficou fria.",
+      "sentence": "Embora eu ___ (aquecer) a sopa todos os dias, ela ficava sempre fria.",
       "blanks": [
         {
           "position": 0,
