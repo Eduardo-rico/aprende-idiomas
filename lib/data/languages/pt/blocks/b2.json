@@ -53,8 +53,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#3 2026-08-13 (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#29: OK, leído entero",
     "type": "flashcard",
     "data": {
       "front": "¿Cuáles son los artículos definidos en portugués?",
@@ -210,8 +210,8 @@
     "tags": [],
     "contentHash": "07ac6b639cf58bc6626d6efd54cd41afae99e3e22e22ddf130262dea8292816f",
     "esContrast": "Quase todo + sustantivo: 'casi todo' (todo concuerda en género/número)",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-indef-todo-tudo · sello anterior: corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Quase ___ restaurantes estavam abertos naquela época.",
@@ -504,28 +504,28 @@
       "regional",
       "coloquial"
     ],
-    "contentHash": "2d2823614b51f2f4df9148d5f3ef5bd7ba5175a638616dfd125f447aa462dd85",
+    "contentHash": "360678b07c2e68b92115c015eaeafa2ab461f8ecd664f0a551c4bc8779fa8763",
     "esContrast": "En PT-PT se prefiere «este» para lo presente y «convosco» (formal/coloquial europeo); en PT-BR se usa «esse» más ampliamente y «com vocês».",
     "audio": {
       "br": {
-        "hash": "04887d776259fc70054fe02839598687022d08466bca62d34693a93954aeba5f",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "1440889c1997fe7c70d46e39f427c295fa8a0143e56043d5d81accab56bf53ef",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "7dc6912580b58fe4b65222994e0389f0435c9e19f481bf6c9b23cb6fd097f0a2",
-        "voice": "Portuguese_Wiselady"
+        "hash": "1440889c1997fe7c70d46e39f427c295fa8a0143e56043d5d81accab56bf53ef",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b2-dem-tres-graus · RESCATADO en E2#22: su punto volvió a bajar del piso al retirarse un ítem roto",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#29: corregido — la clave usaba «esse» para «este año»: el punto es justamente el grado del demostrativo, y lo enseñaba al revés",
     "type": "translation",
     "data": {
       "source": "Este año no voy a poder festejar con ustedes.",
-      "target": "Esse ano não vou poder festejar com vocês.",
+      "target": "Este ano não vou poder festejar convosco.",
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": [
-        "Este ano não vou poder festejar convosco."
+        "Este ano não vou poder festejar com vocês."
       ]
     }
   },
@@ -553,8 +553,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#29: OK, leído entero",
     "type": "flashcard",
     "data": {
       "front": "Cuál es la contracción de \"a + o\"?",
@@ -743,7 +743,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "2364f5c043e5b3e936618a06c8ae1d5867e74880319d85d0a25af0f81731ae53",
+    "contentHash": "7e7718708a1ea865e67d1e76d50d1174bf0858dd047bb7ec783e989b0f8aabf2",
     "audio": {
       "br": {
         "hash": "72a77e98b1effc0a83cc81ae554856978d21beb43b988562450e419261d0e98e",
@@ -754,13 +754,13 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#29: corregido — el ejemplo llevaba el posesivo sin artículo («Meus irmãos»), que es brasileño",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se pluraliza la palabra 'irmão'?",
       "back": "irmãos",
-      "example": "Meus irmãos moram em São Paulo."
+      "example": "Os meus irmãos moram no Porto."
     }
   },
   {
@@ -774,23 +774,23 @@
     "tags": [
       "demostrativo"
     ],
-    "contentHash": "78accd26bcd360c7b0a34cc07e06fe16cc807320a5a841ad393f3e904fbc5432",
+    "contentHash": "fb070979213443da90cccb85d55991ab0ced5d5d23fe0dfd7be110648d9a1661",
     "esContrast": "Esse/essa = 'ese/esa', no 'este/esta'. Indica distancia media.",
     "audio": {
       "br": {
-        "hash": "6239a1457bafc3925eb8ee4d3ba5a3ab94d56d6a3dd8fcc67ff90173bcc32905",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "3184a2df29d1e952c343e33c413334f7d144171acc663c9d4d4b1c85616b85ca",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "2d609d627403ad424e19b1043c7440d0db70c876a5ef1fcb843ba3f063ee5900",
-        "voice": "Portuguese_Wiselady"
+        "hash": "3184a2df29d1e952c343e33c413334f7d144171acc663c9d4d4b1c85616b85ca",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b2-dem-tres-graus · RESCATADO en E2#22: su punto volvió a bajar del piso al retirarse un ítem roto",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#29: corregido — faltaba la preposición: «precisar» rige «de» y la norma europea no la omite",
     "type": "translation",
     "data": {
-      "source": "Preciso falar com essa pessoa.",
+      "source": "Preciso de falar com essa pessoa.",
       "target": "Necesito hablar con esa persona.",
       "sourceLang": "pt-pt",
       "targetLang": "es",
@@ -813,11 +813,12 @@
     ],
     "contentHash": "2a320ff54591948be55c37a382c8ba290c423633108580e0bb30c8936fbef3e0",
     "esContrast": "En español 'dar un abrazo' lleva UN artículo; en PT se dice 'dar um abraço' con UM.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#29: corregido — con la respuesta declarada (∅) la frase salía «damos abraço», agramatical; y «uns nos outros» era «uns aos outros»",
     "type": "verb_preposition",
     "data": {
       "verb": "dar um abraço",
-      "sentence": "Quando nos encontramos, damos ___ abraço uns nos outros.",
+      "sentence": "Quando nos encontramos, damos ___ um abraço uns aos outros.",
       "options": [
         "∅",
         "um",
@@ -851,8 +852,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#29: OK, leído entero",
     "type": "translation",
     "data": {
       "source": "La estudiante portuguesa estudió mucho.",
@@ -914,8 +915,8 @@
     ],
     "contentHash": "2cbec90166c7464c87eb8b11011026f1cf125b76d3169baf79c7a8794b4d3beb",
     "esContrast": "'Precisar' rige DE, pero aquí ya va contraída en 'da' (de + a): 'preciso da ajuda'. La preposición no se duplica.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#29: OK, leído entero",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
@@ -1080,7 +1081,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#29: OK, leído entero",
     "type": "flashcard",
     "data": {
       "front": "¿Qué son los sustantivos comuns de gênero?",
@@ -1133,18 +1135,19 @@
     ],
     "contentHash": "37f077b165a6d25a7cb1277fb47161bca813ceae17c2b841d11d1005221dd7bf",
     "esContrast": "'Artista' es común en cuanto al género, igual que en español.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#29: corregido — la respuesta estaba escrita en la propia frase, en «é uma artista completa»: se copiaba de al lado",
     "type": "fill_blank",
     "data": {
-      "sentence": "Esta ___ é muito talentosa: é uma artista completa.",
+      "sentence": "Esta ___ é muito talentosa: canta, dança e representa.",
       "blanks": [
         {
           "position": 0,
           "answer": "artista",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "la que se dedica al arte — misma forma para los dos géneros, sólo cambia el artículo"
     }
   },
   {
@@ -1297,8 +1300,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b2-plural-ao · RESCATADO en E2#22: su punto volvió a bajar del piso al retirarse un ítem roto",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#29: OK, leído entero",
     "type": "translation",
     "data": {
       "source": "As reuniões serão nas manhãs de sábado.",
@@ -1455,8 +1458,8 @@
     ],
     "contentHash": "4c60e52a4974f6f82250c67808da14d5564214ab10b22a2d44da88bddbffce7f",
     "esContrast": "cidadão → cidadãos (único plural correcto; *cidadões es error frecuente). Los nombres en -ão reparten tres plurales: -ãos (cidadãos, mãos), -ães (alemães, pães), -ões (balões, nações).",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "dictamen dirigido E2#29: OK, leído entero",
     "type": "fill_blank",
     "data": {
       "sentence": "Existem vários ___ na cidade nova.",
@@ -1769,7 +1772,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b2-indef-todo-tudo",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'todo el día' y 'todos los días'?",
@@ -4707,8 +4711,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-indef-todo-tudo · sello anterior: revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
     "type": "translation",
     "data": {
       "source": "Cierto es que casi todo depende del contexto.",
@@ -5052,8 +5056,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-indef-algum-nenhum · sello anterior: revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se traduce 'No tengo ningún problema' en negativo?",
@@ -5149,7 +5153,8 @@
     ],
     "contentHash": "c494839d756ece5f71cfea453564723ff32c44cc3b63b931726de884b3b2bc1b",
     "esContrast": "Pouco = 'poco' (cantidad reducida), diferente de 'pouco' advérbio",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b2-indef-algum-nenhum",
     "type": "fill_blank",
     "data": {
       "sentence": "Pouco a pouco, vamos resolvendo ___ dificuldades.",
@@ -5186,8 +5191,8 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-indef-algum-nenhum · sello anterior: reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
     "type": "listening",
     "data": {
       "audioText": "Não tenho dinheiro algum para gastar, mas posso vender certas coisas.",
@@ -5559,8 +5564,8 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-indef-todo-tudo · sello anterior: reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
     "type": "listening",
     "data": {
       "audioText": "Vários amigos quiseram vir, embora eu tivesse poucos dias livres.",
@@ -5677,8 +5682,8 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "E2#10 2026-09-01: léxico BR→EP por swap mecánico, forma BR movida a variantOverrides['pt-br']",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-indef-algum-nenhum · sello anterior: E2#10 2026-09-01: léxico BR→EP por swap mecánico, forma BR movida a variantOverrides['pt-br']",
     "type": "translation",
     "data": {
       "source": "Algunos contactos no me dejaron buena impresión.",
@@ -9507,6 +9512,256 @@
       "explanationEs": "«Parente» es de género común. El español coloquial dice «parienta» y de ahí sale el calco.",
       "alternatives": [],
       "calcoEs": "La parienta que vino de Lisboa se queda dos días."
+    }
+  },
+  {
+    "id": "co29-001",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-todo-tudo"
+    ],
+    "tags": [
+      "e2-29",
+      "correccion"
+    ],
+    "contentHash": "a31f3e4f6eaa03d65894868f41d7e75d88a1ccbe9dec1e49f5eaa91cb8c43c39",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-29: la frase mala es el calco de «Todo lo que dijo es verdad.». El gate de variante MUERDE por diseño (una sola palabra en español, dos en portugués) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Todo o que ele disse é verdade.",
+      "correct": "Tudo o que ele disse é verdade.",
+      "explanationEs": "Delante de «o que» va el neutro invariable «tudo». «Todo» es adjetivo y necesita un sustantivo con el que concordar.",
+      "alternatives": [],
+      "calcoEs": "Todo lo que dijo es verdad."
+    }
+  },
+  {
+    "id": "co29-002",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-todo-tudo"
+    ],
+    "tags": [
+      "e2-29",
+      "correccion"
+    ],
+    "contentHash": "dc33f2fad15f52481fc9c57fe2f2fdd5ddd59f88eae6c96b35e41f0481eaf173",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-29: la frase mala es el calco de «Sabe todo sobre coches antiguos.». El gate de variante MUERDE por diseño (una sola palabra en español, dos en portugués) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ele sabe todo sobre carros antigos.",
+      "correct": "Ele sabe tudo sobre carros antigos.",
+      "explanationEs": "Sin sustantivo al que acompañar, la forma es «tudo».",
+      "alternatives": [],
+      "calcoEs": "Sabe todo sobre coches antiguos."
+    }
+  },
+  {
+    "id": "co29-003",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-todo-tudo"
+    ],
+    "tags": [
+      "e2-29",
+      "correccion"
+    ],
+    "contentHash": "d2ecfe9587b7dae8bdb40f2994b8a86b840cb2424105dfd80d08d246f3b59ebe",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-29: la frase mala es el calco de «Eso es todo lo que tengo para darte.». El gate de variante MUERDE por diseño (una sola palabra en español, dos en portugués) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Isso é todo o que tenho para te dar.",
+      "correct": "Isso é tudo o que tenho para te dar.",
+      "explanationEs": "Otra vez el neutro delante de «o que»: «tudo o que».",
+      "alternatives": [],
+      "calcoEs": "Eso es todo lo que tengo para darte."
+    }
+  },
+  {
+    "id": "co29-004",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-todo-tudo"
+    ],
+    "tags": [
+      "e2-29",
+      "correccion"
+    ],
+    "contentHash": "d093b42c5440c6557d3040ca799d0e8e565e4e44b16398097907804e2b52cc9f",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-29: la frase mala es el calco de «Todo el mundo lo sabe desde hace meses.». El gate de variante MUERDE por diseño (locución calcada palabra por palabra) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Tudo o mundo sabe disso há meses.",
+      "correct": "Toda a gente sabe disso há meses.",
+      "explanationEs": "El español «todo el mundo» no se traduce palabra por palabra: el portugués dice «toda a gente», con el adjetivo concordando en femenino.",
+      "alternatives": [],
+      "calcoEs": "Todo el mundo lo sabe desde hace meses."
+    }
+  },
+  {
+    "id": "co29-005",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-todo-tudo"
+    ],
+    "tags": [
+      "e2-29",
+      "correccion"
+    ],
+    "contentHash": "662cbc0ed9305b4d0c75834b6b8c82c3986d95b77af10c901d2108113d62ee8a",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-29: la frase mala es el calco de «Trabajó todo el día sin parar.». El gate de variante MUERDE por diseño (hipercorrección del neutro) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ela trabalhou tudo o dia sem parar.",
+      "correct": "Ela trabalhou todo o dia sem parar.",
+      "explanationEs": "Aquí es al revés: hay sustantivo —«o dia»—, así que toca el adjetivo «todo», que concuerda. Quien aprende la regla del neutro suele pasarse de frenada y ponerlo también donde no va.",
+      "alternatives": [],
+      "calcoEs": "Trabajó todo el día sin parar."
+    }
+  },
+  {
+    "id": "co29-006",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-todo-tudo"
+    ],
+    "tags": [
+      "e2-29",
+      "correccion"
+    ],
+    "contentHash": "4bcb1d1f1929dc73a4e0f8807ede446c1799cd9b528212790cb969377ac40e2f",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-29: la frase mala es el calco de «Me lo comí todo y todavía tengo hambre.». El gate de variante MUERDE por diseño (una sola palabra en español, dos en portugués) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Comi todo e ainda tenho fome.",
+      "correct": "Comi tudo e ainda tenho fome.",
+      "explanationEs": "Sin sustantivo, «tudo». Y nótese que el portugués no necesita el «lo» del español: «comi tudo», no «comi-o tudo».",
+      "alternatives": [],
+      "calcoEs": "Me lo comí todo y todavía tengo hambre."
+    }
+  },
+  {
+    "id": "co29-007",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-algum-nenhum"
+    ],
+    "tags": [
+      "e2-29",
+      "correccion"
+    ],
+    "contentHash": "cefdcf7e46d623b1f084dd2e3e83e7d2f888dbe60b85b192ef584c1da0108e25",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-29: la frase mala es el calco de «No vi a nadie en el pasillo.». El gate de variante MUERDE por diseño («a» personal calcada del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Não vi a ninguém no corredor.",
+      "correct": "Não vi ninguém no corredor.",
+      "explanationEs": "El portugués no tiene la «a» personal del español. El complemento directo de persona va desnudo: «não vi ninguém».",
+      "alternatives": [],
+      "calcoEs": "No vi a nadie en el pasillo."
+    }
+  },
+  {
+    "id": "co29-008",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-algum-nenhum"
+    ],
+    "tags": [
+      "e2-29",
+      "correccion"
+    ],
+    "contentHash": "1639684f1a1e7521138106d8ef73ff4b0e931c5c9f53436856345c8adff4764c",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-29: la frase mala es el calco de «¿Conoces a alguien en esta empresa?». El gate de variante MUERDE por diseño («a» personal calcada del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Conheces a alguém nesta empresa?",
+      "correct": "Conheces alguém nesta empresa?",
+      "explanationEs": "Lo mismo en positivo: «conheces alguém», sin preposición. Es de las marcas que más rápido delatan al hispanohablante.",
+      "alternatives": [],
+      "calcoEs": "¿Conoces a alguien en esta empresa?"
+    }
+  },
+  {
+    "id": "co29-009",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-algum-nenhum"
+    ],
+    "tags": [
+      "e2-29",
+      "correccion"
+    ],
+    "contentHash": "5f61e1a2eb320dba9cf9c4c547246fd5ba5df05c50f30dc99a34f140ab308c63",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-29: la frase mala es el calco de «Tengo algo de dinero guardado para eso.». El gate de variante MUERDE por diseño (locución calcada del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Tenho algo de dinheiro guardado para isso.",
+      "correct": "Tenho algum dinheiro guardado para isso.",
+      "explanationEs": "El español «algo de + sustantivo» se dice en portugués con el indefinido: «algum dinheiro». «Algo de» existe pero significa otra cosa.",
+      "alternatives": [],
+      "calcoEs": "Tengo algo de dinero guardado para eso."
+    }
+  },
+  {
+    "id": "co29-010",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-algum-nenhum"
+    ],
+    "tags": [
+      "e2-29",
+      "correccion"
+    ],
+    "contentHash": "8e5c94f1d8cbe5ec0f5f868875a1c8c428667d11d5682c333011140c54f482b9",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección E2-29: la frase mala es el calco de «¿Quieres algo para beber antes de salir?». El gate de variante MUERDE por diseño (registro escrito donde toca el corriente) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Queres algo para beber antes de sair?",
+      "correct": "Queres alguma coisa para beber antes de sair?",
+      "explanationEs": "En la lengua corriente el portugués dice «alguma coisa» donde el español dice «algo». «Algo» a secas existe, pero es de registro escrito y suena raro en una pregunta así.",
+      "alternatives": [],
+      "calcoEs": "¿Quieres algo para beber antes de salir?"
     }
   }
 ]
