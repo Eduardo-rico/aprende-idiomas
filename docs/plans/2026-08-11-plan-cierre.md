@@ -726,3 +726,61 @@ por un invariante en la suite.
 | cloze | 23 | hecha |
 
 De las 23 de cloze, 7 son `b3-pron-directo`, que necesita transformación.
+
+
+---
+
+## E2#19 · la tercera máquina, y el punto que suspendía a quien acertaba
+
+**Déficit 256 → 169**, residuo 0. **Cloze y mediación quedan en CERO.**
+
+**1 · Cerradas las dos líneas maduras.** Las 28 unidades de mediación en
+tres lotes según lo que cada punto pedía (registro, explicar, traducción)
+y las 16 de cloze escribibles. El lote de traducción obligó a declarar
+`sourceLang` y `targetLang` en el ítem: tres de sus seis traducen HACIA el
+español, y publicarlos como `pt` habría sido el defecto de `b2c2-med-220`
+invertido.
+
+**2 · Construida la TERCERA máquina: transformación.** Tipo, esquema,
+tarjeta, despachador, gates y publicador. Es el formato que 15 puntos
+esperaban, incluido `b3-pron-directo`, aparcado en E2#16 porque el cloze
+no puede examinarlo. 41 unidades publicadas en dos pasadas.
+
+**El atajo del formato se declara y se mide.** Traducir al español,
+transformar allí y volver es su riesgo mayor y no se detecta por regex:
+cada ítem declara `espejoEs` y el preflight imprime la proporción, salga
+verde o rojo. Lote 1: 2/24. Lote 2: 0/17.
+
+**3 · DOS COSAS QUE HABRÍAN ENVENENADO EL LOTE ENTERO, encontradas antes
+de escribir ningún ítem.** `enclise` es INGENUA a propósito —se escribió
+para fabricar el distractor de un juicio— y da «fez-o», que no existe;
+`encliseReal` implementa las tres reglas (fê-lo, tem-nas, Encontrámo-las).
+Y la QUINTA clase del conjugador, la más limpia de todas: el acento de
+«nós» sobre el tema de pretérito estaba escrito dos veces y **las dos
+versiones fallaban en espejo** —*coméssemos* en una, *fizêramos* en la
+otra—, cada una correcta donde la otra erraba.
+
+**4 · Y el defecto que más alumnos habría suspendido.** Una auditoría
+externa vio que 7 de 24 transformaciones piden la frase entera con punto
+final y la comparación lo exigía. El barrido destapó lo gordo: **560
+traducciones publicadas** con la clave terminada en signo, y
+`TranslationCard` comparando en crudo —sin NFC, sin recortar la clave y
+exigiendo el punto—. Quien traducía perfecto sin poner el punto quedaba
+suspendido, y el fallo entra en el FSRS.
+
+La cura es el matiz del auditor: se hace opcional **el signo que la clave
+lleva**, no cualquiera. Ignorarlos todos habría dado por buena la
+interrogativa frente a la afirmativa, y ahí el «?» es la respuesta.
+
+### Dónde queda todo
+
+| formato | unidades | estado |
+|---|---:|---|
+| juicio | 97 | bajo moratoria — un lote de 24 decide si vuelve o muere |
+| transformación | 40 | máquina hecha, produciendo |
+| escucha | 32 | sin construir; necesita audio |
+| cloze | 0 | **cerrado** |
+| mediación | 0 | **cerrado** |
+
+Y un punto que no se produce por decisión: `b11-nominalizacao` (8) es casi
+todo espejo del español y en este formato no discrimina.
