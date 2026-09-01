@@ -3099,8 +3099,8 @@
     ],
     "contentHash": "7b4201a6e9856e889973a9c6e81c0a264b7b9f131654d7e330c0725d2ff2283d",
     "esContrast": "vários = varios (indefinido). 'Vieram À festa': vir a, como 'venir a'.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es «vários», no el verbo: vieram, foram y chegaram valen igual",
     "type": "fill_blank",
     "data": {
       "sentence": "Vários amigos ___ à festa de aniversário.",
@@ -3109,8 +3109,9 @@
           "position": 1,
           "answer": "vieram",
           "alternatives": [
-            "foram",
-            "compareceram"
+            "chegaram",
+            "compareceram",
+            "foram"
           ]
         }
       ]
@@ -3361,7 +3362,7 @@
     "tags": [],
     "contentHash": "804dd3aff0c2f71dc25188f4043ab63625975fbd0e3562149da9a7db155f49e3",
     "esContrast": "Certa pessoa = 'cierta persona' (no 'certa' = 'cierta' en port.)",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "___ pessoa que me telefonou disse que voltaria a contactar.",
@@ -3370,7 +3371,9 @@
           "position": 0,
           "answer": "Certa",
           "alternatives": [
-            "Alguma"
+            "A",
+            "Alguma",
+            "Uma"
           ]
         }
       ]
@@ -3379,7 +3382,8 @@
       "pt-br": {
         "sentence": "___ pessoa que me ligou disse que voltaria a contatar."
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es el indefinido; «certa», «uma» y «a» encajan las tres"
   },
   {
     "id": "80ce4cb9",
@@ -3586,8 +3590,8 @@
     "tags": [],
     "contentHash": "87c3220e84f9bb47da260c309b72e22b93f4013bedcc3d534d6529e20462d0f8",
     "esContrast": "Quem quer que seja = 'quienquiera que sea' (forma intensiva)",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — la locución «___ que seja» lo fija",
     "type": "fill_blank",
     "data": {
       "sentence": "Qualquer pessoa, ___ que seja, pode participar do evento.",
@@ -3613,8 +3617,8 @@
     ],
     "contentHash": "88549f33394413e92e7defb5507d2fbc3db761c7c1ea02b76c00e97f0c9ae258",
     "esContrast": "Qualquer outra = 'cualquier otra' (elección indiferente)",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: DUDA — La alternativa aceptada 'toda' ensambla 'do que de toda outra' — giro no idiomático (biblioteca: 'toda A outra' ×2, 'toda outra' a secas ×0; aquí lo natural es solo 'qualquer outra'). Recomiendo quitarla. (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — el marco «do que de ___ outra» lo fija",
     "type": "fill_blank",
     "data": {
       "sentence": "Gosto muito mais desta cidade do que de ___ outra.",
@@ -3716,7 +3720,7 @@
     ],
     "contentHash": "8a4300e2d9e288092d57618b82c4c61a0eb70bd3e544b3c64254dd0883a53714",
     "esContrast": "'Marido' en portugués es masculino; en español 'marido' es común.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "O ___ da Ana é médico.",
@@ -3725,8 +3729,12 @@
           "position": 0,
           "answer": "marido",
           "alternatives": [
+            "companheiro",
             "esposo",
-            "companheiro"
+            "filho",
+            "irmão",
+            "pai",
+            "primo"
           ]
         }
       ]
@@ -3743,7 +3751,8 @@
           }
         ]
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es el género, y cualquier masculino de parentesco lo ejercita"
   },
   {
     "id": "8a63e79c",

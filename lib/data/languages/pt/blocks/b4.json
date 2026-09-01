@@ -7006,7 +7006,7 @@
     "contentHash": "cd557385f08d68b631c1023026988ea513e34217681f38c1bda7debd4b165d87",
     "esContrast": "'Fizera' es la forma simple del mais-que-perfeito de 'fazer', muy usada en textos literarios.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#7 2026-08-30: DUDA — Cloze sin pista con clave contraintuitiva: «Deus ___ o mundo» pide de forma abrumadora «criara / tinha criado»; el ítem sólo acepta «fizera / tinha feito». Añádase que «o velho contador» se lee en pt-PT como 'el viejo co (informe-cola5-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — el punto ES la palabra, así que el hueco necesita quedar determinado",
     "type": "fill_blank",
     "data": {
       "sentence": "O velho contador disse que Deus ___ o mundo em sete dias.",
@@ -7018,7 +7018,8 @@
             "tinha feito"
           ]
         }
-      ]
+      ],
+      "hintEs": "mais-que-perfeito SIMPLE de «fazer», 3.ª persona — la forma de una sola palabra"
     }
   },
   {

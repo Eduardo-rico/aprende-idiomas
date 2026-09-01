@@ -837,7 +837,7 @@
     ],
     "contentHash": "3e4ec32690e7ac25aa6362219632e05f5f101408a5a27c7c0a1a2e671a0a6e15",
     "esContrast": "Pretérito perfeito vs presente: 'continuaram' (pasado) vs 'continuam' (presente).",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "As tradições do Norte do Brasil ___ sendo preservadas.",
@@ -846,7 +846,9 @@
           "position": 0,
           "answer": "continuaram",
           "alternatives": [
-            "continuam"
+            "continuam",
+            "ficaram",
+            "foram"
           ]
         }
       ]
@@ -855,7 +857,8 @@
       "pt-br": {
         "sentence": "As tradições do Norte do Brasil ___ sendo preservadas pelos indígenas."
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es la perífrasis con gerundio, no el verbo que la abre"
   },
   {
     "id": "3fc42791",
@@ -1075,10 +1078,10 @@
     ],
     "contentHash": "54df08976414832efe18bdf0bcaf395dafe43e91dcf55834667bab08d83e5de3",
     "esContrast": "'Meu filho' es cariñoso en PT-BR; en PT-PT se usa más 'filho' sin posesivo.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
-      "sentence": "Meu ___ , o almoço está na mesa. Quando puderes, vem comer.",
+      "sentence": "O meu ___ , o almoço está na mesa. Quando puderes, vem comer.",
       "blanks": [
         {
           "position": 0,
@@ -1104,7 +1107,8 @@
           }
         ]
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — posesivo sin artículo («Meu filho»), que es brasileño; y además el hueco queda determinado por «vem comer»"
   },
   {
     "id": "6424b51e",
@@ -1337,7 +1341,7 @@
     ],
     "contentHash": "71ae42e8322346c5ba49ca1aa8ce5e207aaea99fca9bf14cd2eb2db821a3ec11",
     "esContrast": "'Antecipadamente' significa 'de antemano', no 'de forma antecipada'.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Agradeço ___ pela atenção e aguardo resposta.",
@@ -1349,13 +1353,15 @@
             "com antecedência"
           ]
         }
-      ]
+      ],
+      "hintEs": "de antemano — el adverbio de la fórmula de cierre de una carta"
     },
     "variantOverrides": {
       "pt-br": {
         "sentence": "Agradeço ___ pela atenção e aguardo retorno."
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — el punto ES la palabra, así que el hueco necesita quedar determinado"
   },
   {
     "id": "71b4e921",
@@ -2225,7 +2231,7 @@
     ],
     "contentHash": "a9ce69b57072af3e2778aeccab1ad467c32b9c954a8e90881251e86bb9c15f8d",
     "esContrast": "'No meu entender' es una expresión fija; no se dice 'no minha opinião' en PT.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "No meu ___ , essa é a melhor opção.",
@@ -2237,7 +2243,8 @@
             "ver"
           ]
         }
-      ]
+      ],
+      "hintEs": "en mi opinión — completa la locución «no meu ___»"
     },
     "variantOverrides": {
       "pt-br": {
@@ -2252,7 +2259,8 @@
           }
         ]
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — el punto ES la palabra, así que el hueco necesita quedar determinado"
   },
   {
     "id": "ab779905",
@@ -2472,7 +2480,7 @@
     ],
     "contentHash": "b646cfbb1f21ab0aad66c9fbd22f681723739f3a289264abb6249433b53c361a",
     "esContrast": "Se dice 'fazer o favor' (hacer el favor), no 'fazer favor'.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Pode ___-me o favor de me dizer as horas?",
@@ -2490,7 +2498,8 @@
       "pt-br": {
         "sentence": "Pode me ___ o favor de me dizer as horas?"
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — «o favor» lo fija: la colocación es «fazer o favor»"
   },
   {
     "id": "b82835d6",

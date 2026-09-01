@@ -4835,8 +4835,8 @@
     ],
     "contentHash": "affe348990bae9f08937570e3fab14582a1b77215d3885dd449e869ebbc5bbdd",
     "esContrast": "Em português usa-se o futuro do conjuntivo 'tiver', não 'teria' como no condicional espanhol.",
-    "variantStatus": "divergent",
-    "variantVerificacion": "E2#10 2026-09-01: léxico BR→EP por swap mecánico, forma BR movida a variantOverrides['pt-br']",
+    "variantStatus": "neutral",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — el punto ES la palabra, así que el hueco necesita quedar determinado",
     "type": "fill_blank",
     "data": {
       "sentence": "Se eu ___ dinheiro suficiente, vou comprar um novo telemóvel.",
@@ -4846,7 +4846,8 @@
           "answer": "tiver",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "futuro do conjuntivo de «ter», 1.ª persona — lo pide «se» sobre el futuro"
     },
     "variantOverrides": {
       "pt-br": {

@@ -258,7 +258,7 @@
     "contentHash": "056d0918bd3e1a57e696855819c7285fd90ff3fd9a0b634e7cb60841c2c649be",
     "esContrast": "'Cão' termina en /-ãw/ nasal; el til marca la nasalidad.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#10 2026-09-01: OK ítem a ítem (informe-cola8-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — la frase lo fija: sólo un animal «ladra»",
     "type": "fill_blank",
     "data": {
       "sentence": "O ___ ladra à noite.",
@@ -576,7 +576,7 @@
     "contentHash": "0d4c19726d87d1239f753117e31567c832a18a6ece4105f8083ab03a7de2dcc7",
     "esContrast": "«fábrica» es esdrújula y lleva tilde en las dos lenguas. La regla de las esdrújulas es idéntica en español y portugués — no hay nada que contrastar.",
     "variantStatus": "neutral",
-    "variantVerificacion": "dictamen dirigido E2#28: OK, leído entero",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — el punto ES la palabra, así que el hueco necesita quedar determinado",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela trabalha na ___ todos os dias.",
@@ -586,7 +586,8 @@
           "answer": "fábrica",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "el sitio donde se fabrican cosas en serie — esdrújula, y por eso con tilde"
     }
   },
   {
@@ -1045,7 +1046,7 @@
     "contentHash": "1ba19350d4439d3fa0b472e876d9b7a442f2dd6392480a4dcad61724621937fe",
     "esContrast": "En español no existe la cedilha (ç), solo la 'c' normal.",
     "variantStatus": "neutral",
-    "variantVerificacion": "dictamen manual E2#22, cola de cobertura: corregido — próclise sin atractor: la norma europea pide ênclise, «escreve-se»",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — la frase lo fija: «escreve-se com cedilha» sólo vale para una letra",
     "type": "fill_blank",
     "data": {
       "sentence": "A letra ___ escreve-se com cedilha, como em maçã.",
@@ -1715,7 +1716,7 @@
     ],
     "contentHash": "32ec0ec9696982f576dc89d87c1ec27c4816710d4ea0098b66defffe1525189e",
     "esContrast": "En PT-BR se dice 'ruim'; en PT-PT se prefiere 'mau' para 'malo'.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Este filme é ___ — não gostei nada.",
@@ -1724,6 +1725,7 @@
           "position": 0,
           "answer": "mau",
           "alternatives": [
+            "horrível",
             "péssimo"
           ]
         }
@@ -1739,7 +1741,8 @@
           }
         ]
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto no es la palabra: cualquier adjetivo negativo sirve"
   },
   {
     "id": "350526ca",

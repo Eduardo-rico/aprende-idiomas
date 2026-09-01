@@ -64,8 +64,19 @@ const REGLAS: Regla[] = [
     },
   },
   {
-    nombre: 'cloze sin pista',
-    aplica: (x) => x.type === 'fill_blank' && x.data?.blanks?.length === 1,
+    // «Sin pista» no es «defectuoso»: un cuarto de ellos está determinado
+    // por la propia frase —«O ___ ladra à noite»— y otro tanto se cierra
+    // declarando alternativas, porque el punto es gramatical y el
+    // sustantivo es decorado. Así que la regla cuenta los que siguen SIN
+    // DICTAMINAR, que es el trabajo que queda, y no los que carecen del
+    // campo, que es otra cosa.
+    // Y el dictamen que cuenta es el de ESTE problema, no el de variante:
+    // `neutral` dice que la forma es europea, no que el hueco esté
+    // determinado. Filtrar por `variantStatus` mezclaba las dos preguntas
+    // y bajaba el número de 178 a 39 sin haber arreglado nada.
+    nombre: 'cloze sin pista y sin dictaminar la determinación',
+    aplica: (x) => x.type === 'fill_blank' && x.data?.blanks?.length === 1 &&
+      !/sin pista y CORRECTO|alternativas declaradas/.test(String(x.variantVerificacion ?? '')),
     falla: (x) => (String(x.data.hintEs ?? '').trim() ? null : `«${x.data.sentence}»`),
   },
   {

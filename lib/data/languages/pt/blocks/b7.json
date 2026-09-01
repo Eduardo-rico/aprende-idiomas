@@ -104,7 +104,7 @@
     "contentHash": "04e647496c92f18e5c9f89c2be21723d76318afd94f31fb2ae13d9ae96374307",
     "esContrast": "«Desistirem vocês» = 'Que ustedes desistan'. Con sujeto de 3.ª del plural el infinitivo pessoal lleva -em; el español, que no tiene esta forma, recurre al subjuntivo.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — el punto ES la palabra, así que el hueco necesita quedar determinado",
     "type": "fill_blank",
     "data": {
       "sentence": "___ vocês é mais difícil do que parece.",
@@ -116,7 +116,8 @@
             "desistirem"
           ]
         }
-      ]
+      ],
+      "hintEs": "infinitivo pessoal de «desistir», 3.ª del plural — el sujeto es «vocês»"
     }
   },
   {
@@ -539,7 +540,7 @@
     "contentHash": "1be8b94d2d0167a4968dfaf6d7d8dc22ce966aeb6a172e9763f6a4c2ae1f3b37",
     "esContrast": "«Ganhar» tiene participio corto: con ter/haver el portugués europeo dice «tenho ganho» («ganhado» suena arcaico). El español sólo tiene «ganado».",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — el punto ES la palabra, así que el hueco necesita quedar determinado",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu já tenho ___ muitos jogos este ano!",
@@ -549,7 +550,8 @@
           "answer": "ganho",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "participio de «ganhar» en la forma corta, la que se usa con «ter»"
     }
   },
   {
@@ -1748,7 +1750,7 @@
     "contentHash": "51820100e39fbc8e5d715a58bd58780beeb0b25ca476d42411637f6cd5060198",
     "esContrast": "El portugués pone el sujeto delante del infinitivo: «é bom ela sair». El español necesita subordinada con subjuntivo: «es bueno que ella salga».",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#9 2026-08-31 (informe-cola7-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es que la 3.ª singular del infinitivo pessoal NO flexiona, y eso se ve con cualquier verbo",
     "type": "fill_blank",
     "data": {
       "sentence": "É bom ela ___ mais cedo, não achas?",
@@ -1757,7 +1759,10 @@
           "position": 0,
           "answer": "sair",
           "alternatives": [
-            "ir-se embora"
+            "chegar",
+            "ir",
+            "ir-se embora",
+            "vir"
           ]
         }
       ]

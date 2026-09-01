@@ -414,7 +414,7 @@
     "contentHash": "0b88eddd26b836790c036601d153b8174c2c2a17a55ee2fa61c244cde2cf8496",
     "esContrast": "'Fazer um café' = prepararlo; 'tomar um café' = beberlo (aquí se aceptan ambos). El uso es paralelo al español.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — el punto ES la palabra, así que el hueco necesita quedar determinado",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ um café todas as manhãs.",
@@ -426,7 +426,8 @@
             "tomo"
           ]
         }
-      ]
+      ],
+      "hintEs": "presente de «fazer», 1.ª persona — irregular"
     }
   },
   {
