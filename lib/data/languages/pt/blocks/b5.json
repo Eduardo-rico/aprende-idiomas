@@ -193,7 +193,7 @@
     ],
     "contentHash": "05f010704ff163034ad9c453636dc163fd2556548b5e90c40ba2228466cb1223",
     "esContrast": "'Teríamos' es condicional de 'ter', diferente de 'haver'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Ele perguntou se nós ___ a reunião na segunda-feira.",
@@ -205,8 +205,10 @@
             "haveríamos"
           ]
         }
-      ]
-    }
+      ],
+      "hintEs": "condicional de «ter», 1.ª del plural — futuro del pasado tras «perguntou»"
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos"
   },
   {
     "id": "084022b5",
@@ -260,7 +262,7 @@
     ],
     "contentHash": "09dbb582403a1e625d14f55e2e47fa4bdf347f65e632038a7b8abc14131f1e41",
     "esContrast": "Em español diríamos 'me gustaría' — en portugués se dice 'Eu gostaria'.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ de tomar um café consigo amanhã.",
@@ -278,7 +280,8 @@
       "pt-br": {
         "sentence": "Eu ___ de tomar um café com você amanhã."
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — la petición cortés con «de tomar» detrás lo fija"
   },
   {
     "id": "0e18fa1f",
@@ -1302,7 +1305,7 @@
     "contentHash": "32351ac98ce1a32a4c2c14ed5eb8df8ded50455dc6ca22db7665333c827a78be",
     "esContrast": "Igual que 'voy a hablar', pero el futuro compuesto es más natural en PT-BR que el futuro simple.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — el infinitivo detrás y «amanhã» fijan la perífrasis",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ falar com ela amanhã.",
@@ -1330,7 +1333,7 @@
     "contentHash": "361162f9edde5e889e92ac905aa48d8db1998725efa4ad19adf2bbb821843776",
     "esContrast": "'Vir' hace 'virá' en el futuro simple; el español cambia de radical y dice 'vendrá'. Las dos formas son agudas y llevan tilde.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos",
     "type": "fill_blank",
     "data": {
       "sentence": "Disseram que ele ___ para a reunião amanhã.",
@@ -1342,7 +1345,8 @@
             "vai vir"
           ]
         }
-      ]
+      ],
+      "hintEs": "futuro de «vir», 3.ª persona — irregular"
     }
   },
   {
@@ -2076,7 +2080,7 @@
     "contentHash": "50b03eb33a5800fdf02d5da44740462faa2c0635b00b20659771933584244b9b",
     "esContrast": "'Vão subir' equivale a 'van a subir'. El uso del compuesto es muy frecuente en BR.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — el infinitivo detrás y «no próximo mês» fijan la perífrasis",
     "type": "fill_blank",
     "data": {
       "sentence": "Os preços ___ subir no próximo mês, então é melhor comprar agora.",
@@ -2470,7 +2474,7 @@
     "contentHash": "5f376912770f6d8d266f60abea19d8a2afceab1bb030fdfde5bd3cd89aeb5bd1",
     "esContrast": "'Queria' es más suave que 'quero' para pedidos corteses.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#7 2026-08-30: OK ítem a ítem (informe-cola5-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — «por favor» con un pedido fija el imperfeito de cortesía",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ um copo de água, por favor.",
@@ -2596,7 +2600,7 @@
     "contentHash": "63df3aeb036d7ffba19784094c83513081572a23a91859d92a9cc3232468df14",
     "esContrast": "'Realizar' es regular en el futuro: 'realizarei' (igual que el español 'realizaré').",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#7 2026-08-30 (informe-cola5-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu sou um sonhador e ___ todos os meus objetivos em breve.",
@@ -2608,7 +2612,8 @@
             "vou realizar"
           ]
         }
-      ]
+      ],
+      "hintEs": "futuro de «realizar», 1.ª persona"
     }
   },
   {
@@ -2660,7 +2665,7 @@
     ],
     "contentHash": "6702d71b7c061621b0178cf30327e53e72a8ad3be39edde84a86866881869b13",
     "esContrast": "Em português, 'terei' (não 'teréi'); em espanhol 'tendré' é regular.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ uma casa na praia quando me reformar.",
@@ -2672,13 +2677,15 @@
             "vou ter"
           ]
         }
-      ]
+      ],
+      "hintEs": "futuro de «ter», 1.ª persona"
     },
     "variantOverrides": {
       "pt-br": {
         "sentence": "Eu ___ uma casa na praia quando me aposentar."
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos"
   },
   {
     "id": "6756a8a8",
@@ -3375,7 +3382,7 @@
     ],
     "contentHash": "7ac8e1d8cc8b845055a2f42066c49662de1d348d92005388a5d8922d2aacd77e",
     "esContrast": "Tipo 2 coloquial con 'a gente' en PT-BR; en PT-PT se usa 'nós'.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Se a gente ___ mais tempo, íamos viajar juntos.",
@@ -3391,7 +3398,8 @@
       "pt-br": {
         "sentence": "Se a gente ___ mais tempo, ia viajar juntos."
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — la correlación con «íamos» fija el imperfeito do conjuntivo"
   },
   {
     "id": "7b14b1d9",
@@ -3538,7 +3546,7 @@
     "contentHash": "8237b53d69158f283c54f7edf73311c6c469ca1973153ab65de3ab10c8e8aa08",
     "esContrast": "El futuro simple de 'viajar' es 'viajaremos', idéntico al español 'viajaremos'.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#7 2026-08-30 (informe-cola5-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos",
     "type": "fill_blank",
     "data": {
       "sentence": "Nós ___ muito durante as férias de verão.",
@@ -3550,7 +3558,8 @@
             "vamos viajar"
           ]
         }
-      ]
+      ],
+      "hintEs": "futuro de «viajar», 1.ª del plural"
     }
   },
   {
@@ -4102,7 +4111,7 @@
     "contentHash": "8dc0261c66796ad9d2a60be990312e69d14f75a30c99c8590f4572ae858f5871",
     "esContrast": "'Faria' es el condicional de 'fazer'. En discurso indirecto, el futuro se convierte en condicional.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#8 2026-08-30: OK ítem a ítem (informe-cola6-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela disse que ___ a viagem no mês que vem.",
@@ -4114,7 +4123,8 @@
             "realizaria"
           ]
         }
-      ]
+      ],
+      "hintEs": "condicional de «fazer», 3.ª persona — irregular; futuro del pasado tras «disse»"
     }
   },
   {
@@ -4554,7 +4564,7 @@
     "contentHash": "a4283e03a693a6daabdb5ecf99c81f18fe7fdc51301155af2eb12adb83f47a3b",
     "esContrast": "El futuro de 'trazer' es irregular, como fazer y dizer: 'trarei' (no '*trazerei'). Equivale al español 'traeré'.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ os documentos para a reunião na segunda-feira.",
@@ -4566,7 +4576,8 @@
             "vou trazer"
           ]
         }
-      ]
+      ],
+      "hintEs": "futuro de «trazer», 1.ª persona — irregular"
     }
   },
   {
@@ -5156,7 +5167,7 @@
     "contentHash": "b887a7a8aa8f98e601e2c2b33f4c277ef045dbbd2853a6b90cf9b1356b7959b1",
     "esContrast": "'Faria' es el condicional de 'fazer' y equivale a 'haría': ambas lenguas acortan la raíz (far- / har-).",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#8 2026-08-30 (informe-cola6-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — la colocación «fazer esforço» lo fija",
     "type": "fill_blank",
     "data": {
       "sentence": "O João disse que ___ mais esforço para passar no exame.",

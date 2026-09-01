@@ -1567,7 +1567,7 @@
     ],
     "contentHash": "2d14007fd2651bebe50124ea5723c16c9eada3f6778323186d923a6e017b2877",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela não ___ dinheiro no mercado ontem.",
@@ -1579,7 +1579,8 @@
             "despendeu"
           ]
         }
-      ]
+      ],
+      "hintEs": "pretérito de «gastar», 3.ª persona — el verbo del dinero que se va"
     }
   },
   {
@@ -1691,7 +1692,7 @@
     "contentHash": "2e76f3792d6a42103402b7edfae3a690849d1b336a4dd4a6bb80bad41d990931",
     "esContrast": "El mais-que-perfeito composto usa «tinha + participio», equivalente al español «había intentado».",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ muitas vezes antes de desistir.",
@@ -1703,7 +1704,8 @@
             "tentara"
           ]
         }
-      ]
+      ],
+      "hintEs": "mais-que-perfeito compuesto de «tentar», 1.ª persona"
     }
   },
   {
@@ -3573,7 +3575,7 @@
     "contentHash": "6b14d613fccb9edbb72c1abb3cf6d3543014a17e0863706a5fbcf621a7e166fc",
     "esContrast": "«Quase + mais-que-perfeito» indica una acción que estuvo a punto de ocurrir en el pasado y no llegó a ocurrir.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos",
     "type": "fill_blank",
     "data": {
       "sentence": "Ele ___, mas decidiu tentar mais uma vez.",
@@ -3585,7 +3587,8 @@
             "quase desistira"
           ]
         }
-      ]
+      ],
+      "hintEs": "mais-que-perfeito compuesto de «desistir» con «quase» delante, 3.ª persona"
     }
   },
   {
@@ -3632,7 +3635,7 @@
     ],
     "contentHash": "6d00a1c0fe7d268258ecda3b71ad434650db02e541e13f2d59c83abf4d30c5da",
     "esContrast": "'Ver' no imperfeito é 'via', diferente do es 'veía'. Ação em progresso no passado.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Enquanto ela ___ o filme, eu adormeci.",
@@ -3644,8 +3647,10 @@
             "viu"
           ]
         }
-      ]
-    }
+      ],
+      "hintEs": "imperfeito de «ver», 3.ª persona — la acción larga que la otra interrumpe"
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos"
   },
   {
     "id": "6d17883a",
@@ -4054,7 +4059,7 @@
       "-ir"
     ],
     "contentHash": "739a89f3261db47df176fdd87799116e477000c086da887560950cee1dcf673d",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Tu ___ muito bem ontem à noite?",
@@ -4064,8 +4069,10 @@
           "answer": "dormiste",
           "alternatives": []
         }
-      ]
-    }
+      ],
+      "hintEs": "pretérito de «dormir», 2.ª persona"
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos"
   },
   {
     "id": "7453b417",
@@ -6304,7 +6311,7 @@
     "contentHash": "b9d073ee635d0d49975a5ff47dd2d2ec2d02f4f8d96638b57c1a58155853d76f",
     "esContrast": "El mais-que-perfeito composto se forma con 'tinha' + participio pasado, como 'había preparado'.",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#7 2026-08-30: DUDA — Cloze sin pista: «Ela ___ o relatório antes da reunião» admite «tinha lido», «tinha escrito», «tinha entregado», «leu»… nada apunta a «preparar». El alumno acierta por adivinación o falla sabiendo portugués. (informe-cola5-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela ___ o relatório antes da reunião.",
@@ -6316,7 +6323,8 @@
             "preparara"
           ]
         }
-      ]
+      ],
+      "hintEs": "mais-que-perfeito compuesto de «preparar», 3.ª persona"
     }
   },
   {
@@ -6522,7 +6530,7 @@
     "contentHash": "c11edda65572ff32c44b31679adbc88bde7fa6162689826aae8810e548810fe1",
     "esContrast": "En PT-BR se prefiere el mais-que-perfeito composto ('tinham estado'); el imperfeito 'estavam' describe el estado, no la anterioridad.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#7 2026-08-30 (informe-cola5-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — sin ella el hueco admitía media docena de verbos",
     "type": "fill_blank",
     "data": {
       "sentence": "Os homens que ali ___ partiram ao amanhecer.",
@@ -6534,7 +6542,8 @@
             "tinham estado"
           ]
         }
-      ]
+      ],
+      "hintEs": "imperfeito de «estar», 3.ª del plural — los que ya estaban allí antes"
     }
   },
   {
@@ -9051,7 +9060,7 @@
     "contentHash": "000b0f1150b5659195926240dbcd3f3edbf347a6952b6f1412d9480694512fa7",
     "esContrast": "El imperfeito expresa hábito en el pasado: 'brincava' (= jugaba).",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#7 2026-08-30: DUDA — Cloze sin pista: «Quando era criança, eu ___ no parque todos os dias» admite brincava / jogava / corria / passeava / andava. Además «jogava no parque» sin objeto es cojo en pt-PT («jogava à bola»). (informe-cola5-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es el imperfeito habitual, que se ve con cualquier verbo de juego",
     "type": "fill_blank",
     "data": {
       "sentence": "Quando era criança, eu ___ no parque todos os dias.",
@@ -9060,6 +9069,8 @@
           "position": 0,
           "answer": "brincava",
           "alternatives": [
+            "andava",
+            "corria",
             "jogava"
           ]
         }
@@ -9080,7 +9091,7 @@
     "contentHash": "689bec59741f8ff0a6815aeba4fa6d52c40b201da93f9aa26b6511c1786b26fa",
     "esContrast": "Acción en curso interrumpida = imperfeito ('via'); el evento que interrumpe = perfeito ('tocou').",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es el contraste narrativo, y la perífrasis lo ejercita igual",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ televisão quando o telefone tocou.",
