@@ -146,3 +146,52 @@ premisa está corregida: **el déficit de lo sellado y servible es 386
 unidades en 119 puntos**, no cero. Es decir, sellar A y B no cierra la
 cobertura por sí solo — hace falta además el dictamen de los 284 y la
 producción de los 93.
+
+---
+
+## Addendum 2 · Aplicada (E2#22)
+
+**595 ítems retirados de servicio.** Corpus servible: 2.199 de 3.065.
+Déficit de cobertura servible **72 antes y 72 después** — son excedente por
+definición, así que el número no se mueve; si se hubiera movido, la
+selección estaba mal. Ningún punto cae por debajo del piso.
+
+Las tres condiciones del par, cumplidas:
+
+1. **Motivo por ítem**, con el punto al que pertenecía, en el propio
+   `variantVerificacion`. Al escribir el test salió que **100 ítems de la
+   cuarentena vieja (Ola V, 2026-07-29) no tenían motivo ninguno** — la
+   razón estaba en el comentario de `loaders.ts` y no en el ítem, así que
+   no se podían deshacer caso a caso. Escrita también.
+2. **Recuento antes y después**, arriba.
+3. **Reversibilidad probada**, `tests/unit/cuarentena-reversible.test.ts`:
+   la ida (no se sirve, no cuenta) y **la vuelta** (devolverlo a
+   `unchecked` lo vuelve a servir y a contar), que es la mitad que nadie
+   prueba.
+
+### Tres defectos de contabilidad, todos del mismo mecanismo
+
+La sesión encontró **tres guardianes que convertían una decisión en un
+no-op**, y los tres se saltaban exactamente el caso para el que existían:
+
+| dónde | el guardián | a quién se saltaba |
+|---|---|---|
+| `pisoCero` | `if (cuenta.has(id))` | los puntos con CERO ítems — la clase que se entierra |
+| cuarentena | ningún contador la descontaba | 271 ítems que nadie ve, contados como cobertura |
+| `padreCubierto` | ajuste antes del relleno | los padres sin ítems propios (`b2-demonstrativos`, 8 unidades imposibles) |
+
+Los tres se arreglaron igual: **bajando el PISO en vez de subiendo la
+cuenta**. No es equivalente — la foto del déficit se guarda desde el mapa
+de cuentas, así que subirla escribe ítems que nadie escribió y la sesión
+siguiente los reconcilia como ganancia.
+
+### El test que frenó, y por qué se cambió y no se aflojó
+
+`cuarentena.test.ts` acotaba la cuarentena al 15 % del corpus y saltó al
+28 %. La cota era un **proxy del volumen**; se subió al 35 % diciendo por
+qué, y se añadió el invariante que de verdad importa y que el volumen sólo
+aproximaba: **retirar excedente no puede dejar ningún punto por debajo de
+su piso**. Ese test aísla la decisión de E2#22 —compara los servibles
+contra los servibles más el excedente devuelto— porque mezclarlo con la
+cuarentena vieja lo haría medir otra cosa y no cazaría nunca una mala
+selección.

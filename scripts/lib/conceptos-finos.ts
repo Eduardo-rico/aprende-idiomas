@@ -624,3 +624,27 @@ export function pisoCero(): Map<string, string> {
 export function conPisoCero(piso: (id: string) => number, cero = pisoCero()): (id: string) => number {
   return (id: string) => (cero.has(id) ? 0 : piso(id));
 }
+
+/** Igual que `conPisoCero`, pero para los PADRES CUBIERTOS: un padre cuyos
+ *  sub-puntos están todos por encima del piso no tiene carencia, tiene
+ *  residuo, y su déficit es inalcanzable por construcción — cualquier ítem
+ *  que se escriba para él se reasigna a un sub-punto.
+ *
+ *  Existía ya el ajuste, pero SUBIENDO la cuenta del padre hasta el piso, y
+ *  con dos consecuencias. La primera: en `split-conceptos.ts` corría antes
+ *  de rellenar los puntos a cero, así que **un padre sin ítems propios no
+ *  estaba en el mapa y no lo recibía** — `b2-demonstrativos`, con sus tres
+ *  sub-puntos cubiertos, arrastraba 8 unidades imposibles. Es el mismo
+ *  guardián que se saltaba el piso cero, cazado el mismo día. La segunda:
+ *  la cuenta falseada acaba en la FOTO del déficit, y la sesión siguiente
+ *  reconcilia ítems que nadie escribió.
+ *
+ *  Bajar el piso arregla las dos: no depende de que el punto esté en el
+ *  mapa y no toca la cuenta. */
+export function conPadreCubierto(
+  piso: (id: string) => number,
+  cuenta: Map<string, number>,
+): (id: string) => number {
+  const cubiertos = new Set(PARTICIONES.filter((p) => padreCubierto(p.padre, cuenta, piso)).map((p) => p.padre));
+  return (id: string) => (cubiertos.has(id) ? 0 : piso(id));
+}

@@ -65,3 +65,29 @@ describe('la cuarentena no cuenta como cobertura', () => {
     expect(contarPuntos(items, { incluirCuarentena: true }).cuenta.get('b1-sandi')).toBe(2);
   });
 });
+
+describe('padre cubierto: el déficit inalcanzable por construcción', () => {
+  it('un padre SIN ítems propios cuyos sub-puntos están cubiertos no aporta déficit', async () => {
+    const { conPadreCubierto, PARTICIONES } = await import('@/scripts/lib/conceptos-finos');
+    const part = PARTICIONES[0]!;
+    // El padre NO está en el mapa: cero ítems propios. Es el caso que el
+    // guardián `cuenta.has(id)` se saltaba, y el que de verdad se entierra.
+    const cuenta = new Map<string, number>(part.subs.map((s) => [s.id, 8] as const));
+    const piso = conPadreCubierto(() => 8, cuenta);
+    expect(piso(part.padre)).toBe(0);
+    expect(Math.max(0, piso(part.padre) - (cuenta.get(part.padre) ?? 0))).toBe(0);
+  });
+  it('si UN sub-punto se queda corto, el padre vuelve a pedir su piso', async () => {
+    const { conPadreCubierto, PARTICIONES } = await import('@/scripts/lib/conceptos-finos');
+    const part = PARTICIONES[0]!;
+    const cuenta = new Map<string, number>(part.subs.map((s, i) => [s.id, i === 0 ? 3 : 8] as const));
+    expect(conPadreCubierto(() => 8, cuenta)(part.padre)).toBe(8);
+  });
+  it('baja el PISO, no sube la cuenta: la foto no guarda ítems inventados', async () => {
+    const { conPadreCubierto, PARTICIONES } = await import('@/scripts/lib/conceptos-finos');
+    const part = PARTICIONES[0]!;
+    const cuenta = new Map<string, number>(part.subs.map((s) => [s.id, 8] as const));
+    conPadreCubierto(() => 8, cuenta);
+    expect(cuenta.has(part.padre)).toBe(false);
+  });
+});

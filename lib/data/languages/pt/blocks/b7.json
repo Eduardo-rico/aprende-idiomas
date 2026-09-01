@@ -30,7 +30,10 @@
       "front": "Infinitivo pessoal de «falar» en 1.ª persona del singular (eu)",
       "back": "falar",
       "example": "Foi um erro eu falar assim."
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ]
   },
   {
     "id": "04350a8e",
@@ -64,7 +67,10 @@
       "acceptedAlternatives": [
         "Sin percibirlo yo, ella ya había decidido todo."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-infinitivo-pessoal"
+    ]
   },
   {
     "id": "04c90f64",
@@ -90,7 +96,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-estar-a-infinitivo"
+    ]
   },
   {
     "id": "04e64749",
@@ -117,7 +126,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ]
   },
   {
     "id": "0b0c9571",
@@ -145,7 +157,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ]
   },
   {
     "id": "0b4ea261",
@@ -172,13 +187,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Se puede usar el infinitivo pessoal con 'ao' + infinitivo? Ejemplo.",
       "back": "Sim. 'Ao' indica tempo e exige a flexão quando há sujeito definido.",
       "example": "Ao eu chegar em casa, vou te ligar. / Ao chegares tu, avisa-me."
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-formas"
   },
   {
     "id": "0e239f79",
@@ -203,7 +222,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Ter-lhe-ei enviado a mensagem depois de tu confirmares.",
@@ -213,7 +232,11 @@
       "acceptedAlternatives": [
         "Te habré enviado el mensaje después de que confirmes."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-formas"
   },
   {
     "id": "0e2d8fc1",
@@ -242,7 +265,10 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "0e6c2af6",
@@ -273,7 +299,10 @@
       "front": "¿Qué verbo auxiliar se usa en PT-BR para formar el presente progresivo?",
       "back": "ESTAR + gerúndio",
       "example": "Estou falando português agora. (Estoy hablando portugués ahora.)"
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-brasileiro"
+    ]
   },
   {
     "id": "0f7e4333",
@@ -289,7 +318,7 @@
     ],
     "contentHash": "0f7e43334396b104f22632ea53ec91e44238bf9dfd368d76c1b55eef2ec993f0",
     "esContrast": "O particípio de 'visitar' é regular em português (-ado/-ido), diferente do español.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu já ___ muitas cidades no Brasil.",
@@ -300,7 +329,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-participio"
   },
   {
     "id": "0f9fec33",
@@ -326,13 +359,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Qué es el infinitivo pessoal?",
       "back": "É uma forma verbal do infinitivo que se flexiona em pessoa e número, diferente do infinitivo impessoal que é invariável.",
       "example": "Falar é bom. (impessoal) / Falar eu é bom. (pessoal)"
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-contraste"
   },
   {
     "id": "0fc266ba",
@@ -372,7 +409,10 @@
         "Lo ha escrito"
       ],
       "answer": "Lo ha leído dos veces"
-    }
+    },
+    "__nuevos": [
+      "b7-part-composto-duracion"
+    ]
   },
   {
     "id": "10c85d3c",
@@ -408,7 +448,10 @@
       "acceptedAlternatives": [
         "Ele vai entrando aos poucos em confiança."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-aspectual"
+    ]
   },
   {
     "id": "1154b88e",
@@ -448,7 +491,10 @@
         "Estudiando"
       ],
       "answer": "Ordenando el cuarto"
-    }
+    },
+    "__nuevos": [
+      "b7-part-composto-duracion"
+    ]
   },
   {
     "id": "19c74826",
@@ -516,7 +562,10 @@
         "Con las terminaciones -ando, -endo, -ir"
       ],
       "answer": "Con las terminaciones -ando, -endo, -indo"
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ]
   },
   {
     "id": "1be8b94d",
@@ -544,7 +593,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-part-duplos"
+    ]
   },
   {
     "id": "1bf08752",
@@ -581,7 +633,8 @@
           "Ellos prefieren que ustedes trabajen desde casa."
         ]
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "1df4e6e3",
@@ -606,7 +659,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-brasileiro"
+    ]
   },
   {
     "id": "1f146db0",
@@ -641,7 +697,10 @@
       "acceptedAlternatives": [
         "Desperté soñando con ella."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ]
   },
   {
     "id": "1fa654ad",
@@ -676,7 +735,10 @@
       "acceptedAlternatives": [
         "Los alumnos no paran de preguntar."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-aspectual"
+    ]
   },
   {
     "id": "20c6e6a6",
@@ -702,13 +764,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Participio de NASGER (BR) vs NASCER (PT)",
       "back": "Nascer → nascido (PT-BR); nado (PT-PT)",
       "example": "Nasci em São Paulo. (PT-BR: siempre 'nasci')"
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-participio"
   },
   {
     "id": "232b9a19",
@@ -775,7 +841,10 @@
       "front": "Ganhar → participio irregular",
       "back": "ganhar → ganho (NO 'ganado' como en español)",
       "example": "Tenho ganho muito com esse novo emprego."
-    }
+    },
+    "__nuevos": [
+      "b7-part-duplos"
+    ]
   },
   {
     "id": "2a9da328",
@@ -810,7 +879,10 @@
       "acceptedAlternatives": [
         "Ela viu muitos filmes este mês."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-part-composto-duracion"
+    ]
   },
   {
     "id": "2c10f86c",
@@ -879,7 +951,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-infinitivo-pessoal"
+    ]
   },
   {
     "id": "30edcef4",
@@ -908,7 +983,10 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "3107b674",
@@ -980,7 +1058,10 @@
       "pt-br": {
         "back": "falardes vós"
       }
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ]
   },
   {
     "id": "330cdc48",
@@ -1016,7 +1097,10 @@
       "acceptedAlternatives": [
         "Siempre que puedo, sigo adelante."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio"
+    ]
   },
   {
     "id": "33e64b56",
@@ -1085,7 +1169,10 @@
       "acceptedAlternatives": [
         "Ela tem colocado os livros na mesa toda a semana."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-part-composto-duracion"
+    ]
   },
   {
     "id": "3931eedf",
@@ -1128,7 +1215,10 @@
       "pt-br": {
         "audioText": "Tenho escrito três cartas para minha avó esta semana."
       }
-    }
+    },
+    "__nuevos": [
+      "b7-part-composto-duracion"
+    ]
   },
   {
     "id": "3bad5ed3",
@@ -1179,7 +1269,7 @@
     ],
     "contentHash": "3ce601b96cc5d6908c44a3a942bd3ff600459c61a151bc8c9124edb9e4127f57",
     "esContrast": "PT-BR acepta 'a' o 'em'; PT-PT prefiere 'a'. Errores comunes: 'de' o ausencia de preposición.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "continuar",
@@ -1191,7 +1281,11 @@
         "—"
       ],
       "answer": "a"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-a"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-a"
   },
   {
     "id": "3e112d47",
@@ -1221,7 +1315,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-estar-a-infinitivo"
+    ]
   },
   {
     "id": "3ecb638b",
@@ -1286,7 +1383,10 @@
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b7-infinitivo-pessoal"
+    ]
   },
   {
     "id": "427ac7a0",
@@ -1313,13 +1413,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Cuál es la diferencia entre 'precisar' + infinitivo pessoal vs 'precisar de'?",
       "back": "Precisar + infinitivo pessoal indica necessidade de algo futuro. Precisar de indica necessidade de algo presente.",
       "example": "Preciso de descansar. (agora) / Para eu descansar amanhã, preciso sair cedo. (futuro)"
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-contraste"
   },
   {
     "id": "42c051e1",
@@ -1347,7 +1451,10 @@
         "—"
       ],
       "answer": "em"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-em"
+    ]
   },
   {
     "id": "42f4d894",
@@ -1383,7 +1490,10 @@
       "acceptedAlternatives": [
         "Depois de o ter visto, desisti."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ]
   },
   {
     "id": "4383565e",
@@ -1450,7 +1560,10 @@
       "acceptedAlternatives": [
         "El problema ha venido empeorando con el tiempo."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-brasileiro"
+    ]
   },
   {
     "id": "440c24f4",
@@ -1463,7 +1576,7 @@
     "tags": [],
     "contentHash": "440c24f4a26ab8cd1c901bcde0ad3ef29687add3a4c802e7c513d35e2c7815be",
     "esContrast": "Después de 'para' se usa el infinitivo pessoal: 'para passar eu' es correcto aunque a menudo se omite el pronombre.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Para ___ o exame, preciso estudar muito.",
@@ -1476,7 +1589,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-contraste"
   },
   {
     "id": "47e12b26",
@@ -1518,7 +1635,8 @@
           "Acordo todos os dias a pensar na mesma coisa."
         ]
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "4aebcaf6",
@@ -1547,7 +1665,10 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "4c01dfd7",
@@ -1573,13 +1694,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Traduce: 'Desistir de estudar é fácil.'",
       "back": "Desistires tu de estudar é fácil. / Desistir eu de estudar é fácil.",
       "example": "Desistires tu de estudar agora vai te prejudicar no futuro."
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-formas"
   },
   {
     "id": "4e0d553f",
@@ -1622,7 +1747,8 @@
           "Estou a falar com minha amiga."
         ]
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "4e4837d6",
@@ -1684,13 +1810,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Traduce al portugués: 'Es importante que tú sepas la verdad.'",
       "back": "É importante para tu saberes a verdade.",
       "example": "É importante para tu saberes a verdade antes de decidir."
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-formas"
   },
   {
     "id": "4ffb57cc",
@@ -1717,7 +1847,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-estar-a-infinitivo"
+    ]
   },
   {
     "id": "51820100",
@@ -1744,7 +1877,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-infinitivo-pessoal"
+    ]
   },
   {
     "id": "5292d03a",
@@ -1770,13 +1906,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Conjuga o infinitivo pessoal de 'falar' na 2ª pessoa do singular",
       "back": "falares tu",
       "example": "Fales tu o que quiseres."
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-formas"
   },
   {
     "id": "5406568e",
@@ -1812,7 +1952,10 @@
       "acceptedAlternatives": [
         "Esta semana tenho escrito muitas cartas."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-part-composto-duracion"
+    ]
   },
   {
     "id": "58d47e53",
@@ -1828,7 +1971,7 @@
     ],
     "contentHash": "58d47e53ff7041c3288e5d66f7fcf1769c32ff9683e374c6920e578affb5bb7a",
     "esContrast": "PT-BR y PT-PT: 'acabar DE' + infinitivo (acción reciente). Equivale a 'terminar de' en español.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "acabar",
@@ -1840,7 +1983,11 @@
         "por"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-de"
   },
   {
     "id": "5b51db8e",
@@ -1878,7 +2025,10 @@
         "Describe un estado"
       ],
       "answer": "Expresa una acción en progreso continuo"
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-brasileiro"
+    ]
   },
   {
     "id": "5b7470d5",
@@ -1916,7 +2066,10 @@
         "Cuando se usa con verbos de percepción."
       ],
       "answer": "Cuando hay cambio de sujeto entre la oración principal y la subordinada."
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ]
   },
   {
     "id": "5dcb8dfc",
@@ -1942,7 +2095,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-estar-a-infinitivo"
+    ]
   },
   {
     "id": "5dee3985",
@@ -1974,7 +2130,10 @@
       "front": "Participio de VER y PÔR",
       "back": "ver → visto; pôr → posto",
       "example": "Tenho visto muitos filmes novos. O livro foi posto na mesa."
-    }
+    },
+    "__nuevos": [
+      "b7-part-composto-duracion"
+    ]
   },
   {
     "id": "5e2b8463",
@@ -2012,7 +2171,10 @@
         "Andar"
       ],
       "answer": "Estar"
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-brasileiro"
+    ]
   },
   {
     "id": "5eebed86",
@@ -2036,7 +2198,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ]
   },
   {
     "id": "5f90f678",
@@ -2072,7 +2237,8 @@
       "pt-br": {
         "back": "PT-PT: Haver + participio = tiempo perfecto compuesto"
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "6aa6996b",
@@ -2103,7 +2269,10 @@
       "front": "¿Qué significa 'chegando' en el contexto de saludo informal en PT-BR?",
       "back": "¡Llegué! / ¡Ya estoy aquí! (forma coloquial de chegar)",
       "example": "— Oi, tudo bem? — Chegando agora!"
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ]
   },
   {
     "id": "6b92cf03",
@@ -2137,7 +2306,10 @@
         "Le gusta ayudar a los demás.",
         "Le da gusto ayudar a los demás."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ]
   },
   {
     "id": "6bee5262",
@@ -2175,7 +2347,10 @@
         "Porque la frase es más formal con la conjugación."
       ],
       "answer": "Porque hay cambio de sujeto: 'nós' vs 'eu' implícito."
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-impessoais"
+    ]
   },
   {
     "id": "73e19881",
@@ -2203,7 +2378,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ]
   },
   {
     "id": "77b1c4bb",
@@ -2244,7 +2422,8 @@
           "Ela está a andar pela praia."
         ]
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "79076c11",
@@ -2280,7 +2459,10 @@
       "acceptedAlternatives": [
         "Sempre que possível, saio para correr de manhã."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ]
   },
   {
     "id": "79ce3558",
@@ -2313,7 +2495,10 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ]
   },
   {
     "id": "7b126b91",
@@ -2354,7 +2539,10 @@
           }
         ]
       }
-    }
+    },
+    "__nuevos": [
+      "b7-part-passiva"
+    ]
   },
   {
     "id": "7b5321b1",
@@ -2382,7 +2570,10 @@
         "por"
       ],
       "answer": "em"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-em"
+    ]
   },
   {
     "id": "7bb869a1",
@@ -2415,7 +2606,10 @@
       "acceptedAlternatives": [
         "Yo he realizado la tarea todos los días."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-part-composto-duracion"
+    ]
   },
   {
     "id": "81a88fb8",
@@ -2440,13 +2634,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Qué significa 'vale a pena' en portugués?",
       "back": "Vale a pena = Merece la pena / Conviene",
       "example": "Vale a pena experimentar a comida brasileira."
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-participio"
   },
   {
     "id": "82e31db5",
@@ -2476,7 +2674,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ]
   },
   {
     "id": "832480f1",
@@ -2504,7 +2705,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-part-duplos"
+    ]
   },
   {
     "id": "863fc5a6",
@@ -2536,7 +2740,10 @@
       "front": "Participio regular de verbos -ER/-IR (comer, dormir)",
       "back": "comer → comido; dormir → dormido (con -ido)",
       "example": "Já temos comido naquele restaurante."
-    }
+    },
+    "__nuevos": [
+      "b7-part-composto-duracion"
+    ]
   },
   {
     "id": "877377ce",
@@ -2570,7 +2777,10 @@
       "acceptedAlternatives": [
         "Para que ustedes sepan la verdad, necesitan preguntar directamente."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-preposicao"
+    ]
   },
   {
     "id": "8964941a",
@@ -2596,13 +2806,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Conjuga o infinitivo pessoal de 'falar' na 3ª pessoa do plural",
       "back": "falarem eles/elas",
       "example": "Falerem eles o que quiserem, não me importa."
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-formas"
   },
   {
     "id": "899dc89d",
@@ -2627,7 +2841,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Antes de irse, llamó a su madre.",
@@ -2637,7 +2851,11 @@
       "acceptedAlternatives": [
         "Antes de ir-se, ligou para a mãe."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-contraste"
   },
   {
     "id": "8afe28a6",
@@ -2662,7 +2880,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "O infinitivo pessoal é a forma do infinitivo que se conjuga para cada pessoa.",
@@ -2674,7 +2892,11 @@
         "Es un modo verbal sin conjugación posible."
       ],
       "answer": "Es el infinitivo conjugado según la persona gramatical."
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-contraste"
   },
   {
     "id": "8c46475d",
@@ -2700,13 +2922,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'fazer' no infinitivo pessoal (pessoa com sujeito definido)",
       "back": "fazer eu, fazeres tu, fazer ele, fazermos nós, fazerdes vós, fazerem eles",
       "example": "Fazer eu isso? Nem pensar!"
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-formas"
   },
   {
     "id": "8e57fbb6",
@@ -2732,13 +2958,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Cuándo se usa el infinitivo pessoal en lugar del conjuntivo?",
       "back": "Depois de preposições (para, em, por, sem, ao) e em frases com sujeito expresso.",
       "example": "Para eu sair cedo, preciso acordar às 6h. / É importante para vossa excelência entender isso."
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-contraste"
   },
   {
     "id": "8ed1afe5",
@@ -2775,7 +3005,10 @@
       "acceptedAlternatives": [
         "Ia seguindo em frente com o projeto apesar de tudo."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-aspectual"
+    ]
   },
   {
     "id": "8f227545",
@@ -2791,7 +3024,7 @@
     ],
     "contentHash": "8f227545b025bf96f248a0130ed459c6991424fead447d45dc17f18f76e131c1",
     "esContrast": "O particípio de 'tomar' é regular: -ar → -ado. Em español es 'tomado', pero atención: muchos verbos de este grupo varían.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Nós já ___ a decisão.",
@@ -2802,7 +3035,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-participio"
   },
   {
     "id": "90ad9daa",
@@ -2845,7 +3082,10 @@
           }
         ]
       }
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ]
   },
   {
     "id": "92a52ca0",
@@ -2887,7 +3127,8 @@
           "Estou a tentar encontrar o endereço certo."
         ]
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "949e50b1",
@@ -2922,7 +3163,10 @@
       "acceptedAlternatives": [
         "Es importante que yo le hable a ella sobre eso."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-infinitivo-pessoal"
+    ]
   },
   {
     "id": "94b6b800",
@@ -2949,7 +3193,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ]
   },
   {
     "id": "94d7b3f7",
@@ -2979,7 +3226,10 @@
       "front": "¿Qué significa 'ESTAR + gerúndio' y cómo se compara con el español?",
       "back": "Expresa acción en progreso. Equivale al presente progresivo español (estar + gerundio).",
       "example": "Ela está estudiando para a prova. (Ella está estudiando para el examen.)"
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-brasileiro"
+    ]
   },
   {
     "id": "9554a90b",
@@ -3012,7 +3262,10 @@
       "acceptedAlternatives": [
         "La vida útil de este aparato es de cinco años."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ]
   },
   {
     "id": "96a445f6",
@@ -3046,7 +3299,10 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-impessoais"
+    ]
   },
   {
     "id": "970cf7a9",
@@ -3081,7 +3337,10 @@
       "acceptedAlternatives": [
         "Fiz o trabalho de casa com muito prazer."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ]
   },
   {
     "id": "99790b7d",
@@ -3114,7 +3373,10 @@
       "front": "Infinitivo pessoal de «falar» en 1.ª persona del plural (nós)",
       "back": "falarmos",
       "example": "Falarmos português ajuda muito."
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ]
   },
   {
     "id": "9ef9dcbf",
@@ -3139,13 +3401,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "En constructions como 'Fazendo uma pesquisa, encontrei...', ¿qué función tiene el gerúndio?",
       "back": "Función adverbial: expresa una acción simultánea o condicional (equivalente a 'al hacer', 'mientras hacía')",
       "example": "Fazendo uma pesquisa, descobri a resposta. (Al hacer una búsqueda, descubrí la respuesta.)"
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-adverbial"
   },
   {
     "id": "a21205af",
@@ -3187,7 +3453,8 @@
           "Estávamos a esperar o ônibus quando começou a chover."
         ]
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "a46a9077",
@@ -3213,7 +3480,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Es necesario que el profesor corrija los exámenes.",
@@ -3223,7 +3490,11 @@
       "acceptedAlternatives": [
         "É necessário que o professor corrija os exames."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-contraste"
   },
   {
     "id": "a4bfac2a",
@@ -3251,7 +3522,10 @@
         "a"
       ],
       "answer": "—"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-zero"
+    ]
   },
   {
     "id": "a8bb8161",
@@ -3282,7 +3556,10 @@
       "front": "Traduce: 'Siempre que sea posible, sigo adelante.'",
       "back": "Sempre que possível, sigo em frente.",
       "example": "Sempre que possível, sigo em frente com meus estudos."
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio"
+    ]
   },
   {
     "id": "a9c0aef4",
@@ -3307,13 +3584,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Participio irregular de DIZER",
       "back": "dizer → dito",
       "example": "O que foi dito na reunião?"
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-participio"
   },
   {
     "id": "aa3f127f",
@@ -3338,13 +3619,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Participio irregular de FAZER",
       "back": "fazer → feito (NO hecho, como en español)",
       "example": "Tenho feito muitos exercícios de português."
-    }
+    },
+    "__nuevos": [
+      "b7-part-composto-duracion"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-part-composto-duracion"
   },
   {
     "id": "abae281d",
@@ -3378,7 +3663,10 @@
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b7-part-duplos"
+    ]
   },
   {
     "id": "ac49221a",
@@ -3402,13 +3690,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se forma el gerúndio de los verbos terminados en -AR?",
       "back": "Reemplazando -AR por -ANDO",
       "example": "falar → falando (hablar → hablando)"
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-adverbial"
   },
   {
     "id": "acc817b5",
@@ -3424,7 +3716,7 @@
     ],
     "contentHash": "acc817b5287cda09b07057f3a1d7f0810f291f842b91d1c587167c61604acbc1",
     "esContrast": "'Precisar' en español se construye con 'de', así que aquí el PT coincide, pero muchos olvidan la preposición.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
@@ -3436,7 +3728,11 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-de"
   },
   {
     "id": "b070893a",
@@ -3476,7 +3772,10 @@
         ],
         "answer": "chegamos / chegado"
       }
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-otras"
+    ]
   },
   {
     "id": "b4774398",
@@ -3491,7 +3790,7 @@
     ],
     "contentHash": "b47743983f5f36e6a169bbfff9063de9e752ff84b45e941371f3e369b8aa845d",
     "esContrast": "Estructura muy portuguesa: 'Para nós' + infinitivo pessoal. Equivale al español 'En nuestro caso'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "___ nós, não há problema em chegar tarde.",
@@ -3504,7 +3803,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-contraste"
   },
   {
     "id": "b6ee98bf",
@@ -3530,13 +3833,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Arrumar en PT-BR (significados)",
       "back": "1. Arreglar / organizar; 2. (mujeres) ponerse nerviosa/traviesa",
       "example": "Ela fica toda arrumada quando o namorado chega."
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-participio"
   },
   {
     "id": "b77d490b",
@@ -3560,13 +3867,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Qué verbo se combina con gerúndio para expresar aproximación o venida gradual?",
       "back": "VIR + gerúndio",
       "example": "O dia foi chegando e eu fui me preocupando. (El día fue llegando y yo me fui preocupando.)"
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-adverbial"
   },
   {
     "id": "b9b385f8",
@@ -3590,13 +3901,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Traduce: 'Ella se despertó cantando.'",
       "back": "Ela acordou cantando.",
       "example": "Ela acordou cantando uma música antiga."
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-adverbial"
   },
   {
     "id": "bbb6c2a0",
@@ -3622,7 +3937,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-estar-a-infinitivo"
+    ]
   },
   {
     "id": "bffcf765",
@@ -3656,7 +3974,10 @@
       "acceptedAlternatives": [
         "El café está fuerte, prefiero más suave."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-part-passiva"
+    ]
   },
   {
     "id": "c1ad509c",
@@ -3690,7 +4011,10 @@
       "acceptedAlternatives": [
         "Merece la pena leer este libro al menos una vez."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ]
   },
   {
     "id": "c51d084b",
@@ -3703,7 +4027,7 @@
     "tags": [],
     "contentHash": "1afba287caa4bc90023bd8909780d560ae26e91d91fb17912182bc1eae1aa38f",
     "esContrast": "En español usarías subjuntivo: 'si ir o no'. En portugués puedes decir 'sei se ir' con infinitivo pessoal.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu não sei se ___ ou não ao concerto.",
@@ -3718,7 +4042,11 @@
         }
       ],
       "hintEs": "«¿voy o no voy?» — en infinitivo"
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-contraste"
   },
   {
     "id": "c5ffec65",
@@ -3759,7 +4087,10 @@
         "Contenido simple"
       ],
       "answer": "Errores graves"
-    }
+    },
+    "__nuevos": [
+      "b7-part-passiva"
+    ]
   },
   {
     "id": "c6c330df",
@@ -3796,7 +4127,10 @@
       "acceptedAlternatives": [
         "Arrumei a casa para a visita."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ]
   },
   {
     "id": "cb597dc1",
@@ -3808,7 +4142,7 @@
     ],
     "tags": [],
     "contentHash": "cb597dc1372b28bc29195432c7670d5f4d61a218c458e99cf7b5e94612b505b0",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Vou tentando encontrar uma solução ___ que possível.",
@@ -3819,7 +4153,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-adverbial"
   },
   {
     "id": "cc28fb3f",
@@ -3848,7 +4186,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ]
   },
   {
     "id": "cc58abe2",
@@ -3873,7 +4214,10 @@
         }
       ],
       "hintEs": "infinitivo pessoal, 2.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b7-infinitivo-pessoal"
+    ]
   },
   {
     "id": "ccbc27b9",
@@ -3913,7 +4257,10 @@
         "Está cargado"
       ],
       "answer": "Ya terminó su vida útil"
-    }
+    },
+    "__nuevos": [
+      "b7-part-duplos"
+    ]
   },
   {
     "id": "cef7412d",
@@ -3939,13 +4286,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'poder' no infinitivo pessoal (todas as pessoas)",
       "back": "poder eu, poderes tu, poder ele, podermos nós, poderdes vós, poderem eles",
       "example": "Poder eu fazer isso? Impossível!"
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-formas"
   },
   {
     "id": "cefde2fc",
@@ -3971,13 +4322,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Cuándo se puede usar el infinitivo pessoal en lugar del infinitivo composto?",
       "back": "Para expresar una acción futura o posterior respecto al verbo principal.",
       "example": "Depois de eu chegar, podemos sair. (equivale a 'depois de eu ter chegado')"
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-contraste"
   },
   {
     "id": "cf7ee9d0",
@@ -4002,7 +4357,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Não sei que fazeres para resolver esse problema.",
@@ -4014,7 +4369,11 @@
         "Solo en textos literarios."
       ],
       "answer": "Cuando la frase interrogativa tiene un sujeto diferente."
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-formas"
   },
   {
     "id": "d3d578cf",
@@ -4038,13 +4397,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Traduce: '¿Dónde nos encontraremos?' (usando gerúndio)",
       "back": "Onde vamos nos encontrar?",
       "example": "Onde vamos nos encontrar amanhã?"
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-adverbial"
   },
   {
     "id": "d8371e83",
@@ -4071,7 +4434,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ]
   },
   {
     "id": "d89951cf",
@@ -4108,7 +4474,10 @@
       "acceptedAlternatives": [
         "A vida útil deste aparelho acabou."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ]
   },
   {
     "id": "ddb15d6d",
@@ -4132,13 +4501,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Qué verbo indica un proceso gradual cuando se combina con gerúndio?",
       "back": "IR + gerúndio (indica algo que sucede poco a poco)",
       "example": "Fui me acostumando com o novo horário. (Fui acostumbrándome al nuevo horario.)"
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-adverbial"
   },
   {
     "id": "ded55114",
@@ -4163,7 +4536,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Para eu conseguir o emprego, preciso estudar muito.",
@@ -4175,7 +4548,11 @@
         "Indica obligación del sujeto 'eu'."
       ],
       "answer": "Indica una condición o finalidad para la acción del sujeto principal."
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-contraste"
   },
   {
     "id": "e2d0dde2",
@@ -4199,7 +4576,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ]
   },
   {
     "id": "e40c9ae0",
@@ -4214,7 +4594,7 @@
     ],
     "contentHash": "e40c9ae034bb997392d3852539c24e7064624d86d171c1e8c4de5ad65be2d7f1",
     "esContrast": "Cuidado: 'aprender' existe en ambos idiomas, pero en PT se conjuga para cada persona (aprender eu, aprenderes tu).",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Para ___ português, tens de praticar muito.",
@@ -4227,7 +4607,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-formas"
   },
   {
     "id": "e6797426",
@@ -4260,7 +4644,10 @@
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-preposicao"
+    ]
   },
   {
     "id": "e77c4143",
@@ -4293,7 +4680,10 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ]
   },
   {
     "id": "e791790f",
@@ -4317,13 +4707,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se forma el gerúndio de los verbos terminados en -ER e -IR?",
       "back": "Reemplazando -ER por -ENDO y -IR por -INDO",
       "example": "comer → comendo / dormir → dormindo"
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-adverbial"
   },
   {
     "id": "e86c3aa3",
@@ -4348,7 +4742,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Ela tem nascido em Lisboa, mas cresceu no Brasil.",
@@ -4358,7 +4752,11 @@
       "acceptedAlternatives": [
         "Ella nació en Lisboa, pero creció en Brasil."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-part-composto-duracion"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-part-composto-duracion"
   },
   {
     "id": "e999ac35",
@@ -4383,7 +4781,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Sé que puedes hacerlo mejor.",
@@ -4393,7 +4791,11 @@
       "acceptedAlternatives": [
         "Sei que podes fazer melhor."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-contraste"
   },
   {
     "id": "ea1a5cc9",
@@ -4419,7 +4821,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "O quarto está bem arrumado.",
@@ -4429,7 +4831,11 @@
       "acceptedAlternatives": [
         "La habitación está bien ordenada."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-participio"
   },
   {
     "id": "eb2651de",
@@ -4467,7 +4873,10 @@
         "Andar + gerúndio"
       ],
       "answer": "Estar + gerúndio"
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-brasileiro"
+    ]
   },
   {
     "id": "ee77cd22",
@@ -4528,7 +4937,10 @@
         "em"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "f00f5169",
@@ -4556,7 +4968,10 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "f4480903",
@@ -4581,7 +4996,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Ao chegares a casa, telefona-me imediatamente.",
@@ -4591,7 +5006,11 @@
       "acceptedAlternatives": [
         "Cuando llegues a casa, llámame inmediatamente."
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-inf-pess-formas"
   },
   {
     "id": "f53e27b7",
@@ -4627,7 +5046,10 @@
       "acceptedAlternatives": [
         "Vale a pena fazer esse serviço?"
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ]
   },
   {
     "id": "f7357cb2",
@@ -4654,7 +5076,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Sempre que possível, acordo cedo e sigo em frente sem encontrar desculpas.",
@@ -4666,7 +5088,11 @@
         "Continuar + gerúndio"
       ],
       "answer": "Estar + gerúndio"
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio"
   },
   {
     "id": "f9b54774",
@@ -4696,7 +5122,10 @@
       "front": "¿Qué verbo se usa con gerúndio para expresar una acción continua o persistente?",
       "back": "ANDAR + gerúndio",
       "example": "Ele anda dizendo que vai sair da empresa. (Él anda diciendo que va a salir de la empresa.)"
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-aspectual"
+    ]
   },
   {
     "id": "fb2ebf43",
@@ -4740,7 +5169,8 @@
           "É preciso que venhas amanhã."
         ]
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "fc390e6a",
@@ -4768,7 +5198,10 @@
         "para"
       ],
       "answer": "em"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-em"
+    ]
   },
   {
     "id": "febc4d8a",
@@ -4796,7 +5229,10 @@
         "para"
       ],
       "answer": "a"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-a"
+    ]
   },
   {
     "id": "fec7825b",
@@ -4828,7 +5264,10 @@
       "front": "Participio regular de verbos -AR (ejemplo: falar)",
       "back": "falar → falado (con -ado)",
       "example": "Ela tem falado muito ultimamente."
-    }
+    },
+    "__nuevos": [
+      "b7-part-composto-duracion"
+    ]
   },
   {
     "id": "ff5e7364",
@@ -4861,7 +5300,10 @@
       "front": "Infinitivo pessoal de 'falar' en 3.ª persona del singular (ele/ela)",
       "back": "ele falar",
       "example": "É estranho ele falar assim."
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ]
   },
   {
     "id": "dd32d1d7",
@@ -4886,7 +5328,10 @@
       "tense": "infinitivo pessoal",
       "answer": "falarmos",
       "hintEs": "(para) que nosotros hablemos / al hablar nosotros"
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ]
   },
   {
     "id": "4fd78c34",
@@ -4910,7 +5355,10 @@
       "tense": "infinitivo pessoal",
       "answer": "serem",
       "hintEs": "al ser ellos/ellas"
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ]
   },
   {
     "id": "daccd3f7",
@@ -4934,7 +5382,10 @@
       "tense": "infinitivo pessoal",
       "answer": "termos",
       "hintEs": "al tener nosotros"
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-contraste"
+    ]
   },
   {
     "id": "34859506",
@@ -4958,7 +5409,10 @@
       "tense": "infinitivo pessoal",
       "answer": "fazerem",
       "hintEs": "al hacer ellos/ellas"
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ]
   },
   {
     "id": "89ecb8db",
@@ -4982,7 +5436,10 @@
       "tense": "infinitivo pessoal",
       "answer": "partirmos",
       "hintEs": "al partir nosotros"
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ]
   },
   {
     "id": "9ab4fd77",
@@ -5006,7 +5463,10 @@
       "tense": "infinitivo pessoal",
       "answer": "fazermos",
       "hintEs": "al hacer nosotros"
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ]
   },
   {
     "id": "1b6fbdd8",
@@ -5022,7 +5482,7 @@
     ],
     "contentHash": "1b6fbdd84c6dc600908aaed6e4635447ddfd2a38f6840571b04940bded780c6d",
     "esContrast": "El gerúndio es invariable: 'falando' (= hablando) para todas las personas.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "conjugation",
     "data": {
       "infinitive": "falar",
@@ -5030,7 +5490,11 @@
       "tense": "gerúndio",
       "answer": "falando",
       "hintEs": "hablando"
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-adverbial"
   },
   {
     "id": "16cdc7f1",
@@ -5045,7 +5509,7 @@
       "-er"
     ],
     "contentHash": "16cdc7f1262da20e7b67dd05128affea5d0970a149316f1861e693e33795ecd5",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "conjugation",
     "data": {
       "infinitive": "comer",
@@ -5053,7 +5517,11 @@
       "tense": "gerúndio",
       "answer": "comendo",
       "hintEs": "comiendo"
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-adverbial"
   },
   {
     "id": "c9fbd7a8",
@@ -5068,7 +5536,7 @@
       "-ir"
     ],
     "contentHash": "c9fbd7a86c637ee4af8af41106b290fad8bce5401050bb6dfc18f933bdab3720",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "conjugation",
     "data": {
       "infinitive": "partir",
@@ -5076,7 +5544,11 @@
       "tense": "gerúndio",
       "answer": "partindo",
       "hintEs": "partiendo/saliendo"
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-adverbial"
   },
   {
     "id": "a4447dd2",
@@ -5091,7 +5563,7 @@
       "ver"
     ],
     "contentHash": "a4447dd296b40844ce9c1b86ac4cccfd0b7abb631aabb5a3d66948fccaa0b6ba",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "conjugation",
     "data": {
       "infinitive": "ver",
@@ -5099,7 +5571,11 @@
       "tense": "gerúndio",
       "answer": "vendo",
       "hintEs": "viendo"
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-adverbial"
   },
   {
     "id": "451780c2",
@@ -5121,7 +5597,10 @@
       "sentence": "Ele está comer agora, não pode atender.",
       "correct": "Ele está comendo agora, não pode atender.",
       "explanationEs": "En portugués brasileño la acción en curso es 'estar' + gerúndio: 'está comendo'."
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-brasileiro"
+    ]
   },
   {
     "id": "474b0d6d",
@@ -5145,7 +5624,10 @@
       "sentence": "Eu tinha fazido todo o trabalho.",
       "correct": "Eu tinha feito todo o trabalho.",
       "explanationEs": "El participio de 'fazer' es irregular: 'feito'."
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ]
   },
   {
     "id": "b077af3b",
@@ -5169,7 +5651,10 @@
       "sentence": "Ele tinha dizido a verdade desde o início.",
       "correct": "Ele tinha dito a verdade desde o início.",
       "explanationEs": "El participio de 'dizer' es irregular: 'dito'."
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ]
   },
   {
     "id": "e6ba16e3",
@@ -5186,13 +5671,17 @@
     ],
     "contentHash": "e6ba16e30e3123e832cae1982e97f922259191fbf543ca3347aec2824a4f8aeb",
     "esContrast": "El participio irregular de 'ver' es 'visto'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "error_correction",
     "data": {
       "sentence": "Nós tínhamos vido esse filme antes.",
       "correct": "Nós tínhamos visto esse filme antes.",
       "explanationEs": "El participio de 'ver' es irregular: 'visto'."
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-participio"
   },
   {
     "id": "ccb65e45",
@@ -5214,7 +5703,10 @@
       "sentence": "É importante nós estudar mais para o exame.",
       "correct": "É importante nós estudarmos mais para o exame.",
       "explanationEs": "El infinitivo pessoal con sujeto 'nós' lleva la desinencia '-mos': 'estudarmos'."
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ]
   },
   {
     "id": "8339f141",
@@ -5236,7 +5728,10 @@
       "sentence": "Antes de eles chegar, arrumei a casa toda.",
       "correct": "Antes de eles chegarem, arrumei a casa toda.",
       "explanationEs": "El infinitivo pessoal con sujeto 'eles' lleva '-em': 'chegarem'."
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-preposicao"
+    ]
   },
   {
     "id": "cc7715be",
@@ -5277,13 +5772,17 @@
     ],
     "contentHash": "63e0e91130c6009c268593bae1f2f131e42a08603a27b164d306059a03c3df01",
     "esContrast": "El participio de 'pôr' es irregular: 'posto', no la forma regularizada 'ponhado'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "error_correction",
     "data": {
       "sentence": "Ele já tinha ponhado a mesa para o jantar.",
       "correct": "Ele já tinha posto a mesa para o jantar.",
       "explanationEs": "El participio de 'pôr' es irregular: 'posto'."
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-participio"
   },
   {
     "id": "7696748d",
@@ -5298,7 +5797,7 @@
     ],
     "contentHash": "7696748d7c82a3605df3d76e31c74bca6f899eb34377deee3ba58a98228af64d",
     "esContrast": "Acción en curso: 'estou estudando' (BR).",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Agora eu estou ___ (estudar) português.",
@@ -5308,7 +5807,11 @@
           "answer": "estudando"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-brasileiro"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-brasileiro"
   },
   {
     "id": "b2a1d182",
@@ -5335,7 +5838,10 @@
           "answer": "escrito"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ]
   },
   {
     "id": "4f099982",
@@ -5361,7 +5867,10 @@
           "answer": "chegarmos"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-preposicao"
+    ]
   },
   {
     "id": "cdf698b3",
@@ -5388,7 +5897,10 @@
           "answer": "fechada"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-part-passiva"
+    ]
   },
   {
     "id": "ace36b02",
@@ -5415,7 +5927,10 @@
       ],
       "correctIndex": 0,
       "explanationEs": "El participio de 'escrever' es irregular: 'escrito'."
-    }
+    },
+    "__nuevos": [
+      "b7-participio"
+    ]
   },
   {
     "id": "20a6411f",
@@ -5441,7 +5956,10 @@
       ],
       "correctIndex": 0,
       "explanationEs": "Infinitivo pessoal de 'fazer' con 'nós': 'fazermos'. 'fizermos' es futuro do conjuntivo."
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-formas"
+    ]
   },
   {
     "id": "13aad32a",
@@ -5457,7 +5975,7 @@
     ],
     "contentHash": "13aad32afdd9848fcd751902cc28361d212def77d5c8a6c9c119039760629578",
     "esContrast": "El gerundio con este auxiliar es la forma brasileña; en Portugal: estar a + infinitivo.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "multiple_choice",
     "data": {
       "question": "En portugués brasileño, '(yo) estoy hablando' se dice:",
@@ -5468,7 +5986,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "Brasil usa 'estar' + gerúndio ('estou falando'); Portugal prefiere 'estar a' + infinitivo ('estou a falar')."
-    }
+    },
+    "__nuevos": [
+      "b7-estar-a-infinitivo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-estar-a-infinitivo"
   },
   {
     "id": "b7-ep-01",
@@ -5495,7 +6017,10 @@
           "answer": "a dormir"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-estar-a-infinitivo"
+    ]
   },
   {
     "id": "b7-ep-02",
@@ -5522,7 +6047,10 @@
           "answer": "a pensar"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio"
+    ]
   },
   {
     "id": "b7-ep-03",
@@ -5545,7 +6073,10 @@
       "sentence": "Estou escrevendo a ata da reunião.",
       "correct": "Estou a escrever a ata da reunião.",
       "explanationEs": "El progresivo del estándar europeo es 'estar a + infinitivo'; 'estar + gerundio' es la norma brasileña."
-    }
+    },
+    "__nuevos": [
+      "b7-estar-a-infinitivo"
+    ]
   },
   {
     "id": "b7-ep-04",
@@ -5572,7 +6103,10 @@
           "answer": "a morar"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio"
+    ]
   },
   {
     "id": "b7-ep-05",
@@ -5595,7 +6129,10 @@
       "sentence": "Ela ficou esperando na paragem.",
       "correct": "Ela ficou a esperar na paragem.",
       "explanationEs": "'Ficar a + infinitivo' es la forma europea; 'ficar + gerundio' es brasileña."
-    }
+    },
+    "__nuevos": [
+      "b7-estar-a-infinitivo"
+    ]
   },
   {
     "id": "b7-ep-06",
@@ -5622,7 +6159,10 @@
           "answer": "a arrumar"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio"
+    ]
   },
   {
     "id": "b7-ep-07",
@@ -5645,7 +6185,10 @@
       "sentence": "O que estás fazendo aí em cima?",
       "correct": "O que estás a fazer aí em cima?",
       "explanationEs": "'Estar a + infinitivo' — el gerundio con estar es la norma brasileña."
-    }
+    },
+    "__nuevos": [
+      "b7-estar-a-infinitivo"
+    ]
   },
   {
     "id": "b7-ep-08",
@@ -5672,7 +6215,10 @@
           "answer": "a falar"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-estar-a-infinitivo"
+    ]
   },
   {
     "id": "b7-ep-09",
@@ -5699,7 +6245,10 @@
           "answer": "a conversar"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio"
+    ]
   },
   {
     "id": "b7-ep-10",
@@ -5722,7 +6271,10 @@
       "sentence": "Vocês estão entendendo a explicação?",
       "correct": "Vocês estão a entender a explicação?",
       "explanationEs": "'Estar a + infinitivo' también con vocês: 'estão a entender'."
-    }
+    },
+    "__nuevos": [
+      "b7-estar-a-infinitivo"
+    ]
   },
   {
     "id": "b7-ep-11",
@@ -5749,7 +6301,10 @@
           "answer": "a piorar"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio"
+    ]
   },
   {
     "id": "b7-ep-12",
@@ -5772,7 +6327,10 @@
       "sentence": "Continuo achando que foi um erro.",
       "correct": "Continuo a achar que foi um erro.",
       "explanationEs": "'Continuar a + infinitivo' es la forma europea; 'continuar + gerundio' es brasileña."
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-adverbial"
+    ]
   },
   {
     "id": "b7-ep-13",
@@ -5799,7 +6357,10 @@
           "answer": "a jantar"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-estar-a-infinitivo"
+    ]
   },
   {
     "id": "b7-ep-14",
@@ -5822,7 +6383,10 @@
       "sentence": "Estamos tentando resolver o problema.",
       "correct": "Estamos a tentar resolver o problema.",
       "explanationEs": "'Estar a + infinitivo': 'estamos a tentar'. El gerundio con estar es la norma brasileña."
-    }
+    },
+    "__nuevos": [
+      "b7-estar-a-infinitivo"
+    ]
   },
   {
     "id": "b7-ep-15",
@@ -5849,7 +6413,10 @@
           "answer": "a ver"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio"
+    ]
   },
   {
     "id": "cl16-156",
@@ -5878,7 +6445,10 @@
         }
       ],
       "hintEs": "pasiva con «ser» en pretérito + particípio concordando con «a ponte»"
-    }
+    },
+    "__nuevos": [
+      "b7-part-passiva"
+    ]
   },
   {
     "id": "cl16-157",
@@ -5907,7 +6477,10 @@
         }
       ],
       "hintEs": "pasiva con «ser» en pretérito + particípio concordando con «os documentos»"
-    }
+    },
+    "__nuevos": [
+      "b7-part-passiva"
+    ]
   },
   {
     "id": "tr19-020",
@@ -5932,7 +6505,10 @@
       "answer": "chegarem",
       "alternatives": [],
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-impessoais"
+    ]
   },
   {
     "id": "tr19-021",
@@ -5957,7 +6533,10 @@
       "answer": "esperarmos",
       "alternatives": [],
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-impessoais"
+    ]
   },
   {
     "id": "tr19-022",
@@ -5982,7 +6561,10 @@
       "answer": "leres",
       "alternatives": [],
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-impessoais"
+    ]
   },
   {
     "id": "tr19-023",
@@ -6007,7 +6589,10 @@
       "answer": "saírem",
       "alternatives": [],
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-impessoais"
+    ]
   },
   {
     "id": "tr19-024",
@@ -6032,7 +6617,10 @@
       "answer": "perderem",
       "alternatives": [],
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-impessoais"
+    ]
   },
   {
     "id": "tr19b-014",
@@ -6057,7 +6645,10 @@
       "answer": "saíres",
       "alternatives": [],
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-preposicao"
+    ]
   },
   {
     "id": "tr19b-015",
@@ -6082,7 +6673,10 @@
       "answer": "chegarmos",
       "alternatives": [],
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-preposicao"
+    ]
   },
   {
     "id": "tr19b-016",
@@ -6107,7 +6701,10 @@
       "answer": "fazerem",
       "alternatives": [],
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-preposicao"
+    ]
   },
   {
     "id": "tr19b-017",
@@ -6132,7 +6729,10 @@
       "answer": "darem",
       "alternatives": [],
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-preposicao"
+    ]
   },
   {
     "id": "tr20-015",
@@ -6158,7 +6758,10 @@
       "alternatives": [],
       "hintEs": "estar + preposición + infinitivo",
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-aspectual"
+    ]
   },
   {
     "id": "tr20-016",
@@ -6184,7 +6787,10 @@
       "alternatives": [],
       "hintEs": "andar + preposición + infinitivo",
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-aspectual"
+    ]
   },
   {
     "id": "tr20-017",
@@ -6210,7 +6816,10 @@
       "alternatives": [],
       "hintEs": "ficar + preposición + infinitivo",
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b7-gerundio-aspectual"
+    ]
   },
   {
     "id": "tr20-018",
@@ -6236,7 +6845,10 @@
       "alternatives": [],
       "hintEs": "con ter/haver va el largo; con ser/estar, el corto",
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b7-part-duplos"
+    ]
   },
   {
     "id": "tr20-019",
@@ -6262,7 +6874,10 @@
       "alternatives": [],
       "hintEs": "con estar, el participio corto",
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b7-part-duplos"
+    ]
   },
   {
     "id": "tr20-020",
@@ -6288,6 +6903,9 @@
       "alternatives": [],
       "hintEs": "con ter va el largo, aunque con ser vaya el corto",
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b7-part-duplos"
+    ]
   }
 ]

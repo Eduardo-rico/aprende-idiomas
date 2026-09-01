@@ -38,9 +38,41 @@ describe('cuarentena — puerta de servicio', () => {
     const todos = await loadAllBlocks('pt', { incluirEnCuarentena: true });
     const retirados = todos.length - servidos.length;
     expect(retirados).toBeGreaterThan(0);
-    // Cota de seguridad: si un cambio de marcado dejara en cuarentena a
-    // media app, esto lo caza antes que el alumno.
-    expect(retirados / todos.length).toBeLessThan(0.15);
+    // Cota de seguridad contra el marcado accidental. Estaba en 0,15
+    // cuando la cuarentena eran los 102 de la Ola V (5 %). En E2#22 se
+    // retiraron 595 ítems más POR DECISIÓN MEDIDA —excedente sin dictamen
+    // sobre puntos que ya llegan al piso— y la cuarentena pasó al 28 %.
+    // La cota se sube porque el estado cambió, no porque estorbara; lo que
+    // de verdad protege es el test de abajo, que mira el efecto en vez del
+    // volumen.
+    expect(retirados / todos.length).toBeLessThan(0.35);
+  });
+
+  it('retirar la cuarentena no deja NINGÚN punto por debajo de su piso', async () => {
+    // El invariante que importa, y que el volumen sólo aproximaba: se
+    // puede retirar de servicio lo que sobra, nunca lo que sostiene un
+    // punto. Si un solo punto cruza de «llega» a «no llega» por la
+    // cuarentena, la selección está mal y hay que deshacerla.
+    const { contarPuntos, pisoCero, conPisoCero, conPadreCubierto } = await import('@/scripts/lib/conceptos-finos');
+    const todos = (await loadAllBlocks('pt', { incluirEnCuarentena: true })) as any[];
+    const pisoBase = conPisoCero((id: string) => (id.startsWith('b12') ? 6 : 8), pisoCero());
+    // Se aísla la decisión de E2#22: se comparan los servibles contra los
+    // servibles MÁS el excedente devuelto. La cuarentena VIEJA (Ola V) sí
+    // deja 25 puntos bajo el piso, pero eso es déficit real y declarado —
+    // mezclarlo aquí haría que este test midiera otra cosa y no cazara
+    // nunca una mala selección de excedente.
+    const esExcedente = (x: any) => String(x?.variantVerificacion ?? '').includes('excedente sobre la cobertura');
+    const servibles = todos.filter((x) => x?.variantStatus !== 'needs-human');
+    const conExcedente = [...servibles, ...todos.filter(esExcedente)];
+    const antes = contarPuntos(conExcedente, { incluirCuarentena: true }).cuenta;
+    const despues = contarPuntos(servibles).cuenta;
+    // El piso de un PADRE cubierto es 0: su déficit es inalcanzable por
+    // construcción. Sin esto, `b8-colocacao-pronominal` —cuyos sub-puntos
+    // están todos cubiertos— aparecía como caída y no lo es.
+    const piso = conPadreCubierto(pisoBase, despues);
+    const caen: string[] = [];
+    for (const [id, n] of antes) if (n >= piso(id) && (despues.get(id) ?? 0) < piso(id)) caen.push(id);
+    expect(caen).toEqual([]);
   });
 
   it('loadBlock filtra igual que loadAllBlocks', async () => {

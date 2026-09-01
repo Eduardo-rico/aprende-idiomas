@@ -34,7 +34,10 @@
         "El ratón"
       ],
       "answer": "El carro"
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r"
+    ]
   },
   {
     "id": "01bc77ff",
@@ -89,7 +92,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Meu nome começa com a letra A. Qual é a primeira letra do meu nome?",
@@ -101,7 +104,11 @@
         "O"
       ],
       "answer": "A"
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-alfabeto"
   },
   {
     "id": "02615cb8",
@@ -126,7 +133,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Um dos meus irmãos não come pão por causa da alergia.",
@@ -136,7 +143,11 @@
       "acceptedAlternatives": [
         "Uno de mis hermanos no come pan debido a la alergia."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-nasal-ao-oes"
   },
   {
     "id": "045fccec",
@@ -172,7 +183,10 @@
       "acceptedAlternatives": [
         "Ese libro es muy difícil."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-paroxitona"
+    ]
   },
   {
     "id": "046a3fd1",
@@ -208,7 +222,10 @@
       "pt-br": {
         "sentence": "Minha ___ cantou uma canção bonita."
       }
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-til"
+    ]
   },
   {
     "id": "0560d6c5",
@@ -234,13 +251,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'hombre' en portugués?",
       "back": "homem",
       "example": "O homem que trabalha comigo é brasileiro."
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-nasal-m-final"
   },
   {
     "id": "056d0918",
@@ -265,7 +286,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-vogais-nasais"
+    ]
   },
   {
     "id": "058511dc",
@@ -298,7 +322,10 @@
       "target": "Rosa corrió tres kilómetros.",
       "sourceLang": "pt-pt",
       "targetLang": "es"
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r"
+    ]
   },
   {
     "id": "065e9aee",
@@ -323,13 +350,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Qué ocurre con la 's' en posición de coda silábica en BR vs PT?",
       "back": "BR: se mantiene como /s/ | PT: se realiza como /ʃ/ ante consonante o final",
       "example": "mesmo → BR [mez.mu] / PT [meʒ.mu] | nós mesmos → BR [nos mez.mus]"
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-s-final"
   },
   {
     "id": "0693557a",
@@ -398,7 +429,10 @@
         "olho"
       ],
       "answer": "olho"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-ll-lh"
+    ]
   },
   {
     "id": "082b70a7",
@@ -429,7 +463,10 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-oxitona"
+    ]
   },
   {
     "id": "082f62e1",
@@ -445,7 +482,7 @@
     ],
     "contentHash": "082f62e1101f0e17848f2d1b07573901216a944bba3c6cb682d3ed9dbb6436bf",
     "esContrast": "En español 'necesitar' no lleva preposición; en PT 'precisar' requiere 'de'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
@@ -457,7 +494,11 @@
         "em"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-de"
   },
   {
     "id": "0866375c",
@@ -493,7 +534,10 @@
       "acceptedAlternatives": [
         "Las hojas de acero son muy resistentes."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-acento-cedilha"
+    ]
   },
   {
     "id": "08716d78",
@@ -525,7 +569,10 @@
       "front": "¿Cuál es la regla de pronunciación de 'r' en posición media en PT-BR?",
       "back": "Se pronuncia como /ʁ/ (vibrante múltiple) entre vocales",
       "example": "caro /ka.ʁu/, duro /du.ʁu/, mar /maʁ/"
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r"
+    ]
   },
   {
     "id": "098a851f",
@@ -551,7 +598,8 @@
         }
       ],
       "hintEs": "el lápiz — ojo a la -s final"
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "0d4c1972",
@@ -576,7 +624,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-proparoxitona"
+    ]
   },
   {
     "id": "0de55e46",
@@ -600,13 +651,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Cuántas letras tiene el alfabeto portugués?",
       "back": "26 letras (el mismo que el español)",
       "example": "O alfabeto português tem 26 letras, igual ao espanhol."
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-alfabeto"
   },
   {
     "id": "110cf663",
@@ -637,7 +692,10 @@
       "front": "lleno",
       "back": "cheio",
       "example": "O restaurante está cheio."
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-ll-lh"
+    ]
   },
   {
     "id": "1147ba5d",
@@ -668,7 +726,10 @@
       "front": "¿Cuál es la letra que aparece solo en portugués y no en español?",
       "back": "ç (cê cedilhado)",
       "example": "A palavra 'ação' leva 'ç' em português."
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto"
+    ]
   },
   {
     "id": "12243a35",
@@ -705,7 +766,11 @@
         "Cuatro"
       ],
       "answer": "Una"
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto",
+      "b1-acento-cedilha"
+    ]
   },
   {
     "id": "133a98bd",
@@ -740,7 +805,10 @@
       "front": "¿Por qué «hábito» lleva tilde y «habito» no es la misma palabra?",
       "back": "hábito es PROPAROXÍTONA (esdrújula) y en portugués todas la llevan, sin excepción. «habito» sin tilde es la 1.ª persona del verbo habitar. La regla: toda proparoxítona se acentúa; las paroxítonas sólo si terminan en -l, -r, -x, -n, -i, -u, -ã, -ão, -um.",
       "example": "hábito, fábrica, médico, rápido (proparoxítonas, todas con tilde) · fácil, açúcar (paroxítonas acentuadas por su final)"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-proparoxitona"
+    ]
   },
   {
     "id": "15eab0ae",
@@ -775,7 +843,8 @@
       "acceptedAlternatives": [
         "Esse colectivo é difícil de pegar."
       ]
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "182b84cf",
@@ -813,7 +882,8 @@
     },
     "variantOverrides": {
       "pt-br": {}
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "185d89ba",
@@ -873,7 +943,10 @@
       "target": "¿Qué hora es? No tengo reloj.",
       "sourceLang": "pt-pt",
       "targetLang": "es"
-    }
+    },
+    "__nuevos": [
+      "b1-h-muda"
+    ]
   },
   {
     "id": "194576a1",
@@ -916,7 +989,8 @@
       "pt-br": {
         "audioText": "Meus olhos são verdes. Mais pessoas têm olhos castanhos no Brasil."
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "195e61ed",
@@ -947,7 +1021,10 @@
       "target": "O hotel abre a esta hora",
       "sourceLang": "es",
       "targetLang": "pt-pt"
-    }
+    },
+    "__nuevos": [
+      "b1-h-muda"
+    ]
   },
   {
     "id": "1a16ca62",
@@ -972,7 +1049,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Los ojos del gato son verdes.",
@@ -982,7 +1059,11 @@
       "acceptedAlternatives": [
         "Os olhos do gato são esverdeados."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-s-final"
   },
   {
     "id": "1a77897b",
@@ -1040,7 +1121,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto",
+      "b1-acento-cedilha"
+    ]
   },
   {
     "id": "1cf5bb47",
@@ -1071,7 +1156,10 @@
         }
       ],
       "hintEs": "bueno (de sabor)"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ]
   },
   {
     "id": "1ea185c8",
@@ -1106,7 +1194,10 @@
       "acceptedAlternatives": [
         "Mañana es día lunes."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-nh-ny"
+    ]
   },
   {
     "id": "2101d5d2",
@@ -1141,7 +1232,10 @@
       "acceptedAlternatives": [
         "Minha mãe é doutora."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-vogais-nasais"
+    ]
   },
   {
     "id": "21733ca4",
@@ -1154,7 +1248,7 @@
     "tags": [],
     "contentHash": "ed2874a5779ead50eacacb07662b619a74f0105c65d57984d34d67067d9da5b9",
     "esContrast": "El diptongo nasal /-ão/ suena distinto de la terminación '-an' en español.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Os ___ de pão saem do forno às seis da manhã.",
@@ -1168,7 +1262,11 @@
         }
       ],
       "hintEs": "el plural de «pão»"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-nasal-ao-oes"
   },
   {
     "id": "227a5e6e",
@@ -1202,7 +1300,10 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b1-acento-circunflexo"
+    ]
   },
   {
     "id": "22a0f60d",
@@ -1236,7 +1337,10 @@
       "acceptedAlternatives": [
         "Esa madre está cansada."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-acentos"
+    ]
   },
   {
     "id": "24116203",
@@ -1264,7 +1368,10 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "2465aa85",
@@ -1296,7 +1403,10 @@
       "front": "¿Cómo se dice 'perro' en portugués?",
       "back": "cão",
       "example": "O cão do meu vizinho é pequeno."
-    }
+    },
+    "__nuevos": [
+      "b1-vogais-nasais"
+    ]
   },
   {
     "id": "2643a450",
@@ -1328,7 +1438,11 @@
       "target": "Essa canção é muito popular",
       "sourceLang": "es",
       "targetLang": "pt-pt"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao",
+      "b1-h-muda"
+    ]
   },
   {
     "id": "26a3cf13",
@@ -1362,7 +1476,10 @@
       "pt-br": {
         "back": "[majs]"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ]
   },
   {
     "id": "273b3166",
@@ -1430,7 +1547,8 @@
       "acceptedAlternatives": [
         "Necesito un taxi para el aeropuerto."
       ]
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "2a5d3f34",
@@ -1470,7 +1588,8 @@
       "pt-br": {
         "target": "El ratón grande del carro corrió más rápido en la calle."
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "2a707b3f",
@@ -1507,7 +1626,10 @@
         "fala"
       ],
       "answer": "fala"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao"
+    ]
   },
   {
     "id": "2b6d8e9b",
@@ -1530,7 +1652,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "A mãe comprou pão e deu um pedaço ao cão.",
@@ -1542,7 +1664,11 @@
         "Carne"
       ],
       "answer": "Pão"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-nasal-ao-oes"
   },
   {
     "id": "2bf4e946",
@@ -1577,7 +1703,8 @@
       "acceptedAlternatives": [
         "Compré tres lápices nuevos."
       ]
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "2f00fa00",
@@ -1602,14 +1729,18 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Dois meses, mais olhos.",
       "target": "Dos meses, más ojos.",
       "sourceLang": "pt-pt",
       "targetLang": "es"
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-s-final"
   },
   {
     "id": "31fc0895",
@@ -1641,7 +1772,10 @@
       "pt-br": {
         "sentence": "Meu avô diz que o computador é muit___ útil para aprender."
       }
-    }
+    },
+    "__nuevos": [
+      "b1-acento-agudo"
+    ]
   },
   {
     "id": "32400dc7",
@@ -1664,7 +1798,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "O alfabeto português tem vinte e seis letras, incluindo K, W e Y.",
@@ -1674,7 +1808,11 @@
       "acceptedAlternatives": [
         "El alfabeto portugués tiene 26 letras, incluidas K, W e Y."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-alfabeto"
   },
   {
     "id": "32ec0ec9",
@@ -1713,7 +1851,10 @@
           }
         ]
       }
-    }
+    },
+    "__nuevos": [
+      "b1-vogais-nasais"
+    ]
   },
   {
     "id": "350526ca",
@@ -1745,7 +1886,10 @@
       "front": "¿Cómo se dice 'hermana' en portugués?",
       "back": "irmã",
       "example": "A minha irmã mais nova tem 15 anos."
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-til"
+    ]
   },
   {
     "id": "37b772b1",
@@ -1774,7 +1918,10 @@
         }
       ],
       "hintEs": "donde se duerme cuando se viaja"
-    }
+    },
+    "__nuevos": [
+      "b1-h-muda"
+    ]
   },
   {
     "id": "389f9059",
@@ -1806,7 +1953,10 @@
       "front": "corazón",
       "back": "coração",
       "example": "O coração da cidade bate forte."
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao"
+    ]
   },
   {
     "id": "3b453da4",
@@ -1842,7 +1992,10 @@
         "café"
       ],
       "answer": "fácil"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-oxitona"
+    ]
   },
   {
     "id": "3c91ed82",
@@ -1874,7 +2027,11 @@
       "target": "A mulher tem olhos belos",
       "sourceLang": "es",
       "targetLang": "pt-pt"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-ll-lh",
+      "b1-h-muda"
+    ]
   },
   {
     "id": "3ce0b73e",
@@ -1890,7 +2047,7 @@
     ],
     "contentHash": "3ce0b73efc9e8980cc623bcdae3bda1534c0254aef4bd17af1216080577c439e",
     "esContrast": "En español 'gustar' va sin preposición, pero en PT exige 'de'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
@@ -1902,7 +2059,11 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-de"
   },
   {
     "id": "3e26e656",
@@ -1917,7 +2078,7 @@
     ],
     "contentHash": "3e26e656291bad64087b2d976e02054b88942513fbe1ebf619f44b7209dd02f5",
     "esContrast": "En español la W se llama «uve doble»; en portugués europeo, «duplo vê», y en brasileño «dâblio».",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Em português europeu, a letra W chama-se ___ .",
@@ -1935,7 +2096,11 @@
       "pt-br": {
         "sentence": "Em português, a letra W se chama ___ , igual ao inglês."
       }
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-alfabeto"
   },
   {
     "id": "40dd6dd8",
@@ -1969,7 +2134,10 @@
       "pt-br": {
         "sentence": "Três ___ para você."
       }
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ]
   },
   {
     "id": "41573acf",
@@ -2028,7 +2196,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-acento-agudo"
+    ]
   },
   {
     "id": "4626c4a6",
@@ -2044,7 +2215,7 @@
     ],
     "contentHash": "4626c4a6f31efd5ab0b873b738c6546d84c6341553a555ebfa505d8bb1fa3dab",
     "esContrast": "En BR se pronuncia /kaʁu/ (el 'r' final es /ʁ/), mientras que en PT es /kaʁu/ con vibrante alveolar múltiple.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "O ___ correu pela estrada.",
@@ -2057,7 +2228,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-rr-r"
   },
   {
     "id": "48956949",
@@ -2093,7 +2268,10 @@
         "Esa canción es muy bonita.",
         "Esta canción es muy linda."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao"
+    ]
   },
   {
     "id": "48c59fd3",
@@ -2132,7 +2310,11 @@
         "Un ratón debajo del carro"
       ],
       "answer": "Dos ratones detrás del carro"
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r",
+      "b1-pron-s-final"
+    ]
   },
   {
     "id": "490078b0",
@@ -2161,7 +2343,10 @@
         "—"
       ],
       "answer": "me"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-otras"
+    ]
   },
   {
     "id": "49b99558",
@@ -2198,7 +2383,10 @@
         "tomou"
       ],
       "answer": "banho"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-nh-ny"
+    ]
   },
   {
     "id": "4a686123",
@@ -2265,7 +2453,10 @@
       "acceptedAlternatives": [
         "Cierra bien los ojos y descansa un poco."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-ll-lh"
+    ]
   },
   {
     "id": "4aeeb75d",
@@ -2301,7 +2492,10 @@
       "acceptedAlternatives": [
         "El chico comió pan con miel."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-acentos"
+    ]
   },
   {
     "id": "4d0b69ee",
@@ -2326,7 +2520,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "El carro es rojo.",
@@ -2336,7 +2530,11 @@
       "acceptedAlternatives": [
         "O carro é encarnado."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-rr-r"
   },
   {
     "id": "4db8fa08",
@@ -2378,7 +2576,10 @@
       "pt-br": {
         "target": "Meu avô já morreu."
       }
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-oxitona"
+    ]
   },
   {
     "id": "4dd2b7ab",
@@ -2393,7 +2594,7 @@
     ],
     "contentHash": "4dd2b7abc4a977069d881c88c2a5869ed7888e03d1f99cc64e100e9a783c1bf4",
     "esContrast": "«Lembrar» puede ser pronominal (ES «recordar»); PT usa «lembrar DE».",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "lembrar",
@@ -2405,7 +2606,11 @@
         "em"
       ],
       "answer": "da"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-de"
   },
   {
     "id": "4f1e17b4",
@@ -2420,7 +2625,7 @@
     ],
     "contentHash": "4f1e17b486de1004a31cd31341baff33d4605fa5eec3d0e1c04abd2600bcaff7",
     "esContrast": "El alfabeto portugués tiene las mismas 26 letras que el español.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "O alfabeto português tem ___ letras.",
@@ -2433,7 +2638,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-alfabeto"
   },
   {
     "id": "50bfb214",
@@ -2467,7 +2676,10 @@
         "Ninguna"
       ],
       "answer": "Dos"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-oxitona"
+    ]
   },
   {
     "id": "51a1ce6e",
@@ -2499,7 +2711,10 @@
       "front": "¿Dónde está la sílaba tónica en 'táxi'?",
       "back": "táxi — es paroxítona (acento en la penúltima: TÁ-xi)",
       "example": "Vou de táxi para o aeroporto."
-    }
+    },
+    "__nuevos": [
+      "b1-silaba-tonica"
+    ]
   },
   {
     "id": "51b532fd",
@@ -2525,13 +2740,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Qué indica el acento grave (`)?",
       "back": "Solo se usa en la contracción 'a' + 'aquele/aquela' → 'àquele/àquela'",
       "example": "Vou à padaria. (= a + a padaria)"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-crase"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-acento-crase"
   },
   {
     "id": "52a18a1a",
@@ -2567,7 +2786,11 @@
       "acceptedAlternatives": [
         "O pai de João foi a São Paulo e trouxe pão para nós."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-acento-circunflexo",
+      "b1-alfabeto"
+    ]
   },
   {
     "id": "52b5b890",
@@ -2601,7 +2824,10 @@
         "Está tudo bem, obrigado.",
         "Está tudo ok, obrigado."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ]
   },
   {
     "id": "537c9695",
@@ -2637,7 +2863,11 @@
       "acceptedAlternatives": [
         "Os meses passaram depressa."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r",
+      "b1-pron-s-final"
+    ]
   },
   {
     "id": "54bd1670",
@@ -2652,7 +2882,7 @@
     ],
     "contentHash": "54bd16708acba055f7d6c94b863ee21f7306279a555e3432ed4fa88f76e9f4e5",
     "esContrast": "En español 'soñar' lleva 'con'; en PT 'sonhar COM', misma preposición.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "sonhar",
@@ -2664,7 +2894,11 @@
         "a"
       ],
       "answer": "com"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-com"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-com"
   },
   {
     "id": "5583d948",
@@ -2679,7 +2913,7 @@
     ],
     "contentHash": "5583d94833e0ae38c0d37af57904ad1ac18d1660684190e4be605ca583554217",
     "esContrast": "La 's' final de 'pães' suena /s/ en BR y /ʃ/ en PT por nasalización previa.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Quero dois ___, se faz favor.",
@@ -2691,7 +2925,11 @@
         }
       ],
       "hintEs": "el plural de «pão»"
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-s-final"
   },
   {
     "id": "58d77043",
@@ -2706,7 +2944,7 @@
     ],
     "contentHash": "58d770434350d37f475162104fd319570272b331a60672279d8ccca710bd44d9",
     "esContrast": "«Pensar» lleva «em» en PT, mientras en ES usamos «en».",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
@@ -2718,7 +2956,11 @@
         "—"
       ],
       "answer": "em"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-em"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-em"
   },
   {
     "id": "5930c2c9",
@@ -2752,7 +2994,8 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "59ae5c80",
@@ -2787,7 +3030,8 @@
       "acceptedAlternatives": [
         "Quiero tomar un café."
       ]
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "5b4c538b",
@@ -2810,7 +3054,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Comprei três pães e um bolo para a mãe do meu amigo.",
@@ -2820,7 +3064,11 @@
       "acceptedAlternatives": [
         "Compré tres panes y una torta para la madre de mi amigo."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-nasal-ao-oes"
   },
   {
     "id": "5be546f8",
@@ -2857,7 +3105,8 @@
         "back": "Como /h/ (aspiración suave)",
         "example": "rua → ['hua] | rato → ['hatu]"
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "5c1ce6e3",
@@ -2883,13 +3132,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Por qué 'olhos' se pronuncia diferente entre variantes?",
       "back": "Porque la 's' final es /s/ en BR y /ʃ/ en PT",
       "example": "olhos → ['ɔ.ʎos] en BR / ['ɔ.ʎoʃ] en PT"
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-s-final"
   },
   {
     "id": "5c39fcc3",
@@ -2921,7 +3174,10 @@
       "front": "¿Cuál es el plural de 'pão'?",
       "back": "pães",
       "example": "Ontem comprei dois pães na padaria."
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ]
   },
   {
     "id": "5e4bd926",
@@ -2944,7 +3200,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "O almoço está bom, mas o café está ruim.",
@@ -2956,7 +3212,11 @@
         "Pequeno"
       ],
       "answer": "Bom"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-nasal-m-final"
   },
   {
     "id": "5e68ce66",
@@ -2989,7 +3249,10 @@
       "front": "Cuál es la diferencia entre 'papel' y 'papél'?",
       "back": "'papel' (/paˈpɛw/) = papel (material); 'papel' (/paˈpɛw/) se pronuncia igual en BR — la diferencia de acento no cambia el sonido en muchas variedades",
       "example": "Necesito papel para escribir. / Este papel é muito resistente."
-    }
+    },
+    "__nuevos": [
+      "b1-acento-agudo"
+    ]
   },
   {
     "id": "5f17e878",
@@ -3012,7 +3275,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Meu irmão tem um cão.",
@@ -3024,7 +3287,11 @@
         "O tio"
       ],
       "answer": "O irmão"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-nasal-ao-oes"
   },
   {
     "id": "6176ab3e",
@@ -3052,7 +3319,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-nh-ny"
+    ]
   },
   {
     "id": "620b39dc",
@@ -3095,7 +3365,8 @@
       "pt-br": {
         "audioText": "Quantos meses você ficou no Brasil? Fiquei três meses, mas foram os meses mais bons."
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "62b470e0",
@@ -3126,7 +3397,10 @@
       "front": "mañana",
       "back": "manhã",
       "example": "Vemo-nos amanhã de manhã."
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-nh-ny"
+    ]
   },
   {
     "id": "6524706c",
@@ -3150,13 +3424,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "hola",
       "back": "oi",
       "example": "Oi, tudo bem?"
-    }
+    },
+    "__nuevos": [
+      "b1-h-muda"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-h-muda"
   },
   {
     "id": "654c0b72",
@@ -3187,7 +3465,8 @@
       "front": "Clasifica 'mamãe': ¿aguda, grave o esdrújula?",
       "back": "ma-mãe: 2 sílabas → oxítona. Termina en 'ã' (nasal), así que LLEVA tilde: mamãe.",
       "example": "A minha mamãe é muito carinhosa."
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "65a02894",
@@ -3210,7 +3489,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Ele está bem hoje, graças a Deus.",
@@ -3220,7 +3499,11 @@
       "acceptedAlternatives": [
         "Él se encuentra bien hoy, gracias a Dios."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-nasal-m-final"
   },
   {
     "id": "666eaeb9",
@@ -3255,7 +3538,8 @@
       "acceptedAlternatives": [
         "Mi abuelo es portugués."
       ]
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "6a14a1d4",
@@ -3287,7 +3571,10 @@
       "front": "¿Cómo se dice 'madre' en portugués?",
       "back": "mãe",
       "example": "A minha mãe é muito carinhosa."
-    }
+    },
+    "__nuevos": [
+      "b1-vogais-nasais"
+    ]
   },
   {
     "id": "6c6bb9ac",
@@ -3320,7 +3607,8 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "6d37d0a6",
@@ -3336,7 +3624,7 @@
     ],
     "contentHash": "6d37d0a64d7e345c412d637fadac5eb5994327e110398a871d0bbdca849186c6",
     "esContrast": "El 'r' intervocálico en 'carro' se pronuncia /ʁ/ en BR y /ɾ/ en PT (vibrante simple).",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Comprei um ___ novo.",
@@ -3349,7 +3637,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-rr-r"
   },
   {
     "id": "6dfaaf5b",
@@ -3382,7 +3674,10 @@
       "acceptedAlternatives": [
         "Quiero un pan con manteca."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ]
   },
   {
     "id": "6e92fc31",
@@ -3414,7 +3709,10 @@
       "front": "¿En qué sílaba cae el acento en 'café'?",
       "back": "café — es oxítona (acento en la última sílaba: ca-FÉ)",
       "example": "Eu quero um café, por favor."
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-oxitona"
+    ]
   },
   {
     "id": "6ee544e9",
@@ -3443,7 +3741,10 @@
         "a"
       ],
       "answer": "em"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-em"
+    ]
   },
   {
     "id": "7088d525",
@@ -3475,7 +3776,10 @@
       "front": "Para qué sirve la tilde (~)?",
       "back": "Indica nasalización: ã, õ",
       "example": "maçã /maˈsɐ̃/, coração /koɾaˈsɐ̃w/."
-    }
+    },
+    "__nuevos": [
+      "b1-acento-cedilha"
+    ]
   },
   {
     "id": "7093d2de",
@@ -3577,7 +3881,12 @@
       "target": "O soldado tem um olho roxo",
       "sourceLang": "es",
       "targetLang": "pt-pt"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-nh-ny",
+      "b1-corresp-ll-lh",
+      "b1-h-muda"
+    ]
   },
   {
     "id": "770097dd",
@@ -3604,7 +3913,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-acento-agudo"
+    ]
   },
   {
     "id": "77fd9df3",
@@ -3632,7 +3944,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-nh-ny"
+    ]
   },
   {
     "id": "79125e5d",
@@ -3668,7 +3983,10 @@
       "acceptedAlternatives": [
         "Este ejercicio es muy fácil."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-paroxitona"
+    ]
   },
   {
     "id": "798ef701",
@@ -3693,7 +4011,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ]
   },
   {
     "id": "7a036ad6",
@@ -3719,7 +4040,10 @@
         "por"
       ],
       "answer": "com"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-com"
+    ]
   },
   {
     "id": "7a7ac9fb",
@@ -3790,7 +4114,8 @@
           "Ela cantava muito bem, porém agora sua voz está ruim."
         ]
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "7d8a2c74",
@@ -3821,7 +4146,10 @@
       "front": "¿Cuántas sílabas tiene ' Brasil'? ¿Es aguda, grave o esdrújula?",
       "back": "Brasil: 2 sílabas (Bra-sil) → paroxítona. Termina en -l → sin tilde.",
       "example": "Eu amo o Brasil."
-    }
+    },
+    "__nuevos": [
+      "b1-silaba-tonica"
+    ]
   },
   {
     "id": "7f2bd6e8",
@@ -3837,7 +4165,7 @@
     ],
     "contentHash": "af2e48d779bd584e4376cab19e9c0da6adb0730e84b1c21bf471b089fbbe7761",
     "esContrast": "En BR el 'r' inicial de 'rua' suena /h/; en PT es una vibrante alveolar /ʁ/.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "A ___ é muito larga.",
@@ -3849,7 +4177,11 @@
         }
       ],
       "hintEs": "la calle"
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-rr-r"
   },
   {
     "id": "7fdd81e1",
@@ -3883,7 +4215,10 @@
       "acceptedAlternatives": [
         "A palavra 'coração' tem til."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-acento-cedilha"
+    ]
   },
   {
     "id": "80945c47",
@@ -3909,7 +4244,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "audioExento": {
       "motivo": "front y back en español: explica cuándo se escribe ç"
     },
@@ -3918,7 +4253,11 @@
       "front": "¿Cuándo se escribe 'ç' en portugués?",
       "back": "Sólo ante a, o, u — para que suene /s/ donde una c sola sonaría /k/. NUNCA ante e ni i: ahí basta con c (cedo, cinco), porque ya suena /s/.",
       "example": "começar, açúcar, moço, faço  —  pero: cedo, cinema, cinco (nunca *çedo, *çinco)"
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-alfabeto"
   },
   {
     "id": "81997b51",
@@ -3946,7 +4285,10 @@
         }
       ],
       "hintEs": "que no cuesta esfuerzo — ojo a la sílaba tónica"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-paroxitona"
+    ]
   },
   {
     "id": "81d0ffea",
@@ -3973,7 +4315,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-acento-crase"
+    ]
   },
   {
     "id": "8213a892",
@@ -3996,7 +4341,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Mi hermano mayor vive en São Paulo.",
@@ -4006,7 +4351,11 @@
       "acceptedAlternatives": [
         "Meu irmão mais velho vive em São Paulo."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-nasal-ao-oes"
   },
   {
     "id": "82d8f1d5",
@@ -4032,13 +4381,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Cuál es el artículo indefinido masculino singular en portugués?",
       "back": "um",
       "example": "Eu tenho um irmão e uma irmã."
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-nasal-ao-oes"
   },
   {
     "id": "85451e7c",
@@ -4066,7 +4419,10 @@
         "em"
       ],
       "answer": "da"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "85f61ce8",
@@ -4102,7 +4458,10 @@
         "Mi mamá es brasileña.",
         "Mi madre es brasilera."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-vogais-nasais"
+    ]
   },
   {
     "id": "8695dcff",
@@ -4177,7 +4536,10 @@
       "pt-br": {
         "back": "también / también"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ]
   },
   {
     "id": "86c358b8",
@@ -4203,13 +4565,18 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Compara la pronunciación de 'dois reais' en BR vs PT",
       "back": "BR: [dojs ʁe.'ajs] | PT: [dojʃ ʁe.'ajʃ]",
       "example": "Dois reais é pouco."
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r",
+      "b1-pron-s-final"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-rr-r, b1-pron-s-final"
   },
   {
     "id": "881c40d7",
@@ -4233,13 +4600,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Se usan las letras K, W e Y en portugués?",
       "back": "Sí, pero solo en palabras extranjeras: kiwi, wifi, show, kart",
       "example": "Ele gosta de jogar kart."
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-alfabeto"
   },
   {
     "id": "88aaa870",
@@ -4270,7 +4641,10 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ]
   },
   {
     "id": "88f4a544",
@@ -4302,7 +4676,10 @@
       "front": "hotel",
       "back": "hotel",
       "example": "O hotel fica no centro."
-    }
+    },
+    "__nuevos": [
+      "b1-h-muda"
+    ]
   },
   {
     "id": "8978047a",
@@ -4326,14 +4703,19 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Mañana por la mañana",
       "target": "Amanhã de manhã",
       "sourceLang": "es",
       "targetLang": "pt-pt"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao",
+      "b1-h-muda"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-corresp-on-ao, b1-h-muda"
   },
   {
     "id": "8b4f402c",
@@ -4365,7 +4747,8 @@
       "front": "¿Dónde está la sílaba tónica en 'lápis'?",
       "back": "lápis — es paroxítona (acento en la penúltima: LÁ-pis)",
       "example": "Preciso de um lápis para escrever."
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "8b9118d0",
@@ -4409,7 +4792,10 @@
           }
         ]
       }
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-oxitona"
+    ]
   },
   {
     "id": "8c01145d",
@@ -4442,7 +4828,10 @@
       "front": "¿Cómo se dice 'bien' en portugués?",
       "back": "bem",
       "example": "Eu estou bem, obrigado."
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ]
   },
   {
     "id": "8c2626c7",
@@ -4469,7 +4858,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "La ciudad brasileña tiene muchas calles anchas.",
@@ -4479,7 +4868,12 @@
       "acceptedAlternatives": [
         "O Brasil tem muitas ruas largas."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r",
+      "b1-pron-s-final"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-rr-r, b1-pron-s-final"
   },
   {
     "id": "8de82d91",
@@ -4514,7 +4908,10 @@
         "mãe"
       ],
       "answer": "mãe"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-til"
+    ]
   },
   {
     "id": "8e638d6e",
@@ -4548,7 +4945,10 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b1-acento-circunflexo"
+    ]
   },
   {
     "id": "8f089cb7",
@@ -4617,7 +5017,10 @@
         "táxi"
       ],
       "answer": "música"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-oxitona"
+    ]
   },
   {
     "id": "90adc730",
@@ -4649,7 +5052,8 @@
       "front": "¿Cuál es la regla de acentuación para palabras terminadas en -és, -eas, -em, -ens?",
       "back": "Son oxítonas y LLEVAN tilde: café, marajás, parabéns, vinténs",
       "example": "Ela é muito simpática, parabéns!"
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "9163a764",
@@ -4682,7 +5086,8 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "91a80ac4",
@@ -4719,7 +5124,8 @@
         "back": "Como /s/ (sorda)",
         "example": "dois → [dojs] | meses → [me.zis]"
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "9472f304",
@@ -4754,7 +5160,8 @@
       "acceptedAlternatives": [
         "Comprei três lápis de novo."
       ]
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "953797d5",
@@ -4788,7 +5195,11 @@
       "target": "O coração da canção",
       "sourceLang": "es",
       "targetLang": "pt-pt"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao",
+      "b1-h-muda"
+    ]
   },
   {
     "id": "9675ecfe",
@@ -4817,7 +5228,10 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "96860d5e",
@@ -4852,7 +5266,10 @@
       "acceptedAlternatives": [
         "El can del vecino ladra mucho."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-vogais-nasais"
+    ]
   },
   {
     "id": "96bfd62c",
@@ -4885,7 +5302,10 @@
       "acceptedAlternatives": [
         "Mi hermano mayor reside en Lisboa."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ]
   },
   {
     "id": "96c70ed7",
@@ -4913,7 +5333,10 @@
         "em"
       ],
       "answer": "por"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-por-para"
+    ]
   },
   {
     "id": "97b042f2",
@@ -4944,7 +5367,10 @@
       "front": "mujer",
       "back": "mulher",
       "example": "Aquela mulher é minha mãe."
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-nh-ny"
+    ]
   },
   {
     "id": "97eb196c",
@@ -4972,7 +5398,10 @@
         "a"
       ],
       "answer": "em"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-em"
+    ]
   },
   {
     "id": "98b6061c",
@@ -4997,13 +5426,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "canción",
       "back": "canção",
       "example": "Essa canção me faz chorar."
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-corresp-on-ao"
   },
   {
     "id": "98da1926",
@@ -5037,7 +5470,10 @@
       "pt-br": {
         "back": "['hua] en BR, ['ʁua] en PT"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r"
+    ]
   },
   {
     "id": "99c0eaf2",
@@ -5061,7 +5497,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Açaí é uma fruta típica do Brasil.",
@@ -5071,7 +5507,11 @@
       "acceptedAlternatives": [
         "El açaí es una fruta típica de Brasil."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-alfabeto"
   },
   {
     "id": "9f57a67b",
@@ -5129,7 +5569,10 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "a37da8d4",
@@ -5162,7 +5605,10 @@
       "front": "¿Cuántas vocales tiene el portugués con acentos?",
       "back": "5 vocales nasales /ã ẽ ĩ õ ũ/ (maçã, bem, sim, bom, um) — se escriben con til (ã/õ) o con m/n; los acentos (´ ^) marcan timbre/tonicidad, no crean vocales nuevas.",
       "example": "casa, café, Lisboa, público, maçã, razão."
-    }
+    },
+    "__nuevos": [
+      "b1-acento-agudo"
+    ]
   },
   {
     "id": "a3ba6f48",
@@ -5194,7 +5640,10 @@
       "front": "baño",
       "back": "banho",
       "example": "Vou tomar um banho."
-    }
+    },
+    "__nuevos": [
+      "b1-h-muda"
+    ]
   },
   {
     "id": "a3d9f5a1",
@@ -5222,7 +5671,8 @@
         }
       ],
       "hintEs": "el coche que se toma con taxímetro — ojo al acento"
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "a6f95259",
@@ -5238,7 +5688,7 @@
     ],
     "contentHash": "a6f952599220ff381cfc93a4574f347be27af3400e36203159d1388d7292de8c",
     "esContrast": "'Corazón' → 'coração'. Es -ão, no -on. También se reduce la -z- a -c-.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "O meu ___ bate mais forte quando te vejo.",
@@ -5249,7 +5699,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-corresp-on-ao"
   },
   {
     "id": "aab55904",
@@ -5286,7 +5740,8 @@
       "pt-br": {
         "back": "Como um 'h' aspirado suave ou vibrante múltiplo alveolar"
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "aba830a5",
@@ -5318,7 +5773,8 @@
       "front": "¿Dónde está la sílaba tónica en 'difícil'?",
       "back": "difícil — es paroxítona (acento en la penúltima: di-FÍ-cil)",
       "example": "A lição de hoje é difícil."
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "acbb1382",
@@ -5346,7 +5802,10 @@
         }
       ],
       "hintEs": "el ojo"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-ll-lh"
+    ]
   },
   {
     "id": "b0265e22",
@@ -5378,7 +5837,10 @@
       "front": "¿Cómo se dice 'bueno' en portugués?",
       "back": "bom",
       "example": "Este filme é muito bom!"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ]
   },
   {
     "id": "b18f6d5a",
@@ -5403,14 +5865,18 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Quero dois cafés, mais água e menos açúcar.",
       "target": "Quiero dos cafés, más agua y menos azúcar.",
       "sourceLang": "pt-pt",
       "targetLang": "es"
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-s-final"
   },
   {
     "id": "b196f756",
@@ -5426,7 +5892,7 @@
     ],
     "contentHash": "b196f756fcfdb5e17f4d7cd2362c161988207b5c6be4876965bc4307e2f43b8c",
     "esContrast": "En español 'soñar con' usa 'con'; en PT también se dice 'sonhar com' — ¡es igual!",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "sonhar",
@@ -5438,7 +5904,11 @@
         "por"
       ],
       "answer": "com"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-com"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-com"
   },
   {
     "id": "b19dd2a9",
@@ -5480,7 +5950,8 @@
       "pt-br": {
         "target": "El ratón rogó la ropa."
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "b3428df2",
@@ -5509,7 +5980,10 @@
         "em"
       ],
       "answer": "da"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "b4a3724c",
@@ -5540,7 +6014,10 @@
       "front": "¿Cómo se llama la letra 'A' en portugués?",
       "back": "á (á: sonido /a/)",
       "example": "Quando dizemos o nome das letras, dizemos: 'á', 'bê', 'cê'..."
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto"
+    ]
   },
   {
     "id": "b61938ce",
@@ -5576,7 +6053,10 @@
       "front": "¿Hay diferencia entre PT-PT y PT-BR en los acentos gráficos?",
       "back": "Sí, y es sistemática: donde la vocal tónica es abierta en Portugal y cerrada en Brasil, PT-PT escribe AGUDO y PT-BR CIRCUNFLEJO. António/Antônio, económico/econômico, génio/gênio, ténis/tênis, bónus/bônus. El Acordo de 1990 mantiene las DOS grafías como oficiales — es de los pocos casos de doble ortografía legal.\n\nOjo con el mito inverso: «vôo» con circunflejo era grafía BRASILEÑA antigua (reglas de 1943), nunca portuguesa, y el Acordo la abolió: hoy los dos escriben «voo».",
       "example": "PT-PT: António, económico, génio · PT-BR: Antônio, econômico, gênio · ambos: voo, enjoo"
-    }
+    },
+    "__nuevos": [
+      "b1-acentos"
+    ]
   },
   {
     "id": "b8b56359",
@@ -5612,7 +6092,10 @@
         "Mi corazón está contento.",
         "Mi corazón está alegre."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao"
+    ]
   },
   {
     "id": "b8bb9b51",
@@ -5628,7 +6111,7 @@
     ],
     "contentHash": "b8bb9b514c43b4de6108e9bbe1ddf3ef8d1da0cbdb804dea4128cdd9a0b66a09",
     "esContrast": "En ES «soñar» lleva «con» (correcto), pero algunos confunden con «de».",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "sonhar",
@@ -5640,7 +6123,11 @@
         "por"
       ],
       "answer": "com"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-com"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-com"
   },
   {
     "id": "b94d72c6",
@@ -5671,7 +6158,10 @@
       "pt-br": {
         "sentence": "Preciso de água. Tenho muit___ sede."
       }
-    }
+    },
+    "__nuevos": [
+      "b1-acentos"
+    ]
   },
   {
     "id": "ba9de48e",
@@ -5696,7 +6186,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "La situación es mala.",
@@ -5706,7 +6196,11 @@
       "acceptedAlternatives": [
         "A situação é má."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-vogais-nasais"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-vogais-nasais"
   },
   {
     "id": "baa408d7",
@@ -5733,7 +6227,8 @@
         }
       ],
       "hintEs": "amable"
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "bd843713",
@@ -5770,7 +6265,8 @@
         "Porque son esdrújulas"
       ],
       "answer": "Porque terminan en consonantel consonante del grupo s, l, r, n"
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "bd87ddc1",
@@ -5803,7 +6299,11 @@
       "target": "Ela é uma mulherzinha",
       "sourceLang": "es",
       "targetLang": "pt-pt"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-ll-lh",
+      "b1-h-muda"
+    ]
   },
   {
     "id": "bdad8a26",
@@ -5830,7 +6330,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-acentos"
+    ]
   },
   {
     "id": "bdcff0e2",
@@ -5857,7 +6360,8 @@
         }
       ],
       "hintEs": "que cuesta esfuerzo — ojo a la sílaba tónica"
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "be3cd7cb",
@@ -5891,7 +6395,10 @@
       "acceptedAlternatives": [
         "O cachorro é bom."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ]
   },
   {
     "id": "be6d8a6e",
@@ -5917,13 +6424,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Por qué en PT europeo 'os' suena como 'och'?",
       "back": "Porque la 's' entre vocales se convierte en /ʒ/ o /ʃ/ por asimilación",
       "example": "os homens → [o'ʒõjʃ] o [o'ʃõjʃ]"
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-s-final"
   },
   {
     "id": "bee518df",
@@ -5956,7 +6467,10 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b1-acento-circunflexo"
+    ]
   },
   {
     "id": "bf81e577",
@@ -5992,7 +6506,11 @@
         "El sonido 'z'"
       ],
       "answer": "El sonido 's' antes de e, i, o, u"
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto",
+      "b1-acento-agudo"
+    ]
   },
   {
     "id": "c052bca1",
@@ -6008,7 +6526,7 @@
     ],
     "contentHash": "c052bca15d1745f3e061b8e231ce50606078fa76b7dbe6c42bd669820227ad71",
     "esContrast": "En BR se pronuncia /hatu/ por tratarse de 'r' inicial intervocálico; en PT sería /ʁatu/.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "O ___ está no canto.",
@@ -6021,7 +6539,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-rr-r"
   },
   {
     "id": "c1dfca55",
@@ -6048,7 +6570,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "O carro está no mato. Mais um rato apareceu. Dois meses de paciência.",
@@ -6060,7 +6582,12 @@
         "Un rata en el barro"
       ],
       "answer": "Un ratón en el jardín"
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r",
+      "b1-pron-s-final"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-rr-r, b1-pron-s-final"
   },
   {
     "id": "c2c0c60d",
@@ -6092,7 +6619,10 @@
       "front": "¿Por qué 'pôr' (verbo) y 'por' (preposición) se escriben diferente?",
       "back": "pôr = verbo (con circumflexo por la contracción 'pôr' de 'poder') | por = preposición (sin tilde)",
       "example": "Vou pôr o livro na mesa. / Caminhei por horas."
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-paroxitona"
+    ]
   },
   {
     "id": "c2e97f57",
@@ -6123,7 +6653,10 @@
       "front": "león",
       "back": "leão",
       "example": "O leão é o rei da selva."
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao"
+    ]
   },
   {
     "id": "c5dab06e",
@@ -6158,7 +6691,10 @@
         "Ninguna"
       ],
       "answer": "Dos"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-cedilha"
+    ]
   },
   {
     "id": "c75efbcc",
@@ -6192,7 +6728,10 @@
       "pt-br": {
         "back": "[dojs] en BR"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ]
   },
   {
     "id": "c7a2263e",
@@ -6223,7 +6762,10 @@
       "front": "¿Cuántas sílabas tiene 'regráfico'? ¿Dónde está la tilde?",
       "back": "re-grá-fi-co: 4 sílabas (proparoxítona). Tilde en 'grá'. Todas las esdrújulas llevan tilde.",
       "example": "A língua portuguesa é muito regráfica."
-    }
+    },
+    "__nuevos": [
+      "b1-silaba-tonica"
+    ]
   },
   {
     "id": "c7d20bab",
@@ -6258,7 +6800,10 @@
       "acceptedAlternatives": [
         "El hotel queda en el centro de la ciudad."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-h-muda"
+    ]
   },
   {
     "id": "c7eaa553",
@@ -6290,7 +6835,10 @@
       "front": "ojo",
       "back": "olho",
       "example": "Ela tem olhos verdes."
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-nh-ny"
+    ]
   },
   {
     "id": "c83e79da",
@@ -6327,7 +6875,10 @@
         "Todas son esdrújulas"
       ],
       "answer": "La h inicial no se pronuncia"
-    }
+    },
+    "__nuevos": [
+      "b1-h-muda"
+    ]
   },
   {
     "id": "c90e36c7",
@@ -6353,7 +6904,10 @@
         }
       ],
       "hintEs": "el sitio donde se duerme al viajar"
-    }
+    },
+    "__nuevos": [
+      "b1-silaba-tonica"
+    ]
   },
   {
     "id": "cb0e1fda",
@@ -6369,7 +6923,7 @@
     ],
     "contentHash": "cb0e1fdaf21edb80681b19cca8c04b6995e5d3b6d8dce24a6e7e247a367457a0",
     "esContrast": "'Ojos' → 'olhos' con -lh-. En plural se añade -s: olhos.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "O meu irmão tem ___ verdes.",
@@ -6380,7 +6934,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-ll-lh"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-corresp-ll-lh"
   },
   {
     "id": "cd0da55a",
@@ -6415,7 +6973,10 @@
       "acceptedAlternatives": [
         "Voy a darme un baño por la mañana."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-nh-ny"
+    ]
   },
   {
     "id": "d0321a11",
@@ -6472,13 +7033,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "llamar",
       "back": "chamar",
       "example": "Vou te chamar amanhã."
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-ll-lh"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-corresp-ll-lh"
   },
   {
     "id": "d17610a7",
@@ -6515,7 +7080,10 @@
       "pt-br": {
         "back": "r inicial: /h/ | rr intervocálica: /ʁ/ | r final: /χ/"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r"
+    ]
   },
   {
     "id": "d17e3dc1",
@@ -6542,7 +7110,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Dos meses más y terminan las vacaciones.",
@@ -6552,7 +7120,12 @@
       "acceptedAlternatives": [
         "Dois meses mais e terminam as férias."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r",
+      "b1-pron-s-final"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-rr-r, b1-pron-s-final"
   },
   {
     "id": "d2e4d948",
@@ -6584,7 +7157,10 @@
       "front": "¿Cómo se dice 'paloma' en portugués?",
       "back": "pombo",
       "example": "O pombo está no telhado."
-    }
+    },
+    "__nuevos": [
+      "b1-vogais-nasais"
+    ]
   },
   {
     "id": "d32face7",
@@ -6652,7 +7228,8 @@
       "front": "¿Dónde está la sílaba tónica en 'fácil'?",
       "back": "fácil — es paroxítona (acento en la penúltima: FÁ-cil)",
       "example": "Este exercício é muito fácil."
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "d4c69c92",
@@ -6717,7 +7294,10 @@
       "front": "¿Cuál es el plural de 'mão'?",
       "back": "mãos",
       "example": "Ela tem as mãos frias."
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ]
   },
   {
     "id": "d5b76869",
@@ -6756,7 +7336,8 @@
       "pt-br": {
         "target": "El carro está en la calle."
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "d70fb1c6",
@@ -6787,7 +7368,10 @@
       "front": "hora",
       "back": "hora",
       "example": "Que horas são agora?"
-    }
+    },
+    "__nuevos": [
+      "b1-h-muda"
+    ]
   },
   {
     "id": "d9f4120c",
@@ -6824,7 +7408,11 @@
       "acceptedAlternatives": [
         "El corazón tiene cuatro cavidades."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto",
+      "b1-acento-cedilha"
+    ]
   },
   {
     "id": "dbf3eee4",
@@ -6860,7 +7448,10 @@
       "acceptedAlternatives": [
         "En la clase, el profesor habló sobre la sílaba tónica y las reglas de acentuación."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-silaba-tonica"
+    ]
   },
   {
     "id": "dc037b95",
@@ -6892,7 +7483,10 @@
       "front": "¿Cómo se dice 'malo' en portugués?",
       "back": "ruim",
       "example": "Este tempo está muito ruim para sair."
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-n-interior"
+    ]
   },
   {
     "id": "dca2a942",
@@ -6922,7 +7516,10 @@
       "pt-br": {
         "sentence": "Ontem comprei um ___ na padaria."
       }
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ]
   },
   {
     "id": "dce0e9c9",
@@ -6952,7 +7549,10 @@
       "pt-br": {
         "sentence": "Eu me sinto muito ___ hoje."
       }
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ]
   },
   {
     "id": "dce24b0f",
@@ -6984,7 +7584,10 @@
       "front": "¿Todas las palabras esdrújulas (proparoxítonas) llevan tilde?",
       "back": "SÍ. En portugués, TODAS las palabras con acento en la antepenúltima sílaba LLEVAN tilde.",
       "example": "cômodo, rápido, música, político"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-proparoxitona"
+    ]
   },
   {
     "id": "df2f1d4e",
@@ -7007,7 +7610,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Quiero un café con leche, por favor.",
@@ -7015,7 +7618,11 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-nasal-m-final"
   },
   {
     "id": "df7bf7c6",
@@ -7041,7 +7648,10 @@
         }
       ],
       "hintEs": "donde se atiende a los enfermos"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-paroxitona"
+    ]
   },
   {
     "id": "dfa8ec4f",
@@ -7066,7 +7676,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Tengo dos meses más de clases.",
@@ -7076,7 +7686,11 @@
       "acceptedAlternatives": [
         "Faltam-me mais dois meses de aulas."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-s-final"
   },
   {
     "id": "dfc76327",
@@ -7111,7 +7725,10 @@
       "acceptedAlternatives": [
         "La mujer labora todos los días."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-ll-lh"
+    ]
   },
   {
     "id": "dffba4cc",
@@ -7126,7 +7743,7 @@
     ],
     "contentHash": "dffba4cc3456808dacbdac80a1ddaa4d0513ea35b1213c67bf9faf4861df3363",
     "esContrast": "En español 'necesitar' es directo, en PT 'precisar de' exige 'de'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
@@ -7138,7 +7755,11 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-de"
   },
   {
     "id": "e003d393",
@@ -7154,7 +7775,7 @@
     ],
     "contentHash": "b3096cfb594c15af4b567fc186ace14b71c7ff2b9bbfb24ba8d18f95f43d29b4",
     "esContrast": "En BR el 'r' de 'será' es elidido (/se.ˈa/); en PT se mantiene como /sɨ.ˈɾa/ con vibrante alveolar.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "O relatório ___ entregue amanhã.",
@@ -7170,7 +7791,11 @@
         }
       ],
       "hintEs": "futuro de «ser»"
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-rr-r"
   },
   {
     "id": "e0241775",
@@ -7236,7 +7861,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Este livro é bom, mas aquele é ruim.",
@@ -7246,7 +7871,11 @@
       "acceptedAlternatives": [
         "Este libro es bueno, pero aquel es pésimo."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-nasal-m-final"
   },
   {
     "id": "e2a9ef15",
@@ -7278,7 +7907,10 @@
       "front": "Qué indica el acento circunflexo (^)?",
       "back": "Vocal fechada/tensa o sílaba tónica: â, ê, ô",
       "example": "vovô /voˈvɔ/, coração /koɾaˈsɐ̃w/."
-    }
+    },
+    "__nuevos": [
+      "b1-acento-circunflexo"
+    ]
   },
   {
     "id": "e48ab1fd",
@@ -7302,14 +7934,19 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "El baño de la mujer",
       "target": "O banho da mulher",
       "sourceLang": "es",
       "targetLang": "pt-pt"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-nh-ny",
+      "b1-h-muda"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-corresp-nh-ny, b1-h-muda"
   },
   {
     "id": "e679d063",
@@ -7343,7 +7980,10 @@
       "pt-br": {
         "sentence": "Quantos ___ você tem?"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ]
   },
   {
     "id": "e6eae5d6",
@@ -7374,7 +8014,8 @@
       "front": "¿Cuántas sílabas tiene 'ônibus'? ¿Es aguda, grave o esdrújula?",
       "back": "ô-ni-bus: 3 sílabas → paroxítona. Termina en -s → sin tilde (es llana terminada en consonante fuerte).",
       "example": "Vou de ônibus para o trabalho."
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "e6fb129d",
@@ -7408,7 +8049,10 @@
       "pt-br": {
         "back": "[me.zis]"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ]
   },
   {
     "id": "e79c6e8d",
@@ -7440,7 +8084,8 @@
       "pt-br": {
         "sentence": "Minha ___ está no Brasil."
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "e7e139b7",
@@ -7465,7 +8110,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "El ratón corre por la calle.",
@@ -7475,7 +8120,11 @@
       "acceptedAlternatives": [
         "O rato correu pela rua."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-rr-r"
   },
   {
     "id": "e913eb0e",
@@ -7491,7 +8140,7 @@
     ],
     "contentHash": "e913eb0ea8ee74ddd05e122c5845c7fc782ff38bf0024a7426f1b939dd3dcb35",
     "esContrast": "En español 'recordar' puede ser directo; PT 'lembrar alguém de algo' lleva 'de'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "lembrar",
@@ -7503,7 +8152,11 @@
         "ao"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-de"
   },
   {
     "id": "e91c1337",
@@ -7534,7 +8187,8 @@
       "front": "¿Qué terminaciones hacen que una palabra sea paroxítona Y lleve tilde?",
       "back": "Terminaciones que NO se pronuncian: -ns, -l, -r, -z, -x, -on, -ã, -ão (entre otras)",
       "example": "ácil, répter, cruz, Félix, melón, irmã, coração"
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "eb00f539",
@@ -7568,7 +8222,10 @@
       "acceptedAlternatives": [
         "A letra c com cedilha é usada em palavras como 'ação' e 'maçã'."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto"
+    ]
   },
   {
     "id": "ecddceb0",
@@ -7601,7 +8258,10 @@
       "front": "¿Cómo se escribe 'manzana' en portugués?",
       "back": "maçã (con tilde sobre la 'ã')",
       "example": "Eu gosto de comer maçã."
-    }
+    },
+    "__nuevos": [
+      "b1-acento-cedilha"
+    ]
   },
   {
     "id": "eeb37e3c",
@@ -7626,7 +8286,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Vou à praia amanhã.",
@@ -7636,7 +8296,11 @@
       "acceptedAlternatives": [
         "Iré a la playa mañana."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-acento-crase"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-acento-crase"
   },
   {
     "id": "f02234b9",
@@ -7662,7 +8326,10 @@
         }
       ],
       "hintEs": "la bebida negra del desayuno"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-oxitona"
+    ]
   },
   {
     "id": "f05b417d",
@@ -7693,7 +8360,10 @@
       "front": "año",
       "back": "ano",
       "example": "Feliz ano novo!"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-nh-ny"
+    ]
   },
   {
     "id": "f0ae3fd6",
@@ -7724,7 +8394,10 @@
       "front": "Cuáles son los tres tipos de acentos en português?",
       "back": "águdo (´), circunflexo (^) y grave (`)",
       "example": "café (agudo), vovô (circunflexo), atrás (grave)."
-    }
+    },
+    "__nuevos": [
+      "b1-acento-agudo"
+    ]
   },
   {
     "id": "f1b10ccb",
@@ -7754,7 +8427,11 @@
         }
       ],
       "hintEs": "el plural de «canção»"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao",
+      "b1-corresp-nh-ny"
+    ]
   },
   {
     "id": "f273fa62",
@@ -7779,7 +8456,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ]
   },
   {
     "id": "f283ad9e",
@@ -7802,13 +8482,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Pronuncia: RATO",
       "back": "['hatu] en BR, ['ʁatu] en PT",
       "example": "O rato correu pelo cozinha."
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-rr-r"
   },
   {
     "id": "f2dfafbb",
@@ -7833,7 +8517,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Quiero dos más.",
@@ -7843,7 +8527,11 @@
       "acceptedAlternatives": [
         "Quero dois a mais."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-s-final"
   },
   {
     "id": "f4403697",
@@ -7866,7 +8554,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "O pão está na mesa.",
@@ -7878,7 +8566,11 @@
         "Na cozinha"
       ],
       "answer": "Na mesa"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-nasal-ao-oes"
   },
   {
     "id": "f4babe61",
@@ -7910,7 +8602,10 @@
       "front": "¿Cómo se dice 'nube' en portugués?",
       "back": "nuvem",
       "example": "Há muitas nuvens no céu hoje."
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-m-final"
+    ]
   },
   {
     "id": "f56d9fa6",
@@ -7947,7 +8642,8 @@
       "pt-br": {
         "back": "PT-BR: avó (a-VÓ) | PT-PT: avô (a-VÔ)"
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "f5a62aac",
@@ -7972,7 +8668,7 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "A minha avó mora em Lisboa.",
@@ -7982,7 +8678,11 @@
       "acceptedAlternatives": [
         "Mi abuela vive en Lisboa."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-oxitona"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-tonica-oxitona"
   },
   {
     "id": "f640b1fc",
@@ -8014,7 +8714,10 @@
       "front": "¿Cómo se dice 'pan' en portugués?",
       "back": "pão",
       "example": "Eu compro pão todas as manhãs."
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-ao-oes"
+    ]
   },
   {
     "id": "f6cd6004",
@@ -8047,7 +8750,10 @@
       "acceptedAlternatives": [
         "O alfabeto português possui vinte e seis letras."
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-alfabeto"
+    ]
   },
   {
     "id": "f77c3c24",
@@ -8089,7 +8795,11 @@
       "pt-br": {
         "sentence": "Seus ___ são muito ___."
       }
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r",
+      "b1-pron-s-final"
+    ]
   },
   {
     "id": "f7f71601",
@@ -8104,7 +8814,7 @@
     ],
     "contentHash": "3616b070ae87c2006dba69c7e00a5a4bb8557f9ea05d5c8e44fe12dab1276858",
     "esContrast": "En BR la 's' final se mantiene como /z/ por ser enlace a otra sílaba; en PT puede variar según el hablante.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Ele quer mais ___.",
@@ -8119,7 +8829,11 @@
         }
       ],
       "hintEs": "días festivos"
-    }
+    },
+    "__nuevos": [
+      "b1-pron-s-final"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-s-final"
   },
   {
     "id": "f8532635",
@@ -8135,7 +8849,7 @@
     ],
     "contentHash": "f85326356a65cc4de6feeabc48889b7cb8fe74599f17f20a98598201bf91fe21",
     "esContrast": "'Canción' → 'canção'. La -ç- sustituye a la -c- ante -ão.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Essa ___ é muito bonita, conheces o cantor?",
@@ -8146,7 +8860,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-on-ao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-corresp-on-ao"
   },
   {
     "id": "f9968c54",
@@ -8174,7 +8892,10 @@
         "para"
       ],
       "answer": "da"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "fa9af65b",
@@ -8200,14 +8921,18 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Ricardo erreu a resposta.",
       "target": "Ricardo erró la respuesta.",
       "sourceLang": "pt-pt",
       "targetLang": "es"
-    }
+    },
+    "__nuevos": [
+      "b1-pron-rr-r"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b1-pron-rr-r"
   },
   {
     "id": "fe42aac1",
@@ -8244,7 +8969,10 @@
         "Tres"
       ],
       "answer": "Tres"
-    }
+    },
+    "__nuevos": [
+      "b1-h-muda"
+    ]
   },
   {
     "id": "ff732558",
@@ -8287,7 +9015,8 @@
           "A palavra mãe quer dizer mãe em português."
         ]
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "b1-hf-01",
@@ -8321,7 +9050,10 @@
       "front": "h- española ⇄ f- portuguesa: cuándo sí, y cómo saberlo sin etimología",
       "back": "Sólo cuando la h- española viene de una F- latina. Ahí es sistemática: hijo→filho, hacer→fazer, hablar→falar, harina→farinha, hierro→ferro, hoja→folha, hormiga→formiga, humo→fumo, hambre→fome.\n\nNO se aplica a las que ya tenían h- en latín o vienen de otra lengua: hombre→homem, hora→hora, hoy→hoje, hospital→hospital, historia→história, honra→honra.\n\nLa prueba, sin saber latín: si el español tiene un cultismo con f- de la misma familia, el portugués lleva f-. hijo→filial, hacer→factible, hoja→foliar, hierro→férreo, hambre→famélico, humo→fumar. Y al revés: hombre→humano, hoy→hodierno — con h-, así que homem y hoje.",
       "example": "SÍ: hijo→filho (filial) · hablar→falar · hoja→folha (foliar)  ·  NO: hombre→homem (humano) · hoy→hoje · hora→hora"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-h-f"
+    ]
   },
   {
     "id": "b1-hf-02",
@@ -8348,7 +9080,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-h-f"
+    ]
   },
   {
     "id": "b1-hf-03",
@@ -8374,7 +9109,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-h-f"
+    ]
   },
   {
     "id": "b1-hf-04",
@@ -8408,7 +9146,10 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-h-f"
+    ]
   },
   {
     "id": "cl15-060",
@@ -8437,7 +9178,10 @@
         }
       ],
       "hintEs": "imperfeito, 1.ª del plural — la sílaba tónica se mueve y pide tilde"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-desplazamiento-verbal"
+    ]
   },
   {
     "id": "cl15-061",
@@ -8466,7 +9210,10 @@
         }
       ],
       "hintEs": "imperfeito, 1.ª del plural — con tilde en la í"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-desplazamiento-verbal"
+    ]
   },
   {
     "id": "cl15-062",
@@ -8495,7 +9242,10 @@
         }
       ],
       "hintEs": "imperfeito, 1.ª del plural — esdrújula, con tilde"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-desplazamiento-verbal"
+    ]
   },
   {
     "id": "cl15-063",
@@ -8524,7 +9274,10 @@
         }
       ],
       "hintEs": "imperfeito, 1.ª del plural — con tilde en la í"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-desplazamiento-verbal"
+    ]
   },
   {
     "id": "cl15-064",
@@ -8553,7 +9306,10 @@
         }
       ],
       "hintEs": "imperfeito, 1.ª del plural — esdrújula, con tilde"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-desplazamiento-verbal"
+    ]
   },
   {
     "id": "cl15-065",
@@ -8582,7 +9338,10 @@
         }
       ],
       "hintEs": "imperfeito, 1.ª del plural — con tilde en la í"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-desplazamiento-verbal"
+    ]
   },
   {
     "id": "cl15-066",
@@ -8611,7 +9370,10 @@
         }
       ],
       "hintEs": "imperfeito, 1.ª del plural — esdrújula, con tilde"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-desplazamiento-verbal"
+    ]
   },
   {
     "id": "cl15-067",
@@ -8640,7 +9402,10 @@
         }
       ],
       "hintEs": "imperfeito, 1.ª del plural — con tilde en la í"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-desplazamiento-verbal"
+    ]
   },
   {
     "id": "cl16-087",
@@ -8669,7 +9434,10 @@
         }
       ],
       "hintEs": "la institución donde se deposita el dinero — nasal escrita con n"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-n-interior"
+    ]
   },
   {
     "id": "cl16-088",
@@ -8698,7 +9466,10 @@
         }
       ],
       "hintEs": "lo que cruza un río de orilla a orilla"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-n-interior"
+    ]
   },
   {
     "id": "cl16-089",
@@ -8727,7 +9498,10 @@
         }
       ],
       "hintEs": "el aire en movimiento"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-n-interior"
+    ]
   },
   {
     "id": "cl16-090",
@@ -8756,7 +9530,10 @@
         }
       ],
       "hintEs": "el líquido con que escribe una pluma"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-n-interior"
+    ]
   },
   {
     "id": "cl16-091",
@@ -8785,7 +9562,10 @@
         }
       ],
       "hintEs": "el día anterior a hoy"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-n-interior"
+    ]
   },
   {
     "id": "cl16-092",
@@ -8814,7 +9594,10 @@
         }
       ],
       "hintEs": "el número que sigue a cuatro"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-n-interior"
+    ]
   },
   {
     "id": "cl16-093",
@@ -8843,7 +9626,10 @@
         }
       ],
       "hintEs": "el papel que se pide al final de una comida en el restaurante"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-n-interior"
+    ]
   },
   {
     "id": "cl16-094",
@@ -8872,7 +9658,10 @@
         }
       ],
       "hintEs": "la parte del cuerpo con la que se saluda — lleva tilde ondulada"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-til"
+    ]
   },
   {
     "id": "cl16-095",
@@ -8901,7 +9690,10 @@
         }
       ],
       "hintEs": "la primera parte del día"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-til"
+    ]
   },
   {
     "id": "cl16-096",
@@ -8930,7 +9722,10 @@
         }
       ],
       "hintEs": "lo que se hace con harina y se compra en la panadería"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-til"
+    ]
   },
   {
     "id": "cl16-097",
@@ -8959,7 +9754,10 @@
         }
       ],
       "hintEs": "cada una de las unidades en que se divide un curso"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-til"
+    ]
   },
   {
     "id": "cl16-098",
@@ -8988,7 +9786,10 @@
         }
       ],
       "hintEs": "el plural de «limão»"
-    }
+    },
+    "__nuevos": [
+      "b1-nasal-til"
+    ]
   },
   {
     "id": "cl16-099",
@@ -9017,7 +9818,10 @@
         }
       ],
       "hintEs": "quien receta los medicamentos — esdrújula, siempre acentuada"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-proparoxitona"
+    ]
   },
   {
     "id": "cl16-100",
@@ -9046,7 +9850,10 @@
         }
       ],
       "hintEs": "lo que se oye en la radio — esdrújula"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-proparoxitona"
+    ]
   },
   {
     "id": "cl16-101",
@@ -9075,7 +9882,10 @@
         }
       ],
       "hintEs": "el día anterior al domingo — esdrújula"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-proparoxitona"
+    ]
   },
   {
     "id": "cl16-102",
@@ -9104,7 +9914,10 @@
         }
       ],
       "hintEs": "lo contrario de lento — esdrújula"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-proparoxitona"
+    ]
   },
   {
     "id": "cl16-103",
@@ -9133,7 +9946,10 @@
         }
       ],
       "hintEs": "el final de una serie — esdrújula"
-    }
+    },
+    "__nuevos": [
+      "b1-tonica-proparoxitona"
+    ]
   },
   {
     "id": "cl16-104",
@@ -9162,7 +9978,10 @@
         }
       ],
       "hintEs": "el hijo — la h inicial del español es f en portugués"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-h-f"
+    ]
   },
   {
     "id": "cl16-105",
@@ -9191,7 +10010,10 @@
         }
       ],
       "hintEs": "la harina — h del español, f del portugués"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-h-f"
+    ]
   },
   {
     "id": "cl16-106",
@@ -9220,7 +10042,10 @@
         }
       ],
       "hintEs": "la hoja — h del español, f del portugués"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-h-f"
+    ]
   },
   {
     "id": "cl16-107",
@@ -9249,7 +10074,10 @@
         }
       ],
       "hintEs": "el hierro — h del español, f del portugués"
-    }
+    },
+    "__nuevos": [
+      "b1-corresp-h-f"
+    ]
   },
   {
     "id": "cl16-108",
@@ -9278,7 +10106,10 @@
         }
       ],
       "hintEs": "preposición «a» + artículo femenino: contracción con acento grave"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-crase"
+    ]
   },
   {
     "id": "cl16-109",
@@ -9307,7 +10138,10 @@
         }
       ],
       "hintEs": "preposición «a» + artículo femenino: contracción con acento grave"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-crase"
+    ]
   },
   {
     "id": "cl16-110",
@@ -9336,7 +10170,10 @@
         }
       ],
       "hintEs": "preposición «a» + artículo femenino: contracción con acento grave"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-crase"
+    ]
   },
   {
     "id": "cl16-111",
@@ -9365,7 +10202,10 @@
         }
       ],
       "hintEs": "preposición sola, sin artículo: no lleva acento grave"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-crase"
+    ]
   },
   {
     "id": "cl16-112",
@@ -9394,7 +10234,10 @@
         }
       ],
       "hintEs": "preposición sola delante de infinitivo: no lleva acento grave"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-crase"
+    ]
   },
   {
     "id": "cl16-113",
@@ -9423,7 +10266,10 @@
         }
       ],
       "hintEs": "preposición «a» + artículo femenino PLURAL, con acento grave"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-crase"
+    ]
   },
   {
     "id": "cl16-114",
@@ -9452,7 +10298,10 @@
         }
       ],
       "hintEs": "el padre del padre — con acento circunflejo, no agudo"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-circunflexo"
+    ]
   },
   {
     "id": "cl16-115",
@@ -9481,7 +10330,10 @@
         }
       ],
       "hintEs": "cada una de las doce partes del año — con acento circunflejo"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-circunflexo"
+    ]
   },
   {
     "id": "cl16-116",
@@ -9510,7 +10362,10 @@
         }
       ],
       "hintEs": "el establecimiento donde se sirve la bebida negra del desayuno — acento agudo final"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-agudo"
+    ]
   },
   {
     "id": "cl19-013",
@@ -9539,7 +10394,10 @@
         }
       ],
       "hintEs": "hasta — lleva acento agudo en la última sílaba"
-    }
+    },
+    "__nuevos": [
+      "b1-acento-crase"
+    ]
   },
   {
     "id": "es20-001",
@@ -9577,7 +10435,10 @@
         "hash": "8b79a7b56308e30e25c49768ae8719b3de62f13b375dbcc668724655753c1f6f",
         "voice": "ElevenLabs_Leonor"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-inventario-vocalico"
+    ]
   },
   {
     "id": "es20-002",
@@ -9615,7 +10476,10 @@
         "hash": "bc3f0386463b5533bfd48497d59bb0c8748d16b63fa211fc46efe6983cac2361",
         "voice": "ElevenLabs_Leonor"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-inventario-vocalico"
+    ]
   },
   {
     "id": "es20-003",
@@ -9653,7 +10517,10 @@
         "hash": "c88fb13f0d4c5192f8ee789b9bb36a928a04afa880b17ce2bff7563d4ee5a12c",
         "voice": "ElevenLabs_Leonor"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-inventario-vocalico"
+    ]
   },
   {
     "id": "es20-004",
@@ -9691,7 +10558,10 @@
         "hash": "882845bf5646def75522d4d7f0ca824ba17f1ce1dd120983209e70b9badf45aa",
         "voice": "ElevenLabs_Leonor"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-inventario-vocalico"
+    ]
   },
   {
     "id": "es20-005",
@@ -9729,7 +10599,10 @@
         "hash": "bbb068b59f47e6ce2d69bdfebaf6bae93fdd8b1b7621974c443b7c4c329ee12d",
         "voice": "ElevenLabs_Leonor"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-inventario-vocalico"
+    ]
   },
   {
     "id": "es20-006",
@@ -9767,7 +10640,10 @@
         "hash": "c6a7fdb7b87b4a73f99d2fee62c14fe92ad3155c7ef08f53102f0ac7d0a0b3bf",
         "voice": "ElevenLabs_Leonor"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-inventario-vocalico"
+    ]
   },
   {
     "id": "es20-007",
@@ -9805,7 +10681,10 @@
         "hash": "c7410ee8579722b35b3a56ec4ddc277077ac5bf765e322580f731ed15a2b4abc",
         "voice": "ElevenLabs_Leonor"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-inventario-vocalico"
+    ]
   },
   {
     "id": "es20-008",
@@ -9843,6 +10722,9 @@
         "hash": "9c329f21b4c5715685127931b0f4edb0364e810e8c0959473d6572d3deffb4ae",
         "voice": "ElevenLabs_Leonor"
       }
-    }
+    },
+    "__nuevos": [
+      "b1-inventario-vocalico"
+    ]
   }
 ]

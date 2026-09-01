@@ -36,7 +36,10 @@
         "embora"
       ],
       "answer": "por isso"
-    }
+    },
+    "__nuevos": [
+      "b8-con-contraste"
+    ]
   },
   {
     "id": "005da0b5",
@@ -65,7 +68,10 @@
       "front": "Conector consecutivo: 'logo' (luego, por lo tanto)",
       "back": "logo (luego, por lo tanto, en consecuencia)",
       "example": "Estuda todos os dias, logo vais ter boas notas."
-    }
+    },
+    "__nuevos": [
+      "b8-con-consequencia"
+    ]
   },
   {
     "id": "0106ee6b",
@@ -97,7 +103,10 @@
       "front": "llevarse, arrastrar (algo o a alguien)",
       "back": "levar",
       "example": "A corrente levou o barco para longe."
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ]
   },
   {
     "id": "03013ffe",
@@ -129,7 +138,10 @@
       "front": "¿Qué es una oração subordinada adjetiva?",
       "back": "É uma oração que funciona como adjetivo — modifica um substantivo. Vem introduzida por pronome relativo (que, o qual, quem, onde).",
       "example": "O filme a que assisti é ótimo."
-    }
+    },
+    "__nuevos": [
+      "b8-sub-relativas-cujo"
+    ]
   },
   {
     "id": "05b6f431",
@@ -162,7 +174,10 @@
       "acceptedAlternatives": [
         "João perguntou onde eu vivia."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-discurso-indireto"
+    ]
   },
   {
     "id": "0e2df799",
@@ -207,7 +222,8 @@
           "Imagina como vai ser a festa quando o verão chegar."
         ]
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "102a053a",
@@ -245,7 +261,10 @@
         "Acho que consegues.",
         "Acho que irás conseguir."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-colocacao-pronominal"
+    ]
   },
   {
     "id": "10b05f5a",
@@ -276,7 +295,10 @@
       "front": "lograr / ser capaz de (hacer algo)",
       "back": "conseguir",
       "example": "Ele conseguiu terminar o trabalho a tempo."
-    }
+    },
+    "__nuevos": [
+      "b8-discurso-indireto"
+    ]
   },
   {
     "id": "11849607",
@@ -311,7 +333,10 @@
       "acceptedAlternatives": [
         "Se lhe dessem essa oportunidade, ele aproveitá-la-ia."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-mesoclise"
+    ]
   },
   {
     "id": "11927933",
@@ -327,7 +352,7 @@
     ],
     "contentHash": "11927933c7e0c944b1db0a3683f567b562707d786d827a913ec664cf26ab8c67",
     "esContrast": "'Quem' funciona como 'quién' pero puede aparecer duplicado con 'que/fue que' para énfasis, algo que no ocurre en español.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Não sei ___ foi que deixou-me frustrado.",
@@ -338,7 +363,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-oracoes-subordinadas"
   },
   {
     "id": "11d7b620",
@@ -369,7 +398,10 @@
       "front": "¿Qué verbo introductor se usa con discurso indirecto interrogativo?",
       "back": "Perguntar (perguntou se / perguntou o quê / perguntou por quê)",
       "example": "Ele me perguntou se eu queria sair. / Perguntou-me onde eu morava."
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-interrogativa"
+    ]
   },
   {
     "id": "12fea48b",
@@ -397,7 +429,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-sub-relativas-cujo"
+    ]
   },
   {
     "id": "1312dd96",
@@ -423,7 +458,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Hay que alimentarse bien todos los días.",
@@ -434,7 +469,11 @@
         "Tem de-se de alimentar bem todos os dias.",
         "Deve-se alimentar-se bem todos os dias."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-enclise"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-coloc-enclise"
   },
   {
     "id": "1352e0af",
@@ -466,7 +505,10 @@
       "front": "Subordinada substantiva introduzida por 'que'",
       "back": "Oração completiva com 'que' — funciona como sujeito ou objeto direto.",
       "example": "Eu sei que ele chegou. / É possível que chova."
-    }
+    },
+    "__nuevos": [
+      "b8-sub-substantivas"
+    ]
   },
   {
     "id": "15492270",
@@ -498,7 +540,10 @@
       "front": "¿Qué significa 'achar graça' en portugués?",
       "back": "achar graça (encontrar gracioso/divertido)",
       "example": "Achei muita graça à história dele."
-    }
+    },
+    "__nuevos": [
+      "b8-conectores"
+    ]
   },
   {
     "id": "18ab7858",
@@ -536,7 +581,10 @@
         "Pretérito imperfeito do indicativo"
       ],
       "answer": "Futuro simples do presente"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ]
   },
   {
     "id": "18e1b7bb",
@@ -574,7 +622,10 @@
         "Uma vez que não existe outra opção, teremos de aceitar as suas condições.",
         "Visto que não existe outra opção, teremos de aceitar as suas condições."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-con-causa"
+    ]
   },
   {
     "id": "1aaa2910",
@@ -603,7 +654,10 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "1b5e2519",
@@ -646,7 +700,10 @@
           }
         ]
       }
-    }
+    },
+    "__nuevos": [
+      "b8-sub-adverbiais-tempo"
+    ]
   },
   {
     "id": "1eb6dfb6",
@@ -685,7 +742,10 @@
         "Se usa próclise porque el verbo está en infinitivo"
       ],
       "answer": "Se usa próclise porque hay una palabra negativa (não) antes del verbo"
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-proclise-negacao"
+    ]
   },
   {
     "id": "1f6c7479",
@@ -724,7 +784,11 @@
         "Estaba muy nervioso, así que no pude dormir.",
         "Estaba muy nervioso, por lo tanto no pude dormir."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-con-consequencia",
+      "b8-oracoes-subordinadas"
+    ]
   },
   {
     "id": "1f6e9408",
@@ -749,13 +813,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Subordinada substantiva com 'se' (indireta)",
       "back": "Oração interrogativa indireta — pergunta sem '?'.",
       "example": "Eu perguntei se ele vinha à festa."
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-oracoes-subordinadas"
   },
   {
     "id": "1f83ee26",
@@ -792,7 +860,11 @@
       "acceptedAlternatives": [
         "Apesar de tu não acreditares, ela consegue falar quatro idiomas."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-conectores",
+      "b8-sub-concessivas"
+    ]
   },
   {
     "id": "1fd04f2c",
@@ -818,7 +890,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-proclise-adverbio"
+    ]
   },
   {
     "id": "233bdabf",
@@ -855,7 +930,11 @@
       "acceptedAlternatives": [
         "A pesar de que me hizo gracia, no reí."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-con-causa",
+      "b8-sub-concessivas"
+    ]
   },
   {
     "id": "23f3b01e",
@@ -896,7 +975,8 @@
       "pt-br": {
         "target": "O realizador cujo guião ganhava prémios era um estreante."
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "24296ebd",
@@ -944,7 +1024,7 @@
     ],
     "contentHash": "25b28172fcde894e9640e97d08c9381b2090fe23cdc8a3c9f16c717f4d21e681",
     "esContrast": "PT usa 'conversar SOBRE'; ES usa 'conversar DE/SOBRE' indistintamente.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "conversar",
@@ -956,7 +1036,11 @@
         "conseguimos / sobre"
       ],
       "answer": "conseguirmos / sobre"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-otras"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-otras"
   },
   {
     "id": "265e930f",
@@ -981,7 +1065,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Vamos a meterlo en problemas.",
@@ -992,7 +1076,11 @@
         "Vamos metê-lo em sarilhos.",
         "Vamos metê-lo em apuros."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-enclise"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-coloc-enclise"
   },
   {
     "id": "266fbd1a",
@@ -1008,7 +1096,7 @@
     ],
     "contentHash": "266fbd1a7a489e46f3324b5fa7f6ca6791e480635f311c2c1c932ce9dce5f3ec",
     "esContrast": "'Acordarse de' en ES lleva DE; 'lembrar-se de' en PT también.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "lembrar",
@@ -1020,7 +1108,11 @@
         "Se lembre / —"
       ],
       "answer": "Lembre / de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-otras"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-otras"
   },
   {
     "id": "26820612",
@@ -1126,7 +1218,10 @@
       "acceptedAlternatives": [
         "Ana se imaginó que él traería ese documento de allá."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-discurso-indireto"
+    ]
   },
   {
     "id": "2772c62b",
@@ -1156,7 +1251,10 @@
       "target": "Paramos el coche que estaba protegiendo la casa.",
       "sourceLang": "pt-pt",
       "targetLang": "es"
-    }
+    },
+    "__nuevos": [
+      "b8-sub-adjetivas-que"
+    ]
   },
   {
     "id": "294ade1e",
@@ -1183,7 +1281,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-imperativo"
+    ]
   },
   {
     "id": "2954b8b7",
@@ -1209,14 +1310,18 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Ninguém sabe quem vai levar o prémio para o país, o que deixa toda a equipa frustrada.",
       "target": "Nadie sabe quién se llevará el premio para el país, lo que deja a todo el equipo frustrado.",
       "sourceLang": "pt-pt",
       "targetLang": "es"
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-oracoes-subordinadas"
   },
   {
     "id": "29e9fe7f",
@@ -1244,7 +1349,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-sub-substantivas"
+    ]
   },
   {
     "id": "2acce101",
@@ -1282,7 +1390,10 @@
       "pt-br": {
         "back": "Vamos nos informar / Vamos nos informar (próclise con ‘ir’). En PT-BR informal se acepta ‘a gente vai se informar’."
       }
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-infinitivo"
+    ]
   },
   {
     "id": "2dd077e3",
@@ -1318,7 +1429,10 @@
       "acceptedAlternatives": [
         "Si se lhes derem bem, vão conseguir."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-discurso-indireto"
+    ]
   },
   {
     "id": "2f7365a0",
@@ -1355,7 +1469,11 @@
       "acceptedAlternatives": [
         "Mesmo que tu não acredites, ela consegue falar quatro idiomas."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-conectores",
+      "b8-sub-concessivas"
+    ]
   },
   {
     "id": "2fb35ada",
@@ -1380,7 +1498,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ]
   },
   {
     "id": "3115213d",
@@ -1415,7 +1536,10 @@
       "acceptedAlternatives": [
         "Não me lembro de quem é que me recomendou esse realizador."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-sub-substantivas"
+    ]
   },
   {
     "id": "315cc2f3",
@@ -1461,7 +1585,8 @@
           "Quando eu conseguir conversar contigo, vou-te explicar tudo."
         ]
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "3241b631",
@@ -1492,7 +1617,10 @@
       "pt-br": {
         "sentence": "Conversou ___ (mim) sobre isso?"
       }
-    }
+    },
+    "__nuevos": [
+      "b8-colocacao-pronominal"
+    ]
   },
   {
     "id": "3343b3a0",
@@ -1557,7 +1685,10 @@
       "pt-br": {
         "sentence": "A prova foi adiada ___ terem feito greve."
       }
-    }
+    },
+    "__nuevos": [
+      "b8-conectores"
+    ]
   },
   {
     "id": "33cf21fe",
@@ -1585,7 +1716,10 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "346483d6",
@@ -1622,7 +1756,10 @@
         "Na véspera, disseram-me que existia uma solução.",
         "No dia anterior, me disseram que existia uma solução."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-deicticos"
+    ]
   },
   {
     "id": "34d81602",
@@ -1687,7 +1824,10 @@
       "target": "La productora donde trabajamos desarrolló la película que nos dejó frustrados.",
       "sourceLang": "pt-pt",
       "targetLang": "es"
-    }
+    },
+    "__nuevos": [
+      "b8-sub-adjetivas-que"
+    ]
   },
   {
     "id": "38c0760e",
@@ -1753,7 +1893,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-sub-substantivas"
+    ]
   },
   {
     "id": "38fd83bb",
@@ -1785,7 +1928,10 @@
       "front": "hay / existe (registro formal)",
       "back": "existe",
       "example": "Existe um problema com o sistema."
-    }
+    },
+    "__nuevos": [
+      "b8-conectores"
+    ]
   },
   {
     "id": "406abf88",
@@ -1817,7 +1963,10 @@
       "front": "director / directora (de cine o teatro)",
       "back": "o realizador, a realizadora",
       "example": "O realizador estreou o seu primeiro filme."
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ]
   },
   {
     "id": "407c3bde",
@@ -1891,7 +2040,10 @@
       "front": "Cambio deíctico: 'este/esta' (este/esta) → ¿qué en discurso indirecto?",
       "back": "Esse/essa (aquel/aquella, lo cercano al interlocutor)",
       "example": "Directo: 'Este livro é bom.' → Indireto: 'Ele disse que esse livro era bom.'"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ]
   },
   {
     "id": "4200fafc",
@@ -1923,7 +2075,10 @@
       "target": "El realizador cuya última película fracasó fue contratado.",
       "sourceLang": "pt-pt",
       "targetLang": "es"
-    }
+    },
+    "__nuevos": [
+      "b8-sub-relativas-cujo"
+    ]
   },
   {
     "id": "43a6d371",
@@ -1993,7 +2148,10 @@
       "target": "El realizador debutante presentó el guión que escribió durante dos años.",
       "sourceLang": "pt-pt",
       "targetLang": "es"
-    }
+    },
+    "__nuevos": [
+      "b8-sub-adjetivas-que"
+    ]
   },
   {
     "id": "45b2038a",
@@ -2061,13 +2219,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Coloca el pronombre: Todos os dias, eu ___ (levantar) cedo.",
       "back": "levanto-me — ênclise tras palabra monosilábica tónica",
       "example": "Todos os dias, levanto-me cedo."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-enclise"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-coloc-enclise"
   },
   {
     "id": "4cb6af79",
@@ -2094,7 +2256,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-sub-substantivas"
+    ]
   },
   {
     "id": "4cf47319",
@@ -2130,7 +2295,10 @@
       "acceptedAlternatives": [
         "Se habrían conocido los hechos si hubieran hecho el informe."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-colocacao-pronominal"
+    ]
   },
   {
     "id": "4da6718a",
@@ -2159,7 +2327,10 @@
       "front": "¿Cuál es la regla de oro para recordar próclise, ênclise y mesóclise?",
       "back": "PRÓCLISE = palabra BANDEIRA antes del verbo. ÊNCLISE = verbo al inicio. MESÓCLISE = futuro/condicional en medio.",
       "example": "BANDEIRA: Basta (advérbios), Ainda, Não, etc."
-    }
+    },
+    "__nuevos": [
+      "b8-colocacao-pronominal"
+    ]
   },
   {
     "id": "5137e032",
@@ -2184,13 +2355,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Qué ocurre con el pretérito perfeito en discurso indirecto?",
       "back": "Se transforma en pretérito mais-que-perfeito simples",
       "example": "Directo: 'Ela disse: EU FIZ O TRABALHO.' → Indireto: 'Ela disse que fizera o trabalho.'"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-indireto-correlacao"
   },
   {
     "id": "590eba9b",
@@ -2221,7 +2396,10 @@
       "front": "Pronome relativo 'cujo'",
       "back": "Indica posse — equivale a 'de quem', 'do qual'. Vem ANTES do substantivo possuído.",
       "example": "O realizador cujo filme estreou é estreante."
-    }
+    },
+    "__nuevos": [
+      "b8-sub-relativas-cujo"
+    ]
   },
   {
     "id": "59ec5980",
@@ -2237,7 +2415,7 @@
     ],
     "contentHash": "59ec5980f30b4b3128532c8f3bdcf8bd4952589ed8071284bf70d48c0f86b5f1",
     "esContrast": "'Onde' se usa para lugar (ciudad, país), equivale a 'en la que/donde' en español. No confundas con 'onde' = onda.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "A cidade ___ moro tem muitos cinemas.",
@@ -2248,7 +2426,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-oracoes-subordinadas"
   },
   {
     "id": "5b2f41d8",
@@ -2284,7 +2466,10 @@
         "Quando acordares, avisa-me.",
         "Quando te acordares, avisa-me."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-proclise-adverbio"
+    ]
   },
   {
     "id": "5c51b100",
@@ -2314,7 +2499,10 @@
       "front": "aunque / si bien (conector concesivo)",
       "back": "embora + conjuntivo",
       "example": "Embora estivesse doente, foi ao trabalho."
-    }
+    },
+    "__nuevos": [
+      "b8-conectores"
+    ]
   },
   {
     "id": "5c666bbf",
@@ -2350,7 +2538,10 @@
       "acceptedAlternatives": [
         "Él dijo que vendría el día siguiente."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-deicticos"
+    ]
   },
   {
     "id": "5d581079",
@@ -2375,13 +2566,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Subordinada substantiva com 'quem'",
       "back": "Oração que substitui um substantivo relacionado a pessoa — 'aquele que, aquele a quem'.",
       "example": "Não sei quem ganhou o prêmio."
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-oracoes-subordinadas"
   },
   {
     "id": "5e74382b",
@@ -2407,7 +2602,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Alguém me poderia dizer onde fica a saída?",
@@ -2417,7 +2612,11 @@
       "acceptedAlternatives": [
         "¿Alguien podría decirme dónde queda la salida?"
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-colocacao-pronominal"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-colocacao-pronominal"
   },
   {
     "id": "5fd0932e",
@@ -2446,7 +2645,10 @@
         "a"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "61c3096b",
@@ -2478,7 +2680,10 @@
       "front": "¿Qué significa ‘meter-se’ con pronombre? Da un ejemplo.",
       "back": "Significa ‘meterse, meterse en’ (situación). Ejemplo: Meteu-se em problemas.",
       "example": "Não se meta em confusão!"
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-proclise-negacao"
+    ]
   },
   {
     "id": "61cece5d",
@@ -2510,7 +2715,10 @@
       "front": "¿En qué posición va el pronombre cuando hay un adverbio negativo antes del verbo?",
       "back": "En próclise (antes del verbo) — não me diga, nunca te esqueças",
       "example": "Não me diga que você não sabe!"
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-proclise-negacao"
+    ]
   },
   {
     "id": "61e9dc90",
@@ -2548,7 +2756,10 @@
         "O relatório é completo; entretanto, falta rever as conclusões.",
         "O relatório é completo; porém, falta rever as conclusões."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-con-contraste"
+    ]
   },
   {
     "id": "62974d0b",
@@ -2573,14 +2784,18 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Que o filme me tenha deixado frustrado é inegável.",
       "target": "Que la película me haya dejado frustrado es innegable.",
       "sourceLang": "pt-pt",
       "targetLang": "es"
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-oracoes-subordinadas"
   },
   {
     "id": "630329e4",
@@ -2612,7 +2827,10 @@
       "front": "proteger, resguardar del peligro",
       "back": "proteger",
       "example": "O herói tentou proteger a cidade."
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ]
   },
   {
     "id": "64a089d7",
@@ -2674,13 +2892,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "guião",
       "back": "roteiro (de cinema, peça, etc.)",
       "example": "O realizador escreveu o guião em três meses."
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-oracoes-subordinadas"
   },
   {
     "id": "667b9995",
@@ -2726,7 +2948,11 @@
           }
         ]
       }
-    }
+    },
+    "__nuevos": [
+      "b8-con-causa",
+      "b8-oracoes-subordinadas"
+    ]
   },
   {
     "id": "68c3f8d4",
@@ -2763,7 +2989,10 @@
         "Quiero ir, sin embargo no tengo tiempo.",
         "Quiero ir, no obstante no tengo tiempo."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-con-contraste"
+    ]
   },
   {
     "id": "698995bd",
@@ -2789,7 +3018,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-proclise-negacao"
+    ]
   },
   {
     "id": "6ac9398a",
@@ -2853,7 +3085,10 @@
         "com"
       ],
       "answer": "em"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-em"
+    ]
   },
   {
     "id": "6cc9019d",
@@ -2882,7 +3117,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-con-contraste"
+    ]
   },
   {
     "id": "6eb4b5cf",
@@ -2914,7 +3152,10 @@
       "front": "sin embargo / no obstante (conector adversativo)",
       "back": "porém",
       "example": "O filme é longo, porém muito interessante."
-    }
+    },
+    "__nuevos": [
+      "b8-con-contraste"
+    ]
   },
   {
     "id": "6f52477f",
@@ -2940,13 +3181,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Cambio de pronombres: 'eu' en discurso directo → ¿qué en indirecto?",
       "back": "Ele (1ª persona se convierte en 3ª persona)",
       "example": "Directo: 'Eu quero ir.' → Indireto: 'Ele disse que queria ir.'"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-indireto-correlacao"
   },
   {
     "id": "6f8b7306",
@@ -2971,7 +3216,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Me dejó frustrado que el realizador no terminara la película.",
@@ -2981,7 +3226,11 @@
       "acceptedAlternatives": [
         "Deixou-me frustrado que o realizador não tenha terminado o filme."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-oracoes-subordinadas"
   },
   {
     "id": "6fa406f8",
@@ -3017,7 +3266,10 @@
       "acceptedAlternatives": [
         "Pedro dijo que no había ningún problema."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ]
   },
   {
     "id": "7137d211",
@@ -3053,7 +3305,10 @@
       "acceptedAlternatives": [
         "João dijo que el día anterior había dejado de fumar."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-deicticos"
+    ]
   },
   {
     "id": "71775d32",
@@ -3095,7 +3350,10 @@
       "pt-br": {
         "audioText": "O realizador estreante não sabe se o guião precisa de mudanças."
       }
-    }
+    },
+    "__nuevos": [
+      "b8-sub-relativas-cujo"
+    ]
   },
   {
     "id": "73018a82",
@@ -3128,7 +3386,10 @@
       "front": "lograr / poder (hacer algo)",
       "back": "conseguir — não consigo dormir",
       "example": "Consegui resolver o problema!"
-    }
+    },
+    "__nuevos": [
+      "b8-colocacao-pronominal"
+    ]
   },
   {
     "id": "756235ff",
@@ -3143,7 +3404,7 @@
     ],
     "contentHash": "756235ffd94db60e2673aa2f9470d8fbf10ed72f7390a64a3fd4bb61b070f394",
     "esContrast": "El imperfeito de querer se mantiene igual: \"quería\" no cambia en el indirecto.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Em Portugal, ele disse que ___ parar de conversar com aqueles amigos. (queria → reportado por outro)",
@@ -3154,7 +3415,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-indireto-correlacao"
   },
   {
     "id": "77538e3e",
@@ -3182,7 +3447,10 @@
         "por"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "78771689",
@@ -3212,7 +3480,10 @@
       "front": "conversar",
       "back": "conversar (hablar, conversar)",
       "example": "Precisamos conversar sobre isso amanhã."
-    }
+    },
+    "__nuevos": [
+      "b8-discurso-indireto"
+    ]
   },
   {
     "id": "7903e6e0",
@@ -3248,7 +3519,10 @@
       "acceptedAlternatives": [
         "El gerente preguntó qué pasaría si proporcionan los datos incorrectos."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-interrogativa"
+    ]
   },
   {
     "id": "797d49dd",
@@ -3274,7 +3548,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Se se derem bem, a equipa alimenta-se melhor.",
@@ -3285,7 +3559,11 @@
         "Si se llevan bien, el equipo se alimenta mejor.",
         "Si se llevan bien, la equipe se alimenta melhor."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-enclise"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-coloc-enclise"
   },
   {
     "id": "7a379c9b",
@@ -3318,7 +3596,11 @@
       "front": "¿Qué significa 'conseguir' en portugués?",
       "back": "conseguir (lograr, ser capaz de)",
       "example": "Consegui resolver o problema sozinho."
-    }
+    },
+    "__nuevos": [
+      "b8-conectores",
+      "b8-oracoes-subordinadas"
+    ]
   },
   {
     "id": "7d26539b",
@@ -3381,7 +3663,10 @@
         "∅"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "7f33e7ee",
@@ -3412,7 +3697,10 @@
       "front": "llevar / tardar (cierto tiempo)",
       "back": "levar",
       "example": "A reunião vai levar duas horas."
-    }
+    },
+    "__nuevos": [
+      "b8-discurso-indireto"
+    ]
   },
   {
     "id": "7f3d2b42",
@@ -3450,7 +3738,11 @@
         "Hay un problema, entonces tenemos que resolverlo.",
         "Existe un problema, así que tenemos que resolverlo."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-con-consequencia",
+      "b8-oracoes-subordinadas"
+    ]
   },
   {
     "id": "80101b86",
@@ -3485,7 +3777,10 @@
       "pt-br": {
         "sentence": "Ele não trouxe guarda-chuva, ___ se molhou."
       }
-    }
+    },
+    "__nuevos": [
+      "b8-con-consequencia"
+    ]
   },
   {
     "id": "820036d8",
@@ -3517,7 +3812,10 @@
       "front": "Cambio deíctico: 'aqui' (aquí) → ¿qué en discurso indirecto?",
       "back": "Ali (allí, en el lugar donde está el narrador)",
       "example": "Directo: 'Vou ficar aqui.' → Indireto: 'Ele disse que ia ficar ali.'"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-deicticos"
+    ]
   },
   {
     "id": "82d8cdb5",
@@ -3552,7 +3850,10 @@
         "Subordinada adverbial temporal"
       ],
       "answer": "Subordinada adjetiva explicativa"
-    }
+    },
+    "__nuevos": [
+      "b8-sub-adjetivas-que"
+    ]
   },
   {
     "id": "83a9c448",
@@ -3585,7 +3886,10 @@
       "pt-br": {
         "sentence": "Se ___ (dar) tempo, consegue falar com ela?"
       }
-    }
+    },
+    "__nuevos": [
+      "b8-colocacao-pronominal"
+    ]
   },
   {
     "id": "84eae918",
@@ -3617,7 +3921,10 @@
       "front": "porque / ya que (conector causal)",
       "back": "pois",
       "example": "Não fui à festa, pois estava cansado."
-    }
+    },
+    "__nuevos": [
+      "b8-con-causa"
+    ]
   },
   {
     "id": "891d30c2",
@@ -3632,7 +3939,7 @@
     ],
     "contentHash": "891d30c25782f6c3e8288c779a2281a181a6bf5f060c677feaaab11841a9a580",
     "esContrast": "Ambos idiomas rigen 'de' en este uso: 'lembrar alguém de algo'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "lembrar",
@@ -3644,7 +3951,11 @@
         "em"
       ],
       "answer": "da"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-de"
   },
   {
     "id": "89d7ecee",
@@ -3671,7 +3982,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-sub-relativas-cujo"
+    ]
   },
   {
     "id": "8a92e893",
@@ -3710,7 +4024,10 @@
         "Pretérito Perfeito → Pretérito Mais-que-Perfeito"
       ],
       "answer": "Presente → Pretérito Imperfeito"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ]
   },
   {
     "id": "8b2bc437",
@@ -3736,13 +4053,18 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Qué significa 'tocou-me' en portugués?",
       "back": "tocou-me (me tocó, me conmovió)",
       "example": "A música tocou-me profundamente."
-    }
+    },
+    "__nuevos": [
+      "b8-conectores",
+      "b8-oracoes-subordinadas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-conectores, b8-oracoes-subordinadas"
   },
   {
     "id": "8c10745a",
@@ -3769,7 +4091,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ]
   },
   {
     "id": "8cb5e279",
@@ -3800,7 +4125,10 @@
       "target": "El actor a quien le dieron el guión confirmó que dejaría de fumar para el papel.",
       "sourceLang": "pt-pt",
       "targetLang": "es"
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ]
   },
   {
     "id": "8e08a177",
@@ -3834,7 +4162,10 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b8-sub-adjetivas-que"
+    ]
   },
   {
     "id": "8e9e8016",
@@ -3863,7 +4194,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-conectores"
+    ]
   },
   {
     "id": "8ee01187",
@@ -3921,7 +4255,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-con-causa"
+    ]
   },
   {
     "id": "93b5ad3c",
@@ -3957,7 +4294,10 @@
       "acceptedAlternatives": [
         "Él dijo que trabajaba cada día."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ]
   },
   {
     "id": "9528acd6",
@@ -3989,7 +4329,10 @@
       "front": "debutante (quien debuta)",
       "back": "estreante — quem faz a sua estreia",
       "example": "A atriz é estreante neste filme."
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ]
   },
   {
     "id": "9571e77d",
@@ -4005,7 +4348,7 @@
     ],
     "contentHash": "9571e77d566c95dcc642b92279d46447194545a4d244afd959b00d88a2e69e87",
     "esContrast": "En español 'pensar' no lleva preposición o usa 'en'; en PT-BR y PT-PT siempre lleva EM.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
@@ -4017,7 +4360,11 @@
         "por"
       ],
       "answer": "em"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-em"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-em"
   },
   {
     "id": "95b42a5f",
@@ -4042,7 +4389,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Mi madre me dijo que este libro es interesante.",
@@ -4052,7 +4399,11 @@
       "acceptedAlternatives": [
         "Minha mãe disse-me que aquele livro era interessante."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-indireto-correlacao"
   },
   {
     "id": "964eafa3",
@@ -4065,7 +4416,7 @@
     "tags": [],
     "contentHash": "964eafa329c51adf5c4f6a5fdd81e81d2003534326d48c987ad5d921d159fa70",
     "esContrast": "Futuro → Condicional simple: \"haré\" → \"haría\" / \"iba a hacer\".",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Ele prometeu que ___ a prova amanhã. (eu vou fazer → ele prometeu)",
@@ -4078,7 +4429,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-discurso-indireto"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-discurso-indireto"
   },
   {
     "id": "97adffbb",
@@ -4110,7 +4465,10 @@
       "front": "Cambio deíctico: 'agora' (ahora) → ¿qué en discurso indirecto?",
       "back": "Então (entonces) ou naquele momento",
       "example": "Directo: 'Preciso fazer isso agora.' → Indireto: 'Ele disse que precisava fazer aquilo então.'"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-deicticos"
+    ]
   },
   {
     "id": "980cedff",
@@ -4148,7 +4506,11 @@
         "Concesivo"
       ],
       "answer": "Adversativo"
-    }
+    },
+    "__nuevos": [
+      "b8-con-contraste",
+      "b8-oracoes-subordinadas"
+    ]
   },
   {
     "id": "9871c4d3",
@@ -4173,13 +4535,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Qué ocurre con el futuro do indicativo (ir + inf) en discurso indirecto?",
       "back": "Se transforma en condicional simples",
       "example": "Directo: 'Ele disse: EU VOU VIAJAR.' → Indireto: 'Ele disse que viajaria.'"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-indireto-correlacao"
   },
   {
     "id": "98ee4416",
@@ -4205,7 +4571,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Quando eu acordei, não conseguia me lembrar de nada.",
@@ -4217,7 +4583,11 @@
         "No hay pronombre de colocación"
       ],
       "answer": "Próclise (pronombre antes del verbo)"
-    }
+    },
+    "__nuevos": [
+      "b8-colocacao-pronominal"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-colocacao-pronominal"
   },
   {
     "id": "99c7f051",
@@ -4243,13 +4613,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "se derem",
       "back": "se derem (si dieran, forma de subjuntivo de 'dar')",
       "example": "Se derem mais tempo, terminaremos o projeto."
-    }
+    },
+    "__nuevos": [
+      "b8-discurso-indireto"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-discurso-indireto"
   },
   {
     "id": "9b65cc6f",
@@ -4265,7 +4639,7 @@
     ],
     "contentHash": "9b65cc6f07c549e0445c06e5e23539a1fa9c3a0cc02b3bca63a4b7d6a7d469b4",
     "esContrast": "En subordinadas substantivas con 'é importante' se usa 'que' + subjuntivo, igual que en español con 'que' + subjuntivo.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "É importante ___ tu protejas o meio ambiente.",
@@ -4276,7 +4650,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-oracoes-subordinadas"
   },
   {
     "id": "9b8358e3",
@@ -4318,7 +4696,8 @@
       "pt-br": {
         "target": "A situação era muito complicada; por isso, tive de agir com urgência."
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "9b8559a3",
@@ -4356,7 +4735,10 @@
         "Subordinada adjetiva explicativa"
       ],
       "answer": "Subordinada substantiva relativa (sem antecedente)"
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ]
   },
   {
     "id": "9beb6ff0",
@@ -4385,7 +4767,10 @@
         "∅"
       ],
       "answer": "com"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-com"
+    ]
   },
   {
     "id": "9ef5e4d2",
@@ -4400,7 +4785,7 @@
     ],
     "contentHash": "9ef5e4d267dcfc5645a0f0d73227b00e91fbf2914ba802ad4d1705b3d974c78b",
     "esContrast": "En discurso indirecto hipótesis: \"si dan\" → \"si dieran\" (no \"daban\", que es otro tiempo).",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Se eles ___ a verdade, tudo teria sido mais fácil. (se derem → hipótese passada)",
@@ -4413,7 +4798,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-discurso-indireto"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-discurso-indireto"
   },
   {
     "id": "a02ffc72",
@@ -4444,7 +4833,10 @@
       "pt-br": {
         "sentence": "Dir-___ (eu)-ia a verdade se pudesse."
       }
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-enclise"
+    ]
   },
   {
     "id": "a12c3597",
@@ -4487,7 +4879,8 @@
           "Se diría que la solución existe."
         ]
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "a3ea04a7",
@@ -4513,13 +4906,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿‘Acordar’ es pronominal en portugués? Da un ejemplo.",
       "back": "Sí, como verbo intransitivo/pronominal: Acordei-me cedo. (Me desperté temprano.)",
       "example": "Acordou-se com o barulho."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-enclise"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-coloc-enclise"
   },
   {
     "id": "a62e9f54",
@@ -4544,7 +4941,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Pregunté si habían conseguido resolver el problema.",
@@ -4554,7 +4951,11 @@
       "acceptedAlternatives": [
         "Eu perguntei se tinham conseguido resolver o problema."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-discurso-indireto"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-discurso-indireto"
   },
   {
     "id": "a67ee083",
@@ -4579,13 +4980,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "deixou-me frustrado",
       "back": "deixou-me frustrado (expressão com verbo deixar + pronome oblíquo)",
       "example": "O final do filme me deixou frustrado."
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-oracoes-subordinadas"
   },
   {
     "id": "a6b9cf11",
@@ -4601,7 +5006,7 @@
     ],
     "contentHash": "a6b9cf11c0f6019e32312b69470f6aea78588ecec59526cafdcb70c1d358bd74",
     "esContrast": "El pronombre reflexivo 'me' se enclitiza y el verbo ríege DE, no 'lembrar en'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "lembrar",
@@ -4613,7 +5018,11 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-de"
   },
   {
     "id": "a78be21d",
@@ -4651,7 +5060,10 @@
         "Porque hay una conjunción subordinada antes"
       ],
       "answer": "Porque hay una conjunción subordinada antes"
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-proclise-adverbio"
+    ]
   },
   {
     "id": "a8604510",
@@ -4682,7 +5094,10 @@
       "front": "imaginar, figurarse",
       "back": "imaginar",
       "example": "Eu não imagino como seria isso."
-    }
+    },
+    "__nuevos": [
+      "b8-discurso-indireto"
+    ]
   },
   {
     "id": "a914bb8f",
@@ -4719,7 +5134,10 @@
       "acceptedAlternatives": [
         "A cidade onde eles filmaram o filme é muito bonita."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ]
   },
   {
     "id": "afe4ee62",
@@ -4744,13 +5162,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Qué ocurre con el presente del indicativo en discurso indirecto?",
       "back": "Se transforma en pretérito imperfeito do indicativo",
       "example": "Directo: 'Ele diz: EU TENHO FOME.' → Indireto: 'Ele disse que tinha fome.'"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-indireto-correlacao"
   },
   {
     "id": "b2927a96",
@@ -4775,13 +5197,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Qué significa 'contigo' en portugués?",
       "back": "contigo (contigo, contigo)",
       "example": "Quero viajar contigo nas férias."
-    }
+    },
+    "__nuevos": [
+      "b8-conectores"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-conectores"
   },
   {
     "id": "b332868a",
@@ -4816,7 +5242,10 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ]
   },
   {
     "id": "b37829ce",
@@ -4831,7 +5260,7 @@
     ],
     "contentHash": "b37829ce04609889de180564b3284445794adb5463723933d131fd260e5650ad",
     "esContrast": "En español 'pensar' puede ir sin prep; en PT exige 'em' ante infinitivo.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
@@ -4843,7 +5272,11 @@
         "para"
       ],
       "answer": "em"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-em"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-em"
   },
   {
     "id": "b3974972",
@@ -4954,7 +5387,10 @@
         "Cuando nos acordemos de eso, conversaremos.",
         "Cuando nos acordemos de eso, vamos a conversar."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-proclise-adverbio"
+    ]
   },
   {
     "id": "b9978825",
@@ -4983,7 +5419,10 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "bb456065",
@@ -5014,7 +5453,10 @@
       "front": "Conector adversativo: 'contudo' (sin embargo, no obstante)",
       "back": "contudo (sin embargo, no obstante, con todo)",
       "example": "Quisemos ir, contudo a chuva nos impediu."
-    }
+    },
+    "__nuevos": [
+      "b8-con-contraste"
+    ]
   },
   {
     "id": "bb80e103",
@@ -5040,7 +5482,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Dígame qué piensa.",
@@ -5050,7 +5492,11 @@
       "acceptedAlternatives": [
         "Diga-me o que pensa."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-enclise"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-coloc-enclise"
   },
   {
     "id": "bbc57636",
@@ -5084,7 +5530,10 @@
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ]
   },
   {
     "id": "bcf50c91",
@@ -5126,7 +5575,10 @@
           }
         ]
       }
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-enclise"
+    ]
   },
   {
     "id": "bd109311",
@@ -5149,13 +5601,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Cuándo se usa MESÓCLISE?",
       "back": "Con verbo en futuro (á, ás, emos) o condicional (ia, ias) — dir-se-á, dar-me-ia",
       "example": "Esta situação dir-se-á complicada."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-mesoclise"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-coloc-mesoclise"
   },
   {
     "id": "bee35d9b",
@@ -5192,7 +5648,8 @@
       "pt-br": {
         "back": "por isso / então (por eso, por lo tanto) — Conectores consecutivos en PT-BR."
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "bf18cadd",
@@ -5217,13 +5674,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice ‘Conversar’ con pronombre? Ejemplo con ‘conversar com alguém’.",
       "back": "Conversar com alguém = ‘falar com alguém’. Ejemplo: Conversei com ela sobre isso.",
       "example": "Preciso conversar contigo."
-    }
+    },
+    "__nuevos": [
+      "b8-colocacao-pronominal"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-colocacao-pronominal"
   },
   {
     "id": "c1d7a2c4",
@@ -5238,7 +5699,7 @@
     ],
     "contentHash": "c1d7a2c425cd6dac77e342c0a55cda74e9dd111180f0bcbd9bfbb912b0dd9733",
     "esContrast": "Deixis espacial: \"aquí\" (origen del hablante) → \"allí\" (referencia del narrador).",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "O professor explicou que ___ não existe vida em Marte. (aqui → ele explicou)",
@@ -5249,7 +5710,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-indireto-correlacao"
   },
   {
     "id": "c21d89d9",
@@ -5326,7 +5791,8 @@
       "pt-br": {
         "back": "diga a verdade / que você diga a verdade — próclise tras ‘que’ conjunción"
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "c3c29288",
@@ -5352,7 +5818,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "A mí me hizo mucha gracia la película, aunque a ella no le tocó tanto.",
@@ -5363,7 +5829,11 @@
         "Eu achei muita graça ao filme, embora a ela não a tenha tocado tanto.",
         "Achei muita graça ao filme, apesar de a ela não ter tocado tanto."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-conectores"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-conectores"
   },
   {
     "id": "c4e1cba3",
@@ -5394,7 +5864,10 @@
       "front": "existe",
       "back": "existe (existe, hay)",
       "example": "Existe uma solução para o problema?"
-    }
+    },
+    "__nuevos": [
+      "b8-discurso-indireto"
+    ]
   },
   {
     "id": "c611717a",
@@ -5419,13 +5892,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Subordinada adjetiva com 'onde'",
       "back": "Pronome relativo que indica lugar — equivale a 'em que', 'no qual'.",
       "example": "O cinema onde vi o filme fica perto da minha casa."
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-oracoes-subordinadas"
   },
   {
     "id": "c67fe4b6",
@@ -5467,7 +5944,10 @@
       "pt-br": {
         "audioText": "O realizador cujo filme levou o prêmio está muito feliz."
       }
-    }
+    },
+    "__nuevos": [
+      "b8-sub-relativas-cujo"
+    ]
   },
   {
     "id": "c6d0de20",
@@ -5491,13 +5971,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "parar",
       "back": "parar (parar, dejar de)",
       "example": "Ele parou de fumar no ano passado."
-    }
+    },
+    "__nuevos": [
+      "b8-discurso-indireto"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-discurso-indireto"
   },
   {
     "id": "c8270a85",
@@ -5522,7 +6006,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Imagina que pararíamos de trabajar mañana.",
@@ -5532,7 +6016,11 @@
       "acceptedAlternatives": [
         "Imagina que iríamos parar de trabalhar amanhã."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-discurso-indireto"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-discurso-indireto"
   },
   {
     "id": "ccc3ac65",
@@ -5569,7 +6057,10 @@
         "Não me digas a ninguém.",
         "Não me diga a ninguém."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-proclise-negacao"
+    ]
   },
   {
     "id": "d11905d4",
@@ -5596,7 +6087,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-interrogativa"
+    ]
   },
   {
     "id": "d4e7089f",
@@ -5628,7 +6122,10 @@
       "front": "Coloca el pronombre: A gente ___ (alimentar) de forma saudável.",
       "back": "alimenta-se — ‘a gente’ usa el mismo conjugado que ‘ele/ela’ (3ª pessoa), y sin disparador el clítico va en ênclise",
       "example": "A gente alimenta-se bem quando cozinha em casa."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-enclise"
+    ]
   },
   {
     "id": "d64ccc41",
@@ -5643,7 +6140,7 @@
     ],
     "contentHash": "d64ccc41507f54a54c1afbe24b0568737c5132207e683f43808dc14f2469d28d",
     "esContrast": "Los demostrativos se ajustan al punto de referencia del narrador, no del hablante original.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela disse que ___ era necessário terminar hoje. (isso → ela disse)",
@@ -5656,7 +6153,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-indireto-correlacao"
   },
   {
     "id": "d6eb0f27",
@@ -5701,7 +6202,7 @@
     "tags": [],
     "contentHash": "d7bb9465db5665faafa3f87f4cc50f7c6c08b3506e3196c624aa603b844d7c18",
     "esContrast": "El pronombre \"nós\" no cambia, pero el tiempo verbal retrocede: \"conseguimos\" → \"tínhamos conseguido\".",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "O gerente confirmou que nós ___ o projeto na segunda-feira. (nós conseguimos → o gerente confirmou)",
@@ -5714,7 +6215,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-discurso-indireto"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-discurso-indireto"
   },
   {
     "id": "da371d96",
@@ -5753,7 +6258,11 @@
         "Conector concessivo"
       ],
       "answer": "Conector causal"
-    }
+    },
+    "__nuevos": [
+      "b8-con-causa",
+      "b8-oracoes-subordinadas"
+    ]
   },
   {
     "id": "da76a3f7",
@@ -5770,7 +6279,7 @@
     ],
     "contentHash": "da76a3f776748931580f75496e45709c4200a9e37fc65a72585338d9a3daa50f",
     "esContrast": "'No qual' es el equivalente de 'en el cual'. 'Qual' se usa más en PT-PT y registros formales; 'que' es más coloquial en PT-BR.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "O guião no ___ aparece o acteur estreante foi adaptado.",
@@ -5783,7 +6292,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-oracoes-subordinadas"
   },
   {
     "id": "dc9ba1b0",
@@ -5847,7 +6360,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Contudo, importa salientar que nenhum de nós consegue imaginar tal cenário.",
@@ -5857,7 +6370,12 @@
       "acceptedAlternatives": [
         "No obstante, cabe señalar que ninguno de nosotros puede imaginar tal escenario."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-con-contraste",
+      "b8-oracoes-subordinadas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-con-contraste, b8-oracoes-subordinadas"
   },
   {
     "id": "de63f43f",
@@ -5888,7 +6406,10 @@
       "front": "Subordinada adjetiva com 'que' (pronome relativo)",
       "back": "Pronome relativo mais comum — substitui 'o qual' e se refere a pessoas ou coisas.",
       "example": "A pessoa que me ajudou era simpática."
-    }
+    },
+    "__nuevos": [
+      "b8-sub-relativas-cujo"
+    ]
   },
   {
     "id": "de92b43d",
@@ -5903,7 +6424,7 @@
     ],
     "contentHash": "de92b43d8f33de9c6b01dbdf2e55d10228b0280b342ce7667713b7d85a176a6e",
     "esContrast": "En imperativo AFIRMATIVO, el pronombre va DESPUÉS del verbo (ênclise).",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "___ (sentar)-se aqui, por favor!",
@@ -5916,7 +6437,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-colocacao-pronominal"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-colocacao-pronominal"
   },
   {
     "id": "e0dffdcc",
@@ -5951,7 +6476,10 @@
       "acceptedAlternatives": [
         "Não sei se o guião vai levar a um bom filme."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-sub-substantivas"
+    ]
   },
   {
     "id": "e1a3013c",
@@ -5977,7 +6505,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Ela explicou que aquele livro era seu.",
@@ -5987,7 +6515,11 @@
       "acceptedAlternatives": [
         "Ella explicó que aquel libro le pertenecía."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-indireto-correlacao"
   },
   {
     "id": "e2d0f002",
@@ -6013,7 +6545,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Ela perguntou onde eu tinha parado de estudar português.",
@@ -6025,7 +6557,11 @@
         "'nós' pasó a 'ela'"
       ],
       "answer": "'eu' pasó a 'ela'"
-    }
+    },
+    "__nuevos": [
+      "b8-discurso-indireto"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-discurso-indireto"
   },
   {
     "id": "e3298621",
@@ -6068,7 +6604,10 @@
       "pt-br": {
         "audioText": "Diga-me o que você acha sobre isso, por favor."
       }
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-enclise"
+    ]
   },
   {
     "id": "e398994a",
@@ -6095,7 +6634,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "O João disse que se derem a autorização, ele consegue terminar tudo.",
@@ -6107,7 +6646,11 @@
         "Presente do Indicativo — una acción cierta"
       ],
       "answer": "Futuro do Pretérito (Condicional) — una acción hipotética"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-indireto-correlacao"
   },
   {
     "id": "e52f629a",
@@ -6132,7 +6675,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Ella dijo que ahora vive en Lisboa.",
@@ -6142,7 +6685,11 @@
       "acceptedAlternatives": [
         "Ela disse que agora vivia em Lisboa."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-indireto-correlacao"
   },
   {
     "id": "e5950b9a",
@@ -6179,7 +6726,11 @@
       "acceptedAlternatives": [
         "Aunque estoy cansado, seguiré trabajando."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-conectores",
+      "b8-sub-concessivas"
+    ]
   },
   {
     "id": "e5ccb06b",
@@ -6216,7 +6767,10 @@
         "Adverbial temporal"
       ],
       "answer": "Adverbial concessiva"
-    }
+    },
+    "__nuevos": [
+      "b8-sub-concessivas"
+    ]
   },
   {
     "id": "e943e6b3",
@@ -6242,7 +6796,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Ninguém imagina que aquele projeto existia há tanto tempo.",
@@ -6254,7 +6808,11 @@
         "Existe → Existia (sin cambio)"
       ],
       "answer": "Existe → Existia"
-    }
+    },
+    "__nuevos": [
+      "b8-discurso-indireto"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-discurso-indireto"
   },
   {
     "id": "eb7d4755",
@@ -6279,7 +6837,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "La verdad se dirá tarde o temprano.",
@@ -6289,7 +6847,11 @@
       "acceptedAlternatives": [
         "A verdade há de dizer-se."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-enclise"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-coloc-enclise"
   },
   {
     "id": "ebedefb2",
@@ -6304,7 +6866,7 @@
     ],
     "contentHash": "ebedefb261e98b098d1dde87d61b5f164e2eddbab46544d9756383a6b78aef26",
     "esContrast": "En español 'necesitar' no lleva prep; en PT-BR 'precisar' rije 'de'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
@@ -6316,7 +6878,11 @@
         "a"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-de"
   },
   {
     "id": "ec1d811a",
@@ -6351,7 +6917,10 @@
       "acceptedAlternatives": [
         "Eles disseram que iriam vir amanhã."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-deicticos"
+    ]
   },
   {
     "id": "ed23a32f",
@@ -6380,7 +6949,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-con-consequencia"
+    ]
   },
   {
     "id": "eeb0f6d7",
@@ -6405,7 +6977,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Meteram-se em problemas sérios.",
@@ -6415,7 +6987,11 @@
       "acceptedAlternatives": [
         "Se metieron en graves problemas."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-enclise"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-coloc-enclise"
   },
   {
     "id": "f40fca17",
@@ -6448,7 +7024,10 @@
       "pt-br": {
         "sentence": "O mistério ___ (se resolver) amanhã."
       }
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-enclise"
+    ]
   },
   {
     "id": "f692ec66",
@@ -6473,13 +7052,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Conector adversativo: 'entretanto' (sin embargo, mientras tanto)",
       "back": "entretanto (sin embargo, no obstante, meanwhile)",
       "example": "Estudou muito, entretanto não passou no exame."
-    }
+    },
+    "__nuevos": [
+      "b8-con-contraste"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-con-contraste"
   },
   {
     "id": "f717b064",
@@ -6504,14 +7087,18 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "O público decidiu se o estreante levaria o prémio.",
       "target": "El público decidió si el debutante llevaría el premio.",
       "sourceLang": "pt-pt",
       "targetLang": "es"
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-oracoes-subordinadas"
   },
   {
     "id": "f92f5c12",
@@ -6536,7 +7123,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Quiero que me protejan de las críticas.",
@@ -6546,7 +7133,11 @@
       "acceptedAlternatives": [
         "Quero que me protejam."
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-oracoes-subordinadas"
   },
   {
     "id": "f94bb677",
@@ -6569,13 +7160,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Conector concessivo: 'apesar de' (a pesar de)",
       "back": "apesar de (a pesar de, no obstante)",
       "example": "Apesar de chover, saímos de casa."
-    }
+    },
+    "__nuevos": [
+      "b8-conectores"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-conectores"
   },
   {
     "id": "fa57cc56",
@@ -6591,7 +7186,7 @@
     ],
     "contentHash": "fa57cc56bff5221d21b1eb13c727cdcd398d5e03a0f434d8801240fb8d5f1962",
     "esContrast": "En PT 'acordar' es reflexivo (acordar-se); en ES 'despertar' no lleva pronombre.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "acordar",
@@ -6603,7 +7198,11 @@
         "me acordo"
       ],
       "answer": "me acordo"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-otras"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-otras"
   },
   {
     "id": "fb9bfb23",
@@ -6641,7 +7240,10 @@
         "Mesóclise: el pronombre se intercala dentro del verbo en presente"
       ],
       "answer": "Mesóclise: el pronombre se intercala dentro del verbo en futuro o condicional"
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-proclise-adverbio"
+    ]
   },
   {
     "id": "fc4c9632",
@@ -6679,7 +7281,11 @@
         "porém"
       ],
       "answer": "porque"
-    }
+    },
+    "__nuevos": [
+      "b8-con-contraste",
+      "b8-sub-concessivas"
+    ]
   },
   {
     "id": "fc508283",
@@ -6705,13 +7311,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Cuál es la colocación correcta? a) Se me derem b) Derem-se me c) Me derem se",
       "back": "Se me derem — próclise tras la conjunción ‘se’",
       "example": "Se me derem tempo, vou conseguir."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-enclise"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-coloc-enclise"
   },
   {
     "id": "fc634f55",
@@ -6738,7 +7348,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-sub-adjetivas-que"
+    ]
   },
   {
     "id": "fc9efc91",
@@ -6753,7 +7366,7 @@
     ],
     "contentHash": "fc9efc9165715a3b6c22b640ae549b93751beac5343e2e593e3e53a51aa5ad0a",
     "esContrast": "'Apesar de + infinitivo' es la estructura correcta; en español se dice 'a pesar de'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "___ de não saber a resposta, tentou participar.",
@@ -6766,7 +7379,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-conectores"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-conectores"
   },
   {
     "id": "ffe3cde0",
@@ -6792,7 +7409,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Diga-me quem deixou o estreante frustrado.",
@@ -6804,7 +7421,11 @@
         "Complemento circunstancial"
       ],
       "answer": "Complemento directo del verbo 'diga'"
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-oracoes-subordinadas"
   },
   {
     "id": "c626c3c9",
@@ -6820,13 +7441,17 @@
     ],
     "contentHash": "c626c3c974f98e4715675b944956716d94961d04fa6f83f72ca38e2b8f721930",
     "esContrast": "Tras una palabra negativa va próclise (pronombre antes del verbo): 'não me diga'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "error_correction",
     "data": {
       "sentence": "Não diga-me isso, por favor.",
       "correct": "Não me diga isso, por favor.",
       "explanationEs": "La negación 'não' atrae el pronombre a posición proclítica: 'não me diga'."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-proclise-negacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-coloc-proclise-negacao"
   },
   {
     "id": "c17161d2",
@@ -6843,13 +7468,17 @@
     ],
     "contentHash": "c17161d2b6194af5e04ebccc1feff1a3eceaec34ac0c2a5261bd9267bba3c520",
     "esContrast": "La conjunción 'que' atrae próclise: 'que me ajude'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "error_correction",
     "data": {
       "sentence": "Espero que ajude-me com o projeto.",
       "correct": "Espero que me ajude com o projeto.",
       "explanationEs": "'que' atrae el pronombre a próclise: 'que me ajude'."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-proclise-adverbio"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-coloc-proclise-adverbio"
   },
   {
     "id": "d69a8be6",
@@ -6865,13 +7494,17 @@
     ],
     "contentHash": "d69a8be642a474494e5e98307e7cc4326a4dd9ada6d30b3ea208658bec26ac6b",
     "esContrast": "Las conjunciones subordinantes ('quando') atraen próclise: 'quando o vi'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "error_correction",
     "data": {
       "sentence": "Quando vi-o na rua, fiquei muito feliz.",
       "correct": "Quando o vi na rua, fiquei muito feliz.",
       "explanationEs": "'quando' (subordinante) atrae el pronombre antes del verbo: 'quando o vi'."
-    }
+    },
+    "__nuevos": [
+      "b8-colocacao-pronominal"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-colocacao-pronominal"
   },
   {
     "id": "24de03f2",
@@ -6887,13 +7520,17 @@
     ],
     "contentHash": "24de03f2741d14447f54580e9815fa15411cdf145c954ddb2cb792360facd08e",
     "esContrast": "'mas' (pero) no se confunde con 'mais' (más): falso amigo gráfico.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "error_correction",
     "data": {
       "sentence": "Estudei muito, mais não passei na prova.",
       "correct": "Estudei muito, mas não passei na prova.",
       "explanationEs": "'mas' significa 'pero'; 'mais' significa 'más'. Aquí es adversativo: 'mas'."
-    }
+    },
+    "__nuevos": [
+      "b8-con-contraste"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-con-contraste"
   },
   {
     "id": "d2eb33c6",
@@ -6909,13 +7546,17 @@
     ],
     "contentHash": "d2eb33c6f65973246a67e9cbf425ce3fd8428c4a7253cc390b484554ed0499b7",
     "esContrast": "La causa se introduce con 'porque' (junto), no 'por que'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "error_correction",
     "data": {
       "sentence": "Fiquei em casa por que choveu o dia todo.",
       "correct": "Fiquei em casa porque choveu o dia todo.",
       "explanationEs": "El conector causal es 'porque' (en una palabra): 'porque choveu'."
-    }
+    },
+    "__nuevos": [
+      "b8-con-causa"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-con-causa"
   },
   {
     "id": "fa684345",
@@ -6932,13 +7573,17 @@
     ],
     "contentHash": "fa6843451f54befebc85196e3ba4447dd01895ab7811b73a9b589816af717c94",
     "esContrast": "'embora' (aunque) pide conjuntivo: 'esteja'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "error_correction",
     "data": {
       "sentence": "Embora ele está cansado, continuou trabalhando.",
       "correct": "Embora ele esteja cansado, continuou trabalhando.",
       "explanationEs": "El concesivo 'embora' exige conjuntivo: 'esteja'."
-    }
+    },
+    "__nuevos": [
+      "b8-conectores"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-conectores"
   },
   {
     "id": "706cc57c",
@@ -6954,13 +7599,17 @@
     ],
     "contentHash": "706cc57c7c14dc1e7c69a153c56a3b3f99e30a3813601c716f37dab3e0fe3db4",
     "esContrast": "En el discurso indirecto en pasado, el presente pasa a imperfeito: 'estava'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "error_correction",
     "data": {
       "sentence": "Ontem ele disse que está muito cansado.",
       "correct": "Ontem ele disse que estava muito cansado.",
       "explanationEs": "Discurso indirecto en pasado: presente → imperfeito ('estava')."
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-indireto-correlacao"
   },
   {
     "id": "d9a7ac36",
@@ -6976,13 +7625,17 @@
     ],
     "contentHash": "d9a7ac365b0c48e44684d82b3e79a6fd126548a135610bdfed030ce1d65d5952",
     "esContrast": "En el discurso indirecto en pasado, el futuro perifrástico pasa a imperfeito: 'ia viajar'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "error_correction",
     "data": {
       "sentence": "Maria disse que vou viajar na próxima semana.",
       "correct": "Maria disse que ia viajar na próxima semana.",
       "explanationEs": "Discurso indirecto en pasado: 'vou viajar' → 'ia viajar', con cambio de pronombre implícito."
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-indireto-correlacao"
   },
   {
     "id": "6271f983",
@@ -7004,7 +7657,10 @@
       "sentence": "Eu acho de que ele tem razão.",
       "correct": "Eu acho que ele tem razão.",
       "explanationEs": "'achar' se construye con 'que' (sin 'de'): 'acho que'."
-    }
+    },
+    "__nuevos": [
+      "b8-sub-substantivas"
+    ]
   },
   {
     "id": "5a721355",
@@ -7020,13 +7676,17 @@
     ],
     "contentHash": "5a7213555a241c3f34d778bc4191eb781dd33af7f384c862d0dad0bac6c53a06",
     "esContrast": "La relación de posesión usa el relativo 'cujo': 'cujo autor'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "error_correction",
     "data": {
       "sentence": "O livro que o autor é famoso está esgotado.",
       "correct": "O livro cujo autor é famoso está esgotado.",
       "explanationEs": "Para indicar posesión en la relativa se usa 'cujo': 'o livro cujo autor'."
-    }
+    },
+    "__nuevos": [
+      "b8-sub-relativas-cujo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-sub-relativas-cujo"
   },
   {
     "id": "0f44db92",
@@ -7048,7 +7708,10 @@
       "sentence": "A cidade que eu moro é muito bonita.",
       "correct": "A cidade onde eu moro é muito bonita.",
       "explanationEs": "Para lugar se usa el relativo 'onde': 'a cidade onde moro'."
-    }
+    },
+    "__nuevos": [
+      "b8-sub-adjetivas-que"
+    ]
   },
   {
     "id": "89d9cd61",
@@ -7065,13 +7728,17 @@
     ],
     "contentHash": "89d9cd61b639c12986a5437a2641654edde694fe5b47479fbbbe953ec32fd410",
     "esContrast": "Calco del español 'entonces'; el consecutivo en PT es 'então'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "error_correction",
     "data": {
       "sentence": "Estava cansado, entonces fui dormir cedo.",
       "correct": "Estava cansado, então fui dormir cedo.",
       "explanationEs": "El conector consecutivo en portugués es 'então' (no el español 'entonces')."
-    }
+    },
+    "__nuevos": [
+      "b8-conectores"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-conectores"
   },
   {
     "id": "e0aa80cf",
@@ -7086,7 +7753,7 @@
       "concessivo"
     ],
     "contentHash": "e0aa80cfdbfa705d4368cb58cb7bd01af54833f05ef799a71982290b73dc8a7f",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "multiple_choice",
     "data": {
       "question": "'embora' introduce una idea de:",
@@ -7097,7 +7764,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'embora' (aunque) es concesivo y pide conjuntivo."
-    }
+    },
+    "__nuevos": [
+      "b8-conectores"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-conectores"
   },
   {
     "id": "5df58939",
@@ -7112,7 +7783,7 @@
       "proclise"
     ],
     "contentHash": "5df589390be8d65c812fe6bfbd0518cd07267edcb8a0b13428f607af4dcd2b6a",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "multiple_choice",
     "data": {
       "question": "¿Cuál palabra atrae el pronombre antes del verbo (próclise)?",
@@ -7123,7 +7794,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "Las palabras negativas como 'não' atraen próclise: 'não me diga'."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-proclise-negacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-coloc-proclise-negacao"
   },
   {
     "id": "2440db88",
@@ -7137,7 +7812,7 @@
       "discurso-indireto"
     ],
     "contentHash": "2440db883cc977de62683c5f8fbf29beb89507da5cd9fc4c774e66d25c0d9a50",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "multiple_choice",
     "data": {
       "question": "Directo: 'Vou ao cinema.' Indirecto en pasado: 'Ele disse que ___ ao cinema.'",
@@ -7148,7 +7823,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "El futuro perifrástico 'vou' pasa a imperfeito 'ia' en el discurso indirecto en pasado."
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-correlacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-indireto-correlacao"
   },
   {
     "id": "c5d95688",
@@ -7163,7 +7842,7 @@
       "onde"
     ],
     "contentHash": "c5d95688885be78aa95a0a4160c8727b99190b44d58ed97247d55ce9dc885c9b",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "multiple_choice",
     "data": {
       "question": "'La casa ___ vivo' (= donde vivo):",
@@ -7174,7 +7853,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "Para lugar se usa 'onde': 'a casa onde vivo'."
-    }
+    },
+    "__nuevos": [
+      "b8-sub-relativas-cujo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-sub-relativas-cujo"
   },
   {
     "id": "916d035f",
@@ -7189,7 +7872,7 @@
       "interferencia"
     ],
     "contentHash": "916d035fcabd59f4949d22083929e0fa7fbc5dc49a51b7e9c46840208fb8673b",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "multiple_choice",
     "data": {
       "question": "'Pero' (adversativo) en portugués es:",
@@ -7200,7 +7883,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'mas' = pero; 'mais' = más. Son falsos amigos gráficos."
-    }
+    },
+    "__nuevos": [
+      "b8-con-contraste"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-con-contraste"
   },
   {
     "id": "934ae377",
@@ -7215,7 +7902,7 @@
       "mesoclise"
     ],
     "contentHash": "934ae377ca6890aa8e7b55c92471f30422651fb14ccf1d579f481b3be1d66706",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "multiple_choice",
     "data": {
       "question": "La mesóclise (ej. 'dir-se-á') aparece con verbos en:",
@@ -7226,7 +7913,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "La mesóclise solo ocurre con futuro do presente y condicional: 'dir-se-á', 'far-se-ia'."
-    }
+    },
+    "__nuevos": [
+      "b8-colocacao-pronominal"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-colocacao-pronominal"
   },
   {
     "id": "10d4feb6",
@@ -7241,7 +7932,7 @@
       "cujo"
     ],
     "contentHash": "10d4feb6c6d0d3db17b6234fd5541da91d92476e4ac28a5c76b7733c892fac02",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "multiple_choice",
     "data": {
       "question": "El relativo 'cujo' expresa:",
@@ -7252,7 +7943,11 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'cujo' indica posesión: 'o autor cujo livro...'."
-    }
+    },
+    "__nuevos": [
+      "b8-sub-relativas-cujo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-sub-relativas-cujo"
   },
   {
     "id": "c95d14b1",
@@ -7295,7 +7990,7 @@
     ],
     "contentHash": "28a83819badca8d6e4b7e46df168ccb71703e97839288729e41554c37ca36d20",
     "esContrast": "Concesivo + conjuntivo: 'Embora estivesse...'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "___ estivesse cansado, ele terminou o relatório.",
@@ -7305,7 +8000,11 @@
           "answer": "Embora"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-conectores"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-conectores"
   },
   {
     "id": "e75e296f",
@@ -7321,7 +8020,7 @@
     ],
     "contentHash": "e75e296f16bd7d19e695153a5c047482cfa37aba1d1ff89a5610048e4a71cd62",
     "esContrast": "Tras 'não' va próclise: 'não me disse'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Ele não ___ disse nada sobre a viagem.",
@@ -7331,7 +8030,11 @@
           "answer": "me"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-proclise-negacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-coloc-proclise-negacao"
   },
   {
     "id": "95e39a7a",
@@ -7356,7 +8059,10 @@
           "answer": "queria"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-interrogativa"
+    ]
   },
   {
     "id": "23fe61d0",
@@ -7370,7 +8076,7 @@
       "conectores"
     ],
     "contentHash": "23fe61d090bc555495faeb87126cf535a32a258f39567eeef7147e2507edeede",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "matching",
     "data": {
       "pairs": [
@@ -7391,7 +8097,11 @@
           "right": "concessão"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b8-con-contraste"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b8-con-contraste"
   },
   {
     "id": "b2c2-gj-01",
@@ -7439,7 +8149,10 @@
       "sentence": "Embora estejas cansado, vieste ajudar.",
       "verdict": true,
       "explanationEs": "'Embora' exige conjuntivo ('estejas') — aquí está bien. Con indicativo ('*embora estás') sería agramatical en las dos normas."
-    }
+    },
+    "__nuevos": [
+      "b8-sub-concessivas"
+    ]
   },
   {
     "id": "b2c2-gj-03",
@@ -7464,7 +8177,10 @@
       "verdict": false,
       "repair": "Preciso do teu carro para amanhã.",
       "explanationEs": "'Precisar' rige DE con sustantivo en portugués europeo: 'preciso de + cosa'. Sin 'de' es calco del español ('necesito tu coche'); en Brasil ante infinitivo la supresión es estándar."
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "b2c2-gj-04",
@@ -7488,7 +8204,10 @@
       "verdict": false,
       "repair": "Gosto muito deste bairro.",
       "explanationEs": "'De + este' contrae en 'deste' (aquí, obligatoriamente); solo queda sin contraer cuando 'este' es sujeto de un infinitivo: 'apesar de este bairro ser caro'."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-contracciones"
+    ]
   },
   {
     "id": "b2c2-gj-05",
@@ -7511,7 +8230,10 @@
       "sentence": "Há dois anos que moro em Lisboa.",
       "verdict": true,
       "explanationEs": "'Há + tiempo + que' es la forma europea normal de duración; contrasta con el español 'desde hace'."
-    }
+    },
+    "__nuevos": [
+      "b11-aspecto-tempo"
+    ]
   },
   {
     "id": "b2c2-gj-06",
@@ -7535,7 +8257,10 @@
       "verdict": false,
       "repair": "Conheço-a há cinco anos.",
       "explanationEs": "'Desde hace' español NO se traduce 'desde faz': la duración en portugués es con 'há'. Nota la ênclise 'conheço-a', correcta en europeo — el error no está ahí."
-    }
+    },
+    "__nuevos": [
+      "b11-aspecto-tempo"
+    ]
   },
   {
     "id": "b2c2-gj-l1-01",
@@ -7558,7 +8283,10 @@
       "sentence": "Está a chover desde ontem.",
       "verdict": true,
       "explanationEs": "'Estar a + infinitivo' es el progresivo europeo — en Brasil sería 'está chovendo' y en español 'está lloviendo'. La frase es correcta tal cual."
-    }
+    },
+    "__nuevos": [
+      "b11-aspecto-tempo"
+    ]
   },
   {
     "id": "b2c2-gj-l1-02",
@@ -7582,7 +8310,10 @@
       "verdict": false,
       "repair": "Cheguei a casa muito tarde.",
       "explanationEs": "'Chegar' de movimiento rige A en el estándar europeo — y con la casa de uno, sin artículo: 'chegar a casa'. Este error NO viene del español (que también dice 'llegar A casa'): es interferencia del portugués de Brasil ('cheguei em casa', normal allí), que se pega por las series."
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-a"
+    ]
   },
   {
     "id": "b2c2-gj-l1-03",
@@ -7606,7 +8337,10 @@
       "verdict": false,
       "repair": "Trabalho num escritório de advogados.",
       "explanationEs": "'Oficina' en portugués es el TALLER (mecánico, de reparaciones); el lugar de trabajo administrativo es 'escritório'. Falso amigo clásico del hispanohablante."
-    }
+    },
+    "__nuevos": [
+      "b11-falsos-amigos"
+    ]
   },
   {
     "id": "b2c2-gj-l1-04",
@@ -7629,7 +8363,10 @@
       "sentence": "Apaixonei-me por ela.",
       "verdict": true,
       "explanationEs": "'Enamorarse DE' se dice 'apaixonar-se POR' — aquí está bien. La ênclise 'apaixonei-me' también: frase afirmativa sin disparador de próclise."
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-por-para"
+    ]
   },
   {
     "id": "b2c2-gj-l1-05",
@@ -7653,7 +8390,10 @@
       "verdict": false,
       "repair": "Estudo português há três anos.",
       "explanationEs": "'Llevar + tiempo' no se traduce con 'levar': la duración en portugués es con 'há' ('há três anos que estudo' también vale). 'Levar' existe, pero para otras cosas (levar tempo A fazer algo = tardar)."
-    }
+    },
+    "__nuevos": [
+      "b11-aspecto-tempo"
+    ]
   },
   {
     "id": "b2c2-gj-l1-06",
@@ -7676,7 +8416,10 @@
       "sentence": "Vou perguntar-lhe se pode ajudar.",
       "verdict": true,
       "explanationEs": "'Perguntar se' (preguntar si) está perfecto, y la ênclise 'perguntar-lhe' es la colocación europea con infinitivo."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-infinitivo"
+    ]
   },
   {
     "id": "b2c2-gj-l1-07",
@@ -7700,7 +8443,10 @@
       "verdict": false,
       "repair": "Fiz-lhe uma pergunta.",
       "explanationEs": "Como en español, las preguntas se HACEN: 'fazer uma pergunta' = 'hacer una pregunta'. 'Pedir uma pergunta' no viene del español (ahí también es agramatical): delata material traducido del inglés (to ask)."
-    }
+    },
+    "__nuevos": [
+      "b9-lexico-anti-calco"
+    ]
   },
   {
     "id": "b2c2-gj-l1-08",
@@ -7724,7 +8470,10 @@
       "verdict": false,
       "repair": "Vou a pé até ao centro.",
       "explanationEs": "En Portugal lo normal es contraer: 'até ao centro', 'até à praia'. 'Até o' es la norma de uso brasileña (y no agramatical en sentido estricto) — en un texto europeo, chirría."
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-a-por"
+    ]
   },
   {
     "id": "b2c2-gj-l1-09",
@@ -7745,7 +8494,8 @@
       "sentence": "Faz muito calor em agosto.",
       "verdict": true,
       "explanationEs": "'Fazer calor/frio' existe en portugués igual que en español ('está calor' también se dice). Correcta tal cual."
-    }
+    },
+    "__nuevos": []
   },
   {
     "id": "b2c2-gj-l1-10",
@@ -7769,7 +8519,10 @@
       "verdict": false,
       "repair": "Esqueci-me de trazer o livro.",
       "explanationEs": "'Olvidar' solo sobrevive en portugués como arcaísmo literario ('votar ao olvido'); en la lengua de hoy es 'esquecer'. La estructura ('-me de + infinitivo') estaba impecable — el error es solo el verbo."
-    }
+    },
+    "__nuevos": [
+      "b9-lexico-anti-calco"
+    ]
   },
   {
     "id": "b2c2-gj-l1-11",
@@ -7792,7 +8545,10 @@
       "sentence": "Somos quatro na minha família.",
       "verdict": true,
       "explanationEs": "'Somos cuatro' funciona igual: 'ser + numeral' para el tamaño del grupo, y el posesivo con artículo ('na minha família') es el europeo de manual."
-    }
+    },
+    "__nuevos": [
+      "b2-poss-com-artigo"
+    ]
   },
   {
     "id": "b2c2-gj-l1-12",
@@ -7815,7 +8571,10 @@
       "sentence": "Se calhar vou ficar em casa.",
       "verdict": true,
       "explanationEs": "'Se calhar' (= a lo mejor) es europeo genuino y corriente — no existe en español y por eso suena 'sospechoso'. En Brasil se diría 'talvez' o 'pode ser'."
-    }
+    },
+    "__nuevos": [
+      "b10-reg-mitigacao"
+    ]
   },
   {
     "id": "b2c2-gj-l1-13",
@@ -7839,7 +8598,10 @@
       "sentence": "Não deixes de visitar Sintra.",
       "verdict": true,
       "explanationEs": "'Deixar de + infinitivo' = 'dejar de': coincide con el español y está perfecto — no todo lo que suena igual es calco. El imperativo negativo se hace con el presente do conjuntivo: 'não deixes', no '*não deixa'."
-    }
+    },
+    "__nuevos": [
+      "b3-imper-negativo"
+    ]
   },
   {
     "id": "b2c2-gj-l1-14",
@@ -7863,7 +8625,10 @@
       "verdict": false,
       "repair": "O filme parece-se com o livro.",
       "explanationEs": "'Parecerse A' se dice 'parecer-se COM'. La ênclise 'parece-se' está bien — el error está en la preposición."
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-com"
+    ]
   },
   {
     "id": "b2c2-gj-l1-15",
@@ -7887,7 +8652,10 @@
       "verdict": false,
       "repair": "Sou adepto do futebol.",
       "explanationEs": "'Aficionado' existe en portugués casi solo en el mundo de los toros (es préstamo del español); del fútbol se es 'adepto' (o 'fã'). Léxico, no gramática."
-    }
+    },
+    "__nuevos": [
+      "b9-lexico-anti-calco"
+    ]
   },
   {
     "id": "b2c2-gj-l1-16",
@@ -7911,7 +8679,10 @@
       "verdict": false,
       "repair": "Perguntou-me que horas eram.",
       "explanationEs": "La PREGUNTA de la hora va en plural: 'Que horas são?', 'que horas eram?' (la respuesta puede ser singular: 'é uma hora'). El singular '¿qué hora era?' del español peninsular no se traslada."
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-interrogativa"
+    ]
   },
   {
     "id": "b2c2-gj-l1-17",
@@ -7935,7 +8706,10 @@
       "sentence": "Quanto tempo demoraste a chegar?",
       "verdict": true,
       "explanationEs": "'Demorar A + infinitivo' (= tardar en) es la regência correcta, y 'demoraste' es el 2sg del tuteo europeo normal."
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-a"
+    ]
   },
   {
     "id": "b2c2-gj-l1-18",
@@ -7959,7 +8733,10 @@
       "verdict": false,
       "repair": "A carne estava tão boa que repetimos.",
       "explanationEs": "En posición predicativa, 'rico' es quien tiene dinero: la comida sabrosa 'está boa/saborosa'. (Delante del nombre sí existe un 'rico' afectivo: 'uma rica sopa' — otro uso.) '¡Qué rico!' de comida no se calca."
-    }
+    },
+    "__nuevos": [
+      "b11-falsos-amigos"
+    ]
   },
   {
     "id": "b2c2-gj-l1-19",
@@ -7982,7 +8759,10 @@
       "sentence": "Ainda não me habituei a acordar cedo.",
       "verdict": true,
       "explanationEs": "'Habituar-se A' es la regência correcta, y la próclise ('não ME habituei') la exige la negación — aquí sí hay clítico que colocar."
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-a"
+    ]
   },
   {
     "id": "b2c2-gj-l1-20",
@@ -8005,7 +8785,10 @@
       "sentence": "Vou-me embora, que já é tarde.",
       "verdict": true,
       "explanationEs": "'Ir-se embora' y el 'que' causal coloquial ('…que ya es tarde') son europeos naturales. Nada que tocar."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-enclise"
+    ]
   },
   {
     "id": "b2c2-gj-l2-01",
@@ -8028,7 +8811,10 @@
       "sentence": "Nunca o vi tão feliz.",
       "verdict": true,
       "explanationEs": "La próclise ('o vi') la dispara 'nunca' — con un disparador delante, el clítico va ANTES del verbo también en el europeo."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-proclise-adverbio"
+    ]
   },
   {
     "id": "b2c2-gj-l2-02",
@@ -8052,7 +8838,10 @@
       "verdict": false,
       "repair": "Se tivesse dinheiro, comprava a casa.",
       "explanationEs": "El condicional se introduce con 'SE', no 'si' — la vocal delata al hispanohablante ('si' portugués es otra cosa: pronombre tónico, 'falou de si'). El resto estaba perfecto: 'tivesse' + 'comprava' con valor condicional, muy natural en el europeo hablado."
-    }
+    },
+    "__nuevos": [
+      "b9-lexico-anti-calco"
+    ]
   },
   {
     "id": "b2c2-gj-l2-03",
@@ -8076,7 +8865,10 @@
       "sentence": "Tenho saudades tuas.",
       "verdict": true,
       "explanationEs": "'Saudades tuas' es la forma idiomática europea — lo que descoloca al hispanohablante es el posesivo POSPUESTO y sin artículo, que aquí es lo normal ('saudades de ti' también se dice)."
-    }
+    },
+    "__nuevos": [
+      "b2-poss-formas"
+    ]
   },
   {
     "id": "b2c2-gj-l2-04",
@@ -8100,7 +8892,10 @@
       "verdict": false,
       "repair": "Estou a esperar o autocarro.",
       "explanationEs": "El progresivo del ESTÁNDAR europeo es 'estar a + infinitivo' (con esperar, también el idiomático 'estar à espera de'). 'Estar + gerundio' es la norma brasileña — y sobrevive como rasgo dialectal en el sur de Portugal (Alentejo, Algarve), pero no en el estándar."
-    }
+    },
+    "__nuevos": [
+      "b11-aspecto-tempo"
+    ]
   },
   {
     "id": "b2c2-gj-l2-05",
@@ -8124,7 +8919,10 @@
       "verdict": false,
       "repair": "Limpei o pó dos móveis.",
       "explanationEs": "'Polvo' en portugués es el PULPO; el polvo de limpiar es 'pó'. Uno de los falsos amigos más celebrados — la frase dice que limpiaste el pulpo de los muebles."
-    }
+    },
+    "__nuevos": [
+      "b11-falsos-amigos"
+    ]
   },
   {
     "id": "b2c2-gj-l2-06",
@@ -8147,7 +8945,10 @@
       "sentence": "Vou tirar uma fotografia.",
       "verdict": true,
       "explanationEs": "Las fotos en portugués se TIRAN: 'tirar uma fotografia'. El 'sacar una foto' del español no se traslada — y no hace falta."
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ]
   },
   {
     "id": "b2c2-gj-l2-07",
@@ -8171,7 +8972,10 @@
       "sentence": "Podes emprestar-me o teu carregador?",
       "verdict": true,
       "explanationEs": "'Emprestar' es prestar (el falso rastro es que en portugués 'prestar' se usa para otras cosas: prestar atenção). La ênclise con 'podes emprestar-me' es la colocación normal."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-infinitivo"
+    ]
   },
   {
     "id": "b2c2-gj-l2-08",
@@ -8195,7 +8999,10 @@
       "verdict": false,
       "repair": "A minha irmã tem o cabelo comprido e castanho.",
       "explanationEs": "'Pelo' en portugués es el pelo del cuerpo o de los animales; el de la cabeza es 'cabelo'. Dicho de tu hermana, suena a describir un animal."
-    }
+    },
+    "__nuevos": [
+      "b11-falsos-amigos"
+    ]
   },
   {
     "id": "b2c2-gj-l2-09",
@@ -8219,7 +9026,10 @@
       "verdict": false,
       "repair": "Responderam ao meu email ontem.",
       "explanationEs": "'Responder' rige A en el estándar europeo: 'responder a um email, a uma pergunta'. El objeto directo ('responder o email') es uso brasileño coloquial."
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-a"
+    ]
   },
   {
     "id": "b2c2-gj-l2-10",
@@ -8243,7 +9053,10 @@
       "sentence": "Ligo-te logo à noite.",
       "verdict": true,
       "explanationEs": "'Logo à noite' = ESTA noche, más tarde hoy — 'logo' proyecta dentro del mismo día. Y 'ligar a alguém' es llamar por teléfono."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-enclise"
+    ]
   },
   {
     "id": "b2c2-gj-l2-11",
@@ -8267,7 +9080,10 @@
       "verdict": false,
       "repair": "A minha casa fica perto do centro.",
       "explanationEs": "El posesivo lleva artículo en el estándar europeo: 'A minha casa', 'o meu carro'. Sin artículo es la norma brasileña — y encima coincide con el español 'mi casa': doble imán del error."
-    }
+    },
+    "__nuevos": [
+      "b2-poss-com-artigo"
+    ]
   },
   {
     "id": "b2c2-gj-l2-12",
@@ -8291,7 +9107,10 @@
       "verdict": false,
       "repair": "Preciso de umas férias.",
       "explanationEs": "Hoy nadie dice 'vacações': las vacaciones son 'férias'. (El diccionario conserva 'vacação' solo como tecnicismo — las ferias de los tribunales.) La regência 'preciso DE' estaba perfecta."
-    }
+    },
+    "__nuevos": [
+      "b9-lexico-anti-calco"
+    ]
   },
   {
     "id": "b2c2-gj-l2-13",
@@ -8314,7 +9133,10 @@
       "sentence": "Apesar de estar cansado, fui à festa.",
       "verdict": true,
       "explanationEs": "'Apesar de + infinitivo' es la concesiva normal — paralela al 'a pesar de' español. Correcta tal cual."
-    }
+    },
+    "__nuevos": [
+      "b8-sub-concessivas"
+    ]
   },
   {
     "id": "b2c2-gj-l2-14",
@@ -8337,7 +9159,10 @@
       "sentence": "Está uma bela tarde, não está?",
       "verdict": true,
       "explanationEs": "La coletilla europea repite el verbo ('…, não está?', '…, não é?') donde el español pone '¿verdad?'. Y 'estar' para el tiempo que hace es lo suyo."
-    }
+    },
+    "__nuevos": [
+      "b3-exist-ser-estar"
+    ]
   },
   {
     "id": "b2c2-gj-l2-15",
@@ -8361,7 +9186,10 @@
       "sentence": "Quando chegares, liga-me.",
       "verdict": true,
       "explanationEs": "El 'cuando llegues' español (presente de subjuntivo) se dice con FUTURO DO CONJUNTIVO: 'quando chegares'. Al hispanohablante le suena a error — y es la forma correcta. La ênclise 'liga-me' del imperativo afirmativo, también."
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ]
   },
   {
     "id": "b2c2-gj-l2-16",
@@ -8385,7 +9213,10 @@
       "verdict": false,
       "repair": "Parabéns à cozinheira: a sopa estava mesmo deliciosa!",
       "explanationEs": "'Esquisito' en portugués es RARO, extraño — no exquisito. Felicitar a la cocinera por una sopa 'rarísima' delata el calco. Para elogiar: deliciosa, ótima, muito boa."
-    }
+    },
+    "__nuevos": [
+      "b11-falsos-amigos"
+    ]
   },
   {
     "id": "b2c2-gj-l2-17",
@@ -8409,7 +9240,10 @@
       "verdict": false,
       "repair": "Ele entrou na sala e sentou-se.",
       "explanationEs": "'Sentar' es pronominal en el estándar europeo: 'sentar-se'. Dejar caer el 'se' ('sentou', 'levantou') es habla brasileña coloquial — el español, con 'se sentó', aquí jugaba a favor."
-    }
+    },
+    "__nuevos": [
+      "b3-pron-reflexivo"
+    ]
   },
   {
     "id": "b2c2-gj-l2-18",
@@ -8432,7 +9266,10 @@
       "sentence": "Vou pôr-me a estudar depois do jantar.",
       "verdict": true,
       "explanationEs": "'Pôr-se a + infinitivo' (= ponerse a) funciona igual que en español, con la ênclise en su sitio: 'vou pôr-me a estudar'."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-infinitivo"
+    ]
   },
   {
     "id": "b2c2-gj-l2-19",
@@ -8456,7 +9293,10 @@
       "verdict": false,
       "repair": "Ela disse-me que vinha.",
       "explanationEs": "Sin disparador (negación, 'que', 'nunca', interrogativo…), el clítico va DESPUÉS del verbo en el europeo de hoy: 'disse-me'. La próclise con sujeto ('ela me disse') es la norma brasileña — aunque la verás en la literatura del XIX de la Biblioteca (Camilo, Eça) y en fórmulas fijas ('Deus me livre'): ahí es lengua antigua, no error."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-enclise"
+    ]
   },
   {
     "id": "b2c2-gj-l2-20",
@@ -8480,7 +9320,10 @@
       "sentence": "Gosto muito de ti.",
       "verdict": true,
       "explanationEs": "'Gostar DE' + pronombre tónico ('de ti') es la estructura portuguesa — nada de calcar el 'me gustas tú' español, que invierte quién hace qué."
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "b2c2-gj-l3-01",
@@ -8527,7 +9370,10 @@
       "sentence": "Vou deitar-me cedo hoje.",
       "verdict": true,
       "explanationEs": "'Deitar-se' es acostarse. ('Acostar' existe en portugués, pero es arrimar/recostar — para irse a dormir, deitar-se.)"
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-infinitivo"
+    ]
   },
   {
     "id": "b2c2-gj-l3-03",
@@ -8550,7 +9396,10 @@
       "sentence": "Hei de visitar o Porto um dia.",
       "verdict": true,
       "explanationEs": "'Haver de + infinitivo' expresa promesa/determinación y es frecuentísimo y coloquial en el europeo. El español también tiene 'he de', pero más libresco — aquí no lo evites: es habla viva. Grafía sin guion (AO90)."
-    }
+    },
+    "__nuevos": [
+      "b11-aspecto-tempo"
+    ]
   },
   {
     "id": "b2c2-gj-l3-04",
@@ -8574,7 +9423,10 @@
       "verdict": false,
       "repair": "Ela ligou-me enquanto jantava.",
       "explanationEs": "La cena es 'o jantar' y cenar, 'jantar'. ('Cear' existe — comer la 'ceia', la cena tardía o la de Navidad, la consoada — pero la comida de cada noche es o jantar.)"
-    }
+    },
+    "__nuevos": [
+      "b9-lexico-anti-calco"
+    ]
   },
   {
     "id": "b2c2-gj-l3-05",
@@ -8598,7 +9450,10 @@
       "sentence": "Gostava que viesses ao jantar.",
       "verdict": true,
       "explanationEs": "'Gostava' (imperfecto de cortesía) + imperfecto do conjuntivo: la forma europea coloquial de '(me) gustaría que vinieras'. 'Gostaria' también existe; 'gostava' es lo que se oye."
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-correlacao"
+    ]
   },
   {
     "id": "b2c2-gj-l3-06",
@@ -8622,7 +9477,10 @@
       "verdict": false,
       "repair": "Vou pedir a conta ao empregado.",
       "explanationEs": "'Camarero' no es portugués: en Portugal es 'o empregado (de mesa)'. (En Brasil, 'garçom' — otro préstamo.)"
-    }
+    },
+    "__nuevos": [
+      "b9-lexico-anti-calco"
+    ]
   },
   {
     "id": "b2c2-gj-l3-07",
@@ -8646,7 +9504,10 @@
       "verdict": false,
       "repair": "Vou jantar com eles na sexta-feira.",
       "explanationEs": "'Estar a + infinitivo' es SOLO presente en curso: NO proyecta al futuro. El 'estoy cenando con ellos el viernes' del español no se traslada — para el plan futuro: 'vou jantar' (o el presente: 'janto com eles na sexta')."
-    }
+    },
+    "__nuevos": [
+      "b11-aspecto-tempo"
+    ]
   },
   {
     "id": "b2c2-gj-l3-08",
@@ -8669,7 +9530,10 @@
       "sentence": "É melhor irmos embora antes da chuva.",
       "verdict": true,
       "explanationEs": "El INFINITIVO PESSOAL: 'irmos' concuerda con nosotros sin necesitar conjunción ni conjuntivo. No existe en español y por eso el alumno lo «corrige» — mal hecho."
-    }
+    },
+    "__nuevos": [
+      "b7-inf-pess-impessoais"
+    ]
   },
   {
     "id": "b2c2-gj-l3-09",
@@ -8693,7 +9557,10 @@
       "verdict": false,
       "repair": "Ele pediu desculpas ao público.",
       "explanationEs": "'Disculpa' es la grafía española; en portugués es 'desculpa'. Una vocal, un océano."
-    }
+    },
+    "__nuevos": [
+      "b9-lexico-anti-calco"
+    ]
   },
   {
     "id": "b2c2-gj-l3-10",
@@ -8715,7 +9582,8 @@
       "sentence": "Pois é, tens razão.",
       "verdict": true,
       "explanationEs": "'Pois é' como asentimiento resignado es europeo hasta la médula. Y 'ter razão' = tener razón, igual que en español."
-    }
+    },
+    "__nuevos": []
   },
   {
     "id": "b2c2-gj-l3-11",
@@ -8739,7 +9607,10 @@
       "sentence": "Fica descansado, que eu trato disso.",
       "verdict": true,
       "explanationEs": "'Ficar descansado' (= quédate tranquilo) y 'tratar DE algo → trato disso'. Coloquial europeo de manual."
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "b2c2-gj-l3-12",
@@ -8763,7 +9634,10 @@
       "verdict": false,
       "repair": "Ele disse-me que vinha hoje.",
       "explanationEs": "'Dizer' rige QUE directo — el 'de que' llega del dequeísmo vernáculo del español ('me dijo de que…'). En otros verbos el DE es la regência clásica: 'lembrar-se de que', 'convencer-se de que' (aunque el habla también lo deja caer — Camilo alterna las dos en la misma página); el de tras 'dizer', en cambio, siempre sobra."
-    }
+    },
+    "__nuevos": [
+      "b8-sub-substantivas"
+    ]
   },
   {
     "id": "b2c2-gj-l3-13",
@@ -8787,7 +9661,10 @@
       "sentence": "Dir-te-ei amanhã, prometo.",
       "verdict": true,
       "explanationEs": "La MESÓCLISE: con futuro/condicional y sin disparador de próclise, el clítico va DENTRO del verbo. Culta y viva en la escritura europea; al hispanohablante le parece imposible — y es correctísima. (En el habla informal se diría 'digo-te amanhã'.)"
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-mesoclise"
+    ]
   },
   {
     "id": "b2c2-gj-l3-15",
@@ -8808,7 +9685,8 @@
       "sentence": "Não faz mal, a sério.",
       "verdict": true,
       "explanationEs": "'Não faz mal' (= no pasa nada) y 'a sério' (= en serio): dos idiomatismos europeos que el alumno no se atreve a usar por no sonar «traducido». Suenan perfectos."
-    }
+    },
+    "__nuevos": []
   },
   {
     "id": "b2c2-gj-l3-16",
@@ -8832,7 +9710,10 @@
       "sentence": "Importa-se de fechar a janela?",
       "verdict": true,
       "explanationEs": "'Importar-se de + infinitivo' es LA fórmula de cortesía europea (= ¿le importaría…?). En 3.ª persona deferencial, sin pronombre — el tratamento formal portugués."
-    }
+    },
+    "__nuevos": [
+      "b10-reg-mitigacao"
+    ]
   },
   {
     "id": "b2c2-gj-l3-17",
@@ -8856,7 +9737,10 @@
       "verdict": false,
       "repair": "É proibido fumar aqui.",
       "explanationEs": "La grafía es 'proibido', sin h — el 'prohibido' español no se traslada. (Bonus: la fórmula de cartel usa SER, 'é proibido'; un 'está proibido' se oye para prohibiciones recién en vigor.)"
-    }
+    },
+    "__nuevos": [
+      "b9-lexico-anti-calco"
+    ]
   },
   {
     "id": "b2c2-gj-l3-18",
@@ -8879,7 +9763,10 @@
       "sentence": "Diverti-me imenso na festa.",
       "verdict": true,
       "explanationEs": "'Imenso' adverbial (= muchísimo) es sello del europeo coloquial: 'gostei imenso', 'diverti-me imenso'. (En Brasil se oye más 'demais' o 'muito'.)"
-    }
+    },
+    "__nuevos": [
+      "b3-pron-reflexivo"
+    ]
   },
   {
     "id": "b2c2-gj-l4-01",
@@ -8903,7 +9790,10 @@
       "verdict": false,
       "repair": "Lavei as mãos antes do jantar.",
       "explanationEs": "El dativo posesivo del español ('me lavé las manos') NO se traslada: en portugués basta 'lavei as mãos' — el artículo ya marca la posesión. El '-me' sobra."
-    }
+    },
+    "__nuevos": [
+      "b3-pron-reflexivo"
+    ]
   },
   {
     "id": "b2c2-gj-l4-02",
@@ -8925,7 +9815,8 @@
       "verdict": false,
       "repair": "Ele foi um ótimo aluno.",
       "explanationEs": "El Acordo de 1990 eliminó la consonante muda: 'ótimo', 'objetivo'. 'Óptimo' es la grafía europea antigua — la verás en libros pre-2009 (y el español la conserva: doble imán). Ojo: 'facto' y 'contacto' CONSERVAN la c en Portugal — la regla es la pronunciación."
-    }
+    },
+    "__nuevos": []
   },
   {
     "id": "b2c2-gj-l4-03",
@@ -8948,7 +9839,10 @@
       "sentence": "Eu vi-o ontem no mercado.",
       "verdict": true,
       "explanationEs": "El sujeto expreso ('eu') NO dispara próclise: la ênclise 'vi-o' es la colocación normal. (Quien aprendió que 'ela me disse' está mal a veces sobrecorrige creyendo que todo pronombre delante cambia el clítico — no.)"
-    }
+    },
+    "__nuevos": [
+      "b3-pron-directo"
+    ]
   },
   {
     "id": "b2c2-gj-l4-04",
@@ -8972,7 +9866,10 @@
       "sentence": "Vou ter contigo ao café às cinco.",
       "verdict": true,
       "explanationEs": "'Ir ter com alguém' (= reunirse con, ir a donde está) es idiomatismo europeo de primera necesidad. Suena imposible al hispanohablante — y es lo que dice toda Lisboa."
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-com"
+    ]
   },
   {
     "id": "b2c2-gj-l4-06",
@@ -8995,7 +9892,10 @@
       "sentence": "Estou farto desta chuva toda.",
       "verdict": true,
       "explanationEs": "'Estar farto de' (= estar harto de) funciona igual que en español — no todo lo parecido es calco."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-contracciones"
+    ]
   },
   {
     "id": "b2c2-gj-l4-07",
@@ -9019,7 +9919,10 @@
       "verdict": false,
       "repair": "Ela ficou muito contente com a notícia.",
       "explanationEs": "'Contente' es invariable en género: ele está contente, ela está contente (plural: contentes). El femenino '*contenta' es morfología española."
-    }
+    },
+    "__nuevos": [
+      "b11-morfologia-enganosa"
+    ]
   },
   {
     "id": "b2c2-gj-l4-09",
@@ -9042,7 +9945,10 @@
       "sentence": "Se faz favor, uma bica e um copo de água.",
       "verdict": true,
       "explanationEs": "'Se faz favor' es LA fórmula europea de cortesía (SFF en los letreros); 'bica' es el café solo lisboeta. Frase de manual de supervivencia en Lisboa."
-    }
+    },
+    "__nuevos": [
+      "b10-reg-formulas"
+    ]
   },
   {
     "id": "b2c2-gj-l4-10",
@@ -9065,7 +9971,10 @@
       "sentence": "Vemo-nos logo à saída do trabalho.",
       "verdict": true,
       "explanationEs": "'Vemo-nos' — el -s de 'vemos' cae ante el clítico 'nos': morfología enclítica europea de manual. 'Nos vemos' a la española/brasileña no es la norma de acá."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-enclise"
+    ]
   },
   {
     "id": "b2c2-gj-l4-12",
@@ -9112,7 +10021,10 @@
       "sentence": "Ele insistiu em que eu ficasse para jantar.",
       "verdict": true,
       "explanationEs": "'Insistir EM' — la regência coincide con el 'insistir en' español. Correcta tal cual, conjuntivo incluido."
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-em"
+    ]
   },
   {
     "id": "b2c2-gj-l4-15",
@@ -9135,7 +10047,10 @@
       "sentence": "Vou-lhe dizer a verdade hoje mesmo.",
       "verdict": true,
       "explanationEs": "La SUBIDA del clítico al auxiliar ('vou-lhe dizer') es tan correcta como 'vou dizer-lhe' — dos posiciones válidas en el europeo, ambas con guion."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-infinitivo"
+    ]
   },
   {
     "id": "b2c2-gj-l4-16",
@@ -9158,7 +10073,10 @@
       "sentence": "Disse-lhe para vir mais cedo amanhã.",
       "verdict": true,
       "explanationEs": "'Dizer (a alguém) para + infinitivo' es la manera europea normal de reportar una orden: 'disse-lhe para vir'. Nada que corregir."
-    }
+    },
+    "__nuevos": [
+      "b3-pron-indirecto"
+    ]
   },
   {
     "id": "b2c2-gj-l4-19",
@@ -9182,7 +10100,10 @@
       "verdict": false,
       "repair": "Eles têm-se encontrado com frequência.",
       "explanationEs": "En los tiempos compuestos europeos el clítico va ENCLÍTICO al auxiliar: 'têm-se encontrado'. El 'têm se encontrado' suelto es la colocación brasileña."
-    }
+    },
+    "__nuevos": [
+      "b10-var-colocacao"
+    ]
   },
   {
     "id": "b2c2-gj-l5-01",
@@ -9205,7 +10126,10 @@
       "sentence": "É capaz de chover no domingo.",
       "verdict": true,
       "explanationEs": "«Ser capaz de» impersonal es la manera europea corriente de decir «puede que»: «é capaz de chover», «é capaz de ele não vir». Al hispanohablante le suena a «ser capaz» de una persona y desconfía — pero aquí no hay sujeto humano ninguno, y la frase está impecable."
-    }
+    },
+    "__nuevos": [
+      "b11-aspecto-tempo"
+    ]
   },
   {
     "id": "b2c2-gj-l5-02",
@@ -9228,7 +10152,10 @@
       "sentence": "Apetece-me um gelado depois do almoço.",
       "verdict": true,
       "explanationEs": "«Apetecer» funciona como en español pero es mucho más frecuente en Portugal, y con el clítico en énclisis («apetece-me», sin disparador delante). «Apetece-te um café?» es lo que se oye a diario."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-proclise-adverbio"
+    ]
   },
   {
     "id": "b2c2-gj-l5-03",
@@ -9252,7 +10179,10 @@
       "verdict": false,
       "repair": "À tarde vou jogar futebol com os meus primos.",
       "explanationEs": "Portugués parte en dos el «jugar» español: «brincar» es el juego libre de los niños («brincar às escondidas») y «jogar» es el deporte o el juego con reglas («jogar futebol, jogar às cartas»). Todas las palabras de la frase son portuguesas — el error no se ve, se sabe. Priberam registra siete acepciones de «brincar» y ninguna es deporte."
-    }
+    },
+    "__nuevos": [
+      "b11-falsos-amigos"
+    ]
   },
   {
     "id": "b2c2-gj-l5-04",
@@ -9276,7 +10206,10 @@
       "verdict": false,
       "repair": "Os alemães que conheci em Berlim eram todos de Munique.",
       "explanationEs": "Los nombres en -ão hacen tres plurales distintos y hay que sabérselos uno a uno: -ãos (irmão → irmãos, mão → mãos, cidadão → cidadãos), -ães (pão → pães, cão → cães, alemão → alemães) y -ões, el más numeroso (razão → razões, coração → corações). «Alemãos» es la sobregeneralización natural: se aplica la clase grande a un polisílabo que pertenece a la pequeña. Priberam no registra ninguna variante: el plural de «alemão» es «alemães»."
-    }
+    },
+    "__nuevos": [
+      "b11-morfologia-enganosa"
+    ]
   },
   {
     "id": "b2c2-gj-l5-05",
@@ -9299,7 +10232,10 @@
       "sentence": "Ando a ler um livro do Saramago.",
       "verdict": true,
       "explanationEs": "«Andar a + infinitivo» es el aspecto de acción prolongada y repetida — el paralelo exacto del «ando leyendo» español, sólo que en el europeo el complemento va en infinitivo y no en gerundio. Distinto de «estar a + infinitivo», que es el ahora mismo."
-    }
+    },
+    "__nuevos": [
+      "b11-aspecto-tempo"
+    ]
   },
   {
     "id": "b2c2-gj-l5-06",
@@ -9323,7 +10259,10 @@
       "verdict": false,
       "repair": "Eu não o vi no escritório.",
       "explanationEs": "En portugués «lhe» es sólo dativo — el complemento indirecto, a quien le das o le dices algo. El complemento directo de persona es o/a/os/as: «não o vi», «não a conheço». El español peninsular leísta («no le vi») empuja el error, y el estándar europeo no lo admite: Ciberdúvidas marca «*Ele viu-lhe ontem à tarde» como agramatical en la variedad europea. (En Brasil sí se oye — el vernáculo brasileño perdió los acusativos de tercera y usa «lhe» donde aquí va «o» — pero eso es otra norma, no ésta.)"
-    }
+    },
+    "__nuevos": [
+      "b11-morfologia-enganosa"
+    ]
   },
   {
     "id": "b2c2-gj-l5-07",
@@ -9347,7 +10286,10 @@
       "sentence": "Fica-te bem esse casaco azul.",
       "verdict": true,
       "explanationEs": "«Ficar bem a alguém» es lo que en español es «quedarte bien» la ropa — con el clítico dativo en énclisis. Nada que corregir."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-enclise"
+    ]
   },
   {
     "id": "b2c2-gj-l5-08",
@@ -9371,7 +10313,10 @@
       "sentence": "Já agora, trazes o pão?",
       "verdict": true,
       "explanationEs": "«Já agora» = «ya que estamos / de paso», una muletilla europea utilísima que no significa «ya ahora». Y el presente («trazes») haciendo de petición cortés es lo normal en el habla."
-    }
+    },
+    "__nuevos": [
+      "b10-reg-anti-calco"
+    ]
   },
   {
     "id": "b2c2-gj-l5-09",
@@ -9396,7 +10341,11 @@
       "verdict": false,
       "repair": "Havia muitas pessoas na paragem do autocarro.",
       "explanationEs": "El «haver» existencial es impersonal: no tiene sujeto con el que concordar, así que no pluraliza. «Muitas pessoas» es complemento directo, no sujeto. El error existe igual en español («habían muchas personas») y por eso se cuela doble. En la Biblioteca hay 26 «haviam» y ninguno es existencial."
-    }
+    },
+    "__nuevos": [
+      "b3-exist-haver",
+      "b11-morfologia-enganosa"
+    ]
   },
   {
     "id": "b2c2-gj-l5-10",
@@ -9421,7 +10370,10 @@
       "verdict": false,
       "repair": "Ontem falei com o teu pai.",
       "explanationEs": "El pretérito perfeito composto portugués no es el «he hablado» español: significa acción repetida o continuada hasta hoy («ultimamente tenho falado muito com ele»). Con un «ontem» puntual es incompatible — el hecho cerrado va en pretérito perfeito simples."
-    }
+    },
+    "__nuevos": [
+      "b11-aspecto-tempo"
+    ]
   },
   {
     "id": "b2c2-gj-l5-11",
@@ -9446,7 +10398,11 @@
       "verdict": false,
       "repair": "Prometo fazê-lo com muito cuidado.",
       "explanationEs": "Tras forma verbal terminada en -r, -s o -z, el clítico o/a/os/as toma la forma -lo/-la, cae esa consonante y el verbo se ajusta. La regla va por conjugación: -ar → -á-lo (comprar + as = comprá-las), -er → -ê-lo (fazer + o = fazê-lo), -ir → -i-lo, sin acento (partir + o = parti-lo, abrir + a = abri-la), y pôr → pô-lo. Tras -s: fizemos + o = fizemo-lo. Tras -z: fez + o = fê-lo. En español no existe nada parecido, así que el oído no avisa."
-    }
+    },
+    "__nuevos": [
+      "b11-morfologia-enganosa",
+      "b8-coloc-enclise"
+    ]
   },
   {
     "id": "b2c2-gj-l5-12",
@@ -9469,7 +10425,10 @@
       "sentence": "Não faço a mínima ideia de onde ele pôs as chaves.",
       "verdict": true,
       "explanationEs": "«Não faço ideia» / «não faço a mínima ideia» es la forma más oída en Portugal para «ni idea» — con «fazer». («Não tenho a mínima ideia» también se dice; no hay nada que elegir.) Aquí no hay ningún clítico, así que la colocación pronominal ni entra en juego: la frase está bien tal cual."
-    }
+    },
+    "__nuevos": [
+      "b10-reg-anti-calco"
+    ]
   },
   {
     "id": "b2c2-gj-l5-13",
@@ -9493,7 +10452,10 @@
       "verdict": false,
       "repair": "Não consegui dormir até às três da manhã.",
       "explanationEs": "«Dormir» en portugués no es pronominal: se duerme, sin más — el «-se» del «dormirse» español no tiene dónde agarrarse. Priberam le da once acepciones y ninguna pronominal. (Y si lo que quieres decir es el momento exacto de quedarte dormido, hay verbo propio: «adormecer» — «custou-me a adormecer». En la Biblioteca hay 139 formas de «adormecer» y ni un solo «dormir-se».)"
-    }
+    },
+    "__nuevos": [
+      "b11-morfologia-enganosa"
+    ]
   },
   {
     "id": "b2c2-gj-l5-17",
@@ -9517,7 +10479,10 @@
       "sentence": "Tenho pena de não te ter avisado ontem.",
       "verdict": true,
       "explanationEs": "«Ter pena» es lamentar («dar pena» también existe, con otro matiz: algo me da pena). Y el infinitivo compuesto con el clítico delante («não te ter avisado») es la colocación normal: la negación arrastra el clítico al principio del grupo verbal."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-proclise-negacao"
+    ]
   },
   {
     "id": "b2c2-gj-l6-02",
@@ -9540,7 +10505,10 @@
       "sentence": "Pelos vistos, ninguém sabia de nada.",
       "verdict": true,
       "explanationEs": "«Pelos vistos» (= por lo visto) es europeo genuino y corriente. Suena tan paralelo al español que el alumno lo evita por miedo al calco — sin motivo: es exactamente lo que dice un portugués."
-    }
+    },
+    "__nuevos": [
+      "b10-reg-anti-calco"
+    ]
   },
   {
     "id": "b2c2-gj-l6-03",
@@ -9564,7 +10532,10 @@
       "sentence": "Dá-me jeito vires às três, se puderes.",
       "verdict": true,
       "explanationEs": "Dos señas europeas en una: «dar jeito» (= venir bien, convenir) y el infinitivo pessoal «vires» concordando contigo sin conjunción. Ninguna existe en español; las dos son de primera necesidad en Portugal."
-    }
+    },
+    "__nuevos": [
+      "b8-colocacao-pronominal"
+    ]
   },
   {
     "id": "b2c2-gj-l6-05",
@@ -9589,7 +10560,10 @@
       "verdict": false,
       "repair": "Sempre te vejo no ginásio à sexta.",
       "explanationEs": "«Sempre» delante del verbo es disparador de próclise: «sempre te vejo», «sempre me disseram» — y lo es incluso en su lectura idiomática de 'afinal' («se fores de comboio, sempre te sai mais barato»). La ênclise aquí es la sobrecorrección del que aprendió que «el clítico va después» y lo aplica hasta donde no toca: la lista de disparadores (não, nunca, sempre, já, ainda, também, talvez…) manda más que la regla general."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-proclise-adverbio"
+    ]
   },
   {
     "id": "b2c2-gj-l6-06",
@@ -9612,7 +10586,10 @@
       "sentence": "Oxalá corra tudo bem amanhã.",
       "verdict": true,
       "explanationEs": "«Oxalá» + conjuntivo es portugués de ley (del árabe, como el «ojalá» español — hermanos, no calco). El alumno lo esquiva por sonarle «demasiado español»; los portugueses lo usan sin pestañear."
-    }
+    },
+    "__nuevos": [
+      "b10-reg-anti-calco"
+    ]
   },
   {
     "id": "b2c2-gj-l6-08",
@@ -9636,7 +10613,10 @@
       "sentence": "Vê lá se te portas bem na festa.",
       "verdict": true,
       "explanationEs": "«Vê lá» (= a ver si, más te vale) es fórmula europea coloquial de advertencia suave, con la próclise «te portas» disparada por el «se». Nada que corregir — es Lisboa hablando."
-    }
+    },
+    "__nuevos": [
+      "b10-reg-anti-calco"
+    ]
   },
   {
     "id": "b2c2-gj-l7-01",
@@ -9660,7 +10640,10 @@
       "verdict": false,
       "repair": "Se calhar chego atrasado à reunião das nove.",
       "explanationEs": "«Se calhar» pide INDICATIVO: se calhar chego, se calhar vou. El conjuntivo aquí es la sobrecorrección del que aprendió «talvez + conjuntivo» y extiende la regla al primo coloquial. Es justo al revés: «talvez chegue», pero «se calhar chego» — mismo sentido, dos gramáticas."
-    }
+    },
+    "__nuevos": [
+      "b8-conectores"
+    ]
   },
   {
     "id": "b2c2-gj-l7-06",
@@ -9683,7 +10666,10 @@
       "sentence": "Cá em casa, quem cozinha sou eu.",
       "verdict": true,
       "explanationEs": "«Cá» es europeo vivo y afectivo para el espacio propio (cá em casa, anda cá, cá nos arranjamos) — no un arcaísmo, aunque al hispanohablante «acá» le suene a otra orilla. La clivada «quem cozinha sou eu» funciona igual que en español. Eça, verbatim: «Cá em casa — disse o anão» (O Crime do Padre Amaro)."
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ]
   },
   {
     "id": "b2c2-gj-l7-09",
@@ -9708,7 +10694,10 @@
       "verdict": false,
       "repair": "Caso precises de ajuda com a mudança, liga-me.",
       "explanationEs": "«Caso» rige PRESENTE do conjuntivo: caso precises, caso possas, caso venha. El futuro do conjuntivo («precisares») es la sobrecorrección del que acaba de dominar «se precisares» y decide que caso funciona igual — casi: comparten el si condicional, no el tiempo. Ciberdúvidas lo ejemplifica a la letra: «Empresta-me esse livro, caso possas»."
-    }
+    },
+    "__nuevos": [
+      "b8-conectores"
+    ]
   },
   {
     "id": "b2c2-gj-l8-01",
@@ -9731,7 +10720,10 @@
       "sentence": "Ao sábado, o mercado enche-se de gente.",
       "verdict": true,
       "explanationEs": "«Ao + día» en singular expresa lo habitual: ao sábado (= los sábados), à segunda, ao domingo. Al hispanohablante le suena a artículo mal puesto («¿EL sábado?»); es idioma europeo corriente — el corpus lo trae una decena larga de veces, y Eça llega a juntar los dos: «Faço um d'esses espantosos queijos por semana, ao sabbado, para o comermos nós ambos ao domingo!». El plural «aos sábados» también vale (y es clásico); esta forma en singular es la que el alumno no se atreve a usar."
-    }
+    },
+    "__nuevos": [
+      "b8-conectores"
+    ]
   },
   {
     "id": "b2c2-gj-l8-04",
@@ -9755,7 +10747,10 @@
       "sentence": "Saí em bicos de pés para te não acordar.",
       "verdict": true,
       "explanationEs": "En europeo culto el clítico puede subir DELANTE de la negación del infinitivo: «para te não acordar», «para o não ver» — el corpus del curso lo trae en más de cien pasajes («para lhe não dar fé», «de o não ser», y hasta dos en una línea: «Como o não serviria eu… se me não houvessem apagado»). Al hispanohablante le parece un imposible; en portugués las dos órdenes valen («para não te acordar» también), y esta es la que delata lector de Camilo. De regalo: «em bicos de pés» = de puntillas."
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-proclise-negacao"
+    ]
   },
   {
     "id": "b2c2-gj-l8-05",
@@ -9779,7 +10774,10 @@
       "verdict": false,
       "repair": "Trata-se de obras urgentes, segundo a câmara.",
       "explanationEs": "Cuando «tratar-se de» es IMPERSONAL (= 'son', 'es cuestión de') va en singular aunque lo que siga sea plural: trata-se de obras, tratava-se de erros. La concordancia es la hipercorrección de periódico, frecuentísima también en nativos. Ojo, que el RECÍPROCO es otro verbo a todos los efectos: «tratam-se por tu» y hasta «tratavam-se de pulhas» (¡llamarse sinvergüenzas!) concuerdan con su sujeto — el corpus trae los dos. Aquí no hay quién se trate de nada: es el impersonal, y el impersonal no concuerda."
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ]
   },
   {
     "id": "b2c2-gj-l8-10",
@@ -9803,7 +10801,10 @@
       "sentence": "Enquanto não acabares os trabalhos de casa, não sais.",
       "verdict": true,
       "explanationEs": "Con referencia al futuro, «enquanto» pide futuro do conjuntivo — y el corpus lo dice mejor que nadie: «não socega emquanto não souber quem escreveu o Communicado» (Eça), «Emquanto se não liquidar o que lhe pertence…» (Os Maias). El hispanohablante espera «acabes» («mientras no acabes») y tiende a «corregir» la frase buena. (El presente tras «enquanto não» también asoma — Torga lo escribió, y Ciberdúvidas se niega a condenarlo — pero es regional o de otra época; la forma que nadie te discutirá es esta.) Es el espejo de «caso»: caso pide presente; enquanto — como quando y se — futuro."
-    }
+    },
+    "__nuevos": [
+      "b8-con-causa"
+    ]
   },
   {
     "id": "b2c2-gj-l9-01",
@@ -9826,7 +10827,10 @@
       "sentence": "Mal saímos do teatro, apanhámos uma valente chuvada.",
       "verdict": true,
       "explanationEs": "«Mal + pretérito» significa 'en cuanto, apenas': mal saímos, mal entrou, mal soube. Es conector temporal europeo de todos los días y al hispanohablante no se le ocurre nunca, porque «mal» le suena a 'mal'. Eça lo usa así: «mal entrou na sala, o rosto d'Amelia…». Fíjate de paso en «apanhámos», con tilde: es pretérito, no presente."
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ]
   },
   {
     "id": "b2c2-gj-l9-03",
@@ -9849,7 +10853,10 @@
       "sentence": "Há que ter paciência com estas coisas.",
       "verdict": true,
       "explanationEs": "«Há que + infinitivo» es impersonal europeo legítimo — «há que esperar», «há que ver» — y el corpus del curso lo trae en boca de Jacinto delante de su biblioteca: «Ha que lêr, ha que lêr…» (Eça, A Cidade e as Serras). Al hispanohablante le suena tan a «hay que» que sospecha del calco y lo cambia por «é preciso»; las dos formas valen, y esta no es un españolismo."
-    }
+    },
+    "__nuevos": [
+      "b8-conectores"
+    ]
   },
   {
     "id": "b2c2-gj-l9-07",
@@ -9872,7 +10879,10 @@
       "sentence": "Fiquei a saber ontem que ela se mudou para o Porto.",
       "verdict": true,
       "explanationEs": "«Ficar a saber» es 'enterarse' — construcción europea de todos los días que al hispanohablante no se le ocurre, porque traduce «me enteré» por «soube» (que también vale, pero dice otra cosa: el momento puntual de saberlo). «Fiquei a saber» subraya que la información te llegó de fuera. La próclise de «ela se mudou» no es brasileña aquí: la dispara el «que» de la subordinada."
-    }
+    },
+    "__nuevos": [
+      "b8-oracoes-subordinadas"
+    ]
   },
   {
     "id": "b2c2-gj-l9-09",
@@ -9896,7 +10906,10 @@
       "verdict": false,
       "repair": "O meu irmão é tão alto como o meu pai.",
       "explanationEs": "En la comparación de igualdad, delante de adjetivo o adverbio va **tão**: tão alto como, tão depressa como. «Tanto» va con sustantivos y con verbos: «tanto dinheiro como», «trabalha tanto como». El español distingue igual («tan alto» / «tanto dinero»), así que aquí no te traiciona tu lengua: te traiciona la prisa."
-    }
+    },
+    "__nuevos": [
+      "b8-con-causa"
+    ]
   },
   {
     "id": "b2c2-par-13",
@@ -9925,7 +10938,10 @@
     },
     "variantStatus": "unchecked",
     "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "693529384617ac9ac30f8c90ec1ee56079ee04a49f4a6bee90ecee381892fbf5"
+    "contentHash": "693529384617ac9ac30f8c90ec1ee56079ee04a49f4a6bee90ecee381892fbf5",
+    "__nuevos": [
+      "b8-coloc-mesoclise"
+    ]
   },
   {
     "id": "b2c2-par-14",
@@ -9954,7 +10970,10 @@
     },
     "variantStatus": "unchecked",
     "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "511bfec1261cb40f72403a6637b9bcb28bdc6ffd06f8258ae81874b009591f34"
+    "contentHash": "511bfec1261cb40f72403a6637b9bcb28bdc6ffd06f8258ae81874b009591f34",
+    "__nuevos": [
+      "b8-coloc-mesoclise"
+    ]
   },
   {
     "id": "b2c2-par-15",
@@ -9983,7 +11002,10 @@
     },
     "variantStatus": "unchecked",
     "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "d3b177cf3f551821d9a5f6e38445eeaf8b1eb358298f85e23b3402dd85f4cd34"
+    "contentHash": "d3b177cf3f551821d9a5f6e38445eeaf8b1eb358298f85e23b3402dd85f4cd34",
+    "__nuevos": [
+      "b8-coloc-mesoclise"
+    ]
   },
   {
     "id": "b2c2-par-16",
@@ -10012,7 +11034,10 @@
     },
     "variantStatus": "unchecked",
     "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "123aa35a3e893f0f5e8f5434e5a6c48ac576b45e3e763b0c7293f3047bf19060"
+    "contentHash": "123aa35a3e893f0f5e8f5434e5a6c48ac576b45e3e763b0c7293f3047bf19060",
+    "__nuevos": [
+      "b8-coloc-mesoclise"
+    ]
   },
   {
     "id": "b2c2-par-17",
@@ -10041,7 +11066,10 @@
     "variantStatus": "unchecked",
     "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "esContrast": "Con clítico de 3.ª persona cae la -r del infinitivo, el clítico pasa a «-lo» y el tema se acentúa: comprar + o + á = «comprá-lo-á».",
-    "contentHash": "e4c06bfb7261c3300019a02d0083267311bcee78f84c271aa7c632643feaff09"
+    "contentHash": "e4c06bfb7261c3300019a02d0083267311bcee78f84c271aa7c632643feaff09",
+    "__nuevos": [
+      "b8-coloc-mesoclise"
+    ]
   },
   {
     "id": "b2c2-par-18",
@@ -10070,7 +11098,10 @@
     "variantStatus": "unchecked",
     "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "esContrast": "También cae la -r y aparece «-lo», pero en la 3.ª conjugación sólo se acentúa la i que hace HIATO: «parti-lo-á», «abri-la-á» sin acento porque la i va con consonante, frente a «construí-lo-á», «possuí-lo-á», donde la i forma sílaba sola. Es la excepción que la regla de «tras -r el verbo se acentúa» esconde, porque los ejemplos que se citan siempre son de -ar y -er.",
-    "contentHash": "c01818723510ff901121c7050852ebe7fe76278d76510b3ede92be6488fdde44"
+    "contentHash": "c01818723510ff901121c7050852ebe7fe76278d76510b3ede92be6488fdde44",
+    "__nuevos": [
+      "b8-coloc-mesoclise"
+    ]
   },
   {
     "id": "b2c2-par-19",
@@ -10099,7 +11130,10 @@
     },
     "variantStatus": "unchecked",
     "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "8cc19adda6dde044c4b1ac5fd9b698f276210f95d69431f865368454eb1cbd95"
+    "contentHash": "8cc19adda6dde044c4b1ac5fd9b698f276210f95d69431f865368454eb1cbd95",
+    "__nuevos": [
+      "b8-coloc-mesoclise"
+    ]
   },
   {
     "id": "b2c2-par-20",
@@ -10128,7 +11162,10 @@
     },
     "variantStatus": "unchecked",
     "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "010960b5261b98ee49cf9f304851134be0572142d261a4600d56c48a1469d3fb"
+    "contentHash": "010960b5261b98ee49cf9f304851134be0572142d261a4600d56c48a1469d3fb",
+    "__nuevos": [
+      "b8-coloc-mesoclise"
+    ]
   },
   {
     "id": "b2c2-par-21",
@@ -10157,7 +11194,10 @@
     "variantStatus": "unchecked",
     "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "esContrast": "«Fazer» es uno de los tres irregulares: el tema del futuro es «far-», y la mesóclise se construye sobre él: far + lhe + á.",
-    "contentHash": "102f86d9e58d6e606563249f1ee6f5be9698fbed54916f0aeb476ab9a4a43993"
+    "contentHash": "102f86d9e58d6e606563249f1ee6f5be9698fbed54916f0aeb476ab9a4a43993",
+    "__nuevos": [
+      "b8-coloc-mesoclise"
+    ]
   },
   {
     "id": "b2c2-par-22",
@@ -10186,7 +11226,10 @@
     "variantStatus": "unchecked",
     "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
     "esContrast": "Con clítico de 1.ª o 2.ª persona (y con «lhe/lhes») el tema queda intacto: escrever + lhes + ão.",
-    "contentHash": "93f672e89097eff16ef0a821f42a43d0fd9f530642a27ff1a63b45b7852fdfa8"
+    "contentHash": "93f672e89097eff16ef0a821f42a43d0fd9f530642a27ff1a63b45b7852fdfa8",
+    "__nuevos": [
+      "b8-coloc-mesoclise"
+    ]
   },
   {
     "id": "b2c2-par-23",
@@ -10215,7 +11258,10 @@
     },
     "variantStatus": "unchecked",
     "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "e8dabd233edc6edd307864cc3e6fbcbd44c2cf23ea79b0f3497b549b6ca2ed99"
+    "contentHash": "e8dabd233edc6edd307864cc3e6fbcbd44c2cf23ea79b0f3497b549b6ca2ed99",
+    "__nuevos": [
+      "b8-coloc-mesoclise"
+    ]
   },
   {
     "id": "b2c2-par-24",
@@ -10244,7 +11290,10 @@
     },
     "variantStatus": "unchecked",
     "variantVerificacion": "Familia PARADIGMA v1 lote 1 (dirigido por déficit): forma verificada contra scripts/lib/paradigma-pt.ts + muestreo adversarial 2026-09-01 (docs/contenido/2026-09-01-lote-industrial-paradigma-1.md)",
-    "contentHash": "b7b10ca2733a55c80d37fbf3e77e89f66631ee973bfc846c16b703723df2fb7a"
+    "contentHash": "b7b10ca2733a55c80d37fbf3e77e89f66631ee973bfc846c16b703723df2fb7a",
+    "__nuevos": [
+      "b8-coloc-mesoclise"
+    ]
   },
   {
     "id": "cl15-080",
@@ -10273,7 +11322,10 @@
         }
       ],
       "hintEs": "además — la fórmula de dos palabras que abre frase"
-    }
+    },
+    "__nuevos": [
+      "b8-con-adicao"
+    ]
   },
   {
     "id": "cl15-081",
@@ -10302,7 +11354,10 @@
         }
       ],
       "hintEs": "no sólo… sino que — la primera mitad de la correlación"
-    }
+    },
+    "__nuevos": [
+      "b8-con-adicao"
+    ]
   },
   {
     "id": "cl15-082",
@@ -10331,7 +11386,10 @@
         }
       ],
       "hintEs": "así como — la fórmula de registro cuidado"
-    }
+    },
+    "__nuevos": [
+      "b8-con-adicao"
+    ]
   },
   {
     "id": "cl15-083",
@@ -10360,7 +11418,10 @@
         }
       ],
       "hintEs": "encima — la locución coloquial de tres palabras"
-    }
+    },
+    "__nuevos": [
+      "b8-con-adicao"
+    ]
   },
   {
     "id": "cl15-084",
@@ -10389,7 +11450,10 @@
         }
       ],
       "hintEs": "aparte de — la locución de tres palabras"
-    }
+    },
+    "__nuevos": [
+      "b8-con-adicao"
+    ]
   },
   {
     "id": "cl15-085",
@@ -10418,7 +11482,10 @@
         }
       ],
       "hintEs": "por lo demás — la locución de dos palabras"
-    }
+    },
+    "__nuevos": [
+      "b8-con-adicao"
+    ]
   },
   {
     "id": "cl15-086",
@@ -10447,7 +11514,10 @@
         }
       ],
       "hintEs": "junto a eso — la locución de tres palabras"
-    }
+    },
+    "__nuevos": [
+      "b8-con-adicao"
+    ]
   },
   {
     "id": "cl15-087",
@@ -10476,7 +11546,10 @@
         }
       ],
       "hintEs": "a lo que hay que añadir que — la fórmula de registro formal"
-    }
+    },
+    "__nuevos": [
+      "b8-con-adicao"
+    ]
   },
   {
     "id": "cl16-066",
@@ -10505,7 +11578,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 3.ª persona — la orden referida"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-imperativo"
+    ]
   },
   {
     "id": "cl16-067",
@@ -10534,7 +11610,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 3.ª del plural"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-imperativo"
+    ]
   },
   {
     "id": "cl16-068",
@@ -10563,7 +11642,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 1.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-imperativo"
+    ]
   },
   {
     "id": "cl16-069",
@@ -10592,7 +11674,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 1.ª del plural"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-imperativo"
+    ]
   },
   {
     "id": "cl16-070",
@@ -10621,7 +11706,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 3.ª del plural"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-imperativo"
+    ]
   },
   {
     "id": "cl16-071",
@@ -10650,7 +11738,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 2.ª persona — irregular"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-imperativo"
+    ]
   },
   {
     "id": "cl16-072",
@@ -10679,7 +11770,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 1.ª del plural — irregular"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-imperativo"
+    ]
   },
   {
     "id": "cl16-073",
@@ -10708,7 +11802,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 3.ª persona — irregular"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-imperativo"
+    ]
   },
   {
     "id": "cl16-074",
@@ -10737,7 +11834,10 @@
         }
       ],
       "hintEs": "futuro do conjuntivo, 2.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b8-sub-adverbiais-tempo"
+    ]
   },
   {
     "id": "cl16-075",
@@ -10766,7 +11866,10 @@
         }
       ],
       "hintEs": "futuro do conjuntivo, 3.ª del plural — irregular"
-    }
+    },
+    "__nuevos": [
+      "b8-sub-adverbiais-tempo"
+    ]
   },
   {
     "id": "cl16-076",
@@ -10795,7 +11898,10 @@
         }
       ],
       "hintEs": "futuro do conjuntivo, 1.ª del plural — irregular"
-    }
+    },
+    "__nuevos": [
+      "b8-sub-adverbiais-tempo"
+    ]
   },
   {
     "id": "cl16-077",
@@ -10824,7 +11930,10 @@
         }
       ],
       "hintEs": "futuro do conjuntivo, 3.ª persona — irregular"
-    }
+    },
+    "__nuevos": [
+      "b8-sub-adverbiais-tempo"
+    ]
   },
   {
     "id": "cl16-078",
@@ -10853,7 +11962,10 @@
         }
       ],
       "hintEs": "imperfeito, 3.ª persona — sin inversión ni signo de interrogación"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-interrogativa"
+    ]
   },
   {
     "id": "cl16-079",
@@ -10882,7 +11994,10 @@
         }
       ],
       "hintEs": "presente, 3.ª persona — irregular"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-interrogativa"
+    ]
   },
   {
     "id": "cl16-080",
@@ -10911,7 +12026,10 @@
         }
       ],
       "hintEs": "imperfeito, 3.ª del plural"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-interrogativa"
+    ]
   },
   {
     "id": "cl16-081",
@@ -10940,7 +12058,10 @@
         }
       ],
       "hintEs": "a él / a ella — complemento indirecto enclítico al infinitivo"
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-infinitivo"
+    ]
   },
   {
     "id": "cl16-082",
@@ -10969,7 +12090,10 @@
         }
       ],
       "hintEs": "a nosotros — enclítico al infinitivo"
-    }
+    },
+    "__nuevos": [
+      "b8-coloc-infinitivo"
+    ]
   },
   {
     "id": "cl16-083",
@@ -10998,7 +12122,10 @@
         }
       ],
       "hintEs": "por lo tanto"
-    }
+    },
+    "__nuevos": [
+      "b8-con-consequencia"
+    ]
   },
   {
     "id": "cl16-084",
@@ -11027,7 +12154,10 @@
         }
       ],
       "hintEs": "por eso"
-    }
+    },
+    "__nuevos": [
+      "b8-con-consequencia"
+    ]
   },
   {
     "id": "cl16-085",
@@ -11056,7 +12186,10 @@
         }
       ],
       "hintEs": "aquel — el deíctico se desplaza al pasar a indirecto"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-deicticos"
+    ]
   },
   {
     "id": "cl16-086",
@@ -11085,6 +12218,9 @@
         }
       ],
       "hintEs": "allí — el deíctico se aleja al pasar a indirecto"
-    }
+    },
+    "__nuevos": [
+      "b8-indireto-deicticos"
+    ]
   }
 ]

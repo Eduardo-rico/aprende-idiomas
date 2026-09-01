@@ -34,7 +34,10 @@
         "Assim que encontrar a vaga, ligo-te.",
         "Quando achar a vaga, ligo-te."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ]
   },
   {
     "id": "01c91268",
@@ -65,7 +68,10 @@
       "front": "formulário (substantivo)",
       "back": "formulário",
       "example": "Preciso preencher o formulário de inscrição."
-    }
+    },
+    "__nuevos": [
+      "b6-futuro-subj"
+    ]
   },
   {
     "id": "0201bcbb",
@@ -100,7 +106,10 @@
       "acceptedAlternatives": [
         "Cuando la casa se caliente me pondré a estudiar."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ]
   },
   {
     "id": "03b538f2",
@@ -136,7 +145,10 @@
       "acceptedAlternatives": [
         "Al inicio, nadie sabía manejar la situación."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contraste-indicativo-subjuntivo"
+    ]
   },
   {
     "id": "04421012",
@@ -168,7 +180,10 @@
       "front": "Traduce: 'conexión; llamada telefónica'",
       "back": "ligação",
       "example": "Há uma ligação entre os dois eventos."
-    }
+    },
+    "__nuevos": [
+      "b6-contraste-indicativo-subjuntivo"
+    ]
   },
   {
     "id": "056ccbea",
@@ -201,7 +216,10 @@
       "front": "¿Dónde va 'talvez' con subjuntivo?",
       "back": "Antes do verbo: 'talvez' anteposto exige conjuntivo. Posposto ao verbo, usa-se o indicativo.",
       "example": "Talvez ele venha. / Ele vem, talvez."
-    }
+    },
+    "__nuevos": [
+      "b6-se-subjuntivo"
+    ]
   },
   {
     "id": "064a533b",
@@ -232,7 +250,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contraste-indicativo-subjuntivo"
+    ]
   },
   {
     "id": "07865669",
@@ -261,7 +282,10 @@
         "por"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "08a7c6a1",
@@ -303,7 +327,10 @@
       "pt-br": {
         "audioText": "É incrível que você tenha tanta confiança para lidar com situações difíceis no início."
       }
-    }
+    },
+    "__nuevos": [
+      "b6-contraste-indicativo-subjuntivo"
+    ]
   },
   {
     "id": "0a649f0c",
@@ -329,7 +356,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ]
   },
   {
     "id": "0a693481",
@@ -368,7 +398,10 @@
         "Expresión de duda"
       ],
       "answer": "Expresión impersonal de posibilidad"
-    }
+    },
+    "__nuevos": [
+      "b6-contr-impessoais"
+    ]
   },
   {
     "id": "0b68f903",
@@ -439,7 +472,10 @@
       "acceptedAlternatives": [
         "Me da miedo que salgan a la luz pública y lo cuenten todo."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contraste-indicativo-subjuntivo"
+    ]
   },
   {
     "id": "0e6f747c",
@@ -456,7 +492,7 @@
     ],
     "contentHash": "0e6f747c7013d6c4b5aaf706ad52a7dedbc762e0fb148965b5429354a0875825",
     "esContrast": "'Talvez' pode ir antes ou depois do verbo; exige subjuntivo.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "___ ele ___ aqui amanhã. (talvez / estar)",
@@ -474,7 +510,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-talvez"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-contr-talvez"
   },
   {
     "id": "1111ffde",
@@ -510,7 +550,10 @@
       "acceptedAlternatives": [
         "Si él prometiese que venía a la fiesta"
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-formacao"
+    ]
   },
   {
     "id": "134441ae",
@@ -542,7 +585,10 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-formacao"
+    ]
   },
   {
     "id": "14654ef2",
@@ -569,7 +615,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-correlacao"
+    ]
   },
   {
     "id": "173d1ece",
@@ -601,7 +650,10 @@
       "front": "Error común: 'Se eu sei...' (españolismo)",
       "back": "Correcto: Se eu soubesse... (imperfeito do subjuntivo)",
       "example": "Se eu soubesse o que ia acontecer, teria fugido."
-    }
+    },
+    "__nuevos": [
+      "b6-se-hipotetico"
+    ]
   },
   {
     "id": "1876a7b4",
@@ -633,7 +685,10 @@
       "front": "¿Qué significa 'Se ao menos...'?",
       "back": "Expresa desejo irrealizável — 'Si al menos...'",
       "example": "Se ao menos eu pudesse ajudá-lo!"
-    }
+    },
+    "__nuevos": [
+      "b6-se-subjuntivo"
+    ]
   },
   {
     "id": "187a6c40",
@@ -664,7 +719,10 @@
       "front": "advocacia (substantivo)",
       "back": "advocacia (profissão de advogado)",
       "example": "Ele se formou em advocacia pela USP."
-    }
+    },
+    "__nuevos": [
+      "b6-futuro-subj"
+    ]
   },
   {
     "id": "198befe5",
@@ -690,7 +748,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-hipotetico"
+    ]
   },
   {
     "id": "198dbde3",
@@ -724,7 +785,10 @@
       "acceptedAlternatives": [
         "Si ustedes comiesen más vegetales"
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-formacao"
+    ]
   },
   {
     "id": "19c89d21",
@@ -791,7 +855,10 @@
       "front": "Tengo miedo de que él no pueda venir. (traduce al portugués)",
       "back": "Tenho medo de que ele não possa vir.",
       "example": "Tenho medo de que ele não possa vir à reunião amanhã."
-    }
+    },
+    "__nuevos": [
+      "b6-contraste-indicativo-subjuntivo"
+    ]
   },
   {
     "id": "1c3050fc",
@@ -823,7 +890,10 @@
       "front": "Traduce: 'apretar, apretar la mano'",
       "back": "apertar",
       "example": "Ele apertou a mão do amigo com força."
-    }
+    },
+    "__nuevos": [
+      "b6-presente-subj"
+    ]
   },
   {
     "id": "1d5ff8ff",
@@ -859,7 +929,10 @@
       "acceptedAlternatives": [
         "Desejo que haja uma boa ligação entre nós."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-emocao"
+    ]
   },
   {
     "id": "1e30cc88",
@@ -891,7 +964,10 @@
       "front": "Conjuga 'falar' en presente do conjuntivo: Eu",
       "back": "que eu fale",
       "example": "É importante que eu fale com ela hoje."
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-disparadores"
+    ]
   },
   {
     "id": "1ecd4197",
@@ -928,7 +1004,10 @@
         "Estudassem"
       ],
       "answer": "Estudar"
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-correlacao"
+    ]
   },
   {
     "id": "1ee66c76",
@@ -960,7 +1039,10 @@
       "front": "Traduce: 'inicio'",
       "back": "início",
       "example": "No início do ano, tudo era difícil."
-    }
+    },
+    "__nuevos": [
+      "b6-contraste-indicativo-subjuntivo"
+    ]
   },
   {
     "id": "1f424c71",
@@ -996,7 +1078,10 @@
       "pt-br": {
         "back": "Se eu estivesse no teu lugar..."
       }
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ]
   },
   {
     "id": "22557d60",
@@ -1029,7 +1114,10 @@
       "acceptedAlternatives": [
         "En cuanto se determine el rumbo de la investigación, os daré noticias."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-irregulares"
+    ]
   },
   {
     "id": "22b073bd",
@@ -1065,7 +1153,10 @@
       "acceptedAlternatives": [
         "Quando o céu se puser, o calor vai intensificar."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-irregulares"
+    ]
   },
   {
     "id": "253d0395",
@@ -1100,7 +1191,10 @@
       "acceptedAlternatives": [
         "Si hubiera tomado otra dirección, no habría conocido a María."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-irreal-passado"
+    ]
   },
   {
     "id": "260ee130",
@@ -1125,7 +1219,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Eu duvidava que ele fizesse o trabalho, mas ele prometeu que faria.",
@@ -1137,7 +1231,11 @@
         "Fazia"
       ],
       "answer": "Fizesse"
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-irregulares"
   },
   {
     "id": "261d6d4d",
@@ -1172,7 +1270,10 @@
       "acceptedAlternatives": [
         "Como se chovesse amanhã, já comprei o guarda-chuva."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-se"
+    ]
   },
   {
     "id": "266656b5",
@@ -1208,7 +1309,10 @@
       "acceptedAlternatives": [
         "Não acredito que eles tenham a confiança necessária."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-duvida"
+    ]
   },
   {
     "id": "278e78fc",
@@ -1279,7 +1383,10 @@
       "acceptedAlternatives": [
         "Tenho dúvidas de que ele saiba lidar com este problema."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-duvida"
+    ]
   },
   {
     "id": "299659db",
@@ -1294,7 +1401,7 @@
     ],
     "contentHash": "299659dbdba32f3db914e7ca6f5d1f9c571f0f134cf437fa35fcb1a98d4f75c5",
     "esContrast": "Ojo: 'estudar' en subjuntivo imperfecto es 'estudasse' (con una sola 'd'), no 'estudiase'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Se ela ___ mais, teria passado no exame.",
@@ -1305,7 +1412,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-subjuntivo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-subjuntivo"
   },
   {
     "id": "299f7796",
@@ -1335,7 +1446,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-emocao"
+    ]
   },
   {
     "id": "2a1567bd",
@@ -1368,7 +1482,10 @@
       "acceptedAlternatives": [
         "Si él promise quedarse quieto, habríamos hecho el trabajo."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-hipotetico"
+    ]
   },
   {
     "id": "2c90a6da",
@@ -1394,7 +1511,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ]
   },
   {
     "id": "2ca8356e",
@@ -1427,7 +1547,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-hipotetico"
+    ]
   },
   {
     "id": "2cd4cb67",
@@ -1459,7 +1582,10 @@
       "front": "Conector ASSIM QUE + futuro do conjuntivo",
       "back": "Indica uma ação que ocorrerá imediatamente após outra no futuro: Assim que + [verbo no futuro do conjuntivo]...",
       "example": "Assim que a ligação terminar, vou aquecer o jantar."
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ]
   },
   {
     "id": "2ce1c2c0",
@@ -1484,7 +1610,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Cuando hagas la llamada, avísame.",
@@ -1494,7 +1620,11 @@
       "acceptedAlternatives": [
         "Quando fizeres a ligação, dá-me um toque."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-quando"
   },
   {
     "id": "2cfcc89a",
@@ -1520,7 +1650,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-se"
+    ]
   },
   {
     "id": "2f57ad8b",
@@ -1546,7 +1679,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Me temo que la vaga idea que tengo sea insuficiente para llenar el formulario.",
@@ -1556,7 +1689,11 @@
       "acceptedAlternatives": [
         "Tenho medo de que a ideia vaga que tenho seja insuficiente para preencher o formulário."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contraste-indicativo-subjuntivo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-contraste-indicativo-subjuntivo"
   },
   {
     "id": "2fbb364c",
@@ -1591,7 +1728,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-emocao"
+    ]
   },
   {
     "id": "2ff1704f",
@@ -1622,7 +1762,10 @@
       "front": "Traduce al portugués: 'Era necesario que el agua se calentara antes de usar.'",
       "back": "Era necessário que a água se aquecesse antes de usar.",
       "example": "Era necessário que a água se aquecesse a 40 graus para o experimento."
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-correlacao"
+    ]
   },
   {
     "id": "31477887",
@@ -1724,13 +1867,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "formulário (substantivo)",
       "back": "formulário",
       "example": "Preciso preencher este formulário de inscrição."
-    }
+    },
+    "__nuevos": [
+      "b6-contraste-indicativo-subjuntivo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-contraste-indicativo-subjuntivo"
   },
   {
     "id": "348ba22c",
@@ -1757,7 +1904,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Es posible que él traiga las cosas que necesitamos.",
@@ -1767,7 +1914,12 @@
       "acceptedAlternatives": [
         "É possível que ele traga as coisas que precisamos."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-disparadores",
+      "b6-contr-impessoais"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-pres-subj-disparadores, b6-contr-impessoais"
   },
   {
     "id": "355e5f79",
@@ -1793,7 +1945,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Se nós tivéssemos chegado mais cedo, teríamos apanhado o último vagão.",
@@ -1803,7 +1955,11 @@
       "acceptedAlternatives": [
         "Si hubiéramos llegado antes, habríamos agarrado el último vagón."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-subjuntivo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-subjuntivo"
   },
   {
     "id": "39991646",
@@ -1838,7 +1994,10 @@
       "acceptedAlternatives": [
         "Se tomares a decisão correta, o rumo mudará."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-formacao"
+    ]
   },
   {
     "id": "3a081d4c",
@@ -1851,7 +2010,7 @@
     "tags": [],
     "contentHash": "3a081d4c371625dfe268abbd8fff604ab5a6027b272034cb887e589aa4811838",
     "esContrast": "El subjuntivo imperfecto de 'saber' es 'soubesse/soubéssemos', diferente del español 'supiéramos'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Se nós ___ a verdade, não teríamos cometido esse erro.",
@@ -1862,7 +2021,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-subjuntivo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-subjuntivo"
   },
   {
     "id": "3bd2d3d6",
@@ -1891,7 +2054,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-se"
+    ]
   },
   {
     "id": "3bffc14a",
@@ -1934,7 +2100,10 @@
       "pt-br": {
         "audioText": "Temo que o início da ligação seja confuso para vocês, mas é possível que vocês já estejam preparados."
       }
-    }
+    },
+    "__nuevos": [
+      "b6-contr-impessoais"
+    ]
   },
   {
     "id": "3d44b946",
@@ -1974,7 +2143,10 @@
           }
         ]
       }
-    }
+    },
+    "__nuevos": [
+      "b6-se-subjuntivo"
+    ]
   },
   {
     "id": "3e0e742e",
@@ -2000,13 +2172,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Él ya sabe la verdad. (¿Indicativo o Conjuntivo?)",
       "back": "Ele já sabe a verdade. (INDICATIVO - hecho/certeza)",
       "example": "Ele já sabe a verdade, por isso não precisa mentir."
-    }
+    },
+    "__nuevos": [
+      "b6-contraste-indicativo-subjuntivo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-contraste-indicativo-subjuntivo"
   },
   {
     "id": "3e7c6342",
@@ -2041,7 +2217,10 @@
       "acceptedAlternatives": [
         "Si él suspira menos, trabajaría mejor."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-hipotetico"
+    ]
   },
   {
     "id": "3f18efea",
@@ -2076,7 +2255,10 @@
       "acceptedAlternatives": [
         "Se eu soubesse falar português, trabalharia em Lisboa."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-hipotetico"
+    ]
   },
   {
     "id": "411492cc",
@@ -2110,7 +2292,10 @@
       "acceptedAlternatives": [
         "No estoy seguro de que ellos sepan la respuesta correcta."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-certeza-indicativo"
+    ]
   },
   {
     "id": "419a2f15",
@@ -2142,7 +2327,10 @@
       "front": "Traduce: 'vacante, plaza (de trabajo)'",
       "back": "vaga",
       "example": "Vi uma vaga de emprego interessante."
-    }
+    },
+    "__nuevos": [
+      "b6-contraste-indicativo-subjuntivo"
+    ]
   },
   {
     "id": "41a169d9",
@@ -2171,7 +2359,10 @@
         "precisarem —"
       ],
       "answer": "precisarem de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-otras"
+    ]
   },
   {
     "id": "42613079",
@@ -2197,13 +2388,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "pôr-se (verbo pronominal)",
       "back": "pôr-se (colocar-se, colocar a si mesmo) — reflexivo",
       "example": "Assim que escurecer, vou pôr-me a estudar."
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-quando"
   },
   {
     "id": "427e8b73",
@@ -2228,7 +2423,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Es probable que la conexión se pierda al inicio de la llamada.",
@@ -2238,7 +2433,11 @@
       "acceptedAlternatives": [
         "É provável que a ligação se perca no início da ligação."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-impessoais"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-contr-impessoais"
   },
   {
     "id": "43446140",
@@ -2263,7 +2462,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Si el zapato no estuviera tan apretado, podría usarlo.",
@@ -2273,7 +2472,11 @@
       "acceptedAlternatives": [
         "Se o sapato não estivesse tão apertado, podia usá-lo."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-irregulares"
   },
   {
     "id": "435a79ff",
@@ -2336,7 +2539,10 @@
         "em"
       ],
       "answer": "da"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "43c19009",
@@ -2372,7 +2578,10 @@
       "acceptedAlternatives": [
         "Tengo confianza en que él resolverá eso."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contraste-indicativo-subjuntivo"
+    ]
   },
   {
     "id": "442b94b3",
@@ -2413,7 +2622,8 @@
       "pt-br": {
         "target": "É possível que no início não tenhas confiança para te expressar."
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "446ab5d2",
@@ -2455,7 +2665,10 @@
       "pt-br": {
         "answer": "Hipótesis improbable o irreal presente/futura"
       }
-    }
+    },
+    "__nuevos": [
+      "b6-se-hipotetico"
+    ]
   },
   {
     "id": "44d40ed6",
@@ -2491,7 +2704,10 @@
       "acceptedAlternatives": [
         "Duvido que ele saiba o que se passou."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-irregulares"
+    ]
   },
   {
     "id": "451f6f84",
@@ -2557,13 +2773,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Traduce al portugués: 'Si el zapato estuviera menos apretado...'",
       "back": "Se o sapato estivesse menos apertado...",
       "example": "Se o sapato estivesse menos apertado, eu poderia usá-lo o dia todo."
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-irregulares"
   },
   {
     "id": "48fddecb",
@@ -2586,7 +2806,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Si ella estuviera menos ocupada, vendría a visitarnos.",
@@ -2596,7 +2816,11 @@
       "acceptedAlternatives": [
         "Se ela estivesse menos ocupada, viria a visitar-nos."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-subjuntivo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-subjuntivo"
   },
   {
     "id": "496c5452",
@@ -2628,7 +2852,10 @@
       "front": "Traduce: 'apretado, ajustado' (adjetivo)",
       "back": "apertado / apertada",
       "example": "O sapato está muito apertado."
-    }
+    },
+    "__nuevos": [
+      "b6-se-subjuntivo"
+    ]
   },
   {
     "id": "49c18c4f",
@@ -2690,7 +2917,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Caso ele não estivesse tão apertado no horário, viria ao evento no exterior.",
@@ -2702,7 +2929,11 @@
         "Ter"
       ],
       "answer": "Tivesse"
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-irregulares"
   },
   {
     "id": "4aa669a3",
@@ -2718,7 +2949,7 @@
     ],
     "contentHash": "4aa669a3e0284d8134d79ed6feb23eda25fa8e18716cbe8f0008b68be877effe",
     "esContrast": "O 'se' condicional exige subjuntivo em português (futuro do subjuntivo).",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Se ele ___ mais atenção, tudo ficará bem. (dar)",
@@ -2729,7 +2960,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contraste-indicativo-subjuntivo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-contraste-indicativo-subjuntivo"
   },
   {
     "id": "4b1ca4fc",
@@ -2755,13 +2990,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "aquecer (verbo irregular - pret. subj. futuro)",
       "back": "aquecer → aquecer (mantém) — no futuro do conjuntivo",
       "example": "Assim que a água se aquecer, podemos fazer o chá."
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-quando"
   },
   {
     "id": "4b2561b4",
@@ -2831,7 +3070,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-disparadores"
+    ]
   },
   {
     "id": "4c57ee17",
@@ -2868,7 +3110,11 @@
       "acceptedAlternatives": [
         "Talvez ele venha a saber a verdade amanhã."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-irregulares",
+      "b6-contr-talvez"
+    ]
   },
   {
     "id": "4fd214c6",
@@ -2896,7 +3142,10 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "5048626c",
@@ -2924,7 +3173,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-duvida"
+    ]
   },
   {
     "id": "520df8fd",
@@ -2951,7 +3203,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-duvida"
+    ]
   },
   {
     "id": "528df64a",
@@ -2967,7 +3222,7 @@
     ],
     "contentHash": "528df64a35c000d55152eaaa3af3eb8151af95b3a80be56d89f8464c6ce9af58",
     "esContrast": "Ambos rigen EM, pero cuidado: en español se dice 'pensar en', no 'pensar de'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
@@ -2979,7 +3234,11 @@
         "∅"
       ],
       "answer": "em"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-em"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-em"
   },
   {
     "id": "52ac19fa",
@@ -3004,13 +3263,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Traduce al portugués: 'Si supiera la verdad, te lo diría.'",
       "back": "Se eu soubesse a verdade, eu te diria.",
       "example": "Se eu soubesse a verdade, eu te diria sem hesitar."
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-irregulares"
   },
   {
     "id": "5534671f",
@@ -3035,7 +3298,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "É possível que haja ligação entre os dois casos.",
@@ -3045,7 +3308,11 @@
       "acceptedAlternatives": [
         "Es posible que haya una conexión entre los dos casos."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-impessoais"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-contr-impessoais"
   },
   {
     "id": "56497955",
@@ -3070,13 +3337,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Como se forma o futuro do conjuntivo? (verbos em -ER e -IR)",
       "back": "Substitui-se a desinência -er/-ir do pretérito perfeito por -er: comer → comi → com er",
       "example": "Assim que eucomer, vou sair para a reunião."
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-quando"
   },
   {
     "id": "566d289a",
@@ -3108,7 +3379,10 @@
       "front": "Conector QUANDO + futuro do conjuntivo",
       "back": "Indica uma ação futura ainda não realizada: Quando + [sujeito] + [verbo no futuro do conjuntivo]...",
       "example": "Quando eu conseguir a vaga, vou mudar de cidade."
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ]
   },
   {
     "id": "58b6df50",
@@ -3146,7 +3420,10 @@
         "Condicional compuesto"
       ],
       "answer": "Pretérito mais-que-perfeito do conjuntivo"
-    }
+    },
+    "__nuevos": [
+      "b6-se-irreal-passado"
+    ]
   },
   {
     "id": "58cb5eb0",
@@ -3182,7 +3459,8 @@
       "pt-br": {
         "back": "pôr"
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "5b27aed7",
@@ -3215,7 +3493,10 @@
       "acceptedAlternatives": [
         "Se ele não tivesse prometido nada, não o estaríamos à espera."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-irreal-passado"
+    ]
   },
   {
     "id": "5bc3df80",
@@ -3242,7 +3523,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Talvez ele tenha mais confiança no início da ligação.",
@@ -3254,7 +3535,12 @@
         "tinha (imperfecto)"
       ],
       "answer": "tenga (subjuntivo)"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-disparadores",
+      "b6-contr-talvez"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-pres-subj-disparadores, b6-contr-talvez"
   },
   {
     "id": "5d5a108f",
@@ -3270,7 +3556,7 @@
     ],
     "contentHash": "5d5a108fc2b81bfd55f2430cc7645a9a5afa3a392cef383ab7425d6b2606bb0c",
     "esContrast": "Em espanhol 'apretado' se refere a roupas; em PT-BR 'apertado' tem o mesmo sentido.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Se eu ___ (estar) no seu lugar, não aceitaria algo tão ___ (apertar).",
@@ -3286,7 +3572,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-irregulares"
   },
   {
     "id": "5d724b79",
@@ -3352,7 +3642,10 @@
       "acceptedAlternatives": [
         "Si nosotros estuviésemos al principio de la construcción"
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperfeito-subj"
+    ]
   },
   {
     "id": "61c4310f",
@@ -3418,7 +3711,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Quando tiverdes uma vaga na firma, avisai-me.",
@@ -3428,7 +3721,11 @@
       "acceptedAlternatives": [
         "Cuando tengáis una vacante en la firma, avisadme."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-quando"
   },
   {
     "id": "63583190",
@@ -3479,13 +3776,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Como se forma o futuro do conjuntivo? (verbos em -AR)",
       "back": "Substitui-se a desinência -ar do pretérito perfeito por -ar: falar → falei → fal ar",
       "example": "Quando eu falar com o chefe, amanhã, vou pedir a vaga."
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-quando"
   },
   {
     "id": "64073d7a",
@@ -3517,7 +3818,10 @@
       "front": "¿Indicativo o conjuntivo? 'Talvez ele ___ a verdade.' (dizer)",
       "back": "diga (conjuntivo)",
       "example": "Talvez ele diga a verdade."
-    }
+    },
+    "__nuevos": [
+      "b6-contr-talvez"
+    ]
   },
   {
     "id": "643ed58b",
@@ -3589,7 +3893,10 @@
       "acceptedAlternatives": [
         "Es extraño que no haya llamado todavía; espero que esté bien."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-impessoais"
+    ]
   },
   {
     "id": "65045f37",
@@ -3660,7 +3967,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-disparadores",
+      "b6-contr-certeza-indicativo"
+    ]
   },
   {
     "id": "676214a2",
@@ -3695,7 +4006,10 @@
       "acceptedAlternatives": [
         "Como si la conexión se hubiera hecho ayer, así reaccionaste."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-se"
+    ]
   },
   {
     "id": "67c5b809",
@@ -3737,7 +4051,10 @@
       "pt-br": {
         "audioText": "É importante que você saiba lidar com essa situação desde o início."
       }
-    }
+    },
+    "__nuevos": [
+      "b6-contr-impessoais"
+    ]
   },
   {
     "id": "682e66e2",
@@ -3763,7 +4080,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ]
   },
   {
     "id": "694d343b",
@@ -3816,7 +4136,7 @@
     ],
     "contentHash": "6972c50bca94282425cd13babb7d2a09bbee1c0bf13e6702355edc1709959804",
     "esContrast": "En ES 'lidiar con' usa 'con'; en PT 'lidar com' también, pero cambia la estructura verbal tras 'esperar que'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "lidar",
@@ -3828,7 +4148,11 @@
         "—"
       ],
       "answer": "com"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-com"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-com"
   },
   {
     "id": "6c52eb7f",
@@ -3855,7 +4179,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Talvez ela traga mais confiança para lidar com o apertar da rotina.",
@@ -3867,7 +4191,12 @@
         "trará"
       ],
       "answer": "traga"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-disparadores",
+      "b6-contr-talvez"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-pres-subj-disparadores, b6-contr-talvez"
   },
   {
     "id": "6ca73007",
@@ -3929,7 +4258,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contraste-indicativo-subjuntivo"
+    ]
   },
   {
     "id": "6d873e0e",
@@ -3967,7 +4299,10 @@
         "Que lo ignore"
       ],
       "answer": "Que lo llenen al inicio con confianza"
-    }
+    },
+    "__nuevos": [
+      "b6-contr-impessoais"
+    ]
   },
   {
     "id": "6ddf92da",
@@ -3998,7 +4333,10 @@
       "front": "Forma el imperfeito do conjuntivo de VER (irregular)",
       "back": "visse, visses, visse, víssemos, vissem",
       "example": "Se eu visse esse filme antes, teria chorado."
-    }
+    },
+    "__nuevos": [
+      "b6-imperfeito-subj"
+    ]
   },
   {
     "id": "6e7f55d2",
@@ -4023,13 +4361,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Forma el imperfeito do conjuntivo de ESTAR (irregular)",
       "back": "estivesse, estivesses, estivesse, estivéssemos, estivessem",
       "example": "Se nós estivéssemos prontos, já teríamos partido."
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-irregulares"
   },
   {
     "id": "6e8e5a10",
@@ -4058,7 +4400,10 @@
       "front": "¿Cuál es la conjugación completa de FALAR en imperfeito do conjuntivo?",
       "back": "falasse, falasses, falasse, falássemos, falassem",
       "example": "Se ele falasse a verdade, tudo seria mais fácil."
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-formacao"
+    ]
   },
   {
     "id": "6f0e5554",
@@ -4081,7 +4426,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Si supiéramos el rumo de la investigación, podríamos ayudarte mejor.",
@@ -4091,7 +4436,11 @@
       "acceptedAlternatives": [
         "Se soubéssemos o rumo da investigação, poderíamos ajudá-lo melhor."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-subjuntivo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-subjuntivo"
   },
   {
     "id": "72151956",
@@ -4123,7 +4472,10 @@
       "front": "Traduce: 'tal vez, quizá'",
       "back": "talvez",
       "example": "Talvez eu vá à festa amanhã."
-    }
+    },
+    "__nuevos": [
+      "b6-contr-talvez"
+    ]
   },
   {
     "id": "72679e92",
@@ -4156,7 +4508,10 @@
       "pt-br": {
         "sentence": "Se ele não ___ a decisão, teria logrado o éxito."
       }
-    }
+    },
+    "__nuevos": [
+      "b6-se-irreal-passado"
+    ]
   },
   {
     "id": "73224b27",
@@ -4192,7 +4547,10 @@
       "pt-br": {
         "back": "Se eu tivesse tenido tempo, teria saído para o exterior."
       }
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ]
   },
   {
     "id": "73e6569c",
@@ -4226,7 +4584,10 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ]
   },
   {
     "id": "74ad4db6",
@@ -4262,7 +4623,10 @@
       "acceptedAlternatives": [
         "Tal vez vaya a la reunión mañana."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-talvez"
+    ]
   },
   {
     "id": "7823cae6",
@@ -4319,7 +4683,7 @@
       "irregular"
     ],
     "contentHash": "782bf7f2e16f39beff28b3a39ff3db8faa8347bacfb3528eea032a6cf0bea952",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Se ele ___ (fazer) isso, estaria em apuros.",
@@ -4330,7 +4694,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-irregulares"
   },
   {
     "id": "79661cc6",
@@ -4355,7 +4723,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Quiero que vengas al início de la reunión.",
@@ -4365,7 +4733,11 @@
       "acceptedAlternatives": [
         "Quero que tu venhas ao início da reunião."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-disparadores"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-pres-subj-disparadores"
   },
   {
     "id": "7acf7f5e",
@@ -4425,7 +4797,10 @@
         "∅"
       ],
       "answer": "a"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-a"
+    ]
   },
   {
     "id": "7b8f1ddb",
@@ -4453,7 +4828,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ]
   },
   {
     "id": "7bbbb8b5",
@@ -4468,7 +4846,7 @@
     ],
     "contentHash": "7bbbb8b510b3ab6b2f3bd1bfeb8425e787d042f50a9a6145dad9414f009f0014",
     "esContrast": "O PT-BR aceita 'teriam' para a prótase; em PT-PT seria igualmente 'teriam'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Se oPrometeu não ___ (roubar) o fogo, os humanos nunca ___ (ter) civilização.",
@@ -4486,7 +4864,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-formacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-formacao"
   },
   {
     "id": "7c3a2e8d",
@@ -4511,7 +4893,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Talvez seja possível que a ligação dure mais no início, mas não se preocupe.",
@@ -4523,7 +4905,11 @@
         "Afirmación neutral"
       ],
       "answer": "Duda o posibilidad"
-    }
+    },
+    "__nuevos": [
+      "b6-contr-talvez"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-contr-talvez"
   },
   {
     "id": "7dc7da91",
@@ -4549,7 +4935,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-hipotetico"
+    ]
   },
   {
     "id": "7ef779dd",
@@ -4584,7 +4973,10 @@
       "acceptedAlternatives": [
         "Quem me dera que ela vivesse mais perto de nós."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-formacao"
+    ]
   },
   {
     "id": "7fa4ea72",
@@ -4623,7 +5015,10 @@
         "Antes del verano"
       ],
       "answer": "Cuando el verano se caliente"
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ]
   },
   {
     "id": "80c70b79",
@@ -4648,13 +5043,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Complete: Assim que a água ___ (aquecer), vou preparar o chá.",
       "back": "aquecer",
       "example": "Assim que a água se aquecer, vou preparar o chá."
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-quando"
   },
   {
     "id": "81b07c46",
@@ -4678,7 +5077,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Se eu falasse com ela, tudo ficaria mais fácil.",
@@ -4688,7 +5087,11 @@
       "acceptedAlternatives": [
         "Si yo le hablara a ella"
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-formacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-formacao"
   },
   {
     "id": "8231bdc2",
@@ -4723,7 +5126,10 @@
       "acceptedAlternatives": [
         "Si Prometeo viese la galería de arte moderno"
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperfeito-subj"
+    ]
   },
   {
     "id": "8351a07a",
@@ -4768,7 +5174,10 @@
         "audioText": "Se eu tivesse suspado que o tiempo ia ficar assim, teria ficado em casa.",
         "answer": "Condicional tipo 4 (hipótesis irreal pasada)"
       }
-    }
+    },
+    "__nuevos": [
+      "b6-se-irreal-passado"
+    ]
   },
   {
     "id": "847071af",
@@ -4812,7 +5221,11 @@
       "pt-br": {
         "audioText": "Quero que você venha apertar minha mão no início da festa."
       }
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-disparadores",
+      "b6-contr-emocao"
+    ]
   },
   {
     "id": "869a319e",
@@ -4844,7 +5257,10 @@
       "front": "Conjuga 'comer' en presente do conjuntivo: Ele",
       "back": "que ele coma",
       "example": "Espero que ele coma mais vegetais."
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-disparadores"
+    ]
   },
   {
     "id": "86dee484",
@@ -4881,7 +5297,10 @@
       "acceptedAlternatives": [
         "É importante que tu faças a ligação correta."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-disparadores"
+    ]
   },
   {
     "id": "86e213b1",
@@ -4932,7 +5351,7 @@
     ],
     "contentHash": "898193b8646505f3fa1233fd9c2caec72648b04402e83003d3dc0bdd1aadf5d7",
     "esContrast": "'Ligar' en PT-BR puede ser 'llamar por teléfono' o 'conectar', pero 'ligação' no es 'liga'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Quando o nosso ___ (rumo) ___ (mudar), a ___ (ligação) entre as cidades será reestabelecida.",
@@ -4955,7 +5374,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-quando"
   },
   {
     "id": "8a623db0",
@@ -4988,7 +5411,10 @@
       "acceptedAlternatives": [
         "Tal vez él venga mañana."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-talvez"
+    ]
   },
   {
     "id": "8a956dbd",
@@ -5019,7 +5445,10 @@
       "front": "ligação (substantivo)",
       "back": "ligação (chamada telefônica ou conexão)",
       "example": "Fiz uma ligação para o escritório ontem."
-    }
+    },
+    "__nuevos": [
+      "b6-futuro-subj"
+    ]
   },
   {
     "id": "8d514b7e",
@@ -5058,7 +5487,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-duvida"
+    ]
   },
   {
     "id": "8ef5f9e1",
@@ -5094,7 +5526,10 @@
         "Si yo pongo el formulario en línea, en cuanto podáis, responderéis.",
         "Si yo cuelgo el formulario en línea, en cuanto podáis responderéis."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-irregulares"
+    ]
   },
   {
     "id": "8f36fd2f",
@@ -5110,7 +5545,7 @@
     ],
     "contentHash": "8f36fd2f72b27d30ee3fa25ad5ec4bfb278f56358bacaa364b9e7871684e61f2",
     "esContrast": "'Pôr' es irregular: no se conjuga como 'poder'. La respuesta es 'puser', no 'pôr'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Quando eu me ___ (pôr) a estudar, tudo ficará mais claro.",
@@ -5121,7 +5556,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-irregulares"
   },
   {
     "id": "93088d54",
@@ -5154,7 +5593,10 @@
       "front": "Traduce: 'lidiar con, vérselas con'",
       "back": "lidar com",
       "example": "Ela sabe lidar com situações difíceis."
-    }
+    },
+    "__nuevos": [
+      "b6-contraste-indicativo-subjuntivo"
+    ]
   },
   {
     "id": "951f73ca",
@@ -5179,7 +5621,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Nosotros queríamos que ellos vinieran al início de la gala.",
@@ -5187,7 +5629,11 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-irregulares"
   },
   {
     "id": "95316b2d",
@@ -5211,7 +5657,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Assim que llene el formulário, lo enviaré.",
@@ -5222,7 +5668,11 @@
         "Assim que preencher o formulário, envio-o.",
         "Assim que preencher o formulário, mando-o."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-quando"
   },
   {
     "id": "96866205",
@@ -5259,7 +5709,11 @@
       "acceptedAlternatives": [
         "Espero que tu possas lidar com o problema."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-emocao",
+      "b6-pres-subj-disparadores"
+    ]
   },
   {
     "id": "980326fd",
@@ -5291,7 +5745,10 @@
       "front": "¿Indicativo o conjuntivo? 'Eu sei que ele ___ aqui.' (estar)",
       "back": "está (indicativo)",
       "example": "Eu sei que ele está aqui."
-    }
+    },
+    "__nuevos": [
+      "b6-contr-certeza-indicativo"
+    ]
   },
   {
     "id": "99b87720",
@@ -5316,7 +5773,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "El fuego que ardiera en el exterior de la galería ya se había apagado.",
@@ -5326,7 +5783,11 @@
       "acceptedAlternatives": [
         "O fogo que ardesse na parte exterior da galeria já se tinha apagado."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-formacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-formacao"
   },
   {
     "id": "9bd90a95",
@@ -5342,7 +5803,7 @@
     ],
     "contentHash": "9bd90a952ef0182c7d86bf7c1687a1fc917e1b513088c6939f09b0f7f29e095d",
     "esContrast": "El español 'necesitar' no lleva preposición; el portugués 'precisar' lleva DE.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
@@ -5354,7 +5815,11 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-de"
   },
   {
     "id": "9c260a8c",
@@ -5387,7 +5852,10 @@
       "acceptedAlternatives": [
         "Tal vez él supiera la respuesta si hubiera leído el libro."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-irreal-passado"
+    ]
   },
   {
     "id": "9c7872ba",
@@ -5413,7 +5881,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Se o rumo da viagem fosse outro, talvez eu não estivesse tão cansado.",
@@ -5425,7 +5893,11 @@
         "fosse (imperfeito do conjuntivo)"
       ],
       "answer": "fosse (imperfeito do conjuntivo)"
-    }
+    },
+    "__nuevos": [
+      "b6-se-subjuntivo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-subjuntivo"
   },
   {
     "id": "9d0765a9",
@@ -5441,7 +5913,7 @@
     ],
     "contentHash": "9d0765a9ee29fc498da163ca37a1952f8344eb40b893838af8e6543f98cdaf5f",
     "esContrast": "El portugués 'depender' y el español 'depender' rigen DE, pero en contexto condicional se confunden.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "depender",
@@ -5453,7 +5925,11 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-de"
   },
   {
     "id": "9d4f7d44",
@@ -5466,7 +5942,7 @@
     "tags": [],
     "contentHash": "9d4f7d44d55c8018b9c5485bf51da53ce7cec6e19662ed369af5149db42fed60",
     "esContrast": "Dos verbos en subjuntivo: sujeito futuro do pretérito (condicional) na oração principal.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Se nós ___ ao filme, certamente nos ___.",
@@ -5486,7 +5962,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-subjuntivo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-subjuntivo"
   },
   {
     "id": "9de2263f",
@@ -5526,7 +6006,8 @@
       "pt-br": {
         "target": "Dudo que él sepa lidar con esa situación."
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "9fce0ceb",
@@ -5559,7 +6040,10 @@
       "front": "Traduce: 'tal vez, quizá' (adverbio)",
       "back": "talvez",
       "example": "Talvez ele venha amanhã."
-    }
+    },
+    "__nuevos": [
+      "b6-se-subjuntivo"
+    ]
   },
   {
     "id": "9ffe8f93",
@@ -5584,13 +6068,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Forma el imperfeito do conjuntivo de VIR (irregular)",
       "back": "viesse, viesses, viesse, viéssemos, viessem",
       "example": "Se eles viessem à festa, seria mais divertida."
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-irregulares"
   },
   {
     "id": "a3b799c6",
@@ -5622,7 +6110,10 @@
       "front": "Traduce: 'rumbo' (sustantivo)",
       "back": "rumo",
       "example": "O navio seguia rumo ao sul."
-    }
+    },
+    "__nuevos": [
+      "b6-se-subjuntivo"
+    ]
   },
   {
     "id": "a6c2ee3c",
@@ -5675,7 +6166,7 @@
     ],
     "contentHash": "a833a421dd1507fdff806fef4af3edb22c273b797158595aeead0f6d35d09a0c",
     "esContrast": "En español 'acordarse de'; en PT 'lembrar-se DE' exige la preposición.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "lembrar",
@@ -5687,7 +6178,11 @@
         "sobre"
       ],
       "answer": "da"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-de"
   },
   {
     "id": "a87305ac",
@@ -5702,7 +6197,7 @@
     ],
     "contentHash": "a87305ac8cf4122b778f6d0de471d6aff272b866eb9646e1e5e95b621045ca05",
     "esContrast": "En español diríamos 'Si tuviera dinero', pero en portugués se usa el pretérito pluscuamperfecto de subjuntivo: tivesse.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Se eu ___ dinheiro, teria viajado para o Brasil.",
@@ -5715,7 +6210,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-hipotetico"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-hipotetico"
   },
   {
     "id": "a8c4f697",
@@ -5748,7 +6247,10 @@
       "acceptedAlternatives": [
         "Se o documento não tivesse ardido, nós teríamos a prova."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-irreal-passado"
+    ]
   },
   {
     "id": "aaf03c85",
@@ -5774,7 +6276,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Se eu estivesse mais apertado, teria recusado o convite.",
@@ -5784,7 +6286,11 @@
       "acceptedAlternatives": [
         "Si yo estuviera más urgido, habría rechazado la invitación."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-hipotetico"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-hipotetico"
   },
   {
     "id": "ab9058ad",
@@ -5810,7 +6316,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Es necesario que demos una respuesta inmediata.",
@@ -5820,7 +6326,11 @@
       "acceptedAlternatives": [
         "É necessário que a gente dê uma resposta imediata."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-impessoais"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-contr-impessoais"
   },
   {
     "id": "ab9dc6c5",
@@ -5852,7 +6362,10 @@
       "front": "Traduce: 'Es posible que...'",
       "back": "É possível que...",
       "example": "É possível que chova amanhã."
-    }
+    },
+    "__nuevos": [
+      "b6-contr-impessoais"
+    ]
   },
   {
     "id": "ad2cb0f0",
@@ -5865,7 +6378,7 @@
     "tags": [],
     "contentHash": "ad2cb0f086957e22d0c320c2bb9006242d281ba9e58c57c00afac612c847dbc7",
     "esContrast": "Estivesse es subjuntivo imperfecto; con 'não' se subraya la improbabilidad.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Se o trânsito não ___ tão congestionado, eu teria chegado a tempo.",
@@ -5878,7 +6391,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-subjuntivo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-subjuntivo"
   },
   {
     "id": "b15e3a63",
@@ -5903,7 +6420,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Quizás, si estuviera menos apretado, podría ayudarte mañana.",
@@ -5914,7 +6431,11 @@
         "Talvez, se estivesse menos apertado, pudesse ajudar-te amanhã.",
         "Talvez, se estivesse menos apertado, poderia ajudar-te amanhã."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-hipotetico"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-hipotetico"
   },
   {
     "id": "b27edcea",
@@ -5940,7 +6461,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperfeito-subj"
+    ]
   },
   {
     "id": "b3092135",
@@ -5964,7 +6488,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Se a lareira ardesse com mais intensidade, o frio do exterior não nos incomodasse tanto.",
@@ -5974,7 +6498,11 @@
       "acceptedAlternatives": [
         "Si la chimenea ardiese con más intensidad"
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-formacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-formacao"
   },
   {
     "id": "b703cdef",
@@ -5999,13 +6527,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Traduce al portugués: 'Si Prometeo no hubiera prometido fuego a los humanos...'",
       "back": "Se Prometeu não tivesse prometido o fogo aos humanos...",
       "example": "Se Prometeu não tivesse prometido o fogo aos humanos, a civilização seria diferente."
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-irregulares"
   },
   {
     "id": "b75d20c5",
@@ -6033,7 +6565,10 @@
         "∅"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "b7c6c40d",
@@ -6059,13 +6594,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se forma la condición tipo 3 (hipótesis improvável presente)?",
       "back": "Se + imperfeito do subjuntivo + Conditional",
       "example": "Se eu tivesse dinheiro, compraria um carro."
-    }
+    },
+    "__nuevos": [
+      "b6-se-hipotetico"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-hipotetico"
   },
   {
     "id": "b82f612d",
@@ -6093,7 +6632,10 @@
         "para o"
       ],
       "answer": "do"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "b86651eb",
@@ -6124,7 +6666,10 @@
       "front": "vaga (substantivo)",
       "back": "vaga (emprego disponível)",
       "example": "Essa empresa abriu uma vaga para advogado."
-    }
+    },
+    "__nuevos": [
+      "b6-futuro-subj"
+    ]
   },
   {
     "id": "b9ad03d4",
@@ -6155,7 +6700,10 @@
       "front": "¿Cómo se forma la condición tipo 4 (hipótese irreal passada)?",
       "back": "Se + mais-que-perfeito do subjuntivo + Condicional composto",
       "example": "Se eu tivesse estudado, teria passado no exame."
-    }
+    },
+    "__nuevos": [
+      "b6-se-irreal-passado"
+    ]
   },
   {
     "id": "b9c397d4",
@@ -6178,7 +6726,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Assim que trouxerem o formulário, preenchê-lo-ei.",
@@ -6188,7 +6736,11 @@
       "acceptedAlternatives": [
         "En cuanto traigan el formulario, lo preencherei."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-quando"
   },
   {
     "id": "ba66841f",
@@ -6220,7 +6772,10 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b6-imperfeito-subj"
+    ]
   },
   {
     "id": "bd6d3574",
@@ -6236,7 +6791,7 @@
     ],
     "contentHash": "bd6d357441d0c55ff415ef9a3bf5be8cadea6ea54dc6f87ef6ee3924a6b2676f",
     "esContrast": "En portugués 'lembrar-se de' lleva DE; en español 'recordar' no lleva preposición.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "lembrar",
@@ -6248,7 +6803,11 @@
         "∅"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-de"
   },
   {
     "id": "bdb5309a",
@@ -6279,7 +6838,10 @@
       "front": "¿Qué significa 'lidar com'?",
       "back": "lidiar con, tratar con, ocuparse de",
       "example": "Preciso lidar com esse problema agora."
-    }
+    },
+    "__nuevos": [
+      "b6-presente-subj"
+    ]
   },
   {
     "id": "bf8cd8d3",
@@ -6345,7 +6907,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-certeza-indicativo"
+    ]
   },
   {
     "id": "c3039dc6",
@@ -6377,7 +6942,10 @@
       "front": "Traduce: 'el inicio' (sustantivo)",
       "back": "início",
       "example": "O início do curso foi muito difícil."
-    }
+    },
+    "__nuevos": [
+      "b6-contraste-indicativo-subjuntivo"
+    ]
   },
   {
     "id": "c56ed47d",
@@ -6392,7 +6960,7 @@
     ],
     "contentHash": "c56ed47d01272f79ea0ed6a6bee32aa4909fa2f1922db22cf07e6aa2aa462e20",
     "esContrast": "'Traer' en subjuntivo: pt 'traga' vs es 'traiga'. La vocal cambia de 'ai' a 'a'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "É necessário que eu ___ o trabalho até sexta-feira.",
@@ -6405,7 +6973,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-disparadores"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-pres-subj-disparadores"
   },
   {
     "id": "c688fbee",
@@ -6430,12 +7002,16 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'ter' no mais-que-perfeito do subjuntivo",
       "back": "se eu tivesse tido, se tu tivesses tido, se ele tivesse tido..."
-    }
+    },
+    "__nuevos": [
+      "b6-se-irreal-passado"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-irreal-passado"
   },
   {
     "id": "c778a8db",
@@ -6448,7 +7024,7 @@
     "tags": [],
     "contentHash": "c778a8db4c9c073c9fb6b72e235789152d42cabe230cce61273b62c02d0cbb82",
     "esContrast": "'Ir' en subjuntivo: pt 'vamos' (también significa 'vamos') vs es 'vayamos'. Ojo con la primera persona.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "É possível que nós ___ para a reunião amanhã.",
@@ -6461,7 +7037,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-disparadores"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-pres-subj-disparadores"
   },
   {
     "id": "c7d36176",
@@ -6499,7 +7079,10 @@
         "Que no había relación alguna"
       ],
       "answer": "Que parecía existir una conexión directa"
-    }
+    },
+    "__nuevos": [
+      "b6-futuro-subj"
+    ]
   },
   {
     "id": "cb93018d",
@@ -6524,7 +7107,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Se o rumo for outro e não houver vaga para ti, como se nada fosse, aceita.",
@@ -6534,7 +7117,11 @@
       "acceptedAlternatives": [
         "Si el rumbo es otro y no hay puesto para ti, como si nada fuera, acepta."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-irregulares"
   },
   {
     "id": "cbd87b11",
@@ -6550,7 +7137,7 @@
     ],
     "contentHash": "cbd87b11344879d7184b46040c649b0eb7beb0905135f9be96f8bbeb22f9fd20",
     "esContrast": "En español 'gustar' no lleva preposición, pero en portugués 'gostar' exige DE.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
@@ -6562,7 +7149,11 @@
         "∅"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-de"
   },
   {
     "id": "cd88a7e7",
@@ -6588,12 +7179,16 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'ter' no imperfeito do subjuntivo",
       "back": "se eu tivesse, se tu tivesses, se ele tivesse, se nós tivéssemos, se vós tivésseis, se eles tivessem"
-    }
+    },
+    "__nuevos": [
+      "b6-se-hipotetico"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-hipotetico"
   },
   {
     "id": "cdb2ca2d",
@@ -6705,7 +7300,10 @@
       "front": "Traduce: 'suspirar' (y su imperfecto 'suspiraba')",
       "back": "suspirar — ele suspirava",
       "example": "Ela suspirava de saudade."
-    }
+    },
+    "__nuevos": [
+      "b6-se-subjuntivo"
+    ]
   },
   {
     "id": "d24421bc",
@@ -6776,7 +7374,10 @@
       "acceptedAlternatives": [
         "Se te dedicares à advocacia, vais precisar de paciência."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-formacao"
+    ]
   },
   {
     "id": "d39ebf56",
@@ -6852,7 +7453,10 @@
         "Veríamos"
       ],
       "answer": "Víssemos"
-    }
+    },
+    "__nuevos": [
+      "b6-imperfeito-subj"
+    ]
   },
   {
     "id": "d3dbd2f8",
@@ -6875,7 +7479,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Se ele ardesse em fé, não duvidaria de nada.",
@@ -6885,7 +7489,11 @@
       "acceptedAlternatives": [
         "Si él ardiera de fe, no dudaría de nada."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-hipotetico"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-hipotetico"
   },
   {
     "id": "d3dc059d",
@@ -6918,7 +7526,10 @@
       "front": "Es cierto que ella trabaja mucho. (traduce al portugués)",
       "back": "É certo que ela trabalha muito. (INDICATIVO - certeza)",
       "example": "É certo que ela trabalha muito, sempre entrega os projetos no prazo."
-    }
+    },
+    "__nuevos": [
+      "b6-contr-certeza-indicativo"
+    ]
   },
   {
     "id": "d4695b94",
@@ -6949,7 +7560,10 @@
       "front": "Conector SE + futuro do conjuntivo",
       "back": "Indica condição futura: Se + [sujeito] + [verbo no futuro do conjuntivo]...",
       "example": "Se eu preencher o formulário corretamente, serei aprovado."
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-se"
+    ]
   },
   {
     "id": "d4ac795e",
@@ -6974,13 +7588,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Forma el imperfeito do conjuntivo de SER (irregular)",
       "back": "fosse, fosses, fosse, fôssemos, fossem",
       "example": "Se eu fosse mais rico, viajaria o mundo inteiro."
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-irregulares"
   },
   {
     "id": "d62089ce",
@@ -7009,7 +7627,10 @@
         "a"
       ],
       "answer": "em"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-em"
+    ]
   },
   {
     "id": "d628d396",
@@ -7036,13 +7657,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "prometeu (verbo prometer, pretérito perfeito)",
       "back": "prometer — ele prometeu",
       "example": "Ele me prometeu que voltaria."
-    }
+    },
+    "__nuevos": [
+      "b6-se-subjuntivo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-subjuntivo"
   },
   {
     "id": "d635cdd6",
@@ -7070,7 +7695,10 @@
         "∅"
       ],
       "answer": "em"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-em"
+    ]
   },
   {
     "id": "d671be6e",
@@ -7093,13 +7721,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Cuál es la conjugación completa de PARTIR en imperfeito do conjuntivo?",
       "back": "partisse, partisses, partisse, partíssemos, partissem",
       "example": "Se nós partíssemos amanhã, chegaríamos a tempo."
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-formacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-formacao"
   },
   {
     "id": "d68375d3",
@@ -7123,7 +7755,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Dou-te a vaga com a condição de que preenchas o formulário hoje.",
@@ -7133,7 +7765,11 @@
       "acceptedAlternatives": [
         "Te doy el puesto con la condición de que llenes el formulario hoy."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contraste-indicativo-subjuntivo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-contraste-indicativo-subjuntivo"
   },
   {
     "id": "d7745d02",
@@ -7158,7 +7794,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Se fizéssemos um fogo na lareira, a casa inteira aquecesse rapidamente.",
@@ -7168,7 +7804,11 @@
       "acceptedAlternatives": [
         "Si hiciésemos una hoguera en la chimenea"
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-formacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-formacao"
   },
   {
     "id": "d7916162",
@@ -7197,7 +7837,10 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "da209019",
@@ -7228,7 +7871,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-irregulares",
+      "b6-contraste-indicativo-subjuntivo"
+    ]
   },
   {
     "id": "da3e3c73",
@@ -7329,7 +7976,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Se eu soubesse que ia chover, teria trazida a capa.",
@@ -7339,7 +7986,11 @@
       "acceptedAlternatives": [
         "Si yo supiera que iba a llover, habría traído la capa."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-hipotetico"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-hipotetico"
   },
   {
     "id": "dbc83b61",
@@ -7364,13 +8015,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Forma el imperfeito do conjuntivo de FAZER (irregular)",
       "back": "fizesse, fizesses, fizesse, fizéssemos, fizessem",
       "example": "Se ela fizesse um bolo, todos ficariam felizes."
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-irregulares"
   },
   {
     "id": "dbddf08f",
@@ -7401,7 +8056,10 @@
       "front": "rumo (substantivo)",
       "back": "rumo (direção)",
       "example": "O Brasil está tomando um novo rumo econômico."
-    }
+    },
+    "__nuevos": [
+      "b6-futuro-subj"
+    ]
   },
   {
     "id": "dd01dacf",
@@ -7434,7 +8092,10 @@
       "front": "Traduce: 'vago / vaga' (impreciso, difuso)",
       "back": "vago / vaga",
       "example": "Ele tinha uma lembrança vaga do passado."
-    }
+    },
+    "__nuevos": [
+      "b6-se-subjuntivo"
+    ]
   },
   {
     "id": "dd057c9c",
@@ -7482,7 +8143,7 @@
     ],
     "contentHash": "dffe7432c3760c0911ac36291b5c20ca6b00214eeb7967ed26f17fd4eb047307",
     "esContrast": "En español 'recordar' no lleva preposición. En PT 'lembrar' rige DE.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "lembrar",
@@ -7494,7 +8155,11 @@
         "lembrasse —"
       ],
       "answer": "lembrasse de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-otras"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-otras"
   },
   {
     "id": "e1e14a0c",
@@ -7517,7 +8182,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Si hubiéramos sabido la verdad antes, todo habría sido diferente.",
@@ -7527,7 +8192,11 @@
       "acceptedAlternatives": [
         "Se tivéssemos sabido a verdade antes, tudo teria sido diferente."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-subjuntivo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-subjuntivo"
   },
   {
     "id": "e3472039",
@@ -7553,13 +8222,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Traduce al portugués: 'Si Prometeo ardiera eternamente...' (uso literario)",
       "back": "Se Prometeu ardesse eternamente...",
       "example": "Se Prometeu ardesse eternamente no cume do Cáucaso, seu sofrimento seria símbolo."
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-formacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-formacao"
   },
   {
     "id": "e3aec573",
@@ -7582,13 +8255,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Cuál es la conjugación completa de COMER en imperfeito do conjuntivo?",
       "back": "comesse, comesses, comesse, comêssemos, comessem",
       "example": "Se ela comesse menos doces, seria mais saudável."
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-formacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-formacao"
   },
   {
     "id": "e3d20fd0",
@@ -7620,7 +8297,10 @@
       "front": "Traduce: 'la conexión / el vínculo'",
       "back": "ligação",
       "example": "Fiz uma ligação importante ontem."
-    }
+    },
+    "__nuevos": [
+      "b6-contraste-indicativo-subjuntivo"
+    ]
   },
   {
     "id": "e453e88d",
@@ -7650,7 +8330,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-impessoais"
+    ]
   },
   {
     "id": "e4a808b5",
@@ -7725,7 +8408,11 @@
       "acceptedAlternatives": [
         "Oprimir la vida de alguien es pesado, pero suspiro de alivio cuando acaba."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-presente-subj",
+      "b6-contraste-indicativo-subjuntivo"
+    ]
   },
   {
     "id": "e552df71",
@@ -7783,7 +8470,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Se ele soubesse que o sapato estava tão apertado, teria escolhido outro.",
@@ -7793,7 +8480,11 @@
       "acceptedAlternatives": [
         "Si él supiese que el zapato estaba tan apretado"
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-irregulares"
   },
   {
     "id": "e769b603",
@@ -7819,13 +8510,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "ardia (verbo arder, pretérito imperfeito)",
       "back": "arder — eu ardia, tu ardias...",
       "example": "O fogo ardia na lareira."
-    }
+    },
+    "__nuevos": [
+      "b6-se-subjuntivo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-subjuntivo"
   },
   {
     "id": "e8c9ae6b",
@@ -7860,7 +8555,10 @@
       "acceptedAlternatives": [
         "Eu esperava que ele chegasse cedinho."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-correlacao"
+    ]
   },
   {
     "id": "e9764a9c",
@@ -7888,7 +8586,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-irregulares"
+    ]
   },
   {
     "id": "ea635c56",
@@ -7921,7 +8622,10 @@
       "pt-br": {
         "sentence": "É possível que no ___ haja mais vagas. (início)"
       }
-    }
+    },
+    "__nuevos": [
+      "b6-contr-impessoais"
+    ]
   },
   {
     "id": "ea7f1371",
@@ -7953,7 +8657,10 @@
       "front": "Conjuga 'ter' en presente do conjuntivo: Nós",
       "back": "que nós tenhamos",
       "example": "É necessário que nós tenhamos paciência."
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-disparadores"
+    ]
   },
   {
     "id": "ea82416e",
@@ -7989,7 +8696,10 @@
       "acceptedAlternatives": [
         "Talvez no início tudo pareça impreciso."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-contr-talvez"
+    ]
   },
   {
     "id": "edd55a17",
@@ -8092,7 +8802,10 @@
       "front": "Es posible que él sepa la respuesta. (traduce al portugués)",
       "back": "É possível que ele saiba a resposta.",
       "example": "É possível que ele saiba a resposta correta."
-    }
+    },
+    "__nuevos": [
+      "b6-contr-impessoais"
+    ]
   },
   {
     "id": "ef069ef4",
@@ -8124,7 +8837,10 @@
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b6-contr-impessoais"
+    ]
   },
   {
     "id": "f086f74d",
@@ -8167,7 +8883,8 @@
           "Se nós tivéssemos suspeitado algo, teríamos atuado antes."
         ]
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "f1153ada",
@@ -8192,7 +8909,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Se vieres a ter sucesso na advocacia, quando fores nomeado, celebraremos.",
@@ -8202,7 +8919,11 @@
       "acceptedAlternatives": [
         "Si llegaras a tener éxito en la abogacía, cuando seas nombrado celebraremos."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-irregulares"
   },
   {
     "id": "f1903f8d",
@@ -8235,7 +8956,10 @@
       "front": "Espero que ella llegue a tiempo. (traduce al portugués)",
       "back": "Espero que ela chegue a tempo.",
       "example": "Espero que ela chegue a tempo para a apresentação."
-    }
+    },
+    "__nuevos": [
+      "b6-contr-emocao"
+    ]
   },
   {
     "id": "f21d22f2",
@@ -8260,7 +8984,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Assim que nosotros nos pongamos de acuerdo sobre el rumbo, te enviaremos el formulário preenchido.",
@@ -8270,7 +8994,11 @@
       "acceptedAlternatives": [
         "Assim que nos entendermos sobre o rumo, mandamos o formulário preenchido."
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-quando"
   },
   {
     "id": "f2b6ccb6",
@@ -8295,13 +9023,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Traduce al portugués: 'Al início, si no hubiera exposición en la galería...'",
       "back": "No início, se não houvesse exposição na galeria...",
       "example": "No início, se não houvesse exposição na galeria, o evento seria cancelado."
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-irregulares"
   },
   {
     "id": "f3c4752f",
@@ -8317,7 +9049,7 @@
     ],
     "contentHash": "f3c4752f939cc9cfb1e8f5d6456730330d93f8b0ab564b8ca7c1513d075d4a7e",
     "esContrast": "En PT-BR se usa 'esquentar' coloquialmente; 'aquecer' es más formal/literario.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Assim que o tempo ___ (aquecer), vamos à praia.",
@@ -8330,7 +9062,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-quando"
   },
   {
     "id": "f67b77e8",
@@ -8356,7 +9092,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Se eu tivesse dinheiro apertado, talvez viajasse para Portugal este ano.",
@@ -8368,7 +9104,11 @@
         "Condicional tipo 4 (mais-que-perfeito do conjuntivo)"
       ],
       "answer": "Condicional tipo 3 (imperfeito do conjuntivo)"
-    }
+    },
+    "__nuevos": [
+      "b6-se-hipotetico"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-hipotetico"
   },
   {
     "id": "f8056a17",
@@ -8396,7 +9136,10 @@
         "∅"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "f8945bdf",
@@ -8411,7 +9154,7 @@
       "-ar"
     ],
     "contentHash": "f8945bdfbbeb16b5fb96e41b5a37b70df099bc326492d8f8b53cf8f6d0ee6da6",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Se ela ___ (chegar) mais cedo, tudo estaria bem.",
@@ -8422,7 +9165,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-formacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-formacao"
   },
   {
     "id": "fab76824",
@@ -8454,7 +9201,10 @@
       "front": "¿Cómo se dice 'quizás' en portugués?",
       "back": "talvez",
       "example": "Talvez eu vá ao cinema amanhã."
-    }
+    },
+    "__nuevos": [
+      "b6-contr-talvez"
+    ]
   },
   {
     "id": "fb7440b8",
@@ -8524,7 +9274,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-formacao"
+    ]
   },
   {
     "id": "fda162e1",
@@ -8554,7 +9307,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-disparadores",
+      "b6-contr-impessoais"
+    ]
   },
   {
     "id": "fe2ae506",
@@ -8579,7 +9336,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Quando eu preencher o formulário, vou candidatar-me à vaga de advocacia.",
@@ -8591,7 +9348,11 @@
         "Viajar al exterior"
       ],
       "answer": "Postularse a una oferta de empleo"
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-quando"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-quando"
   },
   {
     "id": "fec968e7",
@@ -8616,13 +9377,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se forma el imperfeito do conjuntivo de los verbos terminados en -ER e -IR?",
       "back": "Se toma la raíz del pretérito imperfeito do indicativo y se añade -ESSE: comer → comesse",
       "example": "Se ela comesse mais vegetais, estaria mais saudável."
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-formacao"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-imperf-subj-formacao"
   },
   {
     "id": "feefe9e5",
@@ -8653,7 +9418,10 @@
       "front": "Conector COMO SE + pretérito do conjuntivo",
       "back": "Indica ação hipotética/irreal (como si): Como se + [sujeito] + [verbo no pretérito do conjuntivo]...",
       "example": "Ele fala como se já tivesse ganhado a causa na advocacia."
-    }
+    },
+    "__nuevos": [
+      "b6-futuro-subj"
+    ]
   },
   {
     "id": "95e5ca55",
@@ -8678,7 +9446,10 @@
       "tense": "presente do conjuntivo",
       "answer": "fale",
       "hintEs": "que yo hable"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-ar"
+    ]
   },
   {
     "id": "b45fa0f3",
@@ -8704,7 +9475,10 @@
       "tense": "presente do conjuntivo",
       "answer": "seja",
       "hintEs": "que yo sea"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-irregulares"
+    ]
   },
   {
     "id": "5c846c71",
@@ -8730,7 +9504,10 @@
       "tense": "presente do conjuntivo",
       "answer": "tenham",
       "hintEs": "que ellos/ellas tengan"
-    }
+    },
+    "__nuevos": [
+      "b6-presente-subj"
+    ]
   },
   {
     "id": "cf1dbde8",
@@ -8756,7 +9533,10 @@
       "tense": "presente do conjuntivo",
       "answer": "faça",
       "hintEs": "que yo haga"
-    }
+    },
+    "__nuevos": [
+      "b6-presente-subj"
+    ]
   },
   {
     "id": "ec38f0d2",
@@ -8782,7 +9562,10 @@
       "tense": "presente do conjuntivo",
       "answer": "vá",
       "hintEs": "que yo vaya"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-irregulares"
+    ]
   },
   {
     "id": "69faec04",
@@ -8807,7 +9590,10 @@
       "tense": "imperfeito do conjuntivo",
       "answer": "falasse",
       "hintEs": "que yo hablara/hablase"
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-formacao"
+    ]
   },
   {
     "id": "3cbc3aa0",
@@ -8833,7 +9619,10 @@
       "tense": "imperfeito do conjuntivo",
       "answer": "tivesse",
       "hintEs": "que yo tuviera/tuviese"
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ]
   },
   {
     "id": "739d4742",
@@ -8859,7 +9648,10 @@
       "tense": "imperfeito do conjuntivo",
       "answer": "fosse",
       "hintEs": "que yo fuera/fuese"
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ]
   },
   {
     "id": "6b92f74f",
@@ -8885,7 +9677,10 @@
       "tense": "imperfeito do conjuntivo",
       "answer": "fizesse",
       "hintEs": "que yo hiciera/hiciese"
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ]
   },
   {
     "id": "61332de7",
@@ -8911,7 +9706,10 @@
       "tense": "futuro do conjuntivo",
       "answer": "falar",
       "hintEs": "cuando yo hable (futuro)"
-    }
+    },
+    "__nuevos": [
+      "b6-futuro-subj"
+    ]
   },
   {
     "id": "d46bc441",
@@ -8937,7 +9735,10 @@
       "tense": "futuro do conjuntivo",
       "answer": "tiver",
       "hintEs": "cuando yo tenga (futuro)"
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-irregulares"
+    ]
   },
   {
     "id": "307fac3e",
@@ -8963,7 +9764,10 @@
       "tense": "futuro do conjuntivo",
       "answer": "for",
       "hintEs": "cuando yo sea (futuro)"
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-irregulares"
+    ]
   },
   {
     "id": "ecc2b2aa",
@@ -8989,7 +9793,10 @@
       "tense": "futuro do conjuntivo",
       "answer": "fizer",
       "hintEs": "cuando yo haga (futuro)"
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-irregulares"
+    ]
   },
   {
     "id": "0057f79d",
@@ -9011,7 +9818,10 @@
       "sentence": "Espero que ele venga à festa amanhã.",
       "correct": "Espero que ele venha à festa amanhã.",
       "explanationEs": "Tras 'esperar que' va conjuntivo; la forma portuguesa es 'venha', no el español 'venga'."
-    }
+    },
+    "__nuevos": [
+      "b6-contr-emocao"
+    ]
   },
   {
     "id": "31da58c8",
@@ -9034,7 +9844,10 @@
       "sentence": "Talvez ele está em casa agora.",
       "correct": "Talvez ele esteja em casa agora.",
       "explanationEs": "'talvez' expresa duda y pide el conjuntivo: 'esteja'."
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-irregulares"
+    ]
   },
   {
     "id": "31f581c1",
@@ -9051,13 +9864,17 @@
     ],
     "contentHash": "31f581c1b0bbd7761ea4f212d97e00827a9a4bf90806bf7d1080baa04353d522",
     "esContrast": "'quando' con valor futuro pide futuro do conjuntivo ('tiver'), no futuro do presente.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "error_correction",
     "data": {
       "sentence": "Quando eu terei tempo, eu te ligo.",
       "correct": "Quando eu tiver tempo, eu te ligo.",
       "explanationEs": "'quando' referido al futuro exige futuro do conjuntivo: 'tiver'."
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-irregulares"
   },
   {
     "id": "4dbd621a",
@@ -9131,13 +9948,17 @@
     ],
     "contentHash": "9c6be6bd5de26a7fa804c5f88ce0a5fa47b9a288285ca8c4dd7b3377c642c128",
     "esContrast": "El conjuntivo de 'ter' es 'tenham', no la forma española 'tengan'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "error_correction",
     "data": {
       "sentence": "Trabalho muito para que meus filhos tengan um futuro melhor.",
       "correct": "Trabalho muito para que meus filhos tenham um futuro melhor.",
       "explanationEs": "'para que' (finalidad) pide conjuntivo; la forma portuguesa es 'tenham', no el español 'tengan'."
-    }
+    },
+    "__nuevos": [
+      "b6-contraste-indicativo-subjuntivo"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-contraste-indicativo-subjuntivo"
   },
   {
     "id": "f77c9982",
@@ -9185,7 +10006,7 @@
     ],
     "contentHash": "4efd88e3b2f14015fb92a47befc66244d55fe31e86359da28b9d6560cbec275f",
     "esContrast": "Hipótesis improbable tras 'se': imperfeito do conjuntivo 'pudesse'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Se eu ___ (poder), viajaria pelo mundo todo.",
@@ -9195,7 +10016,11 @@
           "answer": "pudesse"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b6-se-hipotetico"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-hipotetico"
   },
   {
     "id": "0bdb4c36",
@@ -9254,7 +10079,10 @@
       ],
       "correctIndex": 0,
       "explanationEs": "La duda ('talvez') pide conjuntivo; la certeza ('com certeza') va con indicativo."
-    }
+    },
+    "__nuevos": [
+      "b6-contr-talvez"
+    ]
   },
   {
     "id": "db27b3bf",
@@ -9282,7 +10110,10 @@
       ],
       "correctIndex": 0,
       "explanationEs": "Futuro do conjuntivo de 'ser': 'for'. 'será' es futuro do presente y 'seja' es presente do conjuntivo."
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-irregulares"
+    ]
   },
   {
     "id": "b9809b25",
@@ -9308,7 +10139,10 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'achar que' en afirmativo expresa certeza y va con indicativo: 'está'."
-    }
+    },
+    "__nuevos": [
+      "b6-contr-certeza-indicativo"
+    ]
   },
   {
     "id": "cl15-009",
@@ -9337,7 +10171,10 @@
         }
       ],
       "hintEs": "coman — presente de subjuntivo"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-er-ir"
+    ]
   },
   {
     "id": "cl15-010",
@@ -9366,7 +10203,10 @@
         }
       ],
       "hintEs": "salgamos — presente de subjuntivo"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-er-ir"
+    ]
   },
   {
     "id": "cl15-011",
@@ -9395,7 +10235,10 @@
         }
       ],
       "hintEs": "haga — presente de subjuntivo, irregular"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-er-ir"
+    ]
   },
   {
     "id": "cl15-012",
@@ -9424,7 +10267,10 @@
         }
       ],
       "hintEs": "presente de subjuntivo, 2.ª persona — raíz irregular"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-er-ir"
+    ]
   },
   {
     "id": "cl15-013",
@@ -9453,7 +10299,10 @@
         }
       ],
       "hintEs": "presente de subjuntivo, 3.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-er-ir"
+    ]
   },
   {
     "id": "cl15-014",
@@ -9482,7 +10331,10 @@
         }
       ],
       "hintEs": "vengan — presente de subjuntivo, irregular"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-er-ir"
+    ]
   },
   {
     "id": "cl15-015",
@@ -9511,7 +10363,10 @@
         }
       ],
       "hintEs": "escribas — presente de subjuntivo"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-er-ir"
+    ]
   },
   {
     "id": "cl15-016",
@@ -9540,7 +10395,10 @@
         }
       ],
       "hintEs": "podamos — presente de subjuntivo, irregular"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-er-ir"
+    ]
   },
   {
     "id": "cl15-017",
@@ -9569,7 +10427,10 @@
         }
       ],
       "hintEs": "hable — presente de subjuntivo"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-ar"
+    ]
   },
   {
     "id": "cl15-018",
@@ -9598,7 +10459,10 @@
         }
       ],
       "hintEs": "lleguen — presente de subjuntivo"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-ar"
+    ]
   },
   {
     "id": "cl15-019",
@@ -9627,7 +10491,10 @@
         }
       ],
       "hintEs": "trabajes — presente de subjuntivo"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-ar"
+    ]
   },
   {
     "id": "cl15-020",
@@ -9656,7 +10523,10 @@
         }
       ],
       "hintEs": "nos quedemos — presente de subjuntivo"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-ar"
+    ]
   },
   {
     "id": "cl15-021",
@@ -9685,7 +10555,10 @@
         }
       ],
       "hintEs": "estudie — presente de subjuntivo"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-ar"
+    ]
   },
   {
     "id": "cl15-022",
@@ -9714,7 +10587,10 @@
         }
       ],
       "hintEs": "den — presente de subjuntivo, irregular"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-ar"
+    ]
   },
   {
     "id": "cl15-023",
@@ -9743,7 +10619,10 @@
         }
       ],
       "hintEs": "esté — presente de subjuntivo, irregular"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-ar"
+    ]
   },
   {
     "id": "cl16-009",
@@ -9772,7 +10651,10 @@
         }
       ],
       "hintEs": "futuro do conjuntivo, 2.ª persona — el español usa presente"
-    }
+    },
+    "__nuevos": [
+      "b6-se-real"
+    ]
   },
   {
     "id": "cl16-010",
@@ -9801,7 +10683,10 @@
         }
       ],
       "hintEs": "futuro do conjuntivo, 3.ª del plural"
-    }
+    },
+    "__nuevos": [
+      "b6-se-real"
+    ]
   },
   {
     "id": "cl16-011",
@@ -9830,7 +10715,10 @@
         }
       ],
       "hintEs": "futuro do conjuntivo, 3.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b6-se-real"
+    ]
   },
   {
     "id": "cl16-012",
@@ -9859,7 +10747,10 @@
         }
       ],
       "hintEs": "futuro do conjuntivo, 2.ª persona — ojo, no es el infinitivo pessoal"
-    }
+    },
+    "__nuevos": [
+      "b6-se-real"
+    ]
   },
   {
     "id": "cl16-013",
@@ -9888,7 +10779,10 @@
         }
       ],
       "hintEs": "futuro do conjuntivo, 3.ª persona — irregular"
-    }
+    },
+    "__nuevos": [
+      "b6-se-real"
+    ]
   },
   {
     "id": "cl16-014",
@@ -9917,7 +10811,10 @@
         }
       ],
       "hintEs": "futuro do conjuntivo, 1.ª del plural"
-    }
+    },
+    "__nuevos": [
+      "b6-se-real"
+    ]
   },
   {
     "id": "cl16-015",
@@ -9946,7 +10843,10 @@
         }
       ],
       "hintEs": "futuro do conjuntivo, 3.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b6-se-real"
+    ]
   },
   {
     "id": "cl16-016",
@@ -9975,7 +10875,10 @@
         }
       ],
       "hintEs": "futuro do conjuntivo, 3.ª del plural"
-    }
+    },
+    "__nuevos": [
+      "b6-se-real"
+    ]
   },
   {
     "id": "cl16-031",
@@ -10004,7 +10907,10 @@
         }
       ],
       "hintEs": "presente do conjuntivo, 3.ª del plural"
-    }
+    },
+    "__nuevos": [
+      "b6-contr-duvida"
+    ]
   },
   {
     "id": "cl16-032",
@@ -10033,7 +10939,10 @@
         }
       ],
       "hintEs": "presente do conjuntivo, 3.ª persona — irregular"
-    }
+    },
+    "__nuevos": [
+      "b6-contr-duvida"
+    ]
   },
   {
     "id": "cl16-033",
@@ -10062,7 +10971,10 @@
         }
       ],
       "hintEs": "presente do conjuntivo, 3.ª persona — irregular"
-    }
+    },
+    "__nuevos": [
+      "b6-contr-duvida"
+    ]
   },
   {
     "id": "cl16-150",
@@ -10091,7 +11003,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 1.ª persona — lo pide el pasado de la principal"
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-correlacao"
+    ]
   },
   {
     "id": "cl16-151",
@@ -10120,7 +11035,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 3.ª del plural"
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-correlacao"
+    ]
   },
   {
     "id": "cl16-152",
@@ -10149,7 +11067,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 1.ª persona — irregular"
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-irregulares"
+    ]
   },
   {
     "id": "cl16-153",
@@ -10178,7 +11099,10 @@
         }
       ],
       "hintEs": "presente do conjuntivo, 3.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-disparadores"
+    ]
   },
   {
     "id": "cl16-154",
@@ -10207,7 +11131,10 @@
         }
       ],
       "hintEs": "presente do conjuntivo, 1.ª del plural"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-disparadores"
+    ]
   },
   {
     "id": "cl16-155",
@@ -10236,7 +11163,10 @@
         }
       ],
       "hintEs": "presente de INDICATIVO, 3.ª persona — la certeza no pide conjuntivo"
-    }
+    },
+    "__nuevos": [
+      "b6-contr-certeza-indicativo"
+    ]
   },
   {
     "id": "cl19-011",
@@ -10265,7 +11195,10 @@
         }
       ],
       "hintEs": "presente do conjuntivo, 3.ª del plural"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-disparadores"
+    ]
   },
   {
     "id": "cl19-012",
@@ -10294,7 +11227,10 @@
         }
       ],
       "hintEs": "presente do conjuntivo, 2.ª persona — ojo al cambio ortográfico"
-    }
+    },
+    "__nuevos": [
+      "b6-pres-subj-disparadores"
+    ]
   },
   {
     "id": "cl19-016",
@@ -10323,7 +11259,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 3.ª del plural — irregular"
-    }
+    },
+    "__nuevos": [
+      "b6-imperf-subj-formacao"
+    ]
   },
   {
     "id": "tr19-014",
@@ -10348,7 +11287,10 @@
       "answer": "chegares",
       "alternatives": [],
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-formacao"
+    ]
   },
   {
     "id": "tr19-015",
@@ -10373,7 +11315,10 @@
       "answer": "quiserem",
       "alternatives": [],
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-formacao"
+    ]
   },
   {
     "id": "tr19-016",
@@ -10398,7 +11343,10 @@
       "answer": "pudermos",
       "alternatives": [],
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-formacao"
+    ]
   },
   {
     "id": "tr19-017",
@@ -10423,7 +11371,10 @@
       "answer": "vir",
       "alternatives": [],
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-formacao"
+    ]
   },
   {
     "id": "tr19-018",
@@ -10448,7 +11399,10 @@
       "answer": "trouxerem",
       "alternatives": [],
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-formacao"
+    ]
   },
   {
     "id": "tr19-019",
@@ -10473,7 +11427,10 @@
       "answer": "estiver",
       "alternatives": [],
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-formacao"
+    ]
   },
   {
     "id": "tr20-023",
@@ -10498,7 +11455,10 @@
       "answer": "quiserem",
       "alternatives": [],
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-se"
+    ]
   },
   {
     "id": "tr20-024",
@@ -10523,6 +11483,9 @@
       "answer": "formos",
       "alternatives": [],
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b6-fut-subj-se"
+    ]
   }
 ]

@@ -16,7 +16,7 @@
 // de regência verbal viviendo bajo «pretérito perfeito irregular».
 import fs from 'node:fs';
 import path from 'node:path';
-import { PARTICIONES, TRANSVERSALES, contarPuntos, textoItem, padreCubierto, pisoCero, conPisoCero } from './lib/conceptos-finos';
+import { PARTICIONES, TRANSVERSALES, contarPuntos, textoItem, pisoCero, conPisoCero, conPadreCubierto } from './lib/conceptos-finos';
 import { CONCEPTOS_FINOS } from '../lib/data/languages/pt/conceptos-finos.generated';
 import { ALL_CONCEPTS } from '../lib/data/languages/pt/curriculum';
 import { reconciliar, informe, type PorPunto } from './lib/reconciliar-deficit';
@@ -87,9 +87,15 @@ const nivelDe = (id: string): string => {
 // ítems que no casen con ningún sub-punto. Se ajusta aquí, una sola vez,
 // para que todas las tablas de abajo vean lo mismo.
 const CERO = pisoCero();
-const pisoId = conPisoCero((id: string) => pisoDe(nivelDe(id)), CERO);
-const padresCubiertos = [...cuenta.keys()].filter((id) => cuenta.get(id)! < pisoId(id) && padreCubierto(id, cuenta, pisoId));
-for (const id of padresCubiertos) cuenta.set(id, pisoId(id));
+// El relleno de los puntos a CERO va ANTES del ajuste de padres: si no, un
+// padre sin ítems propios no está en el mapa y el ajuste no le llega.
+const DECLARADOS = [...new Set([...ALL_CONCEPTS, ...CONCEPTOS_FINOS].map((c) => c.id))];
+for (const id of DECLARADOS) if (!cuenta.has(id)) cuenta.set(id, 0);
+const pisoBase = conPisoCero((id: string) => pisoDe(nivelDe(id)), CERO);
+// Y el ajuste baja el PISO en vez de subir la cuenta, para que la foto del
+// déficit no guarde ítems que nadie escribió.
+const pisoId = conPadreCubierto(pisoBase, cuenta);
+const padresCubiertos = DECLARADOS.filter((id) => pisoBase(id) > 0 && pisoId(id) === 0);
 
 // Los del piso bajado a cero POR DECISIÓN DECLARADA ya salen de
 // `conPisoCero`, que baja el PISO en vez de subir la cuenta. Se imprimen
@@ -112,8 +118,7 @@ if (CERO.size) {
 // bajara 1: el punto que iba de CERO nunca había estado contado, así que
 // llenarlo no descontó nada. Un indicador que no ve el trabajo que se
 // hace convierte el calendario en ficción.
-const PUNTOS_DECLARADOS = [...new Set([...ALL_CONCEPTS, ...CONCEPTOS_FINOS].map((c) => c.id))];
-for (const id of PUNTOS_DECLARADOS) if (!cuenta.has(id)) cuenta.set(id, 0);
+const PUNTOS_DECLARADOS = DECLARADOS;
 
 const stats = (xs: number[]) => {
   if (!xs.length) return { min: 0, p50: 0, max: 0 };

@@ -30,7 +30,10 @@
       "acceptedAlternatives": [
         "Si yo tuviese más dinero, constituiría familia ahora."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-imperfeito-conj"
+    ]
   },
   {
     "id": "0361bfe7",
@@ -144,7 +147,10 @@
       "acceptedAlternatives": [
         "Em breve começarei a estudar para a prova."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-fut-regular"
+    ]
   },
   {
     "id": "05965fa8",
@@ -205,7 +211,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-cond-regular"
+    ]
   },
   {
     "id": "084022b5",
@@ -243,7 +252,10 @@
         "Contar dinero"
       ],
       "answer": "Ahorrar dinero"
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ]
   },
   {
     "id": "09dbb582",
@@ -277,7 +289,10 @@
       "pt-br": {
         "sentence": "Eu ___ de tomar um café com você amanhã."
       }
-    }
+    },
+    "__nuevos": [
+      "b5-cond-cortesia"
+    ]
   },
   {
     "id": "0e18fa1f",
@@ -314,7 +329,10 @@
         "Un trabajo nuevo"
       ],
       "answer": "Un consejo sobre cómo realizar sus objetivos"
-    }
+    },
+    "__nuevos": [
+      "b5-cond-regular"
+    ]
   },
   {
     "id": "0f0cc9ef",
@@ -346,7 +364,10 @@
       "front": "Conjuga 'poder' en futuro do presente (eu, ele):",
       "back": "poderei, poderá",
       "example": "Poderá contar comigo para o que precisar."
-    }
+    },
+    "__nuevos": [
+      "b5-fut-regular"
+    ]
   },
   {
     "id": "0f32b6a4",
@@ -374,7 +395,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ]
   },
   {
     "id": "100acbec",
@@ -390,7 +414,7 @@
     ],
     "contentHash": "100acbeca263ab36be444858beb24231432fb2fd7c4682adf4ae6e021034794b",
     "esContrast": "En español se dice 'dar un consejo sobre' o 'acerca de'; en PT se usa 'sobre'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "conselho",
@@ -402,7 +426,11 @@
         "em"
       ],
       "answer": "sobre"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-otras"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-otras"
   },
   {
     "id": "10ba2ec3",
@@ -431,7 +459,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-cond-hipotetico"
+    ]
   },
   {
     "id": "1121d710",
@@ -467,7 +498,10 @@
       "acceptedAlternatives": [
         "Vamos a hacer una gran fiesta cuando empiecen las clases."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-fut-irregulares"
+    ]
   },
   {
     "id": "1204e6b3",
@@ -499,7 +533,10 @@
       "front": "Traduce 'realizar' (verbo)",
       "back": "realizar",
       "example": "Eu gostaria de realizar o meu sonho de estudar no estrangeiro."
-    }
+    },
+    "__nuevos": [
+      "b5-cond-cortesia"
+    ]
   },
   {
     "id": "1210533a",
@@ -522,7 +559,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "¿Qué vas a hacer este fin de semana?",
@@ -532,7 +569,11 @@
       "acceptedAlternatives": [
         "O que vais fazer neste fim de semana?"
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "12da8b00",
@@ -570,7 +611,10 @@
         "Que cambie de trabajo"
       ],
       "answer": "Que haga un esfuerzo para realizar sus sueños"
-    }
+    },
+    "__nuevos": [
+      "b5-condicional"
+    ]
   },
   {
     "id": "14991085",
@@ -602,7 +646,10 @@
       "front": "Conjuga 'partir' en futuro do presente (tu, eles):",
       "back": "partirás, partirão",
       "example": "Partirão para a Europa no próximo verão."
-    }
+    },
+    "__nuevos": [
+      "b5-fut-regular"
+    ]
   },
   {
     "id": "15fbc062",
@@ -618,7 +665,7 @@
     ],
     "contentHash": "12968deed19cc2efed40568764a92a4db09ea7ff416682fbc76d11eb320393a7",
     "esContrast": "'De concreto' = 'de hormigón'. En PT se dice 'betão' en PT-PT.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "No próximo ano, eles ___ construir uma casa nova no campo.",
@@ -630,7 +677,11 @@
         }
       ],
       "hintEs": "van a — futuro perifrástico, 3.ª del plural"
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "16480631",
@@ -655,13 +706,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Forma la primera persona del singular (eu) del futuro composto del verbo falar.",
       "back": "Eu vou falar",
       "example": "Eu vou falar com o gerente amanhã."
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "1c3cdbee",
@@ -734,7 +789,10 @@
       "front": "'Ele disse: Eu vou viajar amanhã.' → ¿Cómo queda en discurso indirecto?",
       "back": "Ele disse que ia viajar no dia seguinte.",
       "example": "Ela disse que faria um esforço para melhorar."
-    }
+    },
+    "__nuevos": [
+      "b5-cond-irregulares"
+    ]
   },
   {
     "id": "1e6d2540",
@@ -765,7 +823,10 @@
     "data": {
       "front": "Si llueve mañana, no iré a la playa.",
       "back": "Se chover amanhã, não vou à praia."
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ]
   },
   {
     "id": "212bec51",
@@ -797,7 +858,10 @@
       "front": "¿Cómo se dice 'soñador' en portugués?",
       "back": "sonhador",
       "example": "Ele é um sonhador que quer viajar pelo mundo."
-    }
+    },
+    "__nuevos": [
+      "b5-futuro-presente"
+    ]
   },
   {
     "id": "21b0ad61",
@@ -814,7 +878,7 @@
     ],
     "contentHash": "21b0ad61e0f9b8e714fe934798e0b0b326b952d53f9e624d018ab4535b757a00",
     "esContrast": "Condicional futuro: 'vamos a conseguir, vamos a comprar'. Muy común en BR.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Se tudo correr bem, nós ___ conseguir o empréstimo e ___ comprar a casa.",
@@ -830,7 +894,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "21f96a77",
@@ -845,7 +913,7 @@
     ],
     "contentHash": "21f96a77a1f2263ff79fc579d695dd160a446e08627b148bced7e996fffacbea",
     "esContrast": "ES 'pensar' leva EN, PT 'pensar' leva EM. Moi similar mas non idéntico.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
@@ -857,7 +925,11 @@
         "para"
       ],
       "answer": "em"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-em"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-em"
   },
   {
     "id": "22d63b7d",
@@ -895,7 +967,10 @@
         "Segundo ela, eu deveria fazer mais esforços para estar contente.",
         "De acordo com ela, eu deveria realizar mais esforços para ser feliz."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-cond-regular"
+    ]
   },
   {
     "id": "2461d15f",
@@ -933,7 +1008,10 @@
         "O professor disse que nós faríamos o exame na semana que vem.",
         "O professor informou que faríamos o exame na próxima semana."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-cond-irregulares"
+    ]
   },
   {
     "id": "249eb9db",
@@ -969,7 +1047,10 @@
       "acceptedAlternatives": [
         "Ela disse que podia vir amanhã."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-cond-regular"
+    ]
   },
   {
     "id": "25184d93",
@@ -1004,7 +1085,10 @@
       "acceptedAlternatives": [
         "Formar una familia no es fácil si los precios siguen subiendo."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ]
   },
   {
     "id": "2581a678",
@@ -1036,7 +1120,10 @@
       "front": "¿Cómo se dice 'realizar' en portugués?",
       "back": "realizar",
       "example": "Vou realizar o meu sonho de estudar em Portugal."
-    }
+    },
+    "__nuevos": [
+      "b5-fut-perifrastico"
+    ]
   },
   {
     "id": "26ad74d2",
@@ -1060,7 +1147,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-imperfeito-conj"
+    ]
   },
   {
     "id": "291ff1e5",
@@ -1091,7 +1181,10 @@
       "front": "poupar (verbo)",
       "back": "ahorrar, guardar dinero",
       "example": "Preciso poupar dinheiro para a viagem."
-    }
+    },
+    "__nuevos": [
+      "b5-futuro-composto"
+    ]
   },
   {
     "id": "2d8585af",
@@ -1129,7 +1222,10 @@
         "Será que seria possível realizar o projeto este ano?",
         "Seria viável realizar o projeto este ano?"
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-condicional"
+    ]
   },
   {
     "id": "2e95a90c",
@@ -1163,7 +1259,10 @@
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b5-futuro-presente"
+    ]
   },
   {
     "id": "307d79ee",
@@ -1227,7 +1326,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "¿Vas a ahorrar dinero para el viaje este verano?",
@@ -1237,7 +1336,11 @@
       "acceptedAlternatives": [
         "Vais a ahorrar dinheiro para a viagem este verão?"
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "31f54963",
@@ -1271,7 +1374,10 @@
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b5-fut-irregulares"
+    ]
   },
   {
     "id": "32351ac9",
@@ -1299,7 +1405,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ]
   },
   {
     "id": "361162f9",
@@ -1329,7 +1438,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-fut-perifrastico"
+    ]
   },
   {
     "id": "37befd01",
@@ -1354,13 +1466,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Traduce 'contento' (adjetivo)",
       "back": "contente",
       "example": "Eu estaria contente com essa decisão."
-    }
+    },
+    "__nuevos": [
+      "b5-cond-regular"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-cond-regular"
   },
   {
     "id": "38f7c35c",
@@ -1400,7 +1516,8 @@
           "Se constituísses uma família, terias muitos mais gastos."
         ]
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "3917b328",
@@ -1463,7 +1580,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-imperfeito-conj"
+    ]
   },
   {
     "id": "3a5611e1",
@@ -1496,7 +1616,10 @@
       "acceptedAlternatives": [
         "Si hiciese más esfuerzo, conseguiría el trabajo."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-imperfeito-conj"
+    ]
   },
   {
     "id": "3a886de7",
@@ -1509,7 +1632,7 @@
     "tags": [],
     "contentHash": "3a886de7542ecf9e24df012bab7b213f253a030391f16189e893122fd587309b",
     "esContrast": "Condicional: 'seria' expresa posibilidad hipotética, no 'era'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ mais feliz se tivesse um gato.",
@@ -1520,7 +1643,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-imperfeito-conj"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-imperfeito-conj"
   },
   {
     "id": "3cea424d",
@@ -1556,7 +1683,10 @@
       "acceptedAlternatives": [
         "Os preços vão subir no mês que vem."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ]
   },
   {
     "id": "3e18f681",
@@ -1585,7 +1715,10 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "3eecb886",
@@ -1651,7 +1784,10 @@
         "Um mercado"
       ],
       "answer": "Uma padaria"
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ]
   },
   {
     "id": "408764e8",
@@ -1687,7 +1823,10 @@
       "acceptedAlternatives": [
         "Él es muy concreto, no pierde tiempo con fantasías."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-futuro-composto"
+    ]
   },
   {
     "id": "4287a621",
@@ -1718,7 +1857,10 @@
       "front": "sonhador / sonhadora",
       "back": "soñador / soñadora",
       "example": "Ela é uma pessoa sonhadora que acredita nos seus planos."
-    }
+    },
+    "__nuevos": [
+      "b5-futuro-composto"
+    ]
   },
   {
     "id": "43ecd99f",
@@ -1743,7 +1885,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Se eu tivesse mais tempo, eu faria um grande esforço para aprender português.",
@@ -1755,7 +1897,11 @@
         "Una compra importante"
       ],
       "answer": "Un gran esfuerzo por aprender portugués"
-    }
+    },
+    "__nuevos": [
+      "b5-cond-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-cond-irregulares"
   },
   {
     "id": "44d50878",
@@ -1802,7 +1948,7 @@
     "tags": [],
     "contentHash": "462245599fb2ee7d537ef048ec201aca5545866c2e81a0eb67dd38a11283c6a2",
     "esContrast": "Tipo 2: condição hipotética. Imperfeito do conjuntivo.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Se ela ___ família, precisaria de uma casa maior.",
@@ -1815,7 +1961,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional"
   },
   {
     "id": "467170d9",
@@ -1840,7 +1990,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "El sabe que la vida le traerá nuevos desafíos, pero estará preparado.",
@@ -1850,7 +2000,11 @@
       "acceptedAlternatives": [
         "Ele sabe que a vida lhe trará novos desafios, mas estará pronto."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-fut-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-fut-irregulares"
   },
   {
     "id": "49d7577e",
@@ -1935,7 +2089,8 @@
           "¡Van a adorar esta ciudad!"
         ]
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "4dd7e3e8",
@@ -1967,7 +2122,10 @@
       "front": "¿Cómo expresarías 'Me gustaría un café' como deseo cortés en portugués?",
       "back": "Eu gostaria de um café",
       "example": "Eu gostaria de um café, por favor."
-    }
+    },
+    "__nuevos": [
+      "b5-cond-cortesia"
+    ]
   },
   {
     "id": "4e3d1e6d",
@@ -2036,7 +2194,10 @@
       "acceptedAlternatives": [
         "Ela vai realizar os sonhos dela no próximo ano."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-fut-perifrastico"
+    ]
   },
   {
     "id": "50b03eb3",
@@ -2063,7 +2224,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ]
   },
   {
     "id": "50b0c475",
@@ -2079,7 +2243,7 @@
     ],
     "contentHash": "50b0c47512617eac379c00a0bac374814810cdd0bf99a037958a4da2cb4b8230",
     "esContrast": "'Poder' → 'poderemos'. O radical muda (pod- em vez de pou-).",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Como ___ essa situação se ninguém ajudar?",
@@ -2092,7 +2256,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-fut-perifrastico"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-fut-perifrastico"
   },
   {
     "id": "5112fc8c",
@@ -2129,7 +2297,10 @@
         "esse sonho"
       ],
       "answer": "vou realizar"
-    }
+    },
+    "__nuevos": [
+      "b5-fut-perifrastico"
+    ]
   },
   {
     "id": "5310ac04",
@@ -2177,7 +2348,8 @@
           "Poderia me aconselhar?"
         ]
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "532dfefb",
@@ -2202,13 +2374,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Completa: Eu __ sair mais cedo hoje. (querer → condicional)",
       "back": "eu quereria",
       "example": "Eu quereria sair mais cedo hoje, se possível."
-    }
+    },
+    "__nuevos": [
+      "b5-cond-regular"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-cond-regular"
   },
   {
     "id": "53e21b7f",
@@ -2253,7 +2429,10 @@
           }
         ]
       }
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ]
   },
   {
     "id": "565689da",
@@ -2296,7 +2475,10 @@
       "pt-br": {
         "audioText": "Se você fizesse mais esforço, os preços da padaria seriam mais acessíveis."
       }
-    }
+    },
+    "__nuevos": [
+      "b5-se-imperfeito-conj"
+    ]
   },
   {
     "id": "566554f3",
@@ -2319,7 +2501,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Si no hubiera preços tão altos, constituirías una família con más facilidad.",
@@ -2329,7 +2511,11 @@
       "acceptedAlternatives": [
         "Se não existissem preços tão altos, constituirias uma família com mais facilidade."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional"
   },
   {
     "id": "57dc2b62",
@@ -2352,13 +2538,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Cuál es la diferencia entre 'nós vamos falar' y 'a gente vai falar'?",
       "back": "Significan lo mismo (vamos a hablar), pero 'nós vamos falar' usa el pronombre 'nós' con 'vamos + infinitivo', mientras que 'a gente vai falar' usa 'a gente' (tercera persona) con 'vai'.",
       "example": "Nós vamos falar com o professor. / A gente vai falar com o professor."
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "5e60c6ab",
@@ -2389,7 +2579,10 @@
     "data": {
       "front": "Si voy a la panadería, compraré pan fresco.",
       "back": "Se eu for à padaria, vou comprar pão fresco."
-    }
+    },
+    "__nuevos": [
+      "b5-se-futuro-conj"
+    ]
   },
   {
     "id": "5f1d3ce3",
@@ -2423,7 +2616,10 @@
         }
       ],
       "hintEs": "soñadora · va"
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ]
   },
   {
     "id": "5f376912",
@@ -2453,7 +2649,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-cond-cortesia"
+    ]
   },
   {
     "id": "5f96af67",
@@ -2485,7 +2684,10 @@
       "front": "Conjuga 'comer' en futuro do presente (eu, você, nós):",
       "back": "comerei, comerá, comeremos",
       "example": "Comerei uma pizza para comemorar a minha aprovação."
-    }
+    },
+    "__nuevos": [
+      "b5-fut-regular"
+    ]
   },
   {
     "id": "607946c2",
@@ -2500,7 +2702,7 @@
     ],
     "contentHash": "607946c2821c41c6325a0033502d2163c9a939fabb76217deddbb8e0f4809af7",
     "esContrast": "En español se dice 'pensar EN', pero en PT se usa pensar EM.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
@@ -2512,7 +2714,11 @@
         "∅"
       ],
       "answer": "em"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-em"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-em"
   },
   {
     "id": "63b88b5e",
@@ -2536,7 +2742,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Ellos vendrán a la ceremonia aunque no puedan quedarse hasta el final.",
@@ -2546,7 +2752,11 @@
       "acceptedAlternatives": [
         "Eles virão à cerimónia embora não possam ficar até ao final."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-futuro-presente"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-futuro-presente"
   },
   {
     "id": "63df3aeb",
@@ -2577,7 +2787,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-fut-perifrastico"
+    ]
   },
   {
     "id": "6498a52a",
@@ -2601,7 +2814,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "¿Qué harás tú cuando termines el curso?",
@@ -2611,7 +2824,11 @@
       "acceptedAlternatives": [
         "O que você fará quando terminar o curso?"
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-fut-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-fut-irregulares"
   },
   {
     "id": "6702d71b",
@@ -2645,7 +2862,10 @@
       "pt-br": {
         "sentence": "Eu ___ uma casa na praia quando me aposentar."
       }
-    }
+    },
+    "__nuevos": [
+      "b5-fut-perifrastico"
+    ]
   },
   {
     "id": "6756a8a8",
@@ -2677,7 +2897,10 @@
       "front": "concreto / concreta",
       "back": "concreto / concreta (real, tangible, específico)",
       "example": "Preciso de um plano concreto para economizar."
-    }
+    },
+    "__nuevos": [
+      "b5-futuro-composto"
+    ]
   },
   {
     "id": "683fd7e6",
@@ -2715,7 +2938,10 @@
         "precisares"
       ],
       "answer": "poderás"
-    }
+    },
+    "__nuevos": [
+      "b5-fut-regular"
+    ]
   },
   {
     "id": "69f46fd4",
@@ -2741,12 +2967,16 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Cuál es la estructura de una oración condicional tipo 2?",
       "back": "Se + imperfeito do subjuntivo + condicional presente\n\nExemplo: Se eu tivesse dinheiro, viajaria."
-    }
+    },
+    "__nuevos": [
+      "b5-se-imperfeito-conj"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-imperfeito-conj"
   },
   {
     "id": "6addddb2",
@@ -2771,13 +3001,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Completa: Eu __ um novo emprego. (fazer → condicional)",
       "back": "eu faria",
       "example": "Eu faria um novo estágio, se houvesse vaga."
-    }
+    },
+    "__nuevos": [
+      "b5-cond-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-cond-irregulares"
   },
   {
     "id": "6c1a9bd9",
@@ -2801,7 +3035,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Nosotros veremos si el sueño del joven se cumplirá pronto.",
@@ -2811,7 +3045,11 @@
       "acceptedAlternatives": [
         "Nós veremos se o sonho do sonhador se cumprirá em breve."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-fut-regular"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-fut-regular"
   },
   {
     "id": "6c6dc8b9",
@@ -2843,7 +3081,10 @@
       "front": "preços (sustantivo, plural)",
       "back": "precios",
       "example": "Os preços vão subir no mês que vem."
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ]
   },
   {
     "id": "6c7d8450",
@@ -2869,12 +3110,16 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Si constituyera familia, necesitaría una casa más grande.",
       "back": "Se constituísse família, precisaria de uma casa maior."
-    }
+    },
+    "__nuevos": [
+      "b5-se-imperfeito-conj"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-imperfeito-conj"
   },
   {
     "id": "6cab85e4",
@@ -2939,13 +3184,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Crea una frase con futuro composto usando 'concreto' y 'poupar'.",
       "back": "Modelo: Preciso ter objetivos concretos — vou poupar 500 reais por mês para a viagem.",
       "example": "Para realizar um sonho concreto, vou poupar uma quantia específica todo mês."
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "6e7c498c",
@@ -3088,7 +3337,10 @@
     "data": {
       "front": "¿Cuál es la estructura de una oración condicional tipo 1?",
       "back": "Se + presente do indicativo + futuro do presente (ou presente simples)\n\nExemplo: Se eu tiver dinheiro, vou viajar."
-    }
+    },
+    "__nuevos": [
+      "b5-se-futuro-conj"
+    ]
   },
   {
     "id": "727eedd9",
@@ -3122,7 +3374,10 @@
       "acceptedAlternatives": [
         "Ela vai ser uma arquitecta muito concreta, sempre com os pés bem assentes."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-formas"
+    ]
   },
   {
     "id": "72894d13",
@@ -3188,7 +3443,10 @@
         "∅"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "74c980ba",
@@ -3213,7 +3471,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "No irás a la panadería si no haces esfuerzo ahora.",
@@ -3223,7 +3481,11 @@
       "acceptedAlternatives": [
         "Não irás à padaria se não fizeres um esforço agora."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional"
   },
   {
     "id": "77073b14",
@@ -3239,7 +3501,7 @@
     ],
     "contentHash": "77073b146fffcb17e5a94648379b5fa9a2a2568fe29b3a71027864c4b5125035",
     "esContrast": "El futuro compuesto PT es como 'vamos a ahorrar', pero en BR es la forma más natural.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Amanhã nós ___ poupar dinheiro para a viagem de férias.",
@@ -3250,7 +3512,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "7a321272",
@@ -3275,13 +3541,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "esforço",
       "back": "esfuerzo",
       "example": "O esforço valeu a pena: consegui o emprego!"
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional"
   },
   {
     "id": "7a8432c3",
@@ -3307,7 +3577,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Poderia me dar um conselho sobre como resolver isso?",
@@ -3317,7 +3587,11 @@
       "acceptedAlternatives": [
         "¿Podría usted darme un consejo sobre cómo resolver esto?"
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-cond-regular"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-cond-regular"
   },
   {
     "id": "7ac8e1d8",
@@ -3348,7 +3622,10 @@
       "pt-br": {
         "sentence": "Se a gente ___ mais tempo, ia viajar juntos."
       }
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ]
   },
   {
     "id": "7b14b1d9",
@@ -3405,13 +3682,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Traduce al portugués: '¿Cuánto vas a ahorrar este mes?'",
       "back": "Quanto é que vais poupar este mês?",
       "example": "Quanto é que vais poupar este mês? Vou poupar 200 reais."
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "7fc2782a",
@@ -3448,7 +3729,10 @@
       "pt-br": {
         "back": "En portugués brasileño (BR), el futuro composto reemplaza frecuentemente al futuro simple (fallar, falarei) en el habla cotidiana."
       }
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ]
   },
   {
     "id": "8125e2e5",
@@ -3464,7 +3748,7 @@
     ],
     "contentHash": "8125e2e57ea99a090a5860cf3db367987b13d7a3ce202cb1e0c1e15f79842950",
     "esContrast": "'Vou crescer' = 'voy a crecer'. Expresión muy natural en PT-BR.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Quando eu ___ crescer, quero ser astronauta.",
@@ -3477,7 +3761,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "8237b53d",
@@ -3506,7 +3794,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-fut-perifrastico"
+    ]
   },
   {
     "id": "823a95c9",
@@ -3541,7 +3832,10 @@
       "acceptedAlternatives": [
         "Hablaré con ella mañana."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ]
   },
   {
     "id": "825bf8a6",
@@ -3564,13 +3858,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Usa el futuro composto con 'sonhador' para decir: 'Ella, como es soñadora, va a ahorrar para cumplir sus sueños.'",
       "back": "Ela, sendo sonhadora, vai poupar para realizar os seus sonhos.",
       "example": "Ela, sendo sonhadora, vai poupar para realizar os seus sonhos concretos."
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "844d0dc0",
@@ -3598,7 +3896,10 @@
         "lembrarei sobre"
       ],
       "answer": "lembrarei de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-otras"
+    ]
   },
   {
     "id": "848f2e90",
@@ -3626,7 +3927,10 @@
         "∅"
       ],
       "answer": "com"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-com"
+    ]
   },
   {
     "id": "84e35879",
@@ -3662,7 +3966,10 @@
       "acceptedAlternatives": [
         "Mi abuelo era soñador, siempre creyó en lo imposible."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-futuro-composto"
+    ]
   },
   {
     "id": "8505a63c",
@@ -3705,7 +4012,10 @@
       "pt-br": {
         "audioText": "Se você vier à minha padaria amanhã, vou te dar um desconto especial nos preços."
       }
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ]
   },
   {
     "id": "855588a1",
@@ -3742,7 +4052,10 @@
       "acceptedAlternatives": [
         "Él dijo que haría un gran esfuerzo para llevar a cabo el proyecto."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-cond-irregulares"
+    ]
   },
   {
     "id": "85675188",
@@ -3773,7 +4086,10 @@
       "front": "Conjuga el verbo 'ir' en presente: eu, tu, ele/ela, nós, vós, eles/elas",
       "back": "eu vou, tu vais, ele/ela vai, nós vamos, vós ides, eles/elas vão",
       "example": "Eu vou, tu vais, ele vai, nós vamos, vós ides, eles vão."
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-formas"
+    ]
   },
   {
     "id": "874c054b",
@@ -3806,7 +4122,10 @@
       "front": "preços",
       "back": "precios",
       "example": "Os preços dos imóveis subiram muito este ano."
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ]
   },
   {
     "id": "879e089d",
@@ -3832,7 +4151,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Esses preços estão absurdos, vou reclamar directamente com o director!",
@@ -3842,7 +4161,11 @@
       "acceptedAlternatives": [
         "¡Esos precios son absurdos, voy a reclamar directamente al director!"
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "89f74b9c",
@@ -3868,12 +4191,16 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'ter' en imperfeito do subjuntivo: se eu ___, se tu ___, se ele ___",
       "back": "se eu tivesse, se tu tivesses, se ele tivesse\n(se nós tivéssemos, se vós tivésseis, se eles tivessem)"
-    }
+    },
+    "__nuevos": [
+      "b5-se-imperfeito-conj"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-imperfeito-conj"
   },
   {
     "id": "8a71ec94",
@@ -3933,7 +4260,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-futuro-conj"
+    ]
   },
   {
     "id": "8b7cfbdd",
@@ -3965,7 +4295,10 @@
       "front": "¿Qué alternativa cortés usaría un brasileño para 'eu quero' en una tienda?",
       "back": "Eu gostaria de / Eu ia querer (informal)",
       "example": "Eu ia querer aquele pão aí, por favor."
-    }
+    },
+    "__nuevos": [
+      "b5-cond-cortesia"
+    ]
   },
   {
     "id": "8be006d7",
@@ -4002,7 +4335,10 @@
       "acceptedAlternatives": [
         "La testigo afirmó que vería todo con claridad aquella noche."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-cond-irregulares"
+    ]
   },
   {
     "id": "8ccf5d3d",
@@ -4025,7 +4361,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Si constituyeras una familia, necesitarías más espacio en casa.",
@@ -4035,7 +4371,11 @@
       "acceptedAlternatives": [
         "Se constituísses uma família, terias necessidade de mais espaço em casa."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional"
   },
   {
     "id": "8dc0261c",
@@ -4065,7 +4405,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-cond-irregulares"
+    ]
   },
   {
     "id": "90c3eec0",
@@ -4078,7 +4421,7 @@
     "tags": [],
     "contentHash": "90c3eec0b216a76478a71d1c85a3eaf61986aac45b1867bcfb72db852652a229",
     "esContrast": "Igual que en español: 'começar a' (no 'de' ni 'em').",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "começar",
@@ -4090,7 +4433,11 @@
         "∅"
       ],
       "answer": "a"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-a"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-a"
   },
   {
     "id": "90cfc018",
@@ -4122,7 +4469,10 @@
       "acceptedAlternatives": [
         "Si yo voy a la panadería mañana, compro pan fresco."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-futuro-conj"
+    ]
   },
   {
     "id": "9294ae28",
@@ -4165,7 +4515,8 @@
       "pt-br": {
         "audioText": "No Brasil, vai ter aula online amanhã por causa da chuva."
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "9463f5cc",
@@ -4189,7 +4540,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Vais perceber que sou uma pessoa sonhadora, mas também concreta.",
@@ -4201,7 +4552,11 @@
         "Ni soñadora ni concreta"
       ],
       "answer": "Soñadora y concreta"
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "94729cbc",
@@ -4224,7 +4579,7 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Se ele constituísse família, teria uma vida mais estável.",
@@ -4234,7 +4589,11 @@
       "acceptedAlternatives": [
         "Si él constituyese familia, tendría una vida más estable."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-imperfeito-conj"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-imperfeito-conj"
   },
   {
     "id": "94eaa8bc",
@@ -4270,7 +4629,10 @@
       "acceptedAlternatives": [
         "Vamos apresentar um plano concreto para poupar nos preços da habitação."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ]
   },
   {
     "id": "98a67a8e",
@@ -4296,12 +4658,16 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Si los precios bajan, voy a comprar ese apartamento.",
       "back": "Se os preços caírem, vou comprar aquele apartamento."
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional"
   },
   {
     "id": "99114a7c",
@@ -4317,7 +4683,7 @@
     ],
     "contentHash": "99114a7cfefc1d5ff454a197e488361bd7e6b1cb678e24e6709bc5c81aa0e168",
     "esContrast": "En español 'soñar' puede llevar 'con' o 'en'; en PT-BR se usa 'sonhar COM'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "sonhar",
@@ -4329,7 +4695,11 @@
         "sonhador/para"
       ],
       "answer": "sonhador/com"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-otras"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-otras"
   },
   {
     "id": "99980580",
@@ -4372,7 +4742,10 @@
       "pt-br": {
         "audioText": "Se eu tivesse mais dinheiro, constituiria uma família e abriria minha própria padaria."
       }
-    }
+    },
+    "__nuevos": [
+      "b5-se-imperfeito-conj"
+    ]
   },
   {
     "id": "9d5d938b",
@@ -4397,7 +4770,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Voy a ahorrar para cumplir mi sueño de viajar a Brasil.",
@@ -4407,7 +4780,11 @@
       "acceptedAlternatives": [
         "Vou ahorrar para cumprir o meu sonho de viajar ao Brasil."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "9fa31c61",
@@ -4423,7 +4800,7 @@
     ],
     "contentHash": "9fa31c617a1502800fb9bee074290d9eb816c226a7b22aa1920eababe5b94d43",
     "esContrast": "En español 'gustar' no lleva preposición, pero en PT 'gostar' exige DE.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
@@ -4435,7 +4812,11 @@
         "∅"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-de"
   },
   {
     "id": "a1463326",
@@ -4477,7 +4858,8 @@
           "Me diz o que você queria me dizer e eu te direi se poderei te ajudar."
         ]
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "a4283e03",
@@ -4507,7 +4889,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-fut-irregulares"
+    ]
   },
   {
     "id": "a84de8ea",
@@ -4541,7 +4926,10 @@
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b5-futuro-presente"
+    ]
   },
   {
     "id": "a8952aee",
@@ -4556,7 +4944,7 @@
     ],
     "contentHash": "a8952aee3816c6f041097c7ae558800bb7c0255c4c120992968547f59f46b652",
     "esContrast": "En PT-PT: 'tu vais'; en PT-BR: se usa más 'você vai'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Tu ___ comprar o presente para a Maria?",
@@ -4567,7 +4955,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "a906da0d",
@@ -4592,13 +4984,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se forma el futuro composto en portugués?",
       "back": "ir + infinitivo: vou falar, vais falar, vai falar, vamo(s) falar, ides falar, vão falar",
       "example": "Vou viajar amanhã. (Voy a viajar mañana.)"
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "aab6acb1",
@@ -4632,7 +5028,10 @@
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b5-fut-regular"
+    ]
   },
   {
     "id": "aabee1c1",
@@ -4647,7 +5046,7 @@
     ],
     "contentHash": "aabee1c1b3ac80e85e21147e105c14cfc50e9e9a151c28823b7dd9754bce627d",
     "esContrast": "ES 'gustar' non leva preposición, PT 'gostar' leva DE. Erro moi común.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
@@ -4659,7 +5058,11 @@
         "gostar —"
       ],
       "answer": "gostar"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-otras"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-otras"
   },
   {
     "id": "aafe8217",
@@ -4685,13 +5088,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "padaria",
       "back": "panadería (establecimiento donde se vende pan y bollería)",
       "example": "Eu vou à padaria comprar pão fresco todos os dias."
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional"
   },
   {
     "id": "aba10b4e",
@@ -4726,7 +5133,10 @@
       "acceptedAlternatives": [
         "Voy a ser más concreta: necesitamos resultados."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-formas"
+    ]
   },
   {
     "id": "add8f276",
@@ -4790,7 +5200,10 @@
       "pt-br": {
         "sentence": "Se eu ___ dinheiro suficiente, vou comprar um novo celular."
       }
-    }
+    },
+    "__nuevos": [
+      "b5-se-futuro-conj"
+    ]
   },
   {
     "id": "b052aa71",
@@ -4816,12 +5229,16 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Condicional do verbo 'poder': eu ___, tu ___, ele ___",
       "back": "eu poderia, tu poderias, ele poderia\n(nós poderíamos, vós poderíeis, eles poderiam)"
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional"
   },
   {
     "id": "b1d793db",
@@ -4846,7 +5263,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Constituirías una família más próspera si los preços fueran más justos.",
@@ -4856,7 +5273,11 @@
       "acceptedAlternatives": [
         "Constituirias uma família mais próspera caso os preços fossem mais justos."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional"
   },
   {
     "id": "b2b04b9b",
@@ -4882,7 +5303,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Se os preços subirem muito, muitas famílias vão constituir família mais tarde.",
@@ -4894,7 +5315,11 @@
         "Vão sair de casa"
       ],
       "answer": "Vão constituir família mais tarde"
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional"
   },
   {
     "id": "b3bebf21",
@@ -4994,13 +5419,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Explica por qué 'vou falar' no es exactamente igual a 'voy a hablar' en todos los contextos.",
       "back": "En PT-BR, 'vou falar' puede significar tanto 'voy a hablar' (intención inmediata) como 'hablaré' (futuro general). En español, 'voy a hablar' implica más inmediatez, mientras que 'hablaré' es más distante. En PT-BR, el futuro composto cubre ambos significados.",
       "example": "Vou falar com ela amanhã. (= Hablaré / Voy a hablar con ella mañana.)"
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "b680faa2",
@@ -5026,13 +5455,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'falar' en futuro do presente (todas as pessoas):",
       "back": "falarei, falarás, falará, falaremos, falarão",
       "example": "Falarei com ela amanhã sobre o projeto."
-    }
+    },
+    "__nuevos": [
+      "b5-fut-regular"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-fut-regular"
   },
   {
     "id": "b8547c55",
@@ -5099,7 +5532,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-cond-irregulares"
+    ]
   },
   {
     "id": "ba2402b2",
@@ -5135,7 +5571,10 @@
       "acceptedAlternatives": [
         "El gerente informó que la reunión se postergaría para el jueves."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-cond-hipotetico"
+    ]
   },
   {
     "id": "ba9d2b66",
@@ -5173,7 +5612,10 @@
         "Perguntei se ele gostaria de dar-me um conselho antes de realizar o projeto.",
         "Questionei se ele quereria me dar um conselho antes de realizar o projeto."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-cond-cortesia"
+    ]
   },
   {
     "id": "bc163004",
@@ -5209,7 +5651,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-condicional"
+    ]
   },
   {
     "id": "bc3ef7c0",
@@ -5224,7 +5669,7 @@
     ],
     "contentHash": "bc3ef7c068d99813ba0896fc2e1768b5beb86f808a318c5516241cad4e05b32a",
     "esContrast": "ES 'recordar' non leva preposición, PT 'lembrar' leva DE.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "lembrar",
@@ -5236,7 +5681,11 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-de"
   },
   {
     "id": "be2ce516",
@@ -5262,7 +5711,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Vou ser concreta: os preços vão subir muito em breve.",
@@ -5274,7 +5723,11 @@
         "De forma-irónica, los precios bajarán"
       ],
       "answer": "De forma concreta, los precios subirán"
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "be776088",
@@ -5297,7 +5750,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Si el esfuerzo que haces fuera maior, tendrías melhores preços.",
@@ -5307,7 +5760,11 @@
       "acceptedAlternatives": [
         "Se o esforço que fizesses fosse maior, obterias melhores preços."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional"
   },
   {
     "id": "bf9f60f9",
@@ -5366,7 +5823,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Vais poupar muito dinheiro assim.",
@@ -5376,7 +5833,11 @@
       "acceptedAlternatives": [
         "Ahorrarás mucho dinero así."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "c092ca4e",
@@ -5399,7 +5860,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Si los precios son tan altos, tendré que hacer un gran esfuerzo.",
@@ -5409,7 +5870,11 @@
       "acceptedAlternatives": [
         "Se os preços são tão altos, vou ter de fazer um grande esforço."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional"
   },
   {
     "id": "c21084cf",
@@ -5432,13 +5897,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Traduce: 'Los precios van a subir el próximo año.'",
       "back": "Os preços vão subir no próximo ano.",
       "example": "Os preços vão subir no próximo ano. Preciso poupar mais."
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "c4c353d8",
@@ -5470,7 +5939,10 @@
       "front": "'Maria disse: Eu quero este emprego.' → Transforma em discurso indireto.",
       "back": "Maria disse que queria aquele emprego.",
       "example": "O gerente disse que queria realizar a entrevista logo."
-    }
+    },
+    "__nuevos": [
+      "b5-condicional"
+    ]
   },
   {
     "id": "c4d269ed",
@@ -5496,13 +5968,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Qué es el 'vestibular' en Brasil?",
       "back": "É o exame de seleção para entrar na universidade",
       "example": "Muitos estudantes fazem cursinho para o vestibular."
-    }
+    },
+    "__nuevos": [
+      "b5-futuro-presente"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-futuro-presente"
   },
   {
     "id": "c5991acb",
@@ -5537,7 +6013,10 @@
       "acceptedAlternatives": [
         "Los precios bajarán el próximo mes."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ]
   },
   {
     "id": "c80f3e0a",
@@ -5553,7 +6032,7 @@
     ],
     "contentHash": "c80f3e0a0a5ea2ab57ac5960789edda18f2042625f71983e84c7c7733369dbbd",
     "esContrast": "En español 'esforzarse' puede ir con EN o POR; en PT-BR se prefiere 'em'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "dever",
@@ -5565,7 +6044,11 @@
         "a"
       ],
       "answer": "em"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-em"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-em"
   },
   {
     "id": "c8c73d70",
@@ -5597,7 +6080,10 @@
       "front": "Conjuga 'saber' en futuro do presente (você, elas):",
       "back": "saberá, saberão",
       "example": "Logo saberão a resposta do exame."
-    }
+    },
+    "__nuevos": [
+      "b5-fut-regular"
+    ]
   },
   {
     "id": "ca13ea5c",
@@ -5631,7 +6117,8 @@
       "pt-br": {
         "example": "Tens um plano concreto ou só estás a sonhar? Precisa ser mais realista."
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "ca40cfd1",
@@ -5647,7 +6134,7 @@
     ],
     "contentHash": "ca40cfd195a2a913ff205f7f0fa2a6c91060d3c4a28f597f8f5907f423cbad60",
     "esContrast": "ES 'soñar' leva EN, PT 'sonhar' leva COM. Erro moi común.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "sonhar",
@@ -5659,7 +6146,11 @@
         "sonhar en"
       ],
       "answer": "sonhar"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-otras"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-otras"
   },
   {
     "id": "ccdeaeaa",
@@ -5688,7 +6179,10 @@
         "—"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "d085cce7",
@@ -5724,7 +6218,10 @@
       "acceptedAlternatives": [
         "O meu irmão diz que vai ser um sonho, mas é muito sonhador."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-formas"
+    ]
   },
   {
     "id": "d140e759",
@@ -5751,7 +6248,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ]
   },
   {
     "id": "d2a6e538",
@@ -5780,7 +6280,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-fut-perifrastico"
+    ]
   },
   {
     "id": "d2f872f3",
@@ -5855,7 +6358,10 @@
         "projetos"
       ],
       "answer": "virá"
-    }
+    },
+    "__nuevos": [
+      "b5-futuro-presente"
+    ]
   },
   {
     "id": "d8004a56",
@@ -5886,7 +6392,10 @@
       "front": "Traduce 'consejo' (sustantivo)",
       "back": "conselho",
       "example": "Posso te dar um conselho? Seja paciente."
-    }
+    },
+    "__nuevos": [
+      "b5-condicional"
+    ]
   },
   {
     "id": "d9283c9f",
@@ -5919,7 +6428,10 @@
       "acceptedAlternatives": [
         "Si vas a la panadería, me traes un pastel."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-futuro-conj"
+    ]
   },
   {
     "id": "d962d247",
@@ -5946,7 +6458,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Me gustaría hacer un esfuerzo para ayudarte.",
@@ -5958,7 +6470,11 @@
         "Eu faria um esforço para ajudá-lo.",
         "Quereria fazer um esforço para ajudá-lo."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-cond-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-cond-irregulares"
   },
   {
     "id": "db0eb149",
@@ -5992,7 +6508,10 @@
       "pt-br": {
         "sentence": "Na próxima semana, nós ___ no vestibular da USP."
       }
-    }
+    },
+    "__nuevos": [
+      "b5-fut-irregulares"
+    ]
   },
   {
     "id": "dc63d860",
@@ -6056,7 +6575,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-fut-perifrastico"
+    ]
   },
   {
     "id": "de11f97e",
@@ -6088,7 +6610,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ]
   },
   {
     "id": "e181706e",
@@ -6122,7 +6647,10 @@
       "acceptedAlternatives": [
         "Ella dijo que tendría mucho gusto en ayudarnos."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-condicional"
+    ]
   },
   {
     "id": "e269e14b",
@@ -6158,7 +6686,8 @@
       "pt-br": {
         "back": "Se eu me esforçasse mais, provavelmente aprovaria o exame."
       }
-    }
+    },
+    "variantVerificacion": "cuarentena de la Ola V (2026-07-29): inversión de variante o reparación de b1 a medias. El motivo estaba documentado en lib/data/loaders.ts pero no en el ítem, así que no se podía deshacer caso a caso — escrito aquí en E2#22"
   },
   {
     "id": "e579594d",
@@ -6183,7 +6712,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Vais adorar os preços da nova loja do centro.",
@@ -6195,7 +6724,11 @@
         "Subirlos"
       ],
       "answer": "Amarlos"
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "e9e65a9c",
@@ -6220,13 +6753,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'ser' en futuro do presente (eu, nós):",
       "back": "serei, seremos",
       "example": "Serei médico quando crescer."
-    }
+    },
+    "__nuevos": [
+      "b5-futuro-presente"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-futuro-presente"
   },
   {
     "id": "eaf46532",
@@ -6262,7 +6799,10 @@
       "acceptedAlternatives": [
         "Vou falar com a minha mãe amanhã."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ]
   },
   {
     "id": "eb0c8e2b",
@@ -6288,7 +6828,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Farei o vestibular no próximo ano e darei o meu melhor para ser aprovado.",
@@ -6300,7 +6840,11 @@
         "Quatro"
       ],
       "answer": "Dois"
-    }
+    },
+    "__nuevos": [
+      "b5-fut-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-fut-irregulares"
   },
   {
     "id": "ef6b2728",
@@ -6325,7 +6869,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Se os preços continuarem a aumentar, muitos vão embora do país.",
@@ -6335,7 +6879,11 @@
       "acceptedAlternatives": [
         "Si los precios siguen subiendo, muchos abandonarán el país."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional"
   },
   {
     "id": "f073e13a",
@@ -6348,7 +6896,7 @@
     "tags": [],
     "contentHash": "f073e13a68089a6f6840cedb1fa1b153cb4375a6aecd3b13b4da65d735a9e5f3",
     "esContrast": "Tipo 2 con valor hipotético-pasado. Imperfeito do conjuntivo.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Se ele ___ a tempo, teria chegado mais cedo.",
@@ -6359,7 +6907,11 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional"
   },
   {
     "id": "f0de9ef5",
@@ -6418,13 +6970,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "constituir família",
       "back": "formar una familia (tener hijos, establecerse en familia)",
       "example": "Muitos jovens adiam constituiu família por questões econômicas."
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional"
   },
   {
     "id": "f3712afa",
@@ -6522,13 +7078,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Conjuga 'fazer' en futuro do presente (eu, vocês):",
       "back": "farei, farão",
       "example": "Farei tudo para realizar meus sonhos."
-    }
+    },
+    "__nuevos": [
+      "b5-fut-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-fut-irregulares"
   },
   {
     "id": "f78116a6",
@@ -6553,7 +7113,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "listening",
     "data": {
       "audioText": "Meu amigo me disse que faria qualquer esforço para ficar contente novamente.",
@@ -6565,7 +7125,11 @@
         "Viajar sin su familia"
       ],
       "answer": "Cualquier esfuerzo"
-    }
+    },
+    "__nuevos": [
+      "b5-cond-irregulares"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-cond-irregulares"
   },
   {
     "id": "f9cf63b7",
@@ -6587,7 +7151,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Se os preços baixarem, vamos comprar mais.",
@@ -6597,7 +7161,11 @@
       "acceptedAlternatives": [
         "Si los precios bajan, compraremos más."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional"
   },
   {
     "id": "fbc0d0c6",
@@ -6629,7 +7197,10 @@
       "front": "Conjuga 'ir' en futuro do presente (tu, nós):",
       "back": "irás, iremos",
       "example": "Iremos à praia no fim de semana."
-    }
+    },
+    "__nuevos": [
+      "b5-futuro-presente"
+    ]
   },
   {
     "id": "fbe83c11",
@@ -6644,7 +7215,7 @@
     ],
     "contentHash": "fbe83c1154a35b524931624a9e409168989db78026964db022353ff8623dc5ae",
     "esContrast": "ES 'necesitar' non leva preposición, PT 'precisar' leva DE.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
@@ -6656,7 +7227,11 @@
         "en"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: reg-verbal-de"
   },
   {
     "id": "fd774631",
@@ -6689,7 +7264,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-cond-regular"
+    ]
   },
   {
     "id": "fdaed120",
@@ -6714,7 +7292,7 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "translation",
     "data": {
       "source": "Si no haces un esfuerzo, no irás a la panadería mañana.",
@@ -6724,7 +7302,11 @@
       "acceptedAlternatives": [
         "Se não fizeres esforço, não irás à padaria amanhã."
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional"
   },
   {
     "id": "ff11961a",
@@ -6750,12 +7332,16 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "Si tuviera más dinero, compraría una casa.",
       "back": "Se eu tivesse mais dinheiro, compraria uma casa."
-    }
+    },
+    "__nuevos": [
+      "b5-se-imperfeito-conj"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-imperfeito-conj"
   },
   {
     "id": "ff32ddbd",
@@ -6781,12 +7367,16 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "flashcard",
     "data": {
       "front": "¿Cuál es la diferencia entre 'se' (condicional) y 'se' (reflexivo)?",
       "back": "Se condicional: conjunción que introduce una condición.\nEjemplo: Se chover, fico em casa.\n\nSe reflexivo: pronombre que indica ação do sujeito sobre si mesmo.\nEjemplo: Eu me esfuerzo todos os dias."
-    }
+    },
+    "__nuevos": [
+      "b5-se-condicional"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional"
   },
   {
     "id": "dcc3f383",
@@ -6810,7 +7400,10 @@
       "tense": "futuro do presente",
       "answer": "falarei",
       "hintEs": "yo hablaré"
-    }
+    },
+    "__nuevos": [
+      "b5-fut-regular"
+    ]
   },
   {
     "id": "cd2409b8",
@@ -6834,7 +7427,10 @@
       "tense": "futuro do presente",
       "answer": "serei",
       "hintEs": "yo seré"
-    }
+    },
+    "__nuevos": [
+      "b5-futuro-presente"
+    ]
   },
   {
     "id": "e448128f",
@@ -6859,7 +7455,10 @@
       "tense": "futuro do presente",
       "answer": "farei",
       "hintEs": "yo haré"
-    }
+    },
+    "__nuevos": [
+      "b5-fut-irregulares"
+    ]
   },
   {
     "id": "dc8aba2f",
@@ -6884,7 +7483,10 @@
       "tense": "futuro do presente",
       "answer": "direi",
       "hintEs": "yo diré"
-    }
+    },
+    "__nuevos": [
+      "b5-fut-irregulares"
+    ]
   },
   {
     "id": "99014239",
@@ -6909,7 +7511,10 @@
       "tense": "futuro do presente",
       "answer": "trarão",
       "hintEs": "ellos/ellas traerán"
-    }
+    },
+    "__nuevos": [
+      "b5-fut-irregulares"
+    ]
   },
   {
     "id": "37740d01",
@@ -6940,7 +7545,10 @@
         "answer": "terá",
         "hintEs": "usted tendrá"
       }
-    }
+    },
+    "__nuevos": [
+      "b5-futuro-presente"
+    ]
   },
   {
     "id": "7531c36d",
@@ -6964,7 +7572,10 @@
       "tense": "futuro do presente",
       "answer": "irei",
       "hintEs": "yo iré"
-    }
+    },
+    "__nuevos": [
+      "b5-futuro-presente"
+    ]
   },
   {
     "id": "2f68e579",
@@ -6988,7 +7599,10 @@
       "tense": "condicional",
       "answer": "falaria",
       "hintEs": "yo hablaría"
-    }
+    },
+    "__nuevos": [
+      "b5-cond-regular"
+    ]
   },
   {
     "id": "b785e4db",
@@ -7013,7 +7627,10 @@
       "tense": "condicional",
       "answer": "faria",
       "hintEs": "yo haría"
-    }
+    },
+    "__nuevos": [
+      "b5-cond-irregulares"
+    ]
   },
   {
     "id": "55a0666f",
@@ -7038,7 +7655,10 @@
       "tense": "condicional",
       "answer": "diria",
       "hintEs": "yo diría"
-    }
+    },
+    "__nuevos": [
+      "b5-cond-irregulares"
+    ]
   },
   {
     "id": "4c7ac2f0",
@@ -7062,7 +7682,10 @@
       "tense": "condicional",
       "answer": "seriam",
       "hintEs": "ellos/ellas serían"
-    }
+    },
+    "__nuevos": [
+      "b5-condicional"
+    ]
   },
   {
     "id": "05449e18",
@@ -7086,7 +7709,10 @@
       "tense": "condicional",
       "answer": "gostaria",
       "hintEs": "yo querría/me gustaría"
-    }
+    },
+    "__nuevos": [
+      "b5-cond-regular"
+    ]
   },
   {
     "id": "b81e8fda",
@@ -7110,7 +7736,10 @@
       "tense": "condicional",
       "answer": "veria",
       "hintEs": "yo vería"
-    }
+    },
+    "__nuevos": [
+      "b5-condicional"
+    ]
   },
   {
     "id": "85396ad6",
@@ -7133,7 +7762,10 @@
       "sentence": "Amanhã eu falaré com o chefe.",
       "correct": "Amanhã eu falarei com o chefe.",
       "explanationEs": "El futuro do presente hace la 1ª persona en '-ei': 'falarei' (no el español 'falaré')."
-    }
+    },
+    "__nuevos": [
+      "b5-fut-regular"
+    ]
   },
   {
     "id": "da0227bd",
@@ -7157,7 +7789,10 @@
       "sentence": "Eu fazerei isso amanhã de manhã.",
       "correct": "Eu farei isso amanhã de manhã.",
       "explanationEs": "El futuro de 'fazer' es irregular: 'farei' (no 'fazerei')."
-    }
+    },
+    "__nuevos": [
+      "b5-fut-irregulares"
+    ]
   },
   {
     "id": "eb7f85c1",
@@ -7180,7 +7815,10 @@
       "sentence": "Eu vou a falar com ela hoje.",
       "correct": "Eu vou falar com ela hoje.",
       "explanationEs": "En portugués el futuro perifrástico no lleva 'a': 'vou falar' (no 'vou a falar')."
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ]
   },
   {
     "id": "adab6a42",
@@ -7225,13 +7863,17 @@
     ],
     "contentHash": "b29590793755550dcaa79bdd4176c23c9992f2a9fc52338d9c08fa3f76f02e00",
     "esContrast": "En la condición irreal NO se usa condicional tras 'se'; va el imperfeito do conjuntivo ('tivesse'), calco del español 'si tendría'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "error_correction",
     "data": {
       "sentence": "Se eu teria dinheiro, eu compraria uma casa.",
       "correct": "Se eu tivesse dinheiro, eu compraria uma casa.",
       "explanationEs": "En la condicional irreal, tras 'se' va imperfeito do conjuntivo ('tivesse') y en la principal el condicional ('compraria')."
-    }
+    },
+    "__nuevos": [
+      "b5-se-imperfeito-conj"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-imperfeito-conj"
   },
   {
     "id": "dc5f73f8",
@@ -7254,7 +7896,10 @@
       "sentence": "Ele disse que chegará tarde à reunião.",
       "correct": "Ele disse que chegaria tarde à reunião.",
       "explanationEs": "En el discurso indirecto en pasado, el futuro pasa a condicional: 'disse que chegaria'."
-    }
+    },
+    "__nuevos": [
+      "b5-cond-regular"
+    ]
   },
   {
     "id": "7502f1c7",
@@ -7280,7 +7925,10 @@
           "answer": "viajaremos"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-fut-regular"
+    ]
   },
   {
     "id": "3dc6033d",
@@ -7327,7 +7975,7 @@
     ],
     "contentHash": "73a4d2cb3c92ff4be09b9a8dbc3cbc5ee9ae592ecf7689b57006195d86c35c4a",
     "esContrast": "Futuro perifrástico = 'ir' conjugado + infinitivo: 'vou estudar'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ estudar mais no próximo ano.",
@@ -7337,7 +7985,11 @@
           "answer": "vou"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ],
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-perifrastico-ir"
   },
   {
     "id": "4b100602",
@@ -7364,7 +8016,10 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'fazer' es irregular en futuro: 'farei'. 'fazerei' no existe y 'faço' es presente."
-    }
+    },
+    "__nuevos": [
+      "b5-fut-irregulares"
+    ]
   },
   {
     "id": "d4b0188a",
@@ -7391,7 +8046,10 @@
       ],
       "correctIndex": 0,
       "explanationEs": "El brasileño coloquial prefiere el futuro perifrástico 'ir + infinitivo' (vou falar) sobre el futuro simple."
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-ir"
+    ]
   },
   {
     "id": "707ac39c",
@@ -7418,7 +8076,10 @@
       ],
       "correctIndex": 0,
       "explanationEs": "Condición irreal: la principal va en condicional ('compraria'). En portugués europeo coloquial también se usa el imperfecto de indicativo ('comprava'), pero nunca el pretérito perfecto ('comprei')."
-    }
+    },
+    "__nuevos": [
+      "b5-se-imperfeito-conj"
+    ]
   },
   {
     "id": "b2c2-par-01",
@@ -7447,7 +8108,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-futcomp-composto-real"
+    ]
   },
   {
     "id": "b2c2-par-02",
@@ -7476,7 +8140,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-futcomp-composto-real"
+    ]
   },
   {
     "id": "b2c2-par-03",
@@ -7505,7 +8172,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-futcomp-composto-real"
+    ]
   },
   {
     "id": "b2c2-par-04",
@@ -7534,7 +8204,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-futcomp-composto-real"
+    ]
   },
   {
     "id": "b2c2-par-05",
@@ -7563,7 +8236,10 @@
       ],
       "correctIndex": 0,
       "explanationEs": "Sin un segundo momento futuro al que anticiparse, el futuro composto sobra: basta el simple."
-    }
+    },
+    "__nuevos": [
+      "b5-futcomp-composto-real"
+    ]
   },
   {
     "id": "b2c2-par-06",
@@ -7592,7 +8268,10 @@
       ],
       "correctIndex": 3,
       "explanationEs": "«Se calhar» es la mitigación europea de «quizá», y no cambia el tiempo: aquí la acción es simplemente futura."
-    }
+    },
+    "__nuevos": [
+      "b5-futcomp-composto-real"
+    ]
   },
   {
     "id": "b2c2-par-07",
@@ -7621,7 +8300,10 @@
       ],
       "correctIndex": 1,
       "explanationEs": "El «já» y la subordinada de futuro piden anterioridad: la película ya habrá empezado."
-    }
+    },
+    "__nuevos": [
+      "b5-futcomp-composto-real"
+    ]
   },
   {
     "id": "b2c2-par-08",
@@ -7650,7 +8332,10 @@
       ],
       "correctIndex": 2,
       "explanationEs": "El «já» y la subordinada de futuro piden anterioridad. Y el participio de «pagar» con «ter» es «pago»: es de los tres verbos (pagar, ganhar, gastar) donde el irregular se impuso también con el auxiliar «ter»."
-    }
+    },
+    "__nuevos": [
+      "b5-futcomp-composto-real"
+    ]
   },
   {
     "id": "b2c2-par-09",
@@ -7679,7 +8364,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-futcomp-composto-real"
+    ]
   },
   {
     "id": "b2c2-par-10",
@@ -7708,7 +8396,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b5-futcomp-composto-real"
+    ]
   },
   {
     "id": "b2c2-par-11",
@@ -7737,7 +8428,10 @@
       ],
       "correctIndex": 3,
       "explanationEs": "Con un plazo futuro y un recuento («três vezes»), el compuesto es el que hace el balance."
-    }
+    },
+    "__nuevos": [
+      "b5-futcomp-composto-real"
+    ]
   },
   {
     "id": "b2c2-par-12",
@@ -7766,7 +8460,10 @@
       ],
       "correctIndex": 0,
       "explanationEs": "Es una promesa, no un balance: futuro simple."
-    }
+    },
+    "__nuevos": [
+      "b5-futcomp-composto-real"
+    ]
   },
   {
     "id": "cl15-032",
@@ -7795,7 +8492,10 @@
         }
       ],
       "hintEs": "futuro de conjetura: no dice el futuro, dice «supongo que»"
-    }
+    },
+    "__nuevos": [
+      "b5-fut-suposicao"
+    ]
   },
   {
     "id": "cl15-033",
@@ -7824,7 +8524,10 @@
         }
       ],
       "hintEs": "futuro de conjetura, 3.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b5-fut-suposicao"
+    ]
   },
   {
     "id": "cl15-034",
@@ -7853,7 +8556,10 @@
         }
       ],
       "hintEs": "futuro de conjetura, 3.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b5-fut-suposicao"
+    ]
   },
   {
     "id": "cl15-035",
@@ -7882,7 +8588,10 @@
         }
       ],
       "hintEs": "futuro de conjetura, 3.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b5-fut-suposicao"
+    ]
   },
   {
     "id": "cl15-036",
@@ -7911,7 +8620,10 @@
         }
       ],
       "hintEs": "futuro de conjetura, 3.ª del plural"
-    }
+    },
+    "__nuevos": [
+      "b5-fut-suposicao"
+    ]
   },
   {
     "id": "cl15-037",
@@ -7940,7 +8652,10 @@
         }
       ],
       "hintEs": "futuro de conjetura, 3.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b5-fut-suposicao"
+    ]
   },
   {
     "id": "cl15-038",
@@ -7969,7 +8684,10 @@
         }
       ],
       "hintEs": "futuro de conjetura, 3.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b5-fut-suposicao"
+    ]
   },
   {
     "id": "cl15-039",
@@ -7998,7 +8716,10 @@
         }
       ],
       "hintEs": "futuro de conjetura, 3.ª del plural — supone, no anuncia"
-    }
+    },
+    "__nuevos": [
+      "b5-fut-suposicao"
+    ]
   },
   {
     "id": "cl16-001",
@@ -8027,7 +8748,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 1.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b5-se-irreal"
+    ]
   },
   {
     "id": "cl16-002",
@@ -8056,7 +8780,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 3.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b5-se-irreal"
+    ]
   },
   {
     "id": "cl16-003",
@@ -8085,7 +8812,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 1.ª del plural"
-    }
+    },
+    "__nuevos": [
+      "b5-se-irreal"
+    ]
   },
   {
     "id": "cl16-004",
@@ -8114,7 +8844,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 2.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b5-se-irreal"
+    ]
   },
   {
     "id": "cl16-005",
@@ -8143,7 +8876,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 3.ª del plural"
-    }
+    },
+    "__nuevos": [
+      "b5-se-irreal"
+    ]
   },
   {
     "id": "cl16-006",
@@ -8172,7 +8908,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 1.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b5-se-irreal"
+    ]
   },
   {
     "id": "cl16-007",
@@ -8201,7 +8940,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 3.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b5-se-irreal"
+    ]
   },
   {
     "id": "cl16-008",
@@ -8230,7 +8972,10 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 2.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b5-se-irreal"
+    ]
   },
   {
     "id": "cl16-024",
@@ -8259,7 +9004,10 @@
         }
       ],
       "hintEs": "condicional, 1.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b5-cond-hipotetico"
+    ]
   },
   {
     "id": "cl16-025",
@@ -8288,7 +9036,10 @@
         }
       ],
       "hintEs": "condicional, 1.ª del plural"
-    }
+    },
+    "__nuevos": [
+      "b5-cond-hipotetico"
+    ]
   },
   {
     "id": "cl16-026",
@@ -8317,7 +9068,10 @@
         }
       ],
       "hintEs": "condicional, 3.ª del plural — raíz irregular"
-    }
+    },
+    "__nuevos": [
+      "b5-cond-hipotetico"
+    ]
   },
   {
     "id": "cl16-027",
@@ -8346,7 +9100,10 @@
         }
       ],
       "hintEs": "condicional, 2.ª persona — raíz irregular"
-    }
+    },
+    "__nuevos": [
+      "b5-cond-hipotetico"
+    ]
   },
   {
     "id": "cl16-046",
@@ -8375,7 +9132,10 @@
         }
       ],
       "hintEs": "presente de «ir», 1.ª del plural — sin «a» delante del infinitivo"
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-formas"
+    ]
   },
   {
     "id": "cl16-047",
@@ -8404,7 +9164,10 @@
         }
       ],
       "hintEs": "presente de «ir», 2.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-formas"
+    ]
   },
   {
     "id": "cl16-048",
@@ -8433,7 +9196,10 @@
         }
       ],
       "hintEs": "presente de «ir», 3.ª del plural"
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-formas"
+    ]
   },
   {
     "id": "cl16-049",
@@ -8462,7 +9228,10 @@
         }
       ],
       "hintEs": "imperfeito de «ir», 1.ª persona"
-    }
+    },
+    "__nuevos": [
+      "b5-perifrastico-formas"
+    ]
   },
   {
     "id": "cl16-147",
@@ -8491,7 +9260,10 @@
         }
       ],
       "hintEs": "futuro composto, 1.ª del plural: «ter» en futuro + particípio"
-    }
+    },
+    "__nuevos": [
+      "b5-futcomp-composto-real"
+    ]
   },
   {
     "id": "cl16-148",
@@ -8520,7 +9292,10 @@
         }
       ],
       "hintEs": "futuro composto, 3.ª del plural: «ter» en futuro + particípio"
-    }
+    },
+    "__nuevos": [
+      "b5-futuro-composto"
+    ]
   },
   {
     "id": "cl16-149",
@@ -8549,7 +9324,10 @@
         }
       ],
       "hintEs": "condicional, 3.ª persona — la forma de cortesía"
-    }
+    },
+    "__nuevos": [
+      "b5-cond-cortesia"
+    ]
   },
   {
     "id": "cl19-015",
@@ -8578,7 +9356,10 @@
         }
       ],
       "hintEs": "futuro composto, 3.ª persona: «ter» en futuro + particípio"
-    }
+    },
+    "__nuevos": [
+      "b5-futcomp-composto-real"
+    ]
   },
   {
     "id": "tr20-021",
@@ -8603,7 +9384,10 @@
       "answer": "tiveres",
       "alternatives": [],
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b5-se-futuro-conj"
+    ]
   },
   {
     "id": "tr20-022",
@@ -8628,6 +9412,9 @@
       "answer": "vierem",
       "alternatives": [],
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b5-se-futuro-conj"
+    ]
   }
 ]

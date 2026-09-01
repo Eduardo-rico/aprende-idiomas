@@ -19,7 +19,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { BLOCKS, ALL_CONCEPTS } from '../lib/data/languages/pt/curriculum';
 import { BLOCKS_DIR } from './config';
-import { contarPuntos, padreCubierto, pisoCero, conPisoCero } from './lib/conceptos-finos';
+import { contarPuntos, pisoCero, conPisoCero, conPadreCubierto, servibleAlAlumno } from './lib/conceptos-finos';
 
 const LECTURAS = path.join(process.cwd(), 'lib/data/languages/pt/lecturas');
 
@@ -54,24 +54,29 @@ L.push({ eje: 'Lectura', medido: `${palabras.toLocaleString('es')} palabras · $
 // desaparecer ocho puntos del déficit en silencio.
 const items = fs.readdirSync(BLOCKS_DIR).filter((x) => /^b\d+\.json$/.test(x))
   .flatMap((f) => JSON.parse(fs.readFileSync(path.join(BLOCKS_DIR, f), 'utf8')) as any[]);
+// `contarPuntos` descuenta la cuarentena: un punto «cubierto» con ocho
+// ítems que el alumno no ve no está cubierto.
 const { cuenta: n } = contarPuntos(items);
+const servibles = items.filter(servibleAlAlumno);
 for (const c of ALL_CONCEPTS) if (!n.has(c.id)) n.set(c.id, 0);
 // El piso pasa por `conPisoCero`: el de un punto enterrado ES cero. Con
 // el piso crudo, este script decía 5 puntos bajo el piso mientras
 // `split-conceptos` decía 3 — dos cuentas de lo mismo que no coinciden es
 // exactamente el defecto que este gate existe para no repetir.
 const cero = pisoCero();
-const piso = conPisoCero((id: string) => (id.startsWith('b12') ? 6 : 8), cero);
-for (const id of [...n.keys()]) if (n.get(id)! < piso(id) && padreCubierto(id, n, piso)) n.set(id, piso(id));
+// Mismo piso que `split-conceptos.ts`: cero para los enterrados y cero
+// para los padres cubiertos. Los dos BAJAN el piso; ninguno sube la
+// cuenta, para que ni la foto ni este informe cuenten ítems inexistentes.
+const piso = conPadreCubierto(conPisoCero((id: string) => (id.startsWith('b12') ? 6 : 8), cero), n);
 const bajoPiso = [...n].filter(([id]) => n.get(id)! < piso(id));
 const falta = bajoPiso.reduce((a, [id, hay]) => a + piso(id) - hay, 0);
 
-L.push({ eje: 'Cobertura (piso 8, C2 6)', medido: `${n.size} puntos · ${items.length} ejercicios · ${bajoPiso.length} bajo el piso`,
+L.push({ eje: 'Cobertura (piso 8, C2 6)', medido: `${n.size} puntos · ${servibles.length} ejercicios servibles de ${items.length} · ${bajoPiso.length} bajo el piso`,
   meta: 'cero bajo el piso', pasa: bajoPiso.length === 0, comando: 'npx tsx scripts/split-conceptos.ts',
-  nota: `FALTA ${falta} unidades. Los ${cero.size} puntos de piso cero declarado NO cuentan, por decisión escrita en docs/plans/puntos-piso-cero.json. Ojo: «${items.length} ejercicios» no es la Σ de \`split-conceptos\` (3.182), que suma por PUNTO y un ejercicio puede enseñar varios.` });
+  nota: `FALTA ${falta} unidades. Los ${cero.size} puntos de piso cero declarado NO cuentan, por decisión escrita en docs/plans/puntos-piso-cero.json. Los ${items.length - servibles.length} restantes están en cuarentena y no se sirven ni cuentan. Y ojo: el recuento de ejercicios no es la Σ por PUNTO de \`split-conceptos\`, donde un ejercicio puede enseñar varios.` });
 
 // ── 3 · Mediación: TAREAS ────────────────────────────────────────────
-const tareas = items.filter((x) => x.type === 'mediation').length;
+const tareas = servibles.filter((x) => x.type === 'mediation').length;
 L.push({ eje: 'Mediación (tareas)', medido: `${tareas}`, meta: '230', pasa: tareas >= 230,
   comando: 'npx tsx scripts/recuento-conceptos.ts' });
 
