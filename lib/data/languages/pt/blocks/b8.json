@@ -3608,25 +3608,25 @@
     ],
     "contentHash": "83a9c448ebb3da977c094c4d5912472ad93f5d431625e20d6d3c925747f977ea",
     "esContrast": "Aquí 'se' es CONJUNCIÓN condicional, no pronome: requiere próclise.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
-      "sentence": "Se vos ___ (dar), consegue falar com ela?",
+      "sentence": "Se eles vos ___ (dar) a informação, consegues falar com ela?",
       "blanks": [
         {
           "position": 0,
           "answer": "derem",
-          "alternatives": [
-            "deres"
-          ]
+          "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "futuro do conjuntivo de «dar», 3.ª del plural — lo pide «se» sobre el futuro"
     },
     "variantOverrides": {
       "pt-br": {
         "sentence": "Se ___ (dar) tempo, consegue falar com ela?"
       }
-    }
+    },
+    "variantVerificacion": "calibración del triaje E2#29: corregido — la frase no significaba nada: «Se vos derem, consegue falar com ela?» no tiene sujeto ni objeto, y mezclaba el tratamiento «vos» con «consegue»"
   },
   {
     "id": "84eae918",
@@ -4482,23 +4482,25 @@
     ],
     "contentHash": "a02ffc72265442bdeb3d93bb2c2ec0e2ee3d2d2a4162d38b212a17e2eedbb397",
     "esContrast": "Condicional con mesóclise: dir-me-ia, dir-lhe-ia, dir-vos-ia.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
-      "sentence": "Dir-___ (eu)-a a verdade se pudesse.",
+      "sentence": "Dir-___-ia a verdade se pudesse.",
       "blanks": [
         {
           "position": 0,
           "answer": "lhe",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "a él/ella — el clítico va DENTRO del condicional, entre la raíz y la terminación"
     },
     "variantOverrides": {
       "pt-br": {
         "sentence": "Dir-___ (eu)-ia a verdade se pudesse."
       }
-    }
+    },
+    "variantVerificacion": "calibración del triaje E2#29: corregido — el molde estaba roto: «Dir-___ (eu)-a a verdade» ponía un pronombre de sujeto como si fuera lema y dejaba una «-a» suelta que no es terminación de nada"
   },
   {
     "id": "a12c3597",

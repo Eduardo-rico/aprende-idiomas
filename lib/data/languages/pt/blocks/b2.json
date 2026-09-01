@@ -877,17 +877,20 @@
     ],
     "contentHash": "2a43d82d50cd9dd59c70c962d7056b6e487a3e37c10c18edb889dd18937b5aaf",
     "esContrast": "Tener en portugués es 'ter', que se convierte en 'têm' con acento en la 3ª persona plural.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
-      "sentence": "As organizações têm ___ uma reunião importante.",
+      "sentence": "As organizações têm ___ marcar uma reunião importante.",
       "blanks": [
         {
           "position": 0,
           "answer": "de",
-          "alternatives": []
+          "alternatives": [
+            "que"
+          ]
         }
-      ]
+      ],
+      "hintEs": "la preposición de la obligación: «ter ___ + infinitivo», y la norma europea prefiere la primera"
     },
     "variantOverrides": {
       "pt-br": {
@@ -900,7 +903,8 @@
           }
         ]
       }
-    }
+    },
+    "variantVerificacion": "calibración del triaje E2#29: corregido — con la respuesta puesta la frase salía «têm de uma reunião», agramatical: faltaba el infinitivo que «ter de» rige"
   },
   {
     "id": "2cbec901",

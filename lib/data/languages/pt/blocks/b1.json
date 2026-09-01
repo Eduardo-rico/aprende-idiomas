@@ -4023,17 +4023,18 @@
     "contentHash": "f6ea6c52e63940bb7c6051c2eeabec5cd1e7176e3c83f6720bf950c6c2f765eb",
     "esContrast": "'à' es la contracción de la preposición 'a' + artículo 'a'; en español no se contrae: 'a la'.",
     "variantStatus": "neutral",
-    "variantVerificacion": "dictamen dirigido E2#28: corregido — el enunciado era circular: preguntaba por «a» dando «a» dos veces en la propia frase",
+    "variantVerificacion": "calibración del triaje E2#29: corregido — ERROR MÍO de hace una hora: al reescribir el enunciado cambié la frase y dejé la respuesta vieja («a»), así que la frase quedaba «com o a feminino». La calibración del triaje lo destapó",
     "type": "fill_blank",
     "data": {
       "sentence": "Na frase 'Vou à praia', o acento grave marca a contração da preposição «a» com o ___ feminino.",
       "blanks": [
         {
           "position": 0,
-          "answer": "a",
+          "answer": "artigo",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "la clase de palabra con la que se contrae la preposición: el ___ definido"
     }
   },
   {
