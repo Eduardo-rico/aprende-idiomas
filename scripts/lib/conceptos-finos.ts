@@ -592,3 +592,22 @@ export function pisoCero(): Map<string, string> {
   const d = JSON.parse(fs.readFileSync(f, 'utf8')) as Record<string, any>;
   return new Map(Object.entries(d).filter(([k]) => !k.startsWith('_')).map(([k, v]) => [k, String(v.motivo)]));
 }
+
+/** Envuelve una función de piso aplicándole los puntos de piso cero.
+ *
+ *  El piso de un punto enterrado ES cero — lo dice su nombre. La primera
+ *  implementación hacía otra cosa: dejaba el piso intacto y SUBÍA la
+ *  cuenta del punto hasta él (`cuenta.set(id, piso(id))`), que da el mismo
+ *  déficit sólo si el punto ya está en el mapa. Un punto con CERO ítems no
+ *  lo está — y ésa es exactamente la clase de punto que se entierra, así
+ *  que el ajuste era un no-op justo donde hacía falta: `b11-nominalizacao`
+ *  y `b11-pontuacao-sintatica` seguían sumando 16 unidades de déficit ya
+ *  decidido.
+ *
+ *  Además, subir la cuenta contamina la FOTO del déficit: el histórico se
+ *  guarda desde ese mismo mapa, así que la sesión siguiente habría leído
+ *  ocho ítems por punto que nadie escribió y los habría reconciliado como
+ *  ganancia. Bajar el piso no toca la cuenta y deja el libro limpio. */
+export function conPisoCero(piso: (id: string) => number, cero = pisoCero()): (id: string) => number {
+  return (id: string) => (cero.has(id) ? 0 : piso(id));
+}

@@ -16,7 +16,7 @@
 // de regência verbal viviendo bajo «pretérito perfeito irregular».
 import fs from 'node:fs';
 import path from 'node:path';
-import { PARTICIONES, TRANSVERSALES, contarPuntos, textoItem, padreCubierto, pisoCero } from './lib/conceptos-finos';
+import { PARTICIONES, TRANSVERSALES, contarPuntos, textoItem, padreCubierto, pisoCero, conPisoCero } from './lib/conceptos-finos';
 import { CONCEPTOS_FINOS } from '../lib/data/languages/pt/conceptos-finos.generated';
 import { ALL_CONCEPTS } from '../lib/data/languages/pt/curriculum';
 import { reconciliar, informe, type PorPunto } from './lib/reconciliar-deficit';
@@ -86,14 +86,16 @@ const nivelDe = (id: string): string => {
 // su cuenta es el residuo, no una carencia, y subirla exigiría escribir
 // ítems que no casen con ningún sub-punto. Se ajusta aquí, una sola vez,
 // para que todas las tablas de abajo vean lo mismo.
-const pisoId = (id: string) => pisoDe(nivelDe(id));
+const CERO = pisoCero();
+const pisoId = conPisoCero((id: string) => pisoDe(nivelDe(id)), CERO);
 const padresCubiertos = [...cuenta.keys()].filter((id) => cuenta.get(id)! < pisoId(id) && padreCubierto(id, cuenta, pisoId));
 for (const id of padresCubiertos) cuenta.set(id, pisoId(id));
 
-// Y los que tienen el piso bajado a cero POR DECISIÓN DECLARADA. Se
-// imprimen siempre: una resta silenciosa es cómo se maquilla un número.
-const CERO = pisoCero();
-for (const id of CERO.keys()) if (cuenta.has(id)) cuenta.set(id, pisoId(id));
+// Los del piso bajado a cero POR DECISIÓN DECLARADA ya salen de
+// `conPisoCero`, que baja el PISO en vez de subir la cuenta. Se imprimen
+// siempre: una resta silenciosa es cómo se maquilla un número — y una
+// NO-resta silenciosa engaña en la otra dirección, haciendo creer que
+// queda trabajo que ya se decidió que no existe.
 if (CERO.size) {
   console.log(`\n**${CERO.size} puntos con el piso a CERO por decisión declarada** (docs/plans/puntos-piso-cero.json):`);
   for (const [id, motivo] of CERO) console.log(`- \`${id}\`: ${motivo}`);
@@ -127,17 +129,22 @@ for (const n of NIVELES) {
   const ids = [...cuenta.keys()].filter((id) => nivelDe(id) === n);
   const vs = ids.map((id) => cuenta.get(id)!);
   const s = stats(vs);
-  const bajo = vs.filter((v) => v < pisoDe(n));
-  const faltan = bajo.reduce((a, v) => a + (pisoDe(n) - v), 0);
+  // Por ID, no por valor: el piso de un punto enterrado es 0 y eso sólo
+  // se sabe mirando cuál es. Con el piso del NIVEL, los dos enterrados
+  // seguían contando 8 cada uno en esta tabla y en la lista de abajo,
+  // aunque el total de la reconciliación ya no los contara.
+  const bajoIds = ids.filter((id) => cuenta.get(id)! < pisoId(id));
+  const bajo = bajoIds;
+  const faltan = bajoIds.reduce((a, id) => a + (pisoId(id) - cuenta.get(id)!), 0);
   console.log(`| ${n}    | ${String(ids.length).padStart(6)} | ${String(vs.reduce((a, b) => a + b, 0)).padStart(5)} | ${String(s.min).padStart(3)} | ${String(s.p50).padStart(7)} | ${String(s.max).padStart(3)} | ${String(bajo.length).padStart(9)} | ${String(faltan).padStart(19)} |`);
   tPuntos += ids.length; tItems += vs.reduce((a, b) => a + b, 0); tBajo += bajo.length; tFaltan += faltan;
 }
 console.log(`| **Σ** | ${String(tPuntos).padStart(6)} | ${String(tItems).padStart(5)} | | | | ${String(tBajo).padStart(9)} | ${String(tFaltan).padStart(19)} |`);
 
 console.log(`\nPuntos por debajo del piso (${tBajo}), con lo que le falta a cada uno y CON QUÉ FORMATO se examina:`);
-for (const [id, n] of [...cuenta.entries()].filter(([id2, v]) => v < pisoDe(nivelDe(id2))).sort((a, b) => a[1] - b[1])) {
+for (const [id, n] of [...cuenta.entries()].filter(([id2, v]) => v < pisoId(id2)).sort((a, b) => a[1] - b[1])) {
   const f = formatoDe(id);
-  const piso = pisoDe(nivelDe(id));
+  const piso = pisoId(id);
   console.log(`  ${String(n).padStart(3)}/${piso}  [${nivelDe(id)}] ${id.padEnd(34)} faltan ${String(piso - n).padStart(2)}  →  ${f.formato.padEnd(15)} (${f.clase}, ${f.confianza})`);
 }
 
@@ -154,7 +161,7 @@ const porFormato = new Map<string, { total: number; deficit: number; medidos: nu
 for (const [id, n] of cuenta) {
   const f = formatoDe(id);
   const o = porFormato.get(f.formato) ?? { total: 0, deficit: 0, medidos: 0, defecto: 0 };
-  o.total++; o.deficit += Math.max(0, pisoDe(nivelDe(id)) - n);
+  o.total++; o.deficit += Math.max(0, pisoId(id) - n);
   if (f.confianza === 'medido') o.medidos++;
   if (f.confianza === 'defecto') o.defecto++;
   porFormato.set(f.formato, o);
@@ -173,7 +180,7 @@ console.log('| punto | nivel | tiene | falta | formato | por qué |');
 console.log('|---|---|---:|---:|---|---|');
 for (const [id, n] of [...cuenta].filter(([id]) => ['C1', 'C2'].includes(nivelDe(id))).sort()) {
   const f = formatoDe(id);
-  console.log(`| \`${id}\` | ${nivelDe(id)} | ${n} | ${Math.max(0, pisoDe(nivelDe(id)) - n)} | **${f.formato}** | ${f.motivo} |`);
+  console.log(`| \`${id}\` | ${nivelDe(id)} | ${n} | ${Math.max(0, pisoId(id) - n)} | **${f.formato}** | ${f.motivo} |`);
 }
 
 
@@ -215,7 +222,11 @@ for (const n of NIVELES) {
   const ids = [...cuenta.keys()].filter((id) => nivelDe(id) === n);
   const vs = ids.map((id) => cuenta.get(id)!);
   const piso = pisoDe(n);
-  const deficit = vs.filter((v) => v < piso).reduce((a, v) => a + (piso - v), 0);
+  // El déficit de los EMPEZADOS va por id, para que los puntos enterrados
+  // valgan 0 aquí igual que en la reconciliación. Con el piso del nivel,
+  // esta tabla decía FALTA 40 mientras la reconciliación decía 24, y las
+  // dos son la misma cuenta.
+  const deficit = ids.filter((id) => cuenta.get(id)! < pisoId(id)).reduce((a, id) => a + (pisoId(id) - cuenta.get(id)!), 0);
   const pc = PUNTOS_CURRICULO[n] ?? 0;
   // `ids` ya son los DECLARADOS del nivel (los ceros incluidos), así que
   // esto cuenta sólo lo que falta por declarar.
@@ -242,7 +253,11 @@ const historico: { fecha: string; nota?: string; porPunto: PorPunto }[] =
 console.log('\n');
 if (historico.length) {
   const ultima = historico[historico.length - 1]!;
-  const r = reconciliar(ultima.porPunto, porPuntoAhora, (id) => pisoDe(nivelDe(id)));
+  // Con `pisoId`, no con el piso crudo: las dos fotos tienen que medirse
+  // con el MISMO piso o el residuo miente. Si una sesión entierra un punto
+  // y la reconciliación sigue pidiéndole 8, la bajada aparece como déficit
+  // sin explicar.
+  const r = reconciliar(ultima.porPunto, porPuntoAhora, pisoId);
   console.log(informe(r, '8, C2 6'));
   console.log(`\n(foto anterior: ${ultima.fecha}${ultima.nota ? ' — ' + ultima.nota : ''})`);
   if (r.residuo !== 0) {

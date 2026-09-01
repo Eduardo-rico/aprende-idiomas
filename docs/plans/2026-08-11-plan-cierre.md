@@ -848,23 +848,38 @@ opciones no hay glosa que consultar, hay que PRODUCIR la forma.
 (24 + 24 + 25 + 21), sobre los 19 puntos de la clase `trampa` que el
 juicio dejó huérfanos en E2#20 más los que ya arrastraban déficit.
 
-**Reconciliación: déficit 137 → 40. Residuo 0.**
+**Reconciliación: déficit 121 → 24. Residuo 0.**
 
-Las 40 que quedan son 5 puntos, y ninguno es trabajo de escritura:
+Las 24 que quedan son 3 puntos, y ninguno es trabajo de escritura:
 
 | punto | falta | por qué no se escribe |
 |---|---:|---|
 | `b1-reducao-vocalica` | 8 | `escucha`, parado esperando el oído de Edu |
 | `b1-sandi` | 8 | idem |
 | `b1-ei-lisboeta` | 8 | idem |
-| `b11-nominalizacao` | 8 | piso cero declarado en E2#20 |
-| `b11-pontuacao-sintatica` | 8 | piso cero declarado |
 
-Las dos cifras del cierre no son intercambiables, como siempre: **40** es
-lo que cuenta el currículo contra el piso; **24** es lo que queda por
-producir, porque `hueco.ts` descuenta los dos puntos de piso cero
-declarado y ésos no son trabajo pendiente. Quien lea una y diga la otra
-se equivoca en 16.
+**Estas cifras se corrigieron dentro de la sesión, y la corrección la
+encontró el par.** Se reportó primero «137 → 40», que era lo que
+imprimían las tablas — y era un bug: `pisoCero()` se aplicaba subiendo la
+cuenta del punto hasta su piso, guardado tras `if (cuenta.has(id))`. **Un
+punto con cero ítems no está en el mapa, y ésa es exactamente la clase de
+punto que se entierra**, así que el ajuste era un no-op justo donde hacía
+falta y `b11-nominalizacao` y `b11-pontuacao-sintatica` seguían sumando 16
+unidades de déficit ya decidido.
+
+El comentario de la línea de encima decía «una resta silenciosa es cómo se
+maquilla un número». Lo que había era una **no-resta** silenciosa, que
+engaña en la otra dirección: hace creer que queda trabajo que ya se
+decidió que no existe.
+
+Arreglado bajando el PISO en vez de subiendo la cuenta (`conPisoCero`).
+No es equivalente: la foto del déficit se guarda desde ese mismo mapa, así
+que subir la cuenta habría escrito ocho ítems por punto que nadie escribió
+y la sesión siguiente los habría reconciliado como ganancia. Siete tests
+lo fijan, uno reproduciendo el mecanismo viejo. Las cuatro tablas que
+imprimían el número —niveles, lista de bajo-piso, reparto por formato y
+FALTA— usaban el piso del NIVEL y ahora usan el del PUNTO; antes decían 40
+mientras la reconciliación decía 24, y son la misma cuenta.
 
 ### El defecto que encontró el par, y por qué no se arregló donde apuntaba
 
@@ -929,3 +944,22 @@ queda **declarado sin cubrir en este formato** en vez de rellenado.
   nota es el posicional de detrás de `--registrar`. Ahora se aceptan las
   dos formas, porque una foto sin nota deja a la sesión siguiente
   reconciliando a ciegas.
+
+### Gate E5, preparado
+
+`scripts/gate-e5.ts` ejecuta la checklist de TERMINADO en vez de
+recorrerla: cada línea sale con su cifra medida, su meta y el comando que
+la produce, y **lo que el script no puede medir se imprime igual,
+marcado**, porque una checklist con líneas invisibles se declara
+terminada sin estarlo. Sale con código 1 si alguna medible falla, para que
+«E5 verde» no pueda ser una frase.
+
+Hoy: lectura **3.219.799 palabras** (meta 1.900.000) ✅ y mediación-tarea
+**347** (meta 230) ✅; fallan cobertura (3 puntos bajo el piso, los tres de
+`escucha`), lecciones de b11 (**5**, la meta son 6-8) y triaje (**2.682
+unchecked · 381 needs-human/divergent**). Las tres últimas no son
+sorpresas: son el pendiente que la memoria ya lleva.
+
+El script destapó de paso que **la checklist escrita sigue diciendo piso
+12** cuando Edu lo bajó a 8 (C2 6) en E2#15. Se imprime la discrepancia en
+vez de elegir en silencio.
