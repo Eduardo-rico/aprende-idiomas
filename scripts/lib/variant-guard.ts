@@ -168,7 +168,13 @@ export const MARCADORES: Marcador[] = [
   { re: b('moletom|moletons'), nombre: 'moletom', europeo: 'camisola (com capuz)', severidad: 'error' },
   { re: b('card[áa]pio[s]?'), nombre: 'cardápio', europeo: 'ementa', severidad: 'error' },
   { re: b('todo mundo'), nombre: 'todo mundo', europeo: 'toda a gente', severidad: 'error' },
-  { re: b('beb[êe]s?'), nombre: 'bebê', europeo: 'bebé', severidad: 'error' },
+  // Sólo las formas ACENTUADAS. La tolerancia al sin-acento —que otros
+  // marcadores llevan para cazar erratas— aquí es ruido puro: «bebe» y
+  // «bebes» son el presente y el imperativo de *beber*, de las palabras
+  // más corrientes del idioma. Marcaba `cl16-042`, «___ (beber) um pouco
+  // de água», que no tiene nada de brasileño. Y el acento es justo lo que
+  // separa las dos variantes: tolerarlo borra el rasgo examinado.
+  { re: b('bebês?'), nombre: 'bebê', europeo: 'bebé', severidad: 'error' },
   { re: b('cad[êe]'), nombre: 'cadê', europeo: 'onde está', severidad: 'error' },
   { re: b('mam[ãa]e|papai'), nombre: 'mamãe/papai', europeo: 'mamã/papá', severidad: 'error' },
   { re: b('sobrenome[s]?'), nombre: 'sobrenome', europeo: 'apelido', severidad: 'error' },
