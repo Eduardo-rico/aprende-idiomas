@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { Exercise } from "@/lib/exercise-resolver";
 import { resolveExerciseData } from "@/lib/exercise-resolver";
 import { useSettings } from "@/lib/stores/settings";
-import { answersMatchFinal } from "@/lib/exercises/normalize";
+import { answersMatchCard } from "@/lib/exercises/normalize";
 
 interface Props { ex: Exercise; onSubmit: (answer: string, correct: boolean) => void; }
 
@@ -20,8 +20,8 @@ const aciertaHueco = (b: { answer: string; alternatives?: string[] }, valor: str
   // recorte de la CLAVE: un acento descompuesto o un espacio sobrante en
   // el JSON suspendían a quien había acertado. Es el mismo agujero que
   // `TranslationCard` tenía en 560 ítems.
-  answersMatchFinal(valor, b.answer) ||
-  (b.alternatives ?? []).some((a) => answersMatchFinal(valor, a));
+  answersMatchCard(valor, b.answer) ||
+  (b.alternatives ?? []).some((a) => answersMatchCard(valor, a));
 
 /** El ancho del input es CONSTANTE a propósito. Estaba calculado sobre
  *  `answer.length`, así que la caja se ensanchaba con la respuesta y

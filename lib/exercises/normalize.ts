@@ -30,3 +30,36 @@ export function answersMatchFinal(a: string, b: string): boolean {
   const quita = (s: string) => (s.endsWith(signo) ? s.slice(0, -signo.length).trimEnd() : s);
   return quita(A) === quita(B);
 }
+
+/** La coma ante una conjunción adversativa: opcional al comparar.
+ *
+ *  En «Portugal é um país pequeno mas variado» la coma ante «mas» es
+ *  admisible —y en el período largo, normativa—, así que quien corrige o
+ *  traduce BIEN lo que el ítem examina puede caer por una coma que nadie
+ *  juzga. Es la misma familia que el punto final: puntuación que no es el
+ *  punto y que sin embargo decide el acierto, metiendo un fallo falso en
+ *  el FSRS.
+ *
+ *  No colisiona con ningún contenido: el único punto de puntuación del
+ *  currículo, `b11-pontuacao-sintatica`, está declarado piso cero, y su
+ *  descripción cubre la coma entre sujeto y verbo, la explicativa y los
+ *  dos puntos — nunca ésta.
+ *
+ *  Exige espacio DESPUÉS del conector, así que la parentética «Ele,
+ *  porém, não veio» no entra: ahí las dos comas son un par y quitar una
+ *  sola sí cambia la frase. */
+const COMA_ADVERSATIVA = /,(\s+(?:mas|porém|contudo|todavia)\s)/gi;
+const sinComaAdversativa = (s: string) => s.replace(COMA_ADVERSATIVA, '$1');
+
+/** El criterio COMPLETO con el que una tarjeta acepta una respuesta
+ *  escrita: `answersMatchFinal` más la coma de la adversativa.
+ *
+ *  Existe como función aparte para que el nombre no mienta —
+ *  `answersMatchFinal` sigue significando exactamente lo que dice y se
+ *  compone aquí— y para que los gates de producción puedan importar EL
+ *  MISMO criterio en vez de copiarlo: una alternativa declarada a mano
+ *  sólo hace falta cuando esta función diría que no. */
+export function answersMatchCard(a: string, b: string): boolean {
+  if (answersMatchFinal(a, b)) return true;
+  return answersMatchFinal(sinComaAdversativa(a), sinComaAdversativa(b));
+}

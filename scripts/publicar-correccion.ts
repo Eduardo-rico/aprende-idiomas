@@ -13,8 +13,10 @@ import { BLOCKS_DIR } from './config';
 import { verificar, preflight, type ItemCorreccion } from './lib/correccion';
 import { ITEMS as A } from './lotes/corr-e2-21a';
 import { ITEMS as B } from './lotes/corr-e2-21b';
+import { ITEMS as C } from './lotes/corr-e2-21c';
+import { ITEMS as D } from './lotes/corr-e2-21d';
 
-const LOTES: Record<string, ItemCorreccion[]> = { 'e2-21a': A, 'e2-21b': B };
+const LOTES: Record<string, ItemCorreccion[]> = { 'e2-21a': A, 'e2-21b': B, 'e2-21c': C, 'e2-21d': D };
 
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
 const lote = arg('--lote') ?? '';
@@ -23,6 +25,18 @@ if (!ITEMS) { console.error(`Usa --lote con uno de: ${Object.keys(LOTES).join(',
 const write = process.argv.includes('--write');
 
 const CONCEPTO = new Map(ALL_CONCEPTS.map((c) => [c.id, c]));
+
+// Los puntos `reg-verbal-*` se generaron con blockId 3 y sin prereqs, y
+// b3 no tiene ninguna lección de regencia: los siete ítems caían enteros
+// en «presente regular», que no enseña nada de esto. Su casa está
+// declarada en el currículo — `b11-l2-regencias-que-traem`, cuya
+// descripción nombra «apaixonar-se por» literalmente—, sólo que en otro
+// bloque, y la búsqueda no cruza bloques. Se encamina aquí, a la vista,
+// en vez de dejar que el defecto silencioso decida.
+const CASA: Record<string, string> = {
+  'reg-verbal-por-para': 'b11-l2-regencias-que-traem',
+  'reg-verbal-zero': 'b11-l2-regencias-que-traem',
+};
 const problemas = [...verificar(ITEMS)];
 const porDefecto: string[] = [];
 const yaEnCorpus = new Map<string, string>();
@@ -39,12 +53,17 @@ ITEMS.forEach((x, i) => {
   const id = `co${lote.replace('e2-', '')}-${String(i + 1).padStart(3, '0')}`;
   const c = CONCEPTO.get(x.p);
   if (!c) { problemas.push(`${id}: el punto «${x.p}» no existe`); return; }
-  const bloque = BLOCKS.find((b) => b.id === (c as any).blockId);
+  const casa = CASA[x.p];
+  const bloque = casa
+    ? BLOCKS.find((b) => b.lessons.some((l) => l.id === casa))
+    : BLOCKS.find((b) => b.id === (c as any).blockId);
   if (!bloque) { problemas.push(`${id}: bloque inexistente`); return; }
   const padres = new Set<string>([x.p, ...(((c as any).prereqs ?? []) as string[])]);
-  const leccion = bloque.lessons.find((l) => (l.conceptIds ?? []).some((k: string) => padres.has(k))) ?? bloque.lessons[0];
+  const leccion = casa
+    ? bloque.lessons.find((l) => l.id === casa)
+    : bloque.lessons.find((l) => (l.conceptIds ?? []).some((k: string) => padres.has(k))) ?? bloque.lessons[0];
   if (!leccion) { problemas.push(`${id}: bloque sin lecciones`); return; }
-  if (!(leccion.conceptIds ?? []).some((k: string) => padres.has(k))) porDefecto.push(`${id} (${x.p}) → ${leccion.id}`);
+  if (!casa && !(leccion.conceptIds ?? []).some((k: string) => padres.has(k))) porDefecto.push(`${id} (${x.p}) → ${leccion.id}`);
 
   const clave = x.mala.toLowerCase().replace(/\s+/g, ' ').trim();
   if (yaEnCorpus.has(clave)) problemas.push(`${id}: la frase ya está publicada en ${yaEnCorpus.get(clave)}`);

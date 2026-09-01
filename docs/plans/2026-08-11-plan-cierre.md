@@ -837,3 +837,95 @@ opciones no hay glosa que consultar, hay que PRODUCIR la forma.
 |---|---:|---|
 | corrección | 97 | formato existente, sin producir |
 | escucha | 24 | bloqueado en una voz que nadie ha validado a oído |
+
+---
+
+## E2#21 — corrección a cero (94 unidades) y la coma que suspendía a quien acertaba
+
+### Lo producido
+
+94 unidades de `error_correction` en cuatro pasadas de tamaño de lote
+(24 + 24 + 25 + 21), sobre los 19 puntos de la clase `trampa` que el
+juicio dejó huérfanos en E2#20 más los que ya arrastraban déficit.
+
+**Reconciliación: déficit 137 → 40. Residuo 0.**
+
+Las 40 que quedan son 5 puntos, y ninguno es trabajo de escritura:
+
+| punto | falta | por qué no se escribe |
+|---|---:|---|
+| `b1-reducao-vocalica` | 8 | `escucha`, parado esperando el oído de Edu |
+| `b1-sandi` | 8 | idem |
+| `b1-ei-lisboeta` | 8 | idem |
+| `b11-nominalizacao` | 8 | piso cero declarado en E2#20 |
+| `b11-pontuacao-sintatica` | 8 | piso cero declarado |
+
+Las dos cifras del cierre no son intercambiables, como siempre: **40** es
+lo que cuenta el currículo contra el piso; **24** es lo que queda por
+producir, porque `hueco.ts` descuenta los dos puntos de piso cero
+declarado y ésos no son trabajo pendiente. Quien lea una y diga la otra
+se equivoca en 16.
+
+### El defecto que encontró el par, y por qué no se arregló donde apuntaba
+
+La clave de `co21a-024` era «Portugal é um país pequeno mas variado.»
+Quien escribiera «…pequeno, mas variado.» había corregido el artículo
+—que es lo que el ítem enseña— y la tarjeta lo suspendía por una coma que
+no juzga nadie. Es la familia del punto final de E2#19: puntuación que no
+es el punto y que sin embargo decide el acierto, metiendo un fallo falso
+en el FSRS.
+
+El arreglo pedido era declarar la variante en `alternatives`. Al barrer
+el corpus entero aparecieron **26 claves con adversativa sin variante
+declarada** (13 ítems y sus overrides de variante), casi todas de
+`translation` y de lotes anteriores. Declararlas a mano son trece copias
+de una regla, y la copia número catorce es la que nadie añade — que es
+exactamente el defecto que ya costó `saissem` y el acento de «nós».
+
+Así que se arregló en la comparación: **`answersMatchCard`**, que compone
+`answersMatchFinal` con la coma opcional ante `mas`/`porém`/`contudo`/
+`todavia`. Se comprobó antes que no pisa contenido: el único punto de
+puntuación del currículo, `b11-pontuacao-sintatica`, está a piso cero, y
+ninguno de los 13 ítems toca un punto de puntuación. Exige espacio detrás
+del conector, así que la parentética «Ele, porém, não veio» no entra.
+
+El gate de producción **importa esa misma función** en vez de copiarla, y
+con eso se contesta solo: al arreglar la raíz, las dos alternativas que se
+habían declarado a mano quedaron marcadas como «ya la acepta la tarjeta —
+no añade nada», y se retiraron. Un gate que copia el criterio de la
+tarjeta habría seguido pidiéndolas para siempre.
+
+### `b3-exist-ter-br`: lo que no se escribió, y por qué
+
+Es el único de los seis puntos finales donde el error no nace del español,
+y el existencial puro falla las dos condiciones a la vez:
+
+1. **No es lo que un hispanohablante produce.** «Tem muita gente na
+   praia» sale de la exposición al brasileño, no del calco: el español no
+   tiene «tener» existencial.
+2. **Es espejo del español.** El español pone «hay» justo donde el
+   portugués europeo pone «há», así que traducir entrega la corrección
+   entera — el atajo que mató al juicio, entrando por la otra puerta.
+
+Hay un sub-dominio limpio: el «tem» **temporal**. «Tem dois anos que moro
+aqui» se corrige con «Há dois anos», y ahí el español no ayuda, porque da
+«hace» → «faz», que es igual de brasileño. Las tres lenguas se separan en
+tres direcciones. Los cinco ítems del punto viven ahí; el existencial puro
+queda **declarado sin cubrir en este formato** en vez de rellenado.
+
+### Otros tres arreglos que salieron del preflight
+
+- **Siete ítems de regencia caían en «presente regular»** por defecto de
+  bloque: los puntos `reg-verbal-*` se generaron con `blockId 3` y sin
+  prereqs, y b3 no tiene lección de regencia. Su casa estaba declarada en
+  el currículo —`b11-l2-regencias-que-traem`, cuya descripción nombra
+  «apaixonar-se por»—, sólo que en otro bloque, y la búsqueda no cruza
+  bloques. Se encamina explícitamente.
+- **Tres marcos exigían más que el punto**: «Fui a casa dos meus tios»
+  ponía en juego la crase, `traduzir para (o) português` el artículo, y un
+  ítem de `reg-verbal-zero` obligaba además a mover el clítico. Los tres
+  se reescribieron o declararon la alternativa.
+- **`--nota` se perdía en silencio** al registrar la foto del déficit: la
+  nota es el posicional de detrás de `--registrar`. Ahora se aceptan las
+  dos formas, porque una foto sin nota deja a la sesión siguiente
+  reconciliando a ciegas.

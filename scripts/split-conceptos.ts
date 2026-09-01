@@ -255,7 +255,12 @@ if (historico.length) {
 }
 
 if (process.argv.includes('--registrar')) {
-  const nota = process.argv[process.argv.indexOf('--registrar') + 1];
+  // La nota es el POSICIONAL de detrás de `--registrar`, pero es natural
+  // escribir `--nota "..."` y entonces se pierde en silencio: la foto
+  // queda sin explicación y la sesión siguiente reconcilia a ciegas. Se
+  // aceptan las dos formas.
+  const iN = process.argv.indexOf('--nota');
+  const nota = iN >= 0 ? process.argv[iN + 1] : process.argv[process.argv.indexOf('--registrar') + 1];
   historico.push({ fecha: new Date().toISOString().slice(0, 10), nota: nota && !nota.startsWith('--') ? nota : undefined, porPunto: porPuntoAhora });
   fs.writeFileSync(HIST, JSON.stringify(historico, null, 1) + '\n');
   console.log(`\nFoto registrada en ${path.relative(process.cwd(), HIST)} (${historico.length} en el histórico).`);

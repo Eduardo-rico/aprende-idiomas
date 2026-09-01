@@ -22,6 +22,12 @@
 // Aquí debería estar muerto por construcción, porque no hay nada que
 // elegir. Se mide igual: es exactamente el tipo de afirmación cómoda que
 // acaba de costar cuatro sesiones.
+// El criterio de «esta alternativa ya la acepta la tarjeta» es el de la
+// TARJETA, importado, no una copia. Una copia se desincroniza: cuando
+// `answersMatchFinal` hizo opcional el punto final, un gate con su propia
+// normalización habría seguido pidiendo alternativas que ya sobraban.
+import { answersMatchCard } from '@/lib/exercises/normalize';
+
 export interface ItemCorreccion {
   p: string;
   pasada: number;
@@ -99,8 +105,18 @@ export function verificar(items: ItemCorreccion[]): string[] {
     if (norm(x.explicacion).includes(norm(x.buena)) && palabras(x.explicacion).length < palabras(x.buena).length + 6)
       v.push(`${id}: la explicación es poco más que la frase buena repetida`);
 
+    // La coma de la adversativa NO se declara ítem a ítem. Hubo aquí un
+    // gate que la exigía en `alt`; se retiró al arreglarla en la raíz
+    // (`answersMatchCard`), porque exigir una alternativa que la tarjeta
+    // ya acepta es pedir trece copias de una regla — y la copia número
+    // catorce es la que nadie añade.
     for (const a of x.alt ?? []) {
-      if (norm(a) === norm(x.buena)) v.push(`${id}: la alternativa «${a}» es la respuesta`);
+      // Redundante = LA TARJETA YA LA ACEPTARÍA. Con `norm` —que borra la
+      // puntuación— una variante de coma parecía idéntica a la clave y el
+      // gate la rechazaba, cuando es justo la que hay que declarar:
+      // `normalizeAnswer` NO quita comas, así que sin declararla la
+      // tarjeta suspende a quien corrigió bien.
+      if (answersMatchCard(a, x.buena)) v.push(`${id}: la alternativa «${a}» ya la acepta la tarjeta — no añade nada`);
       if (norm(a) === norm(x.mala)) v.push(`${id}: la alternativa «${a}» es la frase mala`);
     }
 

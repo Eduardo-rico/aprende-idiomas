@@ -5687,5 +5687,182 @@
       "hintEs": "el «é que» de relieve arrastra el pronombre",
       "espejoEs": false
     }
+  },
+  {
+    "id": "co21d-011",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [
+      "reg-verbal-por-para"
+    ],
+    "tags": [
+      "e2-21d",
+      "correccion"
+    ],
+    "contentHash": "17a6dfab86384740f67469172a9ef0d5f584795f189780bdaef76d794d5f5d4c",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21D: la frase mala es el calco de «Mi hermano se enamoró de la vecina.». El gate de variante MUERDE por diseño (preposición calcada del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "O meu irmão apaixonou-se da vizinha.",
+      "correct": "O meu irmão apaixonou-se pela vizinha.",
+      "alternatives": [],
+      "calcoEs": "Mi hermano se enamoró de la vecina.",
+      "explanationEs": "El portugués rige «apaixonar-se POR», y «por + a» se contrae en «pela». El «de» viene del español."
+    }
+  },
+  {
+    "id": "co21d-012",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [
+      "reg-verbal-por-para"
+    ],
+    "tags": [
+      "e2-21d",
+      "correccion"
+    ],
+    "contentHash": "0ce651f5b076c46e5e4e04fe8577b67985f2db1706f36fb050c758ba8f5c921c",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21D: la frase mala es el calco de «El bebé miraba a la madre con atención.». El gate de variante MUERDE por diseño (preposición ausente por calco) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "O bebé olhava a mãe com atenção.",
+      "correct": "O bebé olhava para a mãe com atenção.",
+      "alternatives": [],
+      "calcoEs": "El bebé miraba a la madre con atención.",
+      "explanationEs": "«Olhar» pide «para» cuando hay alguien o algo a quien se mira. Sin preposición, el español suena natural y el portugués queda cojo."
+    }
+  },
+  {
+    "id": "co21d-013",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [
+      "reg-verbal-por-para"
+    ],
+    "tags": [
+      "e2-21d",
+      "correccion"
+    ],
+    "contentHash": "1ce58e9a036f58c30f1f14a4259061ca660b2404ea0404d95608f92e2c6bf30c",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21D: la frase mala es el calco de «La ventana de la cocina da al jardín.». El gate de variante MUERDE por diseño (preposición calcada del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "A janela da cozinha dá ao jardim.",
+      "correct": "A janela da cozinha dá para o jardim.",
+      "alternatives": [],
+      "calcoEs": "La ventana de la cocina da al jardín.",
+      "explanationEs": "«Dar para» es la regencia fija de la orientación de un vano. El «a» del español no vale aquí."
+    }
+  },
+  {
+    "id": "co21d-014",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [
+      "reg-verbal-por-para"
+    ],
+    "tags": [
+      "e2-21d",
+      "correccion"
+    ],
+    "contentHash": "de82b1cae03b2b5221b0e03280a31fbe126bc231779e92d1776ad857499eda42",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21D: la frase mala es el calco de «Tradujo el libro al portugués.». El gate de variante MUERDE por diseño (preposición y artículo calcados del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Traduziu o livro ao português.",
+      "correct": "Traduziu o livro para português.",
+      "alternatives": [
+        "Traduziu o livro para o português."
+      ],
+      "calcoEs": "Tradujo el libro al portugués.",
+      "explanationEs": "La lengua de llegada va con «para», no con «a»: el español contrae «a + el» y de ahí sale el error. Lo normal es dejarla sin artículo —«para português», «para francês»—, pero con artículo también corre."
+    }
+  },
+  {
+    "id": "co21d-015",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [
+      "reg-verbal-por-para"
+    ],
+    "tags": [
+      "e2-21d",
+      "correccion"
+    ],
+    "contentHash": "55e7962206d18b5f8bc9e8876080086bf685dad4a3eb063e70bd16bebaccf352",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21D: la frase mala es el calco de «Me voy a casa, que ya es tarde y quiero acostarme.». El gate de variante MUERDE por diseño (preposición calcada del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Vou a casa, que já é tarde e quero deitar-me.",
+      "correct": "Vou para casa, que já é tarde e quero deitar-me.",
+      "alternatives": [],
+      "calcoEs": "Me voy a casa, que ya es tarde y quiero acostarme.",
+      "explanationEs": "El portugués distingue con la preposición lo que el español deja al contexto: «ir a» es ida y vuelta breve, «ir para» es quedarse. Quien se acuesta va «para» casa."
+    }
+  },
+  {
+    "id": "co21d-020",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [
+      "reg-verbal-zero"
+    ],
+    "tags": [
+      "e2-21d",
+      "correccion"
+    ],
+    "contentHash": "fb69e767226724c63e426041d4ea32c55cdc83f12d131cbe1974b86826b429a5",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21D: la frase mala es el calco de «Voy a buscar el pan a la panadería.». El gate de variante MUERDE por diseño (preposición espuria del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Vou a buscar o pão à padaria.",
+      "correct": "Vou buscar o pão à padaria.",
+      "alternatives": [],
+      "calcoEs": "Voy a buscar el pan a la panadería.",
+      "explanationEs": "«Ir buscar» va sin preposición. El «a» del español se cuela porque allí es obligatorio, y aquí convierte la perífrasis en otra cosa."
+    }
+  },
+  {
+    "id": "co21d-021",
+    "blockId": 11,
+    "lessonId": "b11-l2-regencias-que-traem",
+    "difficulty": 2,
+    "concepts": [
+      "reg-verbal-zero"
+    ],
+    "tags": [
+      "e2-21d",
+      "correccion"
+    ],
+    "contentHash": "6f0c046e60ffd26ff464a9a9d7c9ee23df6a101a89a5a89fcb13c142e8e27312",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21D: la frase mala es el calco de «Traté de explicarle todo con calma.». El gate de variante MUERDE por diseño (preposición espuria del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Tentei de explicar tudo com calma.",
+      "correct": "Tentei explicar tudo com calma.",
+      "alternatives": [],
+      "calcoEs": "Traté de explicarle todo con calma.",
+      "explanationEs": "«Tentar» rige infinitivo sin preposición: el «de» sale de «tratar de», donde el español sí lo pide."
+    }
   }
 ]

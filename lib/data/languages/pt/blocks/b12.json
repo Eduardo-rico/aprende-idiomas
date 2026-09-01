@@ -3484,5 +3484,158 @@
       "hintEs": "femenino",
       "espejoEs": false
     }
+  },
+  {
+    "id": "co21c-008",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 2,
+    "concepts": [
+      "b12-borde-gramaticalidad"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "03726a99eb1af21fd389b37a989a802aee80d6f559e65371c0bfe525bc94b790",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Voy a hablar con él mañana.». El gate de variante MUERDE por diseño (preposición espuria calcada) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Vou a falar com ele amanhã.",
+      "correct": "Vou falar com ele amanhã.",
+      "alternatives": [],
+      "calcoEs": "Voy a hablar con él mañana.",
+      "explanationEs": "La perífrasis de futuro no lleva preposición en portugués: «vou falar». El español la exige y el calco la trae puesta."
+    }
+  },
+  {
+    "id": "co21c-009",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 2,
+    "concepts": [
+      "b12-borde-gramaticalidad"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "b9bbf6abac7676b3b109cd34835cad08975c0204c486ae0f5055858d57ccf5a2",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Ella me dijo de que no venía.». El gate de variante MUERDE por diseño (dequeísmo trasladado) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ela disse-me de que não vinha.",
+      "correct": "Ela disse-me que não vinha.",
+      "alternatives": [],
+      "calcoEs": "Ella me dijo de que no venía.",
+      "explanationEs": "El «de» sobra: «dizer que», sin preposición. El error existe también en español —es el dequeísmo— pero en portugués no tiene ni la coartada del habla descuidada."
+    }
+  },
+  {
+    "id": "co21c-010",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 2,
+    "concepts": [
+      "b12-borde-gramaticalidad"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "89929300fe1e6fba0b2872fa824f494fc861e521e530eae1e973b2b0326cfb8e",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Todos los alumnos que estudiaron aprobaron el examen, pero algunos no estudió.». El gate de variante MUERDE por diseño (concordancia con indefinido) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Todos os alunos que estudaram passaram no exame, mas alguns não estudou.",
+      "correct": "Todos os alunos que estudaram passaram no exame, mas alguns não estudaram.",
+      "calcoEs": "Todos los alumnos que estudiaron aprobaron el examen, pero algunos no estudió.",
+      "explanationEs": "El sujeto «alguns» es plural y arrastra el verbo. El error nace de tratar el indefinido como singular, que es lo que el español permite en algunos giros y el portugués no."
+    }
+  },
+  {
+    "id": "co21c-011",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 2,
+    "concepts": [
+      "b12-borde-gramaticalidad"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "cc878b10886c333fc4da3687a907f68af332c255782f9f249de64d4a9f81043d",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Fue él quien me dijo eso a mí.». El gate de variante MUERDE por diseño (relativo calcado del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Foi ele quem me disse isso a mim.",
+      "correct": "Foi ele que me disse isso a mim.",
+      "alternatives": [
+        "Foi ele quem mo disse a mim."
+      ],
+      "calcoEs": "Fue él quien me dijo eso a mí.",
+      "explanationEs": "En la construcción de relieve el portugués europeo corriente usa «que», no «quem». El español prefiere «quien» y el calco lo trae."
+    }
+  },
+  {
+    "id": "co21c-012",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 2,
+    "concepts": [
+      "b12-borde-gramaticalidad"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "7f7985d9e7c69d3cdcca9e8c956955a0cbfbb08c902dfa323e6ba4939de8f705",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Necesito que me ayudes con esto, si puedes.». El gate de variante MUERDE por diseño (presente donde el portugués pide futuro do conjuntivo) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Preciso que me ajudes com isto, se podes.",
+      "correct": "Preciso que me ajudes com isto, se puderes.",
+      "alternatives": [],
+      "calcoEs": "Necesito que me ayudes con esto, si puedes.",
+      "explanationEs": "Tras «se» con valor de condición posible, el portugués exige futuro do conjuntivo: «se puderes». El español usa presente de indicativo y ahí se cuela el error."
+    }
+  },
+  {
+    "id": "co21c-013",
+    "blockId": 12,
+    "lessonId": "b12-l1-o-limite-da-gramatica",
+    "difficulty": 2,
+    "concepts": [
+      "b12-borde-gramaticalidad"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "de2f2ee582aa00ce9b9e5f566e3916e57f9a9922780ef6584a68c3f8c822fd45",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Él está aquí desde hace dos semanas.». El gate de variante MUERDE por diseño («faz» temporal calcado del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ele está aqui desde faz duas semanas.",
+      "correct": "Ele está aqui desde há duas semanas.",
+      "alternatives": [
+        "Ele está aqui há duas semanas."
+      ],
+      "calcoEs": "Él está aquí desde hace dos semanas.",
+      "explanationEs": "El portugués usa «há» para el tiempo transcurrido, no «faz»: «desde há duas semanas». «Faz» es el calco directo del español."
+    }
   }
 ]

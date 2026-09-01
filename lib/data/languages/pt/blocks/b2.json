@@ -8081,7 +8081,6 @@
     "data": {
       "sentence": "Portugal é país pequeno mas variado.",
       "correct": "Portugal é um país pequeno mas variado.",
-      "alternatives": [],
       "calcoEs": "Portugal es país pequeño pero variado.",
       "explanationEs": "El español admite el predicado nominal sin artículo en este giro; el portugués pide el indefinido: «é um país»."
     }
@@ -8484,6 +8483,706 @@
       "alternatives": [],
       "calcoEs": "Cruzamos el puente a pie.",
       "explanationEs": "«A ponte» es femenino en portugués y «el puente» masculino en español: es de los pares de género que más se fallan."
+    }
+  },
+  {
+    "id": "co21c-001",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-demonstrativos"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "0a941db120b31f051bbfb176e8570a77c5ca5f1e7aa3c32b10b471ebd00d5c10",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Ese libro que tengo aquí es estupendo.». El gate de variante MUERDE por diseño (grado desplazado por calco) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Esse livro que tenho aqui é ótimo.",
+      "correct": "Este livro que tenho aqui é ótimo.",
+      "alternatives": [],
+      "calcoEs": "Ese libro que tengo aquí es estupendo.",
+      "explanationEs": "Lo que está junto a quien habla es «este», no «esse». El español usa «ese» con más soltura y de ahí sale el desplazamiento de grado."
+    }
+  },
+  {
+    "id": "co21c-002",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-demonstrativos"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "0e497971b4f6a912bfee717bf4de44c1536ed8d6b1be52283173e7ea055f76b1",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Pásame este libro que tienes ahí.». El gate de variante MUERDE por diseño (grado desplazado por calco) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Passa-me este livro que tens aí.",
+      "correct": "Passa-me esse livro que tens aí.",
+      "alternatives": [],
+      "calcoEs": "Pásame este libro que tienes ahí.",
+      "explanationEs": "Lo que está junto a quien escucha es «esse». El portugués mantiene los tres grados con más rigor que el español coloquial."
+    }
+  },
+  {
+    "id": "co21c-003",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-demonstrativos"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "fb8212a51e3c04717a5d578a656c94e36c6b1f5bad0a245c115ecaed5168b6ec",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Aquel señor que está aquí a mi lado preguntó por ti.». El gate de variante MUERDE por diseño (grado incompatible con el adverbio) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Aquele senhor que está aqui ao meu lado perguntou por ti.",
+      "correct": "Este senhor que está aqui ao meu lado perguntou por ti.",
+      "alternatives": [],
+      "calcoEs": "Aquel señor que está aquí a mi lado preguntó por ti.",
+      "explanationEs": "«Aquele» es el grado lejano, incompatible con «aqui ao meu lado». El adverbio y el demostrativo tienen que ir en el mismo grado."
+    }
+  },
+  {
+    "id": "co21c-004",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-demonstrativos"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "3a8a8cadc2aa3b598162b2c54cb1a9c6633fd9ff03a532ea292fca6d6492884d",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Prefiero esta camisa a esa otra que viste.». El gate de variante MUERDE por diseño (segundo grado y sin crase) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Prefiro esta camisa a essa outra que viste.",
+      "correct": "Prefiro esta camisa àquela outra que viste.",
+      "alternatives": [],
+      "calcoEs": "Prefiero esta camisa a esa otra que viste.",
+      "explanationEs": "Al contrastar con lo lejano, el portugués va al tercer grado y contrae: a + aquela = «àquela». El español se queda en dos grados y no contrae."
+    }
+  },
+  {
+    "id": "co21c-005",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-demonstrativos"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "e3a08abc941610890da2140b4a9bee5e921de6414882dd4959f31f37223072a0",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «En aquel tiempo en que ahora vivimos todo es rápido.». El gate de variante MUERDE por diseño (grado incompatible con el tiempo verbal) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Naquele tempo em que agora vivemos tudo é rápido.",
+      "correct": "Neste tempo em que agora vivemos tudo é rápido.",
+      "alternatives": [],
+      "calcoEs": "En aquel tiempo en que ahora vivimos todo es rápido.",
+      "explanationEs": "El tiempo presente pide el primer grado: «neste tempo». «Naquele» remite a un pasado lejano y choca con «agora»."
+    }
+  },
+  {
+    "id": "co21c-006",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-demonstrativos"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "5fb859f7db1f0bcf56493e0bd39d2ddfd529f5ad17531e0ed3c3ec82bf3dd156",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Esa es la misma cosa que yo dije ayer.». El gate de variante MUERDE por diseño (femenino donde el portugués pide neutro) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Essa é a mesma coisa que eu disse ontem.",
+      "correct": "Isso é a mesma coisa que eu disse ontem.",
+      "alternatives": [],
+      "calcoEs": "Esa es la misma cosa que yo dije ayer.",
+      "explanationEs": "Cuando el demostrativo no remite a un sustantivo concreto sino a lo dicho, el portugués usa el neutro «isso». El español no distingue la forma y arrastra el femenino."
+    }
+  },
+  {
+    "id": "co21c-007",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-demonstrativos"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "a0c9ac9a7ae79efabd8bff90a5fc28b81777cee04f70ca15ef24ac6a0623ad25",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Este de aquí y aquel de allí son de ese señor.». El gate de variante MUERDE por diseño (preposición sin contraer) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Este aqui e aquele ali são de esse senhor.",
+      "correct": "Este aqui e aquele ali são desse senhor.",
+      "alternatives": [],
+      "calcoEs": "Este de aquí y aquel de allí son de ese señor.",
+      "explanationEs": "de + esse = «desse». La contracción es obligatoria también con el segundo grado."
+    }
+  },
+  {
+    "id": "co21c-014",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-cada-qualquer"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "1bfeb306dbcb6d6cc53bd781c92c161abb9f768a88736321fd0ee6e97802401c",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Cada uno de los libros cuesta diez euros cada uno.». El gate de variante MUERDE por diseño (repetición calcada) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Cada um dos livros custa dez euros cada.",
+      "correct": "Cada um dos livros custa dez euros.",
+      "alternatives": [],
+      "calcoEs": "Cada uno de los libros cuesta diez euros cada uno.",
+      "explanationEs": "«Cada» no se repite al final como refuerzo: o va delante o no va. La repetición viene del español coloquial."
+    }
+  },
+  {
+    "id": "co21c-015",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-cada-qualquer"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "e9978b2e0d57a144167c09941791d9d7d3deae5659b3675b8e081b355f556b91",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Puedes elegir cada uno de estos tres.». El gate de variante MUERDE por diseño (distributivo donde toca indefinido) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Podes escolher cada um destes três.",
+      "correct": "Podes escolher qualquer um destes três.",
+      "alternatives": [],
+      "calcoEs": "Puedes elegir cada uno de estos tres.",
+      "explanationEs": "Para «uno indeterminado, el que sea» el portugués usa «qualquer», no «cada». «Cada» distribuye uno a uno y aquí no distribuye nada."
+    }
+  },
+  {
+    "id": "co21c-016",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-cada-qualquer"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "565a888e1c4b5d0ad37ae491d9bb73a9f29649fd8bcd55a9f9210ec0b6406192",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Cualquier día de la semana viene alguien diferente.». El gate de variante MUERDE por diseño (indefinido donde toca distributivo) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Qualquer dia da semana vem cá alguém diferente.",
+      "correct": "Cada dia da semana vem cá alguém diferente.",
+      "alternatives": [],
+      "calcoEs": "Cualquier día de la semana viene alguien diferente.",
+      "explanationEs": "Aquí sí se distribuye —un día, una persona—, así que toca «cada». «Qualquer» dejaría el día indeterminado y rompe la correspondencia."
+    }
+  },
+  {
+    "id": "co21c-017",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-cada-qualquer"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "04d4bbbb495683f64cdfcc1cb6cfefe23b3ff5efea04c023fa951af992226665",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «No acepto cualquier excusa que me den.». El gate de variante MUERDE por diseño (distributivo en contexto negativo) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Não aceito cada desculpa que me deem.",
+      "correct": "Não aceito qualquer desculpa que me deem.",
+      "alternatives": [],
+      "calcoEs": "No acepto cualquier excusa que me den.",
+      "explanationEs": "En contexto negativo, «qualquer» es el que da el matiz de «ninguna sea cual sea». «Cada» no funciona ahí."
+    }
+  },
+  {
+    "id": "co21c-018",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-cada-qualquer"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "437b0b72a4c68e901e80eabda486b4373f4989659f3d5044536eb608997c5c75",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Cualquiera que venga será bien recibido.». El gate de variante MUERDE por diseño (palabra partida por calco) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Cada quer que venha será bem recebido.",
+      "correct": "Qualquer que venha será bem recebido.",
+      "alternatives": [],
+      "calcoEs": "Cualquiera que venga será bien recibido.",
+      "explanationEs": "«Cualquiera» es una sola palabra en portugués —«qualquer»— y no se descompone. El calco parte la palabra siguiendo el español."
+    }
+  },
+  {
+    "id": "co21c-019",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-cada-qualquer"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "0a04e2851a585b35024edb91be7ccd27024d4d228415e64e50dc13bb47233289",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Faltaron cualesquiera documentos importantes.». El gate de variante MUERDE por diseño (plural formado a la española) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Faltaram quaisqueres documentos importantes.",
+      "correct": "Faltaram quaisquer documentos importantes.",
+      "alternatives": [],
+      "calcoEs": "Faltaron cualesquiera documentos importantes.",
+      "explanationEs": "El plural de «qualquer» es «quaisquer»: cambia por dentro y no añade -es al final."
+    }
+  },
+  {
+    "id": "co21c-020",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-outro-mesmo"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "98516fddac0554266fbb903f94e40f0e7cd05eea3604f6a58879e2b2fe4a1322",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Dame otro café, por favor.». El gate de variante MUERDE por diseño (artículo espurio delante de «outro») — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Dá-me um outro café, se faz favor.",
+      "correct": "Dá-me outro café, se faz favor.",
+      "alternatives": [],
+      "calcoEs": "Dame otro café, por favor.",
+      "explanationEs": "En portugués «outro» no lleva artículo indefinido delante. El «um outro» existe pero significa «uno distinto entre varios», y aquí sobra."
+    }
+  },
+  {
+    "id": "co21c-021",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-outro-mesmo"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "641770e1d4e30a0aaf14a23b2f369ba849d94bf1a8f305f4ab65b257a6ccc9d4",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Vimos la misma cosa el mismo día.». El gate de variante MUERDE por diseño (complemento temporal sin preposición) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Vimos a mesma coisa o mesmo dia.",
+      "correct": "Vimos a mesma coisa no mesmo dia.",
+      "alternatives": [],
+      "calcoEs": "Vimos la misma cosa el mismo día.",
+      "explanationEs": "El complemento de tiempo con «mesmo» pide preposición: «no mesmo dia». El español lo deja sin ella y el calco copia."
+    }
+  },
+  {
+    "id": "co21c-022",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-outro-mesmo"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "b5937eb84b1cd7f26680dfae94951cc81f78afdcbad21a2db2d4b9a74a079099",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Él mismo vino a buscar las llaves él mismo.». El gate de variante MUERDE por diseño (refuerzo duplicado) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ele mesmo veio buscar as chaves ele próprio.",
+      "correct": "Ele próprio veio buscar as chaves.",
+      "alternatives": [],
+      "calcoEs": "Él mismo vino a buscar las llaves él mismo.",
+      "explanationEs": "El refuerzo va una vez, y en portugués europeo «próprio» es más natural que «mesmo» para el enfático de persona."
+    }
+  },
+  {
+    "id": "co21c-023",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-outro-mesmo"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "2bdc5e35e2331df0f1568fe7957c0fc8b0e3ded894f1e4981da3950de5e6d690",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Te traje unos otros papeles que faltaban.». El gate de variante MUERDE por diseño (artículo espurio en plural) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Trouxe-te uns outros papéis que faltavam.",
+      "correct": "Trouxe-te outros papéis que faltavam.",
+      "alternatives": [],
+      "calcoEs": "Te traje unos otros papeles que faltaban.",
+      "explanationEs": "En plural tampoco lleva artículo indefinido: «outros papéis»."
+    }
+  },
+  {
+    "id": "co21c-024",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-outro-mesmo"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "7bd0a84c19a054edcdddcb53653a2bb7125bdf851d26fc7ab6622215250bd502",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Quiero otro más, por favor.». El gate de variante MUERDE por diseño (orden calcado del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Quero outro mais, se faz favor.",
+      "correct": "Quero mais outro, se faz favor.",
+      "alternatives": [],
+      "calcoEs": "Quiero otro más, por favor.",
+      "explanationEs": "El orden es el contrario del español: «mais outro», no «outro mais». Lo mismo con «mais um», «mais uma vez»."
+    }
+  },
+  {
+    "id": "co21c-025",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-outro-mesmo"
+    ],
+    "tags": [
+      "e2-21c",
+      "correccion"
+    ],
+    "contentHash": "eeee9bc22bb4c9d6af528be7be7871fb288903894ef1ddd1a6d740d4f77483ef",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21C: la frase mala es el calco de «Es la misma persona de siempre, la misma que conoces.». El gate de variante MUERDE por diseño (repetición tolerada en español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "É a mesma pessoa de sempre, a mesma que conheces.",
+      "correct": "É a mesma pessoa de sempre, aquela que conheces.",
+      "alternatives": [],
+      "calcoEs": "Es la misma persona de siempre, la misma que conoces.",
+      "explanationEs": "Repetir «a mesma» en la aposición suena redundante en portugués; lo natural es el demostrativo lejano «aquela». El español tolera la repetición."
+    }
+  },
+  {
+    "id": "co21d-001",
+    "blockId": 2,
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-poss-seu-ambiguo"
+    ],
+    "tags": [
+      "e2-21d",
+      "correccion"
+    ],
+    "contentHash": "f05e8ed864a430b9219d5795602317cbc5c4acc5083c26c923e70d01b62f937d",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21D: la frase mala es el calco de «Hablé con Ana sobre su hermano.». El gate de variante MUERDE por diseño (posesivo antepuesto calcado del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Falei com a Ana sobre o seu irmão.",
+      "correct": "Falei com a Ana sobre o irmão dela.",
+      "alternatives": [],
+      "calcoEs": "Hablé con Ana sobre su hermano.",
+      "explanationEs": "Con la Ana delante, «o seu irmão» se entiende como «el hermano de usted», no como el de ella. Para la tercera persona el portugués pospone: «o irmão dela»."
+    }
+  },
+  {
+    "id": "co21d-002",
+    "blockId": 2,
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-poss-seu-ambiguo"
+    ],
+    "tags": [
+      "e2-21d",
+      "correccion"
+    ],
+    "contentHash": "c5c1306689a3725b8a96f6cb65b51d586d7e94479aeff0c3a8bcda9ef378f73f",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21D: la frase mala es el calco de «Encontré a Sofía y a su marido en el mercado.». El gate de variante MUERDE por diseño (posesivo antepuesto calcado del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Encontrei a Sofia e o seu marido no mercado.",
+      "correct": "Encontrei a Sofia e o marido dela no mercado.",
+      "alternatives": [],
+      "calcoEs": "Encontré a Sofía y a su marido en el mercado.",
+      "explanationEs": "Igual: «o seu marido» dicho a alguien es el marido de esa persona. El de la Sofia es «o marido dela»."
+    }
+  },
+  {
+    "id": "co21d-003",
+    "blockId": 2,
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-poss-seu-ambiguo"
+    ],
+    "tags": [
+      "e2-21d",
+      "correccion"
+    ],
+    "contentHash": "67a223c7f98f027a5795bebf771583abe8c522b90cf5699a5ca2a1f7536febc9",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21D: la frase mala es el calco de «Le pregunté al doctor Silva por su hija.». El gate de variante MUERDE por diseño (posesivo antepuesto calcado del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Perguntei ao doutor Silva pela sua filha.",
+      "correct": "Perguntei ao doutor Silva pela filha dele.",
+      "alternatives": [],
+      "calcoEs": "Le pregunté al doctor Silva por su hija.",
+      "explanationEs": "Aquí la ambigüedad es doble, porque al doctor se le trata de «o senhor» y «sua» apunta justo a ese tratamiento. «A filha dele» deshace las dos lecturas."
+    }
+  },
+  {
+    "id": "co21d-004",
+    "blockId": 2,
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-poss-seu-ambiguo"
+    ],
+    "tags": [
+      "e2-21d",
+      "correccion"
+    ],
+    "contentHash": "8c65a1a7d9c67b394f1656ca38e168257156af40f1f830a4a741774d871fb3c5",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21D: la frase mala es el calco de «Ana me cae bien, pero no soporto a su novio.». El gate de variante MUERDE por diseño (posesivo antepuesto calcado del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Gosto da Ana, mas não suporto o seu namorado.",
+      "correct": "Gosto da Ana, mas não suporto o namorado dela.",
+      "alternatives": [],
+      "calcoEs": "Ana me cae bien, pero no soporto a su novio.",
+      "explanationEs": "El poseedor no es quien habla ni a quien se habla: es la Ana, tercera persona. Por eso «dela»."
+    }
+  },
+  {
+    "id": "co21d-005",
+    "blockId": 2,
+    "lessonId": "b2-l3-numero-possessivos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-poss-seu-ambiguo"
+    ],
+    "tags": [
+      "e2-21d",
+      "correccion"
+    ],
+    "contentHash": "7a020231355a673d3ed8f55bb21d39d1bdaec6ec372679befccd5d564e828a58",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21D: la frase mala es el calco de «Estuve en casa de mis tíos y vi sus fotografías antiguas.». El gate de variante MUERDE por diseño (posesivo antepuesto calcado del español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Estive em casa dos meus tios e vi as suas fotografias antigas.",
+      "correct": "Estive em casa dos meus tios e vi as fotografias antigas deles.",
+      "alternatives": [],
+      "calcoEs": "Estuve en casa de mis tíos y vi sus fotografías antiguas.",
+      "explanationEs": "Con poseedor plural de tercera persona, «deles». Va al final del sintagma, detrás del adjetivo."
+    }
+  },
+  {
+    "id": "co21d-016",
+    "blockId": 2,
+    "lessonId": "b2-l2-genero-gramatical",
+    "difficulty": 2,
+    "concepts": [
+      "b2-genero-comum"
+    ],
+    "tags": [
+      "e2-21d",
+      "correccion"
+    ],
+    "contentHash": "c4fde96f5219efc9befc66b1e3448aa85aecbb39faca5d111c137b3acc9dc85a",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21D: la frase mala es el calco de «La jefa nueva llegó hoy.». El gate de variante MUERDE por diseño (femenino en -a inventado desde el español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "A chefa nova chegou hoje.",
+      "correct": "A chefe nova chegou hoje.",
+      "alternatives": [],
+      "calcoEs": "La jefa nueva llegó hoy.",
+      "explanationEs": "«Chefe» es de género común: sólo cambia el artículo. El español tiene «jefa» y el portugués no tiene «chefa»."
+    }
+  },
+  {
+    "id": "co21d-017",
+    "blockId": 2,
+    "lessonId": "b2-l2-genero-gramatical",
+    "difficulty": 2,
+    "concepts": [
+      "b2-genero-comum"
+    ],
+    "tags": [
+      "e2-21d",
+      "correccion"
+    ],
+    "contentHash": "4a133b118303c2eb1c3a029f4df2aecddeb4b48b412759f514ae7e7ac987564e",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21D: la frase mala es el calco de «La clienta esperó media hora en el mostrador.». El gate de variante MUERDE por diseño (femenino en -a inventado desde el español) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "A clienta esperou meia hora ao balcão.",
+      "correct": "A cliente esperou meia hora ao balcão.",
+      "alternatives": [],
+      "calcoEs": "La clienta esperó media hora en el mostrador.",
+      "explanationEs": "Igual que «chefe»: «cliente» no tiene forma femenina propia. El español sí admite «clienta», y de ahí sale el calco."
+    }
+  },
+  {
+    "id": "co21d-018",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-todo-tudo"
+    ],
+    "tags": [
+      "e2-21d",
+      "correccion"
+    ],
+    "contentHash": "39db1f30ca975684c79402e1087c7ff5b341fa958f4616ea66ed58f1fd3de125",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21D: la frase mala es el calco de «Todo está listo para la fiesta.». El gate de variante MUERDE por diseño (una sola palabra en español, dos en portugués) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Todo está pronto para a festa.",
+      "correct": "Tudo está pronto para a festa.",
+      "alternatives": [],
+      "calcoEs": "Todo está listo para la fiesta.",
+      "explanationEs": "Cuando «todo» no acompaña a ningún sustantivo y significa «el conjunto de las cosas», el portugués usa «tudo», que es invariable. «Todo» es adjetivo y concuerda."
+    }
+  },
+  {
+    "id": "co21d-019",
+    "blockId": 2,
+    "lessonId": "b2-l4-demonstrativos-indefinidos",
+    "difficulty": 2,
+    "concepts": [
+      "b2-indef-todo-tudo"
+    ],
+    "tags": [
+      "e2-21d",
+      "correccion"
+    ],
+    "contentHash": "86c0d9bf2cf8f01ee482e1e0e94b3c3ed16ed733dd8dc0c804ed3a877419c381",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Corrección E2-21D: la frase mala es el calco de «Gracias por todo, has sido muy amable.». El gate de variante MUERDE por diseño (una sola palabra en español, dos en portugués) — el error es el material del ejercicio, no un descuido.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Obrigado por todo, foste muito simpático.",
+      "correct": "Obrigado por tudo, foste muito simpático.",
+      "alternatives": [],
+      "calcoEs": "Gracias por todo, has sido muy amable.",
+      "explanationEs": "La fórmula fija es «obrigado por tudo». Detrás de la preposición sigue sin haber sustantivo, así que sigue siendo «tudo»."
     }
   }
 ]

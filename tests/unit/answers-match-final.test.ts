@@ -13,7 +13,7 @@
 // traducciones publicadas** tienen la clave terminada en signo y
 // `TranslationCard` comparaba en crudo, sin NFC ni recorte de la clave.
 import { describe, it, expect } from 'vitest';
-import { answersMatchFinal, answersMatch } from '@/lib/exercises/normalize';
+import { answersMatchFinal, answersMatch, answersMatchCard } from '@/lib/exercises/normalize';
 
 describe('answersMatchFinal', () => {
   it('acepta la respuesta con y sin el punto final de la clave', () => {
@@ -46,5 +46,34 @@ describe('answersMatchFinal', () => {
   it('coincide con answersMatch cuando la clave no lleva signo final', () => {
     for (const [a, b] of [['falo', 'falo'], ['falo', 'falas'], ['estão', 'estao']])
       expect(answersMatchFinal(a!, b!)).toBe(answersMatch(a!, b!));
+  });
+});
+
+describe('answersMatchCard: la coma de la adversativa', () => {
+  it('acepta la respuesta con coma cuando la clave no la lleva', () => {
+    expect(answersMatchCard('Portugal é um país pequeno, mas variado.',
+                            'Portugal é um país pequeno mas variado.')).toBe(true);
+  });
+  it('acepta la respuesta sin coma cuando la clave sí la lleva', () => {
+    expect(answersMatchCard('Estudei muito mas não passei na prova.',
+                            'Estudei muito, mas não passei na prova.')).toBe(true);
+  });
+  it('vale para porém, contudo y todavia', () => {
+    expect(answersMatchCard('Tentei, porém falhei.', 'Tentei porém falhei.')).toBe(true);
+    expect(answersMatchCard('Tentei contudo falhei.', 'Tentei, contudo falhei.')).toBe(true);
+  });
+  it('NO toca la parentética: ahí las dos comas son un par', () => {
+    expect(answersMatchCard('Ele porém, não veio.', 'Ele, porém, não veio.')).toBe(false);
+  });
+  it('sigue distinguiendo todo lo demás: acento, signo final y palabra', () => {
+    // «más» (malas) no es «mas» (pero): el acento se conserva.
+    expect(answersMatchCard('Notas más, mas passei.', 'Notas mas, mas passei.')).toBe(false);
+    expect(answersMatchCard('Estudei muito mas não passei?', 'Estudei muito, mas não passei.')).toBe(false);
+    expect(answersMatchCard('Estudei pouco mas não passei.', 'Estudei muito, mas não passei.')).toBe(false);
+  });
+  it('no cambia nada en una frase sin adversativa', () => {
+    for (const [a, b] of [['Comprei-a na estação', 'Comprei-a na estação.'], ['Vieste.', 'Vieste?']]) {
+      expect(answersMatchCard(a!, b!)).toBe(answersMatchFinal(a!, b!));
+    }
   });
 });

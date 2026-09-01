@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { Exercise } from "@/lib/exercise-resolver";
 import { resolveExerciseData } from "@/lib/exercise-resolver";
 import { useSettings } from "@/lib/stores/settings";
-import { answersMatchFinal } from "@/lib/exercises/normalize";
+import { answersMatchCard } from "@/lib/exercises/normalize";
 
 interface Props { ex: Exercise; onSubmit: (answer: string, correct: boolean) => void; }
 export function ErrorCorrectionCard({ ex, onSubmit }: Props) {
@@ -15,11 +15,11 @@ export function ErrorCorrectionCard({ ex, onSubmit }: Props) {
   const [input, setInput] = useState("");
   const [revealed, setRevealed] = useState(false);
   const submit = () => {
-    // `answersMatchFinal`: el `correct` es una FRASE ENTERA, así que tenía
+    // `answersMatchCard`: el `correct` es una FRASE ENTERA, así que tenía
     // el mismo agujero del punto final que las otras tres tarjetas. Y las
     // alternativas cuentan: una corrección admite más de una salida buena.
     const aceptadas = [data.correct, ...(data.alternatives ?? [])];
-    const ok = aceptadas.some((a) => answersMatchFinal(input, a));
+    const ok = aceptadas.some((a) => answersMatchCard(input, a));
     setRevealed(true);
     onSubmit(input, ok);
   };
