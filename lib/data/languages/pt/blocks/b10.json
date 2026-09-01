@@ -1087,8 +1087,11 @@
           "position": 0,
           "answer": "filho",
           "alternatives": [
-            "rapaz",
-            "gajo"
+            "amor",
+            "gajo",
+            "menino",
+            "querido",
+            "rapaz"
           ]
         }
       ]
@@ -1108,7 +1111,7 @@
         ]
       }
     },
-    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — posesivo sin artículo («Meu filho»), que es brasileño; y además el hueco queda determinado por «vem comer»"
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es el registro familiar, no el parentesco"
   },
   {
     "id": "6424b51e",
@@ -2926,7 +2929,7 @@
     ],
     "contentHash": "d04ecaf716c3c00cc9267cf8d3218531e50a5db921585626f356b4f19f5385cd",
     "esContrast": "'Prezado' y 'Caro' son saludos formales de apertura en e-mails.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Caro ___ , Encaminho a presente mensagem para solicitar informações.",
@@ -2935,8 +2938,9 @@
           "position": 0,
           "answer": "cliente",
           "alternatives": [
-            "senhor",
-            "amigo"
+            "amigo",
+            "colega",
+            "senhor"
           ]
         }
       ]
@@ -2945,7 +2949,8 @@
       "pt-br": {
         "sentence": "Prezado ___ , Encaminho a presente mensagem para solicitar informações."
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es la fórmula de apertura formal, no el destinatario"
   },
   {
     "id": "d5cf7fdf",
@@ -3088,7 +3093,7 @@
     ],
     "contentHash": "e1594e446def6dd087469a374097407096e4fc0a0e9dd61c63de708bf56df721",
     "esContrast": "En portugués 'fila' es la palabra estándar para la cola en ambas variedades.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Tive de esperar uma hora na ___ para comprar os bilhetes.",
@@ -3100,13 +3105,15 @@
             "fila de espera"
           ]
         }
-      ]
+      ],
+      "hintEs": "la hilera de gente que espera su turno — en Portugal se dice así, no como en Brasil"
     },
     "variantOverrides": {
       "pt-br": {
         "sentence": "Tive que esperar uma hora na ___ para comprar os bilhetes."
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: pista escrita — el punto ES la palabra"
   },
   {
     "id": "e16ba1ff",
@@ -3509,26 +3516,27 @@
     ],
     "contentHash": "f6dd70a328c3ab54243cfc6cb7790594e30f3ea8eb20f84147b1ed1e98d54caa",
     "esContrast": "'Comunicar' es más natural; 'manifestar' suena muy burocrático.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Venho por este meio ___ a Vossa Senhoria sobre o assunto.",
       "blanks": [
         {
           "position": 0,
-          "answer": "manifestar",
+          "answer": "informar",
           "alternatives": [
-            "informar",
-            "contactar"
+            "comunicar"
           ]
         }
-      ]
+      ],
+      "hintEs": "poner en conocimiento — el verbo de la fórmula «Venho por este meio ___ V. Sa.»"
     },
     "variantOverrides": {
       "pt-br": {
         "sentence": "Venho por meio desta ___ a Vossa Senhoria sobre o assunto."
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — «manifestar» no rige un complemento de persona: la fórmula es «informar/comunicar a V. Sa.»"
   },
   {
     "id": "fa5682ad",

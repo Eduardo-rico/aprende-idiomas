@@ -1215,7 +1215,7 @@
     "contentHash": "1d7f97475a3e7323d36abff778786d84e0b85b8fe50810c389d0b600c46fe8ff",
     "esContrast": "«Escrevera» es el mais-que-perfeito simples: no es portugués antiguo, sino la forma culta y literaria de «había escrito» (frecuentísima en Eça y Camilo). En el habla corriente se dice «tinha escrito».",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — estaba etiquetado como mais-que-perfeito COMPUESTO y su respuesta es la forma simple; sin pista admitía «tinha escrito»",
     "type": "fill_blank",
     "data": {
       "sentence": "Quando cheguei, ele já ___ a carta.",
@@ -1227,7 +1227,8 @@
             "tinha escrito"
           ]
         }
-      ]
+      ],
+      "hintEs": "mais-que-perfeito SIMPLE de «escrever», 3.ª persona — la forma de una sola palabra"
     }
   },
   {
@@ -1444,7 +1445,7 @@
     ],
     "contentHash": "26fc9273a9c7535ab04bca858afb2da31fc27ba6d804620d29467865004ddb35",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#6 2026-08-29: OK ítem a ítem (informe-cola4-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es el pretérito de -ar; «fui» también es una respuesta natural aquí",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ para a Europa no verão passado.",
@@ -1452,7 +1453,9 @@
         {
           "position": 0,
           "answer": "viajei",
-          "alternatives": []
+          "alternatives": [
+            "fui"
+          ]
         }
       ]
     }
@@ -1533,7 +1536,7 @@
     "contentHash": "2ae6a2e6a583bcbef67dd5b4e67eb67f3d3168a6089b1572404e4d32b6e983da",
     "esContrast": "Acción de fondo (caminhar) = imperfeito; acción breve que la interrumpe (encontrei) = perfeito.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#6 2026-08-29 (informe-cola4-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es el imperfeito frente al pretérito, y lo ejercitan los tres verbos",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ pelo parque quando encontrei a minha velha amiga.",
@@ -1541,7 +1544,10 @@
         {
           "position": 0,
           "answer": "caminhava",
-          "alternatives": []
+          "alternatives": [
+            "andava",
+            "passeava"
+          ]
         }
       ]
     }

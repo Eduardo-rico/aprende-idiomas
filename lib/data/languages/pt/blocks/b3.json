@@ -2251,17 +2251,18 @@
     ],
     "contentHash": "53a11afb241f0b5208621a7dfbc08ffe10c6bd1a48348483b162a77b04a3db68",
     "esContrast": "Futuro simple permite mesóclise (te darei / dar-te-ei)",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
-      "sentence": "___ darei o livro amanhã.",
+      "sentence": "___ o livro amanhã, prometo.",
       "blanks": [
         {
           "position": 0,
           "answer": "Dar-te-ei",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "te daré — futuro con el clítico DENTRO del verbo, entre la raíz y la terminación"
     },
     "variantOverrides": {
       "pt-br": {
@@ -2276,7 +2277,8 @@
           }
         ]
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — con la respuesta puesta la frase salía «Dar-te-ei darei o livro»: el molde dejaba el verbo escrito además del hueco"
   },
   {
     "id": "5451c0a7",
@@ -2744,7 +2746,7 @@
     "contentHash": "640d2e4cfa97272202c63e2480ba778deca0f7e9d414c8ebbc95e5c9e6c3550e",
     "esContrast": "Negación existencial con 'não há' = 'no hay'. El verbo 'haver' es impersonal aquí.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — el existencial negado sólo admite una forma en norma europea",
     "type": "fill_blank",
     "data": {
       "sentence": "Não ___ nada para comer em casa.",
@@ -2822,7 +2824,7 @@
     "contentHash": "673ed3a8bd5dab7a3269325e945fb15be05aed39ac79045a703994e373bf03e9",
     "esContrast": "'À espera' significa 'en espera'; no confundir con 'esperar'",
     "variantStatus": "neutral",
-    "variantVerificacion": "revisión manual E2#5 2026-08-29: OK ítem a ítem (informe-cola3-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — la locución «estar à ___ de» lo fija",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela está à ___ do namorado há uma hora.",
@@ -2880,7 +2882,7 @@
     "contentHash": "6ad1e3dce3efebd4b915bcc5f4c85f4b631f5b1366b116d7d6969a5389eb50d5",
     "esContrast": "Construcción impersonal con 'há' + tiempo. En español: 'Hace mucho tiempo que no la veo'.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#10 2026-09-01 (informe-cola8-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — el marcador temporal con «que não a vejo» lo fija",
     "type": "fill_blank",
     "data": {
       "sentence": "___ muito tempo que não a vejo.",
@@ -4130,7 +4132,7 @@
     ],
     "contentHash": "9185fccdcf953b6de5fb1f92a9630dcc1b5e882bfd7c943688b528e437a01989",
     "esContrast": "'Ter dois filhos' = 'tener dos hijos', no 'es'\n    ",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "Ela ___ dois filhos e mora no Rio de Janeiro.",
@@ -4141,7 +4143,8 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — el verbo de posesión con complemento directo lo fija"
   },
   {
     "id": "92181969",
@@ -5707,10 +5710,10 @@
     ],
     "contentHash": "cabff80fc479862704b7a28f42b49a04a071216dc620dd1566c97da55f5601d0",
     "esContrast": "En PT se puede 'beber' o 'tomar' café; en ES solo 'tomar'",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu ___ um café todas as manhãs.",
+      "sentence": "Eu ___ um café e uma torrada ao pequeno-almoço.",
       "blanks": [
         {
           "position": 0,
@@ -5719,7 +5722,8 @@
             "bebo"
           ]
         }
-      ]
+      ],
+      "hintEs": "presente de «tomar», 1.ª persona"
     },
     "variantOverrides": {
       "pt-br": {
@@ -5733,7 +5737,8 @@
           }
         ]
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — compartía frase LITERAL con `0b88eddd` —«Eu ___ um café todas as manhãs»— y las dos declaraban respuestas distintas, «tomo» y «faço». Dos ítems servidos con el mismo enunciado y claves incompatibles"
   },
   {
     "id": "cbbc02b3",
@@ -6247,17 +6252,18 @@
     ],
     "contentHash": "dbd0465c4d749a120f5e780239891014dcdc39fbf56850c27736456bf63209c8",
     "esContrast": "En PT-BR se acepta 'tem' para existencial coloquial; en PT-PT se usa 'há'.",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
-      "sentence": "No cardápio, ___ várias opções vegetarianas.",
+      "sentence": "Na ementa, ___ várias opções vegetarianas.",
       "blanks": [
         {
           "position": 0,
           "answer": "há",
           "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "el existencial impersonal — la forma europea, nunca «tem»"
     },
     "variantOverrides": {
       "pt-br": {
@@ -6271,7 +6277,8 @@
           }
         ]
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: corregido — «cardápio» es brasileño; en Portugal es «ementa»"
   },
   {
     "id": "dcdefb37",
@@ -6316,7 +6323,7 @@
       "negativo"
     ],
     "contentHash": "dd479edd7ec8dbba7f8d5094b4eec6ac43782b07222d3fbe3d277e27a46b951e",
-    "variantStatus": "divergent",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
       "sentence": "___ tão alto! As pessoas estão a descansar.",
@@ -6325,6 +6332,8 @@
           "position": 0,
           "answer": "Não grites",
           "alternatives": [
+            "Não cantes",
+            "Não fales",
             "Não grite"
           ]
         }
@@ -6342,7 +6351,8 @@
           }
         ]
       }
-    }
+    },
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: alternativas declaradas — el punto es el imperativo negativo, que se ve con cualquier verbo"
   },
   {
     "id": "de76d6ed",
@@ -6977,7 +6987,7 @@
     "contentHash": "f6a6d3873f7e7a48a26a06897bd1b562556e5080bb2a778d3c0d1c240728a6f6",
     "esContrast": "'Dizer a verdade' = 'decir la verdad'.",
     "variantStatus": "neutral",
-    "variantVerificacion": "corregido según revisión manual E2#5 2026-08-29 (informe-cola3-manual)",
+    "variantVerificacion": "reparación de cloze sin pista, E2#29: sin pista y CORRECTO — la colocación «dizer a verdade» lo fija",
     "type": "fill_blank",
     "data": {
       "sentence": "Ele sempre ___ a verdade, mesmo quando dói.",

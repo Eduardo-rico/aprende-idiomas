@@ -41,6 +41,14 @@ const palabras = (s: string) => norm(s).split(' ').filter(Boolean);
 const contiene = (texto: string, palabra: string) =>
   new RegExp(`(?<![\\p{L}])${palabra.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\p{L}])`, 'iu').test(texto);
 
+// Índice de frases, para cazar los gemelos con claves distintas.
+const porFrase = new Map<string, any[]>();
+for (const x of items) {
+  if (x.type !== 'fill_blank' || x.data?.blanks?.length !== 1 || typeof x.data?.sentence !== 'string') continue;
+  const k = norm(x.data.sentence);
+  porFrase.set(k, [...(porFrase.get(k) ?? []), x]);
+}
+
 interface Regla { nombre: string; aplica: (x: any) => boolean; falla: (x: any) => string | null }
 
 const REGLAS: Regla[] = [
@@ -125,6 +133,21 @@ const REGLAS: Regla[] = [
     nombre: 'la respuesta declarada no está entre las opciones',
     aplica: (x) => Array.isArray(x.data?.options) && typeof x.data?.answer === 'string',
     falla: (x) => (x.data.options.some((o: string) => norm(o) === norm(x.data.answer)) ? null : `respuesta «${x.data.answer}» ∉ [${x.data.options.join(' | ')}]`),
+  },
+  {
+    // Salió de un hallazgo suelto: dos ítems publicados con la frase
+    // «Eu ___ um café todas as manhãs» y respuestas incompatibles, «tomo»
+    // y «faço». El alumno acierta uno y falla el otro escribiendo lo
+    // mismo, y el FSRS registra las dos cosas. Una anécdota así merece
+    // barrido: si pasó una vez, la pregunta es cuántas.
+    nombre: 'misma frase publicada con respuestas incompatibles',
+    aplica: (x) => x.type === 'fill_blank' && x.data?.blanks?.length === 1 && typeof x.data?.sentence === 'string',
+    falla: (x) => {
+      const clave = norm(x.data.sentence);
+      const gemelos = porFrase.get(clave) ?? [];
+      const otras = gemelos.filter((y) => y.id !== x.id && norm(y.data.blanks[0].answer) !== norm(x.data.blanks[0].answer));
+      return otras.length ? `«${x.data.sentence}» → «${x.data.blanks[0].answer}» vs «${otras[0].data.blanks[0].answer}» en \`${otras[0].id}\`` : null;
+    },
   },
   {
     nombre: 'derivación rota: undefined/null/NaN en un campo servido',
