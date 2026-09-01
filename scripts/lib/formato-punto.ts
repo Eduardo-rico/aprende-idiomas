@@ -88,7 +88,11 @@ const POR_BLOQUE: Record<number, { clase: Clase; motivo: string }> = {
 
 /** Donde el defecto del bloque miente. Cada override es una afirmación
  *  sobre si el CALCO suena bien en español, no sobre el tema del punto. */
-const OVERRIDES: Record<string, { clase: Clase; motivo: string }> = {
+// Un override puede fijar además el FORMATO, cuando la clase no basta
+// para elegirlo: la clase dice si un JUICIO sirve; si no sirve, el
+// formato depende de si el punto examina una FORMA (transformación) o
+// una ELECCIÓN (cloze cuyo contexto decide).
+const OVERRIDES: Record<string, { clase: Clase; motivo: string; formato?: Formato }> = {
   // ── b2: donde el español coincide y el defecto «trampa» sobra
   'b2-plural-ao': { clase: 'sin-equivalente', motivo: 'los plurales en -ão/-ães/-ões no tienen paralelo español: hay que producirlos' },
   'b2-plural-l': { clase: 'sin-equivalente', motivo: 'ídem: «-l» → «-is» no existe en español' },
@@ -127,7 +131,10 @@ const OVERRIDES: Record<string, { clase: Clase; motivo: string }> = {
 
   // ── b11: lo que el bloque promete y no siempre cumple
   'b11-regencias': { clase: 'coincide', motivo: 'MEDIDO en el lote 10: la mayoría de las regências portuguesas coinciden con la española, así que el calco rompe el español y la glosa lo caza (11/14, p=0,029)' },
-  'b11-alternancia-infinitivo': { clase: 'sin-equivalente', motivo: 'el infinitivo flexionado no existe en español' },
+  'b11-alternancia-infinitivo': {
+    clase: 'sin-equivalente', formato: 'cloze-con-pista',
+    motivo: 'el infinitivo flexionado no existe en español, pero el punto NO es la forma —que es regular sin excepciones, incluso en ser y pôr— sino la ELECCIÓN entre infinitivo pessoal, conjuntivo e infinitivo simples. Se da el lema y el contexto decide cuál de las tres',
+  },
   'b11-ser-estar-divergente': { clase: 'coincide', motivo: 'MEDIDO en el lote 11: once de doce ítems escritos para este punto coincidían con el español (glosa 12/12). Diverge en pocos casos y hay que elegirlos, no suponerlos' },
   'b11-conectores-discursivos': { clase: 'pragmatico', motivo: 'sus errores son de registro y de matiz, no de gramaticalidad — ya declarado al escribir el lote 11' },
 
@@ -151,6 +158,33 @@ const OVERRIDES: Record<string, { clase: Clase; motivo: string }> = {
   'reg-verbal-otras': { clase: 'coincide', motivo: 'por defecto, hasta medirlo' },
 };
 
+// ── LA RESTRICCIÓN QUE EL MAPA DESTAPA, y que no es por punto sino por
+// LOTE ──────────────────────────────────────────────────────────────
+//
+// Un punto de clase `trampa` pide juicio. Pero **un lote de juicios
+// hecho SÓLO de un punto trampa es imposible de pasar**, y por
+// construcción: si todos los MAL son calcos del español, entonces todas
+// sus glosas son español bien formado, y el rasgo de la glosa cognada
+// —que mide las DOS direcciones y se queda con la mejor— acierta el
+// 100 % con la regla «glosa buena ⇒ MAL». Es el mismo atajo que mató al
+// lote 11, leído al revés.
+//
+// La salida no es aflojar el rasgo: es que **dentro del lote las glosas
+// se equilibren**. Y con pares mínimos hay una forma limpia de
+// conseguirlo: elegir pares cuyos DOS rellenos glosen a español
+// igualmente bueno (o igualmente malo). Entonces el rasgo vale lo mismo
+// en los dos miembros, aporta un acierto y un fallo, y queda neutro por
+// teorema — que es la única garantía que los pares sí dan.
+//
+// Regla operativa: **un par sirve para un lote de juicios si sus dos
+// rellenos son igual de aceptables en la glosa española.** Si uno glosa
+// bien y el otro mal, el par mete señal de la glosa y hay que
+// compensarlo con otro par que la meta al revés.
+export const REGLA_DE_LOTE_JUICIO =
+  'Un lote de juicios necesita que las glosas españolas se equilibren dentro del lote: ' +
+  'con pares mínimos, elegir pares cuyos dos rellenos glosen a español igual de bien ' +
+  '(o igual de mal) deja el rasgo neutro por construcción.';
+
 export interface Veredicto {
   clase: Clase;
   formato: Formato;
@@ -162,7 +196,7 @@ export interface Veredicto {
 
 export function formatoDe(id: string): Veredicto {
   const ov = OVERRIDES[id];
-  if (ov) return { ...ov, formato: FORMATO_DE_CLASE[ov.clase], confianza: /MEDIDO/.test(ov.motivo) ? 'medido' : 'declarado' };
+  if (ov) return { ...ov, formato: ov.formato ?? FORMATO_DE_CLASE[ov.clase], confianza: /MEDIDO/.test(ov.motivo) ? 'medido' : 'declarado' };
   const b = Number(id.match(/^b(\d+)-/)?.[1] ?? 0);
   const d = POR_BLOQUE[b] ?? { clase: 'coincide' as Clase, motivo: 'sin bloque reconocible: por defecto, el formato conservador' };
   return { ...d, formato: FORMATO_DE_CLASE[d.clase], confianza: 'defecto' };

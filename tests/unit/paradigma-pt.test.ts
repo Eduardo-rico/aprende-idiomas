@@ -5,7 +5,7 @@
 // bendice. Así que se prueba contra las formas canónicas, incluidas las
 // que la regla ingenua rompe.
 import { describe, it, expect } from 'vitest';
-import { futuro, condicional, participio, futuroComposto, mesoclise, enclise, proclise } from '@/scripts/lib/paradigma-pt';
+import { futuro, condicional, participio, futuroComposto, mesoclise, enclise, proclise , infinitivoPessoal } from '@/scripts/lib/paradigma-pt';
 
 describe('futuro y condicional', () => {
   it('se forman sobre el infinitivo ENTERO', () => {
@@ -124,5 +124,44 @@ describe('las formas con las que se construyen los distractores honestos', () =>
 
   it('próclise: lo que un atractor impone, y que CANCELA la mesóclise', () => {
     expect(proclise('me', futuro('falar', 'ele'))).toBe('me falará');
+  });
+});
+
+// El infinitivo pessoal es la conjugación más segura del portugués —se
+// construye sobre el infinitivo entero, sin excepciones ni en ser ni en
+// ir— y por eso el mapa formato↔punto manda PRODUCIRLO en vez de
+// juzgarlo. Pero tiene dos alteraciones GRÁFICAS, y una de ellas
+// reventaba: el conjugador daba *sairem* por «saírem».
+describe('infinitivo pessoal', () => {
+  it('es regular incluso en los verbos más irregulares', () => {
+    expect(infinitivoPessoal('ser', 'nós')).toBe('sermos');
+    expect(infinitivoPessoal('ir', 'eles')).toBe('irem');
+    expect(infinitivoPessoal('fazer', 'tu')).toBe('fazeres');
+    expect(infinitivoPessoal('ter', 'eles')).toBe('terem');
+  });
+
+  it('las formas de eu y ele coinciden con el infinitivo — el sincretismo es parte del punto', () => {
+    expect(infinitivoPessoal('perceber', 'eu')).toBe('perceber');
+    expect(infinitivoPessoal('perceber', 'ele')).toBe('perceber');
+  });
+
+  it('«pôr» pierde el circunflejo al recibir desinencia', () => {
+    expect(infinitivoPessoal('pôr', 'nós')).toBe('pormos');
+    expect(infinitivoPessoal('pôr', 'eles')).toBe('porem');
+    expect(infinitivoPessoal('pôr', 'eu')).toBe('pôr');
+  });
+
+  it('los verbos en -air/-uir llevan ACENTO cuando la desinencia abre hiato', () => {
+    expect(infinitivoPessoal('sair', 'eles')).toBe('saírem');
+    expect(infinitivoPessoal('sair', 'tu')).toBe('saíres');
+    expect(infinitivoPessoal('cair', 'eles')).toBe('caírem');
+    expect(infinitivoPessoal('construir', 'tu')).toBe('construíres');
+  });
+
+  it('…y NO lo llevan donde no hay hiato', () => {
+    expect(infinitivoPessoal('sair', 'nós')).toBe('sairmos');
+    expect(infinitivoPessoal('partir', 'eles')).toBe('partirem');
+    expect(infinitivoPessoal('ouvir', 'tu')).toBe('ouvires');
+    expect(infinitivoPessoal('ir', 'tu')).toBe('ires');
   });
 });

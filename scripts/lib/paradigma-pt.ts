@@ -104,3 +104,34 @@ export const enclise = (formaConjugada: string, c: Clitico) => `${formaConjugada
 /** PRÓCLISE, que es lo que un atractor impone y CANCELA la mesóclise:
  *  «não me dirá», nunca «não dir-me-á». */
 export const proclise = (c: Clitico, formaConjugada: string) => `${c} ${formaConjugada}`;
+
+// ── INFINITIVO PESSOAL ───────────────────────────────────────────────
+//
+// La forma que el español no tiene, y por eso el mapa formato↔punto
+// manda producirla (TRANSFORMACIÓN) en vez de juzgarla: reconocer una
+// ausencia es fácil, producirla es el punto.
+//
+// Y es la conjugación más segura del portugués: se construye SIEMPRE
+// sobre el infinitivo entero, sin excepciones ni siquiera en los verbos
+// más irregulares —ser→sermos, ir→irem, pôr→pormos—, porque no hay raíz
+// que alterar. Eso la hace derivable al 100 %, que es lo que el gate
+// necesita para recalcularla y comparar.
+const DES_INF_PESSOAL: Record<Persona, string> = {
+  eu: '', tu: 'es', ele: '', 'nós': 'mos', eles: 'em',
+};
+
+export function infinitivoPessoal(inf: string, p: Persona): string {
+  const base = inf.normalize('NFC');
+  const d = DES_INF_PESSOAL[p];
+  if (!d) return base;
+  // «pôr» y sus compuestos pierden el circunflejo al recibir desinencia:
+  // pôr → pormos, pores, porem.
+  let raizBase = /ôr$/.test(base) ? base.replace(/ôr$/, 'or') : base;
+  // Y los verbos en -AIR / -UIR / -OER llevan ACENTO en la i cuando la
+  // desinencia abre hiato: sair → saíres, saírem (pero sairmos, sin
+  // acento, porque ahí no hay hiato). Sin esto el conjugador producía
+  // *sairem* y un ítem del lote lo habría publicado — la misma familia
+  // de fallo que el `dir-lo-ão` que un test verde consagró en E2#11.
+  if (/[aeou]ir$/i.test(raizBase) && (p === 'tu' || p === 'eles')) raizBase = raizBase.replace(/ir$/i, 'ír');
+  return raizBase + d;
+}
