@@ -24,6 +24,7 @@ import path from 'node:path';
 import { BLOCKS_DIR } from './config';
 import { answersMatchCard } from '@/lib/exercises/normalize';
 import { servibleAlAlumno } from './lib/estado-item';
+import { textoAnalizable, palabrasAnalizables } from './lib/texto-cloze';
 
 const MUESTRA = process.argv.includes('--muestra');
 const items = fs.readdirSync(BLOCKS_DIR).filter((x) => /^b\d+\.json$/.test(x)).sort()
@@ -58,8 +59,7 @@ const REGLAS: Regla[] = [
     falla: (x) => {
       const r = String(x.data.blanks[0].answer ?? '');
       if (r.length < 3) return null; // «a», «o», «se»: aparecen por todas partes
-      const resto = String(x.data.sentence).replace('___', ' ');
-      return contiene(norm(resto), norm(r)) ? `«${r}» aparece en «${x.data.sentence}»` : null;
+      return contiene(textoAnalizable(x).toLowerCase(), norm(r)) ? `«${r}» aparece en «${x.data.sentence}»` : null;
     },
   },
   {
@@ -150,14 +150,10 @@ const REGLAS: Regla[] = [
       const r = norm(String(x.data.blanks[0].answer ?? '')).replace(/-.*$/, '');
       if (r.length < 5) return null;
       const raiz = r.slice(0, 4);
-      // FUERA el paréntesis del molde: «___ (trabalhar)» es la convención
-      // del generador —le dice al alumno QUÉ verbo, y la tarea es la
-      // forma—, no un defecto. Sin quitarlo la regla marcaba 121 ítems y
-      // 120 eran la convención. Tercera vez que este paréntesis engaña a
-      // un barrido mío: ya se comió el «estar» de «Tu estás (estar) com
-      // razão» y el infinitivo de la clase de «estar com».
-      const sinMolde = String(x.data.sentence).replace('___', ' ').replace(/\([^)]*\)/g, ' ');
-      const resto = norm(sinMolde).split(' ');
+      // El molde lo desmonta `textoAnalizable`, que es de donde sale
+      // este barrido y cualquier otro sobre cloze: el paréntesis del lema
+      // engañó a TRES barridos distintos antes de que existiera.
+      const resto = palabrasAnalizables(x);
       const gemela = resto.find((w: string) => w.length >= 4 && w.startsWith(raiz) && w !== r);
       return gemela ? `«${x.data.blanks[0].answer}» y «${gemela}» comparten raíz en «${x.data.sentence}»` : null;
     },
