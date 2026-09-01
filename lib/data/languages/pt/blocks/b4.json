@@ -262,7 +262,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b4-mais-que-perfeito",
     "type": "translation",
     "data": {
       "source": "Tinha-se despedido de todos antes do acidente.",
@@ -1114,7 +1115,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b4-mqp-simples",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se forma el Pretérito Mais-que-perfeito SIMPLES?",
@@ -1754,7 +1756,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b4-mais-que-perfeito",
     "type": "flashcard",
     "data": {
       "front": "¿Qué es el Pretérito Mais-que-perfeito?",
@@ -2711,7 +2714,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b4-mqp-simples",
     "type": "translation",
     "data": {
       "source": "Yo casi había salido cuando me llamaron.",
@@ -3404,7 +3408,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b4-mqp-simples",
     "type": "flashcard",
     "data": {
       "front": "Forma simple de 'fazer' en mais-que-perfeito: eu _____ feito",
@@ -4951,7 +4956,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b4-mqp-simples",
     "type": "translation",
     "data": {
       "source": "Si él hubiera visto aquello, habría actuado de otro modo.",
@@ -6096,7 +6102,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b4-mqp-simples",
     "type": "flashcard",
     "data": {
       "front": "Forma simple de 'ver' en mais-que-perfeito: eu _____ visto",
@@ -6422,7 +6429,8 @@
     ],
     "contentHash": "bdf71651694cd8a9fdfaa9a8ce24392cdedee56eed3018b40f77f6ad706911e4",
     "esContrast": "'Tinha visto' es el compuesto; 'vira' es el simple. El español solo tiene 'había visto'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b4-mqp-simples",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ___ aquele filme três vezes.",
@@ -7579,7 +7587,8 @@
     ],
     "contentHash": "e664500249395e516d650fd9fba00667543773f0347f56f785e970adf084de81",
     "esContrast": "'Fora' es el mais-que-perfeito simple de 'ser', muy frecuente en narrativas antiguas.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b4-mqp-simples",
     "type": "fill_blank",
     "data": {
       "sentence": "Naquela época, ele ___ um médico talentoso.",
@@ -10607,6 +10616,188 @@
         }
       ],
       "hintEs": "pretérito de «estar», 3.ª del plural — tema en -ive"
+    }
+  },
+  {
+    "id": "tr29-001",
+    "blockId": 4,
+    "lessonId": "b4-l5-mais-que-perfeito",
+    "difficulty": 2,
+    "concepts": [
+      "b4-mqp-simples"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "ef1a21baf6b9c5b71e4843f12459db511e7b2d32be2de95a8bc265d3ccccec26",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Ele tinha falado com o diretor antes da reunião.",
+      "instructionEs": "Sustituye el pluscuamperfecto compuesto por la forma SIMPLE, la de la lengua escrita, y reescribe la frase entera.",
+      "answer": "Ele falara com o diretor antes da reunião.",
+      "alternatives": [],
+      "hintEs": "una sola palabra en vez de «tinha» + participio",
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "tr29-002",
+    "blockId": 4,
+    "lessonId": "b4-l5-mais-que-perfeito",
+    "difficulty": 2,
+    "concepts": [
+      "b4-mqp-simples"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "d7fa2a6db5fedd79a4db098ca0069ab2a5df8a7647702c0d6c946171af3173d4",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Eles tinham feito tudo antes de eu chegar.",
+      "instructionEs": "Pasa el pluscuamperfecto compuesto a la forma simple y reescribe la frase entera.",
+      "answer": "Eles fizeram tudo antes de eu chegar.",
+      "alternatives": [],
+      "hintEs": "irregular: el tema del pretérito más la terminación",
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "tr29-003",
+    "blockId": 4,
+    "lessonId": "b4-l5-mais-que-perfeito",
+    "difficulty": 2,
+    "concepts": [
+      "b4-mqp-simples"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "ca3d083f70206392db19768de71bbb36231e21cde115173312ba05633580f789",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Eu tinha visto aquele filme muitos anos antes.",
+      "instructionEs": "Pasa el pluscuamperfecto compuesto a la forma simple y reescribe la frase entera.",
+      "answer": "Eu vira aquele filme muitos anos antes.",
+      "alternatives": [],
+      "hintEs": "irregular, primera persona",
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "tr29-004",
+    "blockId": 4,
+    "lessonId": "b4-l5-mais-que-perfeito",
+    "difficulty": 2,
+    "concepts": [
+      "b4-mqp-simples"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "13b1eb74ace14fb0d0db902d2f827d12126c48eb569ede1d7697f12f06d8e966",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Ela tinha dito o mesmo na véspera.",
+      "instructionEs": "Pasa el pluscuamperfecto compuesto a la forma simple y reescribe la frase entera.",
+      "answer": "Ela dissera o mesmo na véspera.",
+      "alternatives": [],
+      "hintEs": "irregular, tercera persona",
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "tr29-005",
+    "blockId": 4,
+    "lessonId": "b4-l5-mais-que-perfeito",
+    "difficulty": 2,
+    "concepts": [
+      "b4-mqp-simples"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "a8e9265e5711eb85f439231013e8c52b66cd5be171b84e16ce8d8b417e719f09",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Nós tínhamos sido os primeiros a chegar.",
+      "instructionEs": "Pasa el pluscuamperfecto compuesto a la forma simple y reescribe la frase entera.",
+      "answer": "Nós fôramos os primeiros a chegar.",
+      "alternatives": [],
+      "hintEs": "primera del plural, con acento",
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "tr29-006",
+    "blockId": 4,
+    "lessonId": "b4-l5-mais-que-perfeito",
+    "difficulty": 2,
+    "concepts": [
+      "b4-mqp-simples"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "a85d2c09cf811cd146de0a5bbeb860c59689e75c6f4f5ef6644a45e682015d34",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Eles tinham estado ali toda a tarde.",
+      "instructionEs": "Pasa el pluscuamperfecto compuesto a la forma simple y reescribe la frase entera.",
+      "answer": "Eles estiveram ali toda a tarde.",
+      "alternatives": [],
+      "hintEs": "irregular, tercera del plural",
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "tr29-007",
+    "blockId": 4,
+    "lessonId": "b4-l5-mais-que-perfeito",
+    "difficulty": 2,
+    "concepts": [
+      "b4-mqp-simples"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "ccb5a42b484f6f6acda44612574ed5eedff050f22f21ffaadf66b6e5ecdef0db",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Tu tinhas partido antes de a carta chegar.",
+      "instructionEs": "Pasa el pluscuamperfecto compuesto a la forma simple y reescribe la frase entera.",
+      "answer": "Tu partiras antes de a carta chegar.",
+      "alternatives": [],
+      "hintEs": "regular de -ir, segunda persona",
+      "espejoEs": false
     }
   }
 ]

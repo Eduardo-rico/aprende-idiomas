@@ -1174,7 +1174,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-se",
     "type": "translation",
     "data": {
       "source": "Como si fuera a llover mañana, ya compré el paraguas.",
@@ -1526,7 +1527,8 @@
     ],
     "contentHash": "2cfcc89a6dd8bbe74b1d9f7127929ae711ab58b9cb82fa8135306dbf9a0de756",
     "esContrast": "'Como se' exige el imperfeito do conjuntivo (no futuro), a diferencia del español.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-se",
     "type": "fill_blank",
     "data": {
       "sentence": "Como se ele já ___ (saber) a resposta, não disse nada.",
@@ -1900,7 +1902,8 @@
     ],
     "contentHash": "3bd2d3d6688d743564c742a481d193e36bff563af249a76317e92665c61204e2",
     "esContrast": "'Vaga' en portugués significa 'puesto vacante' (falso amigo de 'vago' en español).",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-se",
     "type": "fill_blank",
     "data": {
       "sentence": "Se houver uma ___ (vaga) na empresa, candidatarei-me.",
@@ -3730,7 +3733,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-se",
     "type": "translation",
     "data": {
       "source": "Como se a ligação tivesse sido feita ontem, assim reagiste.",
@@ -7035,8 +7039,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-se · RESCATADO en E2#22: su punto volvió a bajar del piso al retirarse un ítem roto",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b6-fut-subj-se · sello anterior: excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-fut-subj-se · RESCATADO en E2#22: su punto volvió a bajar del piso al retirarse un ítem roto",
     "type": "flashcard",
     "data": {
       "front": "Conector SE + futuro do conjuntivo",
@@ -11403,6 +11407,136 @@
         }
       ],
       "hintEs": "auxiliar en imperfeito do conjuntivo, 3.ª del plural"
+    }
+  },
+  {
+    "id": "tr29-013",
+    "blockId": 6,
+    "lessonId": "b6-l3-futuro-conjuntivo",
+    "difficulty": 2,
+    "concepts": [
+      "b6-fut-subj-se"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "274c6ea73b5f306b4eecce456ed3a5a2088bf368452d065e966877913dd7809d",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Se fazes isso, avisa-me.",
+      "instructionEs": "Corrige el tiempo del verbo de la condición: en portugués, una condición sobre el futuro no va en presente.",
+      "answer": "Se fizeres isso, avisa-me.",
+      "alternatives": [],
+      "hintEs": "irregular, segunda persona",
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "tr29-014",
+    "blockId": 6,
+    "lessonId": "b6-l3-futuro-conjuntivo",
+    "difficulty": 2,
+    "concepts": [
+      "b6-fut-subj-se"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "de3657a82c714b6ec510aef5e59fb6b422feb0af57132ac56adbc96bc163b1fc",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Se dizem alguma coisa, não respondas.",
+      "instructionEs": "Corrige el tiempo del verbo de la condición: en portugués, una condición sobre el futuro no va en presente.",
+      "answer": "Se disserem alguma coisa, não respondas.",
+      "alternatives": [],
+      "hintEs": "irregular, tercera del plural",
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "tr29-015",
+    "blockId": 6,
+    "lessonId": "b6-l3-futuro-conjuntivo",
+    "difficulty": 2,
+    "concepts": [
+      "b6-fut-subj-se"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "befdfff1a2671083a7b5b1b6d2183f5a42797436083e389bc6579bfe396ce914",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Se traz o carro, cabemos todos.",
+      "instructionEs": "Corrige el tiempo del verbo de la condición: en portugués, una condición sobre el futuro no va en presente.",
+      "answer": "Se trouxer o carro, cabemos todos.",
+      "alternatives": [],
+      "hintEs": "irregular, tercera persona",
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "tr29-016",
+    "blockId": 6,
+    "lessonId": "b6-l3-futuro-conjuntivo",
+    "difficulty": 2,
+    "concepts": [
+      "b6-fut-subj-se"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "a6ca97d33b9f2598d60b78ef6bc342ace3ec70d746f4abdf3034f44fa8d5cd2c",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Se pomos tudo no carro, não sobra espaço.",
+      "instructionEs": "Corrige el tiempo del verbo de la condición: en portugués, una condición sobre el futuro no va en presente.",
+      "answer": "Se pusermos tudo no carro, não sobra espaço.",
+      "alternatives": [],
+      "hintEs": "irregular, primera del plural",
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "tr29-017",
+    "blockId": 6,
+    "lessonId": "b6-l3-futuro-conjuntivo",
+    "difficulty": 2,
+    "concepts": [
+      "b6-fut-subj-se"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "8bcc713d98c0a4cc10b9435fb43e41db7cbc6ab0085c8439ff852c33a73f7f27",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Se estão prontos às seis, saímos juntos.",
+      "instructionEs": "Corrige el tiempo del verbo de la condición: en portugués, una condición sobre el futuro no va en presente.",
+      "answer": "Se estiverem prontos às seis, saímos juntos.",
+      "alternatives": [],
+      "hintEs": "irregular, tercera del plural",
+      "espejoEs": false
     }
   }
 ]

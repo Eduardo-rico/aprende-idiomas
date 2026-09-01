@@ -362,7 +362,8 @@
     ],
     "contentHash": "0f32b6a401b4ade85821130d90389f1c19ecb8e9140d9a091423cf1a03aa60b7",
     "esContrast": "Tipo 1: si los precios están bajos, vamos (futuro próximo).",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional",
     "type": "fill_blank",
     "data": {
       "sentence": "Nós ___ à padaria se os preços estiverem mais baixos.",
@@ -765,7 +766,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional",
     "type": "flashcard",
     "data": {
       "front": "Si llueve mañana, no iré a la playa.",
@@ -1001,7 +1003,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional",
     "type": "translation",
     "data": {
       "source": "Constituir família não é fácil se os preços continuarem a subir.",
@@ -1653,7 +1656,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-condicional",
     "type": "listening",
     "data": {
       "audioText": "Se eu abrir uma padaria, vou trabalhar de manhã cedo todos os dias.",
@@ -2407,7 +2411,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-futuro-conj",
     "type": "flashcard",
     "data": {
       "front": "Si voy a la panadería, compraré pan fresco.",
@@ -3114,7 +3119,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-futuro-conj",
     "type": "flashcard",
     "data": {
       "front": "¿Cuál es la estructura de una oración condicional tipo 1?",
@@ -3962,7 +3968,8 @@
     ],
     "contentHash": "8accb60d33a9de5f2b0d793b3ce777e9bd5dbfb530852bd74ecd9da8b6e833ff",
     "esContrast": "'Fizer sol' é o futuro do conjuntivo de 'fazer'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-futuro-conj",
     "type": "fill_blank",
     "data": {
       "sentence": "Se ___ sol amanhã, vamos à praia.",
@@ -4154,7 +4161,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-futuro-conj",
     "type": "translation",
     "data": {
       "source": "Se eu for à padaria amanhã, compro pão fresco.",
@@ -5978,7 +5986,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b5-se-futuro-conj",
     "type": "translation",
     "data": {
       "source": "Se fores à padaria, traz-me um bolo.",
@@ -8837,6 +8846,136 @@
         }
       ],
       "hintEs": "imperfeito do conjuntivo, 1.ª del plural — irregular"
+    }
+  },
+  {
+    "id": "tr29-008",
+    "blockId": 5,
+    "lessonId": "b5-l4-se-futuro-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-se-futuro-conj"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "b91ca7835e45a5db06f00b9645957e3c25b69d372c2ffd889bb22b76416967c4",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Talvez possas vir amanhã.",
+      "instructionEs": "Reescribe la idea como una condición con «se», acabando en «avisa-me», y pon el verbo en el tiempo que esa conjunción exige.",
+      "answer": "Se puderes vir amanhã, avisa-me.",
+      "alternatives": [],
+      "hintEs": "no es presente: el portugués tiene un tiempo propio para la condición futura",
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "tr29-009",
+    "blockId": 5,
+    "lessonId": "b5-l4-se-futuro-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-se-futuro-conj"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "5605f221f463446ec6585784fa31f0adc32d3494b5edd0521b5477d93e59ec7d",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Eles talvez queiram ficar mais uns dias.",
+      "instructionEs": "Reescribe la idea como una condición con «se», acabando en «há lugar», y pon el verbo en el tiempo que esa conjunción exige.",
+      "answer": "Se quiserem ficar mais uns dias, há lugar.",
+      "alternatives": [],
+      "hintEs": "irregular, tercera del plural",
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "tr29-010",
+    "blockId": 5,
+    "lessonId": "b5-l4-se-futuro-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-se-futuro-conj"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "6462f20fd1043641c2a9a90264d78edaf3e80a225dfc4f0d86acc4297a215efb",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Talvez vejas o Miguel na festa.",
+      "instructionEs": "Reescribe la idea como una condición con «se», acabando en «dá-lhe um abraço», y pon el verbo en el tiempo que esa conjunción exige.",
+      "answer": "Se vires o Miguel na festa, dá-lhe um abraço.",
+      "alternatives": [],
+      "hintEs": "irregular, segunda persona",
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "tr29-011",
+    "blockId": 5,
+    "lessonId": "b5-l4-se-futuro-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-se-futuro-conj"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "48dc3792ea22dcb6ac0fe5037c76a179f80ff28ee6009e9567310bfb021aa007",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Talvez tenhamos tempo depois do almoço.",
+      "instructionEs": "Reescribe la idea como una condición con «se», acabando en «passamos por lá», y pon el verbo en el tiempo que esa conjunción exige.",
+      "answer": "Se tivermos tempo depois do almoço, passamos por lá.",
+      "alternatives": [],
+      "hintEs": "irregular, primera del plural",
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "tr29-012",
+    "blockId": 5,
+    "lessonId": "b5-l4-se-futuro-condicional",
+    "difficulty": 2,
+    "concepts": [
+      "b5-se-futuro-conj"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "2ce775e4230967c95f1344452227d847d75a12505f78758bdb9405860cf2dc71",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Talvez seja preciso mudar a data.",
+      "instructionEs": "Reescribe la idea como una condición con «se», acabando en «digam-me a tempo», y pon el verbo en el tiempo que esa conjunción exige.",
+      "answer": "Se for preciso mudar a data, digam-me a tempo.",
+      "alternatives": [],
+      "hintEs": "irregular, tercera persona",
+      "espejoEs": false
     }
   }
 ]

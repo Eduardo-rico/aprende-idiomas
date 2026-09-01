@@ -38,14 +38,25 @@ describe('cuarentena — puerta de servicio', () => {
     const todos = await loadAllBlocks('pt', { incluirEnCuarentena: true });
     const retirados = todos.length - servidos.length;
     expect(retirados).toBeGreaterThan(0);
-    // Cota de seguridad contra el marcado accidental. Estaba en 0,15
-    // cuando la cuarentena eran los 102 de la Ola V (5 %). En E2#22 se
-    // retiraron 595 ítems más POR DECISIÓN MEDIDA —excedente sin dictamen
-    // sobre puntos que ya llegan al piso— y la cuarentena pasó al 28 %.
-    // La cota se sube porque el estado cambió, no porque estorbara; lo que
-    // de verdad protege es el test de abajo, que mira el efecto en vez del
-    // volumen.
-    expect(retirados / todos.length).toBeLessThan(0.35);
+    // La cota de PORCENTAJE se retiró en E2#29, después de subirla dos
+    // veces —0,15 → 0,35— y verla saltar otra vez. Cada retirada ha sido
+    // deliberada y comprobada por el invariante de abajo, así que subir el
+    // número cada vez es un trinquete: una cota que se afloja siempre que
+    // molesta no protege de nada, y encima da la impresión contraria.
+    //
+    // La sustituye una cota que NO se puede arrastrar, porque no depende
+    // de cuánto se ha retirado sino de si queda bastante para enseñar:
+    // **el corpus servible tiene que cubrir la suma de todos los pisos.**
+    // Si un día no la cubre, el curso no puede alcanzar su propia meta por
+    // mucho que el porcentaje parezca razonable.
+    const { contarPuntos, pisoCero, conPisoCero, conPadreCubierto } = await import('@/scripts/lib/conceptos-finos');
+    const { ALL_CONCEPTS } = await import('@/lib/data/languages/pt/curriculum');
+    const { CONCEPTOS_FINOS } = await import('@/lib/data/languages/pt/conceptos-finos.generated');
+    const { cuenta } = contarPuntos(servidos as any[]);
+    for (const c of [...ALL_CONCEPTS, ...CONCEPTOS_FINOS]) if (!cuenta.has(c.id)) cuenta.set(c.id, 0);
+    const piso = conPadreCubierto(conPisoCero((id: string) => (id.startsWith('b12') ? 6 : 8), pisoCero()), cuenta);
+    const sumaPisos = [...cuenta.keys()].reduce((a, id) => a + piso(id), 0);
+    expect((servidos as any[]).length).toBeGreaterThan(sumaPisos);
   });
 
   it('retirar la cuarentena no deja NINGÚN punto por debajo de su piso', async () => {

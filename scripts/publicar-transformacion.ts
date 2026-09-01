@@ -16,8 +16,9 @@ import { verificar, respuestaDe, informeEspejo, type ItemTrans } from './lib/tra
 import { ITEMS as E2_19 } from './lotes/trans-e2-19';
 import { ITEMS as E2_19B } from './lotes/trans-e2-19b';
 import { ITEMS as E2_20 } from './lotes/trans-e2-20';
+import { ITEMS as E2_29 } from './lotes/trans-e2-29';
 
-const LOTES: Record<string, ItemTrans[]> = { 'e2-19': E2_19, 'e2-19b': E2_19B, 'e2-20': E2_20 };
+const LOTES: Record<string, ItemTrans[]> = { 'e2-19': E2_19, 'e2-19b': E2_19B, 'e2-20': E2_20, 'e2-29': E2_29 };
 
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
 const lote = arg('--lote') ?? '';

@@ -509,7 +509,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-adverbial",
     "type": "listening",
     "data": {
       "audioText": "O gerúndio em português é formado com as terminações -ando, -endo e -indo.",
@@ -637,7 +638,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-adverbial",
     "type": "translation",
     "data": {
       "source": "Eu acordei sonhando com ela.",
@@ -2044,7 +2046,8 @@
     "tags": [],
     "contentHash": "5eebed8604707e6e24c127748a9bdae1ff1361f933ce3b37e310df81e9bee22c",
     "esContrast": "Andar + gerúndio indica estado habitual, diferente de 'andar' em espanhol.",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-adverbial",
     "type": "fill_blank",
     "data": {
       "sentence": "Eu ando ___ muito ultimamente.",
@@ -2117,7 +2120,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-adverbial",
     "type": "flashcard",
     "data": {
       "front": "¿Qué significa 'chegando' en el contexto de saludo informal en PT-BR?",
@@ -2965,7 +2969,8 @@
       "coloquial"
     ],
     "contentHash": "94b6b800724297ed4ce9786cdcf4b79209b5cc61c7f3addc62f0a4d97cbc98f2",
-    "variantStatus": "unchecked",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b7-gerundio-adverbial",
     "type": "fill_blank",
     "data": {
       "sentence": "Faz anos que ando ___ com esse projeto.",
@@ -6547,6 +6552,136 @@
       "explanationEs": "Y con verbos en -ir: «está a dormir».",
       "alternatives": [],
       "calcoEs": "Está durmiendo, no hagas ruido."
+    }
+  },
+  {
+    "id": "tr29-018",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio-adverbial"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "f326f032109960af71ce86a75ddcaa5345aab5779c89d8c13e29a411ee47dbc9",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Saiu de casa correndo.",
+      "instructionEs": "Pasa el gerundio adverbial a la construcción con preposición que el portugués europeo prefiere, y reescribe la frase entera.",
+      "answer": "Saiu de casa a correr.",
+      "alternatives": [],
+      "hintEs": "«a» + infinitivo",
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "tr29-019",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio-adverbial"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "1f1431da1e943048d3aba99b71edf1f44f45a70c7a3c6033d2f8f4f8a0ad22fd",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Respondeu-me sorrindo.",
+      "instructionEs": "Pasa el gerundio adverbial a la construcción con preposición que el portugués europeo prefiere, y reescribe la frase entera.",
+      "answer": "Respondeu-me a sorrir.",
+      "alternatives": [],
+      "hintEs": "«a» + infinitivo, y el pronombre no se mueve",
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "tr29-020",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio-adverbial"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "c94757a7b1489dfe8961352575e72b84076350ce5c10db97701f999af915838e",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Entrou na sala tremendo.",
+      "instructionEs": "Pasa el gerundio adverbial a la construcción con preposición que el portugués europeo prefiere, y reescribe la frase entera.",
+      "answer": "Entrou na sala a tremer.",
+      "alternatives": [],
+      "hintEs": "«a» + infinitivo",
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "tr29-021",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio-adverbial"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "46e67f3dd111a84043cc09981ea0409ea2c6594ffbe2b36d1516b23a2228057f",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Passou a tarde toda chorando.",
+      "instructionEs": "Pasa el gerundio adverbial a la construcción con preposición que el portugués europeo prefiere, y reescribe la frase entera.",
+      "answer": "Passou a tarde toda a chorar.",
+      "alternatives": [],
+      "hintEs": "«a» + infinitivo",
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "tr29-022",
+    "blockId": 7,
+    "lessonId": "b7-l2-gerundio",
+    "difficulty": 2,
+    "concepts": [
+      "b7-gerundio-adverbial"
+    ],
+    "tags": [
+      "e2-29",
+      "transformacion"
+    ],
+    "contentHash": "1f575dcefbb1bd5324560f6b70688a2ab034d134e28a25a7444a2e1ff5224080",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación E2-29: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Ficou à porta vendo o carro afastar-se.",
+      "instructionEs": "Pasa el gerundio adverbial a la construcción con preposición que el portugués europeo prefiere, y reescribe la frase entera.",
+      "answer": "Ficou à porta a ver o carro afastar-se.",
+      "alternatives": [],
+      "hintEs": "«a» + infinitivo, y el resto de la frase no cambia",
+      "espejoEs": false
     }
   }
 ]
