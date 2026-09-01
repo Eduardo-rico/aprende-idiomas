@@ -38,12 +38,21 @@ const L: Linea[] = [];
 // Las palabras viven en `parrafos[].palabras[]` sólo en las lecturas con
 // karaoke; en el resto están en `parrafos[].texto`. Contar sólo el primer
 // campo daba 29.695 de 3.219.799 — el 0,9 %.
+// PALABRA = algo con una LETRA dentro. Contar por `split(/\s+/)` suma la
+// puntuación suelta, y eso importó de verdad: al separar las 53.101 rayas
+// del transcriptor —«minguar--quando» → «minguar — quando»— esta cifra
+// subió de 3.219.799 a 3.289.461 **sin que se hubiera leído una palabra
+// más de portugués**. Un cambio de formato movió el número de portada un
+// 2 %. Y los tokens de `palabras[]` tampoco valen tal cual: llevan la raya
+// suelta desde ese mismo cambio.
+const conLetra = (t: string) => /\p{L}/u.test(t);
 let palabras = 0, lecturas = 0;
 for (const f of fs.readdirSync(LECTURAS).filter((x) => x.endsWith('.json'))) {
   const d = JSON.parse(fs.readFileSync(path.join(LECTURAS, f), 'utf8'));
   lecturas++;
   for (const p of d.parrafos ?? [])
-    palabras += (p.palabras?.length as number) || String(p.texto ?? '').split(/\s+/).filter(Boolean).length;
+    palabras += (p.palabras as { t: string }[] | undefined)?.filter((w) => conLetra(String(w.t ?? ''))).length
+      ?? String(p.texto ?? '').split(/\s+/).filter(conLetra).length;
 }
 L.push({ eje: 'Lectura', medido: `${palabras.toLocaleString('es')} palabras · ${lecturas} lecturas`,
   meta: '1.900.000', pasa: palabras >= 1_900_000, comando: 'npx tsx scripts/gate-e5.ts' });

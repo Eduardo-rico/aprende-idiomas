@@ -13,6 +13,15 @@ const lang = process.argv[2] ?? 'pt';
 const dir = path.join(process.cwd(), 'lib/data/languages', lang, 'lecturas');
 
 const archivos = fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort();
+// PALABRA = algo que tenga una LETRA dentro. Contar por `split(/\s+/)`
+// suma la puntuación suelta, y eso importó de verdad: al separar las
+// 53.101 rayas del transcriptor —«minguar--quando» → «minguar — quando»—
+// la cifra de lectura subió de 3.219.799 a 3.289.461 **sin que se hubiera
+// leído una palabra más de portugués**. Un cambio de formato movió el
+// número de portada un 2 %.
+const esPalabra = (t) => /\p{L}/u.test(t);
+const contarPalabras = (s) => String(s ?? '').split(/\s+/).filter(esPalabra).length;
+
 let palabras = 0;
 const porNivel = new Map();
 const porVariante = new Map();
@@ -21,7 +30,7 @@ const sinSerie = [];
 
 for (const f of archivos) {
   const l = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
-  const n = l.parrafos.reduce((a, p) => a + p.texto.split(/\s+/).filter(Boolean).length, 0);
+  const n = l.parrafos.reduce((a, p) => a + contarPalabras(p.texto), 0);
   palabras += n;
   const nivel = l.nivel ?? '??';
   // Sin `?? 'pt'`: desde E2#17 el campo es obligatorio y el gate del
