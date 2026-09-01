@@ -119,3 +119,68 @@ describe('FillBlankCard con un hueco — no se rompe lo que ya funcionaba', () =
     expect(onSubmit).toHaveBeenCalledWith('como', false);
   });
 });
+
+// ── E2#14 · LA PISTA QUE LA TARJETA NUNCA MOSTRÓ ─────────────────────
+//
+// El esquema acepta `hintEs` y la tarjeta no lo renderiza. Medido: de
+// los 417 `fill_blank` publicados, CERO lo usan — la convención de facto
+// es meter la pista entre paréntesis dentro de la frase. Es decir: un
+// campo que el esquema valida, que un autor puede rellenar de buena fe y
+// que el alumno no ve nunca. Un campo así no es una funcionalidad a
+// medias: es una funcionalidad que no existe, y silenciosa.
+//
+// Lo destapó el dry-run del lote 11 v2 —un lote de «cloze CON PISTA» que
+// se iba a publicar sin pista— y bloquea su publicación, así que se
+// arregla aquí y no en la próxima sesión.
+const conPista = {
+  id: 'p', type: 'fill_blank',
+  data: {
+    sentence: 'Para os teus colegas ___ o comboio das seis, temos de sair já.',
+    blanks: [{ position: 0, answer: 'apanharem', alternatives: [] }],
+    hintEs: 'apanhar — para que tus compañeros cojan el tren',
+  },
+} as any;
+
+describe('FillBlankCard · la pista', () => {
+  it('MUESTRA `hintEs` cuando el ítem la trae', () => {
+    render(<FillBlankCard ex={conPista} onSubmit={() => {}} />);
+    expect(screen.getByText(/apanhar — para que tus compañeros/)).toBeTruthy();
+  });
+
+  it('no inventa una caja de pista cuando el ítem no la trae', () => {
+    render(<FillBlankCard ex={unHueco} onSubmit={() => {}} />);
+    expect(screen.queryByTestId('pista')).toBeNull();
+  });
+
+  it('la pista NO se cuenta como parte de la frase con huecos', () => {
+    render(<FillBlankCard ex={conPista} onSubmit={() => {}} />);
+    expect(inputs()).toHaveLength(1);
+  });
+});
+
+// El ancho del input estaba calculado sobre la LONGITUD DE LA RESPUESTA
+// (`size={Math.max(6, answer.length)}`), así que la caja se ensanchaba
+// con la respuesta y filtraba cuántas letras tiene. Es un atajo del
+// runner, no del contenido: el mismo alumno que no sabe la forma puede
+// descartar candidatas por el tamaño de la caja.
+describe('FillBlankCard · el ancho del input no puede filtrar la respuesta', () => {
+  it('una respuesta larga y una corta pintan cajas del mismo ancho', () => {
+    render(<FillBlankCard ex={unHueco} onSubmit={() => {}} />);
+    const corta = inputs()[0]!.getAttribute('size');
+    cleanup();
+    render(<FillBlankCard ex={conPista} onSubmit={() => {}} />);
+    expect(inputs()[0]!.getAttribute('size')).toBe(corta);
+  });
+});
+
+// Si el alumno acierta con una ALTERNATIVA declarada, la tarjeta le decía
+// «Respuesta correcta: <answer>» — otra palabra distinta de la que él
+// escribió y que también era buena. Puntuaba bien y explicaba mal.
+describe('FillBlankCard · al revelar, las alternativas aceptadas se ven', () => {
+  it('enseña la alternativa junto a la respuesta', () => {
+    render(<FillBlankCard ex={unHueco} onSubmit={() => {}} />);
+    escribir(0, 'estudo');
+    fireEvent.click(screen.getByText('OK'));
+    expect(screen.getByText(/estudo/)).toBeTruthy();
+  });
+});

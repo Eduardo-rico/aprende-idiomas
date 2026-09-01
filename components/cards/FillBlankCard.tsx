@@ -18,6 +18,13 @@ const aciertaHueco = (b: { answer: string; alternatives?: string[] }, valor: str
   return b.answer.toLowerCase() === v || (b.alternatives ?? []).some((a) => a.toLowerCase() === v);
 };
 
+/** El ancho del input es CONSTANTE a propósito. Estaba calculado sobre
+ *  `answer.length`, así que la caja se ensanchaba con la respuesta y
+ *  filtraba cuántas letras tiene: un atajo del runner, no del contenido —
+ *  el alumno que no sabe la forma puede descartar candidatas por el
+ *  tamaño de la caja. */
+const ANCHO_INPUT = 12;
+
 export function FillBlankCard({ ex, onSubmit }: Props) {
   // CRITICAL FIX: import useSettings directly, no require() wrapper.
   const { variant } = useSettings();
@@ -30,6 +37,13 @@ export function FillBlankCard({ ex, onSubmit }: Props) {
   // posición: así el alumno ve QUÉ hueco está rellenando, que con un solo
   // input tampoco se sabía.
   const trozos = String(data.sentence ?? "").split("___");
+  // LA PISTA. El esquema la acepta desde siempre y la tarjeta no la
+  // pintaba nunca: de los 417 `fill_blank` publicados, CERO usan
+  // `hintEs`, porque la convención de facto acabó siendo meterla entre
+  // paréntesis dentro de la frase. Un campo que el esquema valida, que
+  // un autor rellena de buena fe y que el alumno no ve, no es una
+  // funcionalidad a medias: es una que no existe, y en silencio.
+  const pista = typeof data.hintEs === "string" ? data.hintEs.trim() : "";
   const completo = blanks.length > 0 && valores.every((v) => v.trim().length > 0);
 
   const submit = () => {
@@ -56,19 +70,36 @@ export function FillBlankCard({ ex, onSubmit }: Props) {
                     value={valores[i] ?? ""}
                     onChange={(e) => set(i, e.target.value)}
                     onKeyDown={(e) => { if (e.key === "Enter" && completo) submit(); }}
-                    size={Math.max(6, (blanks[i]?.answer ?? "").length)}
+                    size={ANCHO_INPUT}
                     className="mx-1 border-b-2 border-border bg-background text-center focus:border-primary focus:outline-none"
                   />
             )}
           </span>
         ))}
       </div>
+      {pista && (
+        <p data-testid="pista" className="text-center text-sm text-muted-foreground italic">
+          {pista}
+        </p>
+      )}
       {!revealed ? (
         <button onClick={submit} className="w-full px-4 py-2 bg-primary rounded-md font-medium" disabled={!completo}>OK</button>
       ) : (
         <div className="text-center text-sm">
           {blanks.length > 1 ? "Respuestas correctas: " : "Respuesta correcta: "}
           <span className="font-mono">{blanks.map((b) => b.answer).join(" · ")}</span>
+          {/* Si el alumno acertó con una ALTERNATIVA declarada, la
+              tarjeta le enseñaba otra palabra distinta de la que había
+              escrito y que también era buena: puntuaba bien y explicaba
+              mal. */}
+          {blanks.some((b) => (b.alternatives ?? []).length > 0) && (
+            <span className="block text-xs text-muted-foreground">
+              También válido:{" "}
+              <span className="font-mono">
+                {blanks.flatMap((b) => b.alternatives ?? []).join(" · ")}
+              </span>
+            </span>
+          )}
         </div>
       )}
     </div>

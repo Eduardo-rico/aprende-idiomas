@@ -21,6 +21,11 @@ export interface ResolvedData {
   // fill_blank
   sentence?: string;
   blanks?: { position: number; answer: string; alternatives?: string[] }[];
+  /** La pista que se enseña bajo la frase. El esquema la aceptaba desde
+   *  siempre y NINGUNA tarjeta la pintaba: de los 417 `fill_blank`
+   *  publicados, cero la usan. Faltaba aquí, en el tipo aplanado, y por
+   *  eso la tarjeta no podía ni leerla. */
+  hintEs?: string;
   // listening
   audioText?: string;
   question?: string;

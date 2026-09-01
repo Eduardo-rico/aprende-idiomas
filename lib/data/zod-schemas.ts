@@ -86,6 +86,22 @@ const FillBlankData = z.object({
     answer: z.string().min(1),
     alternatives: z.array(z.string()).optional(),
   })).min(1),
+  /** La pista que se enseña bajo la frase.
+   *
+   *  NO estaba declarada, y `z.object` descarta en silencio lo que no
+   *  declara: un autor podía escribir `hintEs`, el esquema respondía
+   *  «válido» y el campo desaparecía antes de llegar a la tarjeta. De
+   *  los 417 `fill_blank` publicados, cero lo usan — y ahora se entiende
+   *  por qué: no habría servido de nada.
+   *
+   *  Medido en E2#14: de esos 417, **72 (17,3 %) tienen un hueco léxico
+   *  abierto sin pista de ningún tipo**, y en la muestra de veinte hay
+   *  **nueve inresolubles** («Preciso de um ___ para ir ao aeroporto»
+   *  acepta sólo «táxi»). Un ejercicio que no se puede resolver cobra
+   *  FALLOS falsos, y el fallo entra en el FSRS y hunde el mastery de un
+   *  punto que el alumno sí sabe. Es el gemelo del multi-hueco, que
+   *  cobraba aciertos de más. */
+  hintEs: z.string().min(1).optional(),
 });
 const ListeningData = z.object({
   audioText: z.string().min(1),
