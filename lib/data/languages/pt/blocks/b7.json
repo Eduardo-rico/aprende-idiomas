@@ -876,26 +876,19 @@
     "tags": [],
     "contentHash": "2ef382c4281c5e9df8f884be2a7f4f67806962993837a83605e7035939cae3a9",
     "esContrast": "En portugués moderno: 'Se saber ele' en lugar del subjuntivo pluscuamperfecto español 'hubiera sabido'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: corregido a europeo — MOLDE ROTO: «Se ___ ele ___ antes» tenía por respuestas «saber» y «ele», así que la frase montada decía «Se saber ele ele antes». Es la misma avería que el «Dir-___ (eu)-a» de la calibración: un pronombre puesto donde va el lema",
     "type": "fill_blank",
     "data": {
-      "sentence": "Se ___ ele ___ antes, tínhamos ido contigo.",
+      "sentence": "Por não ___ eles a hora certa, chegaram tarde. (saber)",
       "blanks": [
         {
           "position": 0,
-          "answer": "saber",
-          "alternatives": [
-            "ter avisado"
-          ]
-        },
-        {
-          "position": 1,
-          "answer": "ele",
-          "alternatives": [
-            "sido"
-          ]
+          "answer": "saberem",
+          "alternatives": []
         }
-      ]
+      ],
+      "hintEs": "infinitivo pessoal de «saber», 3.ª del plural — lleva desinencia porque su sujeto está expreso"
     }
   },
   {
@@ -3937,7 +3930,8 @@
     "tags": [],
     "contentHash": "de34803164ad494fca5812e921b081b7f835b191c8dacd3e3a6be34afa04d627",
     "esContrast": "Observa las dos personas diferentes: 'vir tu' (2ª) y 'vir ela' (3ª). En español dirías subjuntivo para ambas.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: leído entero, sin rasgo brasileño — infinitivo pessoal «vires» con «avisa-me» en ênclise: europeo en los dos rasgos",
     "type": "fill_blank",
     "data": {
       "sentence": "No caso de ___ tu, avisa-me com tempo. (vir)",

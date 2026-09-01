@@ -556,22 +556,23 @@
       "irregular",
       "formal"
     ],
-    "contentHash": "12da8b00b071fd7365d913f9459e8cb2f7c0aa183e59dd9a524f27b5bfe2133a",
+    "contentHash": "dec72d187d059904dd0cefcf876dba54b692cdbc86c4bd67576c7ba6b8824b27",
     "esContrast": "'Esforço' y 'esfuerzo' son falsos amigos: esfuerzo en PT-BR implica trabajo físico.",
     "audio": {
       "br": {
-        "hash": "b64e5e29ddce810c528af0e816bcddba9bf8754c0c0cb004f25a1e669921e9d1",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "8bba1d67f6b7d31615722edf70c1b3156aa454139608708f2354cb3fe423ea0c",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "95ebfd2432dd8a12ff6461695aa751e14d8b300aa22ef0bd7a612bbe5ae7f97c",
-        "voice": "Portuguese_Wiselady"
+        "hash": "8bba1d67f6b7d31615722edf70c1b3156aa454139608708f2354cb3fe423ea0c",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: corregido a europeo — TRES rasgos brasileños en una frase: «lhe daria» con próclise sin disparador, «você» como sujeto y «seus sonhos» sin artículo",
     "type": "listening",
     "data": {
-      "audioText": "Eu lhe daria um conselho se você fizesse um esforço para realizar seus sonhos.",
+      "audioText": "Eu dar-te-ia um conselho se fizesses um esforço para realizar os teus sonhos.",
       "question": "¿Qué consejo daría el hablante?",
       "options": [
         "Que haga un esfuerzo para realizar sus sueños",
@@ -1090,7 +1091,7 @@
     "tags": [
       "vocabulario"
     ],
-    "contentHash": "291ff1e56e1d804a45986ad333fcbd11ff76f273b27ab63a3d1e003857699baa",
+    "contentHash": "36ecbb6180303b14c2f5413d1c97a2053a7e1986068db772568a5ed5e3337715",
     "esContrast": "No confundas con 'poupar' que en español significa 'economizar' o 'ahorrar', no 'poblar'.",
     "audio": {
       "br": {
@@ -1102,12 +1103,13 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: corregido a europeo — «precisar» rige «de» en europeo: «preciso DE poupar»",
     "type": "flashcard",
     "data": {
       "front": "poupar (verbo)",
       "back": "ahorrar, guardar dinero",
-      "example": "Preciso poupar dinheiro para a viagem."
+      "example": "Preciso de poupar dinheiro para a viagem."
     }
   },
   {
@@ -1737,7 +1739,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: leído entero, sin rasgo brasileño — «acredita nos seus planos» sin rasgo brasileño",
     "type": "flashcard",
     "data": {
       "front": "sonhador / sonhadora",
@@ -5273,10 +5276,11 @@
     ],
     "contentHash": "bc163004642d6c57aa5d3fa50ff2d87cc14f9bdaea3c3edd9093d278c6a59a7a",
     "esContrast": "En discurso indirecto, los verbos principales van en pretérito imperfecto.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: corregido a europeo — dos huecos sin ninguna pista: «podia» encajaba igual que «queria» y el segundo hueco estaba abierto del todo",
     "type": "fill_blank",
     "data": {
-      "sentence": "Ela disse que não ___ ir ao médico porque não se sentia ___ .",
+      "sentence": "Ela disse que não ___ (querer) ir ao médico porque não se sentia ___ .",
       "blanks": [
         {
           "position": 0,
@@ -5292,7 +5296,8 @@
             "contente"
           ]
         }
-      ]
+      ],
+      "hintEs": "imperfeito de «querer», 3.ª persona; y en el segundo hueco, el adverbio contrario a «mal»"
     }
   },
   {
@@ -5964,7 +5969,7 @@
     "tags": [
       "vocabulario"
     ],
-    "contentHash": "d8004a56c0924a02773710af106cf1b5da97ab75ad9b35609855bcd205207660",
+    "contentHash": "19d5dca6a165f249870efcb5db5397b80163ac7f7d8f1d0748174695e5490a9d",
     "esContrast": "Cuidado: 'consejo' ≠ 'consello' (gallego). En portugués es 'conselho'.",
     "audio": {
       "br": {
@@ -5976,12 +5981,13 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: corregido a europeo — mezclaba «te» con un imperativo de «você» —«Seja paciente»— y ponía el clítico delante sin disparador. En europeo: «dar-te» en ênclise y «sê», el imperativo de tu",
     "type": "flashcard",
     "data": {
       "front": "Traduce 'consejo' (sustantivo)",
       "back": "conselho",
-      "example": "Posso te dar um conselho? Seja paciente."
+      "example": "Posso dar-te um conselho? Sê paciente."
     }
   },
   {
@@ -6202,21 +6208,22 @@
     "tags": [
       "discurso-relatado"
     ],
-    "contentHash": "cc461a52027d1dc0d38d85782b3e4411a446e2f8fea2f3b5a7990f069204ec42",
+    "contentHash": "c88bd2c7b2a228109903f6dda119f7ea7c9c36e0a1b4eba89da4d2fa4baa9b80",
     "audio": {
       "br": {
-        "hash": "56bdba9cd9ff3629a600f5f30d4e01c13ed6487a9b99c75a7fc04257e5c201cc",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "ec5bb40bd9e7ade089ef7ab3878ecca3449ff6294c3424d57149dbdbd3288197",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "5b721ea8ec8d36715d7abe8ceb9fcc76298c65bb9d4d45b73f536705aa1acc1c",
-        "voice": "Portuguese_Wiselady"
+        "hash": "ec5bb40bd9e7ade089ef7ab3878ecca3449ff6294c3424d57149dbdbd3288197",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: corregido a europeo — «em NOS ajudar» es próclise brasileña ante infinitivo; el europeo la pospone: «em ajudar-nos»",
     "type": "translation",
     "data": {
-      "source": "Ela disse que teria muito prazer em nos ajudar.",
+      "source": "Ela disse que teria muito prazer em ajudar-nos.",
       "target": "Ella dijo que tendría mucho placer en ayudarnos.",
       "sourceLang": "pt-pt",
       "targetLang": "es",

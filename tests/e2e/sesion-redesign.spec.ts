@@ -2,29 +2,18 @@
 // A.3 — Sesión Manual Lusitano. Verifies the redesigned session page
 // at /[lang]/practicar/srs matches the mockup's structure and the home
 // CTA routes correctly.
-import { test, expect, request } from '@playwright/test';
-
-const PASSWORD = process.env.AUTH_PASSWORD ?? 'charalito4';
+import { test, expect } from '@playwright/test';
+import { entrar, sembrar } from './helpers/sesion';
 
 test.describe('Sesión redesign (A.3)', () => {
+  // SEMBRAR, y no sólo entrar. Estos cuatro tests llevaban tiempo en rojo
+  // porque una sesión recién abierta no tiene tarjetas vencidas: la página
+  // pinta «Hoy no tienes nada pendiente» y la portada ofrece el
+  // diagnóstico en vez de «Empezar sesión», que decide por
+  // `db.cards.count()`. No era el rediseño: era que nadie sembraba.
   test.beforeEach(async ({ page, baseURL }) => {
-    const ctx = await request.newContext({ baseURL });
-    const res = await ctx.post('/api/auth/login', { data: { password: PASSWORD } });
-    expect(res.status(), 'login should succeed').toBe(200);
-    const cookies = await ctx.storageState();
-    await page.context().addCookies(
-      cookies.cookies.map((c) => ({
-        name: c.name,
-        value: c.value,
-        domain: c.domain,
-        path: c.path,
-        expires: c.expires,
-        httpOnly: c.httpOnly,
-        secure: c.secure,
-        sameSite: c.sameSite,
-      })),
-    );
-    await ctx.dispose();
+    const todos = await entrar(page, baseURL);
+    await sembrar(page, todos.slice(0, 12));
   });
 
   test('home CTA "Empezar sesión" va a /[lang]/practicar/srs', async ({ page }) => {

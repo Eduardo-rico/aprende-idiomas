@@ -108,26 +108,29 @@
       "coloquial",
       "regional"
     ],
-    "contentHash": "2df4c4e1c604210a924470cc517f014de276371c341e92d2208f0386f0c9c777",
+    "contentHash": "55b0ce99efeab0f127a81bc4bc12a76e58e0f8edc1a95d0dea8d394c77d9092a",
     "esContrast": "'Tirar de letra' = hacer algo con facilidad (expresión coloquial lusa). No traduzcas 'letra' como 'carta'.",
     "audio": {
       "br": {
-        "hash": "b16bd650e1278d37963e99330c0efb74a19869e8b83cb97ee5ed3e542e73f447",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "f099c1ff264756e3cd1164fb6cbfe9f36002696fc9550cb5116bb64511f46f8d",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "94d0c1373c4c9a5f96184dd5edc034812c1e25d24aece35f877478b1bd683df1",
-        "voice": "Portuguese_Wiselady"
+        "hash": "f099c1ff264756e3cd1164fb6cbfe9f36002696fc9550cb5116bb64511f46f8d",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: corregido a europeo — «tirar tudo de letra» es un modismo BRASILEÑO. En europeo no se dice",
     "type": "translation",
     "data": {
       "source": "Ellos resolvieron todo sin problemas.",
-      "target": "Eles tiraram tudo de letra.",
+      "target": "Eles resolveram tudo sem problemas.",
       "sourceLang": "es",
       "targetLang": "pt-pt",
-      "acceptedAlternatives": []
+      "acceptedAlternatives": [
+        "Eles resolveram tudo sem dificuldade."
+      ]
     }
   },
   {
@@ -2679,21 +2682,22 @@
       "regional",
       "idiomatica"
     ],
-    "contentHash": "624b34b13cc01b23b3bb89122d5165bb3a762c4d08fcece9d26a5c16fe3bd4b4",
+    "contentHash": "0d1f8e58a24e0c190f1059cfade7c0f54a987528b790e5432797cbbe76c720d6",
     "audio": {
       "br": {
-        "hash": "2b63964bf182dc4366b0b6e301cfb69cb994afcd84eef9990c2c99393c4c4586",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "5e5ccb087e53d1f5e35af85372bb99593850021165e98e200bd3926b0f5a0dc0",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "6abbe8ab166e9d840de7e4411be991f74218f5727361aff782c9a9e28bf97fa6",
-        "voice": "Portuguese_Wiselady"
+        "hash": "5e5ccb087e53d1f5e35af85372bb99593850021165e98e200bd3926b0f5a0dc0",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: corregido a europeo — mismo modismo brasileño —«tirar de letra»— declarado como `pt-pt`",
     "type": "translation",
     "data": {
-      "source": "Ela sempre tirou tudo de letra na escola.",
+      "source": "Ela sempre resolveu tudo com facilidade na escola.",
       "target": "Ella siempre se sacó todo con buena nota en la escuela.",
       "sourceLang": "pt-pt",
       "targetLang": "es",
@@ -4841,26 +4845,27 @@
       "idiomatica",
       "regional"
     ],
-    "contentHash": "15cfb1312ca03d535ea3c9214319b287c7ab25d40afe285b51729f4ae39eafe0",
+    "contentHash": "02d25ebfdbe47201e9951f2f199fd812ea329f6e2bc8867e543cd4ba2f9458b2",
     "audio": {
       "br": {
-        "hash": "b2dd1bf306b6246a5d4696af3b5d7721f3caaf12eccb1a518e47aeff237fa980",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "367379ac426eb18cf8c728420d56f1e51b8484619ccf7079f7a687c7acde2203",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "af0de44710fbe520d0186c6c824daccc3b209b44cb56cd4636374d7b1b85adae",
-        "voice": "Portuguese_Wiselady"
+        "hash": "367379ac426eb18cf8c728420d56f1e51b8484619ccf7079f7a687c7acde2203",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: corregido a europeo — «tão bom QUANTO» es la comparación brasileña; el europeo dice «tão bom COMO». Y el «açaí» se cambia por un genérico: no es que esté mal, es que el ejemplo enseñaba léxico de la otra variante",
     "type": "translation",
     "data": {
-      "source": "Eu nunca tinha provado um açaí tão bom quanto aquele.",
-      "target": "Nunca había probado un açaí tan bueno como aquel.",
+      "source": "Eu nunca tinha provado um doce tão bom como aquele.",
+      "target": "Nunca había probado un dulce tan bueno como aquel.",
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": [
-        "Nunca había probado un açaí tan bueno como ese."
+        "Nunca había probado un dulce tan bueno como ese."
       ]
     }
   },
@@ -8114,22 +8119,23 @@
       "irregular",
       "regional"
     ],
-    "contentHash": "f3881f497cf02db3410f9b1bf5462ab501ca2e2aac5e4a9327c1e9685eb622c6",
+    "contentHash": "cb7f1117aa7b5d701e7c0e36b9d0493d8571135a4835472edc69877a162d32c0",
     "esContrast": "'Tinha feito' = 'había hecho/horneado' (pluscuamperfecto con ter).",
     "audio": {
       "br": {
-        "hash": "d00ea67b80324e1a5c8fc68a1f0035e399df7f34bdad362d128c4b1ffc73f863",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "40d383771c5a62455f06e1a3854d5cdef92c67e957baf1ceb2cc023851e18f84",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "b4242fbfdd28d5e1814d4a0d33494e73d20b6302166246790d7ccfadbac37ad1",
-        "voice": "Portuguese_Wiselady"
+        "hash": "40d383771c5a62455f06e1a3854d5cdef92c67e957baf1ceb2cc023851e18f84",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: corregido a europeo — DOS RASGOS: «antes de VOCÊ chegar» es brasileño —el europeo usa el infinitivo pessoal, «antes de chegares»— y la respuesta en español dejaba «bolo» sin traducir",
     "type": "listening",
     "data": {
-      "audioText": "Eu tinha feito o bolo antes de você chegar. A Maria já tinha provado também.",
+      "audioText": "Eu tinha feito o bolo antes de chegares. A Maria já o tinha provado também.",
       "question": "¿Qué había hecho el hablante antes de que llegara la otra persona?",
       "options": [
         "Había comprado el bolo",
@@ -8137,7 +8143,7 @@
         "Había pedido el bolo",
         "Había visto el bolo"
       ],
-      "answer": "Había horneado el bolo"
+      "answer": "Había hecho el pastel"
     }
   },
   {

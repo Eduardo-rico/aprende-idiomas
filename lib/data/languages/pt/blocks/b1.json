@@ -1138,27 +1138,28 @@
     "tags": [
       "falso-amigo"
     ],
-    "contentHash": "853ed3e21a5772eb1f28af269d8b4f4e05c3b07f2809e3e7ddf9842ebba57cab",
+    "contentHash": "b0768cd9a8a5f3006e080301744d5a0e747897c9efec35f0b82f00446d01d582",
     "esContrast": "'Mãe' es solo la madre biológica, no se confunde con 'madrasta'.",
     "audio": {
       "br": {
-        "hash": "e1043ebb3526b69045821fb770bf05008e4a2f7496215c4a33d092b4691939b7",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "e47932816cb3ba1e95a606a08c96a4d6670bfe7be910b58adc87b51e4f4857a3",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "a1bd5bdb4b19ed2a2f72948a1aa07dd5532ed9dffc02ae2d9b07ff87484636da",
-        "voice": "Portuguese_Wiselady"
+        "hash": "e47932816cb3ba1e95a606a08c96a4d6670bfe7be910b58adc87b51e4f4857a3",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: corregido a europeo — «Minha mãe» sin artículo es brasileño; en europeo, «A minha mãe»",
     "type": "translation",
     "data": {
       "source": "Mi madre es doctora.",
-      "target": "Minha mãe é médica.",
+      "target": "A minha mãe é médica.",
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": [
-        "Minha mãe é doutora."
+        "A minha mãe é doutora."
       ]
     }
   },
@@ -1310,8 +1311,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: leído entero, sin rasgo brasileño — «O cão do meu vizinho» con artículo delante del posesivo",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'perro' en portugués?",
@@ -3334,8 +3335,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: OK ítem a ítem (informe-cola1-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: leído entero, sin rasgo brasileño — «A minha mãe» con artículo delante del posesivo",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'madre' en portugués?",
@@ -4157,7 +4158,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: leído entero, sin rasgo brasileño — «A minha mãe é brasileira» con artículo delante del posesivo",
     "type": "translation",
     "data": {
       "source": "A minha mãe é brasileira.",
@@ -4918,7 +4920,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: leído entero, sin rasgo brasileño — «O cão do vizinho late muito» sin rasgo brasileño",
     "type": "translation",
     "data": {
       "source": "O cão do vizinho late muito.",
@@ -6682,8 +6685,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#3 2026-08-13: DUDA — paloma→pombo defendible, pero «pomba» es el equivalente más directo; merece nota en la carta o aceptar ambas",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: leído entero, sin rasgo brasileño — «O pombo está no telhado» sin rasgo brasileño",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'paloma' en portugués?",
@@ -9700,7 +9703,7 @@
       }
     },
     "variantStatus": "unchecked",
-    "variantVerificacion": "Par mínimo de escucha E2#20. Gates: lo locutado está entre las opciones, las dos son palabras distintas con glosas distintas y difieren en una letra. PENDIENTE DE OÍDO: que la voz realice la oposición la vocal tónica, cerrada o abierta — eso no lo puede comprobar un script, y hasta que alguien lo diga el punto no se da por enseñado.",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: par mínimo de Escucha — NO dictaminado: espera el oído de Edu, porque EL_VOICES usa la misma voz para pt y br",
     "register": "neutro",
     "type": "listening",
     "data": {
@@ -9738,7 +9741,7 @@
       }
     },
     "variantStatus": "unchecked",
-    "variantVerificacion": "Par mínimo de escucha E2#20. Gates: lo locutado está entre las opciones, las dos son palabras distintas con glosas distintas y difieren en una letra. PENDIENTE DE OÍDO: que la voz realice la oposición la vocal tónica, cerrada o abierta — eso no lo puede comprobar un script, y hasta que alguien lo diga el punto no se da por enseñado.",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: par mínimo de Escucha — NO dictaminado: espera el oído de Edu, porque EL_VOICES usa la misma voz para pt y br",
     "register": "neutro",
     "type": "listening",
     "data": {
@@ -9776,7 +9779,7 @@
       }
     },
     "variantStatus": "unchecked",
-    "variantVerificacion": "Par mínimo de escucha E2#20. Gates: lo locutado está entre las opciones, las dos son palabras distintas con glosas distintas y difieren en una letra. PENDIENTE DE OÍDO: que la voz realice la oposición la vocal tónica, cerrada o abierta — eso no lo puede comprobar un script, y hasta que alguien lo diga el punto no se da por enseñado.",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: par mínimo de Escucha — NO dictaminado: espera el oído de Edu, porque EL_VOICES usa la misma voz para pt y br",
     "register": "neutro",
     "type": "listening",
     "data": {
@@ -9814,7 +9817,7 @@
       }
     },
     "variantStatus": "unchecked",
-    "variantVerificacion": "Par mínimo de escucha E2#20. Gates: lo locutado está entre las opciones, las dos son palabras distintas con glosas distintas y difieren en una letra. PENDIENTE DE OÍDO: que la voz realice la oposición vocal oral o nasal — eso no lo puede comprobar un script, y hasta que alguien lo diga el punto no se da por enseñado.",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: par mínimo de Escucha — NO dictaminado: espera el oído de Edu, porque EL_VOICES usa la misma voz para pt y br",
     "register": "neutro",
     "type": "listening",
     "data": {
@@ -9852,7 +9855,7 @@
       }
     },
     "variantStatus": "unchecked",
-    "variantVerificacion": "Par mínimo de escucha E2#20. Gates: lo locutado está entre las opciones, las dos son palabras distintas con glosas distintas y difieren en una letra. PENDIENTE DE OÍDO: que la voz realice la oposición vocal oral o nasal — eso no lo puede comprobar un script, y hasta que alguien lo diga el punto no se da por enseñado.",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: par mínimo de Escucha — NO dictaminado: espera el oído de Edu, porque EL_VOICES usa la misma voz para pt y br",
     "register": "neutro",
     "type": "listening",
     "data": {
@@ -9890,7 +9893,7 @@
       }
     },
     "variantStatus": "unchecked",
-    "variantVerificacion": "Par mínimo de escucha E2#20. Gates: lo locutado está entre las opciones, las dos son palabras distintas con glosas distintas y difieren en una letra. PENDIENTE DE OÍDO: que la voz realice la oposición vocal oral o nasal — eso no lo puede comprobar un script, y hasta que alguien lo diga el punto no se da por enseñado.",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: par mínimo de Escucha — NO dictaminado: espera el oído de Edu, porque EL_VOICES usa la misma voz para pt y br",
     "register": "neutro",
     "type": "listening",
     "data": {
@@ -9928,7 +9931,7 @@
       }
     },
     "variantStatus": "unchecked",
-    "variantVerificacion": "Par mínimo de escucha E2#20. Gates: lo locutado está entre las opciones, las dos son palabras distintas con glosas distintas y difieren en una letra. PENDIENTE DE OÍDO: que la voz realice la oposición vocal oral o nasal — eso no lo puede comprobar un script, y hasta que alguien lo diga el punto no se da por enseñado.",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: par mínimo de Escucha — NO dictaminado: espera el oído de Edu, porque EL_VOICES usa la misma voz para pt y br",
     "register": "neutro",
     "type": "listening",
     "data": {
@@ -9966,7 +9969,7 @@
       }
     },
     "variantStatus": "unchecked",
-    "variantVerificacion": "Par mínimo de escucha E2#20. Gates: lo locutado está entre las opciones, las dos son palabras distintas con glosas distintas y difieren en una letra. PENDIENTE DE OÍDO: que la voz realice la oposición vocal oral o nasal — eso no lo puede comprobar un script, y hasta que alguien lo diga el punto no se da por enseñado.",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: par mínimo de Escucha — NO dictaminado: espera el oído de Edu, porque EL_VOICES usa la misma voz para pt y br",
     "register": "neutro",
     "type": "listening",
     "data": {

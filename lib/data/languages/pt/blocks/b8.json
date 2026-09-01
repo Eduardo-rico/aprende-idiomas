@@ -153,7 +153,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: leído entero, sin rasgo brasileño — «João perguntou onde eu morava» sin rasgo brasileño",
     "type": "translation",
     "data": {
       "source": "Juan preguntó dónde yo vivía.",
@@ -303,7 +304,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: leído entero, sin rasgo brasileño — «aproveitá-la-ia» en mesóclisis, que es europea",
     "type": "translation",
     "data": {
       "source": "Si le dieran esa oportunidad, la aprovecharía.",
@@ -1134,7 +1136,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: leído entero, sin rasgo brasileño — «Ana imaginou que ele traria» sin rasgo brasileño",
     "type": "translation",
     "data": {
       "source": "Ana imaginou que ele traria aquele documento de lá.",
@@ -1315,27 +1318,28 @@
       "coloquial",
       "falso-amigo"
     ],
-    "contentHash": "25cb28ba1ab3278b9a461099ec96bbaff1b0a0648eb35f5cd56f8bebffedbc88",
+    "contentHash": "0930ba5b14a3b95b871cf262a437e3921d3c749367f4b2cb7af9653809232822",
     "esContrast": "En PT-BR se usa 'se derem' con sujeito indefinido; en PT-PT es más común 'se lhes derem'. La traducción al español requiere reconstruir la subordinada condicional.",
     "audio": {
       "br": {
-        "hash": "1982e15c67b33cedd1f2af65dab426249b596140f55fad16a21903090c0d841e",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "2e8070f2d4ff71c637f14083c79c669a05e2e5ba918b77aa487a5aa8eed1cae5",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "5e12255cf1525ff26ee22cc287745b0cb98697acffeee29c1cf3c3858b31827d",
-        "voice": "Portuguese_Wiselady"
+        "hash": "2e8070f2d4ff71c637f14083c79c669a05e2e5ba918b77aa487a5aa8eed1cae5",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: corregido a europeo — LOS DOS LADOS CAMBIADOS Y LOS DOS MAL: el campo español traía portugués —«Si se derem bem»— y el portugués traía español —«Si se dan bien»—. Reescritos los dos en su lengua",
     "type": "translation",
     "data": {
-      "source": "Si se derem bem, vão conseguir.",
-      "target": "Si se dan bien, van a conseguir.",
+      "source": "Si se llevan bien, lo van a conseguir.",
+      "target": "Se se derem bem, vão conseguir.",
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": [
-        "Si se lhes derem bem, vão conseguir."
+        "Se se derem bem, hão de conseguir."
       ]
     }
   },
@@ -2153,7 +2157,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: leído entero, sin rasgo brasileño — «Conhecer-se-iam os factos»: mesóclisis y «factos» con la «c» que el europeo sí pronuncia",
     "type": "translation",
     "data": {
       "source": "Conhecer-se-iam os factos se fizessem o relatório.",
@@ -2174,24 +2179,25 @@
       "b8-colocacao-pronominal"
     ],
     "tags": [],
-    "contentHash": "4da6718a607aedc37dca2814ebe744ad1147c5d15d935d50eef8dd129738f9ed",
+    "contentHash": "8b76e6b45efa2323c735546e446603e7e82921defe958bccd81729fcff1cb48c",
     "esContrast": "Mnemotecnia: B-A-N-D-E-I-R-A = Baste, Ainda, Não, Demonstrativos, etc.",
     "audio": {
       "br": {
-        "hash": "b5935058731c1f67eaf19a124fb3c4dd8f12003a729b67e968bb695ee6d5cbc0",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "0c51cddd85274715c642e90e59f564104fd5bc5799098c6b51da4cde8bad1f7a",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "e3ccde706df9c6ce727055681fa9cac6a67b81f557835572c54dd84c14890ff9",
-        "voice": "Portuguese_Wiselady"
+        "hash": "0c51cddd85274715c642e90e59f564104fd5bc5799098c6b51da4cde8bad1f7a",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: corregido a europeo — enseñaba la REGLA BRASILEÑA: el mnemotécnico «BANDEIRA» y «ênclise = verbo al inicio» describen el brasileño, donde la próclise es el caso normal. En europeo es al revés — la ênclise es la norma y la próclise pide atractor—, así que la tarjeta invertía el punto entero del bloque",
     "type": "flashcard",
     "data": {
       "front": "¿Cuál es la regla de oro para recordar próclise, ênclise y mesóclise?",
-      "back": "PRÓCLISE = palabra BANDEIRA antes del verbo. ÊNCLISE = verbo al inicio. MESÓCLISE = futuro/condicional en medio.",
-      "example": "BANDEIRA: Basta (advérbios), Ainda, Não, etc."
+      "back": "En europeo la ÊNCLISE es la NORMA: «chamo-me Ana», «disse-me». La PRÓCLISE sólo aparece si algo la atrae: negación, «que», adverbios como já/sempre/nunca, e interrogativos. La MESÓCLISE, sólo en futuro y condicional cuando no hay atractor.",
+      "example": "Chamo-me Ana. / Não me chamo Ana. / Chamar-me-ei Ana."
     }
   },
   {
@@ -3245,7 +3251,7 @@
     "tags": [
       "vocabulario"
     ],
-    "contentHash": "78771689e2b515ab99d97fcdc9a48bef7b4504cf10b6bc8e46af712aff67a868",
+    "contentHash": "10f9ddbd8e285eb84309e7a6edcce446280e54a9d7e9e2af8fdcdfb3037943dc",
     "audio": {
       "br": {
         "hash": "51276bf08f685ea532f300867c2bdca5899f3212642f427051aea97277bd087f",
@@ -3256,12 +3262,13 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: corregido a europeo — «precisar» rige «de» en europeo",
     "type": "flashcard",
     "data": {
       "front": "conversar",
       "back": "conversar (hablar, conversar)",
-      "example": "Precisamos conversar sobre isso amanhã."
+      "example": "Precisamos de conversar sobre isso amanhã."
     }
   },
   {

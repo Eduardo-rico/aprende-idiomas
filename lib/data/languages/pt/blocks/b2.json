@@ -139,8 +139,8 @@
     "tags": [],
     "contentHash": "4752d5df8fb1f94925efaac3efb9327504e5a7f96347daa718c38e70a8bfd9a7",
     "esContrast": "nossos = nuestros. En PT-PT el posesivo lleva artículo ('visitar os nossos avós'); en PT-BR puede omitirse.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: leído entero, sin rasgo brasileño — «visitar os nossos avós» con artículo delante del posesivo",
     "type": "fill_blank",
     "data": {
       "sentence": "Vamos ___ avós no fim de semana.",
@@ -444,8 +444,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: leído entero, sin rasgo brasileño — «O marido da Ana» con artículo ante nombre propio, que es europeo",
     "type": "translation",
     "data": {
       "source": "O marido da Ana trabalha muito.",
@@ -645,22 +645,22 @@
     "tags": [
       "coloquial"
     ],
-    "contentHash": "575669412df4e45f535cdad0c20d343d0f64da54dc5ef60c6f94189b399ec789",
+    "contentHash": "224ec65cd79e83b6943bca083100b546c51869465ab8f7ddf1b2a6362d8675f1",
     "audio": {
       "br": {
-        "hash": "36581e249df242fcbda64ec98673d901b889343108fa2abc73edfd96564da794",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "e9c684cf4e15d8dcd923af65d7248d3673a601d2f05447b48912613e512f8544",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "095958b34a0ba53f7f9a7f2b9ab005dbed670a9ba4897a95d1551f96bc37dac4",
-        "voice": "Portuguese_Wiselady"
+        "hash": "e9c684cf4e15d8dcd923af65d7248d3673a601d2f05447b48912613e512f8544",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: DUDA — «Ele é bom de cozinha» es colocación forzada: lo idiomático es 'bom na cozinha' / 'cozinha bem' (el patrón 'bom de X' vive en 'bom de garfo', 'bom de bola', no con 'cozinha'). Defendible como coloquial brasileño y el aud (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: corregido a europeo — «bom DE cozinha» es giro brasileño; en europeo se dice «bom NA cozinha»",
     "type": "translation",
     "data": {
-      "source": "Ele é bom de cozinha, mas ela é melhor.",
+      "source": "Ele é bom na cozinha, mas ela é melhor.",
       "target": "Él es bueno en la cocina, pero ella es mejor.",
       "sourceLang": "pt-pt",
       "targetLang": "es",
@@ -1326,24 +1326,24 @@
       "b2-possessivos"
     ],
     "tags": [],
-    "contentHash": "3df9c52de749b3c9caa400c05d280c8864b83ce91e09741cbd8488593d2eff2c",
+    "contentHash": "73ec97fa888ea7283a2735b59887d8e89cbd06c6be654469928dfc1087dcad3b",
     "audio": {
       "br": {
-        "hash": "4401076e5b9bf44271e7ccdc3983e93b5ffdb2ca4bc10a7e584cb758849cbf32",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "3aeed7dbfe61a9a08f58b57c55730e75d5e9706384bc6d6b2e4494aa9be5acc7",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "ab72cd6711e71521d88d50abd3d9ade32a47322101753848ff1b698e7859f9a5",
-        "voice": "Portuguese_Wiselady"
+        "hash": "3aeed7dbfe61a9a08f58b57c55730e75d5e9706384bc6d6b2e4494aa9be5acc7",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: DUDA — Enseña 'meus filhos' sin artículo como LA forma: válido en PT-BR, pero el PT-PT pide 'os meus filhos'. En una app con pista europea, la tarjeta debería dar ambas. (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: corregido a europeo — enseñaba «meus filhos» como LA forma portuguesa, y sin artículo es la brasileña. En europeo, «os meus filhos»",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'mis hijos' en portugués?",
-      "back": "meus filhos",
-      "example": "Tenho dois filhos: meus filhos estudam de manhã."
+      "back": "os meus filhos",
+      "example": "Tenho dois filhos: os meus filhos estudam de manhã."
     }
   },
   {
@@ -1367,8 +1367,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b2-possessivos, b2-numero · RESCATADO en E2#22: su punto volvió a bajar del piso al retirarse un ítem roto",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: leído entero, sin rasgo brasileño — «os nossos amigos» con artículo delante del posesivo",
     "type": "translation",
     "data": {
       "source": "¿Quieres visitar a nuestros amigos?",
@@ -1404,8 +1404,8 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: leído entero, sin rasgo brasileño — «Embora eu tenha pouca vontade» con conjuntivo, igual en las dos variantes",
     "type": "translation",
     "data": {
       "source": "Aunque tengo pocas ganas, voy a la reunión.",
@@ -3060,23 +3060,23 @@
       "regular",
       "frequente"
     ],
-    "contentHash": "729ea1e121d2a53b1287e3b6fb656f98929ff8e4632cee3fb8300956566eb8e8",
+    "contentHash": "3b1376581f61ea82be76af246215df97d5dc3908a4bd688233eed64cadbb52d5",
     "esContrast": "'Minhas irmãs' siempre es plural, aunque en español a veces se omite 'mis' si ya se sobrentiende.",
     "audio": {
       "br": {
-        "hash": "0ef009b2a06030629bf5a6792340d80f51d34ba527499cd51fe7be9e94f210c9",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "3476277b039942fa39395017fbca635194997050516f4f76d497b2ed22627d25",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "ed7692f60196a129768a889319f6ca4380b1e8855f51e4df9fb695dc966ffeb0",
-        "voice": "Portuguese_Wiselady"
+        "hash": "3476277b039942fa39395017fbca635194997050516f4f76d497b2ed22627d25",
+        "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b2-possessivos, b2-numero · RESCATADO en E2#22: su punto volvió a bajar del piso al retirarse un ítem roto",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: corregido a europeo — declaraba `pt-pt` con «Minhas irmãs» sin artículo, que es brasileño",
     "type": "translation",
     "data": {
-      "source": "Minhas irmãs moram no centro.",
+      "source": "As minhas irmãs moram no centro.",
       "target": "Mis hermanas viven en el centro.",
       "sourceLang": "pt-pt",
       "targetLang": "es",
@@ -4408,8 +4408,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: leído entero, sin rasgo brasileño — el posesivo POSPUESTO no lleva artículo, y eso es correcto en europeo",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se dice 'amigos nuestros' (posesivo pospuesto)?",
@@ -5343,8 +5343,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "neutral",
+    "variantVerificacion": "triaje final de los 60 unchecked, E2#29: leído entero, sin rasgo brasileño — «Certas pessoas sempre voltam» sin rasgo brasileño",
     "type": "translation",
     "data": {
       "source": "Certas pessoas sempre voltam.",
@@ -9797,9 +9797,9 @@
     "data": {
       "sentence": "Preciso de mais um outro dia para acabar isto.",
       "correct": "Preciso de mais um dia para acabar isto.",
+      "explanationEs": "«Mais um outro» amontona dos indefinidos donde el portugués sólo pone uno: «mais um dia». La forma «um outro» existe, pero sirve para contraponer —«um outro caminho», otro distinto—, no para sumar.",
       "alternatives": [],
-      "calcoEs": "Necesito un día más para terminar esto.",
-      "explanationEs": "«Mais um outro» amontona dos indefinidos donde el portugués sólo pone uno: «mais um dia». La forma «um outro» existe, pero sirve para contraponer —«um outro caminho», otro distinto—, no para sumar."
+      "calcoEs": "Necesito un día más para terminar esto."
     }
   },
   {
@@ -9822,9 +9822,9 @@
     "data": {
       "sentence": "Ela disse mesmo que eu, palavra por palavra.",
       "correct": "Ela disse o mesmo que eu, palavra por palavra.",
+      "explanationEs": "El español «lo mismo» se dice en portugués «o mesmo», con artículo masculino: el portugués no tiene el neutro «lo», así que lo resuelve con «o».",
       "alternatives": [],
-      "calcoEs": "Ella dijo lo mismo que yo, palabra por palabra.",
-      "explanationEs": "El español «lo mismo» se dice en portugués «o mesmo», con artículo masculino: el portugués no tiene el neutro «lo», así que lo resuelve con «o»."
+      "calcoEs": "Ella dijo lo mismo que yo, palabra por palabra."
     }
   },
   {
@@ -9847,9 +9847,9 @@
     "data": {
       "sentence": "Cada quem trouxe a sua própria bebida para a festa.",
       "correct": "Cada um trouxe a sua própria bebida para a festa.",
+      "explanationEs": "El español «cada quien» no tiene equivalente en portugués: «cada quem» no existe. Se dice «cada um» —o «cada pessoa»—, y el verbo va en singular.",
       "alternatives": [],
-      "calcoEs": "Cada quien trajo su propia bebida para la fiesta.",
-      "explanationEs": "El español «cada quien» no tiene equivalente en portugués: «cada quem» no existe. Se dice «cada um» —o «cada pessoa»—, y el verbo va en singular."
+      "calcoEs": "Cada quien trajo su propia bebida para la fiesta."
     }
   },
   {
@@ -9872,9 +9872,9 @@
     "data": {
       "sentence": "Minha irmã trabalha num hospital perto daqui.",
       "correct": "A minha irmã trabalha num hospital perto daqui.",
+      "explanationEs": "El portugués europeo pone el artículo DELANTE del posesivo: «a minha irmã», «o meu carro». El español no lo lleva, y el portugués de Brasil tampoco, así que el hispanohablante lo omite por partida doble.",
       "alternatives": [],
-      "calcoEs": "Mi hermana trabaja en un hospital cerca de aquí.",
-      "explanationEs": "El portugués europeo pone el artículo DELANTE del posesivo: «a minha irmã», «o meu carro». El español no lo lleva, y el portugués de Brasil tampoco, así que el hispanohablante lo omite por partida doble."
+      "calcoEs": "Mi hermana trabaja en un hospital cerca de aquí."
     }
   }
 ]
