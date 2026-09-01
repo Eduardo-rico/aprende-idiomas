@@ -1,3 +1,5 @@
+import fs from 'node:fs';
+import path from 'node:path';
 // scripts/lib/conceptos-finos.ts
 //
 // LA PARTICIÓN DE LOS CONCEPTOS GRUESOS.
@@ -574,4 +576,19 @@ export function padreCubierto(id: string, cuenta: Map<string, number>, piso: (x:
   const part = PARTICIONES.find((p) => p.padre === id);
   if (!part) return false;
   return part.subs.every((s) => (cuenta.get(s.id) ?? 0) >= piso(s.id));
+}
+
+
+/** Puntos con el piso bajado a CERO por decisión declarada. Viven en
+ *  `docs/plans/puntos-piso-cero.json` con su motivo y con DÓNDE se enseña
+ *  lo que tenían de propio.
+ *
+ *  Existe para que bajar un piso sea una decisión visible y auditable, no
+ *  una resta silenciosa. Un punto que desaparece del déficit sin dejar
+ *  rastro es exactamente cómo se maquilla un número. */
+export function pisoCero(): Map<string, string> {
+  const f = path.join(process.cwd(), 'docs/plans/puntos-piso-cero.json');
+  if (!fs.existsSync(f)) return new Map();
+  const d = JSON.parse(fs.readFileSync(f, 'utf8')) as Record<string, any>;
+  return new Map(Object.entries(d).filter(([k]) => !k.startsWith('_')).map(([k, v]) => [k, String(v.motivo)]));
 }

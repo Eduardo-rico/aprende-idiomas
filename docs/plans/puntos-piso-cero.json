@@ -1,0 +1,20 @@
+{
+  "_criterio": "Puntos DECLARADOS a los que se les baja el piso a CERO, con el motivo escrito. No desaparecen del inventario —siguen en ALL_CONCEPTS y el currículo los sigue enumerando— pero dejan de contar como déficit, porque llenarlos no enseñaría nada. Es el mismo trato que reciben los 15 puntos ORALES del dictamen de C1/C2: se declara la decisión, no se esconde el punto. Bajar un piso para que baje un número sería lo contrario de todo lo que se ha hecho; por eso cada entrada tiene que decir DÓNDE se enseña lo que este punto tenía de propio, o por qué no tenía nada.",
+  "_regla": "Antes de entrar aquí, un punto tiene que haber pasado la prueba de la divergencia: se le busca lo que hace distinto del español, y sólo si eso no existe o ya está enseñado en otro punto se le baja el piso. Si queda algo propio, se escriben ESOS ítems —dos o tres— y no ocho para llenar la casilla.",
+
+  "b11-nominalizacao": {
+    "motivo": "El español nominaliza igual: mismos sufijos (-ción/-ção, -miento/-mento, -da/-da) y misma sintaxis del infinitivo con artículo («el haber llegado tarde» / «o ter chegado tarde»). Ocho ítems aquí medirían castellano.",
+    "divergencia_buscada": "La única divergencia real que tiene la nominalización portuguesa frente a la española es el INFINITIVO PERSONAL FLEXIONADO donde el español va a subjuntivo: «apesar de eles terem chegado tarde» / «a pesar de que ellos llegaran tarde».",
+    "donde_se_ensena": "b7-infinitivo-pessoal, cuya descripción declara literalmente «uso en lugar de conjuntivo/infinitivo», y su sub-punto b7-inf-pess-contraste, que tiene 22 ítems publicados. Repetirla aquí sería duplicar el punto, no enseñarlo más.",
+    "veredicto": "duplicado — piso 0",
+    "sesion": "E2#20"
+  },
+
+  "b11-pontuacao-sintatica": {
+    "motivo": "La puntuación portuguesa y la española comparten la tradición y casi todas las reglas: coma prohibida entre sujeto y verbo, coma que separa la explicativa de la especificativa, dos puntos que introducen consecuencia, punto y coma que articula el período largo. El propio mapa formato↔punto ya lo dice al justificar por qué no admite juicio: «el español comparte casi todas estas reglas, así que la glosa cazaría el error».",
+    "divergencia_buscada": "Lo único que el portugués hace distinto es no abrir interrogación ni exclamación (¿ ¡), que es ortografía elemental y se aprende en la primera lección, no un recurso sintáctico de C1.",
+    "donde_se_ensena": "b1-alfabeto y el material de b1; no requiere un punto de C1.",
+    "veredicto": "sin divergencia propia — piso 0",
+    "sesion": "E2#20"
+  }
+}

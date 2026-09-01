@@ -103,7 +103,7 @@ const B1_LESSONS: Lesson[] = [
       'Reconocer y producir vocales nasales',
       'Distinguir vocal nasal de vocal + n/m',
     ],
-    conceptIds: ['b1-vogais-nasais'],
+    conceptIds: ['b1-vogais-nasais', 'b1-inventario-vocalico'],
     vocabKey: ['mãe', 'pão', 'cão', 'irmão', 'bem', 'bom', 'ruim', 'um'] as const,
     conceptNotesPath: 'b1/l4-vogais-nasais.mdx',
     exerciseRefs: [],

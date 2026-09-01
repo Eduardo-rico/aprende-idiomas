@@ -16,7 +16,7 @@
 // de regência verbal viviendo bajo «pretérito perfeito irregular».
 import fs from 'node:fs';
 import path from 'node:path';
-import { PARTICIONES, TRANSVERSALES, contarPuntos, textoItem, padreCubierto } from './lib/conceptos-finos';
+import { PARTICIONES, TRANSVERSALES, contarPuntos, textoItem, padreCubierto, pisoCero } from './lib/conceptos-finos';
 import { CONCEPTOS_FINOS } from '../lib/data/languages/pt/conceptos-finos.generated';
 import { ALL_CONCEPTS } from '../lib/data/languages/pt/curriculum';
 import { reconciliar, informe, type PorPunto } from './lib/reconciliar-deficit';
@@ -89,6 +89,15 @@ const nivelDe = (id: string): string => {
 const pisoId = (id: string) => pisoDe(nivelDe(id));
 const padresCubiertos = [...cuenta.keys()].filter((id) => cuenta.get(id)! < pisoId(id) && padreCubierto(id, cuenta, pisoId));
 for (const id of padresCubiertos) cuenta.set(id, pisoId(id));
+
+// Y los que tienen el piso bajado a cero POR DECISIÓN DECLARADA. Se
+// imprimen siempre: una resta silenciosa es cómo se maquilla un número.
+const CERO = pisoCero();
+for (const id of CERO.keys()) if (cuenta.has(id)) cuenta.set(id, pisoId(id));
+if (CERO.size) {
+  console.log(`\n**${CERO.size} puntos con el piso a CERO por decisión declarada** (docs/plans/puntos-piso-cero.json):`);
+  for (const [id, motivo] of CERO) console.log(`- \`${id}\`: ${motivo}`);
+}
 // EL INVENTARIO DE PUNTOS son los conceptos DECLARADOS, no los que
 // resultan tener ítems. La v1 medía el déficit sobre `cuenta`, que sólo
 // contiene conceptos con al menos una asignación, así que **un punto a

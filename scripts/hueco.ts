@@ -10,7 +10,7 @@ import fs from 'node:fs'; import path from 'node:path';
 import { formatoDe } from './lib/formato-punto';
 import { BLOCKS_DIR } from './config';
 import { ALL_CONCEPTS } from '../lib/data/languages/pt/curriculum';
-import { contarPuntos, padreCubierto } from './lib/conceptos-finos';
+import { contarPuntos, padreCubierto, pisoCero } from './lib/conceptos-finos';
 
 // El conteo es el CANÓNICO de `conceptos-finos.ts`, el mismo que usa
 // `split-conceptos.ts`. La primera versión de este script leía el campo
@@ -29,6 +29,8 @@ const piso = (id: string) => (id.startsWith('b12') ? 6 : 8);
 // Mismo ajuste que en `split-conceptos.ts`: un padre con todos sus
 // sub-puntos cubiertos no tiene hueco, tiene residuo.
 for (const id of [...n.keys()]) if (n.get(id)! < piso(id) && padreCubierto(id, n, piso)) n.set(id, piso(id));
+// Y los de piso cero declarado, por el mismo motivo.
+for (const id of pisoCero().keys()) if (n.has(id)) n.set(id, piso(id));
 
 const filas = [...n].filter(([id]) => n.get(id)! < piso(id))
   .map(([id, hay]) => ({ id, hay, falta: piso(id) - hay, f: formatoDe(id) }))
