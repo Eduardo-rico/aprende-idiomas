@@ -5,7 +5,7 @@
 // bendice. Así que se prueba contra las formas canónicas, incluidas las
 // que la regla ingenua rompe.
 import { describe, it, expect } from 'vitest';
-import { futuro, condicional, participio, futuroComposto, mesoclise, enclise, proclise , infinitivoPessoal } from '@/scripts/lib/paradigma-pt';
+import { futuro, condicional, participio, futuroComposto, mesoclise, enclise, proclise , infinitivoPessoal, conjugar } from '@/scripts/lib/paradigma-pt';
 
 describe('futuro y condicional', () => {
   it('se forman sobre el infinitivo ENTERO', () => {
@@ -163,5 +163,28 @@ describe('infinitivo pessoal', () => {
     expect(infinitivoPessoal('partir', 'eles')).toBe('partirem');
     expect(infinitivoPessoal('ouvir', 'tu')).toBe('ouvires');
     expect(infinitivoPessoal('ir', 'tu')).toBe('ires');
+  });
+});
+
+// El presente do conjuntivo de los verbos en -car/-gar/-çar cambia la
+// LETRA para conservar el SONIDO. El conjugador daba *chegem* y
+// *ficemos*, y lo cazó el muestreo del 20 % de E2#15 sobre un ítem ya
+// escrito — la misma familia que el `dir-lo-ão` que un test verde dio
+// por bueno en E2#11.
+describe('presente do conjuntivo · el cambio ortográfico ante -e', () => {
+  it('-gar toma u: chegar → cheguem', () => {
+    expect(conjugar('chegar', 'presSubj', 'eles')).toBe('cheguem');
+    expect(conjugar('pagar', 'presSubj', 'eu')).toBe('pague');
+  });
+  it('-car toma qu: ficar → fiquemos', () => {
+    expect(conjugar('ficar', 'presSubj', 'nós')).toBe('fiquemos');
+    expect(conjugar('explicar', 'presSubj', 'tu')).toBe('expliques');
+  });
+  it('-çar pierde la cedilla: começar → comecem', () => {
+    expect(conjugar('começar', 'presSubj', 'eles')).toBe('comecem');
+  });
+  it('y los que no acaban así no se tocan', () => {
+    expect(conjugar('falar', 'presSubj', 'ele')).toBe('fale');
+    expect(conjugar('estudar', 'presSubj', 'eu')).toBe('estude');
   });
 });

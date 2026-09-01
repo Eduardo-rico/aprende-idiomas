@@ -135,3 +135,118 @@ export function infinitivoPessoal(inf: string, p: Persona): string {
   if (/[aeou]ir$/i.test(raizBase) && (p === 'tu' || p === 'eles')) raizBase = raizBase.replace(/ir$/i, 'ír');
   return raizBase + d;
 }
+
+// ── LOS PARADIGMAS QUE LA LÍNEA DE CLOZE NECESITA (E2#15) ────────────
+//
+// El cloze con pista produce el 61 % de lo que falta, y su respuesta
+// tiene que ser DERIVABLE para que el gate la recalcule en vez de
+// creerse al autor — que es lo que rompió el lote de 44 y lo que en
+// E2#11 dejó pasar ocho errores de 24.
+//
+// Sólo lo regular, más una tabla CERRADA de irregulares. Un conjugador
+// que adivina es peor que no tenerlo: si un verbo no está en la tabla y
+// no es regular, el gate lo dice y el ítem no se publica.
+
+type Conj = 'ar' | 'er' | 'ir';
+const conjDe = (inf: string): Conj | null =>
+  /ar$/.test(inf) ? 'ar' : /er$/.test(inf) ? 'er' : /ir$/.test(inf) ? 'ir' : null;
+const raizReg = (inf: string) => inf.slice(0, -2);
+
+const DES_PRESENTE: Record<Conj, Record<Persona, string>> = {
+  ar: { eu: 'o', tu: 'as', ele: 'a', 'nós': 'amos', eles: 'am' },
+  er: { eu: 'o', tu: 'es', ele: 'e', 'nós': 'emos', eles: 'em' },
+  ir: { eu: 'o', tu: 'es', ele: 'e', 'nós': 'imos', eles: 'em' },
+};
+const DES_IMPERFEITO: Record<Conj, Record<Persona, string>> = {
+  ar: { eu: 'ava', tu: 'avas', ele: 'ava', 'nós': 'ávamos', eles: 'avam' },
+  er: { eu: 'ia', tu: 'ias', ele: 'ia', 'nós': 'íamos', eles: 'iam' },
+  ir: { eu: 'ia', tu: 'ias', ele: 'ia', 'nós': 'íamos', eles: 'iam' },
+};
+/** Presente do conjuntivo: -ar toma -e, -er/-ir toman -a. La raíz sale
+ *  de la 1.ª sg del presente, así que las irregularidades de esa persona
+ *  se heredan (faço → faça, digo → diga, tenho → tenha). */
+const DES_PRES_SUBJ: Record<Conj, Record<Persona, string>> = {
+  ar: { eu: 'e', tu: 'es', ele: 'e', 'nós': 'emos', eles: 'em' },
+  er: { eu: 'a', tu: 'as', ele: 'a', 'nós': 'amos', eles: 'am' },
+  ir: { eu: 'a', tu: 'as', ele: 'a', 'nós': 'amos', eles: 'am' },
+};
+
+/** Tabla CERRADA de irregulares. Fuera de aquí, sólo lo regular. */
+const IRREGULARES: Record<string, Partial<Record<string, Partial<Record<Persona, string>>>>> = {
+  ser:   { presente: { eu: 'sou', tu: 'és', ele: 'é', 'nós': 'somos', eles: 'são' },
+           imperfeito: { eu: 'era', tu: 'eras', ele: 'era', 'nós': 'éramos', eles: 'eram' },
+           presSubj: { eu: 'seja', tu: 'sejas', ele: 'seja', 'nós': 'sejamos', eles: 'sejam' },
+           imperativoTu: { tu: 'sê' } },
+  estar: { presente: { eu: 'estou', tu: 'estás', ele: 'está', 'nós': 'estamos', eles: 'estão' },
+           presSubj: { eu: 'esteja', tu: 'estejas', ele: 'esteja', 'nós': 'estejamos', eles: 'estejam' },
+           imperativoTu: { tu: 'está' } },
+  ter:   { presente: { eu: 'tenho', tu: 'tens', ele: 'tem', 'nós': 'temos', eles: 'têm' },
+           imperfeito: { eu: 'tinha', tu: 'tinhas', ele: 'tinha', 'nós': 'tínhamos', eles: 'tinham' },
+           presSubj: { eu: 'tenha', tu: 'tenhas', ele: 'tenha', 'nós': 'tenhamos', eles: 'tenham' },
+           imperativoTu: { tu: 'tem' } },
+  ir:    { presente: { eu: 'vou', tu: 'vais', ele: 'vai', 'nós': 'vamos', eles: 'vão' },
+           imperfeito: { eu: 'ia', tu: 'ias', ele: 'ia', 'nós': 'íamos', eles: 'iam' },
+           presSubj: { eu: 'vá', tu: 'vás', ele: 'vá', 'nós': 'vamos', eles: 'vão' },
+           imperativoTu: { tu: 'vai' } },
+  fazer: { presente: { eu: 'faço', tu: 'fazes', ele: 'faz', 'nós': 'fazemos', eles: 'fazem' },
+           presSubj: { eu: 'faça', tu: 'faças', ele: 'faça', 'nós': 'façamos', eles: 'façam' },
+           imperativoTu: { tu: 'faz' } },
+  dizer: { presente: { eu: 'digo', tu: 'dizes', ele: 'diz', 'nós': 'dizemos', eles: 'dizem' },
+           presSubj: { eu: 'diga', tu: 'digas', ele: 'diga', 'nós': 'digamos', eles: 'digam' },
+           imperativoTu: { tu: 'diz' } },
+  vir:   { presente: { eu: 'venho', tu: 'vens', ele: 'vem', 'nós': 'vimos', eles: 'vêm' },
+           presSubj: { eu: 'venha', tu: 'venhas', ele: 'venha', 'nós': 'venhamos', eles: 'venham' },
+           imperativoTu: { tu: 'vem' } },
+  poder: { presente: { eu: 'posso', tu: 'podes', ele: 'pode', 'nós': 'podemos', eles: 'podem' },
+           presSubj: { eu: 'possa', tu: 'possas', ele: 'possa', 'nós': 'possamos', eles: 'possam' } },
+  querer:{ presente: { eu: 'quero', tu: 'queres', ele: 'quer', 'nós': 'queremos', eles: 'querem' },
+           presSubj: { eu: 'queira', tu: 'queiras', ele: 'queira', 'nós': 'queiramos', eles: 'queiram' } },
+  saber: { presente: { eu: 'sei', tu: 'sabes', ele: 'sabe', 'nós': 'sabemos', eles: 'sabem' },
+           presSubj: { eu: 'saiba', tu: 'saibas', ele: 'saiba', 'nós': 'saibamos', eles: 'saibam' } },
+  dar:   { presente: { eu: 'dou', tu: 'dás', ele: 'dá', 'nós': 'damos', eles: 'dão' },
+           presSubj: { eu: 'dê', tu: 'dês', ele: 'dê', 'nós': 'demos', eles: 'deem' },
+           imperativoTu: { tu: 'dá' } },
+  ver:   { presente: { eu: 'vejo', tu: 'vês', ele: 'vê', 'nós': 'vemos', eles: 'veem' },
+           presSubj: { eu: 'veja', tu: 'vejas', ele: 'veja', 'nós': 'vejamos', eles: 'vejam' },
+           imperativoTu: { tu: 'vê' } },
+  pôr:   { presente: { eu: 'ponho', tu: 'pões', ele: 'põe', 'nós': 'pomos', eles: 'põem' },
+           presSubj: { eu: 'ponha', tu: 'ponhas', ele: 'ponha', 'nós': 'ponhamos', eles: 'ponham' },
+           imperativoTu: { tu: 'põe' } },
+  haver: { presente: { ele: 'há' }, imperfeito: { ele: 'havia' }, presSubj: { ele: 'haja' } },
+};
+
+export type Tiempo = 'presente' | 'imperfeito' | 'presSubj' | 'imperativoTu';
+
+/** Devuelve la forma, o `null` si el verbo no es regular y no está en la
+ *  tabla cerrada. Devolver `null` es la parte importante: un conjugador
+ *  que adivina consagra formas falsas, como el `dir-lo-ão` que un test
+ *  verde dio por bueno en E2#11. */
+export function conjugar(inf: string, tiempo: Tiempo, p: Persona): string | null {
+  const irr = IRREGULARES[inf]?.[tiempo]?.[p];
+  if (irr) return irr;
+  const c = conjDe(inf);
+  if (!c) return null;
+  if (IRREGULARES[inf] && !IRREGULARES[inf]![tiempo]) {
+    // Verbo con irregularidades declaradas pero no en ESTE tiempo: se
+    // deja pasar al regular sólo si el tiempo no depende de la 1.ª sg.
+    if (tiempo === 'presSubj' || tiempo === 'imperativoTu') return null;
+  }
+  const r = raizReg(inf);
+  // CAMBIO ORTOGRÁFICO ante desinencia en -e: la raíz conserva el SONIDO
+  // y cambia la letra — chegar→cheguem, ficar→fiquem, começar→comecem.
+  // Sin esto el conjugador daba *chegem* y *ficemos*, y el muestreo del
+  // 20 % lo cazó en un ítem publicable. Es la misma familia que el
+  // `dir-lo-ão` de E2#11: una forma falsa que el gate habría bendecido
+  // porque «salía del paradigma».
+  const anteE = (raiz: string) =>
+    /c$/.test(raiz) ? raiz.slice(0, -1) + 'qu'
+    : /g$/.test(raiz) ? raiz + 'u'
+    : /ç$/.test(raiz) ? raiz.slice(0, -1) + 'c'
+    : raiz;
+  if (tiempo === 'presente') return r + DES_PRESENTE[c][p];
+  if (tiempo === 'imperfeito') return r + DES_IMPERFEITO[c][p];
+  if (tiempo === 'presSubj') return (c === 'ar' ? anteE(r) : r) + DES_PRES_SUBJ[c][p];
+  // El imperativo de TU de los regulares es la 3.ª sg del presente.
+  if (tiempo === 'imperativoTu') return r + DES_PRESENTE[c].ele;
+  return null;
+}
