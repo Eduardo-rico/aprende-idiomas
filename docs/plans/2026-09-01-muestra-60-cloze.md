@@ -37,3 +37,39 @@ No decide que los sellados sean buenos: decide que **la tasa medida es
 baja como para no leerlos**, con la tasa escrita en cada ítem para que
 quien la lea dentro de seis meses sepa sobre qué evidencia se selló. Es la
 misma figura que el sello por construcción de la familia B.
+
+---
+
+# RESULTADO: **6 de 20 = 30 %. Se leen todos.**
+
+El criterio decía ≥30 % → leer los 60. Cae exactamente en el umbral, y
+además la frontera ya estaba adjudicada a la lectura.
+
+## Los dos ROTOS
+
+- **`a75af754`** — «Vocês ___ a escolha correta. (aperceber)» → «apercebem».
+  «Aperceber-se» rige **de** y es pronominal: «apercebem-se da escolha».
+  La frase, tal cual, no es portuguesa. Y el ítem declara enseñar el
+  pronombre reflexivo mientras su respuesta no lleva ninguno.
+- **`4db88ca6`** — «Eu ___ muito à minha avó. (querer)» → «quero».
+  **Castellanismo**: «querer a alguien» con el sentido de amar es español.
+  El portugués dice «gosto muito da minha avó» o «quero muito bem à minha
+  avó». Es de la familia de «logrado o sucesso» y «manifestar a V. Sa.».
+
+## Los cuatro INDETERMINADOS
+
+Los cuatro comparten causa, y es la que la regla nueva del generador ya
+cierra hacia delante: **el lema está en el molde y el tiempo no lo fija
+nada.**
+
+- `3bca1e9a` «A casa ___ (ser) encantadora» → «era», pero «é» encaja igual.
+- `b27f1f44` «Nós ___ (ser) muito amigos desde a infância» → «éramos», y
+  «somos» encaja igual —«desde a infância» funciona con presente—.
+- `e73505bb` «Ela ___ (admirar) … todas as tardes» → «admirava», y
+  «admira» encaja igual.
+- `bcf50c91` «___ logo o que aconteceu! (dizer)» → «Diga-me», donde ni la
+  persona está fija —«Diz-me» es el tú— ni el clítico está anunciado.
+
+**Lo que esto dice del triaje**: los tres primeros están en la clase
+«verbal determinado», la que el clasificador daba por segura. Ya sabíamos
+que aprobaba de más; ahora está medido dos veces.
