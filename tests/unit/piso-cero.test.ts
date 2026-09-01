@@ -52,3 +52,16 @@ describe('piso cero', () => {
     expect(typeof part).toBe('boolean');
   });
 });
+
+describe('la cuarentena no cuenta como cobertura', () => {
+  it('un ítem needs-human no suma a su punto — no se sirve', async () => {
+    const { contarPuntos } = await import('@/scripts/lib/conceptos-finos');
+    const items = [
+      { concepts: ['b1-sandi'], variantStatus: 'unchecked', type: 'flashcard', data: {} },
+      { concepts: ['b1-sandi'], variantStatus: 'needs-human', type: 'flashcard', data: {} },
+    ];
+    expect(contarPuntos(items).cuenta.get('b1-sandi')).toBe(1);
+    // Con la salida explícita, para auditorías, sí cuenta los dos.
+    expect(contarPuntos(items, { incluirCuarentena: true }).cuenta.get('b1-sandi')).toBe(2);
+  });
+});

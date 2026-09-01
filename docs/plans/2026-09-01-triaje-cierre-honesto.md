@@ -91,3 +91,58 @@ que con el signo cambiado.
 es *cero ítems sin dictamen, con el dictamen otorgado por el procedimiento
 que corresponda a cómo nació cada ítem*. Hoy eso son 879 + la calibración
 de 120, no 2.682.
+
+---
+
+## Addendum E2#22 · El triaje por punto, y lo que destapó
+
+El par decidió no pagar nueve colas por 879 ítems: **triarlos por punto y
+pagar sólo lo que la cobertura exija**. La decisión es correcta y el
+principio también —*no se paga por validar material que el curso no
+necesita*—, pero su premisa («la cobertura ya la sostienen los 2.186
+dictaminados o de máquina») **es falsa, y por bastante**.
+
+### Lo primero, porque invalida el resto: la cuarentena contaba
+
+`variantStatus: 'needs-human'` está filtrado en el embudo de
+`lib/data/loaders.ts` — el alumno no lo ve. **Pero ningún contador de
+cobertura lo descontaba.** 271 ítems que nadie ve sumaban al piso de sus
+puntos, y **27 puntos caen por debajo del piso al descontarlos**.
+
+Si se hubieran mandado 595 ítems más a cuarentena sin arreglar esto, el
+titular habría seguido diciendo 24 mientras el curso perdía 595
+ejercicios. Es la mentira silenciosa de siempre: la etiqueta existe,
+alguien la lee para una cosa y nadie para la otra — la misma familia del
+piso cero que no se aplicaba, cazada el mismo día.
+
+Arreglado en `contarPuntos`, que ahora filtra por defecto y admite
+`{ incluirCuarentena: true }` para las auditorías. **Déficit de contenido
+SERVIBLE: 80, no 24.** Residuo 0; la reconciliación lo explica como los 56
+ítems descontados.
+
+### El triaje, con el coste bien medido
+
+| rama | ítems | qué se hace |
+|---|---:|---|
+| **excedente** — su punto llega al piso sin ellos | **595** | cuarentena, con el motivo escrito |
+| **necesarios** — cubren déficit real | **284** | dictamen a mano, método de las colas |
+| *(no cubrible por ningún ítem viejo)* | **93 unidades** en 38 puntos | producir con las máquinas |
+
+**Cuidado con el número intermedio.** La primera cuenta daba 498
+«necesarios», y estaba mal: contaba TODOS los ítems sin sello de un punto
+deficitario, cuando un punto a 4/8 no necesita sus 22 disponibles, necesita
+**cuatro**. Sobreestimar lo que hay que pagar es tan malo como
+subestimarlo, porque lleva a tirar por la borda lo que sí valía. Con
+selección greedy sobre el déficit real: 284 ítems cubren 293 unidades.
+
+Así que la apuesta del par acierta —**el excedente se lleva el 68 %**— y
+las nueve colas se quedan en **unas tres**, no en una ni en nueve.
+
+### Lo que queda por decidir, y por qué no se ha aplicado
+
+Mandar 595 ítems a cuarentena es reversible y está declarado, pero cambia
+lo que el alumno ve. Se aplica cuando el par o Edu confirmen, ahora que la
+premisa está corregida: **el déficit de lo sellado y servible es 386
+unidades en 119 puntos**, no cero. Es decir, sellar A y B no cierra la
+cobertura por sí solo — hace falta además el dictamen de los 284 y la
+producción de los 93.

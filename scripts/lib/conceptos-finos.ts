@@ -520,7 +520,20 @@ export interface Conteo {
   porGlosa: number;
 }
 
-export function contarPuntos(items: any[]): Conteo {
+/** Un ítem en cuarentena NO se sirve al alumno: `lib/data/loaders.ts`
+ *  lo filtra en el embudo por el que pasa todo. Así que tampoco puede
+ *  contar como cobertura — un punto «cubierto» con ocho ítems que nadie
+ *  ve no está cubierto.
+ *
+ *  Esto no se descontaba: 271 ítems en cuarentena sumaban al déficit
+ *  oficial, y **27 puntos caían por debajo del piso al descontarlos**.
+ *  La cuenta decía 24 unidades cuando la de contenido SERVIBLE eran 72.
+ *  Es la misma familia que el piso cero que no se aplicaba: la etiqueta
+ *  existe, alguien la lee para una cosa y nadie para la otra. */
+export const servibleAlAlumno = (x: any) => x?.variantStatus !== 'needs-human';
+
+export function contarPuntos(items: any[], opciones: { incluirCuarentena?: boolean } = {}): Conteo {
+  if (!opciones.incluirCuarentena) items = items.filter(servibleAlAlumno);
   const porPadre = new Map(PARTICIONES.map((p) => [p.padre, p]));
   const cuenta = new Map<string, number>();
   const residuo = new Map<string, number>();
