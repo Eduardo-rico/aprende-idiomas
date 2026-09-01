@@ -41,6 +41,47 @@ lote 3 (`contradictorio`, `parcial`) pasaron limpios el muestreo y la
 revisión, y lo ya publicado aguanta (0 de 15 mediaciones industriales en
 producción traducen mal «até»). El 45 % fue del lote, no de la línea.
 
+## CADA FORMATO TIENE SUS PROPIOS ATAJOS, Y CAMBIAR DE FORMATO NO SALVA UN PUNTO
+
+**Regla de E2#14.** El mapa `scripts/lib/formato-punto.ts` dice con qué
+formato se examina cada punto, y su criterio es uno: **juicio binario si
+y sólo si el error que enseña produce, traducido palabra por palabra,
+español bien formado.** Si el calco también rompe el español, el alumno
+acierta traduciendo.
+
+Pero el corolario que parecía seguirse —«entonces cámbiale el formato»—
+**es falso y está medido**. El lote 11 v2 pasó de juicios a cloze y su
+sección de ser/estar salió resoluble **12/12 poniendo el verbo español**:
+el cloze mata el atajo de ETIQUETA, no el de TRADUCCIÓN. Lo que decide no
+es el formato sino el CONTENIDO: si «a reunião É às três» se traduce a
+«la reunión ES a las tres», da igual cómo preguntes.
+
+**`coincide` no significa «cámbiale el formato»: significa ELIGE OTRAS
+FRASES.** Dentro de casi todo punto hay un subconjunto que sí diverge y
+es el único que da ítems; si no existe, el punto no es examinable para un
+hispanohablante y hay que declararlo en vez de llenarlo.
+
+Y cada formato trae su batería:
+- **Juicios** → `scripts/lib/atajos.ts`, trece rasgos que predicen la
+  etiqueta binaria.
+- **Cloze** → `scripts/lib/atajos-cloze.ts`. Un atajo de cloze no es un
+  rasgo sino un **resolutor**: una función que produce la respuesta desde
+  un subconjunto ESTRICTO de la información (la pista sola, la palabra
+  que abre la frase, el ancho del input, la traducción) y acierta por
+  encima del azar — que aquí no es 0,5 sino **1/k**, y hay que declarar
+  la k.
+- **Los resolutores fuertes son DECLARADOS, no calculados** (la
+  traducción, la tabla de disparadores): sin la declaración por ítem
+  marcan 0 y la batería miente por omisión. Es exactamente lo que pasaba
+  con la glosa cognada antes de exigirla.
+
+**Y un lote de juicios de un solo punto `trampa` es imposible por
+construcción**: si todos los MAL son calcos, todas sus glosas son español
+bueno y el rasgo acierta el 100 % con la regla invertida. Con pares
+mínimos la salida es elegir pares cuyos DOS rellenos glosen a español
+igual de bien o igual de mal; entonces el rasgo queda neutro por teorema.
+Medido en el lote 13: **3/6 exacto**.
+
 ## ANTES DE ESCRIBIR, MEDIR; ANTES DE MEDIR, ETIQUETAR
 
 **Regla de Edu, E2#13-14, y va antes que el ciclo entero.** Un punto
