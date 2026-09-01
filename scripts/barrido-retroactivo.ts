@@ -135,6 +135,34 @@ const REGLAS: Regla[] = [
     falla: (x) => (x.data.options.some((o: string) => norm(o) === norm(x.data.answer)) ? null : `respuesta «${x.data.answer}» ∉ [${x.data.options.join(' | ')}]`),
   },
   {
+    // El segundo repetido de la ola: «Dar-te-ei ___ darei o livro», donde
+    // el molde dejó el verbo escrito ADEMÁS del hueco. No es la respuesta
+    // literal —ésa la caza la regla de arriba— sino OTRA FORMA del mismo
+    // lema a dos palabras de distancia, que le dice al alumno cuál es el
+    // verbo y a veces la forma entera.
+    //
+    // La raíz se toma de las primeras cuatro letras y se exige que la
+    // palabra encontrada NO sea la respuesta. Es aproximado —cuatro letras
+    // juntan «casa/casar»— así que lo que salga hay que leerlo.
+    nombre: 'otra forma del mismo lema, ya escrita en la frase',
+    aplica: (x: any) => x.type === 'fill_blank' && x.data?.blanks?.length === 1 && typeof x.data?.sentence === 'string',
+    falla: (x: any) => {
+      const r = norm(String(x.data.blanks[0].answer ?? '')).replace(/-.*$/, '');
+      if (r.length < 5) return null;
+      const raiz = r.slice(0, 4);
+      // FUERA el paréntesis del molde: «___ (trabalhar)» es la convención
+      // del generador —le dice al alumno QUÉ verbo, y la tarea es la
+      // forma—, no un defecto. Sin quitarlo la regla marcaba 121 ítems y
+      // 120 eran la convención. Tercera vez que este paréntesis engaña a
+      // un barrido mío: ya se comió el «estar» de «Tu estás (estar) com
+      // razão» y el infinitivo de la clase de «estar com».
+      const sinMolde = String(x.data.sentence).replace('___', ' ').replace(/\([^)]*\)/g, ' ');
+      const resto = norm(sinMolde).split(' ');
+      const gemela = resto.find((w: string) => w.length >= 4 && w.startsWith(raiz) && w !== r);
+      return gemela ? `«${x.data.blanks[0].answer}» y «${gemela}» comparten raíz en «${x.data.sentence}»` : null;
+    },
+  },
+  {
     // Salió de un hallazgo suelto: dos ítems publicados con la frase
     // «Eu ___ um café todas as manhãs» y respuestas incompatibles, «tomo»
     // y «faço». El alumno acierta uno y falla el otro escribiendo lo

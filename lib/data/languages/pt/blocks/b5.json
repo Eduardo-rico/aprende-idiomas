@@ -421,10 +421,10 @@
     ],
     "contentHash": "10ba2ec3aad3646d0096fa092e84cb0cbdac209acd177d4a2c25b0499e180fba",
     "esContrast": "'Falaria' es el condicional regular de 'falar'.",
-    "variantStatus": "unchecked",
+    "variantStatus": "neutral",
     "type": "fill_blank",
     "data": {
-      "sentence": "Eu ___ falar português perfeitamente se praticasse mais.",
+      "sentence": "Eu ___ português perfeitamente se praticasse mais.",
       "blanks": [
         {
           "position": 0,
@@ -433,8 +433,10 @@
             "conseguiria"
           ]
         }
-      ]
-    }
+      ],
+      "hintEs": "condicional de «falar», 1.ª persona — lo pide la condición con «se … praticasse»"
+    },
+    "variantVerificacion": "barrido del lema repetido, E2#29: corregido — con la respuesta puesta salía «Eu falaria falar português»: el molde dejó el infinitivo escrito además del hueco. TERCERO de esta clase"
   },
   {
     "id": "1121d710",
