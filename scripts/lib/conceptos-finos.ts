@@ -646,6 +646,29 @@ export function conPadreCubierto(
   piso: (id: string) => number,
   cuenta: Map<string, number>,
 ): (id: string) => number {
-  const cubiertos = new Set(PARTICIONES.filter((p) => padreCubierto(p.padre, cuenta, piso)).map((p) => p.padre));
+  // La cobertura de un PADRE incluye la de sus sub-puntos, porque su
+  // contenido se enseña a través de ellos. No es bajar un piso: es contar
+  // la enseñanza que existe, igual que descontar la cuarentena era dejar
+  // de contar la que no se sirve.
+  //
+  // Se descubrió produciendo: siete cloze escritos para `b6-futuro-subj`
+  // se repartieron entre `fut-subj-quando`, `-se` e `-irregulares`, y
+  // NINGUNO contó para el padre, que siguió pidiendo siete. Con la regla
+  // anterior —«cubierto sólo si TODOS los sub-puntos llegan al piso»— eso
+  // dejaba **114 unidades en 26 puntos** que sólo se podían cerrar
+  // escribiendo ítems que EVADAN la partición, que es un objetivo
+  // perverso: material deliberadamente inclasificable.
+  //
+  // Y el dato que lo prueba: `b5-futuro-composto` pedía 4 mientras sus
+  // sub-puntos estaban a 14/8 y 16/8. El número del padre no medía
+  // carencia — medía cuántos ítems escapan a sus propias sub-reglas.
+  //
+  // Un padre cuyos sub-puntos están TODOS vacíos sigue deficitario, que es
+  // lo correcto: ahí el área no se enseña por ninguna vía.
+  const total = (p: (typeof PARTICIONES)[number]) =>
+    (cuenta.get(p.padre) ?? 0) + p.subs.reduce((a, s) => a + (cuenta.get(s.id) ?? 0), 0);
+  const cubiertos = new Set(
+    PARTICIONES.filter((p) => padreCubierto(p.padre, cuenta, piso) || total(p) >= piso(p.padre)).map((p) => p.padre),
+  );
   return (id: string) => (cubiertos.has(id) ? 0 : piso(id));
 }

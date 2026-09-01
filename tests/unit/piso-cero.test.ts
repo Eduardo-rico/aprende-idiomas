@@ -77,11 +77,19 @@ describe('padre cubierto: el déficit inalcanzable por construcción', () => {
     expect(piso(part.padre)).toBe(0);
     expect(Math.max(0, piso(part.padre) - (cuenta.get(part.padre) ?? 0))).toBe(0);
   });
-  it('si UN sub-punto se queda corto, el padre vuelve a pedir su piso', async () => {
+  it('si UN sub-punto se queda corto, el que pide es el SUB, no el padre', async () => {
+    // Esta prueba afirmaba lo contrario hasta E2#27, cuando producir siete
+    // cloze para `b6-futuro-subj` no movió su número ni una unidad: los
+    // siete cayeron en sus sub-puntos. Con la regla vieja quedaban 114
+    // unidades en 26 puntos que sólo se podían cerrar escribiendo material
+    // que EVADIERA la partición. La demanda vive en el sub-punto flaco,
+    // que es donde un ítem nuevo va a aterrizar de verdad.
     const { conPadreCubierto, PARTICIONES } = await import('@/scripts/lib/conceptos-finos');
     const part = PARTICIONES[0]!;
     const cuenta = new Map<string, number>(part.subs.map((s, i) => [s.id, i === 0 ? 3 : 8] as const));
-    expect(conPadreCubierto(() => 8, cuenta)(part.padre)).toBe(8);
+    const piso = conPadreCubierto(() => 8, cuenta);
+    expect(piso(part.padre)).toBe(0);
+    expect(piso(part.subs[0]!.id)).toBe(8);
   });
   it('baja el PISO, no sube la cuenta: la foto no guarda ítems inventados', async () => {
     const { conPadreCubierto, PARTICIONES } = await import('@/scripts/lib/conceptos-finos');
@@ -89,5 +97,31 @@ describe('padre cubierto: el déficit inalcanzable por construcción', () => {
     const cuenta = new Map<string, number>(part.subs.map((s) => [s.id, 8] as const));
     conPadreCubierto(() => 8, cuenta);
     expect(cuenta.has(part.padre)).toBe(false);
+  });
+});
+
+describe('la cobertura de un padre incluye la de sus sub-puntos', () => {
+  it('un padre cuyo ÁREA está enseñada no pide más, aunque él tenga pocos propios', async () => {
+    const { conPadreCubierto, PARTICIONES } = await import('@/scripts/lib/conceptos-finos');
+    const part = PARTICIONES[0]!;
+    // El padre tiene 2 ítems propios y sus sub-puntos, de sobra: el área se
+    // enseña. Antes esto pedía 6 más que sólo se podían cubrir escribiendo
+    // material que evadiera la partición.
+    const cuenta = new Map<string, number>([[part.padre, 2], ...part.subs.map((s) => [s.id, 10] as const)]);
+    expect(conPadreCubierto(() => 8, cuenta)(part.padre)).toBe(0);
+  });
+  it('un padre con TODO vacío sigue pidiendo: ahí no se enseña por ninguna vía', async () => {
+    const { conPadreCubierto, PARTICIONES } = await import('@/scripts/lib/conceptos-finos');
+    const part = PARTICIONES[0]!;
+    const cuenta = new Map<string, number>([[part.padre, 0], ...part.subs.map((s) => [s.id, 0] as const)]);
+    expect(conPadreCubierto(() => 8, cuenta)(part.padre)).toBe(8);
+  });
+  it('los sub-puntos conservan su propio déficit: la demanda vive ahí', async () => {
+    const { conPadreCubierto, PARTICIONES } = await import('@/scripts/lib/conceptos-finos');
+    const part = PARTICIONES[0]!;
+    const cuenta = new Map<string, number>([[part.padre, 0], ...part.subs.map((s, i) => [s.id, i === 0 ? 1 : 10] as const)]);
+    const piso = conPadreCubierto(() => 8, cuenta);
+    expect(piso(part.padre)).toBe(0);
+    expect(piso(part.subs[0]!.id)).toBe(8);   // el sub flaco sigue pidiendo
   });
 });
