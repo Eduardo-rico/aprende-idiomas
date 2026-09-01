@@ -588,3 +588,73 @@ ocho sesiones para lo que queda, no cuatro meses.
 los verbos en -car/-gar/-çar, y un conector fuera de su marco. Como el
 freno mordió las tres veces, los 100 acabaron revisados a mano igual;
 pero lo que la revisión encontró fueron **causas**, y eso sí escala.
+
+
+---
+
+## E2#16 · 181 ítems, 46 puntos cerrados, y el conjugador auditado por clases
+
+Tres frentes, los tres cerrados. **Déficit 750 → 611**, residuo 0. (Las
+dos cifras del script conviven y ninguna es la buena a solas: **FALTA
+750 → 611** incluye los 59 puntos que el currículo enumera y aún no
+tienen concepto declarado, × piso; el **déficit de los 213 declarados**
+va de **358 a 203**. Mezclarlas es lo que me hizo perder media sesión.)
+
+**1 · Lote 12 de mediación**, que llevaba tres esperando su formato: 24
+ítems, `b12-mesoclise-estilistica` y `b12-arcaismo-juridico` de 0 a 12,
+los dos cierran. La rúbrica se DERIVA de los marcadores y datos
+declarados, y el gate de trasvase cazó doce fallos en mi propio texto.
+
+**2 · Los 220 «derivables»** dictaminados: 39 de clase cerrada, 155
+verbales, 23 ni una cosa ni otra. Seis reparados, dos de ellos ROTOS. El
+barrido de sujeto-verbo sobre los 155 dio 8 marcados y **los 8 eran
+falsos positivos de mi propia criba**.
+
+**3 · 157 cloze con pista a 44 puntos, todos cerrados.** El número no lo
+elegí: el déficit alcanzable por cloze eran **165 unidades en 46 puntos**,
+así que 150 habría dejado quince sin cerrar y pasar de 165 habría puesto
+ítems por encima del piso, que descuentan cero. El lote es el hueco.
+
+### Lo que encontró el freno: dos clases, no dos ítems
+
+**El acento de hiato.** El muestreo del 20 % dio «saissem» por «saíssem».
+La regla existía y funcionaba en el particípio, en el clítico `-lo` y en
+el infinitivo pessoal — **tres copias del mismo regex**. Los dos
+conjuntivos que E2#15 añadió no la llevaban. El defecto no era el regex:
+era tenerlo tres veces. Ahora hay una `hiatoEnI` y el futuro do
+conjuntivo de los regulares **delega** en el infinitivo pessoal, porque
+son la misma forma.
+
+**La alternancia vocálica de -ir**, que el muestreo NO cazó — la encontró
+la lectura del lote entero que el freno obliga a hacer cuando muerde.
+«sube» por «sobe», «dormo» por «durmo», «servo» por «sirvo», «prefero»
+por «prefiro», «seguo» por «sigo». No es predecible por la forma («unir»
+no alterna), así que tabla cerrada, y **lo que no está se rechaza en vez
+de inventarse**. El guardián frenó a la primera un ítem ya publicado
+(«resumir»): era correcto y lo certifiqué. Eso es exactamente lo que se
+le pide a un guardián.
+
+**Barrido de las dos clases sobre el corpus entero, no sobre muestra.**
+Alternancia: 0 en campo portugués. Hiato: **tres ítems publicados y
+falsos** (`ce0518bc`, `6c7d8450`, `94729cbc`), corregidos con su audio
+regenerado.
+
+### Lo que se aparcó, y lo que se acotó
+
+`b3-pron-directo` se queda fuera con sus 7 ítems escritos: un cloze de
+clítico de OD necesita el antecedente en la frase, y el clítico
+portugués es homógrafo del artículo que lo precede, así que la respuesta
+está siempre escrita al lado. **El gate de fuga no es un falso positivo:
+acierta.** Es el formato el que no sirve para ese punto.
+
+Y un gate se **acotó a su motivo**, que no es lo mismo que aflojarlo: el
+paréntesis en la frase se exigía porque la tarjeta no pintaba `hintEs`, y
+desde E2#13 lo pinta. Ahora se exige donde importa — si el ítem pide la
+forma de un verbo, hay que nombrar el verbo.
+
+### El ritmo, medido otra vez
+
+**181 ítems y 46 puntos en una sesión.** Quedan 611 de FALTA, de los
+cuales **356 son puntos de C1 y C2 sin concepto declarado** (× piso): ésos
+no se llenan escribiendo cloze, se llenan declarándolos primero. El
+déficit de lo ya declarado son **203**, que a este ritmo son dos sesiones.
