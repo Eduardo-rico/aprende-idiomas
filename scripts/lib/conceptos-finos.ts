@@ -553,3 +553,25 @@ for (const x of items) {
   }
   return { cuenta, residuo, ejemplosResiduo, reasignados, porGlosa };
 }
+
+
+/** ¿Es `id` un concepto PADRE cuyos sub-puntos están todos cubiertos?
+ *
+ *  Un padre no es un punto de enseñanza aparte: es la unión de sus
+ *  sub-puntos. Su cuenta en `contarPuntos` es el RESIDUO —los ítems que
+ *  no casan con ningún sub-punto—, así que un padre puede aparecer «bajo
+ *  el piso» mientras el contenido está enseñado de sobra: en E2#19,
+ *  `b1-acentos` marcaba 7 y sus cuatro sub-puntos sumaban 37.
+ *
+ *  Peor aún, ese déficit es INALCANZABLE por construcción: para subir al
+ *  padre habría que escribir ítems que no casen con ninguno de sus
+ *  sub-puntos, que es exactamente lo contrario de lo que se quiere. Se
+ *  descubrió al publicar 16 cloze y ver que el déficit sólo bajaba 3.
+ *
+ *  Los padres con algún sub-punto por debajo SÍ cuentan: ahí el hueco es
+ *  real y está en el sub-punto. */
+export function padreCubierto(id: string, cuenta: Map<string, number>, piso: (x: string) => number): boolean {
+  const part = PARTICIONES.find((p) => p.padre === id);
+  if (!part) return false;
+  return part.subs.every((s) => (cuenta.get(s.id) ?? 0) >= piso(s.id));
+}

@@ -4742,5 +4742,534 @@
       ],
       "modelAnswer": "Al decirle que la casa no es pequeña le obligas a repetir el rebajamiento, y así puede seguir toda la tarde. Fíjate en el remate: si buscara consuelo no habría añadido una ventaja graciosa. Lo que hace es aceptar tu elogio quitándole peso, que es la forma cortés de recibirlo. Lo esperado era seguir el chiste, o pasar a alabar algo concreto — la luz, la vista, el sitio — que ya no admite rebaja."
     }
+  },
+  {
+    "id": "b2c2-med-l19-01",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-mediacao-especializada"
+    ],
+    "tags": [
+      "lote19",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "e1f5cc1a9642bc86017c2464679f2a331839305cc4becd033d2e5757260374c7",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 19 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "address": "o_senhor",
+    "type": "mediation",
+    "data": {
+      "sourceText": "A biópsia revelou hiperplasia benigna sem sinais de atipia celular. Recomenda-se vigilância semestral por imagem.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "o doente, de setenta anos, que ficou branco ao ler a palavra biópsia",
+      "instructionsEs": "Explícaselo tú. Sin quitar ninguna de las dos informaciones: qué salió y qué hay que hacer.",
+      "wordRange": {
+        "min": 25,
+        "max": 60
+      },
+      "rubric": [
+        "¿Sustituye «hiperplasia benigna» por «não é cancro» (o un equivalente del registro de destino)?",
+        "¿Sustituye «vigilância semestral por imagem» por «de seis em seis meses» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «sem sinais de atipia»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "O resultado é bom: o que apareceu não é cancro, é um crescimento benigno, e não há células estranhas nenhumas. O que o médico pede é só ir fazendo um exame de imagem de seis em seis meses, para ver que continua igual."
+    }
+  },
+  {
+    "id": "b2c2-med-l19-02",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-mediacao-especializada"
+    ],
+    "tags": [
+      "lote19",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "5a04fe7fe8665ddacf8ecf39926046aabf37f2cc4971f290fd729e761ad08694",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 19 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "address": "o_senhor",
+    "type": "mediation",
+    "data": {
+      "sourceText": "A cláusula sexta prevê a resolução do contrato por incumprimento reiterado, sem prejuízo da indemnização por danos emergentes.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "o teu inquilino, que não é jurista e quer saber o que lhe pode acontecer",
+      "instructionsEs": "Explícaselo en lenguaje corriente, sin suavizar la consecuencia.",
+      "wordRange": {
+        "min": 25,
+        "max": 60
+      },
+      "rubric": [
+        "¿Sustituye «resolução do contrato» por «acabar o contrato» (o un equivalente del registro de destino)?",
+        "¿Sustituye «incumprimento reiterado» por «falhar várias vezes» (o un equivalente del registro de destino)?",
+        "¿Sustituye «danos emergentes» por «pagar os prejuízos» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «cláusula sexta»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "A cláusula sexta diz isto: se falhar várias vezes, e não só uma, podem acabar o contrato. E acabar o contrato não o livra de pagar os prejuízos que essas falhas tenham causado — são duas coisas separadas e podem vir as duas."
+    }
+  },
+  {
+    "id": "b2c2-med-l19-03",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-mediacao-especializada"
+    ],
+    "tags": [
+      "lote19",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "0233a15c3f7b5cdf4c80aae4d3893c8c048520c089f0408bb52f7233f152202a",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 19 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "neutro",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Detetou-se corrosão nas armaduras da laje do piso -1, com destacamento parcial do recobrimento. Preconiza-se intervenção estrutural a curto prazo.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a assembleia de condóminos, que vai votar o orçamento",
+      "instructionsEs": "Dilo de modo que voten sabiendo qué pasa. Sin dramatizar y sin quitar la urgencia.",
+      "wordRange": {
+        "min": 28,
+        "max": 65
+      },
+      "rubric": [
+        "¿Sustituye «corrosão nas armaduras» por «os ferros estão a enferrujar» (o un equivalente del registro de destino)?",
+        "¿Sustituye «destacamento parcial do recobrimento» por «está a soltar-se» (o un equivalente del registro de destino)?",
+        "¿Sustituye «Preconiza-se intervenção estrutural a curto prazo» por «tem de se arranjar em breve» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «piso -1»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "O relatório diz que na laje da cave os ferros estão a enferrujar e o betão à volta está a soltar-se. Não é uma questão estética: é a estrutura, e tem de se arranjar em breve. Por isso é que a obra aparece no orçamento e não pode ficar para o ano que vem."
+    }
+  },
+  {
+    "id": "b2c2-med-l19-04",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-mediacao-especializada"
+    ],
+    "tags": [
+      "lote19",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "1f43605c89f3ed94d2b176873580b997d32674828406f51a761e89065835134c",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 19 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "O estudo não permite estabelecer causalidade, dada a natureza observacional da amostra e a possível presença de fatores de confundimento não controlados.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a tua irmã, que leu um titular a dizer que aquilo cura",
+      "instructionsEs": "Explícale por qué el titular no se sostiene, sin decirle que el estudio no vale.",
+      "wordRange": {
+        "min": 28,
+        "max": 65
+      },
+      "rubric": [
+        "¿Sustituye «não permite estabelecer causalidade» por «não prova que seja por isso» (o un equivalente del registro de destino)?",
+        "¿Sustituye «natureza observacional» por «só observaram» (o un equivalente del registro de destino)?",
+        "¿Sustituye «fatores de confundimento» por «pode haver outra coisa» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «estudo»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "O estudo não é mau, mas não prova que seja por isso. Eles só observaram o que já acontecia, não experimentaram nada, e por isso pode haver outra coisa a explicar o resultado — quem faz aquilo talvez faça também outras coisas. O titular saltou por cima disso tudo."
+    }
+  },
+  {
+    "id": "b2c2-med-l19-05",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-mediacao-especializada"
+    ],
+    "tags": [
+      "lote19",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "456a6d11755c06ffdb38e364175bcdc6acbe7e2173993624662e74ebfcdb2bbb",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 19 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Doí-me aqui à noite, sobretudo quando me deito de lado. De manhã passa. Já dura para aí um mês.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a nota clínica que fica no processo do doente",
+      "instructionsEs": "Recógelo como nota clínica. Todo lo que él dijo, y nada que él no haya dicho.",
+      "wordRange": {
+        "min": 20,
+        "max": 55
+      },
+      "rubric": [
+        "¿Sustituye «Doí-me aqui» por «Refere dor» (o un equivalente del registro de destino)?",
+        "¿Sustituye «para aí um mês» por «com cerca de um mês de evolução» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «à noite»?",
+        "¿Traslada el dato «de lado»?",
+        "¿Traslada el dato «De manhã passa»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Refere dor de predomínio noturno, agravada em decúbito lateral, com alívio matinal espontâneo. Quadro com cerca de um mês de evolução. Sem outra sintomatologia referida pelo doente."
+    }
+  },
+  {
+    "id": "b2c2-med-l19-06",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-mediacao-especializada"
+    ],
+    "tags": [
+      "lote19",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "d0abf4accb68cf581c0d4dc73003747728190c4d57c8e28cae9d27a86ebeab73",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 19 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Eu ia a passar e o carro dele saiu do lugar sem pôr o pisca. Travei, mas ele bateu-me na porta do lado.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a participação de sinistro que vai para a seguradora",
+      "instructionsEs": "Redáctalo como parte. Nada de responsabilidad declarada: sólo lo que él dice que ocurrió.",
+      "wordRange": {
+        "min": 22,
+        "max": 60
+      },
+      "rubric": [
+        "¿Sustituye «Eu ia a passar» por «circulava» (o un equivalente del registro de destino)?",
+        "¿Sustituye «sem pôr o pisca» por «sem sinalizar» (o un equivalente del registro de destino)?",
+        "¿Sustituye «bateu-me na porta do lado» por «embate na lateral» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «Travei»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "O participante circulava na via quando o segundo veículo iniciou manobra de saída do estacionamento sem sinalizar. Apesar da travagem efetuada, verificou-se embate na lateral do primeiro veículo. Descrição prestada pelo participante."
+    }
+  },
+  {
+    "id": "b2c2-med-l19-07",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-mediacao-especializada"
+    ],
+    "tags": [
+      "lote19",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "5267a3619402eb1ac256cd361f502b51371ea5283987e681c99b09dfb382be14",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 19 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "A máquina começou a fazer um barulho esquisito e depois deitou fumo. Desliguei-a logo e não voltei a ligar.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "o relatório de avaria que vai com o equipamento para a assistência",
+      "instructionsEs": "Escríbelo como reporte de avería. Sin diagnosticar: tú no sabes qué se rompió.",
+      "wordRange": {
+        "min": 20,
+        "max": 55
+      },
+      "rubric": [
+        "¿Sustituye «barulho esquisito» por «ruído anómalo» (o un equivalente del registro de destino)?",
+        "¿Sustituye «deitou fumo» por «libertação de fumo» (o un equivalente del registro de destino)?",
+        "¿Sustituye «Desliguei-a logo» por «corte imediato» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «não voltei a ligar»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "O equipamento apresentou ruído anómalo em funcionamento, seguido de libertação de fumo. Procedeu-se ao corte imediato da alimentação. O equipamento não foi reativado desde então."
+    }
+  },
+  {
+    "id": "b2c2-med-l19-08",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-mediacao-especializada"
+    ],
+    "tags": [
+      "lote19",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "0a502885e02c335357d974c22703e734a8cee33fcff4c7f29152d634c3b0152c",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 19 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "O miúdo não quer ir à escola desde que mudou de turma. Chora de manhã e diz que lhe dói a barriga, mas ao fim de semana está bem.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "o relatório que a psicóloga escolar junta ao processo",
+      "instructionsEs": "Recógelo como observación. Describe lo que la madre cuenta, sin ponerle nombre clínico.",
+      "wordRange": {
+        "min": 22,
+        "max": 60
+      },
+      "rubric": [
+        "¿Sustituye «não quer ir à escola» por «recusa escolar» (o un equivalente del registro de destino)?",
+        "¿Sustituye «diz que lhe dói a barriga» por «queixas abdominais» (o un equivalente del registro de destino)?",
+        "¿Sustituye «ao fim de semana está bem» por «ausência de sintomatologia ao fim de semana» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «mudou de turma»?",
+        "¿Traslada el dato «Chora de manhã»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Relata a mãe recusa escolar com início coincidente com a mudança de turma. Descreve choro matinal e queixas abdominais, com ausência de sintomatologia ao fim de semana. Sem outros dados fornecidos pela mãe."
+    }
+  },
+  {
+    "id": "b2c2-exp-l20-07",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-mediacao-intercultural"
+    ],
+    "tags": [
+      "lote20",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "7404fc96c66e8d8ec3e50db3777c41a6df9d1fbb0083f1622047d10f79a8a5c0",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 20 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Um espanhol numa reunião em Lisboa: «Bueno, yo os lo explico en español que nos entendemos todos, ¿vale?»",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "el propio, que lo dijo para facilitar las cosas y notó que el ambiente se enfrió",
+      "instructionsEs": "Explícale por qué esa frase cuesta cara y qué habría funcionado mejor.",
+      "wordRange": {
+        "min": 55,
+        "max": 130
+      },
+      "rubric": [
+        "¿Dice que el portugués entiende español mejor de lo que el español entiende portugués?",
+        "¿Dice que por eso proponerlo suena a que el esfuerzo lo hacen ellos?",
+        "¿Dice que pedir permiso en portugués cambia por completo el efecto?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "La frase parece práctica y no lo es. El portugués suele entender español mucho mejor de lo que el español entiende portugués, así que proponer el español como lengua común no reparte el esfuerzo: lo pone entero del lado de ellos, y encima da por hecho que aceptan. Lo que funciona es lo contrario: empezar en portugués aunque sea mal, y pedir permiso para pasar al español si hace falta. Lo mismo dicho al revés se recibe al revés."
+    }
+  },
+  {
+    "id": "b2c2-exp-l20-08",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-mediacao-intercultural"
+    ],
+    "tags": [
+      "lote20",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "5d3e81f63bb9f432fa996fa30cebd44671e18d74649e6d4015b84fdbf683707c",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 20 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Um cliente espanhol ao telefone: «¡Qué bien hablas español! Casi no se te nota el acento.»",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "el propio, que lo dijo como cumplido y notó que la conversación se acortó",
+      "instructionsEs": "Explícale por qué el cumplido no llegó como cumplido.",
+      "wordRange": {
+        "min": 55,
+        "max": 130
+      },
+      "rubric": [
+        "¿Dice que muchos portugueses hablan español sin haberlo estudiado?",
+        "¿Dice que elogiarlo señala que se le ve como el que se adapta?",
+        "¿Dice que el cumplido equivalente sería elogiar algo que él eligió?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "El elogio da por hecho justo lo que molesta. Muchos portugueses hablan español razonablemente sin haberlo estudiado, por exposición, y elogiárselo señala que se le ve como el que se adapta a ti — que es la posición en la que ya estaba antes de que hablaras. Si quieres hacer un cumplido, elogia algo que él eligió: su trabajo, una decisión, una explicación clara. La lengua no la eligió, la puso para que tú estuvieras cómodo."
+    }
+  },
+  {
+    "id": "b2c2-exp-l20-09",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-mediacao-intercultural"
+    ],
+    "tags": [
+      "lote20",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "a765eb0f5439d9fc8e0b8e0f40e3b425c75164e8bb0f1e9dfc68ec92b048060a",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 20 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Numa negociação, o espanhol interrompe duas vezes para adiantar a conclusão e o português cala-se até ao fim.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "explain_concept",
+      "audience": "o mediador, que tem de explicar a cada lado o que aconteceu",
+      "instructionsEs": "Explica em português o que cada um julgou do outro e como se desfaz o mal-entendido.",
+      "wordRange": {
+        "min": 55,
+        "max": 130
+      },
+      "rubric": [
+        "¿Dice que a interrupção em Espanha marca envolvimento e não desrespeito?",
+        "¿Dice que o silêncio português foi lido como desinteresse quando era o contrário?",
+        "¿Dice que dizer a norma de cada lado em voz alta resolve mais do que corrigir?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Cada um leu o outro pela sua norma. Em Espanha, interromper marca envolvimento e mostra que se está a acompanhar; o silêncio prolongado é que preocupa. Em Portugal é ao contrário: espera-se o turno, e quem corta parece atropelar. Assim, um pareceu agressivo e o outro pareceu desinteressado, e nenhum dos dois era. O que resolve não é corrigir ninguém: é dizer a norma de cada lado em voz alta, no início, para que a leitura mude."
+    }
+  },
+  {
+    "id": "b2c2-exp-l20-10",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-mediacao-intercultural"
+    ],
+    "tags": [
+      "lote20",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "aebb6ee1eb55c1fb181ff64b1069ef6a85f0320e4013ac6f63a3d1b499aa5b15",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 20 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Um espanhol pergunta a um português: «¿Y vosotros no os sentís un poco españoles?»",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "el propio, que lo preguntó con curiosidad genuina y recibió una respuesta muy seca",
+      "instructionsEs": "Explícale qué contiene esa pregunta sin que él lo pusiera, y cómo se pregunta lo mismo sin ese fondo.",
+      "wordRange": {
+        "min": 55,
+        "max": 130
+      },
+      "rubric": [
+        "¿Dice que la pregunta presupone que Portugal es una variante de España?",
+        "¿Dice que hay una historia larga detrás de esa sensibilidad?",
+        "¿Dice que la misma curiosidad cabe en una pregunta simétrica?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Tu curiosidad era genuina y la pregunta no lo parecía. Tal como está formulada presupone que Portugal es una variante de España, y detrás de esa sensibilidad hay una historia larga que en España casi no se estudia y en Portugal sí. Por eso la respuesta llegó seca. La misma curiosidad cabe en una pregunta simétrica: qué se parece y qué no entre los dos países, preguntado de manera que la respuesta pueda ir en las dos direcciones."
+    }
+  },
+  {
+    "id": "b2c2-exp-l20-11",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-mediacao-intercultural"
+    ],
+    "tags": [
+      "lote20",
+      "mediacao",
+      "explicar"
+    ],
+    "contentHash": "ec3104a5a12182b32a92ecb3588c211af095cd89ecdbd1aa996ccd318ab5b3a2",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación EXPLICAR lote 20 (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano",
+    "register": "neutro",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Numa empresa, o espanhol responde a um pedido com «eso es imposible» e o assunto morre ali.",
+      "sourceLang": "pt",
+      "targetLang": "es",
+      "mediationType": "explain_concept",
+      "audience": "el propio, que quería ganar tiempo y no cerrar la puerta",
+      "instructionsEs": "Explícale qué se oyó al otro lado y cómo se dice lo mismo sin cerrar nada.",
+      "wordRange": {
+        "min": 55,
+        "max": 135
+      },
+      "rubric": [
+        "¿Dice que la negativa directa es más frecuente y menos grave en España?",
+        "¿Dice que en Portugal la negativa se atenúa y una directa se lee como final?",
+        "¿Dice que decir la dificultad concreta mantiene la conversación abierta?",
+        "¿NO añade nada que la fuente no permita afirmar? (casilla negativa: se marca sólo si no inventa)",
+        "¿EXPLICA, en vez de limitarse a traducir o parafrasear la fuente? (si sólo la repite en otras palabras, no vale)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Al otro lado se oyó un portazo. La negativa directa es más frecuente y menos grave en España, donde se discute a partir de ella; en Portugal la negativa se atenúa casi siempre, así que una directa se lee como definitiva y nadie insiste. Lo que mantiene la conversación abierta es decir la dificultad concreta en lugar del veredicto: qué falta, qué plazo haría falta, de qué depende. Con eso el asunto sigue vivo y tú ganas el tiempo que querías."
+    }
   }
 ]

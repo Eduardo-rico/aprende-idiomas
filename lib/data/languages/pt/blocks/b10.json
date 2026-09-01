@@ -12666,5 +12666,128 @@
       ],
       "modelAnswer": "O prazo do pagamento era ontem e a partir de agora conta multa. Preciso que trates disso hoje e que me digas quando estiver feito."
     }
+  },
+  {
+    "id": "b2c2-med-l19-09",
+    "blockId": 10,
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-var-tratamento"
+    ],
+    "tags": [
+      "lote19",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "7fe308dbbd83537f4409f8ea52ee1615c27092301198de7fa4a0d6329115f321",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 19 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "address": "o_senhor",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Oi, professor! Você pode me mandar o arquivo que a gente viu na aula? Obrigado desde já!",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "o mesmo professor, mas numa universidade portuguesa",
+      "instructionsEs": "Reescríbelo como se lo escribiría un estudiante en Portugal. El tratamiento brasileño a un profesor no es el portugués.",
+      "wordRange": {
+        "min": 12,
+        "max": 40
+      },
+      "rubric": [
+        "¿Sustituye «Você pode» por «poderia» (o un equivalente del registro de destino)?",
+        "¿Sustituye «a gente viu» por «vimos» (o un equivalente del registro de destino)?",
+        "¿Sustituye «Obrigado desde já» por «Com os melhores cumprimentos» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «arquivo»?",
+        "¿Traslada el dato «aula»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Bom dia, Professor. Poderia enviar-me o ficheiro que vimos na aula? Muito obrigado. Com os melhores cumprimentos."
+    }
+  },
+  {
+    "id": "b2c2-med-l19-10",
+    "blockId": 10,
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-var-tratamento"
+    ],
+    "tags": [
+      "lote19",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "dc1d4c9489c41eec6db8db4481e93e16d9b085642d264e119f2f81e478dcc5d5",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 19 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "address": "o_senhor",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Dona Maria, a senhora quer que eu passe aí amanhã cedo pra gente resolver isso?",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a mesma vizinha, mas em Lisboa",
+      "instructionsEs": "Pásalo al trato portugués. El «dona + nombre» y el «pra gente» no se dicen así en Lisboa.",
+      "wordRange": {
+        "min": 10,
+        "max": 35
+      },
+      "rubric": [
+        "¿Sustituye «Dona Maria» por «Ó senhora Maria» (o un equivalente del registro de destino)?",
+        "¿Sustituye «pra gente resolver» por «para resolvermos» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «amanhã cedo»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Ó senhora Maria, quer que eu passe aí amanhã de manhã para resolvermos isso?"
+    }
+  },
+  {
+    "id": "b2c2-med-l19-11",
+    "blockId": 10,
+    "lessonId": "b10-l2-variacao-diatopica-brasil-portugal",
+    "difficulty": 3,
+    "concepts": [
+      "b10-var-tratamento"
+    ],
+    "tags": [
+      "lote19",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "70f1c43af84aae4c2b58934ab12c04458ca5ccb30480f51f27ad72ab06ba5a85",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 19 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "address": "o_senhor",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Ó senhor doutor, faz favor: o senhor pode ver-me isto antes de eu ir embora?",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "o mesmo médico, mas num consultório em São Paulo",
+      "instructionsEs": "Dilo como allí. El «senhor doutor» y la ênclise no son el registro brasileño equivalente.",
+      "wordRange": {
+        "min": 10,
+        "max": 35
+      },
+      "rubric": [
+        "¿Sustituye «Ó senhor doutor» por «Doutor» (o un equivalente del registro de destino)?",
+        "¿Sustituye «faz favor» por «por favor» (o un equivalente del registro de destino)?",
+        "¿Sustituye «ver-me isto» por «olhar isso» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «antes de eu ir embora»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Doutor, por favor: o senhor pode olhar isso pra mim antes de eu ir embora?"
+    }
   }
 ]

@@ -217,6 +217,35 @@ const IRREGULARES: Record<string, Partial<Record<string, Partial<Record<Persona,
   dizer: { presente: { eu: 'digo', tu: 'dizes', ele: 'diz', 'nós': 'dizemos', eles: 'dizem' },
            presSubj: { eu: 'diga', tu: 'digas', ele: 'diga', 'nós': 'digamos', eles: 'digam' },
            imperativoTu: { tu: 'diz' } },
+  // ── E2#19 · los -er y -ir irregulares que faltaban. Los tres primeros
+  // comparten regla —el tema en -z apocopa en 3.ª («faz», «diz», «traz»),
+  // donde la desinencia regular daba *traze*— y los otros son léxicos.
+  trazer: { presente: { eu: 'trago', tu: 'trazes', ele: 'traz', 'nós': 'trazemos', eles: 'trazem' },
+           presSubj: { eu: 'traga', tu: 'tragas', ele: 'traga', 'nós': 'tragamos', eles: 'tragam' },
+           imperativoTu: { tu: 'traz' } },
+  ler:   { presente: { eu: 'leio', tu: 'lês', ele: 'lê', 'nós': 'lemos', eles: 'leem' },
+           presSubj: { eu: 'leia', tu: 'leias', ele: 'leia', 'nós': 'leiamos', eles: 'leiam' },
+           imperativoTu: { tu: 'lê' } },
+  crer:  { presente: { eu: 'creio', tu: 'crês', ele: 'crê', 'nós': 'cremos', eles: 'creem' },
+           presSubj: { eu: 'creia', tu: 'creias', ele: 'creia', 'nós': 'creiamos', eles: 'creiam' },
+           imperativoTu: { tu: 'crê' } },
+  perder: { presente: { eu: 'perco', tu: 'perdes', ele: 'perde', 'nós': 'perdemos', eles: 'perdem' },
+           presSubj: { eu: 'perca', tu: 'percas', ele: 'perca', 'nós': 'percamos', eles: 'percam' },
+           imperativoTu: { tu: 'perde' } },
+  valer: { presente: { eu: 'valho', tu: 'vales', ele: 'vale', 'nós': 'valemos', eles: 'valem' },
+           presSubj: { eu: 'valha', tu: 'valhas', ele: 'valha', 'nós': 'valhamos', eles: 'valham' },
+           imperativoTu: { tu: 'vale' } },
+  caber: { presente: { eu: 'caibo', tu: 'cabes', ele: 'cabe', 'nós': 'cabemos', eles: 'cabem' },
+           presSubj: { eu: 'caiba', tu: 'caibas', ele: 'caiba', 'nós': 'caibamos', eles: 'caibam' } },
+  ouvir: { presente: { eu: 'ouço', tu: 'ouves', ele: 'ouve', 'nós': 'ouvimos', eles: 'ouvem' },
+           presSubj: { eu: 'ouça', tu: 'ouças', ele: 'ouça', 'nós': 'ouçamos', eles: 'ouçam' },
+           imperativoTu: { tu: 'ouve' } },
+  pedir: { presente: { eu: 'peço', tu: 'pedes', ele: 'pede', 'nós': 'pedimos', eles: 'pedem' },
+           presSubj: { eu: 'peça', tu: 'peças', ele: 'peça', 'nós': 'peçamos', eles: 'peçam' },
+           imperativoTu: { tu: 'pede' } },
+  medir: { presente: { eu: 'meço', tu: 'medes', ele: 'mede', 'nós': 'medimos', eles: 'medem' },
+           presSubj: { eu: 'meça', tu: 'meças', ele: 'meça', 'nós': 'meçamos', eles: 'meçam' },
+           imperativoTu: { tu: 'mede' } },
   vir:   { presente: { eu: 'venho', tu: 'vens', ele: 'vem', 'nós': 'vimos', eles: 'vêm' },
            // Sin esto la desinencia regular daba «via», que ADEMÁS es una
            // palabra real —el imperfeito de «ver»—, o sea el peor tipo de
@@ -281,6 +310,13 @@ const ALTERNANCIA_IR: Record<string, Partial<Record<Persona, string>>> = {
 
 /** -ir CERTIFICADOS como regulares. La lista existe para que el guardián
  *  de abajo pueda decir «no sé» sin bloquear los verbos que sí sé. */
+const ER_REGULARES = new Set([
+  'comer', 'beber', 'vender', 'aprender', 'correr', 'escrever', 'viver',
+  'receber', 'responder', 'entender', 'depender', 'meter', 'prometer',
+  'esconder', 'resolver', 'mexer', 'bater', 'varrer', 'temer', 'dever',
+  'sofrer', 'atender', 'defender', 'acender', 'suspender', 'percorrer',
+]);
+
 const IR_REGULARES = new Set([
   'partir', 'abrir', 'decidir', 'dividir', 'unir', 'permitir', 'insistir',
   'existir', 'assistir', 'discutir', 'imprimir', 'garantir', 'resistir',
@@ -293,6 +329,24 @@ export function conjugar(inf: string, tiempo: Tiempo, p: Persona): string | null
   if (irr) return irr;
   const c = conjDe(inf);
   if (!c) return null;
+  // -CER / -GER / -GIR: la letra cambia para conservar el SONIDO ante la
+  // desinencia en -o/-a — conheço, protejo, dirijo. Es una REGLA, no una
+  // lista, igual que el `anteE` de los -car/-gar/-çar.
+  if ((c === 'er' || c === 'ir') && (tiempo === 'presente' || tiempo === 'presSubj')) {
+    const r0 = raizReg(inf);
+    const suena = /[oa]/.test(({ presente: DES_PRESENTE, presSubj: DES_PRES_SUBJ } as any)[tiempo][c][p]?.[0] ?? '');
+    if (suena && !IRREGULARES[inf]) {
+      if (/c$/.test(r0)) return r0.slice(0, -1) + 'ç' + ({ presente: DES_PRESENTE, presSubj: DES_PRES_SUBJ } as any)[tiempo][c][p];
+      if (/g$/.test(r0)) return r0.slice(0, -1) + 'j' + ({ presente: DES_PRESENTE, presSubj: DES_PRES_SUBJ } as any)[tiempo][c][p];
+    }
+  }
+  // GUARDIÁN DE LOS -ER, hermano del de los -ir. En E2#19 el conjugador
+  // daba *trazo*, *traze*, *lo*, *cro*, *perdo*, *valo* y *cabo*: los -er
+  // irregulares que no estaban en la tabla caían al patrón regular y
+  // salían formas que no existen. Ahora, si no está en la tabla ni
+  // certificado como regular, se RECHAZA.
+  if (c === 'er' && (tiempo === 'presente' || tiempo === 'imperativoTu' || tiempo === 'presSubj')
+      && !IRREGULARES[inf] && !ER_REGULARES.has(inf) && !/[cg]$/.test(raizReg(inf))) return null;
   // La alternancia sólo se ve en presente (y en el imperativo de tu, que
   // sale de la 3.ª sg). El imperfeito y el conjuntivo no la tienen.
   if (c === 'ir' && (tiempo === 'presente' || tiempo === 'imperativoTu')) {

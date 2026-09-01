@@ -16,7 +16,7 @@
 // de regência verbal viviendo bajo «pretérito perfeito irregular».
 import fs from 'node:fs';
 import path from 'node:path';
-import { PARTICIONES, TRANSVERSALES, contarPuntos, textoItem } from './lib/conceptos-finos';
+import { PARTICIONES, TRANSVERSALES, contarPuntos, textoItem, padreCubierto } from './lib/conceptos-finos';
 import { CONCEPTOS_FINOS } from '../lib/data/languages/pt/conceptos-finos.generated';
 import { ALL_CONCEPTS } from '../lib/data/languages/pt/curriculum';
 import { reconciliar, informe, type PorPunto } from './lib/reconciliar-deficit';
@@ -53,6 +53,7 @@ const items = [...porFichero.values()].flat();
 // menos por no aplicar particiones ni transversales.
 const { cuenta, residuo, ejemplosResiduo, reasignados, porGlosa } = contarPuntos(items);
 
+
 // ── Informe 1 · qué hizo la partición ────────────────────────────────
 console.log(`# Partición de conceptos — ${PARTICIONES.length} conceptos gruesos → ${PARTICIONES.reduce((a, p) => a + p.subs.length, 0)} sub-puntos\n`);
 console.log(`ítems del corpus: ${items.length} · asignaciones movidas a un sub-punto: ${reasignados} (de ellas ${porGlosa} sólo casan mirando la explicación, no el contenido: más débiles)\n`);
@@ -81,6 +82,13 @@ const nivelDe = (id: string): string => {
   const b = BLOQUE_DE.get(id) ?? Number(id.match(/^b(\d+)-/)?.[1] ?? 0);
   return BLOQUE_A_NIVEL[b] ?? '?';
 };
+// Un PADRE cuyos sub-puntos están todos cubiertos no cuenta como déficit:
+// su cuenta es el residuo, no una carencia, y subirla exigiría escribir
+// ítems que no casen con ningún sub-punto. Se ajusta aquí, una sola vez,
+// para que todas las tablas de abajo vean lo mismo.
+const pisoId = (id: string) => pisoDe(nivelDe(id));
+const padresCubiertos = [...cuenta.keys()].filter((id) => cuenta.get(id)! < pisoId(id) && padreCubierto(id, cuenta, pisoId));
+for (const id of padresCubiertos) cuenta.set(id, pisoId(id));
 // EL INVENTARIO DE PUNTOS son los conceptos DECLARADOS, no los que
 // resultan tener ítems. La v1 medía el déficit sobre `cuenta`, que sólo
 // contiene conceptos con al menos una asignación, así que **un punto a

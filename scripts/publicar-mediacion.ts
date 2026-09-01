@@ -18,15 +18,18 @@ import { rubricaDe, verificar, type ItemMed } from './lotes/lote12-mediacion';
 import { ITEMS as L14 } from './lotes/lote14-mediacion';
 import { ITEMS as L15 } from './lotes/lote15-mediacion';
 import { ITEMS as L16 } from './lotes/lote16-mediacion';
+import { ITEMS as L19 } from './lotes/lote19-mediacion';
+import { ITEMS as L21 } from './lotes/lote21-mediacion';
 import { rubricaDe as rubricaExplica, verificar as verificarExplica, type ItemExplica } from './lib/explicar-mediacion';
 import { ITEMS as L17 } from './lotes/lote17-explicar';
 import { ITEMS as L18 } from './lotes/lote18-explicar';
+import { ITEMS as L20 } from './lotes/lote20-explicar';
 
-const LOTES: Record<string, ItemMed[]> = { '14': L14, '15': L15, '16': L16 };
+const LOTES: Record<string, ItemMed[]> = { '14': L14, '15': L15, '16': L16, '19': L19, '21': L21 };
 // La familia EXPLICAR tiene otra forma y otros gates. Se publica por la
 // misma puerta —el orden del contrato es el mismo, validar todo antes de
 // escribir nada— pero no se le fuerza la plantilla de registro.
-const LOTES_EXPLICA: Record<string, ItemExplica[]> = { '17': L17, '18': L18 };
+const LOTES_EXPLICA: Record<string, ItemExplica[]> = { '17': L17, '18': L18, '20': L20 };
 
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
 const lote = arg('--lote') ?? '';
@@ -138,10 +141,10 @@ for (const x of EXPLICA ? [] : ITEMS!) {
     type: 'mediation',
     data: {
       sourceText: x.sourceText,
-      // La fuente de estos ítems es portuguesa en los dos sentidos: se
-      // reformula el registro, no la lengua.
-      sourceLang: 'pt',
-      targetLang: 'pt',
+      // La mayoría reformula el registro sin cambiar de lengua; la
+      // traducción literaria no, y por eso el campo se DECLARA.
+      sourceLang: x.sourceLang ?? 'pt',
+      targetLang: x.targetLang ?? 'pt',
       mediationType: 'reformulate_register',
       audience: x.audience,
       instructionsEs: x.instruccion,

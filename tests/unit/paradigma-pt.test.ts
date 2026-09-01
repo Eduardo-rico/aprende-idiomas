@@ -270,4 +270,38 @@ describe('presente do conjuntivo · el cambio ortográfico ante -e', () => {
     expect(conjugar('seguir', 'imperfeito', 'ele')).toBe('seguia');
     expect(conjugar('partir', 'imperfeito', 'ele')).toBe('partia');
   });
+
+  // E2#19 · la CUARTA clase del conjugador, y la encontró otra vez el
+  // verificar-antes-de-escribir: los -er irregulares que no estaban en la
+  // tabla caían al patrón regular y daban *trazo*, *traze*, *lo*, *cro*,
+  // *perdo*, *valo*, *cabo*. Ninguna existe.
+  it('conjuga los -er irregulares que faltaban', () => {
+    expect(conjugar('trazer', 'presente', 'eu')).toBe('trago');
+    expect(conjugar('trazer', 'presente', 'ele')).toBe('traz');
+    expect(conjugar('trazer', 'imperativoTu', 'tu')).toBe('traz');
+    expect(conjugar('ler', 'presente', 'eu')).toBe('leio');
+    expect(conjugar('ler', 'presente', 'ele')).toBe('lê');
+    expect(conjugar('perder', 'presente', 'eu')).toBe('perco');
+    expect(conjugar('valer', 'presente', 'eu')).toBe('valho');
+    expect(conjugar('caber', 'presente', 'eu')).toBe('caibo');
+    expect(conjugar('ouvir', 'presente', 'eu')).toBe('ouço');
+    expect(conjugar('pedir', 'presente', 'eu')).toBe('peço');
+  });
+
+  it('aplica el cambio ortográfico de -cer/-ger ante -o y -a', () => {
+    // Es una REGLA, no una lista: la letra cambia para conservar el sonido.
+    expect(conjugar('conhecer', 'presente', 'eu')).toBe('conheço');
+    expect(conjugar('parecer', 'presente', 'eu')).toBe('pareço');
+    expect(conjugar('proteger', 'presente', 'eu')).toBe('protejo');
+    // y no se toca donde no hace falta
+    expect(conjugar('conhecer', 'presente', 'ele')).toBe('conhece');
+    expect(conjugar('comer', 'presente', 'eu')).toBe('como');
+  });
+
+  it('RECHAZA el -er desconocido que podría ser irregular', () => {
+    expect(conjugar('roer', 'presente', 'eu')).toBeNull();
+    // pero los certificados como regulares siguen saliendo
+    expect(conjugar('beber', 'presente', 'eu')).toBe('bebo');
+    expect(conjugar('escrever', 'presente', 'ele')).toBe('escreve');
+  });
 });

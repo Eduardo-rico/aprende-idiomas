@@ -53,6 +53,17 @@ export interface ItemMed {
   wordRange: [number, number];
   register: string;
   address?: string;
+  /** Lengua de la FUENTE. Por defecto portugués, porque casi toda esta
+   *  familia reformula el registro sin cambiar de lengua. La traducción
+   *  literaria es la excepción y necesita declararlo — `b2c2-med-220` se
+   *  publicó con la fuente en español y el campo diciendo `pt`, y un gate
+   *  que se fía del campo escanea la lengua equivocada. */
+  sourceLang?: 'pt' | 'es';
+  /** Lengua del MODELO. Por defecto portugués. Los tres ítems de
+   *  traducción que van hacia el español lo declaran, porque publicar
+   *  `targetLang: 'pt'` con un modelo español es literalmente el defecto
+   *  de `b2c2-med-220` invertido. */
+  targetLang?: 'pt' | 'es';
 }
 
 const MES = 'b12-mesoclise-estilistica';
