@@ -396,13 +396,18 @@ async function ingerir(obra) {
   const serie = piezas.length > 1 ? { id: obra.slug, titulo: obra.titulo } : null;
   const escritos = [];
   const usados = new Set();
+  const etq = obra.etiquetaPieza ?? 'Capítulo';
+  // `offsetCapitulo` para las ediciones a las que les falta el marcador
+  // del capítulo I (O Ateneu): el capítulo 1 entra como preámbulo y la
+  // numeración de los demás se corre para que siga cuadrando con el libro.
+  const off = obra.offsetCapitulo ?? 0;
   for (const [i, p] of piezas.entries()) {
-    const nCap = i + 1 - (preambulo ? 1 : 0);
+    const nCap = i + 1 - (preambulo ? 1 : 0) + off;
     const tituloPieza = obra.modo === 'entero' ? obra.titulo
       : p.pre ? p.marcador
         : esConto ? tituloBonito(p.marcador)
-          : p.desde === p.hasta ? `${obra.etiquetaPieza ?? 'Capítulo'} ${p.desde + 1}`
-            : `${obra.etiquetaPieza ?? 'Capítulo'}s ${p.desde + 1}-${p.hasta + 1}`;
+          : p.desde === p.hasta ? `${etq} ${p.desde + 1 + off}`
+            : `${etq}s ${p.desde + 1 + off}-${p.hasta + 1 + off}`;
     let id = piezas.length === 1 ? obra.slug
       : p.pre ? `${obra.slug}-p00`
         : esConto ? `${obra.slug}--${slugify(p.marcador.replace(/\[\d+\]/g, ''))}`
