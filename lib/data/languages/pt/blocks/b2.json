@@ -29,7 +29,10 @@
       "front": "¿Qué significa \"irmã\"?",
       "back": "hermana",
       "example": "A minha irmã é médica. / A irmã dele mora no Rio."
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-em"
+    ]
   },
   {
     "id": "01ccf272",
@@ -60,7 +63,10 @@
       "front": "¿Cuáles son los artículos definidos en portugués?",
       "back": "o, a, os, as",
       "example": "O menino / a menina / os homens / as mulheres"
-    }
+    },
+    "__nuevos": [
+      "b2-artigos"
+    ]
   },
   {
     "id": "02101173",
@@ -97,7 +103,10 @@
         "Na Argentina"
       ],
       "answer": "No Brasil"
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-em"
+    ]
   },
   {
     "id": "02d4fd7f",
@@ -112,8 +121,8 @@
     ],
     "contentHash": "02d4fd7f0e0130e1fe0a85b87f0549f8e86f5d22e4c0db380b8c3f7c611b9977",
     "esContrast": "Se contrae 'em + o = no'; en español se diría 'en el centro'.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: reg-verbal-em · sello anterior: revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "morar",
@@ -125,7 +134,10 @@
         "para"
       ],
       "answer": "no"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-em"
+    ]
   },
   {
     "id": "0478585d",
@@ -154,7 +166,10 @@
         }
       ],
       "hintEs": "visitar a nuestros abuelos"
-    }
+    },
+    "__nuevos": [
+      "b2-possessivos"
+    ]
   },
   {
     "id": "0499318f",
@@ -196,7 +211,11 @@
       "pt-br": {
         "audioText": "Todo aquele contato com saudade quase me fez chorar."
       }
-    }
+    },
+    "__nuevos": [
+      "b2-dem-tres-graus",
+      "b2-indef-todo-tudo"
+    ]
   },
   {
     "id": "07ac6b63",
@@ -221,7 +240,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-indef-todo-tudo"
+    ]
   },
   {
     "id": "08e46bcf",
@@ -312,8 +334,8 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-numero · sello anterior: reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
     "type": "listening",
     "data": {
       "audioText": "Os meus dois filhos estão animados para encontrar a prima no parque amanhã.",
@@ -325,7 +347,10 @@
         "Ninguno"
       ],
       "answer": "Dos"
-    }
+    },
+    "__nuevos": [
+      "b2-numero"
+    ]
   },
   {
     "id": "0a2f6c45",
@@ -357,7 +382,10 @@
       "front": "Cuál es la contracción de \"em + o\"?",
       "back": "no",
       "example": "Moro no Brasil. (= Moro em o Brasil)"
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-em"
+    ]
   },
   {
     "id": "0b964e23",
@@ -405,8 +433,8 @@
     ],
     "contentHash": "0dc246cadb2e2b2f904e85451414853c573e24d7975932674824e1ef63e860d6",
     "esContrast": "En español se dice 'gustar' sin preposición; en portugués siempre lleva DE.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: reg-verbal-de · sello anterior: revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
@@ -418,7 +446,10 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "0dd66b96",
@@ -451,7 +482,10 @@
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "0e3aeb6b",
@@ -486,7 +520,11 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b2-dem-tres-graus",
+      "b2-indefinidos"
+    ]
   },
   {
     "id": "1062ac94",
@@ -557,7 +595,10 @@
       "front": "Cuál es la contracción de \"a + o\"?",
       "back": "ao",
       "example": "Vou ao mercado. (= Vou a o mercado)"
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-a-por"
+    ]
   },
   {
     "id": "1230ec66",
@@ -616,8 +657,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-art-contr-de · sello anterior: revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
     "type": "listening",
     "data": {
       "audioText": "Eu tenho uma irmã e dois filhos. A irmã mora perto da minha casa, no centro da cidade.",
@@ -629,7 +670,10 @@
         "Nenhum filho"
       ],
       "answer": "Dois filhos"
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-de"
+    ]
   },
   {
     "id": "1f1198ae",
@@ -664,7 +708,10 @@
       "acceptedAlternatives": [
         "Él cocina bien, pero ella cocina mejor."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "1f31fbce",
@@ -758,7 +805,10 @@
       "front": "¿Cómo se pluraliza la palabra 'irmão'?",
       "back": "irmãos",
       "example": "Meus irmãos moram em São Paulo."
-    }
+    },
+    "__nuevos": [
+      "b2-plural-ao"
+    ]
   },
   {
     "id": "297ca0e7",
@@ -822,7 +872,10 @@
         "em"
       ],
       "answer": "∅"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-zero"
+    ]
   },
   {
     "id": "2a3c7d36",
@@ -857,7 +910,10 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b2-genero-comum"
+    ]
   },
   {
     "id": "2a43d82d",
@@ -896,7 +952,10 @@
           }
         ]
       }
-    }
+    },
+    "__nuevos": [
+      "b2-numero"
+    ]
   },
   {
     "id": "2cbec901",
@@ -924,7 +983,10 @@
         "a"
       ],
       "answer": "∅"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-zero"
+    ]
   },
   {
     "id": "2d31b5e1",
@@ -983,8 +1045,8 @@
     ],
     "contentHash": "2dbc5e9793c7ff141c21bdc6c964968b718af6b458d58a109491ba019a5ce033",
     "esContrast": "aparelho = aparato (masculino en -o, como en español).",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-genero · sello anterior: corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "O ___ de televisão não funciona.",
@@ -995,7 +1057,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "2e2c9d52",
@@ -1083,7 +1148,10 @@
       "front": "¿Qué son los sustantivos comuns de gênero?",
       "back": "Son sustantivos que tienen la misma forma para masculino y femenino. El artículo indica el género: O artista / A artista",
       "example": "O artista famoso / A artista famosa"
-    }
+    },
+    "__nuevos": [
+      "b2-genero-comum"
+    ]
   },
   {
     "id": "376e5690",
@@ -1142,7 +1210,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-genero-comum"
+    ]
   },
   {
     "id": "3c739a9e",
@@ -1167,14 +1238,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: DUDA — Glosas con inglés colado en curso para hispanohablantes: 'isto (esto/this), isso (eso/that), aquilo (aquello/that)' — el inglés sobra y encima no distingue isso de aquilo (ambos 'that'). El contenido español es correcto; (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-dem-neutros · sello anterior: revisión manual E2#4 2026-08-28: DUDA — Glosas con inglés colado en curso para hispanohablantes: 'isto (esto/this), isso (eso/that), aquilo (aquello/that)' — el inglés sobra y encima no distingue isso de aquilo (ambos 'that'). El contenido español es correcto; (informe-cola2-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Qué son 'isto', 'isso' y 'aquilo'?",
       "back": "Pronombres demostrativos neutros: isto (esto/this), isso (eso/that), aquilo (aquello/that).",
       "example": "Isso é muito interessante! Aquilo que ele disse não é verdade."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-neutros"
+    ]
   },
   {
     "id": "3c93369c",
@@ -1269,7 +1343,10 @@
       "acceptedAlternatives": [
         "As irmãs vivem na praia."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-em"
+    ]
   },
   {
     "id": "3d317f8d",
@@ -1334,7 +1411,10 @@
       "front": "¿Cómo se dice 'mis hijos' en portugués?",
       "back": "meus filhos",
       "example": "Tenho dois filhos: meus filhos estudam de manhã."
-    }
+    },
+    "__nuevos": [
+      "b2-possessivos"
+    ]
   },
   {
     "id": "4059f44c",
@@ -1405,7 +1485,10 @@
       "acceptedAlternatives": [
         "Apesar de ter pouca vontade, vou à reunião."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-indefinidos"
+    ]
   },
   {
     "id": "41c2a32c",
@@ -1465,7 +1548,10 @@
         }
       ],
       "hintEs": "ciudadanos — el plural de «cidadão»"
-    }
+    },
+    "__nuevos": [
+      "b2-plural-ao"
+    ]
   },
   {
     "id": "449f2a14",
@@ -1498,7 +1584,10 @@
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b2-genero-comum"
+    ]
   },
   {
     "id": "462ff808",
@@ -1553,8 +1642,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-genero · sello anterior: corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
     "type": "listening",
     "data": {
       "audioText": "A minha irmã mais velha mora em São Paulo com o marido.",
@@ -1566,7 +1655,10 @@
         "El padre"
       ],
       "answer": "La hermana"
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "4937be04",
@@ -1602,7 +1694,10 @@
       "acceptedAlternatives": [
         "El esposo vive con la hermana."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-artigos"
+    ]
   },
   {
     "id": "4bd239bf",
@@ -1678,7 +1773,10 @@
         "∅"
       ],
       "answer": "com"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-com"
+    ]
   },
   {
     "id": "4d03d5cd",
@@ -1703,8 +1801,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-art-contr-de · sello anterior: corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
     "type": "translation",
     "data": {
       "source": "El marido de la hermana tiene buenas costumbres.",
@@ -1714,7 +1812,10 @@
       "acceptedAlternatives": [
         "O esposo da irmã tem bons costumes."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-de"
+    ]
   },
   {
     "id": "4eb38e01",
@@ -1730,8 +1831,8 @@
     ],
     "contentHash": "4eb38e0174e6f1a9f51c53d9080c8240a9931ac8cfbb2f14b01d2c173bec65ef",
     "esContrast": "PT: pensar EM; em + aquela se contrae: 'penso naquela pessoa'. ES: 'pienso en aquella persona', sin contracción.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: reg-verbal-otras · sello anterior: corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
@@ -1743,7 +1844,10 @@
         "com aquela"
       ],
       "answer": "naquela"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-otras"
+    ]
   },
   {
     "id": "4ef1772b",
@@ -1772,7 +1876,10 @@
       "front": "¿Cómo se dice 'todo el día' y 'todos los días'?",
       "back": "O dia todo (todo el día) / Todos os dias (todos los días).",
       "example": "Fico aqui o dia todo esperando uma resposta."
-    }
+    },
+    "__nuevos": [
+      "b2-indef-todo-tudo"
+    ]
   },
   {
     "id": "50174eb9",
@@ -1804,7 +1911,10 @@
       "front": "¿Qué significa \"marido\" en portugués brasileiro?",
       "back": "esposo/a (cônjuge)",
       "example": "O meu marido trabalha muito. / Minha marido é engenheira."
-    }
+    },
+    "__nuevos": [
+      "b2-art-com-posesivo"
+    ]
   },
   {
     "id": "509133ff",
@@ -1935,7 +2045,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-a-por"
+    ]
   },
   {
     "id": "543ae339",
@@ -1974,7 +2087,10 @@
         "Maestro"
       ],
       "answer": "Artista"
-    }
+    },
+    "__nuevos": [
+      "b2-genero-comum"
+    ]
   },
   {
     "id": "592672b8",
@@ -2004,7 +2120,10 @@
       "front": "¿Cuál es el posesivo de 'nós' en femenino singular?",
       "back": "nosso (masc.) / nossa (fem.)",
       "example": "Nossa casa fica no centro. Nosso projeto é grande."
-    }
+    },
+    "__nuevos": [
+      "b2-poss-formas"
+    ]
   },
   {
     "id": "5951da8e",
@@ -2019,8 +2138,8 @@
     ],
     "contentHash": "5951da8ebf3c74854319c607171fe101704cfc5e73daf5204b55f47020186944",
     "esContrast": "A = la (artículo definido femenino)",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-art-contr-de · sello anterior: corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "A ___ mora perto da praia.",
@@ -2035,7 +2154,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-de"
+    ]
   },
   {
     "id": "5a704517",
@@ -2069,7 +2191,10 @@
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b2-genero-divergente"
+    ]
   },
   {
     "id": "5bee6ef8",
@@ -2108,7 +2233,11 @@
       "acceptedAlternatives": [
         "Los amigos que están en esta reunión deben mantenerse unidos."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-possessivos",
+      "b2-numero"
+    ]
   },
   {
     "id": "5e246909",
@@ -2139,7 +2268,10 @@
       "front": "¿Cómo se pluraliza 'mão' en portugués?",
       "back": "mãos",
       "example": "Ela deu as mãos para as crianças."
-    }
+    },
+    "__nuevos": [
+      "b2-plural-ao"
+    ]
   },
   {
     "id": "5e446349",
@@ -2154,8 +2286,8 @@
     ],
     "contentHash": "5e446349181157e5e7a698ce20c016076211dc78e2e0a4c6c54027eb258d6b4e",
     "esContrast": "En español se dice 'gustar el café', sin preposición. En portugués: 'gostar DE'.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: DUDA — Duplicado en producción del ítem 0dc246ca: misma frase ('Eu gosto ___ café pela manhã'), misma respuesta; solo cambia el 4.º distractor y la lección — el alumno ve el mismo ejercicio dos veces. Además la glosa cita «'gus (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: reg-verbal-de · sello anterior: revisión manual E2#4 2026-08-28: DUDA — Duplicado en producción del ítem 0dc246ca: misma frase ('Eu gosto ___ café pela manhã'), misma respuesta; solo cambia el 4.º distractor y la lección — el alumno ve el mismo ejercicio dos veces. Además la glosa cita «'gus (informe-cola2-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
@@ -2167,7 +2299,10 @@
         "∅"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "5f1630a3",
@@ -2203,7 +2338,11 @@
       "pt-br": {
         "sentence": "Vou dar um abraço nos meus ___ e nas minhas ___."
       }
-    }
+    },
+    "__nuevos": [
+      "b2-possessivos",
+      "b2-numero"
+    ]
   },
   {
     "id": "616d8804",
@@ -2231,7 +2370,10 @@
         }
       ],
       "hintEs": "sus (de ellos)"
-    }
+    },
+    "__nuevos": [
+      "b2-poss-seu-ambiguo"
+    ]
   },
   {
     "id": "61a585cf",
@@ -2258,7 +2400,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-a-por"
+    ]
   },
   {
     "id": "61dc65ee",
@@ -2295,7 +2440,10 @@
       "acceptedAlternatives": [
         "Não tenho nenhum dado a esse respeito."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-indef-algum-nenhum"
+    ]
   },
   {
     "id": "6230a998",
@@ -2325,7 +2473,10 @@
       "front": "Completa: 'Esta é a _____ mãe.' (mi)",
       "back": "minha",
       "example": "Esta é a minha mãe, e aqueles são os meus filhos."
-    }
+    },
+    "__nuevos": [
+      "b2-poss-com-artigo"
+    ]
   },
   {
     "id": "62d108be",
@@ -2359,7 +2510,10 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b2-genero-comum"
+    ]
   },
   {
     "id": "6550ba13",
@@ -2470,7 +2624,10 @@
       "pt-br": {
         "back": "senhor(a) + posesivo o nome próprio + posesivo"
       }
-    }
+    },
+    "__nuevos": [
+      "b2-poss-formas"
+    ]
   },
   {
     "id": "696d8bf1",
@@ -2496,8 +2653,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-genero · sello anterior: revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
     "type": "translation",
     "data": {
       "source": "Mi hermana vive en Río de Janeiro.",
@@ -2507,7 +2664,10 @@
       "acceptedAlternatives": [
         "A minha irmã vive no Rio de Janeiro."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "6b50efa1",
@@ -2607,7 +2767,10 @@
       "front": "¿Cuáles son las cuatro formas de 'algum' (género y número)?",
       "back": "Algum (masc.), alguma (fem.), alguns (masc. pl.), algumas (fem. pl.) — algún/algunos.",
       "example": "Algum dia vou visitar Portugal."
-    }
+    },
+    "__nuevos": [
+      "b2-indef-algum-nenhum"
+    ]
   },
   {
     "id": "6f1b2422",
@@ -2633,8 +2796,8 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-genero · sello anterior: reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
     "type": "translation",
     "data": {
       "source": "El testigo vio todo, pero la otra testigo no dijo nada.",
@@ -2642,7 +2805,10 @@
       "sourceLang": "es",
       "targetLang": "pt-pt",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "7010bbda",
@@ -2671,7 +2837,10 @@
       "front": "Completa: 'A irmã mora com _____ pais.' (tus)",
       "back": "teus",
       "example": "A irmã dele mora com teus pais?"
-    }
+    },
+    "__nuevos": [
+      "b2-poss-seu-ambiguo"
+    ]
   },
   {
     "id": "70ceacd2",
@@ -2704,7 +2873,10 @@
       "front": "Cuál es la contracción de \"por + o\"?",
       "back": "pelo",
       "example": "Passei pelo parque. (= Passei por o parque)"
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-a-por"
+    ]
   },
   {
     "id": "70e996e8",
@@ -2785,8 +2957,8 @@
     ],
     "contentHash": "713256cd5e0dc1a10f4141feae41b56caa241778a50a8fb42421668ce859fdfe",
     "esContrast": "à = a + a: 'fui à casa' = 'fui a la casa'. El acento grave marca la contracción; en español 'a la' no se contrae.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-genero · sello anterior: corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Ontem eu fui ___ casa da minha irmã.",
@@ -2797,7 +2969,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "71a97c04",
@@ -2812,8 +2987,8 @@
     ],
     "contentHash": "71a97c04cc4fab048a4636a4840db0929d4dd0c170396d1ca415c58cccf08137",
     "esContrast": "'Necesitar' en español no lleva preposición; 'precisar' siempre rige DE.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: reg-verbal-de · sello anterior: revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "precisar",
@@ -2825,7 +3000,10 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "7308b457",
@@ -2850,14 +3028,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-genero · sello anterior: revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
     "type": "flashcard",
     "data": {
       "front": "irmã",
       "back": "hermana",
       "example": "Minha irmã estuda medicina."
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "7438d8e0",
@@ -2888,7 +3069,10 @@
         }
       ],
       "hintEs": "sillas"
-    }
+    },
+    "__nuevos": [
+      "b2-plural-m-r-s"
+    ]
   },
   {
     "id": "7649388e",
@@ -2928,7 +3112,10 @@
           }
         ]
       }
-    }
+    },
+    "__nuevos": [
+      "b2-poss-com-artigo"
+    ]
   },
   {
     "id": "78dfe0a9",
@@ -3001,7 +3188,11 @@
         "irmãs"
       ],
       "answer": "irmãs"
-    }
+    },
+    "__nuevos": [
+      "b2-plural-ao",
+      "b2-possessivos"
+    ]
   },
   {
     "id": "7a242a72",
@@ -3024,8 +3215,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: DUDA — «Os filhos moram pelas ruas do bairro» fuerza la semántica: 'morar' pide ubicación fija y 'pelas ruas' es distributivo — la imagen resultante (¿niños viviendo por las calles?) no es la que el ítem quiere. La gramática de (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-art-contr-de · sello anterior: revisión manual E2#4 2026-08-28: DUDA — «Os filhos moram pelas ruas do bairro» fuerza la semántica: 'morar' pide ubicación fija y 'pelas ruas' es distributivo — la imagen resultante (¿niños viviendo por las calles?) no es la que el ítem quiere. La gramática de (informe-cola2-manual)",
     "type": "translation",
     "data": {
       "source": "Los hijos viven por las calles del barrio.",
@@ -3035,7 +3226,10 @@
       "acceptedAlternatives": [
         "Os filhos vivem pelas ruas do bairro."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-de"
+    ]
   },
   {
     "id": "7ae1f0bd",
@@ -3103,7 +3297,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-indefinidos"
+    ]
   },
   {
     "id": "7b812527",
@@ -3119,8 +3316,8 @@
     ],
     "contentHash": "db9820407fef94b8a01b4d9dea08f396f64a17938ca8a26c6dcacebf430cb60d",
     "esContrast": "Mi hermana = minha irmã; mi marido = meu marido. ¡Cuidado con 'meu'!",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: DUDA — Dos huecos con un solo campo de respuesta en el runner: ítem incontestable tal como se muestra (mismo defecto estructural que 713256cd). La glosa '¡Cuidado con meu!' no dice con qué hay que tener cuidado. Nada falso afir (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-genero · sello anterior: revisión manual E2#4 2026-08-28: DUDA — Dos huecos con un solo campo de respuesta en el runner: ítem incontestable tal como se muestra (mismo defecto estructural que 713256cd). La glosa '¡Cuidado con meu!' no dice con qué hay que tener cuidado. Nada falso afir (informe-cola2-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "Quero apresentar minha ___ e meu ___.",
@@ -3141,7 +3338,10 @@
         }
       ],
       "hintEs": "mi hermana y mi esposo"
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "7cc59eb2",
@@ -3164,14 +3364,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: DUDA — 'Jaleco' es léxico brasileño para la bata de médico; Priberam ni siquiera recoge esa acepción (sus acepciones son 'casaco curto' y dos brasileñismos) y en Portugal la prenda es la 'bata' (biblioteca: 'de bata' ×17, 'jale (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-numero · sello anterior: revisión manual E2#4 2026-08-28: DUDA — 'Jaleco' es léxico brasileño para la bata de médico; Priberam ni siquiera recoge esa acepción (sus acepciones son 'casaco curto' y dos brasileñismos) y en Portugal la prenda es la 'bata' (biblioteca: 'de bata' ×17, 'jale (informe-cola2-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Cuál es el plural de 'jaleco'?",
       "back": "jalecos",
       "example": "Os médicos usam jalecos brancos no hospital."
-    }
+    },
+    "__nuevos": [
+      "b2-numero"
+    ]
   },
   {
     "id": "7cfd6a89",
@@ -3264,14 +3467,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-art-contr-a-por · sello anterior: revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
     "type": "flashcard",
     "data": {
       "front": "Cuál es la contracción de \"por + a\"?",
       "back": "pela",
       "example": "Passei pela janela. (= Passei por a janela)"
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-a-por"
+    ]
   },
   {
     "id": "7e240953",
@@ -3304,7 +3510,11 @@
       "front": "¿Se dice 'meu amigos' o 'meus amigos' en PT-BR coloquial?",
       "back": "meus amigos",
       "example": "Meus amigos, vamos nos encontrar amanhã!"
-    }
+    },
+    "__nuevos": [
+      "b2-numero",
+      "b2-poss-formas"
+    ]
   },
   {
     "id": "7fd9b9c3",
@@ -3329,14 +3539,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-genero · sello anterior: corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se escribe: 'vizitar' o 'visitar'?",
       "back": "visitar",
       "example": "Quero visitar Portugal no verão."
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "804dd3af",
@@ -3367,7 +3580,10 @@
       "pt-br": {
         "sentence": "___ pessoa que me ligou disse que voltaria a contatar."
       }
-    }
+    },
+    "__nuevos": [
+      "b2-indef-algum-nenhum"
+    ]
   },
   {
     "id": "80ce4cb9",
@@ -3393,14 +3609,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-art-contr-de · sello anterior: revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
     "type": "flashcard",
     "data": {
       "front": "Cuál es la contracción de \"de + a\"?",
       "back": "da",
       "example": "A filha da Maria. (= A filha de a Maria)"
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-de"
+    ]
   },
   {
     "id": "824a38ab",
@@ -3463,7 +3682,11 @@
       "acceptedAlternatives": [
         "A tua irmã mora aqui."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-poss-com-artigo",
+      "b2-numero"
+    ]
   },
   {
     "id": "8477dcc8",
@@ -3496,7 +3719,10 @@
       "pt-br": {
         "answer": "com"
       }
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-por-para"
+    ]
   },
   {
     "id": "85510711",
@@ -3550,8 +3776,8 @@
     ],
     "contentHash": "8711a7ca17aea37ae91debdc8f01c8438dbf6c53741a3b45a924e1b510b9bd72",
     "esContrast": "ES: 'piensa vivir en el extranjero' (sin preposición cuando es intención). PT: 'pensar EM morar no exterior' — el EM es obligatorio.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: reg-verbal-em · sello anterior: corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "pensar",
@@ -3563,7 +3789,10 @@
         "∅"
       ],
       "answer": "em"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-em"
+    ]
   },
   {
     "id": "87c3220e",
@@ -3588,7 +3817,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-indef-cada-qualquer"
+    ]
   },
   {
     "id": "88549f33",
@@ -3617,7 +3849,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-dem-contracciones"
+    ]
   },
   {
     "id": "89de0734",
@@ -3654,7 +3889,11 @@
         "Encontrei minha irmã e dei-lhe um abraço.",
         "Achei a minha irmã e dei-lhe um abraço."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-poss-com-artigo",
+      "b2-numero"
+    ]
   },
   {
     "id": "8a1856a5",
@@ -3690,7 +3929,10 @@
       "acceptedAlternatives": [
         "O rapaz mora com a irmã."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-em"
+    ]
   },
   {
     "id": "8a4300e2",
@@ -3733,7 +3975,10 @@
           }
         ]
       }
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "8a63e79c",
@@ -3793,7 +4038,10 @@
       "front": "¿Cómo se dice 'Aquella casa es muy grande' (muy lejos)?",
       "back": "Aquela casa é muito grande.",
       "example": "Aquela casa no morro é dos meus avós."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-tres-graus"
+    ]
   },
   {
     "id": "8f027188",
@@ -3828,7 +4076,10 @@
         "Um filho já basta.",
         "Um filho basta."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-em"
+    ]
   },
   {
     "id": "9437720a",
@@ -3862,7 +4113,11 @@
       "acceptedAlternatives": [
         "Meus filhos são afetuosos."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-numero",
+      "b2-possessivos"
+    ]
   },
   {
     "id": "9528513d",
@@ -3917,8 +4172,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-genero · sello anterior: corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
     "type": "translation",
     "data": {
       "source": "Esta mistura de culturas é interessante.",
@@ -3926,7 +4181,10 @@
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "98c187ff",
@@ -3951,8 +4209,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-art-contr-de · sello anterior: revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
     "type": "translation",
     "data": {
       "source": "Vou à casa da minha irmã.",
@@ -3960,7 +4218,10 @@
       "sourceLang": "pt-pt",
       "targetLang": "es",
       "acceptedAlternatives": []
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-de"
+    ]
   },
   {
     "id": "98c6f708",
@@ -3999,7 +4260,11 @@
         "Esa nostalgia nunca va a pasar.",
         "Ese anhelo nunca va a pasar."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-dem-tres-graus",
+      "b2-indefinidos"
+    ]
   },
   {
     "id": "99f34da3",
@@ -4065,7 +4330,10 @@
       "front": "¿Qué significa \"filhos\"?",
       "back": "hijos (sin distinción de género)",
       "example": "Temos dois filhos. / A Maria mora com os filhos."
-    }
+    },
+    "__nuevos": [
+      "b2-artigos"
+    ]
   },
   {
     "id": "9a82d1f4",
@@ -4089,14 +4357,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-numero · sello anterior: revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
     "type": "flashcard",
     "data": {
       "front": "¿Cuál es el plural de 'cidadão'?",
       "back": "cidadãos",
       "example": "Os cidadãos têm direitos e deveres."
-    }
+    },
+    "__nuevos": [
+      "b2-numero"
+    ]
   },
   {
     "id": "9ca6f9b4",
@@ -4146,8 +4417,8 @@
     ],
     "contentHash": "9d69e6d0156533e0c5188180a9b1ea0426d7e12a0b18e1dd4c14c762a08b10e1",
     "esContrast": "mistura = mezcla; femenina en -a, regular como en español: a mistura = la mezcla.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-genero · sello anterior: corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
     "type": "fill_blank",
     "data": {
       "sentence": "A ___ de café ficou muito forte.",
@@ -4158,7 +4429,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "9e23f8fa",
@@ -4217,8 +4491,8 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-dem-tres-graus · sello anterior: reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
     "type": "translation",
     "data": {
       "source": "Aquella ciudad deja mucha nostalgia.",
@@ -4228,7 +4502,10 @@
       "acceptedAlternatives": [
         "Aquela cidade deixa muita saudade."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-dem-tres-graus"
+    ]
   },
   {
     "id": "a391011a",
@@ -4360,14 +4637,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: DUDA — «La 'à' lleva tilde para mantener la vocal» — explicación chapucera: el acento grave marca la crase (fusión a + a), no 'mantiene' vocal alguna. El resto de la tarjeta es correcto y el ejemplo, bueno. (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-art-contr-a-por · sello anterior: revisión manual E2#4 2026-08-28: DUDA — «La 'à' lleva tilde para mantener la vocal» — explicación chapucera: el acento grave marca la crase (fusión a + a), no 'mantiene' vocal alguna. El resto de la tarjeta es correcto y el ejemplo, bueno. (informe-cola2-manual)",
     "type": "flashcard",
     "data": {
       "front": "Cuál es la contracción de \"a + a\"?",
       "back": "à",
       "example": "Vou à escola. (= Vou a a escola)"
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-a-por"
+    ]
   },
   {
     "id": "a84c3808",
@@ -4397,7 +4677,10 @@
       "front": "¿Cómo se dice 'amigos nuestros' (posesivo pospuesto)?",
       "back": "amigos nossos",
       "example": "Esses são amigos nossos de infância."
-    }
+    },
+    "__nuevos": [
+      "b2-possessivos"
+    ]
   },
   {
     "id": "a9b305e9",
@@ -4462,8 +4745,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-genero · sello anterior: revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
     "type": "translation",
     "data": {
       "source": "El marido de Carla es abogado.",
@@ -4473,7 +4756,10 @@
       "acceptedAlternatives": [
         "O esposo de Carla é advogado."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "acd58cf9",
@@ -4490,8 +4776,8 @@
     ],
     "contentHash": "acd58cf9f7f03b8c9267f5dd3d381b4befffa3d95b6275220d0036c3b344be17",
     "esContrast": "En PT 'gostar' rige DE ('gosto de muita gente'). En español 'gustar' no lleva preposición y además invierte la estructura ('me gusta mucha gente').",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: reg-verbal-de · sello anterior: corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "gostar",
@@ -4503,7 +4789,10 @@
         "para"
       ],
       "answer": "de"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "ad2ff781",
@@ -4536,7 +4825,11 @@
       "front": "¿Cómo funciona 'debaixo/detrás/diante de' con demostrativos?",
       "back": "Debaixo deste / Atrás daquela / À frente daquela. Se combinan demostrativos + preposición.",
       "example": "A chave está debaixo deste pano. / Ela estava atrás daquela árvore."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-contracciones",
+      "b2-indefinidos"
+    ]
   },
   {
     "id": "ad4364cb",
@@ -4573,7 +4866,11 @@
       "acceptedAlternatives": [
         "As nações aliadas celebraram a união de seus povos com abraços fraternais."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-numero",
+      "b2-possessivos"
+    ]
   },
   {
     "id": "af0a9d83",
@@ -4598,8 +4895,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-art-contr-de · sello anterior: revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
     "type": "listening",
     "data": {
       "audioText": "O João mora no centro da cidade, perto do trabalho. A esposa dele trabalha numa escola perto da casa dos pais.",
@@ -4611,7 +4908,10 @@
         "Numa loja"
       ],
       "answer": "Numa escola"
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-de"
+    ]
   },
   {
     "id": "af356d45",
@@ -4715,7 +5015,10 @@
       "acceptedAlternatives": [
         "É certo que quase tudo depende do contexto."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-indef-todo-tudo"
+    ]
   },
   {
     "id": "b3758d78",
@@ -4800,8 +5103,8 @@
     ],
     "contentHash": "b47ba1bc69d61ab840af4436bccd2ea0d5a782ee606b961f37c5d7c4964d8700",
     "esContrast": "PT: lembrar-se DE — de + aquele se contrae: 'daquele dia'. ES: acordarse DE / recordar (sin preposición). 'Lembrar' no existe en español.",
-    "variantStatus": "unchecked",
-    "variantVerificacion": "corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: reg-verbal-otras · sello anterior: corregido según revisión manual E2#4 2026-08-28 (informe-cola2-manual)",
     "type": "verb_preposition",
     "data": {
       "verb": "lembrar",
@@ -4813,7 +5116,10 @@
         "para aquele"
       ],
       "answer": "daquele"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-otras"
+    ]
   },
   {
     "id": "b49b214b",
@@ -4898,7 +5204,11 @@
       "pt-br": {
         "source": "Nosso contato profissional é por e-mail."
       }
-    }
+    },
+    "__nuevos": [
+      "b2-poss-formas",
+      "b2-numero"
+    ]
   },
   {
     "id": "b930c744",
@@ -4991,14 +5301,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-genero · sello anterior: revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
     "type": "flashcard",
     "data": {
       "front": "mistura",
       "back": "mezcla",
       "example": "Essa receita tem uma mistura de ingredientes."
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "bba546a2",
@@ -5026,7 +5339,11 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-dem-contracciones",
+      "b2-indefinidos"
+    ]
   },
   {
     "id": "bc471721",
@@ -5056,7 +5373,10 @@
       "front": "¿Cómo se traduce 'No tengo ningún problema' en negativo?",
       "back": "Não tenho nenhum problema.",
       "example": "Não tenho nenhum problema com isso, pode ficar tranquilo."
-    }
+    },
+    "__nuevos": [
+      "b2-indef-algum-nenhum"
+    ]
   },
   {
     "id": "bc90b05e",
@@ -5118,8 +5438,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-genero · sello anterior: revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
     "type": "listening",
     "data": {
       "audioText": "Ele visitou a mãe e a irmã no fim de semana passado.",
@@ -5131,7 +5451,10 @@
         "Al abuelo"
       ],
       "answer": "A la madre y a la hermana"
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "c494839d",
@@ -5160,7 +5483,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-indef-algum-nenhum"
+    ]
   },
   {
     "id": "c4bdc34d",
@@ -5196,7 +5522,10 @@
         "No tiene dinero pero puede vender"
       ],
       "answer": "No tiene dinero pero puede vender"
-    }
+    },
+    "__nuevos": [
+      "b2-indef-algum-nenhum"
+    ]
   },
   {
     "id": "c6329589",
@@ -5270,7 +5599,10 @@
         }
       ],
       "hintEs": "dos"
-    }
+    },
+    "__nuevos": [
+      "b2-artigos"
+    ]
   },
   {
     "id": "c9b8e465",
@@ -5299,7 +5631,10 @@
         "a"
       ],
       "answer": "—"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-zero"
+    ]
   },
   {
     "id": "caf4d2c5",
@@ -5337,7 +5672,10 @@
         "Algunas personas siempre vuelven.",
         "Determinadas personas siempre vuelven."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-indefinidos"
+    ]
   },
   {
     "id": "cc21725f",
@@ -5428,8 +5766,8 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-numero · sello anterior: revisión manual E2#4 2026-08-28: OK ítem a ítem (informe-cola2-manual)",
     "type": "listening",
     "data": {
       "audioText": "Na festa de aniversário, os balões coloridos estavam cheios de ar.",
@@ -5441,7 +5779,10 @@
         "Ar"
       ],
       "answer": "Balões"
-    }
+    },
+    "__nuevos": [
+      "b2-numero"
+    ]
   },
   {
     "id": "d25f2485",
@@ -5468,14 +5809,17 @@
         "voice": "Portuguese_Wiselady"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "revisión manual E2#4 2026-08-28: DUDA — Tarjeta redactada íntegramente en portugués (front y back) dentro de un mazo cuyo estímulo es el español, y con grafía brasileña 'gênero' (PT-PT: género) sin marca en curso con pista europea. El contenido es correcto y e (informe-cola2-manual)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-genero · sello anterior: revisión manual E2#4 2026-08-28: DUDA — Tarjeta redactada íntegramente en portugués (front y back) dentro de un mazo cuyo estímulo es el español, y con grafía brasileña 'gênero' (PT-PT: género) sin marca en curso con pista europea. El contenido es correcto y e (informe-cola2-manual)",
     "type": "flashcard",
     "data": {
       "front": "Qual é o gênero de 'problema' em português?",
       "back": "PROBLEMA é MASCULINO (o problema)",
       "example": "O problema foi resolvido."
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "d3e11929",
@@ -5569,7 +5913,10 @@
         "Tenía todo el tiempo libre"
       ],
       "answer": "Poco disponible"
-    }
+    },
+    "__nuevos": [
+      "b2-indef-todo-tudo"
+    ]
   },
   {
     "id": "d8354016",
@@ -5612,7 +5959,10 @@
       "pt-br": {
         "audioText": "Preciso muito do seu contato para organizar a reunião da família."
       }
-    }
+    },
+    "__nuevos": [
+      "b2-poss-formas"
+    ]
   },
   {
     "id": "d83baed7",
@@ -5688,7 +6038,10 @@
       "pt-br": {
         "target": "Alguns contatos não me deixaram boa impressão."
       }
-    }
+    },
+    "__nuevos": [
+      "b2-indef-algum-nenhum"
+    ]
   },
   {
     "id": "d9405adf",
@@ -5753,7 +6106,11 @@
         "Os nossos filhos querem encontrar os primos deles.",
         "Nossos filhos querem encontrar os primos deles."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-poss-seu-ambiguo",
+      "b2-numero"
+    ]
   },
   {
     "id": "da1ce409",
@@ -5815,7 +6172,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-em"
+    ]
   },
   {
     "id": "dd743c8d",
@@ -5853,7 +6213,11 @@
       "acceptedAlternatives": [
         "Tus hijos son muy simpáticos."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-poss-formas",
+      "b2-numero"
+    ]
   },
   {
     "id": "ded613b6",
@@ -5886,7 +6250,10 @@
         }
       ],
       "hintEs": "los hijos"
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-de"
+    ]
   },
   {
     "id": "df4b9ea9",
@@ -5914,7 +6281,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-de"
+    ]
   },
   {
     "id": "e1a485b5",
@@ -5950,7 +6320,10 @@
       "acceptedAlternatives": [
         "Essa mistura de costumes é fascinante."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-genero-divergente"
+    ]
   },
   {
     "id": "e24696f7",
@@ -6013,7 +6386,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-plural-ao"
+    ]
   },
   {
     "id": "e7acfb7e",
@@ -6041,7 +6417,10 @@
         "∅"
       ],
       "answer": "dos"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-de"
+    ]
   },
   {
     "id": "e9714aba",
@@ -6077,7 +6456,10 @@
       "acceptedAlternatives": [
         "Tengo hijos muy simpáticos."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-artigos"
+    ]
   },
   {
     "id": "ebe4d4b9",
@@ -6103,8 +6485,8 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-genero · sello anterior: reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
     "type": "translation",
     "data": {
       "source": "Quiero visitar a mi prima y a mi primo.",
@@ -6114,7 +6496,10 @@
       "acceptedAlternatives": [
         "Tenho vontade de visitar a minha prima e o meu primo."
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "ed3c76d7",
@@ -6147,7 +6532,10 @@
       "front": "¿Cuál es la contracción de \"em + a\"?",
       "back": "na",
       "example": "Estudo na universidade. (= Estudo em a universidade)"
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-em"
+    ]
   },
   {
     "id": "edd5778b",
@@ -6177,7 +6565,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "ee2f355d",
@@ -6276,7 +6667,10 @@
           ]
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-indefinidos"
+    ]
   },
   {
     "id": "f02099fd",
@@ -6308,7 +6702,10 @@
       "front": "costumes",
       "back": "costumbres",
       "example": "Cada país tem seus costumes."
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "f0ad7702",
@@ -6336,7 +6733,10 @@
         "∅"
       ],
       "answer": "∅"
-    }
+    },
+    "__nuevos": [
+      "reg-verbal-zero"
+    ]
   },
   {
     "id": "f4f87c60",
@@ -6368,7 +6768,11 @@
       "front": "¿Cuándo usas 'logo este' o 'ora este' como demostrativos enfáticos?",
       "back": "Expresiones como 'ora este', 'logo aquele' enfatizan el demostrativo.",
       "example": "Não é este aqui, é logo aquele outro que eu quero."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-tres-graus",
+      "b2-indef-outro-mesmo"
+    ]
   },
   {
     "id": "f6980db2",
@@ -6490,7 +6894,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "f89441f0",
@@ -6520,7 +6927,10 @@
       "front": "¿Cuál es la diferencia entre 'certo' y 'alguns'?",
       "back": "Certo = cierto, específico pero no dicho; Alguns = algunos, varios.",
       "example": "Certas pessoas não entendem. / Alguns amigos vieram à festa."
-    }
+    },
+    "__nuevos": [
+      "b2-indef-algum-nenhum"
+    ]
   },
   {
     "id": "f9cecc9c",
@@ -6586,7 +6996,10 @@
       "front": "¿Cuáles son los artículos indefinidos en portugués?",
       "back": "um, uma, uns, umas",
       "example": "Um livro / uma casa / uns amigos / umas flores"
-    }
+    },
+    "__nuevos": [
+      "b2-artigos"
+    ]
   },
   {
     "id": "fc50090f",
@@ -6627,7 +7040,10 @@
       "pt-br": {
         "audioText": "Os costumes e as tradições do Brasil são muito variados e interesantes."
       }
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "fc5caad2",
@@ -6652,8 +7068,8 @@
         "voice": "ElevenLabs_Leonor"
       }
     },
-    "variantStatus": "unchecked",
-    "variantVerificacion": "reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
+    "variantStatus": "needs-human",
+    "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01) · puntos: b2-indefinidos · sello anterior: reabsorbido de cuarentena en E2#7 2026-08-30 (regla nueva: se corrige y se regenera audio, ya no se cuarentena)",
     "type": "translation",
     "data": {
       "source": "Tenho poucos contactos profissionais.",
@@ -6668,7 +7084,10 @@
       "pt-br": {
         "source": "Tenho poucos contatos profissionais."
       }
-    }
+    },
+    "__nuevos": [
+      "b2-indefinidos"
+    ]
   },
   {
     "id": "fd0eb5d6",
@@ -6696,7 +7115,10 @@
           "alternatives": []
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-a-por"
+    ]
   },
   {
     "id": "fe319d4f",
@@ -6732,7 +7154,10 @@
         "Não há possessivo posposto"
       ],
       "answer": "Não há possessivo posposto"
-    }
+    },
+    "__nuevos": [
+      "b2-poss-formas"
+    ]
   },
   {
     "id": "fec8080e",
@@ -6765,7 +7190,10 @@
       "front": "¿Cuál es la contracción de \"de + o\"?",
       "back": "do",
       "example": "A casa do João. (= A casa de o João)"
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-de"
+    ]
   },
   {
     "id": "ffb4fc2a",
@@ -6827,7 +7255,10 @@
       "correct": "O problema é muito difícil.",
       "explanationEs": "En PT 'problema' es masculino (o problema); el -a final no marca femenino como en español.",
       "alternatives": []
-    }
+    },
+    "__nuevos": [
+      "b2-genero"
+    ]
   },
   {
     "id": "2a484dc4",
@@ -6851,7 +7282,10 @@
       "correct": "A viagem foi muito longa.",
       "explanationEs": "'viagem' es femenino en PT; arrastra la concordancia: a viagem... longa.",
       "alternatives": []
-    }
+    },
+    "__nuevos": [
+      "b2-genero-divergente"
+    ]
   },
   {
     "id": "2ad0c58f",
@@ -6875,7 +7309,10 @@
       "correct": "O leite já está quente.",
       "explanationEs": "'leite' es masculino en PT (o leite), aunque 'leche' sea femenino en español.",
       "alternatives": []
-    }
+    },
+    "__nuevos": [
+      "b2-genero-divergente"
+    ]
   },
   {
     "id": "c550419f",
@@ -6897,7 +7334,10 @@
       "correct": "A árvore do jardim é antiga.",
       "explanationEs": "'árvore' es femenino en PT: a árvore.",
       "alternatives": []
-    }
+    },
+    "__nuevos": [
+      "b2-genero-divergente"
+    ]
   },
   {
     "id": "beae9531",
@@ -6943,7 +7383,10 @@
       "correct": "Este é o carro do meu pai.",
       "explanationEs": "'de' + 'o' se contrae en 'do' de forma obligatoria en PT.",
       "alternatives": []
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-de"
+    ]
   },
   {
     "id": "5a092cc8",
@@ -6967,7 +7410,10 @@
       "correct": "Todas as manhãs vou à praia.",
       "explanationEs": "'a' (preposición) + 'a' (artículo) se funden en 'à' (crase).",
       "alternatives": []
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-a-por"
+    ]
   },
   {
     "id": "f6f47168",
@@ -6991,7 +7437,10 @@
       "correct": "Eu perdi as minhas chaves outra vez.",
       "explanationEs": "En PT el posesivo concuerda con lo poseído: 'chave' es femenino y está en plural, así que 'minhas chaves'.",
       "alternatives": []
-    }
+    },
+    "__nuevos": [
+      "b2-poss-com-artigo"
+    ]
   },
   {
     "id": "4345f6ea",
@@ -7014,7 +7463,10 @@
       "correct": "Os pães da padaria estão frescos.",
       "explanationEs": "Muchos sustantivos en '-ão' forman el plural en '-ães': pão → pães.",
       "alternatives": []
-    }
+    },
+    "__nuevos": [
+      "b2-plural-ao"
+    ]
   },
   {
     "id": "93d20b71",
@@ -7037,7 +7489,10 @@
       "correct": "No zoológico há muitos animais exóticos.",
       "explanationEs": "Los sustantivos en '-al' hacen el plural en '-ais': animal → animais.",
       "alternatives": []
-    }
+    },
+    "__nuevos": [
+      "b2-plural-l"
+    ]
   },
   {
     "id": "674fe02c",
@@ -7063,7 +7518,10 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'coração' pertenece al grupo '-ão' → '-ões': corações."
-    }
+    },
+    "__nuevos": [
+      "b2-plural-ao"
+    ]
   },
   {
     "id": "be8743ad",
@@ -7090,7 +7548,10 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'de' + 'a' se contrae en 'da'. 'dela' (de+ela) significa 'de ella', distinto."
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-de"
+    ]
   },
   {
     "id": "1bea0f05",
@@ -7116,7 +7577,10 @@
       ],
       "correctIndex": 0,
       "explanationEs": "'árvore' es femenino: a árvore."
-    }
+    },
+    "__nuevos": [
+      "b2-genero-divergente"
+    ]
   },
   {
     "id": "c90cae18",
@@ -7152,7 +7616,10 @@
           "right": "papéis"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-plural-ao"
+    ]
   },
   {
     "id": "08c13f51",
@@ -7210,7 +7677,10 @@
           "answer": "no"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-de"
+    ]
   },
   {
     "id": "72ae98a9",
@@ -7236,7 +7706,10 @@
           "answer": "do"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-de"
+    ]
   },
   {
     "id": "d931d23e",
@@ -7263,7 +7736,10 @@
           "answer": "à"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-a-por"
+    ]
   },
   {
     "id": "3317f030",
@@ -7289,7 +7765,10 @@
           "answer": "na"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-de"
+    ]
   },
   {
     "id": "c49e03fd",
@@ -7315,7 +7794,10 @@
           "answer": "dos"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-art-contr-de"
+    ]
   },
   {
     "id": "a092e856",
@@ -7341,7 +7823,10 @@
           "answer": "meus"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-poss-com-artigo"
+    ]
   },
   {
     "id": "208d6710",
@@ -7367,7 +7852,10 @@
           "answer": "papéis"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-plural-l"
+    ]
   },
   {
     "id": "cfa0de98",
@@ -7393,7 +7881,10 @@
           "answer": "lições"
         }
       ]
-    }
+    },
+    "__nuevos": [
+      "b2-plural-l"
+    ]
   },
   {
     "id": "7f5f90d3",
@@ -7445,7 +7936,10 @@
       "alternatives": [],
       "hintEs": "la -l cae y aparece un acento",
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b2-plural-l"
+    ]
   },
   {
     "id": "tr19b-010",
@@ -7471,7 +7965,10 @@
       "alternatives": [],
       "hintEs": "la -l cae; aquí no hace falta acento",
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b2-plural-l"
+    ]
   },
   {
     "id": "tr19b-011",
@@ -7497,7 +7994,10 @@
       "alternatives": [],
       "hintEs": "la -l cae tras -u",
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b2-plural-l"
+    ]
   },
   {
     "id": "tr19b-012",
@@ -7523,7 +8023,10 @@
       "alternatives": [],
       "hintEs": "la -l cae y el acento se mantiene sobre la misma vocal",
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b2-plural-l"
+    ]
   },
   {
     "id": "tr19b-013",
@@ -7549,7 +8052,10 @@
       "alternatives": [],
       "hintEs": "llana: la -l cae ante la terminación y el acento se queda donde estaba",
       "espejoEs": false
-    }
+    },
+    "__nuevos": [
+      "b2-plural-l"
+    ]
   },
   {
     "id": "co21a-001",
@@ -7574,7 +8080,10 @@
       "explanationEs": "En portugués europeo el nombre propio de persona lleva artículo cuando se habla de alguien conocido: «o João», «a Maria». El español lo omite, y de ahí sale el error.",
       "alternatives": [],
       "calcoEs": "Juan llegó tarde otra vez."
-    }
+    },
+    "__nuevos": [
+      "b2-art-com-nome"
+    ]
   },
   {
     "id": "co21a-002",
@@ -7599,7 +8108,10 @@
       "explanationEs": "Con nombre propio de persona hace falta el artículo, y aquí además desaparece la «a» de complemento directo que el español pone y el portugués no.",
       "alternatives": [],
       "calcoEs": "Encontré a Rita en el mercado."
-    }
+    },
+    "__nuevos": [
+      "b2-art-com-nome"
+    ]
   },
   {
     "id": "co21a-003",
@@ -7624,7 +8136,10 @@
       "explanationEs": "La preposición no basta: el nombre propio sigue pidiendo artículo. En Portugal «falar com Pedro» marca al hablante como extranjero.",
       "alternatives": [],
       "calcoEs": "Hablé con Pedro sobre el asunto."
-    }
+    },
+    "__nuevos": [
+      "b2-art-com-nome"
+    ]
   },
   {
     "id": "co21a-004",
@@ -7649,7 +8164,10 @@
       "explanationEs": "Con artículo, la preposición se contrae: de + a = «da». Sin él no hay contracción y la frase queda con el molde español.",
       "alternatives": [],
       "calcoEs": "El libro es de Ana."
-    }
+    },
+    "__nuevos": [
+      "b2-art-com-nome"
+    ]
   },
   {
     "id": "co21a-005",
@@ -7674,7 +8192,10 @@
       "explanationEs": "a + a = «à», con acento grave. El español tiene la misma preposición pero no el artículo, así que la contracción no aparece nunca al traducir literalmente.",
       "alternatives": [],
       "calcoEs": "Le pregunté a Sofía si venía."
-    }
+    },
+    "__nuevos": [
+      "b2-art-com-nome"
+    ]
   },
   {
     "id": "co21a-006",
@@ -7699,7 +8220,10 @@
       "explanationEs": "Cada nombre propio lleva su artículo, y cada uno el suyo por género. En una enumeración el error se duplica.",
       "alternatives": [],
       "calcoEs": "Vamos con Carlos y Teresa."
-    }
+    },
+    "__nuevos": [
+      "b2-art-com-nome"
+    ]
   },
   {
     "id": "co21a-007",
@@ -7724,7 +8248,10 @@
       "explanationEs": "a + o = «ao». La contracción sólo aparece si se pone el artículo que el portugués exige delante del nombre.",
       "alternatives": [],
       "calcoEs": "Le di el recado a Miguel ayer."
-    }
+    },
+    "__nuevos": [
+      "b2-art-com-nome"
+    ]
   },
   {
     "id": "co21a-008",
@@ -7749,7 +8276,10 @@
       "explanationEs": "de + o = «do». El español dice «de Manuel» y el portugués «do Manuel», porque el nombre propio va determinado.",
       "alternatives": [],
       "calcoEs": "La casa de Manuel queda allí."
-    }
+    },
+    "__nuevos": [
+      "b2-art-com-nome"
+    ]
   },
   {
     "id": "co21a-009",
@@ -7774,7 +8304,10 @@
       "explanationEs": "Los sustantivos en -agem son femeninos en portugués. El masculino viene del español «el viaje», que es donde nace el error.",
       "alternatives": [],
       "calcoEs": "Aplazamos el viaje por culpa del tiempo."
-    }
+    },
+    "__nuevos": [
+      "b2-genero-agem-dade"
+    ]
   },
   {
     "id": "co21a-010",
@@ -7799,7 +8332,10 @@
       "explanationEs": "Como «a garagem» es femenino, la contracción es «na» y no «no». El error de género arrastra al de contracción.",
       "alternatives": [],
       "calcoEs": "Dejamos el coche en el garaje."
-    }
+    },
+    "__nuevos": [
+      "b2-genero-agem-dade"
+    ]
   },
   {
     "id": "co21a-011",
@@ -7824,7 +8360,10 @@
       "explanationEs": "El adjetivo tiene que concordar con «a massagem», que es femenino como todo sustantivo en -agem. El español «el masaje» empuja al masculino.",
       "alternatives": [],
       "calcoEs": "El masaje estuvo muy bueno."
-    }
+    },
+    "__nuevos": [
+      "b2-genero-agem-dade"
+    ]
   },
   {
     "id": "co21a-012",
@@ -7849,7 +8388,10 @@
       "explanationEs": "El artículo ya iba bien, pero el adjetivo se quedó en masculino por el español «el paisaje». Con -agem todo concuerda en femenino.",
       "alternatives": [],
       "calcoEs": "El paisaje es muy bonito."
-    }
+    },
+    "__nuevos": [
+      "b2-genero-agem-dade"
+    ]
   },
   {
     "id": "co21a-013",
@@ -7874,7 +8416,10 @@
       "explanationEs": "Los sustantivos en -dade son femeninos. Aquí el español no ayuda ni estorba —«la ciudad» también lo es— así que el error es del sufijo, no del calco.",
       "alternatives": [],
       "calcoEs": "Visitamos la ciudad entera en un día."
-    }
+    },
+    "__nuevos": [
+      "b2-genero-agem-dade"
+    ]
   },
   {
     "id": "co21a-014",
@@ -7899,7 +8444,10 @@
       "explanationEs": "de + a = «da», porque «a verdade» es femenino como todos los sustantivos en -dade.",
       "alternatives": [],
       "calcoEs": "Nadie dudó de la verdad."
-    }
+    },
+    "__nuevos": [
+      "b2-genero-agem-dade"
+    ]
   },
   {
     "id": "co21a-015",
@@ -7924,7 +8472,10 @@
       "explanationEs": "El participio concuerda con «a universidade», femenino como todos los sustantivos en -dade. Aquí el descuido no viene del español, que también lo tiene femenino: viene de no aplicar el sufijo.",
       "alternatives": [],
       "calcoEs": "La universidad está cerrado hoy."
-    }
+    },
+    "__nuevos": [
+      "b2-genero-agem-dade"
+    ]
   },
   {
     "id": "co21a-016",
@@ -7949,7 +8500,10 @@
       "explanationEs": "El adjetivo final describe la reportagem, que es femenina; el español «un reportaje» empuja al masculino y arrastra la concordancia a distancia.",
       "alternatives": [],
       "calcoEs": "Hicimos un reportaje sobre el mismo tema, muy completo."
-    }
+    },
+    "__nuevos": [
+      "b2-genero-agem-dade"
+    ]
   },
   {
     "id": "co21a-017",
@@ -7974,7 +8528,10 @@
       "explanationEs": "El portugués europeo pone artículo delante del posesivo. Sin él la frase es española o brasileña, pero no de Lisboa.",
       "alternatives": [],
       "calcoEs": "Mi casa queda cerca de la estación."
-    }
+    },
+    "__nuevos": [
+      "b2-art-com-posesivo"
+    ]
   },
   {
     "id": "co21a-018",
@@ -7999,7 +8556,10 @@
       "explanationEs": "También en plural: «as tuas chaves». El artículo va delante del posesivo, no se elige.",
       "alternatives": [],
       "calcoEs": "Dejé tus llaves encima de la mesa."
-    }
+    },
+    "__nuevos": [
+      "b2-art-com-posesivo"
+    ]
   },
   {
     "id": "co21a-019",
@@ -8024,7 +8584,10 @@
       "explanationEs": "Artículo y posesivo van juntos: «o meu guarda-chuva». Es de las marcas que más rápido delatan a un hispanohablante en Portugal.",
       "alternatives": [],
       "calcoEs": "Perdí mi paraguas en el tren."
-    }
+    },
+    "__nuevos": [
+      "b2-art-com-posesivo"
+    ]
   },
   {
     "id": "co21a-020",
@@ -8049,7 +8612,10 @@
       "explanationEs": "Ni siquiera los nombres de parentesco en plural se libran: «os teus pais».",
       "alternatives": [],
       "calcoEs": "Hablamos con tus padres el domingo."
-    }
+    },
+    "__nuevos": [
+      "b2-art-com-posesivo"
+    ]
   },
   {
     "id": "co21a-021",
@@ -8074,7 +8640,10 @@
       "explanationEs": "Con artículo la preposición se contrae: de + a = «da sua ideia». Sin él, la contracción desaparece y queda el molde español.",
       "alternatives": [],
       "calcoEs": "Me gusta mucho su idea."
-    }
+    },
+    "__nuevos": [
+      "b2-art-com-posesivo"
+    ]
   },
   {
     "id": "co21a-022",
@@ -8099,7 +8668,10 @@
       "explanationEs": "em + o = «no». El artículo que el posesivo exige es el que permite la contracción.",
       "alternatives": [],
       "calcoEs": "En nuestra oficina trabajan ocho personas."
-    }
+    },
+    "__nuevos": [
+      "b2-art-com-posesivo"
+    ]
   },
   {
     "id": "co21a-023",
@@ -8124,7 +8696,10 @@
       "explanationEs": "Con «para» no hay contracción, pero el artículo sigue haciendo falta: «para o vosso filho».",
       "alternatives": [],
       "calcoEs": "Traje esto para vuestro hijo."
-    }
+    },
+    "__nuevos": [
+      "b2-art-com-posesivo"
+    ]
   },
   {
     "id": "co21a-024",
@@ -8149,7 +8724,10 @@
       "explanationEs": "El español admite el predicado nominal sin artículo en este giro; el portugués pide el indefinido: «é um país».",
       "alternatives": [],
       "calcoEs": "Portugal es país pequeño pero variado."
-    }
+    },
+    "__nuevos": [
+      "b2-artigos"
+    ]
   },
   {
     "id": "co21b-009",
@@ -8174,7 +8752,10 @@
       "explanationEs": "La preposición se contrae obligatoriamente con el demostrativo neutro: de + isto = «disto». El español los deja separados y por eso el calco no contrae.",
       "alternatives": [],
       "calcoEs": "No me gusta esto."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-neutros"
+    ]
   },
   {
     "id": "co21b-010",
@@ -8199,7 +8780,10 @@
       "explanationEs": "de + isso = «disso». La contracción no es opcional ni de registro: es obligatoria.",
       "alternatives": [],
       "calcoEs": "Nadie habló de eso en la reunión."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-neutros"
+    ]
   },
   {
     "id": "co21b-011",
@@ -8224,7 +8808,10 @@
       "explanationEs": "em + aquilo = «naquilo». El español mantiene «en aquello» separado, y el calco copia esa separación.",
       "alternatives": [],
       "calcoEs": "No quiero pensar en aquello ahora."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-neutros"
+    ]
   },
   {
     "id": "co21b-012",
@@ -8249,7 +8836,10 @@
       "explanationEs": "em + isto = «nisto», también al principio de la frase.",
       "alternatives": [],
       "calcoEs": "En esto estamos todos de acuerdo."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-neutros"
+    ]
   },
   {
     "id": "co21b-013",
@@ -8274,7 +8864,10 @@
       "explanationEs": "de + aquilo = «daquilo». La contracción se mantiene aunque siga una relativa.",
       "alternatives": [],
       "calcoEs": "Él nunca se acuerda de aquello que promete."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-neutros"
+    ]
   },
   {
     "id": "co21b-014",
@@ -8299,7 +8892,10 @@
       "explanationEs": "a + aquilo = «àquilo», con acento grave. Con «isto» y «isso» la preposición «a» no se contrae, y por eso la primera mitad de la frase se queda como está: la contracción sólo ocurre con el grado lejano.",
       "alternatives": [],
       "calcoEs": "No me refiero a esto, me refiero a aquello."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-neutros"
+    ]
   },
   {
     "id": "co21b-015",
@@ -8324,7 +8920,10 @@
       "explanationEs": "El neutro no tiene forma masculina: para referirse a una idea, y no a un objeto de género conocido, se repite «isso» y no «este».",
       "alternatives": [],
       "calcoEs": "Eso es lo que yo decía, eso mismo."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-neutros"
+    ]
   },
   {
     "id": "co21b-016",
@@ -8349,7 +8948,10 @@
       "explanationEs": "Las palabras acabadas en -m hacen el plural en -ns: «homem» → «homens». El español no tiene esa alternancia y el calco añade la -s directamente.",
       "alternatives": [],
       "calcoEs": "Vinieron tres hombres a la puerta."
-    }
+    },
+    "__nuevos": [
+      "b2-plural-m-r-s"
+    ]
   },
   {
     "id": "co21b-017",
@@ -8374,7 +8976,10 @@
       "explanationEs": "-m → -ns: «jardim» → «jardins». La regla no admite excepciones útiles.",
       "alternatives": [],
       "calcoEs": "La ciudad tiene muchos jardines."
-    }
+    },
+    "__nuevos": [
+      "b2-plural-m-r-s"
+    ]
   },
   {
     "id": "co21b-018",
@@ -8399,7 +9004,10 @@
       "explanationEs": "Doble error de calco: «viagem» es femenino y su plural es «viagens», con -ns.",
       "alternatives": [],
       "calcoEs": "Faltan dos viajes en el informe."
-    }
+    },
+    "__nuevos": [
+      "b2-plural-m-r-s"
+    ]
   },
   {
     "id": "co21b-019",
@@ -8424,7 +9032,10 @@
       "explanationEs": "Las acabadas en -r añaden -es: «mulher» → «mulheres». El calco pone sólo la -s, como en español.",
       "alternatives": [],
       "calcoEs": "Conozco a dos mujeres de esta tierra."
-    }
+    },
+    "__nuevos": [
+      "b2-plural-m-r-s"
+    ]
   },
   {
     "id": "co21b-020",
@@ -8449,7 +9060,10 @@
       "explanationEs": "«Mar» → «mares», con -es como todas las acabadas en -r.",
       "alternatives": [],
       "calcoEs": "Visitamos dos países vecinos y tres mares."
-    }
+    },
+    "__nuevos": [
+      "b2-plural-m-r-s"
+    ]
   },
   {
     "id": "co21b-021",
@@ -8474,7 +9088,10 @@
       "explanationEs": "«Mês» pierde el acento en plural: «meses». El circunflejo sólo hace falta en singular, donde marca la tónica final.",
       "alternatives": [],
       "calcoEs": "Pasaron seis meses desde entonces."
-    }
+    },
+    "__nuevos": [
+      "b2-plural-m-r-s"
+    ]
   },
   {
     "id": "co21b-022",
@@ -8499,7 +9116,10 @@
       "explanationEs": "Las palabras esdrújulas acabadas en -s son invariables: «o lápis» / «os lápis». El español las pluraliza y el calco inventa una forma que no existe.",
       "alternatives": [],
       "calcoEs": "Compré dos lápices azules."
-    }
+    },
+    "__nuevos": [
+      "b2-plural-m-r-s"
+    ]
   },
   {
     "id": "co21b-023",
@@ -8524,7 +9144,10 @@
       "explanationEs": "«O leite» es masculino en portugués y femenino en español. El calco arrastra el artículo y el adjetivo.",
       "alternatives": [],
       "calcoEs": "La leche está fría."
-    }
+    },
+    "__nuevos": [
+      "b2-genero-divergente"
+    ]
   },
   {
     "id": "co21b-024",
@@ -8549,7 +9172,10 @@
       "explanationEs": "«A ponte» es femenino en portugués y «el puente» masculino en español: es de los pares de género que más se fallan.",
       "alternatives": [],
       "calcoEs": "Cruzamos el puente a pie."
-    }
+    },
+    "__nuevos": [
+      "b2-genero-divergente"
+    ]
   },
   {
     "id": "co21c-001",
@@ -8574,7 +9200,10 @@
       "explanationEs": "Lo que está junto a quien habla es «este», no «esse». El español usa «ese» con más soltura y de ahí sale el desplazamiento de grado.",
       "alternatives": [],
       "calcoEs": "Ese libro que tengo aquí es estupendo."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-tres-graus"
+    ]
   },
   {
     "id": "co21c-002",
@@ -8599,7 +9228,10 @@
       "explanationEs": "Lo que está junto a quien escucha es «esse». El portugués mantiene los tres grados con más rigor que el español coloquial.",
       "alternatives": [],
       "calcoEs": "Pásame este libro que tienes ahí."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-tres-graus"
+    ]
   },
   {
     "id": "co21c-003",
@@ -8624,7 +9256,10 @@
       "explanationEs": "«Aquele» es el grado lejano, incompatible con «aqui ao meu lado». El adverbio y el demostrativo tienen que ir en el mismo grado.",
       "alternatives": [],
       "calcoEs": "Aquel señor que está aquí a mi lado preguntó por ti."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-tres-graus"
+    ]
   },
   {
     "id": "co21c-004",
@@ -8649,7 +9284,10 @@
       "explanationEs": "Al contrastar con lo lejano, el portugués va al tercer grado y contrae: a + aquela = «àquela». El español se queda en dos grados y no contrae.",
       "alternatives": [],
       "calcoEs": "Prefiero esta camisa a esa otra que viste."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-contracciones"
+    ]
   },
   {
     "id": "co21c-005",
@@ -8674,7 +9312,10 @@
       "explanationEs": "El tiempo presente pide el primer grado: «neste tempo». «Naquele» remite a un pasado lejano y choca con «agora».",
       "alternatives": [],
       "calcoEs": "En aquel tiempo en que ahora vivimos todo es rápido."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-contracciones"
+    ]
   },
   {
     "id": "co21c-006",
@@ -8699,7 +9340,10 @@
       "explanationEs": "Cuando el demostrativo no remite a un sustantivo concreto sino a lo dicho, el portugués usa el neutro «isso». El español no distingue la forma y arrastra el femenino.",
       "alternatives": [],
       "calcoEs": "Esa es la misma cosa que yo dije ayer."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-neutros"
+    ]
   },
   {
     "id": "co21c-007",
@@ -8724,7 +9368,10 @@
       "explanationEs": "de + esse = «desse». La contracción es obligatoria también con el segundo grado.",
       "alternatives": [],
       "calcoEs": "Este de aquí y aquel de allí son de ese señor."
-    }
+    },
+    "__nuevos": [
+      "b2-dem-contracciones"
+    ]
   },
   {
     "id": "co21c-014",
@@ -8749,7 +9396,10 @@
       "explanationEs": "«Cada» no se repite al final como refuerzo: o va delante o no va. La repetición viene del español coloquial.",
       "alternatives": [],
       "calcoEs": "Cada uno de los libros cuesta diez euros cada uno."
-    }
+    },
+    "__nuevos": [
+      "b2-indef-cada-qualquer"
+    ]
   },
   {
     "id": "co21c-015",
@@ -8774,7 +9424,10 @@
       "explanationEs": "Para «uno indeterminado, el que sea» el portugués usa «qualquer», no «cada». «Cada» distribuye uno a uno y aquí no distribuye nada.",
       "alternatives": [],
       "calcoEs": "Puedes elegir cada uno de estos tres."
-    }
+    },
+    "__nuevos": [
+      "b2-indef-cada-qualquer"
+    ]
   },
   {
     "id": "co21c-016",
@@ -8799,7 +9452,10 @@
       "explanationEs": "Aquí sí se distribuye —un día, una persona—, así que toca «cada». «Qualquer» dejaría el día indeterminado y rompe la correspondencia.",
       "alternatives": [],
       "calcoEs": "Cualquier día de la semana viene alguien diferente."
-    }
+    },
+    "__nuevos": [
+      "b2-indef-cada-qualquer"
+    ]
   },
   {
     "id": "co21c-017",
@@ -8824,7 +9480,10 @@
       "explanationEs": "En contexto negativo, «qualquer» es el que da el matiz de «ninguna sea cual sea». «Cada» no funciona ahí.",
       "alternatives": [],
       "calcoEs": "No acepto cualquier excusa que me den."
-    }
+    },
+    "__nuevos": [
+      "b2-indef-cada-qualquer"
+    ]
   },
   {
     "id": "co21c-018",
@@ -8849,7 +9508,10 @@
       "explanationEs": "«Cualquiera» es una sola palabra en portugués —«qualquer»— y no se descompone. El calco parte la palabra siguiendo el español.",
       "alternatives": [],
       "calcoEs": "Cualquiera que venga será bien recibido."
-    }
+    },
+    "__nuevos": [
+      "b2-indef-cada-qualquer"
+    ]
   },
   {
     "id": "co21c-019",
@@ -8874,7 +9536,10 @@
       "explanationEs": "El plural de «qualquer» es «quaisquer»: cambia por dentro y no añade -es al final.",
       "alternatives": [],
       "calcoEs": "Faltaron cualesquiera documentos importantes."
-    }
+    },
+    "__nuevos": [
+      "b2-indef-cada-qualquer"
+    ]
   },
   {
     "id": "co21c-020",
@@ -8899,7 +9564,10 @@
       "explanationEs": "En portugués «outro» no lleva artículo indefinido delante. El «um outro» existe pero significa «uno distinto entre varios», y aquí sobra.",
       "alternatives": [],
       "calcoEs": "Dame otro café, por favor."
-    }
+    },
+    "__nuevos": [
+      "b2-indef-outro-mesmo"
+    ]
   },
   {
     "id": "co21c-021",
@@ -8924,7 +9592,10 @@
       "explanationEs": "El complemento de tiempo con «mesmo» pide preposición: «no mesmo dia». El español lo deja sin ella y el calco copia.",
       "alternatives": [],
       "calcoEs": "Vimos la misma cosa el mismo día."
-    }
+    },
+    "__nuevos": [
+      "b2-indef-outro-mesmo"
+    ]
   },
   {
     "id": "co21c-022",
@@ -8951,7 +9622,10 @@
         "Ele mesmo veio buscar as chaves."
       ],
       "calcoEs": "Él mismo vino a buscar las llaves él mismo."
-    }
+    },
+    "__nuevos": [
+      "b2-indef-outro-mesmo"
+    ]
   },
   {
     "id": "co21c-023",
@@ -8976,7 +9650,10 @@
       "explanationEs": "En plural tampoco lleva artículo indefinido: «outros papéis».",
       "alternatives": [],
       "calcoEs": "Te traje unos otros papeles que faltaban."
-    }
+    },
+    "__nuevos": [
+      "b2-indef-outro-mesmo"
+    ]
   },
   {
     "id": "co21c-024",
@@ -9001,7 +9678,10 @@
       "explanationEs": "El orden es el contrario del español: «mais outro», no «outro mais». Lo mismo con «mais um», «mais uma vez».",
       "alternatives": [],
       "calcoEs": "Quiero otro más, por favor."
-    }
+    },
+    "__nuevos": [
+      "b2-indef-outro-mesmo"
+    ]
   },
   {
     "id": "co21c-025",
@@ -9028,7 +9708,10 @@
         "É a mesma pessoa de sempre, a que conheces."
       ],
       "calcoEs": "Es la misma persona de siempre, la misma que conoces."
-    }
+    },
+    "__nuevos": [
+      "b2-indef-outro-mesmo"
+    ]
   },
   {
     "id": "co21d-001",
@@ -9053,7 +9736,10 @@
       "explanationEs": "Con la Ana delante, «o seu irmão» se entiende como «el hermano de usted», no como el de ella. Para la tercera persona el portugués pospone: «o irmão dela».",
       "alternatives": [],
       "calcoEs": "Hablé con Ana sobre su hermano."
-    }
+    },
+    "__nuevos": [
+      "b2-poss-seu-ambiguo"
+    ]
   },
   {
     "id": "co21d-002",
@@ -9078,7 +9764,10 @@
       "explanationEs": "Igual: «o seu marido» dicho a alguien es el marido de esa persona. El de la Sofia es «o marido dela».",
       "alternatives": [],
       "calcoEs": "Encontré a Sofía y a su marido en el mercado."
-    }
+    },
+    "__nuevos": [
+      "b2-poss-seu-ambiguo"
+    ]
   },
   {
     "id": "co21d-003",
@@ -9103,7 +9792,10 @@
       "explanationEs": "Aquí la ambigüedad es doble, porque al doctor se le trata de «o senhor» y «sua» apunta justo a ese tratamiento. «A filha dele» deshace las dos lecturas.",
       "alternatives": [],
       "calcoEs": "Le pregunté al doctor Silva por su hija."
-    }
+    },
+    "__nuevos": [
+      "b2-poss-seu-ambiguo"
+    ]
   },
   {
     "id": "co21d-004",
@@ -9128,7 +9820,10 @@
       "explanationEs": "El poseedor no es quien habla ni a quien se habla: es la Ana, tercera persona. Por eso «dela».",
       "alternatives": [],
       "calcoEs": "Ana me cae bien, pero no soporto a su novio."
-    }
+    },
+    "__nuevos": [
+      "b2-poss-seu-ambiguo"
+    ]
   },
   {
     "id": "co21d-005",
@@ -9153,7 +9848,10 @@
       "explanationEs": "Con poseedor plural de tercera persona, «deles». Va al final del sintagma, detrás del adjetivo.",
       "alternatives": [],
       "calcoEs": "Estuve en casa de mis tíos y vi sus fotografías antiguas."
-    }
+    },
+    "__nuevos": [
+      "b2-poss-seu-ambiguo"
+    ]
   },
   {
     "id": "co21d-016",
@@ -9178,7 +9876,10 @@
       "explanationEs": "«Chefe» es de género común: sólo cambia el artículo. El español tiene «jefa» y el portugués no tiene «chefa».",
       "alternatives": [],
       "calcoEs": "La jefa nueva llegó hoy."
-    }
+    },
+    "__nuevos": [
+      "b2-genero-comum"
+    ]
   },
   {
     "id": "co21d-017",
@@ -9203,7 +9904,10 @@
       "explanationEs": "Igual que «chefe»: «cliente» no tiene forma femenina propia. El español sí admite «clienta», y de ahí sale el calco.",
       "alternatives": [],
       "calcoEs": "La clienta esperó media hora en el mostrador."
-    }
+    },
+    "__nuevos": [
+      "b2-genero-comum"
+    ]
   },
   {
     "id": "co21d-018",
@@ -9228,7 +9932,10 @@
       "explanationEs": "Cuando «todo» no acompaña a ningún sustantivo y significa «el conjunto de las cosas», el portugués usa «tudo», que es invariable. «Todo» es adjetivo y concuerda.",
       "alternatives": [],
       "calcoEs": "Todo está listo para la fiesta."
-    }
+    },
+    "__nuevos": [
+      "b2-indef-todo-tudo"
+    ]
   },
   {
     "id": "co21d-019",
@@ -9253,6 +9960,9 @@
       "explanationEs": "La fórmula fija es «obrigado por tudo». Detrás de la preposición sigue sin haber sustantivo, así que sigue siendo «tudo».",
       "alternatives": [],
       "calcoEs": "Gracias por todo, has sido muy amable."
-    }
+    },
+    "__nuevos": [
+      "b2-indef-todo-tudo"
+    ]
   }
 ]

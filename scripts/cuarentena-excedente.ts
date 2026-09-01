@@ -24,13 +24,22 @@ import { contarPuntos, padreCubierto, pisoCero, conPisoCero } from './lib/concep
 
 const APLICAR = process.argv.includes('--aplicar');
 const MOTIVO = 'excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01)';
+const MOTIVO2 = 'excedente sobre la cobertura de su punto, sin dictamen que cubra variante (E2#22 segunda pasada, 2026-09-01)';
 
 const ficheros = fs.readdirSync(BLOCKS_DIR).filter((x) => /^b\d+\.json$/.test(x)).sort();
 const porFichero = new Map(ficheros.map((f) => [f, JSON.parse(fs.readFileSync(path.join(BLOCKS_DIR, f), 'utf8')) as any[]]));
 const items = [...porFichero.values()].flat();
 
 const servible = (x: any) => x.variantStatus !== 'needs-human';
-const sellado = (x: any) => Boolean(x.variantVerificacion) || x.variantStatus === 'divergent' || x.variantStatus === 'neutral';
+// SELLADO tiene que significar lo MISMO aquí que en `sellar-familia-a.ts`
+// y `sellar-familia-b.ts`. Tener `variantVerificacion` ya no basta: las
+// colas 1 y 2 lo tienen y NO se sellaron, porque su dictamen no cubría
+// variante. Si los tres scripts no comparten el criterio, uno manda a
+// cuarentena lo que otro cuenta como cobertura.
+const sellado = (x: any) => x.variantStatus === 'neutral' || x.variantStatus === 'divergent';
+// ESCUCHA va por otra vía: espera el oído de Edu, no un dictamen de cola.
+// Ni se sella ni se cuarentena aquí.
+const esEscucha = (x: any) => /par mínimo|Escucha/i.test(String(x.variantVerificacion ?? ''));
 const piso = conPisoCero((id: string) => (id.startsWith('b12') ? 6 : 8), pisoCero());
 
 const cuentaDe = (xs: any[]) => {
@@ -54,7 +63,7 @@ const selladoYServible = cuentaDe(items.filter((x) => servible(x) && sellado(x))
 // no quede déficit cubrible. El resto es excedente.
 const pend = new Map<string, number>();
 for (const [id, n] of selladoYServible) { const f = piso(id) - n; if (f > 0) pend.set(id, f); }
-const sinSello = items.filter((x) => servible(x) && !sellado(x));
+const sinSello = items.filter((x) => servible(x) && !sellado(x) && !esEscucha(x));
 const conservar = new Set<any>();
 for (;;) {
   let mejor: any = null, mejorN = 0;
@@ -77,7 +86,7 @@ console.log(`- se CONSERVAN por cubrir déficit real: **${conservar.size}** → 
 console.log(`- a CUARENTENA por excedente: **${excedente.length}**\n`);
 
 // Condición 2 del par: el recuento de cobertura, antes y después.
-for (const x of excedente) { x.variantStatus = 'needs-human'; x.variantVerificacion = `${MOTIVO} · puntos: ${((x.concepts ?? []) as string[]).join(', ') || '(sin punto)'}`; }
+for (const x of excedente) { const m = x.variantVerificacion ? MOTIVO2 : MOTIVO; x.variantStatus = 'needs-human'; x.variantVerificacion = `${m} · puntos: ${((x.concepts ?? []) as string[]).join(', ') || '(sin punto)'}${x.variantVerificacion ? ` · sello anterior: ${x.variantVerificacion}` : ''}`; }
 const despues = cuentaDe(items);
 console.log(`| | déficit de cobertura servible |`);
 console.log(`|---|---:|`);

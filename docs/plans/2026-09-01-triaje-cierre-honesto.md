@@ -195,3 +195,39 @@ su piso**. Ese test aísla la decisión de E2#22 —compara los servibles
 contra los servibles más el excedente devuelto— porque mezclarlo con la
 cuarentena vieja lo haría medir otra cosa y no cazaría nunca una mala
 selección.
+
+---
+
+## Addendum 3 · El triaje de los 422, y una apuesta que falla
+
+Al no sellar las colas 1 y 2, sus 179 ítems pierden la condición de
+cubiertos y entran en el trabajo manual. El par propuso —bien— aplicarles
+el mismo triaje que a los 879: **sólo se lee lo que la cobertura reclama**.
+
+Hecho, y **la cola casi no baja**:
+
+| | ítems |
+|---|---:|
+| pendientes de dictamen (sin sello, servibles, sin contar `escucha`) | **504** |
+| conservados por cubrir déficit real → dictamen | **414** |
+| excedente → cuarentena | **90** |
+
+Déficit servible **72 antes y 72 después**; ningún punto cae.
+
+**La apuesta era que bajara bastante y baja el 18 %.** La razón es
+medible: el déficit de lo sellado son **443 unidades** y sólo hay **504**
+ítems sin sellar en todo el corpus. No hay holgura — el corpus viejo
+apenas tiene más material del que la cobertura necesita, así que casi
+todo lo que queda hace falta. Quedan además **101 unidades** que ningún
+ítem viejo cubre y hay que producir (eran 93; las 8 de diferencia son los
+pares de `escucha`, que salen del cálculo por ir por otra vía).
+
+### Y un criterio que estaba en tres sitios con tres formas
+
+`sellado()` significaba cosas distintas en `cuarentena-excedente.ts`, en
+`cola-dictamen.ts` y en los dos scripts de sellado: el primero daba por
+sellado a todo el que tuviera `variantVerificacion`, y las colas 1-2 lo
+tienen. Con eso, un script mandaba a cuarentena lo que otro contaba como
+cobertura. Unificado: **sellado = `neutral` o `divergent`**, que es lo que
+el estado significa. Y `escucha` sale de los dos: ni se sella ni se
+cuarentena, porque espera un oído y no un dictamen.

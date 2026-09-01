@@ -23,7 +23,9 @@ const N = Number(process.argv[2] ?? 0);
 const items = fs.readdirSync(BLOCKS_DIR).filter((x) => /^b\d+\.json$/.test(x)).sort()
   .flatMap((f) => JSON.parse(fs.readFileSync(path.join(BLOCKS_DIR, f), 'utf8')) as any[]);
 const servible = (x: any) => x.variantStatus !== 'needs-human';
-const sellado = (x: any) => x.variantStatus === 'neutral' || x.variantStatus === 'divergent' || /informe-cola[345678]|adversaria|lingu/i.test(String(x.variantVerificacion ?? ''));
+const sellado = (x: any) => x.variantStatus === 'neutral' || x.variantStatus === 'divergent';
+// ESCUCHA no entra en una cola de dictamen: espera el oído de Edu.
+const esEscucha = (x: any) => /par mínimo|Escucha/i.test(String(x.variantVerificacion ?? ''));
 
 const cuentaDe = (xs: any[]) => {
   const { cuenta } = contarPuntos(xs);
@@ -35,7 +37,7 @@ const piso = conPadreCubierto(conPisoCero((id: string) => (id.startsWith('b12') 
 const falta = new Map<string, number>();
 for (const [id, n] of conSello) { const f = piso(id) - n; if (f > 0) falta.set(id, f); }
 
-const pendientes = items.filter((x) => servible(x) && !sellado(x));
+const pendientes = items.filter((x) => servible(x) && !sellado(x) && !esEscucha(x));
 // Greedy: se elige el que más déficit cubre, y se recalcula. Es el mismo
 // criterio con el que se decidió qué NO era excedente, así que la cola y
 // la cuarentena no pueden discrepar.
