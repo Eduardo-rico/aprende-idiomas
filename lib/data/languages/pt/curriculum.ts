@@ -275,6 +275,22 @@ const B9: Block = {
 };
 
 // --- Block 10: Registros y variación ---
+const B9_CONCEPTS: Concept[] = [
+  // Declarado en E2#14 por el barrido de etiquetado. NO se inventa para
+  // que cuadre una cifra: **doce juicios publicados llevaban desde el
+  // lote 1 enseñando exactamente esto y no tenían dónde vivir**
+  // (estornudar, bocadillo, embarazada, taller, botella, camarero,
+  // cenar, disculpas, prohibido, vacações, aficionado, olvidar). Sin el
+  // punto, los doce eran invisibles para la tabla de cobertura, porque
+  // el bucle de asignación itera `concepts` y el suyo estaba vacío.
+  //
+  // Es distinto del FALSO AMIGO, que ya tiene su punto en C1: el falso
+  // amigo existe en portugués con otro sentido («polvo» es pulpo,
+  // «esquisito» es raro); el hispanismo simplemente NO existe. Uno se
+  // enseña desactivando una lectura, el otro sustituyendo una palabra.
+  { id: 'b9-lexico-anti-calco', name: 'Hispanismo léxico: la palabra española que el portugués no tiene', blockId: 9, description: 'Palabras españolas que se cuelan porque el portugués tiene otra distinta y no un homógrafo: estornudar/espirrar, bocadillo/sandes, embarazada/grávida, taller/oficina, botella/garrafa, camarero/empregado, cenar/jantar, disculpas/desculpas, vacaciones/férias, aficionado/adepto, olvidar/esquecer', prereqs: [] },
+];
+
 const B10_CONCEPTS: Concept[] = [
   { id: 'b10-registro', name: 'Registro formal/informal', blockId: 10, description: 'Marcadores de formalidad (vocabulario, tratamiento você/o senhor/a senhora, conectores, pronombres), cartas/e-mails vs conversación', prereqs: [] },
   { id: 'b10-variacao-diatopica', name: 'Variação diatópica + norma culta', blockId: 10, description: 'Diferencias BR↔PT (léxico, fonética, gramática), variantes regionales (norte/sul de BR, Açores/Madeira), norma culta escrita vs uso coloquial', prereqs: [] },
@@ -381,6 +397,7 @@ export const ALL_CONCEPTS: Concept[] = [
   ...B8_CONCEPTS,
   // B9 is freeDrill — no Concept[] (it drills whatever vocab the catalog has).
   ...B10_CONCEPTS,
+  ...B9_CONCEPTS,
   ...B11_CONCEPTS,
   ...B12_CONCEPTS,
 ];

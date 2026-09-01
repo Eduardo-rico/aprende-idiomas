@@ -23,7 +23,8 @@
     "verify:variant": "tsx scripts/check-variant.ts",
     "invert:variant": "tsx scripts/invert-variant-base.ts",
     "gc:audio": "node scripts/gc-audio.mjs",
-    "probe:tts": "tsx scripts/probe-tts.ts"
+    "probe:tts": "tsx scripts/probe-tts.ts",
+    "check:concepts": "tsx scripts/check-concepts.ts --strict"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.102.0",

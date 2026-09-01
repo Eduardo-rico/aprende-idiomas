@@ -41,6 +41,37 @@ lote 3 (`contradictorio`, `parcial`) pasaron limpios el muestreo y la
 revisión, y lo ya publicado aguanta (0 de 15 mediaciones industriales en
 producción traducen mal «até»). El 45 % fue del lote, no de la línea.
 
+## ANTES DE ESCRIBIR, MEDIR; ANTES DE MEDIR, ETIQUETAR
+
+**Regla de Edu, E2#13-14, y va antes que el ciclo entero.** Un punto
+puede llevar sesiones cerrado y la tabla no verlo, porque **un ítem con
+`concepts: []` no se cuenta en ningún punto**: el bucle de asignación de
+`split-conceptos.ts` itera `x.concepts`, así que el ítem no está mal
+contado — es **invisible** para la tabla que gobierna el calendario.
+
+Medido. En E2#13 siete juicios enseñaban aspecto y tiempo sin declararlo
+y al etiquetarlos `b11-aspecto-tempo` pasó de 6 a 13 y **cerró sin
+escribir un ítem**. En E2#14 el barrido completo —109 ejercicios, el
+4,5 % del corpus— cerró **cinco puntos más** y bajó el déficit 35, otra
+vez sin escribir nada. Es la única tarea del proyecto que BORRA trabajo
+del calendario en vez de crearlo.
+
+El método, y no admite atajos: se decide por lo que el ítem **ENSEÑA**,
+no por su lección ni por su nombre. En un juicio de gramaticalidad el
+punto es **el tramo que cambia entre `sentence` y `repair`** — eso es
+literalmente lo que el ítem juzga, y todo lo demás es contexto. Una
+propuesta por bolsa de palabras devuelve entre 2 y 11 candidatos por
+ítem, casi todos gramática incidental: sirve para ordenar la lectura, no
+para decidir. Y en una mediación la fuente NO es el punto: lo que decide
+es la consigna.
+
+`npx tsx scripts/check-concepts.ts --strict` (o `npm run check:concepts`)
+es la puerta, y distingue el ítem **sin revisar** del **revisado y
+declarado sin punto**. Lo segundo es legítimo y frecuente —léxico
+temático, tareas de mediación que no cubren un punto de gramática— pero
+vive escrito con su motivo en `docs/plans/etiquetado-e2-14.json`. Un
+`concepts: []` sin entrada ahí es deuda, no decisión.
+
 ## El ciclo
 
 1. **Borrador** en `docs/contenido/AAAA-MM-DD-loteN-….md`, marcado
