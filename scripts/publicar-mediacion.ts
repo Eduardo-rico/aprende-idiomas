@@ -87,7 +87,11 @@ if (EXPLICA) {
       blockId: d.bloque.id, lessonId: d.leccion.id, difficulty: 3,
       concepts: [x.concepto], tags: [`lote${lote}`, 'mediacao', 'explicar'],
       contentHash: crypto.createHash('sha256').update(`${x.sourceText}|${x.modelo}`).digest('hex'),
-      variantStatus: 'unchecked',
+      // El sello se escribe AQUÍ, al publicar, y no en una sesión de
+    // limpieza seis semanas después. Es la mitad durable de la
+    // calibración de E2#22: sin esto, cada lote vuelve a nacer
+    // `unchecked` y el montón se reconstruye solo.
+    variantStatus: 'neutral',
       variantVerificacion: `Mediación EXPLICAR lote ${lote} (E2#18): rúbrica DERIVADA de los puntos clave declarados; cada punto con su ancla comprobada por script; lote revisado a mano`,
       register: x.register,
       ...(x.address ? { address: x.address } : {}),
@@ -134,7 +138,11 @@ for (const x of EXPLICA ? [] : ITEMS!) {
     concepts: [x.concepto],
     tags: [`lote${lote}`, 'mediacao', 'registro'],
     contentHash: crypto.createHash('sha256').update(`${x.sourceText}|${x.modelo}`).digest('hex'),
-    variantStatus: 'unchecked',
+    // El sello se escribe AQUÍ, al publicar, y no en una sesión de
+    // limpieza seis semanas después. Es la mitad durable de la
+    // calibración de E2#22: sin esto, cada lote vuelve a nacer
+    // `unchecked` y el montón se reconstruye solo.
+    variantStatus: 'neutral',
     variantVerificacion: `Mediación lote ${lote} (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno`,
     register: x.register,
     ...(x.address ? { address: x.address } : {}),

@@ -11,6 +11,10 @@ import crypto from 'node:crypto';
 import { BLOCKS_DIR } from './config';
 
 const N = Number(process.argv[2] ?? 120);
+// `--desde k` salta los k primeros del mismo orden determinista, para
+// sacar una muestra DISJUNTA de la anterior. Releer la muestra ya
+// arreglada no probaría nada: sería enseñar al examen.
+const DESDE = Number(process.argv[process.argv.indexOf('--desde') + 1] ?? 0) || 0;
 const esA = (t: string) => /revisión manual|corregido según revisión|lingu|adversaria/i.test(t);
 const esB = (x: any) => {
   const t = String(x.variantVerificacion ?? '');
@@ -29,5 +33,5 @@ const items = fs.readdirSync(BLOCKS_DIR).filter((x) => /^b\d+\.json$/.test(x)).s
   .flatMap((f) => JSON.parse(fs.readFileSync(path.join(BLOCKS_DIR, f), 'utf8')) as any[]).filter(esB);
 const orden = items.map((x) => [crypto.createHash('sha256').update(x.id).digest('hex'), x] as const)
   .sort((a, b) => a[0].localeCompare(b[0]));
-console.log(`familia B: ${items.length} ítems · muestra determinista de ${N}\n`);
-orden.slice(0, N).forEach(([, x], i) => console.log(`${String(i + 1).padStart(3)}. ${x.id} [${x.type}] ${texto(x)}`));
+console.log(`familia B: ${items.length} ítems · muestra determinista de ${N}${DESDE ? ` desde el ${DESDE + 1}` : ''}\n`);
+orden.slice(DESDE, DESDE + N).forEach(([, x], i) => console.log(`${String(i + 1).padStart(3)}. ${x.id} [${x.type}] ${texto(x)}`));

@@ -66,7 +66,11 @@ ITEMS.forEach((x, i) => {
     concepts: [x.p],
     tags: [lote, 'transformacion'],
     contentHash: crypto.createHash('sha256').update(`${x.s}|${answer}`).digest('hex'),
-    variantStatus: 'unchecked',
+    // El sello se escribe AQUÍ, al publicar, y no en una sesión de
+    // limpieza seis semanas después. Es la mitad durable de la
+    // calibración de E2#22: sin esto, cada lote vuelve a nacer
+    // `unchecked` y el montón se reconstruye solo.
+    variantStatus: 'neutral',
     variantVerificacion: `Transformación ${lote.toUpperCase()}: respuesta DERIVADA del paradigma y recalculada por el gate; atajo de traducción declarado por ítem y medido en el lote`,
     register: 'neutro',
     type: 'transformation',

@@ -74,7 +74,11 @@ ITEMS.forEach((x, i) => {
     id, blockId: bloque.id, lessonId: leccion.id, difficulty: 2,
     concepts: [x.p], tags: [lote, 'correccion'],
     contentHash: crypto.createHash('sha256').update(`${x.mala}|${x.buena}`).digest('hex'),
-    variantStatus: 'unchecked',
+    // El sello se escribe AQUÍ, al publicar, y no en una sesión de
+    // limpieza seis semanas después. Es la mitad durable de la
+    // calibración de E2#22: sin esto, cada lote vuelve a nacer
+    // `unchecked` y el montón se reconstruye solo.
+    variantStatus: 'neutral',
     // El aviso de variante va en el ítem, no en un silenciador: el error
     // deliberado ES el material, y quien audite tiene que saberlo.
     variantVerificacion: `Corrección ${lote.toUpperCase()}: la frase mala es el calco de «${x.calcoEs}». ${x.varianteEsperada ? `El gate de variante MUERDE por diseño (${x.varianteEsperada}) — el error es el material del ejercicio, no un descuido.` : ''}`,

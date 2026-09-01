@@ -34,6 +34,12 @@ ITEMS.forEach((x, i) => {
     id, blockId: bloque.id, lessonId: leccion.id, difficulty: 2,
     concepts: [x.p], tags: ['e2-20', 'escucha', 'par-minimo'],
     contentHash: crypto.createHash('sha256').update(`${x.audio}|${x.par.join('/')}`).digest('hex'),
+    // ESCUCHA ES LA EXCEPCIÓN, y se queda en `unchecked` a propósito.
+    // Las demás máquinas se autosellan desde la calibración de E2#22,
+    // pero aquí la pregunta abierta ES de variante: nadie ha comprobado a
+    // oído que la voz realice la reducción vocálica, el sândi y el ⟨ei⟩
+    // lisboeta — y `EL_VOICES` usa la misma voz para pt y para br. Un
+    // sello aquí afirmaría exactamente lo que está en duda.
     variantStatus: 'unchecked',
     // La verificación dice EXACTAMENTE lo que falta, para que nadie dé el
     // punto por enseñado antes de tiempo.

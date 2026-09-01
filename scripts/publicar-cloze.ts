@@ -82,7 +82,11 @@ ITEMS.forEach((x, i) => {
     concepts: [x.p],
     tags: [lote, 'cloze-con-pista'],
     contentHash: crypto.createHash('sha256').update(`${x.s}|${answer}`).digest('hex'),
-    variantStatus: 'unchecked',
+    // El sello se escribe AQUÍ, al publicar, y no en una sesión de
+    // limpieza seis semanas después. Es la mitad durable de la
+    // calibración de E2#22: sin esto, cada lote vuelve a nacer
+    // `unchecked` y el montón se reconstruye solo.
+    variantStatus: 'neutral',
     variantVerificacion: `Cloze con pista ${lote.toUpperCase()}: ${x.lema ? 'derivado del paradigma' : 'respuesta declarada'} + revisión completa del lote a mano`,
     register: 'neutro',
     type: 'fill_blank',
