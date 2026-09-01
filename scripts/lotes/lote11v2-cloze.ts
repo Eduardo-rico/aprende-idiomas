@@ -53,27 +53,27 @@ const B = 'b11-ser-estar-divergente';
 // de E2#11, aplicada antes de escribir en vez de después del round.
 export const ITEMS: ItemCloze[] = [
   { id: 'CL-01', concepto: A, lema: 'apanhar', persona: 'eles', construccion: 'pessoal',
-    sentence: 'Para os teus colegas ___ o comboio das seis, temos de sair já.',
+    sentence: 'Para os teus colegas ___ (apanhar) o comboio das seis, temos de sair já.',
     answer: 'apanharem', alternatives: [], ancla: 'Para os teus colegas',
     hintEs: 'apanhar — para que tus compañeros cojan el tren' },
   { id: 'CL-02', concepto: A, lema: 'sair', persona: 'eles', construccion: 'pessoal',
-    sentence: 'Antes de eles ___ de casa, deixámos a chave no sítio do costume.',
+    sentence: 'Antes de eles ___ (sair) de casa, deixámos a chave no sítio do costume.',
     answer: 'saírem', alternatives: [], ancla: 'Antes de eles',
     hintEs: 'sair — antes de que ellos salieran' },
   { id: 'CL-03', concepto: A, lema: 'dar', persona: 'eles', construccion: 'pessoal',
-    sentence: 'Sem os vizinhos ___ por nada, mudámos o piano para o outro andar.',
+    sentence: 'Sem os vizinhos ___ (dar) por nada, mudámos o piano para o outro andar.',
     answer: 'darem', alternatives: [], ancla: 'Sem os vizinhos',
     hintEs: 'dar (por) — sin que los vecinos se dieran cuenta' },
   { id: 'CL-04', concepto: A, lema: 'assinar', persona: 'nós', construccion: 'pessoal',
-    sentence: 'Depois de nós ___ o contrato, tudo ficou muito mais simples.',
+    sentence: 'Depois de nós ___ (assinar) o contrato, tudo ficou muito mais simples.',
     answer: 'assinarmos', alternatives: [], ancla: 'Depois de nós',
     hintEs: 'assinar — después de que nosotros firmáramos' },
   { id: 'CL-05', concepto: A, lema: 'pôr', persona: 'eles', construccion: 'pessoal',
-    sentence: 'Trouxe os documentos para os senhores ___ a assinatura hoje mesmo.',
+    sentence: 'Trouxe os documentos para os senhores ___ (pôr) a assinatura hoje mesmo.',
     answer: 'porem', alternatives: [], ancla: 'para os senhores',
     hintEs: 'pôr — para que ustedes pongan la firma' },
   { id: 'CL-06', concepto: A, lema: 'ser', persona: 'eles', construccion: 'pessoal',
-    sentence: 'É difícil os alunos ___ todos pontuais logo à primeira aula.',
+    sentence: 'É difícil os alunos ___ (ser) todos pontuais logo à primeira aula.',
     answer: 'serem', alternatives: [], ancla: 'os alunos',
     hintEs: 'ser — es difícil que los alumnos sean' },
   // Las cinco frases que siguen NO son las que escribí primero. El gate
@@ -85,15 +85,15 @@ export const ITEMS: ItemCloze[] = [
   // aquí la lección se había escrito copiando el lote, y el resultado es
   // el mismo — el alumno acaba de leer la respuesta.
   { id: 'CL-07', concepto: A, lema: 'fazer', persona: 'eles', construccion: 'conjuntivo-presente',
-    sentence: 'É preciso que vocês ___ uma escolha antes do fim do mês.',
+    sentence: 'É preciso que vocês ___ (fazer) uma escolha antes do fim do mês.',
     answer: 'façam', alternatives: [], ancla: 'que vocês',
     hintEs: 'fazer — hace falta que hagáis una elección' },
   { id: 'CL-08', concepto: A, lema: 'ser', persona: 'ele', construccion: 'conjuntivo-presente',
-    sentence: 'Convém que a proposta ___ entregue antes de sexta-feira ao meio-dia.',
+    sentence: 'Convém que a proposta ___ (ser) entregue antes de sexta-feira ao meio-dia.',
     answer: 'seja', alternatives: [], ancla: 'que a proposta',
     hintEs: 'ser — conviene que la propuesta sea entregada' },
   { id: 'CL-09', concepto: A, lema: 'trazer', persona: 'tu', construccion: 'conjuntivo-presente',
-    sentence: 'Espero que tu ___ o contrato assinado à reunião de amanhã.',
+    sentence: 'Espero que tu ___ (trazer) o contrato assinado à reunião de amanhã.',
     answer: 'tragas', alternatives: [], ancla: 'que tu',
     hintEs: 'trazer — espero que traigas' },
   // Con un verbo REGULAR este ítem no discriminaba: «chegares» es a la
@@ -103,15 +103,15 @@ export const ITEMS: ItemCloze[] = [
   // se separan —«vires» frente a «veres»— y el ítem vuelve a medir la
   // elección.
   { id: 'CL-10', concepto: A, lema: 'ver', persona: 'tu', construccion: 'conjuntivo-futuro',
-    sentence: 'Quando tu ___ o teu irmão, dá-lhe os parabéns da minha parte.',
+    sentence: 'Quando tu ___ (ver) o teu irmão, dá-lhe os parabéns da minha parte.',
     answer: 'vires', alternatives: [], ancla: 'Quando tu',
     hintEs: 'ver — cuando veas a tu hermano (futuro)' },
   { id: 'CL-11', concepto: A, lema: 'querer', persona: 'eles', construccion: 'conjuntivo-futuro',
-    sentence: 'Se eles ___ vir connosco no domingo, ainda há lugar no carro.',
+    sentence: 'Se eles ___ (querer) vir connosco no domingo, ainda há lugar no carro.',
     answer: 'quiserem', alternatives: [], ancla: 'Se eles',
     hintEs: 'querer — si quieren venir (futuro)' },
   { id: 'CL-12', concepto: A, lema: 'saber', persona: 'nós', construccion: 'conjuntivo-futuro',
-    sentence: 'Assim que nós ___ alguma coisa de concreto, avisamos toda a gente.',
+    sentence: 'Assim que nós ___ (saber) alguma coisa de concreto, avisamos toda a gente.',
     answer: 'soubermos', alternatives: [], ancla: 'Assim que nós',
     hintEs: 'saber — en cuanto sepamos algo' },
 
@@ -121,51 +121,51 @@ export const ITEMS: ItemCloze[] = [
   // suponerlos» — de los doce ítems que se escribieron suponiendo,
   // once coincidían con el español.
   { id: 'CL-13', concepto: B,
-    sentence: 'O jantar de despedida ___ na quinta-feira, num sítio ainda por combinar.',
+    sentence: 'O jantar de despedida ___ (ser / estar / ficar) na quinta-feira, num sítio ainda por combinar.',
     answer: 'é', alternatives: [], ancla: 'O jantar de despedida',
     hintEs: 'un evento OCURRE: en portugués va con ser' },
   { id: 'CL-14', concepto: B,
-    sentence: 'O concerto ___ no Coliseu no próximo sábado, às nove e meia.',
+    sentence: 'O concerto ___ (ser / estar / ficar) no Coliseu no próximo sábado, às nove e meia.',
     answer: 'é', alternatives: [], ancla: 'O concerto',
     hintEs: 'otro evento con lugar y fecha: sigue siendo ser' },
   { id: 'CL-15', concepto: B,
-    sentence: 'A festa de anos da minha sobrinha ___ no domingo em casa dos avós.',
+    sentence: 'A festa de anos da minha sobrinha ___ (ser / estar / ficar) no domingo em casa dos avós.',
     answer: 'é', alternatives: [], ancla: 'A festa',
     hintEs: 'si el sujeto se puede sustituir por «tem lugar», va con ser' },
   { id: 'CL-16', concepto: B,
-    sentence: 'O António ___ doente e hoje não vem, mas na segunda já cá anda.',
+    sentence: 'O António ___ (ser / estar / ficar) doente e hoje não vem, mas na segunda já cá anda.',
     answer: 'está', alternatives: [], ancla: 'na segunda já cá anda',
     hintEs: 'estado pasajero — la segunda mitad dice que se le pasa' },
   { id: 'CL-17', concepto: B,
-    sentence: 'A comida ___ fria, ninguém se lembrou de a tapar quando saímos.',
+    sentence: 'A comida ___ (ser / estar / ficar) fria, ninguém se lembrou de a tapar quando saímos.',
     answer: 'está', alternatives: [], ancla: 'ninguém se lembrou de a tapar',
     hintEs: 'se ha enfriado: estado resultante, no cualidad' },
   { id: 'CL-18', concepto: B,
-    sentence: 'O tribunal ___ mesmo ao lado da estação, num prédio dos anos trinta.',
+    sentence: 'O tribunal ___ (ser / estar / ficar) mesmo ao lado da estação, num prédio dos anos trinta.',
     answer: 'fica', alternatives: ['está'], ancla: 'num prédio dos anos trinta',
     hintEs: 'la localización de un edificio prefiere ficar, que el español no tiene en este uso' },
   { id: 'CL-19', concepto: B,
-    sentence: 'Eu ___ português, mas vivo em Espanha desde os dezoito anos.',
+    sentence: 'Eu ___ (ser / estar / ficar) português, mas vivo em Espanha desde os dezoito anos.',
     answer: 'sou', alternatives: [], ancla: 'português',
     hintEs: 'nacionalidad con ser, por muy temporal que sea la situación' },
   { id: 'CL-20', concepto: B,
-    sentence: 'Ela ___ professora de História, embora este ano esteja a dar Português.',
+    sentence: 'Ela ___ (ser / estar / ficar) professora de História, embora este ano esteja a dar Português.',
     answer: 'é', alternatives: [], ancla: 'professora de História',
     hintEs: 'profesión con ser, y el contraste con «esteja a dar» en la misma frase' },
   { id: 'CL-21', concepto: B,
-    sentence: 'A porta ___ aberta a noite toda e entrou frio pela casa dentro.',
+    sentence: 'A porta ___ (ser / estar / ficar) aberta a noite toda e entrou frio pela casa dentro.',
     answer: 'esteve', alternatives: [], ancla: 'a noite toda',
     hintEs: 'estado resultante en un periodo cerrado' },
   { id: 'CL-22', concepto: B,
-    sentence: 'A entrada ___ gratuita para os sócios durante todo o mês de agosto.',
+    sentence: 'A entrada ___ (ser / estar / ficar) gratuita para os sócios durante todo o mês de agosto.',
     answer: 'é', alternatives: [], ancla: 'gratuita para os sócios',
     hintEs: 'característica del billete, no estado de hoy' },
   { id: 'CL-23', concepto: B,
-    sentence: 'O prédio ___ do século dezanove, mas está todo remodelado por dentro.',
+    sentence: 'O prédio ___ (ser / estar / ficar) do século dezanove, mas está todo remodelado por dentro.',
     answer: 'é', alternatives: [], ancla: 'do século dezanove',
     hintEs: 'lo que el edificio ES —su época— frente a cómo está ahora' },
   { id: 'CL-24', concepto: B,
-    sentence: 'Como ___ o tempo aí no Porto? Aqui o céu não abre há uma semana.',
+    sentence: 'Como ___ (ser / estar / ficar) o tempo aí no Porto? Aqui o céu não abre há uma semana.',
     answer: 'está', alternatives: [], ancla: 'o céu não abre há uma semana',
     hintEs: 'el tiempo de hoy: estar' },
 ];
@@ -196,6 +196,15 @@ export function verificar(items: ItemCloze[]): string[] {
       if (x.answer === infinitivoPessoal(x.lema!, x.persona!))
         v.push(`${x.id}: la respuesta coincide con el infinitivo pessoal, así que el ítem no distingue las dos construcciones`);
     }
+    // LA PISTA TIENE QUE SER VISIBLE. `FillBlankCard` no renderiza
+    // ningún campo de pista —y CERO de los 417 fill_blank publicados
+    // usan `hintEs`—: la convención del corpus es ponerla entre
+    // paréntesis DENTRO de la frase. Sin este gate, un lote entero de
+    // «cloze CON PISTA» se publica sin pista y los ítems quedan
+    // inresolubles. Lo cazó el dry-run del publicador, no un revisor.
+    if (!/\([^)]+\)/.test(x.sentence))
+      v.push(`${x.id}: la frase no lleva pista entre paréntesis, y la tarjeta no muestra ningún otro campo`);
+
     // La respuesta no puede aparecer ya escrita en la propia frase.
     if (new RegExp(`(?<![\\p{L}])${x.answer}(?![\\p{L}])`, 'iu').test(x.sentence.replace('___', '')))
       v.push(`${x.id}: la respuesta «${x.answer}» ya está en la frase`);
