@@ -457,3 +457,53 @@ A2/B1/B2 por cerrados y la partición fina demostró lo contrario —
 medianas de 8, 11 y 11, con 89 puntos bajo el piso entre los tres. Es
 exactamente para lo que servía partir los conceptos: **un concepto gordo
 bien surtido esconde sub-puntos famélicos.**
+
+
+---
+
+## E2#13 (2026-09-03) — se abre C2, y el método artesanal cambia de raíz
+
+**1 · El bloque 12 existe.** C2 eran **408 unidades de déficit
+inalcanzables**: el currículo enumera 34 puntos y no había ni un concepto
+declarado ni sitio donde aterrizar un ítem, porque `LessonSchema.blockId`
+topaba en 11. Abierto el bloque «Pasar por portugués (C2)» con los OCHO
+puntos de la línea de gramática del currículo. Los otros (léxico opaco,
+fonología, pragmática, mediación profesional) se declararán cuando exista
+el formato que los ejercita; declararlos antes sería fingir cobertura.
+
+Y el hallazgo que sólo se ve mirando la tabla: al abrirlo, todo salió
+verde y **los ocho puntos nuevos desaparecieron del déficit**, porque
+`split-conceptos.ts` tenía su propia COPIA de `BLOQUE_A_NIVEL` en vez de
+importarla. Un mapa duplicado es una métrica que miente en silencio.
+
+**2 · Los juicios se escriben por PARES MÍNIMOS** (`scripts/lib/
+pares-minimos.ts`): el BIEN y el MAL salen del mismo esqueleto y difieren
+sólo en el tramo juzgado. Rompe el bucle de tres sesiones en que cada
+atajo arreglado fabricaba otro del mismo calibre. Y sustituye el criterio
+del molde, que se agotaba: «prefijo de CUATRO no visto» tenía 16 casillas
+y quedaban cinco, tres de ellas con racha >3 — moría en dos lotes.
+
+**Pero la tesis prueba MENOS de lo que se le atribuyó, y está medido**:
+el par compra validez **diferencial** y cero validez **absoluta**. Todo
+defecto compartido por los dos miembros es invisible por construcción y
+la batería lo puntúa «limpio». Tres corolarios pagados el mismo día: el
+rasgo juzgado puede seguir siendo un atajo si se usa sólo su tercio fácil
+(12/12, p=0,0002); los `repair` son verbatim otros ítems del lote, lo que
+sube el techo de la estrategia sin portugués del 50 % al 75 %; y a N=12
+el binomial exige 10/12, así que un atajo al 75 % se escapa el 61 % de
+las veces.
+
+**3 · Dos rasgos nuevos en la batería, encontrados por los rounds:**
+- **El 12, la GLOSA COGNADA**, que la skill nombraba desde el lote 3 y
+  que el código nunca tuvo por ser el único que no sale de un regex:
+  **20/24 (p=0,0008)** en el lote 11. No se calcula, se DECLARA, y el
+  preflight bloquea si falta. **Los pares mínimos NO lo neutralizan**
+  porque mira dentro del hueco: la única defensa es que el punto sea de
+  verdad divergente del español.
+- **El 13, la CONSTRUCCIÓN EUROPEA MARCADA**: 11/14 (p=0,029) en el lote
+  10, con tasa base 53 % sobre los 146 juicios publicados.
+
+**4 · Lo publicado y lo que no.** Lote 10: **14 ítems**, tres rondas,
+once bloqueantes aplicados. Lotes 11 y 12: **NO publican**, y por la
+misma razón de fondo — un punto que no diverge del español no se puede
+examinar con juicios binarios. Déficit **1.668 → 1.656**, residuo 0.
