@@ -44,6 +44,7 @@ const SOLO = flags.includes('--solo') ? flags[flags.indexOf('--solo') + 1] : nul
 // la Nota de Eça en la Ola L (el preámbulo puede ser contenido real).
 const PREAMBULOS = flags.includes('--preambulos');
 const PIEZAS = flags.includes('--piezas');   // lista título y palabras de cada pieza
+const REHACER = flags.includes('--rehacer'); // borra lo que la obra publicó antes
 
 const CACHE = path.join(process.cwd(), 'scripts/.cache/lectura');
 const SALIDA = path.join(process.cwd(), 'lib/data/languages/pt/lecturas');
@@ -83,6 +84,40 @@ function cuerpoGutenberg(crudo) {
   const hasta = desde.split(/\*\*\* ?END OF (?:THE|THIS) PROJECT GUTENBERG EBOOK/i)[0];
   const italicas = (hasta.match(/_/g) ?? []).length;
   return { texto: hasta.replace(/_/g, ''), italicas };
+}
+
+// ── recorte del aparato final ────────────────────────────────────
+//
+// Detrás del «FIM» los transcriptores de Gutenberg dejan su tabla de
+// erratas, su nota de editor y el índice. Sin este recorte, el ÚLTIMO
+// capítulo de media biblioteca acababa con
+// «+----------+------------------------+ | Original | Correcção |».
+// Se corta en la primera marca de aparato QUE DEJE POCO DETRÁS (≤12 %
+// del libro y ≤6.000 palabras): así un «FIM» a mitad de un volumen de
+// contos no se lleva por delante los contos que faltan.
+const APARATO = [
+  /^End of (the )?Project Gutenberg/i,
+  /^\+[-+=]{6,}\+$/,
+  /^Aqui encontram-se listados/i,
+  /\berros?\b[^.]{0,60}\bcorrigid/i,          // «Lista de erros corrigidos», «Os erros óbvios … corrigidos»
+  /^Nota d[eo] (editor|transcri)/i,
+  /^ERRATAS?\.?$/i,
+  /^[ÍI]NDICE\.?$/i,
+  /^SUM[MÁA]RIO\.?$/i,
+  /^FIM\.?$/,
+];
+
+function recorteFinal(lineas, desde) {
+  const totalPal = palabrasEntre(lineas, desde, lineas.length);
+  const tope = Math.min(Math.floor(totalPal * 0.12), 6000);
+  for (let i = desde + 1; i < lineas.length; i++) {
+    // Los transcriptores marcan sus notas con *asteriscos*: se quitan
+    // antes de cotejar, o «*Lista de erros corrigidos*» no casa.
+    const l = lineas[i].replace(/[*_]/g, '').trim();
+    if (!APARATO.some((re) => re.test(l))) continue;
+    if (palabrasEntre(lineas, i, lineas.length) <= tope) return i;
+  }
+  return lineas.length;
 }
 
 // ── segmentadores ────────────────────────────────────────────────
@@ -198,7 +233,9 @@ function marcasPorIndice(lineas, omitir = []) {
       // El índice numera («III. D. Beatriz de Portugal», «VIII—O guarda
       // do cemiterio») y el cuerpo no. Fuera la numeración de cabecera.
       const t = bruto === null ? '' : bruto
-        .replace(/^\s*(?:[IVXLCDM]+|\d{1,3})\s*(?:[.\-—:)]\s*|\s+(?=[A-ZÀ-Ýa-zà-ÿ]))/, '')
+        // El romano que numera la entrada empieza por I, V o X: «D.» es
+        // Dom/Dona y «D. BENEDICTA» no es la entrada número 500.
+        .replace(/^\s*(?:[IVX][IVXLCDM]*|\d{1,3})\s*(?:[.\-—:)]\s*|\s+(?=[A-ZÀ-Ýa-zà-ÿ]))/, '')
         .replace(/\s*\(\s*\d[\d\s\-–—?]*\)\s*$/, '')   // «O BISPO NEGRO (1130)»
         .replace(/[\s.]+$/, '').trim();
       // Una línea que queda vacía tras limpiarla era numeración de
@@ -353,8 +390,9 @@ async function ingerir(obra) {
   //    trozos que no son lectura, y no se pierde ni una línea.
   const corte = obra.corte ? new RegExp(obra.corte) : null;
   const iCorte = corte ? lineas.findIndex((l, k) => k > (marcas[0] ?? 0) && corte.test(l.trim())) : -1;
-  const fin = iCorte >= 0 ? iCorte : lineas.length;
-  const cortadas = iCorte >= 0 ? palabrasEntre(lineas, iCorte, lineas.length) : 0;
+  const iAparato = recorteFinal(lineas, Math.max(marcas[0], 0));
+  const fin = Math.min(iCorte >= 0 ? iCorte : lineas.length, iAparato);
+  const cortadas = palabrasEntre(lineas, fin, lineas.length);
   const esConto = obra.modo === 'titulos' || obra.modo === 'mayusculas' || obra.modo === 'indice';
   const objetivo = obra.agrupar ?? 0;
 
@@ -427,6 +465,17 @@ async function ingerir(obra) {
 
   // 6) JSON
   const serie = piezas.length > 1 ? { id: obra.slug, titulo: obra.titulo } : null;
+  // --rehacer: borra las piezas que esta obra dejó en una corrida
+  // anterior, para que un segmentador mejorado no deje huérfanos
+  // («dom-casmurro-c31» era el índice del libro; ya no se publica).
+  if (REHACER && !DRY) {
+    for (const f of fs.readdirSync(SALIDA)) {
+      if (!f.endsWith('.json')) continue;
+      const base = f.slice(0, -5);
+      if (base === obra.slug || base.startsWith(`${obra.slug}-`)) fs.unlinkSync(path.join(SALIDA, f));
+    }
+  }
+
   const escritos = [];
   const usados = new Set();
   const etq = obra.etiquetaPieza ?? 'Capítulo';
