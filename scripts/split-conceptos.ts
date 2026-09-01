@@ -16,7 +16,7 @@
 // de regência verbal viviendo bajo «pretérito perfeito irregular».
 import fs from 'node:fs';
 import path from 'node:path';
-import { PARTICIONES, TRANSVERSALES } from './lib/conceptos-finos';
+import { PARTICIONES, TRANSVERSALES, contarPuntos, textoItem } from './lib/conceptos-finos';
 import { CONCEPTOS_FINOS } from '../lib/data/languages/pt/conceptos-finos.generated';
 import { ALL_CONCEPTS } from '../lib/data/languages/pt/curriculum';
 import { reconciliar, informe, type PorPunto } from './lib/reconciliar-deficit';
@@ -42,69 +42,16 @@ const NIVELES = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 /** El texto que se mira para decidir el sub-punto: la frase ENSAMBLADA
  *  (la del hueco relleno) más todo lo didáctico. Aquí no se busca si el
  *  ítem está en portugués sino QUÉ ENSEÑA, así que entra todo. */
-function textoItem(x: any, conExplicacion = false): string {
-  const d = x.data ?? {};
-  const partes: string[] = [];
-  const push = (v: unknown) => {
-    if (typeof v === 'string') partes.push(v);
-    else if (Array.isArray(v)) v.forEach(push);
-    else if (v && typeof v === 'object') Object.values(v as any).forEach(push);
-  };
-  if (x.type === 'fill_blank' && typeof d.sentence === 'string') {
-    let s = d.sentence as string;
-    for (const b of (d.blanks ?? [])) s = s.replace('___', String(b.answer ?? ''));
-    partes.push(s);
-    for (const b of (d.blanks ?? [])) push(b.alternatives);
-  } else push(d);
-  // La EXPLICACIÓN se mira sólo como último recurso, y se declara cuántas
-  // asignaciones salen de ahí. Motivo medido: la glosa suele NOMBRAR las
-  // formas como contraejemplo — un ítem sobre «veria» cuya glosa dice
-  // «sólo dizer, fazer y trazer son irregulares: diria, faria, traria»
-  // entraba como irregular por citar justamente lo que no es. Lo cazó la
-  // validación a mano de 20 asignaciones.
-  if (conExplicacion) { push(x.esContrast); push(x.tags); }
-  return partes.join(' · ');
-}
-
 const DIR = path.join(process.cwd(), 'lib/data/languages/pt/blocks');
 const ficheros = fs.readdirSync(DIR).filter((x) => /^b\d+\.json$/.test(x)).sort();
 const porFichero = new Map<string, any[]>();
 for (const f of ficheros) porFichero.set(f, JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8')));
 const items = [...porFichero.values()].flat();
 
-const porPadre = new Map(PARTICIONES.map((p) => [p.padre, p]));
-const cuenta = new Map<string, number>();
-const residuo = new Map<string, number>();
-const ejemplosResiduo = new Map<string, string[]>();
-let reasignados = 0;
-let porGlosa = 0;   // asignaciones que sólo casan mirando la explicación: más débiles
-
-for (const x of items) {
-  const nuevos: string[] = [];
-  for (const c of (x.concepts ?? [])) {
-    // Las transversales tienen precedencia: un ítem de regência verbal
-    // no enseña el concepto bajo el que lo etiquetaron.
-    const tr = TRANSVERSALES.find((r) => r.aplica(x));
-    if (tr) { nuevos.push(tr.id); cuenta.set(tr.id, (cuenta.get(tr.id) ?? 0) + 1); reasignados++; continue; }
-    const part = porPadre.get(c);
-    if (!part) { nuevos.push(c); cuenta.set(c, (cuenta.get(c) ?? 0) + 1); continue; }
-    const t = textoItem(x);
-    let sub = part.subs.find((s) => s.re.test(t));
-    if (!sub) { sub = part.subs.find((s) => s.re.test(textoItem(x, true))); if (sub) porGlosa++; }
-    if (sub) {
-      nuevos.push(sub.id);
-      cuenta.set(sub.id, (cuenta.get(sub.id) ?? 0) + 1);
-      reasignados++;
-    } else {
-      nuevos.push(c);
-      cuenta.set(c, (cuenta.get(c) ?? 0) + 1);
-      residuo.set(c, (residuo.get(c) ?? 0) + 1);
-      const ej = ejemplosResiduo.get(c) ?? [];
-      if (ej.length < 4) { ej.push(`${x.id}: ${textoItem(x, true).slice(0, 95)}`); ejemplosResiduo.set(c, ej); }
-    }
-  }
-  x.__nuevos = [...new Set(nuevos)];
-}
+// El conteo es el CANÓNICO y vive en la librería: lo comparten este
+// script y `hueco.ts`, que antes lo re-implementaba y daba 15 unidades
+// menos por no aplicar particiones ni transversales.
+const { cuenta, residuo, ejemplosResiduo, reasignados, porGlosa } = contarPuntos(items);
 
 // ── Informe 1 · qué hizo la partición ────────────────────────────────
 console.log(`# Partición de conceptos — ${PARTICIONES.length} conceptos gruesos → ${PARTICIONES.reduce((a, p) => a + p.subs.length, 0)} sub-puntos\n`);
@@ -235,11 +182,14 @@ for (const [id, n] of [...cuenta].filter(([id]) => ['C1', 'C2'].includes(nivelDe
 // metía **188 unidades de déficit inexistentes**, el 31 % del total.
 // El dictamen, punto a punto, en docs/plans/puntos-c1c2-dictamen.json;
 // el recuento, en `npx tsx scripts/dictamen-c1c2.ts`.
-// PENDIENTE: A1 declara 8 puntos sin empezar (64 unidades) y su
-// enumeración NO está dictaminada — puede tener el mismo sesgo.
+// A1 dictaminado en E2#18: de sus «8 sin empezar» eran 5 puntos reales
+// (4 de fonología, 1 de interrogativos), 2 metas de léxico y 3 fragmentos.
+// PENDIENTE: A2, B1 y B2 no están dictaminados, pero su `sinEmpezar` ya
+// era 0 porque la partición hizo más puntos que la prosa — así que su
+// sesgo, si lo hay, no infla el déficit.
 const DICT = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'docs/plans/puntos-c1c2-dictamen.json'), 'utf8'));
 const reales = (n: string) => (DICT[n] as { clase: string }[]).filter((x) => ['declarado', 'nuevo'].includes(x.clase)).length;
-const PUNTOS_CURRICULO: Record<string, number> = { A1: 31, A2: 31, B1: 27, B2: 31, C1: reales('C1'), C2: reales('C2') };
+const PUNTOS_CURRICULO: Record<string, number> = { A1: reales('A1'), A2: 31, B1: 27, B2: 31, C1: reales('C1'), C2: reales('C2') };
 console.log(`\n\n# LO QUE FALTA PARA CUBRIR — piso ${PISO}, contra los puntos que enumera el currículo\n`);
 console.log('| nivel | puntos currículo | puntos con corpus | puntos SIN empezar | déficit de los empezados | × piso los nuevos | FALTA |');
 console.log('|-------|-----------------:|------------------:|-------------------:|-------------------------:|------------------:|------:|');

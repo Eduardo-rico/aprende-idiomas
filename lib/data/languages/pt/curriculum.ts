@@ -39,6 +39,19 @@ const B1_CONCEPTS: Concept[] = [
   { id: 'b1-vogais-nasais', name: 'Vocales nasales', blockId: 1, description: 'ã, õ, am, em, im, om, um', prereqs: [] },
   { id: 'b1-pron-rr-r', name: 'Pronunciación rr/r inicial', blockId: 1, description: 'En BR como /h/; en PT vibrante', prereqs: [] },
   { id: 'b1-pron-s-final', name: 'Pronunciación de "s" final', blockId: 1, description: 'BR /s/; PT /ʃ/', prereqs: [] },
+  // ── E2#18 · los puntos de FONOLOGÍA que A1 enumera y nadie había
+  // declarado. Son de PERCEPCIÓN: se enseñan con pares mínimos y audio
+  // A/B, no con texto, así que su formato es `escucha` y no cualquiera de
+  // los cuatro de producción escrita.
+  //
+  // `b1-reducao-vocalica` merece un aviso: **el propio currículo dice que
+  // hoy tiene CERO menciones en todo el corpus**, y es lo que separa oír
+  // portugués europeo de oír una sopa. Era el agujero real de A1, y la
+  // aritmética de «8 puntos sin empezar» lo tapaba en vez de señalarlo.
+  { id: 'b1-inventario-vocalico', name: 'Inventario vocálico PT-PT', blockId: 1, description: 'Las 9 vocales orales y las 5 nasales del portugués europeo, contra las 5 del español: el alumno tiene que OÍR las que su lengua no distingue antes de intentar decirlas', prereqs: [] },
+  { id: 'b1-reducao-vocalica', name: 'Redução vocálica átona', blockId: 1, description: 'La átona se cierra y a menudo se elide: /e/→[ɨ] («telefone» → t\'lfon), /o/→[u], /a/→[ɐ]. Es LA marca del portugués europeo frente al brasileño y la causa de que un hispanohablante no reconozca palabras que sabe', prereqs: ['b1-inventario-vocalico'] },
+  { id: 'b1-sandi', name: 'Sândi entre palabras', blockId: 1, description: 'Lo que pasa en la frontera de dos palabras al hablar seguido: elisión, ligadura y crase de vocales — por qué «uma amiga» suena a una sola palabra', prereqs: ['b1-reducao-vocalica'] },
+  { id: 'b1-ei-lisboeta', name: '⟨ei⟩ lisboeta [ɐj]', blockId: 1, description: 'El diptongo ⟨ei⟩ que en Lisboa se abre a [ɐj] («leite», «primeiro») y en el norte y en Brasil no: rasgo diatópico que el alumno debe reconocer, no imitar por obligación', prereqs: ['b1-inventario-vocalico'] },
 ];
 
 const B1_LESSONS: Lesson[] = [
@@ -149,6 +162,7 @@ const B3_CONCEPTS: Concept[] = [
   { id: 'b3-pronomes', name: 'Pronomes pessoais', blockId: 3, description: 'Retos (eu, tu, ele/ela, nós, vós, eles/elas) y oblícuos (me, te, se, o, a, lhe, nos, vos, os, as, lhes)', prereqs: [] },
   { id: 'b3-imperativo', name: 'Imperativo', blockId: 3, description: 'Afirmativo (fala, fale, falemos) y negativo (não fales, não fale) — irregulares y reflexivos', prereqs: [] },
   { id: 'b3-existenciais', name: 'Existenciales (haver/ter)', blockId: 3, description: 'Há = existe(n) (impersonal) vs tem = tiene (también existencial en BR). Distribución y registros.', prereqs: [] },
+  { id: 'b3-interrogativos', name: 'Interrogativos', blockId: 3, description: 'que / o que / qual / quem / onde / quando / como / porquê, con la trampa que el español garantiza: «qual» donde el español pone «cuál» pero también donde pone «qué» («Qual é o teu nome?»)', prereqs: [] },
 ];
 
 const B3: Block = {

@@ -10,7 +10,7 @@ import fs from 'node:fs';
 import { ALL_CONCEPTS } from '../lib/data/languages/pt/curriculum';
 
 const D = JSON.parse(fs.readFileSync('docs/plans/puntos-c1c2-dictamen.json', 'utf8'));
-const PISO: Record<string, number> = { C1: 8, C2: 6 };
+const PISO: Record<string, number> = { A1: 8, C1: 8, C2: 6 };
 const declarados = new Set(ALL_CONCEPTS.map((c) => c.id));
 const ORDEN = ['declarado', 'nuevo', 'oral', 'lexico', 'fragmento', 'artefacto', 'no-es-punto'];
 const QUE_ES: Record<string, string> = {
@@ -28,7 +28,7 @@ console.log('# Los 66 puntos de C1/C2, dictaminados\n');
 console.log('| nivel | ' + ORDEN.join(' | ') + ' | TOTAL |');
 console.log('|---|' + ORDEN.map(() => '---:').join('|') + '|---:|');
 const nuevos: { nivel: string; id: string; texto: string }[] = [];
-for (const n of ['C1', 'C2']) {
+for (const n of ['A1', 'C1', 'C2']) {
   const xs = D[n] as any[];
   const fila = ORDEN.map((k) => xs.filter((x) => x.clase === k).length);
   console.log(`| ${n} | ${fila.join(' | ')} | ${xs.length} |`);
@@ -45,12 +45,12 @@ const deficitNuevo = nuevos.reduce((a, x) => a + (PISO[x.nivel] ?? 8), 0);
 console.log(`\n## Qué significa para el déficit\n`);
 console.log('| | puntos | × piso | unidades |');
 console.log('|---|---:|---:|---:|');
-for (const n of ['C1', 'C2']) {
+for (const n of ['A1', 'C1', 'C2']) {
   const k = nuevos.filter((x) => x.nivel === n).length;
   console.log(`| ${n} nuevos | ${k} | ${PISO[n]} | ${k * (PISO[n] ?? 8)} |`);
 }
 console.log(`| **Σ** | **${nuevos.length}** | | **${deficitNuevo}** |`);
-console.log(`\nLa aritmética vieja contaba **51 puntos y 356 unidades** (25×8 + 26×6).`);
+console.log(`\nLa aritmética vieja contaba **51 puntos de C1/C2 y 356 unidades**, más 8 de A1 (64).`);
 console.log(`El dictamen deja **${nuevos.length} puntos y ${deficitNuevo} unidades**: **${356 - deficitNuevo} de déficit que no existían**.`);
 
 const yaDeclarados = nuevos.filter((x) => declarados.has(x.id)).length;

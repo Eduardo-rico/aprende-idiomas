@@ -2216,5 +2216,977 @@
       ],
       "hintEs": "el existencial escrito en imperfeito, con sujeto singular"
     }
+  },
+  {
+    "id": "b2c2-med-l14-01",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-coloc-registro"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "a18d703e83bf12c6ec4d7263fba6f5682eb648aace669d77978529b4dc4161bd",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Comunica-se aos utentes que se encontra encerrado o balcão n.º 3. Solicita-se que se dirijam ao balcão n.º 5, onde serão atendidos com a maior brevidade.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a tua mãe, que está na fila e não percebeu o aviso",
+      "instructionsEs": "Dile lo que pasa, en voz normal. El «comunica-se» y el «solicita-se» del aviso no se dicen en voz alta: usa un verbo con sujeto.",
+      "wordRange": {
+        "min": 18,
+        "max": 45
+      },
+      "rubric": [
+        "¿Sustituye «Comunica-se» por «avisam» (o un equivalente del registro de destino)?",
+        "¿Sustituye «Solicita-se» por «temos de» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «balcão n.º 3»?",
+        "¿Traslada el dato «balcão n.º 5»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Ó mãe, o balcão 3 está fechado. Temos de ir ao balcão 5, que é onde atendem agora — dizem que é rápido."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-02",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-coloc-registro"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "5fa3ec427d989bc21477f3088ee334ab4fa8abb485ddf48a43319d686830f0f1",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Informa-se que a chave do portão se encontra na portaria. Deverá o condómino identificar-se antes de a levantar.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "o teu irmão, que chega esta noite e não tem chave",
+      "instructionsEs": "Explícaselo por mensaje. Nadie dice «identificar-se» a un hermano: cuéntalo con palabras de casa.",
+      "wordRange": {
+        "min": 18,
+        "max": 45
+      },
+      "rubric": [
+        "¿Sustituye «Informa-se» por «a chave está» (o un equivalente del registro de destino)?",
+        "¿Sustituye «identificar-se» por «dizes quem és» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «portaria»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "A chave do portão está na portaria. Chegas lá, dizes quem és e dão-ta — não te esqueças de levar alguma coisa com o teu nome."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-03",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-coloc-registro"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "4851759721baa488d99c59b35f9d4900e290a92b3314b7c38d76ffe6d40fa6a5",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Recorda-se aos senhores passageiros que não é permitido fumar em todo o recinto. Aos infratores aplicar-se-á a coima prevista no regulamento.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "um amigo que acabou de acender um cigarro à porta",
+      "instructionsEs": "Avísale antes de que le caiga la multa. Díselo como se lo dirías de verdad, sin la voz del altavoz.",
+      "wordRange": {
+        "min": 18,
+        "max": 45
+      },
+      "rubric": [
+        "¿Sustituye «Recorda-se» por «não podes» (o un equivalente del registro de destino)?",
+        "¿Sustituye «aplicar-se-á» por «levas» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «coima»?",
+        "¿Traslada el dato «fumar»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Ó pá, aqui não se pode fumar em lado nenhum, nem à porta. Se te apanham, levas multa — apaga isso e vamos ali para fora."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-04",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-coloc-registro"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "a980723535b7a66a0ea100300a962446aae3293f1c177db86dbe7b2429aadff9",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Agradece-se que se evite o uso do elevador durante os trabalhos. Qualquer avaria deverá comunicar-se de imediato à administração.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a vizinha do lado, que sobe sempre de elevador",
+      "instructionsEs": "Cuéntaselo en el rellano. El «agradece-se» y el «comunicar-se» son de circular: tú tienes voz.",
+      "wordRange": {
+        "min": 18,
+        "max": 45
+      },
+      "rubric": [
+        "¿Sustituye «Agradece-se» por «é melhor» (o un equivalente del registro de destino)?",
+        "¿Sustituye «comunicar-se» por «avisar» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «elevador»?",
+        "¿Traslada el dato «administração»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Ó vizinha, pediram para não usarmos o elevador enquanto durarem as obras. Se avariar alguma coisa, é avisar já a administração."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-05",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-coloc-registro"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "0841fb661abbccbecdce5a0878af38b4d26eda792b3a0d69588f00a9f43b8d11",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Ó Zé, diz aos outros que amanhã não venham cedo, que a água vai estar cortada de manhã. Se alguém precisar de alguma coisa, que me ligue.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "os colegas do escritório, num aviso que fica afixado na porta",
+      "instructionsEs": "Pásalo a aviso escrito para la puerta. Un aviso no tutea ni nombra a nadie: la colocación culta hace ese trabajo.",
+      "wordRange": {
+        "min": 20,
+        "max": 50
+      },
+      "rubric": [
+        "¿Sustituye «diz aos outros» por «Informam-se» (o un equivalente del registro de destino)?",
+        "¿Sustituye «que me ligue» por «deverá contactar» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «água»?",
+        "¿Traslada el dato «de manhã»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "AVISO — Informa-se que o abastecimento de água estará suspenso durante o período da manhã de amanhã. Solicita-se que se evite a chegada antecipada. Qualquer necessidade deverá contactar-se o responsável."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-06",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-coloc-registro"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "890ddb29299cdd0926643b1c31d3077ce301f216e590dd87ab7f1385c2564540",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Malta, a sala grande fica ocupada na quinta toda. Quem tiver reunião, mude para a pequena e avise-me se não der.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "todos os departamentos, num correio interno que fica em arquivo",
+      "instructionsEs": "Escríbelo como correo interno archivable. Sin «malta» y sin imperativos de tú: que la forma culta lleve el tono.",
+      "wordRange": {
+        "min": 20,
+        "max": 50
+      },
+      "rubric": [
+        "¿Sustituye «Malta» por «Informam-se» (o un equivalente del registro de destino)?",
+        "¿Sustituye «avise-me» por «deverá comunicar-se» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «sala grande»?",
+        "¿Traslada el dato «quinta»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Comunica-se que a sala grande se encontrará ocupada durante todo o dia de quinta-feira. As reuniões previstas deverão realizar-se na sala pequena; qualquer impossibilidade deverá comunicar-se atempadamente."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-07",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-coloc-registro"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "3c1b488defa02d77f5d56918336dc69cd12f1fa41d107e2e5b5965d34c75549b",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Olha, diz-lhes que as inscrições acabam no dia 30 e que depois não aceito mais nada, nem que venham chorar.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "os candidatos, numa nota publicada no sítio da instituição",
+      "instructionsEs": "Conviértelo en nota pública. Lo que en la conversación es una amenaza, por escrito es una cláusula.",
+      "wordRange": {
+        "min": 20,
+        "max": 50
+      },
+      "rubric": [
+        "¿Sustituye «diz-lhes» por «Informam-se» (o un equivalente del registro de destino)?",
+        "¿Sustituye «não aceito mais nada» por «não serão aceites» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «inscrições»?",
+        "¿Traslada el dato «dia 30»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Informa-se que o prazo de inscrição termina no dia 30. As candidaturas submetidas após essa data não serão aceites, independentemente do motivo invocado."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-08",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-coloc-registro"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "c25e56a5ce4303b76246830832fdfcb9dc25cfe9544530d46c39823ce48ff94b",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Manda-lhes dizer que o pagamento sai na sexta e que quem não tiver os dados certos que trate disso já, senão fica para o mês seguinte.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "os prestadores de serviços, numa circular da contabilidade",
+      "instructionsEs": "Redáctalo como circular. La orden dicha de viva voz se convierte en condición escrita.",
+      "wordRange": {
+        "min": 22,
+        "max": 55
+      },
+      "rubric": [
+        "¿Sustituye «Manda-lhes dizer» por «Informa-se» (o un equivalente del registro de destino)?",
+        "¿Sustituye «que trate disso já» por «deverão regularizar» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «sexta»?",
+        "¿Traslada el dato «mês seguinte»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Comunica-se que o processamento dos pagamentos se realizará na sexta-feira. Os prestadores cujos dados bancários se encontrem incorretos deverão regularizar a situação até essa data, sob pena de o pagamento transitar para o mês subsequente."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-09",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-norma-culta-oral"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "7996ec06d9a5c0596218d9adef2baac9f17b698cc9aabaa7704a1c285e1d36ed",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "A gente já falou com o arquiteto e ele disse que dava para mudar a porta, mas que ia custar mais.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "o cliente, num relatório de obra que fica no processo",
+      "instructionsEs": "Pásalo a relatório. «A gente» es de portugués culto hablando; en el processo se escribe la otra forma.",
+      "wordRange": {
+        "min": 16,
+        "max": 50
+      },
+      "rubric": [
+        "¿Sustituye «A gente já falou» por «Foi contactado» (o un equivalente del registro de destino)?",
+        "¿Sustituye «dava para» por «ser possível» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «arquiteto»?",
+        "¿Traslada el dato «porta»?",
+        "¿Traslada el dato «custar mais»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Contactámos o arquiteto, que confirmou ser possível alterar a porta. A alteração implica, no entanto, um acréscimo de custo."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-10",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-norma-culta-oral"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "8f0b8941f59a14524195e5a9bfe462e5a5f4b9c762f45c90eb4cac6972dc905d",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Eu acho que não vale a pena insistir. Já mandámos dois emails e eles não responderam a nenhum dos dois.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a direção, numa nota interna que vai a ata",
+      "instructionsEs": "Escríbelo para el acta. Lo que en la reunión es una opinión, en el acta es una constatación.",
+      "wordRange": {
+        "min": 16,
+        "max": 45
+      },
+      "rubric": [
+        "¿Sustituye «Eu acho que» por «Considera-se» (o un equivalente del registro de destino)?",
+        "¿Sustituye «não vale a pena» por «não se afigura útil» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «dois emails»?",
+        "¿Traslada el dato «não responderam»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Considera-se que não se justifica nova insistência. Foram enviadas duas mensagens, ambas sem resposta por parte do destinatário."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-11",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-norma-culta-oral"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "ee5f1798068614df095a8d1e0c139826f8c70fcfc347a76eedc0c4b07551bfa5",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Tem muita gente a queixar-se do barulho à noite, principalmente do lado da rua de trás.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a câmara municipal, numa exposição escrita",
+      "instructionsEs": "Redáctalo como exposición. «Tem» existencial es de conversación incluso entre gente instruida: por escrito se pide el otro.",
+      "wordRange": {
+        "min": 16,
+        "max": 45
+      },
+      "rubric": [
+        "¿Sustituye «Tem muita gente» por «Têm sido registadas» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «barulho»?",
+        "¿Traslada el dato «à noite»?",
+        "¿Traslada el dato «rua de trás»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Têm sido registadas queixas reiteradas relativas a ruído no período noturno, com particular incidência no arruamento posterior."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-12",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-norma-culta-oral"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "a938b048146c10abc066627508024eeec1e16ed1b742d5ead9aab0ac94c20a14",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "O relatório que eu te falei ontem já está pronto, só falta a assinatura do chefe.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "o departamento jurídico, num correio que fica registado",
+      "instructionsEs": "Pásalo a correo registrado. «O relatório que eu te falei» es lo que se dice; el jurídico espera la regência completa.",
+      "wordRange": {
+        "min": 14,
+        "max": 40
+      },
+      "rubric": [
+        "¿Sustituye «que eu te falei» por «a que me referi» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «assinatura»?",
+        "¿Traslada el dato «chefe»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "O relatório a que me referi ontem encontra-se concluído, aguardando apenas a assinatura do superior hierárquico."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-13",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-norma-culta-oral"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "7182301f0d410bbe6ae888dc22a59fe00c8850636d1372c1e8fcfdfd932a8d91",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "address": "o_senhor",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Informa-se que a documentação submetida se encontra incompleta, devendo o requerente proceder à junção dos elementos em falta no prazo de dez dias úteis.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "o requerente, ao balcão, que não percebeu a carta",
+      "instructionsEs": "Explícaselo de viva voz, sin bajar de registro culto: sigues siendo funcionario, pero estás hablando.",
+      "wordRange": {
+        "min": 16,
+        "max": 45
+      },
+      "rubric": [
+        "¿Sustituye «Informa-se» por «Falta» (o un equivalente del registro de destino)?",
+        "¿Sustituye «proceder à junção» por «entregar» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «dez dias úteis»?",
+        "¿Traslada el dato «documentação»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "O senhor tem os documentos incompletos: falta juntar alguns elementos. Tem dez dias úteis para os entregar — se quiser, aponto-lhe aqui quais são."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-14",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-norma-culta-oral"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "254ad6e7565a6438b728106449a709918c2cdd35ed1705e6bf5e457f231d6f03",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "address": "o_senhor",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Mais se informa que o pagamento deverá ser efetuado por transferência bancária, não se aceitando numerário em caso algum.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "um cliente ao telefone, que pergunta se pode pagar em dinheiro",
+      "instructionsEs": "Respóndele al teléfono. La fórmula escrita no se dice: dilo culto pero hablado.",
+      "wordRange": {
+        "min": 16,
+        "max": 45
+      },
+      "rubric": [
+        "¿Sustituye «Mais se informa» por «Olhe» (o un equivalente del registro de destino)?",
+        "¿Sustituye «não se aceitando numerário» por «não aceitamos dinheiro» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «transferência bancária»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Olhe, o pagamento tem mesmo de ser por transferência bancária. Não aceitamos dinheiro, nem aqui nem em nenhum balcão — é a regra da casa."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-15",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-norma-culta-oral"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "520c2b06e07c0e397e8b3a7831d2567bbabe5ede1c79364214d9d5c25d02e192",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Aquando da chegada, deverão os participantes dirigir-se à receção, onde lhes será entregue o respetivo crachá identificativo.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "os participantes, por megafone à porta do auditório",
+      "instructionsEs": "Dilo por megáfono. «Aquando da» no se pronuncia: sigue siendo formal, pero es voz.",
+      "wordRange": {
+        "min": 16,
+        "max": 45
+      },
+      "rubric": [
+        "¿Sustituye «Aquando da chegada» por «Quando chegarem» (o un equivalente del registro de destino)?",
+        "¿Sustituye «lhes será entregue» por «entregamos» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «receção»?",
+        "¿Traslada el dato «crachá»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Bom dia. Quando chegarem, façam o favor de passar pela receção, que é onde entregamos o crachá identificativo a cada participante."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-16",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-norma-culta-oral"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "7f6b72411b0be647d22fade100063abb934f55605a93d042d43e146a060be79b",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "neutro",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Não obstante o atraso verificado, mantém-se a data prevista para a entrega, cujo cumprimento se reputa essencial.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a equipa, numa reunião de segunda-feira de manhã",
+      "instructionsEs": "Dilo en la reunión. «Não obstante» y «reputa-se» son de papel: la reunión pide otra cosa sin perder seriedad.",
+      "wordRange": {
+        "min": 16,
+        "max": 45
+      },
+      "rubric": [
+        "¿Sustituye «Não obstante» por «Apesar do» (o un equivalente del registro de destino)?",
+        "¿Sustituye «se reputa essencial» por «é essencial» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «atraso»?",
+        "¿Traslada el dato «data prevista»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Apesar do atraso que tivemos, a data de entrega mantém-se. É mesmo importante cumpri-la — não podemos falhar essa."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-17",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-conectores-discursivos"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "e8c3087a51d3a354e84ec71832868bd006118c3b870ba4ac9302faa1dbd435da",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Choveu muito. E depois a estrada estava cortada. E então tivemos de dar a volta toda e chegámos tarde.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a seguradora, na descrição do sinistro",
+      "instructionsEs": "Escríbelo para el seguro. Los «e depois / e então» de la conversación no articulan un texto: usa conectores que digan la relación.",
+      "wordRange": {
+        "min": 20,
+        "max": 55
+      },
+      "rubric": [
+        "¿Sustituye «E depois» por «Acresce que» (o un equivalente del registro de destino)?",
+        "¿Sustituye «E então» por «Em consequência» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «estrada»?",
+        "¿Traslada el dato «tarde»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Registou-se precipitação intensa. Acresce que a via se encontrava cortada ao trânsito. Em consequência, foi necessário efetuar um desvio, do que resultou a chegada com atraso considerável."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-18",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-conectores-discursivos"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "5ad7ffafef436d6ee9f4b1c768845db865deb7807ace124d865c9e50ba011f26",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "O produto é bom, sim. Mas é caro. E também não há assistência cá. Por isso eu não compraria.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a direção, num parecer técnico",
+      "instructionsEs": "Redáctalo como parecer. La concesión y la conclusión piden conectores que las marquen, no un «mas» y un «por isso».",
+      "wordRange": {
+        "min": 20,
+        "max": 55
+      },
+      "rubric": [
+        "¿Sustituye «Mas» por «Não obstante» (o un equivalente del registro de destino)?",
+        "¿Sustituye «E também» por «Acresce ainda» (o un equivalente del registro de destino)?",
+        "¿Sustituye «Por isso» por «Pelo exposto» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «caro»?",
+        "¿Traslada el dato «assistência»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "O produto apresenta qualidade técnica reconhecida. Não obstante, o seu custo é elevado. Acresce que não existe assistência técnica no país. Pelo exposto, não se recomenda a aquisição."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-19",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-conectores-discursivos"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "1ea096199a82cfe5d9cc0c2e3dfac9c71ace847b1495ff67312cd34005056f6b",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Olha, a proposta deles é mais barata. Só que o prazo é o dobro. Ao fim ao cabo, sai o mesmo ou pior.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "o conselho, numa nota de apreciação de propostas",
+      "instructionsEs": "Pásalo a nota de apreciación. «Só que» y «ao fim ao cabo» son de café: el consejo espera la articulación escrita.",
+      "wordRange": {
+        "min": 20,
+        "max": 55
+      },
+      "rubric": [
+        "¿Sustituye «Só que» por «Sucede que» (o un equivalente del registro de destino)?",
+        "¿Sustituye «Ao fim ao cabo» por «Em suma» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «prazo»?",
+        "¿Traslada el dato «o dobro»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "A proposta apresenta um valor inferior ao das concorrentes. Sucede que o prazo de execução é o dobro do previsto. Em última análise, a vantagem financeira anula-se, podendo mesmo inverter-se."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-20",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-conectores-discursivos"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "a39dcf42202d4ba2259cd5b3f67be48b87637370eebb2181d6e0ba6c31ba263b",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Não é só o barulho. É também o pó. E há o problema do estacionamento, que ninguém resolve.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a assembleia de condóminos, na ata",
+      "instructionsEs": "Escríbelo para el acta. Una enumeración de quejas necesita conectores que las jerarquicen.",
+      "wordRange": {
+        "min": 20,
+        "max": 55
+      },
+      "rubric": [
+        "¿Sustituye «Não é só» por «Em primeiro lugar» (o un equivalente del registro de destino)?",
+        "¿Sustituye «É também» por «Em segundo lugar» (o un equivalente del registro de destino)?",
+        "¿Sustituye «E há» por «Por último» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «pó»?",
+        "¿Traslada el dato «estacionamento»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Em primeiro lugar, foi reportado o ruído. Em segundo lugar, a poeira. Por último, mantém-se por resolver a questão do estacionamento, que ninguém tem resolvido."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-21",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-conectores-discursivos"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "3c9df1555e764d189004576c6f6b00bde1a7b57601fc499d9c3d0ae474b5cb75",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Não obstante o atraso, a entrega manteve-se. Acresce que os custos não sofreram agravamento. Pelo exposto, considera-se o balanço positivo.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "um colega novo, ao almoço, que perguntou como correu",
+      "instructionsEs": "Cuéntaselo al almuerzo. Los conectores del informe no se dicen: usa los de hablar.",
+      "wordRange": {
+        "min": 16,
+        "max": 45
+      },
+      "rubric": [
+        "¿Sustituye «Não obstante» por «Apesar do» (o un equivalente del registro de destino)?",
+        "¿Sustituye «Acresce que» por «E ainda por cima» (o un equivalente del registro de destino)?",
+        "¿Sustituye «Pelo exposto» por «No fundo» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «atraso»?",
+        "¿Traslada el dato «custos»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Correu bem. Apesar do atraso, entregámos na data. E ainda por cima não custou mais do que estava previsto. No fundo, saímos a ganhar."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-22",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-conectores-discursivos"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "9614cc6d477cf3007ab9d3e3fa23ede4d48f6a76563160eb1fac668562f24455",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Em face do exposto, e porquanto se mantêm as condições anteriormente descritas, entende-se dever manter-se a decisão. Todavia, admite-se reapreciação mediante novos elementos.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "o teu primo, que é quem fez o pedido e não percebeu a carta",
+      "instructionsEs": "Tradúceselo a lenguaje de familia. Sin conectores de despacho, pero sin perder ni una condición.",
+      "wordRange": {
+        "min": 16,
+        "max": 45
+      },
+      "rubric": [
+        "¿Sustituye «Em face do exposto» por «Portanto» (o un equivalente del registro de destino)?",
+        "¿Sustituye «Todavia» por «Mas» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «manter-se a decisão»?",
+        "¿Traslada el dato «novos elementos»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "Resumindo: como não mudou nada, a decisão fica na mesma. Mas dizem que voltam a olhar para o caso se apresentares papéis novos — vale a pena tentar."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-23",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-conectores-discursivos"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "a9d68ebbf176b9d67f6364a4e3d67c4e3a9ffd7270659ff93bbad667b56f51bc",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "informal",
+    "address": "tu",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Por um lado, a solução é mais económica. Por outro, exige formação adicional. Em suma, a decisão dependerá do prazo disponível.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "a tua equipa, num mensagem de grupo",
+      "instructionsEs": "Mándaselo al grupo. La estructura de dos platos se dice de otra manera.",
+      "wordRange": {
+        "min": 16,
+        "max": 45
+      },
+      "rubric": [
+        "¿Sustituye «Por um lado» por «É mais barata» (o un equivalente del registro de destino)?",
+        "¿Sustituye «Por outro» por «mas» (o un equivalente del registro de destino)?",
+        "¿Sustituye «Em suma» por «Ou seja» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «formação»?",
+        "¿Traslada el dato «prazo»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "É mais barata, sim, mas obriga a formação extra. Ou seja: se tivermos tempo, compensa; se estivermos com o prazo em cima, não."
+    }
+  },
+  {
+    "id": "b2c2-med-l14-24",
+    "blockId": 11,
+    "lessonId": "b11-l5-eleccion-c1",
+    "difficulty": 3,
+    "concepts": [
+      "b11-conectores-discursivos"
+    ],
+    "tags": [
+      "lote14",
+      "mediacao",
+      "registro"
+    ],
+    "contentHash": "f5296b93984adfa6dcbc8fccb67399b0fb6d92a61de6c74b20e54edd03d415aa",
+    "variantStatus": "unchecked",
+    "variantVerificacion": "Mediación lote 14 (E2#18): rúbrica DERIVADA de marcadores y datos declarados; gate de trasvase por script, casilla a casilla; lote revisado ENTERO a mano tras morder el freno",
+    "register": "formal",
+    "address": "o_senhor",
+    "type": "mediation",
+    "data": {
+      "sourceText": "Cumpre esclarecer que a alteração decorre de imposição legal. Consequentemente, não se afigura possível manter as condições anteriores.",
+      "sourceLang": "pt",
+      "targetLang": "pt",
+      "mediationType": "reformulate_register",
+      "audience": "uma cliente antiga, ao balcão, que está a ficar irritada",
+      "instructionsEs": "Explícaselo en el mostrador. Tiene que entender que no es decisión tuya, sin que le sueltes la circular.",
+      "wordRange": {
+        "min": 16,
+        "max": 45
+      },
+      "rubric": [
+        "¿Sustituye «Cumpre esclarecer» por «É por causa» (o un equivalente del registro de destino)?",
+        "¿Sustituye «Consequentemente» por «por isso» (o un equivalente del registro de destino)?",
+        "¿Traslada el dato «imposição legal»?",
+        "¿Traslada el dato «condições anteriores»?",
+        "¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)",
+        "¿No copia más de 6 palabras seguidas de la fuente? (comprobable por script)"
+      ],
+      "modelAnswer": "A lei mudou e obriga-nos a isto — não fomos nós que decidimos. Por isso é que não podemos manter as condições de antes. Lamento mesmo, minha senhora."
+    }
   }
 ]

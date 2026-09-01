@@ -22,7 +22,8 @@ for (const l of curr) {
       if (x.replace(/[^\p{L}]/gu, '').length >= 12) out.push({ nivel, sec: s, texto: x });
   }
 }
-for (const n of ['C1', 'C2']) {
+const NIVELES = process.argv.slice(2).filter((a) => /^(A1|A2|B1|B2|C1|C2)$/.test(a));
+for (const n of (NIVELES.length ? NIVELES : ['C1', 'C2'])) {
   const xs = out.filter((x) => x.nivel === n);
   console.log(`\n## ${n} — ${xs.length} puntos enumerados`);
   xs.forEach((x, i) => console.log(`${String(i + 1).padStart(2)} [${x.sec}] ${x.texto}`));

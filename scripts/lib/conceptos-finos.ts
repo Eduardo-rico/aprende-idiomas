@@ -472,3 +472,84 @@ export const PARTICIONES: Particion[] = [
     ],
   },
 ];
+
+
+// ─── EL CONTEO CANÓNICO ──────────────────────────────────────────────
+//
+// Vive aquí y no en `split-conceptos.ts` porque en E2#18 `hueco.ts`
+// contó los puntos leyendo el campo `concepts` crudo y dio **353** donde
+// el contador oficial daba **368**: la diferencia eran las particiones y
+// las transversales, que el oficial aplica y el otro no. Dos scripts
+// calculando la misma cantidad de dos maneras es el defecto, no la
+// diferencia — la misma familia que los dos pisos del déficit.
+//
+// `textoItem` mira la EXPLICACIÓN sólo como último recurso, y el conteo
+// declara cuántas asignaciones salieron de ahí: la glosa suele NOMBRAR
+// las formas como contraejemplo, así que casar por ella es más débil.
+export function textoItem(x: any, conExplicacion = false): string {
+  const d = x.data ?? {};
+  const partes: string[] = [];
+  const push = (v: unknown) => {
+    if (typeof v === 'string') partes.push(v);
+    else if (Array.isArray(v)) v.forEach(push);
+    else if (v && typeof v === 'object') Object.values(v as any).forEach(push);
+  };
+  if (x.type === 'fill_blank' && typeof d.sentence === 'string') {
+    let s = d.sentence as string;
+    for (const b of (d.blanks ?? [])) s = s.replace('___', String(b.answer ?? ''));
+    partes.push(s);
+    for (const b of (d.blanks ?? [])) push(b.alternatives);
+  } else push(d);
+  // La EXPLICACIÓN se mira sólo como último recurso, y se declara cuántas
+  // asignaciones salen de ahí. Motivo medido: la glosa suele NOMBRAR las
+  // formas como contraejemplo — un ítem sobre «veria» cuya glosa dice
+  // «sólo dizer, fazer y trazer son irregulares: diria, faria, traria»
+  // entraba como irregular por citar justamente lo que no es. Lo cazó la
+  // validación a mano de 20 asignaciones.
+  if (conExplicacion) { push(x.esContrast); push(x.tags); }
+  return partes.join(' · ');
+}
+
+export interface Conteo {
+  cuenta: Map<string, number>;
+  residuo: Map<string, number>;
+  ejemplosResiduo: Map<string, string[]>;
+  reasignados: number;
+  porGlosa: number;
+}
+
+export function contarPuntos(items: any[]): Conteo {
+  const porPadre = new Map(PARTICIONES.map((p) => [p.padre, p]));
+  const cuenta = new Map<string, number>();
+  const residuo = new Map<string, number>();
+  const ejemplosResiduo = new Map<string, string[]>();
+  let reasignados = 0;
+  let porGlosa = 0;
+for (const x of items) {
+  const nuevos: string[] = [];
+  for (const c of (x.concepts ?? [])) {
+    // Las transversales tienen precedencia: un ítem de regência verbal
+    // no enseña el concepto bajo el que lo etiquetaron.
+    const tr = TRANSVERSALES.find((r) => r.aplica(x));
+    if (tr) { nuevos.push(tr.id); cuenta.set(tr.id, (cuenta.get(tr.id) ?? 0) + 1); reasignados++; continue; }
+    const part = porPadre.get(c);
+    if (!part) { nuevos.push(c); cuenta.set(c, (cuenta.get(c) ?? 0) + 1); continue; }
+    const t = textoItem(x);
+    let sub = part.subs.find((s) => s.re.test(t));
+    if (!sub) { sub = part.subs.find((s) => s.re.test(textoItem(x, true))); if (sub) porGlosa++; }
+    if (sub) {
+      nuevos.push(sub.id);
+      cuenta.set(sub.id, (cuenta.get(sub.id) ?? 0) + 1);
+      reasignados++;
+    } else {
+      nuevos.push(c);
+      cuenta.set(c, (cuenta.get(c) ?? 0) + 1);
+      residuo.set(c, (residuo.get(c) ?? 0) + 1);
+      const ej = ejemplosResiduo.get(c) ?? [];
+      if (ej.length < 4) { ej.push(`${x.id}: ${textoItem(x, true).slice(0, 95)}`); ejemplosResiduo.set(c, ej); }
+    }
+  }
+  x.__nuevos = [...new Set(nuevos)];
+  }
+  return { cuenta, residuo, ejemplosResiduo, reasignados, porGlosa };
+}

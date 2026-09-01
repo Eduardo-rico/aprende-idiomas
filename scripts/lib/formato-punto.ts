@@ -29,6 +29,9 @@
 // De ahí las cuatro clases. No son «tipos de punto»: son respuestas a
 // esa única pregunta.
 export type Clase =
+  /** Rasgo de PRONUNCIACIÓN o de percepción: no hay forma escrita que
+   *  juzgar ni hueco que rellenar. ⇒ ESCUCHA. */
+  | 'fonologico'
   /** El español PERMITE lo que el portugués prohíbe. El calco suena bien
    *  en español, así que la glosa engaña y el juicio mide portugués.
    *  Ej.: «vou A falar» (es: «voy a hablar», correcto), «Minha casa»
@@ -58,9 +61,15 @@ export type Formato =
   | 'cloze-con-pista'   // fill_blank cuyo contexto DETERMINA la respuesta
   | 'transformacion'    // dar una forma y pedir la otra (conjugation, sentence_construction)
   | 'mediacion'         // mediation: registro, variedad, efecto
-  | 'flashcard';        // léxico puro
+  | 'flashcard'         // léxico puro
+  // E2#18: los cuatro puntos de FONOLOGÍA de A1 no se examinan por
+  // escrito. Un par mínimo /ɐj/ vs /ej/ o la elisión de la átona se
+  // enseñan OYENDO, con audio A/B; meterlos en cualquiera de los cuatro
+  // formatos de arriba sería fingir que se enseñan.
+  | 'escucha';          // listening: discriminación por pares mínimos, audio A/B
 
 export const FORMATO_DE_CLASE: Record<Clase, Formato> = {
+  fonologico: 'escucha',
   trampa: 'juicio',
   coincide: 'cloze-con-pista',
   'sin-equivalente': 'transformacion',
@@ -93,6 +102,14 @@ const POR_BLOQUE: Record<number, { clase: Clase; motivo: string }> = {
 // formato depende de si el punto examina una FORMA (transformación) o
 // una ELECCIÓN (cloze cuyo contexto decide).
 const OVERRIDES: Record<string, { clase: Clase; motivo: string; formato?: Formato }> = {
+  // ── E2#18 · los 5 puntos de A1 declarados tras dictaminar su
+  // enumeración. Cuatro son de percepción y uno es gramática corriente.
+  'b1-inventario-vocalico': { clase: 'fonologico', motivo: 'oír 9 vocales orales donde el español tiene 5: se discrimina, no se escribe' },
+  'b1-reducao-vocalica': { clase: 'fonologico', motivo: 'la átona que se cierra y se elide sólo se aprende oyéndola; CERO menciones en el corpus hasta hoy' },
+  'b1-sandi': { clase: 'fonologico', motivo: 'la frontera entre palabras al hablar seguido no tiene forma escrita que juzgar' },
+  'b1-ei-lisboeta': { clase: 'fonologico', motivo: 'rasgo diatópico de percepción: par mínimo con audio A/B' },
+  'b3-interrogativos': { clase: 'trampa', motivo: '«Qual é o teu nome?» donde el español pide «cuál» pero glosa «qué»: el calco suena bien en español' },
+
   // ── E2#17 · los 23 puntos de C1/C2 declarados esta sesión. Sin
   // override heredaban el defecto de su bloque, que es `trampa` ⇒
   // JUICIO, y eso ponía **222 de las 242 unidades de juicio** —el 74 %
