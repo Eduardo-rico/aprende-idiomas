@@ -69,9 +69,15 @@ const REGLAS: Regla[] = [
     falla: (x) => (String(x.data.hintEs ?? '').trim() ? null : `«${x.data.sentence}»`),
   },
   {
-    nombre: 'cloze de varios huecos',
+    // INFORMATIVA, no un defecto. Se listó como backlog y era falso: desde
+    // E2#11 `FillBlankCard` pinta un input POR HUECO y valida con
+    // `blanks.every()` contra la respuesta de cada uno, así que un ítem de
+    // dos huecos se sirve bien y pide las dos formas. Lo que estaba roto
+    // era la v1, que validaba con `blanks.some()` sobre un solo input.
+    // Se deja contado para que nadie vuelva a darlo por defectuoso.
+    nombre: 'cloze de varios huecos (informativo: la tarjeta los sirve bien)',
     aplica: (x) => x.type === 'fill_blank' && Array.isArray(x.data?.blanks),
-    falla: (x) => (x.data.blanks.length > 1 ? `${x.data.blanks.length} huecos: «${x.data.sentence}»` : null),
+    falla: () => null,
   },
   {
     nombre: 'corrección: alternativa que la tarjeta ya acepta',
