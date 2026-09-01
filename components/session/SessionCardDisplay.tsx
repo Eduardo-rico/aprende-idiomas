@@ -1,46 +1,44 @@
 // components/session/SessionCardDisplay.tsx
-// Manual Lusitano chrome for the active exercise card. Matches
-// design-mockups/sesion.html:48-62. For A.3 only `flashcard` exercises
-// get the full chrome (front word in serif + IPA + big audio button +
-// reveal block with answer + example + Contraste ES chip). Other
-// exercise types fall through to the same chrome with whatever fields
-// they expose — the per-type affordances (fill_blank inline, etc.)
-// land in a follow-up. See task-A.3-report.md concerns.
+// El chrome de la tarjeta activa en la sesión de REPASO — el flujo que se
+// usa a diario con el FSRS, distinto del de práctica por lección, que va
+// por `ExerciseRunner` con una tarjeta por tipo.
+//
+// Hasta E2#29 este componente miraba dos campos —`data.back` de flashcard
+// y `data.answer` si era string— y todo lo demás caía a cadena vacía. Como
+// el render es `{back && …}`, **1.640 de 2.131 ejercicios servibles (77 %)
+// no enseñaban su respuesta al revelarla**: fill_blank 682, mediation 361,
+// translation 239, error_correction 161, grammaticality_judgment 144,
+// multiple_choice 52, matching 1. Las respuestas estaban ahí todo el
+// tiempo, en `blanks[].answer`, `correct`, `target`, `modelAnswer`,
+// `options[correctIndex]`.
+//
+// Ahora el qué-se-enseña vive en `lib/exercises/respuesta.ts`, con un test
+// por tipo y otro que recorre el corpus entero exigiendo que ninguno se
+// quede mudo — porque la avería duró meses justamente por no dar error: un
+// tipo que no encaja devuelve «» y no se pinta nada.
 "use client";
 import type { Exercise } from "@/lib/data/zod-schemas";
 import type { LanguageId } from "@/lib/locales";
 import { db } from "@/lib/db/schema";
+import { respuestaDe, frenteDe, alternativasDe } from "@/lib/exercises/respuesta";
 
-type FlashcardData = { front: string; back: string; example?: string };
-type ListeningData = { audioText: string; question: string };
 type AnyEx = Exercise & { data: Record<string, unknown> };
 
-function frontFor(ex: Exercise): string {
+/** La transcripción de un listening, que AHORA va detrás del revelado: en
+ *  el frente era la respuesta impresa, y el ejercicio dejaba de ser de
+ *  escucha. */
+function apoyoFor(ex: Exercise): string | undefined {
   const d = (ex as AnyEx).data;
-  switch (ex.type) {
-    case "flashcard":
-      return (d as FlashcardData).front;
-    case "listening":
-      return (d as ListeningData).audioText;
-    default:
-      // Fall back to first string-looking field we find.
-      const first = Object.values(d).find((v) => typeof v === "string");
-      return typeof first === "string" ? first : "";
-  }
-}
-
-function backFor(ex: Exercise): string {
-  const d = (ex as AnyEx).data;
-  if (ex.type === "flashcard") return (d as FlashcardData).back;
-  const answer = (d as Record<string, unknown>).answer;
-  return typeof answer === "string" ? answer : "";
-}
-
-function exampleFor(ex: Exercise): string | undefined {
-  const d = (ex as AnyEx).data;
-  if (ex.type === "flashcard") return (d as FlashcardData).example;
+  if (ex.type === "flashcard") return typeof d.example === "string" ? d.example : undefined;
+  if (ex.type === "listening") return typeof d.audioText === "string" ? d.audioText : undefined;
   return undefined;
 }
+
+/** Un `modelAnswer` de mediación son 25-65 palabras: a 28 px de serif
+ *  desplaza la tarjeta entera. La talla se elige por longitud, no por
+ *  tipo, que es lo que de verdad decide si cabe. */
+const talla = (t: string, grande: string, medio: string, pequeno: string) =>
+  t.length <= 24 ? grande : t.length <= 90 ? medio : pequeno;
 
 const PROMPT: Record<string, string> = {
   flashcard: "¿Qué significa en español?",
@@ -74,9 +72,10 @@ export function SessionCardDisplay({
   rule?: string;
   contrastText?: string;
 }) {
-  const front = frontFor(exercise);
-  const back = backFor(exercise);
-  const example = exampleFor(exercise);
+  const front = frenteDe(exercise);
+  const back = respuestaDe(exercise);
+  const example = apoyoFor(exercise);
+  const alternativas = alternativasDe(exercise);
   const esContrast = exercise.esContrast;
   const prompt = PROMPT[exercise.type] ?? "¿Qué significa?";
 
@@ -87,7 +86,10 @@ export function SessionCardDisplay({
     >
       <div className="mb-[18px] text-[13px] text-ink-muted">{prompt}</div>
       {front && (
-        <div className="mb-2.5 font-display text-[44px] font-semibold tracking-[-.02em]">
+        <div
+          className={`mb-2.5 whitespace-pre-line font-display font-semibold tracking-[-.02em] ${talla(front, "text-[44px]", "text-[28px]", "text-[18px] leading-relaxed")}`}
+          data-testid="card-front"
+        >
           {front}
         </div>
       )}
@@ -113,7 +115,17 @@ export function SessionCardDisplay({
       ) : (
         <div className="mt-7 border-t border-dashed border-rule pt-6" data-testid="reveal-block">
           {back && (
-            <div className="mb-2 font-display text-[28px] font-medium">{back}</div>
+            <div
+              className={`mb-2 whitespace-pre-line font-display font-medium ${talla(back, "text-[28px]", "text-[22px]", "text-[16px] leading-relaxed text-left")}`}
+              data-testid="card-back"
+            >
+              {back}
+            </div>
+          )}
+          {alternativas.length > 0 && (
+            <div className="mb-2 text-[13px] text-ink-muted" data-testid="card-alternativas">
+              También vale: {alternativas.join(" · ")}
+            </div>
           )}
           {example && (
             <div className="font-display text-[16px] italic text-ink-muted">
