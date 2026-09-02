@@ -112,6 +112,9 @@ async function bajarHtml(titulo) {
   }
   const html = d.parse.text['*'];
   fs.writeFileSync(f, html);
+  // Un respiro entre descargas: 150 páginas seguidas sin pausa dieron
+  // 429 en la tanda de poesía, y el 429 cuatro veces seguidas tumba la obra.
+  await new Promise((ok) => setTimeout(ok, 250));
   return html;
 }
 
