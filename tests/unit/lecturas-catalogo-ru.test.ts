@@ -19,9 +19,9 @@ invariantesDelCatalogo({
   // Medido 2026-09-02 al cierre de la tanda F-RU-T1 (Ушинский, Толстой
   // книги для чтения y народные рассказы, Афанасьев, Мамин-Сибиряк,
   // Аксаков, Одоевский, Погорельский): 377 lecturas · 16 series ·
-  // 535.913 palabras. Se actualiza con cada tanda.
-  lecturas: 377,
-  palabras: 535_913,
+  // 535.913 palabras; F-RU-T2 (Chéjov: 532 relatos, 12 повести, 7 obras de teatro largas y 9 breves): 1.017 · 38 series · 1.799.015 palabras.
+  lecturas: 1017,
+  palabras: 1_799_015,
   // ru.wikisource: navegación de capítulos («← Предыдущая», «Следующая →»),
   // llamadas de nota «[1]» huérfanas, páginas del escaneo sin transcribir,
   // el aviso «Источник текста не указан», la frase de las páginas de

@@ -20,9 +20,11 @@
 // - el diccionario hunspell de la auditoría OCR es el ru_RU de
 //   A. I. Lebedev (BSD, vía LibreOffice), vendorizado en tools/hunspell.
 
-/** NFC y fuera el acento de intensidad (U+0301). */
+/** NFC, fuera el acento de intensidad (U+0301) y fuera las marcas
+ *  invisibles de dirección (U+200E/U+200F, que Afanásiev trae al
+ *  principio de párrafo) y el BOM. */
 export function normalizarDiacriticos(s) {
-  return String(s ?? '').normalize('NFC').replace(/́/g, '').normalize('NFC');
+  return String(s ?? '').normalize('NFC').replace(/[\u0301\u200E\u200F\uFEFF]/g, '').normalize('NFC');
 }
 
 /** PALABRA = algo con una LETRA cirílica dentro (regla de la fase F-RU:

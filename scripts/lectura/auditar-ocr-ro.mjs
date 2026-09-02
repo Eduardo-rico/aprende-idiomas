@@ -23,7 +23,7 @@ import { spawnSync } from 'node:child_process';
 // el que llama elige la lengua.
 const args = process.argv.slice(2);
 const LANG = args.includes('--lang') ? args[args.indexOf('--lang') + 1] : 'ro';
-const DICS = { ro: 'ro_RO', cs: 'cs_CZ' };
+const DICS = { ro: 'ro_RO', cs: 'cs_CZ', ru: 'ru_RU' };
 const DIR = path.join(process.cwd(), `lib/data/languages/${LANG}/lecturas`);
 const DIC = path.join(process.cwd(), 'tools/hunspell', DICS[LANG]);
 const CACHE = path.join(process.cwd(), `scripts/.cache/lectura/ocr-${LANG}.json`);
@@ -52,7 +52,15 @@ export function paraDiccionarioCs(p) {
     .replace(/(\p{L})au/gu, '$1ou')
     .replace(/(\p{L}{2,})ti$/u, '$1t');
 }
-export const paraDiccionario = LANG === 'cs' ? paraDiccionarioCs : paraDiccionarioRo;
+/** RUSO: el diccionario ru_RU (Lebedev) es de la norma actual y NO
+ *  distingue la «ё»: escribe «ё» como «е». Para la consulta se pasa ё→е.
+ *  La grafía pre-1918 (ѣ, і, ъ final) NO se normaliza: esas piezas están
+ *  declaradas y se reportan como época, no como OCR (como los textos
+ *  anteriores a 1904 en RO). */
+export function paraDiccionarioRu(p) {
+  return p.replace(/ё/g, 'е').replace(/Ё/g, 'Е');
+}
+export const paraDiccionario = LANG === 'cs' ? paraDiccionarioCs : LANG === 'ru' ? paraDiccionarioRu : paraDiccionarioRo;
 
 function desconocidas(palabras) {
   const r = spawnSync('hunspell', ['-d', DIC, '-l'], { input: palabras.join('\n'), encoding: 'utf8', maxBuffer: 64 << 20 });

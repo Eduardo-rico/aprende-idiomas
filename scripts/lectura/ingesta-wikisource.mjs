@@ -517,12 +517,24 @@ async function ingerir(obra) {
     const excluir = new Set((obra.excluir ?? []).map(normalizarDiacriticos));
     lista = lista.filter((e) => !excluir.has(e.titulo) && !excluir.has(e.texto));
     const vistos = new Set();
-    for (const e of lista) {
+    const cola = [...lista];
+    while (cola.length) {
+      const e = cola.shift();
       if (vistos.has(e.titulo)) continue;
       vistos.add(e.titulo);
       const h = await bajarHtml(e.titulo);
       if (!h) { rojas.push(e.titulo); continue; }
-      const b = bloquesDe(h); suma(b.tablas);
+      const b = bloquesDe(h);
+      // `recursivo` (fase F-RU): una entrada de la colección que es un
+      // ÍNDICE (menos de `min` palabras y ≥2 subpáginas propias) se
+      // sustituye por sus capítulos, en orden, con «Obra: capítulo» de
+      // título. Sin esto el índice entraba como texto pegado al cuento
+      // siguiente.
+      if (obra.recursivo && palabrasDe(b.bloques) < min) {
+        const hijas = subpaginasDe(h, e.titulo).filter((x) => !vistos.has(x.titulo) && !excluir.has(x.titulo));
+        if (hijas.length >= 2) { cola.unshift(...hijas.map((x) => ({ titulo: x.titulo, texto: `${e.texto}: ${x.texto}` }))); console.log(`    índice «${e.titulo}» → ${hijas.length} subpáginas`); continue; }
+      }
+      suma(b.tablas);
       crudas.push({ titulo: e.texto, bloques: b.bloques.map((x) => (x.h !== undefined ? { texto: x.texto } : x)), pagina: e.titulo });
     }
     if (!crudas.length) throw new Error('la colección no tiene ni una página existente');
