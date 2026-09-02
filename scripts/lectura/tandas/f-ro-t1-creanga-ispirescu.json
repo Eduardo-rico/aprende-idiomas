@@ -1,0 +1,75 @@
+[
+ {
+  "slug": "creanga-povesti",
+  "titulo": "Povești (Ion Creangă)",
+  "autor": "Ion Creangă",
+  "muerteAutor": 1889,
+  "publicacion": 1877,
+  "modo": "coleccion",
+  "autorPagina": "Ion Creangă",
+  "seccion": "Povești",
+  "excluir": ["Prefață la poveștile mele", "Povestea lui Ionică cel prost", "Povestea poveștilor"],
+  "edicion": "Opere, Editura Minerva, 1970",
+  "minPalabras": 200
+ },
+ {
+  "slug": "creanga-povestiri",
+  "titulo": "Povestiri (Ion Creangă)",
+  "autor": "Ion Creangă",
+  "muerteAutor": 1889,
+  "publicacion": 1885,
+  "modo": "coleccion",
+  "autorPagina": "Ion Creangă",
+  "seccion": "Povestiri",
+  "edicion": "Opere, Editura Minerva, 1970",
+  "minPalabras": 200
+ },
+ {
+  "slug": "creanga-povestiri-didactice",
+  "titulo": "Povestiri didactice (Ion Creangă)",
+  "autor": "Ion Creangă",
+  "muerteAutor": 1889,
+  "publicacion": 1880,
+  "modo": "coleccion",
+  "autorPagina": "Ion Creangă",
+  "seccion": "Povestiri didactice",
+  "excluir": ["Harap-Alb"],
+  "edicion": "Opere, Editura Minerva, 1970",
+  "minPalabras": 60
+ },
+ {
+  "slug": "amintiri-din-copilarie",
+  "titulo": "Amintiri din copilărie",
+  "autor": "Ion Creangă",
+  "muerteAutor": 1889,
+  "publicacion": 1881,
+  "modo": "secciones",
+  "pagina": "Amintiri din copilărie",
+  "agrupar": 2500,
+  "etiquetaPieza": "Partea",
+  "edicion": "Opere, Editura Minerva, 1970"
+ },
+ {
+  "slug": "creanga-postume",
+  "titulo": "Postume (Ion Creangă)",
+  "autor": "Ion Creangă",
+  "muerteAutor": 1889,
+  "publicacion": 1898,
+  "modo": "coleccion",
+  "paginas": ["Făt Frumos, fiul iepei", "Fragment de autobiografie"],
+  "edicion": "Opere, Editura Minerva, 1970",
+  "minPalabras": 200
+ },
+ {
+  "slug": "ispirescu-legende-sau-basmele-romanilor",
+  "titulo": "Legende sau basmele românilor",
+  "autor": "Petre Ispirescu",
+  "muerteAutor": 1887,
+  "publicacion": 1882,
+  "modo": "coleccion",
+  "autorPagina": "Petre Ispirescu",
+  "seccion": "Legende sau basmele românilor (1882)",
+  "excluir": ["În loc de prefață (Alecsandri)"],
+  "minPalabras": 200
+ }
+]

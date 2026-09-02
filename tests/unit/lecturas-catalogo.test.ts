@@ -1,118 +1,27 @@
 // tests/unit/lecturas-catalogo.test.ts
 //
-// Invariantes del catálogo PÚBLICO de lectura, sobre las lecturas
-// reales — no sobre un fixture. La Ola E3 lo escribió al pasar el
-// catálogo de 224 a 967 piezas: a esa escala una lectura rota ya no se
-// ve leyendo, sólo midiendo. Los tres gates de la Ola L viven aquí
-// dentro (procedencia, dominio público por aritmética, variante), más
-// los que la escala añadió (id único, serie completa, cero aparato de
-// Gutenberg dentro del texto).
+// Invariantes del catálogo PÚBLICO de lectura PT, sobre las lecturas
+// reales — no sobre un fixture. La Ola E3 los escribió al pasar el
+// catálogo de 224 a 967 piezas; la fase F los sacó a
+// `lecturas-catalogo.invariantes.ts` para que RO (y luego CS/RU) pasen
+// LOS MISMOS sin copiarlos. Aquí sólo queda lo que es de PT: el piso
+// medido y las variantes.
 //
 // Si una tanda nueva sube las cifras, se actualizan MEDIDAS con
 // `node scripts/lectura/medir-catalogo.mjs pt` — nunca a ojo.
-import { describe, it, expect } from 'vitest';
-import fs from 'node:fs';
-import path from 'node:path';
+import { invariantesDelCatalogo } from './lecturas-catalogo.invariantes';
 
-const DIR = path.join(process.cwd(), 'lib/data/languages/pt/lecturas');
-
-interface Pieza {
-  id: string; titulo: string; autor: string; nivel: string;
-  fuente?: string; licencia?: string; muerteAutor?: number; fuenteUrl?: string;
-  original?: true; revisadoPor?: string; fechaRevision?: string;
-  variante?: string; modo?: string;
-  serie?: { id: string; titulo: string; orden: number };
-  parrafos: { texto: string }[];
-}
-
-const archivos = fs.readdirSync(DIR).filter((f) => f.endsWith('.json')).sort();
-const catalogo: { archivo: string; l: Pieza }[] = archivos.map((f) => ({
-  archivo: f,
-  l: JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8')) as Pieza,
-}));
-
-const palabras = (l: Pieza) =>
-  l.parrafos.reduce((a, p) => a + p.texto.split(/\s+/).filter(Boolean).length, 0);
-
-describe('catálogo de lectura PT', () => {
-  it('tiene el tamaño medido de la Ola E3 (piso, no igualdad: crecer está bien)', () => {
-    const total = catalogo.reduce((a, x) => a + palabras(x.l), 0);
-    // Medido 2026-09-01 al cierre de E3: 967 lecturas · 52 series ·
-    // 3.219.799 palabras (pt 2.091.688 · pt-br 1.128.111).
-    expect(catalogo.length).toBeGreaterThanOrEqual(967);
-    expect(total).toBeGreaterThanOrEqual(3_219_799);
-    const pt = catalogo.filter((x) => x.l.variante === 'pt').reduce((a, x) => a + palabras(x.l), 0);
-    // La meta de inmersión del plan es PT-PT: el estante brasileño no la paga.
-    expect(pt).toBeGreaterThanOrEqual(1_900_000);
-  });
-
-  it('el id de cada lectura es su nombre de archivo, y es único', () => {
-    const vistos = new Set<string>();
-    for (const { archivo, l } of catalogo) {
-      expect(l.id, archivo).toBe(archivo.slice(0, -5));
-      expect(vistos.has(l.id), `id duplicado: ${l.id}`).toBe(false);
-      vistos.add(l.id);
-    }
-  });
-
-  it('pasa el gate de procedencia por su vía (dominio público u original)', () => {
-    for (const { archivo, l } of catalogo) {
-      const campos = l.original === true
-        ? ['titulo', 'autor', 'nivel', 'revisadoPor', 'fechaRevision']
-        : ['titulo', 'autor', 'muerteAutor', 'fuenteUrl', 'nivel', 'fuente', 'licencia'];
-      for (const c of campos) expect(l[c as keyof Pieza], `${archivo} sin ${c}`).toBeTruthy();
-    }
-  });
-
-  it('el dominio público sale de la ARITMÉTICA, no de una suposición', () => {
-    const hoy = new Date().getFullYear();
-    for (const { archivo, l } of catalogo) {
-      if (l.original === true || l.muerteAutor === undefined) continue;
-      // La regla más conservadora de las tres que usa el proyecto:
-      // México, vida + 100.
-      expect(l.muerteAutor + 101, `${archivo}: †${l.muerteAutor} no es libre en MX`).toBeLessThanOrEqual(hoy);
-    }
-  });
-
+invariantesDelCatalogo({
+  lang: 'pt',
   // E2#17: el campo pasa a ser OBLIGATORIO. Las 224 de la Ola L no lo
   // declaraban y heredaban 'pt' por un `?? 'pt'` copiado en tres sitios;
   // el default acertaba, que es justo lo que hace peligroso un valor
-  // implícito — acierta hasta que deja de acertar y nadie lo nota. Ahora
-  // las 967 lo estampan y el gate exige el campo, no el default.
-  it('TODA lectura declara su variante, y es pt o pt-br', () => {
-    for (const { archivo, l } of catalogo) {
-      expect(l.variante, `${archivo} no declara variante`).toBeDefined();
-      expect(['pt', 'pt-br'], archivo).toContain(l.variante);
-    }
-  });
-
-  it('ninguna pieza está vacía', () => {
-    for (const { archivo, l } of catalogo) {
-      expect(l.parrafos.length, archivo).toBeGreaterThan(0);
-      expect(l.parrafos.every((p) => typeof p.texto === 'string' && p.texto.trim().length > 0), archivo).toBe(true);
-    }
-  });
-
-  it('cada serie numera sus piezas 1..n sin huecos ni repetidos', () => {
-    const series = new Map<string, number[]>();
-    for (const { l } of catalogo) {
-      if (!l.serie) continue;
-      series.set(l.serie.id, [...(series.get(l.serie.id) ?? []), l.serie.orden]);
-    }
-    for (const [id, ordenes] of series) {
-      const o = [...ordenes].sort((a, b) => a - b);
-      expect(o, `serie ${id}`).toEqual(o.map((_, i) => i + 1));
-    }
-  });
-
-  it('no queda aparato del transcriptor de Gutenberg dentro del texto', () => {
-    // La tabla de erratas en ASCII y el «Lista de erros corrigidos» del
-    // transcriptor NO son texto de autor. Estaban dentro de os-maias-c18
-    // y o-crime-do-padre-amaro-c25 desde la Ola L.
-    const aparato = /\+[-+=]{6,}\+|End of (the )?Project Gutenberg|Aqui encontram-se listados|\berros?\b[^.]{0,60}\bcorrigid/i;
-    const sucias = catalogo
-      .filter(({ l }) => l.parrafos.some((p) => aparato.test(p.texto)))
-      .map((x) => x.archivo);
-    expect(sucias).toEqual([]);
-  });
+  // implícito. Ahora las 967 lo estampan y el gate exige el campo.
+  variantes: ['pt', 'pt-br'],
+  // Medido 2026-09-01 al cierre de E3: 967 lecturas · 52 series ·
+  // 3.219.799 palabras (pt 2.091.688 · pt-br 1.128.111).
+  lecturas: 967,
+  palabras: 3_219_799,
+  // La meta de inmersión del plan es PT-PT: el estante brasileño no la paga.
+  inmersion: { variante: 'pt', palabras: 1_900_000 },
 });
