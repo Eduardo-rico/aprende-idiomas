@@ -97,10 +97,10 @@ export function parsearCurriculo(md: string, lang: LanguageId): NivelCurriculo[]
   // intervalo («60-90 h + 170-240 h»): el nivel se lee, las horas no.
   const cab = new RegExp(`^### ${titulo} · (?:pre_A1 \\+ )?(A1|A2|B1|B2|C1|C2)\\b(?: — (\\d+) h)?`);
   for (let i = 0; i < seccion.length; i++) {
-    const m = seccion[i].match(cab);
+    const m = seccion[i]!.match(cab);
     if (!m) continue;
     let j = i + 1;
-    while (j < seccion.length && !/^### /.test(seccion[j])) j++;
+    while (j < seccion.length && !/^### /.test(seccion[j] ?? '')) j++;
     const cuerpo = seccion.slice(i + 1, j);
     const nivel = m[1] as Nivel;
     const horas = m[2] ? Number(m[2]) : null;
@@ -116,13 +116,13 @@ export function parsearCurriculo(md: string, lang: LanguageId): NivelCurriculo[]
     const k0 = cuerpo.findIndex((l) => /\*\*Sabrá hacer \(\d+\):\*\*/.test(l));
     const descriptores: { etiqueta: string; destreza: Destreza }[] = [];
     for (let k = k0 + 1; k < cuerpo.length; k++) {
-      const l = cuerpo[k];
+      const l = cuerpo[k] ?? '';
       if (l.trim() === '' && descriptores.length === 0) continue;
       if (!/^- /.test(l)) break;
       const tag = l.match(/^- \[([^\]]+)\]/);
       if (!tag) { descriptores.push({ etiqueta: '', destreza: 'SIN_ETIQUETA' }); continue; }
-      const etiqueta = tag[1].trim();
-      const categoria = etiqueta.split('·')[0].trim();
+      const etiqueta = (tag[1] ?? '').trim();
+      const categoria = (etiqueta.split('·')[0] ?? '').trim();
       const destreza = DESTREZA_DE[categoria];
       if (!destreza) throw new Error(`${lang} ${nivel}: etiqueta desconocida «${categoria}» — decláralo en DESTREZA_DE`);
       descriptores.push({ etiqueta, destreza });
@@ -134,7 +134,7 @@ export function parsearCurriculo(md: string, lang: LanguageId): NivelCurriculo[]
     const mat = cuerpo
       .map((l) => l.match(/\*\*Material a producir:\*\* ([\d.,]+) palabras de lectura · ([\d.,]+) min de audio · ([\d.,]+) ejercicios · ([\d.,]+) tareas/))
       .find(Boolean);
-    const material = mat ? { palabras: num(mat[1]), audioMin: num(mat[2]), ejercicios: num(mat[3]), tareas: num(mat[4]) } : null;
+    const material = mat ? { palabras: num(mat[1] ?? ''), audioMin: num(mat[2] ?? ''), ejercicios: num(mat[3] ?? ''), tareas: num(mat[4] ?? '') } : null;
     out.push({ nivel, horas, declarados, descriptores, material });
   }
   if (out.length !== NIVELES.length) throw new Error(`${lang}: el currículo tiene ${out.length} niveles parseables, no ${NIVELES.length}`);
@@ -263,7 +263,7 @@ export function informe(lang: LanguageId, niveles: NivelCurriculo[], corpus: Cor
   for (const n of niveles) {
     const c: Record<string, number> = {};
     for (const d of n.descriptores) c[d.destreza] = (c[d.destreza] ?? 0) + 1;
-    for (const k of Object.keys(c)) sum[k] = (sum[k] ?? 0) + c[k];
+    for (const k of Object.keys(c)) sum[k] = (sum[k] ?? 0) + (c[k] ?? 0);
     const enAlcance = n.descriptores.filter((d) => d.destreza !== 'EXCLUIDO' && d.destreza !== 'SIN_ETIQUETA').length;
     L.push(`| ${n.nivel} | ${destrezas.map((d) => c[d] ?? 0).join(' | ')} | **${enAlcance}** | ${c.EXCLUIDO ?? 0} | ${c.SIN_ETIQUETA ?? 0} | ${n.declarados} |`);
   }
