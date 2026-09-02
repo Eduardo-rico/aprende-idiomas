@@ -11,9 +11,12 @@
 //     números, hora, comida, casa, piață, transporte, cuerpo, tiempo);
 //   · el género NEUTRO se declara con la prueba un…/două… y se marca:
 //     tren, scaun, oraș, telefon, birou son de los primeros 200;
-//   · `registro` es OBLIGATORIO cuando hay vocativo marcado (dexonline
-//     atesta doctorule y șefule, y son bruscos dirigidos a la persona;
-//     la forma cortés es nominal: domnule doctor);
+//   · `registro` es OBLIGATORIO cuando hay vocativo marcado. Criterio del
+//     lingüista (2026-09-01): -ule PRIMARIA en oficios y tratamientos
+//     (doctorule, profesorule, studentule, domnule), -e primaria en
+//     parentesco y trato personal (băiete, copile, bărbate, vecine,
+//     prietene). Los de oficio son bruscos dirigidos a la persona: la forma
+//     cortés es nominal (domnule doctor);
 //   · el vocativo se rellenó con la tabla del Paso 0 §12 (dexonline lema a
 //     lema); donde la página no lo atestó, no se declara;
 //   · un verbo se guarda por su infinitivo CON partícula, nunca por una
@@ -22,22 +25,22 @@ import type { LemaNominal, LemaVerbal } from '@/scripts/lib/paradigma-ro';
 
 export const SUSTANTIVOS_A1: LemaNominal[] = [
   // personas y familia
-  { lema: 'om', genero: 'm', plural: 'oameni', vocSg: 'omule', registro: 'brusc', gloss: 'hombre, persona' },
+  { lema: 'om', genero: 'm', plural: 'oameni', vocSg: 'omule', registro: 'familiar', gloss: 'hombre, persona' },
   { lema: 'domn', genero: 'm', plural: 'domni', vocSg: 'domnule', registro: 'neutru', gloss: 'señor' },
   { lema: 'doamnă', genero: 'f', plural: 'doamne', vocSg: null, gloss: 'señora' },
   { lema: 'băiat', genero: 'm', plural: 'băieți', vocSg: 'băiete', vocAlt: ['băiatule'], registro: 'familiar', gloss: 'chico' },
-  { lema: 'fată', genero: 'f', plural: 'fete', vocSg: 'fato', registro: 'familiar', gloss: 'chica' },
+  { lema: 'fată', genero: 'f', plural: 'fete', vocSg: 'fato', registro: 'brusc', gloss: 'chica' },
   { lema: 'prieten', genero: 'm', plural: 'prieteni', vocSg: 'prietene', registro: 'neutru', gloss: 'amigo' },
   { lema: 'frate', genero: 'm', plural: 'frați', vocSg: null, gloss: 'hermano' },
-  { lema: 'soră', genero: 'f', plural: 'surori', vocSg: null, gloss: 'hermana' },
+  { lema: 'soră', genero: 'f', plural: 'surori', vocSg: 'soro', vocAlt: ['soră'], registro: 'familiar', gloss: 'hermana' },
   { lema: 'mamă', genero: 'f', plural: 'mame', vocSg: 'mamo', registro: 'familiar', gloss: 'madre' },
   { lema: 'tată', genero: 'm', plural: 'tați', vocSg: null, gloss: 'padre' },
   { lema: 'copil', genero: 'm', plural: 'copii', vocSg: 'copile', vocAlt: ['copilule'], registro: 'familiar', gloss: 'niño' },
   { lema: 'femeie', genero: 'f', plural: 'femei', vocSg: null, gloss: 'mujer' },
   { lema: 'bărbat', genero: 'm', plural: 'bărbați', vocSg: 'bărbate', vocAlt: ['bărbatule'], registro: 'familiar', gloss: 'hombre, varón' },
   { lema: 'student', genero: 'm', plural: 'studenți', vocSg: 'studentule', vocAlt: ['studente'], registro: 'brusc', gloss: 'estudiante' },
-  { lema: 'profesor', genero: 'm', plural: 'profesori', vocSg: 'profesore', vocAlt: ['profesorule'], registro: 'brusc', gloss: 'profesor' },
-  { lema: 'doctor', genero: 'm', plural: 'doctori', vocSg: 'doctore', vocAlt: ['doctorule'], registro: 'brusc', gloss: 'médico' },
+  { lema: 'profesor', genero: 'm', plural: 'profesori', vocSg: 'profesorule', vocAlt: ['profesore'], registro: 'brusc', gloss: 'profesor' },
+  { lema: 'doctor', genero: 'm', plural: 'doctori', vocSg: 'doctorule', vocAlt: ['doctore'], registro: 'brusc', gloss: 'médico' },
   { lema: 'vecin', genero: 'm', plural: 'vecini', vocSg: 'vecine', vocAlt: ['vecinule'], registro: 'familiar', gloss: 'vecino' },
   { lema: 'bunic', genero: 'm', plural: 'bunici', vocSg: 'bunicule', registro: 'familiar', gloss: 'abuelo' },
   { lema: 'nume', genero: 'n', plural: 'nume', gloss: 'nombre' },
@@ -114,7 +117,10 @@ export const VERBOS_A1: LemaVerbal[] = [
   { inf: 'a lăsa', sg1: 'las', sg3: 'lasă', gloss: 'dejar' },
   { inf: 'a cumpăra', sg1: 'cumpăr', sg3: 'cumpără', sg2: 'cumperi', gloss: 'comprar' },
   { inf: 'a aștepta', sg1: 'aștept', sg3: 'așteaptă', gloss: 'esperar' },
-  { inf: 'a locui', sg1: 'locuiesc', sg3: 'locuiește', gloss: 'vivir (residir)' },
+  { inf: 'a vizita', sg1: 'vizitez', sg3: 'vizitează', gloss: 'visitar' },
+  { inf: 'a dansa', sg1: 'dansez', sg3: 'dansează', gloss: 'bailar' },
+  { inf: 'a desena', sg1: 'desenez', sg3: 'desenează', gloss: 'dibujar' },
+  { inf: 'a fuma', sg1: 'fumez', sg3: 'fumează', gloss: 'fumar' },
   // 2.ª conjugación (-ea)
   { inf: 'a vedea', sg1: 'văd', sg3: 'vede', sg2: 'vezi', participio: 'văzut', gloss: 'ver' },
   { inf: 'a putea', sg1: 'pot', sg3: 'poate', participio: 'putut', gloss: 'poder' },
@@ -135,6 +141,7 @@ export const VERBOS_A1: LemaVerbal[] = [
   { inf: 'a iubi', sg1: 'iubesc', sg3: 'iubește', gloss: 'amar' },
   { inf: 'a găti', sg1: 'gătesc', sg3: 'gătește', gloss: 'cocinar' },
   { inf: 'a plăti', sg1: 'plătesc', sg3: 'plătește', gloss: 'pagar' },
+  { inf: 'a locui', sg1: 'locuiesc', sg3: 'locuiește', gloss: 'vivir (residir)' },
   { inf: 'a coborî', sg1: 'cobor', sg3: 'coboară', gloss: 'bajar' },
   { inf: 'a hotărî', sg1: 'hotărăsc', sg3: 'hotărăște', gloss: 'decidir' },
 ];

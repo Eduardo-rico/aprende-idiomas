@@ -42,49 +42,57 @@ export interface ClozeRo {
   /** declarada, donde el paradigma no llega */
   r?: string;
   alt?: string[];
-  /** ¿La raíz latina común deja acertar sin saber la morfología? Declarado. */
+  /** ¿La CADENA que escribiría un hispanohablante sin morfología rumana
+   *  coincide con la respuesta? Si no coincide, es `false` aunque la raíz
+   *  se reconozca: «tren» se reconoce y «trenul» no se produce; «lucra» se
+   *  reconoce y produce *lucr. El lingüista cazó 7 `true` que contestaban
+   *  «¿se reconoce la raíz?» — otra pregunta — y dejaban el lote rozando el
+   *  tope sin motivo. Declarado, y con este criterio. */
   transparenteLatin: boolean;
 }
 
 export const ITEMS: ClozeRo[] = [
   // ── r2-articulo-enclitico-sg · 8 ─────────────────────────────────
-  // El contexto exige el DEFINIDO (un referente ya dado o único): el
-  // ancla es lo que lo exige. El instinto castellano pone «el/la» delante
-  // y deja el sustantivo desnudo; aquí el hueco pide la forma con el
-  // artículo dentro.
-  { p: 'r2-articulo-enclitico-sg', lema: 'om', s: '___ (om) de la fereastră este vecinul meu.', pista: 'hombre — con el artículo definido, que va pegado al final', ancla: 'de la fereastră este vecinul meu', transparenteLatin: false },
-    // «casa» es la misma cadena en español y en rumano: glosar es deletrear
-  // (la cicatriz de PT, tres veces). Se describe la cosa.
-  { p: 'r2-articulo-enclitico-sg', lema: 'casă', s: '___ (casă) noastră este lângă parc.', pista: 'el sitio donde vive una familia — con artículo definido enclítico (femenino en -ă)', ancla: 'noastră', transparenteLatin: true },
-  { p: 'r2-articulo-enclitico-sg', lema: 'tren', s: '___ (tren) de București pleacă la ora opt.', pista: 'tren — con artículo definido enclítico (neutro)', ancla: 'de București pleacă la ora opt', transparenteLatin: true },
+  // El contexto exige el DEFINIDO y, sobre todo, el SINGULAR: el testigo
+  // de número no puede ser un verbo de la 1.ª conjugación en presente,
+  // donde 3.ª sg = 3.ª pl (CLRO-003 v0: «Trenul/Trenurile de București
+  // pleacă» — indeterminado; lo cazó el lingüista, y ahora un gate).
+  // Las seis clases del artículo, sin repetir, y no todas en posición
+  // inicial: el alumno no debe aprender «primera casilla ⇒ -ul».
+  { p: 'r2-articulo-enclitico-sg', lema: 'om', s: 'Am văzut ___ (om) de la fereastră: este vecinul meu.', pista: 'hombre — con artículo definido enclítico (masculino en consonante)', ancla: 'este vecinul meu', transparenteLatin: false },
+  { p: 'r2-articulo-enclitico-sg', lema: 'tată', s: '___ (tată) meu lucrează la spital.', pista: 'padre — con artículo definido enclítico (masculino en -ă)', ancla: 'meu lucrează', transparenteLatin: false },
+  { p: 'r2-articulo-enclitico-sg', lema: 'tren', s: '___ (tren) de București este deja în gară.', pista: 'tren — con artículo definido enclítico (neutro en consonante)', ancla: 'este deja în gară', transparenteLatin: false },
   { p: 'r2-articulo-enclitico-sg', lema: 'carte', s: '___ (carte) aceasta este foarte interesantă.', pista: 'libro — con artículo definido enclítico (femenino en -e)', ancla: 'aceasta', transparenteLatin: false },
-  { p: 'r2-articulo-enclitico-sg', lema: 'frate', s: '___ (frate) meu locuiește la Cluj.', pista: 'hermano — con artículo definido enclítico (masculino en -e)', ancla: 'meu locuiește', transparenteLatin: true },
-  { p: 'r2-articulo-enclitico-sg', lema: 'metrou', s: '___ (metrou) din Cluj nu există încă.', pista: 'metro — con artículo definido enclítico (neutro en -u)', ancla: 'din Cluj nu există încă', transparenteLatin: true },
-  { p: 'r2-articulo-enclitico-sg', lema: 'zi', s: '___ (zi) de azi este foarte frumoasă.', pista: 'día — con artículo definido enclítico (femenino en -i)', ancla: 'de azi', transparenteLatin: false },
-  { p: 'r2-articulo-enclitico-sg', lema: 'ușă', s: '___ (ușă) de la intrare este deschisă.', pista: 'puerta — con artículo definido enclítico (femenino en -ă); lema opaco, sin cognado', ancla: 'de la intrare este deschisă', transparenteLatin: false },
+  { p: 'r2-articulo-enclitico-sg', lema: 'frate', s: '___ (frate) meu locuiește la Cluj.', pista: 'hermano — con artículo definido enclítico (masculino en -e)', ancla: 'meu locuiește', transparenteLatin: false },
+  { p: 'r2-articulo-enclitico-sg', lema: 'metrou', s: '___ (metrou) din București este foarte aglomerat seara.', pista: 'metro — con artículo definido enclítico (neutro en -u)', ancla: 'este foarte aglomerat', transparenteLatin: false },
+  { p: 'r2-articulo-enclitico-sg', lema: 'zi', s: '___ (zi) de naștere a fratelui meu este mâine.', pista: 'día — con artículo definido enclítico (femenino en -i)', ancla: 'de naștere a fratelui meu este', transparenteLatin: false },
+  // «ușă» es opaca (sin cognado): la nota va aquí, no en la pista.
+  { p: 'r2-articulo-enclitico-sg', lema: 'ușă', s: '___ (ușă) de la intrare este deschisă.', pista: 'puerta — con artículo definido enclítico (femenino en -ă)', ancla: 'de la intrare este deschisă', transparenteLatin: false },
 
   // ── r3-presente-4-conjugaciones · 8 ──────────────────────────────
   // Las casillas que DIVERGEN (motivo del inventario): 3.ª pl = 3.ª sg en
-  // -a; 1.ª sg = 3.ª pl en -e/-i; y la 2.ª sg con palatalización.
+  // -a; 1.ª sg = 3.ª pl en -e/-i; y la 2.ª sg con palatalización. El
+  // pronombre explícito sólo donde el contexto lo licencia (contraste):
+  // el rumano es pro-drop y nueve «Tu …» seguidos son prosa de manual.
   { p: 'r3-presente-4-conjugaciones', inf: 'a cânta', per: 'ei', s: 'Copiii ___ (a cânta) în fiecare dimineață la școală.', pista: 'presente, 3.ª del plural — conjugación en -a', ancla: 'Copiii', transparenteLatin: true },
   { p: 'r3-presente-4-conjugaciones', inf: 'a merge', per: 'ei', s: 'Ei ___ (a merge) la piață sâmbăta.', pista: 'presente, 3.ª del plural — conjugación en -e', ancla: 'Ei', transparenteLatin: false },
   { p: 'r3-presente-4-conjugaciones', inf: 'a dormi', per: 'ei', s: 'Bunicii ___ (a dormi) după masă.', pista: 'presente, 3.ª del plural — conjugación en -i', ancla: 'Bunicii', transparenteLatin: true },
-  { p: 'r3-presente-4-conjugaciones', inf: 'a vedea', per: 'tu', s: 'Tu ___ (a vedea) marea de la fereastră?', pista: 'presente, 2.ª del singular — conjugación en -ea, con cambio de consonante', ancla: 'Tu', transparenteLatin: true },
-  { p: 'r3-presente-4-conjugaciones', inf: 'a pleca', per: 'tu', s: 'Tu ___ (a pleca) mâine la Brașov?', pista: 'presente, 2.ª del singular — conjugación en -a', ancla: 'Tu', transparenteLatin: false },
-  { p: 'r3-presente-4-conjugaciones', inf: 'a ști', per: 'noi', s: 'Noi ___ (a ști) unde este gara.', pista: 'presente, 1.ª del plural — conjugación en -i, tema en vocal', ancla: 'Noi', transparenteLatin: false },
-  { p: 'r3-presente-4-conjugaciones', inf: 'a coborî', per: 'voi', s: 'Voi ___ (a coborî) la stația următoare?', pista: 'presente, 2.ª del plural — conjugación en -î', ancla: 'Voi', transparenteLatin: false },
-  { p: 'r3-presente-4-conjugaciones', inf: 'a mânca', per: 'noi', s: 'Noi ___ (a mânca) la restaurant duminica.', pista: 'presente, 1.ª del plural — conjugación en -a, desde el tema del infinitivo', ancla: 'Noi', transparenteLatin: true },
+  { p: 'r3-presente-4-conjugaciones', inf: 'a vedea', per: 'tu', s: 'Tu ___ (a vedea) marea de la balcon?', pista: 'presente, 2.ª del singular — conjugación en -ea, con cambio de consonante', ancla: 'Tu', transparenteLatin: false },
+  { p: 'r3-presente-4-conjugaciones', inf: 'a pleca', per: 'tu', s: 'Eu rămân, tu ___ (a pleca) mâine la Brașov?', pista: 'presente, 2.ª del singular — conjugación en -a', ancla: 'Eu rămân, tu', transparenteLatin: false },
+  { p: 'r3-presente-4-conjugaciones', inf: 'a ști', per: 'noi', s: 'Noi ___ (a ști) unde este gara, ei nu.', pista: 'presente, 1.ª del plural — conjugación en -i, tema en vocal', ancla: 'Noi', transparenteLatin: false },
+  { p: 'r3-presente-4-conjugaciones', inf: 'a coborî', per: 'voi', s: 'Voi ce faceți, ___ (a coborî) la stația următoare?', pista: 'presente, 2.ª del plural — conjugación en -î', ancla: 'Voi ce faceți', transparenteLatin: false },
+  { p: 'r3-presente-4-conjugaciones', inf: 'a mânca', per: 'noi', s: 'Noi ___ (a mânca) la restaurant, voi acasă.', pista: 'presente, 1.ª del plural — conjugación en -a, desde el tema del infinitivo', ancla: 'Noi', transparenteLatin: false },
 
   // ── r3-sufijo-ez-esc · 8 ─────────────────────────────────────────
   // Donde la raíz se reconoce, el instinto produce *lucr, *cit: el ítem
-  // pide la forma con el sufijo, y la pista nombra el sufijo como
-  // paradigma (no la forma).
-  { p: 'r3-sufijo-ez-esc', inf: 'a lucra', per: 'eu', s: 'Eu ___ (a lucra) la o bancă din centru.', pista: 'presente, 1.ª del singular — verbo con sufijo -ez', ancla: 'Eu', transparenteLatin: true },
-  { p: 'r3-sufijo-ez-esc', inf: 'a lucra', per: 'el', s: 'Ea ___ (a lucra) de acasă vinerea.', pista: 'presente, 3.ª del singular — verbo con sufijo -ez', ancla: 'Ea', transparenteLatin: true },
+  // pide la forma con el sufijo. La mitad -ez con DOS lemas distintos
+  // (lucra, vizita), o el ítem mide memoria de «lucrez» y no la clase.
+  { p: 'r3-sufijo-ez-esc', inf: 'a lucra', per: 'eu', s: 'Eu ___ (a lucra) la o bancă din centru.', pista: 'presente, 1.ª del singular — verbo con sufijo -ez', ancla: 'Eu', transparenteLatin: false },
+  { p: 'r3-sufijo-ez-esc', inf: 'a vizita', per: 'el', s: 'Ea ___ (a vizita) muzeul cu copiii.', pista: 'presente, 3.ª del singular — verbo con sufijo -ez', ancla: 'Ea', transparenteLatin: false },
   { p: 'r3-sufijo-ez-esc', inf: 'a citi', per: 'eu', s: 'Eu ___ (a citi) o carte în fiecare lună.', pista: 'presente, 1.ª del singular — verbo con sufijo -esc', ancla: 'Eu', transparenteLatin: false },
   { p: 'r3-sufijo-ez-esc', inf: 'a citi', per: 'tu', s: 'Tu ___ (a citi) ziarul dimineața?', pista: 'presente, 2.ª del singular — verbo con sufijo -esc, palatalizado', ancla: 'Tu', transparenteLatin: false },
   { p: 'r3-sufijo-ez-esc', inf: 'a vorbi', per: 'el', s: 'Profesorul ___ (a vorbi) rar și clar.', pista: 'presente, 3.ª del singular — verbo con sufijo -esc', ancla: 'Profesorul', transparenteLatin: false },
-  { p: 'r3-sufijo-ez-esc', inf: 'a locui', per: 'ei', s: 'Părinții mei ___ (a locui) la țară.', pista: 'presente, 3.ª del plural — verbo con sufijo -esc', ancla: 'Părinții mei', transparenteLatin: true },
+  { p: 'r3-sufijo-ez-esc', inf: 'a locui', per: 'ei', s: 'Părinții mei ___ (a locui) la țară.', pista: 'presente, 3.ª del plural — verbo con sufijo -esc', ancla: 'Părinții mei', transparenteLatin: false },
   { p: 'r3-sufijo-ez-esc', inf: 'a plăti', per: 'eu', s: 'Eu ___ (a plăti) chiria pe data de întâi.', pista: 'presente, 1.ª del singular — verbo con sufijo -esc', ancla: 'Eu', transparenteLatin: false },
   { p: 'r3-sufijo-ez-esc', inf: 'a găti', per: 'el', s: 'Mama ___ (a găti) ciorbă duminica.', pista: 'presente, 3.ª del singular — verbo con sufijo -esc', ancla: 'Mama', transparenteLatin: false },
 ];
@@ -122,6 +130,15 @@ export function verificar(items: ClozeRo[]): string[] {
     if (new RegExp(`(?<![\\p{L}])${r}(?![\\p{L}])`, 'iu').test(x.s.replace('___', ''))) v.push(`${id}: la respuesta «${r}» ya está escrita en la frase`);
     // El hueco de sufijo tiene que llevar el sufijo: si no, el punto no mide su punto.
     if (x.p === 'r3-sufijo-ez-esc' && !/(ez|ezi|ează|esc|ești|ește)$/.test(r)) v.push(`${id}: el punto es el sufijo y la forma «${r}» no lo lleva`);
+    if (x.p === 'r3-sufijo-ez-esc' && !/(ez|ezi|ează|esc|ești|ește)$/.test(r)) { /* ya avisado */ }
+    // SINCRETISMO: en un ítem de artículo SINGULAR el único testigo de número
+    // no puede ser un verbo de 1.ª conjugación en presente (pleacă, există:
+    // 3.ª sg = 3.ª pl). Hace falta un testigo singular explícito.
+    if (x.lema) {
+      const resto = x.s.replace('___', '').replace(/\([^)]*\)/g, '');
+      const testigo = /(?<![\p{L}])(este|e|era|a fost|meu|mea|nostru|noastră|tău|ta|acesta|aceasta|acest|această|acela|aceea)(?![\p{L}])/iu.test(resto);
+      if (!testigo) v.push(`${id}: sin testigo singular explícito — con «pleacă»/«există» la frase admite el plural (trenurile) y el ítem no está determinado`);
+    }
     // Un ítem de artículo cuya respuesta es igual al lema no examina nada.
     if (x.lema && r === x.lema) v.push(`${id}: la forma articulada coincide con el lema`);
     // ORTOGRAFÍA DOOM3 en todo lo que el alumno ve.
@@ -142,6 +159,9 @@ export function verificar(items: ClozeRo[]): string[] {
     const [top, k] = [...m].sort((a, b) => b[1] - a[1])[0]!;
     if (n >= 4 && k / n > 0.5) v.push(`${p}: la respuesta «${top}» sale ${k} de ${n} veces`);
   }
+  // La mitad -ez del punto del sufijo con al menos DOS lemas distintos.
+  const ez = new Set(items.filter((x) => x.p === 'r3-sufijo-ez-esc' && /ez|ează/.test(respuestaDe(x) ?? '')).map((x) => x.inf));
+  if (items.some((x) => x.p === 'r3-sufijo-ez-esc') && ez.size < 2) v.push(`r3-sufijo-ez-esc: la mitad -ez descansa en ${ez.size} lema(s) — con uno solo el ítem mide memoria de «lucrez», no la clase`);
   // El atajo del latín común: declarado, medido, con tope en la mitad.
   const trans = items.filter((x) => x.transparenteLatin).length;
   if (items.length >= 8 && trans / items.length > 0.5) v.push(`transparenteLatin: ${trans} de ${items.length} ítems se aciertan por la raíz común — por encima de la mitad el lote mide reconocimiento, no rumano`);

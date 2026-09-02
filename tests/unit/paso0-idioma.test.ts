@@ -55,11 +55,12 @@ describe('paso0-idioma: el parser del currículo', () => {
 });
 
 describe('paso0-idioma: el corpus', () => {
-  it('mide el rumano: inventario de puntos ya declarado, corpus a cero', async () => {
+  it('mide el rumano: inventario, bloques con lección y el primer lote publicado', async () => {
     const c = await medirCorpus('ro');
     expect(c.conceptos).toBeGreaterThan(0); // paso 1 de la fase F: el inventario
     expect(c.bloques).toBeGreaterThan(0); // b2 y b3 con lecciones (fase F)
-    expect(c.ejercicios).toBe(0);
+    expect(c.ejercicios).toBeGreaterThan(0); // primer lote A1 publicado (2026-09-01)
+    expect(c.servibles).toBe(c.ejercicios);
     // La biblioteca rumana se mezcló el 2026-09-01: 818 lecturas. El contador
     // reproduce el 2.831.967 del agente de lecturas por un camino independiente.
     expect(c.lecturas).toBeGreaterThan(800);
