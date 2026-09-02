@@ -1,0 +1,233 @@
+[
+ {
+  "autor": "Александр Пушкин",
+  "muerteAutor": 1837,
+  "slug": "pushkin-povesti-belkina",
+  "titulo": "Повести покойного Ивана Петровича Белкина",
+  "publicacion": 1831,
+  "modo": "coleccion",
+  "paginas": [
+   {
+    "titulo": "Повести покойного Ивана Петровича Белкина (Пушкин)/От издателя",
+    "texto": "От издателя"
+   },
+   {
+    "titulo": "Повести покойного Ивана Петровича Белкина (Пушкин)/Выстрел",
+    "texto": "Выстрел"
+   },
+   {
+    "titulo": "Повести покойного Ивана Петровича Белкина (Пушкин)/Метель",
+    "texto": "Метель"
+   },
+   {
+    "titulo": "Повести покойного Ивана Петровича Белкина (Пушкин)/Гробовщик",
+    "texto": "Гробовщик"
+   },
+   {
+    "titulo": "Повести покойного Ивана Петровича Белкина (Пушкин)/Станционный смотритель",
+    "texto": "Станционный смотритель"
+   },
+   {
+    "titulo": "Повести покойного Ивана Петровича Белкина (Пушкин)/Барышня-крестьянка",
+    "texto": "Барышня-крестьянка"
+   }
+  ],
+  "minPalabras": 200,
+  "nivel": "B1",
+  "notaOrtografia": "Nivel B1 DECLARADO por criterio (anclas-ru.mjs): la prosa de Pushkin es corta, transparente y de frase breve; la densidad la sube por morfología."
+ },
+ {
+  "autor": "Александр Пушкин",
+  "muerteAutor": 1837,
+  "slug": "pushkin-pikovaya-dama",
+  "titulo": "Пиковая дама",
+  "publicacion": 1834,
+  "modo": "entero",
+  "pagina": "Пиковая дама (Пушкин)",
+  "agrupar": 2500,
+  "nivel": "B2",
+  "notaOrtografia": "Nivel B2 declarado: relato fantástico con carga social y francés."
+ },
+ {
+  "autor": "Александр Пушкин",
+  "muerteAutor": 1837,
+  "slug": "pushkin-dubrovskij",
+  "titulo": "Дубровский",
+  "publicacion": 1841,
+  "modo": "subpaginas",
+  "pagina": "Дубровский (Пушкин)",
+  "agrupar": 3000,
+  "nivel": "B2",
+  "notaOrtografia": "Nivel B2 declarado: novela corta de aventuras, frase breve, escala media.",
+  "recursivo": true
+ },
+ {
+  "autor": "Александр Пушкин",
+  "muerteAutor": 1837,
+  "slug": "pushkin-kapitanskaya-dochka",
+  "titulo": "Капитанская дочка",
+  "publicacion": 1836,
+  "modo": "secciones",
+  "pagina": "Капитанская дочка (Пушкин)/1978 (СО)",
+  "agrupar": 3000,
+  "nivel": "B2",
+  "notaOrtografia": "Nivel B2 declarado: novela histórica corta, narración en primera persona, frase breve."
+ },
+ {
+  "autor": "Александр Пушкин",
+  "muerteAutor": 1837,
+  "slug": "pushkin-proza",
+  "titulo": "Проза (Пушкин)",
+  "publicacion": 1837,
+  "modo": "coleccion",
+  "paginas": [
+   "Арап Петра Великого (Пушкин)",
+   "История села Горюхина (Пушкин)",
+   "Рославлев (Пушкин)",
+   "Кирджали (повесть, Пушкин)",
+   "Египетские ночи (Пушкин)",
+   "Путешествие в Арзрум во время похода 1829 года (Пушкин)"
+  ],
+  "minPalabras": 200,
+  "nivel": "B2",
+  "notaOrtografia": "Nivel B2 declarado: prosa histórica y de viaje de Pushkin.",
+  "recursivo": true
+ },
+ {
+  "autor": "Александр Пушкин",
+  "muerteAutor": 1837,
+  "slug": "pushkin-skazki",
+  "titulo": "Сказки (Пушкин)",
+  "publicacion": 1834,
+  "modo": "coleccion",
+  "paginas": [
+   "Сказка о попе и о работнике его Балде (Пушкин)",
+   "Сказка о царе Салтане (Пушкин)",
+   "Сказка о рыбаке и рыбке (Пушкин)",
+   "Сказка о мёртвой царевне и о семи богатырях (Пушкин)",
+   "Сказка о золотом петушке (Пушкин)",
+   "Жених (Пушкин)",
+   "Сказка о медведихе (Пушкин)"
+  ],
+  "minPalabras": 150,
+  "versos": true,
+  "nivel": "B1",
+  "notaOrtografia": "Nivel B1 DECLARADO a mano: cuentos en verso, léxico de сказка y rima fácil; el verso engaña a la densidad (CS lo pagó)."
+ },
+ {
+  "slug": "lermontov-geroj-nashego-vremeni",
+  "titulo": "Герой нашего времени",
+  "autor": "Михаил Лермонтов",
+  "muerteAutor": 1841,
+  "publicacion": 1840,
+  "modo": "subpaginas",
+  "pagina": "Герой нашего времени (Лермонтов)/СО",
+  "recursivo": true,
+  "agrupar": 3000,
+  "nivel": "C1",
+  "notaOrtografia": "Nivel C1 declarado: prosa psicológica romántica, período largo, francés."
+ },
+ {
+  "autor": "Николай Гоголь",
+  "muerteAutor": 1852,
+  "slug": "gogol-vechera",
+  "titulo": "Вечера на хуторе близ Диканьки",
+  "publicacion": 1832,
+  "modo": "coleccion",
+  "paginas": [
+   "Сорочинская ярмарка (Гоголь)",
+   "Вечер накануне Ивана Купала (Гоголь)",
+   "Майская ночь, или Утопленница (Гоголь)",
+   "Пропавшая грамота (Гоголь)",
+   "Ночь перед Рождеством (Гоголь)",
+   "Страшная месть (Гоголь)",
+   "Иван Фёдорович Шпонька и его тётушка (Гоголь)",
+   "Заколдованное место (Гоголь)"
+  ],
+  "minPalabras": 200,
+  "nivel": "B2",
+  "notaOrtografia": "Nivel B2 DECLARADO por criterio (anclas-ru.mjs): Gógol de las Вечера — narración oral, humor, ucranianismos explicados.",
+  "recursivo": true
+ },
+ {
+  "autor": "Николай Гоголь",
+  "muerteAutor": 1852,
+  "slug": "gogol-mirgorod",
+  "titulo": "Миргород",
+  "publicacion": 1835,
+  "modo": "coleccion",
+  "paginas": [
+   "Старосветские помещики (Гоголь)",
+   "Тарас Бульба (Гоголь)",
+   "Вий (Гоголь)",
+   "Повесть о том, как поссорился Иван Иванович с Иваном Никифоровичем (Гоголь)"
+  ],
+  "minPalabras": 200,
+  "nivel": "C1",
+  "notaOrtografia": "Nivel C1 DECLARADO por criterio (anclas-ru.mjs): Gógol petersburgués y Мёртвые души — período largo, digresión, ironía. Se publica la redacción de 1842 de Тарас Бульба; la de 1835 (que ru.wikisource enlaza como subpágina) queda fuera para no duplicar la obra.",
+  "recursivo": true,
+  "excluir": [
+   "Тарас Бульба (Гоголь)/Редакция «Миргорода» 1835"
+  ]
+ },
+ {
+  "autor": "Николай Гоголь",
+  "muerteAutor": 1852,
+  "slug": "gogol-peterburgskie-povesti",
+  "titulo": "Петербургские повести",
+  "publicacion": 1842,
+  "modo": "coleccion",
+  "paginas": [
+   "Невский проспект (Гоголь)",
+   "Нос (Гоголь)",
+   "Портрет (Гоголь)",
+   "Шинель (Гоголь)",
+   "Записки сумасшедшего (Гоголь)",
+   "Коляска (Гоголь)",
+   "Рим (Гоголь)"
+  ],
+  "minPalabras": 200,
+  "nivel": "C1",
+  "notaOrtografia": "Nivel C1 DECLARADO por criterio (anclas-ru.mjs): Gógol petersburgués y Мёртвые души — período largo, digresión, ironía.",
+  "recursivo": true
+ },
+ {
+  "autor": "Николай Гоголь",
+  "muerteAutor": 1852,
+  "slug": "gogol-myortvye-dushi",
+  "titulo": "Мёртвые души",
+  "publicacion": 1842,
+  "modo": "subpaginas",
+  "pagina": "Мёртвые души (Гоголь)",
+  "recursivo": true,
+  "agrupar": 3500,
+  "nivel": "C1",
+  "notaOrtografia": "Nivel C1 DECLARADO por criterio (anclas-ru.mjs): Gógol petersburgués y Мёртвые души — período largo, digresión, ironía."
+ },
+ {
+  "autor": "Николай Гоголь",
+  "muerteAutor": 1852,
+  "slug": "gogol-revizor",
+  "titulo": "Ревизор",
+  "publicacion": 1836,
+  "modo": "subpaginas",
+  "pagina": "Ревизор (Гоголь)",
+  "recursivo": true,
+  "agrupar": 2500,
+  "nivel": "B2",
+  "notaOrtografia": "Nivel B2 declarado: comedia — diálogo coloquial, réplicas cortas."
+ },
+ {
+  "autor": "Николай Гоголь",
+  "muerteAutor": 1852,
+  "slug": "gogol-zhenitba",
+  "titulo": "Женитьба",
+  "publicacion": 1842,
+  "modo": "subpaginas",
+  "pagina": "Женитьба (Гоголь)",
+  "recursivo": true,
+  "agrupar": 2500,
+  "nivel": "B2",
+  "notaOrtografia": "Nivel B2 declarado: comedia — diálogo coloquial, réplicas cortas."
+ }
+]
