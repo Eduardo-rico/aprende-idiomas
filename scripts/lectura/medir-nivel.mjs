@@ -95,6 +95,38 @@ const LENGUAS = {
     // Zeyer) se declara en la tanda.
     cortes: { A2: 20.0, B1: 26.5, B2: 28.5 },
   },
+  ru: {
+    // а е ё и о у ы э ю я. La «й» es semivocal y no cuenta (лей, май
+    // son monosílabos); la «ѣ» y la «і» de la grafía pre-1918 cuentan
+    // como vocales para que esas piezas se midan con la misma regla.
+    vocales: 'аеёиоуыэюяѣі',
+    // Medido 2026-09-02 (node scripts/lectura/anclas-ru.mjs, 31 obras):
+    //   abajo   — Ушинский 19,6 · 25,3; Толстой (книги для чтения) 24,3 ·
+    //             25,6, Филипок 23,6, Три медведя 30,5; Афанасьев 25,9 ·
+    //             27,6; Мамин-Сибиряк 23,6.            mediana 25,3
+    //   medio-b — Чехов corto 31,3 · 32,3 · 34,5; Кавказский пленник 27,4;
+    //             Белкин 33,4 · 37,4; Аленький цветочек 32,2.  mediana 32,3
+    //   medio   — Чехов maduro 27,8 · 30,2 · 31,0; Тургенев 29,8 · 34,1;
+    //             Детство 33,4; Гоголь (Вечера) 30,4.   mediana 30,4
+    //   arriba  — Шинель 33,9; Белые ночи 26,4; Левша 30,8; Салтыков
+    //             (Премудрый пискарь) 20,8.              mediana 30,8
+    //   a mano  — Война и мир 34,5; Карамазовы 31,6.
+    // La métrica reproduce SÓLO el primer escalón: lo escrito para niños
+    // (mediana 25,3) queda por debajo de todo lo demás (30-32). Entre B1,
+    // B2 y C1 NO ordena: el Chéjov de una página (31-34) mide como Gógol
+    // (34) y la fábula satírica de Saltykov (20,8) mide como un cuento
+    // infantil — la morfología rusa alarga toda palabra y la dificultad
+    // real está en la sintaxis, el léxico y la ironía, que este eje no
+    // ve. La longitud de frase separa el diálogo (Chéjov 6-7) de la
+    // descripción (Gógol 23, Karamázov 24, Aksákov 29), no el nivel.
+    // DECISIÓN: el corte A2 (26,0) se usa; los demás caen ENTRE las
+    // medianas y son sólo un fallback para lo no declarado. El nivel de
+    // cada obra rusa se DECLARA en la tanda por el criterio escrito en
+    // anclas-ru.mjs (Chéjov temprano B1, Chéjov maduro/Turguénev B2,
+    // Gógol petersburgués/Dostoyevski/Leskov C1, novelas grandes C2), y
+    // el piso por escala sigue mandando sobre la densidad.
+    cortes: { A2: 26.0, B1: 30.0, B2: 33.0 },
+  },
 };
 
 const VOCALES = LENGUAS.pt.vocales;

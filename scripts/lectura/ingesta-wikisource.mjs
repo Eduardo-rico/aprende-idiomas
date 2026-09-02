@@ -103,10 +103,12 @@ function aplicarErratas(id, parrafos) {
   return n;
 }
 
-const slugify = (t) => t.toLowerCase()
+// Fase F-RU: un alfabeto no latino necesita transliterar (si no, todo id
+// cirílico quedaba en «--»); el perfil de la lengua la trae si la necesita.
+const slugify = PERFIL.slug ?? ((t) => t.toLowerCase()
   .replace(/ș/g, 's').replace(/ț/g, 't').replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
   .normalize('NFD').replace(/[̀-ͯ]/g, '')
-  .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''));
 
 // ── descarga (con caché en disco) ────────────────────────────────
 async function api(params) {
@@ -139,22 +141,34 @@ async function api(params) {
 }
 
 /** HTML parseado de una página; `null` si no existe. */
-async function bajarHtml(titulo) {
+const redirigidas = [];
+async function bajarHtml(titulo, salto = 0) {
   const f = path.join(CACHE, `${slugify(titulo)}-${hash(titulo)}.html`);
+  let html;
   if (fs.existsSync(f)) {
-    const t = fs.readFileSync(f, 'utf8');
-    return t === '' ? null : t;
+    html = fs.readFileSync(f, 'utf8');
+    if (html === '') return null;
+  } else {
+    const d = await api({ action: 'parse', page: titulo, prop: 'text', disableeditsection: 1, redirects: 1 });
+    if (d.error) {
+      if (d.error.code === 'missingtitle') { fs.writeFileSync(f, ''); return null; }
+      throw new Error(`${titulo}: ${d.error.info}`);
+    }
+    html = d.parse.text['*'];
+    fs.writeFileSync(f, html);
+    // Un respiro entre descargas: 150 páginas seguidas sin pausa dieron
+    // 429 en la tanda de poesía, y el 429 cuatro veces seguidas tumba la obra.
+    await new Promise((ok) => setTimeout(ok, PERFIL.espaciadoDescargas ?? 250));
   }
-  const d = await api({ action: 'parse', page: titulo, prop: 'text', disableeditsection: 1, redirects: 1 });
-  if (d.error) {
-    if (d.error.code === 'missingtitle') { fs.writeFileSync(f, ''); return null; }
-    throw new Error(`${titulo}: ${d.error.info}`);
+  // Fase F-RU: en ru.wikisource «Título (Autor)» suele ser una LISTA DE
+  // REDACCIONES (una subpágina por edición, en grafía vieja o moderna) o
+  // una desambiguación. El perfil decide a cuál ir (o que no es obra).
+  if (PERFIL.redirigir && salto < 3) {
+    const doc = new JSDOM(`<body>${html}</body>`).window.document;
+    const destino = PERFIL.redirigir(doc, titulo);
+    if (destino === false) { redirigidas.push(`${titulo} → (no es una obra)`); return null; }
+    if (typeof destino === 'string' && destino !== titulo) { redirigidas.push(`${titulo} → ${destino.slice(titulo.length)}`); return bajarHtml(destino, salto + 1); }
   }
-  const html = d.parse.text['*'];
-  fs.writeFileSync(f, html);
-  // Un respiro entre descargas: 150 páginas seguidas sin pausa dieron
-  // 429 en la tanda de poesía, y el 429 cuatro veces seguidas tumba la obra.
-  await new Promise((ok) => setTimeout(ok, PERFIL.espaciadoDescargas ?? 250));
   return html;
 }
 
@@ -178,6 +192,7 @@ async function bajarRaw(titulo) {
     await new Promise((ok) => setTimeout(ok, ms));
   }
   if (t === null) throw new Error(`${titulo}: raw 429/5xx ocho veces seguidas`);
+  if (PERFIL.preprocesarRaw) t = PERFIL.preprocesarRaw(t);
   fs.writeFileSync(f, t);
   await new Promise((ok) => setTimeout(ok, PERFIL.espaciadoDescargas ?? 250));
   return t;
@@ -203,6 +218,9 @@ function bloquesDe(html) {
   const dom = new JSDOM(`<body>${html}</body>`);
   const doc = dom.window.document;
   for (const sel of QUITAR) for (const n of doc.querySelectorAll(sel)) n.remove();
+  // Fase F-RU: el perfil puede reordenar el DOM antes de leerlo (ru.wikisource
+  // envuelve libros enteros, con sus encabezados, en un <div class="poem">).
+  if (PERFIL.prepararDoc) PERFIL.prepararDoc(doc);
   // comentarios HTML
   const walker = doc.createTreeWalker(doc.body, 128 /* COMMENT */);
   const coms = [];
@@ -464,19 +482,38 @@ async function ingerir(obra) {
   } else if (obra.modo === 'subpaginas') {
     const html = await bajarHtml(obra.pagina);
     if (!html) throw new Error(`la página madre «${obra.pagina}» no existe`);
-    const subs = subpaginasDe(html, obra.pagina).filter((s) => !(obra.excluir ?? []).includes(s.texto) && !(obra.excluir ?? []).includes(s.titulo));
+    const excluida = (s) => (obra.excluir ?? []).includes(s.texto) || (obra.excluir ?? []).includes(s.titulo)
+      || (obra.excluirRe && new RegExp(obra.excluirRe, 'u').test(s.titulo));
+    // `soloDirectas`: sólo las hijas inmediatas («…/Книга первая», no
+    // «…/Книга первая/I»), cuando la madre enlaza los dos niveles y la
+    // hija ya trae el texto entero (Karamázov en ru.wikisource).
+    const directa = (s) => !obra.soloDirectas || !s.titulo.slice(obra.pagina.length + 1).includes('/');
+    let subs = subpaginasDe(html, obra.pagina).filter((s) => !excluida(s) && directa(s));
     if (subs.length < 2) throw new Error(`la página madre sólo enlaza ${subs.length} subpáginas`);
-    for (const s of subs) {
+    // `recursivo` (fase F-RU): una subpágina que es a su vez ÍNDICE
+    // (menos de `min` palabras y ≥2 enlaces a sus propias subpáginas)
+    // se sustituye por sus hijas, en orden y sin repetir: «Война и мир»
+    // enlaza tomos, y cada tomo enlaza (o trae) sus capítulos.
+    const vistas = new Set(subs.map((s) => s.titulo));
+    const cola = [...subs];
+    subs = [];
+    while (cola.length) {
+      const s = cola.shift();
       const h = await bajarHtml(s.titulo);
       if (!h) { rojas.push(s.titulo); continue; }
-      const b = bloquesDe(h); suma(b.tablas);
+      const b = bloquesDe(h); 
+      if (obra.recursivo && palabrasDe(b.bloques) < min) {
+        const hijas = subpaginasDe(h, s.titulo).filter((x) => !excluida(x) && !vistas.has(x.titulo));
+        if (hijas.length >= 2) { for (const x of hijas) vistas.add(x.titulo); cola.unshift(...hijas); console.log(`    índice «${s.titulo.slice(obra.pagina.length)}» → ${hijas.length} subpáginas`); continue; }
+      }
+      suma(b.tablas);
       crudas.push({ titulo: s.texto, bloques: b.bloques.map((x) => (x.h !== undefined ? { texto: x.texto } : x)), pagina: s.titulo });
     }
     if (rojas.length) throw new Error(`${rojas.length} subpáginas no existen (${rojas.slice(0, 3).join(', ')}) — me niego a publicar la obra incompleta`);
   } else if (obra.modo === 'coleccion') {
     let lista;
     if (obra.paginas) lista = obra.paginas.map((p) => (typeof p === 'string' ? { titulo: p, texto: p.replace(/ \([^)]*\)$/, '') } : p));
-    else lista = enlacesDeSeccion(await bajarRaw(`Autor:${obra.autorPagina}`), obra.seccion);
+    else lista = enlacesDeSeccion(await bajarRaw(`${PERFIL.prefijoAutor ?? 'Autor'}:${obra.autorPagina}`), obra.seccion);
     const excluir = new Set((obra.excluir ?? []).map(normalizarDiacriticos));
     lista = lista.filter((e) => !excluir.has(e.titulo) && !excluir.has(e.texto));
     const vistos = new Set();
@@ -526,6 +563,23 @@ async function ingerir(obra) {
     if (cortos.length && !obra.permitirCortos) {
       throw new Error(`${cortos.length} piezas de <${min} palabras EN MEDIO (${cortos.slice(0, 4).map((p) => `«${p.titulos[0]}»=${p.palabras}`).join(', ')}) — segmentación rota, me niego.`);
     }
+  }
+  // Fase F-RU: en una COLECCIÓN cada pieza es independiente y pasa el gate
+  // de lengua y el de grafía por su cuenta: Afanásiev trae cuentos en
+  // ucraniano y bielorruso entre los rusos, y páginas de dos ediciones.
+  // Las que no pasan se quitan y SE REPORTAN; una obra continua sigue
+  // fallando entera (abajo), porque ahí un capítulo fuera es un hueco.
+  const caidas = [];
+  if (esColeccion) {
+    piezas = piezas.filter((p) => {
+      const t = p.bloques.map((b) => b.texto).join('\n');
+      const g = gateDiacriticos(t);
+      if (!g.ok) { caidas.push(`«${p.titulos.filter(Boolean)[0]}»: ${g.detalle}`); return false; }
+      const gr = medirGrafia(t);
+      if (gr.mezcla) { caidas.push(`«${p.titulos.filter(Boolean)[0]}»: ${gr.etiqueta}`); return false; }
+      return true;
+    });
+    if (caidas.length) console.log(`    piezas fuera por gate (${caidas.length}): ${caidas.join(' · ')}`);
   }
   if (prePieza) piezas.unshift(prePieza);
   if (!piezas.length) throw new Error('cero piezas tras el filtro');
@@ -587,6 +641,9 @@ async function ingerir(obra) {
     // La grafía se mide POR PIEZA: en un volumen conviven páginas
     // transcritas con «sunt» y páginas con «sînt» (Creangă, Postume).
     const grafiaPieza = medirGrafia(p.bloques.map((b) => b.texto).join('\n'));
+    // Fase F-RU: una pieza con la grafía MEZCLADA (dos ediciones pegadas,
+    // conversión a medias) no entra; el perfil decide qué es mezcla.
+    if (grafiaPieza.mezcla) throw new Error(`«${tituloPieza}»: ${grafiaPieza.nota} — exclúyela o busca otra edición`);
     const notaPieza = grafiaPieza.nota + (obra.notaOrtografia ? ` ${obra.notaOrtografia}` : '');
     const meta = {
       id,
@@ -632,6 +689,7 @@ for (const obra of tanda) {
       `${r.tablas.n ? `  tablas fuera ${r.tablas.n}/${r.tablas.palabras} pal` : ''}` +
       `${r.rojas.length ? `  páginas rojas ${r.rojas.length}` : ''}`,
     );
+    if (redirigidas.length) { console.log(`    redacciones resueltas (${redirigidas.length}): ${redirigidas.slice(0, 6).join(' · ')}${redirigidas.length > 6 ? ' …' : ''}`); redirigidas.length = 0; }
   } catch (e) {
     fallos.push(`${obra.slug}: ${e.message}`);
     console.log(`✗ ${obra.slug.padEnd(36)} ${e.message}`);
