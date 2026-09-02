@@ -17,16 +17,33 @@
 #   · colisión de id con el catálogo público → aborta todo
 #
 # Uso: python3 scripts/lectura/ingesta-privada-pdf.py <config.json>
-import json, re, sys, unicodedata
+import json, re, subprocess, sys, unicodedata
 from pathlib import Path
 from pypdf import PdfReader
 
 cfg = json.load(open(sys.argv[1]))
-RAIZ = Path.cwd()
-OUT = RAIZ / 'lib/data/languages/pt/lecturas-privadas'
-PUB = RAIZ / 'lib/data/languages/pt/lecturas'
+# Fase F (2026-09-02): parametrizado por lengua. `lang` (default pt) elige
+# el estante; `raizSalida` permite escribir en OTRO checkout (el estante
+# privado está gitignorado y se ingiere en el checkout principal, no en
+# un worktree). Los scripts se resuelven desde este fichero.
+LANG = cfg.get('lang', 'pt')
+RAIZ = Path(cfg.get('raizSalida', Path.cwd()))
+AQUI = Path(__file__).resolve().parent
+OUT = RAIZ / f'lib/data/languages/{LANG}/lecturas-privadas'
+PUB = RAIZ / f'lib/data/languages/{LANG}/lecturas'
 publicos = {p.stem for p in PUB.glob('*.json')}
 OUT.mkdir(parents=True, exist_ok=True)
+
+
+def normalizar(s):
+    # ș/ț con COMA (U+0219/U+021B), nunca cedilla: la misma regla que
+    # `texto-ro.mjs` (normalizarDiacriticos); aquí sólo para el rumano.
+    # La verificación de verdad la hace `gate-privadas.mjs` al final, con
+    # el módulo de node — así la regla vive en un solo sitio.
+    s = unicodedata.normalize('NFC', s)
+    if LANG == 'ro':
+        s = s.replace('ş', 'ș').replace('Ş', 'Ș').replace('ţ', 'ț').replace('Ţ', 'Ț')
+    return s
 
 r = PdfReader(cfg['pdf'])
 ini, fin = cfg.get('pagInicio', 0), cfg.get('pagFin', len(r.pages))
@@ -41,8 +58,10 @@ excluir = set(cfg.get('titulosExcluir', []))
 lineas, folios = [], 0
 for i in range(ini, min(fin, len(r.pages))):
     for ln in (r.pages[i].extract_text() or '').split('\n'):
+        # pypdf separa palabras con TAB en algunos PDF (Humanitas): a espacio
+        ln = normalizar(ln.replace('\t', ' '))
         if ln.strip():
-            lineas.append(ln.strip())
+            lineas.append(re.sub(r' {2,}', ' ', ln.strip()))
 
 # ── 2. partir en cuentos por línea-título ──
 # Tres modos de detectar el título:
@@ -130,7 +149,11 @@ def reflujo(ls):
             parrafos.append(buf)
             buf = ln
         elif buf.endswith('-') and not buf.endswith(' -'):
-            buf = buf[:-1] + ln  # des-guionado
+            # des-guionado… salvo donde el guion es RASGO de la lengua: en
+            # rumano «se-ntindea», «m-a», «zona-ntunecată» parten línea en
+            # el guion y unirlos sin él da «sentindea» (49 de 49 líneas
+            # del PDF de Cărtărescu). `guionEsRasgo` lo conserva.
+            buf = (buf if cfg.get('guionEsRasgo') else buf[:-1]) + ln
         else:
             buf = f'{buf} {ln}'.strip()
         if len(ln) < UMBRAL and buf.endswith(FIN_FRASE):
@@ -150,7 +173,9 @@ def slug(s):
 escritos, errores, total = [], [], 0
 for orden, (tit, ls) in enumerate(cuentos, 1):
     parrafos = reflujo(ls)
-    palabras = sum(len(p.split()) for p in parrafos)
+    # PALABRA = algo con una letra dentro (regla de PT: contar tokens
+    # sumaba las rayas y movía la cifra de portada un 2 %)
+    palabras = sum(1 for p in parrafos for t in p.split() if re.search(r'\w', t) and not t.isdigit())
     if palabras < cfg.get('minPalabras', 300):
         errores.append(f'«{tit}»: {palabras} palabras < mínimo — saltado')
         continue
@@ -176,6 +201,7 @@ for orden, (tit, ls) in enumerate(cuentos, 1):
         'licencia': 'copia personal — NO redistribuir; estante privado gitignorado',
         'nivel': cfg['nivel'], 'modo': 'texto', 'privada': True,
         'variante': cfg['variante'],
+        **({'notaOrtografia': cfg['notaOrtografia']} if cfg.get('notaOrtografia') else {}),
         'serie': {'id': cfg['serieId'], 'titulo': cfg['serieTitulo'], 'orden': orden},
         'parrafos': [{'texto': p} for p in parrafos],
     }
@@ -189,3 +215,13 @@ if errores:
     print(f'\ndescartes REPORTADOS ({len(errores)}):')
     for e in errores:
         print('  ✗', e)
+
+# Gate de la lengua sobre lo escrito (diacríticos, cedilla), con el MISMO
+# módulo que usa la biblioteca pública. Si falla, se borra lo escrito.
+if LANG != 'pt':
+    g = subprocess.run(['node', str(AQUI / 'gate-privadas.mjs'), LANG, str(OUT)], capture_output=True, text=True)
+    print(g.stdout.strip())
+    if g.returncode != 0:
+        for e in escritos:
+            (OUT / f"{e.split(' · ')[0]}.json").unlink(missing_ok=True)
+        sys.exit(f'GATE de {LANG} en rojo: {g.stderr.strip() or g.stdout.strip()} — nada queda escrito')

@@ -30,6 +30,22 @@ export function contarPalabras(parrafos) {
 }
 
 const RE_PAL = /[\p{L}'’-]+/gu;
+
+// «î» interior de la norma 1953-1993, con las EXENCIONES medidas sobre
+// las 104 lecturas que el gate DOOM3 marcaba sin nota (2026-09-02):
+//  - prefijo que abre raíz: neîncetat, reîncepe, preaînalt, nemaiîncăpând,
+//    subtîmpărțesc (prea/nemai/subt no estaban en la lista del gate);
+//  - interjecciones con î repetida (hîîî, psîîîî, îîh): no son ortografía;
+//  - francés en cursiva (maître, entraîne, plaît, fîtes): no es rumano.
+// Lo que queda (cînd, hotărît, pămînt, dînsa, întrînsul, Bîrlad) es grafía
+// vieja de verdad, y se declara aunque sean dos formas en mil.
+const PREFIJOS_I = /^(?:ne|re|pre|prea|de|dez|des|răs|sub|subt|supra|semi|auto|contra|inter|non|bine|rău|ante|post|para|ori|între|nemai)î/;
+const FRANCES_I = new Set(['maître', 'maîtresse', 'entraîne', 'plaît', 'fîtes', 'connaît', 'paraît', 'naître', 'dîner', 'île', 'maîtres', 'entraîner']);
+export function esIInteriorAntigua(p) {
+  if (!/\p{L}î\p{L}/u.test(p)) return false;
+  if (/îî/.test(p) || FRANCES_I.has(p)) return false;
+  return p.split('-').some((t) => t.length > 2 && /î/.test(t.slice(1, -1)) && !PREFIJOS_I.test(t));
+}
 // Elisión con apóstrofo de la grafía anterior a 1953: proclisis
 // (într'o, dintr'un, s'a, n'am, m'a, ș'apoi, c'un, vr'o, să'l, par'că)
 // o enclisis (pus'o, dat'o, să'țĭ). El apóstrofo curvo cuenta igual.
@@ -64,10 +80,11 @@ export function gateDiacriticos(texto, umbral = 0.15) {
 export function medirGrafia(texto) {
   const palabras = texto.toLowerCase().match(RE_PAL) ?? [];
   let conA = 0, conI = 0, sint = 0, sunt = 0, apostrofos = 0;
+  const ejemplosI = [];
   for (const p of palabras) {
     if (RE_ELISION.test(p)) apostrofos += 1;
     if (/\p{L}â\p{L}/u.test(p)) conA += 1;
-    if (/\p{L}î\p{L}/u.test(p) && !/^(ne|re|pre|de|dez|des|sub|supra|bine|semi|auto|contra|nemai)î/.test(p)) conI += 1;
+    if (esIInteriorAntigua(p)) { conI += 1; if (ejemplosI.length < 4 && !ejemplosI.includes(p)) ejemplosI.push(p); }
     if (/^s[îi]nt(em|eți|eti)?$/.test(p)) sint += 1;
     if (/^sunt(em|eți|eti)?$/.test(p)) sunt += 1;
   }
@@ -95,6 +112,13 @@ export function medirGrafia(texto) {
     nota = `${base} La transcripción mezcla las dos normas (â y î en interior de palabra: ${conA} y ${conI} formas). Se conserva tal cual: es la grafía de la edición, no un error.`;
   }
   if (sint > 0 && sunt > 0) nota += ` Conviven «sînt» (${sint}) y «sunt» (${sunt}).`;
+  // «Mixta con pocas formas»: una edición modernizada a la que se le
+  // escaparon dos «cînd» en mil palabras. No se corrige (es la fuente);
+  // se declara, para que el gate DOOM3 sepa que está visto.
+  if (etiqueta.startsWith('grafía actual') && (conI > 0 || sint > 0)) {
+    etiqueta += ` (+${conI + sint} formas con î sin modernizar)`;
+    nota += ` Quedan ${conI + sint} formas con «î» interior de la norma 1953-1993 sin modernizar (${[...ejemplosI, ...(sint ? ['sînt'] : [])].slice(0, 4).join(', ')}): se conservan tal cual.`;
+  }
   if (elision) {
     etiqueta += ' + apóstrofo pre-1953';
     nota += ` Conserva además el apóstrofo de elisión anterior a la reforma de 1953 (într'o, s'a, n'am: ${apostrofos} formas), donde la norma actual escribe guion. Es la grafía de la edición, no un error.`;
