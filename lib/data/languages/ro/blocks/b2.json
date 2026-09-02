@@ -238,5 +238,205 @@
       ],
       "hintEs": "puerta — con artículo definido enclítico (femenino en -ă)"
     }
+  },
+  {
+    "id": "b06a5f95",
+    "blockId": 2,
+    "lessonId": "b2-l1-articolul-enclitic",
+    "difficulty": 2,
+    "concepts": [
+      "r2-numerales-de"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "b06a5f95629a6036e6def16bd57b59a01eafa73a476216795ab39fc7db97129e",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «Tengo veinte años y vivo en Cluj.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Am douăzeci ani și locuiesc în Cluj.",
+      "correct": "Am douăzeci de ani și locuiesc în Cluj.",
+      "alternatives": [],
+      "calcoEs": "Tengo veinte años y vivo en Cluj.",
+      "explanationEs": "A partir de 20, el numeral no va pegado al sustantivo: se une con «de» — «douăzeci de ani». Por debajo de 20 no: «zece ani», «nouăsprezece ani»."
+    }
+  },
+  {
+    "id": "1e617364",
+    "blockId": 2,
+    "lessonId": "b2-l1-articolul-enclitic",
+    "difficulty": 2,
+    "concepts": [
+      "r2-numerales-de"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "1e617364188bdd0c283bf0aa6ac40d1e92066d3343cb84aab9fbe470553792cf",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «El billete cuesta cien lei.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Biletul costă o sută lei.",
+      "correct": "Biletul costă o sută de lei.",
+      "alternatives": [],
+      "calcoEs": "El billete cuesta cien lei.",
+      "explanationEs": "«O sută» es más de 20: pide «de» antes del sustantivo, «o sută de lei». El español no pone nada entre «cien» y «lei», y de ahí el calco."
+    }
+  },
+  {
+    "id": "353fa673",
+    "blockId": 2,
+    "lessonId": "b2-l1-articolul-enclitic",
+    "difficulty": 2,
+    "concepts": [
+      "r2-numerales-de"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "353fa673a57214ad96adc6afbedc20fa46f9db6204df8274210d2fc3b7b0d16e",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «Hay treinta alumnos en la clase.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Sunt treizeci elevi în clasă.",
+      "correct": "Sunt treizeci de elevi în clasă.",
+      "alternatives": [],
+      "calcoEs": "Hay treinta alumnos en la clase.",
+      "explanationEs": "Con «treizeci» el sustantivo va precedido de «de»: «treizeci de elevi». La regla es constante desde 20 hacia arriba."
+    }
+  },
+  {
+    "id": "8b6ff145",
+    "blockId": 2,
+    "lessonId": "b2-l1-articolul-enclitic",
+    "difficulty": 2,
+    "concepts": [
+      "r2-numerales-de"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "8b6ff145265ccf10fea8998b16a26179af0740cf411ca783af8404ac73bd3ad6",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «He comprado veinticinco manzanas.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Am cumpărat douăzeci și cinci mere.",
+      "correct": "Am cumpărat douăzeci și cinci de mere.",
+      "alternatives": [],
+      "calcoEs": "He comprado veinticinco manzanas.",
+      "explanationEs": "El «de» lo pide el ÚLTIMO tramo del numeral: «douăzeci și cinci DE mere» (25), pero «o sută doi lei» (102) sin «de», porque el tramo final es «doi»."
+    }
+  },
+  {
+    "id": "3dee17ed",
+    "blockId": 2,
+    "lessonId": "b2-l1-articolul-enclitic",
+    "difficulty": 2,
+    "concepts": [
+      "r2-numerales-de"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "3dee17ed4c51e2a9857673eed521e952103a3548935b5e76474d1339ccd39f53",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «Mi abuelo tiene ochenta años.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Bunicul meu are optzeci ani.",
+      "correct": "Bunicul meu are optzeci de ani.",
+      "alternatives": [],
+      "calcoEs": "Mi abuelo tiene ochenta años.",
+      "explanationEs": "«Optzeci de ani»: la edad se dice siempre con «de» a partir de los 20. «Optzeci ani» es el calco de «ochenta años»."
+    }
+  },
+  {
+    "id": "f4b8e78e",
+    "blockId": 2,
+    "lessonId": "b2-l1-articolul-enclitic",
+    "difficulty": 2,
+    "concepts": [
+      "r2-numerales-de"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "f4b8e78e07c32d4c1ad7c6b99e052e4d4b491bdf988ed3d25e0c30829f7eb954",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «El libro tiene doscientas páginas.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Cartea are două sute pagini.",
+      "correct": "Cartea are două sute de pagini.",
+      "alternatives": [],
+      "calcoEs": "El libro tiene doscientas páginas.",
+      "explanationEs": "Las centenas llevan «de» como las decenas: «două sute de pagini». El español dice «doscientas páginas» sin enlace, y ése es el calco."
+    }
+  },
+  {
+    "id": "bbb22e8f",
+    "blockId": 2,
+    "lessonId": "b2-l1-articolul-enclitic",
+    "difficulty": 2,
+    "concepts": [
+      "r2-numerales-de"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "bbb22e8f92455dc18b1450cf4a74045c041ed3e886667f6d3756ee9fdaa87ad8",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «Necesito cincuenta lei para el billete.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Am nevoie de cincizeci lei pentru bilet.",
+      "correct": "Am nevoie de cincizeci de lei pentru bilet.",
+      "alternatives": [],
+      "calcoEs": "Necesito cincuenta lei para el billete.",
+      "explanationEs": "Aunque ya haya un «de» antes («am nevoie de»), el numeral lleva el suyo: «de cincizeci de lei». Dos «de» seguidos son normales aquí."
+    }
+  },
+  {
+    "id": "dd4a6d5d",
+    "blockId": 2,
+    "lessonId": "b2-l1-articolul-enclitic",
+    "difficulty": 2,
+    "concepts": [
+      "r2-numerales-de"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "dd4a6d5d002d119b1e79cf39a15a90bc4a922938d717f48c7277099576fbca7f",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «En el curso hay cuarenta estudiantes.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "La curs sunt patruzeci studenți.",
+      "correct": "La curs sunt patruzeci de studenți.",
+      "alternatives": [],
+      "calcoEs": "En el curso hay cuarenta estudiantes.",
+      "explanationEs": "«Patruzeci de studenți»: la regla del «de» no depende del sustantivo ni del contexto, sólo del último tramo del numeral (de 20 en adelante; con «o sută unu», «o sută doi», no)."
+    }
   }
 ]

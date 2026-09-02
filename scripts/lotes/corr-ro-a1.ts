@@ -35,18 +35,21 @@ export const ITEMS: ItemCorreccion[] = [
   { p: SA, pasada: 1, espejoEs: false,
     mala: 'Vreau a merge la mare vara aceasta.', buena: 'Vreau să merg la mare vara aceasta.',
     calcoEs: 'Quiero ir al mar este verano.',
-    explicacion: 'Tras «vreau» el rumano no pone infinitivo sino «să» + presente: el verbo se conjuga con la misma persona que «vreau». «A merge» es la forma de diccionario y no se usa como complemento.' },
+    explicacion: 'Tras «vreau» el rumano actual no pone infinitivo sino «să» + presente: el verbo se conjuga con la misma persona que «vreau». (Otros verbos, como «a putea» o «a începe», sí admiten infinitivo; «a vrea» no.)' },
   { p: SA, pasada: 1, espejoEs: false,
     mala: 'Pot a veni mâine la tine.', buena: 'Pot să vin mâine la tine.', alt: ['Pot veni mâine la tine.'],
     calcoEs: 'Puedo venir mañana a tu casa.',
-    explicacion: 'Con «a putea» hay dos salidas: «pot să vin» (conjuntivo) o «pot veni» (infinitivo SIN la partícula «a»). Lo que nunca existe es «pot a veni»: la «a» del infinitivo cae detrás de «a putea».' },
+    explicacion: 'Con «a putea» hay dos salidas: «pot să vin» (conjuntivo) o «pot veni» (infinitivo SIN la partícula «a»). En rumano actual no se dice «pot a veni»: la «a» del infinitivo cae detrás de «a putea».' },
+  // «Îmi place a citi» salió: el infinitivo-sujeto es libresco pero lícito
+  // (GALR; «îmi place a crede că» vive en registro culto). El lingüista lo
+  // cazó: un ítem de corrección sólo entra con la mala atestada agramatical.
   { p: SA, pasada: 1, espejoEs: false,
-    mala: 'Îmi place a citi seara.', buena: 'Îmi place să citesc seara.',
-    calcoEs: 'Me gusta leer por la noche.',
-    explicacion: '«Îmi place» rige «să» + presente en la persona del que disfruta: «îmi place să citesc» (a mí), «îți place să citești» (a ti). El infinitivo español se convierte en verbo conjugado.' },
+    mala: 'Putem a merge pe jos până la gară.', buena: 'Putem să mergem pe jos până la gară.', alt: ['Putem merge pe jos până la gară.'],
+    calcoEs: 'Podemos ir a pie hasta la estación.',
+    explicacion: 'Con «a putea» hay dos salidas: «putem să mergem» o «putem merge» (infinitivo sin «a»). La partícula «a» detrás de «putem» es el calco de «podemos ir».' },
   { p: SA, pasada: 1, espejoEs: false,
-    mala: 'Trebuie a pleca acum.', buena: 'Trebuie să plec acum.',
-    calcoEs: 'Tengo que irme ahora.',
+    mala: 'Eu trebuie a pleca acum.', buena: 'Eu trebuie să plec acum.',
+    calcoEs: 'Yo debo irme ahora.',
     explicacion: '«Trebuie» es invariable y el sujeto lo lleva el conjuntivo: «trebuie să plec» (yo), «trebuie să pleci» (tú). «Trebuie a pleca» calca «tener que irse» y no existe.' },
   { p: SA, pasada: 1, espejoEs: false,
     mala: 'Vrem a mânca ceva înainte de film.', buena: 'Vrem să mâncăm ceva înainte de film.',
@@ -54,16 +57,19 @@ export const ITEMS: ItemCorreccion[] = [
     explicacion: 'El verbo subordinado se conjuga con «să» en la MISMA persona que el principal: «vrem să mâncăm». La 1.ª del plural sale del tema del infinitivo (mânc-), no de «mănânc».' },
   { p: SA, pasada: 1, espejoEs: false,
     mala: 'Ea vrea a dormi puțin după masă.', buena: 'Ea vrea să doarmă puțin după masă.',
-    calcoEs: 'Ella quiere dormir un poco después de comer.',
+    calcoEs: 'Ella quiere dormir un poco después de la comida.',
     explicacion: 'En 3.ª persona el conjuntivo tiene forma propia, distinta del indicativo: «doarme» → «să doarmă». Tras «vrea» va esa forma, nunca el infinitivo.' },
   { p: SA, pasada: 1, espejoEs: false,
     mala: 'Poți a mă ajuta cu bagajul?', buena: 'Poți să mă ajuți cu bagajul?', alt: ['Mă poți ajuta cu bagajul?'],
     calcoEs: '¿Puedes ayudarme con el equipaje?',
-    explicacion: 'Con «poți» el complemento va con «să» + presente («să mă ajuți») o con infinitivo sin «a» y el clítico delante («mă poți ajuta»). «Poți a mă ajuta» mezcla las dos y no existe.' },
+    explicacion: 'Con «poți» el complemento va con «să» + presente («să mă ajuți») o con infinitivo sin «a» y el clítico delante («mă poți ajuta»). «Poți a mă ajuta» mezcla las dos y en rumano actual no se dice.' },
+  // «Începem a lucra» salió: «a începe» RIGE infinitivo con «a» (DGLR; «a
+  // început a ninge» es literario vivo). Era el único ítem del lote donde el
+  // calco acertaba. Lo cazó el lingüista.
   { p: SA, pasada: 1, espejoEs: false,
-    mala: 'Începem a lucra la ora opt.', buena: 'Începem să lucrăm la ora opt.',
-    calcoEs: 'Empezamos a trabajar a las ocho.',
-    explicacion: '«A începe» rige «să» + presente conjugado con la misma persona («începem să lucrăm»). El «a trabajar» español —preposición + infinitivo— no se calca.' },
+    mala: 'Nu poți a intra fără bilet.', buena: 'Nu poți să intri fără bilet.', alt: ['Nu poți intra fără bilet.'],
+    calcoEs: 'No puedes entrar sin billete.',
+    explicacion: 'Tras «a putea» el infinitivo va SIN «a» («nu poți intra») o se usa «să» + presente («nu poți să intri»). «Poți a intra» calca «puedes entrar» con la partícula puesta.' },
 
   // ══ r3-trebuie-invariable (8) ═════════════════════════════════════
   // «trebuie» no concuerda: el sujeto lo lleva el conjuntivo. El calco
@@ -73,7 +79,7 @@ export const ITEMS: ItemCorreccion[] = [
   { p: TREBUIE, pasada: 1, espejoEs: false,
     mala: 'Trebuim să învățăm mai mult pentru examen.', buena: 'Trebuie să învățăm mai mult pentru examen.',
     calcoEs: 'Debemos estudiar más para el examen.',
-    explicacion: '«Trebuie» es una forma única para todas las personas; la persona la marca el verbo que sigue: «trebuie să învățăm». «Trebuim» calca «debemos» y no existe como modal.' },
+    explicacion: 'Como modal (con «să»), «trebuie» es una forma única para todas las personas; la persona la marca el verbo que sigue: «trebuie să învățăm». «Trebuim» calca «debemos».' },
   { p: TREBUIE, pasada: 1, espejoEs: false,
     mala: 'Trebuiți să veniți la timp.', buena: 'Trebuie să veniți la timp.',
     calcoEs: 'Debéis venir a tiempo.',
@@ -93,7 +99,7 @@ export const ITEMS: ItemCorreccion[] = [
   { p: TREBUIE, pasada: 1, espejoEs: false,
     mala: 'Ei trebuiesc să lucreze și sâmbăta.', buena: 'Ei trebuie să lucreze și sâmbăta.',
     calcoEs: 'Ellos deben trabajar también los sábados.',
-    explicacion: '«Trebuie» vale para «ei» igual que para «eu»: la 3.ª del plural está en «să lucreze». «Trebuiesc» como modal no existe.' },
+    explicacion: 'Como modal, «trebuie» vale para «ei» igual que para «eu»: la 3.ª del plural está en «să lucreze». Existe un «trebuiesc» rumano, pero es otro verbo: «îmi trebuiesc bani» = me hacen falta, con la cosa como sujeto.' },
   { p: TREBUIE, pasada: 1, espejoEs: false,
     mala: 'Eu trebuiesc să citesc mai mult în română.', buena: 'Eu trebuie să citesc mai mult în română.',
     calcoEs: 'Yo debo leer más en rumano.',
@@ -108,10 +114,11 @@ export const ITEMS: ItemCorreccion[] = [
   // o sută DE lei. «Veinte años» sin nada es español perfecto y el calco
   // *douăzeci ani es lo que escribe todo hispanohablante.
   //
-  // (El dativo experimentante —mi-e foame— salió de este lote: «am foame»
-  // está atestado en DEX (a avea foame) y corregirlo castigaría una forma
-  // que un nativo usa. Entra cuando el lingüista ateste calco por calco
-  // cuáles son agramaticales.)
+  // (El dativo experimentante —mi-e foame— salió de este lote por una
+  // premisa que resultó FALSA: «am foame» NO está en DEX (sólo «a-i fi
+  // foame»). Lo que sí está atestado, y NO se puede corregir, es «am
+  // teamă» (NODEX), «am frică» (Alecsandri, DLRLC) y «am rușine» (MDA2,
+  // raro). Los 8 calcos agramaticales van al lote 3 con su gate propio.)
   { p: NUM, pasada: 1, espejoEs: false,
     mala: 'Am douăzeci ani și locuiesc în Cluj.', buena: 'Am douăzeci de ani și locuiesc în Cluj.',
     calcoEs: 'Tengo veinte años y vivo en Cluj.',
@@ -127,7 +134,7 @@ export const ITEMS: ItemCorreccion[] = [
   { p: NUM, pasada: 1, espejoEs: false,
     mala: 'Am cumpărat douăzeci și cinci mere.', buena: 'Am cumpărat douăzeci și cinci de mere.',
     calcoEs: 'He comprado veinticinco manzanas.',
-    explicacion: 'El «de» va también con los compuestos: «douăzeci și cinci DE mere». Lo que cuenta es que el numeral entero sea 20 o más.' },
+    explicacion: 'El «de» lo pide el ÚLTIMO tramo del numeral: «douăzeci și cinci DE mere» (25), pero «o sută doi lei» (102) sin «de», porque el tramo final es «doi».' },
   { p: NUM, pasada: 1, espejoEs: false,
     mala: 'Bunicul meu are optzeci ani.', buena: 'Bunicul meu are optzeci de ani.',
     calcoEs: 'Mi abuelo tiene ochenta años.',
@@ -143,7 +150,7 @@ export const ITEMS: ItemCorreccion[] = [
   { p: NUM, pasada: 1, espejoEs: false,
     mala: 'La curs sunt patruzeci studenți.', buena: 'La curs sunt patruzeci de studenți.',
     calcoEs: 'En el curso hay cuarenta estudiantes.',
-    explicacion: '«Patruzeci de studenți»: la regla del «de» no depende del sustantivo ni del contexto, sólo del numeral (≥ 20).' },
+    explicacion: '«Patruzeci de studenți»: la regla del «de» no depende del sustantivo ni del contexto, sólo del último tramo del numeral (de 20 en adelante; con «o sută unu», «o sută doi», no).' },
 ];
 
 /** Los gates de PT + los dos del rumano. */
@@ -162,6 +169,15 @@ export function verificar(items: ItemCorreccion[]): string[] {
     // cambia sea la del punto.
     if (x.p === TREBUIE && !/trebui(esc|m|ți|ești)/i.test(x.mala)) v.push(`${id}: el punto es «trebuie» invariable y la mala no conjuga el modal`);
     if (x.p === SA && !/\b(a|să) \p{L}+/u.test(x.mala)) v.push(`${id}: el punto es să vs infinitivo y la mala no lleva infinitivo con «a»`);
+    // La tarjeta pinta SÓLO la frase mala (ErrorCorrectionCard): si la mala
+    // no fija la persona, «Trebuie a pleca» admite să plec/pleci/plece/…
+    // y suspende cuatro respuestas correctas. Con regente invariable
+    // («trebuie») hace falta pronombre; con regente conjugado no.
+    if (x.p === SA && /(?<![\p{L}])trebuie a(?![\p{L}])/iu.test(x.mala) && !/(?<![\p{L}])(eu|tu|el|ea|noi|voi|ei|ele)(?![\p{L}])/iu.test(x.mala)) v.push(`${id}: la mala no fija la persona y el alumno no ve el calco — indeterminada`);
+    // Y el regente de la mala no puede ser uno que RIJA infinitivo con «a»
+    // (a începe, a încerca, a învăța, a ști, a apuca…): ahí la «mala» es
+    // rumano correcto. Lista DGLR.
+    if (x.p === SA && /(?<![\p{L}])(încep\p{L}*|încerc\p{L}*|înv[aă]ț\p{L}*|apuc\p{L}*|îndrăznesc|izbut\p{L}*|pornesc|primesc) a \p{L}/iu.test(x.mala)) v.push(`${id}: el regente rige infinitivo con «a» en rumano — la mala es correcta`);
     if (x.p === NUM && !/(zeci|sută|sute|mie|mii)( și \p{L}+)? \p{L}/u.test(x.mala)) v.push(`${id}: el punto es el «de» de los numerales y la mala no tiene numeral ≥ 20 pegado al sustantivo`);
     if (x.p === NUM && !/(zeci|sută|sute|mie|mii)( și \p{L}+)? de \p{L}/u.test(x.buena)) v.push(`${id}: la buena no lleva el «de» tras el numeral`);
   }

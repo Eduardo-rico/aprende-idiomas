@@ -478,5 +478,413 @@
       ],
       "hintEs": "presente, 3.ª del singular — verbo con sufijo -esc"
     }
+  },
+  {
+    "id": "1894328c",
+    "blockId": 3,
+    "lessonId": "b3-l1-prezentul",
+    "difficulty": 2,
+    "concepts": [
+      "r3-sa-vs-infinitivo"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "1894328ce221155c1ce8f071299cc4bf4542f1df25ed96e791a38fb0eb08da8b",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «Quiero ir al mar este verano.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Vreau a merge la mare vara aceasta.",
+      "correct": "Vreau să merg la mare vara aceasta.",
+      "alternatives": [],
+      "calcoEs": "Quiero ir al mar este verano.",
+      "explanationEs": "Tras «vreau» el rumano actual no pone infinitivo sino «să» + presente: el verbo se conjuga con la misma persona que «vreau». (Otros verbos, como «a putea» o «a începe», sí admiten infinitivo; «a vrea» no.)"
+    }
+  },
+  {
+    "id": "c691d2f8",
+    "blockId": 3,
+    "lessonId": "b3-l1-prezentul",
+    "difficulty": 2,
+    "concepts": [
+      "r3-sa-vs-infinitivo"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "c691d2f86b717278a6f153448367e9f73c3c3502be91fc2ec2f4d90f9a15f199",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «Puedo venir mañana a tu casa.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Pot a veni mâine la tine.",
+      "correct": "Pot să vin mâine la tine.",
+      "alternatives": [
+        "Pot veni mâine la tine."
+      ],
+      "calcoEs": "Puedo venir mañana a tu casa.",
+      "explanationEs": "Con «a putea» hay dos salidas: «pot să vin» (conjuntivo) o «pot veni» (infinitivo SIN la partícula «a»). En rumano actual no se dice «pot a veni»: la «a» del infinitivo cae detrás de «a putea»."
+    }
+  },
+  {
+    "id": "f1ae6e0f",
+    "blockId": 3,
+    "lessonId": "b3-l1-prezentul",
+    "difficulty": 2,
+    "concepts": [
+      "r3-sa-vs-infinitivo"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "f1ae6e0ff1fe4b75a5c6c4143b4090bc5ea21b973f97da7a1f5140579b1830dc",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «Podemos ir a pie hasta la estación.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Putem a merge pe jos până la gară.",
+      "correct": "Putem să mergem pe jos până la gară.",
+      "alternatives": [
+        "Putem merge pe jos până la gară."
+      ],
+      "calcoEs": "Podemos ir a pie hasta la estación.",
+      "explanationEs": "Con «a putea» hay dos salidas: «putem să mergem» o «putem merge» (infinitivo sin «a»). La partícula «a» detrás de «putem» es el calco de «podemos ir»."
+    }
+  },
+  {
+    "id": "db77e811",
+    "blockId": 3,
+    "lessonId": "b3-l1-prezentul",
+    "difficulty": 2,
+    "concepts": [
+      "r3-sa-vs-infinitivo"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "db77e8118206fd534bc59b65dbc22e2dc28016348020f88c9d971ab33071ae3f",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «Yo debo irme ahora.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Eu trebuie a pleca acum.",
+      "correct": "Eu trebuie să plec acum.",
+      "alternatives": [],
+      "calcoEs": "Yo debo irme ahora.",
+      "explanationEs": "«Trebuie» es invariable y el sujeto lo lleva el conjuntivo: «trebuie să plec» (yo), «trebuie să pleci» (tú). «Trebuie a pleca» calca «tener que irse» y no existe."
+    }
+  },
+  {
+    "id": "cbc1f6d5",
+    "blockId": 3,
+    "lessonId": "b3-l1-prezentul",
+    "difficulty": 2,
+    "concepts": [
+      "r3-sa-vs-infinitivo"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "cbc1f6d5d75839fc8d20984619684440366efd536a9be5f74726c072831b6772",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «Queremos comer algo antes de la película.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Vrem a mânca ceva înainte de film.",
+      "correct": "Vrem să mâncăm ceva înainte de film.",
+      "alternatives": [],
+      "calcoEs": "Queremos comer algo antes de la película.",
+      "explanationEs": "El verbo subordinado se conjuga con «să» en la MISMA persona que el principal: «vrem să mâncăm». La 1.ª del plural sale del tema del infinitivo (mânc-), no de «mănânc»."
+    }
+  },
+  {
+    "id": "f21e3c03",
+    "blockId": 3,
+    "lessonId": "b3-l1-prezentul",
+    "difficulty": 2,
+    "concepts": [
+      "r3-sa-vs-infinitivo"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "f21e3c03197f2e5c8cf1b18451033fa262622e1ba573dd45f1609791b90dbe46",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «Ella quiere dormir un poco después de la comida.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ea vrea a dormi puțin după masă.",
+      "correct": "Ea vrea să doarmă puțin după masă.",
+      "alternatives": [],
+      "calcoEs": "Ella quiere dormir un poco después de la comida.",
+      "explanationEs": "En 3.ª persona el conjuntivo tiene forma propia, distinta del indicativo: «doarme» → «să doarmă». Tras «vrea» va esa forma, nunca el infinitivo."
+    }
+  },
+  {
+    "id": "808e3830",
+    "blockId": 3,
+    "lessonId": "b3-l1-prezentul",
+    "difficulty": 2,
+    "concepts": [
+      "r3-sa-vs-infinitivo"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "808e38308c52aed8c8fed27f08af3998ff549c9f0bfa2fda79f59f14639c198b",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «¿Puedes ayudarme con el equipaje?»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Poți a mă ajuta cu bagajul?",
+      "correct": "Poți să mă ajuți cu bagajul?",
+      "alternatives": [
+        "Mă poți ajuta cu bagajul?"
+      ],
+      "calcoEs": "¿Puedes ayudarme con el equipaje?",
+      "explanationEs": "Con «poți» el complemento va con «să» + presente («să mă ajuți») o con infinitivo sin «a» y el clítico delante («mă poți ajuta»). «Poți a mă ajuta» mezcla las dos y en rumano actual no se dice."
+    }
+  },
+  {
+    "id": "67cd0fc2",
+    "blockId": 3,
+    "lessonId": "b3-l1-prezentul",
+    "difficulty": 2,
+    "concepts": [
+      "r3-sa-vs-infinitivo"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "67cd0fc24eccea10c54489c43911cfe2003c3c0255bfa3ea9e6bdb0be717bab0",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «No puedes entrar sin billete.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Nu poți a intra fără bilet.",
+      "correct": "Nu poți să intri fără bilet.",
+      "alternatives": [
+        "Nu poți intra fără bilet."
+      ],
+      "calcoEs": "No puedes entrar sin billete.",
+      "explanationEs": "Tras «a putea» el infinitivo va SIN «a» («nu poți intra») o se usa «să» + presente («nu poți să intri»). «Poți a intra» calca «puedes entrar» con la partícula puesta."
+    }
+  },
+  {
+    "id": "392c4429",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-trebuie-invariable"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "392c4429029696b8598ce6acb88755a396d767d821bd32c67760074a932d4073",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «Debemos estudiar más para el examen.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Trebuim să învățăm mai mult pentru examen.",
+      "correct": "Trebuie să învățăm mai mult pentru examen.",
+      "alternatives": [],
+      "calcoEs": "Debemos estudiar más para el examen.",
+      "explanationEs": "Como modal (con «să»), «trebuie» es una forma única para todas las personas; la persona la marca el verbo que sigue: «trebuie să învățăm». «Trebuim» calca «debemos»."
+    }
+  },
+  {
+    "id": "31007a1c",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-trebuie-invariable"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "31007a1c0fd8c1ee147222a2ea090e193278152790822151060dcfea1d808f2e",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «Debéis venir a tiempo.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Trebuiți să veniți la timp.",
+      "correct": "Trebuie să veniți la timp.",
+      "alternatives": [],
+      "calcoEs": "Debéis venir a tiempo.",
+      "explanationEs": "Aunque el sujeto sea «voi», el modal no cambia: «trebuie să veniți». La 2.ª del plural está en «veniți», no en el modal."
+    }
+  },
+  {
+    "id": "65b3e8fc",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-trebuie-invariable"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "65b3e8fcc73371d036440c1ef546ebd5a9a321853d7fe76b3511e8267839f7fe",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «Los niños deben dormir temprano.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Copiii trebuiesc să doarmă devreme.",
+      "correct": "Copiii trebuie să doarmă devreme.",
+      "alternatives": [],
+      "calcoEs": "Los niños deben dormir temprano.",
+      "explanationEs": "Con sujeto plural el modal sigue siendo «trebuie»: «copiii trebuie să doarmă». El plural vive en «copiii» y en «să doarmă», no en el modal."
+    }
+  },
+  {
+    "id": "a2cb7bae",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-trebuie-invariable"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "a2cb7baea632df48e9ab117429599f2a0fdb0b2d94932c643aa538140b2974fe",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «Debes comer más.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Trebuiești să mănânci mai mult.",
+      "correct": "Trebuie să mănânci mai mult.",
+      "alternatives": [],
+      "calcoEs": "Debes comer más.",
+      "explanationEs": "«Trebuie» no tiene forma de 2.ª persona: «trebuie să mănânci» ya dice «tú» en «mănânci». Conjugar el modal es calcar «debes»."
+    }
+  },
+  {
+    "id": "cbabc74f",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-trebuie-invariable"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "cbabc74fb34f0354a14bd99971ce967ac1a4801164d62cb9f618724b2f1ff455",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «Nosotros debemos pagar el alquiler hoy.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Noi trebuim să plătim chiria azi.",
+      "correct": "Noi trebuie să plătim chiria azi.",
+      "alternatives": [],
+      "calcoEs": "Nosotros debemos pagar el alquiler hoy.",
+      "explanationEs": "Incluso con «noi» explícito, el modal no concuerda: «noi trebuie să plătim». Es de los pocos verbos rumanos que no se conjugan con su sujeto."
+    }
+  },
+  {
+    "id": "fc36d616",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-trebuie-invariable"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "fc36d616b187ec4987cb6b124af3a8ad29b31c2fcbb0fa3e283a32dcea34b2f1",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «Ellos deben trabajar también los sábados.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ei trebuiesc să lucreze și sâmbăta.",
+      "correct": "Ei trebuie să lucreze și sâmbăta.",
+      "alternatives": [],
+      "calcoEs": "Ellos deben trabajar también los sábados.",
+      "explanationEs": "Como modal, «trebuie» vale para «ei» igual que para «eu»: la 3.ª del plural está en «să lucreze». Existe un «trebuiesc» rumano, pero es otro verbo: «îmi trebuiesc bani» = me hacen falta, con la cosa como sujeto."
+    }
+  },
+  {
+    "id": "a8149186",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-trebuie-invariable"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "a8149186a89ccb41b9d3f41711a633619e2a64a49efcf72ac6c494d3160d1a91",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «Yo debo leer más en rumano.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Eu trebuiesc să citesc mai mult în română.",
+      "correct": "Eu trebuie să citesc mai mult în română.",
+      "alternatives": [],
+      "calcoEs": "Yo debo leer más en rumano.",
+      "explanationEs": "La forma es la misma con «eu»: «eu trebuie să citesc». Al hispanohablante le sale «trebuiesc» porque conjuga «debo»; el rumano deja el modal quieto."
+    }
+  },
+  {
+    "id": "7c285d12",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-trebuie-invariable"
+    ],
+    "tags": [
+      "ro-corr-a1",
+      "correccion"
+    ],
+    "contentHash": "7c285d12ad65d191ef1ea397c6beee4e4b658faa2ce6c9706d9b71dcd2ba6b21",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1 (2026-09-01): la frase mala es el calco de «Tenemos que comprar pan y leche.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Trebuim să cumpărăm pâine și lapte.",
+      "correct": "Trebuie să cumpărăm pâine și lapte.",
+      "alternatives": [],
+      "calcoEs": "Tenemos que comprar pan y leche.",
+      "explanationEs": "«Tenemos que» también lleva al calco «trebuim». En rumano: «trebuie să cumpărăm», con el modal invariable y la persona en «cumpărăm»."
+    }
   }
 ]
