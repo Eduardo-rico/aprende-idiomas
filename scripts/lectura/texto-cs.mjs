@@ -83,7 +83,13 @@ export function medirGrafia(texto) {
   // 0-3 por mil (Augustin, pauza, restaurace); la «Národní Báchorky a
   // Powěsti» de 1845 tiene «w» en el 6 % de las palabras y «au» en el
   // 2 %. El corte, en 0,5 %, cae entre familias.
-  const bratrska = conW / n >= 0.005 || conAu / n >= 0.005;
+  // Las DOS señales a la vez: «Dauerling» ×110 en Švejk v zajetí (1917) y
+  // «naučil» daban «au» sin una sola «w»; un texto de 1845 trae ambas.
+  // MEDIDO: las Báchorky de 1845 tienen «w» en el 13-17 % de las palabras y
+  // CERO «au» (ya escriben «ou»); Švejk v zajetí (1917) tiene «w» 0,2 % y
+  // «au» 0,65 % por «Dauerling» ×110. La «w» decide (≥1 %: el checo actual
+  // no la tiene fuera de nombres); el «au» sólo acompaña.
+  const bratrska = conW / n >= 0.01 || (conW / n >= 0.005 && conAu / n >= 0.005);
   const infTi = ti >= 3 && ti / Math.max(1, ti + t) >= 0.5;
   const cultismoS = cultoS >= 2 && cultoS > cultoZ;
   const base = 'Texto en NFC con los diacríticos checos de la fuente (háček, čárka, kroužek).';

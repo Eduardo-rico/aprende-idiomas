@@ -1,0 +1,37 @@
+[
+ {
+  "slug": "svejk",
+  "titulo": "Osudy dobrého vojáka Švejka za světové války",
+  "autor": "Jaroslav Hašek",
+  "muerteAutor": 1923,
+  "publicacion": 1921,
+  "modo": "subpaginas",
+  "pagina": "Osudy dobrého vojáka Švejka za světové války",
+  "agrupar": 3500,
+  "nivel": "C1",
+  "notaOrtografia": "Sólo el texto de Hašek: las ilustraciones de Josef Lada (†1957) no son de dominio público y no se incluyen. Nivel declarado a mano: el léxico es coloquial y la densidad lo pone abajo, pero la novela tiene 200.000 palabras, jerga militar austrohúngara y germanismos."
+ },
+ {
+  "slug": "svejk-v-zajeti",
+  "titulo": "Dobrý voják Švejk v zajetí",
+  "autor": "Jaroslav Hašek",
+  "muerteAutor": 1923,
+  "publicacion": 1917,
+  "modo": "entero",
+  "pagina": "Dobrý voják Švejk v zajetí",
+  "agrupar": 3000,
+  "nivel": "B2"
+ },
+ {
+  "slug": "hasek-povidky",
+  "titulo": "Povídky (Jaroslav Hašek)",
+  "autor": "Jaroslav Hašek",
+  "muerteAutor": 1923,
+  "publicacion": 1912,
+  "modo": "coleccion",
+  "autorPagina": "Jaroslav Hašek",
+  "seccion": "=== Povídky, cestopisy, národopisné črty ===",
+  "excluir": ["Povídky z Ruska", "Dobrý voják Švejk v zajetí"],
+  "minPalabras": 200
+ }
+]
