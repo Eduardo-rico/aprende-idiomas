@@ -59,18 +59,45 @@ describe('estante privado de lecturas', () => {
   });
 });
 
+// Fase F (2026-09-02): la línea roja cubre TODAS las lenguas, no sólo
+// PT — el estante rumano (Cărtărescu) vive en `ro/lecturas-privadas/`
+// y cs/ru vendrán por el mismo camino. El .gitignore pasó de
+// `pt/lecturas-privadas/` a `*/lecturas-privadas/` por eso mismo.
+const LENGUAS = ['pt', 'ro', 'cs', 'ru'];
+const DIRS_PRIVADOS = [...LENGUAS.map((l) => `lib/data/languages/${l}/lecturas-privadas`), 'ingesta-privada'];
+const trackeados = () => execSync(`git ls-files ${DIRS_PRIVADOS.join(' ')}`, { cwd: process.cwd(), encoding: 'utf8' }).trim();
+
 describe('la línea roja: nada privado en git', () => {
-  it('git no trackea NI UN archivo de lecturas-privadas ni de ingesta-privada', () => {
-    const out = execSync(
-      'git ls-files lib/data/languages/pt/lecturas-privadas ingesta-privada',
-      { cwd: process.cwd(), encoding: 'utf8' },
-    ).trim();
-    expect(out).toBe('');
+  it('git no trackea NI UN archivo de lecturas-privadas (pt/ro/cs/ru) ni de ingesta-privada', () => {
+    expect(trackeados()).toBe('');
   });
 
-  it('.gitignore cubre ambos directorios', async () => {
+  it('.gitignore cubre el estante privado de TODAS las lenguas y la carpeta de ingesta', async () => {
     const gi = await fs.readFile(path.join(process.cwd(), '.gitignore'), 'utf8');
     expect(gi).toContain('ingesta-privada/');
-    expect(gi).toContain('lecturas-privadas/');
+    expect(gi).toContain('lib/data/languages/*/lecturas-privadas/');
+    // git-check-ignore es la verdad, no el texto del .gitignore
+    for (const l of LENGUAS) {
+      const r = execSync(`git check-ignore -q lib/data/languages/${l}/lecturas-privadas/x.json; echo $?`, { cwd: process.cwd(), encoding: 'utf8' }).trim();
+      expect(r, `${l} no está ignorado`).toBe('0');
+    }
+  });
+
+  // Un gate visto sólo en verde no está probado: se fuerza un dummy al
+  // índice (`git add -f`, como haría un descuido) en el estante RUMANO y
+  // la comprobación tiene que verlo. Se retira del índice pase lo que pase.
+  it('EN ROJO: un fichero privado forzado al índice lo caza la comprobación', async () => {
+    const dir = path.join(process.cwd(), 'lib/data/languages/ro/lecturas-privadas');
+    const dummy = path.join(dir, 'zzz-dummy-linea-roja.json');
+    await fs.mkdir(dir, { recursive: true });
+    await fs.writeFile(dummy, '{}');
+    try {
+      execSync(`git add -f "${dummy}"`, { cwd: process.cwd() });
+      expect(trackeados()).toContain('zzz-dummy-linea-roja.json');
+    } finally {
+      execSync(`git rm --cached -q -f "${dummy}"`, { cwd: process.cwd() });
+      await fs.rm(dummy, { force: true });
+    }
+    expect(trackeados()).toBe('');
   });
 });
