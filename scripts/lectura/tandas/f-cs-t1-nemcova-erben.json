@@ -77,10 +77,22 @@
    "Je-li spravedlnost na světě, či ne",
    "Kdo je hloupější?",
    "Král času (Pilnáčkovy pohádky)",
-   { "titulo": "Čtyři doby/I", "texto": "Čtyři doby: I" },
-   { "titulo": "Čtyři doby/II", "texto": "Čtyři doby: II" },
-   { "titulo": "Čtyři doby/III", "texto": "Čtyři doby: III" },
-   { "titulo": "Čtyři doby/IV", "texto": "Čtyři doby: IV" }
+   {
+    "titulo": "Čtyři doby/I",
+    "texto": "Čtyři doby: I"
+   },
+   {
+    "titulo": "Čtyři doby/II",
+    "texto": "Čtyři doby: II"
+   },
+   {
+    "titulo": "Čtyři doby/III",
+    "texto": "Čtyři doby: III"
+   },
+   {
+    "titulo": "Čtyři doby/IV",
+    "texto": "Čtyři doby: IV"
+   }
   ],
   "minPalabras": 200
  },
@@ -105,8 +117,12 @@
   "pagina": "Kytice z pověstí národních",
   "piezasSueltas": true,
   "versos": true,
-  "excluir": ["Poznamenání"],
-  "minPalabras": 120
+  "excluir": [
+   "Poznamenání"
+  ],
+  "minPalabras": 120,
+  "nivel": "B1",
+  "notaOrtografia": "Nivel declarado a mano: la densidad polisilábica subestima el verso y lo pondría en A2."
  },
  {
   "slug": "erben-pohadky",
@@ -116,8 +132,14 @@
   "publicacion": 1858,
   "modo": "coleccion",
   "paginas": [
-   { "titulo": "Máj (almanach 1858)/Pták Ohnivák a liška Ryška", "texto": "Pták Ohnivák a liška Ryška" },
-   { "titulo": "Zlatovláska (Erben)", "texto": "Zlatovláska" },
+   {
+    "titulo": "Máj (almanach 1858)/Pták Ohnivák a liška Ryška",
+    "texto": "Pták Ohnivák a liška Ryška"
+   },
+   {
+    "titulo": "Zlatovláska (Erben)",
+    "texto": "Zlatovláska"
+   },
    "Tři zlaté vlasy Děda-Vševěda",
    "Král tchoř",
    "Jirka s kozú"
@@ -145,8 +167,14 @@
   "publicacion": 1834,
   "modo": "coleccion",
   "paginas": [
-   { "titulo": "Obrazy ze života mého/Večer na Bezdězu", "texto": "Večer na Bezdězu" },
-   { "titulo": "Obrazy ze života mého/Marinka", "texto": "Marinka" },
+   {
+    "titulo": "Obrazy ze života mého/Večer na Bezdězu",
+    "texto": "Večer na Bezdězu"
+   },
+   {
+    "titulo": "Obrazy ze života mého/Marinka",
+    "texto": "Marinka"
+   },
    "Pouť krkonošská"
   ],
   "nivel": "C1",
@@ -164,7 +192,9 @@
    "Tyrolské elegie"
   ],
   "versos": true,
-  "minPalabras": 200
+  "minPalabras": 200,
+  "nivel": "B1",
+  "notaOrtografia": "Nivel declarado a mano: la densidad polisilábica subestima el verso y lo pondría en A2."
  },
  {
   "slug": "krest-svateho-vladimira",
@@ -177,6 +207,8 @@
   "versos": true,
   "agrupar": 700,
   "etiquetaPieza": "Zpěv",
-  "minPalabras": 120
+  "minPalabras": 120,
+  "nivel": "B1",
+  "notaOrtografia": "Nivel declarado a mano: la densidad polisilábica subestima el verso y lo pondría en A2."
  }
 ]
