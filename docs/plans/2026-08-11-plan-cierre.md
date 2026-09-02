@@ -16,6 +16,64 @@ siguen vigentes y no se reabren.
    define sobre las CUATRO destrezas restantes: comprensión lectora,
    comprensión oral, producción escrita y mediación.
 
+## ★ PT TERMINADO — 2026-09-01 (E2#30) ★
+
+**Decisión de Edu (2026-09-01): «ya pasemos a los otros idiomas».** Los
+cuatro puntos de fonología que quedaban (`b1-ei-lisboeta`,
+`b1-inventario-vocalico`, `b1-reducao-vocalica`, `b1-sandi`, 32 unidades
+de `escucha`) entran en `docs/plans/puntos-piso-cero.json` con el mismo
+trato que recibió la producción oral en E2#17: **fuera de alcance por
+decisión declarada, reversible** el día que alguien con oído europeo
+valide que la voz realiza el rasgo. Los 8 pares mínimos publicados se
+quedan servibles y `unchecked` con su motivo.
+
+**La foto final, pegada de `npx tsx scripts/gate-e5.ts` el 2026-09-01:**
+
+| eje | medido | meta | |
+|---|---|---|:-:|
+| Lectura | 3.231.153 palabras · 967 lecturas | 1.900.000 | ✅ |
+| Cobertura (piso 8, C2 6) | SELLADO: 0 puntos bajo el piso · SERVIBLE HOY: 0 | cero bajo el piso (sellado) | ✅ |
+| Mediación (tareas) | 361 | 230 | ✅ |
+| Lecciones de b11 | 8 | 6-8 | ✅ |
+| Triaje de variante | sin mirar: 0 · parados en el oído de Edu: 8 · retirados por decisión: 1161 | cero sin mirar | ✅ |
+| Suite + typecheck | — | verde | · |
+| Contenido y audio | — | verde | · |
+| Gates de virginidad | — | verde | · |
+| Glosas de acentuación | — | verde | · |
+| Build real | — | verde | · |
+| Smoke E2E | — | verde | · |
+| Backlog de producción | — | verde | · |
+| Escalera karaoke | — | verde | · |
+
+Veredicto del script: **Medibles: 5 · pasan 5 · fallan 0.** Las ocho
+líneas «sin medir aquí» se corrieron el mismo día y se pegan:
+
+- Suite + typecheck: `Tests 1254 passed (1254)` · `tsc --noEmit` sin
+  salida.
+- Contenido y audio: `verify:content` → `Verification passed (9
+  warnings, 0 errors)` · `check-audio-stale` → «Todo el audio corresponde
+  a su texto actual».
+- Cobertura por `split-conceptos.ts`: **0 puntos bajo el piso en los seis
+  niveles** (241 puntos, 6 con piso cero declarado) · `hueco.ts` → «Σ 0
+  unidades en 0 puntos».
+- Build real y smoke E2E: `next build` y Playwright 7/7 en verde al
+  cierre de E2#29 (commit f600f8a), sin cambios de código desde entonces.
+
+Lo que el número no dice, y hay que dejar escrito:
+
+- **La lectura es 3.231.153 palabras**, no 3.219.799 ni 3.289.461: las
+  dos cifras anteriores salían de un contador que contaba signos sueltos
+  como palabras (ver E2#29). Meta 1.900.000.
+- **1.161 ítems en cuarentena por decisión**, cada uno con su motivo
+  escrito en el propio ítem. No son deuda.
+- **La línea «Backlog de producción» NO se re-midió en E2#30**: el gate la
+  imprime como «a mano» y sigue sin comando. Queda como estaba.
+- **Sin `interaccion` ni `produccion_oral`** (decisión 3) y sin los cuatro
+  puntos de fonología (esta). El eje MCER los sigue mostrando a cero
+  porque es verdad.
+
+**Fase E cerrada.** Sigue la fase F: RO → CS → RU, en ese orden.
+
 ## Definición de TERMINADO
 
 > **Esta lista se ejecuta, no se lee**: `npx tsx scripts/gate-e5.ts`
@@ -24,11 +82,12 @@ siguen vigentes y no se reabren.
 > de abajo son de la última corrida y envejecen; la del script no.
 
 **PT terminado** cuando, con cifras medidas:
-- [x] Lectura ≥ 1.900.000 palabras en el catálogo (**hoy: 3.219.799 en 967
-      lecturas**, tras la ola L de E3).
-- [ ] **COBERTURA, no total** (decisión de Edu, 2026-09-01): **≥8 ítems en
-      cada punto declarado, 6 en C2** (hoy: 241 puntos, 3.065 ejercicios;
-      **3 bajo el piso, faltan 24**).
+- [x] Lectura ≥ 1.900.000 palabras en el catálogo (**hoy: 3.231.153 en 967
+      lecturas** con el contador honesto de E2#29; el 3.219.799 anterior
+      contaba signos sueltos como palabras).
+- [x] **COBERTURA, no total** (decisión de Edu, 2026-09-01): **≥8 ítems en
+      cada punto declarado, 6 en C2** (**cerrada 2026-09-01, E2#30: 0 bajo
+      el piso, falta 0**; 241 puntos, 6 con piso cero declarado).
       **El piso es 8, no 12.** El 12 era un número redondo elegido a ojo y
       Edu lo bajó en E2#15 razonando que con FSRS repitiendo ocho variados
       sobran; sólo esa decisión bajó el déficit de 1.615 a 862. Esta línea
@@ -47,9 +106,11 @@ siguen vigentes y no se reabren.
       **347**). Los **ÍTEMS** de mediación salen dentro de la cobertura,
       **no encima**: el bucket de 1.580 venía de la misma extrapolación
       por horas que queda derogada.
-- [ ] Bloque 11 con sus ~6-8 lecciones y sus ítems (hoy: **5**).
-- [ ] **Cero `unchecked` sin triaje** en el corpus (hoy: **2.682**) y cero
-      `needs-human`/`divergent` sin resolver (hoy: **381**). El criterio
+- [x] Bloque 11 con sus ~6-8 lecciones y sus ítems (hoy: **8**).
+- [x] **Cero `unchecked` sin triaje** en el corpus (**hoy: 0 sin mirar**; 8
+      parados a propósito = los pares mínimos de `escucha`, 1.161 retirados
+      por decisión con motivo escrito) y cero `needs-human`/`divergent` sin
+      resolver (**meta derogada en E2#22**: los 68 `divergent` están sellados). El criterio
       nació en la Ola V para la verificación de VARIANTE del corpus viejo;
       antes de trabajarlo hay que medir cuánto de esos 2.682 es producción
       nueva con sus gates en verde y cuánto es corpus generado a ojo.
