@@ -55,9 +55,10 @@ describe('paso0-idioma: el parser del currículo', () => {
 });
 
 describe('paso0-idioma: el corpus', () => {
-  it('mide el scaffold vacío del rumano como cero, no como «sin datos»', async () => {
+  it('mide el rumano: inventario de puntos ya declarado, corpus a cero', async () => {
     const c = await medirCorpus('ro');
-    expect(c.conceptos).toBe(0);
+    expect(c.conceptos).toBeGreaterThan(0); // paso 1 de la fase F: el inventario
+    expect(c.bloques).toBe(0);
     expect(c.ejercicios).toBe(0);
     expect(c.lecturas).toBe(0);
     expect(c.voces).toEqual([]);

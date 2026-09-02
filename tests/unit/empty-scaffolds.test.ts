@@ -16,7 +16,10 @@ describe("empty scaffolds (Phase 5)", () => {
     it("loadCurriculum returns empty BLOCKS/ALL_CONCEPTS and throws on getBlock", async () => {
       const c = await loadCurriculum(lang);
       expect(c.BLOCKS).toEqual([]);
-      expect(c.ALL_CONCEPTS).toEqual([]);
+      // Fase F (E2#30): el rumano ya tiene INVENTARIO de puntos (ALL_CONCEPTS)
+      // aunque siga sin bloques ni lecciones. CS y RU siguen vacíos del todo.
+      if (lang === 'ro') expect(c.ALL_CONCEPTS.length).toBeGreaterThan(0);
+      else expect(c.ALL_CONCEPTS).toEqual([]);
       expect(() => c.getBlock(1)).toThrow();
     });
 

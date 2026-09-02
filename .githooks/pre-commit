@@ -1,0 +1,8 @@
+#!/bin/sh
+# Rechaza el commit si el typecheck falla. Existe porque en E2#30 dos
+# commits salieron con tsc en rojo: el `| tail` se comía el código de
+# salida y el verde mentía. Lo que depende de acordarse, falla; esto no
+# depende de acordarse. Activar con: git config core.hooksPath .githooks
+set -e
+echo "pre-commit: tsc --noEmit"
+npx tsc --noEmit

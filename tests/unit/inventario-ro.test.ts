@@ -1,0 +1,119 @@
+// tests/unit/inventario-ro.test.ts
+//
+// El inventario de puntos del rumano, cruzado contra el currículo del que
+// sale. Es el gate del paso 1 de la fase F: un inventario que no cubre un
+// descriptor «Sabrá hacer» de sistema deja un agujero que ningún lote va a
+// llenar, y un punto que cita un descriptor que no existe se inventó fuera
+// del currículo. Las dos direcciones, y el resto son invariantes de forma
+// que en PT se rompieron por separado (prereqs sueltos, formato sin
+// motivo, juicio por defecto).
+import { describe, it, expect } from 'vitest';
+import fs from 'node:fs';
+import path from 'node:path';
+import { PUNTOS_RO, BLOQUES_RO, FORMATO_DE_CLASE_RO, formatoDeRo, PISO_RO } from '@/lib/data/languages/ro/inventario-puntos';
+import { ALL_CONCEPTS, BLOCKS } from '@/lib/data/languages/ro/curriculum';
+import { parsearCurriculo } from '@/scripts/paso0-idioma';
+
+const DOC = fs.readFileSync(path.join(process.cwd(), 'docs/plans/2026-07-28-curriculos-completos.md'), 'utf8');
+const NIVELES = parsearCurriculo(DOC, 'ro');
+const DESCRIPTORES = new Set(NIVELES.flatMap((n) => n.descriptores.map((d) => `${n.nivel}/${d.etiqueta}`)));
+
+describe('inventario-ro: forma', () => {
+  it('ids únicos, con prefijo r<bloque>- que coincide con su bloque', () => {
+    const ids = PUNTOS_RO.map((p) => p.id);
+    expect(new Set(ids).size).toBe(ids.length);
+    for (const p of PUNTOS_RO) expect(p.id.startsWith(`r${p.bloque}-`), p.id).toBe(true);
+    const bloques = new Set(BLOQUES_RO.map((b) => b.id));
+    for (const p of PUNTOS_RO) expect(bloques.has(p.bloque), p.id).toBe(true);
+  });
+
+  it('todos los prereqs existen y ninguno se apunta a sí mismo', () => {
+    const ids = new Set(PUNTOS_RO.map((p) => p.id));
+    for (const p of PUNTOS_RO) for (const q of p.prereqs) {
+      expect(ids.has(q), `${p.id} → ${q}`).toBe(true);
+      expect(q).not.toBe(p.id);
+    }
+  });
+
+  it('cada punto lleva motivo, descripción, fuente dentro de la sección rumana y al menos un descriptor', () => {
+    for (const p of PUNTOS_RO) {
+      expect(p.motivo.length, p.id).toBeGreaterThan(20);
+      expect(p.descripcion.length, p.id).toBeGreaterThan(20);
+      expect(p.fuente, p.id).toBeGreaterThanOrEqual(407);
+      expect(p.fuente, p.id).toBeLessThan(842);
+      expect(p.cubre.length, p.id).toBeGreaterThan(0);
+    }
+  });
+
+  it('el formato sale de la clase; un override lleva su razón en el motivo', () => {
+    for (const p of PUNTOS_RO) {
+      if (p.formato && p.formato !== FORMATO_DE_CLASE_RO[p.clase]) {
+        expect(p.motivo, `${p.id}: override ${p.formato} sin razón`).toMatch(/transformaci|cloze|mediaci|flashcard|correcci/i);
+      }
+      expect(formatoDeRo(p)).toBe(p.formato ?? FORMATO_DE_CLASE_RO[p.clase]);
+    }
+  });
+
+  it('el JUICIO no se asigna a nada sin un motivo que empiece por MEDIDO', () => {
+    for (const p of PUNTOS_RO) {
+      if (formatoDeRo(p) === 'juicio') expect(p.motivo, p.id).toMatch(/^MEDIDO/);
+    }
+    expect(FORMATO_DE_CLASE_RO.lexico).not.toBe('juicio');
+  });
+
+  it('la prueba del calco es coherente con la clase', () => {
+    for (const p of PUNTOS_RO) {
+      if (p.clase === 'trampa') expect(p.calco.castellano, `${p.id}: trampa exige calco castellano BIEN formado`).toBe('bien');
+      if (p.clase === 'coincide') expect(p.calco.castellano, `${p.id}: coincide exige calco castellano MAL formado`).toBe('mal');
+      if (p.clase === 'fonologico') expect(p.calco.castellano, p.id).toBe('no-aplica');
+    }
+  });
+
+  it('piso 8, y 6 en C2', () => {
+    expect(PISO_RO('A1')).toBe(8);
+    expect(PISO_RO('C2')).toBe(6);
+  });
+});
+
+describe('inventario-ro: contra el currículo', () => {
+  it('cada descriptor que un punto dice cubrir EXISTE en el currículo con ese nombre exacto', () => {
+    const malos: string[] = [];
+    for (const p of PUNTOS_RO) for (const c of p.cubre) if (!DESCRIPTORES.has(c)) malos.push(`${p.id} → ${c}`);
+    expect(malos, malos.join('\n')).toEqual([]);
+  });
+
+  it('cada descriptor de SISTEMA del currículo (gramática, léxico, fonología, pragmática, cultura) tiene al menos un punto', () => {
+    const cubiertos = new Set(PUNTOS_RO.flatMap((p) => p.cubre));
+    const sinPunto: string[] = [];
+    for (const n of NIVELES) for (const d of n.descriptores) {
+      if (d.destreza !== 'sistema') continue;
+      const k = `${n.nivel}/${d.etiqueta}`;
+      if (!cubiertos.has(k)) sinPunto.push(k);
+    }
+    expect(sinPunto, sinPunto.join('\n')).toEqual([]);
+  });
+
+  it('el gate de cobertura DISPARA: quitando los puntos que cubren A1/FONOLOGÍA, ese descriptor sale sin punto', () => {
+    const sinFonologia = PUNTOS_RO.filter((p) => !p.cubre.includes('A1/FONOLOGÍA'));
+    expect(sinFonologia.length).toBeLessThan(PUNTOS_RO.length);
+    const cubiertos = new Set(sinFonologia.flatMap((p) => p.cubre));
+    const sinPunto = NIVELES.flatMap((n) => n.descriptores
+      .filter((d) => d.destreza === 'sistema')
+      .map((d) => `${n.nivel}/${d.etiqueta}`)
+      .filter((k) => !cubiertos.has(k)));
+    expect(sinPunto).toEqual(['A1/FONOLOGÍA']);
+  });
+
+  it('el nivel de cada punto es el de alguno de los descriptores que cubre (o inferior: se enseña antes)', () => {
+    const orden = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+    for (const p of PUNTOS_RO) {
+      const niveles = p.cubre.map((c) => orden.indexOf(c.split('/')[0] ?? ''));
+      expect(orden.indexOf(p.nivel), `${p.id} está en ${p.nivel} pero cubre ${p.cubre.join(', ')}`).toBeLessThanOrEqual(Math.max(...niveles));
+    }
+  });
+
+  it('ALL_CONCEPTS del rumano es el inventario; BLOCKS sigue vacío hasta que haya lecciones', () => {
+    expect(ALL_CONCEPTS.length).toBe(PUNTOS_RO.length);
+    expect(BLOCKS).toEqual([]);
+  });
+});
