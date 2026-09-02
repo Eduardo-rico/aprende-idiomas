@@ -22,8 +22,10 @@ describe("empty scaffolds (Phase 5)", () => {
       expect(() => c.getBlock(1)).toThrow();
     });
 
-    it("loadAllBlocks returns []", async () => {
-      expect(await loadAllBlocks(lang)).toEqual([]);
+    it("loadAllBlocks: [] en los scaffolds vacíos; ro ya sirve su primer lote", async () => {
+      const blocks = await loadAllBlocks(lang);
+      if (lang === 'ro') expect(blocks.length).toBeGreaterThan(0);
+      else expect(blocks).toEqual([]);
     });
 
     it("loadAllStories returns []", async () => {
