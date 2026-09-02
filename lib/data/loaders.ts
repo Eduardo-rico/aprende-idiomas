@@ -305,7 +305,7 @@ interface LecturaBase {
   // Variante de la obra: 'pt' (europeo, el default del curso) o 'pt-br'
   // (estante brasileño — no cuenta para la meta de inmersión PT-PT y
   // sirve de fuente para mediaciones cross_variety).
-  variante?: 'pt' | 'pt-br';
+  variante?: 'pt' | 'pt-br' | 'ro';
 }
 export interface LecturaKaraoke extends LecturaBase { modo?: 'karaoke'; parrafos: ParrafoLectura[] }
 export interface LecturaTexto extends LecturaBase { modo: 'texto'; parrafos: ParrafoTexto[] }

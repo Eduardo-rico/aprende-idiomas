@@ -60,7 +60,10 @@ describe('paso0-idioma: el corpus', () => {
     expect(c.conceptos).toBeGreaterThan(0); // paso 1 de la fase F: el inventario
     expect(c.bloques).toBe(0);
     expect(c.ejercicios).toBe(0);
-    expect(c.lecturas).toBe(0);
+    // La biblioteca rumana se mezcló el 2026-09-01: 818 lecturas. El contador
+    // reproduce el 2.831.967 del agente de lecturas por un camino independiente.
+    expect(c.lecturas).toBeGreaterThan(800);
+    expect(c.palabrasLectura).toBeGreaterThan(2_800_000);
     expect(c.voces).toEqual([]);
   });
 
