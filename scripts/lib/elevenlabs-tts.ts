@@ -23,16 +23,23 @@ import { TTS_OUTPUT } from '../config';
 
 const MODEL = 'eleven_multilingual_v2';
 
-export const EL_VOICES: Record<'br' | 'pt', { id: string; name: string }> = {
-  pt: { id: 'nJ5NFqyKb8kn9JBPmo6i', name: 'ElevenLabs_Leonor' },
+export type ElVariant = 'br' | 'pt' | 'ro';
+
+export const EL_VOICES: Record<ElVariant, { id: string; name: string; validatedBy?: string; validatedAt?: string }> = {
+  pt: { id: 'nJ5NFqyKb8kn9JBPmo6i', name: 'ElevenLabs_Leonor', validatedBy: 'oído de Edu', validatedAt: '2026-07' },
   // INTERINO: misma voz que pt hasta que Edu apruebe una BR a oído.
   // El nombre distinto deja los clips localizables para regenerarlos.
   br: { id: 'nJ5NFqyKb8kn9JBPmo6i', name: 'ElevenLabs_Leonor_brInterino' },
+  // RUMANO (fase F, 2026-09-01): Răzvan, elegido por la batería fonética
+  // v2 (docs/plans/2026-09-01-ro-paso0.md §14): vocales centrales 5/7,
+  // palatalización final 6/7, 16/18 de 24 objetivos. El sello dice QUIÉN
+  // validó y cómo: un ASR y un agente, no un nativo. Reversible.
+  ro: { id: 'jYTnaUiO0yq8mgBlAL89', name: 'ElevenLabs_Razvan', validatedBy: 'ASR faster-whisper small + linguista-adversarial-ro (agente), sin oído nativo', validatedAt: '2026-09-01' },
 };
 
 export interface ElTtsRequest {
   text: string;
-  variant: 'br' | 'pt';
+  variant: ElVariant;
   speed?: number;
 }
 export interface ElTtsResult { hash: string; cached: boolean; voice: string; }

@@ -25,7 +25,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 
-const OUT = path.join(process.cwd(), 'scratchpad', 'audio-ro');
+const OUT = path.join(process.cwd(), 'scratchpad', 'audio-ro-v2');
 const KEY = process.env.ELEVENLABS_API_KEY;
 const MODEL = 'eleven_multilingual_v2';
 const WHISPER_PY = '/Volumes/Edu/whisper-venv/bin/python';
@@ -42,26 +42,40 @@ export const CANDIDATAS = [
 /** La voz portuguesa: el caso que DEBE fallar. */
 const LEONOR = /^Leonor/;
 
-/** La batería: cada entrada es un contraste con su texto exacto. */
+/** La batería v2: el contraste va DENTRO de una frase portadora, y se
+ *  puntúa por recuperación exacta de la palabra objetivo. La v1 usaba
+ *  palabras aisladas y Whisper small alucinaba en las tres voces («masă» →
+ *  «M-a făcut păr», «ghem» → «Kim»): 5/24, 9/24, 7/24 no separaban nada.
+ *  Un ASR transcribe frases, no listas de palabras. */
 export const BATERIA = [
   // /a/ ~ /ə/ ~ /ɨ/
-  { contraste: 'vocales centrales', texto: 'masa' }, { contraste: 'vocales centrales', texto: 'masă' },
-  { contraste: 'vocales centrales', texto: 'in' }, { contraste: 'vocales centrales', texto: 'în' },
-  { contraste: 'vocales centrales', texto: 'rău' }, { contraste: 'vocales centrales', texto: 'râu' },
-  { contraste: 'vocales centrales', texto: 'Casa și masa sunt în sat.' },
+  { contraste: 'vocales centrales', palabra: 'masa', texto: 'Masa din bucătărie este mare.' },
+  { contraste: 'vocales centrales', palabra: 'masă', texto: 'Pe masă este o carte veche.' },
+  { contraste: 'vocales centrales', palabra: 'în', texto: 'Copiii sunt în casă acum.' },
+  { contraste: 'vocales centrales', palabra: 'rău', texto: 'Nu este rău, este foarte bine.' },
+  { contraste: 'vocales centrales', palabra: 'râu', texto: 'Lângă sat curge un râu mare.' },
+  { contraste: 'vocales centrales', palabra: 'când', texto: 'Nu știu când vine trenul.' },
+  { contraste: 'vocales centrales', palabra: 'pământ', texto: 'Cartoful crește în pământ.' },
   // palatalización final (-i)
-  { contraste: 'palatalización final', texto: 'pom' }, { contraste: 'palatalización final', texto: 'pomi' },
-  { contraste: 'palatalización final', texto: 'lup' }, { contraste: 'palatalización final', texto: 'lupi' },
-  { contraste: 'palatalización final', texto: 'vezi' }, { contraste: 'palatalización final', texto: 'vede' },
-  { contraste: 'palatalización final', texto: 'Doi lupi și trei pomi.' },
+  { contraste: 'palatalización final', palabra: 'pom', texto: 'În grădină este un pom bătrân.' },
+  { contraste: 'palatalización final', palabra: 'pomi', texto: 'În grădină sunt trei pomi bătrâni.' },
+  { contraste: 'palatalización final', palabra: 'lup', texto: 'Un lup singur trece prin pădure.' },
+  { contraste: 'palatalización final', palabra: 'lupi', texto: 'Doi lupi trec prin pădure.' },
+  { contraste: 'palatalización final', palabra: 'vezi', texto: 'Tu vezi marea de la balcon.' },
+  { contraste: 'palatalización final', palabra: 'vede', texto: 'El vede marea de la balcon.' },
+  { contraste: 'palatalización final', palabra: 'elevi', texto: 'Cinci elevi așteaptă la ușă.' },
   // ș ț ce ci ge gi che chi ghe ghi
-  { contraste: 'consonantes', texto: 'țară' }, { contraste: 'consonantes', texto: 'șase' },
-  { contraste: 'consonantes', texto: 'cer' }, { contraste: 'consonantes', texto: 'chem' },
-  { contraste: 'consonantes', texto: 'ger' }, { contraste: 'consonantes', texto: 'ghem' },
-  { contraste: 'consonantes', texto: 'Cinci cești și șapte chei.' },
+  { contraste: 'consonantes', palabra: 'țară', texto: 'România este o țară frumoasă.' },
+  { contraste: 'consonantes', palabra: 'șase', texto: 'Am cumpărat șase mere roșii.' },
+  { contraste: 'consonantes', palabra: 'cer', texto: 'Pe cer nu este niciun nor.' },
+  { contraste: 'consonantes', palabra: 'chem', texto: 'Te chem mâine la telefon.' },
+  { contraste: 'consonantes', palabra: 'ger', texto: 'Afară este ger și zăpadă.' },
+  { contraste: 'consonantes', palabra: 'ghem', texto: 'Pisica se joacă cu un ghem de lână.' },
+  { contraste: 'consonantes', palabra: 'cheile', texto: 'Am uitat cheile pe masă.' },
   // acento léxico
-  { contraste: 'acento', texto: 'copii' }, { contraste: 'acento', texto: 'veselă' },
-  { contraste: 'acento', texto: 'Copiii sunt veseli.' },
+  { contraste: 'acento', palabra: 'copii', texto: 'Copiii mici sunt veseli.' },
+  { contraste: 'acento', palabra: 'veselă', texto: 'Bunica este veselă astăzi.' },
+  { contraste: 'acento', palabra: 'copíi', texto: 'Am făcut două copii ale documentului.' },
 ];
 
 const norm = (s) => s.toLowerCase().normalize('NFC').replace(/[^\p{L}\s]/gu, ' ').replace(/\s+/g, ' ').trim();
@@ -135,33 +149,42 @@ json.dump(out, open(os.path.join(${JSON.stringify(OUT)}, "transcripciones.json")
   if (r.status !== 0) throw new Error('whisper falló');
 }
 
+const sinDiacriticos = (s) => norm(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ș|ş/g, 's').replace(/ț|ţ/g, 't');
+const tiene = (tr, palabra, laxo) => {
+  const t = laxo ? sinDiacriticos(tr) : norm(tr);
+  const w = laxo ? sinDiacriticos(palabra) : norm(palabra);
+  return new RegExp(`(?<![\\p{L}])${w.replace(/í/g, 'i')}(?![\\p{L}])`, 'u').test(t.replace(/í/g, 'i'));
+};
+
 function puntuar() {
   const tr = JSON.parse(fs.readFileSync(path.join(OUT, 'transcripciones.json'), 'utf8'));
   const ids = JSON.parse(fs.readFileSync(path.join(OUT, 'voces.json'), 'utf8'));
   const contrastes = [...new Set(BATERIA.map((b) => b.contraste))];
-  console.log(`# Batería fonética rumana — ASR faster-whisper ${WHISPER_MODEL}, ${BATERIA.length} cadenas\n`);
-  console.log('| voz | ' + contrastes.join(' | ') + ' | total |');
-  console.log('|---|' + contrastes.map(() => '---:').join('|') + '|---:|');
+  console.log(`# Batería fonética rumana v2 — ASR faster-whisper small, ${BATERIA.length} frases portadoras\n`);
+  console.log('Cada celda: palabra objetivo recuperada CON diacríticos / sin diacríticos, sobre N.\n');
+  console.log('| voz | ' + contrastes.join(' | ') + ' | total | frase entera exacta |');
+  console.log('|---|' + contrastes.map(() => '---:').join('|') + '|---:|---:|');
   const fallos = [];
   for (const clave of Object.keys(ids)) {
-    const fila = [];
-    let ok = 0, n = 0;
+    const fila = []; let ok = 0, okLaxo = 0, n = 0, exactas = 0;
     for (const c of contrastes) {
-      let a = 0, t = 0;
+      let a = 0, al = 0, t = 0;
       for (const [i, b] of BATERIA.entries()) {
         if (b.contraste !== c) continue;
         const f = path.basename(clip(clave, i));
         if (!(f in tr)) continue;
         t += 1;
-        if (norm(tr[f]) === norm(b.texto)) a += 1; else fallos.push(`${clave} · ${c}: «${b.texto}» → ASR «${tr[f]}»`);
+        const estricto = tiene(tr[f], b.palabra, false), laxo = tiene(tr[f], b.palabra, true);
+        if (estricto) a += 1; if (laxo) al += 1;
+        if (norm(tr[f]) === norm(b.texto)) exactas += 1;
+        if (!laxo) fallos.push(`${clave} · ${c}: «${b.palabra}» en «${b.texto}» → ASR «${tr[f]}»`);
       }
-      fila.push(t ? `${a}/${t}` : '—'); ok += a; n += t;
+      fila.push(t ? `${a}/${al} de ${t}` : '—'); ok += a; okLaxo += al; n += t;
     }
-    console.log(`| ${clave} | ${fila.join(' | ')} | **${ok}/${n}** |`);
+    console.log(`| ${clave} | ${fila.join(' | ')} | **${ok}/${okLaxo} de ${n}** | ${exactas}/${n} |`);
   }
-  console.log('\n## Fallos, uno a uno\n');
+  console.log('\n## Palabra objetivo NO recuperada ni sin diacríticos\n');
   for (const f of fallos) console.log('- ' + f);
-  // EL CASO ROJO: contra el texto equivocado, cualquier voz tiene que fallar.
   const cualquiera = Object.keys(tr)[0];
   if (cualquiera) {
     const equivocado = 'Bună ziua, ce mai faceți?';
