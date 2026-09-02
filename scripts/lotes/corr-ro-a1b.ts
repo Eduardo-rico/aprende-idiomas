@@ -131,7 +131,12 @@ export function verificar(items: ItemCorreccion[]): string[] {
     if (x.p === PREP) {
       const conCu = /(?<![\p{L}])cu(?![\p{L}])/iu.test(x.buena);
       if (!/(?<![\p{L}])(la|în|pe|cu|din|de la)(?![\p{L}])/iu.test(x.mala)) v.push(`${id}: la mala no tiene preposición`);
-      if (!conCu && !/\b(la|în|pe) \p{L}+(ă|e|ou|u|i)(?![\p{L}])/u.test(x.buena)) v.push(`${id}: la buena no muestra el sustantivo sin artículo tras la preposición`);
+      // Tras la/în/pe la buena NO lleva artículo enclítico (-ul/-le/-ua/-a
+      // sobre la base) y la mala SÍ: se mira la terminación articulada, no
+      // la desnuda, porque la desnuda es cualquier cosa (oraș, școală, birou).
+      const ART = /(?<![\p{L}])(la|în|pe) \p{L}+(ul|le|ua)(?![\p{L}])/u;
+      if (!conCu && ART.test(x.buena.replace(/\b(la|în|pe) \p{L}+ (noastr|nostr|voastr|vostr|me|t|s|lui|ei|lor|acest|acel)\p{L}*/gu, ''))) v.push(`${id}: la buena conserva el artículo tras la preposición sin determinante`);
+      if (!conCu && !/(?<![\p{L}])(la|în|pe) \p{L}+(ul|le|ua|a)(?![\p{L}])/u.test(x.mala)) v.push(`${id}: la mala no lleva el artículo que el punto quita`);
     }
   }
   if (!hunspellDisponible()) v.push('hunspell no disponible: el segundo camino NO corrió y esto no es verde');
