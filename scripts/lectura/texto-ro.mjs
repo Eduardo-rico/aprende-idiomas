@@ -131,3 +131,19 @@ export function sinDiacriticos(texto) {
   return texto.replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i').replace(/ș/g, 's').replace(/ț/g, 't')
     .replace(/Ă/g, 'A').replace(/Â/g, 'A').replace(/Î/g, 'I').replace(/Ș/g, 'S').replace(/Ț/g, 'T');
 }
+
+/** Perfil de lengua para `ingesta-wikisource.mjs`: lo que cambia entre
+ *  Wikisources y no es regla de texto. Son los valores que el motor
+ *  llevaba escritos a mano cuando sólo servía al rumano (F-RO-T1..T4):
+ *  sacarlos aquí no cambia una coma de la salida. */
+export const PERFIL = {
+  nombre: 'rumano',
+  notas: /^(note|notă|nota|referințe|referinţe|cuprins|surse|bibliografie)\b/i,
+  traduccion: /\((?:de|după|dupa|după)\s+\[\[|\bdup[ăa]\s+\[\[|traducere|tradus[ăe]?\b|trad\.\s/i,
+  paginaRoja: /Pagină:[^\n]*?\.(?:djvu|pdf)\/\d+/g,
+  etiquetaPieza: 'Capitolul',
+  tituloPreambulo: 'Prolog',
+  minusculas: new Set(['de', 'din', 'la', 'și', 'cu', 'pe', 'în', 'a', 'al', 'ale', 'ai', 'lui', 'cel', 'cea', 'cei', 'cele', 'sau', 'ori', 'ca', 'că', 'nu', 'un', 'o', 'unei', 'unui', 'spre', 'către', 'fără', 'prin', 'după', 'sub', 'peste', 'despre', 'pentru']),
+  quitar: [],
+  espaciadoDescargas: 250,
+};

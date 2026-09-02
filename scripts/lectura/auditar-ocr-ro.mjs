@@ -18,22 +18,41 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 
-const DIR = path.join(process.cwd(), 'lib/data/languages/ro/lecturas');
-const DIC = path.join(process.cwd(), 'tools/hunspell/ro_RO');
-const CACHE = path.join(process.cwd(), 'scripts/.cache/lectura/ocr-ro.json');
+// POR LENGUA (`--lang cs`, fase F): mismo método, otro diccionario y otra
+// normalización de época. El nombre del fichero se queda por historia;
+// el que llama elige la lengua.
 const args = process.argv.slice(2);
+const LANG = args.includes('--lang') ? args[args.indexOf('--lang') + 1] : 'ro';
+const DICS = { ro: 'ro_RO', cs: 'cs_CZ' };
+const DIR = path.join(process.cwd(), `lib/data/languages/${LANG}/lecturas`);
+const DIC = path.join(process.cwd(), 'tools/hunspell', DICS[LANG]);
+const CACHE = path.join(process.cwd(), `scripts/.cache/lectura/ocr-${LANG}.json`);
 const PIEZA = args.includes('--pieza') ? args[args.indexOf('--pieza') + 1] : null;
 
 const RE_PAL = /[\p{L}]+(?:['’\-][\p{L}]+)*/gu;
 
 /** Normalización SÓLO para consultar el diccionario de 1993. */
-export function paraDiccionario(p) {
+export function paraDiccionarioRo(p) {
   return p
     .replace(/’/g, "'")
     .replace(/(\p{L})'(\p{L})/gu, '$1-$2')       // într'o → într-o
     .replace(/^s[îi]nt(em|eți)?$/i, (m) => m.replace(/[îi]/, 'u'))  // sînt → sunt
     .replace(/(\p{L})î(\p{L})/gu, '$1â$2');       // cînd → când (î interior de la norma 1953)
 }
+
+/** CHECO: el diccionario es de la norma actual; para que la grafía de
+ *  época NO cuente como OCR se normaliza SÓLO para la consulta:
+ *  bratrská (pre-1849) w→v, au→ou, y el infinitivo «-ti» → «-t». La
+ *  «j» por «í» y la «g» por «j» (gegj) no se tocan: son ambiguas y
+ *  esas piezas se reportan como época, no como OCR (como los textos
+ *  anteriores a 1904 en RO). */
+export function paraDiccionarioCs(p) {
+  return p
+    .replace(/w/g, 'v').replace(/W/g, 'V')
+    .replace(/(\p{L})au/gu, '$1ou')
+    .replace(/(\p{L}{2,})ti$/u, '$1t');
+}
+export const paraDiccionario = LANG === 'cs' ? paraDiccionarioCs : paraDiccionarioRo;
 
 function desconocidas(palabras) {
   const r = spawnSync('hunspell', ['-d', DIC, '-l'], { input: palabras.join('\n'), encoding: 'utf8', maxBuffer: 64 << 20 });
@@ -52,10 +71,13 @@ for (const f of archivos) {
   // no están en el diccionario y no son OCR; quitarlos baja el ruido común
   // a todas las piezas sin tocar la señal.
   const cand = tokens.filter((t) => /^\p{Ll}/u.test(t));
-  const unicas = [...new Set(cand.map(paraDiccionario))];
+  // Se consulta la forma cruda Y la normalizada: desconocida sólo si lo
+  // son las dos («děti» normalizada a «dět» no es OCR; «wšak» → «však» sí
+  // se reconoce). Estricta y sin falsos positivos por la normalización.
+  const unicas = [...new Set(cand.flatMap((t) => [t, paraDiccionario(t)]))];
   const desc = desconocidas(unicas);
   const cuenta = new Map();
-  for (const t of cand) if (desc.has(paraDiccionario(t))) cuenta.set(t, (cuenta.get(t) ?? 0) + 1);
+  for (const t of cand) if (desc.has(t) && desc.has(paraDiccionario(t))) cuenta.set(t, (cuenta.get(t) ?? 0) + 1);
   const n = [...cuenta.values()].reduce((a, b) => a + b, 0);
   filas.push({ id: l.id, autor: l.autor, tokens: cand.length, desconocidas: n, tasa: cand.length ? n / cand.length : 0, top: [...cuenta.entries()].sort((a, b) => b[1] - a[1]).slice(0, 40) });
 }
@@ -73,7 +95,7 @@ const mediana = q(0.5);
 const mad = [...filas.map((r) => Math.abs(r.tasa - mediana))].sort((a, b) => a - b)[Math.floor(filas.length / 2)];
 const corte = mediana + 3 * mad;
 const pct = (x) => `${(100 * x).toFixed(2)} %`;
-console.log(`OCR RO · ${filas.length} lecturas · tasa de palabras desconocidas (hunspell ro_RO, minúsculas, época normalizada)`);
+console.log(`OCR ${LANG.toUpperCase()} · ${filas.length} lecturas · tasa de palabras desconocidas (hunspell ${DICS[LANG]}, minúsculas, época normalizada)`);
 console.log(`  mín ${pct(tasas[0])} · p10 ${pct(q(0.1))} · p25 ${pct(q(0.25))} · MEDIANA ${pct(mediana)} · p75 ${pct(q(0.75))} · p90 ${pct(q(0.9))} · p99 ${pct(q(0.99))} · máx ${pct(tasas.at(-1))}`);
 console.log(`  MAD ${pct(mad)} · corte de anomalía = mediana + 3·MAD = ${pct(corte)}`);
 const anomalas = filas.filter((r) => r.tasa > corte).sort((a, b) => b.tasa - a.tasa);

@@ -54,7 +54,6 @@ import path from 'node:path';
 import { JSDOM } from 'jsdom';
 import { verificarProcedencia, dominioPublico } from './gate-procedencia.mjs';
 import { densidad, nivelPorDensidad, pisoPorEscala, mayorNivel } from './medir-nivel.mjs';
-import { normalizarDiacriticos, gateDiacriticos, medirGrafia, contarPalabras } from './texto-ro.mjs';
 
 const args = process.argv.slice(2);
 const flag = (n) => args.includes(n);
@@ -66,6 +65,15 @@ const DRY = flag('--dry');
 const SOLO = valor('--solo', null);
 const PIEZAS = flag('--piezas');
 const REHACER = flag('--rehacer');
+
+// Las reglas de TEXTO son de cada lengua y viven en `texto-<lang>.mjs`
+// (RO: cedilla→coma, î/â; CS: NFC, bratrská, -ti). Con ellas viaja el
+// PERFIL: lo que cambia entre Wikisources y no es regla de texto (nombre
+// de la sección de notas, marca de traducción en la página Autor:,
+// prefijo de las páginas del escaneo, etiqueta de capítulo…).
+const T = await import(`./texto-${LANG}.mjs`);
+const { normalizarDiacriticos, gateDiacriticos, medirGrafia, contarPalabras, PERFIL } = T;
+if (!PERFIL) throw new Error(`texto-${LANG}.mjs no exporta PERFIL`);
 
 const HOST = `https://${LANG}.wikisource.org`;
 const CACHE = path.join(process.cwd(), 'scripts/.cache/lectura', `ws-${LANG}`);
@@ -105,18 +113,29 @@ async function api(params) {
   const u = new URL(`${HOST}/w/api.php`);
   for (const [k, v] of Object.entries(params)) u.searchParams.set(k, v);
   u.searchParams.set('format', 'json');
-  for (let intento = 0; intento < 4; intento++) {
+  // Reintento PACIENTE: la corrida CS anterior murió por cuota con dos
+  // sondeos en paralelo y cuatro reintentos de segundo y medio. Aquí:
+  // todo en serie, ocho intentos, espera exponencial (3 s → 60 s) y se
+  // honra `Retry-After` cuando el servidor lo manda.
+  const INTENTOS = 8;
+  for (let intento = 0; intento < INTENTOS; intento++) {
+    const espera = Math.min(60_000, 3000 * 2 ** intento);
     try {
       const r = await fetch(u, { headers: UA });
       if (r.ok) return r.json();
-      if (r.status === 429 || r.status >= 500) { await new Promise((ok) => setTimeout(ok, 1500 * (intento + 1))); continue; }
+      if (r.status === 429 || r.status >= 500) {
+        const ra = Number(r.headers.get('retry-after'));
+        const ms = Number.isFinite(ra) && ra > 0 ? Math.max(espera, ra * 1000) : espera;
+        console.log(`    HTTP ${r.status} en «${u.searchParams.get('page') ?? ''}»: espero ${Math.round(ms / 1000)} s (${intento + 1}/${INTENTOS})`);
+        await new Promise((ok) => setTimeout(ok, ms)); continue;
+      }
       throw new Error(`HTTP ${r.status}`);
     } catch (e) {
-      if (intento === 3) throw e;
-      await new Promise((ok) => setTimeout(ok, 1500 * (intento + 1)));
+      if (intento === INTENTOS - 1) throw e;
+      await new Promise((ok) => setTimeout(ok, espera));
     }
   }
-  throw new Error(`la API respondió 429/5xx cuatro veces seguidas (${u.searchParams.get('page') ?? ''}) — reintenta la tanda`);
+  throw new Error(`la API respondió 429/5xx ${INTENTOS} veces seguidas (${u.searchParams.get('page') ?? ''}) — reintenta la tanda`);
 }
 
 /** HTML parseado de una página; `null` si no existe. */
@@ -135,7 +154,7 @@ async function bajarHtml(titulo) {
   fs.writeFileSync(f, html);
   // Un respiro entre descargas: 150 páginas seguidas sin pausa dieron
   // 429 en la tanda de poesía, y el 429 cuatro veces seguidas tumba la obra.
-  await new Promise((ok) => setTimeout(ok, 250));
+  await new Promise((ok) => setTimeout(ok, PERFIL.espaciadoDescargas ?? 250));
   return html;
 }
 
@@ -149,10 +168,18 @@ function hash(s) {
 async function bajarRaw(titulo) {
   const f = path.join(CACHE, `raw-${slugify(titulo)}-${hash(titulo)}.txt`);
   if (fs.existsSync(f)) return fs.readFileSync(f, 'utf8');
-  const r = await fetch(`${HOST}/w/index.php?title=${encodeURIComponent(titulo)}&action=raw`, { headers: UA });
-  if (!r.ok) throw new Error(`${titulo}: HTTP ${r.status}`);
-  const t = await r.text();
+  let t = null;
+  for (let intento = 0; intento < 8; intento++) {
+    const r = await fetch(`${HOST}/w/index.php?title=${encodeURIComponent(titulo)}&action=raw`, { headers: UA });
+    if (r.ok) { t = await r.text(); break; }
+    if (r.status !== 429 && r.status < 500) throw new Error(`${titulo}: HTTP ${r.status}`);
+    const ms = Math.min(60_000, 3000 * 2 ** intento);
+    console.log(`    HTTP ${r.status} en «${titulo}» (raw): espero ${Math.round(ms / 1000)} s`);
+    await new Promise((ok) => setTimeout(ok, ms));
+  }
+  if (t === null) throw new Error(`${titulo}: raw 429/5xx ocho veces seguidas`);
   fs.writeFileSync(f, t);
+  await new Promise((ok) => setTimeout(ok, PERFIL.espaciadoDescargas ?? 250));
   return t;
 }
 
@@ -168,8 +195,9 @@ const QUITAR = [
   '.wst-header', '.headertemplate', '.header_notes', '.plainSister', 'table.navbox',
   // La ilustración y su pie («Greuceanu artwork») no son texto del autor.
   'figure', 'figcaption', '.thumb', '.gallery', '.mw-halign-left', '.mw-halign-right',
+  ...(PERFIL.quitar ?? []),
 ];
-const NOTAS = /^(note|notă|nota|referințe|referinţe|cuprins|surse|bibliografie)\b/i;
+const NOTAS = PERFIL.notas;
 
 function bloquesDe(html) {
   const dom = new JSDOM(`<body>${html}</body>`);
@@ -196,7 +224,7 @@ function bloquesDe(html) {
     // Zamfirescu - Îndreptări.djvu/54» ×115 en Îndreptări cap. 4): el
     // transcriptor no llegó a esas páginas y el nombre del fichero se
     // coló como texto. Fuera; la auditoría OCR con hunspell lo destapó.
-    .replace(/Pagină:[^\n]*?\.(?:djvu|pdf)\/\d+/g, '')
+    .replace(PERFIL.paginaRoja, '')
     .replace(/<(-?\p{L}+)>/gu, '$1')
     .replace(/\s?\[\d{1,3}\]/g, '')
     // «unii^și», «Ghiritlii^ Arnăut»: la llamada de nota de Wikisource que
@@ -370,7 +398,7 @@ function enlacesDeSeccion(raw, seccion) {
     // o «traducere» es una TRADUCCIÓN colada en la sección del autor
     // (los postumos de Eminescu traen dos de Schiller). Regla de Edu:
     // sólo literatura nativa. Fuera, y se reporta.
-    if (/\((?:de|după|dupa|după)\s+\[\[|\bdup[ăa]\s+\[\[|traducere|tradus[ăe]?\b|trad\.\s/i.test(lineas[k])) { traducciones.push(lineas[k].trim().slice(0, 60)); continue; }
+    if (PERFIL.traduccion.test(lineas[k])) { traducciones.push(lineas[k].trim().slice(0, 60)); continue; }
     for (const e of lineas[k].matchAll(/\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|([^\]]*))?\]\]/g)) {
       const t = normalizarDiacriticos(e[1].trim());
       if (/^(Imagine|Fișier|File|Image|Categorie|Autor|Format):/i.test(t)) continue;
@@ -467,7 +495,7 @@ async function ingerir(obra) {
   let prePalabras = 0, prePieza = null;
   if (preambulo && preambulo.bloques.length) {
     prePalabras = palabrasDe(preambulo.bloques);
-    if (prePalabras >= (obra.minPreambulo ?? min)) prePieza = { titulos: [obra.tituloPreambulo ?? 'Prolog'], bloques: preambulo.bloques, palabras: prePalabras, pre: true };
+    if (prePalabras >= (obra.minPreambulo ?? min)) prePieza = { titulos: [obra.tituloPreambulo ?? PERFIL.tituloPreambulo], bloques: preambulo.bloques, palabras: prePalabras, pre: true };
   }
 
   // 3) agrupar / medir cada pieza
@@ -505,7 +533,7 @@ async function ingerir(obra) {
   // 5) gates de texto sobre la obra entera
   const todo = piezas.map((p) => p.bloques.map((b) => b.texto).join('\n')).join('\n');
   const gd = gateDiacriticos(todo);
-  if (!gd.ok) throw new Error(`sin diacríticos: ${gd.detalle} — no es rumano correcto, no entra`);
+  if (!gd.ok) throw new Error(`sin diacríticos: ${gd.detalle} — no es ${PERFIL.nombre} correcto, no entra`);
   const grafia = medirGrafia(todo);
   const total = piezas.reduce((a, p) => a + p.palabras, 0);
   const { indice } = densidad(todo, LANG);
@@ -528,12 +556,12 @@ async function ingerir(obra) {
     }
   }
   const urlDe = (t) => `${HOST}/wiki/${encodeURI(t.replace(/ /g, '_'))}`;
-  const etq = obra.etiquetaPieza ?? 'Capitolul';
+  const etq = obra.etiquetaPieza ?? PERFIL.etiquetaPieza;
   const esNumeral = (t) => /^(?:[IVXLC]+|\d{1,3})\.?$/.test(String(t ?? '').trim());
   // «ACTUL I» → «Actul I»; «I - MORMÂNTUL» → «I - Mormântul». Un
   // encabezado todo en mayúsculas es tipografía de la edición, no
   // título; los numerales romanos se conservan.
-  const MINUSCULAS = new Set(['de', 'din', 'la', 'și', 'cu', 'pe', 'în', 'a', 'al', 'ale', 'ai', 'lui', 'cel', 'cea', 'cei', 'cele', 'sau', 'ori', 'ca', 'că', 'nu', 'un', 'o', 'unei', 'unui', 'spre', 'către', 'fără', 'prin', 'după', 'sub', 'peste', 'despre', 'pentru']);
+  const MINUSCULAS = PERFIL.minusculas;
   const bonito = (t) => (/\p{Ll}/u.test(t) ? t : t.toLowerCase()
     .replace(/(^|[\s.:\-—–(«„"]+)(\p{L}+)/gu, (_, a, w) => a + (a !== '' && MINUSCULAS.has(w) ? w : w[0].toUpperCase() + w.slice(1)))
     .replace(/\b([ivxlc]+)\b/gi, (m) => m.toUpperCase()));

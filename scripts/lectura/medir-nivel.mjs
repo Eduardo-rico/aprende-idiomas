@@ -64,6 +64,37 @@ const LENGUAS = {
     // separa Caragiale/Hogaș de Odobescu y del teatro de Caragiale.
     cortes: { A2: 18.5, B1: 22.5, B2: 26.0 },
   },
+  cs: {
+    // a e i o u y + las largas y ě/ů. Las «r» y «l» silábicas (vlk, prst,
+    // krk) no se cuentan: subcuenta constante entre textos, que es lo
+    // que importa para comparar. El «au» de la grafía pre-1849 (saud) y
+    // el «ou» actual cuentan uno igual; la «j» por «í» de la bratrská
+    // (gegj) subcuenta una sílaba en esas piezas, y se acepta porque las
+    // anclas y el catálogo se miden con la misma regla.
+    vocales: 'aeiouyáéíóúýěů',
+    // Medido 2026-09-02 (node scripts/lectura/anclas-cs.mjs, 22 obras):
+    //   abajo  — pohádky: Němcová (Báchorky 1845) 16,3 (Honza) · 24,1
+    //            (Bajaja) · 25,7 (Sedmero krkavců); Erben 22,0 · 22,2 ·
+    //            26,5; Havlíček (Král Lávra) 17,4.   mediana 22,2
+    //   medio  — Neruda (Malostranské) 21,9 · 24,6 · 24,9; Hálek 19,5 ·
+    //            20,4; Babička/I 28,9; Sv. Čech (Brouček) 34,6.  mediana 24,6
+    //   arriba — Zeyer 26,0 · Arbes 28,5 · 28,6 · Klostermann 26,3 ·
+    //            Mrštík 24,4 · Mácha (prosa) 25,2.   mediana 26,2
+    // La métrica reproduce el orden de las MEDIANAS (22,2 < 24,6 < 26,2)
+    // pero no separa obra a obra: el checo flexivo alarga todas las
+    // palabras y una pohádka formal (Sedmero krkavců) mide como Zeyer.
+    // Se probaron dos ejes más —% de palabras de 4+ sílabas y letras por
+    // palabra— y solapan igual; la longitud de frase separa el diálogo
+    // (Neruda 13) de la descripción (Mácha 37), no el nivel. Por eso los
+    // cortes van ENTRE familias y anchos: 20,0 deja en A2 la pohádka
+    // corta y a Hálek; 26,5 mantiene TODAS las pohádky de las anclas en
+    // ≤B1 (criterio: cuentos para A2-B1); 28,5 separa Arbes, Babička y
+    // Čech (C1) del resto. La zona 24-26,5, donde conviven Neruda, Zeyer
+    // y Klostermann, la decide el PISO POR ESCALA (novela ≥8.000 → B2);
+    // lo que el criterio marcó «a mano» (Švejk, Máj, Mácha en prosa,
+    // Zeyer) se declara en la tanda.
+    cortes: { A2: 20.0, B1: 26.5, B2: 28.5 },
+  },
 };
 
 const VOCALES = LENGUAS.pt.vocales;
