@@ -279,7 +279,7 @@ export function informe(lang: LanguageId, niveles: NivelCurriculo[], corpus: Cor
 
 async function main() {
   const arg = process.argv.find((a) => a.startsWith('--lang'));
-  const lang = arg ? (arg.includes('=') ? arg.split('=')[1] : process.argv[process.argv.indexOf(arg) + 1]) : 'ro';
+  const lang = (arg ? (arg.includes('=') ? arg.split('=')[1] : process.argv[process.argv.indexOf(arg) + 1]) : 'ro') ?? '';
   if (!hasLocale(lang)) throw new Error(`--lang=${lang}: no es una lengua del proyecto`);
   const md = fs.readFileSync(path.join(process.cwd(), 'docs/plans/2026-07-28-curriculos-completos.md'), 'utf8');
   const niveles = parsearCurriculo(md, lang);
