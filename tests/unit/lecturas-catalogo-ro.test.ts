@@ -14,10 +14,11 @@ import { normalizarDiacriticos, gateDiacriticos, sinDiacriticos, contarPalabras,
 invariantesDelCatalogo({
   lang: 'ro',
   variantes: ['ro'],
-  // Medido 2026-09-01, tanda F-RO-T1 (Creangă + Ispirescu):
-  // 64 lecturas · 6 series · 226.055 palabras.
-  lecturas: 64,
-  palabras: 226_055,
+  // Medido 2026-09-01, tandas F-RO-T1 (Creangă + Ispirescu) y T2
+  // (Caragiale + Slavici + Gârleanu + Delavrancea):
+  // 392 lecturas · 34 series · 1.243.062 palabras.
+  lecturas: 392,
+  palabras: 1_243_062,
   // Wikisource: la navegación «▲ Începutul paginii», el pie de
   // ilustración («Greuceanu artwork» se coló en la primera corrida) y
   // las llamadas de nota «[1]» huérfanas.

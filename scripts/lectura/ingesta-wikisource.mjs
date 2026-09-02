@@ -356,6 +356,15 @@ async function ingerir(obra) {
       const p = partirPorEncabezados(b.bloques, nivel);
       preambulo = p.preambulo;
       crudas = p.trozos;
+      // Los trozos cortos ANTES del primer trozo real (la lista de
+      // «Personajele» de una pieza de teatro, una dedicatoria con
+      // encabezado) son preludio, no capítulo: van al preámbulo. Sin
+      // esto, O scrisoare pierdută salía como «Actul 1: Personajele ·
+      // ACTUL I».
+      while (crudas.length > 1 && palabrasDe(crudas[0].bloques) < min) {
+        const t = crudas.shift();
+        preambulo.bloques.push(...(t.titulo ? [{ texto: t.titulo }] : []), ...t.bloques);
+      }
     }
   } else if (obra.modo === 'subpaginas') {
     const html = await bajarHtml(obra.pagina);
@@ -454,16 +463,23 @@ async function ingerir(obra) {
   const urlDe = (t) => `${HOST}/wiki/${encodeURI(t.replace(/ /g, '_'))}`;
   const etq = obra.etiquetaPieza ?? 'Capitolul';
   const esNumeral = (t) => /^(?:[IVXLC]+|\d{1,3})\.?$/.test(String(t ?? '').trim());
+  // «ACTUL I» → «Actul I»; «I - MORMÂNTUL» → «I - Mormântul». Un
+  // encabezado todo en mayúsculas es tipografía de la edición, no
+  // título; los numerales romanos se conservan.
+  const bonito = (t) => (/\p{Ll}/u.test(t) ? t : t.toLowerCase()
+    .replace(/(^|[\s.:\-—–(«„"]+)(\p{L})/gu, (_, a, c) => a + c.toUpperCase())
+    .replace(/\b([ivxlc]+)\b/gi, (m) => m.toUpperCase()));
   const usados = new Set();
   const escritos = [];
   for (const [i, p] of piezas.entries()) {
     const nCap = i + 1 - (prePieza ? 1 : 0);
+    const titulos = p.titulos.map((t) => (t ? bonito(t) : t));
     const tituloPieza = obra.modo === 'entero' ? obra.titulo
-      : p.pre ? p.titulos[0]
-        : esColeccion ? p.titulos.filter(Boolean).join(' · ')
-          : p.titulos.length === 1 ? (p.titulos[0] ? (esNumeral(p.titulos[0]) ? `${etq} ${p.titulos[0]}` : p.titulos[0]) : `${etq} ${nCap}`)
-            : p.titulos.every(esNumeral) ? `${etq} ${p.titulos[0]}-${p.titulos.at(-1)}`
-              : `${etq} ${nCap}: ${p.titulos.filter(Boolean).join(' · ')}`;
+      : p.pre ? titulos[0]
+        : esColeccion ? titulos.filter(Boolean).join(' · ')
+          : titulos.length === 1 ? (titulos[0] ? (esNumeral(titulos[0]) ? `${etq} ${titulos[0]}` : titulos[0]) : `${etq} ${nCap}`)
+            : titulos.every(esNumeral) ? `${etq} ${titulos[0]}-${titulos.at(-1)}`
+              : `${etq} ${nCap}: ${titulos.filter(Boolean).join(' · ')}`;
     let id = piezas.length === 1 ? obra.slug
       : p.pre ? `${obra.slug}-p00`
         : esColeccion ? `${obra.slug}--${slugify(p.titulos.filter(Boolean)[0] ?? String(nCap))}`

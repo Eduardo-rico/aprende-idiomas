@@ -8,7 +8,15 @@
   "modo": "coleccion",
   "autorPagina": "Ion Luca Caragiale",
   "seccion": "Nuvele și povestiri",
-  "excluir": ["Răzbunare", "Broasca minunată", "Masca", "O balercă de Amontillado", "Curiosul pedepsit", "Abu-Hasan", "Făt-frumos cu moț în frunte"],
+  "excluir": [
+   "Răzbunare",
+   "Broasca minunată",
+   "Masca",
+   "O balercă de Amontillado",
+   "Curiosul pedepsit",
+   "Abu-Hasan",
+   "Făt-frumos cu moț în frunte"
+  ],
   "minPalabras": 150
  },
  {
@@ -21,7 +29,9 @@
   "pagina": "O noapte furtunoasă",
   "agrupar": 3000,
   "etiquetaPieza": "Actul",
-  "nivel": "C1"
+  "nivel": "C1",
+  "minPreambulo": 60,
+  "tituloPreambulo": "Personajele"
  },
  {
   "slug": "conu-leonida-fata-cu-reactiunea",
@@ -43,7 +53,9 @@
   "pagina": "O scrisoare pierdută",
   "agrupar": 3000,
   "etiquetaPieza": "Actul",
-  "nivel": "C1"
+  "nivel": "C1",
+  "minPreambulo": 60,
+  "tituloPreambulo": "Personajele"
  },
  {
   "slug": "d-ale-carnavalului",
@@ -55,7 +67,9 @@
   "pagina": "D'ale carnavalului",
   "agrupar": 3000,
   "etiquetaPieza": "Actul",
-  "nivel": "C1"
+  "nivel": "C1",
+  "minPreambulo": 60,
+  "tituloPreambulo": "Personajele"
  },
  {
   "slug": "napasta",
@@ -67,7 +81,9 @@
   "pagina": "Năpasta",
   "agrupar": 3000,
   "etiquetaPieza": "Actul",
-  "nivel": "C1"
+  "nivel": "C1",
+  "minPreambulo": 60,
+  "tituloPreambulo": "Personajele"
  },
  {
   "slug": "caragiale-teatru-scurt",
@@ -76,7 +92,12 @@
   "muerteAutor": 1912,
   "publicacion": 1909,
   "modo": "coleccion",
-  "paginas": ["O soacră", "Începem", "Modern", "1 Aprilie"],
+  "paginas": [
+   "O soacră",
+   "Începem",
+   "Modern",
+   "1 Aprilie"
+  ],
   "nivel": "C1",
   "minPalabras": 150
  },
@@ -159,7 +180,15 @@
   "modo": "coleccion",
   "autorPagina": "Ioan Slavici",
   "seccion": "Nuvele",
-  "excluir": ["Moara cu noroc", "Pădureanca", "Vecinii", "Budulea Taichii", "La răscruci", "Gura satului", "Crucile roșii"],
+  "excluir": [
+   "Moara cu noroc",
+   "Pădureanca",
+   "Vecinii",
+   "Budulea Taichii",
+   "La răscruci",
+   "Gura satului",
+   "Crucile roșii"
+  ],
   "minPalabras": 200
  },
  {
@@ -182,28 +211,6 @@
   "modo": "subpaginas",
   "pagina": "Mara",
   "agrupar": 2500
- },
- {
-  "slug": "inchisorile-mele",
-  "titulo": "Închisorile mele",
-  "autor": "Ioan Slavici",
-  "muerteAutor": 1925,
-  "publicacion": 1921,
-  "modo": "secciones",
-  "pagina": "Închisorile mele",
-  "agrupar": 2500,
-  "nivel": "C1"
- },
- {
-  "slug": "slavici-amintiri",
-  "titulo": "Amintiri (Ioan Slavici)",
-  "autor": "Ioan Slavici",
-  "muerteAutor": 1925,
-  "publicacion": 1924,
-  "modo": "secciones",
-  "pagina": "Amintiri (Slavici)",
-  "agrupar": 2500,
-  "nivel": "C1"
  },
  {
   "slug": "garleanu-din-lumea-celor-care-nu-cuvanta",
@@ -280,7 +287,9 @@
   "modo": "coleccion",
   "autorPagina": "Emil Gârleanu",
   "seccion": "Postume",
-  "excluir": ["Emil Gârleanu (Mihail Sebastian)"],
+  "excluir": [
+   "Emil Gârleanu (Mihail Sebastian)"
+  ],
   "minPalabras": 150
  },
  {
@@ -315,7 +324,9 @@
   "pagina": "Apus de soare",
   "agrupar": 3000,
   "etiquetaPieza": "Actul",
-  "nivel": "C1"
+  "nivel": "C1",
+  "minPreambulo": 60,
+  "tituloPreambulo": "Personajele"
  },
  {
   "slug": "viforul",
@@ -327,7 +338,9 @@
   "pagina": "Viforul",
   "agrupar": 3000,
   "etiquetaPieza": "Actul",
-  "nivel": "C1"
+  "nivel": "C1",
+  "minPreambulo": 60,
+  "tituloPreambulo": "Personajele"
  },
  {
   "slug": "luceafarul-delavrancea",
@@ -339,6 +352,8 @@
   "pagina": "Luceafărul (Delavrancea)",
   "agrupar": 3000,
   "etiquetaPieza": "Actul",
-  "nivel": "C1"
+  "nivel": "C1",
+  "minPreambulo": 60,
+  "tituloPreambulo": "Personajele"
  }
 ]
