@@ -24,7 +24,18 @@
  *  invisibles de dirección (U+200E/U+200F, que Afanásiev trae al
  *  principio de párrafo) y el BOM. */
 export function normalizarDiacriticos(s) {
-  return String(s ?? '').normalize('NFC').replace(/[\u0301\u200E\u200F\uFEFF]/g, '').normalize('NFC');
+  return String(s ?? '').normalize('NFC').replace(/[\u0301\u200E\u200F\uFEFF]/g, '')
+    // La llamada de nota «<71>» va ANTES que la regla del guion: «Sauvée!
+    // -<71> патетически» tapaba el espacio y el guion se quedaba.
+    .replace(/<\d{1,3}>/g, '')
+    // Guion ASCII con espacio a los dos lados («- Представьте себе! - сказал
+    // Версилов»): en ruso un guion entre espacios no existe, siempre es la
+    // raya de diálogo o de inciso. MEDIDO antes de aplicarlo: 13.542 casos
+    // en 98 piezas (Обрыв, Подросток, Ushinski), doce muestras al azar y
+    // todas eran rayas. La raya pegada («в 17..году-») no se toca.
+    // (también al final del nodo: «карай лукавых -</dd>», el verso corta ahí)
+    .replace(/(^|\s)-(?=\s|$)/gu, '$1—')
+    .normalize('NFC');
 }
 
 /** PALABRA = algo con una LETRA cirílica dentro (regla de la fase F-RU:
@@ -48,8 +59,9 @@ const RE_UK_BY = /[їєґўЇЄҐЎ]/;
  *  de Guerra y paz con MÁS francés que ruso sigue siendo un capítulo de
  *  la novela) y lejos de lo roto (una página de índice, de aparato o en
  *  otra lengua). Se exige además que no haya letras ucranianas o
- *  bielorrusas (ї є ґ ў) en más del 0,2 % de las palabras. El test lo
- *  prueba EN ROJO con un texto latino y con uno ucraniano. */
+ *  bielorrusas (ї є ґ ў) en más del 1 % de las palabras (Gógol cita
+ *  epígrafes ucranianos: 0,22 %), ni un BLOQUE en esas lenguas (abajo).
+ *  El test lo prueba EN ROJO con un texto latino y con uno ucraniano. */
 export function gateDiacriticos(texto, umbral = 0.6) {
   const palabras = (texto.match(RE_PAL) ?? []).filter((p) => /\p{L}/u.test(p));
   const con = palabras.filter((p) => RE_CIR.test(p)).length;
@@ -66,15 +78,19 @@ export function gateDiacriticos(texto, umbral = 0.6) {
   const esPre = /[ѣѳѵ]/.test(texto) || /[бвгджзклмнпрстфхцчшщ]ъ(?=[\s.,;:!?…»)]|$)/.test(texto);
   const reBloque = esPre ? RE_UK_BY : /[їєґўіЇЄҐЎІ]/;
   let bloque = 0;
-  const V = 100;
+  // Ventana de 200 y corte 25 %: los epígrafes ucranianos de Gógol
+  // (Сорочинская ярмарка, 20-40 palabras por capítulo) daban 30 % en una
+  // ventana de 100 y tiraban seis capítulos; una variante ucraniana de
+  // Afanásiev (≥300 palabras seguidas) sigue dando 40-90 %.
+  const V = 200;
   const marcas = palabras.map((p) => (reBloque.test(p) ? 1 : 0));
   let suma = 0;
   for (let i = 0; i < marcas.length; i++) {
     suma += marcas[i]; if (i >= V) suma -= marcas[i - V];
     if (i >= V - 1) bloque = Math.max(bloque, suma / V);
   }
-  const ok = palabras.length > 0 && ratio >= umbral && ukby <= 0.002 && bloque < 0.2;
-  return { ok, ratio, palabras: palabras.length, bloque, detalle: `${(100 * ratio).toFixed(1)} % de palabras en cirílico${ukby > 0.002 ? `, y ${(100 * ukby).toFixed(2)} % con letras ucranianas/bielorrusas (ї є ґ ў)` : ''}${bloque >= 0.2 ? `, con un bloque en ucraniano/bielorruso (${(100 * bloque).toFixed(0)} % de «і ї є ґ ў» en 100 palabras)` : ''}` };
+  const ok = palabras.length > 0 && ratio >= umbral && ukby <= 0.01 && bloque < 0.25;
+  return { ok, ratio, palabras: palabras.length, bloque, detalle: `${(100 * ratio).toFixed(1)} % de palabras en cirílico${ukby > 0.01 ? `, y ${(100 * ukby).toFixed(2)} % con letras ucranianas/bielorrusas (ї є ґ ў)` : ''}${bloque >= 0.25 ? `, con un bloque en ucraniano/bielorruso (${(100 * bloque).toFixed(0)} % de «і ї є ґ ў» en 200 palabras)` : ''}` };
 }
 
 /** Grafía de época, MEDIDA y declarada (no corregida).
@@ -188,15 +204,27 @@ export function redirigir(doc, titulo) {
   return cands[0].t;
 }
 
+/** Hook de la ingesta: si TODAS las subpáginas de una obra son
+ *  redacciones de la misma («/ПСС 1902—1903 (ДО)», «… (ВТ)», «… (ВТ:Ё)»,
+ *  «/СО», «/ДО»), devuelve la preferida; si no, `null` (son capítulos). */
+const RE_VARIANTE = /\((?:ДО|ВТ|ВТ:Ё|СО)\)\s*$|\/(?:ДО|ВТ|ВТ:Ё|СО)$|\/\d{4}\s*\((?:ДО|СО)\)$|дореформенн|современн/i;
+export function elegirVariante(hijas) {
+  if (!hijas.every((x) => RE_VARIANTE.test(x.titulo) || RE_VARIANTE.test(x.texto ?? ''))) return null;
+  return [...hijas].sort((a, b) => puntuarVariante(b.titulo, b.texto ?? '') - puntuarVariante(a.titulo, a.texto ?? ''))[0];
+}
+
 /** Perfil de lengua para `ingesta-wikisource.mjs`: lo que cambia entre
  *  Wikisources y no es regla de texto. */
 export const PERFIL = {
   nombre: 'ruso',
   // Secciones de aparato que se cortan con lo que cuelga de ellas.
-  notas: /^(примечания|примечание|комментарии|комментарий|источники|ссылки|см\.\s*также|литература|библиография|оглавление|содержание|варианты|редакции)\b/i,
+  // OJO: sin «\b» — en JavaScript el límite de palabra es ASCII y tras
+  // una letra cirílica no existe: «Примечания» no casaba y el rótulo
+  // quedó como último párrafo en 886 piezas. Se usa (?![\p{L}]).
+  notas: /^(?:примечания|примечание|комментарии|комментарий|источники|ссылки|см\.\s*также|литература|библиография|оглавление|содержание|варианты|редакции)(?![\p{L}])/iu,
   // Una entrada de la página Автор: que es TRADUCCIÓN (regla de Edu:
   // sólo literatura nativa). «перевод», «перев.», «пер. с…», «из Гейне».
-  traduccion: /перевод|перев\.|\bпер\.\s|переложени|подражани|\bс\s+(?:нем|фр|англ|польск|лат|итал|исп|греч|древнегреч|укр|чеш|швед|дат|норв|перс|араб|санскр)\p{L}*\b|^\s*[*#]+\s*из\s+\[\[/iu,
+  traduccion: /перевод|перев\.|(?<![\p{L}])пер\.\s|переложени|подражани|(?<![\p{L}])с\s+(?:нем|фр|англ|польск|лат|итал|исп|греч|древнегреч|укр|чеш|швед|дат|норв|перс|араб|санскр)\p{L}*|^\s*[*#]+\s*из\s+\[\[/iu,
   // Enlaces rojos a páginas del escaneo sin transcribir.
   paginaRoja: /Страница:[^\n]*?\.(?:djvu|pdf)\/\d+/g,
   etiquetaPieza: 'Глава',
@@ -214,7 +242,8 @@ export const PERFIL = {
   // «…/В дореформенной орфографии») cuando ya se está leyendo la moderna.
   // Y «…/Текст целиком»: la novela entera en una página al lado de sus
   // capítulos (Бедные люди, Двойник, Хозяйка) — duplicaría cada palabra.
-  subpaginaExcluida: /\/ДО(?:\/|$)|дореформенн|\/(?:Текст целиком|Весь текст|Полный текст)$/i,
+  subpaginaExcluida: /\/ДО(?:\/|$)|\(ДО\)(?:\/|$)|дореформенн|\/(?:Текст целиком|Весь текст|Полный текст)$/i,
+  elegirVariante,
   // ru.wikisource envuelve libros enteros (las «Русские книги для чтения»
   // de Tolstói) en un <div class="poem">, encabezados incluidos: la
   // ingesta lo leería como UNA estrofa y perdería los capítulos. Un
@@ -241,11 +270,37 @@ export const PERFIL = {
     // rótulo y las líneas de índice que le siguen, hasta la primera línea
     // que no lo sea. Pagado: entró como texto en Попрыгунья y В глуши.
     const esIndice = (t) => /^(?:Глав[аы]\s*:?\s*)?[IVXLC\d]+(?:\.|\s*[•·]\s*[IVXLC\d]+)*\.?$/.test(t) || /^(?:Часть|Книга|Том|Действие|Акт|Эпилог|Пролог)\s+[\p{L}\d]+\.?$/u.test(t) || /^Главы\s*:/.test(t);
+    // La barra de navegación por anclas de la propia página («I • II • III
+    // … • XI • Примечания»): un <div> de enlaces que la ingesta leía como
+    // once párrafos de una palabra al principio de la pieza. Fuera entera.
+    // Regla: un bloque cuyos enlaces son TODOS anclas de la misma página
+    // («#Глава_II», «#Примечания», «#КАРТИНА_ВТОРАЯ») y cuyo texto, quitados
+    // los enlaces, son sólo viñetas y espacios.
+    for (const el of [...doc.querySelectorAll('div, p, center')]) {
+      if (el.querySelector('p, div')) continue;
+      const anclas = [...el.querySelectorAll('a')];
+      if (anclas.length < 2 || !anclas.every((a) => (a.getAttribute('href') ?? '').startsWith('#'))) continue;
+      const resto = anclas.reduce((t, a) => t.replace(a.textContent, ''), el.textContent).replace(/[\s•·|—–-]+/g, '');
+      if (resto === '') el.remove();
+    }
     for (const el of [...doc.querySelectorAll('p, div, b, h2, h3, h4, span')]) {
       if (!/^(?:Оглавление|Содержание)\s*:?$/.test(el.textContent.trim())) continue;
       let n = el.nextElementSibling;
       while (n && esIndice(n.textContent.trim())) { const m = n.nextElementSibling; n.remove(); n = m; }
       el.remove();
+    }
+    // El comentario del EDITOR MODERNO al final de la pieza (las ediciones
+    // académicas de Leskov, Pushkin y Tolstói en ru.wikisource lo traen
+    // como párrafos, sin encabezado que la sección de notas pueda cortar):
+    // un párrafo que es sólo «Примечания»/«Комментарии»/«Варианты», o el
+    // primer «Стр. 136. …» (nota por página), abre el aparato; desde ahí
+    // hasta el final, fuera. El comentario de 1950 no es dominio público,
+    // y no es el autor. Pagado: 15 piezas lo traían dentro.
+    const abreAparato = (t) => /^(?:Примечания|Комментарии|Комментарий|Варианты|Печатные варианты|Примечание)\s*:?$/i.test(t) || /^Стр\.\s*\d+[.,]/.test(t);
+    const primero = [...doc.querySelectorAll('p, div, h2, h3, h4, h5, center, dt, li, b, strong')].find((el) => abreAparato(el.textContent.trim()) && !el.querySelector('p, div'));
+    if (primero) {
+      let n = primero;
+      while (n) { const m = n.nextElementSibling; n.remove(); n = m; }
     }
   },
   slug,

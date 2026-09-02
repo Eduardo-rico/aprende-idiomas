@@ -19,14 +19,14 @@ invariantesDelCatalogo({
   // Medido 2026-09-02 al cierre de la tanda F-RU-T1 (Ушинский, Толстой
   // книги для чтения y народные рассказы, Афанасьев, Мамин-Сибиряк,
   // Аксаков, Одоевский, Погорельский): 377 lecturas · 16 series ·
-  // 535.913 palabras; F-RU-T2 (Chéjov: 532 relatos, 12 повести, 7 obras de teatro largas y 9 breves): 1.017 · 38 series · 1.799.015 palabras; T3 (Tolstói: Детство-Отрочество-Юность, Казаки, Хаджи-Мурат, 22 relatos, Анна Каренина, Война и мир, Воскресение) y T4 (Pushkin, Lérmontov, Gógol): 1,438 · 70 series · 3,641,530 palabras. T6 (Dostoyevski entero: Бедные люди, Белые ночи, Записки из подполья, Игрок, 8 повести, 14 relatos C1; ПиН, Идиот, Бесы, Подросток, Карамазовы C2): 1.717 · 5.451.195 palabras.
-  lecturas: 1717,
-  palabras: 5_451_195,
+  // 535.913 palabras; F-RU-T2 (Chéjov: 532 relatos, 12 повести, 7 obras de teatro largas y 9 breves): 1.017 · 38 series · 1.799.015 palabras; T3 (Tolstói: Детство-Отрочество-Юность, Казаки, Хаджи-Мурат, 22 relatos, Анна Каренина, Война и мир, Воскресение) y T4 (Pushkin, Lérmontov, Gógol): 1,438 · 70 series · 3,641,530 palabras. T6 (Dostoyevski entero: Бедные люди, Белые ночи, Записки из подполья, Игрок, 8 повести, 14 relatos C1; ПиН, Идиот, Бесы, Подросток, Карамазовы C2): 1.717 · 5.451.195 palabras. T5 (Turguénev: Записки охотника y 32 повести B2, 6 novelas C1; Goncharov C1/C2; Leskov C1, Соборяне C2 en grafía pre-1918; Saltykov C1/C2) y re-corrida de las seis tandas con el motor final: 2,188 · 101 series · 7,715,327 palabras.
+  lecturas: 2188,
+  palabras: 7_715_327,
   // ru.wikisource: navegación de capítulos («← Предыдущая», «Следующая →»),
   // llamadas de nota «[1]» huérfanas, páginas del escaneo sin transcribir,
   // el aviso «Источник текста не указан», la frase de las páginas de
   // redacciones y las líneas de índice «… 205» de las ediciones escaneadas.
-  aparato: /←\s*Предыдущ|Следующ\p{L}*\s*→|^Оглавление$|^Главы:\s*I\b|дореформенной орфографии$|\[\d{1,3}\]|Страница:[^\n]*\.(?:djvu|pdf)|\^|Источник текста не указан|список редакций|\.\.\.\s*\d{1,4}$|^(?:English|polski|Deutsch|français|italiano|español|magyar|українська|čeština)+$/iu,
+  aparato: /←\s*Предыдущ|Следующ\p{L}*\s*→|^Оглавление$|^Главы:\s*I\b|дореформенной орфографии$|^Стр\.\s*\d+[.,]|^Примечания$|<\d{1,3}>|\{\{|\[\d{1,3}\]|Страница:[^\n]*\.(?:djvu|pdf)|\^|Источник текста не указан|список редакций|\.\.\.\s*\d{1,4}$|^(?:English|polski|Deutsch|français|italiano|español|magyar|українська|čeština)+$/iu,
   extra: (catalogo) => {
     it('todo el texto está en NFC y sin acentos de intensidad (U+0301), en todos los campos con texto', () => {
       const rotas = catalogo
@@ -99,15 +99,17 @@ describe('gates del texto ruso, probados en rojo', () => {
   it('el gate RECHAZA un texto ucraniano y un bloque ucraniano dentro de uno ruso, y ACEPTA el diálogo ucraniano salpicado', () => {
     const uk = 'Як були собі цар да цариця; да у їх не було дітей; да були вони такі бідні, що і їсти нічого було. Раз пішов цар на заробітки; на дорозі йому захотілось пити. ';
     expect(gateDiacriticos(uk.repeat(6)).ok).toBe(false);
-    // 300 palabras rusas + un bloque ucraniano: fuera (es Afanásiev)
+    // 300 palabras rusas + un bloque ucraniano de ~180: fuera (es Afanásiev)
     expect(gateDiacriticos(`${muestra.slice(0, 2000)}\n${uk.repeat(6)}`).ok).toBe(false);
     // dos réplicas ucranianas dentro de 400 palabras rusas: dentro (es «Два старика»)
     const salpicado = `${muestra.slice(0, 1500)} — Чого тобі треба? Нема, чоловіче, нічого. Іди собі. ${muestra.slice(1500, 3000)}`;
     expect(gateDiacriticos(salpicado).ok).toBe(true);
   });
 
-  it('la normalización recompone a NFC, quita el acento de intensidad y no toca la «ё»', () => {
+  it('la normalización recompone a NFC, quita el acento de intensidad, vuelve raya el guion entre espacios y no toca la «ё»', () => {
     expect(normalizarDiacriticos('на́ пол по́ полу')).toBe('на пол по полу');
+    expect(normalizarDiacriticos('- Представьте себе! - сказал Версилов.')).toBe('— Представьте себе! — сказал Версилов.');
+    expect(normalizarDiacriticos('кое-как, в 17-м году')).toBe('кое-как, в 17-м году');
     expect(normalizarDiacriticos('й ё')).toBe('й ё');
     expect(normalizarDiacriticos('Жил-был старик со старухою. Ещё раз.')).toBe('Жил-был старик со старухою. Ещё раз.');
   });

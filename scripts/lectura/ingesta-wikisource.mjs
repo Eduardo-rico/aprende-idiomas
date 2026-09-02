@@ -244,6 +244,10 @@ function bloquesDe(html) {
     // coló como texto. Fuera; la auditoría OCR con hunspell lo destapó.
     .replace(PERFIL.paginaRoja, '')
     .replace(/<(-?\p{L}+)>/gu, '$1')
+    // «cher enfant,<02>»: llamada de nota que la plantilla dejó como
+    // número entre ángulos (Подросток, 141 casos). Un número entre
+    // ángulos nunca es texto.
+    .replace(/<\d{1,3}>/g, '')
     .replace(/\s?\[\d{1,3}\]/g, '')
     // «unii^și», «Ghiritlii^ Arnăut»: la llamada de nota de Wikisource que
     // quedó pegada como «^» (2 casos en las cartas de Ghica, auditoría).
@@ -401,7 +405,7 @@ function subpaginasDe(html, pagina, { limpio = false } = {}) {
     if (vistos.has(titulo)) continue;
     // Fase F-RU: la variante «/ДО» (grafía vieja) de un capítulo que ya
     // existe en grafía moderna es un duplicado, no un capítulo.
-    if (PERFIL.subpaginaExcluida && PERFIL.subpaginaExcluida.test(titulo)) continue;
+    if (PERFIL.subpaginaExcluida && !PERFIL.subpaginaExcluida.test(pagina) && PERFIL.subpaginaExcluida.test(titulo)) continue;
     vistos.set(titulo, { titulo, texto: normalizarDiacriticos(a.textContent.trim()), rojo: a.classList.contains('new') });
   }
   return [...vistos.values()];
@@ -510,7 +514,11 @@ async function ingerir(obra) {
       if (!h) { rojas.push(s.titulo); continue; }
       const b = bloquesDe(h); 
       if (obra.recursivo && palabrasDe(b.bloques) < min) {
-        const hijas = subpaginasDe(h, s.titulo).filter((x) => !excluida(x) && !vistas.has(x.titulo));
+        let hijas = subpaginasDe(h, s.titulo).filter((x) => !excluida(x) && !vistas.has(x.titulo));
+        // Si TODAS las hijas son redacciones de la misma obra (ДО / ВТ /
+        // ВТ:Ё / СО), no son capítulos: el perfil elige UNA.
+        const variante = hijas.length >= 2 && PERFIL.elegirVariante ? PERFIL.elegirVariante(hijas) : null;
+        if (variante) { console.log(`    redacciones en «${s.titulo.slice(obra.pagina.length)}»: ${hijas.length} → ${variante.titulo.slice(s.titulo.length)}`); hijas = [variante]; vistas.add(variante.titulo); cola.unshift({ ...variante, texto: s.texto }); continue; }
         if (hijas.length >= 2) { for (const x of hijas) vistas.add(x.titulo); cola.unshift(...hijas); console.log(`    índice «${s.titulo.slice(obra.pagina.length)}» → ${hijas.length} subpáginas`); continue; }
         // Un índice sin hijas nuevas (la lista «В дореформенной орфографии»
         // de Анна Каренина, que enlaza capítulos ya vistos o en otra grafía)
@@ -548,6 +556,8 @@ async function ingerir(obra) {
       // siguiente.
       if (obra.recursivo && palabrasDe(b.bloques) < min) {
         const hijas = subpaginasDe(h, e.titulo).filter((x) => !vistos.has(x.titulo) && !excluir.has(x.titulo));
+        const variante = hijas.length >= 2 && PERFIL.elegirVariante ? PERFIL.elegirVariante(hijas) : null;
+        if (variante) { console.log(`    redacciones en «${e.titulo}»: ${hijas.length} → ${variante.titulo.slice(e.titulo.length)}`); cola.unshift({ titulo: variante.titulo, texto: e.texto }); continue; }
         if (hijas.length >= 2) { cola.unshift(...hijas.map((x) => ({ titulo: x.titulo, texto: `${e.texto}: ${x.texto}` }))); console.log(`    índice «${e.titulo}» → ${hijas.length} subpáginas`); continue; }
         if (subpaginasDe(h, e.titulo, { limpio: true }).length >= 2) { console.log(`    fuera «${e.titulo}»: ${palabrasDe(b.bloques)} palabras y enlaza capítulos ya vistos — índice, no pieza`); continue; }
       }
