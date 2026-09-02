@@ -95,6 +95,7 @@ async function api(params) {
       await new Promise((ok) => setTimeout(ok, 1500 * (intento + 1)));
     }
   }
+  throw new Error(`la API respondió 429/5xx cuatro veces seguidas (${u.searchParams.get('page') ?? ''}) — reintenta la tanda`);
 }
 
 /** HTML parseado de una página; `null` si no existe. */
@@ -158,7 +159,17 @@ function bloquesDe(html) {
 
   const bloques = [];
   const tablas = { n: 0, palabras: 0 };
-  const limpiar = (s) => normalizarDiacriticos(s).replace(/ /g, ' ').replace(/[ \t\r\f\v]+/g, ' ');
+  // Además de los diacríticos: las llamadas de nota escritas COMO TEXTO
+  // («sansimonienilor [1]» en Filimon: 116 párrafos) se quitan —la nota
+  // no está en la lectura, igual que en PT—, y las etiquetas <poem>
+  // que el transcriptor dejó sin cerrar salen escapadas como texto.
+  const limpiar = (s) => normalizarDiacriticos(s)
+    .replace(/<\/?(?:poem|nowiki)>/g, '')
+    // «D<omnu>l», «d<umnea>lui»: el editor marca entre ángulos las letras
+    // que expande de una abreviatura. Se dejan las letras, sin ángulos.
+    .replace(/<(\p{L}+)>/gu, '$1')
+    .replace(/\s?\[\d{1,3}\]/g, '')
+    .replace(/ /g, ' ').replace(/[ \t\r\f\v]+/g, ' ');
   const prosa = (s) => limpiar(s.replace(/\s*\n\s*/g, ' ')).trim();
   const versos = (s) => limpiar(s).split('\n').map((l) => l.trim()).filter(Boolean).join('\n');
 
@@ -318,15 +329,22 @@ function enlacesDeSeccion(raw, seccion) {
   if (i < 0) throw new Error(`sección «${seccion}» no está en la página Autor:`);
   const nivel = (lineas[i].match(/^=+/) ?? [''])[0].length;
   const out = [];
+  const traducciones = [];
   for (let k = i + 1; k < lineas.length; k++) {
     const m = lineas[k].match(/^(=+)[^=]/);
     if (m && m[1].length <= nivel) break;
+    // Una entrada anotada «(de [[Friedrich Schiller]])», «după [[Poe]]»
+    // o «traducere» es una TRADUCCIÓN colada en la sección del autor
+    // (los postumos de Eminescu traen dos de Schiller). Regla de Edu:
+    // sólo literatura nativa. Fuera, y se reporta.
+    if (/\((?:de|după|dupa|după)\s+\[\[|\bdup[ăa]\s+\[\[|traducere|tradus[ăe]?\b|trad\.\s/i.test(lineas[k])) { traducciones.push(lineas[k].trim().slice(0, 60)); continue; }
     for (const e of lineas[k].matchAll(/\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|([^\]]*))?\]\]/g)) {
       const t = normalizarDiacriticos(e[1].trim());
       if (/^(Imagine|Fișier|File|Image|Categorie|Autor|Format):/i.test(t)) continue;
       out.push({ titulo: t, texto: normalizarDiacriticos((e[2] ?? e[1]).trim()) });
     }
   }
+  if (traducciones.length) console.log(`    traducciones fuera (${traducciones.length}): ${traducciones.join(' · ')}`);
   return out;
 }
 
@@ -349,7 +367,23 @@ async function ingerir(obra) {
     if (!html) throw new Error(`la página «${obra.pagina}» no existe`);
     const b = bloquesDe(html); suma(b.tablas);
     if (obra.modo === 'entero') {
-      crudas = [{ titulo: obra.titulo, bloques: b.bloques.map((x) => (x.h !== undefined ? { texto: x.texto } : x)) }];
+      const bloques = b.bloques.map((x) => (x.h !== undefined ? { texto: x.texto } : x));
+      // Una página sin encabezados y con `agrupar` se parte en trozos
+      // de ~N palabras POR PÁRRAFO (Geniu pustiu son 30.000 palabras
+      // seguidas: una sola lectura no es lectura). Los trozos se
+      // numeran; ninguna línea se pierde.
+      if (obra.agrupar && palabrasDe(bloques) > obra.agrupar * 1.5) {
+        let actual = [], n = 0;
+        for (const x of bloques) {
+          actual.push(x); n += palabrasDe([x]);
+          if (n >= obra.agrupar) { crudas.push({ titulo: null, bloques: actual }); actual = []; n = 0; }
+        }
+        if (actual.length) {
+          if (crudas.length && n < obra.agrupar / 2) crudas.at(-1).bloques.push(...actual);
+          else crudas.push({ titulo: null, bloques: actual });
+        }
+        obra = { ...obra, modo: 'trozos' };
+      } else crudas = [{ titulo: obra.titulo, bloques }];
     } else {
       const nivel = obra.nivelSeccion ?? nivelDeCorte(b.bloques);
       if (nivel === null) throw new Error('sin encabezados repetidos — usa modo «entero» o declara nivelSeccion');
@@ -466,8 +500,9 @@ async function ingerir(obra) {
   // «ACTUL I» → «Actul I»; «I - MORMÂNTUL» → «I - Mormântul». Un
   // encabezado todo en mayúsculas es tipografía de la edición, no
   // título; los numerales romanos se conservan.
+  const MINUSCULAS = new Set(['de', 'din', 'la', 'și', 'cu', 'pe', 'în', 'a', 'al', 'ale', 'ai', 'lui', 'cel', 'cea', 'cei', 'cele', 'sau', 'ori', 'ca', 'că', 'nu', 'un', 'o', 'unei', 'unui', 'spre', 'către', 'fără', 'prin', 'după', 'sub', 'peste', 'despre', 'pentru']);
   const bonito = (t) => (/\p{Ll}/u.test(t) ? t : t.toLowerCase()
-    .replace(/(^|[\s.:\-—–(«„"]+)(\p{L})/gu, (_, a, c) => a + c.toUpperCase())
+    .replace(/(^|[\s.:\-—–(«„"]+)(\p{L}+)/gu, (_, a, w) => a + (a !== '' && MINUSCULAS.has(w) ? w : w[0].toUpperCase() + w.slice(1)))
     .replace(/\b([ivxlc]+)\b/gi, (m) => m.toUpperCase()));
   const usados = new Set();
   const escritos = [];
@@ -475,6 +510,7 @@ async function ingerir(obra) {
     const nCap = i + 1 - (prePieza ? 1 : 0);
     const titulos = p.titulos.map((t) => (t ? bonito(t) : t));
     const tituloPieza = obra.modo === 'entero' ? obra.titulo
+      : obra.modo === 'trozos' ? `${etq} ${nCap}`
       : p.pre ? titulos[0]
         : esColeccion ? titulos.filter(Boolean).join(' · ')
           : titulos.length === 1 ? (titulos[0] ? (esNumeral(titulos[0]) ? `${etq} ${titulos[0]}` : titulos[0]) : `${etq} ${nCap}`)
