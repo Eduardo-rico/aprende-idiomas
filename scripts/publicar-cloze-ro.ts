@@ -15,12 +15,14 @@ import path from 'node:path';
 import { BLOCKS, ALL_CONCEPTS } from '../lib/data/languages/ro/curriculum';
 import { blocksDir } from '../lib/data/registry';
 import { hashKey } from './lib/cache';
-import { ITEMS as A1, verificar, respuestaDe, type ClozeRo } from './lotes/cloze-ro-a1';
+import { ITEMS as A1, verificar as verificarA1, respuestaDe, type ClozeRo } from './lotes/cloze-ro-a1';
+import { ITEMS as A2, verificar as verificarA2 } from './lotes/cloze-ro-a2';
 
-const LOTES: Record<string, ClozeRo[]> = { a1: A1 };
+const LOTES: Record<string, { items: ClozeRo[]; verificar: (xs: ClozeRo[]) => string[] }> = { a1: { items: A1, verificar: verificarA1 }, a2: { items: A2, verificar: verificarA2 } };
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
 const lote = arg('--lote') ?? '';
-const ITEMS = LOTES[lote];
+const LOTE = LOTES[lote];
+const ITEMS = LOTE?.items;
 if (!ITEMS) { console.error(`Usa --lote con uno de: ${Object.keys(LOTES).join(', ')}`); process.exit(2); }
 const write = process.argv.includes('--write');
 const BLOCKS_DIR = blocksDir('ro');
@@ -28,7 +30,7 @@ const CONCEPTO = new Map(ALL_CONCEPTS.map((c) => [c.id, c]));
 const problemas: string[] = [];
 const porDefecto: string[] = [];
 
-problemas.push(...verificar(ITEMS));
+problemas.push(...LOTE!.verificar(ITEMS));
 
 const yaEnCorpus = new Map<string, string>();
 if (fs.existsSync(BLOCKS_DIR)) for (const f of fs.readdirSync(BLOCKS_DIR).filter((x) => /^b\d+\.json$/.test(x)))
