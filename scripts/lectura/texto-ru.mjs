@@ -210,6 +210,9 @@ export const PERFIL = {
   quitar: ['.ambox', '.dablink', '.notice', '.searchbox', '.mw-inputbox-centered', 'form', '[class*="dottedtoc"]', '.ws-summary', '.interwiki', 'span[style*="display:none"]', 'div[style*="display:none"]', '.mw-halign-center'],
   espaciadoDescargas: 500,
   prefijoAutor: 'Автор',
+  // Subpáginas que son la MISMA obra en grafía anterior a 1918 («…/ДО»,
+  // «…/В дореформенной орфографии») cuando ya se está leyendo la moderna.
+  subpaginaExcluida: /\/ДО(?:\/|$)|дореформенн/i,
   // ru.wikisource envuelve libros enteros (las «Русские книги для чтения»
   // de Tolstói) en un <div class="poem">, encabezados incluidos: la
   // ingesta lo leería como UNA estrofa y perdería los capítulos. Un
@@ -231,6 +234,17 @@ export const PERFIL = {
       }
     }
     for (const p of [...doc.querySelectorAll('p')]) if (/\.\.\.\s*\d{1,4}\s*$/.test(p.textContent.trim()) && p.textContent.trim().split(/\s+/).length <= 12) p.remove();
+    // El índice DENTRO de la página («Оглавление» y luego «Глава I», «I • II
+    // • III», «Часть первая» como párrafos con enlaces a anclas): fuera el
+    // rótulo y las líneas de índice que le siguen, hasta la primera línea
+    // que no lo sea. Pagado: entró como texto en Попрыгунья y В глуши.
+    const esIndice = (t) => /^(?:Глав[аы]\s*:?\s*)?[IVXLC\d]+(?:\.|\s*[•·]\s*[IVXLC\d]+)*\.?$/.test(t) || /^(?:Часть|Книга|Том|Действие|Акт|Эпилог|Пролог)\s+[\p{L}\d]+\.?$/u.test(t) || /^Главы\s*:/.test(t);
+    for (const el of [...doc.querySelectorAll('p, div, b, h2, h3, h4, span')]) {
+      if (!/^(?:Оглавление|Содержание)\s*:?$/.test(el.textContent.trim())) continue;
+      let n = el.nextElementSibling;
+      while (n && esIndice(n.textContent.trim())) { const m = n.nextElementSibling; n.remove(); n = m; }
+      el.remove();
+    }
   },
   slug,
   redirigir,

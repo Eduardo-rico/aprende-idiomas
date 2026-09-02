@@ -17,7 +17,7 @@
   "slug": "tolstoj-otrochestvo",
   "titulo": "Отрочество",
   "publicacion": 1854,
-  "modo": "subpaginas",
+  "modo": "secciones",
   "pagina": "Отрочество (Толстой)",
   "agrupar": 2500,
   "nivel": "B2",
@@ -41,9 +41,9 @@
   "slug": "tolstoj-kazaki",
   "titulo": "Казаки",
   "publicacion": 1863,
-  "modo": "secciones",
+  "modo": "entero",
   "pagina": "Казаки (Толстой)",
-  "agrupar": 3000,
+  "agrupar": 3500,
   "nivel": "B2",
   "notaOrtografia": "Nivel B2 DECLARADO por criterio (anclas-ru.mjs): Tolstói narrativo maduro — período largo pero léxico concreto."
  },
@@ -53,11 +53,12 @@
   "slug": "tolstoj-hadzhi-murat",
   "titulo": "Хаджи-Мурат",
   "publicacion": 1912,
-  "modo": "secciones",
+  "modo": "subpaginas",
   "pagina": "Хаджи-Мурат (Толстой)",
   "agrupar": 3000,
   "nivel": "B2",
-  "notaOrtografia": "Nivel B2 DECLARADO por criterio (anclas-ru.mjs): Tolstói narrativo maduro — período largo pero léxico concreto."
+  "notaOrtografia": "Nivel B2 DECLARADO por criterio (anclas-ru.mjs): Tolstói narrativo maduro — período largo pero léxico concreto.",
+  "recursivo": true
  },
  {
   "autor": "Лев Толстой",
@@ -125,11 +126,15 @@
   "slug": "tolstoj-sevastopolskie-rasskazy",
   "titulo": "Севастопольские рассказы",
   "publicacion": 1855,
-  "modo": "subpaginas",
-  "pagina": "Севастопольские рассказы (Толстой)",
-  "agrupar": 3000,
+  "modo": "coleccion",
   "nivel": "B2",
-  "notaOrtografia": "Nivel B2 DECLARADO por criterio (anclas-ru.mjs): Tolstói narrativo maduro — período largo pero léxico concreto."
+  "notaOrtografia": "Nivel B2 DECLARADO por criterio (anclas-ru.mjs): Tolstói narrativo maduro — período largo pero léxico concreto.",
+  "paginas": [
+   "Севастополь в декабре месяце (Толстой)",
+   "Севастополь в мае (Толстой)",
+   "Севастополь в августе 1855 года (Толстой)"
+  ],
+  "minPalabras": 200
  },
  {
   "autor": "Лев Толстой",

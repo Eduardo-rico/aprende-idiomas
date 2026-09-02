@@ -54,11 +54,12 @@
   "slug": "pushkin-dubrovskij",
   "titulo": "Дубровский",
   "publicacion": 1841,
-  "modo": "secciones",
+  "modo": "subpaginas",
   "pagina": "Дубровский (Пушкин)",
   "agrupar": 3000,
   "nivel": "B2",
-  "notaOrtografia": "Nivel B2 declarado: novela corta de aventuras, frase breve, escala media."
+  "notaOrtografia": "Nivel B2 declarado: novela corta de aventuras, frase breve, escala media.",
+  "recursivo": true
  },
  {
   "autor": "Александр Пушкин",
@@ -67,7 +68,7 @@
   "titulo": "Капитанская дочка",
   "publicacion": 1836,
   "modo": "secciones",
-  "pagina": "Капитанская дочка (Пушкин)",
+  "pagina": "Капитанская дочка (Пушкин)/1978 (СО)",
   "agrupar": 3000,
   "nivel": "B2",
   "notaOrtografia": "Nivel B2 declarado: novela histórica corta, narración en primera persona, frase breve."
@@ -89,7 +90,8 @@
   ],
   "minPalabras": 200,
   "nivel": "B2",
-  "notaOrtografia": "Nivel B2 declarado: prosa histórica y de viaje de Pushkin."
+  "notaOrtografia": "Nivel B2 declarado: prosa histórica y de viaje de Pushkin.",
+  "recursivo": true
  },
  {
   "autor": "Александр Пушкин",
@@ -142,10 +144,10 @@
    "Иван Фёдорович Шпонька и его тётушка (Гоголь)",
    "Заколдованное место (Гоголь)"
   ],
-  "agrupar": 3000,
   "minPalabras": 200,
   "nivel": "B2",
-  "notaOrtografia": "Nivel B2 DECLARADO por criterio (anclas-ru.mjs): Gógol de las Вечера — narración oral, humor, ucranianismos explicados."
+  "notaOrtografia": "Nivel B2 DECLARADO por criterio (anclas-ru.mjs): Gógol de las Вечера — narración oral, humor, ucranianismos explicados.",
+  "recursivo": true
  },
  {
   "autor": "Николай Гоголь",
@@ -160,10 +162,13 @@
    "Вий (Гоголь)",
    "Повесть о том, как поссорился Иван Иванович с Иваном Никифоровичем (Гоголь)"
   ],
-  "agrupar": 3000,
   "minPalabras": 200,
   "nivel": "C1",
-  "notaOrtografia": "Nivel C1 DECLARADO por criterio (anclas-ru.mjs): Gógol petersburgués y Мёртвые души — período largo, digresión, ironía."
+  "notaOrtografia": "Nivel C1 DECLARADO por criterio (anclas-ru.mjs): Gógol petersburgués y Мёртвые души — período largo, digresión, ironía. Se publica la redacción de 1842 de Тарас Бульба; la de 1835 (que ru.wikisource enlaza como subpágina) queda fuera para no duplicar la obra.",
+  "recursivo": true,
+  "excluir": [
+   "Тарас Бульба (Гоголь)/Редакция «Миргорода» 1835"
+  ]
  },
  {
   "autor": "Николай Гоголь",
@@ -181,10 +186,10 @@
    "Коляска (Гоголь)",
    "Рим (Гоголь)"
   ],
-  "agrupar": 3000,
   "minPalabras": 200,
   "nivel": "C1",
-  "notaOrtografia": "Nivel C1 DECLARADO por criterio (anclas-ru.mjs): Gógol petersburgués y Мёртвые души — período largo, digresión, ironía."
+  "notaOrtografia": "Nivel C1 DECLARADO por criterio (anclas-ru.mjs): Gógol petersburgués y Мёртвые души — período largo, digresión, ironía.",
+  "recursivo": true
  },
  {
   "autor": "Николай Гоголь",

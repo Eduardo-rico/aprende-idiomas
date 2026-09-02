@@ -384,8 +384,12 @@ function agrupar(trozos, objetivo) {
 
 /** Enlaces a subpáginas «Título/…» de la página madre, en orden y sin
  *  duplicados por cedilla. */
-function subpaginasDe(html, pagina) {
+function subpaginasDe(html, pagina, { limpio = false } = {}) {
   const dom = new JSDOM(`<body>${html}</body>`);
+  // `limpio`: sólo los enlaces del CUERPO (fuera cabecera y navegación
+  // «← anterior · siguiente →», que toda página de capítulo trae): así
+  // se distingue un índice de un capítulo corto.
+  if (limpio) for (const sel of QUITAR) for (const n of dom.window.document.querySelectorAll(sel)) n.remove();
   const pref = `/wiki/${encodeURI(pagina.replace(/ /g, '_'))}/`;
   const vistos = new Map();
   for (const a of dom.window.document.querySelectorAll('a[href]')) {
@@ -395,6 +399,9 @@ function subpaginasDe(html, pagina) {
     if (!dec.startsWith(decodeURIComponent(pref))) continue;
     const titulo = normalizarDiacriticos(dec.slice('/wiki/'.length).replace(/_/g, ' ').split('#')[0]);
     if (vistos.has(titulo)) continue;
+    // Fase F-RU: la variante «/ДО» (grafía vieja) de un capítulo que ya
+    // existe en grafía moderna es un duplicado, no un capítulo.
+    if (PERFIL.subpaginaExcluida && PERFIL.subpaginaExcluida.test(titulo)) continue;
     vistos.set(titulo, { titulo, texto: normalizarDiacriticos(a.textContent.trim()), rojo: a.classList.contains('new') });
   }
   return [...vistos.values()];
@@ -505,6 +512,15 @@ async function ingerir(obra) {
       if (obra.recursivo && palabrasDe(b.bloques) < min) {
         const hijas = subpaginasDe(h, s.titulo).filter((x) => !excluida(x) && !vistas.has(x.titulo));
         if (hijas.length >= 2) { for (const x of hijas) vistas.add(x.titulo); cola.unshift(...hijas); console.log(`    índice «${s.titulo.slice(obra.pagina.length)}» → ${hijas.length} subpáginas`); continue; }
+        // Un índice sin hijas nuevas (la lista «В дореформенной орфографии»
+        // de Анна Каренина, que enlaza capítulos ya vistos o en otra grafía)
+        // no es capítulo: fuera y se reporta. Pagado: entró como texto. Es
+        // índice si enlaza ≥2 subpáginas de la OBRA; un capítulo corto de
+        // verdad (Каренина II/X, 197 palabras) no enlaza nada y se queda.
+        if (subpaginasDe(h, obra.pagina, { limpio: true }).filter((x) => x.titulo !== s.titulo).length >= 2) {
+          console.log(`    fuera «${s.titulo.slice(obra.pagina.length)}»: ${palabrasDe(b.bloques)} palabras y enlaza capítulos de la obra — índice, no capítulo`);
+          continue;
+        }
       }
       suma(b.tablas);
       crudas.push({ titulo: s.texto, bloques: b.bloques.map((x) => (x.h !== undefined ? { texto: x.texto } : x)), pagina: s.titulo });
@@ -533,6 +549,7 @@ async function ingerir(obra) {
       if (obra.recursivo && palabrasDe(b.bloques) < min) {
         const hijas = subpaginasDe(h, e.titulo).filter((x) => !vistos.has(x.titulo) && !excluir.has(x.titulo));
         if (hijas.length >= 2) { cola.unshift(...hijas.map((x) => ({ titulo: x.titulo, texto: `${e.texto}: ${x.texto}` }))); console.log(`    índice «${e.titulo}» → ${hijas.length} subpáginas`); continue; }
+        if (subpaginasDe(h, e.titulo, { limpio: true }).length >= 2) { console.log(`    fuera «${e.titulo}»: ${palabrasDe(b.bloques)} palabras y enlaza capítulos ya vistos — índice, no pieza`); continue; }
       }
       suma(b.tablas);
       crudas.push({ titulo: e.texto, bloques: b.bloques.map((x) => (x.h !== undefined ? { texto: x.texto } : x)), pagina: e.titulo });
