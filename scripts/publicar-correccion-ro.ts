@@ -12,17 +12,23 @@ import { BLOCKS, ALL_CONCEPTS } from '../lib/data/languages/ro/curriculum';
 import { blocksDir } from '../lib/data/registry';
 import { hashKey } from './lib/cache';
 import { preflight, type ItemCorreccion } from './lib/correccion';
-import { ITEMS as A1, verificar } from './lotes/corr-ro-a1';
+import { ITEMS as A1, verificar as verificarA1 } from './lotes/corr-ro-a1';
+import { ITEMS as A1B, verificar as verificarA1B } from './lotes/corr-ro-a1b';
 
-const LOTES: Record<string, ItemCorreccion[]> = { a1: A1 };
+// Cada lote trae SU verificar: los gates de punto viven con el lote.
+const LOTES: Record<string, { items: ItemCorreccion[]; verificar: (xs: ItemCorreccion[]) => string[] }> = {
+  a1: { items: A1, verificar: verificarA1 },
+  a1b: { items: A1B, verificar: verificarA1B },
+};
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
 const lote = arg('--lote') ?? '';
-const ITEMS = LOTES[lote];
+const LOTE = LOTES[lote];
+const ITEMS = LOTE?.items;
 if (!ITEMS) { console.error(`Usa --lote con uno de: ${Object.keys(LOTES).join(', ')}`); process.exit(2); }
 const write = process.argv.includes('--write');
 const BLOCKS_DIR = blocksDir('ro');
 const CONCEPTO = new Map(ALL_CONCEPTS.map((c) => [c.id, c]));
-const problemas = [...verificar(ITEMS)];
+const problemas = [...LOTE!.verificar(ITEMS)];
 const porDefecto: string[] = [];
 const yaEnCorpus = new Map<string, string>();
 if (fs.existsSync(BLOCKS_DIR)) for (const f of fs.readdirSync(BLOCKS_DIR).filter((x) => /^b\d+\.json$/.test(x)))
