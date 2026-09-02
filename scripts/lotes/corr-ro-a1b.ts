@@ -134,7 +134,7 @@ export function verificar(items: ItemCorreccion[]): string[] {
       // Tras la/în/pe la buena NO lleva artículo enclítico (-ul/-le/-ua/-a
       // sobre la base) y la mala SÍ: se mira la terminación articulada, no
       // la desnuda, porque la desnuda es cualquier cosa (oraș, școală, birou).
-      const ART = /(?<![\p{L}])(la|în|pe) \p{L}+(ul|le|ua)(?![\p{L}])/u;
+      const ART = /(?<![\p{L}])(la|în|pe) \p{L}+(ul|le|ua|a)(?![\p{L}])/u;
       if (!conCu && ART.test(x.buena.replace(/\b(la|în|pe) \p{L}+ (noastr|nostr|voastr|vostr|me|t|s|lui|ei|lor|acest|acel)\p{L}*/gu, ''))) v.push(`${id}: la buena conserva el artículo tras la preposición sin determinante`);
       if (!conCu && !/(?<![\p{L}])(la|în|pe) \p{L}+(ul|le|ua|a)(?![\p{L}])/u.test(x.mala)) v.push(`${id}: la mala no lleva el artículo que el punto quita`);
     }
