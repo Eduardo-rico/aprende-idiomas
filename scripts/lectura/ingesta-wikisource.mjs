@@ -170,8 +170,12 @@ function bloquesDe(html) {
     .replace(/<\/?(?:poem|nowiki)>/g, '')
     // «D<omnu>l», «d<umnea>lui»: el editor marca entre ángulos las letras
     // que expande de una abreviatura. Se dejan las letras, sin ángulos.
-    .replace(/<(\p{L}+)>/gu, '$1')
+    .replace(/<sic!?>/g, '')
+    .replace(/<(-?\p{L}+)>/gu, '$1')
     .replace(/\s?\[\d{1,3}\]/g, '')
+    // «unii^și», «Ghiritlii^ Arnăut»: la llamada de nota de Wikisource que
+    // quedó pegada como «^» (2 casos en las cartas de Ghica, auditoría).
+    .replace(/\^/g, ' ')
     .replace(/ /g, ' ').replace(/[ \t\r\f\v]+/g, ' ');
   const prosa = (s) => limpiar(s.replace(/\s*\n\s*/g, ' ')).trim();
   const versos = (s) => limpiar(s).split('\n').map((l) => l.trim()).filter(Boolean).join('\n');

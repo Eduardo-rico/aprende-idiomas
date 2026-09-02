@@ -20,11 +20,11 @@ invariantesDelCatalogo({
   // Vlahuță, Russo, Negruzzi, Alecsandri, Pop-Reteganul, Eminescu, Ghica…):
   // 818 lecturas · 77 series · 2.831.967 palabras.
   lecturas: 818,
-  palabras: 2_831_967,
+  palabras: 2_831_968,
   // Wikisource: la navegación «▲ Începutul paginii», el pie de
   // ilustración («Greuceanu artwork» se coló en la primera corrida) y
   // las llamadas de nota «[1]» huérfanas.
-  aparato: /Începutul paginii|\bartwork\b|\[\d{1,3}\]/i,
+  aparato: /Începutul paginii|\bartwork\b|\[\d{1,3}\]|\^/i,
   extra: (catalogo) => {
     it('ș y ț llevan COMA debajo en todos los campos con texto — cero cedillas', () => {
       const conCedilla = catalogo
