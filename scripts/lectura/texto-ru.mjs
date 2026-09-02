@@ -212,7 +212,9 @@ export const PERFIL = {
   prefijoAutor: 'Автор',
   // Subpáginas que son la MISMA obra en grafía anterior a 1918 («…/ДО»,
   // «…/В дореформенной орфографии») cuando ya se está leyendo la moderna.
-  subpaginaExcluida: /\/ДО(?:\/|$)|дореформенн/i,
+  // Y «…/Текст целиком»: la novela entera en una página al lado de sus
+  // capítulos (Бедные люди, Двойник, Хозяйка) — duplicaría cada palabra.
+  subpaginaExcluida: /\/ДО(?:\/|$)|дореформенн|\/(?:Текст целиком|Весь текст|Полный текст)$/i,
   // ru.wikisource envuelve libros enteros (las «Русские книги для чтения»
   // de Tolstói) en un <div class="poem">, encabezados incluidos: la
   // ingesta lo leería como UNA estrofa y perdería los capítulos. Un

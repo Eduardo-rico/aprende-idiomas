@@ -19,9 +19,9 @@ invariantesDelCatalogo({
   // Medido 2026-09-02 al cierre de la tanda F-RU-T1 (Ушинский, Толстой
   // книги для чтения y народные рассказы, Афанасьев, Мамин-Сибиряк,
   // Аксаков, Одоевский, Погорельский): 377 lecturas · 16 series ·
-  // 535.913 palabras; F-RU-T2 (Chéjov: 532 relatos, 12 повести, 7 obras de teatro largas y 9 breves): 1.017 · 38 series · 1.799.015 palabras; T3 (Tolstói: Детство-Отрочество-Юность, Казаки, Хаджи-Мурат, 22 relatos, Анна Каренина, Война и мир, Воскресение) y T4 (Pushkin, Lérmontov, Gógol): 1,438 · 70 series · 3,641,530 palabras.
-  lecturas: 1438,
-  palabras: 3_641_530,
+  // 535.913 palabras; F-RU-T2 (Chéjov: 532 relatos, 12 повести, 7 obras de teatro largas y 9 breves): 1.017 · 38 series · 1.799.015 palabras; T3 (Tolstói: Детство-Отрочество-Юность, Казаки, Хаджи-Мурат, 22 relatos, Анна Каренина, Война и мир, Воскресение) y T4 (Pushkin, Lérmontov, Gógol): 1,438 · 70 series · 3,641,530 palabras. T6 (Dostoyevski entero: Бедные люди, Белые ночи, Записки из подполья, Игрок, 8 повести, 14 relatos C1; ПиН, Идиот, Бесы, Подросток, Карамазовы C2): 1.717 · 5.451.195 palabras.
+  lecturas: 1717,
+  palabras: 5_451_195,
   // ru.wikisource: navegación de capítulos («← Предыдущая», «Следующая →»),
   // llamadas de nota «[1]» huérfanas, páginas del escaneo sin transcribir,
   // el aviso «Источник текста не указан», la frase de las páginas de

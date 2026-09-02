@@ -163,7 +163,8 @@
   "recursivo": true,
   "agrupar": 3500,
   "nivel": "C2",
-  "notaOrtografia": "Nivel C2 DECLARADO por criterio (anclas-ru.mjs): novela grande de Dostoyevski — escala, polifonía, carga filosófica."
+  "notaOrtografia": "Nivel C2 DECLARADO por criterio (anclas-ru.mjs): novela grande de Dostoyevski — escala, polifonía, carga filosófica. Las páginas «Часть …» (cada parte entera) quedan fuera: duplicarían los capítulos.",
+  "excluirRe": "^Бесы \\(Достоевский\\)/Часть [^/]+$"
  },
  {
   "autor": "Фёдор Достоевский",
@@ -189,6 +190,7 @@
   "soloDirectas": true,
   "agrupar": 3500,
   "nivel": "C2",
-  "notaOrtografia": "Nivel C2 DECLARADO por criterio (anclas-ru.mjs): novela grande de Dostoyevski — escala, polifonía, carga filosófica."
+  "notaOrtografia": "Nivel C2 DECLARADO por criterio (anclas-ru.mjs): novela grande de Dostoyevski — escala, polifonía, carga filosófica.",
+  "recursivo": true
  }
 ]
