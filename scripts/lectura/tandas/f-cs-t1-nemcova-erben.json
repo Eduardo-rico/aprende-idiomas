@@ -1,0 +1,214 @@
+[
+ {
+  "slug": "babicka",
+  "titulo": "Babička",
+  "autor": "Božena Němcová",
+  "muerteAutor": 1862,
+  "publicacion": 1855,
+  "modo": "subpaginas",
+  "pagina": "Babička",
+  "agrupar": 3000,
+  "edicion": "Česká grafická unie, 1924"
+ },
+ {
+  "slug": "diva-bara",
+  "titulo": "Divá Bára",
+  "autor": "Božena Němcová",
+  "muerteAutor": 1862,
+  "publicacion": 1856,
+  "modo": "subpaginas",
+  "pagina": "Divá Bára (Němcová)"
+ },
+ {
+  "slug": "dobry-clovek",
+  "titulo": "Dobrý člověk",
+  "autor": "Božena Němcová",
+  "muerteAutor": 1862,
+  "publicacion": 1858,
+  "modo": "subpaginas",
+  "pagina": "Dobrý člověk"
+ },
+ {
+  "slug": "chudi-lide",
+  "titulo": "Chudí lidé",
+  "autor": "Božena Němcová",
+  "muerteAutor": 1862,
+  "publicacion": 1856,
+  "modo": "subpaginas",
+  "pagina": "Chudí lidé (Němcová)"
+ },
+ {
+  "slug": "karla",
+  "titulo": "Karla",
+  "autor": "Božena Němcová",
+  "muerteAutor": 1862,
+  "publicacion": 1855,
+  "modo": "subpaginas",
+  "pagina": "Karla",
+  "agrupar": 2000
+ },
+ {
+  "slug": "pan-ucitel",
+  "titulo": "Pan učitel",
+  "autor": "Božena Němcová",
+  "muerteAutor": 1862,
+  "publicacion": 1860,
+  "modo": "subpaginas",
+  "pagina": "Pan učitel"
+ },
+ {
+  "slug": "v-zamku-a-v-podzamci",
+  "titulo": "V zámku a v podzámčí",
+  "autor": "Božena Němcová",
+  "muerteAutor": 1862,
+  "publicacion": 1856,
+  "modo": "subpaginas",
+  "pagina": "V zámku a v podzámčí",
+  "agrupar": 2000
+ },
+ {
+  "slug": "nemcova-pohadky",
+  "titulo": "Pohádky a drobné prózy (Božena Němcová)",
+  "autor": "Božena Němcová",
+  "muerteAutor": 1862,
+  "publicacion": 1846,
+  "modo": "coleccion",
+  "paginas": [
+   "Je-li spravedlnost na světě, či ne",
+   "Kdo je hloupější?",
+   "Král času (Pilnáčkovy pohádky)",
+   {
+    "titulo": "Čtyři doby/I",
+    "texto": "Čtyři doby: I"
+   },
+   {
+    "titulo": "Čtyři doby/II",
+    "texto": "Čtyři doby: II"
+   },
+   {
+    "titulo": "Čtyři doby/III",
+    "texto": "Čtyři doby: III"
+   },
+   {
+    "titulo": "Čtyři doby/IV",
+    "texto": "Čtyři doby: IV"
+   }
+  ],
+  "minPalabras": 200
+ },
+ {
+  "slug": "narodni-bachorky-a-powesti",
+  "titulo": "Národní Báchorky a Powěsti",
+  "autor": "Božena Němcová",
+  "muerteAutor": 1862,
+  "publicacion": 1845,
+  "modo": "subpaginas",
+  "pagina": "Národní Báchorky a Powěsti",
+  "piezasSueltas": true,
+  "minPalabras": 200
+ },
+ {
+  "slug": "erben-kytice",
+  "titulo": "Kytice z pověstí národních",
+  "autor": "Karel Jaromír Erben",
+  "muerteAutor": 1870,
+  "publicacion": 1853,
+  "modo": "subpaginas",
+  "pagina": "Kytice z pověstí národních",
+  "piezasSueltas": true,
+  "versos": true,
+  "excluir": [
+   "Poznamenání"
+  ],
+  "minPalabras": 120,
+  "nivel": "B1",
+  "notaOrtografia": "Nivel declarado a mano: la densidad polisilábica subestima el verso y lo pondría en A2."
+ },
+ {
+  "slug": "erben-pohadky",
+  "titulo": "Pohádky (Karel Jaromír Erben)",
+  "autor": "Karel Jaromír Erben",
+  "muerteAutor": 1870,
+  "publicacion": 1858,
+  "modo": "coleccion",
+  "paginas": [
+   {
+    "titulo": "Máj (almanach 1858)/Pták Ohnivák a liška Ryška",
+    "texto": "Pták Ohnivák a liška Ryška"
+   },
+   {
+    "titulo": "Zlatovláska (Erben)",
+    "texto": "Zlatovláska"
+   },
+   "Tři zlaté vlasy Děda-Vševěda",
+   "Král tchoř",
+   "Jirka s kozú"
+  ],
+  "minPalabras": 200
+ },
+ {
+  "slug": "macha-maj",
+  "titulo": "Máj",
+  "autor": "Karel Hynek Mácha",
+  "muerteAutor": 1836,
+  "publicacion": 1836,
+  "modo": "subpaginas",
+  "pagina": "Máj (Mácha)",
+  "piezasSueltas": true,
+  "versos": true,
+  "nivel": "C1",
+  "minPalabras": 120
+ },
+ {
+  "slug": "macha-proza",
+  "titulo": "Próza (Karel Hynek Mácha)",
+  "autor": "Karel Hynek Mácha",
+  "muerteAutor": 1836,
+  "publicacion": 1834,
+  "modo": "coleccion",
+  "paginas": [
+   {
+    "titulo": "Obrazy ze života mého/Večer na Bezdězu",
+    "texto": "Večer na Bezdězu"
+   },
+   {
+    "titulo": "Obrazy ze života mého/Marinka",
+    "texto": "Marinka"
+   },
+   "Pouť krkonošská"
+  ],
+  "nivel": "C1",
+  "minPalabras": 200
+ },
+ {
+  "slug": "havlicek-satiry",
+  "titulo": "Satiry (Karel Havlíček Borovský)",
+  "autor": "Karel Havlíček Borovský",
+  "muerteAutor": 1856,
+  "publicacion": 1854,
+  "modo": "coleccion",
+  "paginas": [
+   "Král Lávra",
+   "Tyrolské elegie"
+  ],
+  "versos": true,
+  "minPalabras": 200,
+  "nivel": "B1",
+  "notaOrtografia": "Nivel declarado a mano: la densidad polisilábica subestima el verso y lo pondría en A2."
+ },
+ {
+  "slug": "krest-svateho-vladimira",
+  "titulo": "Křest svatého Vladimíra",
+  "autor": "Karel Havlíček Borovský",
+  "muerteAutor": 1856,
+  "publicacion": 1877,
+  "modo": "subpaginas",
+  "pagina": "Křest svatého Vladimíra",
+  "versos": true,
+  "agrupar": 700,
+  "etiquetaPieza": "Zpěv",
+  "minPalabras": 120,
+  "nivel": "B1",
+  "notaOrtografia": "Nivel declarado a mano: la densidad polisilábica subestima el verso y lo pondría en A2."
+ }
+]
