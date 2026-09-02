@@ -16,9 +16,11 @@ invariantesDelCatalogo({
   lang: 'cs',
   variantes: ['cs'],
   // Medido 2026-09-02 al cierre de la tanda F-CS-T1 (Němcová, Erben,
-  // Mácha, Havlíček). Piso, no igualdad: crecer está bien.
-  lecturas: 60,
-  palabras: 160_000,
+  // T2 (Hašek), T3 (prosa: Neruda, Hálek, Světlá, Čech, Sabina, Arbes, Zeyer,
+  // Klostermann, Mrštík) y T4 (poesía), tras la auditoría OCR (16 erratas
+  // atestiguadas): 745 lecturas · 64 series · 1.923.739 palabras.
+  lecturas: 745,
+  palabras: 1_923_739,
   // cs.wikisource: navegación de capítulos («← Předchozí», «Další →»),
   // la plantilla Textinfo si se colara, llamadas de nota «[1]» huérfanas
   // y las páginas del escaneo sin transcribir.
