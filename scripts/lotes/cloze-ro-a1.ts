@@ -26,7 +26,7 @@
 // coordinador pidió el lote preparado, no en el corpus. Y antes de
 // publicarse pasa por el lingüista adversarial.
 import { SUSTANTIVOS_A1, VERBOS_A1 } from '../../lib/data/languages/ro/lexicon-a1';
-import { articulado, presente, type Persona } from '../lib/paradigma-ro';
+import { articulado, presente, PERSONAS, type Persona } from '../lib/paradigma-ro';
 import { revisarOrtografiaRo } from '../../lib/lang/ortografia-ro';
 import { hunspellDisponible, desconocidas } from '../lib/hunspell-ro';
 
@@ -59,7 +59,11 @@ export const ITEMS: ClozeRo[] = [
   // pleacă» — indeterminado; lo cazó el lingüista, y ahora un gate).
   // Las seis clases del artículo, sin repetir, y no todas en posición
   // inicial: el alumno no debe aprender «primera casilla ⇒ -ul».
-  { p: 'r2-articulo-enclitico-sg', lema: 'om', s: 'Am văzut ___ (om) de la fereastră: este vecinul meu.', pista: 'hombre — con artículo definido enclítico (masculino en consonante)', ancla: 'este vecinul meu', transparenteLatin: false },
+  // v1 decía «Am văzut ___ (om) de la fereastră»: con OD humano DEFINIDO el
+  // rumano exige «pe» + doblado (GALR II) y la respuesta ya no era «omul»
+  // sino «pe omul». Error, no matiz — lo cazó el coordinador y lo dictaminó
+  // el lingüista. Marco predicativo: «pe» no aplica nunca en el predicado.
+  { p: 'r2-articulo-enclitico-sg', lema: 'om', s: 'Vecinul meu este ___ (om) de la fereastră.', pista: 'hombre — con artículo definido enclítico (masculino en consonante)', ancla: 'Vecinul meu este', transparenteLatin: false },
   { p: 'r2-articulo-enclitico-sg', lema: 'tată', s: '___ (tată) meu lucrează la spital.', pista: 'padre — con artículo definido enclítico (masculino en -ă)', ancla: 'meu lucrează', transparenteLatin: false },
   { p: 'r2-articulo-enclitico-sg', lema: 'tren', s: '___ (tren) de București este deja în gară.', pista: 'tren — con artículo definido enclítico (neutro en consonante)', ancla: 'este deja în gară', transparenteLatin: false },
   { p: 'r2-articulo-enclitico-sg', lema: 'carte', s: '___ (carte) aceasta este foarte interesantă.', pista: 'libro — con artículo definido enclítico (femenino en -e)', ancla: 'aceasta', transparenteLatin: false },
@@ -138,6 +142,17 @@ export function verificar(items: ClozeRo[]): string[] {
       const resto = x.s.replace('___', '').replace(/\([^)]*\)/g, '');
       const testigo = /(?<![\p{L}])(este|e|era|a fost|meu|mea|nostru|noastră|tău|ta|acesta|aceasta|acest|această|acela|aceea)(?![\p{L}])/iu.test(resto);
       if (!testigo) v.push(`${id}: sin testigo singular explícito — con «pleacă»/«există» la frase admite el plural (trenurile) y el ítem no está determinado`);
+    }
+    // INVARIANTE (lingüista, 2026-09-01): en el punto del artículo el hueco
+    // NUNCA va en posición de objeto directo, porque con humano definido el
+    // OD exige «pe» + doblado y eso es otro punto (r6). Se detecta un verbo
+    // finito o un perfect compus DELANTE del hueco que no sea la cópula.
+    if (x.lema) {
+      const antes = x.s.split('___')[0] ?? '';
+      const formas = new Set(VERBOS_A1.flatMap((v) => PERSONAS.map((q) => presente(v, q)).filter(Boolean) as string[]));
+      const toks = antes.toLowerCase().replace(/[^\p{L}\- ]/gu, ' ').split(/\s+/).filter(Boolean);
+      const verboAntes = toks.find((t) => (formas.has(t) && !/^(este|e|sunt|era)$/.test(t)) || /^(am|ai|a|ați|au)$/.test(t) && toks.includes('văzut'));
+      if (verboAntes || /\b(am|ai|a|ați|au) \p{L}+t ___/u.test(x.s)) v.push(`${id}: el hueco de artículo está en posición de objeto directo («${verboAntes ?? 'perfect compus'}» delante) — con humano definido pide «pe» + doblado, que es otro punto`);
     }
     // Un ítem de artículo cuya respuesta es igual al lema no examina nada.
     if (x.lema && r === x.lema) v.push(`${id}: la forma articulada coincide con el lema`);
