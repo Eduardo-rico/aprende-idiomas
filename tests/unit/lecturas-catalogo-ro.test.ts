@@ -21,7 +21,7 @@ invariantesDelCatalogo({
   // 817 lecturas · 77 series · 2.830.946 palabras (tras la auditoría OCR:
   // fuera zamfirescu-nuvele, OCR crudo en la fuente).
   lecturas: 817,
-  palabras: 2_830_946,
+  palabras: 2_830_965,
   // Wikisource: la navegación «▲ Începutul paginii», el pie de
   // ilustración («Greuceanu artwork» se coló en la primera corrida) y
   // las llamadas de nota «[1]» huérfanas.
@@ -85,6 +85,18 @@ describe('gates del texto rumano, probados en rojo', () => {
     expect(medirGrafia(nuevo).nota).not.toMatch(/apóstrofo/);
     // «dom'le» de Caragiale es habla de personaje, no norma: no cuenta
     expect(medirGrafia("dom'le, dom'le, dom'le, văz't că vin't când toți dormeau").elision).toBe(false);
+  });
+
+  it('«mixta con pocas formas»: dos «cînd» en un texto moderno se DECLARAN; el mismo texto sin ellos, no', () => {
+    // ocho formas modernas con â y, en la variante, dos restos con î: la
+    // edición es «actual» (â domina 6 a 2) pero tiene restos que declarar
+    const moderno = 'Când a venit, era târziu și toți dormeau în sat. Când s-a dus, nimeni nu l-a văzut; câinii tăceau, vântul cânta printre pâlcuri. Pământul era rece.';
+    const conRestos = moderno.replace('Când s-a', 'Cînd s-a').replace('Pământul', 'Pămîntul');
+    expect(medirGrafia(moderno).nota).not.toMatch(/sin modernizar/);
+    expect(medirGrafia(conRestos).nota).toMatch(/Quedan 2 formas .* sin modernizar/);
+    expect(medirGrafia(conRestos).nota).toMatch(/1953-1993/);
+    // exenciones: prefijo que abre raíz, interjección, francés
+    expect(medirGrafia('preaînalt nemaiîncăpând subtîmpărțesc hîîî psîîîî maître entraîne când sunt').nota).not.toMatch(/sin modernizar/);
   });
 
   it('el contador cuenta PALABRAS (algo con una letra), no tokens: la raya no es una palabra', () => {
