@@ -8,9 +8,48 @@
       "Producir la forma con sufijo -ez/-esc donde la raíz se reconoce (lucrez, citesc) y el instinto la omite",
       "Aplicar la palatalización de la 2.ª persona (vezi, pleci, citești)"
     ],
-    "conceptIds": ["r3-presente-4-conjugaciones", "r3-sufijo-ez-esc", "r3-irregulares-a1"],
-    "vocabKey": ["a cânta", "a merge", "a dormi", "a vedea", "a lucra", "a citi", "a vorbi", "a locui"],
+    "conceptIds": [
+      "r3-presente-4-conjugaciones",
+      "r3-sufijo-ez-esc",
+      "r3-irregulares-a1"
+    ],
+    "vocabKey": [
+      "a cânta",
+      "a merge",
+      "a dormi",
+      "a vedea",
+      "a lucra",
+      "a citi",
+      "a vorbi",
+      "a locui"
+    ],
     "conceptNotesPath": "b3/l1-prezentul.mdx",
+    "exerciseRefs": []
+  },
+  {
+    "id": "b3-l2-conjunctivul-cu-sa",
+    "blockId": 3,
+    "name": "Să + prezent: donde el español pone infinitivo",
+    "objectives": [
+      "Producir «să» + presente tras vreau, pot, trebuie, îmi place, încep, en la persona del sujeto",
+      "Mantener «trebuie» invariable y poner la persona en el verbo que sigue",
+      "Usar «o să» invariable como futuro coloquial"
+    ],
+    "conceptIds": [
+      "r3-sa-vs-infinitivo",
+      "r3-trebuie-invariable",
+      "r3-futuro-o-sa",
+      "r3-dativo-experimentante"
+    ],
+    "vocabKey": [
+      "a vrea",
+      "a putea",
+      "a trebui",
+      "a începe",
+      "a pleca",
+      "a veni"
+    ],
+    "conceptNotesPath": "b3/l2-conjunctivul-cu-sa.mdx",
     "exerciseRefs": []
   }
 ]
