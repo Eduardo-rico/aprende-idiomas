@@ -9,25 +9,29 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useLang } from "@/lib/stores/lang-context";
-import { LANGUAGES, LANG_LABELS, LANG_FLAGS, type LanguageId } from "@/lib/locales";
+import { LANGUAGES, LANG_LABELS, LANG_FLAGS, LANG_CHROME, type LanguageId } from "@/lib/locales";
 import { useSettings } from "@/lib/stores/settings";
 
 export function NavBar() {
   const lang = useLang();
   const path = usePathname() ?? "";
   const router = useRouter();
-  const { language, setLanguage } = useSettings();
+  const { setLanguage } = useSettings();
+  // Wordmark + menu labels come from the chrome catalogue keyed by the
+  // ROUTE lang (lib/locales LANG_CHROME), so /ro reads «Învață Română ·
+  // Învață · Carte …» while /pt keeps «Aprende Português · Estudar …».
+  const chrome = LANG_CHROME[lang];
   const links = [
-    { href: `/${lang}`, label: "Estudar" },
-    { href: `/${lang}/blocks`, label: "Livro" },
-    { href: `/${lang}/stories`, label: "Histórias" },
-    { href: `/${lang}/leer`, label: "Ler" },
-    { href: `/${lang}/progreso`, label: "Progresso" },
+    { href: `/${lang}`, label: chrome.nav.estudar },
+    { href: `/${lang}/blocks`, label: chrome.nav.livro },
+    { href: `/${lang}/stories`, label: chrome.nav.historias },
+    { href: `/${lang}/leer`, label: chrome.nav.ler },
+    { href: `/${lang}/progreso`, label: chrome.nav.progreso },
     // A.6: nav item now points at the new /cuenta hub (Manual Lusitano
     // chrome) rather than the legacy /settings page. The /settings URL
     // still 308s to /cuenta via next.config redirects for backward
     // compatibility (bookmarks, in-flight links).
-    { href: `/${lang}/cuenta`, label: "Cuenta" },
+    { href: `/${lang}/cuenta`, label: chrome.nav.cuenta },
   ];
   // Phase 5: los 4 idiomas están habilitados. Cambiar el dropdown hace
   // `setLanguage` (persiste en el settings store) y navega a la home
@@ -45,7 +49,7 @@ export function NavBar() {
             aria-hidden="true"
             className="inline-block w-2 h-2 rounded-full bg-lesson"
           />
-          Aprende Português
+          {chrome.title}
         </Link>
         <ul className="flex gap-1 ml-auto items-center list-none">
           {links.map((l) => {
@@ -66,8 +70,11 @@ export function NavBar() {
             );
           })}
         </ul>
+        {/* The selected option is the ROUTE lang, not the persisted
+            settings value: landing on /ro by URL must show 🇷🇴 even if
+            the store still remembers pt from a previous visit. */}
         <select
-          value={language}
+          value={lang}
           onChange={(e) => handleLanguageChange(e.target.value as LanguageId)}
           aria-label="Idioma objetivo"
           className="border border-rule-strong rounded-md px-2 py-1 text-xs bg-paper text-ink"

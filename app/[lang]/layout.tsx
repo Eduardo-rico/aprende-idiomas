@@ -19,11 +19,28 @@
 // route group that needs a semantic <main> (e.g. (config)/cuenta/
 // layout.tsx) provides its own. This avoids nested-<main> HTML invalid
 // markup when sub-pages also want a semantic <main> wrapper.
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LangProvider } from "@/lib/stores/lang-context";
 import { UiStateHydrator } from "@/components/UiStateHydrator";
-import { hasLocale, type LanguageId } from "@/lib/locales";
+import { hasLocale, LANG_CHROME, type LanguageId } from "@/lib/locales";
+
+// <title> + description per target language, from the single chrome
+// catalogue in lib/locales. Overrides the root layout's static
+// metadata (which stays as the fallback for /login and friends). An
+// unknown lang falls through to the root metadata; the layout body
+// below is what 404s it.
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  if (!hasLocale(lang)) return {};
+  const chrome = LANG_CHROME[lang];
+  return { title: chrome.title, description: chrome.description };
+}
 
 export default async function LangLayout({
   children,
