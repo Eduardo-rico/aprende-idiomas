@@ -1,33 +1,194 @@
 [
- { "pieza": "chehov-ivanov-c01", "de": "{{rem|Анна Петровна уходит.", "a": "(Анна Петровна уходит.)", "motivo": "plantilla {{rem|…}} de acotación que el transcriptor dejó sin cerrar; las demás acotaciones de la pieza van entre paréntesis" },
- { "pieza": "chehov-ivanov-c02", "de": "{{rem|Гаврила подносит Бабакиной чай.", "a": "(Гаврила подносит Бабакиной чай.)", "motivo": "plantilla {{rem|…}} de acotación sin cerrar" },
- { "pieza": "chehov-ivanov-c02", "de": "{{rem|Боркин и граф со смехом берут ее под руки и, целуя в щеки, уводят в правую дверь.", "a": "(Боркин и граф со смехом берут ее под руки и, целуя в щеки, уводят в правую дверь.)", "motivo": "plantilla {{rem|…}} de acotación sin cerrar" },
- { "pieza": "dostoevskij-prestuplenie-i-nakazanie-c07", "de": "с В--го проспекта", "a": "с В—го проспекта", "motivo": "raya de topónimo abreviado («В—го проспекта») escrita con dos guiones ASCII; en el resto de la novela va «—»" },
- { "pieza": "gogol-vechera--ivan-fyodorovich-shponka-i-ego-tyotushka", "de": "«Я взъеду, -- услышал", "a": "«Я взъеду, — услышал", "motivo": "raya de diálogo con dos guiones ASCII; el párrafo lleva «—» en las demás" },
- { "pieza": "gogol-vechera--ivan-fyodorovich-shponka-i-ego-tyotushka", "de": "имел случай… -- проговорил", "a": "имел случай… — проговорил", "motivo": "raya de diálogo con dos guiones ASCII" },
- { "pieza": "gogol-vechera--ivan-fyodorovich-shponka-i-ego-tyotushka", "de": "про себя:-- «Куды", "a": "про себя: — «Куды", "motivo": "raya con dos guiones ASCII pegada a los dos puntos" },
- { "pieza": "gogol-peterburgskie-povesti--nevskij-prospekt", "de": "— Гензи на кухня!1 ----", "a": "— Гензи на кухня!", "motivo": "llamada de nota «1» y la raya de separación de la nota al pie, pegadas a la réplica; la traducción del alemán macarrónico sigue como párrafo aparte" },
- { "pieza": "dostoevskij-povesti--selo-stepanchikovo-i-ego-obitateli", "de": "совсем заучил7", "a": "совсем заучил", "motivo": "llamada de nota «7» pegada a la palabra (la nota se quitó con el aparato)" },
- { "pieza": "pushkin-skazki--zhenih", "de": "<1825>", "a": "(1825)", "motivo": "fecha de composición que el editor pone entre ángulos al pie del poema; se deja como fecha, sin los ángulos" },
- { "pieza": "pushkin-kapitanskaya-dochka-c08", "de": "----", "a": "* * *", "motivo": "separador de escena tecleado como cuatro guiones; el catálogo usa «* * *»" },
- { "pieza": "dostoevskij-rasskazy--roman-v-devyati-pismah", "de": "0Иван Петрович!", "a": "Иван Петрович!", "motivo": "un «0» pegado al vocativo que abre cada carta (resto de una plantilla de sangría); tres cartas" },
- { "pieza": "dostoevskij-rasskazy--roman-v-devyati-pismah", "de": "0Петр Иваныч!", "a": "Петр Иваныч!", "motivo": "un «0» pegado al vocativo que abre cada carta; dos cartas" },
- { "pieza": "chehov-ogni-c02", "de": "пиндо?сов", "a": "пиндосов", "motivo": "acento de intensidad («пиндо́сов») que la transcripción dejó como «?»; los acentos se quitan en todo el catálogo" },
- { "pieza": "chehov-pozdnie-rasskazy--imeniny", "de": "у?же", "a": "уже", "motivo": "acento de intensidad («у́же», más estrecho) dejado como «?»" },
- { "pieza": "chehov-pozdnie-rasskazy--poceluj", "de": "ве?рхом", "a": "верхом", "motivo": "acento de intensidad («ве́рхом») dejado como «?»" },
- { "pieza": "chehov-rannie-rasskazy--barynya", "de": "бо?льшую", "a": "большую", "motivo": "acento de intensidad («бо́льшую») dejado como «?»" },
- { "pieza": "chehov-rannie-rasskazy--geroj-barynya", "de": "кофе?я", "a": "кофея", "motivo": "acento de intensidad («кофе́я») dejado como «?»" },
- { "pieza": "chehov-rannie-rasskazy--greshnik-iz-toledo", "de": "воро?нами", "a": "воронами", "motivo": "acento de intensidad («воро́нами») dejado como «?»" },
- { "pieza": "chehov-rannie-rasskazy--lyubov", "de": "«непрем?нно»", "a": "«непремѣнно»", "motivo": "Chéjov se burla de la «ѣ» en la palabra: «е в слове „непремѣнно“»; la ѣ, que la transcripción dejó como «?», es el chiste y se restituye" },
- { "pieza": "chehov-rannie-rasskazy--nadul", "de": "По?шло", "a": "Пошло", "motivo": "acento de intensidad («По́шло») dejado como «?»" },
- { "pieza": "chehov-rannie-rasskazy--o-zhenschiny-zhenschiny", "de": "Ландыше?й вместо ла?ндышей", "a": "Ландышей вместо ландышей", "motivo": "acentos de intensidad de la rima parodiada (Ландыше́й / ла́ндышей) dejados como «?»; la burla sigue legible por el contexto" },
- { "pieza": "chehov-rannie-rasskazy--perpetuum-mobile", "de": "доро?гой", "a": "дорогой", "motivo": "acento de intensidad («доро́гой») dejado como «?»" },
- { "pieza": "chehov-rannie-rasskazy--posle-benefisa", "de": "«В?нецыя»", "a": "«Вѣнецыя»", "motivo": "rótulo de hotel en grafía vieja que Chéjov cita («Вѣнецыя»); la ѣ quedó como «?» y se restituye" },
- { "pieza": "chehov-rannie-rasskazy--rasskaz-bez-konca", "de": "«Кол?сное зав?дение»", "a": "«Колѣсное завѣдение»", "motivo": "letrero en grafía vieja citado por Chéjov; las dos ѣ quedaron como «?» y se restituyen" },
- { "pieza": "chehov-rannie-rasskazy--russkij-ugol", "de": "сто?ит", "a": "стоит", "motivo": "acento de intensidad («сто́ит») dejado como «?»" },
- { "pieza": "chehov-rannie-rasskazy--ugroza", "de": "язы?ках", "a": "языках", "motivo": "acento de intensidad («язы́ках») dejado como «?»" },
- { "pieza": "pushkin-kapitanskaya-dochka-c06", "de": "сто?я", "a": "стоя", "motivo": "acento de intensidad («сто́я») dejado como «?»" },
- { "pieza": "turgenev-rudin-c03", "de": "сто?ят", "a": "стоят", "motivo": "acento de intensidad («сто́ят») dejado como «?»" },
- { "pieza": "turgenev-rudin-c03", "de": "запла?чу", "a": "заплачу", "motivo": "acento de intensidad («запла́чу») dejado como «?»" },
- { "pieza": "turgenev-rudin-c03", "de": "сто?ите", "a": "стоите", "motivo": "acento de intensidad («сто́ите») dejado como «?»" }
+ {
+  "pieza": "chehov-ivanov-c01",
+  "de": "{{rem|Анна Петровна уходит.",
+  "a": "(Анна Петровна уходит.)",
+  "motivo": "plantilla {{rem|…}} de acotación que el transcriptor dejó sin cerrar; las demás acotaciones de la pieza van entre paréntesis"
+ },
+ {
+  "pieza": "chehov-ivanov-c02",
+  "de": "{{rem|Гаврила подносит Бабакиной чай.",
+  "a": "(Гаврила подносит Бабакиной чай.)",
+  "motivo": "plantilla {{rem|…}} de acotación sin cerrar"
+ },
+ {
+  "pieza": "chehov-ivanov-c02",
+  "de": "{{rem|Боркин и граф со смехом берут ее под руки и, целуя в щеки, уводят в правую дверь.",
+  "a": "(Боркин и граф со смехом берут ее под руки и, целуя в щеки, уводят в правую дверь.)",
+  "motivo": "plantilla {{rem|…}} de acotación sin cerrar"
+ },
+ {
+  "pieza": "dostoevskij-prestuplenie-i-nakazanie-c07",
+  "de": "с В--го проспекта",
+  "a": "с В—го проспекта",
+  "motivo": "raya de topónimo abreviado («В—го проспекта») escrita con dos guiones ASCII; en el resto de la novela va «—»"
+ },
+ {
+  "pieza": "gogol-vechera--ivan-fyodorovich-shponka-i-ego-tyotushka",
+  "de": "«Я взъеду, -- услышал",
+  "a": "«Я взъеду, — услышал",
+  "motivo": "raya de diálogo con dos guiones ASCII; el párrafo lleva «—» en las demás"
+ },
+ {
+  "pieza": "gogol-vechera--ivan-fyodorovich-shponka-i-ego-tyotushka",
+  "de": "имел случай… -- проговорил",
+  "a": "имел случай… — проговорил",
+  "motivo": "raya de diálogo con dos guiones ASCII"
+ },
+ {
+  "pieza": "gogol-vechera--ivan-fyodorovich-shponka-i-ego-tyotushka",
+  "de": "про себя:-- «Куды",
+  "a": "про себя: — «Куды",
+  "motivo": "raya con dos guiones ASCII pegada a los dos puntos"
+ },
+ {
+  "pieza": "gogol-peterburgskie-povesti--nevskij-prospekt",
+  "de": "— Гензи на кухня!1 ----",
+  "a": "— Гензи на кухня!",
+  "motivo": "llamada de nota «1» y la raya de separación de la nota al pie, pegadas a la réplica; la traducción del alemán macarrónico sigue como párrafo aparte"
+ },
+ {
+  "pieza": "dostoevskij-povesti--selo-stepanchikovo-i-ego-obitateli",
+  "de": "совсем заучил7",
+  "a": "совсем заучил",
+  "motivo": "llamada de nota «7» pegada a la palabra (la nota se quitó con el aparato)"
+ },
+ {
+  "pieza": "pushkin-skazki--zhenih",
+  "de": "<1825>",
+  "a": "(1825)",
+  "motivo": "fecha de composición que el editor pone entre ángulos al pie del poema; se deja como fecha, sin los ángulos"
+ },
+ {
+  "pieza": "pushkin-kapitanskaya-dochka-c08",
+  "de": "----",
+  "a": "* * *",
+  "motivo": "separador de escena tecleado como cuatro guiones; el catálogo usa «* * *»"
+ },
+ {
+  "pieza": "dostoevskij-rasskazy--roman-v-devyati-pismah",
+  "de": "0Иван Петрович!",
+  "a": "Иван Петрович!",
+  "motivo": "un «0» pegado al vocativo que abre cada carta (resto de una plantilla de sangría); tres cartas"
+ },
+ {
+  "pieza": "dostoevskij-rasskazy--roman-v-devyati-pismah",
+  "de": "0Петр Иваныч!",
+  "a": "Петр Иваныч!",
+  "motivo": "un «0» pegado al vocativo que abre cada carta; dos cartas"
+ },
+ {
+  "pieza": "chehov-ogni-c02",
+  "de": "пиндо?сов",
+  "a": "пиндосов",
+  "motivo": "acento de intensidad («пиндо́сов») que la transcripción dejó como «?»; los acentos se quitan en todo el catálogo"
+ },
+ {
+  "pieza": "chehov-pozdnie-rasskazy--imeniny",
+  "de": "у?же",
+  "a": "уже",
+  "motivo": "acento de intensidad («у́же», más estrecho) dejado como «?»"
+ },
+ {
+  "pieza": "chehov-pozdnie-rasskazy--poceluj",
+  "de": "ве?рхом",
+  "a": "верхом",
+  "motivo": "acento de intensidad («ве́рхом») dejado como «?»"
+ },
+ {
+  "pieza": "chehov-rannie-rasskazy--barynya",
+  "de": "бо?льшую",
+  "a": "большую",
+  "motivo": "acento de intensidad («бо́льшую») dejado como «?»"
+ },
+ {
+  "pieza": "chehov-rannie-rasskazy--geroj-barynya",
+  "de": "кофе?я",
+  "a": "кофея",
+  "motivo": "acento de intensidad («кофе́я») dejado como «?»"
+ },
+ {
+  "pieza": "chehov-rannie-rasskazy--greshnik-iz-toledo",
+  "de": "воро?нами",
+  "a": "воронами",
+  "motivo": "acento de intensidad («воро́нами») dejado como «?»"
+ },
+ {
+  "pieza": "chehov-rannie-rasskazy--lyubov",
+  "de": "«непрем?нно»",
+  "a": "«непремѣнно»",
+  "motivo": "Chéjov se burla de la «ѣ» en la palabra: «е в слове „непремѣнно“»; la ѣ, que la transcripción dejó como «?», es el chiste y se restituye"
+ },
+ {
+  "pieza": "chehov-rannie-rasskazy--nadul",
+  "de": "По?шло",
+  "a": "Пошло",
+  "motivo": "acento de intensidad («По́шло») dejado como «?»"
+ },
+ {
+  "pieza": "chehov-rannie-rasskazy--o-zhenschiny-zhenschiny",
+  "de": "Ландыше?й вместо ла?ндышей",
+  "a": "Ландышей вместо ландышей",
+  "motivo": "acentos de intensidad de la rima parodiada (Ландыше́й / ла́ндышей) dejados como «?»; la burla sigue legible por el contexto"
+ },
+ {
+  "pieza": "chehov-rannie-rasskazy--perpetuum-mobile",
+  "de": "доро?гой",
+  "a": "дорогой",
+  "motivo": "acento de intensidad («доро́гой») dejado como «?»"
+ },
+ {
+  "pieza": "chehov-rannie-rasskazy--posle-benefisa",
+  "de": "«В?нецыя»",
+  "a": "«Вѣнецыя»",
+  "motivo": "rótulo de hotel en grafía vieja que Chéjov cita («Вѣнецыя»); la ѣ quedó como «?» y se restituye"
+ },
+ {
+  "pieza": "chehov-rannie-rasskazy--rasskaz-bez-konca",
+  "de": "«Кол?сное зав?дение»",
+  "a": "«Колѣсное завѣдение»",
+  "motivo": "letrero en grafía vieja citado por Chéjov; las dos ѣ quedaron como «?» y se restituyen"
+ },
+ {
+  "pieza": "chehov-rannie-rasskazy--russkij-ugol",
+  "de": "сто?ит",
+  "a": "стоит",
+  "motivo": "acento de intensidad («сто́ит») dejado como «?»"
+ },
+ {
+  "pieza": "chehov-rannie-rasskazy--ugroza",
+  "de": "язы?ках",
+  "a": "языках",
+  "motivo": "acento de intensidad («язы́ках») dejado como «?»"
+ },
+ {
+  "pieza": "pushkin-kapitanskaya-dochka-c06",
+  "de": "сто?я",
+  "a": "стоя",
+  "motivo": "acento de intensidad («сто́я») dejado como «?»"
+ },
+ {
+  "pieza": "turgenev-rudin-c03",
+  "de": "сто?ят",
+  "a": "стоят",
+  "motivo": "acento de intensidad («сто́ят») dejado como «?»"
+ },
+ {
+  "pieza": "turgenev-rudin-c03",
+  "de": "запла?чу",
+  "a": "заплачу",
+  "motivo": "acento de intensidad («запла́чу») dejado como «?»"
+ },
+ {
+  "pieza": "turgenev-rudin-c03",
+  "de": "сто?ите",
+  "a": "стоите",
+  "motivo": "acento de intensidad («сто́ите») dejado como «?»"
+ },
+ {
+  "pieza": "goncharov-obryv-c09",
+  "de": "c’etait vгаi",
+  "a": "c’etait vrai",
+  "motivo": "«vrai» francés con la «r» leída como «г» cirílica cursiva y la «a» cirílica; palabra mixta que la regla de homóglifos no decide (г no tiene gemela latina)"
+ }
 ]

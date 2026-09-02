@@ -28,7 +28,11 @@
 // mayoritario de la palabra. MEDIDO en la auditoría OCR: 280 palabras
 // en el catálogo (Игрок cap. 9 y Крокодил IV traen la «р» latina en
 // casi cada línea); ninguna legítima entre las 25 muestras leídas.
-const LAT_A_CIR = { a: 'а', c: 'с', e: 'е', o: 'о', p: 'р', x: 'х', y: 'у', A: 'А', B: 'В', C: 'С', E: 'Е', H: 'Н', K: 'К', M: 'М', O: 'О', P: 'Р', T: 'Т', X: 'Х' };
+// La «i» latina va a la «і» UCRANIANA (U+0456), nunca a la «и» rusa: en
+// Gógol («мiй», «вiн», «coбi») son palabras ucranianas en boca de los
+// personajes y tienen que seguir siéndolo. MEDIDO: 256 formas en 12
+// piezas (Вечера, Leskov con personajes ucranianos).
+const LAT_A_CIR = { a: 'а', c: 'с', e: 'е', o: 'о', p: 'р', x: 'х', y: 'у', i: 'і', I: 'І', A: 'А', B: 'В', C: 'С', E: 'Е', H: 'Н', K: 'К', M: 'М', O: 'О', P: 'Р', T: 'Т', X: 'Х' };
 const CIR_A_LAT = Object.fromEntries(Object.entries(LAT_A_CIR).map(([l, c]) => [c, l]));
 let homoglifosCorregidos = 0;
 export function corregirHomoglifos(s) {
@@ -40,8 +44,10 @@ export function corregirHomoglifos(s) {
     // hace latina la palabra («ессеlenzа» → «eccellenza»); una «д», «ж» o
     // «ы» la hace cirílica. Si las dos escrituras traen letras sin gemela
     // no se toca; si ninguna, manda la mayoría.
-    const latSola = /[bdfghijklmnqrstuvwzDFGIJLNQRSUVWYZ]/.test(w);
-    const cirSola = /[бвгджзийклмнптфцчшщъыьэюяёѣіѳѵБГДЖЗИЙЛПФЦЧШЩЪЫЬЭЮЯЁ]/.test(w);
+    // (la «i/I» latina NO decide: tiene gemela ucraniana «і»; «тiм» es cirílica)
+    const latSola = /[bdfghjklmnqrstuvwzDFGJLNQRSUVWYZ]/.test(w);
+    // (la «і» ucraniana tampoco decide —es la gemela de «i»—; ї є ґ ў sí)
+    const cirSola = /[бвгджзийклмнптфцчшщъыьэюяёѣѳѵїєґўБГДЖЗИЙЛПФЦЧШЩЪЫЬЭЮЯЁЇЄҐЎ]/.test(w);
     if (latSola && cirSola) return w;
     const cir = (w.match(/\p{Script=Cyrillic}/gu) ?? []).length;
     const lat = (w.match(/[a-zA-Z]/g) ?? []).length;
@@ -61,6 +67,9 @@ export function normalizarDiacriticos(s) {
     // La llamada de nota «<71>» va ANTES que la regla del guion: «Sauvée!
     // -<71> патетически» tapaba el espacio y el guion se quedaba.
     .replace(/<\d{1,3}>/g, '')
+    // «<**1 См. Примечания в конце текста>»: llamada de nota del editor
+    // entre ángulos con asteriscos (Подросток; 23 casos en 14 piezas).
+    .replace(/<\*{1,2}\d{1,3}[^<>]{0,80}>/g, '')
     // Guion ASCII con espacio a los dos lados («- Представьте себе! - сказал
     // Версилов»): en ruso un guion entre espacios no existe, siempre es la
     // raya de diálogo o de inciso. MEDIDO antes de aplicarlo: 13.542 casos
@@ -163,23 +172,30 @@ export function medirGrafia(texto) {
   // La «і» sola no es marca pre-1918: es ucraniano (los campesinos de
   // «Два старика» de Tolstói hablan ucraniano en el texto ruso). Sólo
   // cuenta como grafía vieja si la acompañan ѣ, ѳ, ѵ o el ъ final.
-  if (yat + fita + izh + hardFinal === 0) { pre -= iDec; ejemplos.length = 0; }
+  // (la «і» sola sigue contando para la clase «mixta», con su recuento)
   const ratio = pre / n;
   const pre1918 = ratio >= 0.05;
-  const mezcla = !pre1918 && ratio > 0.003;
+  // Restos: entre 5 marcas y el 5 % es una edición modernizada con restos
+  // (Дневник лишнего человека: 7 ѣ y 6 ъ finales en 15.700 palabras) o un
+  // texto ruso con pasajes en ucraniano (Два старика: 29 «і»). Se declara
+  // «mixta» con el recuento, como RO hizo con los restos de «î»; no se
+  // rechaza ni se convierte.
+  const mixta = !pre1918 && pre >= 5;
+  const mezcla = false;
   const base = 'Texto en NFC, sin acentos de intensidad editoriales.';
   let etiqueta, nota;
   if (pre1918) {
     etiqueta = 'grafía pre-1918 (ѣ, і, ъ final)';
     nota = `${base} La edición conserva la ortografía anterior a la reforma de 1918 (${ejemplos.join(', ')}; marca pre-reforma en el ${(100 * ratio).toFixed(1)} % de las palabras: ${yat} con ѣ, ${iDec} con і, ${fita} con ѳ, ${izh} con ѵ, ${hardFinal} con ъ final). Es la grafía real de la edición, no un error, y no se convierte: ѣ→е falla en los homógrafos.`;
-  } else if (mezcla) {
-    etiqueta = 'grafía MEZCLADA (rechazar)';
-    nota = `${base} Mezcla incoherente: marca pre-1918 en el ${(100 * ratio).toFixed(2)} % de las palabras (${ejemplos.join(', ')}).`;
+  } else if (mixta) {
+    etiqueta = 'grafía mixta (restos)';
+    const que = yat + fita + izh + hardFinal > 0 ? 'restos de la edición anterior a 1918' : 'la «і» de pasajes en ucraniano';
+    nota = `${base} La transcripción sigue la ortografía posterior a 1918 con ${que}: ${pre} formas (${yat} con ѣ, ${iDec} con і, ${fita + izh} con ѳ/ѵ, ${hardFinal} con ъ final; ${ejemplos.join(', ')}). Se conservan tal cual: no se convierte nada.`;
   } else {
     etiqueta = 'grafía actual (post-1918)';
     nota = `${base} La transcripción sigue la ortografía posterior a la reforma de 1918${yo ? ` y escribe la «ё» (${yo} formas)` : ' y no distingue la «ё»'}; la «ё» opcional se deja como está en la fuente.`;
   }
-  return { etiqueta, nota, ratio, pre1918, mezcla, yat, iDec, fita, izh, hardFinal, yo };
+  return { etiqueta, nota, ratio, pre1918, mixta, mezcla, marcas: pre, yat, iDec, fita, izh, hardFinal, yo };
 }
 
 /** Transliteración para ids de fichero (GOST 7.79 simplificado, sin
@@ -281,7 +297,9 @@ export const PERFIL = {
   // «…/В дореформенной орфографии») cuando ya se está leyendo la moderna.
   // Y «…/Текст целиком»: la novela entera en una página al lado de sus
   // capítulos (Бедные люди, Двойник, Хозяйка) — duplicaría cada palabra.
-  subpaginaExcluida: /\/ДО(?:\/|$)|\(ДО\)(?:\/|$)|дореформенн|\/(?:Текст целиком|Весь текст|Полный текст)$/i,
+  // Y «…/Приложение/…»: el apéndice del editor (el glosario «Перевод
+  // иноязычных выражений» de Подросток entraba como último capítulo).
+  subpaginaExcluida: /\/ДО(?:\/|$)|\(ДО\)(?:\/|$)|дореформенн|\/(?:Текст целиком|Весь текст|Полный текст)$|\/Приложение(?:\/|$)/i,
   elegirVariante,
   // ru.wikisource envuelve libros enteros (las «Русские книги для чтения»
   // de Tolstói) en un <div class="poem">, encabezados incluidos: la
@@ -335,7 +353,9 @@ export const PERFIL = {
     // primer «Стр. 136. …» (nota por página), abre el aparato; desde ahí
     // hasta el final, fuera. El comentario de 1950 no es dominio público,
     // y no es el autor. Pagado: 15 piezas lo traían dentro.
-    const abreAparato = (t) => /^(?:Примечания|Комментарии|Комментарий|Варианты|Печатные варианты|Примечание)\s*:?$/i.test(t) || /^Стр\.\s*\d+[.,]/.test(t);
+    // «Перевод иноязычных выражений»: el glosario del editor con las frases
+    // francesas del capítulo (Подросток) — aparato, no traducción de la obra.
+    const abreAparato = (t) => /^(?:Примечания|Комментарии|Комментарий|Варианты|Печатные варианты|Примечание)\s*:?$/i.test(t) || /^Стр\.\s*\d+[.,]/.test(t) || /^Перевод иноязычных выражений/i.test(t);
     const primero = [...doc.querySelectorAll('p, div, h2, h3, h4, h5, center, dt, li, b, strong')].find((el) => abreAparato(el.textContent.trim()) && !el.querySelector('p, div'));
     if (primero) {
       let n = primero;

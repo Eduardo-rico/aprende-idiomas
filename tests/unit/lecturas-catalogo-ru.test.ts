@@ -11,7 +11,7 @@
 import { describe, it, expect } from 'vitest';
 import { invariantesDelCatalogo, cargarCatalogo } from './lecturas-catalogo.invariantes';
 // Módulo .mjs del pipeline: es la MISMA regla que usa la ingesta (allowJs).
-import { normalizarDiacriticos, gateDiacriticos, sinCirilico, fingirPre1918, contarPalabras, medirGrafia, slug } from '../../scripts/lectura/texto-ru.mjs';
+import { normalizarDiacriticos, gateDiacriticos, sinCirilico, fingirPre1918, contarPalabras, medirGrafia, slug, corregirHomoglifos } from '../../scripts/lectura/texto-ru.mjs';
 
 invariantesDelCatalogo({
   lang: 'ru',
@@ -19,14 +19,14 @@ invariantesDelCatalogo({
   // Medido 2026-09-02 al cierre de la tanda F-RU-T1 (Ушинский, Толстой
   // книги для чтения y народные рассказы, Афанасьев, Мамин-Сибиряк,
   // Аксаков, Одоевский, Погорельский): 377 lecturas · 16 series ·
-  // 535.913 palabras; F-RU-T2 (Chéjov: 532 relatos, 12 повести, 7 obras de teatro largas y 9 breves): 1.017 · 38 series · 1.799.015 palabras; T3 (Tolstói: Детство-Отрочество-Юность, Казаки, Хаджи-Мурат, 22 relatos, Анна Каренина, Война и мир, Воскресение) y T4 (Pushkin, Lérmontov, Gógol): 1,438 · 70 series · 3,641,530 palabras. T6 (Dostoyevski entero: Бедные люди, Белые ночи, Записки из подполья, Игрок, 8 повести, 14 relatos C1; ПиН, Идиот, Бесы, Подросток, Карамазовы C2): 1.717 · 5.451.195 palabras. T5 (Turguénev: Записки охотника y 32 повести B2, 6 novelas C1; Goncharov C1/C2; Leskov C1, Соборяне C2 en grafía pre-1918; Saltykov C1/C2) y re-corrida de las seis tandas con el motor final: 2,188 · 101 series · 7,715,327 palabras. Cierre 2026-09-02 tras la auditoría OCR (bielorruso sin «ў» fuera, Огни y Чёрный монах sin duplicar, 31 erratas atestiguadas, homóglifos): 2.180 · 101 series · 7.687.902 palabras — el piso BAJA aquí a propósito.
+  // 535.913 palabras; F-RU-T2 (Chéjov: 532 relatos, 12 повести, 7 obras de teatro largas y 9 breves): 1.017 · 38 series · 1.799.015 palabras; T3 (Tolstói: Детство-Отрочество-Юность, Казаки, Хаджи-Мурат, 22 relatos, Анна Каренина, Война и мир, Воскресение) y T4 (Pushkin, Lérmontov, Gógol): 1,438 · 70 series · 3,641,530 palabras. T6 (Dostoyevski entero: Бедные люди, Белые ночи, Записки из подполья, Игрок, 8 повести, 14 relatos C1; ПиН, Идиот, Бесы, Подросток, Карамазовы C2): 1.717 · 5.451.195 palabras. T5 (Turguénev: Записки охотника y 32 повести B2, 6 novelas C1; Goncharov C1/C2; Leskov C1, Соборяне C2 en grafía pre-1918; Saltykov C1/C2) y re-corrida de las seis tandas con el motor final: 2,188 · 101 series · 7,715,327 palabras. Cierre 2026-09-02 tras la auditoría OCR (bielorruso sin «ў» fuera, Огни y Чёрный монах sin duplicar, 31 erratas atestiguadas, homóglifos): 2.180 · 101 series · 7.687.902 palabras — el piso BAJA aquí a propósito; cierre de residuos (mixta con recuento, «і» ucraniana, apéndice de Подросток, <**n>): 7.687.892.
   lecturas: 2180,
-  palabras: 7_687_902,
+  palabras: 7_687_892,
   // ru.wikisource: navegación de capítulos («← Предыдущая», «Следующая →»),
   // llamadas de nota «[1]» huérfanas, páginas del escaneo sin transcribir,
   // el aviso «Источник текста не указан», la frase de las páginas de
   // redacciones y las líneas de índice «… 205» de las ediciones escaneadas.
-  aparato: /←\s*Предыдущ|Следующ\p{L}*\s*→|^Оглавление$|^Главы:\s*I\b|дореформенной орфографии$|^Стр\.\s*\d+[.,]|^Примечания$|<\d{1,3}>|\{\{|\[\d{1,3}\]|Страница:[^\n]*\.(?:djvu|pdf)|\^|Источник текста не указан|список редакций|\.\.\.\s*\d{1,4}$|^(?:English|polski|Deutsch|français|italiano|español|magyar|українська|čeština)+$/iu,
+  aparato: /←\s*Предыдущ|Следующ\p{L}*\s*→|^Оглавление$|^Главы:\s*I\b|дореформенной орфографии$|^Стр\.\s*\d+[.,]|^Примечания$|^Перевод иноязычных выражений|<\*{1,2}\d|<\d{1,3}>|\{\{|\[\d{1,3}\]|Страница:[^\n]*\.(?:djvu|pdf)|\^|Источник текста не указан|список редакций|\.\.\.\s*\d{1,4}$|^(?:English|polski|Deutsch|français|italiano|español|magyar|українська|čeština)+$/iu,
   extra: (catalogo) => {
     it('todo el texto está en NFC y sin acentos de intensidad (U+0301), en todos los campos con texto', () => {
       const rotas = catalogo
@@ -50,12 +50,18 @@ invariantesDelCatalogo({
       }
     });
 
-    it('la grafía pre-1918 declarada coincide con la medida sobre el texto (ѣ, і, ѳ, ѵ, ъ final), y nunca se convirtió', () => {
+    it('la grafía pre-1918 o mixta declarada coincide con la medida sobre el texto (ѣ, і, ѳ, ѵ, ъ final), con su recuento, y nunca se convirtió', () => {
       for (const { archivo, l } of catalogo) {
         const g = medirGrafia(l.parrafos.map((p) => p.texto).join('\n'));
-        expect(/anterior a la reforma de 1918/.test(l.notaOrtografia ?? ''), `${archivo}: nota «${l.notaOrtografia?.slice(0, 80)}» vs medida «${g.etiqueta}»`).toBe(g.pre1918);
-        expect(g.mezcla, `${archivo}: ${g.etiqueta}`).toBe(false);
+        expect(/anterior a la reforma de 1918 \(/.test(l.notaOrtografia ?? ''), `${archivo}: nota «${l.notaOrtografia?.slice(0, 80)}» vs medida «${g.etiqueta}»`).toBe(g.pre1918);
+        expect(/posterior a 1918 con (?:restos|la «і»)/.test(l.notaOrtografia ?? ''), `${archivo}: nota «${l.notaOrtografia?.slice(0, 80)}» vs medida «${g.etiqueta}»`).toBe(g.mixta);
+        if (g.mixta) expect(l.notaOrtografia, archivo).toContain(`${g.marcas} formas`);
       }
+    });
+
+    it('un texto ucraniano en boca de un personaje conserva su «і» (U+0456): ninguna «i» latina dentro de palabra cirílica', () => {
+      const rotas = catalogo.filter(({ l }) => l.parrafos.some((p) => /[\p{Script=Cyrillic}][iI]|[iI][\p{Script=Cyrillic}]/u.test(p.texto))).map((x) => x.archivo);
+      expect(rotas).toEqual([]);
     });
 
     it('toda lectura es modo texto (cero audio en la fase F)', () => {
@@ -125,13 +131,16 @@ describe('gates del texto ruso, probados en rojo', () => {
     expect(medirGrafia(actual).etiqueta).toBe('grafía actual (post-1918)');
   });
 
-  it('la medición marca como MEZCLA un texto actual con páginas pre-1918 pegadas, y no lo hace con la «і» ucraniana sola', () => {
+  it('la medición marca como MIXTA (con recuento) un texto actual con restos pre-1918, y distingue la «і» ucraniana', () => {
     const actual = 'Жил-был старик со старухою. Просит старик испечь колобок. Взяла старуха крылышко, по коробу поскребла, по сусеку помела. '.repeat(20);
     const pegado = `${actual} Когда императоръ Александръ Павловичъ окончилъ вѣнскій совѣтъ, то онъ захотѣлъ по Европѣ проѣздиться.`;
-    expect(medirGrafia(pegado).mezcla).toBe(true);
-    const ucraniano = `${actual} — Чого тобі треба? Нема, чоловіче, нічого. Іди собі.`;
-    expect(medirGrafia(ucraniano).mezcla).toBe(false);
+    expect(medirGrafia(pegado).mixta).toBe(true);
+    expect(medirGrafia(pegado).nota).toMatch(/restos de la edición anterior a 1918/);
+    const ucraniano = `${actual} — Чого тобі треба? Нема, чоловіче, нічого. Іди собі. Він пішов, і всі пішли.`;
+    expect(medirGrafia(ucraniano).mixta).toBe(true);
+    expect(medirGrafia(ucraniano).nota).toMatch(/la «і» de pasajes en ucraniano/);
     expect(medirGrafia(ucraniano).pre1918).toBe(false);
+    expect(medirGrafia(`${actual} собі`).mixta).toBe(false);
   });
 
   it('el contador cuenta PALABRAS con letra cirílica: el francés de Tolstói y la raya no son palabras rusas', () => {
@@ -142,5 +151,12 @@ describe('gates del texto ruso, probados en rojo', () => {
   it('la transliteración de ids es estable y sin cirílico', () => {
     expect(slug('Смерть чиновника')).toBe('smert-chinovnika');
     expect(slug('Ёж и щука, ъ')).toBe('yozh-i-schuka');
+  });
+
+  it('los homóglifos latinos dentro de palabra cirílica van al cirílico, y la «i» a la «і» ucraniana, nunca a «и»', () => {
+    expect(corregirHomoglifos('столбы сеpебpа вокpуг')).toBe('столбы серебра вокруг');
+    expect(corregirHomoglifos('У тiм возку козак coбi, мiй вiн')).toBe('У тім возку козак собі, мій він');
+    expect(corregirHomoglifos('«О bеllа!» ессеlenzа')).toBe('«О bella!» eccelenza');
+    expect(corregirHomoglifos('cher enfant, сказал он')).toBe('cher enfant, сказал он');
   });
 });
