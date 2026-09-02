@@ -19,9 +19,9 @@ invariantesDelCatalogo({
   // Medido 2026-09-02 al cierre de la tanda F-RU-T1 (Ушинский, Толстой
   // книги для чтения y народные рассказы, Афанасьев, Мамин-Сибиряк,
   // Аксаков, Одоевский, Погорельский): 377 lecturas · 16 series ·
-  // 535.913 palabras; F-RU-T2 (Chéjov: 532 relatos, 12 повести, 7 obras de teatro largas y 9 breves): 1.017 · 38 series · 1.799.015 palabras; T3 (Tolstói: Детство-Отрочество-Юность, Казаки, Хаджи-Мурат, 22 relatos, Анна Каренина, Война и мир, Воскресение) y T4 (Pushkin, Lérmontov, Gógol): 1,438 · 70 series · 3,641,530 palabras. T6 (Dostoyevski entero: Бедные люди, Белые ночи, Записки из подполья, Игрок, 8 повести, 14 relatos C1; ПиН, Идиот, Бесы, Подросток, Карамазовы C2): 1.717 · 5.451.195 palabras. T5 (Turguénev: Записки охотника y 32 повести B2, 6 novelas C1; Goncharov C1/C2; Leskov C1, Соборяне C2 en grafía pre-1918; Saltykov C1/C2) y re-corrida de las seis tandas con el motor final: 2,188 · 101 series · 7,715,327 palabras.
-  lecturas: 2188,
-  palabras: 7_715_327,
+  // 535.913 palabras; F-RU-T2 (Chéjov: 532 relatos, 12 повести, 7 obras de teatro largas y 9 breves): 1.017 · 38 series · 1.799.015 palabras; T3 (Tolstói: Детство-Отрочество-Юность, Казаки, Хаджи-Мурат, 22 relatos, Анна Каренина, Война и мир, Воскресение) y T4 (Pushkin, Lérmontov, Gógol): 1,438 · 70 series · 3,641,530 palabras. T6 (Dostoyevski entero: Бедные люди, Белые ночи, Записки из подполья, Игрок, 8 повести, 14 relatos C1; ПиН, Идиот, Бесы, Подросток, Карамазовы C2): 1.717 · 5.451.195 palabras. T5 (Turguénev: Записки охотника y 32 повести B2, 6 novelas C1; Goncharov C1/C2; Leskov C1, Соборяне C2 en grafía pre-1918; Saltykov C1/C2) y re-corrida de las seis tandas con el motor final: 2,188 · 101 series · 7,715,327 palabras. Cierre 2026-09-02 tras la auditoría OCR (bielorruso sin «ў» fuera, Огни y Чёрный монах sin duplicar, 31 erratas atestiguadas, homóglifos): 2.180 · 101 series · 7.687.902 palabras — el piso BAJA aquí a propósito.
+  lecturas: 2180,
+  palabras: 7_687_902,
   // ru.wikisource: navegación de capítulos («← Предыдущая», «Следующая →»),
   // llamadas de nota «[1]» huérfanas, páginas del escaneo sin transcribir,
   // el aviso «Источник текста не указан», la frase de las páginas de

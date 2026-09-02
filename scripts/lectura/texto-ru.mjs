@@ -20,11 +20,44 @@
 // - el diccionario hunspell de la auditoría OCR es el ru_RU de
 //   A. I. Lebedev (BSD, vía LibreOffice), vendorizado en tools/hunspell.
 
+// Homóglifos: una palabra que mezcla alfabetos («сеpебpа» con «p»
+// latina, «Просыпaлись» con «a» latina, «bеllа» con «е» y «а» cirílicas)
+// es siempre un error de transcripción: ninguna palabra rusa ni latina
+// mezcla escrituras. Se corrige SÓLO dentro de la palabra mixta, y sólo
+// las letras que tienen gemela en el otro alfabeto, hacia el alfabeto
+// mayoritario de la palabra. MEDIDO en la auditoría OCR: 280 palabras
+// en el catálogo (Игрок cap. 9 y Крокодил IV traen la «р» latina en
+// casi cada línea); ninguna legítima entre las 25 muestras leídas.
+const LAT_A_CIR = { a: 'а', c: 'с', e: 'е', o: 'о', p: 'р', x: 'х', y: 'у', A: 'А', B: 'В', C: 'С', E: 'Е', H: 'Н', K: 'К', M: 'М', O: 'О', P: 'Р', T: 'Т', X: 'Х' };
+const CIR_A_LAT = Object.fromEntries(Object.entries(LAT_A_CIR).map(([l, c]) => [c, l]));
+let homoglifosCorregidos = 0;
+export function corregirHomoglifos(s) {
+  // Atajo: un párrafo sin las dos escrituras no tiene nada que corregir
+  // (la expresión de abajo es cara y el test de 7,7 M palabras lo pagaba).
+  if (!/[a-zA-Z]/.test(s) || !/\p{Script=Cyrillic}/u.test(s)) return s;
+  return s.replace(/[\p{L}]*(?:[\p{Script=Cyrillic}][\p{L}]*[a-zA-Z]|[a-zA-Z][\p{L}]*[\p{Script=Cyrillic}])[\p{L}]*/gu, (w) => {
+    // Decide el alfabeto la letra SIN gemela: una «l», «n» o «z» latina
+    // hace latina la palabra («ессеlenzа» → «eccellenza»); una «д», «ж» o
+    // «ы» la hace cirílica. Si las dos escrituras traen letras sin gemela
+    // no se toca; si ninguna, manda la mayoría.
+    const latSola = /[bdfghijklmnqrstuvwzDFGIJLNQRSUVWYZ]/.test(w);
+    const cirSola = /[бвгджзийклмнптфцчшщъыьэюяёѣіѳѵБГДЖЗИЙЛПФЦЧШЩЪЫЬЭЮЯЁ]/.test(w);
+    if (latSola && cirSola) return w;
+    const cir = (w.match(/\p{Script=Cyrillic}/gu) ?? []).length;
+    const lat = (w.match(/[a-zA-Z]/g) ?? []).length;
+    const aCirilico = cirSola || (!latSola && cir >= lat);
+    const out = aCirilico ? w.replace(/[a-zA-Z]/g, (c) => LAT_A_CIR[c] ?? c) : w.replace(/\p{Script=Cyrillic}/gu, (c) => CIR_A_LAT[c] ?? c);
+    if (out !== w) homoglifosCorregidos += 1;
+    return out;
+  });
+}
+export const homoglifos = () => homoglifosCorregidos;
+
 /** NFC, fuera el acento de intensidad (U+0301) y fuera las marcas
  *  invisibles de dirección (U+200E/U+200F, que Afanásiev trae al
  *  principio de párrafo) y el BOM. */
 export function normalizarDiacriticos(s) {
-  return String(s ?? '').normalize('NFC').replace(/[\u0301\u200E\u200F\uFEFF]/g, '')
+  return corregirHomoglifos(String(s ?? '').normalize('NFC').replace(/[\u0301\u200E\u200F\uFEFF]/g, ''))
     // La llamada de nota «<71>» va ANTES que la regla del guion: «Sauvée!
     // -<71> патетически» tapaba el espacio y el guion se quedaba.
     .replace(/<\d{1,3}>/g, '')
@@ -89,8 +122,14 @@ export function gateDiacriticos(texto, umbral = 0.6) {
     suma += marcas[i]; if (i >= V) suma -= marcas[i - V];
     if (i >= V - 1) bloque = Math.max(bloque, suma / V);
   }
-  const ok = palabras.length > 0 && ratio >= umbral && ukby <= 0.01 && bloque < 0.25;
-  return { ok, ratio, palabras: palabras.length, bloque, detalle: `${(100 * ratio).toFixed(1)} % de palabras en cirílico${ukby > 0.01 ? `, y ${(100 * ukby).toFixed(2)} % con letras ucranianas/bielorrusas (ї є ґ ў)` : ''}${bloque >= 0.25 ? `, con un bloque en ucraniano/bielorruso (${(100 * bloque).toFixed(0)} % de «і ї є ґ ў» en 200 palabras)` : ''}` };
+  // Bielorruso SIN «ў» (Afanásiev transcribe cuentos bielorrusos con
+  // grafía rusa de 1860: «ён», «яго», «яна», «яны», «кажа»): se cuentan
+  // esas formas, que en ruso no existen. MEDIDO: «Надзей папов унук» las
+  // tiene en el 9 % de sus palabras; un cuento ruso, en el 0 %.
+  const BY = new Set(['ён', 'яго', 'яна', 'яны', 'яе', 'кажа', 'кажуць', 'гэта', 'гэты', 'гэтак', 'гавориць', 'гаворыць', 'пайшоў', 'пашоў', 'зрабіў', 'сказаў']);
+  const by = palabras.filter((p) => BY.has(p.toLowerCase())).length / Math.max(1, palabras.length);
+  const ok = palabras.length > 0 && ratio >= umbral && ukby <= 0.01 && bloque < 0.25 && by < 0.005;
+  return { ok, ratio, palabras: palabras.length, bloque, by, detalle: `${(100 * ratio).toFixed(1)} % de palabras en cirílico${ukby > 0.01 ? `, y ${(100 * ukby).toFixed(2)} % con letras ucranianas/bielorrusas (ї є ґ ў)` : ''}${bloque >= 0.25 ? `, con un bloque en ucraniano/bielorruso (${(100 * bloque).toFixed(0)} % de «і ї є ґ ў» en 200 palabras)` : ''}${by >= 0.005 ? `, y ${(100 * by).toFixed(1)} % de formas bielorrusas (ён, яго, кажа…)` : ''}` };
 }
 
 /** Grafía de época, MEDIDA y declarada (no corregida).
