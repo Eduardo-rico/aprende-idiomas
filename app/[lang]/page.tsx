@@ -81,7 +81,14 @@ export default async function LangHomePage({ params }: PageProps) {
   // the existing fallback in the legacy home page.
   const { BLOCKS } = await loadCurriculum(lang);
   if (BLOCKS.length === 0) {
-    return <EmptyState lang={lang} page="la página de inicio" />;
+    // The empty home still gets the chrome: without the NavBar there is
+    // no wordmark, no menu and no language selector to leave from.
+    return (
+      <>
+        <NavBar />
+        <EmptyState lang={lang} page="la página de inicio" />
+      </>
+    );
   }
 
   const chapters = chaptersFromCurriculum(BLOCKS);
