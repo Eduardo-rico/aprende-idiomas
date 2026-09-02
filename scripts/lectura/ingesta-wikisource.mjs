@@ -74,6 +74,27 @@ fs.mkdirSync(CACHE, { recursive: true });
 if (!DRY) fs.mkdirSync(SALIDA, { recursive: true });
 const UA = { 'user-agent': 'aprende-idiomas-lectura/1.0 (https://github.com/; emrs94@gmail.com)' };
 
+// ERRATAS ATESTIGUADAS (auditoría OCR con hunspell, 2026-09-02): cada una
+// lleva pieza, cadena exacta, corrección y motivo (un topónimo real, una
+// palabra que hunspell reconoce con una letra de menos, dos líneas
+// pegadas). Nada de reglas ciegas: la lista es cerrada y se aplica por
+// pieza; una errata que ya no case se REPORTA, no se calla.
+const ERRATAS_PATH = path.join(process.cwd(), 'scripts/lectura', `erratas-${LANG}.json`);
+const ERRATAS = fs.existsSync(ERRATAS_PATH) ? JSON.parse(fs.readFileSync(ERRATAS_PATH, 'utf8')) : [];
+const erratasAplicadas = new Set();
+function aplicarErratas(id, parrafos) {
+  let n = 0;
+  for (const e of ERRATAS) {
+    if (e.pieza !== id) continue;
+    for (const par of parrafos) {
+      if (!par.texto.includes(e.de)) continue;
+      par.texto = par.texto.split(e.de).join(e.a);
+      erratasAplicadas.add(e); n += 1;
+    }
+  }
+  return n;
+}
+
 const slugify = (t) => t.toLowerCase()
   .replace(/ș/g, 's').replace(/ț/g, 't').replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
   .normalize('NFD').replace(/[̀-ͯ]/g, '')
@@ -171,6 +192,11 @@ function bloquesDe(html) {
     // «D<omnu>l», «d<umnea>lui»: el editor marca entre ángulos las letras
     // que expande de una abreviatura. Se dejan las letras, sin ángulos.
     .replace(/<sic!?>/g, '')
+    // Enlaces ROJOS a páginas del escaneo que faltan («Pagină:Duiliu
+    // Zamfirescu - Îndreptări.djvu/54» ×115 en Îndreptări cap. 4): el
+    // transcriptor no llegó a esas páginas y el nombre del fichero se
+    // coló como texto. Fuera; la auditoría OCR con hunspell lo destapó.
+    .replace(/Pagină:[^\n]*?\.(?:djvu|pdf)\/\d+/g, '')
     .replace(/<(-?\p{L}+)>/gu, '$1')
     .replace(/\s?\[\d{1,3}\]/g, '')
     // «unii^și», «Ghiritlii^ Arnăut»: la llamada de nota de Wikisource que
@@ -550,6 +576,8 @@ async function ingerir(obra) {
     };
     verificarProcedencia(meta);
     const parrafos = p.bloques.filter((b) => b.texto.trim()).map((b) => ({ texto: b.texto }));
+    const nErr = aplicarErratas(id, parrafos);
+    if (nErr) console.log(`    erratas atestiguadas aplicadas en ${id}: ${nErr}`);
     if (!DRY) fs.writeFileSync(path.join(SALIDA, `${id}.json`), JSON.stringify({ ...meta, parrafos }, null, 1));
     if (PIEZAS) console.log(`    ${String(i + 1).padStart(3)}. ${meta.titulo.slice(0, 50).padEnd(50)} ${String(p.palabras).padStart(6)} pal`);
     escritos.push(id);
@@ -580,6 +608,14 @@ for (const obra of tanda) {
     fallos.push(`${obra.slug}: ${e.message}`);
     console.log(`✗ ${obra.slug.padEnd(36)} ${e.message}`);
   }
+}
+{
+  // Una errata de la lista que no casó con ninguna pieza de esta tanda no
+  // es error (la pieza puede ser de otra tanda), pero si su pieza SÍ se
+  // procesó y no casó, el texto cambió debajo: hay que verla.
+  const procesadas = new Set(tanda.filter((o) => !SOLO || o.slug === SOLO).map((o) => o.slug));
+  const huerfanas = ERRATAS.filter((e) => !erratasAplicadas.has(e) && [...procesadas].some((slug) => e.pieza === slug || e.pieza.startsWith(`${slug}-`)));
+  if (huerfanas.length) console.log(`\n⚠ erratas de esta tanda que YA NO casan (${huerfanas.length}): ${huerfanas.map((e) => `${e.pieza}: «${e.de}»`).join(' · ')}`);
 }
 console.log(`\nTANDA: ${granPiezas} piezas · ${granTotal.toLocaleString('es-MX')} palabras${DRY ? '  (DRY: no se escribió nada)' : ''}`);
 if (fallos.length) console.log(`fuera (${fallos.length}): se listan arriba con ✗`);

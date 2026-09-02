@@ -9,7 +9,7 @@
 import { describe, it, expect } from 'vitest';
 import { invariantesDelCatalogo, cargarCatalogo } from './lecturas-catalogo.invariantes';
 // Módulo .mjs del pipeline: es la MISMA regla que usa la ingesta (allowJs).
-import { normalizarDiacriticos, gateDiacriticos, sinDiacriticos, contarPalabras, tieneCedilla } from '../../scripts/lectura/texto-ro.mjs';
+import { normalizarDiacriticos, gateDiacriticos, sinDiacriticos, contarPalabras, tieneCedilla, medirGrafia } from '../../scripts/lectura/texto-ro.mjs';
 
 invariantesDelCatalogo({
   lang: 'ro',
@@ -18,9 +18,10 @@ invariantesDelCatalogo({
   // (Caragiale + Slavici + Gârleanu + Delavrancea) y T3 (novela, memoria
   // y crónica: Filimon, Odobescu, Hogaș, Zamfirescu, Gane, Hasdeu,
   // Vlahuță, Russo, Negruzzi, Alecsandri, Pop-Reteganul, Eminescu, Ghica…):
-  // 818 lecturas · 77 series · 2.831.967 palabras.
-  lecturas: 818,
-  palabras: 2_831_968,
+  // 817 lecturas · 77 series · 2.830.946 palabras (tras la auditoría OCR:
+  // fuera zamfirescu-nuvele, OCR crudo en la fuente).
+  lecturas: 817,
+  palabras: 2_830_946,
   // Wikisource: la navegación «▲ Începutul paginii», el pie de
   // ilustración («Greuceanu artwork» se coló en la primera corrida) y
   // las llamadas de nota «[1]» huérfanas.
@@ -73,6 +74,17 @@ describe('gates del texto rumano, probados en rojo', () => {
     expect(normalizarDiacriticos('Ştefan ţine paşii')).toBe('Ștefan ține pașii');
     expect(normalizarDiacriticos('s\u0327i t\u0327ara')).toBe('și țara');
     expect(normalizarDiacriticos('și țara, când sînt')).toBe('și țara, când sînt');
+  });
+
+  it('la medición de grafía ve el apóstrofo de elisión pre-1953, y NO lo ve en el mismo texto con guion', () => {
+    const viejo = 'Într’o zi s’a dus și n’am știut nimic; m’a lăsat într’un sat. Era când toți dormeau.';
+    const nuevo = viejo.replace(/(\p{L})’(\p{L})/gu, '$1-$2');
+    expect(medirGrafia(viejo).elision).toBe(true);
+    expect(medirGrafia(viejo).nota).toMatch(/apóstrofo de elisión anterior a la reforma de 1953/);
+    expect(medirGrafia(nuevo).elision).toBe(false);
+    expect(medirGrafia(nuevo).nota).not.toMatch(/apóstrofo/);
+    // «dom'le» de Caragiale es habla de personaje, no norma: no cuenta
+    expect(medirGrafia("dom'le, dom'le, dom'le, văz't că vin't când toți dormeau").elision).toBe(false);
   });
 
   it('el contador cuenta PALABRAS (algo con una letra), no tokens: la raya no es una palabra', () => {

@@ -30,6 +30,10 @@ export function contarPalabras(parrafos) {
 }
 
 const RE_PAL = /[\p{L}'’-]+/gu;
+// Elisión con apóstrofo de la grafía anterior a 1953: proclisis
+// (într'o, dintr'un, s'a, n'am, m'a, ș'apoi, c'un, vr'o, să'l, par'că)
+// o enclisis (pus'o, dat'o, să'țĭ). El apóstrofo curvo cuenta igual.
+const RE_ELISION = /^(?:într|dintr|printr|s|n|m|l|ș|c|d|vr|să|nu|ce|care|par|făr|te|ne|v|i|ț)['’]\p{L}{1,}$|^\p{L}{2,}['’](?:o|l|i|ĭ|țĭ|ți|mi|și)$/u;
 const RE_DIACR = /[ăâîșțĂÂÎȘȚ]/;
 
 /** Gate: un texto rumano SIN diacríticos no es rumano correcto y no
@@ -59,14 +63,22 @@ export function gateDiacriticos(texto, umbral = 0.15) {
  *  normas y no se cuenta). */
 export function medirGrafia(texto) {
   const palabras = texto.toLowerCase().match(RE_PAL) ?? [];
-  let conA = 0, conI = 0, sint = 0, sunt = 0;
+  let conA = 0, conI = 0, sint = 0, sunt = 0, apostrofos = 0;
   for (const p of palabras) {
+    if (RE_ELISION.test(p)) apostrofos += 1;
     if (/\p{L}â\p{L}/u.test(p)) conA += 1;
     if (/\p{L}î\p{L}/u.test(p) && !/^(ne|re|pre|de|dez|des|sub|supra|bine|semi|auto|contra|nemai)î/.test(p)) conI += 1;
     if (/^s[îi]nt(em|eți|eti)?$/.test(p)) sint += 1;
     if (/^sunt(em|eți|eti)?$/.test(p)) sunt += 1;
   }
   const cedillas = (texto.match(CEDILLAS) ?? []).length;
+  // Apóstrofo de elisión (într'o, s'a, n'am): grafía ANTERIOR a 1953, donde
+  // hoy va guion. Medido 2026-09-02 sobre las 818: mediana 0 %, p90 0,07 %;
+  // las piezas con la grafía vieja de verdad están entre 1 % y 3,6 %
+  // (Vlahuță, Slavici, Anghel, Ispirescu «Omul de piatră», Îndreptări).
+  // Umbral: ≥3 formas y ≥0,2 % de las palabras. Las elisiones de habla
+  // de Caragiale («dom'le», «văz't») no casan con el patrón y no cuentan.
+  const elision = apostrofos >= 3 && apostrofos / Math.max(1, palabras.length) >= 0.002;
   let etiqueta, nota;
   const base = 'Diacríticos normalizados a la norma actual de la Academia (ș y ț con coma debajo).';
   if (conI > 0 && conI >= conA * 3) {
@@ -83,7 +95,11 @@ export function medirGrafia(texto) {
     nota = `${base} La transcripción mezcla las dos normas (â y î en interior de palabra: ${conA} y ${conI} formas). Se conserva tal cual: es la grafía de la edición, no un error.`;
   }
   if (sint > 0 && sunt > 0) nota += ` Conviven «sînt» (${sint}) y «sunt» (${sunt}).`;
-  return { etiqueta, nota, conA, conI, sint, sunt, cedillas };
+  if (elision) {
+    etiqueta += ' + apóstrofo pre-1953';
+    nota += ` Conserva además el apóstrofo de elisión anterior a la reforma de 1953 (într'o, s'a, n'am: ${apostrofos} formas), donde la norma actual escribe guion. Es la grafía de la edición, no un error.`;
+  }
+  return { etiqueta, nota, conA, conI, sint, sunt, cedillas, apostrofos, elision };
 }
 
 /** Quita los diacríticos: sólo para probar el gate EN ROJO. */
