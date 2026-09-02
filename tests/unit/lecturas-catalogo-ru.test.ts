@@ -40,7 +40,7 @@ invariantesDelCatalogo({
         .filter(({ l }) => !gateDiacriticos(l.parrafos.map((p) => p.texto).join('\n')).ok)
         .map((x) => x.archivo);
       expect(rotas).toEqual([]);
-    });
+    }, 60_000); // 2.180 lecturas · 7,7 M palabras: bajo la suite entera pasaba de 5 s (2026-09-02)
 
     it('toda lectura declara su grafía medida en notaOrtografia, y ninguna es una mezcla', () => {
       for (const { archivo, l } of catalogo) {
