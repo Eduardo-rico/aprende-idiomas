@@ -10,13 +10,19 @@
 import { describe, it, expect } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
-import { PUNTOS_RO, BLOQUES_RO, FORMATO_DE_CLASE_RO, formatoDeRo, PISO_RO } from '@/lib/data/languages/ro/inventario-puntos';
+import { PUNTOS_RO, BLOQUES_RO, FORMATO_DE_CLASE_RO, DESCRIPTORES_FUERA_DEL_INVENTARIO, formatoDeRo, PISO_RO } from '@/lib/data/languages/ro/inventario-puntos';
 import { ALL_CONCEPTS, BLOCKS } from '@/lib/data/languages/ro/curriculum';
 import { parsearCurriculo } from '@/scripts/paso0-idioma';
 
 const DOC = fs.readFileSync(path.join(process.cwd(), 'docs/plans/2026-07-28-curriculos-completos.md'), 'utf8');
 const NIVELES = parsearCurriculo(DOC, 'ro');
 const DESCRIPTORES = new Set(NIVELES.flatMap((n) => n.descriptores.map((d) => `${n.nivel}/${d.etiqueta}`)));
+const EN_ALCANCE = new Set(NIVELES.flatMap((n) => n.descriptores.filter((d) => d.destreza !== 'EXCLUIDO').map((d) => `${n.nivel}/${d.etiqueta}`)));
+// La sección §Rumano del documento, para comprobar las citas textuales.
+const lineas = DOC.split('\n');
+const ini = lineas.findIndex((l) => l.trim() === '## Rumano');
+const fin = lineas.findIndex((l, i) => i > ini && /^## /.test(l));
+const SECCION_RO = lineas.slice(ini, fin).join('\n');
 
 describe('inventario-ro: forma', () => {
   it('ids únicos, con prefijo r<bloque>- que coincide con su bloque', () => {
@@ -35,13 +41,26 @@ describe('inventario-ro: forma', () => {
     }
   });
 
-  it('cada punto lleva motivo, descripción, fuente dentro de la sección rumana y al menos un descriptor', () => {
+  it('cada punto lleva motivo, descripción, y una CITA textual que existe en §Rumano del currículo', () => {
+    const sinCita: string[] = [];
     for (const p of PUNTOS_RO) {
       expect(p.motivo.length, p.id).toBeGreaterThan(20);
       expect(p.descripcion.length, p.id).toBeGreaterThan(20);
-      expect(p.fuente, p.id).toBeGreaterThanOrEqual(407);
-      expect(p.fuente, p.id).toBeLessThan(842);
-      expect(p.cubre.length, p.id).toBeGreaterThan(0);
+      expect(p.cita.length, p.id).toBeGreaterThan(12);
+      if (!SECCION_RO.includes(p.cita)) sinCita.push(`${p.id}: «${p.cita}»`);
+    }
+    expect(sinCita, sinCita.join('\n')).toEqual([]);
+  });
+
+  it('la cita se busca SÓLO en §Rumano: una frase del portugués no vale', () => {
+    expect(SECCION_RO.includes('Distingue de oído 18 de 20 pares mínimos PT-PT')).toBe(false);
+    expect(DOC.includes('Distingue de oído 18 de 20 pares mínimos PT-PT')).toBe(true);
+  });
+
+  it('`cubre` vacío sólo con `sinDescriptor` escrito: el hueco del currículo se denuncia, no se tapa', () => {
+    for (const p of PUNTOS_RO) {
+      if (p.cubre.length === 0) expect(p.sinDescriptor, `${p.id} no cubre nada y no dice por qué`).toBeTruthy();
+      else expect(p.sinDescriptor, `${p.id} cubre y a la vez declara sinDescriptor`).toBeUndefined();
     }
   });
 
@@ -65,7 +84,10 @@ describe('inventario-ro: forma', () => {
     for (const p of PUNTOS_RO) {
       if (p.clase === 'trampa') expect(p.calco.castellano, `${p.id}: trampa exige calco castellano BIEN formado`).toBe('bien');
       if (p.clase === 'coincide') expect(p.calco.castellano, `${p.id}: coincide exige calco castellano MAL formado`).toBe('mal');
-      if (p.clase === 'fonologico') expect(p.calco.castellano, p.id).toBe('no-aplica');
+      if (p.clase === 'fonologico' || p.clase === 'ortografico') expect(p.calco.castellano, p.id).toBe('no-aplica');
+      // La casilla se contesta mirando el error, no la clase: un punto de
+      // paradigma cuyo error desnudo es español perfecto dice «bien».
+      if (p.clase === 'paradigma') expect(['bien', 'no-aplica']).toContain(p.calco.castellano);
     }
   });
 
@@ -93,6 +115,25 @@ describe('inventario-ro: contra el currículo', () => {
     expect(sinPunto, sinPunto.join('\n')).toEqual([]);
   });
 
+  it('TODO descriptor en alcance está cubierto por un punto O declarado fuera del inventario con su motivo — y no las dos cosas', () => {
+    const cubiertos = new Set(PUNTOS_RO.flatMap((p) => p.cubre));
+    const fuera = new Set(Object.keys(DESCRIPTORES_FUERA_DEL_INVENTARIO));
+    const huerfanos = [...EN_ALCANCE].filter((k) => !cubiertos.has(k) && !fuera.has(k));
+    expect(huerfanos, 'en alcance y sin nadie que lo cubra:\n' + huerfanos.join('\n')).toEqual([]);
+    const dobles = [...fuera].filter((k) => cubiertos.has(k));
+    expect(dobles, 'declarado fuera y cubierto a la vez:\n' + dobles.join('\n')).toEqual([]);
+    const inventados = [...fuera].filter((k) => !DESCRIPTORES.has(k));
+    expect(inventados, 'declarado fuera pero no existe en el currículo:\n' + inventados.join('\n')).toEqual([]);
+    const excluidos = [...fuera].filter((k) => !EN_ALCANCE.has(k));
+    expect(excluidos, 'declarado fuera pero ya está excluido por decisión (no hace falta):\n' + excluidos.join('\n')).toEqual([]);
+    for (const [k, v] of Object.entries(DESCRIPTORES_FUERA_DEL_INVENTARIO)) expect(v.length, k).toBeGreaterThan(10);
+  });
+
+  it('los puntos con `abierto` están listados: no se produce ninguno hasta cerrarlo', () => {
+    const abiertos = PUNTOS_RO.filter((p) => p.abierto).map((p) => p.id);
+    expect(abiertos).toEqual(['r4-vocativo']);
+  });
+
   it('el gate de cobertura DISPARA: quitando los puntos que cubren A1/FONOLOGÍA, ese descriptor sale sin punto', () => {
     const sinFonologia = PUNTOS_RO.filter((p) => !p.cubre.includes('A1/FONOLOGÍA'));
     expect(sinFonologia.length).toBeLessThan(PUNTOS_RO.length);
@@ -107,6 +148,7 @@ describe('inventario-ro: contra el currículo', () => {
   it('el nivel de cada punto es el de alguno de los descriptores que cubre (o inferior: se enseña antes)', () => {
     const orden = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
     for (const p of PUNTOS_RO) {
+      if (p.cubre.length === 0) continue; // sinDescriptor: no hay con qué comparar
       const niveles = p.cubre.map((c) => orden.indexOf(c.split('/')[0] ?? ''));
       expect(orden.indexOf(p.nivel), `${p.id} está en ${p.nivel} pero cubre ${p.cubre.join(', ')}`).toBeLessThanOrEqual(Math.max(...niveles));
     }
