@@ -131,7 +131,7 @@ describe('inventario-ro: contra el currículo', () => {
 
   it('los puntos con `abierto` están listados: no se produce ninguno hasta cerrarlo', () => {
     const abiertos = PUNTOS_RO.filter((p) => p.abierto).map((p) => p.id);
-    expect(abiertos).toEqual(['r4-vocativo']);
+    expect(abiertos).toEqual([]); // r4-vocativo se cerró en dexonline (Paso 0 §12)
   });
 
   it('el gate de cobertura DISPARA: quitando los puntos que cubren A1/FONOLOGÍA, ese descriptor sale sin punto', () => {

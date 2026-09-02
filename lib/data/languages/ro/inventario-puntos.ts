@@ -380,11 +380,16 @@ export const PUNTOS_RO: PuntoRo[] = [
     motivo: '«el más bueno» transfiere la idea y produce *mai bunul: se produce por transformación (bun → cel mai bun)', cubre: ['A2/GRAMÁTICA · CASO'],
     cita: 'las formas cel/cea/cei/cele como proforma y como marca de superlativo' }),
   P({ id: 'r4-vocativo', nombre: 'Vocativo: -e, -ule, -o, -lor, forma no marcada, y el registro', bloque: 4, nivel: 'A2',
-    descripcion: 'Ioane!, băiete!/băiatule!, domnule!, Mario!, fraților!, domnilor!; la forma no marcada (Maria!, Mihai!) es normal. Lo ÚNICO derivable por regla: el plural animado = GD plural (-lor); los neutros no tienen vocativo. El singular se almacena POR LEMA (om → omule, nunca *oame; domn → domnule, nunca *domne; Ion → Ioane, nunca *Ioanule) con un campo de REGISTRO obligatorio: -ule sobre un común es brusco (doctorule!) y la forma cortés es nominal (domnule doctor!). En A1 sólo Domnule!/Doamnă! como fórmula.',
+    descripcion: 'Ion!/Ioane! (tradicional), băiete!/băiatule!, domnule!, Mario!, fraților!, domnilor!; la forma no marcada (Maria!, Mihai!, Ion!) es la del diccionario y la segura. Lo ÚNICO derivable por regla: el plural animado = GD plural (-lor); los neutros no tienen vocativo. El singular se almacena POR LEMA (om → omule, nunca *oame; domn → domnule, nunca *domne; Ion → Ioane, nunca *Ioanule) con un campo de REGISTRO obligatorio: -ule sobre un común es brusco (doctorule!) y la forma cortés es nominal (domnule doctor!). En A1 sólo Domnule!/Doamnă! como fórmula.',
     prereqs: ['r2-articulo-enclitico-sg', 'r4-gd-definido-pl'], clase: 'paradigma', calco: { castellano: 'bien', latinComun: 'engañoso' },
     motivo: 'el español no flexiona el vocativo: *Ion!, *băiat! («¡Ion!», perfecto). Deriva del lexicón (clase + registro), no del género; Hunspell sólo caza *domne/*oame, no certifica formas ausentes (rechaza doctorule, que es real)', cubre: ['A2/GRAMÁTICA · CASO'],
     cita: 'Vocativo: paradigma productivo (-e masculino: Ioane, băiete, domnule; -o femenino: Mario, fato; plural -lor: fraților, domnilor)',
-    abierto: 'el reparto -e/-ule lema a lema para los ~20 masculinos comunes del núcleo A1-A2 hay que comprobarlo en dexonline antes de poblar el lexicón (el lingüista lo pidió expresamente: sin red no lo certifica)' }),
+    // Comprobado en dexonline lema a lema el 2026-09-01 (Paso 0 §12): todo
+    // común masculino admite -ule (18/18), -e es segunda forma en 9 y única
+    // en prieten; plural -lor siempre; los nombres propios van SIN marca en
+    // el diccionario (Ion → Ion; Ioane es tradicional). El registro no lo da
+    // el diccionario: lo rellena el lingüista.
+  }),
   P({ id: 'r4-preposicion-caida-articulo', nombre: 'Preposición de acusativo y CAÍDA del artículo', bloque: 4, nivel: 'A2',
     descripcion: 'la școală, în oraș, pe stradă, la birou: el sustantivo tras preposición va SIN artículo, salvo con determinante (la școala noastră) y con «cu» instrumental/comitativo determinado (cu trenul, cu creionul, cu mâna).',
     prereqs: ['r2-articulo-enclitico-sg'], clase: 'trampa', calco: { castellano: 'bien', latinComun: 'transparente' },
