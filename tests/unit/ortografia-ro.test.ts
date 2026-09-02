@@ -99,6 +99,12 @@ describe('revisarOrtografiaRo: el gate visto en rojo', () => {
   it('NO dispara sobre la norma: sunt, când, început, neîncetat, reîncepe, bineînțeles, într-însul, a coborî', () => {
     expect(clases('sunt când început neîncetat reîncepe bineînțeles într-însul a coborî hotărî În Îl')).toEqual([]);
   });
+  it('NO dispara sobre los 25 falsos positivos que midió el agente de lecturas: prea-/nemai-/subt-, interjecciones con îî, francés', () => {
+    expect(clases('Preaînalt Preaînțeleptul Nemaiîncăpând subtîmpărțesc Hîîî Psîîîî ăîîși Îîh maître maîtresse plaît fîtes')).toEqual([]);
+    // y sigue cazando lo que debe al lado de ellos
+    expect(clases('Preaînalt cînd')).toEqual(['i-interior:cînd']);
+  });
+
   it('el inventario de puntos del rumano pasa el gate entero (nombre, descripción, motivo)', async () => {
     const { PUNTOS_RO } = await import('@/lib/data/languages/ro/inventario-puntos');
     const malos: string[] = [];

@@ -41,7 +41,15 @@ export const tieneCedilla = (s: string): boolean => RE_CEDILLA.test(String(s ?? 
 
 /** Prefijos tras los que «î» interior es legítimo porque abre raíz:
  *  neîncetat, reîncepe, subînțeles, bineînțeles, preîntâmpina, dezînvăța. */
-const PREFIJOS = ['ne', 're', 'pre', 'sub', 'des', 'dez', 'răs', 'supra', 'semi', 'auto', 'contra', 'inter', 'non', 'bine', 'rău', 'ante', 'post', 'para', 'ori', 'între'];
+const PREFIJOS = ['ne', 'nemai', 're', 'pre', 'prea', 'sub', 'subt', 'des', 'dez', 'răs', 'supra', 'semi', 'auto', 'contra', 'inter', 'non', 'bine', 'rău', 'ante', 'post', 'para', 'ori', 'între'];
+
+/** Lo que NO es grafía rumana antigua aunque lleve «î» dentro: las
+ *  interjecciones alargadas («hîîî», «psîîîî») y el francés citado en la
+ *  biblioteca («maître», «plaît»). Medido por el agente de lecturas
+ *  (2026-09-01): 25 formas en 18 lecturas eran falsos positivos de este
+ *  gate, y un gate que marca de más se deja de leer. */
+const RE_INTERJECCION = /îî/i;
+const FRANCES = new Set(['maître', 'maîtresse', 'plaît', 'fîtes', 'connaît', 'paraît', 'île', 'dîner', 'boîte', 'traîner', 'naître', 'château']);
 const RE_PREFIJO = new RegExp(`^(?:${PREFIJOS.join('|')})î`, 'i');
 
 /** Formas de «a fi» y afines con la grafía anterior a 1993. */
@@ -62,6 +70,7 @@ export function revisarOrtografiaRo(texto: string): HallazgoOrtografia[] {
     // «î» que no está ni al principio ni al final de la palabra. Un
     // compuesto con guion («într-însul») se evalúa por partes, y un
     // prefijo que abre raíz («neîncetat») exime.
+    if (RE_INTERJECCION.test(w) || FRANCES.has(w.toLowerCase())) continue;
     const partes = w.split('-');
     const mala = partes.some((p) => p.length > 2 && /[îÎ]/.test(p.slice(1, -1)) && !RE_PREFIJO.test(p));
     if (mala) out.push({ clase: 'i-interior', palabra: w });
