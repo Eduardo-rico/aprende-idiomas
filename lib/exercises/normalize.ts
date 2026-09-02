@@ -2,8 +2,16 @@
 // Shared answer normalizer for text-input exercise cards. Accents are
 // significant (PT minimal pairs like estão/estao differ); we only trim,
 // lowercase, and NFC-normalize so composed vs decomposed accents match.
+//
+// Fase F (2026-09-01): además, ș/ț con cedilla se leen como ș/ț con coma
+// (`canonicalRo`). «şi» y «și» son la misma palabra en dos codificaciones
+// y el alumno escribe con el teclado que tiene; sin esto, una respuesta
+// correcta se marca mal. Es inocuo para el portugués (cero cedillas s/t
+// en todo su plano de datos) y NO toca la «ç».
+import { canonicalRo } from '@/lib/lang/ortografia-ro';
+
 export function normalizeAnswer(s: string): string {
-  return s.trim().toLowerCase().normalize('NFC');
+  return canonicalRo(s.trim().toLowerCase());
 }
 export function answersMatch(a: string, b: string): boolean {
   return normalizeAnswer(a) === normalizeAnswer(b);

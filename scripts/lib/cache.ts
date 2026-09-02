@@ -2,15 +2,20 @@
 import crypto from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { canonicalRo } from '@/lib/lang/ortografia-ro';
 
 // Normalización para hashing estable.
 // 1. JSON round-trip strips undefined y convierte NaN/Infinity → null.
 // 2. Strings se normalizan a NFC (forma canónica compuesta) para que
 //    ediciones con NFD (forma descomuesta) no invaliden el cache silenciosamente.
+//    Fase F (2026-09-01): y ș/ț con cedilla → con coma, para que dos textos
+//    rumanos idénticos con distinta codificación no sean dos ids ni dos
+//    MP3. Medido antes: CERO cedillas s/t en el plano de datos de PT, así
+//    que ningún id de portugués cambia (y lo vigila un test).
 // 3. Recursión para cubrir estructuras anidadas.
 export function normalizeForHash(value: unknown): unknown {
   if (value === null || value === undefined) return null;
-  if (typeof value === 'string') return value.normalize('NFC');
+  if (typeof value === 'string') return canonicalRo(value);
   if (typeof value === 'number') {
     if (Number.isNaN(value) || !Number.isFinite(value)) return null;
     return value;
