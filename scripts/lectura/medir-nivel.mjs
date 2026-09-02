@@ -30,7 +30,43 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const VOCALES = 'aeiouáéíóúâêôàãõü';
+// POR LENGUA (fase F): el eje es el mismo —densidad polisilábica— pero
+// el inventario de vocales y los cortes no se heredan: se miden. Los
+// cortes del rumano salen de `anclas-ro.mjs` (criterio escrito allí:
+// basme de Ispirescu/Creangă abajo, Caragiale en medio, Slavici/Odobescu
+// arriba) y se pegan aquí con la medición que los produjo.
+const LENGUAS = {
+  pt: {
+    vocales: 'aeiouáéíóúâêôàãõü',
+    cortes: { A2: 18.0, B1: 23.5, B2: 26.0 },   // el corte B1 es el del plan maestro, verificado
+  },
+  ro: {
+    // ă/â/î son vocales propias; el diptongo (ea, oa, ia, ie, iu…) cuenta
+    // uno, igual que en PT: la subcuenta del hiato es constante.
+    vocales: 'aeiouăâî',
+    // Medido 2026-09-01 (node scripts/lectura/anclas-ro.mjs, 18 obras):
+    //   abajo  — Creangă 17,1 (Capra) · 18,1 (Harap-Alb) · 19,3 (Amintiri)
+    //            · 20,6 (Punguța); Ispirescu 19,4 · 20,4 · 21,9.
+    //   medio  — Caragiale: Vizită 20,5 · D-l Goe 24,0 · În vreme de
+    //            război 24,6 · Două loturi 25,3 · O scrisoare pierdută 28,9.
+    //   arriba — Odobescu 27,4 (Pseudo-Kynegetikos) · 30,3 (Doamna
+    //            Chiajna); Hogaș 24,9; Eminescu (Sărmanul Dionis) 24,3;
+    //            **Slavici 16,5-16,6** (Moara cu noroc, Pădureanca).
+    // La métrica reproduce el orden basme < Caragiale < Odobescu. NO
+    // reproduce a Slavici: su léxico es llano y la dificultad está en la
+    // frase larga y en la escala (nuvele de 40.000 palabras) — eso lo
+    // recoge el piso por escala (≥8.000 → B2), no la densidad. La prosa
+    // de Eminescu (filosófica, 24,3) se declara C1 a mano en la tanda:
+    // la densidad la subestima igual que subestimaba Os Maias en PT.
+    // Los cortes caen ENTRE familias, no encima de una obra: 18,5 deja
+    // los cuentos cortos de Creangă en A2 y Amintiri/Ispirescu en B1;
+    // 22,5 separa Ispirescu de las schițe largas de Caragiale; 26,0
+    // separa Caragiale/Hogaș de Odobescu y del teatro de Caragiale.
+    cortes: { A2: 18.5, B1: 22.5, B2: 26.0 },
+  },
+};
+
+const VOCALES = LENGUAS.pt.vocales;
 // Sin flag global en las que se usan con .test(): un regex /g es
 // stateful y `test` alterna true/false llamada a llamada — el bug se
 // comió un tercio de las palabras la primera vez.
@@ -42,23 +78,29 @@ const RE_VOCAL = new RegExp(`[${VOCALES}]`);
  *  que es lo frecuente en portugués, cuenta uno; el hiato se subcuenta,
  *  y esa subcuenta es constante entre textos, que es lo que importa
  *  para comparar). */
-export function silabas(palabra) {
-  return Math.max(1, (palabra.match(RE_GRUPO_G) ?? []).length);
+export function silabas(palabra, lang = 'pt') {
+  const re = lang === 'pt' ? RE_GRUPO_G : new RegExp(`[${LENGUAS[lang].vocales}]+`, 'g');
+  return Math.max(1, (palabra.match(re) ?? []).length);
 }
 
 /** Densidad polisilábica en % (el índice). */
-export function densidad(texto) {
-  const palabras = (texto.toLowerCase().match(RE_PALABRA) ?? []).filter((p) => RE_VOCAL.test(p));
+export function densidad(texto, lang = 'pt') {
+  const L = LENGUAS[lang];
+  if (!L) throw new Error(`medir-nivel: lengua sin calibrar «${lang}»`);
+  const rePalabra = lang === 'pt' ? RE_PALABRA : new RegExp(`[${L.vocales}\\p{L}]+`, 'gu');
+  const reVocal = lang === 'pt' ? RE_VOCAL : new RegExp(`[${L.vocales}]`);
+  const palabras = (texto.toLowerCase().match(rePalabra) ?? []).filter((p) => reVocal.test(p));
   if (palabras.length === 0) return { indice: 0, palabras: 0 };
-  const largas = palabras.filter((p) => silabas(p) >= 3).length;
+  const largas = palabras.filter((p) => silabas(p, lang) >= 3).length;
   return { indice: (100 * largas) / palabras.length, palabras: palabras.length };
 }
 
 /** Nivel MCER sugerido por el índice. C2 no sale de aquí (ver cabecera). */
-export function nivelPorDensidad(indice) {
-  if (indice <= 18.0) return 'A2';
-  if (indice <= 23.5) return 'B1';  // el corte del plan maestro, verificado
-  if (indice <= 26.0) return 'B2';
+export function nivelPorDensidad(indice, lang = 'pt') {
+  const c = LENGUAS[lang].cortes;
+  if (indice <= c.A2) return 'A2';
+  if (indice <= c.B1) return 'B1';
+  if (indice <= c.B2) return 'B2';
   return 'C1';
 }
 
@@ -95,6 +137,7 @@ export function textoDeLectura(lectura) {
 if (import.meta.url === `file://${process.argv[1]}`) {
   const objetivo = process.argv[2] ?? 'lib/data/languages/pt/lecturas';
   const soloDisc = process.argv.includes('--discrepancias');
+  const lang = process.argv.includes('--lang') ? process.argv[process.argv.indexOf('--lang') + 1] : (objetivo.match(/languages\/(\w+)\//)?.[1] ?? 'pt');
   const archivos = fs.statSync(objetivo).isDirectory()
     ? fs.readdirSync(objetivo).filter((f) => f.endsWith('.json')).sort().map((f) => path.join(objetivo, f))
     : [objetivo];
@@ -102,8 +145,8 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   let coinciden = 0, total = 0;
   for (const a of archivos) {
     const l = JSON.parse(fs.readFileSync(a, 'utf8'));
-    const { indice, palabras } = densidad(textoDeLectura(l));
-    const sugerido = nivelPorDensidad(indice);
+    const { indice, palabras } = densidad(textoDeLectura(l), lang);
+    const sugerido = nivelPorDensidad(indice, lang);
     // C2 declarado a mano no se contradice: es decisión de escala.
     const ok = l.nivel === sugerido || l.nivel === 'C2';
     total += 1; if (ok) coinciden += 1;
