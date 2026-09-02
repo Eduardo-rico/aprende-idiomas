@@ -1,8 +1,13 @@
 #!/bin/sh
-# Rechaza el commit si el typecheck falla. Existe porque en E2#30 dos
-# commits salieron con tsc en rojo: el `| tail` se comía el código de
-# salida y el verde mentía. Lo que depende de acordarse, falla; esto no
-# depende de acordarse. Activar con: git config core.hooksPath .githooks
+# Rechaza el commit si el typecheck o los tests AFECTADOS fallan. Existe
+# porque en E2#30 dos commits salieron con tsc en rojo y uno con vitest en
+# rojo: el `| tail` se comía el código de salida y el verde mentía. Lo que
+# depende de acordarse, falla; esto no depende de acordarse.
+# `vitest run --changed` corre sólo los tests que tocan lo cambiado; la
+# suite entera queda para el cierre de sesión y antes de push.
+# Activar con: git config core.hooksPath .githooks
 set -e
 echo "pre-commit: tsc --noEmit"
 npx tsc --noEmit
+echo "pre-commit: vitest run --changed"
+npx vitest run --changed --passWithNoTests

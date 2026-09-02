@@ -154,8 +154,13 @@ describe('inventario-ro: contra el currículo', () => {
     }
   });
 
-  it('ALL_CONCEPTS del rumano es el inventario; BLOCKS sigue vacío hasta que haya lecciones', () => {
+  it('ALL_CONCEPTS del rumano es el inventario; sólo existen los bloques con lecciones, y sus conceptIds son puntos del inventario', () => {
     expect(ALL_CONCEPTS.length).toBe(PUNTOS_RO.length);
-    expect(BLOCKS).toEqual([]);
+    const ids = new Set(PUNTOS_RO.map((p) => p.id));
+    expect(BLOCKS.length).toBeGreaterThan(0);
+    for (const b of BLOCKS) {
+      expect(b.lessons.length, `bloque ${b.id} sin lecciones`).toBeGreaterThan(0);
+      for (const l of b.lessons) for (const c of l.conceptIds) expect(ids.has(c), `${l.id} → ${c}`).toBe(true);
+    }
   });
 });
