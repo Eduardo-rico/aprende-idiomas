@@ -10,6 +10,19 @@
 // en todo su plano de datos) y NO toca la «ç».
 import { canonicalRo } from '@/lib/lang/ortografia-ro';
 
+// ⚠ EL LATÍN NO PASA POR AQUÍ, y es a propósito. Su comparación vive en
+// `lib/lang/ortografia-la.ts` (`comparaLa`) porque necesita algo que esta
+// función no puede dar: **dos modos**. Por defecto es insensible al
+// mácrón —el alumno escribe con el teclado que tiene— pero los puntos
+// cuyo tema ES la cantidad vocálica tienen que compararse en modo
+// sensible, o `malus` pasaría por `mālus` y **el ítem no podría fallar
+// nunca**. Es «la normalización tapa el rasgo examinado», que este
+// proyecto ya pagó tres veces.
+//
+// Cuando existan ítems latinos, la tarjeta debe llamar a `comparaLa` con
+// `sensibleACantidad` tomado del punto declarado — NO reimplementar la
+// normalización aquí, que es como se desincronizan las reglas.
+
 export function normalizeAnswer(s: string): string {
   return canonicalRo(s.trim().toLowerCase());
 }

@@ -1754,20 +1754,24 @@ Más: 60.000 palabras de verso leídas y retención SRS a 7 días ≥85 % sobre 
 | L2 | 180 | 40.000 | 380 | 60 | 60 |
 | L3 | 220 | 120.000 | 300 | 80 | 40 |
 | L4 | 200 | 60.000 | 220 | 60 | 30 |
-| **Σ** | **750** | **232.000** | **1.240** | **240** | **210** |
+| **Σ** | **750** | **232.000** | **1.240** ⚠ | **240** | **210** |
+| | | | ⚠ **VOLUMEN, no plan: la cifra que gobierna es la COBERTURA por punto (≈1.020 a piso), no ésta** | | |
 
 **Y lo que estas cifras NO son, dicho antes de que alguien planifique con ellas.** Los 1.240 ejercicios son VOLUMEN, y la meta del proyecto desde E2#15 es **COBERTURA**: ≥8 ítems por punto, 6 en el peldaño más alto. El presupuesto real sale del inventario de puntos, que hoy no existe: el recuento provisional del Paso 0 estima 128 puntos y ≈1.020 ítems a piso, y **ésa es la cifra que gobierna**, no ésta. Los 1.240 son una cota alta y no un plan, exactamente como los 7.100 del rumano.
 
 Las **210 min de audio** sí son un compromiso, y salen de la aritmética del Paso 0 §4.5: ~67.000 caracteres del corpus de enseñanza de L1 más las cantilenas de paradigma y la escalera karaoke. A 840 caracteres/minuto de narración —y **no a los 441 del karaoke portugués**, que es la tasa que el plan rumano extrapoló de más— son unos 176.000 caracteres, o sea **un mes de cuota de ElevenLabs**. No se genera un segundo antes de la batería de voz.
 
-### Latín · la columna «escucha» sale a CERO, y es verdad
+### Latín · la columna «escucha» a CERO: piso cero declarado, no hueco
 
 `paso0-idioma.ts --lang=la` cuenta **0 descriptores de escucha en los cuatro
 peldaños**, y no es un olvido: **no hay comprensión oral en una lengua que nadie
 habla.** Los descriptores de fonología del nivel L1 y los de métrica de L4 miden
 LEER EN VOZ ALTA y ESCANDIR, que son destrezas de sistema y no de escucha, y por
-eso van etiquetados `[FONOLOGÍA]`. El eje seguirá mostrando cero y eso es honesto
-— el mismo trato que la producción oral en portugués desde E2#17.
+eso van etiquetados `[FONOLOGÍA]`. El eje seguirá mostrando cero y eso es honesto: se declara **piso cero**, con el
+mismo trato que la producción oral del portugués desde E2#17 y que los cuatro
+puntos de fonología de E2#30 — **cero POR MOTIVO ESCRITO, no por hueco**. La
+diferencia importa para cualquier cola posterior: un piso cero declarado no
+cuenta como déficit y nadie tiene que volver a preguntarse si falta trabajo ahí.
 
 Y la aritmética cuadra por dos caminos: la tabla de arriba está sumada a mano y
 `paso0-idioma.ts` suma las líneas «Material a producir» de los cuatro niveles por

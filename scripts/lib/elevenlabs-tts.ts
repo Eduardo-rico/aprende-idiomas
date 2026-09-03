@@ -20,12 +20,50 @@ import path from 'node:path';
 import { hashKey } from './cache';
 import { isValidMp3 } from './minimax-tts';
 import { TTS_OUTPUT } from '../config';
+import { textoParaVoz } from '../../lib/lang/ortografia-la';
 
 const MODEL = 'eleven_multilingual_v2';
 
-export type ElVariant = 'br' | 'pt' | 'ro';
+export type ElVariant = 'br' | 'pt' | 'ro' | 'la';
 
-export const EL_VOICES: Record<ElVariant, { id: string; name: string; validatedBy?: string; validatedAt?: string }> = {
+// ── EL TEXTO QUE SE ENVÍA NO ES SIEMPRE EL QUE SE MUESTRA ─────────────
+//
+// En latín hay que transformarlo por DOS razones que se acumulan
+// (Paso 0 §3.1 y §3.4):
+//
+//   · el mácrón: `ā` no existe en la ortografía italiana y el G2P hará
+//     algo indefinido con él;
+//   · la respelización eclesiástica: `caelum` sólo suena «chélum» si la
+//     voz ve `ce`, y `grātia` sólo «grátsia» si ve `tsi`. El italiano no
+//     tiene ni `ae` ni la regla de `ti`+vocal, así que **el ejemplo del
+//     propio encargo es el que la voz NO produciría sola**.
+//
+// Y de ahí el requisito que evita las dos eras de ficheros del portugués
+// (5.451 MP3 para 2.576 refs): **el hash se calcula sobre el texto
+// ENVIADO**. Si se calculara sobre el mostrado, `Rōma` y `Roma` serían
+// dos hashes del mismo audio y se pagarían dos clips; y si `generate-audio`
+// transformara pero `check-audio-stale` no, todos los clips latinos
+// saldrían caducos para siempre y el gate se volvería ilegible.
+//
+// Por eso la transformación vive AQUÍ, dentro de la función del hash, y
+// no en el llamador: los dos caminos la heredan sin que nadie tenga que
+// acordarse.
+const TEXTO_DE_VOZ: Partial<Record<ElVariant, (s: string) => string>> = {
+  la: textoParaVoz,
+};
+
+/** El texto que de verdad se manda a la voz. Exportado para que se pueda
+ *  probar sin necesidad de tener una voz declarada. */
+export function textoDeTts(variant: ElVariant, text: string): string {
+  return (TEXTO_DE_VOZ[variant] ?? ((x: string) => x))(text);
+}
+
+// `Partial` a propósito, y no por comodidad: **una voz sólo existe cuando
+// está validada**. El latín no tiene entrada aquí porque su batería aún
+// no se ha corrido, y `generateElevenTts` lanza si se le pide una que no
+// esté — que es mejor que una entrada provisional que alguien use sin
+// mirar el sello.
+export const EL_VOICES: Partial<Record<ElVariant, { id: string; name: string; validatedBy?: string; validatedAt?: string }>> = {
   pt: { id: 'nJ5NFqyKb8kn9JBPmo6i', name: 'ElevenLabs_Leonor', validatedBy: 'oído de Edu', validatedAt: '2026-07' },
   // INTERINO: misma voz que pt hasta que Edu apruebe una BR a oído.
   // El nombre distinto deja los clips localizables para regenerarlos.
@@ -48,8 +86,12 @@ export function elevenTtsHash(req: ElTtsRequest): string {
   return hashKey({
     provider: 'elevenlabs',
     model: MODEL,
-    text: req.text,
-    voiceId: EL_VOICES[req.variant].id,
+    text: textoDeTts(req.variant, req.text),
+    // El id de la voz entra en el hash aunque la voz aún no exista: para
+    // el latín es `undefined` hoy y será el id el día que se valide, así
+    // que un clip generado con la voz definitiva jamás colisiona con uno
+    // hecho antes de tenerla.
+    voiceId: EL_VOICES[req.variant]?.id,
     speed: req.speed ?? 1,
   });
 }
@@ -62,6 +104,7 @@ function requireApiKey(): string {
 
 export async function generateElevenTts(req: ElTtsRequest): Promise<ElTtsResult> {
   const voice = EL_VOICES[req.variant];
+  if (!voice) throw new Error(`no hay voz declarada para «${req.variant}»: ninguna voz entra sin su batería y su sello (validatedBy/validatedAt)`);
   const hash = elevenTtsHash(req);
   const filePath = path.join(TTS_OUTPUT, `${hash}.mp3`);
 
@@ -77,7 +120,11 @@ export async function generateElevenTts(req: ElTtsRequest): Promise<ElTtsResult>
         method: 'POST',
         headers: { 'xi-api-key': requireApiKey(), 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          text: req.text,
+          // EL MISMO texto que el hash. Mandar `req.text` crudo aquí y
+          // hashear el transformado hace que la identidad del clip y su
+          // contenido discrepen: el fichero diría una cosa y su nombre
+          // otra, sin que nada falle.
+          text: textoDeTts(req.variant, req.text),
           model_id: MODEL,
           // Los mismos settings del karaoke aprobado (generar-karaoke.mjs),
           // a velocidad de ejercicio.
