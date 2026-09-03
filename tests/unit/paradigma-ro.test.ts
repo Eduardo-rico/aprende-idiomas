@@ -9,6 +9,7 @@ import { describe, it, expect } from 'vitest';
 import {
   articulado, genitivoDativo, vocativo, presente, participio, perfectCompus, imperfecto,
   conjugacionDe, temaInfinitivo, palatalizar, invariantesLema, paradigmaNominal,
+  conjunctiv, conjunctiv3, conjunctivSa, conjunctivPerfect, conj3Derivable,
   type LemaNominal, type LemaVerbal,
 } from '@/scripts/lib/paradigma-ro';
 import { SUSTANTIVOS_A1, VERBOS_A1 } from '@/lib/data/languages/ro/lexicon-a1';
@@ -160,5 +161,109 @@ describe('lexicón A1', () => {
     const guardadas = [...SUSTANTIVOS_A1.flatMap((l) => [l.lema, l.plural]), ...VERBOS_A1.flatMap((v) => [v.sg1, v.sg3])];
     const malas = desconocidas(guardadas);
     expect(malas, `Hunspell no reconoce: ${malas.join(', ')}`).toEqual([]);
+  });
+});
+
+
+// ── El conjuntivo, visto en ROJO antes que en verde ───────────────────
+//
+// El punto entero de `r7-conjuntivo-presente` es la 3.ª persona, y es la
+// única casilla que no se deriva. Estos tests son las formas MAL GENERADAS
+// a propósito: son literalmente lo que produce la regla ingenua «-e → -ă»
+// que cualquiera escribiría para tapar un null.
+describe('conjuntivo: el guardián y las formas mal generadas', () => {
+  const NAIVE = { mergă: 'meargă', vedă: 'vadă', începă: 'înceapă', spunăe: 'spună' };
+
+  it('un lema de 2.ª o 3.ª sin `conj3` da ERROR y NO se deriva en silencio', () => {
+    const merge = V('a merge', 'merg', 'merge', { participio: 'mers' });
+    expect(invariantesLema(merge).join(' ')).toMatch(/sin `conj3`/);
+    // Y lo que importa: no hay fallback. Un derivador con fallback
+    // plausible no falla, MIENTE — es la lección de temaInfinitivo().
+    expect(conjunctiv3(merge)).toBeNull();
+    expect(conjunctiv(merge, 'el')).toBeNull();
+    expect(conjunctivSa(merge, 'ei')).toBeNull();
+  });
+
+  it('con `conj3` guardada sale la forma real, no la que daría «-e → -ă»', () => {
+    const merge = V('a merge', 'merg', 'merge', { participio: 'mers', conj3: 'meargă' });
+    expect(conjunctiv3(merge)).toBe('meargă');
+    expect(conjunctiv3(merge)).not.toBe('mergă');
+    expect(conjunctivSa(merge, 'el')).toBe('să meargă');
+    expect(invariantesLema(merge)).toEqual([]);
+    // Las personas que SÍ coinciden con el indicativo, comprobadas: si
+    // alguien «arreglara» la 3.ª tocando la función entera, éstas caen.
+    expect(conjunctiv(merge, 'eu')).toBe('merg');
+    expect(conjunctiv(merge, 'noi')).toBe('mergem');
+  });
+
+  it('`conj3` guardada donde la regla ya la da es una copia que se desincroniza', () => {
+    expect(invariantesLema(V('a cânta', 'cânt', 'cântă', { conj3: 'cânte' })).join(' ')).toMatch(/SÍ se deriva/);
+  });
+
+  it('la 1.ª conjugación se deriva, INCLUIDA la alternancia ă → e que la v0 no tenía', () => {
+    // Las dos que Hunspell cazó: la regla daba *cumpăre y *învățe.
+    expect(conjunctiv3(V('a cumpăra', 'cumpăr', 'cumpără', { sg2: 'cumperi' }))).toBe('cumpere');
+    expect(conjunctiv3(V('a învăța', 'învăț', 'învață', { sg2: 'înveți' }))).toBe('învețe');
+    // Y la que rompe la versión descuidada de esa misma regla: se toca la
+    // última VOCAL, no la última «ă». «Cambia la última ă» daría *menânce.
+    expect(conjunctiv3(V('a mânca', 'mănânc', 'mănâncă'))).toBe('mănânce');
+    expect(conjunctiv3(V('a pleca', 'plec', 'pleacă'))).toBe('plece');
+    expect(conjunctiv3(V('a intra', 'intru', 'intră'))).toBe('intre');
+    expect(conjunctiv3(V('a lucra', 'lucrez', 'lucrează'))).toBe('lucreze');
+  });
+
+  it('los sufijos -esc / -iesc / -ăsc se derivan', () => {
+    expect(conjunctiv3(V('a citi', 'citesc', 'citește'))).toBe('citească');
+    expect(conjunctiv3(V('a locui', 'locuiesc', 'locuiește'))).toBe('locuiască');
+    expect(conjunctiv3(V('a hotărî', 'hotărăsc', 'hotărăște'))).toBe('hotărască');
+  });
+
+  it('«a fi» es irregular en TODA la persona, no sólo en la tercera', () => {
+    const fi = VERBOS_A1.find((v) => v.inf === 'a fi')!;
+    expect(conjunctiv(fi, 'tu')).toBe('fii');
+    expect(presente(fi, 'tu')).toBe('ești');       // el indicativo NO sirve
+    expect(conjunctiv(fi, 'noi')).toBe('fim');
+    expect(conjunctivSa(fi, 'el')).toBe('să fie');
+  });
+
+  it('el conjuntivo perfecto es uniforme y cuelga del participio', () => {
+    const merge = VERBOS_A1.find((v) => v.inf === 'a merge')!;
+    expect(conjunctivPerfect(merge)).toBe('fi mers');
+    // Sin participio no hay forma: no se inventa.
+    expect(conjunctivPerfect(V('a plânge', 'plâng', 'plânge', { conj3: 'plângă' }))).toBeNull();
+  });
+
+  it('el lexicón entero declara su conjuntivo: ningún verbo cae en null', () => {
+    for (const v of VERBOS_A1) {
+      expect(conj3Derivable(v) || !!v.conj3 || v.inf === 'a fi').toBe(true);
+      expect(conjunctiv3(v), v.inf).not.toBeNull();
+    }
+  });
+
+  // EL SEGUNDO CAMINO, con su agujero MEDIDO y no supuesto. Hunspell caza
+  // seis de las siete formas que la regla ingenua produce — incluidas las
+  // dos que de verdad se colaron en el lexicón (*cumpăre, *învățe) —, y
+  // deja pasar UNA.
+  it('Hunspell caza las formas mal generadas… menos «vedă», que ACEPTA', () => {
+    if (!hunspellDisponible()) { expect(hunspellDisponible()).toBe(false); return; }
+    const buenas = Object.values(NAIVE).concat(['cumpere', 'învețe', 'mănânce']);
+    expect(desconocidas(buenas)).toEqual([]);
+    const malas = Object.keys(NAIVE).concat(['cumpăre', 'învățe', 'menânce']);
+    expect(desconocidas(malas).sort()).toEqual(malas.filter((w) => w !== 'vedă').sort());
+  });
+
+  // EL AGUJERO, escrito como test para que nadie lo descubra dos veces.
+  it('«vedă» es el agujero del segundo camino: Hunspell la da por buena y NO es el conjuntivo de «a vedea»', () => {
+    if (!hunspellDisponible()) { expect(hunspellDisponible()).toBe(false); return; }
+    // Hunspell es gate LÉXICO, no morfológico: contesta «¿existe esta
+    // cadena?», no «¿es la casilla que pido?». Si la regla ingenua «-e → -ă»
+    // hubiera entrado, `a vedea` habría dado *să vedă y el gate del
+    // paradigma habría salido VERDE con 2751 formas.
+    expect(desconocidas(['vedă'])).toEqual([]);
+    // Lo que sí lo impide es el invariante: `a vedea` es de 2.ª conjugación,
+    // no se deriva, y sin `conj3` el lema no pasa. La defensa de esta
+    // casilla no es el diccionario: es el guardián, y detrás el lingüista.
+    expect(conjunctiv3(VERBOS_A1.find((v) => v.inf === 'a vedea')!)).toBe('vadă');
+    expect(invariantesLema(V('a vedea', 'văd', 'vede', { participio: 'văzut' })).join(' ')).toMatch(/sin `conj3`/);
   });
 });

@@ -170,6 +170,16 @@ export interface LemaVerbal {
   /** 1.ª sg del imperfecto, guardada cuando no se deriva: dădeam, stăteam,
    *  voiam, beam, făceam. Las demás personas salen de ella. */
   impf?: string;
+  /** LA 3.ª PERSONA DEL CONJUNTIVO (`să ___`), guardada. Una sola casilla
+   *  para singular y plural, porque el conjuntivo las funde: `el să meargă`
+   *  y `ei să meargă`. Es la ÚNICA casilla del conjuntivo que se aparta del
+   *  indicativo, y no es derivable: la alternancia vocálica se INVIERTE
+   *  respecto al presente (merg/merge → meargă, văd/vede → vadă,
+   *  încep/începe → înceapă) y la reducción del diptongo no es predecible
+   *  desde ninguna casilla guardada (iese → iasă, no *iesă). Una regla
+   *  «-e → -ă» produciría *mergă, *vedă, *începă: rumano de ninguna clase.
+   *  Se guarda por la misma razón que el participio de 2.ª y 3.ª. */
+  conj3?: string;
   /** Invariable (a trebui): una sola forma para todas las personas. */
   invariable?: boolean;
   gloss: string;
@@ -330,6 +340,130 @@ export function conditionalPerfect(v: LemaVerbal, p: Persona): string | null {
   return part ? formaValida(`${AUX_COND[p]} fi ${part}`) : null;
 }
 
+// ── Conjuntivo ────────────────────────────────────────────────────────
+//
+// EL REPARTO, y por qué esta función no deriva más de lo que deriva.
+//
+// El conjuntivo rumano es `să` + una forma que coincide con el presente de
+// indicativo EN TODAS LAS PERSONAS MENOS LA TERCERA, donde singular y
+// plural se funden en una casilla propia (`eu să merg`, `tu să mergi`,
+// pero `el/ei să meargă`). Esa casilla es el punto entero de
+// `r7-conjuntivo-presente`, y es justo la que NO se deriva:
+//
+//   · en la 1.ª conjugación SÍ hay regla y es limpia: la desinencia es
+//     `-e` sobre el tema de la 1.ª sg (cânt → cânte, plec → plece,
+//     mănânc → mănânce, lucrez → lucreze). Se deriva.
+//   · con los sufijos `-esc` / `-iesc` / `-ăsc` también: `-ească`,
+//     `-iască`, `-ască` (citesc → citească, locuiesc → locuiască,
+//     hotărăsc → hotărască). Se deriva.
+//   · en TODO lo demás se guarda. La alternancia vocálica se INVIERTE
+//     respecto al presente —merg/merge da meargă, văd/vede da vadă,
+//     încep/începe da înceapă— y la reducción del diptongo no es
+//     predecible ni desde `sg1` ni desde `sg3` (a ieși: ies/iese → iasă,
+//     no *iesă). Una regla «-e → -ă» fabricaría *mergă, *vedă, *începă.
+//
+// Y el guardián, que es lo que impide que esto se rompa en silencio: si un
+// lema que necesita `conj3` no lo trae, `invariantesLema` da ERROR y
+// `conjunctiv()` devuelve **null**. No hay fallback. Es la lección de
+// `temaInfinitivo()`, que sobrevivió roto durante catorce lotes porque los
+// cuatro lemas que lo habrían delatado llevaban su record guardado y
+// ninguna rama llegaba al fallback: un derivador con fallback plausible no
+// falla, MIENTE.
+//
+// ── LO QUE ESTA FUNCIÓN NO CUBRE, declarado ──────────────────────────
+//   · El `să` NO lo pone: se compone fuera (`conjunctivSa`). Aquí se
+//     devuelve la forma verbal sola, porque en el hueco de un cloze el
+//     `să` puede estar ya escrito en la frase.
+//   · La NEGACIÓN (`să nu meargă`) y los CLÍTICOS (`să-i spună`, `să se
+//     ducă`) son colocación, no flexión: no pasan por aquí.
+//   · El conjuntivo de los verbos con `se` obligatorio no está en el
+//     lexicón A1 y por tanto no está cubierto por ningún gate.
+//   · Hunspell certifica que la forma EXISTE, no que sea la del
+//     conjuntivo de ESE lema: `mergi` y `mergem` también existen. La
+//     casilla correcta la certifica el lingüista, no el diccionario. Y no
+//     es teórico: **medido, Hunspell ACEPTA `vedă`**, que es justo lo que
+//     la regla ingenua «-e → -ă» produciría para `a vedea`. De las siete
+//     formas mal generadas que se le pasaron caza seis y deja pasar ésa,
+//     así que el segundo camino habría dado VERDE sobre 2.751 formas con
+//     `*să vedă` dentro. Lo que salva esa casilla es el invariante que
+//     obliga a guardarla, no el diccionario. Está en un test con nombre.
+const CONJUNCTIV_IRREGULAR: Record<string, Record<Persona, string>> = {
+  // `a fi` es el ÚNICO verbo del lexicón cuyo conjuntivo se aparta del
+  // indicativo también fuera de la 3.ª persona (să fiu / sunt, să fii /
+  // ești, să fim / suntem). Guardarlo entero es la diferencia entre una
+  // excepción declarada y una regla que se cree general.
+  'a fi': { eu: 'fiu', tu: 'fii', el: 'fie', noi: 'fim', voi: 'fiți', ei: 'fie' },
+};
+
+/** ¿La 3.ª del conjuntivo de este lema se DERIVA, o hay que guardarla? */
+export function conj3Derivable(v: LemaVerbal): boolean {
+  if (v.irregular || v.invariable || CONJUNCTIV_IRREGULAR[v.inf]) return false;
+  if (/(esc|iesc|ăsc)$/.test(v.sg1)) return true;
+  return conjugacionDe(v.inf) === 'I';
+}
+
+/** La `ă` de la última sílaba se adelanta a `e` ante desinencia anterior.
+ *  Sólo la ÚLTIMA VOCAL, y sólo si es `ă`: `â` no participa. */
+function frontalizarUltimaVocal(tema: string): string {
+  const m = [...tema.matchAll(/[aeiouăâî]/gu)];
+  const ult = m[m.length - 1];
+  if (!ult || ult[0] !== 'ă') return tema;
+  return tema.slice(0, ult.index!) + 'e' + tema.slice(ult.index! + 1);
+}
+
+/** La 3.ª persona del conjuntivo (una casilla para sg y pl). Devuelve null
+ *  —nunca una forma inventada— cuando hace falta guardarla y no está. */
+export function conjunctiv3(v: LemaVerbal): string | null {
+  if (CONJUNCTIV_IRREGULAR[v.inf]) return formaValida(CONJUNCTIV_IRREGULAR[v.inf]!.el);
+  if (v.conj3) return formaValida(v.conj3);
+  if (!conj3Derivable(v)) return null;
+  const s = v.sg1;
+  if (/iesc$/.test(s)) return formaValida(s.slice(0, -4) + 'iască');   // locuiesc → locuiască
+  if (/esc$/.test(s)) return formaValida(s.slice(0, -3) + 'ească');     // citesc → citească
+  if (/ăsc$/.test(s)) return formaValida(s.slice(0, -3) + 'ască');      // hotărăsc → hotărască
+  // 1.ª conjugación: desinencia -e sobre la 1.ª sg. La -u de `intru`,
+  // `umblu` es desinencia de 1.ª sg y cae; la de `beau`/`dau` no llega
+  // aquí porque esos lemas son irregulares y van guardados.
+  const tema = /[^aeiouăâî]u$/.test(s) ? s.slice(0, -1) : s;
+  // Y LA ALTERNANCIA `ă → e`, que la v0 no tenía. Ante la desinencia
+  // anterior `-e`, la `ă` de la ÚLTIMA sílaba del tema se adelanta:
+  // cumpăr → să cumpere, învăț → să învețe. Sin esto la regla producía
+  // «*cumpăre» y «*învățe», y NINGÚN camino propio lo habría visto: lo
+  // cazó Hunspell, que es el segundo camino y no lo escribió quien
+  // escribió la regla. Es también el desmentido de lo que este mismo
+  // comentario afirmaba una hora antes —«en la 1.ª conjugación SÍ hay
+  // regla y es limpia»—: la había, y le faltaba una mitad.
+  //
+  // Se toca la última VOCAL, no la última `ă`: en `mănânc` la última vocal
+  // es `â` y no se mueve (să mănânce), mientras que una regla escrita como
+  // «cambia la última ă» daría «*menânce». La distinción no es cosmética,
+  // y el lexicón A1 tiene el caso.
+  return formaValida(frontalizarUltimaVocal(tema) + 'e');
+}
+
+/** Conjuntivo presente, sin `să`. 1.ª, 2.ª y las dos del plural coinciden
+ *  con el indicativo; la 3.ª es casilla propia y común a sg y pl. */
+export function conjunctiv(v: LemaVerbal, p: Persona): string | null {
+  const irr = CONJUNCTIV_IRREGULAR[v.inf];
+  if (irr) return formaValida(irr[p]);
+  if (p === 'el' || p === 'ei') return conjunctiv3(v);
+  return presente(v, p);
+}
+
+/** Con la partícula, que es como aparece en la lengua. */
+export function conjunctivSa(v: LemaVerbal, p: Persona): string | null {
+  const f = conjunctiv(v, p);
+  return f ? formaValida(`să ${f}`) : null;
+}
+
+/** Conjuntivo PERFECTO: `să fi` + participio, invariable en persona. Es la
+ *  única parte del conjuntivo que sí es uniforme, y por eso se deriva
+ *  entera; si no hay participio, no hay forma. */
+export function conjunctivPerfect(v: LemaVerbal): string | null {
+  const part = participio(v);
+  return part ? formaValida(`fi ${part}`) : null;
+}
+
 /** Todo el paradigma nominal de un lema, para el gate y para los lotes. */
 export function paradigmaNominal(l: LemaNominal): Record<string, string | null> {
   return {
@@ -350,6 +484,8 @@ export function paradigmaVerbal(v: LemaVerbal): Record<string, string | null> {
   for (const p of PERSONAS) out[`viit ${p}`] = viitorLiterar(v, p);
   for (const p of PERSONAS) out[`cond ${p}`] = conditional(v, p);
   out['cond perf eu'] = conditionalPerfect(v, 'eu');
+  for (const p of PERSONAS) out[`conj ${p}`] = conjunctiv(v, p);
+  out['conj perf'] = conjunctivPerfect(v);
   return out;
 }
 
@@ -371,6 +507,19 @@ export function invariantesLema(l: LemaNominal | LemaVerbal): string[] {
       // II: el participio NO es regular (văzut, băut, avut frente a putut): se guarda.
       if (c === 'II' && !l.participio) errores.push(`${l.inf}: 2.ª conjugación sin participio guardado`);
     }
+    // EL GUARDIÁN DEL CONJUNTIVO. Todo lema cuya 3.ª no se derive tiene que
+    // TRAERLA. Sin esto, `conjunctiv()` devolvería null en silencio y un
+    // lote que pidiera la casilla se quedaría sin respuesta —o, peor, quien
+    // viniera detrás escribiría una regla «-e → -ă» para tapar el null y
+    // empezaría a fabricar *mergă sin que nada fallara. Es exactamente cómo
+    // `temaInfinitivo()` sobrevivió roto: los lemas que lo delataban tenían
+    // record guardado.
+    if (!conj3Derivable(l) && !l.conj3 && !CONJUNCTIV_IRREGULAR[l.inf])
+      errores.push(`${l.inf}: sin \`conj3\` — la 3.ª del conjuntivo no se deriva en esta clase (la alternancia se invierte: merge → meargă, vede → vadă) y una regla «-e → -ă» produciría *mergă`);
+    // Y al revés: una `conj3` guardada donde la regla ya la da es una copia
+    // que se desincroniza el día que la regla cambie.
+    if (conj3Derivable(l) && l.conj3)
+      errores.push(`${l.inf}: trae \`conj3\` «${l.conj3}» y esta clase SÍ se deriva — lo guardado y lo derivado se desincronizan; quítalo o justifica por qué la regla falla aquí`);
   } else {
     if (!/^[a-zăâîșț]+$/.test(l.lema)) errores.push(`${l.lema}: lema con caracteres fuera del alfabeto`);
     if (/[şţ]/.test(JSON.stringify(l))) errores.push(`${l.lema}: cedilla`);
