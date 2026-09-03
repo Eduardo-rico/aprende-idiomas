@@ -23,6 +23,22 @@ import type { LanguageId } from '@/lib/locales';
 // `pre_A1` no es decoración: ruso y checo tienen una fase de
 // descodificación (alfabeto → sílaba → palabra) anterior a cualquier
 // descriptor A1.
+//
+// ⚠ LÍMITE CONOCIDO (fase G, 2026-09-03): esta escala es la del MCER y
+// vale para las CUATRO lenguas vivas. **No vale para el latín ni para el
+// griego antiguo**, cuyos peldaños son `NIVELES_DE.la` (L1…L5) y
+// `NIVELES_DE.grc` (G1…G5) en `scripts/paso0-idioma.ts` — el MCER
+// describe lo que alguien puede HACER con una lengua viva, y no hay
+// transacción cotidiana en latín (docs/plans/2026-09-03-la-grc-paso0.md
+// §0).
+//
+// Hoy eso NO rompe nada, y por eso no se ha tocado: `Descriptor.language`
+// y `Evidence.language` son `z.string()` abiertos, `anclarEjercicio`
+// toma `lang = 'pt'`, y `la`/`grc` no tienen todavía ni un ejercicio del
+// que sacar evidencia. **El día que lo tengan, `CefrLevel` hay que
+// parametrizarlo por lengua igual que se hizo con `NIVELES`**, y no
+// reutilizar «B1» como nombre opaco de peldaño: quien lo lea creerá que
+// significa lo que significa en portugués.
 export const CEFR_LEVELS = ['pre_A1', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const;
 export type CefrLevel = (typeof CEFR_LEVELS)[number];
 
