@@ -56,6 +56,17 @@ export interface ClozeRo {
    *  «¿se reconoce la raíz?» — otra pregunta — y dejaban el lote rozando el
    *  tope sin motivo. Declarado, y con este criterio. */
   transparenteLatin: boolean;
+  /** ¿El GÉNERO del sustantivo español coincide con el que el ítem obliga
+   *  a elegir en rumano? Es una segunda vía de calco que
+   *  `transparenteLatin` NO ve: aquél pregunta por la CADENA («¿la
+   *  escribiría un hispanohablante?») y ésta por el CAMINO DE RESOLUCIÓN
+   *  («¿se acierta traduciendo el género?»). Lo destapó el lingüista en
+   *  el lote 15: cuatro de cinco ítems del artículo indefinido se
+   *  acertaban traduciendo `la casa → o casă`, y el gate que prohibía la
+   *  mitad convergente miraba la cadena de la respuesta —`un`/`o` no
+   *  están en la lista— y por eso aprobaba. Otro sello respondiendo a
+   *  otra pregunta. NO es derivable: se declara. */
+  generoConvergeEs?: boolean;
 }
 
 export const ITEMS: ClozeRo[] = [

@@ -88,6 +88,8 @@ export const SUSTANTIVOS_A1: LemaNominal[] = [
   { lema: 'cuvânt', genero: 'n', plural: 'cuvinte', gloss: 'palabra' },
   { lema: 'limbă', genero: 'f', plural: 'limbi', gloss: 'lengua' },
   { lema: 'lege', genero: 'f', plural: 'legi', gloss: 'ley' },
+  { lema: 'problemă', genero: 'f', plural: 'probleme', gloss: 'problema (s.f.; el español lo tiene en masculino)' },
+  { lema: 'fotografie', genero: 'f', plural: 'fotografii', gloss: 'fotografía' },
   { lema: 'telefon', genero: 'n', plural: 'telefoane', gloss: 'teléfono' },
   { lema: 'floare', genero: 'f', plural: 'flori', dim: 'floricică', dimPlural: 'floricele', dimFuente: "DEX '09 s.v. FLORICEA, -ICĂ, pl. floricele; DOOM3 !floricică, g.-d. art. floricelei, pl. floricele", gloss: 'flor' },
   { lema: 'leu', genero: 'm', plural: 'lei', gloss: 'leu (moneda)' },
