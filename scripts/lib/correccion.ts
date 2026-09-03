@@ -85,6 +85,29 @@ export interface ItemCorreccion {
    *  el tipo para no tocar los lotes de PT; los gates del rumano la
    *  exigen donde el ítem no fija la persona por otra vía. */
   intencion?: string;
+  /** DE DÓNDE VIENE EL ERROR, y existe porque el ítem de FRONTERA rompe un
+   *  supuesto que este formato hacía sin decirlo.
+   *
+   *  Todo ítem de corrección se escribió hasta ahora suponiendo que la mala
+   *  es el CALCO del español: por eso `calcoEs` es obligatorio y por eso
+   *  `atajoEs` debería ser false siempre — si traducir diera la buena, el
+   *  ítem mediría español.
+   *
+   *  El ítem de SOBREAPLICACIÓN (§0.6 del relevo: «un punto cuya regla
+   *  admite excepción debe incluir un ítem cuyo error sea aplicarla donde
+   *  no toca») invierte eso por construcción: su error no viene del
+   *  español sino de sobregeneralizar una regla RUMANA recién aprendida,
+   *  y entonces **traducir del español SÍ da la buena** — «Compré cinco
+   *  manzanas» → `Am cumpărat cinci mere`, sin `de`. Eso no es un defecto
+   *  del ítem: es lo que lo hace la frontera. Sin él el alumno aprende
+   *  «pon siempre de» y saca 8/8.
+   *
+   *  Así que el atajo no se silencia: se declara que la pregunta no
+   *  aplica, y `medirAtajo` los cuenta APARTE en vez de mezclarlos.
+   *  `undefined` vale 'calco', que es lo que el formato ya suponía en
+   *  todos los ítems escritos hasta hoy: el campo hace explícito un
+   *  supuesto que ya se estaba haciendo, no abre un silencio nuevo. */
+  origenError?: 'calco' | 'sobreaplicacion';
   /** Los gates de variante van a morder por diseño: el error deliberado
    *  ES el material. Se declara el motivo, no se silencia el gate. */
   varianteEsperada?: string;

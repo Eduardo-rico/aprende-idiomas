@@ -34,6 +34,14 @@ export interface MedicionAtajo {
   lineas: string[];
   /** Ítems donde el autor declara que traducir da la BUENA. */
   atajo: string[];
+  /** Ítems de FRONTERA, donde la pregunta del atajo NO APLICA porque el
+   *  error no viene del español sino de sobregeneralizar una regla rumana
+   *  (§0.6 del relevo). Se cuentan APARTE en vez de mezclarlos con los
+   *  que sí miden español: son la clase de ítem que impide que el alumno
+   *  saque 8/8 sobregeneralizando, y sin ellos el punto enseña media
+   *  regla. Mezclarlos habría dejado dos opciones malas —silenciar el
+   *  gate, o no escribir el ítem de frontera nunca. */
+  frontera: string[];
   /** Ítems sin declarar: no medidos, que no es lo mismo que limpios. */
   sinDeclarar: string[];
   /** Ítems donde los dos caminos NO dicen lo mismo. */
@@ -43,6 +51,7 @@ export interface MedicionAtajo {
 export function medirAtajo(items: ItemCorreccion[], etiqueta: string): MedicionAtajo {
   const punto = new Map(PUNTOS_RO.map((p) => [p.id, p]));
   const atajo: string[] = [];
+  const frontera: string[] = [];
   const sinDeclarar: string[] = [];
   const discrepan: string[] = [];
   const porPunto = new Map<string, { n: number; cast: string; atajo: number }>();
@@ -53,6 +62,10 @@ export function medirAtajo(items: ItemCorreccion[], etiqueta: string): MedicionA
     const cast = p?.calco.castellano ?? '(punto fuera del inventario)';
     const r = porPunto.get(x.p) ?? { n: 0, cast, atajo: 0 };
     r.n += 1;
+    // El ítem de FRONTERA sale de los dos caminos: su error no viene del
+    // español, así que ni «traducir da la buena» ni «el calco produce la
+    // mala» son preguntas que se le puedan hacer. Se cuenta y se sigue.
+    if (x.origenError === 'sobreaplicacion') { frontera.push(`${id} (${x.p})`); porPunto.set(x.p, r); return; }
     if (x.atajoEs === undefined) sinDeclarar.push(`${id} (${x.p})`);
     else if (x.atajoEs) { atajo.push(`${id} (${x.p})`); r.atajo += 1; }
     // Camino 1 dice «traducir NO da la buena»; camino 2 dice «el calco no
@@ -73,5 +86,12 @@ export function medirAtajo(items: ItemCorreccion[], etiqueta: string): MedicionA
   lineas.push(`**Camino 2** — ítems cuyo punto NO declara \`castellano: 'bien'\`: **${malos.reduce((a, [, r]) => a + r.n, 0)}/${items.length}**${malos.length ? ` (${malos.map(([p]) => p).join(', ')})` : ''}.`);
   lineas.push(`**Discrepancias entre los dos caminos: ${discrepan.length}.**`);
   for (const d of discrepan) lineas.push(`- ${d}`);
-  return { lineas, atajo, sinDeclarar, discrepan };
+  if (frontera.length) {
+    lineas.push('', `**Ítems de FRONTERA: ${frontera.length}/${items.length}** — su error es la`);
+    lineas.push('SOBREAPLICACIÓN de una regla rumana, no el calco del español, así que la');
+    lineas.push('pregunta del atajo no se les puede hacer: traducir SÍ da la buena, y eso');
+    lineas.push('es precisamente lo que los hace la frontera del punto (§0.6). Sin ellos el');
+    lineas.push('alumno sobregeneraliza y saca 8/8.');
+  }
+  return { lineas, atajo, frontera, sinDeclarar, discrepan };
 }
