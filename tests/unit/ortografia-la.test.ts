@@ -76,13 +76,40 @@ describe('textoParaVoz: lo que se ENVÍA no es lo que se muestra', () => {
     expect(textoParaVoz('vēnit')).toBe('venit');
   });
 
-  it('es IDEMPOTENTE: aplicarlo dos veces da lo mismo', () => {
-    // Importa porque el hash del audio se calcula sobre su salida: si no
-    // fuera idempotente, un recálculo daría otro hash y todos los clips
-    // saldrían caducos.
-    for (const w of ['caelum', 'grātia', 'philosophia', 'Rōma', 'poena']) {
+  it('respeliza SOBRE el texto macronizado: `poēta` NO lleva el dígrafo `oe`', () => {
+    // El bug que destapó el primer lote real. `poēta` es o + ē en hiato
+    // (po-Ē-ta, de ποιητής), no el dígrafo de `poena`. La versión anterior
+    // quitaba los mácrons ANTES de respelizar y devolvía `peta`: el audio
+    // habría dicho una palabra que no existe.
+    expect(textoParaVoz('poēta')).toBe('poeta');
+    expect(textoParaVoz('poēta')).not.toBe('peta');
+    expect(textoParaVoz('Poētam laudat agricola.')).toBe('poetam laudat agricola.');
+    // Y el dígrafo de verdad sigue respelizándose.
+    expect(textoParaVoz('poena')).toBe('pena');
+  });
+
+  it('es DETERMINISTA, que es lo que el hash necesita — y no idempotente, que es lo que yo probaba', () => {
+    // Corrección de un test anterior, y la lección vale más que el bug:
+    // el test decía «es IDEMPOTENTE» y razonaba que si no lo fuera, un
+    // recálculo daría otro hash. Las dos mitades estaban mal.
+    //
+    // La primera: el hash se calcula UNA vez sobre la fuente macronizada
+    // (`elevenlabs-tts.ts:89` y `:127` llaman a `textoDeTts(v, req.text)`),
+    // así que lo que hace falta es determinismo.
+    //
+    // La segunda, peor: la función vieja era idempotente PORQUE destruía
+    // la distinción en la primera pasada. El invariante que yo probaba lo
+    // satisfacía el defecto — verde por la razón equivocada.
+    const veces = Array.from({ length: 5 }, () => textoParaVoz('poēta'));
+    expect(new Set(veces).size).toBe(1);
+    // Lo demás sí es idempotente; el hiato no puede serlo, y se enseña.
+    for (const w of ['caelum', 'grātia', 'Rōma', 'poena', 'philosophia']) {
       expect(textoParaVoz(textoParaVoz(w))).toBe(textoParaVoz(w));
     }
+    // `poēta` y `poena` COLISIONAN al perder el mácrón: es un hecho de la
+    // transformación, no un fallo. Por eso la entrada tiene que venir
+    // macronizada, y por eso se muestra en vez de esconderse.
+    expect(textoParaVoz(textoParaVoz('poēta'))).toBe('peta');
   });
 });
 

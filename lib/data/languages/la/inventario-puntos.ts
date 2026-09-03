@@ -168,6 +168,14 @@ export interface PuntoLa {
    *  marcaba «hay siete declaradas y se cubren seis», que es correcto.
    *  Un gate que marca de más se deja de leer. */
   valoresQueCubre?: number;
+  /** Cuántos ítems pide el descriptor, cuando lo dice con un número.
+   *  NO es `valoresQueCubre`, que cuenta valores distintos de un paradigma
+   *  y por eso va acotado por el piso; éste es el tamaño del lote y está
+   *  POR ENCIMA del piso. Confundirlos hizo saltar el gate del piso con un
+   *  20 contra un 8, que es el gate funcionando: son cantidades distintas.
+   *  Se comprueba contra el número escrito en `cita`, que es el segundo
+   *  camino: la prosa y el campo se desincronizan sin que falle nada. */
+  itemsQuePide?: number;
   /** Lo que queda por comprobar contra fuente y bloquea la producción. */
   abierto?: string;
 }
@@ -401,12 +409,13 @@ export const PUNTOS_LA: PuntoLa[] = [
 
   // ── b3 · El caso: la función va en la desinencia ────────────────────
   P({ id: 'l3-funcion-por-desinencia', nombre: 'La función va en la desinencia, no en la posición', bloque: 3, peldano: 'L1',
-    descripcion: 'EL PUNTO CENTRAL DEL CURSO. «Fīlium pater amat» y «Pater fīlium amat» significan lo mismo, y la lectura española del primero —«el hijo ama al padre»— es coherente y falsa. Se instala con pares de orden invertido y las mismas palabras.',
-    prereqs: ['l2-genitivo-clave'], clase: 'funcion',
+    descripcion: 'EL PUNTO CENTRAL DEL CURSO. «Fīlium pater amat» y «Pater fīlium amat» significan lo mismo, y la lectura española del primero —«el hijo ama al padre»— es coherente y falsa. Se instala MEZCLANDO los seis órdenes, mitad con el sujeto delante y mitad con el objeto: prohibir ítem a ítem los que coinciden con el español deja el objeto delante en todo el lote, y entonces «escríbelos al revés» lo acierta entero sin leer una desinencia.',
+    prereqs: ['l2-genitivo-clave', 'l2-primera', 'l2-segunda'], clase: 'funcion',
     calco: { ordenEnganya: 'si', herencia: 'sin-equivalente', via: 'recepcion' },
-    motivo: 'no hay «suena raro» que rescate al alumno: las dos lecturas son español impecable. Sólo el hueco en la glosa obliga a parsear',
+    motivo: 'no hay «suena raro» que rescate al alumno: las dos lecturas son español impecable. Sólo el hueco en la glosa obliga a parsear — y sólo si el lote derrota A LA VEZ a las tres lecturas ciegas: traducir en orden, invertir y preguntarse quién haría eso',
     cubre: ['L1/GRAMÁTICA · CASO'], cita: 'dice **quién hace qué**, en 20 ítems donde el orden CONTRADICE al instinto español',
-    varia: 'el ORDEN (sólo los tres en que el objeto precede al sujeto: en «Pater fīlium amat» traducir en orden ya acierta y el ítem sale gratis), la declinación del par, la conjugación del verbo y el número. NO varía la animación: los dos tienen que ser animados, porque con «puella librum legit» el sentido común resuelve y el ítem no mide nada. Ofrecerla como dimensión era un error de este campo, y lo destapó el gate del formato al escribir el primer lote' }),
+    itemsQuePide: 20,
+    varia: 'el ORDEN —los SEIS, mitad con el sujeto delante y mitad con el objeto—, la declinación del par, el número y el par léxico. NO varía la conjugación del verbo: este punto examina la desinencia del NOMBRE, así que cambiar «videt» por «dūcit» no cambia ninguna operación del alumno, y meterla en la clave de unicidad aprobaba dos ítems que eran el mismo. Y NO varía la animación: los dos tienen que ser animados y sin jerarquía entre ellos, porque si uno se define por la relación que el verbo nombra —maestro/discípulo, señor/siervo— el sentido común resuelve el ítem sin desinencia' }),
 
   P({ id: 'l3-nominativo', nombre: 'Nominativo: sujeto y atributo', bloque: 3, peldano: 'L1',
     descripcion: 'El sujeto y, con «sum» y verbos copulativos, también el atributo: «Caesar imperātor est» lleva los dos en nominativo.',

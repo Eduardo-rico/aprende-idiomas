@@ -88,9 +88,24 @@ export function comparaLa(a: string, b: string, opts: { sensibleACantidad?: bool
 // La tabla es pequeña y explícita a propósito: cada regla es
 // comprobable, y una regla ciega en un texto que nadie relee es la forma
 // barata de romper algo que no se ve.
+//
+// ── EL ORDEN IMPORTA, Y COSTÓ UNA PALABRA INEXISTENTE ─────────────────
+//
+// La versión anterior quitaba los mácrons ANTES de respelizar, y con eso
+// destruía justo el dato que distingue el dígrafo del hiato: `poēta` es
+// o + ē en dos sílabas (po-Ē-ta, de ποιητής), no el dígrafo `oe`. La
+// regla ciega se comía la sílaba y `textoParaVoz('poēta')` devolvía
+// `peta`. El primer contenido latino real —el primer lote— ya lo
+// disparaba, y el audio habría dicho una palabra que no existe.
+//
+// Ahora se respeliza SOBRE EL TEXTO MACRONIZADO y los dígrafos exigen que
+// la segunda vocal vaya sin mácrón. No resuelve el caso general (`coemō`
+// en hiato frente a `coepī` dígrafo, las dos con e breve): para eso hará
+// falta lista de excepciones, y se declara aquí en vez de fingir que la
+// regla es completa.
 const RESPELIZACION: [RegExp, string][] = [
-  [/ae/g, 'e'],      // caelum → celum   (y así `c`+e da /tʃ/)
-  [/oe/g, 'e'],      // poena  → pena
+  [/a(?=e)e/g, 'e'],  // caelum → celum   (y así `c`+e da /tʃ/)
+  [/oe/g, 'e'],       // poena  → pena — pero NO `poēta`: la ē lleva mácrón
   [/ti(?=[aeou])/g, 'tsi'], // gratia → gratsia
   [/ph/g, 'f'],      // philosophia → filosofia
   [/th/g, 't'],
@@ -102,9 +117,11 @@ const RESPELIZACION: [RegExp, string][] = [
 /** El texto que se ENVÍA a la voz: sin mácrons y respelizado. **El hash
  *  del audio se calcula sobre ESTO**, no sobre lo que se muestra. */
 export function textoParaVoz(s: string): string {
-  let t = sinCantidad(s.normalize('NFC')).toLowerCase().replace(/j/g, 'i');
+  // Respelizar PRIMERO, con los mácrons puestos: son lo que distingue el
+  // dígrafo del hiato. Quitarlos antes fue el fallo de `poēta → peta`.
+  let t = s.normalize('NFC').toLowerCase().replace(/j/g, 'i');
   for (const [re, sub] of RESPELIZACION) t = t.replace(re, sub);
-  return t;
+  return sinCantidad(t);
 }
 
 // ── EL ACENTO, DERIVADO DE LA CANTIDAD ────────────────────────────────

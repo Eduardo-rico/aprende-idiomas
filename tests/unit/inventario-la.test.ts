@@ -282,3 +282,19 @@ describe('toda afirmación léxica dice EN QUÉ LATÍN vale', () => {
     expect(malos, `puntos de L1 que afirman sobre un latín que el alumno aún no lee:\n${malos.join('\n')}`).toEqual([]);
   });
 });
+
+describe('el número de ítems que pide un descriptor', () => {
+  it('coincide con el número escrito en su propia `cita`', () => {
+    // El segundo camino: `cita` es prosa y `itemsQuePide` es un campo, y
+    // los dos dicen el mismo número. Se desincronizan sin que falle nada.
+    for (const p of PUNTOS_LA) {
+      const m = p.cita.match(/(\d+)\s+ítems/);
+      if (m) expect(p.itemsQuePide, `${p.id}: la cita dice ${m[1]} ítems`).toBe(Number(m[1]));
+      if (p.itemsQuePide !== undefined) {
+        expect(m, `${p.id}: declara itemsQuePide y la cita no dice ningún número`).not.toBeNull();
+        // Y por encima del piso, que es un mínimo y no un máximo.
+        expect(p.itemsQuePide).toBeGreaterThanOrEqual(PISO_LA(p.peldano));
+      }
+    }
+  });
+});

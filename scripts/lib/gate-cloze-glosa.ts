@@ -1,196 +1,125 @@
 // scripts/lib/gate-cloze-glosa.ts
 //
-// EL GATE DEL FORMATO NUEVO, escrito ANTES del primer ítem.
+// EL GATE DEL «CLOZE EN LA GLOSA», reescrito después de que el latinista
+// adversarial demostrara que su primera versión no medía nada.
 //
-// El «cloze en la glosa» es el formato dominante del inventario latino
-// (46 de 116 puntos) y **este proyecto no lo ha producido nunca**: en
-// portugués y en rumano el hueco va siempre en la lengua meta. Estrenar
-// lengua y formato a la vez, sin ni un ítem previo del que copiar la
-// forma, es donde un lote se quema entero.
+// ── LO QUE PASÓ, porque es la lección y no una nota de versión ─────────
 //
-// ── EL PELIGRO, con su precedente ─────────────────────────────────────
+// La v1 comprobaba POR ÍTEM que el orden latino contradijera al español:
+// sólo OSV, OVS y VOS, porque en SOV y VSO traducir en orden ya acierta.
+// Parecía la mitad del punto. Era una trampa.
 //
-// El juicio binario murió en portugués **porque la glosa contenía la
-// respuesta**. Un hueco EN la glosa es el mismo peligro con la geometría
-// invertida, y tiene dos caras:
+// Al vetar por ítem todo orden en que el sujeto precede al objeto, el
+// lote entero queda con el objeto primero — y entonces `respuestas` es
+// SIEMPRE el reverso del orden latino. Medido sobre el primer lote:
 //
-//   1. **La pista posicional.** Si la frase latina va en el orden del
-//      español, rellenar la glosa palabra por palabra da la respuesta
-//      correcta **sin haber mirado una sola desinencia** — que es justo
-//      lo que el punto examina. `Pater fīlium amat` traducido en orden da
-//      «el padre ama al hijo», que es lo correcto, y el ítem no mide
-//      nada. `Fīlium pater amat` traducido en orden da «al hijo ama el
-//      padre», que es lo INCORRECTO: ahí sí hay que leer la terminación.
+//     la heurística ciega «escríbelos al revés» acierta 12 de 12
 //
-//   2. **El sentido común.** `Puella librum legit` se resuelve sin
-//      gramática, porque un libro no lee. Si sólo uno de los dos
-//      candidatos es plausible como agente, la desinencia sobra.
+// **Un gate por ítem que fuerza una propiedad la vuelve constante en el
+// lote, y una constante es una estrategia gratis.** Maté una lectura
+// ciega instalando otra, y la hice perfecta.
 //
-//   3. **La fuga morfológica del español**, que salió atacando este mismo
-//      gate después de verlo verde. `El ___ ama a la ___`, con «padre» y
-//      «niña», pasa las dos comprobaciones anteriores y **está resuelto
-//      igual**: los artículos reparten los huecos sin latín. No es sólo el
-//      artículo — el adjetivo, el participio y el clítico concuerdan
-//      también, así que enumerar los canales es perder. La clase se cierra
-//      por construcción: **los dos candidatos comparten género y número**,
-//      y entonces ninguna concordancia española puede distinguirlos.
-//      Cuesta pares (`fīlius`/`māter` queda fuera) y a cambio la fuga no
-//      existe en vez de estar vigilada.
+// Y no sólo no medía: enseñaba una regla falsa. Sobre los treebanks UD,
+// 4.937 cláusulas con `nsubj` y `obj` explícitos en 227.300 tokens:
 //
-// Las dos producen ítems impecables que no miden nada, y ninguna es
-// propiedad de una palabra: hay que mirar el ítem entero.
+//     SOV 38,9 %  SVO 29,4 %  OSV 15,5 %  OVS 6,3 %  VOS 5,1 %  VSO 4,8 %
+//     el sujeto precede al objeto en el 73,1 % del latín real
 //
-// Si el formato no admite este gate, es mejor saberlo con UN punto que
-// con cuarenta y seis.
+// El lote de la v1 entrenaba una heurística que falla en tres de cada
+// cuatro frases latinas.
+//
+// ── LA FORMA CORRECTA: tres estrategias ciegas, derrotadas EN EL LOTE ──
+//
+// Un ítem aislado no puede examinar este punto: sea cual sea su orden,
+// alguna regla ciega lo acierta. Lo que se examina es el LOTE, y tiene
+// que derrotar a las tres a la vez:
+//
+//   1. **posicional** — traducir en el orden del latín.
+//   2. **inversión**  — escribirlos al revés.
+//   3. **pragmática** — «¿quién haría esto?». El latinista la encontró en
+//      9 de 12 ítems de la v1: padre/hijo, señor/siervo, siervos/señores…
+//      la respuesta correcta era el agente esperado. Preguntando sólo eso
+//      se sacaba ~10 de 12, a un cara-o-cruz del ≥85 % del descriptor.
+//
+// El umbral es el azar: con dos candidatos por ítem, adivinar da 50 %.
+// Ninguna estrategia ciega puede pasar de ahí. Eso OBLIGA a mezclar
+// órdenes —incluidos SOV y SVO, los dos más frecuentes— en vez de
+// prohibirlos, que es además el latín que el alumno se va a encontrar.
 
 export interface PalabraGlosada {
-  /** La palabra latina, tal como aparece. */
   la: string;
-  /** Su glosa española palabra por palabra, sin reordenar. */
   es: string;
-  /** El papel que juega, si es uno de los que el ítem examina. */
   rol?: 'sujeto' | 'objeto' | 'verbo';
-  /** Género y número DE LA GLOSA ESPAÑOLA, obligatorios en las palabras
-   *  con rol de sujeto u objeto: son lo que cierra la fuga morfológica. */
+  /** Género y número DE LA GLOSA ESPAÑOLA, obligatorios en sujeto y
+   *  objeto: son lo que cierra la fuga morfológica. */
   gen?: 'm' | 'f';
   num?: 'sg' | 'pl';
 }
 
-export interface ItemClozeGlosa {
-  id: string;
-  /** El punto del inventario que examina. */
-  punto: string;
-  /** La frase latina completa. */
-  latin: string;
-  /** Palabra a palabra, EN EL ORDEN DEL LATÍN. */
-  palabras: PalabraGlosada[];
-  /** La glosa española con `___` donde van los huecos. */
-  glosa: string;
-  /** Las respuestas, en el orden de los huecos. */
-  respuestas: string[];
-  /** Por qué los dos candidatos son plausibles en los dos papeles. Sin
-   *  esto el sentido común resuelve el ítem y la desinencia sobra. */
-  reversible: string;
-  /** Los ejes por los que este ítem se distingue de sus hermanos. Existen
-   *  porque «ocho ítems pueden ser uno repetido ocho veces»: sin una
-   *  dimensión declarada, el lote parece variado y no varía nada. */
-  ejes: EjesItem;
+export interface EjesItem {
+  /** Los SEIS órdenes, con los seis representables. La v1 admitía tres y
+   *  con eso hacía irrepresentable el caso que el gate debía cazar; luego
+   *  admitió cinco y el comentario decía «los cinco» de seis que son.
+   *  Quien juzga es la comprobación de lote, no el tipo. */
+  orden: 'SOV' | 'SVO' | 'OSV' | 'OVS' | 'VSO' | 'VOS';
+  conjugacion: 1 | 2 | 3 | 4;
+  declinacion: '1ª' | '2ª' | '3ª' | '1ª-masc' | 'mixta';
+  numero: 'sg' | 'pl';
+  /** Cuál de los dos repartos espera la pragmática. `correcto` = el
+   *  adivinador acierta; `falso` = se estrella; `neutro` = ninguno de los
+   *  dos papeles es el esperado. Es lo ÚNICO comprobable contra el
+   *  sentido común: `reversible` es prosa y no la cierra. */
+  esperado: 'correcto' | 'falso' | 'neutro';
 }
 
-export interface EjesItem {
-  /** Sólo los órdenes en que el objeto PRECEDE al sujeto son utilizables
-   *  aquí: SOV y VSO coinciden con el español y el ítem sale gratis.
+export interface ItemClozeGlosa {
+  id: string;
+  punto: string;
+  latin: string;
+  palabras: PalabraGlosada[];
+  glosa: string;
+  respuestas: string[];
+  /** Por qué los dos candidatos son plausibles en los dos papeles.
    *
-   *  Los cinco caben en el tipo A PROPÓSITO, y es una corrección: dejarlo
-   *  en los tres buenos hacía IRREPRESENTABLE el ítem que el gate existe
-   *  para cazar, y un gate que no puede recibir su caso malo no se puede
-   *  probar. Quien rechaza SOV y VSO es la comprobación, no el tipo.
-   *
-   *  Y el campo se COMPRUEBA contra los datos en vez de creerse: es una
-   *  etiqueta escrita a mano sobre una frase, o sea justo la clase de dato
-   *  que se desincroniza sin que falle nada. */
-  orden: 'OSV' | 'OVS' | 'VOS' | 'SOV' | 'VSO';
-  conjugacion: 1 | 2 | 3 | 4;
-  declinacion: '1ª' | '2ª' | '1ª-masc' | 'mixta';
-  numero: 'sg' | 'pl';
+   *  AVISO HONESTO, que el latinista tenía razón en exigir: el gate sólo
+   *  comprueba que esto ESTÉ ESCRITO. Es prosa libre y nadie la lee, así
+   *  que **este campo no cierra el sentido común** — lo cierra `esperado`
+   *  con la tasa pragmática del lote. Se conserva porque obliga a quien
+   *  escribe el ítem a pensarlo, no porque mida. */
+  reversible: string;
+  ejes: EjesItem;
 }
 
 export type ClaseFallo =
   | 'huecos-y-respuestas'
-  | 'pista-posicional'
   | 'no-reversible'
   | 'hueco-fuera-del-rol'
   | 'glosa-no-cuadra'
   | 'fuga-morfologica'
   | 'ejes-repetidos'
-  | 'eje-mal-declarado';
+  | 'eje-mal-declarado'
+  | 'estrategia-ciega';
 
 export interface FalloClozeGlosa { item: string; clase: ClaseFallo; detalle: string }
 
 const HUECO = /___/g;
-
 const norm = (s: string) => s.normalize('NFC').toLowerCase().replace(/[.,;:!?¿¡]/g, '').trim();
+const papeles = (it: ItemClozeGlosa) => it.palabras.filter((p) => p.rol === 'sujeto' || p.rol === 'objeto');
 
-/** LA COMPROBACIÓN CENTRAL, y la que justifica todo el fichero.
- *
- *  Simula al alumno que traduce en el orden del latín sin mirar las
- *  desinencias: toma las glosas palabra a palabra EN EL ORDEN LATINO y
- *  ve con qué rellenaría los huecos. Si eso da las respuestas correctas,
- *  **el ítem se resuelve sin gramática y hay que rehacerlo**.
- *
- *  No es una heurística sobre el texto: es ejecutar la estrategia del
- *  alumno y comprobar si funciona. */
+/** Lo que rellenaría quien traduce en el orden del latín sin mirar una
+ *  desinencia. No es una heurística sobre el texto: ejecuta la estrategia
+ *  del alumno y devuelve su respuesta. */
 export function respuestaPosicional(item: ItemClozeGlosa): string[] {
-  const conRol = item.palabras.filter((p) => p.rol === 'sujeto' || p.rol === 'objeto');
-  // El lector posicional asigna sujeto al PRIMERO y objeto al segundo,
-  // que es la regla del español.
-  const enOrden = conRol.map((p) => p.es);
   const huecos = (item.glosa.match(HUECO) ?? []).length;
-  return enOrden.slice(0, huecos);
+  return papeles(item).map((p) => p.es).slice(0, huecos);
 }
 
-export function revisarClozeGlosa(item: ItemClozeGlosa): FalloClozeGlosa[] {
-  const out: FalloClozeGlosa[] = [];
-  const push = (clase: ClaseFallo, detalle: string) => out.push({ item: item.id, clase, detalle });
-
-  const huecos = (item.glosa.match(HUECO) ?? []).length;
-  if (huecos === 0) push('huecos-y-respuestas', 'la glosa no tiene ningún hueco `___`');
-  if (huecos !== item.respuestas.length) {
-    push('huecos-y-respuestas', `${huecos} huecos y ${item.respuestas.length} respuestas`);
-  }
-
-  // La glosa palabra a palabra tiene que reconstruir la frase latina.
-  const enItem = item.palabras.map((p) => norm(p.la)).join(' ');
-  const enFrase = norm(item.latin).split(/\s+/).join(' ');
-  if (enItem !== enFrase) {
-    push('glosa-no-cuadra', `las palabras glosadas no reconstruyen la frase: «${enItem}» contra «${enFrase}»`);
-  }
-
-  // ── (1) la pista posicional ──
-  const pos = respuestaPosicional(item).map(norm);
-  const esp = item.respuestas.map(norm);
-  if (pos.length === esp.length && pos.length > 0 && pos.every((x, i) => x === esp[i])) {
-    push('pista-posicional',
-      `traducir en el orden del latín da las respuestas correctas (${pos.join(', ')}): el ítem se resuelve SIN mirar la desinencia. El orden latino tiene que contradecir al español`);
-  }
-
-  // ── (2) el sentido común ──
-  if (!item.reversible || item.reversible.trim().length < 20) {
-    push('no-reversible',
-      'sin declarar por qué los dos candidatos son plausibles en los dos papeles: si sólo uno puede ser agente, la desinencia sobra y el ítem lo resuelve el sentido común');
-  }
-
-  // ── (3) el hueco cae sobre el rasgo que el punto enseña ──
-  const roles = item.palabras.filter((p) => p.rol === 'sujeto' || p.rol === 'objeto');
-  if (roles.length < 2) {
-    push('hueco-fuera-del-rol', 'el ítem no declara DOS palabras con rol de sujeto y objeto: sin las dos no hay ambigüedad que resolver');
-  }
-  const respSet = new Set(esp);
-  const rolesEs = new Set(roles.map((p) => norm(p.es)));
-  for (const r of respSet) {
-    if (!rolesEs.has(r)) {
-      push('hueco-fuera-del-rol',
-        `la respuesta «${r}» no es ninguna de las palabras con rol: el hueco no cae sobre el rasgo que el punto enseña`);
-    }
-  }
-
-  // ── (3) la fuga morfológica: cerrada por construcción ──
-  const sinRasgos = roles.filter((p) => !p.gen || !p.num);
-  if (sinRasgos.length > 0) {
-    push('fuga-morfologica',
-      `sin género/número declarados en ${sinRasgos.map((p) => `«${p.es}»`).join(', ')}: no se puede comprobar que la concordancia española no reparta los huecos sola`);
-  } else if (roles.length >= 2) {
-    const rasgos = new Set(roles.map((p) => `${p.gen}${p.num}`));
-    if (rasgos.size > 1) {
-      push('fuga-morfologica',
-        `los candidatos no comparten género y número (${roles.map((p) => `«${p.es}» ${p.gen}/${p.num}`).join(', ')}): el artículo, el adjetivo o el clítico de la glosa reparten los huecos SIN latín`);
-    }
-  }
-
-  return out;
+/** La estrategia que la v1 de este gate instalaba sin querer. */
+export function respuestaInvertida(item: ItemClozeGlosa): string[] {
+  return [...respuestaPosicional(item)].reverse();
 }
 
-/** El orden REAL, leído de las palabras, no de la etiqueta. */
+/** El orden REAL, leído de las palabras y no de la etiqueta. */
 export function ordenReal(item: ItemClozeGlosa): string | null {
   const sig = item.palabras
     .map((p) => (p.rol === 'sujeto' ? 'S' : p.rol === 'objeto' ? 'O' : p.rol === 'verbo' ? 'V' : ''))
@@ -198,27 +127,95 @@ export function ordenReal(item: ItemClozeGlosa): string | null {
   return /^[SOV]{3}$/.test(sig) ? sig : null;
 }
 
-/** El lote entero, no el ítem: comprueba que no hay dos ítems idénticos en
- *  todos sus ejes. Es la contracara de «ocho ítems, uno repetido ocho
- *  veces» — y aquí la invariancia NO es propiedad de la lengua, porque el
- *  latín sí ofrece tres órdenes, cuatro conjugaciones y dos números. */
+const aciertaCon = (item: ItemClozeGlosa, r: string[]) => {
+  const a = r.map(norm), b = item.respuestas.map(norm);
+  return a.length === b.length && a.length > 0 && a.every((x, i) => x === b[i]);
+};
+
+/** Lo que saca cada estrategia ciega sobre el lote, en tanto por uno. */
+export function tasasCiegas(items: ItemClozeGlosa[]) {
+  const n = items.length || 1;
+  const pos = items.filter((it) => aciertaCon(it, respuestaPosicional(it))).length / n;
+  const inv = items.filter((it) => aciertaCon(it, respuestaInvertida(it))).length / n;
+  const prag = items.reduce((a, it) =>
+    a + (it.ejes.esperado === 'correcto' ? 1 : it.ejes.esperado === 'neutro' ? 0.5 : 0), 0) / n;
+  return { posicional: pos, inversion: inv, pragmatica: prag };
+}
+
+/** El azar con dos candidatos. Ninguna estrategia ciega puede superarlo. */
+export const TECHO_CIEGO = 0.5;
+
+export function revisarClozeGlosa(item: ItemClozeGlosa): FalloClozeGlosa[] {
+  const out: FalloClozeGlosa[] = [];
+  const push = (clase: ClaseFallo, detalle: string) => out.push({ item: item.id, clase, detalle });
+
+  const huecos = (item.glosa.match(HUECO) ?? []).length;
+  if (huecos === 0) push('huecos-y-respuestas', 'la glosa no tiene ningún hueco `___`');
+  if (huecos !== item.respuestas.length) push('huecos-y-respuestas', `${huecos} huecos y ${item.respuestas.length} respuestas`);
+
+  const enItem = item.palabras.map((p) => norm(p.la)).join(' ');
+  const enFrase = norm(item.latin).split(/\s+/).join(' ');
+  if (enItem !== enFrase) {
+    push('glosa-no-cuadra', `las palabras glosadas no reconstruyen la frase: «${enItem}» contra «${enFrase}»`);
+  }
+
+  if (!item.reversible || item.reversible.trim().length < 20) {
+    push('no-reversible', 'sin declarar por qué los dos candidatos son plausibles en los dos papeles');
+  }
+
+  const roles = papeles(item);
+  if (roles.length < 2) {
+    push('hueco-fuera-del-rol', 'el ítem no declara DOS palabras con rol de sujeto y objeto: sin las dos no hay ambigüedad que resolver');
+  }
+  const esp = item.respuestas.map(norm);
+  const rolesEs = new Set(roles.map((p) => norm(p.es)));
+  for (const r of new Set(esp)) {
+    if (!rolesEs.has(r)) push('hueco-fuera-del-rol', `la respuesta «${r}» no es ninguna palabra con rol`);
+  }
+
+  const sinRasgos = roles.filter((p) => !p.gen || !p.num);
+  if (sinRasgos.length > 0) {
+    push('fuga-morfologica', `sin género/número en ${sinRasgos.map((p) => `«${p.es}»`).join(', ')}`);
+  } else if (roles.length >= 2 && new Set(roles.map((p) => `${p.gen}${p.num}`)).size > 1) {
+    push('fuga-morfologica',
+      `los candidatos no comparten género y número (${roles.map((p) => `«${p.es}» ${p.gen}/${p.num}`).join(', ')}): el artículo, el adjetivo o el clítico reparten los huecos SIN latín`);
+  }
+
+  const real = ordenReal(item);
+  if (real && real !== item.ejes.orden) {
+    push('eje-mal-declarado', `declara orden ${item.ejes.orden} y la frase es ${real}`);
+  }
+  return out;
+}
+
 export function revisarLote(items: ItemClozeGlosa[]): FalloClozeGlosa[] {
   const out = items.flatMap(revisarClozeGlosa);
-  for (const it of items) {
-    const real = ordenReal(it);
-    if (real && real !== it.ejes.orden) {
-      out.push({ item: it.id, clase: 'eje-mal-declarado', detalle: `declara orden ${it.ejes.orden} y la frase es ${real}` });
+
+  // ── LO QUE SÓLO SE VE EN EL LOTE ──
+  const t = tasasCiegas(items);
+  const pct = (x: number) => `${(100 * x).toFixed(0)} %`;
+  for (const [nombre, valor, glosa] of [
+    ['posicional', t.posicional, 'traducir en el orden del latín'],
+    ['inversión', t.inversion, 'escribir los dos nombres al revés'],
+    ['pragmática', t.pragmatica, 'preguntar «¿quién haría esto?»'],
+  ] as const) {
+    if (valor > TECHO_CIEGO) {
+      out.push({ item: '(lote)', clase: 'estrategia-ciega',
+        detalle: `la estrategia ${nombre} —${glosa}— acierta el ${pct(valor)} del lote, por encima del ${pct(TECHO_CIEGO)} del azar: el lote se resuelve sin leer una desinencia` });
     }
   }
+
+  // La clave de unicidad NO lleva la conjugación: este punto examina la
+  // desinencia del NOMBRE, así que cambiar `videt` por `dūcit` no cambia
+  // ninguna operación del alumno. Incluirla aprobaba `la-fpd-03` y
+  // `la-fpd-10`, que eran el mismo ítem con otro verbo.
   const vistos = new Map<string, string>();
   for (const it of items) {
-    const k = `${it.ejes.orden}|${it.ejes.conjugacion}|${it.ejes.declinacion}|${it.ejes.numero}`;
+    const par = papeles(it).map((p) => norm(p.la)).join('+');
+    const k = `${it.ejes.orden}|${it.ejes.declinacion}|${it.ejes.numero}|${par}`;
     const antes = vistos.get(k);
-    if (antes) {
-      out.push({ item: it.id, clase: 'ejes-repetidos', detalle: `mismos ejes que «${antes}» (${k}): desde el alumno los dos ítems son el mismo` });
-    } else {
-      vistos.set(k, it.id);
-    }
+    if (antes) out.push({ item: it.id, clase: 'ejes-repetidos', detalle: `mismo ítem que «${antes}» desde el alumno (${k})` });
+    else vistos.set(k, it.id);
   }
   return out;
 }
