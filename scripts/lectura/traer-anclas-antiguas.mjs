@@ -40,10 +40,17 @@ const OBRAS = {
     // los tres salen de `el.wikisource` y se miden con la misma regla —
     // incluido Homero, que en el treebank sí está: comparar una obra
     // ampliada contra una del treebank sería comparar dos instrumentos.
-    { obra: 'Ilíada', autor: 'Homero', peldano: 'G5', autorPagina: 'Συγγραφέας:Όμηρος' },
+    // HOMERO NO ENTRA POR AQUÍ, y es un hallazgo: `el.wikisource` **no
+    // tiene la Ilíada como texto seguido**. `Ιλιάδα` es un redirect de 20
+    // caracteres, `Ιλιάς` un índice de 816, y lo que cuelga del autor son
+    // la Batracomiomaquia (una parodia, no Homero), los Himnos homéricos
+    // (tampoco) y traducciones modernas. Homero se mide desde el
+    // TREEBANK, donde hay 6.003 frases de la Ilíada — y por eso hace
+    // falta un puente entre treebank y Wikisource, que lo da SÓFOCLES,
+    // presente en los dos.
+    { obra: 'Tragedias', autor: 'Sófocles', peldano: 'PUENTE', autorPagina: 'Συγγραφέας:Σοφοκλής' },
     { obra: 'Odas', autor: 'Píndaro', peldano: 'G5', autorPagina: 'Συγγραφέας:Πίνδαρος' },
     { obra: 'Comedias', autor: 'Aristófanes', peldano: 'G5', autorPagina: 'Συγγραφέας:Αριστοφάνης' },
-    { obra: 'Tragedias', autor: 'Sófocles', peldano: 'G4', autorPagina: 'Συγγραφέας:Σοφοκλής' },
   ],
   la: [
     { obra: 'Eneida', autor: 'Virgilio', peldano: 'L4',
@@ -204,11 +211,33 @@ function textoPlano(html) {
   return html
     .replace(/<sup[^>]*class="[^"]*reference[^"]*"[\s\S]*?<\/sup>/g, ' ')
     .replace(/<ol[^>]*class="[^"]*references[^"]*"[\s\S]*?<\/ol>/g, ' ')
-    .replace(/<table[\s\S]*?<\/table>/g, ' ')
     .replace(/<style[\s\S]*?<\/style>/g, ' ')
+    .replace(/<table[\s\S]*?<\/table>/g, (t) => (griegasEn(t) < 200 && latinasEn(t) < 400 ? ' ' : t))
     .replace(/<[^>]+>/g, ' ')
     .replace(/&#\d+;|&[a-z]+;/g, ' ');
 }
+
+// ── POR QUÉ LAS TABLAS NO SE BORRAN ENTERAS ───────────────────────────
+//
+// La primera versión hacía `.replace(/<table…<\/table>/g, ' ')` para
+// quitar el aparato de Wikisource. En `el.wikisource` **el texto de las
+// tragedias VIVE DENTRO DE TABLAS**: medido sobre la caché, las siete
+// obras de Sófocles y las Ranas de Aristófanes tienen el **99,8-99,9 %**
+// de sus caracteres griegos dentro de `<table>`. El limpiador las dejaba
+// en 36 caracteres y el gate politónico informaba «sin-texto (0
+// griegas)» — **un veredicto que parece legítimo y que en realidad
+// describía el destrozo del limpiador, no la página.**
+//
+// Sólo se vio porque seis de siete obras de Sófocles dando cero es
+// implausible. Es la lección de siempre: un 0 puede ser «no he mirado».
+//
+// La regla nueva quita la tabla SÓLO si es pequeña —menos de 200
+// caracteres griegos y menos de 400 latinos—, que es el tamaño de una
+// caja de navegación, y conserva las que llevan texto. Medido: las
+// páginas sanas (Píndaro, ocho comedias) tienen 0-0,1 % en tablas, así
+// que la regla no las toca.
+const griegasEn = (t) => (t.match(/[Ͱ-Ͽἀ-῿]/gu) ?? []).length;
+const latinasEn = (t) => (t.match(/[A-Za-zÀ-ÿ]/g) ?? []).length;
 
 /** Formas griegas canónicas de un HTML ya limpio. */
 function formasGrc(plano) {

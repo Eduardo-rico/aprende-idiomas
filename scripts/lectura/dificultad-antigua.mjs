@@ -116,8 +116,11 @@ const OBRAS = {
       'tlg0016.tlg001': { autor: 'Heródoto', obra: 'Historias', peldano: 'G3' },
       'tlg0003.tlg001': { autor: 'Tucídides', obra: 'Guerra del Peloponeso', peldano: 'G4' },
       'tlg0012.tlg001': { autor: 'Homero', obra: 'Ilíada', peldano: 'G5' },
-      'tlg0011.tlg004': { autor: 'Sófocles', obra: 'Edipo Rey', peldano: 'G4', extra: true },
-      'tlg0011.tlg002': { autor: 'Sófocles', obra: 'Antígona', peldano: 'G4', extra: true },
+      'tlg0011.tlg004': { autor: 'Sófocles', obra: 'Tragedias', peldano: 'G4', extra: true },
+      'tlg0011.tlg002': { autor: 'Sófocles', obra: 'Tragedias', peldano: 'G4', extra: true },
+      'tlg0011.tlg001': { autor: 'Sófocles', obra: 'Tragedias', peldano: 'G4', extra: true },
+      'tlg0011.tlg003': { autor: 'Sófocles', obra: 'Tragedias', peldano: 'G4', extra: true },
+      'tlg0011.tlg005': { autor: 'Sófocles', obra: 'Tragedias', peldano: 'G4', extra: true },
       'tlg0085.tlg001': { autor: 'Esquilo', obra: 'Suplicantes', peldano: 'G5', extra: true },
       'tlg0020.tlg001': { autor: 'Hesíodo', obra: 'Teogonía', extra: true },
       'tlg0007.tlg015': { autor: 'Plutarco', obra: 'Alcibíades', extra: true },
@@ -210,7 +213,16 @@ const PUENTES = {
     { autor: 'Jerónimo', calidad: 'mismo texto, libros distintos' },
     { autor: 'Cicerón', calidad: 'mismo autor, obras distintas' },
   ],
-  grc: [{ autor: 'Heródoto', calidad: 'MISMA OBRA' }],
+  grc: [
+    { autor: 'Heródoto', calidad: 'MISMA OBRA, treebank↔treebank' },
+    // El puente que hacía falta y no existía: Píndaro y Aristófanes NO
+    // están en ningún treebank, así que su medida viene de Wikisource,
+    // mientras Homero sólo existe en el treebank (`el.wikisource` no
+    // tiene la Ilíada como texto seguido). Sófocles está en LOS DOS —
+    // cinco tragedias en Perseus y siete en Wikisource— y es lo único
+    // que permite comparar una cosa con la otra.
+    { autor: 'Sófocles', calidad: 'mismo autor, treebank↔wikisource' },
+  ],
 };
 
 /** Parejas que NO están en la cadena declarada pero conviene medir, cada
@@ -242,7 +254,20 @@ const COMPROBACIONES_EXTRA = {
     ['Eneida', 'Historiae', ['palabrasFrase', 'subordFrase', 'arcoAdj'],
      'L4→L5 por el eje SINTÁCTICO, dentro de Perseus (sin puente de por medio): la «brevitas» de Tácito es una propiedad de la sintaxis, no del léxico'],
   ],
-  grc: [],
+  grc: [
+    ['Tragedias', 'Tragedias (ampliada)', ['fueraTop1000Formas'],
+     'EL PUENTE treebank↔wikisource: Sófocles medido en los dos. Si se mueve mucho, comparar Homero (treebank) con Píndaro y Aristófanes (Wikisource) no vale'],
+    ['Guerra del Peloponeso', 'Odas (ampliada)', ['fueraTop1000Formas'], 'G5 · Píndaro contra el ancla de G4'],
+    ['Guerra del Peloponeso', 'Comedias (ampliada)', ['fueraTop1000Formas'], 'G5 · Aristófanes contra el ancla de G4'],
+    ['Ilíada', 'Odas (ampliada)', ['fueraTop1000Formas'], 'G5 · Homero contra Píndaro (CRUZA fuentes: leer con el puente delante)'],
+    ['Ilíada', 'Comedias (ampliada)', ['fueraTop1000Formas'], 'G5 · Homero contra Aristófanes (CRUZA fuentes)'],
+    // Lo único de G5 que SÍ se puede comparar: los dos miembros que
+    // viven en la misma fuente. Sin puente de por medio.
+    ['Comedias (ampliada)', 'Odas (ampliada)', ['fueraTop1000Formas'],
+     'G5 · Aristófanes contra Píndaro, LOS DOS EN WIKISOURCE: la única comparación de G5 que no cruza fuentes'],
+    ['Comedias (ampliada)', 'Tragedias (ampliada)', ['fueraTop1000Formas'],
+     'referencia dentro de Wikisource: Aristófanes contra Sófocles'],
+  ],
 };
 
 const SUBORD = new Set(['advcl', 'acl', 'ccomp', 'xcomp', 'csubj']);
@@ -555,18 +580,44 @@ function main() {
   for (const { autor, calidad } of PUENTES[LANG]) {
     const f = filas.filter((x) => x.autor === autor);
     if (new Set(f.map((x) => x.proyecto)).size < 2) { console.log(`  ${autor} (${calidad}): sólo en un treebank, no sirve de puente`); continue; }
-    const linea = METRICAS.map(([k, nombre, d]) => {
-      const por = Object.fromEntries(f.map((x) => [x.proyecto, x[k]]));
-      const rel = (100 * Math.abs(por.proiel - por.perseus)) / ((por.proiel + por.perseus) / 2);
-      return `${nombre} ${rel.toFixed(0)} %`;
+    // Los DOS proyectos que este puente conecta, sean cuales sean: hay
+    // puentes treebank↔treebank (Heródoto) y treebank↔wikisource
+    // (Sófocles), y el segundo es el único que permite comparar a Homero,
+    // que sólo existe en el treebank, con Píndaro y Aristófanes, que sólo
+    // existen en Wikisource.
+    const proys = [...new Set(f.map((x) => x.proyecto))];
+    const linea = METRICAS.map(([k, nombre]) => {
+      const a = f.find((x) => x.proyecto === proys[0])[k];
+      const b = f.find((x) => x.proyecto === proys[1])[k];
+      if (Number.isNaN(a) || Number.isNaN(b)) return `${nombre} —`;
+      return `${nombre} ${((100 * Math.abs(a - b)) / ((a + b) / 2)).toFixed(0)} %`;
     }).join(' · ');
-    console.log(`  ${autor.padEnd(10)} (${calidad}): ${linea}`);
+    console.log(`  ${autor.padEnd(10)} (${calidad}, ${proys.join('↔')}): ${linea}`);
     if (!puente) { puente = f; calidadPuente = `${autor} — ${calidad}`; }
   }
-  if (puente) {
+  // Un desplazamiento POR PAR DE FUENTES, no uno solo: treebank↔treebank
+  // y treebank↔wikisource son confusores distintos y de tamaño muy
+  // distinto (1-8 % contra 25 % en griego).
+  const desplazPar = {};
+  for (const { autor } of PUENTES[LANG]) {
+    const f = filas.filter((x) => x.autor === autor);
+    const ps = [...new Set(f.map((x) => x.proyecto))];
+    if (ps.length < 2) continue;
+    const clave = ps.slice().sort().join('|');
+    desplazPar[clave] = {};
     for (const [k] of METRICAS) {
-      const por = Object.fromEntries(puente.map((x) => [x.proyecto, x[k]]));
-      desplazamiento[k] = (100 * Math.abs(por.proiel - por.perseus)) / ((por.proiel + por.perseus) / 2);
+      const a = f.find((x) => x.proyecto === ps[0])[k], b = f.find((x) => x.proyecto === ps[1])[k];
+      if (!Number.isNaN(a) && !Number.isNaN(b)) desplazPar[clave][k] = (100 * Math.abs(a - b)) / ((a + b) / 2);
+    }
+  }
+  const desplazDe = (px, py, k) => desplazPar[[px, py].sort().join('|')]?.[k];
+
+  if (puente) {
+    const proys = [...new Set(puente.map((x) => x.proyecto))];
+    for (const [k] of METRICAS) {
+      const a = puente.find((x) => x.proyecto === proys[0])[k];
+      const b = puente.find((x) => x.proyecto === proys[1])[k];
+      desplazamiento[k] = (100 * Math.abs(a - b)) / ((a + b) / 2);
     }
     console.log(`  ⇒ se usa el de mejor calidad: ${calidadPuente}`);
   } else {
@@ -669,6 +720,17 @@ function main() {
       const [x, y, mismoProy] = emparejar(a, b);
       console.log(`\n  ${a} → ${b}   [${mismoProy ? `dentro de ${x.proyecto}` : `${x.proyecto} vs ${y.proyecto}`}]  — ${motivo}`);
       for (const k of ejes) {
+        // LA MISMA REGLA DEL PUENTE que en la cadena. Faltaba aquí, y la
+        // consecuencia era grave: las comprobaciones extra imprimían ✔ en
+        // comparaciones que cruzan fuentes con el puente roto. En griego
+        // el puente treebank↔wikisource (Sófocles) se mueve un 25 %, así
+        // que un «ORDENADO» entre Tucídides (treebank) y Píndaro
+        // (Wikisource) no dice nada sobre los autores.
+        const dp = mismoProy ? undefined : (desplazDe(x.proyecto, y.proyecto, k) ?? desplazamiento[k]);
+        if (dp !== undefined && dp > PUENTE_MAX) {
+          console.log(`      · ${nombreDe[k].padEnd(16)} NO ARBITRA: cruza ${x.proyecto}↔${y.proyecto} y ese puente se mueve ${dp.toFixed(0)} %`);
+          continue;
+        }
         const v = juzgar(x, y, k);
         const marca = v.estado === 'ORDENADO' ? '✔' : v.estado === 'INDISTINGUIBLE' ? '~' : '✘';
         console.log(`      ${marca} ${nombreDe[k].padEnd(16)} ${v.txt}   ${v.estado}`);
