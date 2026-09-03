@@ -47,3 +47,8 @@ lib/data/languages/*/lecturas-privadas/
 # worktrees de agentes en paralelo: territorio ajeno, nunca al índice
 .claude/worktrees/
 test-results/
+
+# Directorios de compilación alternativos (NEXT_DIST_DIR), para verificar
+# sin pisar el .next de un `npm run dev` vivo. Efímeros.
+.next-verify/
+.next-e2e/
