@@ -27,6 +27,20 @@ export const CAMPOS_EXIGIDOS: Record<string, readonly string[]> = {
   // morfología?». Un ítem puede ser limpio en uno y sucio en el otro.
   correccion: ['espejoEs', 'atajoEs', 'transparenteLatin'],
   'cloze-con-pista': ['transparenteLatin'],
+  // `transformacion` ENTRA EL 2026-09-03, y ni un día antes: hasta hoy no
+  // tenía máquina en rumano, y declararle campos exigidos a un formato sin
+  // máquina es prometer una cobertura que no existe — el mismo defecto que
+  // el gate declarado y ausente, con el signo cambiado.
+  //
+  // Sus dos atajos son los mismos que los de la corrección menos `atajoEs`,
+  // y la razón de que falte es de fondo: `atajoEs` pregunta «¿traduciendo
+  // el calco se llega a la BUENA?», y en transformación **no hay calco que
+  // traducir** porque no se enseña ninguna frase mala. Lo que sí hay es
+  // «¿el español hace la MISMA transformación?», que es `espejoEs`. Los
+  // gates de LOTE —copiar el foco, la edición modal, la varianza— no van
+  // aquí porque no son campos del ítem: se ejecutan sobre los ocho a la
+  // vez, y ése es justo el punto de esta máquina.
+  transformacion: ['espejoEs', 'transparenteLatin'],
 };
 
 /** Los campos que un ítem de este formato NO declara. Vacío es limpio. */

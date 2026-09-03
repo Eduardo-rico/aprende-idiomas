@@ -21,6 +21,7 @@ import { ITEMS as CORR_A2B } from '../../scripts/lotes/corr-ro-a2b';
 import { ITEMS as CORR_B1 } from '../../scripts/lotes/corr-ro-b1';
 import { ITEMS as CLOZE_B1 } from '../../scripts/lotes/cloze-ro-b1';
 import { ITEMS as CLOZE_B1B } from '../../scripts/lotes/cloze-ro-b1b';
+import { ITEMS as TRANS_L23 } from '../../scripts/lotes/trans-ro-l23';
 
 describe('el gate declarado existe de verdad', () => {
   it('ROJO: un ítem que no declara un campo exigido se denuncia por nombre', () => {
@@ -60,9 +61,21 @@ describe('el gate declarado existe de verdad', () => {
   });
 
   it('el registro no declara campos para formatos sin máquina', () => {
-    // `transformacion`, `flashcard`, `escucha`, `mediacion` y
-    // `preferencia-registro` no tienen lotes: declararles gates sería
-    // prometer cobertura que no existe.
-    expect(Object.keys(CAMPOS_EXIGIDOS).sort()).toEqual(['cloze-con-pista', 'correccion']);
+    // `flashcard`, `escucha`, `mediacion` y `preferencia-registro` no
+    // tienen lotes en rumano: declararles gates sería prometer cobertura
+    // que no existe. `transformacion` entró el 2026-09-03, cuando su
+    // máquina existió — no antes.
+    expect(Object.keys(CAMPOS_EXIGIDOS).sort()).toEqual(['cloze-con-pista', 'correccion', 'transformacion']);
+  });
+
+  it('el lote de transformación declara los dos campos que su formato exige', () => {
+    for (const x of TRANS_L23)
+      expect(camposSinDeclarar('transformacion', x as unknown as Record<string, unknown>), x.s).toEqual([]);
+  });
+
+  it('ROJO: un ítem de transformación sin `espejoEs` se denuncia por nombre', () => {
+    const { espejoEs, ...sinCampo } = TRANS_L23[0]! as unknown as Record<string, unknown>;
+    expect(camposSinDeclarar('transformacion', sinCampo)).toEqual(['espejoEs']);
+    expect(camposSinDeclarar('transformacion', { ...sinCampo, espejoEs: false })).toEqual([]);
   });
 });

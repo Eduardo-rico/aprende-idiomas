@@ -51,19 +51,33 @@ const toks = (s: string) => s.split(/\s+/).map(norm).filter(Boolean);
  *  pone `lui` en 7 de 8, y el octavo es justamente su contraejemplo. */
 export const UMBRAL = 0.8;
 
+/** Las piezas con signo que separan una frase de la otra: `+w` la que
+ *  entra, `-w` la que sale. Es la operación que se le pide al alumno, y
+ *  la comparten la corrección (mala→buena) y la transformación
+ *  (fuente→respuesta). Escrita UNA vez a propósito. */
+function diff(antes: string, despues: string): string[] {
+  const bolsa = new Map<string, number>();
+  for (const w of toks(antes)) bolsa.set(w, (bolsa.get(w) ?? 0) + 1);
+  const entran: string[] = [];
+  for (const w of toks(despues)) { const c = bolsa.get(w) ?? 0; if (c > 0) bolsa.set(w, c - 1); else entran.push(`+${w}`); }
+  const salen = [...bolsa].flatMap(([w, n]) => Array<string>(n).fill(`-${w}`));
+  return [...entran, ...salen].sort();
+}
+
 /** La OPERACIÓN que el ítem pide, como piezas con signo. `null` si el
  *  formato no se sabe leer: «no medido» no es «limpio». */
 export function operacionDe(x: any): string[] | null {
-  if (x?.type === 'error_correction') {
-    const mala = toks(String(x.data?.sentence ?? ''));
-    const buena = toks(String(x.data?.correct ?? ''));
-    const bolsa = new Map<string, number>();
-    for (const w of mala) bolsa.set(w, (bolsa.get(w) ?? 0) + 1);
-    const entran: string[] = [];
-    for (const w of buena) { const c = bolsa.get(w) ?? 0; if (c > 0) bolsa.set(w, c - 1); else entran.push(`+${w}`); }
-    const salen = [...bolsa].flatMap(([w, n]) => Array<string>(n).fill(`-${w}`));
-    return [...entran, ...salen].sort();
-  }
+  if (x?.type === 'error_correction') return diff(String(x.data?.sentence ?? ''), String(x.data?.correct ?? ''));
+  // TRANSFORMACIÓN (rumano, desde el lote 23). Es el MISMO diff que la
+  // corrección —fuente → respuesta, qué palabras entran y cuáles salen—
+  // porque es literalmente lo que se le pide al alumno. Va aquí y no en
+  // la máquina del formato: la primera versión de esta lectura nació
+  // dentro de `transformacion-ro.ts`, o sea la copia N+1 de una regla que
+  // ya existía, y se retiró antes de publicarse. **Y hacía falta de
+  // verdad**: sin esta rama, `operacionDe` devuelve null para todo ítem
+  // de transformación y la pasada de varianza los cuenta como «no
+  // medidos», que es exactamente lo que pasa con los 24 de mediación.
+  if (x?.type === 'transformation') return diff(String(x.data?.source ?? ''), String(x.data?.answer ?? ''));
   if (x?.type === 'fill_blank')
     return ((x.data?.blanks ?? []) as any[]).map((b) => `=${norm(String(b?.answer ?? ''))}`).sort();
   return null;
