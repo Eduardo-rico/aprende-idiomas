@@ -39,6 +39,17 @@ const OBRAS = {
       paginas: ['Aeneis/Liber I', 'Aeneis/Liber II', 'Aeneis/Liber III', 'Aeneis/Liber IV', 'Aeneis/Liber V', 'Aeneis/Liber VI'] },
     { obra: 'Historiae', autor: 'Tácito', peldano: 'L5',
       paginas: ['Historiae (Tacitus)/Liber I', 'Historiae (Tacitus)/Liber II', 'Historiae (Tacitus)/Liber III', 'Historiae (Tacitus)/Liber IV', 'Historiae (Tacitus)/Liber V'] },
+    // Los otros DOS representantes que el peldaño L5 declara y que nunca
+    // se habían medido, porque no están en ningún treebank UD. El
+    // criterio con el que se leerá este resultado lo fijó el coordinador
+    // ANTES de correrlo (ver §1.8 del Paso 0), y no se toca después.
+    //
+    // Horacio viene poema a poema —`Carmina (Horatius)` es un índice de
+    // 150 palabras—, así que se expande por prefijo en UNA petición de
+    // listado en vez de adivinar 103 títulos.
+    { obra: 'Carmina', autor: 'Horacio', peldano: 'L5', prefijo: 'Carmina (Horatius)/' },
+    { obra: 'Comedias', autor: 'Plauto', peldano: 'L5',
+      paginas: ['Aulularia', 'Miles gloriosus', 'Mostellaria', 'Pseudolus', 'Menaechmi', 'Captivi', 'Rudens'] },
   ],
 };
 
@@ -50,6 +61,20 @@ const UA = 'aprende-idiomas-fase-g/1.0 (research; contacto proyecto local)';
  *  mismos casos abajo. */
 function canonicalLa(s) {
   return s.normalize('NFD').replace(/̄/g, '').normalize('NFC').toLowerCase();
+}
+
+/** Expande un prefijo a sus páginas reales con UNA petición de listado.
+ *  Adivinar 103 títulos de Horacio sería inventar datos; `allpages` los
+ *  dice. Se excluye la página raíz, que es un índice sin texto. */
+async function expandir(prefijo) {
+  const url = `https://${LANG}.wikisource.org/w/api.php?` + new URLSearchParams({
+    action: 'query', list: 'allpages', apprefix: prefijo, apnamespace: '0', aplimit: 'max', format: 'json',
+  });
+  const r = await fetch(url, { headers: { 'User-Agent': UA } });
+  if (!r.ok) throw new Error(`allpages ${prefijo}: HTTP ${r.status}`);
+  const j = await r.json();
+  await new Promise((ok) => setTimeout(ok, 1500));
+  return j.query.allpages.map((x) => x.title).filter((t) => t !== prefijo.replace(/\/$/, ''));
 }
 
 async function bajar(pagina) {
@@ -107,17 +132,19 @@ async function main() {
   const salida = [];
   for (const o of OBRAS[LANG]) {
     const formas = [];
-    for (const pagina of o.paginas) {
+    const paginas = o.paginas ?? await expandir(o.prefijo);
+    if (o.prefijo) console.log(`  «${o.prefijo}» → ${paginas.length} páginas`);
+    for (const pagina of paginas) {
       const html = await bajar(pagina);
       const f = formasDe(html);
-      console.log(`  ${pagina.padEnd(34)} ${f.length.toLocaleString('es').padStart(8)} formas`);
+      if (!o.prefijo) console.log(`  ${pagina.padEnd(34)} ${f.length.toLocaleString('es').padStart(8)} formas`);
       formas.push(...f);
     }
     // Se guarda el RECUENTO por forma, no la lista: es lo que consume la
     // métrica y ocupa 30 veces menos.
     const cuenta = {};
     for (const w of formas) cuenta[w] = (cuenta[w] ?? 0) + 1;
-    salida.push({ obra: o.obra, autor: o.autor, peldano: o.peldano, paginas: o.paginas, total: formas.length, cuenta });
+    salida.push({ obra: o.obra, autor: o.autor, peldano: o.peldano, paginas, total: formas.length, cuenta });
     console.log(`${o.obra} (${o.autor}): ${formas.length.toLocaleString('es')} formas · ${Object.keys(cuenta).length.toLocaleString('es')} distintas\n`);
   }
   fs.writeFileSync(SALIDA, JSON.stringify(salida));

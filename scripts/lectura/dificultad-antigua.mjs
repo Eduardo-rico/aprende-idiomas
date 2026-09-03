@@ -227,6 +227,18 @@ const COMPROBACIONES_EXTRA = {
      'control: la MISMA obra medida en el treebank y ampliada. Si difieren mucho, la ampliación no es comparable'],
     ['Historiae', 'Historiae (ampliada)', ['fueraTop1000Formas'],
      'control: ídem para Tácito'],
+    // Los otros dos representantes que L5 declara y que ningún treebank
+    // trae. El criterio de lectura lo fijó el coordinador ANTES de esta
+    // corrida (Paso 0 §1.8): si Horacio o Plauto superan a Virgilio con
+    // IC disjuntos, el ancla era el problema y L5 se queda; si los tres
+    // quedan por debajo o indistinguibles, el salto no es léxico; y si
+    // sale un tercer patrón, se para y se consulta.
+    ['Eneida (ampliada)', 'Carmina (ampliada)', ['fueraTop1000Formas'],
+     'L5 con su segundo representante declarado: Horacio, Odas'],
+    ['Eneida (ampliada)', 'Comedias (ampliada)', ['fueraTop1000Formas'],
+     'L5 con su tercer representante declarado: Plauto, comedias'],
+    ['Historiae (ampliada)', 'Carmina (ampliada)', ['fueraTop1000Formas'],
+     'los dos representantes de L5 entre sí'],
     ['Eneida', 'Historiae', ['palabrasFrase', 'subordFrase', 'arcoAdj'],
      'L4→L5 por el eje SINTÁCTICO, dentro de Perseus (sin puente de por medio): la «brevitas» de Tácito es una propiedad de la sintaxis, no del léxico'],
   ],
