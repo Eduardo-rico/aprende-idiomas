@@ -82,6 +82,11 @@ export function verificar(items: ItemExplica[]): string[] {
         v.push(`${x.id}: ninguna ancla de «${p.dice}» está en el modelo (${p.ancla.join(' / ')})`);
     }
 
+    // El guardián que estaba apagado también aquí: el modelo de EXPLICAR
+    // no puede afirmar un dato que la fuente no permite afirmar.
+    const inv = inventadosProbables(x);
+    if (inv.length) v.push(`${x.id}: el modelo afirma lo que la fuente no da (${inv.join(', ')}) — y su propia rúbrica lo reprueba`);
+
     const larga = copiaLarga(x.sourceText, x.modelo);
     if (larga) v.push(`${x.id}: el modelo copia 7 palabras seguidas de la fuente — «${larga}»`);
 

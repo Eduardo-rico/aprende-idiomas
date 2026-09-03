@@ -334,8 +334,14 @@ export function rubricaDe(x: ItemMed): string[] {
     //
     // Derivarla del modelo hace esa clase IMPOSIBLE, en vez de vigilarla:
     // el modelo es la respuesta trabajada y ya pasa todos los gates.
-    const a = alt.find((o) => contiene(x.modelo, o)) ?? alt[0];
-    r.push(`¿Sustituye «${de}» por «${a}» (o un equivalente del registro de destino)?`);
+    const reales = alt.filter((o) => o.trim() !== '');
+    const a = reales.find((o) => contiene(x.modelo, o)) ?? reales[0];
+    // Un marcador puede no tener sustituto: el destino lo BORRA (una
+    // fórmula de cortesía que en coloquial simplemente no se dice). La
+    // casilla tiene que decir eso, no inventar un sustituto.
+    r.push(a && contiene(x.modelo, a)
+      ? `¿Sustituye «${de}» por «${a}» (o un equivalente del registro de destino)?`
+      : `¿Quita «${de}», que el registro de destino no lleva?`);
   }
   for (const d of x.datos) r.push(`¿Traslada el dato «${literal(d)}»?`);
   r.push('¿NO añade ningún dato que la fuente no dé? (casilla negativa: se marca sólo si no inventa nada)');
@@ -345,7 +351,20 @@ export function rubricaDe(x: ItemMed): string[] {
 
 export const palabras = (s: string) => s.trim().split(/\s+/).filter(Boolean);
 export const norm = (s: string) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^\p{L}\p{N} ]/gu, ' ').replace(/\s+/g, ' ').trim();
-export const contiene = (texto: string, aguja: string) => norm(texto).includes(norm(aguja));
+/** ¿Está la aguja en el texto, COMO PALABRA(S)? El `includes` desnudo
+ *  bastó en portugués —los marcadores son fórmulas largas— y era falso en
+ *  cuanto la lengua forma palabras por sufijo: en rumano el diminutivo ES
+ *  la base + sufijo, así que un modelo que sustituye «cinci minute» por
+ *  «cinci minuțele» (normalizado: «cinci minutele») parecía CONSERVAR el
+ *  marcador que acababa de cambiar, y el gate mandaba «arreglar» un
+ *  modelo correcto. Tres de los trece problemas del lote 5 rumano eran
+ *  eso, y ninguno era un error de contenido. Visto en rojo antes de
+ *  tocarlo (tests/unit/contiene-mediacion.test.ts). */
+export const contiene = (texto: string, aguja: string) => {
+  const a = norm(aguja);
+  if (!a) return false;
+  return new RegExp(`(?<![\\p{L}\\p{N}])${a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\p{L}\\p{N}])`, 'u').test(norm(texto));
+};
 export const literal = (d: string | string[]) => (Array.isArray(d) ? d[0]! : d);
 export const acepta = (d: string | string[]) => (Array.isArray(d) ? d : [d]);
 
@@ -380,11 +399,32 @@ export function inventadosProbables(x: ItemMed): string[] {
   const fuente = `${x.sourceText} ${x.audience} ${x.instruccion} ` +
     x.marcadores.flatMap(([, ...a]) => a).join(' ') + ' ' +
     x.datos.flatMap((d) => acepta(d)).join(' ');
-  const NUM = /(?<![\p{L}])(um|uma|dois|duas|tr[eê]s|quatro|cinco|seis|sete|oito|nove|dez|quinze|vinte|trinta|quarenta|cinquenta|cem|mil|meia|meio|\d+)(?![\p{L}])/giu;
+  // `um`/`uma` NO entran: en portugués son el artículo indefinido antes
+  // que el numeral, y no hay forma de distinguirlos aquí. Con ellos dentro,
+  // el guardián marcaba 13 modelos de los seis lotes portugueses YA
+  // PUBLICADOS —todos «um aviso», «uma multa»— y ninguno inventaba nada.
+  // Un gate que marca la mitad de los casos es un gate apagado: se acota.
+  // Lo mismo con `un`/`o` del rumano, que tampoco entran.
+  const NUM = /(?<![\p{L}])(dois|duas|tr[eê]s|quatro|cinco|seis|sete|oito|nove|dez|quinze|vinte|trinta|quarenta|cinquenta|cem|mil|doi|dou[ăa]|trei|patru|[șs]ase|[șs]apte|opt|nou[ăa]|zece|dou[ăa]zeci|sut[ăa]|\d+)(?![\p{L}])/giu;
   const out: string[] = [];
   const enFuente = norm(fuente);
-  for (const m of x.modelo.matchAll(NUM))
-    if (!new RegExp(`(?<![\\p{L}])${norm(m[0])}(?![\\p{L}])`, 'u').test(enFuente) && !out.includes(m[0])) out.push(m[0]);
+  // Un numeral inventado sólo es un DATO inventado si cuantifica algo de
+  // lo que la fuente habla. «Duas coisas rápidas:» y «são duas coisas
+  // separadas» son el modelo anunciando su propia estructura, no un plazo
+  // ni una cantidad sacada de la nada — y eran los dos últimos falsos
+  // positivos sobre portugués publicado. La condición es el sustantivo
+  // que va detrás: si la fuente no lo nombra, el número no habla de la
+  // fuente. Coste declarado: se escapa un número pegado a un sustantivo
+  // que la fuente tampoco nombra; ahí quedan la casilla de `datos` y el
+  // gate de copia.
+  const modeloNorm = norm(x.modelo);
+  for (const m of x.modelo.matchAll(NUM)) {
+    if (new RegExp(`(?<![\\p{L}])${norm(m[0])}(?![\\p{L}])`, 'u').test(enFuente) || out.includes(m[0])) continue;
+    const tras = modeloNorm.slice(modeloNorm.indexOf(norm(m[0])) + norm(m[0]).length).trim().split(' ')[0] ?? '';
+    const raiz = tras.slice(0, 5);
+    if (raiz.length >= 4 && !enFuente.includes(raiz)) continue;   // cuantifica algo que la fuente no nombra
+    out.push(m[0]);
+  }
   // Nombres propios: mayúscula que no abre frase.
   for (const m of x.modelo.matchAll(/(?<=[^.!?—]\s)\p{Lu}\p{Ll}{2,}/gu))
     if (!enFuente.includes(norm(m[0])) && !out.includes(m[0])) out.push(m[0]);
@@ -399,8 +439,17 @@ export function verificar(items: ItemMed[]): string[] {
     for (const [de, ...aceptadas] of x.marcadores) {
       if (!contiene(x.sourceText, de)) v.push(`${x.id}: el marcador «${de}» NO está en la fuente`);
       if (contiene(x.modelo, de)) v.push(`${x.id}: el modelo conserva «${de}», que la consigna manda cambiar`);
-      if (!aceptadas.some((a) => contiene(x.modelo, a)))
-        v.push(`${x.id}: el modelo no trae ninguna de «${aceptadas.join(' / ')}», que es lo que la casilla exige`);
+      // La cadena vacía declara «este marcador DESAPARECE sin sustituto»
+      // (el destino borra la fórmula, no la traduce). Era una convención
+      // que sólo funcionaba por accidente: con el `includes` desnudo, «»
+      // estaba en todo texto. Al poner límites de palabra el accidente se
+      // acabó y la convención se escribe.
+      const desaparece = aceptadas.some((a) => a.trim() === '');
+      const sustitutos = aceptadas.filter((a) => a.trim() !== '');
+      if (!desaparece && !sustitutos.some((a) => contiene(x.modelo, a)))
+        v.push(`${x.id}: el modelo no trae ninguna de «${sustitutos.join(' / ')}», que es lo que la casilla exige`);
+      if (desaparece && sustitutos.length && !sustitutos.some((a) => contiene(x.modelo, a)) && !contiene(x.modelo, de))
+        void 0; // desaparecer es una salida válida: el marcador ya no está y no hace falta sustituto
     }
     for (const d of x.datos) {
       if (!contiene(x.sourceText, literal(d)))
@@ -425,6 +474,16 @@ export function verificar(items: ItemMed[]): string[] {
     const copia = copiaLarga(enmascarar(x.sourceText), enmascarar(x.modelo));
     if (copia) v.push(`${x.id}: el modelo copia 7 palabras seguidas de la fuente — «${copia}»`);
     if (!x.instruccion.trim() || !x.audience.trim()) v.push(`${x.id}: sin consigna o sin destinatario`);
+    // La casilla NEGATIVA de la rúbrica («¿NO añade ningún dato que la
+    // fuente no dé?») la tiene que cumplir el MODELO, que es el gold del
+    // que la rúbrica se deriva. `inventadosProbables` estaba escrito y
+    // EXPORTADO desde el lote 12 y no lo llamaba nadie: un guardián
+    // apagado. Al encenderlo cazó dos casos reales en el primer lote
+    // rumano de mediación (un firmante «Ana Pop» y una «Maria» que la
+    // fuente no nombra), y cero en los seis lotes portugueses ya
+    // publicados. Lo cazó el lingüista adversarial, no el gate.
+    const inv = inventadosProbables(x);
+    if (inv.length) v.push(`${x.id}: el modelo inventa lo que la fuente no da (${inv.join(', ')}) — y su propia rúbrica lo reprueba`);
   }
   // Variedad: si todas las fuentes son del mismo género, el lote es una
   // plantilla repetida. Es la cicatriz «variar taskType×fuente».
