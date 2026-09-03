@@ -32,13 +32,29 @@ export interface PisoCatalogo {
   /** Aparato del transcriptor propio de la fuente de la lengua (se suma al común). */
   aparato?: RegExp;
   /** Gates extra propios de la lengua (grafía, diacríticos…). */
-  extra?: (catalogo: { archivo: string; l: Pieza }[]) => void;
+  extra?: (catalogo: EntradaCatalogo[]) => void;
 }
 
-export function cargarCatalogo(lang: string): { archivo: string; l: Pieza }[] {
+/** El texto entero de la pieza se une UNA vez y se reutiliza. Antes cada
+ *  test lo reconstruía: con 2.180 lecturas y 7,7 M de palabras eso son
+ *  varios segundos por test, y bajo la suite entera —con otras sesiones
+ *  usando la máquina— pasaba del límite por defecto de 5 s. El síntoma era
+ *  un test INTERMITENTE (1 de cada 3), que es peor que uno roto: enseña a
+ *  todo el mundo a ignorar el rojo. (2026-09-03.) */
+export interface EntradaCatalogo {
+  archivo: string;
+  l: Pieza;
+  /** `parrafos` unidos por salto de línea, calculado una sola vez. */
+  texto: string;
+}
+
+export function cargarCatalogo(lang: string): EntradaCatalogo[] {
   const dir = path.join(process.cwd(), 'lib/data/languages', lang, 'lecturas');
   const archivos = fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort();
-  return archivos.map((f) => ({ archivo: f, l: JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')) as Pieza }));
+  return archivos.map((f) => {
+    const l = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')) as Pieza;
+    return { archivo: f, l, texto: l.parrafos.map((p) => p.texto).join('\n') };
+  });
 }
 
 /** PALABRA = algo con una letra dentro (el criterio de medir-catalogo.mjs). */

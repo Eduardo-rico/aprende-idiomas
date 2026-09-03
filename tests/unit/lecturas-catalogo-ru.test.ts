@@ -30,20 +30,20 @@ invariantesDelCatalogo({
   extra: (catalogo) => {
     it('todo el texto está en NFC y sin acentos de intensidad (U+0301), en todos los campos con texto', () => {
       const rotas = catalogo
-        .filter(({ l }) => l.titulo !== normalizarDiacriticos(l.titulo) || l.parrafos.some((p) => p.texto !== normalizarDiacriticos(p.texto)))
+        .filter(({ l, texto }) => l.titulo !== normalizarDiacriticos(l.titulo) || l.parrafos.some((p) => p.texto !== normalizarDiacriticos(p.texto)))
         .map((x) => x.archivo);
       expect(rotas).toEqual([]);
     });
 
     it('toda lectura pasa el gate de lengua (cirílico ruso, sin bloques en ucraniano/bielorruso)', () => {
       const rotas = catalogo
-        .filter(({ l }) => !gateDiacriticos(l.parrafos.map((p) => p.texto).join('\n')).ok)
+        .filter(({ l, texto }) => !gateDiacriticos(texto).ok)
         .map((x) => x.archivo);
       expect(rotas).toEqual([]);
     }, 60_000); // 2.180 lecturas · 7,7 M palabras: bajo la suite entera pasaba de 5 s (2026-09-02)
 
     it('toda lectura declara su grafía medida en notaOrtografia, y ninguna es una mezcla', () => {
-      for (const { archivo, l } of catalogo) {
+      for (const { archivo, l, texto } of catalogo) {
         expect(l.notaOrtografia, archivo).toMatch(/Texto en NFC/);
         expect(l.notaOrtografia, archivo).toMatch(/pre-1918|post-1918|1918/);
         expect(l.notaOrtografia, archivo).not.toMatch(/MEZCLADA|Mezcla incoherente/);
@@ -51,8 +51,8 @@ invariantesDelCatalogo({
     });
 
     it('la grafía pre-1918 o mixta declarada coincide con la medida sobre el texto (ѣ, і, ѳ, ѵ, ъ final), con su recuento, y nunca se convirtió', () => {
-      for (const { archivo, l } of catalogo) {
-        const g = medirGrafia(l.parrafos.map((p) => p.texto).join('\n'));
+      for (const { archivo, l, texto } of catalogo) {
+        const g = medirGrafia(texto);
         expect(/anterior a la reforma de 1918 \(/.test(l.notaOrtografia ?? ''), `${archivo}: nota «${l.notaOrtografia?.slice(0, 80)}» vs medida «${g.etiqueta}»`).toBe(g.pre1918);
         expect(/posterior a 1918 con (?:restos|la «і»)/.test(l.notaOrtografia ?? ''), `${archivo}: nota «${l.notaOrtografia?.slice(0, 80)}» vs medida «${g.etiqueta}»`).toBe(g.mixta);
         if (g.mixta) expect(l.notaOrtografia, archivo).toContain(`${g.marcas} formas`);
@@ -60,28 +60,28 @@ invariantesDelCatalogo({
     });
 
     it('un texto ucraniano en boca de un personaje conserva su «і» (U+0456): ninguna «i» latina dentro de palabra cirílica', () => {
-      const rotas = catalogo.filter(({ l }) => l.parrafos.some((p) => /[\p{Script=Cyrillic}][iI]|[iI][\p{Script=Cyrillic}]/u.test(p.texto))).map((x) => x.archivo);
+      const rotas = catalogo.filter(({ l, texto }) => l.parrafos.some((p) => /[\p{Script=Cyrillic}][iI]|[iI][\p{Script=Cyrillic}]/u.test(p.texto))).map((x) => x.archivo);
       expect(rotas).toEqual([]);
     });
 
     it('toda lectura es modo texto (cero audio en la fase F)', () => {
-      for (const { archivo, l } of catalogo) expect(l.modo, archivo).toBe('texto');
+      for (const { archivo, l, texto } of catalogo) expect(l.modo, archivo).toBe('texto');
     });
 
     it('sólo autores muertos en 1925 o antes (MX vida+100; Бунин, Горький, Булгаков, Зощенко, Хармс, Куприн no entran)', () => {
-      for (const { archivo, l } of catalogo) expect(l.muerteAutor, archivo).toBeLessThanOrEqual(1925);
+      for (const { archivo, l, texto } of catalogo) expect(l.muerteAutor, archivo).toBeLessThanOrEqual(1925);
     });
 
     it('A2 no queda vacío: los cuentos infantiles de Ushinski y Tolstói están declarados A2 con el criterio escrito', () => {
-      const a2 = catalogo.filter(({ l }) => l.nivel === 'A2');
+      const a2 = catalogo.filter(({ l, texto }) => l.nivel === 'A2');
       expect(a2.length).toBeGreaterThanOrEqual(100);
-      expect(a2.some(({ l }) => l.autor === 'Константин Ушинский')).toBe(true);
-      expect(a2.some(({ l }) => l.autor === 'Лев Толстой')).toBe(true);
+      expect(a2.some(({ l, texto }) => l.autor === 'Константин Ушинский')).toBe(true);
+      expect(a2.some(({ l, texto }) => l.autor === 'Лев Толстой')).toBe(true);
       for (const { archivo, l } of a2) expect(l.notaOrtografia, archivo).toMatch(/A2 DECLARADO/);
     });
 
     it('los ids están transliterados (sin cirílico, sin «--» vacíos)', () => {
-      for (const { archivo, l } of catalogo) {
+      for (const { archivo, l, texto } of catalogo) {
         // «serie--pieza» es el separador de colección del motor; lo que no
         // puede haber es un «--» vacío al final (id cirílico sin transliterar).
         expect(l.id, archivo).toMatch(/^[a-z0-9]+(?:-[a-z0-9]+)*(?:--[a-z0-9]+(?:-[a-z0-9]+)*)?$/);
@@ -93,7 +93,7 @@ invariantesDelCatalogo({
 describe('gates del texto ruso, probados en rojo', () => {
   const primera = cargarCatalogo('ru')[0];
   if (!primera) throw new Error('catálogo RU vacío');
-  const muestra = primera.l.parrafos.map((p) => p.texto).join('\n');
+  const muestra = primera.texto;
 
   it('el gate de lengua RECHAZA el mismo texto transliterado al alfabeto latino', () => {
     expect(gateDiacriticos(muestra).ok).toBe(true);

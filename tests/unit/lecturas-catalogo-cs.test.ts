@@ -33,38 +33,38 @@ invariantesDelCatalogo({
   extra: (catalogo) => {
     it('todo el texto está en NFC (háček y kroužek precompuestos), en todos los campos con texto', () => {
       const rotas = catalogo
-        .filter(({ l }) => l.titulo !== l.titulo.normalize('NFC') || l.parrafos.some((p) => p.texto !== p.texto.normalize('NFC')))
+        .filter(({ l, texto }) => l.titulo !== l.titulo.normalize('NFC') || l.parrafos.some((p) => p.texto !== p.texto.normalize('NFC')))
         .map((x) => x.archivo);
       expect(rotas).toEqual([]);
     });
 
     it('toda lectura pasa el gate de diacríticos (un texto sin háčky no es checo correcto)', () => {
       const rotas = catalogo
-        .filter(({ l }) => !gateDiacriticos(l.parrafos.map((p) => p.texto).join('\n')).ok)
+        .filter(({ l, texto }) => !gateDiacriticos(texto).ok)
         .map((x) => x.archivo);
       expect(rotas).toEqual([]);
     });
 
     it('toda lectura declara su grafía medida en notaOrtografia', () => {
-      for (const { archivo, l } of catalogo) {
+      for (const { archivo, l, texto } of catalogo) {
         expect(l.notaOrtografia, archivo).toMatch(/diacríticos checos de la fuente/);
         expect(l.notaOrtografia, archivo).toMatch(/grafía|ortografía/);
       }
     });
 
     it('la grafía pre-1849 declarada coincide con la medida sobre el texto (w por v, au por ou)', () => {
-      for (const { archivo, l } of catalogo) {
-        const g = medirGrafia(l.parrafos.map((p) => p.texto).join('\n'));
+      for (const { archivo, l, texto } of catalogo) {
+        const g = medirGrafia(texto);
         expect(/anterior a la reforma de 1849/.test(l.notaOrtografia ?? ''), `${archivo}: nota «${l.notaOrtografia?.slice(0, 80)}» vs medida «${g.etiqueta}»`).toBe(g.bratrska);
       }
     });
 
     it('toda lectura es modo texto (cero audio en la fase F)', () => {
-      for (const { archivo, l } of catalogo) expect(l.modo, archivo).toBe('texto');
+      for (const { archivo, l, texto } of catalogo) expect(l.modo, archivo).toBe('texto');
     });
 
     it('sólo autores muertos en 1925 o antes (MX vida+100; Čapek, Jirásek, Rais, Sova, Dyk, Herrmann no entran)', () => {
-      for (const { archivo, l } of catalogo) expect(l.muerteAutor, archivo).toBeLessThanOrEqual(1925);
+      for (const { archivo, l, texto } of catalogo) expect(l.muerteAutor, archivo).toBeLessThanOrEqual(1925);
     });
   },
 });
@@ -72,7 +72,7 @@ invariantesDelCatalogo({
 describe('gates del texto checo, probados en rojo', () => {
   const primera = cargarCatalogo('cs')[0];
   if (!primera) throw new Error('catálogo CS vacío');
-  const muestra = primera.l.parrafos.map((p) => p.texto).join('\n');
+  const muestra = primera.texto;
 
   it('el gate de diacríticos RECHAZA el mismo texto despojado de diacríticos', () => {
     expect(gateDiacriticos(muestra).ok).toBe(true);

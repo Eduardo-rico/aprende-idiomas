@@ -29,26 +29,26 @@ invariantesDelCatalogo({
   extra: (catalogo) => {
     it('ș y ț llevan COMA debajo en todos los campos con texto — cero cedillas', () => {
       const conCedilla = catalogo
-        .filter(({ l }) => tieneCedilla(l.titulo) || tieneCedilla(l.notaOrtografia) || l.parrafos.some((p) => tieneCedilla(p.texto)))
+        .filter(({ l, texto }) => tieneCedilla(l.titulo) || tieneCedilla(l.notaOrtografia) || l.parrafos.some((p) => tieneCedilla(p.texto)))
         .map((x) => x.archivo);
       expect(conCedilla).toEqual([]);
     });
 
     it('toda lectura pasa el gate de diacríticos (un texto sin ă/â/î/ș/ț no es rumano correcto)', () => {
       const rotas = catalogo
-        .filter(({ l }) => !gateDiacriticos(l.parrafos.map((p) => p.texto).join('\n')).ok)
+        .filter(({ l, texto }) => !gateDiacriticos(texto).ok)
         .map((x) => x.archivo);
       expect(rotas).toEqual([]);
     });
 
     it('toda lectura declara su grafía medida en notaOrtografia', () => {
-      for (const { archivo, l } of catalogo) {
+      for (const { archivo, l, texto } of catalogo) {
         expect(l.notaOrtografia, archivo).toMatch(/ș y ț con coma/);
       }
     });
 
     it('toda lectura es modo texto (cero audio en la fase F)', () => {
-      for (const { archivo, l } of catalogo) expect(l.modo, archivo).toBe('texto');
+      for (const { archivo, l, texto } of catalogo) expect(l.modo, archivo).toBe('texto');
     });
   },
 });
@@ -56,7 +56,7 @@ invariantesDelCatalogo({
 describe('gates del texto rumano, probados en rojo', () => {
   const primera = cargarCatalogo('ro')[0];
   if (!primera) throw new Error('catálogo RO vacío');
-  const muestra = primera.l.parrafos.map((p) => p.texto).join('\n');
+  const muestra = primera.texto;
 
   it('el gate de diacríticos RECHAZA el mismo texto despojado de diacríticos', () => {
     expect(gateDiacriticos(muestra).ok).toBe(true);
