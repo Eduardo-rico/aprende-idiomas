@@ -6,7 +6,8 @@
 // y con todos inventados. Así que lo primero de este fichero no es que
 // apruebe lo bueno: es que SUSPENDA lo malo, en las dos direcciones.
 import { describe, it, expect } from 'vitest';
-import { revisarCantidad, auditarPorReflejos, LEXICON, REFLEJOS } from '../../lib/data/languages/la/cantidad';
+import { revisarCantidad, auditarPorReflejos, revisarCoherenciaLexico, REFLEJOS, _invalidarCache } from '../../lib/data/languages/la/cantidad';
+import { NOMBRES_L1 } from '../../lib/data/languages/la/lexicon-l1';
 
 describe('el caso que el gate anterior aprobaba', () => {
   it('SUSPENDE el texto sin mácrons', () => {
@@ -48,19 +49,47 @@ describe('el SEGUNDO camino, que no consulta el mácrón', () => {
     expect(auditarPorReflejos()).toEqual([]);
   });
 
-  it('y CAZA una cantidad falsa metida en el lexicón', () => {
-    // Control positivo del auditor: sin esto sería un sello que responde
-    // «sí» sin haber mirado.
-    const real = LEXICON.servum;
+  it('y CAZA una cantidad falsa, envenenando el GENITIVO, que es de donde sale el tema', () => {
+    // Control positivo, y con dos historias encima.
+    //
+    // (1) Cuando el auditor pasó a leer la salida de la máquina en vez de
+    //     una tabla a mano, este control DEJÓ DE FALLAR, porque envenenaba
+    //     algo que ya nadie leía. Un control positivo que deja de fallar
+    //     es un control que dejó de controlar.
+    // (2) Al reapuntarlo, envenenar el LEMA tampoco hizo nada: la máquina
+    //     deriva del GENITIVO. El lema no entra en ninguna forma de la 2.ª
+    //     declinación regular — que es justamente lo que destapó que hacía
+    //     falta `revisarCoherenciaLexico`.
+    const e = NOMBRES_L1.find((x) => x.lema === 'servus')!;
+    const real = e.genitivo;
     try {
-      (LEXICON as Record<string, string>).servum = 'sērvum';
+      e.genitivo = 'sērvī';
+      _invalidarCache();
       const h = auditarPorReflejos();
       expect(h).toHaveLength(1);
       expect(h[0]).toContain('siervo');
     } finally {
-      (LEXICON as Record<string, string>).servum = real!;
+      e.genitivo = real;
+      _invalidarCache();
     }
     expect(auditarPorReflejos()).toEqual([]);
+  });
+
+  it('el lema declarado y la forma derivada COINCIDEN, y el gate lo caza si no', () => {
+    expect(revisarCoherenciaLexico()).toEqual([]);
+    const e = NOMBRES_L1.find((x) => x.lema === 'servus')!;
+    const real = e.genitivo;
+    try {
+      e.genitivo = 'sērvī';
+      _invalidarCache();
+      const h = revisarCoherenciaLexico();
+      expect(h).toHaveLength(1);
+      expect(h[0]).toContain('sērvus');
+    } finally {
+      e.genitivo = real;
+      _invalidarCache();
+    }
+    expect(revisarCoherenciaLexico()).toEqual([]);
   });
 
   it('los reflejos cubren los cuatro pares que discriminan', () => {

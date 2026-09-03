@@ -22,8 +22,24 @@
 // el sujeto delante y diez con el objeto delante.
 //
 // Es una tensión real y se declara en vez de disimularse: el lote enseña
-// a leer la desinencia, no a estimar la frecuencia del orden. Esa segunda
-// cosa la enseña la lectura, no el ejercicio.
+// a leer la desinencia, no a estimar la frecuencia del orden.
+//
+// **Y la tensión va con su remedio nombrado, porque una tensión declarada
+// sin remedio es una excusa.** El riesgo simétrico es fijarle al alumno la
+// heurística contraria —«en latín el objeto va delante»— que es igual de
+// falsa. El correctivo lo aporta la escalera de lectura, y en concreto la
+// serie de la Vulgata que L1 declara como puerta de entrada: medido sobre
+// PROIEL, por corpus,
+//
+//     Vulgata (Jerónimo)  2.451 cláusulas   78,1 %  ← la lectura de L1
+//     César, B.G.           522 cláusulas   73,2 %
+//     Cicerón               846 cláusulas   64,3 %
+//
+// El sujeto precede al objeto (porcentajes). O sea que **la Vulgata es el
+// corpus MÁS romance de los tres**, justo lo que el currículo afirma sobre
+// su «orden más romance» — y por tanto el texto que L1 pone delante del
+// alumno le da el 78 % de contraejemplos al 50 % del lote. El ejercicio y
+// la lectura se corrigen el uno al otro por construcción, no por suerte.
 //
 // ── 2. PARES SIN JERARQUÍA ────────────────────────────────────────────
 //
