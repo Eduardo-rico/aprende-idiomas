@@ -9,7 +9,31 @@
 // dentro no es un bug, es distribución de una obra con derechos.
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { promises as fs } from 'node:fs';
-import { execSync } from 'node:child_process';
+import { execSync as execCrudo } from 'node:child_process';
+
+// El checkout es COMPARTIDO: otra sesión puede estar commiteando cuando
+// este test invoca git, y `.git/index.lock` hace fallar la llamada. Eso
+// pone la SUITE en rojo por una razón que no es del código y manda a
+// investigar un fantasma — la clase de falso rojo contra la que existe
+// el resto de este fichero. Reintento con espera creciente y, si tras
+// los intentos el lock sigue, el mensaje lo dice en vez de disfrazarse
+// de fallo de la línea roja. (Fase F/G, 2026-09-03: falló una vez así.)
+function execSync(cmd: string, opts?: Parameters<typeof execCrudo>[1]): string {
+  const esperas = [80, 200, 500, 1200];
+  for (let i = 0; ; i++) {
+    try {
+      return String(execCrudo(cmd, opts) ?? '');
+    } catch (e) {
+      const msg = String((e as { stderr?: unknown; message?: unknown }).stderr ?? (e as Error).message ?? '');
+      if (!msg.includes('index.lock') || i >= esperas.length) {
+        if (msg.includes('index.lock'))
+          throw new Error(`git sigue bloqueado por .git/index.lock tras ${esperas.length + 1} intentos — otra sesión está commiteando en este checkout; NO es un fallo de la línea roja. Comando: ${cmd}`);
+        throw e;
+      }
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, esperas[i]);
+    }
+  }
+}
 import path from 'node:path';
 import { loadLecturas, loadLectura } from '@/lib/data/loaders';
 
