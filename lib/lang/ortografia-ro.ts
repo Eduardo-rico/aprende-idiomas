@@ -41,7 +41,11 @@ export const tieneCedilla = (s: string): boolean => RE_CEDILLA.test(String(s ?? 
 
 /** Prefijos tras los que «î» interior es legítimo porque abre raíz:
  *  neîncetat, reîncepe, subînțeles, bineînțeles, preîntâmpina, dezînvăța. */
-const PREFIJOS = ['ne', 'nemai', 're', 'pre', 'prea', 'sub', 'subt', 'des', 'dez', 'răs', 'supra', 'semi', 'auto', 'contra', 'inter', 'non', 'bine', 'rău', 'ante', 'post', 'para', 'ori', 'între'];
+/** Los prefijos tras los que la raíz conserva `î` interior (DOOM3).
+ *  EXPORTADA porque el lote 13 la había copiado a mano con cinco
+ *  entradas y una de más («în», que no es prefijo): tercera aparición
+ *  de «una regla copiada se desincroniza» en esta fase. */
+export const PREFIJOS = ['ne', 'nemai', 're', 'pre', 'prea', 'sub', 'subt', 'des', 'dez', 'răs', 'supra', 'semi', 'auto', 'contra', 'inter', 'non', 'bine', 'rău', 'ante', 'post', 'para', 'ori', 'între'];
 
 /** Lo que NO es grafía rumana antigua aunque lleve «î» dentro: las
  *  interjecciones alargadas («hîîî», «psîîîî») y el francés citado en la

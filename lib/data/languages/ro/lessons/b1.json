@@ -1,0 +1,32 @@
+[
+  {
+    "id": "b1-l1-sunetele-si-literele",
+    "blockId": 1,
+    "name": "Sunetele și literele: ă, â/î, ș, ț și digrafele",
+    "objectives": [
+      "Distinguir /ə/ y /ɨ/ de /a/ e /i/, y las dos centrales entre sí",
+      "Escribir ș, ț, j y z, y leer los dígrafos ce/ci, ge/gi, che/chi, ghe/ghi",
+      "Aplicar la regla de posición de DOOM3: â en el interior, î al principio, al final y al abrir raíz tras prefijo",
+      "Escribir ș y ț con COMA y no con cedilla, y reconocer que la web rumana mezcla las dos"
+    ],
+    "conceptIds": ["r1-vocales-centrales", "r1-consonantes-ausentes", "r1-ortografia-a-i", "r1-diacriticos-coma"],
+    "vocabKey": ["ușa", "țară", "român", "început", "cheia", "ghete"],
+    "conceptNotesPath": "b1/l1-sunetele-si-literele.mdx",
+    "exerciseRefs": []
+  },
+  {
+    "id": "b1-l2-diftongi-accent-si-intonatie",
+    "blockId": 1,
+    "name": "Diftongi, accent și intonație",
+    "objectives": [
+      "Leer y escribir los diptongos ascendentes ea, oa, ia, ie, io, iu como UNA sílaba",
+      "Reconocer que el acento es libre y no se marca, y que hay pares mínimos (cópii / copíi)",
+      "Distinguir la -i final palatal de la -i silábica",
+      "Reconocer el contorno de la pregunta total"
+    ],
+    "conceptIds": ["r1-diptongos", "r1-acento-lexico", "r1-palatalizacion-final", "r1-entonacion-pregunta"],
+    "vocabKey": ["seara", "soare", "iarnă", "ieftin", "copii", "pomi"],
+    "conceptNotesPath": "b1/l2-diftongi-accent-si-intonatie.mdx",
+    "exerciseRefs": []
+  }
+]

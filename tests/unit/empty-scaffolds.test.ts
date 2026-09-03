@@ -15,11 +15,24 @@ describe("empty scaffolds (Phase 5)", () => {
   describe.each(SCAFFOLD_LANGS)("language %s", (lang) => {
     it("loadCurriculum returns empty BLOCKS/ALL_CONCEPTS and throws on getBlock", async () => {
       const c = await loadCurriculum(lang);
-      // Fase F (E2#30): el rumano ya tiene inventario (ALL_CONCEPTS) y los
-      // bloques que tienen lecciones (b2, b3). CS y RU siguen vacíos del todo.
-      if (lang === 'ro') { expect(c.ALL_CONCEPTS.length).toBeGreaterThan(0); expect(c.BLOCKS.length).toBeGreaterThan(0); }
-      else { expect(c.BLOCKS).toEqual([]); expect(c.ALL_CONCEPTS).toEqual([]); }
-      expect(() => c.getBlock(1)).toThrow();
+      // Fase F: el rumano ya tiene inventario (ALL_CONCEPTS) y los bloques
+      // que tienen lecciones. CS y RU siguen vacíos del todo.
+      //
+      // Y desde el lote 13 (2026-09-03) el BLOQUE 1 existe: la afirmación
+      // «getBlock(1) tira» codificaba «el rumano no tiene bloque 1» y
+      // dejó de ser verdad al publicar la ortografía. El test se actualiza
+      // porque el hecho cambió, no porque estorbe: para CS y RU sigue
+      // afirmando exactamente lo mismo que afirmaba.
+      if (lang === 'ro') {
+        expect(c.ALL_CONCEPTS.length).toBeGreaterThan(0);
+        expect(c.BLOCKS.length).toBeGreaterThan(0);
+        expect(c.getBlock(1).lessons.length).toBeGreaterThan(0);
+        expect(() => c.getBlock(99)).toThrow();
+      } else {
+        expect(c.BLOCKS).toEqual([]);
+        expect(c.ALL_CONCEPTS).toEqual([]);
+        expect(() => c.getBlock(1)).toThrow();
+      }
     });
 
     it("loadAllBlocks: [] en los scaffolds vacíos; ro ya sirve su primer lote", async () => {
