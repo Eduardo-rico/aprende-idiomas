@@ -580,7 +580,7 @@
     }
   },
   {
-    "id": "63a99c41",
+    "id": "61b5f518",
     "blockId": 6,
     "lessonId": "b6-l1-pronumele-neaccentuate",
     "difficulty": 2,
@@ -591,7 +591,7 @@
       "ro-corr-a2",
       "correccion"
     ],
-    "contentHash": "63a99c41e1091fef56325112f5a7ad586f8cac106903a4709b3857473219dc50",
+    "contentHash": "61b5f51804ddcba0c8902d9313e5c0b3e71ffacde309aa567607fbe7fe54813e",
     "variantStatus": "neutral",
     "variantVerificacion": "Corrección RO-A2 (2026-09-01): la frase mala es el calco de «El hombre que vi ayer es mi vecino.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
     "register": "neutro",
@@ -599,7 +599,9 @@
     "data": {
       "sentence": "Omul care l-am văzut ieri este vecinul meu.",
       "correct": "Omul pe care l-am văzut ieri este vecinul meu.",
-      "alternatives": [],
+      "alternatives": [
+        "Omul pe care l-am văzut ieri e vecinul meu."
+      ],
       "calcoEs": "El hombre que vi ayer es mi vecino.",
       "explanationEs": "Cuando el relativo es el OBJETO, el rumano lo marca con «pe»: «omul pe care l-am văzut». El español no pone nada delante de «que», así que aquí no hay nada que copiar — y sin «pe» la frase rumana no es gramatical."
     }
@@ -630,7 +632,7 @@
     }
   },
   {
-    "id": "7d662769",
+    "id": "894771fe",
     "blockId": 6,
     "lessonId": "b6-l1-pronumele-neaccentuate",
     "difficulty": 2,
@@ -641,7 +643,7 @@
       "ro-corr-a2",
       "correccion"
     ],
-    "contentHash": "7d66276923728331aef359be76dc7a757d8d3dc826a9dfe67d286abde55c04f4",
+    "contentHash": "894771feb6b6452fb14c7f4822fe13cc259d9de0f1ffb3b86ea868a853af59d7",
     "variantStatus": "neutral",
     "variantVerificacion": "Corrección RO-A2 (2026-09-01): la frase mala es el calco de «La chica que espero es mi hermana.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
     "register": "neutro",
@@ -649,7 +651,9 @@
     "data": {
       "sentence": "Fata care o aștept este sora mea.",
       "correct": "Fata pe care o aștept este sora mea.",
-      "alternatives": [],
+      "alternatives": [
+        "Fata pe care o aștept e sora mea."
+      ],
       "calcoEs": "La chica que espero es mi hermana.",
       "explanationEs": "El relativo objeto va con «pe» y se dobla con el clítico: «fata pe care o aștept». En español «que» va desnudo y no hay «a» que traducir."
     }

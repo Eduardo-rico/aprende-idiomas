@@ -20,6 +20,7 @@
 import { verificar as verificarBase, preflight, type ItemCorreccion } from '../lib/correccion';
 import { revisarOrtografiaRo } from '../../lib/lang/ortografia-ro';
 import { medirAtajo } from '../lib/atajo-correccion';
+import { revisarCopula } from '../lib/copula-ro';
 import { hunspellDisponible, desconocidas } from '../lib/hunspell-ro';
 
 const DAT = 'r3-dativo-experimentante';
@@ -113,6 +114,7 @@ export const ITEMS: ItemCorreccion[] = [
     calcoEs: 'Siempre escribo con lápiz.',
     explicacion: 'Mismo caso: «cu creionul». El instrumento con «cu» lleva artículo aunque el español diga «con lápiz».' },
   { p: PREP, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Sora mea e la școala nouă, eu sunt la școala.', buena: 'Sora mea e la școala nouă, eu sunt la școală.',
+    alt: ['Sora mea este la școala nouă, eu sunt la școală.'],
     calcoEs: 'Mi hermana está en la escuela nueva, yo estoy en la escuela.',
     explicacion: 'Las dos en una frase: con determinante detrás («școala noastră») el artículo se queda; sin nada detrás («la școală») cae. Es la regla completa del punto.' },
 ];
@@ -155,6 +157,11 @@ export function verificar(items: ItemCorreccion[]): string[] {
   // EL ATAJO, medido y con gate. `undefined` es un fallo: «no medido» no
   // es «limpio», que es la confusión que dejó este campo sin existir
   // durante nueve lotes.
+  // La cópula `este`/`e`: la invariante vive AQUÍ y no en el comparador,
+  // que es ciego a la lengua y aceptaría la conjunción «y» portuguesa
+  // como el demostrativo. Allowlist: falla cerrado en todo punto que no
+  // declare que la alternancia es libre.
+  v.push(...revisarCopula(items.map((x) => ({ p: x.p, buena: x.buena, alt: x.alt })), 'COP'));
   const m = medirAtajo(items, 'ATAJO');
   for (const id of m.sinDeclarar) v.push(`${id}: atajoEs sin declarar — el atajo de traducción no se ha medido en este ítem`);
   for (const id of m.atajo) v.push(`${id}: atajoEs=true — traduciendo el calco se llega a la BUENA, así que el ítem mide español`);

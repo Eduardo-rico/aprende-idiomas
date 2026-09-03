@@ -22,6 +22,7 @@
 import { verificar as verificarBase, preflight, type ItemCorreccion } from '../lib/correccion';
 import { revisarOrtografiaRo } from '../../lib/lang/ortografia-ro';
 import { medirAtajo } from '../lib/atajo-correccion';
+import { revisarCopula } from '../lib/copula-ro';
 import { hunspellDisponible, desconocidas } from '../lib/hunspell-ro';
 import { informeAsigna } from '../lib/asigna-ro';
 import { PUNTOS_RO } from '../../lib/data/languages/ro/inventario-puntos';
@@ -112,6 +113,7 @@ export const ITEMS: ItemCorreccion[] = [
     explicacion: 'Contratar «a un ingeniero» cualquiera es un nombre común no específico: en rumano va sin «pe». La «a» del español no se traduce por «pe» automáticamente — pero tampoco se borra siempre: con pronombres y con persona individualizada «pe» es obligatorio.' },
   { p: PE, pasada: 1, espejoEs: false, atajoEs: false,
     mala: 'Omul care l-am văzut ieri este vecinul meu.', buena: 'Omul pe care l-am văzut ieri este vecinul meu.',
+    alt: ['Omul pe care l-am văzut ieri e vecinul meu.'],
     calcoEs: 'El hombre que vi ayer es mi vecino.',
     explicacion: 'Cuando el relativo es el OBJETO, el rumano lo marca con «pe»: «omul pe care l-am văzut». El español no pone nada delante de «que», así que aquí no hay nada que copiar — y sin «pe» la frase rumana no es gramatical.' },
   { p: PE, pasada: 1, espejoEs: false, atajoEs: false,
@@ -120,6 +122,7 @@ export const ITEMS: ItemCorreccion[] = [
     explicacion: 'El relativo objeto lleva «pe» también con cosas: «cartea pe care am citit-o». El español dice sólo «que», así que el «pe» no se copia de ninguna parte: hay que saberlo.' },
   { p: PE, pasada: 1, espejoEs: false, atajoEs: false,
     mala: 'Fata care o aștept este sora mea.', buena: 'Fata pe care o aștept este sora mea.',
+    alt: ['Fata pe care o aștept e sora mea.'],
     calcoEs: 'La chica que espero es mi hermana.',
     explicacion: 'El relativo objeto va con «pe» y se dobla con el clítico: «fata pe care o aștept». En español «que» va desnudo y no hay «a» que traducir.' },
   { p: PE, pasada: 1, espejoEs: false, atajoEs: false,
@@ -212,6 +215,11 @@ export function verificar(items: ItemCorreccion[]): string[] {
   // EL ATAJO, medido y con gate. `undefined` es un fallo: «no medido» no
   // es «limpio», que es la confusión que dejó este campo sin existir
   // durante nueve lotes.
+  // La cópula `este`/`e`: la invariante vive AQUÍ y no en el comparador,
+  // que es ciego a la lengua y aceptaría la conjunción «y» portuguesa
+  // como el demostrativo. Allowlist: falla cerrado en todo punto que no
+  // declare que la alternancia es libre.
+  v.push(...revisarCopula(items.map((x) => ({ p: x.p, buena: x.buena, alt: x.alt })), 'COP'));
   const m = medirAtajo(items, 'ATAJO');
   for (const id of m.sinDeclarar) v.push(`${id}: atajoEs sin declarar — el atajo de traducción no se ha medido en este ítem`);
   for (const id of m.atajo) v.push(`${id}: atajoEs=true — traduciendo el calco se llega a la BUENA, así que el ítem mide español`);

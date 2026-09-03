@@ -888,232 +888,6 @@
     }
   },
   {
-    "id": "6985d766",
-    "blockId": 3,
-    "lessonId": "b3-l2-conjunctivul-cu-sa",
-    "difficulty": 2,
-    "concepts": [
-      "r3-dativo-experimentante"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "6985d766f68c779f56a083ef2bbe04e5f74e65843ca3f30feb4c35268761a7d5",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Tengo hambre, ¿vamos a comer?»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Am foame, mergem să mâncăm?",
-      "correct": "Mi-e foame, mergem să mâncăm?",
-      "alternatives": [
-        "Îmi este foame, mergem să mâncăm?",
-        "Îmi e foame, mergem să mâncăm?"
-      ],
-      "calcoEs": "Tengo hambre, ¿vamos a comer?",
-      "explanationEs": "El hambre no se «tiene»: «le es» a uno. El experimentante va en dativo, con el clítico pegado a «e»: «mi-e foame» (= «îmi este foame»). «Am foame» calca «tengo hambre» (con determinante sí existe: «am o foame de lup»)."
-    }
-  },
-  {
-    "id": "8fe786d8",
-    "blockId": 3,
-    "lessonId": "b3-l2-conjunctivul-cu-sa",
-    "difficulty": 2,
-    "concepts": [
-      "r3-dativo-experimentante"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "8fe786d884eeb4171a0fcbed143681faaccb380d76af1f7b38d788cebbf44c8e",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Tengo sed, quiero agua.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Am sete, vreau apă.",
-      "correct": "Mi-e sete, vreau apă.",
-      "alternatives": [
-        "Îmi este sete, vreau apă.",
-        "Îmi e sete, vreau apă."
-      ],
-      "calcoEs": "Tengo sed, quiero agua.",
-      "explanationEs": "Como el hambre, la sed «le es» a uno: «mi-e sete». «Am sete» sólo vale en sentido figurado con complemento («are sete de putere»)."
-    }
-  },
-  {
-    "id": "1927c154",
-    "blockId": 3,
-    "lessonId": "b3-l2-conjunctivul-cu-sa",
-    "difficulty": 2,
-    "concepts": [
-      "r3-dativo-experimentante"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "1927c1542a277cf0b564703408cfc37ef07bd74cea8184545743c6f8959f8f3c",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Tengo frío aquí, cierra la ventana.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Am frig aici, închide fereastra.",
-      "correct": "Mi-e frig aici, închide fereastra.",
-      "alternatives": [
-        "Îmi este frig aici, închide fereastra.",
-        "Îmi e frig aici, închide fereastra."
-      ],
-      "calcoEs": "Tengo frío aquí, cierra la ventana.",
-      "explanationEs": "Frío y calor van en dativo: «mi-e frig», «mi-e cald». La serie ante «e» es mi-, ți-, i-, ni-, vi-, li- (mi-e, ți-e, i-e frig…); la forma plena, «îmi este frig»."
-    }
-  },
-  {
-    "id": "9aded382",
-    "blockId": 3,
-    "lessonId": "b3-l2-conjunctivul-cu-sa",
-    "difficulty": 2,
-    "concepts": [
-      "r3-dativo-experimentante"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "9aded3821477d30494c89d2e8e8e238286dc3dd74302e89dba60389933b511fc",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Tengo calor, abre la ventana.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Am cald, deschide geamul.",
-      "correct": "Mi-e cald, deschide geamul.",
-      "alternatives": [
-        "Îmi este cald, deschide geamul.",
-        "Îmi e cald, deschide geamul."
-      ],
-      "calcoEs": "Tengo calor, abre la ventana.",
-      "explanationEs": "«Mi-e cald» (a mí me es calor). El verbo es «a fi», no «a avea»; lo que cambia es el clítico dativo: mi-e, ți-e, i-e, ni-e, vi-e, li-e."
-    }
-  },
-  {
-    "id": "7cea4770",
-    "blockId": 3,
-    "lessonId": "b3-l2-conjunctivul-cu-sa",
-    "difficulty": 2,
-    "concepts": [
-      "r3-dativo-experimentante"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "7cea47700e439440bcd142d101b0ad9de01ebe7f66441f9985591086abbe2d83",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «¿Tienes frío? Cierra la puerta.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Ai frig? Închide ușa.",
-      "correct": "Ți-e frig? Închide ușa.",
-      "alternatives": [
-        "Îți este frig? Închide ușa.",
-        "Îți e frig? Închide ușa."
-      ],
-      "calcoEs": "¿Tienes frío? Cierra la puerta.",
-      "explanationEs": "En 2.ª persona el clítico es «ți-»: «ți-e frig» (= «îți este frig»). «Ai frig» conjuga «tener» como el español."
-    }
-  },
-  {
-    "id": "8924cb5e",
-    "blockId": 3,
-    "lessonId": "b3-l2-conjunctivul-cu-sa",
-    "difficulty": 2,
-    "concepts": [
-      "r3-dativo-experimentante"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "8924cb5e9e695253df757e9cfa4f9bbcbe92e5f1dd86f81ce4e966b9d63b24a8",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «El niño tiene frío, ponle un abrigo.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Copilul are frig, pune-i o haină.",
-      "correct": "Copilului i-e frig, pune-i o haină.",
-      "alternatives": [
-        "Copilului îi e frig, pune-i o haină.",
-        "Copilului îi este frig, pune-i o haină.",
-        "I-e frig copilului, pune-i o haină."
-      ],
-      "calcoEs": "El niño tiene frío, ponle un abrigo.",
-      "explanationEs": "Con un sustantivo como experimentante, va en DATIVO («copilului») y se dobla con el clítico de 3.ª: «copilului i-e frig» (= «îi este frig»). «Copilul are frig» calca «tiene frío»."
-    }
-  },
-  {
-    "id": "eb604cf9",
-    "blockId": 3,
-    "lessonId": "b3-l2-conjunctivul-cu-sa",
-    "difficulty": 2,
-    "concepts": [
-      "r3-dativo-experimentante"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "eb604cf96aea6e7372a77ab2d6e1a1fccea1b9437344cf51f31b939f28f4af38",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Ella tiene calor, abre la ventana.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Ea are cald, deschide fereastra.",
-      "correct": "Ei i-e cald, deschide fereastra.",
-      "alternatives": [
-        "I-e cald, deschide fereastra.",
-        "Ei îi e cald, deschide fereastra.",
-        "Îi este cald, deschide fereastra."
-      ],
-      "calcoEs": "Ella tiene calor, abre la ventana.",
-      "explanationEs": "El pronombre experimentante va en dativo («ei») y se dobla con «i-»: «ei i-e cald»; basta «i-e cald» si el referente está claro. «Ea are cald» es el calco."
-    }
-  },
-  {
-    "id": "26ad48e8",
-    "blockId": 3,
-    "lessonId": "b3-l2-conjunctivul-cu-sa",
-    "difficulty": 2,
-    "concepts": [
-      "r3-dativo-experimentante"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "26ad48e828610dca3b6b54fbcbf0fef4c6e827da4613220f25df9ac351af0e70",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Te echo mucho de menos.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Te lipsesc mult.",
-      "correct": "Îmi lipsești mult.",
-      "alternatives": [
-        "Mi-e dor de tine.",
-        "Îmi este dor de tine."
-      ],
-      "calcoEs": "Te echo mucho de menos.",
-      "explanationEs": "«A lipsi» funciona como «faltar»: el que falta es el sujeto y el que lo echa de menos va en dativo — «îmi lipsești» (me faltas). «Te lipsesc» significaría «te privo de algo» y necesita «de». También «mi-e dor de tine»."
-    }
-  },
-  {
     "id": "d010763e",
     "blockId": 3,
     "lessonId": "b3-l1-prezentul",
@@ -2029,6 +1803,232 @@
       ],
       "calcoEs": "El tiempo va a estar bueno mañana.",
       "explanationEs": "Con «a fi» el contraste es el más visible: indicativo «este», conjuntivo «să fie». Detrás de «o să» sólo cabe el segundo."
+    }
+  },
+  {
+    "id": "6985d766",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-dativo-experimentante"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "6985d766f68c779f56a083ef2bbe04e5f74e65843ca3f30feb4c35268761a7d5",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Tengo hambre, ¿vamos a comer?»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Am foame, mergem să mâncăm?",
+      "correct": "Mi-e foame, mergem să mâncăm?",
+      "alternatives": [
+        "Îmi este foame, mergem să mâncăm?",
+        "Îmi e foame, mergem să mâncăm?"
+      ],
+      "calcoEs": "Tengo hambre, ¿vamos a comer?",
+      "explanationEs": "El hambre no se «tiene»: «le es» a uno. El experimentante va en dativo, con el clítico pegado a «e»: «mi-e foame» (= «îmi este foame»). «Am foame» calca «tengo hambre» (con determinante sí existe: «am o foame de lup»)."
+    }
+  },
+  {
+    "id": "8fe786d8",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-dativo-experimentante"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "8fe786d884eeb4171a0fcbed143681faaccb380d76af1f7b38d788cebbf44c8e",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Tengo sed, quiero agua.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Am sete, vreau apă.",
+      "correct": "Mi-e sete, vreau apă.",
+      "alternatives": [
+        "Îmi este sete, vreau apă.",
+        "Îmi e sete, vreau apă."
+      ],
+      "calcoEs": "Tengo sed, quiero agua.",
+      "explanationEs": "Como el hambre, la sed «le es» a uno: «mi-e sete». «Am sete» sólo vale en sentido figurado con complemento («are sete de putere»)."
+    }
+  },
+  {
+    "id": "1927c154",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-dativo-experimentante"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "1927c1542a277cf0b564703408cfc37ef07bd74cea8184545743c6f8959f8f3c",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Tengo frío aquí, cierra la ventana.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Am frig aici, închide fereastra.",
+      "correct": "Mi-e frig aici, închide fereastra.",
+      "alternatives": [
+        "Îmi este frig aici, închide fereastra.",
+        "Îmi e frig aici, închide fereastra."
+      ],
+      "calcoEs": "Tengo frío aquí, cierra la ventana.",
+      "explanationEs": "Frío y calor van en dativo: «mi-e frig», «mi-e cald». La serie ante «e» es mi-, ți-, i-, ni-, vi-, li- (mi-e, ți-e, i-e frig…); la forma plena, «îmi este frig»."
+    }
+  },
+  {
+    "id": "9aded382",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-dativo-experimentante"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "9aded3821477d30494c89d2e8e8e238286dc3dd74302e89dba60389933b511fc",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Tengo calor, abre la ventana.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Am cald, deschide geamul.",
+      "correct": "Mi-e cald, deschide geamul.",
+      "alternatives": [
+        "Îmi este cald, deschide geamul.",
+        "Îmi e cald, deschide geamul."
+      ],
+      "calcoEs": "Tengo calor, abre la ventana.",
+      "explanationEs": "«Mi-e cald» (a mí me es calor). El verbo es «a fi», no «a avea»; lo que cambia es el clítico dativo: mi-e, ți-e, i-e, ni-e, vi-e, li-e."
+    }
+  },
+  {
+    "id": "7cea4770",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-dativo-experimentante"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "7cea47700e439440bcd142d101b0ad9de01ebe7f66441f9985591086abbe2d83",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «¿Tienes frío? Cierra la puerta.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ai frig? Închide ușa.",
+      "correct": "Ți-e frig? Închide ușa.",
+      "alternatives": [
+        "Îți este frig? Închide ușa.",
+        "Îți e frig? Închide ușa."
+      ],
+      "calcoEs": "¿Tienes frío? Cierra la puerta.",
+      "explanationEs": "En 2.ª persona el clítico es «ți-»: «ți-e frig» (= «îți este frig»). «Ai frig» conjuga «tener» como el español."
+    }
+  },
+  {
+    "id": "8924cb5e",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-dativo-experimentante"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "8924cb5e9e695253df757e9cfa4f9bbcbe92e5f1dd86f81ce4e966b9d63b24a8",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «El niño tiene frío, ponle un abrigo.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Copilul are frig, pune-i o haină.",
+      "correct": "Copilului i-e frig, pune-i o haină.",
+      "alternatives": [
+        "Copilului îi e frig, pune-i o haină.",
+        "Copilului îi este frig, pune-i o haină.",
+        "I-e frig copilului, pune-i o haină."
+      ],
+      "calcoEs": "El niño tiene frío, ponle un abrigo.",
+      "explanationEs": "Con un sustantivo como experimentante, va en DATIVO («copilului») y se dobla con el clítico de 3.ª: «copilului i-e frig» (= «îi este frig»). «Copilul are frig» calca «tiene frío»."
+    }
+  },
+  {
+    "id": "eb604cf9",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-dativo-experimentante"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "eb604cf96aea6e7372a77ab2d6e1a1fccea1b9437344cf51f31b939f28f4af38",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Ella tiene calor, abre la ventana.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ea are cald, deschide fereastra.",
+      "correct": "Ei i-e cald, deschide fereastra.",
+      "alternatives": [
+        "I-e cald, deschide fereastra.",
+        "Ei îi e cald, deschide fereastra.",
+        "Îi este cald, deschide fereastra."
+      ],
+      "calcoEs": "Ella tiene calor, abre la ventana.",
+      "explanationEs": "El pronombre experimentante va en dativo («ei») y se dobla con «i-»: «ei i-e cald»; basta «i-e cald» si el referente está claro. «Ea are cald» es el calco."
+    }
+  },
+  {
+    "id": "26ad48e8",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-dativo-experimentante"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "26ad48e828610dca3b6b54fbcbf0fef4c6e827da4613220f25df9ac351af0e70",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Te echo mucho de menos.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Te lipsesc mult.",
+      "correct": "Îmi lipsești mult.",
+      "alternatives": [
+        "Mi-e dor de tine.",
+        "Îmi este dor de tine."
+      ],
+      "calcoEs": "Te echo mucho de menos.",
+      "explanationEs": "«A lipsi» funciona como «faltar»: el que falta es el sujeto y el que lo echa de menos va en dativo — «îmi lipsești» (me faltas). «Te lipsesc» significaría «te privo de algo» y necesita «de». También «mi-e dor de tine»."
     }
   }
 ]

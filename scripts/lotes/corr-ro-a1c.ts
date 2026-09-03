@@ -22,6 +22,7 @@ import { revisarOrtografiaRo } from '../../lib/lang/ortografia-ro';
 import { hunspellDisponible, desconocidas } from '../lib/hunspell-ro';
 import { exenta } from '../lib/exenciones-hunspell-ro';
 import { medirAtajo } from '../lib/atajo-correccion';
+import { revisarCopula } from '../lib/copula-ro';
 import { informeAsigna } from '../lib/asigna-ro';
 
 const ANTE = 'r3-negacion-antepuesta';
@@ -244,6 +245,11 @@ export function verificar(items: ItemCorreccion[]): string[] {
         v.push(`${id}: falta la alternativa con «are/au să», que es registro coloquial estándar y la tarjeta compara exacto`);
     }
   }
+  // La cópula `este`/`e`: la invariante vive AQUÍ y no en el comparador,
+  // que es ciego a la lengua y aceptaría la conjunción «y» portuguesa
+  // como el demostrativo. Allowlist: falla cerrado en todo punto que no
+  // declare que la alternancia es libre.
+  v.push(...revisarCopula(items.map((x) => ({ p: x.p, buena: x.buena, alt: x.alt })), 'COP'));
   const m = medirAtajo(items, 'ATAJO');
   for (const id of m.sinDeclarar) v.push(`${id}: atajoEs sin declarar`);
   for (const id of m.atajo) v.push(`${id}: atajoEs=true — el ítem mide español`);

@@ -1,415 +1,5 @@
 [
   {
-    "id": "fa3785c2",
-    "blockId": 4,
-    "lessonId": "b4-l1-cazul-si-determinarea",
-    "difficulty": 2,
-    "concepts": [
-      "r4-posesivos"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "fa3785c2a99e53ae2c6588ed1cf092806064f0aad701a21b89fd7bcbe5e1a298",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Mi casa está al lado del parque.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Mea casă este lângă parc.",
-      "correct": "Casa mea este lângă parc.",
-      "alternatives": [
-        "Casa mea e lângă parc."
-      ],
-      "calcoEs": "Mi casa está al lado del parque.",
-      "explanationEs": "El posesivo va detrás y el sustantivo lleva el artículo enclítico: «casa mea». Anteponerlo y dejar el sustantivo desnudo es el calco de «mi casa»."
-    }
-  },
-  {
-    "id": "bcbd87fe",
-    "blockId": 4,
-    "lessonId": "b4-l1-cazul-si-determinarea",
-    "difficulty": 2,
-    "concepts": [
-      "r4-posesivos"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "bcbd87fe691b1595ece75194e30356343bb8e3e99de073ed55118fcffeadf7ca",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Mi hermano vive en Cluj.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Meu frate locuiește la Cluj.",
-      "correct": "Fratele meu locuiește la Cluj.",
-      "alternatives": [
-        "Frate-meu locuiește la Cluj."
-      ],
-      "calcoEs": "Mi hermano vive en Cluj.",
-      "explanationEs": "«Fratele meu»: primero el sustantivo articulado (fratele), después el posesivo. Con «frate» el artículo es «-le»."
-    }
-  },
-  {
-    "id": "4c54680c",
-    "blockId": 4,
-    "lessonId": "b4-l1-cazul-si-determinarea",
-    "difficulty": 2,
-    "concepts": [
-      "r4-posesivos"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "4c54680cfe160557dc6e015d6efc35145aca7d29407bc89a9678ebfe85f823b1",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Tu libro está en la mesa.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Ta carte este pe masă.",
-      "correct": "Cartea ta este pe masă.",
-      "alternatives": [
-        "Cartea ta e pe masă."
-      ],
-      "calcoEs": "Tu libro está en la mesa.",
-      "explanationEs": "Mismo orden con «ta»: «cartea ta». El posesivo concuerda con lo poseído (carte, femenino → ta) y va pospuesto."
-    }
-  },
-  {
-    "id": "97a69f1c",
-    "blockId": 4,
-    "lessonId": "b4-l1-cazul-si-determinarea",
-    "difficulty": 2,
-    "concepts": [
-      "r4-posesivos"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "97a69f1c475ef864825a8e1a38f262da1f609deba397df1f77b047087b4928ec",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Nuestros amigos vienen mañana.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Noștri prieteni vin mâine.",
-      "correct": "Prietenii noștri vin mâine.",
-      "alternatives": [],
-      "calcoEs": "Nuestros amigos vienen mañana.",
-      "explanationEs": "En plural igual: sustantivo con artículo plural (prietenii) y posesivo detrás (noștri). «Noștri prieteni» calca «nuestros amigos»."
-    }
-  },
-  {
-    "id": "ea0b7bad",
-    "blockId": 4,
-    "lessonId": "b4-l1-cazul-si-determinarea",
-    "difficulty": 2,
-    "concepts": [
-      "r4-posesivos"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "ea0b7bad1ec975f0667d7150e68e7f142a105f55336fd0def6605abc0dac34dc",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Mis padres están en el pueblo.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Mei părinți sunt la țară.",
-      "correct": "Părinții mei sunt la țară.",
-      "alternatives": [],
-      "calcoEs": "Mis padres están en el pueblo.",
-      "explanationEs": "«Părinții mei»: el artículo plural «-i» se pega al sustantivo y el posesivo masculino plural «mei» va detrás."
-    }
-  },
-  {
-    "id": "06ca23a4",
-    "blockId": 4,
-    "lessonId": "b4-l1-cazul-si-determinarea",
-    "difficulty": 2,
-    "concepts": [
-      "r4-posesivos"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "06ca23a48ef19c88608597c0d8f82a8e46f85a3b5bc35e7e4e0662f20af6002f",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Mis libros están en el bolso.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Mele cărți sunt în geantă.",
-      "correct": "Cărțile mele sunt în geantă.",
-      "alternatives": [],
-      "calcoEs": "Mis libros están en el bolso.",
-      "explanationEs": "Femenino plural: «cărțile mele». El posesivo tiene cuatro formas (meu, mea, mei, mele) según lo poseído, y siempre pospuesto."
-    }
-  },
-  {
-    "id": "863872cb",
-    "blockId": 4,
-    "lessonId": "b4-l1-cazul-si-determinarea",
-    "difficulty": 2,
-    "concepts": [
-      "r4-posesivos"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "863872cbb3924af6a668d1e8b9f18bf8ea4cfade7eeb52fbf2e44cd94d15b2bd",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Su coche (de ustedes) es nuevo.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Voastră mașină este nouă.",
-      "correct": "Mașina voastră este nouă.",
-      "alternatives": [
-        "Mașina voastră e nouă."
-      ],
-      "calcoEs": "Su coche (de ustedes) es nuevo.",
-      "explanationEs": "«Mașina voastră»: sustantivo articulado + posesivo. El calco antepone «voastră» como el español antepone «vuestro»."
-    }
-  },
-  {
-    "id": "04bd00a7",
-    "blockId": 4,
-    "lessonId": "b4-l1-cazul-si-determinarea",
-    "difficulty": 2,
-    "concepts": [
-      "r4-posesivos"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "04bd00a7322366befb1848cce4d62de5373bfd6eabcd97c65f1b65b5d3656d9a",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Su hijo (de ellos) tiene cinco años.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Lor copil are cinci ani.",
-      "correct": "Copilul lor are cinci ani.",
-      "alternatives": [],
-      "calcoEs": "Su hijo (de ellos) tiene cinco años.",
-      "explanationEs": "Para «de ellos» el posesivo es «lor», invariable y pospuesto: «copilul lor». Antepuesto sólo existe con artículo posesivo y en registro literario («al lor copil»); antepuesto y con el sustantivo desnudo, nunca."
-    }
-  },
-  {
-    "id": "60574d00",
-    "blockId": 4,
-    "lessonId": "b4-l1-cazul-si-determinarea",
-    "difficulty": 2,
-    "concepts": [
-      "r4-preposicion-caida-articulo"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "60574d008df4c4912f8d6bc64c1f32ae2c638fc59816a74429437037675dc79e",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Voy a la escuela todos los días.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Merg la școala în fiecare zi.",
-      "correct": "Merg la școală în fiecare zi.",
-      "alternatives": [],
-      "calcoEs": "Voy a la escuela todos los días.",
-      "explanationEs": "Tras «la» el sustantivo pierde el artículo: «la școală» (a la escuela), aunque el español lo lleve. Sólo lo conserva si sigue un determinante: «la școala noastră»."
-    }
-  },
-  {
-    "id": "9f4723c8",
-    "blockId": 4,
-    "lessonId": "b4-l1-cazul-si-determinarea",
-    "difficulty": 2,
-    "concepts": [
-      "r4-preposicion-caida-articulo"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "9f4723c8653e615c5f370d351fb5b57a267c90189c88e7704a60e33f1ab2ea7d",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Vivimos en la ciudad desde hace diez años.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Locuim în orașul de zece ani.",
-      "correct": "Locuim în oraș de zece ani.",
-      "alternatives": [],
-      "calcoEs": "Vivimos en la ciudad desde hace diez años.",
-      "explanationEs": "«În oraș» (en la ciudad): sin artículo tras «în». «În orașul» sólo si sigue algo que lo determine («în orașul acesta»)."
-    }
-  },
-  {
-    "id": "79fcbca5",
-    "blockId": 4,
-    "lessonId": "b4-l1-cazul-si-determinarea",
-    "difficulty": 2,
-    "concepts": [
-      "r4-preposicion-caida-articulo"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "79fcbca57216f28660985fcbb23abc2105460b49002c9071bb739868115b6c50",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Los niños juegan en la calle.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Copiii se joacă pe strada.",
-      "correct": "Copiii se joacă pe stradă.",
-      "alternatives": [],
-      "calcoEs": "Los niños juegan en la calle.",
-      "explanationEs": "«Pe stradă» (en la calle), sin artículo. El «la» del español se calca como «-a» pegada y sobra."
-    }
-  },
-  {
-    "id": "1ed8ace5",
-    "blockId": 4,
-    "lessonId": "b4-l1-cazul-si-determinarea",
-    "difficulty": 2,
-    "concepts": [
-      "r4-preposicion-caida-articulo"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "1ed8ace551273fb01a7e6c12a05b68c52c90f9a872787379d88b8fe4aeee6033",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Papá está en la oficina hasta la noche.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Tata este la biroul până seara.",
-      "correct": "Tata este la birou până seara.",
-      "alternatives": [
-        "Tata e la birou până seara."
-      ],
-      "calcoEs": "Papá está en la oficina hasta la noche.",
-      "explanationEs": "«La birou» (en la oficina): tras «la», sin artículo. «La biroul» pide un determinante detrás («la biroul lui»)."
-    }
-  },
-  {
-    "id": "10544aa6",
-    "blockId": 4,
-    "lessonId": "b4-l1-cazul-si-determinarea",
-    "difficulty": 2,
-    "concepts": [
-      "r4-preposicion-caida-articulo"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "10544aa6dcaef45a306e601353e8e21b5c8dd29d1426a9b854ab401c8981fd34",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Vamos al mercado los sábados.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Mergem la piața sâmbăta.",
-      "correct": "Mergem la piață sâmbăta.",
-      "alternatives": [],
-      "calcoEs": "Vamos al mercado los sábados.",
-      "explanationEs": "«La piață» (al mercado): la preposición hace caer el artículo, salvo que siga un determinante («la piața centrală», «la piața Obor»). Sin nada detrás, sin artículo."
-    }
-  },
-  {
-    "id": "2b017807",
-    "blockId": 4,
-    "lessonId": "b4-l1-cazul-si-determinarea",
-    "difficulty": 2,
-    "concepts": [
-      "r4-preposicion-caida-articulo"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "2b017807c58f2ca95ad9680085dbbd2d8ff7ac88322d02fef6b8e5bef6a8733d",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Voy en tren a Brașov.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Merg cu tren la Brașov.",
-      "correct": "Merg cu trenul la Brașov.",
-      "alternatives": [],
-      "calcoEs": "Voy en tren a Brașov.",
-      "explanationEs": "Excepción que hay que saber: con «cu» (medio, compañía) el artículo se CONSERVA: «cu trenul», «cu mașina», «cu autobuzul». Aquí el español («en tren») es el que no lo lleva."
-    }
-  },
-  {
-    "id": "e237a6da",
-    "blockId": 4,
-    "lessonId": "b4-l1-cazul-si-determinarea",
-    "difficulty": 2,
-    "concepts": [
-      "r4-preposicion-caida-articulo"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "e237a6dad404fc23cec158df0754eead96793d97464d12f4b1438238b8fb696b",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Siempre escribo con lápiz.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Scriu mereu cu creion.",
-      "correct": "Scriu mereu cu creionul.",
-      "alternatives": [],
-      "calcoEs": "Siempre escribo con lápiz.",
-      "explanationEs": "Mismo caso: «cu creionul». El instrumento con «cu» lleva artículo aunque el español diga «con lápiz»."
-    }
-  },
-  {
-    "id": "7c530bb4",
-    "blockId": 4,
-    "lessonId": "b4-l1-cazul-si-determinarea",
-    "difficulty": 2,
-    "concepts": [
-      "r4-preposicion-caida-articulo"
-    ],
-    "tags": [
-      "ro-corr-a1b",
-      "correccion"
-    ],
-    "contentHash": "7c530bb4b9bb7364653222337cba77c9f6e3c5f7d2934199ccfaabed9a3c53c5",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Mi hermana está en la escuela nueva, yo estoy en la escuela.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
-    "register": "neutro",
-    "type": "error_correction",
-    "data": {
-      "sentence": "Sora mea e la școala nouă, eu sunt la școala.",
-      "correct": "Sora mea e la școala nouă, eu sunt la școală.",
-      "alternatives": [],
-      "calcoEs": "Mi hermana está en la escuela nueva, yo estoy en la escuela.",
-      "explanationEs": "Las dos en una frase: con determinante detrás («școala noastră») el artículo se queda; sin nada detrás («la școală») cae. Es la regla completa del punto."
-    }
-  },
-  {
     "id": "bec35c42",
     "blockId": 4,
     "lessonId": "b4-l1-cazul-si-determinarea",
@@ -1825,6 +1415,418 @@
       "alternatives": [],
       "calcoEs": "El hermano de Ion trabaja en el hospital.",
       "explanationEs": "La posesión ante nombre propio masculino es «lui» + nombre: «fratele lui Ion». El «de» calca el español y no existe con este valor."
+    }
+  },
+  {
+    "id": "fa3785c2",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-posesivos"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "fa3785c2a99e53ae2c6588ed1cf092806064f0aad701a21b89fd7bcbe5e1a298",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Mi casa está al lado del parque.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Mea casă este lângă parc.",
+      "correct": "Casa mea este lângă parc.",
+      "alternatives": [
+        "Casa mea e lângă parc."
+      ],
+      "calcoEs": "Mi casa está al lado del parque.",
+      "explanationEs": "El posesivo va detrás y el sustantivo lleva el artículo enclítico: «casa mea». Anteponerlo y dejar el sustantivo desnudo es el calco de «mi casa»."
+    }
+  },
+  {
+    "id": "bcbd87fe",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-posesivos"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "bcbd87fe691b1595ece75194e30356343bb8e3e99de073ed55118fcffeadf7ca",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Mi hermano vive en Cluj.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Meu frate locuiește la Cluj.",
+      "correct": "Fratele meu locuiește la Cluj.",
+      "alternatives": [
+        "Frate-meu locuiește la Cluj."
+      ],
+      "calcoEs": "Mi hermano vive en Cluj.",
+      "explanationEs": "«Fratele meu»: primero el sustantivo articulado (fratele), después el posesivo. Con «frate» el artículo es «-le»."
+    }
+  },
+  {
+    "id": "4c54680c",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-posesivos"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "4c54680cfe160557dc6e015d6efc35145aca7d29407bc89a9678ebfe85f823b1",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Tu libro está en la mesa.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ta carte este pe masă.",
+      "correct": "Cartea ta este pe masă.",
+      "alternatives": [
+        "Cartea ta e pe masă."
+      ],
+      "calcoEs": "Tu libro está en la mesa.",
+      "explanationEs": "Mismo orden con «ta»: «cartea ta». El posesivo concuerda con lo poseído (carte, femenino → ta) y va pospuesto."
+    }
+  },
+  {
+    "id": "97a69f1c",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-posesivos"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "97a69f1c475ef864825a8e1a38f262da1f609deba397df1f77b047087b4928ec",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Nuestros amigos vienen mañana.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Noștri prieteni vin mâine.",
+      "correct": "Prietenii noștri vin mâine.",
+      "alternatives": [],
+      "calcoEs": "Nuestros amigos vienen mañana.",
+      "explanationEs": "En plural igual: sustantivo con artículo plural (prietenii) y posesivo detrás (noștri). «Noștri prieteni» calca «nuestros amigos»."
+    }
+  },
+  {
+    "id": "ea0b7bad",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-posesivos"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "ea0b7bad1ec975f0667d7150e68e7f142a105f55336fd0def6605abc0dac34dc",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Mis padres están en el pueblo.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Mei părinți sunt la țară.",
+      "correct": "Părinții mei sunt la țară.",
+      "alternatives": [],
+      "calcoEs": "Mis padres están en el pueblo.",
+      "explanationEs": "«Părinții mei»: el artículo plural «-i» se pega al sustantivo y el posesivo masculino plural «mei» va detrás."
+    }
+  },
+  {
+    "id": "06ca23a4",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-posesivos"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "06ca23a48ef19c88608597c0d8f82a8e46f85a3b5bc35e7e4e0662f20af6002f",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Mis libros están en el bolso.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Mele cărți sunt în geantă.",
+      "correct": "Cărțile mele sunt în geantă.",
+      "alternatives": [],
+      "calcoEs": "Mis libros están en el bolso.",
+      "explanationEs": "Femenino plural: «cărțile mele». El posesivo tiene cuatro formas (meu, mea, mei, mele) según lo poseído, y siempre pospuesto."
+    }
+  },
+  {
+    "id": "863872cb",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-posesivos"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "863872cbb3924af6a668d1e8b9f18bf8ea4cfade7eeb52fbf2e44cd94d15b2bd",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Su coche (de ustedes) es nuevo.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Voastră mașină este nouă.",
+      "correct": "Mașina voastră este nouă.",
+      "alternatives": [
+        "Mașina voastră e nouă."
+      ],
+      "calcoEs": "Su coche (de ustedes) es nuevo.",
+      "explanationEs": "«Mașina voastră»: sustantivo articulado + posesivo. El calco antepone «voastră» como el español antepone «vuestro»."
+    }
+  },
+  {
+    "id": "04bd00a7",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-posesivos"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "04bd00a7322366befb1848cce4d62de5373bfd6eabcd97c65f1b65b5d3656d9a",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Su hijo (de ellos) tiene cinco años.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Lor copil are cinci ani.",
+      "correct": "Copilul lor are cinci ani.",
+      "alternatives": [],
+      "calcoEs": "Su hijo (de ellos) tiene cinco años.",
+      "explanationEs": "Para «de ellos» el posesivo es «lor», invariable y pospuesto: «copilul lor». Antepuesto sólo existe con artículo posesivo y en registro literario («al lor copil»); antepuesto y con el sustantivo desnudo, nunca."
+    }
+  },
+  {
+    "id": "60574d00",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-preposicion-caida-articulo"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "60574d008df4c4912f8d6bc64c1f32ae2c638fc59816a74429437037675dc79e",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Voy a la escuela todos los días.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Merg la școala în fiecare zi.",
+      "correct": "Merg la școală în fiecare zi.",
+      "alternatives": [],
+      "calcoEs": "Voy a la escuela todos los días.",
+      "explanationEs": "Tras «la» el sustantivo pierde el artículo: «la școală» (a la escuela), aunque el español lo lleve. Sólo lo conserva si sigue un determinante: «la școala noastră»."
+    }
+  },
+  {
+    "id": "9f4723c8",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-preposicion-caida-articulo"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "9f4723c8653e615c5f370d351fb5b57a267c90189c88e7704a60e33f1ab2ea7d",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Vivimos en la ciudad desde hace diez años.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Locuim în orașul de zece ani.",
+      "correct": "Locuim în oraș de zece ani.",
+      "alternatives": [],
+      "calcoEs": "Vivimos en la ciudad desde hace diez años.",
+      "explanationEs": "«În oraș» (en la ciudad): sin artículo tras «în». «În orașul» sólo si sigue algo que lo determine («în orașul acesta»)."
+    }
+  },
+  {
+    "id": "79fcbca5",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-preposicion-caida-articulo"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "79fcbca57216f28660985fcbb23abc2105460b49002c9071bb739868115b6c50",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Los niños juegan en la calle.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Copiii se joacă pe strada.",
+      "correct": "Copiii se joacă pe stradă.",
+      "alternatives": [],
+      "calcoEs": "Los niños juegan en la calle.",
+      "explanationEs": "«Pe stradă» (en la calle), sin artículo. El «la» del español se calca como «-a» pegada y sobra."
+    }
+  },
+  {
+    "id": "1ed8ace5",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-preposicion-caida-articulo"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "1ed8ace551273fb01a7e6c12a05b68c52c90f9a872787379d88b8fe4aeee6033",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Papá está en la oficina hasta la noche.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Tata este la biroul până seara.",
+      "correct": "Tata este la birou până seara.",
+      "alternatives": [
+        "Tata e la birou până seara."
+      ],
+      "calcoEs": "Papá está en la oficina hasta la noche.",
+      "explanationEs": "«La birou» (en la oficina): tras «la», sin artículo. «La biroul» pide un determinante detrás («la biroul lui»)."
+    }
+  },
+  {
+    "id": "10544aa6",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-preposicion-caida-articulo"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "10544aa6dcaef45a306e601353e8e21b5c8dd29d1426a9b854ab401c8981fd34",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Vamos al mercado los sábados.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Mergem la piața sâmbăta.",
+      "correct": "Mergem la piață sâmbăta.",
+      "alternatives": [],
+      "calcoEs": "Vamos al mercado los sábados.",
+      "explanationEs": "«La piață» (al mercado): la preposición hace caer el artículo, salvo que siga un determinante («la piața centrală», «la piața Obor»). Sin nada detrás, sin artículo."
+    }
+  },
+  {
+    "id": "2b017807",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-preposicion-caida-articulo"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "2b017807c58f2ca95ad9680085dbbd2d8ff7ac88322d02fef6b8e5bef6a8733d",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Voy en tren a Brașov.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Merg cu tren la Brașov.",
+      "correct": "Merg cu trenul la Brașov.",
+      "alternatives": [],
+      "calcoEs": "Voy en tren a Brașov.",
+      "explanationEs": "Excepción que hay que saber: con «cu» (medio, compañía) el artículo se CONSERVA: «cu trenul», «cu mașina», «cu autobuzul». Aquí el español («en tren») es el que no lo lleva."
+    }
+  },
+  {
+    "id": "e237a6da",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-preposicion-caida-articulo"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "e237a6dad404fc23cec158df0754eead96793d97464d12f4b1438238b8fb696b",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Siempre escribo con lápiz.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Scriu mereu cu creion.",
+      "correct": "Scriu mereu cu creionul.",
+      "alternatives": [],
+      "calcoEs": "Siempre escribo con lápiz.",
+      "explanationEs": "Mismo caso: «cu creionul». El instrumento con «cu» lleva artículo aunque el español diga «con lápiz»."
+    }
+  },
+  {
+    "id": "87c50196",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-preposicion-caida-articulo"
+    ],
+    "tags": [
+      "ro-corr-a1b",
+      "correccion"
+    ],
+    "contentHash": "87c50196a47266ffcc0afab4188feda1938bf492843e2df77bbfb8d6264c03af",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1B (2026-09-01): la frase mala es el calco de «Mi hermana está en la escuela nueva, yo estoy en la escuela.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Sora mea e la școala nouă, eu sunt la școala.",
+      "correct": "Sora mea e la școala nouă, eu sunt la școală.",
+      "alternatives": [
+        "Sora mea este la școala nouă, eu sunt la școală."
+      ],
+      "calcoEs": "Mi hermana está en la escuela nueva, yo estoy en la escuela.",
+      "explanationEs": "Las dos en una frase: con determinante detrás («școala noastră») el artículo se queda; sin nada detrás («la școală») cae. Es la regla completa del punto."
     }
   }
 ]
