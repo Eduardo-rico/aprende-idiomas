@@ -12,7 +12,7 @@
 //    `u`, así que `ă â î ș ț` no son «palabra» y `\b` dispara DENTRO de la
 //    palabra rumana. Medido: `de face\b` daba 5 y una era «unde faceți».
 import { describe, it, expect } from 'vitest';
-import { buscar, tanda, corpus, CANARIO, FIN } from '../../scripts/corpus-ro';
+import { buscar, tanda, corpus, controles, CANARIO, CANARIO_NEGATIVO, FIN, INI } from '../../scripts/corpus-ro';
 
 describe('corpus-ro · el canario', () => {
   it('la cadena del canario ESTÁ en el corpus — si no, no hay ceros que leer', () => {
@@ -22,6 +22,30 @@ describe('corpus-ro · el canario', () => {
     const r = tanda(['de f(ă|a)cut' + FIN]);
     expect(r).not.toBeNull();
     expect(r![0]!.n).toBeGreaterThan(100);
+  });
+});
+
+// EL SEGUNDO CONTROL. El canario positivo demuestra que la consulta
+// encuentra lo que debe; NO demuestra que no encuentre lo que no debe, y
+// ése es el fallo que ya se pagó una vez. Los dos casos van juntos: el
+// que lo pasa y el que lo suspende.
+describe('corpus-ro · el canario NEGATIVO', () => {
+  it('VERDE: con el límite unicode, «mașin» no es palabra y da cero', () => {
+    expect(buscar(INI + CANARIO_NEGATIVO + FIN).n).toBe(0);
+    // Y el positivo canta a la vez: un cero sin el positivo no vale nada.
+    expect(buscar(CANARIO).n).toBeGreaterThan(0);
+  });
+  it('ROJO: con \\b el mismo patrón dispara DENTRO de «mașină» — el defecto que se pagó', () => {
+    // El testigo no es inventado: es la forma exacta del fallo del lote
+    // 21. Si esto diera cero, el control negativo no probaría nada.
+    expect(corpus().match(/mașin\b/giu)?.length ?? 0).toBeGreaterThan(0);
+  });
+  it('los dos controles se informan por SEPARADO, para saber cuál falló', () => {
+    const c = controles();
+    expect(c.ok).toBe(true);
+    expect(c.negativo).toBe(0);
+    expect(c.positivo).toBeGreaterThan(0);
+    expect(c.fallo).toBeNull();
   });
 });
 

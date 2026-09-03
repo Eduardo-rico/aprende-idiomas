@@ -39,6 +39,19 @@ const DIR = 'lib/data/languages/ro/lecturas';
  *  rota o el corpus no se cargó, y cualquier cero de esa tanda es basura. */
 export const CANARIO = 'mai mare decât';
 
+/** EL SEGUNDO CONTROL, Y ES EL QUE FALTABA (orden del coordinador,
+ *  2026-09-03). El canario de arriba demuestra que la consulta ENCUENTRA
+ *  lo que debe; no demuestra que **no encuentre lo que no debe**, y ése es
+ *  justo el fallo que ya se pagó: `\b` disparaba DENTRO de las palabras
+ *  con `ă â î ș ț` y el instrumento contaba de más sin que nada fallara.
+ *
+ *  `mașin` no es palabra rumana ninguna: sólo existe dentro de `mașină`,
+ *  `mașini`, `mașinării`. Con el límite unicode tiene que dar CERO. Con
+ *  `\b` da 300 y pico, porque la `ă` que sigue no es `\w`. Un cero aquí
+ *  es la única prueba de que el límite de palabra funciona; si sale
+ *  positivo, todos los números de la tanda están inflados. */
+export const CANARIO_NEGATIVO = 'ma(ș|s)in';
+
 let cache: string | null = null;
 export function corpus(): string {
   if (cache) return cache;
@@ -87,12 +100,26 @@ export function buscar(patron: string, ctx = 0): Hallazgo {
   return { patron, n, ejemplos };
 }
 
-/** LA PUERTA HONESTA: corre una tanda CON el canario delante. Si el
- *  canario da cero, tira — porque entonces los otros ceros no significan
- *  nada. Devuelve null en vez de números en los que no se puede confiar. */
+/** El diagnóstico de los DOS controles, por separado, para poder decir
+ *  CUÁL de los dos falló en vez de un «null» mudo. */
+export function controles(): { positivo: number; negativo: number; ok: boolean; fallo: string | null } {
+  const positivo = buscar(CANARIO).n;
+  const negativo = buscar(INI + CANARIO_NEGATIVO + FIN).n;
+  const fallo = positivo === 0
+    ? `el canario POSITIVO «${CANARIO}» da cero: la consulta o el corpus están rotos, y entonces ningún cero significa nada`
+    : negativo > 0
+      ? `el canario NEGATIVO «${CANARIO_NEGATIVO}» da ${negativo} y tiene que dar cero: el límite de palabra está disparando DENTRO de las palabras, así que todos los números están inflados`
+      : null;
+  return { positivo, negativo, ok: fallo === null, fallo };
+}
+
+/** LA PUERTA HONESTA: corre una tanda CON LOS DOS CONTROLES delante. El
+ *  positivo demuestra que la consulta encuentra lo que debe; el negativo,
+ *  que no encuentra lo que no debe. Con uno solo el instrumento ya contó
+ *  de más una vez. Devuelve null en vez de números en los que no se puede
+ *  confiar. */
 export function tanda(patrones: string[], ctx = 0): Hallazgo[] | null {
-  const canario = buscar(CANARIO);
-  if (canario.n === 0) return null;
+  if (!controles().ok) return null;
   return patrones.map((p) => buscar(p, ctx));
 }
 
@@ -104,8 +131,8 @@ if (/[/\\]corpus-ro\.ts$/.test(process.argv[1] ?? '')) {
   let rs: Hallazgo[] | null;
   try { rs = tanda(patrones, ctx); }
   catch (e) { console.error(`PATRÓN RECHAZADO — ${(e as Error).message}`); process.exit(2); }
-  if (!rs) { console.error(`CANARIO «${CANARIO}» a cero: la consulta o el corpus están rotos. No hay números que leer.`); process.exit(1); }
-  console.log(`# Corpus rumano — ${T.split(' ').length.toLocaleString('es')} palabras · canario «${CANARIO}» OK\n`);
+  if (!rs) { console.error(`CONTROL ROTO — ${controles().fallo}. No hay números que leer.`); process.exit(1); }
+  console.log(`# Corpus rumano — ${T.split(' ').length.toLocaleString('es')} palabras · canario + «${CANARIO}» OK · canario − «${CANARIO_NEGATIVO}» 0 OK\n`);
   for (const r of rs) {
     console.log(`- \`${r.patron}\` → **${r.n}**`);
     for (const e of r.ejemplos) console.log(`    ${e}`);
