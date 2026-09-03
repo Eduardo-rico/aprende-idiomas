@@ -1,7 +1,7 @@
 // lib/data/languages/la/lexicon-l1.ts — el vocabulario de L1 que la máquina
 // de paradigmas declina y conjuga. Entrada = lema + genitivo (o infinitivo),
 // que es el punto `l2-genitivo-clave`.
-import type { EntradaNominal, EntradaVerbal } from './paradigma-la';
+import type { EntradaNominal, EntradaVerbal, EntradaAdjetivo } from './paradigma-la';
 
 export const NOMBRES_L1: EntradaNominal[] = [
   { lema: 'puella', genitivo: 'puellae', genero: 'f', glosa: 'niña' },
@@ -31,6 +31,19 @@ export const NOMBRES_L1: EntradaNominal[] = [
   { lema: 'puer', genitivo: 'puerī', genero: 'm', glosa: 'niño' },
   { lema: 'ager', genitivo: 'agrī', genero: 'm', glosa: 'campo' },
   { lema: 'magister', genitivo: 'magistrī', genero: 'm', glosa: 'maestro' },
+  // ── 3.ª. El nominativo NO se deduce del tema y el tema NO se deduce del
+  //    nominativo: es el punto `l2-genitivo-clave` en su forma más pura.
+  { lema: 'rēx', genitivo: 'rēgis', genero: 'm', glosa: 'rey' },
+  { lema: 'homō', genitivo: 'hominis', genero: 'm', glosa: 'hombre' },
+  { lema: 'pater', genitivo: 'patris', genero: 'm', glosa: 'padre' },
+  { lema: 'māter', genitivo: 'mātris', genero: 'f', glosa: 'madre' },
+  { lema: 'urbs', genitivo: 'urbis', genero: 'f', glosa: 'ciudad', iStem: true },
+  // Neutros de 3.ª: los únicos que rompen la colinealidad entre «rima» y
+  // «el género español engaña», porque un neutro de 2.ª rima siempre.
+  { lema: 'opus', genitivo: 'operis', genero: 'n', glosa: 'obra' },
+  { lema: 'corpus', genitivo: 'corporis', genero: 'n', glosa: 'cuerpo' },
+  { lema: 'nōmen', genitivo: 'nōminis', genero: 'n', glosa: 'nombre' },
+  { lema: 'mare', genitivo: 'maris', genero: 'n', glosa: 'mar', iStem: true },
   // 2.ª neutra
   { lema: 'bellum', genitivo: 'bellī', genero: 'n', glosa: 'guerra' },
   { lema: 'dōnum', genitivo: 'dōnī', genero: 'n', glosa: 'regalo' },
@@ -52,4 +65,18 @@ export const VERBOS_L1: EntradaVerbal[] = [
   { lema: 'audiō', infinitivo: 'audīre', glosa: 'oír' },
   { lema: 'inveniō', infinitivo: 'invenīre', glosa: 'encontrar' },
   { lema: 'custōdiō', infinitivo: 'custōdīre', glosa: 'guardar' },
+];
+
+// Adjetivos de la primera clase. El `tema` va aparte del lema por el mismo
+// motivo que el genitivo en los nombres: en los `-er` no se deduce
+// (`pulcher/pulchr-` lo pierde, `miser/miser-` lo conserva), y el alumno
+// tampoco puede deducirlo. Los de la 3.ª (`ācer`, `omnis`, `fēlīx`) son el
+// punto `l4-adjetivo-3a` y esperan a que la máquina tenga la 3.ª.
+export const ADJETIVOS_L1: EntradaAdjetivo[] = [
+  { lema: 'bonus', tema: 'bon', glosa: 'bueno' },
+  { lema: 'magnus', tema: 'magn', glosa: 'grande' },
+  { lema: 'parvus', tema: 'parv', glosa: 'pequeño' },
+  { lema: 'longus', tema: 'long', glosa: 'largo' },
+  { lema: 'pulcher', tema: 'pulchr', glosa: 'hermoso' },
+  { lema: 'miser', tema: 'miser', glosa: 'desdichado' },
 ];

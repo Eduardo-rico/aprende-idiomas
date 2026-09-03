@@ -72,10 +72,12 @@ export const REFLEJOS: [string, string, 'larga' | 'breve', string][] = [
   ['amicum', 'amigo', 'larga', 'ī > i; ĭ habría dado e'],
   ['filium', 'hijo', 'larga', 'ī > i'],
   ['ducit', 'aduce', 'larga', 'ū > u; ŭ habría dado o'],
+  // Un adjetivo, porque la tabla los ignoraba y ahora la máquina los tiene.
+  ['bonus', 'bueno', 'breve', 'sólo ŏ diptonga en ue'],
 ];
 
-import { paradigmaNominal, paradigmaVerbal, declinar, conjugar } from './paradigma-la';
-import { NOMBRES_L1, VERBOS_L1 } from './lexicon-l1';
+import { paradigmaNominal, paradigmaVerbal, declinar, conjugar, declinarAdjetivo, type Caso, type Numero } from './paradigma-la';
+import { NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1 } from './lexicon-l1';
 
 const VOCAL_LARGA = /[āēīōūĀĒĪŌŪ]/;
 export const sinMacron = (s: string) =>
@@ -99,6 +101,13 @@ export function formasValidas(): Map<string, Set<string>> {
   };
   for (const e of NOMBRES_L1) for (const f of Object.values(paradigmaNominal(e))) mete(f);
   for (const e of VERBOS_L1) for (const f of Object.values(paradigmaVerbal(e))) mete(f);
+  // Los adjetivos, que se me olvidaron al añadirlos a la máquina: el gate
+  // marcó `bonus` como forma desconocida en el primer lote que los usó.
+  const CASOS: Caso[] = ['nom', 'ac', 'gen', 'dat', 'abl', 'voc'];
+  for (const a of ADJETIVOS_L1)
+    for (const g of ['m', 'f', 'n'] as const)
+      for (const num of ['sg', 'pl'] as Numero[])
+        for (const c of CASOS) mete(declinarAdjetivo(a, g, c, num));
   CACHE = m;
   return m;
 }
@@ -147,12 +156,27 @@ export function auditarPorReflejos(): string[] {
  *  usa el lema para nada en la 2.ª declinación regular, así que un lema
  *  mal macronizado no cambiaba ni una forma generada — y por eso
  *  envenenarlo no hacía saltar a nadie. Ahora sí. */
+/** Los lemas cuyo nominativo la máquina no deriva, así que este gate no
+ *  puede contrastarlos. Exportado para que el test lo vea y se queje si
+ *  crece sin motivo. */
+export const noContrastables: string[] = [];
+
 export function revisarCoherenciaLexico(): string[] {
   const out: string[] = [];
+  noContrastables.length = 0;
   for (const e of NOMBRES_L1) {
-    // Los `-er`/`-ir` devuelven el lema por construcción: ahí no hay nada
-    // que contrastar, y se dice en vez de fingir cobertura.
-    if (/(er|ir)$/.test(e.lema.normalize('NFC')) && e.genero !== 'n') continue;
+    // DONDE ESTE GATE NO PUEDE MEDIR, y se dice en vez de fingir cobertura:
+    // cuando la máquina devuelve el LEMA por construcción, contrastarlo con
+    // el lema es compararlo consigo mismo. Pasa en los `-er`/`-ir` de la
+    // 2.ª y en TODA la 3.ª, cuyo nominativo es dato y no derivación
+    // (`rēx` contra `rēg-`, `opus` contra `oper-`).
+    //
+    // Se anota, y por eso `celdasNoContrastables` sale en el resultado: un
+    // salto silencioso convierte un gate en decoración sin que nadie lo
+    // decida, y al añadir la 3.ª este pasó de cubrir todo a cubrir la
+    // mitad sin cambiar de color.
+    const esLema = /(er|ir)$/.test(e.lema.normalize('NFC')) && e.genero !== 'n';
+    if (esLema || e.genitivo.normalize('NFC').endsWith('is')) { noContrastables.push(e.lema); continue; }
     const derivado = declinar(e, 'nom', 'sg');
     if (derivado.normalize('NFC') !== e.lema.normalize('NFC')) {
       out.push(`«${e.lema}»: del genitivo «${e.genitivo}» la máquina deriva «${derivado}»`);

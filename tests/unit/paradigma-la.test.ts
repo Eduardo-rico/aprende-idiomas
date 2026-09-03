@@ -10,7 +10,7 @@
 import { describe, it, expect } from 'vitest';
 import { paradigmaNominal, paradigmaVerbal, declinar, conjugar } from '../../lib/data/languages/la/paradigma-la';
 import { NOMBRES_L1, VERBOS_L1 } from '../../lib/data/languages/la/lexicon-l1';
-import { revisarCantidad, auditarPorReflejos } from '../../lib/data/languages/la/cantidad';
+import { revisarCantidad, auditarPorReflejos, revisarCoherenciaLexico, noContrastables } from '../../lib/data/languages/la/cantidad';
 import atestacion from '../../lib/data/languages/la/atestacion-l1.json';
 
 const FILIUS = { lema: 'fīlius', genitivo: 'fīliī', genero: 'm' as const, glosa: 'hijo' };
@@ -79,6 +79,38 @@ describe('la síncopa vive en el DATO, no en el código', () => {
   });
 });
 
+describe('la TERCERA, donde el nominativo es dato y no derivación', () => {
+  const opus = { lema: 'opus', genitivo: 'operis', genero: 'n' as const, glosa: 'obra' };
+  const rex = { lema: 'rēx', genitivo: 'rēgis', genero: 'm' as const, glosa: 'rey' };
+  const urbs = { lema: 'urbs', genitivo: 'urbis', genero: 'f' as const, glosa: 'ciudad', iStem: true };
+  const mare = { lema: 'mare', genitivo: 'maris', genero: 'n' as const, glosa: 'mar', iStem: true };
+
+  it('el tema sale del genitivo y el nominativo del lema, porque no se deducen', () => {
+    // `rēx` contra `rēg-`, `opus` contra `oper-`, `nōmen` contra `nōmin-`:
+    // es `l2-genitivo-clave` en su forma más pura.
+    expect(declinar(rex, 'ac', 'sg')).toBe('rēgem');
+    expect(declinar(rex, 'nom', 'sg')).toBe('rēx');
+    expect(declinar(opus, 'gen', 'sg')).toBe('operis');
+    expect(declinar(opus, 'nom', 'pl')).toBe('opera');
+  });
+
+  it('el neutro iguala nominativo, acusativo y vocativo también aquí', () => {
+    const p = paradigmaNominal(opus);
+    expect([p['nom.sg'], p['ac.sg'], p['voc.sg']]).toEqual(['opus', 'opus', 'opus']);
+    expect([p['nom.pl'], p['ac.pl']]).toEqual(['opera', 'opera']);
+  });
+
+  it('el tema en -i cambia tres celdas, y NO se deduce de la forma', () => {
+    // `urbs/urbis` lo es y `rēx/rēgis` no, con el mismo aspecto: es dato.
+    expect(declinar(urbs, 'gen', 'pl')).toBe('urbium');
+    expect(declinar(rex, 'gen', 'pl')).toBe('rēgum');
+    // y en los neutros toca además el ablativo singular y el plural
+    expect(declinar(mare, 'abl', 'sg')).toBe('marī');
+    expect(declinar(mare, 'nom', 'pl')).toBe('maria');
+    expect(declinar(opus, 'abl', 'sg')).toBe('opere');
+  });
+});
+
 describe('el verbo, y la trampa de la vocal temática', () => {
   it('la temática se ABREVIA ante -t y -nt: `amat`, no `amāt`', () => {
     // El error típico del material generado, por analogía con el
@@ -108,8 +140,8 @@ describe('los tres caminos sobre las 384 formas', () => {
     ...VERBOS_L1.flatMap((e) => Object.values(paradigmaVerbal(e))),
   ];
 
-  it('la máquina genera 384 formas y ninguna falla la cantidad', () => {
-    expect(todas).toHaveLength(384);
+  it('la máquina genera 492 formas y ninguna falla la cantidad', () => {
+    expect(todas).toHaveLength(492);
     for (const f of todas) expect(revisarCantidad(f), f).toEqual([]);
   });
 
@@ -139,5 +171,21 @@ describe('los tres caminos sobre las 384 formas', () => {
       }
     }
     expect(atestacion.tokens).toBe(227301);
+  });
+});
+
+describe('dónde este gate NO puede medir, dicho en vez de pasado en verde', () => {
+  it('nombra los lemas cuyo nominativo es dato y no derivación', () => {
+    // Al añadir la 3.ª, `revisarCoherenciaLexico` pasó de contrastar todo a
+    // contrastar la mitad SIN CAMBIAR DE COLOR: el nominativo de la 3.ª lo
+    // pone el lema, así que compararlo con el lema es compararlo consigo
+    // mismo. Un salto silencioso convierte un gate en decoración.
+    expect(revisarCoherenciaLexico()).toEqual([]);
+    expect(noContrastables.length).toBe(12);
+    expect(noContrastables).toContain('rēx');
+    expect(noContrastables).toContain('opus');
+    expect(noContrastables).toContain('ager');
+    // Y los que sí se contrastan siguen siendo la mayoría.
+    expect(NOMBRES_L1.length - noContrastables.length).toBeGreaterThan(noContrastables.length);
   });
 });
