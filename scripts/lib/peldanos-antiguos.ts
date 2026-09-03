@@ -68,12 +68,17 @@ export const PELDANOS: Record<Lengua, Peldano[]> = {
     { id: 'L4', sistemas: ['el ORDEN POÉTICO: hipérbaton, léxico poético, hexámetro y dístico'],
       prosa: 'Orden poético: hipérbaton, léxico poético, hexámetro y dístico',
       ejemplares: ['Virgilio', 'Ovidio'] },
-    // El que destapó todo. Se deja declarado CON el defecto a la vista
-    // en vez de arreglarlo por lo bajo: es el caso que el gate debe cazar
-    // y el que prueba que el gate ve.
-    { id: 'L5', sistemas: ['brevitas y variatio (idiolecto de prosa comprimida)', 'metros líricos', 'morfología pre-clásica'],
-      prosa: 'El idiolecto de autor y la lengua arcaica: brevitas y variatio; metros líricos; morfología pre-clásica',
-      ejemplares: ['Tácito', 'Horacio', 'Plauto'] },
+    // L5 DISUELTO (2026-09-03). Fue el que destapó todo: sus tres
+    // representantes midieron 72,4 · 64,1 · 51,3 —21 puntos de abanico—
+    // y Plauto quedó 18 puntos POR DEBAJO del ancla de L4, así que la
+    // cima latina fallaba el ORDEN *y* la COHESIÓN a la vez. Lo que
+    // sigue a L3 son especializaciones declaradas: verso épico, verso
+    // lírico, prosa comprimida y drama arcaico. Las dos últimas van
+    // «declaradas, no medidas»: sus ejes son sintáctico y morfológico y
+    // este instrumento no los ve.
+    //
+    // El caso se conserva como fixture del test, no aquí: un peldaño
+    // roto no se deja en la tabla de peldaños buenos.
   ],
   grc: [
     { id: 'G1', sistemas: ['el aparato elemental: alfabeto politónico, artículo y sus posiciones, tres declinaciones, presente e imperfecto, participio'],
@@ -84,8 +89,12 @@ export const PELDANOS: Record<Lengua, Peldano[]> = {
     // («el ASPECTO») y luego DOS sistemas más colgados detrás en frases
     // sueltas. La voz media y los verbos contractos no son parte del
     // aspecto: se aprenden aparte y no dependen de él.
-    { id: 'G2', sistemas: ['el ASPECTO: temas de presente/aoristo/perfecto y su valor fuera del indicativo', 'la voz media', 'los verbos contractos'],
-      prosa: 'El ASPECTO: los temas de presente / aoristo / perfecto, y qué significan fuera del indicativo. Voz media. Verbos contractos',
+    // G2 PARTIDO (2026-09-03) por el gate: llevaba dentro el aspecto, la
+    // voz media y los verbos contractos, que no dependen unos de otros.
+    // Los dos últimos pasan a ser PUNTOS del inventario dentro de
+    // G2a-G3, no peldaños.
+    { id: 'G2a', sistemas: ['el ASPECTO: temas de presente/aoristo/perfecto y su valor fuera del indicativo'],
+      prosa: 'El ASPECTO: los temas de presente / aoristo / perfecto, y qué significan fuera del indicativo',
       ejemplares: ['Jenofonte'] },
     { id: 'G3', sistemas: ['el aparato ático: artículo+infinitivo, discurso indirecto en sus tres construcciones, optativo y sistema de ἄν, articulación con μέν/δέ'],
       prosa: 'El aparato ático completo: artículo + infinitivo, discurso indirecto en sus tres construcciones, optativo y sistema de ἄν, articulación con μέν/δέ',
@@ -93,12 +102,23 @@ export const PELDANOS: Record<Lengua, Peldano[]> = {
     // Tercer hallazgo, y de la MISMA forma que L5: dos núcleos
     // coordinados antes de los dos puntos. La prosa de Tucídides y el
     // trímetro trágico no se necesitan el uno al otro.
-    { id: 'G4', sistemas: ['la prosa ática densa: hipérbaton en prosa y elipsis', 'el trímetro yámbico del diálogo dramático'],
-      prosa: 'Prosa densa y diálogo dramático: hipérbaton en prosa, elipsis, trímetro yámbico',
-      ejemplares: ['Tucídides', 'Demóstenes', 'Sófocles', 'Eurípides'] },
-    { id: 'G5', sistemas: ['la mezcla épica', 'el dorio de la lírica coral', 'el registro cómico y la parodia'],
-      prosa: 'Verso y dialecto: mezcla épica, dorio de la lírica coral, registro cómico y parodia',
-      ejemplares: ['Homero', 'Píndaro', 'Aristófanes'] },
+    { id: 'G4', sistemas: ['la prosa ática densa: hipérbaton en prosa y elipsis'],
+      prosa: 'La prosa ática densa: hipérbaton en prosa y elipsis',
+      ejemplares: ['Tucídides', 'Demóstenes'] },
+    // G5 DISUELTO (2026-09-03). Falló la COHESIÓN, no el orden: sus tres
+    // miembros quedaron los tres por encima del ancla de G4 con IC
+    // disjuntos (Homero 50,4 · Aristófanes 54,7 · Píndaro 66,5 contra
+    // Tucídides 41,3), pero a 16 puntos unos de otros y con tres sistemas
+    // distintos dentro. Un peldaño necesita las DOS cosas.
+    //
+    // Diferencia con el latín, y no es cosmética: allí la cima estaba
+    // ROTA —Plauto caía 18 puntos POR DEBAJO del ancla—, aquí no. De
+    // estas tres sí se puede afirmar que **todas son más difíciles que
+    // G4, cada una por su lado**; de las latinas, no.
+    //
+    // Lo que sigue son ESPECIALIZACIONES, no peldaños: ninguna afirma
+    // orden interno, y sólo asciende a peldaño la que tenga dos miembros
+    // ordenables en su propio eje con IC disjuntos.
   ],
 };
 

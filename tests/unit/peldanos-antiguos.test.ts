@@ -19,24 +19,43 @@ import { PELDANOS, revisarPeldanos, nucleosCoordinados, type Peldano } from '@/s
 
 const ids = (h: { peldano: string }[]) => [...new Set(h.map((x) => x.peldano))].sort();
 
+// Los cuatro peldaños que el gate cazó el 2026-09-03 —L5, G5, G4, G2— ya
+// están arreglados, así que el gate tiene que dar CERO. Y ahí empieza su
+// valor de verdad, que no está en los cuatro de aquel día sino en el
+// peldaño once. Los casos históricos se conservan abajo como fixtures,
+// palabra por palabra, para que sigan probando que el gate ve.
+const HISTORICOS: Peldano[] = [
+  { id: 'L5(histórico)', sistemas: ['brevitas y variatio', 'metros líricos', 'morfología pre-clásica'],
+    prosa: 'El idiolecto de autor y la lengua arcaica: brevitas y variatio; metros líricos; morfología pre-clásica',
+    ejemplares: ['Tácito', 'Horacio', 'Plauto'] },
+  { id: 'G5(histórico)', sistemas: ['la mezcla épica', 'el dorio de la lírica coral', 'el registro cómico'],
+    prosa: 'Verso y dialecto: mezcla épica, dorio de la lírica coral, registro cómico y parodia',
+    ejemplares: ['Homero', 'Píndaro', 'Aristófanes'] },
+  { id: 'G4(histórico)', sistemas: ['la prosa ática densa', 'el trímetro yámbico del diálogo dramático'],
+    prosa: 'Prosa densa y diálogo dramático: hipérbaton en prosa, elipsis, trímetro yámbico',
+    ejemplares: ['Tucídides', 'Sófocles'] },
+  { id: 'G2(histórico)', sistemas: ['el ASPECTO', 'la voz media', 'los verbos contractos'],
+    prosa: 'El ASPECTO: los temas de presente / aoristo / perfecto. Voz media. Verbos contractos',
+    ejemplares: ['Jenofonte'] },
+];
+
 describe('el gate caza los peldaños que empaquetan varios sistemas', () => {
-  it('LATÍN: caza L5 y sólo L5', () => {
-    const h = revisarPeldanos('la');
-    expect(ids(h)).toEqual(['L5']);
-    expect(h[0]!.clase).toBe('varios-sistemas');
-    expect(h[0]!.detalle).toContain('3 sistemas');
+  it('los CUATRO casos históricos siguen cazándose, palabra por palabra', () => {
+    const guardado = PELDANOS.la;
+    try {
+      (PELDANOS as Record<string, Peldano[]>).la = HISTORICOS;
+      expect(ids(revisarPeldanos('la'))).toEqual(['G2(histórico)', 'G4(histórico)', 'G5(histórico)', 'L5(histórico)']);
+    } finally {
+      (PELDANOS as Record<string, Peldano[]>).la = guardado;
+    }
   });
 
-  it('GRIEGO: caza G2, G4 y G5', () => {
-    // G5 es el hermano de L5 y se esperaba. Los otros dos salieron de la
-    // auditoría y son hallazgos:
-    //  · G4 «prosa densa Y diálogo dramático» — la prosa de Tucídides y
-    //    el trímetro trágico no se necesitan el uno al otro.
-    //  · G2 tiene la MISMA enfermedad en OTRA FORMA: no coordina dos
-    //    núcleos antes de los dos puntos, sino que cuelga dos sistemas
-    //    más detrás, en frases sueltas («… Voz media. Verbos
-    //    contractos»). La voz media no es parte del aspecto.
-    expect(ids(revisarPeldanos('grc'))).toEqual(['G2', 'G4', 'G5']);
+  it('y hoy el gate está en CERO en las dos lenguas', () => {
+    // «Después de arreglarlos tiene que quedar en cero y quedarse ahí»:
+    // marcar 4 de 10 estaba justificado sólo mientras los hallazgos
+    // fueran reales. Su valor empieza aquí.
+    expect(revisarPeldanos('la')).toEqual([]);
+    expect(revisarPeldanos('grc')).toEqual([]);
   });
 
   it('NO toca los peldaños que enumeran PIEZAS de un solo sistema', () => {
@@ -101,11 +120,16 @@ describe('lo que el gate NO puede ver, dicho en vez de fingido', () => {
     // sueltas, y ahí no hay núcleos coordinados que contar. Para esa
     // forma manda el campo declarado, no el texto — y por eso el gate es
     // un invariante y la prosa sólo un aviso.
-    const g2 = PELDANOS.grc.find((p) => p.id === 'G2')!;
-    expect(nucleosCoordinados(g2.prosa)).toBe(1);
-    expect(g2.sistemas.length).toBeGreaterThan(1);
-    // Lo caza igualmente, pero por el campo declarado.
-    expect(revisarPeldanos('grc').some((h) => h.peldano === 'G2' && h.clase === 'varios-sistemas')).toBe(true);
+    const g2 = HISTORICOS.find((p) => p.id === 'G2(histórico)')!;
+    expect(nucleosCoordinados(g2.prosa)).toBe(1);   // la prosa NO lo delata
+    expect(g2.sistemas.length).toBeGreaterThan(1);  // el campo declarado SÍ
+    const guardado = PELDANOS.la;
+    try {
+      (PELDANOS as Record<string, Peldano[]>).la = [g2];
+      expect(revisarPeldanos('la').some((h) => h.clase === 'varios-sistemas')).toBe(true);
+    } finally {
+      (PELDANOS as Record<string, Peldano[]>).la = guardado;
+    }
   });
 
   it('cada peldaño declara ejemplares, y con UNO no se afirma orden', () => {
