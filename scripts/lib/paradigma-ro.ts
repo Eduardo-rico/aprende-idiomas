@@ -191,8 +191,20 @@ export function temaInfinitivo(inf: string): string {
   const v = inf.replace(/^a /, '');
   const c = conjugacionDe(inf);
   const t = c === 'II' ? v.slice(0, -2) : v.slice(0, -1);
-  // «a ști»: quitar la -i deja «șt», sin vocal. La i ES del tema.
-  return /[aeiouăâî]/.test(t) ? t : v;
+  if (/[aeiouăâî]/.test(t)) return t;
+  // Sin vocal en el tema hay DOS casos y la v0 los trataba igual,
+  // devolviendo el infinitivo entero:
+  //   · «a ști» → «șt»: la -i ES del tema y hay que conservarla ⇒ «ști».
+  //   · «a da», «a sta», «a bea», «a vrea» → «d», «st», «b», «vr»: el tema
+  //     es la consonante, y devolver «da» fabricaba *daăm, *daat, *staat,
+  //     *beaem, *vreaem.
+  // Hoy no explotaba porque los cuatro llevan `irregular` y `participio`
+  // guardados y ninguna rama llegaba aquí. Explotaría el día que alguien
+  // quitara un record por «este verbo ya no hace falta guardarlo entero»,
+  // y saldría `daăm` sin que nada fallara: es «el fallo que devuelve un
+  // número plausible», sólo que aquí devuelve una PALABRA plausible.
+  // Lo cazó el lingüista adversarial en el lote 14, por omisión.
+  return /i$/.test(v) ? v : t;
 }
 
 /** Las desinencias que empiezan por i/e pierden esa vocal tras tema en -i:
