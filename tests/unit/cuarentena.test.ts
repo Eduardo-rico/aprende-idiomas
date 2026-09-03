@@ -118,13 +118,33 @@ describe('cuarentena — puerta de servicio', () => {
 // Es lo que hizo falta cuando la reversibilidad se probó y salieron 100
 // ítems de la cuarentena vieja SIN motivo: la razón vivía en un comentario
 // de `loaders.ts` y no se podían deshacer caso a caso.
+// Fase F (2026-09-03): esto miraba SÓLO `pt/blocks`, escrito cuando la app
+// era monolingüe. El 2026-09-03 se retiraron 8 ítems rumanos —su «mala»
+// era arcaica, no agramatical— y NINGUNO estaba cubierto por esta regla:
+// el invariante existía y no protegía la lengua donde se estaba
+// produciendo. Es la tercera vez esta noche que añadir una lengua deja
+// una regla vigilando un sitio donde ya no pasa nada (ver el test de
+// enlaces, que anteponía `/pt` a `/ro`). Ahora recorre las cuatro, y una
+// lengua sin corpus todavía no rompe nada: simplemente no aporta ítems.
+const LENGUAS = ['pt', 'ro', 'cs', 'ru'];
+
 describe('nada se retira ni se aparca sin decir por qué', () => {
-  const dir = path.join(process.cwd(), 'lib/data/languages/pt/blocks');
-  const todos = fs.readdirSync(dir).filter((f) => /^b\d+\.json$/.test(f))
-    .flatMap((f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')) as
-      { id: string; variantStatus?: string; variantVerificacion?: string }[]);
+  const todos = LENGUAS.flatMap((lang) => {
+    const dir = path.join(process.cwd(), 'lib/data/languages', lang, 'blocks');
+    if (!fs.existsSync(dir)) return [];
+    return fs.readdirSync(dir).filter((f) => /^b\d+\.json$/.test(f))
+      .flatMap((f) => (JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')) as
+        { id: string; variantStatus?: string; variantVerificacion?: string }[])
+        .map((x) => ({ ...x, id: `${lang}:${x.id}` })));
+  });
   const conMotivo = (x: { variantVerificacion?: string }) => String(x.variantVerificacion ?? '').trim() !== '';
 
+  it('el barrido llega de verdad a las cuatro lenguas', () => {
+    // Sin esto, un `blocks/` que se mueva de sitio dejaría el filtro en
+    // cero ítems y los dos tests de abajo saldrían verdes sin mirar nada.
+    expect(todos.length, 'no se leyó ni un ítem: la regla estaría vigilando el vacío').toBeGreaterThan(500);
+    expect(new Set(todos.map((x) => x.id.split(':')[0])).size).toBeGreaterThanOrEqual(2);
+  });
   it('todo ítem en cuarentena lleva su motivo', () => {
     const mudos = todos.filter((x) => x.variantStatus === 'needs-human' && !conMotivo(x));
     expect(mudos.slice(0, 5).map((x) => x.id)).toEqual([]);

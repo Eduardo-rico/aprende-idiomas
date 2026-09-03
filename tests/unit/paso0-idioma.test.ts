@@ -60,7 +60,13 @@ describe('paso0-idioma: el corpus', () => {
     expect(c.conceptos).toBeGreaterThan(0); // paso 1 de la fase F: el inventario
     expect(c.bloques).toBeGreaterThan(0); // b2 y b3 con lecciones (fase F)
     expect(c.ejercicios).toBeGreaterThan(0); // primer lote A1 publicado (2026-09-01)
-    expect(c.servibles).toBe(c.ejercicios);
+    // Exigía servibles === ejercicios, y dejó de ser cierto el 2026-09-03
+    // al retirarse 8 ítems de `r3-sa-vs-infinitivo`. La cuarentena NO es
+    // deuda: el invariante del proyecto no es «no hay retirados» sino
+    // «ningún retirado sin motivo escrito», y eso lo vigila
+    // `cuarentena.test.ts`, que desde hoy cubre las cuatro lenguas.
+    expect(c.servibles).toBeGreaterThan(0);
+    expect(c.servibles).toBeLessThanOrEqual(c.ejercicios);
     // La biblioteca rumana se mezcló el 2026-09-01: 818 lecturas. El contador
     // reproduce el 2.831.967 del agente de lecturas por un camino independiente.
     expect(c.lecturas).toBeGreaterThan(800);
