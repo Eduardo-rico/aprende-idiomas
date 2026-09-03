@@ -80,5 +80,362 @@
       "calcoEs": "Es importante que los niños duerman ocho horas.",
       "explanationEs": "También con los impersonales: «e important CA copiii SĂ doarmă». La partícula «să» va pegada al verbo, así que todo lo que el español mete detrás de «que» tiene que ir delante de «ca» o detrás del verbo."
     }
+  },
+  {
+    "id": "30920537",
+    "blockId": 8,
+    "lessonId": "b8-l1-subordonarea",
+    "difficulty": 2,
+    "concepts": [
+      "r8-completivas-ca-sa"
+    ],
+    "tags": [
+      "ro-corr-b1c",
+      "correccion"
+    ],
+    "contentHash": "30920537874df3c1a3fb215ab3ed4756f5766bc5cbddcd6c60e0ed68f3e8d4d3",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1C (2026-09-03): la frase mala es el calco de «Aguardo a que mis amigos lleguen a tiempo.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Aștept să prietenii mei sosească la timp.",
+      "correct": "Aștept ca prietenii mei să sosească la timp.",
+      "alternatives": [
+        "Aștept să sosească prietenii mei la timp."
+      ],
+      "calcoEs": "Aguardo a que mis amigos lleguen a tiempo.",
+      "explanationEs": "El sujeto «prietenii mei» no cabe entre «să» y el verbo: ahí sólo entran los clíticos, «nu» y los adverbios «mai, și, tot, prea, cam». Con el sujeto delante, la subordinada se abre con «ca»; la otra salida es posponerlo detrás del verbo."
+    }
+  },
+  {
+    "id": "06741cf0",
+    "blockId": 8,
+    "lessonId": "b8-l1-subordonarea",
+    "difficulty": 2,
+    "concepts": [
+      "r8-completivas-ca-sa"
+    ],
+    "tags": [
+      "ro-corr-b1c",
+      "correccion"
+    ],
+    "contentHash": "06741cf0b4879d9072e63b24f0482b4b64b14a98aa201617517e6ff67ab81bb1",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1C (2026-09-03): la frase mala es el calco de «Es necesario que los estudiantes vengan más temprano.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "E necesar să studenții vină mai devreme.",
+      "correct": "E necesar ca studenții să vină mai devreme.",
+      "alternatives": [
+        "E necesar să vină studenții mai devreme.",
+        "Este necesar ca studenții să vină mai devreme.",
+        "Este necesar să vină studenții mai devreme."
+      ],
+      "calcoEs": "Es necesario que los estudiantes vengan más temprano.",
+      "explanationEs": "También con los impersonales. El español encadena «que» + sujeto + verbo y el rumano no puede: «să» va pegado al verbo, así que el sujeto sale fuera y aparece «ca» delante de él."
+    }
+  },
+  {
+    "id": "c1aa5ff2",
+    "blockId": 8,
+    "lessonId": "b8-l1-subordonarea",
+    "difficulty": 2,
+    "concepts": [
+      "r8-completivas-ca-sa"
+    ],
+    "tags": [
+      "ro-corr-b1c",
+      "correccion"
+    ],
+    "contentHash": "c1aa5ff2883abf102ea7ea286f1d9f33b5b0aa30145d3ae91eeff0abae4b34e2",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1C (2026-09-03): la frase mala es el calco de «El profesor pide que los alumnos lean el texto en casa.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Profesorul cere să elevii citească textul acasă.",
+      "correct": "Profesorul cere ca elevii să citească textul acasă.",
+      "alternatives": [
+        "Profesorul cere să citească elevii textul acasă."
+      ],
+      "calcoEs": "El profesor pide que los alumnos lean el texto en casa.",
+      "explanationEs": "Con los verbos de petición pasa lo mismo que con los de voluntad: «cere CA elevii SĂ citească». Lo que decide no es el verbo principal sino dónde queda el sujeto, y delante del verbo subordinado no cabe."
+    }
+  },
+  {
+    "id": "7e512015",
+    "blockId": 8,
+    "lessonId": "b8-l1-subordonarea",
+    "difficulty": 2,
+    "concepts": [
+      "r8-completivas-ca-sa"
+    ],
+    "tags": [
+      "ro-corr-b1c",
+      "correccion"
+    ],
+    "contentHash": "7e512015713f717a4f4cdb17e684fec2aa130449fb8314e1486e438ecffd248a",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1C (2026-09-03): la frase mala es el calco de «Quiero que nuestros vecinos cierren la puerta.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Vreau să vecinii noștri închidă poarta.",
+      "correct": "Vreau ca vecinii noștri să închidă poarta.",
+      "alternatives": [
+        "Vreau să închidă vecinii noștri poarta."
+      ],
+      "calcoEs": "Quiero que nuestros vecinos cierren la puerta.",
+      "explanationEs": "El grupo «vecinii noștri» es el sujeto de «închidă» y por eso no puede quedarse entre la partícula y el verbo. Escrito con «ca» delante del sujeto, el orden del español se conserva entero."
+    }
+  },
+  {
+    "id": "c43f20d7",
+    "blockId": 8,
+    "lessonId": "b8-l1-subordonarea",
+    "difficulty": 2,
+    "concepts": [
+      "r8-completivas-ca-sa"
+    ],
+    "tags": [
+      "ro-corr-b1c",
+      "correccion"
+    ],
+    "contentHash": "c43f20d722dc4b4dd6b3f7c94e7fc5469abe8dd2f9d55a66650b574573ac4182",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1C (2026-09-03): la frase mala es el calco de «Es bueno que los padres hablen con los profesores.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "E bine să părinții vorbească cu profesorii.",
+      "correct": "E bine ca părinții să vorbească cu profesorii.",
+      "alternatives": [
+        "E bine să vorbească părinții cu profesorii.",
+        "Este bine ca părinții să vorbească cu profesorii.",
+        "Este bine să vorbească părinții cu profesorii."
+      ],
+      "calcoEs": "Es bueno que los padres hablen con los profesores.",
+      "explanationEs": "La partícula «să» y el verbo forman una unidad que nada rompe. Cuando el español mete el sujeto detrás de «que», el rumano lo saca delante y abre con «ca»."
+    }
+  },
+  {
+    "id": "9615500e",
+    "blockId": 8,
+    "lessonId": "b8-l1-subordonarea",
+    "difficulty": 2,
+    "concepts": [
+      "r8-relativas-pe-care"
+    ],
+    "tags": [
+      "ro-corr-b1c",
+      "correccion"
+    ],
+    "contentHash": "9615500e69d67f0a85439ecc5b2849e6f7be7183ed153259374c7cdc5c85fcda",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1C (2026-09-03): la frase mala es el calco de «El hombre que espero es mi vecino.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Omul care aștept este vecinul meu.",
+      "correct": "Omul pe care îl aștept este vecinul meu.",
+      "alternatives": [
+        "Omul pe care-l aștept este vecinul meu.",
+        "Omul pe care îl aștept e vecinul meu.",
+        "Omul pe care-l aștept e vecinul meu."
+      ],
+      "calcoEs": "El hombre que espero es mi vecino.",
+      "explanationEs": "Cuando el relativo es el OBJETO, el rumano pide DOS piezas que van juntas y no se separan: la marca «pe» delante de «care» y el clítico que lo repite junto al verbo. Con antecedente masculino singular el clítico es «îl». El español no pone nada delante de «que» ni repite nada, así que aquí no hay de dónde copiar."
+    }
+  },
+  {
+    "id": "6cfb8820",
+    "blockId": 8,
+    "lessonId": "b8-l1-subordonarea",
+    "difficulty": 2,
+    "concepts": [
+      "r8-relativas-pe-care"
+    ],
+    "tags": [
+      "ro-corr-b1c",
+      "correccion"
+    ],
+    "contentHash": "6cfb8820c25bfe0282e775e0f3179190179a8d85300690032e3a04a092ecb275",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1C (2026-09-03): la frase mala es el calco de «La película que vemos ahora es nueva.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Filmul care vedem acum este nou.",
+      "correct": "Filmul pe care îl vedem acum este nou.",
+      "alternatives": [
+        "Filmul pe care-l vedem acum este nou.",
+        "Filmul pe care îl vedem acum e nou.",
+        "Filmul pe care-l vedem acum e nou."
+      ],
+      "calcoEs": "La película que vemos ahora es nueva.",
+      "explanationEs": "Los neutros se comportan como masculinos en singular, así que el clítico vuelve a ser «îl». Y «pe» hace falta igual aunque el antecedente sea una cosa: ahí el rumano va más lejos que la «a» española, que sólo marca personas."
+    }
+  },
+  {
+    "id": "2ff28562",
+    "blockId": 8,
+    "lessonId": "b8-l1-subordonarea",
+    "difficulty": 2,
+    "concepts": [
+      "r8-relativas-pe-care"
+    ],
+    "tags": [
+      "ro-corr-b1c",
+      "correccion"
+    ],
+    "contentHash": "2ff28562caad438a827bc64359b1397b5894b587284706cc6022ce3c24e4fd16",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1C (2026-09-03): la frase mala es el calco de «La chica que espero es mi hermana.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Fata care aștept este sora mea.",
+      "correct": "Fata pe care o aștept este sora mea.",
+      "alternatives": [
+        "Fata pe care o aștept e sora mea."
+      ],
+      "calcoEs": "La chica que espero es mi hermana.",
+      "explanationEs": "Misma frase y mismo verbo que con «omul», y cambia sólo el clítico: femenino singular «o». La marca «pe» no cambia nunca; lo que hay que elegir es a quién repite el clítico."
+    }
+  },
+  {
+    "id": "a49ca10d",
+    "blockId": 8,
+    "lessonId": "b8-l1-subordonarea",
+    "difficulty": 2,
+    "concepts": [
+      "r8-relativas-pe-care"
+    ],
+    "tags": [
+      "ro-corr-b1c",
+      "correccion"
+    ],
+    "contentHash": "a49ca10d6bb7183f1c99765d91de4d0a9d375620e912e7a0e6436eb237fb0205",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1C (2026-09-03): la frase mala es el calco de «El libro que leemos ahora es muy largo.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Cartea care citim acum este foarte lungă.",
+      "correct": "Cartea pe care o citim acum este foarte lungă.",
+      "alternatives": [
+        "Cartea pe care o citim acum e foarte lungă."
+      ],
+      "calcoEs": "El libro que leemos ahora es muy largo.",
+      "explanationEs": "«Cartea» es femenino singular, así que el clítico es «o» aunque no sea una persona. Y conviene mirar la persona del verbo: «citim» es «leemos», o sea que el sujeto somos nosotros y «cartea» sólo puede ser el objeto."
+    }
+  },
+  {
+    "id": "1ecca039",
+    "blockId": 8,
+    "lessonId": "b8-l1-subordonarea",
+    "difficulty": 2,
+    "concepts": [
+      "r8-relativas-pe-care"
+    ],
+    "tags": [
+      "ro-corr-b1c",
+      "correccion"
+    ],
+    "contentHash": "1ecca03911ceb972af095599463e11a3b2a876e6147e904f29b792c91cf0a80e",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1C (2026-09-03): la frase mala es el calco de «Los compañeros que esperamos vienen en tren.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Colegii care așteptăm vin cu trenul.",
+      "correct": "Colegii pe care îi așteptăm vin cu trenul.",
+      "alternatives": [
+        "Colegii pe care-i așteptăm vin cu trenul."
+      ],
+      "calcoEs": "Los compañeros que esperamos vienen en tren.",
+      "explanationEs": "Masculino plural: el clítico es «îi». «Așteptăm» es «esperamos», así que el sujeto somos nosotros y «colegii» es el objeto — por eso hay que marcarlo con «pe» y repetirlo."
+    }
+  },
+  {
+    "id": "d932301f",
+    "blockId": 8,
+    "lessonId": "b8-l1-subordonarea",
+    "difficulty": 2,
+    "concepts": [
+      "r8-relativas-pe-care"
+    ],
+    "tags": [
+      "ro-corr-b1c",
+      "correccion"
+    ],
+    "contentHash": "d932301fd45d4518fe1194c9626be3b1b98dc65c84ec43a44411c15edbf64300",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1C (2026-09-03): la frase mala es el calco de «Los amigos que visitamos son de Cluj.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Prietenii care vizităm sunt din Cluj.",
+      "correct": "Prietenii pe care îi vizităm sunt din Cluj.",
+      "alternatives": [
+        "Prietenii pe care-i vizităm sunt din Cluj."
+      ],
+      "calcoEs": "Los amigos que visitamos son de Cluj.",
+      "explanationEs": "Otra vez masculino plural, «îi», con otro verbo. Las dos piezas van siempre juntas: sin el clítico la frase no se sostiene, y sin «pe» tampoco."
+    }
+  },
+  {
+    "id": "2e889514",
+    "blockId": 8,
+    "lessonId": "b8-l1-subordonarea",
+    "difficulty": 2,
+    "concepts": [
+      "r8-relativas-pe-care"
+    ],
+    "tags": [
+      "ro-corr-b1c",
+      "correccion"
+    ],
+    "contentHash": "2e889514e905eec36edd9d9d05058eac169b9e94f73dacb9b62e7eccf10e6e85",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1C (2026-09-03): la frase mala es el calco de «Las lecciones que estudio son difíciles.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Lecțiile care învăț sunt grele.",
+      "correct": "Lecțiile pe care le învăț sunt grele.",
+      "alternatives": [],
+      "calcoEs": "Las lecciones que estudio son difíciles.",
+      "explanationEs": "Femenino plural: el clítico es «le». La frase sin «pe» y sin clítico obligaría a leer «care» como sujeto, y entonces el verbo tendría que ser «învață», no «învăț»."
+    }
+  },
+  {
+    "id": "defd849b",
+    "blockId": 8,
+    "lessonId": "b8-l1-subordonarea",
+    "difficulty": 2,
+    "concepts": [
+      "r8-relativas-pe-care"
+    ],
+    "tags": [
+      "ro-corr-b1c",
+      "correccion"
+    ],
+    "contentHash": "defd849b15f1777a38cf0c3aadd5a7d5ccc5cd68401cfd309e1f697da27ea479",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1C (2026-09-03): la frase mala es el calco de «Las flores que compro son para mi madre.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Florile care cumpăr sunt pentru mama.",
+      "correct": "Florile pe care le cumpăr sunt pentru mama.",
+      "alternatives": [
+        "Florile pe care le cumpăr sunt pentru mama mea."
+      ],
+      "calcoEs": "Las flores que compro son para mi madre.",
+      "explanationEs": "Plural otra vez, con «le». Y ojo a la persona: «cumpăr» es «compro», de manera que «florile» no puede ser quien compra — es lo comprado, y va marcado con «pe» y repetido por el clítico."
+    }
   }
 ]
