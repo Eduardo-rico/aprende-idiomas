@@ -30,7 +30,7 @@ export const SUSTANTIVOS_A1: LemaNominal[] = [
   { lema: 'doamnă', genero: 'f', plural: 'doamne', vocSg: null, gloss: 'señora' },
   { lema: 'băiat', genero: 'm', plural: 'băieți', vocSg: 'băiete', vocAlt: ['băiatule'], registro: 'familiar', gloss: 'chico' },
   { lema: 'fată', genero: 'f', plural: 'fete', vocSg: 'fato', registro: 'brusc', dim: 'fetiță', dimPlural: 'fetițe', dimFuente: "DEX '09 s.v. fetiță «diminutiv al lui fată»; DOOM3 fetiță, g.-d. art. fetiței, pl. fetițe", gloss: 'chica' },
-  { lema: 'prieten', genero: 'm', plural: 'prieteni', vocSg: 'prietene', registro: 'neutru', gloss: 'amigo' },
+  { lema: 'prieten', genero: 'm', plural: 'prieteni', vocSg: 'prietene', vocAlt: ['prietenule'], registro: 'neutru', gloss: 'amigo' },
   { lema: 'frate', genero: 'm', plural: 'frați', vocSg: null, gloss: 'hermano' },
   { lema: 'soră', genero: 'f', plural: 'surori', vocSg: 'soro', vocAlt: ['soră'], registro: 'familiar', gloss: 'hermana' },
   { lema: 'mamă', genero: 'f', plural: 'mame', vocSg: 'mamo', registro: 'familiar', gloss: 'madre' },
@@ -42,6 +42,9 @@ export const SUSTANTIVOS_A1: LemaNominal[] = [
   { lema: 'profesor', genero: 'm', plural: 'profesori', vocSg: 'profesorule', vocAlt: ['profesore'], registro: 'brusc', gloss: 'profesor' },
   { lema: 'doctor', genero: 'm', plural: 'doctori', vocSg: 'doctorule', vocAlt: ['doctore'], registro: 'brusc', gloss: 'médico' },
   { lema: 'vecin', genero: 'm', plural: 'vecini', vocSg: 'vecine', vocAlt: ['vecinule'], registro: 'familiar', gloss: 'vecino' },
+  { lema: 'nepot', genero: 'm', plural: 'nepoți', vocSg: 'nepoate', vocAlt: ['nepotule'], registro: 'familiar', gloss: 'nieto; sobrino' },
+  { lema: 'obraz', genero: 'm', plural: 'obraji', gloss: 'mejilla (s.m.; el homónimo neutro obraz/obraze «rostro, honra» es arcaico y NO está aquí)' },
+  { lema: 'turist', genero: 'm', plural: 'turiști', gloss: 'turista' },
   { lema: 'bunic', genero: 'm', plural: 'bunici', vocSg: 'bunicule', registro: 'familiar', gloss: 'abuelo' },
   { lema: 'nume', genero: 'n', plural: 'nume', gloss: 'nombre' },
   // casa y ciudad

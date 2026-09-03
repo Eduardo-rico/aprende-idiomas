@@ -19,18 +19,15 @@
 import { SUSTANTIVOS_A1, VERBOS_A1 } from '../lib/data/languages/ro/lexicon-a1';
 import { paradigmaNominal, paradigmaVerbal, invariantesLema } from './lib/paradigma-ro';
 import { hunspellDisponible, desconocidas } from './lib/hunspell-ro';
+import { EXENCIONES_RO } from './lib/exenciones-hunspell-ro';
 
 const STRICT = process.argv.includes('--strict');
 const tablaDe = process.argv.includes('--tabla') ? process.argv[process.argv.indexOf('--tabla') + 1] : undefined;
 
 /** Formas que Hunspell no tiene y que están atestadas en otra fuente. */
-const EXENCIONES: Record<string, string> = {
-  doctorule: 'dexonline, paradigma de «doctor» (2026-09-01)',
-  profesorule: 'dexonline, paradigma de «profesor»',
-  studentule: 'dexonline, paradigma de «student»',
-  fato: 'DEX \'09, nota de «fată»; currículo l. 538',
-  mamo: 'GALR, vocativo femenino en -o; el lingüista lo listó',
-};
+// Las exenciones viven en `lib/exenciones-hunspell-ro.ts`: estaban
+// escritas en tres sitios y una de las copias no las tenía.
+const EXENCIONES = EXENCIONES_RO;
 
 // ── 1 · invariantes ──────────────────────────────────────────────────
 const errores: string[] = [];

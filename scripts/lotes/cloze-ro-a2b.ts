@@ -106,7 +106,15 @@ export function verificar(items: ClozeRo[]): string[] {
   return v;
 }
 
-if (process.argv[1]?.includes('cloze-ro-a2b')) {
+// EL GUARDIÁN DEL BLOQUE PRINCIPAL VA ANCLADO AL FINAL. La v0 usaba
+// `includes('<nombre>')`, y `cloze-ro-a1` es PREFIJO de `cloze-ro-a1c`,
+// `cloze-ro-a2` lo es de a2b/a2c/a2d/a2e y `corr-ro-a1` de `corr-ro-a1b`:
+// al importar un lote hijo, el bloque principal del padre corría entero
+// —imprimía su tabla y podía llamar a `process.exit(1)` con SUS gates—.
+// Falso rojo hoy; falso verde el día que alguien lea sólo el código de
+// salida y se lo atribuya al lote equivocado. Lo cazó el lingüista
+// adversarial en el lote 11. Tres colisiones reales en once ficheros.
+if (new RegExp(`[/\\\\]cloze-ro-a2b\\.ts$`).test(process.argv[1] ?? '')) {
   const v = verificar(ITEMS);
   if (process.argv.includes('--asigna')) {
     const r = informeAsigna(ITEMS.map((x) => ({ p: x.p, sentence: x.s.replace('___', String(respuestaDim(x) ?? '')), hintEs: x.pista, answer: String(respuestaDim(x) ?? '') })));

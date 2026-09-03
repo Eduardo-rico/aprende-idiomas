@@ -29,6 +29,7 @@ import { SUSTANTIVOS_A1, VERBOS_A1 } from '../../lib/data/languages/ro/lexicon-a
 import { articulado, presente, imperfecto, perfectCompus, participio, paradigmaNominal, diminutivo, PERSONAS, type Persona } from '../lib/paradigma-ro';
 import { revisarOrtografiaRo } from '../../lib/lang/ortografia-ro';
 import { hunspellDisponible, desconocidas } from '../lib/hunspell-ro';
+import { exenta } from '../lib/exenciones-hunspell-ro';
 
 export interface ClozeRo {
   p: string;
@@ -39,7 +40,7 @@ export interface ClozeRo {
    *  defecto el artículo singular; el lote 4 usa plural, artículo plural y
    *  genitivo-dativo definido singular). */
   lema?: string;
-  casilla?: 'N pl' | 'N pl art' | 'GD sg indef' | 'GD sg def' | 'GD pl def' | 'DIM sg';
+  casilla?: 'N pl' | 'N pl art' | 'GD sg indef' | 'GD sg def' | 'GD pl def' | 'DIM sg' | 'V sg' | 'V pl';
   /** derivada: verbo + persona. `t` elige el TIEMPO; por defecto presente,
    *  que es lo único que pedían los lotes 1-6. El participio no lleva
    *  persona. */
@@ -207,12 +208,23 @@ export function verificar(items: ClozeRo[]): string[] {
     const malas = desconocidas(palabras.map((w) => w.replace(/^-|-$/g, '')).filter((w) => !/^[A-ZĂÂÎȘȚ]/.test(w) || w.length > 12));
     // Los nombres propios (București, Cluj, Brașov) no están en ro_RO: se
     // dejan fuera por mayúscula inicial, y se dice.
-    for (const w of malas) v.push(`hunspell no reconoce «${w}» en el lote`);
+    // Y las EXENCIONES, que este gate no tenía: `doctorule` pasaba el
+    // gate del paradigma —donde sí estaban— y lo rechazaba aquí. La lista
+    // vivía en tres sitios y a éste le faltaba. Ahora hay una sola.
+    for (const w of malas) if (!exenta(w)) v.push(`hunspell no reconoce «${w}» en el lote`);
   }
   return v;
 }
 
-if (process.argv[1]?.includes('cloze-ro-a1')) {
+// EL GUARDIÁN DEL BLOQUE PRINCIPAL VA ANCLADO AL FINAL. La v0 usaba
+// `includes('<nombre>')`, y `cloze-ro-a1` es PREFIJO de `cloze-ro-a1c`,
+// `cloze-ro-a2` lo es de a2b/a2c/a2d/a2e y `corr-ro-a1` de `corr-ro-a1b`:
+// al importar un lote hijo, el bloque principal del padre corría entero
+// —imprimía su tabla y podía llamar a `process.exit(1)` con SUS gates—.
+// Falso rojo hoy; falso verde el día que alguien lea sólo el código de
+// salida y se lo atribuya al lote equivocado. Lo cazó el lingüista
+// adversarial en el lote 11. Tres colisiones reales en once ficheros.
+if (new RegExp(`[/\\\\]cloze-ro-a1\\.ts$`).test(process.argv[1] ?? '')) {
   const v = verificar(ITEMS);
   if (process.argv.includes('--json')) {
     console.log(JSON.stringify(ITEMS.map((x, i) => ({ ...x, id: `clro1-${String(i + 1).padStart(3, '0')}`, answer: respuestaDe(x) })), null, 2));

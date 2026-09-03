@@ -17,6 +17,7 @@ import { verificar as verificarRegistro, rubricaDe as rubricaRegistro, type Item
 import { verificar as verificarExplicar, rubricaDe as rubricaExplicar, type ItemExplica } from '../lib/explicar-mediacion';
 import { revisarOrtografiaRo } from '../../lib/lang/ortografia-ro';
 import { hunspellDisponible, desconocidas } from '../lib/hunspell-ro';
+import { EXENCIONES_RO } from '../lib/exenciones-hunspell-ro';
 
 const TRAM = 'r10-registro-tramite';
 const DIM = 'r10-diminutivo-atenuador';
@@ -268,10 +269,7 @@ export const EXPLICAR: ItemExplica[] = [
  *  otras dos (`supică`, `ceaiuț`) no aparecen en DEX, MDA2, DLR ni DOOM3
  *  —`ceaiuț` además tiene forma rival lexicalizada, `ceiuț`, «At: DICȚ.»—
  *  y por eso ésas SÍ se cambiaron: no por el gate, por falta de fuente. */
-const EXENCIONES_HUNSPELL: Record<string, string> = {
-  minuțel: "DLR, s. n. «(Rar) Diminutiv al lui minut», cita Caragiale O. VI, 80 («un minuțel»); MDA2 (2010): minut + suf. -el",
-  minuțele: 'DLR, plural declarado de «minuțel» («Pl.: minuțele»); neutro, de ahí el numeral femenino «două/cinci minuțele» (GALR, doble concordancia del neutro)',
-};
+const EXENCIONES_HUNSPELL = EXENCIONES_RO;
 
 export function verificar(): string[] {
   const v = [...verificarRegistro(REGISTRO), ...verificarExplicar(EXPLICAR)];
@@ -291,7 +289,15 @@ export function verificar(): string[] {
   return v;
 }
 
-if (process.argv[1]?.includes('med-ro-a1')) {
+// EL GUARDIÁN DEL BLOQUE PRINCIPAL VA ANCLADO AL FINAL. La v0 usaba
+// `includes('<nombre>')`, y `cloze-ro-a1` es PREFIJO de `cloze-ro-a1c`,
+// `cloze-ro-a2` lo es de a2b/a2c/a2d/a2e y `corr-ro-a1` de `corr-ro-a1b`:
+// al importar un lote hijo, el bloque principal del padre corría entero
+// —imprimía su tabla y podía llamar a `process.exit(1)` con SUS gates—.
+// Falso rojo hoy; falso verde el día que alguien lea sólo el código de
+// salida y se lo atribuya al lote equivocado. Lo cazó el lingüista
+// adversarial en el lote 11. Tres colisiones reales en once ficheros.
+if (new RegExp(`[/\\\\]med-ro-a1\\.ts$`).test(process.argv[1] ?? '')) {
   const v = verificar();
   console.log(`# Mediación RO-A1 — ${REGISTRO.length} registro + ${EXPLICAR.length} explicar\n`);
   for (const x of REGISTRO) console.log(`- ${x.id} ${x.concepto} ${x.registroFuente}→${x.registroDestino}: ${x.modelo}`);

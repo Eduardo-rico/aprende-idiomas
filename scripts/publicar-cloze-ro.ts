@@ -20,8 +20,10 @@ import { ITEMS as A2, verificar as verificarA2 } from './lotes/cloze-ro-a2';
 import { ITEMS as A2B, verificar as verificarA2B } from './lotes/cloze-ro-a2b';
 import { ITEMS as A2C, verificar as verificarA2C } from './lotes/cloze-ro-a2c';
 import { ITEMS as A2D, verificar as verificarA2D } from './lotes/cloze-ro-a2d';
+import { ITEMS_CON_ALT as A2E, verificar as verificarA2E } from './lotes/cloze-ro-a2e';
+import { ITEMS as A1C, verificar as verificarA1C } from './lotes/cloze-ro-a1c';
 
-const LOTES: Record<string, { items: ClozeRo[]; verificar: (xs: ClozeRo[]) => string[] }> = { a1: { items: A1, verificar: verificarA1 }, a2: { items: A2, verificar: verificarA2 }, a2b: { items: A2B, verificar: verificarA2B }, a2c: { items: A2C, verificar: verificarA2C }, a2d: { items: A2D, verificar: verificarA2D } };
+const LOTES: Record<string, { items: ClozeRo[]; verificar: (xs: ClozeRo[]) => string[] }> = { a1: { items: A1, verificar: verificarA1 }, a2: { items: A2, verificar: verificarA2 }, a2b: { items: A2B, verificar: verificarA2B }, a2c: { items: A2C, verificar: verificarA2C }, a2d: { items: A2D, verificar: verificarA2D }, a2e: { items: A2E, verificar: verificarA2E }, a1c: { items: A1C, verificar: verificarA1C } };
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
 const lote = arg('--lote') ?? '';
 const LOTE = LOTES[lote];

@@ -19,6 +19,7 @@
 // persona y el referente (lección del lote 2).
 import { verificar as verificarBase, preflight, type ItemCorreccion } from '../lib/correccion';
 import { revisarOrtografiaRo } from '../../lib/lang/ortografia-ro';
+import { medirAtajo } from '../lib/atajo-correccion';
 import { hunspellDisponible, desconocidas } from '../lib/hunspell-ro';
 
 const DAT = 'r3-dativo-experimentante';
@@ -31,56 +32,56 @@ export const ITEMS: ItemCorreccion[] = [
   // DOOM3); la forma plena «îmi este» siempre vale y va en alt. «am somn»
   // y «simt mult» salieron (D2/E6 del dictamen): coloquial real el uno,
   // no agramatical el otro.
-  { p: DAT, pasada: 1, espejoEs: false, mala: 'Am foame, mergem să mâncăm?', buena: 'Mi-e foame, mergem să mâncăm?', alt: ['Îmi este foame, mergem să mâncăm?', 'Îmi e foame, mergem să mâncăm?'],
+  { p: DAT, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Am foame, mergem să mâncăm?', buena: 'Mi-e foame, mergem să mâncăm?', alt: ['Îmi este foame, mergem să mâncăm?', 'Îmi e foame, mergem să mâncăm?'],
     calcoEs: 'Tengo hambre, ¿vamos a comer?',
     explicacion: 'El hambre no se «tiene»: «le es» a uno. El experimentante va en dativo, con el clítico pegado a «e»: «mi-e foame» (= «îmi este foame»). «Am foame» calca «tengo hambre» (con determinante sí existe: «am o foame de lup»).' },
-  { p: DAT, pasada: 1, espejoEs: false, mala: 'Am sete, vreau apă.', buena: 'Mi-e sete, vreau apă.', alt: ['Îmi este sete, vreau apă.', 'Îmi e sete, vreau apă.'],
+  { p: DAT, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Am sete, vreau apă.', buena: 'Mi-e sete, vreau apă.', alt: ['Îmi este sete, vreau apă.', 'Îmi e sete, vreau apă.'],
     calcoEs: 'Tengo sed, quiero agua.',
     explicacion: 'Como el hambre, la sed «le es» a uno: «mi-e sete». «Am sete» sólo vale en sentido figurado con complemento («are sete de putere»).' },
-  { p: DAT, pasada: 1, espejoEs: false, mala: 'Am frig aici, închide fereastra.', buena: 'Mi-e frig aici, închide fereastra.', alt: ['Îmi este frig aici, închide fereastra.', 'Îmi e frig aici, închide fereastra.'],
+  { p: DAT, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Am frig aici, închide fereastra.', buena: 'Mi-e frig aici, închide fereastra.', alt: ['Îmi este frig aici, închide fereastra.', 'Îmi e frig aici, închide fereastra.'],
     calcoEs: 'Tengo frío aquí, cierra la ventana.',
     explicacion: 'Frío y calor van en dativo: «mi-e frig», «mi-e cald». La serie ante «e» es mi-, ți-, i-, ni-, vi-, li- (mi-e, ți-e, i-e frig…); la forma plena, «îmi este frig».' },
-  { p: DAT, pasada: 1, espejoEs: false, mala: 'Am cald, deschide geamul.', buena: 'Mi-e cald, deschide geamul.', alt: ['Îmi este cald, deschide geamul.', 'Îmi e cald, deschide geamul.'],
+  { p: DAT, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Am cald, deschide geamul.', buena: 'Mi-e cald, deschide geamul.', alt: ['Îmi este cald, deschide geamul.', 'Îmi e cald, deschide geamul.'],
     calcoEs: 'Tengo calor, abre la ventana.',
     explicacion: '«Mi-e cald» (a mí me es calor). El verbo es «a fi», no «a avea»; lo que cambia es el clítico dativo: mi-e, ți-e, i-e, ni-e, vi-e, li-e.' },
-  { p: DAT, pasada: 1, espejoEs: false, mala: 'Ai frig? Închide ușa.', buena: 'Ți-e frig? Închide ușa.', alt: ['Îți este frig? Închide ușa.', 'Îți e frig? Închide ușa.'],
+  { p: DAT, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Ai frig? Închide ușa.', buena: 'Ți-e frig? Închide ușa.', alt: ['Îți este frig? Închide ușa.', 'Îți e frig? Închide ușa.'],
     calcoEs: '¿Tienes frío? Cierra la puerta.',
     explicacion: 'En 2.ª persona el clítico es «ți-»: «ți-e frig» (= «îți este frig»). «Ai frig» conjuga «tener» como el español.' },
-  { p: DAT, pasada: 1, espejoEs: false, mala: 'Copilul are frig, pune-i o haină.', buena: 'Copilului i-e frig, pune-i o haină.', alt: ['Copilului îi e frig, pune-i o haină.', 'Copilului îi este frig, pune-i o haină.', 'I-e frig copilului, pune-i o haină.'],
+  { p: DAT, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Copilul are frig, pune-i o haină.', buena: 'Copilului i-e frig, pune-i o haină.', alt: ['Copilului îi e frig, pune-i o haină.', 'Copilului îi este frig, pune-i o haină.', 'I-e frig copilului, pune-i o haină.'],
     calcoEs: 'El niño tiene frío, ponle un abrigo.',
     explicacion: 'Con un sustantivo como experimentante, va en DATIVO («copilului») y se dobla con el clítico de 3.ª: «copilului i-e frig» (= «îi este frig»). «Copilul are frig» calca «tiene frío».' },
-  { p: DAT, pasada: 1, espejoEs: false, mala: 'Ea are cald, deschide fereastra.', buena: 'Ei i-e cald, deschide fereastra.', alt: ['I-e cald, deschide fereastra.', 'Ei îi e cald, deschide fereastra.', 'Îi este cald, deschide fereastra.'],
+  { p: DAT, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Ea are cald, deschide fereastra.', buena: 'Ei i-e cald, deschide fereastra.', alt: ['I-e cald, deschide fereastra.', 'Ei îi e cald, deschide fereastra.', 'Îi este cald, deschide fereastra.'],
     calcoEs: 'Ella tiene calor, abre la ventana.',
     explicacion: 'El pronombre experimentante va en dativo («ei») y se dobla con «i-»: «ei i-e cald»; basta «i-e cald» si el referente está claro. «Ea are cald» es el calco.' },
-  { p: DAT, pasada: 1, espejoEs: false, mala: 'Te lipsesc mult.', buena: 'Îmi lipsești mult.', alt: ['Mi-e dor de tine.', 'Îmi este dor de tine.'],
+  { p: DAT, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Te lipsesc mult.', buena: 'Îmi lipsești mult.', alt: ['Mi-e dor de tine.', 'Îmi este dor de tine.'],
     calcoEs: 'Te echo mucho de menos.',
     explicacion: '«A lipsi» funciona como «faltar»: el que falta es el sujeto y el que lo echa de menos va en dativo — «îmi lipsești» (me faltas). «Te lipsesc» significaría «te privo de algo» y necesita «de». También «mi-e dor de tine».' },
 
   // ══ r4-posesivos (8) ══════════════════════════════════════════════
   // El posesivo va DETRÁS del sustantivo, y el sustantivo lleva artículo:
   // «casa mea». «Mi casa» → *mea casă es español perfecto calcado.
-  { p: POS, pasada: 1, espejoEs: false, mala: 'Mea casă este lângă parc.', buena: 'Casa mea este lângă parc.', alt: ['Casa mea e lângă parc.'],
+  { p: POS, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Mea casă este lângă parc.', buena: 'Casa mea este lângă parc.', alt: ['Casa mea e lângă parc.'],
     calcoEs: 'Mi casa está al lado del parque.',
     explicacion: 'El posesivo va detrás y el sustantivo lleva el artículo enclítico: «casa mea». Anteponerlo y dejar el sustantivo desnudo es el calco de «mi casa».' },
-  { p: POS, pasada: 1, espejoEs: false, mala: 'Meu frate locuiește la Cluj.', buena: 'Fratele meu locuiește la Cluj.', alt: ['Frate-meu locuiește la Cluj.'],
+  { p: POS, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Meu frate locuiește la Cluj.', buena: 'Fratele meu locuiește la Cluj.', alt: ['Frate-meu locuiește la Cluj.'],
     calcoEs: 'Mi hermano vive en Cluj.',
     explicacion: '«Fratele meu»: primero el sustantivo articulado (fratele), después el posesivo. Con «frate» el artículo es «-le».' },
-  { p: POS, pasada: 1, espejoEs: false, mala: 'Ta carte este pe masă.', buena: 'Cartea ta este pe masă.', alt: ['Cartea ta e pe masă.'],
+  { p: POS, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Ta carte este pe masă.', buena: 'Cartea ta este pe masă.', alt: ['Cartea ta e pe masă.'],
     calcoEs: 'Tu libro está en la mesa.',
     explicacion: 'Mismo orden con «ta»: «cartea ta». El posesivo concuerda con lo poseído (carte, femenino → ta) y va pospuesto.' },
-  { p: POS, pasada: 1, espejoEs: false, mala: 'Noștri prieteni vin mâine.', buena: 'Prietenii noștri vin mâine.',
+  { p: POS, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Noștri prieteni vin mâine.', buena: 'Prietenii noștri vin mâine.',
     calcoEs: 'Nuestros amigos vienen mañana.',
     explicacion: 'En plural igual: sustantivo con artículo plural (prietenii) y posesivo detrás (noștri). «Noștri prieteni» calca «nuestros amigos».' },
-  { p: POS, pasada: 1, espejoEs: false, mala: 'Mei părinți sunt la țară.', buena: 'Părinții mei sunt la țară.',
+  { p: POS, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Mei părinți sunt la țară.', buena: 'Părinții mei sunt la țară.',
     calcoEs: 'Mis padres están en el pueblo.',
     explicacion: '«Părinții mei»: el artículo plural «-i» se pega al sustantivo y el posesivo masculino plural «mei» va detrás.' },
-  { p: POS, pasada: 1, espejoEs: false, mala: 'Mele cărți sunt în geantă.', buena: 'Cărțile mele sunt în geantă.',
+  { p: POS, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Mele cărți sunt în geantă.', buena: 'Cărțile mele sunt în geantă.',
     calcoEs: 'Mis libros están en el bolso.',
     explicacion: 'Femenino plural: «cărțile mele». El posesivo tiene cuatro formas (meu, mea, mei, mele) según lo poseído, y siempre pospuesto.' },
-  { p: POS, pasada: 1, espejoEs: false, mala: 'Voastră mașină este nouă.', buena: 'Mașina voastră este nouă.', alt: ['Mașina voastră e nouă.'],
+  { p: POS, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Voastră mașină este nouă.', buena: 'Mașina voastră este nouă.', alt: ['Mașina voastră e nouă.'],
     calcoEs: 'Su coche (de ustedes) es nuevo.',
     explicacion: '«Mașina voastră»: sustantivo articulado + posesivo. El calco antepone «voastră» como el español antepone «vuestro».' },
-  { p: POS, pasada: 1, espejoEs: false, mala: 'Lor copil are cinci ani.', buena: 'Copilul lor are cinci ani.',
+  { p: POS, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Lor copil are cinci ani.', buena: 'Copilul lor are cinci ani.',
     calcoEs: 'Su hijo (de ellos) tiene cinco años.',
     explicacion: 'Para «de ellos» el posesivo es «lor», invariable y pospuesto: «copilul lor». Antepuesto sólo existe con artículo posesivo y en registro literario («al lor copil»); antepuesto y con el sustantivo desnudo, nunca.' },
 
@@ -90,28 +91,28 @@ export const ITEMS: ItemCorreccion[] = [
   // Se conserva con determinante (la școala noastră) y con «cu»
   // instrumental/comitativo (cu trenul): los dos van en el lote como
   // contraste, y el gate sabe que ahí la buena LLEVA artículo.
-  { p: PREP, pasada: 1, espejoEs: false, mala: 'Merg la școala în fiecare zi.', buena: 'Merg la școală în fiecare zi.',
+  { p: PREP, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Merg la școala în fiecare zi.', buena: 'Merg la școală în fiecare zi.',
     calcoEs: 'Voy a la escuela todos los días.',
     explicacion: 'Tras «la» el sustantivo pierde el artículo: «la școală» (a la escuela), aunque el español lo lleve. Sólo lo conserva si sigue un determinante: «la școala noastră».' },
-  { p: PREP, pasada: 1, espejoEs: false, mala: 'Locuim în orașul de zece ani.', buena: 'Locuim în oraș de zece ani.',
+  { p: PREP, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Locuim în orașul de zece ani.', buena: 'Locuim în oraș de zece ani.',
     calcoEs: 'Vivimos en la ciudad desde hace diez años.',
     explicacion: '«În oraș» (en la ciudad): sin artículo tras «în». «În orașul» sólo si sigue algo que lo determine («în orașul acesta»).' },
-  { p: PREP, pasada: 1, espejoEs: false, mala: 'Copiii se joacă pe strada.', buena: 'Copiii se joacă pe stradă.',
+  { p: PREP, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Copiii se joacă pe strada.', buena: 'Copiii se joacă pe stradă.',
     calcoEs: 'Los niños juegan en la calle.',
     explicacion: '«Pe stradă» (en la calle), sin artículo. El «la» del español se calca como «-a» pegada y sobra.' },
-  { p: PREP, pasada: 1, espejoEs: false, mala: 'Tata este la biroul până seara.', buena: 'Tata este la birou până seara.', alt: ['Tata e la birou până seara.'],
+  { p: PREP, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Tata este la biroul până seara.', buena: 'Tata este la birou până seara.', alt: ['Tata e la birou până seara.'],
     calcoEs: 'Papá está en la oficina hasta la noche.',
     explicacion: '«La birou» (en la oficina): tras «la», sin artículo. «La biroul» pide un determinante detrás («la biroul lui»).' },
-  { p: PREP, pasada: 1, espejoEs: false, mala: 'Mergem la piața sâmbăta.', buena: 'Mergem la piață sâmbăta.',
+  { p: PREP, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Mergem la piața sâmbăta.', buena: 'Mergem la piață sâmbăta.',
     calcoEs: 'Vamos al mercado los sábados.',
     explicacion: '«La piață» (al mercado): la preposición hace caer el artículo, salvo que siga un determinante («la piața centrală», «la piața Obor»). Sin nada detrás, sin artículo.' },
-  { p: PREP, pasada: 1, espejoEs: false, mala: 'Merg cu tren la Brașov.', buena: 'Merg cu trenul la Brașov.',
+  { p: PREP, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Merg cu tren la Brașov.', buena: 'Merg cu trenul la Brașov.',
     calcoEs: 'Voy en tren a Brașov.',
     explicacion: 'Excepción que hay que saber: con «cu» (medio, compañía) el artículo se CONSERVA: «cu trenul», «cu mașina», «cu autobuzul». Aquí el español («en tren») es el que no lo lleva.' },
-  { p: PREP, pasada: 1, espejoEs: false, mala: 'Scriu mereu cu creion.', buena: 'Scriu mereu cu creionul.',
+  { p: PREP, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Scriu mereu cu creion.', buena: 'Scriu mereu cu creionul.',
     calcoEs: 'Siempre escribo con lápiz.',
     explicacion: 'Mismo caso: «cu creionul». El instrumento con «cu» lleva artículo aunque el español diga «con lápiz».' },
-  { p: PREP, pasada: 1, espejoEs: false, mala: 'Sora mea e la școala nouă, eu sunt la școala.', buena: 'Sora mea e la școala nouă, eu sunt la școală.',
+  { p: PREP, pasada: 1, espejoEs: false, atajoEs: false, mala: 'Sora mea e la școala nouă, eu sunt la școala.', buena: 'Sora mea e la școala nouă, eu sunt la școală.',
     calcoEs: 'Mi hermana está en la escuela nueva, yo estoy en la escuela.',
     explicacion: 'Las dos en una frase: con determinante detrás («școala noastră») el artículo se queda; sin nada detrás («la școală») cae. Es la regla completa del punto.' },
 ];
@@ -151,12 +152,27 @@ export function verificar(items: ItemCorreccion[]): string[] {
       if (!conCu && !/(?<![\p{L}])(la|în|pe) \p{L}+(ul|le|ua|a)(?![\p{L}])/u.test(x.mala)) v.push(`${id}: la mala no lleva el artículo que el punto quita`);
     }
   }
+  // EL ATAJO, medido y con gate. `undefined` es un fallo: «no medido» no
+  // es «limpio», que es la confusión que dejó este campo sin existir
+  // durante nueve lotes.
+  const m = medirAtajo(items, 'ATAJO');
+  for (const id of m.sinDeclarar) v.push(`${id}: atajoEs sin declarar — el atajo de traducción no se ha medido en este ítem`);
+  for (const id of m.atajo) v.push(`${id}: atajoEs=true — traduciendo el calco se llega a la BUENA, así que el ítem mide español`);
+  for (const d of m.discrepan) v.push(`${d}`);
   if (!hunspellDisponible()) v.push('hunspell no disponible: el segundo camino NO corrió y esto no es verde');
   else for (const w of desconocidas(palabras.filter((w) => w && !/^[A-ZĂÂÎȘȚ]/.test(w)))) v.push(`hunspell no reconoce «${w}» en una frase buena`);
   return v;
 }
 
-if (process.argv[1]?.includes('corr-ro-a1b')) {
+// EL GUARDIÁN DEL BLOQUE PRINCIPAL VA ANCLADO AL FINAL. La v0 usaba
+// `includes('<nombre>')`, y `cloze-ro-a1` es PREFIJO de `cloze-ro-a1c`,
+// `cloze-ro-a2` lo es de a2b/a2c/a2d/a2e y `corr-ro-a1` de `corr-ro-a1b`:
+// al importar un lote hijo, el bloque principal del padre corría entero
+// —imprimía su tabla y podía llamar a `process.exit(1)` con SUS gates—.
+// Falso rojo hoy; falso verde el día que alguien lea sólo el código de
+// salida y se lo atribuya al lote equivocado. Lo cazó el lingüista
+// adversarial en el lote 11. Tres colisiones reales en once ficheros.
+if (new RegExp(`[/\\\\]corr-ro-a1b\\.ts$`).test(process.argv[1] ?? '')) {
   const v = verificar(ITEMS);
   const porPunto = new Map<string, number>();
   for (const x of ITEMS) porPunto.set(x.p, (porPunto.get(x.p) ?? 0) + 1);

@@ -42,6 +42,24 @@ export interface ItemCorreccion {
   explicacion: string;
   /** ¿El español haría la misma corrección? Debería ser false siempre. */
   espejoEs: boolean;
+  /** EL ATAJO DE TRADUCCIÓN, que este contrato NO MEDÍA. La definición del
+   *  lingüista adversarial declara `transparenteLatin` como gate del
+   *  formato («por encima de la mitad del lote, el lote no sale») y este
+   *  tipo nunca tuvo el campo: en corrección el atajo no se ha medido
+   *  NUNCA, ni en portugués ni en rumano. Lo destapó el propio lingüista
+   *  en el lote 9 y el coordinador ordenó medir antes de tocar la tarjeta.
+   *
+   *  Pregunta que contesta, y sólo ésa: **¿produciendo la estructura del
+   *  español de `calcoEs`, palabra por palabra, se llega a la BUENA?**
+   *  Si sí, el ítem se resuelve traduciendo y mide español, no la lengua.
+   *  En teoría es `false` siempre —un ítem de corrección existe porque el
+   *  calco es INCORRECTO en rumano, así que traducir da la MALA— pero eso
+   *  es un argumento, no un dato, y esta ola entera ha ido de la
+   *  diferencia entre las dos cosas.
+   *
+   *  OPCIONAL en el tipo para no tocar los lotes de PT ya publicados; los
+   *  gates del rumano lo exigen declarado y `undefined` es un fallo. */
+  atajoEs?: boolean;
   /** Los gates de variante van a morder por diseño: el error deliberado
    *  ES el material. Se declara el motivo, no se silencia el gate. */
   varianteEsperada?: string;

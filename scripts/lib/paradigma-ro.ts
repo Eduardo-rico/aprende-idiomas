@@ -44,7 +44,7 @@
 export type Genero = 'm' | 'f' | 'n';
 export type Numero = 'sg' | 'pl';
 export type Caso = 'NAc' | 'GD';
-export type Registro = 'neutru' | 'familiar' | 'brusc';
+export type Registro = 'neutru' | 'familiar' | 'brusc' | 'popular';
 
 export interface LemaNominal {
   lema: string;
