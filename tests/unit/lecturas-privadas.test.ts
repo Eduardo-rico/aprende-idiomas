@@ -12,29 +12,22 @@ import { promises as fs } from 'node:fs';
 import { execSync as execCrudo } from 'node:child_process';
 
 // El checkout es COMPARTIDO: otra sesión puede estar commiteando cuando
-// este test invoca git, y `.git/index.lock` hace fallar la llamada. Eso
-// pone la SUITE en rojo por una razón que no es del código y manda a
-// investigar un fantasma — la clase de falso rojo contra la que existe
-// el resto de este fichero. Reintento con espera creciente y, si tras
-// los intentos el lock sigue, el mensaje lo dice en vez de disfrazarse
-// de fallo de la línea roja. (Fase F/G, 2026-09-03: falló una vez así.)
+// este test invoca git. Antes se reintentaba con espera; ahora la
+// colisión se quita de raíz (ver SOLO_LECTURA y el test EN ROJO), y esto
+// sólo queda para que, si alguna vez vuelve, el mensaje diga lo que es en
+// vez de disfrazarse de fallo de la línea roja.
 function execSync(cmd: string, opts?: Parameters<typeof execCrudo>[1]): string {
-  const esperas = [80, 200, 500, 1200];
-  for (let i = 0; ; i++) {
-    try {
-      return String(execCrudo(cmd, opts) ?? '');
-    } catch (e) {
-      const msg = String((e as { stderr?: unknown; message?: unknown }).stderr ?? (e as Error).message ?? '');
-      if (!msg.includes('index.lock') || i >= esperas.length) {
-        if (msg.includes('index.lock'))
-          throw new Error(`git sigue bloqueado por .git/index.lock tras ${esperas.length + 1} intentos — otra sesión está commiteando en este checkout; NO es un fallo de la línea roja. Comando: ${cmd}`);
-        throw e;
-      }
-      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, esperas[i]);
-    }
+  try {
+    return String(execCrudo(cmd, opts) ?? '');
+  } catch (e) {
+    const msg = String((e as { stderr?: unknown; message?: unknown }).stderr ?? (e as Error).message ?? '');
+    if (msg.includes('index.lock'))
+      throw new Error(`git bloqueado por .git/index.lock — otra sesión está commiteando en este checkout; NO es un fallo de la línea roja. Comando: ${cmd}`);
+    throw e;
   }
 }
 import path from 'node:path';
+import os from 'node:os';
 import { loadLecturas, loadLectura } from '@/lib/data/loaders';
 
 const PRIV = path.join(process.cwd(), 'lib/data/languages/pt/lecturas-privadas');
@@ -89,40 +82,98 @@ describe('estante privado de lecturas', () => {
 // `pt/lecturas-privadas/` a `*/lecturas-privadas/` por eso mismo.
 const LENGUAS = ['pt', 'ro', 'cs', 'ru'];
 const DIRS_PRIVADOS = [...LENGUAS.map((l) => `lib/data/languages/${l}/lecturas-privadas`), 'ingesta-privada'];
-const trackeados = () => execSync(`git ls-files ${DIRS_PRIVADOS.join(' ')}`, { cwd: process.cwd(), encoding: 'utf8' }).trim();
+
+// `GIT_OPTIONAL_LOCKS=0` es la forma documentada de que git NO tome
+// `.git/index.lock` en operaciones de sólo lectura. En un checkout
+// compartido con otras sesiones eso quita la colisión de raíz, en vez de
+// reintentarla. (Vía la sesión exe-lg, 2026-09-03.)
+// El entorno se LIMPIA de todo GIT_*, no se hereda. Motivo medido el
+// 2026-09-03, y caro: git exporta `GIT_INDEX_FILE` (entre otras) a sus
+// hooks, así que cuando la suite corre dentro de `pre-commit` las
+// llamadas de este fichero apuntaban al índice REAL aunque se les pasara
+// `cwd` de un repo temporal. El aislamiento se evaporaba justo en la
+// única ejecución que importa. `GIT_OPTIONAL_LOCKS=0` es además la forma
+// documentada de que git no tome `.git/index.lock` al sólo leer.
+// El cast es necesario: `fromEntries` pierde el tipo de ProcessEnv, que
+// en este proyecto exige NODE_ENV.
+const SIN_GIT_ENV = Object.fromEntries(
+  Object.entries(process.env).filter(([k]) => !k.startsWith('GIT_')),
+) as NodeJS.ProcessEnv;
+const ENTORNO = { encoding: 'utf8' as const, env: { ...SIN_GIT_ENV, GIT_OPTIONAL_LOCKS: '0' } };
+const SOLO_LECTURA = ENTORNO;
+
+// Parametrizada por repo a propósito: LA MISMA función se prueba contra
+// el checkout real (en verde) y contra un repo temporal (en rojo). Si se
+// copiara para el segundo caso, la copia se desincronizaría de esta.
+const trackeados = (cwd: string = process.cwd()) =>
+  execSync(`git ls-files ${DIRS_PRIVADOS.join(' ')}`, { cwd, ...SOLO_LECTURA }).trim();
 
 describe('la línea roja: nada privado en git', () => {
   it('git no trackea NI UN archivo de lecturas-privadas (pt/ro/cs/ru) ni de ingesta-privada', () => {
     expect(trackeados()).toBe('');
   });
 
+  // El test de arriba, SOLO, es un falso verde esperando: `git ls-files`
+  // sobre una ruta que no existe sale vacío y con éxito (medido
+  // 2026-09-03), así que pasaría igual de bien con la lista mal escrita —
+  // vigilando un sitio donde no hay nada. Esto la ancla al árbol real.
+  it('cada directorio vigilado EXISTE de verdad (si no, el verde de arriba no significa nada)', async () => {
+    for (const d of DIRS_PRIVADOS) {
+      const st = await fs.stat(path.join(process.cwd(), d)).catch(() => null);
+      expect(st?.isDirectory(), `${d} no existe: la línea roja lo cree vigilado y no vigila nada`).toBe(true);
+    }
+  });
+
   it('.gitignore cubre el estante privado de TODAS las lenguas y la carpeta de ingesta', async () => {
     const gi = await fs.readFile(path.join(process.cwd(), '.gitignore'), 'utf8');
     expect(gi).toContain('ingesta-privada/');
     expect(gi).toContain('lib/data/languages/*/lecturas-privadas/');
-    // git-check-ignore es la verdad, no el texto del .gitignore
-    for (const l of LENGUAS) {
-      const r = execSync(`git check-ignore -q lib/data/languages/${l}/lecturas-privadas/x.json; echo $?`, { cwd: process.cwd(), encoding: 'utf8' }).trim();
-      expect(r, `${l} no está ignorado`).toBe('0');
+    // git-check-ignore es la verdad, no el texto del .gitignore. Y se
+    // pregunta por LAS MISMAS rutas de DIRS_PRIVADOS, no por una plantilla
+    // aparte: una regla copiada se desincroniza de la que gobierna.
+    // Ojo con lo que este test NO prueba: el glob ignora también una
+    // lengua inventada (`xx`, medido), así que ancla el nombre del
+    // directorio pero no el de la lengua. Eso lo ancla el test de arriba.
+    for (const d of DIRS_PRIVADOS) {
+      const r = execSync(`git check-ignore -q ${d}/x.json; echo $?`, { cwd: process.cwd(), ...SOLO_LECTURA }).trim();
+      expect(r, `${d} no está ignorado`).toBe('0');
     }
   });
 
   // Un gate visto sólo en verde no está probado: se fuerza un dummy al
-  // índice (`git add -f`, como haría un descuido) en el estante RUMANO y
-  // la comprobación tiene que verlo. Se retira del índice pase lo que pase.
+  // índice (`git add -f`, como haría un descuido) y la comprobación tiene
+  // que verlo.
+  //
+  // Va en un repo TEMPORAL, no en el checkout real, y la razón es que el
+  // modo de fallo de la versión anterior era exactamente aquello contra lo
+  // que este test existe: escribía en el índice de verdad y lo limpiaba en
+  // un `finally`, de modo que si el proceso moría entre el `add` y el `rm
+  // --cached` —o si el `rm` chocaba con el `index.lock` de otra sesión,
+  // que fue lo que pasó— quedaba un fichero privado STAGED en el repo, y
+  // un `git commit` sin rutas se lo lleva (las dos cosas, medidas el
+  // 2026-09-03). Con el .gitignore REAL copiado dentro, el temporal prueba
+  // lo mismo sin poder ensuciar nada.
   it('EN ROJO: un fichero privado forzado al índice lo caza la comprobación', async () => {
-    const dir = path.join(process.cwd(), 'lib/data/languages/ro/lecturas-privadas');
-    const dummy = path.join(dir, 'zzz-dummy-linea-roja.json');
-    await fs.mkdir(dir, { recursive: true });
-    await fs.writeFile(dummy, '{}');
+    const repo = await fs.mkdtemp(path.join(os.tmpdir(), 'linea-roja-'));
     try {
-      execSync(`git add -f "${dummy}"`, { cwd: process.cwd() });
-      expect(trackeados()).toContain('zzz-dummy-linea-roja.json');
+      execSync('git init -q .', { cwd: repo, ...ENTORNO });
+      await fs.copyFile(path.join(process.cwd(), '.gitignore'), path.join(repo, '.gitignore'));
+      for (const d of DIRS_PRIVADOS) await fs.mkdir(path.join(repo, d), { recursive: true });
+      expect(trackeados(repo), 'el repo temporal debería arrancar limpio').toBe('');
+
+      const rel = 'lib/data/languages/ro/lecturas-privadas/zzz-dummy-linea-roja.json';
+      await fs.writeFile(path.join(repo, rel), '{}');
+      // En disco pero ignorado: NO debe aparecer. Sin este paso, el test
+      // no distinguiría «ve lo trackeado» de «ve lo que hay en la carpeta».
+      expect(trackeados(repo)).toBe('');
+
+      // `--git-dir/--work-tree` explícitos: aunque alguien reintroduzca un
+      // GIT_DIR heredado, esta escritura no puede caer en otro repo.
+      execSync(`git --git-dir="${repo}/.git" --work-tree="${repo}" add -f "${rel}"`, { cwd: repo, ...ENTORNO });
+      expect(trackeados(repo)).toContain('zzz-dummy-linea-roja.json');
     } finally {
-      execSync(`git rm --cached -q -f "${dummy}"`, { cwd: process.cwd() });
-      await fs.rm(dummy, { force: true });
+      await fs.rm(repo, { recursive: true, force: true });
     }
-    expect(trackeados()).toBe('');
   });
 });
 
