@@ -2,6 +2,11 @@ import type { NextConfig } from "next";
 import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
+  // Permite verificar con `next build` sin pisar el `.next` que está
+  // usando un `npm run dev` vivo (el checkout es compartido y Edu suele
+  // tener la app abierta): NEXT_DIST_DIR=.next-verify npx next build.
+  // Sin la variable, todo se comporta exactamente igual que antes.
+  distDir: process.env.NEXT_DIST_DIR ?? ".next",
   // Self-host: emit a minimal standalone server (`.next/standalone/server.js`)
   // with only the node_modules it actually needs. The Dockerfile copies that
   // plus `.next/static` and `public/` (which holds the ~451 MB audio corpus).

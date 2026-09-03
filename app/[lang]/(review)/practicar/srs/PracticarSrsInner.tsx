@@ -12,6 +12,7 @@ import { db } from "@/lib/db/schema";
 import { getDueCards, getDueCardsByTag, submitAnswer } from "@/lib/db/repository";
 import { FSRS_CONFIG } from "@/lib/srs/config";
 import { interleave } from "@/lib/srs/interleave";
+import { construirMapaDeFuga } from "@/lib/srs/fuga-sesion";
 import { previewIntervalMs } from "@/lib/srs/fsrs";
 import { useSession } from "@/lib/stores/session";
 import { useSettings } from "@/lib/stores/settings";
@@ -80,10 +81,18 @@ export function PracticarSrsInner({ lang }: { lang: LanguageId }) {
         const byId = new Map(all.map((e) => [e.id, e]));
         // Build a Map keyed by card id for O(1) lookups in the interleave callbacks.
         const cardById = new Map(due.map((c) => [c.id, c]));
+        // Fuga entre tarjetas: si una tarjeta de ESTA sesión imprime la
+        // respuesta de otra, la examinada va antes. Se calcula sobre las
+        // tarjetas de la sesión y no sobre el corpus entero: es O(n²) y la
+        // sesión está topada, mientras que el corpus pasa de 3.000 ítems.
+        // Y no hace falta más: el daño necesita que las dos caigan juntas.
+        const deLaSesion = due.map((c) => byId.get(c.id)).filter(Boolean) as Exercise[];
+        const fuga = construirMapaDeFuga(deLaSesion);
         const mixed = interleave(
           due,
           (id) => cardById.get(id)?.lessonId,          // concept proxy: cards from same lesson share concepts
           (id) => cardById.get(id)?.tags?.[0] ?? "flashcard", // type proxy: first tag drives diversity
+          (id) => fuga.get(id),
         );
         const ordered: Exercise[] = [];
         for (const c of mixed) {
