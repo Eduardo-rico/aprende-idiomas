@@ -64,6 +64,14 @@ export const PUNTOS_COPULA_LIBRE = new Set<string>([
   'r2-concordancia-adjetivo',
   'r6-doblado-cliticos',
   'r7-pasiva-impersonal',
+  // Añadido el 2026-09-03 por el ataque al lote 18: su ítem «E important ca
+  // copiii să doarmă opt ore» dejaba fuera «Este important…», que es rumano
+  // correcto (DOOM3 s.v. fi¹: este / neacc. e, ninguna con etiqueta de
+  // registro). El punto no estaba en NINGUNA de las dos listas de este
+  // fichero, que es el único estado que el diseño no contempla: el gate
+  // falla cerrado y no dijo nada, y el resultado habría sido un fallo falso
+  // en el FSRS sobre una respuesta correcta.
+  'r8-completivas-ca-sa',
 ]);
 
 /** Los puntos donde la alternancia ES contenido y NO se declara nunca.

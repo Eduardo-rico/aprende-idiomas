@@ -748,5 +748,208 @@
       ],
       "hintEs": "cortar — gerundio"
     }
+  },
+  {
+    "id": "6ad9d17b",
+    "blockId": 7,
+    "lessonId": "b7-l1-conjunctivul",
+    "difficulty": 2,
+    "concepts": [
+      "r7-disparadores-sa"
+    ],
+    "tags": [
+      "ro-corr-b1",
+      "correccion"
+    ],
+    "contentHash": "6ad9d17b77266263f2d8b87adfa3432a696d92b46ae5fa915a300a8eed1867e9",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1 (2026-09-03): la frase mala es el calco de «Quiero que vengas conmigo a la estación.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Vreau că vii cu mine la gară.",
+      "correct": "Vreau să vii cu mine la gară.",
+      "alternatives": [],
+      "calcoEs": "Quiero que vengas conmigo a la estación.",
+      "explanationEs": "Los verbos de voluntad no admiten «că»: piden «să» + conjuntivo. El «que» español se traduce por «că» sólo cuando la subordinada afirma un hecho («cred că vine»); con «a vrea» nunca."
+    }
+  },
+  {
+    "id": "98636dff",
+    "blockId": 7,
+    "lessonId": "b7-l1-conjunctivul",
+    "difficulty": 2,
+    "concepts": [
+      "r7-disparadores-sa"
+    ],
+    "tags": [
+      "ro-corr-b1",
+      "correccion"
+    ],
+    "contentHash": "98636dfff189b0888d4699672cafd5a31df3964d311fd52bef0a08261ff0c90e",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1 (2026-09-03): la frase mala es el calco de «Te pido que cierres la puerta.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Te rog că închizi ușa.",
+      "correct": "Te rog să închizi ușa.",
+      "alternatives": [],
+      "calcoEs": "Te pido que cierres la puerta.",
+      "explanationEs": "Lo mismo con los verbos de petición: «te rog SĂ închizi». Con «că» la frase intentaría afirmar que cierras la puerta, que no es lo que se pide."
+    }
+  },
+  {
+    "id": "b1284171",
+    "blockId": 7,
+    "lessonId": "b7-l2-formele-nepersonale",
+    "difficulty": 2,
+    "concepts": [
+      "r7-anti-progresivo"
+    ],
+    "tags": [
+      "ro-corr-b1",
+      "correccion"
+    ],
+    "contentHash": "b1284171502a0b4c3b49de724c9c5ab9cefd7a70a14e0f0f4361d34ab3d7dc28",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1 (2026-09-03): la frase mala es el calco de «Estoy comiendo, te llamo luego.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Sunt mâncând, te sun mai târziu.",
+      "correct": "Mănânc, te sun mai târziu.",
+      "alternatives": [
+        "Tocmai mănânc, te sun mai târziu.",
+        "Stau și mănânc, te sun mai târziu."
+      ],
+      "calcoEs": "Estoy comiendo, te llamo luego.",
+      "explanationEs": "El rumano no tiene progresivo: «estoy comiendo» es sencillamente «mănânc». Para marcar que ocurre justo ahora se añade un adverbio («tocmai mănânc») o se coordina («stau ȘI mănânc»), nunca «a fi» + gerundio."
+    }
+  },
+  {
+    "id": "34c4144c",
+    "blockId": 7,
+    "lessonId": "b7-l2-formele-nepersonale",
+    "difficulty": 2,
+    "concepts": [
+      "r7-anti-progresivo"
+    ],
+    "tags": [
+      "ro-corr-b1",
+      "correccion"
+    ],
+    "contentHash": "34c4144c337f5c4b8d40d754af819326b81c8c8dba6e32500ec40e396f9d23ad",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1 (2026-09-03): la frase mala es el calco de «¿Qué estás haciendo ahora?»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ce ești făcând acum?",
+      "correct": "Ce faci acum?",
+      "alternatives": [],
+      "calcoEs": "¿Qué estás haciendo ahora?",
+      "explanationEs": "También en pregunta: el presente simple hace todo el trabajo, y «acum» ya dice que es ahora. «Ești făcând» no existe en el rumano de hoy, en ningún registro."
+    }
+  },
+  {
+    "id": "a184d480",
+    "blockId": 7,
+    "lessonId": "b7-l2-formele-nepersonale",
+    "difficulty": 2,
+    "concepts": [
+      "r7-anti-progresivo"
+    ],
+    "tags": [
+      "ro-corr-b1",
+      "correccion"
+    ],
+    "contentHash": "a184d480e2702537f645a663acc2c16490a3b519925926e1d80ccaf53eb1f614",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1 (2026-09-03): la frase mala es el calco de «Ella está escribiendo una carta larga.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ea este scriind o scrisoare lungă.",
+      "correct": "Ea scrie o scrisoare lungă.",
+      "alternatives": [],
+      "calcoEs": "Ella está escribiendo una carta larga.",
+      "explanationEs": "El presente rumano cubre el progresivo español entero. Añadir «este» delante del gerundio es calcar una perífrasis que esta lengua no tiene."
+    }
+  },
+  {
+    "id": "09372d80",
+    "blockId": 7,
+    "lessonId": "b7-l2-formele-nepersonale",
+    "difficulty": 2,
+    "concepts": [
+      "r7-anti-progresivo"
+    ],
+    "tags": [
+      "ro-corr-b1",
+      "correccion"
+    ],
+    "contentHash": "09372d8052fbfc7820222a2da4916d6e3707ed53b9edeecb6ccea49c6b3ed96b",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1 (2026-09-03): la frase mala es el calco de «Estamos esperando el autobús desde hace diez minutos.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Suntem așteptând autobuzul de zece minute.",
+      "correct": "Așteptăm autobuzul de zece minute.",
+      "alternatives": [],
+      "calcoEs": "Estamos esperando el autobús desde hace diez minutos.",
+      "explanationEs": "La duración la lleva «de zece minute», no una perífrasis: «așteptăm». El rumano marca el aspecto con adverbios y complementos, no con «a fi» + gerundio."
+    }
+  },
+  {
+    "id": "919421e2",
+    "blockId": 7,
+    "lessonId": "b7-l2-formele-nepersonale",
+    "difficulty": 2,
+    "concepts": [
+      "r7-anti-progresivo"
+    ],
+    "tags": [
+      "ro-corr-b1",
+      "correccion"
+    ],
+    "contentHash": "919421e25e7a195deb493748fde396d33931eac7ed3831080a3b27eb708806bc",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1 (2026-09-03): la frase mala es el calco de «Los niños están durmiendo en su habitación.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Copiii sunt dormind în camera lor.",
+      "correct": "Copiii dorm în camera lor.",
+      "alternatives": [],
+      "calcoEs": "Los niños están durmiendo en su habitación.",
+      "explanationEs": "En plural pasa lo mismo: «copiii dorm». El gerundio rumano existe, pero es adverbial («dormind, n-a auzit telefonul»), nunca el segundo miembro de una perífrasis con «a fi» EN INDICATIVO. Con «a fi» en prezumtiv sí existe y significa otra cosa: «o fi dormind» es «estará durmiendo»."
+    }
+  },
+  {
+    "id": "f489e109",
+    "blockId": 7,
+    "lessonId": "b7-l2-formele-nepersonale",
+    "difficulty": 2,
+    "concepts": [
+      "r7-anti-progresivo"
+    ],
+    "tags": [
+      "ro-corr-b1",
+      "correccion"
+    ],
+    "contentHash": "f489e109dc4ff0b4eb12c2b6ad279fe2412593fd62251a8bbf001ca4be13bb60",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1 (2026-09-03): la frase mala es el calco de «Estoy leyendo un libro muy bueno.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Sunt citind o carte foarte bună.",
+      "correct": "Citesc o carte foarte bună.",
+      "alternatives": [],
+      "calcoEs": "Estoy leyendo un libro muy bueno.",
+      "explanationEs": "«Citesc» ya significa «leo» y «estoy leyendo»: el rumano no reparte esos dos valores en dos formas. Por eso el calco con «sunt» sobra siempre."
+    }
   }
 ]

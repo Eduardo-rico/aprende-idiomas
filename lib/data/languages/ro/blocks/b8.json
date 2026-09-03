@@ -1,0 +1,84 @@
+[
+  {
+    "id": "a6fcbe07",
+    "blockId": 8,
+    "lessonId": "b8-l1-subordonarea",
+    "difficulty": 2,
+    "concepts": [
+      "r8-completivas-ca-sa"
+    ],
+    "tags": [
+      "ro-corr-b1",
+      "correccion"
+    ],
+    "contentHash": "a6fcbe07951d44a492f070426aab4d4743a8d4f072c5f7cba0f66b2cb04dd2f3",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1 (2026-09-03): la frase mala es el calco de «Quiero que él venga mañana a la oficina.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Vreau să el vină mâine la birou.",
+      "correct": "Vreau ca el să vină mâine la birou.",
+      "alternatives": [
+        "Vreau să vină el mâine la birou."
+      ],
+      "calcoEs": "Quiero que él venga mañana a la oficina.",
+      "explanationEs": "Entre «să» y el verbo sólo caben los clíticos pronominales, la negación «nu» y los adverbios clíticos «mai, și, tot, prea, cam» (să mai stau, să nu mai vină): el sujeto no puede meterse ahí. Cuando el sujeto va expreso delante, el rumano abre la subordinada con «ca»: «vreau CA el SĂ vină». La otra salida es posponerlo: «vreau să vină el»."
+    }
+  },
+  {
+    "id": "6b333abe",
+    "blockId": 8,
+    "lessonId": "b8-l1-subordonarea",
+    "difficulty": 2,
+    "concepts": [
+      "r8-completivas-ca-sa"
+    ],
+    "tags": [
+      "ro-corr-b1",
+      "correccion"
+    ],
+    "contentHash": "6b333abec7ca6f8fda758498b065b2f33176f46d7fd01e18913ffe584764b0e4",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1 (2026-09-03): la frase mala es el calco de «Deseo que mi hija estudie en Cluj.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Doresc să fiica mea studieze la Cluj.",
+      "correct": "Doresc ca fiica mea să studieze la Cluj.",
+      "alternatives": [
+        "Doresc să studieze fiica mea la Cluj."
+      ],
+      "calcoEs": "Deseo que mi hija estudie en Cluj.",
+      "explanationEs": "El sujeto «fiica mea» no puede ir entre «să» y el verbo. Con sujeto expreso antepuesto hace falta «ca»: «doresc CA fiica mea SĂ studieze». El español pone un solo «que» y de ahí sale el error."
+    }
+  },
+  {
+    "id": "14406930",
+    "blockId": 8,
+    "lessonId": "b8-l1-subordonarea",
+    "difficulty": 2,
+    "concepts": [
+      "r8-completivas-ca-sa"
+    ],
+    "tags": [
+      "ro-corr-b1",
+      "correccion"
+    ],
+    "contentHash": "14406930dcb4ecdebadbb8cc97e7e6affd55306ea442e1bd9ed948d2ec3049a9",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-B1 (2026-09-03): la frase mala es el calco de «Es importante que los niños duerman ocho horas.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "E important să copiii doarmă opt ore.",
+      "correct": "E important ca copiii să doarmă opt ore.",
+      "alternatives": [
+        "Este important ca copiii să doarmă opt ore.",
+        "E important să doarmă copiii opt ore."
+      ],
+      "calcoEs": "Es importante que los niños duerman ocho horas.",
+      "explanationEs": "También con los impersonales: «e important CA copiii SĂ doarmă». La partícula «să» va pegada al verbo, así que todo lo que el español mete detrás de «que» tiene que ir delante de «ca» o detrás del verbo."
+    }
+  }
+]
