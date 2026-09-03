@@ -64,6 +64,16 @@ const OBRAS = {
   ],
 };
 
+/** El HOST no es `${LANG}.wikisource.org` para el griego antiguo:
+ *  **`grc.wikisource.org` NO EXISTE** (medido al escribir el Paso 0: HTTP
+ *  000). Los textos griegos antiguos viven en `el.wikisource.org`, junto
+ *  a los modernos y a sus traducciones — que es justamente por lo que
+ *  hace falta el gate politónico. El primer intento se fue a `grc.` y
+ *  murió con un error de red ruidoso; si hubiera devuelto una lista
+ *  vacía en silencio, habría medido «Píndaro: 0 páginas» y nadie lo
+ *  habría mirado dos veces. */
+const HOST = { la: 'la.wikisource.org', grc: 'el.wikisource.org' };
+
 const UA = 'aprende-idiomas-fase-g/1.0 (research; contacto proyecto local)';
 
 /** `fetch` con reintento. La primera corrida del griego murió con un
@@ -146,7 +156,7 @@ function canonicalLa(s) {
  *  Adivinar 103 títulos de Horacio sería inventar datos; `allpages` los
  *  dice. Se excluye la página raíz, que es un índice sin texto. */
 async function expandir(prefijo) {
-  const url = `https://${LANG}.wikisource.org/w/api.php?` + new URLSearchParams({
+  const url = `https://${HOST[LANG]}/w/api.php?` + new URLSearchParams({
     action: 'query', list: 'allpages', apprefix: prefijo, apnamespace: '0', aplimit: 'max', format: 'json',
   });
   const r = await pedir(url);
@@ -160,7 +170,7 @@ async function expandir(prefijo) {
  *  obras con traductores («Ιωάννης Γρυπάρης» cuelga de Píndaro y es una
  *  persona, no una oda): el gate politónico es lo que los separa. */
 async function obrasDeAutor(pagina) {
-  const url = `https://${LANG}.wikisource.org/w/api.php?` + new URLSearchParams({
+  const url = `https://${HOST[LANG]}/w/api.php?` + new URLSearchParams({
     action: 'query', titles: pagina, prop: 'links', pllimit: 'max', plnamespace: '0', format: 'json',
   });
   const r = await pedir(url);
@@ -175,7 +185,7 @@ async function bajar(pagina) {
   fs.mkdirSync(CACHE, { recursive: true });
   const f = path.join(CACHE, `${pagina.replace(/[/\s]/g, '_')}.html`);
   if (fs.existsSync(f)) return fs.readFileSync(f, 'utf8');
-  const url = `https://${LANG}.wikisource.org/w/api.php?` +
+  const url = `https://${HOST[LANG]}/w/api.php?` +
     new URLSearchParams({ action: 'parse', page: pagina, prop: 'text', format: 'json' });
   const r = await pedir(url);
   const j = await r.json();

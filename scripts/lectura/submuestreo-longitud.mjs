@@ -67,6 +67,15 @@ function top1000Treebanks(lang) {
 }
 
 const media = (a) => a.reduce((x, y) => x + y, 0) / a.length;
+/** El rango 2,5-97,5 de las submuestras. **NO es un intervalo de
+ *  confianza**, y llamarlo así fue un error mío que el coordinador
+ *  destapó: mide CUÁNTO SE MUEVE EL VALOR AL TRUNCAR a N tokens, no con
+ *  qué precisión está estimado. Se ve en que la obra cuyo corpus YA mide
+ *  N sale con dispersión CERO —muestrear sin reemplazo el corpus entero
+ *  devuelve siempre el corpus—, y bajo un criterio de «intervalos
+ *  disjuntos» eso daría precisión infinita a la obra más pequeña, que es
+ *  justo donde menos evidencia hay. Los intervalos de verdad los da el
+ *  bootstrap POR BLOQUES de `dificultad-antigua.mjs`. */
 const ic = (a) => { const s = [...a].sort((x, y) => x - y); return [s[Math.floor(0.025 * s.length)], s[Math.floor(0.975 * s.length)]]; };
 
 function main() {
@@ -103,7 +112,7 @@ function main() {
     filas.push({ obra: e.obra, autor: e.autor, tokens: e.total, fueraCompleto, ttrCompleto, fueraSub, ttrSub });
   }
 
-  const cab = (t) => { console.log(`\n${t}`); console.log(`  ${'obra'.padEnd(22)} ${'tokens'.padStart(8)} ${'completo'.padStart(9)} ${'submuestreado (IC 95 %)'.padStart(26)} ${'Δ'.padStart(7)}`); };
+  const cab = (t) => { console.log(`\n${t}`); console.log(`  ${'obra'.padEnd(22)} ${'tokens'.padStart(8)} ${'completo'.padStart(9)} ${'submuestreado (dispersión)'.padStart(26)} ${'Δ'.padStart(7)}`); };
 
   cab('① % FUERA DEL TOP-1000 — la métrica que gobierna el veredicto');
   for (const f of filas.slice().sort((a, b) => b.fueraCompleto - a.fueraCompleto)) {
