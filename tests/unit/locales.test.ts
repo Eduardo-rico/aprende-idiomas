@@ -7,8 +7,14 @@ import { describe, it, expect } from "vitest";
 import { LANGUAGES, DEFAULT_LANGUAGE, hasLocale, LANG_LABELS, LANG_FLAGS, type LanguageId } from "@/lib/locales";
 
 describe("lib/locales", () => {
-  it("LANGUAGES contains pt/ru/ro/cs (and nothing else)", () => {
-    expect([...LANGUAGES].sort()).toEqual(["cs", "pt", "ro", "ru"]);
+  // Fase G (2026-09-03): entran `la` y `grc`. Esta lista estaba escrita
+  // DOS veces —aquí y en `locales-langs.test.ts`— y al añadir los dos
+  // idiomas sólo saltó una, porque la otra se actualizó a la vez que el
+  // código. Es la forma barata de «una regla copiada se desincroniza»: la
+  // copia que nadie recuerda es la que falla. Se dejan las dos porque
+  // afirman cosas distintas del mismo hecho, con un puntero cruzado.
+  it("LANGUAGES contains pt/ru/ro/cs/la/grc (and nothing else)", () => {
+    expect([...LANGUAGES].sort()).toEqual(["cs", "grc", "la", "pt", "ro", "ru"]);
   });
 
   it("DEFAULT_LANGUAGE is pt (the only language with full content today)", () => {

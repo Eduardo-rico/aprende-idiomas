@@ -42,9 +42,52 @@ import { servibleAlAlumno } from './lib/estado-item';
 import { VOICES } from './config';
 import { EL_VOICES } from './lib/elevenlabs-tts';
 
-export const TITULO: Record<LanguageId, string> = { pt: 'Portugués', ro: 'Rumano', cs: 'Checo', ru: 'Ruso' };
-export const NIVELES = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const;
-export type Nivel = (typeof NIVELES)[number];
+export const TITULO: Record<LanguageId, string> = {
+  pt: 'Portugués', ro: 'Rumano', cs: 'Checo', ru: 'Ruso',
+  la: 'Latín', grc: 'Griego antiguo',
+};
+
+// ── LOS NIVELES SON POR LENGUA (fase G, 2026-09-03) ───────────────────
+//
+// Hasta hoy `NIVELES` era una constante única, A1…C2, y era correcto
+// mientras las cuatro lenguas fueran vivas. **El MCER no aplica a una
+// lengua que nadie habla**: un descriptor de A2 dice «sostiene una
+// transacción cotidiana» y no hay transacción cotidiana en latín.
+//
+// Reutilizar A1…C2 como nombres opacos de peldaño sería el fallo que este
+// proyecto llama «un sello responde a UNA pregunta»: quien lea «B1»
+// dentro de seis meses va a creer que significa lo que significa en
+// portugués, y planificará con eso.
+//
+// El criterio de los peldaños nuevos está escrito antes de medir nada
+// (`docs/plans/2026-09-03-la-grc-paso0.md` §1.1): **un peldaño es un
+// sistema gramatical que hay que tener automatizado para leer sin ayuda
+// el material del peldaño siguiente.** Los autores se asignan DESPUÉS,
+// midiendo; si la medición los mueve, se mueven.
+const MCER = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const;
+/** L1 declinaciones+conjugaciones en indicativo · L2 subjuntivo,
+ *  participios, ablativo absoluto · L3 el período y la oratio obliqua ·
+ *  L4 orden poético y métrica · L5 idiolecto de autor y lengua arcaica. */
+const PELDANOS_LA = ['L1', 'L2', 'L3', 'L4', 'L5'] as const;
+/** G1 artículo, declinaciones, presente · G2 el ASPECTO y la voz media ·
+ *  G3 el aparato ático (artículo+infinitivo, optativo, ἄν) · G4 prosa
+ *  densa y trímetro · G5 verso y dialecto. */
+const PELDANOS_GRC = ['G1', 'G2', 'G3', 'G4', 'G5'] as const;
+
+/** `satisfies` y no `:` a propósito: mantiene los literales (para que
+ *  `Nivel` siga siendo una unión cerrada y no `string`) Y exige que el
+ *  record cubra todo `LanguageId`, de modo que añadir una lengua vuelva a
+ *  fallar aquí en typecheck. */
+export const NIVELES_DE = {
+  pt: MCER, ru: MCER, ro: MCER, cs: MCER,
+  la: PELDANOS_LA, grc: PELDANOS_GRC,
+} satisfies Record<LanguageId, readonly string[]>;
+
+/** Los seis del MCER. Se conserva el nombre porque cuatro de las seis
+ *  lenguas los usan, pero sale de `NIVELES_DE` para que haya UNA fuente:
+ *  dos listas con los mismos valores se desincronizan. */
+export const NIVELES = NIVELES_DE.pt;
+export type Nivel = (typeof NIVELES_DE)[LanguageId][number];
 
 /** Las destrezas del proyecto, y a cuál va cada etiqueta del currículo.
  *  Una etiqueta que no esté aquí hace FALLAR el parser: meterla en una
@@ -95,7 +138,12 @@ export function parsearCurriculo(md: string, lang: LanguageId): NivelCurriculo[]
   const out: NivelCurriculo[] = [];
   // El ruso funde «pre_A1 + A1» en una cabecera y da las horas como
   // intervalo («60-90 h + 170-240 h»): el nivel se lee, las horas no.
-  const cab = new RegExp(`^### ${titulo} · (?:pre_A1 \\+ )?(A1|A2|B1|B2|C1|C2)\\b(?: — (\\d+) h)?`);
+  // Los peldaños son los de ESTA lengua, no los del MCER: en latín la
+  // cabecera dice «### Latín · L2 — …». Construir el patrón desde
+  // `NIVELES_DE` en vez de escribirlo a mano evita la copia que se
+  // desincroniza el día que un peldaño cambie de nombre.
+  const niveles = NIVELES_DE[lang];
+  const cab = new RegExp(`^### ${titulo} · (?:pre_A1 \\+ )?(${niveles.join('|')})\\b(?: — (\\d+) h)?`);
   for (let i = 0; i < seccion.length; i++) {
     const m = seccion[i]!.match(cab);
     if (!m) continue;
@@ -137,7 +185,7 @@ export function parsearCurriculo(md: string, lang: LanguageId): NivelCurriculo[]
     const material = mat ? { palabras: num(mat[1] ?? ''), audioMin: num(mat[2] ?? ''), ejercicios: num(mat[3] ?? ''), tareas: num(mat[4] ?? '') } : null;
     out.push({ nivel, horas, declarados, descriptores, material });
   }
-  if (out.length !== NIVELES.length) throw new Error(`${lang}: el currículo tiene ${out.length} niveles parseables, no ${NIVELES.length}`);
+  if (out.length !== niveles.length) throw new Error(`${lang}: el currículo tiene ${out.length} niveles parseables, no ${niveles.length} (${niveles.join(', ')})`);
   return out;
 }
 

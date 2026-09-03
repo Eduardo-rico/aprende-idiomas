@@ -73,6 +73,14 @@ export const DEFAULT_VOICE: 'f' | 'm' = 'f';
 // alguien le asigne un boost (o lo deje vacío a propósito).
 export const LANGUAGE_BOOST: Record<LanguageId, string> = {
   pt: 'Portuguese',
+  // Fase G: MiniMax no tiene latín ni griego antiguo, y ElevenLabs
+  // tampoco — medido el 2026-09-03 contra `/v1/models`: `la` y `grc` no
+  // aparecen en NINGUNO de los nueve modelos. No es un hueco de catálogo
+  // que se vaya a llenar. La voz de estas dos lenguas es prestada y
+  // DECLARADA: italiana con pronunciación eclesiástica para el latín,
+  // griega moderna con la tradición escolar para el griego antiguo.
+  la: '',
+  grc: '',
   ru: '',
   ro: '',
   cs: '',

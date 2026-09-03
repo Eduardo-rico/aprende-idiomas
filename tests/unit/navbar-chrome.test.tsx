@@ -76,4 +76,14 @@ describe("<title> por lengua (generateMetadata del lang layout)", () => {
     expect((await generateMetadata({ params: Promise.resolve({ lang: "ro" }) })).title).toBe("Învață Română");
     expect((await generateMetadata({ params: Promise.resolve({ lang: "pt" }) })).title).toBe("Aprende Português");
   });
+
+  // Fase G: las dos lenguas antiguas. Van aquí y no en un fichero aparte
+  // porque la pregunta es la misma. `grc` tiene TRES letras —es el primer
+  // código de tres del proyecto— y esta línea es lo que comprueba que el
+  // layout lo resuelve; por HTTP no se puede ver, porque toda ruta de
+  // `/[lang]` redirige a login antes de renderizar.
+  it("/la → «Disce Latine», /grc → «Μάνθανε Ἑλληνιστί» (código de 3 letras)", async () => {
+    expect((await generateMetadata({ params: Promise.resolve({ lang: "la" }) })).title).toBe("Disce Latine");
+    expect((await generateMetadata({ params: Promise.resolve({ lang: "grc" }) })).title).toBe("Μάνθανε Ἑλληνιστί");
+  });
 });
