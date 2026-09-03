@@ -19,7 +19,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { PUNTOS_RO, PISO_RO } from '../lib/data/languages/ro/inventario-puntos';
 import { blocksDir } from '../lib/data/registry';
-import { servibleAlAlumno } from './lib/estado-item';
+import { contarPuntosRo, pisoDePunto } from './lib/asigna-ro';
 import { reconciliar, informe, type PorPunto } from './lib/reconciliar-deficit';
 
 const HIST = path.join(process.cwd(), 'docs/plans/deficit-ro-historico.json');
@@ -31,18 +31,13 @@ if (fs.existsSync(dir)) for (const f of fs.readdirSync(dir).filter((x) => /^b\d+
   const arr = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
   if (Array.isArray(arr)) items.push(...arr);
 }
-const servibles = items.filter(servibleAlAlumno);
-const cuenta = new Map<string, number>(PUNTOS_RO.map((p) => [p.id, 0]));
-const desconocidos = new Map<string, number>();
-for (const x of servibles) for (const c of (x.concepts ?? []) as string[]) {
-  if (cuenta.has(c)) cuenta.set(c, cuenta.get(c)! + 1);
-  else desconocidos.set(c, (desconocidos.get(c) ?? 0) + 1);
-}
-const nivelDe = new Map(PUNTOS_RO.map((p) => [p.id, p.nivel]));
-const pisoId = (id: string) => PISO_RO(nivelDe.get(id) ?? 'A1');
+// El contador vive en `lib/asigna-ro.ts`, no aquí: el `--asigna` de los
+// lotes usa EXACTAMENTE el mismo, y una regla copiada se desincroniza.
+const { cuenta, desconocidos, servibles: nServibles } = contarPuntosRo(items);
+const pisoId = pisoDePunto;
 
 console.log(`# Déficit rumano — cobertura por punto (piso 8, C2 6)\n`);
-console.log(`Corpus: ${items.length} ítems (${servibles.length} servibles) · ${PUNTOS_RO.length} puntos del inventario.\n`);
+console.log(`Corpus: ${items.length} ítems (${nServibles} servibles) · ${PUNTOS_RO.length} puntos del inventario.\n`);
 console.log('| nivel | puntos | ítems | puntos <piso | faltan |');
 console.log('|---|---:|---:|---:|---:|');
 let faltaTotal = 0;
@@ -54,7 +49,7 @@ for (const n of NIVELES) {
   faltaTotal += falta;
   console.log(`| ${n} | ${ps.length} | ${its} | ${bajo.length} | ${falta} |`);
 }
-console.log(`| **Σ** | **${PUNTOS_RO.length}** | **${servibles.length}** | **${[...cuenta].filter(([id, n]) => n < pisoId(id)).length}** | **${faltaTotal}** |`);
+console.log(`| **Σ** | **${PUNTOS_RO.length}** | **${nServibles}** | **${[...cuenta].filter(([id, n]) => n < pisoId(id)).length}** | **${faltaTotal}** |`);
 const cubiertos = [...cuenta].filter(([id, n]) => n >= pisoId(id));
 if (cubiertos.length) console.log(`\nPuntos cubiertos (${cubiertos.length}): ${cubiertos.map(([id, n]) => `${id} (${n})`).join(', ')}.`);
 if (desconocidos.size) console.log(`\n⚠ ítems con puntos que NO están en el inventario: ${[...desconocidos].map(([k, v]) => `${k} ×${v}`).join(', ')}`);
