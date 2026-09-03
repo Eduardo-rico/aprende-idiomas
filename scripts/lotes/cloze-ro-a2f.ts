@@ -116,7 +116,27 @@ export function verificar(items: ClozeRo[]): string[] {
         v.push(`${id}: el condicional perfecto lleva «fi» + participio y «${r}» no lo lleva`);
     }
 
-    // IRR · el punto no es «VERBO irregular», es «CASILLA irregular». El
+    // IRR · LA CADENA COMPLETA, que es lo que hay que recordar de este
+    // gate: un BUG TAPADO POR OTRO BUG, y un gate salvado por el error
+    // que debía cazar.
+    //   1. `temaInfinitivo()` devolvía el verbo entero en `a da`/`a sta`
+    //      (tema «da» en vez de «d»), así que la regla general producía
+    //      `*daăm` en vez de `dăm`.
+    //   2. Este gate compara la forma del lexicón con la que da la regla
+    //      SIN el record. Como la regla daba `*daăm` y el lexicón `dăm`,
+    //      el gate concluía «la casilla es irregular» — y aprobaba dos
+    //      ítems que no examinaban nada.
+    //   3. Al arreglar (1), la regla empezó a dar `dăm` y el gate cazó
+    //      los dos. O sea: el bug de la máquina estaba TAPANDO el fallo
+    //      de los ítems, y el gate sólo empezó a servir cuando la
+    //      máquina dejó de mentirle.
+    // Moraleja operativa: un gate que compara «lo declarado» con «lo
+    // derivado» hereda todos los fallos del derivador y los convierte en
+    // aprobaciones. No basta con verlo en rojo: hay que verlo en rojo
+    // DESPUÉS de arreglar aquello sobre lo que se apoya.
+    //
+    // Y el defecto original: el punto no es «VERBO irregular», es
+    // «CASILLA irregular». El
     // gate v0 preguntaba sólo si el LEMA estaba marcado, y con eso
     // pasaban `stai` y `luați`, que la regla general produce sola: la
     // irregularidad de `a sta` vive en `stă/stăm`, no en `stai`, y la de
