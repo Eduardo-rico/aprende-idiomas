@@ -21,9 +21,11 @@ import { ITEMS as B1, verificar as verificarB1 } from './lotes/corr-ro-b1';
 import { ITEMS as B1B, verificar as verificarB1B } from './lotes/corr-ro-b1b';
 import { ITEMS as B1C, verificar as verificarB1C } from './lotes/corr-ro-b1c';
 import { ITEMS as L20, verificar as verificarL20 } from './lotes/corr-ro-l20';
+import { ITEMS as L22, verificar as verificarL22 } from './lotes/corr-ro-l22';
 
 // Cada lote trae SU verificar: los gates de punto viven con el lote.
 const LOTES: Record<string, { items: ItemCorreccion[]; verificar: (xs: ItemCorreccion[]) => string[] }> = {
+  l22: { items: L22, verificar: verificarL22 },
   a1: { items: A1, verificar: verificarA1 },
   a1b: { items: A1B, verificar: verificarA1B },
   a2: { items: A2, verificar: verificarA2 },

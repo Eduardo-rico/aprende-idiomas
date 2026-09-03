@@ -1103,5 +1103,130 @@
       "calcoEs": "Leo todas las tardes, y ahora estoy leyendo un libro muy bueno.",
       "explanationEs": "«Citesc» ya significa «leo» y «estoy leyendo»: el rumano no reparte esos dos valores en dos formas, y la forma está delante, en la primera mitad de la frase."
     }
+  },
+  {
+    "id": "98fa9f08",
+    "blockId": 7,
+    "lessonId": "b7-l2-formele-nepersonale",
+    "difficulty": 2,
+    "concepts": [
+      "r7-supin"
+    ],
+    "tags": [
+      "ro-corr-l22",
+      "correccion"
+    ],
+    "contentHash": "98fa9f08b12bcd4056e69b5ff16779e5364873c6807b00de09cb82e3ff727a07",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-L22 (2026-09-03): la frase mala es el calco de «He comprado una máquina de lavar.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Am cumpărat o mașină de a spăla.",
+      "correct": "Am cumpărat o mașină de spălat.",
+      "alternatives": [],
+      "calcoEs": "He comprado una máquina de lavar.",
+      "explanationEs": "Tras un nombre concreto que dice PARA QUÉ sirve algo, el rumano usa el supino: «de» + participio invariable, «de spălat». El infinitivo con «a» («de a spăla») calca el «de lavar» español y ahí no entra — sí entra tras nombres abstractos: «dorința de a pleca», «teama de a greși»."
+    }
+  },
+  {
+    "id": "82377c13",
+    "blockId": 7,
+    "lessonId": "b7-l2-formele-nepersonale",
+    "difficulty": 2,
+    "concepts": [
+      "r7-supin"
+    ],
+    "tags": [
+      "ro-corr-l22",
+      "correccion"
+    ],
+    "contentHash": "82377c13c74da6bdea698e50ebaacd5a1ab4dcaa31991afe67fccaa018cbd35e",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-L22 (2026-09-03): la frase mala es el calco de «Aquí no encuentras agua de beber.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Aici nu găsești apă de a bea.",
+      "correct": "Aici nu găsești apă de băut.",
+      "alternatives": [],
+      "calcoEs": "Aquí no encuentras agua de beber.",
+      "explanationEs": "Igual que «mașină de spălat», pero sin ser una palabra de diccionario: el supino es productivo. «apă de băut», «lemne de foc», «haine de purtat». El participio de «a bea» es «băut», y no cambia nunca de forma."
+    }
+  },
+  {
+    "id": "eafac9f4",
+    "blockId": 7,
+    "lessonId": "b7-l2-formele-nepersonale",
+    "difficulty": 2,
+    "concepts": [
+      "r7-supin"
+    ],
+    "tags": [
+      "ro-corr-l22",
+      "correccion"
+    ],
+    "contentHash": "eafac9f4c06bcdfeeae8640d1e77392fad3dfd03fba63942c39eedfc1778565b",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-L22 (2026-09-03): la frase mala es el calco de «Tengo dos camisas para lavar.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Am două cămăși de spălate.",
+      "correct": "Am două cămăși de spălat.",
+      "alternatives": [],
+      "calcoEs": "Tengo dos camisas para lavar.",
+      "explanationEs": "El supino NO concuerda: es siempre «de spălat», con una camisa o con veinte. Lo que sí concuerda es el participio adjetivo, que va sin «de»: «două cămăși spălate» son dos camisas YA lavadas. Con «de» se habla de lo que falta por hacer, y ahí la forma queda fija."
+    }
+  },
+  {
+    "id": "ff824c3c",
+    "blockId": 7,
+    "lessonId": "b7-l2-formele-nepersonale",
+    "difficulty": 2,
+    "concepts": [
+      "r7-supin"
+    ],
+    "tags": [
+      "ro-corr-l22",
+      "correccion"
+    ],
+    "contentHash": "ff824c3c003faa35f9dc470b784dee92904d77f6a9e37bb1856f824b52ffac64",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-L22 (2026-09-03): la frase mala es el calco de «Hay muchas cosas que hacer en casa.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Sunt multe lucruri de făcute în casă.",
+      "correct": "Sunt multe lucruri de făcut în casă.",
+      "alternatives": [],
+      "calcoEs": "Hay muchas cosas que hacer en casa.",
+      "explanationEs": "Otra vez la forma fija: «de făcut», nunca «de făcute», aunque «lucruri» sea plural. La prueba está en que el rumano dice «ce e de făcut?» sin ningún nombre delante con el que concordar."
+    }
+  },
+  {
+    "id": "4d24b6ca",
+    "blockId": 7,
+    "lessonId": "b7-l2-formele-nepersonale",
+    "difficulty": 2,
+    "concepts": [
+      "r7-supin"
+    ],
+    "tags": [
+      "ro-corr-l22",
+      "correccion"
+    ],
+    "contentHash": "4d24b6ca1959bc07965c445964be47747fda1c79cc3ef5be76c7af89c9e99e63",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-L22 (2026-09-03): la frase mala es el calco de «Quiero irme ahora.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Vreau de plecat acum.",
+      "correct": "Vreau să plec acum.",
+      "alternatives": [],
+      "calcoEs": "Quiero irme ahora.",
+      "explanationEs": "El supino sirve para decir lo que hay POR hacer, no para completar un verbo de voluntad. Tras «vreau» va «să» + verbo conjugado: «vreau să plec». (Y tras «trebuie» el rumano de Moldavia sí dice «trebuie de făcut», así que ahí no hay error, hay región.)"
+    }
   }
 ]

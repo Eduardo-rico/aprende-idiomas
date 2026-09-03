@@ -216,13 +216,18 @@ describe('pisoCero: el piso declarado en cero', () => {
   //   · r7-anti-progresivo 6 (2026-09-03) — CONTADO por el lingüista
   //     adversarial ANTES de escribir ningún ítem, tras dictaminar que el
   //     error diana declarado no servía.
+  //   · r7-supin 5 (2026-09-03) — CONTADO por el lingüista adversarial
+  //     ANTES de escribir ninguno y con el corpus delante: dos marcos del
+  //     punto (`e greu de`, `a avea`) quedaron fuera porque admiten la
+  //     variante `de a` + infinitivo ATESTADA en el corpus, y tres caras
+  //     más no tienen mala ninguna.
   //   · r7-disparadores-sa 2 — nació en 5 y bajó a 2 al REPARTIR el
   //     material con r8-completivas-ca-sa: tres de los cinco eran
   //     literalmente la `cita` de r8. El número no bajó por cansancio ni
   //     por dictamen de lengua, sino porque el material era de otro punto.
   it('el piso reducido está CONTADO y nombrado, no es cansancio', () => {
     const red = PUNTOS_RO.filter((p) => p.pisoDeclarado);
-    expect(red.map((p) => `${p.id}:${p.pisoDeclarado!.piso}`)).toEqual(['r7-disparadores-sa:2', 'r7-anti-progresivo:6']);
+    expect(red.map((p) => `${p.id}:${p.pisoDeclarado!.piso}`)).toEqual(['r7-disparadores-sa:2', 'r7-anti-progresivo:6', 'r7-supin:5']);
     for (const p of red) {
       // El motivo tiene que decir el NÚMERO y de dónde sale, no «da para pocos».
       expect(p.pisoDeclarado!.motivo.length, p.id).toBeGreaterThan(120);
