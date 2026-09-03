@@ -110,7 +110,11 @@ export default async function LessonPage({ params }: PageProps) {
             </div>
 
             <Link
-              href={`/${lang}/practicar/${chapter}/${section}`}
+              // La ruta de práctica es `/[lang]/practice/[lessonId]` y el
+              // `section` de la URL del libro ES ese lessonId; el
+              // `/practicar/{capítulo}/{sección}` que había aquí no existe
+              // como ruta y daba 404 al pulsar «Continuar a exercícios».
+              href={`/${lang}/practice/${section}`}
               className="inline-flex items-center gap-2 bg-lesson text-paper font-medium rounded-lg px-5 py-3 mt-8 no-underline"
             >
               Continuar a exercícios →

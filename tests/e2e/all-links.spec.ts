@@ -13,6 +13,12 @@ const START_PATHS = [
   "/pt/cuenta",
   "/pt/practicar/srs",
   "/pt/historias",
+  // Una página de LECCIÓN: su botón «Continuar a exercícios» construía
+  // `/pt/practicar/{capítulo}/{sección}`, una ruta que no existe (la real
+  // es `/pt/practice/{lección}`). Nadie lo vio porque el rastreo sólo
+  // empezaba en el índice del libro, no dentro de una lección.
+  "/pt/libro/1/alfabeto-acentos",
+  "/ro/libro/2/articolul-enclitic",
 ];
 
 for (const start of START_PATHS) {
