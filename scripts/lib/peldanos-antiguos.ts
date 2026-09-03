@@ -93,6 +93,11 @@ export const PELDANOS: Record<Lengua, Peldano[]> = {
     // voz media y los verbos contractos, que no dependen unos de otros.
     // Los dos últimos pasan a ser PUNTOS del inventario dentro de
     // G2a-G3, no peldaños.
+    // ⚠ UN SOLO EJEMPLAR: la cohesión interna de G2a NO SE PUEDE MEDIR, y
+    // eso sale como estado propio (`no-evaluable`), nunca omitido. Y hay
+    // una segunda razón, independiente: **Jenofonte no está en ninguno de
+    // los dos treebanks griegos**, así que hoy no tiene corpus medible ni
+    // aunque hubiera con qué compararlo. Se declara en vez de taparlo.
     { id: 'G2a', sistemas: ['el ASPECTO: temas de presente/aoristo/perfecto y su valor fuera del indicativo'],
       prosa: 'El ASPECTO: los temas de presente / aoristo / perfecto, y qué significan fuera del indicativo',
       ejemplares: ['Jenofonte'] },
@@ -126,6 +131,41 @@ export interface Hallazgo {
   peldano: string;
   clase: 'varios-sistemas' | 'prosa-delata-mas' | 'exencion-sin-motivo';
   detalle: string;
+}
+
+// ── LA COHESIÓN INTERNA, Y SU ESTADO «NO EVALUABLE» ───────────────────
+//
+// Un peldaño con UN SOLO ejemplar no puede probarse por dentro: un
+// ejemplar no discrepa consigo mismo. Es la misma asimetría que tuvo G5
+// —«no pasó la prueba, es que nunca se le hizo»— y reaparecería en
+// silencio si el informe se limitara a omitir la fila.
+//
+// Por eso `no-evaluable` es un ESTADO PROPIO y no la ausencia de uno: no
+// se puede confundir con «cohesiona», y obliga a decir por qué. Cerrarlo
+// de verdad es añadir un segundo ejemplar; cerrarlo honestamente es
+// declararlo.
+export type EstadoCohesion = 'cohesiona' | 'no-cohesiona' | 'no-evaluable';
+
+export interface Cohesion {
+  peldano: string;
+  estado: EstadoCohesion;
+  ejemplares: number;
+  motivo: string;
+}
+
+/** El estado de cohesión de cada peldaño. NO mide nada: dice si se PUEDE
+ *  medir y con qué. La medición vive en `dificultad-antigua.mjs`; esto es
+ *  el inventario de lo que queda sin probar, para que no quede en
+ *  silencio. */
+export function revisarCohesion(lengua: Lengua): Cohesion[] {
+  return PELDANOS[lengua].map((p) => {
+    if (p.ejemplares.length < 2) {
+      return { peldano: p.id, estado: 'no-evaluable' as const, ejemplares: p.ejemplares.length,
+        motivo: `${p.ejemplares.length} ejemplar(es): un ejemplar no discrepa consigo mismo. NO es «cohesiona»; es que la prueba no se le puede hacer` };
+    }
+    return { peldano: p.id, estado: 'cohesiona' as const, ejemplares: p.ejemplares.length,
+      motivo: `${p.ejemplares.length} ejemplares: evaluable` };
+  });
 }
 
 /** SEGUNDO CAMINO, y sólo eso: una heurística sobre la PROSA, que no

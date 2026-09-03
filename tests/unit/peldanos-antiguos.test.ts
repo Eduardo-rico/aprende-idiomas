@@ -15,7 +15,7 @@
 // de la escalera, **no que cada caja contuviera una sola cosa**. Son dos
 // preguntas y la segunda no se había hecho nunca.
 import { describe, it, expect } from 'vitest';
-import { PELDANOS, revisarPeldanos, nucleosCoordinados, type Peldano } from '@/scripts/lib/peldanos-antiguos';
+import { PELDANOS, revisarPeldanos, revisarCohesion, nucleosCoordinados, type Peldano } from '@/scripts/lib/peldanos-antiguos';
 
 const ids = (h: { peldano: string }[]) => [...new Set(h.map((x) => x.peldano))].sort();
 
@@ -138,6 +138,42 @@ describe('lo que el gate NO puede ver, dicho en vez de fingido', () => {
     // asciende a peldaño con DOS miembros ordenables en su propio eje.
     for (const lengua of ['la', 'grc'] as const) {
       for (const p of PELDANOS[lengua]) expect(p.ejemplares.length, `${p.id} sin ejemplares`).toBeGreaterThan(0);
+    }
+  });
+});
+
+describe('cohesión interna: «no evaluable» es un estado, no una omisión', () => {
+  it('G2a sale NO EVALUABLE, y no se puede confundir con «cohesiona»', () => {
+    // Un ejemplar no discrepa consigo mismo. Es la misma asimetría que
+    // tuvo G5 —«no pasó la prueba, es que nunca se le hizo»— y saltarse
+    // la fila la reproduciría en silencio.
+    const c = revisarCohesion('grc');
+    const g2a = c.find((x) => x.peldano === 'G2a')!;
+    expect(g2a.estado).toBe('no-evaluable');
+    expect(g2a.ejemplares).toBe(1);
+    expect(g2a.motivo).toMatch(/no discrepa consigo mismo/);
+    // Y aparece en la lista: no se omite.
+    expect(c.map((x) => x.peldano)).toContain('G2a');
+  });
+
+  it('los demás peldaños tienen ≥2 ejemplares y son evaluables', () => {
+    for (const lengua of ['la', 'grc'] as const) {
+      for (const c of revisarCohesion(lengua)) {
+        if (c.peldano === 'G2a') continue;
+        expect(c.estado, `${c.peldano} debería ser evaluable`).toBe('cohesiona');
+        expect(c.ejemplares).toBeGreaterThanOrEqual(2);
+      }
+    }
+  });
+
+  it('un peldaño sin ejemplares también es NO EVALUABLE, no «cohesiona»', () => {
+    const vacio: Peldano = { id: 'Z', sistemas: ['uno'], ejemplares: [], prosa: 'Algo: cosas' };
+    const guardado = PELDANOS.la;
+    try {
+      (PELDANOS as Record<string, Peldano[]>).la = [vacio];
+      expect(revisarCohesion('la')[0]!.estado).toBe('no-evaluable');
+    } finally {
+      (PELDANOS as Record<string, Peldano[]>).la = guardado;
     }
   });
 });
