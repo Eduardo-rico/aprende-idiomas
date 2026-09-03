@@ -258,3 +258,27 @@ describe('lo que el ataque del latinista destapó, convertido en gate', () => {
     }
   });
 });
+
+describe('toda afirmación léxica dice EN QUÉ LATÍN vale', () => {
+  it('los puntos de clase `lexico` declaran su corpus', () => {
+    // El mejor hallazgo pedagógico del ataque: «`fidēs` no es fe» es
+    // cierto en Cicerón y FALSO en la Vulgata, que es la puerta de
+    // entrada del curso. El alumno habría recibido en L1 el sentido
+    // cristiano y en L3 una tarjeta diciéndole que no existe.
+    //
+    // Este curso cruza mil años de lengua: una afirmación léxica sin
+    // corpus declarado es una afirmación sobre un latín que nadie dice
+    // cuál es.
+    const sin = PUNTOS_LA.filter((p) => p.clase === 'lexico' && !p.corpus).map((p) => p.id);
+    expect(sin, `puntos léxicos sin corpus declarado:\n${sin.join('\n')}`).toEqual([]);
+  });
+
+  it('un punto de L1 no puede afirmar algo que sólo vale en el latín clásico', () => {
+    // El alumno de L1 lee la Vulgata. Un punto de L1 con `corpus:
+    // 'clásico'` le enseñaría algo que su propia lectura contradice.
+    const malos = PUNTOS_LA
+      .filter((p) => p.peldano === 'L1' && p.corpus === 'clásico')
+      .map((p) => p.id);
+    expect(malos, `puntos de L1 que afirman sobre un latín que el alumno aún no lee:\n${malos.join('\n')}`).toEqual([]);
+  });
+});

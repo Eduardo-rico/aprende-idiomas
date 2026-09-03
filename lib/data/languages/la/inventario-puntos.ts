@@ -72,9 +72,27 @@ export interface CalcoLa {
    *  PARSEAR: nunca un binario (el 50 % sale con una moneda) y nunca una
    *  glosa que contenga la respuesta. */
   ordenEnganya: 'si' | 'no' | 'no-aplica';
-  /** Qué hace la herencia romance con ESTE punto. `falso-regalo` es la
-   *  casilla cara: la forma se reconoce y el instinto produce lo
-   *  contrario. */
+  /** ── LA DEFINICIÓN, en una frase, porque sin ella dos personas pueden
+   *  tener razón a la vez ──
+   *
+   *  **`regalo` = el instinto español, aplicado a la RESPUESTA del ítem,
+   *  la produce correcta o tan cerca que el error es trivial.**
+   *
+   *  De las dos lecturas posibles del campo se elige ésta y no «la
+   *  palabra es reconocible», porque **el campo existe para repartir la
+   *  enseñanza**: tiene que decir dónde está el esfuerzo, y la
+   *  transparencia léxica no dice nada sobre la morfología. Que `rosa` se
+   *  reconozca no ayuda a producir `rosārum`.
+   *
+   *  Consecuencia directa, y es la que cambió ocho casillas cuando el
+   *  latinista lo señaló: **el español no tiene caso**, así que ante
+   *  `rēs / reī / rem / rē` el instinto no entrega nada. No es un regalo:
+   *  es un vacío, y la casilla es `sin-equivalente`. El regalo se reserva
+   *  para donde el español SÍ da la forma (`amābam` → «amaba», `amō` →
+   *  «amo») o la elección (el modo tras «para que»).
+   *
+   *  `falso-regalo` es la casilla cara: la forma se reconoce y el
+   *  instinto produce lo CONTRARIO. */
   herencia: 'regalo' | 'falso-regalo' | 'opaco' | 'sin-equivalente' | 'no-aplica';
   /** En una lengua que no se habla la mayoría se examina RECIBIENDO.
    *  Declararlo cambia el formato; no declararlo fabrica ejercicios de
@@ -125,6 +143,20 @@ export interface PuntoLa {
    *  porque suspender por la señal sola suspendería lengua bien
    *  enseñada. */
   invarianciaJustificada?: string;
+  /** EN QUÉ LATÍN VALE lo que el punto afirma.
+   *
+   *  Existe porque el ataque del latinista encontró el mejor hallazgo
+   *  pedagógico del lote: el punto de falsos regalos cultos decía que
+   *  **«fidēs» no es «fe»**, lo cual es cierto en Cicerón y **falso en la
+   *  Vulgata** — que es la puerta de entrada declarada del curso. El
+   *  alumno habría recibido en L1 el sentido cristiano y en L3 una
+   *  tarjeta diciéndole que ese sentido no existe.
+   *
+   *  Este curso cruza **mil años de lengua**: del latín de Plauto al de
+   *  Jerónimo. Una afirmación léxica sin corpus declarado es una
+   *  afirmación sobre un latín que el punto no dice cuál es. Obligatorio
+   *  en los puntos de clase `lexico`. */
+  corpus?: 'clásico' | 'vulgata' | 'verso' | 'todo';
   /** Cuántos valores distintos tiene que cubrir el lote de este punto.
    *  Se declara sólo cuando el número importa, y **no puede pasar del
    *  piso del peldaño**: `l12-licencias` pedía cubrir SIETE licencias con
@@ -186,6 +218,11 @@ export const DESCRIPTORES_FUERA_DEL_INVENTARIO: Record<string, string> = {
   'L3/MEDIACIÓN · SÍNTESIS': 'máquina de mediación (síntesis)',
   'L4/MEDIACIÓN': 'máquina de mediación',
   'L4/MEDIACIÓN · LITERARIA': 'máquina de mediación (comentario con rúbrica)',
+  // Estos dos ERAN puntos del bloque 13 y salieron del inventario: no son
+  // lengua, son comentario sobre por qué el curso está ordenado como
+  // está. A piso 6 gastaban DOCE ítems de L4 en metadiscurso, o sea en
+  // hablar SOBRE la lengua en vez de usarla. La mediación ya los cubre.
+  'L4/CULTURA': 'máquina de mediación: por qué el verso va después de la prosa y por qué lo que sigue a L4 son especializaciones y no peldaños',
 };
 
 const P = (p: PuntoLa) => p;
@@ -279,7 +316,7 @@ export const PUNTOS_LA: PuntoLa[] = [
   P({ id: 'l2-segunda', nombre: 'Segunda declinación, incluidos los -er y el vocativo en -e', bloque: 2, peldano: 'L1',
     descripcion: 'dominus/dominī, puer/puerī, ager/agrī (con síncopa), vir/virī. Y el vocativo singular en «-e» (domine), una de las tres formas que rompen la igualdad con el nominativo, junto con «fīlī» y «mī».',
     prereqs: ['l2-genitivo-clave'], clase: 'paradigma',
-    calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'produccion' },
+    calco: { ordenEnganya: 'no', herencia: 'sin-equivalente', via: 'produccion' },
     motivo: 'deriva por regla; el vocativo va aquí y no en un punto propio porque es una sola forma',
     cubre: ['L1/GRAMÁTICA · DECLINACIÓN'], cita: 'Las cinco declinaciones completas en singular y plural',
     varia: 'si el tema pierde la vocal (ager/agrī) o la conserva (puer/puerī), que NO se deduce del nominativo',
@@ -330,7 +367,7 @@ export const PUNTOS_LA: PuntoLa[] = [
   P({ id: 'l2-quinta', nombre: 'Quinta declinación', bloque: 2, peldano: 'L1',
     descripcion: 'rēs/reī, diēs/diēī. Pocos lemas, femeninos salvo «diēs» y «merīdiēs», que son masculinos por defecto.',
     prereqs: ['l2-genitivo-clave'], clase: 'paradigma',
-    calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'produccion' },
+    calco: { ordenEnganya: 'no', herencia: 'sin-equivalente', via: 'produccion' },
     motivo: 'clase pequeña y regular: deriva por regla',
     cubre: ['L1/GRAMÁTICA · DECLINACIÓN'], cita: 'Las cinco declinaciones completas en singular y plural',
     varia: 'la cantidad de la «e» del genitivo, larga tras vocal (diēī) y breve tras consonante (reī)',
@@ -342,6 +379,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'falso-regalo', via: 'recepcion' },
     motivo: 'léxico puro: no hay regla, y las que dan los manuales tienen tantas excepciones que enseñarlas produce más error que no darlas',
     cubre: ['L1/LÉXICO'], cita: 'el genitivo como clave de clase y no como una forma más',
+    corpus: 'todo',
     varia: 'el género y si coincide o no con el del descendiente español, que es de donde viene el error' }),
 
   P({ id: 'l2-plural-tantum', nombre: 'Plurales que se traducen en singular', bloque: 2, peldano: 'L1',
@@ -350,6 +388,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'falso-regalo', via: 'recepcion' },
     motivo: 'léxico con contraste: la flashcard enfrenta el singular y el plural del mismo lema cuando existen los dos (littera/litterae)',
     cubre: ['L2/LÉXICO'], cita: '`castra` y `arma` son neutros plurales que se traducen en singular',
+    corpus: 'todo',
     varia: 'si el lema tiene singular con otro sentido (littera = letra) o carece de él (castra)' }),
 
   P({ id: 'l2-sin-articulo', nombre: 'El latín no tiene artículo', bloque: 2, peldano: 'L1',
@@ -372,7 +411,7 @@ export const PUNTOS_LA: PuntoLa[] = [
   P({ id: 'l3-nominativo', nombre: 'Nominativo: sujeto y atributo', bloque: 3, peldano: 'L1',
     descripcion: 'El sujeto y, con «sum» y verbos copulativos, también el atributo: «Caesar imperātor est» lleva los dos en nominativo.',
     prereqs: ['l3-funcion-por-desinencia'], clase: 'funcion',
-    calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'recepcion' },
+    calco: { ordenEnganya: 'no', herencia: 'sin-equivalente', via: 'recepcion' },
     motivo: 'con dos nominativos el orden no decide cuál es sujeto — pero en español TAMPOCO («César es general» / «general es César»), así que el instinto posicional no produce aquí ninguna lectura falsa que el español no produzca igual: `ordenEnganya` es «no». Ponerlo en «sí» era ponerlo desde la clase y no desde el error',
     cubre: ['L1/GRAMÁTICA · CASO'], cita: '`sum` como cópula sin atributo en acusativo',
     varia: 'si hay uno o dos nominativos, y con dos, cuál es el sujeto',
@@ -381,24 +420,15 @@ export const PUNTOS_LA: PuntoLa[] = [
   P({ id: 'l3-acusativo-od', nombre: 'Acusativo de objeto directo', bloque: 3, peldano: 'L1',
     descripcion: 'La función más frecuente del caso, y la que el español marca con «a» sólo cuando el objeto es humano y determinado.',
     prereqs: ['l3-funcion-por-desinencia'], clase: 'funcion',
-    calco: { ordenEnganya: 'si', herencia: 'regalo', via: 'recepcion' },
+    calco: { ordenEnganya: 'si', herencia: 'sin-equivalente', via: 'recepcion' },
     motivo: 'el español tiene marca de objeto pero sólo a veces, así que el instinto la busca donde no está',
     cubre: ['L1/GRAMÁTICA · CASO'], cita: 'Complemento directo, indirecto',
-    varia: 'si el objeto es animado (donde el español pondría «a») o inanimado (donde no)' }),
-
-  P({ id: 'l3-acusativo-doble', nombre: 'Verbos con dos acusativos', bloque: 3, peldano: 'L2',
-    descripcion: 'doceō, rogō, cēlō: «puerōs grammaticam doceō» lleva dos acusativos, el de persona y el de cosa. El español pone dativo en uno de los dos.',
-    prereqs: ['l3-acusativo-od'], clase: 'trampa', formato: 'transformacion',
-    calco: { ordenEnganya: 'no', herencia: 'falso-regalo', via: 'produccion' },
-    motivo: 'el instinto español lee el acusativo de persona como dativo y llega a la traducción CORRECTA por el camino equivocado, así que en recepción el punto no puede medir nada: se examina PRODUCIENDO la construcción desde la paráfrasis · RECEPTIVO: no va por corrección, porque una frase mala sólo mide lo que el alumno pone de más y aquí la dificultad es de lectura',
-    cubre: [], sinDescriptor: 'el currículo no le da descriptor propio: entra dentro de los casos de L1-L2 y se denuncia aquí en vez de colgarlo del de al lado',
-    cita: 'Complemento directo, indirecto',
-    varia: 'cuál de los dos acusativos aparece primero' }),
+    varia: 'si el objeto es animado (donde el español pondría «a») o inanimado (donde no), y si el verbo lleva UN acusativo o DOS — «doceō» (113 en el treebank) y «rogō» (140) rigen dos, el de persona y el de cosa. Los dos acusativos eran un punto aparte y se fundieron aquí: no distinguía nada, porque el instinto español lee el de persona como dativo y llega a la traducción correcta por el camino equivocado' }),
 
   P({ id: 'l3-acusativo-extension', nombre: 'Acusativo de extensión en el espacio y en el tiempo', bloque: 3, peldano: 'L2',
     descripcion: '«decem annōs rēgnāvit», «tria mīlia passuum». Sin preposición, y el español exige «durante» o nada.',
     prereqs: ['l3-acusativo-od'], clase: 'sin-equivalente', formato: 'cloze-en-glosa',
-    calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'recepcion' },
+    calco: { ordenEnganya: 'no', herencia: 'sin-equivalente', via: 'recepcion' },
     motivo: 'el español también pone el acusativo desnudo («reinó diez años»), así que la lectura por instinto da la traducción correcta y no hay lectura coherente y falsa. Lo que se examina es reconocer que NO es objeto directo cuando el verbo ya tiene uno',
     cubre: ['L2/COMPRENSIÓN LECTORA'], cita: 'los ablativos más frecuentes (instrumento, compañía con `cum`, lugar, tiempo)',
     varia: 'si es extensión temporal o espacial, y si el verbo admite además un objeto directo en la misma frase' }),
@@ -406,7 +436,7 @@ export const PUNTOS_LA: PuntoLa[] = [
   P({ id: 'l3-genitivo-posesivo', nombre: 'Genitivo posesivo y de pertenencia', bloque: 3, peldano: 'L1',
     descripcion: '«liber puerī», el libro del niño. Es el caso más transparente para un hispanohablante.',
     prereqs: ['l3-funcion-por-desinencia'], clase: 'funcion',
-    calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'recepcion' },
+    calco: { ordenEnganya: 'no', herencia: 'sin-equivalente', via: 'recepcion' },
     motivo: 'transparente: se examina derivando la forma, no la función',
     cubre: ['L1/GRAMÁTICA · CASO'], cita: 'Los seis casos con su función primaria',
     varia: 'la posición del genitivo respecto a su núcleo, que en latín es libre' }),
@@ -414,7 +444,7 @@ export const PUNTOS_LA: PuntoLa[] = [
   P({ id: 'l3-genitivo-partitivo', nombre: 'Genitivo partitivo y con adjetivos de cantidad', bloque: 3, peldano: 'L2',
     descripcion: '«nihil novī», «satis temporis», «multum vīnī». El español usa «de» y el alumno acierta; lo que falla es reconocerlo cuando el núcleo es un neutro singular que parece sujeto.',
     prereqs: ['l3-genitivo-posesivo'], clase: 'funcion',
-    calco: { ordenEnganya: 'si', herencia: 'regalo', via: 'recepcion' },
+    calco: { ordenEnganya: 'si', herencia: 'sin-equivalente', via: 'recepcion' },
     motivo: 'la trampa no es el genitivo sino el núcleo: «nihil novī» se lee como dos palabras sueltas',
     cubre: ['L2/COMPRENSIÓN LECTORA'], cita: 'Los seis casos con su función primaria',
     varia: 'el núcleo: pronombre neutro, adverbio de cantidad o adjetivo sustantivado' }),
@@ -422,7 +452,7 @@ export const PUNTOS_LA: PuntoLa[] = [
   P({ id: 'l3-dativo-ci', nombre: 'Dativo de complemento indirecto', bloque: 3, peldano: 'L1',
     descripcion: '«puerō librum dō». Regalo casi total: el español tiene dativo pronominal y la construcción transfiere.',
     prereqs: ['l3-funcion-por-desinencia'], clase: 'funcion',
-    calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'recepcion' },
+    calco: { ordenEnganya: 'no', herencia: 'sin-equivalente', via: 'recepcion' },
     motivo: 'transfiere; se examina derivando la forma',
     cubre: ['L1/GRAMÁTICA · CASO'], cita: 'Complemento directo, indirecto',
     varia: 'la declinación del sustantivo, porque el sincretismo del dativo cambia con ella (-ae, -ō, -ī, -uī, -eī)' }),
@@ -642,17 +672,27 @@ export const PUNTOS_LA: PuntoLa[] = [
     motivo: 'transfiere; se enseña en un ítem y se marca como regalo para cobrarlo temprano',
     cubre: ['L1/GRAMÁTICA · CONJUGACIÓN'], sinDescriptor: 'el currículo lo cita en la tipología («pro-drop») sin descriptor propio',
     cita: 'concordancia, pro-drop: todo eso el hispanohablante lo opera desde niño',
+    corpus: 'todo',
     varia: 'si el pronombre expreso es enfático o contrastivo',
     invarianciaJustificada: 'la regla es la misma que el alumno ya aplica en español; un lote variado aquí sería inventar dificultad' }),
 
-  P({ id: 'l5-negacion', nombre: 'Negación con nōn y las dobles negaciones', bloque: 5, peldano: 'L1',
-    descripcion: 'nōn preverbal. Y «nōn nēmō» = «alguien», «nēmō nōn» = «todo el mundo»: el orden invierte el sentido.',
-    prereqs: ['l5-presente'], clase: 'trampa', formato: 'cloze-en-glosa',
-    calco: { ordenEnganya: 'si', herencia: 'falso-regalo', via: 'recepcion' },
-    motivo: 'el español SUMA las negaciones («no vi a nadie») y el latín las MULTIPLICA: es la trampa más limpia del bloque y el orden decide el sentido',
+  P({ id: 'l5-negacion', nombre: 'Negación con nōn, preverbal', bloque: 5, peldano: 'L1',
+    descripcion: 'nōn delante del verbo. Transfiere entero desde el español.',
+    prereqs: ['l5-presente'], clase: 'paradigma',
+    calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'recepcion' },
+    motivo: 'la posición y el valor son los del español: se enseña con la primera frase y no necesita bloque',
     cubre: ['L1/COMPRENSIÓN LECTORA'], cita: 'Negación con `nōn`',
+    varia: 'el tipo de constituyente negado (verbo, sintagma, palabra suelta)' }),
+
+  P({ id: 'l9-negacion-multiplica', nombre: 'Dos negaciones latinas se MULTIPLICAN, no se suman', bloque: 9, peldano: 'L3',
+    descripcion: '«nōn nēmō» = «alguien», «nēmō nōn» = «todo el mundo», «nōn nihil» = «algo». El orden decide el sentido, y el español hace lo contrario: suma («no vi a nadie»).',
+    prereqs: ['l5-negacion'], clase: 'trampa', formato: 'cloze-en-glosa',
+    calco: { ordenEnganya: 'si', herencia: 'falso-regalo', via: 'recepcion' },
+    motivo: 'la lectura española suma y da una frase coherente y falsa que significa lo contrario. BAJADO DE L1 A L3 POR FRECUENCIA MEDIDA, que es el argumento bueno: «nōn nēmō» sale 0 veces en 227.301 tokens, «nēmō nōn» 1, «nōn nihil» 3. Un piso de 8 en L1 habría exigido ocho ítems de una construcción que el alumno de L1 no va a encontrar nunca',
+    cubre: ['L3/COMPRENSIÓN LECTORA'], cita: 'Subordinadas de segundo y tercer grado',
+    sinDescriptor: 'declarado: el currículo agrupa la negación en L1 y esta mitad no tiene descriptor propio',
     varia: 'el orden de los dos negativos, que es lo que cambia el sentido',
-    excepcion: 'con «neque… neque» y con «nec» las negaciones sí se suman: la regla de la multiplicación no vale para las coordinadas' }),
+    excepcion: 'con «neque… neque» y con «nec» las negaciones sí se SUMAN: la multiplicación no vale para las coordinadas' }),
 
   P({ id: 'l5-interrogativas', nombre: 'Las tres partículas interrogativas y lo que esperan', bloque: 5, peldano: 'L1',
     descripcion: '«-ne» pregunta neutra, «num» espera un «no», «nōnne» espera un «sí». La partícula lleva la respuesta esperada.',
@@ -903,6 +943,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'recepcion' },
     motivo: 'léxico funcional que transfiere bien del español: flashcard de contraste',
     cubre: ['L3/GRAMÁTICA · PERÍODO'], cita: 'las correlaciones que lo sostienen (`nōn sōlum… sed etiam`, `tantus… quantus`, `tam… ut`, `cum… tum`)',
+    corpus: 'clásico',
     varia: 'la correlación y la distancia entre sus dos mitades, que en Cicerón puede ser de treinta palabras' }),
 
   P({ id: 'l9-relativa-enlace', nombre: 'El relativo de enlace abre frase', bloque: 9, peldano: 'L3',
@@ -994,6 +1035,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'opaco', via: 'recepcion' },
     motivo: 'léxico funcional opaco: no se parecen a nada español y su posición desconcierta',
     cubre: ['L2/COMPRENSIÓN LECTORA'], cita: 'Coordinación con `et`, `-que`, `sed`, `nam`',
+    corpus: 'clásico',
     varia: 'el conector y el matiz que aporta' }),
 
   P({ id: 'l10-que-enclitico', nombre: 'El -que enclítico', bloque: 10, peldano: 'L1',
@@ -1002,6 +1044,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'sin-equivalente', via: 'recepcion' },
     motivo: 'una conjunción escrita dentro de la palabra no existe en español: el alumno la lee como parte del lema y busca en el diccionario «populusque»',
     cubre: ['L1/COMPRENSIÓN LECTORA'], cita: 'Coordinación con `et`, `-que`, `sed`, `nam`',
+    corpus: 'todo',
     varia: 'si la palabra con -que es reconocible sin él o no' }),
 
   // ── b11 · Léxico: herencia, falsos regalos y estratos ───────────────
@@ -1011,6 +1054,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'recepcion' },
     motivo: 'léxico puro; la mayoría son transparentes y el SRS los fija rápido',
     cubre: ['L1/LÉXICO'], cita: '800 lemas seleccionados por frecuencia sobre los treebanks',
+    corpus: 'todo',
     varia: 'la clase de palabra y si es transparente o no' }),
 
   P({ id: 'l11-falsos-regalos', nombre: 'Los falsos regalos: la forma se reconoce y el sentido no', bloque: 11, peldano: 'L1',
@@ -1019,6 +1063,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'falso-regalo', via: 'recepcion' },
     motivo: 'la flashcard enfrenta el sentido latino y el del descendiente español. Y los ejemplos están elegidos para un HISPANOHABLANTE: la trampa «hostis = huésped» es inglesa (host < hospes) y para nosotros «hueste» y «hostil» ya apuntan a enemigo, así que el falso regalo real de esa familia es «hospes», que es huésped y anfitrión a la vez',
     cubre: ['L1/LÉXICO'], cita: 'reconoce los 60 **falsos regalos** del nivel',
+    corpus: 'todo',
     varia: 'el tipo de desplazamiento (estrechamiento, ampliación, cambio de dominio)' }),
 
   P({ id: 'l11-falsos-regalos-cultos', nombre: 'Los falsos regalos cultos de la prosa abstracta', bloque: 11, peldano: 'L3',
@@ -1027,6 +1072,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'falso-regalo', via: 'recepcion' },
     motivo: 'el alumno de L3 ya no consulta estas palabras porque «las sabe»: el error es invisible y se acumula en la traducción entera. ACOTADO A LA PROSA CLÁSICA: en la Vulgata —que es la puerta de entrada del curso en L1— «fidēs» SÍ es «fe», así que el punto tiene que decir de qué latín habla o contradice lo que el alumno aprendió dos peldaños antes',
     cubre: ['L3/LÉXICO'], cita: 'sus **falsos regalos cultos**: `ratiō` no es «razón» en la mayoría de sus usos',
+    corpus: 'clásico',
     varia: 'el sentido concreto que el contexto impone, y hay que traer varios del mismo lema' }),
 
   P({ id: 'l11-lexico-militar', nombre: 'El vocabulario militar y político de César', bloque: 11, peldano: 'L2',
@@ -1035,6 +1081,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'opaco', via: 'recepcion' },
     motivo: 'campo léxico cerrado: flashcard',
     cubre: ['L2/LÉXICO'], cita: 'el vocabulario militar y político de César',
+    corpus: 'clásico',
     varia: 'el campo (unidades, cargos, logística, terreno)' }),
 
   P({ id: 'l11-preverbios', nombre: 'Los preverbios y lo que hacen al verbo', bloque: 11, peldano: 'L2',
@@ -1043,6 +1090,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'recepcion' },
     motivo: 'regalo enorme y poco explotado: el español conserva los mismos preverbios y el alumno puede derivar cientos de lemas',
     cubre: ['L2/LÉXICO'], cita: 'Numerales cardinales y ordinales hasta mil', sinDescriptor: 'declarado: el currículo no le da descriptor y es de los puntos más rentables del curso',
+    corpus: 'todo',
     varia: 'el preverbio y si el compuesto es transparente o lexicalizado',
     excepcion: 'muchos compuestos están lexicalizados y no significan la suma: «intellegō» no es «leer entre». Un alumno que sobreaplique la composición inventará sentidos' }),
 
@@ -1060,6 +1108,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'produccion' },
     motivo: 'deriva por regla, con los cuatro declinables guardados',
     cubre: ['L2/LÉXICO'], cita: 'Numerales cardinales y ordinales hasta mil',
+    corpus: 'todo',
     varia: 'si el numeral declina o no',
     excepcion: '«duo» y «ambō» conservan formas de dual («duo», «duōs»/«duo»): no siguen la 2.ª declinación aunque lo parezcan' }),
 
@@ -1069,6 +1118,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'falso-regalo', via: 'recepcion' },
     motivo: 'el sentido cristiano de «grātia» o «caritās» es el que el español heredó, así que el alumno lo proyecta hacia atrás sobre el latín clásico',
     cubre: ['L1/CULTURA'], cita: 'qué separa el latín de Jerónimo del latín clásico en tres rasgos concretos',
+    corpus: 'vulgata',
     varia: 'si la palabra es nueva o es clásica resemantizada' }),
 
   P({ id: 'l11-preposiciones-caso', nombre: 'Preposiciones que rigen dos casos', bloque: 11, peldano: 'L2',
@@ -1128,6 +1178,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'opaco', via: 'recepcion' },
     motivo: 'flashcard de contraste con la palabra de prosa, que es lo que hace visible que son dos estratos',
     cubre: ['L4/LÉXICO · POÉTICO'], cita: 'Domina el léxico poético que no coincide con el de la prosa',
+    corpus: 'verso',
     varia: 'el par prosa/verso, y si el poético tiene además motivación métrica',
     abierto: 'los pares hay que sacarlos de la Eneida y las Metamorfosis, no del treebank: éste es de prosa y da «ēnsis» UNA vez frente a «gladius» 45' }),
 
@@ -1155,22 +1206,6 @@ export const PUNTOS_LA: PuntoLa[] = [
     motivo: 'mediación de registro; y es la razón por la que el orden de lectura del peldaño es el que es',
     cubre: ['L3/CULTURA'], cita: 'Cicerón (cartas primero, discursos después: la carta es su registro llano y el discurso el periódico)',
     varia: 'el rasgo de registro comparado' }),
-
-  P({ id: 'l13-orden-lectura-verso', nombre: 'Por qué el verso se lee después de la prosa', bloque: 13, peldano: 'L4',
-    descripcion: 'No porque sea «más difícil» en abstracto, sino porque el verso desactiva la vecindad como pista y hace falta tener la morfología automatizada para leerlo.',
-    prereqs: ['l12-hiperbaton-verso'], clase: 'pragmatico',
-    calco: { ordenEnganya: 'no', herencia: 'no-aplica', via: 'recepcion' },
-    motivo: 'mediación: explicar el porqué del orden del curso es una forma de que el alumno sepa qué está haciendo',
-    cubre: ['L4/CULTURA'], cita: 'por qué la Eneida y las Metamorfosis se leen después de la prosa y no antes',
-    varia: 'el argumento (morfología automatizada, léxico poético, métrica)' }),
-
-  P({ id: 'l13-especializaciones', nombre: 'Lo que viene después de L4 no es un peldaño', bloque: 13, peldano: 'L4',
-    descripcion: 'Tácito, Horacio y Plauto son especializaciones declaradas, con ejes distintos: brevitas sintáctica, variedad léxica extrema, morfología pre-clásica. No se ordenan entre sí.',
-    prereqs: ['l13-orden-lectura-verso'], clase: 'pragmatico',
-    calco: { ordenEnganya: 'no', herencia: 'no-aplica', via: 'recepcion' },
-    motivo: 'mediación; y sirve para que el alumno que termine L4 sepa que elige camino y no sube un escalón',
-    cubre: ['L4/CULTURA'], cita: 'son especializaciones declaradas, no peldaños', sinDescriptor: 'declarado: el currículo lo dice en «lo que NO cubre» y no en un descriptor',
-    varia: 'la especialización y su eje' }),
 
   P({ id: 'l13-tres-lecturas', nombre: 'Las tres pronunciaciones y por qué el curso elige una', bloque: 13, peldano: 'L1',
     descripcion: 'Eclesiástica, restituida y tradicional de cada país. El curso usa la eclesiástica y lo declara: no es la única legítima ni pretende ser la de Cicerón.',

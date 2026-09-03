@@ -5,7 +5,7 @@
 // dirección que la destapa.
 import { describe, it, expect } from 'vitest';
 import {
-  canonicalLa, sinCantidad, comparaLa, textoParaVoz,
+  canonicalLa, sinCantidad, comparaLa, textoParaVoz, acentoDe,
   densidadMacronPorDecimo, estadoMacron, revisarOrtografiaLa,
 } from '@/lib/lang/ortografia-la';
 
@@ -130,5 +130,38 @@ describe('el gate de escritura', () => {
   it('no marca prosa latina corriente y bien escrita', () => {
     expect(revisarOrtografiaLa('Gallia est omnis dīvīsa in partēs trēs.')).toEqual([]);
     expect(revisarOrtografiaLa('arma virumque canō')).toEqual([]);
+  });
+});
+
+describe('el acento derivado, y el ejemplo comprobado CONTRA su regla', () => {
+  it('deriva el acento de palabras macronizadas', () => {
+    expect(acentoDe('amīcus')).toBe('llana');      // penúltima larga por naturaleza
+    expect(acentoDe('dominus')).toBe('esdrujula'); // penúltima breve
+    expect(acentoDe('rosa')).toBe('llana');        // bisílabo
+    expect(acentoDe('rēx')).toBeNull();            // monosílabo
+  });
+
+  it('la larga POR POSICIÓN cuenta, y muta cum liquida NO', () => {
+    expect(acentoDe('magister')).toBe('llana');    // «gis» cerrada por s
+    expect(acentoDe('tenebrae')).toBe('esdrujula');// «br» no alarga
+  });
+
+  it('CAZA el ejemplo que refutaba su propia regla', () => {
+    // El inventario daba «magistrī» como esdrújula para ilustrar la larga
+    // por posición, y es LLANA justamente por esa regla: «gis» está
+    // cerrada por s. Es la cuarta vez en una noche que un ejemplo
+    // canónico refuta la regla que ilustra, y es lo primero que copia
+    // quien escribe el punto siguiente — así que la comprobación se
+    // mecaniza donde se puede, que es aquí.
+    expect(acentoDe('magistrī')).toBe('llana');
+    expect(acentoDe('magistrī')).not.toBe('esdrujula');
+  });
+
+  it('sin mácrons la respuesta es CONFIADA Y FALSA — y eso es el argumento de los mácrons', () => {
+    // No es un defecto de la función: es la razón por la que el material
+    // los lleva siempre. Se enseña en vez de esconderse.
+    expect(acentoDe('amīcus')).toBe('llana');
+    expect(acentoDe('amicus')).toBe('esdrujula');  // la misma palabra, sin marcar
+    expect(acentoDe('amicus')).not.toBe(acentoDe('amīcus'));
   });
 });

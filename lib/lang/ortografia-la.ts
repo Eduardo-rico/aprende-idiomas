@@ -107,6 +107,79 @@ export function textoParaVoz(s: string): string {
   return t;
 }
 
+// ── EL ACENTO, DERIVADO DE LA CANTIDAD ────────────────────────────────
+//
+// El latín no escribe el acento porque se deduce, y sólo se deduce si hay
+// mácrons — que es la razón de fondo por la que el material los lleva
+// siempre. La regla:
+//
+//   bisílabo               → llana, sea cual sea la cantidad
+//   penúltima LARGA        → llana        (amīcus)
+//   penúltima BREVE        → esdrújula    (dominus)
+//
+// «Larga» es por naturaleza (mácrón, diptongo) o **por posición** (vocal
+// seguida de dos consonantes), con la excepción de muta cum liquida.
+//
+// Existe además para poder COMPROBAR los ejemplos del inventario contra
+// la regla que ilustran. En una sola noche eso falló cuatro veces en este
+// proyecto —el último, un punto que daba «magistrī» como esdrújula
+// cuando es llana justo por la regla que el punto enuncia—, y es lo
+// primero que copia quien escribe el punto siguiente.
+export type Acento = 'llana' | 'esdrujula';
+
+const MUTA = /[pbtdcgf]/, LIQUIDA = /[lr]/;
+
+/** Trocea en sílabas de forma bastante burda pero suficiente para el
+ *  acento: sólo hace falta saber cuántas hay y cómo es la penúltima. */
+function silabas(pal: string): { nucleo: string; cierra: boolean }[] {
+  const p = pal.normalize('NFC').toLowerCase();
+  const V = /[aeiouāēīōūyȳ]/;
+  const DIPT = ['ae', 'oe', 'au', 'eu', 'ei'];
+  const out: { nucleo: string; cierra: boolean }[] = [];
+  let i = 0;
+  while (i < p.length) {
+    if (!V.test(p[i]!)) { i++; continue; }
+    let nucleo = p[i]!;
+    if (DIPT.includes(p.slice(i, i + 2))) { nucleo = p.slice(i, i + 2); i += 2; } else i += 1;
+    // consonantes hasta el siguiente núcleo
+    let j = i;
+    while (j < p.length && !V.test(p[j]!)) j++;
+    const grupo = p.slice(i, j);
+    // la sílaba se cierra si quedan ≥2 consonantes (o una x/z) antes del
+    // núcleo siguiente, salvo muta cum liquida, que no alarga.
+    let cierra = grupo.length >= 2 || /[xz]/.test(grupo);
+    if (grupo.length === 2 && MUTA.test(grupo[0]!) && LIQUIDA.test(grupo[1]!)) cierra = false;
+    if (j >= p.length) cierra = false;   // la final no cuenta para el acento
+    out.push({ nucleo, cierra });
+    i = j;
+  }
+  return out;
+}
+
+/** El acento de una palabra **MACRONIZADA**, y el contrato importa.
+ *
+ *  Con mácrons la respuesta es exacta, porque en texto macronizado la
+ *  AUSENCIA de mácrón significa breve. Sin ellos la función devuelve una
+ *  respuesta confiada y equivocada: `amīcus` es llana y `amicus` sale
+ *  esdrújula, porque no hay forma de distinguir «vocal breve» de «vocal
+ *  larga sin marcar».
+ *
+ *  **Eso no es un defecto de esta función: es el argumento entero de la
+ *  decisión de los mácrons**, y por eso hay un test que lo enseña en vez
+ *  de esconderlo. Quien alimente esto con texto de biblioteca sin
+ *  macronizar obtendrá números plausibles y falsos; para eso está
+ *  `estadoMacron`, que decide pieza a pieza.
+ *
+ *  Devuelve `null` sólo si la palabra es monosílaba. */
+export function acentoDe(pal: string): Acento | null {
+  const s = silabas(pal);
+  if (s.length < 2) return null;
+  if (s.length === 2) return 'llana';
+  const pen = s[s.length - 2]!;
+  const larga = /[āēīōūȳ]/.test(pen.nucleo) || pen.nucleo.length === 2 || pen.cierra;
+  return larga ? 'llana' : 'esdrujula';
+}
+
 // ── EL GATE DE ESCRITURA ──────────────────────────────────────────────
 
 export type ClaseOrtografia = 'j-latina' | 'macron-parcial' | 'cantidad-sin-macron';
