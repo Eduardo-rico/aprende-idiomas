@@ -4,6 +4,11 @@
 // password gate; we mirror the login pattern from home-redesign.spec.ts.
 import { test, expect, request } from "@playwright/test";
 
+// Las lenguas que sirve la app. Si entra una quinta y no se añade aquí,
+// el test volvería a inventar URLs en vez de comprobar las reales.
+const LANGS = ["pt", "ro", "cs", "ru"] as const;
+const langDe = (p: string) => LANGS.find((l) => p === `/${l}` || p.startsWith(`/${l}/`)) ?? "pt";
+
 const PASSWORD = process.env.AUTH_PASSWORD ?? "charalito4";
 
 const START_PATHS = [
@@ -69,9 +74,18 @@ for (const start of START_PATHS) {
 
     const failures: string[] = [];
     for (const href of uniqueHrefs) {
-      // All internal links in this app start with /<lang>; if somehow
-      // a bare path slipped in (no /pt prefix), normalize it.
-      const normalized = href.startsWith("/pt") ? href : `/pt${href}`;
+      // Un enlace interno ya trae su prefijo de lengua; sólo se le pone
+      // uno si viene desnudo, y entonces el que corresponde es el de LA
+      // PÁGINA DE PARTIDA, no `/pt`.
+      //
+      // Antes esto era `href.startsWith("/pt") ? href : \`/pt${href}\``,
+      // escrito cuando la app era sólo portuguesa. Al entrar el rumano
+      // convertía `/ro` en `/pt/ro` y `/ro/leer` en `/pt/ro/leer`, y
+      // luego informaba de que el rumano estaba roto: siete «404» sobre
+      // URLs que el propio test acababa de inventar. La aplicación
+      // funcionaba. (2026-09-03.)
+      const conLengua = (p: string) => LANGS.some((l) => p === `/${l}` || p.startsWith(`/${l}/`));
+      const normalized = conLengua(href) ? href : `/${langDe(start)}${href}`;
       try {
         const resp = await page.request.get(normalized);
         if (![200, 308, 301, 302].includes(resp.status())) {
