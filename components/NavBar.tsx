@@ -43,7 +43,14 @@ export function NavBar() {
   };
   return (
     <nav className="sticky top-0 z-50 backdrop-blur-md bg-paper/80 border-b border-rule">
-      <div className="max-w-5xl mx-auto px-6 flex items-center gap-7 h-14">
+      {/* Móvil (medido 2026-09-03 en 375 px): esto era UNA sola fila sin
+          envolver, 751 px de contenido en 320 px visibles y `overflow`
+          visible, así que CUATRO de los seis enlaces —Histórias, Ler,
+          Progresso, Cuenta— quedaban fuera de la pantalla y sin forma de
+          alcanzarlos. Ahora los enlaces saltan a su propia línea por
+          debajo del ancho `sm`; de `sm` en adelante el diseño es
+          exactamente el de antes (una fila de 56 px). */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-wrap sm:flex-nowrap items-center gap-x-7 gap-y-2 py-2 sm:py-0 sm:h-14">
         <Link href={`/${lang}`} className="font-display text-[19px] font-semibold flex items-center gap-2 no-underline text-ink">
           <span
             aria-hidden="true"
@@ -51,7 +58,7 @@ export function NavBar() {
           />
           {chrome.title}
         </Link>
-        <ul className="flex gap-1 ml-auto items-center list-none">
+        <ul className="order-last w-full flex flex-nowrap overflow-x-auto gap-1 items-center list-none [-webkit-overflow-scrolling:touch] sm:order-none sm:w-auto sm:ml-auto sm:justify-end sm:overflow-visible">
           {links.map((l) => {
             const active = path === l.href;
             return (
@@ -60,8 +67,8 @@ export function NavBar() {
                   href={l.href}
                   className={
                     active
-                      ? "px-3 py-1.5 rounded-md text-sm font-medium text-lesson bg-lesson-soft no-underline"
-                      : "px-3 py-1.5 rounded-md text-sm font-medium text-ink-muted hover:text-ink hover:bg-paper-sunken no-underline transition-colors duration-150 ease-[var(--ease)]"
+                      ? "px-3 py-3.5 sm:py-1.5 rounded-md text-sm font-medium whitespace-nowrap text-lesson bg-lesson-soft no-underline"
+                      : "px-3 py-3.5 sm:py-1.5 rounded-md text-sm font-medium whitespace-nowrap text-ink-muted hover:text-ink hover:bg-paper-sunken no-underline transition-colors duration-150 ease-[var(--ease)]"
                   }
                 >
                   {l.label}
@@ -77,7 +84,7 @@ export function NavBar() {
           value={lang}
           onChange={(e) => handleLanguageChange(e.target.value as LanguageId)}
           aria-label="Idioma objetivo"
-          className="border border-rule-strong rounded-md px-2 py-1 text-xs bg-paper text-ink"
+          className="ml-auto sm:ml-0 border border-rule-strong rounded-md px-2 py-2 sm:py-1 text-xs bg-paper text-ink"
         >
           {LANGUAGES.map((l) => (
             <option key={l} value={l}>
