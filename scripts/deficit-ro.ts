@@ -21,6 +21,7 @@ import { PUNTOS_RO, pisoDePuntoRo } from '../lib/data/languages/ro/inventario-pu
 import { blocksDir } from '../lib/data/registry';
 import { contarPuntosRo, pisoDePunto, bloquesSinLeccion } from './lib/asigna-ro';
 import { reconciliar, informe, type PorPunto } from './lib/reconciliar-deficit';
+import { puntosConRasgoInvariante } from './lib/varianza';
 
 const HIST = path.join(process.cwd(), 'docs/plans/deficit-ro-historico.json');
 const NIVELES = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const;
@@ -82,6 +83,43 @@ if (sinLeccion.length) {
 } else {
   console.log(`\nBloqueados por falta de lección: **0** — los ${PUNTOS_RO.length} puntos tienen dónde caer.`);
 }
+
+// ── EL RASGO DIANA QUE NO VARÍA ─────────────────────────────────────
+// «Ocho ítems por punto» presupone que los ocho MIDEN el punto. Si el
+// rasgo diana es constante entre ellos, se aprende en el primero y la
+// cobertura real es 1, no 8 — y eso no lo ve ningún gate por ítem,
+// porque no es propiedad de ningún ítem sino del CONJUNTO. Lo destapó
+// `r8-relativas-pe-care` en el lote 19: ocho ítems impecables uno a uno
+// que eran uno repetido ocho veces.
+//
+// La señal es NECESARIA Y NO SUFICIENTE (ver `lib/varianza.ts`), así que
+// esto NO bloquea por sí solo: lo que se exige es que cada punto marcado
+// lleve su JUICIO ESCRITO, igual que la cuarentena y el piso cero. Cero
+// marcados sin juicio.
+const porPunto = new Map<string, any[]>();
+for (const x of items.filter((i: any) => i?.variantStatus !== 'needs-human'))
+  for (const c of ((x.concepts ?? []) as string[])) { const g = porPunto.get(c) ?? []; g.push(x); porPunto.set(c, g); }
+const invariantes = puntosConRasgoInvariante(porPunto);
+const juicio = new Map(PUNTOS_RO.map((p) => [p.id, p.varianza]));
+console.log(`\n## Rasgo diana INVARIANTE (${invariantes.length} puntos con ≥4 ítems)\n`);
+console.log('Una pieza de la operación presente en ≥80 % de los ítems se aprende en el');
+console.log('primero: a partir del segundo, lo que discrimina es otra cosa. La señal no');
+console.log('decide — decide qué varía en su lugar y si pertenece al punto —, así que');
+console.log('cada uno lleva su juicio escrito en el inventario.\n');
+console.log('| punto | ítems | invariante | varía en su lugar | juicio |');
+console.log('|---|---:|---|---|---|');
+const mudos: string[] = [];
+for (const v of invariantes) {
+  const j = juicio.get(v.punto);
+  if (!j) mudos.push(v.punto);
+  const cab = j ? j.split('.')[0]!.slice(0, 46) : '**SIN JUICIO ESCRITO**';
+  const var_ = v.variable.length ? '`' + v.variable.slice(0, 5).join('`, `') + '`' : '—';
+  console.log(`| \`${v.punto}\` | ${v.n} | ${v.invariantes.map((i) => `\`${i.pieza}\` ${i.en}/${v.n}`).join(', ')} | ${var_} | ${cab} |`);
+}
+if (mudos.length) {
+  console.log(`\n✗ ${mudos.length} punto(s) marcados SIN juicio escrito: ${mudos.join(', ')}`);
+  process.exitCode = 1;
+} else console.log(`\nMarcados sin juicio escrito: **0**.`);
 
 // ── reconciliación ───────────────────────────────────────────────────
 const porPuntoAhora: PorPunto = Object.fromEntries(cuenta);
