@@ -1,6 +1,6 @@
 [
   {
-    "id": "a6fcbe07",
+    "id": "acea8eee",
     "blockId": 8,
     "lessonId": "b8-l1-subordonarea",
     "difficulty": 2,
@@ -11,7 +11,7 @@
       "ro-corr-b1",
       "correccion"
     ],
-    "contentHash": "a6fcbe07951d44a492f070426aab4d4743a8d4f072c5f7cba0f66b2cb04dd2f3",
+    "contentHash": "acea8eeeb91d81ed07c00f74826963bdf23b5033876f72c0d0029d123c04d8fe",
     "variantStatus": "neutral",
     "variantVerificacion": "Corrección RO-B1 (2026-09-03): la frase mala es el calco de «Quiero que él venga mañana a la oficina.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
     "register": "neutro",
@@ -23,11 +23,11 @@
         "Vreau să vină el mâine la birou."
       ],
       "calcoEs": "Quiero que él venga mañana a la oficina.",
-      "explanationEs": "Entre «să» y el verbo sólo caben los clíticos pronominales, la negación «nu» y los adverbios clíticos «mai, și, tot, prea, cam» (să mai stau, să nu mai vină): el sujeto no puede meterse ahí. Cuando el sujeto va expreso delante, el rumano abre la subordinada con «ca»: «vreau CA el SĂ vină». La otra salida es posponerlo: «vreau să vină el»."
+      "explanationEs": "Entre «să» y el verbo sólo caben los clíticos pronominales, la negación «nu» y los adverbios clíticos «mai, și, tot, prea, cam» (să mai stau, să nu mai vină): nada más se mete ahí. Cuando algo se ADELANTA delante del verbo —aquí el sujeto, pero igual valdría un complemento o un adverbio: «vreau CA MÂINE să vină»— el rumano abre la subordinada con «ca». La otra salida es posponer el sujeto: «vreau să vină el», que va SIN «ca» aunque el sujeto siga expreso."
     }
   },
   {
-    "id": "6b333abe",
+    "id": "780eb0a5",
     "blockId": 8,
     "lessonId": "b8-l1-subordonarea",
     "difficulty": 2,
@@ -38,7 +38,7 @@
       "ro-corr-b1",
       "correccion"
     ],
-    "contentHash": "6b333abec7ca6f8fda758498b065b2f33176f46d7fd01e18913ffe584764b0e4",
+    "contentHash": "780eb0a5287cb4cbf7f16c21e9b0fbddf46bc60057aaa3a745043de12442c115",
     "variantStatus": "neutral",
     "variantVerificacion": "Corrección RO-B1 (2026-09-03): la frase mala es el calco de «Deseo que mi hija estudie en Cluj.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
     "register": "neutro",
@@ -50,11 +50,11 @@
         "Doresc să studieze fiica mea la Cluj."
       ],
       "calcoEs": "Deseo que mi hija estudie en Cluj.",
-      "explanationEs": "El sujeto «fiica mea» no puede ir entre «să» y el verbo. Con sujeto expreso antepuesto hace falta «ca»: «doresc CA fiica mea SĂ studieze». El español pone un solo «que» y de ahí sale el error."
+      "explanationEs": "El grupo «fiica mea» no puede ir entre «să» y el verbo. Lo que pide «ca» no es que el sujeto EXISTA, sino que algo vaya ADELANTADO delante del verbo: «doresc CA fiica mea SĂ studieze». El español pone un solo «que» y de ahí sale el error."
     }
   },
   {
-    "id": "14406930",
+    "id": "102ea13c",
     "blockId": 8,
     "lessonId": "b8-l1-subordonarea",
     "difficulty": 2,
@@ -65,7 +65,7 @@
       "ro-corr-b1",
       "correccion"
     ],
-    "contentHash": "14406930dcb4ecdebadbb8cc97e7e6affd55306ea442e1bd9ed948d2ec3049a9",
+    "contentHash": "102ea13ca8ecb9d7b5cd597b7c15b7f760c76569ae98282fa49338a923fa5ca5",
     "variantStatus": "neutral",
     "variantVerificacion": "Corrección RO-B1 (2026-09-03): la frase mala es el calco de «Es importante que los niños duerman ocho horas.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
     "register": "neutro",
@@ -78,11 +78,11 @@
         "E important să doarmă copiii opt ore."
       ],
       "calcoEs": "Es importante que los niños duerman ocho horas.",
-      "explanationEs": "También con los impersonales: «e important CA copiii SĂ doarmă». La partícula «să» va pegada al verbo, así que todo lo que el español mete detrás de «que» tiene que ir delante de «ca» o detrás del verbo."
+      "explanationEs": "También con los impersonales: «e important CA copiii SĂ doarmă». La partícula «să» va pegada al verbo, así que todo lo que el español mete detrás de «que» o se adelanta —y entonces entra «ca»— o se pospone al verbo, y entonces «ca» no aparece."
     }
   },
   {
-    "id": "30920537",
+    "id": "6266b5db",
     "blockId": 8,
     "lessonId": "b8-l1-subordonarea",
     "difficulty": 2,
@@ -93,7 +93,7 @@
       "ro-corr-b1c",
       "correccion"
     ],
-    "contentHash": "30920537874df3c1a3fb215ab3ed4756f5766bc5cbddcd6c60e0ed68f3e8d4d3",
+    "contentHash": "6266b5dbea4d11ec3d05d3464873872697525ea4a754cafe7a2008c147ed1a2e",
     "variantStatus": "neutral",
     "variantVerificacion": "Corrección RO-B1C (2026-09-03): la frase mala es el calco de «Aguardo a que mis amigos lleguen a tiempo.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
     "register": "neutro",
@@ -105,11 +105,11 @@
         "Aștept să sosească prietenii mei la timp."
       ],
       "calcoEs": "Aguardo a que mis amigos lleguen a tiempo.",
-      "explanationEs": "El sujeto «prietenii mei» no cabe entre «să» y el verbo: ahí sólo entran los clíticos, «nu» y los adverbios «mai, și, tot, prea, cam». Con el sujeto delante, la subordinada se abre con «ca»; la otra salida es posponerlo detrás del verbo."
+      "explanationEs": "El grupo «prietenii mei» no cabe entre «să» y el verbo: ahí sólo entran los clíticos, «nu» y los adverbios «mai, și, tot, prea, cam». Lo que hace aparecer «ca» es que algo vaya ADELANTADO delante del verbo, sea el sujeto o no; la otra salida es posponerlo, y entonces «ca» no hace falta."
     }
   },
   {
-    "id": "06741cf0",
+    "id": "df01eeae",
     "blockId": 8,
     "lessonId": "b8-l1-subordonarea",
     "difficulty": 2,
@@ -120,7 +120,7 @@
       "ro-corr-b1c",
       "correccion"
     ],
-    "contentHash": "06741cf0b4879d9072e63b24f0482b4b64b14a98aa201617517e6ff67ab81bb1",
+    "contentHash": "df01eeae67120657f72c65d61c60214aa7f02c466bc8d73b72034043301dfb9b",
     "variantStatus": "neutral",
     "variantVerificacion": "Corrección RO-B1C (2026-09-03): la frase mala es el calco de «Es necesario que los estudiantes vengan más temprano.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
     "register": "neutro",
@@ -134,11 +134,11 @@
         "Este necesar să vină studenții mai devreme."
       ],
       "calcoEs": "Es necesario que los estudiantes vengan más temprano.",
-      "explanationEs": "También con los impersonales. El español encadena «que» + sujeto + verbo y el rumano no puede: «să» va pegado al verbo, así que el sujeto sale fuera y aparece «ca» delante de él."
+      "explanationEs": "También con los impersonales. El español encadena «que» + sujeto + verbo y el rumano no puede: «să» va pegado al verbo, así que lo adelantado sale fuera y aparece «ca» delante. Con el sujeto pospuesto —«e necesar să vină studenții»— no hay nada adelantado y «ca» no entra."
     }
   },
   {
-    "id": "c1aa5ff2",
+    "id": "1fccafc1",
     "blockId": 8,
     "lessonId": "b8-l1-subordonarea",
     "difficulty": 2,
@@ -149,7 +149,7 @@
       "ro-corr-b1c",
       "correccion"
     ],
-    "contentHash": "c1aa5ff2883abf102ea7ea286f1d9f33b5b0aa30145d3ae91eeff0abae4b34e2",
+    "contentHash": "1fccafc118786534537651303bb9dead1ad29462e8ec18a6e0567185a938761b",
     "variantStatus": "neutral",
     "variantVerificacion": "Corrección RO-B1C (2026-09-03): la frase mala es el calco de «El profesor pide que los alumnos lean el texto en casa.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
     "register": "neutro",
@@ -161,11 +161,11 @@
         "Profesorul cere să citească elevii textul acasă."
       ],
       "calcoEs": "El profesor pide que los alumnos lean el texto en casa.",
-      "explanationEs": "Con los verbos de petición pasa lo mismo que con los de voluntad: «cere CA elevii SĂ citească». Lo que decide no es el verbo principal sino dónde queda el sujeto, y delante del verbo subordinado no cabe."
+      "explanationEs": "Con los verbos de petición pasa lo mismo que con los de voluntad: «cere CA elevii SĂ citească». Lo que decide no es el verbo principal ni que haya sujeto: es si algo va ADELANTADO delante del verbo subordinado, porque entre «să» y el verbo no cabe."
     }
   },
   {
-    "id": "7e512015",
+    "id": "4eba59fa",
     "blockId": 8,
     "lessonId": "b8-l1-subordonarea",
     "difficulty": 2,
@@ -176,7 +176,7 @@
       "ro-corr-b1c",
       "correccion"
     ],
-    "contentHash": "7e512015713f717a4f4cdb17e684fec2aa130449fb8314e1486e438ecffd248a",
+    "contentHash": "4eba59fab9b58e6694b8590272ae0b056462f6d85c03d8ee58b53d6aee851351",
     "variantStatus": "neutral",
     "variantVerificacion": "Corrección RO-B1C (2026-09-03): la frase mala es el calco de «Quiero que nuestros vecinos cierren la puerta.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
     "register": "neutro",
@@ -188,11 +188,11 @@
         "Vreau să închidă vecinii noștri poarta."
       ],
       "calcoEs": "Quiero que nuestros vecinos cierren la puerta.",
-      "explanationEs": "El grupo «vecinii noștri» es el sujeto de «închidă» y por eso no puede quedarse entre la partícula y el verbo. Escrito con «ca» delante del sujeto, el orden del español se conserva entero."
+      "explanationEs": "El grupo «vecinii noștri» no puede quedarse entre la partícula y el verbo. Adelantado, pide «ca» delante, y así el orden del español se conserva entero; pospuesto («vreau să închidă vecinii noștri poarta») no pide nada."
     }
   },
   {
-    "id": "c43f20d7",
+    "id": "56e7e569",
     "blockId": 8,
     "lessonId": "b8-l1-subordonarea",
     "difficulty": 2,
@@ -203,7 +203,7 @@
       "ro-corr-b1c",
       "correccion"
     ],
-    "contentHash": "c43f20d722dc4b4dd6b3f7c94e7fc5469abe8dd2f9d55a66650b574573ac4182",
+    "contentHash": "56e7e56972857a54438572e4c870f5dd5cc52e24e55ef255dc4afed0fe258d73",
     "variantStatus": "neutral",
     "variantVerificacion": "Corrección RO-B1C (2026-09-03): la frase mala es el calco de «Es bueno que los padres hablen con los profesores.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
     "register": "neutro",
@@ -217,7 +217,7 @@
         "Este bine să vorbească părinții cu profesorii."
       ],
       "calcoEs": "Es bueno que los padres hablen con los profesores.",
-      "explanationEs": "La partícula «să» y el verbo forman una unidad que nada rompe. Cuando el español mete el sujeto detrás de «que», el rumano lo saca delante y abre con «ca»."
+      "explanationEs": "La partícula «să» y el verbo forman una unidad que nada rompe. Cuando el español mete algo detrás de «que», el rumano o lo adelanta y abre con «ca», o lo pospone al verbo y entonces «ca» no aparece."
     }
   },
   {
