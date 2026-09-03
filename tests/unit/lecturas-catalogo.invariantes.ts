@@ -64,7 +64,20 @@ export const palabras = (l: Pieza) =>
 export function invariantesDelCatalogo(piso: PisoCatalogo) {
   const catalogo = cargarCatalogo(piso.lang);
 
-  describe(`catálogo de lectura ${piso.lang.toUpperCase()}`, () => {
+  // Tiempo límite de suite, no por test. Estas comprobaciones recorren el
+  // corpus entero —2.180 lecturas y 7,7 M de palabras en ruso— y bajo la
+  // suite completa, con otras sesiones usando la máquina, pasan de los 5 s
+  // por defecto. El síntoma es un test INTERMITENTE, que es peor que uno
+  // roto: enseña a ignorar el rojo justo en la suite que corre antes de
+  // cada commit.
+  //
+  // El 2026-09-03 se atacó la CAUSA (cada test reconstruía el texto; ahora
+  // `cargarCatalogo` lo une una vez) y aun así volvió a caer con la
+  // máquina más cargada. O sea que la causa era real pero no suficiente:
+  // el margen sigue dependiendo de cuánta CPU haya libre, y eso no se
+  // arregla optimizando, se declara. Un test hermano ya llevaba 60 s con
+  // el motivo escrito; el error fue ponerlo en UNO y no en el conjunto.
+  describe(`catálogo de lectura ${piso.lang.toUpperCase()}`, { timeout: 120_000 }, () => {
     it('tiene el tamaño medido de la última tanda (piso, no igualdad: crecer está bien)', () => {
       const total = catalogo.reduce((a, x) => a + palabras(x.l), 0);
       expect(catalogo.length).toBeGreaterThanOrEqual(piso.lecturas);
