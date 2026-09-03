@@ -60,6 +60,23 @@ export interface ItemCorreccion {
    *  OPCIONAL en el tipo para no tocar los lotes de PT ya publicados; los
    *  gates del rumano lo exigen declarado y `undefined` es un fallo. */
   atajoEs?: boolean;
+  /** EL ATAJO DEL LATÍN COMÚN, que este tipo NO TENÍA — y es la SEGUNDA vez
+   *  que un gate declarado en la definición del formato no existe en el
+   *  tipo. La primera fue `atajoEs` (lote 9): el atajo de traducción estaba
+   *  declarado como gate y no se había medido nunca. Ahora el mismo agujero
+   *  con `transparenteLatin`, que la definición del lingüista declara gate
+   *  del formato —«por encima de la mitad del lote, el lote no sale»— y que
+   *  el cloze rumano sí lleva desde su primer lote.
+   *
+   *  Un gate DECLARADO y AUSENTE es peor que no tenerlo: la definición
+   *  promete una cobertura que nadie da, y el lote «pasa» sin él. Arreglar
+   *  sólo la instancia garantizaba una tercera, así que lo que cierra la
+   *  clase es `gates-por-formato.ts` y su test.
+   *
+   *  Pregunta que contesta: **¿la raíz latina común deja acertar la BUENA
+   *  sin saber la morfología rumana?** Opcional en el tipo para no tocar
+   *  los lotes de PT; los gates del rumano lo exigen declarado. */
+  transparenteLatin?: boolean;
   /** LA INTENCIÓN, en vocabulario CERRADO (`lib/intencion.ts`). Es lo que
    *  la tarjeta PINTA para cerrar la indeterminación: «Trebuie a pleca»
    *  admite să plec/pleci/plece y sin decir quién habla el alumno no

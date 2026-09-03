@@ -64,6 +64,7 @@ import { exenta } from '../lib/exenciones-hunspell-ro';
 import { medirAtajo } from '../lib/atajo-correccion';
 import { revisarCopula } from '../lib/copula-ro';
 import { informeAsigna } from '../lib/asigna-ro';
+import { camposSinDeclarar } from '../lib/gates-por-formato';
 
 const DISP = 'r7-disparadores-sa';
 const COMPL = 'r8-completivas-ca-sa';
@@ -105,58 +106,75 @@ const CAMPO_PREVERBAL = /^(nu|mai|și|tot|prea|cam|mă|te|se|ne|vă|îmi|îți|�
 export const ITEMS: ItemCorreccion[] = [
   // ══ r7-disparadores-sa · 5 ════════════════════════════════════════
   // (a) el orden español calcado: să + sujeto + verbo.
-  { p: COMPL, pasada: 1, espejoEs: false, atajoEs: false,
+  { p: COMPL, pasada: 1, espejoEs: false, atajoEs: false, transparenteLatin: false,
     mala: 'Vreau să el vină mâine la birou.', buena: 'Vreau ca el să vină mâine la birou.',
     alt: ['Vreau să vină el mâine la birou.'],
     calcoEs: 'Quiero que él venga mañana a la oficina.',
     explicacion: 'Entre «să» y el verbo sólo caben los clíticos pronominales, la negación «nu» y los adverbios clíticos «mai, și, tot, prea, cam» (să mai stau, să nu mai vină): el sujeto no puede meterse ahí. Cuando el sujeto va expreso delante, el rumano abre la subordinada con «ca»: «vreau CA el SĂ vină». La otra salida es posponerlo: «vreau să vină el».' },
-  { p: COMPL, pasada: 1, espejoEs: false, atajoEs: false,
+  { p: COMPL, pasada: 1, espejoEs: false, atajoEs: false, transparenteLatin: false,
     mala: 'Doresc să fiica mea studieze la Cluj.', buena: 'Doresc ca fiica mea să studieze la Cluj.',
     alt: ['Doresc să studieze fiica mea la Cluj.'],
     calcoEs: 'Deseo que mi hija estudie en Cluj.',
     explicacion: 'El sujeto «fiica mea» no puede ir entre «să» y el verbo. Con sujeto expreso antepuesto hace falta «ca»: «doresc CA fiica mea SĂ studieze». El español pone un solo «que» y de ahí sale el error.' },
-  { p: COMPL, pasada: 1, espejoEs: false, atajoEs: false,
+  { p: COMPL, pasada: 1, espejoEs: false, atajoEs: false, transparenteLatin: false,
     mala: 'E important să copiii doarmă opt ore.', buena: 'E important ca copiii să doarmă opt ore.',
     alt: ['Este important ca copiii să doarmă opt ore.', 'E important să doarmă copiii opt ore.'],
     calcoEs: 'Es importante que los niños duerman ocho horas.',
     explicacion: 'También con los impersonales: «e important CA copiii SĂ doarmă». La partícula «să» va pegada al verbo, así que todo lo que el español mete detrás de «que» tiene que ir delante de «ca» o detrás del verbo.' },
   // (b) «că» donde el regente pide «să».
-  { p: DISP, pasada: 1, espejoEs: false, atajoEs: false,
+  { p: DISP, pasada: 1, espejoEs: false, atajoEs: false, transparenteLatin: false,
     mala: 'Vreau că vii cu mine la gară.', buena: 'Vreau să vii cu mine la gară.',
     calcoEs: 'Quiero que vengas conmigo a la estación.',
     explicacion: 'Los verbos de voluntad no admiten «că»: piden «să» + conjuntivo. El «que» español se traduce por «că» sólo cuando la subordinada afirma un hecho («cred că vine»); con «a vrea» nunca.' },
-  { p: DISP, pasada: 1, espejoEs: false, atajoEs: false,
+  { p: DISP, pasada: 1, espejoEs: false, atajoEs: false, transparenteLatin: false,
     mala: 'Te rog că închizi ușa.', buena: 'Te rog să închizi ușa.',
     calcoEs: 'Te pido que cierres la puerta.',
     explicacion: 'Lo mismo con los verbos de petición: «te rog SĂ închizi». Con «că» la frase intentaría afirmar que cierras la puerta, que no es lo que se pide.' },
 
   // ══ r7-anti-progresivo · 6 ════════════════════════════════════════
   // Una sola cara: indicativo finito de «a fi» + gerunziu eventivo.
-  { p: PROG, pasada: 1, espejoEs: false, atajoEs: false,
-    mala: 'Sunt mâncând, te sun mai târziu.', buena: 'Mănânc, te sun mai târziu.',
-    alt: ['Tocmai mănânc, te sun mai târziu.', 'Stau și mănânc, te sun mai târziu.'],
-    calcoEs: 'Estoy comiendo, te llamo luego.',
-    explicacion: 'El rumano no tiene progresivo: «estoy comiendo» es sencillamente «mănânc». Para marcar que ocurre justo ahora se añade un adverbio («tocmai mănânc») o se coordina («stau ȘI mănânc»), nunca «a fi» + gerundio.' },
-  { p: PROG, pasada: 1, espejoEs: false, atajoEs: false,
-    mala: 'Ce ești făcând acum?', buena: 'Ce faci acum?',
-    calcoEs: '¿Qué estás haciendo ahora?',
-    explicacion: 'También en pregunta: el presente simple hace todo el trabajo, y «acum» ya dice que es ahora. «Ești făcând» no existe en el rumano de hoy, en ningún registro.' },
-  { p: PROG, pasada: 1, espejoEs: false, atajoEs: false,
-    mala: 'Ea este scriind o scrisoare lungă.', buena: 'Ea scrie o scrisoare lungă.',
-    calcoEs: 'Ella está escribiendo una carta larga.',
-    explicacion: 'El presente rumano cubre el progresivo español entero. Añadir «este» delante del gerundio es calcar una perífrasis que esta lengua no tiene.' },
-  { p: PROG, pasada: 1, espejoEs: false, atajoEs: false,
-    mala: 'Suntem așteptând autobuzul de zece minute.', buena: 'Așteptăm autobuzul de zece minute.',
-    calcoEs: 'Estamos esperando el autobús desde hace diez minutos.',
-    explicacion: 'La duración la lleva «de zece minute», no una perífrasis: «așteptăm». El rumano marca el aspecto con adverbios y complementos, no con «a fi» + gerundio.' },
-  { p: PROG, pasada: 1, espejoEs: false, atajoEs: false,
-    mala: 'Copiii sunt dormind în camera lor.', buena: 'Copiii dorm în camera lor.',
-    calcoEs: 'Los niños están durmiendo en su habitación.',
-    explicacion: 'En plural pasa lo mismo: «copiii dorm». El gerundio rumano existe, pero es adverbial («dormind, n-a auzit telefonul»), nunca el segundo miembro de una perífrasis con «a fi» EN INDICATIVO. Con «a fi» en prezumtiv sí existe y significa otra cosa: «o fi dormind» es «estará durmiendo».' },
-  { p: PROG, pasada: 1, espejoEs: false, atajoEs: false,
-    mala: 'Sunt citind o carte foarte bună.', buena: 'Citesc o carte foarte bună.',
-    calcoEs: 'Estoy leyendo un libro muy bueno.',
-    explicacion: '«Citesc» ya significa «leo» y «estoy leyendo»: el rumano no reparte esos dos valores en dos formas. Por eso el calco con «sunt» sobra siempre.' },
+  //
+  // LA FORMA DEL PRESENTE VA REGALADA EN EL ENUNCIADO, y ésa es la
+  // reescritura del 2026-09-03. La v0 pedía al alumno dos cosas a la vez:
+  // borrar «sunt» Y producir la forma del presente — `mănânc` (doble
+  // alternancia), `citesc` (sufijo -esc), `faci` (palatalización). Eso es
+  // `r3-presente-4-conjugaciones` y `r3-sufijo-ez-esc`, o sea A1, y la
+  // operación anti-progresiva se aprende en el primer ítem: a partir del
+  // segundo, lo que separaba acierto de fallo era la morfología. **El FSRS
+  // le cargaba a un punto de B1 un fallo de A1**, y el alumno acababa
+  // repasando lo que ya sabe creyendo que fallaba lo otro. Lo cazó el
+  // lingüista contando qué hace distintos a los seis ítems entre sí.
+  //
+  // Ahora cada frase trae el mismo verbo ya conjugado en la persona que
+  // toca, en una cláusula contrastiva, así que **lo único en manos del
+  // alumno es la operación**. Y hay gate: la corrección sólo puede BORRAR
+  // —ninguna palabra de la buena puede faltar en la mala—, que es la forma
+  // exacta y computable de decir «la morfología va dada».
+  { p: PROG, pasada: 1, espejoEs: false, atajoEs: false, transparenteLatin: false,
+    mala: 'De obicei mănânc la ora unu, dar azi sunt mâncând mai devreme.', buena: 'De obicei mănânc la ora unu, dar azi mănânc mai devreme.',
+    alt: ['De obicei mănânc la ora unu, dar azi stau și mănânc mai devreme.'],
+    calcoEs: 'Normalmente como a la una, pero hoy estoy comiendo más temprano.',
+    explicacion: 'El rumano no tiene progresivo: el presente hace todo el trabajo, y por eso la segunda mitad de la frase repite la misma forma que la primera. Para marcar que ocurre justo ahora se añade un adverbio («tocmai mănânc») o se coordina («stau și mănânc»), nunca «a fi» + gerundio.' },
+  { p: PROG, pasada: 1, espejoEs: false, atajoEs: false, transparenteLatin: true,
+    mala: 'Faci mereu ordine; acum ce ești făcând?', buena: 'Faci mereu ordine; acum ce faci?',
+    calcoEs: 'Siempre ordenas; ¿ahora qué estás haciendo?',
+    explicacion: 'La forma «faci» ya está en la primera mitad: lo único que sobra en la segunda es «ești». El presente rumano cubre el progresivo español entero, también en pregunta.' },
+  { p: PROG, pasada: 1, espejoEs: false, atajoEs: false, transparenteLatin: true,
+    mala: 'Ea scrie zilnic, iar acum este scriind o scrisoare lungă.', buena: 'Ea scrie zilnic, iar acum scrie o scrisoare lungă.',
+    calcoEs: 'Ella escribe a diario, y ahora está escribiendo una carta larga.',
+    explicacion: '«Scrie» sirve para «escribe» y para «está escribiendo»: es la misma forma que ya aparece antes en la frase. Añadir «este» delante del gerundio es calcar una perífrasis que esta lengua no tiene.' },
+  { p: PROG, pasada: 1, espejoEs: false, atajoEs: false, transparenteLatin: false,
+    mala: 'Așteptăm mereu în stație, iar azi suntem așteptând de zece minute.', buena: 'Așteptăm mereu în stație, iar azi așteptăm de zece minute.',
+    calcoEs: 'Siempre esperamos en la parada, y hoy estamos esperando desde hace diez minutos.',
+    explicacion: 'La duración la lleva «de zece minute», no una perífrasis. La forma «așteptăm» ya está escrita en la primera mitad y es la misma que hace falta en la segunda.' },
+  { p: PROG, pasada: 1, espejoEs: false, atajoEs: false, transparenteLatin: false,
+    mala: 'Copiii dorm mult; acum sunt dormind în camera lor.', buena: 'Copiii dorm mult; acum dorm în camera lor.',
+    calcoEs: 'Los niños duermen mucho; ahora están durmiendo en su habitación.',
+    explicacion: 'En plural pasa lo mismo, y «dorm» ya está en la primera mitad. El gerundio rumano existe, pero es adverbial («dormind, n-a auzit telefonul»), nunca el segundo miembro de una perífrasis con «a fi» EN INDICATIVO. Con «a fi» en prezumtiv sí existe y significa otra cosa: «o fi dormind» es «estará durmiendo».' },
+  { p: PROG, pasada: 1, espejoEs: false, atajoEs: false, transparenteLatin: false,
+    mala: 'Citesc în fiecare seară, iar acum sunt citind o carte foarte bună.', buena: 'Citesc în fiecare seară, iar acum citesc o carte foarte bună.',
+    calcoEs: 'Leo todas las tardes, y ahora estoy leyendo un libro muy bueno.',
+    explicacion: '«Citesc» ya significa «leo» y «estoy leyendo»: el rumano no reparte esos dos valores en dos formas, y la forma está delante, en la primera mitad de la frase.' },
 ];
 
 export function verificar(items: ItemCorreccion[]): string[] {
@@ -224,8 +242,21 @@ export function verificar(items: ItemCorreccion[]): string[] {
       if (/(?<![\p{L}])(eram|erai|era|erați|erau)\s+\p{L}+(ând|ind)(?![\p{L}])/iu.test(x.mala))
         v.push(`${id}: la mala está en imperfecto — «eram mâncând» es ARCAICO, no agramatical, y ese hecho vive en r5-perifrasis-pasado`);
       if (/(?<![\p{L}])\p{L}+(ând|ind)(?![\p{L}])/iu.test(x.buena)) v.push(`${id}: la buena conserva el gerunziu`);
+      // LA MORFOLOGÍA VA DADA, y esto es la forma computable de decirlo: la
+      // corrección sólo puede BORRAR. Si la buena introduce una palabra que
+      // no está en la mala, el alumno tiene que PRODUCIRLA, y entonces el
+      // ítem mide también r3-presente-4-conjugaciones o r3-sufijo-ez-esc —
+      // A1— mientras el fallo se le carga a este punto, que es B1.
+      const enMala = new Set(x.mala.toLowerCase().replace(/[^\p{L}\s]/gu, ' ').split(/\s+/).filter(Boolean));
+      const nuevas = x.buena.toLowerCase().replace(/[^\p{L}\s]/gu, ' ').split(/\s+/).filter(Boolean).filter((w) => !enMala.has(w));
+      if (nuevas.length) v.push(`${id}: la buena introduce ${nuevas.map((w) => `«${w}»`).join(', ')}, que no está en la mala — el alumno tendría que PRODUCIR la forma del presente, y eso es r3 (A1); aquí sólo se examina borrar la perífrasis`);
     }
   }
+  // Y el invariante del formato: lo que la definición declara como gate
+  // tiene que estar DECLARADO en cada ítem. «No medido» no es «limpio».
+  for (const [i, x] of items.entries())
+    for (const c of camposSinDeclarar('correccion', x as unknown as Record<string, unknown>))
+      v.push(`CORO5-${String(i + 1).padStart(3, '0')} (${x.p}): no declara «${c}», que la definición del formato declara gate`);
   v.push(...revisarCopula(items.map((x) => ({ p: x.p, buena: x.buena, alt: x.alt })), 'COP'));
   const m = medirAtajo(items, 'ATAJO');
   for (const id of m.sinDeclarar) v.push(`${id}: atajoEs sin declarar`);

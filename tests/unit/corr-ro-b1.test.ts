@@ -12,9 +12,11 @@ import { describe, it, expect } from 'vitest';
 import { verificar, ITEMS } from '../../scripts/lotes/corr-ro-b1';
 import type { ItemCorreccion } from '../../scripts/lib/correccion';
 
-const base = { pasada: 1, espejoEs: false, atajoEs: false } as const;
+const base = { pasada: 1, espejoEs: false, atajoEs: false, transparenteLatin: false } as const;
 const caza = (item: ItemCorreccion, re: RegExp) => verificar([item]).some((s) => re.test(s));
 const EXPL = 'El regente selecciona el complementante y el sujeto no cabe entre la partícula y el verbo.';
+// Todos los sondas declaran `transparenteLatin`: desde el lote 18 es gate
+// del formato y «no declarado» no es «limpio».
 
 describe('el gate anti-anglófono, que estaba MUERTO', () => {
   it('caza «Vreau el să vină», que es la mala que este lote existe para prohibir', () => {
@@ -64,6 +66,18 @@ describe('la allowlist de regentes: la v0 era una denylist disfrazada', () => {
 });
 
 describe('el progresivo: la v0 buscaba las dos formas en CUALQUIER parte de la frase', () => {
+  // LA MORFOLOGÍA VA DADA: la corrección sólo puede BORRAR.
+  it('caza la buena que introduce una palabra que no está en la mala', () => {
+    expect(caza({ ...base, p: 'r7-anti-progresivo', transparenteLatin: false,
+      mala: 'Sunt citind o carte foarte bună.', buena: 'Citesc o carte foarte bună.',
+      calcoEs: 'Estoy leyendo un libro muy bueno.', explicacion: EXPL },
+      /tendría que PRODUCIR la forma del presente/)).toBe(true);
+  });
+  it('y NO se dispara en los seis reescritos, que traen la forma en la propia frase', () => {
+    for (const x of ITEMS.filter((i) => i.p === 'r7-anti-progresivo'))
+      expect(caza(x, /tendría que PRODUCIR/), x.mala).toBe(false);
+  });
+
   it('caza «vin alergând», predicación depictiva lícita con verbo de movimiento', () => {
     expect(caza({ ...base, p: 'r7-anti-progresivo', mala: 'E cald, iar copiii vin alergând.',
       buena: 'E cald, iar copiii vin repede.', calcoEs: 'Hace calor y los niños vienen corriendo.', explicacion: EXPL },
@@ -98,7 +112,7 @@ describe('el lote publicado', () => {
     expect(x.alt).toContain('Este important ca copiii să doarmă opt ore.');
   });
   it('y la tercera salida que la propia explicación enseña está declarada', () => {
-    const x = ITEMS.find((i) => i.buena.startsWith('Mănânc'))!;
-    expect(x.alt).toContain('Stau și mănânc, te sun mai târziu.');
+    const x = ITEMS.find((i) => i.p === 'r7-anti-progresivo' && i.buena.startsWith('De obicei'))!;
+    expect(x.alt).toContain('De obicei mănânc la ora unu, dar azi stau și mănânc mai devreme.');
   });
 });
