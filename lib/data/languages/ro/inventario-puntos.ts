@@ -80,7 +80,16 @@ export type NivelRo = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
  *  de grafía no pasa por el español: no hay calco que suene bien ni mal). */
 export type ClaseRo = 'fonologico' | 'ortografico' | 'trampa' | 'coincide' | 'sin-equivalente' | 'pragmatico' | 'lexico' | 'paradigma';
 
-export type FormatoRo = 'escucha' | 'correccion' | 'cloze-con-pista' | 'transformacion' | 'mediacion' | 'flashcard' | 'juicio';
+export type FormatoRo = 'escucha' | 'correccion' | 'cloze-con-pista' | 'transformacion' | 'mediacion' | 'flashcard' | 'juicio' | 'preferencia-registro';
+
+/** `preferencia-registro` NO TIENE MÁQUINA, y nace el 2026-09-03 porque
+ *  hacía falta un sitio donde poner los puntos cuyo error natural del
+ *  alumno NO ES AGRAMATICAL sino ARCAICO o de otro registro. Ahí la
+ *  corrección es el formato equivocado: no se le puede pedir a nadie que
+ *  «corrija el error» de una frase que la lengua admite, aunque hoy no la
+ *  diga nadie. Lo que hace falta es una máquina que diga «esto se entiende
+ *  pero hoy no se dice, se dice así». Se une al grupo de los bloqueados
+ *  por formato: su deuda es REAL y el piso NO se reduce. */
 
 export const FORMATO_DE_CLASE_RO: Record<ClaseRo, FormatoRo> = {
   fonologico: 'escucha',
@@ -331,8 +340,8 @@ export const PUNTOS_RO: PuntoRo[] = [
     cita: 'los 25 irregulares del nivel (a fi, a avea, a merge, a face, a vrea, a putea' }),
   P({ id: 'r3-sa-vs-infinitivo', nombre: 'Conjuntivo con «să» donde el español pone infinitivo', bloque: 3, nivel: 'A1',
     descripcion: 'vreau să merg, pot să vin, trebuie să plec, îmi place să citesc: el infinitivo NO es el complemento por defecto. Desde la primera semana.',
-    prereqs: ['r3-presente-4-conjugaciones'], clase: 'trampa', calco: { castellano: 'bien', latinComun: 'transparente' },
-    motivo: '«quiero ir» es español perfecto, así que *vreau a merge suena bien calcado: se da el calco y se pide la forma con să. Diseñado para inducir el calco', cubre: ['A1/GRAMÁTICA · CONJUNTIVO'],
+    prereqs: ['r3-presente-4-conjugaciones'], clase: 'trampa', formato: 'preferencia-registro', calco: { castellano: 'bien', latinComun: 'transparente' },
+    motivo: 'MOVIDO A `preferencia-registro` EL 2026-09-03, Y SUS 8 ÍTEMS PUBLICADOS RETIRADOS, por orden del coordinador. Tres razones y la tercera es la que decide. (1) CONSISTENCIA: «îmi place a citi» se mató en este proyecto por llevar la etiqueta «înv., astăzi rar», y «vreau a merge» lleva exactamente ésa (dexonline s.v. vrea, DEXI). Si aquella decisión era correcta, ésta también; no puede haber dos varas. (2) «a putea» ES PEOR Y NO ADMITE DISCUSIÓN: dexonline s.v. putea presenta el régimen CON la partícula y dice que «a» PUEDE omitirse — omisión, no prohibición. O sea que «pot a veni» es la forma plena y el ítem marcaba como error algo que la fuente da por bueno. Cuatro de los ocho retirados eran de «a putea». (3) Y LA QUE DECIDE: el calco que un hispanohablante produce para «quiero ir» ES «vreau a merge». El error natural del alumno NO ES AGRAMATICAL, es ARCAICO. Por eso el formato de corrección es el equivocado para este punto, y no es que los ítems estuvieran mal escritos: ningún ajuste de redacción arregla eso. EL PUNTO NO MUERE y no se le baja el piso: el contraste español-infinitivo / rumano-să es de los de más valor del curso para un hispanohablante, porque el español pone infinitivo justo donde el rumano pone «să». Espera la máquina de preferencia y registro, con los demás bloqueados por formato. La deuda de 8 unidades es real y la pagará esa máquina.', cubre: ['A1/GRAMÁTICA · CONJUNTIVO'],
     cita: 'Produce 15 frases con vreau/pot/trebuie/îmi place + să + presente SIN recurrir ni una vez al infinitivo largo' }),
   P({ id: 'r3-trebuie-invariable', nombre: '«a trebui» invariable: trebuie să merg / trebuie să mergem', bloque: 3, nivel: 'A1',
     descripcion: 'trebuie no concuerda con la persona: el sujeto lo lleva el conjuntivo. Nunca *trebuiesc, *trebuim.',
@@ -471,12 +480,12 @@ export const PUNTOS_RO: PuntoRo[] = [
   P({ id: 'r5-perifrasis-pasado', nombre: 'El pasado sin perífrasis: 2:1 y tiempo simple + adverbio', bloque: 5, nivel: 'A2',
     descripcion: 'Hecho de base: el rumano estándar no tiene pasado simple vivo, así que am făcut = «hice» + «he hecho» (2:1). Y las tres perífrasis aspectuales del pasado español no tienen forma rumana: progresivo «estaba comiendo cuando llamó» → mâncam când a sunat (no *eram mâncând); prospectivo «iba a salir cuando sonó» → tocmai plecam când a sunat / eram pe cale să plec (no *mergeam să plec); retrospectivo «acababa de llegar» → tocmai sosise / abia sosise. El reparto imperfecto/indefinido en sí transfiere: NO se examina. «a ști» no admite la coerción incoativa de «supe» (am aflat, no *am știut): va en r9-falsos-amigos.',
     prereqs: ['r5-imperfect', 'r5-participios'], clase: 'trampa', calco: { castellano: 'bien', latinComun: 'transparente' },
-    motivo: 'las tres perífrasis son español perfecto y su calco es rumano malo: corrección desde el calco (dar el español con perífrasis, pedir tiempo simple + adverbio). Es el mismo hecho que r7-anti-progresivo, un nivel antes: r5 lo posee en A2 y r7 lo re-ancla en B1 como umbral duro. Sustituye al «las tres excepciones» del currículo, que nadie enumeraba', cubre: ['A2/GRAMÁTICA · PASADOS'],
+    formato: 'preferencia-registro', motivo: 'MOVIDO A `preferencia-registro` EL 2026-09-03, ANTES DE ESCRIBIR NINGÚN ÍTEM, con el mismo veredicto que r3-sa-vs-infinitivo. De sus tres caras no queda ninguna que sostenga una corrección: el progresivo *eram mâncând es ARCAICO y no agramatical (a fi + gerunziu es la construcción fuente atestiguada en rumano antiguo), y las caras prospectiva y retrospectiva NO TIENEN MALA — sus calcos son rumano bien formado con otro significado, así que no hay nada que corregir. El hecho de lengua sigue siendo verdadero y valioso; lo que no vale es el formato. La v0 decía, y se conserva para que se vea qué se creía: «las tres perífrasis son español perfecto y su calco es rumano malo; corrección desde el calco, dando el español con perífrasis y pidiendo tiempo simple + adverbio». Es el mismo hecho que r7-anti-progresivo, un nivel antes: r5 lo posee en A2 y r7 lo re-ancla en B1 como umbral duro. Sustituye al «las tres excepciones» del currículo, que nadie enumeraba', cubre: ['A2/GRAMÁTICA · PASADOS'],
     cita: 'señalando las tres excepciones donde diverge' }),
   P({ id: 'r5-mai-mult-ca-perfect', nombre: 'Mai-mult-ca-perfectul sintético: făcusem, mersesem', bloque: 5, nivel: 'A2',
     descripcion: 'Una sola palabra, sin auxiliar: se enseña CONTRA el «había hecho» analítico.',
     prereqs: ['r5-perifrasis-pasado'], clase: 'trampa', calco: { castellano: 'bien', latinComun: 'engañoso' },
-    motivo: '*aveam făcut es el calco exacto de «había hecho» y suena perfecto: corrección desde el calco', cubre: ['A2/GRAMÁTICA · PASADOS'],
+    formato: 'preferencia-registro', motivo: 'REVISADO EL 2026-09-03, ANTES DE ESCRIBIR NINGÚN ÍTEM, en la pasada en seco sobre los 27 puntos `trampa`. La mala declarada, *aveam făcut, NO está certificada como agramatical por ninguna fuente: «a avea» + participio existe en rumano como construcción resultativa posesiva («am ceva făcut»), así que el calco de «había hecho» cae en la zona de registro o de otra lectura, no en la agramaticalidad. Se mueve con r3-sa-vs-infinitivo y r5-perifrasis-pasado en vez de gastar ocho ítems en descubrirlo, que es lo que costó las tres veces anteriores. El punto es verdadero —el mai-mult-ca-perfect rumano es SINTÉTICO y una sola palabra— y merece cloze derivado cuando alguien escriba `maiMultCaPerfect()` en paradigma-ro.ts; hoy no existe. Motivo original: *aveam făcut es el calco exacto de «había hecho» y suena perfecto', cubre: ['A2/GRAMÁTICA · PASADOS'],
     cita: 'Mai-mult-ca-perfectul SINTÉTICO (făcusem, mersesem): una sola palabra, sin auxiliar' }),
   P({ id: 'r5-futuro-cuatro-registros', nombre: 'Los cuatro futuros: voi merge / o să merg / am să merg / oi merge', bloque: 5, nivel: 'A2',
     descripcion: 'Receptivos los cuatro, productivos «o să» y «voi» (voi/vei/va/vom/veți/vor + infinitivo sin partícula). En B2 se vuelven elección de registro.',
