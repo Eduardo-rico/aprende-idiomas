@@ -26,7 +26,7 @@
 // coordinador pidió el lote preparado, no en el corpus. Y antes de
 // publicarse pasa por el lingüista adversarial.
 import { SUSTANTIVOS_A1, VERBOS_A1 } from '../../lib/data/languages/ro/lexicon-a1';
-import { articulado, presente, imperfecto, perfectCompus, participio, viitorLiterar, conditional, conditionalPerfect, paradigmaNominal, diminutivo, PERSONAS, type Persona } from '../lib/paradigma-ro';
+import { articulado, presente, imperfecto, perfectCompus, participio, viitorLiterar, conditional, conditionalPerfect, conjunctiv, conjunctivPerfect, gerunziu, paradigmaNominal, diminutivo, PERSONAS, type Persona } from '../lib/paradigma-ro';
 import { revisarOrtografiaRo } from '../../lib/lang/ortografia-ro';
 import { hunspellDisponible, desconocidas } from '../lib/hunspell-ro';
 import { exenta } from '../lib/exenciones-hunspell-ro';
@@ -45,7 +45,12 @@ export interface ClozeRo {
    *  que es lo único que pedían los lotes 1-6. El participio no lleva
    *  persona. */
   inf?: string; per?: Persona;
-  t?: 'presente' | 'imperfecto' | 'perfect-compus' | 'participio' | 'futuro' | 'condicional' | 'condicional-perfecto';
+  /** `conjuntivo`, `conjuntivo-perfecto` y `gerunziu` (lote 17) devuelven
+   *  la forma SIN `să`: la partícula va escrita en la frase, porque la
+   *  elección `să`/infinitivo es otro punto (`r3-sa-vs-infinitivo`, ya en
+   *  el piso) y un hueco que la incluyera mediría los dos a la vez. El
+   *  `gerunziu` no lleva persona. */
+  t?: 'presente' | 'imperfecto' | 'perfect-compus' | 'participio' | 'futuro' | 'condicional' | 'condicional-perfecto' | 'conjuntivo' | 'conjuntivo-perfecto' | 'gerunziu';
   /** declarada, donde el paradigma no llega */
   r?: string;
   alt?: string[];
@@ -136,7 +141,12 @@ export function respuestaDe(x: ClozeRo): string | null {
     const v = VERB.get(x.inf);
     if (!v) return null;
     if (x.t === 'participio') return participio(v);
+    // Ni el gerunziu ni el conjuntivo perfecto llevan persona: el primero
+    // no es forma personal y el segundo es INVARIABLE, que es su punto.
+    if (x.t === 'gerunziu') return gerunziu(v);
+    if (x.t === 'conjuntivo-perfecto') return conjunctivPerfect(v);
     if (!x.per) return null;
+    if (x.t === 'conjuntivo') return conjunctiv(v, x.per);
     if (x.t === 'imperfecto') return imperfecto(v, x.per);
     if (x.t === 'perfect-compus') return perfectCompus(v, x.per);
     if (x.t === 'futuro') return viitorLiterar(v, x.per);

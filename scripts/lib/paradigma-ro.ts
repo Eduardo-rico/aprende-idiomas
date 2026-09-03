@@ -520,6 +520,26 @@ export function gerDerivable(v: LemaVerbal): boolean {
   return c === 'I' || c === 'IV' || c === 'IVî';
 }
 
+/** LA REGLA SOLA, sin mirar lo guardado. Existe para poder preguntarle al
+ *  lexicón **qué lemas ALTERNAN de verdad**, que no es lo mismo que qué
+ *  lemas están guardados: 2.ª y 3.ª se guardan enteras por clase, así que
+ *  `a merge` tiene `ger` y aun así la regla lo acierta. Un gate que use
+ *  «¿está guardado?» para responder «¿el tema alterna?» contesta otra
+ *  pregunta — y ya marcó 4 donde había 2.
+ *
+ *  Es además la comprobación de «quítale el record al lema y mira qué
+ *  deriva la regla sola», que es como se cazó `temaInfinitivo()`. */
+export function gerunziuPorRegla(v: LemaVerbal): string {
+  const tema = temaInfinitivo(v.inf);
+  const c = conjugacionDe(v.inf);
+  return tema + (c === 'IV' || /i$/.test(tema) ? 'ind' : 'ând');
+}
+
+/** ¿El tema de este lema ALTERNA en el gerunziu? Sólo tiene respuesta si
+ *  la forma está guardada: es la comparación de lo guardado con lo que la
+ *  regla daría sola (a vedea → văzând frente a *vedând). */
+export const gerAlterna = (v: LemaVerbal): boolean => !!v.ger && v.ger !== gerunziuPorRegla(v);
+
 /** Gerunziu. Devuelve null —nunca una forma inventada— cuando hace falta
  *  guardarlo y no está. */
 export function gerunziu(v: LemaVerbal): string | null {

@@ -18,6 +18,7 @@ import b3Lessons from "./lessons/b3.json";
 import b4Lessons from "./lessons/b4.json";
 import b5Lessons from "./lessons/b5.json";
 import b6Lessons from "./lessons/b6.json";
+import b7Lessons from "./lessons/b7.json";
 import b10Lessons from "./lessons/b10.json";
 export type { Block, Concept, Lesson, ConceptId, LessonId };
 
@@ -28,6 +29,7 @@ const LECCIONES: Record<number, Lesson[]> = {
   4: b4Lessons as Lesson[],
   5: b5Lessons as Lesson[],
   6: b6Lessons as Lesson[],
+  7: b7Lessons as Lesson[],
   10: b10Lessons as Lesson[],
 };
 
