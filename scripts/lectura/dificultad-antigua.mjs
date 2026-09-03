@@ -305,6 +305,7 @@ function claveObra(meta, proyecto) {
 }
 
 function acumular(lang) {
+  const canon = CANONICAL[lang] ?? canonicalLa;
   const acc = new Map();          // clave → contadores
   const lemas = new Map();        // lema → frecuencia global de la lengua
   const formasGlob = new Map();   // FORMA canónica → frecuencia global
@@ -334,7 +335,7 @@ function acumular(lang) {
         for (const t of palabras) {
           lemas.set(t.lema, (lemas.get(t.lema) ?? 0) + 1);
           a.lemas.set(t.lema, (a.lemas.get(t.lema) ?? 0) + 1);
-          const fm = canonicalLa(t.forma);
+          const fm = canon(t.forma);
           formasGlob.set(fm, (formasGlob.get(fm) ?? 0) + 1);
           a.formas.set(fm, (a.formas.get(fm) ?? 0) + 1);
           lemasFrase.push(t.lema); formasFrase.push(fm);
@@ -351,6 +352,7 @@ function acumular(lang) {
 }
 
 function medir(lang) {
+  const canon = CANONICAL[lang] ?? canonicalLa;
   const { acc, lemas, formasGlob } = acumular(lang);
   // NOTA DE ORDEN: `top1000f` sale de `formasGlob`, que sólo acumula los
   // TREEBANKS — las ampliadas se añaden a `acc` después y no entran en la
@@ -372,8 +374,8 @@ function medir(lang) {
   const extraFile = path.join(CACHE, `extra-${lang}.json`);
   const ampliadas = fs.existsSync(extraFile) ? JSON.parse(fs.readFileSync(extraFile, 'utf8')) : [];
   for (const e of ampliadas) {
-    const formas = new Map(Object.entries(e.cuenta).map(([k, v]) => [canonicalLa(k), v]));
-    const bloquesFormas = (e.bloques ?? []).map((bl) => bl.map(canonicalLa));
+    const formas = new Map(Object.entries(e.cuenta).map(([k, v]) => [canon(k), v]));
+    const bloquesFormas = (e.bloques ?? []).map((bl) => bl.map(canon));
     if (bloquesFormas.length === 0) throw new Error(`${e.obra}: el fichero ampliado no trae \`bloques\` — vuelve a correr traer-anclas-antiguas.mjs. Sin orden de texto no hay bootstrap por bloques, y hacerlo sobre la lista agrupada por forma da intervalos que no significan nada.`);
     acc.set(`wikisource:${e.obra}`, {
       autor: e.autor, obra: `${e.obra} (ampliada)`, peldano: e.peldano, extra: true, proyecto: 'wikisource',
@@ -440,6 +442,36 @@ const METRICAS = [
 function canonicalLa(s) {
   return s.normalize('NFD').replace(/\u0304/g, '').normalize('NFC').toLowerCase();
 }
+
+/** La del griego, IGUAL que la de `traer-anclas-antiguas.mjs`. Está
+ *  duplicada a propósito entre los dos runtimes, como `texto-ro.mjs`
+ *  duplica la del rumano, y el gate de abajo cruza las dos. */
+function canonicalGrc(s) {
+  return s.normalize('NFC')
+    .toLowerCase()
+    .replace(/ς/g, 'σ')
+    .replace(/([βγδεζθκλμνξπρστφχψ])\u0313/gu, "$1'")
+    .replace(/[᾽᾿’ʼ']/g, "'")
+    .replace(/΄/g, '́');
+}
+
+// ⚠ EL FALLO QUE ESTO ARREGLA, y es de los caros.
+//
+// Este script canonicalizaba TODAS las lenguas con `canonicalLa`, griego
+// incluido — o sea que el lado TREEBANK del puente se normalizaba con la
+// regla del latín (quitar mácrones) mientras el lado WIKISOURCE llegaba
+// ya normalizado con `canonicalGrc` (ς→σ, elisión unificada). **Las dos
+// orillas del puente medían con reglas distintas.**
+//
+// El puente Sófocles decía 24-26 % y yo estuve limpiando acotaciones y
+// arreglando la elisión creyendo que eran los textos. Contando los dos
+// lados con la MISMA regla, la diferencia real es de 52,9 % contra 54,5 %:
+// **1,6 puntos**. Todo lo demás era mi propia comparación.
+//
+// Es «el mismo dato vive en varios campos» dentro del instrumento de
+// medida, y sólo salió al comparar a mano los dos lados con una tercera
+// implementación.
+const CANONICAL = { la: canonicalLa, grc: canonicalGrc, pt: canonicalLa, ro: canonicalLa, cs: canonicalLa, ru: canonicalLa };
 
 /** Desplazamiento máximo del PUENTE que se le tolera a una métrica para
  *  que pueda arbitrar ENTRE treebanks.

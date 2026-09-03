@@ -141,14 +141,65 @@ function canonicalGrc(s) {
   // descargar un solo byte: `toLowerCase()` de JavaScript es sensible al
   // contexto y convierte la Σ FINAL en «ς». Con el mapeo ς→σ delante,
   // «ΛΌΓΟΣ» salía «λόγος» —con sigma final— y no casaba con «λόγοσ».
-  // Minúsculas PRIMERO, y el mapeo después. Es la misma familia que el
-  // guion del rumano: una equivalencia probada sólo contra la forma
-  // limpia pasa, y falla contra la forma que lleva el signo.
+  // Minúsculas PRIMERO, y el mapeo después.
+  //
+  // ── LA ELISIÓN: el mismo dato en TRES codificaciones ──────────────
+  //
+  // Medido sobre los dos treebanks, la misma palabra se escribe distinto
+  // en cada uno:
+  //
+  //   PROIEL   «ἀλλ’»  = U+1F00 U+03BB U+03BB **U+2019**   (297 veces)
+  //   Perseus  «ἀλλ̓»  = U+1F00 U+03BB U+03BB **U+0313**   (605 veces)
+  //
+  // Es la cedilla/coma del rumano otra vez, y entre las dos fuentes que
+  // este trabajo compara. Y la primera versión hacía algo peor que no
+  // unificarlas: **borraba el signo**, dejando «ἀλλ», que no existe en
+  // ningún diccionario y no casa con ninguna de las dos. Ese borrado es
+  // la mitad del 25 % que movía el puente.
+  //
+  // La regla: en NFC, una U+0313 SUELTA sólo puede seguir a una
+  // consonante —tras vocal el espíritu va precompuesto (ἀ = U+1F00)—, así
+  // que ahí es elisión y no espíritu. Se unifica con las demás grafías
+  // del apóstrofo y **se conserva**: «ἀλλ'» no es «ἀλλ».
   return s.normalize('NFC')
     .toLowerCase()
     .replace(/ς/g, 'σ')
-    .replace(/[᾽᾿’']/g, "'")
+    .replace(/([βγδεζθκλμνξπρστφχψ])\u0313/gu, "$1'")   // elisión de Perseus
+    .replace(/[᾽᾿’ʼ']/g, "'")                            // las demás grafías
     .replace(/΄/g, '́');
+}
+
+/** Los NOMBRES DE PERSONAJE del teatro: aparato escénico, no lengua.
+ *  Aparecen cientos de veces, caen todos fuera del top-1000 e inflan la
+ *  cuenta léxica de las obras dramáticas — la mitad del 26 % que mueve el
+ *  puente treebank↔Wikisource.
+ *
+ *  MI PRIMERA FIRMA ERA DEMASIADO ESTRECHA: supuse mayúsculas
+ *  («ΟΙΔΙΠΟΥΣ») y sólo quitó 16 de las ~1.700 de Sófocles. Medido sobre
+ *  el HTML crudo, las ediciones no coinciden entre sí:
+ *
+ *    Sófocles     «χορος» ×407 · «οιδιπους» ×388 · «κρεων» ×185  (MINÚSCULA)
+ *    Aristófanes  «ΧΟΡΟΣ» ×195 · «ΔΙΟΝΥΣΟΣ»                      (MAYÚSCULA)
+ *
+ *  Lo que TODAS comparten, y es la firma buena: **ni un solo diacrítico**.
+ *  En un texto politónico cada palabra real lleva acento o espíritu; una
+ *  palabra pelada es aparato.
+ *
+ *  El corte de longitud ≥5 protege a las enclíticas y proclíticas cortas,
+ *  que sí pueden ir sin acento (τε, γε, τις, ποτε). No es una regla
+ *  perfecta —por eso el filtro INFORMA de lo que quita y falla si se
+ *  desmadra—, es una regla auditable. */
+// ⚠ Este rango se escribió mal la primera vez y el propio gate lo cazó
+// antes de producir un dato: puse `\u03AC-\u03CE` creyendo que eran las
+// vocales acentuadas, y **ese rango contiene el alfabeto griego minúsculo
+// ENTERO** (U+03B1 es la alfa pelada). Con él, toda palabra parecía
+// acentuada y el filtro no reconocía ni «χορος». Ahora van enumeradas una
+// a una: acentuadas y con diéresis, minúsculas y mayúsculas, más el
+// bloque politónico y los combinantes.
+const RE_DIACRITICO = /[\u0300-\u036F\u1F00-\u1FFF\u0384\u0385\u0386\u0388\u0389\u038A\u038C\u038E\u038F\u0390\u03AA\u03AB\u03AC\u03AD\u03AE\u03AF\u03B0\u03CA\u03CB\u03CC\u03CD\u03CE]/u;
+function esAcotacion(bruto) {
+  const nfc = bruto.normalize('NFC');
+  return nfc.length >= 5 && !RE_DIACRITICO.test(nfc) && !/['\u2019]/.test(nfc);
 }
 
 /** La canonicalización del latín del Paso 0 §3.1. Duplicada a propósito
@@ -239,14 +290,27 @@ function textoPlano(html) {
 const griegasEn = (t) => (t.match(/[Ͱ-Ͽἀ-῿]/gu) ?? []).length;
 const latinasEn = (t) => (t.match(/[A-Za-zÀ-ÿ]/g) ?? []).length;
 
-/** Formas griegas canónicas de un HTML ya limpio. */
+/** Formas griegas canónicas de un HTML ya limpio, con el aparato
+ *  escénico fuera y CONTADO.
+ *
+ *  Que informe de cuánto quita no es adorno: es un borrado que depende
+ *  del contenido, y un limpiador silencioso es exactamente lo que dejó
+ *  seis obras de Sófocles en cero. Igual que el fichero de erratas de la
+ *  biblioteca, la corrección se aplica **y se queja** si deja de casar
+ *  con lo esperado. */
 function formasGrc(plano) {
   const out = [];
-  for (const m of plano.matchAll(/[Ͱ-Ͽἀ-῿][Ͱ-Ͽἀ-῿̀-ͯ'’᾽᾿]*/gu)) {
-    const w = canonicalGrc(m[0]).replace(/^'+|'+$/g, '');
+  const vistas = new Map();
+  let personajes = 0;
+  for (const m of plano.matchAll(/[Ͱ-Ͽἀ-῿][Ͱ-Ͽἀ-῿̀-ͯ'’᾽᾿ʼ]*/gu)) {
+    const bruto = m[0].normalize('NFC');
+    if (esAcotacion(bruto)) { personajes++; vistas.set(bruto, (vistas.get(bruto) ?? 0) + 1); continue; }
+    // El apóstrofo INICIAL sí se quita (es cita o prodelisión); el FINAL
+    // se conserva, porque es la elisión y distingue la palabra.
+    const w = canonicalGrc(bruto).replace(/^'+/, '');
     if (w.length > 1) out.push(w);
   }
-  return out;
+  return { formas: out, personajes, vistas };
 }
 
 function formasDe(html) {
@@ -287,6 +351,38 @@ async function main() {
     // Y lo que NO debe fundirse: el politónico es el rasgo examinado.
     if (canonicalGrc('ἁ') === canonicalGrc('ἀ')) throw new Error('la canonicalización está borrando los espíritus: taparía el rasgo que el gate examina');
     if (canonicalGrc('ᾳ') === canonicalGrc('α')) throw new Error('la canonicalización está borrando la iota suscrita');
+
+    // ── EL GUARDIÁN DE LA ELISIÓN ────────────────────────────────────
+    //
+    // Faltaba, y es justo el rasgo que se rompió: los guardianes cubrían
+    // lo que a alguien se le ocurrió, y la elisión no se le ocurrió a
+    // nadie. Las formas son REALES y de fuentes distintas — «ἀλλ’» tal
+    // como la escribe PROIEL (297 veces) y «ἀλλ̓» tal como la escribe
+    // Perseus (605), que es la misma palabra de Sófocles en dos
+    // codificaciones.
+    const proiel = 'ἀλλ\u2019', perseus = 'ἀλλ\u0313', llano = "ἀλλ'";
+    if (canonicalGrc(proiel) !== canonicalGrc(perseus)) {
+      throw new Error(`la elisión no se unifica: PROIEL «${proiel}» → «${canonicalGrc(proiel)}» y Perseus «${perseus}» → «${canonicalGrc(perseus)}»`);
+    }
+    if (canonicalGrc(proiel) !== canonicalGrc(llano)) throw new Error('el apóstrofo llano no se unifica con los tipográficos');
+    // Y lo contrario, que es el fallo que se pagó: el signo NO se borra.
+    if (canonicalGrc(proiel) === canonicalGrc('ἀλλ')) {
+      throw new Error('la elisión se está BORRANDO: «ἀλλ\u2019» y «ἀλλ» no son la misma palabra, y «ἀλλ» no existe');
+    }
+    // Y la U+0313 tras VOCAL sigue siendo espíritu, no elisión.
+    if (canonicalGrc('ἀ').includes("'")) throw new Error('el espíritu suave sobre vocal se está leyendo como elisión');
+
+    // Y el filtro de acotaciones: quita las capitales peladas y NADA más.
+    // Las formas REALES de las dos ediciones, no una inventada: Sófocles
+    // escribe los nombres en minúscula pelada y Aristófanes en mayúscula.
+    for (const acot of ['χορος', 'οιδιπους', 'κρεων', 'αντιγονη', 'ΧΟΡΟΣ', 'ΔΙΟΝΥΣΟΣ']) {
+      if (!esAcotacion(acot)) throw new Error(`el filtro de acotaciones no reconoce «${acot}», que es aparato escénico`);
+    }
+    // Y lo que NO puede comerse: lengua de verdad, incluidas las
+    // enclíticas cortas que sí van sin acento.
+    for (const real of ['ἀλλά', 'Ἀντιγόνη', 'λόγος', 'μῆνιν', 'τε', 'γε', 'τις', 'ποτε', "ἀλλ\u2019"]) {
+      if (esAcotacion(real.normalize('NFC'))) throw new Error(`el filtro de acotaciones se comería «${real}», que es lengua`);
+    }
   }
   console.log(`normalización comprobada sobre ${casos.length} casos (${LANG === 'la' ? 'mácrón fuera' : 'ς→σ, elisión unificada, espíritus y iota INTACTOS'}).`);
 
@@ -296,6 +392,8 @@ async function main() {
     const paginas = o.paginas ?? (o.autorPagina ? await obrasDeAutor(o.autorPagina) : await expandir(o.prefijo));
     if (!o.paginas) console.log(`  ${o.autor}: ${paginas.length} páginas candidatas`);
     const retiradas = [];
+    const acotaciones = new Map();
+    let quitados = 0;
     for (const pagina of paginas) {
       let html;
       try { html = await bajar(pagina); } catch (e) { retiradas.push(`${pagina} — ${e.message}`); continue; }
@@ -304,8 +402,17 @@ async function main() {
         const plano = textoPlano(html);
         const v = juzgarPolitonico(plano);
         if (!v.ok) { retiradas.push(`${pagina} — ${v.clase} (${v.griegas} griegas, ${v.pct.toFixed(1)} % marcas)`); continue; }
-        const f = formasGrc(plano);
-        console.log(`  ✔ ${pagina.padEnd(40)} ${f.length.toLocaleString('es').padStart(8)} formas · ${v.pct.toFixed(1)} % marcas`);
+        const { formas: f, personajes, vistas } = formasGrc(plano);
+        for (const [w, n] of vistas) acotaciones.set(w, (acotaciones.get(w) ?? 0) + n);
+        const pctPers = (100 * personajes) / (f.length + personajes);
+        // Un borrado por contenido que se descontrola en cualquiera de
+        // las dos direcciones tiene que sonar. En estos textos el aparato
+        // escénico ronda el 1-3 %: por encima del 8 % está mordiendo
+        // palabras reales.
+        if (pctPers > 8) throw new Error(`${pagina}: el filtro de acotaciones quita el ${pctPers.toFixed(1)} % de las palabras — está mordiendo lengua, no aparato`);
+        quitados += personajes;
+        console.log(`  ✔ ${pagina.padEnd(40)} ${f.length.toLocaleString('es').padStart(8)} formas · ${v.pct.toFixed(1)} % marcas` +
+          (personajes ? ` · −${personajes} acotaciones (${pctPers.toFixed(1)} %)` : ''));
         formas.push(...f);
         continue;
       }
@@ -328,7 +435,14 @@ async function main() {
     const bloques = [];
     for (let i = 0; i < formas.length; i += 500) bloques.push(formas.slice(i, i + 500));
     salida.push({ obra: o.obra, autor: o.autor, peldano: o.peldano, paginas, total: formas.length, cuenta, bloques });
-    console.log(`${o.obra} (${o.autor}): ${formas.length.toLocaleString('es')} formas · ${Object.keys(cuenta).length.toLocaleString('es')} distintas\n`);
+    console.log(`${o.obra} (${o.autor}): ${formas.length.toLocaleString('es')} formas · ${Object.keys(cuenta).length.toLocaleString('es')} distintas` +
+      (quitados ? ` · ${quitados.toLocaleString('es')} acotaciones fuera` : '') + '\n');
+    if (acotaciones.size) {
+      // Se IMPRIME lo que se quitó, para que sea auditable: un borrado por
+      // contenido que nadie puede revisar es el que dejó seis obras en cero.
+      const top = [...acotaciones.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12);
+      console.log(`     acotaciones retiradas (${acotaciones.size} formas distintas): ` + top.map(([w, n]) => `${w}×${n}`).join(' · '));
+    }
   }
   fs.writeFileSync(SALIDA, JSON.stringify(salida));
   console.log(`escrito ${SALIDA} (${(fs.statSync(SALIDA).size / 1e3).toFixed(0)} kB)`);
