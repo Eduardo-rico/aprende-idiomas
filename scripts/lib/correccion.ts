@@ -60,6 +60,14 @@ export interface ItemCorreccion {
    *  OPCIONAL en el tipo para no tocar los lotes de PT ya publicados; los
    *  gates del rumano lo exigen declarado y `undefined` es un fallo. */
   atajoEs?: boolean;
+  /** LA INTENCIÓN, en vocabulario CERRADO (`lib/intencion.ts`). Es lo que
+   *  la tarjeta PINTA para cerrar la indeterminación: «Trebuie a pleca»
+   *  admite să plec/pleci/plece y sin decir quién habla el alumno no
+   *  puede acertar. `calcoEs` NO se pinta —es prueba para el gate— y
+   *  confundir las dos cosas produjo la medición del atajo. Opcional en
+   *  el tipo para no tocar los lotes de PT; los gates del rumano la
+   *  exigen donde el ítem no fija la persona por otra vía. */
+  intencion?: string;
   /** Los gates de variante van a morder por diseño: el error deliberado
    *  ES el material. Se declara el motivo, no se silencia el gate. */
   varianteEsperada?: string;

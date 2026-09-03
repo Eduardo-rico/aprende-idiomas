@@ -1606,5 +1606,429 @@
       ],
       "hintEs": "doble negación: con «nu» delante, la palabra negativa se mantiene"
     }
+  },
+  {
+    "id": "b6e26155",
+    "blockId": 3,
+    "lessonId": "b3-l1-prezentul",
+    "difficulty": 2,
+    "concepts": [
+      "r3-negacion-antepuesta"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "b6e2615521759bb0aebf70e8ebafb30c3d48e0401a0f606b34ab7f1b6aa8b93f",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «Nunca viene a tiempo.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Niciodată vine la timp.",
+      "correct": "Niciodată nu vine la timp.",
+      "alternatives": [],
+      "calcoEs": "Nunca viene a tiempo.",
+      "explanationEs": "Cuando la palabra negativa va DELANTE del verbo, el rumano mantiene «nu»: «niciodată NU vine». El español hace lo contrario y prohíbe el «no», y de ahí sale el error. La otra salida es posponerla: «nu vine niciodată»."
+    }
+  },
+  {
+    "id": "e913f055",
+    "blockId": 3,
+    "lessonId": "b3-l1-prezentul",
+    "difficulty": 2,
+    "concepts": [
+      "r3-negacion-antepuesta"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "e913f0554b4a72cbc4c2c52eb77f7c21fb985ed3d522daba6b89e9fefeb579c5",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «Nadie sabe qué ha pasado.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Nimeni știe ce s-a întâmplat.",
+      "correct": "Nimeni nu știe ce s-a întâmplat.",
+      "alternatives": [],
+      "calcoEs": "Nadie sabe qué ha pasado.",
+      "explanationEs": "Con «nimeni» delante del verbo el «nu» es obligatorio: «nimeni NU știe». En español «nadie no sabe» es imposible, y por eso el «nu» se olvida."
+    }
+  },
+  {
+    "id": "75e58666",
+    "blockId": 3,
+    "lessonId": "b3-l1-prezentul",
+    "difficulty": 2,
+    "concepts": [
+      "r3-negacion-antepuesta"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "75e586666aa7203fcd77ebed01e22a120219986aee014508e06ce7316bf2551b",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «Nada ha cambiado desde el año pasado.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Nimic s-a schimbat de anul trecut.",
+      "correct": "Nimic nu s-a schimbat de anul trecut.",
+      "alternatives": [],
+      "calcoEs": "Nada ha cambiado desde el año pasado.",
+      "explanationEs": "«Nimic» antepuesto pide «nu»: «nimic NU s-a schimbat». La negación rumana es doble siempre que hay una palabra negativa, vaya delante o detrás."
+    }
+  },
+  {
+    "id": "c3c9c03c",
+    "blockId": 3,
+    "lessonId": "b3-l1-prezentul",
+    "difficulty": 2,
+    "concepts": [
+      "r3-negacion-antepuesta"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "c3c9c03cb2a7095cf5c15181f98e9b26aa7517aeb30110dd1c7a588613017e1c",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «En ninguna parte encontré ese libro.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Nicăieri am găsit cartea aceea.",
+      "correct": "Nicăieri nu am găsit cartea aceea.",
+      "alternatives": [
+        "Nicăieri n-am găsit cartea aceea."
+      ],
+      "calcoEs": "En ninguna parte encontré ese libro.",
+      "explanationEs": "También con «nicăieri»: antepuesto, el verbo conserva «nu». Y como el auxiliar empieza por vocal, la contracción «n-am» es la forma corriente."
+    }
+  },
+  {
+    "id": "f5352926",
+    "blockId": 3,
+    "lessonId": "b3-l1-prezentul",
+    "difficulty": 2,
+    "concepts": [
+      "r3-negacion-antepuesta"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "f53529265ef560fe8e455bd22d977bd67c7982c55493bdcab3863b0674721238",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «Ningún estudiante viene los sábados.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Niciun student vine sâmbăta.",
+      "correct": "Niciun student nu vine sâmbăta.",
+      "alternatives": [],
+      "calcoEs": "Ningún estudiante viene los sábados.",
+      "explanationEs": "El determinante negativo «niciun» tampoco quita el «nu»: «niciun student NU vine». El español dice «ningún estudiante viene», sin «no», y ése es el calco."
+    }
+  },
+  {
+    "id": "01839469",
+    "blockId": 3,
+    "lessonId": "b3-l1-prezentul",
+    "difficulty": 2,
+    "concepts": [
+      "r3-negacion-antepuesta"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "01839469e467c0403eac7e3bedcb7fc72f89c6504e74ada47f381a879e19eae2",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «Ninguna carta ha llegado hasta ahora.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Nicio scrisoare a ajuns până acum.",
+      "correct": "Nicio scrisoare nu a ajuns până acum.",
+      "alternatives": [
+        "Nicio scrisoare n-a ajuns până acum."
+      ],
+      "calcoEs": "Ninguna carta ha llegado hasta ahora.",
+      "explanationEs": "Con «nicio» delante, el verbo lleva «nu»: «nicio scrisoare NU a ajuns». La forma contracta «n-a» es la corriente."
+    }
+  },
+  {
+    "id": "56b5713a",
+    "blockId": 3,
+    "lessonId": "b3-l1-prezentul",
+    "difficulty": 2,
+    "concepts": [
+      "r3-negacion-antepuesta"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "56b5713a60192ed78e327741fc86f295432600acdbb429b01abce759718beb40",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «Nunca hemos estado en Iași.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Niciodată am fost la Iași.",
+      "correct": "Niciodată nu am fost la Iași.",
+      "alternatives": [
+        "Niciodată n-am fost la Iași."
+      ],
+      "calcoEs": "Nunca hemos estado en Iași.",
+      "explanationEs": "Con el negativo antepuesto y un pasado compuesto, el «nu» va delante del auxiliar: «niciodată NU am fost». En español el «no» no cabe, y de ahí el olvido."
+    }
+  },
+  {
+    "id": "b0845d98",
+    "blockId": 3,
+    "lessonId": "b3-l1-prezentul",
+    "difficulty": 2,
+    "concepts": [
+      "r3-negacion-antepuesta"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "b0845d9804b1ea8deffd5f7e7060ec7474914cf271719c764aab037a898fb51d",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «Nadie ha dicho nada en la reunión.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Nimeni a spus nimic la ședință.",
+      "correct": "Nimeni nu a spus nimic la ședință.",
+      "alternatives": [
+        "Nimeni n-a spus nimic la ședință."
+      ],
+      "calcoEs": "Nadie ha dicho nada en la reunión.",
+      "explanationEs": "Con DOS palabras negativas el verbo sigue exigiendo «nu»: «nimeni NU a spus nimic». El español, que ya tiene «nadie», prohíbe el «no», y de ahí el olvido. (El rumano incluso admite las dos delante — «nimeni nimic nu a spus» —, pero «nu» no desaparece nunca.)"
+    }
+  },
+  {
+    "id": "9d31eede",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-futuro-o-sa"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "9d31eede59dc5399c64c06072e248ee3b56c3d9ad0d621f3f60c4d5c69cb7282",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «Va a ir al médico la semana que viene.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "O să merge la doctor săptămâna viitoare.",
+      "correct": "O să meargă la doctor săptămâna viitoare.",
+      "alternatives": [
+        "Are să meargă la doctor săptămâna viitoare."
+      ],
+      "calcoEs": "Va a ir al médico la semana que viene.",
+      "explanationEs": "Detrás de «să» el verbo va en CONJUNTIVO, y en 3.ª persona el conjuntivo tiene forma propia: «să meargă», no «merge». El español dice «va a ir» sin subjuntivo, y de ahí sale el error. En 1.ª y 2.ª persona no se nota porque las dos formas coinciden."
+    }
+  },
+  {
+    "id": "3c602bc3",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-futuro-o-sa"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "3c602bc30a6129b2a00537cd1fdf0cd4682dc5dee5a35a1c36359db695365cc9",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «Los niños van a estar en casa a las cinco.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Copiii o să sunt acasă la cinci.",
+      "correct": "Copiii o să fie acasă la cinci.",
+      "alternatives": [
+        "Copiii au să fie acasă la cinci."
+      ],
+      "calcoEs": "Los niños van a estar en casa a las cinco.",
+      "explanationEs": "«A fi» tiene conjuntivo propio en 3.ª: «să fie», nunca «să sunt». El indicativo detrás de «să» es el calco del español, que en «van a estar» no marca subjuntivo."
+    }
+  },
+  {
+    "id": "b9745257",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-futuro-o-sa"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "b9745257e5a0370d4a73c3605587faa4c6c029f8ebf35c70c0b32cf7bd98f7e5",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «Los vecinos van a tener una casa nueva.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Vecinii o să au o casă nouă.",
+      "correct": "Vecinii o să aibă o casă nouă.",
+      "alternatives": [
+        "Vecinii au să aibă o casă nouă."
+      ],
+      "calcoEs": "Los vecinos van a tener una casa nueva.",
+      "explanationEs": "«A avea» hace «să aibă» en 3.ª persona: es una de las formas de conjuntivo que más se aparta del indicativo («au»). Detrás de «să» nunca va el indicativo."
+    }
+  },
+  {
+    "id": "b9536380",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-futuro-o-sa"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "b95363801784728de4698887ab0cfde484c0ccd1534313f4cffde88afa9e96c7",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «María va a hacer un pastel el domingo.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Maria o să face o prăjitură duminică.",
+      "correct": "Maria o să facă o prăjitură duminică.",
+      "alternatives": [
+        "Maria are să facă o prăjitură duminică."
+      ],
+      "calcoEs": "María va a hacer un pastel el domingo.",
+      "explanationEs": "El conjuntivo de 3.ª de «a face» es «să facă», con -ă final. La forma «face» es el indicativo y detrás de «să» no cabe."
+    }
+  },
+  {
+    "id": "06b37186",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-futuro-o-sa"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "06b37186d03b00d2407b21d89e206ec2a813d9514ba726cf97c199e00601badb",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «El profesor va a decir la verdad.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Profesorul o să spune adevărul.",
+      "correct": "Profesorul o să spună adevărul.",
+      "alternatives": [
+        "Profesorul are să spună adevărul."
+      ],
+      "calcoEs": "El profesor va a decir la verdad.",
+      "explanationEs": "«A spune» hace «să spună». La diferencia con el indicativo «spune» es sólo la vocal final, y por eso se cuela: el español no tiene ahí ningún subjuntivo que recordar."
+    }
+  },
+  {
+    "id": "17537144",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-futuro-o-sa"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "17537144e1a122cb5a370aa0b5598e67d71ec473b1308da00b99c8ac0459465d",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «Él va a poder venir mañana.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "El o să poate veni mâine.",
+      "correct": "El o să poată veni mâine.",
+      "alternatives": [
+        "El are să poată veni mâine."
+      ],
+      "calcoEs": "Él va a poder venir mañana.",
+      "explanationEs": "«A putea» hace «să poată» en 3.ª. Y ojo: el segundo verbo sí va en infinitivo («poată veni»), porque quien rige es «a putea»."
+    }
+  },
+  {
+    "id": "645d1718",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-futuro-o-sa"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "645d1718286fb3a409e43fbf09ebe00f68a855c0dafa0c2df457e4de92d57710",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «Ella va a dar un telefonazo esta noche.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ea o să dă un telefon diseară.",
+      "correct": "Ea o să dea un telefon diseară.",
+      "alternatives": [
+        "Ea are să dea un telefon diseară."
+      ],
+      "calcoEs": "Ella va a dar un telefonazo esta noche.",
+      "explanationEs": "El conjuntivo de «a da» es «să dea», no «să dă». Es de los pocos donde la forma cambia de verdad y se oye la diferencia."
+    }
+  },
+  {
+    "id": "bbd01a08",
+    "blockId": 3,
+    "lessonId": "b3-l2-conjunctivul-cu-sa",
+    "difficulty": 2,
+    "concepts": [
+      "r3-futuro-o-sa"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "bbd01a08d7a3f45c8d6f44020206e93f4460cef809fe3bb0d3b454839e3ed3a2",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «El tiempo va a estar bueno mañana.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Vremea o să este frumoasă mâine.",
+      "correct": "Vremea o să fie frumoasă mâine.",
+      "alternatives": [
+        "Vremea are să fie frumoasă mâine."
+      ],
+      "calcoEs": "El tiempo va a estar bueno mañana.",
+      "explanationEs": "Con «a fi» el contraste es el más visible: indicativo «este», conjuntivo «să fie». Detrás de «o să» sólo cabe el segundo."
+    }
   }
 ]

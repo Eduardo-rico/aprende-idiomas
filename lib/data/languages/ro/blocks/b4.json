@@ -1618,5 +1618,213 @@
       ],
       "hintEs": "hermano — vocativo PLURAL; lo único derivable por regla del punto (-lor sobre el plural)"
     }
+  },
+  {
+    "id": "a124667b",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-gd-lui-formula"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "a124667bc947809a26257b96261b80d3342df0add133906095df299bdfeea8c2",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «El coche de Ion está delante de la casa.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Mașina de Ion este în fața casei.",
+      "correct": "Mașina lui Ion este în fața casei.",
+      "alternatives": [
+        "Mașina lui Ion e în fața casei."
+      ],
+      "calcoEs": "El coche de Ion está delante de la casa.",
+      "explanationEs": "El rumano no usa «de» para la posesión: ante nombre propio masculino pone «lui» DELANTE del nombre — «mașina lui Ion». «De» ahí significa «hecho de» o «procedente de»."
+    }
+  },
+  {
+    "id": "9b02f472",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-gd-lui-formula"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "9b02f472547d2ae76e563770aaf97b7f343c5b7523c6cfe934ea0f3194ee8e3b",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «La mochila de Mihai está en la mesa.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Rucsacul de Mihai este pe masă.",
+      "correct": "Rucsacul lui Mihai este pe masă.",
+      "alternatives": [
+        "Rucsacul lui Mihai e pe masă."
+      ],
+      "calcoEs": "La mochila de Mihai está en la mesa.",
+      "explanationEs": "Con nombre propio masculino el genitivo es analítico: «lui» + nombre, sin cambiar el nombre. Se elige una mochila y no un libro a propósito: con una obra, «de» sí marca el autor y la frase sería correcta."
+    }
+  },
+  {
+    "id": "269b82c4",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-gd-lui-formula"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "269b82c42e13b469933b7d6282f66f76c8de7c2b87ece2c5cedea09d12b71c8a",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «La casa de papá está en el pueblo.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Casa de tata este la țară.",
+      "correct": "Casa lui tata este la țară.",
+      "alternatives": [
+        "Casa lui tata e la țară."
+      ],
+      "calcoEs": "La casa de papá está en el pueblo.",
+      "explanationEs": "Los nombres de parentesco articulados («tata», «mama») se comportan como propios y toman «lui»: «casa lui tata». No es «de»."
+    }
+  },
+  {
+    "id": "daa61b4f",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-gd-lui-formula"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "daa61b4f247296ba20b89c09487b8321c039ee72e402fc05a711d92ecd982645",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «Los amigos de Andrei vienen esta noche.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Prietenii de Andrei vin diseară.",
+      "correct": "Prietenii lui Andrei vin diseară.",
+      "alternatives": [],
+      "calcoEs": "Los amigos de Andrei vienen esta noche.",
+      "explanationEs": "«Lui» es invariable: no concuerda con lo poseído ni cambia en plural. «Prietenii lui Andrei», aunque los amigos sean varios."
+    }
+  },
+  {
+    "id": "05a8ee50",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-gd-lui-formula"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "05a8ee50632e16124bf748119b29633d8e13acb3d973ef4f049ad6c7c8288343",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «El teléfono de Radu no funciona.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Telefonul de Radu nu funcționează.",
+      "correct": "Telefonul lui Radu nu funcționează.",
+      "alternatives": [],
+      "calcoEs": "El teléfono de Radu no funciona.",
+      "explanationEs": "Ante nombre propio masculino, la posesión va con «lui» antepuesto al nombre. El «de» del español no se traduce aquí."
+    }
+  },
+  {
+    "id": "6caa33cd",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-gd-lui-formula"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "6caa33cd2704800f86c3eb645899e5e854c069240747b3d88e856a4f82ba2ca2",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «He arreglado la bicicleta de Vlad.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Am reparat bicicleta de Vlad.",
+      "correct": "Am reparat bicicleta lui Vlad.",
+      "alternatives": [],
+      "calcoEs": "He arreglado la bicicleta de Vlad.",
+      "explanationEs": "Para la posesión ante nombre propio masculino el rumano pone «lui» delante del nombre: «bicicleta lui Vlad». El «de» del español no vale aquí. (Ojo: con obras SÍ existe «de» para el autor — «o carte de Eminescu» —, pero ése es otro valor.)"
+    }
+  },
+  {
+    "id": "f027af00",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-gd-lui-formula"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "f027af0000dfa25e9ae2f91182704b39af2f62518bf39ea74416142659138916",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «La oficina del señor Popescu está en el segundo piso.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Biroul lui domnul Popescu este la etajul doi.",
+      "correct": "Biroul domnului Popescu este la etajul doi.",
+      "alternatives": [
+        "Biroul domnului Popescu e la etajul doi."
+      ],
+      "calcoEs": "La oficina del señor Popescu está en el segundo piso.",
+      "explanationEs": "Cuidado con la mitad de la regla: «lui» es para el nombre propio SOLO. Con un común delante («domnul»), el genitivo va en el común: «biroul DOMNULUI Popescu»."
+    }
+  },
+  {
+    "id": "595b1d2b",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-gd-lui-formula"
+    ],
+    "tags": [
+      "ro-corr-a1c",
+      "correccion"
+    ],
+    "contentHash": "595b1d2bcd7a5684fcd06b4f1e3137ad24d021b4a54b3c253e753cf4e4d5b17b",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A1C (2026-09-01): la frase mala es el calco de «El hermano de Ion trabaja en el hospital.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Fratele de Ion lucrează la spital.",
+      "correct": "Fratele lui Ion lucrează la spital.",
+      "alternatives": [],
+      "calcoEs": "El hermano de Ion trabaja en el hospital.",
+      "explanationEs": "La posesión ante nombre propio masculino es «lui» + nombre: «fratele lui Ion». El «de» calca el español y no existe con este valor."
+    }
   }
 ]

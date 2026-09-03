@@ -15,12 +15,14 @@ import { preflight, type ItemCorreccion } from './lib/correccion';
 import { ITEMS as A1, verificar as verificarA1 } from './lotes/corr-ro-a1';
 import { ITEMS as A1B, verificar as verificarA1B } from './lotes/corr-ro-a1b';
 import { ITEMS as A2, verificar as verificarA2 } from './lotes/corr-ro-a2';
+import { ITEMS as A1C, verificar as verificarA1C } from './lotes/corr-ro-a1c';
 
 // Cada lote trae SU verificar: los gates de punto viven con el lote.
 const LOTES: Record<string, { items: ItemCorreccion[]; verificar: (xs: ItemCorreccion[]) => string[] }> = {
   a1: { items: A1, verificar: verificarA1 },
   a1b: { items: A1B, verificar: verificarA1B },
   a2: { items: A2, verificar: verificarA2 },
+  a1c: { items: A1C, verificar: verificarA1C },
 };
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
 const lote = arg('--lote') ?? '';
