@@ -101,3 +101,61 @@ describe('la línea roja: nada privado en git', () => {
     expect(trackeados()).toBe('');
   });
 });
+
+// Fase F-2 (2026-09-02): el estante privado CHECO y RUSO. El gate de
+// lengua que lo guarda se prueba aquí en VERDE y en ROJO sobre un
+// directorio de fixtures, nunca sobre el estante real (que es la copia
+// personal de Edu y está gitignorado).
+const TMP = path.join(process.cwd(), 'lib/data/languages/cs/lecturas-privadas/.tmp-test');
+
+const pieza = (id: string, texto: string) => ({
+  id,
+  titulo: 'Fixture',
+  autor: 'Autor Vivo',
+  nivel: 'B1',
+  modo: 'texto',
+  fuente: 'test',
+  licencia: 'copia personal — NO redistribuir',
+  privada: true,
+  variante: 'cs',
+  parrafos: [{ texto }],
+});
+
+// Checo real (con háček, čárka y kroužek) y el MISMO texto despojado.
+const CS_OK =
+  'Můj tatínek pochopil už dávno, že nejkrásnější ryby žijí v řece pod hrází. Když se setmělo, šli jsme k vodě a čekali, až se ozve šplouchnutí. Byl to večer, na který se nezapomíná.';
+const CS_ROTO = CS_OK.normalize('NFD').replace(/[̀-ͯ]/g, '');
+
+async function conFixture(nombre: string, texto: string) {
+  await fs.rm(TMP, { recursive: true, force: true });
+  await fs.mkdir(TMP, { recursive: true });
+  await fs.writeFile(path.join(TMP, `${nombre}.json`), JSON.stringify(pieza(nombre, texto)));
+  try {
+    return { ok: true, salida: execSync(`node scripts/lectura/gate-privadas.mjs cs "${TMP}"`, { cwd: process.cwd(), encoding: 'utf8' }) };
+  } catch (e) {
+    return { ok: false, salida: String((e as { stdout?: string }).stdout ?? '') };
+  }
+}
+
+describe('gate de lengua del estante privado (cs)', () => {
+  afterAll(async () => {
+    await fs.rm(TMP, { recursive: true, force: true });
+  });
+
+  it('EN VERDE: una pieza en checo correcto pasa', async () => {
+    const r = await conFixture('ok', CS_OK);
+    expect(r.salida).toContain('0 en rojo');
+    expect(r.ok).toBe(true);
+  });
+
+  it('EN ROJO: el MISMO texto sin diacríticos no pasa', async () => {
+    const r = await conFixture('roto', CS_ROTO);
+    expect(r.ok).toBe(false);
+    expect(r.salida).toContain('1 en rojo');
+  });
+
+  it('una lengua sin regla propia no aprueba en falso: lo dice', () => {
+    const salida = execSync('node scripts/lectura/gate-privadas.mjs de', { cwd: process.cwd(), encoding: 'utf8' });
+    expect(salida).toContain('sin gate propio');
+  });
+});
