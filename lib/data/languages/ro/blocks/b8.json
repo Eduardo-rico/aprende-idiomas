@@ -437,5 +437,82 @@
       "calcoEs": "Las flores que compro son para mi madre.",
       "explanationEs": "Plural otra vez, con «le». Y ojo a la persona: «cumpăr» es «compro», de manera que «florile» no puede ser quien compra — es lo comprado, y va marcado con «pe» y repetido por el clítico."
     }
+  },
+  {
+    "id": "f1840f4c",
+    "blockId": 8,
+    "lessonId": "b8-l1-subordonarea",
+    "difficulty": 2,
+    "concepts": [
+      "r8-completivas-ca-sa"
+    ],
+    "tags": [
+      "ro-corr-l20",
+      "correccion"
+    ],
+    "contentHash": "f1840f4c8272d6409e4bab12af04ba5281fd609862580021bc4886e324344aa4",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-L20 (2026-09-03): la frase mala es el calco de «Quiero irme.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Vreau ca să plec.",
+      "correct": "Vreau să plec.",
+      "alternatives": [],
+      "calcoEs": "Quiero irme.",
+      "explanationEs": "«Ca» sólo aparece cuando hay algo que colocar delante de «să» — un sujeto, un complemento, un adverbio. Si no hay nada adelantado, «să» va pegado al verbo principal y «ca» sobra. La norma lo condena expresamente fuera de «pentru ca să»."
+    }
+  },
+  {
+    "id": "cb761af7",
+    "blockId": 8,
+    "lessonId": "b8-l1-subordonarea",
+    "difficulty": 2,
+    "concepts": [
+      "r8-completivas-ca-sa"
+    ],
+    "tags": [
+      "ro-corr-l20",
+      "correccion"
+    ],
+    "contentHash": "cb761af7a793c5962746678334a837743ac5a98e08f8a301c51266ecbf7cad7d",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-L20 (2026-09-03): la frase mala es el calco de «Quiero que Ion termine el libro.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Vreau ca să Ion termine cartea.",
+      "correct": "Vreau ca Ion să termine cartea.",
+      "alternatives": [],
+      "calcoEs": "Quiero que Ion termine el libro.",
+      "explanationEs": "Aquí «ca» sí hace falta, porque «Ion» va delante del verbo — lo que está mal es el ORDEN. El adelantado se coloca ENTRE «ca» y «să», nunca detrás de «să»: entre «să» y el verbo sólo caben los clíticos, «nu» y «mai, și, tot, prea, cam»."
+    }
+  },
+  {
+    "id": "25dc488e",
+    "blockId": 8,
+    "lessonId": "b8-l1-subordonarea",
+    "difficulty": 2,
+    "concepts": [
+      "r8-relativas-pe-care"
+    ],
+    "tags": [
+      "ro-corr-l20",
+      "correccion"
+    ],
+    "contentHash": "25dc488e7f542040c132954dcd918bb5a9321f28bcd782a4509527ac9c69760e",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-L20 (2026-09-03): la frase mala es el calco de «El hombre que viene ahora es mi vecino.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Omul pe care vine acum este vecinul meu.",
+      "correct": "Omul care vine acum este vecinul meu.",
+      "alternatives": [
+        "Omul care vine acum e vecinul meu."
+      ],
+      "calcoEs": "El hombre que viene ahora es mi vecino.",
+      "explanationEs": "Aquí «care» es el SUJETO de «vine»: es el hombre quien viene. El relativo sujeto va desnudo, sin «pe» y sin clítico. Las dos piezas entran juntas y sólo cuando el relativo es el objeto, que se reconoce porque el verbo tiene otro sujeto."
+    }
   }
 ]

@@ -104,7 +104,15 @@ export const ITEMS: ItemCorreccion[] = [
     mala: 'Am reparat bicicleta de Vlad.', buena: 'Am reparat bicicleta lui Vlad.',
     calcoEs: 'He arreglado la bicicleta de Vlad.',
     explicacion: 'Para la posesión ante nombre propio masculino el rumano pone «lui» delante del nombre: «bicicleta lui Vlad». El «de» del español no vale aquí. (Ojo: con obras SÍ existe «de» para el autor — «o carte de Eminescu» —, pero ése es otro valor.)' },
-  { p: LUI, pasada: 1, espejoEs: false, atajoEs: false, intencion: 'él · uno',
+  // EL ÚNICO ÍTEM DE FRONTERA QUE EL CORPUS TENÍA, y estaba mal etiquetado
+  // en los DOS campos. Reetiquetado el 2026-09-03 en la auditoría hacia
+  // atrás del valor por omisión `origenError: 'calco'`: su error NO es el
+  // calco del español —«la oficina del señor Popescu» traducida palabra por
+  // palabra da la BUENA, `Biroul domnului Popescu`, nunca `lui`— sino la
+  // SOBREAPLICACIÓN de la regla del `lui` que el propio punto acaba de
+  // enseñar. Por eso `atajoEs` es true: traducir SÍ resuelve, y eso es lo
+  // que lo hace la frontera. Estaba declarado false.
+  { p: LUI, pasada: 1, espejoEs: false, atajoEs: true, origenError: 'sobreaplicacion', intencion: 'él · uno',
     mala: 'Biroul lui domnul Popescu este la etajul doi.', buena: 'Biroul domnului Popescu este la etajul doi.',
     alt: ['Biroul domnului Popescu e la etajul doi.'],
     calcoEs: 'La oficina del señor Popescu está en el segundo piso.',

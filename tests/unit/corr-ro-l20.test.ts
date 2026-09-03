@@ -4,7 +4,7 @@
 // nada: el anti-anglófono del lote 18 llevaba una condición inalcanzable
 // y el lote imprimía «Limpio» exactamente igual.
 import { describe, it, expect } from 'vitest';
-import { verificar, ITEMS, concuerdaComoSujeto } from '../../scripts/lotes/corr-ro-l20';
+import { verificar, ITEMS, concuerdaComoSujeto, diff } from '../../scripts/lotes/corr-ro-l20';
 import type { ItemCorreccion } from '../../scripts/lib/correccion';
 
 const base = { pasada: 1, espejoEs: false, atajoEs: true, transparenteLatin: false,
@@ -22,6 +22,10 @@ describe('la frontera del 19/20 en `r2-numerales-de`', () => {
   it('APRUEBA con un numeral menor que 20', () => {
     expect(marca(it_('r2-numerales-de', 'Am cumpărat cinci de mere.', 'Am cumpărat cinci mere.'),
       /no lleva un numeral MENOR QUE 20/)).toBe(false);
+  });
+  it('SUSPENDE el demostrativo popular, donde «cinci de-alea» existe y ese «de» es OTRO morfema', () => {
+    expect(marca(it_('r2-numerales-de', 'Am cumpărat cinci de alea.', 'Am cumpărat cinci alea.'),
+      /allowlist del lote/)).toBe(true);
   });
 });
 
@@ -60,10 +64,19 @@ describe('la frontera del «pe» en `r8-relativas-pe-care`: el paradigma AL REV�
   });
 });
 
-describe('el invariante de la clase: un ítem de frontera sólo puede BORRAR', () => {
-  it('SUSPENDE si la buena introduce una palabra que no está en la mala', () => {
+describe('el invariante de la clase: el diff sólo toca el MARCADOR del punto', () => {
+  it('SUSPENDE si el diff toca algo que no es el marcador', () => {
     expect(marca(it_('r2-numerales-de', 'Am cumpărat cinci de mere.', 'Am cumpărat cinci pere.'),
-      /sólo puede BORRAR/)).toBe(true);
+      /sólo puede cambiar la pieza que el punto enseña/)).toBe(true);
+  });
+  it('acepta las TRES direcciones, porque la clase no las distingue', () => {
+    // La v0 decía «sólo puede BORRAR» y era media regla, escrita mirando
+    // los tres primeros puntos. En `r6-pe` la sobreaplicación va al revés
+    // —el alumno omite `pe` donde es obligatorio— y la corrección AÑADE;
+    // en la colocación de `ca` no borra ni añade: mueve.
+    expect(diff('Am cumpărat cinci de mere.', 'Am cumpărat cinci mere.')).toEqual(['de']);   // borra
+    expect(diff('Nu văd nimeni la ușă.', 'Nu văd pe nimeni la ușă.')).toEqual(['pe']);       // añade
+    expect(diff('Vreau ca să Ion termine.', 'Vreau ca Ion să termine.')).toEqual([]);        // mueve
   });
   it('SUSPENDE al ítem que no se declara de sobreaplicación', () => {
     const x = { ...it_('r2-numerales-de', 'Am cumpărat cinci de mere.', 'Am cumpărat cinci mere.') };
@@ -72,14 +85,45 @@ describe('el invariante de la clase: un ítem de frontera sólo puede BORRAR', (
   });
   it('APRUEBA el borrado limpio', () => {
     expect(marca(it_('r2-numerales-de', 'Am cumpărat cinci de mere.', 'Am cumpărat cinci mere.'),
-      /sólo puede BORRAR|todos declaran origenError/)).toBe(false);
+      /sólo puede cambiar la pieza|todos declaran origenError/)).toBe(false);
+  });
+});
+
+describe('`r6-pe-regla-operativa`: el objeto tiene que hacer IMPOSIBLE el doblado', () => {
+  // Si el doblado fuera sólo facultativo, el ítem mediría también
+  // `r6-doblado-cliticos` —cubierto con ocho ítems— y le cargaría el fallo.
+  // Es el defecto que se acaba de arreglar en las relativas.
+  it('SUSPENDE con un objeto que SÍ admite doblado', () => {
+    expect(marca(it_('r6-pe-regla-operativa', 'Văd Ion la ușă.', 'Îl văd pe Ion la ușă.'),
+      /no está en la allowlist de objetos que NO admiten doblado/)).toBe(true);
+  });
+  it('SUSPENDE «cineva», donde las dos fuentes discrepan', () => {
+    expect(marca(it_('r6-pe-regla-operativa', 'Văd cineva la ușă.', 'Văd pe cineva la ușă.'),
+      /no está en la allowlist de objetos/)).toBe(true);
+  });
+  it('APRUEBA «nimeni» y «cine», donde el doblado es imposible', () => {
+    expect(marca(it_('r6-pe-regla-operativa', 'Nu văd nimeni la ușă.', 'Nu văd pe nimeni la ușă.'),
+      /allowlist de objetos/)).toBe(false);
+    expect(marca(it_('r6-pe-regla-operativa', 'Cine ai văzut la gară?', 'Pe cine ai văzut la gară?'),
+      /allowlist de objetos/)).toBe(false);
+  });
+});
+
+describe('`r8-relativas-pe-care`: el antecedente no puede tener lectura LOCATIVA', () => {
+  it('SUSPENDE «drumul», donde «pe care vine» es CORRECTO («el camino por el que viene»)', () => {
+    expect(marca(it_('r8-relativas-pe-care', 'Drumul pe care vine acum este lung.',
+      'Drumul care vine acum este lung.', { inf: 'a veni' }), /lectura LOCATIVA/)).toBe(true);
+  });
+  it('APRUEBA «omul», que no la tiene', () => {
+    expect(marca(it_('r8-relativas-pe-care', 'Omul pe care vine acum este vecinul meu.',
+      'Omul care vine acum este vecinul meu.', { inf: 'a veni' }), /lectura LOCATIVA/)).toBe(false);
   });
 });
 
 describe('los cinco del lote', () => {
   it('pasan todos los gates y los cinco son de frontera', () => {
     expect(verificar(ITEMS)).toEqual([]);
-    expect(ITEMS.length).toBe(5);
+    expect(ITEMS.length).toBe(9);
     expect(ITEMS.every((x) => x.origenError === 'sobreaplicacion')).toBe(true);
   });
   it('y el atajo NO los suspende: en un lote de frontera es la propiedad definitoria', async () => {
@@ -89,7 +133,7 @@ describe('los cinco del lote', () => {
     // arreglo dentro del formato.
     const { medirAtajo } = await import('../../scripts/lib/atajo-correccion');
     const m = medirAtajo(ITEMS, 'T');
-    expect(m.frontera.length).toBe(5);
+    expect(m.frontera.length).toBe(9);
     expect(m.atajo.length).toBe(0);
     expect(verificar(ITEMS)).toEqual([]);
   });

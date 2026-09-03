@@ -46,45 +46,111 @@ import { presente } from '../lib/paradigma-ro';
 const NUM = 'r2-numerales-de';
 const COMPL = 'r8-completivas-ca-sa';
 const REL = 'r8-relativas-pe-care';
+const PE = 'r6-pe-regla-operativa';
 
 type ItemL20 = ItemCorreccion & { inf?: string };
 
-export const ITEMS: ItemL20[] = [
-  // ══ r2-numerales-de · la frontera de los 20 ═══════════════════════
-  // Los ocho ítems publicados llevan numerales 20, 25, 30, 40, 50, 80,
-  // 100 y 200: TODOS ≥20, o sea que la mitad negativa de la regla no se
-  // examina nunca y «pon de detrás del numeral» saca 8/8.
-  { p: NUM, pasada: 1, espejoEs: false, atajoEs: true, transparenteLatin: false, origenError: 'sobreaplicacion',
-    mala: 'Am cumpărat cinci de mere de la piață.', buena: 'Am cumpărat cinci mere de la piață.',
-    calcoEs: 'Compré cinco manzanas en el mercado.',
-    explicacion: 'La regla del «de» tiene frontera: sólo entra a partir de VEINTE. Con los numerales del 1 al 19 el nombre va pegado y sin nada en medio — «cinci mere», «trei copii», «nouă zile». El «de» que sí aparece en esta frase es otro, el de «de la piață».' },
-  { p: NUM, pasada: 1, espejoEs: false, atajoEs: true, transparenteLatin: false, origenError: 'sobreaplicacion',
-    mala: 'În clasă sunt nouăsprezece de studenți.', buena: 'În clasă sunt nouăsprezece studenți.',
-    calcoEs: 'En la clase hay diecinueve estudiantes.',
-    explicacion: 'Diecinueve es el último número sin «de» y veinte el primero con «de»: «nouăsprezece studenți» pero «douăzeci DE studenți». La frontera está exactamente ahí, y no en si el número parece grande o pequeño.' },
+/** Nombres contables admitidos tras el numeral. ALLOWLIST porque decide
+ *  rechazos: lo que no esté, se suspende. */
+const NOMBRES_CONTABLES = new Set(['mere', 'elevi', 'copii', 'zile', 'cărți', 'ani', 'lei', 'studenți', 'scaune']);
+/** Antecedentes sin lectura locativa posible con `pe care`. */
+const ANTECEDENTES_SIN_LECTURA_LOCATIVA = new Set(['omul', 'fata', 'cartea', 'filmul', 'colegii', 'prietenii', 'lecțiile', 'florile', 'studenții']);
+/** Objetos con los que el doblado clítico es IMPOSIBLE, no facultativo
+ *  (Croitor 2010, ej. 3). `cineva` NO entra: las fuentes discrepan. */
+const SIN_DOBLADO_POSIBLE = new Set(['nimeni', 'cine']);
 
-  // ══ r8-completivas-ca-sa · la frontera del «ca» ═══════════════════
-  // Los ocho publicados insertan «ca» y nada más. El caso donde NO va
-  // —sujeto idéntico al del regente— no aparece en ninguno, y encima el
-  // sujeto pospuesto está declarado como ALTERNATIVA dentro de los
-  // propios ítems: el lote sabía que existe y no lo examinaba.
+export const ITEMS: ItemL20[] = [
+  // ══ r2-numerales-de · la frontera del 19/20 ═══════════════════════
+  // Los ocho publicados llevan 20, 25, 30, 40, 50, 80, 100 y 200: TODOS
+  // ≥20, o sea que «pon de detrás del numeral» saca 8/8. La frontera es
+  // normativa y está en 19/20: hasta 19 el numeral determina al nombre
+  // directamente; a partir de 20 la relación se invierte y el nombre se
+  // subordina con `de` (limbaromana.net, *Numeralul cardinal*; dictie.ro).
+  { p: NUM, pasada: 1, espejoEs: false, atajoEs: true, transparenteLatin: false, origenError: 'sobreaplicacion',
+    mala: 'Am mâncat cinci de mere azi-dimineață.', buena: 'Am mâncat cinci mere azi-dimineață.',
+    calcoEs: 'Me comí cinco manzanas esta mañana.',
+    explicacion: 'La regla del «de» tiene frontera: sólo entra a partir de VEINTE. Del 1 al 19 el nombre va pegado al numeral y sin nada en medio — «cinci mere», «trei copii», «nouă zile».' },
+  { p: NUM, pasada: 1, espejoEs: false, atajoEs: true, transparenteLatin: false, origenError: 'sobreaplicacion',
+    mala: 'În clasă sunt nouăsprezece de elevi.', buena: 'În clasă sunt nouăsprezece elevi.',
+    calcoEs: 'En la clase hay diecinueve alumnos.',
+    explicacion: 'Diecinueve es el último número sin «de» y veinte el primero con «de»: «nouăsprezece elevi» pero «douăzeci DE elevi». La frontera está exactamente ahí, y no en si el número suena grande o pequeño.' },
+
+  // ══ r8-completivas-ca-sa · las DOS caras de la frontera ═══════════
+  // Y las dos son operaciones DISTINTAS a propósito: si las dos fueran
+  // «borra ca», el arreglo repetiría el defecto que viene a arreglar.
+  //
+  // ⚠ LA REGLA DEL PUNTO ERA FALSA y se corrigió al escribir este lote:
+  // `ca` NO se licencia por «haber sujeto expreso» sino por haber un
+  // CONSTITUYENTE ADELANTADO a posición preverbal, sea cual sea
+  // (Dobrovie-Sorin 1994: 93-95, en Sava 2012, p. 221). Por eso la mala
+  // de abajo NO puede llevar ningún adverbial adelantable: con `mâine`
+  // dentro, `Vreau CA MÂINE să vin` es GRAMATICAL y el ítem tendría dos
+  // arreglos, uno de los cuales el corpus no contempla.
   { p: COMPL, pasada: 1, espejoEs: false, atajoEs: true, transparenteLatin: false, origenError: 'sobreaplicacion',
-    mala: 'Vreau ca să vin mâine la birou.', buena: 'Vreau să vin mâine la birou.',
-    calcoEs: 'Quiero venir mañana a la oficina.',
-    explicacion: '«Ca» sólo aparece cuando hay un sujeto expreso que meter delante de «să». Si el sujeto es el mismo que el del verbo principal no hay nada que colocar ahí, y «vreau să vin» va sin «ca». En español se ve igual de claro: «quiero venir», no «quiero que yo venga».' },
-  { p: COMPL, pasada: 1, espejoEs: false, atajoEs: true, transparenteLatin: false, origenError: 'sobreaplicacion',
-    mala: 'Doresc ca să plec mai devreme astăzi.', buena: 'Doresc să plec mai devreme astăzi.',
-    calcoEs: 'Deseo irme más temprano hoy.',
-    explicacion: 'Mismo caso con otro verbo de voluntad: sujeto idéntico, así que «să» va pegado al regente sin «ca» en medio. La regla no es «con să siempre ca», es «ca cuando hay un sujeto expreso delante de să».' },
+    mala: 'Vreau ca să plec.', buena: 'Vreau să plec.',
+    calcoEs: 'Quiero irme.',
+    explicacion: '«Ca» sólo aparece cuando hay algo que colocar delante de «să» — un sujeto, un complemento, un adverbio. Si no hay nada adelantado, «să» va pegado al verbo principal y «ca» sobra. La norma lo condena expresamente fuera de «pentru ca să».' },
+  { p: COMPL, pasada: 1, espejoEs: false, atajoEs: false, transparenteLatin: false, origenError: 'sobreaplicacion',
+    mala: 'Vreau ca să Ion termine cartea.', buena: 'Vreau ca Ion să termine cartea.',
+    calcoEs: 'Quiero que Ion termine el libro.',
+    explicacion: 'Aquí «ca» sí hace falta, porque «Ion» va delante del verbo — lo que está mal es el ORDEN. El adelantado se coloca ENTRE «ca» y «să», nunca detrás de «să»: entre «să» y el verbo sólo caben los clíticos, «nu» y «mai, și, tot, prea, cam».' },
 
   // ══ r8-relativas-pe-care · la frontera del «pe» ═══════════════════
-  // Los ocho publicados insertan «pe» + clítico. La relativa de SUJETO,
-  // donde «pe» NO va y no hay nada que repetir, no aparece en ninguno.
+  // ⚠ RESTRICCIÓN DE PLANTILLA, y hay gate: el antecedente NO puede
+  // denotar superficie, vía ni vehículo. `drumul pe care vine`, `calul pe
+  // care vine`, `autobuzul pe care vine` son CORRECTAS en lectura
+  // locativa («el camino por el que viene»), y la mala dejaría de serlo.
   { p: REL, inf: 'a veni', pasada: 1, espejoEs: false, atajoEs: true, transparenteLatin: false, origenError: 'sobreaplicacion',
     mala: 'Omul pe care vine acum este vecinul meu.', buena: 'Omul care vine acum este vecinul meu.',
+    alt: ['Omul care vine acum e vecinul meu.'],
     calcoEs: 'El hombre que viene ahora es mi vecino.',
-    explicacion: 'Aquí «care» es el SUJETO de «vine», no el objeto: es el hombre quien viene. Y el relativo sujeto va desnudo — sin «pe» y sin clítico que lo repita. La marca «pe» y el clítico entran juntos y sólo cuando el relativo es objeto, que se reconoce porque el verbo tiene otro sujeto.' },
+    explicacion: 'Aquí «care» es el SUJETO de «vine»: es el hombre quien viene. El relativo sujeto va desnudo, sin «pe» y sin clítico. Las dos piezas entran juntas y sólo cuando el relativo es el objeto, que se reconoce porque el verbo tiene otro sujeto.' },
+
+  // ══ r6-pe-regla-operativa · la otra mitad de la regla ═════════════
+  // El punto quedó con 4 ítems y los 4 del mismo lado: «quita pe» con
+  // indefinido no específico. El alumno que sobregeneraliza OMITE `pe`
+  // donde es obligatorio, y `nimeni` y `cine` son justo donde lo haría,
+  // porque `nimeni` PARECE un indefinido no específico.
+  //
+  // Y son los únicos contextos que AÍSLAN `pe`: con ellos el doblado
+  // clítico es IMPOSIBLE, no facultativo — «Nu (*l-)am văzut pe nimeni»,
+  // «(*Îl) văd pe cineva»: «los pronombres indefinidos no pueden doblarse
+  // nunca» (Blanca Croitor, *Este dublarea complementului direct un
+  // fenomen de acord?*, Univ. din București 2010, ej. (3); y el handout de
+  // Iași §2.1-2.2). En todos los demás contextos donde el rumano exige
+  // `pe` y el español no marca (`Îl vreau PE acesta`), el doblado es
+  // obligatorio y el ítem mediría también `r6-doblado-cliticos`.
+  // `cineva` se deja FUERA: las dos fuentes discrepan sobre su doblado.
+  { p: PE, inf: 'a vedea', pasada: 1, espejoEs: false, atajoEs: true, transparenteLatin: false, origenError: 'sobreaplicacion',
+    mala: 'Nu văd nimeni la ușă.', buena: 'Nu văd pe nimeni la ușă.',
+    calcoEs: 'No veo a nadie en la puerta.',
+    explicacion: '«Nimeni» parece un indefinido de los que van sin «pe», y no lo es: los pronombres lo llevan siempre. La regla no es «indefinido → sin pe», es «nombre común indeterminado y no específico → sin pe».' },
+  { p: PE, inf: 'a vedea', pasada: 1, espejoEs: false, atajoEs: true, transparenteLatin: false, origenError: 'sobreaplicacion',
+    mala: 'N-am văzut nimeni la petrecere.', buena: 'N-am văzut pe nimeni la petrecere.',
+    calcoEs: 'No vi a nadie en la fiesta.',
+    explicacion: 'Con «nimeni» el «pe» es obligatorio también en pasado. Y aquí no se dobla con clítico: los pronombres indefinidos no admiten el doblado, así que la única pieza que falta es «pe».' },
+  { p: PE, inf: 'a vedea', pasada: 1, espejoEs: false, atajoEs: true, transparenteLatin: false, origenError: 'sobreaplicacion',
+    mala: 'Cine ai văzut la gară?', buena: 'Pe cine ai văzut la gară?',
+    calcoEs: '¿A quién viste en la estación?',
+    explicacion: 'El interrogativo objeto se marca: «pe cine». Sin «pe», «cine» sólo podría ser el sujeto, y entonces el verbo no sería «ai văzut» sino «a văzut». La forma del verbo delata cuál de los dos es.' },
+  { p: PE, inf: 'a aștepta', pasada: 1, espejoEs: false, atajoEs: true, transparenteLatin: false, origenError: 'sobreaplicacion',
+    mala: 'Cine aștepți în fața școlii?', buena: 'Pe cine aștepți în fața școlii?',
+    calcoEs: '¿A quién esperas delante de la escuela?',
+    explicacion: 'Lo mismo en presente: «pe cine aștepți». «Aștepți» es «esperas», así que el sujeto eres tú y «cine» sólo puede ser el objeto — por eso va marcado.' },
+
 ];
+
+/** Las palabras que entran o salen entre la mala y la buena, por
+ *  multiconjunto. Un movimiento (`ca să Ion` → `ca Ion să`) da vacío, que
+ *  es lo correcto: no cambia ninguna pieza, cambia el orden. */
+export function diff(mala: string, buena: string): string[] {
+  const t = (x: string) => x.toLowerCase().replace(/[^\p{L}\s-]/gu, ' ').split(/\s+/).filter(Boolean);
+  const bolsa = new Map<string, number>();
+  for (const w of t(mala)) bolsa.set(w, (bolsa.get(w) ?? 0) + 1);
+  const entran: string[] = [];
+  for (const w of t(buena)) { const c = bolsa.get(w) ?? 0; if (c > 0) bolsa.set(w, c - 1); else entran.push(w); }
+  return [...entran, ...[...bolsa].flatMap(([w, n]) => Array<string>(n).fill(w))];
+}
 
 /** LA FRONTERA DEL RELATIVO, PREGUNTADA AL PARADIGMA.
  *
@@ -117,12 +183,33 @@ export function verificar(items: ItemL20[]): string[] {
     // y aquí además es la DEFINICIÓN de la clase.
     if (x.origenError !== 'sobreaplicacion')
       v.push(`${id}: este lote es de ítems de FRONTERA — todos declaran origenError: 'sobreaplicacion'`);
-    const enMala = new Set(x.mala.toLowerCase().replace(/[^\p{L}\s-]/gu, ' ').split(/\s+/).filter(Boolean));
-    const nuevas = x.buena.toLowerCase().replace(/[^\p{L}\s-]/gu, ' ').split(/\s+/).filter(Boolean).filter((w) => !enMala.has(w));
-    if (nuevas.length)
-      v.push(`${id}: la buena introduce ${nuevas.map((w) => `«${w}»`).join(', ')}, que no está en la mala — un ítem de sobreaplicación sólo puede BORRAR la pieza que sobra`);
+    // EL INVARIANTE DE LA CLASE: el diff entre la mala y la buena sólo
+    // puede tocar EL MARCADOR DEL PUNTO.
+    //
+    // La v0 decía «un ítem de sobreaplicación sólo puede BORRAR», y era
+    // media regla: se escribió mirando los tres primeros puntos, donde la
+    // pieza sobra. En `r6-pe-regla-operativa` la sobreaplicación va al
+    // revés —el alumno sobregeneraliza «quita pe» y OMITE `pe` donde es
+    // obligatorio—, así que la corrección AÑADE. Y en la cara de la
+    // colocación de `ca` no borra ni añade: mueve. Las tres son la misma
+    // clase, y lo que de verdad las une no es la dirección sino que **la
+    // única pieza que cambia es la que el punto enseña**.
+    for (const [pieza, marcador] of [[NUM, 'de'], [COMPL, 'ca'], [REL, 'pe'], [PE, 'pe']] as const) {
+      if (x.p !== pieza) continue;
+      for (const w of diff(x.mala, x.buena))
+        if (w !== marcador)
+          v.push(`${id}: el diff toca «${w}», y el marcador de este punto es «${marcador}» — un ítem de frontera sólo puede cambiar la pieza que el punto enseña`);
+    }
 
     if (x.p === NUM) {
+      // RESTRICCIÓN DE PLANTILLA, en ALLOWLIST porque decide RECHAZOS: en
+      // coloquial existe `cinci de-alea`, `trei de-ăștia` (numeral + `de` +
+      // demostrativo popular), donde ese `de` es OTRO morfema y la mala
+      // sería lengua real. Enumerar lo prohibido dejaría pasar lo que
+      // falte; enumerar lo admitido suspende lo que falte.
+      const nucleo = /(?<![\p{L}])de\s+(\p{L}+)/iu.exec(x.mala)?.[1]?.toLowerCase();
+      if (!nucleo || !NOMBRES_CONTABLES.has(nucleo))
+        v.push(`${id}: el nombre contado «${nucleo ?? '?'}» no está en la allowlist del lote — falla cerrado porque «cinci de-alea» existe en coloquial y ahí «de» es otro morfema`);
       // La pieza que sobra es «de», y tiene que ir PEGADA al numeral: el
       // «de» de «de la piață» es otro y borrarlo sería otra frase.
       if (!/(?<![\p{L}])(unu|una|doi|două|trei|patru|cinci|șase|șapte|opt|nouă|zece|unsprezece|doisprezece|douăsprezece|treisprezece|paisprezece|cincisprezece|șaisprezece|șaptesprezece|optsprezece|nouăsprezece)\s+de(?![\p{L}])/iu.test(x.mala))
@@ -138,6 +225,13 @@ export function verificar(items: ItemL20[]): string[] {
       if (/(?<![\p{L}])ca\s+să(?![\p{L}])/iu.test(x.buena)) v.push(`${id}: la buena conserva «ca să»`);
     }
     if (x.p === REL) {
+      // RESTRICCIÓN DE PLANTILLA, también en allowlist: con un antecedente
+      // que denote superficie, vía o vehículo, `pe care` + verbo de
+      // movimiento es CORRECTO en lectura locativa (`drumul pe care vine`
+      // = «el camino por el que viene») y la mala deja de ser mala.
+      const ante = x.mala.trim().split(/\s+/)[0]?.toLowerCase().replace(/[^\p{L}]/gu, '');
+      if (!ante || !ANTECEDENTES_SIN_LECTURA_LOCATIVA.has(ante))
+        v.push(`${id}: el antecedente «${ante ?? '?'}» no está en la allowlist — con superficie, vía o vehículo (drum, cal, autobuz, scaun) «pe care» admite lectura LOCATIVA y la mala sería correcta`);
       if (!/(?<![\p{L}])pe\s+care(?![\p{L}])/iu.test(x.mala)) v.push(`${id}: la mala no lleva «pe care»`);
       if (/(?<![\p{L}])pe\s+care(?![\p{L}])/iu.test(x.buena)) v.push(`${id}: la buena conserva «pe care»`);
       // EL PARADIGMA, AL REVÉS QUE EN EL LOTE 19: aquí «care» TIENE que
@@ -150,6 +244,19 @@ export function verificar(items: ItemL20[]): string[] {
         v.push(`${id}: «${m[1]}» no es la 3.ª persona de «${x.inf}» — si «care» no puede ser el SUJETO, la buena no es una relativa de sujeto y el ítem no examina la frontera`);
       if (/(?<![\p{L}])(îl|o|îi|le)\s|(?<![\p{L}])(l|i|le|o)-/iu.test(x.buena))
         v.push(`${id}: la buena lleva clítico — la relativa de SUJETO va desnuda, sin «pe» y sin nada que repetir`);
+    }
+    if (x.p === PE) {
+      // LO QUE HACE PUBLICABLE A ESTE ÍTEM: el doblado clítico tiene que
+      // ser IMPOSIBLE, no facultativo, o el ítem mediría también
+      // `r6-doblado-cliticos` — que está cubierto con ocho ítems y se
+      // llevaría el fallo. Sólo lo garantizan `nimeni` y `cine`, donde las
+      // dos fuentes coinciden; `cineva` queda fuera porque discrepan.
+      const objeto = /(?<![\p{L}])pe\s+(\p{L}+)/iu.exec(x.buena)?.[1]?.toLowerCase();
+      if (!objeto || !SIN_DOBLADO_POSIBLE.has(objeto))
+        v.push(`${id}: «pe ${objeto ?? '?'}» no está en la allowlist de objetos que NO admiten doblado — con cualquier otro el ítem mediría también r6-doblado-cliticos`);
+      if (/(?<![\p{L}])(îl|o|îi|le)\s|(?<![\p{L}])(l|i|le|o)-/iu.test(x.buena))
+        v.push(`${id}: la buena lleva clítico, y con estos pronombres el doblado es IMPOSIBLE (Croitor 2010)`);
+      if (/(?<![\p{L}])pe(?![\p{L}])/iu.test(x.mala)) v.push(`${id}: la mala ya lleva «pe»`);
     }
   }
   for (const [i, x] of items.entries())

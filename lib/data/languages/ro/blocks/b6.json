@@ -882,5 +882,105 @@
       "calcoEs": "Ayudo a mi compañera con los deberes.",
       "explanationEs": "Con verbo en presente el clítico va suelto delante: «o ajut pe colega mea». El posesivo ya determina a la persona, así que las dos marcas son obligatorias."
     }
+  },
+  {
+    "id": "12e0391d",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-pe-regla-operativa"
+    ],
+    "tags": [
+      "ro-corr-l20",
+      "correccion"
+    ],
+    "contentHash": "12e0391df4fffb88fa9d28dbf14f4bc519aa4b7757f8b2b8f58866d172ad20de",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-L20 (2026-09-03): la frase mala es el calco de «No veo a nadie en la puerta.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Nu văd nimeni la ușă.",
+      "correct": "Nu văd pe nimeni la ușă.",
+      "alternatives": [],
+      "calcoEs": "No veo a nadie en la puerta.",
+      "explanationEs": "«Nimeni» parece un indefinido de los que van sin «pe», y no lo es: los pronombres lo llevan siempre. La regla no es «indefinido → sin pe», es «nombre común indeterminado y no específico → sin pe»."
+    }
+  },
+  {
+    "id": "f231274e",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-pe-regla-operativa"
+    ],
+    "tags": [
+      "ro-corr-l20",
+      "correccion"
+    ],
+    "contentHash": "f231274e9c985a1f82de831efc0740a554dd8fd31b3c90506afd01f9f9caab32",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-L20 (2026-09-03): la frase mala es el calco de «No vi a nadie en la fiesta.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "N-am văzut nimeni la petrecere.",
+      "correct": "N-am văzut pe nimeni la petrecere.",
+      "alternatives": [],
+      "calcoEs": "No vi a nadie en la fiesta.",
+      "explanationEs": "Con «nimeni» el «pe» es obligatorio también en pasado. Y aquí no se dobla con clítico: los pronombres indefinidos no admiten el doblado, así que la única pieza que falta es «pe»."
+    }
+  },
+  {
+    "id": "96d59435",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-pe-regla-operativa"
+    ],
+    "tags": [
+      "ro-corr-l20",
+      "correccion"
+    ],
+    "contentHash": "96d59435663e8a3188bee72b715da52341cf4c7f276eac35265075536b337574",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-L20 (2026-09-03): la frase mala es el calco de «¿A quién viste en la estación?»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Cine ai văzut la gară?",
+      "correct": "Pe cine ai văzut la gară?",
+      "alternatives": [],
+      "calcoEs": "¿A quién viste en la estación?",
+      "explanationEs": "El interrogativo objeto se marca: «pe cine». Sin «pe», «cine» sólo podría ser el sujeto, y entonces el verbo no sería «ai văzut» sino «a văzut». La forma del verbo delata cuál de los dos es."
+    }
+  },
+  {
+    "id": "19cd2df6",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-pe-regla-operativa"
+    ],
+    "tags": [
+      "ro-corr-l20",
+      "correccion"
+    ],
+    "contentHash": "19cd2df64ea3b6a4847cd43ba4449de7459ca228132bacf7a1a371b864649db7",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-L20 (2026-09-03): la frase mala es el calco de «¿A quién esperas delante de la escuela?»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Cine aștepți în fața școlii?",
+      "correct": "Pe cine aștepți în fața școlii?",
+      "alternatives": [],
+      "calcoEs": "¿A quién esperas delante de la escuela?",
+      "explanationEs": "Lo mismo en presente: «pe cine aștepți». «Aștepți» es «esperas», así que el sujeto eres tú y «cine» sólo puede ser el objeto — por eso va marcado."
+    }
   }
 ]

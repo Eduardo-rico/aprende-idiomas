@@ -1840,5 +1840,55 @@
       ],
       "hintEs": "artículo indefinido: el sustantivo es femenino (en español el equivalente es masculino)"
     }
+  },
+  {
+    "id": "be8b7912",
+    "blockId": 2,
+    "lessonId": "b2-l1-articolul-enclitic",
+    "difficulty": 2,
+    "concepts": [
+      "r2-numerales-de"
+    ],
+    "tags": [
+      "ro-corr-l20",
+      "correccion"
+    ],
+    "contentHash": "be8b7912f1a1926b73f5b4af9704344ed58fcd839eb8495547dfffbaecffaad6",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-L20 (2026-09-03): la frase mala es el calco de «Me comí cinco manzanas esta mañana.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Am mâncat cinci de mere azi-dimineață.",
+      "correct": "Am mâncat cinci mere azi-dimineață.",
+      "alternatives": [],
+      "calcoEs": "Me comí cinco manzanas esta mañana.",
+      "explanationEs": "La regla del «de» tiene frontera: sólo entra a partir de VEINTE. Del 1 al 19 el nombre va pegado al numeral y sin nada en medio — «cinci mere», «trei copii», «nouă zile»."
+    }
+  },
+  {
+    "id": "020e8eaa",
+    "blockId": 2,
+    "lessonId": "b2-l1-articolul-enclitic",
+    "difficulty": 2,
+    "concepts": [
+      "r2-numerales-de"
+    ],
+    "tags": [
+      "ro-corr-l20",
+      "correccion"
+    ],
+    "contentHash": "020e8eaa2bd40b71813d7abecdb6e68b0646923f22300e968901f4176769cb39",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-L20 (2026-09-03): la frase mala es el calco de «En la clase hay diecinueve alumnos.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "În clasă sunt nouăsprezece de elevi.",
+      "correct": "În clasă sunt nouăsprezece elevi.",
+      "alternatives": [],
+      "calcoEs": "En la clase hay diecinueve alumnos.",
+      "explanationEs": "Diecinueve es el último número sin «de» y veinte el primero con «de»: «nouăsprezece elevi» pero «douăzeci DE elevi». La frontera está exactamente ahí, y no en si el número suena grande o pequeño."
+    }
   }
 ]

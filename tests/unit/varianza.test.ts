@@ -108,11 +108,18 @@ describe('el corpus rumano: ningún punto marcado sin juicio escrito', () => {
     const mudos = marcados.filter((v) => !String(juicio.get(v.punto) ?? '').trim()).map((v) => v.punto);
     expect(mudos, `marcados sin juicio escrito: ${mudos.join(', ')}`).toEqual([]);
   });
-  it('y el juicio dice si es DEFECTO o LEGÍTIMO, no una frase cualquiera', async () => {
+  it('y el juicio empieza por un veredicto del vocabulario CERRADO, no por una frase cualquiera', async () => {
+    // El vocabulario es cerrado a propósito: un juicio que empiece por
+    // prosa libre se lee como una explicación y no como una decisión, y
+    // entonces nadie sabe si el punto está bien o está pendiente. Al
+    // arreglar los tres defectos en el lote 20 hizo falta un veredicto
+    // nuevo —ARREGLADO— y el test se puso en rojo antes de que existiera,
+    // que es exactamente lo que tiene que hacer: la lista se amplía a
+    // conciencia, no por descuido.
     const { PUNTOS_RO } = await import('@/lib/data/languages/ro/inventario-puntos');
     const conJuicio = PUNTOS_RO.filter((p) => p.varianza);
     expect(conJuicio.length).toBeGreaterThan(0);
     for (const p of conJuicio)
-      expect(/^(LEGÍTIMO|INSTANCIA REAL|PARCIAL)/.test(p.varianza!), p.id).toBe(true);
+      expect(/^(LEGÍTIMO|INSTANCIA REAL|PARCIAL|ARREGLADO)/.test(p.varianza!), p.id).toBe(true);
   });
 });
