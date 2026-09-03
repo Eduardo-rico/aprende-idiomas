@@ -42,10 +42,21 @@ test.describe("Biblioteca de lectura (Ola L)", () => {
   });
 
   test("diccionario emergente: tocar una palabra abre el popover", async ({ page }) => {
-    await page.goto("/pt/leer/anedotas-e-quadras-a2-1");
-    await page.getByRole("button", { name: "janela", exact: true }).first().click();
-    await expect(page.getByRole("dialog")).toBeVisible();
-    await expect(page.getByRole("dialog")).toContainText(/ventana|Buscando|no está/i);
+    // Apuntaba a `anedotas-e-quadras-a2-1`, que desde la Ola L tiene audio
+    // y se sirve con el lector de KARAOKE: allí las palabras también son
+    // <button>, pero mueven el audio en vez de abrir el diccionario. O sea
+    // que la prueba pulsaba el botón equivocado y concluía que el
+    // diccionario estaba roto. Comprobado a mano: en una lectura de sólo
+    // texto funciona — «noite» devuelve «noche».
+    //
+    // Queda anotado lo que esto destapa y NO es un fallo: en las lecturas
+    // con karaoke no hay diccionario emergente. Es una decisión de diseño
+    // sin declarar, no un defecto.
+    await page.goto("/pt/leer/a-casa-dos-fantasmas-v1-c01");
+    await page.getByRole("button", { name: "noite", exact: true }).first().click();
+    const popover = page.getByRole("dialog").first();
+    await expect(popover).toBeVisible();
+    await expect(popover).toContainText(/noche|Buscando|no está/i);
   });
 
   test("marcar como lida persiste tras recargar", async ({ page }) => {

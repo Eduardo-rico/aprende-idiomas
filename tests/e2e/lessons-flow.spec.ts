@@ -1,93 +1,51 @@
 // tests/e2e/lessons-flow.spec.ts
-// L5: end-to-end happy-path coverage of the lesson-before-exercises
-// flow. Steps:
+// El camino del alumno: índice del libro → lección → ejercicios.
 //
-//   1. Authenticate via POST /api/auth/login with the dev password.
-//   2. Open /pt/blocks/1/lessons/b1-l1-alfabeto-acentos (the first
-//      lesson in the PT curriculum — hand-authored in
-//      `lib/data/languages/pt/curriculum.ts`).
-//   3. Click "Ver lección →" — the new L5.1 sneak-peek panel.
-//   4. Verify the standalone lesson page renders (the L5.3 fallback
-//      message is expected: MDX content isn't generated yet).
-//   5. Click "Continuar a ejercicios →".
-//   6. Verify the URL is now /pt/practice/b1-l1-alfabeto-acentos.
+// La versión anterior recorría `/pt/blocks/1/lessons/:id` → «Ver lección»
+// → `/pt/lessons/:id` → `/pt/practice/:id`, que es la estructura ANTERIOR
+// al rediseño: hoy la lección vive en `/pt/libro/:capítulo/:slug` y el
+// enlace intermedio no existe. Llevaba roja desde entonces y nadie lo vio
+// porque la suite e2e completa no se corría.
 //
-// The LessonGate's "skip vs show-lesson" branch is NOT exercised here —
-// it's a unit-tested branch in tests/unit/lesson-gate.test.ts (future).
-// L5 just confirms the wiring of the page-to-page navigation works.
-//
-// If Playwright browsers are not installed in the environment, the
-// test runner will skip this file (see `npx playwright test --grep`
-// invocation in the L5 gate). The dev server auto-starts via
-// playwright.config.ts.
-import { test, expect, request } from '@playwright/test';
+// Se reescribe sobre el camino real en vez de borrarse: es el único sitio
+// donde se comprueba de punta a punta que desde el índice se llega a una
+// lección y de ahí a practicarla, que es lo que hace el alumno cada día.
+import { test, expect } from '@playwright/test';
+import { entrar } from './helpers/sesion';
 
-const PASSWORD = process.env.AUTH_PASSWORD ?? 'charalito4';
-const LESSON_ID = 'b1-l1-alfabeto-acentos';
-const LANG = 'pt';
+test.describe('Del libro a los ejercicios', () => {
+  test.beforeEach(async ({ page, baseURL }) => {
+    await entrar(page, baseURL);
+  });
 
-test.describe('Lessons flow', () => {
-  test('sneak-peek panel navigates to standalone lesson page, then to practice', async ({
-    page,
-    baseURL,
-  }) => {
-    // 1. Authenticate via the API endpoint (faster than typing into the
-    //    /login form and matches the spec for the auth cookie). We use
-    //    Playwright's `request` fixture so the Set-Cookie response
-    //    header lands in the shared cookie jar.
-    const ctx = await request.newContext({ baseURL });
-    const loginRes = await ctx.post('/api/auth/login', {
-      data: { password: PASSWORD },
-    });
-    expect(loginRes.status(), 'login should succeed').toBe(200);
-    // Plumb the cookies from the API request context into the page's
-    // browser context so the proxy doesn't redirect us to /login.
-    const cookies = await ctx.storageState();
-    await page.context().addCookies(
-      cookies.cookies.map((c) => ({
-        name: c.name,
-        value: c.value,
-        domain: c.domain,
-        path: c.path,
-        expires: c.expires,
-        httpOnly: c.httpOnly,
-        secure: c.secure,
-        sameSite: c.sameSite,
-      })),
-    );
-    await ctx.dispose();
+  test('el índice lleva a una lección, y la lección a sus ejercicios', async ({ page }) => {
+    await page.goto('/pt/libro');
+    // Se busca por el texto que el alumno VE, no por un aria-label: si el
+    // rótulo cambia, la prueba tiene que enterarse.
+    const capitulo = page.getByRole('link', { name: /Sistema fonético/i }).first();
+    await expect(capitulo).toBeVisible();
+    await capitulo.click();
+    // Son TRES saltos, no dos: el índice lleva al CAPÍTULO y el capítulo a
+    // la lección. Escribirlo con dos hacía esperar una URL que no llega.
+    await page.waitForURL(/\/pt\/libro\/1$/);
 
-    // 2. Open the lesson intro page (the panel lives here).
-    await page.goto(`/${LANG}/blocks/1/lessons/${LESSON_ID}`);
+    const leccion = page.getByRole('link', { name: /Alfabeto|acentos/i }).first();
+    await expect(leccion).toBeVisible();
+    await leccion.click();
+    await page.waitForURL(/\/pt\/libro\/1\/.+/);
 
-    // 3. Click the L5.1 sneak-peek "Ver lección →" link.
-    const link = page.getByRole('link', { name: /Ver lección/i });
-    await expect(link).toBeVisible();
-    await link.click();
-
-    // 4. Verify the standalone lesson page renders. We don't assert on
-    //    specific MDX content because no lesson MDX is generated yet —
-    //    the friendly fallback ("Lesson MDX not yet generated for ...")
-    //    is the expected UI.
-    await expect(page).toHaveURL(
-      new RegExp(`/${LANG}/lessons/${LESSON_ID}`),
-    );
-    // Either the MDX content is there OR the fallback is there.
-    // We check for the lesson's <h1> heading (rendered unconditionally
-    // by the page) — this confirms the standalone page actually mounted
-    // (vs. a 404 boundary). Using the heading avoids strict-mode
-    // violations that happen when the fallback text matches two
-    // nested elements (outer rounded-lg + inner text-sm).
+    // La lección montó de verdad, no un límite de error.
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
 
-    // 5. Click "Continuar a ejercicios →" — the L5.3 link at the bottom.
-    const continueLink = page.getByRole('link', { name: /Continuar a ejercicios/i });
-    await expect(continueLink).toBeVisible();
-    await continueLink.click();
+    const aEjercicios = page.getByRole('link', { name: /exerc[íi]cios/i }).first();
+    await expect(aEjercicios).toBeVisible();
+    await aEjercicios.click();
 
-    // 6. Verify the practice URL.
-    await expect(page).toHaveURL(
-      new RegExp(`/${LANG}/practice/${LESSON_ID}`),
-    );
+    // El destino es `/pt/practice/:slug`: el 2026-09-03 este enlace
+    // apuntaba a `/pt/practicar/:capítulo/:sección`, que no existe, y daba
+    // 404 al pulsar «Continuar a exercícios». Por eso se comprueba que la
+    // página de destino CARGA, no sólo que la URL cambió.
+    await page.waitForURL(/\/pt\/practice\//);
+    await expect(page.locator('body')).not.toBeEmpty();
   });
 });

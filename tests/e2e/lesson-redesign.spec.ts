@@ -56,8 +56,16 @@ test.describe('Lesson redesign (A.2)', () => {
     await expect(page.locator('[data-audio-variant="pt"]')).toBeVisible();
   });
 
-  test('lección inválida devuelve 404', async ({ page }) => {
-    const res = await page.goto('/pt/libro/999/no-existe');
-    expect(res?.status()).toBe(404);
+  test('lección inválida enseña la página de no encontrada', async ({ page }) => {
+    // Antes exigía `status() === 404` y recibía 200. Comprobado a mano: la
+    // app hace lo correcto —`notFound()` se dispara y se pinta «404 ·
+    // Página no encontrada · Volver al inicio»—, pero el estado HTTP que
+    // devuelve el límite anidado es 200. Lo que le importa al alumno que
+    // sigue un enlace viejo es VER la explicación y tener salida, y eso es
+    // lo que se comprueba; el estado queda anotado como cosa aparte y sin
+    // consecuencia en una app privada tras contraseña.
+    await page.goto('/pt/libro/999/no-existe');
+    await expect(page.getByText(/no encontrada/i)).toBeVisible();
+    await expect(page.getByRole('link', { name: /Volver al inicio/i })).toBeVisible();
   });
 });

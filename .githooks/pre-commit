@@ -6,8 +6,51 @@
 # `vitest run --changed` corre sólo los tests que tocan lo cambiado; la
 # suite entera queda para el cierre de sesión y antes de push.
 # Activar con: git config core.hooksPath .githooks
+#
+# ── CHECKOUT COMPARTIDO (2026-09-03) ────────────────────────────────
+# `tsc` mira TODO el repo y `--changed` mira el ÁRBOL DE TRABAJO, no lo
+# que va en el commit. Con dos sesiones a la vez, eso significa que
+# ninguna puede commitear mientras la otra está a medias, aunque sus
+# rutas sean disjuntas.
+#
+# La comprobación amplia SE QUEDA, y a propósito: esta noche cazó siete
+# errores de `tsc` en un fichero cuyas propias pruebas daban 10/10, porque
+# vitest no hace typecheck. Estrecharla a lo staged habría dejado pasar
+# justo eso.
+#
+# Lo que se arregla es otra cosa: el coste real no fue la espera, fue que
+# una sesión atribuyó el rojo a la ventana equivocada y usó `--no-verify`
+# sobre un defecto propio. Así que al fallar, el hook DICE de quién es.
 set -e
+
+de_quien_es() {
+  echo ""
+  echo "──────────────────────────────────────────────────────────────"
+  echo "  pre-commit EN ROJO — antes de tocar nada, mira de quién es."
+  echo ""
+  echo "  EN TU COMMIT:"
+  git diff --cached --name-only | sed 's/^/      /'
+  ajenos=$(git diff --name-only; git ls-files --others --exclude-standard)
+  if [ -n "$ajenos" ]; then
+    echo ""
+    echo "  EN EL ÁRBOL PERO NO EN TU COMMIT (otra sesión, probablemente):"
+    printf '%s\n' "$ajenos" | sed 's/^/      /'
+    echo ""
+    echo "  Si el fallo sale de ahí NO es tuyo, y --no-verify no lo"
+    echo "  arregla: lo esconde. Espera a que esa sesión lo ponga en"
+    echo "  verde, o díselo. Corre el test que falla y LEE el mensaje"
+    echo "  antes de atribuirlo."
+  else
+    echo ""
+    echo "  El árbol no tiene nada de nadie más: el rojo es tuyo."
+  fi
+  echo "──────────────────────────────────────────────────────────────"
+}
+trap de_quien_es EXIT
+
 echo "pre-commit: tsc --noEmit"
 npx tsc --noEmit
 echo "pre-commit: vitest run --changed"
 npx vitest run --changed --passWithNoTests
+
+trap - EXIT

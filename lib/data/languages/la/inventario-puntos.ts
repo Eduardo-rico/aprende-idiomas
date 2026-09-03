@@ -406,7 +406,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'si', herencia: 'sin-equivalente', via: 'recepcion' },
     motivo: 'no hay «suena raro» que rescate al alumno: las dos lecturas son español impecable. Sólo el hueco en la glosa obliga a parsear',
     cubre: ['L1/GRAMÁTICA · CASO'], cita: 'dice **quién hace qué**, en 20 ítems donde el orden CONTRADICE al instinto español',
-    varia: 'qué palabra va primera y si el sujeto o el objeto es el animado — porque con «puella librum legit» el sentido común resuelve y el ítem no mide nada' }),
+    varia: 'el ORDEN (sólo los tres en que el objeto precede al sujeto: en «Pater fīlium amat» traducir en orden ya acierta y el ítem sale gratis), la declinación del par, la conjugación del verbo y el número. NO varía la animación: los dos tienen que ser animados, porque con «puella librum legit» el sentido común resuelve y el ítem no mide nada. Ofrecerla como dimensión era un error de este campo, y lo destapó el gate del formato al escribir el primer lote' }),
 
   P({ id: 'l3-nominativo', nombre: 'Nominativo: sujeto y atributo', bloque: 3, peldano: 'L1',
     descripcion: 'El sujeto y, con «sum» y verbos copulativos, también el atributo: «Caesar imperātor est» lleva los dos en nominativo.',
