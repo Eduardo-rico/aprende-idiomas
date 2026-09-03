@@ -95,10 +95,16 @@ const OBRAS = {
       'phi0620.phi001': { autor: 'Propercio', obra: 'Elegías', extra: true },
       'phi1221.phi007': { autor: 'Augusto', obra: 'Res gestae', extra: true },
       'tlg0031.tlg027': { autor: 'Jerónimo', obra: 'Vulgata (Apocalipsis)', extra: true },
-      // `phi0448.phi001` (24 frases) NO entra: el README de UD_Latin-Perseus
-      // no lo lista entre sus once obras, así que no hay rótulo que
-      // verificar, y 24 frases no sostienen una media. César se mide en
-      // PROIEL, con 1.328.
+      // AUTOCORRECCIÓN (misma sesión): esta entrada estaba EXCLUIDA porque
+      // el README de UD_Latin-Perseus no la lista entre sus once obras, y
+      // escribí que «no hay rótulo que verificar». Era un mal motivo: el
+      // método declarado de este fichero es verificar el rótulo LEYENDO el
+      // texto, no consultando una lista. Leído, es César sin duda —
+      // «Bellovacorum», «Haedui», «Q Titurium Sabinum legatum», «ab
+      // Iccio»: Bellum Gallicum libro 2. Entra, y con sus 24 frases a la
+      // vista, porque es el ÚNICO modo de comparar César y Cicerón dentro
+      // de un mismo treebank.
+      'phi0448.phi001': { autor: 'César', obra: 'De bello Gallico (Perseus)', peldano: 'L2', extra: true },
     },
   },
   grc: {
@@ -164,6 +170,10 @@ const EJE_DEL_SALTO = {
   la: {
     'Vulgata→De bello Gallico': ['fueraTop1000'],
     'De bello Gallico→In Catilinam': ['palabrasFrase', 'subordFrase'],
+    // Misma pareja, dentro de Perseus, con las 24 frases de César que hay
+    // allí. Se declara COMO SALTO APARTE en vez de sustituir el ancla en
+    // silencio, que es lo que salió mal con las cartas de Cicerón.
+    'De bello Gallico (Perseus)→In Catilinam': ['palabrasFrase', 'subordFrase'],
     'In Catilinam→Eneida': ['arcoAdj', 'fueraTop1000'],
     'Eneida→Historiae': ['fueraTop1000'],
   },
@@ -174,9 +184,54 @@ const EJE_DEL_SALTO = {
   },
 };
 
-/** Obras que aparecen en LOS DOS treebanks: el puente que mide el
- *  desplazamiento entre proyectos de anotación. */
-const PUENTE = { la: 'Cicerón', grc: 'Heródoto' };
+// ── LOS PUENTES, ordenados por calidad ───────────────────────────────
+//
+// Un puente estima cuánto de la diferencia entre dos treebanks es
+// ANOTACIÓN y no lengua. Pero no todos valen lo mismo, y la primera
+// versión usó el peor sin darse cuenta:
+//
+//   · MISMA OBRA en los dos proyectos → el puente limpio. Todo lo que
+//     difiera es anotación, punto.
+//   · mismo autor, obras distintas → mezcla anotación con REGISTRO.
+//   · mismo texto, libros distintos → mezcla anotación con el libro.
+//
+// Medido en latín, y la diferencia entre puentes es grande:
+//   Cicerón (De officiis vs In Catilinam, obras distintas): 44 % · 72 % · 11 %
+//   Jerónimo (Evangelios vs Apocalipsis, libros distintos): 25 % · 14 % · 33 %
+//   César   (Bellum Gallicum vs Bellum Gallicum, MISMA OBRA): ver abajo
+//
+// El de César es el bueno, y sólo existe porque se rescataron las 24
+// frases de `phi0448` que yo mismo había excluido por no venir en el
+// README. El script usa el de mejor calidad disponible y los imprime
+// todos, porque que dos puentes discrepen ES un dato.
+const PUENTES = {
+  la: [
+    { autor: 'César', calidad: 'MISMA OBRA' },
+    { autor: 'Jerónimo', calidad: 'mismo texto, libros distintos' },
+    { autor: 'Cicerón', calidad: 'mismo autor, obras distintas' },
+  ],
+  grc: [{ autor: 'Heródoto', calidad: 'MISMA OBRA' }],
+};
+
+/** Parejas que NO están en la cadena declarada pero conviene medir, cada
+ *  una con su motivo. Se imprimen aparte y NO cambian el veredicto: la
+ *  cadena de anclas es una decisión declarada y no se toca con lo que
+ *  salga aquí. */
+const COMPROBACIONES_EXTRA = {
+  la: [
+    ['De bello Gallico (Perseus)', 'In Catilinam', ['palabrasFrase', 'subordFrase'],
+     'el mismo salto L2→L3 DENTRO de Perseus, con las 24 frases de César que hay allí'],
+    ['Eneida (ampliada)', 'Historiae (ampliada)', ['fueraTop1000Formas'],
+     'L4→L5 con la muestra ampliada desde Wikisource: 30.759 y 52.249 formas frente a 645 y 745'],
+    ['Eneida', 'Eneida (ampliada)', ['fueraTop1000Formas'],
+     'control: la MISMA obra medida en el treebank y ampliada. Si difieren mucho, la ampliación no es comparable'],
+    ['Historiae', 'Historiae (ampliada)', ['fueraTop1000Formas'],
+     'control: ídem para Tácito'],
+    ['Eneida', 'Historiae', ['palabrasFrase', 'subordFrase', 'arcoAdj'],
+     'L4→L5 por el eje SINTÁCTICO, dentro de Perseus (sin puente de por medio): la «brevitas» de Tácito es una propiedad de la sintaxis, no del léxico'],
+  ],
+  grc: [],
+};
 
 const SUBORD = new Set(['advcl', 'acl', 'ccomp', 'xcomp', 'csubj']);
 
@@ -198,7 +253,7 @@ function* frases(file) {
     const c = linea.split('\t');
     if (c.length < 8) continue;
     if (!/^\d+$/.test(c[0])) continue;   // rangos «1-2» y vacíos «1.1»
-    toks.push({ id: +c[0], lema: c[2], upos: c[3], rasgos: c[5], head: +c[6], rel: c[7].split(':')[0] });
+    toks.push({ id: +c[0], forma: c[1], lema: c[2], upos: c[3], rasgos: c[5], head: +c[6], rel: c[7].split(':')[0] });
   }
   if (toks.length) yield { toks, meta };
 }
@@ -215,6 +270,7 @@ function claveObra(meta, proyecto) {
 function acumular(lang) {
   const acc = new Map();          // clave → contadores
   const lemas = new Map();        // lema → frecuencia global de la lengua
+  const formasGlob = new Map();   // FORMA canónica → frecuencia global
   for (const proyecto of ['proiel', 'perseus']) {
     const tabla = OBRAS[lang][proyecto];
     for (const parte of ['train', 'dev', 'test']) {
@@ -225,7 +281,7 @@ function acumular(lang) {
         const info = tabla[clave];
         if (!info) continue;
         const id = `${proyecto}:${info.obra}`;
-        if (!acc.has(id)) acc.set(id, { ...info, proyecto, frases: 0, palabras: 0, subord: 0, amod: 0, amodDist: 0, finitos: 0, subj: 0, lemas: new Map(), distancias: [], fueraTok: [], largos: [], subords: [] });
+        if (!acc.has(id)) acc.set(id, { ...info, proyecto, frases: 0, palabras: 0, subord: 0, amod: 0, amodDist: 0, finitos: 0, subj: 0, lemas: new Map(), formas: new Map(), distancias: [], fueraTok: [], fueraForma: [], largos: [], subords: [] });
         const a = acc.get(id);
         const porId = new Map(toks.map((t) => [t.id, t]));
         const palabras = toks.filter((t) => t.upos !== 'PUNCT');
@@ -236,6 +292,9 @@ function acumular(lang) {
         for (const t of palabras) {
           lemas.set(t.lema, (lemas.get(t.lema) ?? 0) + 1);
           a.lemas.set(t.lema, (a.lemas.get(t.lema) ?? 0) + 1);
+          const fm = canonicalLa(t.forma);
+          formasGlob.set(fm, (formasGlob.get(fm) ?? 0) + 1);
+          a.formas.set(fm, (a.formas.get(fm) ?? 0) + 1);
           if (SUBORD.has(t.rel)) { a.subord += 1; subEsta += 1; }
           if (t.rel === 'amod' && porId.has(t.head)) { a.amod += 1; const d = Math.abs(t.id - t.head); a.amodDist += d; a.distancias.push(d); }
           if (/VerbForm=Fin/.test(t.rasgos)) { a.finitos += 1; if (/Mood=Sub/.test(t.rasgos)) a.subj += 1; }
@@ -244,13 +303,38 @@ function acumular(lang) {
       }
     }
   }
-  return { acc, lemas };
+  return { acc, lemas, formasGlob };
 }
 
 function medir(lang) {
-  const { acc, lemas } = acumular(lang);
+  const { acc, lemas, formasGlob } = acumular(lang);
+  // NOTA DE ORDEN: `top1000f` sale de `formasGlob`, que sólo acumula los
+  // TREEBANKS — las ampliadas se añaden a `acc` después y no entran en la
+  // lista de referencia. Si entraran, una obra ampliada se estaría
+  // midiendo en parte contra sí misma: 52.000 palabras de Tácito moverían
+  // el top-1000 hacia Tácito y bajarían su propio «% fuera».
   if (acc.size === 0) throw new Error(`sin datos para ${lang}: ¿están los .conllu en ${CACHE}?`);
   const top1000 = new Set([...lemas.entries()].sort((a, b) => b[1] - a[1]).slice(0, 1000).map(([l]) => l));
+  const top1000f = new Set([...formasGlob.entries()].sort((a, b) => b[1] - a[1]).slice(0, 1000).map(([l]) => l));
+
+  // ── Anclas AMPLIADAS con texto de Wikisource ──
+  //
+  // Las trae `traer-anclas-antiguas.mjs` y entran con `proyecto:
+  // 'wikisource'` bien a la vista, porque NO son datos del treebank: no
+  // llevan lema, ni análisis sintáctico, ni por tanto ninguna de las
+  // otras tres métricas. Sólo el eje léxico POR FORMAS, y contra la misma
+  // lista top-1000 que todas las demás obras — que es lo que las hace
+  // comparables.
+  const extraFile = path.join(CACHE, `extra-${lang}.json`);
+  const ampliadas = fs.existsSync(extraFile) ? JSON.parse(fs.readFileSync(extraFile, 'utf8')) : [];
+  for (const e of ampliadas) {
+    const formas = new Map(Object.entries(e.cuenta).map(([k, v]) => [canonicalLa(k), v]));
+    acc.set(`wikisource:${e.obra}`, {
+      autor: e.autor, obra: `${e.obra} (ampliada)`, peldano: e.peldano, extra: true, proyecto: 'wikisource',
+      frases: 0, palabras: e.total, subord: 0, amod: 0, amodDist: 0, finitos: 0, subj: 0,
+      lemas: new Map(), formas, distancias: [], fueraTok: [], fueraForma: [], largos: [], subords: [],
+    });
+  }
 
   const filas = [...acc.values()].map((a) => {
     let fuera = 0, total = 0;
@@ -262,10 +346,20 @@ function medir(lang) {
       for (let i = 0; i < n; i++) muestraFuera.push(100 * esFuera);
     }
     a.fueraTok = muestraFuera;
+    let fueraF = 0, totalF = 0;
+    const muestraF = [];
+    for (const [forma, n] of a.formas) {
+      totalF += n;
+      const es = top1000f.has(forma) ? 0 : 1;
+      if (es) fueraF += n;
+      for (let i = 0; i < n; i++) muestraF.push(100 * es);
+    }
+    a.fueraForma = muestraF;
     return {
+      fueraTop1000Formas: (100 * fueraF) / totalF,
       ...a,
-      palabrasFrase: a.palabras / a.frases,
-      subordFrase: a.subord / a.frases,
+      palabrasFrase: a.frases ? a.palabras / a.frases : NaN,
+      subordFrase: a.frases ? a.subord / a.frases : NaN,
       arcoAdj: a.amod ? a.amodDist / a.amod : NaN,
       fueraTop1000: (100 * fuera) / total,
       subjPct: a.finitos ? (100 * a.subj) / a.finitos : NaN,
@@ -286,7 +380,22 @@ const METRICAS = [
   ['subordFrase', 'subord/frase', 2, 'subords'],
   ['arcoAdj', 'arco amod', 2, 'distancias'],
   ['fueraTop1000', '% fuera top1000', 1, 'fueraTok'],
+  // El MISMO eje léxico calculado sobre FORMAS canónicas en vez de lemas.
+  // Existe para poder ampliar un ancla con texto de Wikisource, que no
+  // viene lematizado. Se VALIDA contra la versión por lemas sobre las
+  // mismas obras: si no reproduce su orden, no sirve y no se usa.
+  ['fueraTop1000Formas', '% fuera top1000 (formas)', 1, 'fueraForma'],
 ];
+
+/** La canonicalización del latín que el Paso 0 §3.1 decidió, en su primer
+ *  uso real: NFC, minúsculas y el mácrón FUERA. Los treebanks no traen
+ *  mácrons (medido: 0 de 227.301 tokens) y Wikisource sí en las piezas
+ *  macronizadas, así que sin esto `Rōma` y `Roma` serían dos formas
+ *  distintas y la cuenta léxica saldría inflada justo en las obras que se
+ *  quiere ampliar. */
+function canonicalLa(s) {
+  return s.normalize('NFD').replace(/\u0304/g, '').normalize('NFC').toLowerCase();
+}
 
 /** Desplazamiento máximo del PUENTE que se le tolera a una métrica para
  *  que pueda arbitrar ENTRE treebanks.
@@ -360,21 +469,29 @@ function main() {
   }
 
   // ── El puente entre proyectos de anotación ──
-  const puente = filas.filter((f) => f.autor === PUENTE[LANG]);
-  const proyectos = new Set(puente.map((f) => f.proyecto));
   const desplazamiento = {};
-  console.log(`\nPUENTE (${PUENTE[LANG]}, en los dos treebanks) — si el desplazamiento es grande, comparar ENTRE proyectos no vale:`);
-  if (proyectos.size < 2) {
-    console.log(`  ⚠ ${PUENTE[LANG]} sólo aparece en ${[...proyectos].join('/') || 'ninguno'}: el desplazamiento NO se puede estimar.`);
-  } else {
-    for (const [k, nombre, d] of METRICAS) {
-      const por = Object.fromEntries(puente.map((f) => [f.proyecto, f[k]]));
+  console.log(`\nPUENTES entre proyectos de anotación (sobre el MISMO autor). El desplazamiento que midan es anotación, no lengua:`);
+  let puente = null, calidadPuente = null;
+  for (const { autor, calidad } of PUENTES[LANG]) {
+    const f = filas.filter((x) => x.autor === autor);
+    if (new Set(f.map((x) => x.proyecto)).size < 2) { console.log(`  ${autor} (${calidad}): sólo en un treebank, no sirve de puente`); continue; }
+    const linea = METRICAS.map(([k, nombre, d]) => {
+      const por = Object.fromEntries(f.map((x) => [x.proyecto, x[k]]));
       const rel = (100 * Math.abs(por.proiel - por.perseus)) / ((por.proiel + por.perseus) / 2);
-      desplazamiento[k] = rel;
-      console.log(`  ${nombre.padEnd(16)} proiel ${por.proiel.toFixed(d).padStart(7)} · perseus ${por.perseus.toFixed(d).padStart(7)} · desplazamiento ${rel.toFixed(0)} %`);
-    }
+      return `${nombre} ${rel.toFixed(0)} %`;
+    }).join(' · ');
+    console.log(`  ${autor.padEnd(10)} (${calidad}): ${linea}`);
+    if (!puente) { puente = f; calidadPuente = `${autor} — ${calidad}`; }
   }
-
+  if (puente) {
+    for (const [k] of METRICAS) {
+      const por = Object.fromEntries(puente.map((x) => [x.proyecto, x[k]]));
+      desplazamiento[k] = (100 * Math.abs(por.proiel - por.perseus)) / ((por.proiel + por.perseus) / 2);
+    }
+    console.log(`  ⇒ se usa el de mejor calidad: ${calidadPuente}`);
+  } else {
+    console.log('  ⚠ ningún puente disponible: el desplazamiento NO se puede estimar y nada se descalifica por él.');
+  }
   // ── EL GATE, salto a salto y por el eje que cada peldaño declara ──
   console.log(`\nORDEN DECLARADO (antes de medir): ${anclas.join(' < ')}`);
   const porObra = new Map();
@@ -457,6 +574,22 @@ function main() {
     if (refutado) { refutados.push(`${a} → ${b}`); console.log('      ⇒ REFUTADO'); }
     else if (confirmado) console.log('      ⇒ CONFIRMADO');
     else { flojos.push(`${a} → ${b}${arbitrado ? '' : ' (sin árbitro: eje descalificado y anclas en treebanks distintos)'}`); console.log(`      ⇒ NO SEPARABLE con esta muestra`); }
+  }
+
+  // ── Comprobaciones declaradas APARTE de la cadena ──
+  const extras = COMPROBACIONES_EXTRA[LANG] ?? [];
+  if (extras.length) {
+    console.log('\nCOMPROBACIONES EXTRA (no cambian el veredicto: la cadena de anclas es una decisión declarada):');
+    for (const [a, b, ejes, motivo] of extras) {
+      if (!porObra.has(a) || !porObra.has(b)) { console.log(`  ${a} → ${b}: sin datos`); continue; }
+      const [x, y, mismoProy] = emparejar(a, b);
+      console.log(`\n  ${a} → ${b}   [${mismoProy ? `dentro de ${x.proyecto}` : `${x.proyecto} vs ${y.proyecto}`}]  — ${motivo}`);
+      for (const k of ejes) {
+        const v = juzgar(x, y, k);
+        const marca = v.estado === 'ORDENADO' ? '✔' : v.estado === 'INDISTINGUIBLE' ? '~' : '✘';
+        console.log(`      ${marca} ${nombreDe[k].padEnd(16)} ${v.txt}   ${v.estado}`);
+      }
+    }
   }
 
   if (refutados.length) {
