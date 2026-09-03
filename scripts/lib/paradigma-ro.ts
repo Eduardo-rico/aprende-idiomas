@@ -532,6 +532,10 @@ export function gerDerivable(v: LemaVerbal): boolean {
 export function gerunziuPorRegla(v: LemaVerbal): string {
   const tema = temaInfinitivo(v.inf);
   const c = conjugacionDe(v.inf);
+  // La MISMA rama que `gerunziu()`. Si se desincronizan, `gerAlterna`
+  // empieza a llamar «alternante» a lo que la regla sí acierta — que es
+  // exactamente el fallo que este par de funciones existe para evitar.
+  if (/[aeiouăâî]i$/u.test(tema)) return tema.slice(0, -1) + 'ind';
   return tema + (c === 'IV' || /i$/.test(tema) ? 'ind' : 'ând');
 }
 
@@ -558,6 +562,21 @@ export function gerunziu(v: LemaVerbal): string | null {
   // regla incompleta sustituyéndola no es corregirla. La condición es una
   // disyunción, y las dos ramas están atestadas por un caso del lexicón.
   const c = conjugacionDe(v.inf);
+  // Y LA TERCERA MITAD, que salió al meter `a tăia` (lote 18). Cuando el
+  // tema acaba en `i`, lo que decide es **qué hay DELANTE de esa i**:
+  //   · consonante ⇒ la i se conserva: apropi + ind = «apropiind»,
+  //     speri + ind = «speriind», ști + ind = «știind», scri + ind =
+  //     «scriind».
+  //   · vocal ⇒ la i CAE: tăi → «tăind», îndoi → «îndoind».
+  // Sin esta rama la regla producía «*tăiind» y «*îndoiind». Medido sobre
+  // los seis verbos en -ia/-oia antes de escribirla, y no al revés.
+  //
+  // Y el segundo camino falló otra vez, medido: Hunspell **rechaza**
+  // `tăiind` pero **acepta `îndoiind`**, que no existe. Es el segundo
+  // agujero suyo que se documenta esta noche, después de `vedă`. Un sello
+  // que contesta «¿existe esta cadena?» no puede sostener «¿es la forma de
+  // este lema?», y ya van dos veces que se ve con un número delante.
+  if (/[aeiouăâî]i$/u.test(tema)) return formaValida(tema.slice(0, -1) + 'ind');
   // Se concatena entero, sin fundir las dos íes: ști + ind da «știind», no
   // «*ștind» — que es lo que haría `pegar`, escrito para el presente, y
   // que aquí sería la regla copiada aplicada donde no toca.

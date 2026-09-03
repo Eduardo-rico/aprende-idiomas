@@ -127,6 +127,15 @@ export const VERBOS_A1: LemaVerbal[] = [
   { inf: 'a dansa', sg1: 'dansez', sg3: 'dansează', gloss: 'bailar' },
   { inf: 'a desena', sg1: 'desenez', sg3: 'desenează', gloss: 'dibujar' },
   { inf: 'a fuma', sg1: 'fumez', sg3: 'fumează', gloss: 'fumar' },
+  // `a tăia` entra por el lote 18: es el ÚNICO ítem que demuestra la regla
+  // del gerunziu CONTRA el calco español (el español «cortando» empuja a
+  // -ând y la respuesta es -ind). Va con el presente entero guardado
+  // porque la 1.ª y 2.ª del plural no salen de la regla de la 1.ª
+  // conjugación: `tăiem`/`tăiați`, no *tăiăm/*tăiați sobre el tema. El
+  // gerunziu, en cambio, SÍ se deriva desde que la regla tiene su tercera
+  // rama (tema en i tras vocal ⇒ la i cae): tăi → tăind.
+  { inf: 'a tăia', sg1: 'tai', sg3: 'taie', sg2: 'tai', participio: 'tăiat', impf: 'tăiam', conj3: 'taie',
+    irregular: { eu: 'tai', tu: 'tai', el: 'taie', noi: 'tăiem', voi: 'tăiați', ei: 'taie' }, gloss: 'cortar' },
   // 2.ª conjugación (-ea)
   { inf: 'a vedea', sg1: 'văd', sg3: 'vede', sg2: 'vezi', participio: 'văzut', conj3: 'vadă', ger: 'văzând', gloss: 'ver' },
   { inf: 'a putea', sg1: 'pot', sg3: 'poate', participio: 'putut', conj3: 'poată', ger: 'putând', gloss: 'poder' },

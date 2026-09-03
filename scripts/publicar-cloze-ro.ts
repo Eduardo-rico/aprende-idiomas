@@ -26,8 +26,9 @@ import { ITEMS as A1D, verificar as verificarA1D } from './lotes/cloze-ro-a1d';
 import { ITEMS as A2F, verificar as verificarA2F } from './lotes/cloze-ro-a2f';
 import { ITEMS as A1E, verificar as verificarA1E } from './lotes/cloze-ro-a1e';
 import { ITEMS as B1, verificar as verificarB1 } from './lotes/cloze-ro-b1';
+import { ITEMS as B1B, verificar as verificarB1B } from './lotes/cloze-ro-b1b';
 
-const LOTES: Record<string, { items: ClozeRo[]; verificar: (xs: ClozeRo[]) => string[] }> = { a1: { items: A1, verificar: verificarA1 }, a2: { items: A2, verificar: verificarA2 }, a2b: { items: A2B, verificar: verificarA2B }, a2c: { items: A2C, verificar: verificarA2C }, a2d: { items: A2D, verificar: verificarA2D }, a2e: { items: A2E, verificar: verificarA2E }, a1c: { items: A1C, verificar: verificarA1C }, a1d: { items: A1D, verificar: verificarA1D }, a2f: { items: A2F, verificar: verificarA2F }, a1e: { items: A1E, verificar: verificarA1E }, b1: { items: B1, verificar: verificarB1 } };
+const LOTES: Record<string, { items: ClozeRo[]; verificar: (xs: ClozeRo[]) => string[] }> = { a1: { items: A1, verificar: verificarA1 }, a2: { items: A2, verificar: verificarA2 }, a2b: { items: A2B, verificar: verificarA2B }, a2c: { items: A2C, verificar: verificarA2C }, a2d: { items: A2D, verificar: verificarA2D }, a2e: { items: A2E, verificar: verificarA2E }, a1c: { items: A1C, verificar: verificarA1C }, a1d: { items: A1D, verificar: verificarA1D }, a2f: { items: A2F, verificar: verificarA2F }, a1e: { items: A1E, verificar: verificarA1E }, b1: { items: B1, verificar: verificarB1 }, b1b: { items: B1B, verificar: verificarB1B } };
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
 const lote = arg('--lote') ?? '';
 const LOTE = LOTES[lote];
