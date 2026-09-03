@@ -14,7 +14,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   verificar, verificarLote, correr, edicion, piezasInvariantes,
-  COPIAR, EDICION_MODAL, type ItemTransRo, type JuiciosLote,
+  COPIAR, COPIAR_LA_FRASE, EDICION_MODAL, type ItemTransRo, type JuiciosLote,
 } from '../../scripts/lib/transformacion-ro';
 
 const JUICIOS: JuiciosLote = {
@@ -186,6 +186,28 @@ describe('transformación RO · los gates DE LOTE, que son la razón de esta má
     // `r3-negacion-antepuesta`, donde la regla no tiene contexto negativo.
     const declarado = { ...JUICIOS, frontera: 'SIN FRONTERA: en rumano no hay imperativo afirmativo que admita el pronombre sujeto, así que la regla no tiene contexto donde no se aplique.' };
     expect(verificarLote(sinFrontera, { juicios: declarado }).filter((s) => /FRONTERA/.test(s))).toEqual([]);
+  });
+
+  // LA ESTRATEGIA QUE EL GATE NO VEÍA. `copiar-el-foco` compara contra el
+  // NÚCLEO, o sea una palabra; la que de verdad amenaza produce la FRASE
+  // ENTERA. Sin el campo `objetivo` no se puede escribir, y sin poder
+  // escribirla no se puede ejecutar.
+  it('una estrategia con objetivo «respuesta» se compara contra la frase entera', () => {
+    const copiones = BASE.map((x) => ({ ...x, r: x.s }));
+    // Ojo: con `r === s` salta además el gate de «respuesta idéntica a la
+    // fuente», así que aquí se mira SÓLO el conteo de la estrategia.
+    expect(correr(COPIAR_LA_FRASE, copiones).aciertos).toBe(4);
+    expect(correr(COPIAR_LA_FRASE, BASE).aciertos).toBe(0);
+  });
+
+  it('y usa la comparación DEL PRODUCTO: el punto final donde la clave lleva admiración', () => {
+    // Si la máquina comparara con una regla propia más estricta que la
+    // tarjeta, mediría una estrategia que el alumno no tiene — y al revés,
+    // dejaría pasar la que sí tiene. `Tu mergi acasă acum.` produce
+    // `Mergi acasă acum.`, que la tarjeta ACEPTA contra `Mergi acasă acum!`.
+    const sinPronombre = { nombre: 'sin-pronombre', objetivo: 'respuesta' as const, aplicar: (x: { s: string }) => x.s.replace(/^Tu /, '') };
+    expect(correr(sinPronombre, BASE).aciertos).toBe(1);
+    expect(correr(sinPronombre, BASE).sobre).toEqual(['Tu mergi acasă acum.']);
   });
 
   it('una estrategia PROPIA del punto se corre igual que las de serie', () => {

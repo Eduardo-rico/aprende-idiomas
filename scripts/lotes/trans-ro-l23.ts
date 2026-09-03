@@ -2,6 +2,7 @@
 // transformación en rumano, con UN solo punto: `r3-imperativo-afirmativo`.
 //
 //   npx tsx scripts/lotes/trans-ro-l23.ts            # preflight + gates
+//   npx tsx scripts/lotes/trans-ro-l23.ts --asigna   # a qué punto cuenta cada ítem
 //
 // Se estrena con un punto y no con tres a propósito: estrenar formato y
 // repartir cobertura a la vez es como se quema un lote entero. Si el
@@ -52,13 +53,26 @@
 //       aquí gotea: `a vedea` → `vezi!` y `a auzi` → `auzi!` son
 //       transitivos con forma de 2.ª sg, y van como excepción listada.
 //
-// ══ LAS DOS RESTRICCIONES DURAS DE LA FUENTE, Y VAN EN GATE ══════════
+// ══ LA RESTRICCIÓN DE LA FUENTE, Y LA MITAD QUE LE FALTABA ═══════════
 //
-// **1 · La fuente va SIEMPRE en 2.ª persona de presente indicativo.**
-// Nunca en 3.ª: por el piso (B), el imperativo de ~22 de los ~40 verbos
-// del lexicón es IDÉNTICO a la 3.ª sg, así que «Maria citește cartea» →
-// «Citește cartea!» se contesta copiando, y el lote entero saldría verde
-// ítem por ítem. Es el defecto que ningún gate por ítem puede ver.
+// La v0 decía: **la fuente va SIEMPRE en 2.ª persona de presente
+// indicativo**, porque en 3.ª el piso (B) regala la respuesta —el
+// imperativo de ~22 de los ~40 verbos del lexicón es IDÉNTICO a la 3.ª
+// sg, así que «Maria citește cartea» → «Citește cartea!» se contesta
+// copiando—. Es cierto **para los pisos A y B**, y **falso para el (C)**,
+// que se define exactamente por «imperativo = 2.ª sg»: aplicada en
+// bloque, la restricción creaba la fuga espejo **justo en los tres ítems
+// que el lote considera su núcleo**. Es §4.13 otra vez, una regla que
+// acierta en los casos que tenía delante y le falta una mitad.
+//
+// **La regla entera es una línea: la fuente va en la persona que NO
+// coincide con el imperativo.** Pisos A y B → 2.ª sg. Piso C → 3.ª sg.
+//
+// Y el daño no era teórico, era sobre el FSRS: con la fuente en 2.ª, el
+// ítem del piso (C) **no puede distinguir** al que sabe que `a sta` no da
+// `*stă!` del que copió sin leer el verbo. Los dos aciertan, los dos
+// marcan «fácil», y el intervalo se dispara en la cabeza del que no sabe.
+// Un ítem que sólo informa cuando falla es medio ítem.
 //
 // **2 · Prohibido `să` + conjuntivo en la fuente.** El marco obvio
 // —«Trebuie să vii mâine»— contiene LITERALMENTE la respuesta calcada:
@@ -77,53 +91,73 @@
 // rechazarlo en silencio sería marcar como mala una forma atestada sin
 // fuente, que es la regla §0 incumplida por omisión.
 import { verificar, informe, type ItemTransRo, type Opciones, type Estrategia, norm } from '../lib/transformacion-ro';
+import { informeAsigna } from '../lib/asigna-ro';
 import { VERBOS_A1 } from '../../lib/data/languages/ro/lexicon-a1';
 import { presente } from '../lib/paradigma-ro';
 
 const IMP = 'r3-imperativo-afirmativo';
 /** La consigna, escrita UNA vez: si se copia por ítem, se desincroniza en
- *  la copia que nadie actualiza. Nombra la CASILLA («en imperativo»), que
- *  el hispanohablante ya tiene y que en rumano designa el mismo paradigma,
- *  y ata el LEMA («esa misma orden») — sin eso `Mergi!` compite con
- *  `Du-te!`, `Pleacă!` y `Hai!`, que son órdenes correctas del mismo
- *  contenido. Lo que NO hace es nombrar `să`: decirle al alumno que
- *  existe una alternativa con `să` y que la evite es enseñarle el calco
- *  dentro del enunciado. */
-const ORDEN_SG = 'Dale esa misma orden a tu amigo, en imperativo, tuteándolo.';
-const ORDEN_PL = 'Dales esa misma orden a los dos, en imperativo.';
+ *  la copia que nadie actualiza. **Cada cláusula cierra una salida
+ *  correcta que la tarjeta suspendería**, y ninguna nombra una palabra
+ *  rumana:
+ *
+ *   · «esa misma orden» ata la ILOCUCIÓN, y no basta — fue el error de la
+ *     v0. «usa el mismo verbo» ata el LEXEMA, y sin eso `Du-te la piață!`
+ *     y `Hai la piață!` (`hai la` sale 65 veces en el corpus, `hai cu
+ *     mine` 13) son las formas NATURALES de esas órdenes: un alumno que
+ *     las escribe está escribiendo mejor rumano que la clave.
+ *   · «empieza la frase por él» cierra `Să vii cu mine!` **por la forma**,
+ *     no por la etiqueta. La v0 decía «en imperativo» y confiaba en que la
+ *     etiqueta excluyera el conjuntivo: no lo hace, porque en español el
+ *     imperativo es funcional antes que morfológico —el negativo, el de
+ *     usted y el de 1.ª pl. SON subjuntivos («no vengas», «venga usted»)—
+ *     y la propia gramática rumana trata `să` + conjuntivo como forma
+ *     supletiva del paradigma imperativo. Y no es un purismo: `să` +
+ *     conjuntivo es REGULAR sobre los nueve verbos (`să stai`, `să
+ *     mergi`, `să faci`…), así que aceptarlo abriría una estrategia que
+ *     acierta 9 de 9 **sin aprender un solo imperativo**.
+ *   · «no pongas pronombre» cierra `Stai tu lângă ușă!` y `Tu vino cu
+ *     mine!`, que son rumano correcto y contrastivo (ver `juicios`). */
+const ORDEN_SG = 'Dale esa misma orden a tu amigo, tuteándolo: usa el mismo verbo, empieza la frase por él y no pongas pronombre.';
+const ORDEN_PL = 'Dales esa misma orden a los dos: usa el mismo verbo, empieza la frase por él y no pongas pronombre.';
 
 export const ITEMS: ItemTransRo[] = [
-  // ══ PISO (C) · LOS TRES DONDE EL CALCO CASTELLANO FALLA ═══════════
-  // La respuesta correcta es no tocar el verbo. No son una concesión: son
-  // los únicos ítems del lote que un hispanohablante no puede acertar
-  // desde el español, porque el español no forma nunca el imperativo con
-  // la 2.ª sg del presente.
+  // ══ PISO (C) · DONDE EL CALCO CASTELLANO FALLA, Y LA FUENTE VA EN 3.ª
+  // El imperativo español de 2.ª sg ES formalmente la 3.ª sg del presente
+  // (*lee* = «él lee»), así que el piso (B) del rumano se acierta
+  // traduciendo. El español NUNCA forma el imperativo con la 2.ª sg del
+  // presente, luego aquí —y sólo aquí— la transferencia produce `*stă!`,
+  // `*merge!`, `*doarme!`. La fuente va en 3.ª persona porque en este
+  // piso el imperativo es la 2.ª: puesta en 2.ª, el ítem se contestaría
+  // copiando y no distinguiría al que sabe del que no leyó el verbo.
   //
-  // `a sta` es el diamante: es de 1.ª conjugación —la clase donde TODO lo
-  // demás toma la 3.ª sg— y toma `stai!`, no `*stă!`. Es ítem de copia y
-  // de sobreaplicación a la vez.
+  // `a sta` es el diamante: 1.ª conjugación —la clase donde TODO lo demás
+  // toma la 3.ª sg— y toma `stai!`, no `*stă!`.
   { p: IMP, pasada: 1, espejoEs: false, transparenteLatin: false, sobreaplicacion: true,
-    s: 'Tu stai lângă ușă.', instruccion: ORDEN_SG, r: 'Stai lângă ușă!',
-    foco: 'stai', nucleo: 'stai' },
+    s: 'El stă lângă ușă.', instruccion: ORDEN_SG, r: 'Stai lângă ușă!',
+    foco: 'stă', nucleo: 'stai' },
   { p: IMP, pasada: 1, espejoEs: false, transparenteLatin: false,
-    s: 'Tu mergi la piață.', instruccion: ORDEN_SG, r: 'Mergi la piață!',
-    foco: 'mergi', nucleo: 'mergi' },
+    s: 'Ea merge la piață.', instruccion: ORDEN_SG, r: 'Mergi la piață!',
+    foco: 'merge', nucleo: 'mergi' },
   { p: IMP, pasada: 1, espejoEs: false, transparenteLatin: false,
-    s: 'Tu dormi în camera ta.', instruccion: ORDEN_SG, r: 'Dormi în camera ta!',
-    foco: 'dormi', nucleo: 'dormi' },
+    s: 'El doarme la hotel.', instruccion: ORDEN_SG, r: 'Dormi la hotel!',
+    foco: 'doarme', nucleo: 'dormi' },
 
   // ══ LA FRONTERA DEL PISO (C): el intransitivo que SÍ cambia ═══════
   // `a vorbi` es intransitivo y aun así toma la 3.ª sg, porque lleva
-  // sufijo `-esc` y la clase manda antes que la sintaxis. Es la
-  // sobreaplicación de la regla falsa que estuvo a punto de publicarse.
+  // sufijo `-esc` y la CLASE manda antes que la sintaxis. Es la
+  // sobreaplicación de la regla que estuvo a punto de publicarse.
+  // `încet` es aquí «en voz baja» (DEX s.v. *încet*, acepción 2): los 8
+  // casos del corpus son todos ésa, acotaciones de Caragiale. Como orden
+  // vale en las dos acepciones y produce la misma cadena.
   { p: IMP, pasada: 1, espejoEs: true, transparenteLatin: true, sobreaplicacion: true,
     s: 'Tu vorbești încet.', instruccion: ORDEN_SG, r: 'Vorbește încet!',
     foco: 'vorbești', nucleo: 'vorbește' },
 
   // ══ PISO (B) · el ancla de la clase ═══════════════════════════════
   // Flojo a propósito y contado como tal: se acierta traduciendo, porque
-  // «lee» español ES la 3.ª sg. Está para que la clase quede representada,
-  // no para medir. Uno basta.
+  // «lee» español ES la 3.ª sg. Está para que la clase quede
+  // representada, no para medir. Uno basta.
   { p: IMP, pasada: 1, espejoEs: true, transparenteLatin: true,
     s: 'Tu citești cartea.', instruccion: ORDEN_SG, r: 'Citește cartea!',
     foco: 'citești', nucleo: 'citește' },
@@ -150,11 +184,28 @@ export const ITEMS: ItemTransRo[] = [
   // paradigma —`veniți`, `faceți`, `aveți`— con UNA excepción en la
   // lengua estándar: `a fi`, donde `sunteți` da `fiți!` (DOOM3 2021 s.v.
   // *a fi*; dexonline, paradigma de *a fi*; corpus: `fiți` 74, `fiiți` 0).
-  // O sea que el plural es donde muere toda la irregularidad, y por eso
-  // sólo entra la casilla que NO es copia. Un `veniți` no mediría nada.
+  //
+  // El predicativo es `cuminți` y no `atenți`: el marco `fii/fiți` + adj.
+  // está vivo (`Fii cuminte` 26 en el corpus) mientras que la declarativa
+  // `sunteți atenți` da CERO —`atent` predicativo plural vive en el
+  // negativo o en el imperativo—, o sea que la fuente sonaba a ejercicio.
+  // El adjetivo se copia de la fuente y eso es bueno aquí: fija el género
+  // y hace la respuesta única, sin regalar `fiți`, que es lo que se pide.
   { p: IMP, pasada: 1, espejoEs: false, transparenteLatin: false, sobreaplicacion: true,
-    s: 'Voi sunteți atenți.', instruccion: ORDEN_PL, r: 'Fiți atenți!',
+    s: 'Voi sunteți cuminți.', instruccion: ORDEN_PL, r: 'Fiți cuminți!',
     foco: 'sunteți', nucleo: 'fiți' },
+
+  // ══ EL ÍTEM DE COPIA LEGÍTIMO, y es el noveno ═════════════════════
+  // Con los tres del piso (C) en 3.ª persona, copiar deja de acertar y el
+  // lote quedaría enseñando «la forma SIEMPRE cambia», que es la otra
+  // estrategia gratis. Éste la cierra sin mentir: en el plural, copiar
+  // **ES la regla** —el imperativo plural es el presente en todo el
+  // paradigma salvo `a fi`—, así que su acierto por copia no es un falso
+  // positivo. Es exactamente el caso negativo que pide la frontera del
+  // ítem anterior, y por eso van en pareja.
+  { p: IMP, pasada: 1, espejoEs: true, transparenteLatin: false,
+    s: 'Voi veniți acum.', instruccion: ORDEN_PL, r: 'Veniți acum!',
+    foco: 'veniți', nucleo: 'veniți' },
 ];
 
 /** LA ESTRATEGIA PROPIA DEL PUNTO, Y LA RAZÓN DE SER DEL LOTE.
@@ -168,7 +219,12 @@ export const ITEMS: ItemTransRo[] = [
 export const TERCERA_SINGULAR: Estrategia = {
   nombre: 'poner-la-3ª-singular-del-presente (la regla del español)',
   aplicar(x) {
-    const v = VERBOS_A1.find((l) => norm(presente(l, 'tu') ?? '') === norm(x.foco));
+    // La búsqueda mira las TRES personas que pueden aparecer en una
+    // fuente de este lote (`tu`, `el`, `voi`), no sólo la 2.ª: si mirara
+    // sólo `tu`, los tres ítems con fuente en 3.ª devolverían null y la
+    // estrategia saldría artificialmente baja — un gate que no puede
+    // disparar sobre medio lote es el §4.18.
+    const v = VERBOS_A1.find((l) => (['tu', 'el', 'voi'] as const).some((per) => norm(presente(l, per) ?? '') === norm(x.foco)));
     return v ? presente(v, 'el') : null;
   },
 };
@@ -189,17 +245,41 @@ export const TERCERA_SINGULAR: Estrategia = {
  *  —poner la 3.ª singular—, que es justo `TERCERA_SINGULAR`: acierta 2 de
  *  8. Cerrar «copiar» no abre nada. */
 
+/** LA ESTRATEGIA QUE EL GATE NO VEÍA, y la encontró el lingüista.
+ *
+ *  `copiar-el-foco` compara contra el NÚCLEO, o sea una palabra. La
+ *  estrategia que un alumno puede ejecutar de punta a punta produce **la
+ *  frase entera**: «copio la fuente, le quito el pronombre y cambio el
+ *  punto por admiración». Con la comparación del producto —que acepta el
+ *  punto donde la clave lleva admiración— la cadena que produce es
+ *  literalmente `fuente − pronombre`, y contra el núcleo no se veía.
+ *  Sobre la v0 acertaba 3 de 8; sobre ésta, 1 de 9, y ese uno es el ítem
+ *  donde copiar ES la regla. */
+export const COPIAR_SIN_PRONOMBRE: Estrategia = {
+  nombre: 'copiar-la-frase-quitándole-el-pronombre',
+  objetivo: 'respuesta',
+  aplicar: (x) => x.s.replace(/^\s*(eu|tu|el|ea|noi|voi|ei|ele)\s+/iu, ''),
+};
+
 export const OPCIONES: Opciones = {
-  estrategias: [TERCERA_SINGULAR],
+  estrategias: [TERCERA_SINGULAR, COPIAR_SIN_PRONOMBRE],
   juicios: {
-    copia: 'TRES de ocho se contestan copiando el foco (`stai`, `mergi`, `dormi`), y ése es el número correcto por una razón que da la vuelta al diseño: el imperativo español de 2.ª sg ES la 3.ª sg del presente (lee = «él lee»), así que el piso donde la forma cambia se acierta traduciendo y el piso donde NO cambia es exactamente donde la transferencia castellana produce *merge!, *doarme!, *stă!. No son una concesión contra la estrategia de copiar: son los únicos ítems del lote que un hispanohablante no puede acertar desde el español. Con cero, el lote enseñaría «la forma siempre cambia», que es otra estrategia gratis; con ocho, se contestaría copiando. Tres de ocho deja las dos por debajo del azar.',
-    frontera: 'La regla tiene contexto negativo en las TRES capas y hay un ítem por capa. (1) `a sta` es de 1.ª conjugación, la clase donde todo toma la 3.ª sg, y toma `stai!` y no *stă!. (2) `a vorbi` es INTRANSITIVO y aun así toma la 3.ª sg, porque el sufijo -esc manda antes que la sintaxis: es la sobreaplicación de la regla «intransitivo → 2.ª sg», que es falsa y la refutan cinco verbos del propio lexicón. (3) `a fi` en plural: `sunteți` da `fiți!`, la única casilla del paradigma donde el plural no es el presente. Los reflexivos (`du-te`) quedan FUERA aunque serían la frontera obvia: un fallo ahí es inatribuible entre no saber la forma y no saber dónde va el clítico, que es `r6-cliticos-imperativo-gerunziu`.',
-    varianza: 'La pieza `-tu` es invariante (7 de 8; el octavo quita `-voi`) y la invariancia es de la LENGUA, no del lote: el imperativo rumano no admite pronombre sujeto antepuesto, así que quitarlo no es una decisión que el ítem examine — va DADO en la fuente y su única función es fijar la persona sin nombrar la desinencia. Es la forma de `r3-negacion-antepuesta`, donde `nu` sale en los ocho porque en rumano no hay palabra negativa que no lo exija. Lo que varía en su lugar, y es lo que el punto enseña, es el PISO morfológico del que sale la forma: supletivo (2 ítems), clase → 3.ª sg (2), transitividad → 2.ª sg (3) y plural (1). El sujeto pospuesto —`Vino tu cu mine!`, atestado en el corpus— es contrastivo y no es «esa misma orden», así que no entra como alternativa.',
+    copia: 'UNO de nueve se contesta copiando el foco, y es el del PLURAL (`Voi veniți acum.` → `Veniți acum!`). Ése es el número correcto, y la v0 tenía tres por una razón equivocada: puso los ítems del piso (C) —stai, mergi, dormi— con la fuente en 2.ª persona, que es justo la persona con la que su imperativo COINCIDE, así que la respuesta estaba escrita en la frase y el ítem no distinguía al que sabe que `a sta` no da *stă! del que copió sin leer el verbo. Con la fuente en 3.ª, esos tres hay que PRODUCIRLOS. Y quitarlos del todo dejaría la regularidad «la forma siempre cambia», que es la otra estrategia gratis: la cierra el ítem del plural, donde copiar ES la regla de la lengua —el imperativo plural es el presente en todo el paradigma salvo `a fi`—, así que su acierto por copia no es un falso positivo. Medido ejecutando: copiar el foco 1/9, copiar la frase entera 0/9, copiar la frase quitándole el pronombre 1/9.',
+    frontera: 'La regla tiene contexto negativo en las TRES capas y hay un ítem por capa. (1) `a sta` es de 1.ª conjugación, la clase donde todo toma la 3.ª sg, y toma `stai!` y no *stă!. (2) `a vorbi` es INTRANSITIVO y aun así toma la 3.ª sg, porque el sufijo -esc manda antes que la sintaxis: es la sobreaplicación de la regla «intransitivo → 2.ª sg», que es falsa y la refutan cinco verbos del propio lexicón. (3) `a fi` en plural: `sunteți` da `fiți!`, la única casilla del paradigma donde el plural no es el presente, y va emparejado con `Veniți acum!`, que es la misma frontera vista desde el otro lado. Los reflexivos (`du-te`) quedan FUERA aunque serían la frontera obvia: un fallo ahí es inatribuible entre no saber la forma y no saber dónde va el clítico, que es `r6-cliticos-imperativo-gerunziu`.',
+    varianza: 'Ninguna pieza de la operación llega al umbral: las fuentes reparten el pronombre entre `el`/`ea` (3), `tu` (4) y `voi` (2), así que quitarlo no es una constante. LO QUE HAY QUE LEER AQUÍ ES EL JUICIO ANTERIOR, QUE ERA FALSO. La v0 tenía `-tu` invariante en 7 de 8 y lo justificaba diciendo que «el imperativo rumano no admite pronombre sujeto antepuesto». Es FALSO y lo refuta el corpus del propio proyecto con la frase del ítem de `a veni`: «iar TU VINO cu mine prin ninsori de stele» (Eminescu), «și tu vino îndărăpt» — `tu vino` sale 3 veces, y pospuesto `stai tu` 8 y `vino tu` 3. La verdad es otra: el imperativo NO MARCADO no lleva sujeto expreso, y el sujeto expreso es CONTRASTIVO («quédate TÚ, no él»). Con la razón verdadera, quitar el pronombre deja de ser propiedad de la lengua y pasa a ser una decisión del ítem — que es justo lo que el gate de varianza existe para denunciar. Por eso ahora se reparte entre tres pronombres, y por eso la consigna cierra `Stai tu!` diciendo «no pongas pronombre» y no fingiendo que no existe. Lo que varía y ES el punto: el PISO morfológico del que sale la forma —supletivo (2), clase → 3.ª sg (2), transitividad → 2.ª sg (3), plural (2).',
   },
 };
 
 if (/[/\\]trans-ro-l23\.ts$/.test(process.argv[1] ?? '')) {
   console.log(`# Lote 23 · transformación · ${ITEMS.length} ítems\n`);
+  if (process.argv.includes('--asigna')) {
+    // El contador CANÓNICO, el mismo que la foto del déficit: si el lote
+    // llevara el suyo, se desincronizarían. Sólo certifica a qué punto
+    // cuenta cada ítem, NO que el ítem mida su punto.
+    const a = informeAsigna(ITEMS.map((x) => ({ p: x.p, sentence: x.s, hintEs: x.hint ?? '', answer: x.r })));
+    for (const l of a.lineas) console.log(l);
+    process.exit(a.desvio ? 1 : 0);
+  }
   for (const l of informe(ITEMS, OPCIONES)) console.log(l);
   const v = verificar(ITEMS, OPCIONES);
   console.log(v.length ? `\n**${v.length} PROBLEMAS:**\n` + v.map((s) => `- ${s}`).join('\n') : '\nLimpio.');

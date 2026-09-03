@@ -55,6 +55,7 @@
 // suspende a un alumno que escribió rumano impecable.
 import { revisarOrtografiaRo } from '../../lib/lang/ortografia-ro';
 import { varianzaDe, UMBRAL } from './varianza';
+import { answersMatchCard } from '../../lib/exercises/normalize';
 
 export const TOPE_ESTRATEGIA = 0.5;
 export const TOPE_ESPEJO = 0.5;
@@ -88,10 +89,22 @@ export interface ItemTransRo {
    *  igual al foco: ése es el ítem donde la respuesta correcta es NO
    *  tocar nada, y el lote lo necesita (ver `juicios.copia`). */
   nucleo: string;
-  /** ¿El español hace la MISMA transformación? Se declara porque no se
-   *  calcula, y se mide en el lote. */
+  /** ¿Se llega a la respuesta traduciendo la fuente al español,
+   *  transformando en español y traduciendo de vuelta? **Es la lectura
+   *  OPERATIVA, no la estructural**, y la distinción costó una
+   *  observación del lingüista: `faci` → `fă` y `sunteți` → `fiți` son
+   *  ESTRUCTURALMENTE lo mismo que «haces» → «haz» y «sois» → «sed»
+   *  —apócope del mismo étimo y supletivismo—, y aun así se declaran
+   *  `false`, porque el español no produce la cadena rumana. El gate y el
+   *  tope cuentan la lectura operativa; quien lo declare por la otra
+   *  hará que el número deje de significar lo mismo. */
   espejoEs: boolean;
-  /** ¿La raíz románica común deja acertar sin saber la morfología? */
+  /** ¿La raíz románica común deja acertar sin saber la morfología?
+   *  Se declara **para un público sólo hispanohablante**, que es el de
+   *  este curso: el italiano `fa'`/`sii` daría `fă`/`fii` casi
+   *  directamente, y aun así va `false` porque el alumno no sabe
+   *  italiano. Si algún día el curso se abre a otra L1, este campo hay
+   *  que recontarlo entero, no reinterpretarlo. */
   transparenteLatin: boolean;
   /** ¿Es el ítem cuyo error sería SOBREaplicar la regla del punto? Sin
    *  uno de éstos el alumno saca 8/8 sobregeneralizando y el autor puede
@@ -104,7 +117,17 @@ export interface ItemTransRo {
 
 /** Los juicios que el lote declara por escrito. El invariante no es un
  *  número: es «cero señales sin motivo escrito», igual que `pisoCero`, la
- *  cuarentena y la pasada de varianza. */
+ *  cuarentena y la pasada de varianza.
+ *
+ *  ⚠ **LO QUE ESTE GATE NO CERTIFICA, y hay caso.** Comprueba que el
+ *  juicio EXISTE y que NOMBRA la pieza marcada; no comprueba que sea
+ *  verdad. En el estreno, el juicio decía «el imperativo rumano no admite
+ *  pronombre sujeto antepuesto» —falso: `tu vino` sale 3 veces en el
+ *  corpus del proyecto, en Eminescu— y **pasó el gate exactamente igual
+ *  que uno verdadero**, porque contiene la subcadena `-tu`. Un sello
+ *  responde a UNA pregunta. La segunda —¿es cierto?— la contestan el
+ *  corpus y el lingüista, y por eso las dos son pasos del ciclo y no
+ *  opcionales. */
 export interface JuiciosLote {
   /** Cuántos ítems se contestan copiando el foco, y por qué ése es el
    *  número correcto. Ni 0 ni N valen sin explicación: N es una estrategia
@@ -137,6 +160,15 @@ export type Vista = Pick<ItemTransRo, 's' | 'instruccion' | 'hint' | 'foco'>;
  *  estrategia no se aplica a ese ítem. */
 export interface Estrategia {
   nombre: string;
+  /** Contra QUÉ se compara lo que la estrategia produce. Por defecto el
+   *  núcleo, o sea la palabra que la transformación cambia. Pero la
+   *  estrategia que de verdad amenaza a este formato produce **la frase
+   *  entera** —«copio la fuente, le quito el pronombre y cambio el punto
+   *  por admiración»— y una estrategia así comparada contra el núcleo no
+   *  se ve: el núcleo es una palabra y ella escribe ocho. Lo destapó el
+   *  lingüista sobre el estreno, y el defecto era de la máquina, no del
+   *  lote. */
+  objetivo?: 'nucleo' | 'respuesta';
   /** `x` es lo que el alumno ve AHORA: nunca su propia respuesta. `otros`
    *  son los DEMÁS ítems enteros, porque el alumno sí ha visto la
    *  corrección de los que ya hizo — es leave-one-out, y sin él la
@@ -197,7 +229,17 @@ export const EDICION_MODAL: Estrategia = {
   },
 };
 
-export const ESTRATEGIAS_DE_SERIE: Estrategia[] = [COPIAR, EDICION_MODAL];
+/** «Copio la frase tal cual.» Va contra la RESPUESTA, no contra el
+ *  núcleo, y por eso hacía falta el campo `objetivo`: la comparación
+ *  además es la del PRODUCTO (`answersMatchCard`), no una propia, porque
+ *  una estrategia acierta si y sólo si la tarjeta se la daría por buena —
+ *  y la tarjeta acepta el punto final donde la clave lleva admiración. Una
+ *  medición más estricta que el producto mide otra cosa. */
+export const COPIAR_LA_FRASE: Estrategia = {
+  nombre: 'copiar-la-frase-entera', objetivo: 'respuesta', aplicar: (x) => x.s,
+};
+
+export const ESTRATEGIAS_DE_SERIE: Estrategia[] = [COPIAR, COPIAR_LA_FRASE, EDICION_MODAL];
 
 export interface Resultado { nombre: string; aciertos: number; total: number; sobre: string[] }
 
@@ -213,7 +255,9 @@ export function correr(e: Estrategia, lote: ItemTransRo[]): Resultado {
     // Lo que no está en el objeto no se puede leer de ninguna manera.
     const vista: Vista = { s: x.s, instruccion: x.instruccion, hint: x.hint, foco: x.foco };
     const g = e.aplicar(vista, lote.filter((_, k) => k !== i));
-    if (g !== null && norm(g) === norm(x.nucleo)) { aciertos++; sobre.push(x.s); }
+    if (g === null) continue;
+    const acierta = e.objetivo === 'respuesta' ? answersMatchCard(g, x.r) : norm(g) === norm(x.nucleo);
+    if (acierta) { aciertos++; sobre.push(x.s); }
   }
   return { nombre: e.nombre, aciertos, total: lote.length, sobre };
 }

@@ -31,6 +31,31 @@ describe('answersMatchFinal', () => {
     expect(answersMatchFinal('Vieste', 'Vieste?')).toBe(true);
   });
 
+  // LA MITAD SIMÉTRICA, que faltaba (rumano, lote 23). El arreglo
+  // original cubría «la clave lleva punto y el alumno no lo pone» y
+  // dejaba abierta «la clave lleva ADMIRACIÓN y el alumno pone punto» —
+  // los ocho imperativos rumanos tienen la clave en `!` y el rumano
+  // escribe imperativos con punto rutinariamente («și stai lângă mine.»,
+  // en el corpus del proyecto).
+  it('con la clave en «!», acepta también el punto y la ausencia de signo', () => {
+    expect(answersMatchFinal('Mergi la piață!', 'Mergi la piață!')).toBe(true);
+    expect(answersMatchFinal('Mergi la piață.', 'Mergi la piață!')).toBe(true);
+    expect(answersMatchFinal('Mergi la piață', 'Mergi la piață!')).toBe(true);
+    // Y lo que NO cambia: la frase tiene que ser la misma.
+    expect(answersMatchFinal('Du-te la piață.', 'Mergi la piață!')).toBe(false);
+  });
+
+  it('el «?» sigue siendo ESTRICTO: ahí el signo ES la respuesta', () => {
+    // La razón por la que esto no se generalizó a todo signo terminal: en
+    // una transformación de afirmativa a interrogativa, aceptar el punto
+    // haría que el ítem no pudiera fallar nunca.
+    expect(answersMatchFinal('Vieste.', 'Vieste?')).toBe(false);
+    expect(answersMatchFinal('Vieste!', 'Vieste?')).toBe(false);
+    // Y la clave en punto tampoco acepta la admiración: la apertura es en
+    // UNA dirección, no en las dos.
+    expect(answersMatchFinal('Comprei-a na estação!', 'Comprei-a na estação.')).toBe(false);
+  });
+
   it('sigue exigiendo los acentos, que en portugués son lengua', () => {
     expect(answersMatchFinal('falara', 'falará')).toBe(false);
     expect(answersMatchFinal('estao', 'estão')).toBe(false);

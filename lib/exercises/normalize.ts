@@ -42,13 +42,39 @@ export function answersMatch(a: string, b: string): boolean {
  *  **Sólo se hace opcional el signo QUE LA CLAVE LLEVA**, no cualquiera.
  *  Si se ignorara todo signo terminal, «Comprei-a na estação?» pasaría
  *  como equivalente de la afirmativa — y en una transformación de
- *  afirmativa a interrogativa el signo ES la respuesta. */
+ *  afirmativa a interrogativa el signo ES la respuesta.
+ *
+ *  ── LA MITAD QUE FALTABA, y es la forma exacta del defecto que esta
+ *  función existe para arreglar (rumano, lote 23) ──
+ *  El arreglo original neutraliza «la clave lleva punto y el alumno no lo
+ *  pone» y deja abierta la simétrica: **«la clave lleva ADMIRACIÓN y el
+ *  alumno pone punto»**. Los ocho imperativos del primer lote de
+ *  transformación rumana tienen la clave en `!`, y el rumano escribe
+ *  imperativos con punto rutinariamente — el corpus del proyecto trae «și
+ *  stai lângă mine.» tal cual. Quien escribe `Mergi la piață.` ha hecho la
+ *  transformación perfecta y entraba como fallo en el FSRS.
+ *
+ *  Así que cuando la clave acaba en `!`, el conjunto aceptado es
+ *  {`!`, `.`, sin signo}: la admiración es énfasis tipográfico, no lengua.
+ *  **El `?` sigue siendo estricto** y por la razón de arriba: ahí el signo
+ *  ES la respuesta. Medido antes de tocarlo: de las 516 respuestas
+ *  publicadas en portugués, **cero** acaban en `!`, así que esto no
+ *  reinterpreta ni un ítem existente. Si algún día hay una transformación
+ *  cuyo punto sea EXCLAMAR, esta línea deja de valer para ella y hará
+ *  falta declararlo en el ítem. */
 export function answersMatchFinal(a: string, b: string): boolean {
   const A = normalizeAnswer(a), B = normalizeAnswer(b);
   if (A === B) return true;
   const signo = B.match(/[.!?…]$/)?.[0];
   if (!signo) return false;
-  const quita = (s: string) => (s.endsWith(signo) ? s.slice(0, -signo.length).trimEnd() : s);
+  // Con `endsWith` y no con una regex construida: `new RegExp('?$')` es un
+  // cuantificador sin nada delante y REVIENTA, así que la versión con
+  // regex habría muerto justo en el signo que hay que dejar estricto.
+  const aceptados = signo === '!' ? ['!', '.'] : [signo];
+  const quita = (s: string) => {
+    for (const g of aceptados) if (s.endsWith(g)) return s.slice(0, -g.length).trimEnd();
+    return s;
+  };
   return quita(A) === quita(B);
 }
 
