@@ -293,13 +293,18 @@ function acumular(lang) {
         const info = tabla[clave];
         if (!info) continue;
         const id = `${proyecto}:${info.obra}`;
-        if (!acc.has(id)) acc.set(id, { ...info, proyecto, frases: 0, palabras: 0, subord: 0, amod: 0, amodDist: 0, finitos: 0, subj: 0, lemas: new Map(), formas: new Map(), distancias: [], fueraTok: [], fueraForma: [], largos: [], subords: [] });
+        if (!acc.has(id)) acc.set(id, { ...info, proyecto, frases: 0, palabras: 0, subord: 0, amod: 0, amodDist: 0, finitos: 0, subj: 0, lemas: new Map(), formas: new Map(), distancias: [], fueraTok: [], fueraForma: [], largos: [], subords: [], frasesLemas: [], frasesFormas: [], frasesArcos: [] });
         const a = acc.get(id);
         const porId = new Map(toks.map((t) => [t.id, t]));
         const palabras = toks.filter((t) => t.upos !== 'PUNCT');
         a.frases += 1;
         a.palabras += palabras.length;
         a.largos.push(palabras.length);
+        // La FRASE es el bloque: se guardan sus tokens EN ORDEN, porque
+        // un bootstrap por bloques sobre una muestra sin orden no
+        // remuestrea texto, remuestrea la agrupación con que se
+        // construyó la lista.
+        const lemasFrase = [], formasFrase = [], arcosFrase = [];
         let subEsta = 0;
         for (const t of palabras) {
           lemas.set(t.lema, (lemas.get(t.lema) ?? 0) + 1);
@@ -307,11 +312,13 @@ function acumular(lang) {
           const fm = canonicalLa(t.forma);
           formasGlob.set(fm, (formasGlob.get(fm) ?? 0) + 1);
           a.formas.set(fm, (a.formas.get(fm) ?? 0) + 1);
+          lemasFrase.push(t.lema); formasFrase.push(fm);
           if (SUBORD.has(t.rel)) { a.subord += 1; subEsta += 1; }
-          if (t.rel === 'amod' && porId.has(t.head)) { a.amod += 1; const d = Math.abs(t.id - t.head); a.amodDist += d; a.distancias.push(d); }
+          if (t.rel === 'amod' && porId.has(t.head)) { a.amod += 1; const d = Math.abs(t.id - t.head); a.amodDist += d; a.distancias.push(d); arcosFrase.push(d); }
           if (/VerbForm=Fin/.test(t.rasgos)) { a.finitos += 1; if (/Mood=Sub/.test(t.rasgos)) a.subj += 1; }
         }
         a.subords.push(subEsta);
+        a.frasesLemas.push(lemasFrase); a.frasesFormas.push(formasFrase); a.frasesArcos.push(arcosFrase);
       }
     }
   }
@@ -341,32 +348,32 @@ function medir(lang) {
   const ampliadas = fs.existsSync(extraFile) ? JSON.parse(fs.readFileSync(extraFile, 'utf8')) : [];
   for (const e of ampliadas) {
     const formas = new Map(Object.entries(e.cuenta).map(([k, v]) => [canonicalLa(k), v]));
+    const bloquesFormas = (e.bloques ?? []).map((bl) => bl.map(canonicalLa));
+    if (bloquesFormas.length === 0) throw new Error(`${e.obra}: el fichero ampliado no trae \`bloques\` — vuelve a correr traer-anclas-antiguas.mjs. Sin orden de texto no hay bootstrap por bloques, y hacerlo sobre la lista agrupada por forma da intervalos que no significan nada.`);
     acc.set(`wikisource:${e.obra}`, {
       autor: e.autor, obra: `${e.obra} (ampliada)`, peldano: e.peldano, extra: true, proyecto: 'wikisource',
       frases: 0, palabras: e.total, subord: 0, amod: 0, amodDist: 0, finitos: 0, subj: 0,
-      lemas: new Map(), formas, distancias: [], fueraTok: [], fueraForma: [], largos: [], subords: [],
+      lemas: new Map(), formas, bloquesFormas, distancias: [], fueraTok: [], fueraForma: [], largos: [], subords: [],
+      frasesLemas: [], frasesFormas: [], frasesArcos: [],
     });
   }
 
   const filas = [...acc.values()].map((a) => {
     let fuera = 0, total = 0;
-    const muestraFuera = [];
-    for (const [lema, n] of a.lemas) {
-      total += n;
-      const esFuera = top1000.has(lema) ? 0 : 1;
-      if (esFuera) fuera += n;
-      for (let i = 0; i < n; i++) muestraFuera.push(100 * esFuera);
-    }
-    a.fueraTok = muestraFuera;
+    for (const [lema, n] of a.lemas) { total += n; if (!top1000.has(lema)) fuera += n; }
+    // La muestra va POR BLOQUES y en orden de texto. `fueraTok` sigue
+    // siendo la lista plana sólo para el invariante de la media.
+    a.blFuera = a.frasesLemas.map((fr) => fr.map((l) => (top1000.has(l) ? 0 : 100)));
+    a.fueraTok = a.blFuera.flat();
     let fueraF = 0, totalF = 0;
-    const muestraF = [];
-    for (const [forma, n] of a.formas) {
-      totalF += n;
-      const es = top1000f.has(forma) ? 0 : 1;
-      if (es) fueraF += n;
-      for (let i = 0; i < n; i++) muestraF.push(100 * es);
-    }
-    a.fueraForma = muestraF;
+    for (const [forma, n] of a.formas) { totalF += n; if (!top1000f.has(forma)) fueraF += n; }
+    a.blFueraForma = a.bloquesFormas
+      ? a.bloquesFormas.map((bl) => bl.map((w) => (top1000f.has(w) ? 0 : 100)))
+      : a.frasesFormas.map((fr) => fr.map((w) => (top1000f.has(w) ? 0 : 100)));
+    a.fueraForma = a.blFueraForma.flat();
+    a.blLargos = a.largos.map((x) => [x]);
+    a.blSubords = a.subords.map((x) => [x]);
+    a.blDistancias = a.frasesArcos.filter((x) => x.length > 0);
     return {
       fueraTop1000Formas: (100 * fueraF) / totalF,
       ...a,
@@ -388,15 +395,15 @@ function medir(lang) {
 // puente; salió en griego, donde la descalificada es otra, y llegó a
 // producir un veredicto de REFUTADO que era falso.
 const METRICAS = [
-  ['palabrasFrase', 'palabras/frase', 1, 'largos'],
-  ['subordFrase', 'subord/frase', 2, 'subords'],
-  ['arcoAdj', 'arco amod', 2, 'distancias'],
-  ['fueraTop1000', '% fuera top1000', 1, 'fueraTok'],
+  ['palabrasFrase', 'palabras/frase', 1, 'blLargos'],
+  ['subordFrase', 'subord/frase', 2, 'blSubords'],
+  ['arcoAdj', 'arco amod', 2, 'blDistancias'],
+  ['fueraTop1000', '% fuera top1000', 1, 'blFuera'],
   // El MISMO eje léxico calculado sobre FORMAS canónicas en vez de lemas.
   // Existe para poder ampliar un ancla con texto de Wikisource, que no
   // viene lematizado. Se VALIDA contra la versión por lemas sobre las
   // mismas obras: si no reproduce su orden, no sirve y no se usa.
-  ['fueraTop1000Formas', '% fuera top1000 (formas)', 1, 'fueraForma'],
+  ['fueraTop1000Formas', '% fuera top1000 (formas)', 1, 'blFueraForma'],
 ];
 
 /** La canonicalización del latín que el Paso 0 §3.1 decidió, en su primer
@@ -442,18 +449,79 @@ function mulberry32(a) {
   };
 }
 
-function ic95(muestra, reps = 2000) {
-  if (muestra.length === 0) return [NaN, NaN];
+// ── BOOTSTRAP POR BLOQUES, y por qué el de token estaba mal ───────────
+//
+// La primera versión remuestreaba TOKENS SUELTOS. El coordinador comparó
+// las anchuras que producía con la fórmula binomial que supone tokens
+// independientes y coincidían hasta la segunda cifra — o sea que el
+// intervalo estaba afirmando que cada palabra de una obra es
+// independiente de la anterior. En un texto literario eso es falso de
+// forma grosera: el vocabulario viene en RACHAS, un pasaje de naves
+// repite léxico náutico, un libro entero comparte campo semántico. El
+// n efectivo es mucho menor que el número de tokens y **el intervalo
+// salía demasiado estrecho**.
+//
+// Y el sesgo va de UNA SOLA MANO, que es lo que lo hace peligroso: un
+// intervalo estrecho fabrica «ORDENADO» y nunca «INDISTINGUIBLE». Por eso
+// hay que repasar los saltos CONFIRMADOS y no los otros.
+//
+// El arreglo no es estadístico, es de UNIDAD: se remuestrean BLOQUES —la
+// frase en el treebank, trozos de 500 tokens en el texto corrido— que
+// conservan la autocorrelación de dentro. Un bloque entra o no entra
+// entero.
+// Tamaño de bloque, ajustable desde la línea de órdenes porque EL
+// RESULTADO DEPENDE DE ÉL y esa dependencia hay que enseñarla, no
+// esconderla. La autocorrelación del vocabulario vive a escala de
+// párrafo y de capítulo; bloques cortos capturan poco de ella y dan
+// intervalos todavía optimistas. `--bloque N` agrupa N FRASES por bloque
+// (1 = una frase, que es la unidad natural del treebank).
+const TOKENS_POR_BLOQUE = 500;
+const FRASES_POR_BLOQUE = Number(valor('--bloque', '1'));
+
+/** Junta bloques contiguos de `n` en uno solo. Con `n`=1 no hace nada. */
+function agrupar(bloques, n) {
+  if (n <= 1) return bloques;
+  const out = [];
+  for (let i = 0; i < bloques.length; i += n) out.push(bloques.slice(i, i + n).flat());
+  return out;
+}
+
+/** Agrupa una muestra plana en bloques contiguos de tamaño fijo. Se usa
+ *  cuando no hay una unidad natural declarada (el texto de Wikisource,
+ *  que llega como cuenta de formas y se serializa en orden). */
+function enBloques(muestra, tam = TOKENS_POR_BLOQUE) {
+  const out = [];
+  for (let i = 0; i < muestra.length; i += tam) out.push(muestra.slice(i, i + tam));
+  return out;
+}
+
+/** IC 95 % por bootstrap DE BLOQUES. `bloques` es un array de arrays; se
+ *  remuestrean con reemplazo tantos bloques como haya y se promedia todo
+ *  lo que caiga dentro. */
+function ic95Bloques(bloques, reps = 2000) {
+  if (bloques.length === 0) return [NaN, NaN];
+  if (bloques.length === 1) {
+    // Un solo bloque no da varianza: decirlo, no fingir precisión.
+    return [NaN, NaN];
+  }
   const rnd = mulberry32(20260903);
   const medias = [];
   for (let r = 0; r < reps; r++) {
-    let s = 0;
-    for (let i = 0; i < muestra.length; i++) s += muestra[(rnd() * muestra.length) | 0];
-    medias.push(s / muestra.length);
+    let suma = 0, n = 0;
+    for (let b = 0; b < bloques.length; b++) {
+      const blk = bloques[(rnd() * bloques.length) | 0];
+      for (let i = 0; i < blk.length; i++) { suma += blk[i]; n++; }
+    }
+    medias.push(suma / n);
   }
   medias.sort((a, b) => a - b);
   return [medias[Math.floor(0.025 * reps)], medias[Math.floor(0.975 * reps)]];
 }
+
+/** Las muestras que llegan aquí YA son arrays de bloques (una frase, o un
+ *  trozo de 500 tokens del texto corrido). Nunca se remuestrea token a
+ *  token. */
+const ic95 = ic95Bloques;
 
 function main() {
   if (!OBRAS[LANG]) throw new Error(`--lang ${LANG}: sólo «la» y «grc»`);
@@ -545,19 +613,23 @@ function main() {
   }
 
   function juzgar(x, y, k) {
-    const mx = x[muestraDe[k]] ?? [], my = y[muestraDe[k]] ?? [];
+    const bx = x[muestraDe[k]] ?? [], by = y[muestraDe[k]] ?? [];
+    const mx = bx.flat(), my = by.flat();
     for (const [f, m] of [[x, mx], [y, my]]) {
       const media = m.reduce((p, q) => p + q, 0) / (m.length || 1);
       if (Math.abs(media - f[k]) > 0.02 * Math.max(1, Math.abs(f[k]))) {
         throw new Error(`IC incoherente en ${nombreDe[k]}/${f.obra}: la muestra promedia ${media.toFixed(3)} y la métrica dice ${f[k].toFixed(3)}`);
       }
     }
-    const [alo, ahi] = ic95(mx), [blo, bhi] = ic95(my);
+    const [alo, ahi] = ic95(agrupar(bx, FRASES_POR_BLOQUE)), [blo, bhi] = ic95(agrupar(by, FRASES_POR_BLOQUE));
+    if ([alo, ahi, blo, bhi].some(Number.isNaN)) {
+      return { estado: 'SIN-INTERVALO', txt: `${x[k].toFixed(decimales[k])} → ${y[k].toFixed(decimales[k])} — menos de 2 bloques: no hay varianza que estimar` };
+    }
     const solapan = ahi >= blo && bhi >= alo;
     return {
       estado: solapan ? 'INDISTINGUIBLE' : y[k] > x[k] ? 'ORDENADO' : 'INVERTIDO',
-      txt: `${x[k].toFixed(decimales[k])} [${alo.toFixed(decimales[k])}, ${ahi.toFixed(decimales[k])}] n=${mx.length}  →  ` +
-           `${y[k].toFixed(decimales[k])} [${blo.toFixed(decimales[k])}, ${bhi.toFixed(decimales[k])}] n=${my.length}`,
+      txt: `${x[k].toFixed(decimales[k])} [${alo.toFixed(decimales[k])}, ${ahi.toFixed(decimales[k])}] n=${mx.length}/${agrupar(bx, FRASES_POR_BLOQUE).length}bl  →  ` +
+           `${y[k].toFixed(decimales[k])} [${blo.toFixed(decimales[k])}, ${bhi.toFixed(decimales[k])}] n=${my.length}/${agrupar(by, FRASES_POR_BLOQUE).length}bl`,
     };
   }
 
@@ -580,7 +652,7 @@ function main() {
       arbitrado = true;
       confirmado = confirmado || v.estado === 'ORDENADO';
       refutado = refutado || v.estado === 'INVERTIDO';
-      const marca = v.estado === 'ORDENADO' ? '✔' : v.estado === 'INDISTINGUIBLE' ? '~' : '✘';
+      const marca = v.estado === 'ORDENADO' ? '✔' : v.estado === 'INVERTIDO' ? '✘' : '~';
       console.log(`      ${marca} ${nombreDe[k].padEnd(16)} ${v.txt}   ${v.estado}`);
     }
     if (refutado) { refutados.push(`${a} → ${b}`); console.log('      ⇒ REFUTADO'); }
