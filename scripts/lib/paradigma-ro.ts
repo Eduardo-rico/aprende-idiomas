@@ -288,6 +288,36 @@ export function imperfecto(v: LemaVerbal, p: Persona): string | null {
   return formaValida(tema + 'e' + DES_IMPF[p]);                              // vedeam, mergeam, dormeam
 }
 
+/** El infinitivo CORTO: el único verbal vivo. El largo es la forma en
+ *  -re (`mergere`), hoy sustantivo — cicatriz del primer ataque
+ *  adversarial, que la encontró presentada como verbo. */
+export const infinitivoCorto = (inf: string) => inf.replace(/^a /, '');
+
+const AUX_VIITOR: Record<Persona, string> = { eu: 'voi', tu: 'vei', el: 'va', noi: 'vom', voi: 'veți', ei: 'vor' };
+/** Viitor LITERAR: `voi/vei/va/vom/veți/vor` + infinitivo corto. Es el
+ *  registro formal y escrito de los cuatro que el punto contrasta, y el
+ *  ÚNICO de los cuatro que se deriva sin conjuntivo — por eso es el que
+ *  el lote pide. Los otros tres (`o să`, `am să`, `oi`) son correctos y
+ *  el inventario los enseña: el ítem tiene que FIJAR el registro o no
+ *  está determinado. */
+export function viitorLiterar(v: LemaVerbal, p: Persona): string | null {
+  return formaValida(`${AUX_VIITOR[p]} ${infinitivoCorto(v.inf)}`);
+}
+
+const AUX_COND: Record<Persona, string> = { eu: 'aș', tu: 'ai', el: 'ar', noi: 'am', voi: 'ați', ei: 'ar' };
+/** Condicional presente: `aș/ai/ar/am/ați/ar` + infinitivo corto. Y el
+ *  perfecto, `aș fi` + participio. El auxiliar NO es el de `a avea` pese
+ *  al parecido de `ai/am/ați`: es una serie propia, y por eso 1.ª pl.
+ *  `am` coincide con el perfect compus y sólo el infinitivo/participio
+ *  de detrás los separa. */
+export function conditional(v: LemaVerbal, p: Persona): string | null {
+  return formaValida(`${AUX_COND[p]} ${infinitivoCorto(v.inf)}`);
+}
+export function conditionalPerfect(v: LemaVerbal, p: Persona): string | null {
+  const part = participio(v);
+  return part ? formaValida(`${AUX_COND[p]} fi ${part}`) : null;
+}
+
 /** Todo el paradigma nominal de un lema, para el gate y para los lotes. */
 export function paradigmaNominal(l: LemaNominal): Record<string, string | null> {
   return {
@@ -305,6 +335,9 @@ export function paradigmaVerbal(v: LemaVerbal): Record<string, string | null> {
   for (const p of PERSONAS) out[`impf ${p}`] = imperfecto(v, p);
   out['participio'] = participio(v);
   out['pc eu'] = perfectCompus(v, 'eu');
+  for (const p of PERSONAS) out[`viit ${p}`] = viitorLiterar(v, p);
+  for (const p of PERSONAS) out[`cond ${p}`] = conditional(v, p);
+  out['cond perf eu'] = conditionalPerfect(v, 'eu');
   return out;
 }
 

@@ -26,7 +26,7 @@
 // coordinador pidió el lote preparado, no en el corpus. Y antes de
 // publicarse pasa por el lingüista adversarial.
 import { SUSTANTIVOS_A1, VERBOS_A1 } from '../../lib/data/languages/ro/lexicon-a1';
-import { articulado, presente, imperfecto, perfectCompus, participio, paradigmaNominal, diminutivo, PERSONAS, type Persona } from '../lib/paradigma-ro';
+import { articulado, presente, imperfecto, perfectCompus, participio, viitorLiterar, conditional, conditionalPerfect, paradigmaNominal, diminutivo, PERSONAS, type Persona } from '../lib/paradigma-ro';
 import { revisarOrtografiaRo } from '../../lib/lang/ortografia-ro';
 import { hunspellDisponible, desconocidas } from '../lib/hunspell-ro';
 import { exenta } from '../lib/exenciones-hunspell-ro';
@@ -45,7 +45,7 @@ export interface ClozeRo {
    *  que es lo único que pedían los lotes 1-6. El participio no lleva
    *  persona. */
   inf?: string; per?: Persona;
-  t?: 'presente' | 'imperfecto' | 'perfect-compus' | 'participio';
+  t?: 'presente' | 'imperfecto' | 'perfect-compus' | 'participio' | 'futuro' | 'condicional' | 'condicional-perfecto';
   /** declarada, donde el paradigma no llega */
   r?: string;
   alt?: string[];
@@ -128,6 +128,9 @@ export function respuestaDe(x: ClozeRo): string | null {
     if (!x.per) return null;
     if (x.t === 'imperfecto') return imperfecto(v, x.per);
     if (x.t === 'perfect-compus') return perfectCompus(v, x.per);
+    if (x.t === 'futuro') return viitorLiterar(v, x.per);
+    if (x.t === 'condicional') return conditional(v, x.per);
+    if (x.t === 'condicional-perfecto') return conditionalPerfect(v, x.per);
     return presente(v, x.per);
   }
   return null;

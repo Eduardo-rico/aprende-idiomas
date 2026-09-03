@@ -17,7 +17,7 @@
 // Qué NO certifica: que el ítem MIDA su punto. Eso es del lingüista y de
 // los testigos del propio lote ([[gotcha: un ítem puede no medir su
 // punto]]).
-import { PUNTOS_RO, PISO_RO } from '../../lib/data/languages/ro/inventario-puntos';
+import { PUNTOS_RO, pisoDePuntoRo } from '../../lib/data/languages/ro/inventario-puntos';
 import { servibleAlAlumno } from './estado-item';
 
 export interface CuentaRo {
@@ -41,8 +41,12 @@ export function contarPuntosRo(items: any[]): CuentaRo {
 }
 
 export const pisoDePunto = (() => {
-  const nivelDe = new Map(PUNTOS_RO.map((p) => [p.id, p.nivel]));
-  return (id: string) => PISO_RO(nivelDe.get(id) ?? 'A1');
+  // El piso REAL, que puede ser CERO cuando el punto lo declara con su
+  // motivo (`pisoCero`). Antes esto miraba sólo el nivel y por eso un
+  // punto declarado «0 ítems por diseño» seguía cobrando 8 unidades: la
+  // declaración vivía en la prosa y el número no la conocía.
+  const porId = new Map(PUNTOS_RO.map((p) => [p.id, p]));
+  return (id: string) => { const p = porId.get(id); return p ? pisoDePuntoRo(p) : 8; };
 })();
 
 /** El `--asigna` de los lotes: mete los BORRADORES por el contador

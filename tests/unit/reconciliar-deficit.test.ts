@@ -82,3 +82,49 @@ describe('informe', () => {
     expect(informe(reconciliar({ a: 12 }, { a: 12 }))).toContain('residuo (tiene que ser 0)');
   });
 });
+
+// ── CAMBIO DE PISO: su propia causa ────────────────────────────────────
+// Añadido el 2026-09-03, al declarar `pisoCero` en `r1-diacriticos-coma`.
+// `deficitAntes` se recalculaba con el piso de HOY, así que bajar un piso
+// REESCRIBÍA LA HISTORIA: la foto que decía 570 pasaba a decir 562 y el
+// −8 no aparecía en ninguna línea. Es el mismo defecto que esta función
+// existe para impedir —«un indicador que no reconcilia convierte el
+// calendario en ficción»— pero aplicado al PISO en vez de a los ítems, y
+// por eso ninguno de los tests anteriores lo veía.
+describe('reconciliar: el PISO tiene su propia línea', () => {
+  const antes = { 'p-a': 0, 'p-b': 3 };
+  const ahora = { 'p-a': 0, 'p-b': 3 };          // nadie ha producido nada
+  const pisoViejo = () => 8;
+  const pisoNuevo = (id: string) => (id === 'p-a' ? 0 : 8);
+
+  it('ROJO: sin el piso de la foto anterior, la rebaja es INVISIBLE', () => {
+    const r = reconciliar(antes, ahora, pisoNuevo);
+    expect(r.deficitAntes).toBe(5);     // ← la historia, reescrita
+    expect(r.aporte.piso).toBe(0);
+    expect(r.pisoCambiado).toEqual([]);
+  });
+
+  it('con el piso de la foto, la rebaja se declara y NO pasa por producción', () => {
+    const r = reconciliar(antes, ahora, pisoNuevo, pisoViejo);
+    expect(r.deficitAntes).toBe(13);    // ← lo que la foto decía de verdad
+    expect(r.deficitAhora).toBe(5);
+    expect(r.aporte.piso).toBe(-8);
+    expect(r.aporte.movidos).toBe(0);   // ← no se disfraza de ítems
+    expect(r.pisoCambiado).toEqual([{ id: 'p-a', pisoAntes: 8, pisoAhora: 0, delta: -8 }]);
+    expect(r.residuo).toBe(0);
+  });
+
+  it('el informe lo dice con todas las letras', () => {
+    const txt = informe(reconciliar(antes, ahora, pisoNuevo, pisoViejo), '8');
+    expect(txt).toContain('PISO declarado distinto');
+    expect(txt).toContain('no es producción');
+    expect(txt).toContain('piso 8 → 0');
+  });
+
+  it('un cambio de piso Y de ítems a la vez se reparte, sin residuo', () => {
+    const r = reconciliar({ 'p-a': 0, 'p-b': 3 }, { 'p-a': 0, 'p-b': 8 }, pisoNuevo, pisoViejo);
+    expect(r.aporte.piso).toBe(-8);
+    expect(r.aporte.movidos).toBe(-5);
+    expect(r.residuo).toBe(0);
+  });
+});

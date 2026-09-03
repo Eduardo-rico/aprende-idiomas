@@ -17,7 +17,7 @@
 // piso: es un hueco del currículo, no del punto.
 import fs from 'node:fs';
 import path from 'node:path';
-import { PUNTOS_RO, PISO_RO } from '../lib/data/languages/ro/inventario-puntos';
+import { PUNTOS_RO, pisoDePuntoRo } from '../lib/data/languages/ro/inventario-puntos';
 import { blocksDir } from '../lib/data/registry';
 import { contarPuntosRo, pisoDePunto } from './lib/asigna-ro';
 import { reconciliar, informe, type PorPunto } from './lib/reconciliar-deficit';
@@ -44,23 +44,38 @@ let faltaTotal = 0;
 for (const n of NIVELES) {
   const ps = PUNTOS_RO.filter((p) => p.nivel === n);
   const its = ps.reduce((a, p) => a + cuenta.get(p.id)!, 0);
-  const bajo = ps.filter((p) => cuenta.get(p.id)! < PISO_RO(n));
-  const falta = bajo.reduce((a, p) => a + (PISO_RO(n) - cuenta.get(p.id)!), 0);
+  // El piso por PUNTO, no por nivel: un punto puede declarar piso cero
+  // con su motivo (`pisoCero`), y entonces no debe unidades.
+  const bajo = ps.filter((p) => cuenta.get(p.id)! < pisoDePuntoRo(p));
+  const falta = bajo.reduce((a, p) => a + (pisoDePuntoRo(p) - cuenta.get(p.id)!), 0);
   faltaTotal += falta;
   console.log(`| ${n} | ${ps.length} | ${its} | ${bajo.length} | ${falta} |`);
 }
 console.log(`| **Σ** | **${PUNTOS_RO.length}** | **${nServibles}** | **${[...cuenta].filter(([id, n]) => n < pisoId(id)).length}** | **${faltaTotal}** |`);
 const cubiertos = [...cuenta].filter(([id, n]) => n >= pisoId(id));
 if (cubiertos.length) console.log(`\nPuntos cubiertos (${cubiertos.length}): ${cubiertos.map(([id, n]) => `${id} (${n})`).join(', ')}.`);
+// Los de PISO CERO se imprimen aparte y con su motivo: bajar el piso sin
+// decirlo sería exactamente la forma de hacer desaparecer déficit sin
+// producir nada.
+const cero = PUNTOS_RO.filter((p) => p.pisoCero);
+if (cero.length) {
+  console.log(`\n**Piso CERO declarado (${cero.length}), con su motivo — no deben unidades:**`);
+  for (const p of cero) console.log(`- \`${p.id}\`: ${p.pisoCero}`);
+}
 if (desconocidos.size) console.log(`\n⚠ ítems con puntos que NO están en el inventario: ${[...desconocidos].map(([k, v]) => `${k} ×${v}`).join(', ')}`);
 
 // ── reconciliación ───────────────────────────────────────────────────
 const porPuntoAhora: PorPunto = Object.fromEntries(cuenta);
-const historico: { fecha: string; nota?: string; porPunto: PorPunto }[] = fs.existsSync(HIST) ? JSON.parse(fs.readFileSync(HIST, 'utf8')) : [];
+const historico: { fecha: string; nota?: string; porPunto: PorPunto; piso?: PorPunto }[] = fs.existsSync(HIST) ? JSON.parse(fs.readFileSync(HIST, 'utf8')) : [];
 console.log('');
 if (historico.length) {
   const ultima = historico[historico.length - 1]!;
-  const r = reconciliar(ultima.porPunto, porPuntoAhora, pisoId);
+  // El piso de la foto anterior sale de la foto, no del código de hoy.
+  // Las fotos 1-11 no lo guardaban: para ellas se usa el piso ACTUAL y
+  // el informe no puede separar la causa — se dice, no se disimula.
+  const pisoAntes = ultima.piso ? (id: string) => ultima.piso![id] ?? pisoId(id) : undefined;
+  if (!ultima.piso) console.log('> (la foto anterior no guardaba su piso: la línea de PISO no puede calcularse para ella)\n');
+  const r = reconciliar(ultima.porPunto, porPuntoAhora, pisoId, pisoAntes);
   console.log(informe(r, '8, C2 6'));
   console.log(`\n(foto anterior: ${ultima.fecha}${ultima.nota ? ' — ' + ultima.nota : ''})`);
   if (r.residuo !== 0) { console.log(`\n✗ RESIDUO ${r.residuo}: hay déficit sin explicar.`); process.exitCode = 1; }
@@ -70,7 +85,12 @@ if (historico.length) {
 const i = process.argv.indexOf('--registrar');
 if (i >= 0) {
   const nota = process.argv[i + 1];
-  historico.push({ fecha: new Date().toISOString().slice(0, 10), nota: nota && !nota.startsWith('--') ? nota : undefined, porPunto: porPuntoAhora });
+  historico.push({
+    fecha: new Date().toISOString().slice(0, 10),
+    nota: nota && !nota.startsWith('--') ? nota : undefined,
+    porPunto: porPuntoAhora,
+    piso: Object.fromEntries(PUNTOS_RO.map((p) => [p.id, pisoDePuntoRo(p)])),
+  });
   fs.writeFileSync(HIST, JSON.stringify(historico, null, 1) + '\n');
   console.log(`\nFoto registrada en ${path.relative(process.cwd(), HIST)} (${historico.length} en el histórico).`);
 }

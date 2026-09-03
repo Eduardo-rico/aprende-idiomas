@@ -107,6 +107,15 @@ export interface PuntoRo {
    *  no tiene descriptor para él, y eso se denuncia, no se tapa. */
   cubre: string[];
   sinDescriptor?: string;
+  /** PISO CERO DECLARADO: el punto no admite ítems y aquí está por qué.
+   *  Existe porque el motivo en prosa no cambia el número: `r1-diacriticos-coma`
+   *  quedó declarado «0 ítems por diseño» el 2026-09-03 y la foto del déficit
+   *  siguió cobrándole 8 unidades, o sea que la declaración era una promesa
+   *  que la cuenta no cumplía. Con este campo el piso ES cero y la
+   *  reconciliación lo dice, en vez de arrastrar una deuda que nadie va a
+   *  pagar nunca. NO es un atajo para bajar el déficit: exige el motivo
+   *  escrito, y un test comprueba que ningún punto lo lleva vacío. */
+  pisoCero?: string;
   /** Fragmento TEXTUAL de §Rumano del currículo del que sale el punto. */
   cita: string;
   /** Lo que queda por comprobar contra fuente viva y bloquea la producción. */
@@ -118,6 +127,11 @@ export function formatoDeRo(p: PuntoRo): FormatoRo {
 }
 
 export const PISO_RO = (nivel: NivelRo) => (nivel === 'C2' ? 6 : 8);
+
+/** El piso REAL de un punto: cero si está declarado con su motivo. Es el
+ *  que tienen que usar el déficit y `--asigna`; `PISO_RO` a secas sólo
+ *  sabe del nivel. */
+export const pisoDePuntoRo = (p: PuntoRo) => (p.pisoCero ? 0 : PISO_RO(p.nivel));
 
 export const BLOQUES_RO: { id: number; slug: string; nombre: string }[] = [
   { id: 1, slug: 'fonologia-ortografia', nombre: 'Fonología y ortografía' },
@@ -196,6 +210,7 @@ export const PUNTOS_RO: PuntoRo[] = [
   P({ id: 'r1-diacriticos-coma', nombre: 'ș y ț con coma, nunca con cedilla', bloque: 1, nivel: 'A1',
     descripcion: 'U+0219/U+021B frente a U+015F/U+0163: la web rumana los mezcla y el alumno debe escribir y reconocer la forma normativa.',
     prereqs: [], clase: 'ortografico', calco: { castellano: 'no-aplica', latinComun: 'no-aplica' },
+    pisoCero: 'la distinción NO ES RENDERIZABLE: la de coma (U+0219) y la de cedilla (U+015F) se separan por unos píxeles y en muchas fuentes caen al mismo fallback, así que un ítem que pida distinguirlas mide la fuente instalada y no la lengua. La cobertura es canonicalRo() en la entrada y en el hash, revisarOrtografiaRo() clase cedilla sobre todo contenido nuevo, y una nota única en b1-l1',
     motivo: 'ÍTEMS: 0 POR DISEÑO (2026-09-03, dictamen del lingüista). La cobertura es `canonicalRo()` —NFC + cedilla→coma, incluida la forma descompuesta s+U+0327— en la entrada y en el hash, `revisarOrtografiaRo()` clase `cedilla` sobre todo contenido nuevo, y una nota única en la primera lección del bloque. Dos motivos, y el primero es el que decide: (1) LA DISTINCIÓN NO ES RENDERIZABLE — la de coma (U+0219) y la de cedilla (U+015F) se separan por unos píxeles y en muchas fuentes de sistema caen al mismo fallback, así que un ítem que pida distinguirlas mide la fuente instalada, no la lengua: no pasaría el propio gate de «ítems que no miden su punto». (2) No tiene consecuencia productiva: no cambia sonido, ni significado, ni la corrección percibida por un nativo — los rumanos teclean cedilla a diario con distribuciones antiguas. Es un problema de encoding, no de competencia. NO se baja el piso a 2-3: eso dejaría la puerta abierta a escribir los ocho ítems idénticos que se quieren evitar; «0 por diseño con la cobertura nombrada» es auditable y «piso 3» es una invitación', cubre: ['A1/FONOLOGÍA'],
     cita: 'Normalización obligatoria ș/ț con COMA (U+0219/U+021B), nunca con cedilla' }),
   P({ id: 'r1-diptongos', nombre: 'Diptongos ea, oa, ia, ie, io, iu', bloque: 1, nivel: 'A1',

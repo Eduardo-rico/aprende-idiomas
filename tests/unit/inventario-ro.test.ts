@@ -10,7 +10,7 @@
 import { describe, it, expect } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
-import { PUNTOS_RO, BLOQUES_RO, FORMATO_DE_CLASE_RO, DESCRIPTORES_FUERA_DEL_INVENTARIO, formatoDeRo, PISO_RO } from '@/lib/data/languages/ro/inventario-puntos';
+import { PUNTOS_RO, BLOQUES_RO, FORMATO_DE_CLASE_RO, DESCRIPTORES_FUERA_DEL_INVENTARIO, formatoDeRo, PISO_RO , pisoDePuntoRo } from '@/lib/data/languages/ro/inventario-puntos';
 import { ALL_CONCEPTS, BLOCKS } from '@/lib/data/languages/ro/curriculum';
 import { parsearCurriculo } from '@/scripts/paso0-idioma';
 
@@ -162,5 +162,41 @@ describe('inventario-ro: contra el currículo', () => {
       expect(b.lessons.length, `bloque ${b.id} sin lecciones`).toBeGreaterThan(0);
       for (const l of b.lessons) for (const c of l.conceptIds) expect(ids.has(c), `${l.id} → ${c}`).toBe(true);
     }
+  });
+});
+
+// ── PISO CERO DECLARADO ────────────────────────────────────────────────
+// Existe porque el motivo en prosa NO cambia el número: `r1-diacriticos-coma`
+// quedó declarado «0 ítems por diseño» y la foto siguió cobrándole 8
+// unidades, o sea que la declaración era una promesa que la cuenta no
+// cumplía. Y por eso mismo el campo es peligroso: es la forma más barata
+// de hacer desaparecer déficit sin producir nada. Estos tests son el
+// precio de tenerlo.
+describe('pisoCero: el piso declarado en cero', () => {
+  it('baja el piso a 0, y sólo cuando está declarado', () => {
+    const p = PUNTOS_RO.find((x) => x.nivel === 'A1' && !x.pisoCero)!;
+    expect(pisoDePuntoRo(p)).toBe(8);
+    expect(pisoDePuntoRo({ ...p, pisoCero: 'un motivo suficientemente largo para el gate' })).toBe(0);
+  });
+
+  it('ROJO: un pisoCero sin motivo de verdad no pasa', () => {
+    for (const p of PUNTOS_RO) {
+      if (p.pisoCero === undefined) continue;
+      expect(p.pisoCero.trim().length, `${p.id} declara piso cero sin motivo`).toBeGreaterThan(60);
+    }
+  });
+
+  it('los que lo declaran están CONTADOS y nombrados, no escondidos', () => {
+    const cero = PUNTOS_RO.filter((p) => p.pisoCero);
+    expect(cero.map((p) => p.id)).toEqual(['r1-diacriticos-coma']);
+  });
+
+  it('un punto con ítems publicados NO puede declarar piso cero', () => {
+    // Si ya se produjo contra él, la declaración llega tarde y taparía
+    // trabajo hecho en vez de un hueco imposible.
+    for (const p of PUNTOS_RO.filter((x) => x.pisoCero)) {
+      expect(p.formato ?? '', `${p.id}`).not.toBe('cloze-con-pista-publicado');
+    }
+    expect(PUNTOS_RO.filter((p) => p.pisoCero).every((p) => p.cubre.length > 0)).toBe(true);
   });
 });
