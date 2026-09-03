@@ -125,6 +125,17 @@ export interface PuntoLa {
    *  porque suspender por la señal sola suspendería lengua bien
    *  enseñada. */
   invarianciaJustificada?: string;
+  /** Cuántos valores distintos tiene que cubrir el lote de este punto.
+   *  Se declara sólo cuando el número importa, y **no puede pasar del
+   *  piso del peldaño**: `l12-licencias` pedía cubrir SIETE licencias con
+   *  un piso de SEIS, que es aritméticamente imposible y ningún gate por
+   *  ítem lo habría visto.
+   *
+   *  Es un campo y no una heurística sobre el texto de `varia` a
+   *  propósito: la primera versión del gate buscaba palabras de número y
+   *  marcaba «hay siete declaradas y se cubren seis», que es correcto.
+   *  Un gate que marca de más se deja de leer. */
+  valoresQueCubre?: number;
   /** Lo que queda por comprobar contra fuente y bloquea la producción. */
   abierto?: string;
 }
@@ -233,7 +244,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     excepcion: 'los bisílabos son siempre llanos, tenga la penúltima la cantidad que tenga: no hay antepenúltima donde caer' }),
 
   P({ id: 'l1-larga-por-posicion', nombre: 'Larga por naturaleza y larga por posición', bloque: 1, peldano: 'L1',
-    descripcion: 'Una vocal breve seguida de dos consonantes cuenta como sílaba larga para el acento y para el verso: «magistrī» es esdrújula pero «magister» es llana.',
+    descripcion: 'Una vocal breve seguida de dos consonantes cuenta como sílaba larga para el acento y para el verso: «magíster» es llana porque «gis» está cerrada por s, y «ténebrae» es esdrújula porque «br» es muta cum liquida y NO alarga.',
     prereqs: ['l1-acento-penultima'], clase: 'ortografico',
     calco: { ordenEnganya: 'no-aplica', herencia: 'sin-equivalente', via: 'recepcion' },
     motivo: 'regla derivable; el alumno que sólo mira el mácrón se equivoca en la mitad de las palabras',
@@ -246,7 +257,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     prereqs: ['l1-eclesiastica-ce'], clase: 'fonologico', formato: 'cloze-derivado',
     calco: { ordenEnganya: 'no-aplica', herencia: 'regalo', via: 'recepcion' },
     motivo: 'el español también tiene h muda: es regalo y se enseña en un ítem, no en un lote',
-    cubre: ['L1/FONOLOGÍA'], cita: '`h` muda', varia: 'la posición de la h: inicial, intervocálica o en los dígrafos ph/th/ch',
+    cubre: ['L1/FONOLOGÍA'], cita: '`h` muda', varia: 'nada: la regla no tiene contexto',
     invarianciaJustificada: 'la operación es la misma en todos los contextos porque la regla no tiene excepción: es propiedad de la lengua, no del lote' }),
 
   // ── b2 · Sustantivo: las cinco declinaciones y el género ────────────
@@ -266,13 +277,13 @@ export const PUNTOS_LA: PuntoLa[] = [
     varia: 'cuál de las tres funciones exige el contexto, y hay que cubrir las tres' }),
 
   P({ id: 'l2-segunda', nombre: 'Segunda declinación, incluidos los -er y el vocativo en -e', bloque: 2, peldano: 'L1',
-    descripcion: 'dominus/dominī, puer/puerī, ager/agrī (con síncopa), vir/virī. Y el vocativo singular en «-e» (domine), la única forma latina que rompe la igualdad con el nominativo.',
+    descripcion: 'dominus/dominī, puer/puerī, ager/agrī (con síncopa), vir/virī. Y el vocativo singular en «-e» (domine), una de las tres formas que rompen la igualdad con el nominativo, junto con «fīlī» y «mī».',
     prereqs: ['l2-genitivo-clave'], clase: 'paradigma',
     calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'produccion' },
     motivo: 'deriva por regla; el vocativo va aquí y no en un punto propio porque es una sola forma',
     cubre: ['L1/GRAMÁTICA · DECLINACIÓN'], cita: 'Las cinco declinaciones completas en singular y plural',
     varia: 'si el tema pierde la vocal (ager/agrī) o la conserva (puer/puerī), que NO se deduce del nominativo',
-    excepcion: 'los en -ius hacen vocativo en -ī y no en -ie: «filī», no *«filie»; y «deus» no tiene vocativo propio' }),
+    excepcion: 'los NOMBRES PROPIOS en -ius, más «fīlius» y «genius», hacen vocativo en -ī y no en -ie: «Pompōnī», «fīlī», no *«fīlie» (Allen & Greenough §49.c). La regla NO vale para los comunes en -ius, y enunciarla sin acotar haría marcar como agramaticales vocativos correctos. Atestiguado en el treebank: fīlī 20, Pompōnī 7, Cornēlī 2, Tullī 2' }),
 
   P({ id: 'l2-neutro-a', nombre: 'La -a de neutro plural: el falso regalo más caro', bloque: 2, peldano: 'L1',
     descripcion: 'templum/templa, bellum/bella, arma, castra. En español «-a» marca femenino singular; en latín marca TAMBIÉN neutro plural, y el alumno lee «arma» como «un arma» durante meses.',
@@ -314,16 +325,16 @@ export const PUNTOS_LA: PuntoLa[] = [
     motivo: 'el alumno declina «manus» como «dominus» por analogía; se corrige derivando desde el genitivo',
     cubre: ['L1/GRAMÁTICA · DECLINACIÓN'], cita: 'Las cinco declinaciones completas en singular y plural',
     varia: 'si el lema es masculino (exercitus) o de los pocos femeninos (manus, domus)',
-    excepcion: '«domus» mezcla cuarta y segunda (domī locativo, domum acusativo de dirección): es irregular y se guarda, no se deriva' }),
+    excepcion: '«domus» toma formas de 2.ª junto a las de 4.ª: ablativo «domō» (66 en el treebank), acusativo plural «domōs» (13), genitivo «domī» (4) y «domōrum» (1). Es irregular y se guarda, no se deriva' }),
 
   P({ id: 'l2-quinta', nombre: 'Quinta declinación', bloque: 2, peldano: 'L1',
-    descripcion: 'rēs/reī, diēs/diēī. Pocos lemas, todos femeninos salvo «diēs», que es de los dos géneros según el sentido.',
+    descripcion: 'rēs/reī, diēs/diēī. Pocos lemas, femeninos salvo «diēs» y «merīdiēs», que son masculinos por defecto.',
     prereqs: ['l2-genitivo-clave'], clase: 'paradigma',
     calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'produccion' },
     motivo: 'clase pequeña y regular: deriva por regla',
     cubre: ['L1/GRAMÁTICA · DECLINACIÓN'], cita: 'Las cinco declinaciones completas en singular y plural',
     varia: 'la cantidad de la «e» del genitivo, larga tras vocal (diēī) y breve tras consonante (reī)',
-    excepcion: '«diēs» es masculino en la fecha y femenino cuando significa plazo: el género no sale de la declinación' }),
+    excepcion: '«diēs» es masculino por defecto, y en singular aparece también en FEMENINO, sobre todo con día señalado o espacio de tiempo (Allen & Greenough §97.a). No es predecible: el corpus da «posterō diē» y «posterā diē» con el mismo sentido, así que no puede ser la respuesta única de un ítem' }),
 
   P({ id: 'l2-genero-3a', nombre: 'El género de la tercera no se deduce del nominativo', bloque: 2, peldano: 'L1',
     descripcion: 'mōns es masculino, mēns femenino, mare neutro, y las tres terminan igual de poco informativas. El género se guarda con el lema.',
@@ -361,11 +372,11 @@ export const PUNTOS_LA: PuntoLa[] = [
   P({ id: 'l3-nominativo', nombre: 'Nominativo: sujeto y atributo', bloque: 3, peldano: 'L1',
     descripcion: 'El sujeto y, con «sum» y verbos copulativos, también el atributo: «Caesar imperātor est» lleva los dos en nominativo.',
     prereqs: ['l3-funcion-por-desinencia'], clase: 'funcion',
-    calco: { ordenEnganya: 'si', herencia: 'regalo', via: 'recepcion' },
-    motivo: 'con dos nominativos en la frase el orden no decide cuál es sujeto: hay que leer el sentido',
-    cubre: ['L1/GRAMÁTICA · CASO'], cita: 'Complemento directo, indirecto',
+    calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'recepcion' },
+    motivo: 'con dos nominativos el orden no decide cuál es sujeto — pero en español TAMPOCO («César es general» / «general es César»), así que el instinto posicional no produce aquí ninguna lectura falsa que el español no produzca igual: `ordenEnganya` es «no». Ponerlo en «sí» era ponerlo desde la clase y no desde el error',
+    cubre: ['L1/GRAMÁTICA · CASO'], cita: '`sum` como cópula sin atributo en acusativo',
     varia: 'si hay uno o dos nominativos, y con dos, cuál es el sujeto',
-    excepcion: 'el español dice «es un general» con artículo y el latín no lo pone: no es un error del alumno, es una asimetría que hay que enseñar' }),
+    excepcion: 'dentro de un acusativo con infinitivo el atributo va en ACUSATIVO («dīcit Caesarem imperātōrem esse»), que es justo donde el alumno sobreaplica el nominativo' }),
 
   P({ id: 'l3-acusativo-od', nombre: 'Acusativo de objeto directo', bloque: 3, peldano: 'L1',
     descripcion: 'La función más frecuente del caso, y la que el español marca con «a» sólo cuando el objeto es humano y determinado.',
@@ -377,9 +388,9 @@ export const PUNTOS_LA: PuntoLa[] = [
 
   P({ id: 'l3-acusativo-doble', nombre: 'Verbos con dos acusativos', bloque: 3, peldano: 'L2',
     descripcion: 'doceō, rogō, cēlō: «puerōs grammaticam doceō» lleva dos acusativos, el de persona y el de cosa. El español pone dativo en uno de los dos.',
-    prereqs: ['l3-acusativo-od'], clase: 'trampa',
-    calco: { ordenEnganya: 'si', herencia: 'falso-regalo', via: 'recepcion' },
-    motivo: 'el instinto español lee el acusativo de persona como dativo y traduce «enseño la gramática a los niños» — que es lo que significa, pero por el camino equivocado; el ítem tiene que hacer visible que los dos son acusativo',
+    prereqs: ['l3-acusativo-od'], clase: 'trampa', formato: 'transformacion',
+    calco: { ordenEnganya: 'no', herencia: 'falso-regalo', via: 'produccion' },
+    motivo: 'el instinto español lee el acusativo de persona como dativo y llega a la traducción CORRECTA por el camino equivocado, así que en recepción el punto no puede medir nada: se examina PRODUCIENDO la construcción desde la paráfrasis · RECEPTIVO: no va por corrección, porque una frase mala sólo mide lo que el alumno pone de más y aquí la dificultad es de lectura',
     cubre: [], sinDescriptor: 'el currículo no le da descriptor propio: entra dentro de los casos de L1-L2 y se denuncia aquí en vez de colgarlo del de al lado',
     cita: 'Complemento directo, indirecto',
     varia: 'cuál de los dos acusativos aparece primero' }),
@@ -387,8 +398,8 @@ export const PUNTOS_LA: PuntoLa[] = [
   P({ id: 'l3-acusativo-extension', nombre: 'Acusativo de extensión en el espacio y en el tiempo', bloque: 3, peldano: 'L2',
     descripcion: '«decem annōs rēgnāvit», «tria mīlia passuum». Sin preposición, y el español exige «durante» o nada.',
     prereqs: ['l3-acusativo-od'], clase: 'sin-equivalente', formato: 'cloze-en-glosa',
-    calco: { ordenEnganya: 'si', herencia: 'sin-equivalente', via: 'recepcion' },
-    motivo: 'un acusativo sin preposición que NO es objeto directo: el instinto lo lee como objeto y la frase se vuelve absurda o —peor— plausible',
+    calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'recepcion' },
+    motivo: 'el español también pone el acusativo desnudo («reinó diez años»), así que la lectura por instinto da la traducción correcta y no hay lectura coherente y falsa. Lo que se examina es reconocer que NO es objeto directo cuando el verbo ya tiene uno',
     cubre: ['L2/COMPRENSIÓN LECTORA'], cita: 'los ablativos más frecuentes (instrumento, compañía con `cum`, lugar, tiempo)',
     varia: 'si es extensión temporal o espacial, y si el verbo admite además un objeto directo en la misma frase' }),
 
@@ -419,8 +430,8 @@ export const PUNTOS_LA: PuntoLa[] = [
   P({ id: 'l3-dativo-posesivo', nombre: 'Dativo posesivo: mihi est', bloque: 3, peldano: 'L2',
     descripcion: '«mihi liber est» = «tengo un libro». La posesión se dice con «ser» y dativo, no con «tener».',
     prereqs: ['l3-dativo-ci'], clase: 'sin-equivalente', formato: 'cloze-en-glosa',
-    calco: { ordenEnganya: 'si', herencia: 'sin-equivalente', via: 'recepcion' },
-    motivo: 'la lectura literal —«a mí un libro es»— no es español, así que el alumno la fuerza mal; el hueco va en la glosa para que tenga que elegir «tengo»',
+    calco: { ordenEnganya: 'no', herencia: 'sin-equivalente', via: 'recepcion' },
+    motivo: 'la lectura literal —«a mí un libro es»— NO es español, así que el alumno se da cuenta de que algo falla: la dificultad es de traducción y no de parseo, y por eso `ordenEnganya` es «no». La primera versión ponía «sí» desde la clase y no desde el error, que es como se puso mal en 17 puntos del rumano',
     cubre: ['L2/COMPRENSIÓN LECTORA'], cita: 'Los seis casos con su función primaria',
     varia: 'la persona del dativo y si el poseído es sujeto singular o plural' }),
 
@@ -547,9 +558,9 @@ export const PUNTOS_LA: PuntoLa[] = [
 
   P({ id: 'l4-indefinidos', nombre: 'quis/quī tras si, nisi, nē, num', bloque: 4, peldano: 'L3',
     descripcion: 'Tras esas cuatro palabras el indefinido pierde el «ali-»: «sī quis» = «si alguien». Es una regla mecánica y muy frecuente en la prosa.',
-    prereqs: ['l4-relativo'], clase: 'trampa',
+    prereqs: ['l4-relativo'], clase: 'trampa', formato: 'cloze-en-glosa',
     calco: { ordenEnganya: 'no', herencia: 'opaco', via: 'recepcion' },
-    motivo: 'el alumno lee «quis» como interrogativo y convierte una condicional en pregunta',
+    motivo: 'el alumno lee «quis» como interrogativo y convierte una condicional en pregunta · RECEPTIVO: no va por corrección, porque una frase mala sólo mide lo que el alumno pone de más y aquí la dificultad es de lectura',
     cubre: ['L3/COMPRENSIÓN LECTORA'], cita: 'Interrogativas indirectas dobles', sinDescriptor: 'el currículo no le da descriptor propio; se declara aquí',
     varia: 'cuál de las cuatro palabras dispara la regla' }),
 
@@ -567,7 +578,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     descripcion: 'amāre (1.ª), monēre (2.ª), regere (3.ª), audīre (4.ª), capere (mixta). La cantidad de la vocal separa monēre de regere, y sin mácrón no se distinguen.',
     prereqs: ['l5-partes-principales', 'l1-cantidad-fonemica'], clase: 'paradigma',
     calco: { ordenEnganya: 'no', herencia: 'falso-regalo', via: 'produccion' },
-    motivo: 'el instinto asigna la conjugación por el descendiente español y falla: «hacer» es de la 3.ª latina (facere) y no de la 2.ª',
+    motivo: 'el instinto asigna la conjugación por el descendiente español y falla: «leer» es de la 3.ª latina (legere) y no de la 2.ª, y «vender» de la 3.ª (vēndere) y no de la 2.ª',
     cubre: ['L1/GRAMÁTICA · CONJUGACIÓN'], cita: 'reconocidas por la **segunda** parte principal y no por el infinitivo español',
     varia: 'la conjugación, y hay que traer la mixta, que es la que nadie ve',
     excepcion: 'la mixta (capiō, capere) tiene infinitivo de 3.ª y presente de 4.ª: no encaja en el reparto y el que sobreaplique la conjugará entera como 3.ª' }),
@@ -586,8 +597,8 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'produccion' },
     motivo: 'regla única y valor transferible: deriva por regla',
     cubre: ['L1/GRAMÁTICA · CONJUGACIÓN'], cita: 'Presente, imperfecto y futuro de indicativo activo',
-    varia: 'la conjugación, porque la vocal que precede al infijo cambia',
-    invarianciaJustificada: 'el infijo -bā- es el mismo en las cinco clases y no admite excepción: la uniformidad es de la lengua' }),
+    varia: 'la conjugación, porque el infijo es -bā- en la 1.ª y la 2.ª y -ēbā- en las otras tres',
+    excepcion: 'los dos verbos más frecuentes del nivel NO llevan infijo: «sum» hace «eram» (27 veces en el treebank) y «possum» hace «poteram»; «eō» hace «ībam». Un alumno que sobreaplique dirá *«esbam»' }),
 
   P({ id: 'l5-futuro-dos-formas', nombre: 'El futuro tiene DOS marcas según la conjugación', bloque: 5, peldano: 'L1',
     descripcion: '-bō/-bi- en la 1.ª y la 2.ª (amābō), pero -am/-ē- en la 3.ª y la 4.ª (regam, regēs). Y «regam» es a la vez futuro de indicativo y presente de subjuntivo.',
@@ -620,9 +631,9 @@ export const PUNTOS_LA: PuntoLa[] = [
     prereqs: ['l5-presente'], clase: 'paradigma',
     calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'produccion' },
     motivo: 'deriva por regla salvo los cuatro, que se guardan',
-    cubre: ['L1/GRAMÁTICA · CONJUGACIÓN'], cita: 'Imperativo',
+    cubre: ['L1/GRAMÁTICA · CONJUGACIÓN'], cita: 'Irregulares de alta frecuencia. Imperativo.',
     varia: 'si el verbo es de los cuatro irregulares o no',
-    excepcion: 'la prohibición NO se dice con imperativo negativo: es «nōlī facere» o «nē fēceris». Un hispanohablante produce *«nōn fac» por instinto' }),
+    excepcion: 'en prosa clásica la prohibición no usa imperativo negativo: es «nōlī facere» o «nē fēceris». Pero en VERSO «nē» + imperativo sí aparece —«Tū nē cēde malīs», Eneida VI.95, que está en el treebank y dentro de la lectura declarada de L4—, así que el asterisco se acota a la prosa. Y el error *«nōn fac» es de ANGLÓFONO, no de hispanohablante: el inglés prohíbe con el imperativo desnudo y el español con subjuntivo («no hagas»), que está mucho más cerca de la forma correcta' }),
 
   P({ id: 'l5-pro-drop', nombre: 'El sujeto pronominal sólo aparece si es enfático', bloque: 5, peldano: 'L1',
     descripcion: 'La desinencia lleva la persona, así que «ego» sólo se pone para contrastar. El español hace lo mismo: es regalo puro.',
@@ -630,7 +641,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'recepcion' },
     motivo: 'transfiere; se enseña en un ítem y se marca como regalo para cobrarlo temprano',
     cubre: ['L1/GRAMÁTICA · CONJUGACIÓN'], sinDescriptor: 'el currículo lo cita en la tipología («pro-drop») sin descriptor propio',
-    cita: 'pro-drop',
+    cita: 'concordancia, pro-drop: todo eso el hispanohablante lo opera desde niño',
     varia: 'si el pronombre expreso es enfático o contrastivo',
     invarianciaJustificada: 'la regla es la misma que el alumno ya aplica en español; un lote variado aquí sería inventar dificultad' }),
 
@@ -676,13 +687,13 @@ export const PUNTOS_LA: PuntoLa[] = [
     motivo: 'el español no tiene pasiva sintética: hay que aprender formas, no una construcción',
     cubre: ['L2/GRAMÁTICA · VOZ PASIVA'], cita: 'Produce y traduce la pasiva completa',
     varia: 'la persona y la conjugación',
-    excepcion: 'la 2.ª singular «amāris» coincide con el genitivo de un sustantivo de la 3.ª en algunos lemas: la homonimia obliga a mirar el contexto' }),
+    excepcion: 'la 2.ª singular «amāris» es homógrafa de «amārīs», ablativo plural de «amārus», y las separa SÓLO la cantidad — que es justo lo que este curso marca. La primera versión afirmaba una homonimia con el genitivo de un sustantivo de la 3.ª sin nombrar ni un lema, y el corpus no da ninguno' }),
 
   P({ id: 'l6-pasiva-perifrastica', nombre: 'Pasiva del perfectum: participio + sum, y el participio CONCUERDA', bloque: 6, peldano: 'L2',
     descripcion: '«amātus est». El participio concuerda con el sujeto en género y número, cosa que el español también hace, pero «est» aquí no es «es» sino «fue».',
-    prereqs: ['l6-pasiva-infectum'], clase: 'trampa',
+    prereqs: ['l6-pasiva-infectum'], clase: 'trampa', formato: 'cloze-en-glosa',
     calco: { ordenEnganya: 'no', herencia: 'falso-regalo', via: 'recepcion' },
-    motivo: 'el error diana es leer «amātus est» como presente («es amado»): la forma es de presente y el valor de pasado. Lo produce cualquier hispanohablante',
+    motivo: 'el error diana es leer «amātus est» como presente («es amado»): la forma es de presente y el valor de pasado. Lo produce cualquier hispanohablante · RECEPTIVO: no va por corrección, porque una frase mala sólo mide lo que el alumno pone de más y aquí la dificultad es de lectura',
     cubre: ['L2/GRAMÁTICA · VOZ PASIVA'], cita: 'incluida la perifrástica del perfecto (`amātus est`)',
     varia: 'el tiempo del auxiliar (est/erat/erit), que corre un tiempo respecto al valor' }),
 
@@ -696,12 +707,13 @@ export const PUNTOS_LA: PuntoLa[] = [
     excepcion: 'los SEMIdeponentes (audeō, gaudeō, soleō, fīdō) son activos en el infectum y deponentes en el perfectum: la regla se rompe a mitad del paradigma' }),
 
   P({ id: 'l6-verbos-impersonales', nombre: 'Impersonales con acusativo o genitivo', bloque: 6, peldano: 'L3',
-    descripcion: 'miseret, paenitet, pudet, taedet, piget: «mē paenitet» = «me arrepiento», con el sujeto lógico en acusativo. Y «licet», «oportet» con dativo.',
+    descripcion: 'Los frecuentes de verdad, medidos en el treebank: «licet» (103) con DATIVO, «oportet» (148) con acusativo con infinitivo o subjuntivo —nunca con dativo—, y «necesse est». Los de sentimiento (paenitet, miseret, piget, pudet, taedet) suman 10 tokens en 227.301 y se mencionan sin bloque propio; el corpus usa en su lugar los deponentes personales «misereor» (34) y «paeniteō» (20).',
     prereqs: ['l6-deponentes'], clase: 'sin-equivalente', formato: 'cloze-en-glosa',
     calco: { ordenEnganya: 'si', herencia: 'falso-regalo', via: 'recepcion' },
-    motivo: 'el acusativo se lee como objeto y la frase queda sin sujeto: el alumno inventa uno. El español tiene «me pesa», que ayuda, pero sólo en un par de verbos',
+    motivo: 'el alumno busca un sujeto nominativo que no existe y lo inventa; y con «oportet» le pone dativo por analogía con «licet». El español tiene «me pesa» y «conviene que», que ayudan en parte',
     cubre: ['L3/COMPRENSIÓN LECTORA'], cita: 'Los seis casos con su función primaria', sinDescriptor: 'el currículo no le da descriptor propio; se declara',
-    varia: 'el caso que rige el impersonal (acusativo, genitivo, dativo)' }),
+    varia: 'el impersonal y lo que rige: dativo (licet), completiva con infinitivo o subjuntivo (oportet), genitivo de causa (paenitet)',
+    excepcion: '«oportet» NO rige dativo: medido en el treebank, 117 ccomp y 11 csubj frente a UN dativo. La regla «impersonal + dativo» es de «licet» y no del grupo' }),
 
   // ── b7 · Subjuntivo y sus usos ──────────────────────────────────────
   P({ id: 'l7-morfologia-subj', nombre: 'Los cuatro tiempos del subjuntivo', bloque: 7, peldano: 'L2',
@@ -732,9 +744,9 @@ export const PUNTOS_LA: PuntoLa[] = [
 
   P({ id: 'l7-ut-consecutiva', nombre: 'Consecutivas con ut y su anticipador', bloque: 7, peldano: 'L2',
     descripcion: '«tam fortis est ut vincat». La principal lleva un anticipador (tam, tantus, ita, sīc, adeō) que avisa de que viene una consecutiva.',
-    prereqs: ['l7-ut-final'], clase: 'trampa',
+    prereqs: ['l7-ut-final'], clase: 'trampa', formato: 'cloze-en-glosa',
     calco: { ordenEnganya: 'no', herencia: 'falso-regalo', via: 'recepcion' },
-    motivo: 'el español pone INDICATIVO en la consecutiva («tan fuerte que vence») y el latín subjuntivo: el alumno lee un valor final donde hay uno consecutivo',
+    motivo: 'el español pone INDICATIVO en la consecutiva («tan fuerte que vence») y el latín subjuntivo: el alumno lee un valor final donde hay uno consecutivo · RECEPTIVO: no va por corrección, porque una frase mala sólo mide lo que el alumno pone de más y aquí la dificultad es de lectura',
     cubre: ['L2/GRAMÁTICA · SUBJUNTIVO'], cita: 'consecutivas con `ut`',
     varia: 'el anticipador, que es la pista, y hay que traer ítems SIN anticipador para que no se resuelva por el reflejo',
     excepcion: 'la consecutiva negativa lleva «ut nōn» y NO «nē»: es exactamente al revés que la final, y quien aplique la regla de la final se equivocará siempre' }),
@@ -758,25 +770,26 @@ export const PUNTOS_LA: PuntoLa[] = [
 
   P({ id: 'l7-interrogativa-indirecta', nombre: 'La interrogativa indirecta va en subjuntivo', bloque: 7, peldano: 'L2',
     descripcion: '«rogō quid faciās». El español pone indicativo («pregunto qué haces») y el latín subjuntivo, sin ningún matiz de duda.',
-    prereqs: ['l7-no-coincide-espanol'], clase: 'trampa',
+    prereqs: ['l7-no-coincide-espanol'], clase: 'trampa', formato: 'cloze-en-glosa',
     calco: { ordenEnganya: 'no', herencia: 'falso-regalo', via: 'recepcion' },
-    motivo: 'el subjuntivo aquí no significa nada, es puramente formal: el alumno le busca un valor y lo traduce mal',
+    motivo: 'el subjuntivo aquí no significa nada, es puramente formal: el alumno le busca un valor y lo traduce mal · RECEPTIVO: no va por corrección, porque una frase mala sólo mide lo que el alumno pone de más y aquí la dificultad es de lectura',
     cubre: ['L2/GRAMÁTICA · SUBJUNTIVO'], cita: 'Interrogativa indirecta en subjuntivo',
     varia: 'la partícula interrogativa (quid, num, an, utrum… an)' }),
 
   P({ id: 'l7-consecutio', nombre: 'Concordancia de tiempos', bloque: 7, peldano: 'L3',
-    descripcion: 'Principal en tiempo principal → subordinada en presente o perfecto de subjuntivo; principal en tiempo histórico → imperfecto o pluscuamperfecto. Es mecánica y sin excepciones útiles.',
+    descripcion: 'Principal en tiempo principal → subordinada en presente o perfecto de subjuntivo; principal en tiempo histórico → imperfecto o pluscuamperfecto.',
     prereqs: ['l7-morfologia-subj'], clase: 'paradigma',
     calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'produccion' },
     motivo: 'deriva por regla desde el tiempo de la principal; el español tiene una regla parecida y transfiere bastante',
     cubre: ['L3/GRAMÁTICA · CONSECUTIO'], cita: 'Aplica la concordancia de tiempos',
-    varia: 'el tiempo de la principal y si la subordinada es simultánea o anterior' }),
+    varia: 'el tiempo de la principal y si la subordinada es simultánea o anterior',
+    excepcion: 'dos, y son justo donde el alumno saca 8/8 sobregeneralizando: la REPRAESENTATIO (el presente histórico admite secuencia primaria) y el perfecto de subjuntivo en la consecutiva tras principal histórica, para subrayar el hecho ocurrido (Allen & Greenough §482-485, §485.c)' }),
 
   P({ id: 'l7-condicionales', nombre: 'Los tres períodos condicionales y el irreal', bloque: 7, peldano: 'L3',
     descripcion: 'Real con indicativo; potencial con presente de subjuntivo; irreal con imperfecto (presente) o pluscuamperfecto (pasado) EN LAS DOS RAMAS.',
     prereqs: ['l7-consecutio'], clase: 'trampa',
     calco: { ordenEnganya: 'no', herencia: 'falso-regalo', via: 'produccion' },
-    motivo: 'el español pone imperfecto de subjuntivo en la prótasis y CONDICIONAL en la apódosis; el latín pone subjuntivo en las dos. El error diana —*«sī habērem, darēbam»— lo produce un hispanohablante por transferencia directa',
+    motivo: 'el error diana medible es confundir POTENCIAL con IRREAL —*«sī habeam, dem» por «sī habērem, darem»—, porque el español usa el MISMO imperfecto de subjuntivo para los dos. La forma *«darēbam» que la primera versión de este punto daba como error diana no existe ni es formable, así que no la produce nadie',
     cubre: ['L3/GRAMÁTICA · CONDICIONALES'], cita: 'el irreal de presente va en imperfecto de subjuntivo en las DOS ramas (`sī habērem, darem`)',
     varia: 'el tipo de período, y hay que traer los tres' }),
 
@@ -838,7 +851,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     prereqs: ['l8-infinitivo-sustantivo', 'l3-acusativo-od'], clase: 'sin-equivalente',
     calco: { ordenEnganya: 'si', herencia: 'sin-equivalente', via: 'produccion' },
     dificultadEsOmision: true,
-    motivo: 'misma razón que el ablativo absoluto: el alumno no lo produce, y además al leerlo toma el acusativo por objeto directo de la principal, lo que da una frase coherente y falsa («dice a César venir»). Transformación desde la completiva española',
+    motivo: 'misma razón que el ablativo absoluto: el alumno no lo produce. Y al leerlo toma el acusativo por objeto indirecto y produce una lectura coherente y falsa: «LE DICE A CÉSAR QUE VENGA», que es español impecable y significa otra cosa. (La primera versión daba como lectura falsa «dice a César venir», que no es español sino el ECM inglés: un error de anglófono colado desde un manual.) Transformación desde la completiva española',
     cubre: ['L2/GRAMÁTICA · ORATIO OBLIQUA'], cita: 'identifica su sujeto **en acusativo** y su verbo **en infinitivo**',
     varia: 'el tiempo del infinitivo, que marca anterioridad, simultaneidad o posterioridad respecto a la principal' }),
 
@@ -865,8 +878,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'sin-equivalente', via: 'recepcion' },
     motivo: 'punto pequeño y se declara pequeño: dos usos cerrados. No se infla para que parezca un bloque',
     cubre: ['L3/GRAMÁTICA · SUPINO'], cita: 'Reconoce las dos formas del supino y su uso restringido (`mīrābile dictū`, `vēnērunt rogātum`)',
-    varia: 'cuál de los dos supinos, y no hay más que variar',
-    invarianciaJustificada: 'el supino tiene exactamente dos usos en toda la lengua: pedir más variación sería pedir latín que no existe' }),
+    varia: 'cuál de los tres usos: finalidad tras verbo de movimiento, limitación tras adjetivo, y el infinitivo de futuro pasivo «factum īrī» (Allen & Greenough §509.b), que la primera versión de este punto se dejaba al afirmar que eran dos' }),
 
   P({ id: 'l8-infinitivo-historico', nombre: 'Infinitivo histórico', bloque: 8, peldano: 'L3',
     descripcion: 'En narración viva, el infinitivo hace de verbo principal en pasado: «hostēs fugere, clāmāre, cadere». Frecuente en Salustio y en Livio.',
@@ -911,9 +923,9 @@ export const PUNTOS_LA: PuntoLa[] = [
 
   P({ id: 'l9-temporales', nombre: 'Temporales: postquam, ubi, simul ac, dum', bloque: 9, peldano: 'L2',
     descripcion: 'Casi todas con indicativo, y «dum» con presente aunque la principal esté en pasado.',
-    prereqs: ['l7-cum-historico'], clase: 'trampa',
+    prereqs: ['l5-presente'], clase: 'trampa', formato: 'cloze-en-glosa',
     calco: { ordenEnganya: 'no', herencia: 'falso-regalo', via: 'recepcion' },
-    motivo: 'el «dum» + presente en contexto pasado se traduce en pasado, y el alumno lo lee en presente',
+    motivo: 'el «dum» + presente en contexto pasado se traduce en pasado, y el alumno lo lee en presente · RECEPTIVO: no va por corrección, porque una frase mala sólo mide lo que el alumno pone de más y aquí la dificultad es de lectura',
     cubre: ['L2/COMPRENSIÓN LECTORA'], cita: '`Cum` histórico, causal y concesivo', sinDescriptor: 'declarado: el currículo agrupa las temporales bajo el cum',
     varia: 'la conjunción, y hay que traer «dum» porque es la que rompe la regla',
     excepcion: '«dum» con sentido de «mientras» va en presente siempre; con sentido de «hasta que» va en subjuntivo: la misma palabra con dos gramáticas' }),
@@ -936,13 +948,13 @@ export const PUNTOS_LA: PuntoLa[] = [
 
   // ── b10 · Orden de palabras, hipérbaton y período ───────────────────
   P({ id: 'l10-orden-neutro', nombre: 'El orden neutro es SOV, y es sólo una tendencia', bloque: 10, peldano: 'L2',
-    descripcion: 'El verbo tiende al final y el genitivo precede a su núcleo, pero es estadística, no gramática: cualquier orden es correcto.',
+    descripcion: 'El verbo tiende al final, pero es estadística y no gramática. Y el genitivo NO precede a su núcleo: medido sobre los 227.301 tokens del treebank, el 73,6 % va pospuesto (y en el subcorpus más clásico, el 59,2 %). La regla escolar de que el genitivo antecede es falsa.',
     prereqs: ['l3-funcion-por-desinencia'], clase: 'funcion',
     calco: { ordenEnganya: 'si', herencia: 'sin-equivalente', via: 'recepcion' },
     motivo: 'el alumno que aprende «el verbo va al final» como regla lo usa para parsear, y falla en cuanto el verbo no está al final — que es a menudo',
     cubre: ['L2/COMPRENSIÓN LECTORA'], cita: 'La oración simple con orden libre', sinDescriptor: 'declarado: el currículo lo trata dentro del eje de la desinencia',
     varia: 'la posición del verbo, y hay que traer ítems donde NO esté al final',
-    excepcion: '«est» y los auxiliares suelen ir en segunda posición y no al final: la regla escolar del verbo final falla justo en el verbo más frecuente' }),
+    excepcion: '«est» es el verbo que menos respeta la tendencia: medido, 645 veces en posición final o penúltima, 422 en segunda y 1.804 en otra. O sea que ni «suele» ir en segunda ni deja de ir al final — la regla escolar del verbo final falla justo en el verbo más frecuente, pero no en la dirección que suele decirse' }),
 
   P({ id: 'l10-enfasis-por-posicion', nombre: 'La posición marca énfasis, no función', bloque: 10, peldano: 'L3',
     descripcion: 'Primera y última posición son las enfáticas. Al liberar el orden de la función, el latín lo dedica entero al énfasis.',
@@ -1002,10 +1014,10 @@ export const PUNTOS_LA: PuntoLa[] = [
     varia: 'la clase de palabra y si es transparente o no' }),
 
   P({ id: 'l11-falsos-regalos', nombre: 'Los falsos regalos: la forma se reconoce y el sentido no', bloque: 11, peldano: 'L1',
-    descripcion: 'casa (cabaña, no casa), hostis (enemigo, no huésped), liber (libro / libre / los hijos), virtūs (valor, no virtud moral), familia (toda la casa incluidos los esclavos), pānis.',
+    descripcion: 'hostis (194 en el treebank: enemigo público, frente a «hospes», que es huésped Y anfitrión a la vez), virtūs (187: valor y hombría, no virtud moral), familia (33: toda la casa incluidos los esclavos), dēbeō (deber dinero, no obligación moral), probō (aprobar y probar), parēns (progenitor, no pariente). Y el par de cantidad: «liber» (libro, i breve), «līber» (libre, ī larga) y «līberī» (los hijos) — tres palabras que sin mácrón se escriben igual.',
     prereqs: ['l11-nucleo-800'], clase: 'lexico',
     calco: { ordenEnganya: 'no', herencia: 'falso-regalo', via: 'recepcion' },
-    motivo: 'la flashcard enfrenta el sentido latino y el del descendiente español: sin el contraste, el alumno confirma su error cada vez que acierta la forma',
+    motivo: 'la flashcard enfrenta el sentido latino y el del descendiente español. Y los ejemplos están elegidos para un HISPANOHABLANTE: la trampa «hostis = huésped» es inglesa (host < hospes) y para nosotros «hueste» y «hostil» ya apuntan a enemigo, así que el falso regalo real de esa familia es «hospes», que es huésped y anfitrión a la vez',
     cubre: ['L1/LÉXICO'], cita: 'reconoce los 60 **falsos regalos** del nivel',
     varia: 'el tipo de desplazamiento (estrechamiento, ampliación, cambio de dominio)' }),
 
@@ -1013,7 +1025,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     descripcion: 'ratiō no es «razón» en la mayoría de sus usos; fidēs no es «fe»; officium no es «oficio»; auctōritās no es «autoridad» sin más. Son los que más daño hacen porque aparecen en el argumento.',
     prereqs: ['l11-falsos-regalos'], clase: 'lexico',
     calco: { ordenEnganya: 'no', herencia: 'falso-regalo', via: 'recepcion' },
-    motivo: 'el alumno de L3 ya no consulta estas palabras porque «las sabe»: el error es invisible y se acumula en la traducción entera',
+    motivo: 'el alumno de L3 ya no consulta estas palabras porque «las sabe»: el error es invisible y se acumula en la traducción entera. ACOTADO A LA PROSA CLÁSICA: en la Vulgata —que es la puerta de entrada del curso en L1— «fidēs» SÍ es «fe», así que el punto tiene que decir de qué latín habla o contradice lo que el alumno aprendió dos peldaños antes',
     cubre: ['L3/LÉXICO'], cita: 'sus **falsos regalos cultos**: `ratiō` no es «razón» en la mayoría de sus usos',
     varia: 'el sentido concreto que el contexto impone, y hay que traer varios del mismo lema' }),
 
@@ -1061,9 +1073,9 @@ export const PUNTOS_LA: PuntoLa[] = [
 
   P({ id: 'l11-preposiciones-caso', nombre: 'Preposiciones que rigen dos casos', bloque: 11, peldano: 'L2',
     descripcion: 'in, sub, super: con acusativo indican dirección, con ablativo situación. «in urbem» (hacia la ciudad) frente a «in urbe» (en la ciudad).',
-    prereqs: ['l3-ablativo-abanico', 'l3-acusativo-od'], clase: 'trampa',
+    prereqs: ['l3-ablativo-abanico', 'l3-acusativo-od'], clase: 'trampa', formato: 'cloze-en-glosa',
     calco: { ordenEnganya: 'si', herencia: 'sin-equivalente', via: 'recepcion' },
-    motivo: 'el español usa la misma preposición para las dos («en la ciudad» / «a la ciudad» con verbos distintos): el alumno ignora el caso y pierde la mitad del sentido',
+    motivo: 'el español usa la misma preposición para las dos («en la ciudad» / «a la ciudad» con verbos distintos): el alumno ignora el caso y pierde la mitad del sentido · RECEPTIVO: no va por corrección, porque una frase mala sólo mide lo que el alumno pone de más y aquí la dificultad es de lectura',
     cubre: ['L2/COMPRENSIÓN LECTORA'], cita: 'los ablativos más frecuentes (instrumento, compañía con `cum`, lugar, tiempo)',
     varia: 'la preposición y el caso, con los dos valores presentes' }),
 
@@ -1107,21 +1119,23 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'si', herencia: 'sin-equivalente', via: 'recepcion' },
     motivo: 'cada licencia rompe una regla que el alumno acaba de automatizar: sin conocerlas, lee la forma como un error del texto',
     cubre: ['L4/GRAMÁTICA · POÉTICO'], cita: 'Reconoce las licencias del verso: dativo de agente, genitivo griego, acusativo de relación, síncopa',
-    varia: 'la licencia, y hay que cubrirlas todas: seis ítems de síncopa son un ítem repetido seis veces' }),
+    valoresQueCubre: 6,
+    varia: 'la licencia. Las declaradas son SIETE y el piso de L4 es SEIS, así que se cubren las seis de mayor frecuencia en Virgilio y Ovidio —dativo de agente, acusativo de relación, síncopa, tmesis, plural poético y genitivo griego— y el ACUSATIVO GRIEGO queda fuera con motivo escrito, no por olvido' }),
 
   P({ id: 'l12-lexico-poetico', nombre: 'El léxico poético es otro estrato', bloque: 12, peldano: 'L4',
-    descripcion: 'ēnsis por gladius, puppis por nāvis, aethēr, ratis, undā. No son sinónimos elegantes: son las palabras que el hexámetro admite.',
+    descripcion: 'ēnsis por gladius, puppis por nāvis, aethēr, ratis, unda (u BREVE y en nominativo: el currículo escribía «ūndā», con un mácron que no existe y en ablativo, dentro de un curso cuyo gate es la cantidad). No son sinónimos elegantes: son las palabras que el hexámetro admite.',
     prereqs: ['l11-nucleo-800'], clase: 'lexico',
     calco: { ordenEnganya: 'no', herencia: 'opaco', via: 'recepcion' },
     motivo: 'flashcard de contraste con la palabra de prosa, que es lo que hace visible que son dos estratos',
     cubre: ['L4/LÉXICO · POÉTICO'], cita: 'Domina el léxico poético que no coincide con el de la prosa',
-    varia: 'el par prosa/verso, y si el poético tiene además motivación métrica' }),
+    varia: 'el par prosa/verso, y si el poético tiene además motivación métrica',
+    abierto: 'los pares hay que sacarlos de la Eneida y las Metamorfosis, no del treebank: éste es de prosa y da «ēnsis» UNA vez frente a «gladius» 45' }),
 
   // ── b13 · Registro, género y variedad ───────────────────────────────
   P({ id: 'l13-vulgata-sintaxis', nombre: 'La sintaxis de la Vulgata: parataxis y orden romance', bloque: 13, peldano: 'L1',
     descripcion: 'Jerónimo coordina donde el clásico subordina, y su orden de palabras se parece mucho más al español. Por eso el curso empieza aquí.',
-    prereqs: ['l10-orden-neutro'], clase: 'pragmatico',
-    calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'recepcion' },
+    prereqs: [], clase: 'pragmatico',
+    calco: { ordenEnganya: 'no', herencia: 'no-aplica', via: 'recepcion' },
     motivo: 'se examina por mediación: comparar la misma idea en Jerónimo y en un clásico y decir qué cambia',
     cubre: ['L1/CULTURA'], cita: 'qué separa el latín de Jerónimo del latín clásico en tres rasgos concretos (parataxis, orden más romance, léxico cristiano)',
     varia: 'el rasgo comparado (parataxis, orden, léxico)' }),
@@ -1165,6 +1179,26 @@ export const PUNTOS_LA: PuntoLa[] = [
     motivo: 'mediación; y es la garantía de honestidad del sello de la voz: el alumno sabe qué está oyendo',
     cubre: ['L1/FONOLOGÍA'], cita: 'contrastada explícitamente con la restituida para que el alumno sepa que está eligiendo una de tres lecturas legítimas',
     varia: 'el rasgo contrastado entre las dos pronunciaciones' }),
+
+  // ── Puntos añadidos por el ataque del latinista (2026-09-03) ────────
+  P({ id: 'l1-eclesiastica-gn', nombre: 'gn se lee /ɲ/', bloque: 1, peldano: 'L1',
+    descripcion: 'agnus = «áñus», magnus = «máñus», rēgnum = «réñum». Es la regla de lectura eclesiástica más frecuente de todas y el italiano la da gratis.',
+    prereqs: ['l1-eclesiastica-ce'], clase: 'fonologico', formato: 'cloze-derivado',
+    calco: { ordenEnganya: 'no-aplica', herencia: 'falso-regalo', via: 'recepcion' },
+    motivo: 'HUECO QUE ENCONTRÓ EL LATINISTA: el currículo nombra la regla en el descriptor de FONOLOGÍA de L1 y era la única de las siete sin punto, con 2.014 tokens medidos en el treebank (magnus 515, cognōscō 246, rēgnum 190, signum 138, ignis 85, dignus 80). Y es de las más hispanohablantes: el español TIENE /ɲ/ como fonema pero no el dígrafo, así que lee «magno» con /gn/',
+    cubre: ['L1/FONOLOGÍA'], cita: '`gn` = /ɲ/ (*agnus*)',
+    varia: 'la posición del dígrafo y si el descendiente español conserva la ñ (signum→seña) o no (magnus→magno)' }),
+
+  P({ id: 'l3-dativo-verbos', nombre: 'Verbos que rigen DATIVO donde el español pone objeto directo', bloque: 3, peldano: 'L2',
+    descripcion: 'crēdō, pāreō, persuādeō, noceō, placeō, serviō, imperō, resistō, ignōscō, faveō, invideō, parcō, studeō, cōnfīdō, nūbō. Y el doble dativo de César: «auxiliō mittere», «praesidiō esse».',
+    prereqs: ['l3-dativo-ci'], clase: 'trampa', formato: 'transformacion',
+    calco: { ordenEnganya: 'no', herencia: 'falso-regalo', via: 'produccion' },
+    dificultadEsOmision: false,
+    motivo: 'EL HUECO MÁS CARO QUE ENCONTRÓ EL LATINISTA, y el más hispanohablante del inventario: 800 tokens medidos (crēdō 310, placeō 99, imperō 66, serviō 57, noceō 52…) y cero puntos. El español usa «a» tanto para el objeto directo humano como para el indirecto —«creer A alguien», «obedecer A alguien»—, así que el instinto NO PUEDE separar los que rigen dativo de los que rigen acusativo, y produce acusativo porque el descendiente español es transitivo. Es error de PRODUCCIÓN: va por transformación',
+    cubre: [], sinDescriptor: 'el currículo no le da descriptor propio y debería: se denuncia aquí en vez de colgarlo del dativo de L1',
+    cita: 'Complemento directo, indirecto',
+    varia: 'el verbo, y hay que traer también verbos que SÍ rigen acusativo como control — si no, el alumno aprende «los verbos raros llevan dativo» y sobreaplica',
+    excepcion: 'algunos alternan según el sentido: «cōnsulō» + acusativo es «consultar a alguien» y + dativo es «velar por alguien». La regla no es por verbo sino por verbo-y-sentido' }),
 
 ];
 

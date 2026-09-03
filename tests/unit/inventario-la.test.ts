@@ -193,3 +193,68 @@ describe('el presupuesto', () => {
     expect(piso).toBeLessThan(1400);
   });
 });
+
+// ── Invariantes que salieron del ataque del latinista adversarial ────
+describe('lo que el ataque del latinista destapó, convertido en gate', () => {
+  it('un punto RECEPTIVO no puede examinarse por CORRECCIÓN', () => {
+    // El hallazgo sistemático del ataque (§4.4), y es el más valioso:
+    // `correccion` enseña una frase mala y pide arreglarla, o sea que es
+    // un formato de PRODUCCIÓN. Un punto cuya dificultad declarada es de
+    // LECTURA no tiene frase mala que enseñar — en `l6-pasiva-perifrastica`
+    // el error diana es leer «amātus est» como presente, y «amātus est» no
+    // tiene nada que corregir.
+    //
+    // Siete puntos caían en esto **por defecto de clase**, sin que nadie
+    // lo escribiera: `FORMATO_DE_CLASE_LA` mapea `trampa → correccion` y
+    // no mira la vía. Es el mismo patrón que `dificultadEsOmision`, en la
+    // dirección contraria.
+    const malos = PUNTOS_LA
+      .filter((p) => p.calco.via === 'recepcion' && formatoDeLa(p) === 'correccion')
+      .map((p) => `${p.id} (clase ${p.clase})`);
+    expect(malos, `receptivos con formato de producción:\n${malos.join('\n')}`).toEqual([]);
+  });
+
+  it('ningún punto declara `invarianciaJustificada` Y `varia` que se contradigan', () => {
+    // `l1-h-muda` decía a la vez «varía la posición de la h» y «la
+    // operación es la misma en todos los contextos». Uno de los dos
+    // sobra, y el que sobra es el `varia`.
+    for (const p of PUNTOS_LA) {
+      if (p.invarianciaJustificada && p.varia.length > 60) {
+        throw new Error(`${p.id}: declara invariancia justificada Y un \`varia\` largo — se contradicen`);
+      }
+    }
+  });
+
+  it('los prereqs no van de un peldaño ALTO a uno bajo', () => {
+    // Dos puntos quedaron bloqueados detrás de una puerta de un peldaño
+    // posterior: `l9-temporales` (L2) dependía de `l7-cum-historico` (L3),
+    // y `l13-vulgata-sintaxis` (L1) —que explica por qué el curso empieza
+    // por la Vulgata— dependía de un punto de L2.
+    const orden = { L1: 1, L2: 2, L3: 3, L4: 4 } as const;
+    const por = new Map(PUNTOS_LA.map((p) => [p.id, p]));
+    const malos: string[] = [];
+    for (const p of PUNTOS_LA) {
+      for (const r of p.prereqs) {
+        const q = por.get(r);
+        if (q && orden[q.peldano] > orden[p.peldano]) malos.push(`${p.id} (${p.peldano}) ← ${r} (${q.peldano})`);
+      }
+    }
+    expect(malos, `prereqs que van hacia atrás en la escalera:\n${malos.join('\n')}`).toEqual([]);
+  });
+
+  it('un punto no puede pedir más valores que el piso de su peldaño', () => {
+    // `l12-licencias` pedía cubrir SIETE licencias con un piso de SEIS.
+    // Aritméticamente imposible, y ningún gate por ítem lo habría visto.
+    //
+    // La primera versión de este test buscaba palabras de número en el
+    // texto de `varia` y marcaba la redacción corregida —«las declaradas
+    // son siete y se cubren seis»—, que es exactamente lo que hay que
+    // escribir. Un gate que marca de más se deja de leer, así que el dato
+    // se declara en un campo.
+    for (const p of PUNTOS_LA) {
+      if (p.valoresQueCubre === undefined) continue;
+      expect(p.valoresQueCubre, `${p.id}: cubre ${p.valoresQueCubre} valores y el piso de ${p.peldano} es ${PISO_LA(p.peldano)}`)
+        .toBeLessThanOrEqual(PISO_LA(p.peldano));
+    }
+  });
+});

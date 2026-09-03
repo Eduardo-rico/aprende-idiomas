@@ -1730,7 +1730,7 @@ Más: 120.000 palabras de lectura extensiva y retención SRS a 7 días ≥85 % s
 - [FONOLOGÍA · MÉTRICA] Escande 20 hexámetros marcando cantidades, cesura y elisión, con ≥80 %, apoyándose en los mácrons y en la posición.
 - [FONOLOGÍA · MÉTRICA] Lee en voz alta 10 hexámetros respetando la cantidad y la elisión, evaluado sobre transcripción.
 - [GRAMÁTICA · POÉTICO] Reconoce las licencias del verso: dativo de agente, genitivo griego, acusativo de relación, síncopa (`amāsse` por `amāvisse`), tmesis, y el plural poético por singular, en 20 ítems.
-- [LÉXICO · POÉTICO] Domina el léxico poético que no coincide con el de la prosa (`ēnsis` por `gladius`, `puppis` por `nāvis`, `aethēr`, `ūndā`, `ratis`), 300 lemas, con ≥85 %.
+- [LÉXICO · POÉTICO] Domina el léxico poético que no coincide con el de la prosa (`ēnsis` por `gladius`, `puppis` por `nāvis`, `aethēr`, `unda`, `ratis`), 300 lemas, con ≥85 %.
 - [COMPRENSIÓN LECTORA] Lee 40-60 versos de Virgilio u Ovidio sin adaptar, con glosario, y responde 8 preguntas de comprensión y de identificación de la construcción, con ≥70 % — el umbral baja respecto a L3 y se dice por qué: el verso admite más de una lectura sintáctica legítima y el examen no puede fingir que hay una sola.
 - [COMPRENSIÓN LECTORA · EXTENSIVA] Acumula 60.000 palabras de verso en el nivel.
 - [MEDIACIÓN] Traduce 30-40 versos a prosa española **explicitando el orden y sin verter el hipérbaton como si fuera prosa latina**, con rúbrica de seis criterios.
