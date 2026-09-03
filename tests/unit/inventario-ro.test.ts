@@ -186,9 +186,21 @@ describe('pisoCero: el piso declarado en cero', () => {
     }
   });
 
+  // ESTA LISTA ES UNA TRAMPA A PROPÓSITO: declarar un piso cero baja el
+  // déficit sin producir nada, así que tiene que costar tocar un test y no
+  // poder hacerse de pasada. Cada entrada nueva lleva aquí quién la
+  // declaró y con qué medición.
+  //   · r1-diacriticos-coma — la distinción coma/cedilla no es
+  //     renderizable: el ítem mediría la fuente instalada.
+  //   · r4-dativo-oi (2026-09-03) — CERO ítems determinados, medido por el
+  //     lingüista adversarial tras dos ataques: la mala declarada era el
+  //     dativul analitic (registro popular, no agramatical), el
+  //     re-encuadre a «cuándo se exige la» se contesta calcando la «a»
+  //     española, y la cara que sí discrimina ya está publicada en
+  //     r4-gd-definido-pl.
   it('los que lo declaran están CONTADOS y nombrados, no escondidos', () => {
     const cero = PUNTOS_RO.filter((p) => p.pisoCero);
-    expect(cero.map((p) => p.id)).toEqual(['r1-diacriticos-coma']);
+    expect(cero.map((p) => p.id)).toEqual(['r1-diacriticos-coma', 'r4-dativo-oi']);
   });
 
   it('un punto con ítems publicados NO puede declarar piso cero', () => {
