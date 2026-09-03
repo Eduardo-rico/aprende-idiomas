@@ -131,7 +131,14 @@ describe('inventario-ro: contra el currículo', () => {
 
   it('los puntos con `abierto` están listados: no se produce ninguno hasta cerrarlo', () => {
     const abiertos = PUNTOS_RO.filter((p) => p.abierto).map((p) => p.id);
-    expect(abiertos).toEqual([]); // r4-vocativo se cerró en dexonline (Paso 0 §12)
+    // r4-vocativo se cerró en dexonline (Paso 0 §12).
+    // r8-discurso-indirecto se BLOQUEÓ el 2026-09-03 (lote 21) con sus dos
+    // ítems escritos, atacados y retirados: la alternancia vine/venea es
+    // subproducción y la cara del futuro no tiene mala atestada. Su piso
+    // NO se reduce —la deuda es real— y el motivo entero vive en `abierto`.
+    expect(abiertos).toEqual(['r8-discurso-indirecto']);
+    // Un punto bloqueado tiene que decir POR QUÉ, no sólo que lo está.
+    for (const p of PUNTOS_RO.filter((x) => x.abierto)) expect(p.abierto!.length, p.id).toBeGreaterThan(200);
   });
 
   it('el gate de cobertura DISPARA: quitando los puntos que cubren A1/FONOLOGÍA, ese descriptor sale sin punto', () => {
