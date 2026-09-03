@@ -41,6 +41,9 @@ import { dataDir, blocksDir, storiesDir } from '../lib/data/registry';
 import { servibleAlAlumno } from './lib/estado-item';
 import { VOICES } from './config';
 import { EL_VOICES } from './lib/elevenlabs-tts';
+// Los peldaños de las lenguas antiguas NO se escriben aquí: se importan
+// de su única fuente. Ver el comentario de `IDS_PELDANO`.
+import { IDS_PELDANO } from './lib/peldanos-antiguos';
 
 export const TITULO: Record<LanguageId, string> = {
   pt: 'Portugués', ro: 'Rumano', cs: 'Checo', ru: 'Ruso',
@@ -65,14 +68,33 @@ export const TITULO: Record<LanguageId, string> = {
 // el material del peldaño siguiente.** Los autores se asignan DESPUÉS,
 // midiendo; si la medición los mueve, se mueven.
 const MCER = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const;
-/** L1 declinaciones+conjugaciones en indicativo · L2 subjuntivo,
- *  participios, ablativo absoluto · L3 el período y la oratio obliqua ·
- *  L4 orden poético y métrica · L5 idiolecto de autor y lengua arcaica. */
-const PELDANOS_LA = ['L1', 'L2', 'L3', 'L4', 'L5'] as const;
-/** G1 artículo, declinaciones, presente · G2 el ASPECTO y la voz media ·
- *  G3 el aparato ático (artículo+infinitivo, optativo, ἄν) · G4 prosa
- *  densa y trímetro · G5 verso y dialecto. */
-const PELDANOS_GRC = ['G1', 'G2', 'G3', 'G4', 'G5'] as const;
+/** L1 la flexión básica · L2 la subordinación de la prosa narrativa ·
+ *  L3 el PERÍODO · L4 el ORDEN POÉTICO.
+ *
+ *  **L5 fue disuelto el 2026-09-03** (Paso 0 §h6): fallaba la COHESIÓN
+ *  —«idiolecto de autor y lengua arcaica: brevitas; metros líricos;
+ *  morfología pre-clásica» son tres sistemas— y además el ORDEN, porque
+ *  Plauto quedó 18 puntos POR DEBAJO del ancla de L4. Lo que seguía a L4
+ *  son especializaciones declaradas: verso lírico (Horacio), prosa
+ *  comprimida (Tácito) y drama arcaico (Plauto), ninguna con dos miembros
+ *  ordenables todavía.
+ *
+ *  L4 SÍ sobrevive, y se comprobó por separado: está ordenado sobre L3
+ *  (In Catilinam 44,8 → Eneida 66,2 y Metamorfosis 61,2, IC disjuntos),
+ *  su definición es un solo sistema, y sus dos ejemplares son
+ *  INDISTINGUIBLES entre sí (66,2 [62,4-69,8] contra 61,2 [59,1-63,3]),
+ *  o sea que cohesiona. */
+const PELDANOS_LA = IDS_PELDANO.la;
+/** G1 el aparato elemental · G2a el ASPECTO · G3 el aparato ático · G4 la
+ *  prosa ática densa.
+ *
+ *  **G5 disuelto y G2 partido el 2026-09-03** (§h6, §g). G5 cumplía el
+ *  ORDEN —sus tres miembros por encima de Tucídides con IC disjuntos—
+ *  pero no la COHESIÓN: tres sistemas a 16 puntos unos de otros. G2
+ *  llevaba dentro el aspecto, la voz media y los verbos contractos; los
+ *  dos últimos pasan a puntos del inventario. Y G4 se quedó sólo con la
+ *  prosa: el trímetro trágico salió a especialización. */
+const PELDANOS_GRC = IDS_PELDANO.grc;
 
 /** `satisfies` y no `:` a propósito: mantiene los literales (para que
  *  `Nivel` siga siendo una unión cerrada y no `string`) Y exige que el

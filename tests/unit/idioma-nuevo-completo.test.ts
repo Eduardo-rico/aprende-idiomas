@@ -26,6 +26,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { LANGUAGES, LANG_LABELS, LANG_FLAGS, LANG_CHROME, type LanguageId } from '@/lib/locales';
 import { NIVELES_DE, TITULO } from '@/scripts/paso0-idioma';
+import { IDS_PELDANO } from '@/scripts/lib/peldanos-antiguos';
 import { LANGUAGE_BOOST } from '@/scripts/config';
 import { dataDir } from '@/lib/data/registry';
 import { lookupVocabInLang, _resetCatalogCacheForTests } from '@/lib/vocab/catalog';
@@ -73,8 +74,15 @@ describe('los peldaños no son intercambiables entre lenguas', () => {
     // El MCER describe lo que alguien HACE con una lengua viva. Reutilizar
     // sus etiquetas como nombres opacos de peldaño sería «un sello responde
     // a una pregunta»: quien lea «B1» creerá que significa lo de portugués.
-    expect(NIVELES_DE.la).toEqual(['L1', 'L2', 'L3', 'L4', 'L5']);
-    expect(NIVELES_DE.grc).toEqual(['G1', 'G2', 'G3', 'G4', 'G5']);
+    //
+    // ⚠ La lista concreta NO se escribe aquí. Esta aserción decía
+    // `['L1'…'L5']` y se quedó vieja el día que la medición disolvió L5 —
+    // la CUARTA copia del mismo dato en una noche. Se DERIVA de su única
+    // fuente, `IDS_PELDANO`, y lo que este test afirma es lo que de verdad
+    // le toca afirmar: que las antiguas no usan el MCER.
+    expect([...NIVELES_DE.la]).toEqual([...IDS_PELDANO.la]);
+    expect([...NIVELES_DE.grc]).toEqual([...IDS_PELDANO.grc]);
+    expect(NIVELES_DE.la.length).toBeGreaterThan(0);
     for (const l of ['la', 'grc'] as const) {
       expect(NIVELES_DE[l] as readonly string[]).not.toContain('A1');
       expect(NIVELES_DE[l] as readonly string[]).not.toContain('C2');

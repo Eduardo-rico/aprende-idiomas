@@ -15,7 +15,10 @@
 // de la escalera, **no que cada caja contuviera una sola cosa**. Son dos
 // preguntas y la segunda no se había hecho nunca.
 import { describe, it, expect } from 'vitest';
-import { PELDANOS, revisarPeldanos, revisarCohesion, nucleosCoordinados, type Peldano } from '@/scripts/lib/peldanos-antiguos';
+import fs from 'node:fs';
+import path from 'node:path';
+import { PELDANOS, IDS_PELDANO, revisarPeldanos, revisarCohesion, nucleosCoordinados, type Peldano } from '@/scripts/lib/peldanos-antiguos';
+import { NIVELES_DE } from '@/scripts/paso0-idioma';
 
 const ids = (h: { peldano: string }[]) => [...new Set(h.map((x) => x.peldano))].sort();
 
@@ -174,6 +177,43 @@ describe('cohesión interna: «no evaluable» es un estado, no una omisión', ()
       expect(revisarCohesion('la')[0]!.estado).toBe('no-evaluable');
     } finally {
       (PELDANOS as Record<string, Peldano[]>).la = guardado;
+    }
+  });
+});
+
+describe('UNA sola fuente de verdad para los peldaños', () => {
+  it('la tabla de PELDANOS y la tupla IDS_PELDANO dicen lo mismo', () => {
+    for (const lengua of ['la', 'grc'] as const) {
+      expect(PELDANOS[lengua].map((p) => p.id)).toEqual([...IDS_PELDANO[lengua]]);
+    }
+  });
+
+  it('`NIVELES_DE` DERIVA de IDS_PELDANO, no lo copia', () => {
+    // Si alguien vuelve a escribirlos a mano en `paso0-idioma.ts`, esto
+    // falla. En una noche el dato se desincronizó tres veces entre tres
+    // sitios: el arreglo no es reconciliarlos, es que sólo haya uno.
+    expect([...NIVELES_DE.la]).toEqual([...IDS_PELDANO.la]);
+    expect([...NIVELES_DE.grc]).toEqual([...IDS_PELDANO.grc]);
+  });
+
+  it('y el DOCUMENTO dice lo mismo que el código', () => {
+    // El tercer sitio donde vivía el dato. El test lee las tablas de
+    // §1.3 y §1.4 y exige que sus filas de peldaño coincidan con la
+    // estructura. Un documento que contradice al código es peor que uno
+    // que falta: se lee y se cree.
+    const doc = fs.readFileSync(path.join(process.cwd(), 'docs/plans/2026-09-03-la-grc-paso0.md'), 'utf8');
+    for (const lengua of ['la', 'grc'] as const) {
+      for (const id of IDS_PELDANO[lengua]) {
+        expect(doc, `el documento no declara el peldaño ${id}`).toContain(`| **${id}** |`);
+      }
+    }
+    // Y los disueltos NO pueden reaparecer como peldaño VIVO. Aparecen en
+    // la tabla histórica de la auditoría, y ahí llevan su marca —«L5
+    // (disuelto)», «G2 (partido en G2a)»— para que la cita del hallazgo
+    // no se lea como una declaración. La primera versión de este test
+    // marcó esas filas y tenía razón en sospechar: la forma era la misma.
+    for (const muerto of ['L5', 'G5', 'G2']) {
+      expect(doc.includes(`| **${muerto}** |`), `${muerto} está disuelto y el documento lo declara como peldaño vivo`).toBe(false);
     }
   });
 });

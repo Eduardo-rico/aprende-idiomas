@@ -1576,3 +1576,218 @@ Y el límite duro que hay que declarar en el propio producto: de esas 4.000 h, a
 - LA COLA MEZCLADA ENTRE IDIOMAS SE VUELVE IRREVERSIBLE CON CADA TARJETA. `lib/db/schema.ts:46` tiene `language?: string` opcional y sólo se estampa en vocabulario; las cuatro consultas de cola no filtran por idioma pese a existir el índice `[language+state]`. Con los cuatro idiomas tratados por igual, un alumno de ruso y checo verá una cola revuelta, y arreglarlo tras haber creado tarjetas exige un backfill de migración. Coste hoy: una tarde. Coste después: una migración v9 sobre datos irreemplazables.
 - EL CONTENIDO CULTURAL RUSO ENVEJECE Y ES POLÉMICO. Un corpus de prensa contemporánea rusa arrastra un contexto político que lo hará obsoleto y discutido, y los niveles C1-C2 dependen de alusión, ironía y textos precedentes, que son inseparables de ese contexto. Hay que fijar la política editorial ANTES de generar C1-C2 (qué fuentes, qué periodo, qué se etiqueta como histórico), y tratar el мат y el registro tabú con un campo de advertencia que la interfaz pinte SIEMPRE antes de la glosa — la auditoría documenta el caso 'bicha', servido en portugués con glosa neutra y con el aviso guardado sólo en una clave del manifest, invisible para la app.
 - LA CAPA DIDÁCTICA DE C1-C2 NO SE PUEDE GENERAR, HAY QUE CURARLA. 900.000 palabras de canon literario existen ya en dominio público; generarlas con un LLM sería peor y más caro. Lo que hay que producir es la anotación —glosas, preguntas de inferencia, etiquetado de ironía y alusión, métrica, arcaísmos—, que es trabajo humano especializado y no escala con presupuesto de tokens. Riesgo de planificación: contar C1-C2 como 'más de lo mismo' y descubrir a mitad que es otro tipo de trabajo, con otro coste y otro perfil de persona.
+
+---
+
+## Latín
+
+_Latín clásico, con la Vulgata como puerta de entrada y la pronunciación eclesiástica (romana) como norma de lectura en voz alta_
+
+**Tipología.** POR QUÉ ESTE CURRÍCULO NO TIENE NIVELES DEL MCER, Y QUÉ TIENE EN SU LUGAR
+
+El MCER describe lo que alguien puede HACER con una lengua viva: sostener una transacción, participar en una conversación, escribir una carta a un destinatario. No hay transacción cotidiana en latín. Reutilizar «A2» como nombre opaco de un peldaño haría creer al lector que significa lo que significa en portugués, y planificaría con eso. Los peldaños son L1-L4 y su criterio está escrito en `2026-09-03-la-grc-paso0.md` §1.1: **un peldaño es un sistema gramatical que hay que tener automatizado para leer sin ayuda el material del peldaño siguiente**. Los autores se asignaron midiendo, no por reputación, y los cuatro saltos declarados se comprobaron o quedaron declarados-no-medidos con su motivo (§1.6-1.8).
+
+QUÉ HACE FÁCIL EL LATÍN A UN HISPANOHABLANTE, Y POR QUÉ ESA FACILIDAD ES UNA TRAMPA
+
+1. **El léxico es transparente y la morfología es opaca.** El español VIENE del latín: `aqua, terra, mater, videre, dicere, scribere` se reconocen sin estudiar. Eso hace que el alumno avance rapidísimo las dos primeras semanas y se estrelle en la tercera, cuando descubre que reconocer `filium` no le dice si es sujeto o complemento.
+2. **Las categorías ya están instaladas.** Género, número, persona, conjugación, subjuntivo, concordancia, pro-drop: todo eso el hispanohablante lo opera desde niño. Un curso para anglófono gasta semanas en explicar que existen.
+3. **El estrato culto del español ES latín.** `dificultad, conditio, videre, magnitudo`: el vocabulario abstracto de L3-L4 está en gran parte ya sabido.
+
+QUÉ LO HACE DIFÍCIL, Y ES UNA SOLA COSA CON MUCHAS CARAS
+
+1. **LA FUNCIÓN VA EN LA DESINENCIA, NO EN LA POSICIÓN. Es la dificultad maestra y todo lo demás cuelga de ella.** El español asigna la función por el orden: «el padre ama al hijo» y «al hijo ama el padre» se distinguen por dónde están las palabras y por la `a`. El latín las asigna por la terminación, y el orden queda libre para el énfasis. Consecuencia, y es lo que hace que esto sea peor que una dificultad normal: **el lector con instinto español no obtiene una lectura confusa, obtiene una lectura COHERENTE Y FALSA.** `Fīlium pater amat` se lee «el hijo ama al padre» y no hay nada que avise. No existe un «suena raro» que rescate al alumno, porque las dos lecturas son frases españolas impecables.
+2. **Cinco declinaciones y seis casos**, con sincretismos que multiplican la ambigüedad: `-ae` es genitivo, dativo y nominativo plural de la 1.ª; `-is` es genitivo singular y dativo-ablativo plural en la 3.ª; el neutro tiene nominativo y acusativo iguales SIEMPRE, que es lo que salva y lo que confunde.
+3. **La `-a` final es el falso amigo más caro de la lengua.** En español marca femenino singular; en latín marca también **neutro plural**: `arma, templa, bella, castra` no son «un arma», son «las armas». El alumno lo lee en singular femenino durante meses.
+4. **Sin artículo.** `puella` es «una niña», «la niña» o «niña» según el contexto, y el hispanohablante, que tiene artículo obligatorio, lo suple mal.
+5. **El ablativo no tiene equivalente.** Es el caso que absorbe instrumento, compañía, modo, causa, tiempo, lugar de donde y término de comparación, con y sin preposición. El español lo reparte entre cinco preposiciones y el alumno tiene que aprender a leerlo sin ninguna.
+6. **La subordinación va por formas no personales.** Acusativo con infinitivo donde el español pone «que», ablativo absoluto donde pone una subordinada temporal, gerundivo donde pone una final. El instinto romance busca una conjunción que no está.
+7. **La cantidad vocálica es fonémica y la ortografía corriente no la escribe.** `mălus` (malo) y `mālus` (manzano, mástil); `vĕnit` (viene) y `vēnit` (vino) — un presente y un perfecto que se distinguen por una vocal larga. Y además **la cantidad decide el acento**, así que sin mácrons no se puede ni leer en voz alta con seguridad.
+
+DECISIONES DE ESTE CURRÍCULO, TOMADAS Y ESCRITAS
+
+- **Los mácrons van SIEMPRE en el material de enseñanza** (`ā ē ī ō ū`). Son el equivalente de la ș/ț rumana y algo más: dan el acento gratis por la regla de la penúltima. En los textos de biblioteca se retiran o se conservan **por pieza y por distribución medida**, nunca a medias (Paso 0 §3.1).
+- **`u`/`v` se distinguen; `i` sirve para `i` y para `j`.** Es la convención del corpus (medido: cero `j` en tres obras de `la.wikisource`) **y** es lo que hace que una voz italiana produzca el /v/ eclesiástico y no el /w/ restituido.
+- **Pronunciación ECLESIÁSTICA (romana), declarada y no disfrazada de reconstrucción.** Es una de las tres lecturas legítimas, es la que una voz italiana produce de verdad, y el sello lo dirá.
+- **Sin producción oral ni interacción** (decisión de Edu del 2026-08-11, vale para todas las lenguas). Aquí además no habría a quién hablarle.
+- **La MEDIACIÓN es la destreza de arriba, no un accesorio**: traducir con comentario ES el ejercicio de la filología clásica. Por eso aparece desde L1 y no espera a que haya biblioteca.
+- **NINGUNA FORMA SE MARCA CON ASTERISCO SIN FUENTE CITADA EN EL PROPIO MATERIAL.** El latín escolar arrastra mucho «esto no se dice» que la lengua atestiguada sí dice. Hay 227.301 tokens de treebank descargados más la Eneida, las Historiae, las Odas y siete comedias: cada agramaticalidad se comprueba contra texto real, no contra la memoria de un manual.
+- **Y a cada error diana se le hacen DOS preguntas, no una**: «¿esto está mal?» y **«¿esto lo produce un hispanohablante?»**. La segunda es la que se olvida, y es la que caza el error heredado de manuales anglosajones — que en latín son casi todos. Un error que sólo comete un anglófono es un ítem que no mide a nuestro alumno, y la comprobación contra fuentes lo aprueba igual.
+
+**Punto de partida.** CERO ABSOLUTO DE CONTENIDO Y CERO DE CURRÍCULO PREVIO.
+
+`lib/data/languages/la/` es el scaffold creado el 2026-09-03: `curriculum.ts` con `BLOCKS = []` y `ALL_CONCEPTS = []`, `concepts.json` y `vocab-catalog.json` a `[]`, `manifest.json` vacío, y `blocks/`, `lessons/`, `stories/` con sólo `.gitkeep`. No hay inventario de puntos, no hay lexicón, no hay `paradigma-la.ts`, no hay voz declarada.
+
+LO QUE SÍ EXISTE Y NO HABRÁ QUE REHACER: la escalera medida y sus anclas (Paso 0 §1.6-1.8), el gate de «una caja, un sistema» en cero, los 61 MB de treebanks UD en caché con 227.301 tokens latinos analizados, el motor de ingesta de Wikisource, y las tres decisiones técnicas escritas con sus gates.
+
+LO QUE NO EXISTE Y BLOQUEA LA PRODUCCIÓN, en este orden: el inventario de puntos con su columna `ordenEnganya`; `ortografia-la.ts` y `check-ortografia-la` (bloquean porque tocan el hash); `paradigma-la.ts` con su gate en rojo; el lexicón con las cuatro partes principales y la cantidad; y la voz validada con su batería.
+
+### Latín · L1 — 150 h
+
+**Leer narrativa latina adaptada y la Vulgata asignando la función por la DESINENCIA y no por la posición, con las cinco declinaciones y las cuatro conjugaciones en indicativo ya automatizadas.**
+
+**Sabrá hacer (12):**
+
+- [FONOLOGÍA] Lee en voz alta 20 palabras aplicando la pronunciación eclesiástica —`ce/ci` = /tʃe, tʃi/ (*Cicerō* «Chíchero»), `gn` = /ɲ/ (*agnus*), `ti` + vocal = /tsj/ (*grātia* «grátsia»), `ae`/`oe` = /e/ (*caelum* «chélum»), `v` = /v/, `h` muda— con ≥90 % de aciertos, evaluado sobre transcripción escrita y no por evaluación automática de pronunciación.
+- [FONOLOGÍA] Aplica la regla de la penúltima sobre 20 palabras macronizadas para decir dónde cae el acento, y distingue los pares que sólo se separan por cantidad (*mălus*/*mālus*, *vĕnit*/*vēnit*, *lĕvis*/*lēvis*) en 10 contextos, con ≥85 %.
+- [GRAMÁTICA · CASO] Dada una oración con dos sustantivos y un verbo, dice **quién hace qué**, en 20 ítems donde el orden CONTRADICE al instinto español (`Fīlium pater amat`, `Puellam puer videt`, `Rēgem mīlitēs necant`), con ≥85 %. Es el descriptor central del nivel: mide lo único que el instinto romance no da.
+- [GRAMÁTICA · DECLINACIÓN] Produce cualquiera de las doce formas de las cinco declinaciones a partir del lema y su genitivo, incluidos los temas en `-i` y los neutros, en 40 ítems con ≥85 %.
+- [GRAMÁTICA · CONJUGACIÓN] Conjuga en presente, imperfecto, futuro y perfecto de indicativo activo las cuatro conjugaciones y los irregulares del nivel (*sum, possum, eō, ferō, volō, nōlō*), en 40 ítems con ≥85 %.
+- [GRAMÁTICA · CONCORDANCIA] Concuerda el adjetivo en género, número y caso con su sustantivo en 20 sintagmas, incluidos los de adjetivo de la 3.ª y los casos en que adjetivo y sustantivo son de declinaciones distintas (*rēs pūblica*, *magnum opus*, *omnis homō*).
+- [GRAMÁTICA · PRONOMBRE] Identifica y traduce `is/ea/id`, `hic/ille/iste`, y el relativo `quī/quae/quod` concordando con su antecedente, en 20 ítems.
+- [LÉXICO] Domina 800 lemas del núcleo de frecuencia y reconoce los 60 **falsos regalos** del nivel: `casa` (cabaña, no casa), `hostis` (enemigo, no huésped), `liber` (libro / libre / los hijos), `pānis`, `virtūs` (valor, no virtud moral), `familia` (el conjunto de la casa incluidos los esclavos), y **la `-a` de neutro plural** (`arma, templa, bella, castra`), con ≥85 % en un ejercicio diseñado para inducir la lectura española.
+- [COMPRENSIÓN LECTORA] Lee un texto narrativo adaptado o de la Vulgata de 100-150 palabras y responde 5 preguntas de comprensión literal formuladas en español, sin diccionario, con ≥80 %.
+- [MEDIACIÓN] Traduce al español un pasaje de 60-80 palabras sin omitir ni añadir nada, **y justifica por escrito la función sintáctica de tres formas marcadas** — que es lo que distingue traducir de adivinar por el léxico.
+- [PRODUCCIÓN ESCRITA] Escribe cinco oraciones latinas a partir de una consigna en español, cada una obligando a un caso distinto, con la morfología correcta y evaluada por rúbrica de cuatro criterios con ≥3/4 en cada uno. La producción es MEDIO, no fin: sirve para fijar la desinencia, no para hablar latín.
+- [CULTURA] Explica por qué la escalera empieza por la Vulgata y no por César, y qué separa el latín de Jerónimo del latín clásico en tres rasgos concretos (parataxis, orden más romance, léxico cristiano).
+
+**Contenido lingüístico.** FONOLOGÍA Y ORTOGRAFÍA. Alfabeto con la convención del proyecto: `u`/`v` distinguidas, `i` para `i` y `j`, `k`/`y`/`z` sólo en préstamos griegos. Pronunciación eclesiástica completa con sus siete reglas, contrastada explícitamente con la restituida para que el alumno sepa que está eligiendo una de tres lecturas legítimas. CANTIDAD VOCÁLICA con mácrons en todo el material, y la regla del acento derivada de ella (penúltima larga → penúltima tónica; penúltima breve → antepenúltima). Diptongos `ae oe au eu`. Ortografía de la geminada y su valor.
+
+MORFOLOGÍA NOMINAL. Las cinco declinaciones completas en singular y plural, con el genitivo como clave de clase y no como una forma más. Los seis casos con su función primaria y el ablativo presentado desde el principio como **el caso que absorbe lo que el español reparte entre preposiciones**. Neutros de la 2.ª y de la 3.ª, con la regla de que nominativo y acusativo coinciden siempre y el plural en `-a`. Temas en `-i` de la 3.ª. Adjetivos de la 1.ª-2.ª y de la 3.ª; concordancia que NO exige coincidencia de declinación. Pronombres personales, demostrativos, el relativo, y `sum` como cópula sin atributo en acusativo.
+
+MORFOLOGÍA VERBAL. Las cuatro conjugaciones más la mixta (`capiō`), reconocidas por la **segunda** parte principal y no por el infinitivo español. Presente, imperfecto y futuro de indicativo activo; perfecto, pluscuamperfecto y futuro perfecto desde el tema de perfecto. Las CUATRO PARTES PRINCIPALES presentadas desde el primer verbo, porque son el input del paradigma y no un apéndice. Irregulares de alta frecuencia. Imperativo. Voz pasiva **sólo receptiva** en este nivel.
+
+SINTAXIS. La oración simple con orden libre y la desinencia como única marca de función — el eje del nivel, trabajado con pares mínimos de orden invertido. Complemento directo, indirecto, y los ablativos más frecuentes (instrumento, compañía con `cum`, lugar, tiempo). Negación con `nōn`. Interrogativas con `-ne`, `num`, `nōnne`. Coordinación con `et`, `-que`, `sed`, `nam`. Relativa simple.
+
+LÉXICO: 800 lemas seleccionados por frecuencia sobre los treebanks, **no por lo que salga en los textos** — el error diagnosticado en portugués, donde el catálogo se derivó de las historias. De esos 800, unos 60 se marcan como FALSO REGALO y reciben el doble de exposiciones en el SRS.
+
+**Material a producir:** 12.000 palabras de lectura · 80 min de audio · 340 ejercicios · 40 tareas. LECTURA: 12.000 palabras = ~120 micro-textos de 90-120 palabras encadenados en 5 SERIES con arco continuo, no viñetas sueltas — el defecto diagnosticado en portugués. Las series son: la casa y la familia romana; el camino y el viaje; una parábola de la Vulgata por semana; la escuela del *grammaticus*; y una crónica militar mínima que prepara a César. AUDIO (80 min): los 120 textos narrados con voz italiana y pronunciación eclesiástica declarada, previa batería de validación y con `validatedBy` escrito. Sin audio de pares mínimos: la cantidad vocálica se enseña por mácrón escrito, no de oído, porque la voz italiana no la realiza. 340 EJERCICIOS: 120 de cloze derivado del paradigma nominal y verbal, **60 del hueco en la GLOSA ESPAÑOLA** (el formato que mide `ordenEnganya`: se da la frase latina y el hueco va en la traducción), 60 de concordancia, 50 de flashcard con contraste de falso regalo, 30 de transformación y 20 de comprensión lectora. 40 TAREAS: 30 de mediación (traducción con justificación de función) y 10 de producción escrita con rúbrica.
+
+**Criterio de salida.** EXAMEN CIEGO de 60 minutos con material nunca visto: (1) 20 ítems de comprensión lectora sobre dos textos nuevos de 120-150 palabras → ≥75 %; (2) 20 ítems de **función por desinencia** con el orden contradiciendo al español, de los cuales al menos 8 con `-a` de neutro plural → ≥80 %, y este umbral es más alto que el resto a propósito, porque es el rasgo del que depende todo lo demás; (3) traducción de 80 palabras con justificación de tres funciones, rúbrica de cuatro criterios → ≥3/4 en CADA criterio; (4) lectura en voz alta de 10 líneas con la pronunciación eclesiástica → ≥90 % de fonemas correctos sobre transcripción.
+
+MÁS tres condiciones medibles en la app: (a) retención SRS a 7 días ≥85 % sobre los 800 lemas y los puntos del nivel, con ≥600 tarjetas en estado Review; (b) 12.000 palabras de lectura efectivamente consumidas por el contador de lectura extensiva, no «marcado como leído»; (c) ≥90 % de los 12 descriptores demostrados por ≥2 tareas INDEPENDIENTES puntuadas ≥3/4.
+
+El nivel NO se cierra por XP ni por porcentaje de ejercicios completados.
+
+### Latín · L2 — 180 h
+
+**Leer prosa narrativa clásica sin adaptar —César, Nepote, Eutropio— con el subjuntivo, los participios, el ablativo absoluto y el acusativo con infinitivo automatizados, o sea con la subordinación que el latín hace por formas NO personales.**
+
+**Sabrá hacer (13):**
+
+- [GRAMÁTICA · SUBJUNTIVO] Produce las cuatro formas del subjuntivo activo y pasivo de las cuatro conjugaciones en 40 ítems con ≥85 %, y **reconoce que el subjuntivo latino no coincide con el español**: aparece en subordinadas donde el español pone indicativo (`cum` histórico, interrogativa indirecta, consecutiva) y falta donde el español lo pone.
+- [GRAMÁTICA · PARTICIPIO] Distingue los tres participios (presente activo, perfecto pasivo, futuro activo) por su forma y traduce cada uno con el giro español que le corresponde, en 30 ítems, **sin usar «que» para los tres**, que es el atajo que borra la distinción.
+- [GRAMÁTICA · ABLATIVO ABSOLUTO] Identifica un ablativo absoluto en 20 oraciones, dice cuál es su sujeto y cuál su predicado, y lo vierte al español con **tres giros distintos según el contexto** (temporal, causal, concesivo) — porque la construcción no tiene equivalente y traducirla siempre igual es no haberla entendido.
+- [GRAMÁTICA · ORATIO OBLIQUA] Reconoce el acusativo con infinitivo tras verbos de decir, pensar y percibir en 25 ítems, identifica su sujeto **en acusativo** y su verbo **en infinitivo**, y lo traduce con «que» + indicativo. Es el punto donde el instinto romance busca una conjunción que no está.
+- [GRAMÁTICA · VOZ PASIVA] Produce y traduce la pasiva completa, incluida la perifrástica del perfecto (`amātus est`), y **distingue el complemento agente (`ā/ab` + ablativo, sólo con seres animados) del instrumental (ablativo sin preposición)** en 20 ítems.
+- [GRAMÁTICA · DEPONENTES] Traduce en activo los verbos deponentes de alta frecuencia (`sequor, loquor, ūtor, morior, patior, hortor`) en 20 contextos, sin leerlos como pasivos.
+- [GRAMÁTICA · PRONOMBRE] Usa el reflexivo `sē/suus` distinguiendo su referencia al sujeto de la principal frente a `is/eius`, en 15 ítems. El español no marca esa diferencia y el alumno no la ve si nadie se la enseña.
+- [COMPRENSIÓN LECTORA] Lee 200-250 palabras de César o Eutropio sin adaptar, con glosario emergente pero sin traducción, y responde 6 preguntas de comprensión literal e inferencial con ≥75 %.
+- [COMPRENSIÓN LECTORA · EXTENSIVA] Acumula 40.000 palabras de lectura corrida en el nivel, medidas por el contador de lectura extensiva.
+- [MEDIACIÓN] Traduce al español 120-150 palabras de prosa clásica **respetando la subordinación del original**: un ablativo absoluto no se vuelve dos oraciones coordinadas, y un acusativo con infinitivo no se pierde. Rúbrica de cinco criterios.
+- [MEDIACIÓN · EXPLICAR] Explica en español, a alguien que no sabe latín, por qué una frase concreta significa lo que significa, señalando las dos o tres desinencias que lo deciden. Es la mediación que este proyecto llama *explicar*, y aquí es el ejercicio central de la destreza.
+- [PRODUCCIÓN ESCRITA] Transforma diez oraciones simples en subordinadas latinas del tipo pedido (participio, ablativo absoluto, acusativo con infinitivo), con rúbrica de cuatro criterios.
+- [LÉXICO] Domina 1.600 lemas acumulados y el vocabulario militar y político de César (`legiō, cohors, castra, imperium, prōvincia, lēgātus, obsēs, frūmentum`), con el aviso de que **`castra` y `arma` son neutros plurales que se traducen en singular**.
+
+**Contenido lingüístico.** MORFOLOGÍA. Subjuntivo activo y pasivo, los cuatro tiempos, de las cuatro conjugaciones y los irregulares. Sistema completo de la pasiva, con la perifrástica del perfecto. Los tres participios y su morfología. Deponentes y semideponentes. Comparativo y superlativo regulares e irregulares (`melior, optimus; maior, maximus; plūs, plūrimus`), con el segundo término en ablativo o con `quam`. Numerales cardinales y ordinales hasta mil.
+
+SINTAXIS, que es el peso del nivel. **ABLATIVO ABSOLUTO**: forma, sujeto propio distinto del de la principal, y sus tres valores en traducción. **ACUSATIVO CON INFINITIVO** tras verbos de lengua y entendimiento, con la concordancia de tiempos del infinitivo. **`CUM` HISTÓRICO** + subjuntivo frente a `cum` temporal + indicativo, que es el mismo signo con dos gramáticas. Interrogativa indirecta en subjuntivo. Finales con `ut`/`nē`, consecutivas con `ut`, completivas con `ut` tras verbos de voluntad. Comparativas. Participio concertado frente a absoluto. El reflexivo indirecto.
+
+LÉXICO: 800 lemas nuevos (1.600 acumulados), sobre el vocabulario de la historiografía y la narración militar.
+
+**Material a producir:** 40.000 palabras de lectura · 60 min de audio · 380 ejercicios · 60 tareas. LECTURA: César (*Bellum Gallicum* I-II adaptado en la entrada y sin adaptar al salir), Eutropio, Nepote, y la continuación de la serie de la Vulgata. AUDIO (60 min): sólo la escalera graduada de textos narrados; el resto de la lectura va como texto puro con diccionario, que es la decisión de Edu del 2026-07-29 heredada de portugués (karaoke = bien escaso). 380 EJERCICIOS: 120 de cloze derivado del subjuntivo y la pasiva, 90 de **hueco en la glosa española** sobre ablativo absoluto y acusativo con infinitivo —donde el instinto romance falla de manera sistemática—, 70 de transformación, 50 de corrección desde el calco, 30 de flashcard y 20 de comprensión. 60 TAREAS: 40 de mediación (25 de traducción con rúbrica y 15 de *explicar*) y 20 de producción escrita.
+
+**Criterio de salida.** EXAMEN CIEGO de 90 minutos: (1) comprensión lectora de 250 palabras de César nunca vistas, 20 ítems → ≥75 %; (2) 20 ítems de identificación y vertido de ablativo absoluto y acusativo con infinitivo → ≥80 %; (3) traducción de 150 palabras respetando la subordinación, rúbrica de cinco criterios → ≥3/4 en cada uno; (4) una tarea de *explicar* sobre una frase con dos desinencias decisivas → ≥3/4.
+
+Más: 40.000 palabras de lectura extensiva consumidas y retención SRS a 7 días ≥85 % sobre los 1.600 lemas.
+
+### Latín · L3 — 220 h
+
+**Leer el PERÍODO: Cicerón, Livio y Salustio, con la oratio obliqua sostenida a lo largo de párrafos enteros, el `cum` histórico, las correlaciones, y el gerundio, el gerundivo y el supino ya automatizados.**
+
+**Sabrá hacer (13):**
+
+- [GRAMÁTICA · PERÍODO] Analiza un período ciceroniano de 60-90 palabras identificando el verbo principal, las subordinadas de primer y segundo grado, y las correlaciones que lo sostienen (`nōn sōlum… sed etiam`, `tantus… quantus`, `tam… ut`, `cum… tum`), en 15 períodos con ≥75 %.
+- [GRAMÁTICA · ORATIO OBLIQUA] Lee un pasaje de discurso indirecto de 80-120 palabras, dice **quién habla y hasta dónde llega su discurso**, y explica por qué cada verbo subordinado está en subjuntivo. Es la destreza que separa leer una frase de leer un texto.
+- [GRAMÁTICA · GERUNDIVO] Distingue gerundio de gerundivo, produce la perifrástica pasiva (`Carthāgō dēlenda est`) y la traduce con el matiz de obligación, en 20 ítems.
+- [GRAMÁTICA · SUPINO] Reconoce las dos formas del supino y su uso restringido (`mīrābile dictū`, `vēnērunt rogātum`), en 10 ítems. Es un punto pequeño y se declara pequeño: no se infla para que parezca un bloque.
+- [GRAMÁTICA · CONDICIONALES] Distingue los tres tipos de período condicional latino y **el punto donde el instinto español falla**: el irreal de presente va en imperfecto de subjuntivo en las DOS ramas (`sī habērem, darem`), donde el español pone imperfecto de subjuntivo y condicional.
+- [GRAMÁTICA · CONSECUTIO] Aplica la concordancia de tiempos: qué tiempo del subjuntivo exige cada tiempo de la principal, en 25 ítems con ≥80 %.
+- [COMPRENSIÓN LECTORA] Lee 300-400 palabras de Cicerón, Livio o Salustio sin adaptar, con glosario, y responde 8 preguntas de comprensión literal, inferencial y de estructura argumentativa, con ≥75 %.
+- [COMPRENSIÓN LECTORA · EXTENSIVA] Acumula 120.000 palabras de lectura corrida en el nivel.
+- [MEDIACIÓN] Traduce 200-250 palabras de prosa periódica **conservando la jerarquía de la subordinación** — el error diana del nivel es deshacer el período en oraciones sueltas, que produce un español legible y una traducción falsa. Rúbrica de seis criterios.
+- [MEDIACIÓN · SÍNTESIS] Resume en español, en 100 palabras, el argumento de un pasaje de 400, distinguiendo la tesis de los ejemplos y de las concesiones.
+- [PRODUCCIÓN ESCRITA] Escribe un período latino de 40-60 palabras con al menos dos grados de subordinación, a partir de un esquema dado, con rúbrica de cinco criterios.
+- [LÉXICO] Domina 2.800 lemas acumulados, con el vocabulario abstracto y forense (`ratiō, causa, cōnsilium, auctōritās, fidēs, officium, iūs, lēx`) y sus **falsos regalos cultos**: `ratiō` no es «razón» en la mayoría de sus usos, `fidēs` no es «fe», `virtūs` no es «virtud», `officium` no es «oficio».
+- [CULTURA] Sitúa a los tres autores del nivel en su género y su momento, y explica en qué se diferencia la prosa de un discurso judicial, una historia y una monografía.
+
+**Contenido lingüístico.** SINTAXIS DEL PERÍODO, que es todo el nivel. Correlaciones y su función de andamiaje. Subordinadas de segundo y tercer grado. `Cum` histórico, causal y concesivo. Consecutio temporum completa. Oratio obliqua extendida: el acusativo con infinitivo en la principal y el subjuntivo en todas las subordinadas, con el cambio de persona y de deícticos. Períodos condicionales: real, potencial e irreal, con la atención puesta en el irreal. Interrogativas indirectas dobles. Comparativas y consecutivas. GERUNDIO, GERUNDIVO y su distinción; perifrástica pasiva. Supino en `-um` y en `-ū`. Estilo indirecto libre en Livio.
+
+LÉXICO: 1.200 lemas nuevos (2.800 acumulados), del vocabulario abstracto, jurídico y político, con la lista de falsos regalos cultos como material discriminante.
+
+**Material a producir:** 120.000 palabras de lectura · 40 min de audio · 300 ejercicios · 80 tareas. LECTURA: Cicerón (cartas primero, discursos después: la carta es su registro llano y el discurso el periódico), Salustio (*Bellum Catilinae*), Livio (I y XXI). AUDIO (40 min): sólo la escalera karaoke; el resto texto puro. 300 EJERCICIOS: 90 de análisis de período, 70 de cloze derivado sobre consecutio y gerundivo, 60 de **hueco en la glosa española** sobre oratio obliqua e irreal, 50 de transformación de directo a indirecto, 30 de flashcard de falso regalo culto. 80 TAREAS: 55 de mediación (35 de traducción, 20 de síntesis) y 25 de producción escrita.
+
+**Criterio de salida.** EXAMEN CIEGO de 120 minutos: (1) comprensión lectora de 400 palabras nunca vistas de Cicerón o Livio → ≥75 %; (2) análisis de dos períodos con identificación de la jerarquía → ≥75 %; (3) traducción de 250 palabras **conservando la subordinación**, rúbrica de seis criterios → ≥3/4 en cada uno, y el criterio «jerarquía conservada» no se puede compensar con los otros; (4) síntesis de 100 palabras de un pasaje de 400 → ≥3/4.
+
+Más: 120.000 palabras de lectura extensiva y retención SRS a 7 días ≥85 % sobre los 2.800 lemas.
+
+### Latín · L4 — 200 h
+
+**Leer verso: Virgilio y Ovidio, con el ORDEN POÉTICO —hipérbaton, léxico poético, hexámetro y dístico— ya automatizado, o sea leyendo una lengua donde la posición de las palabras deja de dar ninguna pista.**
+
+**Sabrá hacer (11):**
+
+- [GRAMÁTICA · HIPÉRBATON] Reconstruye el orden en prosa de 20 versos con hipérbaton, emparejando adjetivo y sustantivo separados por varias palabras, con ≥80 %. Es el descriptor central: en L1 el alumno aprendió que la posición no da la función; aquí aprende que tampoco da la vecindad.
+- [FONOLOGÍA · MÉTRICA] Escande 20 hexámetros marcando cantidades, cesura y elisión, con ≥80 %, apoyándose en los mácrons y en la posición.
+- [FONOLOGÍA · MÉTRICA] Lee en voz alta 10 hexámetros respetando la cantidad y la elisión, evaluado sobre transcripción.
+- [GRAMÁTICA · POÉTICO] Reconoce las licencias del verso: dativo de agente, genitivo griego, acusativo de relación, síncopa (`amāsse` por `amāvisse`), tmesis, y el plural poético por singular, en 20 ítems.
+- [LÉXICO · POÉTICO] Domina el léxico poético que no coincide con el de la prosa (`ēnsis` por `gladius`, `puppis` por `nāvis`, `aethēr`, `ūndā`, `ratis`), 300 lemas, con ≥85 %.
+- [COMPRENSIÓN LECTORA] Lee 40-60 versos de Virgilio u Ovidio sin adaptar, con glosario, y responde 8 preguntas de comprensión y de identificación de la construcción, con ≥70 % — el umbral baja respecto a L3 y se dice por qué: el verso admite más de una lectura sintáctica legítima y el examen no puede fingir que hay una sola.
+- [COMPRENSIÓN LECTORA · EXTENSIVA] Acumula 60.000 palabras de verso en el nivel.
+- [MEDIACIÓN] Traduce 30-40 versos a prosa española **explicitando el orden y sin verter el hipérbaton como si fuera prosa latina**, con rúbrica de seis criterios.
+- [MEDIACIÓN · LITERARIA] Comenta en español un pasaje de 20 versos señalando dos recursos y su efecto, sin usar vocabulario técnico que no pueda justificar sobre el texto.
+- [PRODUCCIÓN ESCRITA] Reescribe en prosa latina correcta 10 versos dados, deshaciendo el hipérbaton y las licencias — que es la prueba de que se han entendido, y no una invitación a componer verso.
+- [CULTURA] Explica qué es un hexámetro y un dístico elegíaco, en qué géneros vive cada uno, y por qué la Eneida y las Metamorfosis se leen después de la prosa y no antes.
+
+**Contenido lingüístico.** MÉTRICA: cantidad silábica frente a cantidad vocálica, sílaba larga por naturaleza y por posición, hexámetro dactílico con sus cesuras, dístico elegíaco, elisión y sinalefa, hiato. ORDEN POÉTICO: hipérbaton y sus tipos, incluida la disposición envolvente; encabalgamiento; el adjetivo separado de su núcleo por medio verso. LICENCIAS: dativo de agente con la perifrástica y en poesía, genitivo y acusativo de tipo griego, acusativo de relación, síncopa y formas contractas, tmesis, plural poético, arcaísmos métricamente útiles (`ollī`, `-ēre` por `-ērunt`). LÉXICO POÉTICO como estrato aparte del de la prosa, presentado en contraste explícito.
+
+**Material a producir:** 60.000 palabras de lectura · 30 min de audio · 220 ejercicios · 60 tareas. LECTURA: Eneida I-VI y Metamorfosis I-V, que son las dos obras cuyo corpus está medido y cuya dificultad léxica se comprobó indistinguible entre sí (Paso 0 §1.3). AUDIO (30 min): la escalera karaoke de hexámetros, que aquí sí es material de enseñanza y no adorno, porque la métrica se oye. 220 EJERCICIOS: 80 de reconstrucción del orden en prosa, 50 de escansión, 40 de licencias, 30 de flashcard de léxico poético, 20 de comprensión. 60 TAREAS: 40 de mediación (25 de traducción, 15 de comentario) y 20 de reescritura en prosa.
+
+**Criterio de salida.** EXAMEN CIEGO de 120 minutos con material nunca visto: (1) comprensión de 50 versos → ≥70 %; (2) reconstrucción del orden en prosa de 15 versos → ≥80 %; (3) escansión de 10 hexámetros → ≥80 %; (4) traducción de 40 versos con rúbrica de seis criterios → ≥3/4 en cada uno.
+
+Más: 60.000 palabras de verso leídas y retención SRS a 7 días ≥85 % sobre los 300 lemas poéticos.
+
+### Latín · volumen total
+
+| peldaño | horas | palabras | ejercicios | tareas | audio min |
+|---|---:|---:|---:|---:|---:|
+| L1 | 150 | 12.000 | 340 | 40 | 80 |
+| L2 | 180 | 40.000 | 380 | 60 | 60 |
+| L3 | 220 | 120.000 | 300 | 80 | 40 |
+| L4 | 200 | 60.000 | 220 | 60 | 30 |
+| **Σ** | **750** | **232.000** | **1.240** | **240** | **210** |
+
+**Y lo que estas cifras NO son, dicho antes de que alguien planifique con ellas.** Los 1.240 ejercicios son VOLUMEN, y la meta del proyecto desde E2#15 es **COBERTURA**: ≥8 ítems por punto, 6 en el peldaño más alto. El presupuesto real sale del inventario de puntos, que hoy no existe: el recuento provisional del Paso 0 estima 128 puntos y ≈1.020 ítems a piso, y **ésa es la cifra que gobierna**, no ésta. Los 1.240 son una cota alta y no un plan, exactamente como los 7.100 del rumano.
+
+Las **210 min de audio** sí son un compromiso, y salen de la aritmética del Paso 0 §4.5: ~67.000 caracteres del corpus de enseñanza de L1 más las cantilenas de paradigma y la escalera karaoke. A 840 caracteres/minuto de narración —y **no a los 441 del karaoke portugués**, que es la tasa que el plan rumano extrapoló de más— son unos 176.000 caracteres, o sea **un mes de cuota de ElevenLabs**. No se genera un segundo antes de la batería de voz.
+
+### Latín · la columna «escucha» sale a CERO, y es verdad
+
+`paso0-idioma.ts --lang=la` cuenta **0 descriptores de escucha en los cuatro
+peldaños**, y no es un olvido: **no hay comprensión oral en una lengua que nadie
+habla.** Los descriptores de fonología del nivel L1 y los de métrica de L4 miden
+LEER EN VOZ ALTA y ESCANDIR, que son destrezas de sistema y no de escucha, y por
+eso van etiquetados `[FONOLOGÍA]`. El eje seguirá mostrando cero y eso es honesto
+— el mismo trato que la producción oral en portugués desde E2#17.
+
+Y la aritmética cuadra por dos caminos: la tabla de arriba está sumada a mano y
+`paso0-idioma.ts` suma las líneas «Material a producir» de los cuatro niveles por
+su cuenta. Las dos dan 232.000 · 1.240 · 240 · 210.
+
+### Latín · lo que este currículo NO cubre, y por qué
+
+- **Producción oral e interacción**: decisión de Edu del 2026-08-11 para todas las lenguas. Aquí, además, no hay interlocutor.
+- **Composición latina como fin**: la producción escrita es medio para fijar la desinencia, no objetivo. Un curso de *prose composition* es otro producto.
+- **Tácito, Horacio y Plauto**: son especializaciones declaradas, no peldaños (Paso 0 §1.3). Tácito y Plauto quedan además **declarados y no medidos**, porque sus ejes son sintáctico y morfológico y el instrumento léxico no los ve.
+- **Latín medieval, humanístico y eclesiástico posterior a Jerónimo**: fuera de alcance declarado, no pendiente.
+- **Epigrafía y paleografía**: fuera de alcance.
+
+### Latín · riesgos (8)
+
+1. **El alumno avanza rapidísimo dos semanas y se estrella en la tercera.** El léxico transparente da una sensación de dominio que la morfología desmiente. Mitigación: el descriptor de función-por-desinencia entra en la primera semana y su umbral de salida es el más alto del nivel.
+2. **La lectura española coherente y falsa no la caza ningún gate de determinación.** Un ítem puede estar bien escrito, tener respuesta única y no medir nada si el alumno lo resuelve por el léxico. Mitigación: el formato de hueco en la glosa española y la columna `ordenEnganya` en cada punto.
+3. **Los manuales de latín son casi todos anglosajones**, y sus errores diana son los de un anglófono. Un error que un hispanohablante no comete es un ítem que no mide a nuestro alumno **y que la comprobación contra fuentes aprueba igual**. Mitigación: la segunda pregunta obligatoria, «¿esto lo produce un hispanohablante?».
+4. **El asterisco escolar.** El latín de manual declara agramatical mucho que la lengua atestiguada dice. Mitigación: ninguna forma con asterisco sin fuente citada, contra los 227.301 tokens de treebank o el corpus descargado.
+5. **Los mácrons a medias.** Medido: `la.wikisource` macroniza el primer capítulo de César y no los otros nueve. Un texto de biblioteca con mácrons parciales enseña una falsedad en silencio, porque la AUSENCIA de mácrón es informativa. Mitigación: la regla por distribución del Paso 0 §3.1, con su gate.
+6. **El hash del audio.** El texto que se muestra lleva mácrons y el que se envía a la voz no, y además hay respelización eclesiástica. Si el hash se calcula sobre el mostrado se pagan dos MP3 por el mismo audio; si `check-audio-stale` compara contra el otro, todos los clips salen caducos. Mitigación: `textoParaVoz()` en los dos sitios, antes del primer clip.
+7. **La voz italiana puede no producir `caelum` = «chélum»** ni `grātia` = «grátsia», porque el G2P italiano no conoce `ae` ni la regla de `ti`+vocal. Es hipótesis con test escrito, no medición. Mitigación: la batería de 24 ítems antes de generar, y si falla, el latín se queda sin audio — que es una salida digna y ya se tomó para cuatro puntos del portugués.
+8. **El peldaño L4 tiene sólo dos ejemplares.** Cohesiona (sus IC se solapan), pero con dos puntos el estadístico es frágil. Mitigación: declarado como tal; si aparece un tercer poeta medible, se vuelve a comprobar.

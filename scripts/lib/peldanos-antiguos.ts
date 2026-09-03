@@ -35,6 +35,24 @@
 
 export type Lengua = 'la' | 'grc';
 
+// ── LA ÚNICA FUENTE DE VERDAD DE LOS PELDAÑOS ─────────────────────────
+//
+// En una sola noche este dato se desincronizó TRES veces entre
+// `NIVELES_DE` (paso0-idioma), esta tabla y el §1.3 del documento, que
+// llegaron a afirmar L1-L5, L1-L4 y L1-L3 a la vez. No fue descuido: es
+// que había **tres fuentes de verdad para un solo dato**, y
+// reconciliarlas a mano las deja sincronizadas hoy y rotas la próxima vez
+// que alguien toque una.
+//
+// Así que los ids viven AQUÍ, en una tupla `as const` que conserva los
+// literales, `NIVELES_DE` los importa en vez de escribirlos, y un test
+// comprueba que la tabla de abajo y el documento dicen lo mismo. El
+// arreglo vale también para la cuarta vez.
+export const IDS_PELDANO = {
+  la: ['L1', 'L2', 'L3', 'L4'],
+  grc: ['G1', 'G2a', 'G3', 'G4'],
+} as const satisfies Record<Lengua, readonly string[]>;
+
 export interface Peldano {
   id: string;
   /** Los sistemas gramaticales que hay que tener automatizados. UNO, o
