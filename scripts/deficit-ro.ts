@@ -19,7 +19,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { PUNTOS_RO, pisoDePuntoRo } from '../lib/data/languages/ro/inventario-puntos';
 import { blocksDir } from '../lib/data/registry';
-import { contarPuntosRo, pisoDePunto } from './lib/asigna-ro';
+import { contarPuntosRo, pisoDePunto, bloquesSinLeccion } from './lib/asigna-ro';
 import { reconciliar, informe, type PorPunto } from './lib/reconciliar-deficit';
 
 const HIST = path.join(process.cwd(), 'docs/plans/deficit-ro-historico.json');
@@ -63,6 +63,25 @@ if (cero.length) {
   for (const p of cero) console.log(`- \`${p.id}\`: ${p.pisoCero}`);
 }
 if (desconocidos.size) console.log(`\n⚠ ítems con puntos que NO están en el inventario: ${[...desconocidos].map(([k, v]) => `${k} ×${v}`).join(', ')}`);
+
+// ── EL BLOQUEO ESTRUCTURAL, ANTES DE INTENTAR PUBLICAR ───────────────
+// Un punto cuyo bloque no tiene lecciones NO PUEDE recibir un ítem, por
+// limpio que salga el lote: el publicador lo rechaza entero. Hasta el
+// 2026-09-03 eso valía para B1, B2, C1 y C2 completos —42 puntos, la
+// mitad del curso— y no estaba escrito en ningún sitio. Aquí sale sin
+// tener que escribir un lote para descubrirlo.
+const sinLeccion = bloquesSinLeccion();
+const puntosBloqueados = sinLeccion.reduce((a, b) => a + b.puntos.length, 0);
+if (sinLeccion.length) {
+  console.log(`\n## ⚠ BLOQUEADOS POR FALTA DE LECCIÓN (${puntosBloqueados} puntos en ${sinLeccion.length} bloques)\n`);
+  console.log('Estos puntos NO pueden recibir un ítem aunque el lote salga limpio: `curriculum.ts`');
+  console.log('sólo declara los bloques con `lessons/bN.json`, y el publicador rechaza el lote entero.\n');
+  console.log('| bloque | puntos | ids |');
+  console.log('|---|---:|---|');
+  for (const b of sinLeccion) console.log(`| b${b.bloque} · ${b.nombre} | ${b.puntos.length} | ${b.puntos.join(', ')} |`);
+} else {
+  console.log(`\nBloqueados por falta de lección: **0** — los ${PUNTOS_RO.length} puntos tienen dónde caer.`);
+}
 
 // ── reconciliación ───────────────────────────────────────────────────
 const porPuntoAhora: PorPunto = Object.fromEntries(cuenta);
