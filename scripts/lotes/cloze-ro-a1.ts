@@ -26,7 +26,7 @@
 // coordinador pidió el lote preparado, no en el corpus. Y antes de
 // publicarse pasa por el lingüista adversarial.
 import { SUSTANTIVOS_A1, VERBOS_A1 } from '../../lib/data/languages/ro/lexicon-a1';
-import { articulado, presente, paradigmaNominal, PERSONAS, type Persona } from '../lib/paradigma-ro';
+import { articulado, presente, paradigmaNominal, diminutivo, PERSONAS, type Persona } from '../lib/paradigma-ro';
 import { revisarOrtografiaRo } from '../../lib/lang/ortografia-ro';
 import { hunspellDisponible, desconocidas } from '../lib/hunspell-ro';
 
@@ -39,7 +39,7 @@ export interface ClozeRo {
    *  defecto el artículo singular; el lote 4 usa plural, artículo plural y
    *  genitivo-dativo definido singular). */
   lema?: string;
-  casilla?: 'N pl' | 'N pl art' | 'GD sg indef' | 'GD sg def' | 'GD pl def';
+  casilla?: 'N pl' | 'N pl art' | 'GD sg indef' | 'GD sg def' | 'GD pl def' | 'DIM sg';
   /** derivada: verbo + persona */
   inf?: string; per?: Persona;
   /** declarada, donde el paradigma no llega */
@@ -109,7 +109,14 @@ const VERB = new Map(VERBOS_A1.map((v) => [v.inf, v]));
 
 export function respuestaDe(x: ClozeRo): string | null {
   if (x.r) return x.r;
-  if (x.lema) { const l = NOM.get(x.lema); if (!l) return null; return x.casilla ? paradigmaNominal(l)[x.casilla] ?? null : articulado(l, 'sg'); }
+  if (x.lema) {
+    const l = NOM.get(x.lema);
+    if (!l) return null;
+    // El diminutivo NO está en `paradigmaNominal`: no es una casilla que se
+    // derive, es una forma guardada con su fuente. Va por su propia puerta.
+    if (x.casilla === 'DIM sg') return diminutivo(l);
+    return x.casilla ? paradigmaNominal(l)[x.casilla] ?? null : articulado(l, 'sg');
+  }
   if (x.inf && x.per) { const v = VERB.get(x.inf); return v ? presente(v, x.per) : null; }
   return null;
 }
@@ -141,7 +148,7 @@ export function verificar(items: ClozeRo[]): string[] {
     // SINCRETISMO: en un ítem de artículo SINGULAR el único testigo de número
     // no puede ser un verbo de 1.ª conjugación en presente (pleacă, există:
     // 3.ª sg = 3.ª pl). Hace falta un testigo singular explícito.
-    if (x.lema && !x.casilla) {
+    if (x.p === 'r2-articulo-enclitico-sg' && x.lema && !x.casilla) {
       const resto = x.s.replace('___', '').replace(/\([^)]*\)/g, '');
       const testigo = /(?<![\p{L}])(este|e|era|a fost|meu|mea|nostru|noastră|tău|ta|acesta|aceasta|acest|această|acela|aceea)(?![\p{L}])/iu.test(resto);
       if (!testigo) v.push(`${id}: sin testigo singular explícito — con «pleacă»/«există» la frase admite el plural (trenurile) y el ítem no está determinado`);
@@ -150,7 +157,7 @@ export function verificar(items: ClozeRo[]): string[] {
     // NUNCA va en posición de objeto directo, porque con humano definido el
     // OD exige «pe» + doblado y eso es otro punto (r6). Se detecta un verbo
     // finito o un perfect compus DELANTE del hueco que no sea la cópula.
-    if (x.lema && !x.casilla) {
+    if (x.p === 'r2-articulo-enclitico-sg' && x.lema && !x.casilla) {
       const antes = x.s.split('___')[0] ?? '';
       const formas = new Set(VERBOS_A1.flatMap((v) => PERSONAS.map((q) => presente(v, q)).filter(Boolean) as string[]));
       const toks = antes.toLowerCase().replace(/[^\p{L}\- ]/gu, ' ').split(/\s+/).filter(Boolean);
@@ -158,7 +165,7 @@ export function verificar(items: ClozeRo[]): string[] {
       if (verboAntes || /\b(am|ai|a|ați|au) \p{L}+t ___/u.test(x.s)) v.push(`${id}: el hueco de artículo está en posición de objeto directo («${verboAntes ?? 'perfect compus'}» delante) — con humano definido pide «pe» + doblado, que es otro punto`);
     }
     // Un ítem de artículo cuya respuesta es igual al lema no examina nada.
-    if (x.lema && !x.casilla && r === x.lema) v.push(`${id}: la forma articulada coincide con el lema`);
+    if (x.p === 'r2-articulo-enclitico-sg' && x.lema && !x.casilla && r === x.lema) v.push(`${id}: la forma articulada coincide con el lema`);
     // ORTOGRAFÍA DOOM3 en todo lo que el alumno ve.
     for (const [campo, t] of [['frase', x.s], ['pista', x.pista], ['respuesta', r]] as const)
       for (const h of revisarOrtografiaRo(t)) v.push(`${id}: ortografía en ${campo}: «${h.palabra}» (${h.clase})`);

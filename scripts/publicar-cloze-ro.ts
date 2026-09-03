@@ -17,8 +17,9 @@ import { blocksDir } from '../lib/data/registry';
 import { hashKey } from './lib/cache';
 import { ITEMS as A1, verificar as verificarA1, respuestaDe, type ClozeRo } from './lotes/cloze-ro-a1';
 import { ITEMS as A2, verificar as verificarA2 } from './lotes/cloze-ro-a2';
+import { ITEMS as A2B, verificar as verificarA2B } from './lotes/cloze-ro-a2b';
 
-const LOTES: Record<string, { items: ClozeRo[]; verificar: (xs: ClozeRo[]) => string[] }> = { a1: { items: A1, verificar: verificarA1 }, a2: { items: A2, verificar: verificarA2 } };
+const LOTES: Record<string, { items: ClozeRo[]; verificar: (xs: ClozeRo[]) => string[] }> = { a1: { items: A1, verificar: verificarA1 }, a2: { items: A2, verificar: verificarA2 }, a2b: { items: A2B, verificar: verificarA2B } };
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
 const lote = arg('--lote') ?? '';
 const LOTE = LOTES[lote];

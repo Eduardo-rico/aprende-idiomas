@@ -612,10 +612,43 @@ export const PUNTOS_RO: PuntoRo[] = [
     prereqs: ['r10-tratamiento'], clase: 'pragmatico', calco: { castellano: 'no-aplica', latinComun: 'transparente' },
     motivo: 'adecuación al género: mediación de registro con rúbrica', cubre: ['A2/PRODUCCIÓN ESCRITA'],
     cita: 'fórmulas de cierre de correo por registro (Cu stimă, Cu respect, Toate cele bune, Pupici)' }),
-  P({ id: 'r10-diminutivo-atenuador', nombre: 'El diminutivo como atenuador cortés: o cafeluță, un pic, două minute', bloque: 10, nivel: 'A2',
-    descripcion: 'Recurso muy productivo y muy rumano; -uță/-uleț/-ică con valor pragmático, no de tamaño.',
-    prereqs: ['r10-registro-tramite'], clase: 'pragmatico', calco: { castellano: 'no-aplica', latinComun: 'transparente' },
-    motivo: 'el español tiene diminutivo pero no este uso sistemático en la transacción: mediación de registro', cubre: ['A2/PRODUCCIÓN ESCRITA'],
+  // RE-ENCUADRADO por el coordinador (2026-09-02), con el motivo escrito
+  // para que no se reabra. Se llamaba «el diminutivo como atenuador
+  // cortés» y se examinaba por mediación de registro. El lingüista
+  // adversarial midió que así NO MEDÍA RUMANO: la función atenuadora es
+  // espejo del español de México (ahorita, cafecito, un ratito), y en la
+  // dirección atenuado→directo el alumno sólo tiene que BORRAR un sufijo.
+  // La divergencia real es otra y es LÉXICA: la elección del sufijo se
+  // almacena por lema (cafea→cafeluță -uță, pahar→păhărel -el,
+  // minut→minuțel -el, apă→apșoară -șoară, fată→fetiță -iță).
+  // MATIZADO por el lingüista el 2026-09-02, porque la v0 de esta nota
+  // decía «no se deriva» a secas y era falso a medias: hay DOS tendencias
+  // reales (fem. en -e → -icică; fem. en -ă → -uță por defecto) y con
+  // ellas se acierta la mitad. Lo léxico de verdad es lo que las
+  // desmiente: fată→fetiță (femenino en -ă que no toma -uță),
+  // cafea→cafeluță (sobre el alomorfo cafel-, no sobre el lema) y todo el
+  // masculino (copil→copilaș frente a om→omuleț, sin nada que los
+  // separe). La formulación que vale: el sufijo NO ES PREDECIBLE desde el
+  // lema. Es la misma lección que masă/mese frente a casă/case.
+  //   · `clase: 'lexico'` porque el reparto se guarda, no se calcula; y
+  //     `formato` DECLARADO para saltar el flashcard de esa clase: la
+  //     casilla que obliga a ELEGIR el sufijo es el cloze derivado, y la
+  //     transformación atenuado→directo se descarta por lo dicho.
+  //   · `castellano: 'bien'` porque el error diana calcado («cafecito»,
+  //     «un ratito») es español impecable ⇒ el ítem PRODUCE, nunca juzga.
+  //   · `latinComun: 'engañoso'`: la raíz se reconoce entera (cafea) justo
+  //     donde la morfología diverge (cafeluță). Es la trampa propia del
+  //     rumano, no «transparente».
+  //   · El `id` NO cambia: lo referencian 8 ítems ya publicados en b10 y
+  //     renombrarlo los dejaría contando a un punto inexistente. El id es
+  //     un asa; lo que enseña lo dicen `nombre` y `descripcion`.
+  //   · `cita` se deja intacta: es la frase literal del currículo y un
+  //     test la busca ahí. El currículo dice «atenuador»; el inventario
+  //     dice qué se EXAMINA, que es otra pregunta.
+  P({ id: 'r10-diminutivo-atenuador', nombre: 'Elección del sufijo diminutivo: cafea → cafeluță, pahar → păhărel, minut → minuțel', bloque: 10, nivel: 'A2',
+    descripcion: 'El reparto -uță / -el / -iță / -aș / -uleț / -icică / -șoară no es PREDECIBLE desde el lema: se almacena por palabra, como la alternancia del plural. Hay dos tendencias (fem. en -e → -icică; fem. en -ă → -uță) y lo que el punto enseña es lo que las desmiente — fată→fetiță, cafea→cafeluță y el masculino entero. Con la función atenuadora al lado, que es la que motiva usarlo; pero lo que el ítem mide es la ELECCIÓN, no el efecto cortés (ése lo calca el español de México sin saber rumano).',
+    prereqs: ['r10-registro-tramite'], clase: 'lexico', formato: 'cloze-con-pista', calco: { castellano: 'bien', latinComun: 'engañoso' },
+    motivo: 'la elección del sufijo es léxica y no derivable ⇒ cloze derivado con el lema dado y la forma diminutiva exigida; cada lema entra al lexicón con su diminutivo ATESTADO y su fuente (supică y ceaiuț se retiraron por no estar en DEX/MDA2/DLR/DOOM3). La función atenuadora sigue enseñándose, pero no es lo que se puntúa: es espejo del castellano', cubre: ['A2/PRODUCCIÓN ESCRITA'],
     cita: 'el uso del diminutivo como atenuador cortés (o cafeluță, un pic, două minute)' }),
   P({ id: 'r10-particulas-modales', nombre: 'Partículas modales: chiar, tocmai, doar, cam, oare, ba, măcar, totuși, tot, parcă, cică', bloque: 10, nivel: 'B1',
     descripcion: 'Sin equivalente 1:1; son la marca acústica del no nativo y su valor es prosódico además de léxico. Se enseñan como sistema, con audio. tocmai y abia se adelantan a A2 porque r5-perifrasis-pasado los necesita.',

@@ -54,13 +54,16 @@ export const ITEMS: ClozeRo[] = [
   // lente) y Hunspell lo acepta; «încete» es más coloquial. El lingüista
   // retiró su objeción de la 1.ª pasada — menos frecuente ≠ agramatical, y
   // sólo se cambia lo atestado como agramatical.
-  { p: ARTPL, lema: 'tren', casilla: 'N pl art', s: '___ (tren) de noapte sunt lente.', pista: 'tren — plural con artículo definido enclítico (neutro: sobre el PLURAL, + -le)', ancla: 'de noapte sunt lente', transparenteLatin: false },
-  // D3 dictaminado y NO aplicado: aquí y en el 12 el testigo es el más
-  // débil del lote (el sujeto plural escueto preverbal es agramatical en
-  // rumano, restricción que el alumno no conoce). El lingüista lo marcó
-  // «opcional, no bloqueante»; anteponer un tercer «Toate» volvería el
-  // lote más plantilla. Se deja medido, no tapado.
-  { p: ARTPL, lema: 'casă', casilla: 'N pl art', s: '___ (casă) din sat sunt mici.', pista: 'casa — plural con artículo definido enclítico (femenino: sobre el PLURAL, + -le)', ancla: 'din sat sunt mici', transparenteLatin: false },
+  { p: ARTPL, lema: 'tren', casilla: 'N pl art', s: '___ (tren) acelea de noapte sunt lente.', pista: 'tren — plural con artículo definido enclítico (neutro: sobre el PLURAL, + -le)', ancla: 'acelea de noapte sunt lente', transparenteLatin: false },
+  // D3 CERRADO (2026-09-02, orden del coordinador: reforzar o declarar,
+  // no dejarlo «no bloqueante» una segunda sesión). Aquí y en el 12 el
+  // testigo era el más débil del lote: para un nativo el hueco está
+  // determinado —el sujeto plural escueto preverbal es agramatical en
+  // rumano—, pero es una restricción que el alumno NO conoce, así que el
+  // ítem le pedía adivinar. Se refuerza con el demostrativo pospuesto
+  // «acelea», que no usaba ningún otro ítem: determina sin convertir el
+  // lote en ocho «Toate».
+  { p: ARTPL, lema: 'casă', casilla: 'N pl art', s: '___ (casă) acelea din sat sunt mici.', pista: 'casa — plural con artículo definido enclítico (femenino: sobre el PLURAL, + -le)', ancla: 'acelea din sat sunt mici', transparenteLatin: false },
   { p: ARTPL, lema: 'floare', casilla: 'N pl art', s: 'Toate ___ (floare) din grădină sunt albe.', pista: 'flor — plural con artículo definido enclítico (femenino: sobre el PLURAL en -i, + -le)', ancla: 'Toate', transparenteLatin: false },
   { p: ARTPL, lema: 'oraș', casilla: 'N pl art', s: '___ (oraș) acestea au metrou.', pista: 'ciudad — plural con artículo definido enclítico (neutro: sobre el PLURAL, + -le)', ancla: 'acestea', transparenteLatin: false },
   { p: ARTPL, lema: 'mașină', casilla: 'N pl art', s: 'Toate ___ (mașină) sunt parcate afară.', pista: 'coche — plural con artículo definido enclítico (femenino: sobre el PLURAL, + -le)', ancla: 'Toate', transparenteLatin: false },

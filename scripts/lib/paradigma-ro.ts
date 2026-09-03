@@ -56,6 +56,25 @@ export interface LemaNominal {
   vocAlt?: string[];
   /** Obligatorio si hay vocativo marcado: -ule sobre un común es brusco. */
   registro?: Registro;
+  /** DIMINUTIVO, guardado y NUNCA derivado. El reparto de sufijos
+   *  (-uță, -el, -iță, -aș, -uleț, -cică, -șoară) no sale del lema: es
+   *  léxico, como la clase de plural. cafea→cafeluță pero pahar→păhărel y
+   *  fată→fetiță; un hispanohablante pondría «-ito» a todo y acertaría
+   *  cero. Punto `r10-diminutivo-atenuador` del inventario, re-encuadrado
+   *  el 2026-09-02: lo que se examina es la ELECCIÓN, no el efecto
+   *  cortés (ése lo calca el español de México sin saber rumano). */
+  dim?: string;
+  /** Plural del diminutivo, guardado por la MISMA razón que el diminutivo
+   *  y con una vuelta de tuerca: el sufijo cambia de alomorfo en plural
+   *  (floricică → floricele, cărticică → cărticele; DOOM3 g.-d. art.
+   *  floricelei). La regla femenina «-ă → -e» daría *floricice. Lo cazó
+   *  el lingüista como ERROR-EN-ESPERA: no explota hoy porque nada
+   *  pluraliza `dim`, y explotaría el día que alguien lo derivara. */
+  dimPlural?: string;
+  /** OBLIGATORIO si hay `dim`, y lo exige un invariante. Regla pagada con
+   *  `supică` y `ceaiuț`, que se colaron en un lote y no están en DEX,
+   *  MDA2, DLR ni DOOM3: un diminutivo sin fuente no entra. */
+  dimFuente?: string;
   gloss: string;
 }
 
@@ -104,6 +123,13 @@ export function genitivoDativo(l: LemaNominal, n: Numero, definido: boolean): st
   const art = articulado(l, 'sg');
   if (!art) return null;
   return formaValida(art.endsWith('le') ? art.slice(0, -2) + 'lui' : art + 'ui');  // omul → omului, fratele → fratelui, tatăl → tatălui
+}
+
+/** Diminutivo: SÓLO lo guardado. No hay rama que lo derive, y es
+ *  deliberado — si mañana alguien escribe una regla «-ă → -uță», este
+ *  módulo empezará a fabricar *apuță por apșoară y nadie lo verá. */
+export function diminutivo(l: LemaNominal): string | null {
+  return l.dim ? formaValida(l.dim) : null;
 }
 
 /** Vocativo: singular guardado por lema (o sin marca); plural = GD plural. */
@@ -299,6 +325,10 @@ export function invariantesLema(l: LemaNominal | LemaVerbal): string[] {
     if (l.genero === 'f' && l.lema.endsWith('ă') && l.plural === l.lema) errores.push(`${l.lema}: plural igual al singular`);
     if (l.vocSg && !l.registro) errores.push(`${l.lema}: vocativo marcado «${l.vocSg}» sin registro`);
     if (l.genero === 'n' && l.vocSg) errores.push(`${l.lema}: un neutro no tiene vocativo`);
+    // Sin fuente no entra: es la regla que costó dos diminutivos inventados.
+    if (l.dim && !l.dimFuente) errores.push(`${l.lema}: diminutivo «${l.dim}» sin fuente (dimFuente) — un diminutivo sin atestar no entra`);
+    if (l.dim && !l.dimPlural) errores.push(`${l.lema}: diminutivo «${l.dim}» sin plural guardado (dimPlural) — el sufijo cambia de alomorfo (floricică → floricele) y la regla femenina daría *floricice`);
+    if (l.dim && l.dim === l.lema) errores.push(`${l.lema}: el diminutivo es igual al lema`);
   }
   return errores;
 }

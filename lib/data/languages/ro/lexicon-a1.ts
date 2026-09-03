@@ -25,17 +25,17 @@ import type { LemaNominal, LemaVerbal } from '@/scripts/lib/paradigma-ro';
 
 export const SUSTANTIVOS_A1: LemaNominal[] = [
   // personas y familia
-  { lema: 'om', genero: 'm', plural: 'oameni', vocSg: 'omule', registro: 'familiar', gloss: 'hombre, persona' },
+  { lema: 'om', genero: 'm', plural: 'oameni', vocSg: 'omule', registro: 'familiar', dim: 'omuleț', dimPlural: 'omuleți', dimFuente: "DEX '09 s.v. omuleț «diminutiv al lui om»; DOOM3 omuleț, pl. omuleți", gloss: 'hombre, persona' },
   { lema: 'domn', genero: 'm', plural: 'domni', vocSg: 'domnule', registro: 'neutru', gloss: 'señor' },
   { lema: 'doamnă', genero: 'f', plural: 'doamne', vocSg: null, gloss: 'señora' },
   { lema: 'băiat', genero: 'm', plural: 'băieți', vocSg: 'băiete', vocAlt: ['băiatule'], registro: 'familiar', gloss: 'chico' },
-  { lema: 'fată', genero: 'f', plural: 'fete', vocSg: 'fato', registro: 'brusc', gloss: 'chica' },
+  { lema: 'fată', genero: 'f', plural: 'fete', vocSg: 'fato', registro: 'brusc', dim: 'fetiță', dimPlural: 'fetițe', dimFuente: "DEX '09 s.v. fetiță «diminutiv al lui fată»; DOOM3 fetiță, g.-d. art. fetiței, pl. fetițe", gloss: 'chica' },
   { lema: 'prieten', genero: 'm', plural: 'prieteni', vocSg: 'prietene', registro: 'neutru', gloss: 'amigo' },
   { lema: 'frate', genero: 'm', plural: 'frați', vocSg: null, gloss: 'hermano' },
   { lema: 'soră', genero: 'f', plural: 'surori', vocSg: 'soro', vocAlt: ['soră'], registro: 'familiar', gloss: 'hermana' },
   { lema: 'mamă', genero: 'f', plural: 'mame', vocSg: 'mamo', registro: 'familiar', gloss: 'madre' },
   { lema: 'tată', genero: 'm', plural: 'tați', vocSg: null, gloss: 'padre' },
-  { lema: 'copil', genero: 'm', plural: 'copii', vocSg: 'copile', vocAlt: ['copilule'], registro: 'familiar', gloss: 'niño' },
+  { lema: 'copil', genero: 'm', plural: 'copii', vocSg: 'copile', vocAlt: ['copilule'], registro: 'familiar', dim: 'copilaș', dimPlural: 'copilași', dimFuente: "DEX '09 s.v. copilaș «diminutiv al lui copil1» (copil + suf. -aș); DOOM3 copilaș, pl. copilași", gloss: 'niño' },
   { lema: 'femeie', genero: 'f', plural: 'femei', vocSg: null, gloss: 'mujer' },
   { lema: 'bărbat', genero: 'm', plural: 'bărbați', vocSg: 'bărbate', vocAlt: ['bărbatule'], registro: 'familiar', gloss: 'hombre, varón' },
   { lema: 'student', genero: 'm', plural: 'studenți', vocSg: 'studentule', vocAlt: ['studente'], registro: 'brusc', gloss: 'estudiante' },
@@ -45,8 +45,8 @@ export const SUSTANTIVOS_A1: LemaNominal[] = [
   { lema: 'bunic', genero: 'm', plural: 'bunici', vocSg: 'bunicule', registro: 'familiar', gloss: 'abuelo' },
   { lema: 'nume', genero: 'n', plural: 'nume', gloss: 'nombre' },
   // casa y ciudad
-  { lema: 'casă', genero: 'f', plural: 'case', gloss: 'casa' },
-  { lema: 'masă', genero: 'f', plural: 'mese', gloss: 'mesa; comida' },
+  { lema: 'casă', genero: 'f', plural: 'case', dim: 'căsuță', dimPlural: 'căsuțe', dimFuente: "DEX '09 s.v. căsuță «diminutiv al lui casă (1)»; DOOM3 căsuță, g.-d. art. căsuței, pl. căsuțe", gloss: 'casa' },
+  { lema: 'masă', genero: 'f', plural: 'mese', dim: 'măsuță', dimPlural: 'măsuțe', dimFuente: "DEX '09 s.v. măsuță «diminutiv al lui masă2»; DOOM3 măsuță, g.-d. art. măsuței, pl. măsuțe", gloss: 'mesa; comida' },
   { lema: 'scaun', genero: 'n', plural: 'scaune', gloss: 'silla' },
   { lema: 'ușă', genero: 'f', plural: 'uși', gloss: 'puerta' },
   { lema: 'poartă', genero: 'f', plural: 'porți', gloss: 'portón' },
@@ -68,7 +68,7 @@ export const SUSTANTIVOS_A1: LemaNominal[] = [
   // comida y bebida
   { lema: 'pâine', genero: 'f', plural: 'pâini', gloss: 'pan' },
   { lema: 'apă', genero: 'f', plural: 'ape', gloss: 'agua' },
-  { lema: 'cafea', genero: 'f', plural: 'cafele', gloss: 'café' },
+  { lema: 'cafea', genero: 'f', plural: 'cafele', dim: 'cafeluță', dimPlural: 'cafeluțe', dimFuente: "DEX '09 s.v. cafeluță (Fam.) «diminutiv al lui cafea (2)»; DOOM3 cafeluță, g.-d. art. cafeluței, pl. cafeluțe", gloss: 'café' },
   { lema: 'măr', genero: 'n', plural: 'mere', gloss: 'manzana' },
   // tiempo
   { lema: 'zi', genero: 'f', plural: 'zile', gloss: 'día' },
@@ -81,11 +81,11 @@ export const SUSTANTIVOS_A1: LemaNominal[] = [
   { lema: 'oră', genero: 'f', plural: 'ore', gloss: 'hora' },
   { lema: 'timp', genero: 'n', plural: 'timpuri', gloss: 'tiempo' },
   // varios
-  { lema: 'carte', genero: 'f', plural: 'cărți', gloss: 'libro' },
+  { lema: 'carte', genero: 'f', plural: 'cărți', dim: 'cărticică', dimPlural: 'cărticele', dimFuente: "DEX '09 s.v. CĂRTICEA, -ICĂ, pl. cărticele; DOOM3 cărticică, g.-d. art. cărticelei, pl. cărticele", gloss: 'libro' },
   { lema: 'cuvânt', genero: 'n', plural: 'cuvinte', gloss: 'palabra' },
   { lema: 'limbă', genero: 'f', plural: 'limbi', gloss: 'lengua' },
   { lema: 'telefon', genero: 'n', plural: 'telefoane', gloss: 'teléfono' },
-  { lema: 'floare', genero: 'f', plural: 'flori', gloss: 'flor' },
+  { lema: 'floare', genero: 'f', plural: 'flori', dim: 'floricică', dimPlural: 'floricele', dimFuente: "DEX '09 s.v. FLORICEA, -ICĂ, pl. floricele; DOOM3 !floricică, g.-d. art. floricelei, pl. floricele", gloss: 'flor' },
   { lema: 'leu', genero: 'm', plural: 'lei', gloss: 'leu (moneda)' },
   { lema: 'ban', genero: 'm', plural: 'bani', gloss: 'moneda; dinero (pl.)' },
   { lema: 'câine', genero: 'm', plural: 'câini', gloss: 'perro' },

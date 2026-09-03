@@ -45,6 +45,12 @@ for (const l of SUSTANTIVOS_A1) {
     if (forma === null) { if (esperable) nulos.push(`${l.lema} · ${casilla}`); continue; }
     formas.push({ lema: l.lema, casilla, forma });
   }
+  // El diminutivo y su plural NO están en `paradigmaNominal` —son formas
+  // guardadas, no casillas derivadas— pero SÍ tienen que pasar por
+  // Hunspell: es el segundo camino, y un diminutivo inventado no puede
+  // entrar al lexicón sólo porque alguien escribió una fuente al lado.
+  if (l.dim) formas.push({ lema: l.lema, casilla: 'DIM sg', forma: l.dim });
+  if (l.dimPlural) formas.push({ lema: l.lema, casilla: 'DIM pl', forma: l.dimPlural });
 }
 for (const v of VERBOS_A1) {
   for (const [casilla, forma] of Object.entries(paradigmaVerbal(v))) {
