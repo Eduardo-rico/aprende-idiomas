@@ -1,0 +1,204 @@
+[
+  {
+    "id": "eb07a366",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-pe-regla-operativa"
+    ],
+    "tags": [
+      "ro-corr-a2",
+      "correccion"
+    ],
+    "contentHash": "eb07a3665877b03551fb52fa3566e706037dac590588faa06f663234553e0c0c",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2 (2026-09-01): la frase mala es el calco de «Busco a un médico bueno en la ciudad.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Caut pe un doctor bun în oraș.",
+      "correct": "Caut un doctor bun în oraș.",
+      "alternatives": [],
+      "calcoEs": "Busco a un médico bueno en la ciudad.",
+      "explanationEs": "Un nombre común indeterminado y NO ESPECÍFICO va sin «pe»: «caut un doctor bun», cualquiera que lo sea. Cuidado con la regla a medias: con los PRONOMBRES «pe» es obligatorio (pe cineva, pe nimeni, pe cine), y también con la persona individualizada."
+    }
+  },
+  {
+    "id": "b82bed8f",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-pe-regla-operativa"
+    ],
+    "tags": [
+      "ro-corr-a2",
+      "correccion"
+    ],
+    "contentHash": "b82bed8f8394568e00010340bb24cea721d5782923d8767c29208e79cc0f1f5a",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2 (2026-09-01): la frase mala es el calco de «La empresa busca a una secretaria.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Firma caută pe o secretară.",
+      "correct": "Firma caută o secretară.",
+      "alternatives": [],
+      "calcoEs": "La empresa busca a una secretaria.",
+      "explanationEs": "No se busca a alguien concreto sino a quien ocupe el puesto: nombre común indeterminado y no específico, sin «pe». La regla NO es «indefinido → sin pe»: los pronombres indefinidos sí lo llevan (caut pe cineva)."
+    }
+  },
+  {
+    "id": "6513dd12",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-pe-regla-operativa"
+    ],
+    "tags": [
+      "ro-corr-a2",
+      "correccion"
+    ],
+    "contentHash": "6513dd127ce2a01e47da33bb37588d9d917d4073c3e200d9142536a75fc8ac73",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2 (2026-09-01): la frase mala es el calco de «Buscamos a un profesor de rumano para los niños.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Căutăm pe un profesor de română pentru copii.",
+      "correct": "Căutăm un profesor de română pentru copii.",
+      "alternatives": [],
+      "calcoEs": "Buscamos a un profesor de rumano para los niños.",
+      "explanationEs": "No se busca a una persona concreta sino a cualquiera que tenga ese perfil: objeto humano indeterminado y NO ESPECÍFICO, sin «pe». Con los pronombres, en cambio, «pe» es obligatorio: pe cineva, pe nimeni, pe cine."
+    }
+  },
+  {
+    "id": "eab461b5",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-pe-regla-operativa"
+    ],
+    "tags": [
+      "ro-corr-a2",
+      "correccion"
+    ],
+    "contentHash": "eab461b5ce1adc7ce75e08d31ea6f95b14da53e5551831f60ac8e5efd183400e",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2 (2026-09-01): la frase mala es el calco de «Queremos contratar a un ingeniero.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Vrem să angajăm pe un inginer.",
+      "correct": "Vrem să angajăm un inginer.",
+      "alternatives": [],
+      "calcoEs": "Queremos contratar a un ingeniero.",
+      "explanationEs": "Contratar «a un ingeniero» cualquiera es un nombre común no específico: en rumano va sin «pe». La «a» del español no se traduce por «pe» automáticamente — pero tampoco se borra siempre: con pronombres y con persona individualizada «pe» es obligatorio."
+    }
+  },
+  {
+    "id": "925a75e0",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-pe-regla-operativa"
+    ],
+    "tags": [
+      "ro-corr-a2",
+      "correccion"
+    ],
+    "contentHash": "925a75e0223a905535ab188ac75fe155f09cbb6022e742b8f009c3ec1581bfb1",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2 (2026-09-01): la frase mala es el calco de «¿A quién viste en la estación?»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Cine ai văzut la gară?",
+      "correct": "Pe cine ai văzut la gară?",
+      "alternatives": [],
+      "calcoEs": "¿A quién viste en la estación?",
+      "explanationEs": "Como OBJETO, «quién» es «pe cine»: el rumano marca siempre el pronombre interrogativo de persona. Sin «pe», «cine» sólo puede ser el SUJETO, y con «ai văzut» (2.ª persona) eso es imposible: la frase no es gramatical."
+    }
+  },
+  {
+    "id": "6a2f6821",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-pe-regla-operativa"
+    ],
+    "tags": [
+      "ro-corr-a2",
+      "correccion"
+    ],
+    "contentHash": "6a2f6821a551493948f86a576fffb4b3ff00d5a0475c2f4f2c1404a1f0eba117",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2 (2026-09-01): la frase mala es el calco de «¿A quién preguntas cuando no sabes?»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Cine întrebi când nu știi?",
+      "correct": "Pe cine întrebi când nu știi?",
+      "alternatives": [],
+      "calcoEs": "¿A quién preguntas cuando no sabes?",
+      "explanationEs": "El interrogativo de persona en función de objeto lleva «pe» obligatoriamente: «pe cine întrebi». Sin «pe», «cine» se lee como sujeto."
+    }
+  },
+  {
+    "id": "90788e34",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-pe-regla-operativa"
+    ],
+    "tags": [
+      "ro-corr-a2",
+      "correccion"
+    ],
+    "contentHash": "90788e34d4c46a40672621762f0695e164e709d5c7a38306df0fe2f9cb84030f",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2 (2026-09-01): la frase mala es el calco de «A mí no me pregunta nadie nunca.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Mie nu mă întreabă nimeni niciodată.",
+      "correct": "Pe mine nu mă întreabă nimeni niciodată.",
+      "alternatives": [
+        "Pe mine nu mă întreabă niciodată nimeni."
+      ],
+      "calcoEs": "A mí no me pregunta nadie nunca.",
+      "explanationEs": "La «a» española tapa la diferencia de caso: «mie» es el tónico de DATIVO y aquí el verbo pide ACUSATIVO, que en forma tónica es «pe mine» y se dobla con el clítico «mă»."
+    }
+  },
+  {
+    "id": "6c5d0361",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-pe-regla-operativa"
+    ],
+    "tags": [
+      "ro-corr-a2",
+      "correccion"
+    ],
+    "contentHash": "6c5d03612feb0810ba8f922a4a62a67db7623169dd6a4c723421a95036846cf0",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2 (2026-09-01): la frase mala es el calco de «A ti te busca alguien en la puerta.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ție te caută cineva la ușă.",
+      "correct": "Pe tine te caută cineva la ușă.",
+      "alternatives": [],
+      "calcoEs": "A ti te busca alguien en la puerta.",
+      "explanationEs": "«Ție» es dativo; con «te caută» el objeto es acusativo y el tónico acusativo lleva «pe» siempre: «pe tine te caută»."
+    }
+  }
+]

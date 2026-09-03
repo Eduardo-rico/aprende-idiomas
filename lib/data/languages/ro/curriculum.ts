@@ -15,6 +15,8 @@ import { CONCEPTOS_RO, BLOQUES_RO } from "./inventario-puntos";
 import b2Lessons from "./lessons/b2.json";
 import b3Lessons from "./lessons/b3.json";
 import b4Lessons from "./lessons/b4.json";
+import b5Lessons from "./lessons/b5.json";
+import b6Lessons from "./lessons/b6.json";
 import b10Lessons from "./lessons/b10.json";
 export type { Block, Concept, Lesson, ConceptId, LessonId };
 
@@ -22,6 +24,8 @@ const LECCIONES: Record<number, Lesson[]> = {
   2: b2Lessons as Lesson[],
   3: b3Lessons as Lesson[],
   4: b4Lessons as Lesson[],
+  5: b5Lessons as Lesson[],
+  6: b6Lessons as Lesson[],
   10: b10Lessons as Lesson[],
 };
 

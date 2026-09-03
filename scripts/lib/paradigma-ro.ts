@@ -71,6 +71,14 @@ export interface LemaNominal {
    *  el lingüista como ERROR-EN-ESPERA: no explota hoy porque nada
    *  pluraliza `dim`, y explotaría el día que alguien lo derivara. */
   dimPlural?: string;
+  /** Dobletes ESTÁNDAR del genitivo-dativo definido singular, que DOOM3 sí
+   *  admite en un puñado de lemas (tată: tatălui / tatii / tatei; soră:
+   *  surorii / sorei; noră: nurorii). `genitivoDativo()` devuelve una sola
+   *  cadena, así que sin este campo la tarjeta suspendería una respuesta
+   *  correcta y ningún gate lo vería. Mismo patrón que `dimPlural`: se
+   *  guarda antes de que muerda. Lo cazó el lingüista en el lote 7, por
+   *  OMISIÓN — no había ítem roto, había un campo que faltaba. */
+  gdAlt?: string[];
   /** OBLIGATORIO si hay `dim`, y lo exige un invariante. Regla pagada con
    *  `supică` y `ceaiuț`, que se colaron en un lote y no están en DEX,
    *  MDA2, DLR ni DOOM3: un diminutivo sin fuente no entra. */
@@ -327,6 +335,11 @@ export function invariantesLema(l: LemaNominal | LemaVerbal): string[] {
     if (l.genero === 'n' && l.vocSg) errores.push(`${l.lema}: un neutro no tiene vocativo`);
     // Sin fuente no entra: es la regla que costó dos diminutivos inventados.
     if (l.dim && !l.dimFuente) errores.push(`${l.lema}: diminutivo «${l.dim}» sin fuente (dimFuente) — un diminutivo sin atestar no entra`);
+    // Los masculinos en -ă (tată, popă, vlădică) y los femeninos en -oră
+    // son justo donde DOOM3 lista el doblete. Si el lema es de esa clase y
+    // no declara `gdAlt`, o falta el doblete o falta escribir que no lo hay.
+    if (/[ăa]$/.test(l.lema) && l.genero === 'm' && !l.gdAlt)
+      errores.push(`${l.lema}: masculino en -ă sin \`gdAlt\` — DOOM3 lista doblete de genitivo-dativo para esta clase (tatălui / tatii / tatei) y la tarjeta compara exacto`);
     if (l.dim && !l.dimPlural) errores.push(`${l.lema}: diminutivo «${l.dim}» sin plural guardado (dimPlural) — el sufijo cambia de alomorfo (floricică → floricele) y la regla femenina daría *floricice`);
     if (l.dim && l.dim === l.lema) errores.push(`${l.lema}: el diminutivo es igual al lema`);
   }

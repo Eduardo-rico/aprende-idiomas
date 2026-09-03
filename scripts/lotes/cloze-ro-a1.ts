@@ -26,7 +26,7 @@
 // coordinador pidió el lote preparado, no en el corpus. Y antes de
 // publicarse pasa por el lingüista adversarial.
 import { SUSTANTIVOS_A1, VERBOS_A1 } from '../../lib/data/languages/ro/lexicon-a1';
-import { articulado, presente, paradigmaNominal, diminutivo, PERSONAS, type Persona } from '../lib/paradigma-ro';
+import { articulado, presente, imperfecto, perfectCompus, participio, paradigmaNominal, diminutivo, PERSONAS, type Persona } from '../lib/paradigma-ro';
 import { revisarOrtografiaRo } from '../../lib/lang/ortografia-ro';
 import { hunspellDisponible, desconocidas } from '../lib/hunspell-ro';
 
@@ -40,8 +40,11 @@ export interface ClozeRo {
    *  genitivo-dativo definido singular). */
   lema?: string;
   casilla?: 'N pl' | 'N pl art' | 'GD sg indef' | 'GD sg def' | 'GD pl def' | 'DIM sg';
-  /** derivada: verbo + persona */
+  /** derivada: verbo + persona. `t` elige el TIEMPO; por defecto presente,
+   *  que es lo único que pedían los lotes 1-6. El participio no lleva
+   *  persona. */
   inf?: string; per?: Persona;
+  t?: 'presente' | 'imperfecto' | 'perfect-compus' | 'participio';
   /** declarada, donde el paradigma no llega */
   r?: string;
   alt?: string[];
@@ -117,7 +120,15 @@ export function respuestaDe(x: ClozeRo): string | null {
     if (x.casilla === 'DIM sg') return diminutivo(l);
     return x.casilla ? paradigmaNominal(l)[x.casilla] ?? null : articulado(l, 'sg');
   }
-  if (x.inf && x.per) { const v = VERB.get(x.inf); return v ? presente(v, x.per) : null; }
+  if (x.inf) {
+    const v = VERB.get(x.inf);
+    if (!v) return null;
+    if (x.t === 'participio') return participio(v);
+    if (!x.per) return null;
+    if (x.t === 'imperfecto') return imperfecto(v, x.per);
+    if (x.t === 'perfect-compus') return perfectCompus(v, x.per);
+    return presente(v, x.per);
+  }
   return null;
 }
 

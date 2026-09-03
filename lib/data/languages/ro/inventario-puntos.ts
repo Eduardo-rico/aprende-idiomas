@@ -396,9 +396,9 @@ export const PUNTOS_RO: PuntoRo[] = [
     motivo: '«a la escuela», «en la ciudad» → *la școala, *în orașul: el calco con artículo suena perfecto; corrección desde el calco, con el contraejemplo cu trenul dentro del lote', cubre: ['A2/GRAMÁTICA · CASO'],
     cita: 'la mayoría rige acusativo Y provoca la CAÍDA DEL ARTÍCULO (la școală, în oraș, la birou, pe stradă)' }),
   P({ id: 'r4-preposiciones-gd', nombre: 'Preposiciones de genitivo y de dativo', bloque: 4, nivel: 'A2',
-    descripcion: 'asupra, contra, deasupra, împotriva, înaintea, în fața (+ G); datorită, grație, mulțumită, conform, potrivit (+ D). Receptivas en A2.',
+    descripcion: 'asupra, contra, deasupra, împotriva, înaintea (+ G) y las LOCUCIONES în fața, în favoarea, din cauza, în jurul (sustantivo articulado + G); datorită, grație, mulțumită, conform, potrivit (+ D). PRODUCTIVAS en A2: la forma es la del genitivo-dativo, que el alumno ya deriva, y lo único nuevo es saber qué preposición lo rige — eso se produce, no se reconoce.',
     prereqs: ['r4-gd-definido-sg'], clase: 'paradigma', calco: { castellano: 'bien', latinComun: 'engañoso' },
-    motivo: 'la preposición se reconoce (contra, conform) y por eso engaña: *contra guvernul por contra guvernului; cloze de la forma del sustantivo, derivada', cubre: ['A2/GRAMÁTICA · CASO'],
+    motivo: 'la preposición se reconoce (contra, conform) y por eso engaña: *contra guvernul por contra guvernului; cloze de la forma del sustantivo, derivada, y la PISTA NO PUEDE NOMBRAR EL CASO — si lo nombra, el ítem es r4-gd-definido-sg con otro nombre (lo cazó el lingüista en el lote 7 y hay un gate que lo impide). CORREGIDO 2026-09-02: la v0 decía «receptivas en A2» y a la vez el mapa asignaba cloze, que es producción; y llamaba preposición a «în fața», que GALR II clasifica como locución prepositiva (el genitivo lo rige el sustantivo de la locución, no una preposición)', cubre: ['A2/GRAMÁTICA · CASO'],
     cita: 'las de genitivo (asupra, contra, deasupra, împotriva, înaintea, în fața) y las de dativo (datorită, grație, mulțumită, conform, potrivit)' }),
 
   // ── r5 · Verbo II ──────────────────────────────────────────────────

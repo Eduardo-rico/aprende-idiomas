@@ -918,5 +918,207 @@
       ],
       "hintEs": "coche — plural con artículo definido enclítico (femenino: sobre el PLURAL, + -le)"
     }
+  },
+  {
+    "id": "6db6ae12",
+    "blockId": 2,
+    "lessonId": "b2-l1-articolul-enclitic",
+    "difficulty": 2,
+    "concepts": [
+      "r2-concordancia-adjetivo"
+    ],
+    "tags": [
+      "ro-corr-a2",
+      "correccion"
+    ],
+    "contentHash": "6db6ae1297f69129657d3c4f81997b69a850b9ebb664573193a2c4a7efc5bf11",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2 (2026-09-01): la frase mala es el calco de «Hay dos trenes buenos hacia Brașov.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Sunt două trenuri buni spre Brașov.",
+      "correct": "Sunt două trenuri bune spre Brașov.",
+      "alternatives": [],
+      "calcoEs": "Hay dos trenes buenos hacia Brașov.",
+      "explanationEs": "El neutro rumano es masculino en singular y FEMENINO en plural: «un tren bun» pero «două trenuri bune». Por eso el adjetivo toma -e, no -i."
+    }
+  },
+  {
+    "id": "6e77365a",
+    "blockId": 2,
+    "lessonId": "b2-l1-articolul-enclitic",
+    "difficulty": 2,
+    "concepts": [
+      "r2-concordancia-adjetivo"
+    ],
+    "tags": [
+      "ro-corr-a2",
+      "correccion"
+    ],
+    "contentHash": "6e77365aa9396445a50800a70e46556e3283b4c835ebf59892e8d5f6313382fa",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2 (2026-09-01): la frase mala es el calco de «Visité tres ciudades bonitas el año pasado.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Am vizitat trei orașe frumoși anul trecut.",
+      "correct": "Am vizitat trei orașe frumoase anul trecut.",
+      "alternatives": [],
+      "calcoEs": "Visité tres ciudades bonitas el año pasado.",
+      "explanationEs": "«Oraș» es neutro: en plural concuerda como femenino, así que «frumos» va en su forma femenina plural, «frumoase», no en la masculina «frumoși»."
+    }
+  },
+  {
+    "id": "f2a5e9dc",
+    "blockId": 2,
+    "lessonId": "b2-l1-articolul-enclitic",
+    "difficulty": 2,
+    "concepts": [
+      "r2-concordancia-adjetivo"
+    ],
+    "tags": [
+      "ro-corr-a2",
+      "correccion"
+    ],
+    "contentHash": "f2a5e9dc0af24635e58b5967027f3af663fac1f1293afe54172d62d0dccf8435",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2 (2026-09-01): la frase mala es el calco de «En la cocina hay cuatro sillas blancas.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "În bucătărie sunt patru scaune albi.",
+      "correct": "În bucătărie sunt patru scaune albe.",
+      "alternatives": [],
+      "calcoEs": "En la cocina hay cuatro sillas blancas.",
+      "explanationEs": "«Scaun» es neutro (un scaun / două scaune) y en plural pide la forma femenina del adjetivo: «albe». «Albi» sólo vale para un plural masculino."
+    }
+  },
+  {
+    "id": "48f52938",
+    "blockId": 2,
+    "lessonId": "b2-l1-articolul-enclitic",
+    "difficulty": 2,
+    "concepts": [
+      "r2-concordancia-adjetivo"
+    ],
+    "tags": [
+      "ro-corr-a2",
+      "correccion"
+    ],
+    "contentHash": "48f52938d1ea3e35619b0e0d74a50d6de5419866a67f205761226e7fc1c51cb7",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2 (2026-09-01): la frase mala es el calco de «Estos teléfonos son demasiado caros.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Telefoanele acestea sunt prea scumpi.",
+      "correct": "Telefoanele acestea sunt prea scumpe.",
+      "alternatives": [],
+      "calcoEs": "Estos teléfonos son demasiado caros.",
+      "explanationEs": "«Telefon» es neutro; su plural «telefoane» concuerda como femenino, también cuando el adjetivo va en el predicado: «sunt scumpe»."
+    }
+  },
+  {
+    "id": "39f2307e",
+    "blockId": 2,
+    "lessonId": "b2-l1-articolul-enclitic",
+    "difficulty": 2,
+    "concepts": [
+      "r2-concordancia-adjetivo"
+    ],
+    "tags": [
+      "ro-corr-a2",
+      "correccion"
+    ],
+    "contentHash": "39f2307e46682dc160cdcced003273d3314a3e8a42ad59681a2acce0ffa18df9",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2 (2026-09-01): la frase mala es el calco de «Hay palabras difíciles en la lección de hoy.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Sunt cuvinte grei în lecția de azi.",
+      "correct": "Sunt cuvinte grele în lecția de azi.",
+      "alternatives": [],
+      "calcoEs": "Hay palabras difíciles en la lección de hoy.",
+      "explanationEs": "«Cuvânt» es neutro y su plural «cuvinte» pide el femenino del adjetivo: «grele». La forma «grei» es el masculino plural de «greu»."
+    }
+  },
+  {
+    "id": "b5b1a506",
+    "blockId": 2,
+    "lessonId": "b2-l1-articolul-enclitic",
+    "difficulty": 2,
+    "concepts": [
+      "r2-concordancia-adjetivo"
+    ],
+    "tags": [
+      "ro-corr-a2",
+      "correccion"
+    ],
+    "contentHash": "b5b1a506e7ebeb9b8bc15aa792b6ce917b13a1b9a903727c0d4fbabb51b8047f",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2 (2026-09-01): la frase mala es el calco de «Todas las tiendas estaban abiertas el domingo.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Toate magazinele erau deschiși duminică.",
+      "correct": "Toate magazinele erau deschise duminică.",
+      "alternatives": [],
+      "calcoEs": "Todas las tiendas estaban abiertas el domingo.",
+      "explanationEs": "«Magazin» es neutro: «magazinele» concuerda como femenino plural y el participio-adjetivo va en «deschise»."
+    }
+  },
+  {
+    "id": "67f7f5a1",
+    "blockId": 2,
+    "lessonId": "b2-l1-articolul-enclitic",
+    "difficulty": 2,
+    "concepts": [
+      "r2-concordancia-adjetivo"
+    ],
+    "tags": [
+      "ro-corr-a2",
+      "correccion"
+    ],
+    "contentHash": "67f7f5a1e915fa2a1202b234b6c83f96e10da59a71d569df32070ead6e1b1e27",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2 (2026-09-01): la frase mala es el calco de «Son oficinas luminosas y tranquilas.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Sunt birouri luminoși și liniștiți.",
+      "correct": "Sunt birouri luminoase și liniștite.",
+      "alternatives": [],
+      "calcoEs": "Son oficinas luminosas y tranquilas.",
+      "explanationEs": "El neutro plural concuerda como femenino, y los dos adjetivos coordinados van los dos igual: «luminoase și liniștite»."
+    }
+  },
+  {
+    "id": "c37363a2",
+    "blockId": 2,
+    "lessonId": "b2-l1-articolul-enclitic",
+    "difficulty": 2,
+    "concepts": [
+      "r2-concordancia-adjetivo"
+    ],
+    "tags": [
+      "ro-corr-a2",
+      "correccion"
+    ],
+    "contentHash": "c37363a2b894b72c9ed928523f4a635056e83e8ecc639520f9930b1dea996a0b",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2 (2026-09-01): la frase mala es el calco de «Por la mañana los autobuses van llenos.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Dimineața autobuzele sunt plini.",
+      "correct": "Dimineața autobuzele sunt pline.",
+      "alternatives": [
+        "Dimineața, autobuzele sunt pline."
+      ],
+      "calcoEs": "Por la mañana los autobuses van llenos.",
+      "explanationEs": "«Autobuz» es neutro; en plural el adjetivo va en femenino: «pline». «Plini» es el masculino plural de «plin»."
+    }
   }
 ]
