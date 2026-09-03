@@ -10,6 +10,7 @@ import {
   articulado, genitivoDativo, vocativo, presente, participio, perfectCompus, imperfecto,
   conjugacionDe, temaInfinitivo, palatalizar, invariantesLema, paradigmaNominal,
   conjunctiv, conjunctiv3, conjunctivSa, conjunctivPerfect, conj3Derivable,
+  gerunziu, gerDerivable,
   type LemaNominal, type LemaVerbal,
 } from '@/scripts/lib/paradigma-ro';
 import { SUSTANTIVOS_A1, VERBOS_A1 } from '@/lib/data/languages/ro/lexicon-a1';
@@ -185,7 +186,10 @@ describe('conjuntivo: el guardián y las formas mal generadas', () => {
   });
 
   it('con `conj3` guardada sale la forma real, no la que daría «-e → -ă»', () => {
-    const merge = V('a merge', 'merg', 'merge', { participio: 'mers', conj3: 'meargă' });
+    // Lleva `ger` porque la 3.ª conjugación también lo exige: el invariante
+    // del gerunziu, escrito después, hizo fallar este test — que es
+    // justamente lo que tenía que pasar.
+    const merge = V('a merge', 'merg', 'merge', { participio: 'mers', conj3: 'meargă', ger: 'mergând' });
     expect(conjunctiv3(merge)).toBe('meargă');
     expect(conjunctiv3(merge)).not.toBe('mergă');
     expect(conjunctivSa(merge, 'el')).toBe('să meargă');
@@ -265,5 +269,86 @@ describe('conjuntivo: el guardián y las formas mal generadas', () => {
     // casilla no es el diccionario: es el guardián, y detrás el lingüista.
     expect(conjunctiv3(VERBOS_A1.find((v) => v.inf === 'a vedea')!)).toBe('vadă');
     expect(invariantesLema(V('a vedea', 'văd', 'vede', { participio: 'văzut' })).join(' ')).toMatch(/sin `conj3`/);
+  });
+});
+
+
+// ── El gerunziu: el gate ANTES de creerse que es derivable ────────────
+//
+// La regla ingenua «tema + ând / ind» acierta en 39 de los 42 verbos del
+// lexicón, que es exactamente el estado en el que se escribe una regla a
+// la que le falta una mitad. Falló en tres, y los tres decían cosas
+// distintas: dos eran léxico (a vedea → văzând, a face → făcând, con el
+// tema alternando) y UNO era la regla mal enunciada (a scrie, de 3.ª,
+// hace scriind). Y al corregirla cambié una mitad por la otra, y el gate
+// devolvió seis *vorbând / *dormând más.
+describe('gerunziu: las dos mitades de la regla, y lo que no se deriva', () => {
+  it('se deriva en I, IV y -î; se GUARDA en II y III', () => {
+    expect(gerDerivable(V('a cânta', 'cânt', 'cântă'))).toBe(true);
+    expect(gerDerivable(V('a coborî', 'cobor', 'coboară'))).toBe(true);
+    expect(gerDerivable(V('a vedea', 'văd', 'vede', { participio: 'văzut' }))).toBe(false);
+    expect(gerDerivable(V('a merge', 'merg', 'merge', { participio: 'mers' }))).toBe(false);
+  });
+
+  it('un lema de II o III sin `ger` da ERROR y NO se deriva en silencio', () => {
+    const crede = V('a crede', 'cred', 'crede', { participio: 'crezut', conj3: 'creadă' });
+    expect(invariantesLema(crede).join(' ')).toMatch(/sin `ger`/);
+    // El verbo que todavía no está en el lexicón y que delataría la regla:
+    // «a crede» hace crezând, y la regla daría *credând.
+    expect(gerunziu(crede)).toBeNull();
+    expect(gerunziu({ ...crede, ger: 'crezând' })).toBe('crezând');
+  });
+
+  it('`ger` guardado donde la regla ya lo da es una copia que se desincroniza', () => {
+    expect(invariantesLema(V('a cânta', 'cânt', 'cântă', { ger: 'cântând' })).join(' ')).toMatch(/SÍ se deriva/);
+  });
+
+  // PRIMERA MITAD: la desinencia no depende sólo de la conjugación.
+  it('«-ind» también fuera de la 4.ª, cuando el tema acaba en i (a scrie → scriind)', () => {
+    expect(gerunziu(VERBOS_A1.find((v) => v.inf === 'a scrie')!)).toBe('scriind');
+    expect(gerunziu(V('a ști', 'știu', 'știe', { participio: 'știut' }))).toBe('știind');
+    // Y no se funden las dos íes: `pegar` (del presente) daría *ștind.
+    expect(gerunziu(V('a ști', 'știu', 'știe', { participio: 'știut' }))).not.toBe('ștind');
+  });
+
+  // SEGUNDA MITAD: y tampoco depende sólo del tema. Los seis que el gate
+  // devolvió al sustituir una mitad de regla por la otra.
+  it('«-ind» en TODA la 4.ª, aunque el tema no acabe en i', () => {
+    for (const [inf, esperado] of [['a vorbi', 'vorbind'], ['a dormi', 'dormind'], ['a veni', 'venind'],
+                                   ['a iubi', 'iubind'], ['a plăti', 'plătind'], ['a locui', 'locuind']] as const)
+      expect(gerunziu(VERBOS_A1.find((v) => v.inf === inf)!), inf).toBe(esperado);
+  });
+
+  it('«-ând» en I y en -î, que es lo que separa a coborî de a locui', () => {
+    expect(gerunziu(V('a cânta', 'cânt', 'cântă'))).toBe('cântând');
+    expect(gerunziu(V('a mânca', 'mănânc', 'mănâncă'))).toBe('mâncând');
+    expect(gerunziu(VERBOS_A1.find((v) => v.inf === 'a coborî')!)).toBe('coborând');
+    expect(gerunziu(VERBOS_A1.find((v) => v.inf === 'a hotărî')!)).toBe('hotărând');
+  });
+
+  // Los irregulares SÍ se derivan aquí, y es una decisión MEDIDA sobre los
+  // cinco que existen, no una herencia del flag `irregular`, que describe
+  // el presente. Un irregular nuevo hay que medirlo.
+  it('los cinco irregulares del lexicón salen correctos por regla', () => {
+    for (const [inf, esperado] of [['a fi', 'fiind'], ['a da', 'dând'], ['a sta', 'stând'],
+                                   ['a lua', 'luând'], ['a trebui', 'trebuind']] as const)
+      expect(gerunziu(VERBOS_A1.find((v) => v.inf === inf)!), inf).toBe(esperado);
+  });
+
+  it('el lexicón entero declara su gerunziu: ningún verbo cae en null', () => {
+    for (const v of VERBOS_A1) expect(gerunziu(v), v.inf).not.toBeNull();
+  });
+
+  // EL SEGUNDO CAMINO, con su agujero medido igual que en el conjuntivo.
+  it('Hunspell caza las formas que produjo la regla incompleta', () => {
+    if (!hunspellDisponible()) { expect(hunspellDisponible()).toBe(false); return; }
+    const malas = ['vedând', 'facând', 'scriând', 'vorbând', 'dormând', 'venând', 'iubând', 'plătând', 'locuând', 'ștind', 'credând'];
+    const buenas = ['văzând', 'făcând', 'scriind', 'vorbind', 'dormind', 'venind', 'iubind', 'plătind', 'locuind', 'știind', 'crezând'];
+    expect(desconocidas(buenas)).toEqual([]);
+    // Se afirma cuántas caza, no que las cace todas: el sello contesta
+    // «¿existe esta cadena?», y en el conjuntivo ya se midió que eso deja
+    // pasar formas (acepta `vedă`). Aquí las caza las once; el día que una
+    // se cuele, este test lo dirá con el número y no con un fallo mudo.
+    expect(desconocidas(malas).length).toBe(11);
   });
 });

@@ -105,12 +105,12 @@ export const SUSTANTIVOS_A1: LemaNominal[] = [
 export const VERBOS_A1: LemaVerbal[] = [
   // enteramente irregulares
   { inf: 'a fi', sg1: 'sunt', sg3: 'este', participio: 'fost', irregular: { eu: 'sunt', tu: 'ești', el: 'este', noi: 'suntem', voi: 'sunteți', ei: 'sunt' }, gloss: 'ser, estar' },
-  { inf: 'a avea', sg1: 'am', sg3: 'are', participio: 'avut', impf: 'aveam', irregular: { eu: 'am', tu: 'ai', el: 'are', noi: 'avem', voi: 'aveți', ei: 'au' }, conj3: 'aibă', gloss: 'tener; haber' },
-  { inf: 'a vrea', sg1: 'vreau', sg3: 'vrea', participio: 'vrut', impf: 'voiam', irregular: { eu: 'vreau', tu: 'vrei', el: 'vrea', noi: 'vrem', voi: 'vreți', ei: 'vor' }, conj3: 'vrea', gloss: 'querer' },
+  { inf: 'a avea', sg1: 'am', sg3: 'are', participio: 'avut', impf: 'aveam', irregular: { eu: 'am', tu: 'ai', el: 'are', noi: 'avem', voi: 'aveți', ei: 'au' }, conj3: 'aibă', ger: 'având', gloss: 'tener; haber' },
+  { inf: 'a vrea', sg1: 'vreau', sg3: 'vrea', participio: 'vrut', impf: 'voiam', irregular: { eu: 'vreau', tu: 'vrei', el: 'vrea', noi: 'vrem', voi: 'vreți', ei: 'vor' }, conj3: 'vrea', ger: 'vrând', gloss: 'querer' },
   { inf: 'a da', sg1: 'dau', sg3: 'dă', participio: 'dat', impf: 'dădeam', irregular: { eu: 'dau', tu: 'dai', el: 'dă', noi: 'dăm', voi: 'dați', ei: 'dau' }, conj3: 'dea', gloss: 'dar' },
   { inf: 'a sta', sg1: 'stau', sg3: 'stă', participio: 'stat', impf: 'stăteam', irregular: { eu: 'stau', tu: 'stai', el: 'stă', noi: 'stăm', voi: 'stați', ei: 'stau' }, conj3: 'stea', gloss: 'estar (de pie), quedarse' },
   { inf: 'a lua', sg1: 'iau', sg3: 'ia', participio: 'luat', impf: 'luam', irregular: { eu: 'iau', tu: 'iei', el: 'ia', noi: 'luăm', voi: 'luați', ei: 'iau' }, conj3: 'ia', gloss: 'tomar, coger' },
-  { inf: 'a bea', sg1: 'beau', sg3: 'bea', participio: 'băut', impf: 'beam', irregular: { eu: 'beau', tu: 'bei', el: 'bea', noi: 'bem', voi: 'beți', ei: 'beau' }, conj3: 'bea', gloss: 'beber' },
+  { inf: 'a bea', sg1: 'beau', sg3: 'bea', participio: 'băut', impf: 'beam', irregular: { eu: 'beau', tu: 'bei', el: 'bea', noi: 'bem', voi: 'beți', ei: 'beau' }, conj3: 'bea', ger: 'bând', gloss: 'beber' },
   { inf: 'a trebui', sg1: 'trebuie', sg3: 'trebuie', participio: 'trebuit', invariable: true, conj3: 'trebuiască', gloss: 'deber, hacer falta' },
   // 1.ª conjugación (-a)
   { inf: 'a cânta', sg1: 'cânt', sg3: 'cântă', gloss: 'cantar' },
@@ -128,16 +128,16 @@ export const VERBOS_A1: LemaVerbal[] = [
   { inf: 'a desena', sg1: 'desenez', sg3: 'desenează', gloss: 'dibujar' },
   { inf: 'a fuma', sg1: 'fumez', sg3: 'fumează', gloss: 'fumar' },
   // 2.ª conjugación (-ea)
-  { inf: 'a vedea', sg1: 'văd', sg3: 'vede', sg2: 'vezi', participio: 'văzut', conj3: 'vadă', gloss: 'ver' },
-  { inf: 'a putea', sg1: 'pot', sg3: 'poate', participio: 'putut', conj3: 'poată', gloss: 'poder' },
+  { inf: 'a vedea', sg1: 'văd', sg3: 'vede', sg2: 'vezi', participio: 'văzut', conj3: 'vadă', ger: 'văzând', gloss: 'ver' },
+  { inf: 'a putea', sg1: 'pot', sg3: 'poate', participio: 'putut', conj3: 'poată', ger: 'putând', gloss: 'poder' },
   // 3.ª conjugación (-e): participio siempre guardado
-  { inf: 'a merge', sg1: 'merg', sg3: 'merge', participio: 'mers', conj3: 'meargă', gloss: 'ir' },
-  { inf: 'a face', sg1: 'fac', sg3: 'face', participio: 'făcut', impf: 'făceam', conj3: 'facă', gloss: 'hacer' },
-  { inf: 'a spune', sg1: 'spun', sg3: 'spune', sg2: 'spui', participio: 'spus', conj3: 'spună', gloss: 'decir' },
-  { inf: 'a zice', sg1: 'zic', sg3: 'zice', participio: 'zis', conj3: 'zică', gloss: 'decir' },
-  { inf: 'a scrie', sg1: 'scriu', sg3: 'scrie', participio: 'scris', conj3: 'scrie', gloss: 'escribir' },
-  { inf: 'a pune', sg1: 'pun', sg3: 'pune', sg2: 'pui', participio: 'pus', conj3: 'pună', gloss: 'poner' },
-  { inf: 'a începe', sg1: 'încep', sg3: 'începe', participio: 'început', conj3: 'înceapă', gloss: 'empezar' },
+  { inf: 'a merge', sg1: 'merg', sg3: 'merge', participio: 'mers', conj3: 'meargă', ger: 'mergând', gloss: 'ir' },
+  { inf: 'a face', sg1: 'fac', sg3: 'face', participio: 'făcut', impf: 'făceam', conj3: 'facă', ger: 'făcând', gloss: 'hacer' },
+  { inf: 'a spune', sg1: 'spun', sg3: 'spune', sg2: 'spui', participio: 'spus', conj3: 'spună', ger: 'spunând', gloss: 'decir' },
+  { inf: 'a zice', sg1: 'zic', sg3: 'zice', participio: 'zis', conj3: 'zică', ger: 'zicând', gloss: 'decir' },
+  { inf: 'a scrie', sg1: 'scriu', sg3: 'scrie', participio: 'scris', conj3: 'scrie', ger: 'scriind', gloss: 'escribir' },
+  { inf: 'a pune', sg1: 'pun', sg3: 'pune', sg2: 'pui', participio: 'pus', conj3: 'pună', ger: 'punând', gloss: 'poner' },
+  { inf: 'a începe', sg1: 'încep', sg3: 'începe', participio: 'început', conj3: 'înceapă', ger: 'începând', gloss: 'empezar' },
   // 4.ª conjugación (-i, -î)
   { inf: 'a citi', sg1: 'citesc', sg3: 'citește', gloss: 'leer' },
   { inf: 'a vorbi', sg1: 'vorbesc', sg3: 'vorbește', gloss: 'hablar' },

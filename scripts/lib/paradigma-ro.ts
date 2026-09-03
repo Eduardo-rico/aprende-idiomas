@@ -180,6 +180,12 @@ export interface LemaVerbal {
    *  «-e → -ă» produciría *mergă, *vedă, *începă: rumano de ninguna clase.
    *  Se guarda por la misma razón que el participio de 2.ª y 3.ª. */
   conj3?: string;
+  /** EL GERUNZIU (`mergând`, `văzând`), guardado en 2.ª y 3.ª conjugación.
+   *  Ahí el tema ALTERNA y la alternancia no sale de ninguna casilla
+   *  guardada: `a vedea` da `văzând` (ved → văz, con e→ă y d→z) y `a face`
+   *  da `făcând` (fac → făc). Es la misma razón por la que esas dos clases
+   *  guardan el participio. En I, IV y -î se deriva. */
+  ger?: string;
   /** Invariable (a trebui): una sola forma para todas las personas. */
   invariable?: boolean;
   gloss: string;
@@ -464,6 +470,80 @@ export function conjunctivPerfect(v: LemaVerbal): string | null {
   return part ? formaValida(`fi ${part}`) : null;
 }
 
+// ── Gerunziu ──────────────────────────────────────────────────────────
+//
+// LA MEDICIÓN VA PRIMERO, y ésta es la que decidió el reparto. Antes de
+// escribir una línea de regla se aplicó la ingenua —«tema del infinitivo +
+// ând, o + ind si es de 4.ª»— a los 42 verbos del lexicón y se contrastó
+// con Hunspell, que es el otro camino. Falló en TRES, y los tres dicen
+// cosas distintas:
+//
+//   · `a vedea` → *vedând, y va `văzând`. El tema alterna dos veces
+//     (e→ă y d→z) y la alternancia no está en ninguna casilla guardada.
+//   · `a face` → *facând, y va `făcând` (a→ă). Lo mismo.
+//   · `a scrie` → *scriând, y va `scriind`. **Éste no es una alternancia:
+//     era un error de MI regla.** La desinencia `-ind` no depende de la
+//     conjugación sino del tema: tras tema acabado en `i` va `-ind`, sea
+//     cual sea la clase. `a scrie` es de 3.ª y su tema es `scri`.
+//
+// O sea que «parece derivable» era verdad para 39 de 42, y de los tres
+// fallos uno era la regla mal enunciada y dos eran léxico. Si la regla se
+// hubiera escrito sin medir, habría entrado con las dos mitades mezcladas
+// y el arreglo del día siguiente habría sido «guardar a scrie», que tapa
+// el síntoma y deja la regla rota para el siguiente verbo en -ie.
+//
+// EL REPARTO QUE SALE DE AHÍ: se derivan I, IV y -î; se GUARDAN 2.ª y 3.ª,
+// la clase entera, por la misma razón por la que guardan el participio —
+// no porque cada lema alterne, sino porque no hay forma de saber cuál lo
+// hace, y un derivador que acierta en seis de ocho es peor que uno que
+// pide la forma. `a merge` da `mergând` con la regla, y aun así se guarda:
+// el día que entre `a crede` (crezând) nadie va a acordarse de comprobarlo.
+//
+// ── LO QUE ESTA FUNCIÓN NO CUBRE, declarado ──────────────────────────
+//   · Los IRREGULARES sí se derivan aquí, y eso es una decisión medida,
+//     no heredada: `irregular` describe el PRESENTE, y los cinco del
+//     lexicón (a fi → fiind, a da → dând, a sta → stând, a lua → luând,
+//     a trebui → trebuind) salen correctos por regla. **Medido sobre esos
+//     cinco**: un irregular nuevo hay que medirlo, no suponerlo.
+//   · El gerunziu NEGATIVO (`nemergând`) y el gerunziu con clítico
+//     enclítico (`văzându-l`, con la -u- de apoyo) son composición, no
+//     flexión, y no salen de aquí. La `-u-` de `văzându-l` es justo el
+//     tipo de detalle que un lote de B1 daría por sabido.
+//   · Hunspell dice si la cadena existe, no si es el gerunziu de ESE lema:
+//     `mergând` existiría igual aunque se lo colgáramos a `a merge` por
+//     error de asignación. Ya está medido que ese sello tiene agujeros
+//     (acepta `vedă`, que no es forma de `a vedea`).
+
+/** ¿El gerunziu de este lema se DERIVA, o hay que guardarlo? */
+export function gerDerivable(v: LemaVerbal): boolean {
+  const c = conjugacionDe(v.inf);
+  return c === 'I' || c === 'IV' || c === 'IVî';
+}
+
+/** Gerunziu. Devuelve null —nunca una forma inventada— cuando hace falta
+ *  guardarlo y no está. */
+export function gerunziu(v: LemaVerbal): string | null {
+  if (v.ger) return formaValida(v.ger);
+  if (!gerDerivable(v)) return null;
+  const tema = temaInfinitivo(v.inf);
+  // `-ind` en la 4.ª conjugación **O** tras tema acabado en `i`; `-ând` en
+  // todo lo demás, la -î incluida (a coborî → coborând).
+  //
+  // LAS DOS MITADES, y me faltó una cada vez. La v0 decía «-ind si es de
+  // 4.ª» y la medición la desmintió con `a scrie`, que es de 3.ª y hace
+  // `scriind`. Al arreglarlo escribí «-ind tras tema en i, y sólo por eso»
+  // —o sea que cambié una mitad de regla por la OTRA mitad— y el gate del
+  // paradigma devolvió *vorbând, *dormând, *venând, *iubând, *plătând,
+  // *locuând: seis verbos de 4.ª cuyo tema no acaba en i. Corregir una
+  // regla incompleta sustituyéndola no es corregirla. La condición es una
+  // disyunción, y las dos ramas están atestadas por un caso del lexicón.
+  const c = conjugacionDe(v.inf);
+  // Se concatena entero, sin fundir las dos íes: ști + ind da «știind», no
+  // «*ștind» — que es lo que haría `pegar`, escrito para el presente, y
+  // que aquí sería la regla copiada aplicada donde no toca.
+  return formaValida(tema + (c === 'IV' || /i$/.test(tema) ? 'ind' : 'ând'));
+}
+
 /** Todo el paradigma nominal de un lema, para el gate y para los lotes. */
 export function paradigmaNominal(l: LemaNominal): Record<string, string | null> {
   return {
@@ -486,6 +566,7 @@ export function paradigmaVerbal(v: LemaVerbal): Record<string, string | null> {
   out['cond perf eu'] = conditionalPerfect(v, 'eu');
   for (const p of PERSONAS) out[`conj ${p}`] = conjunctiv(v, p);
   out['conj perf'] = conjunctivPerfect(v);
+  out['gerunziu'] = gerunziu(v);
   return out;
 }
 
@@ -518,6 +599,13 @@ export function invariantesLema(l: LemaNominal | LemaVerbal): string[] {
       errores.push(`${l.inf}: sin \`conj3\` — la 3.ª del conjuntivo no se deriva en esta clase (la alternancia se invierte: merge → meargă, vede → vadă) y una regla «-e → -ă» produciría *mergă`);
     // Y al revés: una `conj3` guardada donde la regla ya la da es una copia
     // que se desincroniza el día que la regla cambie.
+    // EL GUARDIÁN DEL GERUNZIU, hermano del anterior: 2.ª y 3.ª lo traen o
+    // el lema no pasa. Sin él, `a crede` entraría mañana y la regla daría
+    // *credând por `crezând` sin que nada fallara.
+    if (!gerDerivable(l) && !l.ger)
+      errores.push(`${l.inf}: sin \`ger\` — el gerunziu de 2.ª y 3.ª conjugación no se deriva (el tema alterna: vedea → văzând, face → făcând) y la regla daría *vedând`);
+    if (gerDerivable(l) && l.ger)
+      errores.push(`${l.inf}: trae \`ger\` «${l.ger}» y esta clase SÍ se deriva — lo guardado y lo derivado se desincronizan`);
     if (conj3Derivable(l) && l.conj3)
       errores.push(`${l.inf}: trae \`conj3\` «${l.conj3}» y esta clase SÍ se deriva — lo guardado y lo derivado se desincronizan; quítalo o justifica por qué la regla falla aquí`);
   } else {
