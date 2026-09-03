@@ -203,6 +203,29 @@ describe('pisoCero: el piso declarado en cero', () => {
     expect(cero.map((p) => p.id)).toEqual(['r1-diacriticos-coma', 'r4-dativo-oi']);
   });
 
+  // MISMA TRAMPA A PROPÓSITO QUE `pisoCero`, por la misma razón: declarar un
+  // piso reducido baja el déficit sin producir nada. Cada entrada nueva
+  // lleva aquí su número y de dónde sale.
+  //   · r7-disparadores-sa 5 y r7-anti-progresivo 6 (2026-09-03) — CONTADOS
+  //     por el lingüista adversarial ANTES de escribir ningún ítem, tras
+  //     dictaminar que los errores diana declarados no servían: uno era
+  //     arcaico y otro era error de anglófono.
+  it('el piso reducido está CONTADO y nombrado, no es cansancio', () => {
+    const red = PUNTOS_RO.filter((p) => p.pisoDeclarado);
+    expect(red.map((p) => `${p.id}:${p.pisoDeclarado!.piso}`)).toEqual(['r7-disparadores-sa:5', 'r7-anti-progresivo:6']);
+    for (const p of red) {
+      // El motivo tiene que decir el NÚMERO y de dónde sale, no «da para pocos».
+      expect(p.pisoDeclarado!.motivo.length, p.id).toBeGreaterThan(120);
+      expect(p.pisoDeclarado!.piso, p.id).toBeLessThan(8);
+      expect(p.pisoDeclarado!.piso, p.id).toBeGreaterThan(0);
+      expect(pisoDePuntoRo(p), p.id).toBe(p.pisoDeclarado!.piso);
+    }
+  });
+
+  it('pisoCero manda sobre pisoDeclarado, y ninguno declara los dos', () => {
+    for (const p of PUNTOS_RO) expect(!!(p.pisoCero && p.pisoDeclarado), p.id).toBe(false);
+  });
+
   it('un punto con ítems publicados NO puede declarar piso cero', () => {
     // Si ya se produjo contra él, la declaración llega tarde y taparía
     // trabajo hecho en vez de un hueco imposible.

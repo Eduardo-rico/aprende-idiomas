@@ -126,6 +126,17 @@ export interface PuntoRo {
    *  pagar nunca. NO es un atajo para bajar el déficit: exige el motivo
    *  escrito, y un test comprueba que ningún punto lo lleva vacío. */
   pisoCero?: string;
+  /** PISO REDUCIDO DECLARADO: el punto admite ítems, pero MENOS de los que
+   *  su nivel pide, y aquí está por qué. Nace de la salida que el
+   *  coordinador escribió por adelantado el 2026-09-03: «si sólo da para
+   *  tres o cuatro, publica esos y declara el resto como piso reducido con
+   *  motivo escrito — un punto con cuatro ítems buenos y un motivo honesto
+   *  vale más que ocho con cuatro inventados».
+   *
+   *  Se declara cuando el lingüista ha CONTADO cuántos ítems determinados
+   *  con mala atestada aguanta el punto, no cuando cansa escribir. El
+   *  motivo tiene que decir el número y de dónde sale; un test lo exige. */
+  pisoDeclarado?: { piso: number; motivo: string };
   /** Fragmento TEXTUAL de §Rumano del currículo del que sale el punto. */
   cita: string;
   /** Lo que queda por comprobar contra fuente viva y bloquea la producción. */
@@ -141,7 +152,8 @@ export const PISO_RO = (nivel: NivelRo) => (nivel === 'C2' ? 6 : 8);
 /** El piso REAL de un punto: cero si está declarado con su motivo. Es el
  *  que tienen que usar el déficit y `--asigna`; `PISO_RO` a secas sólo
  *  sabe del nivel. */
-export const pisoDePuntoRo = (p: PuntoRo) => (p.pisoCero ? 0 : PISO_RO(p.nivel));
+export const pisoDePuntoRo = (p: PuntoRo) =>
+  p.pisoCero ? 0 : p.pisoDeclarado ? p.pisoDeclarado.piso : PISO_RO(p.nivel);
 
 export const BLOQUES_RO: { id: number; slug: string; nombre: string }[] = [
   { id: 1, slug: 'fonologia-ortografia', nombre: 'Fonología y ortografía' },
@@ -533,12 +545,14 @@ export const PUNTOS_RO: PuntoRo[] = [
   P({ id: 'r7-disparadores-sa', nombre: 'Los ~25 disparadores del conjuntivo, en dos columnas', bloque: 7, nivel: 'B1',
     descripcion: 'Los que coinciden con el español (e posibil să, sper să, înainte să) y los que DIVERGEN: el sujeto idéntico (vreau să merg) y ca … să con sujeto expreso (vreau ca el să vină).',
     prereqs: ['r7-conjuntivo-presente'], clase: 'trampa', calco: { castellano: 'bien', latinComun: 'transparente' },
-    motivo: 'sólo la columna divergente se examina; ahí el calco (*vreau a merge, *vreau el să vină) suena bien: corrección', cubre: ['B1/GRAMÁTICA · CONJUNTIVO'],
+    motivo: 'CORREGIDO EL 2026-09-03, ANTES DE ESCRIBIR NINGÚN ÍTEM: los DOS errores diana que este punto declaraba eran falsos, y de dos maneras distintas. (1) *vreau a merge NO es agramatical: dexonline s.v. vrea (DEXI) da el régimen con infinitivo como «înv., astăzi rar» —arcaico, raro hoy—, que es literalmente la etiqueta que mató «îmi place a citi». Y está peor que aquél, porque de a vrea + infinitivo sale el futuro vivo (voi merge), así que la construcción no está muerta sino fosilizada dentro del paradigma que el alumno estudia en r5. (2) *vreau el să vină SÍ es agramatical (GALR: con material interpuesto entre el regente y să, «ca» es obligatorio) pero NO LO PRODUCE UN HISPANOHABLANTE: para escribirlo hay que BORRAR el complementante, y el español no lo licencia nunca («*Quiero él venga»). Quien lo borra es el anglófono (I want him to come). ES LA MISMA HUELLA DACTILAR QUE «a asista la»: material heredado de un manual en inglés. Toda la columna divergente hay que pasarla por la pregunta «¿esto lo produce un hispanohablante o un angloparlante?». LAS MALAS QUE SÍ AGUANTAN, con fuente: *Vreau să el vină (calco 1:1 del orden español «que él venga»; agramatical por la adyacencia să+verbo, GALR, donde sólo se intercalan clíticos y «nu») y *Vreau că vine / *Te rog că vii (los volitivos y directivos no seleccionan «că»; ojo: NO vale con a spera ni a se teme, donde las dos rigen). ⚠ DUPLICACIÓN NO DECLARADA con r8-completivas-ca-sa, que declara el MISMO error diana con el mismo motivo casi palabra por palabra: hay que repartir el material antes de escribir el segundo o se paga dos veces el mismo hueco.', cubre: ['B1/GRAMÁTICA · CONJUNTIVO'],
+    pisoDeclarado: { piso: 5, motivo: 'CINCO ítems, contados por el lingüista adversarial el 2026-09-03 ANTES de escribir ninguno: 3 de *Vreau să el vină con tres regentes distintos (a vrea, a dori, e important) + 2 de *Vreau că vine (a vrea, a ruga). No salen más porque el resto de regentes o admiten «că» de verdad (a spera, a se teme: Sper că vine y Sper să vină son los dos correctos) o duplican r8-completivas-ca-sa. Los dos errores diana que el punto declaraba antes no se pueden usar: uno es arcaico y el otro es error de anglófono. El motivo de arriba lo explica entero.' },
     cita: 'Inventario cerrado de ~25 disparadores, presentado en dos columnas' }),
-  P({ id: 'r7-anti-progresivo', nombre: 'Anti-calco: *sunt mâncând no existe', bloque: 7, nivel: 'B1',
+  P({ id: 'r7-anti-progresivo', nombre: 'Anti-calco: el indicativo de «a fi» + gerunziu eventivo no existe (*sunt mâncând)', bloque: 7, nivel: 'B1',
     descripcion: 'El rumano no tiene progresivo gramaticalizado: «estoy comiendo» es mănânc / tocmai mănânc / stau și mănânc; en registro formal sunt în curs de…. («sunt pe cale să mănânc» es «estoy A PUNTO DE comer», prospectivo: no vale como clave; vive en r5-perifrasis-pasado.) Umbral duro de B1; el mismo hecho en pasado se enseña en A2 (r5-perifrasis-pasado).',
     prereqs: ['r7-gerunziu', 'r5-perifrasis-pasado'], clase: 'trampa', calco: { castellano: 'bien', latinComun: 'transparente' },
-    motivo: 'el calco es español perfecto y lo produce todo hispanohablante; corrección desde el calco en contextos diseñados para inducirlo. Es el único punto donde el JUICIO podría vivir (el calco es lo que suena bien), pero no se asigna sin medirlo', cubre: ['B1/GRAMÁTICA · ANTI-CALCO'],
+    motivo: 'el calco es español perfecto y lo produce todo hispanohablante; corrección desde el calco en contextos diseñados para inducirlo. Es el único punto donde el JUICIO podría vivir (el calco es lo que suena bien), pero no se asigna sin medirlo. ACOTADO EL 2026-09-03, porque el nombre de la v0 («*sunt mâncând no existe») era una afirmación falsa sobre la lengua: «fi» + gerunziu ESTÁ VIVO en el prezumtiv (o fi mâncând, va fi mâncând, con antepasado en el viitor gerundial del XVI) y hay gerundios lexicalizados como ADJETIVO donde «este + -ând» es correcto (este suferind, DEX s.v. suferind adj.; igual crescând, descrescând, sângerând). Lo agramatical es sólo «a fi» en INDICATIVO finito + gerunziu EVENTIVO. Y dos malas que NO entran: *stau mâncând (a sta + gerunziu es predicación depictiva lícita —stătea plângând în colț— y la buena se separa por una conjunción, «stau ȘI mănânc», no por agramaticalidad) y *eram mâncând (agramatical hoy pero es la construcción fuente atestiguada en rumano antiguo: cae bajo «arcaico», y además vive en r5-perifrasis-pasado). Las caras prospectiva y retrospectiva NO tienen mala: sus calcos son rumano bien formado con otro significado. El punto tiene UNA cara, no cuatro.', cubre: ['B1/GRAMÁTICA · ANTI-CALCO'],
+    pisoDeclarado: { piso: 6, motivo: 'SEIS ítems, contados por el lingüista adversarial el 2026-09-03 ANTES de escribir ninguno. El punto tiene UNA sola cara agramatical —el indicativo finito de a fi + gerunziu eventivo—, no cuatro: el imperfecto (*eram mâncând) es arcaico y no agramatical, y las caras prospectiva y retrospectiva no tienen mala porque sus calcos son rumano bien formado con otro significado. Seis lemas eventivos con gerunziu no lexicalizado como adjetivo es lo que da de sí sin repetir; ocho serían ocho clones. Excluidos por lema: a suferi, a crește, a sângera, a descrește.' },
     cita: 'NO produce ni una vez *sunt mâncând' }),
   P({ id: 'r7-supin', nombre: 'Supin: de făcut, mașină de spălat, e greu de crezut', bloque: 7, nivel: 'B1',
     descripcion: 'Forma no personal exclusiva del rumano: de + participio con valor de infinitivo/finalidad.',
@@ -552,8 +566,8 @@ export const PUNTOS_RO: PuntoRo[] = [
     cita: 'GERUNZIU: mergând, făcând, y muy especialmente su restricción' }),
   P({ id: 'r7-infinitivo-residual', nombre: 'Infinitivo corto en sus usos residuales; el largo como sustantivo', bloque: 7, nivel: 'B1',
     descripcion: 'Tras preposición (înainte de a pleca, fără a spune), tras a putea sin partícula (pot merge, nunca *pot a merge), y el largo en -re como sustantivo (mâncare, plimbare).',
-    prereqs: ['r3-sa-vs-infinitivo'], clase: 'trampa', calco: { castellano: 'bien', latinComun: 'transparente' },
-    motivo: '«puedo ir» → *pot a merge es español perfecto calcado con la partícula: corrección desde el calco; el contraste să/infinitivo por contexto entra en el mismo lote', cubre: ['B1/GRAMÁTICA · FORMAS NO PERSONALES'],
+    prereqs: ['r3-sa-vs-infinitivo'], clase: 'trampa', formato: 'transformacion', calco: { castellano: 'bien', latinComun: 'transparente' },
+    motivo: 'MOVIDO A TRANSFORMACIÓN el 2026-09-03, sin escribir un solo ítem, porque el lingüista contó CERO malas legítimas. (1) *pot a merge no se puede certificar como agramatical: la norma es «pot merge» (Revista Timpul), pero esa fuente describe la norma sin proscribir la variante, y dexonline s.v. putea presenta el régimen CON la partícula (pot a face, poate a fi) señalando que «a» PUEDE omitirse — omisión, no prohibición. Es «îmi place a citi» otra vez. (2) El infinitivo tras preposición no tiene mala ninguna: «înainte de a pleca», «fără a spune», «în loc de a face» los acierta el español los tres, así que un ítem ahí mide traducción. (3) Y «înainte de a pleca» compite LIBREMENTE con «înainte să plec» (GALR las da como alternativas, DOOM3 no proscribe ninguna), así que un ítem que pida una de las dos no está determinado. Ni siquiera aguanta cloze: «pot ___ merge» admite «să» y el hueco vacío a la vez. En transformación la consigna ES el ejercicio y puede pedir la forma sin regalarla, igual que en r5-imperativo-negativo. El piso se queda en 8 y NO se declara reducido: la deuda es real y la pagará la máquina cuando exista.', cubre: ['B1/GRAMÁTICA · FORMAS NO PERSONALES'],
     cita: 'Infinitivo largo en sus usos residuales: tras preposición (înainte de a pleca, fără a spune, în loc de a face), tras a putea (pot merge)' }),
   P({ id: 'r7-pasiva-impersonal', nombre: 'Pasiva con a fi, pasiva refleja e impersonal', bloque: 7, nivel: 'B1',
     descripcion: 'este făcut, a fost construită (concordado); se face, se vinde; zice lumea, se spune că.',
