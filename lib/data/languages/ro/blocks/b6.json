@@ -682,5 +682,205 @@
       "calcoEs": "Los estudiantes que ayudé aprobaron el examen.",
       "explanationEs": "Con el relativo en función de objeto el rumano exige «pe» y el clítico: «studenții pe care i-am ajutat». El español no marca nada, y por eso el «pe» se olvida."
     }
+  },
+  {
+    "id": "5b1d2c03",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-doblado-cliticos"
+    ],
+    "tags": [
+      "ro-corr-a2b",
+      "correccion"
+    ],
+    "contentHash": "5b1d2c036a5a62881eac7c99932dfc1e6b9c84d303fad79556af280e07d0f65f",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2B (2026-09-03): la frase mala es el calco de «Veo a Ion todos los días.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Văd pe Ion în fiecare zi.",
+      "correct": "Îl văd pe Ion în fiecare zi.",
+      "alternatives": [],
+      "calcoEs": "Veo a Ion todos los días.",
+      "explanationEs": "Cuando el objeto directo es una persona determinada, el rumano pide DOS marcas a la vez: «pe» delante del nombre y el clítico delante del verbo. El español sólo tiene la primera, así que la segunda se olvida."
+    }
+  },
+  {
+    "id": "0431742a",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-doblado-cliticos"
+    ],
+    "tags": [
+      "ro-corr-a2b",
+      "correccion"
+    ],
+    "contentHash": "0431742aced1377a0887bd775ed728292b5bc5f3d41cc5005f886cc57d6dc961",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2B (2026-09-03): la frase mala es el calco de «Espero a María delante del cine.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Aștept pe Maria în fața cinematografului.",
+      "correct": "O aștept pe Maria în fața cinematografului.",
+      "alternatives": [],
+      "calcoEs": "Espero a María delante del cine.",
+      "explanationEs": "El clítico concuerda en género y número con el objeto: para un femenino singular es «o». Sin él la frase no está completa aunque el «pe» esté puesto."
+    }
+  },
+  {
+    "id": "fedd8599",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-doblado-cliticos"
+    ],
+    "tags": [
+      "ro-corr-a2b",
+      "correccion"
+    ],
+    "contentHash": "fedd8599661e00ac806e0e58a36086a2f9044dd5adbf80f646a4004d859a7a4b",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2B (2026-09-03): la frase mala es el calco de «¿Conoces a mi hermana?»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Cunoști pe sora mea?",
+      "correct": "O cunoști pe sora mea?",
+      "alternatives": [],
+      "calcoEs": "¿Conoces a mi hermana?",
+      "explanationEs": "También en pregunta y también con un nombre común determinado por un posesivo: «sora mea» es una persona concreta, así que lleva «pe» y el clítico «o» delante del verbo."
+    }
+  },
+  {
+    "id": "54701c66",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-doblado-cliticos"
+    ],
+    "tags": [
+      "ro-corr-a2b",
+      "correccion"
+    ],
+    "contentHash": "54701c66b82aa82f48ed9f11493bf5021dc428f464e608620f8b51d68cd54085",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2B (2026-09-03): la frase mala es el calco de «Llamé a los vecinos anoche.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Am sunat pe vecini aseară.",
+      "correct": "I-am sunat pe vecini aseară.",
+      "alternatives": [],
+      "calcoEs": "Llamé a los vecinos anoche.",
+      "explanationEs": "En plural masculino el clítico es «îi», y delante de un auxiliar que empieza por vocal se apoya en él: «i-am sunat». El guion no es opcional: es la forma que tiene el clítico ahí."
+    }
+  },
+  {
+    "id": "5d789d95",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-doblado-cliticos"
+    ],
+    "tags": [
+      "ro-corr-a2b",
+      "correccion"
+    ],
+    "contentHash": "5d789d95c9fa8d978c2efa3beda89a38adec32ca9735197b38bc35111df03832",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2B (2026-09-03): la frase mala es el calco de «El profesor felicita a sus estudiantes.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Profesorul felicită pe studenții lui.",
+      "correct": "Profesorul îi felicită pe studenții lui.",
+      "alternatives": [],
+      "calcoEs": "El profesor felicita a sus estudiantes.",
+      "explanationEs": "El clítico va entre el sujeto y el verbo: «îi felicită». Ponerlo no es enfático en rumano, es obligatorio con objeto humano determinado — y «studenții lui» lo está."
+    }
+  },
+  {
+    "id": "86df2c9d",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-doblado-cliticos"
+    ],
+    "tags": [
+      "ro-corr-a2b",
+      "correccion"
+    ],
+    "contentHash": "86df2c9d0344f6ce2901dd655f23abf45dd7c5dea8d8f4b17d139098aabefcd6",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2B (2026-09-03): la frase mala es el calco de «Ayer vi a tu padre en el mercado.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ieri am văzut pe tatăl tău în piață.",
+      "correct": "Ieri l-am văzut pe tatăl tău în piață.",
+      "alternatives": [],
+      "calcoEs": "Ayer vi a tu padre en el mercado.",
+      "explanationEs": "Masculino singular: el clítico es «îl», y ante el auxiliar «am» se reduce a «l-». «Tatăl tău» está determinado, así que el doblado es obligatorio."
+    }
+  },
+  {
+    "id": "eab9f268",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-doblado-cliticos"
+    ],
+    "tags": [
+      "ro-corr-a2b",
+      "correccion"
+    ],
+    "contentHash": "eab9f268c4c9e54ed582159a17bd3e223429a745eeff2d22b11a5f6a4dd45050",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2B (2026-09-03): la frase mala es el calco de «El director recibe a los invitados en la puerta.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Directorul primește pe invitați la ușă.",
+      "correct": "Directorul îi primește pe invitați la ușă.",
+      "alternatives": [],
+      "calcoEs": "El director recibe a los invitados en la puerta.",
+      "explanationEs": "«Invitați» son aquí personas concretas, las de esta puerta: «pe» delante y el clítico «îi» antes del verbo. El español no tiene nada equivalente al clítico y por eso el hueco pasa desapercibido."
+    }
+  },
+  {
+    "id": "0defae34",
+    "blockId": 6,
+    "lessonId": "b6-l1-pronumele-neaccentuate",
+    "difficulty": 2,
+    "concepts": [
+      "r6-doblado-cliticos"
+    ],
+    "tags": [
+      "ro-corr-a2b",
+      "correccion"
+    ],
+    "contentHash": "0defae346c8ede671e72ee533c2ab46ec4ca9957c7e04e23800817fbecb6d91b",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2B (2026-09-03): la frase mala es el calco de «Ayudo a mi compañera con los deberes.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Ajut pe colega mea la teme.",
+      "correct": "O ajut pe colega mea la teme.",
+      "alternatives": [],
+      "calcoEs": "Ayudo a mi compañera con los deberes.",
+      "explanationEs": "Con verbo en presente el clítico va suelto delante: «o ajut pe colega mea». El posesivo ya determina a la persona, así que las dos marcas son obligatorias."
+    }
   }
 ]

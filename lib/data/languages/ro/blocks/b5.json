@@ -958,5 +958,205 @@
       ],
       "hintEs": "venir — condicional PERFECTO, 3.ª plural («habrían venido»)"
     }
+  },
+  {
+    "id": "377129e3",
+    "blockId": 5,
+    "lessonId": "b5-l2-viitor-conditional-imperativ",
+    "difficulty": 2,
+    "concepts": [
+      "r5-reflexivos-ac-dat"
+    ],
+    "tags": [
+      "ro-corr-a2b",
+      "correccion"
+    ],
+    "contentHash": "377129e397a0bd3da2abfde9ff196a285241342d7bad1cd5d489f3d56e413d1a",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2B (2026-09-03): la frase mala es el calco de «Me sueno la nariz tres veces al día.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Mă suflu nasul de trei ori pe zi.",
+      "correct": "Îmi suflu nasul de trei ori pe zi.",
+      "alternatives": [],
+      "calcoEs": "Me sueno la nariz tres veces al día.",
+      "explanationEs": "Con un objeto directo detrás («nasul»), el reflexivo va en DATIVO: îmi, îți, își. El acusativo «mă» ya ocuparía el sitio del objeto, y por eso no puede haber otro."
+    }
+  },
+  {
+    "id": "42195e2c",
+    "blockId": 5,
+    "lessonId": "b5-l2-viitor-conditional-imperativ",
+    "difficulty": 2,
+    "concepts": [
+      "r5-reflexivos-ac-dat"
+    ],
+    "tags": [
+      "ro-corr-a2b",
+      "correccion"
+    ],
+    "contentHash": "42195e2c61f58d5a7c82fdf035221849f2bf5cfb88960dfbb2e1acb847bc8e2d",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2B (2026-09-03): la frase mala es el calco de «Me corto las uñas los domingos.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Mă tai unghiile duminica.",
+      "correct": "Îmi tai unghiile duminica.",
+      "alternatives": [],
+      "calcoEs": "Me corto las uñas los domingos.",
+      "explanationEs": "El español usa «me» para las dos cosas; el rumano no. «Mă tai» es «me corto (yo)», con el pronombre haciendo de objeto; para cortar OTRA cosa que es mía hace falta el dativo «îmi»."
+    }
+  },
+  {
+    "id": "dfa3eb3a",
+    "blockId": 5,
+    "lessonId": "b5-l2-viitor-conditional-imperativ",
+    "difficulty": 2,
+    "concepts": [
+      "r5-reflexivos-ac-dat"
+    ],
+    "tags": [
+      "ro-corr-a2b",
+      "correccion"
+    ],
+    "contentHash": "dfa3eb3a34849ce983d5d945d53445a84e550c6927e1abbfa45e66585504d53e",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2B (2026-09-03): la frase mala es el calco de «Me compro un abrigo nuevo.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Mă cumpăr un palton nou.",
+      "correct": "Îmi cumpăr un palton nou.",
+      "alternatives": [],
+      "calcoEs": "Me compro un abrigo nuevo.",
+      "explanationEs": "Lo comprado es «un palton», así que el pronombre no puede ser acusativo: el beneficiario va en dativo, «îmi». Con «mă» la frase diría que uno se compra a sí mismo."
+    }
+  },
+  {
+    "id": "96731ea0",
+    "blockId": 5,
+    "lessonId": "b5-l2-viitor-conditional-imperativ",
+    "difficulty": 2,
+    "concepts": [
+      "r5-reflexivos-ac-dat"
+    ],
+    "tags": [
+      "ro-corr-a2b",
+      "correccion"
+    ],
+    "contentHash": "96731ea0e436ee0b6fb2d7b61cc38c89fd75d15e4c1a0e5419dc1de95330bcb8",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2B (2026-09-03): la frase mala es el calco de «¿Te atas los cordones o te ayudo?»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Te legi șireturile sau te ajut?",
+      "correct": "Îți legi șireturile sau te ajut?",
+      "alternatives": [],
+      "calcoEs": "¿Te atas los cordones o te ayudo?",
+      "explanationEs": "Los dos «te» del español no son el mismo en rumano: el primero lleva objeto directo («șireturile») y pide dativo «îți»; el segundo ES el objeto de «a ajuta», que en el estándar moderno rige acusativo (a ajuta pe cineva), y se queda en «te»."
+    }
+  },
+  {
+    "id": "771ae98b",
+    "blockId": 5,
+    "lessonId": "b5-l2-viitor-conditional-imperativ",
+    "difficulty": 2,
+    "concepts": [
+      "r5-reflexivos-ac-dat"
+    ],
+    "tags": [
+      "ro-corr-a2b",
+      "correccion"
+    ],
+    "contentHash": "771ae98b6cfc672360baa83ffaddbab0081afe8ce9afcc330270e858dc61dd26",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2B (2026-09-03): la frase mala es el calco de «¿Te pones el gorro cuando sales?»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Te pui căciula când ieși?",
+      "correct": "Îți pui căciula când ieși?",
+      "alternatives": [],
+      "calcoEs": "¿Te pones el gorro cuando sales?",
+      "explanationEs": "Lo que se pone es «căciula», que es el objeto directo; el que se la pone va en dativo: «îți pui». «Te pui» sería colocarse uno mismo en algún sitio."
+    }
+  },
+  {
+    "id": "4104a161",
+    "blockId": 5,
+    "lessonId": "b5-l2-viitor-conditional-imperativ",
+    "difficulty": 2,
+    "concepts": [
+      "r5-reflexivos-ac-dat"
+    ],
+    "tags": [
+      "ro-corr-a2b",
+      "correccion"
+    ],
+    "contentHash": "4104a161c079f3e4a2967e60c091d95a9d920ad08940f028806a1814c765e8b6",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2B (2026-09-03): la frase mala es el calco de «¿Te limpias las gafas con la camiseta?»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Te ștergi ochelarii cu tricoul?",
+      "correct": "Îți ștergi ochelarii cu tricoul?",
+      "alternatives": [],
+      "calcoEs": "¿Te limpias las gafas con la camiseta?",
+      "explanationEs": "Lo que se limpia son «ochelarii», no tú: el sitio del objeto directo ya está ocupado y el reflexivo pasa a dativo, «îți ștergi». «Te ștergi» solo sería secarte a ti mismo."
+    }
+  },
+  {
+    "id": "8b5d71f4",
+    "blockId": 5,
+    "lessonId": "b5-l2-viitor-conditional-imperativ",
+    "difficulty": 2,
+    "concepts": [
+      "r5-reflexivos-ac-dat"
+    ],
+    "tags": [
+      "ro-corr-a2b",
+      "correccion"
+    ],
+    "contentHash": "8b5d71f4abb2672c9a4a1e831dfd21eb5f30e8a7be3bb6ddd2d056b21622ae93",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2B (2026-09-03): la frase mala es el calco de «Andrei se seca el pelo con el secador.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Andrei se usucă părul cu uscătorul de păr.",
+      "correct": "Andrei își usucă părul cu uscătorul de păr.",
+      "alternatives": [],
+      "calcoEs": "Andrei se seca el pelo con el secador.",
+      "explanationEs": "Con «părul» de objeto directo el reflexivo de 3.ª persona es «își», no «se». El sujeto está escrito, así que la frase no puede leerse como pasiva refleja («se usucă părul» = el pelo se seca): es sencillamente el clítico equivocado."
+    }
+  },
+  {
+    "id": "1eda6925",
+    "blockId": 5,
+    "lessonId": "b5-l2-viitor-conditional-imperativ",
+    "difficulty": 2,
+    "concepts": [
+      "r5-reflexivos-ac-dat"
+    ],
+    "tags": [
+      "ro-corr-a2b",
+      "correccion"
+    ],
+    "contentHash": "1eda69254433d473c62d596162ae3e8cd90a091453c099e7709144c524f3fa1b",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Corrección RO-A2B (2026-09-03): la frase mala es el calco de «María se cambia los zapatos en la entrada.»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.",
+    "register": "neutro",
+    "type": "error_correction",
+    "data": {
+      "sentence": "Maria se schimbă pantofii la intrare.",
+      "correct": "Maria își schimbă pantofii la intrare.",
+      "alternatives": [],
+      "calcoEs": "María se cambia los zapatos en la entrada.",
+      "explanationEs": "«Maria se schimbă» es cambiarse de ropa ella misma; para cambiar UNA COSA propia hace falta el dativo «își schimbă pantofii». El español dice «se» en los dos casos y de ahí sale el error."
+    }
   }
 ]

@@ -16,6 +16,7 @@ import { ITEMS as A1, verificar as verificarA1 } from './lotes/corr-ro-a1';
 import { ITEMS as A1B, verificar as verificarA1B } from './lotes/corr-ro-a1b';
 import { ITEMS as A2, verificar as verificarA2 } from './lotes/corr-ro-a2';
 import { ITEMS as A1C, verificar as verificarA1C } from './lotes/corr-ro-a1c';
+import { ITEMS as A2B, verificar as verificarA2B } from './lotes/corr-ro-a2b';
 
 // Cada lote trae SU verificar: los gates de punto viven con el lote.
 const LOTES: Record<string, { items: ItemCorreccion[]; verificar: (xs: ItemCorreccion[]) => string[] }> = {
@@ -23,6 +24,7 @@ const LOTES: Record<string, { items: ItemCorreccion[]; verificar: (xs: ItemCorre
   a1b: { items: A1B, verificar: verificarA1B },
   a2: { items: A2, verificar: verificarA2 },
   a1c: { items: A1C, verificar: verificarA1C },
+  a2b: { items: A2B, verificar: verificarA2B },
 };
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
 const lote = arg('--lote') ?? '';
@@ -30,6 +32,11 @@ const LOTE = LOTES[lote];
 const ITEMS = LOTE?.items;
 if (!ITEMS) { console.error(`Usa --lote con uno de: ${Object.keys(LOTES).join(', ')}`); process.exit(2); }
 const write = process.argv.includes('--write');
+// La FECHA del sello se calcula: estaba escrita a mano como «2026-09-01» y
+// se la habría puesto tal cual a todo lote futuro. Un sello que miente
+// sobre CUÁNDO se certificó no responde a ninguna pregunta, y la mentira
+// no la ve nadie porque el sello no se vuelve a leer.
+const HOY = new Date().toISOString().slice(0, 10);
 const BLOCKS_DIR = blocksDir('ro');
 const CONCEPTO = new Map(ALL_CONCEPTS.map((c) => [c.id, c]));
 const problemas = [...LOTE!.verificar(ITEMS)];
@@ -60,7 +67,7 @@ ITEMS.forEach((x, i) => {
     id, blockId: bloque.id, lessonId: leccion.id, difficulty: 2, concepts: [x.p], tags: [`ro-corr-${lote}`, 'correccion'],
     contentHash: hashKey({ type: 'error_correction', data }),
     variantStatus: 'neutral',
-    variantVerificacion: `Corrección RO-${lote.toUpperCase()} (2026-09-01): la frase mala es el calco de «${x.calcoEs}»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.`,
+    variantVerificacion: `Corrección RO-${lote.toUpperCase()} (${HOY}): la frase mala es el calco de «${x.calcoEs}»; la buena entera por Hunspell ro_RO; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). Responde a «¿la buena es rumano correcto y la mala es el calco que el hispanohablante produce?»; no certifica voz.`,
     register: 'neutro', type: 'error_correction', data,
   };
   if (!porBloque.has(bloque.id)) porBloque.set(bloque.id, []);
