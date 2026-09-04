@@ -56,6 +56,7 @@
 import { revisarOrtografiaRo } from '../../lib/lang/ortografia-ro';
 import { varianzaDe, UMBRAL } from './varianza';
 import { answersMatchCard } from '../../lib/exercises/normalize';
+import { buscar, controles, INI, FIN } from '../corpus-ro';
 
 export const TOPE_ESTRATEGIA = 0.5;
 export const TOPE_ESPEJO = 0.5;
@@ -154,6 +155,62 @@ export interface JuiciosLote {
  *  respuesta **no está en el tipo**, así que una estrategia tramposa no
  *  compila. Es §4.23 aplicado a la máquina nueva. */
 export type Vista = Pick<ItemTransRo, 's' | 'instruccion' | 'hint' | 'foco'>;
+
+/** UNA AFIRMACIÓN DEL LOTE, ESCRITA PARA PODER EJECUTARLA CONTRA EL CORPUS.
+ *
+ *  ══ POR QUÉ EXISTE, Y ES UN FALLO DEL ESTRENO ══════════════════════
+ *  El gate de varianza exige un motivo ESCRITO, y en el lote 23 aceptó
+ *  uno falso —«el imperativo rumano no admite pronombre sujeto
+ *  antepuesto»— **exactamente igual que uno verdadero**, porque comprueba
+ *  que el texto NOMBRE la pieza, no que sea cierto. `tu vino` sale tres
+ *  veces en el corpus del proyecto, en Eminescu.
+ *
+ *  La lección general es que **exigir un motivo escrito garantiza
+ *  presencia, nunca verdad**. Y el arreglo no es pedirle al autor que se
+ *  acuerde de comprobarlo —lo que depende de acordarse, falla—, sino
+ *  quitarle al lote la posibilidad de publicar sin haber puesto sus
+ *  afirmaciones delante del corpus. Es el mismo movimiento que la `Vista`
+ *  sin respuesta: no una norma, un invariante que se ejecuta.
+ *
+ *  ══ LAS DOS ASIMETRÍAS, Y AQUÍ NO SE PUEDEN CONFUNDIR ══════════════
+ *  · `presente`: la afirmación dice que la forma se usa. Cero apariciones
+ *    la REFUTA y el lote no sale.
+ *  · `ausente`: la afirmación dice que la forma no se usa. Una sola
+ *    aparición la REFUTA y el lote no sale — que es justo el caso del
+ *    lote 23. Pero cero apariciones **NO la demuestra**: la ausencia no
+ *    prohíbe, el corpus es prosa del XIX-XX, y hace falta cita normativa
+ *    aparte. El informe lo dice con esas palabras en vez de dar un visto
+ *    bueno que nadie ha ganado. */
+export interface Comprobacion {
+  /** La afirmación, tal como se lee en el juicio o en la prosa del punto. */
+  afirmacion: string;
+  /** El patrón que la pone a prueba. Se le ponen los límites de palabra
+   *  unicode automáticamente, y `corpus-ro` rechaza `\b`, que en JS no es
+   *  unicode-aware y dispara dentro de las palabras rumanas. */
+  patron: string;
+  espera: 'presente' | 'ausente';
+}
+
+/** Corre las afirmaciones del lote contra los 2,9 M de palabras. Devuelve
+ *  las líneas del informe y los problemas, por separado: el número se
+ *  imprime SIEMPRE, salga verde o rojo. */
+export function comprobarEnCorpus(cs: readonly Comprobacion[]): { lineas: string[]; problemas: string[] } {
+  const lineas: string[] = ['| afirmación | patrón | espera | corpus |', '|---|---|---|---:|'];
+  const problemas: string[] = [];
+  const c = controles();
+  if (!c.ok) return { lineas, problemas: [`CORPUS: ${c.fallo}`] };
+  for (const x of cs) {
+    const n = buscar(INI + x.patron + FIN).n;
+    lineas.push(`| ${x.afirmacion} | \`${x.patron}\` | ${x.espera} | **${n}** |`);
+    if (x.espera === 'presente' && n === 0)
+      problemas.push(`AFIRMACIÓN REFUTADA (${x.afirmacion}): «${x.patron}» no aparece ni una vez en el corpus`);
+    if (x.espera === 'ausente' && n > 0)
+      problemas.push(`AFIRMACIÓN REFUTADA (${x.afirmacion}): «${x.patron}» aparece ${n} ${n === 1 ? 'vez' : 'veces'} en el corpus — la presencia prueba`);
+  }
+  if (cs.some((x) => x.espera === 'ausente'))
+    lineas.push('', '⚠ Un `ausente` que da cero **no queda demostrado**: la ausencia no prohíbe y el corpus es prosa del XIX-XX. Sólo significa que el corpus no lo refuta; la prohibición necesita cita normativa aparte.');
+  return { lineas, problemas };
+}
 
 /** Una estrategia del alumno, escrita como función para poder EJECUTARLA.
  *  Devuelve lo que ese alumno pondría en el hueco del núcleo, o null si la
@@ -268,6 +325,13 @@ export interface Opciones {
   juicios: JuiciosLote;
   /** Estrategias propias del punto, además de las de serie. */
   estrategias?: Estrategia[];
+  /** Las afirmaciones de atestación del lote, ejecutables. **Obligatorio
+   *  al menos una**: un lote que no ha puesto ninguna de sus afirmaciones
+   *  delante del corpus no se publica. Lo que el gate NO puede saber es si
+   *  las declaradas son LAS que la prosa hace — un sello responde a una
+   *  pregunta — pero sí impide el caso que ya se pagó: afirmar que algo no
+   *  existe cuando el corpus lo trae tres veces. */
+  comprobaciones?: readonly Comprobacion[];
 }
 
 export function verificar(items: ItemTransRo[], op: Opciones): string[] {
@@ -369,10 +433,12 @@ export function verificarLote(items: ItemTransRo[], op: Opciones): string[] {
   else if (!items.some((x) => x.sobreaplicacion) && !op.juicios.frontera.startsWith('SIN FRONTERA:'))
     v.push('FRONTERA: ningún ítem declara `sobreaplicacion` y el juicio no empieza por «SIN FRONTERA:» con su motivo');
 
-  // ── LA AUSENCIA DEL CORPUS, DECLARADA ───────────────────────────
-  // La presencia prueba; la ausencia NO prohíbe. Por eso no se exige que
-  // el núcleo esté en el corpus: se exige que, si no está, alguien haya
-  // escrito por qué se publica igual.
+  // ── LAS AFIRMACIONES, EJECUTADAS CONTRA EL CORPUS ───────────────
+  // No es «acuérdate de comprobarlo»: sin esto el lote no sale.
+  if (!op.comprobaciones?.length)
+    v.push('COMPROBACIÓN AUSENTE: el lote no pone ni una de sus afirmaciones de atestación delante del corpus, y un motivo escrito garantiza presencia, nunca verdad');
+  else v.push(...comprobarEnCorpus(op.comprobaciones).problemas);
+
   return v;
 }
 
@@ -417,5 +483,9 @@ export function informe(items: ItemTransRo[], op: Opciones): string[] {
     : '**Ninguna pieza de la operación llega al umbral de invariancia.**');
   L.push(`**Ítems que se contestan copiando el foco:** ${items.filter((x) => norm(x.foco) === norm(x.nucleo)).length}/${n}`);
   L.push(`**Ítems de sobreaplicación (la frontera):** ${items.filter((x) => x.sobreaplicacion).length}/${n}`);
+  if (op.comprobaciones?.length) {
+    L.push('', '**Las afirmaciones del lote, contra los 2,9 M de palabras del corpus:**', '');
+    L.push(...comprobarEnCorpus(op.comprobaciones).lineas);
+  }
   return L;
 }

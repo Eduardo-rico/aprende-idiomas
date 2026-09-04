@@ -90,7 +90,7 @@
 // prohibiendo una cadena; y queda escrito aquí y en el inventario porque
 // rechazarlo en silencio sería marcar como mala una forma atestada sin
 // fuente, que es la regla §0 incumplida por omisión.
-import { verificar, informe, type ItemTransRo, type Opciones, type Estrategia, norm } from '../lib/transformacion-ro';
+import { verificar, informe, type ItemTransRo, type Opciones, type Estrategia, type Comprobacion, norm } from '../lib/transformacion-ro';
 import { informeAsigna } from '../lib/asigna-ro';
 import { VERBOS_A1 } from '../../lib/data/languages/ro/lexicon-a1';
 import { presente } from '../lib/paradigma-ro';
@@ -261,7 +261,27 @@ export const COPIAR_SIN_PRONOMBRE: Estrategia = {
   aplicar: (x) => x.s.replace(/^\s*(eu|tu|el|ea|noi|voi|ei|ele)\s+/iu, ''),
 };
 
+/** LAS AFIRMACIONES DEL LOTE, EJECUTABLES. Se añadieron DESPUÉS de
+ *  publicar, cuando el gate existió, y por eso valen: las seis son las
+ *  afirmaciones sobre las que descansan las decisiones de arriba, y hasta
+ *  ahora vivían sólo en prosa. La primera es la que este lote publicó
+ *  AL REVÉS en su primer juicio de varianza. */
+export const COMPROBACIONES: Comprobacion[] = [
+  // El imperativo SÍ admite sujeto pronominal expreso: por eso la consigna
+  // lo excluye pidiéndolo, y no fingiendo que la lengua no lo tiene.
+  { afirmacion: 'el imperativo admite sujeto pronominal antepuesto (contrastivo)', patron: 'tu vino', espera: 'presente' },
+  { afirmacion: 'y también pospuesto', patron: 'vino tu', espera: 'presente' },
+  // Por qué la consigna tiene que atar el LEXEMA y no sólo la ilocución.
+  { afirmacion: '«hai» compite como forma natural de la misma orden', patron: 'hai la', espera: 'presente' },
+  // Por qué `Să vii!` no se puede marcar mal, sólo excluir por la forma.
+  { afirmacion: '«să» + conjuntivo es directiva viva de 2.ª sg', patron: 'să vii', espera: 'presente' },
+  // Por qué el ítem del plural cambió de `atenți` a `cuminți`.
+  { afirmacion: 'el marco «fii» + adjetivo está vivo', patron: 'fii cuminte', espera: 'presente' },
+  { afirmacion: 'la declarativa «sunteți atenți» sonaba a ejercicio', patron: 'sunteți atenți', espera: 'ausente' },
+];
+
 export const OPCIONES: Opciones = {
+  comprobaciones: COMPROBACIONES,
   estrategias: [TERCERA_SINGULAR, COPIAR_SIN_PRONOMBRE],
   juicios: {
     copia: 'UNO de nueve se contesta copiando el foco, y es el del PLURAL (`Voi veniți acum.` → `Veniți acum!`). Ése es el número correcto, y la v0 tenía tres por una razón equivocada: puso los ítems del piso (C) —stai, mergi, dormi— con la fuente en 2.ª persona, que es justo la persona con la que su imperativo COINCIDE, así que la respuesta estaba escrita en la frase y el ítem no distinguía al que sabe que `a sta` no da *stă! del que copió sin leer el verbo. Con la fuente en 3.ª, esos tres hay que PRODUCIRLOS. Y quitarlos del todo dejaría la regularidad «la forma siempre cambia», que es la otra estrategia gratis: la cierra el ítem del plural, donde copiar ES la regla de la lengua —el imperativo plural es el presente en todo el paradigma salvo `a fi`—, así que su acierto por copia no es un falso positivo. Medido ejecutando: copiar el foco 1/9, copiar la frase entera 0/9, copiar la frase quitándole el pronombre 1/9.',
