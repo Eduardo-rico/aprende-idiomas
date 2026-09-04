@@ -286,8 +286,13 @@ export const DECL: Decl[] = [
   },
 ];
 
-export const ITEMS: ItemTransRo[] = DECL.map(construir);
+/** UNA sola construcción, y `ITEMS` es la MISMA lista vista con el tipo
+ *  de la máquina. Construirla dos veces sería la copia N+1 de siempre:
+ *  las estrategias buscan por la fuente normalizada, así que dos listas
+ *  paralelas funcionarían hasta el día en que dejaran de coincidir y
+ *  nada fallaría. */
 const CONSTRUIDOS = DECL.map(construir);
+export const ITEMS: ItemTransRo[] = CONSTRUIDOS;
 
 // ══ LAS ESTRATEGIAS, ESCRITAS PARA EJECUTARLAS ═══════════════════════
 // Todas van contra la RESPUESTA y no contra el núcleo, y es deliberado:
