@@ -103,7 +103,8 @@ describe('UNA PISTA QUE ES LA REGLA NO ES UN ATAJO', () => {
       { nombre: 'la entrada es larga', vale: (i) => i.entrada.length >= 7 },
       { nombre: 'la entrada lleva mácrón', vale: (i) => /[āēīōū]/.test(i.entrada.normalize('NFC')) },
     ];
-    const v = contrastarComposiciones(LOTE, (i) => i.respuesta, E, P, 1000);
+    const v = contrastarComposiciones(LOTE, (i) => i.respuesta, E,
+      { pistas: P, revisadaPor: 'el autor del lote — PENDIENTE de revisión adversarial' }, 1000);
     expect(v.mejor.tasa).toBeGreaterThan(0.5);   // el techo del 50 % marcaría
     expect(v.hayAtajo).toBe(false);              // y se equivocaría
   });

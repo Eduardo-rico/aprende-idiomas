@@ -49,6 +49,40 @@ export interface Pista<T> {
   vale: (i: T) => boolean;
 }
 
+/** La lista de pistas, con QUIÉN la revisó.
+ *
+ *  ── EL LÍMITE DE ESTA HERRAMIENTA, Y ES SU LADO PELIGROSO ────────────
+ *
+ *  El algoritmo es exhaustivo sobre la lista; **la lista la escribe una
+ *  persona**. Y falla por los dos lados:
+ *
+ *    · si SOBRA, marca como atajo la pista que ES el punto —la vocal
+ *      temática del presente acierta el 100 % y es la destreza— y empuja
+ *      a destruir el ejercicio;
+ *    · si FALTA, devuelve un número tranquilizador y **el atajo real
+ *      queda sin ver**.
+ *
+ *  La asimetría es lo que hace peligroso el segundo: el primer error se
+ *  nota porque alguien discute el hallazgo; **el segundo sale en verde**.
+ *  Pasó en rumano — la búsqueda dio 6/9, y con una pista que faltaba
+ *  («el lema acaba en -e») la composición subía a 8/9. La encontró el
+ *  lingüista adversarial, no quien escribió el lote.
+ *
+ *  No tiene arreglo completo: enumerar todo lo que un alumno puede
+ *  percibir no es cerrable. Lo que sí se puede es (1) **imprimir siempre
+ *  la lista usada**, porque un «sin atajo» sobre cinco pistas y otro
+ *  sobre veinte no dicen lo mismo y hoy se leían igual, y (2) exigir que
+ *  la lista diga **quién la revisó**, porque quien escribe los ítems es
+ *  el peor situado para enumerar lo que su lote regala. Es lo mismo que
+ *  ya se hace con los errores diana, y por la misma razón. */
+export interface PistasDeclaradas<T> {
+  pistas: Pista<T>[];
+  /** Quién revisó la lista. `'sin revisar'` es una respuesta válida y hace
+   *  que el veredicto salga marcado: un «sin atajo» sin revisor no es un
+   *  «sin atajo», es un «no encontré con lo que se me ocurrió». */
+  revisadaPor: string;
+}
+
 export interface Composicion {
   regla: string;
   acierta: number;
@@ -103,16 +137,23 @@ export interface VeredictoComposicion {
   nulaP95: number;
   p: number;
   hayAtajo: boolean;
+  /** Sobre qué se decidió. Va en el veredicto y no aparte, porque
+   *  separarlo es cómo se lee un «sin atajo» sin su denominador. */
+  pistasUsadas: string[];
+  revisadaPor: string;
 }
 
 export function contrastarComposiciones<T>(
   items: T[],
   correcta: (i: T) => string,
   estrategias: Estrategia<T>[],
-  pistas: Pista<T>[],
+  declaradas: Pista<T>[] | PistasDeclaradas<T>,
   repeticiones = 2000,
   semilla = 20260903,
 ): VeredictoComposicion {
+  const { pistas, revisadaPor } = Array.isArray(declaradas)
+    ? { pistas: declaradas, revisadaPor: 'sin revisar' }
+    : declaradas;
   const observadas = buscarComposiciones(items, correcta, estrategias, pistas);
   const mejor = observadas[0]!;
 
@@ -139,13 +180,41 @@ export function contrastarComposiciones<T>(
   nula.sort((a, b) => a - b);
   const p95 = nula[Math.floor(0.95 * nula.length)]!;
   const p = nula.filter((x) => x >= mejor.tasa).length / nula.length;
-  return { mejor, nulaP95: p95, p, hayAtajo: p < 0.05 };
+  return { mejor, nulaP95: p95, p, hayAtajo: p < 0.05,
+    pistasUsadas: pistas.map((x) => x.nombre), revisadaPor };
 }
 
+/** ¿Hay un atajo? Sólo eso.
+ *
+ *  Contestó una sola pregunta desde el principio y hubo que devolverla a
+ *  eso: al añadir la comprobación del revisor la metí aquí dentro, y le
+ *  rompí dos tests a la otra sesión, que espera de esta función lo que
+ *  siempre dio. **Un sello responde a UNA pregunta**, y «¿hay atajo?» y
+ *  «¿es fiable la búsqueda?» son dos. La segunda vive en
+ *  `revisarRevisionDePistas`, que se llama aparte y se lee aparte. */
 export function revisarComposiciones(v: VeredictoComposicion): { item: string; clase: 'composicion-gana'; detalle: string }[] {
   if (!v.hayAtajo) return [];
-  return [{
-    item: '(lote)', clase: 'composicion-gana',
-    detalle: `«${v.mejor.regla}» acierta ${v.mejor.acierta}/${v.mejor.de} (${(100 * v.mejor.tasa).toFixed(0)} %), por encima del percentil 95 de la nula (${(100 * v.nulaP95).toFixed(0)} %), p = ${v.p.toFixed(3)}`,
-  }];
+  return [{ item: '(lote)', clase: 'composicion-gana',
+    detalle: `«${v.mejor.regla}» acierta ${v.mejor.acierta}/${v.mejor.de} (${(100 * v.mejor.tasa).toFixed(0)} %), por encima del percentil 95 de la nula (${(100 * v.nulaP95).toFixed(0)} %), p = ${v.p.toFixed(3)}` }];
+}
+
+/** ¿Vale lo que dice el veredicto? Es la otra pregunta: un «sin atajo»
+ *  sobre una lista que no ha revisado nadie no es un «sin atajo», es un
+ *  «no encontré con lo que se me ocurrió». */
+export function revisarRevisionDePistas(v: VeredictoComposicion): { item: string; clase: 'pistas-sin-revisar'; detalle: string }[] {
+  if (v.revisadaPor !== 'sin revisar') return [];
+  return [{ item: '(lote)', clase: 'pistas-sin-revisar',
+    detalle: `las ${v.pistasUsadas.length} pistas no las ha revisado nadie (${v.pistasUsadas.join(', ')}): quien escribe los ítems es el peor situado para enumerar lo que su lote regala` }];
+}
+
+/** Para pegar en un commit o en un informe. Imprime SIEMPRE la lista, que
+ *  es lo que faltaba: un «sin atajo» sobre cinco pistas y otro sobre
+ *  veinte se leían igual. */
+export function resumenComposiciones(v: VeredictoComposicion): string {
+  return [
+    `  mejor: «${v.mejor.regla}» ${v.mejor.acierta}/${v.mejor.de} = ${(100 * v.mejor.tasa).toFixed(0)} %`,
+    `  nula p95 ${(100 * v.nulaP95).toFixed(0)} % · p = ${v.p.toFixed(3)} → ${v.hayAtajo ? 'HAY ATAJO' : 'sin atajo'}`,
+    `  sobre ${v.pistasUsadas.length} pistas, revisadas por: ${v.revisadaPor}`,
+    ...v.pistasUsadas.map((n) => `    · ${n}`),
+  ].join('\n');
 }
