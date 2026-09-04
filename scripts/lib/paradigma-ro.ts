@@ -831,3 +831,100 @@ export function invariantesLema(l: LemaNominal | LemaVerbal): string[] {
   }
   return errores;
 }
+
+// ══ LOS CLÍTICOS DE ACUSATIVO ════════════════════════════════════════
+//
+// Entra el 2026-09-04 por `r6-contracciones-cliticos` (lote 28), y se
+// escribe AQUÍ y no en el lote porque el lote siguiente
+// —`r6-cliticos-imperativo-gerunziu`— lo necesita igual: la segunda vez
+// que una regla se escribe a mano ya es «la regla copiada que se
+// desincroniza» (§4.10), y este paradigma la ha pagado cinco veces.
+//
+// ⚠ **LO QUE ESTA FUNCIÓN NO CUBRE, y va escrito junto a ella**: sólo
+// devuelve la forma PLENA y proclítica, que es la casilla que
+// `r6-cliticos-acusativo` publica. Las variantes asilábicas (`l-`, `-o`
+// enclítica al participio, `i-`) NO se derivan aquí, porque su
+// distribución no es morfológica sino de contacto —depende de la palabra
+// que venga al lado— y meterla aquí sería enunciar media regla en el
+// sitio donde más caro sale (§4.42). El lote que las examina las
+// construye y las pone en gate.
+//
+// La forma la decide la CONCORDANCIA, no el género del lema: el neutro va
+// con el masculino en singular (`trenul → îl`) y con el femenino en
+// plural (`trenurile → le`), que es exactamente lo que `concordanciaDe()`
+// contesta y por eso se importa en vez de repetirse.
+//
+// (GALR I, *Pronumele personal · formele neaccentuate*; DOOM3 2021.)
+
+/** El clítico de acusativo de 3.ª persona que sustituye a un sintagma de
+ *  este género y número. Forma PLENA, proclítica. */
+export function cliticAcuzativ(genero: Genero, n: Numero): string {
+  const c = concordanciaDe(genero, n);
+  if (n === 'sg') return c === 'm' ? 'îl' : 'o';
+  return c === 'm' ? 'îi' : 'le';
+}
+
+/** EL INVENTARIO DE FORMAS DEL CLÍTICO — LA TABLA, NO LA DISTRIBUCIÓN.
+ *
+ *  ══ POR QUÉ ESTÁ AQUÍ, Y ES UN RAZONAMIENTO PROPIO CORREGIDO ═══════
+ *  La primera versión de este fichero dejaba las formas reducidas FUERA
+ *  del paradigma, con este razonamiento escrito: «su distribución no es
+ *  morfológica sino de CONTACTO, y meterla aquí sería enunciar media
+ *  regla en el sitio donde más caro sale». Se llevó al ataque del
+ *  lingüista como manda el §4.4 —todo comentario que justifica NO
+ *  examinar algo va en el prompt como pregunta, porque un ítem malo se ve
+ *  y un razonamiento que cierra contenido no— y **la mitad de delante era
+ *  falsa**: confundía el INVENTARIO con la DISTRIBUCIÓN.
+ *
+ *  · El **inventario** es una tabla CERRADA de casillas que GALR I
+ *    (*Pronumele personal · formele neaccentuate*) imprime como tal. Eso
+ *    es exactamente lo que este fichero contiene, y no tenerlo aquí
+ *    obligaba al lote 28 a escribir sus cuatro claves A MANO — que es
+ *    literalmente el fallo que el lote 23 dejó documentado y sería la
+ *    tercera copia.
+ *  · La **distribución** —cuál de las dos formas se elige ante qué
+ *    vecino— sí es de contacto, y sí sería media regla enunciarla aquí.
+ *    Se queda fuera, y el lote que la examina la construye y la pone en
+ *    gate.
+ *
+ *  ⚠ Y por eso `reducida` NO se llama «asilábica»: `ni`, `vi`, `li` son
+ *  silábicas y aun así son la variante ante otro clítico. Un nombre que
+ *  afirmara más de lo que la tabla sabe volvería a mezclar las dos cosas.
+ *  `null` = esa casilla no tiene variante reducida, y no una plausible. */
+export interface CasillaClitica { plena: string; reducida: string | null }
+
+/** Acusativo. `o` no tiene reducida —es el único silábico que ya puede ir
+ *  solo— y `le` tampoco. */
+export const CLITICOS_ACUZATIV: Record<string, CasillaClitica> = {
+  '1sg': { plena: 'mă', reducida: 'm' },
+  '2sg': { plena: 'te', reducida: 'te' },
+  '3sgM': { plena: 'îl', reducida: 'l' },
+  '3sgF': { plena: 'o', reducida: null },
+  '1pl': { plena: 'ne', reducida: 'ne' },
+  '2pl': { plena: 'vă', reducida: 'v' },
+  '3plM': { plena: 'îi', reducida: 'i' },
+  '3plF': { plena: 'le', reducida: null },
+};
+
+/** Dativo. */
+export const CLITICOS_DATIV: Record<string, CasillaClitica> = {
+  '1sg': { plena: 'îmi', reducida: 'mi' },
+  '2sg': { plena: 'îți', reducida: 'ți' },
+  '3sg': { plena: 'îi', reducida: 'i' },
+  '1pl': { plena: 'ne', reducida: 'ni' },
+  '2pl': { plena: 'vă', reducida: 'vi' },
+  '3pl': { plena: 'le', reducida: 'li' },
+};
+
+/** La clave del acusativo de 3.ª en la tabla, desde el género y el número
+ *  del referente. Se deriva de `concordanciaDe()` en vez de repetirla. */
+export function casillaAcuzativ(genero: Genero, n: Numero): string {
+  const c = concordanciaDe(genero, n);
+  return `3${n}${c.toUpperCase()}`;
+}
+
+/** La forma REDUCIDA de una casilla, o `null` si no tiene. Devolver null
+ *  en vez de una forma plausible es la misma disciplina que el resto de
+ *  este fichero: `conjunctiv3` y `imperativNegativ` hacen igual. */
+export const reducida = (t: Record<string, CasillaClitica>, casilla: string): string | null =>
+  t[casilla]?.reducida ?? null;

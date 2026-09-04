@@ -25,6 +25,7 @@ import { ITEMS as L24, OPCIONES as OP_L24 } from './lotes/trans-ro-l24';
 import { ITEMS as L25, OPCIONES as OP_L25 } from './lotes/trans-ro-l25';
 import { ITEMS as L26, OPCIONES as OP_L26 } from './lotes/trans-ro-l26';
 import { ITEMS as L27, OPCIONES as OP_L27 } from './lotes/trans-ro-l27';
+import { ITEMS as L28, OPCIONES as OP_L28 } from './lotes/trans-ro-l28';
 
 const LOTES: Record<string, { items: ItemTransRo[]; op: Opciones }> = {
   l23: { items: L23, op: OP_L23 },
@@ -32,6 +33,7 @@ const LOTES: Record<string, { items: ItemTransRo[]; op: Opciones }> = {
   l25: { items: L25, op: OP_L25 },
   l26: { items: L26, op: OP_L26 },
   l27: { items: L27, op: OP_L27 },
+  l28: { items: L28, op: OP_L28 },
 };
 
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
@@ -47,13 +49,31 @@ if (!LOTE) { console.error(`Usa --lote con uno de: ${Object.keys(LOTES).join(', 
 // lo que se escribe en el bloque va en `ordenDePublicacion`, que es la
 // MISMA función que mira el gate: si fueran dos, el gate certificaría un
 // orden distinto del publicado.
-const ITEMS = ordenDePublicacion(LOTE.items, LOTE.op.semilla ?? 'orden-escrito');
+// ⚠ **LA BARAJA SE APLICA UNA SOLA VEZ, Y AQUÍ SE APLICABA DOS.** Hasta el
+// 2026-09-04 esta línea era `const ITEMS = ordenDePublicacion(...)` y todo
+// lo de abajo —incluido `verificar`— colgaba de ella; pero `ordenSeparable`
+// (dentro de `verificarLote`) **vuelve a barajar con la misma semilla**,
+// así que el gate del orden se corría sobre `baraja(baraja(xs))` y
+// certificaba un orden que el alumno NO VE. Es exactamente lo que el
+// comentario de abajo dice que no puede pasar, y no había mordido nunca
+// porque los lotes 23-26 declaran `orden-escrito` —donde barajar dos veces
+// es igual que barajar una— y el 27 tiene n = 2, tamaño al que el detector
+// no puede disparar. Lo destapó el lote 28: pasaba sus gates corriendo el
+// fichero suelto y los suspendía al publicar, con la MISMA semilla. Es «dos
+// instrumentos que cuentan distinto en silencio» (§4.38) dentro de un solo
+// script.
+//
+// La regla que sale: **el que valida recibe lo DECLARADO y aplica la baraja
+// él mismo; el que escribe recibe lo BARAJADO.** Los dos llaman a la misma
+// función una vez cada uno.
+const DECLARADOS = LOTE.items;
+const ITEMS = ordenDePublicacion(DECLARADOS, LOTE.op.semilla ?? 'orden-escrito');
 const write = process.argv.includes('--write');
 const HOY = new Date().toISOString().slice(0, 10);
 const BLOCKS_DIR = blocksDir('ro');
 const CONCEPTO = new Map(ALL_CONCEPTS.map((c) => [c.id, c]));
 
-const problemas = [...verificar(ITEMS, LOTE.op)];
+const problemas = [...verificar(DECLARADOS, LOTE.op)];
 const porDefecto: string[] = [];
 
 // Virginidad: una fuente idéntica a otra ya publicada no es un ítem nuevo.
@@ -111,7 +131,7 @@ ITEMS.forEach((x, i) => {
 console.log(`# Publicar transformación RO-${lote} — ${ITEMS.length} ítems\n`);
 for (const [b, xs] of [...porBloque].sort((a, c) => a[0] - c[0])) console.log(`- b${b}: ${xs.length}`);
 console.log('');
-for (const l of informe(ITEMS, LOTE.op)) console.log(l);
+for (const l of informe(DECLARADOS, LOTE.op)) console.log(l);
 console.log('\n## Los juicios escritos del lote\n');
 console.log(`- **copia:** ${LOTE.op.juicios.copia}`);
 console.log(`- **frontera:** ${LOTE.op.juicios.frontera}`);
