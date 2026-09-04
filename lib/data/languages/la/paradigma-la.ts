@@ -179,6 +179,27 @@ const V: Record<Conjugacion, string[]> = {
   4: ['iō', 'īs', 'it', 'īmus', 'ītis', 'iunt'],
 };
 
+// ── VERBOS IRREGULARES, declarados uno a uno ─────────────────────────
+//
+// `sum` es el verbo más frecuente del latín y no sale de ninguna regla:
+// su infinitivo `esse` no encaja en las cuatro conjugaciones y su tema
+// alterna (`s-`/`es-`/`er-`/`fu-`). Una máquina que lo intentara derivar
+// produciría formas que no existen; declararlo es más honesto y más corto.
+//
+// El imperfecto lo trae porque el propio inventario lo señala como la
+// trampa del punto: «los dos verbos más frecuentes del nivel NO llevan
+// infijo — `sum` hace `eram`, no *`esbam`».
+const VERBOS_IRREGULARES: Record<string, Partial<Record<`${Tiempo}.${Persona}`, string>>> = {
+  'sum': {
+    'presente.1sg': 'sum', 'presente.2sg': 'es', 'presente.3sg': 'est',
+    'presente.1pl': 'sumus', 'presente.2pl': 'estis', 'presente.3pl': 'sunt',
+    'imperfecto.1sg': 'eram', 'imperfecto.2sg': 'erās', 'imperfecto.3sg': 'erat',
+    'imperfecto.1pl': 'erāmus', 'imperfecto.2pl': 'erātis', 'imperfecto.3pl': 'erant',
+    'futuro.1sg': 'erō', 'futuro.2sg': 'eris', 'futuro.3sg': 'erit',
+    'futuro.1pl': 'erimus', 'futuro.2pl': 'eritis', 'futuro.3pl': 'erunt',
+  },
+};
+
 export function conjugacionDe(e: EntradaVerbal): Conjugacion {
   const inf = e.infinitivo.normalize('NFC');
   if (inf.endsWith('āre')) return 1;
@@ -221,12 +242,15 @@ export type Tiempo = 'presente' | 'imperfecto' | 'futuro';
 const TABLA: Record<Tiempo, Record<Conjugacion, string[]>> = { presente: V, imperfecto: IMPERFECTO, futuro: FUTURO };
 
 export function conjugar(e: EntradaVerbal, p: Persona, tiempo: Tiempo = 'presente'): string {
+  const irr = VERBOS_IRREGULARES[e.lema.normalize('NFC')]?.[`${tiempo}.${p}` as `${Tiempo}.${Persona}`];
+  if (irr) return irr;
   const c = conjugacionDe(e);
   return temaVerbal(e) + TABLA[tiempo][c]![PERSONAS.indexOf(p)]!;
 }
 
 /** Qué marca de futuro le toca. Es el eje binario del punto. */
-export function marcaDeFuturo(e: EntradaVerbal): 'bi' | 'e' {
+export function marcaDeFuturo(e: EntradaVerbal): 'bi' | 'e' | 'irregular' {
+  if (VERBOS_IRREGULARES[e.lema.normalize('NFC')]) return 'irregular';
   return conjugacionDe(e) <= 2 ? 'bi' : 'e';
 }
 

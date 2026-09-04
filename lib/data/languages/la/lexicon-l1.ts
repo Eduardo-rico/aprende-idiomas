@@ -59,6 +59,11 @@ export const NOMBRES_L1: EntradaNominal[] = [
 ];
 
 export const VERBOS_L1: EntradaVerbal[] = [
+  // El más frecuente del latín, y el que ninguna regla produce: su
+  // infinitivo no encaja en las cuatro conjugaciones y su tema alterna.
+  // Declarado en `VERBOS_IRREGULARES`, con el imperfecto que el inventario
+  // señala como trampa: `eram`, no *`esbam`.
+  { lema: 'sum', infinitivo: 'esse', glosa: 'ser' },
   { lema: 'amō', infinitivo: 'amāre', glosa: 'amar' },
   { lema: 'vocō', infinitivo: 'vocāre', glosa: 'llamar' },
   { lema: 'laudō', infinitivo: 'laudāre', glosa: 'alabar' },

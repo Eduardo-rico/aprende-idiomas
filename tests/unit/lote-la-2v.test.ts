@@ -24,7 +24,10 @@ describe('el lote del vocativo', () => {
     const coinciden = LOTE.filter((i) => i.respuesta === i.entrada.lema);
     expect(coinciden).toHaveLength(5);
     // Y van EXIMIDOS de «celda gratis» con el motivo escrito, no en silencio.
-    for (const i of coinciden) expect(i.porQueNoEsGratis, i.id).toBeTruthy();
+    // Y declarando CUÁL de las dos exenciones es: «copiar ES el punto»,
+    // no «el punto no se puede examinar aquí». Las dos se ven iguales en
+    // el código y significan lo contrario.
+    for (const i of coinciden) expect(i.porQueNoEsGratis?.tipo, i.id).toBe('es-el-punto');
   });
 
   it('y trae la excepción de los -ius, sin la cual se saca 9/9 sobregeneralizando', () => {

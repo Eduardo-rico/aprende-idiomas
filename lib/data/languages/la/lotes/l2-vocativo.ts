@@ -84,7 +84,8 @@ const FUENTE: ItemClozeDerivado[] = DEFS.map(([id, lema, marco, pista]) => {
     // El 63 % de los vocativos del corpus SON el nominativo: aquí eso no
     // es una celda gratis, es el punto.
     porQueNoEsGratis: declinar(entrada, 'voc', 'sg') === entrada.lema
-      ? 'que el vocativo COINCIDA con el nominativo es el contenido del punto: pasa en el 63 % de los 589 vocativos comparables de la Vulgata, y sin estos ítems el alumno aprende que siempre cambia'
+      ? { tipo: 'es-el-punto' as const,
+          motivo: 'que el vocativo COINCIDA con el nominativo es el contenido del punto: pasa en el 63 % de los 589 vocativos comparables de la Vulgata, y sin estos ítems el alumno aprende que siempre cambia' }
       : undefined,
   };
 });

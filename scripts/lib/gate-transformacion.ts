@@ -50,8 +50,12 @@ export interface ItemTransformacion {
   respuesta: string;
   pista: string;
   ejes: {
-    /** La marca que le toca: es lo que el punto examina. */
-    marca: 'bi' | 'e';
+    /** La marca que le toca: es lo que el punto examina. `irregular` es
+     *  la tercera salida y no un caso raro: `sum` hace `erō`, que no es ni
+     *  `-bi-` ni `-ē-`, y es el verbo más frecuente del latín. Los ítems
+     *  irregulares NO entran en el denominador de las dos rutas, porque
+     *  ninguna de las dos puede acertarlos y meterlos diluiría la tasa. */
+    marca: 'bi' | 'e' | 'irregular';
     conjugacion: 1 | 2 | 3 | 4;
     /** Si la respuesta que da la ruta perdedora es una forma REAL del
      *  mismo verbo. Se comprueba contra la máquina, no se declara a ojo. */
@@ -129,9 +133,14 @@ export function revisarTransformacion(item: ItemTransformacion): FalloT[] {
 
 export function tasasCiegasT(items: ItemTransformacion[]) {
   const n = items.length || 1;
+  // Las dos rutas se miden sobre los REGULARES: un irregular no lo acierta
+  // ninguna de las dos, así que incluirlo bajaría las dos tasas a la vez y
+  // haría pasar un lote que no las examina.
+  const reg = items.filter((i) => i.ejes.marca !== 'irregular');
+  const m = reg.length || 1;
   return {
-    siempreBi: items.filter((i) => norm(rutaBi(i)) === norm(i.respuesta)).length / n,
-    siempreE: items.filter((i) => norm(rutaE(i)) === norm(i.respuesta)).length / n,
+    siempreBi: reg.filter((i) => norm(rutaBi(i)) === norm(i.respuesta)).length / m,
+    siempreE: reg.filter((i) => norm(rutaE(i)) === norm(i.respuesta)).length / m,
     copiarLaEntrada: items.filter((i) => norm(i.entrada) === norm(i.respuesta)).length / n,
     conErrorQueExiste: items.filter((i) => i.ejes.elErrorExiste).length,
   };
@@ -142,8 +151,8 @@ export function coberturaTransformacion(items: ItemTransformacion[]): Cobertura[
   const conBi = items.filter((i) => rutaBi(i) !== '').length;
   return [
     { comprobacion: 'entrada y respuesta contra la máquina', decididos: n, total: n },
-    { comprobacion: 'las dos rutas de futuro', decididos: conBi, total: n,
-      motivoDeLosQueQuedanFuera: 'un verbo sin imperfecto en -b- no admite la ruta -bi-, así que no la distingue' },
+    { comprobacion: 'las dos rutas de futuro', decididos: items.filter((i) => i.ejes.marca !== 'irregular').length, total: n,
+      motivoDeLosQueQuedanFuera: 'un irregular como `sum` no lo acierta ninguna de las dos rutas, así que no las distingue' },
     { comprobacion: 'si el error es una forma real', decididos: n, total: n,
       motivoDeLosQueQuedanFuera: 'decide sobre todos, pero INFRAINFORMA: sólo mira el indicativo. `amet` es presente de subjuntivo de `amō` y la máquina todavía no lo tiene, así que ese caso sale «no» siendo «sí»' },
   ];

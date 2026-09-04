@@ -56,10 +56,23 @@ export interface ItemClozeDerivado {
   /** El contexto español que fija la celda sin regalar la forma. */
   pista: string;
   /** Por qué la respuesta puede coincidir con el lema sin ser gratis.
-   *  Obligatorio cuando coinciden: en `l2-vocativo` que el vocativo SEA el
-   *  nominativo es el contenido del punto —el 63 % del corpus— y marcarlo
-   *  como celda gratis sería aplicar un gate donde su premisa no vale. */
-  porQueNoEsGratis?: string;
+   *
+   *  ── LAS DOS EXENCIONES SE VEN IGUAL Y SIGNIFICAN LO CONTRARIO ──
+   *
+   *  En el código las dos son una línea que dice «aquí no aplica»:
+   *
+   *    · **`es-el-punto`** — copiar ES lo que el punto enseña. En
+   *      `l2-vocativo`, que el vocativo sea el nominativo pasa en el 63 %
+   *      del corpus y sin esos ítems el alumno aprende el error simétrico.
+   *      Protege contenido válido.
+   *    · **`no-examinable-aqui`** — el punto NO SE PUEDE examinar en este
+   *      formato. Es lo que casi hago con `Iēsū`: su vocativo es su
+   *      genitivo, o sea la propia entrada, y el ítem no mide nada.
+   *      **Esconde un ítem inútil detrás de algo que parece legítimo.**
+   *
+   *  Y por eso hay que declarar CUÁL: si es la segunda, no es una exención
+   *  — es que hace falta otro formato, y el ítem se va. */
+  porQueNoEsGratis?: { tipo: 'es-el-punto'; motivo: string };
   ejes: {
     /** `regular` = `-us`/`-a`, donde las dos derivaciones coinciden y el
      *  ítem no discrimina; `conserva` = `puer/puerī`; `sincopa` =
@@ -218,7 +231,7 @@ export function revisarClozeDerivado(item: ItemClozeDerivado): FalloD[] {
     // los casos y eso ES el punto. Un gate llevado a otro punto sin
     // reenunciar su premisa marca el contenido como defecto. Se exime con
     // el motivo escrito, no en silencio.
-    if (item.porQueNoEsGratis && item.porQueNoEsGratis.trim().length >= 20) continue;
+    if (item.porQueNoEsGratis?.tipo === 'es-el-punto' && item.porQueNoEsGratis.motivo.trim().length >= 20) continue;
     push('celda-gratis', `la respuesta «${item.respuesta}» es ${qué}, que va en la entrada del lexicón: se contesta copiando (y si aquí eso ES el punto, hay que decirlo en \`porQueNoEsGratis\`)`);
   }
 
