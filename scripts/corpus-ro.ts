@@ -81,13 +81,39 @@ export const INI = '(?<![\\p{L}\\p{N}])';
 /** Cuenta un patrón y devuelve contexto. `patron` es una regex en texto:
  *  se compila con `iu`, así que las clases unicode funcionan.
  *
- *  **RECHAZA `\b`**, y no lo traduce por su cuenta: traducirlo exigiría
- *  saber de qué lado del token está y acertaría casi siempre, que es
- *  exactamente el aspecto de una regla a la que le falta una mitad
- *  (§4.13). Se rechaza y se dice con qué sustituirlo. */
+ *  **RECHAZA `\b` Y `\w`**, y no los traduce por su cuenta: traducirlos
+ *  exigiría saber de qué lado del token está y acertaría casi siempre, que
+ *  es exactamente el aspecto de una regla a la que le falta una mitad
+ *  (§4.13). Se rechazan y se dice con qué sustituirlos.
+ *
+ *  ══ POR QUÉ `\w` TAMBIÉN, Y ES LA MITAD QUE FALTABA ═════════════════
+ *  La cabecera de `INI`/`FIN` YA decía que «`\w` es `[A-Za-z0-9_]` incluso
+ *  con el flag `u`» — o sea que el proyecto conocía el hecho entero y sólo
+ *  guardaba UNA de sus dos formas. `\b` estaba cerrado desde el lote 21;
+ *  `\w` quedó abierto y **no falla, subcuenta en silencio**, que es peor:
+ *  devuelve un número plausible.
+ *
+ *  Medido sobre este corpus el 2026-09-04, al comprobar una afirmación del
+ *  lingüista sobre la marca doble del superlativo:
+ *
+ *    `[\p{L}]+ cel mai` → **821**      `\w+ cel mai` → **625**
+ *
+ *  Las 196 que faltan son EXACTAMENTE las palabras con `ă â î ș ț`, o sea
+ *  justo el rumano: en `sfârșitul cel mai`, `\w+` sólo puede empezar
+ *  después de la `ș` y ahí el `INI` unicode lo rechaza, así que la
+ *  aparición se cae entera. Un patrón con `\w` no da error, da un número
+ *  verdadero de otra cosa (§4.14), y por los cuatro patrones de aquel
+ *  recuento la diferencia era 709 frente a 912.
+ *
+ *  ⚠ Y el gate de los lotes (`comprobarEnCorpus`) llama aquí, así que una
+ *  `Comprobacion` con `\w` habría dado por atestada una afirmación con un
+ *  tercio menos de apariciones — o habría declarado `ausente` algo
+ *  presente. Hoy ningún lote usa `\w`; esto impide el primero. */
 export function buscar(patron: string, ctx = 0): Hallazgo {
   if (/(?:^|[^\\])\\b/.test(patron))
     throw new Error(`el patrón «${patron}» usa \\b, que en JS no es unicode-aware y dispara dentro de las palabras rumanas (ă â î ș ț no son \\w). Usa ${INI} y ${FIN}.`);
+  if (/(?:^|[^\\])\\[wW]/.test(patron))
+    throw new Error(`el patrón «${patron}» usa \\w, que en JS es [A-Za-z0-9_] incluso con el flag u, así que NO casa ă â î ș ț y SUBCUENTA en silencio (medido: «[\\p{L}]+ cel mai» 821 frente a «\\w+ cel mai» 625). Usa [\\p{L}] o [\\p{L}\\p{N}].`);
   const T = corpus();
   const re = new RegExp(patron, 'giu');
   const ejemplos: string[] = [];
