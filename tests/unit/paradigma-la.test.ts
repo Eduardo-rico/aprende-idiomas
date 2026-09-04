@@ -8,7 +8,8 @@
 // auditado por reflejos romances) y la atestación (contra 227.301 tokens
 // de treebank, congelados en un JSON porque el corpus está gitignorado).
 import { describe, it, expect } from 'vitest';
-import { paradigmaNominal, paradigmaVerbal, declinar, conjugar, todasLasFormas, declinacionDe, esMixta, infectum } from '../../lib/data/languages/la/paradigma-la';
+import { paradigmaNominal, paradigmaVerbal, declinar, conjugar, todasLasFormas, declinacionDe, esMixta, infectum,
+         temaDePerfecto, conjugarPerfecto, perfectum } from '../../lib/data/languages/la/paradigma-la';
 import { NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1 } from '../../lib/data/languages/la/lexicon-l1';
 import { revisarCantidad, auditarPorReflejos, revisarCoherenciaLexico, noContrastables } from '../../lib/data/languages/la/cantidad';
 import atestacion from '../../lib/data/languages/la/atestacion-l1.json';
@@ -267,5 +268,48 @@ describe('TRES DEFECTOS QUE ESTABAN DORMIDOS', () => {
 
   it('y un genitivo que no es de ninguna de las cinco LANZA, no fabrica', () => {
     expect(() => declinacionDe({ lema: 'x', genitivo: 'xyz', genero: 'm', glosa: '' })).toThrow(/ninguna de las cinco/);
+  });
+});
+
+describe('EL PERFECTUM: la tercera parte principal', () => {
+  const V = (l: string) => VERBOS_L1.find((v) => v.lema === l)!;
+
+  it('el tipo tenía DOS partes principales y el punto declara CUATRO', () => {
+    // `l5-partes-principales` dice que la entrada del verbo son cuatro, y
+    // su `varia` es «cuál de las cuatro partes se pide»: insatisfacible
+    // por construcción mientras el tipo tuviera dos. Ahora las tiene.
+    expect(VERBOS_L1.every((v) => v.perfecto)).toBe(true);
+    expect(VERBOS_L1.filter((v) => v.supino).length).toBe(14);
+    // Dos no tienen supino y eso es la lengua, no un hueco: `timeō` da
+    // `timuī` y no lo tiene, y `sum` hace `futūrum`, que es participio.
+  });
+
+  it('los tres tiempos salen de UN tema, y el tema es lo irregular', () => {
+    // Las desinencias son las mismas para las cinco clases: la parte
+    // regular del verbo latino. Lo que no se deduce del presente es el
+    // TEMA —de `videō` sale `vīd-` y de `dūcō` sale `dūx-`— y por eso vive
+    // en el lexicón y no en una regla.
+    expect(temaDePerfecto(V('videō'))).toBe('vīd');
+    expect(temaDePerfecto(V('dūcō'))).toBe('dūx');
+    expect(conjugarPerfecto(V('videō'), '3sg', 'perfecto')).toBe('vīdit');
+    expect(conjugarPerfecto(V('dūcō'), '3pl', 'perfecto')).toBe('dūxērunt');
+    expect(conjugarPerfecto(V('sum'), '3sg', 'pluscuamperfecto')).toBe('fuerat');
+    expect(conjugarPerfecto(V('amō'), '3sg', 'futuro-perfecto')).toBe('amāverit');
+  });
+
+  it('y el corpus las confirma: no son formas inventadas', () => {
+    // `fuit` 219, `mīsit` 139, `vīdī` 90, `vīdit` 75, `audīvī` 56.
+    const at = atestacion.lemas as Record<string, Record<string, { forma: string; n: number }>>;
+    expect(at['sum']!['perfecto.3sg']!.forma).toBe('fuit');
+    expect(at['sum']!['perfecto.3sg']!.n).toBeGreaterThan(100);
+    expect(at['mittō']!['perfecto.3sg']!.n).toBeGreaterThan(50);
+    expect(at['videō']!['perfecto.1sg']!.n).toBeGreaterThan(50);
+  });
+
+  it('un verbo sin perfecto declarado devuelve VACÍO, no formas fabricadas', () => {
+    // La lección de `rēs`: cuando no sabe, no inventa.
+    expect(temaDePerfecto({ lema: 'x', infinitivo: 'xāre', glosa: '' })).toBeNull();
+    expect(perfectum({ lema: 'x', infinitivo: 'xāre', glosa: '' })).toEqual({});
+    expect(conjugarPerfecto({ lema: 'x', infinitivo: 'xāre', glosa: '' }, '1sg', 'perfecto')).toBeNull();
   });
 });

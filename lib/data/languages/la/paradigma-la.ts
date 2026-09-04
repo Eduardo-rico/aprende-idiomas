@@ -201,8 +201,26 @@ export type Persona = '1sg' | '2sg' | '3sg' | '1pl' | '2pl' | '3pl';
 const PERSONAS: Persona[] = ['1sg', '2sg', '3sg', '1pl', '2pl', '3pl'];
 
 export interface EntradaVerbal {
-  lema: string;        // 1.ª sg del presente: `amō`
-  infinitivo: string;  // `amāre` — de aquí sale la conjugación
+  lema: string;        // 1.ª sg del presente: `amō`      ← 1.ª parte principal
+  infinitivo: string;  // `amāre` — de aquí sale la conjugación ← 2.ª
+  /** 1.ª sg del PERFECTO: `amāvī`, `vīdī`, `dūxī`, `fuī`. ← 3.ª parte
+   *
+   *  El tipo tenía DOS partes principales y el punto `l5-partes-principales`
+   *  declara que la entrada del verbo son CUATRO — su `varia` es «cuál de
+   *  las cuatro partes se pide», o sea insatisfacible por construcción.
+   *  Y sin tema de perfecto no hay narración: el esqueleto de la Vulgata es
+   *  `dīxit`, `respondit`, `vēnit`.
+   *
+   *  Va OPCIONAL para no romper lo escrito, y la cobertura declara cuántos
+   *  verbos lo tienen: un campo opcional sin denominador es un hueco que se
+   *  lee como completo. */
+  perfecto?: string;
+  /** El SUPINO: `amātum`, `vīsum`, `ductum`. ← 4.ª parte principal.
+   *  De aquí salen el participio de perfecto y el futuro activo, que son
+   *  L2; se guarda ahora porque la entrada del lexicón es donde vive y
+   *  añadirla después obligaría a tocar los mismos ficheros dos veces.
+   *  Algunos verbos no tienen: `timeō` da `timuī` y no tiene supino. */
+  supino?: string;
   glosa: string;
 }
 
@@ -300,6 +318,41 @@ const FUTURO: Record<Conjugacion, string[]> = {
 };
 
 export type Tiempo = 'presente' | 'imperfecto' | 'futuro';
+export type TiempoPerfecto = 'perfecto' | 'pluscuamperfecto' | 'futuro-perfecto';
+
+// ── EL PERFECTUM ─────────────────────────────────────────────────────
+//
+// Los tres tiempos salen de UN solo tema —el perfecto menos su `-ī`— y las
+// desinencias son las mismas para las cinco clases: es la parte regular
+// del verbo latino. Lo irregular es el TEMA, y por eso va en el lexicón y
+// no en una regla: de `videō` sale `vīd-` y de `dūcō` sale `dūx-`, y eso
+// no se deduce del presente.
+const PERFECTO: string[] = ['ī', 'istī', 'it', 'imus', 'istis', 'ērunt'];
+const PLUSCUAMPERFECTO: string[] = ['eram', 'erās', 'erat', 'erāmus', 'erātis', 'erant'];
+const FUTURO_PERFECTO: string[] = ['erō', 'eris', 'erit', 'erimus', 'eritis', 'erint'];
+const TABLA_PERFECTA: Record<TiempoPerfecto, string[]> = {
+  perfecto: PERFECTO, pluscuamperfecto: PLUSCUAMPERFECTO, 'futuro-perfecto': FUTURO_PERFECTO,
+};
+
+/** El tema de perfecto, o `null` si el verbo no lo declara. */
+export function temaDePerfecto(e: EntradaVerbal): string | null {
+  const p = e.perfecto?.normalize('NFC');
+  return p ? p.replace(/ī$/, '') : null;
+}
+
+export function conjugarPerfecto(e: EntradaVerbal, per: Persona, tiempo: TiempoPerfecto): string | null {
+  const tema = temaDePerfecto(e);
+  return tema === null ? null : tema + TABLA_PERFECTA[tiempo][PERSONAS.indexOf(per)]!;
+}
+
+export function perfectum(e: EntradaVerbal): Record<string, string> {
+  const out: Record<string, string> = {};
+  if (temaDePerfecto(e) === null) return out;
+  for (const t of ['perfecto', 'pluscuamperfecto', 'futuro-perfecto'] as TiempoPerfecto[])
+    for (const p of PERSONAS) out[`${t}.${p}`] = conjugarPerfecto(e, p, t)!;
+  if (e.supino) out['supino'] = e.supino.normalize('NFC');
+  return out;
+}
 const TABLA: Record<Tiempo, Record<Conjugacion, string[]>> = { presente: V, imperfecto: IMPERFECTO, futuro: FUTURO };
 
 export function conjugar(e: EntradaVerbal, p: Persona, tiempo: Tiempo = 'presente'): string {
@@ -394,8 +447,10 @@ export function todasLasFormas(
   for (const f of indeclinables) out.push({ clave: `${f}.indecl`, forma: f });
   for (const e of nombres)
     for (const [c, f] of Object.entries(paradigmaNominal(e))) out.push({ clave: `${e.lema}.${c}`, forma: f });
-  for (const e of verbos)
+  for (const e of verbos) {
     for (const [c, f] of Object.entries(infectum(e))) out.push({ clave: `${e.lema}.${c}`, forma: f });
+    for (const [c, f] of Object.entries(perfectum(e))) out.push({ clave: `${e.lema}.${c}`, forma: f });
+  }
   for (const a of adjetivos)
     for (const g of ['m', 'f', 'n'] as const)
       for (const num of ['sg', 'pl'] as Numero[])

@@ -71,22 +71,22 @@ export const VERBOS_L1: EntradaVerbal[] = [
   // infinitivo no encaja en las cuatro conjugaciones y su tema alterna.
   // Declarado en `VERBOS_IRREGULARES`, con el imperfecto que el inventario
   // señala como trampa: `eram`, no *`esbam`.
-  { lema: 'sum', infinitivo: 'esse', glosa: 'ser' },
-  { lema: 'amō', infinitivo: 'amāre', glosa: 'amar' },
-  { lema: 'vocō', infinitivo: 'vocāre', glosa: 'llamar' },
-  { lema: 'laudō', infinitivo: 'laudāre', glosa: 'alabar' },
-  { lema: 'salūtō', infinitivo: 'salūtāre', glosa: 'saludar' },
-  { lema: 'exspectō', infinitivo: 'exspectāre', glosa: 'esperar' },
-  { lema: 'videō', infinitivo: 'vidēre', glosa: 'ver' },
-  { lema: 'timeō', infinitivo: 'timēre', glosa: 'temer' },
-  { lema: 'moneō', infinitivo: 'monēre', glosa: 'advertir' },
-  { lema: 'dūcō', infinitivo: 'dūcere', glosa: 'guiar' },
-  { lema: 'mittō', infinitivo: 'mittere', glosa: 'enviar' },
-  { lema: 'legō', infinitivo: 'legere', glosa: 'leer' },
-  { lema: 'audiō', infinitivo: 'audīre', glosa: 'oír' },
-  { lema: 'inveniō', infinitivo: 'invenīre', glosa: 'encontrar' },
-  { lema: 'custōdiō', infinitivo: 'custōdīre', glosa: 'guardar' },
-  { lema: 'portō', infinitivo: 'portāre', glosa: 'llevar' },
+  { lema: 'sum', infinitivo: 'esse', perfecto: 'fuī', glosa: 'ser' },
+  { lema: 'amō', infinitivo: 'amāre', perfecto: 'amāvī', supino: 'amātum', glosa: 'amar' },
+  { lema: 'vocō', infinitivo: 'vocāre', perfecto: 'vocāvī', supino: 'vocātum', glosa: 'llamar' },
+  { lema: 'laudō', infinitivo: 'laudāre', perfecto: 'laudāvī', supino: 'laudātum', glosa: 'alabar' },
+  { lema: 'salūtō', infinitivo: 'salūtāre', perfecto: 'salūtāvī', supino: 'salūtātum', glosa: 'saludar' },
+  { lema: 'exspectō', infinitivo: 'exspectāre', perfecto: 'exspectāvī', supino: 'exspectātum', glosa: 'esperar' },
+  { lema: 'videō', infinitivo: 'vidēre', perfecto: 'vīdī', supino: 'vīsum', glosa: 'ver' },
+  { lema: 'timeō', infinitivo: 'timēre', perfecto: 'timuī', glosa: 'temer' },
+  { lema: 'moneō', infinitivo: 'monēre', perfecto: 'monuī', supino: 'monitum', glosa: 'advertir' },
+  { lema: 'dūcō', infinitivo: 'dūcere', perfecto: 'dūxī', supino: 'ductum', glosa: 'guiar' },
+  { lema: 'mittō', infinitivo: 'mittere', perfecto: 'mīsī', supino: 'missum', glosa: 'enviar' },
+  { lema: 'legō', infinitivo: 'legere', perfecto: 'lēgī', supino: 'lēctum', glosa: 'leer' },
+  { lema: 'audiō', infinitivo: 'audīre', perfecto: 'audīvī', supino: 'audītum', glosa: 'oír' },
+  { lema: 'inveniō', infinitivo: 'invenīre', perfecto: 'invēnī', supino: 'inventum', glosa: 'encontrar' },
+  { lema: 'custōdiō', infinitivo: 'custōdīre', perfecto: 'custōdīvī', supino: 'custōdītum', glosa: 'guardar' },
+  { lema: 'portō', infinitivo: 'portāre', perfecto: 'portāvī', supino: 'portātum', glosa: 'llevar' },
 ];
 
 // Adjetivos de la primera clase. El `tema` va aparte del lema por el mismo
