@@ -86,14 +86,29 @@ const LOTE_FALSOS_REGALOS_FUENTE: ItemFlashcard[] = [
     porQueUnHispanohablante: '«virtud» en español es sólo moral, y «virtūs» es lo que hace un varón en la batalla: «virtūs mīlitum» se lee «la virtud de los soldados» y es «su valor». La lectura piadosa cabe y no es la del texto.',
     fuente: LS('virtus'), corpus: 'todo',
   },
+  // ── `fidēs` PASÓ DE TRAMPA A REGALO, y lo decidió el corpus ──
+  //
+  // Estaba contada como falso regalo porque en el latín clásico es la
+  // lealtad y el crédito, no la fe. Pero el eje de este campo es **si el
+  // instinto español acierta EN EL CORPUS QUE EL ALUMNO LEE**, y L1 lee la
+  // Vulgata. Miradas las 147 frases del corpus: `fidēs tua tē salvam
+  // fēcit`, `secundum fidem vestram`, `per fidem`, `fidem habēs` — es la
+  // fe religiosa, y «fe» acierta.
+  //
+  // Contarla como trampa era hacerle una tarjeta al alumno de César usando
+  // la plaza del alumno de Jerónimo. El contenido de la tarjeta no cambia
+  // —sigue diciendo las dos cosas, porque el desplazamiento ocurrió DENTRO
+  // del latín y le hará falta en L3— pero el eje binario dice lo que dice
+  // su lectura.
+  //
+  // Y queda el guiño que lo prueba: `fidem servāvī` (2 Timoteo 4) es
+  // literalmente el modismo clásico «mantuve mi palabra», reutilizado.
   {
     id: 'la-11f-03', punto: 'l11-falsos-regalos',
     lema: 'fidēs', claveCorpus: 'fides', frecuencia: 214,
-    sentidoLatino: 'en el latín clásico, la lealtad y la palabra dada («fidem servāre»), y el crédito comercial; en la VULGATA sí es la fe religiosa',
+    sentidoLatino: 'en la Vulgata, la fe religiosa — el sentido que el español conserva. En el latín CLÁSICO era la lealtad y la palabra dada («fidem servāre») y el crédito comercial, y ése hará falta en L3',
     descendiente: 'fe', sentidoDescendiente: 'creencia religiosa',
-    esFalsoRegalo: true, desplazamiento: 'cambio-de-dominio',
-    porQueUnHispanohablante: 'la tarjeta tiene que decir las dos cosas o miente en la mitad del corpus: quien lea a César con «fe» se pierde, y quien lea a Jerónimo con «lealtad» también. El desplazamiento ocurrió DENTRO del latín.',
-    fuente: LS('fides'), corpus: 'todo',
+    esFalsoRegalo: false, fuente: LS('fides'), corpus: 'todo',
   },
 
   // ── TRES TRAMPAS SIN MÁCRÓN, que son las que rompen la correlación ──
@@ -114,6 +129,18 @@ const LOTE_FALSOS_REGALOS_FUENTE: ItemFlashcard[] = [
     esFalsoRegalo: true, desplazamiento: 'estrechamiento',
     porQueUnHispanohablante: 'el español se quedó con el motivo y perdió el pleito, que en latín es el sentido de tribunal: «causam dīcere» no es «decir la causa», es «defender el pleito». Y «honōris causā» pospuesto ya no es un sustantivo.',
     fuente: LS('causa'), corpus: 'todo',
+  },
+  {
+    // Vuelve para equilibrar el mácrón cuando `fidēs` pasó a regalo. Y en
+    // la Vulgata la trampa es aún más nítida que en el clásico: el
+    // padrenuestro dice «dīmitte nōbīs dēbita nostra», que son DEUDAS.
+    id: 'la-11f-13', punto: 'l11-falsos-regalos',
+    lema: 'dēbeō', claveCorpus: 'debeo', frecuencia: 181,
+    sentidoLatino: 'deber DINERO, estar en deuda; la obligación moral es un uso derivado',
+    descendiente: 'deber', sentidoDescendiente: 'tener la obligación de',
+    esFalsoRegalo: true, desplazamiento: 'cambio-de-dominio',
+    porQueUnHispanohablante: 'el español usa «deber» sobre todo para la obligación y el latín para la deuda: «dēbet» a secas se lee «tiene el deber» cuando dice «está endeudado». El hispanohablante no duda porque su palabra funciona.',
+    fuente: LS('debeo'), corpus: 'todo',
   },
   {
     id: 'la-11f-06', punto: 'l11-falsos-regalos',
@@ -162,13 +189,6 @@ const LOTE_FALSOS_REGALOS_FUENTE: ItemFlashcard[] = [
     sentidoLatino: 'el recinto consagrado, el templo',
     descendiente: 'templo', sentidoDescendiente: 'lo mismo',
     esFalsoRegalo: false, fuente: LS('templum'), corpus: 'todo',
-  },
-  {
-    id: 'la-11f-12', punto: 'l11-falsos-regalos',
-    lema: 'locus', claveCorpus: 'locus', frecuencia: 435,
-    sentidoLatino: 'el lugar, el sitio',
-    descendiente: 'lugar', sentidoDescendiente: 'lo mismo',
-    esFalsoRegalo: false, fuente: LS('locus'), corpus: 'todo',
   },
 ];
 
