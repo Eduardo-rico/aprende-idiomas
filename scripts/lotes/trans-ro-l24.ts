@@ -89,19 +89,23 @@
 // casillas concluirá que `Să nu vii!` está mal, que es el asterisco por
 // omisión que persigue el §0.
 //
-// **Ni el SINGULAR de `a fi`.** `Fii cuminte!` → `Nu fi cuminte!` separa
-// foco y núcleo por UNA letra: es el contraste mínimo del §0.8,
-// ortografía disfrazada de morfología, **y ése es el motivo entero**. La
-// v0 daba un segundo motivo y era falso: decía que exigir `nu fi` contra
-// `nu fii` necesitaría cita normativa. **La cita existe** —DOOM3 2021
-// s.v. *fi* da `fii` afirmativo / `nu fi` negativo, y GALR I no lista
-// excepción para `a fi`—, y el número que lo apoyaba estaba inflado: de
-// las 30 apariciones de `nu fii`, **17 son `să nu fii`** (conjuntivo,
-// donde `fii` ES la forma correcta) y sólo ~13 son imperativos desnudos,
-// frente a `nu fi` con 146. Lo que esos 13 sí impiden es llamarlo
-// AGRAMATICAL: es registro literario del XIX (Anton Pann, Caragiale,
-// Ispirescu). `a fi` no es excepción a la regla — `fi` ES su infinitivo
-// corto. El PLURAL de `a fi` sí entra, y es el ítem que más trabaja.
+// **Ni el SINGULAR de `a fi`.** Y el motivo es de una línea: en este lote
+// `fii` aparece SÓLO como fuente —afirmativo, dado, indiscutido— y la
+// respuesta es `fiți`, así que **el singular de `a fi` no hay que
+// producirlo nunca**. La v0 daba otros dos motivos y los dos eran malos,
+// y quedan escritos porque son la clase de error que el §0 persigue:
+// (1) decía que exigir `nu fi` contra `nu fii` necesitaría cita normativa
+// que el lote no tiene — **la cita existe**: GALR I, *Verbul ·
+// Imperativul*, da el negativo de 2.ª sg = infinitivo corto sin excepción
+// listada, y el infinitivo corto de `a fi` es `fi`; (2) apoyaba eso en
+// «`nu fii` sale 30 veces», y de las 30 **17 son `să nu fii`**
+// (conjuntivo, donde `fii` ES la forma correcta), ~13 son imperativos de
+// Anton Pann y una es habla no nativa que el propio Caragiale marca —
+// mientras `nu fi` da 146 con decenas de imperativos limpios en el mismo
+// corpus. **El número con el que se justificó la exclusión decía lo
+// contrario de lo que se le hizo decir**: es el §0.7 al revés, no fiarse
+// de un positivo sin haber visto qué cazó. Lo que esos ~13 sí impiden es
+// llamar `nu fii` AGRAMATICAL: es variante popular decimonónica.
 //
 // **Ni un par que se distinga sólo por el diacrítico.** `Lasă ușa!` →
 // `Nu lăsa ușa!` estaba en el borrador y se cayó al medirlo: `lasă` y
@@ -126,13 +130,28 @@ const NEG = 'r5-imperativo-negativo';
  *     s.v. *cumva*, valor prohibitivo). La tarjeta lo habría suspendido.
  *   · La v1 añadía «exactamente una palabra más», que sí lo cierra pero
  *     obliga al alumno a contar y no dice qué hacer con el orden.
- *   · «La MISMA frase con `nu` delante y el verbo en la forma que toque,
- *     sin añadir ni quitar ninguna otra palabra» cierra de una vez las
- *     seis salidas correctas que la tarjeta suspendería: `Să nu vii
- *     mâine!`, `Nu cumva să vii mâine!`, `Nu mai veni mâine!`, `Nu veni
- *     tu mâine!`, `Mâine nu veni!` y el objeto adelantado —que está
- *     ATESTADO y es justo como la lengua real dice el ítem del dinero:
- *     «Bani nu lua cu tine, nici merinde» (Creangă)—.
+ *   · La v2 decía «la MISMA frase con `nu` delante… sin añadir ni quitar
+ *     ninguna otra palabra» y **seguía sin cerrar dos**, porque el
+ *     recuento no dice nada del ORDEN ni del clítico: `Nu o citi!` y
+ *     `Nu îi luați!` son rumano correcto con el mismo verbo y una
+ *     palabra más —es lo que un rumano diría de hecho—, y `Mâine nu
+ *     veni!` y `Fără mine nu începe!` también, con el complemento
+ *     antepuesto, que está **ATESTADO** y es justo como la lengua real
+ *     dice el ítem del dinero: «Bani nu lua cu tine, nici merinde»,
+ *     «Arme nu lua din cele sclipicioase» (Creangă, Ispirescu).
+ *   · **«Las mismas palabras, en el mismo orden, sin añadir ni quitar
+ *     ninguna otra»** cierra las seis de una vez —`Să nu vii mâine!`,
+ *     `Nu cumva să vii mâine!`, `Nu mai veni mâine!`, `Nu veni tu
+ *     mâine!`, `Mâine nu veni!` y `Nu o citi!`— e implica el «+1» sin
+ *     enunciarlo, así que el alumno no tiene que contar y desaparece la
+ *     duda de si `nu-i` cuenta como una palabra o como dos.
+ *   · **«tuteándolo»** en la del singular cierra la última, y es la que
+ *     más daño haría: `Nu veniți mâine!` es rumano correcto dirigido a
+ *     UNA persona de usted, con el mismo verbo, el mismo orden y una
+ *     palabra más — y coincide letra por letra con la clave de la
+ *     casilla plural, o sea que le colapsaría al alumno el contraste que
+ *     el lote entero existe para enseñar. Un hispanoamericano que tutea
+ *     poco habría llegado ahí solo.
  *
  *  **Y una cláusula que se CAYÓ, porque era ambigua justo al revés de lo
  *  que pretendía.** «No pongas pronombre» quería cerrar `Nu veni tu!`;
@@ -140,8 +159,8 @@ const NEG = 'r5-imperativo-negativo';
  *  (le/lo/la), así que leía «no escribas `Nu-i lua!`» — le prohibía la
  *  respuesta natural por una razón que no es la del punto. La forma de la
  *  frase entera cierra las dos sin nombrar ninguna categoría. */
-const PROHIBE_SG = 'Dile a tu amigo que NO haga eso: escribe la MISMA frase con «nu» delante y el verbo en la forma que toque. No añadas ni quites ninguna otra palabra.';
-const PROHIBE_PL = 'Diles a tus dos amigos que NO hagan eso: escribe la MISMA frase con «nu» delante y el verbo en la forma que toque. No añadas ni quites ninguna otra palabra.';
+const PROHIBE_SG = 'Dile a tu amigo, tuteándolo, que NO haga eso: escribe la misma frase con «nu» delante y el verbo en la forma que toque — las mismas palabras, en el mismo orden, sin añadir ni quitar ninguna otra.';
+const PROHIBE_PL = 'Diles a tus dos amigos que NO hagan eso: escribe la misma frase con «nu» delante y el verbo en la forma que toque — las mismas palabras, en el mismo orden, sin añadir ni quitar ninguna otra.';
 
 const lema = (inf: string): LemaVerbal => {
   const v = VERBOS_A1.find((l) => l.inf === inf);
@@ -227,19 +246,46 @@ export const ITEMS: ItemTransRo[] = [
   // del punto declara. La fuente va en SINGULAR —el cruce de número— o
   // el ítem se contestaría copiando.
   //
-  // EL DE `a fi` ES EL QUE MÁS TRABAJA, y no por el alumno sino por la
-  // regla: es el ÚNICO verbo del lexicón donde el afirmativo plural
-  // (`fiți`) no es el presente (`sunteți`), o sea el único que separa la
-  // formulación verdadera de la falsa que se oye más. Un alumno que haya
-  // aprendido «plural negativo = presente de 2.ª pl» escribe aquí
-  // `*Nu sunteți aici!` y en ningún otro ítem del lote.
+  // EL DE `a fi` ES EL QUE MÁS TRABAJA, Y PROTEGE AL AUTOR, NO AL ALUMNO.
+  // Es el ÚNICO verbo del rumano —no sólo del lexicón A1— donde el
+  // imperativo afirmativo de 2.ª pl (`fiți`) no coincide con el presente
+  // de 2.ª pl (`sunteți`); GALR I *Imperativul* da la homonimia con el
+  // presente y `a fi` es su excepción única, y el lingüista comprobó los
+  // candidatos (`a avea`, `a ști`, `a da`, `a sta`, `a lua`, `a vrea`:
+  // todos coinciden). O sea que es el único ítem que separa la
+  // formulación verdadera —«plural negativo = AFIRMATIVO plural»— de la
+  // falsa que se oye más, «= presente de 2.ª pl».
+  //
+  // **Y la corrección que hay que no perder:** este ítem NO caza un error
+  // del alumno. Quien produce `sunteți` es alguien a quien le enseñaron
+  // la regla mal escrita, no un hispanohablante — el español va por el
+  // subjuntivo, y el conjuntivo rumano de `a fi` 2.ª pl es `să fiți`, así
+  // que la ruta del alumno ACIERTA aquí. Su valor es el SEGUNDO motivo
+  // del §0.6: impide que el autor publique la regla falsa con siete
+  // ítems que la sostienen. Es el mejor ítem del lote por esa razón y no
+  // por la otra. Y `Nu sunteți acasă!` no lleva asterisco: es una
+  // declarativa impecable («no estáis en casa»), sólo que no es la
+  // transformación pedida.
+  //
+  // **LA ASIMETRÍA DE `a fi`, escrita para que el próximo no la pise:**
+  // el imperativo afirmativo y el negativo de `a fi` tienen complementos
+  // casi DISJUNTOS. El afirmativo va con directivos (`fii acasă`, `fii
+  // gata`, `fii atent`); el negativo, en todo el corpus, sólo con
+  // adjetivos evaluativos (`nu fi prost`, `nu fi trist`). Y los
+  // evaluativos CONCUERDAN en número, así que bajo el cruce obligarían a
+  // cambiar dos cosas (`Fii cuminte!` → `Nu fiți cuminți!`) e importarían
+  // la concordancia adjetival, que es de otro punto. Por eso el
+  // complemento es un adverbio invariable, y por eso el ítem queda
+  // marcado elijas lo que elijas: **no hay complemento que salve las dos
+  // polaridades.** `acasă` en vez de `aici` porque «estate en casa a las
+  // nueve» es la orden canónica y su prohibición es plausible.
   //
   // Y el aviso que el gate imprime y no tumba: `fii` → `fiți` es el único
   // contraste de UNA letra del lote (1 de 8). Aquí la letra no es
   // ortografía disfrazada de morfología —es al revés: la `ț` ES el
   // morfema del plural entero—, y el ítem exige además saber que la
   // casilla del plural existe. Queda contado por si alguien añade más.
-  item('a fi', 'pl', 'aici la ora nouă', { sobreaplicacion: true }),
+  item('a fi', 'pl', 'acasă la ora nouă', { sobreaplicacion: true }),
   item('a aștepta', 'pl', 'afară', { sobreaplicacion: true }),
   item('a lua', 'pl', 'banii', { sobreaplicacion: true }),
   item('a merge', 'pl', 'pe jos', { sobreaplicacion: true }),
@@ -380,8 +426,8 @@ export const OPCIONES: Opciones = {
   estrategias: [RUTA_DEL_INFINITIVO, RUTA_DEL_SUBJUNTIVO, ANTEPONER_NU],
   juicios: {
     copia: 'UNO de ocho se contesta copiando el foco, y es la lengua y no un descuido: en `Începe fără mine!` el imperativo afirmativo de la 3.ª conjugación YA ES el infinitivo corto, así que la regla se aplica entera y no cambia nada. Sin ese ítem el lote enseñaría «al negar, la forma siempre cambia», que en rumano es falso y lo desmienten `spune`, `scrie`, `pune`, `zice`, `merge`. Y no puede haber más de uno: los otros tres singulares tienen que separar el afirmativo del infinitivo para examinar algo, y los cuatro plurales llevan la fuente en SINGULAR justo para que copiar no acierte — sin ese cruce de número el plural entero se contestaría copiando, porque el negativo plural ES el afirmativo plural, y ése era el defecto de la v0 de este lote, que imprimía 4 de 9. Medido ejecutando: copiar el foco 1/8, copiar la frase entera 0/8, ponerle «nu» delante a la fuente 1/8, la edición modal del lote 1/8.',
-    frontera: 'Los CUATRO PLURALES son los ítems de sobreaplicación. La regla «imperativo negativo = nu + infinitivo corto» tiene su contexto negativo exactamente en la 2.ª plural, donde la forma es la del afirmativo: un alumno que aprenda la mitad singular escribe *Nu veni mâine! a dos personas, que es el error que la propia descripción del punto declara. Y uno de los cuatro, el de `a fi`, es la frontera DENTRO de la frontera: es el único verbo del lexicón donde el afirmativo plural (fiți) no coincide con el presente de 2.ª pl (sunteți), medido sobre los 39, o sea el único ítem que separa la formulación verdadera de la falsa «plural negativo = presente de 2.ª pl». Un alumno que haya aprendido la falsa escribe *Nu sunteți aici la ora nouă! aquí y acierta en todo lo demás.',
-    varianza: 'La pieza «+nu» es INVARIANTE en los ocho, y es invariancia de la LENGUA y no del diseño: el rumano no tiene forma prohibitiva de 2.ª persona que omita `nu`, igual que en `r3-negacion-antepuesta`, el caso que la pasada de varianza declaró legítimo por esta misma razón. Lo que varía en su lugar, y ES el punto, es la CASILLA de la que sale la forma verbal: infinitivo corto en los cuatro del singular y afirmativo plural en los cuatro del plural. Y lo que hace que la varianza sea real y no decorativa es que el alumno tiene UNA ruta de transferencia para cada casilla y ninguna para las dos: la ruta del infinitivo acierta 4/8 y la del subjuntivo acierta 4/8, que en una elección binaria es exactamente el azar. Con el reparto cargado a un lado, una de las dos pasaría del tope y el lote estaría certificando transferencia; con el reparto equilibrado, lo único que separa 8 de 4 es haber aprendido que la casilla depende del número. Ésa es también la razón de que el lote se quede en ocho. LO QUE ESTE JUICIO NO PUEDE PRESUMIR, y lo dijo el lingüista atacándolo: de lo que varía DENTRO del singular, tres cuartos no son negación sino recuperación del lema (vino→veni es `r3-irregulares-a1` puro) y alternancia radical (mănâncă→mânca es `r2-alternancia-vocalica`), o sea material de otros dos puntos. El punto propio aporta UN bit —de qué casilla sale la forma— y lo repite en los ocho ítems. Se acepta, y no porque la distancia sea una virtud: se acepta porque la fuente da el AFIRMATIVO y no el infinitivo, así que el ítem no se puede contestar sin haber decidido primero la casilla, y porque la confusión de léxico y la de casilla producen respuestas DISTINGUIBLES (*Nu vino mâine! frente a *Nu vii mâine!), o sea que un fallo aquí no es inatribuible — sólo es caro.',
+    frontera: 'Los CUATRO PLURALES son los ítems de sobreaplicación. La regla «imperativo negativo = nu + infinitivo corto» tiene su contexto negativo exactamente en la 2.ª plural, donde la forma es la del afirmativo: un alumno que aprenda la mitad singular escribe *Nu veni mâine! a dos personas, que es el error que la propia descripción del punto declara. Y uno de los cuatro, el de `a fi`, es la frontera DENTRO de la frontera: es el único verbo del lexicón donde el afirmativo plural (fiți) no coincide con el presente de 2.ª pl (sunteți), medido sobre los 39, o sea el único ítem que separa la formulación verdadera de la falsa «plural negativo = presente de 2.ª pl». Y su valor NO es cazar un error del alumno: el hispanohablante va por el subjuntivo, el conjuntivo rumano de a fi 2.ª pl es `să fiți`, y su ruta ACIERTA aquí. Quien produciría `sunteți` es alguien a quien le enseñaron la regla mal escrita, o sea un MATERIAL y no un alumno. Este ítem cumple el SEGUNDO motivo del §0.6, el que protege al autor: sin él se puede publicar la formulación falsa con siete ítems que la sostienen, porque en los otros 38 verbos del lexicón las dos coinciden. Y `Nu sunteți acasă la ora nouă!` no lleva asterisco —es una declarativa impecable, sólo que no es la transformación pedida—: marcarla mala sería el §0 incumplido.',
+    varianza: 'La pieza «+nu» es INVARIANTE en los ocho, y es invariancia de la LENGUA y no del diseño: el rumano no tiene forma prohibitiva de 2.ª persona que omita `nu`, igual que en `r3-negacion-antepuesta`, el caso que la pasada de varianza declaró legítimo por esta misma razón. Lo que varía en su lugar, y ES el punto, es la CASILLA de la que sale la forma verbal: infinitivo corto en los cuatro del singular y afirmativo plural en los cuatro del plural. Y lo que hace que la varianza sea real y no decorativa es que el alumno tiene UNA ruta de transferencia para cada casilla y ninguna para las dos: la ruta del infinitivo acierta 4/8 y la del subjuntivo acierta 4/8, que en una elección binaria es exactamente el azar. Con el reparto cargado a un lado, una de las dos pasaría del tope y el lote estaría certificando transferencia; con el reparto equilibrado, lo único que separa 8 de 4 es haber aprendido que la casilla depende del número. Ésa es también la razón de que el lote se quede en ocho. LO QUE ESTE JUICIO NO PUEDE PRESUMIR, y lo dijo el lingüista atacándolo: de lo que varía DENTRO del singular, tres cuartos no son negación sino recuperación del lema (vino→veni es `r3-irregulares-a1` puro) y alternancia radical (mănâncă→mânca es `r2-alternancia-vocalica`), o sea material de otros dos puntos. El punto propio aporta UN bit —de qué casilla sale la forma— y lo repite en los ocho ítems. Se acepta, y no porque la distancia sea una virtud: se acepta porque la fuente da el AFIRMATIVO y no el infinitivo, así que el ítem no se puede contestar sin haber decidido primero la casilla, y porque la confusión de léxico y la de casilla producen respuestas DISTINGUIBLES (*Nu vino mâine! frente a *Nu vii mâine!), o sea que un fallo aquí no es inatribuible — sólo es caro. Y EL CRUCE DE NÚMERO EXTIENDE ESE PRECIO AL PLURAL, que antes no lo tenía: con la fuente en singular, `Așteaptă afară!` → `Nu așteptați afară!` exige deshacer la alternancia ea→e ADEMÁS de poner -ți, y `Ia banii!` → `Nu luați banii!` exige recuperar el lema `a lua` desde `ia`. Siete de los ocho ítems (todos menos `începe`) llevan encima una recuperación de forma que pertenece a otros dos puntos, y NINGÚN ítem del lote las separa. El cruce sigue estando bien decidido —con fuente plural se copia, y el cruce inverso da el infinitivo con unas tijeras en 34 de 39 verbos— pero el precio es real y va escrito aquí en vez de descubrirlo el lote 25.',
   },
 };
 
