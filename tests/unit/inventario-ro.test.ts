@@ -227,7 +227,7 @@ describe('pisoCero: el piso declarado en cero', () => {
   //     por dictamen de lengua, sino porque el material era de otro punto.
   it('el piso reducido está CONTADO y nombrado, no es cansancio', () => {
     const red = PUNTOS_RO.filter((p) => p.pisoDeclarado);
-    expect(red.map((p) => `${p.id}:${p.pisoDeclarado!.piso}`)).toEqual(['r7-disparadores-sa:2', 'r7-anti-progresivo:6', 'r7-supin:5']);
+    expect(red.map((p) => `${p.id}:${p.pisoDeclarado!.piso}`)).toEqual(['r4-cel-proforma:2', 'r7-disparadores-sa:2', 'r7-anti-progresivo:6', 'r7-supin:5']);
     for (const p of red) {
       // El motivo tiene que decir el NÚMERO y de dónde sale, no «da para pocos».
       expect(p.pisoDeclarado!.motivo.length, p.id).toBeGreaterThan(120);
