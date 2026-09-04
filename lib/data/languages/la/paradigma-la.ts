@@ -165,13 +165,55 @@ export function conjugacionDe(e: EntradaVerbal): Conjugacion {
 const temaVerbal = (e: EntradaVerbal) =>
   e.infinitivo.normalize('NFC').replace(/(āre|ēre|īre|ere)$/, '');
 
-export function conjugar(e: EntradaVerbal, p: Persona): string {
+// ── IMPERFECTO Y FUTURO ───────────────────────────────────────────────
+//
+// El imperfecto tiene UN infijo para las cinco clases (`-bā-` en la 1.ª y
+// la 2.ª, `-ēbā-` en las otras): regla única, valor transferible.
+//
+// El futuro tiene DOS, y ahí está el punto `l5-futuro-dos-formas`:
+// `-bō/-bi-` en la 1.ª y la 2.ª contra `-am/-ē-` en la 3.ª y la 4.ª. Dos
+// reglas presentadas como una es como se fabrica un error sistemático: el
+// alumno que aprende `amābit` produce *`dūcēbit` por `dūcet`.
+//
+// Y la homonimia declarada, que es de LECTURA y no de producción: la 1.ª
+// persona del futuro de la 3.ª y la 4.ª —`dūcam`, `audiam`— es idéntica al
+// presente de subjuntivo. Sólo el contexto las separa.
+const IMPERFECTO: Record<Conjugacion, string[]> = {
+  1: ['ābam', 'ābās', 'ābat', 'ābāmus', 'ābātis', 'ābant'],
+  2: ['ēbam', 'ēbās', 'ēbat', 'ēbāmus', 'ēbātis', 'ēbant'],
+  3: ['ēbam', 'ēbās', 'ēbat', 'ēbāmus', 'ēbātis', 'ēbant'],
+  4: ['iēbam', 'iēbās', 'iēbat', 'iēbāmus', 'iēbātis', 'iēbant'],
+};
+const FUTURO: Record<Conjugacion, string[]> = {
+  1: ['ābō', 'ābis', 'ābit', 'ābimus', 'ābitis', 'ābunt'],
+  2: ['ēbō', 'ēbis', 'ēbit', 'ēbimus', 'ēbitis', 'ēbunt'],
+  3: ['am', 'ēs', 'et', 'ēmus', 'ētis', 'ent'],
+  4: ['iam', 'iēs', 'iet', 'iēmus', 'iētis', 'ient'],
+};
+
+export type Tiempo = 'presente' | 'imperfecto' | 'futuro';
+const TABLA: Record<Tiempo, Record<Conjugacion, string[]>> = { presente: V, imperfecto: IMPERFECTO, futuro: FUTURO };
+
+export function conjugar(e: EntradaVerbal, p: Persona, tiempo: Tiempo = 'presente'): string {
   const c = conjugacionDe(e);
-  return temaVerbal(e) + V[c]![PERSONAS.indexOf(p)]!;
+  return temaVerbal(e) + TABLA[tiempo][c]![PERSONAS.indexOf(p)]!;
 }
 
-export function paradigmaVerbal(e: EntradaVerbal): Record<Persona, string> {
-  return Object.fromEntries(PERSONAS.map((p) => [p, conjugar(e, p)])) as Record<Persona, string>;
+/** Qué marca de futuro le toca. Es el eje binario del punto. */
+export function marcaDeFuturo(e: EntradaVerbal): 'bi' | 'e' {
+  return conjugacionDe(e) <= 2 ? 'bi' : 'e';
+}
+
+export function paradigmaVerbal(e: EntradaVerbal, tiempo: Tiempo = 'presente'): Record<Persona, string> {
+  return Object.fromEntries(PERSONAS.map((p) => [p, conjugar(e, p, tiempo)])) as Record<Persona, string>;
+}
+
+/** Los tres tiempos que L1 declara, en una sola llamada. */
+export function infectum(e: EntradaVerbal): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const t of ['presente', 'imperfecto', 'futuro'] as Tiempo[])
+    for (const p of PERSONAS) out[`${t}.${p}`] = conjugar(e, p, t);
+  return out;
 }
 
 // ── ADJETIVO DE LA PRIMERA CLASE (bonus / bona / bonum) ───────────────
@@ -207,4 +249,30 @@ export function declinarAdjetivo(a: EntradaAdjetivo, genero: 'm' | 'f' | 'n', ca
  *  lo pone el SUSTANTIVO, no la desinencia — que es el punto entero. */
 export function concuerda(a: EntradaAdjetivo, n: EntradaNominal, caso: Caso, num: Numero): string {
   return declinarAdjetivo(a, n.genero, caso, num);
+}
+
+// ── TODO LO QUE ESTA MÁQUINA PRODUCE, EN UN SOLO SITIO ────────────────
+//
+// Existe porque el hueco se abrió TRES veces con la misma forma: se añade
+// algo a la máquina —los adjetivos, luego el imperfecto y el futuro— y el
+// comprobador de cantidad y el congelador de atestación se quedan atrás,
+// **en verde**, porque nadie los tocó. Cada consumidor tenía su propia
+// lista de qué enumerar, y una lista copiada se desincroniza en la copia
+// que nadie actualizó.
+//
+// Quien quiera «todas las formas» llama aquí. Añadir un tiempo o una
+// clase se hace en un sitio y llega a todos.
+export function todasLasFormas(
+  nombres: EntradaNominal[], verbos: EntradaVerbal[], adjetivos: EntradaAdjetivo[],
+): { clave: string; forma: string }[] {
+  const out: { clave: string; forma: string }[] = [];
+  for (const e of nombres)
+    for (const [c, f] of Object.entries(paradigmaNominal(e))) out.push({ clave: `${e.lema}.${c}`, forma: f });
+  for (const e of verbos)
+    for (const [c, f] of Object.entries(infectum(e))) out.push({ clave: `${e.lema}.${c}`, forma: f });
+  for (const a of adjetivos)
+    for (const g of ['m', 'f', 'n'] as const)
+      for (const num of ['sg', 'pl'] as Numero[])
+        for (const c of ORDEN) out.push({ clave: `${a.lema}.${g}.${c}.${num}`, forma: declinarAdjetivo(a, g, c, num) });
+  return out;
 }

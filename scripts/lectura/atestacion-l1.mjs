@@ -9,8 +9,8 @@
 //
 //   npx tsx scripts/lectura/atestacion-l1.mjs
 import fs from 'fs';
-import { paradigmaNominal, paradigmaVerbal } from '../../lib/data/languages/la/paradigma-la.ts';
-import { NOMBRES_L1, VERBOS_L1 } from '../../lib/data/languages/la/lexicon-l1.ts';
+import { todasLasFormas } from '../../lib/data/languages/la/paradigma-la.ts';
+import { NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1 } from '../../lib/data/languages/la/lexicon-l1.ts';
 import { sinMacron } from '../../lib/data/languages/la/cantidad.ts';
 
 const D = 'scripts/.cache/treebanks';
@@ -31,12 +31,12 @@ for (const f of fs.readdirSync(D).filter((x) => x.startsWith('la_') && x.endsWit
 
 const norm = (s) => sinMacron(s).replace(/j/g, 'i').replace(/v/g, 'u');
 const out = { tokens, generado: new Date().toISOString().slice(0, 10), lemas: {} };
-for (const [lema, formas] of [
-  ...NOMBRES_L1.map((e) => [e.lema, paradigmaNominal(e)]),
-  ...VERBOS_L1.map((e) => [e.lema, paradigmaVerbal(e)]),
-]) {
-  out.lemas[lema] = Object.fromEntries(
-    Object.entries(formas).map(([celda, f]) => [celda, { forma: f, n: cuenta.get(norm(f)) ?? 0 }]));
+// UNA sola fuente de «todo lo que la máquina produce»: el hueco se abrió
+// tres veces por tener cada consumidor su propia lista.
+for (const { clave, forma } of todasLasFormas(NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1)) {
+  const i = clave.indexOf('.');
+  const lema = clave.slice(0, i), celda = clave.slice(i + 1);
+  (out.lemas[lema] ??= {})[celda] = { forma, n: cuenta.get(norm(forma)) ?? 0 };
 }
 fs.writeFileSync('lib/data/languages/la/atestacion-l1.json', JSON.stringify(out, null, 1) + '\n');
 

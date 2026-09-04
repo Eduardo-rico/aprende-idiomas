@@ -76,7 +76,7 @@ export const REFLEJOS: [string, string, 'larga' | 'breve', string][] = [
   ['bonus', 'bueno', 'breve', 'sólo ŏ diptonga en ue'],
 ];
 
-import { paradigmaNominal, paradigmaVerbal, declinar, conjugar, declinarAdjetivo, type Caso, type Numero } from './paradigma-la';
+import { declinar, conjugar, todasLasFormas } from './paradigma-la';
 import { NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1 } from './lexicon-l1';
 
 const VOCAL_LARGA = /[āēīōūĀĒĪŌŪ]/;
@@ -99,15 +99,7 @@ export function formasValidas(): Map<string, Set<string>> {
     if (!m.has(k)) m.set(k, new Set());
     m.get(k)!.add(f.normalize('NFC').toLowerCase());
   };
-  for (const e of NOMBRES_L1) for (const f of Object.values(paradigmaNominal(e))) mete(f);
-  for (const e of VERBOS_L1) for (const f of Object.values(paradigmaVerbal(e))) mete(f);
-  // Los adjetivos, que se me olvidaron al añadirlos a la máquina: el gate
-  // marcó `bonus` como forma desconocida en el primer lote que los usó.
-  const CASOS: Caso[] = ['nom', 'ac', 'gen', 'dat', 'abl', 'voc'];
-  for (const a of ADJETIVOS_L1)
-    for (const g of ['m', 'f', 'n'] as const)
-      for (const num of ['sg', 'pl'] as Numero[])
-        for (const c of CASOS) mete(declinarAdjetivo(a, g, c, num));
+  for (const { forma } of todasLasFormas(NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1)) mete(forma);
   CACHE = m;
   return m;
 }

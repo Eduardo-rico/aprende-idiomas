@@ -8,8 +8,8 @@
 // auditado por reflejos romances) y la atestación (contra 227.301 tokens
 // de treebank, congelados en un JSON porque el corpus está gitignorado).
 import { describe, it, expect } from 'vitest';
-import { paradigmaNominal, paradigmaVerbal, declinar, conjugar } from '../../lib/data/languages/la/paradigma-la';
-import { NOMBRES_L1, VERBOS_L1 } from '../../lib/data/languages/la/lexicon-l1';
+import { paradigmaNominal, paradigmaVerbal, declinar, conjugar, todasLasFormas } from '../../lib/data/languages/la/paradigma-la';
+import { NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1 } from '../../lib/data/languages/la/lexicon-l1';
 import { revisarCantidad, auditarPorReflejos, revisarCoherenciaLexico, noContrastables } from '../../lib/data/languages/la/cantidad';
 import atestacion from '../../lib/data/languages/la/atestacion-l1.json';
 
@@ -134,15 +134,32 @@ describe('el verbo, y la trampa de la vocal temática', () => {
   });
 });
 
-describe('los tres caminos sobre las 384 formas', () => {
-  const todas = [
-    ...NOMBRES_L1.flatMap((e) => Object.values(paradigmaNominal(e))),
-    ...VERBOS_L1.flatMap((e) => Object.values(paradigmaVerbal(e))),
-  ];
+describe('los tres caminos sobre TODO lo que la máquina produce', () => {
+  // `todasLasFormas` es la única fuente. El hueco se abrió TRES veces por
+  // tener cada consumidor su propia lista: se añadieron los adjetivos y
+  // luego el imperfecto y el futuro, y el comprobador de cantidad y el
+  // congelador de atestación se quedaron atrás EN VERDE, porque nadie los
+  // tocó. Este test es lo que impide la cuarta.
+  const todas = todasLasFormas(NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1).map((x) => x.forma);
 
-  it('la máquina genera 492 formas y ninguna falla la cantidad', () => {
-    expect(todas).toHaveLength(492);
+  it('ninguna forma que la máquina produce falla la cantidad', () => {
+    expect(todas.length).toBeGreaterThan(700);
     for (const f of todas) expect(revisarCantidad(f), f).toEqual([]);
+  });
+
+  it('y el comprobador NO se ha aflojado hasta aceptarlo todo', () => {
+    // La otra mitad, que hay que mirar siempre que un gate se ensancha. Y
+    // con las dos clases separadas, que no son lo mismo: una forma con el
+    // mácrón mal EXISTE y está mal marcada; una que la máquina no produce
+    // sencillamente no existe. `dūcēbit` —lo que produce el alumno que
+    // sobreaplica `-bi-`— es del segundo tipo, y mi primera aserción lo
+    // pedía del primero.
+    for (const mal_marcada of ['amāt', 'amicus', 'āmīcus', 'Filium']) {
+      expect(revisarCantidad(mal_marcada).map((x) => x.clase), mal_marcada).toContain('cantidad-erronea');
+    }
+    for (const inexistente of ['dūcēbit', 'audiēbit', 'magisterum']) {
+      expect(revisarCantidad(inexistente).map((x) => x.clase), inexistente).toContain('forma-desconocida');
+    }
   });
 
   it('el lexicón concuerda con los reflejos romances, que no lo consultan', () => {

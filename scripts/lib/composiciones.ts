@@ -26,6 +26,17 @@
 // Una pista sólo cuenta como pista si es VISIBLE. Meter aquí algo que
 // exija saber el punto convierte la herramienta en un oráculo que se da la
 // razón: la lista de pistas es la parte que hay que revisar a mano.
+//
+// Y hay un segundo filtro, que salió con el lote de transformación y va en
+// la dirección contraria: **una pista visible que ES la regla que se
+// enseña no es un atajo, es la respuesta.** En «pon el futuro de este
+// verbo», la vocal temática del presente —`amat` contra `dūcit`— está a la
+// vista Y decide la marca; leerla es exactamente la destreza que el punto
+// examina. Meterla en la lista haría que la herramienta encontrara un
+// «atajo al 100 %» que en realidad es el alumno haciéndolo bien.
+//
+// O sea que la lista de pistas tiene que dejar fuera dos cosas: lo que no
+// se ve, y lo que se ve pero ES el punto.
 
 export interface Estrategia<T> {
   nombre: string;
