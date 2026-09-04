@@ -17,7 +17,7 @@
 //      (rechaza doctorule, atestado en dexonline), y lo que se decide
 //      dejar va en EXENCIONES con su fuente.
 import { SUSTANTIVOS_A1, VERBOS_A1 } from '../lib/data/languages/ro/lexicon-a1';
-import { paradigmaNominal, paradigmaVerbal, invariantesLema } from './lib/paradigma-ro';
+import { paradigmaNominal, paradigmaVerbal, invariantesLema, SIN_IMPERATIV } from './lib/paradigma-ro';
 import { hunspellDisponible, desconocidas } from './lib/hunspell-ro';
 import { EXENCIONES_RO } from './lib/exenciones-hunspell-ro';
 
@@ -51,7 +51,13 @@ for (const l of SUSTANTIVOS_A1) {
 }
 for (const v of VERBOS_A1) {
   for (const [casilla, forma] of Object.entries(paradigmaVerbal(v))) {
-    if (forma === null) { nulos.push(`${v.inf} · ${casilla}`); continue; }
+    // El único null ESPERABLE de un verbo: los cuatro defectivos no
+    // tienen imperativo, ni afirmativo ni negativo, y la función devuelve
+    // null en vez de derivar algo plausible. La exención es estrecha a
+    // propósito —esta casilla Y esos cuatro lemas—: ensancharla un poco
+    // más taparía los nulos que este gate existe para ver.
+    const esperable = casilla.startsWith('imp neg') && (SIN_IMPERATIV as readonly string[]).includes(v.inf);
+    if (forma === null) { if (!esperable) nulos.push(`${v.inf} · ${casilla}`); continue; }
     for (const w of forma.split(' ')) formas.push({ lema: v.inf, casilla, forma: w });
   }
 }

@@ -10,7 +10,7 @@ import {
   articulado, genitivoDativo, vocativo, presente, participio, perfectCompus, imperfecto,
   conjugacionDe, temaInfinitivo, palatalizar, invariantesLema, paradigmaNominal,
   conjunctiv, conjunctiv3, conjunctivSa, conjunctivPerfect, conj3Derivable,
-  gerunziu, gerDerivable,
+  gerunziu, gerDerivable, imperativNegativ, imperativAfirmativ2pl, SIN_IMPERATIV,
   type LemaNominal, type LemaVerbal,
 } from '@/scripts/lib/paradigma-ro';
 import { SUSTANTIVOS_A1, VERBOS_A1 } from '@/lib/data/languages/ro/lexicon-a1';
@@ -350,5 +350,63 @@ describe('gerunziu: las dos mitades de la regla, y lo que no se deriva', () => {
     // pasar formas (acepta `vedă`). Aquí las caza las once; el día que una
     // se cuele, este test lo dirá con el número y no con un fallo mudo.
     expect(desconocidas(malas).length).toBe(11);
+  });
+});
+
+// ══ EL IMPERATIVO NEGATIVO (lote 24) ═════════════════════════════════
+//
+// Se escribe en el paradigma y no a mano en el lote porque el lote 23
+// escribió sus nueve claves a mano, y la segunda vez ya es «la regla
+// copiada que se desincroniza».
+describe('imperativo negativo', () => {
+  const v = (inf: string) => VERBOS_A1.find((x) => x.inf === inf)!;
+
+  it('la 2.ª SG es el infinitivo corto, y NINGUNA supletiva del afirmativo sobrevive', () => {
+    // El afirmativo de estos siete es `fă`, `vino`, `zi`, `ia`, `vezi`,
+    // `fii`, `dă` — y la negación los borra todos. Ésa es la razón de que
+    // la regla no tenga excepción léxica en el singular.
+    expect(imperativNegativ(v('a face'), 'sg')).toBe('face');
+    expect(imperativNegativ(v('a veni'), 'sg')).toBe('veni');
+    expect(imperativNegativ(v('a zice'), 'sg')).toBe('zice');
+    expect(imperativNegativ(v('a lua'), 'sg')).toBe('lua');
+    expect(imperativNegativ(v('a vedea'), 'sg')).toBe('vedea');
+    expect(imperativNegativ(v('a fi'), 'sg')).toBe('fi');
+    expect(imperativNegativ(v('a da'), 'sg')).toBe('da');
+  });
+
+  // LA MITAD DE REGLA QUE SE PIERDE SOLA. La formulación que se oye más
+  // —«el plural negativo es el PRESENTE de 2.ª pl»— es falsa, y la rompe
+  // exactamente un verbo. Si el código dijera «presente», este test sería
+  // el único sitio donde se vería.
+  it('la 2.ª PL es el AFIRMATIVO plural, no el presente — y `a fi` es quien los separa', () => {
+    expect(imperativNegativ(v('a veni'), 'pl')).toBe('veniți');
+    expect(imperativNegativ(v('a pleca'), 'pl')).toBe('plecați');
+    expect(imperativNegativ(v('a fi'), 'pl')).toBe('fiți');
+    // ROJO: la formulación falsa daría esto, que no es rumano.
+    expect(presente(v('a fi'), 'voi')).toBe('sunteți');
+    expect(imperativNegativ(v('a fi'), 'pl')).not.toBe(presente(v('a fi'), 'voi'));
+    // Y en todos los demás las dos coinciden, que es por lo que la
+    // formulación falsa sobrevive: sólo se separa en la frontera.
+    for (const x of VERBOS_A1.filter((y) => y.inf !== 'a fi' && !(SIN_IMPERATIV as readonly string[]).includes(y.inf)))
+      expect(imperativAfirmativ2pl(x), x.inf).toBe(presente(x, 'voi'));
+  });
+
+  it('los DEFECTIVOS devuelven null en vez de una forma plausible', () => {
+    for (const inf of SIN_IMPERATIV) {
+      expect(imperativNegativ(v(inf), 'sg'), inf).toBeNull();
+      expect(imperativNegativ(v(inf), 'pl'), inf).toBeNull();
+    }
+    // Y la guarda es ESTRECHA: cualquier otro verbo sí deriva. Sin esto,
+    // un null nuevo se confundiría con la exención declarada.
+    for (const x of VERBOS_A1.filter((y) => !(SIN_IMPERATIV as readonly string[]).includes(y.inf)))
+      expect(imperativNegativ(x, 'sg'), x.inf).not.toBeNull();
+  });
+
+  it('SEGUNDO CAMINO: Hunspell acepta las 78 formas derivadas', () => {
+    if (!hunspellDisponible()) { expect(true).toBe(true); return; }
+    const formas = VERBOS_A1.flatMap((x) => [imperativNegativ(x, 'sg'), imperativNegativ(x, 'pl')])
+      .filter((f): f is string => f !== null);
+    expect(formas.length).toBe(78);
+    expect(desconocidas(formas)).toEqual([]);
   });
 });

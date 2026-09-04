@@ -321,6 +321,52 @@ export function imperfecto(v: LemaVerbal, p: Persona): string | null {
  *  adversarial, que la encontró presentada como verbo. */
 export const infinitivoCorto = (inf: string) => inf.replace(/^a /, '');
 
+// ══ IMPERATIVO NEGATIVO ══════════════════════════════════════════════
+//
+// Se escribe aquí, y no a mano en el lote, porque el lote 23 escribió sus
+// nueve claves a mano y la segunda vez ya es «la regla copiada que se
+// desincroniza». Aquí SÍ es derivable, y con una regla que —cosa rara en
+// este paradigma— **no tiene excepciones léxicas en el singular**:
+//
+//   · 2.ª SG: `nu` + INFINITIVO CORTO, sin excepción. Ninguna supletiva
+//     del afirmativo sobrevive a la negación: `fă!`→`nu face!`,
+//     `vino!`→`nu veni!`, `zi!`→`nu zice!`, `ia!`→`nu lua!`,
+//     `vezi!`→`nu vedea!`, `fii!`→`nu fi!`, `dă!`→`nu da!`.
+//   · 2.ª PL: idéntica al **AFIRMATIVO** plural. Y ésa es la mitad de
+//     regla que se pierde sola: la formulación que se oye más —«igual que
+//     el PRESENTE de 2.ª pl»— es falsa, y la rompe `a fi`, cuyo
+//     afirmativo es `fiți!` y no `*sunteți!`. El inventario ya lo dice
+//     bien; el código lo dice igual para que no se separen.
+//
+// (GALR I, Academia Română, *Verbul · Imperativul*; GBLR 2010, *Verbul ·
+// imperativul*; formas en DOOM3 2021 y en las tablas de dexonline.ro.)
+
+/** Los DEFECTIVOS: no tienen imperativo, **ni afirmativo ni negativo**.
+ *  La defectividad es del paradigma entero, no sólo de una casilla. Va
+ *  como lista cerrada y no como campo del lexicón porque es una propiedad
+ *  léxica de estos cuatro verbos y no un dato que cada entrada elija. */
+export const SIN_IMPERATIV = ['a putea', 'a vrea', 'a trebui', 'a ști'] as const;
+
+/** La ÚNICA casilla del plural que no es el presente. Se guarda en vez de
+ *  derivarse, que es lo que este paradigma hace siempre que una forma no
+ *  sale de una regla. */
+const IMPERATIV_2PL: Record<string, string> = { 'a fi': 'fiți' };
+
+/** El imperativo AFIRMATIVO de 2.ª plural: el presente de 2.ª pl, salvo
+ *  `a fi`. Devuelve null para los defectivos en vez de derivar algo
+ *  plausible. */
+export function imperativAfirmativ2pl(v: LemaVerbal): string | null {
+  if ((SIN_IMPERATIV as readonly string[]).includes(v.inf)) return null;
+  return IMPERATIV_2PL[v.inf] ?? presente(v, 'voi');
+}
+
+/** El imperativo NEGATIVO, sin el `nu`, que es sintaxis y no morfología.
+ *  `numero` decide la casilla. Null para los defectivos. */
+export function imperativNegativ(v: LemaVerbal, numero: 'sg' | 'pl'): string | null {
+  if ((SIN_IMPERATIV as readonly string[]).includes(v.inf)) return null;
+  return numero === 'sg' ? formaValida(infinitivoCorto(v.inf)) : imperativAfirmativ2pl(v);
+}
+
 const AUX_VIITOR: Record<Persona, string> = { eu: 'voi', tu: 'vei', el: 'va', noi: 'vom', voi: 'veți', ei: 'vor' };
 /** Viitor LITERAR: `voi/vei/va/vom/veți/vor` + infinitivo corto. Es el
  *  registro formal y escrito de los cuatro que el punto contrasta, y el
@@ -606,6 +652,11 @@ export function paradigmaVerbal(v: LemaVerbal): Record<string, string | null> {
   for (const p of PERSONAS) out[`conj ${p}`] = conjunctiv(v, p);
   out['conj perf'] = conjunctivPerfect(v);
   out['gerunziu'] = gerunziu(v);
+  // El imperativo entra en el paradigma para que lo miren los DOS
+  // guardianes que ya existen: los invariantes y Hunspell. Un lote que
+  // escriba sus claves a mano no tiene segundo camino.
+  out['imp neg sg'] = imperativNegativ(v, 'sg');
+  out['imp neg pl'] = imperativNegativ(v, 'pl');
   return out;
 }
 
