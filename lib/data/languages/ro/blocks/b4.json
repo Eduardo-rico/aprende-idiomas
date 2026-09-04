@@ -2306,5 +2306,59 @@
       "alternatives": [],
       "espejoEs": true
     }
+  },
+  {
+    "id": "8e4efa1e",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-cel-proforma"
+    ],
+    "tags": [
+      "ro-trans-l27",
+      "transformacion"
+    ],
+    "contentHash": "8e4efa1e63786db337bbf8184921155d681730a4628e6193e0609c92caf4d361",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación RO-L27 (2026-09-04): la respuesta es rumano correcto y está DETERMINADA por la consigna; las estrategias mecánicas del alumno (copiar el foco, repetir la edición modal del lote, traducir del español) se corrieron sobre el lote y ninguna pasa del 50 %; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). NO certifica voz ni naturalidad de la fuente ante nativo.",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Radu este un prieten bun.",
+      "instructionEs": "Di la misma frase con el adjetivo en superlativo relativo —no «muy bueno», sino «el mejor»— y ponlo DELANTE del sustantivo. No añadas ningún complemento y no cambies nada más.",
+      "answer": "Radu este cel mai bun prieten.",
+      "alternatives": [
+        "Radu e cel mai bun prieten."
+      ],
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "e3d9c906",
+    "blockId": 4,
+    "lessonId": "b4-l1-cazul-si-determinarea",
+    "difficulty": 2,
+    "concepts": [
+      "r4-cel-proforma"
+    ],
+    "tags": [
+      "ro-trans-l27",
+      "transformacion"
+    ],
+    "contentHash": "e3d9c9067702fa0ef47b429cf22b8ff8cc314ad01a41183e2fccf7450824953e",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación RO-L27 (2026-09-04): la respuesta es rumano correcto y está DETERMINADA por la consigna; las estrategias mecánicas del alumno (copiar el foco, repetir la edición modal del lote, traducir del español) se corrieron sobre el lote y ninguna pasa del 50 %; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). NO certifica voz ni naturalidad de la fuente ante nativo.",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Ion este un prieten bun.",
+      "instructionEs": "Di la misma frase con el adjetivo en superlativo relativo —no «muy bueno», sino «el mejor»— y déjalo DETRÁS del sustantivo. No añadas ningún complemento y no cambies nada más.",
+      "answer": "Ion este prietenul cel mai bun.",
+      "alternatives": [
+        "Ion e prietenul cel mai bun."
+      ],
+      "espejoEs": false
+    }
   }
 ]
