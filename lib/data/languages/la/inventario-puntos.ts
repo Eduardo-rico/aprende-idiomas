@@ -176,6 +176,13 @@ export interface PuntoLa {
    *  Se comprueba contra el número escrito en `cita`, que es el segundo
    *  camino: la prosa y el campo se desincronizan sin que falle nada. */
   itemsQuePide?: number;
+  /** Cuando la `cita` lleva un número que NO es una cuenta de ítems —una
+   *  longitud de texto, un tamaño de léxico— dice cuál es. El gate exige
+   *  una de las dos: o el número es ítems y va en `itemsQuePide`, o se
+   *  explica qué es. Medido antes de imponerlo: hay 6 puntos con número en
+   *  la cita, 4 son cuentas y 2 no, así que un gate ciego fallaría en un
+   *  tercio de los casos — y un gate que marca un tercio no lo lee nadie. */
+  numeroDeLaCitaNoEsItems?: string;
   /** Lo que queda por comprobar contra fuente y bloquea la producción. */
   abierto?: string;
 }
@@ -285,6 +292,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no-aplica', herencia: 'falso-regalo', via: 'recepcion' },
     motivo: 'el instinto español acentúa por la grafía y aquí no hay tilde; se deriva por regla desde la cantidad marcada',
     cubre: ['L1/FONOLOGÍA'], cita: 'Aplica la regla de la penúltima sobre 20 palabras macronizadas',
+    itemsQuePide: 20,
     varia: 'la longitud de la palabra y si la penúltima es larga por naturaleza o por posición',
     excepcion: 'los bisílabos son siempre llanos, tenga la penúltima la cantidad que tenga: no hay antepenúltima donde caer' }),
 
@@ -1036,6 +1044,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'si', herencia: 'sin-equivalente', via: 'recepcion' },
     motivo: 'destreza compuesta que no se puede examinar por partes: el hueco va en un esquema de la jerarquía',
     cubre: ['L3/GRAMÁTICA · PERÍODO'], cita: 'Analiza un período ciceroniano de 60-90 palabras identificando el verbo principal',
+    numeroDeLaCitaNoEsItems: '60-90 es la longitud del período en palabras, no cuántos ítems hay',
     varia: 'el número de grados de subordinación y si el verbo principal va al final o intercalado' }),
 
   P({ id: 'l10-conectores', nombre: 'Los conectores pospuestos: autem, enim, vērō, quidem', bloque: 10, peldano: 'L2',
@@ -1063,6 +1072,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'recepcion' },
     motivo: 'léxico puro; la mayoría son transparentes y el SRS los fija rápido',
     cubre: ['L1/LÉXICO'], cita: '800 lemas seleccionados por frecuencia sobre los treebanks',
+    numeroDeLaCitaNoEsItems: '800 es el tamaño del léxico acumulado del nivel, no un número de ítems',
     corpus: 'todo',
     varia: 'la clase de palabra y si es transparente o no' }),
 
@@ -1072,6 +1082,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'falso-regalo', via: 'recepcion' },
     motivo: 'la flashcard enfrenta el sentido latino y el del descendiente español. Y los ejemplos están elegidos para un HISPANOHABLANTE: la trampa «hostis = huésped» es inglesa (host < hospes) y para nosotros «hueste» y «hostil» ya apuntan a enemigo, así que el falso regalo real de esa familia es «hospes», que es huésped y anfitrión a la vez',
     cubre: ['L1/LÉXICO'], cita: 'reconoce los 60 **falsos regalos** del nivel',
+    itemsQuePide: 60,
     corpus: 'todo',
     varia: 'el tipo de desplazamiento (estrechamiento, ampliación, cambio de dominio)' }),
 
@@ -1145,6 +1156,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'sin-equivalente', via: 'produccion' },
     motivo: 'se escande, o sea que se produce un análisis: la respuesta se deriva de la cantidad y de la posición',
     cubre: ['L4/FONOLOGÍA · MÉTRICA'], cita: 'Escande 20 hexámetros marcando cantidades, cesura y elisión',
+    itemsQuePide: 20,
     varia: 'la proporción de dáctilos y espondeos y la posición de la cesura' }),
 
   P({ id: 'l12-elision', nombre: 'Elisión y sinalefa', bloque: 12, peldano: 'L4',
@@ -1170,6 +1182,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'si', herencia: 'sin-equivalente', via: 'recepcion' },
     motivo: 'es el descriptor central del peldaño: reconstruir el orden en prosa es la única prueba de que se ha entendido',
     cubre: ['L4/GRAMÁTICA · HIPÉRBATON'], cita: 'Reconstruye el orden en prosa de 20 versos con hipérbaton',
+    itemsQuePide: 20,
     varia: 'la disposición (envolvente, entrelazada) y el número de distractores que concuerdan por casualidad' }),
 
   P({ id: 'l12-licencias', nombre: 'Las licencias del verso', bloque: 12, peldano: 'L4',

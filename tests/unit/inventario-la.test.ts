@@ -290,8 +290,20 @@ describe('el número de ítems que pide un descriptor', () => {
     for (const p of PUNTOS_LA) {
       const m = p.cita.match(/(\d+)\s+ítems/);
       if (m) expect(p.itemsQuePide, `${p.id}: la cita dice ${m[1]} ítems`).toBe(Number(m[1]));
+      // Y el caso general: cualquier número de dos cifras en la cita tiene
+      // que estar DECIDIDO — o es una cuenta de ítems y va en el campo, o
+      // se dice qué es. Ninguno callado.
+      if (/\b\d{2,}\b/.test(p.cita)) {
+        expect(p.itemsQuePide !== undefined || p.numeroDeLaCitaNoEsItems !== undefined,
+          `${p.id}: la cita lleva un número y nadie dice si son ítems — «${p.cita.slice(0, 70)}»`).toBe(true);
+      }
       if (p.itemsQuePide !== undefined) {
-        expect(m, `${p.id}: declara itemsQuePide y la cita no dice ningún número`).not.toBeNull();
+        // El invariante es que el campo y la prosa digan EL MISMO NÚMERO,
+        // no que lo digan con las mismas palabras: «20 ítems», «20
+        // palabras macronizadas» y «20 hexámetros» son la misma cuenta.
+        // Exigir la fórmula literal marcaba como error una cita correcta.
+        expect(p.cita, `${p.id}: declara itemsQuePide ${p.itemsQuePide} y la cita no lo menciona`)
+          .toMatch(new RegExp(`\\b${p.itemsQuePide}\\b`));
         // Y por encima del piso, que es un mínimo y no un máximo.
         expect(p.itemsQuePide).toBeGreaterThanOrEqual(PISO_LA(p.peldano));
       }
