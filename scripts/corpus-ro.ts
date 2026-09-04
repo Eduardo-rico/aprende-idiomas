@@ -138,4 +138,12 @@ if (/[/\\]corpus-ro\.ts$/.test(process.argv[1] ?? '')) {
     for (const e of r.ejemplos) console.log(`    ${e}`);
   }
   console.log('\nLa PRESENCIA prueba; la AUSENCIA no prohíbe; el corpus tiene fecha (prosa XIX-XX).');
+  // ⚠ LOS DOS INSTRUMENTOS NO CUENTAN LO MISMO, y callarlo ya costó una
+  // atestación falsa. Esta CLI busca el patrón TAL CUAL, sin límite de
+  // palabra; `comprobarEnCorpus()` —el gate de los lotes— lo envuelve en
+  // INI/FIN. Con patrones que acaban en palabra corta la diferencia es
+  // enorme y silenciosa: `cartea aceasta a` da 2 aquí y 0 con límites,
+  // porque las dos son «acuma» y «Agata». Un número correcto sobre una
+  // forma ambigua es un número verdadero que mide otra cosa.
+  console.log('⚠ Esta CLI NO pone límite de palabra: envuelve tú el patrón en INI/FIN, o LEE los aciertos con --ctx. `comprobarEnCorpus()` sí lo pone, así que los dos números pueden no coincidir.');
 }

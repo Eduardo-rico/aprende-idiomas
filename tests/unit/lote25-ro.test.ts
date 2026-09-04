@@ -46,6 +46,14 @@ describe('lote 25 · r4-articulo-posesivo', () => {
     expect(revisar(xs).filter((s) => s.includes('coordinación'))).toHaveLength(1);
   });
 
+  it('ROJO · la familia CUANTIFICADA, que «doi dintre …» contesta sin artículo', () => {
+    // Es el hallazgo que costó dos ítems ya escritos, y va como
+    // invariante y no como nota en un comentario: una norma escrita se
+    // hereda mal.
+    const xs = rehacer((x) => { x[3]!.d.familia = 'cuant'; });
+    expect(revisar(xs).some((s) => s.includes('núcleo cuantificado'))).toBe(true);
+  });
+
   it('ROJO · cuatro ítems de «indefinitivizar»: el lote mediría la operación, no la regla', () => {
     const xs = rehacer((x) => { x[3]!.d.familia = 'indef'; });
     expect(revisar(xs).some((s) => s.startsWith('FAMILIA: 4 ítems'))).toBe(true);
@@ -57,7 +65,7 @@ describe('lote 25 · r4-articulo-posesivo', () => {
   });
 
   it('ROJO · plural indefinido con `niște`: dos salidas correctas para una clave exacta', () => {
-    const xs = rehacer((x) => { x[4]!.r = x[4]!.r.replace('Două', 'Niște'); });
+    const xs = rehacer((x) => { x[4]!.r = `Niște ${x[4]!.r}`; });
     expect(revisar(xs).some((s) => s.includes('«niște»'))).toBe(true);
   });
 

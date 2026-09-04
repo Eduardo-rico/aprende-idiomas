@@ -76,9 +76,29 @@
 //     el rasgo. Es el primo por HOMOGRAFÍA del §4.13bis.
 //   · **Plural indefinido sin numeral.** `Niște caiete ale elevului` y
 //     `Caiete ale elevului` son las dos correctas (GALR I, `niște` como
-//     artículo indefinido de plural): dos salidas para un hueco. Los
-//     plurales de este lote van con numeral, que es unívoco y de paso
-//     examina la configuración cuantificada.
+//     artículo indefinido de plural): dos salidas para un hueco.
+//   · **Y LA CUARTA, QUE COSTÓ DOS ÍTEMS YA ESCRITOS: el núcleo
+//     CUANTIFICADO.** La v1 de este lote tenía dos ítems `Doi prieteni ai
+//     Mariei` / `Două telefoane ale doctorului`, y el segundo ataque los
+//     tumbó los dos con una sola frase: **`Doi DINTRE prietenii Mariei
+//     vin mâine` cumple la consigna letra por letra y NO lleva artículo
+//     posesivo** —el poseído sigue definido y el genitivo sigue
+//     adyacente, así que `ai` está correctamente ausente—. Es rumano
+//     estándar, es la traducción más fiel del original y **es la
+//     respuesta que demuestra que el alumno entendió la regla**. La clave
+//     la suspendía.
+//     No se arregla con la consigna: todo cuantificador tiene partitivo
+//     con `dintre` (GALR I, *Construcţii partitive*; dexonline s.v.
+//     *dintre*) y no hay propiedad verificable que lo excluya sin nombrar
+//     la palabra. Y declararlo como alternativa MATA el ítem, porque la
+//     alternativa no lleva artículo y el ítem dejaría de medir su punto.
+//     **La razón exacta, que es la que impide que el error vuelva:
+//     `dintre` entra porque la FUENTE va en plural definido y regala el
+//     conjunto presupuesto.** Con fuente en singular no tiene por dónde:
+//     `Un câine al bunicului` no compite con `Unul dintre câinii
+//     bunicului` porque ése tendría que inventar un plural que no está en
+//     la frase. Por eso muerde en la familia cuantificada y no en la
+//     indefinida — y por eso la familia entera se retiró y hay gate.
 import {
   verificar, informe, norm, type ItemTransRo, type Opciones, type Estrategia, type Comprobacion,
 } from '../lib/transformacion-ro';
@@ -110,7 +130,7 @@ const gd = (l: string): string => {
  *  pegados. `quita` es la inversa exacta de `indef`, y por eso el ítem de
  *  sobreaplicación no hace falta inventarlo: es la misma frase leída al
  *  revés. */
-type Familia = 'indef' | 'cuant' | 'adj' | 'quita';
+type Familia = 'indef' | 'cuant' | 'adj' | 'dem' | 'quita';
 
 /** Las consignas, UNA POR FAMILIA — no puede haber una sola, porque son
  *  cuatro operaciones distintas.
@@ -140,8 +160,12 @@ type Familia = 'indef' | 'cuant' | 'adj' | 'quita';
  *     «Vuelve **a** decir» disparaba el gate de la consigna. Por eso todas
  *     empiezan por «Di otra vez». No es cosmética — lo cazó el gate. */
 const CONSIGNA_FINAL = 'No toques el verbo ni el final de la frase, y no cambies el orden de lo que ya hay.';
-const CONSIGNAS: Record<Exclude<Familia, 'adj'>, (g: 'm' | 'f') => string> = {
+const CONSIGNAS: Record<Exclude<Familia, 'adj' | 'dem'>, (g: 'm' | 'f') => string> = {
   indef: (g) => `Di otra vez la frase, hablando de ${g === 'f' ? 'una' : 'uno'} cualquiera y no ${g === 'f' ? 'de la' : 'del'} que ya se conocía. ${CONSIGNA_FINAL}`,
+  // La consigna de la familia cuantificada se queda escrita porque el
+  // gate la prohíbe y hay que poder leer QUÉ se prohibió: es la que
+  // `Doi dintre prietenii Mariei` cumple letra por letra sin poner el
+  // artículo.
   cuant: () => `Di otra vez la frase, hablando sólo de dos y no de todos. ${CONSIGNA_FINAL}`,
   quita: (g) => `Di otra vez la frase, hablando ${g === 'f' ? 'de la' : 'del'} que ya se conocía y no de ${g === 'f' ? 'una' : 'uno'} cualquiera. ${CONSIGNA_FINAL}`,
 };
@@ -189,6 +213,12 @@ function partes(d: Decl): { fuente: string; sinArticulo: string; foco: string; n
     case 'cuant':
       return { fuente: pegado, sinArticulo: `${may(NUMERAL[l.genero])} ${base} ${d.posesor} ${d.resto}.`, foco: def, nucleo: art, articulo: art };
     case 'adj':
+    case 'dem':
+      // Las dos meten algo entre el núcleo articulado y el genitivo: un
+      // adjetivo o un demostrativo POSPUESTO. Es el mismo mecanismo —la
+      // adyacencia se rompe— y por eso comparten construcción; van como
+      // familias distintas porque la consigna y la cara de frontera que
+      // enseñan no son la misma.
       return { fuente: pegado, sinArticulo: `${may(def)} ${d.adjetivo} ${d.posesor} ${d.resto}.`, foco: def, nucleo: art, articulo: art };
     case 'quita': {
       // La inversa de `indef`: la fuente lleva el artículo y la respuesta
@@ -209,7 +239,9 @@ function construir(d: Decl): ItemTransRo & { d: Decl; sinArticulo: string; artic
   const p = partes(d);
   const r = d.familia === 'quita' ? p.sinArticulo : conArticulo(p.sinArticulo, d.posesor, p.articulo);
   const l = lema(d.poseido);
-  const consigna = d.familia === 'adj' ? consignaAdj(d.precision!) : CONSIGNAS[d.familia](l.genero === 'f' ? 'f' : 'm');
+  const consigna = d.familia === 'adj' || d.familia === 'dem'
+    ? consignaAdj(d.precision!)
+    : CONSIGNAS[d.familia](l.genero === 'f' ? 'f' : 'm');
   return {
     p: PUNTO, pasada: 1,
     s: p.fuente, instruccion: consigna, r, alt: d.alt,
@@ -223,49 +255,62 @@ function construir(d: Decl): ItemTransRo & { d: Decl; sinArticulo: string; artic
 export const DECL: Decl[] = [
   // ══ TRES DE NÚCLEO INDEFINIDO — el tope está en TRES, y hay gate ═══
   // Con más, el invariante del lote sería «mete un/o» y el alumno sacaría
-  // pleno sin ver ninguna de las otras configuraciones.
+  // pleno sin ver ninguna de las otras configuraciones. Y es la única
+  // familia con fuente en SINGULAR que exige el artículo: por eso aquí
+  // `dintre` no tiene por dónde entrar (tendría que inventar un plural
+  // que no está en la frase), y por eso la cuantificada murió y ésta no.
   {
     poseido: 'carte', numero: 'sg', familia: 'indef', posesor: 'Mariei', resto: 'stă pe masă',
     alt: ['O carte de-a Mariei stă pe masă.'],
     nota: 'la superficie ACIERTA (cartea → a) y el español FALLA («libro» es masculino y empujaría a `al`): mide la forma sólo contra el español',
   },
   {
-    poseido: 'perete', numero: 'sg', familia: 'indef', posesor: gd('casă'), resto: 'are o fereastră',
-    nota: 'EL ÚNICO ÍTEM DEL CURSO DONDE LOS DOS ATAJOS FALLAN A LA VEZ: `peretele` empuja a *ale por la terminación, «pared» empuja a *a por el género español, y la forma es `al`. Es la razón por la que `perete` entró al lexicón',
+    poseido: 'perete', numero: 'sg', familia: 'indef', posesor: gd('casă'), resto: 'este galben',
+    nota: 'EL ÚNICO ÍTEM DEL LOTE QUE MIDE LA MITAD FORMA, y por eso el único pilar de esa mitad: `peretele` empuja a *ale por la terminación, «pared» empuja a *a por el género español, y la forma es `al`. El día que alguien lo retoque o lo sustituya, la mitad forma del punto se queda en CERO sin que nada falle. El predicado es de ESTADO porque `un perete al X` vive con predicados de estado, que es lo que enseña la ocurrencia del corpus («rezemat de un perete al vestibulului»); la v1 decía `are o fereastră` y chirriaba',
   },
   {
     poseido: 'câine', numero: 'sg', familia: 'indef', posesor: gd('bunic'), resto: 'doarme în curte',
     alt: ['Un câine de-al bunicului doarme în curte.'],
-    nota: 'la superficie FALLA (`câinele` empuja a *ale) y el español acierta («perro», masculino): es la mitad del residuo que el género español rescata, y por eso hace falta el de `perete`',
+    nota: 'la superficie FALLA (`câinele` empuja a *ale) y el español acierta («perro», masculino): es la mitad del residuo que el género español rescata, y por eso hace falta el de `perete`. AVISO: la forma que un rumano produciría de verdad es la ALTERNATIVA declarada (`de-al`), no la clave; es el único ítem del lote cuya respuesta canónica no es la más idiomática',
   },
 
-  // ══ DOS DE NÚCLEO CUANTIFICADO ════════════════════════════════════
-  // El numeral hace la respuesta unívoca (el plural escueto y `niște` son
-  // los dos correctos) y de paso examina una configuración que la
-  // descripción vieja del punto ni mencionaba.
-  {
-    poseido: 'prieten', numero: 'pl', familia: 'cuant', posesor: 'Mariei', resto: 'vin mâine',
-    alt: ['Doi prieteni de-ai Mariei vin mâine.'],
-    nota: 'la casilla `ai`, con los dos atajos acertando: está por la CONFIGURACIÓN (cuantificado), no por la forma',
-  },
-  {
-    poseido: 'telefon', numero: 'pl', familia: 'cuant', posesor: gd('doctor'), resto: 'sună mereu',
-    nota: 'NEUTRO PLURAL, que es donde el español se equivoca solo: «teléfonos» es masculino y empuja a *ai, y la forma es `ale` porque el neutro rumano va con el femenino en plural',
-  },
-
-  // ══ DOS DE ADJETIVO INTERPUESTO, CON EL NÚCLEO DEFINIDO ═══════════
+  // ══ TRES DE ELEMENTO INTERPUESTO, CON EL NÚCLEO DEFINIDO ══════════
   // Los mejores del lote: rompen la frontera falsa «definido ⇒ sin
   // artículo», el estímulo no contiene ninguna copia de la DECISIÓN, y la
-  // omisión es la que el hispanohablante comete de verdad.
+  // omisión es la que el hispanohablante comete de verdad. Y `cel`
+  // interpuesto rompe la adyacencia igual que el adjetivo desnudo, así
+  // que las variantes con `cel` son rumano correcto Y llevan el artículo:
+  // se declaran, y el ítem sigue midiendo su punto en todas.
   {
     poseido: 'frate', numero: 'sg', familia: 'adj', posesor: gd('vecin'), resto: 'lucrează mult',
     adjetivo: 'mai mic', precision: 'se trata del hermano MENOR',
-    nota: 'poseído DEFINIDO y artículo obligatorio: la superficie falla (`fratele` → *ale) y el español acierta',
+    alt: ['Fratele cel mic al vecinului lucrează mult.', 'Fratele cel mai mic al vecinului lucrează mult.'],
+    nota: 'poseído DEFINIDO y artículo obligatorio: la superficie falla (`fratele` → *ale) y el español acierta. Tres salidas correctas y no una: «MENOR» en español es ambiguo entre `mai mic` y `cel mai mic`, y `cel mic` es la tercera — las tres llevan `al`',
   },
   {
     poseido: 'copil', numero: 'pl', familia: 'adj', posesor: gd('profesor'), resto: 'dorm deja',
     adjetivo: 'mici', precision: 'los niños son PEQUEÑOS',
-    nota: 'la misma configuración en plural: `Copiii profesorului` es correcto y `Copiii mici AI profesorului` también, y lo único que cambia es que algo se metió en medio',
+    alt: ['Copiii cei mici ai profesorului dorm deja.'],
+    nota: 'la misma configuración en plural. ES EL ÍTEM MÁS FLOJO DEL LOTE y va escrito: de la mitad forma no mide nada, porque `ai` lo predicen las DOS rutas a la vez (el enclítico `Copiii` → -i, y «los niños» masculino). Sigue midiendo la distribución, que es el punto; si algún día hay que quitar uno, es éste',
+  },
+  {
+    poseido: 'tren', numero: 'pl', familia: 'adj', posesor: gd('oraș'), resto: 'merg încet',
+    adjetivo: 'noi', precision: 'los trenes son NUEVOS',
+    alt: ['Trenurile cele noi ale orașului merg încet.'],
+    nota: 'NEUTRO PLURAL, que es donde el español se equivoca solo: «trenes» es masculino y empuja a *ai, y la forma es `ale` porque el neutro rumano va con el femenino en plural. Sustituye al ítem cuantificado que el segundo ataque tumbó, y conserva su trampa SIN numeral: la fuente es plural DEFINIDA, así que `dintre` no tiene cuantificador del que colgar',
+  },
+
+  // ══ UNO DE DEMOSTRATIVO POSPUESTO ═════════════════════════════════
+  // La cuarta configuración, y la que el diseño original no tenía. El
+  // núcleo va definido y lo que rompe la adyacencia no es un adjetivo
+  // sino un determinante. Atestado en el corpus del proyecto con UNA sola
+  // ocurrencia, y hubo que leerla para saberlo: «părțile astea ale
+  // Sucevei».
+  {
+    poseido: 'mașină', numero: 'pl', familia: 'dem', posesor: 'Mariei', resto: 'stau afară',
+    adjetivo: 'acestea', precision: 'se trata de ESOS coches y no de otros',
+    alt: ['Mașinile astea ale Mariei stau afară.'],
+    nota: 'la cara de frontera que faltaba: el poseído lleva su artículo enclítico y el artículo posesivo hace falta igual, porque entre el núcleo y el genitivo se metió un determinante. Corpus, y con los aciertos LEÍDOS uno a uno porque las cadenas son homógrafas: la única atestación real es «părțile ASTEA ALE Sucevei»; `cartea aceasta a` y `acestea ale` dan cero con límite de palabra y sus supuestos aciertos eran «acuma», «Agata» y «alergaseră». Va en PLURAL y no en singular por aritmética, no por gusto: en singular la estrategia compuesta lo acertaba y subía a 5/9, por encima del tope; en plural el enclítico acaba en -e, la compuesta se va por el español («coches» es masculino) y falla. `Aceste mașini ale Mariei` es rumano correcto y también exige el artículo, pero la consigna dice «justo detrás» y lo excluye',
   },
 
   // ══ DOS DE SOBREAPLICACIÓN — la frontera, y son ESPEJO ════════════
@@ -280,9 +325,9 @@ export const DECL: Decl[] = [
     nota: 'la configuración [N+enclítico]+[Gen] pegados, que es la única sin artículo posesivo',
   },
   {
-    poseido: 'floare', numero: 'sg', familia: 'quita', posesor: gd('fată'), resto: 'miroase frumos',
+    poseido: 'fotografie', numero: 'sg', familia: 'quita', posesor: gd('mamă'), resto: 'stă pe birou',
     espejoEs: true, sobreaplicacion: true,
-    nota: 'la misma frontera en femenino, para que no se aprenda como una propiedad del masculino',
+    nota: 'la misma frontera en femenino, para que no se aprenda como una propiedad del masculino. El lema es de los pocos que sirven: un femenino en -ă tiene el definido HOMÓGRAFO del indefinido en cuanto se le quitan los diacríticos (mașină/mașina), así que el gate del núcleo copiado lo rechazaría; los femeninos en -e y en -ie no',
   },
 ];
 
@@ -348,7 +393,9 @@ const GENERO_ES: Record<string, 'm' | 'f'> = {
   telefon: 'm',    // «teléfono»
   frate: 'm',      // «hermano»
   copil: 'm',      // «niño»
-  floare: 'f',     // «flor»
+  tren: 'm',       // «tren»
+  mașină: 'm',     // «coche»   ← el género discrepa
+  fotografie: 'f', // «foto»
 };
 export const ESPANOL: Estrategia = {
   nombre: 'el género del español, y ponerlo siempre',
@@ -382,6 +429,38 @@ export const CON_EL_POSEEDOR: Estrategia = {
 /** La forma más frecuente del lote, puesta siempre. Es la estrategia
  *  constante, y va escrita porque un lote cargado a una casilla la
  *  regala. */
+/** LA COMPOSICIÓN QUE LA BÚSQUEDA NO PROBÓ, y la encontró el lingüista.
+ *
+ *  «Si la palabra enfocada acaba en -e, usa el género del español; si no,
+ *  “a” + la terminación del enclítico.» Sobre la v1 de este lote acertaba
+ *  **8 de 9**, muy por encima del 6/9 que daba mi barrido — porque la
+ *  pista que la gobierna **no estaba en mi lista**: no es una propiedad
+ *  de la consigna ni del formato, es **la terminación del lema
+ *  enfocado**. Ahora está, y la composición va además declarada para que
+ *  su número se imprima siempre.
+ *
+ *  **Y lo que significa, que no es lo que parece:** la estrategia
+ *  PRESUPONE que el alumno ya decidió poner el artículo, y esa decisión
+ *  es el contenido del punto y no es gratis (traducir del español acierta
+ *  2/9, y son justo los dos ítems donde no hay que poner nada). O sea que
+ *  el 8/9 no es la nota de quien llega sin saber: es la de quien aprendió
+ *  la DISTRIBUCIÓN y atajó la FORMA. Es la misma conclusión que el
+ *  dictamen previo, por otro camino: **la capacidad discriminante de este
+ *  lote sobre la forma es UN ítem, el de `perete`.** De ahí la regla que
+ *  hereda el siguiente: **no añadir NUNCA a este punto un ítem que sólo
+ *  pida elegir entre al/a/ai/ale — no mediría nada.** */
+export const COMPUESTA_E: Estrategia = {
+  nombre: 'compuesta: el género del español si el lema acaba en -e, y si no la superficie',
+  objetivo: 'respuesta',
+  aplicar(v) {
+    const x = deLaVista(v.s);
+    if (!x) return null;
+    const g = GENERO_ES[x.d.poseido];
+    const f = norm(v.foco).endsWith('e') && g ? articolPosesiv(g, x.d.numero) : superficieDe(v.foco);
+    return conArticulo(x.sinArticulo, x.d.posesor, f);
+  },
+};
+
 export const SIEMPRE_AL: Estrategia = {
   nombre: 'poner siempre «al»',
   objetivo: 'respuesta',
@@ -434,6 +513,12 @@ const pistas = [
   { nombre: 'la consigna habla de dos', vale: (x: (typeof CONSTRUIDOS)[number]) => x.d.familia === 'cuant' },
   { nombre: 'la consigna pide meter una precisión', vale: (x: (typeof CONSTRUIDOS)[number]) => x.d.familia === 'adj' },
   { nombre: 'la consigna dice «el que ya se conocía»', vale: (x: (typeof CONSTRUIDOS)[number]) => x.d.familia === 'quita' },
+  // LA PISTA QUE FALTABA, y con ella el barrido pasó de 6/9 a encontrar
+  // la composición de 7/9. No se me ocurrió porque no es una propiedad de
+  // la consigna ni del formato —que era por donde yo miraba— sino de la
+  // PALABRA: cómo acaba el lema enfocado. La lista de pistas es la parte
+  // que hay que revisar a mano, y ésta la revisó el lingüista.
+  { nombre: 'el lema enfocado acaba en -e', vale: (x: (typeof CONSTRUIDOS)[number]) => norm(x.foco).endsWith('e') },
 ];
 
 /** Se exportan las tres piezas —respuesta correcta, estrategias ciegas y
@@ -488,10 +573,21 @@ export function revisar(xs: readonly Construido[]): string[] {
   // 4 · EL TOPE DE LA FAMILIA `indef`. Sin él, el lote enseñaría una sola
   //     configuración y el alumno sacaría pleno sin ver las otras tres —
   //     el defecto de `r2-numerales-de` calcado.
+  // 4bis · LA FAMILIA CUANTIFICADA NO PUEDE VOLVER. Es un invariante y no
+  //     una nota en un comentario, porque una norma escrita se hereda mal
+  //     y ésta costó dos ítems ya escritos: con la fuente en plural
+  //     definido, `Doi DINTRE prietenii Mariei vin mâine` cumple la
+  //     consigna letra por letra, es rumano estándar y NO lleva artículo
+  //     posesivo — la clave suspendía la respuesta que demuestra que el
+  //     alumno entendió la adyacencia.
+  for (const x of xs)
+    if (x.d.familia === 'cuant')
+      v.push(`${x.d.poseido}: núcleo cuantificado — la fuente en plural definido regala el conjunto presupuesto y «doi dintre …» contesta la consigna SIN artículo posesivo`);
+
   const indef = xs.filter((x) => x.d.familia === 'indef').length;
   if (indef > 3) v.push(`FAMILIA: ${indef} ítems de «indefinitivizar» y el tope es 3 — con más, el invariante del lote es la operación y no la regla`);
   const familias = new Set(xs.map((x) => x.d.familia));
-  if (familias.size < 4) v.push(`FAMILIA: sólo ${familias.size} configuraciones de las 4; la regla es de ADYACENCIA y una sola configuración no la enseña`);
+  if (familias.size < 4) v.push(`FAMILIA: sólo ${familias.size} configuraciones; la regla es de ADYACENCIA y una sola configuración no la enseña`);
 
   // 5 · TODO PLURAL INDEFINIDO VA CON NUMERAL: `niște caiete ale…` y
   //     `caiete ale…` son las dos correctas, o sea dos salidas para una
@@ -524,10 +620,32 @@ export const COMPROBACIONES: Comprobacion[] = [
   { afirmacion: 'núcleo indefinido masculino: «un perete al vestibulului» (Caragiale), que atesta a la vez el lema `perete` como masculino', patron: 'un perete al', espera: 'presente' },
   { afirmacion: 'y con otros núcleos indefinidos masculinos', patron: 'un (prieten|frate|fiu) al', espera: 'presente' },
   { afirmacion: 'núcleo indefinido femenino', patron: '(o carte a|o fată a|o casă a)', espera: 'presente' },
-  // LA CONFIGURACIÓN CUANTIFICADA, que la descripción vieja del punto ni
-  // mencionaba y que es la que hace unívoco el plural.
-  { afirmacion: 'núcleo cuantificado masculino: «doi fii ai», «doi prieteni ai»', patron: 'doi (fii|prieteni) ai', espera: 'presente' },
+  // LA CONFIGURACIÓN CUANTIFICADA, que EXISTE y que este lote NO puede
+  // usar: se comprueba porque la prosa del punto la afirma, y una
+  // afirmación que no se pone delante del corpus es la que se hereda
+  // falsa. Lo que la deja fuera del lote no es la lengua, es que
+  // «doi DINTRE prietenii Mariei» contesta la consigna sin artículo.
+  { afirmacion: 'núcleo cuantificado masculino: «doi fii ai», «doi prieteni ai» — configuración real, inutilizable en este formato', patron: 'doi (fii|prieteni) ai', espera: 'presente' },
   { afirmacion: 'y cuantificado femenino: «trei fete ale»', patron: 'trei fete ale', espera: 'presente' },
+  // LA CONFIGURACIÓN DEL DEMOSTRATIVO POSPUESTO, que es el ítem 7 y la
+  // cara de frontera que el diseño original no tenía.
+  // ⚠ AQUÍ SE PAGÓ EL §0.7 OTRA VEZ, Y CONVIENE QUE QUEDE ESCRITO. La
+  // primera versión de esta comprobación declaraba `cartea aceasta a` (2)
+  // y `casa aceasta a` (1) y `acestea ale` (1), sacados de la CLI del
+  // corpus, que busca SIN límite de palabra. Con límite dan CERO las
+  // tres: leídas una a una, las apariciones eran «cartea aceasta ACUMA»,
+  // «citea din cartea aceasta AGATA», «în casa aceasta AR fi crescut» y
+  // «bucățelele acestea ALERGASERĂ». Cuatro homógrafos y ni una
+  // atestación. La única real del corpus es ésta, y es justo la
+  // configuración del ítem 7 —plural, demostrativo pospuesto, `ale`,
+  // genitivo—: «Ce gospodării frumoase sunt prin părțile ASTEA ALE
+  // Sucevei!» (Sadoveanu). Por eso la clave del ítem va en plural y por
+  // eso `astea` está declarada como alternativa.
+  { afirmacion: 'demostrativo pospuesto + artículo posesivo + genitivo: «părțile astea ale Sucevei» — la ÚNICA atestación real del corpus, leída una a una', patron: 'astea ale', espera: 'presente' },
+  // `cel` INTERPUESTO TAMBIÉN ROMPE LA ADYACENCIA, y por eso las
+  // variantes con `cel`/`cei`/`cele` van en las alternativas: llevan el
+  // artículo igual, así que el ítem sigue midiendo su punto.
+  { afirmacion: '«cel» interpuesto exige el artículo igual que el adjetivo desnudo, también en plural: «cele mari ale»', patron: 'cele mari ale', espera: 'presente' },
   // LA CONFIGURACIÓN QUE TUMBA LA FRONTERA FALSA: poseído DEFINIDO, con
   // algo interpuesto, y el artículo posesivo OBLIGATORIO.
   { afirmacion: 'poseído DEFINIDO con adjetivo interpuesto: «mâna dreaptă a»', patron: 'mâna dreaptă a', espera: 'presente' },
@@ -545,12 +663,12 @@ export const COMPROBACIONES: Comprobacion[] = [
 
 export const OPCIONES: Opciones = {
   comprobaciones: COMPROBACIONES,
-  estrategias: [CALCO_ES, SUPERFICIE, ESPANOL, CON_EL_POSEEDOR, SIEMPRE_AL],
+  estrategias: [CALCO_ES, SUPERFICIE, ESPANOL, COMPUESTA_E, CON_EL_POSEEDOR, SIEMPRE_AL],
   gatesPropios,
   juicios: {
     copia: 'CERO de nueve se contestan copiando el foco, y aquí eso no significa lo que significaba en los lotes 23 y 24: el foco y el núcleo no son dos formas del MISMO verbo sino dos piezas distintas de la frase —el sustantivo poseído y la partícula—, así que «copiar el foco» no es una estrategia que ningún alumno pueda ejecutar y su cero no dice nada. La pregunta equivalente en este punto es otra: ¿cuántos ítems se contestan sin poner nada? DOS de nueve, y son los de la familia `quita`, declarados `espejoEs` porque traducir del español los da enteros. Ni cero ni nueve valdrían: con cero, el lote enseñaría «pon siempre al/a/ai/ale» y el alumno escribiría *Prietenul al băiatului; con más de dos, la mitad del lote se contestaría traduciendo. Medido ejecutando: traducir del español 2/9, copiar la frase entera 0/9, la edición modal del lote 0/9.',
-    frontera: 'La frontera de este punto NO es «definido frente a indefinido» —eso era media regla y el dictamen del 2026-09-04 la tumbó—: es la ADYACENCIA. El artículo posesivo falta sólo en la configuración [núcleo + artículo enclítico] + [genitivo] PEGADOS, y los dos ítems de `quita` son ésa, marcados `sobreaplicacion`: el alumno que aprenda «pon siempre al/a/ai/ale» escribe *Prietenul al băiatului y *Floarea a fetei. Pero la frontera tiene DOS caras y la segunda es la que faltaba en la descripción del punto: con el poseído DEFINIDO el artículo es OBLIGATORIO en cuanto algo se mete en medio, y los dos ítems de `adj` (Fratele mai mic AL vecinului, Copiii mici AI profesorului) son exactamente eso. Sin ellos, el lote enseñaría la regla falsa «si lleva artículo pegado, no pongas nada», que es la que la propia descripción del inventario inducía y que ningún ítem del diseño original habría desmentido. Los ítems de `cuant` cierran una tercera cara: con numeral el núcleo no lleva enclítico y el artículo vuelve. Van dos ítems por cada cara y no uno porque una cara con un solo ítem no se distingue de un accidente.',
-    varianza: 'Lo que varía entre los nueve, y ES el punto, es la CONFIGURACIÓN: núcleo indefinido (3), núcleo cuantificado (2), adjetivo interpuesto con núcleo definido (2) y genitivo pegado al núcleo articulado (2). Ninguna pieza de la operación llega al umbral de invariancia porque las formas se reparten (al 3, ai 2, a 1, ale 1, nada 2) y los poseedores son ocho distintos. LO QUE ESTE LOTE NO MIDE, Y VA ESCRITO PORQUE ES LA MITAD QUE PARECÍA EL PUNTO: la elección de la FORMA está gratis en ocho de los nueve ítems, por dos rutas que se componen —la terminación del artículo enclítico, que acierta 138 de 142 celdas del lexicón, y el género del español, que ya concuerda con lo poseído y rescata donde la otra falla—. El único ítem donde las dos fallan a la vez es el de `perete`, porque su enclítico es `-le` y «pared» es femenino en español. Es UN ítem, no ocho, y por eso el punto se re-encuadró de «elige la forma» a «decide si hace falta»: lo que los nueve miden es la SUBPRODUCCIÓN, que es lo único que este formato ve y lo único que el español no regala. La mitad de la forma vuelve entera en B2 con `r11-relativo-declinado`, que declara este punto como prerrequisito. Y hay un precio declarado: siete de los nueve ítems piden además el genitivo del poseedor (`casei`, `bunicului`, `fetei`), que es `r4-gd-definido-sg`, el prerrequisito; se acepta porque un fallo ahí produce una respuesta DISTINGUIBLE de un fallo del artículo, no porque la varianza pertenezca aquí.',
+    frontera: 'La frontera de este punto NO es «definido frente a indefinido» —eso era media regla y el dictamen del 2026-09-04 la tumbó—: es la ADYACENCIA. El artículo posesivo falta sólo en la configuración [núcleo + artículo enclítico] + [genitivo] PEGADOS, y los dos ítems de `quita` son ésa, marcados `sobreaplicacion`: el alumno que aprenda «pon siempre al/a/ai/ale» escribe *Prietenul al băiatului y *Fotografia a mamei. Pero la frontera tiene DOS caras y la segunda es la que faltaba en la descripción del punto: con el poseído DEFINIDO el artículo es OBLIGATORIO en cuanto algo se mete en medio, y cuatro ítems son eso — tres con un adjetivo interpuesto (Fratele mai mic AL vecinului, Copiii mici AI profesorului, Trenurile noi ALE orașului) y uno con un demostrativo pospuesto (Mașinile acestea ALE Mariei). Sin ellos, el lote enseñaría la regla falsa «si lleva artículo pegado, no pongas nada», que es la que la propia descripción del inventario inducía y que ningún ítem del diseño original habría desmentido. Y las dos configuraciones que el lote NO trae —el predicativo (cartea este a Mariei) y el cuantificado (doi prieteni ai Mariei)— no dejan la regla mutilada: un alumno que generalice «ponlo salvo cuando el genitivo toca a la forma que lleva el enclítico» las acierta sin haberlas visto, porque la regla que se induce de estos nueve es LA regla. Es un hueco de cobertura, no un error, y va escrito con su motivo: el cuantificado está PROHIBIDO por gate, porque con la fuente en plural definido «doi DINTRE prietenii Mariei» contesta la consigna letra por letra sin artículo posesivo.',
+    varianza: 'Lo que varía entre los nueve, y ES el punto, es la CONFIGURACIÓN: núcleo indefinido (3), elemento interpuesto con el núcleo definido —adjetivo (3) y demostrativo pospuesto (1)— y genitivo pegado al núcleo articulado (2). Ninguna pieza de la operación llega al umbral de invariancia porque las formas se reparten (al 3, ale 2, a 1, ai 1, nada 2) y los poseedores son siete distintos. LO QUE ESTE LOTE NO MIDE, Y VA ESCRITO PORQUE ES LA MITAD QUE PARECÍA EL PUNTO: la elección de la FORMA está gratis en ocho de los nueve ítems, por dos rutas que se componen —la terminación del artículo enclítico, que acierta 138 de 142 celdas del lexicón, y el género del español, que ya concuerda con lo poseído y rescata donde la otra falla—. El ÚNICO ítem donde las dos fallan a la vez es el de `perete`, porque su enclítico es `-le` y «pared» es femenino en español. Es UN ítem, no ocho, y de ahí las dos reglas que hereda el siguiente lote de este punto: el ítem de `perete` es el único pilar de la mitad forma —si alguien lo retoca o lo sustituye, esa mitad se queda en CERO sin que nada falle— y NUNCA hay que añadir aquí un ítem que sólo pida elegir entre al/a/ai/ale, porque no mediría nada. Por eso el punto se re-encuadró de «elige la forma» a «decide si hace falta»: lo que los nueve miden es la SUBPRODUCCIÓN, que es lo único que este formato ve y lo único que el español no regala. La mitad de la forma vuelve entera en B2 con `r11-relativo-declinado`, que declara este punto como prerrequisito. Y DOS PRECIOS DECLARADOS. El primero se pagó y se cobró: la v1 pedía además el numeral neutro (`două telefoane`), que es `r2-genero-tres-valores`, y el ítem se perdía por un motivo ajeno al punto; se fue con la familia cuantificada. El segundo NO existe, contra lo que este mismo juicio decía en la v1: ninguno de los nueve pide PRODUCIR el genitivo del poseedor —los siete van escritos en la fuente y se copian carácter a carácter—, así que no hay co-requisito de `r4-gd-definido-sg` ni error inatribuible, y el eje `lui` frente al genitivo sintético queda cerrado de golpe. Y el ítem más flojo va nombrado: el de `copil`, cuya forma `ai` la predicen las dos rutas a la vez; mide la distribución y nada más, y si algún día hay que quitar uno es ése.',
   },
 };
 
