@@ -102,6 +102,23 @@ const SIM = (a: string, b: string) =>
 
 export const LOTE_FUNCION_POR_DESINENCIA: ItemClozeGlosa[] = [
   // ── DIEZ CON EL SUJETO DELANTE (SOV, SVO, VSO) ──
+  //
+  // NOTA SOBRE UNA CORRECCIÓN QUE NO HUBO QUE HACER, porque la historia es
+  // la lección. La búsqueda de composiciones encontró que «invertir si es
+  // plural, si no traducir en orden» acierta 12 de 20 (60 %) — dos
+  // estrategias que sueltas están al 50 % componiéndose por encima del
+  // techo. Se reequilibró el lote para romper esa correlación, y entonces
+  // apareció otra regla al 70 %.
+  //
+  // El lote no había empeorado: **el criterio estaba mal**. Con k pistas
+  // binarias y n ítems, la MEJOR de k supera el 50 % por puro azar, así
+  // que exigirle 50 % a un máximo sobre k reglas garantiza el hallazgo
+  // falso. Contra su propia nula —barajando los valores de las pistas—
+  // este reparto da p = 0,977 y el reequilibrado p = 0,481: los dos
+  // limpios, y el «arreglado» algo peor.
+  //
+  // Así que se revirtió al original. Es «corregir algo que no está mal»,
+  // cazado antes de que se quedara.
   it('la-fpd-01', ['amīcus', 'amigo'], ['vīcīnum', 'vecino'], ['vocat', 'llama'],
     { gen: 'm', num: 'sg' }, { orden: 'SOV', conjugacion: 1, declinacion: '2ª', esperado: 'neutro' }, SIM('amigo', 'vecino')),
   it('la-fpd-02', ['fīlius', 'hijo'], ['amīcum', 'amigo'], ['exspectat', 'espera'],
