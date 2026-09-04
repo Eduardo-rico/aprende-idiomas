@@ -1082,5 +1082,55 @@
       "alternatives": [],
       "espejoEs": false
     }
+  },
+  {
+    "id": "55398f33",
+    "blockId": 6,
+    "lessonId": "b6-l2-contractii-si-encliza",
+    "difficulty": 2,
+    "concepts": [
+      "r6-cliticos-imperativo-gerunziu"
+    ],
+    "tags": [
+      "ro-trans-l29",
+      "transformacion"
+    ],
+    "contentHash": "55398f33421bb615ed95065e1f370525a11c58bc34f2cd17e924cfb94f260771",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación RO-L29 (2026-09-04): la respuesta es rumano correcto y está DETERMINADA por la consigna; las estrategias mecánicas del alumno (copiar el foco, repetir la edición modal del lote, traducir del español) se corrieron sobre el lote y ninguna pasa del 50 %; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). NO certifica voz ni naturalidad de la fuente ante nativo.",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Îmi dai cartea.",
+      "instructionEs": "Dile a tu amigo que haga eso, tuteándolo: usa el mismo verbo, empieza la frase por él y cambia el objeto directo por el pronombre que le corresponde. No añadas ningún complemento.",
+      "answer": "Dă-mi-o.",
+      "alternatives": [],
+      "espejoEs": false
+    }
+  },
+  {
+    "id": "df358728",
+    "blockId": 6,
+    "lessonId": "b6-l2-contractii-si-encliza",
+    "difficulty": 2,
+    "concepts": [
+      "r6-cliticos-imperativo-gerunziu"
+    ],
+    "tags": [
+      "ro-trans-l29",
+      "transformacion"
+    ],
+    "contentHash": "df358728dd0d86094d77800954c9e2abdf1ac06bd2d37c3d63376b65711cd070",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Transformación RO-L29 (2026-09-04): la respuesta es rumano correcto y está DETERMINADA por la consigna; las estrategias mecánicas del alumno (copiar el foco, repetir la edición modal del lote, traducir del español) se corrieron sobre el lote y ninguna pasa del 50 %; ortografía DOOM3; revisado por linguista-adversarial-ro (agente, sin oído nativo). NO certifica voz ni naturalidad de la fuente ante nativo.",
+    "register": "neutro",
+    "type": "transformation",
+    "data": {
+      "source": "Când l-am văzut, am plecat.",
+      "instructionEs": "Di la primera mitad con el verbo en gerundio y sin «când», dejando la segunda mitad igual. No añadas ningún complemento ni cambies el orden.",
+      "answer": "Văzându-l, am plecat.",
+      "alternatives": [],
+      "espejoEs": false
+    }
   }
 ]

@@ -26,6 +26,7 @@ import { ITEMS as L25, OPCIONES as OP_L25 } from './lotes/trans-ro-l25';
 import { ITEMS as L26, OPCIONES as OP_L26 } from './lotes/trans-ro-l26';
 import { ITEMS as L27, OPCIONES as OP_L27 } from './lotes/trans-ro-l27';
 import { ITEMS as L28, OPCIONES as OP_L28 } from './lotes/trans-ro-l28';
+import { ITEMS as L29, OPCIONES as OP_L29 } from './lotes/trans-ro-l29';
 
 const LOTES: Record<string, { items: ItemTransRo[]; op: Opciones }> = {
   l23: { items: L23, op: OP_L23 },
@@ -34,6 +35,7 @@ const LOTES: Record<string, { items: ItemTransRo[]; op: Opciones }> = {
   l26: { items: L26, op: OP_L26 },
   l27: { items: L27, op: OP_L27 },
   l28: { items: L28, op: OP_L28 },
+  l29: { items: L29, op: OP_L29 },
 };
 
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
