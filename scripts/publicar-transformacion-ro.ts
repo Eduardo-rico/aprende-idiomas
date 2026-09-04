@@ -21,9 +21,11 @@ import { hashKey } from './lib/cache';
 import { verificar, informe, type ItemTransRo, type Opciones } from './lib/transformacion-ro';
 import { camposSinDeclarar } from './lib/gates-por-formato';
 import { ITEMS as L23, OPCIONES as OP_L23 } from './lotes/trans-ro-l23';
+import { ITEMS as L24, OPCIONES as OP_L24 } from './lotes/trans-ro-l24';
 
 const LOTES: Record<string, { items: ItemTransRo[]; op: Opciones }> = {
   l23: { items: L23, op: OP_L23 },
+  l24: { items: L24, op: OP_L24 },
 };
 
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
