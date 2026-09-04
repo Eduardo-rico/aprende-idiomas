@@ -219,6 +219,17 @@ describe('transformación RO · los gates DE LOTE, que son la razón de esta má
     expect(correr(sinPronombre, BASE).sobre).toEqual(['Tu mergi acasă acum.']);
   });
 
+  it('los gates PROPIOS del punto viajan en las opciones, no en un verificar aparte', () => {
+    // Así el publicador —que ya recibe las opciones— no puede quedarse sin
+    // ellos: un gate que hay que acordarse de enchufar acaba ausente.
+    const exigeAdmiracion = (xs: readonly ItemTransRo[]) =>
+      xs.filter((x) => !x.r.endsWith('!')).map((x) => `${x.s}: la respuesta no acaba en «!»`);
+    expect(verificarLote(BASE, { ...OP, gatesPropios: exigeAdmiracion })).toEqual([]);
+    const sinSigno = BASE.map((x) => ({ ...x, r: x.r.replace('!', '.') }));
+    expect(verificarLote(sinSigno, { ...OP, gatesPropios: exigeAdmiracion }).join())
+      .toMatch(/la respuesta no acaba en «!»/);
+  });
+
   it('una estrategia PROPIA del punto se corre igual que las de serie', () => {
     // «Al cerrar una estrategia, pregunta qué regularidad deja el cierre y
     // comprueba la nueva EJECUTÁNDOLA»: para eso el lote pasa las suyas.

@@ -366,6 +366,16 @@ export interface Opciones {
    *  pregunta — pero sí impide el caso que ya se pagó: afirmar que algo no
    *  existe cuando el corpus lo trae tres veces. */
   comprobaciones?: readonly Comprobacion[];
+  /** Los gates que sólo valen para ESTE punto. Viajan en las opciones —y
+   *  no en un `verificar` propio que el lote exporte— porque el publicador
+   *  ya recibe las opciones: así un lote no puede olvidarse de enchufar
+   *  sus gates, que es la forma en que un gate declarado acaba ausente.
+   *
+   *  El caso que lo pidió: cuando la CONSIGNA hace una promesa comprobable
+   *  («que la frase te quede con exactamente una palabra más que ésta»),
+   *  esa promesa tiene que tener un gate, o la consigna y las claves se
+   *  desincronizan en el ítem que alguien añada dentro de dos meses. */
+  gatesPropios?: (items: readonly ItemTransRo[]) => string[];
 }
 
 export function verificar(items: ItemTransRo[], op: Opciones): string[] {
@@ -471,6 +481,8 @@ export function verificarLote(items: ItemTransRo[], op: Opciones): string[] {
   if (op.juicios.frontera.trim().length < 40) v.push('JUICIO AUSENTE «frontera»: dónde NO se aplica la regla, y qué ítem lo enseña');
   else if (!items.some((x) => x.sobreaplicacion) && !op.juicios.frontera.startsWith('SIN FRONTERA:'))
     v.push('FRONTERA: ningún ítem declara `sobreaplicacion` y el juicio no empieza por «SIN FRONTERA:» con su motivo');
+
+  v.push(...(op.gatesPropios?.(items) ?? []));
 
   // ── LAS AFIRMACIONES, EJECUTADAS CONTRA EL CORPUS ───────────────
   // No es «acuérdate de comprobarlo»: sin esto el lote no sale.
