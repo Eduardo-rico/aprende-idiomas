@@ -261,9 +261,15 @@ export function verificar(items: ClozeRo[]): string[] {
   }
 
   // LAS DOS REJILLAS CRUZADAS DEL GERUNZIU. El punto no es formar el
-  // gerundio: es que la desinencia la decide el final del TEMA y no la
-  // conjugación. Un lote con ocho -ând de verbos en consonante enseñaría
-  // una regla falsa por omisión, y saldría verde.
+  // gerundio: es que la desinencia **no la decide ni la conjugación sola
+  // ni el tema solo**, sino la disyunción de las dos (ver la cabecera de
+  // este fichero, l. 55). Un lote con ocho -ând de verbos en consonante
+  // enseñaría una regla falsa por omisión, y saldría verde.
+  // ⚠ Esta frase era la MEDIA REGLA muerta —«la decide el final del TEMA y
+  // no la conjugación»—, sobrevivió al arreglo del 2026-09-03 en la copia
+  // que nadie miró, y con ella la del `objectives[0]` de la lección b7-l2,
+  // que es lo que el ALUMNO lee. §4.15: arreglar el código no arregla las
+  // frases que lo explican, y hay más de una.
   const gers = items.filter((x) => x.p === GER);
   if (gers.length >= 4) {
     const forma = (x: ClozeRo) => respuestaDe(x) ?? '';
