@@ -26,6 +26,16 @@
 // Aviso: la comprobación **infrainforma**. `amet` —lo que da la ruta `-ē-`
 // sobre `amō`— es el presente de subjuntivo, o sea una palabra latina, y
 // la máquina todavía no tiene subjuntivo. Sale «no» siendo «sí».
+// ── LAS PISTAS DICEN LA PERSONA Y EL NÚMERO, Y NADA MÁS ──────────────
+//
+// Dos de ellas nombraban la REGLA: «aquí NO va -bi-» decía la ruta
+// perdedora, y «cuarta conjugación» daba el único dato que hay que
+// deducir. El gate no las veía porque sólo comprobaba que la cadena de la
+// respuesta no apareciera — y no aparecía: aparecía la regla.
+//
+// Las dos que avisan de una ambigüedad REAL de la lengua se quedan
+// (`la-5f-02`, que el error da el presente; `la-5f-11`, que la forma
+// coincide con el subjuntivo): ésas no dan la ruta, describen la trampa.
 import type { ItemTransformacion } from '../../../../../scripts/lib/gate-transformacion';
 import { VERBOS_L1 } from '../lexicon-l1';
 import { conjugar, conjugacionDe, marcaDeFuturo, type Persona } from '../paradigma-la';
@@ -46,9 +56,9 @@ const DEFS: Def[] = [
   ['la-5f-06', 'laudō', '1pl', 'Alabamos ahora; ¿y mañana? — primera del plural.'],
 
   // ── SEIS CON LA MARCA -am/-ē- (3.ª y 4.ª) ──
-  ['la-5f-07', 'dūcō', '3sg', 'Guía ahora; ¿y mañana? — aquí NO va -bi-.'],
+  ['la-5f-07', 'dūcō', '3sg', 'Guía ahora; ¿y mañana? — tercera persona del singular.'],
   ['la-5f-08', 'mittō', '3pl', 'Envían ahora; ¿y mañana? — tercera del plural.'],
-  ['la-5f-09', 'audiō', '3sg', 'Oye ahora; ¿y mañana? — cuarta conjugación.'],
+  ['la-5f-09', 'audiō', '3sg', 'Oye ahora; ¿y mañana? — tercera persona del singular.'],
   ['la-5f-10', 'legō', '2sg', 'Lees ahora; ¿y mañana? — segunda del singular.'],
   ['la-5f-11', 'inveniō', '1sg', 'Encuentro ahora; ¿y mañana? La forma coincide con el presente de subjuntivo: sólo el contexto los separa.'],
   ['la-5f-12', 'custōdiō', '3pl', 'Guardan ahora; ¿y mañana? — tercera del plural.'],

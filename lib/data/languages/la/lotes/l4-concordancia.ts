@@ -19,6 +19,18 @@
 //     `bellum` es «la guerra», `dōnum` «el regalo», `verbum` «la palabra»,
 //     y ninguno de los tres géneros españoles es el correcto.
 //
+// ── LAS PISTAS DICEN EL CASO Y EL NÚMERO, Y NADA MÁS ─────────────────
+//
+// La primera versión las escribía explicando el ítem —«en latín *bellum*
+// es NEUTRO», «*opus* acaba en -us y es neutro», «el adjetivo acaba en -a
+// y es neutro plural»— y con eso **se sacaban 14 de 14 leyendo SÓLO la
+// pista**: daba el caso, el número y el género latino, que son los tres
+// rasgos en los que el adjetivo concuerda. El gate no lo veía porque sólo
+// comprobaba que la cadena de la respuesta no apareciera.
+//
+// Ahora la pista fija la CELDA —caso y número, en español— y el género
+// latino lo tiene que sacar el alumno del sustantivo, que es el punto.
+//
 // El neutro plural en `-a` es el caso más caro de los dos ejes a la vez:
 // `pulchra dōna` rima (así que ese eje no lo examina) y además parece un
 // femenino singular español. El alumno lee «una cosa hermosa».
@@ -43,13 +55,13 @@ type Def = [id: string, nom: string, adj: string, celda: ItemConcordancia['celda
 const DEFS: Def[] = [
   // ── SIETE QUE NO RIMAN: la 1.ª masculina y los -er ──
   ['la-4c-01', 'nauta', 'bonus', 'nom.sg', 'm', '___ nauta puellam vocat.',
-   'EL BUEN marinero llama a la niña. «nauta» acaba en -a y es masculino.'],
+   'EL BUEN marinero llama a la niña — sujeto, singular.'],
   ['la-4c-02', 'agricola', 'magnus', 'ac.sg', 'm', 'Puella ___ agricolam videt.',
    'La niña ve AL GRAN campesino — objeto directo, masculino singular.'],
   ['la-4c-03', 'poēta', 'bonus', 'dat.sg', 'm', 'Dominus ___ poētae dōnum mittit.',
    'El señor envía un regalo AL BUEN poeta — destinatario, masculino singular.'],
   ['la-4c-04', 'puer', 'bonus', 'nom.sg', 'm', '___ puer magistrum audit.',
-   'EL BUEN niño oye al maestro. «puer» no lleva desinencia: no hay nada que copiar.'],
+   'EL BUEN niño oye al maestro — sujeto, singular.'],
   ['la-4c-05', 'magister', 'magnus', 'nom.sg', 'm', '___ magister discipulōs monet.',
    'EL GRAN maestro advierte a los discípulos — sujeto, masculino singular.'],
   ['la-4c-06', 'nauta', 'bonus', 'nom.pl', 'm', '___ nautae terram inveniunt.',
@@ -59,15 +71,15 @@ const DEFS: Def[] = [
 
   // ── CINCO QUE RIMAN, y los cinco con el género español engañando ──
   ['la-4c-08', 'bellum', 'magnus', 'ac.sg', 'f', 'Poēta ___ bellum laudat.',
-   'El poeta alaba LA GRAN guerra. En español «guerra» es femenino; en latín «bellum» es NEUTRO.'],
+   'El poeta alaba LA GRAN guerra — objeto directo, singular.'],
   ['la-4c-09', 'bellum', 'magnus', 'ac.pl', 'f', 'Poētae ___ bella laudant.',
-   'Los poetas alaban LAS GRANDES guerras. «bella» es neutro plural, no femenino singular.'],
+   'Los poetas alaban LAS GRANDES guerras — objeto directo, plural.'],
   ['la-4c-10', 'dōnum', 'bonus', 'ac.sg', 'm', 'Puer ___ dōnum exspectat.',
-   'El niño espera EL BUEN regalo. En español «regalo» es masculino; «dōnum» es neutro.'],
+   'El niño espera EL BUEN regalo — objeto directo, singular.'],
   ['la-4c-11', 'verbum', 'bonus', 'ac.pl', 'f', 'Discipulī ___ verba audiunt.',
-   'Los discípulos oyen LAS BUENAS palabras. «verba» es neutro plural.'],
+   'Los discípulos oyen LAS BUENAS palabras — objeto directo, plural.'],
   ['la-4c-12', 'dōnum', 'pulcher', 'ac.pl', 'm', 'Puellae ___ dōna inveniunt.',
-   'Las niñas encuentran LOS HERMOSOS regalos. El adjetivo acaba en -a y es neutro plural.'],
+   'Las niñas encuentran LOS HERMOSOS regalos — objeto directo, plural.'],
 
   // ── LOS DOS QUE ROMPEN LA COLINEALIDAD ──
   //
@@ -81,11 +93,11 @@ const DEFS: Def[] = [
   // neutro, así que el género SÍ engaña. Es la única combinación que
   // separa los dos ejes, y sólo la dan los neutros de 3.ª.
   ['la-4c-13', 'opus', 'magnus', 'ac.sg', 'f', 'Discipulus ___ opus legit.',
-   'El discípulo lee LA GRAN obra. «opus» acaba en -us y es NEUTRO: ni la terminación ni el género español ayudan.'],
+   'El discípulo lee LA GRAN obra — objeto directo, singular.'],
   // Y su contrario: rima y el género español acierta. Sin este, «rima» y
   // «no engaña» tampoco aparecerían juntos.
   ['la-4c-14', 'dominus', 'bonus', 'nom.sg', 'm', '___ dominus servōs vocat.',
-   'EL BUEN señor llama a los esclavos — el caso fácil, donde todo coincide.'],
+   'EL BUEN señor llama a los esclavos — sujeto, singular.'],
 ];
 
 

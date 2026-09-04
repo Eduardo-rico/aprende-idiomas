@@ -253,6 +253,33 @@ export function revisarLoteD(items: ItemClozeDerivado[]): FalloD[] {
       detalle: 'ningún ítem examina el vocativo de los -ius (`fīlī`, no `fīlie`): la regla se puede sobregeneralizar entera' });
   }
 
+  // ── Y EL MARCO TAMPOCO PUEDE ENSEÑAR UN TEMA NO DERIVABLE ──
+  //
+  // Tres marcos llevaban `Magistrī` y `Puerī` de sujeto, o sea el tema
+  // sincopado y el conservado EN PANTALLA, que es justo lo que preguntan
+  // otros ítems. El gate no lo veía porque comprobaba la cadena de la
+  // RESPUESTA, y esas formas no son respuesta de nadie: son la celda que
+  // el lote declara que no se pide «porque ya está a la vista».
+  //
+  // Y la comprobación va acotada a los temas que NO se deducen del
+  // nominativo. Enseñar `dominus` no regala nada —de `dominus` sale
+  // `domin-` sin saber latín— y marcarlo habría llenado el informe de
+  // ruido sobre los regulares, que son la mitad del lote.
+  const noDerivables = new Map<string, string>();
+  for (const it of items) {
+    const tema = norm(it.entrada.genitivo).replace(/(ae|ī)$/, '');
+    if (tema.length >= 4 && temaDelNominativo(it.entrada) !== tema) noDerivables.set(tema, it.entrada.lema);
+  }
+  for (const a of items) {
+    const enMarco = norm(a.marco).replace('___', ' ');
+    for (const [tema, lema] of noDerivables) {
+      if (norm(a.entrada.lema) !== norm(lema) && enMarco.includes(tema)) {
+        out.push({ item: a.id, clase: 'pista-regala-la-forma',
+          detalle: `su marco enseña el tema «${tema}» de «${lema}», que NO se deduce del nominativo y que otro ítem examina` });
+      }
+    }
+  }
+
   // Un marco puede llevar dentro la respuesta de OTRO ítem del lote. Es
   // la misma fuga que la de la pista, pero sólo visible desde el lote: por
   // ítem cada marco está impecable. Salió escribiendo los marcos, no

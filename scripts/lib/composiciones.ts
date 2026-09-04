@@ -132,6 +132,35 @@ export function buscarComposiciones<T>(
 // observada en esa distribución. Sólo es hallazgo si supera el percentil
 // 95 de la nula.
 
+/** ¿PODRÍA esta prueba haber dicho que sí, a este tamaño y con estas
+ *  pistas? Planta un atajo perfecto sobre un lote sintético del mismo n y
+ *  el mismo número de pistas, y mira si la nula lo rechaza.
+ *
+ *  Existe porque en rumano se plantó un atajo que acertaba 8 de 8 y **la
+ *  nula no lo rechazó: p = 0,299**. A ese tamaño el instrumento no puede
+ *  decir que no, así que todo «sin atajo» firmado ahí es AUSENCIA DE
+ *  EVIDENCIA y no evidencia de ausencia.
+ *
+ *  Medido aquí, con semilla fija: a n = 8 y cinco pistas no rechaza
+ *  (p = 0,069); a n = 10 sí (0,019); a n = 12 con holgura (0,004). O sea
+ *  que el borde cae justo por encima del PISO de 8 ítems por peldaño, y
+ *  un lote al piso queda fuera de alcance. */
+export function potenciaDeLaNula(n: number, kPistas: number, repeticiones = 1000): { detecta: boolean; p: number } {
+  type S = { r: 'A' | 'B'; pista: boolean; a: boolean; b: boolean };
+  const items: S[] = Array.from({ length: n }, (_, i) => ({
+    r: i % 2 === 0 ? 'A' : 'B', pista: i % 2 === 0, a: i < n / 2, b: i % 3 === 0,
+  }));
+  const E: Estrategia<S>[] = [{ nombre: 'A', responde: () => 'A' }, { nombre: 'B', responde: () => 'B' }];
+  const todas: Pista<S>[] = [
+    { nombre: 'plantada', vale: (x) => x.pista }, { nombre: 'r1', vale: (x) => x.a },
+    { nombre: 'r2', vale: (x) => x.b }, { nombre: 'r3', vale: (x) => x.a && x.b },
+    { nombre: 'r4', vale: (x) => x.a || x.b }, { nombre: 'r5', vale: (x) => !x.a },
+  ];
+  const v = contrastarComposiciones(items, (x) => x.r, E,
+    todas.slice(0, Math.max(1, Math.min(kPistas, todas.length))), repeticiones);
+  return { detecta: v.p < 0.05, p: v.p };
+}
+
 export interface VeredictoComposicion {
   mejor: Composicion;
   nulaP95: number;
@@ -141,6 +170,9 @@ export interface VeredictoComposicion {
    *  separarlo es cómo se lee un «sin atajo» sin su denominador. */
   pistasUsadas: string[];
   revisadaPor: string;
+  /** Si a este tamaño y con estas pistas la prueba PODRÍA haber dicho que
+   *  sí. Un «sin atajo» con `puedeDetectar: false` no dice nada. */
+  puedeDetectar?: boolean;
 }
 
 export function contrastarComposiciones<T>(
@@ -184,6 +216,17 @@ export function contrastarComposiciones<T>(
     pistasUsadas: pistas.map((x) => x.nombre), revisadaPor };
 }
 
+/** El veredicto CON su potencia. Es lo que hay que llamar desde un gate:
+ *  `contrastarComposiciones` a secas devuelve un `hayAtajo: false` que
+ *  puede significar «no hay» o «no puedo verlo». */
+export function contrastarConPotencia<T>(
+  items: T[], correcta: (i: T) => string, estrategias: Estrategia<T>[],
+  declaradas: Pista<T>[] | PistasDeclaradas<T>, repeticiones = 2000, semilla = 20260903,
+): VeredictoComposicion {
+  const v = contrastarComposiciones(items, correcta, estrategias, declaradas, repeticiones, semilla);
+  return { ...v, puedeDetectar: potenciaDeLaNula(items.length, v.pistasUsadas.length).detecta };
+}
+
 /** ¿Hay un atajo? Sólo eso.
  *
  *  Contestó una sola pregunta desde el principio y hubo que devolverla a
@@ -201,10 +244,20 @@ export function revisarComposiciones(v: VeredictoComposicion): { item: string; c
 /** ¿Vale lo que dice el veredicto? Es la otra pregunta: un «sin atajo»
  *  sobre una lista que no ha revisado nadie no es un «sin atajo», es un
  *  «no encontré con lo que se me ocurrió». */
-export function revisarRevisionDePistas(v: VeredictoComposicion): { item: string; clase: 'pistas-sin-revisar'; detalle: string }[] {
-  if (v.revisadaPor !== 'sin revisar') return [];
-  return [{ item: '(lote)', clase: 'pistas-sin-revisar',
-    detalle: `las ${v.pistasUsadas.length} pistas no las ha revisado nadie (${v.pistasUsadas.join(', ')}): quien escribe los ítems es el peor situado para enumerar lo que su lote regala` }];
+export function revisarRevisionDePistas(v: VeredictoComposicion): { item: string; clase: 'pistas-sin-revisar' | 'sin-potencia'; detalle: string }[] {
+  const out: { item: string; clase: 'pistas-sin-revisar' | 'sin-potencia'; detalle: string }[] = [];
+  if (v.revisadaPor === 'sin revisar') {
+    out.push({ item: '(lote)', clase: 'pistas-sin-revisar',
+      detalle: `las ${v.pistasUsadas.length} pistas no las ha revisado nadie (${v.pistasUsadas.join(', ')}): quien escribe los ítems es el peor situado para enumerar lo que su lote regala` });
+  }
+  // La tercera pregunta, y la que descubrió el rumano: ¿podría esta prueba
+  // haber dicho que sí? Un «sin atajo» sin potencia es ausencia de
+  // evidencia, no evidencia de ausencia.
+  if (v.puedeDetectar === false && !v.hayAtajo) {
+    out.push({ item: '(lote)', clase: 'sin-potencia',
+      detalle: `con ${v.pistasUsadas.length} pistas a este tamaño la nula NO rechaza ni un atajo plantado al 100 %: este «sin atajo» no dice nada` });
+  }
+  return out;
 }
 
 /** Para pegar en un commit o en un informe. Imprime SIEMPRE la lista, que

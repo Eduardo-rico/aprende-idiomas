@@ -28,6 +28,19 @@
 // el genitivo singular — y también el NOMINATIVO PLURAL de la 2.ª, que es
 // su homógrafo (`puerī`): pedirlo es pedir que copien la entrada con otro
 // nombre de celda.
+// ── LOS MARCOS NO ENSEÑAN EL TEMA DE SUS VECINOS ─────────────────────
+//
+// Tres marcos llevaban `Magistrī` y `Puerī` de sujeto, o sea el tema
+// SINCOPADO `magistr-` y el CONSERVADO `puer-` en pantalla — que es
+// exactamente lo que preguntan otros ítems del mismo lote. El gate no lo
+// veía porque comprueba la cadena de la RESPUESTA, y `magistrī` y `puerī`
+// no son respuesta de nadie: son la celda que el propio fichero declara
+// que no se pide «porque su respuesta ya está a la vista». Estaba a la
+// vista igual, en el marco del vecino.
+//
+// La comprobación correcta es sobre el TEMA de todo lema del lote, no
+// sobre la cadena de respuesta. Los tres sujetos cambian a lemas que no
+// examina nadie.
 import type { ItemClozeDerivado } from '../../../../../scripts/lib/gate-cloze-derivado';
 import { NOMBRES_L1 } from '../lexicon-l1';
 import { ordenPublicado } from '../../../../../scripts/lib/orden-publicado';
@@ -59,7 +72,7 @@ const LOTE_SEGUNDA_FUENTE: ItemClozeDerivado[] = [
     marco: 'Dominus ___ dōnum mittit.', pista: 'El señor envía un regalo AL NIÑO — destinatario, singular.',
     ejes: { clase: 'conserva', celda: 'dat.sg' } },
   { id: 'la-2d-03', punto: 'l2-segunda', entrada: E('puer'), celda: 'dat.pl', respuesta: 'puerīs',
-    marco: 'Magistrī ___ dōnum mittunt.', pista: 'Los maestros envían un regalo A LOS NIÑOS — destinatario, plural.',
+    marco: 'Dominī ___ dōnum mittunt.', pista: 'Los maestros envían un regalo A LOS NIÑOS — destinatario, plural.',
     ejes: { clase: 'conserva', celda: 'dat.pl' } },
   // ── EL QUE ROMPE LA REGLA FALSA ──
   //
@@ -94,7 +107,7 @@ const LOTE_SEGUNDA_FUENTE: ItemClozeDerivado[] = [
     marco: 'Discipulus ___ salūtat.', pista: 'El discípulo saluda AL MAESTRO — objeto directo, singular.',
     ejes: { clase: 'sincopa', celda: 'ac.sg' } },
   { id: 'la-2d-08', punto: 'l2-segunda', entrada: E('magister'), celda: 'dat.pl', respuesta: 'magistrīs',
-    marco: 'Puerī ___ dōnum mittunt.', pista: 'Los niños envían un regalo A LOS MAESTROS — destinatario, plural.',
+    marco: 'Colōnī ___ dōnum mittunt.', pista: 'Los niños envían un regalo A LOS MAESTROS — destinatario, plural.',
     ejes: { clase: 'sincopa', celda: 'dat.pl' } },
 
   // ── LA EXCEPCIÓN, y su contraste ──
@@ -110,7 +123,7 @@ const LOTE_SEGUNDA_FUENTE: ItemClozeDerivado[] = [
     marco: 'Dominus ___ vocat.', pista: 'El señor llama A LOS ESCLAVOS — objeto directo, plural.',
     ejes: { clase: 'regular', celda: 'ac.pl' } },
   { id: 'la-2d-12', punto: 'l2-segunda', entrada: E('dōnum'), celda: 'ac.pl', respuesta: 'dōna',
-    marco: 'Puerī ___ exspectant.', pista: 'Los niños esperan LOS REGALOS — neutro plural, objeto directo.',
+    marco: 'Discipulī ___ exspectant.', pista: 'Los niños esperan LOS REGALOS — neutro plural, objeto directo.',
     ejes: { clase: 'regular', celda: 'ac.pl' } },
 ];
 
