@@ -61,10 +61,14 @@ export interface ItemConcordancia {
   };
 }
 
+import { revisarCobertura, type Cobertura } from './cobertura';
+
 export type ClaseFalloC =
   | 'respuesta-no-derivable' | 'eje-mal-declarado' | 'pista-regala-la-forma'
   | 'marco-mal' | 'repetido' | 'estrategia-ciega' | 'sin-trampa-de-genero'
-  | 'ejes-colineales';
+  | 'ejes-colineales'
+  | 'cobertura-cero'
+  | 'cobertura-sin-motivo';
 
 export interface FalloC { item: string; clase: ClaseFalloC; detalle: string }
 
@@ -139,8 +143,24 @@ export function revisarConcordancia(item: ItemConcordancia): FalloC[] {
   return out;
 }
 
+/** Sobre cuántos ítems decide de verdad cada comprobación. */
+export function coberturaConcordancia(items: ItemConcordancia[]): Cobertura[] {
+  const n = items.length;
+  const conDesinencia = items.filter((i) => desinenciaDe(i.sustantivo, i.celda) !== '').length;
+  const neutros = items.filter((i) => i.sustantivo.genero === 'n').length;
+  return [
+    { comprobacion: 'la respuesta contra la máquina', decididos: n, total: n },
+    { comprobacion: 'rimar como estrategia', decididos: conDesinencia, total: n,
+      motivoDeLosQueQuedanFuera: 'ante un -er de 2.ª o un nominativo de 3.ª no hay desinencia que copiar: la estrategia no produce nada' },
+    { comprobacion: 'la trampa del género español', decididos: neutros, total: n,
+      motivoDeLosQueQuedanFuera: 'el español no tiene neutro, así que sólo un sustantivo NEUTRO puede hacer discrepar los géneros' },
+    { comprobacion: 'la independencia de los dos ejes', decididos: n, total: n },
+  ];
+}
+
 export function revisarLoteC(items: ItemConcordancia[]): FalloC[] {
-  const out = items.flatMap(revisarConcordancia);
+  const out: FalloC[] = items.flatMap(revisarConcordancia);
+  out.push(...revisarCobertura(coberturaConcordancia(items)).map((f) => ({ item: f.item, clase: f.clase as unknown as ClaseFalloC, detalle: f.detalle })));
   const t = tasasCiegasC(items);
 
   if (t.rimar > TECHO_C) {

@@ -64,6 +64,8 @@ export interface ItemClozeDerivado {
   };
 }
 
+import { revisarCobertura, type Cobertura } from './cobertura';
+
 export type ClaseFalloD =
   | 'respuesta-no-derivable'
   | 'eje-mal-declarado'
@@ -72,7 +74,9 @@ export type ClaseFalloD =
   | 'estrategia-ciega'
   | 'sin-excepcion'
   | 'celda-gratis'
-  | 'marco-mal';
+  | 'marco-mal'
+  | 'cobertura-cero'
+  | 'cobertura-sin-motivo';
 
 export interface FalloD { item: string; clase: ClaseFalloD; detalle: string }
 
@@ -185,8 +189,24 @@ export function revisarClozeDerivado(item: ItemClozeDerivado): FalloD[] {
   return out;
 }
 
+/** Sobre cuántos ítems decide de verdad cada comprobación. */
+export function coberturaDerivado(items: ItemClozeDerivado[]): Cobertura[] {
+  const n = items.length;
+  const disc = items.filter((i) => i.ejes.clase === 'conserva' || i.ejes.clase === 'sincopa').length;
+  const vocs = items.filter((i) => i.celda === 'voc.sg').length;
+  return [
+    { comprobacion: 'la respuesta contra la máquina', decididos: n, total: n },
+    { comprobacion: 'copiar el lema o el genitivo', decididos: n, total: n },
+    { comprobacion: 'las dos derivaciones del tema', decididos: disc, total: n,
+      motivoDeLosQueQuedanFuera: 'en un nombre regular las dos derivaciones coinciden, así que el ítem no las distingue' },
+    { comprobacion: 'el vocativo en -e', decididos: vocs, total: n,
+      motivoDeLosQueQuedanFuera: 'sólo un ítem de vocativo singular puede examinarlo' },
+  ];
+}
+
 export function revisarLoteD(items: ItemClozeDerivado[]): FalloD[] {
-  const out = items.flatMap(revisarClozeDerivado);
+  const out: FalloD[] = items.flatMap(revisarClozeDerivado);
+  out.push(...revisarCobertura(coberturaDerivado(items)).map((f) => ({ item: f.item, clase: f.clase as unknown as ClaseFalloD, detalle: f.detalle })));
   const t = tasasCiegasD(items);
   const pct = (x: number) => `${(100 * x).toFixed(0)} %`;
   for (const [nombre, valor, glosa] of [

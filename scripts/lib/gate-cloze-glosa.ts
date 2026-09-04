@@ -46,6 +46,8 @@
 // órdenes —incluidos SOV y SVO, los dos más frecuentes— en vez de
 // prohibirlos, que es además el latín que el alumno se va a encontrar.
 
+import { revisarCobertura, type Cobertura } from './cobertura';
+
 export interface PalabraGlosada {
   la: string;
   es: string;
@@ -98,7 +100,9 @@ export type ClaseFallo =
   | 'fuga-morfologica'
   | 'ejes-repetidos'
   | 'eje-mal-declarado'
-  | 'estrategia-ciega';
+  | 'estrategia-ciega'
+  | 'cobertura-cero'
+  | 'cobertura-sin-motivo';
 
 export interface FalloClozeGlosa { item: string; clase: ClaseFallo; detalle: string }
 
@@ -188,8 +192,22 @@ export function revisarClozeGlosa(item: ItemClozeGlosa): FalloClozeGlosa[] {
   return out;
 }
 
+/** Sobre cuántos ítems decide de verdad cada comprobación de este gate. */
+export function coberturaGlosa(items: ItemClozeGlosa[]): Cobertura[] {
+  const n = items.length;
+  const conDosPapeles = items.filter((i) => papeles(i).length >= 2).length;
+  return [
+    { comprobacion: 'las tres estrategias ciegas', decididos: n, total: n },
+    { comprobacion: 'la fuga morfológica', decididos: conDosPapeles, total: n,
+      motivoDeLosQueQuedanFuera: conDosPapeles < n ? 'sin dos papeles no hay dos candidatos que el artículo pueda repartir' : undefined },
+    { comprobacion: 'el orden declarado contra los datos', decididos: items.filter((i) => ordenReal(i) !== null).length, total: n,
+      motivoDeLosQueQuedanFuera: 'una frase sin los tres papeles no tiene orden que leer' },
+  ];
+}
+
 export function revisarLote(items: ItemClozeGlosa[]): FalloClozeGlosa[] {
-  const out = items.flatMap(revisarClozeGlosa);
+  const out: FalloClozeGlosa[] = items.flatMap(revisarClozeGlosa);
+  out.push(...revisarCobertura(coberturaGlosa(items)).map((f) => ({ item: f.item, clase: f.clase as unknown as ClaseFallo, detalle: f.detalle })));
 
   // ── LO QUE SÓLO SE VE EN EL LOTE ──
   const t = tasasCiegas(items);
