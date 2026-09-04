@@ -36,6 +36,9 @@ export const NOMBRES_L1: EntradaNominal[] = [
   // en los propios Evangelios: `adultera` (Mt 12, Mt 16, Mc 8) y
   // `adulterī` (Lc 18, 1 Co 6).
   { lema: 'adulter', genitivo: 'adulterī', genero: 'm', glosa: 'adúltero' },
+  // Préstamo griego, declinado a la griega y con paradigma declarado en
+  // `IRREGULARES`. 846 apariciones: el nombre propio más frecuente.
+  { lema: 'Iēsus', genitivo: 'Iēsū', genero: 'm', glosa: 'Jesús', soloSingular: true },
   // ── 3.ª. El nominativo NO se deduce del tema y el tema NO se deduce del
   //    nominativo: es el punto `l2-genitivo-clave` en su forma más pura.
   { lema: 'rēx', genitivo: 'rēgis', genero: 'm', glosa: 'rey' },

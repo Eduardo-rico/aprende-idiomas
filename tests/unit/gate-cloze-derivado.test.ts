@@ -19,7 +19,7 @@ function mk(id: string, e: EntradaNominal, celda: ItemClozeDerivado['celda'],
   const [c, n] = celda.split('.') as ['nom', 'sg'];
   return { id, punto: 'l2-segunda', entrada: e, celda, respuesta: declinar(e, c, n),
     marco: 'Dominus ___ videt.', pista: 'el contexto español que fija la celda',
-    ejes: { clase, celda } };
+    ejes: { examina: 'tema' as const, clase, celda } };
 }
 
 describe('las dos derivaciones son COMPLEMENTARIAS sobre los -er', () => {
@@ -87,7 +87,7 @@ describe('CONTROLES DE ÍTEM', () => {
   });
 
   it('CAZA la clase declarada que los datos desmienten', () => {
-    const malo = { ...mk('a', AGER, 'ac.sg', 'sincopa'), ejes: { clase: 'conserva' as const, celda: 'ac.sg' as const } };
+    const malo = { ...mk('a', AGER, 'ac.sg', 'sincopa'), ejes: { examina: 'tema' as const, clase: 'conserva' as const, celda: 'ac.sg' as const } };
     expect(revisarClozeDerivado(malo).map((x) => x.clase)).toContain('eje-mal-declarado');
   });
 

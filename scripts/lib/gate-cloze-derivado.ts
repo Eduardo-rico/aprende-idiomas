@@ -55,12 +55,24 @@ export interface ItemClozeDerivado {
   marco: string;
   /** El contexto español que fija la celda sin regalar la forma. */
   pista: string;
+  /** Por qué la respuesta puede coincidir con el lema sin ser gratis.
+   *  Obligatorio cuando coinciden: en `l2-vocativo` que el vocativo SEA el
+   *  nominativo es el contenido del punto —el 63 % del corpus— y marcarlo
+   *  como celda gratis sería aplicar un gate donde su premisa no vale. */
+  porQueNoEsGratis?: string;
   ejes: {
     /** `regular` = `-us`/`-a`, donde las dos derivaciones coinciden y el
      *  ítem no discrimina; `conserva` = `puer/puerī`; `sincopa` =
      *  `ager/agrī`; `voc-ius` = la excepción. */
     clase: 'regular' | 'conserva' | 'sincopa' | 'voc-ius';
     celda: CeldaNominal;
+    /** Qué eje examina este ítem. El formato es el mismo y el punto no:
+     *  `l2-segunda` va del tema y `l2-vocativo` del vocativo. Sin
+     *  declararlo, el gate medía las rutas del tema en un lote de
+     *  vocativo y las daba al 100 % — porque ahí no hay nada que
+     *  discriminar. Adivinarlo desde las clases no basta: un lote de
+     *  vocativo tiene `-er` igual. */
+    examina: 'tema' | 'vocativo';
   };
 }
 
@@ -112,6 +124,27 @@ export function respuestaSincopada(e: EntradaNominal, celda: CeldaNominal): stri
   try { const [c, n] = parte(celda); return norm(declinar(falsa, c, n)); } catch { return ''; }
 }
 
+// ── LAS RUTAS CIEGAS DEL VOCATIVO ────────────────────────────────────
+//
+// Mismo formato, OTRO punto, otro eje. `l2-segunda` se decide entre
+// conservar y sincopar el tema; `l2-vocativo` entre que el vocativo
+// coincida con el nominativo o no. Las estrategias son distintas y viven
+// aquí al lado, no reutilizadas: un gate probado para un punto no está
+// probado para otro aunque el formato sea el mismo.
+//
+//   · **copiar el nominativo** — acierta en el 63 % del latín real, así
+//     que es la ruta buena la mayoría de las veces y falla justo en la 2.ª
+//     en `-us`.
+//   · **poner siempre -e** — acierta en `domine` y falla en todo lo demás,
+//     incluidas las dos ramas de la excepción (`fīlī`, `Iēsū`).
+export function copiarNominativo(item: ItemClozeDerivado): string {
+  try { return norm(declinar(item.entrada, 'nom', 'sg')); } catch { return ''; }
+}
+export function vocativoSiempreE(item: ItemClozeDerivado): string {
+  const tema = norm(item.entrada.genitivo).replace(/(ae|ī|is)$/, '');
+  return tema + 'e';
+}
+
 export function tasasCiegasD(items: ItemClozeDerivado[]) {
   const n = items.length || 1;
   const acierta = (f: (i: ItemClozeDerivado) => string) =>
@@ -131,6 +164,12 @@ export function tasasCiegasD(items: ItemClozeDerivado[]) {
     sincoparSiempre: sobre(disc, (i) => respuestaSincopada(i.entrada, i.celda)),
     vocativoEnE: vocs.length === 0 ? 0 : sobre(vocs, (i) => norm(temaDelNominativo(i.entrada) + 'e')),
     discriminantes: disc.length,
+    // Las dos del vocativo, medidas SÓLO sobre los ítems de vocativo: en
+    // los demás no son aplicables y meterlos en el denominador diluiría la
+    // tasa hasta dejar pasar un lote que no examina nada.
+    copiarNominativo: sobre(vocs, copiarNominativo),
+    vocSiempreE: sobre(vocs, vocativoSiempreE),
+    vocativos: vocs.length,
   };
 }
 
@@ -172,9 +211,15 @@ export function revisarClozeDerivado(item: ItemClozeDerivado): FalloD[] {
   // quita las celdas cuya respuesta ya está a la vista, de un eje de doce:
   // las demás siguen libres y ninguna queda fijada.
   for (const [qué, valor] of [['el lema', item.entrada.lema], ['el genitivo', item.entrada.genitivo]] as const) {
-    if (norm(valor) === norm(item.respuesta)) {
-      push('celda-gratis', `la respuesta «${item.respuesta}» es ${qué}, que va en la entrada del lexicón: se contesta copiando`);
-    }
+    if (norm(valor) !== norm(item.respuesta)) continue;
+    // ── LA EXENCIÓN, Y POR QUÉ EXISTE ──
+    // Este gate nació para `l2-segunda`, donde copiar es un atajo. En
+    // `l2-vocativo` la respuesta COINCIDE con el nominativo en el 63 % de
+    // los casos y eso ES el punto. Un gate llevado a otro punto sin
+    // reenunciar su premisa marca el contenido como defecto. Se exime con
+    // el motivo escrito, no en silencio.
+    if (item.porQueNoEsGratis && item.porQueNoEsGratis.trim().length >= 20) continue;
+    push('celda-gratis', `la respuesta «${item.respuesta}» es ${qué}, que va en la entrada del lexicón: se contesta copiando (y si aquí eso ES el punto, hay que decirlo en \`porQueNoEsGratis\`)`);
   }
 
   // Ni la pista ni el marco pueden llevar la forma dentro. Es la fuga que
@@ -204,6 +249,8 @@ export function coberturaDerivado(items: ItemClozeDerivado[]): Cobertura[] {
       motivoDeLosQueQuedanFuera: 'en un nombre regular las dos derivaciones coinciden, así que el ítem no las distingue' },
     { comprobacion: 'el vocativo en -e', decididos: vocs, total: n,
       motivoDeLosQueQuedanFuera: 'sólo un ítem de vocativo singular puede examinarlo' },
+    { comprobacion: 'copiar el nominativo', decididos: vocs, total: n,
+      motivoDeLosQueQuedanFuera: 'fuera del vocativo la estrategia no es aplicable' },
   ];
 }
 
@@ -225,30 +272,50 @@ export function revisarLoteD(items: ItemClozeDerivado[]): FalloD[] {
   out.push(...revisarCobertura(coberturaDerivado(items)).map((f) => ({ item: f.item, clase: f.clase as unknown as ClaseFalloD, detalle: f.detalle })));
   const t = tasasCiegasD(items);
   const pct = (x: number) => `${(100 * x).toFixed(0)} %`;
-  for (const [nombre, valor, glosa] of [
+  // ── LAS RUTAS QUE SE MIDEN DEPENDEN DEL PUNTO, NO DEL FORMATO ──
+  //
+  // Mismo formato y distinto punto: `l2-segunda` se decide entre conservar
+  // y sincopar el tema, `l2-vocativo` entre que el vocativo coincida con
+  // el nominativo o no. Medir las del tema en un lote de vocativo es
+  // pedirle a un punto que examine el de al lado — y salían al 100 %,
+  // porque ahí no hay nada que discriminar.
+  const delTema = items.some((i) => i.ejes.examina === 'tema');
+  const delVocativo = items.some((i) => i.ejes.examina === 'vocativo');
+  const rutas: [string, number, string][] = [
     ['copiar el lema', t.copiarLema, 'responder con el nominativo'],
     ['copiar el genitivo', t.copiarGenitivo, 'responder con el genitivo que se le enseña'],
+  ];
+  if (delTema) rutas.push(
     ['tema del nominativo', t.temaDelNominativo, 'sacar el tema del nominativo en vez del genitivo'],
     ['sincopar siempre', t.sincoparSiempre, 'suponer que la vocal del -er cae siempre'],
-    ['vocativo en -e', t.vocativoEnE, 'poner -e en todos los vocativos'],
-  ] as const) {
+  );
+  if (delVocativo) rutas.push(
+    ['copiar el nominativo', t.copiarNominativo, 'devolver el nominativo tal cual, que acierta en el 63 % del latín real'],
+    ['-e en el vocativo', t.vocSiempreE, 'darle al vocativo la desinencia -e siempre'],
+  );
+  for (const [nombre, valor, glosa] of rutas) {
     if (valor > TECHO_D) {
       out.push({ item: '(lote)', clase: 'estrategia-ciega',
         detalle: `«${nombre}» —${glosa}— acierta el ${pct(valor)}: por encima del ${pct(TECHO_D)}` });
     }
   }
 
+
   // Sin ítems que discriminen, las tasas de tema son 0 por vacío y el gate
   // callaría sobre un lote que no examina el punto. Es «ocho ítems que no
   // varían son uno», visto desde el denominador.
-  if (t.discriminantes < 4) {
+  // Las rutas del TEMA sólo se miden donde el punto va del tema. En un
+  // lote de vocativo no hay nada que discriminar ahí, y exigirlo sería
+  // pedirle a un punto que examine el de al lado.
+  const vaDelTema = items.some((i) => i.ejes.examina === 'tema');
+  if (vaDelTema && t.discriminantes < 4) {
     out.push({ item: '(lote)', clase: 'estrategia-ciega',
       detalle: `sólo ${t.discriminantes} ítems discriminan el tema (hacen falta ≥4): en los regulares las dos derivaciones coinciden y el ítem no examina el punto` });
   }
 
   // LA EXCEPCIÓN DECLARADA. Sin un ítem de `-ius`, el alumno saca 8/8
   // sobregeneralizando el vocativo en -e y el corpus lo certifica.
-  if (!items.some((i) => i.ejes.clase === 'voc-ius')) {
+  if (vaDelTema && !items.some((i) => i.ejes.clase === 'voc-ius')) {
     out.push({ item: '(lote)', clase: 'sin-excepcion',
       detalle: 'ningún ítem examina el vocativo de los -ius (`fīlī`, no `fīlie`): la regla se puede sobregeneralizar entera' });
   }

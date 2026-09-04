@@ -29,6 +29,10 @@ export interface EntradaNominal {
   genitivo: string;  // genitivo singular, macronizado — de aquí sale el tema
   genero: 'm' | 'f' | 'n';
   glosa: string;
+  /** Sin plural. `Iēsus` no lo tiene, y sin declararlo `paradigmaNominal`
+   *  cae en `declinacionDe` y revienta con un genitivo que no es de
+   *  ninguna de las cinco. */
+  soloSingular?: boolean;
   /** Sólo en la 3.ª: si el tema es en `-i`. No se deduce de la forma
    *  —`urbs/urbis` lo es y `rēx/rēgis` no— así que es DATO, como el
    *  genitivo. Cambia el genitivo plural (`-ium`) y, en los neutros, el
@@ -77,7 +81,28 @@ export function declinacionDe(e: EntradaNominal): Declinacion {
 const temaDe = (e: EntradaNominal) =>
   e.genitivo.normalize('NFC').replace(/(ae|ī|is)$/, '');
 
+// ── IRREGULARES DECLARADOS, uno por uno y con su cuenta ──────────────
+//
+// No es una clase productiva: son préstamos griegos que la Vulgata declina
+// a la griega. `Iēsus` es el nombre propio más frecuente del corpus —846
+// apariciones— y su paradigma medido es nominativo `Iēsus`, acusativo
+// `Iēsum` y **`Iēsū` en todo lo demás** (genitivo 128, ablativo 88, dativo
+// 10, vocativo 9). Una máquina de reglas no lo produce, y fingir que sí
+// habría dado `*Iēse` en el vocativo — que es la forma que el alumno
+// nunca ve y la que la regla del `-us` predice.
+//
+// Van aquí y no como excepción de otro punto, que es el error que ya
+// costó tres veces.
+const IRREGULARES: Record<string, Partial<Record<`${Caso}.${Numero}`, string>>> = {
+  'Iēsus': {
+    'nom.sg': 'Iēsus', 'ac.sg': 'Iēsum', 'gen.sg': 'Iēsū',
+    'dat.sg': 'Iēsū', 'abl.sg': 'Iēsū', 'voc.sg': 'Iēsū',
+  },
+};
+
 export function declinar(e: EntradaNominal, caso: Caso, num: Numero): string {
+  const irr = IRREGULARES[e.lema.normalize('NFC')]?.[`${caso}.${num}` as `${Caso}.${Numero}`];
+  if (irr) return irr;
   const decl = declinacionDe(e);
   const tema = temaDe(e);
   const i = ORDEN.indexOf(caso);
@@ -127,7 +152,8 @@ export function declinar(e: EntradaNominal, caso: Caso, num: Numero): string {
 
 export function paradigmaNominal(e: EntradaNominal): Record<string, string> {
   const out: Record<string, string> = {};
-  for (const num of ['sg', 'pl'] as const) for (const caso of ORDEN) out[`${caso}.${num}`] = declinar(e, caso, num);
+  const numeros = e.soloSingular ? (['sg'] as const) : (['sg', 'pl'] as const);
+  for (const num of numeros) for (const caso of ORDEN) out[`${caso}.${num}`] = declinar(e, caso, num);
   return out;
 }
 

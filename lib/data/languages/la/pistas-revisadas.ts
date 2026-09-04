@@ -129,3 +129,25 @@ export const PISTAS_L5: PistasDeclaradas<ItemTransformacion> = {
 // presente (`amat` contra `dūcit`), la del infinitivo (`amāre` contra
 // `dūcere`), y los remates `-eō` / `-iō` del lema. Identificar la
 // conjugación es literalmente lo que el punto examina.
+
+// ── EL VOCATIVO: LISTA AÚN NO REVISADA, Y SE DICE ────────────────────
+//
+// El lote de `l2-vocativo` es posterior al informe del latinista, así que
+// su lista la escribió el autor. Eso vale menos y el veredicto sale
+// marcado `pistas-sin-revisar`, que es la verdad y no un descuido.
+export const PISTAS_L2V: PistasDeclaradas<ItemClozeDerivado> = {
+  revisadaPor: 'sin revisar',
+  pistas: [
+    { nombre: 'el lema acaba en -er', vale: (i) => /er$/.test(i.entrada.lema.normalize('NFC')) },
+    { nombre: 'el lema es largo', vale: (i) => i.entrada.lema.length >= 7 },
+    { nombre: 'lleva rayita', vale: (i) => conMacron(i.entrada.lema) },
+    { nombre: 'el marco empieza por el hueco', vale: (i) => i.marco.startsWith('___') },
+    porPosicion<ItemClozeDerivado>(),
+  ],
+};
+// EXCLUIDA de l2-vocativo, y es la que más acierta: «el lema acaba en
+// -us». Con ella, «si acaba en -us pon -e, si no copia el nominativo»
+// saca 9/10 con p = 0,013. Pero eso ES la regla que el punto enseña, y
+// falla exactamente en `fīlī`, que es la excepción — o sea que el ítem
+// que la separa del alumno que sabe es justo el que tiene que estar.
+// Meterla en la lista habría empujado a destruir el punto.

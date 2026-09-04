@@ -67,13 +67,13 @@ const LOTE_SEGUNDA_FUENTE: ItemClozeDerivado[] = [
   // ── conserva la vocal: puer / puerī ──
   { id: 'la-2d-01', punto: 'l2-segunda', entrada: E('puer'), celda: 'ac.sg', respuesta: 'puerum',
     marco: 'Magister ___ vocat.', pista: 'El maestro llama AL NIÑO — objeto directo, singular.',
-    ejes: { clase: 'conserva', celda: 'ac.sg' } },
+    ejes: { examina: 'tema', clase: 'conserva', celda: 'ac.sg' } },
   { id: 'la-2d-02', punto: 'l2-segunda', entrada: E('puer'), celda: 'dat.sg', respuesta: 'puerō',
     marco: 'Dominus ___ dōnum mittit.', pista: 'El señor envía un regalo AL NIÑO — destinatario, singular.',
-    ejes: { clase: 'conserva', celda: 'dat.sg' } },
+    ejes: { examina: 'tema', clase: 'conserva', celda: 'dat.sg' } },
   { id: 'la-2d-03', punto: 'l2-segunda', entrada: E('puer'), celda: 'dat.pl', respuesta: 'puerīs',
     marco: 'Dominī ___ dōnum mittunt.', pista: 'Los maestros envían un regalo A LOS NIÑOS — destinatario, plural.',
-    ejes: { clase: 'conserva', celda: 'dat.pl' } },
+    ejes: { examina: 'tema', clase: 'conserva', celda: 'dat.pl' } },
   // ── EL QUE ROMPE LA REGLA FALSA ──
   //
   // Sin él, los tres lemas discriminantes correlacionaban: el único que
@@ -94,37 +94,37 @@ const LOTE_SEGUNDA_FUENTE: ItemClozeDerivado[] = [
   // que es la lectura declarada del nivel.
   { id: 'la-2d-04', punto: 'l2-segunda', entrada: E('adulter'), celda: 'ac.pl', respuesta: 'adulterōs',
     marco: 'Magister ___ monet.', pista: 'El maestro advierte A LOS ADÚLTEROS — objeto directo, plural.',
-    ejes: { clase: 'conserva', celda: 'ac.pl' } },
+    ejes: { examina: 'tema', clase: 'conserva', celda: 'ac.pl' } },
 
   // ── pierde la vocal: ager / agrī, magister / magistrī ──
   { id: 'la-2d-05', punto: 'l2-segunda', entrada: E('ager'), celda: 'ac.sg', respuesta: 'agrum',
     marco: 'Colōnus ___ videt.', pista: 'El colono ve EL CAMPO — objeto directo, singular.',
-    ejes: { clase: 'sincopa', celda: 'ac.sg' } },
+    ejes: { examina: 'tema', clase: 'sincopa', celda: 'ac.sg' } },
   { id: 'la-2d-06', punto: 'l2-segunda', entrada: E('ager'), celda: 'ac.pl', respuesta: 'agrōs',
     marco: 'Colōnī ___ custōdiunt.', pista: 'Los colonos guardan LOS CAMPOS — objeto directo, plural.',
-    ejes: { clase: 'sincopa', celda: 'ac.pl' } },
+    ejes: { examina: 'tema', clase: 'sincopa', celda: 'ac.pl' } },
   { id: 'la-2d-07', punto: 'l2-segunda', entrada: E('magister'), celda: 'ac.sg', respuesta: 'magistrum',
     marco: 'Discipulus ___ salūtat.', pista: 'El discípulo saluda AL MAESTRO — objeto directo, singular.',
-    ejes: { clase: 'sincopa', celda: 'ac.sg' } },
+    ejes: { examina: 'tema', clase: 'sincopa', celda: 'ac.sg' } },
   { id: 'la-2d-08', punto: 'l2-segunda', entrada: E('magister'), celda: 'dat.pl', respuesta: 'magistrīs',
     marco: 'Colōnī ___ dōnum mittunt.', pista: 'Los niños envían un regalo A LOS MAESTROS — destinatario, plural.',
-    ejes: { clase: 'sincopa', celda: 'dat.pl' } },
+    ejes: { examina: 'tema', clase: 'sincopa', celda: 'dat.pl' } },
 
   // ── LA EXCEPCIÓN, y su contraste ──
   { id: 'la-2d-09', punto: 'l2-segunda', entrada: E('fīlius'), celda: 'voc.sg', respuesta: 'fīlī',
     marco: '___, dominus dōnum mittit.', pista: 'Se le habla AL HIJO. Ojo: los -ius no hacen el vocativo en -e.',
-    ejes: { clase: 'voc-ius', celda: 'voc.sg' } },
+    ejes: { examina: 'tema', clase: 'voc-ius', celda: 'voc.sg' } },
   { id: 'la-2d-10', punto: 'l2-segunda', entrada: E('dominus'), celda: 'voc.sg', respuesta: 'domine',
     marco: '___, discipulī verba audiunt.', pista: 'Se le habla AL SEÑOR — el vocativo regular de la 2.ª.',
-    ejes: { clase: 'regular', celda: 'voc.sg' } },
+    ejes: { examina: 'tema', clase: 'regular', celda: 'voc.sg' } },
 
   // ── regulares: no examinan el tema, y por eso no cuentan para su tasa ──
   { id: 'la-2d-11', punto: 'l2-segunda', entrada: E('servus'), celda: 'ac.pl', respuesta: 'servōs',
     marco: 'Dominus ___ vocat.', pista: 'El señor llama A LOS ESCLAVOS — objeto directo, plural.',
-    ejes: { clase: 'regular', celda: 'ac.pl' } },
+    ejes: { examina: 'tema', clase: 'regular', celda: 'ac.pl' } },
   { id: 'la-2d-12', punto: 'l2-segunda', entrada: E('dōnum'), celda: 'ac.pl', respuesta: 'dōna',
     marco: 'Discipulī ___ exspectant.', pista: 'Los niños esperan LOS REGALOS — neutro plural, objeto directo.',
-    ejes: { clase: 'regular', celda: 'ac.pl' } },
+    ejes: { examina: 'tema', clase: 'regular', celda: 'ac.pl' } },
 ];
 
 /** El lote tal como se publica: barajado con `SEMILLA_DE_ORDEN`. */
