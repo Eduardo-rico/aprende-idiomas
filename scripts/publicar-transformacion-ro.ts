@@ -18,7 +18,7 @@ import path from 'node:path';
 import { BLOCKS, ALL_CONCEPTS } from '../lib/data/languages/ro/curriculum';
 import { blocksDir } from '../lib/data/registry';
 import { hashKey } from './lib/cache';
-import { verificar, informe, type ItemTransRo, type Opciones } from './lib/transformacion-ro';
+import { verificar, informe, ordenDePublicacion, type ItemTransRo, type Opciones } from './lib/transformacion-ro';
 import { camposSinDeclarar } from './lib/gates-por-formato';
 import { ITEMS as L23, OPCIONES as OP_L23 } from './lotes/trans-ro-l23';
 import { ITEMS as L24, OPCIONES as OP_L24 } from './lotes/trans-ro-l24';
@@ -34,7 +34,16 @@ const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? 
 const lote = arg('--lote') ?? '';
 const LOTE = LOTES[lote];
 if (!LOTE) { console.error(`Usa --lote con uno de: ${Object.keys(LOTES).join(', ')}`); process.exit(2); }
-const ITEMS = LOTE.items;
+// EL ORDEN EN QUE SE PUBLICA ES UNA PISTA, y por eso no es el orden en
+// que está escrito el fichero salvo que el lote lo declare así. En latín
+// cuatro lotes de cinco se resolvían CONTANDO ejercicios: escritos
+// agrupados por eje y servidos por `ExerciseRunner` con `exercises[idx]`,
+// al alumno le bastaba notar que a partir del séptimo cambia la
+// respuesta. El fichero se sigue escribiendo agrupado —así se revisa— y
+// lo que se escribe en el bloque va en `ordenDePublicacion`, que es la
+// MISMA función que mira el gate: si fueran dos, el gate certificaría un
+// orden distinto del publicado.
+const ITEMS = ordenDePublicacion(LOTE.items, LOTE.op.semilla ?? 'orden-escrito');
 const write = process.argv.includes('--write');
 const HOY = new Date().toISOString().slice(0, 10);
 const BLOCKS_DIR = blocksDir('ro');

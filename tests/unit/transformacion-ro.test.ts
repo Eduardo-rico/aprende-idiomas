@@ -30,7 +30,11 @@ const JUICIOS: JuiciosLote = {
 const COMPROBACIONES: Comprobacion[] = [
   { afirmacion: 'el imperativo «vino» se usa', patron: 'vino', espera: 'presente' },
 ];
-const OP: Opciones = { juicios: JUICIOS, comprobaciones: COMPROBACIONES };
+// `semilla` es obligatoria desde el 2026-09-04 (el orden publicado es una
+// pista): el lote base la declara para que los rojos de abajo midan lo
+// que dicen medir y no el aviso del orden. Su propio rojo y su verde
+// viven en `orden-transformacion-ro.test.ts`.
+const OP: Opciones = { juicios: JUICIOS, comprobaciones: COMPROBACIONES, semilla: 'orden-escrito' };
 
 /** Un lote base SANO, con estrategias mezcladas a propósito: dos ediciones
  *  distintas, un ítem que se contesta copiando y un espejo. */
@@ -339,7 +343,7 @@ describe('transformación RO · las afirmaciones se EJECUTAN contra el corpus', 
   });
 
   it('un lote sin NINGUNA comprobación no se publica', () => {
-    expect(verificarLote(BASE, { juicios: JUICIOS }).join()).toMatch(/COMPROBACIÓN AUSENTE/);
+    expect(verificarLote(BASE, { juicios: JUICIOS, semilla: 'orden-escrito' }).join()).toMatch(/COMPROBACIÓN AUSENTE/);
     expect(verificarLote(BASE, OP).filter((x) => /COMPROBACIÓN/.test(x))).toEqual([]);
   });
 });

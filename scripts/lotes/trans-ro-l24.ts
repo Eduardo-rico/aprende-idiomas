@@ -388,6 +388,10 @@ export const COMPROBACIONES: Comprobacion[] = [
 ];
 
 export const OPCIONES: Opciones = {
+  // Igual que el 23: publicado en el orden escrito y medido limpio el
+  // 2026-09-04. El eje singular/plural va DICHO en la consigna, así que
+  // agruparlos no le regala nada a nadie.
+  semilla: 'orden-escrito',
   comprobaciones: COMPROBACIONES,
   // LAS DOS RUTAS DE TRANSFERENCIA VAN LAS DOS EN EL TOPE, por orden del
   // coordinador y contra el argumento que este mismo fichero defendía en

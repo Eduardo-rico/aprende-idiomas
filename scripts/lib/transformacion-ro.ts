@@ -57,6 +57,8 @@ import { revisarOrtografiaRo } from '../../lib/lang/ortografia-ro';
 import { varianzaDe, UMBRAL } from './varianza';
 import { answersMatchCard } from '../../lib/exercises/normalize';
 import { buscar, controles, INI, FIN } from '../corpus-ro';
+import { separablePorPosicion } from './atajos';
+import { ordenPublicado, patronDe } from './orden-publicado';
 
 export const TOPE_ESTRATEGIA = 0.5;
 export const TOPE_ESPEJO = 0.5;
@@ -376,6 +378,23 @@ export interface Opciones {
    *  esa promesa tiene que tener un gate, o la consigna y las claves se
    *  desincronizan en el ítem que alguien añada dentro de dos meses. */
   gatesPropios?: (items: readonly ItemTransRo[]) => string[];
+  /** LA SEMILLA DEL ORDEN PUBLICADO, y es obligatoria desde el
+   *  2026-09-04. Ver `ordenSeparable()`: el lote se ESCRIBE agrupado por
+   *  eje —así se revisa— y se PUBLICA barajado con esta semilla, porque
+   *  `ExerciseRunner` sirve los ejercicios en el orden del fichero y ese
+   *  orden es una pista gratis. Va en la firma, y no dentro de la
+   *  máquina, para que quede escrita en el lote y el orden publicado sea
+   *  reproducible: un azar sin semilla cambia el veredicto entre
+   *  corridas. */
+  semilla?: Semilla;
+  /** EJES PROPIOS del lote, además de los dos de serie (la edición sobre
+   *  el foco y la consigna). Un lote cuya clase de respuesta sea
+   *  SEMÁNTICA —la configuración sintáctica del 25, «¿lleva artículo o
+   *  no?»— tiene que declararla aquí, porque el detector no puede
+   *  adivinarla y **un eje mal elegido devuelve un verde tranquilizador
+   *  sobre la pista que sí existe**: sobre el lote 25, los dos ejes de
+   *  serie salen limpios y su familia se separa al 100 %. */
+  ejes?: Record<string, (x: ItemTransRo) => string>;
 }
 
 export function verificar(items: ItemTransRo[], op: Opciones): string[] {
@@ -482,6 +501,9 @@ export function verificarLote(items: ItemTransRo[], op: Opciones): string[] {
   else if (!items.some((x) => x.sobreaplicacion) && !op.juicios.frontera.startsWith('SIN FRONTERA:'))
     v.push('FRONTERA: ningún ítem declara `sobreaplicacion` y el juicio no empieza por «SIN FRONTERA:» con su motivo');
 
+  // ── EL ORDEN PUBLICADO, QUE ES UNA PISTA GRATIS ─────────────────
+  v.push(...ordenSeparable(items, op.semilla, op.ejes));
+
   v.push(...(op.gatesPropios?.(items) ?? []));
 
   // ── LAS AFIRMACIONES, EJECUTADAS CONTRA EL CORPUS ───────────────
@@ -490,6 +512,132 @@ export function verificarLote(items: ItemTransRo[], op: Opciones): string[] {
     v.push('COMPROBACIÓN AUSENTE: el lote no pone ni una de sus afirmaciones de atestación delante del corpus, y un motivo escrito garantiza presencia, nunca verdad');
   else v.push(...comprobarEnCorpus(op.comprobaciones).problemas);
 
+  return v;
+}
+
+/** LA CLASE DE UN ÍTEM: la EDICIÓN que la transformación aplica al foco,
+ *  como `quita→pone`. Es el «eje» del ítem escrito de forma computable —
+ *  `un→doi` frente a `un→două`, identidad frente a `-ți`— y por eso es lo
+ *  que hay que cruzar con la posición. */
+export const ejeDe = (x: ItemTransRo) => { const e = edicion(x.foco, x.nucleo); return `${e.quita}→${e.pone}`; };
+
+/** ¿LA POSICIÓN EN EL LOTE PREDICE LA RESPUESTA?
+ *
+ *  ══ POR QUÉ ESTO EXISTE, Y ES EL AGUJERO MÁS BARATO DE LA NOCHE ══════
+ *  El detector (`separablePorPosicion`, en `scripts/lib/atajos.ts`) lleva
+ *  en el repositorio desde el portugués, lo llaman `preflight-lote.ts`,
+ *  `pares-minimos.ts` y los cinco gates de latín — y **esta máquina, que
+ *  se construyó desde cero el 2026-09-03, no lo llamaba**. En latín eso
+ *  costó CUATRO lotes de cinco resueltos al 100 % contando ejercicios:
+ *  escritos agrupados por eje (primero los seis de un tipo, luego los
+ *  seis del otro, porque así se revisan) y servidos por `ExerciseRunner`
+ *  en el orden del fichero, al alumno le bastaba notar que a partir del
+ *  séptimo cambia la respuesta. Ninguna pista de la lengua: **el orden
+ *  del fichero ERA la respuesta.**
+ *
+ *  > **Un detector que existe en el repositorio y no se llama es peor que
+ *  > no tenerlo: da sensación de cobertura.** Los tres «sin atajo» que
+ *  > esta máquina había firmado estaban calculados sobre listas de pistas
+ *  > a las que les faltaba la más barata que hay.
+ *
+ *  ══ CÓMO SE MIDE ════════════════════════════════════════════════════
+ *  `separablePorPosicion` contesta sobre un patrón BINARIO, y un lote de
+ *  transformación puede tener más de dos ejes (el 25 tenía cinco
+ *  configuraciones). Así que se corre **uno-contra-el-resto por cada eje
+ *  distinto**: si existe un corte de posición —o la paridad— que aísle
+ *  cualquiera de ellos al 100 %, el lote se contesta contando.
+ *
+ *  ══ Y LA CURA NO ES ALTERNAR ════════════════════════════════════════
+ *  La alternancia estricta la caza el mismo detector por paridad. El
+ *  fichero se sigue escribiendo agrupado y **lo que se publica va
+ *  barajado con semilla fija** (`ordenPublicado`, que se IMPORTA de
+ *  `orden-publicado.ts` y no se copia: la escribió la sesión del latín el
+ *  mismo día y una regla copiada se desincroniza). Por eso este gate mide
+ *  el orden PUBLICADO y no el declarado: lo que hay que proteger es lo
+ *  que el alumno ve. */
+export const EJES_DE_SERIE: Record<string, (x: ItemTransRo) => string> = {
+  // La EDICIÓN sobre el foco. Sirve cuando la operación ES la clase de
+  // respuesta y la consigna NO la nombra: `un→doi` frente a `un→două`
+  // bajo una consigna única es exactamente el caso del latín.
+  edición: ejeDe,
+};
+
+/** ¿ESTÁ ESTE EJE YA DICHO POR LA CONSIGNA?
+ *
+ *  ══ LA MITAD QUE EL PUERTO DEL DETECTOR NO TRAÍA ════════════════════
+ *  Enchufado tal cual, el detector marca **los tres lotes publicados**:
+ *  l23 singular 1-7 y plural 8-9, l24 cuatro y cuatro, l25 agrupado por
+ *  configuración. **Y los tres hallazgos son FALSOS**, por una diferencia
+ *  de formato con el latín que hay que dejar escrita:
+ *
+ *  > En latín el eje era una propiedad de la FRASE —sujeto delante o
+ *  > detrás, marca `-bi-` o `-ē-`— que el alumno tenía que PERCIBIR. Aquí
+ *  > el eje suele ir dicho en la consigna: «díselo a tu amigo» frente a
+ *  > «díselo a los dos» **es** la casilla del paradigma, y el alumno la
+ *  > lee. La posición no le añade nada que no tenga ya delante.
+ *
+ *  Contar eso como atajo de posición es §4.1 en estado puro: el gate
+ *  contestaría «¿la posición predice la etiqueta?» y se leería como «¿el
+ *  alumno puede contar en vez de saber?», que no es la misma frase. Y
+ *  marcaría 3 de 3 lotes publicados — un gate que marca todo es un gate
+ *  apagado (§4.11).
+ *
+ *  Que la consigna determine la respuesta **sí es una fuga**, pero es
+ *  OTRA, la mide otro instrumento —las pistas de `contrastarComposiciones`,
+ *  donde el lote 25 declara «la consigna dice “el que ya se conocía”»— y
+ *  los dos no pueden compartir hallazgo sin que uno de los dos deje de
+ *  significar lo que dice. **Cada sello, una pregunta.** */
+const dichoPorLaConsigna = (xs: readonly ItemTransRo[], eje: (x: ItemTransRo) => string) => {
+  const porConsigna = new Map<string, Set<string>>();
+  for (const x of xs) {
+    const k = norm(x.instruccion);
+    if (!porConsigna.has(k)) porConsigna.set(k, new Set());
+    porConsigna.get(k)!.add(eje(x));
+  }
+  return [...porConsigna.values()].every((s) => s.size === 1);
+};
+
+/** La semilla del orden publicado, o la declaración explícita de que el
+ *  lote se publicó TAL COMO ESTÁ ESCRITO. Los tres lotes anteriores al
+ *  2026-09-04 llevan `'orden-escrito'` porque ya están publicados y
+ *  medidos limpios: declararles una semilla haría que el gate comprobara
+ *  un orden **que no es el que el alumno ve**, y un sello que responde a
+ *  otra pregunta es peor que ninguno. Los nuevos llevan número. */
+export type Semilla = number | 'orden-escrito';
+
+/** El orden en que el lote se publica: barajado con su semilla, o el
+ *  declarado. Lo usan el gate Y el publicador, de aquí, para que no
+ *  puedan discrepar. */
+export const ordenDePublicacion = <T>(items: readonly T[], semilla: Semilla): T[] =>
+  semilla === 'orden-escrito' ? [...items] : ordenPublicado([...items], semilla);
+
+export function ordenSeparable(
+  items: readonly ItemTransRo[], semilla?: Semilla,
+  ejes: Record<string, (x: ItemTransRo) => string> = {},
+): string[] {
+  if (items.length < 2) return [];
+  if (semilla === undefined)
+    return ['ORDEN: el lote no declara `semilla`, así que se publicaría en el orden en que está escrito — y el orden del fichero es una pista gratis (cuatro lotes de latín se resolvían contando ejercicios)'];
+  const xs = ordenDePublicacion(items, semilla);
+  const n = xs.length;
+  const v: string[] = [];
+  for (const [nombreEje, eje] of Object.entries({ ...EJES_DE_SERIE, ...ejes })) {
+    if (dichoPorLaConsigna(xs, eje)) continue;
+    const cuenta = new Map<string, number>();
+    for (const x of xs) { const k = eje(x); cuenta.set(k, (cuenta.get(k) ?? 0) + 1); }
+    for (const [k, c] of cuenta) {
+      // SÓLO LAS CLASES CONTABLES, y el motivo es que si no el gate se
+      // vuelve ruido y un gate ruidoso es un gate apagado (§4.11): una
+      // clase de UN solo ítem colocado el primero o el último **siempre**
+      // se separa por posición, por construcción y sin que nadie pueda
+      // hacer nada. Y su complemento (n−1) es el mismo caso visto del otro
+      // lado. Lo que se puede contar es una clase con al menos dos
+      // miembros y al menos dos fuera.
+      if (c < 2 || c > n - 2) continue;
+      const fallo = separablePorPosicion(patronDe(xs, (x) => eje(x) === k));
+      if (fallo) v.push(`ORDEN PUBLICADO (semilla ${semilla}): por ${nombreEje}, la clase «${k}» (${c}/${n}) se separa por posición — ${fallo}`);
+    }
+  }
   return v;
 }
 

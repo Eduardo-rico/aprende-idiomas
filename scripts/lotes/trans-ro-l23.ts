@@ -287,6 +287,14 @@ export const COMPROBACIONES: Comprobacion[] = [
 ];
 
 export const OPCIONES: Opciones = {
+  // PUBLICADO EL 2026-09-03 EN EL ORDEN EN QUE ESTÁ ESCRITO, y medido
+  // limpio el 2026-09-04 con `ordenSeparable`: los siete de singular van
+  // delante y los dos de plural detrás, pero **la casilla la dice la
+  // consigna** («dale esa orden a tu amigo» / «a los dos»), así que la
+  // posición no le añade nada al alumno. Ver la cabecera de
+  // `ordenSeparable`: el eje que la consigna nombra no es un atajo de
+  // posición, y contarlo marcaría los tres lotes publicados.
+  semilla: 'orden-escrito',
   comprobaciones: COMPROBACIONES,
   estrategias: [TERCERA_SINGULAR, COPIAR_SIN_PRONOMBRE],
   juicios: {

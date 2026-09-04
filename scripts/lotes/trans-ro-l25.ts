@@ -661,7 +661,31 @@ export const COMPROBACIONES: Comprobacion[] = [
   { afirmacion: 'el partitivo «de-al / de-ai / de-ale» es lengua viva, y por eso va en las alternativas y no se suspende', patron: 'de-(al|ai|ale|a lui)', espera: 'presente' },
 ];
 
+/** La familia de cada ítem, indexada por su fuente: es el eje SEMÁNTICO
+ *  que `ordenSeparable` necesita y que no se puede derivar del ítem
+ *  publicado. */
+const FAMILIA_DE = new Map(CONSTRUIDOS.map((x) => [x.s, x.d.familia]));
+
 export const OPCIONES: Opciones = {
+  // PUBLICADO EN EL ORDEN ESCRITO —tres `indef`, tres `adj`, un `dem`,
+  // dos `quita`— y **ese agrupamiento SÍ es separable por posición**: un
+  // corte en el ítem 8 clasifica «lleva artículo» frente a «no lo lleva»
+  // al 100 %. Medido el 2026-09-04 con el detector que la máquina no
+  // llamaba. No se retira ni se rebaraja, y el motivo va escrito porque
+  // es justo el que decide: **la familia `quita` la nombra su propia
+  // consigna** («hablando del que ya se conocía», que ningún otro ítem
+  // lleva), así que el alumno no necesita contar — lo lee. Eso lo mide el
+  // otro instrumento, y ya está medido: la pista «la consigna dice “el
+  // que ya se conocía”» está declarada en `pistas` y el contraste por
+  // permutación salió sin atajo.
+  semilla: 'orden-escrito',
+  ejes: {
+    // El eje SEMÁNTICO del lote, que ninguno de los de serie ve: el foco
+    // es una palabra distinta en cada ítem, así que la edición hace de
+    // cada ítem su propia clase y el detector no puede contar nada.
+    'configuración': (x) => FAMILIA_DE.get(x.s) ?? '?',
+    '¿lleva artículo posesivo?': (x) => (FAMILIA_DE.get(x.s) === 'quita' ? 'no' : 'sí'),
+  },
   comprobaciones: COMPROBACIONES,
   estrategias: [CALCO_ES, SUPERFICIE, ESPANOL, COMPUESTA_E, CON_EL_POSEEDOR, SIEMPRE_AL],
   gatesPropios,
