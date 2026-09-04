@@ -424,7 +424,7 @@ describe('artículo posesivo al / a / ai / ale', () => {
     expect(articolPosesiv('n', 'pl')).toBe('ale');
   });
 
-  it('EL ATAJO DE SUPERFICIE «a + la terminación del enclítico» acierta 137 de 140', () => {
+  it('EL ATAJO DE SUPERFICIE «a + la terminación del enclítico» acierta 138 de 142', () => {
     // Medido sobre el lexicón ENTERO antes de escribir un solo ítem, que
     // es la contramedida del §4.13: un 137/140 es exactamente el aspecto
     // que tiene una regla a la que le falta una mitad. La consecuencia
@@ -442,11 +442,11 @@ describe('artículo posesivo al / a / ai / ale', () => {
         celdas++;
         if (superficie(art) !== articolPosesiv(l.genero, n)) fallos.push(art);
       }
-    expect(celdas).toBe(140);
+    expect(celdas).toBe(142);
     // El residuo es UNA clase y hay que saberlo: masculino y neutro
     // singular en -e, cuyo enclítico -le es homógrafo del femenino y el
     // neutro PLURAL (fetele → ale, dar fratele → al).
-    expect(fallos).toEqual(['fratele', 'numele', 'câinele']);
+    expect(fallos).toEqual(['fratele', 'numele', 'peretele', 'câinele']);
   });
 });
 

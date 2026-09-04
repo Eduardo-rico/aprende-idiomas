@@ -54,6 +54,14 @@ export const SUSTANTIVOS_A1: LemaNominal[] = [
   { lema: 'ușă', genero: 'f', plural: 'uși', gloss: 'puerta' },
   { lema: 'poartă', genero: 'f', plural: 'porți', gloss: 'portón' },
   { lema: 'fereastră', genero: 'f', plural: 'ferestre', gloss: 'ventana' },
+  // Entra por `r4-articulo-posesivo` y no por frecuencia: es el ÚNICO
+  // lema donde los dos atajos del artículo posesivo fallan a la vez —
+  // masculino singular en -e (el enclítico `peretele` empuja a *ale) y
+  // traducción española FEMENINA («pared», que empuja a *a), cuando la
+  // forma es `al`. Sin él ese punto no tiene ni un ítem que discrimine la
+  // concordancia. Atestado en el corpus del proyecto: «rezemat de un
+  // perete al vestibulului Teatrului Național».
+  { lema: 'perete', genero: 'm', plural: 'pereți', gloss: 'pared' },
   { lema: 'oraș', genero: 'n', plural: 'orașe', gloss: 'ciudad' },
   { lema: 'stradă', genero: 'f', plural: 'străzi', gloss: 'calle' },
   { lema: 'magazin', genero: 'n', plural: 'magazine', gloss: 'tienda' },
