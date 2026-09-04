@@ -21,15 +21,29 @@
 //     demostraba**: esas dos palabras difieren en DOS SÍLABAS ENTERAS, así
 //     que separarlas sólo prueba que son palabras distintas.
 //
-//     La calibración correcta usa pares que COMPARTEN EL PRINCIPIO y
-//     tienen el acento en sílabas distintas —`medico` (MÈ-di-co) contra
-//     `medicina` (me-di-CÌ-na), `principe` contra `principale`— y compara
-//     **sólo el tramo compartido**. Ahí los segmentos son los mismos, así
-//     que lo que quede sólo puede ser prosodia.
+//     Y `medico`/`medicina` tampoco basta: comparten el principio pero
+//     siguen siendo palabras distintas, así que el tramo compartido puede
+//     diferir por coarticulación con lo que viene después.
 //
-// Aviso declarado sobre esa comparación: el tramo se toma como una
-// fracción fija del audio, no alineado fonema a fonema. Es una
-// aproximación, y por eso el veredicto se contrasta contra su nula.
+//     **El par mínimo de verdad existe, y es la MISMA CADENA leída con dos
+//     acentos según el contexto:**
+//
+//         «capitano molti errori»   CÀ-pi-ta-no  (verbo: «ocurren»)
+//         «capitano della nave»     ca-pi-TÀ-no  (nombre: «capitán»)
+//
+//     Los segmentos de la palabra examinada son idénticos **por
+//     construcción** —es la misma palabra— y sólo cambia dónde cae el
+//     acento, que lo decide la sintaxis posterior. Se compara sólo el
+//     tramo inicial, donde aún no ha entrado la palabra que difiere.
+//
+//     Y el resultado es decisivo en las dos direcciones: si la voz las
+//     distingue, tiene acento italiano de verdad y el instrumento lo ve;
+//     si no las distingue, **la voz no hace prosodia italiana**, y eso
+//     contesta la pregunta del latín sin necesidad de medir el latín.
+//
+// Aviso declarado: el tramo se toma como una fracción fija del audio, no
+// alineado fonema a fonema. Es una aproximación, y por eso el veredicto se
+// contrasta contra su nula.
 //
 // ── Y LA LECCIÓN QUE MOTIVÓ LA REESCRITURA ───────────────────────────
 //
@@ -61,10 +75,12 @@ if (!VOZ && !SOLO_PLAN) {
 const PARES = [
   { id: 'tilde', a: 'dominos', b: 'dòminos', compara: 'todo',
     pregunta: '¿la tilde escrita mueve algo? Misma palabra, una con marca y otra sin ella.' },
-  { id: 'calib-medico', a: 'medico', b: 'medicina', compara: 'principio',
-    pregunta: 'calibración: MÈ-di-co contra me-di-CÌ-na, comparando sólo «medic-», que es idéntico.' },
-  { id: 'calib-principe', a: 'principe', b: 'principale', compara: 'principio',
-    pregunta: 'calibración: PRÌN-ci-pe contra prin-ci-PÀ-le, comparando sólo «princip-».' },
+  // PARES MÍNIMOS DE ACENTO: la misma palabra, dos acentos, y lo que los
+  // decide viene DESPUÉS del tramo que se compara.
+  { id: 'calib-capitano', a: 'capitano molti errori', b: 'capitano della nave', compara: 'principio',
+    pregunta: 'CÀ-pi-ta-no («ocurren») contra ca-pi-TÀ-no («capitán»): misma cadena, acento distinto.' },
+  { id: 'calib-subito', a: 'subito dopo la cena', b: 'subito molti danni', compara: 'principio',
+    pregunta: 'SÙ-bi-to («enseguida») contra su-BÌ-to («sufrido»): misma cadena, acento distinto.' },
 ];
 const SUELTAS = ['dominus', 'discipulum', 'agricola', 'amicus', 'filium', 'celum', 'gratsia'];
 
@@ -134,7 +150,9 @@ function permutacion(A, B, R = 5000) {
 const resultados = { voz: VOZ, modelo: MODELO, idioma: IDIOMA, n: N, generado: new Date().toISOString(), pares: {} };
 
 for (const par of PARES) {
-  const fr = par.compara === 'principio' ? 0.45 : 1;
+  // El tramo comparado cubre sólo la palabra examinada, antes de que
+  // entre la que desambigua: «capitano» es 8 de 20 caracteres.
+  const fr = par.compara === 'principio' ? 0.40 : 1;
   for (const lado of ['a', 'b'])
     for (let i = 1; i <= N; i++) await generar(par[lado], `${SALIDA}/${par.id}-${lado}${i}.mp3`);
   const G = (lado) => Array.from({ length: N }, (_, i) => envolvente(`${SALIDA}/${par.id}-${lado}${i + 1}.mp3`, 12, fr)).filter(Boolean);
