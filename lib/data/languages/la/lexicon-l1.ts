@@ -39,6 +39,13 @@ export const NOMBRES_L1: EntradaNominal[] = [
   // Préstamo griego, declinado a la griega y con paradigma declarado en
   // `IRREGULARES`. 846 apariciones: el nombre propio más frecuente.
   { lema: 'Iēsus', genitivo: 'Iēsū', genero: 'm', glosa: 'Jesús', soloSingular: true },
+  { lema: 'gladius', genitivo: 'gladiī', genero: 'm', glosa: 'espada' },
+  { lema: 'annus', genitivo: 'annī', genero: 'm', glosa: 'año' },
+  { lema: 'cūra', genitivo: 'cūrae', genero: 'f', glosa: 'cuidado' },
+  { lema: 'īra', genitivo: 'īrae', genero: 'f', glosa: 'ira' },
+  { lema: 'gaudium', genitivo: 'gaudiī', genero: 'n', glosa: 'alegría' },
+  { lema: 'timor', genitivo: 'timōris', genero: 'm', glosa: 'miedo' },
+  { lema: 'tempus', genitivo: 'temporis', genero: 'n', glosa: 'tiempo' },
   // ── 3.ª. El nominativo NO se deduce del tema y el tema NO se deduce del
   //    nominativo: es el punto `l2-genitivo-clave` en su forma más pura.
   { lema: 'rēx', genitivo: 'rēgis', genero: 'm', glosa: 'rey' },
@@ -56,6 +63,7 @@ export const NOMBRES_L1: EntradaNominal[] = [
   { lema: 'bellum', genitivo: 'bellī', genero: 'n', glosa: 'guerra' },
   { lema: 'dōnum', genitivo: 'dōnī', genero: 'n', glosa: 'regalo' },
   { lema: 'verbum', genitivo: 'verbī', genero: 'n', glosa: 'palabra' },
+  { lema: 'templum', genitivo: 'templī', genero: 'n', glosa: 'templo' },
 ];
 
 export const VERBOS_L1: EntradaVerbal[] = [
@@ -78,6 +86,7 @@ export const VERBOS_L1: EntradaVerbal[] = [
   { lema: 'audiō', infinitivo: 'audīre', glosa: 'oír' },
   { lema: 'inveniō', infinitivo: 'invenīre', glosa: 'encontrar' },
   { lema: 'custōdiō', infinitivo: 'custōdīre', glosa: 'guardar' },
+  { lema: 'portō', infinitivo: 'portāre', glosa: 'llevar' },
 ];
 
 // Adjetivos de la primera clase. El `tema` va aparte del lema por el mismo
@@ -92,4 +101,21 @@ export const ADJETIVOS_L1: EntradaAdjetivo[] = [
   { lema: 'longus', tema: 'long', glosa: 'largo' },
   { lema: 'pulcher', tema: 'pulchr', glosa: 'hermoso' },
   { lema: 'miser', tema: 'miser', glosa: 'desdichado' },
+  { lema: 'prīmus', tema: 'prīm', glosa: 'primero' },
+];
+
+// ── LO QUE NO SE DECLINA, Y LOS COMPARATIVOS ─────────────────────────
+//
+// Las preposiciones no tienen paradigma y hacen falta desde el primer
+// ablativo: `cum` sale 1.148 veces en la Vulgata y `ex` 437. Sin ellas, el
+// gate de cantidad las marca como formas desconocidas y no se puede
+// escribir un ítem de compañía ni de lugar de donde.
+//
+// Y los comparativos van aquí COMO FORMAS SUELTAS, no como paradigma: el
+// grado es el punto `l4-grados` y su declinación —`fortior, fortius,
+// fortiōris`— no está en la máquina. Declarar las dos formas que un lote
+// necesita es honesto; fingir que la máquina las deriva no lo sería.
+export const INDECLINABLES_L1: string[] = [
+  'cum', 'ex', 'ē', 'in',
+  'fortior', 'sanctior',
 ];

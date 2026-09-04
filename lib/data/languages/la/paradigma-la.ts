@@ -314,8 +314,10 @@ export function concuerda(a: EntradaAdjetivo, n: EntradaNominal, caso: Caso, num
 // clase se hace en un sitio y llega a todos.
 export function todasLasFormas(
   nombres: EntradaNominal[], verbos: EntradaVerbal[], adjetivos: EntradaAdjetivo[],
+  indeclinables: string[] = [],
 ): { clave: string; forma: string }[] {
   const out: { clave: string; forma: string }[] = [];
+  for (const f of indeclinables) out.push({ clave: `${f}.indecl`, forma: f });
   for (const e of nombres)
     for (const [c, f] of Object.entries(paradigmaNominal(e))) out.push({ clave: `${e.lema}.${c}`, forma: f });
   for (const e of verbos)

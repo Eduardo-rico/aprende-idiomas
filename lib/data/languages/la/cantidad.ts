@@ -77,7 +77,7 @@ export const REFLEJOS: [string, string, 'larga' | 'breve', string][] = [
 ];
 
 import { declinar, conjugar, todasLasFormas } from './paradigma-la';
-import { NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1 } from './lexicon-l1';
+import { NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1, INDECLINABLES_L1 } from './lexicon-l1';
 
 const VOCAL_LARGA = /[āēīōūĀĒĪŌŪ]/;
 export const sinMacron = (s: string) =>
@@ -99,7 +99,7 @@ export function formasValidas(): Map<string, Set<string>> {
     if (!m.has(k)) m.set(k, new Set());
     m.get(k)!.add(f.normalize('NFC').toLowerCase());
   };
-  for (const { forma } of todasLasFormas(NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1)) mete(forma);
+  for (const { forma } of todasLasFormas(NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1, INDECLINABLES_L1)) mete(forma);
   CACHE = m;
   return m;
 }
