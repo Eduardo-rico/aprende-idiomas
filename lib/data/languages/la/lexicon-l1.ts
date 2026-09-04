@@ -31,6 +31,11 @@ export const NOMBRES_L1: EntradaNominal[] = [
   { lema: 'puer', genitivo: 'puerī', genero: 'm', glosa: 'niño' },
   { lema: 'ager', genitivo: 'agrī', genero: 'm', glosa: 'campo' },
   { lema: 'magister', genitivo: 'magistrī', genero: 'm', glosa: 'maestro' },
+  // CONSERVA la vocal teniendo CONSONANTE delante, que es lo que rompe la
+  // regla falsa que el lote enseñaba sin querer. Atestiguado cinco veces
+  // en los propios Evangelios: `adultera` (Mt 12, Mt 16, Mc 8) y
+  // `adulterī` (Lc 18, 1 Co 6).
+  { lema: 'adulter', genitivo: 'adulterī', genero: 'm', glosa: 'adúltero' },
   // ── 3.ª. El nominativo NO se deduce del tema y el tema NO se deduce del
   //    nominativo: es el punto `l2-genitivo-clave` en su forma más pura.
   { lema: 'rēx', genitivo: 'rēgis', genero: 'm', glosa: 'rey' },

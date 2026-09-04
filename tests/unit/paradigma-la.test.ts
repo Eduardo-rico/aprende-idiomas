@@ -198,7 +198,10 @@ describe('dónde este gate NO puede medir, dicho en vez de pasado en verde', () 
     // pone el lema, así que compararlo con el lema es compararlo consigo
     // mismo. Un salto silencioso convierte un gate en decoración.
     expect(revisarCoherenciaLexico()).toEqual([]);
-    expect(noContrastables.length).toBe(12);
+    // Sube cuando entra un `-er` o un lema de 3.ª: `adulter` lo hizo 13.
+    // El número exacto importa menos que verlo crecer con motivo.
+    expect(noContrastables.length).toBe(13);
+    expect(noContrastables).toContain('adulter');
     expect(noContrastables).toContain('rēx');
     expect(noContrastables).toContain('opus');
     expect(noContrastables).toContain('ager');

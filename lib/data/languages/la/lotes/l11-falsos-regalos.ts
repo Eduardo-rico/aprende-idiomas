@@ -23,6 +23,21 @@
 // se queda escrita aquí, que es donde vale; la plaza va a una palabra que
 // el alumno sí se encuentra.
 //
+// ── Y UNA SEGUNDA CORRELACIÓN, QUE TAMPOCO ERA DE LA LENGUA ──────────
+//
+// La primera versión tenía los SEIS falsos regalos con mácrón y sólo uno
+// de los seis fieles. «Si lleva rayita, desconfía» acertaba 11 de 12
+// (p = 0,030) — y el mácrón no tiene nada que ver con el desplazamiento
+// semántico, que es lo que la tarjeta examina.
+//
+// El latinista lo dio por ESTRUCTURAL: las trampas serían abstractos de
+// 3.ª y 5.ª con vocal larga, y los controles concretos de 1.ª y 2.ª con
+// breve. Lo medí y **no lo es**: hay trampas sin mácrón que pasan el piso
+// de la Vulgata (`familia` 15, `causa` 32, `turba` 158) y fieles con
+// mácrón de sobra (`frāter` 286, `nōmen` 212, `pānis` 99). Era un
+// artefacto de mi muestra, no una propiedad del latín. Ahora va tres y
+// tres en cada grupo.
+//
 // El criterio, que vale para las sesenta tarjetas del nivel: **el experto
 // optimiza por verdad y el curso por lo que el alumno se va a encontrar, y
 // cuando chocan manda lo segundo.** Una trampa que no aparece nunca no es
@@ -52,7 +67,7 @@ const LS = (s: string) => `Lewis & Short s.v. ${s}`;
 export const SEMILLA_DE_ORDEN = 1;
 
 const LOTE_FALSOS_REGALOS_FUENTE: ItemFlashcard[] = [
-  // ── SEIS QUE SE DESPLAZARON ──
+  // ── TRES TRAMPAS CON MÁCRÓN ──
   {
     id: 'la-11f-01', punto: 'l11-falsos-regalos',
     lema: 'quaerō', claveCorpus: 'quaero', frecuencia: 229,
@@ -64,24 +79,6 @@ const LOTE_FALSOS_REGALOS_FUENTE: ItemFlashcard[] = [
   },
   {
     id: 'la-11f-02', punto: 'l11-falsos-regalos',
-    lema: 'parēns', claveCorpus: 'parens', frecuencia: 32,
-    sentidoLatino: 'progenitor: el padre o la madre, y en plural los dos',
-    descendiente: 'pariente', sentidoDescendiente: 'cualquier familiar',
-    esFalsoRegalo: true, desplazamiento: 'ampliación',
-    porQueUnHispanohablante: 'el español amplió la palabra a todo el árbol familiar, así que «parentēs» se lee «los parientes» y son exactamente «los padres». En una frase de familia las dos lecturas son coherentes y sólo una es la del texto.',
-    fuente: LS('parens'), corpus: 'todo',
-  },
-  {
-    id: 'la-11f-03', punto: 'l11-falsos-regalos',
-    lema: 'dēbeō', claveCorpus: 'debeo', frecuencia: 181,
-    sentidoLatino: 'deber DINERO, estar en deuda; la obligación moral es un uso derivado',
-    descendiente: 'deber', sentidoDescendiente: 'tener la obligación de',
-    esFalsoRegalo: true, desplazamiento: 'cambio-de-dominio',
-    porQueUnHispanohablante: 'el español usa «deber» sobre todo para la obligación, y el latín para la deuda: «dēbet» a secas se lee «tiene el deber» cuando dice «está endeudado». El hispanohablante no duda porque su palabra funciona.',
-    fuente: LS('debeo'), corpus: 'todo',
-  },
-  {
-    id: 'la-11f-04', punto: 'l11-falsos-regalos',
     lema: 'virtūs', claveCorpus: 'uirtus', frecuencia: 187,
     sentidoLatino: 'valor, hombría, excelencia del que cumple su papel; en la Vulgata también «poder, milagro»',
     descendiente: 'virtud', sentidoDescendiente: 'excelencia moral',
@@ -90,20 +87,8 @@ const LOTE_FALSOS_REGALOS_FUENTE: ItemFlashcard[] = [
     fuente: LS('virtus'), corpus: 'todo',
   },
   {
-    // Sustituyó a `sententia`, que salía 2 veces en la Vulgata.
-    id: 'la-11f-05', punto: 'l11-falsos-regalos',
-    lema: 'grātia', claveCorpus: 'gratia', frecuencia: 241,
-    sentidoLatino: 'el favor que se hace o se recibe, el agradecimiento, la influencia; y en ablativo pospuesto, «por causa de» («honōris grātiā»). En la Vulgata, la gracia',
-    descendiente: 'gracia', sentidoDescendiente: 'lo que hace reír; el donaire',
-    esFalsoRegalo: true, desplazamiento: 'cambio-de-dominio',
-    porQueUnHispanohablante: 'el primer sentido de «gracia» en español es lo gracioso, y ése es exactamente el único que el latín NO tiene. Y hay algo peor: «grātiā» pospuesto es una posposición que significa «por causa de», así que «honōris grātiā» se lee «la gracia del honor» y construye una frase entera coherente y falsa.',
-    fuente: LS('gratia'), corpus: 'todo',
-  },
-  {
-    id: 'la-11f-06', punto: 'l11-falsos-regalos',
+    id: 'la-11f-03', punto: 'l11-falsos-regalos',
     lema: 'fidēs', claveCorpus: 'fides', frecuencia: 214,
-    // La tarjeta que enseña las DOS: la afirmación «fidēs no es fe» es
-    // verdadera en Cicerón y falsa en Jerónimo, y L1 entra por la Vulgata.
     sentidoLatino: 'en el latín clásico, la lealtad y la palabra dada («fidem servāre»), y el crédito comercial; en la VULGATA sí es la fe religiosa',
     descendiente: 'fe', sentidoDescendiente: 'creencia religiosa',
     esFalsoRegalo: true, desplazamiento: 'cambio-de-dominio',
@@ -111,42 +96,72 @@ const LOTE_FALSOS_REGALOS_FUENTE: ItemFlashcard[] = [
     fuente: LS('fides'), corpus: 'todo',
   },
 
-  // ── SEIS QUE TRANSFIEREN, y sin ellos el lote se aprueba desconfiando ──
+  // ── TRES TRAMPAS SIN MÁCRÓN, que son las que rompen la correlación ──
+  {
+    id: 'la-11f-04', punto: 'l11-falsos-regalos',
+    lema: 'familia', claveCorpus: 'familia', frecuencia: 33,
+    sentidoLatino: 'la casa entera bajo un mismo dueño, ESCLAVOS INCLUIDOS; el conjunto de bienes y personas',
+    descendiente: 'familia', sentidoDescendiente: 'los parientes',
+    esFalsoRegalo: true, desplazamiento: 'estrechamiento',
+    porQueUnHispanohablante: 'la palabra es idéntica y el sentido español cabe dentro del latino, así que el hispanohablante nunca duda: «familia» le suena a padres e hijos y en el texto incluye a los esclavos y al ganado. No hay ninguna señal de que falte algo.',
+    fuente: LS('familia'), corpus: 'todo',
+  },
+  {
+    id: 'la-11f-05', punto: 'l11-falsos-regalos',
+    lema: 'causa', claveCorpus: 'causa', frecuencia: 260,
+    sentidoLatino: 'el pleito, el proceso judicial y la situación de alguien; el motivo es un uso entre otros. Y en ablativo pospuesto, «causā», significa «por causa de»',
+    descendiente: 'causa', sentidoDescendiente: 'el motivo',
+    esFalsoRegalo: true, desplazamiento: 'estrechamiento',
+    porQueUnHispanohablante: 'el español se quedó con el motivo y perdió el pleito, que en latín es el sentido de tribunal: «causam dīcere» no es «decir la causa», es «defender el pleito». Y «honōris causā» pospuesto ya no es un sustantivo.',
+    fuente: LS('causa'), corpus: 'todo',
+  },
+  {
+    id: 'la-11f-06', punto: 'l11-falsos-regalos',
+    lema: 'turba', claveCorpus: 'turba', frecuencia: 170,
+    sentidoLatino: 'la multitud, el gentío — sin ningún juicio sobre su conducta',
+    descendiente: 'turba', sentidoDescendiente: 'la muchedumbre alborotada',
+    esFalsoRegalo: true, desplazamiento: 'cambio-de-dominio',
+    porQueUnHispanohablante: 'el español cargó la palabra de desorden —«turba», «turbar», «disturbio»— y en los Evangelios «turbae» son sencillamente las multitudes que siguen a Jesús. Quien lea «las turbas» ahí le pone al texto una hostilidad que no tiene.',
+    fuente: LS('turba'), corpus: 'todo',
+  },
+
+  // ── TRES FIELES CON MÁCRÓN ──
   {
     id: 'la-11f-07', punto: 'l11-falsos-regalos',
-    lema: 'terra', claveCorpus: 'terra', frecuencia: 343,
-    sentidoLatino: 'la tierra, el suelo, un país',
-    descendiente: 'tierra', sentidoDescendiente: 'lo mismo',
-    esFalsoRegalo: false, fuente: LS('terra'), corpus: 'todo',
-  },
-  {
-    id: 'la-11f-08', punto: 'l11-falsos-regalos',
-    lema: 'templum', claveCorpus: 'templum', frecuencia: 125,
-    sentidoLatino: 'el recinto consagrado, el templo',
-    descendiente: 'templo', sentidoDescendiente: 'lo mismo',
-    esFalsoRegalo: false, fuente: LS('templum'), corpus: 'todo',
-  },
-  {
-    // Sustituyó a `hostis`, que sale CERO veces en la Vulgata.
-    id: 'la-11f-09', punto: 'l11-falsos-regalos',
     lema: 'carō', claveCorpus: 'caro', frecuencia: 118,
     sentidoLatino: 'la carne',
     descendiente: 'carne', sentidoDescendiente: 'lo mismo',
     esFalsoRegalo: false, fuente: LS('caro'), corpus: 'todo',
   },
   {
+    id: 'la-11f-08', punto: 'l11-falsos-regalos',
+    lema: 'frāter', claveCorpus: 'frater', frecuencia: 378,
+    sentidoLatino: 'el hermano',
+    descendiente: 'fraterno, fraternidad, fraile', sentidoDescendiente: 'lo de hermano',
+    esFalsoRegalo: false, fuente: LS('frater'), corpus: 'todo',
+  },
+  {
+    id: 'la-11f-09', punto: 'l11-falsos-regalos',
+    lema: 'nōmen', claveCorpus: 'nomen', frecuencia: 280,
+    sentidoLatino: 'el nombre',
+    descendiente: 'nombre', sentidoDescendiente: 'lo mismo',
+    esFalsoRegalo: false, fuente: LS('nomen'), corpus: 'todo',
+  },
+
+  // ── TRES FIELES SIN MÁCRÓN ──
+  {
     id: 'la-11f-10', punto: 'l11-falsos-regalos',
-    lema: 'servus', claveCorpus: 'seruus', frecuencia: 148,
-    sentidoLatino: 'el esclavo',
-    descendiente: 'siervo', sentidoDescendiente: 'el que sirve, sin libertad',
-    esFalsoRegalo: false, fuente: LS('servus'), corpus: 'todo',
+    lema: 'terra', claveCorpus: 'terra', frecuencia: 343,
+    sentidoLatino: 'la tierra, el suelo, un país',
+    descendiente: 'tierra', sentidoDescendiente: 'lo mismo',
+    esFalsoRegalo: false, fuente: LS('terra'), corpus: 'todo',
   },
   {
     id: 'la-11f-11', punto: 'l11-falsos-regalos',
-    lema: 'tempus', claveCorpus: 'tempus', frecuencia: 327,
-    sentidoLatino: 'el tiempo, y la ocasión oportuna',
-    descendiente: 'tiempo', sentidoDescendiente: 'lo mismo',
-    esFalsoRegalo: false, fuente: LS('tempus'), corpus: 'todo',
+    lema: 'templum', claveCorpus: 'templum', frecuencia: 125,
+    sentidoLatino: 'el recinto consagrado, el templo',
+    descendiente: 'templo', sentidoDescendiente: 'lo mismo',
+    esFalsoRegalo: false, fuente: LS('templum'), corpus: 'todo',
   },
   {
     id: 'la-11f-12', punto: 'l11-falsos-regalos',
@@ -156,6 +171,22 @@ const LOTE_FALSOS_REGALOS_FUENTE: ItemFlashcard[] = [
     esFalsoRegalo: false, fuente: LS('locus'), corpus: 'todo',
   },
 ];
+
+// ── LAS TRES QUE SALIERON, con su motivo ─────────────────────────────
+//
+// `grātia` — RETIRADA POR FALSA, sin sustituir por otra sin comprobar.
+//   La tarjeta decía «el primer sentido de gracia en español es lo
+//   gracioso, y ése es el único que el latín NO tiene», y está mal por los
+//   dos extremos: Lewis & Short abre por el sentido de «encanto, gracia»
+//   —de donde las *Grātiae*—, así que el latín sí lo tiene; y el español
+//   conserva los sentidos latinos en «dar las GRACIAS» (`grātiās agere`) y
+//   «de GRATIS» (`grātiīs`). El desplazamiento declarado no es el que hubo.
+//   Queda el hueco: mejor que rellenarlo con prisa.
+//
+// `parēns` y `dēbeō` — SALEN SÓLO POR EL EQUILIBRIO del mácrón, no por
+//   nada suyo. Las dos son buenas tarjetas y vuelven en las 48 plazas que
+//   le quedan al nivel.
+
 
 /** El lote tal como se publica: barajado con `SEMILLA_DE_ORDEN`. */
 export const LOTE_FALSOS_REGALOS = ordenPublicado(LOTE_FALSOS_REGALOS_FUENTE, SEMILLA_DE_ORDEN);

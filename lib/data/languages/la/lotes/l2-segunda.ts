@@ -61,9 +61,27 @@ const LOTE_SEGUNDA_FUENTE: ItemClozeDerivado[] = [
   { id: 'la-2d-03', punto: 'l2-segunda', entrada: E('puer'), celda: 'dat.pl', respuesta: 'puerīs',
     marco: 'Magistrī ___ dōnum mittunt.', pista: 'Los maestros envían un regalo A LOS NIÑOS — destinatario, plural.',
     ejes: { clase: 'conserva', celda: 'dat.pl' } },
-  { id: 'la-2d-04', punto: 'l2-segunda', entrada: E('puer'), celda: 'gen.pl', respuesta: 'puerōrum',
-    marco: 'Magister ___ verba laudat.', pista: 'El maestro alaba las palabras DE LOS NIÑOS — posesión, plural.',
-    ejes: { clase: 'conserva', celda: 'gen.pl' } },
+  // ── EL QUE ROMPE LA REGLA FALSA ──
+  //
+  // Sin él, los tres lemas discriminantes correlacionaban: el único que
+  // conservaba (`pu-e-r`) tenía VOCAL antes de la `-e-`, y los dos que
+  // sincopaban (`ag-e-r`, `magist-e-r`) tenían consonante. Con eso, «mira
+  // la letra anterior» resolvía el lote 12/12 (p = 0,041) sin saber nada
+  // del genitivo — y la regla es FALSA en latín: `adulter/adulterī`,
+  // `socer/socerī` y `gener/generī` conservan con consonante delante
+  // (Allen & Greenough, 2.ª declinación, lista cerrada).
+  //
+  // El defecto estaba en la MUESTRA, no en la regla del punto: «el tema no
+  // se deduce del nominativo» es verdad del latín, y este lote la había
+  // vuelto deducible por accidente. Se arregla la muestra.
+  //
+  // Y `adulter` no es una rareza traída para tapar un agujero: está
+  // atestiguado CINCO veces en los propios Evangelios —`adultera` en
+  // Mateo 12 y 16 y Marcos 8, `adulterī` en Lucas 18 y 1 Corintios 6—,
+  // que es la lectura declarada del nivel.
+  { id: 'la-2d-04', punto: 'l2-segunda', entrada: E('adulter'), celda: 'ac.pl', respuesta: 'adulterōs',
+    marco: 'Magister ___ monet.', pista: 'El maestro advierte A LOS ADÚLTEROS — objeto directo, plural.',
+    ejes: { clase: 'conserva', celda: 'ac.pl' } },
 
   // ── pierde la vocal: ager / agrī, magister / magistrī ──
   { id: 'la-2d-05', punto: 'l2-segunda', entrada: E('ager'), celda: 'ac.sg', respuesta: 'agrum',

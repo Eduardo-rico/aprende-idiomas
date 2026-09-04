@@ -52,7 +52,13 @@ describe('CONTROLES: lo que el gate tiene que suspender', () => {
   });
 
   it('CAZA la tarjeta cuyo sentido latino es sólo la palabra española', () => {
-    expect(revisarFlashcard({ ...base(), sentidoLatino: 'la virtud' }).map((x) => x.clase))
+    // Construido a partir del PROPIO descendiente del ítem, no de una
+    // cadena fija: la versión anterior escribía «la virtud» y dependía de
+    // que `base()` fuera la tarjeta de `virtūs`. Al reordenar el lote dejó
+    // de serlo y el control se apagó — que es la misma clase que el test
+    // que cogía `LOTE[0]` por índice.
+    const b = base();
+    expect(revisarFlashcard({ ...b, sentidoLatino: `la ${b.descendiente}` }).map((x) => x.clase))
       .toContain('la-tarjeta-se-contesta-sola');
   });
 
