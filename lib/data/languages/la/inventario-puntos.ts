@@ -579,7 +579,8 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'no', herencia: 'regalo', via: 'produccion' },
     motivo: 'paradigma irregular que se guarda entero y se deriva desde él',
     cubre: ['L1/GRAMÁTICA · PRONOMBRE'], cita: 'Identifica y traduce `is/ea/id`',
-    varia: 'el caso y el género, con atención a las formas que coinciden (eius sirve para los tres géneros)' }),
+    varia: 'el caso y el género, con atención a las formas que coinciden (eius sirve para los tres géneros). AMPLIADO 2026-09-04: y la casilla compartida, que es una economía de memoria real y no la cobraba nadie. Seis series —is, hic, ille, iste, ipse, quī, más los adjetivos y numerales ūnus, tōtus, alter, nūllus— comparten genitivo en `-īus` y dativo en `-ī`, o sea que son seis paradigmas que se memorizan como uno. Va aquí y no en un punto propio porque es PRODUCCIÓN y no reconocimiento: como pista de lectura está medida y no vale —el dativo en `-ī` acierta el 5,5 % (es el de toda la 3.ª: mihi ×727, tibi ×418, sibi ×90) y el genitivo en `-īus` el 53,5 %, con `fīlius` ×162 delante—. Nota cruzada en `l4-demostrativos` y `l4-relativo`',
+    excepcion: 'la economía tiene dos boquetes que el material debe avisar. (1) `hic` y `quī` ROMPEN la forma aunque conserven la marca: «huic» y «cui», no *«hīus» ni *«quīus»; el tema cambia y el alumno que generalice se equivoca justo en los dos más frecuentes (huic 66, cui 123). (2) `ego`, `tū` y `sē` NO entran en el sistema: 5.482 tokens en el corpus, de los cuales 1.365 son formas que no siguen la marca (mihi ×719, tibi ×418, sibi ×174, meī ×28, suī ×14, tuī ×12). Enseñar la casilla compartida sin decir esto invita a sobregeneralizar a los tres pronombres más usados de la lengua' }),
 
   P({ id: 'l4-demostrativos', nombre: 'hic, iste, ille: la deixis de tres grados', bloque: 4, peldano: 'L1',
     descripcion: 'CORREGIDO 2026-09-04 con el corpus delante. Los tres grados coinciden con «este/ese/aquel» EN EL LATÍN CLÁSICO, y ahí sí es un regalo deíctico. Pero la lectura declarada de L1 es la VULGATA, y en ella «ille» e «ipse» ya no son deícticos: son el pronombre romance de tercera persona. «ille» sujeto sale 190 veces en la Vulgata frente a 73 en Cicerón y 32 en César, y 113 frases empiezan por «at ille / at illī / at illa» —«y él dijo»—; «ipse» sujeto, 145 contra 29. Un alumno con la glosa escolar lee deixis distal o énfasis en 335 sujetos donde no hay ninguna de las dos. Es el mismo «ille» del que salen «él» y «el».',
@@ -588,7 +589,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     motivo: 'deriva por regla, pero la herencia depende del CORPUS: regalo en Cicerón y falso regalo en Jerónimo, que es por donde entra el alumno. Se declara `falso-regalo` porque el campo tiene que decir lo que le pasa a ESTE lector, no lo que pasa en el latín en abstracto',
     corpus: 'todo',
     cubre: ['L1/GRAMÁTICA · PRONOMBRE'], cita: '`hic/ille/iste`',
-    varia: 'el grado y el caso',
+    varia: 'el grado y el caso. La casilla compartida con las otras cinco series se cobra en `l4-is-ea-id` y aquí NO se repite: `hic` es justo la serie que rompe la forma («huic», no *«hīus»), y eso es su excepción, no su regla',
     excepcion: '«iste» tiene además valor despectivo en la oratoria («ese individuo»), que no sale del sistema deíctico' }),
 
   P({ id: 'l4-relativo', nombre: 'El relativo concuerda con el antecedente en género y número, y toma su caso de SU oración', bloque: 4, peldano: 'L1',
@@ -597,7 +598,8 @@ export const PUNTOS_LA: PuntoLa[] = [
     calco: { ordenEnganya: 'si', herencia: 'falso-regalo', via: 'recepcion' },
     motivo: 'el español tiene «que» invariable, así que el alumno ignora la forma del relativo — y la forma es justo la que dice qué papel juega dentro de su oración',
     cubre: ['L1/GRAMÁTICA · PRONOMBRE'], cita: 'el relativo `quī/quae/quod` concordando con su antecedente',
-    varia: 'el caso del relativo dentro de su oración, y hay que cubrir al menos nominativo, acusativo y genitivo' }),
+    varia: 'el caso del relativo dentro de su oración, y hay que cubrir al menos nominativo, acusativo y genitivo. CON UNA ASIMETRÍA DECLARADA, medida sobre las 30 celdas usables: sólo 6 miden las dos mitades de la regla, y de los tres casos exigidos, el nominativo no tiene NINGUNA (quī = m.sg y m.pl; quae = f.sg, f.pl y n.pl; quod = nom y ac) y el genitivo sólo `quārum` (cuius es igual para los tres géneros). Se cubren los tres igual, cada ítem declara qué mitad examina, y el lote debe traer las dos: que en `cuius` el género no se lea es información que el alumno necesita al leer, no una limitación del ejercicio',
+    excepcion: 'la traducción española regala el caso en genitivo, dativo y ablativo —«cuyo», «al que», «con el que»— y sólo calla en nominativo y acusativo, que es donde «que» es invariable. Así que un ítem de genitivo SINGULAR no mide nada: `cuius` no distingue el género y «cuyo» ya ha dicho el caso. Los que se conserven ahí van marcados como que enseñan sin medir' }),
 
   P({ id: 'l4-reflexivo', nombre: 'se/suus frente a is/eius: el reflexivo que el español no marca', bloque: 4, peldano: 'L2',
     descripcion: '«Caesar suōs mīlitēs laudat» (los suyos) frente a «Caesar eius mīlitēs laudat» (los de otro). El español dice «sus» en los dos casos.',
