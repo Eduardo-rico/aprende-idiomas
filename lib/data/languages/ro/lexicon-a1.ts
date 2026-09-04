@@ -21,7 +21,7 @@
 //     lema); donde la página no lo atestó, no se declara;
 //   · un verbo se guarda por su infinitivo CON partícula, nunca por una
 //     forma finita: «*a lucrez» no existe.
-import type { LemaNominal, LemaVerbal } from '@/scripts/lib/paradigma-ro';
+import type { LemaAdjetival, LemaNominal, LemaVerbal } from '@/scripts/lib/paradigma-ro';
 
 export const SUSTANTIVOS_A1: LemaNominal[] = [
   // personas y familia
@@ -167,4 +167,38 @@ export const VERBOS_A1: LemaVerbal[] = [
   { inf: 'a locui', sg1: 'locuiesc', sg3: 'locuiește', gloss: 'vivir (residir)' },
   { inf: 'a coborî', sg1: 'cobor', sg3: 'coboară', conj3: 'coboare', gloss: 'bajar' },
   { inf: 'a hotărî', sg1: 'hotărăsc', sg3: 'hotărăște', gloss: 'decidir' },
+];
+
+
+// ── ADJETIVOS ─────────────────────────────────────────────────────────
+//
+// Entran el 2026-09-04 por `r2-genero-tres-valores`, y con las CUATRO
+// formas guardadas por la misma razón que el plural del sustantivo: la
+// clase no se deriva del lema. `alb → albi/albe` pero `greu → grei/grele`,
+// `gol → goi/goale`, `negru → negri/negre`, `frumos → frumoși/frumoase`.
+// Una regla «-i masculino, -e femenino» acierta en los dos primeros y
+// fabrica *greui, *gole, *frumosi: el 39-de-42 del §4.13.
+//
+// ⚠ **LOS OCHO SON DE CUATRO FORMAS DISTINTAS, y no es un detalle de
+// estilo.** En rumano hay una clase grande de adjetivos con los DOS
+// plurales homógrafos —`nou/nouă/noi/noi`, `mic/mică/mici/mici`,
+// `mare/mare/mari/mari`, `verde`, `dulce`, `vechi`, `roșu/roșie/roșii`—,
+// y un ítem de concordancia escrito con uno de ésos **aprueba sin
+// distinguir el género** y parece impecable: el masculino plural y el
+// femenino plural se escriben igual. Es §4.13bis, y aquí es invisible
+// porque el ítem es correcto. `cuatroFormas()` lo contesta; el lote 26 lo
+// pone en gate y `check-paradigma-ro.ts` pasa las cuatro por Hunspell.
+//
+// Fuente de las cuatro casillas: DOOM3 2021 lema a lema; dexonline
+// flexiona las cuatro (s.v. alb, bun, greu, plin, gol, negru, frumos,
+// scurt).
+export const ADJETIVOS_A1: LemaAdjetival[] = [
+  { lema: 'alb', fSg: 'albă', mPl: 'albi', fPl: 'albe', gloss: 'blanco' },
+  { lema: 'bun', fSg: 'bună', mPl: 'buni', fPl: 'bune', gloss: 'bueno' },
+  { lema: 'greu', fSg: 'grea', mPl: 'grei', fPl: 'grele', gloss: 'difícil, pesado' },
+  { lema: 'plin', fSg: 'plină', mPl: 'plini', fPl: 'pline', gloss: 'lleno' },
+  { lema: 'gol', fSg: 'goală', mPl: 'goi', fPl: 'goale', gloss: 'vacío' },
+  { lema: 'negru', fSg: 'neagră', mPl: 'negri', fPl: 'negre', gloss: 'negro' },
+  { lema: 'frumos', fSg: 'frumoasă', mPl: 'frumoși', fPl: 'frumoase', gloss: 'bonito, hermoso' },
+  { lema: 'scurt', fSg: 'scurtă', mPl: 'scurți', fPl: 'scurte', gloss: 'corto' },
 ];

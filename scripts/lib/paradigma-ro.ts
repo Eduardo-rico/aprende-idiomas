@@ -130,8 +130,103 @@ export function articulado(l: LemaNominal, n: Numero): string | null {
  *  dos veces falla en la copia que nadie actualiza (§4.10). NO entra en
  *  `paradigmaNominal`: no es una casilla del lema, es concordancia. */
 export function articolPosesiv(genero: Genero, n: Numero): string {
-  if (n === 'pl') return genero === 'm' ? 'ai' : 'ale';
-  return genero === 'f' ? 'a' : 'al';
+  const c = concordanciaDe(genero, n);
+  if (n === 'pl') return c === 'm' ? 'ai' : 'ale';
+  return c === 'f' ? 'a' : 'al';
+}
+
+// ── El AMBIGEN, y las dos piezas que concuerdan con él ────────────────
+
+/** LA REGLA DEL NEUTRO RUMANO, ESCRITA UNA SOLA VEZ.
+ *
+ *  El *ambigen* no tiene ninguna forma propia: **se define por
+ *  distribución, no por forma** (GALR I, *Substantivul · Genul*; GBLR
+ *  2010). Concuerda como MASCULINO en singular y como FEMENINO en plural,
+ *  y ésa es toda su definición: `un tren` / `două trenuri`.
+ *
+ *  Vive aquí, en una función de tres líneas, porque **ya estaba escrita
+ *  tres veces sin nombre**: dentro de `articolPosesiv` (que devolvía `al`
+ *  para el neutro singular y `ale` para el plural sin decir por qué),
+ *  dentro del `NUMERAL = { m: 'doi', f: 'două', n: 'două' }` escrito a
+ *  mano en el lote 25, y a punto de escribirse por cuarta vez en el lote
+ *  26. Es §4.10 exacto: una regla copiada falla en la copia N+1 que nadie
+ *  añadió. Ahora las tres la importan.
+ *
+ *  Lo que devuelve NO es el género del lema: es **con qué género
+ *  concuerda esa casilla**, que para el neutro son dos respuestas
+ *  distintas según el número. Un `Genero` de vuelta se confundiría con el
+ *  del lema, así que devuelve sólo `'m' | 'f'`. */
+export function concordanciaDe(genero: Genero, n: Numero): 'm' | 'f' {
+  if (genero !== 'n') return genero;
+  return n === 'sg' ? 'm' : 'f';
+}
+
+/** El numeral «2», que en rumano concuerda: `doi` / `două`.
+ *
+ *  Es la casilla donde el español está **mudo** —«dos» es invariable—, y
+ *  por eso es la única del punto `r2-genero-tres-valores` que el alumno no
+ *  puede acertar ni fallar por transferencia: sólo callarse. Dictamen del
+ *  lingüista adversarial del 2026-09-04. */
+export function numeralDos(genero: Genero): string {
+  return concordanciaDe(genero, 'pl') === 'm' ? 'doi' : 'două';
+}
+
+/** UN ADJETIVO DE CUATRO FORMAS, con las cuatro GUARDADAS.
+ *
+ *  No se derivan, y la razón es la misma por la que el plural del
+ *  sustantivo se guarda: la clase no sale del lema. `alb → albi/albe`
+ *  pero `greu → grei/grele`, `gol → goi/goale`, `negru → negri/negre`,
+ *  `frumos → frumoși/frumoase` (DOOM3 2021, lema a lema; dexonline
+ *  flexiona las cuatro). Una regla «-i para el masculino, -e para el
+ *  femenino» acertaría en `alb` y `bun` y produciría `*greui`, `*gole`,
+ *  `*frumosi` — que es el 39-de-42 del §4.13 otra vez.
+ *
+ *  ⚠ **Y el rasgo que decide si el adjetivo sirve para examinar el
+ *  género: que `mPl` y `fPl` sean DISTINTOS.** `nou/nouă/noi/noi`,
+ *  `mic/mică/mici/mici`, `mare/mare/mari/mari`, `verde`, `dulce` tienen
+ *  los dos plurales homógrafos, así que un ítem de concordancia con
+ *  ellos **aprueba sin distinguir géneros** y parece impecable. Es
+ *  §4.13bis en su forma más cara. `cuatroFormas()` lo contesta y el lote
+ *  lo pone en gate. */
+export interface LemaAdjetival {
+  /** masculino singular = la forma de cita */
+  lema: string;
+  fSg: string;
+  mPl: string;
+  fPl: string;
+  gloss: string;
+}
+
+/** ¿Distingue este adjetivo el masculino del femenino EN PLURAL? Si no,
+ *  no puede examinar el género de un sustantivo en plural. */
+export const cuatroFormas = (a: LemaAdjetival) => a.mPl !== a.fPl;
+
+/** La forma del adjetivo que concuerda con un sustantivo de ese género y
+ *  número. El neutro pasa por `concordanciaDe`, o sea que **la regla del
+ *  ambigen no está escrita aquí**: se importa. */
+export function adjetivo(a: LemaAdjetival, genero: Genero, n: Numero): string | null {
+  const c = concordanciaDe(genero, n);
+  if (n === 'sg') return formaValida(c === 'm' ? a.lema : a.fSg);
+  return formaValida(c === 'm' ? a.mPl : a.fPl);
+}
+
+/** Las cuatro casillas, para el gate y para Hunspell. */
+export function paradigmaAdjetival(a: LemaAdjetival): Record<string, string | null> {
+  return { 'm sg': a.lema, 'f sg': a.fSg, 'm pl': a.mPl, 'f pl': a.fPl };
+}
+
+/** Invariantes de forma de una entrada adjetival, antes de derivar nada.
+ *  Va aparte de `invariantesLema` porque un `LemaAdjetival` no es ni
+ *  nominal ni verbal y meterlo en la misma unión obligaría a un `in` más
+ *  en cada rama: un guardián que crece por dentro acaba disparándose por
+ *  la forma y no por la pregunta (§4.1). */
+export function invariantesAdjetivo(a: LemaAdjetival): string[] {
+  const e: string[] = [];
+  for (const [k, v] of Object.entries(paradigmaAdjetival(a)))
+    if (!v || !/^[a-zăâîșț]+$/.test(v)) e.push(`${a.lema}: la casilla «${k}» no es una forma rumana («${v}»)`);
+  if (/[şţ]/.test(JSON.stringify(a))) e.push(`${a.lema}: cedilla`);
+  if (a.fSg === a.lema && a.mPl === a.fPl) e.push(`${a.lema}: invariable en género — no puede examinar concordancia`);
+  return e;
 }
 
 /** Genitivo-dativo. Indefinido: m/n = nominativo; f = la forma del plural

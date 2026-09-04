@@ -16,8 +16,8 @@
 //      Hunspell es gate léxico: lo que rechaza se LEE, no se borra
 //      (rechaza doctorule, atestado en dexonline), y lo que se decide
 //      dejar va en EXENCIONES con su fuente.
-import { SUSTANTIVOS_A1, VERBOS_A1 } from '../lib/data/languages/ro/lexicon-a1';
-import { paradigmaNominal, paradigmaVerbal, invariantesLema, SIN_IMPERATIV } from './lib/paradigma-ro';
+import { ADJETIVOS_A1, SUSTANTIVOS_A1, VERBOS_A1 } from '../lib/data/languages/ro/lexicon-a1';
+import { paradigmaAdjetival, paradigmaNominal, paradigmaVerbal, invariantesAdjetivo, invariantesLema, SIN_IMPERATIV } from './lib/paradigma-ro';
 import { hunspellDisponible, desconocidas } from './lib/hunspell-ro';
 import { EXENCIONES_RO } from './lib/exenciones-hunspell-ro';
 
@@ -32,6 +32,11 @@ const EXENCIONES = EXENCIONES_RO;
 // ── 1 · invariantes ──────────────────────────────────────────────────
 const errores: string[] = [];
 for (const l of [...SUSTANTIVOS_A1, ...VERBOS_A1]) errores.push(...invariantesLema(l));
+// Los adjetivos van por su propia puerta: un `LemaAdjetival` no es ni
+// nominal ni verbal, y meterlo en la misma unión obligaría a un `in` más
+// en cada rama de `invariantesLema` — un guardián que crece por dentro
+// acaba disparándose por la forma y no por la pregunta (§4.1).
+for (const a of ADJETIVOS_A1) errores.push(...invariantesAdjetivo(a));
 
 // ── 2 · derivación ───────────────────────────────────────────────────
 const formas: { lema: string; casilla: string; forma: string }[] = [];
@@ -49,6 +54,17 @@ for (const l of SUSTANTIVOS_A1) {
   if (l.dim) formas.push({ lema: l.lema, casilla: 'DIM sg', forma: l.dim });
   if (l.dimPlural) formas.push({ lema: l.lema, casilla: 'DIM pl', forma: l.dimPlural });
 }
+// LAS CUATRO CASILLAS DE CADA ADJETIVO, POR HUNSPELL. Es el segundo
+// camino: las cuatro están GUARDADAS a mano en el lexicón —la clase no se
+// deriva del lema— y sin esto nada las miraría. Hunspell es gate léxico:
+// aprobaría `*greui` sólo si existiera como palabra, así que lo que
+// certifica es «esta cadena existe en rumano», no «es la casilla que
+// digo». La segunda pregunta la contestan DOOM3 y el lingüista.
+for (const a of ADJETIVOS_A1)
+  for (const [casilla, forma] of Object.entries(paradigmaAdjetival(a))) {
+    if (forma === null) { nulos.push(`${a.lema} · ${casilla}`); continue; }
+    formas.push({ lema: a.lema, casilla: `ADJ ${casilla}`, forma });
+  }
 for (const v of VERBOS_A1) {
   for (const [casilla, forma] of Object.entries(paradigmaVerbal(v))) {
     // El único null ESPERABLE de un verbo: los cuatro defectivos no
@@ -80,7 +96,7 @@ if (hunspell) {
 }
 
 console.log('# Paradigma rumano — lexicón A1\n');
-console.log(`Lexicón: ${SUSTANTIVOS_A1.length} sustantivos · ${VERBOS_A1.length} verbos. Formas derivadas o guardadas: ${formas.length}.`);
+console.log(`Lexicón: ${SUSTANTIVOS_A1.length} sustantivos · ${ADJETIVOS_A1.length} adjetivos · ${VERBOS_A1.length} verbos. Formas derivadas o guardadas: ${formas.length}.`);
 console.log(`\n1 · Invariantes: ${errores.length} errores${errores.length ? ':\n' + errores.map((e) => '  - ' + e).join('\n') : '.'}`);
 console.log(`2 · Derivación: ${nulos.length} casillas sin forma${nulos.length ? ':\n' + nulos.map((e) => '  - ' + e).join('\n') : '.'}`);
 if (!hunspell) console.log('3 · Hunspell: NO DISPONIBLE — el segundo camino no corrió. Esto no es verde.');
