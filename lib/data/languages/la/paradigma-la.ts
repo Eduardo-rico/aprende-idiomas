@@ -66,20 +66,50 @@ const N3_NEUTRO: Record<Numero, string[]> = {
   sg: ['', '', 'is', 'ī', 'e', ''],
   pl: ['a', 'a', 'um', 'ibus', 'ibus', 'a'],
 };
+const N4: Record<Numero, string[]> = {
+  sg: ['us', 'um', 'ūs', 'uī', 'ū', 'us'],
+  pl: ['ūs', 'ūs', 'uum', 'ibus', 'ibus', 'ūs'],
+};
+const N4_NEUTRO: Record<Numero, string[]> = {
+  sg: ['ū', 'ū', 'ūs', 'ū', 'ū', 'ū'],
+  pl: ['ua', 'ua', 'uum', 'ibus', 'ibus', 'ua'],
+};
+const N5: Record<Numero, string[]> = {
+  sg: ['ēs', 'em', 'eī', 'eī', 'ē', 'ēs'],
+  pl: ['ēs', 'ēs', 'ērum', 'ēbus', 'ēbus', 'ēs'],
+};
 const ORDEN: Caso[] = ['nom', 'ac', 'gen', 'dat', 'abl', 'voc'];
 
-export type Declinacion = '1ª' | '2ª' | '3ª';
+export type Declinacion = '1ª' | '2ª' | '3ª' | '4ª' | '5ª';
 
+// ── EL ORDEN DE ESTAS COMPROBACIONES ES EL ARREGLO ───────────────────
+//
+// La versión anterior miraba `-ī` antes que nada y la 5.ª cae dentro: el
+// genitivo de `rēs` es `reī`, que acaba en `ī`. Resultado, sin lanzar y
+// sin avisar:
+//
+//     rēs → *reus *reum reī *reō | *reī *reōs *reōrum *reīs
+//
+// Y **`reus` es una palabra latina real** —«el acusado», 15 tokens en el
+// treebank— así que una comprobación por atestación habría dicho que sí.
+// Es el fallo que devuelve un número plausible: ni error ni cero, sino la
+// forma de al lado. La 4.ª sí lanzaba; la 5.ª pasaba en silencio.
+//
+// Aviso declarado: `-ēī` también es el genitivo de los propios en `-ēius`
+// (`Pompēius` → `Pompēī`). Si algún día entra uno, hay que distinguirlo
+// por dato y no por final, como ya se hace con el tema en `-i`.
 export function declinacionDe(e: EntradaNominal): Declinacion {
   const g = e.genitivo.normalize('NFC');
   if (g.endsWith('ae')) return '1ª';
-  if (g.endsWith('ī')) return '2ª';
+  if (/[eē]ī$/.test(g)) return '5ª';       // ANTES que la 2.ª: `reī` acaba en `ī`
+  if (g.endsWith('ūs')) return '4ª';
   if (g.endsWith('is')) return '3ª';
-  throw new Error(`genitivo «${g}» fuera de L1: 1.ª (-ae), 2.ª (-ī) o 3.ª (-is)`);
+  if (g.endsWith('ī')) return '2ª';
+  throw new Error(`genitivo «${g}» no es de ninguna de las cinco declinaciones`);
 }
 
 const temaDe = (e: EntradaNominal) =>
-  e.genitivo.normalize('NFC').replace(/(ae|ī|is)$/, '');
+  e.genitivo.normalize('NFC').replace(/([eē]ī|ae|ūs|is|ī)$/, '');
 
 // ── IRREGULARES DECLARADOS, uno por uno y con su cuenta ──────────────
 //
@@ -108,6 +138,13 @@ export function declinar(e: EntradaNominal, caso: Caso, num: Numero): string {
   const i = ORDEN.indexOf(caso);
 
   if (decl === '1ª') return tema + N1[num]![i]!;
+
+  if (decl === '5ª') return tema + N5[num]![i]!;
+
+  if (decl === '4ª') {
+    const t4 = e.genero === 'n' ? N4_NEUTRO : N4;
+    return tema + t4[num]![i]!;
+  }
 
   if (decl === '3ª') {
     // Nominativo, acusativo y vocativo del neutro, y nominativo y
@@ -200,6 +237,30 @@ const VERBOS_IRREGULARES: Record<string, Partial<Record<`${Tiempo}.${Persona}`, 
   },
 };
 
+export type Conjugacion5 = Conjugacion | 'mixta';
+
+// ── LA MIXTA NO FALTABA: SALÍA MAL ───────────────────────────────────
+//
+// Los verbos en `-iō` de la 3.ª —`capiō/capere`, `faciō/facere`— tienen
+// infinitivo en `-ere`, así que la versión anterior los mandaba a la 3.ª y
+// producía `*capō … *capunt`. Lo correcto es `capiō … capiunt`
+// (Allen & Greenough, verbos en -iō de la tercera). En el treebank:
+// `capō` 0, `capunt` 0, `facō` 0, `facunt` 0, frente a `faciō` 35 y
+// `faciunt` 34 — y `faciō` es el lema n.º 19 del corpus.
+//
+// Dos puntos de L1 la declaran obligatoria: `l5-presente` («las cinco
+// clases») y `l5-conjugacion-por-infinitivo`, cuyo `varia` dice «hay que
+// traer la mixta, que es la que nadie ve». Se reconoce por el LEMA en
+// `-iō` con infinitivo en `-ere`: ninguno de los dos solo basta.
+const V_MIXTA: string[] = ['ō', 'is', 'it', 'imus', 'itis', 'iunt'];
+const IMPERFECTO_MIXTA = ['iēbam', 'iēbās', 'iēbat', 'iēbāmus', 'iēbātis', 'iēbant'];
+const FUTURO_MIXTA = ['iam', 'iēs', 'iet', 'iēmus', 'iētis', 'ient'];
+
+export function esMixta(e: EntradaVerbal): boolean {
+  const inf = e.infinitivo.normalize('NFC');
+  return /iō$/.test(e.lema.normalize('NFC')) && inf.endsWith('ere') && !inf.endsWith('īre');
+}
+
 export function conjugacionDe(e: EntradaVerbal): Conjugacion {
   const inf = e.infinitivo.normalize('NFC');
   if (inf.endsWith('āre')) return 1;
@@ -244,6 +305,13 @@ const TABLA: Record<Tiempo, Record<Conjugacion, string[]>> = { presente: V, impe
 export function conjugar(e: EntradaVerbal, p: Persona, tiempo: Tiempo = 'presente'): string {
   const irr = VERBOS_IRREGULARES[e.lema.normalize('NFC')]?.[`${tiempo}.${p}` as `${Tiempo}.${Persona}`];
   if (irr) return irr;
+  if (esMixta(e)) {
+    const tabla = tiempo === 'presente' ? V_MIXTA : tiempo === 'imperfecto' ? IMPERFECTO_MIXTA : FUTURO_MIXTA;
+    const tema = e.infinitivo.normalize('NFC').replace(/ere$/, '');
+    // La 1.ª sg del presente es el LEMA (`capiō`), no tema + ō.
+    if (tiempo === 'presente' && p === '1sg') return e.lema.normalize('NFC');
+    return tema + tabla[PERSONAS.indexOf(p)]!;
+  }
   const c = conjugacionDe(e);
   return temaVerbal(e) + TABLA[tiempo][c]![PERSONAS.indexOf(p)]!;
 }
@@ -263,6 +331,12 @@ export function infectum(e: EntradaVerbal): Record<string, string> {
   const out: Record<string, string> = {};
   for (const t of ['presente', 'imperfecto', 'futuro'] as Tiempo[])
     for (const p of PERSONAS) out[`${t}.${p}`] = conjugar(e, p, t);
+  // EL INFINITIVO, que existía en el tipo, lo leía `conjugacionDe` y NUNCA
+  // SE EMITÍA. Como el gate de cantidad se construye desde aquí, rechazaba
+  // `amāre`, `vidēre`, `dūcere`, `audīre` y `esse` — las cuatro segundas
+  // partes y la del verbo más frecuente. Y el punto
+  // `l5-conjugacion-por-infinitivo` ES reconocer la conjugación por ellas.
+  out['infinitivo'] = e.infinitivo.normalize('NFC');
   return out;
 }
 

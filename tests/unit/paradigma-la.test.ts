@@ -8,7 +8,7 @@
 // auditado por reflejos romances) y la atestación (contra 227.301 tokens
 // de treebank, congelados en un JSON porque el corpus está gitignorado).
 import { describe, it, expect } from 'vitest';
-import { paradigmaNominal, paradigmaVerbal, declinar, conjugar, todasLasFormas } from '../../lib/data/languages/la/paradigma-la';
+import { paradigmaNominal, paradigmaVerbal, declinar, conjugar, todasLasFormas, declinacionDe, esMixta, infectum } from '../../lib/data/languages/la/paradigma-la';
 import { NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1 } from '../../lib/data/languages/la/lexicon-l1';
 import { revisarCantidad, auditarPorReflejos, revisarCoherenciaLexico, noContrastables } from '../../lib/data/languages/la/cantidad';
 import atestacion from '../../lib/data/languages/la/atestacion-l1.json';
@@ -211,5 +211,61 @@ describe('dónde este gate NO puede medir, dicho en vez de pasado en verde', () 
     expect(noContrastables).toContain('ager');
     // Y los que sí se contrastan siguen siendo la mayoría.
     expect(NOMBRES_L1.length - noContrastables.length).toBeGreaterThan(noContrastables.length);
+  });
+});
+
+describe('TRES DEFECTOS QUE ESTABAN DORMIDOS', () => {
+  // Los tres los encontró el latinista mirando la máquina AL REVÉS —qué le
+  // falta para lo que el inventario declara— en vez de al derecho. Ninguno
+  // había dado la cara porque ningún lote los había tocado todavía.
+
+  it('D1 · la 5.ª declinación FABRICABA en silencio', () => {
+    // `reī` acaba en `ī`, así que la clasificaba como 2.ª y derivaba
+    // `*reus *reum *reō *reōs`. Y `reus` ES una palabra latina real —«el
+    // acusado», 15 tokens— así que una comprobación por atestación habría
+    // dicho que sí: el fallo que devuelve un número plausible.
+    const res = { lema: 'rēs', genitivo: 'reī', genero: 'f' as const, glosa: 'cosa' };
+    expect(declinacionDe(res)).toBe('5ª');
+    expect(declinar(res, 'nom', 'sg')).toBe('rēs');
+    expect(declinar(res, 'nom', 'sg')).not.toBe('reus');
+    expect(declinar(res, 'ac', 'sg')).toBe('rem');
+    expect(declinar(res, 'gen', 'pl')).toBe('rērum');
+    // Y la 4.ª, que antes lanzaba, ahora declina.
+    const manus = { lema: 'manus', genitivo: 'manūs', genero: 'f' as const, glosa: 'mano' };
+    expect(declinacionDe(manus)).toBe('4ª');
+    expect(declinar(manus, 'dat', 'sg')).toBe('manuī');
+    expect(declinar(manus, 'gen', 'pl')).toBe('manuum');
+  });
+
+  it('D2 · la conjugación mixta no faltaba: SALÍA MAL', () => {
+    // `capere` acaba en `-ere`, así que iba a la 3.ª pura y daba `*capō`,
+    // `*capunt`. En el treebank: `capō` 0, `capunt` 0, `faciō` 35,
+    // `faciunt` 34 — y `faciō` es el lema n.º 19 del corpus.
+    const capio = { lema: 'capiō', infinitivo: 'capere', glosa: 'coger' };
+    expect(esMixta(capio)).toBe(true);
+    expect(conjugar(capio, '1sg')).toBe('capiō');
+    expect(conjugar(capio, '3pl')).toBe('capiunt');
+    expect(conjugar(capio, '3pl')).not.toBe('capunt');
+    expect(conjugar(capio, '3sg', 'imperfecto')).toBe('capiēbat');
+    // Y la 3.ª PURA no cambia: se reconoce por el lema en -iō, no por el
+    // infinitivo, porque el infinitivo de las dos es el mismo.
+    const duco = { lema: 'dūcō', infinitivo: 'dūcere', glosa: 'guiar' };
+    expect(esMixta(duco)).toBe(false);
+    expect(conjugar(duco, '3pl')).toBe('dūcunt');
+  });
+
+  it('D3 · el infinitivo existía en el tipo y NUNCA se emitía', () => {
+    // `conjugacionDe` lo leía, pero `infectum` no lo sacaba, así que el
+    // gate de cantidad —que se construye desde la máquina— rechazaba las
+    // cuatro segundas partes. Y el punto `l5-conjugacion-por-infinitivo`
+    // ES reconocer la conjugación por ellas.
+    for (const f of ['amāre', 'vidēre', 'dūcere', 'audīre', 'esse']) {
+      expect(revisarCantidad(f), f).toEqual([]);
+    }
+    expect(infectum({ lema: 'amō', infinitivo: 'amāre', glosa: 'amar' }).infinitivo).toBe('amāre');
+  });
+
+  it('y un genitivo que no es de ninguna de las cinco LANZA, no fabrica', () => {
+    expect(() => declinacionDe({ lema: 'x', genitivo: 'xyz', genero: 'm', glosa: '' })).toThrow(/ninguna de las cinco/);
   });
 });
