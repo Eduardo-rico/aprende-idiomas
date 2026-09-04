@@ -36,7 +36,26 @@
 import frecuencias from '../../lib/data/languages/la/frecuencias-la.json';
 import { revisarCobertura, type Cobertura } from './cobertura';
 
-const LEMAS = frecuencias.lemas as Record<string, { total: number; ambiguo?: string }>;
+const LEMAS = frecuencias.lemas as Record<string, { total: number; vulgata: number; ambiguo?: string }>;
+
+// ── EL PISO SE MIDE SOBRE LA LECTURA DEL NIVEL, NO SOBRE EL LATÍN ─────
+//
+// El experto optimiza por verdad; el curso optimiza por lo que el alumno
+// se va a encontrar. Cuando chocan manda lo segundo, porque una trampa que
+// no aparece nunca no es una trampa: es una curiosidad.
+//
+// L1 declara 12.000 palabras de lectura y entra por la VULGATA, que en el
+// corpus son 109.198 tokens. Un lema con 10 apariciones ahí sale
+// 10 × 12.000 / 109.198 ≈ 1,1 veces en todo lo que el alumno lee en el
+// nivel. Por debajo de eso la tarjeta enseña algo que no se va a usar, y
+// en L1 hay sesenta plazas.
+//
+// Lo que este piso tumba, medido: `hostis` (194 en el corpus, CERO en la
+// Vulgata: sus apariciones son todas de César y Cicerón), `fortuna` (64 y
+// cero), `ingenium` (24 y cero), `sententia` (62 y dos) y `hospes` (19 y
+// ocho). De los 1.311 lemas citables, 134 no salen NI UNA VEZ en la
+// lectura del nivel.
+export const MIN_VULGATA = 10;
 
 export interface ItemFlashcard {
   id: string;
@@ -71,6 +90,7 @@ export type ClaseFalloF =
   | 'frecuencia-no-cuadra' | 'lema-homografo' | 'sin-fuente' | 'sin-corpus'
   | 'falso-regalo-sin-desplazamiento' | 'trampa-no-hispanohablante'
   | 'la-tarjeta-se-contesta-sola' | 'repetido' | 'corpus-que-el-alumno-no-lee'
+  | 'no-esta-en-la-lectura-del-nivel'
   | 'estrategia-ciega' | 'cobertura-cero' | 'cobertura-sin-motivo';
 
 export interface FalloF { item: string; clase: ClaseFalloF; detalle: string }
@@ -89,6 +109,10 @@ export function revisarFlashcard(item: ItemFlashcard): FalloF[] {
   } else {
     if (f.total !== item.frecuencia) push('frecuencia-no-cuadra', `declara ${item.frecuencia} y el corpus da ${f.total}`);
     if (f.ambiguo) push('lema-homografo', `${f.ambiguo} — la tarjeta tendría que decir cómo se desambiguó`);
+    if (f.vulgata < MIN_VULGATA) {
+      push('no-esta-en-la-lectura-del-nivel',
+        `«${item.claveCorpus}» sale ${f.total} veces en el corpus pero ${f.vulgata} en la VULGATA, que es la lectura declarada de L1: el alumno no se la va a encontrar (piso ${MIN_VULGATA})`);
+    }
   }
 
   if (!/Lewis|Short|L&S|Allen|Greenough|Gildersleeve|Ernout|OLD|treebank/i.test(item.fuente)) {
@@ -147,6 +171,7 @@ export function coberturaFlashcard(items: ItemFlashcard[]): Cobertura[] {
   const falsos = items.filter((i) => i.esFalsoRegalo).length;
   return [
     { comprobacion: 'la frecuencia contra el corpus', decididos: n, total: n },
+    { comprobacion: 'el piso sobre la lectura del nivel', decididos: n, total: n },
     { comprobacion: 'la fuente citada', decididos: n, total: n },
     { comprobacion: 'la pregunta del hispanohablante', decididos: falsos, total: n,
       motivoDeLosQueQuedanFuera: 'sólo un falso regalo puede tener una trampa que sea inglesa o española' },

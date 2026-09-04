@@ -87,12 +87,20 @@ describe('el primer lote de flashcard', () => {
     expect(t.desconfiarSiempre + t.fiarseSiempre).toBe(1);
   });
 
-  it('trae la tarjeta que enseña el método: `hostis` NO es trampa para nosotros', () => {
-    // En los manuales ingleses es la trampa estrella —«hostis no es host»,
-    // host < hospes— y para un hispanohablante «hueste» y «hostil» ya
-    // apuntan a enemigo.
-    const hostis = LOTE.find((i) => i.lema === 'hostis')!;
-    expect(hostis.esFalsoRegalo).toBe(false);
+  it('NINGUNA tarjeta enseña una palabra que el alumno no vaya a leer', () => {
+    // El criterio que tumbó dos de las doce, `hostis` entre ellas: sale
+    // 194 veces en el corpus y CERO en la Vulgata, que es por donde entra
+    // L1. El experto optimiza por verdad y el curso por lo que el alumno
+    // se encuentra; cuando chocan manda lo segundo.
+    for (const i of LOTE) {
+      expect(revisarFlashcard(i).map((x) => x.clase), i.lema).not.toContain('no-esta-en-la-lectura-del-nivel');
+    }
+    expect(LOTE.find((i) => i.lema === 'hostis'), 'hostis salió del lote por el piso de lectura').toBeUndefined();
+  });
+
+  it('y el gate lo CAZA si alguien la vuelve a meter', () => {
+    const h = revisarFlashcard({ ...base(), lema: 'hostis', claveCorpus: 'hostis', frecuencia: 194, esFalsoRegalo: false });
+    expect(h.map((x) => x.clase)).toContain('no-esta-en-la-lectura-del-nivel');
   });
 
   it('`fidēs` dice lo que pasa en los DOS latines', () => {

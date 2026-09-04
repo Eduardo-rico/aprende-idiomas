@@ -8,16 +8,28 @@
 // latino sí transfiere y un alumno que desconfíe de todo lee peor.
 //
 // Los ejemplos están elegidos para un HISPANOHABLANTE, que es la mitad
-// difícil. El propio punto lo dice de la trampa más citada del género:
-// «hostis = huésped» es inglesa (host < hospes), y para nosotros «hueste»
-// y «hostil» ya apuntan a enemigo. Por eso `hostis` está aquí como
-// VERDADERO regalo, que es lo que es para nuestro alumno.
+// difícil. La trampa más citada del género —«hostis = huésped»— es
+// INGLESA (host < hospes), y para nosotros «hueste» y «hostil» ya apuntan
+// a enemigo. Un falso amigo que sólo lo es en inglés enseña una dificultad
+// que nuestro alumno no tiene, y la comprobación contra fuentes lo aprueba
+// igual, porque el sentido latino sí es ése.
 //
-// Y una nota de método que salió midiendo: el punto propone `hospes` como
-// «el falso regalo real de esa familia», y `hospes` aparece **19 veces en
-// 227.301 tokens**, por debajo del umbral citable. Es buena lingüística y
-// mala tarjeta: una trampa que el alumno no se encuentra no merece un
-// ítem de los sesenta del nivel.
+// ── PERO `hostis` TAMPOCO ESTÁ AQUÍ, Y ESO ES LO INTERESANTE ──────────
+//
+// Estuvo, como control de verdadero regalo, hasta que el piso de
+// frecuencia sobre la LECTURA DEL NIVEL lo tumbó: `hostis` sale 194 veces
+// en el corpus entero y **CERO en la Vulgata**, que es por donde entra
+// L1. Todas sus apariciones son de César y Cicerón. La lección anglófona
+// se queda escrita aquí, que es donde vale; la plaza va a una palabra que
+// el alumno sí se encuentra.
+//
+// El criterio, que vale para las sesenta tarjetas del nivel: **el experto
+// optimiza por verdad y el curso por lo que el alumno se va a encontrar, y
+// cuando chocan manda lo segundo.** Una trampa que no aparece nunca no es
+// una trampa: es una curiosidad. Lo mismo tumbó a `sententia` (62 en el
+// corpus, 2 en la Vulgata) y a `hospes` (19 y 8), que es justamente la
+// palabra que el punto propone como «el falso regalo real de esa
+// familia»: buena lingüística y mala tarjeta.
 import type { ItemFlashcard } from '../../../../../scripts/lib/gate-flashcard';
 
 const LS = (s: string) => `Lewis & Short s.v. ${s}`;
@@ -61,13 +73,14 @@ export const LOTE_FALSOS_REGALOS: ItemFlashcard[] = [
     fuente: LS('virtus'), corpus: 'todo',
   },
   {
+    // Sustituyó a `sententia`, que salía 2 veces en la Vulgata.
     id: 'la-11f-05', punto: 'l11-falsos-regalos',
-    lema: 'sententia', claveCorpus: 'sententia', frecuencia: 62,
-    sentidoLatino: 'la opinión que uno sostiene o vota; el parecer',
-    descendiente: 'sentencia', sentidoDescendiente: 'fallo judicial, o máxima',
-    esFalsoRegalo: true, desplazamiento: 'estrechamiento',
-    porQueUnHispanohablante: 'los dos sentidos españoles —el fallo y la máxima— existen en latín como usos menores, así que el hispanohablante acierta a veces y eso le confirma la lectura equivocada en el resto. En el senado «sententia» es el voto de cada uno.',
-    fuente: LS('sententia'), corpus: 'todo',
+    lema: 'grātia', claveCorpus: 'gratia', frecuencia: 241,
+    sentidoLatino: 'el favor que se hace o se recibe, el agradecimiento, la influencia; y en ablativo pospuesto, «por causa de» («honōris grātiā»). En la Vulgata, la gracia',
+    descendiente: 'gracia', sentidoDescendiente: 'lo que hace reír; el donaire',
+    esFalsoRegalo: true, desplazamiento: 'cambio-de-dominio',
+    porQueUnHispanohablante: 'el primer sentido de «gracia» en español es lo gracioso, y ése es exactamente el único que el latín NO tiene. Y hay algo peor: «grātiā» pospuesto es una posposición que significa «por causa de», así que «honōris grātiā» se lee «la gracia del honor» y construye una frase entera coherente y falsa.',
+    fuente: LS('gratia'), corpus: 'todo',
   },
   {
     id: 'la-11f-06', punto: 'l11-falsos-regalos',
@@ -97,13 +110,12 @@ export const LOTE_FALSOS_REGALOS: ItemFlashcard[] = [
     esFalsoRegalo: false, fuente: LS('templum'), corpus: 'todo',
   },
   {
+    // Sustituyó a `hostis`, que sale CERO veces en la Vulgata.
     id: 'la-11f-09', punto: 'l11-falsos-regalos',
-    // LA TARJETA QUE ENSEÑA EL MÉTODO: en los manuales ingleses ésta es la
-    // trampa estrella —«hostis no es host»— y para nosotros no lo es.
-    lema: 'hostis', claveCorpus: 'hostis', frecuencia: 194,
-    sentidoLatino: 'el enemigo público, el del pueblo enemigo',
-    descendiente: 'hueste, hostil', sentidoDescendiente: 'tropa; enemigo',
-    esFalsoRegalo: false, fuente: LS('hostis'), corpus: 'todo',
+    lema: 'carō', claveCorpus: 'caro', frecuencia: 118,
+    sentidoLatino: 'la carne',
+    descendiente: 'carne', sentidoDescendiente: 'lo mismo',
+    esFalsoRegalo: false, fuente: LS('caro'), corpus: 'todo',
   },
   {
     id: 'la-11f-10', punto: 'l11-falsos-regalos',
