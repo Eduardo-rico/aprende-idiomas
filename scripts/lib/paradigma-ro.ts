@@ -115,6 +115,25 @@ export function articulado(l: LemaNominal, n: Numero): string | null {
   return formaValida(s + 'ul');                                                    // om → omul
 }
 
+/** ARTÍCULO POSESIVO / GENITIVAL `al · a · ai · ale`.
+ *
+ *  Concuerda con lo **POSEÍDO**, nunca con el poseedor — y concordarlo con
+ *  el poseedor es una de las clases de error que el lingüista adversarial
+ *  busca activamente en este proyecto. Seis casillas y no cuatro, porque
+ *  el NEUTRO es la tercera concordancia del rumano: singular como el
+ *  masculino, plural como el femenino (`un scaun AL vecinului`, `niște
+ *  scaune ALE vecinului`). GALR I, *Articolul posesiv (genitival)*;
+ *  DOOM3 2021 s.v. *al*.
+ *
+ *  Vive aquí y no en el lote que lo estrena porque lo necesita también
+ *  `r11-relativo-declinado` (`omul AL cărui fiu…`), y una regla escrita
+ *  dos veces falla en la copia que nadie actualiza (§4.10). NO entra en
+ *  `paradigmaNominal`: no es una casilla del lema, es concordancia. */
+export function articolPosesiv(genero: Genero, n: Numero): string {
+  if (n === 'pl') return genero === 'm' ? 'ai' : 'ale';
+  return genero === 'f' ? 'a' : 'al';
+}
+
 /** Genitivo-dativo. Indefinido: m/n = nominativo; f = la forma del plural
  *  (unei case, unei cărți). Definido: m/n = articulado + ui; f = plural + i
  *  (casei, cărții), con -ie → -iei; plural definido = plural + lor. */

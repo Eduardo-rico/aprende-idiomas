@@ -8,7 +8,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   articulado, genitivoDativo, vocativo, presente, participio, perfectCompus, imperfecto,
-  conjugacionDe, temaInfinitivo, palatalizar, invariantesLema, paradigmaNominal,
+  conjugacionDe, temaInfinitivo, palatalizar, invariantesLema, paradigmaNominal, articolPosesiv,
   conjunctiv, conjunctiv3, conjunctivSa, conjunctivPerfect, conj3Derivable,
   gerunziu, gerDerivable, imperativNegativ, imperativAfirmativ2pl, SIN_IMPERATIV,
   type LemaNominal, type LemaVerbal,
@@ -410,3 +410,43 @@ describe('imperativo negativo', () => {
     expect(desconocidas(formas)).toEqual([]);
   });
 });
+
+describe('artículo posesivo al / a / ai / ale', () => {
+  it('son SEIS casillas y no cuatro: el neutro es la tercera concordancia', () => {
+    // GALR I, Articolul posesiv; DOOM3 2021 s.v. «al». El neutro va con el
+    // masculino en singular y con el femenino en plural, y ésa es la
+    // casilla que un hispanohablante no tiene dónde colocar.
+    expect(articolPosesiv('m', 'sg')).toBe('al');
+    expect(articolPosesiv('f', 'sg')).toBe('a');
+    expect(articolPosesiv('n', 'sg')).toBe('al');
+    expect(articolPosesiv('m', 'pl')).toBe('ai');
+    expect(articolPosesiv('f', 'pl')).toBe('ale');
+    expect(articolPosesiv('n', 'pl')).toBe('ale');
+  });
+
+  it('EL ATAJO DE SUPERFICIE «a + la terminación del enclítico» acierta 137 de 140', () => {
+    // Medido sobre el lexicón ENTERO antes de escribir un solo ítem, que
+    // es la contramedida del §4.13: un 137/140 es exactamente el aspecto
+    // que tiene una regla a la que le falta una mitad. La consecuencia
+    // para el material es dura: si la fuente del ítem enseña el
+    // sustantivo ARTICULADO, la forma del posesivo se lee de su
+    // terminación y el ítem no examina la concordancia.
+    const superficie = (art: string) =>
+      art.endsWith('le') ? 'ale' : /ii$|[^l]i$/.test(art) ? 'ai' : art.endsWith('l') ? 'al' : art.endsWith('a') ? 'a' : '?';
+    const fallos: string[] = [];
+    let celdas = 0;
+    for (const l of SUSTANTIVOS_A1)
+      for (const n of ['sg', 'pl'] as const) {
+        const art = articulado(l, n);
+        if (!art) continue;
+        celdas++;
+        if (superficie(art) !== articolPosesiv(l.genero, n)) fallos.push(art);
+      }
+    expect(celdas).toBe(140);
+    // El residuo es UNA clase y hay que saberlo: masculino y neutro
+    // singular en -e, cuyo enclítico -le es homógrafo del femenino y el
+    // neutro PLURAL (fetele → ale, dar fratele → al).
+    expect(fallos).toEqual(['fratele', 'numele', 'câinele']);
+  });
+});
+
