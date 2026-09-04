@@ -6,7 +6,7 @@
 // y con todos inventados. Así que lo primero de este fichero no es que
 // apruebe lo bueno: es que SUSPENDA lo malo, en las dos direcciones.
 import { describe, it, expect } from 'vitest';
-import { revisarCantidad, auditarPorReflejos, revisarCoherenciaLexico, REFLEJOS, _invalidarCache } from '../../lib/data/languages/la/cantidad';
+import { revisarCantidad, auditarPorReflejos, revisarCoherenciaLexico, separarEnclitico, formasValidas, REFLEJOS, _invalidarCache } from '../../lib/data/languages/la/cantidad';
 import { NOMBRES_L1 } from '../../lib/data/languages/la/lexicon-l1';
 
 describe('el caso que el gate anterior aprobaba', () => {
@@ -97,5 +97,52 @@ describe('el SEGUNDO camino, que no consulta el mácrón', () => {
     // y se declara en vez de fingir cobertura.
     expect(REFLEJOS.filter((r) => r[2] === 'breve').length).toBeGreaterThanOrEqual(3);
     expect(REFLEJOS.filter((r) => r[2] === 'larga').length).toBeGreaterThanOrEqual(3);
+  });
+});
+
+describe('EL ENCLÍTICO, que no se separa por espacios', () => {
+  // `-que` va PEGADO —`populusque`, `dominusque`— así que el troceo por
+  // no-letras lo entrega entero. No basta con añadirlo al lexicón: hay que
+  // partir, y hay que partir con cuidado.
+
+  it('parte cuando lo que queda ES una forma conocida', () => {
+    expect(revisarCantidad('dominusque')).toEqual([]);
+    expect(separarEnclitico('dominusque', formasValidas())).toEqual(['dominus', 'que']);
+    expect(revisarCantidad('servus dominusque agrōs custōdiunt')).toEqual([]);
+  });
+
+  it('y NO parte las que acaban igual sin llevar enclítico', () => {
+    // `neque`, `quisque`, `usque`, `dēnique`, `atque` son palabras
+    // enteras. Con sólo la primera condición —«la palabra completa no es
+    // conocida»— se partirían en cuanto faltaran del lexicón; con sólo la
+    // segunda, `sine` se partiría en `si`+`ne`.
+    const v = formasValidas();
+    for (const w of ['neque', 'quisque', 'usque', 'dēnique', 'itaque', 'atque', 'sine']) {
+      expect(separarEnclitico(w, v), w).toEqual([w]);
+    }
+  });
+
+  it('y una base DESCONOCIDA no se parte para salvarla', () => {
+    // `populus` no está en el lexicón, así que `populusque` se rechaza
+    // entero. Partirlo para que `que` pasara sería fabricar una aprobación
+    // — la misma familia que un generador que inventa cuando no sabe.
+    expect(separarEnclitico('populusque', formasValidas())).toEqual(['populusque']);
+    expect(revisarCantidad('populusque').map((x) => x.clase)).toContain('forma-desconocida');
+  });
+
+  it('las palabras de función que faltaban después de ocho lotes', () => {
+    // `et` es la palabra más frecuente del latín (11.407) y `nōn` la
+    // duodécima (2.931). Sin ellas no se puede escribir una frase
+    // coordinada ni una negación, y se nota en los lotes ya escritos: casi
+    // toda frase es N-V-N de tres palabras.
+    for (const w of ['et', 'nōn', 'ut', 'sed', 'quia', 'ad', 'per', 'dē', 'sī', 'nē', 'autem', 'enim']) {
+      expect(revisarCantidad(w), w).toEqual([]);
+    }
+  });
+
+  it('y el gate NO se ha aflojado al ensancharse', () => {
+    for (const mala of ['amāt', 'āmīcus', 'Filium', 'dūcēbit', 'populusqux']) {
+      expect(revisarCantidad(mala).length, mala).toBeGreaterThan(0);
+    }
   });
 });

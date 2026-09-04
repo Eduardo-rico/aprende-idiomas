@@ -116,6 +116,32 @@ export const ADJETIVOS_L1: EntradaAdjetivo[] = [
 // fortiōris`— no está en la máquina. Declarar las dos formas que un lote
 // necesita es honesto; fingir que la máquina las deriva no lo sería.
 export const INDECLINABLES_L1: string[] = [
-  'cum', 'ex', 'ē', 'in',
+  // ── PREPOSICIONES ──
+  'cum', 'ex', 'ē', 'in', 'ad', 'ab', 'ā', 'dē', 'per', 'prō', 'sine', 'sub', 'ante', 'post',
+  // ── CONJUNCIONES Y PARTÍCULAS ──
+  //
+  // `et` es la palabra más frecuente del latín (11.407) y `nōn` la
+  // duodécima (2.931), y ninguna de las dos estaba después de ocho lotes.
+  // Sin ellas no se puede escribir una frase coordinada ni una negación, y
+  // se nota en los lotes ya escritos: casi toda frase es N-V-N de tres
+  // palabras. Juntas, este bloque es el 13,7 % del corpus.
+  'et', 'nōn', 'ut', 'autem', 'sed', 'enim', 'quia', 'quod', 'aut', 'atque',
+  'nec', 'neque', 'sī', 'nē', 'quam', 'ecce', 'iam', 'tunc', 'etiam', 'quoque',
+  // ── ENCLÍTICOS ──
+  //
+  // `-que` no se separa por espacios: va pegado (`populusque`). No basta
+  // con listarlo — hay que trocear, y eso es `separarEnclitico`.
+  'que', 'ne', 've',
+  // ── COMPARATIVOS, formas sueltas (ver arriba) ──
   'fortior', 'sanctior',
+];
+
+/** Las palabras que ACABAN en `-que`, `-ne` o `-ve` sin llevar enclítico.
+ *  Sin esta lista, el troceo partiría `neque` en `ne`+`que` y `quisque` en
+ *  `quis`+`que`, que son palabras enteras. Es la mitad que evita partir de
+ *  más, y va escrita porque no se deduce. */
+export const NO_LLEVAN_ENCLITICO: string[] = [
+  'neque', 'quisque', 'usque', 'dēnique', 'itaque', 'atque', 'quaeque', 'quodque',
+  'utique', 'undique', 'plērīque', 'quīcumque', 'nēve', 'sīve', 'bene', 'sine',
+  'ante', 'omne', 'īre', 'plēne', 'iuvene',
 ];

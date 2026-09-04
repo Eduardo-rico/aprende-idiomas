@@ -77,7 +77,7 @@ export const REFLEJOS: [string, string, 'larga' | 'breve', string][] = [
 ];
 
 import { declinar, conjugar, todasLasFormas } from './paradigma-la';
-import { NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1, INDECLINABLES_L1 } from './lexicon-l1';
+import { NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1, INDECLINABLES_L1, NO_LLEVAN_ENCLITICO } from './lexicon-l1';
 
 const VOCAL_LARGA = /[āēīōūĀĒĪŌŪ]/;
 export const sinMacron = (s: string) =>
@@ -109,10 +109,42 @@ export function formasValidas(): Map<string, Set<string>> {
  *  queja, y un auditor que nunca se ha visto fallar es un sello. */
 export function _invalidarCache(): void { CACHE = null; }
 
+// ── EL ENCLÍTICO NO SE SEPARA POR ESPACIOS ───────────────────────────
+//
+// `-que` va pegado —`populusque`, `dominusque`— así que el troceo por
+// no-letras lo entrega entero y el gate lo rechaza. No basta con añadir
+// `que` al lexicón: hay que partir.
+//
+// Y hay que partir CON CUIDADO, porque `neque`, `quisque`, `usque`,
+// `dēnique` y `atque` acaban igual y son palabras enteras. La regla tiene
+// dos condiciones y las dos hacen falta:
+//
+//   1. la palabra completa NO es una forma conocida, y
+//   2. lo que queda al quitar el enclítico SÍ lo es.
+//
+// Con sólo la primera, `neque` se partiría en cuanto no estuviera en el
+// lexicón; con sólo la segunda, `sine` se partiría en `si`+`ne`. La lista
+// `NO_LLEVAN_ENCLITICO` es el cinturón: lo que se sabe que acaba así sin
+// llevarlo, escrito porque no se deduce.
+const ENCLITICOS = ['que', 'ne', 've'];
+
+export function separarEnclitico(palabra: string, conocidas: Map<string, Set<string>>): string[] {
+  const p = palabra.normalize('NFC').toLowerCase();
+  if (NO_LLEVAN_ENCLITICO.includes(p)) return [palabra];
+  if (conocidas.has(sinMacron(p))) return [palabra];          // la palabra entera existe
+  for (const enc of ENCLITICOS) {
+    if (!p.endsWith(enc) || p.length <= enc.length + 1) continue;
+    const base = palabra.slice(0, palabra.length - enc.length);
+    if (conocidas.has(sinMacron(base))) return [base, enc];   // y el resto también
+  }
+  return [palabra];
+}
+
 export function revisarCantidad(texto: string): HallazgoCantidad[] {
   const out: HallazgoCantidad[] = [];
   const validas = formasValidas();
-  for (const bruta of texto.normalize('NFC').split(/[^\p{L}̄]+/u).filter(Boolean)) {
+  const crudas = texto.normalize('NFC').split(/[^\p{L}̄]+/u).filter(Boolean);
+  for (const bruta of crudas.flatMap((w) => separarEnclitico(w, validas))) {
     const clave = sinMacron(bruta);
     const opciones = validas.get(clave);
     if (!opciones) { out.push({ forma: bruta, esperado: '(no está en el léxico de L1)', clase: 'forma-desconocida' }); continue; }
