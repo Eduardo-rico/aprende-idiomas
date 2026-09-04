@@ -722,8 +722,8 @@ export const PUNTOS_LA: PuntoLa[] = [
     motivo: 'la lectura española suma y da una frase coherente y falsa que significa lo contrario. BAJADO DE L1 A L3 POR FRECUENCIA MEDIDA, que es el argumento bueno: «nōn nēmō» sale 0 veces en 227.301 tokens, «nēmō nōn» 1, «nōn nihil» 3. Un piso de 8 en L1 habría exigido ocho ítems de una construcción que el alumno de L1 no va a encontrar nunca',
     cubre: ['L3/COMPRENSIÓN LECTORA'], cita: 'Subordinadas de segundo y tercer grado',
     sinDescriptor: 'declarado: el currículo agrupa la negación en L1 y esta mitad no tiene descriptor propio',
-    varia: 'el orden de los dos negativos, que es lo que cambia el sentido',
-    excepcion: 'con «neque… neque» y con «nec» las negaciones sí se SUMAN: la multiplicación no vale para las coordinadas' }),
+    varia: 'el orden de los dos negativos, que es lo que cambia el sentido. AMPLIADO 2026-09-04: y la declinación supletiva de «nēmō», que no la cobraba ningún punto. De sus 200 tokens en el corpus, 147 son el nominativo «nēmō» —que no necesita paradigma— y quedan 53 formas oblicuas: «nēminem» ×31, «nēminī» ×21, «nēmine» ×1. Va aquí, en el punto de la palabra, en vez de abrir uno propio: 53 formas no sostienen un punto',
+    excepcion: 'con «neque… neque» y con «nec» las negaciones sí se SUMAN: la multiplicación no vale para las coordinadas. Y «nēmō» no tiene genitivo propio: en 227.301 tokens de corpus no aparece NI UNO, y su sitio lo ocupa «nūllīus». Ese cero va escrito como DATO y no como hueco — es la evidencia positiva de la supleción, no una falta de cobertura' }),
 
   P({ id: 'l5-interrogativas', nombre: 'Las tres partículas interrogativas y lo que esperan', bloque: 5, peldano: 'L1',
     descripcion: '«-ne» pregunta neutra, «num» espera un «no», «nōnne» espera un «sí». La partícula lleva la respuesta esperada.',

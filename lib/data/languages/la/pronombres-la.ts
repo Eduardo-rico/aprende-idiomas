@@ -99,7 +99,7 @@ export const PRONOMBRES_L1: EntradaPronombre[] = [
       'm.nom.pl': 'iī', 'm.voc.pl': 'iī', 'm.dat.pl': 'eīs', 'm.abl.pl': 'eīs',
       'f.dat.pl': 'eīs', 'f.abl.pl': 'eīs', 'n.dat.pl': 'eīs', 'n.abl.pl': 'eīs',
     },
-    porQueDiverge: 'el tema alterna `e-`/`i-` y el nominativo masculino es «is», no *«eus». El genitivo «eius» (929 apariciones, el más frecuente del corpus) sirve para los TRES géneros, que es lo que su punto declara examinar. La alternancia no es libre y va CELDA A CELDA, medida en el corpus que el alumno lee: nominativo plural «iī» ×32 contra «eī» ×1, pero dativo plural «eīs» ×247 contra «iīs» ×34. Las gramáticas dan las dos por buenas en ambas celdas; aquí manda la lectura declarada, y el contraste contra la anotación del treebank es lo que corrigió mi «eī» de manual' },
+    porQueDiverge: 'el tema alterna `e-`/`i-` y el nominativo masculino es «is», no *«eus». El genitivo «eius» (929 apariciones, el más frecuente del corpus) sirve para los TRES géneros, que es lo que su punto declara examinar. La alternancia no es libre y va CELDA A CELDA, medida en el corpus que el alumno lee: nominativo plural «iī» ×32 contra «eī» ×1, pero dativo plural «eīs» ×247 contra «iīs» ×34. ESAS CIFRAS DEL DATIVO SON DEL MASCULINO: sin filtrar por género salen 250 contra 41, porque el dativo y el ablativo plurales son la misma forma en los tres géneros. Quien las relea sin el filtro creerá que están mal. Las gramáticas dan las dos por buenas en ambas celdas; aquí manda la lectura declarada, y el contraste contra la anotación del treebank es lo que corrigió mi «eī» de manual' },
 
   // ── `hic`: el más irregular, con la partícula `-c` pegada ──
   { lema: 'hic', tema: 'h', glosa: 'este',
