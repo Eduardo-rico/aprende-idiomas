@@ -47,6 +47,8 @@
 // prohibirlos, que es además el latín que el alumno se va a encontrar.
 
 import { revisarCobertura, type Cobertura } from './cobertura';
+import { separablePorPosicion } from './atajos';
+import { patronDe } from './orden-publicado';
 
 export interface PalabraGlosada {
   la: string;
@@ -93,6 +95,7 @@ export interface ItemClozeGlosa {
 }
 
 export type ClaseFallo =
+  | 'orden-separable'
   | 'huecos-y-respuestas'
   | 'no-reversible'
   | 'hueco-fuera-del-rol'
@@ -206,7 +209,20 @@ export function coberturaGlosa(items: ItemClozeGlosa[]): Cobertura[] {
 }
 
 export function revisarLote(items: ItemClozeGlosa[]): FalloClozeGlosa[] {
+
   const out: FalloClozeGlosa[] = items.flatMap(revisarClozeGlosa);
+  // ── EL ORDEN DE PUBLICACIÓN, QUE NINGÚN GATE DE LATÍN MIRABA ──
+  //
+  // `separablePorPosicion` está en el repositorio desde portugués y
+  // ninguno de los cinco gates nuevos lo llamaba: cuatro de los cinco
+  // lotes se resolvían al 100 % contando ejercicios. Un detector que
+  // existe y no se llama es peor que no tenerlo, porque da sensación de
+  // cobertura.
+  {
+    const sep = separablePorPosicion(patronDe(items, (i) => ['SOV', 'SVO', 'VSO'].includes(i.ejes.orden)));
+    if (sep) out.push({ item: '(lote)', clase: 'orden-separable' as ClaseFallo,
+      detalle: `el eje «el sujeto va delante» se predice por la POSICIÓN: ${sep}` });
+  }
   out.push(...revisarCobertura(coberturaGlosa(items)).map((f) => ({ item: f.item, clase: f.clase as unknown as ClaseFallo, detalle: f.detalle })));
 
   // ── LO QUE SÓLO SE VE EN EL LOTE ──

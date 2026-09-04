@@ -32,6 +32,8 @@
 import { conjugar, conjugacionDe, marcaDeFuturo, infectum,
          type EntradaVerbal, type Persona, type Tiempo } from '../../lib/data/languages/la/paradigma-la';
 import { revisarCobertura, type Cobertura } from './cobertura';
+import { separablePorPosicion } from './atajos';
+import { patronDe } from './orden-publicado';
 
 export interface ItemTransformacion {
   id: string;
@@ -58,6 +60,7 @@ export interface ItemTransformacion {
 }
 
 export type ClaseFalloT =
+  | 'orden-separable'
   | 'entrada-o-respuesta-no-derivable' | 'eje-mal-declarado' | 'pista-regala-la-forma'
   | 'repetido' | 'estrategia-ciega' | 'sin-error-que-existe'
   | 'cobertura-cero' | 'cobertura-sin-motivo';
@@ -147,7 +150,20 @@ export function coberturaTransformacion(items: ItemTransformacion[]): Cobertura[
 }
 
 export function revisarLoteT(items: ItemTransformacion[]): FalloT[] {
+
   const out: FalloT[] = items.flatMap(revisarTransformacion);
+  // ── EL ORDEN DE PUBLICACIÓN, QUE NINGÚN GATE DE LATÍN MIRABA ──
+  //
+  // `separablePorPosicion` está en el repositorio desde portugués y
+  // ninguno de los cinco gates nuevos lo llamaba: cuatro de los cinco
+  // lotes se resolvían al 100 % contando ejercicios. Un detector que
+  // existe y no se llama es peor que no tenerlo, porque da sensación de
+  // cobertura.
+  {
+    const sep = separablePorPosicion(patronDe(items, (i) => i.ejes.marca === 'bi'));
+    if (sep) out.push({ item: '(lote)', clase: 'orden-separable' as ClaseFalloT,
+      detalle: `el eje «lleva la marca -bi-» se predice por la POSICIÓN: ${sep}` });
+  }
   out.push(...revisarCobertura(coberturaTransformacion(items)).map((f) => ({ item: f.item, clase: f.clase as ClaseFalloT, detalle: f.detalle })));
 
   const t = tasasCiegasT(items);

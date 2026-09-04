@@ -7,7 +7,11 @@ import { buscarComposiciones, contrastarComposiciones, type Estrategia, type Pis
 import { conjugar } from '../../lib/data/languages/la/paradigma-la';
 import { PISO_LA } from '../../lib/data/languages/la/inventario-puntos';
 
-const base = () => ({ ...LOTE[0]! });
+// Por ID y no por índice: el lote se publica BARAJADO, así que `LOTE[0]`
+// ya no es el que era. Es la misma lección que motivó el barajado, en
+// pequeño — una referencia posicional se rompe cuando el orden deja de
+// ser el de escritura, y aquí rompió dos controles positivos.
+const base = () => ({ ...LOTE.find((i) => i.id === 'la-5f-01')! });
 
 describe('la ruta equivocada NO es inventada', () => {
   it('sale del imperfecto, que sí existe, cambiándole la vocal', () => {

@@ -30,6 +30,7 @@ import type { ItemTransformacion } from '../../../../../scripts/lib/gate-transfo
 import { VERBOS_L1 } from '../lexicon-l1';
 import { conjugar, conjugacionDe, marcaDeFuturo, type Persona } from '../paradigma-la';
 import { elErrorExiste } from '../../../../../scripts/lib/gate-transformacion';
+import { ordenPublicado } from '../../../../../scripts/lib/orden-publicado';
 
 const V = (l: string) => VERBOS_L1.find((x) => x.lema === l)!;
 
@@ -53,7 +54,23 @@ const DEFS: Def[] = [
   ['la-5f-12', 'custōdiō', '3pl', 'Guardan ahora; ¿y mañana? — tercera del plural.'],
 ];
 
-export const LOTE_FUTURO: ItemTransformacion[] = DEFS.map(([id, lema, persona, pista]) => {
+
+// ── EL ORDEN PUBLICADO VA BARAJADO, Y NO ES UN DETALLE ────────────────
+//
+// Este fichero se escribe AGRUPADO por el eje del punto porque así se
+// revisa. Pero `ExerciseRunner` sirve los ejercicios con `exercises[idx]`
+// incremental, o sea **en el orden del fichero**, y agrupados el alumno
+// resuelve el lote entero contando: «a partir del séptimo cambia la
+// respuesta». El detector `separablePorPosicion` —en el repositorio desde
+// portugués, y que ninguno de los gates de latín llamaba— lo confirma al
+// 100 %.
+//
+// Se publica barajado con semilla fija: ni alternancia estricta, que el
+// mismo detector caza por paridad, ni azar sin semilla, que haría el orden
+// irreproducible.
+export const SEMILLA_DE_ORDEN = 1;
+
+const LOTE_FUTURO_FUENTE: ItemTransformacion[] = DEFS.map(([id, lema, persona, pista]) => {
   const verbo = V(lema);
   const item: ItemTransformacion = {
     id, punto: 'l5-futuro-dos-formas', verbo, persona,
@@ -68,3 +85,6 @@ export const LOTE_FUTURO: ItemTransformacion[] = DEFS.map(([id, lema, persona, p
   item.ejes.elErrorExiste = elErrorExiste(item);
   return item;
 });
+
+/** El lote tal como se publica: barajado con `SEMILLA_DE_ORDEN`. */
+export const LOTE_FUTURO = ordenPublicado(LOTE_FUTURO_FUENTE, SEMILLA_DE_ORDEN);

@@ -88,7 +88,23 @@ const DEFS: Def[] = [
    'EL BUEN señor llama a los esclavos — el caso fácil, donde todo coincide.'],
 ];
 
-export const LOTE_CONCORDANCIA: ItemConcordancia[] = DEFS.map(
+
+// ── EL ORDEN PUBLICADO VA BARAJADO, Y NO ES UN DETALLE ────────────────
+//
+// Este fichero se escribe AGRUPADO por el eje del punto porque así se
+// revisa. Pero `ExerciseRunner` sirve los ejercicios con `exercises[idx]`
+// incremental, o sea **en el orden del fichero**, y agrupados el alumno
+// resuelve el lote entero contando: «a partir del séptimo cambia la
+// respuesta». El detector `separablePorPosicion` —en el repositorio desde
+// portugués, y que ninguno de los gates de latín llamaba— lo confirma al
+// 100 %.
+//
+// Se publica barajado con semilla fija: ni alternancia estricta, que el
+// mismo detector caza por paridad, ni azar sin semilla, que haría el orden
+// irreproducible.
+export const SEMILLA_DE_ORDEN = 1;
+
+const LOTE_CONCORDANCIA_FUENTE: ItemConcordancia[] = DEFS.map(
   ([id, nom, adj, celda, generoEs, marco, pista]) => {
     const s = N(nom), a = A(adj);
     const [c, num] = celda.split('.') as ['nom', 'sg'];
@@ -103,4 +119,8 @@ export const LOTE_CONCORDANCIA: ItemConcordancia[] = DEFS.map(
 // es exactamente la clase de campo que se desincroniza, y el gate la
 // comprueba igual por si alguien la toca.
 import { rimaDeVerdad } from '../../../../../scripts/lib/gate-concordancia';
-for (const it of LOTE_CONCORDANCIA) it.ejes.rima = rimaDeVerdad(it);
+import { ordenPublicado } from '../../../../../scripts/lib/orden-publicado';
+for (const it of LOTE_CONCORDANCIA_FUENTE) it.ejes.rima = rimaDeVerdad(it);
+
+/** El lote tal como se publica: barajado con `SEMILLA_DE_ORDEN`. */
+export const LOTE_CONCORDANCIA = ordenPublicado(LOTE_CONCORDANCIA_FUENTE, SEMILLA_DE_ORDEN);

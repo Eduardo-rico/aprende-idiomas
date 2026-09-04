@@ -31,10 +31,27 @@
 // palabra que el punto propone como «el falso regalo real de esa
 // familia»: buena lingüística y mala tarjeta.
 import type { ItemFlashcard } from '../../../../../scripts/lib/gate-flashcard';
+import { ordenPublicado } from '../../../../../scripts/lib/orden-publicado';
 
 const LS = (s: string) => `Lewis & Short s.v. ${s}`;
 
-export const LOTE_FALSOS_REGALOS: ItemFlashcard[] = [
+
+// ── EL ORDEN PUBLICADO VA BARAJADO, Y NO ES UN DETALLE ────────────────
+//
+// Este fichero se escribe AGRUPADO por el eje del punto porque así se
+// revisa. Pero `ExerciseRunner` sirve los ejercicios con `exercises[idx]`
+// incremental, o sea **en el orden del fichero**, y agrupados el alumno
+// resuelve el lote entero contando: «a partir del séptimo cambia la
+// respuesta». El detector `separablePorPosicion` —en el repositorio desde
+// portugués, y que ninguno de los gates de latín llamaba— lo confirma al
+// 100 %.
+//
+// Se publica barajado con semilla fija: ni alternancia estricta, que el
+// mismo detector caza por paridad, ni azar sin semilla, que haría el orden
+// irreproducible.
+export const SEMILLA_DE_ORDEN = 1;
+
+const LOTE_FALSOS_REGALOS_FUENTE: ItemFlashcard[] = [
   // ── SEIS QUE SE DESPLAZARON ──
   {
     id: 'la-11f-01', punto: 'l11-falsos-regalos',
@@ -139,3 +156,6 @@ export const LOTE_FALSOS_REGALOS: ItemFlashcard[] = [
     esFalsoRegalo: false, fuente: LS('locus'), corpus: 'todo',
   },
 ];
+
+/** El lote tal como se publica: barajado con `SEMILLA_DE_ORDEN`. */
+export const LOTE_FALSOS_REGALOS = ordenPublicado(LOTE_FALSOS_REGALOS_FUENTE, SEMILLA_DE_ORDEN);

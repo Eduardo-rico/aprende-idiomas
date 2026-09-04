@@ -62,8 +62,11 @@ export interface ItemConcordancia {
 }
 
 import { revisarCobertura, type Cobertura } from './cobertura';
+import { separablePorPosicion } from './atajos';
+import { patronDe } from './orden-publicado';
 
 export type ClaseFalloC =
+  | 'orden-separable'
   | 'respuesta-no-derivable' | 'eje-mal-declarado' | 'pista-regala-la-forma'
   | 'marco-mal' | 'repetido' | 'estrategia-ciega' | 'sin-trampa-de-genero'
   | 'ejes-colineales'
@@ -159,7 +162,20 @@ export function coberturaConcordancia(items: ItemConcordancia[]): Cobertura[] {
 }
 
 export function revisarLoteC(items: ItemConcordancia[]): FalloC[] {
+
   const out: FalloC[] = items.flatMap(revisarConcordancia);
+  // ── EL ORDEN DE PUBLICACIÓN, QUE NINGÚN GATE DE LATÍN MIRABA ──
+  //
+  // `separablePorPosicion` está en el repositorio desde portugués y
+  // ninguno de los cinco gates nuevos lo llamaba: cuatro de los cinco
+  // lotes se resolvían al 100 % contando ejercicios. Un detector que
+  // existe y no se llama es peor que no tenerlo, porque da sensación de
+  // cobertura.
+  {
+    const sep = separablePorPosicion(patronDe(items, (i) => i.ejes.rima));
+    if (sep) out.push({ item: '(lote)', clase: 'orden-separable' as ClaseFalloC,
+      detalle: `el eje «las desinencias riman» se predice por la POSICIÓN: ${sep}` });
+  }
   out.push(...revisarCobertura(coberturaConcordancia(items)).map((f) => ({ item: f.item, clase: f.clase as unknown as ClaseFalloC, detalle: f.detalle })));
   const t = tasasCiegasC(items);
 

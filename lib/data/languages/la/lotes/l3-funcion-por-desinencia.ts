@@ -66,6 +66,7 @@
 //     nominativo, donde la 3.ª no aporta ninguna desinencia que leer:
 //     coste de un paradigma no desbloqueado a cambio de nada.
 import type { ItemClozeGlosa, EjesItem, PalabraGlosada } from '../../../../../scripts/lib/gate-cloze-glosa';
+import { ordenPublicado } from '../../../../../scripts/lib/orden-publicado';
 
 type Rasgos = { gen: 'm' | 'f'; num: 'sg' | 'pl' };
 const ART: Record<string, [string, string]> = {
@@ -100,7 +101,23 @@ function it(
 const SIM = (a: string, b: string) =>
   `${a} y ${b} no se definen el uno por el otro ni hay jerarquía entre ellos, así que los dos papeles son igual de plausibles`;
 
-export const LOTE_FUNCION_POR_DESINENCIA: ItemClozeGlosa[] = [
+
+// ── EL ORDEN PUBLICADO VA BARAJADO, Y NO ES UN DETALLE ────────────────
+//
+// Este fichero se escribe AGRUPADO por el eje del punto porque así se
+// revisa. Pero `ExerciseRunner` sirve los ejercicios con `exercises[idx]`
+// incremental, o sea **en el orden del fichero**, y agrupados el alumno
+// resuelve el lote entero contando: «a partir del séptimo cambia la
+// respuesta». El detector `separablePorPosicion` —en el repositorio desde
+// portugués, y que ninguno de los gates de latín llamaba— lo confirma al
+// 100 %.
+//
+// Se publica barajado con semilla fija: ni alternancia estricta, que el
+// mismo detector caza por paridad, ni azar sin semilla, que haría el orden
+// irreproducible.
+export const SEMILLA_DE_ORDEN = 1;
+
+const LOTE_FUNCION_POR_DESINENCIA_FUENTE: ItemClozeGlosa[] = [
   // ── DIEZ CON EL SUJETO DELANTE (SOV, SVO, VSO) ──
   //
   // NOTA SOBRE UNA CORRECCIÓN QUE NO HUBO QUE HACER, porque la historia es
@@ -166,3 +183,6 @@ export const LOTE_FUNCION_POR_DESINENCIA: ItemClozeGlosa[] = [
   it('la-fpd-20', ['vīcīnī', 'vecinos'], ['medicōs', 'médicos'], ['audiunt', 'oyen'],
     { gen: 'm', num: 'pl' }, { orden: 'VOS', conjugacion: 4, declinacion: '2ª', esperado: 'neutro' }, SIM('vecinos', 'médicos')),
 ];
+
+/** El lote tal como se publica: barajado con `SEMILLA_DE_ORDEN`. */
+export const LOTE_FUNCION_POR_DESINENCIA = ordenPublicado(LOTE_FUNCION_POR_DESINENCIA_FUENTE, SEMILLA_DE_ORDEN);

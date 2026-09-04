@@ -35,6 +35,8 @@
 // mácrons nada los separa. Citar 124 sería citar una suma de dos palabras.
 import frecuencias from '../../lib/data/languages/la/frecuencias-la.json';
 import { revisarCobertura, type Cobertura } from './cobertura';
+import { separablePorPosicion } from './atajos';
+import { patronDe } from './orden-publicado';
 
 const LEMAS = frecuencias.lemas as Record<string, { total: number; vulgata: number; ambiguo?: string }>;
 
@@ -87,6 +89,7 @@ export interface ItemFlashcard {
 }
 
 export type ClaseFalloF =
+  | 'orden-separable'
   | 'frecuencia-no-cuadra' | 'lema-homografo' | 'sin-fuente' | 'sin-corpus'
   | 'falso-regalo-sin-desplazamiento' | 'trampa-no-hispanohablante'
   | 'la-tarjeta-se-contesta-sola' | 'repetido' | 'corpus-que-el-alumno-no-lee'
@@ -181,7 +184,20 @@ export function coberturaFlashcard(items: ItemFlashcard[]): Cobertura[] {
 }
 
 export function revisarLoteF(items: ItemFlashcard[]): FalloF[] {
+
   const out: FalloF[] = items.flatMap(revisarFlashcard);
+  // ── EL ORDEN DE PUBLICACIÓN, QUE NINGÚN GATE DE LATÍN MIRABA ──
+  //
+  // `separablePorPosicion` está en el repositorio desde portugués y
+  // ninguno de los cinco gates nuevos lo llamaba: cuatro de los cinco
+  // lotes se resolvían al 100 % contando ejercicios. Un detector que
+  // existe y no se llama es peor que no tenerlo, porque da sensación de
+  // cobertura.
+  {
+    const sep = separablePorPosicion(patronDe(items, (i) => !i.esFalsoRegalo));
+    if (sep) out.push({ item: '(lote)', clase: 'orden-separable' as ClaseFalloF,
+      detalle: `el eje «la palabra transfiere» se predice por la POSICIÓN: ${sep}` });
+  }
   out.push(...revisarCobertura(coberturaFlashcard(items)).map((f) => ({ item: f.item, clase: f.clase as ClaseFalloF, detalle: f.detalle })));
 
   const t = tasasCiegasF(items);

@@ -30,10 +30,27 @@
 // nombre de celda.
 import type { ItemClozeDerivado } from '../../../../../scripts/lib/gate-cloze-derivado';
 import { NOMBRES_L1 } from '../lexicon-l1';
+import { ordenPublicado } from '../../../../../scripts/lib/orden-publicado';
 
 const E = (lema: string) => NOMBRES_L1.find((x) => x.lema === lema)!;
 
-export const LOTE_SEGUNDA: ItemClozeDerivado[] = [
+
+// ── EL ORDEN PUBLICADO VA BARAJADO, Y NO ES UN DETALLE ────────────────
+//
+// Este fichero se escribe AGRUPADO por el eje del punto porque así se
+// revisa. Pero `ExerciseRunner` sirve los ejercicios con `exercises[idx]`
+// incremental, o sea **en el orden del fichero**, y agrupados el alumno
+// resuelve el lote entero contando: «a partir del séptimo cambia la
+// respuesta». El detector `separablePorPosicion` —en el repositorio desde
+// portugués, y que ninguno de los gates de latín llamaba— lo confirma al
+// 100 %.
+//
+// Se publica barajado con semilla fija: ni alternancia estricta, que el
+// mismo detector caza por paridad, ni azar sin semilla, que haría el orden
+// irreproducible.
+export const SEMILLA_DE_ORDEN = 1;
+
+const LOTE_SEGUNDA_FUENTE: ItemClozeDerivado[] = [
   // ── conserva la vocal: puer / puerī ──
   { id: 'la-2d-01', punto: 'l2-segunda', entrada: E('puer'), celda: 'ac.sg', respuesta: 'puerum',
     marco: 'Magister ___ vocat.', pista: 'El maestro llama AL NIÑO — objeto directo, singular.',
@@ -78,3 +95,6 @@ export const LOTE_SEGUNDA: ItemClozeDerivado[] = [
     marco: 'Puerī ___ exspectant.', pista: 'Los niños esperan LOS REGALOS — neutro plural, objeto directo.',
     ejes: { clase: 'regular', celda: 'ac.pl' } },
 ];
+
+/** El lote tal como se publica: barajado con `SEMILLA_DE_ORDEN`. */
+export const LOTE_SEGUNDA = ordenPublicado(LOTE_SEGUNDA_FUENTE, SEMILLA_DE_ORDEN);

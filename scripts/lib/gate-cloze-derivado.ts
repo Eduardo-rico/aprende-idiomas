@@ -65,8 +65,11 @@ export interface ItemClozeDerivado {
 }
 
 import { revisarCobertura, type Cobertura } from './cobertura';
+import { separablePorPosicion } from './atajos';
+import { patronDe } from './orden-publicado';
 
 export type ClaseFalloD =
+  | 'orden-separable'
   | 'respuesta-no-derivable'
   | 'eje-mal-declarado'
   | 'pista-regala-la-forma'
@@ -205,7 +208,20 @@ export function coberturaDerivado(items: ItemClozeDerivado[]): Cobertura[] {
 }
 
 export function revisarLoteD(items: ItemClozeDerivado[]): FalloD[] {
+
   const out: FalloD[] = items.flatMap(revisarClozeDerivado);
+  // ── EL ORDEN DE PUBLICACIÓN, QUE NINGÚN GATE DE LATÍN MIRABA ──
+  //
+  // `separablePorPosicion` está en el repositorio desde portugués y
+  // ninguno de los cinco gates nuevos lo llamaba: cuatro de los cinco
+  // lotes se resolvían al 100 % contando ejercicios. Un detector que
+  // existe y no se llama es peor que no tenerlo, porque da sensación de
+  // cobertura.
+  {
+    const sep = separablePorPosicion(patronDe(items, (i) => i.ejes.clase === 'conserva' || i.ejes.clase === 'regular'));
+    if (sep) out.push({ item: '(lote)', clase: 'orden-separable' as ClaseFalloD,
+      detalle: `el eje «el tema conserva la vocal» se predice por la POSICIÓN: ${sep}` });
+  }
   out.push(...revisarCobertura(coberturaDerivado(items)).map((f) => ({ item: f.item, clase: f.clase as unknown as ClaseFalloD, detalle: f.detalle })));
   const t = tasasCiegasD(items);
   const pct = (x: number) => `${(100 * x).toFixed(0)} %`;
