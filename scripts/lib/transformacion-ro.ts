@@ -298,6 +298,40 @@ export const COPIAR_LA_FRASE: Estrategia = {
 
 export const ESTRATEGIAS_DE_SERIE: Estrategia[] = [COPIAR, COPIAR_LA_FRASE, EDICION_MODAL];
 
+/** Distancia de edición entre el foco y el núcleo, sobre las formas
+ *  normalizadas SIN quitar diacríticos —aquí el diacrítico es justo lo que
+ *  se mide—. */
+export function distancia(a: string, b: string): number {
+  const x = a.toLowerCase().trim(), y = b.toLowerCase().trim();
+  const d: number[][] = Array.from({ length: x.length + 1 }, (_, i) => [i, ...Array<number>(y.length).fill(0)]);
+  for (let j = 0; j <= y.length; j++) d[0]![j] = j;
+  for (let i = 1; i <= x.length; i++)
+    for (let j = 1; j <= y.length; j++)
+      d[i]![j] = Math.min(d[i - 1]![j]! + 1, d[i]![j - 1]! + 1, d[i - 1]![j - 1]! + (x[i - 1] === y[j - 1] ? 0 : 1));
+  return d[x.length]![y.length]!;
+}
+
+/** EL CONTRASTE DE UNA SOLA LETRA, que es un ítem de ortografía disfrazado
+ *  de ítem de morfología.
+ *
+ *  Medido sobre el lexicón rumano entero antes de que existiera este
+ *  gate: entre la 3.ª sg del presente y el infinitivo corto —las dos
+ *  casillas del imperativo negativo— **18 de 43 verbos se separan por una
+ *  letra o menos**, y la 3.ª conjugación completa (`merge`, `face`,
+ *  `spune`, `zice`, `scrie`, `pune`, `începe`) por CERO. En la 1.ª son
+ *  pares como `cântă!` / `nu cânta!`, donde lo único que cambia es la
+ *  vocal final.
+ *
+ *  Un ítem así **puede estar perfecto y no examinar la regla**: el alumno
+ *  que acierta puede haber acertado la ortografía de la `ă` final. No es
+ *  el §4.13bis —ahí la frase contiene una copia del rasgo— sino su primo:
+ *  el contraste existe, pero es tan pequeño que no distingue saber la
+ *  casilla de saber escribirla. Se CUENTA siempre y sólo tumba el lote
+ *  cuando es la mayoría, porque un lote puede querer un par mínimo a
+ *  propósito para enseñar precisamente esa diferencia. */
+export const contrasteMinimo = (items: readonly ItemTransRo[]) =>
+  items.filter((x) => { const d = distancia(x.foco, x.nucleo); return d > 0 && d <= 1; });
+
 export interface Resultado { nombre: string; aciertos: number; total: number; sobre: string[] }
 
 /** Corre una estrategia sobre el lote y cuenta. **Esto es lo que sustituye
@@ -415,6 +449,11 @@ export function verificarLote(items: ItemTransRo[], op: Opciones): string[] {
   const latin = items.filter((x) => x.transparenteLatin).length;
   if (latin / n > TOPE_LATIN) v.push(`ESTRATEGIA GRATIS «la raíz románica»: ${latin}/${n} transparentes (tope ${TOPE_LATIN * 100} %)`);
 
+  // ── EL CONTRASTE DE UNA LETRA ───────────────────────────────────
+  const minimos = contrasteMinimo(items);
+  if (minimos.length / n > TOPE_ESTRATEGIA)
+    v.push(`CONTRASTE MÍNIMO: ${minimos.length}/${n} ítems separan foco y núcleo por UNA letra (tope ${TOPE_ESTRATEGIA * 100} %) — el lote mide ortografía, no la casilla`);
+
   // ── LA VARIANZA, ANTES DE PUBLICAR ──────────────────────────────
   // Toda pieza que la operación añade o quita en ≥80 % de los ítems se
   // aprende en el primero. No bloquea: exige que el juicio escrito la
@@ -483,6 +522,8 @@ export function informe(items: ItemTransRo[], op: Opciones): string[] {
     : '**Ninguna pieza de la operación llega al umbral de invariancia.**');
   L.push(`**Ítems que se contestan copiando el foco:** ${items.filter((x) => norm(x.foco) === norm(x.nucleo)).length}/${n}`);
   L.push(`**Ítems de sobreaplicación (la frontera):** ${items.filter((x) => x.sobreaplicacion).length}/${n}`);
+  const min = contrasteMinimo(items);
+  L.push(`**Ítems cuyo contraste es de UNA letra** (miden ortografía, no la casilla): ${min.length}/${n}${min.length ? ` — ${min.map((x) => `${x.foco}→${x.nucleo}`).join(', ')}` : ''}`);
   if (op.comprobaciones?.length) {
     L.push('', '**Las afirmaciones del lote, contra los 2,9 M de palabras del corpus:**', '');
     L.push(...comprobarEnCorpus(op.comprobaciones).lineas);

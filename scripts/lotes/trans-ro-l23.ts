@@ -136,6 +136,12 @@ export const ITEMS: ItemTransRo[] = [
   { p: IMP, pasada: 1, espejoEs: false, transparenteLatin: false, sobreaplicacion: true,
     s: 'El stă lângă ușă.', instruccion: ORDEN_SG, r: 'Stai lângă ușă!',
     foco: 'stă', nucleo: 'stai' },
+  // MEDIDO DESPUÉS, cuando el gate del contraste mínimo existió: éste
+  // separa `merge` de `mergi` por UNA letra, y es el único de los tres
+  // «diamantes» que lo hace. No lo invalida —ahí la letra ES la
+  // morfología entera, y el alumno tiene que saber además que la forma
+  // cambia— pero queda escrito: de los nueve ítems, tres contrastan por
+  // una letra y dos de ellos son los que el lote ya declara flojos.
   { p: IMP, pasada: 1, espejoEs: false, transparenteLatin: false,
     s: 'Ea merge la piață.', instruccion: ORDEN_SG, r: 'Mergi la piață!',
     foco: 'merge', nucleo: 'mergi' },

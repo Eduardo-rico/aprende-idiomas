@@ -14,7 +14,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   verificar, verificarLote, correr, edicion, piezasInvariantes, comprobarEnCorpus,
-  COPIAR, COPIAR_LA_FRASE, EDICION_MODAL,
+  COPIAR, COPIAR_LA_FRASE, EDICION_MODAL, distancia, contrasteMinimo,
   type ItemTransRo, type JuiciosLote, type Comprobacion, type Opciones,
 } from '../../scripts/lib/transformacion-ro';
 
@@ -267,6 +267,37 @@ describe('transformación RO · una estrategia no puede leer la respuesta', () =
 // que el texto nombre la pieza y no que sea cierto. El testigo rojo de
 // aquí **es el hallazgo entero**, no una muestra de él: la afirmación
 // literal que se publicó y la frase que la refuta.
+// EL CONTRASTE DE UNA LETRA. Medido sobre el lexicón antes de escribir el
+// gate: entre la 3.ª sg y el infinitivo corto, 18 de 43 verbos rumanos se
+// separan por una letra o menos. Un ítem así puede estar impecable y medir
+// la ortografía de la `ă` final en vez de la casilla.
+describe('transformación RO · el contraste que es ortográfico y no morfológico', () => {
+  it('ROJO: un lote entero de pares de una letra no mide la casilla', () => {
+    const ortograficos: ItemTransRo[] = [
+      { ...BASE[0]!, s: 'El cântă bine.', r: 'Nu cânta bine!', foco: 'cântă', nucleo: 'cânta' },
+      { ...BASE[1]!, s: 'El intră acum.', r: 'Nu intra acum!', foco: 'intră', nucleo: 'intra' },
+      { ...BASE[2]!, s: 'El termină azi.', r: 'Nu termina azi!', foco: 'termină', nucleo: 'termina' },
+      { ...BASE[3]!, s: 'El dă bani.', r: 'Nu da bani!', foco: 'dă', nucleo: 'da' },
+    ];
+    expect(contrasteMinimo(ortograficos)).toHaveLength(4);
+    expect(verificarLote(ortograficos, OP).join()).toMatch(/CONTRASTE MÍNIMO: 4\/4/);
+  });
+
+  it('VERDE: el lote base contrasta por algo más que una letra', () => {
+    // `citești`→`citește` es una letra… y por eso el gate cuenta y sólo
+    // tumba cuando es la MAYORÍA: un par mínimo a propósito es legítimo.
+    expect(contrasteMinimo(BASE).length).toBeLessThanOrEqual(2);
+    expect(verificarLote(BASE, OP).filter((x) => /CONTRASTE MÍNIMO/.test(x))).toEqual([]);
+  });
+
+  it('la distancia NO ignora los diacríticos: aquí el diacrítico es lo que se mide', () => {
+    // Si se normalizaran, `cântă`/`cânta` daría 0 y el gate no vería nada.
+    expect(distancia('cântă', 'cânta')).toBe(1);
+    expect(distancia('citește', 'citi')).toBeGreaterThan(1);
+    expect(distancia('mergi', 'mergi')).toBe(0);
+  });
+});
+
 describe('transformación RO · las afirmaciones se EJECUTAN contra el corpus', () => {
   it('ROJO: la afirmación falsa del lote 23, tal cual, con el corpus delante', () => {
     const falsa: Comprobacion = {
