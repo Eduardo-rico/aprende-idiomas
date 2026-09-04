@@ -335,6 +335,20 @@ export const RUTA_DEL_SUBJUNTIVO: Estrategia = {
   },
 };
 
+/** LA REGULARIDAD QUE DEJA EL CRUCE DE NÚMERO, y la pregunta obligatoria
+ *  al cerrar una estrategia es qué regularidad deja el cierre. Con la
+ *  fuente en singular en los ocho, la edición mecánica que resolvería el
+ *  plural sería «pégale `-ți` al afirmativo singular». **No se razona,
+ *  se ejecuta:** acierta 0 de 8, porque el plural rumano no se forma
+ *  sobre el imperativo singular sino sobre el tema (`fii`→`*fiiți` por
+ *  `fiți`, `așteaptă`→`*așteaptăți` por `așteptați`, `ia`→`*iați` por
+ *  `luați`, `mergi`→`*mergiți` por `mergeți`). El cero es la prueba de
+ *  que el cruce no abrió una puerta de tijeras como la que cerró. */
+export const PEGARLE_TI: Estrategia = {
+  nombre: 'pegarle «-ți» al imperativo afirmativo singular',
+  aplicar: (x) => (esPlural(x) ? x.foco + 'ți' : null),
+};
+
 /** La estrategia de FRASE ENTERA, que contra el núcleo no se ve: «copio
  *  la fuente y le pongo `nu` delante». Es lo que un alumno hace de punta
  *  a punta sin haber aprendido nada, y cumple además la cláusula del
@@ -423,7 +437,7 @@ export const OPCIONES: Opciones = {
   // cumple con 1/8 y 4/8. **Ninguna estrategia queda fuera del tope: no
   // hay exención que auditar.** Que la v0 necesitara una era el síntoma,
   // no el problema.
-  estrategias: [RUTA_DEL_INFINITIVO, RUTA_DEL_SUBJUNTIVO, ANTEPONER_NU],
+  estrategias: [RUTA_DEL_INFINITIVO, RUTA_DEL_SUBJUNTIVO, ANTEPONER_NU, PEGARLE_TI],
   juicios: {
     copia: 'UNO de ocho se contesta copiando el foco, y es la lengua y no un descuido: en `Începe fără mine!` el imperativo afirmativo de la 3.ª conjugación YA ES el infinitivo corto, así que la regla se aplica entera y no cambia nada. Sin ese ítem el lote enseñaría «al negar, la forma siempre cambia», que en rumano es falso y lo desmienten `spune`, `scrie`, `pune`, `zice`, `merge`. Y no puede haber más de uno: los otros tres singulares tienen que separar el afirmativo del infinitivo para examinar algo, y los cuatro plurales llevan la fuente en SINGULAR justo para que copiar no acierte — sin ese cruce de número el plural entero se contestaría copiando, porque el negativo plural ES el afirmativo plural, y ése era el defecto de la v0 de este lote, que imprimía 4 de 9. Medido ejecutando: copiar el foco 1/8, copiar la frase entera 0/8, ponerle «nu» delante a la fuente 1/8, la edición modal del lote 1/8.',
     frontera: 'Los CUATRO PLURALES son los ítems de sobreaplicación. La regla «imperativo negativo = nu + infinitivo corto» tiene su contexto negativo exactamente en la 2.ª plural, donde la forma es la del afirmativo: un alumno que aprenda la mitad singular escribe *Nu veni mâine! a dos personas, que es el error que la propia descripción del punto declara. Y uno de los cuatro, el de `a fi`, es la frontera DENTRO de la frontera: es el único verbo del lexicón donde el afirmativo plural (fiți) no coincide con el presente de 2.ª pl (sunteți), medido sobre los 39, o sea el único ítem que separa la formulación verdadera de la falsa «plural negativo = presente de 2.ª pl». Y su valor NO es cazar un error del alumno: el hispanohablante va por el subjuntivo, el conjuntivo rumano de a fi 2.ª pl es `să fiți`, y su ruta ACIERTA aquí. Quien produciría `sunteți` es alguien a quien le enseñaron la regla mal escrita, o sea un MATERIAL y no un alumno. Este ítem cumple el SEGUNDO motivo del §0.6, el que protege al autor: sin él se puede publicar la formulación falsa con siete ítems que la sostienen, porque en los otros 38 verbos del lexicón las dos coinciden. Y `Nu sunteți acasă la ora nouă!` no lleva asterisco —es una declarativa impecable, sólo que no es la transformación pedida—: marcarla mala sería el §0 incumplido.',
