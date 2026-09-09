@@ -89,6 +89,20 @@ export const EXIGENCIAS: Exigencia[] = [
   { patron: /4\.ª|cuarta declinación/i, nombre: 'nombres de 4.ª', cuantosHay: decl('4ª'), minimo: 2 },
   { patron: /temas? en `?-i`?|tema en -i/i, nombre: 'nombres de tema en -i',
     cuantosHay: () => NOMBRES_L1.filter((n) => n.iStem).length, minimo: 2 },
+  // Los irregulares de alta frecuencia que el currículo nombra. No basta con
+  // que estén en el lexicón: `conjugar` tiene que saber producirlos, y hoy
+  // sólo sabe `sum`. `ferō` hace «fers», «fert», «fertis» — nada de eso sale
+  // de una regla.
+  //
+  // EL PATRÓN VA ACOTADO A LOS NOMBRES DE LOS VERBOS, no a la palabra
+  // «irregulares». Con `/\birregulares\b/` salían SIETE puntos y cuatro
+  // eran falsos: `l2-segunda`, `l4-comparativo` y hasta `l5-imperativo`
+  // usan la palabra para otra cosa. Un gate que marca la mitad de los casos
+  // no lo lee nadie, y este filtro es exactamente del tipo que ya matamos
+  // una vez por ruidoso.
+  { patron: /eō, ferō|ferō, volō|volō, nōlō|nōlō, mālō/i, nombre: 'verbos irregulares con máquina',
+    cuantosHay: () => VERBOS_L1.filter((v) => ['sum', 'eō', 'ferō', 'volō', 'nōlō', 'mālō', 'fīō'].includes(v.lema)).length,
+    minimo: 3 },
   { patron: /\b800\b|núcleo de 800/i, nombre: 'lemas del núcleo de 800',
     cuantosHay: () => NOMBRES_L1.length + VERBOS_L1.length + ADJETIVOS_L1.length, minimo: 800 },
 ];

@@ -46,6 +46,15 @@ describe('qué exige el inventario y qué tiene el lexicón', () => {
     // `l2-cuarta` pide «los pocos femeninos» de 4.ª y sólo hay `manus`:
     // `domus` es irregular y hay que guardarlo entero.
     expect(ids).toContain('l2-cuarta');
+    // `l5-irregulares` pide `eō`, `ferō`, `volō`... y la máquina sólo sabe
+    // `sum`. Es el mismo hueco que deja el imperativo sin su cuarto caso.
+    expect(ids).toContain('l5-irregulares');
+    // Y NO deben salir los que sólo usan la palabra «irregulares» para otra
+    // cosa: con el patrón ancho salían SIETE y cuatro eran falsos. Un gate
+    // que marca la mitad de los casos no lo lee nadie.
+    expect(ids).not.toContain('l2-segunda');
+    expect(ids).not.toContain('l4-comparativo');
+    expect(ids).not.toContain('l5-imperativo');
   });
 
   it('el gate declara ser una heurística sobre prosa, y su silencio no prueba nada', () => {
