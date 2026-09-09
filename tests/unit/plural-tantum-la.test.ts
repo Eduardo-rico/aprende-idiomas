@@ -72,3 +72,39 @@ describe('las cuentas salieron del corpus', () => {
     expect(PLURALIA_TANTUM.filter((p) => p.singular === null)).toHaveLength(6);
   });
 });
+
+describe('el lote de los pluralia tantum', () => {
+  it('trae los dos sentidos: nueve singulares y tres plurales', async () => {
+    const { LOTE_PLURAL_TANTUM } = await import('@/lib/data/languages/la/lotes/l2-plural-tantum');
+    // Sin los de sentido plural, el alumno aprendería «plural en latín =
+    // singular en español», que es falso en un tercio de los casos.
+    expect(LOTE_PLURAL_TANTUM.filter((it) => it.ejes.sentidoSingular)).toHaveLength(9);
+    expect(LOTE_PLURAL_TANTUM.filter((it) => !it.ejes.sentidoSingular)).toHaveLength(3);
+  });
+
+  it('el sentido se LEE de la respuesta y no se declara', async () => {
+    const { LOTE_PLURAL_TANTUM } = await import('@/lib/data/languages/la/lotes/l2-plural-tantum');
+    for (const it of LOTE_PLURAL_TANTUM)
+      expect(it.ejes.sentidoSingular, it.id).toBe(/^(el|la|un|una) /.test(it.respuesta));
+  });
+
+  it('ningún ítem dice usar un singular que su lema no tiene', async () => {
+    const { incoherentes, USAN_EL_SINGULAR } = await import('@/lib/data/languages/la/lotes/l2-plural-tantum');
+    expect(incoherentes()).toHaveLength(0);
+    expect(USAN_EL_SINGULAR).toHaveLength(3);
+  });
+
+  it('POR QUÉ `usaElSingular` va declarado y no derivado', async () => {
+    const { LOTE_PLURAL_TANTUM } = await import('@/lib/data/languages/la/lotes/l2-plural-tantum');
+    // `litteram` es el acusativo del singular y `litterās` el del plural.
+    // Comparar subcadenas fallaba por los dos lados a la vez: «litterās»
+    // CONTIENE «littera», y «Copia» no casaba con «cōpia» por el macrón y la
+    // mayúscula. Sin paradigma para estas palabras —que precisamente no lo
+    // tienen— no hay forma de separarlos.
+    const plural = LOTE_PLURAL_TANTUM.find((it) => it.marco.includes('litteras'))!;
+    const singular = LOTE_PLURAL_TANTUM.find((it) => it.marco.includes('litteram'))!;
+    expect(plural.marco.includes('littera')).toBe(true);      // la trampa
+    expect(plural.ejes.usaElSingular).toBe(false);            // y la verdad
+    expect(singular.ejes.usaElSingular).toBe(true);
+  });
+});
