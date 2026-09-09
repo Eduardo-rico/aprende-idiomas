@@ -93,6 +93,14 @@ export interface ItemFuncionCaso {
     /** Obligatorio cuando la forma cruza de declinación: hay que decir con
      *  qué se confunde, porque ningún paradigma aislado lo enseña. */
     cruzaDeDeclinacion?: string;
+    /** Para `l3-genitivo-posesivo`: dónde va el genitivo respecto a su
+     *  núcleo. El español pospone SIEMPRE, así que el instinto acierta el
+     *  76 % del corpus —medido— y sólo se estrella con los antepuestos. */
+    posicion?: 'antes' | 'despues';
+    /** Y lo que convierte un genitivo antepuesto en trampa de verdad: que su
+     *  forma sea además un nominativo plural, de modo que la lectura falsa
+     *  sea COHERENTE y no sólo rara. `puellae`, `servī` y `manūs` lo son. */
+    pareceNominativo?: string;
   };
 }
 
@@ -104,7 +112,12 @@ export type ClaseFalloFC =
 export interface FalloFC { item: string; clase: ClaseFalloFC; detalle: string }
 
 const MACRON = /[āēīōūĀĒĪŌŪ]/;
-const sinM = (s: string) => s.normalize('NFD').replace(/[̄̆]/g, '').normalize('NFC');
+// Sin cantidad y sin mayúscula: el marco capitaliza su primera palabra, y
+// un genitivo antepuesto ES la primera palabra. Comparar respetando el caso
+// hacía fallar los seis ítems antepuestos de `l3-genitivo-posesivo` — o sea,
+// justo la mitad que el punto examina.
+const sinM = (s: string) =>
+  s.normalize('NFD').replace(/[̄̆]/g, '').normalize('NFC').toLowerCase();
 
 export function revisarItemFuncionCaso(it: ItemFuncionCaso): FalloFC[] {
   const out: FalloFC[] = [];
@@ -153,11 +166,26 @@ export function revisarLoteFuncionCaso(items: ItemFuncionCaso[], opciones: {
   if (porFuncion.size > 1 && max / n > 0.6)
     push('funcion-constante', `una función sale en ${max} de ${n} ítems: contestarla siempre resuelve el lote`);
 
-  const sep = separablePorPosicion(items.map((it) => (it.ejes.colisiones > 0 ? 'A' : 'B')).join(''));
+  // Si el lote declara posiciones, tiene que traer las dos: uno todo
+  // pospuesto lo resuelve el instinto español sin leer una desinencia.
+  if (items.some((it) => it.ejes.posicion)) {
+    for (const pos of ['antes', 'despues'] as const)
+      if (!items.some((it) => it.ejes.posicion === pos))
+        push('rango-plano',
+          `ningún genitivo va «${pos}» de su núcleo: el español pospone siempre, así que un lote de una sola posición no examina nada`);
+    const antes = items.filter((it) => it.ejes.posicion === 'antes').length;
+    if (Math.abs(antes / n - 0.5) > 0.17)
+      push('funcion-constante',
+        `${antes} de ${n} antepuestos: el instinto español —posponer siempre— saca el ${(100 * Math.max(antes, n - antes) / n).toFixed(0)} %`);
+  }
+
+  const sep = separablePorPosicion(items.map((it) =>
+    (it.ejes.posicion ? (it.ejes.posicion === 'antes' ? 'A' : 'B') : (it.ejes.colisiones > 0 ? 'A' : 'B'))).join(''));
   if (sep) push('orden-separable', sep);
 
   const ambiguos = items.filter((it) => it.ejes.colisiones > 0).length;
   const cruzan = items.filter((it) => it.ejes.cruzaDeDeclinacion).length;
+  const trampas = items.filter((it) => it.ejes.posicion === 'antes' && it.ejes.pareceNominativo).length;
   const cobertura: Cobertura[] = [
     { comprobacion: 'la forma contra la máquina', decididos: items.length, total: items.length },
     { comprobacion: 'formas ambiguas dentro de su paradigma', decididos: ambiguos, total: items.length,
@@ -166,6 +194,11 @@ export function revisarLoteFuncionCaso(items: ItemFuncionCaso[], opciones: {
     { comprobacion: 'formas que cruzan de declinación', decididos: cruzan, total: items.length,
       motivoDeLosQueQuedanFuera: 'las que sólo colisionan dentro de su propio paradigma. El cruce es lo que ningún paradigma aislado enseña —«rēgī» leído como el genitivo de «servī»— y por eso se cuenta aparte',
       elCeroEsUnResultado: 'un lote puede no traer ninguna forma que cruce, y eso es una elección legítima: el cruce es un extremo del eje, no un requisito' },
+    ...(items.some((it) => it.ejes.posicion) ? [{
+      comprobacion: 'genitivos antepuestos que parecen sujeto', decididos: trampas, total: items.length,
+      motivoDeLosQueQuedanFuera: 'los pospuestos, y los antepuestos cuya forma no coincide con ningún nominativo. Este renglón cuenta los ítems donde la lectura falsa es COHERENTE —«puerī liber» leído como «los niños [son] libres»— y no sólo rara, que es donde el punto muerde de verdad',
+      elCeroEsUnResultado: undefined,
+    }] : []),
   ];
   fallos.push(...revisarCobertura(cobertura));
   return { fallos, cobertura };
