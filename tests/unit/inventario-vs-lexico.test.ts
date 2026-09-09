@@ -41,14 +41,20 @@ describe('qué exige el inventario y qué tiene el lexicón', () => {
     // `l4-adjetivo-3a` estuvo bloqueado toda la sesión y dejó de estarlo el
     // 2026-09-09: la máquina ya tiene los tres tipos.
     expect(ids).not.toContain('l4-adjetivo-3a');
-    // `l11-nucleo-800` pide 800 lemas y hay 95.
+    // Y queda UNO, que no es de máquina sino de contenido: el núcleo de 800
+    // lemas, que hoy son poco más de cien. Al cerrar la sesión del 9 de
+    // septiembre era el único punto del inventario latino que su `varia` no
+    // podía satisfacer.
     expect(ids).toContain('l11-nucleo-800');
-    // `l2-cuarta` pide «los pocos femeninos» de 4.ª y sólo hay `manus`:
-    // `domus` es irregular y hay que guardarlo entero.
-    expect(ids).toContain('l2-cuarta');
-    // `l5-irregulares` pide `eō`, `ferō`, `volō`... y la máquina sólo sabe
-    // `sum`. Es el mismo hueco que deja el imperativo sin su cuarto caso.
-    expect(ids).toContain('l5-irregulares');
+    expect(ids).toHaveLength(1);
+    // `l2-cuarta` pedía «los pocos femeninos» de 4.ª y sólo había `manus`.
+    // `domus` entró el 2026-09-09, declarado entero en `IRREGULARES` porque
+    // mezcla la 2.ª con la 4.ª: «domō» y «domōs» son de segunda dentro de un
+    // paradigma de cuarta.
+    expect(ids).not.toContain('l2-cuarta');
+    // `l5-irregulares` estuvo bloqueado toda la sesión: la máquina sólo
+    // sabía `sum`. Los seis entraron el 2026-09-09.
+    expect(ids).not.toContain('l5-irregulares');
     // Y NO deben salir los que sólo usan la palabra «irregulares» para otra
     // cosa: con el patrón ancho salían SIETE y cuatro eran falsos. Un gate
     // que marca la mitad de los casos no lo lee nadie.

@@ -221,7 +221,33 @@ const IRREGULARES: Record<string, Partial<Record<`${Caso}.${Numero}`, string>>> 
     'voc.sg': 'Deus',
     'nom.pl': 'dī', 'voc.pl': 'dī', 'dat.pl': 'dīs', 'abl.pl': 'dīs',
   },
+  // `domus` es el tercer irregular, y de otra clase que los dos anteriores:
+  // no es un préstamo griego ni una asimilación, es un nombre que **mezcla
+  // dos declinaciones**. Medido en el corpus, celda a celda:
+  //
+  //     nom.sg  domus ×38      ac.sg   domum ×132
+  //     gen.sg  domūs ×9 · domī ×4     dat.sg  domuī ×6
+  //     abl.sg  domō ×66       ← de 2.ª, no de 4.ª
+  //     nom.pl  domūs ×3       ac.pl   domōs ×13 · domūs ×1
+  //     gen.pl  domōrum ×1     dat/abl.pl  domibus ×4
+  //     LOC     domī ×6        ← y además tiene locativo
+  //
+  // El ablativo singular `domō` y el acusativo plural `domōs` son de la 2.ª
+  // dentro de un paradigma de 4.ª. Es el lema que `l2-cuarta` nombra como su
+  // segundo femenino y el que hacía su `varia` insatisfacible: con `manus`
+  // solo, ese punto medía un lema y no una clase.
+  'domus': {
+    'nom.sg': 'domus', 'ac.sg': 'domum', 'gen.sg': 'domūs',
+    'dat.sg': 'domuī', 'abl.sg': 'domō', 'voc.sg': 'domus',
+    'nom.pl': 'domūs', 'ac.pl': 'domōs', 'gen.pl': 'domōrum',
+    'dat.pl': 'domibus', 'abl.pl': 'domibus', 'voc.pl': 'domūs',
+  },
 };
+
+/** El locativo de `domus`: «domī» ×6, «en casa». Va aparte porque el
+ *  locativo no es uno de los seis casos del tipo y tiene su propio punto
+ *  (`l3-locativo`). */
+export const LOCATIVO_DOMUS = 'domī';
 
 export function declinar(e: EntradaNominal, caso: Caso, num: Numero): string {
   const irr = IRREGULARES[e.lema.normalize('NFC')]?.[`${caso}.${num}` as `${Caso}.${Numero}`];

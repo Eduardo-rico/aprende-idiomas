@@ -66,6 +66,10 @@ export const NOMBRES_L1: EntradaNominal[] = [
   { lema: 'pars', genitivo: 'partis', genero: 'f', glosa: 'parte', iStem: true },
   { lema: 'spīritus', genitivo: 'spīritūs', genero: 'm', glosa: 'espíritu' },
   { lema: 'manus', genitivo: 'manūs', genero: 'f', glosa: 'mano' },
+  // El segundo femenino de 4.ª, que `l2-cuarta` nombra y sin el cual su
+  // `varia` era insatisfacible. Es irregular —mezcla 2.ª y 4.ª— y su
+  // paradigma está declarado entero en `IRREGULARES`.
+  { lema: 'domus', genitivo: 'domūs', genero: 'f', glosa: 'casa' },
   { lema: 'diēs', genitivo: 'diēī', genero: 'm', glosa: 'día' },
   // ── LA 4.ª Y LA 5.ª, que tenían dos lemas y uno ──
   //

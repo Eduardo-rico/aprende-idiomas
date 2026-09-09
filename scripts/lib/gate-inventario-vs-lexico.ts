@@ -32,6 +32,7 @@
 // ha mirado.
 import { NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1 } from '../../lib/data/languages/la/lexicon-l1';
 import { ADJETIVOS_3A } from '../../lib/data/languages/la/adjetivos-3a';
+import { IRREGULARES_L1 } from '../../lib/data/languages/la/irregulares';
 import { declinacionDe, esMixta } from '../../lib/data/languages/la/paradigma-la';
 import { COMPUESTOS_DE_SUM } from '../../lib/data/languages/la/compuestos-de-sum';
 
@@ -141,8 +142,9 @@ export const EXIGENCIAS: Exigencia[] = [
     // está y ese punto se destrabará al escribirlo.
     cuantosHay: () => VERBOS_L1.filter((v) => v.supino).length, minimo: 1 },
   { patron: /eō, ferō|ferō, volō|volō, nōlō|nōlō, mālō/i, nombre: 'verbos irregulares con máquina',
-    cuantosHay: () => VERBOS_L1.filter((v) => ['sum', 'eō', 'ferō', 'volō', 'nōlō', 'mālō', 'fīō'].includes(v.lema)).length,
-    minimo: 3 },
+    // Los seis existen desde 2026-09-09, en `irregulares.ts`, como tablas y
+    // no como reglas — que es lo que el punto pide literalmente.
+    cuantosHay: () => IRREGULARES_L1.length + 1, minimo: 3 },
   { patron: /\b800\b|núcleo de 800/i, nombre: 'lemas del núcleo de 800',
     cuantosHay: () => NOMBRES_L1.length + VERBOS_L1.length + ADJETIVOS_L1.length, minimo: 800 },
 ];
