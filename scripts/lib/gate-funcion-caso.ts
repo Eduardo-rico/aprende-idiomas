@@ -112,6 +112,15 @@ export interface ItemFuncionCaso {
     cuantosNominativos?: 1 | 2;
     /** Con dos nominativos, dónde va el sujeto. */
     sujetoDelante?: boolean;
+    /** Para `l3-acusativo-od`: si el objeto es animado. El español marca el
+     *  objeto con «a» SÓLO cuando es animado y determinado, así que con un
+     *  objeto inanimado la traducción no lleva ninguna marca y el alumno se
+     *  queda con la posición. Es donde la transferencia se acaba. */
+    objetoAnimado?: boolean;
+    /** Y si el verbo rige DOS acusativos. Medido: sólo 7 frases en los
+     *  227.301 tokens del corpus, así que el eje existe pero es raro y el
+     *  lote lo declara en vez de fingir que es corriente. */
+    dobleAcusativo?: string;
   };
 }
 
@@ -190,6 +199,15 @@ export function revisarLoteFuncionCaso(items: ItemFuncionCaso[], opciones: {
         `de ${dos.length} ítems con dos nominativos, el sujeto va delante en ${delante}: contestar «el primero es el sujeto» saca el ${(100 * Math.max(delante, dos.length - delante) / dos.length).toFixed(0)} %`);
   }
 
+  // El español marca el objeto con «a» sólo si es animado: sin las dos
+  // clases, el lote no examina dónde se acaba la transferencia.
+  if (items.some((it) => it.ejes.objetoAnimado !== undefined)) {
+    for (const v of [true, false])
+      if (!items.some((it) => it.ejes.objetoAnimado === v))
+        push('rango-plano',
+          `ningún objeto ${v ? 'animado' : 'inanimado'}: el español pone «a» sólo con los animados, y sin las dos clases no se ve dónde deja de ayudar`);
+  }
+
   // Si el lote declara posiciones, tiene que traer las dos: uno todo
   // pospuesto lo resuelve el instinto español sin leer una desinencia.
   if (items.some((it) => it.ejes.posicion)) {
@@ -218,6 +236,12 @@ export function revisarLoteFuncionCaso(items: ItemFuncionCaso[], opciones: {
     { comprobacion: 'formas que cruzan de declinación', decididos: cruzan, total: items.length,
       motivoDeLosQueQuedanFuera: 'las que sólo colisionan dentro de su propio paradigma. El cruce es lo que ningún paradigma aislado enseña —«rēgī» leído como el genitivo de «servī»— y por eso se cuenta aparte',
       elCeroEsUnResultado: 'un lote puede no traer ninguna forma que cruce, y eso es una elección legítima: el cruce es un extremo del eje, no un requisito' },
+    ...(items.some((it) => it.ejes.objetoAnimado !== undefined) ? [{
+      comprobacion: 'objetos donde el español NO pone marca', decididos:
+        items.filter((it) => it.ejes.objetoAnimado === false).length, total: items.length,
+      motivoDeLosQueQuedanFuera: 'los animados, donde el español pone «a» y el alumno tiene una marca a la que agarrarse. En los inanimados no hay ninguna: sólo la desinencia latina y la posición',
+      elCeroEsUnResultado: undefined,
+    }] : []),
     ...(items.some((it) => it.ejes.cuantosNominativos) ? [{
       comprobacion: 'frases donde la desinencia NO decide', decididos:
         items.filter((it) => it.ejes.cuantosNominativos === 2).length, total: items.length,

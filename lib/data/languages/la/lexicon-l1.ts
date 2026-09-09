@@ -117,6 +117,11 @@ export const VERBOS_L1: EntradaVerbal[] = [
   // `-iō` de la primera parte principal lo delata.
   { lema: 'faciō', infinitivo: 'facere', glosa: 'hacer', perfecto: 'fēcī', supino: 'factum' },
   { lema: 'capiō', infinitivo: 'capere', glosa: 'tomar, coger', perfecto: 'cēpī', supino: 'captum' },
+  // Los dos verbos de doble acusativo que `l3-acusativo-od` nombra, con su
+  // cuenta medida: `doceō` 113 —el número que el punto ya declaraba— y
+  // `rogō` 140. Entran para que ese eje del punto sea escribible.
+  { lema: 'doceō', infinitivo: 'docēre', glosa: 'enseñar', perfecto: 'docuī', supino: 'doctum' },
+  { lema: 'rogō', infinitivo: 'rogāre', glosa: 'preguntar, pedir', perfecto: 'rogāvī', supino: 'rogātum' },
   // El más frecuente del latín, y el que ninguna regla produce: su
   // infinitivo no encaja en las cuatro conjugaciones y su tema alterna.
   // Declarado en `VERBOS_IRREGULARES`, con el imperfecto que el inventario
