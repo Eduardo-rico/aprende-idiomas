@@ -110,7 +110,30 @@ export const EXIGENCIAS: Exigencia[] = [
   // «lo que hace que la voz italiana produzca el /v/», «por eso la voz
   // funciona». Es el mismo tropiezo que con `/irregulares/`, y van dos.
   { patron: /la voz (del|de la|activa|pasiva)|voz pasiva|\bpasiv[ao]s?\b|deponente/i,
-    nombre: 'formas de voz pasiva', cuantosHay: () => 0, minimo: 1 },
+    nombre: 'formas de voz pasiva',
+    // El infectum pasivo YA EXISTE desde 2026-09-09.
+    cuantosHay: () => VERBOS_L1.length, minimo: 1 },
+
+  // EL PARTICIPIO, que es otra cosa y sigue sin haber. El perfecto pasivo es
+  // perifrástico —«amātus sum»— y sin participio no se forma; el gerundio,
+  // el gerundivo, el supino y la perifrástica también lo necesitan.
+  //
+  // Va como exigencia APARTE de la pasiva porque son piezas distintas, y
+  // fundirlas habría dado por desbloqueados cuatro puntos en cuanto escribí
+  // el infectum. La cuarta parte principal (`amātum`) está en el lexicón,
+  // pero declinarla como adjetivo pide los adjetivos de 1.ª clase aplicados
+  // al supino, que no está hecho.
+  //
+  // EL PATRÓN VA POR `id`, NO POR PROSA, y es la tercera vez que hace falta.
+  // Con `/participi|gerundi|supino|perifrástic/` salían dos puntos de más:
+  // `l5-partes-principales`, cuya descripción sólo MENCIONA los participios
+  // («de la cuarta salen los participios y el supino») y cuyo lote ya está
+  // escrito, y `l4-adjetivo-3a`. Mencionar una pieza no es necesitarla.
+  //
+  // Los ids de este proyecto nombran el contenido del punto, así que decir
+  // «los puntos que SON de participio» es exactamente enumerarlos.
+  { patron: /l8-(tres-participios|participio-concertado|ablativo-absoluto|gerundio-gerundivo|perifrastica-pasiva|supino)|l6-pasiva-perifrastica/,
+    nombre: 'participios', cuantosHay: () => 0, minimo: 1 },
   { patron: /eō, ferō|ferō, volō|volō, nōlō|nōlō, mālō/i, nombre: 'verbos irregulares con máquina',
     cuantosHay: () => VERBOS_L1.filter((v) => ['sum', 'eō', 'ferō', 'volō', 'nōlō', 'mālō', 'fīō'].includes(v.lema)).length,
     minimo: 3 },

@@ -490,6 +490,75 @@ function sincopado(forma: string): string | null {
   return null;
 }
 
+// ── LA VOZ PASIVA DEL INFECTUM ───────────────────────────────────────
+//
+// Nueve puntos del inventario la piden —todo el bloque 6 y todo el 8— y la
+// máquina no la tenía. Lo destapó la auditoría inversa: 10.669 tokens del
+// corpus anotados `Voice=Pass` y cero producidos.
+//
+// Se DERIVA de la activa en vez de escribirse aparte, porque las desinencias
+// pasivas sustituyen a las activas una a una y duplicar las tablas es pedir
+// que se desincronicen:
+//
+//     -ō/-m  → -or/-r      -mus  → -mur
+//     -s     → -ris        -tis  → -minī
+//     -t     → -tur        -nt   → -ntur
+//
+// LA ÚNICA COMPLICACIÓN es la segunda del singular: la vocal temática breve
+// `i` pasa a `e` ante `-ris`. «legis» → «legeris», «capis» → «caperis»,
+// «amābis» → «amāberis». Con vocal larga no pasa nada: «amās» → «amāris».
+//
+// Comprobado contra las formas atestiguadas: `videor` ×18, `vidētur`,
+// `vidēbātur` ×27, `vidēbuntur` ×3, `dūciminī`, `dūcēminī`, `dūcēbāminī`,
+// `mittitur` ×5, `audiētur` ×5, `portābitur`, `amāmur`, `capiēbantur`.
+//
+// El perfecto pasivo NO se deriva así: es perifrástico («amātus sum») y
+// pertenece a `l6-pasiva-perifrastica`, que necesita el participio.
+
+const PASIVA: [RegExp, string][] = [
+  [/ō$/, 'or'], [/m$/, 'r'],
+  [/s$/, 'ris'], [/t$/, 'tur'],
+  [/mus$/, 'mur'], [/tis$/, 'minī'], [/nt$/, 'ntur'],
+];
+
+export function conjugarPasiva(e: EntradaVerbal, p: Persona, tiempo: Tiempo = 'presente'): string {
+  // LA TERCERA DEL SINGULAR NO SE DERIVA DE LA TERCERA DEL SINGULAR.
+  //
+  // El activo `videt` ACORTÓ su vocal ante la `-t` final —la ley de la
+  // brevis brevians— y el pasivo la recupera, porque en `vidētur` la `t` ya
+  // no es final. Sustituir `-t` por `-tur` daba *«videtur», *«audituṟ»,
+  // *«portābatur»: seis formas mal de veintitrés, todas la misma.
+  //
+  // La 2.ª del plural activa no sufre ese acortamiento —`vidētis`,
+  // `audītis`, `portābātis`— así que la 3.ª del singular pasiva se saca de
+  // ahí cambiando `-tis` por `-tur`. Sale bien en las cinco clases y en los
+  // tres tiempos, comprobado contra el corpus.
+  if (p === '3sg') {
+    const dosPlural = conjugar(e, '2pl', tiempo).normalize('NFC');
+    if (dosPlural.endsWith('tis')) return `${dosPlural.slice(0, -3)}tur`;
+  }
+  const act = conjugar(e, p, tiempo).normalize('NFC');
+  // El orden importa: `-mus` y `-tis` tienen que probarse antes que `-s` y
+  // `-t`, y `-nt` antes que `-t`. Se prueban por longitud de sufijo.
+  for (const [de, a] of [...PASIVA].sort((x, y) => y[0].source.length - x[0].source.length)) {
+    if (!de.test(act)) continue;
+    let f = act.replace(de, a);
+    // La vocal temática breve `i` pasa a `e` ante `-ris`: «legis» →
+    // «legeris», «amābis» → «amāberis». Con vocal larga no pasa nada.
+    if (a === 'ris') f = f.replace(/i(ris)$/, 'e$1');
+    return f;
+  }
+  throw new Error(`no sé pasivizar «${act}» (${e.lema} ${p} ${tiempo})`);
+}
+
+export function pasivaInfectum(e: EntradaVerbal): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const t of ['presente', 'imperfecto', 'futuro'] as Tiempo[])
+    for (const p of ['1sg', '2sg', '3sg', '1pl', '2pl', '3pl'] as Persona[])
+      out[`${t}.${p}`] = conjugarPasiva(e, p, t);
+  return out;
+}
+
 // ── EL IMPERATIVO ────────────────────────────────────────────────────
 //
 // `l5-imperativo`: «amā/amāte. Y dīc, dūc, fac, fer, que pierden la vocal

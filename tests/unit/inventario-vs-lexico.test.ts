@@ -55,10 +55,20 @@ describe('qué exige el inventario y qué tiene el lexicón', () => {
     expect(ids).not.toContain('l2-segunda');
     expect(ids).not.toContain('l4-comparativo');
     expect(ids).not.toContain('l5-imperativo');
-    // La voz pasiva: 10.669 tokens en el corpus y la máquina no produce
-    // ninguno, así que todo punto que la pida está bloqueado.
-    expect(ids).toContain('l6-pasiva-infectum');
-    expect(ids).toContain('l8-infinitivo-sustantivo');
+    // La pasiva de infectum YA existe desde 2026-09-09, así que estos dos
+    // dejaron de estar bloqueados — y el test lo dice al revés que antes.
+    expect(ids).not.toContain('l6-pasiva-infectum');
+    expect(ids).not.toContain('l8-infinitivo-sustantivo');
+    // Lo que sigue bloqueado es el PARTICIPIO, que es otra pieza: sin él no
+    // hay perfecto pasivo, ni gerundio, ni ablativo absoluto.
+    expect(ids).toContain('l8-tres-participios');
+    expect(ids).toContain('l8-ablativo-absoluto');
+    expect(ids).toContain('l6-pasiva-perifrastica');
+    // Y NO los que sólo MENCIONAN el participio: `l5-partes-principales`
+    // dice «de la cuarta salen los participios» y su lote ya está escrito.
+    // Tercera vez que este gate produce falsos por buscar una palabra en
+    // prosa, y tercera que el arreglo es ir por el `id`.
+    expect(ids).not.toContain('l5-partes-principales');
     // Y NO los de fonología, donde «voz» es el sonido y no la categoría
     // gramatical: «lo que hace que la voz italiana produzca el /v/». Con el
     // patrón ancho salían tres, y van dos veces que este gate casi se apaga
