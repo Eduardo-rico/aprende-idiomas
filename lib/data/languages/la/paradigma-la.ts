@@ -441,6 +441,26 @@ export function conjugarPerfecto(e: EntradaVerbal, per: Persona, tiempo: TiempoP
   return tema === null ? null : tema + TABLA_PERFECTA[tiempo][PERSONAS.indexOf(per)]!;
 }
 
+// ── LA VARIANTE DE LA 3.ª PERSONA DEL PLURAL ─────────────────────────
+//
+// El perfecto tiene dos formas en la 3.ª del plural: `-ērunt` y `-ēre`.
+// Medido en el corpus: 1.614 contra 61, o sea que el `-ēre` es el **3,6 %**.
+//
+// `l6-perfectum` lo declara en su `excepcion` y con un motivo bueno: «un
+// alumno que sólo conozca "-ērunt" leerá un infinitivo». `dūxēre` se parece
+// a `dūcere` lo bastante como para que la lectura falsa sea coherente, que
+// es la condición que este proyecto exige para llamar trampa a algo.
+//
+// Va como función aparte, igual que `variantesDe` para los nombres: los que
+// llaman a `conjugarPerfecto` siguen recibiendo una cadena.
+export function variantesDelPerfecto(e: EntradaVerbal, p: Persona, t: TiempoPerfecto): string[] {
+  const base = conjugarPerfecto(e, p, t);
+  if (base === null) return [];
+  if (p === '3pl' && t === 'perfecto' && base.endsWith('ērunt'))
+    return [base, `${base.slice(0, -5)}ēre`];
+  return [base];
+}
+
 export function perfectum(e: EntradaVerbal): Record<string, string> {
   const out: Record<string, string> = {};
   if (temaDePerfecto(e) === null) return out;

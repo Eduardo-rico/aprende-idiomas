@@ -121,6 +121,19 @@ export const VERBOS_L1: EntradaVerbal[] = [
   // cuenta medida: `doceō` 113 —el número que el punto ya declaraba— y
   // `rogō` 140. Entran para que ese eje del punto sea escribible.
   { lema: 'doceō', infinitivo: 'docēre', glosa: 'enseñar', perfecto: 'docuī', supino: 'doctum' },
+  // ── PERFECTOS REDUPLICADOS ──
+  //
+  // `l6-perfectum` enumera cuatro formaciones de tema —reduplicado, en -v-,
+  // en -s- y con alargamiento— y el lexicón no tenía NINGÚN reduplicado, así
+  // que su `varia` era insatisfacible.
+  //
+  // Elegidos por frecuencia medida: `stō` 178 y `cadō` 98. El más frecuente
+  // de todos es `dō` con 745, y NO entra: su infinitivo es `dare` con `a`
+  // BREVE, así que `claseDe` lo mandaría a la 3.ª —acaba en `-are`, no en
+  // `-āre`— y estaría mal. `dō` es de 1.ª con tema breve, una irregularidad
+  // propia, y meterlo pide declararla antes.
+  { lema: 'stō', infinitivo: 'stāre', glosa: 'estar de pie', perfecto: 'stetī', supino: 'statum' },
+  { lema: 'cadō', infinitivo: 'cadere', glosa: 'caer', perfecto: 'cecidī', supino: 'cāsum' },
   { lema: 'rogō', infinitivo: 'rogāre', glosa: 'preguntar, pedir', perfecto: 'rogāvī', supino: 'rogātum' },
   // El más frecuente del latín, y el que ninguna regla produce: su
   // infinitivo no encaja en las cuatro conjugaciones y su tema alterna.
