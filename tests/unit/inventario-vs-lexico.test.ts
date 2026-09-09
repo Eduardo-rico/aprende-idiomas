@@ -38,9 +38,9 @@ describe('qué exige el inventario y qué tiene el lexicón', () => {
   it('y los que siguen sin poder satisfacerse salen nombrados', () => {
     const r = buscarInsatisfechos(PUNTOS_LA as never);
     const ids = r.map((x) => x.punto);
-    // `l4-adjetivo-3a` pide adjetivos de 3.ª y hay cero: la máquina no los
-    // tiene y es el siguiente hueco de fondo.
-    expect(ids).toContain('l4-adjetivo-3a');
+    // `l4-adjetivo-3a` estuvo bloqueado toda la sesión y dejó de estarlo el
+    // 2026-09-09: la máquina ya tiene los tres tipos.
+    expect(ids).not.toContain('l4-adjetivo-3a');
     // `l11-nucleo-800` pide 800 lemas y hay 95.
     expect(ids).toContain('l11-nucleo-800');
     // `l2-cuarta` pide «los pocos femeninos» de 4.ª y sólo hay `manus`:
@@ -59,11 +59,11 @@ describe('qué exige el inventario y qué tiene el lexicón', () => {
     // dejaron de estar bloqueados — y el test lo dice al revés que antes.
     expect(ids).not.toContain('l6-pasiva-infectum');
     expect(ids).not.toContain('l8-infinitivo-sustantivo');
-    // Lo que sigue bloqueado es el PARTICIPIO, que es otra pieza: sin él no
-    // hay perfecto pasivo, ni gerundio, ni ablativo absoluto.
-    expect(ids).toContain('l8-tres-participios');
-    expect(ids).toContain('l8-ablativo-absoluto');
-    expect(ids).toContain('l6-pasiva-perifrastica');
+    // Y el PARTICIPIO tampoco bloquea ya: los cuatro existen, así que los
+    // siete puntos del bloque 8 quedaron destrabados el mismo día.
+    expect(ids).not.toContain('l8-tres-participios');
+    expect(ids).not.toContain('l8-ablativo-absoluto');
+    expect(ids).not.toContain('l6-pasiva-perifrastica');
     // Y NO los que sólo MENCIONAN el participio: `l5-partes-principales`
     // dice «de la cuarta salen los participios» y su lote ya está escrito.
     // Tercera vez que este gate produce falsos por buscar una palabra en

@@ -31,6 +31,7 @@
 // filtro del macrón: quien lo reejecute y no vea nada tiene que saber qué no
 // ha mirado.
 import { NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1 } from '../../lib/data/languages/la/lexicon-l1';
+import { ADJETIVOS_3A } from '../../lib/data/languages/la/adjetivos-3a';
 import { declinacionDe, esMixta } from '../../lib/data/languages/la/paradigma-la';
 import { COMPUESTOS_DE_SUM } from '../../lib/data/languages/la/compuestos-de-sum';
 
@@ -78,7 +79,7 @@ export const EXIGENCIAS: Exigencia[] = [
   { patron: /reduplicad/i, nombre: 'verbos de perfecto reduplicado',
     cuantosHay: () => VERBOS_L1.filter((v) => esReduplicado(v.perfecto)).length, minimo: 2 },
   { patron: /adjetivos? de (la )?(3\.ª|tercera)|\badjetivo-3a\b/i, nombre: 'adjetivos de 3.ª declinación',
-    cuantosHay: () => ADJETIVOS_L1.filter((a) => !/us$|er$/.test(a.lema.normalize('NFC'))).length, minimo: 2 },
+    cuantosHay: () => ADJETIVOS_3A.length, minimo: 2 },
   { patron: /femenin\w+ \(manus|pocos femeninos/i, nombre: 'nombres femeninos de 4.ª',
     cuantosHay: () => NOMBRES_L1.filter((n) => {
       try { return declinacionDe(n) === '4ª' && n.genero === 'f'; } catch { return false; }
@@ -133,7 +134,12 @@ export const EXIGENCIAS: Exigencia[] = [
   // Los ids de este proyecto nombran el contenido del punto, así que decir
   // «los puntos que SON de participio» es exactamente enumerarlos.
   { patron: /l8-(tres-participios|participio-concertado|ablativo-absoluto|gerundio-gerundivo|perifrastica-pasiva|supino)|l6-pasiva-perifrastica/,
-    nombre: 'participios', cuantosHay: () => 0, minimo: 1 },
+    nombre: 'participios',
+    // Los cuatro existen desde 2026-09-09. `l8-supino` sigue necesitando el
+    // supino como forma nominal propia —no como cuarta parte principal—, y
+    // eso es otra cosa; se queda con el mínimo en 1 porque el participio ya
+    // está y ese punto se destrabará al escribirlo.
+    cuantosHay: () => VERBOS_L1.filter((v) => v.supino).length, minimo: 1 },
   { patron: /eō, ferō|ferō, volō|volō, nōlō|nōlō, mālō/i, nombre: 'verbos irregulares con máquina',
     cuantosHay: () => VERBOS_L1.filter((v) => ['sum', 'eō', 'ferō', 'volō', 'nōlō', 'mālō', 'fīō'].includes(v.lema)).length,
     minimo: 3 },
