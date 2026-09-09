@@ -101,6 +101,17 @@ export interface ItemFuncionCaso {
      *  forma sea además un nominativo plural, de modo que la lectura falsa
      *  sea COHERENTE y no sólo rara. `puellae`, `servī` y `manūs` lo son. */
     pareceNominativo?: string;
+    /** Para `l3-nominativo`: cuántos nominativos hay en la frase. Con DOS
+     *  —«Caesar imperātor est»— ninguna desinencia dice cuál es el sujeto, y
+     *  sólo queda el orden o la semántica.
+     *
+     *  Medido: 1.208 frases copulativas de este tipo en el corpus, con el
+     *  sujeto delante en el 80,6 %. O sea que el orden acierta cuatro de
+     *  cada cinco en el texto real, y un lote equilibrado lo baja al 50 %
+     *  — que es propiedad DEL LOTE y no de la lengua. */
+    cuantosNominativos?: 1 | 2;
+    /** Con dos nominativos, dónde va el sujeto. */
+    sujetoDelante?: boolean;
   };
 }
 
@@ -166,6 +177,19 @@ export function revisarLoteFuncionCaso(items: ItemFuncionCaso[], opciones: {
   if (porFuncion.size > 1 && max / n > 0.6)
     push('funcion-constante', `una función sale en ${max} de ${n} ítems: contestarla siempre resuelve el lote`);
 
+  // Con dos nominativos no hay desinencia que decida, así que el lote tiene
+  // que equilibrar el orden o el instinto —«el primero es el sujeto»— lo
+  // resuelve entero. En el texto real ese instinto acierta el 80,6 %.
+  if (items.some((it) => it.ejes.cuantosNominativos === 2)) {
+    const dos = items.filter((it) => it.ejes.cuantosNominativos === 2);
+    const delante = dos.filter((it) => it.ejes.sujetoDelante).length;
+    if (!items.some((it) => it.ejes.cuantosNominativos === 1))
+      push('rango-plano', 'ningún ítem tiene UN solo nominativo: falta el caso donde la desinencia sí resuelve');
+    if (dos.length > 0 && Math.abs(delante / dos.length - 0.5) > 0.2)
+      push('funcion-constante',
+        `de ${dos.length} ítems con dos nominativos, el sujeto va delante en ${delante}: contestar «el primero es el sujeto» saca el ${(100 * Math.max(delante, dos.length - delante) / dos.length).toFixed(0)} %`);
+  }
+
   // Si el lote declara posiciones, tiene que traer las dos: uno todo
   // pospuesto lo resuelve el instinto español sin leer una desinencia.
   if (items.some((it) => it.ejes.posicion)) {
@@ -194,6 +218,12 @@ export function revisarLoteFuncionCaso(items: ItemFuncionCaso[], opciones: {
     { comprobacion: 'formas que cruzan de declinación', decididos: cruzan, total: items.length,
       motivoDeLosQueQuedanFuera: 'las que sólo colisionan dentro de su propio paradigma. El cruce es lo que ningún paradigma aislado enseña —«rēgī» leído como el genitivo de «servī»— y por eso se cuenta aparte',
       elCeroEsUnResultado: 'un lote puede no traer ninguna forma que cruce, y eso es una elección legítima: el cruce es un extremo del eje, no un requisito' },
+    ...(items.some((it) => it.ejes.cuantosNominativos) ? [{
+      comprobacion: 'frases donde la desinencia NO decide', decididos:
+        items.filter((it) => it.ejes.cuantosNominativos === 2).length, total: items.length,
+      motivoDeLosQueQuedanFuera: 'las de un solo nominativo, donde el caso dice cuál es el sujeto sin más. Las de dos son las que el punto examina: los dos van en nominativo y sólo queda el orden o el sentido',
+      elCeroEsUnResultado: undefined,
+    }] : []),
     ...(items.some((it) => it.ejes.posicion) ? [{
       comprobacion: 'genitivos antepuestos que parecen sujeto', decididos: trampas, total: items.length,
       motivoDeLosQueQuedanFuera: 'los pospuestos, y los antepuestos cuya forma no coincide con ningún nominativo. Este renglón cuenta los ítems donde la lectura falsa es COHERENTE —«puerī liber» leído como «los niños [son] libres»— y no sólo rara, que es donde el punto muerde de verdad',
