@@ -82,6 +82,19 @@ export const NOMBRES_L1: EntradaNominal[] = [
   // ── Y tres de 3.ª que faltaban, dos de ellas neutras en -us ──
   { lema: 'cīvitās', genitivo: 'cīvitātis', genero: 'f', glosa: 'ciudad, ciudadanía' },
   { lema: 'iūs', genitivo: 'iūris', genero: 'n', glosa: 'derecho' },
+  // ── PARA `l2-genero-3a`: el género no se lee en la terminación ──
+  //
+  // «mōns es masculino, mēns femenino, mare neutro, y las tres terminan
+  // igual de poco informativas.» Elegidos por frecuencia y para que el eje
+  // del punto —si el género coincide con el del descendiente español— tenga
+  // los dos valores. `arbor` es el caso canónico: femenino en latín y «el
+  // árbol» masculino en español.
+  { lema: 'arbor', genitivo: 'arboris', genero: 'f', glosa: 'árbol' },        // 79
+  { lema: 'mōns', genitivo: 'montis', genero: 'm', glosa: 'monte', iStem: true },   // 95
+  { lema: 'mēns', genitivo: 'mentis', genero: 'f', glosa: 'mente', iStem: true },   // 56
+  { lema: 'vōx', genitivo: 'vōcis', genero: 'f', glosa: 'voz' },              // 210
+  { lema: 'virtūs', genitivo: 'virtūtis', genero: 'f', glosa: 'virtud' },     // 187
+  { lema: 'nox', genitivo: 'noctis', genero: 'f', glosa: 'noche', iStem: true },    // 127
   { lema: 'homō', genitivo: 'hominis', genero: 'm', glosa: 'hombre' },
   { lema: 'pater', genitivo: 'patris', genero: 'm', glosa: 'padre' },
   { lema: 'māter', genitivo: 'mātris', genero: 'f', glosa: 'madre' },

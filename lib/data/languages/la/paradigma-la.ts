@@ -456,9 +456,38 @@ export function conjugarPerfecto(e: EntradaVerbal, per: Persona, tiempo: TiempoP
 export function variantesDelPerfecto(e: EntradaVerbal, p: Persona, t: TiempoPerfecto): string[] {
   const base = conjugarPerfecto(e, p, t);
   if (base === null) return [];
+  const out = [base];
   if (p === '3pl' && t === 'perfecto' && base.endsWith('ērunt'))
-    return [base, `${base.slice(0, -5)}ēre`];
-  return [base];
+    out.push(`${base.slice(0, -5)}ēre`);
+  const sinc = sincopado(base);
+  if (sinc) out.push(sinc);
+  return out;
+}
+
+// ── EL PERFECTO SINCOPADO ────────────────────────────────────────────
+//
+// Los temas de perfecto en `-v-` pierden la `-v-` ante `s` y ante `r`, y las
+// vocales contraen. No es una licencia poética ni una rareza: sale así en el
+// corpus, y el brief del latinista lo nombra entre las formas que el latín
+// escolar marca con asterisco indebidamente.
+//
+//     audīvistis → audīstis ×20      audīvērunt → audiērunt ×25
+//     audīvisse  → audīsse  ×11      petīvērunt → petiērunt ×8
+//     audīvistī  → audīstī  ×2       nōvērunt   → nōvērunt (ya sincopado)
+//
+// Lo destapó auditar qué formas ATESTIGUADAS no producía la máquina, y no
+// una revisión: son 61 tokens de lemas que el lexicón ya tenía.
+function sincopado(forma: string): string | null {
+  const f = forma.normalize('NFC');
+  // `-īvis-` → `-īs-` y `-āvis-` → `-ās-`
+  const anteS = f.replace(/([āēīō])vis/, '$1s');
+  if (anteS !== f) return anteS;
+  // `-īvēr-` → `-iēr-`  ·  `-āvēr-` → `-ār-`
+  if (/īvēr/.test(f)) return f.replace('īvēr', 'iēr');
+  if (/āvēr/.test(f)) return f.replace('āvēr', 'ār');
+  // `-īver-` del pluscuamperfecto y el futuro perfecto → `-ier-`
+  if (/īver/.test(f)) return f.replace('īver', 'ier');
+  return null;
 }
 
 // ── EL IMPERATIVO ────────────────────────────────────────────────────
