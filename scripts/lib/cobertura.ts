@@ -30,6 +30,18 @@ export interface Cobertura {
    *  menor que `total`: un salto sin motivo escrito es el mismo agujero
    *  que la cuarentena sin razón. */
   motivoDeLosQueQuedanFuera?: string;
+  /** Para el renglón que NO es una comprobación sino una MEDIDA, y cuyo cero
+   *  es informativo en vez de sospechoso.
+   *
+   *  Nace de un caso concreto: «celdas que sólo el macrón separa» da 6 de 12
+   *  en la 4.ª declinación y 0 de 12 en la 5.ª — y ese cero es exactamente
+   *  el hallazgo, porque la 5.ª no pierde ninguna celda al escribirse sin
+   *  cantidad. Tratarlo como «no ha mirado nada» convertía un resultado en
+   *  una alarma.
+   *
+   *  Va con motivo escrito y no como booleano suelto, por lo mismo que todo
+   *  lo demás: la excusa tiene que poder leerse y discutirse. */
+  elCeroEsUnResultado?: string;
 }
 
 export interface FalloCobertura { item: string; clase: 'cobertura-cero' | 'cobertura-sin-motivo'; detalle: string }
@@ -39,7 +51,7 @@ export interface FalloCobertura { item: string; clase: 'cobertura-cero' | 'cober
 export function revisarCobertura(cs: Cobertura[]): FalloCobertura[] {
   const out: FalloCobertura[] = [];
   for (const c of cs) {
-    if (c.decididos === 0) {
+    if (c.decididos === 0 && !c.elCeroEsUnResultado) {
       out.push({ item: '(lote)', clase: 'cobertura-cero',
         detalle: `«${c.comprobacion}» decidió sobre 0 de ${c.total} ítems: no ha aprobado nada, ha callado` });
     } else if (c.decididos < c.total && !c.motivoDeLosQueQuedanFuera) {

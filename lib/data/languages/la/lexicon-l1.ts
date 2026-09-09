@@ -67,6 +67,21 @@ export const NOMBRES_L1: EntradaNominal[] = [
   { lema: 'spīritus', genitivo: 'spīritūs', genero: 'm', glosa: 'espíritu' },
   { lema: 'manus', genitivo: 'manūs', genero: 'f', glosa: 'mano' },
   { lema: 'diēs', genitivo: 'diēī', genero: 'm', glosa: 'día' },
+  // ── LA 4.ª Y LA 5.ª, que tenían dos lemas y uno ──
+  //
+  // Con dos lemas de 4.ª y uno de 5.ª, un lote de esas declinaciones habría
+  // sido un paradigma repetido y no una declinación. Elegidos por frecuencia
+  // medida en el corpus, no por costumbre de manual.
+  { lema: 'rēs', genitivo: 'reī', genero: 'f', glosa: 'cosa, asunto' },        // 853
+  { lema: 'fidēs', genitivo: 'fideī', genero: 'f', glosa: 'fe, confianza' },   // 214
+  { lema: 'speciēs', genitivo: 'speciēī', genero: 'f', glosa: 'aspecto' },     // 22
+  { lema: 'senātus', genitivo: 'senātūs', genero: 'm', glosa: 'senado' },      // 160
+  { lema: 'exercitus', genitivo: 'exercitūs', genero: 'm', glosa: 'ejército' },// 130
+  { lema: 'frūctus', genitivo: 'frūctūs', genero: 'm', glosa: 'fruto' },       // 89
+  { lema: 'metus', genitivo: 'metūs', genero: 'm', glosa: 'miedo' },           // 39
+  // ── Y tres de 3.ª que faltaban, dos de ellas neutras en -us ──
+  { lema: 'cīvitās', genitivo: 'cīvitātis', genero: 'f', glosa: 'ciudad, ciudadanía' },
+  { lema: 'iūs', genitivo: 'iūris', genero: 'n', glosa: 'derecho' },
   { lema: 'homō', genitivo: 'hominis', genero: 'm', glosa: 'hombre' },
   { lema: 'pater', genitivo: 'patris', genero: 'm', glosa: 'padre' },
   { lema: 'māter', genitivo: 'mātris', genero: 'f', glosa: 'madre' },
