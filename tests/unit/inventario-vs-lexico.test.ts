@@ -55,6 +55,17 @@ describe('qué exige el inventario y qué tiene el lexicón', () => {
     expect(ids).not.toContain('l2-segunda');
     expect(ids).not.toContain('l4-comparativo');
     expect(ids).not.toContain('l5-imperativo');
+    // La voz pasiva: 10.669 tokens en el corpus y la máquina no produce
+    // ninguno, así que todo punto que la pida está bloqueado.
+    expect(ids).toContain('l6-pasiva-infectum');
+    expect(ids).toContain('l8-infinitivo-sustantivo');
+    // Y NO los de fonología, donde «voz» es el sonido y no la categoría
+    // gramatical: «lo que hace que la voz italiana produzca el /v/». Con el
+    // patrón ancho salían tres, y van dos veces que este gate casi se apaga
+    // por lo mismo.
+    expect(ids).not.toContain('l1-uv-ij');
+    expect(ids).not.toContain('l1-eclesiastica-ce');
+    expect(ids).not.toContain('l1-eclesiastica-ae');
   });
 
   it('el gate declara ser una heurística sobre prosa, y su silencio no prueba nada', () => {

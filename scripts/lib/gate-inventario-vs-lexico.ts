@@ -100,6 +100,17 @@ export const EXIGENCIAS: Exigencia[] = [
   // usan la palabra para otra cosa. Un gate que marca la mitad de los casos
   // no lo lee nadie, y este filtro es exactamente del tipo que ya matamos
   // una vez por ruidoso.
+  // LA VOZ PASIVA. La auditoría inversa la midió: 10.669 tokens del corpus
+  // anotados `Voice=Pass` y la máquina no produce ninguno. Cualquier punto
+  // cuyo `varia` diga «la voz» pide algo que hoy no existe, y sin este
+  // renglón se escribiría el lote con ese eje decorativo — que es justo lo
+  // que este gate está para evitar.
+  // EL PATRÓN ES «la voz DEL/DE» y no «la voz» a secas. Con el ancho salían
+  // 15 puntos y TRES eran de fonología, donde «voz» significa el sonido:
+  // «lo que hace que la voz italiana produzca el /v/», «por eso la voz
+  // funciona». Es el mismo tropiezo que con `/irregulares/`, y van dos.
+  { patron: /la voz (del|de la|activa|pasiva)|voz pasiva|\bpasiv[ao]s?\b|deponente/i,
+    nombre: 'formas de voz pasiva', cuantosHay: () => 0, minimo: 1 },
   { patron: /eō, ferō|ferō, volō|volō, nōlō|nōlō, mālō/i, nombre: 'verbos irregulares con máquina',
     cuantosHay: () => VERBOS_L1.filter((v) => ['sum', 'eō', 'ferō', 'volō', 'nōlō', 'mālō', 'fīō'].includes(v.lema)).length,
     minimo: 3 },
