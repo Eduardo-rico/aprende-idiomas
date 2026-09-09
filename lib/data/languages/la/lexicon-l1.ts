@@ -226,7 +226,21 @@ export const INDECLINABLES_L1: string[] = [
  *  `quis`+`que`, que son palabras enteras. Es la mitad que evita partir de
  *  más, y va escrita porque no se deduce. */
 export const NO_LLEVAN_ENCLITICO: string[] = [
-  'neque', 'quisque', 'usque', 'dēnique', 'itaque', 'atque', 'quaeque', 'quodque',
+  'neque', 'quisque', 'ūsque', 'dēnique', 'itaque', 'atque', 'quaeque', 'quodque',
   'utique', 'undique', 'plērīque', 'quīcumque', 'nēve', 'sīve', 'bene', 'sine',
   'ante', 'omne', 'īre', 'plēne', 'iuvene',
+  // AÑADIDOS 2026-09-09 tras contarlos en el corpus. Las palabras que acaban
+  // en `-que` sin llevar enclítico son MUCHÍSIMAS —el treebank separa el
+  // enclítico de verdad, así que todo lo que queda acabado en `-que` en el
+  // flujo de tokens es palabra entera—:
+  //
+  //   atque 462 · itaque 170 · ūsque 151 · quoque 95 · quīnque 80 ·
+  //   quīcumque 52 · quaecumque 44 · quisque 37 · utique 32 ·
+  //   ūnusquisque 32 · neque 29 · plērumque 27 · undique 23 · dēnique 20
+  //
+  // `quīnque` es «cinco» y no `quīn`+`que`; `ūsque` es «hasta»; `quoque` es
+  // «también». Un alumno que haya aprendido «-que significa "y"» las partirá
+  // todas y sacará basura.
+  'quoque', 'quīnque', 'quaecumque', 'quodcumque', 'ūnusquisque', 'utraque',
+  'uterque', 'plērumque', 'namque', 'ubīque', 'quandōque', 'cumque',
 ];
