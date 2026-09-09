@@ -49,6 +49,24 @@ export const NOMBRES_L1: EntradaNominal[] = [
   // ── 3.ª. El nominativo NO se deduce del tema y el tema NO se deduce del
   //    nominativo: es el punto `l2-genitivo-clave` en su forma más pura.
   { lema: 'rēx', genitivo: 'rēgis', genero: 'm', glosa: 'rey' },
+  // ── LOS QUE FALTABAN Y PESAN EN LA LECTURA DECLARADA ──
+  //
+  // `Deus` con 1.127 apariciones estaba FUERA del lexicón de un curso cuya
+  // lectura es la Vulgata. No es un hueco de cobertura: es el hueco que
+  // parece estilo, porque nadie echa de menos la palabra más frecuente del
+  // texto — su ausencia no rompe nada, sólo hace que ningún ítem la use.
+  { lema: 'Deus', genitivo: 'Deī', genero: 'm', glosa: 'Dios' },
+  { lema: 'Chrīstus', genitivo: 'Chrīstī', genero: 'm', glosa: 'Cristo' },
+  { lema: 'caelum', genitivo: 'caelī', genero: 'n', glosa: 'cielo' },
+  { lema: 'populus', genitivo: 'populī', genero: 'm', glosa: 'pueblo' },
+  { lema: 'locus', genitivo: 'locī', genero: 'm', glosa: 'lugar' },
+  { lema: 'vir', genitivo: 'virī', genero: 'm', glosa: 'varón' },
+  { lema: 'lēx', genitivo: 'lēgis', genero: 'f', glosa: 'ley' },
+  { lema: 'frāter', genitivo: 'frātris', genero: 'm', glosa: 'hermano' },
+  { lema: 'pars', genitivo: 'partis', genero: 'f', glosa: 'parte', iStem: true },
+  { lema: 'spīritus', genitivo: 'spīritūs', genero: 'm', glosa: 'espíritu' },
+  { lema: 'manus', genitivo: 'manūs', genero: 'f', glosa: 'mano' },
+  { lema: 'diēs', genitivo: 'diēī', genero: 'm', glosa: 'día' },
   { lema: 'homō', genitivo: 'hominis', genero: 'm', glosa: 'hombre' },
   { lema: 'pater', genitivo: 'patris', genero: 'm', glosa: 'padre' },
   { lema: 'māter', genitivo: 'mātris', genero: 'f', glosa: 'madre' },

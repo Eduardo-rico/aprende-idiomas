@@ -123,11 +123,25 @@ describe('EL ENCLÍTICO, que no se separa por espacios', () => {
   });
 
   it('y una base DESCONOCIDA no se parte para salvarla', () => {
-    // `populus` no está en el lexicón, así que `populusque` se rechaza
-    // entero. Partirlo para que `que` pasara sería fabricar una aprobación
-    // — la misma familia que un generador que inventa cuando no sabe.
-    expect(separarEnclitico('populusque', formasValidas())).toEqual(['populusque']);
-    expect(revisarCantidad('populusque').map((x) => x.clase)).toContain('forma-desconocida');
+    // Partir una palabra para que su `que` final pasara sería fabricar una
+    // aprobación: la misma familia que un generador que inventa cuando no
+    // sabe. Aquí la base tiene que quedar entera y ser rechazada.
+    //
+    // LA BASE ES INVENTADA A PROPÓSITO. La versión anterior usaba
+    // «populusque» porque `populus` no estaba en el lexicón — y al meterlo
+    // (1.127 apariciones de `Deus` obligaron a repasar los frecuentes) el
+    // test se puso rojo sin que nada se rompiera: el partidor había pasado
+    // a acertar, porque «populusque» es latín de verdad, el del «Senātus
+    // Populusque Rōmānus». Un fixture que depende de que algo NO exista
+    // caduca en cuanto el material crece, así que ahora la base es una
+    // secuencia que ninguna ampliación del lexicón va a contener.
+    expect(separarEnclitico('xyrgotusque', formasValidas())).toEqual(['xyrgotusque']);
+    expect(revisarCantidad('xyrgotusque').map((x) => x.clase)).toContain('forma-desconocida');
+
+    // Y el control por el otro lado: con la base YA en el lexicón, sí se
+    // parte. Si esto dejara de partir, el partidor estaría muerto y el test
+    // de arriba seguiría verde por la razón equivocada.
+    expect(separarEnclitico('populusque', formasValidas())).toEqual(['populus', 'que']);
   });
 
   it('las palabras de función que faltaban después de ocho lotes', () => {

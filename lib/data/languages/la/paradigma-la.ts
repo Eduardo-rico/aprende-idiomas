@@ -74,10 +74,26 @@ const N4_NEUTRO: Record<Numero, string[]> = {
   sg: ['ū', 'ū', 'ūs', 'ū', 'ū', 'ū'],
   pl: ['ua', 'ua', 'uum', 'ibus', 'ibus', 'ua'],
 };
+// La 5.ª tiene DOS juegos de genitivo y dativo singular, y no es una
+// variante libre: la `e` es LARGA cuando el tema acaba en vocal y breve
+// cuando acaba en consonante.
+//
+//     rēs, reī      (tema `r-`,  consonante)
+//     diēs, diēī    (tema `di-`, vocal)
+//
+// Sólo son cuatro palabras las de tema vocálico —`diēs`, `aciēs`, `faciēs`,
+// `speciēs`— pero `diēs` sale 654 veces en el corpus, así que la tabla de
+// una sola terminación fallaba en la única de la 5.ª que el alumno va a
+// leer de verdad. Lo destapó meterla en el lexicón, no una revisión.
 const N5: Record<Numero, string[]> = {
   sg: ['ēs', 'em', 'eī', 'eī', 'ē', 'ēs'],
   pl: ['ēs', 'ēs', 'ērum', 'ēbus', 'ēbus', 'ēs'],
 };
+const N5_TEMA_VOCALICO: Record<Numero, string[]> = {
+  sg: ['ēs', 'em', 'ēī', 'ēī', 'ē', 'ēs'],
+  pl: ['ēs', 'ēs', 'ērum', 'ēbus', 'ēbus', 'ēs'],
+};
+const acabaEnVocal = (tema: string) => /[aeiouāēīōū]$/.test(tema.normalize('NFC'));
 const ORDEN: Caso[] = ['nom', 'ac', 'gen', 'dat', 'abl', 'voc'];
 
 export type Declinacion = '1ª' | '2ª' | '3ª' | '4ª' | '5ª';
@@ -98,18 +114,53 @@ export type Declinacion = '1ª' | '2ª' | '3ª' | '4ª' | '5ª';
 // Aviso declarado: `-ēī` también es el genitivo de los propios en `-ēius`
 // (`Pompēius` → `Pompēī`). Si algún día entra uno, hay que distinguirlo
 // por dato y no por final, como ya se hace con el tema en `-i`.
+/** La declinación, desde el GENITIVO — con una excepción declarada.
+ *
+ *  El resto del motor deriva del genitivo a propósito: el lema no manda, y
+ *  eso es lo que hace que envenenar el lema no cambie nada. Pero la 5.ª y la
+ *  2.ª **colisionan de verdad en el genitivo** y no es un defecto de la
+ *  regla, es una propiedad del latín:
+ *
+ *      reī   (5.ª, de `rēs`)     ·   Deī   (2.ª, de `Deus`)
+ *
+ *  Los dos acaban en `-eī`, los dos con la `e` breve: ni la terminación ni
+ *  la cantidad los separan. Sólo el nominativo lo hace —`rēs` acaba en `-ēs`
+ *  y `Deus` en `-us`—, así que aquí, y sólo aquí, hace falta mirarlo.
+ *
+ *  Lo destapó añadir `Deus` al lexicón: la regla anterior lo mandaba a la
+ *  5.ª y la máquina producía `Dēs`, `Dem`, `Dērum`. La regla estaba escrita
+ *  para que `reī` no cayera en la 2.ª, y al arreglar aquel caso movió el
+ *  agujero en vez de cerrarlo — que es exactamente lo que pasa cuando se
+ *  sustituye una condición en vez de completarla. */
 export function declinacionDe(e: EntradaNominal): Declinacion {
   const g = e.genitivo.normalize('NFC');
+  const l = e.lema.normalize('NFC');
   if (g.endsWith('ae')) return '1ª';
-  if (/[eē]ī$/.test(g)) return '5ª';       // ANTES que la 2.ª: `reī` acaba en `ī`
+  // La 5.ª va ANTES que la 2.ª porque su genitivo acaba en `ī`; y pide el
+  // nominativo en `-ēs` porque si no se traga los `Deus/Deī`.
+  if (/[eē]ī$/.test(g) && /[eē]s$/.test(l)) return '5ª';
   if (g.endsWith('ūs')) return '4ª';
   if (g.endsWith('is')) return '3ª';
   if (g.endsWith('ī')) return '2ª';
-  throw new Error(`genitivo «${g}» no es de ninguna de las cinco declinaciones`);
+  throw new Error(`genitivo «${g}» no es de ninguna de las cinco declinaciones (lema «${l}»)`);
 }
 
+/** El tema, cortando la desinencia QUE LE TOCA A SU DECLINACIÓN.
+ *
+ *  La versión anterior probaba las cinco terminaciones en orden —`([eē]ī|ae|
+ *  ūs|is|ī)$`— y eso repetía, un nivel más abajo, la misma colisión que
+ *  `declinacionDe`: a `Deī` le comía la `e` y dejaba el tema en `D`, así que
+ *  la máquina producía `Dus`, `Dum`, `Dōrum`. Arreglar sólo el clasificador
+ *  no bastaba porque el corte vivía en dos sitios.
+ *
+ *  Preguntando primero por la declinación, la ambigüedad se resuelve UNA vez
+ *  y en un solo sitio, y la clase de fallo se cierra en vez de moverse. */
+const DESINENCIA_DEL_GENITIVO: Record<Declinacion, RegExp> = {
+  '1ª': /ae$/, '2ª': /ī$/, '3ª': /is$/, '4ª': /ūs$/, '5ª': /[eē]ī$/,
+};
+
 const temaDe = (e: EntradaNominal) =>
-  e.genitivo.normalize('NFC').replace(/([eē]ī|ae|ūs|is|ī)$/, '');
+  e.genitivo.normalize('NFC').replace(DESINENCIA_DEL_GENITIVO[declinacionDe(e)], '');
 
 // ── IRREGULARES DECLARADOS, uno por uno y con su cuenta ──────────────
 //
@@ -123,10 +174,30 @@ const temaDe = (e: EntradaNominal) =>
 //
 // Van aquí y no como excepción de otro punto, que es el error que ya
 // costó tres veces.
+//
+// `Deus` es el segundo caso, y su irregularidad es de otra clase: sigue la
+// 2.ª entera SALVO en el vocativo singular y en todo el plural. Medido:
+//
+//     voc.sg   «Deus» ×2      — la regla de la 2.ª predice *«Dee», que no
+//                               existe. Y `l2-vocativo` enseña justamente
+//                               esa regla, así que sin declararlo aquí el
+//                               punto produce su propio contraejemplo.
+//     nom.pl   «dī» ×4 · «diī» ×4        (nunca «deī»)
+//     voc.pl   «dī» ×6
+//     dat/abl.pl «dīs» ×2
+//     gen.pl   «deōrum» ×10 · «deum» ×1  (el genitivo corto, atestiguado)
+//
+// El plural es de los dioses paganos y sale de Perseus, no de la Vulgata:
+// para el alumno de L1 lo que muerde es el vocativo, que es como se le
+// habla a Dios en todo el salterio.
 const IRREGULARES: Record<string, Partial<Record<`${Caso}.${Numero}`, string>>> = {
   'Iēsus': {
     'nom.sg': 'Iēsus', 'ac.sg': 'Iēsum', 'gen.sg': 'Iēsū',
     'dat.sg': 'Iēsū', 'abl.sg': 'Iēsū', 'voc.sg': 'Iēsū',
+  },
+  'Deus': {
+    'voc.sg': 'Deus',
+    'nom.pl': 'dī', 'voc.pl': 'dī', 'dat.pl': 'dīs', 'abl.pl': 'dīs',
   },
 };
 
@@ -139,7 +210,10 @@ export function declinar(e: EntradaNominal, caso: Caso, num: Numero): string {
 
   if (decl === '1ª') return tema + N1[num]![i]!;
 
-  if (decl === '5ª') return tema + N5[num]![i]!;
+  if (decl === '5ª') {
+    const t5 = acabaEnVocal(tema) ? N5_TEMA_VOCALICO : N5;
+    return tema + t5[num]![i]!;
+  }
 
   if (decl === '4ª') {
     const t4 = e.genero === 'n' ? N4_NEUTRO : N4;
