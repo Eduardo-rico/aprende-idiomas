@@ -461,6 +461,44 @@ export function variantesDelPerfecto(e: EntradaVerbal, p: Persona, t: TiempoPerf
   return [base];
 }
 
+// ── EL IMPERATIVO ────────────────────────────────────────────────────
+//
+// `l5-imperativo`: «amā/amāte. Y dīc, dūc, fac, fer, que pierden la vocal
+// final.» `varia`: si el verbo es de los cuatro irregulares o no.
+//
+// El regular es el tema del presente a secas en singular y con `-te` en
+// plural. La 3.ª y la mixta cambian la vocal temática ante `-te`:
+//
+//     amā / amāte      monē / monēte     audī / audīte
+//     lege / legite    cape / capite     ← la `e` pasa a `i`
+//
+// Los cuatro irregulares pierden la vocal SÓLO en el singular; su plural es
+// normal. Medido en el corpus: «dīc» ×24 contra «dīcite» ×19, «fac» ×33
+// contra «facite» ×24, «dūc» ×2 contra «dūcite» ×2, «fer» ×2 contra
+// «ferte» ×3. O sea que el alumno verá las dos cosas del mismo verbo, y la
+// irregularidad no es del verbo sino de UNA de sus dos formas.
+const IMPERATIVOS_IRREGULARES: Record<string, { sg: string; pl: string }> = {
+  'dīcō': { sg: 'dīc', pl: 'dīcite' },
+  'dūcō': { sg: 'dūc', pl: 'dūcite' },
+  'faciō': { sg: 'fac', pl: 'facite' },
+};
+
+export function imperativo(e: EntradaVerbal, num: Numero): string {
+  const irr = IMPERATIVOS_IRREGULARES[e.lema.normalize('NFC')];
+  if (irr) return num === 'sg' ? irr.sg : irr.pl;
+  const i = e.infinitivo.normalize('NFC');
+  if (i.endsWith('āre')) return num === 'sg' ? i.slice(0, -2) : `${i.slice(0, -2)}te`;
+  if (i.endsWith('ēre')) return num === 'sg' ? i.slice(0, -2) : `${i.slice(0, -2)}te`;
+  if (i.endsWith('īre')) return num === 'sg' ? i.slice(0, -2) : `${i.slice(0, -2)}te`;
+  // 3.ª y mixta: el singular acaba en `-e` y el plural cambia esa `e` por `i`.
+  const tema = i.slice(0, -3);
+  return num === 'sg' ? `${tema}e` : `${tema}ite`;
+}
+
+export function esImperativoIrregular(e: EntradaVerbal): boolean {
+  return IMPERATIVOS_IRREGULARES[e.lema.normalize('NFC')] !== undefined;
+}
+
 export function perfectum(e: EntradaVerbal): Record<string, string> {
   const out: Record<string, string> = {};
   if (temaDePerfecto(e) === null) return out;

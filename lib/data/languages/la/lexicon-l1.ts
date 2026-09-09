@@ -132,6 +132,10 @@ export const VERBOS_L1: EntradaVerbal[] = [
   // BREVE, así que `claseDe` lo mandaría a la 3.ª —acaba en `-are`, no en
   // `-āre`— y estaría mal. `dō` es de 1.ª con tema breve, una irregularidad
   // propia, y meterlo pide declararla antes.
+  // `dīcō` entra por el imperativo: es uno de los cuatro que pierden la
+  // vocal final —«dīc» ×24 en el corpus— y sin él el `varia` de
+  // `l5-imperativo` sólo tendría dos de sus cuatro casos.
+  { lema: 'dīcō', infinitivo: 'dīcere', glosa: 'decir', perfecto: 'dīxī', supino: 'dictum' },
   { lema: 'stō', infinitivo: 'stāre', glosa: 'estar de pie', perfecto: 'stetī', supino: 'statum' },
   { lema: 'cadō', infinitivo: 'cadere', glosa: 'caer', perfecto: 'cecidī', supino: 'cāsum' },
   { lema: 'rogō', infinitivo: 'rogāre', glosa: 'preguntar, pedir', perfecto: 'rogāvī', supino: 'rogātum' },
