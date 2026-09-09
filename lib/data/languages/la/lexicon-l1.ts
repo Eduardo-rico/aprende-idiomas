@@ -107,6 +107,16 @@ export const VERBOS_L1: EntradaVerbal[] = [
   // que aceptan sujeto inanimado son intransitivos (`veniō`, `maneō`,
   // `cadō`, `stō`) y no forman pareja sujeto-objeto.
   { lema: 'habeō', infinitivo: 'habēre', glosa: 'tener', perfecto: 'habuī', supino: 'habitum' },
+  // ── LA CONJUGACIÓN MIXTA, QUE NO TENÍA NI UN VERBO ──
+  //
+  // El `varia` de `l5-conjugacion-por-infinitivo` dice literalmente «hay que
+  // traer la mixta, que es la que nadie ve», y el lexicón no tenía ninguno:
+  // el punto era insatisfacible por construcción. Entran los dos más
+  // frecuentes del corpus, medidos, y son además los que hacen visible el
+  // problema — `capere` se escribe igual que un infinitivo de 3.ª y sólo el
+  // `-iō` de la primera parte principal lo delata.
+  { lema: 'faciō', infinitivo: 'facere', glosa: 'hacer', perfecto: 'fēcī', supino: 'factum' },
+  { lema: 'capiō', infinitivo: 'capere', glosa: 'tomar, coger', perfecto: 'cēpī', supino: 'captum' },
   // El más frecuente del latín, y el que ninguna regla produce: su
   // infinitivo no encaja en las cuatro conjugaciones y su tema alterna.
   // Declarado en `VERBOS_IRREGULARES`, con el imperfecto que el inventario
