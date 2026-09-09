@@ -83,12 +83,44 @@ export function celdasQueSoloElMacronSepara(e: EntradaNominal, caso: Caso, num: 
 //
 // Un lote que no recorra el eje mide un solo grado de opacidad y su `varia`
 // es decorativa.
+/** ¿SALE el tema del nominativo? Es la pregunta del punto
+ *  `l2-genitivo-clave`: «de `rēx` no se deduce nada; de `rēgis` sale todo».
+ *
+ *  Sale si el tema es un PREFIJO del nominativo, o sea si basta con quitarle
+ *  la desinencia: `puella` → `puell-` sí, `rēx` → `rēg-` no, porque la `g`
+ *  no está en `rēx` por ninguna parte.
+ *
+ *  No es lo mismo que la distancia: `puella`/`puell-` tiene distancia 1
+ *  —se cae una letra— y es perfectamente predecible. Medir la distancia y
+ *  llamarla opacidad confunde quitar una desinencia con no poder deducir
+ *  nada. */
+export function elTemaSaleDelNominativo(e: EntradaNominal): boolean {
+  return sinCantidad(e.lema).toLowerCase().startsWith(sinCantidad(temaReal(e)).toLowerCase());
+}
+
 export function distanciaDelTema(e: EntradaNominal): number {
   const a = sinCantidad(e.lema).toLowerCase();
-  const tema = sinCantidad(e.genitivo).toLowerCase().replace(/is$/, '');
+  const tema = sinCantidad(temaReal(e)).toLowerCase();
   let i = 0;
   while (i < a.length && i < tema.length && a[i] === tema[i]) i++;
   return (a.length - i) + (tema.length - i);
+}
+
+/** El tema, derivado de la MÁQUINA y no de una terminación supuesta: el
+ *  prefijo común a las formas oblicuas del singular.
+ *
+ *  La versión anterior de `distanciaDelTema` quitaba `-is` al genitivo, que
+ *  sólo vale para la 3.ª. Con `puella/puellae` dejaba el «tema» en
+ *  «puellae» y daba distancia 1 donde es 0. Servía para el punto de la 3.ª,
+ *  que era donde se usaba, y habría mentido en cuanto se usara en otro. */
+export function temaReal(e: EntradaNominal): string {
+  const p = paradigmaNominal(e);
+  // El ACUSATIVO queda fuera: en los neutros es igual al nominativo, así que
+  // contamina el prefijo común y `tempus` daba «temp» en vez de «tempor-».
+  const formas = ['gen.sg', 'dat.sg', 'abl.sg'].map((k) => p[k]!.normalize('NFC'));
+  let i = 0;
+  while (i < Math.min(...formas.map((f) => f.length)) && formas.every((f) => f[i] === formas[0]![i])) i++;
+  return formas[0]!.slice(0, i);
 }
 
 /** Las tres marcas del tema en `-i`, tal como el punto las enumera. */
