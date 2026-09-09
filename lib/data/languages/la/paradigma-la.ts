@@ -132,6 +132,28 @@ export type Declinacion = '1ª' | '2ª' | '3ª' | '4ª' | '5ª';
  *  para que `reī` no cayera en la 2.ª, y al arreglar aquel caso movió el
  *  agujero en vez de cerrarlo — que es exactamente lo que pasa cuando se
  *  sustituye una condición en vez de completarla. */
+// ── VARIANTES ATESTIGUADAS, con su cuenta ────────────────────────────
+//
+// La máquina produce UNA forma por celda: la mayoritaria. Pero hay celdas
+// donde el corpus trae dos y la segunda no es una rareza de manual.
+//
+// El acusativo plural de los temas en `-i` en `-īs` —«partīs» junto a
+// «partēs»— sale 56 veces contra 1.386 en `-ēs`: el 3,9 %. `l2-tercera-i`
+// lo declara como una de sus TRES marcas, así que sin él ese punto no puede
+// cubrir su propio `varia`.
+//
+// Va como función aparte y no metiendo dos formas en la celda: los que ya
+// llaman a `declinar` siguen recibiendo una cadena, y quien necesite las
+// variantes las pide. Meter un array en la celda habría roto a todos los
+// llamadores para servir a un caso.
+export function variantesDe(e: EntradaNominal, caso: Caso, num: Numero): string[] {
+  if (e.iStem && caso === 'ac' && num === 'pl' && e.genero !== 'n') {
+    const alt = temaDe(e) + 'īs';
+    return [declinar(e, caso, num), alt];
+  }
+  return [declinar(e, caso, num)];
+}
+
 export function declinacionDe(e: EntradaNominal): Declinacion {
   const g = e.genitivo.normalize('NFC');
   const l = e.lema.normalize('NFC');

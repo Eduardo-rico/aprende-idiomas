@@ -24,7 +24,7 @@
 // un ítem que se apoye en la cantidad para hacer DISTINGUIR dos celdas está
 // apoyándose en una marca que el texto no trae, y eso el gate lo dice.
 import {
-  paradigmaNominal, declinar, declinacionDe,
+  paradigmaNominal, declinar, declinacionDe, variantesDe,
   type EntradaNominal, type Caso, type Numero, type Declinacion,
 } from '../../lib/data/languages/la/paradigma-la';
 import { separablePorPosicion } from './atajos';
@@ -69,6 +69,51 @@ export function celdasQueSoloElMacronSepara(e: EntradaNominal, caso: Caso, num: 
     .map(([k]) => k);
 }
 
+// ── EL EJE DE `l2-tercera-consonante`, QUE ES MEDIBLE ────────────────
+//
+// Su `varia` dice «cuánto cambia el tema respecto al nominativo, de nada
+// (cōnsul) a mucho (iter/itiner-)». Eso no hay que juzgarlo: se cuenta.
+// Prefijo común entre nominativo y tema, y lo que sobra por cada lado.
+//
+//     timor / timōris    tema timōr     coste 0   ← el tema ES el nominativo
+//     urbs  / urbis      tema urb       coste 1
+//     rēx   / rēgis      tema rēg       coste 2
+//     homō  / hominis    tema homin     coste 3
+//     tempus/ temporis   tema tempor    coste 4
+//
+// Un lote que no recorra el eje mide un solo grado de opacidad y su `varia`
+// es decorativa.
+export function distanciaDelTema(e: EntradaNominal): number {
+  const a = sinCantidad(e.lema).toLowerCase();
+  const tema = sinCantidad(e.genitivo).toLowerCase().replace(/is$/, '');
+  let i = 0;
+  while (i < a.length && i < tema.length && a[i] === tema[i]) i++;
+  return (a.length - i) + (tema.length - i);
+}
+
+/** Las tres marcas del tema en `-i`, tal como el punto las enumera. */
+export type MarcaI = 'gen-pl-ium' | 'abl-sg-i' | 'nom-pl-ia' | 'ac-pl-is';
+
+/** Qué marcas muestra DE VERDAD una FORMA concreta. Se calcula sobre la
+ *  forma y no sobre la celda, y eso no es un detalle:
+ *
+ *  la primera versión miraba sólo la celda, así que aprobaba un ítem que
+ *  decía enseñar el acusativo en `-īs` **y respondía «partēs»** — la forma
+ *  mayoritaria, que es justo la que NO tiene la marca. El ítem era latín
+ *  correcto, estaba bien declarado y enseñaba lo contrario de lo que decía.
+ *
+ *  Con la forma delante, «partīs» muestra la marca y «partēs» no. */
+export function marcasQueMuestra(e: EntradaNominal, caso: Caso, num: Numero, forma: string): MarcaI[] {
+  if (!e.iStem) return [];
+  const f = forma.normalize('NFC');
+  const out: MarcaI[] = [];
+  if (caso === 'gen' && num === 'pl' && f.endsWith('ium')) out.push('gen-pl-ium');
+  if (caso === 'abl' && num === 'sg' && e.genero === 'n' && /ī$/.test(f)) out.push('abl-sg-i');
+  if (caso === 'nom' && num === 'pl' && e.genero === 'n' && f.endsWith('ia')) out.push('nom-pl-ia');
+  if (caso === 'ac' && num === 'pl' && e.genero !== 'n' && /īs$/.test(f)) out.push('ac-pl-is');
+  return out;
+}
+
 export interface ItemDeclinacion {
   id: string;
   punto: string;
@@ -88,6 +133,9 @@ export interface ItemDeclinacion {
     /** Obligatorio cuando la celda colapsa con otras al perder el macrón:
      *  hay que decir con cuáles y que se sabe. */
     colapsaAlLeer?: string;
+    /** Sólo para `l2-tercera-i`: qué marca del tema en `-i` enseña este
+     *  ítem. Escrita a mano y contrastada contra `marcasQueMuestra`. */
+    marcaI?: MarcaI;
   };
 }
 
@@ -98,6 +146,9 @@ export type ClaseFalloDecl =
   | 'colapso-no-declarado'
   | 'colapso-declarado-de-mas'
   | 'celda-sin-cubrir'
+  | 'marca-i-mal-declarada'
+  | 'eje-de-opacidad-plano'
+  | 'marca-i-sin-cubrir'
   | 'lema-repetido'
   | 'orden-separable'
   | 'cobertura-cero'
@@ -111,9 +162,13 @@ export function revisarItemDeclinacion(it: ItemDeclinacion): FalloDecl[] {
   const out: FalloDecl[] = [];
   const push = (clase: ClaseFalloDecl, detalle: string) => out.push({ item: it.id, clase, detalle });
 
-  const dela = declinar(it.entrada, it.caso, it.numero);
-  if (dela.normalize('NFC') !== it.respuesta.normalize('NFC'))
-    push('respuesta-no-derivada', `la máquina da «${dela}» y el ítem escribe «${it.respuesta}»`);
+  // Se admite CUALQUIERA de las variantes atestiguadas, no sólo la
+  // mayoritaria: «partēs» y «partīs» son las dos latín y el punto de los
+  // temas en `-i` necesita la segunda para cubrir su varia.
+  const variantes = variantesDe(it.entrada, it.caso, it.numero).map((x) => x.normalize('NFC'));
+  if (!variantes.includes(it.respuesta.normalize('NFC')))
+    push('respuesta-no-derivada',
+      `la máquina da ${variantes.map((v) => `«${v}»`).join(' o ')} y el ítem escribe «${it.respuesta}»`);
 
   if (!it.marco.includes('___')) push('respuesta-no-derivada', 'el marco no tiene hueco');
   if (MACRON.test(it.marco))
@@ -123,6 +178,13 @@ export function revisarItemDeclinacion(it: ItemDeclinacion): FalloDecl[] {
   if (real !== it.ejes.declinacion)
     push('declinacion-mal-declarada',
       `el ítem dice ${it.ejes.declinacion} y el genitivo «${it.entrada.genitivo}» da ${real}`);
+
+  if (it.ejes.marcaI) {
+    const muestra = marcasQueMuestra(it.entrada, it.caso, it.numero, it.respuesta);
+    if (!muestra.includes(it.ejes.marcaI))
+      push('marca-i-mal-declarada',
+        `dice enseñar «${it.ejes.marcaI}» y «${it.respuesta}» (${it.caso}.${it.numero} de ${it.entrada.lema}) no la muestra: las marcas del tema en -i no salen todas en cada lema`);
+  }
 
   const colapsan = celdasQueSoloElMacronSepara(it.entrada, it.caso, it.numero);
   if (colapsan.length > 0 && !it.ejes.colapsaAlLeer)
@@ -141,6 +203,11 @@ export function revisarLoteDeclinacion(items: ItemDeclinacion[], opciones: {
   /** Cuántos lemas distintos como mínimo: ocho ítems del mismo lema son uno
    *  repetido ocho veces. */
   lemasMinimos: number;
+  /** Para `l2-tercera-consonante`: el lote tiene que recorrer el eje de
+   *  opacidad, de un tema que ES el nominativo a uno que se aleja mucho. */
+  exigeRecorrerLaOpacidad?: boolean;
+  /** Para `l2-tercera-i`: las marcas que el `varia` obliga a traer. */
+  marcasExigidas?: MarcaI[];
 }): { fallos: FalloDecl[]; cobertura: Cobertura[] } {
   const fallos = items.flatMap(revisarItemDeclinacion);
   const push = (clase: ClaseFalloDecl, detalle: string) => fallos.push({ item: '(lote)', clase, detalle });
@@ -153,6 +220,18 @@ export function revisarLoteDeclinacion(items: ItemDeclinacion[], opciones: {
   if (lemas.size < opciones.lemasMinimos)
     push('lema-repetido',
       `${lemas.size} lemas distintos para ${items.length} ítems: por debajo de los ${opciones.lemasMinimos} que pide el punto, el lote mide un paradigma y no una declinación`);
+
+  if (opciones.exigeRecorrerLaOpacidad) {
+    const ds = items.map((it) => distanciaDelTema(it.entrada));
+    const min = Math.min(...ds), max = Math.max(...ds);
+    if (min > 0 || max < 3)
+      push('eje-de-opacidad-plano',
+        `el lote va de ${min} a ${max} en distancia del tema al nominativo, y el varia pide «de nada a mucho»: sin un lema cuyo tema SEA el nominativo y otro que se aleje de verdad, el eje es decorativo`);
+  }
+
+  for (const m of opciones.marcasExigidas ?? [])
+    if (!items.some((it) => it.ejes.marcaI === m))
+      push('marca-i-sin-cubrir', `el varia enumera «${m}» y ningún ítem la enseña`);
 
   const sep = separablePorPosicion(items.map((it) => (it.numero === 'sg' ? 'A' : 'B')).join(''));
   if (sep) push('orden-separable', sep);
