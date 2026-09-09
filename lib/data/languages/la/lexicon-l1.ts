@@ -100,6 +100,13 @@ export const NOMBRES_L1: EntradaNominal[] = [
 ];
 
 export const VERBOS_L1: EntradaVerbal[] = [
+  // `habeō` entra por una razón concreta y medida: es el verbo transitivo
+  // más frecuente que acepta SUJETO NEUTRO —11 sujetos neutros distintos
+  // anotados en el corpus, «mare», «flūmen», «ferrum»…—, y sin él el punto
+  // `l2-neutro-regla` no podía tener ítems de DOS neutros. Todos los demás
+  // que aceptan sujeto inanimado son intransitivos (`veniō`, `maneō`,
+  // `cadō`, `stō`) y no forman pareja sujeto-objeto.
+  { lema: 'habeō', infinitivo: 'habēre', glosa: 'tener', perfecto: 'habuī', supino: 'habitum' },
   // El más frecuente del latín, y el que ninguna regla produce: su
   // infinitivo no encaja en las cuatro conjugaciones y su tema alterna.
   // Declarado en `VERBOS_IRREGULARES`, con el imperfecto que el inventario

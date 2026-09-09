@@ -74,6 +74,19 @@ export interface EjesItem {
    *  dos papeles es el esperado. Es lo ÚNICO comprobable contra el
    *  sentido común: `reversible` es prosa y no la cierra. */
   esperado: 'correcto' | 'falso' | 'neutro';
+  /** Sólo para `l2-neutro-regla`: ¿resuelve la DESINENCIA quién es sujeto y
+   *  quién objeto?
+   *
+   *  En latín el neutro tiene el nominativo y el acusativo iguales, así que
+   *  una frase con un neutro y un no-neutro se resuelve por la desinencia
+   *  DEL OTRO; una con dos neutros no se resuelve por ninguna desinencia y
+   *  sólo queda el orden y el contexto.
+   *
+   *  Eso convierte a los ítems de dos neutros en un PISO: la estrategia
+   *  posicional los acierta por construcción, no porque el ítem esté mal
+   *  escrito. Sumarlos a la tasa ciega sin declararlos infla la fuga y hace
+   *  imposible saber si el lote mide algo. Se declara y se descuenta. */
+  resuelveLaDesinencia?: boolean;
 }
 
 export interface ItemClozeGlosa {
@@ -152,6 +165,29 @@ export function tasasCiegas(items: ItemClozeGlosa[]) {
 /** El azar con dos candidatos. Ninguna estrategia ciega puede superarlo. */
 export const TECHO_CIEGO = 0.5;
 
+/** EL PISO QUE PONE LA LENGUA, y sólo para UNA de las tres rutas.
+ *
+ *  Cuando la desinencia no resuelve —dos neutros—, lo único que queda para
+ *  decidir quién es sujeto es la SEMÁNTICA: «la guerra destruye el templo» y
+ *  no al revés. Así que esos ítems los gana la ruta PRAGMÁTICA por
+ *  construcción, y exigirle el 50 % del azar daría por fugado un lote
+ *  correcto.
+ *
+ *      piso pragmático = (ítems que la desinencia no resuelve)
+ *                        + 0,5 · (los que sí)
+ *
+ *  LAS OTRAS DOS RUTAS NO SE TOCAN. La posicional no gana nada por que haya
+ *  dos neutros: sólo gana si el orden se parece al español, y eso sí es una
+ *  fuga de diseño. Aplicarle el piso a las tres —como hacía la primera
+ *  versión de esta función— habría subido el listón justo donde no debía y
+ *  dejado pasar el orden español gratis. */
+export function pisoPragmatico(items: ItemClozeGlosa[]): number | null {
+  if (!items.some((it) => it.ejes.resuelveLaDesinencia !== undefined)) return null;
+  const n = items.length || 1;
+  const sinResolver = items.filter((it) => it.ejes.resuelveLaDesinencia === false).length;
+  return (sinResolver + TECHO_CIEGO * (n - sinResolver)) / n;
+}
+
 export function revisarClozeGlosa(item: ItemClozeGlosa): FalloClozeGlosa[] {
   const out: FalloClozeGlosa[] = [];
   const push = (clase: ClaseFallo, detalle: string) => out.push({ item: item.id, clase, detalle });
@@ -228,14 +264,16 @@ export function revisarLote(items: ItemClozeGlosa[]): FalloClozeGlosa[] {
   // ── LO QUE SÓLO SE VE EN EL LOTE ──
   const t = tasasCiegas(items);
   const pct = (x: number) => `${(100 * x).toFixed(0)} %`;
-  for (const [nombre, valor, glosa] of [
-    ['posicional', t.posicional, 'traducir en el orden del latín'],
-    ['inversión', t.inversion, 'escribir los dos nombres al revés'],
-    ['pragmática', t.pragmatica, 'preguntar «¿quién haría esto?»'],
+  const pisoPrag = pisoPragmatico(items);
+  for (const [nombre, valor, glosa, limite, comoSeLlama] of [
+    ['posicional', t.posicional, 'traducir en el orden del latín', TECHO_CIEGO, 'del azar'],
+    ['inversión', t.inversion, 'escribir los dos nombres al revés', TECHO_CIEGO, 'del azar'],
+    ['pragmática', t.pragmatica, 'preguntar «¿quién haría esto?»',
+      pisoPrag ?? TECHO_CIEGO, pisoPrag === null ? 'del azar' : 'del piso que pone la lengua'],
   ] as const) {
-    if (valor > TECHO_CIEGO) {
+    if (valor > limite + 1e-9) {
       out.push({ item: '(lote)', clase: 'estrategia-ciega',
-        detalle: `la estrategia ${nombre} —${glosa}— acierta el ${pct(valor)} del lote, por encima del ${pct(TECHO_CIEGO)} del azar: el lote se resuelve sin leer una desinencia` });
+        detalle: `la estrategia ${nombre} —${glosa}— acierta el ${pct(valor)} del lote, por encima del ${pct(limite)} ${comoSeLlama}: el lote se resuelve sin leer una desinencia` });
     }
   }
 

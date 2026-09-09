@@ -279,9 +279,16 @@ describe('EL PERFECTUM: la tercera parte principal', () => {
     // su `varia` es «cuál de las cuatro partes se pide»: insatisfacible
     // por construcción mientras el tipo tuviera dos. Ahora las tiene.
     expect(VERBOS_L1.every((v) => v.perfecto)).toBe(true);
-    expect(VERBOS_L1.filter((v) => v.supino).length).toBe(14);
-    // Dos no tienen supino y eso es la lengua, no un hueco: `timeō` da
-    // `timuī` y no lo tiene, y `sum` hace `futūrum`, que es participio.
+    // Los que NO tienen supino se nombran, en vez de fijar una cuenta: esta
+    // línea decía «14» y se puso roja al entrar `habeō` en el lexicón, sin
+    // que nada se hubiera roto. Es la segunda vez que una cuenta exacta
+    // caduca al crecer el material; nombrar los miembros no caduca.
+    const SIN_SUPINO = ['timeō', 'sum'];
+    // `timeō` da `timuī` y no tiene supino, y `sum` hace `futūrum`, que es
+    // participio. Eso es la lengua, no un hueco del lexicón.
+    for (const l of SIN_SUPINO) expect(V(l).supino, l).toBeUndefined();
+    for (const v of VERBOS_L1)
+      if (!SIN_SUPINO.includes(v.lema)) expect(v.supino, v.lema).toBeTruthy();
   });
 
   it('los tres tiempos salen de UN tema, y el tema es lo irregular', () => {
