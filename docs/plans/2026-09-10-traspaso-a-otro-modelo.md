@@ -228,6 +228,62 @@ cada texto se sintetiza UNA vez.** Rita, que la nota del parón daba por
 la voz del latín, resultó ser **napolitana**: aprobada igual, pero es la
 única no estándar y va anotada.
 
+#### ✅ TAREA C HECHA (en parte) — 2026-09-11, commit `429cccb3`
+
+**280 ejercicios publicados** (256 fill_blank, 12 transformation, 12
+flashcard) en 6 bloques y 12 lecciones, todas con ejercicios. El latín
+pasa de 0 a servir contenido.
+
+**EL BLOQUEO NO ERA EL QUE DECÍA ESTA TAREA.** No hacía falta portar
+`publicar-cloze-ro.ts`: hacía falta que existiera un currículo. `BLOCKS`
+estaba a `[]`, así que los 454 ítems escritos no tenían dónde ir. Y §7
+del relevo del latín decía «2 lotes hechos» cuando había **35**. Medir
+antes de ejecutar.
+
+Lo que hay ahora:
+- `lib/data/languages/la/curriculum.ts` — conceptos y bloques DERIVADOS
+  de `inventario-puntos.ts` (no copiados: derivados, así que no se
+  desincronizan). Lo escrito a mano es el tallado en lecciones.
+- `scripts/generate-mdx-la.ts` — las notas de lección se GENERAN desde
+  las descripciones del inventario, con test de drift.
+- `scripts/publicar-la.ts` — 8 formas de ítem, no una; valida contra
+  `ExerciseSchema` antes de escribir nada.
+- `tests/unit/curriculum-la.test.ts` — 12 tests, gates vistos en rojo.
+
+**LO QUE FALTA, con su motivo escrito en el código** (`APLAZADOS_CON_MOTIVO`
+en el publicador y `SIN_TALLAR` en el currículo): 174 ítems en 14 lotes.
+En orden de rentabilidad:
+
+1. **Forma D, 8 lotes, 98 ítems** — el bloque 3 casi entero. Necesitan
+   `alternativas` por ítem: la clave lleva artículo español y el latín no
+   tiene artículo, «a la madre» suspende «a su madre», y 9 de 12 de
+   `l5-pro-drop` admiten otra respuesta buena («erat» no marca género).
+   Hay que escribirlas bajo el gate del lote; no se derivan.
+2. **`l2-cuarta` (12)** — necesita que `FillBlankCard` llame a
+   `comparaLa(valor, clave, { sensibleACantidad })`. `comparaLa` existe
+   desde hace meses y NO tiene ni un consumidor.
+3. **`l2-sin-articulo` (12)** — el latinista dio la salida y no exige
+   producto: mover el hueco para que se trague el sustantivo («el señor
+   es ___» → clave «maestro»), y la respuesta vacía desaparece.
+4. **`l5-interrogativas` (12)** — cabe en `multiple_choice`, pero hay que
+   ESCRIBIR 12 `explanationEs`.
+5. **`l2-genero-3a` (14), `l10-que-enclitico` (12),
+   `l5-conjugacion-por-infinitivo` (14)** — sin superficie evidente.
+
+**Y UN HUECO QUE NO ES UN APLAZAMIENTO: falta `l2-primera`.** La primera
+declinación está en el inventario, es peldaño L1, **no tiene lote**, y es
+prerrequisito de `l3-funcion-por-desinencia` —el punto central del
+curso—, que se publica igual con 20 ítems llenos de «puella» y
+«rēgīnās». El bloque «Sustantivo» enseña la 2.ª, la 3.ª y la 5.ª y da por
+sabida la 1.ª. Es el primer lote que hay que escribir.
+
+**Pendiente de arreglar en material ya escrito**: `l3-ablativo`
+`la-3ab-11` y `la-3ab-12` publican español agramatical («de el templo»);
+`l2-neutro-regla.ts:43` tiene la plantilla `ART` desincronizada de la de
+`l3-funcion-por-desinencia` y produce «La guerra llama la reina»; y
+`scripts/check-ortografia-la.ts` se anuncia en `ortografia-la.ts` y no
+existe, así que `custodit` y `custōdit` conviven en el corpus.
+
 ### Tarea D — Sólo si el coordinador lo ordena
 
 - **Checo o ruso**: arrancar por el Paso 0 (`npx tsx scripts/paso0-idioma.ts --lang=cs|ru`)
