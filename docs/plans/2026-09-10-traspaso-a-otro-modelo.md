@@ -44,8 +44,12 @@ busques ese rojo.
   inventario). Decisión del 4-sep: **el marco se presenta sin macrones**;
   la versión con macrones va en la respuesta o en la pista.
 - **Auditoría de prosa**: `docs/auditorias/2026-09-04-prosa-que-lee-el-alumno.md`
-  — las 8 falsas (F1–F8, todas en PORTUGUÉS) y 18 medias verdades, con
-  fichero, ruta y evidencia cada una.
+  — las 8 falsas y 18 medias verdades, con fichero, ruta y evidencia cada
+  una. **ERRATA DE ESTE DOCUMENTO, corregida el 10-sep**: una versión
+  anterior decía «F1–F8, todas en PORTUGUÉS». Es falso y lo desmiente el
+  propio recuento de la auditoría: **7 son de portugués (F1, F2, F3, F4,
+  F6, F11, F12) y la octava es de RUMANO** (R2, «Contracciones
+  OBLIGATORIAS»). La Tarea A cubre las siete; R2 sigue sin tocar.
 - **Reglas transversales**: memoria del proyecto
   (`~/.claude/projects/-Users-lalo/memory/`), en especial
   `gotcha_gate_solo_en_verde.md`, `gotcha_un_sello_responde_a_una_pregunta.md`,
@@ -55,9 +59,9 @@ busques ese rojo.
 
 ## 2 · LO QUE FALTA, en el orden en que hay que hacerlo
 
-### Tarea A — Arreglar las 8 falsedades de la prosa portuguesa (PRIMERO)
+### Tarea A — Arreglar las 7 falsedades de la prosa portuguesa (PRIMERO)
 
-**Por qué primero**: el 4-sep quedó propuesto «arreglar las 8 falsas antes
+**Por qué primero**: el 4-sep quedó propuesto «arreglar las falsas antes
 de seguir con lengua nueva», pendiente del OK de Edu. Edu, al pedir este
 traspaso, quiere que lo que falta se haga; el coordinador (`idiomas`) es
 quien confirma el orden — **pregúntale en el primer mensaje si el OK está
@@ -95,7 +99,7 @@ literal de cada una):
    `Co-Authored-By` y `Claude-Session` del modelo que lo haga.
 6. Al final: `npx next build` (el texto de lección atraviesa páginas).
 
-**Cifra de cierre esperada**: «8 falsas → 0; N medias verdades → M», con la
+**Cifra de cierre esperada**: «7 falsas de PT → 0; N medias verdades → M», con la
 lista de commits.
 
 ### Tarea B — Los 5 puntos de `transformacion` que le quedan al rumano
@@ -216,4 +220,4 @@ npx tsx scripts/deficit-ro.ts        # 370, residuo 0
 
 Primer mensaje al coordinador: «Sesión nueva sobre el traspaso del 10-sep.
 Árbol limpio en <hash>, suite <n>/<n>. ¿Está dado el OK de Edu a la Tarea A
-(8 falsas de PT) antes de lengua nueva? Si no, arranco la Tarea B.»
+(7 falsas de PT) antes de lengua nueva? Si no, arranco la Tarea B.»

@@ -586,16 +586,16 @@
       "gramática",
       "erro-comum"
     ],
-    "contentHash": "0e69025a033a3752d5ef83b85ca4bb2118215282eaa711c4488fa496e3ecd5f0",
+    "contentHash": "a27aa4efe1eb924b03b646dc2e1d7831684abcfe13b32e4af88bb9e293e027c6",
     "esContrast": "En español decimos 'si supiera', pero muchos hispanos usan el presente del indicativo al portugués por analogía.",
     "audio": {
       "br": {
-        "hash": "859cceeaf55ba7096af15d1af630f27e9f69876fbafbd4d1c1beee9279ba188d",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "08978d4500abae2fe2e3fb52852ed3a7b840c155388389c1d4daede69d94a5cf",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "2b88497d0cde08d90e612905292f6c402bb4ad2fc96433c3c07a670762f5fd3f",
-        "voice": "Portuguese_Wiselady"
+        "hash": "08978d4500abae2fe2e3fb52852ed3a7b840c155388389c1d4daede69d94a5cf",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
@@ -603,7 +603,7 @@
     "type": "flashcard",
     "data": {
       "front": "Error común: 'Se eu sei...' (españolismo)",
-      "back": "Correcto: Se eu soubesse... (imperfeito do subjuntivo)",
+      "back": "Correcto: Se eu soubesse... (imperfeito do conjuntivo)",
       "example": "Se eu soubesse o que ia acontecer, teria fugido."
     }
   },
@@ -2461,7 +2461,7 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "69cd466fb6d666b009523888d38fcd97a0ac45f97e21ed4dc333fca6a666ccb2",
+    "contentHash": "1c9eda79dcf94b62828f4f54ca52be719d0175aa27f891ebb87efa65195e7f6b",
     "esContrast": "En español diríamos 'si supiera... habría traído', pero en PT-BR se mantiene el imperfeito em ambas partes.",
     "audio": {
       "br": {
@@ -2483,7 +2483,7 @@
         "Hipótesis probable en el presente",
         "Hipótesis improbable o irreal presente/futura",
         "Condición futura cierta",
-        "Hipótesis irreal del pasado (tipo 4)"
+        "Hipótesis irreal del pasado"
       ],
       "answer": "Hipótesis improbable o irreal presente/futura"
     },
@@ -2756,7 +2756,7 @@
       "condicional"
     ],
     "contentHash": "4aa669a3e0284d8134d79ed6feb23eda25fa8e18716cbe8f0008b68be877effe",
-    "esContrast": "O 'se' condicional exige subjuntivo em português (futuro do subjuntivo).",
+    "esContrast": "O «se» orientado para o futuro exige o futuro do conjuntivo — onde o espanhol põe presente do indicativo.",
     "variantStatus": "needs-human",
     "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-contraste-indicativo-subjuntivo",
     "type": "fill_blank",
@@ -3824,16 +3824,16 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "e0f2c060c7cb5ae64d323593c082b3f4f003d92bc24ccd1bd48248efdf48b428",
+    "contentHash": "a95a8b2fa4e3f6f8e324c0000d9e679317c49555a73276f79d92aa244cc02947",
     "esContrast": "Ojo: en español diríamos 'hablara', pero en portugués se usa -ASSE para el presente del subjuntivo.",
     "audio": {
       "br": {
-        "hash": "d3a71bfca8e49ca5c888005078cd0e3c6b79f452048f6e7e6f6572983e1d8608",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "d65a328b87f38a9ffb03447673065e71bc6e5b6426eaea3dc34b0f60214ccd5c",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "e9b793b3050cc3d0d3e9414b9eb7edf56eb8b1fcf9292ede765c1c921b81572a",
-        "voice": "Portuguese_Wiselady"
+        "hash": "d65a328b87f38a9ffb03447673065e71bc6e5b6426eaea3dc34b0f60214ccd5c",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
@@ -3841,7 +3841,7 @@
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se forma el imperfeito do conjuntivo de los verbos terminados en -AR?",
-      "back": "Se toma la raíz del pretérito imperfeito do indicativo y se añade -ASSE: falar → falasse",
+      "back": "Se toma la 3.ª persona del plural del PRETÉRITO PERFEITO y se cambia -RAM por -SSE: falaram → falasse. No sale del imperfeito: de «falava» saldría *falavasse.",
       "example": "Se eu falasse mais devagar, entenderias melhor."
     },
     "variantOverrides": {
@@ -4802,8 +4802,8 @@
       "coloquial",
       "regional"
     ],
-    "contentHash": "0667ae6fef0a7d844de7e49bbe7939a25c311c16c67060b97ba08e607af48c1b",
-    "esContrast": "Tipo 4 usa 'Se + mais-que-perfeito do conjuntivo + teria/poderia + infinitivo'. Equivale a 'Si hubiera/hubiese + participio... habría/podría + infinitivo'.",
+    "contentHash": "3a77b7d2d1dff5068c8efd4d586237837432659d299add29cba0aecf666512b1",
+    "esContrast": "Irreal de pasado: «se» + mais-que-perfeito composto do conjuntivo (tivesse suspeitado) + «teria/poderia» + particípio. Equivale a «si hubiera sospechado... habría...».",
     "audio": {
       "br": {
         "hash": "9da827caf54d8d601728b01b5c0b8c8d74690a7c54cc347b18c6ab5273f833bb",
@@ -4821,17 +4821,17 @@
       "audioText": "Se eu tivesse suspeitado que o tempo ia ficar assim, teria ficado em casa.",
       "question": "La oración expresa una hipótesis sobre el pasado que NO se cumplió. ¿Qué tipo de condicional es?",
       "options": [
-        "Condicional tipo 3 (hipótesis improbable presente)",
-        "Condicional tipo 4 (hipótesis irreal pasada)",
-        "Condicional tipo 2 (hipótesis improbable futura)",
-        "Condicional tipo 1 (hipótesis provável)"
+        "Condicional hipotética (improbable, presente o futuro)",
+        "Condicional irreal de pasado",
+        "Condicional real (futuro do conjuntivo)",
+        "Comparativa hipotética (como se + imperfeito do conjuntivo)"
       ],
-      "answer": "Condicional tipo 4 (hipótesis irreal pasada)"
+      "answer": "Condicional irreal de pasado"
     },
     "variantOverrides": {
       "pt-br": {
         "audioText": "Se eu tivesse suspado que o tiempo ia ficar assim, teria ficado em casa.",
-        "answer": "Condicional tipo 4 (hipótesis irreal pasada)"
+        "answer": "Condicional irreal de pasado"
       }
     }
   },
@@ -5138,8 +5138,8 @@
     "tags": [
       "regional"
     ],
-    "contentHash": "9db84ac06a4c26bb1b117a84eee01d8fa2baeb4645e13252418a401b2e53dd80",
-    "esContrast": "Puser vs poner: futuro do subjuntivo, irregular en 1ª pessoa do singular. 'Poner' en español tiene forma analítica 'ponga'.",
+    "contentHash": "5f4df007edeed65a4f007ce52dad5e8763eb178f7bdc882f2dd4f1a33371dcd2",
+    "esContrast": "Puser vs poner: futuro do conjuntivo de «pôr», que sale de «puseram». 'Poner' en español tiene forma analítica 'ponga'.",
     "audio": {
       "br": {
         "hash": "f0acb9d675cea1f72969b8cbb40556cb160b3e7e8a9c44d2704d61104ae1f988",
@@ -6135,24 +6135,24 @@
       "gramática",
       "hipótese improvável"
     ],
-    "contentHash": "b7c6c40dedbb3301293a6458eb6cbd11236537418092090a4db5e5e8111911c5",
+    "contentHash": "3ec5db306e0e31df7181b5c7bc1ef08f7999b69a5687f702bfc9a90ff6b9bb45",
     "esContrast": "En español: 'Si tuviera dinero, compraría un coche.' La estructura es casi idéntica.",
     "audio": {
       "br": {
-        "hash": "3055c39bdff0fb250ddc7ad200a68a69dd07841742cba158b4e6b4a8ea5e4443",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "eea25033c18abc79e090d8a30eff66f7e2b87e813248c7876236145706c4cfd9",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "5b363a8279ca26503346f6f030a22d59616291eacffb6f592663138106b38609",
-        "voice": "Portuguese_Wiselady"
+        "hash": "eea25033c18abc79e090d8a30eff66f7e2b87e813248c7876236145706c4cfd9",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
     "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-hipotetico",
     "type": "flashcard",
     "data": {
-      "front": "¿Cómo se forma la condición tipo 3 (hipótesis improvável presente)?",
-      "back": "Se + imperfeito do subjuntivo + Conditional",
+      "front": "¿Cómo se forma la condicional HIPOTÉTICA (improbable, presente o futuro)?",
+      "back": "Se + imperfeito do CONJUNTIVO + condicional",
       "example": "Se eu tivesse dinheiro, compraria um carro."
     }
   },
@@ -6228,23 +6228,23 @@
       "gramática",
       "hipótese irreal"
     ],
-    "contentHash": "b9ad03d4e95d5645d7a8b2d9309e9139c79c6a325d18915b99665c238c03b783",
+    "contentHash": "77e8ae17f4139c3ad7a050180c3d5d1821e9b57a433899a9298e07ad116f626e",
     "audio": {
       "br": {
-        "hash": "6854a8be62c8a5c804d0c608576d1b8d7811b8d957c019986b938a422e3a86ce",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "dd5fcb3011834924f07a2c28f668c127a4d5acac48892eca477b4d379431a63a",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "b06de3e6ea8fb6c7d8fc51c23b47ce078c0878d55c47ae95574d2469fb8917b5",
-        "voice": "Portuguese_Wiselady"
+        "hash": "dd5fcb3011834924f07a2c28f668c127a4d5acac48892eca477b4d379431a63a",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
     "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-irreal-passado",
     "type": "flashcard",
     "data": {
-      "front": "¿Cómo se forma la condición tipo 4 (hipótese irreal passada)?",
-      "back": "Se + mais-que-perfeito do subjuntivo + Condicional composto",
+      "front": "¿Cómo se forma la condicional IRREAL de pasado?",
+      "back": "Se + mais-que-perfeito do CONJUNTIVO + condicional composto",
       "example": "Se eu tivesse estudado, teria passado no exame."
     }
   },
@@ -6257,8 +6257,8 @@
       "b6-fut-subj-quando"
     ],
     "tags": [],
-    "contentHash": "0400fb536d055630acc68116ae7e3422e82bb987af0058005d569b5c86c9f7aa",
-    "esContrast": "Trouxerem vs traen: 'trouxerem' es futuro do subjuntivo de trazer. En ES se dice simplemente 'traigan'.",
+    "contentHash": "3941e2c6aa8eebfdddf2ff08d6c781f7faef349fdaac94baba914fd94eb633bc",
+    "esContrast": "Trouxerem vs traen: 'trouxerem' es futuro do conjuntivo de trazer. En ES se dice simplemente 'traigan'.",
     "audio": {
       "br": {
         "hash": "15e5cd5f06f7e593c747c1d1a725d34ef041a215b1fac6e3b2a198439b79301d",
@@ -6515,7 +6515,7 @@
       "gramática",
       "conjugação"
     ],
-    "contentHash": "c688fbeeb0603be9def9fc3540811489044c666c6576996179b1323bbf5e87c1",
+    "contentHash": "01e34cc230dcf6070bbf8649e1e3bb8bcf1a6ad013e0a2907ab5c38668dcbd9d",
     "audio": {
       "br": {
         "hash": "9ec36f5e086a7b1f80ecaec60a7be10c507100fc5dc083ea6a5523d39bad9ae3",
@@ -6530,7 +6530,7 @@
     "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-irreal-passado",
     "type": "flashcard",
     "data": {
-      "front": "Conjuga 'ter' no mais-que-perfeito do subjuntivo",
+      "front": "Conjuga 'ter' no mais-que-perfeito do conjuntivo",
       "back": "se eu tivesse tido, se tu tivesses tido, se ele tivesse tido..."
     }
   },
@@ -6677,7 +6677,7 @@
       "gramática",
       "conjugação"
     ],
-    "contentHash": "cd88a7e7428812f7b3e493f32ceff6f59190cf1c53e72d1d720a0ef62597040f",
+    "contentHash": "5d6cb47d7f4b515deec11303811c4d73c2fa0dbb93c716f5911c0b7b693827ae",
     "esContrast": "'Tuviera/tuviese' en español. El PT-BR usa 'tivesse' en todos los contextos.",
     "audio": {
       "br": {
@@ -6693,7 +6693,7 @@
     "variantVerificacion": "excedente sobre la cobertura de su punto, sin dictamen (E2#22, 2026-09-01) · puntos: b6-se-hipotetico",
     "type": "flashcard",
     "data": {
-      "front": "Conjuga 'ter' no imperfeito do subjuntivo",
+      "front": "Conjuga 'ter' no imperfeito do conjuntivo",
       "back": "se eu tivesse, se tu tivesses, se ele tivesse, se nós tivéssemos, se vós tivésseis, se eles tivessem"
     }
   },
@@ -8469,7 +8469,7 @@
       "falso-amigo",
       "irregular"
     ],
-    "contentHash": "7e66d6e1c531dab4e107e73f72e88584c1d92ec6c0bef942ed36148b66254beb",
+    "contentHash": "066bf3f9d74074d0fb127c77095bc8fb75b5d69e3c9dff55ebaaf10b8b8f0c40",
     "esContrast": "En PT-BR se usa el imperfeito do conjuntivo (tivesse), que en español sería subjuntivo imperfecto.",
     "audio": {
       "br": {
@@ -8488,12 +8488,12 @@
       "audioText": "Se eu tivesse dinheiro apertado, talvez viajasse para Portugal este ano.",
       "question": "¿Qué conditional usa la frase?",
       "options": [
-        "Condicional tipo 3 (imperfeito do conjuntivo)",
-        "Condicional tipo 1 (presente do indicativo)",
-        "Condicional tipo 2 (imperfeito do indicativo)",
-        "Condicional tipo 4 (mais-que-perfeito do conjuntivo)"
+        "Condicional hipotética (imperfeito do conjuntivo)",
+        "Condicional con presente do indicativo (el calco del español)",
+        "Condicional con imperfeito do indicativo",
+        "Condicional irreal de pasado (mais-que-perfeito do conjuntivo)"
       ],
-      "answer": "Condicional tipo 3 (imperfeito do conjuntivo)"
+      "answer": "Condicional hipotética (imperfeito do conjuntivo)"
     }
   },
   {
@@ -8638,7 +8638,7 @@
       "-er/-ir"
     ],
     "contentHash": "fc13ad89a6295cd7dbe085b571c56d0e9beac653c19fc00df356bffd3f787e2e",
-    "esContrast": "Em espanhol: 'aunque yo calentara' (imperfeito do subjuntivo); em português: 'aquecesse'.",
+    "esContrast": "Em espanhol: «aunque yo calentara» (imperfecto de subjuntivo); em português: «aquecesse», imperfeito do conjuntivo.",
     "variantStatus": "neutral",
     "variantVerificacion": "lectura de los 60, E2#29: corregido — la cola-7 lo marcó DUDA con razón: con «ficou» —hecho puntual y acabado— el portugués prefiere el compuesto «tivesse aquecido», así que la forma simple no era la única. Pasado a hábito con «todos os dias» y «ficava», donde el imperfecto simple es el correlato natural. Queda sin pista y CORRECTO",
     "type": "fill_blank",
@@ -8734,16 +8734,16 @@
     "tags": [
       "irregular"
     ],
-    "contentHash": "fec968e7e8e74c715c7b903d04569e0914bb1139ccb1f188aaf11796bd0944e8",
+    "contentHash": "c4bbf2cb26ee8ab6cdeb331447804ba53fe8953ae4d36b64b1dcc7e347203f89",
     "esContrast": "No confundas con el imperfecto de subjuntivo español que usa -IERA/-IESE.",
     "audio": {
       "br": {
-        "hash": "72ebb3f7f94d161e6f2bdf46df1fe3c13198b0f89c464ffa04b44364f4c342c6",
-        "voice": "Portuguese_SentimentalLady"
+        "hash": "fb798023c5f384a62780e1af2568d05b6ce709d04125e66ab1ec3c9fc9b4f33d",
+        "voice": "ElevenLabs_Leonor_brInterino"
       },
       "pt": {
-        "hash": "0e56bc23d6e4cda7ddcc00071542c3d068a8a8b9562f39619b232b93df9b9b56",
-        "voice": "Portuguese_Wiselady"
+        "hash": "fb798023c5f384a62780e1af2568d05b6ce709d04125e66ab1ec3c9fc9b4f33d",
+        "voice": "ElevenLabs_Leonor"
       }
     },
     "variantStatus": "needs-human",
@@ -8751,7 +8751,7 @@
     "type": "flashcard",
     "data": {
       "front": "¿Cómo se forma el imperfeito do conjuntivo de los verbos terminados en -ER e -IR?",
-      "back": "Se toma la raíz del pretérito imperfeito do indicativo y se añade -ESSE: comer → comesse",
+      "back": "Se toma la 3.ª persona del plural del PRETÉRITO PERFEITO y se cambia -RAM por -SSE: comeram → comesse, partiram → partisse. Los -IR dan -ISSE, no -ESSE.",
       "example": "Se ela comesse mais vegetais, estaria mais saudável."
     }
   },

@@ -29,7 +29,7 @@ const B1_CONCEPTS: Concept[] = [
   { id: 'b1-acentos', name: 'Acentos diacríticos', blockId: 1, description: 'Agudo, grave, circunflejo, tilde, cedilha', prereqs: [] },
   { id: 'b1-silaba-tonica', name: 'Sílaba tónica', blockId: 1, description: 'Reglas de acentuación tónica', prereqs: ['b1-acentos'] },
   { id: 'b1-corresp-on-ao', name: 'Correspondencia -ón → -ão', blockId: 1, description: 'Pasaje sistemático ES→PT', prereqs: [] },
-  { id: 'b1-corresp-ll-lh', name: 'Correspondencia -ll- → -lh-', blockId: 1, description: 'Pasaje sistemático ES→PT', prereqs: [] },
+  { id: 'b1-corresp-ll-lh', name: 'Correspondencia -ll- → -lh-', blockId: 1, description: 'Sólo donde la -ll- viene de -LI- latina (batalla/batalha, maravilla/maravilha). La ll- inicial da ch- (llave/chave, lluvia/chuva) y la -ll- latina da -l- (caballo/cavalo)', prereqs: [] },
   { id: 'b1-corresp-nh-ny', name: 'Correspondencia -ñ → -nh-', blockId: 1, description: 'Pasaje sistemático ES→PT', prereqs: [] },
   // Condicionada, no general: sólo vale donde la h- española viene de F-
   // latina (hijo/filho), no donde ya era h- (hombre/homem). Enunciarla como
@@ -86,7 +86,7 @@ const B1_LESSONS: Lesson[] = [
     blockId: 1,
     name: 'Correspondencias sistemáticas español → portugués',
     objectives: [
-      'Aplicar las reglas -ón→-ão, -ll-→-lh-, -ñ-→-nh-',
+      'Aplicar -ón→-ão; acotar -ñ-→-nh- a la ñ que viene de -NI-/-GN- (señor/senhor, sueño/sonho), porque la que viene de -NN- da -n- (año/ano, caña/cana, daño/dano); y acotar -ll-→-lh- a la que viene de -LI- latina: la ll- inicial da ch- sólo cuando viene de CL-/FL-/PL- (llave/chave, lluvia/chuva), no siempre (llevar/levar)',
       'Reconocer h muda',
       'Aplicar h-→f- sólo donde procede, con la prueba del cultismo',
     ],
@@ -138,7 +138,7 @@ const B1: Block = {
 const B2_CONCEPTS: Concept[] = [
   { id: 'b2-artigos', name: 'Artigos', blockId: 2, description: 'Definidos (o, a, os, as), indefinidos (um, uma, uns, umas) y contracciones (ao, à, do, da, no, na, pelo, pela)', prereqs: [] },
   { id: 'b2-genero', name: 'Gênero gramatical', blockId: 2, description: 'Reglas de masculino/femenino: terminación -o/-a, sustantivos comunes en cuanto a género, excepciones', prereqs: [] },
-  { id: 'b2-numero', name: 'Número (singular/plural)', blockId: 2, description: 'Reglas de plural: -s, -es, -ões, -ães, casos irregulares', prereqs: [] },
+  { id: 'b2-numero', name: 'Número (singular/plural)', blockId: 2, description: 'Reglas de plural: -s, -es y las TRES clases de -ão (-ões: lições; -ãos: mãos, irmãos; -ães: pães), más los irregulares', prereqs: [] },
   { id: 'b2-possessivos', name: 'Pronomes possessivos', blockId: 2, description: 'meu/minha, teu/tua, seu/sua, nosso/nossa, vosso/vossa, seu/sua (3ª persona), posicionamento pre/postnominal', prereqs: [] },
   { id: 'b2-demonstrativos', name: 'Demonstrativos', blockId: 2, description: 'este/esta, esse/essa, aquele/aquela + formas plural; uso para señalar distancia', prereqs: [] },
   { id: 'b2-indefinidos', name: 'Indefinidos', blockId: 2, description: 'todo, muito, pouco, algum, nenhum, certo, vários, qualquer', prereqs: [] },
@@ -158,7 +158,7 @@ const B2: Block = {
 // --- Block 3: Presente e imperativo ---
 const B3_CONCEPTS: Concept[] = [
   { id: 'b3-presente-regular', name: 'Presente do indicativo regular', blockId: 3, description: 'Conjugación regular de verbos en -ar, -er, -ir', prereqs: [] },
-  { id: 'b3-presente-irregular', name: 'Presente irregular frecuente', blockId: 3, description: 'ser, estar, ter, ir, fazer, dizer, vir, ver, poder, querer, saber, dar, traer', prereqs: [] },
+  { id: 'b3-presente-irregular', name: 'Presente irregular frecuente', blockId: 3, description: 'ser, estar, ter, ir, fazer, dizer, vir, ver, poder, querer, saber, dar, trazer', prereqs: [] },
   { id: 'b3-pronomes', name: 'Pronomes pessoais', blockId: 3, description: 'Retos (eu, tu, ele/ela, nós, vós, eles/elas) y oblícuos (me, te, se, o, a, lhe, nos, vos, os, as, lhes)', prereqs: [] },
   { id: 'b3-imperativo', name: 'Imperativo', blockId: 3, description: 'Afirmativo (fala, fale, falemos) y negativo (não fales, não fale) — irregulares y reflexivos', prereqs: [] },
   { id: 'b3-existenciais', name: 'Existenciales (haver/ter)', blockId: 3, description: 'Há = existe(n) (impersonal) vs tem = tiene (también existencial en BR). Distribución y registros.', prereqs: [] },
@@ -180,7 +180,7 @@ const B3: Block = {
 const B4_CONCEPTS: Concept[] = [
   { id: 'b4-perfeito-regular', name: 'Pretérito perfeito regular', blockId: 4, description: 'Conjugación regular: -ei, -aste, -ou, -amos, -astes, -aram (verbos en -ar); -i, -este, -eu, -emos, -estes, -eram (-er/-ir)', prereqs: [] },
   { id: 'b4-perfeito-irregular', name: 'Pretérito perfeito irregular', blockId: 4, description: 'ir, ser, estar, ter, fazer, dizer, vir, ver, poder, querer, saber, dar, trazer, pôr', prereqs: [] },
-  { id: 'b4-imperfeito', name: 'Pretérito imperfeito', blockId: 4, description: 'Conjugación regular: -ava, -avas, -ava, -ávamos, -áveis, -avam (-ar); -ia, -ias, -ia, -íamos, -íeis, -iam (-er/-ir). Irregular: ser, ir, ver', prereqs: [] },
+  { id: 'b4-imperfeito', name: 'Pretérito imperfeito', blockId: 4, description: 'Conjugación regular: -ava, -avas, -ava, -ávamos, -áveis, -avam (-ar); -ia, -ias, -ia, -íamos, -íeis, -iam (-er/-ir). Irregulares: SOLO ser (era), ter (tinha), vir (vinha), pôr (punha) y compuestos; ir (ia) y ver (via) son regulares. La lista de tres del español (ser/ir/ver) NO vale aquí', prereqs: [] },
   { id: 'b4-mais-que-perfeito', name: 'Pretérito mais-que-perfeito', blockId: 4, description: 'Composto (tinha + particípio) y simples (falara) — uso literario', prereqs: [] },
   { id: 'b4-contraste-passado', name: 'Contraste perfeito/imperfeito', blockId: 4, description: 'Perfeito = evento puntual/cerrado; imperfeito = descripción/hábito/fondo. Marcadores temporales (ontem, sempre, enquanto)', prereqs: [] },
 ];
@@ -198,17 +198,17 @@ const B4: Block = {
 
 // --- Block 5: Futuros y condicional ---
 const B5_CONCEPTS: Concept[] = [
-  { id: 'b5-futuro-presente', name: 'Futuro do presente (simples)', blockId: 5, description: 'Conjugación de falarei, falarás...; irregulares (ser, estar, ter, ir, fazer, dizer, vir, ver, poder, querer, saber, dar, trazer, pôr)', prereqs: [] },
-  { id: 'b5-futuro-composto', name: 'Futuro composto (ir + infinitivo)', blockId: 5, description: 'Vou falar, vais falar, vai falar...; uso informal/coloquial y como sustituto del futuro simple en BR', prereqs: [] },
+  { id: 'b5-futuro-presente', name: 'Futuro do presente (simples)', blockId: 5, description: 'Conjugación de falarei, falarás...; SOLO TRES irregulares: dizer (direi), fazer (farei), trazer (trarei) y sus compuestos. El resto es infinitivo + desinencia, sin excepción', prereqs: [] },
+  { id: 'b5-futuro-composto', name: 'Futuro perifrástico (ir + infinitivo)', blockId: 5, description: 'Vou falar, vais falar, vai falar...; uso informal/coloquial y como sustituto del futuro simple en BR. NO es el «futuro composto» de la gramática portuguesa, que es «terei falado»', prereqs: [] },
   { id: 'b5-condicional', name: 'Condicional simple', blockId: 5, description: 'Conjugación de falaria, falarias...; irregulares; uso para deseo cortés y reporte de discurso indirecto', prereqs: [] },
-  { id: 'b5-se-condicional', name: 'Se + futuro/condicional', blockId: 5, description: 'Oraciones condicionales tipo 1 (si presente, futuro) y tipo 2 (si imperfeito subjuntivo, condicional)', prereqs: [] },
+  { id: 'b5-se-condicional', name: 'Se + futuro/condicional', blockId: 5, description: 'Condicional REAL orientada al futuro: se + futuro do conjuntivo → futuro (Se tiver tempo, vou), donde el español pone presente; el presente do indicativo tras «se» sólo es correcto para un hecho presente o general (Se sabes, diz). Condicional HIPOTÉTICA: se + imperfeito do conjuntivo → condicional (Se tivesse tempo, iria)', prereqs: [] },
 ];
 
 const B5: Block = {
   id: 5,
   slug: 'futuros-condicional',
   name: 'Verbal: futuros y condicional',
-  description: 'Futuro do presente (simple) y composto (ir + infinitivo), condicional simple, y oraciones condicionales tipo 1 y 2.',
+  description: 'Futuro do presente (simple) y perifrástico (ir + infinitivo), condicional simple, y oraciones condicionales real (se + futuro do conjuntivo) e hipotética (se + imperfeito do conjuntivo).',
   durationWeeks: 3,
   prereqs: [4],
   freeDrill: false,
@@ -218,9 +218,9 @@ const B5: Block = {
 // --- Block 6: Subjuntivo ---
 const B6_CONCEPTS: Concept[] = [
   { id: 'b6-presente-subj', name: 'Presente do conjuntivo', blockId: 6, description: 'Conjugación regular e irregular (ser, estar, ter, ir, fazer, dizer, vir, ver, poder, querer, saber, dar, trazer, pôr)', prereqs: [] },
-  { id: 'b6-imperfeito-subj', name: 'Imperfeito do conjuntivo', blockId: 6, description: 'Derivación del imperfeito (-ar → -asse; -er/-ir → -esse); irregulares (ser, estar, ter, ir, fazer, ver, vir)', prereqs: [] },
-  { id: 'b6-futuro-subj', name: 'Futuro do conjuntivo', blockId: 6, description: 'Derivación del perfeito (-ar → -ar; -er/-ir → -er); uso con quando, se, assim que, como se', prereqs: [] },
-  { id: 'b6-se-subjuntivo', name: 'Se + conjuntivo', blockId: 6, description: 'Condicionales tipo 3 (imperfeito subj) y 4 (mais-que-perfeito subj) — hipótesis improbable/irreal', prereqs: [] },
+  { id: 'b6-imperfeito-subj', name: 'Imperfeito do conjuntivo', blockId: 6, description: 'Derivación de la 3.ª pl. del PERFEITO (fizeram → fizesse), no del imperfeito: -ar → -asse, -er → -esse, -ir → -isse; irregulares (ser, estar, ter, ir, fazer, ver, vir)', prereqs: [] },
+  { id: 'b6-futuro-subj', name: 'Futuro do conjuntivo', blockId: 6, description: 'Derivación de la 3.ª pl. del perfeito (fizeram → fizer): falar → falar, comer → comer, partir → partir; uso con quando, se, assim que, enquanto, logo que — nunca con «como se», que sólo admite imperfeito (como se fosse)', prereqs: [] },
+  { id: 'b6-se-subjuntivo', name: 'Se + conjuntivo', blockId: 6, description: 'Condicional hipotética (se + imperfeito do conjuntivo) e irreal de pasado (se + mais-que-perfeito do conjuntivo) — hipótesis improbable/irreal', prereqs: [] },
   { id: 'b6-contraste-indicativo-subjuntivo', name: 'Contraste indicativo/conjuntivo', blockId: 6, description: 'Certeza/hecho (indicativo) vs deseo/duda/temor/emotion (conjuntivo); expresiones impessoales (é importante que, é possível que)', prereqs: [] },
 ];
 
@@ -238,7 +238,7 @@ const B6: Block = {
 // --- Block 7: Formas no personales ---
 const B7_CONCEPTS: Concept[] = [
   { id: 'b7-infinitivo-pessoal', name: 'Infinitivo pessoal', blockId: 7, description: 'Forma portuguesa única: falar (general) vs falar eu, falares tu, falar ele; uso en lugar de conjuntivo/infinitivo compuesto', prereqs: [] },
-  { id: 'b7-gerundio', name: 'Gerúndio', blockId: 7, description: 'Conjugación regular (-ando, -endo, -indo); uso con estar, andar, ir, vir (estar falando); construcción progresiva', prereqs: [] },
+  { id: 'b7-gerundio', name: 'Gerúndio', blockId: 7, description: 'Conjugación regular (-ando, -endo, -indo); en PT-PT el progresivo es «estar A + infinitivo» (estou a falar) y «estar + gerúndio» es brasileño; con andar, ir y vir el gerúndio SÍ es europeo', prereqs: [] },
   { id: 'b7-participio', name: 'Particípio', blockId: 7, description: 'Regular (-ado, -ido) e irregulares (feito, dito, escrito, visto, posto, ganho, morto, nado); uso con ter/haver y como adjetivo', prereqs: [] },
 ];
 
@@ -246,7 +246,7 @@ const B7: Block = {
   id: 7,
   slug: 'formas-no-personales',
   name: 'Formas no personales',
-  description: 'Infinitivo pessoal (singular de la PT), gerúndio, y particípio (regular e irregular) con sus construcciones (estar + ger, ter/haver + part, voz pasiva).',
+  description: 'Infinitivo pessoal (singular de la PT), gerúndio, y particípio (regular e irregular) con sus construcciones (estar a + infinitivo en PT-PT, ter/haver + part, voz pasiva).',
   durationWeeks: 3,
   prereqs: [6],
   freeDrill: false,
