@@ -397,40 +397,9 @@
     }
   },
   {
-    "id": "5c334562",
-    "blockId": 2,
-    "lessonId": "la-b2-l1-entrada-del-lexico",
-    "difficulty": 2,
-    "concepts": [
-      "l2-genitivo-clave"
-    ],
-    "tags": [
-      "la-l1",
-      "forma-A"
-    ],
-    "contentHash": "5c3345621697a84831205627631647f36a0be552bf227f67e12a1fd9dbc53c4a",
-    "variantStatus": "neutral",
-    "variantVerificacion": "Latín L1 (2026-09-11), forma A. Los ítems los escribieron y los atacaron los lotes de lib/data/languages/la/lotes con sus propios gates; este publicador NO los revisa: sólo los coloca. Responde a «¿está este ítem colocado en la lección que le toca y sin duplicar frase?»; NO certifica que el latín sea correcto ni que la cantidad vocálica esté bien — eso lo firman el gate del lote y el latinista adversarial.",
-    "register": "neutro",
-    "type": "fill_blank",
-    "data": {
-      "sentence": "Cura ___ magna est.",
-      "blanks": [
-        {
-          "position": 0,
-          "answer": "manūs",
-          "alternatives": [
-            "manus"
-          ]
-        }
-      ],
-      "hintEs": "El cuidado de la mano es grande. · genitivo singular"
-    }
-  },
-  {
     "id": "4a638433",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-neutro-regla"
@@ -464,7 +433,7 @@
   {
     "id": "445472aa",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-neutro-regla"
@@ -498,7 +467,7 @@
   {
     "id": "37d31fb6",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-neutro-regla"
@@ -532,7 +501,7 @@
   {
     "id": "7a6ea9a6",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-neutro-regla"
@@ -566,7 +535,7 @@
   {
     "id": "3d96ebef",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-neutro-regla"
@@ -600,7 +569,7 @@
   {
     "id": "05b9d4fe",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-neutro-regla"
@@ -634,7 +603,7 @@
   {
     "id": "5eb36ef0",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-neutro-regla"
@@ -668,7 +637,7 @@
   {
     "id": "862771fd",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-neutro-regla"
@@ -702,7 +671,7 @@
   {
     "id": "81e51823",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-neutro-regla"
@@ -736,7 +705,7 @@
   {
     "id": "7d821b87",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-neutro-regla"
@@ -770,7 +739,7 @@
   {
     "id": "b6e1b680",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-neutro-regla"
@@ -804,7 +773,7 @@
   {
     "id": "5716d29f",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-neutro-regla"
@@ -836,9 +805,344 @@
     }
   },
   {
+    "id": "08e41f4e",
+    "blockId": 2,
+    "lessonId": "la-b2-l2-primera",
+    "difficulty": 2,
+    "concepts": [
+      "l2-primera"
+    ],
+    "tags": [
+      "la-l1",
+      "forma-A"
+    ],
+    "contentHash": "08e41f4ef4a90dbd51975bc0c700187d8c2db86ee0b35c1582bea2564c14871e",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Latín L1 (2026-09-11), forma A. Los ítems los escribieron y los atacaron los lotes de lib/data/languages/la/lotes con sus propios gates; este publicador NO los revisa: sólo los coloca. Responde a «¿está este ítem colocado en la lección que le toca y sin duplicar frase?»; NO certifica que el latín sea correcto ni que la cantidad vocálica esté bien — eso lo firman el gate del lote y el latinista adversarial.",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Nauta dona mittit ___.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "rēgīnīs",
+          "alternatives": [
+            "reginis"
+          ]
+        }
+      ],
+      "hintEs": "El marinero envía unos regalos a las reinas. · destinatario, plural"
+    }
+  },
+  {
+    "id": "ccba4ba7",
+    "blockId": 2,
+    "lessonId": "la-b2-l2-primera",
+    "difficulty": 2,
+    "concepts": [
+      "l2-primera"
+    ],
+    "tags": [
+      "la-l1",
+      "forma-A"
+    ],
+    "contentHash": "ccba4ba70d43da565a4be714c2065d52389c2995f1558405a083f9c7829386a2",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Latín L1 (2026-09-11), forma A. Los ítems los escribieron y los atacaron los lotes de lib/data/languages/la/lotes con sus propios gates; este publicador NO los revisa: sólo los coloca. Responde a «¿está este ítem colocado en la lección que le toca y sin duplicar frase?»; NO certifica que el latín sea correcto ni que la cantidad vocálica esté bien — eso lo firman el gate del lote y el latinista adversarial.",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Agricola ___ videt.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "rosās",
+          "alternatives": [
+            "rosas"
+          ]
+        }
+      ],
+      "hintEs": "El campesino ve unas rosas. · objeto directo, plural"
+    }
+  },
+  {
+    "id": "f26833e8",
+    "blockId": 2,
+    "lessonId": "la-b2-l2-primera",
+    "difficulty": 2,
+    "concepts": [
+      "l2-primera"
+    ],
+    "tags": [
+      "la-l1",
+      "forma-A"
+    ],
+    "contentHash": "f26833e8ac3650e4e2610433b39f6480128d599dae081223264d90161e57fa06",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Latín L1 (2026-09-11), forma A. Los ítems los escribieron y los atacaron los lotes de lib/data/languages/la/lotes con sus propios gates; este publicador NO los revisa: sólo los coloca. Responde a «¿está este ítem colocado en la lección que le toca y sin duplicar frase?»; NO certifica que el latín sea correcto ni que la cantidad vocálica esté bien — eso lo firman el gate del lote y el latinista adversarial.",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "___ rosam portat.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "puella",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "La niña lleva una rosa. · sujeto, singular"
+    }
+  },
+  {
+    "id": "83776032",
+    "blockId": 2,
+    "lessonId": "la-b2-l2-primera",
+    "difficulty": 2,
+    "concepts": [
+      "l2-primera"
+    ],
+    "tags": [
+      "la-l1",
+      "forma-A"
+    ],
+    "contentHash": "837760321c17ed6b13aa2e7f7b749bb37165da60d48c8243b6de55efb348eabe",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Latín L1 (2026-09-11), forma A. Los ítems los escribieron y los atacaron los lotes de lib/data/languages/la/lotes con sus propios gates; este publicador NO los revisa: sólo los coloca. Responde a «¿está este ítem colocado en la lección que le toca y sin duplicar frase?»; NO certifica que el latín sea correcto ni que la cantidad vocálica esté bien — eso lo firman el gate del lote y el latinista adversarial.",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Poeta ___ vocat.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "amīcam",
+          "alternatives": [
+            "amicam"
+          ]
+        }
+      ],
+      "hintEs": "El poeta llama a la amiga. · objeto directo, singular"
+    }
+  },
+  {
+    "id": "f401ee40",
+    "blockId": 2,
+    "lessonId": "la-b2-l2-primera",
+    "difficulty": 2,
+    "concepts": [
+      "l2-primera"
+    ],
+    "tags": [
+      "la-l1",
+      "forma-A"
+    ],
+    "contentHash": "f401ee40dd43b0e36ae709b61af5feb7a4a67777a36f01af18a4a3d7dba6d06c",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Latín L1 (2026-09-11), forma A. Los ítems los escribieron y los atacaron los lotes de lib/data/languages/la/lotes con sus propios gates; este publicador NO los revisa: sólo los coloca. Responde a «¿está este ítem colocado en la lección que le toca y sin duplicar frase?»; NO certifica que el latín sea correcto ni que la cantidad vocálica esté bien — eso lo firman el gate del lote y el latinista adversarial.",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Cum ___ laborat.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "cūrīs",
+          "alternatives": [
+            "curis"
+          ]
+        }
+      ],
+      "hintEs": "Trabaja con cuidados. · ablativo con «cum», plural"
+    }
+  },
+  {
+    "id": "ae166ae3",
+    "blockId": 2,
+    "lessonId": "la-b2-l2-primera",
+    "difficulty": 2,
+    "concepts": [
+      "l2-primera"
+    ],
+    "tags": [
+      "la-l1",
+      "forma-A"
+    ],
+    "contentHash": "ae166ae34ee5a0397c06298cef0a986b69dfabd980d206b3ad535b9102c9e02d",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Latín L1 (2026-09-11), forma A. Los ítems los escribieron y los atacaron los lotes de lib/data/languages/la/lotes con sus propios gates; este publicador NO los revisa: sólo los coloca. Responde a «¿está este ítem colocado en la lección que le toca y sin duplicar frase?»; NO certifica que el latín sea correcto ni que la cantidad vocálica esté bien — eso lo firman el gate del lote y el latinista adversarial.",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Cura ___ magna est.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "rēgīnae",
+          "alternatives": [
+            "reginae"
+          ]
+        }
+      ],
+      "hintEs": "El cuidado de la reina es grande. · posesor, singular"
+    }
+  },
+  {
+    "id": "3ab0af26",
+    "blockId": 2,
+    "lessonId": "la-b2-l2-primera",
+    "difficulty": 2,
+    "concepts": [
+      "l2-primera"
+    ],
+    "tags": [
+      "la-l1",
+      "forma-A"
+    ],
+    "contentHash": "3ab0af26180d6b7c3bde483a3f94fd506be4b23fedcca68aaa917a3911646a1e",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Latín L1 (2026-09-11), forma A. Los ítems los escribieron y los atacaron los lotes de lib/data/languages/la/lotes con sus propios gates; este publicador NO los revisa: sólo los coloca. Responde a «¿está este ítem colocado en la lección que le toca y sin duplicar frase?»; NO certifica que el latín sea correcto ni que la cantidad vocálica esté bien — eso lo firman el gate del lote y el latinista adversarial.",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Audite, ___!",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "poētae",
+          "alternatives": [
+            "poetae"
+          ]
+        }
+      ],
+      "hintEs": "¡Escuchad, poetas! · vocativo, plural — cuarta celda que comparte «-ae»"
+    }
+  },
+  {
+    "id": "f003fa1b",
+    "blockId": 2,
+    "lessonId": "la-b2-l2-primera",
+    "difficulty": 2,
+    "concepts": [
+      "l2-primera"
+    ],
+    "tags": [
+      "la-l1",
+      "forma-A"
+    ],
+    "contentHash": "f003fa1b3151075691e10d20c175f5ef957c408bdf3615721a72374d8aba567b",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Latín L1 (2026-09-11), forma A. Los ítems los escribieron y los atacaron los lotes de lib/data/languages/la/lotes con sus propios gates; este publicador NO los revisa: sólo los coloca. Responde a «¿está este ítem colocado en la lección que le toca y sin duplicar frase?»; NO certifica que el latín sea correcto ni que la cantidad vocálica esté bien — eso lo firman el gate del lote y el latinista adversarial.",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Verba ___ audit.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "amīcārum",
+          "alternatives": [
+            "amicarum"
+          ]
+        }
+      ],
+      "hintEs": "Oye las palabras de las amigas. · posesor, plural"
+    }
+  },
+  {
+    "id": "c1a1bcd7",
+    "blockId": 2,
+    "lessonId": "la-b2-l2-primera",
+    "difficulty": 2,
+    "concepts": [
+      "l2-primera"
+    ],
+    "tags": [
+      "la-l1",
+      "forma-A"
+    ],
+    "contentHash": "c1a1bcd7370140f33c97b7b24c261d49bca62f197676a79b95bf0d4fab5cea3f",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Latín L1 (2026-09-11), forma A. Los ítems los escribieron y los atacaron los lotes de lib/data/languages/la/lotes con sus propios gates; este publicador NO los revisa: sólo los coloca. Responde a «¿está este ítem colocado en la lección que le toca y sin duplicar frase?»; NO certifica que el latín sea correcto ni que la cantidad vocálica esté bien — eso lo firman el gate del lote y el latinista adversarial.",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Salve, ___!",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "domina",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "¡Salud, señora! · vocativo, singular — en la 1.ª es igual que el nominativo"
+    }
+  },
+  {
+    "id": "44251026",
+    "blockId": 2,
+    "lessonId": "la-b2-l2-primera",
+    "difficulty": 2,
+    "concepts": [
+      "l2-primera"
+    ],
+    "tags": [
+      "la-l1",
+      "forma-A"
+    ],
+    "contentHash": "44251026809224e66b6e4be15d3882011c3d7befd162435f981bb8df372dbe12",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Latín L1 (2026-09-11), forma A. Los ítems los escribieron y los atacaron los lotes de lib/data/languages/la/lotes con sus propios gates; este publicador NO los revisa: sólo los coloca. Responde a «¿está este ítem colocado en la lección que le toca y sin duplicar frase?»; NO certifica que el latín sea correcto ni que la cantidad vocálica esté bien — eso lo firman el gate del lote y el latinista adversarial.",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "___ rosas portant.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "puellae",
+          "alternatives": []
+        }
+      ],
+      "hintEs": "Las niñas llevan unas rosas. · sujeto, plural"
+    }
+  },
+  {
+    "id": "3fd000dc",
+    "blockId": 2,
+    "lessonId": "la-b2-l2-primera",
+    "difficulty": 2,
+    "concepts": [
+      "l2-primera"
+    ],
+    "tags": [
+      "la-l1",
+      "forma-A"
+    ],
+    "contentHash": "3fd000dc3ceee3fa740865dfaf0da28a3c0e8dd59c31919574fa3422d4241bd5",
+    "variantStatus": "neutral",
+    "variantVerificacion": "Latín L1 (2026-09-11), forma A. Los ítems los escribieron y los atacaron los lotes de lib/data/languages/la/lotes con sus propios gates; este publicador NO los revisa: sólo los coloca. Responde a «¿está este ítem colocado en la lección que le toca y sin duplicar frase?»; NO certifica que el latín sea correcto ni que la cantidad vocálica esté bien — eso lo firman el gate del lote y el latinista adversarial.",
+    "register": "neutro",
+    "type": "fill_blank",
+    "data": {
+      "sentence": "Poeta rosam dat ___.",
+      "blanks": [
+        {
+          "position": 0,
+          "answer": "vīcīnae",
+          "alternatives": [
+            "vicinae"
+          ]
+        }
+      ],
+      "hintEs": "El poeta da una rosa a la vecina. · destinatario, singular"
+    }
+  },
+  {
     "id": "0b827ede",
     "blockId": 2,
-    "lessonId": "la-b2-l4-quinta",
+    "lessonId": "la-b2-l5-quinta",
     "difficulty": 2,
     "concepts": [
       "l2-quinta"
@@ -869,7 +1173,7 @@
   {
     "id": "d390f17d",
     "blockId": 2,
-    "lessonId": "la-b2-l4-quinta",
+    "lessonId": "la-b2-l5-quinta",
     "difficulty": 2,
     "concepts": [
       "l2-quinta"
@@ -900,7 +1204,7 @@
   {
     "id": "d7a1c4ab",
     "blockId": 2,
-    "lessonId": "la-b2-l4-quinta",
+    "lessonId": "la-b2-l5-quinta",
     "difficulty": 2,
     "concepts": [
       "l2-quinta"
@@ -931,7 +1235,7 @@
   {
     "id": "f965f874",
     "blockId": 2,
-    "lessonId": "la-b2-l4-quinta",
+    "lessonId": "la-b2-l5-quinta",
     "difficulty": 2,
     "concepts": [
       "l2-quinta"
@@ -962,7 +1266,7 @@
   {
     "id": "1783314b",
     "blockId": 2,
-    "lessonId": "la-b2-l4-quinta",
+    "lessonId": "la-b2-l5-quinta",
     "difficulty": 2,
     "concepts": [
       "l2-quinta"
@@ -993,7 +1297,7 @@
   {
     "id": "ad9ce679",
     "blockId": 2,
-    "lessonId": "la-b2-l4-quinta",
+    "lessonId": "la-b2-l5-quinta",
     "difficulty": 2,
     "concepts": [
       "l2-quinta"
@@ -1024,7 +1328,7 @@
   {
     "id": "8a6c2656",
     "blockId": 2,
-    "lessonId": "la-b2-l4-quinta",
+    "lessonId": "la-b2-l5-quinta",
     "difficulty": 2,
     "concepts": [
       "l2-quinta"
@@ -1053,7 +1357,7 @@
   {
     "id": "3b6fd63a",
     "blockId": 2,
-    "lessonId": "la-b2-l4-quinta",
+    "lessonId": "la-b2-l5-quinta",
     "difficulty": 2,
     "concepts": [
       "l2-quinta"
@@ -1084,7 +1388,7 @@
   {
     "id": "b4926fd4",
     "blockId": 2,
-    "lessonId": "la-b2-l4-quinta",
+    "lessonId": "la-b2-l5-quinta",
     "difficulty": 2,
     "concepts": [
       "l2-quinta"
@@ -1113,7 +1417,7 @@
   {
     "id": "77a3d618",
     "blockId": 2,
-    "lessonId": "la-b2-l4-quinta",
+    "lessonId": "la-b2-l5-quinta",
     "difficulty": 2,
     "concepts": [
       "l2-quinta"
@@ -1144,7 +1448,7 @@
   {
     "id": "86fbd1d5",
     "blockId": 2,
-    "lessonId": "la-b2-l4-quinta",
+    "lessonId": "la-b2-l5-quinta",
     "difficulty": 2,
     "concepts": [
       "l2-quinta"
@@ -1175,7 +1479,7 @@
   {
     "id": "5f2e696d",
     "blockId": 2,
-    "lessonId": "la-b2-l4-quinta",
+    "lessonId": "la-b2-l5-quinta",
     "difficulty": 2,
     "concepts": [
       "l2-quinta"
@@ -1206,7 +1510,7 @@
   {
     "id": "bf05fb7a",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-segunda"
@@ -1235,7 +1539,7 @@
   {
     "id": "3535b9b7",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-segunda"
@@ -1266,7 +1570,7 @@
   {
     "id": "2b285790",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-segunda"
@@ -1295,7 +1599,7 @@
   {
     "id": "7eba5d02",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-segunda"
@@ -1326,7 +1630,7 @@
   {
     "id": "3cabf55a",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-segunda"
@@ -1357,7 +1661,7 @@
   {
     "id": "bbd327e7",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-segunda"
@@ -1388,7 +1692,7 @@
   {
     "id": "4b579ed5",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-segunda"
@@ -1419,7 +1723,7 @@
   {
     "id": "88e0b51b",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-segunda"
@@ -1450,7 +1754,7 @@
   {
     "id": "24a83f6c",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-segunda"
@@ -1481,7 +1785,7 @@
   {
     "id": "d7dc8525",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-segunda"
@@ -1510,7 +1814,7 @@
   {
     "id": "41fce035",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-segunda"
@@ -1539,7 +1843,7 @@
   {
     "id": "d0874a97",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-segunda"
@@ -1570,7 +1874,7 @@
   {
     "id": "61211b29",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-consonante"
@@ -1599,7 +1903,7 @@
   {
     "id": "bcb0ec2b",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-consonante"
@@ -1630,7 +1934,7 @@
   {
     "id": "cf5a96df",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-consonante"
@@ -1661,7 +1965,7 @@
   {
     "id": "fc3644a5",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-consonante"
@@ -1692,7 +1996,7 @@
   {
     "id": "075824f5",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-consonante"
@@ -1721,7 +2025,7 @@
   {
     "id": "c3b91719",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-consonante"
@@ -1752,7 +2056,7 @@
   {
     "id": "40abdb66",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-consonante"
@@ -1783,7 +2087,7 @@
   {
     "id": "d650a523",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-consonante"
@@ -1814,7 +2118,7 @@
   {
     "id": "8de99ee3",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-consonante"
@@ -1845,7 +2149,7 @@
   {
     "id": "dbafe0d9",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-consonante"
@@ -1876,7 +2180,7 @@
   {
     "id": "811e6857",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-consonante"
@@ -1905,7 +2209,7 @@
   {
     "id": "71abca46",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-consonante"
@@ -1936,7 +2240,7 @@
   {
     "id": "555c3c75",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-i"
@@ -1965,7 +2269,7 @@
   {
     "id": "b7595b57",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-i"
@@ -1994,7 +2298,7 @@
   {
     "id": "5fe8c114",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-i"
@@ -2023,7 +2327,7 @@
   {
     "id": "b4679b8f",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-i"
@@ -2052,7 +2356,7 @@
   {
     "id": "f459165f",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-i"
@@ -2081,7 +2385,7 @@
   {
     "id": "a6bc7d78",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-i"
@@ -2110,7 +2414,7 @@
   {
     "id": "b1ca68c3",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-i"
@@ -2141,7 +2445,7 @@
   {
     "id": "78462449",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-i"
@@ -2170,7 +2474,7 @@
   {
     "id": "0147dab0",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-i"
@@ -2201,7 +2505,7 @@
   {
     "id": "eda75889",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-i"
@@ -2230,7 +2534,7 @@
   {
     "id": "6dfef252",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-i"
@@ -2261,7 +2565,7 @@
   {
     "id": "218c25a4",
     "blockId": 2,
-    "lessonId": "la-b2-l3-tercera",
+    "lessonId": "la-b2-l4-tercera",
     "difficulty": 2,
     "concepts": [
       "l2-tercera-i"
@@ -2292,7 +2596,7 @@
   {
     "id": "c1c97e40",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-vocativo"
@@ -2323,7 +2627,7 @@
   {
     "id": "3ec3c28c",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-vocativo"
@@ -2352,7 +2656,7 @@
   {
     "id": "6c8a6c9d",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-vocativo"
@@ -2383,7 +2687,7 @@
   {
     "id": "5f023fad",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-vocativo"
@@ -2414,7 +2718,7 @@
   {
     "id": "b064e00d",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-vocativo"
@@ -2443,7 +2747,7 @@
   {
     "id": "ebf8c08d",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-vocativo"
@@ -2472,7 +2776,7 @@
   {
     "id": "a857d0c8",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-vocativo"
@@ -2501,7 +2805,7 @@
   {
     "id": "97c9bf5e",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-vocativo"
@@ -2530,7 +2834,7 @@
   {
     "id": "e645ae7d",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-vocativo"
@@ -2559,7 +2863,7 @@
   {
     "id": "4572d0dc",
     "blockId": 2,
-    "lessonId": "la-b2-l2-segunda-y-neutro",
+    "lessonId": "la-b2-l3-segunda-y-neutro",
     "difficulty": 2,
     "concepts": [
       "l2-vocativo"

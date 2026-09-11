@@ -145,8 +145,32 @@ const APLAZADOS_CON_MOTIVO: Record<string, string> = {
 function alternativasDe(it: Crudo): string[] {
   const r = str(it.respuesta);
   if (!r || CANTIDAD_ES_EL_PUNTO.has(String(it.punto))) return [];
+  if (colapsaSinMacron(it)) return [];
   const sin = sinCantidad(r);
   return sin !== r ? [sin] : [];
+}
+
+/** ⚠ EL ÍTEM CUYA ALTERNATIVA SIN MÁCRÓN ACEPTARÍA OTRA CELDA.
+ *
+ *  La regla del mácrón se escribió el 2026-09-10 por punto —«salvo donde
+ *  la cantidad ES el rasgo examinado»— y eso no basta: la colisión no es
+ *  propiedad del PUNTO, es propiedad de la CELDA. El ablativo singular de
+ *  la 1.ª (`terrā`) sólo se separa del nominativo (`terra`) por la
+ *  cantidad, y el genitivo singular de la 4.ª (`manūs`) del nominativo
+ *  igual — en puntos que no son «de cantidad».
+ *
+ *  El daño estaba VIVO: `l2-genitivo-clave/la-2g-04` se publicó aceptando
+ *  «manus» como respuesta buena del genitivo «manūs», o sea aceptando la
+ *  celda equivocada. Lo destapó escribir el lote de la 1.ª, no un gate.
+ *
+ *  Los ítems ya lo declaran: `ejes.colapsaAlLeer` existe justamente para
+ *  esto. Así que el ítem se APARTA —ni con alternativa, que tapa el
+ *  rasgo, ni sin ella, que lo vuelve intecleable— y se dice cuál y por
+ *  qué. Vuelve cuando la tarjeta llame a `comparaLa`. */
+function colapsaSinMacron(it: Crudo): boolean {
+  const r = str(it.respuesta);
+  const ejes = it.ejes as Crudo | undefined;
+  return !!r && !!ejes?.colapsaAlLeer && sinCantidad(r) !== r;
 }
 
 function datosDe(it: Crudo, f: Forma): { type: string; data: Record<string, unknown> } {
@@ -235,6 +259,7 @@ async function main() {
   const porBloque = new Map<number, unknown[]>();
   const usados = new Map<string, { ex: Record<string, unknown>; data: Record<string, unknown>; punto: string }>();
   const fusionados: string[] = [];
+  const porCelda: string[] = [];
 
   const yaEnCorpus = new Map<string, string>();
   if (fs.existsSync(BLOCKS_DIR)) for (const f of fs.readdirSync(BLOCKS_DIR).filter((x) => /^b\d+\.json$/.test(x)))
@@ -307,6 +332,10 @@ async function main() {
         //   Un punto sin lección declarada es un PROBLEMA, no un destino.
         const leccion = bloque.lessons.find((l) => l.conceptIds.includes(punto));
         if (!leccion) { problemas.push(`${String(it.id)}: el punto «${punto}» no está declarado en ninguna lección de b${bloque.id}`); continue; }
+        if (colapsaSinMacron(it)) {
+          porCelda.push(`${String(it.id)} (${punto}): «${str(it.respuesta)}» — sin el mácrón acepta otra celda (${String((it.ejes as Crudo).colapsaAlLeer)}), y con él no se teclea`);
+          continue;
+        }
         const { type, data } = datosDe(it, forma);
         const id = hashKey({ type, data, variantOverrides: undefined, esContrast: undefined }).slice(0, 8);
         // ⚠ EL DUPLICADO ES DE PANTALLA, NO DE FRASE, y esto costó una
@@ -374,6 +403,10 @@ async function main() {
   if (conMotivo.size) {
     console.log(`\n**APLAZADOS CON MOTIVO COMPROBADO: ${conMotivo.size} lote(s).**`);
     for (const [l, m] of conMotivo) console.log(`- ${l} — ${m}`);
+  }
+  if (porCelda.length) {
+    console.log(`\n**${porCelda.length} ítems APARTADOS POR CELDA** (su respuesta sólo se distingue de otra celda por el mácrón: con alternativa taparía el rasgo, sin ella no se teclea — vuelven cuando la tarjeta llame a \`comparaLa\`):`);
+    for (const s2 of porCelda) console.log(`- ${s2}`);
   }
   if (fusionados.length) {
     console.log(`\n**${fusionados.length} ejercicios FUSIONADOS** (misma pantalla y misma respuesta escritas en dos lotes: se publica uno y cuenta para los dos puntos):`);

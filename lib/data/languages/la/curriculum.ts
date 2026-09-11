@@ -85,17 +85,12 @@ export const SIN_TALLAR: Record<string, string> = {
   'l5-interrogativas': 'necesita 12 `explanationEs` que hay que escribir, no derivar',
   'l5-pro-drop': 'forma D: 9 de 12 admiten una segunda respuesta correcta que la clave suspende',
   'l10-que-enclitico': 'su respuesta es una lista y el mapeo obliga a decidir qué se muestra y qué se pide',
-  // ⚠ Y EL QUE NO ES UN APLAZAMIENTO SINO UN HUECO, que el latinista
-  //   encontró sin que nadie se lo preguntara: `l2-primera` está en el
-  //   inventario, es del peldaño L1, y NO TIENE LOTE. No es inocuo: es
-  //   prerrequisito declarado de `l3-funcion-por-desinencia`, o sea del
-  //   punto central del curso, que se publica igual con 20 ítems llenos
-  //   de `puella`, `amīcam`, `rēgīnās` y `nautae`. El bloque «Sustantivo»
-  //   enseña la 2.ª, la 3.ª y la 5.ª y DA POR SABIDA la 1.ª. Se declara
-  //   aquí porque un hueco que nadie nombra se manifiesta como
-  //   uniformidad —cuatro lecciones ordenadas, nada que chirríe— y así
-  //   es como se esconde una pieza que falta.
-  'l2-primera': 'NO ESTÁ APLAZADO: NO TIENE LOTE. Y es prerrequisito de l3-funcion-por-desinencia, que sí se publica — el curso da por sabida la primera declinación',
+  // ⚠ `l2-primera` ESTUVO AQUÍ y ya no está: el 2026-09-11 se le escribió
+  //   lote. Era el hueco que el latinista encontró mirando otra cosa —la
+  //   primera declinación, prerrequisito del punto central del curso, sin
+  //   un solo ítem— y así es como se encuentran: una pieza que falta se
+  //   manifiesta como uniformidad, y nadie busca un hueco que parece una
+  //   elección.
 };
 
 export const TALLAS: Talla[] = [
@@ -109,7 +104,17 @@ export const TALLAS: Talla[] = [
     ],
   },
   {
-    id: 'la-b2-l2-segunda-y-neutro', blockId: 2, mdx: 'b2/l2-segunda-y-neutro.mdx',
+    id: 'la-b2-l2-primera', blockId: 2, mdx: 'b2/l2-primera.mdx',
+    name: 'Primera declinación: doce celdas y siete formas',
+    conceptIds: ['l2-primera'],
+    objectives: [
+      'Declinar la primera entera y ver que sus doce celdas producen sólo SIETE cadenas distintas: «-a», «-am», «-ae», «-ā», «-ās», «-ārum», «-īs»',
+      'Reconocer que «-ae» cubre CUATRO celdas —genitivo singular, dativo singular, nominativo plural y vocativo plural—, así que producirla es fácil y leerla no: cuál de las cuatro es en cada frase se resuelve más adelante, con el contexto',
+      'Declinar también los masculinos en «-a» (nauta, agricola, poēta), que siguen la primera sin ser femeninos — como «el poeta» y «el mapa» en español',
+    ],
+  },
+  {
+    id: 'la-b2-l3-segunda-y-neutro', blockId: 2, mdx: 'b2/l3-segunda-y-neutro.mdx',
     name: 'Segunda declinación, vocativo y el neutro en -a',
     conceptIds: ['l2-segunda', 'l2-vocativo', 'l2-neutro-regla'],
     objectives: [
@@ -119,7 +124,7 @@ export const TALLAS: Talla[] = [
     ],
   },
   {
-    id: 'la-b2-l3-tercera', blockId: 2, mdx: 'b2/l3-tercera.mdx',
+    id: 'la-b2-l4-tercera', blockId: 2, mdx: 'b2/l4-tercera.mdx',
     name: 'La tercera declinación: tema en consonante, temas en -i y el género',
     conceptIds: ['l2-tercera-consonante', 'l2-tercera-i'],
     objectives: [
@@ -128,7 +133,7 @@ export const TALLAS: Talla[] = [
     ],
   },
   {
-    id: 'la-b2-l4-quinta', blockId: 2, mdx: 'b2/l4-quinta.mdx',
+    id: 'la-b2-l5-quinta', blockId: 2, mdx: 'b2/l5-quinta.mdx',
     name: 'Quinta declinación',
     conceptIds: ['l2-quinta'],
     objectives: [
