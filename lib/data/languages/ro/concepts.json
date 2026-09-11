@@ -1,1 +1,965 @@
-[]
+[
+  {
+    "id": "r1-acento-lexico",
+    "name": "Acento léxico libre no marcado",
+    "blockId": 1,
+    "description": "La grafía no dice dónde va el acento y hay pares mínimos: cópii (copias) / copíi (niños), véselă (alegre) / vesélă (vajilla), ácele / acéle. Cada lema entra al SRS con su acento anotado desde A1; en A2 se añade el acento en la flexión.",
+    "prereqs": []
+  },
+  {
+    "id": "r1-consonantes-ausentes",
+    "name": "ț ș j z v y los dígrafos ce/ci ge/gi che/chi ghe/ghi",
+    "blockId": 1,
+    "description": "/ts/ /ʃ/ /ʒ/ /z/ /v/ que el español no tiene o fusiona (b~v, s~z), y la lectura de los dígrafos: che = /ke/, ce = /tʃe/.",
+    "prereqs": []
+  },
+  {
+    "id": "r1-diacriticos-coma",
+    "name": "ș y ț con coma, nunca con cedilla",
+    "blockId": 1,
+    "description": "U+0219/U+021B frente a U+015F/U+0163: la web rumana los mezcla y el alumno debe escribir y reconocer la forma normativa.",
+    "prereqs": []
+  },
+  {
+    "id": "r1-diptongos",
+    "name": "Diptongos ea, oa, ia, ie, io, iu",
+    "blockId": 1,
+    "description": "seară, poartă, iarnă, ieftin: lectura y escritura de los diptongos que luego alternan en la flexión (ea→e, oa→o).",
+    "prereqs": []
+  },
+  {
+    "id": "r1-entonacion-pregunta",
+    "name": "Entonación de la pregunta total: el contorno",
+    "blockId": 1,
+    "description": "Ni el rumano ni el español marcan la pregunta sí/no con partícula: lo que diverge es el CONTORNO. Rumano: pico y caída sobre la última tónica; español: ascenso final sostenido. Sin ese rasgo escrito no hay nada que discriminar.",
+    "prereqs": []
+  },
+  {
+    "id": "r1-habla-conectada",
+    "name": "Habla conectada: elisión de -u, reducción, sinalefa",
+    "blockId": 1,
+    "description": "Lo que pasa en tempo rápido: la -u final que cae, la î de apoyo, la sinalefa. Diferencia entre entender un podcast y no.",
+    "prereqs": [
+      "r1-palatalizacion-final"
+    ]
+  },
+  {
+    "id": "r1-ortografia-a-i",
+    "name": "Ortografía: â interior, î inicial y final, sunt",
+    "blockId": 1,
+    "description": "La regla DOOM3: â en interior de palabra (român, cânt), î al inicio y al final y en inicio de raíz de compuestos (început, neîncetat); «sunt», no la grafía antigua con î (s·î·nt).",
+    "prereqs": [
+      "r1-vocales-centrales"
+    ]
+  },
+  {
+    "id": "r1-palatalizacion-final",
+    "name": "La -i final palatal como marca de plural y de 2.ª persona",
+    "blockId": 1,
+    "description": "[pomʲ], [lupʲ], [vezʲ]: la -i no es vocal plena, es un rasgo de la consonante anterior. Excepción que el paradigma necesita: tras obstruyente + líquida la -i SÍ es silábica (membru/membri, codru/codri, socru/socri, aflu/afli). Es el fallo #1 de comprensión oral del hispanohablante porque no la oye.",
+    "prereqs": [
+      "r1-vocales-centrales"
+    ]
+  },
+  {
+    "id": "r1-variedades",
+    "name": "Variedades: moldoveneasca, ardeleneasca, olteneasca",
+    "blockId": 1,
+    "description": "Palatalización moldava de labiales (ghini < bine, chept < piept, h'er < fier) y el cierre e→i final (bini), entonación ardeleneasca, perfectul simplu oltenesc. Receptivo. Las formas dialectales las rechaza el Hunspell vendorizado: el punto necesita exención declarada en verify-content.",
+    "prereqs": [
+      "r1-habla-conectada"
+    ]
+  },
+  {
+    "id": "r1-vocales-centrales",
+    "name": "/ə/ y /ɨ/ frente a /a/ e /i/, y entre sí",
+    "blockId": 1,
+    "description": "Las dos vocales centrales que el español no tiene, en oposición fonológica: masa/masă (a~ə), in/în (i~ɨ), rău/râu (ə~ɨ). Se discrimina oyendo.",
+    "prereqs": []
+  },
+  {
+    "id": "r10-cortesia-negativa",
+    "name": "El «nu» cortés, la atenuación y el desacuerdo con preservación de imagen",
+    "blockId": 10,
+    "description": "parcă, oarecum, într-un fel, cam; formas indirectas del no; interrupción aceptable vs descortés; bășcălie receptiva.",
+    "prereqs": [
+      "r10-tres-registros"
+    ]
+  },
+  {
+    "id": "r10-diminutivo-atenuador",
+    "name": "Elección del sufijo diminutivo: cafea → cafeluță, pahar → păhărel, minut → minuțel",
+    "blockId": 10,
+    "description": "El reparto -uță / -el / -iță / -aș / -uleț / -icică / -șoară no es PREDECIBLE desde el lema: se almacena por palabra, como la alternancia del plural. Hay dos tendencias (fem. en -e → -icică; fem. en -ă → -uță) y lo que el punto enseña es lo que las desmiente — fată→fetiță, cafea→cafeluță y el masculino entero. Con la función atenuadora al lado, que es la que motiva usarlo; pero lo que el ítem mide es la ELECCIÓN, no el efecto cortés (ése lo calca el español de México sin saber rumano).",
+    "prereqs": [
+      "r10-registro-tramite"
+    ]
+  },
+  {
+    "id": "r10-ironia-bascalie",
+    "name": "Ironía, bășcălie, understatement y sus marcas",
+    "blockId": 10,
+    "description": "cică, chipurile, vezi Doamne, mă rog; entonación; la herencia de Caragiale como código compartido.",
+    "prereqs": [
+      "r10-cortesia-negativa"
+    ]
+  },
+  {
+    "id": "r10-particulas-modales",
+    "name": "Partículas modales: chiar, tocmai, doar, cam, oare, ba, măcar, totuși, tot, parcă, cică",
+    "blockId": 10,
+    "description": "Sin equivalente 1:1; son la marca acústica del no nativo y su valor es prosódico además de léxico. Se enseñan como sistema, con audio. tocmai y abia se adelantan a A2 porque r5-perifrasis-pasado los necesita.",
+    "prereqs": [
+      "r10-diminutivo-atenuador"
+    ]
+  },
+  {
+    "id": "r10-poftim",
+    "name": "«Poftim / poftiți» como multiherramienta",
+    "blockId": 10,
+    "description": "Tenga, ¿cómo dice?, pase, sírvase: sin equivalente español, se enseña como pieza aparte.",
+    "prereqs": [
+      "r10-saludos-formulas"
+    ]
+  },
+  {
+    "id": "r10-registro-tramite",
+    "name": "Registro de la transacción y fórmulas del trámite",
+    "blockId": 10,
+    "description": "magazin, farmacie, poștă, primărie, medic de familie; cierres de correo por registro (Cu stimă, Cu respect, Toate cele bune, Pupici).",
+    "prereqs": [
+      "r10-tratamiento"
+    ]
+  },
+  {
+    "id": "r10-reparacion-turno",
+    "name": "Estrategias de reparación: Poftim? Adică? Vreți să spuneți că…? Cum ați zis?",
+    "blockId": 10,
+    "description": "Pedir aclaración, reformular, ceder e interrumpir: las fórmulas, receptivas y en producción escrita (chat).",
+    "prereqs": [
+      "r10-poftim"
+    ]
+  },
+  {
+    "id": "r10-saludos-formulas",
+    "name": "Saludos por hora y registro, vă rog, mulțumesc, cu plăcere, scuzați, nu-i nimic",
+    "blockId": 10,
+    "description": "bună dimineața / bună ziua / bună seara / salut / servus / noapte bună y las fórmulas de cortesía.",
+    "prereqs": []
+  },
+  {
+    "id": "r10-tratamiento",
+    "name": "tu / dumneavoastră (+ 2.ª pl.) / dumneata (+ 2.ª SG.); dânsul receptivo",
+    "blockId": 10,
+    "description": "Elección por situación social: panadera, jefe, abuelo, funcionario, camarero, desconocido. La trampa: dumneavoastră rige 2.ª plural y dumneata 2.ª SINGULAR. Tratamiento nominal domnule + cargo, doamna + apellido.",
+    "prereqs": []
+  },
+  {
+    "id": "r10-tres-registros",
+    "name": "Tres registros: coloquial, estándar escrito, administrativo",
+    "blockId": 10,
+    "description": "Subsemnatul, Vă rog să binevoiți a, prezenta cerere, în conformitate cu prevederile; los cuatro futuros como elección consciente.",
+    "prereqs": [
+      "r10-particulas-modales",
+      "r5-futuro-cuatro-registros"
+    ]
+  },
+  {
+    "id": "r11-aktionsart",
+    "name": "Aspecto y Aktionsart lexicalizados: a se apuca de, a da să, a sta să, a tot face, a mai face",
+    "blockId": 11,
+    "description": "Perífrasis y prefijos con valor aspectual (a reciti, a străbate, a se îmbolnăvi); sin equivalente sistemático.",
+    "prereqs": [
+      "r7-disparadores-sa"
+    ]
+  },
+  {
+    "id": "r11-cel-complejo",
+    "name": "«cel» en estructuras complejas y sintagmas densos con doble genitivo",
+    "blockId": 11,
+    "description": "cel de acolo, cel ce, cel mai bun dintre, cei doi; adjetivo antepuesto como marca de registro; genitivos encadenados.",
+    "prereqs": [
+      "r4-cel-proforma",
+      "r11-relativo-declinado"
+    ]
+  },
+  {
+    "id": "r11-dativo-relativo",
+    "name": "Dativo relativo: căruia, căreia, cărora",
+    "blockId": 11,
+    "description": "omul căruia i-am dat cartea: relativo en dativo con doblado.",
+    "prereqs": [
+      "r11-relativo-declinado"
+    ]
+  },
+  {
+    "id": "r11-periodo-condicional",
+    "name": "Los tres períodos condicionales, el irreal con imperfecto y dacă / de / să",
+    "blockId": 11,
+    "description": "La prótasis rumana lleva CONDICIONAL (dacă aș ști, aș veni; dacă aș fi știut, aș fi venit) o IMPERFECTO en el irreal corriente del habla (dacă știam, veneam — hueco de recepción, no de producción), nunca el subjuntivo que calca el español (*dacă să știu). El condicional de distanciamiento periodístico (ar fi vorba despre); dacă/de/să en la prótasis.",
+    "prereqs": [
+      "r5-condicional",
+      "r8-circunstanciales"
+    ]
+  },
+  {
+    "id": "r11-prezumtiv-receptivo",
+    "name": "Prezumtiv receptivo: o fi plecat, va fi știind, o fi având dreptate",
+    "blockId": 11,
+    "description": "El modo epistémico de suposición, innovación balcánica (no herencia latina). El hispanohablante SÍ tiene ancla: el futuro y el condicional epistémicos («serán las tres», «habrá salido», «estaría durmiendo») calcan casi exactamente o fi trei, o fi plecat, o fi fiind.",
+    "prereqs": [
+      "r5-futuro-cuatro-registros",
+      "r7-gerunziu"
+    ]
+  },
+  {
+    "id": "r11-relativo-declinado",
+    "name": "Relativo declinado: al cărui, a cărei, ai căror, ale căror",
+    "blockId": 11,
+    "description": "omul al cărui fiu…, femeia a cărei mașină…, copiii ai căror părinți…: donde el caso y el artículo posesivo se cruzan. Separa el B1 fluido del B2 real.",
+    "prereqs": [
+      "r4-articulo-posesivo",
+      "r8-relativas-pe-care"
+    ]
+  },
+  {
+    "id": "r11-variedad-moldova",
+    "name": "Rumano de la República de Moldova: léxico, calcos rusos, sovietismos; las hermanas de la romanidad oriental",
+    "blockId": 11,
+    "description": "Mismas normas escritas, léxico diferenciado (a se odihni con valores rusos), ruso como lengua de contacto. Receptivo pleno. Y, como perspectiva (dos o tres ítems dentro de este punto), las otras tres lenguas de la romanidad oriental —aromâna, meglenoromâna, istroromâna—, hermanas de la dacorrumana, que es el rumano mismo.",
+    "prereqs": [
+      "r1-variedades"
+    ]
+  },
+  {
+    "id": "r12-anteposicion-adjetivo",
+    "name": "Anteposición del adjetivo: el artículo salta al adjetivo",
+    "blockId": 12,
+    "description": "frumoasa poveste vs povestea frumoasă: el artículo enclítico se mueve al primer elemento del sintagma. Recurso estilístico y marca de registro elevado.",
+    "prereqs": [
+      "r2-concordancia-adjetivo"
+    ]
+  },
+  {
+    "id": "r12-argumentacion-b2",
+    "name": "Argumentación con contraargumento, refutación y matización",
+    "blockId": 12,
+    "description": "aș zice că, mai degrabă, în mare parte, nu neapărat, într-o oarecare măsură; texto de 350-450 palabras con ≤3 errores/100.",
+    "prereqs": [
+      "r8-conectores-argumentativos"
+    ]
+  },
+  {
+    "id": "r12-cirilico-receptivo",
+    "name": "Rumano en alfabeto cirílico (pre-1860 y RSS Moldovenească), receptivo",
+    "blockId": 12,
+    "description": "Tabla de correspondencias, suficiente para fuentes primarias. Choca con latin-guard: hay que hacerlo por lengua antes.",
+    "prereqs": [
+      "r11-variedad-moldova"
+    ]
+  },
+  {
+    "id": "r12-correlativas",
+    "name": "Coordinación correlativa: atât… cât și, nu numai… ci și, fie… fie, ori… ori",
+    "blockId": 12,
+    "description": "Léxico funcional de la coordinación correlativa; nu numai… ci și (no *dar și).",
+    "prereqs": [
+      "r8-conectores-argumentativos"
+    ]
+  },
+  {
+    "id": "r12-dislocacion-cliticos",
+    "name": "Dislocación a la izquierda con clítico de recuperación: Cartea, am citit-o ieri",
+    "blockId": 12,
+    "description": "Muy productiva en rumano, transferible del español pero con otra frecuencia; estructuras escindidas (Nu Ion a spus, ci Maria).",
+    "prereqs": [
+      "r6-contracciones-cliticos"
+    ]
+  },
+  {
+    "id": "r12-formas-enfaticas",
+    "name": "Formas largas y enfáticas: dânsul, însumi/însuți/însuși…, Domnia Voastră",
+    "blockId": 12,
+    "description": "însumi/însuți/însuși, însămi/însăți/însăși, pl. înșine/înșivă/înșiși, însene/însevă/înseși: concuerda en género, número Y PERSONA, la única forma del rumano que lo hace. Pronombres de cortesía y formas arcaizantes receptivas.",
+    "prereqs": [
+      "r10-tratamiento"
+    ]
+  },
+  {
+    "id": "r12-generos-discursivos",
+    "name": "Géneros: editorial, cronică, eseu, recenzie, cerere, sesizare",
+    "blockId": 12,
+    "description": "Convenciones rumanas concretas de cada género; la carta formal con sus fórmulas (Subsemnatul…, Cu deosebită considerație).",
+    "prereqs": [
+      "r10-tres-registros"
+    ]
+  },
+  {
+    "id": "r12-perfectul-simplu",
+    "name": "Perfectul simplu: făcui, făcuși, făcurăm",
+    "blockId": 12,
+    "description": "Narrativo literario y conversacional oltenesc; se elige por su valor, no al azar.",
+    "prereqs": [
+      "r5-perifrasis-pasado"
+    ]
+  },
+  {
+    "id": "r12-precision-sintagmas-densos",
+    "name": "Precisión en sintagmas de máxima densidad: genitivos encadenados con relativas",
+    "blockId": 12,
+    "description": "Varios genitivos, al cărui dentro de coordinaciones, prezumtiv + condicional + conjuntivo perfecto; cero errores de caso, posesivo, relativo y neutro.",
+    "prereqs": [
+      "r11-cel-complejo",
+      "r12-prezumtiv-productivo"
+    ]
+  },
+  {
+    "id": "r12-prezumtiv-productivo",
+    "name": "Prezumtiv productivo: o fi fiind bolnav, va fi plecat deja",
+    "blockId": 12,
+    "description": "Presente y perfecto como marcador epistémico que sustituye a «debe de estar».",
+    "prereqs": [
+      "r11-prezumtiv-receptivo"
+    ]
+  },
+  {
+    "id": "r2-alternancia-consonantica",
+    "name": "Alternancias consonánticas ante -i: t→ț, d→z, s→ș, c→ci, g→gi",
+    "blockId": 2,
+    "description": "frate/frați, student/studenți, brad/brazi, urs/urși, obraz/obraji — nunca *draji. Son automáticas y se generan por regla. (băiat/băieți acumula además ia→ie y no sirve para probar la consonántica sola.) EXCLUIDO DEL CLOZE (lingüista, 2026-09-03): la alternancia VELAR (sac/saci, drag/dragi, bunic/bunici) es real en la fonología —/k/→/tʃ/, /g/→/dʒ/ ante -i— pero INVISIBLE EN LA GRAFÍA: la «c» se queda y el alumno sólo añade -i, que es exactamente r2-plural-i-e-uri. Un cloze escrito no la distingue de an/ani. Vive en la casilla de FONOLOGÍA a la que este punto ya enruta, y el cloze cubre sólo las alternancias con cambio de LETRA.",
+    "prereqs": [
+      "r2-plural-i-e-uri"
+    ]
+  },
+  {
+    "id": "r2-alternancia-vocalica",
+    "name": "Alternancias vocálicas en el plural: ea→e, oa→o, a→e, a→ă",
+    "blockId": 2,
+    "description": "seară/seri, fată/fete, școală/școli, țară/țări. La a→e NO es predecible (masă/mese pero casă/case): la clase se almacena por lema. (poartă/porți y carte/cărți estaban aquí de ejemplo y NO sirven: mutan también la consonante, así que no prueban la vocálica sola — mismo motivo que băiat/băieți en el punto hermano.)",
+    "prereqs": [
+      "r2-plural-i-e-uri",
+      "r1-diptongos"
+    ]
+  },
+  {
+    "id": "r2-articulo-enclitico-pl",
+    "name": "Artículo definido enclítico, plural",
+    "blockId": 2,
+    "description": "oamenii, casele, florile, trenurile: -i y -le sobre el plural ya formado.",
+    "prereqs": [
+      "r2-articulo-enclitico-sg",
+      "r2-plural-i-e-uri"
+    ]
+  },
+  {
+    "id": "r2-articulo-enclitico-sg",
+    "name": "Artículo definido enclítico, singular",
+    "blockId": 2,
+    "description": "om→omul, casă→casa, floare→floarea, tren→trenul, tată→tatăl, zi→ziua. El artículo no es palabra: es flexión. («tata», familiar, es OTRO lema, el que pide «lui tata».)",
+    "prereqs": [
+      "r2-genero-tres-valores"
+    ]
+  },
+  {
+    "id": "r2-articulo-indefinido",
+    "name": "un / o / niște",
+    "blockId": 2,
+    "description": "El indefinido antepuesto, con el plural niște que el español no tiene como artículo.",
+    "prereqs": [
+      "r2-genero-tres-valores"
+    ]
+  },
+  {
+    "id": "r2-concordancia-adjetivo",
+    "name": "Concordancia del adjetivo, incluido el neutro",
+    "blockId": 2,
+    "description": "un tren bun / două trenuri bune; adjetivo pospuesto por defecto, con las 4 formas (bun/bună/buni/bune) y las de 3 y 2 formas. El error diana es *două trenuri buni: el neutro colapsado en masculino.",
+    "prereqs": [
+      "r2-genero-tres-valores"
+    ]
+  },
+  {
+    "id": "r2-genero-tres-valores",
+    "name": "Género de tres valores: la prueba un…/două…",
+    "blockId": 2,
+    "description": "Masculino, femenino y NEUTRO (ambigen): masculino en singular, femenino en plural. Se clasifica un sustantivo nuevo con la prueba un tren / două trenuri.",
+    "prereqs": []
+  },
+  {
+    "id": "r2-hora-fecha",
+    "name": "La hora y la fecha: e ora trei, două și un sfert, pe 3 martie",
+    "blockId": 2,
+    "description": "Estructuras propias: e ora trei / e trei, la ora cinci, două și jumătate, fără un sfert, pe 3 martie, în martie, luni. El calco «son las tres» produce *sunt trei.",
+    "prereqs": [
+      "r2-numerales-de"
+    ]
+  },
+  {
+    "id": "r2-numerales-de",
+    "name": "Numerales y la regla del «de» desde 20",
+    "blockId": 2,
+    "description": "douăzeci DE ani, o sută DE lei; doi/două concuerda en género; 0-1.000.",
+    "prereqs": [
+      "r2-genero-tres-valores"
+    ]
+  },
+  {
+    "id": "r2-plural-i-e-uri",
+    "name": "Plural: -i, -e, -uri",
+    "blockId": 2,
+    "description": "Las tres desinencias y su reparto por género: masculino -i, femenino -e/-i, neutro -e/-uri. La elección neutro -e vs -uri NO es predecible (scaun/scaune pero tren/trenuri, oraș/orașe pero birou/birouri): se almacena por lema, como la alternancia a→e.",
+    "prereqs": [
+      "r2-genero-tres-valores"
+    ]
+  },
+  {
+    "id": "r3-dativo-experimentante",
+    "name": "Dativo experimentante: mi-e foame, îmi place, mă doare capul",
+    "blockId": 3,
+    "description": "Estados con el experimentante en dativo (mi-e foame/sete/frig/somn) o acusativo (mă doare): «tengo hambre» → *am foame es el calco. îmi place transfiere de «me gusta» y se marca como regalo.",
+    "prereqs": [
+      "r6-cliticos-dativo"
+    ]
+  },
+  {
+    "id": "r3-futuro-o-sa",
+    "name": "Futuro coloquial «o să + conjuntivo», con o invariable",
+    "blockId": 3,
+    "description": "o să merg, o să mergem, o să vin: el futuro que se habla. «voy a ir» transfiere la función; lo que no transfiere es que o sea INVARIABLE (nunca *om să mergem). «voi merge» se presenta en A2.",
+    "prereqs": [
+      "r3-sa-vs-infinitivo"
+    ]
+  },
+  {
+    "id": "r3-imperativo-afirmativo",
+    "name": "Imperativo afirmativo de 20 verbos frecuentes",
+    "blockId": 3,
+    "description": "vino!, fă!, du-te!, spune!, ia!, dă!, stai!, veniți!: formas de 2.ª sg. y pl.",
+    "prereqs": [
+      "r3-irregulares-a1"
+    ]
+  },
+  {
+    "id": "r3-interrogativos",
+    "name": "Interrogativos: ce, cine, care, unde, când, cum, cât; pe cine",
+    "blockId": 3,
+    "description": "Las palabras interrogativas y su caso: cine (N) / pe cine (Ac) / cui (D); care concuerda y toma pe en OD; cât/câtă/câți/câte concuerda.",
+    "prereqs": [
+      "r3-presente-4-conjugaciones"
+    ]
+  },
+  {
+    "id": "r3-irregulares-a1",
+    "name": "Los 25 irregulares de A1: a fi, a avea, a vrea, a putea, a ști, a da, a lua, a bea, a veni, a sta…",
+    "blockId": 3,
+    "description": "Presente de los irregulares de alta frecuencia; a fi como único copulativo (no hay ser/estar) y a avea como auxiliar.",
+    "prereqs": [
+      "r3-presente-4-conjugaciones"
+    ]
+  },
+  {
+    "id": "r3-negacion-antepuesta",
+    "name": "El negativo ANTEPUESTO conserva «nu»: niciodată nu, nimeni nu, nimic nu",
+    "blockId": 3,
+    "description": "Niciodată nu vine la timp; Nimeni nu știe; Nimic nu s-a schimbat. Cuando la palabra negativa va DELANTE del verbo, el rumano mantiene «nu» y el español lo prohíbe: «nunca viene», no «*nunca no viene». Es la mitad divergente de la doble negación; la pospuesta (nu văd nimic) sí transfiere y vive como regalo declarado en r3-negacion-nu.",
+    "prereqs": [
+      "r3-negacion-nu"
+    ]
+  },
+  {
+    "id": "r3-negacion-nu",
+    "name": "Negación nu / n- y sus contracciones; doble negación",
+    "blockId": 3,
+    "description": "nu văd; n-am / nu am, nu-l / nu îl: la contracción es la forma corriente y la plena es la de registro cuidado — las dos son correctas (DOOM3), y el ítem acepta las dos. Doble negación: la transferencia del español es PARCIAL, no entera (lingüista, 2026-09-03). Coincide con el negativo POSPUESTO (nu văd nimic / «no veo nada») y ahí entra como regalo declarado, dos o tres ítems. DIVERGE con el ANTEPUESTO: el rumano conserva «nu» (Niciodată nu vine la timp) y el español lo prohíbe («nunca *no* viene»). Esa mitad NO está cubierta por este punto ni por ningún otro, y las pistas de los ítems de regalo van acotadas a «con nu delante» para no mentir. Abrir un punto propio para la antepuesta es decisión del coordinador: cambia el presupuesto.",
+    "prereqs": [
+      "r3-presente-4-conjugaciones"
+    ]
+  },
+  {
+    "id": "r3-perfect-compus-intro",
+    "name": "Perfect compus: am + participio (fin de A1)",
+    "blockId": 3,
+    "description": "am mâncat, ai văzut, a venit: auxiliar a avea + participio; los 60 participios más frecuentes. La casilla que confunde: am es 1.ª sg. Y 1.ª pl. (am mâncat = «he comido» y «hemos comido»).",
+    "prereqs": [
+      "r3-irregulares-a1"
+    ]
+  },
+  {
+    "id": "r3-presente-4-conjugaciones",
+    "name": "Presente de las 4 conjugaciones (-a, -ea, -e, -i/-î)",
+    "blockId": 3,
+    "description": "a cânta, a vedea, a merge, a dormi, a coborî: las desinencias regulares de persona.",
+    "prereqs": []
+  },
+  {
+    "id": "r3-sa-vs-infinitivo",
+    "name": "Conjuntivo con «să» donde el español pone infinitivo",
+    "blockId": 3,
+    "description": "vreau să merg, pot să vin, trebuie să plec, îmi place să citesc: el infinitivo NO es el complemento por defecto. Desde la primera semana.",
+    "prereqs": [
+      "r3-presente-4-conjugaciones"
+    ]
+  },
+  {
+    "id": "r3-sufijo-ez-esc",
+    "name": "Sufijos -ez-/-esc- (a lucra → lucrez, a citi → citesc)",
+    "blockId": 3,
+    "description": "La subclase productiva con sufijo en las personas 1, 2, 3 y 6; nunca *a lucrez, que junta la partícula de infinitivo con una forma finita. a lucra tiene raíz latina (lucrum, aunque el sentido diverge de «lucrar»); a citi es eslavo y se memoriza sin apoyo.",
+    "prereqs": [
+      "r3-presente-4-conjugaciones"
+    ]
+  },
+  {
+    "id": "r3-trebuie-invariable",
+    "name": "«a trebui» invariable: trebuie să merg / trebuie să mergem",
+    "blockId": 3,
+    "description": "trebuie no concuerda con la persona: el sujeto lo lleva el conjuntivo. Nunca *trebuiesc, *trebuim.",
+    "prereqs": [
+      "r3-sa-vs-infinitivo"
+    ]
+  },
+  {
+    "id": "r4-articulo-posesivo",
+    "name": "Artículo posesivo/genitival al / a / ai / ale: CUÁNDO hace falta",
+    "blockId": 4,
+    "description": "La regla NO es «definido ⇒ no hay artículo»: es de ADYACENCIA. El artículo posesivo falta SÓLO en la configuración [N + enclítico] + [genitivo] pegados (cartea băiatului); en cuanto algo se mete en medio o el núcleo no lleva el enclítico, aparece — y concuerda con lo POSEÍDO, no con el poseedor. Cinco configuraciones productivas en A2, todas con el artículo OBLIGATORIO: núcleo indefinido (o carte a băiatului), núcleo cuantificado (doi prieteni ai Mariei), adjetivo interpuesto con el núcleo DEFINIDO (casa nouă a Mariei), demostrativo pospuesto (mașina aceasta a Mariei) y predicativo con cópula (cartea este a Mariei). Y el enclítico puede estar en otra palabra: noua mașină a lui Ion, cel al Mariei. (GALR I, Articolul posesiv-genitival; Avram, Gramatica pentru toți, cap. Articolul.)",
+    "prereqs": [
+      "r4-gd-definido-sg"
+    ]
+  },
+  {
+    "id": "r4-cel-proforma",
+    "name": "DÓNDE se marca la definitud en el grupo del superlativo: prietenul cel mai bun / cel mai bun prieten",
+    "blockId": 4,
+    "description": "La definitud se marca UNA vez, en el borde izquierdo del grupo nominal (GALR I, «Articolul»; Avram). De ahí las dos caras: POSPUESTO, el nombre conserva su enclítico y ADEMÁS aparece «cel» (prietenul cel mai bun, DOS marcas donde el español y el portugués ponen una); ANTEPUESTO, «cel» carga la definitud y el nombre va DESNUDO (cel mai bun prieten, nunca *cel mai bun prietenul), igual que acest băiat / *acest băiatul.",
+    "prereqs": [
+      "r4-demostrativos-caso"
+    ]
+  },
+  {
+    "id": "r4-dativo-oi",
+    "name": "Dativo como objeto indirecto con doblado",
+    "blockId": 4,
+    "description": "Îi dau Mariei cartea, le spun copiilor: el OI en GD, doblado por el clítico dativo. El doblado transfiere de «le doy a María»; la FORMA de caso no.",
+    "prereqs": [
+      "r4-gd-definido-sg"
+    ]
+  },
+  {
+    "id": "r4-demostrativos-caso",
+    "name": "Demostrativos con caso y en las dos posiciones",
+    "blockId": 4,
+    "description": "acest băiat / băiatul acesta; acestui băiat, acestei fete; acel/acela. Antepuesto sin artículo, pospuesto con artículo y forma larga.",
+    "prereqs": [
+      "r4-gd-definido-sg"
+    ]
+  },
+  {
+    "id": "r4-gd-definido-pl",
+    "name": "Genitivo-dativo definido plural: -lor",
+    "blockId": 4,
+    "description": "oamenilor, caselor, copiilor: -lor sobre el plural. La misma maquinaria da el vocativo plural (fraților, doamnelor).",
+    "prereqs": [
+      "r4-gd-definido-sg",
+      "r2-articulo-enclitico-pl"
+    ]
+  },
+  {
+    "id": "r4-gd-definido-sg",
+    "name": "Genitivo-dativo definido singular: -ului, -ei, -ii",
+    "blockId": 4,
+    "description": "băiatului, fetei, cărții, casei, orașului: el enclítico declinado; el femenino toma la forma del plural (fete → fetei, cărți → cărții).",
+    "prereqs": [
+      "r4-gd-indefinido",
+      "r2-articulo-enclitico-sg"
+    ]
+  },
+  {
+    "id": "r4-gd-indefinido",
+    "name": "Genitivo-dativo indefinido: unui / unei / unor",
+    "blockId": 4,
+    "description": "unui băiat, unei fete, unor oameni: el indefinido declinado; el femenino toma la forma del plural (unei case, unei cărți).",
+    "prereqs": [
+      "r2-articulo-indefinido",
+      "r2-alternancia-vocalica"
+    ]
+  },
+  {
+    "id": "r4-gd-lui-formula",
+    "name": "Genitivo con «lui» ante nombre propio masculino",
+    "blockId": 4,
+    "description": "mașina lui Ion, cartea lui Mihai, casa lui tata: el genitivo analítico, memorizado como fórmula en A1; el paradigma entero va en A2.",
+    "prereqs": [
+      "r2-articulo-enclitico-sg"
+    ]
+  },
+  {
+    "id": "r4-posesivos",
+    "name": "Posesivos meu/mea/mei/mele y său vs lui/ei",
+    "blockId": 4,
+    "description": "El posesivo concordado con lo poseído, pospuesto al sustantivo articulado (casa mea), y la alternancia său/sa vs lui/ei, trampa constante.",
+    "prereqs": [
+      "r2-articulo-enclitico-sg"
+    ]
+  },
+  {
+    "id": "r4-preposicion-caida-articulo",
+    "name": "Preposición de acusativo y CAÍDA del artículo",
+    "blockId": 4,
+    "description": "la școală, în oraș, pe stradă, la birou: el sustantivo tras preposición va SIN artículo, salvo con determinante (la școala noastră) y con «cu» instrumental/comitativo determinado (cu trenul, cu creionul, cu mâna).",
+    "prereqs": [
+      "r2-articulo-enclitico-sg"
+    ]
+  },
+  {
+    "id": "r4-preposiciones-gd",
+    "name": "Preposiciones de genitivo y de dativo",
+    "blockId": 4,
+    "description": "asupra, contra, deasupra, împotriva, înaintea (+ G) y las LOCUCIONES în fața, în favoarea, din cauza, în jurul (sustantivo articulado + G); datorită, grație, mulțumită, conform, potrivit (+ D). PRODUCTIVAS en A2: la forma es la del genitivo-dativo, que el alumno ya deriva, y lo único nuevo es saber qué preposición lo rige — eso se produce, no se reconoce.",
+    "prereqs": [
+      "r4-gd-definido-sg"
+    ]
+  },
+  {
+    "id": "r4-vocativo",
+    "name": "Vocativo: -e, -ule, -o, -lor, forma no marcada, y el registro",
+    "blockId": 4,
+    "description": "Ion!/Ioane! (tradicional), băiete!/băiatule!, domnule!, Mario!, fraților!, domnilor!; la forma no marcada (Maria!, Mihai!, Ion!) es la del diccionario y la segura. Lo ÚNICO derivable por regla: el plural animado = GD plural (-lor); los neutros no tienen vocativo. El singular se almacena POR LEMA (om → omule, nunca *oame; domn → domnule, nunca *domne; Ion → Ioane, nunca *Ioanule) con un campo de REGISTRO obligatorio: -ule sobre un común es brusco (doctorule!) y la forma cortés es nominal (domnule doctor!). En A1 sólo Domnule!/Doamnă! como fórmula.",
+    "prereqs": [
+      "r2-articulo-enclitico-sg",
+      "r4-gd-definido-pl"
+    ]
+  },
+  {
+    "id": "r5-condicional",
+    "name": "Condicional presente y perfecto: aș merge, aș fi mers",
+    "blockId": 5,
+    "description": "aș/ai/ar/am/ați/ar + infinitivo; perfecto con fi + participio.",
+    "prereqs": [
+      "r5-futuro-cuatro-registros"
+    ]
+  },
+  {
+    "id": "r5-futuro-cuatro-registros",
+    "name": "Los cuatro futuros: voi merge / o să merg / am să merg / oi merge",
+    "blockId": 5,
+    "description": "Receptivos los cuatro, productivos «o să» y «voi» (voi/vei/va/vom/veți/vor + infinitivo sin partícula). En B2 se vuelven elección de registro.",
+    "prereqs": [
+      "r3-futuro-o-sa"
+    ]
+  },
+  {
+    "id": "r5-imperativo-negativo",
+    "name": "Imperativo negativo: 2.ª sg. con INFINITIVO (nu veni!), 2.ª pl. como el afirmativo (nu veniți!)",
+    "blockId": 5,
+    "description": "nu veni!, nu te duce!, nu spune! en singular; nu veniți!, nu faceți! en plural, idénticos al afirmativo. Un generador con «negativo = infinitivo» produce *nu veni! a un plural.",
+    "prereqs": [
+      "r3-imperativo-afirmativo"
+    ]
+  },
+  {
+    "id": "r5-imperfect",
+    "name": "Imperfect: eram, făceam, mergeam",
+    "blockId": 5,
+    "description": "La formación del imperfecto en las 4 conjugaciones. El sincretismo que el español no tiene: 1.ª sg. = 1.ª pl. (eu mergeam / noi mergeam).",
+    "prereqs": [
+      "r3-presente-4-conjugaciones"
+    ]
+  },
+  {
+    "id": "r5-mai-mult-ca-perfect",
+    "name": "Mai-mult-ca-perfectul sintético: făcusem, mersesem",
+    "blockId": 5,
+    "description": "Una sola palabra, sin auxiliar: se enseña CONTRA el «había hecho» analítico.",
+    "prereqs": [
+      "r5-perifrasis-pasado"
+    ]
+  },
+  {
+    "id": "r5-participios",
+    "name": "Participios: regulares por clase e irregulares",
+    "blockId": 5,
+    "description": "Regulares: -at (luat, dat, stat), -ut (avut, vrut, putut, știut, văzut), -it (venit, dormit), -ât (coborât). Irregulares de verdad: spus, mers, scris, pus, fost, făcut (alternancia). Sólo éstos se guardan a mano.",
+    "prereqs": [
+      "r3-perfect-compus-intro"
+    ]
+  },
+  {
+    "id": "r5-perifrasis-pasado",
+    "name": "El pasado sin perífrasis: 2:1 y tiempo simple + adverbio",
+    "blockId": 5,
+    "description": "Hecho de base: el rumano estándar no tiene pasado simple vivo, así que am făcut = «hice» + «he hecho» (2:1). Y las tres perífrasis aspectuales del pasado español no tienen forma rumana: progresivo «estaba comiendo cuando llamó» → mâncam când a sunat (no *eram mâncând); prospectivo «iba a salir cuando sonó» → tocmai plecam când a sunat / eram pe cale să plec (no *mergeam să plec); retrospectivo «acababa de llegar» → tocmai sosise / abia sosise. El reparto imperfecto/indefinido en sí transfiere: NO se examina. «a ști» no admite la coerción incoativa de «supe» (am aflat, no *am știut): va en r9-falsos-amigos.",
+    "prereqs": [
+      "r5-imperfect",
+      "r5-participios"
+    ]
+  },
+  {
+    "id": "r5-reflexivos-ac-dat",
+    "name": "Reflexivos acusativo vs dativo: mă spăl / îmi spăl mâinile",
+    "blockId": 5,
+    "description": "El español distingue igual pero con UN pronombre (me lavo / me lavo las manos); el rumano con dos (mă / îmi).",
+    "prereqs": [
+      "r6-cliticos-acusativo",
+      "r6-cliticos-dativo"
+    ]
+  },
+  {
+    "id": "r6-cliticos-acusativo",
+    "name": "Clíticos de acusativo: mă, te, îl, o, ne, vă, îi, le",
+    "blockId": 6,
+    "description": "Îl văd, o văd, îi văd, le văd: formas y colocación proclítica con el verbo finito. A1 sólo la 3.ª persona en fórmulas.",
+    "prereqs": [
+      "r3-presente-4-conjugaciones"
+    ]
+  },
+  {
+    "id": "r6-cliticos-dativo",
+    "name": "Clíticos de dativo: îmi, îți, îi, ne, vă, le",
+    "blockId": 6,
+    "description": "îmi place, îți dau, îi spun: el dativo, con la homonimia îi (dat. sg.) / îi (ac. pl.).",
+    "prereqs": [
+      "r6-cliticos-acusativo"
+    ]
+  },
+  {
+    "id": "r6-cliticos-imperativo-gerunziu",
+    "name": "El clúster enclítico segmentado y la vocal de legătură: dă-mi-o, văzându-l",
+    "blockId": 6,
+    "description": "EL PUNTO NO ES DE COLOCACIÓN, y el nombre y esta línea se reescribieron el 2026-09-04 por eso: la colocación entera —enclítica con el imperativo afirmativo, proclítica otra vez con el negativo— es GRATIS por DOS vías (es. «dámelo» / «no te vayas»; pt. «dá-mo» / «não te vás»), y el propio motivo ya lo concedía para el español. Lo que ninguna de las dos lenguas del alumno le da: (1) el clúster enclítico se mantiene SEGMENTADO, un guion por clítico —«dă-mi-o», «dă-mi-l»—, mientras el portugués lo FUNDE en un solo morfema («dá-mo», «deu-lho»), que es la interferencia concreta que el punto mide; y (2) el gerunziu inserta una VOCAL DE LEGĂTURĂ ante el clítico —«văzându-l», «spunându-i», «ducându-se»—, y sin ella la forma no existe («văzând-l» 0). ⚠ Y la vocal NO es uniforme: ante «o» la norma es NO ponerla («văzând-o» 27 frente a «văzându-o» 4), así que todo ítem de ese eje va con objeto MASCULINO o NEUTRO y eso está en gate. Los dos hechos son el MISMO principio silábico que gobierna r6-contracciones-cliticos: el clítico asilábico necesita una vocal donde apoyarse, y el gerundio se la suministra igual que el auxiliar en «l-am văzut».",
+    "prereqs": [
+      "r6-contracciones-cliticos",
+      "r5-imperativo-negativo"
+    ]
+  },
+  {
+    "id": "r6-contracciones-cliticos",
+    "name": "El guion del clítico: de qué lado se pega, y dónde NO se pega",
+    "blockId": 6,
+    "description": "EL PUNTO NO ES DE COLOCACIÓN, ES DE ORTOGRAFÍA, y el nombre y esta línea se reescribieron el 2026-09-04 por eso: la colocación entera es GRATIS para este alumno por dos vías —el español da el orden dativo<acusativo y la proclisis con verbo finito, y el portugués europeo C2 da además que el clítico cuelga del AUXILIAR y nunca del participio (tinha-mo dado) y la idea misma de un clítico pegado con guion (dá-mo, deu-lho)—. Lo que no le da ninguna de las dos: EL GUION RUMANO NO MARCA ENCLISIS COMO EL PORTUGUÉS, MARCA SÍLABA, y por eso «l-am văzut» lo lleva siendo PROCLÍTICO, cosa que el portugués no hace jamás («não me deu», sin guion). De ahí las dos caras que el punto examina: (1) el clítico ASILÁBICO se apoya con guion en la palabra vecina y el SILÁBICO va suelto —«mi-o dă» frente a «mi le dă»—; y (2) por eso mismo «o», que es el único acusativo silábico, es el único que puede ir enclítico a un participio acabado en consonante —«a văzut-o» frente a «l-a văzut», con «a văzut-l» imposible porque la coda «-tl» no existe en rumano—. ⚠ Y NO se llama «obligatorias», que es lo que decía y era falso: con «nu» la contracción es OPCIONAL y así está publicado en r3-negacion-nu, que acepta «nu îl», «nu îmi» y «nu am» como alternativas; con el auxiliar no lo es. ⚠ «într-o» y «dintr-un» SALEN de aquí: no son clíticos sino preposición + artículo (DOOM3 s.v. într-un), estaban en esta línea por listar formas en vez de decir qué se examina, su calco lo bloquea el portugués (num, dum, no, na) y «în o» 76 y «prin un» 63 están atestados, o sea §0.3 viejas y no malas.",
+    "prereqs": [
+      "r6-cliticos-dativo",
+      "r3-perfect-compus-intro"
+    ]
+  },
+  {
+    "id": "r6-doblado-cliticos",
+    "name": "Doblado del clítico: obligatorio con el objeto DIRECTO marcado con pe",
+    "blockId": 6,
+    "description": "Îl văd pe Ion, o aștept pe Maria: el objeto DIRECTO humano determinado marcado con «pe» se dobla con el clítico, y *Văd pe Ion está mal (GALR: con nombre propio de persona y con nombre común determinado la duplicación es obligatoria). DOS LÍMITES, que no son matices: (a) con un plural ESCUETO no específico marcado con «pe» la duplicación no está exigida, así que el contexto tiene que forzar la lectura específica; (b) con el objeto INDIRECTO NO vale — GALR II («Anticiparea și reluarea complementului indirect») hace el doblado obligatorio con pronombre fuerte (Mie ÎMI place) o con el OI ANTEPUESTO (Mariei ÎI dau cartea), y sólo OPCIONAL con OI léxico pospuesto: «Dau cartea Mariei» es correcto. La v0 de esta línea decía «el objeto humano determinado se dobla SIEMPRE» y ponía «îi dau Mariei cartea» de ejemplo, que es justo el caso donde es opcional.",
+    "prereqs": [
+      "r6-pe-regla-operativa",
+      "r6-cliticos-acusativo"
+    ]
+  },
+  {
+    "id": "r6-pe-regla-operativa",
+    "name": "Marcador «pe» de objeto directo",
+    "blockId": 6,
+    "description": "Obligatorio con humano determinado y con pronombres (pe mine, pe cine, pe care); ausente con indefinido genérico (caut un doctor). Es la «a» personal del español casi 1:1: donde coincide no se examina.",
+    "prereqs": [
+      "r6-cliticos-acusativo"
+    ]
+  },
+  {
+    "id": "r7-anti-progresivo",
+    "name": "Anti-calco: el indicativo de «a fi» + gerunziu eventivo no existe (*sunt mâncând)",
+    "blockId": 7,
+    "description": "El rumano no tiene progresivo gramaticalizado: «estoy comiendo» es mănânc / tocmai mănânc / stau și mănânc; en registro formal sunt în curs de…. («sunt pe cale să mănânc» es «estoy A PUNTO DE comer», prospectivo: no vale como clave; vive en r5-perifrasis-pasado.) Umbral duro de B1; el mismo hecho en pasado se enseña en A2 (r5-perifrasis-pasado).",
+    "prereqs": [
+      "r7-gerunziu",
+      "r5-perifrasis-pasado"
+    ]
+  },
+  {
+    "id": "r7-conjuntivo-perfecto",
+    "name": "Conjuntivo perfecto: să fi mers",
+    "blockId": 7,
+    "description": "să fi + participio, INVARIABLE EN PERSONA, en subordinadas de anterioridad. «fi» es el infinitivo corto fijado como auxiliar —el mismo de aș fi mers, voi fi mers, o fi mers— y no existe *să fiu mers en ningún registro (GALR). El borde, escrito el 2026-09-03 porque la palabra suelta es más ancha que la verdad: en la PASIVA concuerda el participio léxico (să fi fost văzut / văzută / văzuți / văzute), e invariable sigue siendo «fi», no la perífrasis; y con verbo REFLEXIVO varía el clítico que precede a «fi» (să mă fi dus / să te fi dus), así que ahí un hueco sin testigo de persona dejaría de estar determinado. Choca con r7-pasiva-impersonal: leer los dos juntos.",
+    "prereqs": [
+      "r7-conjuntivo-presente",
+      "r5-participios"
+    ]
+  },
+  {
+    "id": "r7-conjuntivo-presente",
+    "name": "Conjuntivo presente completo y las irregulares de 3.ª",
+    "blockId": 7,
+    "description": "Donde la 3.ª diverge del indicativo: este→să fie, are→să aibă, dă→să dea, stă→să stea, poate→să poată, merge→să meargă, face→să facă. La coincidencia de a lua, a vrea, a ști y a scrie es SÓLO DEL SINGULAR (ia/să ia, vrea/să vrea, știe/să știe, scrie/să scrie): contra la 3.ª PLURAL del indicativo (iau, vor, știu, scriu) las cuatro divergen, y esa casilla es construible — «Nu vreau ca ei să ia mașina» frente a «ei iau mașina». La v0 de esta línea decía que esos cuatro «no se construyen» sin el «en singular», y con eso cerraba cuatro verbos de altísima frecuencia por una descripción falsa de la lengua. Queda ABIERTA para un lote futuro; el lote 17 no la usó porque ya estaba cerrado en 8/8/8.",
+    "prereqs": [
+      "r3-sa-vs-infinitivo"
+    ]
+  },
+  {
+    "id": "r7-disparadores-sa",
+    "name": "Los ~25 disparadores del conjuntivo, en dos columnas",
+    "blockId": 7,
+    "description": "Los que coinciden con el español (e posibil să, sper să, înainte să) y los que DIVERGEN: el sujeto idéntico (vreau să merg) y ca … să con sujeto expreso (vreau ca el să vină).",
+    "prereqs": [
+      "r7-conjuntivo-presente"
+    ]
+  },
+  {
+    "id": "r7-gerunziu",
+    "name": "Gerunziu: mergând, făcând, y su restricción",
+    "blockId": 7,
+    "description": "La forma en -ând/-ind, sus usos adverbiales, y lo que NO hace: progresivo. La desinencia es una DISYUNCIÓN (GALR, formas no personales): -ind en la 4.ª conjugación en -i O cuando el tema acaba en i (vorbind, citind, scriind, știind, tăind); -ând en todo lo demás, la conjugación en -î incluida (mergând, coborând — no *coborind). NI LA CONJUGACIÓN SOLA NI EL TEMA SOLO BASTAN, y ésa es la corrección del 2026-09-03: la v0 decía «la decide el final del TEMA, no la conjugación» y ponía de ejemplo «fugind», cuyo tema es «fug» y no acaba ni en i ni en palatal — el ejemplo refutaba la regla que ilustraba. Los temas de a vorbi, a citi y a merge acaban los tres en consonante (vorb, cit, merg) y dan -ind, -ind y -ând: lo que los separa es la conjugación.",
+    "prereqs": [
+      "r3-presente-4-conjugaciones"
+    ]
+  },
+  {
+    "id": "r7-infinitivo-residual",
+    "name": "Infinitivo corto en sus usos residuales; el largo como sustantivo",
+    "blockId": 7,
+    "description": "Tras preposición (înainte de a pleca, fără a spune), tras a putea sin partícula (pot merge, nunca *pot a merge), y el largo en -re como sustantivo (mâncare, plimbare).",
+    "prereqs": [
+      "r3-sa-vs-infinitivo"
+    ]
+  },
+  {
+    "id": "r7-pasiva-impersonal",
+    "name": "Pasiva con a fi, pasiva refleja e impersonal",
+    "blockId": 7,
+    "description": "este făcut, a fost construită (concordado); se face, se vinde; zice lumea, se spune că.",
+    "prereqs": [
+      "r5-participios",
+      "r6-doblado-cliticos"
+    ]
+  },
+  {
+    "id": "r7-supin",
+    "name": "Supin: mașină de spălat, două cămăși de spălat, nu «vreau de plecat»",
+    "blockId": 7,
+    "description": "Forma no personal exclusiva del rumano: «de» + participio INVARIABLE con valor de infinitivo/finalidad. La mala NO es «de» + infinitivo corto (*mașină de spăla): eso es agramatical y aun así improducible —hay que borrar la partícula «a», que el español no licencia— y encima es homógrafo de «de» conjuncional + perfecto simple. La mala que un hispanohablante produce de verdad es «de a» + infinitivo (*mașină de a spăla), y sólo es mala AQUÍ: «de a» + infinitivo es rumano correcto y corriente (2.591 apariciones en el corpus del proyecto), pero con nombre CONCRETO sin estructura argumental da cero — con nombre abstracto es lo normal (dorința de a pleca, teama de a greși). Y el supino NO CONCUERDA, a diferencia del participio adjetivo que enseña el prerrequisito r5-participios: «două cămăși de spălat» frente a «două cămăși spălate».",
+    "prereqs": [
+      "r5-participios"
+    ]
+  },
+  {
+    "id": "r8-circunstanciales",
+    "name": "Circunstanciales: el español mueve el MODO, el rumano mueve la CONJUNCIÓN",
+    "blockId": 8,
+    "description": "deși y cu toate că (concesiva factual): SÓLO indicativo — lo hipotético no se dice con deși, se cambia a chiar dacă (indicativo o condicional, nunca să). dacă: indicativo (real) o condicional en las DOS cláusulas (dacă aș avea bani, aș pleca), nunca să. El să de las circunstanciales vive en finales y temporales: ca să, pentru ca … să, fără să, înainte să, în loc să, până să. Causa: pentru că, fiindcă, deoarece, întrucât. Tiempo: când, în timp ce, după ce, până când.",
+    "prereqs": [
+      "r7-conjuntivo-presente",
+      "r5-condicional"
+    ]
+  },
+  {
+    "id": "r8-comparativo",
+    "name": "Comparativo y superlativo: mai … decât / ca, la fel de … ca, cel mai",
+    "blockId": 8,
+    "description": "El TÉRMINO DE COMPARACIÓN NO SE EXAMINA: «decât» y «ca» son los DOS el comparativo de superioridad tras «mai» (mai mare decât mine / mai mare ca mine), con «decât» más frecuente y neutro y «ca» corriente y algo menos formal. Medido en el corpus del proyecto, no supuesto: mai+ADJ+decât (contando la grafía antigua en î) = 514 frente a mai+ADJ+ca = 100, en prosa corriente («Tu nu ești mai mare CA mine?», «alta mai frumoasă CA ea»). Un hueco ahí no está determinado. AVISO para quien escriba aquí: «ca» en el comparativo NO es el «como» español de igualdad —la igualdad es «la fel de … ca» / «tot atât de … ca»—, y emparejarlos le enseña al alumno que «ca» marca igualdad. Lo que el punto SÍ examina es (a) la concordancia de cel/cea/cei/cele, con su frontera: «cel» concuerda siempre que haya un NOMBRE al que determinar —incluso cuando lo que «mai» modifica es un adverbio o un participio, «din lecția CEA MAI BINE preparată»— y queda invariable cuando el superlativo modifica al VERBO y no hay nombre («ea cântă cel mai bine»); y (b) el corte bine/bun (vorbește mai bine / mâncarea este mai bună).",
+    "prereqs": [
+      "r4-cel-proforma"
+    ]
+  },
+  {
+    "id": "r8-completivas-ca-sa",
+    "name": "Completivas: că vs să, y ca … să con sujeto expreso",
+    "blockId": 8,
+    "description": "cred că vine / vreau să vină / vreau ca el să vină: indicativo vs conjuntivo, y la partícula «ca» cuando algo se ADELANTA a posición preverbal. CORREGIDO EL 2026-09-03: la regla NO es «ca cuando hay sujeto expreso» — eso describe el caso frecuente, no la condición. «Ca» se licencia por haber un CONSTITUYENTE ADELANTADO delante de «să», sea sujeto o no (Vreau CA PÂNĂ MÂINE să termine Ion cartea, con adverbial adelantado y el sujeto detrás), y un sujeto expreso POSPUESTO no lo pide (Vreau să vină el, sin «ca»). El punto examina esa colocación.",
+    "prereqs": [
+      "r7-disparadores-sa"
+    ]
+  },
+  {
+    "id": "r8-conectores-argumentativos",
+    "name": "Conectores del texto argumentativo",
+    "blockId": 8,
+    "description": "prin urmare, în schimb, pe de altă parte, cu toate acestea, de altfel, totuși: los 8+ que el descriptor exige.",
+    "prereqs": [
+      "r8-circunstanciales"
+    ]
+  },
+  {
+    "id": "r8-discurso-indirecto",
+    "name": "Discurso indirecto sin consecutio temporum obligatoria",
+    "blockId": 8,
+    "description": "A spus că vine es la forma no marcada; a spus că venea es gramatical (imperfecto durativo/simultáneo). Lo que el rumano no tiene es el retraso OBLIGATORIO del español. BLOQUEADO: ver «abierto».",
+    "prereqs": [
+      "r5-perifrasis-pasado"
+    ]
+  },
+  {
+    "id": "r8-relativas-pe-care",
+    "name": "Relativas de OD: «pe care» + reluare clitică, las DOS piezas a la vez",
+    "blockId": 8,
+    "description": "omul care vine (sujeto, sin nada) / omul PE care ÎL văd (objeto: marca «pe» delante y clítico coindexado junto al verbo). RENOMBRADO EL 2026-09-03: no es «la preposición pe», es la construcción entera, y el nombre importa porque NO EXISTE NINGÚN CONTEXTO EN QUE FALTE SÓLO «pe» — si el clítico está y «pe» no, la frase no es un error sino la RELATIVA RESUMPTIVA del rumano coloquial y dialectal (Croitor, Limba Română 1/2016), o sea habla real. La marca vale también con INANIMADOS (cartea pe care am citit-o), donde el rumano va más lejos que la «a» personal española: ahí es donde el hispanohablante falla más, no menos.",
+    "prereqs": [
+      "r6-pe-regla-operativa",
+      "r6-doblado-cliticos"
+    ]
+  },
+  {
+    "id": "r9-colocaciones",
+    "name": "Colocaciones y unidades fraseológicas",
+    "blockId": 9,
+    "description": "a lua o decizie, a-și da seama, a ține cont de, a face față, a pune la punct; a bate câmpii, a-i pica fisa, a o da în bară. 200 + 100.",
+    "prereqs": [
+      "r9-familias-derivativas"
+    ]
+  },
+  {
+    "id": "r9-estratos-dobletes",
+    "name": "Dobletes de estrato como elección estilística",
+    "blockId": 9,
+    "description": "a grăi / a vorbi / a discuta; nevastă / soție; slobod / liber; a sfârși / a termina / a finaliza; a se prăpădi / a muri / a deceda.",
+    "prereqs": [
+      "r9-colocaciones"
+    ]
+  },
+  {
+    "id": "r9-falsos-amigos",
+    "name": "Falsos amigos ES-RO",
+    "blockId": 9,
+    "description": "a supăra ≠ superar, cald = caliente, larg = ancho, a merge = ir, prost = tonto, plic = sobre, comod, a pretinde, a realiza, a suporta, a ține ≠ tener, a pleca = irse, masă, a uita vs a se uita; y a ști ≠ «supe» (la coerción incoativa del indefinido no transfiere: am aflat). 30 en A2, 50 en B1, 80 en B2. CRITERIO: falso amigo = existe cognado español reconocible con significado distinto; sin cognado (a păstra) va a los opacos; «a asista la» NO es falso amigo para un hispanohablante. El fichero heredado se revisa entrada por entrada con este filtro.",
+    "prereqs": [
+      "r9-nucleo-a1"
+    ]
+  },
+  {
+    "id": "r9-familias-derivativas",
+    "name": "Familias derivativas: a lucra → lucru / lucrător / lucrare / a prelucra",
+    "blockId": 9,
+    "description": "Sufijos -tor/-toare, -ime, -ie/-ție, -eală, -esc, -uleț/-ică/-uț; prefijos re-, ne-, des-, în-, stră-. 30 familias completas.",
+    "prereqs": [
+      "r9-nucleo-a1"
+    ]
+  },
+  {
+    "id": "r9-nucleo-a1",
+    "name": "Núcleo léxico A1 por frecuencia (600 lemas)",
+    "blockId": 9,
+    "description": "Identidad, familia, números, hora, días, comida, casa, piață, transporte, cuerpo, tiempo, colores, ropa. Por frecuencia, no por lo que salga en los relatos.",
+    "prereqs": []
+  },
+  {
+    "id": "r9-opacos",
+    "name": "Los lemas OPACOS: sin cognado español reconocible",
+    "blockId": 9,
+    "description": "a vorbi, a citi, a trebui, a plăti, a găti, prieten, nevoie, oraș, ceas, ieftin, gata, murdar, geam, a sosi, zăpadă, poveste, veste, a păstra. CRITERIO: opaco = no existe cognado español reconocible, gane quien gane la etimología (a păstra es de origen disputado, DEX búlgaro / Ciorănescu latín tardío, y es opaco igual: nada lleva de «pasto» a «guardar»). Doble exposición en el SRS.",
+    "prereqs": [
+      "r9-nucleo-a1"
+    ]
+  },
+  {
+    "id": "r9-referencias-culturales",
+    "name": "Referencias culturales compartidas: Caragiale, 1989, mici, Dacia, mitul mioritic",
+    "blockId": 9,
+    "description": "50 referencias que un hablante culto reconoce sin glosa; Dracula como malentendido occidental.",
+    "prereqs": [
+      "r9-vocabulario-comunista"
+    ]
+  },
+  {
+    "id": "r9-vocabulario-comunista",
+    "name": "Vocabulario del período comunista y su reutilización irónica",
+    "blockId": 9,
+    "description": "tovarăș, ședință, plan cincinal, «ca la Comitetul Central»: léxico que circula en la conversación adulta con carga irónica.",
+    "prereqs": [
+      "r9-colocaciones"
+    ]
+  }
+]

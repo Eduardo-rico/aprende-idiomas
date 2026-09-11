@@ -1,1 +1,1054 @@
-[]
+[
+  {
+    "id": "l1-acento-penultima",
+    "name": "El acento sale de la cantidad: la regla de la penúltima",
+    "blockId": 1,
+    "description": "Penúltima larga → tónica (amīcus); penúltima breve → antepenúltima (dominus). El acento latino no se escribe porque se deduce, y sólo se deduce si hay mácrons.",
+    "prereqs": [
+      "l1-cantidad-fonemica"
+    ]
+  },
+  {
+    "id": "l1-cantidad-fonemica",
+    "name": "La cantidad vocálica distingue palabras",
+    "blockId": 1,
+    "description": "mălus (malo) frente a mālus (manzano); vĕnit (viene) frente a vēnit (vino) — un presente y un perfecto separados por una vocal larga. El español no distingue cantidad y el alumno no la oye ni la busca.",
+    "prereqs": []
+  },
+  {
+    "id": "l1-eclesiastica-ae",
+    "name": "ae y oe se leen /e/",
+    "blockId": 1,
+    "description": "caelum = «chélum», poena = «péna». Es el punto donde la voz italiana NO ayuda: el italiano no tiene la grafía «ae» y leería /ka.e/. Por eso existe la respelización.",
+    "prereqs": [
+      "l1-eclesiastica-ce"
+    ]
+  },
+  {
+    "id": "l1-eclesiastica-ce",
+    "name": "Lectura eclesiástica: ce/ci, ge/gi, sc+e/i",
+    "blockId": 1,
+    "description": "Cicerō = «Chíchero», descendit = «deshéndit», regem = «réyem». El italiano lo da gratis y por eso la voz funciona.",
+    "prereqs": [
+      "l1-uv-ij"
+    ]
+  },
+  {
+    "id": "l1-eclesiastica-gn",
+    "name": "gn se lee /ɲ/",
+    "blockId": 1,
+    "description": "agnus = «áñus», magnus = «máñus», rēgnum = «réñum». Es la regla de lectura eclesiástica más frecuente de todas y el italiano la da gratis.",
+    "prereqs": [
+      "l1-eclesiastica-ce"
+    ]
+  },
+  {
+    "id": "l1-eclesiastica-ti",
+    "name": "ti + vocal se lee /tsi/",
+    "blockId": 1,
+    "description": "grātia = «grátsia», nātiō = «natsio». El otro agujero del G2P italiano.",
+    "prereqs": [
+      "l1-eclesiastica-ce"
+    ]
+  },
+  {
+    "id": "l1-h-muda",
+    "name": "La h es muda y no cuenta",
+    "blockId": 1,
+    "description": "En la lectura eclesiástica «h» no suena y no impide la elisión ni cierra sílaba: «mihi» = «mí-i».",
+    "prereqs": [
+      "l1-eclesiastica-ce"
+    ]
+  },
+  {
+    "id": "l1-larga-por-posicion",
+    "name": "Larga por naturaleza y larga por posición",
+    "blockId": 1,
+    "description": "Una vocal breve seguida de dos consonantes cuenta como sílaba larga para el acento y para el verso: «magíster» es llana porque «gis» está cerrada por s, y «ténebrae» es esdrújula porque «br» es muta cum liquida y NO alarga.",
+    "prereqs": [
+      "l1-acento-penultima"
+    ]
+  },
+  {
+    "id": "l1-uv-ij",
+    "name": "Convención u/v e i/j",
+    "blockId": 1,
+    "description": "El proyecto distingue u de v y usa «i» para i y para j: «venit», no «uenit»; «Iesus», no «Jesus». No es tipografía: escribir «v» es lo que hace que la voz italiana produzca el /v/ eclesiástico y no el /w/ restituido.",
+    "prereqs": []
+  },
+  {
+    "id": "l10-conectores",
+    "name": "Los conectores pospuestos: autem, enim, vērō, quidem",
+    "blockId": 10,
+    "description": "Nunca van primeros: ocupan la segunda posición de su oración. «Caesar autem…» conecta con lo anterior, no con «Caesar».",
+    "prereqs": [
+      "l10-orden-neutro"
+    ]
+  },
+  {
+    "id": "l10-elipsis",
+    "name": "Elipsis del verbo, sobre todo de «est»",
+    "blockId": 10,
+    "description": "«Omnia praeclāra rāra» — sin verbo. La cópula se sobreentiende con muchísima frecuencia.",
+    "prereqs": [
+      "l10-hiperbaton-prosa"
+    ]
+  },
+  {
+    "id": "l10-enfasis-por-posicion",
+    "name": "La posición marca énfasis, no función",
+    "blockId": 10,
+    "description": "Primera y última posición son las enfáticas. Al liberar el orden de la función, el latín lo dedica entero al énfasis.",
+    "prereqs": [
+      "l10-orden-neutro"
+    ]
+  },
+  {
+    "id": "l10-hiperbaton-prosa",
+    "name": "Hipérbaton en prosa",
+    "blockId": 10,
+    "description": "Adjetivo y sustantivo separados por varias palabras ya en Cicerón, no sólo en verso.",
+    "prereqs": [
+      "l10-enfasis-por-posicion",
+      "l4-concordancia"
+    ]
+  },
+  {
+    "id": "l10-orden-neutro",
+    "name": "El orden neutro es SOV, y es sólo una tendencia",
+    "blockId": 10,
+    "description": "El verbo tiende al final, pero es estadística y no gramática. Y el genitivo NO precede a su núcleo: medido sobre los 227.301 tokens del treebank, el 73,6 % va pospuesto (y en el subcorpus más clásico, el 59,2 %). La regla escolar de que el genitivo antecede es falsa.",
+    "prereqs": [
+      "l3-funcion-por-desinencia"
+    ]
+  },
+  {
+    "id": "l10-periodo",
+    "name": "Analizar un período de 60-90 palabras",
+    "blockId": 10,
+    "description": "Encontrar el verbo principal, los grados de subordinación y las correlaciones. Es la síntesis de todo el peldaño.",
+    "prereqs": [
+      "l9-correlaciones",
+      "l10-hiperbaton-prosa",
+      "l7-consecutio"
+    ]
+  },
+  {
+    "id": "l10-que-enclitico",
+    "name": "El -que enclítico",
+    "blockId": 10,
+    "description": "«senātus populusque» — la conjunción va pegada a la SEGUNDA palabra, no entre las dos.",
+    "prereqs": []
+  },
+  {
+    "id": "l11-apofonia",
+    "name": "La apofonía del compuesto",
+    "blockId": 11,
+    "description": "faciō → efficiō, capiō → accipiō, teneō → retineō. La vocal de la raíz cambia al componer, y el alumno no reconoce el simple dentro del compuesto.",
+    "prereqs": [
+      "l11-preverbios"
+    ]
+  },
+  {
+    "id": "l11-falsos-regalos",
+    "name": "Los falsos regalos: la forma se reconoce y el sentido no",
+    "blockId": 11,
+    "description": "hostis (194 en el treebank: enemigo público, frente a «hospes», que es huésped Y anfitrión a la vez), virtūs (187: valor y hombría, no virtud moral), familia (33: toda la casa incluidos los esclavos), dēbeō (deber dinero, no obligación moral), probō (aprobar y probar), parēns (progenitor, no pariente). Y el par de cantidad: «liber» (libro, i breve), «līber» (libre, ī larga) y «līberī» (los hijos) — tres palabras que sin mácrón se escriben igual.",
+    "prereqs": [
+      "l11-nucleo-800"
+    ]
+  },
+  {
+    "id": "l11-falsos-regalos-cultos",
+    "name": "Los falsos regalos cultos de la prosa abstracta",
+    "blockId": 11,
+    "description": "ratiō no es «razón» en la mayoría de sus usos; fidēs no es «fe»; officium no es «oficio»; auctōritās no es «autoridad» sin más. Son los que más daño hacen porque aparecen en el argumento.",
+    "prereqs": [
+      "l11-falsos-regalos"
+    ]
+  },
+  {
+    "id": "l11-lexico-militar",
+    "name": "El vocabulario militar y político de César",
+    "blockId": 11,
+    "description": "legiō, cohors, castra, imperium, prōvincia, lēgātus, obsēs, frūmentum. Cerrado, muy frecuente en L2 y casi ausente después.",
+    "prereqs": [
+      "l11-nucleo-800"
+    ]
+  },
+  {
+    "id": "l11-nucleo-800",
+    "name": "El núcleo de 800 lemas por frecuencia",
+    "blockId": 11,
+    "description": "Seleccionados sobre los treebanks por frecuencia, no por lo que salga en los textos — el error diagnosticado en portugués, donde el catálogo se derivó de las historias y acabó con «acarajé» pero sin los días de la semana.",
+    "prereqs": []
+  },
+  {
+    "id": "l11-numerales",
+    "name": "Numerales cardinales y ordinales",
+    "blockId": 11,
+    "description": "Hasta mil. Sólo declinan ūnus, duo, trēs y las centenas; los demás son invariables.",
+    "prereqs": [
+      "l11-nucleo-800"
+    ]
+  },
+  {
+    "id": "l11-preposiciones-caso",
+    "name": "Preposiciones que rigen dos casos",
+    "blockId": 11,
+    "description": "in, sub, super: con acusativo indican dirección, con ablativo situación. «in urbem» (hacia la ciudad) frente a «in urbe» (en la ciudad).",
+    "prereqs": [
+      "l3-ablativo-abanico",
+      "l3-acusativo-od"
+    ]
+  },
+  {
+    "id": "l11-preverbios",
+    "name": "Los preverbios y lo que hacen al verbo",
+    "blockId": 11,
+    "description": "ad-, ab-, con-, dē-, ex-, in-, prae-, prō-, sub-, trāns-. Componen el 40 % del vocabulario verbal y son productivos: sabiendo el simple y el preverbio se adivina el compuesto.",
+    "prereqs": [
+      "l11-nucleo-800"
+    ]
+  },
+  {
+    "id": "l11-vulgata-lexico",
+    "name": "El léxico cristiano de la Vulgata",
+    "blockId": 11,
+    "description": "Palabras nuevas (angelus, apostolus, baptizō) y palabras clásicas con sentido nuevo (grātia, caritās, saeculum, verbum). Es la puerta de entrada del curso y conviene decir en qué se aparta.",
+    "prereqs": [
+      "l11-nucleo-800"
+    ]
+  },
+  {
+    "id": "l12-distico",
+    "name": "El dístico elegíaco",
+    "blockId": 12,
+    "description": "Hexámetro más pentámetro, con la cesura del pentámetro obligatoria. Es el metro de Ovidio elegíaco y de Propercio.",
+    "prereqs": [
+      "l12-hexametro"
+    ]
+  },
+  {
+    "id": "l12-elision",
+    "name": "Elisión y sinalefa",
+    "blockId": 12,
+    "description": "Vocal o -m final ante vocal o h- inicial: la sílaba desaparece del cómputo. Sin esto el verso no cuadra nunca.",
+    "prereqs": [
+      "l12-hexametro",
+      "l1-h-muda"
+    ]
+  },
+  {
+    "id": "l12-hexametro",
+    "name": "El hexámetro dactílico y sus cesuras",
+    "blockId": 12,
+    "description": "Seis pies, dáctilos sustituibles por espondeos salvo el quinto, y la cesura pentemímera como corte habitual.",
+    "prereqs": [
+      "l1-larga-por-posicion"
+    ]
+  },
+  {
+    "id": "l12-hiperbaton-verso",
+    "name": "Hipérbaton del verso y disposición envolvente",
+    "blockId": 12,
+    "description": "Adjetivo y núcleo separados por medio verso, con el orden aBab o abAB. En L1 el alumno aprendió que la posición no da la función; aquí aprende que tampoco la vecindad.",
+    "prereqs": [
+      "l10-hiperbaton-prosa"
+    ]
+  },
+  {
+    "id": "l12-lexico-poetico",
+    "name": "El léxico poético es otro estrato",
+    "blockId": 12,
+    "description": "ēnsis por gladius, puppis por nāvis, aethēr, ratis, unda (u BREVE y en nominativo: el currículo escribía «ūndā», con un mácron que no existe y en ablativo, dentro de un curso cuyo gate es la cantidad). No son sinónimos elegantes: son las palabras que el hexámetro admite.",
+    "prereqs": [
+      "l11-nucleo-800"
+    ]
+  },
+  {
+    "id": "l12-licencias",
+    "name": "Las licencias del verso",
+    "blockId": 12,
+    "description": "Dativo de agente, genitivo y acusativo de tipo griego, acusativo de relación, síncopa (amāsse), tmesis, plural poético por singular.",
+    "prereqs": [
+      "l12-hiperbaton-verso"
+    ]
+  },
+  {
+    "id": "l13-carta-vs-discurso",
+    "name": "La carta de Cicerón no es el discurso de Cicerón",
+    "blockId": 13,
+    "description": "Las cartas son su registro llano —frases cortas, elipsis, griego intercalado— y los discursos su registro periódico. Por eso el currículo lee las cartas primero.",
+    "prereqs": [
+      "l13-generos-prosa"
+    ]
+  },
+  {
+    "id": "l13-generos-prosa",
+    "name": "Los tres géneros de la prosa de L3",
+    "blockId": 13,
+    "description": "Discurso judicial, historia y monografía: distinta persona, distinto tiempo dominante, distinta densidad de período.",
+    "prereqs": [
+      "l10-periodo"
+    ]
+  },
+  {
+    "id": "l13-tres-lecturas",
+    "name": "Las tres pronunciaciones y por qué el curso elige una",
+    "blockId": 13,
+    "description": "Eclesiástica, restituida y tradicional de cada país. El curso usa la eclesiástica y lo declara: no es la única legítima ni pretende ser la de Cicerón.",
+    "prereqs": [
+      "l1-eclesiastica-ce"
+    ]
+  },
+  {
+    "id": "l13-vulgata-sintaxis",
+    "name": "La sintaxis de la Vulgata: parataxis y orden romance",
+    "blockId": 13,
+    "description": "Jerónimo coordina donde el clásico subordina, y su orden de palabras se parece mucho más al español. Por eso el curso empieza aquí.",
+    "prereqs": []
+  },
+  {
+    "id": "l2-cuarta",
+    "name": "Cuarta declinación y su choque con la segunda",
+    "blockId": 2,
+    "description": "manus/manūs, exercitus/exercitūs. El nominativo en «-us» es idéntico al de la segunda y sólo el genitivo los separa — con la cantidad como única marca en «-ūs».",
+    "prereqs": [
+      "l2-segunda"
+    ]
+  },
+  {
+    "id": "l2-genero-3a",
+    "name": "El género de la tercera no se deduce del nominativo",
+    "blockId": 2,
+    "description": "mōns es masculino, mēns femenino, mare neutro, y las tres terminan igual de poco informativas. El género se guarda con el lema.",
+    "prereqs": [
+      "l2-tercera-consonante"
+    ]
+  },
+  {
+    "id": "l2-genitivo-clave",
+    "name": "El genitivo identifica la declinación, no el nominativo",
+    "blockId": 2,
+    "description": "De «rēx» no se deduce nada; de «rēgis» sale todo el paradigma. La entrada del lexicón es lema + genitivo, y el alumno tiene que aprender a leerla así.",
+    "prereqs": []
+  },
+  {
+    "id": "l2-neutro-a",
+    "name": "La -a de neutro plural: el falso regalo más caro",
+    "blockId": 2,
+    "description": "templum/templa, bellum/bella, arma, castra. En español «-a» marca femenino singular; en latín marca TAMBIÉN neutro plural, y el alumno lee «arma» como «un arma» durante meses.",
+    "prereqs": [
+      "l2-segunda"
+    ]
+  },
+  {
+    "id": "l2-neutro-regla",
+    "name": "En el neutro, nominativo y acusativo coinciden SIEMPRE",
+    "blockId": 2,
+    "description": "Es la regla que salva y la que confunde: salva porque no hay que aprender dos formas, confunde porque la forma sola no dice si es sujeto u objeto.",
+    "prereqs": [
+      "l2-neutro-a"
+    ]
+  },
+  {
+    "id": "l2-plural-tantum",
+    "name": "Plurales que se traducen en singular",
+    "blockId": 2,
+    "description": "castra (el campamento), arma (las armas, pero también el equipo de UN soldado), litterae (la carta), copiae (las tropas). La forma es plural y el sentido no siempre.",
+    "prereqs": [
+      "l2-neutro-a"
+    ]
+  },
+  {
+    "id": "l2-primera",
+    "name": "Primera declinación y su sincretismo en -ae",
+    "blockId": 2,
+    "description": "rosa, rosae. La terminación «-ae» es genitivo singular, dativo singular Y nominativo plural: tres funciones en una forma, y el contexto decide.",
+    "prereqs": [
+      "l2-genitivo-clave"
+    ]
+  },
+  {
+    "id": "l2-quinta",
+    "name": "Quinta declinación",
+    "blockId": 2,
+    "description": "rēs/reī, diēs/diēī. Pocos lemas, femeninos salvo «diēs» y «merīdiēs», que son masculinos por defecto.",
+    "prereqs": [
+      "l2-genitivo-clave"
+    ]
+  },
+  {
+    "id": "l2-segunda",
+    "name": "Segunda declinación, incluidos los -er y el vocativo en -e",
+    "blockId": 2,
+    "description": "dominus/dominī, puer/puerī, ager/agrī (con síncopa), vir/virī. Y el vocativo singular en «-e» (domine), una de las tres formas que rompen la igualdad con el nominativo, junto con «fīlī» y «mī».",
+    "prereqs": [
+      "l2-genitivo-clave"
+    ]
+  },
+  {
+    "id": "l2-sin-articulo",
+    "name": "El latín no tiene artículo",
+    "blockId": 2,
+    "description": "«puella» es «una niña», «la niña» o «niña» según el contexto. El hispanohablante, que tiene artículo obligatorio, lo suple mal y sobre todo lo suple SIEMPRE igual.",
+    "prereqs": []
+  },
+  {
+    "id": "l2-tercera-consonante",
+    "name": "Tercera declinación de tema en consonante",
+    "blockId": 2,
+    "description": "rēx/rēgis, corpus/corporis, iter/itineris, homō/hominis. El tema sale del genitivo y casi nunca del nominativo.",
+    "prereqs": [
+      "l2-genitivo-clave"
+    ]
+  },
+  {
+    "id": "l2-tercera-i",
+    "name": "Temas en -i de la tercera y sus tres marcas",
+    "blockId": 2,
+    "description": "Genitivo plural en «-ium», acusativo plural en «-īs» posible, y ablativo singular en «-ī» en los neutros: mare/marī/maria/marium.",
+    "prereqs": [
+      "l2-tercera-consonante"
+    ]
+  },
+  {
+    "id": "l2-vocativo",
+    "name": "El vocativo es el nominativo — salvo en la 2.ª en -us",
+    "blockId": 2,
+    "description": "MEDIDO sobre los 589 vocativos comparables de la Vulgata: el 63 % son IDÉNTICOS al nominativo, y los 217 que difieren son todos de la 2.ª declinación singular en -us. O sea que la regla es «el vocativo es el nominativo» y toda la dificultad cabe en una excepción con tres ramas: «domine» (121 veces, la forma más frecuente con diferencia), «fīlī» y no *«fīlie» para los -ius (18), y «Iesu» a la griega (9), que además es el nombre propio más frecuente del corpus. Más «mī» de «meus» (3).",
+    "prereqs": [
+      "l2-segunda"
+    ]
+  },
+  {
+    "id": "l3-ablativo-abanico",
+    "name": "El ablativo: un caso, siete funciones",
+    "blockId": 3,
+    "description": "Instrumento, compañía, modo, causa, tiempo, lugar de donde, término de comparación — con y sin preposición. El español lo reparte entre cinco preposiciones y el alumno tiene que leerlo sin ninguna.",
+    "prereqs": [
+      "l3-funcion-por-desinencia"
+    ]
+  },
+  {
+    "id": "l3-ablativo-agente",
+    "name": "Agente contra instrumento: la preposición depende de lo animado",
+    "blockId": 3,
+    "description": "«ā Caesare» (por César, animado, con preposición) frente a «gladiō» (con la espada, inanimado, sin preposición). La regla es del latín y no tiene análogo español.",
+    "prereqs": [
+      "l3-ablativo-abanico"
+    ]
+  },
+  {
+    "id": "l3-ablativo-comparacion",
+    "name": "Ablativo de comparación frente a quam",
+    "blockId": 3,
+    "description": "«melior frātre» = «melior quam frāter». Dos construcciones para lo mismo, y la primera no tiene marca ninguna.",
+    "prereqs": [
+      "l3-ablativo-abanico"
+    ]
+  },
+  {
+    "id": "l3-acusativo-extension",
+    "name": "Acusativo de extensión en el espacio y en el tiempo",
+    "blockId": 3,
+    "description": "«decem annōs rēgnāvit», «tria mīlia passuum». Sin preposición, y el español exige «durante» o nada.",
+    "prereqs": [
+      "l3-acusativo-od"
+    ]
+  },
+  {
+    "id": "l3-acusativo-od",
+    "name": "Acusativo de objeto directo",
+    "blockId": 3,
+    "description": "La función más frecuente del caso, y la que el español marca con «a» sólo cuando el objeto es humano y determinado.",
+    "prereqs": [
+      "l3-funcion-por-desinencia"
+    ]
+  },
+  {
+    "id": "l3-dativo-ci",
+    "name": "Dativo de complemento indirecto",
+    "blockId": 3,
+    "description": "«puerō librum dō». Regalo casi total: el español tiene dativo pronominal y la construcción transfiere.",
+    "prereqs": [
+      "l3-funcion-por-desinencia"
+    ]
+  },
+  {
+    "id": "l3-dativo-posesivo",
+    "name": "Dativo posesivo: mihi est",
+    "blockId": 3,
+    "description": "«mihi liber est» = «tengo un libro». La posesión se dice con «ser» y dativo, no con «tener».",
+    "prereqs": [
+      "l3-dativo-ci"
+    ]
+  },
+  {
+    "id": "l3-dativo-verbos",
+    "name": "Verbos que rigen DATIVO donde el español pone objeto directo",
+    "blockId": 3,
+    "description": "crēdō, pāreō, persuādeō, noceō, placeō, serviō, imperō, resistō, ignōscō, faveō, invideō, parcō, studeō, cōnfīdō, nūbō. Y el doble dativo de César: «auxiliō mittere», «praesidiō esse».",
+    "prereqs": [
+      "l3-dativo-ci"
+    ]
+  },
+  {
+    "id": "l3-funcion-por-desinencia",
+    "name": "La función va en la desinencia, no en la posición",
+    "blockId": 3,
+    "description": "EL PUNTO CENTRAL DEL CURSO. «Fīlium pater amat» y «Pater fīlium amat» significan lo mismo, y la lectura española del primero —«el hijo ama al padre»— es coherente y falsa. Se instala MEZCLANDO los seis órdenes, mitad con el sujeto delante y mitad con el objeto: prohibir ítem a ítem los que coinciden con el español deja el objeto delante en todo el lote, y entonces «escríbelos al revés» lo acierta entero sin leer una desinencia.",
+    "prereqs": [
+      "l2-genitivo-clave",
+      "l2-primera",
+      "l2-segunda"
+    ]
+  },
+  {
+    "id": "l3-genitivo-partitivo",
+    "name": "Genitivo partitivo y con adjetivos de cantidad",
+    "blockId": 3,
+    "description": "«nihil novī», «satis temporis», «multum vīnī». El español usa «de» y el alumno acierta; lo que falla es reconocerlo cuando el núcleo es un neutro singular que parece sujeto.",
+    "prereqs": [
+      "l3-genitivo-posesivo"
+    ]
+  },
+  {
+    "id": "l3-genitivo-posesivo",
+    "name": "Genitivo posesivo y de pertenencia",
+    "blockId": 3,
+    "description": "«liber puerī», el libro del niño. Es el caso más transparente para un hispanohablante.",
+    "prereqs": [
+      "l3-funcion-por-desinencia"
+    ]
+  },
+  {
+    "id": "l3-locativo",
+    "name": "Locativo y los nombres de ciudad",
+    "blockId": 3,
+    "description": "«Rōmae» (en Roma), «domī», «rūrī»: un caso residual que sólo sobrevive en nombres de ciudad, islas pequeñas y tres o cuatro comunes. Y los nombres de ciudad van SIN preposición también para el «a» y el «de».",
+    "prereqs": [
+      "l3-ablativo-abanico"
+    ]
+  },
+  {
+    "id": "l3-nominativo",
+    "name": "Nominativo: sujeto y atributo",
+    "blockId": 3,
+    "description": "El sujeto y, con «sum» y verbos copulativos, también el atributo: «Caesar imperātor est» lleva los dos en nominativo.",
+    "prereqs": [
+      "l3-funcion-por-desinencia"
+    ]
+  },
+  {
+    "id": "l3-sincretismo",
+    "name": "Los sincretismos que hacen ambigua la forma",
+    "blockId": 3,
+    "description": "«-ae» vale genitivo, dativo y nominativo plural; «-īs» vale dativo y ablativo plural; «-a» vale nominativo femenino y neutro plural. La desinencia informa, pero no siempre desambigua.",
+    "prereqs": [
+      "l3-funcion-por-desinencia",
+      "l2-neutro-a"
+    ]
+  },
+  {
+    "id": "l4-adjetivo-3a",
+    "name": "Adjetivos de la tercera: tres, dos y una terminación",
+    "blockId": 4,
+    "description": "ācer/ācris/ācre, omnis/omne, fēlīx. Y todos declinan como tema en -i, con ablativo en -ī.",
+    "prereqs": [
+      "l4-concordancia",
+      "l2-tercera-i"
+    ]
+  },
+  {
+    "id": "l4-comparativo",
+    "name": "Comparativo y superlativo, regulares e irregulares",
+    "blockId": 4,
+    "description": "altior/altissimus; melior/optimus, maior/maximus, plūs/plūrimus. Los irregulares son los mismos que en español, que es un regalo poco frecuente.",
+    "prereqs": [
+      "l4-adjetivo-3a"
+    ]
+  },
+  {
+    "id": "l4-comparativo-absoluto",
+    "name": "El comparativo sin segundo término es «demasiado» o «bastante»",
+    "blockId": 4,
+    "description": "«altior» sin «quam» no es «más alto» sino «demasiado alto» o «bastante alto». El español no tiene ese uso y el alumno traduce «más alto» a secas, que no significa nada.",
+    "prereqs": [
+      "l4-comparativo"
+    ]
+  },
+  {
+    "id": "l4-concordancia",
+    "name": "El adjetivo concuerda en género, número y caso — no en declinación",
+    "blockId": 4,
+    "description": "«rēs pūblica», «magnum opus», «omnis homō»: adjetivo y sustantivo pueden ser de declinaciones distintas y aun así concordar. El alumno busca la rima y no la hay.",
+    "prereqs": [
+      "l2-genitivo-clave"
+    ]
+  },
+  {
+    "id": "l4-demostrativos",
+    "name": "hic, iste, ille: la deixis de tres grados",
+    "blockId": 4,
+    "description": "CORREGIDO 2026-09-04 con el corpus delante. Los tres grados coinciden con «este/ese/aquel» EN EL LATÍN CLÁSICO, y ahí sí es un regalo deíctico. Pero la lectura declarada de L1 es la VULGATA, y en ella «ille» e «ipse» ya no son deícticos: son el pronombre romance de tercera persona. «ille» sujeto sale 190 veces en la Vulgata frente a 73 en Cicerón y 32 en César, y 113 frases empiezan por «at ille / at illī / at illa» —«y él dijo»—; «ipse» sujeto, 145 contra 29. Un alumno con la glosa escolar lee deixis distal o énfasis en 335 sujetos donde no hay ninguna de las dos. Es el mismo «ille» del que salen «él» y «el».",
+    "prereqs": [
+      "l4-is-ea-id"
+    ]
+  },
+  {
+    "id": "l4-indefinidos",
+    "name": "quis/quī tras si, nisi, nē, num",
+    "blockId": 4,
+    "description": "Tras esas cuatro palabras el indefinido pierde el «ali-»: «sī quis» = «si alguien». Es una regla mecánica y muy frecuente en la prosa.",
+    "prereqs": [
+      "l4-relativo"
+    ]
+  },
+  {
+    "id": "l4-is-ea-id",
+    "name": "is/ea/id: el pronombre de tercera persona",
+    "blockId": 4,
+    "description": "Hace de «él/ella/ello» y de «ese». Es el más frecuente del latín y su paradigma es irregular.",
+    "prereqs": [
+      "l4-concordancia"
+    ]
+  },
+  {
+    "id": "l4-reflexivo",
+    "name": "se/suus frente a is/eius: el reflexivo que el español no marca",
+    "blockId": 4,
+    "description": "«Caesar suōs mīlitēs laudat» (los suyos) frente a «Caesar eius mīlitēs laudat» (los de otro). El español dice «sus» en los dos casos.",
+    "prereqs": [
+      "l4-is-ea-id"
+    ]
+  },
+  {
+    "id": "l4-reflexivo-indirecto",
+    "name": "El reflexivo indirecto en la subordinada",
+    "blockId": 4,
+    "description": "En oratio obliqua «sē» remite al sujeto de la principal, no al de su propia oración. Es la regla que permite seguir quién habla a lo largo de un párrafo.",
+    "prereqs": [
+      "l4-reflexivo"
+    ]
+  },
+  {
+    "id": "l4-relativo",
+    "name": "El relativo concuerda con el antecedente en género y número, y toma su caso de SU oración",
+    "blockId": 4,
+    "description": "La regla de dos mitades: género y número vienen de fuera, el caso de dentro. «vir quem videō» — masculino singular por «vir», acusativo por ser objeto de «videō».",
+    "prereqs": [
+      "l4-is-ea-id",
+      "l3-funcion-por-desinencia"
+    ]
+  },
+  {
+    "id": "l5-conjugacion-por-infinitivo",
+    "name": "La conjugación se reconoce por la SEGUNDA parte, no por el español",
+    "blockId": 5,
+    "description": "amāre (1.ª), monēre (2.ª), regere (3.ª), audīre (4.ª), capere (mixta). La cantidad de la vocal separa monēre de regere, y sin mácrón no se distinguen.",
+    "prereqs": [
+      "l5-partes-principales",
+      "l1-cantidad-fonemica"
+    ]
+  },
+  {
+    "id": "l5-futuro-dos-formas",
+    "name": "El futuro tiene DOS marcas según la conjugación",
+    "blockId": 5,
+    "description": "-bō/-bi- en la 1.ª y la 2.ª (amābō), pero -am/-ē- en la 3.ª y la 4.ª (regam, regēs). Y «regam» es a la vez futuro de indicativo y presente de subjuntivo.",
+    "prereqs": [
+      "l5-imperfecto"
+    ]
+  },
+  {
+    "id": "l5-imperativo",
+    "name": "Imperativo y sus cuatro irregulares",
+    "blockId": 5,
+    "description": "amā/amāte. Y dīc, dūc, fac, fer, que pierden la vocal final.",
+    "prereqs": [
+      "l5-presente"
+    ]
+  },
+  {
+    "id": "l5-imperfecto",
+    "name": "Imperfecto en -bā-",
+    "blockId": 5,
+    "description": "amābam, monēbam, regēbam. Un solo infijo para las cinco clases, y coincide en valor con el imperfecto español.",
+    "prereqs": [
+      "l5-presente"
+    ]
+  },
+  {
+    "id": "l5-interrogativas",
+    "name": "Las tres partículas interrogativas y lo que esperan",
+    "blockId": 5,
+    "description": "«-ne» pregunta neutra, «num» espera un «no», «nōnne» espera un «sí». La partícula lleva la respuesta esperada.",
+    "prereqs": [
+      "l5-negacion"
+    ]
+  },
+  {
+    "id": "l5-irregulares",
+    "name": "eō, ferō, volō, nōlō, mālō, fīō",
+    "blockId": 5,
+    "description": "Los irregulares de alta frecuencia, que hay que guardar y no derivar.",
+    "prereqs": [
+      "l5-sum-y-compuestos"
+    ]
+  },
+  {
+    "id": "l5-negacion",
+    "name": "Negación con nōn, preverbal",
+    "blockId": 5,
+    "description": "nōn delante del verbo. Transfiere entero desde el español.",
+    "prereqs": [
+      "l5-presente"
+    ]
+  },
+  {
+    "id": "l5-partes-principales",
+    "name": "Las cuatro partes principales son la entrada del verbo",
+    "blockId": 5,
+    "description": "amō, amāre, amāvī, amātum. De la primera sale la persona, de la segunda la conjugación, de la tercera todo el perfectum y de la cuarta los participios y el supino. No es un apéndice: es el lema.",
+    "prereqs": []
+  },
+  {
+    "id": "l5-presente",
+    "name": "Presente de indicativo activo de las cinco clases",
+    "blockId": 5,
+    "description": "amō, moneō, regō, audiō, capiō. La vocal temática y sus alternancias.",
+    "prereqs": [
+      "l5-conjugacion-por-infinitivo"
+    ]
+  },
+  {
+    "id": "l5-pro-drop",
+    "name": "La omisión transfiere; recuperar la persona, no",
+    "blockId": 5,
+    "description": "CORREGIDO 2026-09-04 tras medirlo: decía «el español hace lo mismo: es regalo puro» y NO lo es. La OMISIÓN sí transfiere —1.397 sujetos pronominales expresos sobre 38.026 verbos finitos, el 3,67 %, y la regla de A&G se cumple en el corpus—. Lo que no transfiere es RECUPERAR la persona, y falla en tres casillas medidas. (1) El español sincretiza 1.ª y 3.ª de singular en OCHO de sus catorce paradigmas finitos —imperfecto, condicional, los dos subjuntivos y sus cuatro compuestos— y el latín en CERO de diez: «hospes eram» (Mt 25,35) y «erat clamans» (Mc 5,5) se distinguen por la desinencia y en español son las dos «era»; en la Vulgata y en los tiempos de L1 son 1.043 formas, 644 sin sujeto expreso. (2) En el español de MÉXICO no hay «vosotros», así que la 2.ª y la 3.ª del plural latinas colapsan en una sola forma —«estis» y «sunt» son las dos «son»— y ahí el latín OMITE mientras el español OBLIGA. (3) En la Vulgata «ille» e «ipse» ya son el pronombre romance y no «aquel» ni «él mismo»: 113 frases empiezan por «at ille», e «ipse» sujeto sale 145 veces contra 29 en Cicerón.",
+    "prereqs": [
+      "l5-imperfecto"
+    ]
+  },
+  {
+    "id": "l5-sum-y-compuestos",
+    "name": "sum, possum y los compuestos de sum",
+    "blockId": 5,
+    "description": "sum/es/est, possum (pot- + sum), adsum, absum, prōsum. Irregular, altísima frecuencia, y con la asimilación de possum como única complicación.",
+    "prereqs": [
+      "l5-presente"
+    ]
+  },
+  {
+    "id": "l6-deponentes",
+    "name": "Deponentes: forma pasiva, sentido activo",
+    "blockId": 6,
+    "description": "sequor, loquor, ūtor, morior, patior, hortor. Se leen en activo aunque parezcan pasivos.",
+    "prereqs": [
+      "l6-pasiva-infectum"
+    ]
+  },
+  {
+    "id": "l6-pasiva-infectum",
+    "name": "Pasiva del infectum: las desinencias en -r",
+    "blockId": 6,
+    "description": "amor, amāris, amātur. Un juego de desinencias nuevo, no una perífrasis.",
+    "prereqs": [
+      "l5-presente"
+    ]
+  },
+  {
+    "id": "l6-pasiva-perifrastica",
+    "name": "Pasiva del perfectum: participio + sum, y el participio CONCUERDA",
+    "blockId": 6,
+    "description": "«amātus est». El participio concuerda con el sujeto en género y número, cosa que el español también hace, pero «est» aquí no es «es» sino «fue».",
+    "prereqs": [
+      "l6-pasiva-infectum"
+    ]
+  },
+  {
+    "id": "l6-perfecto-doble-valor",
+    "name": "El perfecto latino vale por dos tiempos españoles",
+    "blockId": 6,
+    "description": "«vēnī» es «vine» y «he venido». El latín no distingue aoristo de perfecto resultativo y el español sí.",
+    "prereqs": [
+      "l6-perfectum"
+    ]
+  },
+  {
+    "id": "l6-perfectum",
+    "name": "El tema de perfecto y sus tres tiempos",
+    "blockId": 6,
+    "description": "amāvī, amāveram, amāverō. Un solo tema, desinencias propias, y la 3.ª persona plural con dos formas (-ērunt / -ēre).",
+    "prereqs": [
+      "l5-partes-principales"
+    ]
+  },
+  {
+    "id": "l6-verbos-impersonales",
+    "name": "Impersonales con acusativo o genitivo",
+    "blockId": 6,
+    "description": "Los frecuentes de verdad, medidos en el treebank: «licet» (103) con DATIVO, «oportet» (148) con acusativo con infinitivo o subjuntivo —nunca con dativo—, y «necesse est». Los de sentimiento (paenitet, miseret, piget, pudet, taedet) suman 10 tokens en 227.301 y se mencionan sin bloque propio; el corpus usa en su lugar los deponentes personales «misereor» (34) y «paeniteō» (20).",
+    "prereqs": [
+      "l6-deponentes"
+    ]
+  },
+  {
+    "id": "l7-completivas-ut",
+    "name": "Completivas con ut tras verbos de voluntad",
+    "blockId": 7,
+    "description": "«imperat ut veniant». El español dice «ordena que vengan», también con subjuntivo: regalo.",
+    "prereqs": [
+      "l7-ut-final"
+    ]
+  },
+  {
+    "id": "l7-condicionales",
+    "name": "Los tres períodos condicionales y el irreal",
+    "blockId": 7,
+    "description": "Real con indicativo; potencial con presente de subjuntivo; irreal con imperfecto (presente) o pluscuamperfecto (pasado) EN LAS DOS RAMAS.",
+    "prereqs": [
+      "l7-consecutio"
+    ]
+  },
+  {
+    "id": "l7-consecutio",
+    "name": "Concordancia de tiempos",
+    "blockId": 7,
+    "description": "Principal en tiempo principal → subordinada en presente o perfecto de subjuntivo; principal en tiempo histórico → imperfecto o pluscuamperfecto.",
+    "prereqs": [
+      "l7-morfologia-subj"
+    ]
+  },
+  {
+    "id": "l7-cum-historico",
+    "name": "cum + subjuntivo frente a cum + indicativo",
+    "blockId": 7,
+    "description": "El mismo signo con dos gramáticas: con indicativo es temporal puro; con subjuntivo es histórico, causal o concesivo, y el contexto decide cuál.",
+    "prereqs": [
+      "l7-no-coincide-espanol"
+    ]
+  },
+  {
+    "id": "l7-interrogativa-indirecta",
+    "name": "La interrogativa indirecta va en subjuntivo",
+    "blockId": 7,
+    "description": "«rogō quid faciās». El español pone indicativo («pregunto qué haces») y el latín subjuntivo, sin ningún matiz de duda.",
+    "prereqs": [
+      "l7-no-coincide-espanol"
+    ]
+  },
+  {
+    "id": "l7-morfologia-subj",
+    "name": "Los cuatro tiempos del subjuntivo",
+    "blockId": 7,
+    "description": "amem, amārem, amāverim, amāvissem. El imperfecto se forma sobre el infinitivo, que es la regla más útil y la que menos se enseña.",
+    "prereqs": [
+      "l5-partes-principales"
+    ]
+  },
+  {
+    "id": "l7-no-coincide-espanol",
+    "name": "El subjuntivo latino NO coincide con el español",
+    "blockId": 7,
+    "description": "Aparece donde el español pone indicativo (cum histórico, interrogativa indirecta, consecutiva) y falta donde el español lo pone. El instinto romance es aquí un estorbo, no una ayuda.",
+    "prereqs": [
+      "l7-morfologia-subj"
+    ]
+  },
+  {
+    "id": "l7-quominus-quin",
+    "name": "quōminus y quīn tras verbos de impedir y dudar",
+    "blockId": 7,
+    "description": "«nōn dubitō quīn veniat». Construcción sin análogo, con la negación de la principal decidiendo la conjunción.",
+    "prereqs": [
+      "l7-completivas-ut"
+    ]
+  },
+  {
+    "id": "l7-subj-independiente",
+    "name": "Subjuntivo en oración independiente",
+    "blockId": 7,
+    "description": "Yusivo («veniat» = que venga), potencial («dīcat aliquis» = alguien podría decir), deliberativo («quid faciam?» = ¿qué voy a hacer?), optativo con «utinam».",
+    "prereqs": [
+      "l7-morfologia-subj"
+    ]
+  },
+  {
+    "id": "l7-ut-consecutiva",
+    "name": "Consecutivas con ut y su anticipador",
+    "blockId": 7,
+    "description": "«tam fortis est ut vincat». La principal lleva un anticipador (tam, tantus, ita, sīc, adeō) que avisa de que viene una consecutiva.",
+    "prereqs": [
+      "l7-ut-final"
+    ]
+  },
+  {
+    "id": "l7-ut-final",
+    "name": "Finales con ut / nē",
+    "blockId": 7,
+    "description": "«vēnit ut videat». Transfiere bien: el español dice «para que vea», también en subjuntivo.",
+    "prereqs": [
+      "l7-morfologia-subj"
+    ]
+  },
+  {
+    "id": "l8-ablativo-absoluto",
+    "name": "Ablativo absoluto",
+    "blockId": 8,
+    "description": "«urbe captā, mīlitēs discessērunt». Sujeto propio, distinto del de la principal, los dos en ablativo, sin conjunción. No tiene equivalente y admite tres traducciones según el contexto.",
+    "prereqs": [
+      "l8-participio-concertado",
+      "l3-ablativo-abanico"
+    ]
+  },
+  {
+    "id": "l8-acusativo-infinitivo",
+    "name": "Acusativo con infinitivo",
+    "blockId": 8,
+    "description": "«dīcit Caesarem venīre» = «dice que César viene». Sujeto en ACUSATIVO y verbo en INFINITIVO donde el español pone «que» + indicativo. El instinto romance busca una conjunción que no está.",
+    "prereqs": [
+      "l8-infinitivo-sustantivo",
+      "l3-acusativo-od"
+    ]
+  },
+  {
+    "id": "l8-gerundio-gerundivo",
+    "name": "Gerundio y gerundivo: la misma forma, dos gramáticas",
+    "blockId": 8,
+    "description": "El gerundio es un sustantivo verbal activo («ars scrībendī»); el gerundivo es un adjetivo pasivo que concuerda («ad urbem capiendam»). Coinciden en la forma.",
+    "prereqs": [
+      "l8-tres-participios"
+    ]
+  },
+  {
+    "id": "l8-infinitivo-historico",
+    "name": "Infinitivo histórico",
+    "blockId": 8,
+    "description": "En narración viva, el infinitivo hace de verbo principal en pasado: «hostēs fugere, clāmāre, cadere». Frecuente en Salustio y en Livio.",
+    "prereqs": [
+      "l8-infinitivo-sustantivo"
+    ]
+  },
+  {
+    "id": "l8-infinitivo-sustantivo",
+    "name": "El infinitivo como sujeto y como objeto",
+    "blockId": 8,
+    "description": "«errāre hūmānum est». Transfiere casi entero desde el español.",
+    "prereqs": [
+      "l5-conjugacion-por-infinitivo"
+    ]
+  },
+  {
+    "id": "l8-participio-concertado",
+    "name": "Participio concertado",
+    "blockId": 8,
+    "description": "«mīlitēs victī fūgērunt». Concuerda con un elemento de la oración y equivale a una relativa o a una circunstancial.",
+    "prereqs": [
+      "l8-tres-participios"
+    ]
+  },
+  {
+    "id": "l8-perifrastica-pasiva",
+    "name": "Perifrástica pasiva: la obligación",
+    "blockId": 8,
+    "description": "«Carthāgō dēlenda est» = «Cartago debe ser destruida». Gerundivo + sum, con el agente en DATIVO y no en ablativo.",
+    "prereqs": [
+      "l8-gerundio-gerundivo"
+    ]
+  },
+  {
+    "id": "l8-supino",
+    "name": "Supino en -um y en -ū",
+    "blockId": 8,
+    "description": "«vēnērunt rogātum» (finalidad tras verbo de movimiento) y «mīrābile dictū» (limitación tras adjetivo). Dos usos y nada más.",
+    "prereqs": [
+      "l8-gerundio-gerundivo"
+    ]
+  },
+  {
+    "id": "l8-tres-participios",
+    "name": "Los tres participios y sus tres tiempos relativos",
+    "blockId": 8,
+    "description": "amāns (presente activo), amātus (perfecto pasivo), amātūrus (futuro activo). El tiempo es RELATIVO al del verbo principal, no absoluto.",
+    "prereqs": [
+      "l5-partes-principales"
+    ]
+  },
+  {
+    "id": "l9-causales",
+    "name": "Causales: quod, quia, quoniam y el modo que eligen",
+    "blockId": 9,
+    "description": "Con indicativo la causa es del que habla; con subjuntivo es de otro («porque, según dice, …»). El modo lleva la atribución.",
+    "prereqs": [
+      "l7-no-coincide-espanol"
+    ]
+  },
+  {
+    "id": "l9-comparativas",
+    "name": "Comparativas y su modo",
+    "blockId": 9,
+    "description": "«ut» + indicativo para el hecho real; «quasi», «tamquam sī» + subjuntivo para la comparación hipotética.",
+    "prereqs": [
+      "l7-consecutio"
+    ]
+  },
+  {
+    "id": "l9-concesivas",
+    "name": "Concesivas: quamquam, quamvīs, etsī",
+    "blockId": 9,
+    "description": "«quamquam» con indicativo para el hecho admitido, «quamvīs» con subjuntivo para el hipotético.",
+    "prereqs": [
+      "l9-causales"
+    ]
+  },
+  {
+    "id": "l9-correlaciones",
+    "name": "Las correlaciones que sostienen el período",
+    "blockId": 9,
+    "description": "nōn sōlum… sed etiam; tantus… quantus; tam… ut; cum… tum. Son el andamiaje que permite leer 80 palabras sin perderse.",
+    "prereqs": [
+      "l7-ut-consecutiva"
+    ]
+  },
+  {
+    "id": "l9-negacion-multiplica",
+    "name": "Dos negaciones latinas se MULTIPLICAN, no se suman",
+    "blockId": 9,
+    "description": "«nōn nēmō» = «alguien», «nēmō nōn» = «todo el mundo», «nōn nihil» = «algo». El orden decide el sentido, y el español hace lo contrario: suma («no vi a nadie»).",
+    "prereqs": [
+      "l5-negacion"
+    ]
+  },
+  {
+    "id": "l9-oratio-obliqua",
+    "name": "Oratio obliqua sostenida",
+    "blockId": 9,
+    "description": "Párrafos enteros de discurso indirecto: la principal en acusativo con infinitivo y TODAS las subordinadas en subjuntivo, con cambio de persona y de deícticos.",
+    "prereqs": [
+      "l8-acusativo-infinitivo",
+      "l7-consecutio",
+      "l4-reflexivo-indirecto"
+    ]
+  },
+  {
+    "id": "l9-relativa-enlace",
+    "name": "El relativo de enlace abre frase",
+    "blockId": 9,
+    "description": "«Quae cum ita sint…» — un relativo al principio de una oración nueva que equivale a «y esto». Muy frecuente en Cicerón y desconcertante si no se conoce.",
+    "prereqs": [
+      "l4-relativo"
+    ]
+  },
+  {
+    "id": "l9-temporales",
+    "name": "Temporales: postquam, ubi, simul ac, dum",
+    "blockId": 9,
+    "description": "Casi todas con indicativo, y «dum» con presente aunque la principal esté en pasado.",
+    "prereqs": [
+      "l5-presente"
+    ]
+  }
+]

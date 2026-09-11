@@ -3,17 +3,20 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { dataDir } from '@/lib/data/registry';
-import { ALL_CONCEPTS } from '@/lib/data/languages/pt/curriculum';
-import { parseLangArgs, noopForLang } from './lib/cli';
+import { parseLangArgs } from './lib/cli';
+import type { Concept } from '@/lib/data/curriculum-types';
 
+// ⚠ ESTO ESTABA CLAVADO A PORTUGUÉS, con el comentario «Phase 5: solo PT
+//   tiene curriculum real». Dejó de ser verdad dos veces sin que nadie
+//   tocara este fichero: el rumano tiene currículo desde la fase F y el
+//   latín desde el 2026-09-10. Con el import fijo, `--lang la` imprimía un
+//   «no-op» tranquilizador y escribía el fichero de PORTUGUÉS: un fallo
+//   que devuelve un número plausible. Ahora la fuente se resuelve por
+//   idioma, y un scaffold vacío genera `[]`, que es su respuesta correcta.
 async function main() {
   const { lang } = parseLangArgs();
-  // Phase 5: solo PT tiene curriculum real; scaffolds sin contenido no
-  // pueden generar `concepts.json`.
-  if (lang !== 'pt') {
-    console.log(noopForLang(lang, 'generate-curriculum'));
-    return;
-  }
+  const mod = await import(`../lib/data/languages/${lang}/curriculum`) as { ALL_CONCEPTS: Concept[] };
+  const ALL_CONCEPTS = mod.ALL_CONCEPTS;
   const dir = dataDir(lang);
   await fs.mkdir(dir, { recursive: true });
   const file = path.join(dir, 'concepts.json');

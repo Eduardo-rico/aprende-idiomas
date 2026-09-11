@@ -28,6 +28,17 @@ describe("empty scaffolds (Phase 5)", () => {
         expect(c.BLOCKS.length).toBeGreaterThan(0);
         expect(c.getBlock(1).lessons.length).toBeGreaterThan(0);
         expect(() => c.getBlock(99)).toThrow();
+      } else if (lang === 'la') {
+        // Y desde el 2026-09-10 el LATÍN tampoco está vacío: tiene sus 117
+        // conceptos derivados del inventario y los bloques que tienen
+        // lote. Su bloque 1 (ortografía) sigue sin lecciones y por eso
+        // `getBlock(1)` SÍ tira — que es la afirmación que este test hacía
+        // y que en latín sigue siendo verdad, sólo que ahora por el motivo
+        // concreto y no por estar el idioma entero a cero.
+        expect(c.ALL_CONCEPTS.length).toBeGreaterThan(0);
+        expect(c.BLOCKS.length).toBeGreaterThan(0);
+        expect(() => c.getBlock(1)).toThrow();
+        expect(c.getBlock(2).lessons.length).toBeGreaterThan(0);
       } else {
         expect(c.BLOCKS).toEqual([]);
         expect(c.ALL_CONCEPTS).toEqual([]);
@@ -35,9 +46,9 @@ describe("empty scaffolds (Phase 5)", () => {
       }
     });
 
-    it("loadAllBlocks: [] en los scaffolds vacíos; ro ya sirve su primer lote", async () => {
+    it("loadAllBlocks: [] en los scaffolds vacíos; ro y la ya sirven contenido", async () => {
       const blocks = await loadAllBlocks(lang);
-      if (lang === 'ro') expect(blocks.length).toBeGreaterThan(0);
+      if (lang === 'ro' || lang === 'la') expect(blocks.length).toBeGreaterThan(0);
       else expect(blocks).toEqual([]);
     });
 
@@ -71,8 +82,16 @@ describe("empty scaffolds (Phase 5)", () => {
       });
     });
 
-    it("loadConcepts returns []", async () => {
-      expect(await loadConcepts(lang)).toEqual([]);
+    it("loadConcepts: [] en los scaffolds vacíos; ro y la sirven sus conceptos", async () => {
+      // ⚠ ro y la tenían `concepts.json` en `[]` teniendo currículo, y no
+      //   por diseño: `scripts/generate-curriculum.ts` estaba clavado a
+      //   portugués con el comentario «solo PT tiene curriculum real»,
+      //   que dejó de ser verdad dos veces sin que nadie tocara el
+      //   fichero. Es la misma avería que tuvo el portugués con 50 de 241
+      //   conceptos. Hoy el generador resuelve la fuente por idioma.
+      const cs = await loadConcepts(lang);
+      if (lang === 'ro' || lang === 'la') expect(cs.length).toBeGreaterThan(0);
+      else expect(cs).toEqual([]);
     });
   });
 
