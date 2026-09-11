@@ -47,14 +47,29 @@ const N = (l: string) => NOMBRES_L1.find((x) => x.lema === l)!;
 type Def = [id: string, lema: string, num: 'sg' | 'pl', pos: 'antes' | 'despues',
             marco: string, glosa: string, respuesta: string];
 
+
+// ⚠ NINGÚN ÍTEM DE GENITIVO LLEVA «est» NI «sunt», y es un gate de
+//   contenido, no de estilo. Con «sum», un dativo expresa POSESIÓN
+//   (Allen & Greenough §373, *dative of possessor*), y está atestado en la
+//   propia lectura del curso: «et erit Sarrae filius» (Gn 18:10, PROIEL),
+//   primera declinación, «-ae», dativo, regido por «sum». Donde el
+//   genitivo y el dativo son HOMÓGRAFOS —toda la 1.ª y la 5.ª— una frase
+//   copulativa deja el ítem indeterminado: «Rosa puellae pulchra est» se
+//   lee igual de bien como «la niña tiene una rosa hermosa».
+//
+//   Lo encontró el latinista adversarial el 2026-09-11 y nombró cuatro;
+//   contarlo por homografía en vez de a ojo dio CINCO —se le había pasado
+//   «Poetae verba bona sunt»—. Los cinco llevan ahora un verbo transitivo
+//   que no es copulativo ni ditransitivo, que es lo único que deja al
+//   genitivo como única lectura con licenciador local.
 const DEFS: Def[] = [
   // ── SEIS ANTEPUESTOS · donde el instinto español se estrella ──
-  ['la-3g-01', 'puella', 'sg', 'antes', 'Puellae rosa pulchra est.',
-   'La rosa ___ es hermosa.', 'de la niña'],
-  ['la-3g-02', 'rēgīna', 'sg', 'antes', 'Reginae donum magnum est.',
-   'El regalo ___ es grande.', 'de la reina'],
-  ['la-3g-03', 'poēta', 'sg', 'antes', 'Poetae verba bona sunt.',
-   'Las palabras ___ son buenas.', 'del poeta'],
+  ['la-3g-01', 'puella', 'sg', 'antes', 'Puellae rosam poeta laudat.',
+   'El poeta alaba la rosa ___.', 'de la niña'],
+  ['la-3g-02', 'rēgīna', 'sg', 'antes', 'Reginae donum medicus videt.',
+   'El médico ve el regalo ___.', 'de la reina'],
+  ['la-3g-03', 'poēta', 'sg', 'antes', 'Poetae verba discipulus audit.',
+   'El discípulo oye las palabras ___.', 'del poeta'],
   ['la-3g-04', 'servus', 'sg', 'antes', 'Servi cura magna est.',
    'El cuidado ___ es grande.', 'del esclavo'],
   ['la-3g-05', 'rēx', 'sg', 'antes', 'Regis verba audio.',
@@ -63,10 +78,10 @@ const DEFS: Def[] = [
    'El cuidado ___ es grande.', 'del tiempo'],
 
   // ── SEIS POSPUESTOS · el orden que el español espera ──
-  ['la-3g-07', 'puella', 'sg', 'despues', 'Rosa puellae pulchra est.',
-   'La rosa ___ es hermosa.', 'de la niña'],
-  ['la-3g-08', 'domina', 'sg', 'despues', 'Donum dominae magnum est.',
-   'El regalo ___ es grande.', 'de la señora'],
+  ['la-3g-07', 'puella', 'sg', 'despues', 'Rosam puellae poeta videt.',
+   'El poeta ve la rosa ___.', 'de la niña'],
+  ['la-3g-08', 'domina', 'sg', 'despues', 'Donum dominae servus laudat.',
+   'El esclavo alaba el regalo ___.', 'de la señora'],
   ['la-3g-09', 'dominus', 'sg', 'despues', 'Verba domini audio.',
    'Oigo las palabras ___.', 'del señor'],
   ['la-3g-10', 'māter', 'sg', 'despues', 'Cura matris magna est.',

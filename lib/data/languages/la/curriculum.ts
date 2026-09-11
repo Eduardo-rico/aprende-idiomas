@@ -76,10 +76,7 @@ export const SIN_TALLAR: Record<string, string> = {
   'l2-plural-tantum': 'forma D, misma familia del artículo, y con lemas cuyo sentido en español oscila («litterae» = la carta / las cartas)',
   'l2-genero-3a': 'su marco «magnus ___» ya da el adjetivo, que es lo único que revela el género',
   'l2-cuarta': 'la CANTIDAD es su punto: sin mácrón el ítem no discrimina, y con mácrón no se teclea',
-  'l3-nominativo': 'forma D: la clave lleva artículo determinado como única respuesta y el latín no tiene artículo',
   'l3-acusativo-od': 'forma D: «a la madre» es la única clave y suspende «a su madre», que es la traducción natural',
-  'l3-genitivo-posesivo': 'forma D: artículo y posesivo en la clave, sin alternativas — «el libro del niño» / «su libro»',
-  'l3-dativo-ci': 'forma D: artículo en la clave como única respuesta, sin alternativas para «un/una» ni el cero',
   'l3-ablativo-abanico': 'forma D, y dos ítems cuya única clave da español agramatical («de el templo»)',
   'l5-conjugacion-por-infinitivo': 'clasifica en CINCO clases y multiple_choice topa en 4 opciones',
   'l5-interrogativas': 'necesita 12 `explanationEs` que hay que escribir, no derivar',
@@ -144,16 +141,30 @@ export const TALLAS: Talla[] = [
   {
     id: 'la-b3-l1-funcion-por-desinencia', blockId: 3, mdx: 'b3/l1-funcion-por-desinencia.mdx',
     name: 'La función va en la desinencia: nominativo y acusativo',
-    conceptIds: ['l3-funcion-por-desinencia'],
+    conceptIds: ['l3-funcion-por-desinencia', 'l3-nominativo'],
     objectives: [
       'Asignar la función por la DESINENCIA y no por la posición: «Fīlium pater amat» y «Pater fīlium amat» significan lo mismo, y la lectura española del primero es coherente y FALSA',
+      'Reconocer el nominativo como sujeto — y saber que cuando la frase lleva DOS nominativos, como «Caesar imperātor est», ninguna desinencia dice cuál es el sujeto: ahí deciden el orden y el sentido',
     ],
   },
-  // ⚠ `la-b3-l2-genitivo-dativo-ablativo` SE RETIRÓ el 2026-09-10. Sus
-  //   tres puntos —genitivo posesivo, dativo de CI y el abanico del
-  //   ablativo— son los tres de forma D, así que la lección quedaba con
-  //   tres objetivos y CERO ejercicios. Es la misma regla que dejó fuera
-  //   el bloque 10, aplicada a la lección: lo que nada mide no se promete.
+  // ⚠ ESTA LECCIÓN SE RETIRÓ EL 2026-09-10 Y VOLVIÓ EL 2026-09-11, con
+  //   un punto menos. Se retiró porque sus tres puntos eran de forma D y
+  //   quedaba con tres objetivos y cero ejercicios; vuelve porque dos de
+  //   ellos ya publican —la clave lleva ahora la alternativa de
+  //   determinante que el latín exige, y se les arreglaron diez ítems
+  //   indeterminados—. El ABLATIVO sigue fuera: dos de sus ítems tienen
+  //   como única clave aceptada una frase española agramatical («de el
+  //   templo»), y eso se arregla en el lote, no aquí.
+  {
+    id: 'la-b3-l2-genitivo-y-dativo', blockId: 3, mdx: 'b3/l2-genitivo-y-dativo.mdx',
+    name: 'Genitivo y dativo: el poseedor y el destinatario',
+    conceptIds: ['l3-genitivo-posesivo', 'l3-dativo-ci'],
+    objectives: [
+      'Reconocer el genitivo posesivo, que es el caso más transparente para un hispanohablante («liber puerī»), y leerlo también cuando va ANTEPUESTO a su núcleo, que es donde el instinto español se estrella',
+      'Reconocer el dativo de complemento indirecto («puerō librum dō»), que transfiere casi entero desde el español',
+      'Desconfiar cuando la forma es la misma para los dos: en la 1.ª y en la 5.ª el genitivo y el dativo se escriben igual, y entonces lo que decide es el verbo y qué palabra tiene al lado',
+    ],
+  },
   // ── b4 · Adjetivo y pronombre ──────────────────────────────────────
   {
     id: 'la-b4-l1-concordancia', blockId: 4, mdx: 'b4/l1-concordancia.mdx',

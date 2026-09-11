@@ -143,7 +143,9 @@ export type ClaseFalloFC =
   | 'forma-no-derivada' | 'caso-no-cuadra-con-la-funcion' | 'macron-en-el-marco'
   | 'colisiones-mal-contadas' | 'rango-plano' | 'funcion-constante'
   | 'orden-separable' | 'cobertura-cero' | 'cobertura-sin-motivo'
-  | 'determinante-sin-alternativa' | 'eje-sin-cubrir';
+  | 'determinante-sin-alternativa' | 'eje-sin-cubrir'
+  | 'copula-con-homografo' | 'homografo-pegado-a-sustantivo'
+  | 'eje-no-medible-en-este-formato';
 
 export interface FalloFC { item: string; clase: ClaseFalloFC; detalle: string }
 
@@ -211,6 +213,34 @@ export function revisarItemFuncionCaso(it: ItemFuncionCaso): FalloFC[] {
   if (falta) push('determinante-sin-alternativa',
     `la clave «${it.respuesta}» empieza por determinante y falta la otra lectura: «${falta}». El latín no tiene artículo`);
 
+  // ── LAS DOS LECTURAS QUE UNA GLOSA ESPAÑOLA TAPA ──────────────────
+  //
+  // El ítem se corrige contra la glosa, así que nadie comprueba nunca si
+  // el LATÍN admite otra lectura: la glosa hace que un ítem indeterminado
+  // parezca determinado. Los dos casos, encontrados el 2026-09-11 sobre
+  // material ya escrito, y los dos sólo muerden donde las celdas son
+  // HOMÓGRAFAS —toda la 1.ª y la 5.ª—.
+  const p = paradigmaNominal(it.entrada);
+  const igual = (a: string, b: string) => p[a]!.normalize('NFC') === p[b]!.normalize('NFC');
+
+  // (1) CÓPULA + GENITIVO = dativo posesivo (A&G §373), atestado en la
+  //     propia lectura del curso: «et erit Sarrae filius» (Gn 18:10).
+  if (it.funcion === 'posesor' && igual('gen.sg', 'dat.sg') && /\b(est|sunt|erat|erant|erit)\b/iu.test(it.marco))
+    push('copula-con-homografo',
+      `«${it.forma}» es a la vez genitivo y dativo, y el marco lleva cópula: «${it.marco}» se lee igual de bien con dativo posesivo (A&G §373)`);
+
+  // (2) DATIVO O NOMINATIVO PLURAL PEGADO A UN SUSTANTIVO = genitivo. El
+  //     genitivo necesita núcleo nominal y el 100 % de los medidos son
+  //     adyacentes; si la forma toca un sustantivo, esa lectura está
+  //     disponible — y es la MAYORITARIA, el 54 % de los «-ae» del corpus.
+  //     Se exige que la forma vaya al final, que es donde el verbo la
+  //     separa de todo núcleo posible.
+  const homografoAmbiguo = (it.funcion === 'destinatario' && igual('gen.sg', 'dat.sg'))
+    || (it.funcion === 'sujeto' && it.numero === 'pl' && igual('gen.sg', 'nom.pl'));
+  if (homografoAmbiguo && !sinM(it.marco.replace(/[.!?¿¡]/gu, '').trim()).endsWith(sinM(it.forma)))
+    push('homografo-pegado-a-sustantivo',
+      `«${it.forma}» es homógrafa del genitivo y no va al final de «${it.marco}»: con un sustantivo al lado, la lectura de genitivo está disponible y el ítem no es único`);
+
   const reales = colisionesDentro(it.entrada, caso, it.numero);
   if (reales.length !== it.ejes.colisiones)
     push('colisiones-mal-contadas',
@@ -273,18 +303,24 @@ export function revisarLoteFuncionCaso(items: ItemFuncionCaso[], opciones: {
   if (porFuncion.size > 1 && max / n > 0.6)
     push('funcion-constante', `una función sale en ${max} de ${n} ítems: contestarla siempre resuelve el lote`);
 
-  // Con dos nominativos no hay desinencia que decida, así que el lote tiene
-  // que equilibrar el orden o el instinto —«el primero es el sujeto»— lo
-  // resuelve entero. En el texto real ese instinto acierta el 80,6 %.
-  if (items.some((it) => it.ejes.cuantosNominativos === 2)) {
-    const dos = items.filter((it) => it.ejes.cuantosNominativos === 2);
-    const delante = dos.filter((it) => it.ejes.sujetoDelante).length;
-    if (!items.some((it) => it.ejes.cuantosNominativos === 1))
-      push('rango-plano', 'ningún ítem tiene UN solo nominativo: falta el caso donde la desinencia sí resuelve');
-    if (dos.length > 0 && Math.abs(delante / dos.length - 0.5) > 0.2)
-      push('funcion-constante',
-        `de ${dos.length} ítems con dos nominativos, el sujeto va delante en ${delante}: contestar «el primero es el sujeto» saca el ${(100 * Math.max(delante, dos.length - delante) / dos.length).toFixed(0)} %`);
-  }
+  // ⚠ DOS NOMINATIVOS NO SON MEDIBLES CON HUECO EN LA GLOSA, y esto
+  //   sustituye a un equilibrado que no servía de nada.
+  //
+  //   El gate anterior exigía repartir el orden mitad y mitad para que «el
+  //   primero es el sujeto» quedara en el 50 % en vez del 80,6 % del texto
+  //   real. Estaba bien pensado y era INSUFICIENTE: con dos nominativos la
+  //   glosa española nombra ya a uno de los dos, así que sólo queda una
+  //   palabra para el hueco, y la estrategia «pon el sustantivo que la
+  //   glosa no menciona» acierta el 100 % sin mirar el orden ni la
+  //   desinencia. Se EJECUTÓ sobre los seis ítems publicados: 6 de 6.
+  //
+  //   El eje es real —el latín no marca cuál de los dos es el sujeto— pero
+  //   necesita dos huecos o una elección múltiple. Aquí se prohíbe, en vez
+  //   de equilibrar una propiedad que no decide nada.
+  for (const it of items)
+    if (it.ejes.cuantosNominativos === 2)
+      push('eje-no-medible-en-este-formato',
+        `${it.id}: con DOS nominativos la glosa nombra ya a uno, así que «pon el sustantivo que la glosa no menciona» resuelve el ítem sin decidir nada (medido: 6/6). Este eje necesita dos huecos o elección múltiple`);
 
   // El español marca el objeto con «a» sólo si es animado: sin las dos
   // clases, el lote no examina dónde se acaba la transferencia.
@@ -333,7 +369,12 @@ export function revisarLoteFuncionCaso(items: ItemFuncionCaso[], opciones: {
       comprobacion: 'frases donde la desinencia NO decide', decididos:
         items.filter((it) => it.ejes.cuantosNominativos === 2).length, total: items.length,
       motivoDeLosQueQuedanFuera: 'las de un solo nominativo, donde el caso dice cuál es el sujeto sin más. Las de dos son las que el punto examina: los dos van en nominativo y sólo queda el orden o el sentido',
-      elCeroEsUnResultado: undefined,
+      // EL CERO AQUÍ ES UN RESULTADO desde el 2026-09-11, y es el hallazgo
+      // que retiró seis ítems: con dos nominativos la glosa española nombra
+      // ya a uno de los dos, así que «pon el sustantivo que la glosa no
+      // menciona» acierta el 100 % —medido, 6/6— sin decidir nada. El eje
+      // existe en la lengua y NO es medible en este formato.
+      elCeroEsUnResultado: 'con hueco en la glosa el eje de los dos nominativos no se puede medir: la glosa nombra a uno de los dos y la estrategia de eliminación acierta el 100 %. Un lote sin ellos no está incompleto, está limpio; el eje necesita dos huecos o elección múltiple',
     }] : []),
     ...(items.some((it) => it.ejes.posicion) ? [{
       comprobacion: 'genitivos antepuestos que parecen sujeto', decididos: trampas, total: items.length,

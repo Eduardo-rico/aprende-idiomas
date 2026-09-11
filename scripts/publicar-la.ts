@@ -112,12 +112,25 @@ const APLAZADOS_CON_MOTIVO: Record<string, string> = {
   // falso entra en el FSRS.
   'l2-neutro-a': 'FORMA D · la clave lleva artículo español y el latín no tiene artículo: «la alegría» suspende a quien escribe «alegría» o «una alegría». Necesita `alternativas` por ítem.',
   'l2-plural-tantum': 'FORMA D · misma familia del artículo, y encima con lemas cuyo sentido en español oscila («litterae» = la carta / las cartas).',
-  'l3-nominativo': 'FORMA D · la clave lleva artículo determinado como única respuesta.',
   'l3-acusativo-od': 'FORMA D · artículo Y posesivo: «a la madre» suspende «a su madre», que es la traducción natural.',
-  'l3-genitivo-posesivo': 'FORMA D · artículo y posesivo en la clave, sin alternativas.',
-  'l3-dativo-ci': 'FORMA D · artículo en la clave, sin alternativas.',
   'l3-ablativo': 'FORMA D · artículo, y además DOS ítems (la-3ab-11, la-3ab-12) cuya única clave aceptada produce español AGRAMATICAL: «de» + «el templo» = «de el templo», que en español es obligatoriamente «del». Quien escribe la forma buena suspende. Hay que reescribir la glosa o admitir «del»/«desde el», y eso es del gate del lote.',
   'l5-pro-drop': 'FORMA D · 9 de 12 admiten una segunda respuesta correcta que la clave suspende: «erat», «vidēbat» y «audiēbat» no marcan género, así que «ella» vale tanto como «él»; igual «ellas»/«ellos» y «vosotros»/«ustedes».',
+  // ⚠ `l3-nominativo`, `l3-genitivo-posesivo` y `l3-dativo-ci` ESTUVIERON
+  //   AQUÍ y salieron el 2026-09-11. Su motivo era que la clave llevaba
+  //   artículo español siendo el latín una lengua sin artículo, y eso ya
+  //   no pasa: `conAlternativaDeDeterminante` cierra la familia mecánica
+  //   —definido ↔ indefinido, con «del» y «al»— y el gate la EXIGE por
+  //   ítem, así que un lote sin ella no compila el gate. Las otras dos
+  //   familias que el latinista nombró no les afectan: el posesivo («a la
+  //   madre» / «a su madre») es de `l3-acusativo-od` y el género que el
+  //   verbo no marca es de `l5-pro-drop`, y los dos siguen aquí.
+  //
+  //   De paso se les arreglaron once ítems INDETERMINADOS que ningún gate
+  //   veía, porque el ítem se corrige contra la glosa y nadie comprueba si
+  //   el LATÍN admite otra lectura: cinco genitivos con cópula (dativo
+  //   posesivo, A&G §373), cinco dativos pegados a un sustantivo (lectura
+  //   de genitivo, la mayoritaria del corpus) y uno de nominativo plural
+  //   derrotado por pro-drop. Los tres casos son gates ahora.
   // ── Y el de la cantidad ───────────────────────────────────────────
   'l2-cuarta':
     'LA CANTIDAD ES SU PUNTO Y POR ESO NO TIENE SALIDA HOY. El punto existe porque «manus» (nom.) y «manūs» (gen.) sólo se distinguen por el mácrón, así que 7 de sus 12 respuestas lo llevan. No se puede publicar la forma sin mácrón como alternativa —taparía justo el rasgo examinado, y el ítem no podría fallar nunca— ni dejarla sin alternativa, porque un teclado español no escribe «ū». Necesita que la tarjeta llame a `comparaLa(valor, clave, { sensibleACantidad })`, que `lib/exercises/normalize.ts` ya anuncia y que hoy NO tiene ni un consumidor.',

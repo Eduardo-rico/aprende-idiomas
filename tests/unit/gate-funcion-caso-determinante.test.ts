@@ -54,8 +54,13 @@ describe('la pareja definido/indefinido', () => {
 
 const base = (extra: Partial<ItemFuncionCaso>): ItemFuncionCaso => ({
   id: 'x', punto: 'l2-primera', entrada: N('puella'), funcion: 'posesor', numero: 'sg',
-  marco: 'Rosa puellae pulchra est.', forma: 'puellae',
-  glosa: 'La rosa ___ es hermosa.', respuesta: 'de la niña',
+  // ⚠ El marco NO puede llevar cópula: con «est», «puellae» admite la
+  //   lectura de dativo posesivo (A&G §373) y el ítem deja de ser único.
+  //   La primera versión de este fixture usaba «Rosa puellae pulchra est.»
+  //   y el gate nuevo la marcó — sobre un fixture de test, que es donde
+  //   menos se mira.
+  marco: 'Rosam puellae poeta videt.', forma: 'puellae',
+  glosa: 'El poeta ve la rosa ___.', respuesta: 'de la niña',
   alternativas: ['de una niña'], ejes: { colisiones: 3 }, ...extra,
 });
 

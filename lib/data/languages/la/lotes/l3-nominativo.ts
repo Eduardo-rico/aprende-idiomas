@@ -55,21 +55,27 @@ const DEFS: Def[] = [
   // ── SEIS CON UN SOLO NOMINATIVO · la desinencia decide sola ──
   ['la-3n-01', 'rēgīna', 'sg', 1, 'Regina rosam portat.', '___ lleva una rosa.', 'La reina'],
   ['la-3n-02', 'servus', 'sg', 1, 'Servus agrum custodit.', '___ guarda el campo.', 'El esclavo'],
-  ['la-3n-03', 'discipulus', 'pl', 1, 'Discipuli verba audiunt.', '___ oyen las palabras.', 'Los discípulos'],
+  ['la-3n-03', 'discipulus', 'pl', 1, 'Verba audiunt discipuli.', '___ oyen las palabras.', 'Los discípulos'],
   ['la-3n-04', 'rēx', 'sg', 1, 'Templum rex custodit.', '___ guarda el templo.', 'El rey'],
-  ['la-3n-05', 'puella', 'pl', 1, 'Rosas puellae portant.', '___ llevan las rosas.', 'Las niñas'],
+  ['la-3n-05', 'puella', 'pl', 1, 'Rosas vident puellae.', '___ ven las rosas.', 'Las niñas'],
   ['la-3n-06', 'poēta', 'sg', 1, 'Verba poeta legit.', '___ lee las palabras.', 'El poeta'],
 
-  // ── SEIS CON DOS NOMINATIVOS · aquí no decide ninguna desinencia ──
+  // ── LOS SEIS DE DOS NOMINATIVOS SE RETIRARON el 2026-09-11 ───────
   //
-  // Tres con el sujeto delante y tres detrás, para que «el primero es el
-  // sujeto» quede en el 50 % y no en el 80,6 % que da el texto real.
-  ['la-3n-07', 'rēx', 'sg', 2, 'Rex dominus est.', '___ es el señor.', 'El rey', true],
-  ['la-3n-08', 'rēgīna', 'sg', 2, 'Regina domina est.', '___ es la señora.', 'La reina', true],
-  ['la-3n-09', 'poēta', 'sg', 2, 'Poeta magister est.', '___ es el maestro.', 'El poeta', true],
-  ['la-3n-10', 'medicus', 'sg', 2, 'Amicus medicus est.', 'El amigo es ___.', 'el médico', false],
-  ['la-3n-11', 'nauta', 'sg', 2, 'Vicinus nauta est.', 'El vecino es ___.', 'el marinero', false],
-  ['la-3n-12', 'domina', 'sg', 2, 'Filia domina est.', 'La hija es ___.', 'la señora', false],
+  // Eran «Rex dominus est.» → «___ es el señor.» y sus cinco hermanos, y
+  // el eje que decían medir —«con dos nominativos, cuál es el sujeto»— NO
+  // ES MEDIBLE con un hueco en la glosa. La glosa nombra ya a uno de los
+  // dos, así que sólo queda una palabra para el hueco: la estrategia
+  // ciega «pon el sustantivo que la glosa no menciona» se EJECUTÓ sobre
+  // los seis y acertó **6 de 6**, sin decidir nada. Y no hay desempate
+  // semántico que rescatarlos, porque en español la cópula es reversible:
+  // «el rey es el señor» y «el señor es el rey» dicen lo mismo.
+  //
+  // El eje existe y es real —el latín no marca cuál de los dos
+  // nominativos es el sujeto, y en el texto real el orden acierta el
+  // 80,6 %—, pero necesita otro formato: dos huecos, o una elección
+  // múltiple. Queda declarado en el inventario con piso reducido 6, no
+  // rellenado con seis ítems que nadie puede fallar.
 ];
 
 export const SEMILLA_DE_ORDEN = 1;

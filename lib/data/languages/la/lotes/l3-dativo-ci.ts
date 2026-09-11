@@ -47,13 +47,26 @@ const CRUCE_I = 'un «-ī» se lee como genitivo de 2.ª («servī», del esclav
 type Def = [id: string, lema: string, funcion: ItemFuncionCaso['funcion'], num: 'sg' | 'pl',
             marco: string, glosa: string, respuesta: string, cruce?: string];
 
+
+// ⚠ NINGÚN DATIVO VA PEGADO A UN SUSTANTIVO. El genitivo necesita un
+//   núcleo nominal y el 100 % de los genitivos medidos en este proyecto
+//   son ADYACENTES a él, así que un «-ae» junto a un sustantivo tiene la
+//   lectura de genitivo disponible: «Servus reginae donum portat» se lee
+//   igual de bien como «el esclavo lleva el regalo de la reina», y ésa es
+//   la lectura MAYORITARIA (el 54 % de los «-ae» del corpus son
+//   genitivos). El dativo va detrás del verbo, que es lo que lo deja sin
+//   núcleo al que colgarse.
+//
+//   Lo encontró el latinista adversarial el 2026-09-11 y nombró tres; al
+//   contarlo por homografía salieron CINCO, porque «reī» y «fideī» de la
+//   5.ª también lo son.
 const DEFS: Def[] = [
   // ── 1.ª · TRES colisiones: el peor caso ──
-  ['la-3d-01', 'puella', 'destinatario', 'sg', 'Poeta puellae rosam dat.',
+  ['la-3d-01', 'puella', 'destinatario', 'sg', 'Poeta rosam dat puellae.',
    'El poeta da una rosa ___.', 'a la niña'],
-  ['la-3d-02', 'rēgīna', 'destinatario', 'sg', 'Servus reginae donum portat.',
+  ['la-3d-02', 'rēgīna', 'destinatario', 'sg', 'Servus donum portat reginae.',
    'El esclavo lleva un regalo ___.', 'a la reina'],
-  ['la-3d-03', 'domina', 'destinatario', 'sg', 'Medicus dominae verba mittit.',
+  ['la-3d-03', 'domina', 'destinatario', 'sg', 'Medicus verba mittit dominae.',
    'El médico envía palabras ___.', 'a la señora'],
 
   // ── 2.ª · UNA colisión, con el ablativo ──
@@ -77,9 +90,9 @@ const DEFS: Def[] = [
    'El poeta envía palabras ___.', 'al senado'],
 
   // ── 5.ª · UNA colisión, con el genitivo ──
-  ['la-3d-11', 'rēs', 'destinatario', 'sg', 'Discipulus rei curam dat.',
+  ['la-3d-11', 'rēs', 'destinatario', 'sg', 'Discipulus curam dat rei.',
    'El discípulo da cuidado ___.', 'al asunto'],
-  ['la-3d-12', 'fidēs', 'destinatario', 'sg', 'Poeta fidei verba dat.',
+  ['la-3d-12', 'fidēs', 'destinatario', 'sg', 'Poeta verba dat fidei.',
    'El poeta da palabras ___.', 'a la fe'],
 ];
 

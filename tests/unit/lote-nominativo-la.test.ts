@@ -16,45 +16,45 @@ describe('el nominativo · en verde', () => {
     expect(r.fallos, JSON.stringify(r.fallos, null, 2)).toHaveLength(0);
   });
 
-  it('el varia se cubre: seis con un nominativo y seis con dos', () => {
-    expect(LOTE_NOMINATIVO.filter((it) => it.ejes.cuantosNominativos === 1)).toHaveLength(6);
-    expect(LOTE_NOMINATIVO.filter((it) => it.ejes.cuantosNominativos === 2)).toHaveLength(6);
+  it('son SEIS, todos de un solo nominativo: el eje de los dos se retiró', () => {
+    // Los seis de «Rex dominus est.» salieron el 2026-09-11. El eje que
+    // decían medir no es medible con hueco en la glosa: la glosa nombra ya
+    // a uno de los dos nominativos, así que sólo queda una palabra para el
+    // hueco. La estrategia «pon el sustantivo que la glosa no menciona» se
+    // EJECUTÓ sobre ellos y acertó 6 de 6.
+    expect(LOTE_NOMINATIVO).toHaveLength(6);
+    expect(LOTE_NOMINATIVO.every((it) => it.ejes.cuantosNominativos === 1)).toBe(true);
   });
 
-  it('y los de dos van equilibrados, tres y tres', () => {
-    // Porque en el texto real el sujeto va delante el 80,6 % de las veces:
-    // sin equilibrar, «el primero es el sujeto» resolvería el lote entero.
-    const dos = LOTE_NOMINATIVO.filter((it) => it.ejes.cuantosNominativos === 2);
-    expect(dos.filter((it) => it.ejes.sujetoDelante)).toHaveLength(3);
-    expect(dos.filter((it) => it.ejes.sujetoDelante === false)).toHaveLength(3);
-  });
-});
-
-describe('el nominativo · ROJO', () => {
-  it('un lote sin frases de dos nominativos no examina el punto', () => {
-    // Escribí este test esperando que el renglón de cobertura ni apareciera,
-    // y el gate hace algo mejor: aparece con CERO y eso es un hallazgo. Un
-    // lote de puros nominativos únicos está bien escrito, es latín correcto
-    // y no mide el `varia` del punto, que es «con dos, cuál es el sujeto».
-    const soloUno = copia().filter((it) => it.ejes.cuantosNominativos === 1);
-    const r = revisarLoteFuncionCaso(soloUno, OPC);
+  it('y el cero de la fila de cobertura está DECLARADO como resultado, no callado', () => {
+    const r = revisarLoteFuncionCaso(LOTE_NOMINATIVO, OPC);
     const fila = r.cobertura.find((c) => c.comprobacion.includes('NO decide'))!;
     expect(fila.decididos).toBe(0);
-    expect(r.fallos.some((f) => f.clase === 'cobertura-cero')).toBe(true);
+    expect(fila.elCeroEsUnResultado).toMatch(/no se puede medir/);
   });
 
-  it('un lote sin frases de UN nominativo pierde el contraste', () => {
-    const soloDos = copia().filter((it) => it.ejes.cuantosNominativos === 2);
-    expect(revisarLoteFuncionCaso(soloDos, OPC).fallos.some((f) => f.clase === 'rango-plano')).toBe(true);
+});
+
+// ── TRES TESTIGOS BORRADOS el 2026-09-11, y el motivo, que es lo que
+//    importa: probaban el equilibrado de los ítems de DOS nominativos —que
+//    hubiera de los dos tipos, y que el sujeto fuera delante en la mitad—.
+//    Ese equilibrado estaba bien pensado y era INSUFICIENTE: con dos
+//    nominativos la glosa española nombra ya a uno, así que «pon el
+//    sustantivo que la glosa no menciona» acierta el 100 % sin mirar el
+//    orden. Medido, 6 de 6. Los ítems se retiraron y el eje está prohibido
+//    en este formato, así que los tres testigos probaban una propiedad de
+//    algo que ya no puede existir. Se borran en vez de dejarlos en `skip`:
+//    un test saltado sin motivo escrito es peor que no tenerlo.
+describe('el nominativo · ROJO', () => {
+  it('ROJO · un ítem de DOS nominativos ya no se puede declarar', () => {
+    const dos = copia().map((it) => ({ ...it, ejes: { ...it.ejes, cuantosNominativos: 2 as const, sujetoDelante: true } }));
+    const r = revisarLoteFuncionCaso(dos, OPC);
+    expect(r.fallos.some((f) => f.clase === 'eje-no-medible-en-este-formato')).toBe(true);
+    expect(r.fallos.find((f) => f.clase === 'eje-no-medible-en-este-formato')!.detalle).toMatch(/6\/6/);
   });
 
-  it('EL CONTROL DEL PISO: todos con el sujeto delante y el instinto gana', () => {
-    // Es exactamente el reparto del corpus —80,6 %— y por eso un lote que lo
-    // imitara mediría mucho menos de lo que parece.
-    const escorado = copia().map((it) =>
-      (it.ejes.cuantosNominativos === 2 ? { ...it, ejes: { ...it.ejes, sujetoDelante: true } } : it));
-    expect(revisarLoteFuncionCaso(escorado, OPC).fallos.some((f) => f.clase === 'funcion-constante')).toBe(true);
-  });
+
+
 
   it('una forma que no es el nominativo de su lema', () => {
     const it = copia()[0]!;
