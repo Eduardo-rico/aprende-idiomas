@@ -205,9 +205,22 @@ describe('pisoCero: el piso declarado en cero', () => {
   //     re-encuadre a «cuándo se exige la» se contesta calcando la «a»
   //     española, y la cara que sí discrimina ya está publicada en
   //     r4-gd-definido-pl.
+  //   · r7-infinitivo-residual (2026-09-10) — CERO ítems, medido por el
+  //     lingüista adversarial ANTES de escribir ninguno y A LA VEZ que
+  //     r7-pasiva-impersonal, que es lo que evitó que se duplicaran. El
+  //     punto NO está mal formulado: está CUBIERTO y es GRATIS por DOS
+  //     vías. La forma que examina la producen 24 ítems servibles de r5;
+  //     su único uso residual vivo y obligatorio —el imperativo negativo
+  //     «nu veni!»— lo publica r5-imperativo-negativo entero; la casilla
+  //     de «a putea» es de r3-sa-vs-infinitivo y ya se escribió y se
+  //     retiró allí; el infinitivo tras preposición es gratis por español
+  //     Y portugués y encima está INDETERMINADO en corpus («fără a» 349
+  //     frente a «fără să» 691); y el infinitivo largo en -re es léxico,
+  //     o sea de r9-familias-derivativas. Es r4-dativo-oi otra vez, con
+  //     dos vías gratis en vez de una.
   it('los que lo declaran están CONTADOS y nombrados, no escondidos', () => {
     const cero = PUNTOS_RO.filter((p) => p.pisoCero);
-    expect(cero.map((p) => p.id)).toEqual(['r1-diacriticos-coma', 'r4-dativo-oi']);
+    expect(cero.map((p) => p.id)).toEqual(['r1-diacriticos-coma', 'r4-dativo-oi', 'r7-infinitivo-residual']);
   });
 
   // MISMA TRAMPA A PROPÓSITO QUE `pisoCero`, por la misma razón: declarar un
@@ -225,9 +238,24 @@ describe('pisoCero: el piso declarado en cero', () => {
   //     material con r8-completivas-ca-sa: tres de los cinco eran
   //     literalmente la `cita` de r8. El número no bajó por cansancio ni
   //     por dictamen de lengua, sino porque el material era de otro punto.
+  //   · r7-pasiva-impersonal 1 (2026-09-10) — nació en 2 y bajó a 1 EN EL
+  //     ATAQUE AL LOTE YA ESCRITO, por la cláusula de retirada que el
+  //     propio lote había escrito. Ninguna de las tres casillas que el
+  //     punto declara sobrevive: la concordancia está publicada en
+  //     r2-concordancia-adjetivo (8 ítems, con el neutro), y la pasiva
+  //     refleja y la impersonal son gratis por el español. Queda el
+  //     dativo ANTES de «se», que las dos lenguas del alumno colocan al
+  //     revés — y de sus seis celdas sólo la 3.ª PLURAL está determinada:
+  //     «li se» 264 / «le se» 0, mientras que «îi se» sale 2 y «ne se» 2,
+  //     las cuatro genuinas y atestadas. ⚠ El argumento que se tiró, por
+  //     si vuelve: «el listón del proyecto es văzându-o, rechazado a
+  //     13 %, y esto es 0,1 %» — 13 % era un umbral de RECHAZO, no de
+  //     ACEPTACIÓN, y aplicado de verdad habría metido también la 1.ª
+  //     plural (1,44 %). El criterio real: una clave que suspende rumano
+  //     atestado no se publica.
   it('el piso reducido está CONTADO y nombrado, no es cansancio', () => {
     const red = PUNTOS_RO.filter((p) => p.pisoDeclarado);
-    expect(red.map((p) => `${p.id}:${p.pisoDeclarado!.piso}`)).toEqual(['r4-cel-proforma:2', 'r6-contracciones-cliticos:4', 'r6-cliticos-imperativo-gerunziu:2', 'r7-disparadores-sa:2', 'r7-anti-progresivo:6', 'r7-supin:5']);
+    expect(red.map((p) => `${p.id}:${p.pisoDeclarado!.piso}`)).toEqual(['r4-cel-proforma:2', 'r6-contracciones-cliticos:4', 'r6-cliticos-imperativo-gerunziu:2', 'r7-disparadores-sa:2', 'r7-anti-progresivo:6', 'r7-supin:5', 'r7-pasiva-impersonal:1']);
     for (const p of red) {
       // El motivo tiene que decir el NÚMERO y de dónde sale, no «da para pocos».
       expect(p.pisoDeclarado!.motivo.length, p.id).toBeGreaterThan(120);
