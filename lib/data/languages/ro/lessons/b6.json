@@ -4,9 +4,9 @@
     "blockId": 6,
     "name": "Pronumele neaccentuate: acuzativ, dativ și marcatorul «pe»",
     "objectives": [
-      "Usar los clíticos de acusativo (mă, te, îl, o, ne, vă, îi, le) y de dativo (îmi, îți, îi, ne, vă, le) en su posición",
+      "Usar las FORMAS de los clíticos de acusativo (mă, te, îl, o, ne, vă, îi, le) y de dativo (îmi, îți, îi, ne, vă, le), con la homonimia «îi» (dativo singular) / «îi» (acusativo plural masculino)",
       "Poner «pe» donde el rumano lo exige (humano determinado, pronombres, pe cine) y NO ponerlo con el indefinido genérico",
-      "Doblar el clítico cuando el objeto humano determinado va explícito (Îl văd pe Ion)"
+      "Doblar el clítico cuando el objeto DIRECTO humano determinado marcado con «pe» va explícito (Îl văd pe Ion). Con el objeto INDIRECTO depende de la posición: con el OI léxico POSPUESTO es opcional (Dau cartea Mariei), pero es obligatorio si va ANTEPUESTO (Mariei îi dau cartea) o si es pronombre fuerte (Mie îmi place)"
     ],
     "conceptIds": [
       "r6-cliticos-acusativo",
@@ -27,10 +27,13 @@
   {
     "id": "b6-l2-contractii-si-encliza",
     "blockId": 6,
-    "name": "Contracții și encliză: mi l-a dat, dă-mi-l",
+    "name": "Cratima la pronumele neaccentuate: mi l-a dat, dă-mi-o, văzându-l",
     "objectives": [
-      "Escribir las contracciones obligatorias de los clíticos con guion (mi l-a dat, ți-l dau)",
-      "Colocar los clíticos detrás del verbo en el imperativo afirmativo y en el gerunziu (dă-mi-l, văzându-l)"
+      "Escribir el guion del clítico donde el rumano lo exige: con verbo finito marca SÍLABA y no enclisis, y por eso «l-am văzut» lo lleva siendo PROCLÍTICO (al revés que el guion portugués de «dá-mo»), mientras que «mi le dă» va suelto",
+      "Saber que en ENCLISIS el guion va siempre, sea el clítico silábico o no: du-te, spune-le, dă-mi-l",
+      "Saber dónde el guion NO es obligatorio: con «nu» la contracción es OPCIONAL y «nu îl dau» también es correcto, pero la forma corriente es «nu-l dau» y la plena suena a registro cuidado",
+      "Segmentar el clúster enclítico con un guion por clítico (dă-mi-o, dă-mi-l), donde el portugués europeo lo FUNDE en uno solo (dá-mo, deu-lho)",
+      "Poner la vocal de enlace del gerunziu ante clítico consonántico (văzându-l, spunându-i, ducându-se; nunca *văzând-l) — SALVO ante «o», donde no se pone: văzând-o"
     ],
     "conceptIds": [
       "r6-contracciones-cliticos",

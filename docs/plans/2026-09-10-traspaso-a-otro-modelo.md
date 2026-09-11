@@ -102,7 +102,54 @@ literal de cada una):
 **Cifra de cierre esperada**: «7 falsas de PT → 0; N medias verdades → M», con la
 lista de commits.
 
-### Tarea B — Los 5 puntos de `transformacion` que le quedan al rumano
+#### ✅ TAREA A HECHA — 2026-09-10, commit `3ca0ee53`
+
+**7 falsas de PT → 0.** Y además las 3 de rumano de la misma auditoría
+(R2, R3, R4), que la tabla de arriba no listaba.
+
+Lo que hay que saber si se vuelve sobre esto:
+
+- **La auditoría no miró los MDX**, y ahí vivía la misma familia de
+  falsedades en el texto que el alumno lee COMO la lección. Se
+  reescribieron siete reglas (`b5/l1`, `b5/l2`, `b5/l3`, `b5/l4`,
+  `b6/l2`, `b6/l3`, `b7/l2`). La lección del gerundio enseñaba brasileño
+  entera —regla, dos ejemplos y el Tip— en la rama europea.
+- **F6 no era «unificar la numeración», era matarla.** Se habían borrado
+  las tarjetas que DEFINÍAN los tipos 1-4 y quedaban 25 que los USABAN,
+  varias repitiendo la falsedad que F3 denuncia. Ahora se nombran: real /
+  hipotética / irreal de pasado.
+- **EL LINGÜISTA ENCONTRÓ SEIS ERRORES EN MIS PROPIAS CORRECCIONES**, y
+  esto es lo más transferible del lote: *una corrección no es verdad por
+  ser una corrección*. El grave: al matar F3 escribí la regla absoluta
+  «tras `se` NUNCA va presente de indicativo», y la desmiente un ítem
+  PUBLICADO del curso (`c092ca4e`: «Se os preços são tão altos, terei de
+  fazer um esforço»). El futuro do conjuntivo es obligatorio cuando la
+  condición MIRA AL FUTURO; para un hecho presente o general el
+  indicativo es correcto. **El paso 3 del procedimiento no es un trámite.**
+- **`corr-ro-a2b.test.ts:24` no se puso en rojo**: 19/19. La nota del
+  parón se equivocaba, o la falsedad que congelaba ya se había ido.
+- **`next build` NO se corrió**, a propósito: hay un servidor de Edu vivo
+  en el 3000 desde el 3-sep y el build escribe en el mismo `.next`. Los
+  siete MDX se validaron compilándolos con `@mdx-js/mdx`, que es lo que
+  ese gate habría comprobado. **Si alguien lo corre, que mire antes si
+  ese servidor sigue vivo.**
+- **Gate nuevo**: `tests/unit/prosa-pt-falsedades.test.ts`, visto en rojo.
+  Su primera versión salía roja por la propia regla que CITA la forma mala
+  para prohibirla: un gate que no distingue «enseñar X» de «avisar contra
+  X» marca lo correcto y nadie lo lee.
+- **`concepts.json` pasó de 50 a 241** al regenerarlo: llevaba meses
+  desincronizado de `curriculum.ts`, su generador. Comprobado que **no
+  llega al alumno**: `loadConcepts()` no se llama desde ninguna pantalla y
+  `description` no se pinta en ningún componente.
+
+### Tarea B — Los 2 puntos de `transformacion` que le quedan al rumano
+
+**CORRECCIÓN DEL 2026-09-10**: son **DOS**, no cinco. Los cinco puntos con
+`formato: 'transformacion'` son `r3-imperativo-afirmativo` (9 ítems),
+`r5-imperativo-negativo` (8), `r6-cliticos-imperativo-gerunziu` (2, piso
+declarado), **`r7-infinitivo-residual` (0)** y **`r7-pasiva-impersonal`
+(0)**. Sólo los dos últimos están a cero, y son justo los que el relevo
+manda dictaminar A LA VEZ.
 
 Déficit 370 → lo que quede. Todo está en `2026-09-03-ro-relevo.md` §3; no
 hay que diseñar nada nuevo. Lo que ese relevo advierte y NO hay que olvidar:
