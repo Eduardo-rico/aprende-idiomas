@@ -86,6 +86,21 @@ export interface ItemFuncionCaso {
   forma: string;
   glosa: string;
   respuesta: string;
+  /** LAS OTRAS TRADUCCIONES CORRECTAS, y no son un adorno.
+   *
+   *  El latín NO TIENE ARTÍCULO —lo enseña el primer objetivo del bloque
+   *  2— así que «rosam» es «la rosa», «una rosa» o «rosa», y una clave
+   *  única suspende a quien escribe la otra. El latinista adversarial
+   *  aplazó por esto los ocho lotes de hueco-en-la-glosa el 2026-09-10:
+   *  sus claves eran únicas y `alternatives` iba vacío, y cada fallo falso
+   *  entra en el FSRS.
+   *
+   *  El gate de abajo lo EXIGE cuando la respuesta empieza por
+   *  determinante. No se deriva en el publicador a propósito: el
+   *  determinante no es la única fuente de alternativa —«a la madre» /
+   *  «a su madre», «él» / «ella» cuando el verbo no marca género— y
+   *  derivar sólo la mecánica daría la falsa impresión de estar cubierto. */
+  alternativas?: string[];
   ejes: {
     /** Cuántas otras celdas del MISMO paradigma comparten esta forma.
      *  Escrito a mano y contrastado contra el cálculo. */
@@ -127,7 +142,8 @@ export interface ItemFuncionCaso {
 export type ClaseFalloFC =
   | 'forma-no-derivada' | 'caso-no-cuadra-con-la-funcion' | 'macron-en-el-marco'
   | 'colisiones-mal-contadas' | 'rango-plano' | 'funcion-constante'
-  | 'orden-separable' | 'cobertura-cero' | 'cobertura-sin-motivo';
+  | 'orden-separable' | 'cobertura-cero' | 'cobertura-sin-motivo'
+  | 'determinante-sin-alternativa' | 'eje-sin-cubrir';
 
 export interface FalloFC { item: string; clase: ClaseFalloFC; detalle: string }
 
@@ -138,6 +154,41 @@ const MACRON = /[āēīōūĀĒĪŌŪ]/;
 // justo la mitad que el punto examina.
 const sinM = (s: string) =>
   s.normalize('NFD').replace(/[̄̆]/g, '').normalize('NFC').toLowerCase();
+
+/** Las parejas definido/indefinido del español, de la más larga a la más
+ *  corta para que «de la» gane a «la». */
+const PAREJAS: readonly (readonly [string, string])[] = [
+  ['de las', 'de unas'], ['de los', 'de unos'], ['de la', 'de una'],
+  ['a las', 'a unas'], ['a los', 'a unos'], ['a la', 'a una'],
+  ['del', 'de un'], ['al', 'a un'],
+  ['las', 'unas'], ['los', 'unos'], ['la', 'una'], ['el', 'un'],
+];
+
+/** Devuelve la lectura que FALTA, o `null` si la clave no lleva
+ *  determinante o su pareja ya está aceptada. */
+export function determinanteSinPareja(respuesta: string, alternativas: readonly string[]): string | null {
+  const r = respuesta.trim();
+  const bajo = r.toLowerCase();
+  for (const [def, indef] of PAREJAS) {
+    for (const [a, b] of [[def, indef], [indef, def]] as const) {
+      if (!bajo.startsWith(`${a} `) && bajo !== a) continue;
+      const esperada = (b + r.slice(a.length)).trim();
+      const ya = alternativas.some((x) => x.trim().toLowerCase() === esperada.toLowerCase());
+      return ya ? null : esperada;
+    }
+  }
+  return null;
+}
+
+/** Rellena la alternativa del DETERMINANTE, que es la única familia
+ *  mecánica de las tres. Las otras dos —el posesivo («a la madre» / «a su
+ *  madre») y el género que el verbo no marca («él» / «ella»)— hay que
+ *  escribirlas a mano, y por eso este helper NO cierra el campo: sólo
+ *  quita de en medio lo que sí se deriva. */
+export function conAlternativaDeDeterminante<T extends { respuesta: string; alternativas?: string[] }>(it: T): T {
+  const falta = determinanteSinPareja(it.respuesta, it.alternativas ?? []);
+  return falta ? { ...it, alternativas: [...(it.alternativas ?? []), falta] } : it;
+}
 
 export function revisarItemFuncionCaso(it: ItemFuncionCaso): FalloFC[] {
   const out: FalloFC[] = [];
@@ -153,6 +204,13 @@ export function revisarItemFuncionCaso(it: ItemFuncionCaso): FalloFC[] {
     push('forma-no-derivada', `«${it.forma}» no aparece en el marco`);
   if (!it.glosa.includes('___')) push('forma-no-derivada', 'la glosa no tiene hueco');
 
+  // EL DETERMINANTE: si la clave lleva uno, la otra opción tiene que estar
+  // aceptada. El latín no tiene artículo y el alumno no puede adivinar cuál
+  // quiso el autor.
+  const falta = determinanteSinPareja(it.respuesta, it.alternativas ?? []);
+  if (falta) push('determinante-sin-alternativa',
+    `la clave «${it.respuesta}» empieza por determinante y falta la otra lectura: «${falta}». El latín no tiene artículo`);
+
   const reales = colisionesDentro(it.entrada, caso, it.numero);
   if (reales.length !== it.ejes.colisiones)
     push('colisiones-mal-contadas',
@@ -162,23 +220,52 @@ export function revisarItemFuncionCaso(it: ItemFuncionCaso): FalloFC[] {
 }
 
 export function revisarLoteFuncionCaso(items: ItemFuncionCaso[], opciones: {
-  /** El lote tiene que recorrer el rango de ambigüedad, no medir un solo
-   *  grado. */
+  /** El tope de ambigüedad que el lote tiene que recorrer. Sólo se
+   *  comprueba con el eje `declinacion`. */
   colisionesMinimas: number;
   colisionesMaximas: number;
+  /** QUÉ VARÍA EN ESTE LOTE, y por qué el campo existe.
+   *
+   *  Los cuatro puntos de `l3` varían la DECLINACIÓN, porque su `varia`
+   *  dice que el sincretismo cambia con ella; de ahí las dos
+   *  comprobaciones por defecto (rango de colisiones y ≥3 declinaciones).
+   *
+   *  `l2-primera` varía la FUNCIÓN: es una sola declinación con el
+   *  sincretismo CONSTANTE —«-ae» es genitivo, dativo y nominativo plural
+   *  a la vez— y su `varia` dice literalmente «cuál de las tres funciones
+   *  exige el contexto, y hay que cubrir las tres». Aplicarle el eje de
+   *  `l3` lo suspendería por «3 colisiones en los doce» y por «una sola
+   *  declinación», que son justo sus dos rasgos definitorios. Un gate que
+   *  marca lo correcto no lo lee nadie. */
+  ejeDeVarianza?: 'declinacion' | 'funcion';
 }): { fallos: FalloFC[]; cobertura: Cobertura[] } {
   const fallos = items.flatMap(revisarItemFuncionCaso);
   const push = (clase: ClaseFalloFC, detalle: string) => fallos.push({ item: '(lote)', clase, detalle });
   const n = items.length || 1;
 
-  const cs = items.map((it) => it.ejes.colisiones);
-  if (Math.min(...cs) > opciones.colisionesMinimas || Math.max(...cs) < opciones.colisionesMaximas)
-    push('rango-plano',
-      `el lote va de ${Math.min(...cs)} a ${Math.max(...cs)} colisiones y el punto pide de ${opciones.colisionesMinimas} a ${opciones.colisionesMaximas}: sin los dos extremos mide un solo grado de ambigüedad`);
+  const eje = opciones.ejeDeVarianza ?? 'declinacion';
+  if (eje === 'declinacion') {
+    const cs = items.map((it) => it.ejes.colisiones);
+    if (Math.min(...cs) > opciones.colisionesMinimas || Math.max(...cs) < opciones.colisionesMaximas)
+      push('rango-plano',
+        `el lote va de ${Math.min(...cs)} a ${Math.max(...cs)} colisiones y el punto pide de ${opciones.colisionesMinimas} a ${opciones.colisionesMaximas}: sin los dos extremos mide un solo grado de ambigüedad`);
 
-  const decl = new Set(items.map((it) => declinacionDe(it.entrada)));
-  if (decl.size < 3)
-    push('rango-plano', `${decl.size} declinaciones distintas: el varia dice que el sincretismo cambia con ella, así que hacen falta varias`);
+    const decl = new Set(items.map((it) => declinacionDe(it.entrada)));
+    if (decl.size < 3)
+      push('rango-plano', `${decl.size} declinaciones distintas: el varia dice que el sincretismo cambia con ella, así que hacen falta varias`);
+  } else {
+    // Eje FUNCIÓN: lo que tiene que estar cubierto son las tres lecturas
+    // que la misma forma admite. Si falta una, el lote enseña que «-ae» es
+    // dos cosas cuando son tres.
+    for (const f of ['posesor', 'destinatario', 'sujeto'] as const)
+      if (!items.some((it) => it.funcion === f))
+        push('eje-sin-cubrir', `ninguna item con función «${f}»: el sincretismo de «-ae» tiene TRES lecturas y el lote cubre ${new Set(items.map((i) => i.funcion)).size}`);
+    // Y la ambigüedad tiene que ser real en todos: un ítem cuya forma no
+    // colisiona no examina el sincretismo, examina otra cosa.
+    for (const it of items)
+      if (it.ejes.colisiones === 0)
+        push('eje-sin-cubrir', `${it.id}: su forma no colisiona con ninguna otra celda, así que no examina el sincretismo`);
+  }
 
   const porFuncion = new Map<Funcion, number>();
   for (const it of items) porFuncion.set(it.funcion, (porFuncion.get(it.funcion) ?? 0) + 1);

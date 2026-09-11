@@ -37,7 +37,7 @@
 // el español dice «de» y no hay nada que aprender. Lo que no es transparente
 // es la forma.
 import type { ItemFuncionCaso } from '../../../../../scripts/lib/gate-funcion-caso';
-import { colisionesDentro } from '../../../../../scripts/lib/gate-funcion-caso';
+import { colisionesDentro, conAlternativaDeDeterminante } from '../../../../../scripts/lib/gate-funcion-caso';
 import { ordenPublicado } from '../../../../../scripts/lib/orden-publicado';
 import { NOMBRES_L1 } from '../lexicon-l1';
 import { declinar, paradigmaNominal } from '../paradigma-la';
@@ -97,4 +97,16 @@ const FUENTE: ItemFuncionCaso[] = DEFS.map(([id, lema, numero, posicion, marco, 
   };
 });
 
-export const LOTE_GENITIVO = ordenPublicado(FUENTE, SEMILLA_DE_ORDEN);
+
+// ── LA ALTERNATIVA DEL DETERMINANTE, añadida el 2026-09-11 ───────────
+//
+// El latín NO TIENE ARTÍCULO, así que «rosam» es «la rosa», «una rosa» o
+// «rosa», y publicar una clave única suspende a quien escribe la otra.
+// Lo encontró el latinista adversarial el 2026-09-10 y por eso este lote
+// quedó APLAZADO. `conAlternativaDeDeterminante` cierra la familia
+// mecánica —definido ↔ indefinido— y el gate lo exige por ítem.
+//
+// ⚠ NO DESAPLAZA EL LOTE. Quedan las dos familias que hay que escribir a
+// mano: el posesivo («a la madre» / «a su madre») y, en otros lotes, el
+// género que el verbo latino no marca.
+export const LOTE_GENITIVO = ordenPublicado(FUENTE.map(conAlternativaDeDeterminante), SEMILLA_DE_ORDEN);
