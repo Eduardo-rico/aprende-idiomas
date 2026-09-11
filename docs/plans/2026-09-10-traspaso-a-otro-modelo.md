@@ -171,6 +171,40 @@ hay que diseñar nada nuevo. Lo que ese relevo advierte y NO hay que olvidar:
 **Cifra de cierre esperada**: déficit 370 → X, residuo 0, foto registrada,
 puntos de transformación restantes 5 → Y.
 
+#### ✅ TAREA B HECHA — 2026-09-10, commit `498b2f0c`
+
+**Déficit 370 → 354, residuo 0.** Puntos de `transformacion` a cero: 2 → 0.
+Foto registrada (34 en el histórico).
+
+- `r7-infinitivo-residual` → **PISO CERO**. Está CUBIERTO y es GRATIS por
+  dos vías; es `r4-dativo-oi` otra vez. Queda escrita la única casilla que
+  podría resucitarlo (el infinitivo impersonal de instrucciones, «A nu se
+  atinge»), condicionada a cita de DOOM3/GALR, con el aviso de que el
+  corpus del proyecto **no puede** atestiguarla y de que «a nu se» sale 378
+  veces sin ser ni una sola vez esa fórmula.
+- `r7-pasiva-impersonal` → **PISO 1**, publicado.
+
+**Y lo que hay que leer antes de escribir el siguiente lote**, porque son
+tres fallos míos de tres clases distintas:
+
+1. **Un dato inventado que el propio fichero castigaba.** Escribí «las dos
+   atestaciones son del XIX» sin tener ningún dato de fecha delante —los
+   ficheros del corpus sólo llevan la muerte del autor— y eran de 1914. El
+   lote contenía su propia cláusula de retirada y se disparó contra mí.
+2. **Un umbral de RECHAZO usado como umbral de ACEPTACIÓN.** «El listón es
+   `văzându-o`, rechazado a 13 %, y esto es 0,1 %» no vale: son dos
+   preguntas. Y la prueba de que no era un criterio es que no lo aplicaba a
+   la celda vecina (1,44 %).
+3. **Dos números copiados de un informe sin recontarlos** («mi se» 763, no
+   664; «ți se» 194, no 408) y una atribución falsa: «Alecsandri» salía en
+   la ventana de contexto como **nombre de calle**.
+
+Y un fallo del andamiaje que vale para cualquier lote: **un testigo de gate
+puede pasar en vacío**. Uno de los míos cambiaba dos cosas a la vez, así
+que al desactivar el gate que decía probar seguía en verde, salvado por
+otra comprobación del mismo gate. Un defecto por testigo, y comprobar
+desactivando cada comprobación por separado.
+
 ### Tarea C — Latín: publicar lo que ya está escrito
 
 Hay **36 lotes escritos** en `lib/data/languages/la/lotes/` y **cero
