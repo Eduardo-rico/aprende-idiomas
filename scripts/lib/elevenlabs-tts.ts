@@ -22,6 +22,8 @@ import { isValidMp3 } from './minimax-tts';
 import { TTS_OUTPUT } from '../config';
 import { textoParaVoz } from '../../lib/lang/ortografia-la';
 
+import { VOZ_LA_PRINCIPAL, SELLO_VOZ_LA } from '@/lib/data/languages/la/voces';
+
 const MODEL = 'eleven_multilingual_v2';
 
 export type ElVariant = 'br' | 'pt' | 'ro' | 'la';
@@ -73,6 +75,16 @@ export const EL_VOICES: Partial<Record<ElVariant, { id: string; name: string; va
   // palatalización final 6/7, 16/18 de 24 objetivos. El sello dice QUIÉN
   // validó y cómo: un ASR y un agente, no un nativo. Reversible.
   ro: { id: 'jYTnaUiO0yq8mgBlAL89', name: 'ElevenLabs_Razvan', validatedBy: 'ASR faster-whisper small + linguista-adversarial-ro (agente), sin oído nativo', validatedAt: '2026-09-01' },
+  // LATÍN (2026-09-10): la voz POR DEFECTO. Las cinco aprobadas y sus
+  // papeles viven en `lib/data/languages/la/voces.ts`, que es la fuente:
+  // aquí sólo está la de cabecera porque el hash necesita UNA por variante,
+  // y un test comprueba que las dos no se desincronizan.
+  //
+  // Sello más fuerte que el rumano y hay que decir por qué: lo validó un
+  // OÍDO, escuchando las cinco leer la batería de esdrújulas. La cautela
+  // que sí lleva: Edu no es nativo italiano, así que lo aprobado es dónde
+  // cae el acento latino, no la calidad del acento italiano.
+  la: { id: VOZ_LA_PRINCIPAL.id, name: VOZ_LA_PRINCIPAL.nombre, validatedBy: SELLO_VOZ_LA.validatedBy, validatedAt: SELLO_VOZ_LA.validatedAt },
 };
 
 export interface ElTtsRequest {

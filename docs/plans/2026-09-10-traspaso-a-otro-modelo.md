@@ -130,9 +130,18 @@ si hay un publicador de latín o si hay que portar `publicar-cloze-ro.ts`
 (patrón: validar TODO antes de escribir NADA; id = hash del contenido; sello
 que dice qué certifica).
 
-Después, en el orden del relevo §7: lotes restantes de L1 → batería de voz
-(**Rita en la cuenta de ElevenLabs es lo que la bloquea; lo pone Edu**;
-antes de pagar un MP3 probar una esdrújula) → lectura de L1 con la Vulgata.
+Después, en el orden del relevo §7: lotes restantes de L1 → **el audio ya
+NO está bloqueado** (ver abajo) → lectura de L1 con la Vulgata.
+
+**La voz se resolvió el 2026-09-10** (`2026-09-03-la-relevo.md` §5.ante):
+Edu escuchó la batería de esdrújulas y aprobó **cinco** voces italianas,
+declaradas en `lib/data/languages/la/voces.ts` con papeles —MarcoTrox
+narrador, Tiziana y Samanta alternancia, Sara y Rita diálogo— y sello
+`oído de Edu`. `EL_VOICES.la` apunta a la principal, con test que impide
+la desincronización. **Cinco voces son cinco papeles, no cinco corpus:
+cada texto se sintetiza UNA vez.** Rita, que la nota del parón daba por
+la voz del latín, resultó ser **napolitana**: aprobada igual, pero es la
+única no estándar y va anotada.
 
 ### Tarea D — Sólo si el coordinador lo ordena
 
@@ -161,7 +170,8 @@ De la nota del parón, siguen pendientes:
 
 ## 3 · Lo que ESPERA DE EDU (no lo decide la sesión)
 
-- La voz **Rita** en su cuenta de ElevenLabs (audio del latín).
+_(La voz del latín ya no está aquí: resuelta el 2026-09-10.)_
+
 - El **OK** explícito a la Tarea A antes de lengua nueva (el coordinador lo transmite).
 - El **orden** entre terminar rumano, publicar latín, arrancar checo/ruso, abrir griego.
 
