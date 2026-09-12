@@ -109,6 +109,10 @@ export const NOMBRES_L1: EntradaNominal[] = [
   { lema: 'corpus', genitivo: 'corporis', genero: 'n', glosa: 'cuerpo' },
   { lema: 'nōmen', genitivo: 'nōminis', genero: 'n', glosa: 'nombre' },
   { lema: 'mare', genitivo: 'maris', genero: 'n', glosa: 'mar', iStem: true },
+  // Segundo lema para la muta cum liquida, por el mismo motivo que
+  // `integer`: `vo-lu-crēs`, `vo-lu-crem`, `vo-lu-cris`. Atestiguado:
+  // `volucres` ×9, `volucris` ×3, `volucrum` ×3.
+  { lema: 'volucris', genitivo: 'volucris', genero: 'f', glosa: 'ave', iStem: true },
   // 2.ª neutra
   { lema: 'bellum', genitivo: 'bellī', genero: 'n', glosa: 'guerra' },
   { lema: 'dōnum', genitivo: 'dōnī', genero: 'n', glosa: 'regalo' },
@@ -191,6 +195,12 @@ export const ADJETIVOS_L1: EntradaAdjetivo[] = [
   { lema: 'pulcher', tema: 'pulchr', glosa: 'hermoso' },
   { lema: 'miser', tema: 'miser', glosa: 'desdichado' },
   { lema: 'prīmus', tema: 'prīm', glosa: 'primero' },
+  // ENTRA EL 2026-09-12 por un motivo concreto y medido: `l1-larga-por-posicion`
+  // examina la muta cum liquida, y con `tenebrae` sola el lote mediría un
+  // lema tres veces. `in-te-gra`, `in-te-grum` e `in-te-grae` son formas
+  // donde el grupo `gr` NO alarga la penúltima breve, que es el punto.
+  // Atestiguado: `integra` ×4.
+  { lema: 'integer', tema: 'integr', glosa: 'entero, intacto' },
 ];
 
 // ── LO QUE NO SE DECLINA, Y LOS COMPARATIVOS ─────────────────────────

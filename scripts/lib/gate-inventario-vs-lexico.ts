@@ -36,7 +36,7 @@ import { IRREGULARES_L1 } from '../../lib/data/languages/la/irregulares';
 import { declinacionDe, esMixta } from '../../lib/data/languages/la/paradigma-la';
 import { COMPUESTOS_DE_SUM } from '../../lib/data/languages/la/compuestos-de-sum';
 
-import { todasLasFormasL1 } from './atestar-acento';
+import { todasLasFormasDeL1 } from '../../lib/data/languages/la/todas-las-formas';
 import { silabas } from '../voz/cuanto-duele';
 
 export interface Exigencia {
@@ -120,9 +120,24 @@ export function decideLaMutaCumLiquida(forma: string): boolean {
   return arranque.length >= 2 && MUT.includes(arranque[0]!) && LIQ.includes(arranque[1]!);
 }
 
+/** Los lemas que aportan al menos una forma decisiva. Se agrupa por el
+ *  LEMA de la clave, no por la forma, porque tres formas de una palabra son
+ *  una palabra. */
+export function lemasConMutaCumLiquida(): string[] {
+  const out = new Set<string>();
+  for (const { clave, forma } of todasLasFormasDeL1())
+    if (decideLaMutaCumLiquida(forma)) out.add(clave.split('.')[0]!);
+  return [...out];
+}
+
 export const EXIGENCIAS: Exigencia[] = [
-  { patron: /muta cum liquida/i, nombre: 'formas donde la muta cum liquida DECIDE el acento',
-    cuantosHay: () => todasLasFormasL1().filter(decideLaMutaCumLiquida).length, minimo: 2 },
+  // Cuenta LEMAS, no formas, y la diferencia es el punto entero: `tenebrae`
+  // sola da tres formas decisivas —`tenebrae`, `tenebrās`, `tenebrīs`— y con
+  // ellas el lote mediría un lema tres veces. Es el mismo defecto que ya se
+  // cazó en la 4.ª y en la 5.ª declinación: si el rasgo diana no varía entre
+  // los ítems, la cobertura real es 1 y la métrica está inflada.
+  { patron: /muta cum liquida/i, nombre: 'LEMAS con alguna forma donde la muta cum liquida DECIDE',
+    cuantosHay: () => lemasConMutaCumLiquida().length, minimo: 2 },
   { patron: /\bmixta\b/i, nombre: 'verbos de conjugación mixta',
     cuantosHay: () => VERBOS_L1.filter(esMixta).length, minimo: 2 },
   { patron: /reduplicad/i, nombre: 'verbos de perfecto reduplicado',

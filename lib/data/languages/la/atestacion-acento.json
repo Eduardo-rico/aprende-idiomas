@@ -2,8 +2,8 @@
  "generado": "2026-09-12",
  "corpus": "la_perseus + la_proiel (UD)",
  "tokens": 227300,
- "formas": 2174,
- "sueloDeLaPenultima": 0.6237350505979761,
+ "formas": 2194,
+ "sueloDeLaPenultima": 0.6189608021877848,
  "reparto": {
   "monosilabo": {
    "total": 70,
@@ -14,19 +14,19 @@
    "atestiguadas": 506
   },
   "breve": {
-   "total": 748,
-   "atestiguadas": 413
+   "total": 766,
+   "atestiguadas": 424
   },
   "posicion": {
    "total": 194,
    "atestiguadas": 87
   },
   "macron": {
-   "total": 576,
+   "total": 578,
    "atestiguadas": 298
   }
  },
- "posicionSobreAtestiguadas": 0.06336489439184267,
+ "posicionSobreAtestiguadas": 0.06286127167630058,
  "tabla": {
   "cum": {
    "silabas": [
@@ -5120,6 +5120,78 @@
    "tonica": "ma",
    "tipo": "breve",
    "n": 1
+  },
+  "volucris": {
+   "silabas": [
+    "vo",
+    "lu",
+    "cris"
+   ],
+   "tonica": "vo",
+   "tipo": "breve",
+   "n": 3
+  },
+  "volucrem": {
+   "silabas": [
+    "vo",
+    "lu",
+    "crem"
+   ],
+   "tonica": "vo",
+   "tipo": "breve",
+   "n": 1
+  },
+  "volucrī": {
+   "silabas": [
+    "vo",
+    "lu",
+    "crī"
+   ],
+   "tonica": "vo",
+   "tipo": "breve",
+   "n": 0
+  },
+  "volucre": {
+   "silabas": [
+    "vo",
+    "lu",
+    "cre"
+   ],
+   "tonica": "vo",
+   "tipo": "breve",
+   "n": 0
+  },
+  "volucrēs": {
+   "silabas": [
+    "vo",
+    "lu",
+    "crēs"
+   ],
+   "tonica": "vo",
+   "tipo": "breve",
+   "n": 9
+  },
+  "volucrium": {
+   "silabas": [
+    "vo",
+    "lu",
+    "cri",
+    "um"
+   ],
+   "tonica": "lu",
+   "tipo": "breve",
+   "n": 0
+  },
+  "volucribus": {
+   "silabas": [
+    "vo",
+    "lu",
+    "cri",
+    "bus"
+   ],
+   "tonica": "lu",
+   "tipo": "breve",
+   "n": 0
   },
   "bellum": {
    "silabas": [
@@ -15737,6 +15809,138 @@
     "rum"
    ],
    "tonica": "mā",
+   "tipo": "macron",
+   "n": 0
+  },
+  "integer": {
+   "silabas": [
+    "in",
+    "te",
+    "ger"
+   ],
+   "tonica": "in",
+   "tipo": "breve",
+   "n": 1
+  },
+  "integrum": {
+   "silabas": [
+    "in",
+    "te",
+    "grum"
+   ],
+   "tonica": "in",
+   "tipo": "breve",
+   "n": 3
+  },
+  "integrī": {
+   "silabas": [
+    "in",
+    "te",
+    "grī"
+   ],
+   "tonica": "in",
+   "tipo": "breve",
+   "n": 0
+  },
+  "integrō": {
+   "silabas": [
+    "in",
+    "te",
+    "grō"
+   ],
+   "tonica": "in",
+   "tipo": "breve",
+   "n": 0
+  },
+  "integrōs": {
+   "silabas": [
+    "in",
+    "te",
+    "grōs"
+   ],
+   "tonica": "in",
+   "tipo": "breve",
+   "n": 1
+  },
+  "integrōrum": {
+   "silabas": [
+    "in",
+    "te",
+    "grō",
+    "rum"
+   ],
+   "tonica": "grō",
+   "tipo": "macron",
+   "n": 0
+  },
+  "integrīs": {
+   "silabas": [
+    "in",
+    "te",
+    "grīs"
+   ],
+   "tonica": "in",
+   "tipo": "breve",
+   "n": 3
+  },
+  "integra": {
+   "silabas": [
+    "in",
+    "te",
+    "gra"
+   ],
+   "tonica": "in",
+   "tipo": "breve",
+   "n": 4
+  },
+  "integram": {
+   "silabas": [
+    "in",
+    "te",
+    "gram"
+   ],
+   "tonica": "in",
+   "tipo": "breve",
+   "n": 2
+  },
+  "integrae": {
+   "silabas": [
+    "in",
+    "te",
+    "grae"
+   ],
+   "tonica": "in",
+   "tipo": "breve",
+   "n": 1
+  },
+  "integrā": {
+   "silabas": [
+    "in",
+    "te",
+    "grā"
+   ],
+   "tonica": "in",
+   "tipo": "breve",
+   "n": 4
+  },
+  "integrās": {
+   "silabas": [
+    "in",
+    "te",
+    "grās"
+   ],
+   "tonica": "in",
+   "tipo": "breve",
+   "n": 0
+  },
+  "integrārum": {
+   "silabas": [
+    "in",
+    "te",
+    "grā",
+    "rum"
+   ],
+   "tonica": "grā",
    "tipo": "macron",
    "n": 0
   },

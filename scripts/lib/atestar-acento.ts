@@ -51,10 +51,10 @@ export function tipoDeAcento(palabra: string): { tipo: TipoDeAcento; silabas: st
 /** Las formas de L1, y **ya no las enumera este fichero**.
  *
  *  La primera versión miraba tres tablas —nombres, verbos y el LEMA de los
- *  adjetivos— y daba 1.429 formas. La máquina produce 2.174 desde diez
+ *  adjetivos— y daba 1.429 formas. La máquina produce 2.194 desde diez
  *  tablas: faltaban los indeclinables, los pluralia tantum, los adjetivos
  *  de 3.ª, los irregulares, los compuestos de `sum`, los pronombres y los
- *  participios. 745 formas que ningún consumidor veía, y entre ellas `tenebrae`, que es
+ *  participios. 765 formas que ningún consumidor veía, y entre ellas `tenebrae`, que es
  *  la que desbloquea `l1-larga-por-posicion`.
  *
  *  Era la cuarta vez que se abría el mismo hueco y la escribí yo sin mirar

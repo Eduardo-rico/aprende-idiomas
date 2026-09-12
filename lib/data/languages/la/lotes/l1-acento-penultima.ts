@@ -9,7 +9,7 @@
 //
 // ── DOS DISTORSIONES DELIBERADAS, Y LAS DOS MEDIDAS ──────────────────
 //
-// 1 · **El 62,4 % de las 2.174 formas de L1 son llanas.** Quien conteste
+// 1 · **El 61,9 % de las 2.194 formas de L1 son llanas.** Quien conteste
 //     «la penúltima» a todo acierta seis de cada diez sin saber latín. El
 //     lote va **10 y 10** en vez de copiar la proporción de la lengua, y el
 //     gate lo exige.
@@ -21,13 +21,13 @@
 //
 // (Las dos cifras cambiaron el 2026-09-12 y la corrección importa: las
 // primeras —61,5 % y 3,8 %— salieron de un enumerador que miraba tres
-// tablas de diez y se dejaba 745 formas. No cambian ninguna decisión del
+// tablas de diez y se dejaba 765 formas. No cambian ninguna decisión del
 // lote, pero una cifra que se cita tiene que ser la que sale.)
 //
 // ── UNA CATEGORÍA DEL DESCRIPTOR QUE NO EXISTE ───────────────────────
 //
 // «Larga por naturaleza» incluye el diptongo, y **en L1 no hay ni una forma
-// con diptongo en la penúltima**: cero de 2.174. No es un hueco del lote,
+// con diptongo en la penúltima**: cero de 2.194. No es un hueco del lote,
 // es que la categoría está vacía en el lexicón. El gate lo declara como
 // resultado en vez de dejar la cobertura en cero sin explicación.
 //
@@ -39,7 +39,7 @@
 // inventario el 2026-09-12, con la medida y con la distinción que el
 // ataque adversarial destapó: la afirmación probablemente confundía dos
 // errores distintos, y el grande es el otro —el instinto castellano de
-// acentuar siempre la penúltima falla en el 34,4 % de las formas y el
+// acentuar siempre la penúltima falla en el 34,9 % de las formas y el
 // 10,6 % de los tokens—, que es justo lo que enseña ESTE punto.
 //
 // ── LAS PALABRAS SON LAS QUE EL ALUMNO VA A LEER ─────────────────────
