@@ -151,13 +151,28 @@ const MUTA = /[pbtdcgf]/, LIQUIDA = /[lr]/;
 function silabas(pal: string): { nucleo: string; cierra: boolean }[] {
   const p = pal.normalize('NFC').toLowerCase();
   const V = /[aeiouāēīōūyȳ]/;
-  const DIPT = ['ae', 'oe', 'au', 'eu', 'ei'];
+  // `eu` y `ei` NO son diptongos por defecto, y aquí estaba el fallo que
+  // compartían las DOS implementaciones del repositorio: `Deus` es `De-us`
+  // —el tema sale del genitivo `Deī`— y salía monosílabo, con `acentoDe`
+  // devolviendo `null`. Son 432 tokens del corpus entre `Deus` y `Deum`.
+  // Cruzar las dos copias no podía cazarlo: una copia y su original
+  // coinciden en el error. Lo destapó un camino independiente de verdad —la
+  // frontera de morfema, que sale del genitivo del lexicón— y ese cruce
+  // está en `tests/unit/acento-la-dos-caminos.test.ts`.
+  const DIPT = ['ae', 'oe', 'au'];
+  const CERRADAS: Record<string, string[]> = {
+    ui: ['cui', 'huic', 'hui'],
+    eu: ['heu', 'heus', 'eheu', 'ceu', 'seu', 'neu'],
+    ei: ['deinde', 'dein', 'hei', 'deinceps'],
+  };
   const out: { nucleo: string; cierra: boolean }[] = [];
   let i = 0;
   while (i < p.length) {
     if (!V.test(p[i]!)) { i++; continue; }
     let nucleo = p[i]!;
-    if (DIPT.includes(p.slice(i, i + 2))) { nucleo = p.slice(i, i + 2); i += 2; } else i += 1;
+    const par = p.slice(i, i + 2);
+    const esDipt = DIPT.includes(par) || (CERRADAS[par]?.includes(p) ?? false);
+    if (esDipt) { nucleo = par; i += 2; } else i += 1;
     // consonantes hasta el siguiente núcleo
     let j = i;
     while (j < p.length && !V.test(p[j]!)) j++;

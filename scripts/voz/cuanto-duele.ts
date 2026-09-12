@@ -33,15 +33,26 @@ const VOCALES = 'aeiouāēīōūyȳ';
 // dos funciones devuelven cosas distintas y la de `lib` no expone las
 // sílabas— pero ya no puede desincronizarse en silencio: hay un test que
 // las cruza sobre todas las formas de L1.
-const DIPTONGOS = ['ae', 'au', 'oe', 'ei', 'eu'];
-/** Las tres palabras donde `ui` sí es diptongo. Son una lista cerrada. */
+// Y `eu` y `ei` tampoco, por el mismo motivo y con el mismo tipo de fallo.
+// `Deus` es `De-us` —el tema sale del genitivo `Deī`, o sea `De-`— y las dos
+// implementaciones del repositorio lo daban por monosílabo. Son 432 tokens
+// del corpus: `Deus` ×271 y `Deum` ×161, la palabra más frecuente de la
+// mitad vulgata. Lo mismo con `meus` = `me-us`.
+const DIPTONGOS = ['ae', 'au', 'oe'];
+/** Las palabras donde estos pares SÍ son diptongo. Listas cerradas, no
+ *  heurísticos: en latín son un puñado y fuera de ellas hay hiato. */
 const UI_DIPTONGO = ['cui', 'huic', 'hui'];
+const EU_DIPTONGO = ['heu', 'heus', 'eheu', 'ceu', 'seu', 'neu'];
+const EI_DIPTONGO = ['deinde', 'dein', 'hei', 'deinceps'];
 const MUTAS = 'pbtdcgf', LIQUIDAS = 'lr';
 
 function esDiptongo(w: string, i: number): boolean {
   const par = w.slice(i, i + 2);
   if (DIPTONGOS.includes(par)) return true;
-  return par === 'ui' && UI_DIPTONGO.includes(w);
+  if (par === 'ui') return UI_DIPTONGO.includes(w);
+  if (par === 'eu') return EU_DIPTONGO.includes(w);
+  if (par === 'ei') return EI_DIPTONGO.includes(w);
+  return false;
 }
 
 export function silabas(p: string): string[] {
@@ -76,7 +87,8 @@ export function silabas(p: string): string[] {
 export function silabaLarga(s: string, siguiente: string | undefined): boolean {
   if (/[āēīōūȳ]/.test(s)) return true;
   for (const d of DIPTONGOS) if (s.includes(d)) return true;
-  if (s.includes('ui') && UI_DIPTONGO.some((q) => q.includes(s))) return true;
+  for (const [par, lista] of [['ui', UI_DIPTONGO], ['eu', EU_DIPTONGO], ['ei', EI_DIPTONGO]] as [string, string[]][])
+    if (s.includes(par) && lista.some((q) => q.includes(s))) return true;
   const trasNucleo = s.replace(new RegExp(`^[^${VOCALES}]*[${VOCALES}]+`), '');
   if (trasNucleo.length > 0) return true;                      // cerrada por su propia coda
   if (siguiente) {

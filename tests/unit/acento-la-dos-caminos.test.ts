@@ -18,6 +18,24 @@
 // No se ha unificado el código —devuelven cosas distintas y la línea de voz
 // depende de las sílabas—, así que lo que impide la cuarta vez es este
 // test: cruzarlas sobre TODAS las formas, no sobre una muestra.
+//
+// ── Y CRUZARLAS NO BASTA, QUE ES LA PARTE QUE COSTÓ ──────────────────
+//
+// Con las dos de acuerdo, `Deus` seguía saliendo MONOSÍLABO en las dos:
+// las dos tenían `eu` en la lista de diptongos, porque una es copia de la
+// otra. **Una copia y su original coinciden en el error**, así que el cruce
+// da una confianza que no ha ganado.
+//
+// El camino que sí es independiente sale del LEXICÓN y no del silabeador:
+// el tema de `Deus` se saca de su genitivo `Deī`, o sea `De-`, y entonces
+// `Deus` es `De` + `us`. Una frontera de morfema no cae nunca dentro de un
+// diptongo. Encontró 4 formas —`Deus`, `Deum` y el vocativo—, que son 432
+// tokens del corpus y la palabra más frecuente de la mitad vulgata.
+//
+// Y de paso: la primera versión de ese cruce devolvió CERO porque llamaba a
+// una función que no existe con ese nombre y el `try/catch` se tragó el
+// error. Un cero que sólo significaba «no he mirado». Por eso aquí no hay
+// `catch` que silencie nada.
 import { describe, it, expect } from 'vitest';
 import { acentoDe } from '@/lib/lang/ortografia-la';
 import { acentoLatino, silabas } from '@/scripts/voz/cuanto-duele';
@@ -68,6 +86,57 @@ describe('el caso concreto que los separaba', () => {
   it('y SÍ lo es en las tres palabras donde el latín lo tiene', () => {
     expect(silabas('cui')).toEqual(['cui']);
     expect(silabas('huic')).toEqual(['huic']);
+  });
+});
+
+describe('el camino independiente: la frontera de morfema', () => {
+  // El tema sale del GENITIVO, que es dato del lexicón, no derivación del
+  // silabeador. Ahí está la independencia.
+  const temaPorGenitivo = (gen: string, d: string) => {
+    const g = gen.normalize('NFC');
+    if (d === '1ª') return g.replace(/ae$/, '');
+    if (d === '2ª') return g.replace(/ī$/, '');
+    if (d === '3ª') return g.replace(/is$/, '');
+    if (d === '4ª') return g.replace(/ūs$/, '');
+    return g.replace(/eī$|ēī$/, '');
+  };
+  const sinM = (x: string) => x.normalize('NFD').replace(/[\u0304\u0306]/g, '').normalize('NFC').toLowerCase();
+  const V = 'aeiouāēīōūyȳ';
+
+  it('ninguna sílaba se traga una frontera de morfema', () => {
+    const malas: string[] = [];
+    let fronteras = 0;
+    for (const n of NOMBRES_L1) {
+      let d: string;
+      try { d = String(declinacionDe(n)); } catch { continue; }   // sólo se salta lo que no es de las cinco
+      const tema = temaPorGenitivo(n.genitivo, d);
+      if (!tema || !V.includes(tema[tema.length - 1]!)) continue;
+      for (const [celda, f] of Object.entries(paradigmaNominal(n))) {
+        const fn = f.normalize('NFC');
+        if (sinM(fn).indexOf(sinM(tema)) !== 0) continue;
+        const resto = fn.slice(tema.length);
+        if (!resto || !V.includes(resto[0]!)) continue;
+        fronteras++;
+        // La frontera cae entre dos vocales: tienen que quedar en sílabas
+        // distintas, o sea el silabeo debe partir justo ahí.
+        const antes = silabas(fn).reduce<string[]>((acc, s) => [...acc, (acc[acc.length - 1] ?? '') + s], []);
+        const parteAhi = antes.some((pref) => sinM(pref) === sinM(tema));
+        if (!parteAhi) malas.push(`${n.lema} ${celda}: ${fn} = «${tema}»+«${resto}» pero silabea ${silabas(fn).join('-')}`);
+      }
+    }
+    expect(fronteras).toBeGreaterThan(50);   // que el test haya MIRADO de verdad
+    expect(malas).toEqual([]);
+  });
+
+  it('«Deus» es bisílabo y llana, que es lo que este camino destapó', () => {
+    expect(silabas('Deus')).toEqual(['de', 'us']);
+    expect(silabas('Deum')).toEqual(['de', 'um']);
+    expect(acentoDe('Deus')).toBe('llana');
+    expect(acentoLatino('Deus').acento).toBe('bisilabo');
+  });
+
+  it('y «heu», «cui», «huic» siguen siendo monosílabos', () => {
+    for (const w of ['heu', 'cui', 'huic']) expect(silabas(w), w).toEqual([w]);
   });
 });
 
