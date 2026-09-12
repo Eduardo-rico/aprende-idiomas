@@ -43,17 +43,27 @@ export interface PluralTantum {
   /** Tokens en el corpus y cuántos de ellos en singular. */
   tokens: number;
   enSingular: number;
+  /** A qué declinación pertenece el plural y de qué género es.
+   *
+   *  ENTRA EL 2026-09-12 y no es adorno: sin esto la tabla no produce
+   *  formas, así que `tenebrārum` y `tenebrīs` no existían para ningún
+   *  enumerador del proyecto. Y eso bloqueó un punto entero —
+   *  `l1-larga-por-posicion`, cuyo `varia` es la muta cum liquida— porque
+   *  `te-ne-brae` es justamente uno de los pocos casos donde decide.
+   *  El lema estaba; lo que faltaba era que la máquina lo declinara. */
+  declinacion: 1 | 2 | 3;
+  genero: 'm' | 'f' | 'n';
 }
 
 export const PLURALIA_TANTUM: PluralTantum[] = [
   // ── SIN SINGULAR NINGUNO ──
   { lema: 'arma', glosa: 'las armas; también el equipo de UN solo soldado',
-    singular: null, tokens: 77, enSingular: 0 },
-  { lema: 'tenebrae', glosa: 'la oscuridad', singular: null, tokens: 44, enSingular: 0 },
-  { lema: 'īnsidiae', glosa: 'la emboscada', singular: null, tokens: 24, enSingular: 0 },
-  { lema: 'nūptiae', glosa: 'la boda', singular: null, tokens: 21, enSingular: 0 },
-  { lema: 'līberī', glosa: 'los hijos', singular: null, tokens: 16, enSingular: 0 },
-  { lema: 'moenia', glosa: 'la muralla', singular: null, tokens: 5, enSingular: 0 },
+    singular: null, tokens: 77, enSingular: 0, declinacion: 2, genero: 'n' },
+  { lema: 'tenebrae', glosa: 'la oscuridad', singular: null, tokens: 44, enSingular: 0, declinacion: 1, genero: 'f' },
+  { lema: 'īnsidiae', glosa: 'la emboscada', singular: null, tokens: 24, enSingular: 0, declinacion: 1, genero: 'f' },
+  { lema: 'nūptiae', glosa: 'la boda', singular: null, tokens: 21, enSingular: 0, declinacion: 1, genero: 'f' },
+  { lema: 'līberī', glosa: 'los hijos', singular: null, tokens: 16, enSingular: 0, declinacion: 2, genero: 'm' },
+  { lema: 'moenia', glosa: 'la muralla', singular: null, tokens: 5, enSingular: 0, declinacion: 3, genero: 'n' },
 
   // ── CON SINGULAR RARÍSIMO ──
   // El punto lo pone como ejemplo de «carece de singular», y casi acierta:
@@ -63,15 +73,15 @@ export const PLURALIA_TANTUM: PluralTantum[] = [
   // contradecirlo.
   { lema: 'castra', glosa: 'el campamento', singular: 'castrum',
     glosaDelSingular: 'el fortín, un puesto suelto: existe y el alumno no lo verá nunca (1 de 160)',
-    tokens: 160, enSingular: 1 },
+    tokens: 160, enSingular: 1, declinacion: 2, genero: 'n' },
 
   // ── CON SINGULAR REAL Y OTRO SENTIDO ──
   { lema: 'litterae', glosa: 'la carta', singular: 'littera',
     glosaDelSingular: 'la letra del alfabeto — un sentido completamente distinto',
-    tokens: 225, enSingular: 7 },
+    tokens: 225, enSingular: 7, declinacion: 1, genero: 'f' },
   { lema: 'cōpiae', glosa: 'las tropas', singular: 'cōpia',
     glosaDelSingular: 'la abundancia, la provisión — y es corriente: 22 % de sus apariciones',
-    tokens: 119, enSingular: 26 },
+    tokens: 119, enSingular: 26, declinacion: 1, genero: 'f' },
 ];
 
 export type ClasePT = 'sin-singular' | 'singular-con-otro-sentido';
@@ -95,4 +105,33 @@ export function claseDe(p: PluralTantum): ClasePT {
  *  que `arma`, que no lo tiene, ni que `cōpia`, corriente en singular. */
 export function loRaroQueEsElSingular(p: PluralTantum): number | null {
   return p.singular === null ? null : p.enSingular / p.tokens;
+}
+
+/** El paradigma plural, que es el único que estos lemas tienen.
+ *
+ *  Las desinencias son las de siempre; lo único que hace falta es saber la
+ *  declinación y el género, y eso es dato de la entrada porque no se deduce
+ *  de la forma: `castra` y `moenia` acaban las dos en `-a` y son de segunda
+ *  y de tercera. */
+export function paradigmaPluralTantum(p: PluralTantum): Record<string, string> {
+  const l = p.lema.normalize('NFC');
+  if (p.declinacion === 1) {
+    const t = l.replace(/ae$/, '');
+    return { 'nom.pl': `${t}ae`, 'ac.pl': `${t}ās`, 'gen.pl': `${t}ārum`,
+             'dat.pl': `${t}īs`, 'abl.pl': `${t}īs`, 'voc.pl': `${t}ae` };
+  }
+  if (p.declinacion === 2 && p.genero === 'n') {
+    const t = l.replace(/a$/, '');
+    return { 'nom.pl': `${t}a`, 'ac.pl': `${t}a`, 'gen.pl': `${t}ōrum`,
+             'dat.pl': `${t}īs`, 'abl.pl': `${t}īs`, 'voc.pl': `${t}a` };
+  }
+  if (p.declinacion === 2) {
+    const t = l.replace(/ī$/, '');
+    return { 'nom.pl': `${t}ī`, 'ac.pl': `${t}ōs`, 'gen.pl': `${t}ōrum`,
+             'dat.pl': `${t}īs`, 'abl.pl': `${t}īs`, 'voc.pl': `${t}ī` };
+  }
+  // 3.ª neutra con tema en -i, que es la de `moenia`
+  const t = l.replace(/ia$/, '');
+  return { 'nom.pl': `${t}ia`, 'ac.pl': `${t}ia`, 'gen.pl': `${t}ium`,
+           'dat.pl': `${t}ibus`, 'abl.pl': `${t}ibus`, 'voc.pl': `${t}ia` };
 }

@@ -26,8 +26,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { contarCorpus, sinCantidad } from './atestar-irregulares';
 import { acentoLatino } from '../voz/cuanto-duele';
-import { NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1 } from '../../lib/data/languages/la/lexicon-l1';
-import { paradigmaNominal, infectum, perfectum, declinacionDe } from '../../lib/data/languages/la/paradigma-la';
+import { formasUnicasDeL1 } from '../../lib/data/languages/la/todas-las-formas';
 
 const SALIDA = 'lib/data/languages/la/atestacion-acento.json';
 const MACRON = /[āēīōūȳ]/;
@@ -49,18 +48,19 @@ export function tipoDeAcento(palabra: string): { tipo: TipoDeAcento; silabas: st
   return { tipo: 'posicion', silabas: s, tonica: pen };
 }
 
+/** Las formas de L1, y **ya no las enumera este fichero**.
+ *
+ *  La primera versión miraba tres tablas —nombres, verbos y el LEMA de los
+ *  adjetivos— y daba 1.429 formas. La máquina produce 2.174 desde diez
+ *  tablas: faltaban los indeclinables, los pluralia tantum, los adjetivos
+ *  de 3.ª, los irregulares, los compuestos de `sum`, los pronombres y los
+ *  participios. 745 formas que ningún consumidor veía, y entre ellas `tenebrae`, que es
+ *  la que desbloquea `l1-larga-por-posicion`.
+ *
+ *  Era la cuarta vez que se abría el mismo hueco y la escribí yo sin mirar
+ *  si existía la canónica. Se delega y no se copia. */
 export function todasLasFormasL1(): string[] {
-  const out = new Set<string>();
-  for (const n of NOMBRES_L1) {
-    try { declinacionDe(n); } catch { continue; }
-    for (const f of Object.values(paradigmaNominal(n))) out.add(f);
-  }
-  for (const v of VERBOS_L1) {
-    for (const f of Object.values(infectum(v))) out.add(f);
-    for (const f of Object.values(perfectum(v))) out.add(f);
-  }
-  for (const a of ADJETIVOS_L1) out.add(a.lema);
-  return [...out];
+  return formasUnicasDeL1();
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]).endsWith('atestar-acento.ts')) {

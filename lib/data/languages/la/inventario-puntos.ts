@@ -300,7 +300,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     descripcion: 'Una vocal breve seguida de dos consonantes cuenta como sílaba larga para el acento y para el verso: «magíster» es llana porque «gis» está cerrada por s, y «ténebrae» es esdrújula porque «br» es muta cum liquida y NO alarga.',
     prereqs: ['l1-acento-penultima'], clase: 'ortografico',
     calco: { ordenEnganya: 'no-aplica', herencia: 'sin-equivalente', via: 'recepcion' },
-    motivo: 'regla derivable; el alumno que sólo mira el mácrón se equivoca en la mitad de las palabras',
+    motivo: 'regla derivable. LA CIFRA QUE DECÍA ESTE MOTIVO ERA FALSA y se corrige el 2026-09-12 con la medida: quien sólo mira el mácrón falla en el 6,3 % de las formas atestiguadas de L1 (87 de 1.373) y en el 0,7 % de los tokens, no en la mitad. La confusión probable es con OTRO error, que sí es grande: el instinto castellano de acentuar siempre la penúltima falla en el 34,4 % de las formas y el 10,6 % de los tokens — y ése lo cubre `l1-acento-penultima`, no este punto. Lo que este punto enseña es raro y caro, no frecuente',
     cubre: ['L1/FONOLOGÍA'], cita: 'sílaba larga por naturaleza y por posición',
     varia: 'el grupo consonántico, porque muta cum liquida (pa-tris) puede contar como breve',
     excepcion: 'oclusiva + líquida (tr, pr, cl…) puede NO alargar: «tenĕbrae» sigue siendo esdrújula. El manual escolar lo presenta como absoluto y no lo es' }),

@@ -25,9 +25,17 @@ describe('el suelo que pone la lengua, medido y no supuesto', () => {
   });
 
   it('y la categoría que examina la mitad difícil es rarísima', () => {
-    // El inventario dice «se equivoca en la mitad de las palabras»; el
-    // corpus del propio proyecto dice el 3,8 %.
-    expect(POSICION_EN_LA_LENGUA).toBeLessThan(0.06);
+    // El `motivo` de `l1-larga-por-posicion` decía «se equivoca en la mitad
+    // de las palabras»; el corpus del propio proyecto dice el 6,3 % de las
+    // formas atestiguadas y el 0,7 % de los tokens. Corregido en el
+    // inventario el 2026-09-12.
+    //
+    // La primera versión de este test ponía 0,06 como techo, porque la
+    // cifra entonces era 3,8 % — y esa cifra salía de un enumerador que
+    // miraba tres tablas de diez. El techo va ahora en 0,10, que deja sitio
+    // a la medida y sigue estando lejísimos de «la mitad».
+    expect(POSICION_EN_LA_LENGUA).toBeLessThan(0.10);
+    expect(POSICION_EN_LA_LENGUA).toBeGreaterThan(0.04);
   });
 });
 

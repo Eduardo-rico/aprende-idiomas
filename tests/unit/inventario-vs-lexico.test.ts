@@ -42,21 +42,21 @@ describe('qué exige el inventario y qué tiene el lexicón', () => {
     // `l4-adjetivo-3a` estuvo bloqueado toda la sesión y dejó de estarlo el
     // 2026-09-09: la máquina ya tiene los tres tipos.
     expect(ids).not.toContain('l4-adjetivo-3a');
-    // Quedan DOS, y ninguno es de máquina: los dos son de contenido.
+    // Queda UNO, y no es de máquina sino de contenido: `l11-nucleo-800`
+    // pide 800 lemas y hay poco más de cien.
     //
-    // · `l11-nucleo-800` pide 800 lemas y hay poco más de cien.
-    // · `l1-larga-por-posicion` ENTRA EL 2026-09-12, y hasta hoy el gate lo
-    //   daba limpio porque nadie le había preguntado. Su `varia` es «el
-    //   grupo consonántico, porque muta cum liquida puede contar como
-    //   breve», y en L1 no hay NI UNA forma donde eso decida: las cinco con
-    //   oclusiva + líquida son de `magister`, y ahí la penúltima `gis` ya
-    //   está cerrada por su propia `s`. En el corpus hay 113 formas donde sí
-    //   decide —`tenebris` ×17, `arbitror` ×18, `obsecrō` ×17— y `tenebrae`,
-    //   que es el ejemplo del propio descriptor, sale ×23 entre sus casos.
-    //   Falta el lema, no la regla.
+    // `l1-larga-por-posicion` estuvo dos horas en esta lista el 2026-09-12 y
+    // la historia vale más que el resultado. La exigencia de la muta cum
+    // liquida se añadió ese día y salió 0 de 2: en L1 no había ni una forma
+    // donde el grupo consonántico decidiera el acento. La conclusión
+    // —«falta el lema»— era FALSA. `tenebrae` estaba en el repositorio desde
+    // el principio, en `PLURALIA_TANTUM` y con 44 tokens medidos; lo que
+    // faltaba era que esa tabla produjera formas y que el enumerador del
+    // dominio la mirara. `te-ne-brae` es justo uno de los pocos casos donde
+    // la muta cum liquida decide.
     expect(ids).toContain('l11-nucleo-800');
-    expect(ids).toContain('l1-larga-por-posicion');
-    expect(ids).toHaveLength(2);
+    expect(ids).not.toContain('l1-larga-por-posicion');
+    expect(ids).toHaveLength(1);
     // `l2-cuarta` pedía «los pocos femeninos» de 4.ª y sólo había `manus`.
     // `domus` entró el 2026-09-09, declarado entero en `IRREGULARES` porque
     // mezcla la 2.ª con la 4.ª: «domō» y «domōs» son de segunda dentro de un
@@ -120,9 +120,13 @@ describe('la muta cum liquida: el punto que el lexicón no puede sostener', () =
       expect(decideLaMutaCumLiquida(w), w).toBe(false);
   });
 
-  it('y en L1 no hay NINGUNA, así que el punto está bloqueado en el lexicón', () => {
-    expect(todasLasFormasL1().filter(decideLaMutaCumLiquida)).toEqual([]);
-    const r = buscarInsatisfechos(PUNTOS_LA as never);
-    expect(r.map((x) => x.punto)).toContain('l1-larga-por-posicion');
+  it('y las que hay salen de una tabla que el enumerador no miraba', () => {
+    // Con el enumerador viejo esto daba CERO y el punto quedaba declarado
+    // bloqueado por falta de vocabulario. El vocabulario estaba.
+    const decisivas = todasLasFormasL1().filter(decideLaMutaCumLiquida);
+    expect(decisivas).toContain('tenebrae');
+    expect(decisivas.length).toBeGreaterThanOrEqual(2);
+    expect(buscarInsatisfechos(PUNTOS_LA as never).map((x) => x.punto))
+      .not.toContain('l1-larga-por-posicion');
   });
 });
