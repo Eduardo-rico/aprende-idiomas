@@ -41,6 +41,7 @@ import { blocksDir } from '../lib/data/registry';
 import { hashKey } from './lib/cache';
 import { ExerciseSchema } from '../lib/data/zod-schemas';
 import { sinCantidad } from '../lib/lang/ortografia-la';
+import { determinanteSinPareja } from './lib/gate-funcion-caso';
 
 const HOY = new Date().toISOString().slice(0, 10);
 const write = process.argv.includes('--write');
@@ -110,8 +111,8 @@ const APLAZADOS_CON_MOTIVO: Record<string, string> = {
   // No se arregla en el publicador: las alternativas hay que escribirlas
   // ítem por ítem, bajo el gate del lote. Y no es cosmético — cada fallo
   // falso entra en el FSRS.
-  'l2-neutro-a': 'FORMA D · la clave lleva artículo español y el latín no tiene artículo: «la alegría» suspende a quien escribe «alegría» o «una alegría». Necesita `alternativas` por ítem.',
-  'l2-plural-tantum': 'FORMA D · misma familia del artículo, y encima con lemas cuyo sentido en español oscila («litterae» = la carta / las cartas).',
+  'l2-neutro-a': 'FORMA D · la mitad mecánica ya está resuelta —el publicador añade «una alegría» junto a «la alegría»— y lo que queda NO es mecánico: aquí el hueco es el OBJETO, y en español un objeto puede ir SIN determinante cuando es plural o de masa («la reina tiene alegría», «el rey ve guerras»). Aceptar la forma escueta en bloque metería español agramatical en los singulares contables («ve rosa»), y no aceptarla suspende a quien traduce bien. Hay que decidirlo ítem por ítem, bajo el gate del lote. ⚠ La diferencia con los lotes de l3 que sí se publican es real y no es una excusa: allí el hueco va tras preposición («a la niña») o es sujeto («Las niñas llevan»), y en esas dos posiciones la forma escueta NO es gramatical, así que la pareja definido/indefinido agota las lecturas.',
+  'l2-plural-tantum': 'FORMA D · misma posición de objeto que l2-neutro-a, así que le pasa lo mismo con la forma escueta; y encima con lemas cuyo sentido en español oscila («litterae» = la carta / las cartas), que es una segunda familia de alternativas y ésa sí es puro contenido.',
   'l3-acusativo-od': 'FORMA D · artículo Y posesivo: «a la madre» suspende «a su madre», que es la traducción natural.',
   'l3-ablativo': 'FORMA D · artículo, y además DOS ítems (la-3ab-11, la-3ab-12) cuya única clave aceptada produce español AGRAMATICAL: «de» + «el templo» = «de el templo», que en español es obligatoriamente «del». Quien escribe la forma buena suspende. Hay que reescribir la glosa o admitir «del»/«desde el», y eso es del gate del lote.',
   'l5-pro-drop': 'FORMA D · 9 de 12 admiten una segunda respuesta correcta que la clave suspende: «erat», «vidēbat» y «audiēbat» no marcan género, así que «ella» vale tanto como «él»; igual «ellas»/«ellos» y «vosotros»/«ustedes».',
@@ -155,12 +156,33 @@ const APLAZADOS_CON_MOTIVO: Record<string, string> = {
  *  `lib/exercises/normalize.ts`: «cuando existan ítems latinos, la tarjeta
  *  debe llamar a comparaLa». Hoy `comparaLa` no tiene ni un consumidor;
  *  esto es la mitad que se puede cerrar desde el publicador. */
+/** LAS ALTERNATIVAS QUE EL ÍTEM YA TRAE, más la del determinante.
+ *
+ *  ⚠ ESTO FALTABA, y el fallo es de los que se cuentan: el 2026-09-11
+ *  desaplacé tres lotes diciendo que «la clave lleva ahora la alternativa
+ *  de determinante que el latín exige», y era verdad EN EL ÍTEM y falso EN
+ *  LA PUBLICACIÓN — `datosDe` escribía `alternatives: []` para la forma D
+ *  y nunca leía `it.alternativas`. Se publicaron 30 ítems con el defecto
+ *  exacto que el aplazamiento existía para evitar. Un campo que el lote
+ *  rellena de buena fe y que el publicador tira es una funcionalidad que
+ *  no existe, y en silencio.
+ *
+ *  Por eso además hay un GATE abajo: que la alternativa esté en el ÍTEM no
+ *  prueba que llegue al alumno. */
+function alternativasDeclaradas(it: Crudo): string[] {
+  const propias = Array.isArray(it.alternativas) ? (it.alternativas as string[]) : [];
+  const r = str(it.respuesta);
+  if (!r) return propias;
+  const falta = determinanteSinPareja(r, propias);
+  return falta ? [...propias, falta] : propias;
+}
+
 function alternativasDe(it: Crudo): string[] {
   const r = str(it.respuesta);
   if (!r || CANTIDAD_ES_EL_PUNTO.has(String(it.punto))) return [];
-  if (colapsaSinMacron(it)) return [];
+  if (colapsaSinMacron(it)) return alternativasDeclaradas(it);
   const sin = sinCantidad(r);
-  return sin !== r ? [sin] : [];
+  return sin !== r ? [...alternativasDeclaradas(it), sin] : alternativasDeclaradas(it);
 }
 
 /** ⚠ EL ÍTEM CUYA ALTERNATIVA SIN MÁCRÓN ACEPTARÍA OTRA CELDA.
@@ -237,7 +259,7 @@ function datosDe(it: Crudo, f: Forma): { type: string; data: Record<string, unkn
       const ctx = [marco, pista].filter(Boolean).join(' · ');
       return { type: 'fill_blank', data: {
         sentence: glosa,
-        blanks: [{ position: 0, answer: str(it.respuesta)!, alternatives: [] }],
+        blanks: [{ position: 0, answer: str(it.respuesta)!, alternatives: alternativasDeclaradas(it) }],
         hintEs: ctx,
       } };
     }
@@ -247,7 +269,7 @@ function datosDe(it: Crudo, f: Forma): { type: string; data: Record<string, unkn
       const rs = it.respuestas as string[];
       return { type: 'fill_blank', data: {
         sentence: glosa,
-        blanks: rs.map((r, i) => ({ position: i, answer: r, alternatives: [] })),
+        blanks: rs.map((r, i) => ({ position: i, answer: r, alternatives: determinanteSinPareja(r, []) ? [determinanteSinPareja(r, [])!] : [] })),
         hintEs: str(it.latin) ?? str(it.marco) ?? '',
       } };
     }
@@ -396,6 +418,13 @@ async function main() {
         // después de escribir: un ejercicio que no valida es un ejercicio
         // que el runner no puede pintar, y descubrirlo en el JSON ya
         // escrito significa haberlo publicado.
+        // ⚠ EL GATE QUE FALTABA: que la alternativa esté declarada en el
+        //   ítem no prueba que llegue al alumno. Se comprueba sobre el
+        //   `data` ya construido, que es lo que el runner va a leer.
+        for (const b3 of (data.blanks as { answer: string; alternatives?: string[] }[] | undefined) ?? []) {
+          const falta = determinanteSinPareja(b3.answer, b3.alternatives ?? []);
+          if (falta) problemas.push(`${id} (${punto}): la clave «${b3.answer}» empieza por determinante y se publicaría SIN la otra lectura («${falta}»). El latín no tiene artículo`);
+        }
         const v2 = ExerciseSchema.safeParse(ex);
         if (!v2.success) { problemas.push(`${id} (${punto}): no valida contra ExerciseSchema — ${v2.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`).slice(0, 3).join(' · ')}`); continue; }
         usados.set(pantalla, { ex, data, punto });
