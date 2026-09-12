@@ -21,8 +21,28 @@ import { paradigmaNominal, infectum, perfectum, declinacionDe } from '../../lib/
  *  Regla: una consonante entre vocales va con la siguiente sílaba; dos o más
  *  se reparten, salvo muta cum liquida, que va entera con la siguiente. */
 const VOCALES = 'aeiouāēīōūyȳ';
-const DIPTONGOS = ['ae', 'au', 'oe', 'ei', 'eu', 'ui'];
+// `ui` NO está, y ahí estaba el fallo. Latín lo tiene como diptongo sólo en
+// `cui` y `huic` —y `hui`, interjección—, no en `habuit`, `monuit` ni
+// `fuimus`, que son `ha-bu-it`, `mo-nu-it`, `fu-i-mus`. Tratarlo como
+// diptongo siempre convertía `habuit` en bisílabo y le daba el acento a la
+// penúltima, cuando la palabra es esdrújula: HA-bu-it.
+//
+// Lo destapó cruzar esta función con `acentoDe` de `lib/lang/ortografia-la`,
+// que es la MISMA REGLA escrita dos veces en el repositorio: 9 formas de
+// 1.405 discrepaban, y las nueve eran este caso. La duplicación sigue —las
+// dos funciones devuelven cosas distintas y la de `lib` no expone las
+// sílabas— pero ya no puede desincronizarse en silencio: hay un test que
+// las cruza sobre todas las formas de L1.
+const DIPTONGOS = ['ae', 'au', 'oe', 'ei', 'eu'];
+/** Las tres palabras donde `ui` sí es diptongo. Son una lista cerrada. */
+const UI_DIPTONGO = ['cui', 'huic', 'hui'];
 const MUTAS = 'pbtdcgf', LIQUIDAS = 'lr';
+
+function esDiptongo(w: string, i: number): boolean {
+  const par = w.slice(i, i + 2);
+  if (DIPTONGOS.includes(par)) return true;
+  return par === 'ui' && UI_DIPTONGO.includes(w);
+}
 
 export function silabas(p: string): string[] {
   const w = p.normalize('NFC').toLowerCase();
@@ -30,14 +50,14 @@ export function silabas(p: string): string[] {
   for (let i = 0; i < w.length; i++) {
     if (!VOCALES.includes(w[i]!)) continue;
     if (nucleos.length && i === nucleos[nucleos.length - 1]! + 1
-        && DIPTONGOS.includes(w.slice(i - 1, i + 1))) continue;   // el diptongo es un núcleo
+        && esDiptongo(w, i - 1)) continue;   // el diptongo es un núcleo
     nucleos.push(i);
   }
   if (nucleos.length <= 1) return [w];
   const cortes: number[] = [];
   for (let k = 0; k < nucleos.length - 1; k++) {
     let ini = nucleos[k]!;
-    while (ini + 1 < w.length && VOCALES.includes(w[ini + 1]!) && DIPTONGOS.includes(w.slice(ini, ini + 2))) ini++;
+    while (ini + 1 < w.length && VOCALES.includes(w[ini + 1]!) && esDiptongo(w, ini)) ini++;
     const fin = nucleos[k + 1]!;
     const cons = w.slice(ini + 1, fin);
     if (cons.length === 0) cortes.push(fin);
@@ -56,6 +76,7 @@ export function silabas(p: string): string[] {
 export function silabaLarga(s: string, siguiente: string | undefined): boolean {
   if (/[āēīōūȳ]/.test(s)) return true;
   for (const d of DIPTONGOS) if (s.includes(d)) return true;
+  if (s.includes('ui') && UI_DIPTONGO.some((q) => q.includes(s))) return true;
   const trasNucleo = s.replace(new RegExp(`^[^${VOCALES}]*[${VOCALES}]+`), '');
   if (trasNucleo.length > 0) return true;                      // cerrada por su propia coda
   if (siguiente) {
