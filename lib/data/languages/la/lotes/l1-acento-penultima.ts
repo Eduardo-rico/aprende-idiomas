@@ -9,25 +9,27 @@
 //
 // ── DOS DISTORSIONES DELIBERADAS, Y LAS DOS MEDIDAS ──────────────────
 //
-// 1 · **El 61,7 % de las 2.194 formas de L1 son llanas.** Quien conteste
+// 1 · **El 64,6 % de las 2.787 formas de L1 son llanas.** Quien conteste
 //     «la penúltima» a todo acierta seis de cada diez sin saber latín. El
 //     lote va **10 y 10** en vez de copiar la proporción de la lengua, y el
 //     gate lo exige.
 //
-// 2 · **La penúltima larga POR POSICIÓN es el 6,3 % de las formas
+// 2 · **La penúltima larga POR POSICIÓN es el 7,8 % de las formas
 //     atestiguadas.** Es la única categoría que refuta mirar sólo el
 //     mácrón, así que respetar su proporción daría 1,3 ítems de la mitad
 //     difícil del punto. Van **5 de 20**, o sea el 25 %.
 //
-// (Las dos cifras cambiaron el 2026-09-12 y la corrección importa: las
-// primeras —61,5 % y 3,8 %— salieron de un enumerador que miraba tres
-// tablas de diez y se dejaba 765 formas. No cambian ninguna decisión del
-// lote, pero una cifra que se cita tiene que ser la que sale.)
+// (LAS CIFRAS SON UNA FOTO CON FECHA, y esto importa más que su valor:
+// las primeras —61,5 % y 3,8 %— salieron de un enumerador que miraba tres
+// tablas de doce. Cada vez que la máquina crece, cambian. Se reproducen con
+// `npx tsx scripts/lib/dominio-antes-y-despues.ts`, y lo que no cambia con
+// ellas es la DECISIÓN del lote: va 10 y 10 porque el gate lo exige en
+// absoluto, no porque el suelo valga hoy 64,6 %.)
 //
 // ── UNA CATEGORÍA DEL DESCRIPTOR QUE NO EXISTE ───────────────────────
 //
 // «Larga por naturaleza» incluye el diptongo, y **en L1 no hay ni una forma
-// con diptongo en la penúltima**: cero de 2.194. No es un hueco del lote,
+// con diptongo en la penúltima**: cero de 2.787. No es un hueco del lote,
 // es que la categoría está vacía en el lexicón. El gate lo declara como
 // resultado en vez de dejar la cobertura en cero sin explicación.
 //
@@ -35,12 +37,12 @@
 //
 // El `motivo` de `l1-larga-por-posicion` decía que «el alumno que sólo mira
 // el mácrón se equivoca en la mitad de las palabras». Medido: **el 6,3 % de
-// las formas atestiguadas y el 0,7 % de los tokens**. Corregido en el
+// las formas atestiguadas y el 0,9 % de los tokens**. Corregido en el
 // inventario el 2026-09-12, con la medida y con la distinción que el
 // ataque adversarial destapó: la afirmación probablemente confundía dos
 // errores distintos, y el grande es el otro —el instinto castellano de
-// acentuar siempre la penúltima falla en el 34,7 % de las formas y el
-// 8,9 % de los tokens—, que es justo lo que enseña ESTE punto.
+// acentuar siempre la penúltima falla en el 32,5 % de las formas y el
+// 9,1 % de los tokens—, que es justo lo que enseña ESTE punto.
 //
 // ── LAS PALABRAS SON LAS QUE EL ALUMNO VA A LEER ─────────────────────
 //

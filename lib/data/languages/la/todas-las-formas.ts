@@ -37,6 +37,8 @@ import { IRREGULARES_L1 } from './irregulares';
 import { COMPUESTOS_DE_SUM, paradigmaCompuesto } from './compuestos-de-sum';
 import { PRONOMBRES_L1, paradigmaPronombre } from './pronombres-la';
 import { participioPresente } from './participios';
+import { pasivaInfectum } from './paradigma-la';
+import { todosLosInfinitivos, SIN_PASIVA } from './infinitivos';
 
 export interface FormaDeL1 { clave: string; forma: string; tabla: string }
 
@@ -45,6 +47,7 @@ export interface FormaDeL1 { clave: string; forma: string; tabla: string }
 export const TABLAS_QUE_PRODUCEN_FORMAS = [
   'NOMBRES_L1', 'VERBOS_L1', 'ADJETIVOS_L1', 'INDECLINABLES_L1', 'PLURALIA_TANTUM',
   'ADJETIVOS_3A', 'IRREGULARES_L1', 'COMPUESTOS_DE_SUM', 'PRONOMBRES_L1', 'PARTICIPIOS',
+  'PASIVA', 'INFINITIVOS',
 ] as const;
 
 export function todasLasFormasDeL1(): FormaDeL1[] {
@@ -80,6 +83,21 @@ export function todasLasFormasDeL1(): FormaDeL1[] {
   for (const e of PRONOMBRES_L1)
     for (const [c, f] of Object.entries(paradigmaPronombre(e)))
       out.push({ clave: `${e.lema}.${c}`, forma: f, tabla: 'PRONOMBRES_L1' });
+  // LA VOZ PASIVA, que la máquina tiene (`pasivaInfectum`) y que ningún
+  // enumerador llamaba. Lo destapó el gate de vocabulario del marco: `dīcitur`
+  // y `vidētur` salían como palabras que el alumno no conoce, y las conoce.
+  for (const v of VERBOS_L1) {
+    if (SIN_PASIVA[v.lema.normalize('NFC')]) continue;   // declarado, no tragado
+    for (const [c, f] of Object.entries(pasivaInfectum(v)))
+      out.push({ clave: `${v.lema}.pas.${c}`, forma: f, tabla: 'PASIVA' });
+  }
+  // Y los cinco infinitivos, que entran con `l8-infinitivo-sustantivo`. El
+  // de presente activo ya estaba —es dato del lexicón— y los otros cuatro
+  // no existían para nadie.
+  for (const v of VERBOS_L1)
+    for (const g of ['m', 'f', 'n'] as const)
+      for (const i of todosLosInfinitivos(v, g))
+        out.push({ clave: `${v.lema}.inf.${i.tiempo}.${i.voz}.${g}`, forma: i.forma, tabla: 'INFINITIVOS' });
   // Del participio se enumera el de PRESENTE, que es el que declina como
   // adjetivo de 3.ª y el que el inventario examina en `l4-adjetivo-3a`.
   for (const v of VERBOS_L1) {

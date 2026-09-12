@@ -1,0 +1,1656 @@
+{
+ "generado": "2026-09-12",
+ "corpus": "la_perseus + la_proiel (UD)",
+ "comoSeCuenta": "los simples por unigrama; los perifrásticos por su PRIMERA palabra (el participio, que es lo que dice si la forma del verbo existe) y además por el bigrama con «esse», que dice si la construcción aparece",
+ "total": {
+  "presente.activa": 570,
+  "presente.pasiva": 234,
+  "perfecto.activa": 40,
+  "perfecto.pasiva": 185,
+  "futuro.activa": 20
+ },
+ "lemas": {
+  "habeō": {
+   "presente.activa": {
+    "forma": "habēre",
+    "n": 87
+   },
+   "presente.pasiva": {
+    "forma": "habērī",
+    "n": 2
+   },
+   "perfecto.activa": {
+    "forma": "habuisse",
+    "n": 5
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "habitus esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "habitūrus esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "habitum esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "habitūrum esse",
+    "n": 4,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "habita esse",
+    "n": 5,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "habitūra esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "habitam esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "habitūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "habitum esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "habitūrum esse",
+    "n": 4,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "habitum esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "habitūrum esse",
+    "n": 4,
+    "bigrama": 0
+   }
+  },
+  "faciō": {
+   "presente.activa": {
+    "forma": "facere",
+    "n": 135
+   },
+   "presente.pasiva": {
+    "forma": "fierī",
+    "n": 118
+   },
+   "perfecto.activa": {
+    "forma": "fēcisse",
+    "n": 16
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "factus esse",
+    "n": 78,
+    "bigrama": 2
+   },
+   "futuro.activa.m.nom": {
+    "forma": "factūrus esse",
+    "n": 8,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "factum esse",
+    "n": 177,
+    "bigrama": 9
+   },
+   "futuro.activa.m.ac": {
+    "forma": "factūrum esse",
+    "n": 15,
+    "bigrama": 1
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "facta esse",
+    "n": 125,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "factūra esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "factam esse",
+    "n": 4,
+    "bigrama": 1
+   },
+   "futuro.activa.f.ac": {
+    "forma": "factūram esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "factum esse",
+    "n": 177,
+    "bigrama": 9
+   },
+   "futuro.activa.n.nom": {
+    "forma": "factūrum esse",
+    "n": 15,
+    "bigrama": 1
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "factum esse",
+    "n": 177,
+    "bigrama": 9
+   },
+   "futuro.activa.n.ac": {
+    "forma": "factūrum esse",
+    "n": 15,
+    "bigrama": 1
+   }
+  },
+  "capiō": {
+   "presente.activa": {
+    "forma": "capere",
+    "n": 17
+   },
+   "presente.pasiva": {
+    "forma": "capī",
+    "n": 6
+   },
+   "perfecto.activa": {
+    "forma": "cēpisse",
+    "n": 0
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "captus esse",
+    "n": 5,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "captūrus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "captum esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "captūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "capta esse",
+    "n": 5,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "captūra esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "captam esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "captūram esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "captum esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "captūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "captum esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "captūrum esse",
+    "n": 0,
+    "bigrama": 0
+   }
+  },
+  "doceō": {
+   "presente.activa": {
+    "forma": "docēre",
+    "n": 9
+   },
+   "presente.pasiva": {
+    "forma": "docērī",
+    "n": 1
+   },
+   "perfecto.activa": {
+    "forma": "docuisse",
+    "n": 0
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "doctus esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "doctūrus esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "doctum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "doctūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "docta esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "doctūra esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "doctam esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "doctūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "doctum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "doctūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "doctum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "doctūrum esse",
+    "n": 0,
+    "bigrama": 0
+   }
+  },
+  "dīcō": {
+   "presente.activa": {
+    "forma": "dīcere",
+    "n": 83
+   },
+   "presente.pasiva": {
+    "forma": "dīcī",
+    "n": 17
+   },
+   "perfecto.activa": {
+    "forma": "dīxisse",
+    "n": 8
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "dictus esse",
+    "n": 3,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "dictūrus esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "dictum esse",
+    "n": 47,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "dictūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "dicta esse",
+    "n": 14,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "dictūra esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "dictam esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "dictūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "dictum esse",
+    "n": 47,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "dictūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "dictum esse",
+    "n": 47,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "dictūrum esse",
+    "n": 0,
+    "bigrama": 0
+   }
+  },
+  "stō": {
+   "presente.activa": {
+    "forma": "stāre",
+    "n": 16
+   },
+   "presente.pasiva": {
+    "forma": "stārī",
+    "n": 1
+   },
+   "perfecto.activa": {
+    "forma": "stetisse",
+    "n": 0
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "status esse",
+    "n": 13,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "statūrus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "statum esse",
+    "n": 5,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "statūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "stata esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "statūra esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "statam esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "statūram esse",
+    "n": 3,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "statum esse",
+    "n": 5,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "statūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "statum esse",
+    "n": 5,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "statūrum esse",
+    "n": 0,
+    "bigrama": 0
+   }
+  },
+  "cadō": {
+   "presente.activa": {
+    "forma": "cadere",
+    "n": 5
+   },
+   "presente.pasiva": {
+    "forma": "cadī",
+    "n": 0
+   },
+   "perfecto.activa": {
+    "forma": "cecidisse",
+    "n": 1
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "cāsus esse",
+    "n": 6,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "cāsūrus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "cāsum esse",
+    "n": 13,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "cāsūrum esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "cāsa esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "cāsūra esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "cāsam esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "cāsūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "cāsum esse",
+    "n": 13,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "cāsūrum esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "cāsum esse",
+    "n": 13,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "cāsūrum esse",
+    "n": 2,
+    "bigrama": 0
+   }
+  },
+  "rogō": {
+   "presente.activa": {
+    "forma": "rogāre",
+    "n": 10
+   },
+   "presente.pasiva": {
+    "forma": "rogārī",
+    "n": 0
+   },
+   "perfecto.activa": {
+    "forma": "rogāvisse",
+    "n": 0
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "rogātus esse",
+    "n": 6,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "rogātūrus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "rogātum esse",
+    "n": 3,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "rogātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "rogāta esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "rogātūra esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "rogātam esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "rogātūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "rogātum esse",
+    "n": 3,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "rogātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "rogātum esse",
+    "n": 3,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "rogātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   }
+  },
+  "amō": {
+   "presente.activa": {
+    "forma": "amāre",
+    "n": 11
+   },
+   "presente.pasiva": {
+    "forma": "amārī",
+    "n": 7
+   },
+   "perfecto.activa": {
+    "forma": "amāvisse",
+    "n": 0
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "amātus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "amātūrus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "amātum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "amātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "amāta esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "amātūra esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "amātam esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "amātūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "amātum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "amātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "amātum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "amātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   }
+  },
+  "vocō": {
+   "presente.activa": {
+    "forma": "vocāre",
+    "n": 6
+   },
+   "presente.pasiva": {
+    "forma": "vocārī",
+    "n": 11
+   },
+   "perfecto.activa": {
+    "forma": "vocāvisse",
+    "n": 0
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "vocātus esse",
+    "n": 12,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "vocātūrus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "vocātum esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "vocātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "vocāta esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "vocātūra esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "vocātam esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "vocātūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "vocātum esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "vocātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "vocātum esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "vocātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   }
+  },
+  "laudō": {
+   "presente.activa": {
+    "forma": "laudāre",
+    "n": 2
+   },
+   "presente.pasiva": {
+    "forma": "laudārī",
+    "n": 5
+   },
+   "perfecto.activa": {
+    "forma": "laudāvisse",
+    "n": 0
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "laudātus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "laudātūrus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "laudātum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "laudātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "laudāta esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "laudātūra esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "laudātam esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "laudātūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "laudātum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "laudātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "laudātum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "laudātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   }
+  },
+  "salūtō": {
+   "presente.activa": {
+    "forma": "salūtāre",
+    "n": 5
+   },
+   "presente.pasiva": {
+    "forma": "salūtārī",
+    "n": 2
+   },
+   "perfecto.activa": {
+    "forma": "salūtāvisse",
+    "n": 0
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "salūtātus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "salūtātūrus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "salūtātum esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "salūtātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "salūtāta esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "salūtātūra esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "salūtātam esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "salūtātūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "salūtātum esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "salūtātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "salūtātum esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "salūtātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   }
+  },
+  "exspectō": {
+   "presente.activa": {
+    "forma": "exspectāre",
+    "n": 12
+   },
+   "presente.pasiva": {
+    "forma": "exspectārī",
+    "n": 1
+   },
+   "perfecto.activa": {
+    "forma": "exspectāvisse",
+    "n": 0
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "exspectātus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "exspectātūrus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "exspectātum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "exspectātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "exspectāta esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "exspectātūra esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "exspectātam esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "exspectātūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "exspectātum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "exspectātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "exspectātum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "exspectātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   }
+  },
+  "videō": {
+   "presente.activa": {
+    "forma": "vidēre",
+    "n": 55
+   },
+   "presente.pasiva": {
+    "forma": "vidērī",
+    "n": 14
+   },
+   "perfecto.activa": {
+    "forma": "vīdisse",
+    "n": 4
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "vīsus esse",
+    "n": 13,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "vīsūrus esse",
+    "n": 5,
+    "bigrama": 1
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "vīsum esse",
+    "n": 25,
+    "bigrama": 1
+   },
+   "futuro.activa.m.ac": {
+    "forma": "vīsūrum esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "vīsa esse",
+    "n": 13,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "vīsūra esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "vīsam esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "vīsūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "vīsum esse",
+    "n": 25,
+    "bigrama": 1
+   },
+   "futuro.activa.n.nom": {
+    "forma": "vīsūrum esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "vīsum esse",
+    "n": 25,
+    "bigrama": 1
+   },
+   "futuro.activa.n.ac": {
+    "forma": "vīsūrum esse",
+    "n": 1,
+    "bigrama": 0
+   }
+  },
+  "timeō": {
+   "presente.activa": {
+    "forma": "timēre",
+    "n": 25
+   },
+   "presente.pasiva": {
+    "forma": "timērī",
+    "n": 0
+   },
+   "perfecto.activa": {
+    "forma": "timuisse",
+    "n": 0
+   }
+  },
+  "moneō": {
+   "presente.activa": {
+    "forma": "monēre",
+    "n": 1
+   },
+   "presente.pasiva": {
+    "forma": "monērī",
+    "n": 0
+   },
+   "perfecto.activa": {
+    "forma": "monuisse",
+    "n": 1
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "monitus esse",
+    "n": 3,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "monitūrus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "monitum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "monitūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "monita esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "monitūra esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "monitam esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "monitūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "monitum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "monitūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "monitum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "monitūrum esse",
+    "n": 0,
+    "bigrama": 0
+   }
+  },
+  "dūcō": {
+   "presente.activa": {
+    "forma": "dūcere",
+    "n": 10
+   },
+   "presente.pasiva": {
+    "forma": "dūcī",
+    "n": 9
+   },
+   "perfecto.activa": {
+    "forma": "dūxisse",
+    "n": 0
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "ductus esse",
+    "n": 4,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "ductūrus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "ductum esse",
+    "n": 1,
+    "bigrama": 1
+   },
+   "futuro.activa.m.ac": {
+    "forma": "ductūrum esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "ducta esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "ductūra esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "ductam esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "ductūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "ductum esse",
+    "n": 1,
+    "bigrama": 1
+   },
+   "futuro.activa.n.nom": {
+    "forma": "ductūrum esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "ductum esse",
+    "n": 1,
+    "bigrama": 1
+   },
+   "futuro.activa.n.ac": {
+    "forma": "ductūrum esse",
+    "n": 1,
+    "bigrama": 0
+   }
+  },
+  "mittō": {
+   "presente.activa": {
+    "forma": "mittere",
+    "n": 34
+   },
+   "presente.pasiva": {
+    "forma": "mittī",
+    "n": 8
+   },
+   "perfecto.activa": {
+    "forma": "mīsisse",
+    "n": 3
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "missus esse",
+    "n": 22,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "missūrus esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "missum esse",
+    "n": 10,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "missūrum esse",
+    "n": 3,
+    "bigrama": 1
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "missa esse",
+    "n": 7,
+    "bigrama": 1
+   },
+   "futuro.activa.f.nom": {
+    "forma": "missūra esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "missam esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "missūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "missum esse",
+    "n": 10,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "missūrum esse",
+    "n": 3,
+    "bigrama": 1
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "missum esse",
+    "n": 10,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "missūrum esse",
+    "n": 3,
+    "bigrama": 1
+   }
+  },
+  "legō": {
+   "presente.activa": {
+    "forma": "legere",
+    "n": 4
+   },
+   "presente.pasiva": {
+    "forma": "legī",
+    "n": 21
+   },
+   "perfecto.activa": {
+    "forma": "lēgisse",
+    "n": 1
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "lēctus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "lēctūrus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "lēctum esse",
+    "n": 8,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "lēctūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "lēcta esse",
+    "n": 3,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "lēctūra esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "lēctam esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "lēctūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "lēctum esse",
+    "n": 8,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "lēctūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "lēctum esse",
+    "n": 8,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "lēctūrum esse",
+    "n": 0,
+    "bigrama": 0
+   }
+  },
+  "audiō": {
+   "presente.activa": {
+    "forma": "audīre",
+    "n": 29
+   },
+   "presente.pasiva": {
+    "forma": "audīrī",
+    "n": 1
+   },
+   "perfecto.activa": {
+    "forma": "audīvisse",
+    "n": 0
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "audītus esse",
+    "n": 4,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "audītūrus esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "audītum esse",
+    "n": 6,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "audītūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "audīta esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "audītūra esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "audītam esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "audītūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "audītum esse",
+    "n": 6,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "audītūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "audītum esse",
+    "n": 6,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "audītūrum esse",
+    "n": 0,
+    "bigrama": 0
+   }
+  },
+  "inveniō": {
+   "presente.activa": {
+    "forma": "invenīre",
+    "n": 4
+   },
+   "presente.pasiva": {
+    "forma": "invenīrī",
+    "n": 5
+   },
+   "perfecto.activa": {
+    "forma": "invēnisse",
+    "n": 1
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "inventus esse",
+    "n": 11,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "inventūrus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "inventum esse",
+    "n": 4,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "inventūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "inventa esse",
+    "n": 3,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "inventūra esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "inventam esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "inventūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "inventum esse",
+    "n": 4,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "inventūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "inventum esse",
+    "n": 4,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "inventūrum esse",
+    "n": 0,
+    "bigrama": 0
+   }
+  },
+  "custōdiō": {
+   "presente.activa": {
+    "forma": "custōdīre",
+    "n": 3
+   },
+   "presente.pasiva": {
+    "forma": "custōdīrī",
+    "n": 4
+   },
+   "perfecto.activa": {
+    "forma": "custōdīvisse",
+    "n": 0
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "custōdītus esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "custōdītūrus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "custōdītum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "custōdītūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "custōdīta esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "custōdītūra esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "custōdītam esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "custōdītūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "custōdītum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "custōdītūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "custōdītum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "custōdītūrum esse",
+    "n": 0,
+    "bigrama": 0
+   }
+  },
+  "portō": {
+   "presente.activa": {
+    "forma": "portāre",
+    "n": 7
+   },
+   "presente.pasiva": {
+    "forma": "portārī",
+    "n": 1
+   },
+   "perfecto.activa": {
+    "forma": "portāvisse",
+    "n": 0
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "portātus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "portātūrus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "portātum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "portātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "portāta esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "portātūra esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "portātam esse",
+    "n": 1,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "portātūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "portātum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "portātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "portātum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "portātūrum esse",
+    "n": 0,
+    "bigrama": 0
+   }
+  }
+ }
+}
