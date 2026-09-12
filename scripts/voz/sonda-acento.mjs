@@ -75,6 +75,19 @@ if (!VOZ && !SOLO_PLAN) {
 const PARES = [
   { id: 'tilde', a: 'dominos', b: 'dòminos', compara: 'todo',
     pregunta: '¿la tilde escrita mueve algo? Misma palabra, una con marca y otra sin ella.' },
+  // LA PREGUNTA QUE LA DECISIÓN DEL MACRÓN AÑADIÓ (2026-09-09).
+  //
+  // El alumno lee sin macrones, así que si a la voz se le manda la forma
+  // escueta el motor NO TIENE NINGUNA PISTA de la cantidad y acertar el
+  // acento sería casualidad. `discipulum` es dis-CI-pu-lum —la penúltima
+  // es breve— y el italiano acentúa la penúltima por defecto: dis-ci-PU-lum.
+  //
+  // Si las dos suenan igual, el motor ignora la tilde y hay que buscar otra
+  // mitigación. Si difieren, `textoParaVoz` tiene que mandar la
+  // respelización ACENTUADA aunque el alumno lea la forma desnuda — el
+  // mismo corte de producir contra leer, aplicado al canal de audio.
+  { id: 'esdrujula', a: 'discipulum', b: 'discìpulum', compara: 'todo',
+    pregunta: 'dis-CI-pu-lum (latín) contra dis-ci-PU-lum (penúltima italiana): ¿arregla la tilde el acento de una esdrújula?' },
   // PARES MÍNIMOS DE ACENTO: la misma palabra, dos acentos, y lo que los
   // decide viene DESPUÉS del tramo que se compara.
   { id: 'calib-capitano', a: 'capitano molti errori', b: 'capitano della nave', compara: 'principio',
@@ -82,7 +95,16 @@ const PARES = [
   { id: 'calib-subito', a: 'subito dopo la cena', b: 'subito molti danni', compara: 'principio',
     pregunta: 'SÙ-bi-to («enseguida») contra su-BÌ-to («sufrido»): misma cadena, acento distinto.' },
 ];
-const SUELTAS = ['dominus', 'discipulum', 'agricola', 'amicus', 'filium', 'celum', 'gratsia'];
+// Las sueltas van en PAREJA —desnuda y acentuada— para que se puedan
+// comparar de oído. Las cinco primeras son esdrújulas latinas, donde el
+// italiano pondría el acento en la penúltima; `dominos` es la contraria, una
+// llana cuya penúltima es larga (do-mi-NŌS), y está para ver si el motor
+// acierta justo donde el defecto italiano coincide con el latín.
+const SUELTAS = [
+  'dominus', 'dòminus', 'discipulum', 'discìpulum', 'agricola', 'agrìcola',
+  'filium', 'fìlium', 'puerum', 'pùerum', 'dominos', 'domìnos',
+  'amicus', 'celum', 'gratsia',
+];
 
 const coste = PARES.reduce((a, p) => a + (p.a.length + p.b.length) * N, 0) + SUELTAS.reduce((a, s) => a + s.length, 0);
 console.log(`plan: ${PARES.length} pares × ${N} repeticiones + ${SUELTAS.length} sueltas = ${coste} caracteres`);
