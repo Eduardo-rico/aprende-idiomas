@@ -52,6 +52,23 @@
 // Si NO obedece, aquí acaba la línea del IPA y no se gasta un carácter
 // más. Si obedece, la pregunta de `discipulum` se hace aparte y con n
 // mayor, porque ahí la potencia es la mitad.
+//
+// ── LA PRIMERA TANDA SE ANULÓ, Y EL FALLO ERA DE ORDEN ───────────────
+//
+// 790 caracteres, veredicto ANULADO por su propia regla: `discipulum`, que
+// va IDÉNTICO carácter a carácter en las dos condiciones, se movió 0,358
+// —3,8 errores típicos—, mientras que la palabra etiquetada no se movió
+// nada (0,005, 0,1 ee). Comprobado que no era un desajuste de índices: la
+// API devuelve las cinco palabras en el mismo sitio en las dos.
+//
+// El sospechoso es el ORDEN. La primera versión generaba las diez A y
+// después las diez B, así que **cualquier deriva del motor a lo largo de
+// la tanda cae entera sobre el contraste** y es indistinguible del efecto.
+// Un control negativo no protege de eso: se mueve igual que todo lo demás,
+// que es exactamente lo que se vio.
+//
+// El arreglo no cuesta un carácter: **se intercalan**, A B A B A B. Así la
+// deriva se reparte entre las dos condiciones en vez de sumarse a una.
 import fs from 'node:fs';
 import { spawnSync } from 'node:child_process';
 
@@ -137,17 +154,21 @@ const sd = (v: number[]) => { const m = media(v); return Math.sqrt(media(v.map((
 
 async function main() {
   const datos: Record<string, { dur: number[]; frac: Record<string, number[]> }> = {};
-  for (const [cond, texto] of Object.entries(CONDICIONES)) {
-    const d = { dur: [] as number[], frac: {} as Record<string, number[]> };
-    for (const t of DIANAS) d.frac[t.nombre] = [];
-    for (let i = 1; i <= N; i++) {
+  for (const cond of Object.keys(CONDICIONES)) {
+    datos[cond] = { dur: [], frac: {} };
+    for (const t of DIANAS) datos[cond]!.frac[t.nombre] = [];
+  }
+  // INTERCALADAS. Generar las diez A y luego las diez B mete cualquier
+  // deriva del motor entera dentro del contraste, y eso ya anuló una tanda.
+  for (let i = 1; i <= N; i++) {
+    for (const [cond, texto] of Object.entries(CONDICIONES)) {
       const mp3 = `${SALIDA}/${cond}-${i}.mp3`;
       const al = await generar(texto, mp3);
+      const d = datos[cond]!;
       d.dur.push(al.character_end_times_seconds[al.character_end_times_seconds.length - 1]!);
       const x = pcm(mp3);
       for (const t of DIANAS) { const v = vano(al, t.i); if (v) d.frac[t.nombre]!.push(fraccionDelPico(x, v[0], v[1])); }
     }
-    datos[cond] = d;
   }
 
   const durA = media(datos.A!.dur), durB = media(datos.B!.dur);
