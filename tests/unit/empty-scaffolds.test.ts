@@ -39,6 +39,27 @@ describe("empty scaffolds (Phase 5)", () => {
         expect(c.BLOCKS.length).toBeGreaterThan(0);
         expect(() => c.getBlock(1)).toThrow();
         expect(c.getBlock(2).lessons.length).toBeGreaterThan(0);
+      } else if (lang === 'ru') {
+        // Y desde el 2026-09-11 el RUSO estrena un tercer estado, que ni
+        // el rumano ni el latín tuvieron: **inventario poblado y BLOCKS
+        // vacío del todo**. No es un a medias entre los otros dos: es el
+        // estado correcto de una lengua que ya tiene sus 93 puntos
+        // declarados y todavía no tiene ni una lección, y lo que afirma es
+        // que las herramientas de cobertura ya ven los puntos mientras la
+        // app sigue diciendo la verdad — que no hay nada que practicar.
+        //
+        // Declarar los 15 bloques sin lecciones para «adelantar» rendiría
+        // 15 pantallas rotas en vez del EmptyState. El test lo fija aquí
+        // para que nadie lo haga creyendo que ayuda.
+        expect(c.ALL_CONCEPTS.length).toBeGreaterThan(0);
+        expect(c.BLOCKS).toEqual([]);
+        expect(() => c.getBlock(1)).toThrow();
+        // Y que `getConceptsByIds` filtre de verdad y no devuelva [] como
+        // el stub: un loader que siempre devuelve vacío es indistinguible
+        // de uno roto.
+        const alguno = c.ALL_CONCEPTS[0]!.id;
+        expect(c.getConceptsByIds([alguno]).map((x) => x.id)).toEqual([alguno]);
+        expect(c.getConceptsByIds(['no-existe'])).toEqual([]);
       } else {
         expect(c.BLOCKS).toEqual([]);
         expect(c.ALL_CONCEPTS).toEqual([]);
