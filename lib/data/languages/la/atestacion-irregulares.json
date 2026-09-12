@@ -1,0 +1,670 @@
+{
+ "generado": "2026-09-12",
+ "corpus": "la_perseus + la_proiel (UD)",
+ "comoSeCuenta": "las formas de una palabra por unigrama; las locuciones de `nōlō` («nōn vīs») por BIGRAMA, porque contarlas por la palabra suelta les presta las apariciones de `volō`",
+ "celdas": 108,
+ "refutanLaReglaGeneral": 35,
+ "deEsasAtestiguadas": 24,
+ "lemas": {
+  "eō": {
+   "presente.1sg": {
+    "forma": "eō",
+    "n": 431,
+    "regular": "eō",
+    "refuta": false
+   },
+   "presente.2sg": {
+    "forma": "īs",
+    "n": 72,
+    "regular": "eis",
+    "refuta": true
+   },
+   "presente.3sg": {
+    "forma": "it",
+    "n": 1,
+    "regular": "eit",
+    "refuta": true
+   },
+   "presente.1pl": {
+    "forma": "īmus",
+    "n": 1,
+    "regular": "eimus",
+    "refuta": true
+   },
+   "presente.2pl": {
+    "forma": "ītis",
+    "n": 0,
+    "regular": "eitis",
+    "refuta": true
+   },
+   "presente.3pl": {
+    "forma": "eunt",
+    "n": 1,
+    "regular": "eunt",
+    "refuta": false
+   },
+   "imperfecto.1sg": {
+    "forma": "ībam",
+    "n": 0,
+    "regular": "eēbam",
+    "refuta": true
+   },
+   "imperfecto.2sg": {
+    "forma": "ībās",
+    "n": 0,
+    "regular": "eēbās",
+    "refuta": true
+   },
+   "imperfecto.3sg": {
+    "forma": "ībat",
+    "n": 15,
+    "regular": "eēbat",
+    "refuta": true
+   },
+   "imperfecto.1pl": {
+    "forma": "ībāmus",
+    "n": 1,
+    "regular": "eēbāmus",
+    "refuta": true
+   },
+   "imperfecto.2pl": {
+    "forma": "ībātis",
+    "n": 0,
+    "regular": "eēbātis",
+    "refuta": true
+   },
+   "imperfecto.3pl": {
+    "forma": "ībant",
+    "n": 10,
+    "regular": "eēbant",
+    "refuta": true
+   },
+   "futuro.1sg": {
+    "forma": "ībō",
+    "n": 1,
+    "regular": "eam",
+    "refuta": true
+   },
+   "futuro.2sg": {
+    "forma": "ībis",
+    "n": 2,
+    "regular": "eēs",
+    "refuta": true
+   },
+   "futuro.3sg": {
+    "forma": "ībit",
+    "n": 2,
+    "regular": "eet",
+    "refuta": true
+   },
+   "futuro.1pl": {
+    "forma": "ībimus",
+    "n": 2,
+    "regular": "eēmus",
+    "refuta": true
+   },
+   "futuro.2pl": {
+    "forma": "ībitis",
+    "n": 0,
+    "regular": "eētis",
+    "refuta": true
+   },
+   "futuro.3pl": {
+    "forma": "ībunt",
+    "n": 2,
+    "regular": "eent",
+    "refuta": true
+   }
+  },
+  "ferō": {
+   "presente.1sg": {
+    "forma": "ferō",
+    "n": 8,
+    "regular": "ferō",
+    "refuta": false
+   },
+   "presente.2sg": {
+    "forma": "fers",
+    "n": 3,
+    "regular": "feris",
+    "refuta": true
+   },
+   "presente.3sg": {
+    "forma": "fert",
+    "n": 11,
+    "regular": "ferit",
+    "refuta": true
+   },
+   "presente.1pl": {
+    "forma": "ferimus",
+    "n": 0,
+    "regular": "ferimus",
+    "refuta": false
+   },
+   "presente.2pl": {
+    "forma": "fertis",
+    "n": 0,
+    "regular": "feritis",
+    "refuta": true
+   },
+   "presente.3pl": {
+    "forma": "ferunt",
+    "n": 9,
+    "regular": "ferunt",
+    "refuta": false
+   },
+   "imperfecto.1sg": {
+    "forma": "ferēbam",
+    "n": 0,
+    "regular": "ferēbam",
+    "refuta": false
+   },
+   "imperfecto.2sg": {
+    "forma": "ferēbās",
+    "n": 0,
+    "regular": "ferēbās",
+    "refuta": false
+   },
+   "imperfecto.3sg": {
+    "forma": "ferēbat",
+    "n": 3,
+    "regular": "ferēbat",
+    "refuta": false
+   },
+   "imperfecto.1pl": {
+    "forma": "ferēbāmus",
+    "n": 0,
+    "regular": "ferēbāmus",
+    "refuta": false
+   },
+   "imperfecto.2pl": {
+    "forma": "ferēbātis",
+    "n": 0,
+    "regular": "ferēbātis",
+    "refuta": false
+   },
+   "imperfecto.3pl": {
+    "forma": "ferēbant",
+    "n": 6,
+    "regular": "ferēbant",
+    "refuta": false
+   },
+   "futuro.1sg": {
+    "forma": "feram",
+    "n": 9,
+    "regular": "feram",
+    "refuta": false
+   },
+   "futuro.2sg": {
+    "forma": "ferēs",
+    "n": 2,
+    "regular": "ferēs",
+    "refuta": false
+   },
+   "futuro.3sg": {
+    "forma": "feret",
+    "n": 1,
+    "regular": "feret",
+    "refuta": false
+   },
+   "futuro.1pl": {
+    "forma": "ferēmus",
+    "n": 4,
+    "regular": "ferēmus",
+    "refuta": false
+   },
+   "futuro.2pl": {
+    "forma": "ferētis",
+    "n": 0,
+    "regular": "ferētis",
+    "refuta": false
+   },
+   "futuro.3pl": {
+    "forma": "ferent",
+    "n": 0,
+    "regular": "ferent",
+    "refuta": false
+   }
+  },
+  "volō": {
+   "presente.1sg": {
+    "forma": "volō",
+    "n": 46,
+    "regular": "volō",
+    "refuta": false
+   },
+   "presente.2sg": {
+    "forma": "vīs",
+    "n": 46,
+    "regular": "volis",
+    "refuta": true
+   },
+   "presente.3sg": {
+    "forma": "vult",
+    "n": 32,
+    "regular": "volit",
+    "refuta": true
+   },
+   "presente.1pl": {
+    "forma": "volumus",
+    "n": 18,
+    "regular": "volimus",
+    "refuta": true
+   },
+   "presente.2pl": {
+    "forma": "vultis",
+    "n": 26,
+    "regular": "volitis",
+    "refuta": true
+   },
+   "presente.3pl": {
+    "forma": "volunt",
+    "n": 17,
+    "regular": "volunt",
+    "refuta": false
+   },
+   "imperfecto.1sg": {
+    "forma": "volēbam",
+    "n": 4,
+    "regular": "volēbam",
+    "refuta": false
+   },
+   "imperfecto.2sg": {
+    "forma": "volēbās",
+    "n": 1,
+    "regular": "volēbās",
+    "refuta": false
+   },
+   "imperfecto.3sg": {
+    "forma": "volēbat",
+    "n": 13,
+    "regular": "volēbat",
+    "refuta": false
+   },
+   "imperfecto.1pl": {
+    "forma": "volēbāmus",
+    "n": 1,
+    "regular": "volēbāmus",
+    "refuta": false
+   },
+   "imperfecto.2pl": {
+    "forma": "volēbātis",
+    "n": 0,
+    "regular": "volēbātis",
+    "refuta": false
+   },
+   "imperfecto.3pl": {
+    "forma": "volēbant",
+    "n": 7,
+    "regular": "volēbant",
+    "refuta": false
+   },
+   "futuro.1sg": {
+    "forma": "volam",
+    "n": 1,
+    "regular": "volam",
+    "refuta": false
+   },
+   "futuro.2sg": {
+    "forma": "volēs",
+    "n": 7,
+    "regular": "volēs",
+    "refuta": false
+   },
+   "futuro.3sg": {
+    "forma": "volet",
+    "n": 3,
+    "regular": "volet",
+    "refuta": false
+   },
+   "futuro.1pl": {
+    "forma": "volēmus",
+    "n": 0,
+    "regular": "volēmus",
+    "refuta": false
+   },
+   "futuro.2pl": {
+    "forma": "volētis",
+    "n": 0,
+    "regular": "volētis",
+    "refuta": false
+   },
+   "futuro.3pl": {
+    "forma": "volent",
+    "n": 5,
+    "regular": "volent",
+    "refuta": false
+   }
+  },
+  "nōlō": {
+   "presente.1sg": {
+    "forma": "nōlō",
+    "n": 20,
+    "regular": "nōlō",
+    "refuta": false
+   },
+   "presente.2sg": {
+    "forma": "nōn vīs",
+    "n": 2,
+    "regular": "nōlis",
+    "refuta": true
+   },
+   "presente.3sg": {
+    "forma": "nōn vult",
+    "n": 3,
+    "regular": "nōlit",
+    "refuta": true
+   },
+   "presente.1pl": {
+    "forma": "nōlumus",
+    "n": 3,
+    "regular": "nōlimus",
+    "refuta": true
+   },
+   "presente.2pl": {
+    "forma": "nōn vultis",
+    "n": 3,
+    "regular": "nōlitis",
+    "refuta": true
+   },
+   "presente.3pl": {
+    "forma": "nōlunt",
+    "n": 4,
+    "regular": "nōlunt",
+    "refuta": false
+   },
+   "imperfecto.1sg": {
+    "forma": "nōlēbam",
+    "n": 2,
+    "regular": "nōlēbam",
+    "refuta": false
+   },
+   "imperfecto.2sg": {
+    "forma": "nōlēbās",
+    "n": 0,
+    "regular": "nōlēbās",
+    "refuta": false
+   },
+   "imperfecto.3sg": {
+    "forma": "nōlēbat",
+    "n": 6,
+    "regular": "nōlēbat",
+    "refuta": false
+   },
+   "imperfecto.1pl": {
+    "forma": "nōlēbāmus",
+    "n": 0,
+    "regular": "nōlēbāmus",
+    "refuta": false
+   },
+   "imperfecto.2pl": {
+    "forma": "nōlēbātis",
+    "n": 0,
+    "regular": "nōlēbātis",
+    "refuta": false
+   },
+   "imperfecto.3pl": {
+    "forma": "nōlēbant",
+    "n": 1,
+    "regular": "nōlēbant",
+    "refuta": false
+   },
+   "futuro.1sg": {
+    "forma": "nōlam",
+    "n": 0,
+    "regular": "nōlam",
+    "refuta": false
+   },
+   "futuro.2sg": {
+    "forma": "nōlēs",
+    "n": 0,
+    "regular": "nōlēs",
+    "refuta": false
+   },
+   "futuro.3sg": {
+    "forma": "nōlet",
+    "n": 0,
+    "regular": "nōlet",
+    "refuta": false
+   },
+   "futuro.1pl": {
+    "forma": "nōlēmus",
+    "n": 0,
+    "regular": "nōlēmus",
+    "refuta": false
+   },
+   "futuro.2pl": {
+    "forma": "nōlētis",
+    "n": 0,
+    "regular": "nōlētis",
+    "refuta": false
+   },
+   "futuro.3pl": {
+    "forma": "nōlent",
+    "n": 0,
+    "regular": "nōlent",
+    "refuta": false
+   }
+  },
+  "mālō": {
+   "presente.1sg": {
+    "forma": "mālō",
+    "n": 34,
+    "regular": "mālō",
+    "refuta": false
+   },
+   "presente.2sg": {
+    "forma": "māvīs",
+    "n": 1,
+    "regular": "mālis",
+    "refuta": true
+   },
+   "presente.3sg": {
+    "forma": "māvult",
+    "n": 2,
+    "regular": "mālit",
+    "refuta": true
+   },
+   "presente.1pl": {
+    "forma": "mālumus",
+    "n": 0,
+    "regular": "mālimus",
+    "refuta": true
+   },
+   "presente.2pl": {
+    "forma": "māvultis",
+    "n": 0,
+    "regular": "mālitis",
+    "refuta": true
+   },
+   "presente.3pl": {
+    "forma": "mālunt",
+    "n": 0,
+    "regular": "mālunt",
+    "refuta": false
+   },
+   "imperfecto.1sg": {
+    "forma": "mālēbam",
+    "n": 0,
+    "regular": "mālēbam",
+    "refuta": false
+   },
+   "imperfecto.2sg": {
+    "forma": "mālēbās",
+    "n": 0,
+    "regular": "mālēbās",
+    "refuta": false
+   },
+   "imperfecto.3sg": {
+    "forma": "mālēbat",
+    "n": 0,
+    "regular": "mālēbat",
+    "refuta": false
+   },
+   "imperfecto.1pl": {
+    "forma": "mālēbāmus",
+    "n": 0,
+    "regular": "mālēbāmus",
+    "refuta": false
+   },
+   "imperfecto.2pl": {
+    "forma": "mālēbātis",
+    "n": 0,
+    "regular": "mālēbātis",
+    "refuta": false
+   },
+   "imperfecto.3pl": {
+    "forma": "mālēbant",
+    "n": 1,
+    "regular": "mālēbant",
+    "refuta": false
+   },
+   "futuro.1sg": {
+    "forma": "mālam",
+    "n": 3,
+    "regular": "mālam",
+    "refuta": false
+   },
+   "futuro.2sg": {
+    "forma": "mālēs",
+    "n": 0,
+    "regular": "mālēs",
+    "refuta": false
+   },
+   "futuro.3sg": {
+    "forma": "mālet",
+    "n": 0,
+    "regular": "mālet",
+    "refuta": false
+   },
+   "futuro.1pl": {
+    "forma": "mālēmus",
+    "n": 0,
+    "regular": "mālēmus",
+    "refuta": false
+   },
+   "futuro.2pl": {
+    "forma": "mālētis",
+    "n": 0,
+    "regular": "mālētis",
+    "refuta": false
+   },
+   "futuro.3pl": {
+    "forma": "mālent",
+    "n": 0,
+    "regular": "mālent",
+    "refuta": false
+   }
+  },
+  "fīō": {
+   "presente.1sg": {
+    "forma": "fīō",
+    "n": 0,
+    "regular": "fīō",
+    "refuta": false
+   },
+   "presente.2sg": {
+    "forma": "fīs",
+    "n": 0,
+    "regular": "fīis",
+    "refuta": true
+   },
+   "presente.3sg": {
+    "forma": "fit",
+    "n": 53,
+    "regular": "fīit",
+    "refuta": true
+   },
+   "presente.1pl": {
+    "forma": "fīmus",
+    "n": 0,
+    "regular": "fīimus",
+    "refuta": true
+   },
+   "presente.2pl": {
+    "forma": "fītis",
+    "n": 0,
+    "regular": "fīitis",
+    "refuta": true
+   },
+   "presente.3pl": {
+    "forma": "fīunt",
+    "n": 20,
+    "regular": "fīunt",
+    "refuta": false
+   },
+   "imperfecto.1sg": {
+    "forma": "fīēbam",
+    "n": 0,
+    "regular": "fīēbam",
+    "refuta": false
+   },
+   "imperfecto.2sg": {
+    "forma": "fīēbās",
+    "n": 0,
+    "regular": "fīēbās",
+    "refuta": false
+   },
+   "imperfecto.3sg": {
+    "forma": "fīēbat",
+    "n": 5,
+    "regular": "fīēbat",
+    "refuta": false
+   },
+   "imperfecto.1pl": {
+    "forma": "fīēbāmus",
+    "n": 0,
+    "regular": "fīēbāmus",
+    "refuta": false
+   },
+   "imperfecto.2pl": {
+    "forma": "fīēbātis",
+    "n": 0,
+    "regular": "fīēbātis",
+    "refuta": false
+   },
+   "imperfecto.3pl": {
+    "forma": "fīēbant",
+    "n": 8,
+    "regular": "fīēbant",
+    "refuta": false
+   },
+   "futuro.1sg": {
+    "forma": "fīam",
+    "n": 3,
+    "regular": "fīam",
+    "refuta": false
+   },
+   "futuro.2sg": {
+    "forma": "fīēs",
+    "n": 0,
+    "regular": "fīēs",
+    "refuta": false
+   },
+   "futuro.3sg": {
+    "forma": "fīet",
+    "n": 20,
+    "regular": "fīet",
+    "refuta": false
+   },
+   "futuro.1pl": {
+    "forma": "fīēmus",
+    "n": 0,
+    "regular": "fīēmus",
+    "refuta": false
+   },
+   "futuro.2pl": {
+    "forma": "fīētis",
+    "n": 0,
+    "regular": "fīētis",
+    "refuta": false
+   },
+   "futuro.3pl": {
+    "forma": "fīent",
+    "n": 5,
+    "regular": "fīent",
+    "refuta": false
+   }
+  }
+ }
+}
