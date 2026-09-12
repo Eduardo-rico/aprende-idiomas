@@ -48,22 +48,33 @@ export function regularIngenuo(lema: string, p: Persona, t: Tiempo): string {
   return tema + DESINENCIAS_REGULARES[t][PERSONAS.indexOf(p)]!;
 }
 
-if (process.argv[1] && path.resolve(process.argv[1]).endsWith('atestar-irregulares.ts')) {
+/** Cuenta el corpus latino una sola vez. Vive aquí y no copiada en cada
+ *  generador: contar el corpus es exactamente la clase de rutina que se
+ *  duplica sin pensar y luego se desincroniza —la normalización, el salto
+ *  de los rangos `1-2`, el reinicio del bigrama entre frases—. */
+export function contarCorpus(dir = DIR): { unigramas: Map<string, number>; bigramas: Map<string, number>; tokens: number } {
   const unigramas = new Map<string, number>();
   const bigramas = new Map<string, number>();
-  for (const f of fs.readdirSync(DIR).filter((x) => x.startsWith('la_') && x.endsWith('.conllu'))) {
+  let tokens = 0;
+  for (const f of fs.readdirSync(dir).filter((x) => x.startsWith('la_') && x.endsWith('.conllu'))) {
     let previa = '';
-    for (const l of fs.readFileSync(path.join(DIR, f), 'utf8').split('\n')) {
+    for (const l of fs.readFileSync(path.join(dir, f), 'utf8').split('\n')) {
       if (!l.trim()) { previa = ''; continue; }
       if (l[0] === '#') continue;
       const c = l.split('\t');
       if (c.length < 10 || c[0]!.includes('-')) continue;
       const w = sinCantidad(c[1] ?? '');
+      tokens++;
       unigramas.set(w, (unigramas.get(w) ?? 0) + 1);
       if (previa) bigramas.set(`${previa} ${w}`, (bigramas.get(`${previa} ${w}`) ?? 0) + 1);
       previa = w;
     }
   }
+  return { unigramas, bigramas, tokens };
+}
+
+if (process.argv[1] && path.resolve(process.argv[1]).endsWith('atestar-irregulares.ts')) {
+  const { unigramas, bigramas } = contarCorpus();
 
   const out: Record<string, Record<string, { forma: string; n: number; regular: string; refuta: boolean }>> = {};
   let refutan = 0, atestiguadas = 0, celdas = 0;
