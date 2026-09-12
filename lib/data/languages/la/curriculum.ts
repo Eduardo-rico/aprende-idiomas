@@ -71,7 +71,6 @@ interface Talla {
  *  Los motivos largos viven en `scripts/publicar-la.ts`
  *  (`APLAZADOS_CON_MOTIVO`), que es donde se comprueban. */
 export const SIN_TALLAR: Record<string, string> = {
-  'l2-sin-articulo': '4 de sus 12 respuestas correctas son la CADENA VACÍA y FillBlankCard no deja enviar un hueco vacío',
   'l2-neutro-a': 'forma D: la clave lleva artículo y el latín no tiene artículo — necesita alternativas por ítem',
   'l2-plural-tantum': 'forma D, misma familia del artículo, y con lemas cuyo sentido en español oscila («litterae» = la carta / las cartas)',
   'l2-genero-3a': 'su marco «magnus ___» ya da el adjetivo, que es lo único que revela el género',
@@ -95,9 +94,10 @@ export const TALLAS: Talla[] = [
   {
     id: 'la-b2-l1-entrada-del-lexico', blockId: 2, mdx: 'b2/l1-entrada-del-lexico.mdx',
     name: 'La entrada del léxico: lema y genitivo (y por qué no hay artículo)',
-    conceptIds: ['l2-genitivo-clave'],
+    conceptIds: ['l2-genitivo-clave', 'l2-sin-articulo'],
     objectives: [
       'Leer la entrada del léxico como lema + genitivo, y sacar el tema del GENITIVO: de «rēx» no se deduce nada, de «rēgis» sale el paradigma entero',
+      'Suplir el artículo que el latín no tiene ELIGIENDO entre tres: indefinido en la primera mención, definido cuando el nombre ya salió, y NINGUNO en el atributo con «sum» — «el señor es maestro», que es donde el hispanohablante mete «un» sin darse cuenta',
     ],
   },
   {

@@ -86,6 +86,17 @@ const PUBLICABLES: Forma[] = ['A', 'B', 'C', 'D', 'I', 'J'];
  *  «manūs» y el ítem no podría fallar nunca. */
 const CANTIDAD_ES_EL_PUNTO = new Set(['l2-cuarta', 'l5-conjugacion-por-infinitivo', 'l1-cantidad-fonemica']);
 
+/** ⚠ LOS PUNTOS DONDE EL DETERMINANTE ES EL RASGO EXAMINADO.
+ *
+ *  La alternativa mecánica definido ↔ indefinido existe porque el latín no
+ *  tiene artículo y una clave única suspende a quien escribe la otra
+ *  lectura. Pero en `l2-sin-articulo` ELEGIR EL DETERMINANTE ES EL
+ *  EJERCICIO —el alumno decide entre «Una niña», «La niña» y sin
+ *  artículo—, así que añadirla convertiría dos de las tres rutas ciegas en
+ *  aciertos y el ítem no podría fallar. Es la misma forma del veto de la
+ *  cantidad, en otro rasgo: la normalización que tapa lo examinado. */
+const DETERMINANTE_ES_EL_PUNTO = new Set(['l2-sin-articulo']);
+
 const APLAZADOS_CON_MOTIVO: Record<string, string> = {
   // ── LOS OCHO LOTES DE FORMA D, aplazados EN BLOQUE ────────────────
   //
@@ -132,11 +143,15 @@ const APLAZADOS_CON_MOTIVO: Record<string, string> = {
   //   posesivo, A&G §373), cinco dativos pegados a un sustantivo (lectura
   //   de genitivo, la mayoritaria del corpus) y uno de nominativo plural
   //   derrotado por pro-drop. Los tres casos son gates ahora.
+  // ⚠ `l2-sin-articulo` ESTUVO AQUÍ y salió el 2026-09-11. Su motivo era
+  //   que cuatro de sus doce respuestas eran la CADENA VACÍA —el artículo
+  //   que no está— y `FillBlankCard` no deja enviar un hueco vacío. La
+  //   salida no costó producto: el hueco se traga ahora el sustantivo
+  //   («El señor es ___» → «maestro»), la elección sigue siendo la misma
+  //   de tres valores y las tres rutas ciegas siguen clavadas en el 33 %.
   // ── Y el de la cantidad ───────────────────────────────────────────
   'l2-cuarta':
     'LA CANTIDAD ES SU PUNTO Y POR ESO NO TIENE SALIDA HOY. El punto existe porque «manus» (nom.) y «manūs» (gen.) sólo se distinguen por el mácrón, así que 7 de sus 12 respuestas lo llevan. No se puede publicar la forma sin mácrón como alternativa —taparía justo el rasgo examinado, y el ítem no podría fallar nunca— ni dejarla sin alternativa, porque un teclado español no escribe «ū». Necesita que la tarjeta llame a `comparaLa(valor, clave, { sensibleACantidad })`, que `lib/exercises/normalize.ts` ya anuncia y que hoy NO tiene ni un consumidor.',
-  'l2-sin-articulo':
-    'LA RESPUESTA CORRECTA DE 4 DE SUS 12 ÍTEMS ES LA CADENA VACÍA —«el señor es ___ maestro» → sin artículo, `ejes.valor: "ninguno"`— y `components/cards/FillBlankCard.tsx` deshabilita el botón mientras algún hueco esté vacío (`completo = valores.every(v => v.trim().length > 0)`), así que esos cuatro serían INCONTESTABLES. Y publicar sólo los otros ocho es peor que no publicar nada: dejaría un lote donde SIEMPRE hay artículo, que es exactamente la falsedad que el punto existe para impedir. Necesita una superficie que admita «ninguno» como respuesta; es decisión de producto.',
 };
 
 /** El `data` del ejercicio, por forma. Nada se inventa: el hueco, la frase
@@ -172,7 +187,7 @@ const APLAZADOS_CON_MOTIVO: Record<string, string> = {
 function alternativasDeclaradas(it: Crudo): string[] {
   const propias = Array.isArray(it.alternativas) ? (it.alternativas as string[]) : [];
   const r = str(it.respuesta);
-  if (!r) return propias;
+  if (!r || DETERMINANTE_ES_EL_PUNTO.has(String(it.punto))) return propias;
   const falta = determinanteSinPareja(r, propias);
   return falta ? [...propias, falta] : propias;
 }
@@ -422,7 +437,7 @@ async function main() {
         //   ítem no prueba que llegue al alumno. Se comprueba sobre el
         //   `data` ya construido, que es lo que el runner va a leer.
         for (const b3 of (data.blanks as { answer: string; alternatives?: string[] }[] | undefined) ?? []) {
-          const falta = determinanteSinPareja(b3.answer, b3.alternatives ?? []);
+          const falta = DETERMINANTE_ES_EL_PUNTO.has(punto) ? null : determinanteSinPareja(b3.answer, b3.alternatives ?? []);
           if (falta) problemas.push(`${id} (${punto}): la clave «${b3.answer}» empieza por determinante y se publicaría SIN la otra lectura («${falta}»). El latín no tiene artículo`);
         }
         const v2 = ExerciseSchema.safeParse(ex);

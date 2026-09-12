@@ -1,7 +1,7 @@
 // tests/unit/lote-la-2a.test.ts — el lote del artículo, y el primer eje de TRES.
 import { describe, it, expect } from 'vitest';
 import { revisarLoteA, revisarArticulo, tasasCiegasA, coberturaArticulo, TECHO_A,
-         rutaDefinido, rutaIndefinido, type ItemArticulo } from '../../scripts/lib/gate-articulo';
+         rutaDefinido, rutaIndefinido, rutaNinguno, type ItemArticulo } from '../../scripts/lib/gate-articulo';
 import { LOTE_SIN_ARTICULO as LOTE } from '../../lib/data/languages/la/lotes/l2-sin-articulo';
 import { contrastarConPotencia, revisarComposiciones } from '../../scripts/lib/composiciones';
 import { revisarCantidad } from '../../lib/data/languages/la/cantidad';
@@ -38,12 +38,21 @@ describe('el lote del artículo', () => {
   });
 
   it('la ruta ciega no falla por concordancia, falla por ELEGIR', () => {
-    // Quien pone siempre el definido escribe «Los», no «El»: si la
+    // Quien pone siempre el definido escribe «Las», no «El»: si la
     // simulación se equivocara de forma, la tasa bajaría por la razón
     // equivocada y el lote parecería más limpio de lo que es.
+    //
+    // ⚠ Desde el 2026-09-11 la ruta devuelve el SINTAGMA ENTERO, porque el
+    //   hueco se traga el sustantivo: la respuesta de los ítems de valor
+    //   «ninguno» era la cadena vacía y `FillBlankCard` no deja enviar un
+    //   hueco vacío, así que cuatro de los doce eran incontestables. Lo
+    //   que el test comprueba no cambia —la concordancia está bien y lo
+    //   que falla es la elección— sólo que ahora se ve en el sintagma.
     const plural = LOTE.find((i) => i.ejes.num === 'pl' && i.ejes.gen === 'f')!;
-    expect(rutaDefinido(plural)).toBe('Las');
-    expect(rutaIndefinido(plural)).toBe('Unas');
+    expect(rutaDefinido(plural)).toBe(`Las ${plural.sustantivo}`);
+    expect(rutaIndefinido(plural)).toBe(`Unas ${plural.sustantivo}`);
+    // Y la ruta de «ninguno» ya no es la cadena vacía: es el núcleo solo.
+    expect(rutaNinguno(plural)).toBe(plural.sustantivo);
   });
 
   it('CAZA la respuesta que no cuadra con su eje declarado', () => {

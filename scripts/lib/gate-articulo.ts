@@ -38,6 +38,22 @@ export interface ItemArticulo {
   /** La glosa española con `___` donde va el artículo (o su ausencia). */
   glosa: string;
   /** La forma que toca: «El», «Una», o cadena vacía. */
+  /** EL NÚCLEO ESPAÑOL DEL SINTAGMA, y por qué el campo existe.
+   *
+   *  Hasta el 2026-09-11 el hueco caía SÓLO sobre el artículo —«El señor
+   *  es ___ maestro»— y la respuesta del valor «ninguno» era LA CADENA
+   *  VACÍA. Eso hacía cuatro de los doce ítems INCONTESTABLES en el
+   *  producto: `components/cards/FillBlankCard.tsx` deshabilita el botón
+   *  mientras algún hueco esté vacío. Y publicar sólo los otros ocho era
+   *  peor que no publicar: dejaba un lote donde SIEMPRE hay artículo, que
+   *  es exactamente la falsedad que el punto existe para impedir.
+   *
+   *  La salida la dio el latinista adversarial: que el hueco se trague el
+   *  sustantivo. «El señor es ___» → «maestro». La elección del alumno
+   *  sigue siendo la misma —definido / indefinido / ninguno— el techo
+   *  ciego sigue siendo 1/3, y la respuesta vacía desaparece porque el
+   *  hueco ya nunca puede estarlo. */
+  sustantivo: string;
   respuesta: string;
   ejes: {
     valor: ValorArticulo;
@@ -65,9 +81,18 @@ const clave = (i: ItemArticulo) => `${i.ejes.gen}${i.ejes.num}` as keyof typeof 
 
 /** Lo que responde quien pone SIEMPRE el definido, con la forma correcta:
  *  la ruta ciega no falla por concordancia, falla por elegir. */
-export const rutaDefinido = (i: ItemArticulo) => DEFINIDO[clave(i)];
-export const rutaIndefinido = (i: ItemArticulo) => INDEFINIDO[clave(i)];
-export const rutaNinguno = () => '';
+const sintagma = (art: string, nucleo: string) => (art ? `${art} ${nucleo}` : nucleo);
+export const rutaDefinido = (i: ItemArticulo) => sintagma(DEFINIDO[clave(i)], i.sustantivo);
+export const rutaIndefinido = (i: ItemArticulo) => sintagma(INDEFINIDO[clave(i)], i.sustantivo);
+export const rutaNinguno = (i: ItemArticulo) => i.sustantivo;
+
+/** La respuesta se DERIVA del eje y del núcleo: escrita a mano se
+ *  desincroniza del eje, que es el fallo `respuesta-no-cuadra`. */
+export const respuestaDeArticulo = (i: Omit<ItemArticulo, 'respuesta'>) => sintagma(
+  i.ejes.valor === 'definido' ? DEFINIDO[clave(i as ItemArticulo)]
+    : i.ejes.valor === 'indefinido' ? INDEFINIDO[clave(i as ItemArticulo)] : '',
+  i.sustantivo,
+);
 
 /** El techo es el azar del eje: 1/3 con tres valores. */
 export const TECHO_A = 1 / 3;
@@ -81,14 +106,22 @@ export function revisarArticulo(item: ItemArticulo): FalloA[] {
 
   // La respuesta y el eje declarado tienen que cuadrar: el eje dice qué
   // valor es y la respuesta qué forma toma, y se desincronizan.
-  const esperada = item.ejes.valor === 'definido' ? DEFINIDO[clave(item)]
-    : item.ejes.valor === 'indefinido' ? INDEFINIDO[clave(item)] : '';
+  const esperada = respuestaDeArticulo(item);
   if (norm(esperada) !== norm(item.respuesta)) {
     push('respuesta-no-cuadra', `declara «${item.ejes.valor}» en ${item.ejes.gen}/${item.ejes.num}, que da «${esperada}», y la respuesta es «${item.respuesta}»`);
   }
-  if (item.ejes.valor === 'ninguno' && item.respuesta !== '') {
-    push('eje-mal-declarado', 'declara «ninguno» y trae una forma');
-  }
+  // ⚠ LA RESPUESTA NO PUEDE SER LA CADENA VACÍA, y esto es un gate del
+  //   PRODUCTO y no de la lengua: `FillBlankCard` deshabilita el envío
+  //   mientras algún hueco esté vacío, así que un ítem así es
+  //   incontestable. Es lo que tuvo apartado a este lote entero.
+  if (item.respuesta.trim() === '')
+    push('eje-mal-declarado', 'la respuesta es la cadena vacía y el hueco sería incontestable: el hueco tiene que tragarse el sustantivo');
+  if (!item.sustantivo.trim())
+    push('eje-mal-declarado', 'falta el núcleo del sintagma');
+  // Y el sustantivo NO puede seguir al hueco en la glosa: si sigue, el
+  // hueco vuelve a ser sólo el artículo.
+  if (new RegExp(`___\\s+${item.sustantivo}\\b`, 'iu').test(item.glosa))
+    push('eje-mal-declarado', `la glosa deja «${item.sustantivo}» detrás del hueco: el hueco tiene que tragárselo`);
   return out;
 }
 
@@ -129,7 +162,7 @@ export function revisarLoteA(items: ItemArticulo[]): FalloA[] {
   for (const [nombre, valor] of [
     ['poner siempre el definido', t.siempreDefinido],
     ['poner siempre el indefinido', t.siempreIndefinido],
-    ['no poner ninguno nunca', t.siempreNinguno],
+    ['no poner artículo nunca', t.siempreNinguno],
   ] as const) {
     if (valor > TECHO_A + 1e-9) {
       out.push({ item: '(lote)', clase: 'estrategia-ciega',
