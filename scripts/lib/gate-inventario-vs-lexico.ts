@@ -36,6 +36,9 @@ import { IRREGULARES_L1 } from '../../lib/data/languages/la/irregulares';
 import { declinacionDe, esMixta } from '../../lib/data/languages/la/paradigma-la';
 import { COMPUESTOS_DE_SUM } from '../../lib/data/languages/la/compuestos-de-sum';
 
+import { todasLasFormasL1 } from './atestar-acento';
+import { silabas } from '../voz/cuanto-duele';
+
 export interface Exigencia {
   /** Cómo se nombra en la prosa de los puntos. */
   patron: RegExp;
@@ -74,7 +77,52 @@ const decl = (d: string) => () => NOMBRES_L1.filter((n) => {
   try { return declinacionDe(n) === d; } catch { return false; }
 }).length;
 
+/** Formas donde la MUTA CUM LIQUIDA decide el acento: penúltima breve
+ *  seguida de oclusiva + líquida, y tres sílabas o más.
+ *
+ *  ── POR QUÉ HACE FALTA CONTARLAS APARTE ──
+ *
+ *  `l1-larga-por-posicion` declara en su `varia` que lo que varía es «el
+ *  grupo consonántico, porque muta cum liquida (pa-tris) puede contar como
+ *  breve», y en su excepción que «el manual escolar lo presenta como
+ *  absoluto y no lo es». Con el lexicón de hoy ese punto **no se puede
+ *  escribir**: las únicas cinco formas de L1 con oclusiva + líquida son de
+ *  `magister` —`magistrum`, `magistrī`, `magistrō`, `magistrōs`,
+ *  `magistrīs`— y en las cinco la penúltima `gis` ya está cerrada por su
+ *  propia `s`, así que el grupo `tr` no decide nada.
+ *
+ *  Cero formas decisivas, y el gate lo daba limpio porque nadie se lo había
+ *  preguntado. En el corpus hay 113 formas donde sí decide —`tenebris` ×17,
+ *  `arbitror` ×18, `obsecrō` ×17, `volucrēs` ×9— y `tenebrae`, que es el
+ *  ejemplo del propio descriptor, sale ×23 entre sus casos. Falta el lema,
+ *  no la regla.
+ *
+ *  ── Y ESTO USA EL SILABEADOR, NO UNA CUARTA COPIA ──
+ *
+ *  La primera versión se escribió a mano, barriendo vocales para encontrar
+ *  la penúltima, y **falló su propio control positivo**: `tenebrae` daba
+ *  `false`, porque el barrido cuenta `ae` como dos vocales y la penúltima
+ *  le salía corrida. Era la cuarta copia del silabeado en un día en el que
+ *  ya llevo dos arreglos de reglas duplicadas. Se llama a `silabas`, que
+ *  está probado. */
+export function decideLaMutaCumLiquida(forma: string): boolean {
+  const MUT = 'pbtdcgf', LIQ = 'lr';
+  const s = silabas(forma);
+  if (s.length < 3) return false;                       // sin antepenúltima no hay elección
+  const pen = s[s.length - 2]!, ult = s[s.length - 1]!;
+  // La penúltima tiene que ser breve por sí misma: con mácrón o diptongo es
+  // larga por naturaleza y el grupo consonántico no decide nada; con coda
+  // propia ya está cerrada, que es el caso de `ma-gis-trum`.
+  if (/[āēīōūȳ]/.test(pen)) return false;
+  if (['ae', 'au', 'oe'].some((d) => pen.includes(d))) return false;
+  if (/[^aeiouāēīōūyȳ]$/.test(pen)) return false;
+  const arranque = ult.match(/^[^aeiouāēīōūyȳ]*/)?.[0] ?? '';
+  return arranque.length >= 2 && MUT.includes(arranque[0]!) && LIQ.includes(arranque[1]!);
+}
+
 export const EXIGENCIAS: Exigencia[] = [
+  { patron: /muta cum liquida/i, nombre: 'formas donde la muta cum liquida DECIDE el acento',
+    cuantosHay: () => todasLasFormasL1().filter(decideLaMutaCumLiquida).length, minimo: 2 },
   { patron: /\bmixta\b/i, nombre: 'verbos de conjugación mixta',
     cuantosHay: () => VERBOS_L1.filter(esMixta).length, minimo: 2 },
   { patron: /reduplicad/i, nombre: 'verbos de perfecto reduplicado',

@@ -5,7 +5,8 @@
 // el lote y ya con la tarde empezada.
 import { describe, it, expect } from 'vitest';
 import { PUNTOS_LA } from '@/lib/data/languages/la/inventario-puntos';
-import { buscarInsatisfechos, esReduplicado, EXIGENCIAS } from '@/scripts/lib/gate-inventario-vs-lexico';
+import { buscarInsatisfechos, decideLaMutaCumLiquida, esReduplicado, EXIGENCIAS } from '@/scripts/lib/gate-inventario-vs-lexico';
+import { todasLasFormasL1 } from '@/scripts/lib/atestar-acento';
 
 describe('el detector de reduplicación', () => {
   it('caza los canónicos, incluido el que la primera versión no veía', () => {
@@ -41,12 +42,21 @@ describe('qué exige el inventario y qué tiene el lexicón', () => {
     // `l4-adjetivo-3a` estuvo bloqueado toda la sesión y dejó de estarlo el
     // 2026-09-09: la máquina ya tiene los tres tipos.
     expect(ids).not.toContain('l4-adjetivo-3a');
-    // Y queda UNO, que no es de máquina sino de contenido: el núcleo de 800
-    // lemas, que hoy son poco más de cien. Al cerrar la sesión del 9 de
-    // septiembre era el único punto del inventario latino que su `varia` no
-    // podía satisfacer.
+    // Quedan DOS, y ninguno es de máquina: los dos son de contenido.
+    //
+    // · `l11-nucleo-800` pide 800 lemas y hay poco más de cien.
+    // · `l1-larga-por-posicion` ENTRA EL 2026-09-12, y hasta hoy el gate lo
+    //   daba limpio porque nadie le había preguntado. Su `varia` es «el
+    //   grupo consonántico, porque muta cum liquida puede contar como
+    //   breve», y en L1 no hay NI UNA forma donde eso decida: las cinco con
+    //   oclusiva + líquida son de `magister`, y ahí la penúltima `gis` ya
+    //   está cerrada por su propia `s`. En el corpus hay 113 formas donde sí
+    //   decide —`tenebris` ×17, `arbitror` ×18, `obsecrō` ×17— y `tenebrae`,
+    //   que es el ejemplo del propio descriptor, sale ×23 entre sus casos.
+    //   Falta el lema, no la regla.
     expect(ids).toContain('l11-nucleo-800');
-    expect(ids).toHaveLength(1);
+    expect(ids).toContain('l1-larga-por-posicion');
+    expect(ids).toHaveLength(2);
     // `l2-cuarta` pedía «los pocos femeninos» de 4.ª y sólo había `manus`.
     // `domus` entró el 2026-09-09, declarado entero en `IRREGULARES` porque
     // mezcla la 2.ª con la 4.ª: «domō» y «domōs» son de segunda dentro de un
@@ -93,5 +103,26 @@ describe('qué exige el inventario y qué tiene el lexicón', () => {
     const r = buscarInsatisfechos(conVaria as never);
     // Con dos mixtas en el lexicón, ninguno sale insatisfecho por eso.
     expect(r.filter((x) => x.exigencia.includes('mixta'))).toHaveLength(0);
+  });
+});
+
+describe('la muta cum liquida: el punto que el lexicón no puede sostener', () => {
+  it('los dos juegos de control, positivo y negativo', () => {
+    // La primera versión de esta función se escribió a mano barriendo
+    // vocales y FALLÓ su control positivo: `tenebrae` daba false, porque
+    // `ae` cuenta como dos vocales y la penúltima salía corrida. Los
+    // controles van los dos, y el negativo importa igual: `magistrum` NO
+    // es un caso, porque su penúltima `gis` ya está cerrada por su propia
+    // `s` y el grupo `tr` no decide nada.
+    for (const w of ['tenebrae', 'tenebrās', 'volucrēs', 'integra', 'celebrat'])
+      expect(decideLaMutaCumLiquida(w), w).toBe(true);
+    for (const w of ['magistrum', 'magistrī', 'dominus', 'habēre', 'patris', 'puella'])
+      expect(decideLaMutaCumLiquida(w), w).toBe(false);
+  });
+
+  it('y en L1 no hay NINGUNA, así que el punto está bloqueado en el lexicón', () => {
+    expect(todasLasFormasL1().filter(decideLaMutaCumLiquida)).toEqual([]);
+    const r = buscarInsatisfechos(PUNTOS_LA as never);
+    expect(r.map((x) => x.punto)).toContain('l1-larga-por-posicion');
   });
 });
