@@ -1,0 +1,29 @@
+[
+ {
+  "lema": "vōx",
+  "forma": "voice",
+  "fichero": "perseus-ud-test",
+  "tokens": 1,
+  "rasgos": "Case=Abl|Gender=Fem|Number=Sing",
+  "deberiaSer": "vōce",
+  "motivo": "es la PALABRA INGLESA «voice» dentro de un texto latino, con la anotación latina correcta (vōx, ablativo femenino singular). No es una variante gráfica ni una forma rara: es una contaminación de la transcripción."
+ },
+ {
+  "lema": "cūra",
+  "forma": "icurae",
+  "fichero": "perseus-ud-test",
+  "tokens": 1,
+  "rasgos": "Case=Dat|Gender=Fem|Number=Sing",
+  "deberiaSer": "cūrae",
+  "motivo": "una «i» pegada delante de «curae». La anotación es correcta; la cadena tiene una letra de más."
+ },
+ {
+  "lema": "gravis",
+  "forma": "graviore",
+  "fichero": "proiel-ud-train",
+  "tokens": 3,
+  "rasgos": "Case=Abl|Degree=Pos|Number=Sing",
+  "deberiaSer": "Degree=Cmp",
+  "motivo": "la forma sólo puede ser el ablativo del COMPARATIVO «gravior»: el positivo «gravis» hace ablativo «gravī» y no admite «-iōre». El lema «gravis» es la convención UD y está bien; lo que está mal es el rasgo «Degree=Pos». Es una errata de ANOTACIÓN, no de transcripción."
+ }
+]

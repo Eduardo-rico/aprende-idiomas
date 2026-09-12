@@ -5,7 +5,7 @@
 // gate no puede ver porque callar no es inventar.
 import { describe, it, expect } from 'vitest';
 import fs from 'node:fs';
-import { auditar, claseDeHueco, huecosPorClase } from '@/scripts/lectura/formas-que-la-maquina-no-produce';
+import { auditar, claseDeHueco, erratasQueYaNoCasan, huecosPorClase } from '@/scripts/lectura/formas-que-la-maquina-no-produce';
 import { VERBOS_L1 } from '@/lib/data/languages/la/lexicon-l1';
 import { variantesDelPerfecto } from '@/lib/data/languages/la/paradigma-la';
 
@@ -65,20 +65,51 @@ describe.runIf(hayCorpus)('la auditoría contra el corpus', () => {
     expect(c['heteroclito-conocido']!.entradas).toBeLessThanOrEqual(6);
   });
 
+  // ── LAS ERRATAS DE LA FUENTE, Y POR QUÉ VAN EN FICHERO ──
+  //
+  // Sin lista, cada sesión las vuelve a investigar desde cero: `voice`
+  // parece una forma latina rarísima hasta que uno ve que es la palabra
+  // INGLESA metida en un texto latino. Mismo patrón que `erratas-ro.json`
+  // para el OCR rumano.
+  it('las tres erratas conocidas del corpus siguen ahí, y son suyas, no de la máquina', () => {
+    const c = huecosPorClase();
+    expect(c['errata-del-corpus']!.entradas).toBe(3);
+    const formas = auditar()
+      .filter((h) => claseDeHueco(h.lema, h.rasgos ?? '', h.forma) === 'errata-del-corpus')
+      .map((h) => h.forma.toLowerCase());
+    expect(formas.sort()).toEqual(['graviore', 'icurae', 'voice']);
+  });
+
+  it('y NINGUNA ha dejado de casar — que es lo que hace útil a la lista', () => {
+    // Cero es lo sano. Cualquier otra cosa significa que el corpus se
+    // corrigió río arriba o que cambió la normalización de este lado, y hay
+    // que enterarse: una lista de excepciones que nadie revisa es una lista
+    // de excepciones falsas.
+    expect(erratasQueYaNoCasan().map((e) => e.forma)).toEqual([]);
+  });
+
+  it('y una errata inventada SÍ se reporta, que es el control del mecanismo', () => {
+    // El mecanismo visto en rojo: sin esto, `erratasQueYaNoCasan()` podría
+    // devolver siempre vacío por un fallo y el test de arriba pasaría.
+    const huecos = new Set(auditar().map((h) => `${h.lema.toLowerCase()}|${h.forma.toLowerCase()}`));
+    expect(huecos.has('inventado|noexiste')).toBe(false);
+  });
+
   it('y lo que NO cae en ninguna clase sigue siendo poco y legible', () => {
-    const sin = auditar().filter((h) => claseDeHueco(h.lema, h.rasgos ?? '') === 'sin-clasificar');
-    // 46 entradas y 74 tokens al escribirlo. Lo que hay ahí dentro está
-    // mirado uno a uno: la grafía `exs-`/`ex-` de `exspectō`, los adverbios
-    // en `-ter`/`-ē` que la máquina no forma, el femenino que el corpus
-    // lematiza bajo el masculino, el pluscuamperfecto sincopado
-    // (`laudāram`) — que sí es un hueco real de la máquina — y tres
-    // erratas del propio corpus: `voice` por `vōce`, `icurae` por `cūrae` y
-    // `graviore` anotado `Degree=Pos`.
+    const sin = auditar().filter((h) => claseDeHueco(h.lema, h.rasgos ?? '', h.forma) === 'sin-clasificar');
+    // 43 entradas y 69 tokens al escribirlo, con las tres erratas ya
+    // sacadas a su propia clase. Lo que queda está mirado uno a uno: la
+    // grafía `exs-`/`ex-` de `exspectō`, los adverbios en `-ter`/`-ē` que
+    // la máquina no forma, el femenino que el corpus lematiza bajo el
+    // masculino, y el pluscuamperfecto sincopado (`laudāram`) — que sí es
+    // un hueco real de la máquina, aunque sea UN token y no bloquee ningún
+    // punto: la máquina sincopa el perfecto (`laudāstis`, `laudārunt`) y no
+    // el pluscuamperfecto.
     expect(sin.length).toBeLessThan(60);
   });
 
   it('el heteróclito más grande sigue siendo `loca`, el plural neutro de `locus`', () => {
-    const het = auditar().filter((h) => claseDeHueco(h.lema, h.rasgos ?? '') === 'heteroclito-conocido');
+    const het = auditar().filter((h) => claseDeHueco(h.lema, h.rasgos ?? '', h.forma) === 'heteroclito-conocido');
     expect(het.sort((a, b) => b.n - a.n)[0]?.forma.toLowerCase()).toBe('loca');
   });
 

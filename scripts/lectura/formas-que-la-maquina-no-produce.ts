@@ -115,7 +115,38 @@ if (process.argv[1]?.endsWith('formas-que-la-maquina-no-produce.ts')) {
 // éste dice de qué.
 export type ClaseDeHueco = 'grafia-del-indeclinable' | 'grado-del-adjetivo'
   | 'perfectum-del-irregular' | 'grafia-del-pronombre' | 'heteroclito-conocido'
-  | 'sin-clasificar';
+  | 'errata-del-corpus' | 'sin-clasificar';
+
+// ── LAS ERRATAS DE LA FUENTE, EN FICHERO Y NO EN LA CABEZA ───────────
+//
+// El corpus tiene defectos propios y esta auditoría los encuentra una y
+// otra vez. Sin una lista, cada sesión los vuelve a investigar desde cero:
+// `voice` parece una forma latina rarísima hasta que uno se da cuenta de
+// que es la palabra INGLESA dentro de un texto latino.
+//
+// Mismo patrón que `erratas-ro.json` para el OCR de la biblioteca rumana, y
+// con la misma regla, que es la que le da valor: **una errata que ya no
+// case se REPORTA, no se calla.** Si el corpus se corrige río arriba, o si
+// cambia la normalización de este lado, hay que enterarse — una lista de
+// excepciones que nadie revisa es una lista de excepciones falsas.
+export interface ErrataDelCorpus {
+  lema: string; forma: string; fichero: string; tokens: number;
+  rasgos: string; deberiaSer: string; motivo: string;
+}
+const ERRATAS: ErrataDelCorpus[] = JSON.parse(
+  fs.readFileSync(`${import.meta.dirname}/erratas-corpus-la.json`, 'utf8'),
+) as ErrataDelCorpus[];
+
+const esErrata = (lema: string, forma: string) =>
+  ERRATAS.some((e) => sinM(e.lema) === sinM(lema) && sinM(e.forma) === sinM(forma));
+
+/** Las erratas declaradas que YA NO aparecen como hueco. Cero es lo sano;
+ *  cualquier otra cosa es que la lista se ha quedado vieja y hay que
+ *  mirarla, no borrarla en silencio. */
+export function erratasQueYaNoCasan(): ErrataDelCorpus[] {
+  const huecos = new Set(auditar().map((h) => `${sinM(h.lema)}|${sinM(h.forma)}`));
+  return ERRATAS.filter((e) => !huecos.has(`${sinM(e.lema)}|${sinM(e.forma)}`));
+}
 
 /** Indeclinables y partículas cuya grafía alterna en el corpus: `ab`/`ā`,
  *  `atque`/`ac`, `neque`/`nec`, `ex`/`ē`, `ut`/`utī`. El lexicón guarda una
@@ -152,8 +183,9 @@ const IRREGULAR = new Set(['possum', 'volo', 'nolo', 'malo', 'fero', 'eo', 'fio'
   'prosum', 'desum', 'absum', 'adsum', 'intersum', 'praesum', 'supersum', 'obsum']);
 const PRONOMBRE = new Set(['is', 'hic', 'ille', 'qui', 'ipse', 'idem', 'iste']);
 
-export function claseDeHueco(lema: string, rasgos = ''): ClaseDeHueco {
+export function claseDeHueco(lema: string, rasgos = '', forma = ''): ClaseDeHueco {
   const l = lema.normalize('NFC').toLowerCase();
+  if (forma && esErrata(lema, forma)) return 'errata-del-corpus';
   if (GRAFIA_INDECLINABLE.has(l)) return 'grafia-del-indeclinable';
   if (GRADO_SUPLETIVO.has(l) || gradoAnotado(rasgos)) return 'grado-del-adjetivo';
   if (IRREGULAR.has(l)) return 'perfectum-del-irregular';
@@ -167,7 +199,7 @@ export function claseDeHueco(lema: string, rasgos = ''): ClaseDeHueco {
 export function huecosPorClase(): Record<ClaseDeHueco, { entradas: number; tokens: number }> {
   const out = {} as Record<ClaseDeHueco, { entradas: number; tokens: number }>;
   for (const h of auditar()) {
-    const c = claseDeHueco(h.lema ?? '', h.rasgos ?? '');
+    const c = claseDeHueco(h.lema ?? '', h.rasgos ?? '', h.forma ?? '');
     (out[c] ??= { entradas: 0, tokens: 0 }).entradas++;
     out[c]!.tokens += (h as unknown as { n?: number }).n ?? 1;
   }
