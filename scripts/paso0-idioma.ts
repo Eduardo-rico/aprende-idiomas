@@ -127,6 +127,24 @@ export const DESTREZA_DE: Record<string, Destreza> = {
   'PRAGMÁTICA': 'sistema',
   'CULTURA': 'sistema',
   'ESCRITURA HISTÓRICA': 'sistema',
+  // Categorías que estrena el RUSO (2026-09-11). Van aquí y no en una
+  // bolsa porque el parser FALLA con una etiqueta desconocida, que es lo
+  // correcto: contar sin saber qué se cuenta es peor que no contar.
+  // `ALFABETO` y `ASPECTO` son sistema; `CURSIVA` y `TECLADO` son
+  // destrezas de ESCRITURA (producir el grafo y teclearlo), no de
+  // conocimiento del sistema: un alumno puede saberse las 33 letras y no
+  // poder escribir una sola a mano.
+  'ALFABETO': 'sistema',
+  'ASPECTO': 'sistema',
+  'GRAMÁTICA Y ESTILO': 'sistema',
+  'CURSIVA': 'escritura',
+  'TECLADO': 'escritura',
+  'MEDIACIÓN DE UN TEXTO': 'mediacion',
+  'MEDIACIÓN DE TEXTOS': 'mediacion',
+  'MEDIACIÓN DE CONCEPTOS': 'mediacion',
+  'MEDIACIÓN DE LA COMUNICACIÓN': 'mediacion',
+  'MEDIACIÓN INTERLINGÜÍSTICA': 'mediacion',
+  'MEDIACIÓN INTERCULTURAL': 'mediacion',
   'VARIANTE': 'sistema',
   // Excluidas por decisión de Edu (2026-08-11): sin `interaccion` ni
   // `produccion_oral`. Se cuentan para que se vea cuánto queda fuera.

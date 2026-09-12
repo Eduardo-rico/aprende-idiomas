@@ -1179,19 +1179,19 @@ CONSECUENCIA: el ruso no puede empezar por generar contenido. Empieza por (1) ar
 
 **Sabrá hacer (13):**
 
-- ALFABETO: lee en voz alta cualquier palabra rusa en imprenta a ≥60 palabras/minuto con el acento marcado, sin caer en los siete falsos amigos gráficos (В=[v], Н=[n], Р=[r], С=[s], У=[u], Х=[x], Е=[je]); medido con una lista de 100 palabras cronometrada.
-- CURSIVA: escribe a mano las 33 letras en mayúscula y minúscula cursiva con el orden de trazo correcto, y transcribe un dictado de 40 palabras conocidas con ≥90% de letras correctas, incluidas las secuencias de dientes (ш/т/и/л/м) y las tres letras que engañan al ojo latino (д, т, п cursivas).
-- TECLADO: escribe 60 palabras conocidas con la distribución ЙЦУКЕН en ≤6 minutos sin recurrir a transliteración ni a un selector de caracteres.
-- COMPRENSIÓN LECTORA: extrae la información concreta pedida (hora, precio, lugar, nombre) de letreros, menús, horarios, recibos y mensajes de móvil de ≤50 palabras, con ≥80% de aciertos.
-- COMPRENSIÓN ORAL: distingue en pares mínimos la consonante dura de la palatalizada (мат/мать, был/бил, брат/брать, ров/рёв) con ≥80% de aciertos, y anota correctamente números, precios, horas y fechas dichos a 100-110 ppm (≥85%).
-- COMPRENSIÓN ORAL: identifica en enunciados de 6-12 palabras el género y el número del sustantivo y la persona del verbo, y reconoce oralmente palabras con reducción átona plena (молоко, хорошо, язык, сегодня) tras una sola escucha (≥70%).
-- PRODUCCIÓN ESCRITA: rellena un formulario ruso con sus datos (Ф.И.О., гражданство, профессия, адрес) y escribe un mensaje de 40-60 palabras presentándose, con caso correcto en ≥70% de los sintagmas.
-- PRODUCCIÓN ORAL: se presenta, dice su edad con la concordancia numeral correcta (21 год / 22 года / 25 лет), describe a su familia y su rutina diaria en 8-10 frases enlazadas, sin leer.
-- INTERACCIÓN: compra algo, pide en un café y pregunta una dirección resolviendo la transacción; elige ты o вы correctamente según el interlocutor en ≥90% de los turnos y usa el patronímico al dirigirse a alguien mayor o en contexto formal.
-- GRAMÁTICA (caso): usa productivamente nominativo, acusativo (objeto directo y dirección con в/на), prepositivo (localización y tema con о) y genitivo (у меня есть, нет + genitivo, posesión, tras 2-4), y reconoce dativo e instrumental en sus dos usos más frecuentes.
-- GRAMÁTICA (movimiento): elige entre идти/ходить y ехать/ездить sin prefijo según sea trayecto único en curso o desplazamiento habitual, en ≥75% de los casos.
-- ASPECTO: selecciona el miembro correcto de 40 pares aspectuales frecuentes en pasado y en futuro, y explica en español por qué 'leí' puede traducirse читал o прочитал según lo que se quiera decir.
-- MEDIACIÓN (precursora): transmite en español, sin omitir el dato clave, el contenido de un mensaje ruso sencillo — un SMS, un cartel, un horario, una etiqueta de producto.
+- [ALFABETO] lee en voz alta cualquier palabra rusa en imprenta a ≥60 palabras/minuto con el acento marcado, sin caer en los siete falsos amigos gráficos (В=[v], Н=[n], Р=[r], С=[s], У=[u], Х=[x], Е=[je]); medido con una lista de 100 palabras cronometrada.
+- [CURSIVA] escribe a mano las 33 letras en mayúscula y minúscula cursiva con el orden de trazo correcto, y transcribe un dictado de 40 palabras conocidas con ≥90% de letras correctas, incluidas las secuencias de dientes (ш/т/и/л/м) y las tres letras que engañan al ojo latino (д, т, п cursivas).
+- [TECLADO] escribe 60 palabras conocidas con la distribución ЙЦУКЕН en ≤6 minutos sin recurrir a transliteración ni a un selector de caracteres.
+- [COMPRENSIÓN LECTORA] extrae la información concreta pedida (hora, precio, lugar, nombre) de letreros, menús, horarios, recibos y mensajes de móvil de ≤50 palabras, con ≥80% de aciertos.
+- [COMPRENSIÓN ORAL] distingue en pares mínimos la consonante dura de la palatalizada (мат/мать, был/бил, брат/брать, ров/рёв) con ≥80% de aciertos, y anota correctamente números, precios, horas y fechas dichos a 100-110 ppm (≥85%).
+- [COMPRENSIÓN ORAL] identifica en enunciados de 6-12 palabras el género y el número del sustantivo y la persona del verbo, y reconoce oralmente palabras con reducción átona plena (молоко, хорошо, язык, сегодня) tras una sola escucha (≥70%).
+- [PRODUCCIÓN ESCRITA] rellena un formulario ruso con sus datos (Ф.И.О., гражданство, профессия, адрес) y escribe un mensaje de 40-60 palabras presentándose, con caso correcto en ≥70% de los sintagmas.
+- [PRODUCCIÓN ORAL] se presenta, dice su edad con la concordancia numeral correcta (21 год / 22 года / 25 лет), describe a su familia y su rutina diaria en 8-10 frases enlazadas, sin leer.
+- [INTERACCIÓN] compra algo, pide en un café y pregunta una dirección resolviendo la transacción; elige ты o вы correctamente según el interlocutor en ≥90% de los turnos y usa el patronímico al dirigirse a alguien mayor o en contexto formal.
+- [GRAMÁTICA · caso] usa productivamente nominativo, acusativo (objeto directo y dirección con в/на), prepositivo (localización y tema con о) y genitivo (у меня есть, нет + genitivo, posesión, tras 2-4), y reconoce dativo e instrumental en sus dos usos más frecuentes.
+- [GRAMÁTICA · movimiento] elige entre идти/ходить y ехать/ездить sin prefijo según sea trayecto único en curso o desplazamiento habitual, en ≥75% de los casos.
+- [ASPECTO] selecciona el miembro correcto de 40 pares aspectuales frecuentes en pasado y en futuro, y explica en español por qué 'leí' puede traducirse читал o прочитал según lo que se quiera decir.
+- [MEDIACIÓN · precursora] transmite en español, sin omitir el dato clave, el contenido de un mensaje ruso sencillo — un SMS, un cartel, un horario, una etiqueta de producto.
 
 **Contenido lingüístico.** GRAFÍA Y ORTOGRAFÍA: las 33 letras (imprenta mayúscula/minúscula + cursiva mayúscula/minúscula = 132 unidades gráficas con orden de trazo); los falsos amigos gráficos latín↔cirílico; ь y ъ como signos sin sonido propio; ё escrito como е en texto real (doble ortografía almacenada); reglas ortográficas dependientes de la palatalización (жи/ши, ча/ща, чу/щу, и tras к/г/х); distribución ЙЦУКЕН.
 
@@ -1229,19 +1229,19 @@ Dependencia dura: nada de esto se puede generar hasta que exista el tipo de ejer
 
 **Sabrá hacer (13):**
 
-- COMPRENSIÓN LECTORA: lee textos adaptados de 300-500 palabras (correspondencia personal, anuncios, folletos, noticias breves) a ≥90 ppm y responde 8 preguntas de comprensión literal e inferencial con ≥75% de aciertos.
-- COMPRENSIÓN LECTORA: lematiza — dada una forma oblicua en un texto (о студентах, к врачу, с друзьями), identifica el nominativo singular y el caso, en ≥80% de los casos. Es la destreza que le permite usar un diccionario ruso.
-- COMPRENSIÓN ORAL: entiende diálogos cotidianos de 1-2 minutos con dos voces distintas a 120-130 ppm y responde preguntas de detalle con ≥70% de aciertos.
-- COMPRENSIÓN ORAL: transcribe correctamente, tras una sola escucha, palabras y sintagmas con reducción átona plena y asimilación (что [ʂto], сегодня [sʲɪˈvodʲnʲə], здравствуйте, конечно [kɐˈnʲeʂnə]), con ≥75% de aciertos.
-- PRODUCCIÓN ESCRITA: escribe una carta personal de 100-150 palabras (invitar, agradecer, disculparse, contar un fin de semana) con conectores básicos y ≥75% de sintagmas con caso correcto.
-- PRODUCCIÓN ESCRITA: describe una fotografía o una escena en 80-120 palabras usando al menos 8 adjetivos declinados y concordados correctamente.
-- PRODUCCIÓN ORAL: narra un hecho pasado durante 2 minutos eligiendo el aspecto según proceso, resultado o repetición, y justifica en español dos de sus elecciones.
-- PRODUCCIÓN ORAL: da instrucciones para llegar a un sitio empleando al menos 6 verbos de movimiento prefijados distintos (дойти, перейти, пройти, войти, выйти, доехать) sin confundir el par de aspecto.
-- INTERACCIÓN ORAL: mantiene una conversación de 5 minutos sobre trabajo, estudios, salud, ocio o planes; cuando no entiende, pide aclaración en ruso (Повторите, пожалуйста / Что значит…? / Как это по-русски?) y no recurre al español.
-- INTERACCIÓN ESCRITA: resuelve una gestión por correo o chat (reservar, reclamar un pedido, pedir cita médica, cancelar) con el registro y la fórmula de tratamiento adecuados.
-- GRAMÁTICA (caso): declina correctamente sustantivos y adjetivos en los seis casos, singular y plural, incluidos los temas blandos y los sibilantes, y distingue свой de его/её/их sin error sistemático — el error que el español 'su' garantiza.
-- GRAMÁTICA (rección): usa correctamente el régimen de 60 verbos frecuentes de alta interferencia (заниматься+instr, помогать+dat, ждать+gen/ac, интересоваться+instr, поздравлять с+instr, играть в/на, звонить+dat, отвечать на+ac).
-- MEDIACIÓN: resume en ruso, en 5-6 frases, un texto ruso de 300 palabras; y explica en español a un tercero el contenido de un anuncio, una instrucción de uso o un correo ruso, sin omitir la condición o la restricción clave.
+- [COMPRENSIÓN LECTORA] lee textos adaptados de 300-500 palabras (correspondencia personal, anuncios, folletos, noticias breves) a ≥90 ppm y responde 8 preguntas de comprensión literal e inferencial con ≥75% de aciertos.
+- [COMPRENSIÓN LECTORA] lematiza — dada una forma oblicua en un texto (о студентах, к врачу, с друзьями), identifica el nominativo singular y el caso, en ≥80% de los casos. Es la destreza que le permite usar un diccionario ruso.
+- [COMPRENSIÓN ORAL] entiende diálogos cotidianos de 1-2 minutos con dos voces distintas a 120-130 ppm y responde preguntas de detalle con ≥70% de aciertos.
+- [COMPRENSIÓN ORAL] transcribe correctamente, tras una sola escucha, palabras y sintagmas con reducción átona plena y asimilación (что [ʂto], сегодня [sʲɪˈvodʲnʲə], здравствуйте, конечно [kɐˈnʲeʂnə]), con ≥75% de aciertos.
+- [PRODUCCIÓN ESCRITA] escribe una carta personal de 100-150 palabras (invitar, agradecer, disculparse, contar un fin de semana) con conectores básicos y ≥75% de sintagmas con caso correcto.
+- [PRODUCCIÓN ESCRITA] describe una fotografía o una escena en 80-120 palabras usando al menos 8 adjetivos declinados y concordados correctamente.
+- [PRODUCCIÓN ORAL] narra un hecho pasado durante 2 minutos eligiendo el aspecto según proceso, resultado o repetición, y justifica en español dos de sus elecciones.
+- [PRODUCCIÓN ORAL] da instrucciones para llegar a un sitio empleando al menos 6 verbos de movimiento prefijados distintos (дойти, перейти, пройти, войти, выйти, доехать) sin confundir el par de aspecto.
+- [INTERACCIÓN ORAL] mantiene una conversación de 5 minutos sobre trabajo, estudios, salud, ocio o planes; cuando no entiende, pide aclaración en ruso (Повторите, пожалуйста / Что значит…? / Как это по-русски?) y no recurre al español.
+- [INTERACCIÓN ESCRITA] resuelve una gestión por correo o chat (reservar, reclamar un pedido, pedir cita médica, cancelar) con el registro y la fórmula de tratamiento adecuados.
+- [GRAMÁTICA · caso] declina correctamente sustantivos y adjetivos en los seis casos, singular y plural, incluidos los temas blandos y los sibilantes, y distingue свой de его/её/их sin error sistemático — el error que el español 'su' garantiza.
+- [GRAMÁTICA · rección] usa correctamente el régimen de 60 verbos frecuentes de alta interferencia (заниматься+instr, помогать+dat, ждать+gen/ac, интересоваться+instr, поздравлять с+instr, играть в/на, звонить+dat, отвечать на+ac).
+- [MEDIACIÓN] resume en ruso, en 5-6 frases, un texto ruso de 300 palabras; y explica en español a un tercero el contenido de un anuncio, una instrucción de uso o un correo ruso, sin omitir la condición o la restricción clave.
 
 **Contenido lingüístico.** MORFOLOGÍA NOMINAL COMPLETA: las tres declinaciones en los seis casos, singular y plural, con los temas duros, blandos y sibilantes y sus reglas ortográficas asociadas; el genitivo plural en toda su irregularidad (tres desinencias: -ов/-ев (студентов, музеев), -ей (рублей, друзей, людей) y CERO (книг, окон, мест), con vocal de apoyo (окно→окон, сестра→сестёр), más los irregulares frecuentes: людей, детей, друзей, рублей); animacidad en acusativo (masculino singular y todos los plurales: вижу студента / вижу студентов vs вижу столы); declinación adjetival completa dura, blanda y mixta (большой/синий/русский/хороший); pronombres demostrativos (этот/тот) e interrogativos declinados; свой frente a los posesivos de tercera persona; declinación de apellidos rusos y extranjeros.
 
@@ -1279,20 +1279,20 @@ ADVERTENCIA HONESTA: el estándar ТБУ es algo más estrecho que el A2 del Com
 
 **Sabrá hacer (14):**
 
-- COMPRENSIÓN LECTORA: lee 20-25 páginas por semana de prosa contemporánea adaptada o de prensa sencilla a ≥120 ppm y produce un resumen de 100 palabras con ≥80% de fidelidad a la jerarquía informativa del original.
-- COMPRENSIÓN LECTORA: deduce el significado de palabras nuevas por su morfología derivativa (prefijo + raíz + sufijo) sin diccionario, en ≥60% de los casos, sobre una lista de 30 palabras no vistas.
-- COMPRENSIÓN ORAL: sigue un podcast, un boletín de noticias o una entrevista de 5-8 minutos a 140-150 ppm y responde 10 preguntas de detalle e inferencia con ≥70% de aciertos.
-- COMPRENSIÓN ORAL: entiende habla informal con elisión coloquial real (щас, чё, тыща, здрасьте, сёдня, тока) y capta el sentido pese a no reconocer todas las palabras.
-- PRODUCCIÓN ESCRITA: escribe un texto de 200-250 palabras argumentando una opinión, con párrafos y conectores (однако, поэтому, кроме того, несмотря на то что, во-первых), y con ≤8 errores que un lector nativo considere perturbadores.
-- PRODUCCIÓN ESCRITA: escribe una carta formal (solicitud, reclamación, carta de motivación) con las fórmulas de tratamiento correctas (Уважаемый Иван Петрович / С уважением) y la puntuación rusa de subordinada, que no coincide con la española.
-- PRODUCCIÓN ORAL: expone durante 4-5 minutos sobre un tema preparado, sin leer, con no más de 6 errores de caso que impidan o entorpezcan la comprensión.
-- PRODUCCIÓN ORAL: cuenta una anécdota manejando el contraste он приходил (vino y se fue) frente a он пришёл (vino y está aquí), y el imperfectivo general-fáctico (Вы читали «Войну и мир»?), y explica en español por qué eligió cada uno.
-- INTERACCIÓN ORAL: participa en una conversación de 15 minutos con un hablante nativo sobre temas conocidos, negocia el paso de вы a ты (Давайте на ты) y repara los malentendidos sin abandonar el ruso.
-- INTERACCIÓN ESCRITA: interviene en un foro o grupo de chat ruso — responde, discrepa, matiza, cita a otro participante — manteniendo el registro del hilo.
-- MEDIACIÓN DE UN TEXTO: resume en ruso un texto ruso de 800-1.000 palabras en 150 palabras, conservando la jerarquía informativa y sin introducir información que no está en el original.
-- MEDIACIÓN DE CONCEPTOS: explica en ruso, a alguien que no lo sabe, un concepto o un procedimiento tomado de un texto (una receta, una norma, un trámite administrativo), comprobando que el interlocutor lo ha entendido.
-- MEDIACIÓN DE LA COMUNICACIÓN: actúa de puente entre un hispanohablante y un rusohablante en una situación de servicio (consulta médica, hotel, trámite), transmitiendo el contenido completo y adaptando el registro a cada parte.
-- GRAMÁTICA: usa который declinado y concordado correctamente, distingue чтобы + pasado de чтобы + infinitivo, y reproduce el estilo indirecto ruso, que conserva el tiempo original y por tanto contradice la concordancia de tiempos española.
+- [COMPRENSIÓN LECTORA] lee 20-25 páginas por semana de prosa contemporánea adaptada o de prensa sencilla a ≥120 ppm y produce un resumen de 100 palabras con ≥80% de fidelidad a la jerarquía informativa del original.
+- [COMPRENSIÓN LECTORA] deduce el significado de palabras nuevas por su morfología derivativa (prefijo + raíz + sufijo) sin diccionario, en ≥60% de los casos, sobre una lista de 30 palabras no vistas.
+- [COMPRENSIÓN ORAL] sigue un podcast, un boletín de noticias o una entrevista de 5-8 minutos a 140-150 ppm y responde 10 preguntas de detalle e inferencia con ≥70% de aciertos.
+- [COMPRENSIÓN ORAL] entiende habla informal con elisión coloquial real (щас, чё, тыща, здрасьте, сёдня, тока) y capta el sentido pese a no reconocer todas las palabras.
+- [PRODUCCIÓN ESCRITA] escribe un texto de 200-250 palabras argumentando una opinión, con párrafos y conectores (однако, поэтому, кроме того, несмотря на то что, во-первых), y con ≤8 errores que un lector nativo considere perturbadores.
+- [PRODUCCIÓN ESCRITA] escribe una carta formal (solicitud, reclamación, carta de motivación) con las fórmulas de tratamiento correctas (Уважаемый Иван Петрович / С уважением) y la puntuación rusa de subordinada, que no coincide con la española.
+- [PRODUCCIÓN ORAL] expone durante 4-5 minutos sobre un tema preparado, sin leer, con no más de 6 errores de caso que impidan o entorpezcan la comprensión.
+- [PRODUCCIÓN ORAL] cuenta una anécdota manejando el contraste он приходил (vino y se fue) frente a он пришёл (vino y está aquí), y el imperfectivo general-fáctico (Вы читали «Войну и мир»?), y explica en español por qué eligió cada uno.
+- [INTERACCIÓN ORAL] participa en una conversación de 15 minutos con un hablante nativo sobre temas conocidos, negocia el paso de вы a ты (Давайте на ты) y repara los malentendidos sin abandonar el ruso.
+- [INTERACCIÓN ESCRITA] interviene en un foro o grupo de chat ruso — responde, discrepa, matiza, cita a otro participante — manteniendo el registro del hilo.
+- [MEDIACIÓN DE UN TEXTO] resume en ruso un texto ruso de 800-1.000 palabras en 150 palabras, conservando la jerarquía informativa y sin introducir información que no está en el original.
+- [MEDIACIÓN DE CONCEPTOS] explica en ruso, a alguien que no lo sabe, un concepto o un procedimiento tomado de un texto (una receta, una norma, un trámite administrativo), comprobando que el interlocutor lo ha entendido.
+- [MEDIACIÓN DE LA COMUNICACIÓN] actúa de puente entre un hispanohablante y un rusohablante en una situación de servicio (consulta médica, hotel, trámite), transmitiendo el contenido completo y adaptando el registro a cada parte.
+- [GRAMÁTICA] usa который declinado y concordado correctamente, distingue чтобы + pasado de чтобы + infinitivo, y reproduce el estilo indirecto ruso, que conserva el tiempo original y por tanto contradice la concordancia de tiempos española.
 
 **Contenido lingüístico.** CASO — usos difíciles: instrumental predicativo (он был врачом vs он врач) y su restricción temporal; genitivo de negación y su alternancia con acusativo (книги нет vs книгу не читал), que no tiene regla mecánica y hay que enseñar por tipo de predicado; genitivo partitivo (чаю, сахару); acusativo de duración vs instrumental de tiempo; el sintagma numeral completo, con adjetivo: два новых дома / пять новых домов / двадцать одна новая книга — tres reglas superpuestas en un solo sintagma; numerales colectivos (двое, трое, четверо) y su restricción de uso; fechas, horas y edades con sus casos obligatorios; declinación de numerales complejos.
 
@@ -1335,20 +1335,20 @@ ANCLAJE INSTITUCIONAL: ТРКИ-1 es el certificado exigido para ingresar en una
 
 **Sabrá hacer (14):**
 
-- COMPRENSIÓN LECTORA: lee prensa rusa NO adaptada (Коммерсантъ, РБК, Медуза) y textos divulgativos de 1.500-2.500 palabras, y distingue de forma fiable el hecho de la opinión y la atribución de la afirmación propia.
-- COMPRENSIÓN LECTORA: lee una novela contemporánea completa con ≤10 consultas de diccionario por página, y resume cada capítulo sin recurrir al español.
-- COMPRENSIÓN ORAL: entiende un debate, una conferencia o una película sin subtítulos, con habla superpuesta y sin adaptación, y capta el punto de vista y el tono con ≥75% de detalle.
-- COMPRENSIÓN ORAL: identifica el registro del hablante (разговорный / нейтральный / официально-деловой) y detecta la ironía marcada por partículas (же, ведь, разве, неужели), con ≥70% de aciertos sobre 30 fragmentos.
-- PRODUCCIÓN ESCRITA: escribe un ensayo argumentativo de 350-450 palabras con tesis, contraargumento y conclusión, empleando activamente al menos 5 participios y 3 gerundios correctamente formados y puntuados.
-- PRODUCCIÓN ESCRITA: escribe un correo oficial y un informe breve en registro официально-деловой (в связи с + instr, согласно + dat, в целях + gen, прошу вас + inf), sin filtraciones de registro coloquial.
-- PRODUCCIÓN ORAL: defiende una postura en un debate de 10 minutos — concede, refuta, reformula lo dicho por el otro — sin que el interlocutor tenga que simplificar su ruso.
-- PRODUCCIÓN ORAL: hace una presentación de 10 minutos con datos y gráficos, declinando correctamente los numerales complejos (в две тысячи двадцать шестом году, с тремястами пятьюдесятью шестью респондентами).
-- INTERACCIÓN ORAL: conversa con dos nativos a la vez durante 30 minutos, toma y cede el turno, y sigue el hilo cuando los otros dos hablan entre sí.
-- INTERACCIÓN ESCRITA: gestiona por escrito un asunto complejo con seguimiento (contrato, avería, reclamación en varias rondas), manteniendo el registro y el hilo a lo largo de la cadena.
-- MEDIACIÓN: sintetiza dos fuentes rusas con posturas distintas en un texto propio de 250 palabras que atribuye cada idea a su fuente y señala dónde discrepan.
-- MEDIACIÓN: transmite al español el contenido de un texto ruso especializado de su campo, y a la inversa, sin calcar la estructura sintáctica del original — se evalúa que el resultado suene natural en la lengua meta, no que sea literal.
-- LÉXICO: deriva activamente familias completas (учить → учитель, учебник, учёба, изучать, выучить, переучиться, обучение) y usa cada miembro con el régimen correcto.
-- GRAMÁTICA: distingue y usa la forma corta y la larga del adjetivo con su diferencia semántica (он больной / он болен, она свободная / она свободна) y elige entre pasiva con -ся y participio pasivo corto (дом строится / дом построен).
+- [COMPRENSIÓN LECTORA] lee prensa rusa NO adaptada (Коммерсантъ, РБК, Медуза) y textos divulgativos de 1.500-2.500 palabras, y distingue de forma fiable el hecho de la opinión y la atribución de la afirmación propia.
+- [COMPRENSIÓN LECTORA] lee una novela contemporánea completa con ≤10 consultas de diccionario por página, y resume cada capítulo sin recurrir al español.
+- [COMPRENSIÓN ORAL] entiende un debate, una conferencia o una película sin subtítulos, con habla superpuesta y sin adaptación, y capta el punto de vista y el tono con ≥75% de detalle.
+- [COMPRENSIÓN ORAL] identifica el registro del hablante (разговорный / нейтральный / официально-деловой) y detecta la ironía marcada por partículas (же, ведь, разве, неужели), con ≥70% de aciertos sobre 30 fragmentos.
+- [PRODUCCIÓN ESCRITA] escribe un ensayo argumentativo de 350-450 palabras con tesis, contraargumento y conclusión, empleando activamente al menos 5 participios y 3 gerundios correctamente formados y puntuados.
+- [PRODUCCIÓN ESCRITA] escribe un correo oficial y un informe breve en registro официально-деловой (в связи с + instr, согласно + dat, в целях + gen, прошу вас + inf), sin filtraciones de registro coloquial.
+- [PRODUCCIÓN ORAL] defiende una postura en un debate de 10 minutos — concede, refuta, reformula lo dicho por el otro — sin que el interlocutor tenga que simplificar su ruso.
+- [PRODUCCIÓN ORAL] hace una presentación de 10 minutos con datos y gráficos, declinando correctamente los numerales complejos (в две тысячи двадцать шестом году, с тремястами пятьюдесятью шестью респондентами).
+- [INTERACCIÓN ORAL] conversa con dos nativos a la vez durante 30 minutos, toma y cede el turno, y sigue el hilo cuando los otros dos hablan entre sí.
+- [INTERACCIÓN ESCRITA] gestiona por escrito un asunto complejo con seguimiento (contrato, avería, reclamación en varias rondas), manteniendo el registro y el hilo a lo largo de la cadena.
+- [MEDIACIÓN] sintetiza dos fuentes rusas con posturas distintas en un texto propio de 250 palabras que atribuye cada idea a su fuente y señala dónde discrepan.
+- [MEDIACIÓN] transmite al español el contenido de un texto ruso especializado de su campo, y a la inversa, sin calcar la estructura sintáctica del original — se evalúa que el resultado suene natural en la lengua meta, no que sea literal.
+- [LÉXICO] deriva activamente familias completas (учить → учитель, учебник, учёба, изучать, выучить, переучиться, обучение) y usa cada miembro con el régimen correcto.
+- [GRAMÁTICA] distingue y usa la forma corta y la larga del adjetivo con su diferencia semántica (он больной / он болен, она свободная / она свободна) y elige entre pasiva con -ся y participio pasivo corto (дом строится / дом построен).
 
 **Contenido lingüístico.** FORMAS NO PERSONALES — producción activa: formación completa de participios activos y pasivos, presente y pasado, con sus restricciones aspectuales (el participio pasivo presente sólo de imperfectivos transitivos); gerundios imperfectivo (-я) y perfectivo (-в/-вши) con la restricción de sujeto compartido; la conversión participio↔который como herramienta de estilo (el registro escrito ruso prefiere el participio donde el hablado prefiere который); обособление y la puntuación asociada — las comas rusas son reglas duras, no pausas, y NO coinciden con las españolas: hay que enseñarlas como sistema.
 
@@ -1393,20 +1393,20 @@ NOTA: ТРКИ-2 es el nivel exigido para el título de grado en universidades r
 
 **Sabrá hacer (14):**
 
-- COMPRENSIÓN LECTORA: lee sin esfuerzo textos académicos, jurídicos y literarios de cualquier campo, incluidos los de sintaxis participial densa y nominalización pesada, sin que la estructura le obligue a releer.
-- COMPRENSIÓN LECTORA: capta implicaturas, ironía, alusiones culturales y citas de cine y literatura (крылатые выражения) en ≥70% de las que un ruso culto reconocería; medido sobre un corpus de 50 alusiones etiquetadas.
-- COMPRENSIÓN ORAL: entiende cualquier variedad de habla nativa — conferencia, radio, teatro, разговорный rápido, hablantes con acento regional o con habla descuidada — con ≥85% de detalle.
-- COMPRENSIÓN ORAL: sigue una discusión de cuatro o más participantes y reconstruye después quién sostuvo qué y con qué matiz, sin confundir posturas.
-- PRODUCCIÓN ESCRITA: escribe un artículo, un informe o una reseña de 800-1.200 palabras con estructura, cohesión y puntuación rusa correcta (обособление, comas en subordinadas, guion largo por cópula omitida), con ≤5 errores por cada 1.000 palabras.
-- PRODUCCIÓN ESCRITA: adapta el mismo contenido a tres registros (científico, periodístico, coloquial) de modo que un lector nativo identifique correctamente cada uno de los tres sin que se le diga cuál es cuál.
-- PRODUCCIÓN ORAL: expone durante 20 minutos improvisando sobre notas, responde preguntas hostiles o inesperadas y se autorrepara sin romper el discurso ni cambiar de tema.
-- PRODUCCIÓN ORAL: usa las partículas (же, ведь, -то, вот, ну, разве, неужели, мол, дескать) con valor pragmático real y no como muletillas — evaluado por un nativo que juzgue si cada aparición aporta algo.
-- INTERACCIÓN: negocia, discrepa y matiza en contexto profesional; ajusta la distancia social con el patronímico, el diminutivo y el aspecto del imperativo según a quién se dirige y qué le está pidiendo.
-- INTERACCIÓN ESCRITA: participa en una discusión escrita larga y de consecuencias (cadena de correo profesional, revisión comentada de un documento) sin filtraciones de registro ni ambigüedades de atribución.
-- MEDIACIÓN DE TEXTOS: reformula en ruso un texto académico ruso para un público lego, conservando la exactitud del contenido y bajando el registro dos escalones.
-- MEDIACIÓN DE LA COMUNICACIÓN: media en un desacuerdo entre dos partes rusohablantes — reformula cada postura de modo que la otra la acepte como fiel, identifica el punto común y propone una salida.
-- MEDIACIÓN INTERLINGÜÍSTICA: interpreta consecutivamente ES↔RU en una reunión de trabajo de 30 minutos, con toma de notas, sin omitir condiciones, cifras ni reservas.
-- GRAMÁTICA Y ESTILO: usa el orden de palabras como recurso informativo (tema-rema) de forma deliberada — ventaja específica del hispanohablante, cuya lengua ya permite 'El libro lo compré yo' — y justifica por qué ordenó así una frase concreta.
+- [COMPRENSIÓN LECTORA] lee sin esfuerzo textos académicos, jurídicos y literarios de cualquier campo, incluidos los de sintaxis participial densa y nominalización pesada, sin que la estructura le obligue a releer.
+- [COMPRENSIÓN LECTORA] capta implicaturas, ironía, alusiones culturales y citas de cine y literatura (крылатые выражения) en ≥70% de las que un ruso culto reconocería; medido sobre un corpus de 50 alusiones etiquetadas.
+- [COMPRENSIÓN ORAL] entiende cualquier variedad de habla nativa — conferencia, radio, teatro, разговорный rápido, hablantes con acento regional o con habla descuidada — con ≥85% de detalle.
+- [COMPRENSIÓN ORAL] sigue una discusión de cuatro o más participantes y reconstruye después quién sostuvo qué y con qué matiz, sin confundir posturas.
+- [PRODUCCIÓN ESCRITA] escribe un artículo, un informe o una reseña de 800-1.200 palabras con estructura, cohesión y puntuación rusa correcta (обособление, comas en subordinadas, guion largo por cópula omitida), con ≤5 errores por cada 1.000 palabras.
+- [PRODUCCIÓN ESCRITA] adapta el mismo contenido a tres registros (científico, periodístico, coloquial) de modo que un lector nativo identifique correctamente cada uno de los tres sin que se le diga cuál es cuál.
+- [PRODUCCIÓN ORAL] expone durante 20 minutos improvisando sobre notas, responde preguntas hostiles o inesperadas y se autorrepara sin romper el discurso ni cambiar de tema.
+- [PRODUCCIÓN ORAL] usa las partículas (же, ведь, -то, вот, ну, разве, неужели, мол, дескать) con valor pragmático real y no como muletillas — evaluado por un nativo que juzgue si cada aparición aporta algo.
+- [INTERACCIÓN] negocia, discrepa y matiza en contexto profesional; ajusta la distancia social con el patronímico, el diminutivo y el aspecto del imperativo según a quién se dirige y qué le está pidiendo.
+- [INTERACCIÓN ESCRITA] participa en una discusión escrita larga y de consecuencias (cadena de correo profesional, revisión comentada de un documento) sin filtraciones de registro ni ambigüedades de atribución.
+- [MEDIACIÓN DE TEXTOS] reformula en ruso un texto académico ruso para un público lego, conservando la exactitud del contenido y bajando el registro dos escalones.
+- [MEDIACIÓN DE LA COMUNICACIÓN] media en un desacuerdo entre dos partes rusohablantes — reformula cada postura de modo que la otra la acepte como fiel, identifica el punto común y propone una salida.
+- [MEDIACIÓN INTERLINGÜÍSTICA] interpreta consecutivamente ES↔RU en una reunión de trabajo de 30 minutos, con toma de notas, sin omitir condiciones, cifras ni reservas.
+- [GRAMÁTICA Y ESTILO] usa el orden de palabras como recurso informativo (tema-rema) de forma deliberada — ventaja específica del hispanohablante, cuya lengua ya permite 'El libro lo compré yo' — y justifica por qué ordenó así una frase concreta.
 
 **Contenido lingüístico.** ESTILÍSTICA COMO COMPETENCIA: los cinco estilos funcionales ya no se reconocen, se producen y se conmutan; marcas léxicas, morfológicas y sintácticas de cada uno; nominalización, participio y voz pasiva como marcadores de registro escrito; la elisión, la partícula y la sintaxis truncada como marcadores de разговорный.
 
@@ -1451,19 +1451,19 @@ HORAS HUMANAS: ≥150 horas de interacción con nativos, de las cuales ≥60 en 
 
 **Sabrá hacer (13):**
 
-- COMPRENSIÓN LECTORA: lee prosa del siglo XIX (Chéjov, Tolstói, Dostoyevski, Gógol) captando arcaísmos léxicos y sintácticos, realia histórica y matiz estilístico, sin apoyo y sin perder la ironía del narrador.
-- COMPRENSIÓN LECTORA: lee poesía rusa y percibe el metro, la rima y el desplazamiento expresivo del acento; recita 10 poemas con la acentuación métrica correcta.
-- COMPRENSIÓN LECTORA: reconoce los dobletes eslavo-eclesiásticos (город/град, голова/глава, молодой/младой, берег/брег) y explica qué aporta cada uno al registro del texto en que aparece.
-- COMPRENSIÓN ORAL: entiende cualquier discurso oral, incluidos el habla rápida con мат atenuado, la jerga generacional, el humor y el sarcasmo, y capta de forma fiable lo que NO se dice.
-- PRODUCCIÓN ESCRITA: escribe un artículo académico o un texto literario que un lector nativo culto no identifica como escrito por extranjero — evaluado a ciegas contra textos de nativos.
-- PRODUCCIÓN ESCRITA: edita y corrige un texto escrito por un nativo, justificando cada cambio con la norma (ortográfica, de puntuación, estilística) y distinguiendo error de opción de estilo.
-- PRODUCCIÓN ORAL: da una conferencia, modera una mesa redonda y usa el humor y la ironía con efecto buscado y logrado sobre una audiencia rusa.
-- PRODUCCIÓN ORAL: cambia de registro dentro del mismo turno con intención (de книжный a разговорный para marcar complicidad, o al revés para marcar distancia) y el interlocutor lee el gesto correctamente.
-- INTERACCIÓN: sostiene una conversación de varias horas sobre cualquier tema sin fatiga perceptible ni pérdida de precisión léxica o gramatical.
-- INTERACCIÓN: discute un texto o un problema con especialistas rusos de su campo en pie de igualdad, sin que el registro técnico le imponga rodeos.
-- MEDIACIÓN: traduce y adapta contenido cultural (humor, publicidad, subtítulos, juego de palabras) del ruso al español conservando el EFECTO y no la letra, y justifica cada renuncia.
-- MEDIACIÓN: modera y resume en tiempo real una discusión multipartita rusa, atribuyendo cada postura a su autor con exactitud y sin aplanar los matices.
-- MEDIACIÓN INTERCULTURAL: explica a un ruso un fenómeno de la cultura hispanohablante y a la inversa, anticipando dónde se va a producir el malentendido y desactivándolo antes de que ocurra.
+- [COMPRENSIÓN LECTORA] lee prosa del siglo XIX (Chéjov, Tolstói, Dostoyevski, Gógol) captando arcaísmos léxicos y sintácticos, realia histórica y matiz estilístico, sin apoyo y sin perder la ironía del narrador.
+- [COMPRENSIÓN LECTORA] lee poesía rusa y percibe el metro, la rima y el desplazamiento expresivo del acento; recita 10 poemas con la acentuación métrica correcta.
+- [COMPRENSIÓN LECTORA] reconoce los dobletes eslavo-eclesiásticos (город/град, голова/глава, молодой/младой, берег/брег) y explica qué aporta cada uno al registro del texto en que aparece.
+- [COMPRENSIÓN ORAL] entiende cualquier discurso oral, incluidos el habla rápida con мат atenuado, la jerga generacional, el humor y el sarcasmo, y capta de forma fiable lo que NO se dice.
+- [PRODUCCIÓN ESCRITA] escribe un artículo académico o un texto literario que un lector nativo culto no identifica como escrito por extranjero — evaluado a ciegas contra textos de nativos.
+- [PRODUCCIÓN ESCRITA] edita y corrige un texto escrito por un nativo, justificando cada cambio con la norma (ortográfica, de puntuación, estilística) y distinguiendo error de opción de estilo.
+- [PRODUCCIÓN ORAL] da una conferencia, modera una mesa redonda y usa el humor y la ironía con efecto buscado y logrado sobre una audiencia rusa.
+- [PRODUCCIÓN ORAL] cambia de registro dentro del mismo turno con intención (de книжный a разговорный para marcar complicidad, o al revés para marcar distancia) y el interlocutor lee el gesto correctamente.
+- [INTERACCIÓN] sostiene una conversación de varias horas sobre cualquier tema sin fatiga perceptible ni pérdida de precisión léxica o gramatical.
+- [INTERACCIÓN] discute un texto o un problema con especialistas rusos de su campo en pie de igualdad, sin que el registro técnico le imponga rodeos.
+- [MEDIACIÓN] traduce y adapta contenido cultural (humor, publicidad, subtítulos, juego de palabras) del ruso al español conservando el EFECTO y no la letra, y justifica cada renuncia.
+- [MEDIACIÓN] modera y resume en tiempo real una discusión multipartita rusa, atribuyendo cada postura a su autor con exactitud y sin aplanar los matices.
+- [MEDIACIÓN INTERCULTURAL] explica a un ruso un fenómeno de la cultura hispanohablante y a la inversa, anticipando dónde se va a producir el malentendido y desactivándolo antes de que ocurra.
 
 **Contenido lingüístico.** LENGUA LITERARIA E HISTÓRICA: prosa del XIX con su ortografía modernizada pero su sintaxis y su léxico originales; arcaísmos y historicismos (аршин, барин, губерния, ямщик); el sistema de tratamiento decimonónico (сударь, ваше благородие) y su rendimiento irónico en textos actuales; realia soviética imprescindible para leer el XX (коммуналка, дефицит, партсобрание, оттепель, застой).
 
