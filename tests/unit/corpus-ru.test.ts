@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { buscar, controles, CANARIO, CANARIO_NEGATIVO, INI, FIN } from '@/scripts/corpus-ru';
+import { buscar, controles, corpus, CANARIO, CANARIO_NEGATIVO, INI, FIN } from '@/scripts/corpus-ru';
 
 // EL TESTIGO EN ROJO DEL CONTADOR CIRÍLICO.
 //
@@ -12,7 +12,32 @@ import { buscar, controles, CANARIO, CANARIO_NEGATIVO, INI, FIN } from '@/script
 // error que el proyecto ya cometió una vez: conocía el hecho entero y
 // guardaba una sola de sus dos formas.
 
-describe('corpus-ru · el contador sabe leer cirílico', () => {
+// POR QUÉ ESTE FICHERO DECLARA UN TIMEOUT LARGO, y no es pereza.
+//
+// `corpus()` parsea ~91 MB de JSON y los une en una sola cadena. En
+// aislado tarda ~1 s; en la suite completa, con varios workers en
+// paralelo y otra sesión compilando a la vez, se pasa del límite POR
+// DEFECTO de vitest, que son 5 s. Resultado: un rojo que va y viene y
+// que no es un fallo de lógica — la otra sesión ya lo había normalizado
+// como «el rojo de siempre», y un rojo que se aprende a ignorar es un
+// gate apagado.
+//
+// Es el mismo caso, con la misma causa y el mismo arreglo, que el
+// catálogo de lecturas (`lecturas-catalogo.invariantes.ts`, timeout
+// 120_000).
+//
+// ⚠ Y UN TIMEOUT MÁS LARGO PUEDE ESCONDER UN CUELGUE: si algún día
+// `corpus()` devolviera vacío o se colgara a medias, esperar más sólo
+// haría tardar más en fallar. Por eso el primer test comprueba que se ha
+// cargado material de verdad ANTES de mirar ningún control — sin esa
+// línea, subir el límite convierte «tarda» y «no lee nada» en el mismo
+// verde.
+describe('corpus-ru · el contador sabe leer cirílico', { timeout: 120_000 }, () => {
+  it('el corpus se ha cargado de verdad (si no, el timeout largo taparía un cuelgue)', () => {
+    const n = corpus().length;
+    expect(n, 'corpus() devolvió menos de 1 MB: no ha leído la biblioteca').toBeGreaterThan(1_000_000);
+  });
+
   it('los DOS controles están en verde: el positivo sale y el negativo da cero', () => {
     const c = controles();
     expect(c.positivo, `el canario «${CANARIO}» tiene que aparecer`).toBeGreaterThan(0);
