@@ -27,6 +27,7 @@
 // singular el alumno aprendería «plural en latín = singular en español», que
 // es falso en un tercio de los casos.
 import { ordenPublicado } from '../../../../../scripts/lib/orden-publicado';
+import { alternativaEscueta } from '../../../../../scripts/lib/escueto-es';
 import { PLURALIA_TANTUM, claseDe, type PluralTantum } from '../plural-tantum';
 
 const P = (l: string) => PLURALIA_TANTUM.find((x) => x.lema === l)!;
@@ -39,6 +40,8 @@ export interface ItemPT {
   glosa: string;
   /** Lo que hay que escribir: el sintagma español. */
   respuesta: string;
+  /** Las otras traducciones correctas: el latín no tiene artículo. */
+  alternativas?: string[];
   ejes: {
     /** ¿El sentido español es singular? Es lo que el alumno produce. */
     sentidoSingular: boolean;
@@ -90,6 +93,13 @@ const FUENTE: ItemPT[] = DEFS.map(([id, lema, marco, glosa, respuesta, usaElSing
   const sentidoSingular = /^(el|la|un|una) /.test(respuesta);
   return {
     id, punto: 'l2-plural-tantum', entrada, marco, glosa, respuesta,
+    // ⚠ La forma escueta sólo donde el español la admite —objeto y
+    //   plural—, nunca en sujeto («Abundancia es grande») ni tras
+    //   preposición («está en oscuridad»). Y no toca el rasgo examinado,
+    //   que es el NÚMERO del sentido español: «las tropas» y «tropas» son
+    //   las dos plurales, así que quien traduzca «copias» en singular
+    //   sigue fallando.
+    alternativas: alternativaEscueta(glosa, respuesta),
     ejes: {
       sentidoSingular,
       tieneSingular: entrada.singular !== null,

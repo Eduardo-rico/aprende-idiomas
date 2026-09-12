@@ -39,6 +39,7 @@
 // discute, y ningún caso dudoso.
 import type { ItemNeutroA } from '../../../../../scripts/lib/gate-neutro-a';
 import { ordenPublicado } from '../../../../../scripts/lib/orden-publicado';
+import { alternativaEscueta } from '../../../../../scripts/lib/escueto-es';
 
 type Def = [id: string, latin: string, marco: string, glosa: string, respuesta: string,
             num: 'sg' | 'pl', homografo?: { palabra: string; queEsEnEspanol: string }];
@@ -66,8 +67,31 @@ const DEFS: Def[] = [
 
 export const SEMILLA_DE_ORDEN = 1;
 
+// ── LAS ALTERNATIVAS, Y POR QUÉ NO SON UN ADORNO ─────────────────────
+//
+// El latín no tiene artículo: «bella» es «las guerras», «unas guerras» o
+// «guerras», y una clave única suspende a quien escribe la otra lectura.
+// La pareja definido ↔ indefinido la añade el publicador; la forma
+// ESCUETA la decide `admiteEscueto`, que sólo dice que sí donde el
+// español la admite —objeto y plural— y nunca en sujeto ni tras
+// preposición.
+//
+// ⚠ Y NINGUNA DE LAS DOS TOCA EL RASGO EXAMINADO, que es el NÚMERO: «las
+// guerras» / «unas guerras» / «guerras» son las tres plurales, así que el
+// alumno que lea «bella» como femenino singular sigue fallando. Ésa es la
+// condición que hace publicable este lote.
+//
+// EL CASO QUE NO SE DERIVA, declarado a mano: `gaudium` es abstracto de
+// masa, y «la reina tiene alegría» es español correcto aunque sea
+// singular. `admiteEscueto` no puede saberlo —haría falta marcar la
+// contabilidad en el lexicón— así que va escrito aquí.
+const ESCUETO_A_MANO: Record<string, string> = {
+  'la-2a-10': 'alegría',
+};
+
 const FUENTE: ItemNeutroA[] = DEFS.map(([id, latin, marco, glosa, respuesta, numero, homografo]) => ({
   id, punto: 'l2-neutro-a', latin, marco, glosa, respuesta,
+  alternativas: [...alternativaEscueta(glosa, respuesta), ...(ESCUETO_A_MANO[id] ? [ESCUETO_A_MANO[id]!] : [])],
   ejes: { numero, ...(homografo ? { homografo } : {}) },
 }));
 

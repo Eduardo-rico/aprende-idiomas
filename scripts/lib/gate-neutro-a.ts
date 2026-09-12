@@ -48,6 +48,9 @@ export interface ItemNeutroA {
   glosa: string;
   /** Lo que hay que escribir: «las guerras», «la guerra»… */
   respuesta: string;
+  /** Las otras traducciones correctas. El latín no tiene artículo, así que
+   *  la clave única suspende a quien escribe la otra lectura. */
+  alternativas?: string[];
   ejes: {
     numero: 'sg' | 'pl';
     /** La palabra española con la que coincide la forma latina, cuando

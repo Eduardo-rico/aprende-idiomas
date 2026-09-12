@@ -122,8 +122,6 @@ const APLAZADOS_CON_MOTIVO: Record<string, string> = {
   // No se arregla en el publicador: las alternativas hay que escribirlas
   // ítem por ítem, bajo el gate del lote. Y no es cosmético — cada fallo
   // falso entra en el FSRS.
-  'l2-neutro-a': 'FORMA D · la mitad mecánica ya está resuelta —el publicador añade «una alegría» junto a «la alegría»— y lo que queda NO es mecánico: aquí el hueco es el OBJETO, y en español un objeto puede ir SIN determinante cuando es plural o de masa («la reina tiene alegría», «el rey ve guerras»). Aceptar la forma escueta en bloque metería español agramatical en los singulares contables («ve rosa»), y no aceptarla suspende a quien traduce bien. Hay que decidirlo ítem por ítem, bajo el gate del lote. ⚠ La diferencia con los lotes de l3 que sí se publican es real y no es una excusa: allí el hueco va tras preposición («a la niña») o es sujeto («Las niñas llevan»), y en esas dos posiciones la forma escueta NO es gramatical, así que la pareja definido/indefinido agota las lecturas.',
-  'l2-plural-tantum': 'FORMA D · misma posición de objeto que l2-neutro-a, así que le pasa lo mismo con la forma escueta; y encima con lemas cuyo sentido en español oscila («litterae» = la carta / las cartas), que es una segunda familia de alternativas y ésa sí es puro contenido.',
   'l3-acusativo-od': 'FORMA D · artículo Y posesivo: «a la madre» suspende «a su madre», que es la traducción natural.',
   'l3-ablativo': 'FORMA D · artículo, y además DOS ítems (la-3ab-11, la-3ab-12) cuya única clave aceptada produce español AGRAMATICAL: «de» + «el templo» = «de el templo», que en español es obligatoriamente «del». Quien escribe la forma buena suspende. Hay que reescribir la glosa o admitir «del»/«desde el», y eso es del gate del lote.',
   'l5-pro-drop': 'FORMA D · 9 de 12 admiten una segunda respuesta correcta que la clave suspende: «erat», «vidēbat» y «audiēbat» no marcan género, así que «ella» vale tanto como «él»; igual «ellas»/«ellos» y «vosotros»/«ustedes».',
@@ -143,6 +141,14 @@ const APLAZADOS_CON_MOTIVO: Record<string, string> = {
   //   posesivo, A&G §373), cinco dativos pegados a un sustantivo (lectura
   //   de genitivo, la mayoritaria del corpus) y uno de nominativo plural
   //   derrotado por pro-drop. Los tres casos son gates ahora.
+  // ⚠ `l2-neutro-a` y `l2-plural-tantum` ESTUVIERON AQUÍ y salieron el
+  //   2026-09-11. Su motivo era la forma ESCUETA: en esos dos el hueco es
+  //   el OBJETO, y el español admite el sintagma sin determinante cuando
+  //   es plural («el rey ve guerras»), así que la pareja definido ↔
+  //   indefinido no agotaba las lecturas. Ahora `admiteEscueto` la deriva
+  //   —sólo en objeto y plural, nunca en sujeto ni tras preposición— y un
+  //   test comprueba lo único que los hace publicables: que NINGUNA
+  //   alternativa cambia el NÚMERO, que es el rasgo que los dos examinan.
   // ⚠ `l2-sin-articulo` ESTUVO AQUÍ y salió el 2026-09-11. Su motivo era
   //   que cuatro de sus doce respuestas eran la CADENA VACÍA —el artículo
   //   que no está— y `FillBlankCard` no deja enviar un hueco vacío. La

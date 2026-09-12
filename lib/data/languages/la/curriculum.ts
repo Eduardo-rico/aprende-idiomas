@@ -71,8 +71,6 @@ interface Talla {
  *  Los motivos largos viven en `scripts/publicar-la.ts`
  *  (`APLAZADOS_CON_MOTIVO`), que es donde se comprueban. */
 export const SIN_TALLAR: Record<string, string> = {
-  'l2-neutro-a': 'forma D: la clave lleva artículo y el latín no tiene artículo — necesita alternativas por ítem',
-  'l2-plural-tantum': 'forma D, misma familia del artículo, y con lemas cuyo sentido en español oscila («litterae» = la carta / las cartas)',
   'l2-genero-3a': 'su marco «magnus ___» ya da el adjetivo, que es lo único que revela el género',
   'l2-cuarta': 'la CANTIDAD es su punto: sin mácrón el ítem no discrimina, y con mácrón no se teclea',
   'l3-acusativo-od': 'forma D: «a la madre» es la única clave y suspende «a su madre», que es la traducción natural',
@@ -113,11 +111,13 @@ export const TALLAS: Talla[] = [
   {
     id: 'la-b2-l3-segunda-y-neutro', blockId: 2, mdx: 'b2/l3-segunda-y-neutro.mdx',
     name: 'Segunda declinación, vocativo y el neutro en -a',
-    conceptIds: ['l2-segunda', 'l2-vocativo', 'l2-neutro-regla'],
+    conceptIds: ['l2-segunda', 'l2-vocativo', 'l2-neutro-a', 'l2-neutro-regla', 'l2-plural-tantum'],
     objectives: [
       'Declinar la segunda, incluidos los «-er» que sincopan (ager/agrī) y los que conservan la vocal (puer/puerī), sacando el tema del genitivo',
       'Saber que el vocativo ES el nominativo salvo en la 2.ª en «-us» (domine), que es donde están los 217 casos que difieren de los 589 medidos en la Vulgata',
+      'No leer la «-a» final como femenino singular: en «arma», «castra», «templa» marca NEUTRO PLURAL, y es el falso regalo más caro del latín',
       'Saber que en el neutro nominativo y acusativo coinciden SIEMPRE, así que la forma sola no dice si es sujeto u objeto',
+      'Traducir en singular los plurales que lo piden (castra = el campamento, litterae = la carta) sin generalizar: «arma» y «cōpiae» sí son plurales en español',
     ],
   },
   {
