@@ -117,10 +117,25 @@ describe('la línea roja: nada privado en git', () => {
   // sobre una ruta que no existe sale vacío y con éxito (medido
   // 2026-09-03), así que pasaría igual de bien con la lista mal escrita —
   // vigilando un sitio donde no hay nada. Esto la ancla al árbol real.
+  //
+  // Y se ancla al WORKTREE PRINCIPAL, no a `process.cwd()`. El estante
+  // privado está gitignoreado, o sea que NO VIAJA a un worktree enlazado:
+  // desde uno, `cwd` apunta a una copia donde esos directorios no existen
+  // y este test se ponía rojo sin que nada estuviera mal. Peor: como
+  // commitear desde un worktree limpio es la salida recomendada cuando
+  // otra sesión deja el árbol roto, el único test que protege la línea
+  // roja fallaba precisamente en el camino que se usa para esquivar un
+  // rojo ajeno — y un rojo que se aprende a ignorar es un gate apagado.
   it('cada directorio vigilado EXISTE de verdad (si no, el verde de arriba no significa nada)', async () => {
+    // `git worktree list` da SIEMPRE el principal en la primera línea,
+    // se corra desde donde se corra.
+    const primeraLinea = execSync('git worktree list --porcelain', SOLO_LECTURA).split('\n')[0] ?? '';
+    const principal = primeraLinea.replace(/^worktree /, '').trim();
+    expect(principal, 'no se pudo localizar el worktree principal').not.toBe('');
+
     for (const d of DIRS_PRIVADOS) {
-      const st = await fs.stat(path.join(process.cwd(), d)).catch(() => null);
-      expect(st?.isDirectory(), `${d} no existe: la línea roja lo cree vigilado y no vigila nada`).toBe(true);
+      const st = await fs.stat(path.join(principal, d)).catch(() => null);
+      expect(st?.isDirectory(), `${d} no existe en ${principal}: la línea roja lo cree vigilado y no vigila nada`).toBe(true);
     }
   });
 
