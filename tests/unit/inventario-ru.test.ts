@@ -73,6 +73,41 @@ describe('inventario-ru · la atribución de la dificultad', () => {
     expect(huerfanas).toEqual([]);
   });
 
+  // ⚠ EL INVARIANTE DE ARRIBA ERA UN GUARDIÁN QUE VOLVÍA NO-OP SU PROPIA
+  // DECISIÓN, y lo destapó el lingüista adversarial el 2026-09-11: comprueba
+  // que la capa dada tenga DUEÑO, y los tres dueños de `acento`
+  // (u2-acento-fonemico, u2-acento-movil, u15-metrica-poetica) están a
+  // pisoCero. O sea que la condición salía en verde sobre una capa con CERO
+  // ítems detrás, en cinco sitios. Existir no es enseñar.
+  //
+  // El arreglo no es bajar el criterio ni silenciarlo: es exigir que un
+  // punto que carga una capa sin dueño PRODUCIBLE lo declare por escrito.
+  // Es la forma del pisoCero y la de la cuarentena — el invariante no es un
+  // número, es «cero capas huérfanas sin motivo escrito».
+  it('toda capa dada tiene dueño PRODUCIBLE, o el punto declara el hueco', () => {
+    const producibles = new Map<CapaRu, number>();
+    for (const p of PUNTOS_RU) {
+      if (pisoDePuntoRu(p) === 0) continue;
+      const r = rango(p.nivel);
+      const y = producibles.get(p.capas.examina);
+      if (y === undefined || r < y) producibles.set(p.capas.examina, r);
+    }
+    const mudos: string[] = [];
+    for (const p of PUNTOS_RU) {
+      if (pisoDePuntoRu(p) === 0) continue; // un punto que no produce no carga nada
+      for (const c of p.capas.dadas) {
+        const r = producibles.get(c);
+        const cubierta = r !== undefined && r <= rango(p.nivel);
+        if (cubierta) continue;
+        // El hueco es legítimo si está DECLARADO: `abierto` tiene que
+        // nombrar la capa, no basta con que exista.
+        if ((p.abierto ?? '').includes(c)) continue;
+        mudos.push(`${p.id} (${p.nivel}) carga «${c}» y no hay punto PRODUCIBLE que la examine antes; declárala en \`abierto\``);
+      }
+    }
+    expect(mudos.sort()).toEqual([]);
+  });
+
   it('ningún punto se examina a sí mismo por partida doble', () => {
     for (const p of PUNTOS_RU)
       expect(p.capas.dadas, p.id).not.toContain(p.capas.examina);
@@ -127,6 +162,7 @@ describe('inventario-ru · los descriptores del currículo', () => {
     const sec = seccionRusa();
     const EXCLUIDAS = new Set(['PRODUCCIÓN ORAL', 'INTERACCIÓN', 'INTERACCIÓN ORAL', 'INTERACCIÓN ESCRITA']);
     const enAlcance = new Set<string>();
+    const orden = new Map<string, number>();
     let nivel: NivelRu | null = null;
     let dentro = false;
     for (const l of sec.split('\n')) {
@@ -141,16 +177,44 @@ describe('inventario-ru · los descriptores del currículo', () => {
       const etiqueta = t[1]!.trim();
       const categoria = etiqueta.split('·')[0]!.trim();
       if (EXCLUIDAS.has(categoria)) continue;
-      enAlcance.add(`${nivel}/${categoria}`);
+      // ⚠ CON ORDINAL. §Ruso tiene varios descriptores con el mismo nivel y
+      // la misma etiqueta (dos COMPRENSIÓN ORAL en A1, TRES COMPRENSIÓN
+      // LECTORA en C2), así que la clave sin ordinal funde descriptores
+      // distintos y da por cubierto lo que no lo está.
+      const n = (orden.get(`${nivel}/${categoria}`) ?? 0) + 1;
+      orden.set(`${nivel}/${categoria}`, n);
+      enAlcance.add(`${nivel}/${categoria} #${n}`);
     }
     expect(enAlcance.size, 'el parser tiene que encontrar descriptores; si da 0 no está midiendo').toBeGreaterThan(30);
 
     const cubiertos = new Set<string>();
     for (const p of PUNTOS_RU) for (const c of p.cubre) cubiertos.add(c.split('·')[0]!.trim());
+    // Aquí sí se parte por «·»: una entrada `… #1 · dictado de números`
+    // declara UNA MITAD del descriptor, y para saber si el descriptor está
+    // ATENDIDO basta con que alguien lo nombre.
     const declarados = new Set(Object.keys(DESCRIPTORES_FUERA_DEL_INVENTARIO).map((k) => k.split('·')[0]!.trim()));
 
     const huerfanos = [...enAlcance].filter((d) => !cubiertos.has(d) && !declarados.has(d));
     expect(huerfanos.sort()).toEqual([]);
+  });
+
+  // ⚠ EL TEST DE ARRIBA SÓLO CAZA «EN NINGUNO DE LOS DOS», y el caso que
+  // oculta el fallo real es «EN LOS DOS» (lingüista adversarial,
+  // 2026-09-11). Un descriptor que está a la vez en `cubre` y en
+  // DESCRIPTORES_FUERA afirma dos cosas incompatibles —lo cubre un punto y
+  // lo cubre otro mecanismo— y nadie lo mira. Es peor que el hueco abierto,
+  // porque el hueco se ve y la doble declaración parece cobertura de sobra.
+  it('ningún descriptor se declara a la vez cubierto por un punto y fuera del inventario', () => {
+    const cubiertos = new Set<string>();
+    for (const p of PUNTOS_RU) for (const c of p.cubre) cubiertos.add(c.split('·')[0]!.trim());
+    // ⚠ AQUÍ NO se parte por «·», y es la mitad que faltaba: una entrada
+    // con calificador (`A1/COMPRENSIÓN ORAL #1 · dictado de números…`)
+    // declara explícitamente que cubre OTRA MITAD del mismo descriptor, y
+    // eso es legítimo y es justo lo que hay que poder escribir. Lo que no
+    // puede haber es la MISMA clave en los dos sitios.
+    const dobles = Object.keys(DESCRIPTORES_FUERA_DEL_INVENTARIO)
+      .filter((k) => cubiertos.has(k.trim()));
+    expect([...new Set(dobles)].sort()).toEqual([]);
   });
 
   it('nada en DESCRIPTORES_FUERA_DEL_INVENTARIO se declara sin motivo', () => {

@@ -251,37 +251,70 @@ export const BLOQUES_RU: { id: number; slug: string; nombre: string }[] = [
  *  aquí ni en `cubre`. La lección son las 32 unidades de escucha que en
  *  portugués se quedaron fuera sin que nadie lo dijera. */
 export const DESCRIPTORES_FUERA_DEL_INVENTARIO: Record<string, string> = {
-  'A1/COMPRENSIÓN LECTORA': 'biblioteca (2.180 lecturas) + preguntas de comprensión por texto; no es un punto',
-  'A2/COMPRENSIÓN LECTORA': 'biblioteca + preguntas por texto. El SEGUNDO descriptor de A2 (lematizar una forma oblicua) SÍ es punto: u5-lematizacion',
-  'B1/COMPRENSIÓN LECTORA': 'biblioteca + preguntas por texto y resumen con rúbrica',
-  'B2/COMPRENSIÓN LECTORA': 'biblioteca + preguntas de inferencia y atribución',
-  'C1/COMPRENSIÓN LECTORA': 'biblioteca + resumen crítico con rúbrica',
-  'C2/COMPRENSIÓN LECTORA': 'biblioteca (canon del XIX, ya ingerido) + explicación de pasajes con rúbrica',
-  'A1/COMPRENSIÓN ORAL': 'ESCUCHA: la cubren u2-palatalizacion y u2-reduccion-atona, que existen y NO se producen hasta que haya voz validada',
-  'A2/COMPRENSIÓN ORAL': 'ESCUCHA: bloqueada hasta voz validada',
-  'B1/COMPRENSIÓN ORAL': 'ESCUCHA: bloqueada hasta voz validada; la elisión coloquial la cubre u2-habla-conectada',
-  'B2/COMPRENSIÓN ORAL': 'ESCUCHA: bloqueada hasta voz validada',
-  'C1/COMPRENSIÓN ORAL': 'ESCUCHA: bloqueada hasta voz validada',
-  'C2/COMPRENSIÓN ORAL': 'ESCUCHA: bloqueada hasta voz validada',
-  'A1/PRODUCCIÓN ESCRITA': 'tarea de producción con rúbrica (formulario, presentación), no punto',
-  'A2/PRODUCCIÓN ESCRITA': 'tarea con rúbrica (carta personal, descripción), no punto',
-  'B1/PRODUCCIÓN ESCRITA': 'tarea con rúbrica; las fórmulas de la carta formal son u14-registro-oficial',
-  'B2/PRODUCCIÓN ESCRITA': 'tarea con rúbrica de 6 criterios',
-  'C1/PRODUCCIÓN ESCRITA': 'tarea con rúbrica de 7 criterios',
-  'C2/PRODUCCIÓN ESCRITA': 'tarea con evaluación a ciegas contra textos nativos; no la puede juzgar ningún LLM y está declarado en el currículo',
-  'A1/MEDIACIÓN': 'máquina de mediación (relay RU→ES) cuando haya material A1 del que partir',
-  'A2/MEDIACIÓN': 'máquina de mediación (resumen RU→RU, explicación RU→ES)',
-  'B1/MEDIACIÓN DE UN TEXTO': 'máquina de mediación (resumen RU→RU)',
-  'B1/MEDIACIÓN DE CONCEPTOS': 'máquina de mediación-explicar',
-  'B1/MEDIACIÓN DE LA COMUNICACIÓN': 'fuera de alcance: exige interacción turno a turno (decisión de Edu, 2026-08-11)',
-  'B2/MEDIACIÓN': 'máquina de mediación (síntesis multifuente y transferencia ES↔RU)',
-  'C1/MEDIACIÓN DE TEXTOS': 'máquina de mediación (académico→llano)',
-  'C1/MEDIACIÓN DE LA COMUNICACIÓN': 'fuera de alcance: mediar un desacuerdo exige interlocutor',
-  'C1/MEDIACIÓN INTERLINGÜÍSTICA': 'fuera de alcance: interpretación consecutiva es producción oral',
-  'C2/MEDIACIÓN': 'máquina de mediación (traducción cultural con comentario de la renuncia)',
-  'C2/MEDIACIÓN INTERCULTURAL': 'fuera de alcance: anticipar el malentendido exige interlocutor',
-  'C2/CURSIVA': 'no existe en C2; la cursiva es A1 y la cubre u1-cursiva-trazo',
+  // ⚠ LA CLAVE LLEVA ORDINAL, Y ES LA CORRECCIÓN MÁS IMPORTANTE DE ESTA
+  // TABLA (lingüista adversarial, 2026-09-11). La v0 usaba
+  // `<nivel>/<etiqueta>`, y §Ruso tiene VARIOS descriptores con el mismo
+  // nivel y la misma etiqueta: dos COMPRENSIÓN ORAL en A1, tres
+  // COMPRENSIÓN LECTORA en C2. Con esa clave, 11 descriptores estaban
+  // declarados a la vez CUBIERTOS por un punto y FUERA del inventario, y
+  // el test no podía verlo porque sólo cazaba el caso «en ninguno de los
+  // dos». La doble declaración es peor que el hueco: el hueco se ve y esto
+  // parece cobertura de sobra.
+  //
+  // El daño concreto que ocultaba, y es literalmente la lección de las 32
+  // unidades de escucha del portugués repetida con el mecanismo construido
+  // para evitarla: el descriptor **A1/COMPRENSIÓN ORAL #1** pide dos cosas
+  // —los pares mínimos de palatalización Y «anota correctamente números,
+  // precios, horas y fechas dichos a 100-110 ppm»—. `u2-palatalizacion`
+  // cubre la primera; la segunda **no la cubre ningún punto** y la tabla
+  // juraba que sí. Va declarada abajo como lo que es.
+  'A1/COMPRENSIÓN LECTORA #1': 'biblioteca (2.180 lecturas) + preguntas de comprensión por texto; no es un punto',
+  'A1/COMPRENSIÓN ORAL #1 · dictado de números, precios, horas y fechas': 'DESCUBIERTO: la segunda mitad de ese descriptor no la cubre ningún punto. Es destreza de transcripción bajo presión temporal, no de sistema, y necesita voz validada más un tipo `dictation` que no existe. Se declara para que el hueco sea visible en vez de quedar tapado por el punto que cubre la otra mitad',
+  'A2/COMPRENSIÓN LECTORA #1': 'biblioteca + preguntas por texto',
+  'B1/COMPRENSIÓN LECTORA #1': 'biblioteca + preguntas por texto y resumen con rúbrica',
+  'B2/COMPRENSIÓN LECTORA #1': 'biblioteca + preguntas de inferencia y atribución',
+  'B2/COMPRENSIÓN LECTORA #2': 'biblioteca: lectura extensiva de novela completa con contador',
+  'C1/COMPRENSIÓN LECTORA #1': 'biblioteca + resumen crítico con rúbrica',
+  'C2/COMPRENSIÓN LECTORA #1 · volumen': 'biblioteca: el canon del XIX ya está ingerido; la lectura extensiva se cuenta, no se enseña por puntos',
+  'B1/COMPRENSIÓN ORAL #1': 'ESCUCHA: bloqueada hasta voz validada',
+  'B2/COMPRENSIÓN ORAL #1': 'ESCUCHA: bloqueada hasta voz validada',
+  'C1/COMPRENSIÓN ORAL #1': 'ESCUCHA: bloqueada hasta voz validada',
+  'C1/COMPRENSIÓN ORAL #2': 'ESCUCHA: seguir una discusión de cuatro participantes exige habla espontánea multivoz, que no hay',
+  'C2/COMPRENSIÓN ORAL #1': 'ESCUCHA: bloqueada hasta voz validada; y el мат atenuado lo cubre u14-mat, que a su vez está bloqueado por falta de campo de advertencia',
+  'A1/PRODUCCIÓN ESCRITA #1': 'tarea de producción con rúbrica (formulario, presentación), no punto',
+  'A2/PRODUCCIÓN ESCRITA #1': 'tarea con rúbrica (carta personal), no punto',
+  'A2/PRODUCCIÓN ESCRITA #2': 'tarea con rúbrica (descripción con adjetivos declinados); la morfología la cubre u6-adjetivo-declinado, la tarea no es un punto',
+  'B1/PRODUCCIÓN ESCRITA #1': 'tarea con rúbrica (texto argumentativo)',
+  'B1/PRODUCCIÓN ESCRITA #2': 'tarea con rúbrica (carta formal); sus fórmulas son u14-registro-oficial, que es B2 — el currículo las pide antes de enseñarlas y queda denunciado aquí',
+  'C1/PRODUCCIÓN ESCRITA #2': 'tarea con rúbrica: adaptar el mismo contenido a tres registros. La competencia es u14-cinco-estilos; la tarea no es un punto',
+  'C2/PRODUCCIÓN ESCRITA #1': 'tarea con evaluación a ciegas contra textos nativos; el currículo declara que ningún LLM puede juzgarla y aquí no se finge lo contrario',
+  'A1/MEDIACIÓN #1': 'máquina de mediación (relay RU→ES) cuando haya material A1 del que partir',
+  'A2/MEDIACIÓN #1': 'máquina de mediación (resumen RU→RU, explicación RU→ES)',
+  'B1/MEDIACIÓN DE UN TEXTO #1': 'máquina de mediación (resumen RU→RU)',
+  'B1/MEDIACIÓN DE CONCEPTOS #1': 'máquina de mediación-explicar',
+  'B1/MEDIACIÓN DE LA COMUNICACIÓN #1': 'fuera de alcance: exige interacción turno a turno (decisión de Edu, 2026-08-11)',
+  'B2/MEDIACIÓN #1': 'máquina de mediación (síntesis de fuentes con atribución)',
+  'B2/MEDIACIÓN #2': 'máquina de mediación (transferencia ES↔RU evaluada por naturalidad)',
+  'C1/MEDIACIÓN DE TEXTOS #1': 'máquina de mediación (académico→llano)',
+  'C1/MEDIACIÓN DE LA COMUNICACIÓN #1': 'fuera de alcance: mediar un desacuerdo exige interlocutor',
+  'C1/MEDIACIÓN INTERLINGÜÍSTICA #1': 'fuera de alcance: interpretación consecutiva es producción oral',
+  'C2/MEDIACIÓN #1': 'máquina de mediación (traducción cultural con comentario de la renuncia)',
+  'C2/MEDIACIÓN #2': 'máquina de mediación (resumen de discusión multipartita) — y con el aviso de que en tiempo real no es alcanzable sin interlocutor',
+  'C2/MEDIACIÓN INTERCULTURAL #1': 'fuera de alcance: anticipar el malentendido exige interlocutor',
+  'A1/CURSIVA #1': 'la cubre u1-cursiva-trazo, bloqueado por falta de tipo de ejercicio gráfico',
+  'A1/TECLADO #1': 'la cubre u1-teclado-jcuken, bloqueado por falta de tipo `typing`',
+  'A1/ALFABETO #1': 'la cubre u1-falsos-amigos-graficos; la mitad de VELOCIDAD (≥60 ppm cronometrado) no es un punto: es una métrica de lectura que el modelo no tiene',
+  'A1/ASPECTO #1': 'lo cubren u8-par-aspectual y u8-pasado-proceso-resultado',
+  'A1/GRAMÁTICA #1': 'lo cubren los puntos de u4 (caso)',
+  'A1/GRAMÁTICA #2': 'lo cubren u9-uni-multidireccional y u9-ir-a-pie-o-en-vehiculo',
+  'A2/GRAMÁTICA #1': 'lo cubren u5-declinacion-plural, u5-animacidad-acusativo y u6-svoj',
+  'A2/GRAMÁTICA #2': 'lo cubre u10-reccion-verbal',
+  'B1/GRAMÁTICA #1': 'lo cubren u11-kotoryj, u11-chtoby y u11-estilo-indirecto',
+  'B2/GRAMÁTICA #1': 'lo cubren u6-adjetivo-corto y u12-pasiva-sya-vs-participio',
+  'B2/LÉXICO #1': 'lo cubren u13-sufijos-nominales y u13-familias-derivativas',
+  'C1/GRAMÁTICA Y ESTILO #1': 'lo cubre u11-orden-tema-rema',
 };
+
 
 const P = (p: PuntoRu) => p;
 
@@ -291,26 +324,26 @@ export const PUNTOS_RU: PuntoRu[] = [
     descripcion: 'В=[v], Н=[n], Р=[r], С=[s], У=[u], Х=[x], Е=[je]: siete glifos que el alumno YA sabe leer, y mal. No es aprender un signo nuevo: es desaprender uno viejo, que es más caro y más lento.',
     prereqs: [], clase: 'ortografico', calco: { castellano: 'no-aplica', portugues: 'no-aplica', internacional: 'opaco' },
     capas: { examina: 'grafia', dadas: [] },
-    gratis: 'las otras 26 letras, a medias: ~10 son idénticas al latín en forma y valor (А К М О Т) o casi, y ~11 son enteramente nuevas y por eso BARATAS — no hay hábito que las contradiga. Lo que NO es gratis es exactamente este subconjunto de siete, y el punto vale porque está acotado a él. Ni el español ni el portugués aportan nada más allá del alfabeto latino compartido, que aquí es el problema y no la ayuda.',
+    gratis: 'las otras 26 letras, a medias, y los números van contados y no a ojo: **5** son idénticas al latín en forma y valor (А К М О Т) y **21** son enteramente nuevas (Б Г Д Ё Ж З И Й Л П Ф Ц Ч Ш Щ Ъ Ы Ь Э Ю Я) y por eso BARATAS — no hay hábito que las contradiga. 5 + 21 + los 7 falsos amigos = 33. (La v0 decía «~10» y «~11», que ni son correctos ni suman su propio total; corregido el 2026-09-11.) Lo que NO es gratis es exactamente este subconjunto de siete, y el punto vale porque está acotado a él. Ni el español ni el portugués aportan nada más allá del alfabeto latino compartido, que aquí es el problema y no la ayuda.',
     motivo: 'se examina leyendo en voz alta o eligiendo la transcripción: el error es de DESCODIFICACIÓN, no de lengua, y no hay calco que suene bien ni mal. El ítem da la palabra escrita y pide el valor, nunca al revés',
     cubre: ['A1/ALFABETO'],
     cita: 'sin caer en los siete falsos amigos gráficos (В=[v], Н=[n], Р=[r], С=[s], У=[u], Х=[x], Е=[je])' }),
 
   P({ id: 'u1-signos-sin-sonido', nombre: 'ь y ъ: dos letras que no suenan y no son la misma cosa', bloque: 1, nivel: 'A1',
-    descripcion: 'ь marca blandura de la consonante anterior (мат/мать, брат/брать) y a la vez es marca morfológica (тетрадь f., пишешь 2.ª sg); ъ es separador y sólo aparece tras prefijo (объявление, съесть). El alumno los lee como «nada» y se le caen al escribir.',
+    descripcion: 'ь marca blandura de la consonante anterior (мат/мать, брат/брать) y a la vez es marca morfológica (тетрадь f., пишешь 2.ª sg); ъ es separador y aparece tras prefijo (объявление, съесть), tras componente numeral (двухъярусный, трёхъязычный) y en préstamos sin prefijo analizable (адъютант, конъюнктура, инъекция). El alumno los lee como «nada» y se le caen al escribir.',
     prereqs: ['u1-falsos-amigos-graficos'], clase: 'ortografico', calco: { castellano: 'no-aplica', portugues: 'no-aplica', internacional: 'opaco' },
     capas: { examina: 'grafia', dadas: ['fonologia'] },
-    gratis: 'nada. Ni el español ni el portugués tienen ninguna letra muda con valor distintivo: la «h» española es muda pero NO cambia la letra de al lado, y el alumno la trata como decoración. Ese hábito es exactamente el que hace que ь se le caiga.',
+    gratis: 'MÁS DE LO QUE LA v0 DECÍA, y la v0 se contradecía con su propio punto hermano dos entradas más abajo. Decía «ni el español ni el portugués tienen ninguna letra muda con valor distintivo» — y la ⟨u⟩ de gue/gui es exactamente eso: una letra muda cuya única función es fijar el valor de la consonante anterior, que es la definición estructural de ь. El portugués hace lo mismo con la ⟨h⟩ de nh/lh/ch. Así que el MECANISMO transfiere de las dos lenguas y el alumno no lo trata como decoración. Lo que no transfiere es (a) que ь sea además marca morfológica (тетрадь f., пишешь 2.ª sg), que es donde de verdad se le cae, y (b) ъ, que no tiene ningún análogo. Lo cazó el lingüista adversarial el 2026-09-11 leyendo los dos puntos del mismo bloque en paralelo, que es el único método que ve una contradicción entre dos declaraciones.',
     motivo: 'cloze del grafema en contexto donde la ausencia cambia la palabra o el paradigma. NO se puede examinar de oído en A1: la distinción dura/blanda es u2-palatalizacion y este punto la da por resuelta',
     cubre: [], sinDescriptor: 'el currículo lo pide en «GRAFÍA Y ORTOGRAFÍA» y no tiene descriptor propio: el de ALFABETO sólo habla de leer en voz alta',
     cita: 'ь y ъ como signos sin sonido propio' }),
 
   P({ id: 'u1-ortografia-sibilantes', nombre: 'жи/ши, ча/ща, чу/щу y la и tras к/г/х', bloque: 1, nivel: 'A1',
-    descripcion: 'Reglas de grafía que CONTRADICEN la fonética: жи y ши se escriben con и y se pronuncian con [ɨ]. Son la primera vez que el alumno tiene que escribir contra lo que oye. Con sus tres excepciones nombradas (жюри, брошюра, парашют).',
+    descripcion: 'Reglas de grafía que CONTRADICEN la fonética: жи y ши se escriben con и y se pronuncian con [ɨ]. Son la primera vez que el alumno tiene que escribir contra lo que oye. Y la regla жу/шу, que es la que tiene las tres excepciones nombradas (жюри, брошюра, парашют).',
     prereqs: ['u1-falsos-amigos-graficos'], clase: 'ortografico', calco: { castellano: 'no-aplica', portugues: 'no-aplica', internacional: 'no-aplica' },
     capas: { examina: 'grafia', dadas: ['fonologia'] },
     gratis: 'el HÁBITO de escribir contra el oído sí transfiere, y de las dos lenguas: el español escribe «gue/gui» con una u que no suena y «que/qui» igual; el portugués hace lo mismo y además tiene «ç» y la «h» inicial. El alumno no se sorprende de que la grafía mienta. Lo que no transfiere es CUÁL es la regla.',
-    motivo: 'cloze del grafema con regla cerrada, y es además el gate de escritura de lib/lang/ortografia-ru.ts: un generador por paradigma produce *книгы solo si nadie se la enseña. §0.6: el ítem de frontera es una de las tres excepciones',
+    motivo: 'cloze del grafema con regla cerrada, y es además el gate de escritura de lib/lang/ortografia-ru.ts: un generador por paradigma produce *книгы solo si nadie se la enseña. §0.6: el ítem de frontera es una de las tres excepciones. ⚠ Y LA v0 LO DEJABA INCONSTRUIBLE SIN QUE NADA FALLARA (lingüista adversarial, 2026-09-11): enunciaba жи/ши, ча/ща, чу/щу e и tras velar, y declaraba como excepciones жюри, брошюра y парашют — que NO son excepciones de ninguna de esas cuatro, sino de жу/шу, regla que el punto no enunciaba. O sea que el ítem de frontera que el §0.6 exige no se podía escribir, y el hueco no lo detectaba nada. Añadida жу/шу a la descripción',
     cubre: [], sinDescriptor: 'contenido de «GRAFÍA Y ORTOGRAFÍA» sin descriptor propio',
     cita: 'reglas ortográficas dependientes de la palatalización (жи/ши, ча/ща, чу/щу, и tras к/г/х)' }),
 
@@ -320,6 +353,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     capas: { examina: 'grafia', dadas: ['acento'] },
     gratis: 'nada, y ninguna de las dos lenguas tiene análogo. Lo más cercano es la tilde española, y apunta al revés: la tilde se omite por descuido y se considera error, mientras que omitir la ё es la norma tipográfica.',
     motivo: 'MEDIDO sobre las 2.180 lecturas (scripts/corpus-ru.ts): 9,5 % de ё-grafía en 64.996 apariciones de 16 pares inequívocos. Y la distribución es BIMODAL POR EDICIÓN —1.295 lecturas no la escriben nunca, 159 siempre, 34 en medio—, o sea que la ё no es una tendencia de la lengua sino una decisión del editor. De ahí las dos mitades: producir con ё es legítimo, EXIGIR RECONOCER POR LA Ё NO LO ES. El punto examina la dirección segura —dada la forma con ё, reconocer la palabra en un texto que la escribe е— y nunca la contraria',
+    abierto: '⚠ CARGA LA CAPA «acento» Y ESA CAPA NO TIENE DUEÑO PRODUCIBLE. Sus tres dueños (u2-acento-fonemico, u2-acento-movil, u15-metrica-poetica) están a pisoCero por falta del formato `posicion`, así que el estímulo de este punto tiene que traer el acento PINTADO —capa de presentación— y el ítem no puede pedirlo nunca. Va declarado y no razonado en un comentario porque el invariante de capas salía en VERDE sobre una capa con cero ítems detrás: comprobaba que el dueño EXISTIERA, no que enseñara. Existir no es enseñar, y lo destapó el lingüista adversarial el 2026-09-11',
     varianza: 'el rasgo diana (la ё ausente) es INVARIANTE por construcción: lo que varía es la palabra, y la palabra es u13-lexico. Por eso el punto vale 2 y no 8',
     pisoDeclarado: { piso: 2, motivo: 'dos ítems: uno donde la е-grafía es ambigua con otra palabra real (все/всё) y uno donde no lo es (пришел/пришёл). Del tercero en adelante lo único que varía es el lema, que pertenece a u13. Es la pregunta del §4.25 —¿qué VARÍA entre los ítems?— hecha antes de escribir' },
     cubre: [], sinDescriptor: 'el currículo lo pide en «GRAFÍA Y ORTOGRAFÍA» y en los retos específicos; ningún descriptor lo nombra',
@@ -352,7 +386,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     capas: { examina: 'fonologia', dadas: [] },
     gratis: 'un asidero PARCIAL y hay que decir de qué tamaño: el español tiene /ɲ/ (ñ) y en algunas variedades /ʎ/, y el portugués tiene los dos (nh, lh) de forma estable, así que el alumno de portugués C2 llega con DOS consonantes palatales productivas y no una. Eso le da н/нь y л/ль casi gratis. No le da nada para т/ть, д/дь, с/сь, з/зь, р/рь, que son el resto del sistema. El punto se acota a los pares SIN asidero, y eso es lo que lo hace medir.',
     motivo: 'percepción pura: par mínimo A/B con audio, y sólo con voz validada. NO se produce un solo ítem hasta la sonda (§ voz). El portugués paga aquí más de lo que nadie contaba, y por eso el reparto de pares del lote tiene que excluir н/нь y л/ль o el ítem mide portugués',
-    cubre: ['A1/COMPRENSIÓN ORAL'],
+    cubre: ['A1/COMPRENSIÓN ORAL #1'],
     cita: 'distingue en pares mínimos la consonante dura de la palatalizada (мат/мать, был/бил, брат/брать, ров/рёв)' }),
 
   P({ id: 'u2-palatalizacion-escrita', nombre: 'La blandura se escribe en la VOCAL siguiente, no en la consonante', bloque: 2, nivel: 'A1',
@@ -369,8 +403,9 @@ export const PUNTOS_RU: PuntoRu[] = [
     prereqs: ['u2-palatalizacion'], clase: 'fonologico', calco: { castellano: 'no-aplica', portugues: 'no-aplica', internacional: 'no-aplica' },
     capas: { examina: 'fonologia', dadas: ['acento'] },
     gratis: 'AQUÍ EL PORTUGUÉS PAGA, Y PAGA MUCHO, y es el hallazgo que más cambia el diseño de este bloque. El currículo dice que la reducción es «específicamente PEOR para un hispanohablante» porque el español no reduce — y eso es cierto de un hispanohablante a secas. Este alumno tiene portugués C2, y el portugués EUROPEO reduce las átonas hasta hacerlas caer (/e/→[ɨ], /o/→[u], síncopa entera en «telefone»). O sea que llega con la intuición de que la vocal átona se desdibuja, que es justo lo que el currículo da por ausente. Lo que NO transfiere es la DIRECCIÓN: el portugués cierra (o→u) y el ruso abre (о→[ɐ]), así que el alumno oye молоко y espera [mulu-], no [məlɐ-]. El punto mide esa dirección, no la existencia de la reducción.',
+    abierto: '⚠ CARGA LA CAPA «acento» Y ESA CAPA NO TIENE DUEÑO PRODUCIBLE. Sus tres dueños (u2-acento-fonemico, u2-acento-movil, u15-metrica-poetica) están a pisoCero por falta del formato `posicion`, así que el estímulo de este punto tiene que traer el acento PINTADO —capa de presentación— y el ítem no puede pedirlo nunca. Va declarado y no razonado en un comentario porque el invariante de capas salía en VERDE sobre una capa con cero ítems detrás: comprobaba que el dueño EXISTIERA, no que enseñara. Existir no es enseñar, y lo destapó el lingüista adversarial el 2026-09-11',
     motivo: 'percepción: reconocer la palabra escrita a partir del audio reducido. Bloqueado por voz. Y el lote tiene que excluir los ítems donde la reducción portuguesa acierta por casualidad, o mide portugués',
-    cubre: ['A1/COMPRENSIÓN ORAL'],
+    cubre: ['A1/COMPRENSIÓN ORAL #2'],
     cita: 'reconoce oralmente palabras con reducción átona plena (молоко, хорошо, язык, сегодня) tras una sola escucha' }),
 
   P({ id: 'u2-acento-fonemico', nombre: 'El acento es fonemático y no se escribe: за́мок / замо́к', bloque: 2, nivel: 'A1',
@@ -397,9 +432,9 @@ export const PUNTOS_RU: PuntoRu[] = [
     descripcion: 'La consonante sonora final se ensordece y el grupo asimila hacia atrás. Afecta al RECONOCIMIENTO: el alumno oye [druk] y busca «крук».',
     prereqs: ['u2-reduccion-atona'], clase: 'fonologico', calco: { castellano: 'no-aplica', portugues: 'no-aplica', internacional: 'no-aplica' },
     capas: { examina: 'fonologia', dadas: ['lexico'] },
-    gratis: 'EL PORTUGUÉS OTRA VEZ, y esta vez al revés: el portugués sonoriza la /s/ final ante sonora («as casas» [ʒ]) y el español de México no hace ninguna de las dos cosas de forma sistemática. O sea que el alumno tiene el concepto de asimilación regresiva por el portugués y le falta el ensordecimiento final, que ninguna de las dos lenguas tiene (las dos permiten sonoras finales o no tienen coda sonora en absoluto).',
+    gratis: 'LAS DOS MITADES, y la v0 negaba las dos — es el caso más claro del inventario del riesgo de declarar cara la mitad que el alumno trae hecha. (a) El ESPAÑOL tiene asimilación regresiva de sonoridad obligatoria y productiva: mismo [ˈmizmo], desde [ˈdezðe], rasgo [ˈrazɣo], que es literalmente вокзал [vɐɡzal]; y la de punto en las nasales (un beso [um], un gato [uŋ]) es del mismo tipo. El portugués añade la sonorización de /s/ final ante sonora («as casas» [ʒ]). (b) El español MEXICANO sí ensordece la obstruyente final: usted, verdad, Madrid se realizan con [t]. Lo que queda de verdad es el INVENTARIO —qué consonantes rusas entran en el juego y con qué output— y el hecho de que la grafía no lo refleje nunca, no el mecanismo. Lo cazó el lingüista adversarial el 2026-09-11.',
     motivo: 'percepción y transcripción; bloqueado por voz. La mitad que no lo está —predecir la pronunciación desde la grafía— es cloze y se declara aparte si algún lote la necesita',
-    cubre: ['A2/COMPRENSIÓN ORAL'],
+    cubre: ['A2/COMPRENSIÓN ORAL #2'],
     cita: 'ensordecimiento final (друг→[druk], город→[gorət]) y asimilación regresiva de sonoridad' }),
 
   P({ id: 'u2-grupos-iniciales', nombre: 'Grupos consonánticos iniciales que el español prohíbe: встреча, взгляд, мгновение', bloque: 2, nivel: 'A2',
@@ -418,7 +453,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     capas: { examina: 'fonologia', dadas: [] },
     gratis: 'el concepto de interrogativa sin marca segmental sí, de las dos: «¿Vienes?» y «Vens?» son exactamente Ты идёшь? sin nada más que la curva. El alumno no tiene que aprender que eso se pueda hacer. Lo que no trae es la FORMA de la curva rusa, que sube brusco en la sílaba tónica y cae, frente al ascenso sostenido español.',
     motivo: 'discriminación auditiva de la curva: el ítem oye dos versiones y pide cuál es pregunta. Bloqueado por voz, y con una condición extra que ninguna otra escucha tiene: el TTS tiene que REALIZAR la ИК-3, y un TTS que lee la frase como declarativa fabricaría un ítem cuya clave es falsa',
-    cubre: ['A2/COMPRENSIÓN ORAL'],
+    cubre: ['A2/COMPRENSIÓN ORAL #1'],
     cita: 'las construcciones ИК-1 a ИК-5 (Bryzgunova), especialmente ИК-3' }),
 
   P({ id: 'u2-habla-conectada', nombre: 'Lo que el habla real hace con las palabras: щас, чё, здрасьте, сёдня', bloque: 2, nivel: 'B1',
@@ -428,7 +463,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     gratis: 'el hábito, y otra vez del portugués: un C2 de portugués europeo ya sobrevivió a «tá», «pra», «num» y a la síncopa que hace irreconocible «está a». Sabe que la forma de diccionario y la forma oral son dos. El español de México elide mucho menos. Lo que no transfiere es cuáles.',
     motivo: 'transcripción de lo oído; bloqueado por voz. Y con la trampa propia de este punto: un TTS NO produce elisión coloquial, así que este punto NO SE PUEDE PRODUCIR con voz sintética por bien validada que esté — necesita habla real grabada. Queda declarado en vez de prometido',
     abierto: 'sin material de habla espontánea real no hay ítems. Un clip de TTS leyendo «щас» es una falsificación: la elisión es del hablante, no de la ortografía',
-    cubre: ['B1/COMPRENSIÓN ORAL'],
+    cubre: ['B1/COMPRENSIÓN ORAL #2'],
     cita: 'entiende habla informal con elisión coloquial real (щас, чё, тыща, здрасьте, сёдня, тока)' }),
 
   // ── u3 · Sustantivo: género, número, plural ────────────────────────
@@ -443,11 +478,11 @@ export const PUNTOS_RU: PuntoRu[] = [
     cita: 'tres géneros por terminación' }),
 
   P({ id: 'u3-plural-nominativo', nombre: 'Plural -ы/-и/-а/-я y los irregulares frecuentes', bloque: 3, nivel: 'A1',
-    descripcion: 'El reparto es ortográfico (и tras к г х ж ш щ ч, ы si no) más una clase masculina en -а́ tónica (дома́, города́) que no se predice; y друзья, дети, люди.',
+    descripcion: 'Decide PRIMERO el tema: blando (конь, музей, деревня, дверь) → -и; duro → -ы, y sólo entonces la regla ortográfica convierte esa -ы en -и tras к г х ж ш щ ч. Más una clase masculina en -а́ tónica (дома́, города́) que no se predice; y друзья, дети, люди.',
     prereqs: ['u3-genero-por-terminacion', 'u1-ortografia-sibilantes'], clase: 'paradigma', calco: { castellano: 'bien', portugues: 'bien', internacional: 'engañoso' },
     capas: { examina: 'declinacion', dadas: ['genero', 'grafia'] },
     gratis: 'la idea de plural sufijal, entera, de las dos lenguas. Y algo más que nadie contaría: el portugués tiene plurales con alternancia de raíz (ovo/ovos con timbre, pão/pães, cidadão/cidadãos/cidadães) que el español no tiene, así que el alumno no se sorprende de que el plural cambie la palabra. Lo que NO transfiere es el reparto ortográfico ы/и, que es regla de grafía y no de morfología.',
-    motivo: 'deriva por regla desde el lexicón; el gate lo recalcula. §0.6: el ítem de sobreaplicación es la clase en -а́ (дом→дома́ y no *до́мы), donde la regla ortográfica acierta la letra y falla la casilla',
+    motivo: 'deriva por regla desde el lexicón; el gate lo recalcula. §0.6: el ítem de sobreaplicación es la clase en -а́ (дом→дома́ y no *до́мы), donde la regla ortográfica acierta la letra y falla la casilla. ⚠ LA v0 DE LA DESCRIPCIÓN ESTABA MAL Y ERA EL SITIO DE MÁXIMO DAÑO (lingüista adversarial, 2026-09-11): decía que el reparto -ы/-и es ORTOGRÁFICO, y es primero de TEMA. Una regla así produce *коны, *музеы, *деревны, *дверы — y el gate las aprueba, porque recalcula la misma regla. Medido en el corpus: кони 120, музеи 3, деревни 395, двери 1834, y ninguno tiene velar ni sibilante. Un gate que compara lo declarado con lo derivado hereda todos los fallos del derivador y los convierte en APROBACIONES',
     cubre: [], sinDescriptor: 'MORFOSINTAXIS de A1; sin descriptor propio',
     cita: 'plural -ы/-и/-а/-я y los plurales irregulares frecuentes (дом→дома́, друг→друзья́, ребёнок→де́ти)' }),
 
@@ -477,6 +512,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     capas: { examina: 'declinacion', dadas: ['caso', 'genero', 'grafia'] },
     gratis: 'nada de las desinencias. Y el estrato internacional ENGAÑA justo aquí: el alumno reconoce «университет» entero y por eso cree que la palabra está resuelta, cuando lo que le falta es «в университете». Es el `latinComun` rumano con otra piel.',
     motivo: 'deriva por regla desde el lexicón anotado y el gate la recalcula — es la única forma de producir las ~900 unidades de morfología nominal que el currículo pide sin que un LLM invente casillas que el alumno no puede detectar',
+    abierto: '⚠ EL SEGUNDO LOCATIVO NO ESTÁ EN NINGÚN PUNTO, y no es sólo un hueco: envenena este generador. Una clase de masculinos toma -у́ tónica tras в/на con valor locativo (в лесу́, на берегу́, в саду́, на полу́) y la regla de prepositivo escrita aquí produce *в лесе. Medido: в лесу 381 frente a в лесе 3. Hasta que el lexicón guarde la casilla por lema, ningún lote de este punto puede usar un sustantivo de esa clase, y eso NO se puede dejar al criterio de quien escriba el lote: va en gate. Lo destapó el lingüista adversarial el 2026-09-11 buscando lo que el currículo pide y el inventario no declara',
     cubre: [], sinDescriptor: 'MORFOSINTAXIS de A1 declara «las tres declinaciones nominales en singular con los seis casos»; el descriptor de GRAMÁTICA · caso habla de USO, no de forma',
     cita: 'las tres declinaciones nominales en singular con los seis casos' }),
 
@@ -486,7 +522,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     capas: { examina: 'caso', dadas: ['declinacion', 'lexico'] },
     gratis: 'la DISTINCIÓN semántica, entera y de las dos lenguas: «voy a la escuela»/«estoy en la escuela», «vou à escola»/«estou na escola». El alumno nunca confunde el concepto. Lo que le falta es que en ruso lo lleve la desinencia y no la preposición, y eso hace que OMITA la marca, no que la equivoque.',
     motivo: 'el error diana es de OMISIÓN (poner siempre la forma de prepositivo, o siempre la de acusativo), no de elección, así que el formato de corrección mide la mitad. Se examina con cloze de la desinencia sobre pares mínimos de la MISMA preposición y el MISMO lema, donde lo único que varía es el verbo rector — que es lo que hay que aprender a leer',
-    varianza: '+в es invariante en los ocho por construcción, y eso es propiedad de la LENGUA (no hay otra preposición que haga este contraste con в). Lo que varía es el verbo rector, y ésa ES la cobertura',
+    varianza: '⚠ CORREGIDO el 2026-09-11: la v0 decía que «+в es invariante por construcción y eso es propiedad de la LENGUA, porque no hay otra preposición que haga este contraste». ES FALSO, y la propia cita del punto dice «в/на». Medido: на стол 547 / на столе 551, за стол 296 / за столом 321, под стол 68 / под столом 48 — CUATRO preposiciones hacen el contraste. Luego la invariancia no es de la lengua sino de una decisión mía, que es exactamente la diferencia entre r3-negacion-antepuesta (legítimo) y r2-numerales-de (defecto). El lote se reparte entre в/на/за/под y entonces la cobertura es real; si alguien lo deja todo en в, la cobertura es 1 y no 8',
     cubre: ['A1/GRAMÁTICA · caso'],
     cita: 'acusativo (objeto directo y dirección con в/на), prepositivo (localización y tema con о)' }),
 
@@ -503,9 +539,9 @@ export const PUNTOS_RU: PuntoRu[] = [
     descripcion: 'El experimentante en dativo. Estructuralmente idéntico a «me gusta / me hace falta / tengo frío».',
     prereqs: ['u4-declinacion-singular'], clase: 'coincide', calco: { castellano: 'bien', portugues: 'bien', internacional: 'no-aplica' },
     capas: { examina: 'caso', dadas: ['declinacion', 'conjugacion'] },
-    gratis: 'TODO, y de las dos lenguas: «me gusta el libro» = мне нравится книга, con el mismo reparto de papeles y la misma inversión aparente del sujeto. El portugués añade «faz-me falta», «dói-me» con clítico dativo explícito. El currículo lo dice y hay que obedecerlo: se enseña como regalo, no como dificultad.',
+    gratis: 'LA MITAD, no todo, y el reparto importa porque decide el piso. `мне нравится` transfiere al 100 % («me gusta el libro», y el portugués añade «faz-me falta», «dói-me» con clítico dativo explícito) y `мне нужно` casi. Pero `мне холодно` y `мне 30 лет` NO TRANSFIEREN EN ABSOLUTO: el español y el portugués los dicen con SUJETO NOMINATIVO y el verbo «tener» —tengo frío, tengo 30 años; tenho frio, tenho 30 anos—, o sea una construcción de tipo distinto, no una variante de «me gusta». La v0 decía «TODO» y el currículo dice «enseñadas como calco directo del español»: los dos se equivocan en la mitad, y lo cazó el lingüista adversarial el 2026-09-11 enumerando los cuatro exponentes de la cita en vez de leerlos como un bloque.',
     motivo: 'el punto NO puede examinar la construcción, que es gratis. Lo único que mide es la CONCORDANCIA del verbo con el estímulo (мне нравится книга / мне нравятся книги), que es donde el español no da ninguna pista porque «me gustan» también concuerda — o sea que coincide y por eso tampoco mide. §4.35 aplicado: si las dos rutas aciertan, el punto es la excepción o no hay punto',
-    pisoDeclarado: { piso: 2, motivo: 'contado antes de escribir: lo único no-gratis es el DATIVO DE PERSONA con lema flexionado (мне/тебе/ему/Ивану, donde el español da un clítico invariable y el ruso una forma de caso) y el нужен/нужна/нужно concordado con la COSA, que el español resuelve con «necesito» y el ruso no. Dos casillas. La construcción entera es transferencia pura y ocho ítems de ella medirían español' },
+    pisoDeclarado: { piso: 4, motivo: 'CUATRO, subido de 2 el 2026-09-11 por el dictamen del lingüista y contra mi propio cálculo, que era el que estaba mal. Dos casillas que ya estaban contadas: el DATIVO DE PERSONA con lema flexionado (мне/тебе/ему/Ивану, donde el español da un clítico invariable y el ruso una forma de caso) y el нужен/нужна/нужно concordado con la COSA. Y dos que la v0 daba por transferencia y no lo son: мне холодно y мне 30 лет, que en las dos lenguas del alumno llevan SUJETO y «tener». Sigue sin llegar a 8 porque мне нравится es transferencia pura y ocho ítems de ella medirían español' },
     cubre: [], sinDescriptor: 'el currículo lo lista en MORFOSINTAXIS y entre las ventajas; ningún descriptor lo nombra',
     cita: 'construcciones de sujeto dativo (мне нравится, мне нужно, мне холодно, мне 30 лет) enseñadas como calco directo del español' }),
 
@@ -545,7 +581,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     capas: { examina: 'declinacion', dadas: ['caso', 'grafia'] },
     gratis: 'nada. Y hay que decir por qué NO es «lo mismo al revés»: derivar la forma desde el lema es una función; volver desde la forma es una RELACIÓN, con sincretismo abundante —студента es genitivo Y acusativo, книги es genitivo sg Y nominativo pl—, así que la respuesta a veces no es única y el ítem tiene que admitir las dos. Es el error simétrico: un alumno impecable que dé la segunda lectura correcta no puede suspender.',
     motivo: 'es el único punto del bloque cuya dirección es RECEPTIVA, y por eso tiene descriptor propio cuando los demás no. Cloze del lema, con las alternativas de sincretismo DECLARADAS: contar los ejes de ambigüedad y multiplicar, o falta la esquina que combina dos',
-    cubre: ['A2/COMPRENSIÓN LECTORA'],
+    cubre: ['A2/COMPRENSIÓN LECTORA #2'],
     cita: 'dada una forma oblicua en un texto (о студентах, к врачу, с друзьями), identifica el nominativo singular y el caso' }),
 
   P({ id: 'u5-genitivo-negacion', nombre: 'Genitivo de negación: книги нет frente a книгу не читал', bloque: 5, nivel: 'B1',
@@ -559,10 +595,10 @@ export const PUNTOS_RU: PuntoRu[] = [
     cita: 'genitivo de negación y su alternancia con acusativo (книги нет vs книгу не читал)' }),
 
   P({ id: 'u5-instrumental-predicativo', nombre: 'он был врачом frente a он врач: el instrumental como ser/estar ruso', bloque: 5, nivel: 'B1',
-    descripcion: 'El predicado nominal va en instrumental cuando es temporal o pasado, y en nominativo cuando es permanente y presente. Con su restricción temporal.',
+    descripcion: 'Quien decide es el TIEMPO VERBAL, no la permanencia: en pasado el instrumental es la opción por defecto aunque la cualidad sea permanentísima (Пушкин был великим поэтом), y en presente con cópula cero es imposible, sea temporal o permanente.',
     prereqs: ['u5-declinacion-plural', 'u7-pasado-genero'], clase: 'trampa', calco: { castellano: 'bien', portugues: 'bien', internacional: 'no-aplica' },
     capas: { examina: 'caso', dadas: ['declinacion', 'conjugacion'] },
-    gratis: 'EL CORTE SEMÁNTICO ENTERO, y de las dos lenguas a la vez: «era médico»/«es médico» es ser/estar, permanente/temporal, y el alumno lo tiene automatizado en dos idiomas. Este es el mejor ejemplo del bloque de una dificultad que sería FALSO declarar: lo que el alumno no sabe no es cuándo, es con qué marca.',
+    gratis: 'MENOS DE LO QUE LA v0 DECÍA, y la corrección es el caso más limpio del inventario del riesgo contrario — declarar INEXISTENTE una dificultad que existe. La v0 decía «el corte semántico entero es ser/estar, y lo que el alumno no sabe no es cuándo sino con qué marca». Es falso: el corte ruso lo hace el TIEMPO VERBAL y el tiempo verbal no es ser/estar. Medido en el corpus: был + …ом sale 392 veces, y 5 de ellas con adjetivo de cualidad permanente (великим, известным, русским, хорошим). Así que el alumno TAMPOCO sabe el cuándo, porque el cuándo ruso no es el suyo. De las dos lenguas trae sólo que el predicado nominal pueda llevar marca, que es poco. Lo cazó el lingüista adversarial el 2026-09-11.',
     motivo: 'el punto se acota a la FORMA (la desinencia de instrumental sobre el predicado) y NO al reparto, que se contesta traduciendo. Si un lote reparte sus ocho ítems entre «permanente» y «temporal», mide español mexicano con una fidelidad del 100 %',
     cubre: [], sinDescriptor: 'CASO — usos difíciles de B1; sin descriptor',
     cita: 'instrumental predicativo (он был врачом vs он врач) y su restricción temporal' }),
@@ -599,7 +635,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     descripcion: 'Los determinantes también declinan, y los interrogativos son la puerta de entrada al relativo который.',
     prereqs: ['u6-adjetivo-declinado'], clase: 'paradigma', calco: { castellano: 'bien', portugues: 'bien', internacional: 'no-aplica' },
     capas: { examina: 'declinacion', dadas: ['caso', 'genero'] },
-    gratis: 'el sistema deíctico de dos términos (este/ese, este/esse) mapea sobre этот/тот sin fricción, y el portugués tiene TRES (este/esse/aquele) donde el ruso tiene dos: el alumno colapsa hacia abajo, que es más fácil que expandir.',
+    gratis: 'MENOS QUE NADA, y la v0 declaraba transferencia que no existe. Decía que «este/ese mapea sobre этот/тот sin fricción» y que el alumno «colapsa tres en dos, que es más fácil que expandir». Falso: **этот cubre a la vez «este» Y «ese»**, y `тот` no es «ese» sino «aquel / el otro / el ya mencionado». No es un colapso: es un RE-REPARTO de la frontera, y quien traduzca «ese libro» por *та книга comete justo el error que la v0 declaraba imposible. Ese re-reparto es contenido real y la v0 lo regalaba. Lo que sí trae de las dos lenguas es que el determinante concuerde y tenga forma propia, que es poco.',
     motivo: 'deriva por regla. El punto NO puede examinar la elección этот/тот, que es transferencia; examina la forma',
     varianza: 'si todos los ítems piden la misma casilla con distinto lema, la cobertura real es 1',
     cubre: [], sinDescriptor: 'MORFOLOGÍA NOMINAL COMPLETA de A2; sin descriptor',
@@ -640,7 +676,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     capas: { examina: 'conjugacion', dadas: ['caso', 'lexico'] },
     gratis: 'nada, y las dos lenguas obligan a la cópula sin excepción. Pero el error es de EXCESO y por tanto visible: el alumno escribe *Я есть студент, que es lo único que puede hacer.',
     motivo: 'la dificultad es una OMISIÓN que el alumno no hace, o sea que el error es ponerlo de más y eso SÍ cabe en corrección. §0.6: el ítem de sobreaplicación es el pasado (Я был студентом), donde quitarla es el error — y ahí además entra u5-instrumental-predicativo, así que el ítem tiene que darlo resuelto',
-    pisoDeclarado: { piso: 3, motivo: 'la regla se aprende en el primer ítem y del segundo en adelante lo único que varía es el sustantivo, que es u13-lexico. Tres: el presente, el pasado con cópula, y el guion largo del registro escrito (Москва — столица), que es la única casilla con contenido propio' },
+    pisoDeclarado: { piso: 2, motivo: 'DOS, bajado de 3 el 2026-09-11: el presente sin cópula y el pasado con cópula. La tercera casilla que la v0 se cobraba —el guion largo del registro escrito (Москва — столица)— es ÍNTEGRAMENTE u15-guion-largo, que además ya había escrito en su propio motivo la condición «que el ítem NO sea el de u7-sin-copula con otra piel». O sea que u15 vio el riesgo y lo declaró, y u7 lo cometió, y encima llamaba a esa casilla «la única con contenido propio». Es la duplicación del §4.20 en su forma más pura —el mismo ítem contado en un punto A1 y en uno B2— y no la ve ningún instrumento: sólo leer las dos entradas seguidas' },
     cubre: [], sinDescriptor: 'MORFOSINTAXIS de A1; sin descriptor',
     cita: 'ausencia de cópula en presente (Я студент)' }),
 
@@ -677,6 +713,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     prereqs: ['u7-conjugacion-i-ii'], clase: 'paradigma', calco: { castellano: 'bien', portugues: 'bien', internacional: 'no-aplica' },
     capas: { examina: 'conjugacion', dadas: ['acento', 'aspecto'] },
     gratis: 'la existencia de una forma imperativa dedicada, y de las dos lenguas. Y un aviso: el español forma el imperativo negativo y el de usted con SUBJUNTIVO, así que el alumno ya sabe que el imperativo puede tener dos caras — lo que le falta es que en ruso la segunda cara sea el ASPECTO y no el modo.',
+    abierto: '⚠ CARGA LA CAPA «acento» Y ESA CAPA NO TIENE DUEÑO PRODUCIBLE. Sus tres dueños (u2-acento-fonemico, u2-acento-movil, u15-metrica-poetica) están a pisoCero por falta del formato `posicion`, así que el estímulo de este punto tiene que traer el acento PINTADO —capa de presentación— y el ítem no puede pedirlo nunca. Va declarado y no razonado en un comentario porque el invariante de capas salía en VERDE sobre una capa con cero ítems detrás: comprobaba que el dueño EXISTIERA, no que enseñara. Existir no es enseñar, y lo destapó el lingüista adversarial el 2026-09-11',
     motivo: 'deriva por regla; ⚠ la regla depende del ACENTO del presente (пиши́ frente a бу́дь), o sea que carga la capa que el proyecto no puede examinar. El ítem tiene que dar el presente acentuado en el estímulo, y eso es capa de presentación, no respuesta',
     cubre: [], sinDescriptor: 'MORFOSINTAXIS de A1; sin descriptor',
     cita: 'imperativo; verbos reflexivos en -ся' }),
@@ -695,6 +732,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     prereqs: ['u7-pasado-genero'], clase: 'sin-equivalente', calco: { castellano: 'mal', portugues: 'mal', internacional: 'no-aplica' },
     capas: { examina: 'conjugacion', dadas: ['aspecto', 'orden'] },
     gratis: 'nada, y la interferencia es fuerte por partida doble: el español tiene condicional simple y compuesto Y subjuntivo, y el portugués igual, así que el alumno llega con CUATRO distinciones que el ruso funde en una. El error no es que le falte una forma: es que le sobran tres y buscará dónde meterlas.',
+    abierto: '⚠ CARGA LA CAPA «orden» Y SU ÚNICO DUEÑO ≤A2 (u3-sin-articulo) ESTÁ A pisoCero: el primer punto producible que la examina es u11-orden-tema-rema, en C1. Así que el ítem tiene que fijar el orden en el estímulo y no puede examinarlo. Mismo hallazgo que la capa «acento» y mismo motivo: el invariante comprobaba existencia, no piso',
     motivo: 'la dificultad es de SIMPLIFICACIÓN, y una simplificación no produce una frase mala que corregir: produce una traducción correcta hecha con esfuerzo inútil. Transformación desde la paráfrasis española es el único formato que la ve',
     cubre: [], sinDescriptor: 'VERBO de A2; sin descriptor',
     cita: 'condicional con бы' }),
@@ -748,12 +786,13 @@ export const PUNTOS_RU: PuntoRu[] = [
     cubre: [], sinDescriptor: 'ASPECTO de A2; sin descriptor',
     cita: 'imperfectivo para PROHIBIR (не открывай!), perfectivo para ADVERTIR de algo involuntario' }),
 
-  P({ id: 'u8-fase-modal', nombre: 'Verbos de fase y modales: начать/кончить + imperfectivo obligatorio', bloque: 8, nivel: 'A2',
+  P({ id: 'u8-fase-modal', nombre: 'Verbos de FASE: начать/кончить + imperfectivo obligatorio', bloque: 8, nivel: 'A2',
     descripcion: 'Tras empezar, terminar, continuar el aspecto no se elige: es imperfectivo siempre. Es la única casilla del aspecto con regla dura.',
     prereqs: ['u8-par-aspectual'], clase: 'paradigma', calco: { castellano: 'no-aplica', portugues: 'no-aplica', internacional: 'no-aplica' },
     capas: { examina: 'aspecto', dadas: ['conjugacion', 'lexico'] },
     gratis: 'nada, pero es el punto MÁS BARATO del bloque precisamente porque es una regla y no un valor: se aprende en un ítem.',
     varianza: '+imperfectivo es invariante en los ocho por definición del punto, y eso NO es legítimo aquí (a diferencia de una invariancia de la lengua): lo único que varía es el verbo de fase, que es u13-lexico. Cobertura real 1',
+    abierto: '⚠ EL NOMBRE DE LA v0 DECÍA «Verbos de fase Y MODALES» y era falso, y el nombre es lo primero que lee el siguiente (misma avería que r7-supin en rumano, que hubo que renombrar por eso). Los modales NO imponen imperfectivo: могу читать / могу прочитать, хочу писать / хочу написать, должен делать / должен сделать son los dos posibles con diferencia de sentido. Peor: la varianza declaraba que el ítem de frontera es «un verbo de fase que NO impone imperfectivo», y no existe ninguno — LA FRONTERA ES PRECISAMENTE EL MODAL, y el punto se había quedado sin ella justo al afirmar que el modal se comporta como la fase. El número 2 del piso sigue valiendo; la segunda casilla hay que reescribirla como modal y no como fase, y eso no se hace sin dictamen',
     motivo: 'cloze del aspecto tras verbo de fase, con el par DADO en el estímulo para que el fallo sea de regla y no de léxico',
     pisoDeclarado: { piso: 2, motivo: 'la regla se aprende en el primer ítem. El segundo es el de frontera: un verbo de fase que NO impone imperfectivo o un contexto donde el perfectivo entra por otra vía. Del tercero en adelante sólo varía el léxico' },
     cubre: [], sinDescriptor: 'ASPECTO de A2; sin descriptor',
@@ -908,9 +947,9 @@ export const PUNTOS_RU: PuntoRu[] = [
     descripcion: 'Он сказал, что он придёт = «Dijo que vendría». El ruso conserva el tiempo del original y contradice la consecutio temporum española.',
     prereqs: ['u11-chtoby'], clase: 'trampa', calco: { castellano: 'mal', portugues: 'mal', internacional: 'no-aplica' },
     capas: { examina: 'conjugacion', dadas: ['aspecto', 'lexico'] },
-    gratis: 'nada, y las dos lenguas empujan igual de fuerte hacia el error: el español y el portugués retrasan obligatoriamente. El calco produce *Он сказал, что он придёт бы o un pasado donde va futuro.',
+    gratis: 'LO CONTRARIO DE LO QUE DECÍA LA v0, y el punto cambia de SIGNO. La v0 decía «el español y el portugués retrasan obligatoriamente» y que las dos empujan al error. Falso: el español mexicano hablado y escrito NO retrasa cuando el contenido sigue vigente —«Dijo que viene mañana», «Me dijo que llega el lunes» son normales y no marcados—, y el portugués igual. La consecutio es regla de gramática escolar, no obligación productiva. O sea que las dos lenguas OFRECEN YA la construcción rusa y lo único que el alumno tiene que hacer es dejar de autocorregirse hacia la norma escolar. Eso no es una dificultad: es una inhibición, y una inhibición no produce una frase mala que corregir.',
     motivo: 'transformación directa→indirecta, que es el único formato donde el retraso se vería. ⚠ AVISO HEREDADO DEL RUMANO, donde este mismo punto MURIÓ: allí la alternancia era subproducción y las dos opciones eran correctas. Aquí hay que comprobarlo ANTES de escribir: si el pasado ruso también es aceptable en la subordinada, no hay mala y el punto muere igual',
-    abierto: 'contar en el corpus cuántas subordinadas de verbo de decir en pasado llevan futuro y cuántas pasado. Si las dos salen con frecuencia alta, no hay mala bajo §0 y el punto pasa a preferencia-registro',
+    abierto: 'contar en el corpus cuántas subordinadas de verbo de decir en pasado llevan futuro y cuántas pasado. Si las dos salen con frecuencia alta, no hay mala bajo §0 y el punto pasa a preferencia-registro. ⚠ Y DESDE EL 2026-09-11 EL PUNTO ESTÁ AMENAZADO POR LAS DOS VÍAS A LA VEZ: además de eso, la transferencia que se le suponía al alumno no existe (ver `gratis`), así que aunque hubiera mala puede que no haya nadie que la produzca. Es la forma exacta en que murió r8-discurso-indirecto en rumano —lengua bien descrita, formato equivocado— y allí costó ocho ítems escritos y retirados. Aquí no se escribe ni uno hasta tener las dos respuestas',
     cubre: ['B1/GRAMÁTICA'],
     cita: 'reproduce el estilo indirecto ruso, que conserva el tiempo original y por tanto contradice la concordancia de tiempos española' }),
 
@@ -949,7 +988,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     capas: { examina: 'derivacion', dadas: ['aspecto', 'conjugacion'] },
     gratis: 'nada de las restricciones: ni el español ni el portugués condicionan la formación del participio al aspecto, porque no tienen aspecto morfológico.',
     motivo: 'deriva por regla y el gate lo recalcula. §0.6: el ítem de sobreaplicación es un perfectivo al que se le pide participio pasivo PRESENTE, que no existe',
-    cubre: ['B2/PRODUCCIÓN ESCRITA'],
+    cubre: ['B2/PRODUCCIÓN ESCRITA #1'],
     cita: 'formación completa de participios activos y pasivos, presente y pasado, con sus restricciones aspectuales' }),
 
   P({ id: 'u12-gerundios', nombre: 'Gerundios читая / прочитав y la restricción de sujeto compartido', bloque: 12, nivel: 'B2',
@@ -958,7 +997,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     capas: { examina: 'derivacion', dadas: ['aspecto', 'conjugacion'] },
     gratis: 'la forma y la función, de las dos lenguas: «leyendo», «lendo» + el perfectivo «habiendo leído». Lo que NO transfiere es la restricción de sujeto, y es el mejor error diana del bloque porque el español lo permite y lo estigmatiza a la vez (el «gerundio de posterioridad» que las gramáticas condenan y todo el mundo usa).',
     motivo: 'corrección con error diana atestado: el gerundio colgado es agramatical en ruso con cita normativa. Y el ítem tiene que dar la forma del gerundio ya hecha, o mide u12-participios-produccion',
-    cubre: ['B2/PRODUCCIÓN ESCRITA'],
+    cubre: ['B2/PRODUCCIÓN ESCRITA #1'],
     cita: 'gerundios imperfectivo (-я) y perfectivo (-в/-вши) con la restricción de sujeto compartido' }),
 
   P({ id: 'u12-pasiva-sya-vs-participio', nombre: 'дом строится frente a дом построен', bloque: 12, nivel: 'B2',
@@ -977,7 +1016,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     capas: { examina: 'registro', dadas: ['derivacion', 'caso'] },
     gratis: 'la nominalización en sí y su valor de registro, de las dos lenguas: «la construcción del edificio» es prosa administrativa en español igual que en ruso, y el portugués administrativo aún más. El estrato internacional además regala los sufijos (-ция/-ción, -ство/-dad). Es transferencia alta y hay que declararla.',
     motivo: 'mediación de registro: reescribir subiendo o bajando. El punto NO mide que exista la nominalización sino qué sufijo toma cada verbo, y eso es u13',
-    cubre: ['B2/PRODUCCIÓN ESCRITA'],
+    cubre: ['B2/PRODUCCIÓN ESCRITA #2'],
     cita: 'nominalización (строительство дома вместо того, что строят дом) como marca de registro escrito' }),
 
   // ── u13 · Derivación y léxico ──────────────────────────────────────
@@ -987,7 +1026,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     capas: { examina: 'derivacion', dadas: ['aspecto', 'lexico'] },
     gratis: 'BASTANTE, por vía latina y de las dos lenguas: пере-/trans-, вы-/ex-, раз-/dis-, до-/ad-. Un alumno que sepa qué hace «dis-» en «dispersar» tiene раз- casi hecho. Lo que no transfiere son по- y за-, que no tienen correlato latino claro y son los dos más frecuentes.',
     motivo: 'el lote se acota a по- y за-, que es donde no hay transferencia. Un lote que reparta los seis prefijos mediría latín en cuatro de seis',
-    cubre: ['B1/COMPRENSIÓN LECTORA'],
+    cubre: ['B1/COMPRENSIÓN LECTORA #2'],
     cita: 'los prefijos verbales con su semántica (по- incoativo/atenuativo, за- incoativo, пере- iterativo/excesivo, раз- distributivo, вы- extractivo, до- terminativo' }),
 
   P({ id: 'u13-sufijos-nominales', nombre: 'Sufijos nominales productivos: -тель, -ник, -ость, -ство, -ение, -ация, -ка', bloque: 13, nivel: 'B1',
@@ -995,7 +1034,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     prereqs: ['u3-genero-por-terminacion'], clase: 'lexico', calco: { castellano: 'bien', portugues: 'bien', internacional: 'transparente' },
     capas: { examina: 'derivacion', dadas: ['genero', 'lexico'] },
     gratis: 'el sistema entero y buena parte de los sufijos concretos: -тель/-dor, -ость/-dad, -ство/-ismo·-azgo, -ация/-ación, -ение/-miento. El alumno de portugués C2 tiene además -dade, -mento, -agem productivos. Es transferencia MUY alta y declararla como dificultad sería falsear el termómetro.',
-    motivo: 'el punto se acota a lo que el sufijo predice y el español no: el GÉNERO (todo -ость es femenino, todo -тель masculino, todo -ение neutro), que es información gramatical gratis para quien conozca el sufijo y que ningún punto de u3 enseña',
+    motivo: 'el punto se acota a lo que el sufijo predice y el español no: el GÉNERO, que es información gramatical gratis para quien conozca el sufijo y que ningún punto de u3 enseña. ⚠ Y LA REGLA VA CON SU CONDICIÓN, que la v0 no tenía: -ость femenino y -ение neutro son sin excepción, pero «-тель masculino» SÓLO vale para el AGENTIVO DEVERBAL. Medido: метель 88 y постель 591 son femeninos en -тель y de alta frecuencia (y капель, шинель). O sea que el ítem de sobreaplicación del §0.6 estaba servido y sin declarar: es un -тель no agentivo, donde la regla que el propio punto acaba de enseñar da la respuesta contraria',
     varianza: 'si el lote pide «forma el nombre desde el verbo», la operación es una y lo que varía es el lema. El lote pide el GÉNERO de un derivado no visto, que es la casilla con contenido',
     cubre: ['B2/LÉXICO'],
     cita: 'los sufijos nominales productivos (-тель, -ник, -ость, -ство, -ение, -ация, -ка)' }),
@@ -1024,7 +1063,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     capas: { examina: 'derivacion', dadas: ['registro', 'lexico'] },
     gratis: 'EL MECANISMO ENTERO, y es una transferencia que nadie habría contado: el español tiene sus propios dobletes culto/patrimonial por la misma razón histórica (ojo/óculo, llama/flama, hoja/folio, llave/clave) y el portugués igual (cheio/pleno, chave/clave). El alumno ya sabe que la forma culta y la popular son la misma palabra por dos caminos, y que la culta marca registro elevado. Es exactamente la relación город/град.',
     motivo: 'el punto NO puede enseñar que el doblete exista: eso lo trae hecho. Mide el REPARTO —cuál de los dos es el neutro hoy— que en ruso no coincide con la intuición romance: город es el neutro y град el marcado, pero страна (forma «culta») es el neutro y сторона tiene otro significado. El ítem es de elección de registro, no de reconocimiento',
-    cubre: ['C2/COMPRENSIÓN LECTORA'],
+    cubre: ['C2/COMPRENSIÓN LECTORA #3'],
     cita: 'reconoce los dobletes eslavo-eclesiásticos (город/град, голова/глава, молодой/младой, берег/брег)' }),
 
   P({ id: 'u13-arcaismos-realia', nombre: 'Arcaísmos, historicismos y realia: аршин, барин, коммуналка, оттепель', bloque: 13, nivel: 'C2',
@@ -1033,7 +1072,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     capas: { examina: 'lexico', dadas: ['registro'] },
     gratis: 'nada del contenido, y el hábito de leer con realia ajena sí: un lector de literatura hispanoamericana del XIX ya sabe que hay palabras que sólo existen en ese mundo. Es metodología, no léxico.',
     motivo: 'flashcard con glosa cultural, anclada a las lecturas donde aparece. Es el punto con mejor relación coste/valor del inventario, porque el corpus ya está ingerido: 2.180 lecturas del canon',
-    cubre: ['C2/COMPRENSIÓN LECTORA'],
+    cubre: ['C2/COMPRENSIÓN LECTORA #1'],
     cita: 'arcaísmos y historicismos (аршин, барин, губерния, ямщик)' }),
 
   P({ id: 'u13-realia-b1', nombre: 'Realia imprescindible de B1: прописка, дача, отчество, 9 мая', bloque: 13, nivel: 'B1',
@@ -1092,7 +1131,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     capas: { examina: 'registro', dadas: ['caso', 'declinacion', 'lexico'] },
     gratis: 'el REGISTRO administrativo entero, y el portugués paga la mayor parte: «venho por este meio solicitar», «nos termos do disposto» es exactamente el канцелярит, con la misma nominalización y la misma distancia. Un C2 de portugués reconoce el género sin que se lo expliquen.',
     motivo: 'mediación de registro. El punto mide las FÓRMULAS concretas y su régimen (согласно pide dativo, que es contraintuitivo incluso para un ruso), no el registro, que transfiere',
-    cubre: ['B2/PRODUCCIÓN ESCRITA'],
+    cubre: ['B2/PRODUCCIÓN ESCRITA #2'],
     cita: 'escribe un correo oficial y un informe breve en registro официально-деловой (в связи с + instr, согласно + dat, в целях + gen, прошу вас + inf)' }),
 
   P({ id: 'u14-cinco-estilos', nombre: 'Los cinco estilos funcionales como sistema', bloque: 14, nivel: 'B2',
@@ -1102,7 +1141,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     gratis: 'la existencia de registros y la capacidad de identificarlos, de las dos lenguas. Lo que no transfiere es que el ruso los tenga CODIFICADOS como cinco categorías escolares con nombre, y que un ruso culto los nombre igual que se nombran los tiempos verbales.',
     motivo: 'clasificación y conmutación; el corpus de la biblioteca da художественный de sobra y nada de los otros cuatro. Eso es un hueco de material, no de diseño',
     abierto: 'el corpus de 2.180 lecturas es literatura del XIX: cubre художественный y nada más. Los otros cuatro estilos necesitan material que no existe, y prometer cobertura aquí sería contar como cubierto lo que no lo está',
-    cubre: ['B2/COMPRENSIÓN ORAL'],
+    cubre: ['B2/COMPRENSIÓN ORAL #2'],
     cita: 'los cinco estilos funcionales rusos presentados como sistema — научный, официально-деловой, публицистический, художественный, разговорный' }),
 
   P({ id: 'u14-mat', nombre: 'El мат: comprensión con advertencia, nunca producción', bloque: 14, nivel: 'C1',
@@ -1122,7 +1161,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     capas: { examina: 'grafia', dadas: ['derivacion', 'caso'] },
     gratis: 'nada, y las dos lenguas estorban igual: el español y el portugués puntúan por PAUSA y por criterio del autor, con la coma ante subordinada como opción. El ruso la exige. El alumno no omitirá la coma por ignorancia sino por convicción, que es más difícil de corregir.',
     motivo: 'corrección con error diana atestado y regla citable (Правила 1956; Лопатин 2006). Y es de los pocos puntos donde el error del alumno es una OMISIÓN que sí deja rastro escrito y sí cabe en corrección: la frase sin coma es visible',
-    cubre: ['C1/PRODUCCIÓN ESCRITA'],
+    cubre: ['C1/PRODUCCIÓN ESCRITA #1'],
     cita: 'обособление y la puntuación asociada — las comas rusas son reglas duras, no pausas, y NO coinciden con las españolas' }),
 
   P({ id: 'u15-guion-largo', nombre: 'El guion largo por cópula omitida: Москва — столица России', bloque: 15, nivel: 'B2',
@@ -1131,8 +1170,8 @@ export const PUNTOS_RU: PuntoRu[] = [
     capas: { examina: 'grafia', dadas: ['registro'] },
     gratis: 'nada: ninguna de las dos lenguas omite la cópula, así que no tienen nada que marcar.',
     motivo: 'cloze del signo, con la condición de que el ítem NO sea el de u7-sin-copula con otra piel: aquí la cópula ya está ausente en el estímulo y lo que se pide es la raya',
-    pisoDeclarado: { piso: 3, motivo: 'la regla tiene tres configuraciones (nombre—nombre, numeral—numeral, infinitivo—infinitivo) y una frontera clara: NO va con pronombre sujeto (Он студент). Cuatro casillas, una de ellas negativa' },
-    cubre: ['C1/PRODUCCIÓN ESCRITA'],
+    pisoDeclarado: { piso: 4, motivo: 'CUATRO: tres configuraciones (nombre—nombre, numeral—numeral, infinitivo—infinitivo) más la frontera negativa, que NO va con pronombre sujeto (Он студент). La v0 escribía «piso: 3» y su propio motivo terminaba diciendo «cuatro casillas»: un piso a la baja con dictamen escrito es un buen resultado, uno que contradice a su propio dictamen es un número sin respaldo. Cazado por el lingüista adversarial el 2026-09-11 leyendo el motivo hasta el final' },
+    cubre: ['C1/PRODUCCIÓN ESCRITA #1'],
     cita: 'guion largo por cópula omitida' }),
 
   P({ id: 'u15-metrica-poetica', nombre: 'Los metros silabotónicos y el acento con función métrica', bloque: 15, nivel: 'C2',
@@ -1142,7 +1181,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     gratis: 'EL SISTEMA MÉTRICO, y más de lo que parece: el español y el portugués tienen verso acentual (el endecasílabo con sus acentos obligatorios en 6.ª o en 4.ª y 8.ª) y el alumno culto ha escandido en la escuela. Lo que no transfiere es que el metro ruso sea de PIES regulares —sílaba tónica cada dos o cada tres— frente al conteo silábico romance, que cuenta sílabas y fija sólo algunos acentos.',
     pisoCero: 'la respuesta es una POSICIÓN de acento dentro del verso: mismo bloqueo de formato que u2-acento-fonemico y u2-acento-movil, y por la misma razón. Tres puntos comparten el mismo bloqueo y los tres lo declaran por separado en vez de disolverlo, porque la deuda es de tres puntos y no de uno',
     motivo: 'requiere el formato `posicion`, que no existe. Y requiere corpus poético anotado métricamente, que tampoco',
-    cubre: ['C2/COMPRENSIÓN LECTORA'],
+    cubre: ['C2/COMPRENSIÓN LECTORA #2'],
     cita: 'los metros silabotónicos rusos (ямб, хорей, дактиль, амфибрахий, анапест)' }),
 
   P({ id: 'u15-ironia-subtexto', nombre: 'Ironía, subtexto y alusión sobre corpus etiquetado', bloque: 15, nivel: 'C2',
@@ -1152,7 +1191,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     gratis: 'la capacidad de leer ironía, entera y de las dos lenguas: un lector culto de español y portugués detecta el sarcasmo sin que nadie se lo enseñe. Lo que no transfiere son las MARCAS rusas concretas (las partículas разве/неужели, el diminutivo peyorativo, el orden marcado), y eso es lo único que el punto puede medir.',
     motivo: 'requiere corpus ETIQUETADO, y el etiquetado es trabajo humano especializado que no escala con presupuesto de tokens — el currículo lo declara. El corpus en bruto está (2.180 lecturas del canon); la capa didáctica no',
     abierto: 'sin corpus etiquetado no hay ítems. Y la tentación aquí es generar la anotación con un LLM, que es exactamente lo que el currículo prohíbe para C1-C2',
-    cubre: ['C2/COMPRENSIÓN LECTORA'],
+    cubre: ['C2/COMPRENSIÓN LECTORA #1'],
     cita: 'textos donde el sentido literal y el sentido comunicado difieren, con la marca que lo señala anotada' }),
 
   P({ id: 'u15-diminutivos-expresivos', nombre: 'Los diminutivos como actitud: супчик, домик, книжонка, ручища', bloque: 15, nivel: 'C1',
@@ -1171,7 +1210,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     gratis: 'el MECANISMO, y de las dos lenguas — del español mexicano muy en concreto: citar cine y televisión en la conversación («¿Y ahora quién podrá defenderme?», Cantinflas, los refranes truncados) es una práctica idéntica, y el portugués tiene su propio repertorio de provérbios truncados. El alumno sabe cómo funciona un texto precedente. Lo que no tiene es el repertorio, y eso no se enseña con una lista.',
     motivo: 'flashcard con contexto de uso, anclada a la fuente. El corpus de la biblioteca da Griboyédov, Krylov y Pushkin —las tres fuentes clásicas— y nada del cine soviético, que es la mitad viva',
     abierto: 'las крылатые выражения del cine soviético no están en el corpus y no se pueden inventar. Requiere corpus de guiones, que el currículo pide y no existe',
-    cubre: ['C1/COMPRENSIÓN LECTORA'],
+    cubre: ['C1/COMPRENSIÓN LECTORA #2'],
     cita: 'крылатые выражения de Griboyedov, Krylov, Pushkin y del cine soviético y postsoviético' }),
 
   P({ id: 'u15-edicion-de-texto', nombre: 'Editar un texto de un nativo y distinguir error de opción de estilo', bloque: 15, nivel: 'C2',
@@ -1181,7 +1220,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     gratis: 'nada del ruso. Y el criterio metodológico —distinguir error de opción— es exactamente la regla §0 de este proyecto, así que quien lo escriba ya la tiene interiorizada. Conviene decirlo porque el punto se puede diseñar mal con mucha facilidad: un ítem que marque como error una opción de estilo es el asterisco propio, en su versión más cara',
     motivo: 'tarea con rúbrica evaluada por nativo; el currículo dice expresamente que ningún LLM puede juzgarlo de forma fiable',
     pisoCero: 'el criterio de aprobación exige un editor profesional humano («≥80 % de coincidencia con la corrección de un editor profesional»). Ningún formato de la app lo expresa, y presentar un veredicto automático como si lo fuera sería el falso verde que el propio currículo denuncia',
-    cubre: ['C2/PRODUCCIÓN ESCRITA'],
+    cubre: ['C2/PRODUCCIÓN ESCRITA #2'],
     cita: 'edita y corrige un texto escrito por un nativo, justificando cada cambio con la norma' }),
 ];
 
