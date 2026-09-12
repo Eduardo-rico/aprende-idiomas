@@ -261,3 +261,25 @@ describe('inventario-ru · la deuda se cuenta, no se tiñe de verde', () => {
     expect(ahorro).toBe(declarado);
   });
 });
+
+// ── La capa `puntuacion`, separada de `grafia` el 2026-09-12 ──────────
+//
+// Uno de los 20 DISCUTIBLE del dictamen del lingüista, aplicado. `grafia`
+// llevaba NUEVE puntos, de descodificar cirílico a la coma de обособление,
+// y por eso no atribuía: un alumno que lee cirílico sin un error puede
+// fallar la puntuación entera, y con las dos en la misma capa el fallo no
+// dice qué reforzar. No mueve ningún piso.
+describe('la capa `puntuacion` no vuelve a fundirse con `grafia`', () => {
+  it('los dos puntos de puntuación la examinan, y ninguno examina `grafia`', () => {
+    const p = PUNTOS_RU.filter((x) => x.capas.examina === 'puntuacion').map((x) => x.id);
+    expect(p.sort()).toEqual(['u15-guion-largo', 'u15-puntuacion-obosoblenie']);
+  });
+
+  it('`grafia` se queda con lo que de verdad es escribir cirílico: 7 puntos', () => {
+    const g = PUNTOS_RU.filter((x) => x.capas.examina === 'grafia');
+    expect(g).toHaveLength(7);
+    // Todos de los bloques 1 y 2 — alfabeto y fonología escrita. Si algún
+    // día entra uno de otro bloque, la capa se está sobrecargando otra vez.
+    expect(new Set(g.map((x) => x.bloque))).toEqual(new Set([1, 2]));
+  });
+});

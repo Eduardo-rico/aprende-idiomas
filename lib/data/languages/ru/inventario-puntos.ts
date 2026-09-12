@@ -156,6 +156,19 @@ export const FORMATO_DE_CLASE_RU: Record<ClaseRu, FormatoRu> = {
  *  las que un ítem puede fallar. */
 export type CapaRu =
   | 'grafia'        // leer y escribir cirílico
+  // ⚠ `puntuacion` SE SEPARÓ DE `grafia` EL 2026-09-12, y es uno de los 20
+  // DISCUTIBLE del dictamen del 11 aplicado. El argumento del lingüista:
+  // «la capa `grafia` está sobrecargada —nueve puntos, de descodificar
+  // cirílico a la coma de обособление— y POR ESO NO ATRIBUYE».
+  //
+  // Y es exacto: las capas no son temas, son las fuentes INDEPENDIENTES por
+  // las que un ítem puede fallar, y un alumno que descodifica cirílico sin
+  // un error puede fallar `обособление` entero. Metidas en la misma capa,
+  // el FSRS programa el repaso de una tarjeta cuyo fallo no dice qué
+  // reforzar, que es justo lo que el sistema de capas existe para impedir.
+  //
+  // No mueve ningún piso: es una reasignación de atribución, no producción.
+  | 'puntuacion'    // la coma dura, la raya, el guion — reglas, no pausas
   | 'acento'        // dónde cae, y que no se escribe
   | 'fonologia'     // palatalización, reducción átona, ensordecimiento
   | 'genero'        // los tres géneros y su marca formal
@@ -604,11 +617,12 @@ export const PUNTOS_RU: PuntoRu[] = [
     cita: 'instrumental predicativo (он был врачом vs он врач) y su restricción temporal' }),
 
   P({ id: 'u5-numerales-rigen-caso', nombre: 'El numeral gobierna el sintagma: 1→nom sg, 2-4→gen sg, 5+→gen pl', bloque: 5, nivel: 'A2',
-    descripcion: 'La respuesta correcta depende de OTRO token de la frase. Y con adjetivo se superponen dos reglas: два новых дома / пять новых домов / двадцать одна новая книга.',
+    descripcion: 'La respuesta correcta depende de OTRO token de la frase: el numeral decide el caso y el número del SUSTANTIVO. Lo que varía entre ítems son las cuatro clases de numeral (1 / 2-4 / 5+ / 21), y ésa es la cobertura.',
     prereqs: ['u5-genitivo-plural', 'u6-adjetivo-declinado'], clase: 'sin-equivalente', calco: { castellano: 'mal', portugues: 'mal', internacional: 'no-aplica' },
     capas: { examina: 'caso', dadas: ['declinacion', 'genero', 'lexico'] },
     gratis: 'nada, y la interferencia es activa: en las dos lenguas del alumno el numeral ≥2 pide plural y punto. «Dos casas», «duas casas». Que «dos» pida un SINGULAR es contraintuitivo por las dos vías a la vez.',
     motivo: 'no existe ningún tipo de ejercicio donde la respuesta dependa de otro token: el currículo lo declara como reto específico y pide un tipo `government` con trigger explícito. Con `fill_blank` + `concepts` se puede aproximar, pero el gate no puede comprobar que el disparador esté presente, así que el ítem puede quedar indeterminado sin que nada falle. §0.6: el ítem de frontera es el 21, que vuelve a nominativo singular (двадцать одна новая книга) y desmiente «a partir de 2, genitivo»',
+    varianza: '⚠ SOLAPABA CON u10-sintagma-numeral-adjetivo Y SE SEPARÓ EL 2026-09-12 (DISCUTIBLE nº1 del dictamen del 11, aplicado). Los dos puntos tenían las MISMAS `capas` y los MISMOS tres ejemplos en el mismo orden —два новых дома / пять новых домов / двадцать одна новая книга—, o sea 16 ítems para un conjunto que da para menos. El corte que el lingüista proponía («sin adjetivo» / «con adjetivo») no se sostiene, porque `пять новых домов` no añade ninguna decisión: el adjetivo va en genitivo plural igual que el sustantivo. El corte que sí se sostiene sale de preguntar qué VARÍA: aquí varía la CLASE DE NUMERAL sobre el sustantivo (cuatro casillas); allí varía el caso del ADJETIVO tras 2-4, que es la única configuración donde el adjetivo NO sigue al sustantivo. Este punto deja de nombrar el adjetivo',
     cubre: [], sinDescriptor: 'MORFOSINTAXIS de A1 y CASO de B1 lo declaran; el descriptor de PRODUCCIÓN ORAL de A1 («dice su edad con la concordancia numeral correcta») está excluido por ser oral',
     cita: 'numerales 1-1000 con su rección (1→nom sg, 2-4→gen sg, 5+→gen pl)' }),
 
@@ -900,7 +914,9 @@ export const PUNTOS_RU: PuntoRu[] = [
     prereqs: ['u5-numerales-rigen-caso', 'u6-adjetivo-declinado'], clase: 'paradigma', calco: { castellano: 'mal', portugues: 'mal', internacional: 'no-aplica' },
     capas: { examina: 'caso', dadas: ['declinacion', 'genero', 'lexico'] },
     gratis: 'nada, y es donde el alumno se rompe. Ni el español ni el portugués superponen dos regímenes en un sintagma nominal.',
-    motivo: 'deriva por regla y el gate lo recalcula: es exactamente el caso donde un LLM inventaría una casilla que el alumno no puede detectar',
+    motivo: 'lo único suyo, una vez separado de u5-numerales-rigen-caso (2026-09-12), es el caso del ADJETIVO tras 2-4: la única configuración del ruso donde el adjetivo NO concuerda con el caso del sustantivo. `пять новых домов` NO pertenece aquí —ahí el adjetivo va en genitivo plural igual que el sustantivo, o sea ninguna decisión nueva— y este punto deja de reclamarlo',
+    abierto: '⚠ EL CORPUS DE LECTURA DEL PROYECTO CONTRADICE LA REGLA DE ESTE PUNTO, y es una clase nueva. La norma moderna (Розенталь; АГ-80) reparte: masculino y neutro → adjetivo en genitivo plural (два больших дома), femenino → nominativo plural (две большие книги). Medido en las 2.180 lecturas y LEÍDO acierto por acierto, no contado: `два большие` 7 frente a `два больших` 10, `два молодые` 6 frente a `два молодых` 0, `три большие` 5 frente a `три больших` 1. Las apariciones son masculinos de verdad y de prosa buena — «два большие портрета» (Dostoievski), «два молодые сослуживца», «два большие стога», «три большие дерева» —, con un solo falso positivo de 12 leídos («через два года, молодые…»). O sea que en el XIX el masculino toma el NOMINATIVO plural al menos tan a menudo como el genitivo, y la norma de hoy es una estandarización posterior. El punto NO muere: la norma moderna es citable y bajo §0 eso basta para marcar la otra forma como no normativa HOY. Pero (a) ningún ítem puede justificarse con el corpus, que es el segundo camino de todo lo demás; (b) el femenino NO está determinado ni siquiera hoy —`две новых канарейки` (Mamin-Sibiriak), `две маленьких`, 2 apariciones frente a 23— así que un ítem que exija sólo -ые suspende a un alumno que escribe ruso atestado; y (c) la LECCIÓN tiene que decirle al alumno que va a leer la otra forma en la biblioteca, o el material de inmersión desenseña el punto. Antes de escribir un lote hay que decidir eso, y no es decisión del agente',
+    varianza: 'si el lote reparte entre masculino y femenino, la mitad femenina no discrimina: las dos respuestas están atestadas. La cobertura real de un lote de ocho sería 3 o 4, no 8 — el piso habría que declararlo a la baja con este dictamen, y un cambio de piso va en su propia línea y no lo decide quien escribe el lote',
     cubre: [], sinDescriptor: 'CASO — usos difíciles de B1; el descriptor de PRODUCCIÓN ORAL de B2 lo nombra y está excluido',
     cita: 'el sintagma numeral completo, con adjetivo: два новых дома / пять новых домов / двадцать одна новая книга' }),
 
@@ -1158,7 +1174,7 @@ export const PUNTOS_RU: PuntoRu[] = [
   P({ id: 'u15-puntuacion-obosoblenie', nombre: 'La coma rusa es una regla dura, no una pausa', bloque: 15, nivel: 'B2',
     descripcion: 'Обособление: subordinadas, aposiciones, incisos, participios y gerundios se separan por regla. Y NO coincide con el español.',
     prereqs: ['u12-gerundios', 'u11-kotoryj'], clase: 'ortografico', calco: { castellano: 'mal', portugues: 'mal', internacional: 'no-aplica' },
-    capas: { examina: 'grafia', dadas: ['derivacion', 'caso'] },
+    capas: { examina: 'puntuacion', dadas: ['derivacion', 'caso'] },
     gratis: 'nada, y las dos lenguas estorban igual: el español y el portugués puntúan por PAUSA y por criterio del autor, con la coma ante subordinada como opción. El ruso la exige. El alumno no omitirá la coma por ignorancia sino por convicción, que es más difícil de corregir.',
     motivo: 'corrección con error diana atestado y regla citable (Правила 1956; Лопатин 2006). Y es de los pocos puntos donde el error del alumno es una OMISIÓN que sí deja rastro escrito y sí cabe en corrección: la frase sin coma es visible',
     cubre: ['C1/PRODUCCIÓN ESCRITA #1'],
@@ -1167,7 +1183,7 @@ export const PUNTOS_RU: PuntoRu[] = [
   P({ id: 'u15-guion-largo', nombre: 'El guion largo por cópula omitida: Москва — столица России', bloque: 15, nivel: 'B2',
     descripcion: 'Donde el presente no lleva cópula, el registro escrito pone raya. Es la contrapartida gráfica de u7-sin-copula.',
     prereqs: ['u7-sin-copula', 'u15-puntuacion-obosoblenie'], clase: 'ortografico', calco: { castellano: 'mal', portugues: 'mal', internacional: 'no-aplica' },
-    capas: { examina: 'grafia', dadas: ['registro'] },
+    capas: { examina: 'puntuacion', dadas: ['registro'] },
     gratis: 'nada: ninguna de las dos lenguas omite la cópula, así que no tienen nada que marcar.',
     motivo: 'cloze del signo, con la condición de que el ítem NO sea el de u7-sin-copula con otra piel: aquí la cópula ya está ausente en el estímulo y lo que se pide es la raya',
     pisoDeclarado: { piso: 4, motivo: 'CUATRO: tres configuraciones (nombre—nombre, numeral—numeral, infinitivo—infinitivo) más la frontera negativa, que NO va con pronombre sujeto (Он студент). La v0 escribía «piso: 3» y su propio motivo terminaba diciendo «cuatro casillas»: un piso a la baja con dictamen escrito es un buen resultado, uno que contradice a su propio dictamen es un número sin respaldo. Cazado por el lingüista adversarial el 2026-09-11 leyendo el motivo hasta el final' },
