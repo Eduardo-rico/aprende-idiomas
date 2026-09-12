@@ -112,7 +112,11 @@ export const NOMBRES_L1: EntradaNominal[] = [
   // Segundo lema para la muta cum liquida, por el mismo motivo que
   // `integer`: `vo-lu-crēs`, `vo-lu-crem`, `vo-lu-cris`. Atestiguado:
   // `volucres` ×9, `volucris` ×3, `volucrum` ×3.
-  { lema: 'volucris', genitivo: 'volucris', genero: 'f', glosa: 'ave', iStem: true },
+  // `iStem: false` y lo dice el CORPUS, no un manual: `uolucrum` ×3,
+  // `uolucrium` ×0. Lo entré como tema en -i por la pinta del nominativo y
+  // la auditoría invertida lo cazó al día siguiente — que es justo para lo
+  // que existe: preguntar qué trae el corpus que la máquina no produce.
+  { lema: 'volucris', genitivo: 'volucris', genero: 'f', glosa: 'ave' },
   // 2.ª neutra
   { lema: 'bellum', genitivo: 'bellī', genero: 'n', glosa: 'guerra' },
   { lema: 'dōnum', genitivo: 'dōnī', genero: 'n', glosa: 'regalo' },

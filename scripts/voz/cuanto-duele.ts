@@ -14,8 +14,7 @@
 //
 // Si el daño es el 10 %, no hay problema de ingeniería sino un problema de
 // contenido acotado. Si es el 40 %, merece la conversación cara.
-import { NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1 } from '../../lib/data/languages/la/lexicon-l1';
-import { paradigmaNominal, infectum, perfectum, declinacionDe } from '../../lib/data/languages/la/paradigma-la';
+import { formasUnicasDeL1 } from '../../lib/data/languages/la/todas-las-formas';
 
 /** Sílabas de una palabra latina macronizada, como listas de caracteres.
  *  Regla: una consonante entre vocales va con la siguiente sílaba; dos o más
@@ -46,6 +45,16 @@ const EU_DIPTONGO = ['heu', 'heus', 'eheu', 'ceu', 'seu', 'neu'];
 const EI_DIPTONGO = ['deinde', 'dein', 'hei', 'deinceps'];
 const MUTAS = 'pbtdcgf', LIQUIDAS = 'lr';
 
+/** La `u` de `qu` NO es vocal: es parte de la consonante labiovelar. Lo
+ *  destapó el enumerador nuevo, al entrar los indeclinables en el dominio:
+ *  `quia` salía `qu-i-a` —tres sílabas y penúltima breve— cuando es `qui-a`,
+ *  dos sílabas. Es la misma clase que `ui` y `eu`: un carácter que parece
+ *  vocal y no lo es. Afecta a 17 formas de L1, entre ellas `quia`, `atque`,
+ *  `neque`, `quoque` y todo el relativo. */
+function uMuda(w: string, i: number): boolean {
+  return (w[i] === 'u' || w[i] === 'ū') && i > 0 && w[i - 1] === 'q';
+}
+
 function esDiptongo(w: string, i: number): boolean {
   const par = w.slice(i, i + 2);
   if (DIPTONGOS.includes(par)) return true;
@@ -60,6 +69,7 @@ export function silabas(p: string): string[] {
   const nucleos: number[] = [];
   for (let i = 0; i < w.length; i++) {
     if (!VOCALES.includes(w[i]!)) continue;
+    if (uMuda(w, i)) continue;               // la `u` de `qu` no es núcleo
     if (nucleos.length && i === nucleos[nucleos.length - 1]! + 1
         && esDiptongo(w, i - 1)) continue;   // el diptongo es un núcleo
     nucleos.push(i);
@@ -71,7 +81,10 @@ export function silabas(p: string): string[] {
     while (ini + 1 < w.length && VOCALES.includes(w[ini + 1]!) && esDiptongo(w, ini)) ini++;
     const fin = nucleos[k + 1]!;
     const cons = w.slice(ini + 1, fin);
-    if (cons.length === 0) cortes.push(fin);
+    // El `qu` es UNA consonante y va entera con la sílaba siguiente, igual
+    // que la muta cum liquida: `ne-que`, no `neq-ue`.
+    if (/qu$/i.test(cons)) cortes.push(fin - cons.length + Math.max(0, cons.length - 2));
+    else if (cons.length === 0) cortes.push(fin);
     else if (cons.length === 1) cortes.push(fin - 1);
     else if (cons.length === 2 && MUTAS.includes(cons[0]!) && LIQUIDAS.includes(cons[1]!)) cortes.push(fin - 2);
     else cortes.push(ini + 2);
@@ -89,10 +102,12 @@ export function silabaLarga(s: string, siguiente: string | undefined): boolean {
   for (const d of DIPTONGOS) if (s.includes(d)) return true;
   for (const [par, lista] of [['ui', UI_DIPTONGO], ['eu', EU_DIPTONGO], ['ei', EI_DIPTONGO]] as [string, string[]][])
     if (s.includes(par) && lista.some((q) => q.includes(s))) return true;
-  const trasNucleo = s.replace(new RegExp(`^[^${VOCALES}]*[${VOCALES}]+`), '');
+  // Para la coda hay que quitar antes la `u` de `qu`, que no es vocal.
+  const sinQu = s.replace(/qu/gi, 'q');
+  const trasNucleo = sinQu.replace(new RegExp(`^[^${VOCALES}]*[${VOCALES}]+`), '');
   if (trasNucleo.length > 0) return true;                      // cerrada por su propia coda
   if (siguiente) {
-    const arranque = siguiente.match(new RegExp(`^[^${VOCALES}]*`))?.[0] ?? '';
+    const arranque = (siguiente.replace(/qu/gi, 'q')).match(new RegExp(`^[^${VOCALES}]*`))?.[0] ?? '';
     if (arranque.length >= 2 && !(MUTAS.includes(arranque[0]!) && LIQUIDAS.includes(arranque[1]!))) return true;
   }
   return false;
@@ -115,12 +130,12 @@ export function acentoLatino(p: string): { acento: Acento; silabas: string[]; el
 }
 
 if (process.argv[1]?.includes('cuanto-duele')) {
-  const formas = new Set<string>();
-  for (const n of NOMBRES_L1) { try { declinacionDe(n); } catch { continue; }
-    for (const f of Object.values(paradigmaNominal(n))) formas.add(f); }
-  for (const v of VERBOS_L1) { for (const f of Object.values(infectum(v))) formas.add(f);
-    for (const f of Object.values(perfectum(v))) formas.add(f); }
-  for (const a of ADJETIVOS_L1) formas.add(a.lema);
+  // El dominio lo enumera `todas-las-formas`, no este fichero. La versión
+  // anterior miraba tres tablas de diez y daba 1.437 formas donde hay
+  // 2.194: la cifra del daño salía sobre el 65 % del material, y eso es
+  // exactamente el fallo que no avisa —los porcentajes seguían siendo
+  // correctos sobre lo que el enumerador veía—.
+  const formas = new Set<string>(formasUnicasDeL1());
 
   const cuenta = { penultima: 0, antepenultima: 0, monosilabo: 0, bisilabo: 0 };
   const fallan: string[] = [];

@@ -3,30 +3,30 @@
  "corpus": "la_perseus + la_proiel (UD)",
  "tokens": 227300,
  "formas": 2194,
- "sueloDeLaPenultima": 0.6189608021877848,
+ "sueloDeLaPenultima": 0.6166818596171376,
  "reparto": {
   "monosilabo": {
-   "total": 70,
-   "atestiguadas": 69
+   "total": 80,
+   "atestiguadas": 79
   },
   "bisilabo": {
-   "total": 586,
-   "atestiguadas": 506
+   "total": 583,
+   "atestiguadas": 503
   },
   "breve": {
-   "total": 766,
-   "atestiguadas": 424
+   "total": 761,
+   "atestiguadas": 420
   },
   "posicion": {
    "total": 194,
    "atestiguadas": 87
   },
   "macron": {
-   "total": 578,
-   "atestiguadas": 298
+   "total": 576,
+   "atestiguadas": 296
   }
  },
- "posicionSobreAtestiguadas": 0.06286127167630058,
+ "posicionSobreAtestiguadas": 0.0628158844765343,
  "tabla": {
   "cum": {
    "silabas": [
@@ -194,21 +194,19 @@
   },
   "quia": {
    "silabas": [
-    "qu",
-    "i",
+    "qui",
     "a"
    ],
-   "tonica": "qu",
-   "tipo": "breve",
+   "tonica": "qui",
+   "tipo": "bisilabo",
    "n": 825
   },
   "quod": {
    "silabas": [
-    "qu",
-    "od"
+    "quod"
    ],
-   "tonica": "qu",
-   "tipo": "bisilabo",
+   "tonica": "quod",
+   "tipo": "monosilabo",
    "n": 1511
   },
   "aut": {
@@ -222,11 +220,10 @@
   "atque": {
    "silabas": [
     "at",
-    "qu",
-    "e"
+    "que"
    ],
    "tonica": "at",
-   "tipo": "breve",
+   "tipo": "bisilabo",
    "n": 462
   },
   "nec": {
@@ -240,11 +237,10 @@
   "neque": {
    "silabas": [
     "ne",
-    "qu",
-    "e"
+    "que"
    ],
    "tonica": "ne",
-   "tipo": "breve",
+   "tipo": "bisilabo",
    "n": 29
   },
   "sī": {
@@ -265,11 +261,10 @@
   },
   "quam": {
    "silabas": [
-    "qu",
-    "am"
+    "quam"
    ],
-   "tonica": "qu",
-   "tipo": "bisilabo",
+   "tonica": "quam",
+   "tipo": "monosilabo",
    "n": 803
   },
   "ecce": {
@@ -310,22 +305,19 @@
   },
   "quoque": {
    "silabas": [
-    "qu",
-    "o",
-    "qu",
-    "e"
+    "quo",
+    "que"
    ],
-   "tonica": "o",
-   "tipo": "breve",
+   "tonica": "quo",
+   "tipo": "bisilabo",
    "n": 95
   },
   "que": {
    "silabas": [
-    "qu",
-    "e"
+    "que"
    ],
-   "tonica": "qu",
-   "tipo": "bisilabo",
+   "tonica": "que",
+   "tipo": "monosilabo",
    "n": 1753
   },
   "ne": {
@@ -5171,16 +5163,15 @@
    "tipo": "breve",
    "n": 9
   },
-  "volucrium": {
+  "volucrum": {
    "silabas": [
     "vo",
     "lu",
-    "cri",
-    "um"
+    "crum"
    ],
-   "tonica": "lu",
+   "tonica": "vo",
    "tipo": "breve",
-   "n": 0
+   "n": 3
   },
   "volucribus": {
    "silabas": [
@@ -19704,20 +19695,18 @@
   },
   "quī": {
    "silabas": [
-    "qu",
-    "ī"
+    "quī"
    ],
-   "tonica": "qu",
-   "tipo": "bisilabo",
+   "tonica": "quī",
+   "tipo": "monosilabo",
    "n": 2355
   },
   "quem": {
    "silabas": [
-    "qu",
-    "em"
+    "quem"
    ],
-   "tonica": "qu",
-   "tipo": "bisilabo",
+   "tonica": "quem",
+   "tipo": "monosilabo",
    "n": 322
   },
   "cuius": {
@@ -19740,77 +19729,69 @@
   },
   "quō": {
    "silabas": [
-    "qu",
-    "ō"
+    "quō"
    ],
-   "tonica": "qu",
-   "tipo": "bisilabo",
+   "tonica": "quō",
+   "tipo": "monosilabo",
    "n": 467
   },
   "quōs": {
    "silabas": [
-    "qu",
-    "ōs"
+    "quōs"
    ],
-   "tonica": "qu",
-   "tipo": "bisilabo",
+   "tonica": "quōs",
+   "tipo": "monosilabo",
    "n": 170
   },
   "quōrum": {
    "silabas": [
-    "qu",
-    "ō",
+    "quō",
     "rum"
    ],
-   "tonica": "ō",
-   "tipo": "macron",
+   "tonica": "quō",
+   "tipo": "bisilabo",
    "n": 84
   },
   "quibus": {
    "silabas": [
-    "qu",
-    "i",
+    "qui",
     "bus"
    ],
-   "tonica": "qu",
-   "tipo": "breve",
+   "tonica": "qui",
+   "tipo": "bisilabo",
    "n": 272
   },
   "quae": {
    "silabas": [
-    "qu",
-    "ae"
+    "quae"
    ],
-   "tonica": "qu",
-   "tipo": "bisilabo",
+   "tonica": "quae",
+   "tipo": "monosilabo",
    "n": 1176
   },
   "quā": {
    "silabas": [
-    "qu",
-    "ā"
+    "quā"
    ],
-   "tonica": "qu",
-   "tipo": "bisilabo",
+   "tonica": "quā",
+   "tipo": "monosilabo",
    "n": 266
   },
   "quās": {
    "silabas": [
-    "qu",
-    "ās"
+    "quās"
    ],
-   "tonica": "qu",
-   "tipo": "bisilabo",
+   "tonica": "quās",
+   "tipo": "monosilabo",
    "n": 129
   },
   "quārum": {
    "silabas": [
-    "qu",
-    "ā",
+    "quā",
     "rum"
    ],
-   "tonica": "ā",
-   "tipo": "macron",
+   "tonica": "quā",
+   "tipo": "bisilabo",
    "n": 24
   },
   "habēns": {

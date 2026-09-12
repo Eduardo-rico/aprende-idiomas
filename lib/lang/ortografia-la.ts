@@ -169,6 +169,9 @@ function silabas(pal: string): { nucleo: string; cierra: boolean }[] {
   let i = 0;
   while (i < p.length) {
     if (!V.test(p[i]!)) { i++; continue; }
+    // La `u` de `qu` no es vocal: es parte de la consonante labiovelar.
+    // `quia` es `qui-a`, no `qu-i-a`.
+    if ((p[i] === 'u' || p[i] === 'ū') && i > 0 && p[i - 1] === 'q') { i++; continue; }
     let nucleo = p[i]!;
     const par = p.slice(i, i + 2);
     const esDipt = DIPT.includes(par) || (CERRADAS[par]?.includes(p) ?? false);
@@ -176,7 +179,9 @@ function silabas(pal: string): { nucleo: string; cierra: boolean }[] {
     // consonantes hasta el siguiente núcleo
     let j = i;
     while (j < p.length && !V.test(p[j]!)) j++;
-    const grupo = p.slice(i, j);
+    // El `qu` cuenta como UNA consonante y va entero con la sílaba
+    // siguiente: no cierra la anterior. `ne-que`, no `neq-ue`.
+    const grupo = p.slice(i, j).replace(/qu$/, 'q');
     // la sílaba se cierra si quedan ≥2 consonantes (o una x/z) antes del
     // núcleo siguiente, salvo muta cum liquida, que no alarga.
     let cierra = grupo.length >= 2 || /[xz]/.test(grupo);

@@ -5,7 +5,7 @@
 // gate no puede ver porque callar no es inventar.
 import { describe, it, expect } from 'vitest';
 import fs from 'node:fs';
-import { auditar } from '@/scripts/lectura/formas-que-la-maquina-no-produce';
+import { auditar, claseDeHueco, huecosPorClase } from '@/scripts/lectura/formas-que-la-maquina-no-produce';
 import { VERBOS_L1 } from '@/lib/data/languages/la/lexicon-l1';
 import { variantesDelPerfecto } from '@/lib/data/languages/la/paradigma-la';
 
@@ -39,16 +39,47 @@ describe('el perfecto sincopado, que la auditoría destapó', () => {
 });
 
 describe.runIf(hayCorpus)('la auditoría contra el corpus', () => {
-  it('los huecos conocidos son pocos y están identificados', () => {
-    const r = auditar();
-    // Al escribirla eran 119. Excluida la pasiva —que es un punto entero, no
-    // un hueco— y añadido el sincopado, bajan a unas cuarenta.
-    expect(r.length).toBeLessThan(60);
+  // ── EL NÚMERO SOLO DEJÓ DE SIGNIFICAR ALGO EL 2026-09-12 ──
+  //
+  // Hasta ese día la auditoría miraba tres tablas de diez, así que sólo
+  // auditaba nombres, verbos y el lema de los adjetivos: unos cuarenta
+  // huecos. Enchufada al enumerador bueno empezó a mirar también
+  // pronombres, irregulares, pluralia e indeclinables, y saltó a 256.
+  //
+  // No es ruido y no se tapa bajando el listón: son CLASES nombrables, y
+  // cada una está acotada aquí con su motivo. Un gate que dijera «256» y
+  // nada más sería un gate apagado.
+  it('los huecos se reparten en clases conocidas, y cada una está acotada', () => {
+    const c = huecosPorClase();
+    // La grafía alterna de los indeclinables: `ab`/`ā`, `atque`/`ac`,
+    // `neque`/`nec`. El lexicón guarda una forma y el corpus trae las dos.
+    expect(c['grafia-del-indeclinable']!.entradas).toBeLessThan(25);
+    // El GRADO: la máquina no tiene comparativo ni superlativo. Es un área
+    // del currículo sin construir, no un fallo — y se detecta por la
+    // anotación del treebank (`Degree=Cmp|Sup`), no adivinando sufijos.
+    expect(c['grado-del-adjetivo']!.entradas).toBeLessThan(150);
+    // El perfectum de los irregulares y de los compuestos de `sum`: sale
+    // del tema de perfecto, que `irregulares.ts` declara.
+    expect(c['perfectum-del-irregular']!.entradas).toBeLessThan(90);
+    expect(c['grafia-del-pronombre']!.entradas).toBeLessThan(25);
+    expect(c['heteroclito-conocido']!.entradas).toBeLessThanOrEqual(6);
   });
 
-  it('y el más grande sigue siendo `loca`, el plural neutro de `locus`', () => {
-    const r = auditar();
-    expect(r[0]?.forma.toLowerCase()).toBe('loca');
+  it('y lo que NO cae en ninguna clase sigue siendo poco y legible', () => {
+    const sin = auditar().filter((h) => claseDeHueco(h.lema, h.rasgos ?? '') === 'sin-clasificar');
+    // 46 entradas y 74 tokens al escribirlo. Lo que hay ahí dentro está
+    // mirado uno a uno: la grafía `exs-`/`ex-` de `exspectō`, los adverbios
+    // en `-ter`/`-ē` que la máquina no forma, el femenino que el corpus
+    // lematiza bajo el masculino, el pluscuamperfecto sincopado
+    // (`laudāram`) — que sí es un hueco real de la máquina — y tres
+    // erratas del propio corpus: `voice` por `vōce`, `icurae` por `cūrae` y
+    // `graviore` anotado `Degree=Pos`.
+    expect(sin.length).toBeLessThan(60);
+  });
+
+  it('el heteróclito más grande sigue siendo `loca`, el plural neutro de `locus`', () => {
+    const het = auditar().filter((h) => claseDeHueco(h.lema, h.rasgos ?? '') === 'heteroclito-conocido');
+    expect(het.sort((a, b) => b.n - a.n)[0]?.forma.toLowerCase()).toBe('loca');
   });
 
   it('EL ERROR DEL CORPUS: «voice» por «vōce» en perseus-ud-test', () => {

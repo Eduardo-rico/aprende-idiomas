@@ -9,7 +9,7 @@
 //
 // ── DOS DISTORSIONES DELIBERADAS, Y LAS DOS MEDIDAS ──────────────────
 //
-// 1 · **El 61,9 % de las 2.194 formas de L1 son llanas.** Quien conteste
+// 1 · **El 61,7 % de las 2.194 formas de L1 son llanas.** Quien conteste
 //     «la penúltima» a todo acierta seis de cada diez sin saber latín. El
 //     lote va **10 y 10** en vez de copiar la proporción de la lengua, y el
 //     gate lo exige.
@@ -39,8 +39,8 @@
 // inventario el 2026-09-12, con la medida y con la distinción que el
 // ataque adversarial destapó: la afirmación probablemente confundía dos
 // errores distintos, y el grande es el otro —el instinto castellano de
-// acentuar siempre la penúltima falla en el 34,9 % de las formas y el
-// 10,6 % de los tokens—, que es justo lo que enseña ESTE punto.
+// acentuar siempre la penúltima falla en el 34,7 % de las formas y el
+// 8,9 % de los tokens—, que es justo lo que enseña ESTE punto.
 //
 // ── LAS PALABRAS SON LAS QUE EL ALUMNO VA A LEER ─────────────────────
 //

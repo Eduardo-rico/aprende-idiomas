@@ -39,22 +39,15 @@
 import { describe, it, expect } from 'vitest';
 import { acentoDe } from '@/lib/lang/ortografia-la';
 import { acentoLatino, silabas } from '@/scripts/voz/cuanto-duele';
-import { NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1 } from '@/lib/data/languages/la/lexicon-l1';
-import { paradigmaNominal, infectum, perfectum, declinacionDe } from '@/lib/data/languages/la/paradigma-la';
+import { NOMBRES_L1 } from '@/lib/data/languages/la/lexicon-l1';
+import { paradigmaNominal, declinacionDe } from '@/lib/data/languages/la/paradigma-la';
+import { formasUnicasDeL1 } from '@/lib/data/languages/la/todas-las-formas';
 
-function todasLasFormas(): string[] {
-  const out = new Set<string>();
-  for (const n of NOMBRES_L1) {
-    try { declinacionDe(n); } catch { continue; }
-    for (const f of Object.values(paradigmaNominal(n))) out.add(f);
-  }
-  for (const v of VERBOS_L1) {
-    for (const f of Object.values(infectum(v))) out.add(f);
-    for (const f of Object.values(perfectum(v))) out.add(f);
-  }
-  for (const a of ADJETIVOS_L1) out.add(a.lema);
-  return [...out];
-}
+// El dominio NO se enumera aquí. Este mismo test tenía su propia copia y
+// cruzaba las dos implementaciones sobre 1.437 formas cuando la máquina
+// produce 2.194 — o sea que el guardián contra la desincronización estaba
+// él mismo mirando el 65 % del material.
+const todasLasFormas = formasUnicasDeL1;
 
 describe('los dos caminos del acento dicen lo mismo', () => {
   it('sobre TODAS las formas de L1, no sobre una muestra', () => {
@@ -68,7 +61,7 @@ describe('los dos caminos del acento dicen lo mismo', () => {
       const bNorm = b.acento === 'antepenultima' ? 'esdrujula' : 'llana';
       if (a !== bNorm) discrepan.push(`${f}: lib/lang «${a}» · scripts/voz «${b.acento}» (${silabas(f).join('-')})`);
     }
-    expect(comparadas).toBeGreaterThan(1000);
+    expect(comparadas).toBeGreaterThan(2000);
     expect(discrepan).toEqual([]);
   });
 });
@@ -144,10 +137,13 @@ describe('la cifra que sostiene la decisión de la voz', () => {
   it('el motor italiano falla en la proporción medida, y el número se declara aquí', () => {
     const formas = todasLasFormas();
     const breves = formas.filter((f) => acentoLatino(f).acento === 'antepenultima').length;
-    // 528 de 1.429 = 36,9 %. Antes del arreglo del diptongo salía 36,3 %,
-    // y la diferencia son exactamente las nueve formas que discrepaban.
-    expect(formas.length).toBeGreaterThanOrEqual(1400);
-    expect(breves / formas.length).toBeGreaterThan(0.35);
-    expect(breves / formas.length).toBeLessThan(0.39);
+    // LA CIFRA SE HA MOVIDO DOS VECES Y LAS DOS POR LO MISMO: el
+    // denominador. 36,3 % salía con `ui` mal; 36,9 % con el diptongo
+    // arreglado pero sobre 1.437 formas; **34,7 %** sobre las 2.194 que la
+    // máquina produce de verdad. Ninguna de las tres medía mal el acento:
+    // las dos primeras medían sobre el 65 % del material.
+    expect(formas.length).toBeGreaterThanOrEqual(2100);
+    expect(breves / formas.length).toBeGreaterThan(0.32);
+    expect(breves / formas.length).toBeLessThan(0.37);
   });
 });
