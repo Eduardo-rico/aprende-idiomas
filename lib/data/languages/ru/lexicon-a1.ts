@@ -26,7 +26,8 @@ export const NOMBRES_A1: EntradaNominal[] = [
   // sólo DESPUÉS la regla velar la escribe `и`. Y es el control positivo
   // del gate: si la máquina llegara a producir `*книгы`, `revisarOrtografiaRu`
   // lo caza como `velar-y`.
-  { lema: 'книга', genero: 'f', tema: 'duro', glosa: 'libro' },            // 388
+  { lema: 'книга', genero: 'f', tema: 'duro', glosa: 'libro',              // 388
+    lecturaRival: { 'nom.pl': 'книгы sale 1 vez en 7,7 M y es DELIBERADA: «как владельцу оной бесценной книгы», la inscripción de un semianalfabeto citada entre comillas. Frente a книги 597. Es caracterización de personaje, no lengua — y es la prueba de que «la presencia atestigua» se rompe a una aparición' } },
   { lema: 'вода', genero: 'f', tema: 'duro', glosa: 'agua' },              // 561
   { lema: 'голова', genero: 'f', tema: 'duro', glosa: 'cabeza' },          // 1439
   { lema: 'школа', genero: 'f', tema: 'duro', glosa: 'escuela' },          // 59
@@ -71,13 +72,15 @@ export const NOMBRES_A1: EntradaNominal[] = [
   // clase que envenena el generador, y el lexicón es el único sitio donde
   // la casilla puede vivir: no hay regla que la prediga.
   { lema: 'лес', genero: 'm', tema: 'duro', glosa: 'bosque', locativo2: { forma: 'лесу', regente: 'в' },
+    lecturaRival: { locativo2: 'в лесе sale 3 veces y о лесе 2: el prepositivo regular de лес EXISTE y es correcto, pero está casi muerto en este corpus. No es homógrafo ni caracterización: es la casilla legítima que la clase del segundo locativo desplaza. Por eso son DOS casillas y no una corrección' },
     nota: 'в лесу 381 frente a в лесе 3. ⚠ Y UNA CORRECCIÓN DE MI PROPIA v0: escribí que «el prepositivo regular (о лесе) sigue vivo y por eso son DOS casillas». Medido, о лесе sale **2 veces**. Sigue siendo lengua correcta y la casilla existe, pero no está viva en este corpus, y un ítem que la pida está pidiendo algo que el alumno no ha leído nunca' },
   { lema: 'сад', genero: 'm', tema: 'duro', glosa: 'jardín', locativo2: { forma: 'саду', regente: 'в' },
     nota: 'в саду 416 frente a в саде 0' },
   { lema: 'берег', genero: 'm', tema: 'duro', glosa: 'orilla', locativo2: { forma: 'берегу', regente: 'на' }, nomPlIrreg: 'берега',
     nota: 'на берегу 203; y el tema es VELAR, así que su plural regular pasa además por la regla ortográfica' },
   { lema: 'пол', genero: 'm', tema: 'duro', glosa: 'suelo',
-    locativo2: { forma: 'полу', regente: 'на', rivalContaminado: 'на поле sale 105 veces y NO es ninguna forma de пол: es el prepositivo de поле «campo», un neutro distinto. La comparación 374 > 105 sale bien por la razón equivocada y por eso no se hace' },
+    locativo2: { forma: 'полу', regente: 'на' },
+    lecturaRival: { locativo2: 'на поле sale 105 veces y NO es ninguna forma de пол: es el prepositivo de поле «campo», otro lema y además neutro — «выйдет в поле», «в поле съезжаться». La comparación 374 > 105 sale bien POR LA RAZÓN EQUIVOCADA, y los 12 de «в полу» son todos el suelo o el faldón («заделывая в полу щели», «вцепился в полу сюртука»)' },
     nota: 'на полу 374. El único lema del bloque cuyo rival choca con OTRA entrada del lexicón potencial' },
   // Supletivos de altísima frecuencia. `друг` cambia de tema entero en
   // plural y `человек` cambia de palabra: los dos van guardados, no

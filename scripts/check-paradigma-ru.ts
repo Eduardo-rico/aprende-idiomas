@@ -68,13 +68,56 @@ function contar(forma: string): number {
   return buscar(alt).n;
 }
 
-interface Prueba {
+export interface Prueba {
   lema: string; celda: string; forma: string; n: number;
   rival?: string; nRival?: number;
-  /** Declarado en el lexicón: la comparación con el rival mediría otro
-   *  lema, así que no se hace. Un «no puedo» impreso vale más que un verde
-   *  que sale bien por la razón equivocada. */
+  /** Lectura DECLARADA de un rival con apariciones. Ver `clasificar()`. */
   contaminado?: string;
+  /** Con qué otra entrada del lexicón choca el rival, si choca. */
+  choca?: string;
+}
+
+// ══ CUÁNDO UN PAR ES EVIDENCIA, Y CUÁNDO ES UNA TAREA DE LECTURA ═════
+//
+// ⚠ ESTA ES LA CORRECCIÓN MÁS IMPORTANTE DEL GATE, y la trajo el
+// coordinador. La v0 leía «la forma buena sale más que su rival» como
+// evidencia a secas, y eso es falso por una razón que el proyecto ya tiene
+// escrita con el signo contrario: **una comparación entre dos CADENAS no
+// es una comparación entre dos HIPÓTESIS SOBRE EL MISMO LEMA.**
+//
+// En rumano el fallo salió como verde por homografía —`nu veni` daba 8 y
+// ninguno era imperativo—. Aquí salió como **ROJO** por homografía, que es
+// peor, porque empuja a romper una forma que está bien: el gate comparaba
+// `в полу` 12 contra `в поле` 428 y los 428 son «en el campo», el
+// prepositivo de `поле`, otro lema y además neutro.
+//
+// La v0 lo cerró con un campo `rivalContaminado` declarado a mano en el
+// lexicón, y eso es una DENYLIST DISFRAZADA DE ALLOWLIST: lo que nadie
+// declare pasa como evidencia. El criterio tiene que ser estructural, y lo
+// es — y además es UNA SOLA CONDICIÓN:
+//
+//   **Un rival con CERO apariciones es evidencia. Un rival con una o más
+//   NO ES UN NÚMERO: ES UNA TAREA DE LECTURA.**
+//
+// Porque un rival distinto de cero sólo puede ser tres cosas y las tres
+// exigen mirar los contextos: (a) una forma que compite de verdad, (b) un
+// homógrafo de otro lema —`в поле`—, o (c) una caracterización de
+// personaje —`книгы` ×1, la inscripción del semianalfabeto—. Contar no las
+// separa; sólo leerlas.
+//
+// Y la mitad que impide que esto sea un gate apagado: un par en el que el
+// rival GANA sigue siendo ROJO mientras nadie declare qué leyó. Es la forma
+// del `pisoCero`: cero pares perdidos sin lectura escrita.
+export type Veredicto = 'evidencia' | 'leer' | 'nulo-vacio' | 'rojo';
+
+export function clasificar(p: Prueba): Veredicto {
+  if (p.rival === undefined || p.nRival === undefined) {
+    return p.n === 0 ? 'nulo-vacio' : 'evidencia';
+  }
+  if (p.n === 0 && p.nRival === 0) return 'nulo-vacio';
+  if (p.nRival === 0) return 'evidencia';
+  if (p.contaminado) return 'leer';          // lectura declarada
+  return p.nRival >= p.n ? 'rojo' : 'leer';  // sin lectura: gana → rojo
 }
 
 /** LA FORMA QUE LA REGLA MAL ENUNCIADA HABRÍA PRODUCIDO.
@@ -100,7 +143,7 @@ function pruebasNominales(entradas: EntradaNominal[]): Prueba[] {
         const p: Prueba = { lema: e.lema, celda: `${caso}.${num}`, forma, n: contar(forma) };
         if (num === 'pl' && caso === 'nom') {
           const r = rivalNominativoPlural(forma);
-          if (r) { p.rival = r; p.nRival = contar(r); }
+          if (r) { p.rival = r; p.nRival = contar(r); p.contaminado = e.lecturaRival?.[`${caso}.${num}`]; }
         }
         out.push(p);
       }
@@ -114,15 +157,19 @@ function pruebasNominales(entradas: EntradaNominal[]): Prueba[] {
       // `в` siempre y daba dos falsos rojos (`в берегу` 0 contra
       // `на берегу` 203) y un falso verde: `в поле` 428 no es ninguna forma
       // de `пол`, es el prepositivo de `поле` «campo».
-      const { regente, rivalContaminado } = e.locativo2;
+      const { regente } = e.locativo2;
       const loc = prepositivoSg(e, regente)!;
       const reg = casillaNominal(e, 'prep', 'sg')!;
       const pr: Prueba = {
         lema: e.lema, celda: `locativo2 (${regente} ___)`,
         forma: `${regente} ${loc}`, n: contar(`${regente} ${quitarAcento(loc)}`),
       };
-      if (rivalContaminado) pr.contaminado = rivalContaminado;
-      else { pr.rival = `${regente} ${reg}`; pr.nRival = contar(`${regente} ${reg}`); }
+      // La comparación se hace SIEMPRE — ocultarla era la v0 — y la lectura
+      // declarada viaja con ella para que el lector vea los dos números Y
+      // lo que significan.
+      pr.rival = `${regente} ${reg}`;
+      pr.nRival = contar(`${regente} ${reg}`);
+      pr.contaminado = e.lecturaRival?.locativo2;
       out.push(pr);
     }
   }
@@ -227,19 +274,51 @@ if (/[/\\]check-paradigma-ru\.ts$/.test(process.argv[1] ?? '')) {
 
   // ── 3 · EL CORPUS, FORMA A FORMA ──────────────────────────────────
   const pruebas = [...pruebasNominales(NOMBRES_A1), ...pruebasVerbales(VERBOS_A1)];
+  // EL SEGUNDO CHEQUEO, y es de otra naturaleza que el conteo: ¿el rival es
+  // además una casilla de OTRA entrada del lexicón? Donde se puede
+  // comprobar, se comprueba, en vez de esperar a que alguien lo declare.
+  // No cubre los lemas que no están (`поле` no está), y por eso no
+  // sustituye al criterio del cero: lo acompaña.
+  const formasDeOtros = new Map<string, string>();
+  for (const e of NOMBRES_A1)
+    for (const num of ['sg', 'pl'] as const)
+      for (const c of ['nom', 'ac', 'gen', 'dat', 'instr', 'prep'] as const) {
+        const f = casillaNominal(e, c, num);
+        if (f && !formasDeOtros.has(f)) formasDeOtros.set(f, `${e.lema} ${c}.${num}`);
+      }
+  for (const p of pruebas) {
+    if (!p.rival) continue;
+    const duenyo = formasDeOtros.get(p.rival);
+    if (duenyo && !duenyo.startsWith(p.lema + ' ')) p.choca = duenyo;
+  }
+
+  const por = (v: Veredicto) => pruebas.filter((x) => clasificar(x) === v);
   const sinAtestar = pruebas.filter((p) => p.n === 0);
-  const perdidas = pruebas.filter((p) => p.nRival !== undefined && p.nRival >= p.n);
+  const perdidas = por('rojo');
+  const aLeer = por('leer');
 
   console.log(`── CORPUS: ${pruebas.length} formas generadas ──`);
   console.log(`   atestadas: ${pruebas.length - sinAtestar.length} · sin una sola aparición: ${sinAtestar.length}`);
-  const contaminadas = pruebas.filter((p) => p.contaminado);
-  console.log(`   comparadas con su rival: ${pruebas.filter((p) => p.rival).length} · perdidas contra el rival: ${perdidas.length}`);
-  console.log(`   sin comparación posible por homografía declarada: ${contaminadas.length}\n`);
-  for (const p of contaminadas) console.log(`  NO CERTIFICABLE  ${p.lema}\t${p.celda}\t${p.forma} ${p.n} — ${p.contaminado}`);
-  if (contaminadas.length) console.log();
+  console.log(`   pares comparados: ${pruebas.filter((p) => p.rival).length}`);
+  console.log(`   · el rival da CERO (evidencia limpia): ${pruebas.filter((p) => p.rival && p.nRival === 0 && p.n > 0).length}`);
+  console.log(`   · el rival tiene apariciones (hay que LEERLO): ${aLeer.length}`);
+  console.log(`   · el rival GANA y nadie ha leído nada (rojo): ${perdidas.length}\n`);
+
+  if (aLeer.length) {
+    console.log('EL RIVAL NO DA CERO — un número aquí no es evidencia, es una tarea de lectura.');
+    console.log('Un rival distinto de cero es (a) forma que compite, (b) homógrafo de otro lema o');
+    console.log('(c) caracterización de personaje, y contar no las separa. `corpus-ru.ts --ctx «…»`.');
+    for (const p of aLeer) {
+      console.log(`  ${p.lema}\t${p.celda}\t${p.forma} ${p.n} · *${p.rival} ${p.nRival}`);
+      if (p.choca) console.log(`      ⚠ el rival es además una casilla del lexicón: ${p.choca}`);
+      if (p.contaminado) console.log(`      LEÍDO: ${p.contaminado}`);
+      else console.log('      SIN LEER — declara la lectura en el lexicón o el par no certifica nada');
+    }
+    console.log();
+  }
 
   if (perdidas.length) {
-    console.log('⚠ FORMAS QUE PIERDEN CONTRA LA REGLA MAL ENUNCIADA (esto tumba el lexicón):');
+    console.log('⚠ EL RIVAL GANA Y NO HAY LECTURA ESCRITA (esto tumba el lexicón):');
     for (const p of perdidas) console.log(`  ${p.lema}\t${p.celda}\t${p.forma} ${p.n} ≤ *${p.rival} ${p.nRival}`);
     console.log();
   }

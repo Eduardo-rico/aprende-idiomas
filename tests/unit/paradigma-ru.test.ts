@@ -17,6 +17,7 @@ import {
 } from '../../lib/data/languages/ru/paradigma-ru';
 import { NOMBRES_A1, VERBOS_A1 } from '../../lib/data/languages/ru/lexicon-a1';
 import { revisarOrtografiaRu } from '../../lib/lang/ortografia-ru';
+import { clasificar, type Prueba } from '../../scripts/check-paradigma-ru';
 
 const n = (lema: string) => NOMBRES_A1.find((x) => x.lema === lema)!;
 const v = (lema: string) => VERBOS_A1.find((x) => x.lema === lema)!;
@@ -262,5 +263,47 @@ describe('el lexicón declara lo que no se deriva', () => {
   it('un locativo2 que coincida con el prepositivo regular se denuncia como inútil', () => {
     const falso: EntradaNominal = { ...n('стол'), locativo2: { forma: 'столе', regente: 'в' } };
     expect(invariantesNominales([falso]).map((a) => a.clase)).toContain('locativo2-inutil');
+  });
+});
+
+
+describe('CUÁNDO UN PAR ES EVIDENCIA Y CUÁNDO ES UNA TAREA DE LECTURA', () => {
+  // La v0 del gate leía «la buena sale más que el rival» como evidencia a
+  // secas. Es falso: una comparación entre dos CADENAS no es una
+  // comparación entre dos HIPÓTESIS SOBRE EL MISMO LEMA. El caso que lo
+  // destapó salió como ROJO y no como verde, que es peor: `в полу` 12
+  // contra `в поле` 428, donde los 428 son «en el campo» — el prepositivo
+  // de `поле`, otro lema y además neutro.
+  const par = (n: number, nRival: number, contaminado?: string): Prueba =>
+    ({ lema: 'x', celda: 'c', forma: 'f', n, rival: 'r', nRival, contaminado });
+
+  it('rival a CERO y forma atestada: evidencia limpia (кони 120 · коны 0)', () => {
+    expect(clasificar(par(120, 0))).toBe('evidencia');
+  });
+
+  it('los DOS a cero: nulo vacío, nunca rojo — el corpus no trae la casilla', () => {
+    expect(clasificar(par(0, 0))).toBe('nulo-vacio');
+  });
+
+  it('rival con apariciones y la buena ganando: NO es evidencia, hay que leerlo', () => {
+    expect(clasificar(par(597, 1))).toBe('leer');   // книги / книгы
+    expect(clasificar(par(381, 3))).toBe('leer');   // в лесу / в лесе
+  });
+
+  // ⚠ EL TESTIGO ROJO. Sin él, un clasificador que devolviera siempre
+  // «leer» sería indistinguible de éste y el gate no podría suspender nada.
+  it('rival que GANA y sin lectura escrita: ROJO', () => {
+    expect(clasificar(par(12, 428))).toBe('rojo');
+    expect(clasificar(par(5, 5))).toBe('rojo');
+  });
+
+  it('el mismo par CON la lectura declarada deja de ser rojo', () => {
+    expect(clasificar(par(12, 428, 'los 428 son el prepositivo de поле, otro lema'))).toBe('leer');
+  });
+
+  it('las tres lecturas que el lexicón declara hoy están escritas, no supuestas', () => {
+    expect(n('книга').lecturaRival?.['nom.pl']).toMatch(/1 vez/);
+    expect(n('лес').lecturaRival?.locativo2).toMatch(/о лесе 2/);
+    expect(n('пол').lecturaRival?.locativo2).toMatch(/поле «campo»/);
   });
 });

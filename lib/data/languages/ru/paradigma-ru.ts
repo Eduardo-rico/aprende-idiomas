@@ -117,18 +117,7 @@ export interface EntradaNominal {
    *  prepositivo del neutro `поле` «campo», no de `пол` «suelo». Un número
    *  correcto sobre una forma ambigua es un número verdadero que mide otra
    *  cosa, y aquí la ambigüedad cruzaba dos entradas del lexicón. */
-  locativo2?: {
-    forma: string;
-    regente: 'в' | 'на';
-    /** ⚠ EL RIVAL DE ESTA CASILLA ES HOMÓGRAFO DE OTRO LEMA, y entonces la
-     *  comparación del gate NO mide este lema. `пол` «suelo» hace
-     *  `на полу` (374) y su rival regular sería `на поле`… que sale 105
-     *  veces y es ÍNTEGRAMENTE el prepositivo de `поле` «campo», un neutro
-     *  distinto. La comparación sale bien —374 > 105— y sale bien POR LA
-     *  RAZÓN EQUIVOCADA. Declararlo convierte un verde falso en un «no
-     *  puedo certificarlo», que es lo que de verdad se sabe. */
-    rivalContaminado?: string;
-  };
+  locativo2?: { forma: string; regente: 'в' | 'на' };
   /** Casillas sueltas que la regla falla y que el corpus corrigió. La
    *  clave es `<caso>.<numero>`. Existe para que una excepción medida se
    *  guarde COMO DATO en vez de moverle el agujero a la regla. */
@@ -136,6 +125,21 @@ export interface EntradaNominal {
   /** Sin plural (время no, pero молоко sí). `paradigmaNominal` devuelve
    *  `null` en plural en vez de derivar algo plausible. */
   soloSingular?: boolean;
+  /** ⚠ LA LECTURA DE UN RIVAL QUE NO DA CERO, POR CASILLA.
+   *
+   *  El gate compara cada forma con la que produciría la regla mal
+   *  enunciada. Si el rival da CERO, el par es evidencia. **Si da uno o
+   *  más, el número no es evidencia: es una tarea de lectura**, porque un
+   *  rival distinto de cero sólo puede ser (a) una forma que compite de
+   *  verdad, (b) un homógrafo de OTRO lema o (c) una caracterización de
+   *  personaje — y contar no las separa.
+   *
+   *  Aquí va lo que se leyó, con la clave de la casilla (`nom.pl`,
+   *  `locativo2`). Vive en el LEXICÓN y no en un comentario a propósito:
+   *  las tres lecturas que este campo guarda hoy ya estaban hechas y
+   *  escritas en prosa, y el gate no podía verlas — que es exactamente por
+   *  lo que una afirmación en prosa no se vuelve a mirar nunca. */
+  lecturaRival?: Record<string, string>;
   /** Por qué esta entrada está en el lexicón, cuando el motivo no es «es
    *  frecuente». Lo lee el gate y lo imprime. */
   nota?: string;
