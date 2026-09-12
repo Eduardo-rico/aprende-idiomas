@@ -13,7 +13,7 @@ const CASOS = [
   { titulo: 'discipulum → discìpulum', a: 'esdrujula-a', b: 'esdrujula-b', n: 4, marcada: 2,
     latin: 2, nota: 'dis-CI-pu-lum en latín; el italiano pondría dis-ci-PU-lum' },
   { titulo: 'dominos → dòminos', a: 'tilde-a', b: 'tilde-b', n: 3, marcada: 1,
-    latin: 3, nota: 'do-mi-NŌS en latín, porque la penúltima es larga' },
+    latin: 1, nota: 'DO-mi-nōs: esdrújula. La penúltima «mi» es BREVE; que la última sea larga da igual porque el latín nunca acentúa la última. Lo tuve mal escrito y el par no era el control que yo creía' },
 ];
 
 console.log(`  clips: ${DIR}\n`);

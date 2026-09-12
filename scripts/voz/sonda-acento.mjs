@@ -96,10 +96,21 @@ const PARES = [
     pregunta: 'SÙ-bi-to («enseguida») contra su-BÌ-to («sufrido»): misma cadena, acento distinto.' },
 ];
 // Las sueltas van en PAREJA —desnuda y acentuada— para que se puedan
-// comparar de oído. Las cinco primeras son esdrújulas latinas, donde el
-// italiano pondría el acento en la penúltima; `dominos` es la contraria, una
-// llana cuya penúltima es larga (do-mi-NŌS), y está para ver si el motor
-// acierta justo donde el defecto italiano coincide con el latín.
+// comparar de oído. Las SEIS son esdrújulas latinas, donde el italiano
+// pondría el acento en la penúltima.
+//
+// ERRATA CORREGIDA, y conviene que quede: aquí decía que `dominos` era «la
+// contraria, una llana cuya penúltima es larga (do-mi-NŌS)», puesta para ver
+// si el motor acierta donde el defecto italiano coincide con el latín.
+//
+// ERA FALSO. `dominōs` es DO-mi-nōs, esdrújula: la penúltima es `mi` y es
+// BREVE. Que la ÚLTIMA sílaba `nōs` sea larga da igual, porque el latín
+// nunca acentúa la última. Confundí la última con la penúltima y construí
+// sobre eso un «control» que no controlaba nada: las seis eran del mismo
+// tipo y el caso de contraste no estaba en la sonda.
+//
+// El que sí lo sería es cualquier palabra de penúltima larga —`rēgīna`
+// (rē-GĪ-na), `amāvērunt` (a-mā-VĒ-runt)— y no se midió ninguna.
 const SUELTAS = [
   'dominus', 'dòminus', 'discipulum', 'discìpulum', 'agricola', 'agrìcola',
   'filium', 'fìlium', 'puerum', 'pùerum', 'dominos', 'domìnos',
