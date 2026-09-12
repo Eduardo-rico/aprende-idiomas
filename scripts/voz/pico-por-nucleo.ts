@@ -47,6 +47,40 @@
 // falla un solo control, se descarta y la sílaba entera se queda como
 // estaba. Los controles no dicen nada sobre `discipulum`: por eso pueden
 // arbitrar sin decidir.
+// ── PREGUNTA C · ¿HASTA DÓNDE LLEGA LA INTERPOLACIÓN DE v3? ─────────
+//
+// Que v3 reparta el tiempo DENTRO de la palabra no implica que las
+// fronteras ENTRE palabras también sean inventadas, y la diferencia
+// decide cuánto daño hace: el karaoke del proyecto resalta por PALABRA
+// (`palabras[].t/s/e`), no por sílaba. Si las fronteras de palabra son
+// reales, v3 sirve para karaoke y sólo falla para medir acento.
+//
+// Se comprueba sin pagar nada: en el hueco entre dos palabras la señal
+// baja. Para cada frontera declarada se mira en qué PERCENTIL de energía
+// cae dentro de la frase. Una frontera medida debe caer abajo.
+//
+// Y el test trae su propio control de potencia: `multilingual_v2`, cuya
+// alineación ya salió medida en la pregunta A. Si en v2 las fronteras
+// tampoco caen abajo, es el test el que no sirve, no v3.
+// Umbral declarado antes de mirar: percentil ≤ 25 = frontera real.
+//
+// MEDIDO: 66 en v2 y 68 en v3. El control lo tumba — **este test no tiene
+// potencia** y no dice nada de v3. La razón es que en habla seguida no hay
+// silencio entre palabras: «Magister discipulum» va pegado, y el tramo que
+// la API asigna al espacio es convencional. Se deja escrito porque un nulo
+// sin control se habría leído como «las fronteras de v3 son falsas».
+//
+// ── PREGUNTA D · EL MISMO TIRO, CON POTENCIA ────────────────────────
+//
+// Si las fronteras de palabra de v3 fueran repartidas y no medidas, el
+// reparto saldría IGUAL en cada generación: la proporción de la frase que
+// ocupa cada palabra sería casi constante. Si están medidas, esa
+// proporción baila, porque el motor no dice la frase igual dos veces.
+//
+// Se mide el coeficiente de variación de la proporción de cada palabra a
+// lo largo de las 12 generaciones, y el control vuelve a ser v2, que ya
+// salió medido. Umbral declarado antes de mirar: cv ≤ 1/3 del de v2 =
+// repartida.
 import fs from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { silabas } from './cuanto-duele';
@@ -135,8 +169,45 @@ for (const modelo of MODELOS) {
       votosD.get(d.palabra)![du.indexOf(Math.max(...du))]!++;
     }
   }
+  // C · percentil de energía en las fronteras de palabra declaradas
+  const percentiles: number[] = [];
+  for (let i = 1; i <= 99; i++) {
+    const mp3 = `${DIR}/${modelo}-${i}.mp3`, js = `${DIR}/${modelo}-${i}.json`;
+    if (!fs.existsSync(js) || !fs.existsSync(mp3)) continue;
+    const al = JSON.parse(fs.readFileSync(js, 'utf8')) as Alineacion;
+    const x = pcm(mp3); if (!x) continue;
+    const paso = 0.005, fin = al.character_end_times_seconds[al.character_end_times_seconds.length - 1]!;
+    const env: number[] = [];
+    for (let t = 0; t + paso <= fin; t += paso) env.push(rms(x, t, t + paso));
+    const orden = [...env].sort((a, b) => a - b);
+    for (let k = 0; k < al.characters.length; k++) {
+      if (!/\s/.test(al.characters[k]!)) continue;
+      const t = (al.character_start_times_seconds[k]! + al.character_end_times_seconds[k]!) / 2;
+      const v = env[Math.min(env.length - 1, Math.floor(t / paso))]!;
+      percentiles.push(100 * orden.filter((z) => z < v).length / orden.length);
+    }
+  }
+  // D · ¿bailan las proporciones de palabra entre generaciones?
+  const propor = new Map<string, number[]>();
+  for (const d of DIANAS) propor.set(d.palabra, []);
+  for (let i = 1; i <= 99; i++) {
+    const js = `${DIR}/${modelo}-${i}.json`;
+    if (!fs.existsSync(js)) continue;
+    const al = JSON.parse(fs.readFileSync(js, 'utf8')) as Alineacion;
+    const total = al.character_end_times_seconds[al.character_end_times_seconds.length - 1]!;
+    for (const d of DIANAS) {
+      const tr = tramos(d.palabra, al); if (!tr) continue;
+      const t0 = al.character_start_times_seconds[tr[0]!.desde]!;
+      const t1 = al.character_end_times_seconds[tr[tr.length - 1]!.hasta - 1]!;
+      propor.get(d.palabra)!.push((t1 - t0) / total);
+    }
+  }
+  const cvs = DIANAS.map((d) => { const v = propor.get(d.palabra)!; const m = media(v); return Math.sqrt(media(v.map((z) => (z - m) ** 2))) / m; });
+
   console.log(`  ${modelo}  (${n} generaciones)`);
   console.log(`    A · racha de duraciones idénticas: ${media(rachas).toFixed(1)} caracteres de media  → ${media(rachas) >= 4 ? 'REPARTIDA, no medida' : 'medida'}`);
+  console.log(`    C · fronteras de palabra: percentil de energía ${media(percentiles).toFixed(0)}  (el control de v2 tumba este test: sin potencia)`);
+  console.log(`    D · proporción de cada palabra entre generaciones: cv ${cvs.map((v) => `${(100 * v).toFixed(1)} %`).join(' · ')}   media ${(100 * media(cvs)).toFixed(1)} %`);
   for (const d of DIANAS) {
     const sil = silabas(d.palabra), vE = votosE.get(d.palabra)!, vD = votosD.get(d.palabra)!;
     const idx = sil.indexOf(d.espera);
