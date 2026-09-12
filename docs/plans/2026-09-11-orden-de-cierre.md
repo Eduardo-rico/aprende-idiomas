@@ -29,17 +29,49 @@ de gate: el trabajo que pide de más parece pendiente y el que ya está
 hecho no se acredita. Si te encuentras persiguiendo el número grande,
 párate.
 
-## Estado medido el 2026-09-11
+## Estado medido el 2026-09-12
 
 | lengua | lectura | ejercicios | cobertura |
 |---|---|---|---|
-| PT | 3,2M ✅ | 3.292 | 0 bajo piso · **prosa corregida el 11-sep** |
+| PT | 3,2M ✅ | 3.292 | 0 bajo piso · prosa corregida el 11-sep (7 falsas + las 6 que metió la corrección) |
 | RO | 2,9M ✅ | 454 servibles | 48 de 107 puntos bajo piso · déficit **354**, residuo 0 |
-| LA | 3 lecturas | 357 publicados | 34 de 117 puntos con lote |
-| RU | **7,7M ✅** (de 1,96M) | 0 | inventario sin empezar |
+| LA | 3 lecturas | ~400 publicados | **40 de 117** puntos con lote (eran 34 el 11-sep) |
+| RU | **7,7M ✅** (de 1,96M) | 0 | **93 puntos**, máquina de paradigmas + lexicón A1 construidos |
 | CS | 793 lecturas | 0 | sin inventario |
 
-Suite: **2.519/2.519 verde**, 243 ficheros. Árbol limpio.
+Suite: **255 ficheros / 2.697 tests, verde.**
+
+## Lo que se resolvió el 11 y el 12 de septiembre
+
+**La línea de la voz del latín está CERRADA en `needs-human`.** Cinco voces,
+dos lenguas, ocho marcas ortográficas y el canal IPA de `eleven_v3`: el
+acento latino **no es forzable por medios ortográficos**. Y el cierre trae
+dos hallazgos que valen fuera del latín:
+
+- **la energía de la señal NO mide acento** — lo dice un control positivo,
+  no una sospecha: en `capitano` el pico cae en `no`, que no se acentúa ni
+  como sustantivo ni como verbo;
+- **`eleven_v3` reparte la alineación DENTRO de la palabra** (racha de 7,7
+  caracteres idénticos contra 1,9 en v2) **y la mide bien ENTRE palabras**.
+  Sirve para karaoke por palabra; **no sirve por debajo de la palabra**.
+  Su variabilidad en frase sí pasa (1,2-1,6× la de v2); en palabra suelta
+  no (4,2×), y eso era un artefacto de medir palabras aisladas.
+
+**Lo único que queda de la voz es el oído de Edu** sobre
+`https://claude.ai/code/artifact/7dc2ff45-2cbe-4640-845f-62a6d8463d38`
+(`capitano` contra `càpitano`). Su veredicto sobre la primera página fue
+**«sonaban distintas entre sí»** — y explícitamente NO «la marcada sonaba
+bien». O sea: **la marca cambia el audio de forma audible; no está
+verificado que ponga el acento donde toca.** No estirar eso.
+
+**Dos gates propios estaban apagados y se arreglaron:**
+
+- el test de la **línea roja** fallaba en cualquier worktree, que es
+  justo la maniobra que se usa para esquivar un rojo ajeno. Anclado al
+  worktree principal.
+- **`corpus-ru`** era el `testTimeout` por defecto (5 s) contra 91 MB de
+  JSON. Declarado 120 s **con guarda**: un timeout largo puede esconder un
+  cuelgue, así que se comprueba que el corpus se cargó de verdad.
 
 ## Lo que hay que saber al retomar cada una
 
@@ -56,14 +88,31 @@ sin dar error.** Ya mordió tres veces en rumano y latín.
 
 **LATÍN — la máquina dejó de ser el cuello de botella** (pasiva,
 participios, adjetivos de 3.ª e irregulares construidos). Lo que queda es
-léxico y contenido. La voz está **medida y casi resuelta**: el motor
-italianiza el acento, pero lee la tilde y la aplica al sitio correcto —
-se queda a tres centésimas de volcar el pico.
+léxico y contenido. **La deuda con fecha es el GRADO del adjetivo**: 114
+entradas y 537 tokens que la máquina no produce. Hoy no lo pide ningún
+punto; en cuanto se escriba uno, **la máquina va antes que el lote**.
+
+⚠ **El enumerador del dominio se había quedado atrás** y nadie lo notaba:
+1.429 formas de 2.194, el 65 %. Toda cifra «sobre el dominio» anterior al
+2026-09-12 está medida sobre dos tercios. Recalculadas las ocho: el lote
+publicado está sano (su gate usa un umbral **absoluto**, no la cifra
+medida), dos se corrigieron, y **dos no se movieron — que es lo que las
+convierte en hallazgos y no en artefactos del denominador**.
 
 **RUMANO — no está parado por un problema, está aparcado por decisión.**
 Quedan 5 puntos de `transformacion` y los niveles B2/C1/C2 enteros a cero.
 Relevo: `docs/plans/2026-09-03-ro-relevo.md`, más de cuarenta trampas cada
 una con el método que la cazó. Es el documento que más ha ahorrado.
+
+⚠ **RUSO — una clase nueva que vale para las CUATRO lenguas: la
+biblioteca puede desenseñar el punto.** El corpus de inmersión es de
+dominio público, o sea de hace un siglo, y puede contradecir la norma
+moderna que el curso enseña (medido en `u10`: «два большие портрета» de
+Dostoievski contra la regla de hoy). **La norma gana** —es citable— pero
+entonces: ningún ítem de ese punto puede justificarse con el corpus, hay
+que vigilar el error simétrico, y **la lección tiene que avisar** o la
+inmersión deshace lo enseñado. Es la primera vez en el proyecto que el
+corpus pierde contra el material.
 
 **CHECO — no arranca sin Paso 0.** `npx tsx scripts/paso0-idioma.ts
 --lang=cs` primero, y luego el orden que funcionó dos veces:
