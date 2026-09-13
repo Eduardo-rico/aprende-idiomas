@@ -22,6 +22,7 @@
  "categoriaEnDisputa": 27,
  "cantidadVariable": 9,
  "flexionanEnElCorpus": 237,
+ "conParadigma": 248,
  "conLaFormaDeCitaSinAtestiguar": 100,
  "porQueSeMiraLaFlexion": "un indeclinable no lleva nunca `Case=`. `lātus` viene etiquetado ADV por el corpus y la fuente calla sobre su categoría, así que ni la cantidad ni la categoría lo cazan: sale 41 veces CON caso y 2 sin, y es un adjetivo declinado",
  "porQueLaCategoriaSeCruza": "el corpus etiqueta `tantus` y `cēterus` como ADV —su uso adverbial— y son adjetivos que DECLINAN: importarlos como indeclinables por fiarse de una etiqueta sola mete un error de datos que ningún gate de cantidad puede ver. Y `categoriaEnDisputa` es CONTRADICCIÓN, no silencio: los indeclinables de la fuente no llevan plantilla de encabezado, así que su categoría viene en blanco y eso no descalifica nada",
@@ -1920,7 +1921,13 @@
    "sinCasoEnElCorpus": 378,
    "formaAtestiguada": 12,
    "plantilla": "3|scrībō|scrīps|scrīpt",
-   "definicion": "to write"
+   "definicion": "to write",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "scrībere",
+    "perfecto": "scrīpsī",
+    "supino": "scrīptum"
+   }
   },
   {
    "clave": "alius",
@@ -1961,7 +1968,13 @@
    "sinCasoEnElCorpus": 377,
    "formaAtestiguada": 65,
    "plantilla": "4++.old-impf-futr.poet-sync-perf.no-und|sciō|2s_pres_actv_impr=scītō/scī|2p_pres_actv_impr=scītōte/scīte",
-   "definicion": "to be able to, to know , understand, to have practical knowledge"
+   "definicion": "to be able to, to know , understand, to have practical knowledge",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "scīre",
+    "perfecto": "scīvī",
+    "supino": "scītum"
+   }
   },
   {
    "clave": "nihil",
@@ -1989,7 +2002,13 @@
    "sinCasoEnElCorpus": 306,
    "formaAtestiguada": 2,
    "plantilla": "3|accipiō|accēp|accept",
-   "definicion": "to receive, accept, take"
+   "definicion": "to receive, accept, take",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "accipere",
+    "perfecto": "accēpī",
+    "supino": "acceptum"
+   }
   },
   {
    "clave": "sicut",
@@ -2107,7 +2126,13 @@
    "sinCasoEnElCorpus": 233,
    "formaAtestiguada": 15,
    "plantilla": "3|agō|ēg|āct",
-   "definicion": "to act, to behave"
+   "definicion": "to act, to behave",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "agere",
+    "perfecto": "ēgī",
+    "supino": "āctum"
+   }
   },
   {
    "clave": "credo",
@@ -2120,7 +2145,13 @@
    "sinCasoEnElCorpus": 273,
    "formaAtestiguada": 30,
    "plantilla": "3|crēdō|crēdid|crēdit",
-   "definicion": "to believe, to trust in, to give credence to"
+   "definicion": "to believe, to trust in, to give credence to",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "crēdere",
+    "perfecto": "crēdidī",
+    "supino": "crēditum"
+   }
   },
   {
    "clave": "nunc",
@@ -2222,7 +2253,13 @@
    "sinCasoEnElCorpus": 256,
    "formaAtestiguada": 52,
    "plantilla": "1+.poet-sync-perf|putō",
-   "definicion": "to clean, cleanse"
+   "definicion": "to clean, cleanse",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "putāre",
+    "perfecto": "putāvī",
+    "supino": "putātum"
+   }
   },
   {
    "clave": "aliquis",
@@ -2256,7 +2293,13 @@
    "sinCasoEnElCorpus": 198,
    "formaAtestiguada": 4,
    "plantilla": "3.poet-sync-perf|cognōscō|cognōv|cognit",
-   "definicion": "to learn, to get to know"
+   "definicion": "to learn, to get to know",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "cognōscere",
+    "perfecto": "cognōvī",
+    "supino": "cognitum"
+   }
   },
   {
    "clave": "publicus",
@@ -2283,7 +2326,13 @@
    "sinCasoEnElCorpus": 198,
    "formaAtestiguada": 11,
    "plantilla": "3.poet-sync-perf|quaerō|quaesīv/quaesi|quaesīt",
-   "definicion": "to seek, look for"
+   "definicion": "to seek, look for",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "quaerere",
+    "perfecto": "quaesīvī",
+    "supino": "quaesītum"
+   }
   },
   {
    "clave": "iste",
@@ -2312,7 +2361,12 @@
    "flexiona": true,
    "formaAtestiguada": 36,
    "plantilla": "animus<2>",
-   "definicion": "life, life force, soul, vitality"
+   "definicion": "life, life force, soul, vitality",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "animī",
+    "genero": "m"
+   }
   },
   {
    "clave": "littera",
@@ -2326,7 +2380,12 @@
    "flexiona": true,
    "formaAtestiguada": 3,
    "plantilla": "littera<1>",
-   "definicion": "letter (of the alphabet)"
+   "definicion": "letter (of the alphabet)",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "litterae",
+    "genero": "f"
+   }
   },
   {
    "clave": "pono",
@@ -2339,7 +2398,13 @@
    "sinCasoEnElCorpus": 143,
    "formaAtestiguada": 4,
    "plantilla": "3.poet-sync-perf|pōnō|posu/posīv|posit/post",
-   "definicion": "to place; to put; to lay"
+   "definicion": "to place; to put; to lay",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "pōnere",
+    "perfecto": "posuī",
+    "supino": "positum"
+   }
   },
   {
    "clave": "consilium",
@@ -2353,7 +2418,12 @@
    "flexiona": true,
    "formaAtestiguada": 71,
    "plantilla": "cōnsilium<2>",
-   "definicion": "plan, intention, design, purpose"
+   "definicion": "plan, intention, design, purpose",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "cōnsiliī",
+    "genero": "n"
+   }
   },
   {
    "clave": "totus",
@@ -2437,7 +2507,12 @@
    "flexiona": true,
    "formaAtestiguada": 15,
    "plantilla": "hostis<3>|g=m|g2=f",
-   "definicion": "an enemy of the state, an enemy, a hostile, opponent, foe"
+   "definicion": "an enemy of the state, an enemy, a hostile, opponent, foe",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "hostis",
+    "genero": "m"
+   }
   },
   {
    "clave": "exeo",
@@ -2504,7 +2579,13 @@
    "sinCasoEnElCorpus": 127,
    "formaAtestiguada": 4,
    "plantilla": "3|relinquō|relīqu|relict",
-   "definicion": "to abandon, forsake, desert"
+   "definicion": "to abandon, forsake, desert",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "relinquere",
+    "perfecto": "relīquī",
+    "supino": "relictum"
+   }
   },
   {
    "clave": "dimitto",
@@ -2517,7 +2598,13 @@
    "sinCasoEnElCorpus": 148,
    "formaAtestiguada": 0,
    "plantilla": "3|dīmittō|dīmīs|dīmiss",
-   "definicion": "to send away, send forth, send off, dismiss, let go"
+   "definicion": "to send away, send forth, send off, dismiss, let go",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "dīmittere",
+    "perfecto": "dīmīsī",
+    "supino": "dīmissum"
+   }
   },
   {
    "clave": "mundus",
@@ -2566,7 +2653,12 @@
    "flexiona": true,
    "formaAtestiguada": 9,
    "plantilla": "modus<2>",
-   "definicion": "measure"
+   "definicion": "measure",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "modī",
+    "genero": "m"
+   }
   },
   {
    "clave": "turba",
@@ -2580,7 +2672,12 @@
    "flexiona": true,
    "formaAtestiguada": 77,
    "plantilla": "turba<1>",
-   "definicion": "turmoil, disorder, stir, disturbance, tumult, uproar, hubbub, commotion, trouble, confusion, disarray, brawl"
+   "definicion": "turmoil, disorder, stir, disturbance, tumult, uproar, hubbub, commotion, trouble, confusion, disarray, brawl",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "turbae",
+    "genero": "f"
+   }
   },
   {
    "clave": "angelus",
@@ -2594,7 +2691,12 @@
    "flexiona": true,
    "formaAtestiguada": 51,
    "plantilla": "angelus<2>",
-   "definicion": "angel"
+   "definicion": "angel",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "angelī",
+    "genero": "m"
+   }
   },
   {
    "clave": "princeps",
@@ -2695,7 +2797,12 @@
    "flexiona": true,
    "formaAtestiguada": 74,
    "plantilla": "mulier/mulier<3>|g=f",
-   "definicion": "a woman, female"
+   "definicion": "a woman, female",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "mulieris",
+    "genero": "f"
+   }
   },
   {
    "clave": "expression",
@@ -2717,7 +2824,12 @@
    "flexiona": true,
    "formaAtestiguada": 4,
    "plantilla": "pēs/ped<3>|g=m",
-   "definicion": "a foot, in its senses as"
+   "definicion": "a foot, in its senses as",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "pedis",
+    "genero": "m"
+   }
   },
   {
    "clave": "trado",
@@ -2730,7 +2842,13 @@
    "sinCasoEnElCorpus": 123,
    "formaAtestiguada": 1,
    "plantilla": "3|trādō|trādid|trādit",
-   "definicion": "to hand over, give up, deliver, transmit, surrender; impart; entrust, confide"
+   "definicion": "to hand over, give up, deliver, transmit, surrender; impart; entrust, confide",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "trādere",
+    "perfecto": "trādidī",
+    "supino": "trāditum"
+   }
   },
   {
    "clave": "reliquus",
@@ -2757,7 +2875,13 @@
    "sinCasoEnElCorpus": 92,
    "formaAtestiguada": 1,
    "plantilla": "2.pass-impers|sedeō|sēd|sess",
-   "definicion": "to sit, to be seated"
+   "definicion": "to sit, to be seated",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "sedēre",
+    "perfecto": "sēdī",
+    "supino": "sessum"
+   }
   },
   {
    "clave": "peto",
@@ -2770,7 +2894,13 @@
    "sinCasoEnElCorpus": 131,
    "formaAtestiguada": 7,
    "plantilla": "3.poet-sync-perf|petō|petīv/peti|petīt",
-   "definicion": "to ask, beg, request, look for, inquire, petition, entreat"
+   "definicion": "to ask, beg, request, look for, inquire, petition, entreat",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "petere",
+    "perfecto": "petīvī",
+    "supino": "petītum"
+   }
   },
   {
    "clave": "gloria",
@@ -2784,7 +2914,12 @@
    "flexiona": true,
    "formaAtestiguada": 58,
    "plantilla": "glōria<1>",
-   "definicion": "glory, renown, fame, honor"
+   "definicion": "glory, renown, fame, honor",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "glōriae",
+    "genero": "f"
+   }
   },
   {
    "clave": "iudico",
@@ -2797,7 +2932,13 @@
    "sinCasoEnElCorpus": 128,
    "formaAtestiguada": 12,
    "plantilla": "1+|iūdicō",
-   "definicion": "to examine judicially, judge, pass judgement, decide; condemn"
+   "definicion": "to examine judicially, judge, pass judgement, decide; condemn",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "iūdicāre",
+    "perfecto": "iūdicāvī",
+    "supino": "iūdicātum"
+   }
   },
   {
    "clave": "usque",
@@ -2859,7 +3000,12 @@
    "flexiona": true,
    "formaAtestiguada": 42,
    "plantilla": "spēs<5>",
-   "definicion": "hope (belief or expectation that something wished for can or will happen)"
+   "definicion": "hope (belief or expectation that something wished for can or will happen)",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "speī",
+    "genero": "f"
+   }
   },
   {
    "clave": "quicumque",
@@ -2913,7 +3059,13 @@
    "sinCasoEnElCorpus": 125,
    "formaAtestiguada": 0,
    "plantilla": "1+|mandūcō",
-   "definicion": "to chew, gnaw on, masticate"
+   "definicion": "to chew, gnaw on, masticate",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "mandūcāre",
+    "perfecto": "mandūcāvī",
+    "supino": "mandūcātum"
+   }
   },
   {
    "clave": "propheta",
@@ -2927,7 +3079,12 @@
    "flexiona": true,
    "formaAtestiguada": 31,
    "plantilla": "prophēta<1>|g=m|f=prophētis/prophētissa",
-   "definicion": "prophet, soothsayer"
+   "definicion": "prophet, soothsayer",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "prophētae",
+    "genero": "m"
+   }
   },
   {
    "clave": "finis",
@@ -2941,7 +3098,12 @@
    "flexiona": true,
    "formaAtestiguada": 16,
    "plantilla": "fīnis<3.abl-e-i>|g=m|g2=f",
-   "definicion": "end"
+   "definicion": "end",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "fīnis",
+    "genero": "m"
+   }
   },
   {
    "clave": "ibi",
@@ -2990,7 +3152,13 @@
    "sinCasoEnElCorpus": 118,
    "formaAtestiguada": 3,
    "plantilla": "2|teneō|tenu/tetin|tent",
-   "definicion": "to hold, have; to grasp"
+   "definicion": "to hold, have; to grasp",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "tenēre",
+    "perfecto": "tenuī",
+    "supino": "tentum"
+   }
   },
   {
    "clave": "mors",
@@ -3017,7 +3185,13 @@
    "sinCasoEnElCorpus": 127,
    "formaAtestiguada": 11,
    "plantilla": "3|intellegō|intellēx|intellēct",
-   "definicion": "to understand, comprehend, realize, come to know"
+   "definicion": "to understand, comprehend, realize, come to know",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "intellegere",
+    "perfecto": "intellēxī",
+    "supino": "intellēctum"
+   }
   },
   {
    "clave": "tum",
@@ -3070,7 +3244,12 @@
    "flexiona": true,
    "formaAtestiguada": 6,
    "plantilla": "mīles/mīlit<3>|g=m|g2=f",
-   "definicion": "A soldier."
+   "definicion": "A soldier.",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "mīlitis",
+    "genero": "m"
+   }
   },
   {
    "clave": "mille",
@@ -3112,7 +3291,12 @@
    "flexiona": true,
    "formaAtestiguada": 92,
    "plantilla": "hōra<1>",
-   "definicion": "hour"
+   "definicion": "hour",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "hōrae",
+    "genero": "f"
+   }
   },
   {
    "clave": "accedo",
@@ -3125,7 +3309,13 @@
    "sinCasoEnElCorpus": 102,
    "formaAtestiguada": 0,
    "plantilla": "3.nopass|accēdō|access|access",
-   "definicion": "to go or come toward, approach, reach"
+   "definicion": "to go or come toward, approach, reach",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "accēdere",
+    "perfecto": "accessī",
+    "supino": "accessum"
+   }
   },
   {
    "clave": "sui",
@@ -3202,7 +3392,12 @@
    "flexiona": true,
    "formaAtestiguada": 52,
    "plantilla": "iūdicium<2>",
-   "definicion": "judgment, decision"
+   "definicion": "judgment, decision",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "iūdiciī",
+    "genero": "n"
+   }
   },
   {
    "clave": "diligo",
@@ -3216,7 +3411,13 @@
    "sinCasoEnElCorpus": 111,
    "formaAtestiguada": 6,
    "plantilla": "3|dīligō|dīlēx|dīlēct",
-   "definicion": "to esteem, prize, love, have regard, to delight in (something)"
+   "definicion": "to esteem, prize, love, have regard, to delight in (something)",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "dīligere",
+    "perfecto": "dīlēxī",
+    "supino": "dīlēctum"
+   }
   },
   {
    "clave": "summus",
@@ -3241,7 +3442,13 @@
    "sinCasoEnElCorpus": 106,
    "formaAtestiguada": 0,
    "plantilla": "3|tollō|sustul|sublāt",
-   "definicion": "to raise, lift up, elevate"
+   "definicion": "to raise, lift up, elevate",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "tollere",
+    "perfecto": "sustulī",
+    "supino": "sublātum"
+   }
   },
   {
    "clave": "surgo",
@@ -3254,7 +3461,13 @@
    "sinCasoEnElCorpus": 89,
    "formaAtestiguada": 0,
    "plantilla": "3|surgō|surrēx|surrēct",
-   "definicion": "to rise; to arise; to rise from bed; to get up; to stand up"
+   "definicion": "to rise; to arise; to rise from bed; to get up; to stand up",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "surgere",
+    "perfecto": "surrēxī",
+    "supino": "surrēctum"
+   }
   },
   {
    "clave": "liber",
@@ -3282,7 +3495,12 @@
    "flexiona": true,
    "formaAtestiguada": 17,
    "plantilla": "oculus<2>",
-   "definicion": "eye"
+   "definicion": "eye",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "oculī",
+    "genero": "m"
+   }
   },
   {
    "clave": "curo",
@@ -3295,7 +3513,13 @@
    "sinCasoEnElCorpus": 105,
    "formaAtestiguada": 2,
    "plantilla": "1+.p3inf.poet-sync-perf|cūrō",
-   "definicion": "to arrange, see to, attend to, take care of, look after, ensure, tend to"
+   "definicion": "to arrange, see to, attend to, take care of, look after, ensure, tend to",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "cūrāre",
+    "perfecto": "cūrāvī",
+    "supino": "cūrātum"
+   }
   },
   {
    "clave": "pax",
@@ -3392,7 +3616,12 @@
    "flexiona": true,
    "formaAtestiguada": 21,
    "plantilla": "cōpia<1>",
-   "definicion": "supply, abundance, copiousness, wealth, riches"
+   "definicion": "supply, abundance, copiousness, wealth, riches",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "cōpiae",
+    "genero": "f"
+   }
   },
   {
    "clave": "transeo",
@@ -3432,7 +3661,12 @@
    "flexiona": true,
    "formaAtestiguada": 24,
    "plantilla": "carō/carn<3>|gen_pl=carnum/carnium|g=f",
-   "definicion": "flesh, meat of an animal"
+   "definicion": "flesh, meat of an animal",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "carnis",
+    "genero": "f"
+   }
   },
   {
    "clave": "caput",
@@ -3460,7 +3694,12 @@
    "flexiona": true,
    "formaAtestiguada": 36,
    "plantilla": "peccātum<2>",
-   "definicion": "sin, error, fault"
+   "definicion": "sin, error, fault",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "peccātī",
+    "genero": "n"
+   }
   },
   {
    "clave": "occido",
@@ -3473,7 +3712,13 @@
    "sinCasoEnElCorpus": 93,
    "formaAtestiguada": 0,
    "plantilla": "3.nopass|occidō|occid|occās",
-   "definicion": "to fall down"
+   "definicion": "to fall down",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "occidere",
+    "perfecto": "occidī",
+    "supino": "occāsum"
+   }
   },
   {
    "clave": "supra",
@@ -3512,7 +3757,13 @@
    "sinCasoEnElCorpus": 99,
    "formaAtestiguada": 0,
    "plantilla": "3|recipiō|recēp|recept",
-   "definicion": "to take back, (i.e., regain possession of something)"
+   "definicion": "to take back, (i.e., regain possession of something)",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "recipere",
+    "perfecto": "recēpī",
+    "supino": "receptum"
+   }
   },
   {
    "clave": "ascendo",
@@ -3525,7 +3776,13 @@
    "sinCasoEnElCorpus": 87,
    "formaAtestiguada": 2,
    "plantilla": "3|ascendō|ascend|ascēns",
-   "definicion": "to climb up, to go up, to move upwards"
+   "definicion": "to climb up, to go up, to move upwards",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "ascendere",
+    "perfecto": "ascendī",
+    "supino": "ascēnsum"
+   }
   },
   {
    "clave": "testimonium",
@@ -3539,7 +3796,12 @@
    "flexiona": true,
    "formaAtestiguada": 101,
    "plantilla": "testimōnium<2>",
-   "definicion": "testimony, witness"
+   "definicion": "testimony, witness",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "testimōniī",
+    "genero": "n"
+   }
   },
   {
    "clave": "constituo",
@@ -3552,7 +3814,13 @@
    "sinCasoEnElCorpus": 84,
    "formaAtestiguada": 1,
    "plantilla": "3|cōnstituō|cōnstitu|cōnstitūt",
-   "definicion": "to place, put, locate, lay"
+   "definicion": "to place, put, locate, lay",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "cōnstituere",
+    "perfecto": "cōnstituī",
+    "supino": "cōnstitūtum"
+   }
   },
   {
    "clave": "intro",
@@ -3565,7 +3833,13 @@
    "sinCasoEnElCorpus": 103,
    "formaAtestiguada": 5,
    "plantilla": "1+.poet-sync-perf|intrō",
-   "definicion": "to enter, go into, come in, get in, penetrate"
+   "definicion": "to enter, go into, come in, get in, penetrate",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "intrāre",
+    "perfecto": "intrāvī",
+    "supino": "intrātum"
+   }
   },
   {
    "clave": "consul",
@@ -3614,7 +3888,12 @@
    "flexiona": true,
    "formaAtestiguada": 16,
    "plantilla": "pānis<3>|gen_pl=pānium/pānum|g=m",
-   "definicion": "bread, loaf"
+   "definicion": "bread, loaf",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "pānis",
+    "genero": "m"
+   }
   },
   {
    "clave": "reddo",
@@ -3627,7 +3906,13 @@
    "sinCasoEnElCorpus": 93,
    "formaAtestiguada": 5,
    "plantilla": "3|reddō|reddid|reddit",
-   "definicion": "to give back, return, restore"
+   "definicion": "to give back, return, restore",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "reddere",
+    "perfecto": "reddidī",
+    "supino": "redditum"
+   }
   },
   {
    "clave": "uoluntas",
@@ -3648,7 +3933,13 @@
    "sinCasoEnElCorpus": 103,
    "formaAtestiguada": 3,
    "plantilla": "2|maneō|māns|māns",
-   "definicion": "to stay, remain, abide"
+   "definicion": "to stay, remain, abide",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "manēre",
+    "perfecto": "mānsī",
+    "supino": "mānsum"
+   }
   },
   {
    "clave": "mortuus",
@@ -3725,7 +4016,12 @@
    "flexiona": true,
    "formaAtestiguada": 28,
    "plantilla": "ecclēsia<1>",
-   "definicion": "church (a house of worship)"
+   "definicion": "church (a house of worship)",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "ecclēsiae",
+    "genero": "f"
+   }
   },
   {
    "clave": "tamquam",
@@ -3765,7 +4061,13 @@
    "sinCasoEnElCorpus": 79,
    "formaAtestiguada": 14,
    "plantilla": "1+.poet-sync-perf|ōrō",
-   "definicion": "to orate, deliver a speech publicly"
+   "definicion": "to orate, deliver a speech publicly",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "ōrāre",
+    "perfecto": "ōrāvī",
+    "supino": "ōrātum"
+   }
   },
   {
    "clave": "medius",
@@ -3819,7 +4121,13 @@
    "sinCasoEnElCorpus": 95,
    "formaAtestiguada": 2,
    "plantilla": "1+.poet-sync-perf|interrogō",
-   "definicion": "to ask, question, inquire, interrogate, to seek information from"
+   "definicion": "to ask, question, inquire, interrogate, to seek information from",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "interrogāre",
+    "perfecto": "interrogāvī",
+    "supino": "interrogātum"
+   }
   },
   {
    "clave": "existimo",
@@ -3832,7 +4140,13 @@
    "sinCasoEnElCorpus": 91,
    "formaAtestiguada": 10,
    "plantilla": "1+.poet-sync-perf|exīstimō",
-   "definicion": "to value, or esteem, estimate, reckon, consider [with of quality ]"
+   "definicion": "to value, or esteem, estimate, reckon, consider [with of quality ]",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "exīstimāre",
+    "perfecto": "exīstimāvī",
+    "supino": "exīstimātum"
+   }
   },
   {
    "clave": "tertius",
@@ -3854,7 +4168,12 @@
    "flexiona": true,
    "formaAtestiguada": 32,
    "plantilla": "proelium<2>",
-   "definicion": "a battle, combat, conflict"
+   "definicion": "a battle, combat, conflict",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "proeliī",
+    "genero": "n"
+   }
   },
   {
    "clave": "flumen",
@@ -3882,7 +4201,12 @@
    "flexiona": true,
    "formaAtestiguada": 19,
    "plantilla": "numerus<2>",
-   "definicion": "number"
+   "definicion": "number",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "numerī",
+    "genero": "m"
+   }
   },
   {
    "clave": "deinde",
@@ -3903,7 +4227,13 @@
    "sinCasoEnElCorpus": 72,
    "formaAtestiguada": 5,
    "plantilla": "1+|praedicō",
-   "definicion": "to proclaim, declare publicly"
+   "definicion": "to proclaim, declare publicly",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "praedicāre",
+    "perfecto": "praedicāvī",
+    "supino": "praedicātum"
+   }
   },
   {
    "clave": "epistula",
@@ -3916,7 +4246,12 @@
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
    "formaAtestiguada": 33,
-   "plantilla": "epistula<1>"
+   "plantilla": "epistula<1>",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "epistulae",
+    "genero": "f"
+   }
   },
   {
    "clave": "legatus",
@@ -3930,7 +4265,12 @@
    "flexiona": true,
    "formaAtestiguada": 3,
    "plantilla": "lēgātus<2>",
-   "definicion": "envoy, ambassador, legate"
+   "definicion": "envoy, ambassador, legate",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "lēgātī",
+    "genero": "m"
+   }
   },
   {
    "clave": "septem",
@@ -3951,7 +4291,13 @@
    "sinCasoEnElCorpus": 60,
    "formaAtestiguada": 0,
    "plantilla": "4|aperiō|aperu|apert",
-   "definicion": "to uncover, make or lay bare, reveal, clear"
+   "definicion": "to uncover, make or lay bare, reveal, clear",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "aperīre",
+    "perfecto": "aperuī",
+    "supino": "apertum"
+   }
   },
   {
    "clave": "officium",
@@ -3965,7 +4311,12 @@
    "flexiona": true,
    "formaAtestiguada": 23,
    "plantilla": "officium<2>",
-   "definicion": "duty, service, office"
+   "definicion": "duty, service, office",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "officiī",
+    "genero": "n"
+   }
   },
   {
    "clave": "gero",
@@ -3978,7 +4329,13 @@
    "sinCasoEnElCorpus": 66,
    "formaAtestiguada": 0,
    "plantilla": "3|gerō|gess|gest",
-   "definicion": "to carry, bear"
+   "definicion": "to carry, bear",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "gerere",
+    "perfecto": "gessī",
+    "supino": "gestum"
+   }
   },
   {
    "clave": "primum",
@@ -4038,7 +4395,13 @@
    "sinCasoEnElCorpus": 71,
    "formaAtestiguada": 0,
    "plantilla": "3|dēscendō|dēscend|dēscēns",
-   "definicion": "to climb down, to go or come down, to descend"
+   "definicion": "to climb down, to go or come down, to descend",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "dēscendere",
+    "perfecto": "dēscendī",
+    "supino": "dēscēnsum"
+   }
   },
   {
    "clave": "pharisaeus",
@@ -4059,7 +4422,13 @@
    "sinCasoEnElCorpus": 73,
    "formaAtestiguada": 0,
    "plantilla": "1+.poet-sync-perf|parō",
-   "definicion": "to arrange, order, contrive, design"
+   "definicion": "to arrange, order, contrive, design",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "parāre",
+    "perfecto": "parāvī",
+    "supino": "parātum"
+   }
   },
   {
    "clave": "saepe",
@@ -4086,7 +4455,12 @@
    "flexiona": true,
    "formaAtestiguada": 30,
    "plantilla": "iūstitia<1>",
-   "definicion": "justice, fairness, equity"
+   "definicion": "justice, fairness, equity",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "iūstitiae",
+    "genero": "f"
+   }
   },
   {
    "clave": "quantus",
@@ -4114,7 +4488,13 @@
    "sinCasoEnElCorpus": 82,
    "formaAtestiguada": 7,
    "plantilla": "1+.poet-sync-perf|cōgitō",
-   "definicion": "to think"
+   "definicion": "to think",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "cōgitāre",
+    "perfecto": "cōgitāvī",
+    "supino": "cōgitātum"
+   }
   },
   {
    "clave": "anima",
@@ -4184,7 +4564,12 @@
    "flexiona": true,
    "formaAtestiguada": 65,
    "plantilla": "nātūra<1>",
-   "definicion": "the nature, quality, substance or essence of a thing"
+   "definicion": "the nature, quality, substance or essence of a thing",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "nātūrae",
+    "genero": "f"
+   }
   },
   {
    "clave": "prouincia",
@@ -4219,7 +4604,12 @@
    "flexiona": true,
    "formaAtestiguada": 9,
    "plantilla": "mēnsis<3>|g=m",
-   "definicion": "month"
+   "definicion": "month",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "mēnsis",
+    "genero": "m"
+   }
   },
   {
    "clave": "uxor",
@@ -4303,7 +4693,13 @@
    "sinCasoEnElCorpus": 61,
    "formaAtestiguada": 1,
    "plantilla": "1+|clāmō",
-   "definicion": "to cry out, clamor, shout, yell, exclaim"
+   "definicion": "to cry out, clamor, shout, yell, exclaim",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "clāmāre",
+    "perfecto": "clāmāvī",
+    "supino": "clāmātum"
+   }
   },
   {
    "clave": "solus",
@@ -4330,7 +4726,13 @@
    "sinCasoEnElCorpus": 78,
    "formaAtestiguada": 33,
    "plantilla": "1+.poet-sync-perf|spērō",
-   "definicion": "to hope, expect"
+   "definicion": "to hope, expect",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "spērāre",
+    "perfecto": "spērāvī",
+    "supino": "spērātum"
+   }
   },
   {
    "clave": "quare",
@@ -4406,7 +4808,12 @@
    "flexiona": true,
    "formaAtestiguada": 2,
    "plantilla": "saeculum<2>",
-   "definicion": "race, breed"
+   "definicion": "race, breed",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "saeculī",
+    "genero": "n"
+   }
   },
   {
    "clave": "uis",
@@ -4442,7 +4849,12 @@
    "sinCasoEnElCorpus": 60,
    "formaAtestiguada": 19,
    "plantilla": "2.semi-depon|gaudeō|gāvīs",
-   "definicion": "to rejoice, make merry"
+   "definicion": "to rejoice, make merry",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "gaudēre",
+    "perfecto": "gāvīsī"
+   }
   },
   {
    "clave": "duodecim",
@@ -4471,7 +4883,13 @@
    "sinCasoEnElCorpus": 62,
    "formaAtestiguada": 0,
    "plantilla": "2.poet-sync-perf|impleō|implēv|implēt",
-   "definicion": "to fill up or with, fill fully; cover, fulfill. (+ genitive, ablative, or accusative case)"
+   "definicion": "to fill up or with, fill fully; cover, fulfill. (+ genitive, ablative, or accusative case)",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "implēre",
+    "perfecto": "implēvī",
+    "supino": "implētum"
+   }
   },
   {
    "clave": "discedo",
@@ -4484,7 +4902,13 @@
    "sinCasoEnElCorpus": 76,
    "formaAtestiguada": 0,
    "plantilla": "3|discēdō|discess|discess",
-   "definicion": "to leave, depart, abandon, retire (with ablative)"
+   "definicion": "to leave, depart, abandon, retire (with ablative)",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "discēdere",
+    "perfecto": "discessī",
+    "supino": "discessum"
+   }
   },
   {
    "clave": "oratio",
@@ -4520,7 +4944,12 @@
    "flexiona": true,
    "formaAtestiguada": 8,
    "plantilla": "lapis/lapid<3>|g=m",
-   "definicion": "stone"
+   "definicion": "stone",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "lapidis",
+    "genero": "m"
+   }
   },
   {
    "clave": "adduco",
@@ -4546,7 +4975,13 @@
    "sinCasoEnElCorpus": 68,
    "formaAtestiguada": 2,
    "plantilla": "3|bibō|bib|bibit",
-   "definicion": "to drink"
+   "definicion": "to drink",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "bibere",
+    "perfecto": "bibī",
+    "supino": "bibitum"
+   }
   },
   {
    "clave": "coram",
@@ -4600,7 +5035,13 @@
    "sinCasoEnElCorpus": 65,
    "formaAtestiguada": 1,
    "plantilla": "3|fugiō|fūg|fugit",
-   "definicion": "to flee, fly, take flight, escape, depart, run, run away, recede"
+   "definicion": "to flee, fly, take flight, escape, depart, run, run away, recede",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "fugere",
+    "perfecto": "fūgī",
+    "supino": "fugitum"
+   }
   },
   {
    "clave": "eques",
@@ -4614,7 +5055,12 @@
    "flexiona": true,
    "formaAtestiguada": 1,
    "plantilla": "eques/equit<3>|g=m",
-   "definicion": "horseman, cavalryman, rider"
+   "definicion": "horseman, cavalryman, rider",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "equitis",
+    "genero": "m"
+   }
   },
   {
    "clave": "item",
@@ -4654,7 +5100,13 @@
    "sinCasoEnElCorpus": 76,
    "formaAtestiguada": 1,
    "plantilla": "1+.p3inf.poet-sync-perf|negō",
-   "definicion": "to deny"
+   "definicion": "to deny",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "negāre",
+    "perfecto": "negāvī",
+    "supino": "negātum"
+   }
   },
   {
    "clave": "quinque",
@@ -4716,7 +5168,12 @@
    "flexiona": true,
    "formaAtestiguada": 24,
    "plantilla": "iniūria<1>",
-   "definicion": "injury, wronging, offense, insult, wrong"
+   "definicion": "injury, wronging, offense, insult, wrong",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "iniūriae",
+    "genero": "f"
+   }
   },
   {
    "clave": "periculum",
@@ -4730,7 +5187,12 @@
    "flexiona": true,
    "formaAtestiguada": 21,
    "plantilla": "perīculum<2>",
-   "definicion": "trial, experiment, attempt, proof, essay"
+   "definicion": "trial, experiment, attempt, proof, essay",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "perīculī",
+    "genero": "n"
+   }
   },
   {
    "clave": "solum",
@@ -4751,7 +5213,13 @@
    "sinCasoEnElCorpus": 64,
    "formaAtestiguada": 5,
    "plantilla": "3|ēiciō|ēiēc|ēiect",
-   "definicion": "to cast, thrust or drive out"
+   "definicion": "to cast, thrust or drive out",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "ēicere",
+    "perfecto": "ēiēcī",
+    "supino": "ēiectum"
+   }
   },
   {
    "clave": "multum",
@@ -4803,7 +5271,13 @@
    "sinCasoEnElCorpus": 71,
    "formaAtestiguada": 0,
    "plantilla": "3|ostendō|ostend|ostent/ostēns",
-   "definicion": "to expose to view, exhibit, show"
+   "definicion": "to expose to view, exhibit, show",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "ostendere",
+    "perfecto": "ostendī",
+    "supino": "ostentum"
+   }
   },
   {
    "clave": "interficio",
@@ -4816,7 +5290,13 @@
    "sinCasoEnElCorpus": 57,
    "formaAtestiguada": 0,
    "plantilla": "3|interficiō|interfēc|interfect",
-   "definicion": "to kill, destroy, assassinate, slay"
+   "definicion": "to kill, destroy, assassinate, slay",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "interficere",
+    "perfecto": "interfēcī",
+    "supino": "interfectum"
+   }
   },
   {
    "clave": "absum",
@@ -4869,7 +5349,13 @@
    "sinCasoEnElCorpus": 74,
    "formaAtestiguada": 0,
    "plantilla": "3|contendō|contend|content",
-   "definicion": "to hurry"
+   "definicion": "to hurry",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "contendere",
+    "perfecto": "contendī",
+    "supino": "contentum"
+   }
   },
   {
    "clave": "uinco",
@@ -4919,7 +5405,13 @@
    "sinCasoEnElCorpus": 59,
    "formaAtestiguada": 5,
    "plantilla": "1+.poet-sync-perf|probō",
-   "definicion": "to approve, permit, commend"
+   "definicion": "to approve, permit, commend",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "probāre",
+    "perfecto": "probāvī",
+    "supino": "probātum"
+   }
   },
   {
    "clave": "inuicem",
@@ -4940,7 +5432,13 @@
    "sinCasoEnElCorpus": 53,
    "formaAtestiguada": 1,
    "plantilla": "3|suscipiō|suscēp|suscept",
-   "definicion": "to take up, acknowledge"
+   "definicion": "to take up, acknowledge",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "suscipere",
+    "perfecto": "suscēpī",
+    "supino": "susceptum"
+   }
   },
   {
    "clave": "reuertor",
@@ -4961,7 +5459,13 @@
    "sinCasoEnElCorpus": 47,
    "formaAtestiguada": 3,
    "plantilla": "1+|baptizō",
-   "definicion": "to dip or bathe in water"
+   "definicion": "to dip or bathe in water",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "baptizāre",
+    "perfecto": "baptizāvī",
+    "supino": "baptizātum"
+   }
   },
   {
    "clave": "facile",
@@ -4987,7 +5491,13 @@
    "sinCasoEnElCorpus": 53,
    "formaAtestiguada": 0,
    "plantilla": "3|cōgō|coēg|coāct",
-   "definicion": "to collect, assemble, gather together"
+   "definicion": "to collect, assemble, gather together",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "cōgere",
+    "perfecto": "coēgī",
+    "supino": "coāctum"
+   }
   },
   {
    "clave": "nuntio",
@@ -5000,7 +5510,13 @@
    "sinCasoEnElCorpus": 55,
    "formaAtestiguada": 1,
    "plantilla": "1+|nūntiō",
-   "definicion": "to announce; to declare"
+   "definicion": "to announce; to declare",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "nūntiāre",
+    "perfecto": "nūntiāvī",
+    "supino": "nūntiātum"
+   }
   },
   {
    "clave": "numquam",
@@ -5041,7 +5557,12 @@
    "flexiona": true,
    "formaAtestiguada": 6,
    "plantilla": "senex/sen<3>|g=m|g2=f",
-   "definicion": "old man, older man }}"
+   "definicion": "old man, older man }}",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "senis",
+    "genero": "m"
+   }
   },
   {
    "clave": "semen",
@@ -5082,7 +5603,12 @@
    "flexiona": true,
    "formaAtestiguada": 25,
    "plantilla": "faciēs<5>",
-   "definicion": "make, form, shape, figure, configuration"
+   "definicion": "make, form, shape, figure, configuration",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "facieī",
+    "genero": "f"
+   }
   },
   {
    "clave": "imperium",
@@ -5096,7 +5622,12 @@
    "flexiona": true,
    "formaAtestiguada": 25,
    "plantilla": "imperium<2>",
-   "definicion": "The empire, state, imperial government, realm, dominion."
+   "definicion": "The empire, state, imperial government, realm, dominion.",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "imperiī",
+    "genero": "n"
+   }
   },
   {
    "clave": "soluo",
@@ -5169,7 +5700,12 @@
    "sinCasoEnElCorpus": 58,
    "formaAtestiguada": 0,
    "plantilla": "3.nopass|perdō|perdid",
-   "definicion": "to destroy, ruin, wreck"
+   "definicion": "to destroy, ruin, wreck",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "perdere",
+    "perfecto": "perdidī"
+   }
   },
   {
    "clave": "oppidum",
@@ -5183,7 +5719,12 @@
    "flexiona": true,
    "formaAtestiguada": 19,
    "plantilla": "oppidum<2>",
-   "definicion": "town (esp. of towns other than Rome, which was generally called Urbs)"
+   "definicion": "town (esp. of towns other than Rome, which was generally called Urbs)",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "oppidī",
+    "genero": "n"
+   }
   },
   {
    "clave": "inimicus",
@@ -5197,7 +5738,12 @@
    "flexiona": true,
    "formaAtestiguada": 11,
    "plantilla": "inimīcus<2>",
-   "definicion": "enemy, foe"
+   "definicion": "enemy, foe",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "inimīcī",
+    "genero": "m"
+   }
   },
   {
    "clave": "praecipio",
@@ -5210,7 +5756,13 @@
    "sinCasoEnElCorpus": 54,
    "formaAtestiguada": 6,
    "plantilla": "3|praecipiō|praecēp|praecept",
-   "definicion": "to take or seize beforehand, in advance"
+   "definicion": "to take or seize beforehand, in advance",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "praecipere",
+    "perfecto": "praecēpī",
+    "supino": "praeceptum"
+   }
   },
   {
    "clave": "soleo",
@@ -5236,7 +5788,13 @@
    "sinCasoEnElCorpus": 41,
    "formaAtestiguada": 2,
    "plantilla": "1+.poet-sync-perf|pugnō",
-   "definicion": "to fight, combat, battle, engage"
+   "definicion": "to fight, combat, battle, engage",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "pugnāre",
+    "perfecto": "pugnāvī",
+    "supino": "pugnātum"
+   }
   },
   {
    "clave": "donec",
@@ -5276,7 +5834,12 @@
    "flexiona": true,
    "formaAtestiguada": 12,
    "plantilla": "apostolus<2>",
-   "definicion": "a notice sent to a higher tribunal or judge"
+   "definicion": "a notice sent to a higher tribunal or judge",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "apostolī",
+    "genero": "m"
+   }
   },
   {
    "clave": "statuo",
@@ -5289,7 +5852,13 @@
    "sinCasoEnElCorpus": 62,
    "formaAtestiguada": 1,
    "plantilla": "3|statuō|statu|statūt",
-   "definicion": "to put up (something)"
+   "definicion": "to put up (something)",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "statuere",
+    "perfecto": "statuī",
+    "supino": "statūtum"
+   }
   },
   {
    "clave": "ualde",
@@ -5346,7 +5915,12 @@
    "flexiona": true,
    "formaAtestiguada": 13,
    "plantilla": "sabbatum<2>",
-   "definicion": "Sabbath (the Jewish day of rest, i.e., the biblical seventh day of the week)"
+   "definicion": "Sabbath (the Jewish day of rest, i.e., the biblical seventh day of the week)",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "sabbatī",
+    "genero": "n"
+   }
   },
   {
    "clave": "sustineo",
@@ -5359,7 +5933,13 @@
    "sinCasoEnElCorpus": 63,
    "formaAtestiguada": 0,
    "plantilla": "2|sustineō|sustinu|sustent",
-   "definicion": "to hold up or upright, uphold, support, sustain"
+   "definicion": "to hold up or upright, uphold, support, sustain",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "sustinēre",
+    "perfecto": "sustinuī",
+    "supino": "sustentum"
+   }
   },
   {
    "clave": "confero",
@@ -5406,7 +5986,13 @@
    "sinCasoEnElCorpus": 58,
    "formaAtestiguada": 1,
    "plantilla": "3.sigm|efficiō|effēc|effect|effex",
-   "definicion": "to make out or work out; effect, execute, complete, accomplish, make, form, compose"
+   "definicion": "to make out or work out; effect, execute, complete, accomplish, make, form, compose",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "efficere",
+    "perfecto": "effēcī",
+    "supino": "effectum"
+   }
   },
   {
    "clave": "mos",
@@ -5433,7 +6019,13 @@
    "sinCasoEnElCorpus": 47,
    "formaAtestiguada": 0,
    "plantilla": "1+.poet-sync-perf|imperō",
-   "definicion": "to command, give orders to, impose, demand"
+   "definicion": "to command, give orders to, impose, demand",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "imperāre",
+    "perfecto": "imperāvī",
+    "supino": "imperātum"
+   }
   },
   {
    "clave": "conficio",
@@ -5447,7 +6039,13 @@
    "flexiona": true,
    "formaAtestiguada": 0,
    "plantilla": "3.sigm|cōnficiō|cōnfēc|cōnfect|cōnfex",
-   "definicion": "to prepare, accomplish, complete, execute; settle, close a bargain; traverse"
+   "definicion": "to prepare, accomplish, complete, execute; settle, close a bargain; traverse",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "cōnficere",
+    "perfecto": "cōnfēcī",
+    "supino": "cōnfectum"
+   }
   },
   {
    "clave": "scriba",
@@ -5461,7 +6059,12 @@
    "flexiona": true,
    "formaAtestiguada": 6,
    "plantilla": "scrība<1>|g=m",
-   "definicion": "writer, scribe, secretary, clerk"
+   "definicion": "writer, scribe, secretary, clerk",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "scrībae",
+    "genero": "m"
+   }
   },
   {
    "clave": "daemonium",
@@ -5475,7 +6078,12 @@
    "flexiona": true,
    "formaAtestiguada": 23,
    "plantilla": "daemonium<2>",
-   "definicion": "demon"
+   "definicion": "demon",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "daemoniī",
+    "genero": "n"
+   }
   },
   {
    "clave": "germani",
@@ -5510,7 +6118,12 @@
    "flexiona": true,
    "formaAtestiguada": 20,
    "plantilla": "spatium<2>",
-   "definicion": "space, room, extent"
+   "definicion": "space, room, extent",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "spatiī",
+    "genero": "n"
+   }
   },
   {
    "clave": "operor",
@@ -5537,7 +6150,12 @@
    "flexiona": true,
    "formaAtestiguada": 28,
    "plantilla": "fortūna<1>",
-   "definicion": "fortune, luck"
+   "definicion": "fortune, luck",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "fortūnae",
+    "genero": "f"
+   }
   },
   {
    "clave": "studium",
@@ -5551,7 +6169,12 @@
    "flexiona": true,
    "formaAtestiguada": 13,
    "plantilla": "studium<2>",
-   "definicion": "study"
+   "definicion": "study",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "studiī",
+    "genero": "n"
+   }
   },
   {
    "clave": "impono",
@@ -5564,7 +6187,13 @@
    "sinCasoEnElCorpus": 47,
    "formaAtestiguada": 0,
    "plantilla": "3.poet-sync-perf|impōnō|imposu/imposīv|imposit/impost",
-   "definicion": "to place, lay, set, or put on, in, into, over, or upon"
+   "definicion": "to place, lay, set, or put on, in, into, over, or upon",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "impōnere",
+    "perfecto": "imposuī",
+    "supino": "impositum"
+   }
   },
   {
    "clave": "confirmo",
@@ -5577,7 +6206,13 @@
    "sinCasoEnElCorpus": 41,
    "formaAtestiguada": 2,
    "plantilla": "1+.poet-sync-perf|cōnfirmō",
-   "definicion": "to make firm, establish, re-establish, strengthen, fortify, mature, confirm"
+   "definicion": "to make firm, establish, re-establish, strengthen, fortify, mature, confirm",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "cōnfirmāre",
+    "perfecto": "cōnfirmāvī",
+    "supino": "cōnfirmātum"
+   }
   },
   {
    "clave": "ample",
@@ -5643,7 +6278,12 @@
    "flexiona": true,
    "formaAtestiguada": 22,
    "plantilla": "lingua<1>",
-   "definicion": "the tongue"
+   "definicion": "the tongue",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "linguae",
+    "genero": "f"
+   }
   },
   {
    "clave": "negotium",
@@ -5657,7 +6297,12 @@
    "flexiona": true,
    "formaAtestiguada": 22,
    "plantilla": "negōtium<2>",
-   "definicion": "business, employment, occupation, affair"
+   "definicion": "business, employment, occupation, affair",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "negōtiī",
+    "genero": "n"
+   }
   },
   {
    "clave": "proximus",
@@ -5671,7 +6316,12 @@
    "flexiona": true,
    "formaAtestiguada": 5,
    "plantilla": "proximus<2>",
-   "definicion": "nearest, next"
+   "definicion": "nearest, next",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "proximī",
+    "genero": "m"
+   }
   },
   {
    "clave": "praesidium",
@@ -5685,7 +6335,12 @@
    "flexiona": true,
    "formaAtestiguada": 11,
    "plantilla": "praesidium<2>",
-   "definicion": "defence, protection, guardianship"
+   "definicion": "defence, protection, guardianship",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "praesidiī",
+    "genero": "n"
+   }
   },
   {
    "clave": "met",
@@ -5728,7 +6383,12 @@
    "flexiona": true,
    "formaAtestiguada": 27,
    "plantilla": "sententia<1>",
-   "definicion": "a way of thinking, view, opinion, judgement or sentence"
+   "definicion": "a way of thinking, view, opinion, judgement or sentence",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "sententiae",
+    "genero": "f"
+   }
   },
   {
    "clave": "praeter",
@@ -5755,7 +6415,12 @@
    "flexiona": true,
    "formaAtestiguada": 19,
    "plantilla": "tribūnus<2>",
-   "definicion": "chief of a tribe"
+   "definicion": "chief of a tribe",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "tribūnī",
+    "genero": "m"
+   }
   },
   {
    "clave": "adoro",
@@ -5768,7 +6433,13 @@
    "sinCasoEnElCorpus": 58,
    "formaAtestiguada": 0,
    "plantilla": "1+|adōrō",
-   "definicion": "to speak to, accost, address; negotiate a matter with"
+   "definicion": "to speak to, accost, address; negotiate a matter with",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "adōrāre",
+    "perfecto": "adōrāvī",
+    "supino": "adōrātum"
+   }
   },
   {
    "clave": "heluetii",
@@ -5820,7 +6491,12 @@
    "flexiona": true,
    "formaAtestiguada": 14,
    "plantilla": "pecūnia<1>",
-   "definicion": "money"
+   "definicion": "money",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "pecūniae",
+    "genero": "f"
+   }
   },
   {
    "clave": "prohibeo",
@@ -5861,7 +6537,12 @@
    "flexiona": true,
    "formaAtestiguada": 14,
    "plantilla": "equitātus<4>",
-   "definicion": "cavalry"
+   "definicion": "cavalry",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "equitātūs",
+    "genero": "m"
+   }
   },
   {
    "clave": "synagoga",
@@ -5875,7 +6556,12 @@
    "flexiona": true,
    "formaAtestiguada": 18,
    "plantilla": "synagōga<1>",
-   "definicion": "congregation (of Jews)"
+   "definicion": "congregation (of Jews)",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "synagōgae",
+    "genero": "f"
+   }
   },
   {
    "clave": "potius",
@@ -5902,7 +6588,12 @@
    "flexiona": true,
    "formaAtestiguada": 8,
    "plantilla": "auris<3.abl-e-occ-i>|g=f",
-   "definicion": "ear"
+   "definicion": "ear",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "auris",
+    "genero": "f"
+   }
   },
   {
    "clave": "miror",
@@ -5951,7 +6642,12 @@
    "flexiona": true,
    "formaAtestiguada": 27,
    "plantilla": "ūsus<4>",
-   "definicion": "use, employment, exercise, advantage"
+   "definicion": "use, employment, exercise, advantage",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "ūsūs",
+    "genero": "m"
+   }
   },
   {
    "clave": "sentio",
@@ -5964,7 +6660,13 @@
    "sinCasoEnElCorpus": 54,
    "formaAtestiguada": 5,
    "plantilla": "4|sentiō|sēns|sēns",
-   "definicion": "to feel, to sense, to perceive (with the senses)"
+   "definicion": "to feel, to sense, to perceive (with the senses)",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "sentīre",
+    "perfecto": "sēnsī",
+    "supino": "sēnsum"
+   }
   },
   {
    "clave": "appello",
@@ -5990,7 +6692,13 @@
    "sinCasoEnElCorpus": 42,
    "formaAtestiguada": 0,
    "plantilla": "1+.poet-sync-perf|postulō",
-   "definicion": "to demand, ask, request, desire"
+   "definicion": "to demand, ask, request, desire",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "postulāre",
+    "perfecto": "postulāvī",
+    "supino": "postulātum"
+   }
   },
   {
    "clave": "auctoritas",
@@ -6031,7 +6739,13 @@
    "sinCasoEnElCorpus": 37,
    "formaAtestiguada": 11,
    "plantilla": "3.poet-sync-perf|serō|sēv|sat",
-   "definicion": "to sow, plant"
+   "definicion": "to sow, plant",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "serere",
+    "perfecto": "sēvī",
+    "supino": "satum"
+   }
   },
   {
    "clave": "fuga",
@@ -6045,7 +6759,12 @@
    "flexiona": true,
    "formaAtestiguada": 32,
    "plantilla": "fuga<1>",
-   "definicion": "flight, fleeing, escape"
+   "definicion": "flight, fleeing, escape",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "fugae",
+    "genero": "f"
+   }
   },
   {
    "clave": "ideo",
@@ -6080,7 +6799,12 @@
    "flexiona": true,
    "formaAtestiguada": 22,
    "plantilla": "monumentum<2>",
-   "definicion": "reminder, memorial"
+   "definicion": "reminder, memorial",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "monumentī",
+    "genero": "n"
+   }
   },
   {
    "clave": "accido",
@@ -6093,7 +6817,12 @@
    "sinCasoEnElCorpus": 57,
    "formaAtestiguada": 0,
    "plantilla": "3.nopass|accidō|accid",
-   "definicion": "to fall down, upon, at or near; descend"
+   "definicion": "to fall down, upon, at or near; descend",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "accidere",
+    "perfecto": "accidī"
+   }
   },
   {
    "clave": "mandatum",
@@ -6107,7 +6836,12 @@
    "flexiona": true,
    "formaAtestiguada": 27,
    "plantilla": "mandātum<2>",
-   "definicion": "mandate, command, commandment, commission, charge, order to do something, law"
+   "definicion": "mandate, command, commandment, commission, charge, order to do something, law",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "mandātī",
+    "genero": "n"
+   }
   },
   {
    "clave": "tango",
@@ -6120,7 +6854,13 @@
    "sinCasoEnElCorpus": 53,
    "formaAtestiguada": 0,
    "plantilla": "3|tangō|tetig|tāct",
-   "definicion": "to touch, grasp"
+   "definicion": "to touch, grasp",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "tangere",
+    "perfecto": "tetigī",
+    "supino": "tāctum"
+   }
   },
   {
    "clave": "dolor",
@@ -6162,7 +6902,12 @@
    "flexiona": true,
    "formaAtestiguada": 5,
    "plantilla": "paenitentia<1>",
-   "definicion": "repentance, penitence, regret"
+   "definicion": "repentance, penitence, regret",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "paenitentiae",
+    "genero": "f"
+   }
   },
   {
    "clave": "initium",
@@ -6176,7 +6921,12 @@
    "flexiona": true,
    "formaAtestiguada": 24,
    "plantilla": "initium<2>",
-   "definicion": "beginning, start"
+   "definicion": "beginning, start",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "initiī",
+    "genero": "n"
+   }
   },
   {
    "clave": "uetus",
@@ -6224,7 +6974,13 @@
    "sinCasoEnElCorpus": 32,
    "formaAtestiguada": 1,
    "plantilla": "4++|impediō",
-   "definicion": "to hinder, impede, prevent, obstruct, hamper, thwart"
+   "definicion": "to hinder, impede, prevent, obstruct, hamper, thwart",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "impedīre",
+    "perfecto": "impedīvī",
+    "supino": "impedītum"
+   }
   },
   {
    "clave": "nouissimus",
@@ -6245,7 +7001,13 @@
    "sinCasoEnElCorpus": 51,
    "formaAtestiguada": 7,
    "plantilla": "1+|dēsīderō",
-   "definicion": "to want, desire, wish for, long for"
+   "definicion": "to want, desire, wish for, long for",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "dēsīderāre",
+    "perfecto": "dēsīderāvī",
+    "supino": "dēsīderātum"
+   }
   },
   {
    "clave": "infero",
@@ -6272,7 +7034,12 @@
    "flexiona": true,
    "formaAtestiguada": 0,
    "plantilla": "obses/obsid<3>|g=m|g2=f",
-   "definicion": "hostage"
+   "definicion": "hostage",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "obsidis",
+    "genero": "m"
+   }
   },
   {
    "clave": "egredior",
@@ -6323,7 +7090,12 @@
    "flexiona": true,
    "formaAtestiguada": 19,
    "plantilla": "auxilium<2>",
-   "definicion": "help, aid, assistance, relief"
+   "definicion": "help, aid, assistance, relief",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "auxiliī",
+    "genero": "n"
+   }
   },
   {
    "clave": "lux",
@@ -6351,7 +7123,12 @@
    "flexiona": true,
    "formaAtestiguada": 16,
    "plantilla": "frūmentum<2>",
-   "definicion": "grain"
+   "definicion": "grain",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "frūmentī",
+    "genero": "n"
+   }
   },
   {
    "clave": "eligo",
@@ -6364,7 +7141,13 @@
    "sinCasoEnElCorpus": 28,
    "formaAtestiguada": 0,
    "plantilla": "3|ēligō|ēlēg|ēlēct",
-   "definicion": "to choose, to pluck or root out, extract"
+   "definicion": "to choose, to pluck or root out, extract",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "ēligere",
+    "perfecto": "ēlēgī",
+    "supino": "ēlēctum"
+   }
   },
   {
    "clave": "prope",
@@ -6390,7 +7173,13 @@
    "sinCasoEnElCorpus": 40,
    "formaAtestiguada": 1,
    "plantilla": "1+|sēminō",
-   "definicion": "to plant, sow"
+   "definicion": "to plant, sow",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "sēmināre",
+    "perfecto": "sēmināvī",
+    "supino": "sēminātum"
+   }
   },
   {
    "clave": "diligenter",
@@ -6438,7 +7227,13 @@
    "sinCasoEnElCorpus": 43,
    "formaAtestiguada": 5,
    "plantilla": "2.opt-semi-depon|audeō|aus|aus",
-   "definicion": "to dare, venture, risk"
+   "definicion": "to dare, venture, risk",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "audēre",
+    "perfecto": "ausī",
+    "supino": "ausum"
+   }
   },
   {
    "clave": "incipio",
@@ -6451,7 +7246,13 @@
    "sinCasoEnElCorpus": 33,
    "formaAtestiguada": 2,
    "plantilla": "3|incipiō|incēp|incept",
-   "definicion": "to begin, to commence"
+   "definicion": "to begin, to commence",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "incipere",
+    "perfecto": "incēpī",
+    "supino": "inceptum"
+   }
   },
   {
    "clave": "silua",
@@ -6485,7 +7286,13 @@
    "sinCasoEnElCorpus": 44,
    "formaAtestiguada": 15,
    "plantilla": "3.poet-sync-perf|cupiō|cupīv/cupi|cupīt",
-   "definicion": "to desire, long for"
+   "definicion": "to desire, long for",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "cupere",
+    "perfecto": "cupīvī",
+    "supino": "cupītum"
+   }
   },
   {
    "clave": "cito",
@@ -6526,7 +7333,13 @@
    "sinCasoEnElCorpus": 37,
    "formaAtestiguada": 4,
    "plantilla": "3|perspiciō|perspex|perspect",
-   "definicion": "to see through something"
+   "definicion": "to see through something",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "perspicere",
+    "perfecto": "perspexī",
+    "supino": "perspectum"
+   }
   },
   {
    "clave": "omnino",
@@ -6552,7 +7365,13 @@
    "sinCasoEnElCorpus": 52,
    "formaAtestiguada": 0,
    "plantilla": "3.nopass|resurgō|resurrēx|resurrēct",
-   "definicion": "to rise again"
+   "definicion": "to rise again",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "resurgere",
+    "perfecto": "resurrēxī",
+    "supino": "resurrēctum"
+   }
   },
   {
    "clave": "emo",
@@ -6565,7 +7384,13 @@
    "sinCasoEnElCorpus": 40,
    "formaAtestiguada": 1,
    "plantilla": "3|emō|ēm|ēmpt/ēmt",
-   "definicion": "to buy, purchase"
+   "definicion": "to buy, purchase",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "emere",
+    "perfecto": "ēmī",
+    "supino": "ēmptum"
+   }
   },
   {
    "clave": "aedifico",
@@ -6578,7 +7403,13 @@
    "sinCasoEnElCorpus": 39,
    "formaAtestiguada": 2,
    "plantilla": "1+.poet-sync-perf|aedificō",
-   "definicion": "to build, erect, establish"
+   "definicion": "to build, erect, establish",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "aedificāre",
+    "perfecto": "aedificāvī",
+    "supino": "aedificātum"
+   }
   },
   {
    "clave": "opera",
@@ -6592,7 +7423,12 @@
    "flexiona": true,
    "formaAtestiguada": 67,
    "plantilla": "opera<1>",
-   "definicion": "work, pains, exertion, effort, labour"
+   "definicion": "work, pains, exertion, effort, labour",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "operae",
+    "genero": "f"
+   }
   },
   {
    "clave": "uereor",
@@ -6627,7 +7463,13 @@
    "sinCasoEnElCorpus": 30,
    "formaAtestiguada": 1,
    "plantilla": "1+|congregō",
-   "definicion": "to gather into a flock"
+   "definicion": "to gather into a flock",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "congregāre",
+    "perfecto": "congregāvī",
+    "supino": "congregātum"
+   }
   },
   {
    "clave": "nondum",
@@ -6667,7 +7509,12 @@
    "flexiona": true,
    "formaAtestiguada": 12,
    "plantilla": "impetus<4>",
-   "definicion": "an attack, an assault, a charge"
+   "definicion": "an attack, an assault, a charge",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "impetūs",
+    "genero": "m"
+   }
   },
   {
    "clave": "peruenio",
@@ -6689,7 +7536,12 @@
    "flexiona": true,
    "formaAtestiguada": 5,
    "plantilla": "ōrdō/ōrdin<3>|g=m",
-   "definicion": "a methodical series, arrangement, or order; regular line, row, or series"
+   "definicion": "a methodical series, arrangement, or order; regular line, row, or series",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "ōrdinis",
+    "genero": "m"
+   }
   },
   {
    "clave": "crucifigo",
@@ -6702,7 +7554,13 @@
    "sinCasoEnElCorpus": 33,
    "formaAtestiguada": 0,
    "plantilla": "3|crucifīgō|crucifīx|crucifīx",
-   "definicion": "to crucify, fix on a cross"
+   "definicion": "to crucify, fix on a cross",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "crucifīgere",
+    "perfecto": "crucifīxī",
+    "supino": "crucifīxum"
+   }
   },
   {
    "clave": "adsum",
@@ -6728,7 +7586,13 @@
    "sinCasoEnElCorpus": 34,
    "formaAtestiguada": 1,
    "plantilla": "3|committō|commīs|commiss",
-   "definicion": "to join together, unite, connect, put together"
+   "definicion": "to join together, unite, connect, put together",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "committere",
+    "perfecto": "commīsī",
+    "supino": "commissum"
+   }
   },
   {
    "clave": "uae",
@@ -6810,7 +7674,13 @@
    "sinCasoEnElCorpus": 40,
    "formaAtestiguada": 1,
    "plantilla": "2|contineō|continu|content",
-   "definicion": "to hold, keep, connect, contain, maintain"
+   "definicion": "to hold, keep, connect, contain, maintain",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "continēre",
+    "perfecto": "continuī",
+    "supino": "contentum"
+   }
   },
   {
    "clave": "pecco",
@@ -6823,7 +7693,13 @@
    "sinCasoEnElCorpus": 41,
    "formaAtestiguada": 0,
    "plantilla": "1+.poet-sync-perf|peccō",
-   "definicion": "}} to sin, transgress, commit a wrongdoing"
+   "definicion": "}} to sin, transgress, commit a wrongdoing",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "peccāre",
+    "perfecto": "peccāvī",
+    "supino": "peccātum"
+   }
   },
   {
    "clave": "gratus",
@@ -6851,7 +7727,12 @@
    "flexiona": true,
    "formaAtestiguada": 24,
    "plantilla": "sapientia<1>",
-   "definicion": "wisdom, discernment, memory"
+   "definicion": "wisdom, discernment, memory",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "sapientiae",
+    "genero": "f"
+   }
   },
   {
    "clave": "uinea",
@@ -6872,7 +7753,13 @@
    "sinCasoEnElCorpus": 31,
    "formaAtestiguada": 2,
    "plantilla": "1+|iūrō",
-   "definicion": "to confirm formally, to pronounce enforceably, to swear, to vow, to take an oath"
+   "definicion": "to confirm formally, to pronounce enforceably, to swear, to vow, to take an oath",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "iūrāre",
+    "perfecto": "iūrāvī",
+    "supino": "iūrātum"
+   }
   },
   {
    "clave": "o",
@@ -6928,7 +7815,13 @@
    "sinCasoEnElCorpus": 41,
    "formaAtestiguada": 0,
    "plantilla": "3|prōcēdō|prōcess|prōcess",
-   "definicion": "to proceed, advance"
+   "definicion": "to proceed, advance",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "prōcēdere",
+    "perfecto": "prōcessī",
+    "supino": "prōcessum"
+   }
   },
   {
    "clave": "pertineo",
@@ -6941,7 +7834,12 @@
    "sinCasoEnElCorpus": 46,
    "formaAtestiguada": 0,
    "plantilla": "2.nopass|pertineō|pertinu",
-   "definicion": "to extend, stretch out, reach, matter"
+   "definicion": "to extend, stretch out, reach, matter",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "pertinēre",
+    "perfecto": "pertinuī"
+   }
   },
   {
    "clave": "caueo",
@@ -7017,7 +7915,13 @@
    "sinCasoEnElCorpus": 35,
    "formaAtestiguada": 0,
    "plantilla": "3|dēfendō|dēfend|dēfēns",
-   "definicion": "to drive away"
+   "definicion": "to drive away",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "dēfendere",
+    "perfecto": "dēfendī",
+    "supino": "dēfēnsum"
+   }
   },
   {
    "clave": "accuso",
@@ -7030,7 +7934,13 @@
    "sinCasoEnElCorpus": 43,
    "formaAtestiguada": 3,
    "plantilla": "1+.poet-sync-perf|accūsō",
-   "definicion": "to blame, reproach, make a complaint against, find fault with"
+   "definicion": "to blame, reproach, make a complaint against, find fault with",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "accūsāre",
+    "perfecto": "accūsāvī",
+    "supino": "accūsātum"
+   }
   },
   {
    "clave": "colo",
@@ -7043,7 +7953,13 @@
    "sinCasoEnElCorpus": 27,
    "formaAtestiguada": 0,
    "plantilla": "3|colō|colu|cult",
-   "definicion": "to cultivate the land, till, tend, take care of a field or garden"
+   "definicion": "to cultivate the land, till, tend, take care of a field or garden",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "colere",
+    "perfecto": "coluī",
+    "supino": "cultum"
+   }
   },
   {
    "clave": "equus",
@@ -7057,7 +7973,12 @@
    "flexiona": true,
    "formaAtestiguada": 5,
    "plantilla": "equus<2>|f=equa",
-   "definicion": "horse"
+   "definicion": "horse",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "equī",
+    "genero": "m"
+   }
   },
   {
    "clave": "offero",
@@ -7083,7 +8004,13 @@
    "sinCasoEnElCorpus": 39,
    "formaAtestiguada": 1,
    "plantilla": "1+.nopass|abundō",
-   "definicion": "to overflow, flow over or down"
+   "definicion": "to overflow, flow over or down",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "abundāre",
+    "perfecto": "abundāvī",
+    "supino": "abundātum"
+   }
   },
   {
    "clave": "cohors",
@@ -7138,7 +8065,12 @@
    "sinCasoEnElCorpus": 34,
    "formaAtestiguada": 11,
    "plantilla": "3.semi-depon|cōnfīdō|cōnfīs",
-   "definicion": "(+ Dative of the person and + ablative of the thing or / + ablative) to be confident or assured of, confide in, believe, trust, place or put confidence in; rely"
+   "definicion": "(+ Dative of the person and + ablative of the thing or / + ablative) to be confident or assured of, confide in, believe, trust, place or put confidence in; rely",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "cōnfīdere",
+    "perfecto": "cōnfīsī"
+   }
   },
   {
    "clave": "minister",
@@ -7152,7 +8084,12 @@
    "flexiona": true,
    "formaAtestiguada": 13,
    "plantilla": "minister/ministr<2>|f=ministra/ministrīx",
-   "definicion": "attendant, servant, slave, waiter"
+   "definicion": "attendant, servant, slave, waiter",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "ministrī",
+    "genero": "m"
+   }
   },
   {
    "clave": "sino",
@@ -7178,7 +8115,13 @@
    "sinCasoEnElCorpus": 28,
    "formaAtestiguada": 0,
    "plantilla": "3|excipiō|excēp|except",
-   "definicion": "to take out, extract, pull out"
+   "definicion": "to take out, extract, pull out",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "excipere",
+    "perfecto": "excēpī",
+    "supino": "exceptum"
+   }
   },
   {
    "clave": "fleo",
@@ -7191,7 +8134,13 @@
    "sinCasoEnElCorpus": 27,
    "formaAtestiguada": 0,
    "plantilla": "2.poet-sync-perf|fleō|flēv|flēt",
-   "definicion": "to weep, cry"
+   "definicion": "to weep, cry",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "flēre",
+    "perfecto": "flēvī",
+    "supino": "flētum"
+   }
   },
   {
    "clave": "beatus",
@@ -7219,7 +8168,12 @@
    "flexiona": true,
    "formaAtestiguada": 1,
    "plantilla": "cōnspectus<4>",
-   "definicion": "a sight"
+   "definicion": "a sight",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "cōnspectūs",
+    "genero": "m"
+   }
   },
   {
    "clave": "prosum",
@@ -7257,7 +8211,13 @@
    "sinCasoEnElCorpus": 41,
    "formaAtestiguada": 1,
    "plantilla": "1+|dēlectō",
-   "definicion": "to delight, charm, please (+ accusative the person, who is delighted)"
+   "definicion": "to delight, charm, please (+ accusative the person, who is delighted)",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "dēlectāre",
+    "perfecto": "dēlectāvī",
+    "supino": "dēlectātum"
+   }
   },
   {
    "clave": "laus",
@@ -7271,7 +8231,12 @@
    "flexiona": true,
    "formaAtestiguada": 6,
    "plantilla": "laus/laud<3>|g=f",
-   "definicion": "praise, glory, repute"
+   "definicion": "praise, glory, repute",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "laudis",
+    "genero": "f"
+   }
   },
   {
    "clave": "carcer",
@@ -7285,7 +8250,12 @@
    "flexiona": true,
    "formaAtestiguada": 1,
    "plantilla": "carcer/carcer<3>|g=m",
-   "definicion": "prison, jail"
+   "definicion": "prison, jail",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "carceris",
+    "genero": "m"
+   }
   },
   {
    "clave": "forte",
@@ -7389,7 +8359,13 @@
    "sinCasoEnElCorpus": 31,
    "formaAtestiguada": 0,
    "plantilla": "2|retineō|retinu|retent",
-   "definicion": "to keep or hold back, detain, restrain, retain, confine, contain; delay"
+   "definicion": "to keep or hold back, detain, restrain, retain, confine, contain; delay",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "retinēre",
+    "perfecto": "retinuī",
+    "supino": "retentum"
+   }
   },
   {
    "clave": "ob",
@@ -7415,7 +8391,13 @@
    "sinCasoEnElCorpus": 36,
    "formaAtestiguada": 4,
    "plantilla": "1+.poet-sync-perf|dubitō",
-   "definicion": "to waver (in opinion), be uncertain, doubt, question, be in doubt"
+   "definicion": "to waver (in opinion), be uncertain, doubt, question, be in doubt",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "dubitāre",
+    "perfecto": "dubitāvī",
+    "supino": "dubitātum"
+   }
   },
   {
    "clave": "ignoro",
@@ -7482,7 +8464,13 @@
    "sinCasoEnElCorpus": 34,
    "formaAtestiguada": 0,
    "plantilla": "3|percutiō|percuss|percuss",
-   "definicion": "to strike, beat"
+   "definicion": "to strike, beat",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "percutere",
+    "perfecto": "percussī",
+    "supino": "percussum"
+   }
   },
   {
    "clave": "uix",
@@ -7516,7 +8504,13 @@
    "sinCasoEnElCorpus": 37,
    "formaAtestiguada": 5,
    "plantilla": "3.sup-futr-actv-only|discō|didic|discit",
-   "definicion": "to learn"
+   "definicion": "to learn",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "discere",
+    "perfecto": "didicī",
+    "supino": "discitum"
+   }
   },
   {
    "clave": "quemadmodum",
@@ -7537,7 +8531,13 @@
    "sinCasoEnElCorpus": 31,
    "formaAtestiguada": 1,
    "plantilla": "4++.pass-impers|dormiō",
-   "definicion": "to sleep"
+   "definicion": "to sleep",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "dormīre",
+    "perfecto": "dormīvī",
+    "supino": "dormītum"
+   }
   },
   {
    "clave": "scriptura",
@@ -7551,7 +8551,12 @@
    "flexiona": true,
    "formaAtestiguada": 18,
    "plantilla": "scrīptūra<1>",
-   "definicion": "a writing, something written"
+   "definicion": "a writing, something written",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "scrīptūrae",
+    "genero": "f"
+   }
   },
   {
    "clave": "galli",
@@ -7572,7 +8577,13 @@
    "sinCasoEnElCorpus": 28,
    "formaAtestiguada": 0,
    "plantilla": "3|īnstituō|īnstitu|īnstitūt",
-   "definicion": "to set up, establish, found, institute or arrange"
+   "definicion": "to set up, establish, found, institute or arrange",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "īnstituere",
+    "perfecto": "īnstituī",
+    "supino": "īnstitūtum"
+   }
   },
   {
    "clave": "acies",
@@ -7586,7 +8597,12 @@
    "flexiona": true,
    "formaAtestiguada": 8,
    "plantilla": "aciēs<5>",
-   "definicion": "sharp edge or point"
+   "definicion": "sharp edge or point",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "acieī",
+    "genero": "f"
+   }
   },
   {
    "clave": "umquam",
@@ -7633,7 +8649,13 @@
    "sinCasoEnElCorpus": 33,
    "formaAtestiguada": 0,
    "plantilla": "1+|significō",
-   "definicion": "to show, express, signify, point out"
+   "definicion": "to show, express, signify, point out",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "significāre",
+    "perfecto": "significāvī",
+    "supino": "significātum"
+   }
   },
   {
    "clave": "glorior",
@@ -7660,7 +8682,12 @@
    "flexiona": true,
    "formaAtestiguada": 20,
    "plantilla": "magistrātus<4>",
-   "definicion": "a magistrate, official"
+   "definicion": "a magistrate, official",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "magistrātūs",
+    "genero": "m"
+   }
   },
   {
    "clave": "comitium",
@@ -7674,7 +8701,12 @@
    "flexiona": true,
    "formaAtestiguada": 1,
    "plantilla": "comitium<2>",
-   "definicion": "A place in the forum where comitia (election assemblies) were held."
+   "definicion": "A place in the forum where comitia (election assemblies) were held.",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "comitiī",
+    "genero": "n"
+   }
   },
   {
    "clave": "perhibeo",
@@ -7726,7 +8758,13 @@
    "sinCasoEnElCorpus": 35,
    "formaAtestiguada": 7,
    "plantilla": "1+.poet-sync-perf|mandō",
-   "definicion": "to order, command, enjoin"
+   "definicion": "to order, command, enjoin",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "mandāre",
+    "perfecto": "mandāvī",
+    "supino": "mandātum"
+   }
   },
   {
    "clave": "reperio",
@@ -7739,7 +8777,13 @@
    "sinCasoEnElCorpus": 30,
    "formaAtestiguada": 3,
    "plantilla": "4.p3inf|reperiō|repper|repert",
-   "definicion": "to find, find out, learn, realise, ascertain, discover, invent"
+   "definicion": "to find, find out, learn, realise, ascertain, discover, invent",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "reperīre",
+    "perfecto": "repperī",
+    "supino": "repertum"
+   }
   },
   {
    "clave": "notus",
@@ -7766,7 +8810,13 @@
    "sinCasoEnElCorpus": 33,
    "formaAtestiguada": 0,
    "plantilla": "3|sūmō|sūmps/surēm/surēmps|sūmpt",
-   "definicion": "to take, take up, catch, assume, seize, claim, arrogate"
+   "definicion": "to take, take up, catch, assume, seize, claim, arrogate",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "sūmere",
+    "perfecto": "sūmpsī",
+    "supino": "sūmptum"
+   }
   },
   {
    "clave": "caedo",
@@ -7779,7 +8829,13 @@
    "sinCasoEnElCorpus": 28,
    "formaAtestiguada": 0,
    "plantilla": "3|caedō|cecīd|caes",
-   "definicion": "to cut, hew, fell"
+   "definicion": "to cut, hew, fell",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "caedere",
+    "perfecto": "cecīdī",
+    "supino": "caesum"
+   }
   },
   {
    "clave": "defero",
@@ -7853,7 +8909,12 @@
    "flexiona": true,
    "formaAtestiguada": 23,
    "plantilla": "doctrīna<1>",
-   "definicion": "teaching, instruction"
+   "definicion": "teaching, instruction",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "doctrīnae",
+    "genero": "f"
+   }
   },
   {
    "clave": "familiaris",
@@ -7889,7 +8950,13 @@
    "sinCasoEnElCorpus": 38,
    "formaAtestiguada": 0,
    "plantilla": "1+|suscitō",
-   "definicion": "to lift up, raise, elevate"
+   "definicion": "to lift up, raise, elevate",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "suscitāre",
+    "perfecto": "suscitāvī",
+    "supino": "suscitātum"
+   }
   },
   {
    "clave": "facultas",
@@ -7955,7 +9022,13 @@
    "sinCasoEnElCorpus": 24,
    "formaAtestiguada": 0,
    "plantilla": "3|frangō|frēg|frāct",
-   "definicion": "to break, shatter"
+   "definicion": "to break, shatter",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "frangere",
+    "perfecto": "frēgī",
+    "supino": "frāctum"
+   }
   },
   {
    "clave": "praeterea",
@@ -7982,7 +9055,12 @@
    "flexiona": true,
    "formaAtestiguada": 12,
    "plantilla": "plāga<1>",
-   "definicion": "plague, misfortune"
+   "definicion": "plague, misfortune",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "plāgae",
+    "genero": "f"
+   }
   },
   {
    "clave": "nauigo",
@@ -8016,7 +9094,13 @@
    "sinCasoEnElCorpus": 33,
    "formaAtestiguada": 2,
    "plantilla": "1+.poet-sync-perf|ministrō",
-   "definicion": "to attend, wait upon, serve"
+   "definicion": "to attend, wait upon, serve",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "ministrāre",
+    "perfecto": "ministrāvī",
+    "supino": "ministrātum"
+   }
   },
   {
    "clave": "perficio",
@@ -8029,7 +9113,13 @@
    "sinCasoEnElCorpus": 26,
    "formaAtestiguada": 2,
    "plantilla": "3|perficiō|perfēc|perfect",
-   "definicion": "to finish, complete"
+   "definicion": "to finish, complete",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "perficere",
+    "perfecto": "perfēcī",
+    "supino": "perfectum"
+   }
   },
   {
    "clave": "consuesco",
@@ -8042,7 +9132,13 @@
    "sinCasoEnElCorpus": 39,
    "formaAtestiguada": 0,
    "plantilla": "3|cōnsuēscō|cōnsuēv|cōnsuēt",
-   "definicion": "to accustom, inure or habituate, tend to"
+   "definicion": "to accustom, inure or habituate, tend to",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "cōnsuēscere",
+    "perfecto": "cōnsuēvī",
+    "supino": "cōnsuētum"
+   }
   },
   {
    "clave": "appropinquo",
@@ -8069,7 +9165,12 @@
    "flexiona": true,
    "formaAtestiguada": 3,
    "plantilla": "parabola<1>",
-   "definicion": "A comparison, illustration, likeness"
+   "definicion": "A comparison, illustration, likeness",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "parabolae",
+    "genero": "f"
+   }
   },
   {
    "clave": "tempto",
@@ -8082,7 +9183,13 @@
    "sinCasoEnElCorpus": 30,
    "formaAtestiguada": 0,
    "plantilla": "1+|temptō",
-   "definicion": "to test the strength; to make an attack upon"
+   "definicion": "to test the strength; to make an attack upon",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "temptāre",
+    "perfecto": "temptāvī",
+    "supino": "temptātum"
+   }
   },
   {
    "clave": "tribulatio",
@@ -8160,7 +9267,12 @@
    "flexiona": true,
    "formaAtestiguada": 18,
    "plantilla": "concilium<2>",
-   "definicion": "a council"
+   "definicion": "a council",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "conciliī",
+    "genero": "n"
+   }
   },
   {
    "clave": "rapio",
@@ -8173,7 +9285,13 @@
    "sinCasoEnElCorpus": 28,
    "formaAtestiguada": 0,
    "plantilla": "3|rapiō|rapu|rapt",
-   "definicion": "to snatch, grab, carry off, abduct, rape, steal"
+   "definicion": "to snatch, grab, carry off, abduct, rape, steal",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "rapere",
+    "perfecto": "rapuī",
+    "supino": "raptum"
+   }
   },
   {
    "clave": "consolor",
@@ -8213,7 +9331,13 @@
    "sinCasoEnElCorpus": 22,
    "formaAtestiguada": 0,
    "plantilla": "1+.poet-sync-perf|occupō",
-   "definicion": "to occupy, fill, take up"
+   "definicion": "to occupy, fill, take up",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "occupāre",
+    "perfecto": "occupāvī",
+    "supino": "occupātum"
+   }
   },
   {
    "clave": "membrum",
@@ -8227,7 +9351,12 @@
    "flexiona": true,
    "formaAtestiguada": 4,
    "plantilla": "membrum<2>",
-   "definicion": "limb of the body; member."
+   "definicion": "limb of the body; member.",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "membrī",
+    "genero": "n"
+   }
   },
   {
    "clave": "praetereo",
@@ -8275,7 +9404,13 @@
    "sinCasoEnElCorpus": 25,
    "formaAtestiguada": 0,
    "plantilla": "3|colligō|collēg|collēct",
-   "definicion": "to gather, draw, bring or collect (together), assemble, pick up; contract, draw up, compress, concentrate; harvest"
+   "definicion": "to gather, draw, bring or collect (together), assemble, pick up; contract, draw up, compress, concentrate; harvest",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "colligere",
+    "perfecto": "collēgī",
+    "supino": "collēctum"
+   }
   },
   {
    "clave": "euangelizo",
@@ -8296,7 +9431,13 @@
    "sinCasoEnElCorpus": 28,
    "formaAtestiguada": 0,
    "plantilla": "3|effundō|effūd|effūs",
-   "definicion": "to pour out, shed, spread abroad, drain off"
+   "definicion": "to pour out, shed, spread abroad, drain off",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "effundere",
+    "perfecto": "effūdī",
+    "supino": "effūsum"
+   }
   },
   {
    "clave": "dux",
@@ -8345,7 +9486,12 @@
    "flexiona": true,
    "formaAtestiguada": 10,
    "plantilla": "testis<3>|g=m|g2=f",
-   "definicion": "witness"
+   "definicion": "witness",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "testis",
+    "genero": "m"
+   }
   },
   {
    "clave": "adnuntio",
@@ -8358,7 +9504,13 @@
    "sinCasoEnElCorpus": 27,
    "formaAtestiguada": 2,
    "plantilla": "1+|adnūntiō",
-   "definicion": "to announce, make known, report, proclaim, relate"
+   "definicion": "to announce, make known, report, proclaim, relate",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "adnūntiāre",
+    "perfecto": "adnūntiāvī",
+    "supino": "adnūntiātum"
+   }
   },
   {
    "clave": "peccator",
@@ -8385,7 +9537,13 @@
    "sinCasoEnElCorpus": 24,
    "formaAtestiguada": 0,
    "plantilla": "3.old-impf-futr|pariō|peper|parit/part|pres_actv_inf=parere/parīre|pres_pasv_inf=parī/parīrī|futr_actv_ptc=paritūrus/partūrus",
-   "definicion": "to bear, to give birth to"
+   "definicion": "to bear, to give birth to",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "parere",
+    "perfecto": "peperī",
+    "supino": "paritum"
+   }
   },
   {
    "clave": "prior",
@@ -8448,7 +9606,13 @@
    "sinCasoEnElCorpus": 34,
    "formaAtestiguada": 0,
    "plantilla": "3|permittō|permīs|permiss",
-   "definicion": "to let go, let loose"
+   "definicion": "to let go, let loose",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "permittere",
+    "perfecto": "permīsī",
+    "supino": "permissum"
+   }
   },
   {
    "clave": "thronus",
@@ -8462,7 +9626,12 @@
    "flexiona": true,
    "formaAtestiguada": 1,
    "plantilla": "thronus<2>",
-   "definicion": "a throne"
+   "definicion": "a throne",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "thronī",
+    "genero": "m"
+   }
   },
   {
    "clave": "consummo",
@@ -8475,7 +9644,13 @@
    "sinCasoEnElCorpus": 26,
    "formaAtestiguada": 0,
    "plantilla": "1+|cōnsummō",
-   "definicion": "to sum up"
+   "definicion": "to sum up",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "cōnsummāre",
+    "perfecto": "cōnsummāvī",
+    "supino": "cōnsummātum"
+   }
   },
   {
    "clave": "commoueo",
@@ -8573,7 +9748,13 @@
    "sinCasoEnElCorpus": 35,
    "formaAtestiguada": 0,
    "plantilla": "1.nopass|cōnstō|cōnstit|cōnstāt",
-   "definicion": "to stand together"
+   "definicion": "to stand together",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "cōnstāre",
+    "perfecto": "cōnstitī",
+    "supino": "cōnstātum"
+   }
   },
   {
    "clave": "curro",
@@ -8586,7 +9767,13 @@
    "sinCasoEnElCorpus": 27,
    "formaAtestiguada": 1,
    "plantilla": "3|currō|cucurr/curr|curs",
-   "definicion": "to run"
+   "definicion": "to run",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "currere",
+    "perfecto": "cucurrī",
+    "supino": "cursum"
+   }
   },
   {
    "clave": "possideo",
@@ -8599,7 +9786,13 @@
    "sinCasoEnElCorpus": 34,
    "formaAtestiguada": 2,
    "plantilla": "2|possideō|possēd|possess",
-   "definicion": "to have, hold, own, possess"
+   "definicion": "to have, hold, own, possess",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "possidēre",
+    "perfecto": "possēdī",
+    "supino": "possessum"
+   }
   },
   {
    "clave": "forum",
@@ -8613,7 +9806,12 @@
    "flexiona": true,
    "formaAtestiguada": 13,
    "plantilla": "forum<2>",
-   "definicion": "public place, marketplace,"
+   "definicion": "public place, marketplace,",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "forī",
+    "genero": "n"
+   }
   },
   {
    "clave": "misceo",
@@ -8627,7 +9825,13 @@
    "flexiona": true,
    "formaAtestiguada": 0,
    "plantilla": "2.p3inf|misceō|miscu|mixt/mist",
-   "definicion": "to mix; to mingle; to intermingle"
+   "definicion": "to mix; to mingle; to intermingle",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "miscēre",
+    "perfecto": "miscuī",
+    "supino": "mixtum"
+   }
   },
   {
    "clave": "decerno",
@@ -8640,7 +9844,13 @@
    "sinCasoEnElCorpus": 27,
    "formaAtestiguada": 1,
    "plantilla": "3.poet-sync-perf|dēcernō|dēcrēv|dēcrēt",
-   "definicion": "to decide, decide upon, settle, determine (especially something disputed or doubtful)"
+   "definicion": "to decide, decide upon, settle, determine (especially something disputed or doubtful)",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "dēcernere",
+    "perfecto": "dēcrēvī",
+    "supino": "dēcrētum"
+   }
   },
   {
    "clave": "perfero",
@@ -8666,7 +9876,13 @@
    "sinCasoEnElCorpus": 26,
    "formaAtestiguada": 0,
    "plantilla": "3.poet-sync-perf|dēpōnō|dēposu/dēposīv|dēposit/dēpost",
-   "definicion": "to lay, set, put or place aside or away; deposit"
+   "definicion": "to lay, set, put or place aside or away; deposit",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "dēpōnere",
+    "perfecto": "dēposuī",
+    "supino": "dēpositum"
+   }
   },
   {
    "clave": "centurio",
@@ -8701,7 +9917,13 @@
    "sinCasoEnElCorpus": 19,
    "formaAtestiguada": 0,
    "plantilla": "3|claudō|claus|claus",
-   "definicion": "to shut up, close, lock"
+   "definicion": "to shut up, close, lock",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "claudere",
+    "perfecto": "clausī",
+    "supino": "clausum"
+   }
   },
   {
    "clave": "par",
@@ -8756,7 +9978,12 @@
    "flexiona": true,
    "formaAtestiguada": 6,
    "plantilla": "beneficium<2>",
-   "definicion": "benefit"
+   "definicion": "benefit",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "beneficiī",
+    "genero": "n"
+   }
   },
   {
    "clave": "coniungo",
@@ -8769,7 +9996,13 @@
    "sinCasoEnElCorpus": 23,
    "formaAtestiguada": 1,
    "plantilla": "3|coniungō|coniūnx|coniūnct",
-   "definicion": "to bind together, connect, join, unite, yoke together, juxtapose"
+   "definicion": "to bind together, connect, join, unite, yoke together, juxtapose",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "coniungere",
+    "perfecto": "coniūnxī",
+    "supino": "coniūnctum"
+   }
   },
   {
    "clave": "uiginti",
@@ -8791,7 +10024,13 @@
    "flexiona": true,
    "formaAtestiguada": 0,
    "plantilla": "3|subiciō|subiēc|subiect",
-   "definicion": "to throw, lay, place, set or bring under or near"
+   "definicion": "to throw, lay, place, set or bring under or near",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "subicere",
+    "perfecto": "subiēcī",
+    "supino": "subiectum"
+   }
   },
   {
    "clave": "triginta",
@@ -8830,7 +10069,12 @@
    "flexiona": true,
    "formaAtestiguada": 5,
    "plantilla": "odium<2>",
-   "definicion": "hatred, ill-will, aversion, dislike, disgust, detestation, , loathing, enmity or their manifestation"
+   "definicion": "hatred, ill-will, aversion, dislike, disgust, detestation, , loathing, enmity or their manifestation",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "odiī",
+    "genero": "n"
+   }
   },
   {
    "clave": "odi",
@@ -8885,7 +10129,12 @@
    "flexiona": true,
    "formaAtestiguada": 8,
    "plantilla": "poena<1>",
-   "definicion": "penalty, punishment"
+   "definicion": "penalty, punishment",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "poenae",
+    "genero": "f"
+   }
   },
   {
    "clave": "eripio",
@@ -8898,7 +10147,13 @@
    "sinCasoEnElCorpus": 26,
    "formaAtestiguada": 0,
    "plantilla": "3|ēripiō|ēripu|ērept",
-   "definicion": "to rescue, deliver, free, save"
+   "definicion": "to rescue, deliver, free, save",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "ēripere",
+    "perfecto": "ēripuī",
+    "supino": "ēreptum"
+   }
   },
   {
    "clave": "subito",
@@ -8925,7 +10180,12 @@
    "flexiona": true,
    "formaAtestiguada": 19,
    "plantilla": "patria<1>",
-   "definicion": "fatherland, native land"
+   "definicion": "fatherland, native land",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "patriae",
+    "genero": "f"
+   }
   },
   {
    "clave": "calix",
@@ -8953,7 +10213,12 @@
    "flexiona": true,
    "formaAtestiguada": 10,
    "plantilla": "mercēs/mercēd<3>|g=f",
-   "definicion": "pay, wages, reward"
+   "definicion": "pay, wages, reward",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "mercēdis",
+    "genero": "f"
+   }
   },
   {
    "clave": "uigilo",
@@ -9010,7 +10275,12 @@
    "flexiona": true,
    "formaAtestiguada": 12,
    "plantilla": "misericordia<1>",
-   "definicion": "pity, compassion, mercy, lovingkindness, tenderness, heartedness"
+   "definicion": "pity, compassion, mercy, lovingkindness, tenderness, heartedness",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "misericordiae",
+    "genero": "f"
+   }
   },
   {
    "clave": "conseruo",
@@ -9032,7 +10302,12 @@
    "flexiona": true,
    "formaAtestiguada": 14,
    "plantilla": "memoria<1>",
-   "definicion": "memory; the ability to remember"
+   "definicion": "memory; the ability to remember",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "memoriae",
+    "genero": "f"
+   }
   },
   {
    "clave": "necessarius",
@@ -9069,7 +10344,12 @@
    "flexiona": true,
    "formaAtestiguada": 9,
    "plantilla": "amīcitia<1>",
-   "definicion": "friendship"
+   "definicion": "friendship",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "amīcitiae",
+    "genero": "f"
+   }
   },
   {
    "clave": "scientia",
@@ -9082,7 +10362,12 @@
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
    "formaAtestiguada": 17,
-   "plantilla": "scientia<1>"
+   "plantilla": "scientia<1>",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "scientiae",
+    "genero": "f"
+   }
   },
   {
    "clave": "sano",
@@ -9095,7 +10380,13 @@
    "sinCasoEnElCorpus": 24,
    "formaAtestiguada": 1,
    "plantilla": "1+|sānō",
-   "definicion": "to heal, cure"
+   "definicion": "to heal, cure",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "sānāre",
+    "perfecto": "sānāvī",
+    "supino": "sānātum"
+   }
   },
   {
    "clave": "permaneo",
@@ -9108,7 +10399,13 @@
    "sinCasoEnElCorpus": 34,
    "formaAtestiguada": 0,
    "plantilla": "2|permaneō|permāns|permāns",
-   "definicion": "to stay to the end, hold out"
+   "definicion": "to stay to the end, hold out",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "permanēre",
+    "perfecto": "permānsī",
+    "supino": "permānsum"
+   }
   },
   {
    "clave": "remitto",
@@ -9121,7 +10418,13 @@
    "sinCasoEnElCorpus": 30,
    "formaAtestiguada": 0,
    "plantilla": "3|remittō|remīs|remiss",
-   "definicion": "to send back, to remit, to throw back, restore"
+   "definicion": "to send back, to remit, to throw back, restore",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "remittere",
+    "perfecto": "remīsī",
+    "supino": "remissum"
+   }
   },
   {
    "clave": "hortus",
@@ -9135,7 +10438,12 @@
    "flexiona": true,
    "formaAtestiguada": 5,
    "plantilla": "hortus<2>",
-   "definicion": "garden"
+   "definicion": "garden",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "hortī",
+    "genero": "m"
+   }
   },
   {
    "clave": "pugna",
@@ -9149,7 +10457,12 @@
    "flexiona": true,
    "formaAtestiguada": 12,
    "plantilla": "pugna<1>",
-   "definicion": "a fight, battle, combat, action"
+   "definicion": "a fight, battle, combat, action",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "pugnae",
+    "genero": "f"
+   }
   },
   {
    "clave": "conor",
@@ -9190,7 +10503,12 @@
    "flexiona": true,
    "formaAtestiguada": 19,
    "plantilla": "fāma<1>",
-   "definicion": "fame"
+   "definicion": "fame",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "fāmae",
+    "genero": "f"
+   }
   },
   {
    "clave": "carus",
@@ -9218,7 +10536,12 @@
    "flexiona": true,
    "formaAtestiguada": 12,
    "plantilla": "familia<1>|gen_sg=familiae/familiās",
-   "definicion": "a household"
+   "definicion": "a household",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "familiae",
+    "genero": "f"
+   }
   },
   {
    "clave": "uoluptas",
@@ -9239,7 +10562,13 @@
    "sinCasoEnElCorpus": 26,
    "formaAtestiguada": 1,
    "plantilla": "3|contemnō|contemps/contems|contempt/contemt",
-   "definicion": "to scorn, despise, show contempt"
+   "definicion": "to scorn, despise, show contempt",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "contemnere",
+    "perfecto": "contempsī",
+    "supino": "contemptum"
+   }
   },
   {
    "clave": "honestus",
@@ -9280,7 +10609,12 @@
    "flexiona": true,
    "formaAtestiguada": 21,
    "plantilla": "dīligentia<1>",
-   "definicion": "diligence, care, attentiveness, discipline"
+   "definicion": "diligence, care, attentiveness, discipline",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "dīligentiae",
+    "genero": "f"
+   }
   },
   {
    "clave": "dignitas",
@@ -9308,7 +10642,12 @@
    "flexiona": true,
    "formaAtestiguada": 6,
    "plantilla": "cāsus<4>",
-   "definicion": "a fall, downwards movement"
+   "definicion": "a fall, downwards movement",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "cāsūs",
+    "genero": "m"
+   }
   },
   {
    "clave": "tribus",
@@ -9322,7 +10661,12 @@
    "flexiona": true,
    "formaAtestiguada": 48,
    "plantilla": "tribus<4>|g=f",
-   "definicion": "One of the three original tribes of Rome: Ramnes, Tities, Luceres."
+   "definicion": "One of the three original tribes of Rome: Ramnes, Tities, Luceres.",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "tribūs",
+    "genero": "f"
+   }
   },
   {
    "clave": "modicus",
@@ -9350,7 +10694,12 @@
    "flexiona": true,
    "formaAtestiguada": 15,
    "plantilla": "dēsertum<2>",
-   "definicion": "a desert, wasteland"
+   "definicion": "a desert, wasteland",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "dēsertī",
+    "genero": "n"
+   }
   },
   {
    "clave": "praesertim",
@@ -9377,7 +10726,12 @@
    "flexiona": true,
    "formaAtestiguada": 12,
    "plantilla": "castellum<2>",
-   "definicion": "castle, fort, citadel, fortress, stronghold"
+   "definicion": "castle, fort, citadel, fortress, stronghold",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "castellī",
+    "genero": "n"
+   }
   },
   {
    "clave": "cogitatio",
@@ -9481,7 +10835,13 @@
    "sinCasoEnElCorpus": 23,
    "formaAtestiguada": 2,
    "plantilla": "1+|cōnsīderō",
-   "definicion": "to examine, look at or inspect, survey"
+   "definicion": "to examine, look at or inspect, survey",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "cōnsīderāre",
+    "perfecto": "cōnsīderāvī",
+    "supino": "cōnsīderātum"
+   }
   },
   {
    "clave": "albus",
@@ -9509,7 +10869,12 @@
    "flexiona": true,
    "formaAtestiguada": 3,
    "plantilla": "cibus<2>",
-   "definicion": "food, fodder"
+   "definicion": "food, fodder",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "cibī",
+    "genero": "m"
+   }
   },
   {
    "clave": "prouideo",
@@ -9530,7 +10895,13 @@
    "sinCasoEnElCorpus": 16,
    "formaAtestiguada": 0,
    "plantilla": "1+|alligō",
-   "definicion": "to bind to, up or around something, tie, fetter, fasten; bandage"
+   "definicion": "to bind to, up or around something, tie, fetter, fasten; bandage",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "alligāre",
+    "perfecto": "alligāvī",
+    "supino": "alligātum"
+   }
   },
   {
    "clave": "utique",
@@ -9551,7 +10922,13 @@
    "sinCasoEnElCorpus": 30,
    "formaAtestiguada": 2,
    "plantilla": "1+.poet-sync-perf|narrō",
-   "definicion": "to tell, say, relate"
+   "definicion": "to tell, say, relate",
+   "paradigma": {
+    "tipo": "verbo",
+    "infinitivo": "narrāre",
+    "perfecto": "narrāvī",
+    "supino": "narrātum"
+   }
   }
  ]
 }

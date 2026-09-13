@@ -12,6 +12,7 @@ import {
   siempreUt, tasasCiegasUtFinal, type ItemUtFinal,
 } from '@/scripts/lib/gate-ut-final';
 import { VERBOS_L1 } from '@/lib/data/languages/la/lexicon-l1';
+import { palabraFueraDeL1 } from './ayuda/fuera-de-l1';
 
 const V = (l: string) => VERBOS_L1.find((x) => x.lema === l)!;
 const base = LOTE_UT_FINAL.find((i) => i.id === 'la-uf-01')!;
@@ -109,7 +110,7 @@ describe('los venenos que el gate tiene que cazar', () => {
     expect(clases(con({ marco: 'Rēx venit ut ___.' }))).toContain('marco-regala-la-forma');
   });
   it('el marco con vocabulario de fuera de L1', () => {
-    expect(clases(con({ marco: 'Mīles venit ___.' }))).toContain('marco-fuera-de-l1');
+    expect(clases(con({ marco: `${palabraFueraDeL1()} venit ___.` }))).toContain('marco-fuera-de-l1');
   });
   it('y —lo más fácil de colar— una negativa cuya glosa no niega', () => {
     const neg = LOTE_UT_FINAL.find((i) => i.conjuncion === 'nē')!;

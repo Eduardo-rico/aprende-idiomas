@@ -65,6 +65,8 @@ import { IRREGULARES_L1 } from '../../lib/data/languages/la/irregulares';
 import { DEPONENTES_L1 } from '../../lib/data/languages/la/deponentes';
 import { PLURALIA_TANTUM } from '../../lib/data/languages/la/plural-tantum';
 import { leerFrases } from './atestar-ut';
+import { leerPlantillaNominal, entradaNominal, leerPlantillaVerbal, entradaVerbal } from './parsear-paradigma';
+import { paradigmaNominal, infectum, perfectum } from '../../lib/data/languages/la/paradigma-la';
 
 const SALIDA = 'lib/data/languages/la/macrones.json';
 const API = 'https://en.wiktionary.org/w/api.php';
@@ -122,6 +124,12 @@ export interface FilaDeMacron {
    *  el lingüista, y esto reduce 141 revisiones a las pocas que no solapan.
    *  Y un lema sin definición sale «no verificable», nunca «malo». */
   definicion?: string;
+  /** El paradigma DERIVADO de la plantilla y CONFIRMADO contra el corpus.
+   *  Ausente cuando la plantilla no lo da (3.ª sin tema, 2.ª en `-er` sin
+   *  tema, irregulares) o cuando el corpus no lo confirma. Ver
+   *  `parsear-paradigma.ts` y `importados.ts`. */
+  paradigma?: { tipo: 'nombre'; genitivo: string; genero: 'm' | 'f' | 'n' }
+    | { tipo: 'verbo'; infinitivo: string; perfecto: string; supino?: string };
   /** Los argumentos CRUDOS de la plantilla de encabezado. De ahí sale el
    *  paradigma —`rēx/rēg<3>|g=m` da tema, declinación y género;
    *  `4.pass-impers|veniō|vēn|vent` da conjugación y temas—. Se guardan sin
@@ -287,6 +295,9 @@ async function main() {
   // TERCER CAMINO: cuenta de rasgos de caso en el treebank, por lema.
   const casos = new Map<string, { con: number; sin: number }>();
   const formasDelCorpus = new Map<string, number>();
+  // El genitivo SINGULAR por lema: el plural (`cōpiārum`) no contradice al
+  // singular (`cōpiae`), y compararlos daba trece choques falsos.
+  const genitivoSg = new Map<string, Set<string>>();
   for (const fr of leerFrases()) {
     for (const t of fr) {
       const k = sinCantidad(t.lema);
@@ -295,8 +306,41 @@ async function main() {
       if (/Case=/.test(t.feats)) r.con++; else r.sin++;
       const f = sinCantidad(t.forma);
       formasDelCorpus.set(f, (formasDelCorpus.get(f) ?? 0) + 1);
+      if (/Case=Gen/.test(t.feats) && /Number=Sing/.test(t.feats)) {
+        const g = genitivoSg.get(k) ?? new Set<string>();
+        g.add(f); genitivoSg.set(k, g);
+      }
     }
   }
+
+  /** El paradigma, derivado y CONFIRMADO. Lo que el corpus no confirma no
+   *  sale de aquí. */
+  const paradigmaDe = (clave: string, pos: string | null, plantilla: string | null): FilaDeMacron['paradigma'] => {
+    if (!plantilla) return undefined;
+    if (pos === 'noun') {
+      const pl = leerPlantillaNominal(plantilla);
+      const e = pl ? entradaNominal(pl) : null;
+      if (!e) return undefined;
+      let par: Record<string, string>;
+      try { par = paradigmaNominal(e); } catch { return undefined; }
+      if (!Object.values(par).some((x) => formasDelCorpus.has(sinCantidad(x)))) return undefined;
+      const gc = genitivoSg.get(clave);
+      if (gc && gc.size > 0 && !gc.has(sinCantidad(e.genitivo))) return undefined;
+      return { tipo: 'nombre', genitivo: e.genitivo, genero: e.genero };
+    }
+    if (pos === 'verb') {
+      const pl = leerPlantillaVerbal(plantilla);
+      const e = pl ? entradaVerbal(pl) : null;
+      if (!e) return undefined;
+      let inf: Record<string, string>; let perf: Record<string, string>;
+      try { inf = infectum(e); perf = perfectum(e); } catch { return undefined; }
+      const hayInf = Object.values(inf).some((x) => formasDelCorpus.has(sinCantidad(x)));
+      const hayPerf = Object.values(perf).some((x) => formasDelCorpus.has(sinCantidad(x)));
+      if (!hayInf || !hayPerf) return undefined;
+      return { tipo: 'verbo', infinitivo: e.infinitivo, perfecto: e.perfecto ?? '', ...(e.supino ? { supino: e.supino } : {}) };
+    }
+    return undefined;
+  };
   const crudo = new Map<string, { ipa: string | null; head: string | null; pos: string | null; plantilla: string | null; definicion: string | null; falta: boolean }>();
   for (let i = 0; i < titulos.length; i += 50) {
     for (const p of await lote(titulos.slice(i, i + 50))) {
@@ -346,6 +390,7 @@ async function main() {
         formaAtestiguada: formasDelCorpus.get(sinCantidad(forma)) ?? 0,
         ...(c?.plantilla ? { plantilla: c.plantilla } : {}),
         ...(c?.definicion ? { definicion: c.definicion } : {}),
+        ...((() => { const par = paradigmaDe(k, pos, c?.plantilla ?? null); return par ? { paradigma: par } : {}; })()),
       }
       : { clave: k, cantidad: null, origen: 'sin-dato', caminos: 0, posFuente: pos, uposCorpus: upos });
   }
@@ -374,6 +419,7 @@ async function main() {
     categoriaEnDisputa: disputadas,
     cantidadVariable: variables,
     flexionanEnElCorpus: flexionan,
+    conParadigma: filas.filter((f) => f.paradigma).length,
     conLaFormaDeCitaSinAtestiguar: filas.filter((f) => f.origen === 'fuente-externa' && f.formaAtestiguada === 0).length,
     porQueSeMiraLaFlexion: 'un indeclinable no lleva nunca `Case=`. `lātus` viene etiquetado ADV por el corpus y la fuente calla sobre su categoría, así que ni la cantidad ni la categoría lo cazan: sale 41 veces CON caso y 2 sin, y es un adjetivo declinado',
     porQueLaCategoriaSeCruza: 'el corpus etiqueta `tantus` y `cēterus` como ADV —su uso adverbial— y son adjetivos que DECLINAN: importarlos como indeclinables por fiarse de una etiqueta sola mete un error de datos que ningún gate de cantidad puede ver. Y `categoriaEnDisputa` es CONTRADICCIÓN, no silencio: los indeclinables de la fuente no llevan plantilla de encabezado, así que su categoría viene en blanco y eso no descalifica nada',
@@ -382,7 +428,8 @@ async function main() {
   console.log(`${SALIDA}: ${filas.length} filas`);
   console.log(`  lexicón propio ${cuenta('lexicon-propio')} · fuente externa ${cuenta('fuente-externa')} · sin dato ${cuenta('sin-dato')}`);
   console.log(`  discrepancias con el lexicón: ${filas.filter((f) => f.discrepancia).length}`);
-  console.log(`  categoría en disputa: ${disputadas} · cantidad variable: ${variables} · flexionan en el corpus: ${flexionan}`);
+  console.log(`  categoría en disputa: ${disputadas} · cantidad variable: ${variables} · flexionan: ${flexionan}`);
+  console.log(`  CON PARADIGMA derivado y confirmado: ${filas.filter((f) => f.paradigma).length}`);
   for (const f of filas.filter((x) => x.discrepancia)) console.log(`    ${f.enElLexicon} — ${f.discrepancia}`);
 }
 if (process.argv[1]?.endsWith('traer-macrones.ts')) void main();

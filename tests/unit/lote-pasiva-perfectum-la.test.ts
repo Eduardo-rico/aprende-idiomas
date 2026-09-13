@@ -8,6 +8,7 @@ import {
   type ItemPerfectum,
 } from '@/scripts/lib/gate-pasiva-perfectum';
 import { VERBOS_L1 } from '@/lib/data/languages/la/lexicon-l1';
+import { palabraFueraDeL1 } from './ayuda/fuera-de-l1';
 
 const V = (l: string) => VERBOS_L1.find((x) => x.lema === l)!;
 const base = LOTE_PASIVA_PERFECTUM.find((i) => i.id === 'la-pf-01')!;
@@ -91,7 +92,7 @@ describe('los venenos que el gate tiene que cazar', () => {
       .toContain('par-sin-atestiguar');
   });
   it('la frase con vocabulario de fuera de L1', () => {
-    expect(clases(con({ latin: 'Mīles ā Deō factum est.' }))).toContain('latin-fuera-de-l1');
+    expect(clases(con({ latin: `${palabraFueraDeL1()} ā Deō factum est.` }))).toContain('latin-fuera-de-l1');
   });
   it('la glosa sin hueco', () => {
     expect(clases(con({ glosa: 'La señal fue hecha por Dios.' }))).toContain('glosa-sin-hueco');

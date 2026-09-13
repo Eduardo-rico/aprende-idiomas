@@ -108,6 +108,16 @@ export function silabaLarga(s: string, siguiente: string | undefined): boolean {
   if (trasNucleo.length > 0) return true;                      // cerrada por su propia coda
   if (siguiente) {
     const arranque = (siguiente.replace(/qu/gi, 'q')).match(new RegExp(`^[^${VOCALES}]*`))?.[0] ?? '';
+    // `x` y `z` son consonantes DOBLES —/ks/ y /dz/— y cierran la sílaba
+    // anterior ellas solas. Faltaba aquí y estaba en el otro camino
+    // (`ortografia-la.ts`), así que los dos discrepaban sin que nadie lo
+    // notara: **los 182 lemas escritos a mano no tienen ni una `z`**, y la
+    // `x` de `rēx` o `vōx` es coda, no ataque. Hizo falta importar un
+    // préstamo griego —`baptizō`, `bap-ti-zō`— para tocar la regla.
+    //
+    // Una regla que el material nunca ejercita no está probada aunque esté
+    // escrita, y aquí sólo una de las dos copias la tenía.
+    if (/^[xz]/i.test(arranque)) return true;
     if (arranque.length >= 2 && !(MUTAS.includes(arranque[0]!) && LIQUIDAS.includes(arranque[1]!))) return true;
   }
   return false;

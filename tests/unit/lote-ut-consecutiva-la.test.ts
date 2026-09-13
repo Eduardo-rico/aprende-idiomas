@@ -8,6 +8,7 @@ import {
   tasasCiegasUtConsec, type ItemUtConsec,
 } from '@/scripts/lib/gate-ut-consecutiva';
 import { palabrasDesconocidas } from '@/scripts/lib/gate-vocabulario-del-marco';
+import { palabraFueraDeL1 } from './ayuda/fuera-de-l1';
 
 const base = LOTE_UT_CONSECUTIVA.find((i) => i.id === 'la-uc-01')!;
 const con = (p: Partial<ItemUtConsec>): ItemUtConsec => ({ ...base, ...p, ejes: { ...base.ejes, ...(p.ejes ?? {}) } });
@@ -121,7 +122,7 @@ describe('los venenos que el gate tiene que cazar', () => {
     expect(clases(con({ glosa: 'El rey es tan grande que teme ___ el pueblo.' }))).toContain('glosa-regala-la-respuesta');
   });
   it('y el latín de fuera de L1', () => {
-    expect(clases(con({ latin: 'Rēx tam magnus est ut mīles timeat.' }))).toContain('latin-fuera-de-l1');
+    expect(clases(con({ latin: `Rēx tam magnus est ut ${palabraFueraDeL1()} timeat.` }))).toContain('latin-fuera-de-l1');
   });
 });
 

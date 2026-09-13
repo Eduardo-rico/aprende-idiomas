@@ -7,6 +7,7 @@ import {
 } from '@/scripts/lib/gate-interrogativa-indirecta';
 import { todasLasFormasDeL1 } from '@/lib/data/languages/la/todas-las-formas';
 import { palabrasDesconocidas } from '@/scripts/lib/gate-vocabulario-del-marco';
+import { palabraFueraDeL1 } from './ayuda/fuera-de-l1';
 
 const sin = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').normalize('NFC').toLowerCase();
 const SUBJ = new Set(todasLasFormasDeL1().filter((f) => f.tabla === 'SUBJUNTIVOS').map((f) => sin(f.forma)));
@@ -90,7 +91,7 @@ describe('los venenos que el gate tiene que cazar', () => {
     expect(clases(con({ latin: 'Rēx rogat num venit.' }))).toContain('latin-sin-subjuntivo');
   });
   it('y el latín de fuera de L1', () => {
-    expect(clases(con({ latin: 'Mīles rogat num veniat.' }))).toContain('latin-fuera-de-l1');
+    expect(clases(con({ latin: `${palabraFueraDeL1()} rogat num veniat.` }))).toContain('latin-fuera-de-l1');
   });
 });
 

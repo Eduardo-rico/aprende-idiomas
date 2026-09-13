@@ -6,6 +6,7 @@ import {
   tasasCiegasNoCoincide, type ItemNoCoincide,
 } from '@/scripts/lib/gate-no-coincide';
 import { todasLasFormasDeL1 } from '@/lib/data/languages/la/todas-las-formas';
+import { palabraFueraDeL1 } from './ayuda/fuera-de-l1';
 
 const sin = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').normalize('NFC').toLowerCase();
 const SUBJ = new Set(todasLasFormasDeL1().filter((f) => f.tabla === 'SUBJUNTIVOS').map((f) => sin(f.forma)));
@@ -94,6 +95,6 @@ describe('los venenos que el gate tiene que cazar', () => {
     expect(clases(con({ glosa: 'Cuando el rey venía ___, el niño estaba de pie.' }))).toContain('glosa-regala-la-respuesta');
   });
   it('y el latín de fuera de L1', () => {
-    expect(clases(con({ latin: 'Cum mīles venīret, puer stābat.' }))).toContain('latin-fuera-de-l1');
+    expect(clases(con({ latin: `Cum ${palabraFueraDeL1()} venīret, puer stābat.` }))).toContain('latin-fuera-de-l1');
   });
 });

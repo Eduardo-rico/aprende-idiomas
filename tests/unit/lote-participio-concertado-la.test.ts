@@ -7,6 +7,7 @@ import {
   type ItemConcertado,
 } from '@/scripts/lib/gate-participio-concertado';
 import { VERBOS_L1 } from '@/lib/data/languages/la/lexicon-l1';
+import { palabraFueraDeL1 } from './ayuda/fuera-de-l1';
 
 const V = (l: string) => VERBOS_L1.find((x) => x.lema === l)!;
 const base = LOTE_PARTICIPIO_CONCERTADO.find((i) => i.id === 'la-pc-05')!;
@@ -100,7 +101,7 @@ describe('los venenos que el gate tiene que cazar', () => {
     expect(clases(con({ marco: 'Rēx puerum dīcentem ___ vocat.' }))).toContain('marco-regala-la-forma');
   });
   it('y el marco con vocabulario de fuera de L1', () => {
-    expect(clases(con({ marco: 'Mīles puerum ___ vocat.' }))).toContain('marco-fuera-de-l1');
+    expect(clases(con({ marco: `${palabraFueraDeL1()} puerum ___ vocat.` }))).toContain('marco-fuera-de-l1');
   });
 });
 

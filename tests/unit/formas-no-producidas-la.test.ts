@@ -138,7 +138,23 @@ describe.runIf(hayCorpus)('la auditoría contra el corpus', () => {
     // un hueco real de la máquina, aunque sea UN token y no bloquee ningún
     // punto: la máquina sincopa el perfecto (`laudāstis`, `laudārunt`) y no
     // el pluscuamperfecto.
-    expect(sin.length).toBeLessThan(130);
+    // EL TECHO SUBE PORQUE LA MÁQUINA CRECIÓ, y la cifra va con su
+    // composición para que no sea un número a ojo. Al importar 248 lemas del
+    // núcleo (2026-09-13) pasó de 97 a 806, y bajó a 381 al simetrizar el
+    // enumerador —a lo importado se le sacaba menos que a lo propio: le
+    // faltaban imperativo, subjuntivo completo, gerundivo, participio de
+    // futuro, y los infinitivos se tiraban enteros por un filtro defensivo
+    // que confundía un array con un Record—.
+    //
+    // Lo que queda, medido: 135 personales, 68 subjuntivos, 54 participios,
+    // 50 nominales (el i-stem `hostium`, el genitivo arcaico `cōnsilī`),
+    // 36 otros, 30 infinitivos, 8 gerundios. Son formas reales que la
+    // máquina aún no produce, no errores.
+    //
+    // 500 es un techo ABSOLUTO con margen sobre 381, no la cifra de hoy más
+    // un poco: un techo pegado a la medida se rompe en la siguiente
+    // importación sin que nada esté mal.
+    expect(sin.length).toBeLessThan(500);
   });
 
   it('el heteróclito más grande sigue siendo `loca`, el plural neutro de `locus`', () => {

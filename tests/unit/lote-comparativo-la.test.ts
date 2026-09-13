@@ -9,6 +9,7 @@ import {
 import { SEIS_EN_ILIS, SIN_GRADO, declinarComparativo, gradosDe, vaConPerifrasis } from '@/lib/data/languages/la/grado';
 import { declinarAdjetivo3a } from '@/lib/data/languages/la/adjetivos-3a';
 import { todasLasFormasDeL1 } from '@/lib/data/languages/la/todas-las-formas';
+import { palabraFueraDeL1 } from './ayuda/fuera-de-l1';
 
 const base = LOTE_COMPARATIVO.find((i) => i.id === 'la-gr-01')!;
 const con = (p: Partial<ItemGrado>): ItemGrado => ({ ...base, ...p, ejes: { ...base.ejes, ...(p.ejes ?? {}) } });
@@ -144,7 +145,7 @@ describe('los venenos que el gate tiene que cazar', () => {
     expect(clases(con({ marco: 'Rēgīna fidēlissima ___ est.' }))).toContain('marco-regala-la-forma');
   });
   it('y el marco con vocabulario de fuera de L1', () => {
-    expect(clases(con({ marco: 'Mīles ___ est.' }))).toContain('marco-fuera-de-l1');
+    expect(clases(con({ marco: `${palabraFueraDeL1()} ___ est.` }))).toContain('marco-fuera-de-l1');
   });
 });
 

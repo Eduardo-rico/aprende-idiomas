@@ -7,8 +7,8 @@
  "tokensDelCorpus": 214918,
  "cuantos": 800,
  "porcentajeDeTokensQueCubren": 81.6,
- "yaCubiertosPorLaMaquina": 258,
- "sinNingunaFormaProducida": 489,
+ "yaCubiertosPorLaMaquina": 499,
+ "sinNingunaFormaProducida": 243,
  "lemas": [
   {
    "lema": "et",
@@ -590,7 +590,7 @@
    "lema": "scribo",
    "n": 538,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9944237918215614,
    "formas": [
     "scriptum",
     "scribis",
@@ -675,7 +675,7 @@
    "lema": "scio",
    "n": 418,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9688995215311005,
    "formas": [
     "scio",
     "scire",
@@ -707,7 +707,7 @@
    "lema": "accipio",
    "n": 381,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9973753280839895,
    "formas": [
     "accepit",
     "accepi",
@@ -895,7 +895,7 @@
    "lema": "ago",
    "n": 312,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9935897435897436,
    "formas": [
     "agere",
     "agit",
@@ -906,7 +906,7 @@
    "lema": "credo",
    "n": 310,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "crediderunt",
     "credo",
@@ -1125,7 +1125,7 @@
    "lema": "puto",
    "n": 266,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9548872180451128,
    "formas": [
     "puto",
     "putes",
@@ -1198,7 +1198,7 @@
    "lema": "cognosco",
    "n": 246,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.975609756097561,
    "formas": [
     "cognouit",
     "cognouerunt",
@@ -1260,7 +1260,7 @@
    "lema": "quaero",
    "n": 229,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9868995633187773,
    "formas": [
     "quaeris",
     "quaerit",
@@ -1282,7 +1282,7 @@
    "lema": "animus",
    "n": 226,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "animo",
     "animi",
@@ -1293,7 +1293,7 @@
    "lema": "littera",
    "n": 225,
    "upos": "NOUN",
-   "cubierto": 0.9777777777777777,
+   "cubierto": 1,
    "formas": [
     "litteras",
     "litteris",
@@ -1304,7 +1304,7 @@
    "lema": "pono",
    "n": 222,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.990990990990991,
    "formas": [
     "posuit",
     "posita",
@@ -1326,7 +1326,7 @@
    "lema": "consilium",
    "n": 219,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.9041095890410958,
    "formas": [
     "consilio",
     "consilium",
@@ -1507,7 +1507,7 @@
    "lema": "hostis",
    "n": 194,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.7319587628865979,
    "formas": [
     "hostes",
     "hostium",
@@ -1615,7 +1615,7 @@
    "lema": "relinquo",
    "n": 176,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9943181818181818,
    "formas": [
     "reliquit",
     "relictis",
@@ -1626,7 +1626,7 @@
    "lema": "dimitto",
    "n": 176,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "dimisit",
     "dimittere",
@@ -1677,7 +1677,7 @@
    "lema": "modus",
    "n": 171,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "modi",
     "modo",
@@ -1688,7 +1688,7 @@
    "lema": "turba",
    "n": 170,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "turba",
     "turbae",
@@ -1710,7 +1710,7 @@
    "lema": "angelus",
    "n": 169,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "angelus",
     "angeli",
@@ -1732,7 +1732,7 @@
    "lema": "modo",
    "n": 166,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "modo"
    ]
@@ -1796,7 +1796,7 @@
    "lema": "mulier",
    "n": 162,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "mulier",
     "mulieres",
@@ -1818,7 +1818,7 @@
    "lema": "pes",
    "n": 161,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "pedes",
     "pedibus",
@@ -1829,7 +1829,7 @@
    "lema": "trado",
    "n": 161,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "tradidit",
     "tradiderunt",
@@ -1840,7 +1840,7 @@
    "lema": "reliquus",
    "n": 160,
    "upos": "DET",
-   "cubierto": 0,
+   "cubierto": 0.11875,
    "formas": [
     "reliquis",
     "reliqua",
@@ -1873,7 +1873,7 @@
    "lema": "sedeo",
    "n": 158,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "sedebat",
     "sedentem",
@@ -1884,7 +1884,7 @@
    "lema": "peto",
    "n": 157,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.7261146496815286,
    "formas": [
     "petere",
     "petit",
@@ -1906,7 +1906,7 @@
    "lema": "gloria",
    "n": 155,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "gloriam",
     "gloria",
@@ -1917,7 +1917,7 @@
    "lema": "iudico",
    "n": 152,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9539473684210527,
    "formas": [
     "iudicat",
     "iudico",
@@ -1981,7 +1981,7 @@
    "lema": "spes",
    "n": 146,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "spem",
     "spe",
@@ -2023,7 +2023,7 @@
    "lema": "manduco",
    "n": 143,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9790209790209791,
    "formas": [
     "manducare",
     "manducat",
@@ -2045,7 +2045,7 @@
    "lema": "propheta",
    "n": 142,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.9929577464788732,
    "formas": [
     "propheta",
     "prophetae",
@@ -2056,7 +2056,7 @@
    "lema": "finis",
    "n": 141,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "fines",
     "finibus",
@@ -2142,7 +2142,7 @@
    "lema": "teneo",
    "n": 138,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9927536231884058,
    "formas": [
     "tenere",
     "tenebat",
@@ -2164,7 +2164,7 @@
    "lema": "intellego",
    "n": 138,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9710144927536232,
    "formas": [
     "intellego",
     "intellegere",
@@ -2239,7 +2239,7 @@
    "lema": "miles",
    "n": 134,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "milites",
     "militum",
@@ -2272,7 +2272,7 @@
    "lema": "hora",
    "n": 132,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "hora",
     "horam",
@@ -2283,7 +2283,7 @@
    "lema": "accedo",
    "n": 131,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9847328244274809,
    "formas": [
     "accessit",
     "accesserunt",
@@ -2420,7 +2420,7 @@
    "lema": "iudicium",
    "n": 127,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.9763779527559056,
    "formas": [
     "iudicium",
     "iudicio",
@@ -2431,7 +2431,7 @@
    "lema": "diligo",
    "n": 127,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 0.9921259842519685,
    "formas": [
     "diligit",
     "diliges",
@@ -2486,7 +2486,7 @@
    "lema": "tollo",
    "n": 125,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.992,
    "formas": [
     "tolle",
     "sustulit",
@@ -2497,7 +2497,7 @@
    "lema": "surgo",
    "n": 124,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "surgens",
     "surge",
@@ -2519,7 +2519,7 @@
    "lema": "oculus",
    "n": 123,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "oculos",
     "oculis",
@@ -2541,7 +2541,7 @@
    "lema": "curo",
    "n": 123,
    "upos": "VERB",
-   "cubierto": 0.22764227642276422,
+   "cubierto": 0.9512195121951219,
    "formas": [
     "cura",
     "curauit",
@@ -2574,7 +2574,7 @@
    "lema": "tres",
    "n": 121,
    "upos": "NUM",
-   "cubierto": 0,
+   "cubierto": 0.33884297520661155,
    "formas": [
     "tribus",
     "tres",
@@ -2647,7 +2647,7 @@
    "lema": "copia",
    "n": 119,
    "upos": "NOUN",
-   "cubierto": 0.7815126050420168,
+   "cubierto": 1,
    "formas": [
     "copias",
     "copiis",
@@ -2690,7 +2690,7 @@
    "lema": "caro",
    "n": 118,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "carnem",
     "carne",
@@ -2712,7 +2712,7 @@
    "lema": "peccatum",
    "n": 117,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "peccatum",
     "peccata",
@@ -2723,7 +2723,7 @@
    "lema": "occido",
    "n": 116,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.8189655172413793,
    "formas": [
     "occiderunt",
     "occidi",
@@ -2755,7 +2755,7 @@
    "lema": "recipio",
    "n": 116,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "receperunt",
     "recipit",
@@ -2766,7 +2766,7 @@
    "lema": "ascendo",
    "n": 115,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "ascendit",
     "ascenderunt",
@@ -2777,7 +2777,7 @@
    "lema": "testimonium",
    "n": 115,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.991304347826087,
    "formas": [
     "testimonium",
     "testimonio",
@@ -2788,7 +2788,7 @@
    "lema": "constituo",
    "n": 115,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.991304347826087,
    "formas": [
     "constituit",
     "constituta",
@@ -2799,7 +2799,7 @@
    "lema": "intro",
    "n": 114,
    "upos": "VERB",
-   "cubierto": 0.017543859649122806,
+   "cubierto": 0.9736842105263158,
    "formas": [
     "intrauit",
     "intrare",
@@ -2852,7 +2852,7 @@
    "lema": "panis",
    "n": 113,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "panem",
     "panes",
@@ -2883,7 +2883,7 @@
    "lema": "reddo",
    "n": 112,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "reddidit",
     "reddere",
@@ -2916,7 +2916,7 @@
    "lema": "maneo",
    "n": 111,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "manet",
     "manere",
@@ -2938,7 +2938,7 @@
    "lema": "os",
    "n": 109,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.07339449541284404,
    "formas": [
     "ore",
     "os",
@@ -2998,7 +2998,7 @@
    "lema": "ecclesia",
    "n": 107,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "ecclesiae",
     "ecclesia",
@@ -3053,7 +3053,7 @@
    "lema": "oro",
    "n": 103,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9611650485436893,
    "formas": [
     "oro",
     "orate",
@@ -3097,7 +3097,7 @@
    "lema": "interrogo",
    "n": 102,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9803921568627451,
    "formas": [
     "interrogauit",
     "interrogabant",
@@ -3108,7 +3108,7 @@
    "lema": "existimo",
    "n": 102,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9117647058823529,
    "formas": [
     "existimabat",
     "existimo",
@@ -3130,7 +3130,7 @@
    "lema": "proelium",
    "n": 102,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "proelio",
     "proelium",
@@ -3161,7 +3161,7 @@
    "lema": "numerus",
    "n": 101,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "numero",
     "numerum",
@@ -3182,7 +3182,7 @@
    "lema": "praedico",
    "n": 101,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.8316831683168316,
    "formas": [
     "praedicans",
     "praedicare",
@@ -3193,7 +3193,7 @@
    "lema": "epistula",
    "n": 101,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.9900990099009901,
    "formas": [
     "epistula",
     "epistulam",
@@ -3204,7 +3204,7 @@
    "lema": "legatus",
    "n": 101,
    "upos": "NOUN",
-   "cubierto": 0.15841584158415842,
+   "cubierto": 1,
    "formas": [
     "legatos",
     "legati",
@@ -3225,7 +3225,7 @@
    "lema": "aperio",
    "n": 100,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.99,
    "formas": [
     "aperuit",
     "aperuisset",
@@ -3236,7 +3236,7 @@
    "lema": "officium",
    "n": 100,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.98,
    "formas": [
     "officio",
     "officium",
@@ -3258,7 +3258,7 @@
    "lema": "gero",
    "n": 100,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "geruntur",
     "gestis",
@@ -3309,7 +3309,7 @@
    "lema": "descendo",
    "n": 99,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "descendit",
     "descendentem",
@@ -3342,7 +3342,7 @@
    "lema": "paro",
    "n": 98,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9183673469387755,
    "formas": [
     "parare",
     "parate",
@@ -3375,7 +3375,7 @@
    "lema": "iustitia",
    "n": 98,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "iustitiae",
     "iustitiam",
@@ -3397,7 +3397,7 @@
    "lema": "cogito",
    "n": 97,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.979381443298969,
    "formas": [
     "cogitabam",
     "cogitare",
@@ -3470,7 +3470,7 @@
    "lema": "natura",
    "n": 93,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "natura",
     "naturae",
@@ -3514,7 +3514,7 @@
    "lema": "mensis",
    "n": 92,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.9891304347826086,
    "formas": [
     "mense",
     "mensibus",
@@ -3611,7 +3611,7 @@
    "lema": "clamo",
    "n": 88,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9772727272727273,
    "formas": [
     "clamabant",
     "clamauit",
@@ -3644,7 +3644,7 @@
    "lema": "spero",
    "n": 87,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9885057471264368,
    "formas": [
     "spero",
     "sperare",
@@ -3720,7 +3720,7 @@
    "lema": "saeculum",
    "n": 85,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "saecula",
     "saeculorum",
@@ -3753,7 +3753,7 @@
    "lema": "gaudeo",
    "n": 84,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9285714285714286,
    "formas": [
     "gaudeo",
     "gaudete",
@@ -3784,7 +3784,7 @@
    "lema": "impleo",
    "n": 84,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9404761904761905,
    "formas": [
     "impleatur",
     "impleuit",
@@ -3795,7 +3795,7 @@
    "lema": "discedo",
    "n": 83,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "discedere",
     "discessit",
@@ -3837,7 +3837,7 @@
    "lema": "lapis",
    "n": 82,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "lapidem",
     "lapides",
@@ -3859,7 +3859,7 @@
    "lema": "lego",
    "n": 82,
    "upos": "VERB",
-   "cubierto": 0.8902439024390244,
+   "cubierto": 0.9146341463414634,
    "formas": [
     "legistis",
     "legi",
@@ -3870,7 +3870,7 @@
    "lema": "bibo",
    "n": 82,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "bibere",
     "bibit",
@@ -3912,7 +3912,7 @@
    "lema": "fugio",
    "n": 81,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "fugit",
     "fugere",
@@ -3923,7 +3923,7 @@
    "lema": "eques",
    "n": 81,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "equites",
     "equitum",
@@ -3955,7 +3955,7 @@
    "lema": "nego",
    "n": 80,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9,
    "formas": [
     "negauit",
     "negat",
@@ -4030,7 +4030,7 @@
    "lema": "iniuria",
    "n": 79,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "iniuriam",
     "iniuria",
@@ -4041,7 +4041,7 @@
    "lema": "periculum",
    "n": 79,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.9367088607594937,
    "formas": [
     "periculo",
     "periculum",
@@ -4063,7 +4063,7 @@
    "lema": "eicio",
    "n": 79,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "eicere",
     "eiecerunt",
@@ -4105,7 +4105,7 @@
    "lema": "ostendo",
    "n": 78,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9743589743589743,
    "formas": [
     "ostendit",
     "ostendam",
@@ -4116,7 +4116,7 @@
    "lema": "interficio",
    "n": 78,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "interficere",
     "interfecto",
@@ -4171,7 +4171,7 @@
    "lema": "contendo",
    "n": 77,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "contendit",
     "contendere",
@@ -4225,7 +4225,7 @@
    "lema": "probo",
    "n": 75,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.96,
    "formas": [
     "probari",
     "probare",
@@ -4246,7 +4246,7 @@
    "lema": "suscipio",
    "n": 75,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "suscipere",
     "suscepit",
@@ -4268,7 +4268,7 @@
    "lema": "baptizo",
    "n": 75,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "baptizati",
     "baptizatus",
@@ -4290,7 +4290,7 @@
    "lema": "cogo",
    "n": 74,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "cogor",
     "coegit",
@@ -4301,7 +4301,7 @@
    "lema": "nuntio",
    "n": 73,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9726027397260274,
    "formas": [
     "nuntiauerunt",
     "nuntiauit",
@@ -4333,7 +4333,7 @@
    "lema": "senex",
    "n": 72,
    "upos": "ADJ",
-   "cubierto": 0,
+   "cubierto": 0.20833333333333334,
    "formas": [
     "seniores",
     "senioribus",
@@ -4344,7 +4344,7 @@
    "lema": "semen",
    "n": 72,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.20833333333333334,
    "formas": [
     "semen",
     "semina",
@@ -4364,7 +4364,7 @@
    "lema": "facies",
    "n": 72,
    "upos": "NOUN",
-   "cubierto": 0.1527777777777778,
+   "cubierto": 1,
    "formas": [
     "faciem",
     "facie",
@@ -4375,7 +4375,7 @@
    "lema": "imperium",
    "n": 72,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.9305555555555556,
    "formas": [
     "imperium",
     "imperio",
@@ -4463,7 +4463,7 @@
    "lema": "perdo",
    "n": 70,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.8571428571428571,
    "formas": [
     "perdere",
     "perdet",
@@ -4485,7 +4485,7 @@
    "lema": "oppidum",
    "n": 70,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "oppido",
     "oppidum",
@@ -4496,7 +4496,7 @@
    "lema": "inimicus",
    "n": 70,
    "upos": "ADJ",
-   "cubierto": 0,
+   "cubierto": 0.8428571428571429,
    "formas": [
     "inimicos",
     "inimici",
@@ -4507,7 +4507,7 @@
    "lema": "praecipio",
    "n": 69,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "praecepit",
     "praecipio",
@@ -4529,7 +4529,7 @@
    "lema": "pugno",
    "n": 69,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9855072463768116,
    "formas": [
     "pugnare",
     "pugnatum",
@@ -4561,7 +4561,7 @@
    "lema": "apostolus",
    "n": 69,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "apostoli",
     "apostolos",
@@ -4572,7 +4572,7 @@
    "lema": "statuo",
    "n": 69,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "statuit",
     "statuerunt",
@@ -4625,7 +4625,7 @@
    "lema": "sabbatum",
    "n": 68,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "sabbato",
     "sabbati",
@@ -4636,7 +4636,7 @@
    "lema": "sustineo",
    "n": 67,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "sustinere",
     "sustinet",
@@ -4690,7 +4690,7 @@
    "lema": "efficio",
    "n": 66,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "efficere",
     "efficitur",
@@ -4723,7 +4723,7 @@
    "lema": "impero",
    "n": 66,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9393939393939394,
    "formas": [
     "imperat",
     "imperauit",
@@ -4734,7 +4734,7 @@
    "lema": "conficio",
    "n": 66,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "confecto",
     "confecta",
@@ -4745,7 +4745,7 @@
    "lema": "scriba",
    "n": 66,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "scribae",
     "scribis",
@@ -4756,7 +4756,7 @@
    "lema": "daemonium",
    "n": 66,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "daemonia",
     "daemonium",
@@ -4789,7 +4789,7 @@
    "lema": "spatium",
    "n": 65,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.9846153846153847,
    "formas": [
     "spatio",
     "spatium",
@@ -4811,7 +4811,7 @@
    "lema": "fortuna",
    "n": 64,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "fortuna",
     "fortunam",
@@ -4822,7 +4822,7 @@
    "lema": "studium",
    "n": 64,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.96875,
    "formas": [
     "studio",
     "studia",
@@ -4833,7 +4833,7 @@
    "lema": "impono",
    "n": 64,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.234375,
    "formas": [
     "inposuerunt",
     "inposuisset",
@@ -4844,7 +4844,7 @@
    "lema": "confirmo",
    "n": 64,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.953125,
    "formas": [
     "confirmata",
     "confirmatum",
@@ -4916,7 +4916,7 @@
    "lema": "lingua",
    "n": 63,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "lingua",
     "linguis",
@@ -4927,7 +4927,7 @@
    "lema": "negotium",
    "n": 63,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.8888888888888888,
    "formas": [
     "negotium",
     "negotio",
@@ -4938,7 +4938,7 @@
    "lema": "proximus",
    "n": 63,
    "upos": "ADJ",
-   "cubierto": 0,
+   "cubierto": 0.746031746031746,
    "formas": [
     "proximis",
     "proximum",
@@ -4949,7 +4949,7 @@
    "lema": "praesidium",
    "n": 63,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.9523809523809523,
    "formas": [
     "praesidio",
     "praesidium",
@@ -4991,7 +4991,7 @@
    "lema": "sententia",
    "n": 62,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "sententia",
     "sententiam",
@@ -5011,7 +5011,7 @@
    "lema": "tribunus",
    "n": 62,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "tribunus",
     "tribunis",
@@ -5022,7 +5022,7 @@
    "lema": "adoro",
    "n": 62,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "adorauerunt",
     "adorare",
@@ -5088,7 +5088,7 @@
    "lema": "pecunia",
    "n": 61,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "pecuniam",
     "pecunia",
@@ -5143,7 +5143,7 @@
    "lema": "equitatus",
    "n": 60,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "equitatu",
     "equitatum",
@@ -5163,7 +5163,7 @@
    "lema": "synagoga",
    "n": 60,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "synagogis",
     "synagoga",
@@ -5183,7 +5183,7 @@
    "lema": "auris",
    "n": 59,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "aures",
     "aurem",
@@ -5238,7 +5238,7 @@
    "lema": "usus",
    "n": 58,
    "upos": "NOUN",
-   "cubierto": 0.5,
+   "cubierto": 1,
    "formas": [
     "usu",
     "usus",
@@ -5249,7 +5249,7 @@
    "lema": "sentio",
    "n": 58,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "sentire",
     "sentiat",
@@ -5271,7 +5271,7 @@
    "lema": "postulo",
    "n": 58,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.896551724137931,
    "formas": [
     "postulabat",
     "postulantes",
@@ -5315,7 +5315,7 @@
    "lema": "sero",
    "n": 57,
    "upos": "VERB",
-   "cubierto": 0.017543859649122806,
+   "cubierto": 1,
    "formas": [
     "sero",
     "serenda",
@@ -5326,7 +5326,7 @@
    "lema": "fuga",
    "n": 57,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "fuga",
     "fugam",
@@ -5357,7 +5357,7 @@
    "lema": "monumentum",
    "n": 57,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.9824561403508771,
    "formas": [
     "monumentum",
     "monumento",
@@ -5368,7 +5368,7 @@
    "lema": "accido",
    "n": 57,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "accidit",
     "accidere",
@@ -5379,7 +5379,7 @@
    "lema": "mandatum",
    "n": 57,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "mandatum",
     "mandata",
@@ -5412,7 +5412,7 @@
    "lema": "tango",
    "n": 56,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9642857142857143,
    "formas": [
     "tetigit",
     "tetigerit",
@@ -5454,7 +5454,7 @@
    "lema": "paenitentia",
    "n": 56,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "paenitentiam",
     "paenitentiae",
@@ -5465,7 +5465,7 @@
    "lema": "initium",
    "n": 56,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "initio",
     "initium",
@@ -5509,7 +5509,7 @@
    "lema": "impedio",
    "n": 55,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.8909090909090909,
    "formas": [
     "impeditos",
     "impedit",
@@ -5531,7 +5531,7 @@
    "lema": "desidero",
    "n": 55,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "desiderat",
     "desidero",
@@ -5553,7 +5553,7 @@
    "lema": "obses",
    "n": 55,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "obsides",
     "obsidibus",
@@ -5608,7 +5608,7 @@
    "lema": "auxilium",
    "n": 54,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "auxilium",
     "auxilia",
@@ -5641,7 +5641,7 @@
    "lema": "frumentum",
    "n": 54,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "frumentum",
     "frumenta",
@@ -5652,7 +5652,7 @@
    "lema": "eligo",
    "n": 54,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "elegit",
     "electos",
@@ -5663,7 +5663,7 @@
    "lema": "prope",
    "n": 54,
    "upos": "ADV",
-   "cubierto": 0.7222222222222222,
+   "cubierto": 0.8703703703703703,
    "formas": [
     "prope",
     "proxime",
@@ -5674,7 +5674,7 @@
    "lema": "semino",
    "n": 53,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9433962264150944,
    "formas": [
     "seminat",
     "seminatur",
@@ -5727,7 +5727,7 @@
    "lema": "audeo",
    "n": 52,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9807692307692307,
    "formas": [
     "audebat",
     "ausus",
@@ -5738,7 +5738,7 @@
    "lema": "incipio",
    "n": 52,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "incipiens",
     "incipit",
@@ -5771,7 +5771,7 @@
    "lema": "cupio",
    "n": 52,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9615384615384616,
    "formas": [
     "cupio",
     "cupit",
@@ -5804,7 +5804,7 @@
    "lema": "perspicio",
    "n": 52,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "perspecta",
     "perspicias",
@@ -5824,7 +5824,7 @@
    "lema": "resurgo",
    "n": 52,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "resurrexit",
     "resurgunt",
@@ -5835,7 +5835,7 @@
    "lema": "emo",
    "n": 51,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "emit",
     "emi",
@@ -5846,7 +5846,7 @@
    "lema": "aedifico",
    "n": 51,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "aedificauit",
     "aedificare",
@@ -5857,7 +5857,7 @@
    "lema": "opera",
    "n": 51,
    "upos": "NOUN",
-   "cubierto": 0.3137254901960784,
+   "cubierto": 1,
    "formas": [
     "operam",
     "opera",
@@ -5890,7 +5890,7 @@
    "lema": "congrego",
    "n": 51,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9607843137254902,
    "formas": [
     "congregati",
     "congregatis",
@@ -5929,7 +5929,7 @@
    "lema": "impetus",
    "n": 50,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.98,
    "formas": [
     "impetum",
     "impetu",
@@ -5951,7 +5951,7 @@
    "lema": "ordo",
    "n": 50,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "ordinis",
     "ordine",
@@ -5962,7 +5962,7 @@
    "lema": "crucifigo",
    "n": 50,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "crucifixus",
     "crucifige",
@@ -5984,7 +5984,7 @@
    "lema": "committo",
    "n": 49,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "committere",
     "committendum",
@@ -6055,7 +6055,7 @@
    "lema": "contineo",
    "n": 48,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9791666666666666,
    "formas": [
     "continetur",
     "contineret",
@@ -6077,7 +6077,7 @@
    "lema": "pecco",
    "n": 48,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9791666666666666,
    "formas": [
     "peccaui",
     "peccauerunt",
@@ -6099,7 +6099,7 @@
    "lema": "sapientia",
    "n": 48,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "sapientia",
     "sapientiam",
@@ -6121,7 +6121,7 @@
    "lema": "iuro",
    "n": 47,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9148936170212766,
    "formas": [
     "iurare",
     "iurando",
@@ -6173,7 +6173,7 @@
    "lema": "procedo",
    "n": 47,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "procedunt",
     "processit",
@@ -6184,7 +6184,7 @@
    "lema": "pertineo",
    "n": 47,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "pertinet",
     "pertinere",
@@ -6215,7 +6215,7 @@
    "lema": "iudex",
    "n": 47,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.5319148936170213,
    "formas": [
     "iudices",
     "iudex",
@@ -6259,7 +6259,7 @@
    "lema": "defendo",
    "n": 47,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "defendere",
     "defenderet",
@@ -6270,7 +6270,7 @@
    "lema": "accuso",
    "n": 47,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9787234042553191,
    "formas": [
     "accusare",
     "accusarent",
@@ -6281,7 +6281,7 @@
    "lema": "colo",
    "n": 46,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9782608695652174,
    "formas": [
     "colitur",
     "colere",
@@ -6292,7 +6292,7 @@
    "lema": "equus",
    "n": 46,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "equis",
     "equorum",
@@ -6325,7 +6325,7 @@
    "lema": "abundo",
    "n": 46,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "abundetis",
     "abundauit",
@@ -6369,7 +6369,7 @@
    "lema": "confido",
    "n": 46,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.8913043478260869,
    "formas": [
     "confido",
     "confidebant",
@@ -6380,7 +6380,7 @@
    "lema": "minister",
    "n": 46,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "ministri",
     "minister",
@@ -6402,7 +6402,7 @@
    "lema": "excipio",
    "n": 45,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "excepit",
     "exceptis",
@@ -6413,7 +6413,7 @@
    "lema": "fleo",
    "n": 45,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "flentes",
     "flere",
@@ -6435,7 +6435,7 @@
    "lema": "conspectus",
    "n": 45,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "conspectu",
     "conspectum",
@@ -6499,7 +6499,7 @@
    "lema": "delecto",
    "n": 45,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9111111111111111,
    "formas": [
     "delectat",
     "delectant",
@@ -6510,7 +6510,7 @@
    "lema": "laus",
    "n": 45,
    "upos": "NOUN",
-   "cubierto": 0.4,
+   "cubierto": 1,
    "formas": [
     "laudem",
     "laudis",
@@ -6521,7 +6521,7 @@
    "lema": "carcer",
    "n": 45,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "carcere",
     "carcerem",
@@ -6639,7 +6639,7 @@
    "lema": "retineo",
    "n": 44,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "retinere",
     "retinet",
@@ -6659,7 +6659,7 @@
    "lema": "dubito",
    "n": 44,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9545454545454546,
    "formas": [
     "dubitabat",
     "dubitans",
@@ -6714,7 +6714,7 @@
    "lema": "percutio",
    "n": 43,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "percussit",
     "percutere",
@@ -6756,7 +6756,7 @@
    "lema": "disco",
    "n": 43,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "didicistis",
     "discere",
@@ -6777,7 +6777,7 @@
    "lema": "dormio",
    "n": 43,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.813953488372093,
    "formas": [
     "dormierunt",
     "dormientes",
@@ -6799,7 +6799,7 @@
    "lema": "scriptura",
    "n": 43,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "scriptura",
     "scripturas",
@@ -6821,7 +6821,7 @@
    "lema": "instituo",
    "n": 42,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "instituit",
     "instituta",
@@ -6832,7 +6832,7 @@
    "lema": "acies",
    "n": 42,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "aciem",
     "acie",
@@ -6886,7 +6886,7 @@
    "lema": "significo",
    "n": 42,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9523809523809523,
    "formas": [
     "significat",
     "significas",
@@ -6908,7 +6908,7 @@
    "lema": "magistratus",
    "n": 42,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "magistratus",
     "magistratum",
@@ -6919,7 +6919,7 @@
    "lema": "comitium",
    "n": 42,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "comitia",
     "comitiis",
@@ -6959,7 +6959,7 @@
    "lema": "mando",
    "n": 41,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9512195121951219,
    "formas": [
     "mando",
     "mandaui",
@@ -6970,7 +6970,7 @@
    "lema": "reperio",
    "n": 41,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "reperire",
     "repertus",
@@ -6992,7 +6992,7 @@
    "lema": "sumo",
    "n": 41,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.975609756097561,
    "formas": [
     "sumere",
     "sumpsit",
@@ -7003,7 +7003,7 @@
    "lema": "caedo",
    "n": 41,
    "upos": "VERB",
-   "cubierto": 0.4146341463414634,
+   "cubierto": 1,
    "formas": [
     "cecidit",
     "cecidi",
@@ -7067,7 +7067,7 @@
    "lema": "doctrina",
    "n": 41,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "doctrina",
     "doctrinam",
@@ -7098,7 +7098,7 @@
    "lema": "suscito",
    "n": 41,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "suscitauit",
     "suscitabit",
@@ -7151,7 +7151,7 @@
    "lema": "frango",
    "n": 40,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "fregit",
     "fregi",
@@ -7171,7 +7171,7 @@
    "lema": "plaga",
    "n": 40,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "plaga",
     "plagas",
@@ -7204,7 +7204,7 @@
    "lema": "ministro",
    "n": 40,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "ministrare",
     "ministrabat",
@@ -7215,7 +7215,7 @@
    "lema": "perficio",
    "n": 40,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "perficere",
     "perficiam",
@@ -7226,7 +7226,7 @@
    "lema": "consuesco",
    "n": 40,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.425,
    "formas": [
     "consueuit",
     "consuerunt",
@@ -7248,7 +7248,7 @@
    "lema": "parabola",
    "n": 40,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "parabolam",
     "parabolis",
@@ -7259,7 +7259,7 @@
    "lema": "tempto",
    "n": 40,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.925,
    "formas": [
     "temptantes",
     "temptatis",
@@ -7325,7 +7325,7 @@
    "lema": "concilium",
    "n": 39,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "concilium",
     "concilio",
@@ -7336,7 +7336,7 @@
    "lema": "rapio",
    "n": 39,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "rapuit",
     "rapit",
@@ -7369,7 +7369,7 @@
    "lema": "occupo",
    "n": 39,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9230769230769231,
    "formas": [
     "occupatis",
     "occupat",
@@ -7380,7 +7380,7 @@
    "lema": "membrum",
    "n": 39,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "membra",
     "membris",
@@ -7446,7 +7446,7 @@
    "lema": "colligo",
    "n": 39,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.7435897435897436,
    "formas": [
     "collegerunt",
     "colligendi",
@@ -7468,7 +7468,7 @@
    "lema": "effundo",
    "n": 38,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "effudit",
     "effusus",
@@ -7510,7 +7510,7 @@
    "lema": "testis",
    "n": 38,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.9473684210526315,
    "formas": [
     "testes",
     "testis",
@@ -7521,7 +7521,7 @@
    "lema": "adnuntio",
    "n": 38,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "adnuntiant",
     "adnuntians",
@@ -7532,7 +7532,7 @@
    "lema": "peccator",
    "n": 38,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.21052631578947367,
    "formas": [
     "peccatores",
     "peccatorum",
@@ -7543,7 +7543,7 @@
    "lema": "pario",
    "n": 37,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.7567567567567568,
    "formas": [
     "peperit",
     "parta",
@@ -7617,7 +7617,7 @@
    "lema": "permitto",
    "n": 37,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "permisit",
     "permitte",
@@ -7628,7 +7628,7 @@
    "lema": "thronus",
    "n": 37,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "throno",
     "thronum",
@@ -7639,7 +7639,7 @@
    "lema": "consummo",
    "n": 37,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.8108108108108109,
    "formas": [
     "consummasset",
     "consummentur",
@@ -7715,7 +7715,7 @@
    "lema": "sedes",
    "n": 36,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.4722222222222222,
    "formas": [
     "sedes",
     "sedis",
@@ -7726,7 +7726,7 @@
    "lema": "consto",
    "n": 36,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9722222222222222,
    "formas": [
     "constat",
     "constabat",
@@ -7737,7 +7737,7 @@
    "lema": "curro",
    "n": 36,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "currere",
     "currens",
@@ -7748,7 +7748,7 @@
    "lema": "possideo",
    "n": 36,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "possidet",
     "possidebit",
@@ -7759,7 +7759,7 @@
    "lema": "forum",
    "n": 36,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "foro",
     "forum",
@@ -7770,7 +7770,7 @@
    "lema": "misceo",
    "n": 36,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9722222222222222,
    "formas": [
     "mixta",
     "mixtum",
@@ -7781,7 +7781,7 @@
    "lema": "decerno",
    "n": 36,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9444444444444444,
    "formas": [
     "decreuit",
     "decreta",
@@ -7803,7 +7803,7 @@
    "lema": "depono",
    "n": 36,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "deponere",
     "depones",
@@ -7836,7 +7836,7 @@
    "lema": "claudo",
    "n": 35,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.6857142857142857,
    "formas": [
     "clausa",
     "clausum",
@@ -7847,7 +7847,7 @@
    "lema": "par",
    "n": 35,
    "upos": "ADJ",
-   "cubierto": 0,
+   "cubierto": 0.6,
    "formas": [
     "pares",
     "par",
@@ -7891,7 +7891,7 @@
    "lema": "beneficium",
    "n": 35,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "beneficio",
     "beneficium",
@@ -7902,7 +7902,7 @@
    "lema": "coniungo",
    "n": 35,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "coniungere",
     "coniungi",
@@ -7923,7 +7923,7 @@
    "lema": "subicio",
    "n": 35,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "subiecit",
     "subiecta",
@@ -7966,7 +7966,7 @@
    "lema": "odium",
    "n": 35,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "odio",
     "odium",
@@ -8010,7 +8010,7 @@
    "lema": "poena",
    "n": 34,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "poenas",
     "poena",
@@ -8021,7 +8021,7 @@
    "lema": "eripio",
    "n": 34,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "eripuit",
     "eriperet",
@@ -8041,7 +8041,7 @@
    "lema": "patria",
    "n": 34,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "patria",
     "patriae",
@@ -8063,7 +8063,7 @@
    "lema": "merces",
    "n": 34,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "mercedem",
     "merces",
@@ -8118,7 +8118,7 @@
    "lema": "misericordia",
    "n": 34,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "misericordiam",
     "misericordia",
@@ -8140,7 +8140,7 @@
    "lema": "memoria",
    "n": 34,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "memoriam",
     "memoria",
@@ -8162,7 +8162,7 @@
    "lema": "foris",
    "n": 34,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.8823529411764706,
    "formas": [
     "foris",
     "fores",
@@ -8173,7 +8173,7 @@
    "lema": "amicitia",
    "n": 34,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "amicitiam",
     "amicitia",
@@ -8184,7 +8184,7 @@
    "lema": "scientia",
    "n": 34,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "scientia",
     "scientiam",
@@ -8195,7 +8195,7 @@
    "lema": "sano",
    "n": 34,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "sanare",
     "sanauit",
@@ -8206,7 +8206,7 @@
    "lema": "permaneo",
    "n": 34,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "permanere",
     "permanebo",
@@ -8217,7 +8217,7 @@
    "lema": "remitto",
    "n": 34,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "remittetur",
     "remittuntur",
@@ -8228,7 +8228,7 @@
    "lema": "hortus",
    "n": 34,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "horti",
     "hortis",
@@ -8239,7 +8239,7 @@
    "lema": "pugna",
    "n": 33,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "pugnae",
     "pugna",
@@ -8272,7 +8272,7 @@
    "lema": "fama",
    "n": 33,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "fama",
     "famam",
@@ -8294,7 +8294,7 @@
    "lema": "familia",
    "n": 33,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "familia",
     "familias",
@@ -8316,7 +8316,7 @@
    "lema": "contemno",
    "n": 33,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9393939393939394,
    "formas": [
     "contemnant",
     "contemnere",
@@ -8349,7 +8349,7 @@
    "lema": "diligentia",
    "n": 33,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "diligentia",
     "diligentiam",
@@ -8371,7 +8371,7 @@
    "lema": "casus",
    "n": 33,
    "upos": "NOUN",
-   "cubierto": 0.5757575757575758,
+   "cubierto": 1,
    "formas": [
     "casum",
     "casu",
@@ -8382,7 +8382,7 @@
    "lema": "tribus",
    "n": 33,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.9090909090909091,
    "formas": [
     "tribu",
     "tribus",
@@ -8404,7 +8404,7 @@
    "lema": "desertum",
    "n": 33,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "deserto",
     "desertum",
@@ -8424,7 +8424,7 @@
    "lema": "castellum",
    "n": 33,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "castellum",
     "castella",
@@ -8518,7 +8518,7 @@
    "lema": "considero",
    "n": 32,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "considerate",
     "considerandum",
@@ -8540,7 +8540,7 @@
    "lema": "cibus",
    "n": 32,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "cibum",
     "cibo",
@@ -8562,7 +8562,7 @@
    "lema": "alligo",
    "n": 32,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.9375,
    "formas": [
     "alligata",
     "alligatus",
@@ -8582,7 +8582,7 @@
    "lema": "narro",
    "n": 32,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.90625,
    "formas": [
     "narrauit",
     "narrauerunt",

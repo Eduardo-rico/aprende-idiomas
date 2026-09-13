@@ -38,10 +38,10 @@ import { COMPUESTOS_DE_SUM, paradigmaCompuesto } from './compuestos-de-sum';
 import { PRONOMBRES_L1, paradigmaPronombre } from './pronombres-la';
 import { PERSONALES_L1, formasDe, GENITIVO_PARTITIVO } from './personales-la';
 import { participioPresente } from './participios';
-import { pasivaInfectum, imperativo, perfectum } from './paradigma-la';
+import { pasivaInfectum, imperativo, perfectum, infectum } from './paradigma-la';
 import { todosLosInfinitivos, SIN_PASIVA } from './infinitivos';
 import { paradigmaSubjuntivo, subjuntivoPasivo, subjuntivo, TIEMPOS_SUBJ, PERSONAS_SUBJ } from './subjuntivo';
-import { participioPerfecto, participioFuturo } from './participios';
+import { participioPerfecto, participioFuturo, gerundivo } from './participios';
 import { declinarAdjetivo, type Caso } from './paradigma-la';
 /** El orden canónico de los casos. `paradigma-la` lo tiene privado, así que
  *  se repite aquí —seis literales— en vez de exportar un detalle interno. */
@@ -50,6 +50,7 @@ import { IRREGULARES_L1 as IRR } from './irregulares';
 import { ADJETIVOS_L1 as ADJ } from './lexicon-l1';
 import { ADJETIVOS_3A as ADJ3, temaDelAdjetivo } from './adjetivos-3a';
 import { gradosDe, declinarComparativo } from './grado';
+import { NOMBRES_IMPORTADOS as NOMBRES_IMP, VERBOS_IMPORTADOS as VERBOS_IMP } from './importados';
 import {
   DEPONENTES_L1, paradigmaDeponente, participioDelDeponente, subjuntivoDelDeponente,
   participioPresenteDelDeponente, participioFuturoDelDeponente, imperativoDelDeponente,
@@ -74,6 +75,10 @@ export const TABLAS_QUE_PRODUCEN_FORMAS = [
   // `conjugar()` produjera `*sequō` y que todos los gates que iteran la
   // lista vieran un verbo que no existe.
   'DEPONENTES_L1',
+  // Los 248 del núcleo que entran con paradigma derivado de la fuente y
+  // confirmado contra el corpus. Van en tablas propias para que se vea de
+  // un vistazo cuánto del dominio es importado.
+  'NOMBRES_IMPORTADOS', 'VERBOS_IMPORTADOS',
 ] as const;
 
 export function todasLasFormasDeL1(): FormaDeL1[] {
@@ -220,6 +225,69 @@ export function todasLasFormasDeL1(): FormaDeL1[] {
     const pp = participioPresente(v);
     for (const [c, f] of Object.entries(paradigmaAdjetivo3a(pp)))
       out.push({ clave: `${v.lema}.part-pres.${c}`, forma: f, tabla: 'PARTICIPIOS' });
+  }
+
+  // ══ LO IMPORTADO ═══════════════════════════════════════════════════
+  //
+  // Mismo trato que lo propio: los nombres por el declinador nominal y los
+  // verbos por todas las máquinas verbales. Si el paradigma derivado
+  // estuviera mal, estas formas saldrían mal — y por eso el registro sólo
+  // trae los que el corpus confirma.
+  for (const n of NOMBRES_IMP) {
+    for (const [c, f] of Object.entries(paradigmaNominal(n)))
+      out.push({ clave: `${n.lema}.imp.${c}`, forma: f, tabla: 'NOMBRES_IMPORTADOS' });
+  }
+  for (const v of VERBOS_IMP) {
+    for (const [c, f] of Object.entries(infectum(v))) out.push({ clave: `${v.lema}.imp.${c}`, forma: String(f), tabla: 'VERBOS_IMPORTADOS' });
+    for (const [c, f] of Object.entries(perfectum(v))) out.push({ clave: `${v.lema}.imp-perf.${c}`, forma: f, tabla: 'VERBOS_IMPORTADOS' });
+    for (const [c, f] of Object.entries(pasivaInfectum(v))) out.push({ clave: `${v.lema}.imp-pas.${c}`, forma: f, tabla: 'VERBOS_IMPORTADOS' });
+    // El subjuntivo ENTERO —los cuatro tiempos y la pasiva—, no sólo lo que
+    // `paradigmaSubjuntivo` da por defecto. La auditoría lo pidió en cuanto
+    // entraron los importados: 208 subjuntivos que la máquina no producía
+    // porque a lo importado se le sacaba menos que a lo propio.
+    for (const t of TIEMPOS_SUBJ)
+      for (const per of PERSONAS_SUBJ) {
+        const a = subjuntivo(v, t, per);
+        if (a) out.push({ clave: `${v.lema}.imp-subj.${t}.${per}`, forma: a, tabla: 'VERBOS_IMPORTADOS' });
+        const pa = subjuntivoPasivo(v, t, per);
+        if (pa) out.push({ clave: `${v.lema}.imp-subj-pas.${t}.${per}`, forma: pa, tabla: 'VERBOS_IMPORTADOS' });
+      }
+    // El IMPERATIVO: 232 formas personales que faltaban, casi todas
+    // imperativos (`surge`, `cūrā`, `scrībe`).
+    for (const num of ['sg', 'pl'] as const)
+      out.push({ clave: `${v.lema}.imp-imper.${num}`, forma: imperativo(v, num), tabla: 'VERBOS_IMPORTADOS' });
+    // El GERUNDIVO y el participio de FUTURO, que tampoco se sacaban.
+    const ger = gerundivo(v);
+    const comoGer = { lema: ger.lema, tema: ger.lema.normalize('NFC').slice(0, -2), glosa: ger.glosa };
+    for (const g of ['m', 'f', 'n'] as const)
+      for (const num of ['sg', 'pl'] as const)
+        for (const c of ORDEN_CASOS)
+          out.push({ clave: `${v.lema}.imp-gerundivo.${g}.${c}.${num}`, forma: declinarAdjetivo(comoGer, g, c, num), tabla: 'VERBOS_IMPORTADOS' });
+    const fut = participioFuturo(v);
+    if (fut) {
+      const comoFut = { lema: fut.lema, tema: fut.lema.normalize('NFC').slice(0, -2), glosa: fut.glosa };
+      for (const g of ['m', 'f', 'n'] as const)
+        for (const num of ['sg', 'pl'] as const)
+          for (const c of ORDEN_CASOS)
+            out.push({ clave: `${v.lema}.imp-part-fut.${g}.${c}.${num}`, forma: declinarAdjetivo(comoFut, g, c, num), tabla: 'VERBOS_IMPORTADOS' });
+    }
+    const pp = participioPresente(v);
+    for (const [c, f] of Object.entries(paradigmaAdjetivo3a(pp))) out.push({ clave: `${v.lema}.imp-part-pres.${c}`, forma: f, tabla: 'VERBOS_IMPORTADOS' });
+    const perf = participioPerfecto(v);
+    if (perf) {
+      const como = { lema: perf.lema, tema: perf.lema.normalize('NFC').slice(0, -2), glosa: perf.glosa };
+      for (const g of ['m', 'f', 'n'] as const)
+        for (const num of ['sg', 'pl'] as const)
+          for (const c of ORDEN_CASOS)
+            out.push({ clave: `${v.lema}.imp-part-perf.${g}.${c}.${num}`, forma: declinarAdjetivo(como, g, c, num), tabla: 'VERBOS_IMPORTADOS' });
+    }
+    // `todosLosInfinitivos` devuelve un ARRAY de objetos, no un Record. Con
+    // `Object.entries` + `typeof f === 'string'` se tiraban los 137 de una
+    // vez, en silencio: el filtro defensivo descartaba exactamente lo que
+    // venía a proteger. Los perifrásticos (`scrīptus esse`) van también:
+    // son dos palabras y el gate de vocabulario trocea por espacios.
+    for (const inf of todosLosInfinitivos(v))
+      out.push({ clave: `${v.lema}.imp-inf.${inf.tiempo}.${inf.voz}`, forma: inf.forma, tabla: 'VERBOS_IMPORTADOS' });
   }
 
   // ══ LOS DEPONENTES ═════════════════════════════════════════════════

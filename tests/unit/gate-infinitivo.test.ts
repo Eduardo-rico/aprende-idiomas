@@ -13,6 +13,7 @@ import {
   tasasCiegasInf, type ItemInfinitivo,
 } from '../../scripts/lib/gate-infinitivo';
 import { palabrasDesconocidas } from '../../scripts/lib/gate-vocabulario-del-marco';
+import { palabraFueraDeL1 } from './ayuda/fuera-de-l1';
 
 const V = (l: string) => VERBOS_L1.find((x) => x.lema === l)!;
 const base: ItemInfinitivo = {
@@ -78,19 +79,15 @@ describe('los venenos que el gate tiene que cazar', () => {
 
   it('el marco con palabras que la máquina de L1 no produce', () => {
     // Los cinco que salieron de verdad en el lote ya «verde».
-    for (const [marco, mala] of [['Rēgem ___ scīmus.', 'scīmus'], ['Poētam ___ crēdunt.', 'crēdunt'],
-                                 ['Mundus ___ dīcitur.', 'Mundus'], ['Mīles ___ potest.', 'Mīles'],
-                                 // `Sē` estaba aquí y dejó de servir de veneno el 2026-09-12,
-                                 // cuando entraron los pronombres personales: ahora es palabra
-                                 // conocida. Un veneno que deja de envenenar hay que
-                                 // sustituirlo, no borrarlo en silencio.
-                                 // Y `Vērum` cayó el mismo día, unas horas después: entró en
-                                 // `lexicon-l1.ts` porque un marco del subjuntivo lo necesitaba.
-                                 // Dos en una sesión. El veneno caduca cuando crece la máquina,
-                                 // y sólo se entera el test que AFIRMA que el veneno envenena:
-                                 // si sólo comprobara el fallo del gate, se habría vuelto verde
-                                 // sin decir nada.
-                                 ['Imperātor ___ dīcunt.', 'Imperātor']] as const) {
+    for (const [marco, mala] of [
+      // TODAS calculadas: `Sē`, `Vērum`, `Mīles`, `Mundus` y `scīmus`
+      // caducaron, cada una en su día, al crecer el lexicón. Una lista
+      // escrita a mano en un gate de vocabulario es una lista con fecha de
+      // caducidad y sin aviso.
+      [`${palabraFueraDeL1()} ___ potest.`, palabraFueraDeL1()],
+      [`Rēgem ___ ${palabraFueraDeL1().toLowerCase()}.`, palabraFueraDeL1().toLowerCase()],
+      [`Poētam ___ ${palabraFueraDeL1().toLowerCase()}.`, palabraFueraDeL1().toLowerCase()],
+    ] as const) {
       expect(palabrasDesconocidas(marco), marco).toContain(mala);
       expect(clases(con({ marco })), marco).toContain('marco-fuera-de-l1');
     }

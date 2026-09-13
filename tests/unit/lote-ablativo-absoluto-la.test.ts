@@ -6,6 +6,7 @@ import {
   revisarItemAblAbs, revisarLoteAblAbs, tasasCiegasAblAbs, type ItemAblAbs,
 } from '@/scripts/lib/gate-ablativo-absoluto';
 import { NOMBRES_L1, VERBOS_L1 } from '@/lib/data/languages/la/lexicon-l1';
+import { palabraFueraDeL1 } from './ayuda/fuera-de-l1';
 
 const N = (l: string) => NOMBRES_L1.find((x) => x.lema === l)!;
 const V = (l: string) => VERBOS_L1.find((x) => x.lema === l)!;
@@ -95,7 +96,7 @@ describe('los venenos que el gate tiene que cazar', () => {
     expect(clases(con({ marco: 'Urbe ___, rēx ambulat.' }))).toContain('marco-regala-la-forma');
   });
   it('y el marco con vocabulario de fuera de L1', () => {
-    expect(clases(con({ marco: '___, mīles ambulat.' }))).toContain('marco-fuera-de-l1');
+    expect(clases(con({ marco: `___, ${palabraFueraDeL1()} ambulat.` }))).toContain('marco-fuera-de-l1');
   });
 });
 

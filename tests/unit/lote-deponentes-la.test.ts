@@ -10,6 +10,7 @@ import {
   participioDelDeponente, participioFuturoDelDeponente, subjuntivoDelDeponente,
 } from '@/lib/data/languages/la/deponentes';
 import atPerf from '@/lib/data/languages/la/atestacion-perfectum.json';
+import { palabraFueraDeL1 } from './ayuda/fuera-de-l1';
 
 const base = LOTE_DEPONENTES.find((i) => i.id === 'la-dp-01')!;
 const con = (p: Partial<ItemDeponente>): ItemDeponente => ({ ...base, ...p, ejes: { ...base.ejes, ...(p.ejes ?? {}) } });
@@ -117,7 +118,7 @@ describe('los venenos que el gate tiene que cazar', () => {
     expect(clases(con({ glosa: 'El esclavo sigue ___ al señor.' }))).toContain('glosa-regala-la-respuesta');
   });
   it('y el latín de fuera de L1', () => {
-    expect(clases(con({ latin: 'Mīles dominum sequitur.' }))).toContain('latin-fuera-de-l1');
+    expect(clases(con({ latin: `${palabraFueraDeL1()} dominum sequitur.` }))).toContain('latin-fuera-de-l1');
   });
 });
 

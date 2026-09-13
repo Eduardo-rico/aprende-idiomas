@@ -6,6 +6,7 @@ import {
   revisarItemTresPart, revisarLoteTresPart, tasasCiegasTresPart, type ItemTresPart,
 } from '@/scripts/lib/gate-tres-participios';
 import { VERBOS_L1 } from '@/lib/data/languages/la/lexicon-l1';
+import { palabraFueraDeL1 } from './ayuda/fuera-de-l1';
 
 const V = (l: string) => VERBOS_L1.find((x) => x.lema === l)!;
 const base = LOTE_TRES_PARTICIPIOS.find((i) => i.id === 'la-tp-01')!;
@@ -74,7 +75,7 @@ describe('los venenos que el gate tiene que cazar', () => {
     expect(clases(con({ marco: 'Puer dīcēns verbum ___ ambulat.' }))).toContain('marco-regala-la-forma');
   });
   it('y el marco con vocabulario de fuera de L1', () => {
-    expect(clases(con({ marco: 'Mīles verbum ___ ambulat.' }))).toContain('marco-fuera-de-l1');
+    expect(clases(con({ marco: `${palabraFueraDeL1()} verbum ___ ambulat.` }))).toContain('marco-fuera-de-l1');
   });
 });
 
