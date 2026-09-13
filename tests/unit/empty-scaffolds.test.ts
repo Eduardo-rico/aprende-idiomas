@@ -2,6 +2,7 @@
 // Phase 5 (multi-idioma): los scaffolds vacíos para ru/ro/cs exponen
 // los loaders con forma "vacía pero tipada". La app renderiza el
 // `EmptyState` y la home de cada idioma está navegable.
+import fs from 'node:fs';
 import { describe, it, expect } from "vitest";
 import {
   loadCurriculum, loadAllBlocks, loadAllStories, loadDiagnostic,
@@ -42,20 +43,38 @@ describe("empty scaffolds (Phase 5)", () => {
       } else if (lang === 'ru') {
         // El 2026-09-11 el RUSO estrenó un tercer estado que ni el rumano ni
         // el latín tuvieron —inventario poblado y BLOCKS vacío del todo—, y
-        // el 2026-09-12 salió de él: con el primer lote (11 ítems de
+        // el 2026-09-12 salió de él: con el primer lote (12 ítems de
         // `u4-declinacion-singular`) entró `lessons/b4.json`, y con ella el
-        // bloque 4. **Lo que este test afirma no ha cambiado**: que se
-        // declara el bloque que tiene lección y NINGÚN otro. Los otros
-        // catorce siguen fuera, y `getBlock(1)` sigue tirando — ahora por el
-        // motivo concreto (el bloque 1 no tiene lección) y no porque la
-        // lengua esté entera a cero.
+        // bloque 4. El 2026-09-13 entraron b3, b5 y b7. **Lo que este test
+        // afirma no ha cambiado**: que se declara el bloque que tiene lección
+        // y NINGÚN otro, y que `getBlock(1)` sigue tirando — ahora por el
+        // motivo concreto (el bloque 1 no tiene lección) y no porque la lengua
+        // esté entera a cero.
+        //
+        // ⚠ Y LA LISTA YA NO SE ESCRIBE A MANO, porque escrita a mano este test
+        // se pone rojo cada vez que entra una lección legítima y el arreglo es
+        // teclear el número nuevo — o sea que deja de comprobar algo y pasa a
+        // ser un peaje. Medido: la v0 decía `[4]` y la entrada de b3, b5 y b7
+        // lo tumbó sin que nada estuviera mal. La afirmación que SÍ vale es la
+        // biyección: **los bloques declarados son exactamente los que tienen
+        // fichero `lessons/bN.json`.** Se lee del directorio, que es la fuente.
         //
         // Declarar los 15 bloques sin lecciones para «adelantar» rendiría 15
         // pantallas rotas en vez del EmptyState. El test lo fija aquí para
         // que nadie lo haga creyendo que ayuda.
         expect(c.ALL_CONCEPTS.length).toBeGreaterThan(0);
-        expect(c.BLOCKS.map((b) => b.id)).toEqual([4]);
-        expect(c.getBlock(4).lessons.length).toBe(1);
+        const conFichero = fs.readdirSync('lib/data/languages/ru/lessons')
+          .map((f) => /^b(\d+)\.json$/.exec(f)?.[1])
+          .filter((x): x is string => x !== undefined)
+          .map(Number).sort((a, b) => a - b);
+        expect(conFichero.length).toBeGreaterThan(0);   // si no, el test no mira nada
+        expect(c.BLOCKS.map((b) => b.id)).toEqual(conFichero);
+        for (const id of conFichero) expect(c.getBlock(id).lessons.length).toBeGreaterThan(0);
+        // Y su CONTROL NEGATIVO: un bloque del inventario que NO tiene fichero
+        // tiene que seguir tirando. Sin esto, declararlos todos pasaría igual.
+        const sinFichero = c.ALL_CONCEPTS.map((x) => x.blockId).filter((id) => !conFichero.includes(id));
+        expect(sinFichero.length).toBeGreaterThan(0);
+        expect(() => c.getBlock(sinFichero[0]!)).toThrow();
         expect(() => c.getBlock(1)).toThrow();
         // Y que `getConceptsByIds` filtre de verdad y no devuelva [] como
         // el stub: un loader que siempre devuelve vacío es indistinguible
