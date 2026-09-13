@@ -2,16 +2,16 @@
  "generado": "2026-09-13",
  "corpus": "la_perseus + la_proiel (UD)",
  "tokens": 227300,
- "formas": 5603,
- "sueloDeLaPenultima": 0.7169373549883991,
+ "formas": 5631,
+ "sueloDeLaPenultima": 0.7183448765760966,
  "reparto": {
   "monosilabo": {
    "total": 114,
    "atestiguadas": 108
   },
   "bisilabo": {
-   "total": 1020,
-   "atestiguadas": 800
+   "total": 1044,
+   "atestiguadas": 820
   },
   "breve": {
    "total": 1472,
@@ -22,11 +22,11 @@
    "atestiguadas": 224
   },
   "macron": {
-   "total": 2213,
-   "atestiguadas": 667
+   "total": 2217,
+   "atestiguadas": 668
   }
  },
- "posicionSobreAtestiguadas": 0.09172809172809172,
+ "posicionSobreAtestiguadas": 0.09094600081201787,
  "tabla": {
   "cum": {
    "silabas": [
@@ -614,6 +614,134 @@
    "tonica": "a",
    "tipo": "bisilabo",
    "n": 6
+  },
+  "vīta": {
+   "silabas": [
+    "vī",
+    "ta"
+   ],
+   "tonica": "vī",
+   "tipo": "bisilabo",
+   "n": 63
+  },
+  "vītam": {
+   "silabas": [
+    "vī",
+    "tam"
+   ],
+   "tonica": "vī",
+   "tipo": "bisilabo",
+   "n": 62
+  },
+  "vītae": {
+   "silabas": [
+    "vī",
+    "tae"
+   ],
+   "tonica": "vī",
+   "tipo": "bisilabo",
+   "n": 72
+  },
+  "vītā": {
+   "silabas": [
+    "vī",
+    "tā"
+   ],
+   "tonica": "vī",
+   "tipo": "bisilabo",
+   "n": 63
+  },
+  "vītās": {
+   "silabas": [
+    "vī",
+    "tās"
+   ],
+   "tonica": "vī",
+   "tipo": "bisilabo",
+   "n": 0
+  },
+  "vītārum": {
+   "silabas": [
+    "vī",
+    "tā",
+    "rum"
+   ],
+   "tonica": "tā",
+   "tipo": "macron",
+   "n": 0
+  },
+  "vītīs": {
+   "silabas": [
+    "vī",
+    "tīs"
+   ],
+   "tonica": "vī",
+   "tipo": "bisilabo",
+   "n": 32
+  },
+  "via": {
+   "silabas": [
+    "vi",
+    "a"
+   ],
+   "tonica": "vi",
+   "tipo": "bisilabo",
+   "n": 54
+  },
+  "viam": {
+   "silabas": [
+    "vi",
+    "am"
+   ],
+   "tonica": "vi",
+   "tipo": "bisilabo",
+   "n": 50
+  },
+  "viae": {
+   "silabas": [
+    "vi",
+    "ae"
+   ],
+   "tonica": "vi",
+   "tipo": "bisilabo",
+   "n": 8
+  },
+  "viā": {
+   "silabas": [
+    "vi",
+    "ā"
+   ],
+   "tonica": "vi",
+   "tipo": "bisilabo",
+   "n": 54
+  },
+  "viās": {
+   "silabas": [
+    "vi",
+    "ās"
+   ],
+   "tonica": "vi",
+   "tipo": "bisilabo",
+   "n": 15
+  },
+  "viārum": {
+   "silabas": [
+    "vi",
+    "ā",
+    "rum"
+   ],
+   "tonica": "ā",
+   "tipo": "macron",
+   "n": 1
+  },
+  "viīs": {
+   "silabas": [
+    "vi",
+    "īs"
+   ],
+   "tonica": "vi",
+   "tipo": "bisilabo",
+   "n": 2
   },
   "grātia": {
    "silabas": [
@@ -19217,6 +19345,134 @@
    "tonica": "tā",
    "tipo": "macron",
    "n": 1
+  },
+  "vērus": {
+   "silabas": [
+    "vē",
+    "rus"
+   ],
+   "tonica": "vē",
+   "tipo": "bisilabo",
+   "n": 4
+  },
+  "vērum": {
+   "silabas": [
+    "vē",
+    "rum"
+   ],
+   "tonica": "vē",
+   "tipo": "bisilabo",
+   "n": 69
+  },
+  "vērī": {
+   "silabas": [
+    "vē",
+    "rī"
+   ],
+   "tonica": "vē",
+   "tipo": "bisilabo",
+   "n": 6
+  },
+  "vērō": {
+   "silabas": [
+    "vē",
+    "rō"
+   ],
+   "tonica": "vē",
+   "tipo": "bisilabo",
+   "n": 287
+  },
+  "vēre": {
+   "silabas": [
+    "vē",
+    "re"
+   ],
+   "tonica": "vē",
+   "tipo": "bisilabo",
+   "n": 40
+  },
+  "vērōs": {
+   "silabas": [
+    "vē",
+    "rōs"
+   ],
+   "tonica": "vē",
+   "tipo": "bisilabo",
+   "n": 0
+  },
+  "vērōrum": {
+   "silabas": [
+    "vē",
+    "rō",
+    "rum"
+   ],
+   "tonica": "rō",
+   "tipo": "macron",
+   "n": 0
+  },
+  "vērīs": {
+   "silabas": [
+    "vē",
+    "rīs"
+   ],
+   "tonica": "vē",
+   "tipo": "bisilabo",
+   "n": 0
+  },
+  "vēra": {
+   "silabas": [
+    "vē",
+    "ra"
+   ],
+   "tonica": "vē",
+   "tipo": "bisilabo",
+   "n": 20
+  },
+  "vēram": {
+   "silabas": [
+    "vē",
+    "ram"
+   ],
+   "tonica": "vē",
+   "tipo": "bisilabo",
+   "n": 1
+  },
+  "vērae": {
+   "silabas": [
+    "vē",
+    "rae"
+   ],
+   "tonica": "vē",
+   "tipo": "bisilabo",
+   "n": 1
+  },
+  "vērā": {
+   "silabas": [
+    "vē",
+    "rā"
+   ],
+   "tonica": "vē",
+   "tipo": "bisilabo",
+   "n": 20
+  },
+  "vērās": {
+   "silabas": [
+    "vē",
+    "rās"
+   ],
+   "tonica": "vē",
+   "tipo": "bisilabo",
+   "n": 0
+  },
+  "vērārum": {
+   "silabas": [
+    "vē",
+    "rā",
+    "rum"
+   ],
+   "tonica": "rā",
+   "tipo": "macron",
+   "n": 0
   },
   "anxius": {
    "silabas": [

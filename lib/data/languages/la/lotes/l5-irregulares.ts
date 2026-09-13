@@ -63,8 +63,17 @@ type Def = [id: string, lema: string, tiempo: Tiempo, persona: Persona, respuest
 
 const DEFS: Def[] = [
   // ── `eō` · el único irregular fuera del presente ──
-  ['la-ir-01', 'eō', 'presente', '2sg', 'īs', 'Quō ___?',
-   '2.ª persona del singular, presente', '¿Adónde vas?'],
+  // Aquí estuvo `īs` («¿Quō īs?»), que es latín bueno y estaba atestiguado
+  // —72 veces— por CADENA. Contando por rasgo, las 72 son el pronombre
+  // `iīs`/`eīs` y **ninguna** es el verbo. El alumno se encontraría `īs`
+  // setenta y dos veces queriendo decir «a aquéllos» y ni una «vas».
+  // La casilla tiene que cumplir DOS cosas a la vez, y eso deja casi nada:
+  // estar atestiguada como verbo y refutar la regla general. `eunt` está
+  // atestiguada pero es exactamente lo que da la regla (`e`+`unt`), y el
+  // gate la rechazó. `it` refuta —la regla daría `eit`— y sale una vez sin
+  // homónimo ninguno.
+  ['la-ir-01', 'eō', 'presente', '3sg', 'it', 'Puer ad templum ___.',
+   '3.ª persona del singular, presente', 'El niño va al templo.'],
   ['la-ir-02', 'eō', 'imperfecto', '3sg', 'ībat', 'Rēx ad urbem ___.',
    '3.ª persona del singular, imperfecto', 'El rey iba a la ciudad.'],
   ['la-ir-03', 'eō', 'futuro', '3pl', 'ībunt', 'Discipulī ad urbem ___.',

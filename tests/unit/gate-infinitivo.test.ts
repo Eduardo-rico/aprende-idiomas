@@ -79,11 +79,17 @@ describe('los venenos que el gate tiene que cazar', () => {
   it('el marco con palabras que la máquina de L1 no produce', () => {
     // Los cinco que salieron de verdad en el lote ya «verde».
     for (const [marco, mala] of [['Rēgem ___ scīmus.', 'scīmus'], ['Poētam ___ crēdunt.', 'crēdunt'],
-                                 ['Mundus ___ dīcitur.', 'Mundus'], ['Vērum ___ potest.', 'Vērum'],
+                                 ['Mundus ___ dīcitur.', 'Mundus'], ['Mīles ___ potest.', 'Mīles'],
                                  // `Sē` estaba aquí y dejó de servir de veneno el 2026-09-12,
                                  // cuando entraron los pronombres personales: ahora es palabra
                                  // conocida. Un veneno que deja de envenenar hay que
                                  // sustituirlo, no borrarlo en silencio.
+                                 // Y `Vērum` cayó el mismo día, unas horas después: entró en
+                                 // `lexicon-l1.ts` porque un marco del subjuntivo lo necesitaba.
+                                 // Dos en una sesión. El veneno caduca cuando crece la máquina,
+                                 // y sólo se entera el test que AFIRMA que el veneno envenena:
+                                 // si sólo comprobara el fallo del gate, se habría vuelto verde
+                                 // sin decir nada.
                                  ['Imperātor ___ dīcunt.', 'Imperātor']] as const) {
       expect(palabrasDesconocidas(marco), marco).toContain(mala);
       expect(clases(con({ marco })), marco).toContain('marco-fuera-de-l1');

@@ -1,0 +1,7597 @@
+{
+ "generado": "2026-09-13",
+ "corpus": "UD Latin (scripts/.cache/treebanks)",
+ "tokens": 227301,
+ "formasDelDominio": 9231,
+ "formasAtestiguadas": 2463,
+ "formasAtestiguadasComoSubjuntivo": 448,
+ "tabla": {
+  "cum": {
+   "otro": 2263
+  },
+  "ex": {
+   "otro": 999
+  },
+  "ē": {
+   "otro": 43
+  },
+  "in": {
+   "otro": 6072
+  },
+  "ad": {
+   "otro": 2157
+  },
+  "ab": {
+   "otro": 591
+  },
+  "ā": {
+   "otro": 1035,
+   "nominal": 1
+  },
+  "dē": {
+   "otro": 1459
+  },
+  "per": {
+   "otro": 657
+  },
+  "prō": {
+   "otro": 278
+  },
+  "sine": {
+   "otro": 207,
+   "imp": 9
+  },
+  "sub": {
+   "otro": 101
+  },
+  "ante": {
+   "otro": 264
+  },
+  "post": {
+   "otro": 201
+  },
+  "at": {
+   "otro": 197
+  },
+  "cūr": {
+   "otro": 20
+  },
+  "satis": {
+   "otro": 88,
+   "part": 3,
+   "nominal": 2,
+   "ind": 4,
+   "sub": 5,
+   "inf": 1,
+   "ger": 1
+  },
+  "semper": {
+   "otro": 109
+  },
+  "nōnne": {
+   "otro": 60
+  },
+  "num": {
+   "otro": 22
+  },
+  "salvē": {
+   "imp": 2
+  },
+  "et": {
+   "otro": 11407,
+   "nominal": 1
+  },
+  "nōn": {
+   "otro": 2932,
+   "nominal": 19
+  },
+  "ut": {
+   "otro": 2236
+  },
+  "autem": {
+   "otro": 2214
+  },
+  "sed": {
+   "otro": 1281
+  },
+  "enim": {
+   "otro": 1082
+  },
+  "quia": {
+   "otro": 825
+  },
+  "quod": {
+   "nominal": 866,
+   "otro": 645
+  },
+  "aut": {
+   "otro": 647
+  },
+  "atque": {
+   "otro": 462
+  },
+  "nec": {
+   "otro": 69
+  },
+  "neque": {
+   "otro": 29
+  },
+  "sī": {
+   "otro": 1416
+  },
+  "nē": {
+   "otro": 1417
+  },
+  "quam": {
+   "otro": 580,
+   "nominal": 223
+  },
+  "ecce": {
+   "otro": 236
+  },
+  "iam": {
+   "otro": 349
+  },
+  "tunc": {
+   "otro": 176
+  },
+  "etiam": {
+   "otro": 482
+  },
+  "quoque": {
+   "otro": 82,
+   "nominal": 13
+  },
+  "que": {
+   "otro": 1753
+  },
+  "ne": {
+   "otro": 1417
+  },
+  "ve": {
+   "otro": 49
+  },
+  "fortior": {
+   "nominal": 5
+  },
+  "sanctior": {
+   "nominal": 1
+  },
+  "puella": {
+   "nominal": 17
+  },
+  "puellam": {
+   "nominal": 4
+  },
+  "puellae": {
+   "nominal": 12
+  },
+  "puellā": {
+   "nominal": 17
+  },
+  "puellās": {
+   "nominal": 4
+  },
+  "puellīs": {
+   "nominal": 2
+  },
+  "causa": {
+   "nominal": 157
+  },
+  "causam": {
+   "nominal": 67
+  },
+  "causae": {
+   "nominal": 11
+  },
+  "causā": {
+   "nominal": 157
+  },
+  "causās": {
+   "nominal": 13
+  },
+  "causīs": {
+   "nominal": 12
+  },
+  "aqua": {
+   "nominal": 49
+  },
+  "aquam": {
+   "nominal": 31
+  },
+  "aquae": {
+   "nominal": 25
+  },
+  "aquā": {
+   "nominal": 49
+  },
+  "aquās": {
+   "nominal": 12
+  },
+  "aquārum": {
+   "nominal": 15
+  },
+  "aquīs": {
+   "nominal": 6
+  },
+  "vīta": {
+   "nominal": 63
+  },
+  "vītam": {
+   "nominal": 62
+  },
+  "vītae": {
+   "nominal": 72
+  },
+  "vītā": {
+   "nominal": 63
+  },
+  "vītīs": {
+   "nominal": 32
+  },
+  "via": {
+   "nominal": 54
+  },
+  "viam": {
+   "nominal": 50
+  },
+  "viae": {
+   "nominal": 8
+  },
+  "viā": {
+   "nominal": 54
+  },
+  "viās": {
+   "nominal": 15
+  },
+  "viārum": {
+   "nominal": 1
+  },
+  "viīs": {
+   "nominal": 2
+  },
+  "grātia": {
+   "nominal": 101
+  },
+  "grātiam": {
+   "nominal": 57
+  },
+  "grātiae": {
+   "nominal": 17
+  },
+  "grātiā": {
+   "nominal": 101
+  },
+  "grātiās": {
+   "nominal": 57
+  },
+  "grātiārum": {
+   "nominal": 9
+  },
+  "bestia": {
+   "nominal": 5
+  },
+  "bestiam": {
+   "nominal": 23
+  },
+  "bestiae": {
+   "nominal": 21
+  },
+  "bestiā": {
+   "nominal": 5
+  },
+  "bestiās": {
+   "nominal": 5
+  },
+  "bestiīs": {
+   "nominal": 3
+  },
+  "nātiō": {
+   "nominal": 1
+  },
+  "nātiōnem": {
+   "nominal": 1
+  },
+  "nātiōnis": {
+   "nominal": 3
+  },
+  "nātiōne": {
+   "nominal": 3
+  },
+  "nātiōnēs": {
+   "nominal": 11
+  },
+  "nātiōnum": {
+   "nominal": 1
+  },
+  "nātiōnibus": {
+   "nominal": 3
+  },
+  "agnus": {
+   "nominal": 11
+  },
+  "agnum": {
+   "nominal": 1
+  },
+  "agnī": {
+   "nominal": 18
+  },
+  "agnō": {
+   "nominal": 4
+  },
+  "agnōs": {
+   "nominal": 4
+  },
+  "rēgnum": {
+   "nominal": 126
+  },
+  "rēgnī": {
+   "nominal": 17
+  },
+  "rēgnō": {
+   "nominal": 38
+  },
+  "rēgna": {
+   "nominal": 8
+  },
+  "rēgnīs": {
+   "nominal": 1
+  },
+  "signum": {
+   "nominal": 54
+  },
+  "signō": {
+   "nominal": 8
+  },
+  "signa": {
+   "nominal": 63,
+   "imp": 1
+  },
+  "signōrum": {
+   "nominal": 2
+  },
+  "signīs": {
+   "nominal": 11
+  },
+  "amīcae": {
+   "nominal": 1
+  },
+  "amīcās": {
+   "nominal": 1
+  },
+  "amīcīs": {
+   "nominal": 20
+  },
+  "vīcīna": {
+   "nominal": 4
+  },
+  "vīcīnae": {
+   "nominal": 1
+  },
+  "vīcīnā": {
+   "nominal": 4
+  },
+  "vīcīnās": {
+   "nominal": 1
+  },
+  "vīcīnārum": {
+   "nominal": 1
+  },
+  "fīlia": {
+   "nominal": 22
+  },
+  "fīliam": {
+   "nominal": 8
+  },
+  "fīliae": {
+   "nominal": 5
+  },
+  "fīliā": {
+   "nominal": 22
+  },
+  "fīliās": {
+   "nominal": 1
+  },
+  "fīliīs": {
+   "nominal": 26
+  },
+  "rēgīna": {
+   "nominal": 3
+  },
+  "rēgīnae": {
+   "nominal": 1
+  },
+  "rēgīnā": {
+   "nominal": 3
+  },
+  "domina": {
+   "nominal": 2
+  },
+  "dominae": {
+   "nominal": 4
+  },
+  "dominā": {
+   "nominal": 2
+  },
+  "dominīs": {
+   "nominal": 8
+  },
+  "rosae": {
+   "nominal": 1
+  },
+  "rosīs": {
+   "nominal": 1
+  },
+  "terra": {
+   "nominal": 110
+  },
+  "terram": {
+   "nominal": 129
+  },
+  "terrae": {
+   "nominal": 80
+  },
+  "terrā": {
+   "nominal": 110
+  },
+  "terrās": {
+   "nominal": 6
+  },
+  "terrārum": {
+   "nominal": 8
+  },
+  "terrīs": {
+   "nominal": 10
+  },
+  "nautae": {
+   "nominal": 3
+  },
+  "nautās": {
+   "nominal": 1
+  },
+  "agricola": {
+   "nominal": 1
+  },
+  "agricolam": {
+   "nominal": 1
+  },
+  "agricolae": {
+   "nominal": 3
+  },
+  "agricolā": {
+   "nominal": 1
+  },
+  "agricolās": {
+   "nominal": 2
+  },
+  "agricolīs": {
+   "nominal": 5
+  },
+  "poēta": {
+   "nominal": 1
+  },
+  "poētae": {
+   "nominal": 3
+  },
+  "poētā": {
+   "nominal": 1
+  },
+  "poētārum": {
+   "nominal": 1
+  },
+  "amīcus": {
+   "nominal": 21
+  },
+  "amīcum": {
+   "nominal": 6
+  },
+  "amīcī": {
+   "nominal": 17
+  },
+  "amīcō": {
+   "nominal": 6
+  },
+  "amīce": {
+   "nominal": 6
+  },
+  "amīcōs": {
+   "nominal": 21
+  },
+  "amīcōrum": {
+   "nominal": 9
+  },
+  "vīcīnus": {
+   "nominal": 4
+  },
+  "vīcīnum": {
+   "nominal": 5
+  },
+  "vīcīnī": {
+   "nominal": 3
+  },
+  "vīcīnō": {
+   "nominal": 2
+  },
+  "vīcīnōs": {
+   "nominal": 4
+  },
+  "fīlius": {
+   "nominal": 162
+  },
+  "fīlium": {
+   "nominal": 86
+  },
+  "fīliī": {
+   "nominal": 75
+  },
+  "fīliō": {
+   "nominal": 36
+  },
+  "fīlī": {
+   "nominal": 24
+  },
+  "fīliōs": {
+   "nominal": 38
+  },
+  "fīliōrum": {
+   "nominal": 16
+  },
+  "servus": {
+   "nominal": 37
+  },
+  "servum": {
+   "nominal": 18
+  },
+  "servī": {
+   "nominal": 33
+  },
+  "servō": {
+   "nominal": 10,
+   "ind": 1
+  },
+  "serve": {
+   "nominal": 6
+  },
+  "servōs": {
+   "nominal": 21
+  },
+  "servōrum": {
+   "nominal": 9
+  },
+  "servīs": {
+   "nominal": 15
+  },
+  "dominus": {
+   "nominal": 154
+  },
+  "dominum": {
+   "nominal": 67
+  },
+  "dominī": {
+   "nominal": 173
+  },
+  "dominō": {
+   "nominal": 130
+  },
+  "domine": {
+   "nominal": 122
+  },
+  "dominōrum": {
+   "nominal": 1
+  },
+  "medicus": {
+   "nominal": 1
+  },
+  "medicum": {
+   "nominal": 2
+  },
+  "medicī": {
+   "nominal": 2
+  },
+  "medicō": {
+   "nominal": 2
+  },
+  "medice": {
+   "nominal": 1
+  },
+  "medicōs": {
+   "nominal": 1
+  },
+  "medicōrum": {
+   "nominal": 1
+  },
+  "medicīs": {
+   "nominal": 1
+  },
+  "discipulus": {
+   "nominal": 22
+  },
+  "discipulum": {
+   "nominal": 5
+  },
+  "discipulī": {
+   "nominal": 111
+  },
+  "discipulō": {
+   "nominal": 2
+  },
+  "discipulōs": {
+   "nominal": 37
+  },
+  "discipulōrum": {
+   "nominal": 10
+  },
+  "discipulīs": {
+   "nominal": 75
+  },
+  "colōnī": {
+   "nominal": 3
+  },
+  "colōnō": {
+   "nominal": 1
+  },
+  "colōnōs": {
+   "nominal": 2
+  },
+  "colōnīs": {
+   "nominal": 3
+  },
+  "puer": {
+   "nominal": 33
+  },
+  "puerum": {
+   "nominal": 24
+  },
+  "puerī": {
+   "nominal": 20
+  },
+  "puerō": {
+   "nominal": 6
+  },
+  "puerōs": {
+   "nominal": 8
+  },
+  "puerōrum": {
+   "nominal": 2
+  },
+  "puerīs": {
+   "nominal": 14
+  },
+  "ager": {
+   "nominal": 16
+  },
+  "agrum": {
+   "nominal": 21
+  },
+  "agrī": {
+   "nominal": 26
+  },
+  "agrō": {
+   "nominal": 24
+  },
+  "agrōs": {
+   "nominal": 24
+  },
+  "agrōrum": {
+   "nominal": 3
+  },
+  "agrīs": {
+   "nominal": 25
+  },
+  "magister": {
+   "nominal": 45
+  },
+  "magistrum": {
+   "nominal": 7
+  },
+  "magistrī": {
+   "nominal": 2
+  },
+  "magistrō": {
+   "nominal": 2
+  },
+  "magistrōs": {
+   "nominal": 3
+  },
+  "magistrīs": {
+   "nominal": 1
+  },
+  "adulter": {
+   "nominal": 1
+  },
+  "adulterī": {
+   "nominal": 2
+  },
+  "Iēsus": {
+   "nominal": 472
+  },
+  "Iēsum": {
+   "nominal": 139
+  },
+  "Iēsū": {
+   "nominal": 235
+  },
+  "gladius": {
+   "nominal": 5
+  },
+  "gladium": {
+   "nominal": 13
+  },
+  "gladiī": {
+   "nominal": 4
+  },
+  "gladiō": {
+   "nominal": 13
+  },
+  "gladiōrum": {
+   "nominal": 1
+  },
+  "gladiīs": {
+   "nominal": 12
+  },
+  "annus": {
+   "nominal": 7
+  },
+  "annum": {
+   "nominal": 18
+  },
+  "annī": {
+   "nominal": 20
+  },
+  "annō": {
+   "nominal": 19
+  },
+  "annōs": {
+   "nominal": 33
+  },
+  "annōrum": {
+   "nominal": 12
+  },
+  "annīs": {
+   "nominal": 28
+  },
+  "cūra": {
+   "nominal": 32,
+   "imp": 27
+  },
+  "cūram": {
+   "nominal": 12
+  },
+  "cūrae": {
+   "nominal": 13
+  },
+  "cūrā": {
+   "nominal": 32,
+   "imp": 27
+  },
+  "cūrās": {
+   "nominal": 1,
+   "ind": 1
+  },
+  "cūrārum": {
+   "nominal": 1
+  },
+  "cūrīs": {
+   "nominal": 3
+  },
+  "īra": {
+   "nominal": 29
+  },
+  "īram": {
+   "nominal": 10
+  },
+  "īrae": {
+   "nominal": 16
+  },
+  "īrā": {
+   "nominal": 29
+  },
+  "īrās": {
+   "nominal": 1
+  },
+  "īrīs": {
+   "nominal": 3
+  },
+  "gaudium": {
+   "nominal": 27
+  },
+  "gaudiī": {
+   "nominal": 3
+  },
+  "gaudiō": {
+   "nominal": 23
+  },
+  "gaudia": {
+   "nominal": 5
+  },
+  "timor": {
+   "nominal": 17
+  },
+  "timōrem": {
+   "nominal": 14
+  },
+  "timōris": {
+   "nominal": 7
+  },
+  "timōrī": {
+   "nominal": 1
+  },
+  "timōre": {
+   "nominal": 39
+  },
+  "timōrēs": {
+   "nominal": 1
+  },
+  "tempus": {
+   "nominal": 108
+  },
+  "temporis": {
+   "nominal": 33
+  },
+  "temporī": {
+   "nominal": 2
+  },
+  "tempore": {
+   "nominal": 133
+  },
+  "tempora": {
+   "nominal": 25
+  },
+  "temporum": {
+   "nominal": 5
+  },
+  "temporibus": {
+   "nominal": 21
+  },
+  "rēx": {
+   "nominal": 63
+  },
+  "rēgem": {
+   "nominal": 24
+  },
+  "rēgis": {
+   "nominal": 10,
+   "ind": 2
+  },
+  "rēgī": {
+   "inf": 3,
+   "nominal": 4
+  },
+  "rēge": {
+   "nominal": 5
+  },
+  "rēgēs": {
+   "nominal": 26
+  },
+  "rēgum": {
+   "nominal": 4
+  },
+  "rēgibus": {
+   "nominal": 5
+  },
+  "Deus": {
+   "nominal": 271
+  },
+  "Deum": {
+   "nominal": 161
+  },
+  "Deī": {
+   "nominal": 465
+  },
+  "Deō": {
+   "nominal": 192
+  },
+  "dī": {
+   "nominal": 11
+  },
+  "Deōs": {
+   "nominal": 10
+  },
+  "Deōrum": {
+   "nominal": 10
+  },
+  "dīs": {
+   "nominal": 4
+  },
+  "Chrīstus": {
+   "nominal": 89
+  },
+  "Chrīstum": {
+   "nominal": 67
+  },
+  "Chrīstī": {
+   "nominal": 144
+  },
+  "Chrīstō": {
+   "nominal": 108
+  },
+  "Chrīste": {
+   "nominal": 1
+  },
+  "caelum": {
+   "nominal": 65
+  },
+  "caelī": {
+   "nominal": 33
+  },
+  "caelō": {
+   "nominal": 127
+  },
+  "caelōrum": {
+   "nominal": 38
+  },
+  "caelīs": {
+   "nominal": 33
+  },
+  "populus": {
+   "nominal": 36
+  },
+  "populum": {
+   "nominal": 51
+  },
+  "populī": {
+   "nominal": 79
+  },
+  "populō": {
+   "nominal": 55
+  },
+  "populōs": {
+   "nominal": 2
+  },
+  "populōrum": {
+   "nominal": 1
+  },
+  "populīs": {
+   "nominal": 11
+  },
+  "locus": {
+   "nominal": 48
+  },
+  "locum": {
+   "nominal": 133
+  },
+  "locī": {
+   "nominal": 27
+  },
+  "locō": {
+   "nominal": 111
+  },
+  "locōrum": {
+   "nominal": 2
+  },
+  "locīs": {
+   "nominal": 89
+  },
+  "vir": {
+   "nominal": 61
+  },
+  "virum": {
+   "nominal": 39
+  },
+  "virī": {
+   "nominal": 78
+  },
+  "virō": {
+   "nominal": 29
+  },
+  "virōs": {
+   "nominal": 33
+  },
+  "virōrum": {
+   "nominal": 7
+  },
+  "virīs": {
+   "nominal": 18
+  },
+  "lēx": {
+   "nominal": 45
+  },
+  "lēgem": {
+   "nominal": 59
+  },
+  "lēgis": {
+   "nominal": 48,
+   "ind": 2
+  },
+  "lēgī": {
+   "ind": 5,
+   "inf": 3,
+   "nominal": 13
+  },
+  "lēge": {
+   "nominal": 81
+  },
+  "lēgēs": {
+   "ind": 2,
+   "nominal": 10
+  },
+  "lēgum": {
+   "nominal": 4
+  },
+  "lēgibus": {
+   "nominal": 13
+  },
+  "frāter": {
+   "nominal": 62
+  },
+  "frātrem": {
+   "nominal": 45
+  },
+  "frātris": {
+   "nominal": 25
+  },
+  "frātrī": {
+   "nominal": 22
+  },
+  "frātre": {
+   "nominal": 25
+  },
+  "frātrēs": {
+   "nominal": 161
+  },
+  "frātrum": {
+   "nominal": 7
+  },
+  "frātribus": {
+   "nominal": 31
+  },
+  "pars": {
+   "nominal": 56
+  },
+  "partem": {
+   "nominal": 90
+  },
+  "partis": {
+   "nominal": 8
+  },
+  "partī": {
+   "nominal": 1
+  },
+  "parte": {
+   "nominal": 87
+  },
+  "partēs": {
+   "nominal": 48
+  },
+  "partibus": {
+   "nominal": 17
+  },
+  "spīritus": {
+   "nominal": 141
+  },
+  "spīritum": {
+   "nominal": 69
+  },
+  "spīritūs": {
+   "nominal": 141
+  },
+  "spīrituī": {
+   "nominal": 9
+  },
+  "spīritū": {
+   "nominal": 107
+  },
+  "spīrituum": {
+   "nominal": 5
+  },
+  "spīritibus": {
+   "nominal": 8
+  },
+  "manus": {
+   "nominal": 106
+  },
+  "manum": {
+   "nominal": 45
+  },
+  "manūs": {
+   "nominal": 106
+  },
+  "manuī": {
+   "nominal": 1
+  },
+  "manū": {
+   "nominal": 67,
+   "part": 3
+  },
+  "manuum": {
+   "nominal": 3
+  },
+  "manibus": {
+   "nominal": 46
+  },
+  "domus": {
+   "nominal": 51
+  },
+  "domum": {
+   "nominal": 132
+  },
+  "domūs": {
+   "nominal": 51
+  },
+  "domuī": {
+   "nominal": 6
+  },
+  "domō": {
+   "nominal": 66
+  },
+  "domōs": {
+   "nominal": 13
+  },
+  "domōrum": {
+   "nominal": 1
+  },
+  "domibus": {
+   "nominal": 4
+  },
+  "diēs": {
+   "nominal": 155
+  },
+  "diem": {
+   "nominal": 92,
+   "otro": 14
+  },
+  "diēī": {
+   "nominal": 28
+  },
+  "diē": {
+   "nominal": 244
+  },
+  "diērum": {
+   "nominal": 19
+  },
+  "diēbus": {
+   "nominal": 116
+  },
+  "rēs": {
+   "nominal": 168
+  },
+  "rem": {
+   "nominal": 146,
+   "otro": 7
+  },
+  "reī": {
+   "nominal": 130
+  },
+  "rē": {
+   "nominal": 177,
+   "otro": 31
+  },
+  "rērum": {
+   "nominal": 77
+  },
+  "rēbus": {
+   "nominal": 157
+  },
+  "fidēs": {
+   "nominal": 36
+  },
+  "fidem": {
+   "nominal": 87
+  },
+  "fideī": {
+   "nominal": 35
+  },
+  "fidē": {
+   "nominal": 56
+  },
+  "speciēs": {
+   "nominal": 6
+  },
+  "speciem": {
+   "nominal": 8
+  },
+  "speciēī": {
+   "nominal": 1
+  },
+  "speciē": {
+   "nominal": 7
+  },
+  "senātus": {
+   "nominal": 75
+  },
+  "senātum": {
+   "nominal": 35
+  },
+  "senātūs": {
+   "nominal": 75
+  },
+  "senātuī": {
+   "nominal": 3
+  },
+  "senātū": {
+   "nominal": 45
+  },
+  "exercitus": {
+   "nominal": 31
+  },
+  "exercitum": {
+   "nominal": 59,
+   "part": 1
+  },
+  "exercitūs": {
+   "nominal": 31
+  },
+  "exercituī": {
+   "nominal": 4
+  },
+  "exercitū": {
+   "nominal": 34
+  },
+  "exercitibus": {
+   "nominal": 2
+  },
+  "frūctus": {
+   "nominal": 21
+  },
+  "frūctum": {
+   "nominal": 46
+  },
+  "frūctūs": {
+   "nominal": 21
+  },
+  "frūctū": {
+   "nominal": 10
+  },
+  "frūctuum": {
+   "nominal": 4
+  },
+  "frūctibus": {
+   "nominal": 8
+  },
+  "metus": {
+   "nominal": 10
+  },
+  "metum": {
+   "nominal": 7
+  },
+  "metūs": {
+   "nominal": 10
+  },
+  "metuī": {
+   "ind": 1
+  },
+  "metū": {
+   "nominal": 22
+  },
+  "cīvitās": {
+   "nominal": 44
+  },
+  "cīvitātem": {
+   "nominal": 76
+  },
+  "cīvitātis": {
+   "nominal": 44
+  },
+  "cīvitātī": {
+   "nominal": 11
+  },
+  "cīvitāte": {
+   "nominal": 44
+  },
+  "cīvitātēs": {
+   "nominal": 46
+  },
+  "cīvitātum": {
+   "nominal": 9
+  },
+  "cīvitātibus": {
+   "nominal": 23
+  },
+  "iūs": {
+   "nominal": 26
+  },
+  "iūris": {
+   "nominal": 9
+  },
+  "iūre": {
+   "nominal": 29
+  },
+  "iūra": {
+   "nominal": 7
+  },
+  "arbor": {
+   "nominal": 14
+  },
+  "arborem": {
+   "nominal": 12
+  },
+  "arboris": {
+   "nominal": 9
+  },
+  "arborī": {
+   "nominal": 5
+  },
+  "arbore": {
+   "nominal": 7
+  },
+  "arborēs": {
+   "nominal": 14
+  },
+  "arborum": {
+   "nominal": 6
+  },
+  "arboribus": {
+   "nominal": 11
+  },
+  "mōns": {
+   "nominal": 10
+  },
+  "montem": {
+   "nominal": 34
+  },
+  "montis": {
+   "nominal": 12
+  },
+  "montī": {
+   "nominal": 3
+  },
+  "monte": {
+   "nominal": 18
+  },
+  "montēs": {
+   "nominal": 7
+  },
+  "montium": {
+   "nominal": 1
+  },
+  "montibus": {
+   "nominal": 10
+  },
+  "mēns": {
+   "nominal": 6
+  },
+  "mentem": {
+   "nominal": 11
+  },
+  "mentis": {
+   "nominal": 11
+  },
+  "mente": {
+   "nominal": 23
+  },
+  "mentēs": {
+   "nominal": 2
+  },
+  "mentibus": {
+   "nominal": 3
+  },
+  "vōx": {
+   "nominal": 39
+  },
+  "vōcem": {
+   "nominal": 80,
+   "sub": 1
+  },
+  "vōcis": {
+   "nominal": 7
+  },
+  "vōce": {
+   "nominal": 60
+  },
+  "vōcēs": {
+   "nominal": 12
+  },
+  "vōcibus": {
+   "nominal": 11
+  },
+  "virtūs": {
+   "nominal": 26
+  },
+  "virtūtem": {
+   "nominal": 39
+  },
+  "virtūtis": {
+   "nominal": 29
+  },
+  "virtūtī": {
+   "nominal": 5
+  },
+  "virtūte": {
+   "nominal": 63
+  },
+  "virtūtēs": {
+   "nominal": 20
+  },
+  "virtūtum": {
+   "nominal": 1
+  },
+  "virtūtibus": {
+   "nominal": 4
+  },
+  "nox": {
+   "nominal": 10
+  },
+  "noctem": {
+   "nominal": 16
+  },
+  "noctis": {
+   "nominal": 12
+  },
+  "nocte": {
+   "nominal": 71
+  },
+  "noctēs": {
+   "nominal": 8
+  },
+  "noctium": {
+   "nominal": 2
+  },
+  "noctibus": {
+   "nominal": 6
+  },
+  "homō": {
+   "nominal": 142
+  },
+  "hominem": {
+   "nominal": 115
+  },
+  "hominis": {
+   "nominal": 126
+  },
+  "hominī": {
+   "nominal": 41
+  },
+  "homine": {
+   "nominal": 28
+  },
+  "hominēs": {
+   "nominal": 123
+  },
+  "hominum": {
+   "nominal": 124
+  },
+  "hominibus": {
+   "nominal": 89
+  },
+  "pater": {
+   "nominal": 148
+  },
+  "patrem": {
+   "nominal": 99
+  },
+  "patris": {
+   "nominal": 48
+  },
+  "patrī": {
+   "nominal": 22
+  },
+  "patre": {
+   "nominal": 55
+  },
+  "patrēs": {
+   "nominal": 41
+  },
+  "patrum": {
+   "nominal": 14
+  },
+  "patribus": {
+   "nominal": 7
+  },
+  "māter": {
+   "nominal": 37
+  },
+  "mātrem": {
+   "nominal": 31
+  },
+  "mātris": {
+   "nominal": 10
+  },
+  "mātrī": {
+   "nominal": 11
+  },
+  "mātre": {
+   "nominal": 5
+  },
+  "mātrēs": {
+   "nominal": 5
+  },
+  "mātribus": {
+   "nominal": 1
+  },
+  "urbs": {
+   "nominal": 2
+  },
+  "urbem": {
+   "nominal": 16
+  },
+  "urbis": {
+   "nominal": 14
+  },
+  "urbī": {
+   "nominal": 3
+  },
+  "urbe": {
+   "nominal": 29
+  },
+  "urbēs": {
+   "nominal": 2
+  },
+  "urbibus": {
+   "nominal": 1
+  },
+  "opus": {
+   "nominal": 84
+  },
+  "operis": {
+   "nominal": 12
+  },
+  "operī": {
+   "nominal": 2
+  },
+  "opere": {
+   "nominal": 31
+  },
+  "opera": {
+   "nominal": 67
+  },
+  "operum": {
+   "nominal": 3
+  },
+  "operibus": {
+   "nominal": 27
+  },
+  "corpus": {
+   "nominal": 82
+  },
+  "corporis": {
+   "nominal": 31
+  },
+  "corporī": {
+   "nominal": 5
+  },
+  "corpore": {
+   "nominal": 38
+  },
+  "corpora": {
+   "nominal": 18
+  },
+  "corporum": {
+   "nominal": 3
+  },
+  "corporibus": {
+   "nominal": 3
+  },
+  "nōmen": {
+   "nominal": 113
+  },
+  "nōminis": {
+   "nominal": 6
+  },
+  "nōminī": {
+   "nominal": 2
+  },
+  "nōmine": {
+   "nominal": 136
+  },
+  "nōmina": {
+   "nominal": 15
+  },
+  "nōminum": {
+   "nominal": 2
+  },
+  "nōminibus": {
+   "nominal": 6
+  },
+  "mare": {
+   "nominal": 74
+  },
+  "maris": {
+   "nominal": 17
+  },
+  "marī": {
+   "nominal": 31
+  },
+  "maria": {
+   "nominal": 41
+  },
+  "maribus": {
+   "nominal": 1
+  },
+  "volucris": {
+   "nominal": 3
+  },
+  "volucrem": {
+   "nominal": 1
+  },
+  "volucrēs": {
+   "nominal": 9
+  },
+  "volucrum": {
+   "nominal": 3
+  },
+  "bellum": {
+   "nominal": 84
+  },
+  "bellī": {
+   "nominal": 36
+  },
+  "bellō": {
+   "nominal": 57
+  },
+  "bella": {
+   "nominal": 15
+  },
+  "bellōrum": {
+   "nominal": 4
+  },
+  "bellīs": {
+   "nominal": 4
+  },
+  "dōnum": {
+   "nominal": 12
+  },
+  "dōnō": {
+   "ind": 2,
+   "nominal": 5
+  },
+  "dōna": {
+   "nominal": 3
+  },
+  "dōnīs": {
+   "nominal": 1
+  },
+  "verbum": {
+   "nominal": 127
+  },
+  "verbī": {
+   "nominal": 9
+  },
+  "verbō": {
+   "nominal": 38
+  },
+  "verba": {
+   "nominal": 70
+  },
+  "verbōrum": {
+   "nominal": 8
+  },
+  "verbīs": {
+   "nominal": 41
+  },
+  "templum": {
+   "nominal": 49
+  },
+  "templī": {
+   "nominal": 13
+  },
+  "templō": {
+   "nominal": 58
+  },
+  "templa": {
+   "nominal": 3
+  },
+  "templōrum": {
+   "nominal": 1
+  },
+  "templīs": {
+   "nominal": 1
+  },
+  "veniō": {
+   "ind": 22
+  },
+  "venīs": {
+   "ind": 3
+  },
+  "venit": {
+   "ind": 236
+  },
+  "venīmus": {
+   "ind": 26
+  },
+  "veniunt": {
+   "ind": 24
+  },
+  "veniēbās": {
+   "ind": 1
+  },
+  "veniēbat": {
+   "ind": 2
+  },
+  "veniēbant": {
+   "ind": 11
+  },
+  "veniam": {
+   "nominal": 6,
+   "ind": 15,
+   "sub": 5
+  },
+  "veniēs": {
+   "ind": 5
+  },
+  "veniet": {
+   "ind": 20
+  },
+  "veniēmus": {
+   "ind": 2
+  },
+  "venient": {
+   "ind": 19
+  },
+  "venīre": {
+   "inf": 61
+  },
+  "vēnī": {
+   "ind": 51,
+   "imp": 23
+  },
+  "vēnistī": {
+   "ind": 9
+  },
+  "vēnit": {
+   "ind": 236
+  },
+  "vēnimus": {
+   "ind": 26
+  },
+  "vēnistis": {
+   "ind": 2
+  },
+  "vēnērunt": {
+   "ind": 80
+  },
+  "vēneram": {
+   "ind": 1
+  },
+  "vēnerat": {
+   "ind": 17
+  },
+  "vēnerant": {
+   "ind": 21
+  },
+  "vēnerō": {
+   "ind": 8
+  },
+  "vēneris": {
+   "ind": 10
+  },
+  "vēnerit": {
+   "sub": 13,
+   "ind": 28
+  },
+  "vēnerimus": {
+   "ind": 2
+  },
+  "vēnerint": {
+   "ind": 3,
+   "sub": 3
+  },
+  "ventum": {
+   "nominal": 4,
+   "part": 6
+  },
+  "respondēs": {
+   "ind": 5
+  },
+  "respondet": {
+   "ind": 5
+  },
+  "respondēmus": {
+   "ind": 1
+  },
+  "respondent": {
+   "ind": 3
+  },
+  "respondēbat": {
+   "ind": 2
+  },
+  "respondēbō": {
+   "ind": 4
+  },
+  "respondēbit": {
+   "ind": 2
+  },
+  "respondēbitis": {
+   "ind": 1
+  },
+  "respondēbunt": {
+   "ind": 3
+  },
+  "respondēre": {
+   "inf": 4
+  },
+  "respondī": {
+   "ind": 4
+  },
+  "respondistī": {
+   "ind": 3
+  },
+  "respondit": {
+   "ind": 107
+  },
+  "respondimus": {
+   "ind": 1
+  },
+  "respondērunt": {
+   "ind": 23
+  },
+  "responderat": {
+   "ind": 1
+  },
+  "responderis": {
+   "sub": 1
+  },
+  "responderit": {
+   "sub": 1
+  },
+  "respōnsum": {
+   "nominal": 8,
+   "part": 1
+  },
+  "ambulō": {
+   "ind": 1
+  },
+  "ambulās": {
+   "ind": 2
+  },
+  "ambulat": {
+   "ind": 4
+  },
+  "ambulāmus": {
+   "ind": 3
+  },
+  "ambulātis": {
+   "ind": 2
+  },
+  "ambulant": {
+   "ind": 8
+  },
+  "ambulābās": {
+   "ind": 1
+  },
+  "ambulābat": {
+   "ind": 8
+  },
+  "ambulābant": {
+   "ind": 1
+  },
+  "ambulābit": {
+   "ind": 1
+  },
+  "ambulābunt": {
+   "ind": 3
+  },
+  "ambulāre": {
+   "inf": 10
+  },
+  "ambulāvimus": {
+   "ind": 1
+  },
+  "ambulāverat": {
+   "ind": 1
+  },
+  "ambulāverit": {
+   "ind": 2
+  },
+  "habitō": {
+   "part": 2
+  },
+  "habitās": {
+   "ind": 2
+  },
+  "habitat": {
+   "ind": 8
+  },
+  "habitātis": {
+   "ind": 4
+  },
+  "habitant": {
+   "ind": 7
+  },
+  "habitābat": {
+   "ind": 1
+  },
+  "habitābant": {
+   "ind": 6
+  },
+  "habitābit": {
+   "ind": 3
+  },
+  "habitāre": {
+   "inf": 6
+  },
+  "habitāvit": {
+   "ind": 4
+  },
+  "labōrō": {
+   "ind": 2
+  },
+  "labōrās": {
+   "ind": 1
+  },
+  "labōrat": {
+   "ind": 2
+  },
+  "labōrāmus": {
+   "ind": 2
+  },
+  "labōrātis": {
+   "ind": 1
+  },
+  "labōrant": {
+   "ind": 5
+  },
+  "labōrābit": {
+   "ind": 1
+  },
+  "labōrāre": {
+   "inf": 3
+  },
+  "labōrāvī": {
+   "ind": 3
+  },
+  "labōrāvit": {
+   "ind": 2
+  },
+  "labōrāvērunt": {
+   "ind": 2
+  },
+  "taceō": {
+   "ind": 1
+  },
+  "tacēs": {
+   "ind": 3
+  },
+  "tacēmus": {
+   "ind": 1
+  },
+  "tacent": {
+   "ind": 1
+  },
+  "tacēbat": {
+   "ind": 2
+  },
+  "tacēbant": {
+   "ind": 2
+  },
+  "tacēre": {
+   "inf": 2
+  },
+  "tacuit": {
+   "ind": 2
+  },
+  "tacuērunt": {
+   "ind": 5
+  },
+  "tacuerat": {
+   "ind": 2
+  },
+  "tacuerint": {
+   "ind": 1
+  },
+  "tacitum": {
+   "nominal": 2
+  },
+  "habeō": {
+   "ind": 60
+  },
+  "habēs": {
+   "ind": 52
+  },
+  "habet": {
+   "ind": 183
+  },
+  "habēmus": {
+   "ind": 39
+  },
+  "habētis": {
+   "ind": 38
+  },
+  "habent": {
+   "ind": 73
+  },
+  "habēbam": {
+   "ind": 12
+  },
+  "habēbās": {
+   "ind": 1
+  },
+  "habēbat": {
+   "ind": 54
+  },
+  "habēbāmus": {
+   "ind": 1
+  },
+  "habēbant": {
+   "ind": 44
+  },
+  "habēbō": {
+   "ind": 5
+  },
+  "habēbis": {
+   "ind": 12
+  },
+  "habēbit": {
+   "ind": 9
+  },
+  "habēbimus": {
+   "ind": 4
+  },
+  "habēbitis": {
+   "ind": 3
+  },
+  "habēbunt": {
+   "ind": 5
+  },
+  "habēre": {
+   "inf": 87
+  },
+  "habuī": {
+   "ind": 12
+  },
+  "habuistī": {
+   "ind": 1
+  },
+  "habuit": {
+   "ind": 28
+  },
+  "habuimus": {
+   "ind": 7
+  },
+  "habuistis": {
+   "ind": 4
+  },
+  "habuērunt": {
+   "ind": 5
+  },
+  "habuerat": {
+   "ind": 8
+  },
+  "habuerant": {
+   "ind": 2
+  },
+  "habuerō": {
+   "ind": 4
+  },
+  "habueris": {
+   "ind": 1,
+   "sub": 1
+  },
+  "habuerit": {
+   "sub": 2
+  },
+  "habuerimus": {
+   "sub": 2,
+   "ind": 1
+  },
+  "habueritis": {
+   "ind": 4,
+   "sub": 1
+  },
+  "habuerint": {
+   "sub": 1
+  },
+  "habitum": {
+   "part": 1
+  },
+  "faciō": {
+   "ind": 35
+  },
+  "facis": {
+   "ind": 24
+  },
+  "facit": {
+   "ind": 68
+  },
+  "facimus": {
+   "ind": 6
+  },
+  "facitis": {
+   "ind": 18
+  },
+  "faciunt": {
+   "ind": 34
+  },
+  "faciēbam": {
+   "ind": 4
+  },
+  "faciēbās": {
+   "ind": 1
+  },
+  "faciēbat": {
+   "ind": 18
+  },
+  "faciēbant": {
+   "ind": 9
+  },
+  "faciam": {
+   "sub": 25,
+   "ind": 27
+  },
+  "faciēs": {
+   "nominal": 11,
+   "ind": 14
+  },
+  "faciet": {
+   "ind": 30
+  },
+  "faciēmus": {
+   "ind": 16
+  },
+  "faciētis": {
+   "ind": 2
+  },
+  "facient": {
+   "ind": 5
+  },
+  "facere": {
+   "inf": 135
+  },
+  "fēcī": {
+   "ind": 31
+  },
+  "fēcistī": {
+   "ind": 12
+  },
+  "fēcit": {
+   "ind": 112
+  },
+  "fēcimus": {
+   "ind": 6
+  },
+  "fēcistis": {
+   "ind": 12
+  },
+  "fēcērunt": {
+   "ind": 39
+  },
+  "fēcerat": {
+   "ind": 13
+  },
+  "fēcerant": {
+   "ind": 6
+  },
+  "fēceris": {
+   "sub": 6,
+   "ind": 7
+  },
+  "fēcerit": {
+   "sub": 17,
+   "ind": 7
+  },
+  "fēcerimus": {
+   "sub": 2,
+   "ind": 1
+  },
+  "fēceritis": {
+   "ind": 4,
+   "sub": 1
+  },
+  "fēcerint": {
+   "ind": 1,
+   "sub": 2
+  },
+  "factum": {
+   "nominal": 9,
+   "part": 168
+  },
+  "capiō": {
+   "ind": 1
+  },
+  "capit": {
+   "ind": 4
+  },
+  "capitis": {
+   "nominal": 4
+  },
+  "capiunt": {
+   "ind": 2
+  },
+  "capiēbat": {
+   "ind": 1
+  },
+  "capiēmus": {
+   "ind": 1
+  },
+  "capere": {
+   "inf": 17
+  },
+  "cēpī": {
+   "ind": 3
+  },
+  "cēpit": {
+   "ind": 3
+  },
+  "cēpimus": {
+   "ind": 3
+  },
+  "cēpērunt": {
+   "ind": 1
+  },
+  "cēperat": {
+   "ind": 2
+  },
+  "cēperant": {
+   "ind": 2
+  },
+  "cēperit": {
+   "sub": 2
+  },
+  "cēperint": {
+   "sub": 2
+  },
+  "captum": {
+   "part": 1
+  },
+  "doceō": {
+   "ind": 2
+  },
+  "docēs": {
+   "ind": 7
+  },
+  "docet": {
+   "ind": 3
+  },
+  "docent": {
+   "ind": 1
+  },
+  "docēbat": {
+   "ind": 17
+  },
+  "docēbant": {
+   "ind": 2
+  },
+  "docēbō": {
+   "ind": 1
+  },
+  "docēbit": {
+   "ind": 3
+  },
+  "docēre": {
+   "inf": 9
+  },
+  "docuī": {
+   "ind": 2
+  },
+  "docuistī": {
+   "ind": 1
+  },
+  "docuit": {
+   "ind": 4
+  },
+  "docuimus": {
+   "ind": 3
+  },
+  "docuērunt": {
+   "ind": 2
+  },
+  "docuerant": {
+   "ind": 1
+  },
+  "docuerit": {
+   "ind": 2,
+   "sub": 1
+  },
+  "dīcō": {
+   "ind": 225
+  },
+  "dīcis": {
+   "ind": 29,
+   "nominal": 1
+  },
+  "dīcit": {
+   "ind": 262
+  },
+  "dīcimus": {
+   "ind": 14
+  },
+  "dīcitis": {
+   "ind": 22
+  },
+  "dīcunt": {
+   "ind": 66
+  },
+  "dīcēbam": {
+   "ind": 4
+  },
+  "dīcēbās": {
+   "ind": 1
+  },
+  "dīcēbat": {
+   "ind": 71
+  },
+  "dīcēbant": {
+   "ind": 73
+  },
+  "dīcam": {
+   "sub": 14,
+   "ind": 13,
+   "nominal": 1
+  },
+  "dīcēs": {
+   "ind": 17
+  },
+  "dīcet": {
+   "ind": 16
+  },
+  "dīcēmus": {
+   "ind": 10
+  },
+  "dīcētis": {
+   "ind": 5
+  },
+  "dīcent": {
+   "ind": 6
+  },
+  "dīcere": {
+   "inf": 82,
+   "ind": 1
+  },
+  "dīxī": {
+   "ind": 56
+  },
+  "dīxistī": {
+   "ind": 8
+  },
+  "dīxit": {
+   "ind": 517
+  },
+  "dīximus": {
+   "ind": 11
+  },
+  "dīxistis": {
+   "ind": 2
+  },
+  "dīxērunt": {
+   "ind": 136
+  },
+  "dīxeram": {
+   "ind": 2
+  },
+  "dīxerās": {
+   "ind": 1
+  },
+  "dīxerat": {
+   "ind": 18
+  },
+  "dīxerāmus": {
+   "ind": 2
+  },
+  "dīxerant": {
+   "ind": 1
+  },
+  "dīxerō": {
+   "ind": 5
+  },
+  "dīxeris": {
+   "sub": 8,
+   "ind": 1
+  },
+  "dīxerit": {
+   "sub": 19,
+   "ind": 7
+  },
+  "dīxerimus": {
+   "ind": 5,
+   "sub": 1
+  },
+  "dīxeritis": {
+   "sub": 2,
+   "ind": 2
+  },
+  "dīxerint": {
+   "ind": 4,
+   "sub": 1
+  },
+  "dictum": {
+   "nominal": 5,
+   "part": 42
+  },
+  "stō": {
+   "ind": 5
+  },
+  "stās": {
+   "ind": 3
+  },
+  "stat": {
+   "ind": 7
+  },
+  "stāmus": {
+   "ind": 1
+  },
+  "stātis": {
+   "ind": 4
+  },
+  "stant": {
+   "ind": 4
+  },
+  "stābam": {
+   "ind": 1
+  },
+  "stābat": {
+   "ind": 17
+  },
+  "stābant": {
+   "ind": 11
+  },
+  "stābit": {
+   "ind": 5
+  },
+  "stābimus": {
+   "ind": 1
+  },
+  "stābitis": {
+   "ind": 2
+  },
+  "stābunt": {
+   "ind": 1
+  },
+  "stāre": {
+   "inf": 16
+  },
+  "stetit": {
+   "ind": 21
+  },
+  "stetistis": {
+   "ind": 1
+  },
+  "stetērunt": {
+   "ind": 5
+  },
+  "steterint": {
+   "sub": 1
+  },
+  "statum": {
+   "nominal": 5
+  },
+  "cadit": {
+   "ind": 3
+  },
+  "cadunt": {
+   "ind": 6
+  },
+  "cadēbat": {
+   "ind": 1
+  },
+  "cadēbant": {
+   "ind": 1
+  },
+  "cadet": {
+   "ind": 5
+  },
+  "cadent": {
+   "ind": 3
+  },
+  "cadere": {
+   "inf": 5
+  },
+  "cecidī": {
+   "ind": 4
+  },
+  "cecidit": {
+   "ind": 35
+  },
+  "cecidērunt": {
+   "ind": 24
+  },
+  "ceciderit": {
+   "sub": 2,
+   "ind": 6
+  },
+  "cāsum": {
+   "nominal": 13
+  },
+  "rogō": {
+   "ind": 26,
+   "nominal": 1
+  },
+  "rogās": {
+   "ind": 3
+  },
+  "rogat": {
+   "ind": 10
+  },
+  "rogāmus": {
+   "ind": 8
+  },
+  "rogant": {
+   "ind": 1
+  },
+  "rogābat": {
+   "ind": 10
+  },
+  "rogābāmus": {
+   "ind": 1
+  },
+  "rogābant": {
+   "ind": 13
+  },
+  "rogābō": {
+   "ind": 2
+  },
+  "rogābit": {
+   "ind": 1
+  },
+  "rogābitis": {
+   "ind": 1
+  },
+  "rogāre": {
+   "inf": 10
+  },
+  "rogāvī": {
+   "ind": 6
+  },
+  "rogāvit": {
+   "ind": 7
+  },
+  "rogāvimus": {
+   "ind": 1
+  },
+  "rogāvērunt": {
+   "ind": 6
+  },
+  "rogātum": {
+   "part": 2,
+   "sup": 1
+  },
+  "sum": {
+   "ind": 302
+  },
+  "es": {
+   "ind": 137
+  },
+  "est": {
+   "ind": 2903
+  },
+  "sumus": {
+   "ind": 120
+  },
+  "estis": {
+   "ind": 142
+  },
+  "sunt": {
+   "ind": 1001
+  },
+  "eram": {
+   "ind": 27
+  },
+  "erās": {
+   "ind": 7
+  },
+  "erat": {
+   "ind": 506
+  },
+  "erāmus": {
+   "ind": 8
+  },
+  "erātis": {
+   "ind": 5
+  },
+  "erant": {
+   "ind": 250
+  },
+  "erō": {
+   "ind": 18
+  },
+  "eris": {
+   "ind": 19
+  },
+  "erit": {
+   "ind": 206
+  },
+  "erimus": {
+   "ind": 16
+  },
+  "eritis": {
+   "ind": 15
+  },
+  "erunt": {
+   "ind": 59
+  },
+  "esse": {
+   "inf": 691
+  },
+  "fuī": {
+   "ind": 19
+  },
+  "fuistī": {
+   "ind": 4
+  },
+  "fuit": {
+   "ind": 219
+  },
+  "fuimus": {
+   "ind": 10
+  },
+  "fuistis": {
+   "ind": 6
+  },
+  "fuērunt": {
+   "ind": 40
+  },
+  "fueram": {
+   "ind": 2
+  },
+  "fuerat": {
+   "ind": 41
+  },
+  "fuerāmus": {
+   "ind": 1
+  },
+  "fuerant": {
+   "ind": 16
+  },
+  "fuerō": {
+   "ind": 8
+  },
+  "fueris": {
+   "ind": 1,
+   "sub": 2
+  },
+  "fuerit": {
+   "sub": 25,
+   "ind": 62
+  },
+  "fuerimus": {
+   "sub": 2,
+   "ind": 1
+  },
+  "fueritis": {
+   "ind": 4
+  },
+  "fuerint": {
+   "sub": 11,
+   "ind": 10
+  },
+  "amō": {
+   "ind": 11
+  },
+  "amās": {
+   "ind": 19
+  },
+  "amat": {
+   "ind": 15
+  },
+  "amāmus": {
+   "ind": 2
+  },
+  "amant": {
+   "ind": 7
+  },
+  "amābam": {
+   "ind": 1
+  },
+  "amābat": {
+   "ind": 3
+  },
+  "amābō": {
+   "ind": 6
+  },
+  "amābimus": {
+   "ind": 1
+  },
+  "amāre": {
+   "inf": 8,
+   "otro": 3
+  },
+  "amāvī": {
+   "ind": 1
+  },
+  "amāvit": {
+   "ind": 1
+  },
+  "vocō": {
+   "ind": 3
+  },
+  "vocās": {
+   "ind": 3
+  },
+  "vocat": {
+   "ind": 19
+  },
+  "vocāmus": {
+   "ind": 1
+  },
+  "vocātis": {
+   "part": 9,
+   "ind": 2
+  },
+  "vocant": {
+   "ind": 6
+  },
+  "vocābat": {
+   "ind": 1
+  },
+  "vocābant": {
+   "ind": 3
+  },
+  "vocābō": {
+   "ind": 1
+  },
+  "vocābis": {
+   "ind": 3
+  },
+  "vocābit": {
+   "ind": 1
+  },
+  "vocābunt": {
+   "ind": 1
+  },
+  "vocāre": {
+   "inf": 6
+  },
+  "vocāvī": {
+   "ind": 1
+  },
+  "vocāvit": {
+   "ind": 31
+  },
+  "vocāvērunt": {
+   "ind": 3
+  },
+  "vocāverat": {
+   "ind": 1
+  },
+  "vocātum": {
+   "part": 2
+  },
+  "laudō": {
+   "ind": 6
+  },
+  "laudās": {
+   "ind": 3
+  },
+  "laudat": {
+   "ind": 2
+  },
+  "laudāmus": {
+   "ind": 3
+  },
+  "laudātis": {
+   "part": 1
+  },
+  "laudant": {
+   "ind": 1
+  },
+  "laudābat": {
+   "ind": 1
+  },
+  "laudābant": {
+   "ind": 1
+  },
+  "laudāre": {
+   "inf": 2
+  },
+  "laudāvit": {
+   "ind": 3
+  },
+  "laudāvimus": {
+   "ind": 1
+  },
+  "salūtō": {
+   "ind": 1
+  },
+  "salūtat": {
+   "ind": 7
+  },
+  "salūtātis": {
+   "part": 1
+  },
+  "salūtant": {
+   "ind": 9
+  },
+  "salūtābat": {
+   "ind": 1
+  },
+  "salūtābant": {
+   "ind": 1
+  },
+  "salūtāre": {
+   "inf": 1,
+   "nominal": 4
+  },
+  "salūtāvī": {
+   "ind": 1
+  },
+  "salūtāvit": {
+   "ind": 5
+  },
+  "salūtāveritis": {
+   "ind": 1,
+   "sub": 1
+  },
+  "salūtātum": {
+   "sup": 2
+  },
+  "exspectō": {
+   "ind": 20
+  },
+  "exspectās": {
+   "ind": 4
+  },
+  "exspectat": {
+   "ind": 1
+  },
+  "exspectāmus": {
+   "ind": 4
+  },
+  "exspectant": {
+   "ind": 3
+  },
+  "exspectābam": {
+   "ind": 3
+  },
+  "exspectābāmus": {
+   "ind": 1
+  },
+  "exspectābō": {
+   "ind": 2
+  },
+  "exspectābis": {
+   "ind": 1
+  },
+  "exspectāre": {
+   "inf": 12
+  },
+  "videō": {
+   "ind": 52
+  },
+  "vidēs": {
+   "ind": 31
+  },
+  "videt": {
+   "ind": 32
+  },
+  "vidēmus": {
+   "ind": 7
+  },
+  "vidētis": {
+   "ind": 14
+  },
+  "vident": {
+   "ind": 13
+  },
+  "vidēbam": {
+   "ind": 4
+  },
+  "vidēbat": {
+   "ind": 9
+  },
+  "vidēbāmus": {
+   "ind": 1
+  },
+  "vidēbant": {
+   "ind": 6
+  },
+  "vidēbō": {
+   "ind": 6
+  },
+  "vidēbis": {
+   "ind": 11
+  },
+  "vidēbit": {
+   "ind": 6
+  },
+  "vidēbimus": {
+   "ind": 3
+  },
+  "vidēbitis": {
+   "ind": 19
+  },
+  "vidēbunt": {
+   "ind": 14
+  },
+  "vidēre": {
+   "inf": 54,
+   "ind": 1
+  },
+  "vīdī": {
+   "ind": 90
+  },
+  "vīdistī": {
+   "ind": 14
+  },
+  "vīdit": {
+   "ind": 75
+  },
+  "vīdimus": {
+   "ind": 17
+  },
+  "vīdistis": {
+   "ind": 8
+  },
+  "vīdērunt": {
+   "ind": 36
+  },
+  "vīderam": {
+   "ind": 1
+  },
+  "vīderat": {
+   "ind": 6
+  },
+  "vīderātis": {
+   "ind": 1
+  },
+  "vīderant": {
+   "ind": 11
+  },
+  "vīderō": {
+   "ind": 6
+  },
+  "vīderis": {
+   "ind": 10,
+   "sub": 1
+  },
+  "vīderit": {
+   "ind": 3,
+   "sub": 3
+  },
+  "vīderimus": {
+   "ind": 2
+  },
+  "vīderitis": {
+   "ind": 9,
+   "sub": 3
+  },
+  "vīderint": {
+   "sub": 5,
+   "ind": 2
+  },
+  "vīsum": {
+   "part": 16,
+   "nominal": 8,
+   "sup": 1
+  },
+  "timeō": {
+   "ind": 10
+  },
+  "timēs": {
+   "ind": 2
+  },
+  "timet": {
+   "ind": 5
+  },
+  "timēmus": {
+   "ind": 3
+  },
+  "timētis": {
+   "ind": 3
+  },
+  "timent": {
+   "ind": 2
+  },
+  "timēbam": {
+   "ind": 3
+  },
+  "timēbās": {
+   "ind": 1
+  },
+  "timēbat": {
+   "ind": 1
+  },
+  "timēbātis": {
+   "ind": 1
+  },
+  "timēbant": {
+   "ind": 10
+  },
+  "timēbit": {
+   "ind": 2
+  },
+  "timēre": {
+   "inf": 25
+  },
+  "timuī": {
+   "ind": 2
+  },
+  "timuit": {
+   "ind": 7
+  },
+  "timuērunt": {
+   "ind": 13
+  },
+  "timueram": {
+   "ind": 1
+  },
+  "timuerāmus": {
+   "ind": 1
+  },
+  "timueris": {
+   "sub": 1
+  },
+  "timueritis": {
+   "sub": 2
+  },
+  "moneō": {
+   "ind": 2
+  },
+  "monēs": {
+   "ind": 1
+  },
+  "monet": {
+   "ind": 5
+  },
+  "monent": {
+   "ind": 3
+  },
+  "monēre": {
+   "inf": 1
+  },
+  "monuī": {
+   "ind": 1
+  },
+  "monuit": {
+   "ind": 2
+  },
+  "dūcō": {
+   "ind": 2
+  },
+  "dūcis": {
+   "ind": 1
+  },
+  "dūcit": {
+   "ind": 10
+  },
+  "dūcitis": {
+   "ind": 1
+  },
+  "dūcunt": {
+   "ind": 5
+  },
+  "dūcēbam": {
+   "ind": 1
+  },
+  "dūcēbat": {
+   "ind": 2
+  },
+  "dūcēbant": {
+   "ind": 2
+  },
+  "dūcēs": {
+   "nominal": 6
+  },
+  "dūcet": {
+   "ind": 1
+  },
+  "dūcere": {
+   "inf": 10
+  },
+  "dūxī": {
+   "ind": 6
+  },
+  "dūxit": {
+   "ind": 11
+  },
+  "dūximus": {
+   "ind": 1
+  },
+  "dūxērunt": {
+   "ind": 15
+  },
+  "dūxerat": {
+   "ind": 4
+  },
+  "dūxerant": {
+   "ind": 1
+  },
+  "dūxerit": {
+   "sub": 4,
+   "ind": 2
+  },
+  "dūxerint": {
+   "sub": 1
+  },
+  "ductum": {
+   "part": 1
+  },
+  "mittō": {
+   "ind": 16
+  },
+  "mittit": {
+   "ind": 26
+  },
+  "mittunt": {
+   "ind": 20
+  },
+  "mittēbat": {
+   "ind": 1
+  },
+  "mittēbant": {
+   "ind": 2
+  },
+  "mittam": {
+   "ind": 17,
+   "sub": 2
+  },
+  "mittēs": {
+   "ind": 2
+  },
+  "mittet": {
+   "ind": 4
+  },
+  "mittēmus": {
+   "ind": 2
+  },
+  "mittent": {
+   "ind": 4,
+   "otro": 1
+  },
+  "mittere": {
+   "inf": 33,
+   "imp": 1
+  },
+  "mīsī": {
+   "ind": 34
+  },
+  "mīsistī": {
+   "ind": 10
+  },
+  "mīsit": {
+   "ind": 139
+  },
+  "mīsimus": {
+   "ind": 6
+  },
+  "mīsistis": {
+   "ind": 3
+  },
+  "mīsērunt": {
+   "ind": 34
+  },
+  "mīseram": {
+   "nominal": 4,
+   "ind": 1
+  },
+  "mīserās": {
+   "nominal": 2,
+   "ind": 1
+  },
+  "mīserat": {
+   "ind": 5
+  },
+  "mīserant": {
+   "ind": 4
+  },
+  "mīserō": {
+   "nominal": 1,
+   "ind": 2
+  },
+  "mīseris": {
+   "nominal": 1,
+   "sub": 1
+  },
+  "mīserit": {
+   "ind": 1
+  },
+  "missum": {
+   "part": 10
+  },
+  "legō": {
+   "ind": 2
+  },
+  "legis": {
+   "nominal": 48,
+   "ind": 2
+  },
+  "legit": {
+   "ind": 5
+  },
+  "legēbat": {
+   "ind": 2
+  },
+  "legēbant": {
+   "ind": 1
+  },
+  "legēs": {
+   "ind": 2,
+   "nominal": 10
+  },
+  "legere": {
+   "inf": 4
+  },
+  "lēgit": {
+   "ind": 5
+  },
+  "lēgistis": {
+   "ind": 12
+  },
+  "lēgērunt": {
+   "ind": 1
+  },
+  "lēgeram": {
+   "ind": 2
+  },
+  "lēgerat": {
+   "ind": 1
+  },
+  "lēctum": {
+   "nominal": 8
+  },
+  "audiō": {
+   "ind": 13
+  },
+  "audīs": {
+   "ind": 5
+  },
+  "audit": {
+   "ind": 18
+  },
+  "audīmus": {
+   "ind": 2
+  },
+  "audītis": {
+   "ind": 11,
+   "part": 6
+  },
+  "audiunt": {
+   "ind": 13
+  },
+  "audiēbat": {
+   "ind": 8
+  },
+  "audiēbāmus": {
+   "ind": 2
+  },
+  "audiēbant": {
+   "ind": 12
+  },
+  "audiam": {
+   "ind": 3
+  },
+  "audiēs": {
+   "ind": 5
+  },
+  "audiet": {
+   "ind": 2
+  },
+  "audiēmus": {
+   "ind": 1
+  },
+  "audiētis": {
+   "ind": 3
+  },
+  "audient": {
+   "ind": 6
+  },
+  "audīre": {
+   "inf": 29
+  },
+  "audīvī": {
+   "ind": 56
+  },
+  "audīvit": {
+   "ind": 20
+  },
+  "audīvimus": {
+   "ind": 12
+  },
+  "audītum": {
+   "part": 3,
+   "nominal": 3
+  },
+  "inveniō": {
+   "ind": 8
+  },
+  "invenit": {
+   "ind": 36
+  },
+  "invenīmus": {
+   "ind": 7
+  },
+  "inveniunt": {
+   "ind": 3
+  },
+  "inveniēbat": {
+   "ind": 2
+  },
+  "inveniēbant": {
+   "ind": 3
+  },
+  "inveniam": {
+   "sub": 1
+  },
+  "inveniēs": {
+   "ind": 2
+  },
+  "inveniet": {
+   "ind": 4
+  },
+  "inveniēmus": {
+   "ind": 3
+  },
+  "inveniētis": {
+   "ind": 10
+  },
+  "invenient": {
+   "ind": 3
+  },
+  "invenīre": {
+   "inf": 4
+  },
+  "invēnī": {
+   "ind": 10
+  },
+  "invēnistī": {
+   "ind": 2
+  },
+  "invēnit": {
+   "ind": 36
+  },
+  "invēnimus": {
+   "ind": 7
+  },
+  "invēnērunt": {
+   "ind": 23
+  },
+  "invēneris": {
+   "sub": 1
+  },
+  "invēnerit": {
+   "sub": 4,
+   "ind": 3
+  },
+  "invēneritis": {
+   "ind": 2
+  },
+  "invēnerint": {
+   "sub": 1
+  },
+  "inventum": {
+   "nominal": 1,
+   "part": 3
+  },
+  "custōdīs": {
+   "nominal": 1
+  },
+  "custōdit": {
+   "ind": 6
+  },
+  "custōdītis": {
+   "part": 1
+  },
+  "custōdiunt": {
+   "ind": 4
+  },
+  "custōdiēbam": {
+   "ind": 1
+  },
+  "custōdiēbat": {
+   "ind": 2
+  },
+  "custōdiēbant": {
+   "ind": 2
+  },
+  "custōdiam": {
+   "nominal": 4
+  },
+  "custōdiēs": {
+   "ind": 1
+  },
+  "custōdiet": {
+   "ind": 2
+  },
+  "custōdīre": {
+   "inf": 3
+  },
+  "custōdīvī": {
+   "ind": 3
+  },
+  "portō": {
+   "ind": 1
+  },
+  "portās": {
+   "nominal": 7
+  },
+  "portat": {
+   "ind": 2
+  },
+  "portābant": {
+   "ind": 2
+  },
+  "portābit": {
+   "ind": 2
+  },
+  "portāre": {
+   "inf": 7
+  },
+  "portāvit": {
+   "ind": 2
+  },
+  "portāvimus": {
+   "ind": 2
+  },
+  "bonus": {
+   "nominal": 21
+  },
+  "bonum": {
+   "nominal": 78
+  },
+  "bonī": {
+   "nominal": 29
+  },
+  "bonō": {
+   "nominal": 23
+  },
+  "bone": {
+   "nominal": 6
+  },
+  "bonōs": {
+   "nominal": 15
+  },
+  "bonōrum": {
+   "nominal": 19
+  },
+  "bonīs": {
+   "nominal": 22
+  },
+  "bona": {
+   "nominal": 35
+  },
+  "bonam": {
+   "nominal": 16
+  },
+  "bonae": {
+   "nominal": 10
+  },
+  "bonā": {
+   "nominal": 35
+  },
+  "bonās": {
+   "nominal": 2
+  },
+  "magnus": {
+   "nominal": 43
+  },
+  "magnum": {
+   "nominal": 69
+  },
+  "magnī": {
+   "nominal": 26
+  },
+  "magnō": {
+   "nominal": 87
+  },
+  "magne": {
+   "nominal": 1
+  },
+  "magnōs": {
+   "nominal": 10
+  },
+  "magnōrum": {
+   "nominal": 3
+  },
+  "magnīs": {
+   "nominal": 32
+  },
+  "magna": {
+   "nominal": 162
+  },
+  "magnam": {
+   "nominal": 51
+  },
+  "magnae": {
+   "nominal": 20
+  },
+  "magnā": {
+   "nominal": 162
+  },
+  "magnās": {
+   "nominal": 11
+  },
+  "parvum": {
+   "nominal": 2
+  },
+  "parvī": {
+   "nominal": 3
+  },
+  "parvō": {
+   "nominal": 4
+  },
+  "parvīs": {
+   "nominal": 2
+  },
+  "parva": {
+   "nominal": 11
+  },
+  "parvam": {
+   "nominal": 2
+  },
+  "parvae": {
+   "nominal": 1
+  },
+  "parvā": {
+   "nominal": 11
+  },
+  "longus": {
+   "nominal": 3
+  },
+  "longum": {
+   "nominal": 5
+  },
+  "longī": {
+   "nominal": 1
+  },
+  "longō": {
+   "nominal": 5
+  },
+  "longe": {
+   "otro": 69
+  },
+  "longīs": {
+   "nominal": 1
+  },
+  "longa": {
+   "nominal": 7
+  },
+  "longam": {
+   "nominal": 4
+  },
+  "longae": {
+   "nominal": 3
+  },
+  "longā": {
+   "nominal": 7
+  },
+  "longās": {
+   "nominal": 10
+  },
+  "longārum": {
+   "nominal": 2
+  },
+  "pulchrum": {
+   "nominal": 2
+  },
+  "pulchra": {
+   "nominal": 3
+  },
+  "pulchrae": {
+   "nominal": 1
+  },
+  "pulchrā": {
+   "nominal": 3
+  },
+  "miser": {
+   "nominal": 6
+  },
+  "miserum": {
+   "nominal": 8
+  },
+  "miserī": {
+   "nominal": 2
+  },
+  "miserō": {
+   "nominal": 1,
+   "ind": 2
+  },
+  "miserōs": {
+   "nominal": 2
+  },
+  "miserīs": {
+   "nominal": 1,
+   "sub": 1
+  },
+  "misera": {
+   "nominal": 2
+  },
+  "miseram": {
+   "nominal": 4,
+   "ind": 1
+  },
+  "miserae": {
+   "nominal": 4
+  },
+  "miserā": {
+   "nominal": 2
+  },
+  "miserās": {
+   "nominal": 2,
+   "ind": 1
+  },
+  "prīmus": {
+   "nominal": 36
+  },
+  "prīmum": {
+   "otro": 110,
+   "nominal": 22
+  },
+  "prīmī": {
+   "nominal": 19
+  },
+  "prīmō": {
+   "nominal": 21,
+   "otro": 25
+  },
+  "prīmōs": {
+   "nominal": 12
+  },
+  "prīmōrum": {
+   "nominal": 1
+  },
+  "prīmīs": {
+   "nominal": 30
+  },
+  "prīma": {
+   "nominal": 40
+  },
+  "prīmam": {
+   "nominal": 11
+  },
+  "prīmae": {
+   "nominal": 1
+  },
+  "prīmā": {
+   "nominal": 40
+  },
+  "prīmās": {
+   "nominal": 4
+  },
+  "integer": {
+   "nominal": 1
+  },
+  "integrum": {
+   "nominal": 3
+  },
+  "integrōs": {
+   "nominal": 1
+  },
+  "integrīs": {
+   "nominal": 3
+  },
+  "integra": {
+   "nominal": 4
+  },
+  "integram": {
+   "nominal": 2
+  },
+  "integrae": {
+   "nominal": 1
+  },
+  "integrā": {
+   "nominal": 4
+  },
+  "certus": {
+   "nominal": 7
+  },
+  "certum": {
+   "nominal": 12
+  },
+  "certī": {
+   "nominal": 12
+  },
+  "certō": {
+   "nominal": 4,
+   "otro": 8
+  },
+  "certe": {
+   "otro": 46
+  },
+  "certōs": {
+   "nominal": 2
+  },
+  "certīs": {
+   "nominal": 1
+  },
+  "certa": {
+   "nominal": 11
+  },
+  "certam": {
+   "nominal": 2
+  },
+  "certae": {
+   "nominal": 1
+  },
+  "certā": {
+   "nominal": 11
+  },
+  "certārum": {
+   "nominal": 1
+  },
+  "vērus": {
+   "nominal": 4
+  },
+  "vērum": {
+   "nominal": 31,
+   "otro": 38
+  },
+  "vērī": {
+   "nominal": 6
+  },
+  "vērō": {
+   "nominal": 4,
+   "otro": 283
+  },
+  "vēre": {
+   "otro": 36,
+   "nominal": 4
+  },
+  "vēra": {
+   "nominal": 20
+  },
+  "vēram": {
+   "nominal": 1
+  },
+  "vērae": {
+   "nominal": 1
+  },
+  "vērā": {
+   "nominal": 20
+  },
+  "anxius": {
+   "nominal": 3
+  },
+  "anxiī": {
+   "nominal": 1
+  },
+  "suus": {
+   "nominal": 5
+  },
+  "suum": {
+   "nominal": 139
+  },
+  "suī": {
+   "nominal": 64
+  },
+  "suō": {
+   "nominal": 130
+  },
+  "sue": {
+   "nominal": 1
+  },
+  "suōs": {
+   "nominal": 118
+  },
+  "suōrum": {
+   "nominal": 11
+  },
+  "suīs": {
+   "nominal": 212
+  },
+  "sua": {
+   "nominal": 188
+  },
+  "suam": {
+   "nominal": 184
+  },
+  "suae": {
+   "nominal": 52
+  },
+  "suā": {
+   "nominal": 188
+  },
+  "suās": {
+   "nominal": 51
+  },
+  "suārum": {
+   "nominal": 8
+  },
+  "meus": {
+   "nominal": 86
+  },
+  "meum": {
+   "nominal": 152
+  },
+  "meī": {
+   "nominal": 106
+  },
+  "meō": {
+   "nominal": 126
+  },
+  "meōs": {
+   "nominal": 37
+  },
+  "meōrum": {
+   "nominal": 15
+  },
+  "meīs": {
+   "nominal": 76
+  },
+  "mea": {
+   "nominal": 184
+  },
+  "meam": {
+   "nominal": 99
+  },
+  "meae": {
+   "nominal": 55
+  },
+  "meā": {
+   "nominal": 184
+  },
+  "meās": {
+   "nominal": 27
+  },
+  "meārum": {
+   "nominal": 7
+  },
+  "tuus": {
+   "nominal": 60
+  },
+  "tuum": {
+   "nominal": 125
+  },
+  "tuī": {
+   "nominal": 64
+  },
+  "tuō": {
+   "nominal": 91
+  },
+  "tuōs": {
+   "nominal": 38
+  },
+  "tuōrum": {
+   "nominal": 15
+  },
+  "tuīs": {
+   "nominal": 62
+  },
+  "tua": {
+   "nominal": 166
+  },
+  "tuam": {
+   "nominal": 60
+  },
+  "tuae": {
+   "nominal": 50
+  },
+  "tuā": {
+   "nominal": 166
+  },
+  "tuās": {
+   "nominal": 35
+  },
+  "tuārum": {
+   "nominal": 4
+  },
+  "noster": {
+   "nominal": 60
+  },
+  "nostrum": {
+   "nominal": 100
+  },
+  "nostrī": {
+   "nominal": 150
+  },
+  "nostrō": {
+   "nominal": 75
+  },
+  "nostrōs": {
+   "nominal": 56
+  },
+  "nostrōrum": {
+   "nominal": 24
+  },
+  "nostrīs": {
+   "nominal": 80
+  },
+  "nostra": {
+   "nominal": 110
+  },
+  "nostram": {
+   "nominal": 45
+  },
+  "nostrae": {
+   "nominal": 45
+  },
+  "nostrā": {
+   "nominal": 110
+  },
+  "nostrās": {
+   "nominal": 14
+  },
+  "nostrārum": {
+   "nominal": 4
+  },
+  "arma": {
+   "nominal": 31
+  },
+  "armōrum": {
+   "nominal": 3
+  },
+  "armīs": {
+   "nominal": 44
+  },
+  "tenebrae": {
+   "nominal": 12
+  },
+  "tenebrās": {
+   "nominal": 6
+  },
+  "tenebrārum": {
+   "nominal": 9
+  },
+  "tenebrīs": {
+   "nominal": 17
+  },
+  "īnsidiae": {
+   "nominal": 4
+  },
+  "īnsidiās": {
+   "nominal": 11
+  },
+  "īnsidiārum": {
+   "nominal": 1
+  },
+  "īnsidiīs": {
+   "nominal": 8
+  },
+  "nūptiae": {
+   "nominal": 6
+  },
+  "nūptiās": {
+   "nominal": 10
+  },
+  "nūptiārum": {
+   "nominal": 2
+  },
+  "nūptiīs": {
+   "nominal": 3
+  },
+  "līberī": {
+   "nominal": 8
+  },
+  "līberōs": {
+   "nominal": 13
+  },
+  "līberōrum": {
+   "nominal": 1
+  },
+  "līberīs": {
+   "nominal": 9
+  },
+  "moenia": {
+   "nominal": 4
+  },
+  "moenibus": {
+   "nominal": 2
+  },
+  "castra": {
+   "nominal": 83
+  },
+  "castrōrum": {
+   "nominal": 9
+  },
+  "castrīs": {
+   "nominal": 76
+  },
+  "litterae": {
+   "nominal": 35
+  },
+  "litterās": {
+   "nominal": 99
+  },
+  "litterārum": {
+   "nominal": 14
+  },
+  "litterīs": {
+   "nominal": 72
+  },
+  "cōpiae": {
+   "nominal": 10
+  },
+  "cōpiās": {
+   "nominal": 39
+  },
+  "cōpiārum": {
+   "nominal": 5
+  },
+  "cōpiīs": {
+   "nominal": 39
+  },
+  "omnis": {
+   "nominal": 213
+  },
+  "omnem": {
+   "nominal": 103
+  },
+  "omnī": {
+   "nominal": 180
+  },
+  "omnēs": {
+   "nominal": 436
+  },
+  "omnium": {
+   "nominal": 137
+  },
+  "omnibus": {
+   "nominal": 313
+  },
+  "omne": {
+   "nominal": 67
+  },
+  "omnia": {
+   "nominal": 403
+  },
+  "similis": {
+   "nominal": 19
+  },
+  "similem": {
+   "nominal": 5
+  },
+  "similī": {
+   "nominal": 7
+  },
+  "similēs": {
+   "nominal": 19
+  },
+  "similibus": {
+   "nominal": 2
+  },
+  "simile": {
+   "nominal": 28
+  },
+  "similia": {
+   "nominal": 5
+  },
+  "gravis": {
+   "nominal": 10
+  },
+  "gravem": {
+   "nominal": 8
+  },
+  "gravī": {
+   "nominal": 8
+  },
+  "gravēs": {
+   "nominal": 6
+  },
+  "gravibus": {
+   "nominal": 4
+  },
+  "grave": {
+   "nominal": 7
+  },
+  "gravia": {
+   "nominal": 1
+  },
+  "fortis": {
+   "nominal": 23
+  },
+  "fortem": {
+   "nominal": 5
+  },
+  "fortī": {
+   "nominal": 4
+  },
+  "fortēs": {
+   "nominal": 7
+  },
+  "fortium": {
+   "nominal": 1
+  },
+  "fortibus": {
+   "nominal": 2
+  },
+  "forte": {
+   "nominal": 10,
+   "otro": 47
+  },
+  "fortia": {
+   "nominal": 1
+  },
+  "commūnis": {
+   "nominal": 8
+  },
+  "commūnem": {
+   "nominal": 8
+  },
+  "commūnī": {
+   "nominal": 14
+  },
+  "commūnēs": {
+   "nominal": 2
+  },
+  "commūnibus": {
+   "nominal": 5
+  },
+  "commūne": {
+   "nominal": 15
+  },
+  "commūnia": {
+   "nominal": 10
+  },
+  "fidēlis": {
+   "nominal": 27
+  },
+  "fidēlem": {
+   "nominal": 4
+  },
+  "fidēlī": {
+   "nominal": 3
+  },
+  "fidēlēs": {
+   "nominal": 4
+  },
+  "fidēlibus": {
+   "nominal": 4
+  },
+  "fidēle": {
+   "nominal": 1
+  },
+  "fidēlia": {
+   "nominal": 1
+  },
+  "ūtilis": {
+   "nominal": 10
+  },
+  "ūtilem": {
+   "nominal": 3
+  },
+  "ūtilī": {
+   "nominal": 1
+  },
+  "ūtilēs": {
+   "nominal": 5
+  },
+  "ūtilium": {
+   "nominal": 1
+  },
+  "ūtile": {
+   "nominal": 12
+  },
+  "ūtilia": {
+   "nominal": 3
+  },
+  "fēlīx": {
+   "nominal": 9
+  },
+  "fēlīcem": {
+   "nominal": 1
+  },
+  "fēlīcī": {
+   "nominal": 3
+  },
+  "fēlīcēs": {
+   "nominal": 3
+  },
+  "fēlīce": {
+   "nominal": 1
+  },
+  "praesēns": {
+   "part": 1,
+   "nominal": 12
+  },
+  "praesentem": {
+   "nominal": 6
+  },
+  "praesentis": {
+   "nominal": 4
+  },
+  "praesentī": {
+   "nominal": 8
+  },
+  "praesentēs": {
+   "nominal": 6
+  },
+  "praesentibus": {
+   "nominal": 2
+  },
+  "praesente": {
+   "nominal": 4
+  },
+  "praesentia": {
+   "nominal": 8
+  },
+  "ācer": {
+   "nominal": 1
+  },
+  "ācrem": {
+   "nominal": 1
+  },
+  "ācris": {
+   "nominal": 2
+  },
+  "ācrēs": {
+   "nominal": 1
+  },
+  "ācre": {
+   "nominal": 1
+  },
+  "dō": {
+   "ind": 14
+  },
+  "dās": {
+   "ind": 1
+  },
+  "dat": {
+   "ind": 25
+  },
+  "damus": {
+   "ind": 3
+  },
+  "datis": {
+   "part": 6
+  },
+  "dant": {
+   "ind": 4
+  },
+  "dabam": {
+   "ind": 5
+  },
+  "dabat": {
+   "ind": 9
+  },
+  "dabant": {
+   "ind": 5
+  },
+  "dabō": {
+   "ind": 28
+  },
+  "dabis": {
+   "ind": 5
+  },
+  "dabit": {
+   "ind": 19
+  },
+  "dabimus": {
+   "ind": 3
+  },
+  "dabunt": {
+   "ind": 5
+  },
+  "eō": {
+   "nominal": 330,
+   "otro": 99,
+   "ind": 2
+  },
+  "īs": {
+   "nominal": 72
+  },
+  "it": {
+   "ind": 1
+  },
+  "īmus": {
+   "ind": 1
+  },
+  "eunt": {
+   "ind": 1
+  },
+  "ībat": {
+   "ind": 15
+  },
+  "ībāmus": {
+   "ind": 1
+  },
+  "ībant": {
+   "ind": 10
+  },
+  "ībō": {
+   "ind": 1
+  },
+  "ībis": {
+   "ind": 2
+  },
+  "ībit": {
+   "ind": 2
+  },
+  "ībimus": {
+   "ind": 2
+  },
+  "ībunt": {
+   "ind": 2
+  },
+  "ferō": {
+   "ind": 8
+  },
+  "fers": {
+   "ind": 3
+  },
+  "fert": {
+   "ind": 11
+  },
+  "ferunt": {
+   "ind": 9
+  },
+  "ferēbat": {
+   "ind": 3
+  },
+  "ferēbant": {
+   "ind": 6
+  },
+  "feram": {
+   "sub": 5,
+   "ind": 4
+  },
+  "ferēs": {
+   "ind": 2
+  },
+  "feret": {
+   "ind": 1
+  },
+  "ferēmus": {
+   "ind": 4
+  },
+  "volō": {
+   "ind": 46
+  },
+  "vīs": {
+   "ind": 33,
+   "nominal": 13
+  },
+  "vult": {
+   "ind": 32
+  },
+  "volumus": {
+   "ind": 18
+  },
+  "vultis": {
+   "ind": 26
+  },
+  "volunt": {
+   "ind": 17
+  },
+  "volēbam": {
+   "ind": 4
+  },
+  "volēbās": {
+   "ind": 1
+  },
+  "volēbat": {
+   "ind": 13
+  },
+  "volēbāmus": {
+   "ind": 1
+  },
+  "volēbant": {
+   "ind": 7
+  },
+  "volam": {
+   "ind": 1
+  },
+  "volēs": {
+   "ind": 7
+  },
+  "volet": {
+   "ind": 3
+  },
+  "volent": {
+   "sub": 1,
+   "ind": 4
+  },
+  "nōlō": {
+   "ind": 20
+  },
+  "nōlumus": {
+   "ind": 3
+  },
+  "nōlunt": {
+   "ind": 4
+  },
+  "nōlēbam": {
+   "ind": 2
+  },
+  "nōlēbat": {
+   "ind": 6
+  },
+  "nōlēbant": {
+   "ind": 1
+  },
+  "mālō": {
+   "ind": 14,
+   "nominal": 20
+  },
+  "māvīs": {
+   "ind": 1
+  },
+  "māvult": {
+   "ind": 2
+  },
+  "mālēbant": {
+   "ind": 1
+  },
+  "mālam": {
+   "nominal": 3
+  },
+  "fit": {
+   "ind": 53
+  },
+  "fīunt": {
+   "ind": 20
+  },
+  "fīēbat": {
+   "ind": 5
+  },
+  "fīēbant": {
+   "ind": 8
+  },
+  "fīam": {
+   "sub": 3
+  },
+  "fīet": {
+   "ind": 20
+  },
+  "fīent": {
+   "ind": 5
+  },
+  "possum": {
+   "ind": 42
+  },
+  "potes": {
+   "ind": 30,
+   "sub": 1
+  },
+  "potest": {
+   "ind": 143
+  },
+  "possumus": {
+   "ind": 18
+  },
+  "potestis": {
+   "ind": 27
+  },
+  "possunt": {
+   "ind": 42
+  },
+  "poterat": {
+   "ind": 32
+  },
+  "poterātis": {
+   "ind": 1
+  },
+  "poterant": {
+   "ind": 24
+  },
+  "poterō": {
+   "ind": 8
+  },
+  "poteris": {
+   "ind": 19
+  },
+  "poterit": {
+   "ind": 20
+  },
+  "poterimus": {
+   "ind": 6
+  },
+  "poteritis": {
+   "ind": 1
+  },
+  "poterunt": {
+   "ind": 9
+  },
+  "ades": {
+   "ind": 2
+  },
+  "adest": {
+   "ind": 3
+  },
+  "adsumus": {
+   "ind": 1
+  },
+  "adestis": {
+   "ind": 1
+  },
+  "adsunt": {
+   "ind": 1
+  },
+  "aderās": {
+   "ind": 1
+  },
+  "aderat": {
+   "ind": 2
+  },
+  "aderant": {
+   "ind": 5
+  },
+  "aderis": {
+   "ind": 3
+  },
+  "aderit": {
+   "ind": 2
+  },
+  "aderunt": {
+   "ind": 2
+  },
+  "abes": {
+   "ind": 4
+  },
+  "abest": {
+   "ind": 3
+  },
+  "absumus": {
+   "ind": 2
+  },
+  "absunt": {
+   "ind": 2
+  },
+  "aberam": {
+   "ind": 1
+  },
+  "aberat": {
+   "ind": 6
+  },
+  "aberant": {
+   "ind": 4
+  },
+  "aberis": {
+   "ind": 1
+  },
+  "aberit": {
+   "ind": 2
+  },
+  "prōdest": {
+   "ind": 8
+  },
+  "prōsunt": {
+   "ind": 2
+  },
+  "prōderit": {
+   "ind": 8
+  },
+  "dēsum": {
+   "ind": 2
+  },
+  "dēest": {
+   "ind": 8
+  },
+  "dēsumus": {
+   "ind": 1
+  },
+  "dēsunt": {
+   "ind": 6
+  },
+  "dēerat": {
+   "ind": 7
+  },
+  "dēerant": {
+   "ind": 4
+  },
+  "dēerunt": {
+   "ind": 1
+  },
+  "ille": {
+   "nominal": 285
+  },
+  "illum": {
+   "nominal": 327
+  },
+  "illīus": {
+   "nominal": 73
+  },
+  "illī": {
+   "nominal": 462
+  },
+  "illō": {
+   "nominal": 184,
+   "otro": 4
+  },
+  "illōs": {
+   "nominal": 167
+  },
+  "illōrum": {
+   "nominal": 46
+  },
+  "illīs": {
+   "nominal": 412
+  },
+  "illa": {
+   "nominal": 214
+  },
+  "illam": {
+   "nominal": 85
+  },
+  "illā": {
+   "nominal": 214
+  },
+  "illae": {
+   "nominal": 14
+  },
+  "illās": {
+   "nominal": 15
+  },
+  "illārum": {
+   "nominal": 4
+  },
+  "illud": {
+   "nominal": 155
+  },
+  "iste": {
+   "nominal": 22
+  },
+  "istum": {
+   "nominal": 12
+  },
+  "istīus": {
+   "nominal": 9
+  },
+  "istī": {
+   "nominal": 21
+  },
+  "istō": {
+   "nominal": 13
+  },
+  "istōs": {
+   "nominal": 15
+  },
+  "istōrum": {
+   "nominal": 12
+  },
+  "istīs": {
+   "nominal": 28
+  },
+  "ista": {
+   "nominal": 57
+  },
+  "istam": {
+   "nominal": 18
+  },
+  "istā": {
+   "nominal": 57
+  },
+  "istae": {
+   "nominal": 2
+  },
+  "istās": {
+   "nominal": 3
+  },
+  "istud": {
+   "nominal": 15
+  },
+  "ipse": {
+   "nominal": 303
+  },
+  "ipsum": {
+   "nominal": 175
+  },
+  "ipsīus": {
+   "nominal": 52
+  },
+  "ipsī": {
+   "nominal": 123
+  },
+  "ipsō": {
+   "nominal": 129
+  },
+  "ipsōs": {
+   "nominal": 45
+  },
+  "ipsōrum": {
+   "nominal": 24
+  },
+  "ipsīs": {
+   "nominal": 61
+  },
+  "ipsa": {
+   "nominal": 62
+  },
+  "ipsam": {
+   "nominal": 10
+  },
+  "ipsā": {
+   "nominal": 62
+  },
+  "ipsae": {
+   "nominal": 4
+  },
+  "ipsās": {
+   "nominal": 5
+  },
+  "is": {
+   "nominal": 72
+  },
+  "eum": {
+   "nominal": 983
+  },
+  "eius": {
+   "nominal": 929
+  },
+  "eī": {
+   "nominal": 481,
+   "otro": 1
+  },
+  "iī": {
+   "nominal": 33
+  },
+  "eōs": {
+   "nominal": 425
+  },
+  "eōrum": {
+   "nominal": 342
+  },
+  "eīs": {
+   "nominal": 348
+  },
+  "ea": {
+   "nominal": 331
+  },
+  "eam": {
+   "nominal": 195,
+   "sub": 1
+  },
+  "eā": {
+   "nominal": 331
+  },
+  "eae": {
+   "nominal": 5
+  },
+  "eās": {
+   "nominal": 64,
+   "sub": 1
+  },
+  "eārum": {
+   "nominal": 30
+  },
+  "id": {
+   "nominal": 325,
+   "otro": 2
+  },
+  "hic": {
+   "nominal": 212,
+   "otro": 87
+  },
+  "hunc": {
+   "nominal": 94
+  },
+  "huius": {
+   "nominal": 94
+  },
+  "huic": {
+   "nominal": 66
+  },
+  "hōc": {
+   "nominal": 650,
+   "otro": 3
+  },
+  "hī": {
+   "nominal": 35
+  },
+  "hōs": {
+   "nominal": 46
+  },
+  "hōrum": {
+   "nominal": 25
+  },
+  "hīs": {
+   "nominal": 351
+  },
+  "haec": {
+   "nominal": 559
+  },
+  "hanc": {
+   "nominal": 93
+  },
+  "hāc": {
+   "nominal": 86,
+   "otro": 1
+  },
+  "hae": {
+   "nominal": 9
+  },
+  "hās": {
+   "nominal": 38
+  },
+  "hārum": {
+   "nominal": 9
+  },
+  "hoc": {
+   "nominal": 650,
+   "otro": 3
+  },
+  "quī": {
+   "nominal": 2352,
+   "otro": 3
+  },
+  "quem": {
+   "nominal": 307,
+   "otro": 15
+  },
+  "cuius": {
+   "nominal": 111
+  },
+  "cui": {
+   "nominal": 123
+  },
+  "quō": {
+   "otro": 110,
+   "nominal": 357
+  },
+  "quōs": {
+   "nominal": 170
+  },
+  "quōrum": {
+   "nominal": 84
+  },
+  "quibus": {
+   "nominal": 272
+  },
+  "quae": {
+   "nominal": 1176
+  },
+  "quā": {
+   "otro": 48,
+   "nominal": 218
+  },
+  "quās": {
+   "nominal": 129
+  },
+  "quārum": {
+   "nominal": 24
+  },
+  "respondēris": {
+   "sub": 1
+  },
+  "labōrātur": {
+   "ind": 1
+  },
+  "tacentur": {
+   "ind": 1
+  },
+  "habētur": {
+   "ind": 10
+  },
+  "habentur": {
+   "ind": 2
+  },
+  "habēbātur": {
+   "ind": 2
+  },
+  "habēberis": {
+   "ind": 1
+  },
+  "habēbuntur": {
+   "ind": 1
+  },
+  "capiēbantur": {
+   "ind": 1
+  },
+  "dīcor": {
+   "ind": 1
+  },
+  "dīcitur": {
+   "ind": 44
+  },
+  "dīciminī": {
+   "ind": 1
+  },
+  "dīcuntur": {
+   "ind": 9
+  },
+  "dīcēbātur": {
+   "ind": 8
+  },
+  "dīcēbantur": {
+   "ind": 12
+  },
+  "dīcar": {
+   "sub": 2,
+   "ind": 1
+  },
+  "dīcētur": {
+   "ind": 3
+  },
+  "dīcentur": {
+   "ind": 3
+  },
+  "amor": {
+   "nominal": 22
+  },
+  "amāris": {
+   "nominal": 1
+  },
+  "amāmur": {
+   "ind": 1
+  },
+  "vocātur": {
+   "ind": 26
+  },
+  "vocantur": {
+   "ind": 2
+  },
+  "vocābātur": {
+   "ind": 6
+  },
+  "vocāberis": {
+   "ind": 2
+  },
+  "vocābitur": {
+   "ind": 10
+  },
+  "vocābuntur": {
+   "ind": 2
+  },
+  "laudātur": {
+   "ind": 1
+  },
+  "laudantur": {
+   "ind": 2
+  },
+  "salūtāris": {
+   "nominal": 1
+  },
+  "exspectāris": {
+   "sub": 2
+  },
+  "exspectātur": {
+   "ind": 2
+  },
+  "videor": {
+   "ind": 19
+  },
+  "vidēris": {
+   "ind": 10,
+   "sub": 1
+  },
+  "vidētur": {
+   "ind": 59
+  },
+  "vidēmur": {
+   "ind": 3
+  },
+  "videntur": {
+   "ind": 21,
+   "sub": 1
+  },
+  "vidēbar": {
+   "ind": 2
+  },
+  "vidēbātur": {
+   "ind": 27
+  },
+  "vidēbantur": {
+   "ind": 10
+  },
+  "vidēbitur": {
+   "ind": 9
+  },
+  "vidēbimur": {
+   "ind": 1
+  },
+  "vidēbuntur": {
+   "ind": 3
+  },
+  "timentur": {
+   "ind": 1
+  },
+  "dūcitur": {
+   "ind": 2
+  },
+  "dūciminī": {
+   "ind": 1
+  },
+  "dūcuntur": {
+   "ind": 1
+  },
+  "dūcēbāminī": {
+   "ind": 1
+  },
+  "dūcēbantur": {
+   "ind": 1
+  },
+  "dūcēminī": {
+   "ind": 1
+  },
+  "dūcentur": {
+   "ind": 1
+  },
+  "mittitur": {
+   "ind": 5
+  },
+  "mittuntur": {
+   "ind": 3
+  },
+  "mittēbantur": {
+   "ind": 1
+  },
+  "mittētur": {
+   "ind": 3
+  },
+  "legitur": {
+   "ind": 4
+  },
+  "leguntur": {
+   "ind": 2
+  },
+  "audītur": {
+   "ind": 1
+  },
+  "audiēris": {
+   "sub": 4
+  },
+  "audiētur": {
+   "ind": 5
+  },
+  "invenītur": {
+   "ind": 2
+  },
+  "invenīmur": {
+   "ind": 1
+  },
+  "inveniar": {
+   "sub": 3
+  },
+  "inveniētur": {
+   "ind": 4
+  },
+  "custōdiēbāmur": {
+   "ind": 1
+  },
+  "portābātur": {
+   "ind": 1
+  },
+  "portābitur": {
+   "ind": 1
+  },
+  "venīrī": {
+   "inf": 2
+  },
+  "vēnisse": {
+   "inf": 20
+  },
+  "respondērī": {
+   "inf": 1
+  },
+  "respondisse": {
+   "inf": 2
+  },
+  "tacuisse": {
+   "inf": 1
+  },
+  "habērī": {
+   "inf": 2
+  },
+  "habuisse": {
+   "inf": 5
+  },
+  "fierī": {
+   "inf": 118
+  },
+  "fēcisse": {
+   "inf": 16
+  },
+  "capī": {
+   "inf": 6
+  },
+  "docērī": {
+   "inf": 1
+  },
+  "dīcī": {
+   "inf": 17
+  },
+  "dīxisse": {
+   "inf": 8
+  },
+  "stārī": {
+   "inf": 1
+  },
+  "cecidisse": {
+   "inf": 1
+  },
+  "fuisse": {
+   "inf": 52
+  },
+  "amārī": {
+   "inf": 5,
+   "nominal": 2
+  },
+  "vocārī": {
+   "inf": 11
+  },
+  "laudārī": {
+   "inf": 5
+  },
+  "salūtārī": {
+   "inf": 1,
+   "nominal": 1
+  },
+  "exspectārī": {
+   "inf": 1
+  },
+  "vidērī": {
+   "inf": 14
+  },
+  "vīdisse": {
+   "inf": 4
+  },
+  "monuisse": {
+   "inf": 1
+  },
+  "dūcī": {
+   "inf": 9
+  },
+  "mittī": {
+   "inf": 8
+  },
+  "mīsisse": {
+   "inf": 3
+  },
+  "legī": {
+   "ind": 5,
+   "inf": 3,
+   "nominal": 13
+  },
+  "lēgisse": {
+   "inf": 1
+  },
+  "audīrī": {
+   "inf": 1
+  },
+  "invenīrī": {
+   "inf": 5
+  },
+  "invēnisse": {
+   "inf": 1
+  },
+  "custōdīrī": {
+   "inf": 4
+  },
+  "portārī": {
+   "inf": 1
+  },
+  "ego": {
+   "nominal": 713
+  },
+  "mē": {
+   "nominal": 1345,
+   "otro": 28
+  },
+  "mihi": {
+   "nominal": 719
+  },
+  "tū": {
+   "nominal": 377
+  },
+  "tē": {
+   "nominal": 863,
+   "otro": 3
+  },
+  "tibi": {
+   "nominal": 418
+  },
+  "nōs": {
+   "nominal": 460
+  },
+  "nōbīs": {
+   "nominal": 323
+  },
+  "vōs": {
+   "nominal": 663
+  },
+  "vestrī": {
+   "nominal": 39
+  },
+  "vōbīs": {
+   "nominal": 693
+  },
+  "vestrum": {
+   "nominal": 77
+  },
+  "sē": {
+   "nominal": 789
+  },
+  "sibi": {
+   "nominal": 213
+  },
+  "veniās": {
+   "sub": 10
+  },
+  "veniat": {
+   "sub": 27
+  },
+  "veniant": {
+   "sub": 12
+  },
+  "venīrem": {
+   "sub": 3
+  },
+  "venīrēs": {
+   "sub": 1
+  },
+  "venīret": {
+   "sub": 16
+  },
+  "venīrent": {
+   "sub": 8
+  },
+  "vēnerim": {
+   "sub": 2
+  },
+  "vēnerīs": {
+   "ind": 10
+  },
+  "vēnerīmus": {
+   "ind": 2
+  },
+  "vēnissem": {
+   "sub": 7
+  },
+  "vēnissēs": {
+   "sub": 1
+  },
+  "vēnisset": {
+   "sub": 38
+  },
+  "vēnissēmus": {
+   "sub": 4
+  },
+  "vēnissent": {
+   "sub": 25
+  },
+  "venīrētur": {
+   "sub": 1
+  },
+  "respondeās": {
+   "sub": 2
+  },
+  "respondeat": {
+   "sub": 2
+  },
+  "respondeātis": {
+   "sub": 2
+  },
+  "respondeant": {
+   "sub": 1
+  },
+  "respondērent": {
+   "sub": 1
+  },
+  "responderīs": {
+   "sub": 1
+  },
+  "respondisset": {
+   "sub": 1
+  },
+  "respondissent": {
+   "sub": 1
+  },
+  "ambulet": {
+   "sub": 2
+  },
+  "ambulēmus": {
+   "sub": 5
+  },
+  "ambulētis": {
+   "sub": 3
+  },
+  "ambulārem": {
+   "sub": 1
+  },
+  "ambulāret": {
+   "sub": 2
+  },
+  "ambulārētis": {
+   "sub": 1
+  },
+  "ambulārent": {
+   "sub": 1
+  },
+  "habitent": {
+   "sub": 1
+  },
+  "labōrem": {
+   "nominal": 11
+  },
+  "labōrēs": {
+   "nominal": 4
+  },
+  "labōret": {
+   "sub": 2
+  },
+  "labōrent": {
+   "sub": 1
+  },
+  "labōrāverim": {
+   "sub": 1
+  },
+  "labōrārētur": {
+   "sub": 1
+  },
+  "taceās": {
+   "sub": 1
+  },
+  "taceat": {
+   "sub": 2
+  },
+  "taceant": {
+   "sub": 1
+  },
+  "tacēret": {
+   "sub": 2
+  },
+  "tacērent": {
+   "sub": 2
+  },
+  "habeam": {
+   "sub": 12
+  },
+  "habeās": {
+   "sub": 8
+  },
+  "habeat": {
+   "sub": 26
+  },
+  "habeāmus": {
+   "sub": 5
+  },
+  "habeātis": {
+   "sub": 8
+  },
+  "habeant": {
+   "sub": 14
+  },
+  "habērem": {
+   "sub": 11
+  },
+  "habērēs": {
+   "sub": 4
+  },
+  "habēret": {
+   "sub": 23
+  },
+  "habērēmus": {
+   "sub": 2
+  },
+  "habērētis": {
+   "sub": 3
+  },
+  "habērent": {
+   "sub": 19
+  },
+  "habuerīs": {
+   "ind": 1,
+   "sub": 1
+  },
+  "habuerīmus": {
+   "sub": 2,
+   "ind": 1
+  },
+  "habuerītis": {
+   "ind": 4,
+   "sub": 1
+  },
+  "habuissem": {
+   "sub": 1
+  },
+  "habuisset": {
+   "sub": 2
+  },
+  "habuissent": {
+   "sub": 2
+  },
+  "habeātur": {
+   "sub": 2
+  },
+  "habeāminī": {
+   "sub": 2
+  },
+  "habeantur": {
+   "sub": 1
+  },
+  "habērētur": {
+   "sub": 2
+  },
+  "habērentur": {
+   "sub": 2
+  },
+  "faciās": {
+   "sub": 15
+  },
+  "faciat": {
+   "sub": 21
+  },
+  "faciāmus": {
+   "sub": 8
+  },
+  "faciātis": {
+   "sub": 10
+  },
+  "faciant": {
+   "sub": 9
+  },
+  "facerem": {
+   "sub": 10
+  },
+  "facerēs": {
+   "sub": 2
+  },
+  "faceret": {
+   "sub": 22
+  },
+  "facerent": {
+   "sub": 11
+  },
+  "fēcerim": {
+   "sub": 2
+  },
+  "fēcerīs": {
+   "sub": 6,
+   "ind": 7
+  },
+  "fēcerīmus": {
+   "sub": 2,
+   "ind": 1
+  },
+  "fēcerītis": {
+   "ind": 4,
+   "sub": 1
+  },
+  "fēcissem": {
+   "sub": 4
+  },
+  "fēcisset": {
+   "sub": 24
+  },
+  "fēcissent": {
+   "sub": 9
+  },
+  "faciātur": {
+   "sub": 1
+  },
+  "capiat": {
+   "sub": 3
+  },
+  "capiāmus": {
+   "sub": 1
+  },
+  "caperet": {
+   "sub": 4
+  },
+  "caperent": {
+   "sub": 6
+  },
+  "cēpissēs": {
+   "sub": 1
+  },
+  "cēpissēmus": {
+   "sub": 1
+  },
+  "capiātur": {
+   "sub": 1
+  },
+  "doceās": {
+   "sub": 2
+  },
+  "doceat": {
+   "sub": 1
+  },
+  "doceant": {
+   "sub": 2
+  },
+  "docērem": {
+   "sub": 1
+  },
+  "docēret": {
+   "sub": 2
+  },
+  "docērētis": {
+   "sub": 1
+  },
+  "docērent": {
+   "sub": 2
+  },
+  "docuissent": {
+   "sub": 1
+  },
+  "dīcās": {
+   "sub": 10
+  },
+  "dīcat": {
+   "sub": 20,
+   "ind": 2
+  },
+  "dīcāmus": {
+   "sub": 2
+  },
+  "dīcātis": {
+   "sub": 3
+  },
+  "dīcant": {
+   "sub": 10,
+   "ind": 1
+  },
+  "dīcerem": {
+   "sub": 3
+  },
+  "dīcerēs": {
+   "sub": 1
+  },
+  "dīceret": {
+   "sub": 31
+  },
+  "dīcerētis": {
+   "sub": 1
+  },
+  "dīcerent": {
+   "sub": 15
+  },
+  "dīxerim": {
+   "sub": 7
+  },
+  "dīxerīs": {
+   "sub": 8,
+   "ind": 1
+  },
+  "dīxerīmus": {
+   "ind": 5,
+   "sub": 1
+  },
+  "dīxerītis": {
+   "sub": 2,
+   "ind": 2
+  },
+  "dīxissem": {
+   "sub": 1
+  },
+  "dīxisset": {
+   "sub": 28
+  },
+  "dīxissent": {
+   "sub": 2
+  },
+  "dīcātur": {
+   "sub": 2
+  },
+  "dīcantur": {
+   "sub": 2
+  },
+  "dīcerētur": {
+   "sub": 4
+  },
+  "dīcerentur": {
+   "sub": 2
+  },
+  "stet": {
+   "sub": 1
+  },
+  "stāret": {
+   "sub": 1
+  },
+  "stetissent": {
+   "sub": 1
+  },
+  "cadat": {
+   "sub": 1
+  },
+  "cadant": {
+   "sub": 1
+  },
+  "caderent": {
+   "sub": 1
+  },
+  "ceciderim": {
+   "sub": 1
+  },
+  "cecidisset": {
+   "sub": 1
+  },
+  "cecidissent": {
+   "sub": 2
+  },
+  "rogem": {
+   "sub": 1
+  },
+  "rogēs": {
+   "sub": 1
+  },
+  "roget": {
+   "sub": 2
+  },
+  "rogārēmus": {
+   "sub": 1
+  },
+  "sim": {
+   "sub": 32
+  },
+  "sīs": {
+   "sub": 37
+  },
+  "sit": {
+   "sub": 340
+  },
+  "sīmus": {
+   "sub": 20
+  },
+  "sītis": {
+   "sub": 27
+  },
+  "sint": {
+   "sub": 101
+  },
+  "essem": {
+   "sub": 36
+  },
+  "essēs": {
+   "sub": 17
+  },
+  "esset": {
+   "sub": 286
+  },
+  "essēmus": {
+   "sub": 19
+  },
+  "essētis": {
+   "sub": 7
+  },
+  "essent": {
+   "sub": 72
+  },
+  "fuerim": {
+   "sub": 3
+  },
+  "fuerīs": {
+   "ind": 1,
+   "sub": 2
+  },
+  "fuerīmus": {
+   "sub": 2,
+   "ind": 1
+  },
+  "fuerītis": {
+   "ind": 4
+  },
+  "fuissem": {
+   "sub": 3
+  },
+  "fuissēs": {
+   "sub": 3
+  },
+  "fuisset": {
+   "sub": 25
+  },
+  "fuissēmus": {
+   "sub": 3
+  },
+  "fuissētis": {
+   "sub": 1
+  },
+  "fuissent": {
+   "sub": 7
+  },
+  "amēs": {
+   "sub": 5
+  },
+  "amet": {
+   "sub": 2
+  },
+  "amēmus": {
+   "sub": 1
+  },
+  "ament": {
+   "sub": 1
+  },
+  "amārent": {
+   "sub": 1
+  },
+  "amētur": {
+   "sub": 1
+  },
+  "amentur": {
+   "sub": 1
+  },
+  "vocem": {
+   "nominal": 80,
+   "sub": 1
+  },
+  "vocēs": {
+   "nominal": 12
+  },
+  "vocēmus": {
+   "sub": 1
+  },
+  "vocent": {
+   "sub": 1
+  },
+  "vocāret": {
+   "sub": 1
+  },
+  "vocētur": {
+   "sub": 1
+  },
+  "vocēminī": {
+   "sub": 1
+  },
+  "vocārētur": {
+   "sub": 2
+  },
+  "laudem": {
+   "nominal": 15
+  },
+  "laudēs": {
+   "sub": 1,
+   "nominal": 3
+  },
+  "laudēmus": {
+   "sub": 2
+  },
+  "laudent": {
+   "sub": 1
+  },
+  "laudārem": {
+   "sub": 1
+  },
+  "laudārēs": {
+   "sub": 1
+  },
+  "laudārent": {
+   "sub": 1
+  },
+  "laudētur": {
+   "sub": 2
+  },
+  "laudēmur": {
+   "sub": 1
+  },
+  "salūtem": {
+   "nominal": 35
+  },
+  "salūtāverītis": {
+   "ind": 1,
+   "sub": 1
+  },
+  "exspectem": {
+   "sub": 3
+  },
+  "exspectēs": {
+   "sub": 1
+  },
+  "exspectēmus": {
+   "sub": 4
+  },
+  "exspectent": {
+   "sub": 1
+  },
+  "exspectārem": {
+   "sub": 2
+  },
+  "exspectāret": {
+   "sub": 1
+  },
+  "exspectārent": {
+   "sub": 1
+  },
+  "exspectētur": {
+   "sub": 1
+  },
+  "videam": {
+   "sub": 9
+  },
+  "videās": {
+   "sub": 9
+  },
+  "videat": {
+   "sub": 5
+  },
+  "videāmus": {
+   "sub": 8
+  },
+  "videant": {
+   "sub": 17
+  },
+  "vidērem": {
+   "sub": 5
+  },
+  "vidērēs": {
+   "sub": 2
+  },
+  "vidēret": {
+   "sub": 18
+  },
+  "vidērent": {
+   "sub": 4
+  },
+  "vīderīs": {
+   "ind": 10,
+   "sub": 1
+  },
+  "vīderīmus": {
+   "ind": 2
+  },
+  "vīderītis": {
+   "ind": 9,
+   "sub": 3
+  },
+  "vīdissem": {
+   "sub": 6
+  },
+  "vīdissēs": {
+   "sub": 1
+  },
+  "vīdisset": {
+   "sub": 32
+  },
+  "vīdissent": {
+   "sub": 14
+  },
+  "videar": {
+   "sub": 4
+  },
+  "videāris": {
+   "sub": 1
+  },
+  "videātur": {
+   "sub": 20
+  },
+  "videāmur": {
+   "sub": 7
+  },
+  "videāminī": {
+   "sub": 1
+  },
+  "videantur": {
+   "sub": 14
+  },
+  "vidērer": {
+   "sub": 2
+  },
+  "vidērētur": {
+   "sub": 22
+  },
+  "vidērēmur": {
+   "sub": 1
+  },
+  "vidērentur": {
+   "sub": 9
+  },
+  "timeam": {
+   "sub": 2
+  },
+  "timeās": {
+   "sub": 4
+  },
+  "timeat": {
+   "sub": 1
+  },
+  "timeātis": {
+   "sub": 1
+  },
+  "timērem": {
+   "sub": 2
+  },
+  "timēret": {
+   "sub": 3
+  },
+  "timērent": {
+   "sub": 3
+  },
+  "timuerīs": {
+   "sub": 1
+  },
+  "timuerītis": {
+   "sub": 2
+  },
+  "timuissent": {
+   "sub": 1
+  },
+  "timeātur": {
+   "sub": 1
+  },
+  "monērem": {
+   "sub": 2
+  },
+  "dūcat": {
+   "sub": 2
+  },
+  "dūceret": {
+   "sub": 3
+  },
+  "dūcerent": {
+   "sub": 1
+  },
+  "dūcātur": {
+   "sub": 3
+  },
+  "dūcantur": {
+   "sub": 3
+  },
+  "dūcerētur": {
+   "sub": 1
+  },
+  "dūcerentur": {
+   "sub": 4
+  },
+  "mittās": {
+   "sub": 9
+  },
+  "mittat": {
+   "sub": 4
+  },
+  "mittātis": {
+   "sub": 1
+  },
+  "mittant": {
+   "sub": 2
+  },
+  "mitterem": {
+   "sub": 1
+  },
+  "mitteret": {
+   "sub": 3
+  },
+  "mitterent": {
+   "sub": 2
+  },
+  "mīserīs": {
+   "nominal": 1,
+   "sub": 1
+  },
+  "mīsissem": {
+   "sub": 2
+  },
+  "mīsisset": {
+   "sub": 1
+  },
+  "mīsissent": {
+   "sub": 1
+  },
+  "mittāris": {
+   "sub": 1
+  },
+  "mittātur": {
+   "sub": 4
+  },
+  "mittantur": {
+   "sub": 2
+  },
+  "mitterētur": {
+   "sub": 2
+  },
+  "mitterentur": {
+   "sub": 2
+  },
+  "legās": {
+   "sub": 2
+  },
+  "legat": {
+   "sub": 1
+  },
+  "legāmus": {
+   "sub": 2
+  },
+  "legātis": {
+   "nominal": 16
+  },
+  "legerēs": {
+   "sub": 1
+  },
+  "legeret": {
+   "sub": 3
+  },
+  "legerent": {
+   "sub": 1
+  },
+  "lēgissem": {
+   "sub": 1
+  },
+  "lēgisset": {
+   "sub": 1
+  },
+  "lēgissent": {
+   "sub": 1
+  },
+  "legātur": {
+   "sub": 2
+  },
+  "audiās": {
+   "sub": 2
+  },
+  "audiat": {
+   "sub": 23
+  },
+  "audiāmus": {
+   "sub": 1
+  },
+  "audiātis": {
+   "sub": 1
+  },
+  "audiant": {
+   "sub": 4
+  },
+  "audīrem": {
+   "sub": 1
+  },
+  "audīrēs": {
+   "sub": 1
+  },
+  "audīret": {
+   "sub": 2
+  },
+  "audīrent": {
+   "sub": 6
+  },
+  "audīrētur": {
+   "sub": 1
+  },
+  "audīrentur": {
+   "sub": 1
+  },
+  "inveniat": {
+   "sub": 4
+  },
+  "inveniant": {
+   "sub": 2
+  },
+  "invenīret": {
+   "sub": 3
+  },
+  "invenīrent": {
+   "sub": 1
+  },
+  "invēnerim": {
+   "sub": 1
+  },
+  "invēnerīs": {
+   "sub": 1
+  },
+  "invēnerītis": {
+   "ind": 2
+  },
+  "invēnisset": {
+   "sub": 4
+  },
+  "invēnissēmus": {
+   "sub": 1
+  },
+  "invēnissent": {
+   "sub": 4
+  },
+  "inveniātur": {
+   "sub": 1
+  },
+  "inveniāmur": {
+   "sub": 1
+  },
+  "inveniāminī": {
+   "sub": 1
+  },
+  "inveniantur": {
+   "sub": 1
+  },
+  "invenīrer": {
+   "sub": 1
+  },
+  "invenīrētur": {
+   "sub": 2
+  },
+  "custōdiās": {
+   "nominal": 4,
+   "sub": 1
+  },
+  "custōdiat": {
+   "sub": 3
+  },
+  "custōdīret": {
+   "sub": 1
+  },
+  "portem": {
+   "sub": 1
+  },
+  "portet": {
+   "sub": 1
+  },
+  "portēmus": {
+   "sub": 1
+  },
+  "portentur": {
+   "sub": 1
+  },
+  "portārētur": {
+   "sub": 2
+  },
+  "dem": {
+   "sub": 5
+  },
+  "dēs": {
+   "sub": 12
+  },
+  "det": {
+   "sub": 15
+  },
+  "dēmus": {
+   "sub": 5
+  },
+  "dētis": {
+   "sub": 2
+  },
+  "dent": {
+   "sub": 3
+  },
+  "darem": {
+   "sub": 7
+  },
+  "daret": {
+   "sub": 16
+  },
+  "darēmus": {
+   "sub": 1
+  },
+  "darent": {
+   "sub": 8
+  },
+  "dederim": {
+   "sub": 1
+  },
+  "dederīs": {
+   "ind": 1,
+   "sub": 1
+  },
+  "dederit": {
+   "sub": 3,
+   "ind": 3
+  },
+  "dederīmus": {
+   "sub": 1
+  },
+  "dederītis": {
+   "ind": 2,
+   "sub": 1
+  },
+  "dederint": {
+   "ind": 1,
+   "sub": 1
+  },
+  "dedissem": {
+   "sub": 4
+  },
+  "dedissēs": {
+   "sub": 1
+  },
+  "dedisset": {
+   "sub": 5
+  },
+  "dedissētis": {
+   "sub": 1
+  },
+  "dedissent": {
+   "sub": 3
+  },
+  "dare": {
+   "inf": 51
+  },
+  "dā": {
+   "imp": 22
+  },
+  "date": {
+   "imp": 16
+  },
+  "dedī": {
+   "ind": 29
+  },
+  "dedistī": {
+   "ind": 22
+  },
+  "dedit": {
+   "ind": 111
+  },
+  "dedimus": {
+   "ind": 3
+  },
+  "dedistis": {
+   "ind": 4
+  },
+  "dedērunt": {
+   "ind": 16
+  },
+  "dederam": {
+   "ind": 8
+  },
+  "dederās": {
+   "ind": 2
+  },
+  "dederat": {
+   "ind": 4
+  },
+  "dederant": {
+   "ind": 3
+  },
+  "dederis": {
+   "ind": 1,
+   "sub": 1
+  },
+  "dederimus": {
+   "sub": 1
+  },
+  "dederitis": {
+   "ind": 2,
+   "sub": 1
+  },
+  "eat": {
+   "sub": 1
+  },
+  "eāmus": {
+   "sub": 10
+  },
+  "eātis": {
+   "sub": 1
+  },
+  "eant": {
+   "sub": 3
+  },
+  "īrem": {
+   "sub": 3
+  },
+  "īrēs": {
+   "sub": 2
+  },
+  "īret": {
+   "sub": 5
+  },
+  "īrent": {
+   "sub": 6
+  },
+  "ierīs": {
+   "ind": 2
+  },
+  "ierit": {
+   "ind": 1
+  },
+  "īre": {
+   "inf": 43
+  },
+  "ī": {
+   "imp": 1
+  },
+  "īte": {
+   "imp": 22
+  },
+  "iērunt": {
+   "ind": 1
+  },
+  "ierant": {
+   "ind": 2
+  },
+  "ierō": {
+   "ind": 1
+  },
+  "ieris": {
+   "ind": 2
+  },
+  "ferās": {
+   "nominal": 2
+  },
+  "ferat": {
+   "sub": 5
+  },
+  "ferant": {
+   "sub": 5
+  },
+  "ferrēs": {
+   "sub": 1
+  },
+  "ferret": {
+   "sub": 8
+  },
+  "ferrent": {
+   "sub": 3,
+   "ind": 1
+  },
+  "tulerītis": {
+   "sub": 1
+  },
+  "ferre": {
+   "inf": 32
+  },
+  "fer": {
+   "imp": 2
+  },
+  "ferte": {
+   "imp": 3
+  },
+  "tulī": {
+   "ind": 5
+  },
+  "tulistī": {
+   "ind": 1
+  },
+  "tulit": {
+   "ind": 18
+  },
+  "tulistis": {
+   "ind": 2
+  },
+  "tulērunt": {
+   "ind": 11
+  },
+  "tuleritis": {
+   "sub": 1
+  },
+  "velim": {
+   "sub": 89
+  },
+  "velīs": {
+   "nominal": 4,
+   "sub": 7
+  },
+  "velit": {
+   "sub": 13
+  },
+  "velīmus": {
+   "sub": 3
+  },
+  "velītis": {
+   "sub": 1
+  },
+  "velint": {
+   "sub": 16
+  },
+  "vellem": {
+   "sub": 22
+  },
+  "vellet": {
+   "sub": 23
+  },
+  "vellēmus": {
+   "sub": 1
+  },
+  "vellent": {
+   "sub": 9
+  },
+  "voluerīs": {
+   "ind": 5,
+   "sub": 3
+  },
+  "voluerit": {
+   "ind": 15,
+   "sub": 3
+  },
+  "voluerīmus": {
+   "sub": 1
+  },
+  "voluerītis": {
+   "ind": 2
+  },
+  "voluerint": {
+   "sub": 3,
+   "ind": 1
+  },
+  "voluissem": {
+   "sub": 1
+  },
+  "voluissēs": {
+   "sub": 2
+  },
+  "voluisset": {
+   "sub": 6
+  },
+  "voluissēmus": {
+   "sub": 1
+  },
+  "voluissent": {
+   "sub": 1
+  },
+  "velle": {
+   "inf": 21
+  },
+  "voluī": {
+   "ind": 17
+  },
+  "voluistī": {
+   "ind": 4
+  },
+  "voluit": {
+   "ind": 18
+  },
+  "voluimus": {
+   "ind": 2
+  },
+  "voluistis": {
+   "ind": 1
+  },
+  "voluērunt": {
+   "ind": 6
+  },
+  "volueram": {
+   "ind": 1
+  },
+  "voluerās": {
+   "ind": 1
+  },
+  "voluerō": {
+   "ind": 1
+  },
+  "volueris": {
+   "ind": 5,
+   "sub": 3
+  },
+  "voluerimus": {
+   "sub": 1
+  },
+  "volueritis": {
+   "ind": 2
+  },
+  "nōlim": {
+   "sub": 4
+  },
+  "nōlīs": {
+   "sub": 1
+  },
+  "nōlint": {
+   "sub": 1
+  },
+  "nōllem": {
+   "sub": 1
+  },
+  "nōllet": {
+   "sub": 2
+  },
+  "nōllent": {
+   "sub": 2
+  },
+  "nōluissēs": {
+   "sub": 1
+  },
+  "nōlle": {
+   "inf": 2
+  },
+  "nōlī": {
+   "imp": 36
+  },
+  "nōlīte": {
+   "imp": 87
+  },
+  "nōluī": {
+   "ind": 3
+  },
+  "nōluistī": {
+   "ind": 2
+  },
+  "nōluit": {
+   "ind": 6
+  },
+  "nōluimus": {
+   "ind": 1
+  },
+  "nōluistis": {
+   "ind": 1
+  },
+  "nōluērunt": {
+   "ind": 3
+  },
+  "nōlueram": {
+   "ind": 1
+  },
+  "nōluerant": {
+   "ind": 1
+  },
+  "mālim": {
+   "sub": 1
+  },
+  "mālīs": {
+   "nominal": 13
+  },
+  "mālit": {
+   "sub": 1
+  },
+  "mālint": {
+   "sub": 1
+  },
+  "māllem": {
+   "sub": 10
+  },
+  "māllet": {
+   "sub": 1
+  },
+  "māllēmus": {
+   "sub": 1
+  },
+  "māllent": {
+   "sub": 1
+  },
+  "māluerint": {
+   "sub": 1
+  },
+  "māluisset": {
+   "sub": 1
+  },
+  "mālle": {
+   "inf": 3
+  },
+  "māluī": {
+   "ind": 3
+  },
+  "māluit": {
+   "ind": 2
+  },
+  "māluimus": {
+   "ind": 1
+  },
+  "māluērunt": {
+   "ind": 1
+  },
+  "mālueram": {
+   "ind": 1
+  },
+  "fīās": {
+   "sub": 1
+  },
+  "fīat": {
+   "sub": 55
+  },
+  "fīāmus": {
+   "sub": 1
+  },
+  "fīant": {
+   "sub": 22
+  },
+  "fierem": {
+   "sub": 1
+  },
+  "fierēs": {
+   "sub": 1
+  },
+  "fieret": {
+   "sub": 30
+  },
+  "fierent": {
+   "sub": 4
+  },
+  "possim": {
+   "sub": 11
+  },
+  "possīs": {
+   "sub": 10,
+   "ind": 1
+  },
+  "possit": {
+   "sub": 75
+  },
+  "possīmus": {
+   "sub": 5
+  },
+  "possītis": {
+   "sub": 6
+  },
+  "possint": {
+   "sub": 25
+  },
+  "possem": {
+   "sub": 10
+  },
+  "possēs": {
+   "sub": 1
+  },
+  "posset": {
+   "sub": 59
+  },
+  "possēmus": {
+   "sub": 6
+  },
+  "possent": {
+   "sub": 48
+  },
+  "potuerim": {
+   "sub": 1
+  },
+  "potuerīs": {
+   "ind": 4
+  },
+  "potuerit": {
+   "sub": 5,
+   "ind": 3
+  },
+  "potuerīmus": {
+   "sub": 1
+  },
+  "potuerint": {
+   "sub": 3,
+   "ind": 1
+  },
+  "potuissēs": {
+   "sub": 1
+  },
+  "potuisset": {
+   "sub": 1
+  },
+  "potuissent": {
+   "sub": 4
+  },
+  "posse": {
+   "inf": 88
+  },
+  "venī": {
+   "ind": 51,
+   "imp": 23
+  },
+  "venīte": {
+   "imp": 14
+  },
+  "respondēte": {
+   "imp": 3
+  },
+  "ambulā": {
+   "imp": 7
+  },
+  "ambulāte": {
+   "imp": 4
+  },
+  "habitā": {
+   "part": 5
+  },
+  "labōrā": {
+   "imp": 1
+  },
+  "tacē": {
+   "imp": 2
+  },
+  "habē": {
+   "imp": 7
+  },
+  "habēte": {
+   "imp": 6
+  },
+  "fac": {
+   "imp": 33
+  },
+  "facite": {
+   "imp": 24
+  },
+  "capite": {
+   "nominal": 19,
+   "imp": 1
+  },
+  "docē": {
+   "imp": 1
+  },
+  "docēte": {
+   "imp": 1
+  },
+  "dīc": {
+   "imp": 24
+  },
+  "dīcite": {
+   "imp": 19
+  },
+  "stā": {
+   "imp": 2
+  },
+  "stāte": {
+   "imp": 5
+  },
+  "cadite": {
+   "imp": 2
+  },
+  "rogā": {
+   "imp": 1
+  },
+  "rogāte": {
+   "imp": 2
+  },
+  "vocā": {
+   "imp": 3
+  },
+  "vocāte": {
+   "imp": 1
+  },
+  "laudāte": {
+   "imp": 1
+  },
+  "salūtā": {
+   "imp": 3
+  },
+  "salūtāte": {
+   "imp": 21
+  },
+  "exspectā": {
+   "imp": 4
+  },
+  "vidē": {
+   "imp": 20
+  },
+  "vidēte": {
+   "imp": 34
+  },
+  "timē": {
+   "imp": 2
+  },
+  "timēte": {
+   "imp": 4
+  },
+  "dūc": {
+   "imp": 2
+  },
+  "dūcite": {
+   "imp": 2
+  },
+  "mitte": {
+   "imp": 15
+  },
+  "mittite": {
+   "imp": 2
+  },
+  "lege": {
+   "nominal": 81
+  },
+  "audī": {
+   "imp": 4
+  },
+  "audīte": {
+   "imp": 14
+  },
+  "invenī": {
+   "ind": 10
+  },
+  "custōdī": {
+   "nominal": 1
+  },
+  "custōdīte": {
+   "imp": 1
+  },
+  "portā": {
+   "nominal": 7
+  },
+  "portāte": {
+   "imp": 2
+  },
+  "ventus": {
+   "nominal": 10
+  },
+  "ventī": {
+   "nominal": 9
+  },
+  "ventō": {
+   "nominal": 16
+  },
+  "ventōs": {
+   "nominal": 5
+  },
+  "ventōrum": {
+   "nominal": 1
+  },
+  "ventīs": {
+   "nominal": 9
+  },
+  "ventūrus": {
+   "part": 24
+  },
+  "ventūrum": {
+   "part": 6
+  },
+  "ventūrī": {
+   "part": 3
+  },
+  "ventūrō": {
+   "part": 1
+  },
+  "ventūrōs": {
+   "part": 5
+  },
+  "ventūra": {
+   "part": 7
+  },
+  "ventūrā": {
+   "part": 7
+  },
+  "respōnsō": {
+   "nominal": 4
+  },
+  "respōnsīs": {
+   "nominal": 2
+  },
+  "respōnsa": {
+   "nominal": 1
+  },
+  "respōnsā": {
+   "nominal": 1
+  },
+  "respōnsūrum": {
+   "part": 1
+  },
+  "ambulātīs": {
+   "ind": 2
+  },
+  "habitātōrum": {
+   "nominal": 1
+  },
+  "habitātīs": {
+   "ind": 4
+  },
+  "habitātūra": {
+   "part": 1
+  },
+  "habitātūrā": {
+   "part": 1
+  },
+  "labōrātīs": {
+   "ind": 1
+  },
+  "tacitī": {
+   "part": 2,
+   "nominal": 1
+  },
+  "tacitō": {
+   "nominal": 1
+  },
+  "tacite": {
+   "otro": 1
+  },
+  "tacitōrum": {
+   "part": 1
+  },
+  "tacitīs": {
+   "part": 2
+  },
+  "tacita": {
+   "part": 1
+  },
+  "tacitā": {
+   "part": 1
+  },
+  "habitus": {
+   "nominal": 1,
+   "part": 1
+  },
+  "habitī": {
+   "part": 1
+  },
+  "habitōs": {
+   "part": 1
+  },
+  "habitīs": {
+   "part": 1
+  },
+  "habita": {
+   "part": 5
+  },
+  "habitae": {
+   "part": 1
+  },
+  "habitūrus": {
+   "part": 2
+  },
+  "habitūrum": {
+   "part": 4
+  },
+  "habitūra": {
+   "part": 1
+  },
+  "habitūrā": {
+   "part": 1
+  },
+  "factus": {
+   "part": 78
+  },
+  "factī": {
+   "part": 33
+  },
+  "factō": {
+   "nominal": 3,
+   "part": 31
+  },
+  "factōs": {
+   "part": 1
+  },
+  "factōrum": {
+   "nominal": 3,
+   "part": 3
+  },
+  "factīs": {
+   "part": 6,
+   "nominal": 5
+  },
+  "facta": {
+   "part": 119,
+   "nominal": 6
+  },
+  "factam": {
+   "part": 4
+  },
+  "factae": {
+   "part": 22
+  },
+  "factā": {
+   "part": 119,
+   "nominal": 6
+  },
+  "factās": {
+   "part": 1
+  },
+  "factūrus": {
+   "part": 8
+  },
+  "factūrum": {
+   "part": 15
+  },
+  "factūrī": {
+   "part": 1
+  },
+  "factūrōs": {
+   "part": 3
+  },
+  "factūra": {
+   "part": 1,
+   "nominal": 1
+  },
+  "factūram": {
+   "nominal": 1
+  },
+  "factūrā": {
+   "part": 1,
+   "nominal": 1
+  },
+  "factūrās": {
+   "part": 1
+  },
+  "captus": {
+   "part": 4,
+   "nominal": 1
+  },
+  "captī": {
+   "part": 2
+  },
+  "captō": {
+   "part": 3
+  },
+  "captōs": {
+   "part": 2
+  },
+  "captōrum": {
+   "part": 1
+  },
+  "captīs": {
+   "part": 1
+  },
+  "capta": {
+   "part": 5
+  },
+  "captā": {
+   "part": 5
+  },
+  "captūra": {
+   "nominal": 2
+  },
+  "captūram": {
+   "nominal": 1
+  },
+  "captūrā": {
+   "nominal": 2
+  },
+  "doctus": {
+   "part": 2
+  },
+  "doctī": {
+   "part": 1,
+   "nominal": 1
+  },
+  "doctō": {
+   "part": 1
+  },
+  "doctōs": {
+   "nominal": 1
+  },
+  "doctōrum": {
+   "part": 1
+  },
+  "doctīs": {
+   "part": 1
+  },
+  "doctae": {
+   "part": 1
+  },
+  "doctūrus": {
+   "part": 1
+  },
+  "dictus": {
+   "part": 3
+  },
+  "dictī": {
+   "part": 1
+  },
+  "dictō": {
+   "part": 3,
+   "nominal": 3
+  },
+  "dictōs": {
+   "part": 1
+  },
+  "dictōrum": {
+   "part": 1,
+   "nominal": 3
+  },
+  "dictīs": {
+   "part": 1
+  },
+  "dicta": {
+   "nominal": 2,
+   "part": 12
+  },
+  "dictae": {
+   "part": 1
+  },
+  "dictā": {
+   "nominal": 2,
+   "part": 12
+  },
+  "dictūrus": {
+   "part": 2
+  },
+  "status": {
+   "nominal": 12,
+   "part": 1
+  },
+  "state": {
+   "imp": 5
+  },
+  "statīs": {
+   "ind": 4
+  },
+  "statūra": {
+   "nominal": 1
+  },
+  "statūram": {
+   "nominal": 3
+  },
+  "statūrae": {
+   "nominal": 1
+  },
+  "statūrā": {
+   "nominal": 1
+  },
+  "cāsus": {
+   "nominal": 6
+  },
+  "cāsam": {
+   "nominal": 1
+  },
+  "cāsūrum": {
+   "part": 2
+  },
+  "rogātus": {
+   "part": 6
+  },
+  "rogātī": {
+   "part": 1
+  },
+  "rogāta": {
+   "part": 2
+  },
+  "rogātā": {
+   "part": 2
+  },
+  "futūrus": {
+   "part": 10
+  },
+  "futūrum": {
+   "nominal": 2,
+   "part": 20
+  },
+  "futūrī": {
+   "nominal": 1,
+   "part": 1
+  },
+  "futūrō": {
+   "nominal": 4
+  },
+  "futūrōs": {
+   "part": 4
+  },
+  "futūrōrum": {
+   "nominal": 1,
+   "part": 2
+  },
+  "futūrīs": {
+   "nominal": 1
+  },
+  "futūra": {
+   "part": 10,
+   "nominal": 4
+  },
+  "futūram": {
+   "part": 7,
+   "nominal": 1
+  },
+  "futūrae": {
+   "nominal": 1,
+   "part": 1
+  },
+  "futūrā": {
+   "part": 10,
+   "nominal": 4
+  },
+  "futūrārum": {
+   "part": 1
+  },
+  "vocātus": {
+   "part": 12
+  },
+  "vocātī": {
+   "part": 11
+  },
+  "vocātōs": {
+   "part": 1
+  },
+  "vocātīs": {
+   "part": 9,
+   "ind": 2
+  },
+  "laudātīs": {
+   "part": 1
+  },
+  "laudāta": {
+   "part": 1
+  },
+  "laudātā": {
+   "part": 1
+  },
+  "salūtātī": {
+   "part": 1
+  },
+  "salūtātīs": {
+   "part": 1
+  },
+  "exspectātō": {
+   "imp": 1
+  },
+  "exspectātās": {
+   "part": 1
+  },
+  "vīsus": {
+   "part": 13
+  },
+  "vīsī": {
+   "part": 2
+  },
+  "vīsō": {
+   "part": 8
+  },
+  "vīsīs": {
+   "part": 1
+  },
+  "vīsa": {
+   "part": 13
+  },
+  "vīsae": {
+   "part": 2
+  },
+  "vīsā": {
+   "part": 13
+  },
+  "vīsūrus": {
+   "part": 5
+  },
+  "vīsūrum": {
+   "part": 1
+  },
+  "vīsūrī": {
+   "part": 3
+  },
+  "monitus": {
+   "part": 3
+  },
+  "monitīs": {
+   "nominal": 1,
+   "part": 2
+  },
+  "ductus": {
+   "part": 4
+  },
+  "ductōs": {
+   "part": 1
+  },
+  "ductīs": {
+   "part": 2
+  },
+  "ducta": {
+   "part": 2
+  },
+  "ductā": {
+   "part": 2
+  },
+  "ductūrum": {
+   "part": 1
+  },
+  "missus": {
+   "part": 22
+  },
+  "missī": {
+   "part": 14
+  },
+  "missō": {
+   "part": 2
+  },
+  "missīs": {
+   "part": 7
+  },
+  "missa": {
+   "part": 7
+  },
+  "missam": {
+   "part": 2
+  },
+  "missae": {
+   "part": 2
+  },
+  "missā": {
+   "part": 7
+  },
+  "missās": {
+   "part": 2
+  },
+  "missūrus": {
+   "part": 1
+  },
+  "missūrum": {
+   "part": 3
+  },
+  "missūrī": {
+   "part": 1
+  },
+  "missūrōs": {
+   "part": 1
+  },
+  "lēctō": {
+   "nominal": 7
+  },
+  "lēctōs": {
+   "nominal": 2
+  },
+  "lēctōrum": {
+   "nominal": 1
+  },
+  "lēctīs": {
+   "nominal": 1
+  },
+  "lēcta": {
+   "part": 3
+  },
+  "lēctae": {
+   "part": 1
+  },
+  "lēctā": {
+   "part": 3
+  },
+  "lēctās": {
+   "part": 1
+  },
+  "audītus": {
+   "nominal": 3,
+   "part": 1
+  },
+  "audītō": {
+   "part": 15
+  },
+  "audītīs": {
+   "ind": 11,
+   "part": 6
+  },
+  "audīta": {
+   "part": 2
+  },
+  "audītā": {
+   "part": 2
+  },
+  "audītūrus": {
+   "part": 1
+  },
+  "audītūrī": {
+   "part": 1
+  },
+  "inventus": {
+   "part": 11
+  },
+  "inventī": {
+   "part": 2
+  },
+  "inventō": {
+   "part": 1
+  },
+  "inventīs": {
+   "part": 4
+  },
+  "inventa": {
+   "part": 3
+  },
+  "inventae": {
+   "part": 1
+  },
+  "inventā": {
+   "part": 3
+  },
+  "inventūrī": {
+   "part": 1
+  },
+  "custōdītus": {
+   "part": 1
+  },
+  "custōdītīs": {
+   "part": 1
+  },
+  "portātam": {
+   "part": 1
+  },
+  "portātūrī": {
+   "part": 1
+  },
+  "veniēns": {
+   "part": 21
+  },
+  "venientem": {
+   "part": 13
+  },
+  "venientēs": {
+   "part": 11
+  },
+  "veniente": {
+   "part": 2
+  },
+  "respondēns": {
+   "part": 107
+  },
+  "respondentēs": {
+   "part": 7
+  },
+  "ambulāns": {
+   "part": 7
+  },
+  "ambulantem": {
+   "part": 5
+  },
+  "ambulantēs": {
+   "part": 6
+  },
+  "ambulantium": {
+   "part": 1
+  },
+  "ambulantibus": {
+   "part": 2
+  },
+  "ambulante": {
+   "part": 1
+  },
+  "habitantī": {
+   "part": 1
+  },
+  "habitantēs": {
+   "part": 4
+  },
+  "habitantibus": {
+   "part": 6
+  },
+  "labōrantī": {
+   "part": 1
+  },
+  "labōrantēs": {
+   "part": 4
+  },
+  "labōrantibus": {
+   "part": 2
+  },
+  "tacēns": {
+   "part": 1
+  },
+  "tacente": {
+   "part": 2
+  },
+  "habēns": {
+   "part": 54
+  },
+  "habentem": {
+   "part": 26
+  },
+  "habentis": {
+   "part": 3
+  },
+  "habentī": {
+   "part": 7
+  },
+  "habentēs": {
+   "part": 43
+  },
+  "habentium": {
+   "part": 1
+  },
+  "habentibus": {
+   "part": 3
+  },
+  "habente": {
+   "part": 1
+  },
+  "habentia": {
+   "part": 1
+  },
+  "faciēns": {
+   "part": 18
+  },
+  "facientem": {
+   "part": 5
+  },
+  "facientī": {
+   "part": 1
+  },
+  "facientēs": {
+   "part": 7
+  },
+  "facientibus": {
+   "part": 2
+  },
+  "faciente": {
+   "part": 2
+  },
+  "capiēns": {
+   "part": 1
+  },
+  "capientēs": {
+   "part": 1
+  },
+  "docēns": {
+   "part": 18
+  },
+  "docentem": {
+   "part": 1
+  },
+  "docentēs": {
+   "part": 8
+  },
+  "docente": {
+   "part": 1
+  },
+  "dīcēns": {
+   "part": 211
+  },
+  "dīcentem": {
+   "part": 42
+  },
+  "dīcentis": {
+   "part": 5
+  },
+  "dīcentī": {
+   "part": 1
+  },
+  "dīcentēs": {
+   "part": 167
+  },
+  "dīcentium": {
+   "part": 5
+  },
+  "dīcentibus": {
+   "part": 3
+  },
+  "dīcente": {
+   "part": 5
+  },
+  "dīcentia": {
+   "part": 3
+  },
+  "stāns": {
+   "part": 18
+  },
+  "stantem": {
+   "part": 13
+  },
+  "stantis": {
+   "part": 1
+  },
+  "stantēs": {
+   "part": 21
+  },
+  "stantium": {
+   "part": 1
+  },
+  "stantibus": {
+   "part": 4
+  },
+  "cadēns": {
+   "part": 4
+  },
+  "cadentem": {
+   "part": 1
+  },
+  "cadentis": {
+   "part": 1
+  },
+  "rogāns": {
+   "part": 3
+  },
+  "rogantēs": {
+   "part": 2
+  },
+  "rogantibus": {
+   "part": 2
+  },
+  "amāns": {
+   "nominal": 1
+  },
+  "amantem": {
+   "nominal": 2
+  },
+  "amantis": {
+   "part": 5,
+   "nominal": 1
+  },
+  "amantī": {
+   "part": 2
+  },
+  "amantēs": {
+   "part": 1
+  },
+  "vocāns": {
+   "part": 3
+  },
+  "vocantēs": {
+   "part": 2
+  },
+  "laudāns": {
+   "part": 2
+  },
+  "laudantem": {
+   "part": 1
+  },
+  "laudantēs": {
+   "part": 2
+  },
+  "laudantium": {
+   "part": 1
+  },
+  "exspectāns": {
+   "part": 2
+  },
+  "vidēns": {
+   "part": 45
+  },
+  "videntēs": {
+   "part": 33
+  },
+  "videntibus": {
+   "part": 3
+  },
+  "timēns": {
+   "part": 9
+  },
+  "timentēs": {
+   "part": 4
+  },
+  "timentibus": {
+   "part": 3
+  },
+  "monēns": {
+   "part": 1
+  },
+  "monentem": {
+   "part": 1
+  },
+  "dūcentis": {
+   "nominal": 8
+  },
+  "dūcente": {
+   "part": 1
+  },
+  "mittēns": {
+   "part": 11
+  },
+  "mittentem": {
+   "part": 1
+  },
+  "mittentēs": {
+   "part": 6
+  },
+  "mittentibus": {
+   "part": 1
+  },
+  "legēns": {
+   "part": 2
+  },
+  "legentem": {
+   "part": 1
+  },
+  "legentī": {
+   "part": 1
+  },
+  "audiēns": {
+   "part": 12
+  },
+  "audientem": {
+   "part": 2
+  },
+  "audientī": {
+   "part": 3
+  },
+  "audientēs": {
+   "part": 30
+  },
+  "audientium": {
+   "part": 1
+  },
+  "audientibus": {
+   "part": 3
+  },
+  "audiente": {
+   "part": 1
+  },
+  "inveniēns": {
+   "part": 3
+  },
+  "invenientēs": {
+   "part": 4
+  },
+  "custōdiēns": {
+   "part": 1
+  },
+  "custōdientēs": {
+   "part": 3
+  },
+  "custōdiente": {
+   "part": 1
+  },
+  "portāns": {
+   "part": 2
+  },
+  "portantēs": {
+   "part": 2
+  }
+ }
+}

@@ -31,9 +31,17 @@ import { revisarCobertura, type Cobertura } from './cobertura';
 import { separablePorPosicion } from './atajos';
 import { patronDe } from './orden-publicado';
 import { palabrasDesconocidas } from './gate-vocabulario-del-marco';
-import atestacion from '../../lib/data/languages/la/atestacion-acento.json';
+import porAnalisis from '../../lib/data/languages/la/atestacion-por-analisis.json';
 
-const TABLA = (atestacion as { tabla: Record<string, { n: number }> }).tabla;
+// ══ LA CADENA NO ES EL ANÁLISIS ══════════════════════════════════════
+//
+// Este gate leía `atestacion-acento.json`, que cuenta CADENAS. Para el
+// acento la cadena es la pregunta entera; aquí no. Medido al cambiarlo:
+// `amor` —la pasiva de `amō`, el ejemplo de manual— aparece 22 veces en el
+// corpus y **las 22 son el sustantivo `amor`**. Cero como verbo.
+const TABLA = (porAnalisis as { tabla: Record<string, Record<string, number>> }).tabla;
+const comoVerbo = (f: string) => (TABLA[f]?.ind ?? 0) + (TABLA[f]?.sub ?? 0) + (TABLA[f]?.imp ?? 0);
+const comoNombre = (f: string) => TABLA[f]?.nominal ?? 0;
 
 export interface ItemPasiva {
   id: string;
@@ -54,7 +62,7 @@ export interface ItemPasiva {
 }
 
 export type ClaseFalloPas =
-  | 'respuesta-no-derivable' | 'eje-mal-declarado' | 'sin-atestiguar'
+  | 'respuesta-no-derivable' | 'eje-mal-declarado' | 'sin-atestiguar' | 'homonimo-nominal'
   | 'pista-regala-la-forma' | 'marco-mal' | 'marco-fuera-de-l1'
   | 'varia-incompleto' | 'estrategia-ciega' | 'celdas-repetidas'
   | 'orden-separable' | 'cobertura-cero' | 'cobertura-sin-motivo';
@@ -82,8 +90,13 @@ export function revisarItemPasiva(item: ItemPasiva): FalloPas[] {
   catch { push('eje-mal-declarado', `«${item.verbo.lema}» no es de ninguna de las cuatro`); return out; }
   if (c !== item.ejes.conjugacion) push('eje-mal-declarado', `declara conjugación ${item.ejes.conjugacion} y es ${c}`);
 
-  if ((TABLA[item.respuesta]?.n ?? 0) === 0 && (item.porQueSinAtestiguar ?? '').trim().length < 20)
-    push('sin-atestiguar', `«${item.respuesta}» no aparece en el corpus`);
+  const excusado = (item.porQueSinAtestiguar ?? '').trim().length >= 20;
+  if (comoVerbo(item.respuesta) === 0 && !excusado)
+    push('sin-atestiguar', `«${item.respuesta}» no aparece NUNCA como verbo en el corpus`
+      + ` (la cadena sale ${Object.values(TABLA[item.respuesta] ?? {}).reduce((a, b) => a + b, 0)} vez/veces)`);
+  else if (comoNombre(item.respuesta) > comoVerbo(item.respuesta) && !excusado)
+    push('homonimo-nominal', `«${item.respuesta}» sale ${comoNombre(item.respuesta)} vez/veces como nombre`
+      + ` y sólo ${comoVerbo(item.respuesta)} como verbo`);
 
   for (const [donde, txt] of [['la pista', item.pista], ['la glosa', item.glosa], ['el marco', item.marco]] as const)
     if (norm(txt).includes(norm(item.respuesta))) push('pista-regala-la-forma', `${donde} contiene «${item.respuesta}»`);
@@ -99,8 +112,12 @@ export function coberturaPasiva(items: ItemPasiva[]): Cobertura[] {
   const conj = new Set(items.map((i) => i.ejes.conjugacion));
   const refutan = items.filter((i) => norm(activaMasR(i.verbo, i.persona, i.tiempo)) !== norm(i.respuesta)).length;
   return [
-    { comprobacion: 'la respuesta contra la máquina', decididos: n, total: n },
-    { comprobacion: 'la forma aparece en el corpus', decididos: n, total: n },
+    // Estas dos contaban `n` de `n`: 100 % sin mirar. Ahora cuentan.
+    { comprobacion: 'la respuesta contra la máquina',
+      decididos: items.filter((i) => norm(pasivaInfectum(i.verbo)[`${i.tiempo}.${i.persona}`] ?? "\u0000") === norm(i.respuesta)).length, total: n },
+    { comprobacion: 'la forma aparece en el corpus COMO VERBO',
+      decididos: items.filter((i) => comoVerbo(i.respuesta) > 0).length, total: n,
+      motivoDeLosQueQuedanFuera: 'la 1.ª conjugación no tiene ni una pasiva de 1.ª persona atestiguada en el corpus (sólo videor ×19 y dīcor ×1 en todo L1), y `amor` lleva su motivo escrito' },
     { comprobacion: 'las seis personas', decididos: personas.size, total: 6,
       motivoDeLosQueQuedanFuera: 'el varia es la persona y la conjugación: con tres personas el lote mide media tabla' },
     { comprobacion: 'las conjugaciones', decididos: conj.size, total: 5,

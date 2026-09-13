@@ -43,9 +43,15 @@
 import { conjugarIrregular, type VerboIrregular } from '../../lib/data/languages/la/irregulares';
 import type { Persona, Tiempo } from '../../lib/data/languages/la/paradigma-la';
 import atestacion from '../../lib/data/languages/la/atestacion-irregulares.json';
+import porAnalisis from '../../lib/data/languages/la/atestacion-por-analisis.json';
 import { revisarCobertura, type Cobertura } from './cobertura';
 import { separablePorPosicion } from './atajos';
 import { patronDe } from './orden-publicado';
+
+const POR_ANALISIS = (porAnalisis as { tabla: Record<string, Record<string, number>> }).tabla;
+const comoVerbo = (f: string) =>
+  (POR_ANALISIS[f]?.ind ?? 0) + (POR_ANALISIS[f]?.sub ?? 0) + (POR_ANALISIS[f]?.imp ?? 0);
+const comoNombre = (f: string) => POR_ANALISIS[f]?.nominal ?? 0;
 
 export interface CeldaAtestiguada { forma: string; n: number; regular: string; refuta: boolean }
 const LEMAS = (atestacion as { lemas: Record<string, Record<string, CeldaAtestiguada>> }).lemas;
@@ -116,6 +122,18 @@ export function revisarItemIrregular(item: ItemIrregular): FalloI[] {
     push('forma-sin-atestiguar',
       `«${item.respuesta}» no aparece ni una vez en los 227.301 tokens: enseñarla como respuesta es enseñar latín de manual (y si hay motivo, hay que escribirlo)`);
   }
+  // Y TIENE QUE EXISTIR COMO VERBO. `celda.n` cuenta la CADENA, y ahí `īs`
+  // marcaba 72 apariciones de las que ninguna es el verbo: las 72 son el
+  // pronombre `iīs`. La supleción de `nōlō` va en dos palabras y su cuenta
+  // es un bigrama, que esta tabla —de un token por fila— no puede tener.
+  else if (!item.respuesta.includes(' ') && (item.porQueSinAtestiguar ?? '').trim().length < 20) {
+    if (comoVerbo(item.respuesta) === 0)
+      push('forma-sin-atestiguar',
+        `«${item.respuesta}» sale ${celda.n} vez/veces pero NINGUNA como verbo: la cadena está atestiguada y la forma no`);
+    else if (comoNombre(item.respuesta) > comoVerbo(item.respuesta))
+      push('forma-sin-atestiguar',
+        `«${item.respuesta}» sale ${comoNombre(item.respuesta)} vez/veces como nombre y sólo ${comoVerbo(item.respuesta)} como verbo`);
+  }
 
   // UNA CELDA QUE NO REFUTA LA REGLA NO EXAMINA ESTE PUNTO.
   if (!celda.refuta && (item.porQueSiNoRefuta ?? '').trim().length < 20) {
@@ -159,8 +177,15 @@ export function coberturaIrregulares(items: ItemIrregular[]): Cobertura[] {
   const locuciones = items.filter((i) => i.respuesta.includes(' ')).length;
   const fueraDelPresente = items.filter((i) => i.tiempo !== 'presente').length;
   return [
-    { comprobacion: 'la respuesta contra la tabla guardada', decididos: n, total: n },
-    { comprobacion: 'la forma aparece en el corpus', decididos: n, total: n },
+    // Las dos contaban `n` de `n`, que es decir 100 % sin mirar.
+    { comprobacion: 'la respuesta contra la tabla guardada',
+      decididos: items.filter((i) => norm(conjugarIrregular(i.verbo, i.persona, i.tiempo) ?? '\u0000') === norm(i.respuesta)).length, total: n },
+    // Y la segunda contaba CADENAS. `īs` pasaba con 72 apariciones de las
+    // que ninguna es el verbo: son el pronombre `iīs`. Ahora, para las
+    // respuestas de una sola palabra, se pregunta por el rasgo.
+    { comprobacion: 'la forma aparece en el corpus COMO VERBO',
+      decididos: items.filter((i) => i.respuesta.includes(' ') || comoVerbo(i.respuesta) > 0).length, total: n,
+      motivoDeLosQueQuedanFuera: 'las respuestas de dos palabras (la supleción de `nōlō`) se cuentan por bigrama en `atestacion-irregulares.json`, que es donde vive esa cuenta' },
     { comprobacion: 'la celda refuta la regla general', decididos: refutan, total: n,
       motivoDeLosQueQuedanFuera: 'de las 108 celdas de los seis verbos sólo 35 refutan la regla: la 1.ª del singular y la 3.ª del plural no lo hacen en ninguno, y el imperfecto y el futuro sólo en `eō`' },
     { comprobacion: 'la supleción con `nōn` suelto de `nōlō`', decididos: locuciones, total: n,

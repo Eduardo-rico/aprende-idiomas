@@ -35,12 +35,20 @@ import type { Persona, Tiempo } from '../paradigma-la';
 const V = (l: string) => VERBOS_L1.find((x) => x.lema === l)!;
 
 type Def = [id: string, lema: string, tiempo: Tiempo, persona: Persona, respuesta: string,
-            conj: 1 | 2 | 3 | 4 | 'mixta', marco: string, pista: string, glosa: string];
+            conj: 1 | 2 | 3 | 4 | 'mixta', marco: string, pista: string, glosa: string,
+            porQueSinAtestiguar?: string];
 
 const DEFS: Def[] = [
   // ── 1.ª persona · la ÚNICA casilla donde «activa + r» acierta ──
+  // `amor` sale 22 veces en el corpus y las 22 son el SUSTANTIVO. Se queda
+  // —con el motivo escrito— porque la 1.ª conjugación no tiene ni una sola
+  // pasiva de 1.ª persona atestiguada: medido sobre todo L1, las únicas dos
+  // son `videor` ×19, que es el ítem de al lado, y `dīcor` ×1. La casilla no
+  // se puede llenar con una forma atestiguada, y el lote no descansa en
+  // ésta: `la-pa-02` la sostiene.
   ['la-pa-01', 'amō', 'presente', '1sg', 'amor', 1, 'Ā rēgīnā ___.',
-   'presente PASIVO, 1.ª del singular', 'Soy amado por la reina.'],
+   'presente PASIVO, 1.ª del singular', 'Soy amado por la reina.',
+   'el corpus no atestigua NINGUNA pasiva de 1.ª persona de la 1.ª conjugación: medidas todas las de L1, sólo hay videor (19) y dīcor (1). Las 22 apariciones de la cadena «amor» son el sustantivo.'],
   ['la-pa-02', 'videō', 'presente', '1sg', 'videor', 2, 'Ā populō ___.',
    'presente PASIVO, 1.ª del singular', 'Soy visto por el pueblo.'],
 
@@ -77,9 +85,10 @@ const DEFS: Def[] = [
 
 export const SEMILLA_DE_ORDEN = 1;
 
-const FUENTE: ItemPasiva[] = DEFS.map(([id, lema, tiempo, persona, respuesta, conj, marco, pista, glosa]) => ({
+const FUENTE: ItemPasiva[] = DEFS.map(([id, lema, tiempo, persona, respuesta, conj, marco, pista, glosa, porQueSinAtestiguar]) => ({
   id, punto: 'l6-pasiva-infectum', verbo: V(lema), tiempo, persona, respuesta, marco, pista, glosa,
   ejes: { conjugacion: conj },
+  ...(porQueSinAtestiguar ? { porQueSinAtestiguar } : {}),
 }));
 
 export const LOTE_PASIVA_INFECTUM = ordenPublicado(FUENTE, SEMILLA_DE_ORDEN);

@@ -9,6 +9,11 @@ export const NOMBRES_L1: EntradaNominal[] = [
   // `aqua` ×31 en acusativo.
   { lema: 'causa', genitivo: 'causae', genero: 'f', glosa: 'causa, motivo' },
   { lema: 'aqua', genitivo: 'aquae', genero: 'f', glosa: 'agua' },
+  // Léxico básico que los marcos piden y el lexicón no tenía. Medido:
+  // `vīta` ×229, `via` ×129. Son de las palabras más corrientes del corpus
+  // y `l11-nucleo-800` sigue en 120 lemas de 800, así que además suman.
+  { lema: 'vīta', genitivo: 'vītae', genero: 'f', glosa: 'vida' },
+  { lema: 'via', genitivo: 'viae', genero: 'f', glosa: 'camino, calle' },
   // ── ENTRAN EL 2026-09-12 PARA DESBLOQUEAR DOS PUNTOS ──
   //
   // Son las palabras que los propios descriptores nombran, y sin ellas dos
@@ -251,6 +256,9 @@ export const ADJETIVOS_L1: EntradaAdjetivo[] = [
   { lema: 'integer', tema: 'integr', glosa: 'entero, intacto' },
   // `certa` sale en un marco de `l5-negacion` y está atestiguado ×11.
   { lema: 'certus', tema: 'cert', glosa: 'cierto, seguro' },
+  // `vērus` ×387, y su neutro `vērum` es «la verdad» sustantivado, que es
+  // como sale en casi todos los marcos.
+  { lema: 'vērus', tema: 'vēr', glosa: 'verdadero; y en neutro, «la verdad»' },
   // `anxia` sale en un marco de `l5-negacion`. El FEMENINO no aparece en el
   // corpus, pero el lema sí (`anxius` ×3): una forma regular de un lema
   // atestiguado no es un invento, que es lo que el congelador ya declara.

@@ -1,8 +1,8 @@
 {
  "generado": "2026-09-13",
  "comoSeCuenta": "por LEMA más RASGOS del treebank, no por cadena: el corpus no lleva mácrones y buscar la cadena devuelve el mismo número para los dos miembros del par",
- "pares": 244,
- "miembrosConCuenta": 238,
+ "pares": 247,
+ "miembrosConCuenta": 244,
  "miembrosSinMapear": 255,
  "paresConUnMiembroACero": 107,
  "lista": {
@@ -3658,6 +3658,38 @@
     }
    ]
   },
+  "vera": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "vēra",
+     "clave": "vērus.f.nom.sg",
+     "n": 3
+    },
+    {
+     "forma": "vērā",
+     "clave": "vērus.f.abl.sg",
+     "n": 4
+    }
+   ]
+  },
+  "via": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "via",
+     "clave": "via.nom.sg",
+     "n": 8
+    },
+    {
+     "forma": "viā",
+     "clave": "via.abl.sg",
+     "n": 45
+    }
+   ]
+  },
   "vicina": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -3756,6 +3788,22 @@
      "forma": "vīsūrā",
      "clave": "videō.part-fut.f.abl.sg",
      "n": null
+    }
+   ]
+  },
+  "vita": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "vīta",
+     "clave": "vīta.nom.sg",
+     "n": 35
+    },
+    {
+     "forma": "vītā",
+     "clave": "vīta.abl.sg",
+     "n": 27
     }
    ]
   },
