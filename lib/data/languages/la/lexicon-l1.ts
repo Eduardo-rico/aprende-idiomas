@@ -318,8 +318,15 @@ interface FilaDelRegistro {
   cantidadVariable?: boolean; flexiona?: boolean; formaAtestiguada?: number;
 }
 
-/** Los escritos a mano, de antes de que hubiera fuente. */
-const INDECLINABLES_A_MANO: string[] = [
+/** Los escritos a mano, de antes de que hubiera fuente.
+ *
+ *  SE EXPORTA, y no por comodidad: el generador del registro tiene que leer
+ *  ESTA lista y no `INDECLINABLES_L1`. Leer la compuesta hace que los
+ *  importados vuelvan al registro marcados `lexicon-propio`, el filtro deje
+ *  de encontrar `fuente-externa`, y la importación se borre sola. Pasó: de
+ *  61 a 0 en una regeneración. Un generador que lee lo que él mismo produjo
+ *  no está midiendo nada. */
+export const INDECLINABLES_A_MANO: string[] = [
   // ── PREPOSICIONES ──
   'cum', 'ex', 'ē', 'in', 'ad', 'ab', 'ā', 'dē', 'per', 'prō', 'sine', 'sub', 'ante', 'post',
   // ── ENTRAN EL 2026-09-12, por el barrido de los marcos ──

@@ -13,6 +13,10 @@
 import { describe, it, expect } from 'vitest';
 import macrones from '@/lib/data/languages/la/macrones.json';
 import { conciliar, lemasDelLexicon, macronesDe, argQueEsElLema, sinCantidad } from '@/scripts/lib/traer-macrones';
+import { INDECLINABLES_A_MANO, INDECLINABLES_IMPORTADOS, INDECLINABLES_L1 } from '@/lib/data/languages/la/lexicon-l1';
+import nucleo from '@/lib/data/languages/la/nucleo-800.json';
+
+const NUCLEO = nucleo as { lemas: { lema: string }[] };
 
 const M = macrones as {
   generado: string;
@@ -126,18 +130,50 @@ describe('los dos caminos de la fuente, y cuándo NO se usa', () => {
   });
 });
 
+describe('LAS DOS CIRCULARIDADES, que se comieron la importación', () => {
+  // El 2026-09-13, en una sola regeneración, los importados pasaron de 61 a
+  // 0. Dos veces la misma forma: el generador leyendo como ENTRADA algo que
+  // él mismo había producido.
+  it('el generador lee la lista ESCRITA A MANO, no la compuesta', () => {
+    // Leer `INDECLINABLES_L1` devolvía los importados al registro marcados
+    // `lexicon-propio`, el filtro dejaba de encontrar `fuente-externa` y la
+    // importación se borraba sola.
+    const aMano = new Set(INDECLINABLES_A_MANO);
+    for (const i of INDECLINABLES_IMPORTADOS) expect(aMano.has(i), i).toBe(false);
+    expect(INDECLINABLES_L1.length).toBe(INDECLINABLES_A_MANO.length + INDECLINABLES_IMPORTADOS.length);
+    // Y ninguno de los importados figura como propio en el registro.
+    const propios = new Set(M.filas.filter((f) => f.origen === 'lexicon-propio').map((f) => f.clave));
+    const sinM = (x: string) => x.normalize('NFD').replace(/[\u0304\u0306]/g, '').normalize('NFC').toLowerCase();
+    for (const i of INDECLINABLES_IMPORTADOS) expect(propios.has(sinM(i)), i).toBe(false);
+  });
+
+  it('y los candidatos son el núcleo ENTERO, no «los que están a cero»', () => {
+    // «A cero» es un valor derivado de la máquina: al importar unos cuantos
+    // dejan de estarlo, salen de la lista y desaparecen del registro. El
+    // registro tiene que cubrir los 800 pase lo que pase con la cobertura.
+    const enRegistro = new Set(M.filas.map((f) => f.clave));
+    const sinM = (x: string) => x.normalize('NFD').replace(/[\u0304\u0306]/g, '').normalize('NFC').toLowerCase().replace(/v/g, 'u').replace(/j/g, 'i');
+    const fuera = NUCLEO.lemas.filter((l) => !enRegistro.has(sinM(l.lema)));
+    expect(fuera.map((l) => l.lema), 'lemas del núcleo que el registro no cubre').toEqual([]);
+  });
+});
+
 describe('el extractor, contra wikitexto de verdad', () => {
   it('lee las dos plantillas y encuentra la sección latina aunque empiece en 0', () => {
     const soloLatin = '==Latin==\n===Pronunciation===\n* {{la-IPA|veniō}}\n===Verb===\n{{la-verb|4.pass-impers|veniō|vēn|vent}}\n';
-    expect(macronesDe(soloLatin, 'venio')).toEqual({ ipa: 'veniō', head: 'veniō', pos: 'verb' });
+    const r = macronesDe(soloLatin, 'venio');
+    expect({ ipa: r.ipa, head: r.head, pos: r.pos }).toEqual({ ipa: 'veniō', head: 'veniō', pos: 'verb' });
+    // Y la plantilla cruda se guarda: de ahí sale el paradigma.
+    expect(r.plantilla).toContain('vēn');
   });
 
   it('y se salta los parámetros con nombre de la plantilla de pronunciación', () => {
     const conEccl = '==Latin==\n* {{la-IPA|eccl=yes|pāx}}\n{{la-noun|pāx/pāc<3>|g=f}}\n';
-    expect(macronesDe(conEccl, 'pax')).toEqual({ ipa: 'pāx', head: 'pāx', pos: 'noun' });
+    const r2 = macronesDe(conEccl, 'pax');
+    expect({ ipa: r2.ipa, head: r2.head, pos: r2.pos }).toEqual({ ipa: 'pāx', head: 'pāx', pos: 'noun' });
   });
 
   it('y devuelve nulos donde no hay sección latina, en vez de inventar', () => {
-    expect(macronesDe('==Spanish==\n{{es-noun|f}}\n', 'paz')).toEqual({ ipa: null, head: null, pos: null });
+    expect(macronesDe('==Spanish==\n{{es-noun|f}}\n', 'paz')).toEqual({ ipa: null, head: null, pos: null, plantilla: null });
   });
 });

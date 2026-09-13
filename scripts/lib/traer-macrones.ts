@@ -55,7 +55,11 @@
 // adivinar posiciones —en `la-verb` la primera es el código de conjugación—
 // ni se cuela un argumento cualquiera.
 import fs from 'node:fs';
-import { NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1, INDECLINABLES_L1 } from '../../lib/data/languages/la/lexicon-l1';
+// `INDECLINABLES_A_MANO` y NO `INDECLINABLES_L1`: la segunda incluye los que
+// este mismo generador importó, y leerlos los devolvería al registro como
+// `lexicon-propio`, el filtro del lexicón dejaría de encontrarlos y la
+// importación se borraría sola. Pasó una vez: de 61 a 0.
+import { NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1, INDECLINABLES_A_MANO } from '../../lib/data/languages/la/lexicon-l1';
 import { ADJETIVOS_3A } from '../../lib/data/languages/la/adjetivos-3a';
 import { IRREGULARES_L1 } from '../../lib/data/languages/la/irregulares';
 import { DEPONENTES_L1 } from '../../lib/data/languages/la/deponentes';
@@ -105,6 +109,12 @@ export interface FilaDeMacron {
    *  lo da bien, pero el corpus sólo trae su comparativo `amplius`: la
    *  forma de cita no aparece. Un lema así no se puede usar en un marco. */
   formaAtestiguada?: number;
+  /** Los argumentos CRUDOS de la plantilla de encabezado. De ahí sale el
+   *  paradigma —`rēx/rēg<3>|g=m` da tema, declinación y género;
+   *  `4.pass-impers|veniō|vēn|vent` da conjugación y temas—. Se guardan sin
+   *  interpretar para que el parseo se pueda rehacer sin volver a la red:
+   *  la fuente se pide una vez, el análisis las que hagan falta. */
+  plantilla?: string;
   /** Si el lema ya estaba en el lexicón escrito a mano, lo que decía. */
   enElLexicon?: string;
   /** Escrito sólo cuando el lexicón y la fuente discrepan. */
@@ -137,15 +147,16 @@ export function argQueEsElLema(args: string, titulo: string): string | null {
 }
 
 const POS = 'noun|verb|adj|proper noun|num|pron|adv|prep|conj|part|det|suffix|prefix';
-export function macronesDe(txt: string, titulo: string): { ipa: string | null; head: string | null; pos: string | null } {
+export function macronesDe(txt: string, titulo: string): { ipa: string | null; head: string | null; pos: string | null; plantilla: string | null } {
   const la = seccionLatina(txt);
-  if (!la) return { ipa: null, head: null, pos: null };
+  if (!la) return { ipa: null, head: null, pos: null, plantilla: null };
   const mi = la.match(/\{\{la-IPA\|([^}]*)\}\}/);
   const mh = la.match(new RegExp(`\\{\\{la-(${POS})\\|([^}]*)\\}\\}`));
   return {
     ipa: mi ? argQueEsElLema(mi[1]!, titulo) : null,
     head: mh ? argQueEsElLema(mh[2]!, titulo) : null,
     pos: mh ? mh[1]! : null,
+    plantilla: mh ? mh[2]! : null,
   };
 }
 
@@ -210,17 +221,25 @@ export function lemasDelLexicon(): { lema: string; modulo: string }[] {
     ...IRREGULARES_L1.map((v) => ({ lema: v.lema, modulo: 'IRREGULARES_L1' })),
     ...DEPONENTES_L1.map((d) => ({ lema: d.lema, modulo: 'DEPONENTES_L1' })),
     ...PLURALIA_TANTUM.map((p) => ({ lema: p.lema, modulo: 'PLURALIA_TANTUM' })),
-    ...INDECLINABLES_L1.map((i) => ({ lema: i, modulo: 'INDECLINABLES_L1' })),
+    ...INDECLINABLES_A_MANO.map((i) => ({ lema: i, modulo: 'INDECLINABLES_A_MANO' })),
   ];
 }
 
 async function main() {
   const propios = lemasDelLexicon();
   const nucleo = JSON.parse(fs.readFileSync('lib/data/languages/la/nucleo-800.json', 'utf8')) as { lemas: { lema: string; cubierto: number }[] };
-  const aCero = nucleo.lemas.filter((l) => l.cubierto === 0).map((l) => l.lema);
 
-  const titulos = [...new Set([...propios.map((p) => sinCantidad(p.lema)), ...aCero])];
-  console.error(`${titulos.length} títulos (${propios.length} del lexicón + ${aCero.length} del núcleo a cero)`);
+  // EL NÚCLEO ENTERO, no «los que están a cero».
+  //
+  // La primera versión pedía sólo los no cubiertos, y eso es un valor
+  // DERIVADO de la máquina: en cuanto se importan unos cuantos dejan de
+  // estar a cero, salen de la lista, desaparecen del registro y el lexicón
+  // —que los lee de ahí— los pierde. El registro encogía cuando la
+  // cobertura crecía. Segunda circularidad del mismo día y la misma forma:
+  // leer como entrada algo que uno mismo produjo.
+  const delNucleo = nucleo.lemas.map((l) => l.lema);
+  const titulos = [...new Set([...propios.map((p) => sinCantidad(p.lema)), ...delNucleo])];
+  console.error(`${titulos.length} títulos (${propios.length} del lexicón a mano + los ${delNucleo.length} del núcleo)`);
 
   const uposDelCorpus = new Map(nucleo.lemas.map((l) => [sinCantidad(l.lema), (l as unknown as { upos: string }).upos]));
   // TERCER CAMINO: cuenta de rasgos de caso en el treebank, por lema.
@@ -236,11 +255,11 @@ async function main() {
       formasDelCorpus.set(f, (formasDelCorpus.get(f) ?? 0) + 1);
     }
   }
-  const crudo = new Map<string, { ipa: string | null; head: string | null; pos: string | null; falta: boolean }>();
+  const crudo = new Map<string, { ipa: string | null; head: string | null; pos: string | null; plantilla: string | null; falta: boolean }>();
   for (let i = 0; i < titulos.length; i += 50) {
     for (const p of await lote(titulos.slice(i, i + 50))) {
       const txt = p.revisions?.[0]?.slots?.main?.content ?? '';
-      crudo.set(sinCantidad(p.title), p.missing ? { ipa: null, head: null, pos: null, falta: true } : { ...macronesDe(txt, p.title), falta: false });
+      crudo.set(sinCantidad(p.title), p.missing ? { ipa: null, head: null, pos: null, plantilla: null, falta: true } : { ...macronesDe(txt, p.title), falta: false });
     }
     console.error(`  ${Math.min(i + 50, titulos.length)}/${titulos.length}`);
     await dormir(1500);
@@ -264,7 +283,7 @@ async function main() {
       ...(discrepa ? { discrepancia: `la fuente da «${forma}»` } : {}),
     });
   }
-  for (const l of aCero) {
+  for (const l of delNucleo) {
     const k = sinCantidad(l);
     if (vistos.has(k)) continue;
     vistos.add(k);
@@ -282,6 +301,7 @@ async function main() {
         ...(fx ? { conCasoEnElCorpus: fx.con, sinCasoEnElCorpus: fx.sin } : {}),
         ...(fx && fx.con > fx.sin ? { flexiona: true as const } : {}),
         formaAtestiguada: formasDelCorpus.get(sinCantidad(forma)) ?? 0,
+        ...(c?.plantilla ? { plantilla: c.plantilla } : {}),
       }
       : { clave: k, cantidad: null, origen: 'sin-dato', caminos: 0, posFuente: pos, uposCorpus: upos });
   }

@@ -50,6 +50,7 @@ const NO_PRODUCEN: Record<string, string> = {
   // Se exportan para que el test de procedencia pueda contarlas por
   // separado, no para producir formas por su cuenta.
   INDECLINABLES_IMPORTADOS: 'la mitad de INDECLINABLES_L1 que viene del registro de cantidad; sus formas entran por INDECLINABLES_L1',
+  INDECLINABLES_A_MANO: 'la otra mitad, la escrita a mano. Se exporta para que el generador del registro lea ÉSTA y no la compuesta: leer la compuesta devuelve los importados al registro como propios y borra la importación',
   // El guardián cazó estas dos al entrar el subjuntivo, que es la tercera
   // vez en el día que avisa. No son tablas de material: son las etiquetas
   // de los ejes del propio módulo.

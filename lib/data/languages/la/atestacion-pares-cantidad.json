@@ -1,10 +1,10 @@
 {
  "generado": "2026-09-13",
  "comoSeCuenta": "por LEMA más RASGOS del treebank, no por cadena: el corpus no lleva mácrones y buscar la cadena devuelve el mismo número para los dos miembros del par",
- "pares": 296,
- "miembrosConCuenta": 247,
- "miembrosSinMapear": 350,
- "paresConUnMiembroACero": 110,
+ "pares": 298,
+ "miembrosConCuenta": 249,
+ "miembrosSinMapear": 352,
+ "paresConUnMiembroACero": 112,
  "lista": {
   "acerrima": {
    "tipo": "morfologico",
@@ -611,6 +611,22 @@
      "forma": "certā",
      "clave": "certus.f.abl.sg",
      "n": 1
+    }
+   ]
+  },
+  "certe": {
+   "tipo": "lexico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "certē",
+     "clave": "certē.indecl",
+     "n": null
+    },
+    {
+     "forma": "certe",
+     "clave": "certus.m.voc.sg",
+     "n": 0
     }
    ]
   },
@@ -2541,6 +2557,22 @@
      "forma": "longā",
      "clave": "longus.f.abl.sg",
      "n": 3
+    }
+   ]
+  },
+  "longe": {
+   "tipo": "lexico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "longē",
+     "clave": "longē.indecl",
+     "n": null
+    },
+    {
+     "forma": "longe",
+     "clave": "longus.m.voc.sg",
+     "n": 0
     }
    ]
   },

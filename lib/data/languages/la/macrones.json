@@ -12,17 +12,17 @@
   "porQue": "no marca la cantidad sino lo justo para colocar el acento: 42,5 % de las vocales, y calla sobre alguna en 182 de 200 lemas. `rēgnum` sale como «regnum»"
  },
  "loQueNoSeHace": "macronizadores automáticos: su salida es una inferencia de un modelo, no una atestación",
- "total": 771,
+ "total": 840,
  "porOrigen": {
   "lexicon-propio": 217,
-  "fuente-externa": 471,
-  "sin-dato": 83
+  "fuente-externa": 517,
+  "sin-dato": 106
  },
  "discrepanciasConElLexicon": 8,
- "categoriaEnDisputa": 18,
- "cantidadVariable": 8,
- "flexionanEnElCorpus": 212,
- "conLaFormaDeCitaSinAtestiguar": 96,
+ "categoriaEnDisputa": 27,
+ "cantidadVariable": 9,
+ "flexionanEnElCorpus": 237,
+ "conLaFormaDeCitaSinAtestiguar": 100,
  "porQueSeMiraLaFlexion": "un indeclinable no lleva nunca `Case=`. `lātus` viene etiquetado ADV por el corpus y la fuente calla sobre su categoría, así que ni la cantidad ni la categoría lo cazan: sale 41 veces CON caso y 2 sin, y es un adjetivo declinado",
  "porQueLaCategoriaSeCruza": "el corpus etiqueta `tantus` y `cēterus` como ADV —su uso adverbial— y son adjetivos que DECLINAN: importarlos como indeclinables por fiarse de una etiqueta sola mete un error de datos que ningún gate de cantidad puede ver. Y `categoriaEnDisputa` es CONTRADICCIÓN, no silencio: los indeclinables de la fuente no llevan plantilla de encabezado, así que su categoría viene en blanco y eso no descalifica nada",
  "filas": [
@@ -1554,6 +1554,143 @@
    "enElLexicon": "sanctior"
   },
   {
+   "clave": "qui",
+   "cantidad": "quī",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "det",
+   "uposCorpus": "PRON",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 6257,
+   "sinCasoEnElCorpus": 6,
+   "flexiona": true,
+   "formaAtestiguada": 2355,
+   "plantilla": "quī<irreg+>"
+  },
+  {
+   "clave": "is",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": "det",
+   "uposCorpus": "DET"
+  },
+  {
+   "clave": "ego",
+   "cantidad": "egō̆",
+   "origen": "fuente-externa",
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "PRON",
+   "cantidadVariable": true,
+   "conCasoEnElCorpus": 2814,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 713
+  },
+  {
+   "clave": "hic",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": "det",
+   "uposCorpus": "DET"
+  },
+  {
+   "clave": "ille",
+   "cantidad": "ille",
+   "origen": "fuente-externa",
+   "caminos": 1,
+   "posFuente": "det",
+   "uposCorpus": "DET",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 2444,
+   "sinCasoEnElCorpus": 1,
+   "flexiona": true,
+   "formaAtestiguada": 285,
+   "plantilla": "ille<irreg+>"
+  },
+  {
+   "clave": "tu",
+   "cantidad": "tū",
+   "origen": "fuente-externa",
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "PRON",
+   "conCasoEnElCorpus": 1703,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 377
+  },
+  {
+   "clave": "uos",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "PRON"
+  },
+  {
+   "clave": "quis",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": "det",
+   "uposCorpus": "PRON"
+  },
+  {
+   "clave": "ipse",
+   "cantidad": "ipse",
+   "origen": "fuente-externa",
+   "caminos": 1,
+   "posFuente": "det",
+   "uposCorpus": "DET",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 994,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 303,
+   "plantilla": "ipse<irreg+>|comp=-|sup=ipsissimus/ipsimus"
+  },
+  {
+   "clave": "se",
+   "cantidad": "sē",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "prep",
+   "uposCorpus": "PRON",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 965,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 789,
+   "plantilla": "sē|ablative"
+  },
+  {
+   "clave": "possum",
+   "cantidad": "possum",
+   "origen": "fuente-externa",
+   "caminos": 1,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 8,
+   "sinCasoEnElCorpus": 882,
+   "formaAtestiguada": 42,
+   "plantilla": "irreg|possum"
+  },
+  {
+   "clave": "nos",
+   "cantidad": "nōs",
+   "origen": "fuente-externa",
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "PRON",
+   "conCasoEnElCorpus": 812,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 460
+  },
+  {
    "clave": "multus",
    "cantidad": "multus",
    "origen": "fuente-externa",
@@ -1563,7 +1700,8 @@
    "conCasoEnElCorpus": 659,
    "sinCasoEnElCorpus": 17,
    "flexiona": true,
-   "formaAtestiguada": 8
+   "formaAtestiguada": 8,
+   "plantilla": "multus|comp=plūs|sup=plūrimus/plūrumus|adv=multō"
   },
   {
    "clave": "unus",
@@ -1575,7 +1713,8 @@
    "conCasoEnElCorpus": 543,
    "sinCasoEnElCorpus": 3,
    "flexiona": true,
-   "formaAtestiguada": 123
+   "formaAtestiguada": 123,
+   "plantilla": "ūnus<+.ius>|gen_sg_m=ūnī̆us/ūnī|gen_sg_f=ūnī̆us/ūnī|gen_sg_n=ūnī̆us/ūnī|dat_sg_m=ūnī/ūnō|dat_sg_f=ūnī/ūnae|dat_sg_n=ūnī/ūnō"
   },
   {
    "clave": "scribo",
@@ -1586,7 +1725,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 160,
    "sinCasoEnElCorpus": 378,
-   "formaAtestiguada": 12
+   "formaAtestiguada": 12,
+   "plantilla": "3|scrībō|scrīps|scrīpt"
   },
   {
    "clave": "alius",
@@ -1599,7 +1739,8 @@
    "conCasoEnElCorpus": 491,
    "sinCasoEnElCorpus": 1,
    "flexiona": true,
-   "formaAtestiguada": 53
+   "formaAtestiguada": 53,
+   "plantilla": "((alius<+.ius>,alius<+>))\n|gen_sg_m=alterī̆us/alīus/aliī\n|gen_sg_f=alterī̆us/alīus/aliae\n|nom_sg_n=aliud|gen_sg_n=alterī̆us/alīus/aliī|acc_sg_n=aliud|voc_sg_n=aliud\n"
   },
   {
    "clave": "ergo",
@@ -1610,7 +1751,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 444,
-   "formaAtestiguada": 444
+   "formaAtestiguada": 444,
+   "plantilla": "ergō|-"
   },
   {
    "clave": "scio",
@@ -1621,7 +1763,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 41,
    "sinCasoEnElCorpus": 377,
-   "formaAtestiguada": 65
+   "formaAtestiguada": 65,
+   "plantilla": "4++.old-impf-futr.poet-sync-perf.no-und|sciō|2s_pres_actv_impr=scītō/scī|2p_pres_actv_impr=scītōte/scīte"
   },
   {
    "clave": "nihil",
@@ -1634,7 +1777,8 @@
    "conCasoEnElCorpus": 372,
    "sinCasoEnElCorpus": 27,
    "flexiona": true,
-   "formaAtestiguada": 388
+   "formaAtestiguada": 388,
+   "plantilla": "nihil|-"
   },
   {
    "clave": "accipio",
@@ -1645,7 +1789,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 75,
    "sinCasoEnElCorpus": 306,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "3|accipiō|accēp|accept"
   },
   {
    "clave": "sicut",
@@ -1656,7 +1801,8 @@
    "uposCorpus": "SCONJ",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 361,
-   "formaAtestiguada": 359
+   "formaAtestiguada": 359,
+   "plantilla": "sīcut|-"
   },
   {
    "clave": "greek.expression",
@@ -1675,7 +1821,8 @@
    "uposCorpus": "PART",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 334,
-   "formaAtestiguada": 334
+   "formaAtestiguada": 334,
+   "plantilla": "quidem|-"
   },
   {
    "clave": "nam",
@@ -1689,6 +1836,14 @@
    "formaAtestiguada": 329
   },
   {
+   "clave": "uester",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "DET"
+  },
+  {
    "clave": "tamen",
    "cantidad": "tamen",
    "origen": "fuente-externa",
@@ -1697,7 +1852,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 332,
-   "formaAtestiguada": 332
+   "formaAtestiguada": 332,
+   "plantilla": "tamen|-"
   },
   {
    "clave": "aio",
@@ -1708,7 +1864,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 329,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "irreg|aiō"
   },
   {
    "clave": "super",
@@ -1719,7 +1876,8 @@
    "uposCorpus": "ADP",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 318,
-   "formaAtestiguada": 317
+   "formaAtestiguada": 317,
+   "plantilla": "super|accusative|ablative"
   },
   {
    "clave": "quoniam",
@@ -1741,7 +1899,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 79,
    "sinCasoEnElCorpus": 233,
-   "formaAtestiguada": 15
+   "formaAtestiguada": 15,
+   "plantilla": "3|agō|ēg|āct"
   },
   {
    "clave": "credo",
@@ -1752,7 +1911,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 37,
    "sinCasoEnElCorpus": 273,
-   "formaAtestiguada": 30
+   "formaAtestiguada": 30,
+   "plantilla": "3|crēdō|crēdid|crēdit"
   },
   {
    "clave": "nunc",
@@ -1763,7 +1923,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 306,
-   "formaAtestiguada": 305
+   "formaAtestiguada": 305,
+   "plantilla": "nunc|-"
   },
   {
    "clave": "quidam",
@@ -1776,7 +1937,8 @@
    "conCasoEnElCorpus": 297,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 153
+   "formaAtestiguada": 153,
+   "plantilla": "quīdam<irreg+>|nom_sg_n=quoddam"
   },
   {
    "clave": "uel",
@@ -1795,7 +1957,24 @@
    "uposCorpus": "ADP",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 286,
-   "formaAtestiguada": 286
+   "formaAtestiguada": 286,
+   "plantilla": "propter|-"
+  },
+  {
+   "clave": "magis",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": "adv",
+   "uposCorpus": "ADV"
+  },
+  {
+   "clave": "uero",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADV"
   },
   {
    "clave": "idem",
@@ -1809,7 +1988,8 @@
    "conCasoEnElCorpus": 270,
    "sinCasoEnElCorpus": 4,
    "flexiona": true,
-   "formaAtestiguada": 68
+   "formaAtestiguada": 68,
+   "plantilla": "īdem<irreg+.sufn>dem"
   },
   {
    "clave": "duo",
@@ -1828,7 +2008,16 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 10,
    "sinCasoEnElCorpus": 256,
-   "formaAtestiguada": 52
+   "formaAtestiguada": 52,
+   "plantilla": "1+.poet-sync-perf|putō"
+  },
+  {
+   "clave": "aliquis",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "PRON"
   },
   {
    "clave": "nisi",
@@ -1851,7 +2040,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 48,
    "sinCasoEnElCorpus": 198,
-   "formaAtestiguada": 4
+   "formaAtestiguada": 4,
+   "plantilla": "3.poet-sync-perf|cognōscō|cognōv|cognit"
   },
   {
    "clave": "publicus",
@@ -1863,7 +2053,8 @@
    "conCasoEnElCorpus": 231,
    "sinCasoEnElCorpus": 5,
    "flexiona": true,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "pūblicus"
   },
   {
    "clave": "quaero",
@@ -1874,7 +2065,22 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 31,
    "sinCasoEnElCorpus": 198,
-   "formaAtestiguada": 11
+   "formaAtestiguada": 11,
+   "plantilla": "3.poet-sync-perf|quaerō|quaesīv/quaesi|quaesīt"
+  },
+  {
+   "clave": "iste",
+   "cantidad": "iste",
+   "origen": "fuente-externa",
+   "caminos": 1,
+   "posFuente": "det",
+   "uposCorpus": "DET",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 229,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 22,
+   "plantilla": "iste<irreg+>|cat2=pronouns|cat3=demonstrative pronouns"
   },
   {
    "clave": "animus",
@@ -1886,7 +2092,21 @@
    "conCasoEnElCorpus": 226,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 36
+   "formaAtestiguada": 36,
+   "plantilla": "animus<2>"
+  },
+  {
+   "clave": "littera",
+   "cantidad": "littera",
+   "origen": "fuente-externa",
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 225,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 3,
+   "plantilla": "littera<1>"
   },
   {
    "clave": "pono",
@@ -1897,7 +2117,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 79,
    "sinCasoEnElCorpus": 143,
-   "formaAtestiguada": 4
+   "formaAtestiguada": 4,
+   "plantilla": "3.poet-sync-perf|pōnō|posu/posīv|posit/post"
   },
   {
    "clave": "consilium",
@@ -1909,7 +2130,8 @@
    "conCasoEnElCorpus": 219,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 71
+   "formaAtestiguada": 71,
+   "plantilla": "cōnsilium<2>"
   },
   {
    "clave": "totus",
@@ -1921,7 +2143,8 @@
    "conCasoEnElCorpus": 202,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 10
+   "formaAtestiguada": 10,
+   "plantilla": "tōtus<+.ius>"
   },
   {
    "clave": "nullus",
@@ -1934,7 +2157,8 @@
    "conCasoEnElCorpus": 200,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 17
+   "formaAtestiguada": 17,
+   "plantilla": "((nūllus<+.ius>,nūllus<+>))"
   },
   {
    "clave": "nemo",
@@ -1957,7 +2181,22 @@
    "uposCorpus": "ADP",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 198,
-   "formaAtestiguada": 198
+   "formaAtestiguada": 198,
+   "plantilla": "inter|accusative"
+  },
+  {
+   "clave": "sanctus",
+   "cantidad": "sānctus",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "part",
+   "uposCorpus": "NOUN",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 198,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 29,
+   "plantilla": "sānctus|comp=sānctior|sup=sānctissimus"
   },
   {
    "clave": "hostis",
@@ -1969,7 +2208,8 @@
    "conCasoEnElCorpus": 194,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 15
+   "formaAtestiguada": 15,
+   "plantilla": "hostis<3>|g=m|g2=f"
   },
   {
    "clave": "exeo",
@@ -1980,7 +2220,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 35,
    "sinCasoEnElCorpus": 157,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "irreg|exeō"
   },
   {
    "clave": "apud",
@@ -1991,7 +2232,8 @@
    "uposCorpus": "ADP",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 190,
-   "formaAtestiguada": 190
+   "formaAtestiguada": 190,
+   "plantilla": "apud|accusative"
   },
   {
    "clave": "alter",
@@ -2004,7 +2246,8 @@
    "conCasoEnElCorpus": 186,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 39
+   "formaAtestiguada": 39,
+   "plantilla": "alter/alter<+.ius>\n|gen_sg=alterī̆us/altrī̆us\n|dat_sg=alterī/altrī\n|nom_pl_m=alterī/altrī\n|dat_pl=alterīs/altrīs\n|abl_pl=alterīs/altrīs\n|voc_pl_m=alterī/altrī\n"
   },
   {
    "clave": "debeo",
@@ -2015,7 +2258,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 9,
    "sinCasoEnElCorpus": 172,
-   "formaAtestiguada": 6
+   "formaAtestiguada": 6,
+   "plantilla": "2+|dēbeō"
   },
   {
    "clave": "relinquo",
@@ -2026,7 +2270,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 49,
    "sinCasoEnElCorpus": 127,
-   "formaAtestiguada": 4
+   "formaAtestiguada": 4,
+   "plantilla": "3|relinquō|relīqu|relict"
   },
   {
    "clave": "dimitto",
@@ -2037,7 +2282,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 28,
    "sinCasoEnElCorpus": 148,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|dīmittō|dīmīs|dīmiss"
   },
   {
    "clave": "mundus",
@@ -2049,7 +2295,8 @@
    "conCasoEnElCorpus": 174,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 29
+   "formaAtestiguada": 29,
+   "plantilla": "mundus|comp=mundior|sup=mundissimus|adv=munditer"
   },
   {
    "clave": "secundum",
@@ -2060,7 +2307,8 @@
    "uposCorpus": "ADP",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 174,
-   "formaAtestiguada": 187
+   "formaAtestiguada": 187,
+   "plantilla": "secundum|accusative"
   },
   {
    "clave": "iudaei",
@@ -2080,7 +2328,8 @@
    "conCasoEnElCorpus": 171,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 9
+   "formaAtestiguada": 9,
+   "plantilla": "modus<2>"
   },
   {
    "clave": "turba",
@@ -2092,7 +2341,8 @@
    "conCasoEnElCorpus": 170,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 77
+   "formaAtestiguada": 77,
+   "plantilla": "turba<1>"
   },
   {
    "clave": "angelus",
@@ -2104,7 +2354,8 @@
    "conCasoEnElCorpus": 169,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 51
+   "formaAtestiguada": 51,
+   "plantilla": "angelus<2>"
   },
   {
    "clave": "princeps",
@@ -2117,7 +2368,8 @@
    "conCasoEnElCorpus": 168,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 28
+   "formaAtestiguada": 28,
+   "plantilla": "prī̆nceps/prī̆ncip"
   },
   {
    "clave": "modo",
@@ -2142,7 +2394,16 @@
    "conCasoEnElCorpus": 154,
    "sinCasoEnElCorpus": 10,
    "flexiona": true,
-   "formaAtestiguada": 4
+   "formaAtestiguada": 4,
+   "plantilla": "tantus"
+  },
+  {
+   "clave": "malus",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ"
   },
   {
    "clave": "gens",
@@ -2154,7 +2415,8 @@
    "conCasoEnElCorpus": 164,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 9
+   "formaAtestiguada": 9,
+   "plantilla": "gēns<3.I>|g=f"
   },
   {
    "clave": "genus",
@@ -2174,7 +2436,8 @@
    "conCasoEnElCorpus": 162,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 44
+   "formaAtestiguada": 44,
+   "plantilla": "sermō<3>|g=m"
   },
   {
    "clave": "mulier",
@@ -2186,7 +2449,16 @@
    "conCasoEnElCorpus": 161,
    "sinCasoEnElCorpus": 1,
    "flexiona": true,
-   "formaAtestiguada": 74
+   "formaAtestiguada": 74,
+   "plantilla": "mulier/mulier<3>|g=f"
+  },
+  {
+   "clave": "expression",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADV"
   },
   {
    "clave": "pes",
@@ -2198,7 +2470,8 @@
    "conCasoEnElCorpus": 161,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 4
+   "formaAtestiguada": 4,
+   "plantilla": "pēs/ped<3>|g=m"
   },
   {
    "clave": "trado",
@@ -2209,7 +2482,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 38,
    "sinCasoEnElCorpus": 123,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "3|trādō|trādid|trādit"
   },
   {
    "clave": "reliquus",
@@ -2221,7 +2495,8 @@
    "conCasoEnElCorpus": 160,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "reliquus"
   },
   {
    "clave": "sedeo",
@@ -2232,7 +2507,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 66,
    "sinCasoEnElCorpus": 92,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "2.pass-impers|sedeō|sēd|sess"
   },
   {
    "clave": "peto",
@@ -2243,7 +2519,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 26,
    "sinCasoEnElCorpus": 131,
-   "formaAtestiguada": 7
+   "formaAtestiguada": 7,
+   "plantilla": "3.poet-sync-perf|petō|petīv/peti|petīt"
   },
   {
    "clave": "gloria",
@@ -2255,7 +2532,8 @@
    "conCasoEnElCorpus": 155,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 58
+   "formaAtestiguada": 58,
+   "plantilla": "glōria<1>"
   },
   {
    "clave": "iudico",
@@ -2266,7 +2544,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 24,
    "sinCasoEnElCorpus": 128,
-   "formaAtestiguada": 12
+   "formaAtestiguada": 12,
+   "plantilla": "1+|iūdicō"
   },
   {
    "clave": "usque",
@@ -2277,7 +2556,16 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 151,
-   "formaAtestiguada": 151
+   "formaAtestiguada": 151,
+   "plantilla": "usque|-"
+  },
+  {
+   "clave": "calendar",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADV"
   },
   {
    "clave": "potestas",
@@ -2289,7 +2577,8 @@
    "conCasoEnElCorpus": 150,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 16
+   "formaAtestiguada": 16,
+   "plantilla": "potestās<3>"
   },
   {
    "clave": "oportet",
@@ -2300,7 +2589,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 148,
-   "formaAtestiguada": 84
+   "formaAtestiguada": 84,
+   "plantilla": "2.nopass|oportet|oportu"
   },
   {
    "clave": "spes",
@@ -2312,7 +2602,8 @@
    "conCasoEnElCorpus": 146,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 42
+   "formaAtestiguada": 42,
+   "plantilla": "spēs<5>"
   },
   {
    "clave": "quicumque",
@@ -2337,7 +2628,8 @@
    "conCasoEnElCorpus": 143,
    "sinCasoEnElCorpus": 2,
    "flexiona": true,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "cēterus"
   },
   {
    "clave": "itaque",
@@ -2348,7 +2640,8 @@
    "uposCorpus": "PART",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 145,
-   "formaAtestiguada": 170
+   "formaAtestiguada": 170,
+   "plantilla": "itaque|-"
   },
   {
    "clave": "manduco",
@@ -2359,7 +2652,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 18,
    "sinCasoEnElCorpus": 125,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "1+|mandūcō"
   },
   {
    "clave": "propheta",
@@ -2371,7 +2665,8 @@
    "conCasoEnElCorpus": 142,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 31
+   "formaAtestiguada": 31,
+   "plantilla": "prophēta<1>|g=m|f=prophētis/prophētissa"
   },
   {
    "clave": "finis",
@@ -2383,7 +2678,8 @@
    "conCasoEnElCorpus": 141,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 16
+   "formaAtestiguada": 16,
+   "plantilla": "fīnis<3.abl-e-i>|g=m|g2=f"
   },
   {
    "clave": "ibi",
@@ -2408,7 +2704,8 @@
    "conCasoEnElCorpus": 140,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 29
+   "formaAtestiguada": 29,
+   "plantilla": "quis<irreg+>quam|nom_sg_m=quisquam|nom_sg_f=quaequam|nom_sg_n=quodquam"
   },
   {
    "clave": "nouus",
@@ -2427,7 +2724,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 20,
    "sinCasoEnElCorpus": 118,
-   "formaAtestiguada": 3
+   "formaAtestiguada": 3,
+   "plantilla": "2|teneō|tenu/tetin|tent"
   },
   {
    "clave": "mors",
@@ -2439,7 +2737,8 @@
    "conCasoEnElCorpus": 138,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 30
+   "formaAtestiguada": 30,
+   "plantilla": "mors<3.I>|g=f"
   },
   {
    "clave": "intellego",
@@ -2450,7 +2749,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 11,
    "sinCasoEnElCorpus": 127,
-   "formaAtestiguada": 11
+   "formaAtestiguada": 11,
+   "plantilla": "3|intellegō|intellēx|intellēct"
   },
   {
    "clave": "tum",
@@ -2461,7 +2761,20 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 136,
-   "formaAtestiguada": 136
+   "formaAtestiguada": 136,
+   "plantilla": "tum|-"
+  },
+  {
+   "clave": "coepi",
+   "cantidad": "coepī",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 6,
+   "sinCasoEnElCorpus": 130,
+   "formaAtestiguada": 7,
+   "plantilla": "3|coepī|coept"
   },
   {
    "clave": "romanus",
@@ -2473,7 +2786,8 @@
    "conCasoEnElCorpus": 135,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 10
+   "formaAtestiguada": 10,
+   "plantilla": "rōmānus|adv=rōmānē"
   },
   {
    "clave": "miles",
@@ -2485,7 +2799,8 @@
    "conCasoEnElCorpus": 134,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 6
+   "formaAtestiguada": 6,
+   "plantilla": "mīles/mīlit<3>|g=m|g2=f"
   },
   {
    "clave": "mille",
@@ -2497,7 +2812,8 @@
    "conCasoEnElCorpus": 111,
    "sinCasoEnElCorpus": 22,
    "flexiona": true,
-   "formaAtestiguada": 21
+   "formaAtestiguada": 21,
+   "plantilla": "mīlle<irreg+.N>"
   },
   {
    "clave": "cor",
@@ -2509,7 +2825,8 @@
    "conCasoEnElCorpus": 132,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 30
+   "formaAtestiguada": 30,
+   "plantilla": "((cor/cord<3.N.I>,cor/cord<3.N>))"
   },
   {
    "clave": "hora",
@@ -2521,7 +2838,8 @@
    "conCasoEnElCorpus": 132,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 92
+   "formaAtestiguada": 92,
+   "plantilla": "hōra<1>"
   },
   {
    "clave": "accedo",
@@ -2532,7 +2850,20 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 29,
    "sinCasoEnElCorpus": 102,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3.nopass|accēdō|access|access"
+  },
+  {
+   "clave": "sui",
+   "cantidad": "suī",
+   "origen": "fuente-externa",
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "PRON",
+   "conCasoEnElCorpus": 130,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 64
   },
   {
    "clave": "uiuo",
@@ -2551,7 +2882,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 130,
-   "formaAtestiguada": 130
+   "formaAtestiguada": 130,
+   "plantilla": "āmēn|-"
   },
   {
    "clave": "iterum",
@@ -2562,7 +2894,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 129,
-   "formaAtestiguada": 129
+   "formaAtestiguada": 129,
+   "plantilla": "iterum|-"
   },
   {
    "clave": "nauis",
@@ -2590,7 +2923,8 @@
    "conCasoEnElCorpus": 127,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 52
+   "formaAtestiguada": 52,
+   "plantilla": "iūdicium<2>"
   },
   {
    "clave": "diligo",
@@ -2602,7 +2936,8 @@
    "categoriaEnDisputa": true,
    "conCasoEnElCorpus": 16,
    "sinCasoEnElCorpus": 111,
-   "formaAtestiguada": 6
+   "formaAtestiguada": 6,
+   "plantilla": "3|dīligō|dīlēx|dīlēct"
   },
   {
    "clave": "summus",
@@ -2625,7 +2960,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 19,
    "sinCasoEnElCorpus": 106,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|tollō|sustul|sublāt"
   },
   {
    "clave": "surgo",
@@ -2636,7 +2972,21 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 35,
    "sinCasoEnElCorpus": 89,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|surgō|surrēx|surrēct"
+  },
+  {
+   "clave": "liber",
+   "cantidad": "līber",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 124,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 20,
+   "plantilla": "līber|comp=līberior|sup=līberrimus|adv=līberē"
   },
   {
    "clave": "oculus",
@@ -2648,7 +2998,20 @@
    "conCasoEnElCorpus": 123,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 17
+   "formaAtestiguada": 17,
+   "plantilla": "oculus<2>"
+  },
+  {
+   "clave": "curo",
+   "cantidad": "cūrō",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 18,
+   "sinCasoEnElCorpus": 105,
+   "formaAtestiguada": 2,
+   "plantilla": "1+.p3inf.poet-sync-perf|cūrō"
   },
   {
    "clave": "pax",
@@ -2660,7 +3023,8 @@
    "conCasoEnElCorpus": 123,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 36
+   "formaAtestiguada": 36,
+   "plantilla": "pāx<3>|g=f"
   },
   {
    "clave": "tres",
@@ -2683,7 +3047,16 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 120,
-   "formaAtestiguada": 120
+   "formaAtestiguada": 120,
+   "plantilla": "contrā|-"
+  },
+  {
+   "clave": "seruo",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "dum",
@@ -2703,7 +3076,8 @@
    "conCasoEnElCorpus": 119,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 30
+   "formaAtestiguada": 30,
+   "plantilla": "ratiō<3>"
   },
   {
    "clave": "affero",
@@ -2714,7 +3088,21 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 20,
    "sinCasoEnElCorpus": 99,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "irreg|afferō|at|al"
+  },
+  {
+   "clave": "copia",
+   "cantidad": "cōpia",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 119,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 21,
+   "plantilla": "cōpia<1>"
   },
   {
    "clave": "transeo",
@@ -2725,7 +3113,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 21,
    "sinCasoEnElCorpus": 97,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "irreg|trānseō"
   },
   {
    "clave": "abeo",
@@ -2736,7 +3125,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 10,
    "sinCasoEnElCorpus": 108,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "irreg.pass-impers|abeō"
   },
   {
    "clave": "caro",
@@ -2748,7 +3138,21 @@
    "conCasoEnElCorpus": 118,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 24
+   "formaAtestiguada": 24,
+   "plantilla": "carō/carn<3>|gen_pl=carnum/carnium|g=f"
+  },
+  {
+   "clave": "caput",
+   "cantidad": "caput",
+   "origen": "fuente-externa",
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 117,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 64,
+   "plantilla": "caput/capit<3.N>"
   },
   {
    "clave": "peccatum",
@@ -2760,7 +3164,8 @@
    "conCasoEnElCorpus": 117,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 36
+   "formaAtestiguada": 36,
+   "plantilla": "peccātum<2>"
   },
   {
    "clave": "occido",
@@ -2771,7 +3176,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 23,
    "sinCasoEnElCorpus": 93,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3.nopass|occidō|occid|occās"
   },
   {
    "clave": "supra",
@@ -2782,7 +3188,8 @@
    "uposCorpus": "ADP",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 116,
-   "formaAtestiguada": 115
+   "formaAtestiguada": 115,
+   "plantilla": "suprā|superius|summē/suprēmē"
   },
   {
    "clave": "nescio",
@@ -2793,7 +3200,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 4,
    "sinCasoEnElCorpus": 112,
-   "formaAtestiguada": 44
+   "formaAtestiguada": 44,
+   "plantilla": "4|nesciō|nescīv/nesci|nescīt"
   },
   {
    "clave": "recipio",
@@ -2804,7 +3212,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 17,
    "sinCasoEnElCorpus": 99,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|recipiō|recēp|recept"
   },
   {
    "clave": "ascendo",
@@ -2815,7 +3224,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 28,
    "sinCasoEnElCorpus": 87,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "3|ascendō|ascend|ascēns"
   },
   {
    "clave": "testimonium",
@@ -2827,7 +3237,8 @@
    "conCasoEnElCorpus": 115,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 101
+   "formaAtestiguada": 101,
+   "plantilla": "testimōnium<2>"
   },
   {
    "clave": "constituo",
@@ -2838,7 +3249,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 31,
    "sinCasoEnElCorpus": 84,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "3|cōnstituō|cōnstitu|cōnstitūt"
   },
   {
    "clave": "intro",
@@ -2849,7 +3261,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 11,
    "sinCasoEnElCorpus": 103,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "1+.poet-sync-perf|intrō"
   },
   {
    "clave": "consul",
@@ -2861,7 +3274,8 @@
    "conCasoEnElCorpus": 114,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 25
+   "formaAtestiguada": 25,
+   "plantilla": "cōnsul<3>|g=m"
   },
   {
    "clave": "adhuc",
@@ -2872,7 +3286,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 113,
-   "formaAtestiguada": 113
+   "formaAtestiguada": 113,
+   "plantilla": "adhūc|-"
   },
   {
    "clave": "conuenio",
@@ -2892,7 +3307,8 @@
    "conCasoEnElCorpus": 113,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 16
+   "formaAtestiguada": 16,
+   "plantilla": "pānis<3>|gen_pl=pānium/pānum|g=m"
   },
   {
    "clave": "reddo",
@@ -2903,7 +3319,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 19,
    "sinCasoEnElCorpus": 93,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "3|reddō|reddid|reddit"
   },
   {
    "clave": "uoluntas",
@@ -2922,7 +3339,22 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 8,
    "sinCasoEnElCorpus": 103,
-   "formaAtestiguada": 3
+   "formaAtestiguada": 3,
+   "plantilla": "2|maneō|māns|māns"
+  },
+  {
+   "clave": "mortuus",
+   "cantidad": "mortuus",
+   "origen": "fuente-externa",
+   "caminos": 1,
+   "posFuente": "part",
+   "uposCorpus": "ADJ",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 110,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 49,
+   "plantilla": "mortuus"
   },
   {
    "clave": "os",
@@ -2934,7 +3366,8 @@
    "conCasoEnElCorpus": 109,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 39
+   "formaAtestiguada": 39,
+   "plantilla": "ōs/ōr<3.N.I>"
   },
   {
    "clave": "igitur",
@@ -2953,7 +3386,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 15,
    "sinCasoEnElCorpus": 92,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3.poet-sync-perf|nōscō|nōv|nōt"
   },
   {
    "clave": "quasi",
@@ -2977,7 +3411,20 @@
    "conCasoEnElCorpus": 107,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 28
+   "formaAtestiguada": 28,
+   "plantilla": "ecclēsia<1>"
+  },
+  {
+   "clave": "tamquam",
+   "cantidad": "tamquam",
+   "origen": "fuente-externa",
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "SCONJ",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 106,
+   "formaAtestiguada": 90,
+   "plantilla": "tamquam|-"
   },
   {
    "clave": "sacerdos",
@@ -2989,7 +3436,8 @@
    "conCasoEnElCorpus": 104,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 8
+   "formaAtestiguada": 8,
+   "plantilla": "sacerdōs<3>|g=m|g2=f"
   },
   {
    "clave": "oro",
@@ -3000,7 +3448,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 24,
    "sinCasoEnElCorpus": 79,
-   "formaAtestiguada": 14
+   "formaAtestiguada": 14,
+   "plantilla": "1+.poet-sync-perf|ōrō"
   },
   {
    "clave": "medius",
@@ -3012,7 +3461,8 @@
    "conCasoEnElCorpus": 102,
    "sinCasoEnElCorpus": 1,
    "flexiona": true,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "medius|comp=magis medius/medior|sup=medioximus"
   },
   {
    "clave": "licet",
@@ -3023,7 +3473,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 103,
-   "formaAtestiguada": 62
+   "formaAtestiguada": 62,
+   "plantilla": "2.3only.opt-semi-depon.nopass.sigm|licet|licu|licit"
   },
   {
    "clave": "legio",
@@ -3035,7 +3486,8 @@
    "conCasoEnElCorpus": 108,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 6
+   "formaAtestiguada": 6,
+   "plantilla": "legiō<3>|g=f"
   },
   {
    "clave": "interrogo",
@@ -3046,7 +3498,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 7,
    "sinCasoEnElCorpus": 95,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "1+.poet-sync-perf|interrogō"
   },
   {
    "clave": "existimo",
@@ -3057,7 +3510,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 11,
    "sinCasoEnElCorpus": 91,
-   "formaAtestiguada": 10
+   "formaAtestiguada": 10,
+   "plantilla": "1+.poet-sync-perf|exīstimō"
   },
   {
    "clave": "tertius",
@@ -3077,7 +3531,8 @@
    "conCasoEnElCorpus": 102,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 32
+   "formaAtestiguada": 32,
+   "plantilla": "proelium<2>"
   },
   {
    "clave": "flumen",
@@ -3089,7 +3544,8 @@
    "conCasoEnElCorpus": 101,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 45
+   "formaAtestiguada": 45,
+   "plantilla": "flūmen<3>"
   },
   {
    "clave": "numerus",
@@ -3101,7 +3557,8 @@
    "conCasoEnElCorpus": 101,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 19
+   "formaAtestiguada": 19,
+   "plantilla": "numerus<2>"
   },
   {
    "clave": "deinde",
@@ -3120,7 +3577,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 29,
    "sinCasoEnElCorpus": 72,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "1+|praedicō"
   },
   {
    "clave": "epistula",
@@ -3132,7 +3590,21 @@
    "conCasoEnElCorpus": 101,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 33
+   "formaAtestiguada": 33,
+   "plantilla": "epistula<1>"
+  },
+  {
+   "clave": "legatus",
+   "cantidad": "lēgātus",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 101,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 3,
+   "plantilla": "lēgātus<2>"
   },
   {
    "clave": "septem",
@@ -3151,7 +3623,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 40,
    "sinCasoEnElCorpus": 60,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "4|aperiō|aperu|apert"
   },
   {
    "clave": "officium",
@@ -3163,7 +3636,8 @@
    "conCasoEnElCorpus": 100,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 23
+   "formaAtestiguada": 23,
+   "plantilla": "officium<2>"
   },
   {
    "clave": "gero",
@@ -3174,7 +3648,20 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 34,
    "sinCasoEnElCorpus": 66,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|gerō|gess|gest"
+  },
+  {
+   "clave": "primum",
+   "cantidad": "prīmum",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 100,
+   "formaAtestiguada": 132,
+   "plantilla": "prīmum|-"
   },
   {
    "clave": "uado",
@@ -3193,7 +3680,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 9,
    "sinCasoEnElCorpus": 90,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "2+.opt-semi-depon|placeō"
   },
   {
    "clave": "statim",
@@ -3204,7 +3692,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 99,
-   "formaAtestiguada": 99
+   "formaAtestiguada": 99,
+   "plantilla": "statim|-"
   },
   {
    "clave": "descendo",
@@ -3215,7 +3704,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 28,
    "sinCasoEnElCorpus": 71,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|dēscendō|dēscend|dēscēns"
   },
   {
    "clave": "pharisaeus",
@@ -3234,7 +3724,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 25,
    "sinCasoEnElCorpus": 73,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "1+.poet-sync-perf|parō"
   },
   {
    "clave": "saepe",
@@ -3245,7 +3736,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 98,
-   "formaAtestiguada": 85
+   "formaAtestiguada": 85,
+   "plantilla": "saepe|saepius|saepissimē"
   },
   {
    "clave": "iustitia",
@@ -3257,7 +3749,8 @@
    "conCasoEnElCorpus": 98,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 30
+   "formaAtestiguada": 30,
+   "plantilla": "iūstitia<1>"
   },
   {
    "clave": "quantus",
@@ -3270,7 +3763,8 @@
    "conCasoEnElCorpus": 92,
    "sinCasoEnElCorpus": 5,
    "flexiona": true,
-   "formaAtestiguada": 4
+   "formaAtestiguada": 4,
+   "plantilla": "quantus"
   },
   {
    "clave": "cogito",
@@ -3281,7 +3775,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 15,
    "sinCasoEnElCorpus": 82,
-   "formaAtestiguada": 7
+   "formaAtestiguada": 7,
+   "plantilla": "1+.poet-sync-perf|cōgitō"
   },
   {
    "clave": "anima",
@@ -3293,7 +3788,28 @@
    "conCasoEnElCorpus": 96,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 24
+   "formaAtestiguada": 24,
+   "plantilla": "((anima<1>,anima<1.abus>))"
+  },
+  {
+   "clave": "parum",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": "adv",
+   "uposCorpus": "ADV"
+  },
+  {
+   "clave": "quo",
+   "cantidad": "quō",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 1,
+   "sinCasoEnElCorpus": 94,
+   "formaAtestiguada": 467,
+   "plantilla": "quō|-"
   },
   {
    "clave": "simul",
@@ -3304,7 +3820,16 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 95,
-   "formaAtestiguada": 95
+   "formaAtestiguada": 95,
+   "plantilla": "simul|-"
+  },
+  {
+   "clave": "quisque",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "DET"
   },
   {
    "clave": "natura",
@@ -3316,7 +3841,8 @@
    "conCasoEnElCorpus": 93,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 65
+   "formaAtestiguada": 65,
+   "plantilla": "nātūra<1>"
   },
   {
    "clave": "prouincia",
@@ -3335,7 +3861,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 1,
    "sinCasoEnElCorpus": 91,
-   "formaAtestiguada": 22
+   "formaAtestiguada": 22,
+   "plantilla": "irreg|inquam"
   },
   {
    "clave": "mensis",
@@ -3347,7 +3874,8 @@
    "conCasoEnElCorpus": 92,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 9
+   "formaAtestiguada": 9,
+   "plantilla": "mēnsis<3>|g=m"
   },
   {
    "clave": "uxor",
@@ -3359,7 +3887,8 @@
    "conCasoEnElCorpus": 92,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 15
+   "formaAtestiguada": 15,
+   "plantilla": "uxor<3>|g=f"
   },
   {
    "clave": "quattuor",
@@ -3379,7 +3908,20 @@
    "conCasoEnElCorpus": 91,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 9
+   "formaAtestiguada": 9,
+   "plantilla": "((plēbs<3.I>,plēbs<3>))|footnote=The non-i-stem variant is found in Medieval Latin.|g=f"
+  },
+  {
+   "clave": "bene",
+   "cantidad": "bene",
+   "origen": "fuente-externa",
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 91,
+   "formaAtestiguada": 67,
+   "plantilla": "bene|melius|optimē"
   },
   {
    "clave": "saluus",
@@ -3399,7 +3941,8 @@
    "conCasoEnElCorpus": 90,
    "sinCasoEnElCorpus": 1,
    "flexiona": true,
-   "formaAtestiguada": 13
+   "formaAtestiguada": 13,
+   "plantilla": "iūstus|comp=iūstior|sup=iūstissimus"
   },
   {
    "clave": "clamo",
@@ -3410,7 +3953,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 27,
    "sinCasoEnElCorpus": 61,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "1+|clāmō"
   },
   {
    "clave": "solus",
@@ -3422,7 +3966,8 @@
    "conCasoEnElCorpus": 87,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 32
+   "formaAtestiguada": 32,
+   "plantilla": "sōlus<+.ius>"
   },
   {
    "clave": "spero",
@@ -3433,7 +3978,20 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 9,
    "sinCasoEnElCorpus": 78,
-   "formaAtestiguada": 33
+   "formaAtestiguada": 33,
+   "plantilla": "1+.poet-sync-perf|spērō"
+  },
+  {
+   "clave": "quare",
+   "cantidad": "quārē",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "INTJ",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 87,
+   "formaAtestiguada": 56,
+   "plantilla": "quārē|-"
   },
   {
    "clave": "multitudo",
@@ -3445,7 +4003,20 @@
    "conCasoEnElCorpus": 87,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 31
+   "formaAtestiguada": 31,
+   "plantilla": "multitūdō<3>"
+  },
+  {
+   "clave": "longe",
+   "cantidad": "longē",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 87,
+   "formaAtestiguada": 69,
+   "plantilla": "longē"
   },
   {
    "clave": "ignis",
@@ -3457,7 +4028,8 @@
    "conCasoEnElCorpus": 85,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 31
+   "formaAtestiguada": 31,
+   "plantilla": "ignis/ign<3.M.abl-i-occ-e>"
   },
   {
    "clave": "uniuersus",
@@ -3477,7 +4049,16 @@
    "conCasoEnElCorpus": 85,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "saeculum<2>"
+  },
+  {
+   "clave": "uis",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "sanguis",
@@ -3490,7 +4071,8 @@
    "conCasoEnElCorpus": 84,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 18
+   "formaAtestiguada": 18,
+   "plantilla": "sanguī̆s/sanguin<3.M>|adj=sanguinārius/sanguinālis/sanguināris|dim=sanguiculus"
   },
   {
    "clave": "gaudeo",
@@ -3501,7 +4083,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 24,
    "sinCasoEnElCorpus": 60,
-   "formaAtestiguada": 19
+   "formaAtestiguada": 19,
+   "plantilla": "2.semi-depon|gaudeō|gāvīs"
   },
   {
    "clave": "duodecim",
@@ -3528,7 +4111,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 22,
    "sinCasoEnElCorpus": 62,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "2.poet-sync-perf|impleō|implēv|implēt"
   },
   {
    "clave": "discedo",
@@ -3539,7 +4123,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 7,
    "sinCasoEnElCorpus": 76,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|discēdō|discess|discess"
   },
   {
    "clave": "oratio",
@@ -3551,7 +4136,16 @@
    "conCasoEnElCorpus": 83,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 10
+   "formaAtestiguada": 10,
+   "plantilla": "ōrātiō<3>"
+  },
+  {
+   "clave": "uitis",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "lapis",
@@ -3563,7 +4157,8 @@
    "conCasoEnElCorpus": 82,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 8
+   "formaAtestiguada": 8,
+   "plantilla": "lapis/lapid<3>|g=m"
   },
   {
    "clave": "adduco",
@@ -3574,7 +4169,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 26,
    "sinCasoEnElCorpus": 56,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "irreg|addūcō"
   },
   {
    "clave": "bibo",
@@ -3585,7 +4181,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 14,
    "sinCasoEnElCorpus": 68,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "3|bibō|bib|bibit"
   },
   {
    "clave": "coram",
@@ -3596,7 +4193,21 @@
    "uposCorpus": "ADP",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 82,
-   "formaAtestiguada": 82
+   "formaAtestiguada": 82,
+   "plantilla": "cōram|-"
+  },
+  {
+   "clave": "salus",
+   "cantidad": "salūs",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 83,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 11,
+   "plantilla": "salūs<3>|g=f"
   },
   {
    "clave": "paucus",
@@ -3608,7 +4219,8 @@
    "conCasoEnElCorpus": 81,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "paucus|comp=paucior|sup=paucissimus"
   },
   {
    "clave": "fugio",
@@ -3619,7 +4231,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 16,
    "sinCasoEnElCorpus": 65,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "3|fugiō|fūg|fugit"
   },
   {
    "clave": "eques",
@@ -3631,7 +4244,8 @@
    "conCasoEnElCorpus": 81,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "eques/equit<3>|g=m"
   },
   {
    "clave": "item",
@@ -3642,7 +4256,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 81,
-   "formaAtestiguada": 77
+   "formaAtestiguada": 77,
+   "plantilla": "item|-"
   },
   {
    "clave": "dignus",
@@ -3654,7 +4269,8 @@
    "conCasoEnElCorpus": 80,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 24
+   "formaAtestiguada": 24,
+   "plantilla": "dignus|comp=dignior|sup=dignissimus"
   },
   {
    "clave": "nego",
@@ -3665,7 +4281,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 4,
    "sinCasoEnElCorpus": 76,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "1+.p3inf.poet-sync-perf|negō"
   },
   {
    "clave": "quinque",
@@ -3695,7 +4312,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 15,
    "sinCasoEnElCorpus": 65,
-   "formaAtestiguada": 18
+   "formaAtestiguada": 18,
+   "plantilla": "1+.p3inf|arbitror"
   },
   {
    "clave": "ullus",
@@ -3708,7 +4326,8 @@
    "conCasoEnElCorpus": 79,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "ūllus<+.ius>|gen_sg_m=ūllī̆us/ūllī|gen_sg_f=ūllī̆us/ūllī|gen_sg_n=ūllī̆us/ūllī"
   },
   {
    "clave": "iniuria",
@@ -3720,7 +4339,8 @@
    "conCasoEnElCorpus": 79,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 24
+   "formaAtestiguada": 24,
+   "plantilla": "iniūria<1>"
   },
   {
    "clave": "periculum",
@@ -3732,7 +4352,8 @@
    "conCasoEnElCorpus": 79,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 21
+   "formaAtestiguada": 21,
+   "plantilla": "perīculum<2>"
   },
   {
    "clave": "solum",
@@ -3751,7 +4372,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 15,
    "sinCasoEnElCorpus": 64,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "3|ēiciō|ēiēc|ēiect"
   },
   {
    "clave": "multum",
@@ -3762,7 +4384,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 79,
-   "formaAtestiguada": 57
+   "formaAtestiguada": 57,
+   "plantilla": "multum|plūs|plūrimum"
   },
   {
    "clave": "refero",
@@ -3773,7 +4396,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 22,
    "sinCasoEnElCorpus": 56,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "irreg|referō|ret|re"
   },
   {
    "clave": "inde",
@@ -3784,7 +4408,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 78,
-   "formaAtestiguada": 78
+   "formaAtestiguada": 78,
+   "plantilla": "inde|-"
   },
   {
    "clave": "ostendo",
@@ -3795,7 +4420,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 7,
    "sinCasoEnElCorpus": 71,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|ostendō|ostend|ostent/ostēns"
   },
   {
    "clave": "interficio",
@@ -3806,7 +4432,20 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 21,
    "sinCasoEnElCorpus": 57,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|interficiō|interfēc|interfect"
+  },
+  {
+   "clave": "absum",
+   "cantidad": "absum",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 5,
+   "sinCasoEnElCorpus": 72,
+   "formaAtestiguada": 0,
+   "plantilla": "irreg|absum||ā"
   },
   {
    "clave": "superus",
@@ -3818,7 +4457,8 @@
    "conCasoEnElCorpus": 76,
    "sinCasoEnElCorpus": 1,
    "flexiona": true,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "superus|comp=superior|sup=suprēmus/superrimus/superrumus/summus|adv=super/suprā"
   },
   {
    "clave": "pereo",
@@ -3829,7 +4469,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 3,
    "sinCasoEnElCorpus": 74,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "irreg.pass-impers|pereō"
   },
   {
    "clave": "contendo",
@@ -3840,7 +4481,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 3,
    "sinCasoEnElCorpus": 74,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|contendō|contend|content"
   },
   {
    "clave": "uinco",
@@ -3859,7 +4501,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 11,
    "sinCasoEnElCorpus": 65,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "irreg|introeō"
   },
   {
    "clave": "conuerto",
@@ -3886,7 +4529,16 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 16,
    "sinCasoEnElCorpus": 59,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "1+.poet-sync-perf|probō"
+  },
+  {
+   "clave": "inuicem",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "PRON"
   },
   {
    "clave": "suscipio",
@@ -3897,7 +4549,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 22,
    "sinCasoEnElCorpus": 53,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "3|suscipiō|suscēp|suscept"
   },
   {
    "clave": "reuertor",
@@ -3916,7 +4569,20 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 28,
    "sinCasoEnElCorpus": 47,
-   "formaAtestiguada": 3
+   "formaAtestiguada": 3,
+   "plantilla": "1+|baptizō"
+  },
+  {
+   "clave": "facile",
+   "cantidad": "facile",
+   "origen": "fuente-externa",
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 75,
+   "formaAtestiguada": 60,
+   "plantilla": "facile|facilius|facillimē"
   },
   {
    "clave": "cogo",
@@ -3927,7 +4593,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 21,
    "sinCasoEnElCorpus": 53,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|cōgō|coēg|coāct"
   },
   {
    "clave": "nuntio",
@@ -3938,7 +4605,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 18,
    "sinCasoEnElCorpus": 55,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "1+|nūntiō"
   },
   {
    "clave": "numquam",
@@ -3949,7 +4617,21 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 72,
-   "formaAtestiguada": 66
+   "formaAtestiguada": 66,
+   "plantilla": "numquam|-"
+  },
+  {
+   "clave": "amor",
+   "cantidad": "amor",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 72,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 22,
+   "plantilla": "amor<3>"
   },
   {
    "clave": "senex",
@@ -3961,7 +4643,8 @@
    "conCasoEnElCorpus": 72,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 6
+   "formaAtestiguada": 6,
+   "plantilla": "senex/sen<3>|g=m|g2=f"
   },
   {
    "clave": "semen",
@@ -3973,7 +4656,8 @@
    "conCasoEnElCorpus": 72,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 29
+   "formaAtestiguada": 29,
+   "plantilla": "sēmen<3>"
   },
   {
    "clave": "numquid",
@@ -3984,7 +4668,21 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 72,
-   "formaAtestiguada": 72
+   "formaAtestiguada": 72,
+   "plantilla": "numquid|-"
+  },
+  {
+   "clave": "facies",
+   "cantidad": "faciēs",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 72,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 25,
+   "plantilla": "faciēs<5>"
   },
   {
    "clave": "imperium",
@@ -3996,7 +4694,8 @@
    "conCasoEnElCorpus": 72,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 25
+   "formaAtestiguada": 25,
+   "plantilla": "imperium<2>"
   },
   {
    "clave": "soluo",
@@ -4024,7 +4723,8 @@
    "conCasoEnElCorpus": 71,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 9
+   "formaAtestiguada": 9,
+   "plantilla": "plēnus|comp=plēnior|sup=plēnissimus|adv=plēnē"
   },
   {
    "clave": "ualeo",
@@ -4044,7 +4744,16 @@
    "conCasoEnElCorpus": 71,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "aeternus|adv=aeternō"
+  },
+  {
+   "clave": "labor",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": "noun",
+   "uposCorpus": "VERB"
   },
   {
    "clave": "perdo",
@@ -4055,7 +4764,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 12,
    "sinCasoEnElCorpus": 58,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3.nopass|perdō|perdid"
   },
   {
    "clave": "oppidum",
@@ -4067,7 +4777,8 @@
    "conCasoEnElCorpus": 70,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 19
+   "formaAtestiguada": 19,
+   "plantilla": "oppidum<2>"
   },
   {
    "clave": "inimicus",
@@ -4079,7 +4790,8 @@
    "conCasoEnElCorpus": 70,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 11
+   "formaAtestiguada": 11,
+   "plantilla": "inimīcus<2>"
   },
   {
    "clave": "praecipio",
@@ -4090,7 +4802,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 15,
    "sinCasoEnElCorpus": 54,
-   "formaAtestiguada": 6
+   "formaAtestiguada": 6,
+   "plantilla": "3|praecipiō|praecēp|praecept"
   },
   {
    "clave": "soleo",
@@ -4101,7 +4814,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 7,
    "sinCasoEnElCorpus": 62,
-   "formaAtestiguada": 4
+   "formaAtestiguada": 4,
+   "plantilla": "2+.opt-semi-depon.noimp.nofutr|soleō"
   },
   {
    "clave": "pugno",
@@ -4112,7 +4826,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 28,
    "sinCasoEnElCorpus": 41,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "1+.poet-sync-perf|pugnō"
   },
   {
    "clave": "donec",
@@ -4135,7 +4850,8 @@
    "conCasoEnElCorpus": 69,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 6
+   "formaAtestiguada": 6,
+   "plantilla": "regiō<3>|g=f"
   },
   {
    "clave": "apostolus",
@@ -4147,7 +4863,8 @@
    "conCasoEnElCorpus": 69,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 12
+   "formaAtestiguada": 12,
+   "plantilla": "apostolus<2>"
   },
   {
    "clave": "statuo",
@@ -4158,7 +4875,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 7,
    "sinCasoEnElCorpus": 62,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "3|statuō|statu|statūt"
   },
   {
    "clave": "ualde",
@@ -4178,7 +4896,8 @@
    "conCasoEnElCorpus": 68,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 16
+   "formaAtestiguada": 16,
+   "plantilla": "tālis|adv=tāliter"
   },
   {
    "clave": "aduentus",
@@ -4210,7 +4929,8 @@
    "conCasoEnElCorpus": 68,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 13
+   "formaAtestiguada": 13,
+   "plantilla": "sabbatum<2>"
   },
   {
    "clave": "sustineo",
@@ -4221,7 +4941,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 4,
    "sinCasoEnElCorpus": 63,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "2|sustineō|sustinu|sustent"
   },
   {
    "clave": "confero",
@@ -4232,7 +4953,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 13,
    "sinCasoEnElCorpus": 54,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "irreg|cōnferō|con|col"
   },
   {
    "clave": "tantum",
@@ -4243,7 +4965,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 67,
-   "formaAtestiguada": 98
+   "formaAtestiguada": 98,
+   "plantilla": "tantum|-"
   },
   {
    "clave": "euangelium",
@@ -4262,7 +4985,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 8,
    "sinCasoEnElCorpus": 58,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "3.sigm|efficiō|effēc|effect|effex"
   },
   {
    "clave": "mos",
@@ -4274,7 +4998,8 @@
    "conCasoEnElCorpus": 66,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 4
+   "formaAtestiguada": 4,
+   "plantilla": "mōs/mōr<3.M>"
   },
   {
    "clave": "impero",
@@ -4285,7 +5010,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 19,
    "sinCasoEnElCorpus": 47,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "1+.poet-sync-perf|imperō"
   },
   {
    "clave": "conficio",
@@ -4297,7 +5023,8 @@
    "conCasoEnElCorpus": 41,
    "sinCasoEnElCorpus": 25,
    "flexiona": true,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3.sigm|cōnficiō|cōnfēc|cōnfect|cōnfex"
   },
   {
    "clave": "scriba",
@@ -4309,7 +5036,8 @@
    "conCasoEnElCorpus": 66,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 6
+   "formaAtestiguada": 6,
+   "plantilla": "scrība<1>|g=m"
   },
   {
    "clave": "daemonium",
@@ -4321,7 +5049,8 @@
    "conCasoEnElCorpus": 66,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 23
+   "formaAtestiguada": 23,
+   "plantilla": "daemonium<2>"
   },
   {
    "clave": "germani",
@@ -4340,7 +5069,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 65,
-   "formaAtestiguada": 42
+   "formaAtestiguada": 42,
+   "plantilla": "diū|diūtius|diūtissimē"
   },
   {
    "clave": "spatium",
@@ -4352,7 +5082,8 @@
    "conCasoEnElCorpus": 65,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 20
+   "formaAtestiguada": 20,
+   "plantilla": "spatium<2>"
   },
   {
    "clave": "operor",
@@ -4363,7 +5094,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 20,
    "sinCasoEnElCorpus": 45,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "1+|operor"
   },
   {
    "clave": "fortuna",
@@ -4375,7 +5107,8 @@
    "conCasoEnElCorpus": 64,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 28
+   "formaAtestiguada": 28,
+   "plantilla": "fortūna<1>"
   },
   {
    "clave": "studium",
@@ -4387,7 +5120,8 @@
    "conCasoEnElCorpus": 64,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 13
+   "formaAtestiguada": 13,
+   "plantilla": "studium<2>"
   },
   {
    "clave": "impono",
@@ -4398,7 +5132,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 17,
    "sinCasoEnElCorpus": 47,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3.poet-sync-perf|impōnō|imposu/imposīv|imposit/impost"
   },
   {
    "clave": "confirmo",
@@ -4409,7 +5144,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 23,
    "sinCasoEnElCorpus": 41,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "1+.poet-sync-perf|cōnfirmō"
   },
   {
    "clave": "ample",
@@ -4420,7 +5156,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 64,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "amplē"
   },
   {
    "clave": "unusquisque",
@@ -4443,7 +5180,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 63,
-   "formaAtestiguada": 63
+   "formaAtestiguada": 63,
+   "plantilla": "unde|-"
   },
   {
    "clave": "circa",
@@ -4454,7 +5192,8 @@
    "uposCorpus": "ADP",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 63,
-   "formaAtestiguada": 63
+   "formaAtestiguada": 63,
+   "plantilla": "circā|-"
   },
   {
    "clave": "lingua",
@@ -4466,7 +5205,8 @@
    "conCasoEnElCorpus": 63,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 22
+   "formaAtestiguada": 22,
+   "plantilla": "lingua<1>"
   },
   {
    "clave": "negotium",
@@ -4478,7 +5218,8 @@
    "conCasoEnElCorpus": 63,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 22
+   "formaAtestiguada": 22,
+   "plantilla": "negōtium<2>"
   },
   {
    "clave": "proximus",
@@ -4490,7 +5231,8 @@
    "conCasoEnElCorpus": 63,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "proximus<2>"
   },
   {
    "clave": "praesidium",
@@ -4502,7 +5244,8 @@
    "conCasoEnElCorpus": 63,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 11
+   "formaAtestiguada": 11,
+   "plantilla": "praesidium<2>"
   },
   {
    "clave": "met",
@@ -4521,6 +5264,18 @@
    "uposCorpus": "NOUN"
   },
   {
+   "clave": "desum",
+   "cantidad": "dēsum",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 62,
+   "formaAtestiguada": 2,
+   "plantilla": "irreg|dēsum|de"
+  },
+  {
    "clave": "sententia",
    "cantidad": "sententia",
    "origen": "fuente-externa",
@@ -4530,7 +5285,8 @@
    "conCasoEnElCorpus": 62,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 27
+   "formaAtestiguada": 27,
+   "plantilla": "sententia<1>"
   },
   {
    "clave": "praeter",
@@ -4541,7 +5297,8 @@
    "uposCorpus": "ADP",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 62,
-   "formaAtestiguada": 62
+   "formaAtestiguada": 62,
+   "plantilla": "praeter|accusative"
   },
   {
    "clave": "tribunus",
@@ -4553,7 +5310,8 @@
    "conCasoEnElCorpus": 62,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 19
+   "formaAtestiguada": 19,
+   "plantilla": "tribūnus<2>"
   },
   {
    "clave": "adoro",
@@ -4564,7 +5322,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 4,
    "sinCasoEnElCorpus": 58,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "1+|adōrō"
   },
   {
    "clave": "heluetii",
@@ -4584,7 +5343,8 @@
    "conCasoEnElCorpus": 62,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 19
+   "formaAtestiguada": 19,
+   "plantilla": "sōl<3>|g=m"
   },
   {
    "clave": "uestimentum",
@@ -4612,7 +5372,8 @@
    "conCasoEnElCorpus": 61,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 14
+   "formaAtestiguada": 14,
+   "plantilla": "pecūnia<1>"
   },
   {
    "clave": "prohibeo",
@@ -4623,7 +5384,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 10,
    "sinCasoEnElCorpus": 51,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "2+|prohibeō"
   },
   {
    "clave": "caritas",
@@ -4635,7 +5397,8 @@
    "conCasoEnElCorpus": 61,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 17
+   "formaAtestiguada": 17,
+   "plantilla": "cāritās<3>"
   },
   {
    "clave": "equitatus",
@@ -4647,7 +5410,8 @@
    "conCasoEnElCorpus": 60,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 14
+   "formaAtestiguada": 14,
+   "plantilla": "equitātus<4>"
   },
   {
    "clave": "synagoga",
@@ -4659,7 +5423,8 @@
    "conCasoEnElCorpus": 60,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 18
+   "formaAtestiguada": 18,
+   "plantilla": "synagōga<1>"
   },
   {
    "clave": "potius",
@@ -4670,7 +5435,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 60,
-   "formaAtestiguada": 65
+   "formaAtestiguada": 65,
+   "plantilla": "potius|-"
   },
   {
    "clave": "auris",
@@ -4682,7 +5448,8 @@
    "conCasoEnElCorpus": 59,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 8
+   "formaAtestiguada": 8,
+   "plantilla": "auris<3.abl-e-occ-i>|g=f"
   },
   {
    "clave": "miror",
@@ -4693,7 +5460,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 22,
    "sinCasoEnElCorpus": 37,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "1+.p3inf|mīror"
   },
   {
    "clave": "secundus",
@@ -4705,7 +5473,8 @@
    "conCasoEnElCorpus": 59,
    "sinCasoEnElCorpus": 1,
    "flexiona": true,
-   "formaAtestiguada": 10
+   "formaAtestiguada": 10,
+   "plantilla": "secundus|comp=secundior|sup=secundissimus"
   },
   {
    "clave": "moueo",
@@ -4716,6 +5485,19 @@
    "uposCorpus": "VERB"
   },
   {
+   "clave": "usus",
+   "cantidad": "ūsus",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 58,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 27,
+   "plantilla": "ūsus<4>"
+  },
+  {
    "clave": "sentio",
    "cantidad": "sentiō",
    "origen": "fuente-externa",
@@ -4724,7 +5506,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 4,
    "sinCasoEnElCorpus": 54,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "4|sentiō|sēns|sēns"
   },
   {
    "clave": "appello",
@@ -4735,7 +5518,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 16,
    "sinCasoEnElCorpus": 42,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "3|appellō|appul|appuls"
   },
   {
    "clave": "postulo",
@@ -4746,7 +5530,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 16,
    "sinCasoEnElCorpus": 42,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "1+.poet-sync-perf|postulō"
   },
   {
    "clave": "auctoritas",
@@ -4758,7 +5543,8 @@
    "conCasoEnElCorpus": 58,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 12
+   "formaAtestiguada": 12,
+   "plantilla": "auctōritās<3>"
   },
   {
    "clave": "honor",
@@ -4770,7 +5556,20 @@
    "conCasoEnElCorpus": 57,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 3
+   "formaAtestiguada": 3,
+   "plantilla": "honor<3>"
+  },
+  {
+   "clave": "sero",
+   "cantidad": "serō",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 20,
+   "sinCasoEnElCorpus": 37,
+   "formaAtestiguada": 11,
+   "plantilla": "3.poet-sync-perf|serō|sēv|sat"
   },
   {
    "clave": "fuga",
@@ -4782,7 +5581,8 @@
    "conCasoEnElCorpus": 57,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 32
+   "formaAtestiguada": 32,
+   "plantilla": "fuga<1>"
   },
   {
    "clave": "ideo",
@@ -4793,7 +5593,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 57,
-   "formaAtestiguada": 57
+   "formaAtestiguada": 57,
+   "plantilla": "ideō|-"
   },
   {
    "clave": "seruio",
@@ -4813,7 +5614,8 @@
    "conCasoEnElCorpus": 57,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 22
+   "formaAtestiguada": 22,
+   "plantilla": "monumentum<2>"
   },
   {
    "clave": "accido",
@@ -4824,7 +5626,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 57,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3.nopass|accidō|accid"
   },
   {
    "clave": "mandatum",
@@ -4836,7 +5639,8 @@
    "conCasoEnElCorpus": 57,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 27
+   "formaAtestiguada": 27,
+   "plantilla": "mandātum<2>"
   },
   {
    "clave": "tango",
@@ -4847,7 +5651,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 3,
    "sinCasoEnElCorpus": 53,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|tangō|tetig|tāct"
   },
   {
    "clave": "dolor",
@@ -4859,7 +5664,8 @@
    "conCasoEnElCorpus": 56,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 11
+   "formaAtestiguada": 11,
+   "plantilla": "dolor<3>"
   },
   {
    "clave": "fere",
@@ -4871,7 +5677,8 @@
    "cantidadVariable": true,
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 56,
-   "formaAtestiguada": 56
+   "formaAtestiguada": 56,
+   "plantilla": "ferē̆|-"
   },
   {
    "clave": "paenitentia",
@@ -4883,7 +5690,8 @@
    "conCasoEnElCorpus": 56,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "paenitentia<1>"
   },
   {
    "clave": "initium",
@@ -4895,7 +5703,8 @@
    "conCasoEnElCorpus": 56,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 24
+   "formaAtestiguada": 24,
+   "plantilla": "initium<2>"
   },
   {
    "clave": "uetus",
@@ -4914,7 +5723,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 3,
    "sinCasoEnElCorpus": 52,
-   "formaAtestiguada": 7
+   "formaAtestiguada": 7,
+   "plantilla": "irreg.pass-impers|redeō"
   },
   {
    "clave": "caecus",
@@ -4926,7 +5736,8 @@
    "conCasoEnElCorpus": 55,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 15
+   "formaAtestiguada": 15,
+   "plantilla": "caecus"
   },
   {
    "clave": "impedio",
@@ -4937,7 +5748,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 23,
    "sinCasoEnElCorpus": 32,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "4++|impediō"
   },
   {
    "clave": "nouissimus",
@@ -4956,7 +5768,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 4,
    "sinCasoEnElCorpus": 51,
-   "formaAtestiguada": 7
+   "formaAtestiguada": 7,
+   "plantilla": "1+|dēsīderō"
   },
   {
    "clave": "infero",
@@ -4967,7 +5780,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 14,
    "sinCasoEnElCorpus": 41,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "irreg|īnferō|in|il"
   },
   {
    "clave": "obses",
@@ -4979,7 +5793,8 @@
    "conCasoEnElCorpus": 55,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "obses/obsid<3>|g=m|g2=f"
   },
   {
    "clave": "egredior",
@@ -4991,7 +5806,16 @@
    "conCasoEnElCorpus": 40,
    "sinCasoEnElCorpus": 15,
    "flexiona": true,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|ēgredior|ēgress"
+  },
+  {
+   "clave": "uentus",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "altus",
@@ -5004,7 +5828,8 @@
    "conCasoEnElCorpus": 53,
    "sinCasoEnElCorpus": 1,
    "flexiona": true,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "altus|comp=altior|sup=altissimus|adv=altē"
   },
   {
    "clave": "auxilium",
@@ -5016,7 +5841,8 @@
    "conCasoEnElCorpus": 54,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 19
+   "formaAtestiguada": 19,
+   "plantilla": "auxilium<2>"
   },
   {
    "clave": "lux",
@@ -5028,7 +5854,8 @@
    "conCasoEnElCorpus": 54,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 18
+   "formaAtestiguada": 18,
+   "plantilla": "lūx<3>|abl_sg=lūce/lūcī|g=f"
   },
   {
    "clave": "frumentum",
@@ -5040,7 +5867,8 @@
    "conCasoEnElCorpus": 54,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 16
+   "formaAtestiguada": 16,
+   "plantilla": "frūmentum<2>"
   },
   {
    "clave": "eligo",
@@ -5051,7 +5879,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 26,
    "sinCasoEnElCorpus": 28,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|ēligō|ēlēg|ēlēct"
   },
   {
    "clave": "prope",
@@ -5062,7 +5891,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 1,
    "sinCasoEnElCorpus": 53,
-   "formaAtestiguada": 39
+   "formaAtestiguada": 39,
+   "plantilla": "prope|propius|proximē/proxumus/proximus"
   },
   {
    "clave": "semino",
@@ -5073,7 +5903,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 13,
    "sinCasoEnElCorpus": 40,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "1+|sēminō"
   },
   {
    "clave": "diligenter",
@@ -5084,7 +5915,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 53,
-   "formaAtestiguada": 32
+   "formaAtestiguada": 32,
+   "plantilla": "dīligenter"
   },
   {
    "clave": "diuido",
@@ -5104,7 +5936,8 @@
    "conCasoEnElCorpus": 53,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "aliēnus|comp=aliēnior|sup=aliēnissimus"
   },
   {
    "clave": "audeo",
@@ -5115,7 +5948,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 9,
    "sinCasoEnElCorpus": 43,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "2.opt-semi-depon|audeō|aus|aus"
   },
   {
    "clave": "incipio",
@@ -5126,7 +5960,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 19,
    "sinCasoEnElCorpus": 33,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "3|incipiō|incēp|incept"
   },
   {
    "clave": "silua",
@@ -5145,7 +5980,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 7,
    "sinCasoEnElCorpus": 45,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "2+.p3inf|noceō"
   },
   {
    "clave": "cupio",
@@ -5156,7 +5992,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 8,
    "sinCasoEnElCorpus": 44,
-   "formaAtestiguada": 15
+   "formaAtestiguada": 15,
+   "plantilla": "3.poet-sync-perf|cupiō|cupīv/cupi|cupīt"
   },
   {
    "clave": "cito",
@@ -5168,7 +6005,8 @@
    "categoriaEnDisputa": true,
    "conCasoEnElCorpus": 1,
    "sinCasoEnElCorpus": 51,
-   "formaAtestiguada": 41
+   "formaAtestiguada": 41,
+   "plantilla": "1+.p3inf|citō"
   },
   {
    "clave": "infirmus",
@@ -5180,7 +6018,8 @@
    "conCasoEnElCorpus": 52,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 7
+   "formaAtestiguada": 7,
+   "plantilla": "īnfirmus|comp=īnfirmior|sup=īnfirmissimus|adv=īnfirmiter"
   },
   {
    "clave": "perspicio",
@@ -5191,7 +6030,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 15,
    "sinCasoEnElCorpus": 37,
-   "formaAtestiguada": 4
+   "formaAtestiguada": 4,
+   "plantilla": "3|perspiciō|perspex|perspect"
   },
   {
    "clave": "omnino",
@@ -5202,7 +6042,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 52,
-   "formaAtestiguada": 52
+   "formaAtestiguada": 52,
+   "plantilla": "omnīnō|-"
   },
   {
    "clave": "resurgo",
@@ -5213,7 +6054,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 52,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3.nopass|resurgō|resurrēx|resurrēct"
   },
   {
    "clave": "emo",
@@ -5224,7 +6066,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 11,
    "sinCasoEnElCorpus": 40,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "3|emō|ēm|ēmpt/ēmt"
   },
   {
    "clave": "aedifico",
@@ -5235,7 +6078,21 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 12,
    "sinCasoEnElCorpus": 39,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "1+.poet-sync-perf|aedificō"
+  },
+  {
+   "clave": "opera",
+   "cantidad": "opera",
+   "origen": "fuente-externa",
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 51,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 67,
+   "plantilla": "opera<1>"
   },
   {
    "clave": "uereor",
@@ -5255,7 +6112,8 @@
    "categoriaEnDisputa": true,
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 51,
-   "formaAtestiguada": 8
+   "formaAtestiguada": 8,
+   "plantilla": "praestō|-"
   },
   {
    "clave": "congrego",
@@ -5266,7 +6124,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 21,
    "sinCasoEnElCorpus": 30,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "1+|congregō"
   },
   {
    "clave": "nondum",
@@ -5277,7 +6136,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 50,
-   "formaAtestiguada": 50
+   "formaAtestiguada": 50,
+   "plantilla": "nōndum|-"
   },
   {
    "clave": "quin",
@@ -5288,7 +6148,8 @@
    "uposCorpus": "SCONJ",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 50,
-   "formaAtestiguada": 50
+   "formaAtestiguada": 50,
+   "plantilla": "quīn|-"
   },
   {
    "clave": "impetus",
@@ -5300,7 +6161,8 @@
    "conCasoEnElCorpus": 50,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 12
+   "formaAtestiguada": 12,
+   "plantilla": "impetus<4>"
   },
   {
    "clave": "peruenio",
@@ -5320,7 +6182,8 @@
    "conCasoEnElCorpus": 50,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "ōrdō/ōrdin<3>|g=m"
   },
   {
    "clave": "crucifigo",
@@ -5331,7 +6194,20 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 17,
    "sinCasoEnElCorpus": 33,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|crucifīgō|crucifīx|crucifīx"
+  },
+  {
+   "clave": "adsum",
+   "cantidad": "adsum",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 49,
+   "formaAtestiguada": 0,
+   "plantilla": "irreg|adsum"
   },
   {
    "clave": "committo",
@@ -5342,7 +6218,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 15,
    "sinCasoEnElCorpus": 34,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "3|committō|commīs|commiss"
   },
   {
    "clave": "uae",
@@ -5361,7 +6238,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 49,
-   "formaAtestiguada": 49
+   "formaAtestiguada": 49,
+   "plantilla": "proptereā|-"
   },
   {
    "clave": "assumo",
@@ -5372,7 +6250,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 19,
    "sinCasoEnElCorpus": 30,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "3|assūmō|assūmps|assūmpt"
   },
   {
    "clave": "gigno",
@@ -5383,7 +6262,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 1,
    "sinCasoEnElCorpus": 47,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|gignō|genu|genit"
   },
   {
    "clave": "postquam",
@@ -5403,7 +6283,8 @@
    "conCasoEnElCorpus": 48,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 24
+   "formaAtestiguada": 24,
+   "plantilla": "lūmen<3>"
   },
   {
    "clave": "contineo",
@@ -5414,7 +6295,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 8,
    "sinCasoEnElCorpus": 40,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "2|contineō|continu|content"
   },
   {
    "clave": "pecco",
@@ -5425,7 +6307,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 7,
    "sinCasoEnElCorpus": 41,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "1+.poet-sync-perf|peccō"
   },
   {
    "clave": "gratus",
@@ -5437,7 +6320,8 @@
    "conCasoEnElCorpus": 48,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "grātus|comp=grātior|sup=grātissimus|adv=grātē"
   },
   {
    "clave": "sapientia",
@@ -5449,7 +6333,8 @@
    "conCasoEnElCorpus": 48,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 24
+   "formaAtestiguada": 24,
+   "plantilla": "sapientia<1>"
   },
   {
    "clave": "uinea",
@@ -5468,7 +6353,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 16,
    "sinCasoEnElCorpus": 31,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "1+|iūrō"
   },
   {
    "clave": "o",
@@ -5480,7 +6366,8 @@
    "categoriaEnDisputa": true,
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 47,
-   "formaAtestiguada": 47
+   "formaAtestiguada": 47,
+   "plantilla": "ō|g=n|g2=f|indecl=y"
   },
   {
    "clave": "coepio",
@@ -5499,7 +6386,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 8,
    "sinCasoEnElCorpus": 39,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "irreg|auferō|abs|ab"
   },
   {
    "clave": "decem",
@@ -5518,7 +6406,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 6,
    "sinCasoEnElCorpus": 41,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|prōcēdō|prōcess|prōcess"
   },
   {
    "clave": "pertineo",
@@ -5529,7 +6418,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 1,
    "sinCasoEnElCorpus": 46,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "2.nopass|pertineō|pertinu"
   },
   {
    "clave": "caueo",
@@ -5548,7 +6438,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 47,
-   "formaAtestiguada": 55
+   "formaAtestiguada": 55,
+   "plantilla": "posteā|-"
   },
   {
    "clave": "iudex",
@@ -5560,7 +6451,8 @@
    "conCasoEnElCorpus": 47,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 7
+   "formaAtestiguada": 7,
+   "plantilla": "iūdex<3>|g=m"
   },
   {
    "clave": "magnitudo",
@@ -5572,7 +6464,8 @@
    "conCasoEnElCorpus": 47,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 18
+   "formaAtestiguada": 18,
+   "plantilla": "magnitūdō<3>"
   },
   {
    "clave": "consequor",
@@ -5584,7 +6477,8 @@
    "conCasoEnElCorpus": 24,
    "sinCasoEnElCorpus": 23,
    "flexiona": true,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|cōnsequor|cōnsecūt/cōnsequūt"
   },
   {
    "clave": "defendo",
@@ -5595,7 +6489,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 12,
    "sinCasoEnElCorpus": 35,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|dēfendō|dēfend|dēfēns"
   },
   {
    "clave": "accuso",
@@ -5606,7 +6501,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 4,
    "sinCasoEnElCorpus": 43,
-   "formaAtestiguada": 3
+   "formaAtestiguada": 3,
+   "plantilla": "1+.poet-sync-perf|accūsō"
   },
   {
    "clave": "colo",
@@ -5617,7 +6513,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 19,
    "sinCasoEnElCorpus": 27,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|colō|colu|cult"
   },
   {
    "clave": "equus",
@@ -5629,7 +6526,8 @@
    "conCasoEnElCorpus": 46,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "equus<2>|f=equa"
   },
   {
    "clave": "offero",
@@ -5640,7 +6538,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 9,
    "sinCasoEnElCorpus": 37,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "irreg|offerō|ob|ob"
   },
   {
    "clave": "abundo",
@@ -5651,7 +6550,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 7,
    "sinCasoEnElCorpus": 39,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "1+.nopass|abundō"
   },
   {
    "clave": "cohors",
@@ -5663,7 +6563,8 @@
    "conCasoEnElCorpus": 46,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 3
+   "formaAtestiguada": 3,
+   "plantilla": "cohors<3.I>|g=f"
   },
   {
    "clave": "animal",
@@ -5675,7 +6576,8 @@
    "conCasoEnElCorpus": 46,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 8
+   "formaAtestiguada": 8,
+   "plantilla": "animal<3>"
   },
   {
    "clave": "consuetudo",
@@ -5687,7 +6589,8 @@
    "conCasoEnElCorpus": 46,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 10
+   "formaAtestiguada": 10,
+   "plantilla": "cōnsuētūdō<3>"
   },
   {
    "clave": "confido",
@@ -5698,7 +6601,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 12,
    "sinCasoEnElCorpus": 34,
-   "formaAtestiguada": 11
+   "formaAtestiguada": 11,
+   "plantilla": "3.semi-depon|cōnfīdō|cōnfīs"
   },
   {
    "clave": "minister",
@@ -5710,7 +6614,20 @@
    "conCasoEnElCorpus": 46,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 13
+   "formaAtestiguada": 13,
+   "plantilla": "minister/ministr<2>|f=ministra/ministrīx"
+  },
+  {
+   "clave": "sino",
+   "cantidad": "sinō",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 2,
+   "sinCasoEnElCorpus": 43,
+   "formaAtestiguada": 1,
+   "plantilla": "3.poet-sync-perf|sinō|sīv/si|sit"
   },
   {
    "clave": "excipio",
@@ -5721,7 +6638,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 17,
    "sinCasoEnElCorpus": 28,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|excipiō|excēp|except"
   },
   {
    "clave": "fleo",
@@ -5732,7 +6650,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 18,
    "sinCasoEnElCorpus": 27,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "2.poet-sync-perf|fleō|flēv|flēt"
   },
   {
    "clave": "beatus",
@@ -5744,7 +6663,8 @@
    "conCasoEnElCorpus": 45,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 14
+   "formaAtestiguada": 14,
+   "plantilla": "beātus|comp=beātior|sup=beātissimus|adv=beātē"
   },
   {
    "clave": "conspectus",
@@ -5756,7 +6676,20 @@
    "conCasoEnElCorpus": 45,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "cōnspectus<4>"
+  },
+  {
+   "clave": "prosum",
+   "cantidad": "prōsum",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 3,
+   "sinCasoEnElCorpus": 42,
+   "formaAtestiguada": 0,
+   "plantilla": "irreg|prōsum|prōd"
   },
   {
    "clave": "etsi",
@@ -5778,7 +6711,21 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 4,
    "sinCasoEnElCorpus": 41,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "1+|dēlectō"
+  },
+  {
+   "clave": "laus",
+   "cantidad": "laus",
+   "origen": "fuente-externa",
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 45,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 6,
+   "plantilla": "laus/laud<3>|g=f"
   },
   {
    "clave": "carcer",
@@ -5790,7 +6737,20 @@
    "conCasoEnElCorpus": 45,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "carcer/carcer<3>|g=m"
+  },
+  {
+   "clave": "forte",
+   "cantidad": "forte",
+   "origen": "fuente-externa",
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 45,
+   "formaAtestiguada": 57,
+   "plantilla": "forte|-"
   },
   {
    "clave": "socius",
@@ -5802,7 +6762,8 @@
    "conCasoEnElCorpus": 44,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 6
+   "formaAtestiguada": 6,
+   "plantilla": "socius"
   },
   {
    "clave": "deduco",
@@ -5813,7 +6774,16 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 12,
    "sinCasoEnElCorpus": 32,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "irreg|dēdūcō"
+  },
+  {
+   "clave": "uerum",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "soror",
@@ -5825,7 +6795,8 @@
    "conCasoEnElCorpus": 44,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 13
+   "formaAtestiguada": 13,
+   "plantilla": "soror<3>|g=f"
   },
   {
    "clave": "uehementer",
@@ -5844,7 +6815,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 44,
-   "formaAtestiguada": 34
+   "formaAtestiguada": 34,
+   "plantilla": "rūrsus|-"
   },
   {
    "clave": "ciuis",
@@ -5863,7 +6835,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 13,
    "sinCasoEnElCorpus": 31,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "2|retineō|retinu|retent"
   },
   {
    "clave": "ob",
@@ -5874,7 +6847,8 @@
    "uposCorpus": "ADP",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 44,
-   "formaAtestiguada": 44
+   "formaAtestiguada": 44,
+   "plantilla": "ob|accusative"
   },
   {
    "clave": "dubito",
@@ -5885,7 +6859,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 8,
    "sinCasoEnElCorpus": 36,
-   "formaAtestiguada": 4
+   "formaAtestiguada": 4,
+   "plantilla": "1+.poet-sync-perf|dubitō"
   },
   {
    "clave": "ignoro",
@@ -5896,7 +6871,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 10,
    "sinCasoEnElCorpus": 34,
-   "formaAtestiguada": 4
+   "formaAtestiguada": 4,
+   "plantilla": "1+.p3inf.poet-sync-perf|ignōrō"
   },
   {
    "clave": "radix",
@@ -5908,7 +6884,8 @@
    "conCasoEnElCorpus": 44,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 4
+   "formaAtestiguada": 4,
+   "plantilla": "rādīx<3>|g=f"
   },
   {
    "clave": "qualis",
@@ -5932,7 +6909,8 @@
    "conCasoEnElCorpus": 41,
    "sinCasoEnElCorpus": 2,
    "flexiona": true,
-   "formaAtestiguada": 10
+   "formaAtestiguada": 10,
+   "plantilla": "lātus"
   },
   {
    "clave": "percutio",
@@ -5943,7 +6921,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 9,
    "sinCasoEnElCorpus": 34,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|percutiō|percuss|percuss"
   },
   {
    "clave": "uix",
@@ -5954,6 +6933,18 @@
    "uposCorpus": "ADV"
   },
   {
+   "clave": "huc",
+   "cantidad": "hūc",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 43,
+   "formaAtestiguada": 40,
+   "plantilla": "hūc|-"
+  },
+  {
    "clave": "disco",
    "cantidad": "discō",
    "origen": "fuente-externa",
@@ -5962,7 +6953,16 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 6,
    "sinCasoEnElCorpus": 37,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "3.sup-futr-actv-only|discō|didic|discit"
+  },
+  {
+   "clave": "quemadmodum",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": "adv",
+   "uposCorpus": "ADV"
   },
   {
    "clave": "dormio",
@@ -5973,7 +6973,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 12,
    "sinCasoEnElCorpus": 31,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "4++.pass-impers|dormiō"
   },
   {
    "clave": "scriptura",
@@ -5985,7 +6986,8 @@
    "conCasoEnElCorpus": 43,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 18
+   "formaAtestiguada": 18,
+   "plantilla": "scrīptūra<1>"
   },
   {
    "clave": "galli",
@@ -6004,7 +7006,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 14,
    "sinCasoEnElCorpus": 28,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|īnstituō|īnstitu|īnstitūt"
   },
   {
    "clave": "acies",
@@ -6016,7 +7019,8 @@
    "conCasoEnElCorpus": 42,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 8
+   "formaAtestiguada": 8,
+   "plantilla": "aciēs<5>"
   },
   {
    "clave": "umquam",
@@ -6027,7 +7031,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 42,
-   "formaAtestiguada": 39
+   "formaAtestiguada": 39,
+   "plantilla": "umquam|-"
   },
   {
    "clave": "appareo",
@@ -6038,7 +7043,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 2,
    "sinCasoEnElCorpus": 40,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "2+|appāreō"
   },
   {
    "clave": "ouis",
@@ -6057,7 +7063,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 9,
    "sinCasoEnElCorpus": 33,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "1+|significō"
   },
   {
    "clave": "glorior",
@@ -6068,7 +7075,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 5,
    "sinCasoEnElCorpus": 37,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "1+|glōrior"
   },
   {
    "clave": "magistratus",
@@ -6080,7 +7088,8 @@
    "conCasoEnElCorpus": 42,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 20
+   "formaAtestiguada": 20,
+   "plantilla": "magistrātus<4>"
   },
   {
    "clave": "comitium",
@@ -6092,7 +7101,8 @@
    "conCasoEnElCorpus": 42,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "comitium<2>"
   },
   {
    "clave": "perhibeo",
@@ -6103,7 +7113,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 4,
    "sinCasoEnElCorpus": 38,
-   "formaAtestiguada": 6
+   "formaAtestiguada": 6,
+   "plantilla": "2+|perhibeō"
   },
   {
    "clave": "similiter",
@@ -6114,7 +7125,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 42,
-   "formaAtestiguada": 44
+   "formaAtestiguada": 44,
+   "plantilla": "similiter|-"
   },
   {
    "clave": "sane",
@@ -6125,7 +7137,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 42,
-   "formaAtestiguada": 48
+   "formaAtestiguada": 48,
+   "plantilla": "sānē"
   },
   {
    "clave": "mando",
@@ -6136,7 +7149,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 6,
    "sinCasoEnElCorpus": 35,
-   "formaAtestiguada": 7
+   "formaAtestiguada": 7,
+   "plantilla": "1+.poet-sync-perf|mandō"
   },
   {
    "clave": "reperio",
@@ -6147,7 +7161,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 11,
    "sinCasoEnElCorpus": 30,
-   "formaAtestiguada": 3
+   "formaAtestiguada": 3,
+   "plantilla": "4.p3inf|reperiō|repper|repert"
   },
   {
    "clave": "notus",
@@ -6159,7 +7174,8 @@
    "conCasoEnElCorpus": 43,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 8
+   "formaAtestiguada": 8,
+   "plantilla": "nōtus|comp=nōtior|sup=nōtissimus"
   },
   {
    "clave": "sumo",
@@ -6170,7 +7186,20 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 8,
    "sinCasoEnElCorpus": 33,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|sūmō|sūmps/surēm/surēmps|sūmpt"
+  },
+  {
+   "clave": "caedo",
+   "cantidad": "caedō",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 13,
+   "sinCasoEnElCorpus": 28,
+   "formaAtestiguada": 0,
+   "plantilla": "3|caedō|cecīd|caes"
   },
   {
    "clave": "defero",
@@ -6181,7 +7210,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 11,
    "sinCasoEnElCorpus": 30,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "irreg|dēferō"
   },
   {
    "clave": "educo",
@@ -6192,7 +7222,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 11,
    "sinCasoEnElCorpus": 30,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "irreg|ēdūcō"
   },
   {
    "clave": "aliquando",
@@ -6203,7 +7234,16 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 41,
-   "formaAtestiguada": 41
+   "formaAtestiguada": 41,
+   "plantilla": "aliquandō|-"
+  },
+  {
+   "clave": "porta",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "multo",
@@ -6214,7 +7254,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 1,
    "sinCasoEnElCorpus": 40,
-   "formaAtestiguada": 62
+   "formaAtestiguada": 62,
+   "plantilla": "1+|multō"
   },
   {
    "clave": "doctrina",
@@ -6226,7 +7267,8 @@
    "conCasoEnElCorpus": 41,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 23
+   "formaAtestiguada": 23,
+   "plantilla": "doctrīna<1>"
   },
   {
    "clave": "familiaris",
@@ -6239,7 +7281,8 @@
    "conCasoEnElCorpus": 40,
    "sinCasoEnElCorpus": 1,
    "flexiona": true,
-   "formaAtestiguada": 9
+   "formaAtestiguada": 9,
+   "plantilla": "familiāris|comp=familiārior|sup=familiārissimus|adv=familiāriter"
   },
   {
    "clave": "prius",
@@ -6258,7 +7301,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 3,
    "sinCasoEnElCorpus": 38,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "1+|suscitō"
   },
   {
    "clave": "facultas",
@@ -6270,7 +7314,20 @@
    "conCasoEnElCorpus": 41,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 7
+   "formaAtestiguada": 7,
+   "plantilla": "facultās<3>"
+  },
+  {
+   "clave": "certe",
+   "cantidad": "certē",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 41,
+   "formaAtestiguada": 46,
+   "plantilla": "certē"
   },
   {
    "clave": "iaceo",
@@ -6281,7 +7338,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 11,
    "sinCasoEnElCorpus": 29,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "2+.nopass.sup-futr-actv-only|iaceō"
   },
   {
    "clave": "trans",
@@ -6292,7 +7350,8 @@
    "uposCorpus": "ADP",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 40,
-   "formaAtestiguada": 40
+   "formaAtestiguada": 40,
+   "plantilla": "trāns|accusative"
   },
   {
    "clave": "frango",
@@ -6303,7 +7362,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 16,
    "sinCasoEnElCorpus": 24,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|frangō|frēg|frāct"
   },
   {
    "clave": "praeterea",
@@ -6314,7 +7374,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 40,
-   "formaAtestiguada": 40
+   "formaAtestiguada": 40,
+   "plantilla": "praetereā|-"
   },
   {
    "clave": "plaga",
@@ -6326,7 +7387,8 @@
    "conCasoEnElCorpus": 40,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 12
+   "formaAtestiguada": 12,
+   "plantilla": "plāga<1>"
   },
   {
    "clave": "nauigo",
@@ -6345,7 +7407,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 16,
    "sinCasoEnElCorpus": 24,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "3|persequor|persecūt/persequūt"
   },
   {
    "clave": "ministro",
@@ -6356,7 +7419,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 7,
    "sinCasoEnElCorpus": 33,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "1+.poet-sync-perf|ministrō"
   },
   {
    "clave": "perficio",
@@ -6367,7 +7431,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 14,
    "sinCasoEnElCorpus": 26,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "3|perficiō|perfēc|perfect"
   },
   {
    "clave": "consuesco",
@@ -6378,7 +7443,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 1,
    "sinCasoEnElCorpus": 39,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|cōnsuēscō|cōnsuēv|cōnsuēt"
   },
   {
    "clave": "appropinquo",
@@ -6389,7 +7455,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 4,
    "sinCasoEnElCorpus": 36,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "1+|appropinquō"
   },
   {
    "clave": "parabola",
@@ -6401,7 +7468,8 @@
    "conCasoEnElCorpus": 40,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 3
+   "formaAtestiguada": 3,
+   "plantilla": "parabola<1>"
   },
   {
    "clave": "tempto",
@@ -6412,7 +7480,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 10,
    "sinCasoEnElCorpus": 30,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "1+|temptō"
   },
   {
    "clave": "tribulatio",
@@ -6424,7 +7493,8 @@
    "conCasoEnElCorpus": 40,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "trībulātiō<3>"
   },
   {
    "clave": "celeriter",
@@ -6435,7 +7505,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 40,
-   "formaAtestiguada": 36
+   "formaAtestiguada": 36,
+   "plantilla": "celeriter|celerius|celerrimē"
   },
   {
    "clave": "generatio",
@@ -6447,7 +7518,8 @@
    "conCasoEnElCorpus": 40,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 12
+   "formaAtestiguada": 12,
+   "plantilla": "generātiō<3>"
   },
   {
    "clave": "uiuus",
@@ -6456,6 +7528,20 @@
    "caminos": 0,
    "posFuente": null,
    "uposCorpus": "ADJ"
+  },
+  {
+   "clave": "passus",
+   "cantidad": "passus",
+   "origen": "fuente-externa",
+   "caminos": 1,
+   "posFuente": "part",
+   "uposCorpus": "NOUN",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 39,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 16,
+   "plantilla": "passus"
   },
   {
    "clave": "concilium",
@@ -6467,7 +7553,8 @@
    "conCasoEnElCorpus": 39,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 18
+   "formaAtestiguada": 18,
+   "plantilla": "concilium<2>"
   },
   {
    "clave": "rapio",
@@ -6478,7 +7565,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 11,
    "sinCasoEnElCorpus": 28,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|rapiō|rapu|rapt"
   },
   {
    "clave": "consolor",
@@ -6489,7 +7577,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 12,
    "sinCasoEnElCorpus": 27,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "1+|cōnsōlor"
   },
   {
    "clave": "turpis",
@@ -6501,7 +7590,8 @@
    "conCasoEnElCorpus": 38,
    "sinCasoEnElCorpus": 1,
    "flexiona": true,
-   "formaAtestiguada": 4
+   "formaAtestiguada": 4,
+   "plantilla": "turpis|comp=turpior|sup=turpissimus|adv=turpiter"
   },
   {
    "clave": "occupo",
@@ -6512,7 +7602,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 17,
    "sinCasoEnElCorpus": 22,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "1+.poet-sync-perf|occupō"
   },
   {
    "clave": "membrum",
@@ -6524,7 +7615,8 @@
    "conCasoEnElCorpus": 39,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 4
+   "formaAtestiguada": 4,
+   "plantilla": "membrum<2>"
   },
   {
    "clave": "praetereo",
@@ -6535,7 +7627,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 14,
    "sinCasoEnElCorpus": 25,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "irreg|praetereō"
   },
   {
    "clave": "breuis",
@@ -6555,7 +7648,8 @@
    "conCasoEnElCorpus": 39,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 12
+   "formaAtestiguada": 12,
+   "plantilla": "opīniō<3>|g=f"
   },
   {
    "clave": "colligo",
@@ -6566,7 +7660,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 14,
    "sinCasoEnElCorpus": 25,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|colligō|collēg|collēct"
   },
   {
    "clave": "euangelizo",
@@ -6585,7 +7680,21 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 10,
    "sinCasoEnElCorpus": 28,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|effundō|effūd|effūs"
+  },
+  {
+   "clave": "dux",
+   "cantidad": "dux",
+   "origen": "fuente-externa",
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 38,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 8,
+   "plantilla": "dux<3>|g=m|g2=f"
   },
   {
    "clave": "dexter",
@@ -6604,7 +7713,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 38,
-   "formaAtestiguada": 38
+   "formaAtestiguada": 38,
+   "plantilla": "circiter|accusative"
   },
   {
    "clave": "testis",
@@ -6616,7 +7726,8 @@
    "conCasoEnElCorpus": 38,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 10
+   "formaAtestiguada": 10,
+   "plantilla": "testis<3>|g=m|g2=f"
   },
   {
    "clave": "adnuntio",
@@ -6627,7 +7738,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 11,
    "sinCasoEnElCorpus": 27,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "1+|adnūntiō"
   },
   {
    "clave": "peccator",
@@ -6639,7 +7751,8 @@
    "conCasoEnElCorpus": 38,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "peccātor<3>"
   },
   {
    "clave": "pario",
@@ -6650,7 +7763,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 13,
    "sinCasoEnElCorpus": 24,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3.old-impf-futr|pariō|peper|parit/part|pres_actv_inf=parere/parīre|pres_pasv_inf=parī/parīrī|futr_actv_ptc=paritūrus/partūrus"
   },
   {
    "clave": "prior",
@@ -6669,7 +7783,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 16,
    "sinCasoEnElCorpus": 21,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "2+|tueor"
   },
   {
    "clave": "intra",
@@ -6680,7 +7795,8 @@
    "uposCorpus": "ADP",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 37,
-   "formaAtestiguada": 39
+   "formaAtestiguada": 39,
+   "plantilla": "intrā|accusative"
   },
   {
    "clave": "uendo",
@@ -6707,7 +7823,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 3,
    "sinCasoEnElCorpus": 34,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|permittō|permīs|permiss"
   },
   {
    "clave": "thronus",
@@ -6719,7 +7836,8 @@
    "conCasoEnElCorpus": 37,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "thronus<2>"
   },
   {
    "clave": "consummo",
@@ -6730,7 +7848,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 11,
    "sinCasoEnElCorpus": 26,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "1+|cōnsummō"
   },
   {
    "clave": "commoueo",
@@ -6750,7 +7869,8 @@
    "conCasoEnElCorpus": 37,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "pūblicānus"
   },
   {
    "clave": "resurrectio",
@@ -6762,7 +7882,8 @@
    "conCasoEnElCorpus": 37,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 6
+   "formaAtestiguada": 6,
+   "plantilla": "resurrēctiō<3>"
   },
   {
    "clave": "plane",
@@ -6773,7 +7894,29 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 37,
-   "formaAtestiguada": 40
+   "formaAtestiguada": 40,
+   "plantilla": "plānē"
+  },
+  {
+   "clave": "uere",
+   "cantidad": null,
+   "origen": "sin-dato",
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADV"
+  },
+  {
+   "clave": "adeo",
+   "cantidad": "adeō",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "VERB",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 3,
+   "sinCasoEnElCorpus": 33,
+   "formaAtestiguada": 7,
+   "plantilla": "adeō|-"
   },
   {
    "clave": "sedes",
@@ -6785,7 +7928,8 @@
    "conCasoEnElCorpus": 36,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 11
+   "formaAtestiguada": 11,
+   "plantilla": "sēdēs<3>|g=f"
   },
   {
    "clave": "consto",
@@ -6796,7 +7940,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 1,
    "sinCasoEnElCorpus": 35,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "1.nopass|cōnstō|cōnstit|cōnstāt"
   },
   {
    "clave": "curro",
@@ -6807,7 +7952,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 9,
    "sinCasoEnElCorpus": 27,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "3|currō|cucurr/curr|curs"
   },
   {
    "clave": "possideo",
@@ -6818,7 +7964,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 2,
    "sinCasoEnElCorpus": 34,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "2|possideō|possēd|possess"
   },
   {
    "clave": "forum",
@@ -6830,7 +7977,8 @@
    "conCasoEnElCorpus": 36,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 13
+   "formaAtestiguada": 13,
+   "plantilla": "forum<2>"
   },
   {
    "clave": "misceo",
@@ -6842,7 +7990,8 @@
    "conCasoEnElCorpus": 22,
    "sinCasoEnElCorpus": 14,
    "flexiona": true,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "2.p3inf|misceō|miscu|mixt/mist"
   },
   {
    "clave": "decerno",
@@ -6853,7 +8002,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 9,
    "sinCasoEnElCorpus": 27,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "3.poet-sync-perf|dēcernō|dēcrēv|dēcrēt"
   },
   {
    "clave": "perfero",
@@ -6864,7 +8014,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 14,
    "sinCasoEnElCorpus": 22,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "irreg|perferō"
   },
   {
    "clave": "depono",
@@ -6875,7 +8026,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 10,
    "sinCasoEnElCorpus": 26,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3.poet-sync-perf|dēpōnō|dēposu/dēposīv|dēposit/dēpost"
   },
   {
    "clave": "centurio",
@@ -6887,7 +8039,8 @@
    "conCasoEnElCorpus": 36,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 13
+   "formaAtestiguada": 13,
+   "plantilla": "1+|centuriō"
   },
   {
    "clave": "appr(eh)endo",
@@ -6906,7 +8059,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 16,
    "sinCasoEnElCorpus": 19,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|claudō|claus|claus"
   },
   {
    "clave": "par",
@@ -6918,7 +8072,8 @@
    "conCasoEnElCorpus": 35,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 7
+   "formaAtestiguada": 7,
+   "plantilla": "pār/par|comp=parior|sup=parissimus/parissumus|adv=pariter"
   },
   {
    "clave": "ingredior",
@@ -6930,7 +8085,8 @@
    "conCasoEnElCorpus": 19,
    "sinCasoEnElCorpus": 16,
    "flexiona": true,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "3|ingredior|ingress"
   },
   {
    "clave": "induco",
@@ -6941,7 +8097,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 14,
    "sinCasoEnElCorpus": 21,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "irreg|indūcō"
   },
   {
    "clave": "beneficium",
@@ -6953,7 +8110,8 @@
    "conCasoEnElCorpus": 35,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 6
+   "formaAtestiguada": 6,
+   "plantilla": "beneficium<2>"
   },
   {
    "clave": "coniungo",
@@ -6964,7 +8122,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 12,
    "sinCasoEnElCorpus": 23,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "3|coniungō|coniūnx|coniūnct"
   },
   {
    "clave": "uiginti",
@@ -6984,7 +8143,8 @@
    "conCasoEnElCorpus": 19,
    "sinCasoEnElCorpus": 16,
    "flexiona": true,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|subiciō|subiēc|subiect"
   },
   {
    "clave": "triginta",
@@ -7006,7 +8166,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 7,
    "sinCasoEnElCorpus": 28,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "irreg|trānsferō"
   },
   {
    "clave": "odium",
@@ -7018,7 +8179,8 @@
    "conCasoEnElCorpus": 35,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "odium<2>"
   },
   {
    "clave": "odi",
@@ -7029,7 +8191,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 2,
    "sinCasoEnElCorpus": 33,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "4.perf-as-pres.semi-depon|ōdī|ōs"
   },
   {
    "clave": "durus",
@@ -7041,7 +8204,8 @@
    "conCasoEnElCorpus": 34,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "dūrus|comp=dūrior|sup=dūrissimus|adv=dūrē/dūriter"
   },
   {
    "clave": "frons",
@@ -7053,7 +8217,8 @@
    "conCasoEnElCorpus": 34,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "frōns<3.I>|g=f|g2=m"
   },
   {
    "clave": "poena",
@@ -7065,7 +8230,8 @@
    "conCasoEnElCorpus": 34,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 8
+   "formaAtestiguada": 8,
+   "plantilla": "poena<1>"
   },
   {
    "clave": "eripio",
@@ -7076,7 +8242,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 8,
    "sinCasoEnElCorpus": 26,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|ēripiō|ēripu|ērept"
   },
   {
    "clave": "subito",
@@ -7087,7 +8254,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 34,
-   "formaAtestiguada": 40
+   "formaAtestiguada": 40,
+   "plantilla": "subitō|-"
   },
   {
    "clave": "patria",
@@ -7099,7 +8267,8 @@
    "conCasoEnElCorpus": 34,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 19
+   "formaAtestiguada": 19,
+   "plantilla": "patria<1>"
   },
   {
    "clave": "calix",
@@ -7111,7 +8280,8 @@
    "conCasoEnElCorpus": 34,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 4
+   "formaAtestiguada": 4,
+   "plantilla": "calix<3>|g=m"
   },
   {
    "clave": "merces",
@@ -7123,7 +8293,8 @@
    "conCasoEnElCorpus": 34,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 10
+   "formaAtestiguada": 10,
+   "plantilla": "mercēs/mercēd<3>|g=f"
   },
   {
    "clave": "uigilo",
@@ -7143,7 +8314,8 @@
    "conCasoEnElCorpus": 32,
    "sinCasoEnElCorpus": 2,
    "flexiona": true,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "stultus|comp=stultior|sup=stultissimus|adv=stultē"
   },
   {
    "clave": "diues",
@@ -7162,7 +8334,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 12,
    "sinCasoEnElCorpus": 22,
-   "formaAtestiguada": 3
+   "formaAtestiguada": 3,
+   "plantilla": "2.p3inf|misereor|miserit/misert"
   },
   {
    "clave": "misericordia",
@@ -7174,7 +8347,8 @@
    "conCasoEnElCorpus": 34,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 12
+   "formaAtestiguada": 12,
+   "plantilla": "misericordia<1>"
   },
   {
    "clave": "conseruo",
@@ -7194,7 +8368,8 @@
    "conCasoEnElCorpus": 34,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 14
+   "formaAtestiguada": 14,
+   "plantilla": "memoria<1>"
   },
   {
    "clave": "necessarius",
@@ -7207,7 +8382,8 @@
    "conCasoEnElCorpus": 33,
    "sinCasoEnElCorpus": 1,
    "flexiona": true,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "necessārius|comp=necessarior|sup=necessarissimus|adv=necessāriē/necessāriō"
   },
   {
    "clave": "foris",
@@ -7227,7 +8403,8 @@
    "conCasoEnElCorpus": 34,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 9
+   "formaAtestiguada": 9,
+   "plantilla": "amīcitia<1>"
   },
   {
    "clave": "scientia",
@@ -7239,7 +8416,8 @@
    "conCasoEnElCorpus": 34,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 17
+   "formaAtestiguada": 17,
+   "plantilla": "scientia<1>"
   },
   {
    "clave": "sano",
@@ -7250,7 +8428,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 10,
    "sinCasoEnElCorpus": 24,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "1+|sānō"
   },
   {
    "clave": "permaneo",
@@ -7261,7 +8440,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 34,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "2|permaneō|permāns|permāns"
   },
   {
    "clave": "remitto",
@@ -7272,7 +8452,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 4,
    "sinCasoEnElCorpus": 30,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|remittō|remīs|remiss"
   },
   {
    "clave": "hortus",
@@ -7284,7 +8465,8 @@
    "conCasoEnElCorpus": 34,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "hortus<2>"
   },
   {
    "clave": "pugna",
@@ -7296,7 +8478,8 @@
    "conCasoEnElCorpus": 33,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 12
+   "formaAtestiguada": 12,
+   "plantilla": "pugna<1>"
   },
   {
    "clave": "conor",
@@ -7307,7 +8490,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 13,
    "sinCasoEnElCorpus": 20,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "1+|cōnor"
   },
   {
    "clave": "ops",
@@ -7319,7 +8503,8 @@
    "conCasoEnElCorpus": 33,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "ops<3>|g=f"
   },
   {
    "clave": "fama",
@@ -7331,7 +8516,8 @@
    "conCasoEnElCorpus": 33,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 19
+   "formaAtestiguada": 19,
+   "plantilla": "fāma<1>"
   },
   {
    "clave": "carus",
@@ -7343,7 +8529,8 @@
    "conCasoEnElCorpus": 33,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "cārus|comp=cārior|sup=cārissimus"
   },
   {
    "clave": "familia",
@@ -7355,7 +8542,8 @@
    "conCasoEnElCorpus": 33,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 12
+   "formaAtestiguada": 12,
+   "plantilla": "familia<1>|gen_sg=familiae/familiās"
   },
   {
    "clave": "uoluptas",
@@ -7374,7 +8562,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 7,
    "sinCasoEnElCorpus": 26,
-   "formaAtestiguada": 1
+   "formaAtestiguada": 1,
+   "plantilla": "3|contemnō|contemps/contems|contempt/contemt"
   },
   {
    "clave": "honestus",
@@ -7386,7 +8575,8 @@
    "conCasoEnElCorpus": 29,
    "sinCasoEnElCorpus": 4,
    "flexiona": true,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "honestus|comp=honestior|sup=honestissimus|adv=honestē"
   },
   {
    "clave": "sapio",
@@ -7397,7 +8587,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 11,
    "sinCasoEnElCorpus": 22,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3.nopass|sapiō|sapīv/sapi/sapu"
   },
   {
    "clave": "diligentia",
@@ -7409,7 +8600,8 @@
    "conCasoEnElCorpus": 33,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 21
+   "formaAtestiguada": 21,
+   "plantilla": "dīligentia<1>"
   },
   {
    "clave": "dignitas",
@@ -7421,7 +8613,21 @@
    "conCasoEnElCorpus": 33,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "dignitās<3>"
+  },
+  {
+   "clave": "casus",
+   "cantidad": "cāsus",
+   "origen": "fuente-externa",
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 33,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 6,
+   "plantilla": "cāsus<4>"
   },
   {
    "clave": "tribus",
@@ -7433,7 +8639,8 @@
    "conCasoEnElCorpus": 33,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 48
+   "formaAtestiguada": 48,
+   "plantilla": "tribus<4>|g=f"
   },
   {
    "clave": "modicus",
@@ -7445,7 +8652,8 @@
    "conCasoEnElCorpus": 33,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "modicus"
   },
   {
    "clave": "desertum",
@@ -7457,7 +8665,8 @@
    "conCasoEnElCorpus": 33,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 15
+   "formaAtestiguada": 15,
+   "plantilla": "dēsertum<2>"
   },
   {
    "clave": "praesertim",
@@ -7468,7 +8677,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 33,
-   "formaAtestiguada": 33
+   "formaAtestiguada": 33,
+   "plantilla": "praesertim|-"
   },
   {
    "clave": "castellum",
@@ -7480,7 +8690,8 @@
    "conCasoEnElCorpus": 33,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 12
+   "formaAtestiguada": 12,
+   "plantilla": "castellum<2>"
   },
   {
    "clave": "cogitatio",
@@ -7492,7 +8703,8 @@
    "conCasoEnElCorpus": 33,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 5
+   "formaAtestiguada": 5,
+   "plantilla": "cōgitātiō<3>"
   },
   {
    "clave": "graeci",
@@ -7519,7 +8731,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 32,
-   "formaAtestiguada": 31
+   "formaAtestiguada": 31,
+   "plantilla": "hinc|-"
   },
   {
    "clave": "conuoco",
@@ -7539,7 +8752,8 @@
    "conCasoEnElCorpus": 32,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 3
+   "formaAtestiguada": 3,
+   "plantilla": "((parēns<3>,parēns<3.I>))|g=m|g2=f"
   },
   {
    "clave": "queror",
@@ -7550,7 +8764,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 8,
    "sinCasoEnElCorpus": 24,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "3|queror|quest"
   },
   {
    "clave": "interim",
@@ -7561,7 +8776,8 @@
    "uposCorpus": "ADV",
    "conCasoEnElCorpus": 0,
    "sinCasoEnElCorpus": 32,
-   "formaAtestiguada": 32
+   "formaAtestiguada": 32,
+   "plantilla": "interim|-"
   },
   {
    "clave": "considero",
@@ -7572,7 +8788,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 9,
    "sinCasoEnElCorpus": 23,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "1+|cōnsīderō"
   },
   {
    "clave": "albus",
@@ -7584,7 +8801,8 @@
    "conCasoEnElCorpus": 32,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 4
+   "formaAtestiguada": 4,
+   "plantilla": "albus|comp=albior|sup=albissimus"
   },
   {
    "clave": "cibus",
@@ -7596,7 +8814,8 @@
    "conCasoEnElCorpus": 32,
    "sinCasoEnElCorpus": 0,
    "flexiona": true,
-   "formaAtestiguada": 3
+   "formaAtestiguada": 3,
+   "plantilla": "cibus<2>"
   },
   {
    "clave": "prouideo",
@@ -7615,7 +8834,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 16,
    "sinCasoEnElCorpus": 16,
-   "formaAtestiguada": 0
+   "formaAtestiguada": 0,
+   "plantilla": "1+|alligō"
   },
   {
    "clave": "utique",
@@ -7634,7 +8854,8 @@
    "uposCorpus": "VERB",
    "conCasoEnElCorpus": 2,
    "sinCasoEnElCorpus": 30,
-   "formaAtestiguada": 2
+   "formaAtestiguada": 2,
+   "plantilla": "1+.poet-sync-perf|narrō"
   }
  ]
 }

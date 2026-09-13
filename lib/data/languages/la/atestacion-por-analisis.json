@@ -2,8 +2,8 @@
  "generado": "2026-09-13",
  "corpus": "UD Latin (scripts/.cache/treebanks)",
  "tokens": 227301,
- "formasDelDominio": 12228,
- "formasAtestiguadas": 2935,
+ "formasDelDominio": 12238,
+ "formasAtestiguadas": 2941,
  "formasAtestiguadasComoSubjuntivo": 501,
  "formasAtestiguadasPorParticipio": {
   "presente": 125,
@@ -245,14 +245,34 @@
   "adhūc": {
    "otro": 113
   },
+  "tamquam": {
+   "otro": 90
+  },
+  "prīmum": {
+   "otro": 110,
+   "nominal": 22
+  },
   "statim": {
    "otro": 99
   },
   "saepe": {
    "otro": 85
   },
+  "quō": {
+   "otro": 110,
+   "nominal": 357
+  },
   "simul": {
    "otro": 95
+  },
+  "bene": {
+   "otro": 67
+  },
+  "quārē": {
+   "otro": 56
+  },
+  "longē": {
+   "otro": 69
   },
   "cōram": {
    "otro": 82
@@ -266,6 +286,10 @@
   },
   "inde": {
    "otro": 78
+  },
+  "facile": {
+   "nominal": 4,
+   "otro": 56
   },
   "numquam": {
    "otro": 66
@@ -322,11 +346,18 @@
   "etsī": {
    "otro": 45
   },
+  "forte": {
+   "nominal": 10,
+   "otro": 47
+  },
   "rūrsus": {
    "otro": 34
   },
   "ob": {
    "otro": 44
+  },
+  "hūc": {
+   "otro": 40
   },
   "umquam": {
    "otro": 39
@@ -339,6 +370,9 @@
   },
   "aliquandō": {
    "otro": 41
+  },
+  "certē": {
+   "otro": 46
   },
   "trāns": {
    "otro": 40
@@ -3854,10 +3888,6 @@
   "prīmus": {
    "nominal": 36
   },
-  "prīmum": {
-   "otro": 110,
-   "nominal": 22
-  },
   "prīmī": {
    "nominal": 19
   },
@@ -4325,10 +4355,6 @@
   "fortibus": {
    "nominal": 2
   },
-  "forte": {
-   "nominal": 10,
-   "otro": 47
-  },
   "fortia": {
    "nominal": 1
   },
@@ -4403,10 +4429,6 @@
   },
   "facilī": {
    "nominal": 3
-  },
-  "facile": {
-   "nominal": 4,
-   "otro": 56
   },
   "facilia": {
    "nominal": 1
@@ -5076,10 +5098,6 @@
   },
   "cui": {
    "nominal": 123
-  },
-  "quō": {
-   "otro": 110,
-   "nominal": 357
   },
   "quōs": {
    "nominal": 170

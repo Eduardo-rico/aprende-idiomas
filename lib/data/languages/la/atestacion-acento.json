@@ -2,16 +2,16 @@
  "generado": "2026-09-13",
  "corpus": "la_perseus + la_proiel (UD)",
  "tokens": 227300,
- "formas": 6928,
- "sueloDeLaPenultima": 0.6997690531177829,
+ "formas": 6934,
+ "sueloDeLaPenultima": 0.6998846264782232,
  "reparto": {
   "monosilabo": {
-   "total": 124,
-   "atestiguadas": 118
+   "total": 125,
+   "atestiguadas": 119
   },
   "bisilabo": {
-   "total": 1142,
-   "atestiguadas": 899
+   "total": 1147,
+   "atestiguadas": 904
   },
   "breve": {
    "total": 1956,
@@ -26,7 +26,7 @@
    "atestiguadas": 803
   }
  },
- "posicionSobreAtestiguadas": 0.10085178875638842,
+ "posicionSobreAtestiguadas": 0.10064603876232574,
  "tabla": {
   "cum": {
    "silabas": [
@@ -658,6 +658,24 @@
    "tipo": "bisilabo",
    "n": 113
   },
+  "tamquam": {
+   "silabas": [
+    "tam",
+    "quam"
+   ],
+   "tonica": "tam",
+   "tipo": "bisilabo",
+   "n": 90
+  },
+  "prīmum": {
+   "silabas": [
+    "prī",
+    "mum"
+   ],
+   "tonica": "prī",
+   "tipo": "bisilabo",
+   "n": 132
+  },
   "statim": {
    "silabas": [
     "sta",
@@ -676,6 +694,14 @@
    "tipo": "bisilabo",
    "n": 85
   },
+  "quō": {
+   "silabas": [
+    "quō"
+   ],
+   "tonica": "quō",
+   "tipo": "monosilabo",
+   "n": 467
+  },
   "simul": {
    "silabas": [
     "si",
@@ -684,6 +710,33 @@
    "tonica": "si",
    "tipo": "bisilabo",
    "n": 95
+  },
+  "bene": {
+   "silabas": [
+    "be",
+    "ne"
+   ],
+   "tonica": "be",
+   "tipo": "bisilabo",
+   "n": 67
+  },
+  "quārē": {
+   "silabas": [
+    "quā",
+    "rē"
+   ],
+   "tonica": "quā",
+   "tipo": "bisilabo",
+   "n": 56
+  },
+  "longē": {
+   "silabas": [
+    "lon",
+    "gē"
+   ],
+   "tonica": "lon",
+   "tipo": "bisilabo",
+   "n": 69
   },
   "cōram": {
    "silabas": [
@@ -720,6 +773,16 @@
    "tonica": "in",
    "tipo": "bisilabo",
    "n": 78
+  },
+  "facile": {
+   "silabas": [
+    "fa",
+    "ci",
+    "le"
+   ],
+   "tonica": "fa",
+   "tipo": "breve",
+   "n": 60
   },
   "numquam": {
    "silabas": [
@@ -890,6 +953,15 @@
    "tipo": "bisilabo",
    "n": 45
   },
+  "forte": {
+   "silabas": [
+    "for",
+    "te"
+   ],
+   "tonica": "for",
+   "tipo": "bisilabo",
+   "n": 57
+  },
   "rūrsus": {
    "silabas": [
     "rūr",
@@ -906,6 +978,14 @@
    "tonica": "ob",
    "tipo": "monosilabo",
    "n": 44
+  },
+  "hūc": {
+   "silabas": [
+    "hūc"
+   ],
+   "tonica": "hūc",
+   "tipo": "monosilabo",
+   "n": 40
   },
   "umquam": {
    "silabas": [
@@ -946,6 +1026,15 @@
    "tonica": "quan",
    "tipo": "posicion",
    "n": 41
+  },
+  "certē": {
+   "silabas": [
+    "cer",
+    "tē"
+   ],
+   "tonica": "cer",
+   "tipo": "bisilabo",
+   "n": 46
   },
   "trāns": {
    "silabas": [
@@ -20014,15 +20103,6 @@
    "tipo": "bisilabo",
    "n": 36
   },
-  "prīmum": {
-   "silabas": [
-    "prī",
-    "mum"
-   ],
-   "tonica": "prī",
-   "tipo": "bisilabo",
-   "n": 132
-  },
   "prīmī": {
    "silabas": [
     "prī",
@@ -21791,15 +21871,6 @@
    "tipo": "breve",
    "n": 2
   },
-  "forte": {
-   "silabas": [
-    "for",
-    "te"
-   ],
-   "tonica": "for",
-   "tipo": "bisilabo",
-   "n": 57
-  },
   "fortia": {
    "silabas": [
     "for",
@@ -22120,16 +22191,6 @@
    "tonica": "ci",
    "tipo": "breve",
    "n": 0
-  },
-  "facile": {
-   "silabas": [
-    "fa",
-    "ci",
-    "le"
-   ],
-   "tonica": "fa",
-   "tipo": "breve",
-   "n": 60
   },
   "facilia": {
    "silabas": [
@@ -25293,14 +25354,6 @@
    "tonica": "cui",
    "tipo": "monosilabo",
    "n": 123
-  },
-  "quō": {
-   "silabas": [
-    "quō"
-   ],
-   "tonica": "quō",
-   "tipo": "monosilabo",
-   "n": 467
   },
   "quōs": {
    "silabas": [
