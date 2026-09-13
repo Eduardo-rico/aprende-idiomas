@@ -30,7 +30,12 @@ export const NOMBRES_L1: EntradaNominal[] = [
   // Atestiguadas: `grātia` ×232, `rēgnum` ×189, `signum` ×137, `bestia`
   // ×54, `agnus` ×38, `nātiō` ×17.
   { lema: 'grātia', genitivo: 'grātiae', genero: 'f', glosa: 'gracia, favor' },
-  { lema: 'bestia', genitivo: 'bestiae', genero: 'f', glosa: 'bestia, animal' },
+  // CANTIDAD CORREGIDA el 2026-09-13 contra la fuente externa (ver
+  // `macrones.json`): era `bestia` y es `bēstia`. El error no se veía
+  // porque no mueve el acento —la penúltima es breve y la palabra es
+  // esdrújula con `e` larga o breve—, que es justo por lo que una cantidad
+  // escrita a mano sobrevive: el curso no deriva nada de ella.
+  { lema: 'bēstia', genitivo: 'bēstiae', genero: 'f', glosa: 'bestia, animal' },
   { lema: 'nātiō', genitivo: 'nātiōnis', genero: 'f', glosa: 'nación, pueblo' },
   { lema: 'agnus', genitivo: 'agnī', genero: 'm', glosa: 'cordero' },
   { lema: 'rēgnum', genitivo: 'rēgnī', genero: 'n', glosa: 'reino' },
@@ -274,7 +279,10 @@ export const ADJETIVOS_L1: EntradaAdjetivo[] = [
   // `anxia` sale en un marco de `l5-negacion`. El FEMENINO no aparece en el
   // corpus, pero el lema sí (`anxius` ×3): una forma regular de un lema
   // atestiguado no es un invento, que es lo que el congelador ya declara.
-  { lema: 'anxius', tema: 'anxi', glosa: 'angustiado, inquieto' },
+  // Ídem: era `anxius` y es `ānxius`. Éste cae además en la clase que la
+  // predicción daba por más probable —vocal larga ante grupo consonántico,
+  // aquí `nx`—, y tampoco mueve el acento.
+  { lema: 'ānxius', tema: 'ānxi', glosa: 'angustiado, inquieto' },
   // ── LOS POSESIVOS, EL 2026-09-12 ──
   //
   // `suus` es **el contraejemplo que el descriptor de `l1-uv-ij` da**

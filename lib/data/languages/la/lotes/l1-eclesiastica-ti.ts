@@ -10,7 +10,7 @@
 // ── ESTE LOTE NO SE PODÍA ESCRIBIR HACE UNA HORA ─────────────────────
 //
 // El caso negativo es obligatorio y **en L1 no había ni uno**: cero formas
-// con `ti`+vocal precedidas de `s`, `t` o `x`. No pocas — cero. `bestia`
+// con `ti`+vocal precedidas de `s`, `t` o `x`. No pocas — cero. `bēstia`
 // entró por eso, con sus 54 tokens, y es la palabra que el propio
 // descriptor nombra.
 import { itemsDe, type DefEc } from './_ayuda-eclesiastica';
@@ -26,12 +26,12 @@ const APLICAN: DefEc[] = [
 ];
 // ── LOS NEGATIVOS · tras `s` la regla NO se aplica ──
 const NO_APLICAN: DefEc[] = [
-  ['la-et-07', 'bestia', 'la bestia', 'el «ti» va tras «s»: ¿se africa?'],
-  ['la-et-08', 'bestiam', 'la bestia (acusativo)', 'el «ti» va tras «s»'],
-  ['la-et-09', 'bestiae', 'de la bestia', 'el «ti» va tras «s»'],
-  ['la-et-10', 'bestiās', 'las bestias', 'el «ti» va tras «s»'],
-  ['la-et-11', 'bestiīs', 'con las bestias', 'el «ti» va tras «s»'],
-  ['la-et-12', 'bestiā', 'con la bestia', 'el «ti» va tras «s»'],
+  ['la-et-07', 'bēstia', 'la bestia', 'el «ti» va tras «s»: ¿se africa?'],
+  ['la-et-08', 'bēstiam', 'la bestia (acusativo)', 'el «ti» va tras «s»'],
+  ['la-et-09', 'bēstiae', 'de la bestia', 'el «ti» va tras «s»'],
+  ['la-et-10', 'bēstiās', 'las bestias', 'el «ti» va tras «s»'],
+  ['la-et-11', 'bēstiīs', 'con las bestias', 'el «ti» va tras «s»'],
+  ['la-et-12', 'bēstiā', 'con la bestia', 'el «ti» va tras «s»'],
 ];
 
 export const SEMILLA_DE_ORDEN = 1;

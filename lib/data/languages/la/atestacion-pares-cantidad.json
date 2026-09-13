@@ -1,9 +1,9 @@
 {
  "generado": "2026-09-13",
  "comoSeCuenta": "por LEMA más RASGOS del treebank, no por cadena: el corpus no lleva mácrones y buscar la cadena devuelve el mismo número para los dos miembros del par",
- "pares": 292,
+ "pares": 296,
  "miembrosConCuenta": 247,
- "miembrosSinMapear": 342,
+ "miembrosSinMapear": 350,
  "paresConUnMiembroACero": 110,
  "lista": {
   "acerrima": {
@@ -251,13 +251,13 @@
    "vocal": "a",
    "miembros": [
     {
-     "forma": "anxia",
-     "clave": "anxius.f.nom.sg",
+     "forma": "ānxia",
+     "clave": "ānxius.f.nom.sg",
      "n": 0
     },
     {
-     "forma": "anxiā",
-     "clave": "anxius.f.abl.sg",
+     "forma": "ānxiā",
+     "clave": "ānxius.f.abl.sg",
      "n": 0
     }
    ]
@@ -379,13 +379,13 @@
    "vocal": "a",
    "miembros": [
     {
-     "forma": "bestia",
-     "clave": "bestia.nom.sg",
+     "forma": "bēstia",
+     "clave": "bēstia.nom.sg",
      "n": 5
     },
     {
-     "forma": "bestiā",
-     "clave": "bestia.abl.sg",
+     "forma": "bēstiā",
+     "clave": "bēstia.abl.sg",
      "n": 0
     }
    ]
@@ -2560,6 +2560,22 @@
     }
    ]
   },
+  "loquere": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "loquere",
+     "clave": "loquor.dep.presente.2sg-alt",
+     "n": null
+    },
+    {
+     "forma": "loquēre",
+     "clave": "loquor.dep.futuro.2sg-alt",
+     "n": null
+    }
+   ]
+  },
   "loqueris": {
    "tipo": "morfologico",
    "vocal": "e",
@@ -2965,6 +2981,22 @@
     }
    ]
   },
+  "moritura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "moritūra",
+     "clave": "morior.dep-part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "moritūrā",
+     "clave": "morior.dep-part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
   "mortua": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -2981,18 +3013,18 @@
     }
    ]
   },
-  "mortuura": {
+  "nascere": {
    "tipo": "morfologico",
-   "vocal": "a",
+   "vocal": "e",
    "miembros": [
     {
-     "forma": "mortuūra",
-     "clave": "morior.dep-part-fut.f.nom.sg",
+     "forma": "nāscere",
+     "clave": "nāscor.dep.presente.2sg-alt",
      "n": null
     },
     {
-     "forma": "mortuūrā",
-     "clave": "morior.dep-part-fut.f.abl.sg",
+     "forma": "nāscēre",
+     "clave": "nāscor.dep.futuro.2sg-alt",
      "n": null
     }
    ]
@@ -3013,6 +3045,22 @@
     }
    ]
   },
+  "nascitura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "nāscitūra",
+     "clave": "nāscor.dep-part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "nāscitūrā",
+     "clave": "nāscor.dep-part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
   "nata": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -3025,22 +3073,6 @@
     {
      "forma": "nātā",
      "clave": "nāscor.dep-part.f.abl.sg",
-     "n": null
-    }
-   ]
-  },
-  "natura": {
-   "tipo": "morfologico",
-   "vocal": "a",
-   "miembros": [
-    {
-     "forma": "nātūra",
-     "clave": "nāscor.dep-part-fut.f.nom.sg",
-     "n": null
-    },
-    {
-     "forma": "nātūrā",
-     "clave": "nāscor.dep-part-fut.f.abl.sg",
      "n": null
     }
    ]
@@ -3377,6 +3409,22 @@
     {
      "forma": "profectūrā",
      "clave": "proficīscor.dep-part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "proficiscere": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "proficīscere",
+     "clave": "proficīscor.dep.presente.2sg-alt",
+     "n": null
+    },
+    {
+     "forma": "proficīscēre",
+     "clave": "proficīscor.dep.futuro.2sg-alt",
      "n": null
     }
    ]
@@ -3799,6 +3847,22 @@
      "forma": "senātūs",
      "clave": "senātus.gen.sg",
      "n": 48
+    }
+   ]
+  },
+  "sequere": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "sequere",
+     "clave": "sequor.dep.presente.2sg-alt",
+     "n": null
+    },
+    {
+     "forma": "sequēre",
+     "clave": "sequor.dep.futuro.2sg-alt",
+     "n": null
     }
    ]
   },

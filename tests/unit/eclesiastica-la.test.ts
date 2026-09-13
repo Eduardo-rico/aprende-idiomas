@@ -28,7 +28,7 @@ describe('la transcripción, contra los ejemplos del propio material', () => {
 
   it('y los casos negativos que los descriptores nombran', () => {
     expect(transcribir('casa')).toBe('cása');       // ca/co/cu siguen /k/
-    expect(transcribir('bestia')).toBe('béstia');   // ti tras s no se africa
+    expect(transcribir('bēstia')).toBe('béstia');   // ti tras s no se africa
     expect(transcribir('aër')).toBe('a-er');        // la diéresis rompe el dígrafo
     expect(transcribir('poēta')).toBe('poéta');     // y el mácrón también
   });
@@ -94,10 +94,13 @@ describe('el caso negativo es obligatorio salvo donde el punto declara invarianc
 });
 
 describe('lo que el barrido dejó dicho sobre el material', () => {
-  it('el punto `ti` tenía CERO casos negativos en L1 antes de entrar `bestia`', () => {
+  it('el punto `ti` tenía CERO casos negativos en L1 antes de entrar `bēstia`', () => {
     const negs = LOTE_ECLESIASTICA_TI.filter((i) => !i.ejes.aplica);
     expect(negs).toHaveLength(6);
-    for (const i of negs) expect(i.palabra.toLowerCase()).toContain('besti');
+    // `bēstia` con mácron desde el 2026-09-13: la cantidad se corrigió
+    // contra la fuente externa y la comparación va sin ella.
+    const sinM = (x: string) => x.normalize('NFD').replace(/[\u0304\u0306]/g, '').normalize('NFC').toLowerCase();
+    for (const i of negs) expect(sinM(i.palabra)).toContain('besti');
   });
 
   it('y el punto `gn` tenía UN solo lema', () => {

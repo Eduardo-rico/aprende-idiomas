@@ -89,8 +89,8 @@ describe('LO QUE LA MÁQUINA SE CALLA', () => {
     }
   });
   it('y los en -ius van con perífrasis, no con `*anxior`', () => {
-    expect(vaConPerifrasis('anxius')).toBe(true);
-    expect(gradosDe('anxius', 'anxi').comparativo).toBe('magis anxius');
+    expect(vaConPerifrasis('ānxius')).toBe(true);
+    expect(gradosDe('ānxius', 'ānxi').comparativo).toBe('magis ānxius');
     // Y la perífrasis no entra al dominio: no es una forma.
     expect(todasLasFormasDeL1().some((f) => f.forma.includes('magis '))).toBe(false);
   });

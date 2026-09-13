@@ -7,7 +7,14 @@ import { describe, it, expect } from 'vitest';
 import nucleo from '@/lib/data/languages/la/nucleo-800.json';
 import { formasUnicasDeL1 } from '@/lib/data/languages/la/todas-las-formas';
 import catalogo from '@/lib/data/languages/la/vocab-catalog.json';
+import macrones from '@/lib/data/languages/la/macrones.json';
 import { FALLBACK_DICTIONARY } from '@/lib/data/languages/la/fallback-dictionary';
+
+const M = macrones as {
+  procedencia: { obra: string };
+  porOrigen: Record<string, number>;
+  filas: { clave: string; cantidad: string | null; origen: string }[];
+};
 
 const N = nucleo as {
   cuantos: number; porcentajeDeTokensQueCubren: number;
@@ -36,16 +43,32 @@ describe('la selección del núcleo de 800', () => {
   });
 });
 
-describe('LO QUE FALTA NO ES SELECCIONAR', () => {
-  it('el fichero dice que lo que falta es la cantidad, no la lista', () => {
-    expect(N.loQueFalta).toContain('CANTIDAD');
-    expect(N.loQueFalta).toContain('mácrones');
+describe('EL BLOQUEO, QUE ERA LA CANTIDAD Y YA NO LO ES', () => {
+  // Este bloque comprobaba lo contrario hasta el 2026-09-13: que NO había
+  // fuente de mácrones, para que el bloqueo no fuera una frase que envejece
+  // en un documento. Ahora la hay, y comprueba que se usa como es debido.
+
+  it('hay fuente, y el registro dice de dónde sale cada cantidad', () => {
+    expect(M.procedencia.obra).toContain('Wiktionary');
+    expect(M.porOrigen['fuente-externa']).toBeGreaterThan(400);
   });
 
-  it('y el repositorio no tiene ninguna fuente de mácrones', () => {
-    // Si algún día la hay, este test se pone rojo y el punto se desbloquea.
-    // Es el control de que el bloqueo sigue siendo el que decimos, y no una
-    // frase que envejece en un documento.
+  it('la cobertura de la fuente está medida, no supuesta', () => {
+    // 471 de los 554 a cero. El listón que se puso antes de medir era que
+    // una fuente al 60 % deja el problema igual de abierto.
+    const deLaFuente = M.porOrigen['fuente-externa']!;
+    expect(deLaFuente / (deLaFuente + M.porOrigen['sin-dato']!)).toBeGreaterThan(0.8);
+  });
+
+  it('y los que la fuente no cubre siguen SIN DATO, no rellenados', () => {
+    expect(M.porOrigen['sin-dato']).toBeGreaterThan(0);
+    for (const f of M.filas.filter((x) => x.origen === 'sin-dato')) expect(f.cantidad, f.clave).toBeNull();
+  });
+
+  it('los dos andamios vacíos siguen vacíos: la fuente NO es un diccionario del repo', () => {
+    // La cantidad vive en `macrones.json` con su procedencia, no en un
+    // catálogo sin origen. Si alguien rellena éstos, hay que preguntarle
+    // de dónde salieron.
     expect(catalogo).toHaveLength(0);
     expect(Object.keys(FALLBACK_DICTIONARY)).toHaveLength(0);
   });
