@@ -335,6 +335,18 @@ export const INDECLINABLES_L1: string[] = [
   // (×7), `tālis` (×16) y `tot` (×9) se quedan fuera por raros, y `tantus`
   // porque es un adjetivo y declina: meterlo es una decisión aparte.
   'tam', 'ita', 'sīc',
+  // ── LAS PARTÍCULAS DE LA INTERROGATIVA INDIRECTA ──
+  //
+  // `l7-interrogativa-indirecta` tiene de `varia` «la partícula
+  // interrogativa (quid, num, an, utrum… an)» y sólo `num` estaba. Entran
+  // las cuatro INDECLINABLES frecuentes: `ubi` ×247, `an` ×112, `quōmodo`
+  // ×102, `quandō` ×53.
+  //
+  // `quid` (×727) y `quis` (×292) —que son el ejemplo del propio punto— NO
+  // entran aquí: declinan, y meterlos en una lista de invariables sería
+  // mentir sobre su morfología para ahorrarse un paradigma. Les toca un
+  // módulo de interrogativos, y el lote lo dice.
+  'an', 'ubi', 'quandō', 'quōmodo',
   // ── ENCLÍTICOS ──
   //
   // `-que` no se separa por espacios: va pegado (`populusque`). No basta

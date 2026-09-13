@@ -2,20 +2,20 @@
  "generado": "2026-09-13",
  "corpus": "la_perseus + la_proiel (UD)",
  "tokens": 227300,
- "formas": 5769,
- "sueloDeLaPenultima": 0.718148725949038,
+ "formas": 5773,
+ "sueloDeLaPenultima": 0.7179975749177204,
  "reparto": {
   "monosilabo": {
-   "total": 116,
-   "atestiguadas": 110
+   "total": 117,
+   "atestiguadas": 111
   },
   "bisilabo": {
-   "total": 1045,
-   "atestiguadas": 821
+   "total": 1047,
+   "atestiguadas": 823
   },
   "breve": {
-   "total": 1510,
-   "atestiguadas": 653
+   "total": 1511,
+   "atestiguadas": 654
   },
   "posicion": {
    "total": 820,
@@ -26,7 +26,7 @@
    "atestiguadas": 674
   }
  },
- "posicionSobreAtestiguadas": 0.09426393902928198,
+ "posicionSobreAtestiguadas": 0.09411293552262716,
  "tabla": {
   "cum": {
    "silabas": [
@@ -396,6 +396,42 @@
    "tonica": "sīc",
    "tipo": "monosilabo",
    "n": 282
+  },
+  "an": {
+   "silabas": [
+    "an"
+   ],
+   "tonica": "an",
+   "tipo": "monosilabo",
+   "n": 112
+  },
+  "ubi": {
+   "silabas": [
+    "u",
+    "bi"
+   ],
+   "tonica": "u",
+   "tipo": "bisilabo",
+   "n": 247
+  },
+  "quandō": {
+   "silabas": [
+    "quan",
+    "dō"
+   ],
+   "tonica": "quan",
+   "tipo": "bisilabo",
+   "n": 53
+  },
+  "quōmodo": {
+   "silabas": [
+    "quō",
+    "mo",
+    "do"
+   ],
+   "tonica": "quō",
+   "tipo": "breve",
+   "n": 102
   },
   "que": {
    "silabas": [
