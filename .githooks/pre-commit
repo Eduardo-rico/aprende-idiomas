@@ -66,10 +66,12 @@ de_quien_es() {
     echo "  EN EL ÁRBOL PERO NO EN TU COMMIT (otra sesión, probablemente):"
     printf '%s\n' "$aj" | sed 's/^/      /'
     echo ""
-    echo "  Si el fallo sale de ahí, este hook YA LO HABRÍA DEJADO PASAR."
-    echo "  Que esté en rojo significa que al menos un error cae en un"
-    echo "  fichero que SÍ va en tu commit. --no-verify no lo arregla:"
-    echo "  lo esconde. Corre el test que falla y LEE el mensaje."
+    echo "  OJO: la tolerancia al rojo ajeno cubre TSC y cubre VITEST"
+    echo "  SÓLO si tu commit no toca código ni tests (docs, .md,"
+    echo "  .githooks). Si tu commit lleva código, un vitest rojo por"
+    echo "  trabajo ajeno TE BLOQUEA y es correcto: no hay forma barata"
+    echo "  de saber si el fallo es del código de otro o del tuyo."
+    echo "  --no-verify no lo arregla, lo esconde: espera o pregúntale."
   else
     echo ""
     echo "  El árbol no tiene nada de nadie más: el rojo es tuyo."
@@ -80,6 +82,36 @@ de_quien_es() {
 trap de_quien_es EXIT
 
 staged | sort -u > "$TMP_STAGED"
+
+# ── LA RAMA COMPARTIDA PUEDE PERDER COMMITS EN SILENCIO (2026-09-12) ──
+# Un `reset` sobre la rama tiró un commit ya hecho y NADA avisó: el árbol
+# de trabajo conservaba los ficheros, los tests pasaban y la cobertura
+# salía bien. Sólo se veía mirando fichero a fichero contra HEAD. Y la
+# ruta de `git update-ref` desde un worktree siguió adelante desde el
+# punto reseteado sin enterarse, cuando un `git commit` normal habría
+# dado conflicto.
+#
+# La señal es barata: si el commit al que apunta `origin` NO es ancestro
+# de HEAD, el historial local ha DEJADO DE CONTENER algo que ya estaba
+# publicado. Va como AVISO y no como rechazo, porque la misma condición
+# se da de forma legítima cuando otra sesión acaba de empujar y tú aún no
+# has hecho pull — y bloquear eso pararía el trabajo sin motivo.
+rama=$(git symbolic-ref --quiet --short HEAD 2>/dev/null || echo '')
+if [ -n "$rama" ] && git rev-parse --verify --quiet "origin/$rama" >/dev/null; then
+  if ! git merge-base --is-ancestor "origin/$rama" HEAD 2>/dev/null; then
+    echo ""
+    echo "  ⚠⚠ TU HEAD NO CONTIENE LO QUE HAY EN origin/$rama."
+    echo "     O bien otra sesión empujó y te falta un pull —lo normal—,"
+    echo "     o bien un reset se ha llevado commits ya publicados, que es"
+    echo "     la avería que no da ningún síntoma: los ficheros siguen en"
+    echo "     el árbol y los tests pasan igual."
+    echo ""
+    echo "     Compruébalo ANTES de seguir:"
+    echo "       git fetch origin && git log --oneline HEAD..origin/$rama"
+    echo "     Si ahí aparece trabajo que creías tener, NO commitees encima."
+    echo ""
+  fi
+fi
 
 echo "pre-commit: tsc --noEmit"
 if ! npx tsc --noEmit > "$TMP_TSC" 2>&1; then
@@ -98,8 +130,30 @@ if ! npx tsc --noEmit > "$TMP_TSC" 2>&1; then
   echo ""
 fi
 
+# ── VITEST Y EL ROJO AJENO ──────────────────────────────────────────
+# La tolerancia de `tsc` no se puede copiar tal cual: un test que falla
+# puede estar fallando por un fichero STAGED aunque el test mismo no lo
+# esté, y separar eso pide el grafo de importaciones. Así que se tolera
+# sólo un caso **demostrablemente** seguro: cuando NADA de lo que va en
+# el commit puede ser cargado por un test — commits de documentación, de
+# `.md` o del propio hook. Ahí un vitest rojo no puede ser de este
+# commit, y punto. Si el commit lleva código, el rojo bloquea aunque sea
+# ajeno: es molesto y es correcto, porque la alternativa sería adivinar.
+puede_afectar_tests=$(staged | grep -vE '^docs/|^\.githooks/|\.md$' || true)
+
 echo "pre-commit: vitest run --changed"
-npx vitest run --changed --passWithNoTests
+if ! npx vitest run --changed --passWithNoTests > "$TMP_TSC" 2>&1; then
+  cat "$TMP_TSC"
+  if [ -n "$puede_afectar_tests" ]; then exit 1; fi
+  ajenos > "$TMP_AJENOS"
+  if [ ! -s "$TMP_AJENOS" ]; then exit 1; fi
+  echo ""
+  echo "  ⚠ vitest en rojo, pero este commit sólo lleva documentación:"
+  staged | sed 's/^/       /'
+  echo "     Nada de eso lo carga un test, así que el rojo NO es de este"
+  echo "     commit. Hay trabajo en vuelo de otra sesión en el árbol."
+  echo ""
+fi
 
 trap - EXIT
 limpia
