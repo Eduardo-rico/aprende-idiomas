@@ -230,3 +230,54 @@ export function revisarOrtografiaRu(texto: string, opts: { acentoPermitido?: boo
   }
   return out;
 }
+
+// ══════════════════════════════════════════════════════════════════════
+// EL ERROR SIMÉTRICO DE LA Ё, Y POR QUÉ ES UNA FUNCIÓN Y NO UNA BANDERA
+// ══════════════════════════════════════════════════════════════════════
+//
+// Las cuatro reglas de la ё del proyecto son: producir con ё siempre;
+// **ACEPTAR LAS DOS AL COMPARAR**; no plegar en el hash; y no usarla nunca
+// como pista. La segunda es la que este proyecto tiene DECLARADA Y AUSENTE
+// (§4.21 rumano): `plegarYo()` y `normalizarRespuestaRu()` existen aquí
+// arriba, con su doctrina escrita y con test propio, **y no las llama nadie
+// del producto**. La comparación de las tarjetas la hace
+// `lib/exercises/normalize.ts`, que pasa por `canonicalRo` —el
+// canonicalizador RUMANO— y no funde la ё. Comprobado el 2026-09-13 con un
+// grep sobre `lib` y `scripts`: las dos funciones sólo aparecen en su propio
+// test.
+//
+// Medido, y es lo que convierte esto en un fallo y no en un detalle:
+// `живёшь` sale **15** veces en la biblioteca y `живешь` **142**, o sea que
+// el 90 % de lo que el alumno lee escribe la forma sin ё; y de las 1.488
+// lecturas con apariciones medibles, **1.295 no escriben la ё nunca**. Un
+// ítem cuya clave lleve ё suspende a quien teclea lo que ha leído. Es el
+// error simétrico exacto: que ninguna respuesta correcta alternativa suspenda
+// a un alumno impecable.
+//
+// ⚠ Y POR QUÉ NO SE ARREGLA PLEGANDO EN `normalizeAnswer`, que es el arreglo
+// que parece obvio y sería inocuo para PT, RO y LA (no tienen ё): porque
+// `u1-yo-doble-ortografia` es un punto del inventario **cuyo contenido ES la
+// ё**, y plegarla en el comparador general taparía el rasgo examinado en el
+// único sitio donde se examina. Es «la normalización tapa el rasgo
+// examinado», que este proyecto ya pagó tres veces en rumano y una en ruso
+// —con el signo contrario, fabricando el hallazgo—. El arreglo bueno es un
+// plegado POR PUNTO, como el `sensibleACantidad` del latín, y montarlo no es
+// decisión de un lote.
+//
+// Mientras eso no exista, la variante se acepta ÍTEM POR ÍTEM y CALCULADA:
+// esta función. Está aquí y no en el lote porque la segunda copia de una
+// regla falla en la copia N+1 que nadie sincronizó.
+
+/** La variante sin ё de una forma, para ACEPTARLA como respuesta correcta.
+ *  Devuelve `[]` si la forma no lleva ё — nunca una cadena igual a la
+ *  original, porque una «alternativa» idéntica a la clave es un gate que no
+ *  puede fallar.
+ *
+ *  **Nunca para producir, nunca para hashear**: el `contentHash` no pliega la
+ *  ё a propósito (`все`/`всё` son dos palabras y fundirlas pagaría un MP3 que
+ *  dice la palabra equivocada). */
+export function variantesSinYo(forma: string): string[] {
+  const f = quitarAcento(forma);
+  if (!f.includes('ё')) return [];
+  return [plegarYo(f)];
+}

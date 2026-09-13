@@ -30,17 +30,66 @@ import { BLOCKS, ALL_CONCEPTS } from '../lib/data/languages/ru/curriculum';
 import { blocksDir } from '../lib/data/registry';
 import { hashKey } from './lib/cache';
 import { leccionParaPunto } from './lib/leccion-ru';
-import { ITEMS as A1, verificar as verificarA1, respuestaDe, alternativasDe, type ClozeRu } from './lotes/cloze-ru-a1';
+import * as A1 from './lotes/cloze-ru-a1';
+import * as A1B from './lotes/cloze-ru-a1b';
 
-const LOTES: Record<string, { items: ClozeRu[]; verificar: (xs: ClozeRu[]) => string[] }> = {
-  a1: { items: A1, verificar: verificarA1 },
+/** ⚠ EL REGISTRO ES GENÉRICO Y NO ESTÁ TIPADO AL LOTE 1, y el motivo importa.
+ *  La v0 importaba `respuestaDe` y `alternativasDe` de `cloze-ru-a1` **por
+ *  nombre y a nivel de módulo**, y las llamaba sobre el ítem de cualquier lote:
+ *  mientras hubo un solo lote eso era correcto y con el segundo habría llamado
+ *  a la máquina NOMINAL sobre un ítem VERBAL. No habría explotado —
+ *  `casillaNominal()` recibe un objeto sin `genero` y devuelve `null`— y el
+ *  publicador habría dicho «sin respuesta derivada» en los diez ítems, o peor,
+ *  habría derivado algo plausible. Es el mismo defecto que la elección de
+ *  lección: una expresión correcta con un solo caso delante.
+ *
+ *  Cada lote trae sus propias funciones y sus propias etiquetas. `Item` es
+ *  `unknown` a propósito: el publicador no sabe nada del ítem salvo `p` y `s`,
+ *  y todo lo que depende de la forma del ítem lo pone el lote. */
+interface LoteRu<T> {
+  items: T[];
+  verificar: (xs: T[]) => string[];
+  respuestaDe: (x: T) => string | null;
+  alternativasDe: (x: T) => string[];
+  /** El punto del inventario y la frase, que es lo único que el publicador lee
+   *  directamente del ítem. */
+  punto: (x: T) => string;
+  frase: (x: T) => string;
+  pista: (x: T) => string;
+  /** Las etiquetas propias del lote: el eje que el ítem instancia. Sin esto,
+   *  el publicador escribiría `caso-undefined` en un lote verbal. */
+  tags: (x: T) => string[];
+}
+
+/** El lote con su tipo BORRADO, que es lo único que el publicador necesita. El
+ *  casting ocurre UNA vez, aquí, y con el tipo del lote comprobado a la
+ *  entrada: cada entrada del registro se escribe con su `T` explícito, así que
+ *  un campo mal leído (`x.caso` en un lote verbal) es un error de compilación y
+ *  no un `caso-undefined` en una etiqueta publicada. */
+type LoteAnonimo = LoteRu<unknown>;
+const deLote = <T>(l: LoteRu<T>): LoteAnonimo => l as LoteAnonimo;
+
+const LOTES: Record<string, LoteAnonimo> = {
+  a1: deLote<A1.ClozeRu>({
+    items: A1.ITEMS, verificar: A1.verificar, respuestaDe: A1.respuestaDe,
+    alternativasDe: A1.alternativasDe,
+    punto: (x) => x.p, frase: (x) => x.s, pista: (x) => x.pista,
+    tags: (x) => [`caso-${x.caso}`, ...(x.frontera ? ['frontera-sobreaplicacion'] : [])],
+  }),
+  a1b: deLote<A1B.ClozeVerboRu>({
+    items: A1B.ITEMS, verificar: A1B.verificar, respuestaDe: A1B.respuestaDe,
+    alternativasDe: A1B.alternativasDe,
+    punto: (x) => x.p, frase: (x) => x.s, pista: (x) => x.pista,
+    tags: (x) => [`persona-${x.persona}`, `eje-${x.eje}`, ...(x.frontera ? [`frontera-${x.frontera.regla}`] : [])],
+  }),
 };
 
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
 const lote = arg('--lote') ?? '';
 const LOTE = LOTES[lote];
 if (!LOTE) { console.error(`Usa --lote con uno de: ${Object.keys(LOTES).join(', ')}`); process.exit(2); }
-const ITEMS = LOTE.items;
+const ITEMS: unknown[] = LOTE.items;
+const { respuestaDe, alternativasDe } = LOTE;
 const write = process.argv.includes('--write');
 // La FECHA del sello se CALCULA. Escrita a mano se le pone igual a todo lote
 // futuro, y un sello que miente sobre cuándo se certificó no responde a
@@ -63,31 +112,32 @@ if (fs.existsSync(BLOCKS_DIR)) for (const f of fs.readdirSync(BLOCKS_DIR).filter
 const porBloque = new Map<number, unknown[]>();
 const usados = new Set<string>();
 ITEMS.forEach((x, i) => {
-  const c = CONCEPTO.get(x.p);
-  if (!c) { problemas.push(`ítem ${i + 1}: el punto «${x.p}» no existe en el inventario`); return; }
+  const punto = LOTE.punto(x);
+  const c = CONCEPTO.get(punto);
+  if (!c) { problemas.push(`ítem ${i + 1}: el punto «${punto}» no existe en el inventario`); return; }
   const bloque = BLOCKS.find((b) => b.id === c.blockId);
-  if (!bloque) { problemas.push(`ítem ${i + 1}: el bloque ${c.blockId} de «${x.p}» no tiene lecciones declaradas`); return; }
+  if (!bloque) { problemas.push(`ítem ${i + 1}: el bloque ${c.blockId} de «${punto}» no tiene lecciones declaradas`); return; }
   // ⚠ DOS PASADAS, y la precedencia vive en `lib/leccion-ru.ts`: primero la
   // lección que declara EL PUNTO y sólo después la que declara un
   // prerrequisito. La expresión de una sola pasada que había aquí era correcta
   // mientras cada bloque tuviera una lección y se volvió incorrecta EN SILENCIO
   // al entrar b5 y b7 con dos cada uno — y el aviso de «lección por defecto»
   // usaba el mismo predicado, así que no podía delatarlo.
-  const elegida = leccionParaPunto(bloque.lessons, x.p, c.prereqs);
+  const elegida = leccionParaPunto(bloque.lessons, punto, c.prereqs);
   if (!elegida) { problemas.push(`ítem ${i + 1}: el bloque ${bloque.id} no tiene lecciones`); return; }
   const { leccion, via } = elegida;
   const answer = respuestaDe(x);
   if (!answer) { problemas.push(`ítem ${i + 1}: sin respuesta derivada`); return; }
-  const data = { sentence: x.s, blanks: [{ position: 0, answer, alternatives: alternativasDe(x) }], hintEs: x.pista };
+  const data = { sentence: LOTE.frase(x), blanks: [{ position: 0, answer, alternatives: alternativasDe(x) }], hintEs: LOTE.pista(x) };
   const id = hashKey({ type: 'fill_blank', data, variantOverrides: undefined, esContrast: undefined }).slice(0, 8);
-  if (via !== 'punto') porDefecto.push(`${id} (${x.p}) → ${leccion.id} [por ${via}]`);
-  const clave = x.s.toLowerCase().replace(/\s+/g, ' ').trim();
+  if (via !== 'punto') porDefecto.push(`${id} (${punto}) → ${leccion.id} [por ${via}]`);
+  const clave = LOTE.frase(x).toLowerCase().replace(/\s+/g, ' ').trim();
   if (yaEnCorpus.has(clave)) problemas.push(`${id}: la frase ya está publicada en ${yaEnCorpus.get(clave)}`);
   if (usados.has(clave)) problemas.push(`${id}: frase repetida dentro del lote`);
   usados.add(clave);
   const ex = {
-    id, blockId: bloque.id, lessonId: leccion.id, difficulty: 2, concepts: [x.p],
-    tags: [`ru-${lote}`, 'cloze-con-pista', `caso-${x.caso}`, ...(x.frontera ? ['frontera-sobreaplicacion'] : [])],
+    id, blockId: bloque.id, lessonId: leccion.id, difficulty: 2, concepts: [punto],
+    tags: [`ru-${lote}`, 'cloze-con-pista', ...LOTE.tags(x)],
     contentHash: hashKey({ type: 'fill_blank', data }),
     variantStatus: 'neutral',
     variantVerificacion: `Cloze derivado RU-${lote.toUpperCase()} (${HOY}): forma recalculada por paradigma-ru desde lexicon-a1; atestada en 7,7 M de palabras (scripts/corpus-ru.ts); ortografía y homóglifos por revisarOrtografiaRu; la ё comprobada sin fundir (candidatasConYo); revisado por linguista-adversarial-ru (agente, sin oído nativo). Responde a «¿la forma y la frase son ruso correcto?». NO certifica la VOZ: en ruso no hay ninguna voz validada y el acento no se escribe.`,
