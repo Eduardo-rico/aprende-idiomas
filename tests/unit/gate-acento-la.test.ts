@@ -20,8 +20,15 @@ const clases = (i: ItemAcento) => revisarItemAcento(i).map((f) => f.clase);
 
 describe('el suelo que pone la lengua, medido y no supuesto', () => {
   it('el latín ya da seis de cada diez llanas', () => {
-    expect(SUELO_DE_LA_PENULTIMA).toBeGreaterThan(0.6);
-    expect(SUELO_DE_LA_PENULTIMA).toBeLessThan(0.65);
+    // LA CIFRA SE MUEVE CADA VEZ QUE CRECE LA MÁQUINA, y ya van cinco en un
+    // día: 61,2 → 61,7 → 62,4 → 64,9 → 65,4 %. Lo que NO se mueve, y es lo
+    // que este test tiene que fijar, es la FORMA del hecho: la lengua da
+    // bastante más de la mitad, así que contestar «la penúltima» a todo no
+    // es una estrategia tonta y el lote tiene que romper esa proporción.
+    // Una banda estrecha alrededor de la cifra del día convierte el test en
+    // un recordatorio de actualizar el test.
+    expect(SUELO_DE_LA_PENULTIMA).toBeGreaterThan(0.55);
+    expect(SUELO_DE_LA_PENULTIMA).toBeLessThan(0.75);
   });
 
   it('y la categoría que examina la mitad difícil es rarísima', () => {

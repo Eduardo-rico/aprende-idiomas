@@ -255,6 +255,19 @@ export const ADJETIVOS_L1: EntradaAdjetivo[] = [
   // corpus, pero el lema sí (`anxius` ×3): una forma regular de un lema
   // atestiguado no es un invento, que es lo que el congelador ya declara.
   { lema: 'anxius', tema: 'anxi', glosa: 'angustiado, inquieto' },
+  // ── LOS POSESIVOS, EL 2026-09-12 ──
+  //
+  // `suus` es **el contraejemplo que el descriptor de `l1-uv-ij` da**
+  // —«"uolo"→"volo" pero "suus" se queda»— y no estaba en el lexicón, así
+  // que la excepción del punto no se podía examinar. Entran los cuatro
+  // porque van juntos y son de los más frecuentes del corpus: `suus` ×933,
+  // `meus` ×753, `tuus` ×506, `noster` ×495. Y hacen falta además para
+  // `l5-pro-drop`: el posesivo es lo que el latín SÍ pone donde el español
+  // pone artículo.
+  { lema: 'suus', tema: 'su', glosa: 'suyo' },
+  { lema: 'meus', tema: 'me', glosa: 'mío' },
+  { lema: 'tuus', tema: 'tu', glosa: 'tuyo' },
+  { lema: 'noster', tema: 'nostr', glosa: 'nuestro' },
 ];
 
 // ── LO QUE NO SE DECLINA, Y LOS COMPARATIVOS ─────────────────────────

@@ -1,8 +1,8 @@
 {
  "generado": "2026-09-13",
  "comoSeCuenta": "por LEMA más RASGOS del treebank, no por cadena: el corpus no lleva mácrones y buscar la cadena devuelve el mismo número para los dos miembros del par",
- "pares": 63,
- "miembrosConCuenta": 111,
+ "pares": 67,
+ "miembrosConCuenta": 119,
  "miembrosSinMapear": 16,
  "paresConUnMiembroACero": 19,
  "lista": {
@@ -635,6 +635,22 @@
     }
    ]
   },
+  "mea": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "mea",
+     "clave": "meus.f.nom.sg",
+     "n": 62
+    },
+    {
+     "forma": "meā",
+     "clave": "meus.f.abl.sg",
+     "n": 70
+    }
+   ]
+  },
   "metus": {
    "tipo": "morfologico",
    "vocal": "u",
@@ -760,6 +776,22 @@
      "forma": "ne",
      "clave": "ne.indecl",
      "n": null
+    }
+   ]
+  },
+  "nostra": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "nostra",
+     "clave": "noster.f.nom.sg",
+     "n": 35
+    },
+    {
+     "forma": "nostrā",
+     "clave": "noster.f.abl.sg",
+     "n": 44
     }
    ]
   },
@@ -923,6 +955,22 @@
     }
    ]
   },
+  "sua": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "sua",
+     "clave": "suus.f.nom.sg",
+     "n": 3
+    },
+    {
+     "forma": "suā",
+     "clave": "suus.f.abl.sg",
+     "n": 112
+    }
+   ]
+  },
   "terra": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -936,6 +984,22 @@
      "forma": "terrā",
      "clave": "terra.abl.sg",
      "n": 74
+    }
+   ]
+  },
+  "tua": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "tua",
+     "clave": "tuus.f.nom.sg",
+     "n": 68
+    },
+    {
+     "forma": "tuā",
+     "clave": "tuus.f.abl.sg",
+     "n": 59
     }
    ]
   },

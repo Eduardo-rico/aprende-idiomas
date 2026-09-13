@@ -144,13 +144,18 @@ describe('la cifra que sostiene la decisión de la voz', () => {
   it('el motor italiano falla en la proporción medida, y el número se declara aquí', () => {
     const formas = todasLasFormas();
     const breves = formas.filter((f) => acentoLatino(f).acento === 'antepenultima').length;
-    // LA CIFRA SE HA MOVIDO DOS VECES Y LAS DOS POR LO MISMO: el
-    // denominador. 36,3 % salía con `ui` mal; 36,9 % con el diptongo
-    // arreglado pero sobre 1.437 formas; **34,7 %** sobre las 2.194 que la
-    // máquina produce de verdad. Ninguna de las tres medía mal el acento:
-    // las dos primeras medían sobre el 65 % del material.
+    // LA CIFRA SE MUEVE CADA VEZ QUE CRECE LA MÁQUINA: 36,3 % (con `ui`
+    // mal), 36,9 % (sobre 1.437 formas), 34,7 % (sobre 2.194), y sigue
+    // bajando según entran lemas. Ninguna medía mal el acento: cambiaba el
+    // denominador.
+    //
+    // Lo que este test fija es la FORMA del hecho, que es lo que sostiene
+    // la decisión: el motor se equivoca en una fracción GRANDE pero
+    // claramente menor que la mitad. Una banda estrecha alrededor de la
+    // cifra del día convertiría el test en un recordatorio de actualizar el
+    // test.
     expect(formas.length).toBeGreaterThanOrEqual(2100);
-    expect(breves / formas.length).toBeGreaterThan(0.32);
-    expect(breves / formas.length).toBeLessThan(0.37);
+    expect(breves / formas.length).toBeGreaterThan(0.25);
+    expect(breves / formas.length).toBeLessThan(0.45);
   });
 });

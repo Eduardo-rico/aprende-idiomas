@@ -2,16 +2,16 @@
  "generado": "2026-09-13",
  "corpus": "la_perseus + la_proiel (UD)",
  "tokens": 227300,
- "formas": 3416,
- "sueloDeLaPenultima": 0.6492974238875878,
+ "formas": 3466,
+ "sueloDeLaPenultima": 0.6543566070398154,
  "reparto": {
   "monosilabo": {
    "total": 98,
    "atestiguadas": 96
   },
   "bisilabo": {
-   "total": 707,
-   "atestiguadas": 596
+   "total": 749,
+   "atestiguadas": 636
   },
   "breve": {
    "total": 1100,
@@ -22,11 +22,11 @@
    "atestiguadas": 142
   },
   "macron": {
-   "total": 982,
-   "atestiguadas": 412
+   "total": 990,
+   "atestiguadas": 420
   }
  },
- "posicionSobreAtestiguadas": 0.08114285714285714,
+ "posicionSobreAtestiguadas": 0.07897664071190211,
  "tabla": {
   "cum": {
    "silabas": [
@@ -19360,6 +19360,509 @@
    "tipo": "macron",
    "n": 0
   },
+  "suus": {
+   "silabas": [
+    "su",
+    "us"
+   ],
+   "tonica": "su",
+   "tipo": "bisilabo",
+   "n": 5
+  },
+  "suum": {
+   "silabas": [
+    "su",
+    "um"
+   ],
+   "tonica": "su",
+   "tipo": "bisilabo",
+   "n": 139
+  },
+  "suī": {
+   "silabas": [
+    "su",
+    "ī"
+   ],
+   "tonica": "su",
+   "tipo": "bisilabo",
+   "n": 64
+  },
+  "suō": {
+   "silabas": [
+    "su",
+    "ō"
+   ],
+   "tonica": "su",
+   "tipo": "bisilabo",
+   "n": 130
+  },
+  "sue": {
+   "silabas": [
+    "su",
+    "e"
+   ],
+   "tonica": "su",
+   "tipo": "bisilabo",
+   "n": 1
+  },
+  "suōs": {
+   "silabas": [
+    "su",
+    "ōs"
+   ],
+   "tonica": "su",
+   "tipo": "bisilabo",
+   "n": 118
+  },
+  "suōrum": {
+   "silabas": [
+    "su",
+    "ō",
+    "rum"
+   ],
+   "tonica": "ō",
+   "tipo": "macron",
+   "n": 11
+  },
+  "suīs": {
+   "silabas": [
+    "su",
+    "īs"
+   ],
+   "tonica": "su",
+   "tipo": "bisilabo",
+   "n": 212
+  },
+  "sua": {
+   "silabas": [
+    "su",
+    "a"
+   ],
+   "tonica": "su",
+   "tipo": "bisilabo",
+   "n": 188
+  },
+  "suam": {
+   "silabas": [
+    "su",
+    "am"
+   ],
+   "tonica": "su",
+   "tipo": "bisilabo",
+   "n": 184
+  },
+  "suae": {
+   "silabas": [
+    "su",
+    "ae"
+   ],
+   "tonica": "su",
+   "tipo": "bisilabo",
+   "n": 52
+  },
+  "suā": {
+   "silabas": [
+    "su",
+    "ā"
+   ],
+   "tonica": "su",
+   "tipo": "bisilabo",
+   "n": 188
+  },
+  "suās": {
+   "silabas": [
+    "su",
+    "ās"
+   ],
+   "tonica": "su",
+   "tipo": "bisilabo",
+   "n": 51
+  },
+  "suārum": {
+   "silabas": [
+    "su",
+    "ā",
+    "rum"
+   ],
+   "tonica": "ā",
+   "tipo": "macron",
+   "n": 8
+  },
+  "meus": {
+   "silabas": [
+    "me",
+    "us"
+   ],
+   "tonica": "me",
+   "tipo": "bisilabo",
+   "n": 86
+  },
+  "meum": {
+   "silabas": [
+    "me",
+    "um"
+   ],
+   "tonica": "me",
+   "tipo": "bisilabo",
+   "n": 152
+  },
+  "meī": {
+   "silabas": [
+    "me",
+    "ī"
+   ],
+   "tonica": "me",
+   "tipo": "bisilabo",
+   "n": 106
+  },
+  "meō": {
+   "silabas": [
+    "me",
+    "ō"
+   ],
+   "tonica": "me",
+   "tipo": "bisilabo",
+   "n": 126
+  },
+  "mee": {
+   "silabas": [
+    "me",
+    "e"
+   ],
+   "tonica": "me",
+   "tipo": "bisilabo",
+   "n": 0
+  },
+  "meōs": {
+   "silabas": [
+    "me",
+    "ōs"
+   ],
+   "tonica": "me",
+   "tipo": "bisilabo",
+   "n": 37
+  },
+  "meōrum": {
+   "silabas": [
+    "me",
+    "ō",
+    "rum"
+   ],
+   "tonica": "ō",
+   "tipo": "macron",
+   "n": 15
+  },
+  "meīs": {
+   "silabas": [
+    "me",
+    "īs"
+   ],
+   "tonica": "me",
+   "tipo": "bisilabo",
+   "n": 76
+  },
+  "mea": {
+   "silabas": [
+    "me",
+    "a"
+   ],
+   "tonica": "me",
+   "tipo": "bisilabo",
+   "n": 184
+  },
+  "meam": {
+   "silabas": [
+    "me",
+    "am"
+   ],
+   "tonica": "me",
+   "tipo": "bisilabo",
+   "n": 99
+  },
+  "meae": {
+   "silabas": [
+    "me",
+    "ae"
+   ],
+   "tonica": "me",
+   "tipo": "bisilabo",
+   "n": 55
+  },
+  "meā": {
+   "silabas": [
+    "me",
+    "ā"
+   ],
+   "tonica": "me",
+   "tipo": "bisilabo",
+   "n": 184
+  },
+  "meās": {
+   "silabas": [
+    "me",
+    "ās"
+   ],
+   "tonica": "me",
+   "tipo": "bisilabo",
+   "n": 27
+  },
+  "meārum": {
+   "silabas": [
+    "me",
+    "ā",
+    "rum"
+   ],
+   "tonica": "ā",
+   "tipo": "macron",
+   "n": 7
+  },
+  "tuus": {
+   "silabas": [
+    "tu",
+    "us"
+   ],
+   "tonica": "tu",
+   "tipo": "bisilabo",
+   "n": 60
+  },
+  "tuum": {
+   "silabas": [
+    "tu",
+    "um"
+   ],
+   "tonica": "tu",
+   "tipo": "bisilabo",
+   "n": 125
+  },
+  "tuī": {
+   "silabas": [
+    "tu",
+    "ī"
+   ],
+   "tonica": "tu",
+   "tipo": "bisilabo",
+   "n": 64
+  },
+  "tuō": {
+   "silabas": [
+    "tu",
+    "ō"
+   ],
+   "tonica": "tu",
+   "tipo": "bisilabo",
+   "n": 91
+  },
+  "tue": {
+   "silabas": [
+    "tu",
+    "e"
+   ],
+   "tonica": "tu",
+   "tipo": "bisilabo",
+   "n": 0
+  },
+  "tuōs": {
+   "silabas": [
+    "tu",
+    "ōs"
+   ],
+   "tonica": "tu",
+   "tipo": "bisilabo",
+   "n": 38
+  },
+  "tuōrum": {
+   "silabas": [
+    "tu",
+    "ō",
+    "rum"
+   ],
+   "tonica": "ō",
+   "tipo": "macron",
+   "n": 15
+  },
+  "tuīs": {
+   "silabas": [
+    "tu",
+    "īs"
+   ],
+   "tonica": "tu",
+   "tipo": "bisilabo",
+   "n": 62
+  },
+  "tua": {
+   "silabas": [
+    "tu",
+    "a"
+   ],
+   "tonica": "tu",
+   "tipo": "bisilabo",
+   "n": 166
+  },
+  "tuam": {
+   "silabas": [
+    "tu",
+    "am"
+   ],
+   "tonica": "tu",
+   "tipo": "bisilabo",
+   "n": 60
+  },
+  "tuae": {
+   "silabas": [
+    "tu",
+    "ae"
+   ],
+   "tonica": "tu",
+   "tipo": "bisilabo",
+   "n": 50
+  },
+  "tuā": {
+   "silabas": [
+    "tu",
+    "ā"
+   ],
+   "tonica": "tu",
+   "tipo": "bisilabo",
+   "n": 166
+  },
+  "tuās": {
+   "silabas": [
+    "tu",
+    "ās"
+   ],
+   "tonica": "tu",
+   "tipo": "bisilabo",
+   "n": 35
+  },
+  "tuārum": {
+   "silabas": [
+    "tu",
+    "ā",
+    "rum"
+   ],
+   "tonica": "ā",
+   "tipo": "macron",
+   "n": 4
+  },
+  "noster": {
+   "silabas": [
+    "nos",
+    "ter"
+   ],
+   "tonica": "nos",
+   "tipo": "bisilabo",
+   "n": 60
+  },
+  "nostrum": {
+   "silabas": [
+    "nos",
+    "trum"
+   ],
+   "tonica": "nos",
+   "tipo": "bisilabo",
+   "n": 100
+  },
+  "nostrī": {
+   "silabas": [
+    "nos",
+    "trī"
+   ],
+   "tonica": "nos",
+   "tipo": "bisilabo",
+   "n": 150
+  },
+  "nostrō": {
+   "silabas": [
+    "nos",
+    "trō"
+   ],
+   "tonica": "nos",
+   "tipo": "bisilabo",
+   "n": 75
+  },
+  "nostrōs": {
+   "silabas": [
+    "nos",
+    "trōs"
+   ],
+   "tonica": "nos",
+   "tipo": "bisilabo",
+   "n": 56
+  },
+  "nostrōrum": {
+   "silabas": [
+    "nos",
+    "trō",
+    "rum"
+   ],
+   "tonica": "trō",
+   "tipo": "macron",
+   "n": 24
+  },
+  "nostrīs": {
+   "silabas": [
+    "nos",
+    "trīs"
+   ],
+   "tonica": "nos",
+   "tipo": "bisilabo",
+   "n": 80
+  },
+  "nostra": {
+   "silabas": [
+    "nos",
+    "tra"
+   ],
+   "tonica": "nos",
+   "tipo": "bisilabo",
+   "n": 110
+  },
+  "nostram": {
+   "silabas": [
+    "nos",
+    "tram"
+   ],
+   "tonica": "nos",
+   "tipo": "bisilabo",
+   "n": 45
+  },
+  "nostrae": {
+   "silabas": [
+    "nos",
+    "trae"
+   ],
+   "tonica": "nos",
+   "tipo": "bisilabo",
+   "n": 45
+  },
+  "nostrā": {
+   "silabas": [
+    "nos",
+    "trā"
+   ],
+   "tonica": "nos",
+   "tipo": "bisilabo",
+   "n": 110
+  },
+  "nostrās": {
+   "silabas": [
+    "nos",
+    "trās"
+   ],
+   "tonica": "nos",
+   "tipo": "bisilabo",
+   "n": 14
+  },
+  "nostrārum": {
+   "silabas": [
+    "nos",
+    "trā",
+    "rum"
+   ],
+   "tonica": "trā",
+   "tipo": "macron",
+   "n": 4
+  },
   "arma": {
    "silabas": [
     "ar",
@@ -31804,15 +32307,6 @@
    "tipo": "monosilabo",
    "n": 1373
   },
-  "meī": {
-   "silabas": [
-    "me",
-    "ī"
-   ],
-   "tonica": "me",
-   "tipo": "bisilabo",
-   "n": 106
-  },
   "mihi": {
    "silabas": [
     "mi",
@@ -31838,15 +32332,6 @@
    "tipo": "monosilabo",
    "n": 866
   },
-  "tuī": {
-   "silabas": [
-    "tu",
-    "ī"
-   ],
-   "tonica": "tu",
-   "tipo": "bisilabo",
-   "n": 64
-  },
   "tibi": {
    "silabas": [
     "ti",
@@ -31864,15 +32349,6 @@
    "tipo": "monosilabo",
    "n": 460
   },
-  "nostrī": {
-   "silabas": [
-    "nos",
-    "trī"
-   ],
-   "tonica": "nos",
-   "tipo": "bisilabo",
-   "n": 150
-  },
   "nōbīs": {
    "silabas": [
     "nō",
@@ -31881,15 +32357,6 @@
    "tonica": "nō",
    "tipo": "bisilabo",
    "n": 323
-  },
-  "nostrum": {
-   "silabas": [
-    "nos",
-    "trum"
-   ],
-   "tonica": "nos",
-   "tipo": "bisilabo",
-   "n": 100
   },
   "vōs": {
    "silabas": [
@@ -31933,15 +32400,6 @@
    "tonica": "sē",
    "tipo": "monosilabo",
    "n": 789
-  },
-  "suī": {
-   "silabas": [
-    "su",
-    "ī"
-   ],
-   "tonica": "su",
-   "tipo": "bisilabo",
-   "n": 64
   },
   "sibi": {
    "silabas": [
