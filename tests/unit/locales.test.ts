@@ -13,8 +13,10 @@ describe("lib/locales", () => {
   // código. Es la forma barata de «una regla copiada se desincroniza»: la
   // copia que nadie recuerda es la que falla. Se dejan las dos porque
   // afirman cosas distintas del mismo hecho, con un puntero cruzado.
-  it("LANGUAGES contains pt/ru/ro/cs/la/grc (and nothing else)", () => {
-    expect([...LANGUAGES].sort()).toEqual(["cs", "grc", "la", "pt", "ro", "ru"]);
+  it("LANGUAGES contains pt/ru/ro/cs/la/el/grc (and nothing else)", () => {
+    // Fase H (2026-09-13): entra `el`, el griego MODERNO, por decisión de
+    // Edu. `grc` se queda aparcado a cero: son DOS lenguas.
+    expect([...LANGUAGES].sort()).toEqual(["cs", "el", "grc", "la", "pt", "ro", "ru"]);
   });
 
   it("DEFAULT_LANGUAGE is pt (the only language with full content today)", () => {

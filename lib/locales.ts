@@ -28,7 +28,19 @@
 //      HACER con una lengua viva; no hay transacción cotidiana en latín.
 //   3. No tienen bandera, y eso es un dato, no una omisión: ver
 //      `LANG_FLAGS`.
-export const LANGUAGES = ["pt", "ru", "ro", "cs", "la", "grc"] as const;
+// Fase H (2026-09-13): entra `el`, el griego MODERNO, por decisión de Edu
+// —«griego es griego moderno»—. Es la lengua que él quiso desde el
+// principio; `grc` lo añadió una sesión anterior junto al latín y **se
+// queda aparcado a cero**, también por decisión suya («los dos, moderno
+// primero»).
+//
+// ⚠ `el` y `grc` son DOS LENGUAS, no dos nombres de una. Tratarlas como
+// una sería «un sello responde a una pregunta» en su forma más cara: el
+// moderno es una lengua viva con niveles MCER y hablantes que aprueban el
+// material; el antiguo no tiene ninguna de las dos cosas. Comparten
+// alfabeto y poco más — el moderno es MONOTÓNICO desde 1982, así que su
+// ortografía no lleva espíritus ni los tres acentos del politónico.
+export const LANGUAGES = ["pt", "ru", "ro", "cs", "la", "el", "grc"] as const;
 export type LanguageId = (typeof LANGUAGES)[number];
 export const DEFAULT_LANGUAGE: LanguageId = "pt";
 
@@ -44,6 +56,7 @@ export const LANG_LABELS: Record<LanguageId, string> = {
   ro: "Română",
   cs: "Čeština",
   la: "Latina",
+  el: "Ελληνικά",
   grc: "Ἑλληνική",
 };
 
@@ -62,6 +75,7 @@ export const LANG_FLAGS: Record<LanguageId, string> = {
   ro: "🇷🇴",
   cs: "🇨🇿",
   la: "🏛️",
+  el: "🇬🇷",
   grc: "🏺",
 };
 
@@ -136,6 +150,7 @@ export const LANG_LECCION: Record<LanguageId, LangLeccion> = {
   cs: { ...SIN_VARIANTES, cuerpo: "" },
   ru: { ...SIN_VARIANTES, cuerpo: "" },
   la: { ...SIN_VARIANTES, cuerpo: "" },
+  el: { ...SIN_VARIANTES, cuerpo: "" },
   grc: { ...SIN_VARIANTES, cuerpo: "" },
 };
 
@@ -175,6 +190,14 @@ export const LANG_CHROME: Record<LanguageId, LangChrome> = {
     title: "Disce Latine",
     description: "Latina para hispanohablantes",
     nav: { estudar: "Disce", livro: "Liber", historias: "Fabulae", ler: "Lege", progreso: "Progressus", cuenta: "Ratio" },
+  },
+  // El griego MODERNO, monotónico: una sola tilde y ningún espíritu. Es
+  // lengua viva, así que su chrome SÍ tiene quien lo apruebe — al revés
+  // que el latín y el griego antiguo de aquí abajo.
+  el: {
+    title: "Μάθε Ελληνικά",
+    description: "Ελληνικά para hispanohablantes",
+    nav: { estudar: "Μάθε", livro: "Βιβλίο", historias: "Ιστορίες", ler: "Διάβασε", progreso: "Πρόοδος", cuenta: "Λογαριασμός" },
   },
   grc: {
     title: "Μάνθανε Ἑλληνιστί",

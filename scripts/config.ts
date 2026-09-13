@@ -80,6 +80,10 @@ export const LANGUAGE_BOOST: Record<LanguageId, string> = {
   // DECLARADA: italiana con pronunciación eclesiástica para el latín,
   // griega moderna con la tradición escolar para el griego antiguo.
   la: '',
+  // El griego MODERNO sí es lengua viva y el motor lo soporta, pero el
+  // boost queda vacío hasta que alguien lo verifique contra /v1/models:
+  // declararlo de memoria sería escribir una cifra sin leerla.
+  el: '',
   grc: '',
   ru: '',
   ro: '',

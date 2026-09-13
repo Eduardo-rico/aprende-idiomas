@@ -12,9 +12,9 @@ import { describe, it, expect } from "vitest";
 import { LANGUAGES, hasLocale, LANG_LABELS, LANG_FLAGS, type LanguageId } from "@/lib/locales";
 
 describe("Phase 5 locales", () => {
-  it("6 idiomas registrados: pt, ru, ro, cs, la, grc", () => {
-    expect(LANGUAGES).toHaveLength(6);
-    expect([...LANGUAGES].sort()).toEqual(["cs", "grc", "la", "pt", "ro", "ru"]);
+  it("7 idiomas registrados: pt, ru, ro, cs, la, el, grc", () => {
+    expect(LANGUAGES).toHaveLength(7);
+    expect([...LANGUAGES].sort()).toEqual(["cs", "el", "grc", "la", "pt", "ro", "ru"]);
   });
 
   it("todos los langs pasan hasLocale", () => {
@@ -35,6 +35,7 @@ describe("Phase 5 locales", () => {
     expect(LANG_LABELS.cs).toBe("Čeština");
     expect(LANG_LABELS.la).toBe("Latina");
     expect(LANG_LABELS.grc).toBe("Ἑλληνική");
+    expect(LANG_LABELS.el).toBe("Ελληνικά");
   });
 
   it("LANG_FLAGS tiene una marca para cada uno (bandera si hay estado)", () => {

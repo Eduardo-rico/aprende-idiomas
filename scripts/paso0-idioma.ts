@@ -47,7 +47,11 @@ import { IDS_PELDANO } from './lib/peldanos-antiguos';
 
 export const TITULO: Record<LanguageId, string> = {
   pt: 'Portugués', ro: 'Rumano', cs: 'Checo', ru: 'Ruso',
-  la: 'Latín', grc: 'Griego antiguo',
+  // Los dos griegos van con apellido SIEMPRE, en los dos. «Griego» a
+  // secas en un informe es la confusión que este proyecto ya cometió:
+  // durante diez días se construyó `grc` creyendo que era lo que Edu
+  // había pedido, y lo que quería era el moderno.
+  el: 'Griego moderno', la: 'Latín', grc: 'Griego antiguo',
 };
 
 // ── LOS NIVELES SON POR LENGUA (fase G, 2026-09-03) ───────────────────
@@ -101,7 +105,11 @@ const PELDANOS_GRC = IDS_PELDANO.grc;
  *  record cubra todo `LanguageId`, de modo que añadir una lengua vuelva a
  *  fallar aquí en typecheck. */
 export const NIVELES_DE = {
-  pt: MCER, ru: MCER, ro: MCER, cs: MCER,
+  // El griego MODERNO es lengua VIVA, así que usa el MCER como las otras
+  // cuatro. Es la diferencia que lo separa de `grc`: el MCER describe lo
+  // que alguien puede HACER con una lengua, y no hay transacción
+  // cotidiana en griego antiguo.
+  pt: MCER, ru: MCER, ro: MCER, cs: MCER, el: MCER,
   la: PELDANOS_LA, grc: PELDANOS_GRC,
 } satisfies Record<LanguageId, readonly string[]>;
 

@@ -89,12 +89,30 @@ describe('los peldaños no son intercambiables entre lenguas', () => {
     }
   });
 
-  it('`grc` es el griego ANTIGUO y no colisiona con el moderno', () => {
-    // `el` es el griego moderno, declarado fase posterior. El día que
-    // entre, este test es lo que impide que alguien lo meta como `grc`.
+  it('`el` y `grc` son DOS lenguas, y ninguna se cuela como la otra', () => {
+    // Este test decía `not.toContain('el')` — «el moderno aún no
+    // existe»—, y el 2026-09-13 entró por decisión de Edu («griego es
+    // griego moderno»; «los dos, moderno primero»). O sea que su
+    // afirmación caducó **porque el trabajo se hizo**, que es el caso
+    // del control anclado a una carencia transitoria.
+    //
+    // Lo que NO caduca es su propósito: que las dos no se confundan.
+    // Eso se comprueba ahora por lo que las distingue de verdad.
     expect(LANGUAGES).toContain('grc');
-    expect(LANGUAGES as readonly string[]).not.toContain('el');
+    expect(LANGUAGES).toContain('el');
+
+    // 1. Se nombran con apellido las dos. «Griego» a secas es la
+    //    confusión que costó diez días de construir la lengua que no era.
     expect(TITULO.grc).toBe('Griego antiguo');
+    expect(TITULO.el).toBe('Griego moderno');
+    expect(TITULO.el).not.toBe(TITULO.grc);
+
+    // 2. Y no comparten niveles: el moderno es lengua VIVA y usa el
+    //    MCER; el antiguo usa peldaños, porque el MCER describe lo que
+    //    alguien puede HACER con una lengua y no hay transacción
+    //    cotidiana en griego antiguo.
+    expect(NIVELES_DE.el).toEqual(NIVELES_DE.pt);
+    expect(NIVELES_DE.grc).not.toEqual(NIVELES_DE.el);
   });
 });
 
