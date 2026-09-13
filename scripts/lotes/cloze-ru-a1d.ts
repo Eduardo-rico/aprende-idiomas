@@ -15,13 +15,14 @@
 //   · **LA CASILLA ES INVARIANTE EN LOS DOCE, Y ESO NO ES §D5.** El punto ES
 //     una casilla —el nominativo plural—, así que exigirle que varíe sería
 //     pedirle que midiera otro punto. Lo que tiene que variar, y varía, es la
-//     CLASE del lema: seis ejes y seis colas distintas (-ы, -и, -а, -я, -ья y
-//     un supletivo). Escrito antes de escribir un ítem, porque la lectura
+//     CLASE del lema: seis ejes y CINCO colas distintas (-ы, -и, -а, -ья y un
+//     supletivo; la sexta, `-я`, no es escribible con este lexicón y su
+//     evidencia negativa está más abajo). Escrito antes de escribir un ítem, porque la lectura
 //     contraria —«doce ítems en la misma casilla son uno»— es la que un gate
 //     heredado haría.
 //   · **EL NÚMERO VA DADO EN LA LENGUA**, por el verbo en plural que precede
-//     al hueco (`стояли`, `лежали`, `упоминались`, `были`, `пришли`,
-//     `собрались`). Sin él, el nominativo SINGULAR es el lema y el ítem se
+//     al hueco (`стояли`, `лежали`, `виднелись`, `были`, `пришли`,
+//     `собрались`, los seis atestados en la biblioteca). Sin él, el nominativo SINGULAR es el lema y el ítem se
 //     contestaría copiando el paréntesis. Ése es el ANCLA de este lote y el
 //     gate lo comprueba delante del hueco.
 //   · **EL GÉNERO VA DADO EN LA PISTA Y EN NINGÚN OTRO SITIO, y eso es un
