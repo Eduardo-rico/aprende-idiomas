@@ -33,6 +33,7 @@ import { leccionParaPunto } from './lib/leccion-ru';
 import * as A1 from './lotes/cloze-ru-a1';
 import * as A1B from './lotes/cloze-ru-a1b';
 import * as A1C from './lotes/cloze-ru-a1c';
+import * as A1D from './lotes/cloze-ru-a1d';
 
 /** ⚠ EL REGISTRO ES GENÉRICO Y NO ESTÁ TIPADO AL LOTE 1, y el motivo importa.
  *  La v0 importaba `respuestaDe` y `alternativasDe` de `cloze-ru-a1` **por
@@ -93,6 +94,16 @@ const LOTES: Record<string, LoteAnonimo> = {
     alternativasDe: A1C.alternativasDe,
     punto: (x) => x.p, frase: (x) => A1C.frase(x), pista: (x) => x.pista,
     tags: (x) => [`caso-${x.caso}`, `num-${x.num}`, `eje-${x.eje}`, ...(x.frontera ? [`frontera-${x.frontera.regla}`] : [])],
+  }),
+  // El CUARTO lote tampoco escribe su frase: la compone `frase()` metiendo el
+  // lema en el paréntesis. Y su `caso` no se etiqueta porque no varía —el punto
+  // ES el nominativo plural—: una etiqueta constante no distingue nada y
+  // fingiría una dimensión que el lote no tiene.
+  a1d: deLote<A1D.ClozePlRu>({
+    items: A1D.ITEMS, verificar: A1D.verificar, respuestaDe: A1D.respuestaDe,
+    alternativasDe: A1D.alternativasDe,
+    punto: (x) => x.p, frase: (x) => A1D.frase(x), pista: (x) => x.pista,
+    tags: (x) => [`eje-${x.eje}`, ...(x.frontera ? [`frontera-${x.frontera.regla}`] : [])],
   }),
 };
 
