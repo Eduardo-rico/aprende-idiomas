@@ -7,21 +7,51 @@
 # suite entera queda para el cierre de sesión y antes de push.
 # Activar con: git config core.hooksPath .githooks
 #
-# ── CHECKOUT COMPARTIDO (2026-09-03) ────────────────────────────────
+# ── CHECKOUT COMPARTIDO ─────────────────────────────────────────────
 # `tsc` mira TODO el repo y `--changed` mira el ÁRBOL DE TRABAJO, no lo
-# que va en el commit. Con dos sesiones a la vez, eso significa que
-# ninguna puede commitear mientras la otra está a medias, aunque sus
-# rutas sean disjuntas.
+# que va en el commit. Con tres sesiones a la vez, eso significaba que
+# ninguna podía commitear mientras otra estaba a medias, aunque sus rutas
+# fueran disjuntas.
 #
-# La comprobación amplia SE QUEDA, y a propósito: esta noche cazó siete
+# LA COMPROBACIÓN AMPLIA SE QUEDA, y a propósito: el 3-sep cazó siete
 # errores de `tsc` en un fichero cuyas propias pruebas daban 10/10, porque
 # vitest no hace typecheck. Estrecharla a lo staged habría dejado pasar
 # justo eso.
 #
-# Lo que se arregla es otra cosa: el coste real no fue la espera, fue que
-# una sesión atribuyó el rojo a la ventana equivocada y usó `--no-verify`
-# sobre un defecto propio. Así que al fallar, el hook DICE de quién es.
+# ── POR QUÉ SE TOLERA EL ROJO AJENO (2026-09-12) ────────────────────
+# La salida hasta hoy era commitear desde un worktree limpio. Funciona,
+# pero cuesta **874 MB por worktree** medidos, y este Mac vive entre 0,2 y
+# 3 GB libres: hoy el disco llegó a 202 MB con dos worktrees olvidados a
+# la vez. Una maniobra que hay que repetir cada hora y que cuesta casi un
+# giga no es una salida, es una avería con instrucciones.
+#
+# Lo que se tolera NO es «rojo ajeno» en general: es el caso en que
+# **TODOS** los errores caen en ficheros que este commit no contiene. Y
+# eso es correcto por construcción, no una concesión:
+#
+#   · un fichero sin nada en el índice NO entra en el árbol que produce
+#     este commit — si está `untracked` no está, y si está modificado sin
+#     stagear, el commit lleva la versión de HEAD;
+#   · si algo staged DEPENDE de ese fichero roto, `tsc` reporta también un
+#     error EN el fichero staged, y entonces esto falla como siempre.
+#
+# O sea: se valida **el árbol que el commit produce**, que es la pregunta
+# correcta, en vez del directorio de trabajo, que es donde vive el trabajo
+# en vuelo de otros. Si algún error cae en un fichero con cambios en el
+# índice, el commit se rechaza igual que antes.
 set -e
+
+staged() { git diff --cached --name-only; }
+# Ajeno = tiene cambios en el árbol o no está trackeado, Y NO tiene nada
+# en el índice. Un fichero staged con modificaciones extra NO es ajeno:
+# parte de él va en el commit.
+ajenos() {
+  { git diff --name-only; git ls-files --others --exclude-standard; } \
+    | sort -u | comm -23 - "$TMP_STAGED"
+}
+
+TMP_STAGED=$(mktemp); TMP_TSC=$(mktemp); TMP_AJENOS=$(mktemp)
+limpia() { rm -f "$TMP_STAGED" "$TMP_TSC" "$TMP_AJENOS"; }
 
 de_quien_es() {
   echo ""
@@ -29,28 +59,47 @@ de_quien_es() {
   echo "  pre-commit EN ROJO — antes de tocar nada, mira de quién es."
   echo ""
   echo "  EN TU COMMIT:"
-  git diff --cached --name-only | sed 's/^/      /'
-  ajenos=$(git diff --name-only; git ls-files --others --exclude-standard)
-  if [ -n "$ajenos" ]; then
+  staged | sed 's/^/      /'
+  aj=$(ajenos)
+  if [ -n "$aj" ]; then
     echo ""
     echo "  EN EL ÁRBOL PERO NO EN TU COMMIT (otra sesión, probablemente):"
-    printf '%s\n' "$ajenos" | sed 's/^/      /'
+    printf '%s\n' "$aj" | sed 's/^/      /'
     echo ""
-    echo "  Si el fallo sale de ahí NO es tuyo, y --no-verify no lo"
-    echo "  arregla: lo esconde. Espera a que esa sesión lo ponga en"
-    echo "  verde, o díselo. Corre el test que falla y LEE el mensaje"
-    echo "  antes de atribuirlo."
+    echo "  Si el fallo sale de ahí, este hook YA LO HABRÍA DEJADO PASAR."
+    echo "  Que esté en rojo significa que al menos un error cae en un"
+    echo "  fichero que SÍ va en tu commit. --no-verify no lo arregla:"
+    echo "  lo esconde. Corre el test que falla y LEE el mensaje."
   else
     echo ""
     echo "  El árbol no tiene nada de nadie más: el rojo es tuyo."
   fi
   echo "──────────────────────────────────────────────────────────────"
+  limpia
 }
 trap de_quien_es EXIT
 
+staged | sort -u > "$TMP_STAGED"
+
 echo "pre-commit: tsc --noEmit"
-npx tsc --noEmit
+if ! npx tsc --noEmit > "$TMP_TSC" 2>&1; then
+  cat "$TMP_TSC"
+  # Ficheros que aparecen en los errores, en formato `ruta(l,c): error TSxxxx`
+  culpables=$(sed -n 's/^\([^(]*\)(.*): error TS.*/\1/p' "$TMP_TSC" | sort -u)
+  if [ -z "$culpables" ]; then exit 1; fi
+  ajenos > "$TMP_AJENOS"
+  propios=$(printf '%s\n' "$culpables" | comm -23 - "$TMP_AJENOS")
+  if [ -n "$propios" ]; then exit 1; fi
+  echo ""
+  echo "  ⚠ tsc en rojo, pero TODOS los errores caen en ficheros que este"
+  echo "     commit NO contiene (trabajo en vuelo de otra sesión):"
+  printf '%s\n' "$culpables" | sed 's/^/       /'
+  echo "     El árbol que produce este commit NO los lleva, así que sigue."
+  echo ""
+fi
+
 echo "pre-commit: vitest run --changed"
 npx vitest run --changed --passWithNoTests
 
 trap - EXIT
+limpia
