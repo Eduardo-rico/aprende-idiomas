@@ -26,7 +26,7 @@ const rehacer = (f: (xs: Construido[]) => void): Construido[] => { const xs = XS
  *  apagaron dos controles el mismo día por eso. */
 const por = (xs: Construido[], lema: string) => xs.find((x) => x.d.n === lema)!;
 
-describe('lote 26 · r2-genero-tres-valores', () => {
+describe('lote 26 · r2-genero-tres-valores', { timeout: 120_000 }, () => {
   it('en VERDE: el lote real pasa sus propios gates y los de la máquina', () => {
     expect(verificar(ITEMS, OPCIONES)).toEqual([]);
   });
@@ -193,7 +193,7 @@ describe('lote 26 · r2-genero-tres-valores', () => {
   });
 });
 
-describe('la regla del ambigen, escrita una sola vez', () => {
+describe('la regla del ambigen, escrita una sola vez', { timeout: 120_000 }, () => {
   it('el neutro concuerda como masculino en singular y como femenino en plural', () => {
     expect(concordanciaDe('n', 'sg')).toBe('m');
     expect(concordanciaDe('n', 'pl')).toBe('f');

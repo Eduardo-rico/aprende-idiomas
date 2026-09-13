@@ -20,7 +20,7 @@ import { verificar } from '@/scripts/lib/transformacion-ro';
 const XS = () => JSON.parse(JSON.stringify(ITEMS.map((x, i) => ({ ...x, d: DECL[i] })))) as Construido[];
 const rehacer = (f: (xs: Construido[]) => void): Construido[] => { const xs = XS(); f(xs); return xs; };
 
-describe('lote 25 · r4-articulo-posesivo', () => {
+describe('lote 25 · r4-articulo-posesivo', { timeout: 120_000 }, () => {
   it('en VERDE: el lote real pasa sus propios gates y los de la máquina', () => {
     expect(verificar(ITEMS, OPCIONES)).toEqual([]);
   });

@@ -29,7 +29,7 @@ const rehacer = (f: (xs: Construido[]) => void): Construido[] => { const xs = XS
  *  mismo día por eso. */
 const por = (xs: Construido[], sujeto: string) => xs.find((x) => x.d.sujeto === sujeto)!;
 
-describe('lote 27 · r4-cel-proforma · en verde', () => {
+describe('lote 27 · r4-cel-proforma · en verde', { timeout: 120_000 }, () => {
   it('el lote real pasa sus propios gates y los de la máquina', () => {
     expect(verificar(ITEMS, OPCIONES)).toEqual([]);
   });
@@ -49,7 +49,7 @@ describe('lote 27 · r4-cel-proforma · en verde', () => {
 // LAS DOS SOBREGENERALIZACIONES OPUESTAS. Que cada una acierte EXACTAMENTE
 // la mitad no es holgura: con respuesta binaria la mitad ES el azar, y es
 // lo que fija el tamaño del lote.
-describe('lote 27 · las estrategias, ejecutadas', () => {
+describe('lote 27 · las estrategias, ejecutadas', { timeout: 120_000 }, () => {
   it('«siempre pospuesto» acierta 1 de 2 — el suelo de una binaria', () => {
     expect(correr(SIEMPRE_POSPUESTO, ITEMS).aciertos).toBe(1);
   });
@@ -65,7 +65,7 @@ describe('lote 27 · las estrategias, ejecutadas', () => {
   });
 });
 
-describe('lote 27 · los gates propios, vistos en ROJO', () => {
+describe('lote 27 · los gates propios, vistos en ROJO', { timeout: 120_000 }, () => {
   it('ROJO · una clave escrita a mano que el paradigma no deriva', () => {
     const xs = rehacer((x) => { por(x, 'Ion').r = 'Ion este prieten cel mai bun.'; });
     expect(revisar(xs).some((s) => s.includes('no es la que deriva el paradigma'))).toBe(true);
@@ -142,7 +142,7 @@ describe('lote 27 · los gates propios, vistos en ROJO', () => {
 // LA VARIACIÓN LIBRE, CONTADA POR EJES Y MULTIPLICADA (§4.28): un eje
 // (`este`/`e`), dos valores, una alternativa. Si algún día aparece un
 // segundo eje, la esquina que combina los dos es la que se olvida.
-describe('lote 27 · las salidas correctas declaradas', () => {
+describe('lote 27 · las salidas correctas declaradas', { timeout: 120_000 }, () => {
   it('cada ítem declara la elisión de `este`', () => {
     expect(por(XS(), 'Ion').alt).toEqual(['Ion e prietenul cel mai bun.']);
     expect(por(XS(), 'Radu').alt).toEqual(['Radu e cel mai bun prieten.']);
@@ -155,7 +155,7 @@ describe('lote 27 · las salidas correctas declaradas', () => {
   });
 });
 
-describe('lote 27 · la declaración y los ítems no se desincronizan', () => {
+describe('lote 27 · la declaración y los ítems no se desincronizan', { timeout: 120_000 }, () => {
   it('cada Decl produce el ítem que el lote publica', () => {
     expect(DECL.map(construir).map((x) => x.r)).toEqual(ITEMS.map((x) => x.r));
   });

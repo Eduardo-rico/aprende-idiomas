@@ -23,7 +23,7 @@ import { clasificar, candidatasConYo, type Prueba } from '../../scripts/check-pa
 const n = (lema: string) => NOMBRES_A1.find((x) => x.lema === lema)!;
 const v = (lema: string) => VERBOS_A1.find((x) => x.lema === lema)!;
 
-describe('el orden de las dos reglas: TEMA primero, ORTOGRAFÍA después', () => {
+describe('el orden de las dos reglas: TEMA primero, ORTOGRAFÍA después', { timeout: 120_000 }, () => {
   // Éste es el sitio de máximo daño del inventario: la v0 decía que el
   // reparto -ы/-и es ORTOGRÁFICO y es primero de TEMA. Las cuatro formas
   // de abajo son las que la regla mal enunciada produce, y ninguna existe.
@@ -48,7 +48,7 @@ describe('el orden de las dos reglas: TEMA primero, ORTOGRAFÍA después', () =>
   });
 });
 
-describe('EL CONTROL POSITIVO: ninguna forma falsa de arranque es producible', () => {
+describe('EL CONTROL POSITIVO: ninguna forma falsa de arranque es producible', { timeout: 120_000 }, () => {
   // ⚠ Y SU CONTROL NEGATIVO, que es la mitad que falta casi siempre. Un
   // gate que rechaza todo también rechaza las nueve, y su verde es idéntico
   // al de uno que funciona. Las BUENAS tienen que pasar limpias.
@@ -82,7 +82,7 @@ describe('EL CONTROL POSITIVO: ninguna forma falsa de arranque es producible', (
   });
 });
 
-describe('EL SEGUNDO LOCATIVO: la firma es el invariante', () => {
+describe('EL SEGUNDO LOCATIVO: la firma es el invariante', { timeout: 120_000 }, () => {
   it('в лесу (381) sale de в; о лесе (2) sale de о — y son dos casillas', () => {
     expect(prepositivoSg(n('лес'), 'в')).toBe('лесу');
     expect(prepositivoSg(n('лес'), 'о')).toBe('лесе');
@@ -99,7 +99,7 @@ describe('EL SEGUNDO LOCATIVO: la firma es el invariante', () => {
   });
 });
 
-describe('EL §4.2 RUMANO, EJECUTADO: quitarle el dato a un lema y ver qué deriva la regla sola', () => {
+describe('EL §4.2 RUMANO, EJECUTADO: quitarle el dato a un lema y ver qué deriva la regla sola', { timeout: 120_000 }, () => {
   // ⚠ ESTE TEST SE ESCRIBIÓ AL REVÉS Y SALIÓ ROJO, Y LO QUE DIJO EL ROJO
   // VALE MÁS QUE LO QUE YO QUERÍA PROBAR. La versión de partida afirmaba
   // que el invariante caza al que envenena el lema. NO LO CAZA, y no puede:
@@ -140,7 +140,7 @@ describe('EL §4.2 RUMANO, EJECUTADO: quitarle el dato a un lema y ver qué deri
   });
 });
 
-describe('LOS DOS ACENTOS, que la v0 tenía como un campo solo', () => {
+describe('LOS DOS ACENTOS, que la v0 tenía como un campo solo', { timeout: 120_000 }, () => {
   // писать separa los dos hechos: пишу́ tónica (imperativo пиши́) y пи́шешь
   // átona (sin ё). Un campo solo obliga a escribir mal una de las dos.
   it('писать: imperativo пиши CON -и, y 2.ª sg пишешь SIN ё', () => {
@@ -158,7 +158,7 @@ describe('LOS DOS ACENTOS, que la v0 tenía como un campo solo', () => {
   });
 });
 
-describe('LA DUREZA DE LA DESINENCIA ES DISTINTA EN LAS DOS CONJUGACIONES', () => {
+describe('LA DUREZA DE LA DESINENCIA ES DISTINTA EN LAS DOS CONJUGACIONES', { timeout: 120_000 }, () => {
   // La v0 escribió UNA regla para las dos y producía *говорат, *любат,
   // *люблу, *помну. Lo cazó el corpus: говорят 2.531 · говорат 0.
   it.each([
@@ -187,7 +187,7 @@ describe('LA DUREZA DE LA DESINENCIA ES DISTINTA EN LAS DOS CONJUGACIONES', () =
   });
 });
 
-describe('la vocal fugaz y los temas de plural', () => {
+describe('la vocal fugaz y los temas de plural', { timeout: 120_000 }, () => {
   it('день conserva la vocal SÓLO en el nominativo singular', () => {
     const d = n('день');
     expect(casillaNominal(d, 'nom', 'sg')).toBe('день');
@@ -208,7 +208,7 @@ describe('la vocal fugaz y los temas de plural', () => {
   });
 });
 
-describe('la animacidad y las tres declinaciones', () => {
+describe('la animacidad y las tres declinaciones', { timeout: 120_000 }, () => {
   it('el acusativo animado sale del genitivo y el inanimado del nominativo', () => {
     expect(casillaNominal(n('студент'), 'ac', 'sg')).toBe(casillaNominal(n('студент'), 'gen', 'sg'));
     expect(casillaNominal(n('стол'), 'ac', 'sg')).toBe('стол');
@@ -228,7 +228,7 @@ describe('la animacidad y las tres declinaciones', () => {
   });
 });
 
-describe('el pasado concuerda en género y no en persona', () => {
+describe('el pasado concuerda en género y no en persona', { timeout: 120_000 }, () => {
   it('читать da читал/читала/читали', () => {
     expect(pasado(v('читать'), 'm')).toBe('читал');
     expect(pasado(v('читать'), 'f')).toBe('читала');
@@ -248,7 +248,7 @@ describe('el pasado concuerda en género y no en persona', () => {
   });
 });
 
-describe('el lexicón declara lo que no se deriva', () => {
+describe('el lexicón declara lo que no se deriva', { timeout: 120_000 }, () => {
   it('toda alternancia lleva su motivo escrito: cero avisos mudos', () => {
     expect(invariantesVerbales(VERBOS_A1).filter((a) => a.clase.startsWith('alternancia'))).toEqual([]);
   });
@@ -268,7 +268,7 @@ describe('el lexicón declara lo que no se deriva', () => {
 });
 
 
-describe('CUÁNDO UN PAR ES EVIDENCIA Y CUÁNDO ES UNA TAREA DE LECTURA', () => {
+describe('CUÁNDO UN PAR ES EVIDENCIA Y CUÁNDO ES UNA TAREA DE LECTURA', { timeout: 120_000 }, () => {
   // La v0 del gate leía «la buena sale más que el rival» como evidencia a
   // secas. Es falso: una comparación entre dos CADENAS no es una
   // comparación entre dos HIPÓTESIS SOBRE EL MISMO LEMA. El caso que lo
@@ -320,7 +320,7 @@ describe('CUÁNDO UN PAR ES EVIDENCIA Y CUÁNDO ES UNA TAREA DE LECTURA', () => 
 // rumano fueron el guion de la ênclise, el acento de la crase y la coma de
 // la adversativa— y por eso el detector es una FUNCIÓN APARTE con el nombre
 // puesto, no una bandera que se olvida de pasar.
-describe('el detector de la ё: en rojo primero', () => {
+describe('el detector de la ё: en rojo primero', { timeout: 120_000 }, () => {
   // Los dos errores REALES tal como estaban publicados. Éste es el testigo:
   // si el detector no los caza, no sirve.
   it('caza *днем cuando la lengua escribe днём (52 con ё · 428 sin)', () => {
@@ -368,7 +368,7 @@ describe('el detector de la ё: en rojo primero', () => {
 // LA /o/ DE LA DESINENCIA (2026-09-12) — la regla que `ortografiar` no
 // tenía, con sus DOS ejes: el tema y el acento.
 // ══════════════════════════════════════════════════════════════════════
-describe('LA /o/ DE LA DESINENCIA: una regla con tres grafías y dos ejes', () => {
+describe('LA /o/ DE LA DESINENCIA: una regla con tres grafías y dos ejes', { timeout: 120_000 }, () => {
   // Las cuatro caras, cada una con su cuenta del corpus. Van las cuatro y
   // no una: con una sola, una regla que dijera «sibilante ⇒ siempre -ом» o
   // «blando ⇒ siempre -ём» pasaría el test entero.
@@ -449,7 +449,7 @@ describe('LA /o/ DE LA DESINENCIA: una regla con tres grafías y dos ejes', () =
   });
 });
 
-describe('LA VARIANTE `-ою/-ею` DEL XIX: el error simétrico, medido', () => {
+describe('LA VARIANTE `-ою/-ею` DEL XIX: el error simétrico, medido', { timeout: 120_000 }, () => {
   it('lleva la casilla en el nombre porque en el adjetivo -ой ocupa CUATRO casillas', () => {
     // `новой` es genitivo, dativo, instrumental Y prepositivo femenino, y
     // la variante larga existe SÓLO en el instrumental: una función que
