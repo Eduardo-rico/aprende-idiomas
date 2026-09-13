@@ -2,13 +2,13 @@
  "generado": "2026-09-13",
  "corpus": "UD Latin (scripts/.cache/treebanks)",
  "tokens": 227301,
- "formasDelDominio": 10969,
- "formasAtestiguadas": 2638,
- "formasAtestiguadasComoSubjuntivo": 452,
+ "formasDelDominio": 12167,
+ "formasAtestiguadas": 2874,
+ "formasAtestiguadasComoSubjuntivo": 501,
  "formasAtestiguadasPorParticipio": {
-  "presente": 98,
-  "perfecto": 107,
-  "futuro": 43
+  "presente": 125,
+  "perfecto": 150,
+  "futuro": 53
  },
  "tabla": {
   "cum": {
@@ -7980,6 +7980,820 @@
   "portantēs": {
    "part": 2,
    "partPres": 2
+  },
+  "sequor": {
+   "ind": 2
+  },
+  "sequeris": {
+   "ind": 1
+  },
+  "sequere": {
+   "ind": 1,
+   "imp": 13
+  },
+  "sequitur": {
+   "ind": 13
+  },
+  "sequimur": {
+   "ind": 1
+  },
+  "sequiminī": {
+   "imp": 2
+  },
+  "sequuntur": {
+   "ind": 8
+  },
+  "sequēbātur": {
+   "ind": 14
+  },
+  "sequēbantur": {
+   "ind": 7
+  },
+  "sequar": {
+   "ind": 3
+  },
+  "sequēris": {
+   "ind": 1
+  },
+  "sequēre": {
+   "ind": 1,
+   "imp": 13
+  },
+  "sequētur": {
+   "ind": 2
+  },
+  "sequēmur": {
+   "ind": 4
+  },
+  "sequentur": {
+   "ind": 1
+  },
+  "sequendī": {
+   "part": 1
+  },
+  "sequī": {
+   "inf": 15
+  },
+  "sequātur": {
+   "sub": 5
+  },
+  "sequāmur": {
+   "sub": 2
+  },
+  "sequantur": {
+   "sub": 3
+  },
+  "sequerētur": {
+   "sub": 2
+  },
+  "sequēns": {
+   "part": 2,
+   "partPres": 2
+  },
+  "sequentem": {
+   "part": 1,
+   "partPres": 1
+  },
+  "sequentis": {
+   "part": 1,
+   "partPres": 1
+  },
+  "sequentī": {
+   "nominal": 14,
+   "part": 1,
+   "partPres": 1
+  },
+  "sequentēs": {
+   "part": 4,
+   "partPres": 3
+  },
+  "sequentibus": {
+   "part": 3,
+   "partPres": 3
+  },
+  "secūtus": {
+   "part": 10,
+   "partPast": 9
+  },
+  "secūtī": {
+   "part": 28,
+   "partPast": 28
+  },
+  "secūtōs": {
+   "part": 1,
+   "partPast": 1
+  },
+  "secūta": {
+   "part": 4,
+   "partPast": 4
+  },
+  "secūtae": {
+   "part": 10,
+   "partPast": 9
+  },
+  "secūtā": {
+   "part": 4,
+   "partPast": 4
+  },
+  "loquor": {
+   "ind": 26
+  },
+  "loqueris": {
+   "ind": 4
+  },
+  "loquere": {
+   "imp": 2
+  },
+  "loquitur": {
+   "ind": 31
+  },
+  "loquimur": {
+   "ind": 11
+  },
+  "loquiminī": {
+   "imp": 3,
+   "ind": 1
+  },
+  "loquuntur": {
+   "ind": 5
+  },
+  "loquēbar": {
+   "ind": 1
+  },
+  "loquēbātur": {
+   "ind": 27
+  },
+  "loquēbāmur": {
+   "ind": 1
+  },
+  "loquēbantur": {
+   "ind": 7
+  },
+  "loquar": {
+   "sub": 7,
+   "ind": 3
+  },
+  "loquēris": {
+   "ind": 4
+  },
+  "loquēre": {
+   "imp": 2
+  },
+  "loquētur": {
+   "ind": 4
+  },
+  "loquentur": {
+   "ind": 2
+  },
+  "loquendī": {
+   "part": 1,
+   "ger": 2
+  },
+  "loquendō": {
+   "part": 1
+  },
+  "loquī": {
+   "inf": 47
+  },
+  "loquātur": {
+   "sub": 6
+  },
+  "loquāmur": {
+   "sub": 1
+  },
+  "loquāminī": {
+   "sub": 3
+  },
+  "loquantur": {
+   "sub": 2
+  },
+  "loquerētur": {
+   "sub": 6
+  },
+  "loquerentur": {
+   "sub": 4
+  },
+  "loquēns": {
+   "part": 5,
+   "partPres": 5
+  },
+  "loquentem": {
+   "part": 4,
+   "partPres": 4
+  },
+  "loquentis": {
+   "part": 1,
+   "partPres": 1
+  },
+  "loquentēs": {
+   "part": 13,
+   "partPres": 13
+  },
+  "loquentium": {
+   "part": 2,
+   "partPres": 1
+  },
+  "loquentibus": {
+   "part": 2,
+   "partPres": 2
+  },
+  "loquente": {
+   "part": 13,
+   "partPres": 13
+  },
+  "locūtūrum": {
+   "part": 1
+  },
+  "locūtus": {
+   "part": 66,
+   "partPast": 63
+  },
+  "locūtum": {
+   "part": 3,
+   "partPast": 3
+  },
+  "locūtī": {
+   "part": 12,
+   "partPast": 12
+  },
+  "locūta": {
+   "part": 3,
+   "partPast": 3
+  },
+  "locūtam": {
+   "part": 1
+  },
+  "locūtā": {
+   "part": 3,
+   "partPast": 3
+  },
+  "patior": {
+   "ind": 6
+  },
+  "patitur": {
+   "ind": 9
+  },
+  "patimur": {
+   "ind": 5
+  },
+  "patiminī": {
+   "ind": 2
+  },
+  "patiuntur": {
+   "ind": 7
+  },
+  "patiēbātur": {
+   "ind": 1
+  },
+  "patiar": {
+   "ind": 7,
+   "sub": 1
+  },
+  "patiēris": {
+   "ind": 2
+  },
+  "patiētur": {
+   "ind": 3
+  },
+  "patiēminī": {
+   "ind": 1
+  },
+  "patientur": {
+   "ind": 1
+  },
+  "patī": {
+   "inf": 20
+  },
+  "patiāris": {
+   "sub": 1
+  },
+  "patiāre": {
+   "sub": 2
+  },
+  "patiātur": {
+   "sub": 4
+  },
+  "patiāminī": {
+   "sub": 1
+  },
+  "patiantur": {
+   "sub": 6
+  },
+  "paterer": {
+   "sub": 1
+  },
+  "paterētur": {
+   "sub": 2
+  },
+  "paterēminī": {
+   "sub": 1
+  },
+  "paterentur": {
+   "sub": 1
+  },
+  "patiēns": {
+   "part": 4,
+   "partPres": 1
+  },
+  "patientem": {
+   "part": 1,
+   "partPres": 1
+  },
+  "patientī": {
+   "part": 1,
+   "partPres": 1
+  },
+  "patientēs": {
+   "part": 1,
+   "partPres": 1,
+   "nominal": 1
+  },
+  "patientia": {
+   "nominal": 15
+  },
+  "passūrus": {
+   "part": 2,
+   "partFut": 2
+  },
+  "passūrōs": {
+   "part": 1,
+   "partFut": 1
+  },
+  "passus": {
+   "nominal": 7,
+   "part": 9,
+   "partPast": 9
+  },
+  "passum": {
+   "nominal": 1
+  },
+  "passī": {
+   "part": 6,
+   "partPast": 6
+  },
+  "passīs": {
+   "part": 3,
+   "partPast": 2
+  },
+  "passa": {
+   "part": 1,
+   "partPast": 1
+  },
+  "passam": {
+   "part": 1
+  },
+  "passā": {
+   "part": 1,
+   "partPast": 1
+  },
+  "ūtor": {
+   "ind": 4
+  },
+  "ūtitur": {
+   "ind": 1
+  },
+  "ūtimur": {
+   "ind": 3
+  },
+  "ūtiminī": {
+   "ind": 1
+  },
+  "ūtuntur": {
+   "ind": 8
+  },
+  "ūtēbātur": {
+   "ind": 4
+  },
+  "ūtēbantur": {
+   "ind": 2
+  },
+  "ūtar": {
+   "sub": 1,
+   "ind": 1
+  },
+  "ūtēre": {
+   "imp": 3
+  },
+  "ūtēmur": {
+   "ind": 2
+  },
+  "ūtentur": {
+   "ind": 1
+  },
+  "ūtendum": {
+   "otro": 5
+  },
+  "ūtī": {
+   "inf": 31,
+   "otro": 57
+  },
+  "ūtātur": {
+   "sub": 5
+  },
+  "ūtāmur": {
+   "sub": 3
+  },
+  "ūtantur": {
+   "sub": 4
+  },
+  "ūterētur": {
+   "sub": 5
+  },
+  "ūterēmur": {
+   "sub": 2
+  },
+  "ūterentur": {
+   "sub": 5
+  },
+  "ūtēns": {
+   "part": 1,
+   "partPres": 1
+  },
+  "ūsūrus": {
+   "part": 1,
+   "partFut": 1
+  },
+  "ūsūrum": {
+   "part": 4,
+   "partFut": 3
+  },
+  "ūsūrōs": {
+   "part": 1,
+   "partFut": 1
+  },
+  "ūsūrīs": {
+   "nominal": 1
+  },
+  "ūsūra": {
+   "nominal": 3
+  },
+  "ūsūrā": {
+   "nominal": 3
+  },
+  "ūsūrās": {
+   "nominal": 1
+  },
+  "ūsus": {
+   "nominal": 16,
+   "part": 11,
+   "partPast": 8
+  },
+  "ūsum": {
+   "nominal": 13
+  },
+  "ūsī": {
+   "part": 9,
+   "partPast": 8
+  },
+  "ūsōs": {
+   "part": 1,
+   "partPast": 1
+  },
+  "morior": {
+   "ind": 1
+  },
+  "moreris": {
+   "sub": 1
+  },
+  "moritur": {
+   "ind": 8
+  },
+  "morimur": {
+   "ind": 3
+  },
+  "moriuntur": {
+   "ind": 2
+  },
+  "moriēbātur": {
+   "ind": 1
+  },
+  "moriar": {
+   "sub": 1,
+   "ind": 1
+  },
+  "moriētur": {
+   "ind": 1
+  },
+  "moriēmur": {
+   "ind": 1
+  },
+  "moriēminī": {
+   "ind": 3
+  },
+  "morī": {
+   "inf": 16
+  },
+  "moriātur": {
+   "sub": 6
+  },
+  "moriāmur": {
+   "sub": 1
+  },
+  "morerētur": {
+   "sub": 3
+  },
+  "morerentur": {
+   "sub": 1
+  },
+  "moriēns": {
+   "part": 2
+  },
+  "morientēs": {
+   "part": 2,
+   "partPres": 2
+  },
+  "moritūrus": {
+   "part": 4,
+   "partFut": 4
+  },
+  "moritūra": {
+   "part": 1,
+   "partFut": 1
+  },
+  "moritūrā": {
+   "part": 1,
+   "partFut": 1
+  },
+  "mortuus": {
+   "part": 39,
+   "nominal": 10,
+   "partPast": 38
+  },
+  "mortuum": {
+   "nominal": 3,
+   "part": 5,
+   "partPast": 5
+  },
+  "mortuī": {
+   "nominal": 21,
+   "part": 10,
+   "partPast": 10
+  },
+  "mortuō": {
+   "part": 3,
+   "partPast": 3
+  },
+  "mortuōs": {
+   "nominal": 13
+  },
+  "mortuōrum": {
+   "nominal": 17
+  },
+  "mortuīs": {
+   "nominal": 44,
+   "part": 2,
+   "partPast": 2
+  },
+  "mortua": {
+   "nominal": 1,
+   "part": 9,
+   "partPast": 9
+  },
+  "mortuam": {
+   "part": 2,
+   "nominal": 1,
+   "partPast": 1
+  },
+  "mortuae": {
+   "part": 1,
+   "partPast": 1
+  },
+  "mortuā": {
+   "nominal": 1,
+   "part": 9,
+   "partPast": 9
+  },
+  "hortor": {
+   "ind": 3
+  },
+  "hortāris": {
+   "ind": 4
+  },
+  "hortāre": {
+   "ind": 1
+  },
+  "hortātur": {
+   "ind": 6
+  },
+  "hortantur": {
+   "ind": 2
+  },
+  "hortābar": {
+   "ind": 1
+  },
+  "hortābātur": {
+   "ind": 1
+  },
+  "hortābantur": {
+   "ind": 1
+  },
+  "hortārī": {
+   "inf": 2
+  },
+  "horter": {
+   "sub": 1
+  },
+  "hortēre": {
+   "sub": 2
+  },
+  "hortētur": {
+   "sub": 1
+  },
+  "hortārer": {
+   "sub": 2
+  },
+  "hortantibus": {
+   "part": 2,
+   "partPres": 1
+  },
+  "hortātus": {
+   "part": 5,
+   "partPast": 5
+  },
+  "proficīscere": {
+   "imp": 3
+  },
+  "proficīscitur": {
+   "ind": 10
+  },
+  "proficīscuntur": {
+   "ind": 2
+  },
+  "proficīscēbar": {
+   "ind": 2
+  },
+  "proficīscar": {
+   "ind": 4
+  },
+  "proficīscēre": {
+   "imp": 3
+  },
+  "proficīscēmur": {
+   "ind": 1
+  },
+  "proficīscendum": {
+   "ger": 2
+  },
+  "proficīscī": {
+   "inf": 23
+  },
+  "proficīscāris": {
+   "sub": 1
+  },
+  "proficīscāre": {
+   "sub": 3
+  },
+  "proficīscantur": {
+   "sub": 3
+  },
+  "proficīscerer": {
+   "sub": 1
+  },
+  "proficīscerētur": {
+   "sub": 4
+  },
+  "proficīscerēmur": {
+   "sub": 1
+  },
+  "proficīscerentur": {
+   "sub": 1
+  },
+  "proficīscēns": {
+   "part": 4,
+   "partPres": 4
+  },
+  "proficīscentis": {
+   "part": 2,
+   "partPres": 2
+  },
+  "proficīscentī": {
+   "part": 1,
+   "partPres": 1
+  },
+  "proficīscentēs": {
+   "part": 1,
+   "partPres": 1
+  },
+  "proficīscente": {
+   "part": 1,
+   "partPres": 1
+  },
+  "profectūrus": {
+   "part": 2,
+   "partFut": 2
+  },
+  "profectūrum": {
+   "part": 1,
+   "partFut": 1
+  },
+  "profectus": {
+   "part": 40,
+   "partPast": 40
+  },
+  "profectum": {
+   "part": 10,
+   "partPast": 9,
+   "nominal": 2
+  },
+  "profectī": {
+   "part": 11,
+   "partPast": 11
+  },
+  "profectō": {
+   "otro": 22
+  },
+  "profectōs": {
+   "part": 1,
+   "partPast": 1
+  },
+  "profecta": {
+   "part": 1,
+   "partPast": 1
+  },
+  "profectae": {
+   "part": 2,
+   "partPast": 2
+  },
+  "profectā": {
+   "part": 1,
+   "partPast": 1
+  },
+  "nāscitur": {
+   "ind": 6
+  },
+  "nāscuntur": {
+   "ind": 6
+  },
+  "nāscēbātur": {
+   "ind": 2
+  },
+  "nāscētur": {
+   "ind": 2
+  },
+  "nāscendī": {
+   "part": 1
+  },
+  "nāscī": {
+   "inf": 8
+  },
+  "nāscātur": {
+   "sub": 3
+  },
+  "nāscantur": {
+   "sub": 1
+  },
+  "nāscerer": {
+   "sub": 1
+  },
+  "nāscerētur": {
+   "sub": 3
+  },
+  "nāscēns": {
+   "part": 1,
+   "partPres": 1
+  },
+  "nāscentibus": {
+   "part": 1,
+   "partPres": 1
+  },
+  "nātus": {
+   "part": 24,
+   "nominal": 1,
+   "partPast": 20
+  },
+  "nātum": {
+   "part": 7,
+   "nominal": 1,
+   "partPast": 5
+  },
+  "nātī": {
+   "part": 9,
+   "partPast": 8
+  },
+  "nāte": {
+   "nominal": 1
+  },
+  "nātōs": {
+   "part": 5,
+   "partPast": 3,
+   "nominal": 1
+  },
+  "nātīs": {
+   "part": 1,
+   "partPast": 1
+  },
+  "nāta": {
+   "nominal": 2,
+   "part": 6,
+   "partPast": 6
+  },
+  "nātam": {
+   "nominal": 1
+  },
+  "nātā": {
+   "nominal": 2,
+   "part": 6,
+   "partPast": 6
   },
   "melior": {
    "nominal": 10

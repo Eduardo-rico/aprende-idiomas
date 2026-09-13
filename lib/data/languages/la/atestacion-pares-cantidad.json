@@ -1,9 +1,9 @@
 {
  "generado": "2026-09-13",
  "comoSeCuenta": "por LEMA más RASGOS del treebank, no por cadena: el corpus no lleva mácrones y buscar la cadena devuelve el mismo número para los dos miembros del par",
- "pares": 272,
+ "pares": 292,
  "miembrosConCuenta": 247,
- "miembrosSinMapear": 302,
+ "miembrosSinMapear": 342,
  "paresConUnMiembroACero": 110,
  "lista": {
   "acerrima": {
@@ -1718,6 +1718,38 @@
     }
    ]
   },
+  "hortata": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "hortāta",
+     "clave": "hortor.dep-part.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "hortātā",
+     "clave": "hortor.dep-part.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "hortatura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "hortātūra",
+     "clave": "hortor.dep-part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "hortātūrā",
+     "clave": "hortor.dep-part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
   "ierimus": {
    "tipo": "morfologico",
    "vocal": "i",
@@ -2464,6 +2496,38 @@
     }
    ]
   },
+  "locuta": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "locūta",
+     "clave": "loquor.dep-part.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "locūtā",
+     "clave": "loquor.dep-part.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "locutura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "locūtūra",
+     "clave": "loquor.dep-part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "locūtūrā",
+     "clave": "loquor.dep-part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
   "longa": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -2492,6 +2556,22 @@
     {
      "forma": "longissimā",
      "clave": "longus.sup.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "loqueris": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "loqueris",
+     "clave": "loquor.dep.presente.2sg",
+     "n": null
+    },
+    {
+     "forma": "loquēris",
+     "clave": "loquor.dep.futuro.2sg",
      "n": null
     }
    ]
@@ -2885,6 +2965,86 @@
     }
    ]
   },
+  "mortua": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "mortua",
+     "clave": "morior.dep-part.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "mortuā",
+     "clave": "morior.dep-part.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "mortuura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "mortuūra",
+     "clave": "morior.dep-part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "mortuūrā",
+     "clave": "morior.dep-part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "nasceris": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "nāsceris",
+     "clave": "nāscor.dep.presente.2sg",
+     "n": null
+    },
+    {
+     "forma": "nāscēris",
+     "clave": "nāscor.dep.futuro.2sg",
+     "n": null
+    }
+   ]
+  },
+  "nata": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "nāta",
+     "clave": "nāscor.dep-part.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "nātā",
+     "clave": "nāscor.dep-part.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "natura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "nātūra",
+     "clave": "nāscor.dep-part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "nātūrā",
+     "clave": "nāscor.dep-part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
   "nauta": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -3010,6 +3170,38 @@
      "forma": "parvā",
      "clave": "parvus.f.abl.sg",
      "n": 5
+    }
+   ]
+  },
+  "passa": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "passa",
+     "clave": "patior.dep-part.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "passā",
+     "clave": "patior.dep-part.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "passura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "passūra",
+     "clave": "patior.dep-part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "passūrā",
+     "clave": "patior.dep-part-fut.f.abl.sg",
+     "n": null
     }
    ]
   },
@@ -3154,6 +3346,54 @@
      "forma": "prīmā",
      "clave": "prīmus.f.abl.sg",
      "n": 19
+    }
+   ]
+  },
+  "profecta": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "profecta",
+     "clave": "proficīscor.dep-part.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "profectā",
+     "clave": "proficīscor.dep-part.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "profectura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "profectūra",
+     "clave": "proficīscor.dep-part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "profectūrā",
+     "clave": "proficīscor.dep-part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "proficisceris": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "proficīsceris",
+     "clave": "proficīscor.dep.presente.2sg",
+     "n": null
+    },
+    {
+     "forma": "proficīscēris",
+     "clave": "proficīscor.dep.futuro.2sg",
+     "n": null
     }
    ]
   },
@@ -3514,6 +3754,38 @@
     }
    ]
   },
+  "secuta": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "secūta",
+     "clave": "sequor.dep-part.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "secūtā",
+     "clave": "sequor.dep-part.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "secutura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "secūtūra",
+     "clave": "sequor.dep-part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "secūtūrā",
+     "clave": "sequor.dep-part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
   "senatus": {
    "tipo": "morfologico",
    "vocal": "u",
@@ -3527,6 +3799,22 @@
      "forma": "senātūs",
      "clave": "senātus.gen.sg",
      "n": 48
+    }
+   ]
+  },
+  "sequeris": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "sequeris",
+     "clave": "sequor.dep.presente.2sg",
+     "n": null
+    },
+    {
+     "forma": "sequēris",
+     "clave": "sequor.dep.futuro.2sg",
+     "n": null
     }
    ]
   },
@@ -3895,6 +4183,38 @@
      "forma": "tuleritis",
      "clave": "ferō.futuro-perfecto.2pl",
      "n": 0
+    }
+   ]
+  },
+  "usa": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "ūsa",
+     "clave": "ūtor.dep-part.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "ūsā",
+     "clave": "ūtor.dep-part.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "usura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "ūsūra",
+     "clave": "ūtor.dep-part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "ūsūrā",
+     "clave": "ūtor.dep-part-fut.f.abl.sg",
+     "n": null
     }
    ]
   },

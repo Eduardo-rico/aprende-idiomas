@@ -37,11 +37,22 @@ describe('el suelo que pone la lengua, medido y no supuesto', () => {
     // formas atestiguadas y el 0,7 % de los tokens. Corregido en el
     // inventario el 2026-09-12.
     //
-    // La primera versión de este test ponía 0,06 como techo, porque la
-    // cifra entonces era 3,8 % — y esa cifra salía de un enumerador que
-    // miraba tres tablas de diez. El techo va ahora en 0,10, que deja sitio
-    // a la medida y sigue estando lejísimos de «la mitad».
-    expect(POSICION_EN_LA_LENGUA).toBeLessThan(0.10);
+    // ESTE TECHO SE HA ROTO DOS VECES, Y LAS DOS POR LO MISMO.
+    //
+    // La primera versión ponía 0,06 porque la cifra era entonces 3,8 %, con
+    // un enumerador que miraba tres tablas de diez. Se subió a 0,10 «que
+    // deja sitio a la medida», que es exactamente el error: 0,10 estaba a
+    // ras del 9,97 % de aquel día. El 2026-09-12 entraron los deponentes al
+    // dominio, la cifra pasó a 10,16 % y el test se puso rojo sin que nada
+    // estuviera mal.
+    //
+    // Un techo puesto contra la cifra medida se rompe cada vez que la
+    // máquina crece, y este proyecto tiene esa regla escrita desde antes.
+    // El techo va ahora en 0,20: lo que este test afirma es que la
+    // categoría es RARA frente al «la mitad de las palabras» del descriptor,
+    // y 0,20 sigue estando a un factor de 2,5 de esa afirmación mientras
+    // deja al dominio crecer sin falsos rojos.
+    expect(POSICION_EN_LA_LENGUA).toBeLessThan(0.20);
     expect(POSICION_EN_LA_LENGUA).toBeGreaterThan(0.04);
   });
 });

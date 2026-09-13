@@ -50,6 +50,12 @@ import { IRREGULARES_L1 as IRR } from './irregulares';
 import { ADJETIVOS_L1 as ADJ } from './lexicon-l1';
 import { ADJETIVOS_3A as ADJ3, temaDelAdjetivo } from './adjetivos-3a';
 import { gradosDe, declinarComparativo } from './grado';
+import {
+  DEPONENTES_L1, paradigmaDeponente, participioDelDeponente, subjuntivoDelDeponente,
+  participioPresenteDelDeponente, participioFuturoDelDeponente, imperativoDelDeponente,
+  gerundioDelDeponente, segundaEnRe,
+  TIEMPOS_SUBJ as TIEMPOS_SUBJ_DEP, PERSONAS_SUBJ as PERSONAS_SUBJ_DEP,
+} from './deponentes';
 
 export interface FormaDeL1 { clave: string; forma: string; tabla: string }
 
@@ -63,6 +69,11 @@ export const TABLAS_QUE_PRODUCEN_FORMAS = [
   // gritos: 126 entradas y 584 tokens, la tercera clase de hueco por tamaño
   // y la primera de las que dependen de una máquina que no existía.
   'COMPARATIVOS', 'SUPERLATIVOS',
+  // Los deponentes entran el 2026-09-12 con `deponentes.ts`. No van en
+  // `VERBOS_L1` porque no tienen activa: meterlos ahí habría hecho que
+  // `conjugar()` produjera `*sequō` y que todos los gates que iteran la
+  // lista vieran un verbo que no existe.
+  'DEPONENTES_L1',
 ] as const;
 
 export function todasLasFormasDeL1(): FormaDeL1[] {
@@ -209,6 +220,59 @@ export function todasLasFormasDeL1(): FormaDeL1[] {
     const pp = participioPresente(v);
     for (const [c, f] of Object.entries(paradigmaAdjetivo3a(pp)))
       out.push({ clave: `${v.lema}.part-pres.${c}`, forma: f, tabla: 'PARTICIPIOS' });
+  }
+
+  // ══ LOS DEPONENTES ═════════════════════════════════════════════════
+  //
+  // Su paradigma ES el pasivo de la activa que nunca existió, así que sale
+  // de la máquina que ya estaba. Y su participio de perfecto —`secūtus`,
+  // con sentido ACTIVO— es la excepción que `l8-tres-participios` declara y
+  // no pudo examinar con material de `VERBOS_L1`.
+  for (const d of DEPONENTES_L1) {
+    for (const [c, f] of Object.entries(paradigmaDeponente(d))) {
+      out.push({ clave: `${d.lema}.dep.${c}`, forma: f, tabla: 'DEPONENTES_L1' });
+      // La 2.ª del singular pasiva tiene dos formas y la máquina general
+      // sólo daba una: `sequeris` y `sequere`.
+      const alt = segundaEnRe(f);
+      if (alt) out.push({ clave: `${d.lema}.dep.${c}-alt`, forma: alt, tabla: 'DEPONENTES_L1' });
+    }
+    for (const [c, f] of Object.entries(gerundioDelDeponente(d)))
+      out.push({ clave: `${d.lema}.dep-ger.${c}`, forma: f, tabla: 'DEPONENTES_L1' });
+    out.push({ clave: `${d.lema}.dep.inf`, forma: d.infinitivo, tabla: 'DEPONENTES_L1' });
+    // El SUBJUNTIVO, el participio de PRESENTE y el de FUTURO, y el
+    // imperativo. Los pidió la auditoría inversa en cuanto los deponentes
+    // entraron: 89 entradas y 235 tokens —`loquātur`, `loquentēs`,
+    // `ūsūrum`, `sequere`— que salen de la misma entrada ficticia.
+    for (const t of TIEMPOS_SUBJ_DEP)
+      for (const per of PERSONAS_SUBJ_DEP) {
+        const f = subjuntivoDelDeponente(d, t, per);
+        if (!f) continue;
+        out.push({ clave: `${d.lema}.dep-subj.${t}.${per}`, forma: f, tabla: 'DEPONENTES_L1' });
+        const alt = segundaEnRe(f);
+        if (alt) out.push({ clave: `${d.lema}.dep-subj.${t}.${per}-alt`, forma: alt, tabla: 'DEPONENTES_L1' });
+      }
+    for (const [c, f] of Object.entries(paradigmaAdjetivo3a(participioPresenteDelDeponente(d))))
+      out.push({ clave: `${d.lema}.dep-part-pres.${c}`, forma: f, tabla: 'DEPONENTES_L1' });
+    const fut = participioFuturoDelDeponente(d);
+    if (fut) {
+      const comoFut = { lema: fut, tema: fut.replace(/us$/, ''), glosa: d.glosa };
+      for (const g of ['m', 'f', 'n'] as const)
+        for (const num of ['sg', 'pl'] as const)
+          for (const c of ORDEN_CASOS)
+            out.push({ clave: `${d.lema}.dep-part-fut.${g}.${c}.${num}`, forma: declinarAdjetivo(comoFut, g, c, num), tabla: 'DEPONENTES_L1' });
+    }
+    const imp = imperativoDelDeponente(d);
+    out.push({ clave: `${d.lema}.dep-imp.sg`, forma: imp.sg, tabla: 'DEPONENTES_L1' });
+    out.push({ clave: `${d.lema}.dep-imp.pl`, forma: imp.pl, tabla: 'DEPONENTES_L1' });
+
+    const part = participioDelDeponente(d);
+    if (part) {
+      const como = { lema: part, tema: part.replace(/us$/, ''), glosa: d.glosa };
+      for (const g of ['m', 'f', 'n'] as const)
+        for (const num of ['sg', 'pl'] as const)
+          for (const c of ORDEN_CASOS)
+            out.push({ clave: `${d.lema}.dep-part.${g}.${c}.${num}`, forma: declinarAdjetivo(como, g, c, num), tabla: 'DEPONENTES_L1' });
+    }
   }
 
   // ══ EL GRADO ═══════════════════════════════════════════════════════
