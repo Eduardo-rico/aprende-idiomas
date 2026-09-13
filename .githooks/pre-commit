@@ -76,6 +76,14 @@ de_quien_es() {
     echo ""
     echo "  El árbol no tiene nada de nadie más: el rojo es tuyo."
   fi
+  echo ""
+  echo "  ⚠ Y LO PRIMERO, ANTES DE INVESTIGAR: haz \`git reset\`."
+  echo "     El ÍNDICE es COMPARTIDO entre las sesiones. Si tu commit se"
+  echo "     rechaza y dejas los ficheros staged, el siguiente \`git commit\`"
+  echo "     de otra sesión SE LOS LLEVA dentro de su commit. Ya ha pasado"
+  echo "     dos veces. No se pierde contenido, pero la autoría y el"
+  echo "     mensaje quedan mal — y el mensaje es donde vive el"
+  echo "     razonamiento, que es la mitad del trabajo aquí."
   echo "──────────────────────────────────────────────────────────────"
   limpia
 }
