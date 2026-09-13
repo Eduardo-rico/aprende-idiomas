@@ -1,0 +1,8592 @@
+{
+ "generado": "2026-09-13",
+ "corpus": "UD Latin (scripts/.cache/treebanks)",
+ "comoSeSelecciona": "por frecuencia de LEMA sobre el corpus entero, fuera puntuación, símbolos, no analizados y nombres propios",
+ "loQueFalta": "la CANTIDAD. El corpus no marca mácrones y este repositorio no tiene fuente que los dé. Escribir 600 formas de cita a mano sería afirmar 600 cantidades sin fuente, y justo en el eje del que cuelga la línea de fonología. La selección está hecha; falta un diccionario o un texto macronizados.",
+ "tokensDelCorpus": 214918,
+ "cuantos": 800,
+ "porcentajeDeTokensQueCubren": 81.6,
+ "yaCubiertosPorLaMaquina": 198,
+ "sinNingunaFormaProducida": 554,
+ "lemas": [
+  {
+   "lema": "et",
+   "n": 11407,
+   "upos": "CCONJ",
+   "cubierto": 1,
+   "formas": [
+    "et"
+   ]
+  },
+  {
+   "lema": "sum",
+   "n": 8189,
+   "upos": "AUX",
+   "cubierto": 0.9848577359873001,
+   "formas": [
+    "est",
+    "sunt",
+    "esse"
+   ]
+  },
+  {
+   "lema": "qui",
+   "n": 6263,
+   "upos": "PRON",
+   "cubierto": 0.9952099632763851,
+   "formas": [
+    "qui",
+    "quae",
+    "quod"
+   ]
+  },
+  {
+   "lema": "in",
+   "n": 6073,
+   "upos": "ADP",
+   "cubierto": 0.9996706734727482,
+   "formas": [
+    "in",
+    "inque"
+   ]
+  },
+  {
+   "lema": "is",
+   "n": 5043,
+   "upos": "DET",
+   "cubierto": 0.9720404521118382,
+   "formas": [
+    "eum",
+    "eius",
+    "ei"
+   ]
+  },
+  {
+   "lema": "non",
+   "n": 2931,
+   "upos": "PART",
+   "cubierto": 1,
+   "formas": [
+    "non"
+   ]
+  },
+  {
+   "lema": "ego",
+   "n": 2814,
+   "upos": "PRON",
+   "cubierto": 0.9968017057569296,
+   "formas": [
+    "me",
+    "mihi",
+    "ego"
+   ]
+  },
+  {
+   "lema": "dico",
+   "n": 2568,
+   "upos": "VERB",
+   "cubierto": 0.9922118380062306,
+   "formas": [
+    "dixit",
+    "dicit",
+    "dico"
+   ]
+  },
+  {
+   "lema": "hic",
+   "n": 2516,
+   "upos": "DET",
+   "cubierto": 0.9709856915739269,
+   "formas": [
+    "hoc",
+    "haec",
+    "his"
+   ]
+  },
+  {
+   "lema": "ille",
+   "n": 2445,
+   "upos": "DET",
+   "cubierto": 0.9991820040899796,
+   "formas": [
+    "illi",
+    "illis",
+    "illum"
+   ]
+  },
+  {
+   "lema": "cum",
+   "n": 2290,
+   "upos": "ADP",
+   "cubierto": 0.9882096069868995,
+   "formas": [
+    "cum",
+    "quom",
+    "cumque"
+   ]
+  },
+  {
+   "lema": "ut",
+   "n": 2285,
+   "upos": "SCONJ",
+   "cubierto": 1,
+   "formas": [
+    "ut",
+    "uti"
+   ]
+  },
+  {
+   "lema": "autem",
+   "n": 2214,
+   "upos": "PART",
+   "cubierto": 1,
+   "formas": [
+    "autem"
+   ]
+  },
+  {
+   "lema": "ad",
+   "n": 2157,
+   "upos": "ADP",
+   "cubierto": 1,
+   "formas": [
+    "ad"
+   ]
+  },
+  {
+   "lema": "que",
+   "n": 2007,
+   "upos": "CCONJ",
+   "cubierto": 0.8734429496761336,
+   "formas": [
+    "que",
+    "c"
+   ]
+  },
+  {
+   "lema": "omnis",
+   "n": 1831,
+   "upos": "DET",
+   "cubierto": 1,
+   "formas": [
+    "omnes",
+    "omnia",
+    "omnibus"
+   ]
+  },
+  {
+   "lema": "tu",
+   "n": 1703,
+   "upos": "PRON",
+   "cubierto": 1,
+   "formas": [
+    "te",
+    "tibi",
+    "tu"
+   ]
+  },
+  {
+   "lema": "ab",
+   "n": 1657,
+   "upos": "ADP",
+   "cubierto": 0.9770669885334943,
+   "formas": [
+    "a",
+    "ab",
+    "abs"
+   ]
+  },
+  {
+   "lema": "facio",
+   "n": 1541,
+   "upos": "VERB",
+   "cubierto": 0.9669046073977936,
+   "formas": [
+    "factum",
+    "facere",
+    "facta"
+   ]
+  },
+  {
+   "lema": "de",
+   "n": 1459,
+   "upos": "ADP",
+   "cubierto": 1,
+   "formas": [
+    "de"
+   ]
+  },
+  {
+   "lema": "si",
+   "n": 1417,
+   "upos": "SCONJ",
+   "cubierto": 0.9992942836979535,
+   "formas": [
+    "si",
+    "sin"
+   ]
+  },
+  {
+   "lema": "ne",
+   "n": 1386,
+   "upos": "ADV",
+   "cubierto": 0.9985569985569985,
+   "formas": [
+    "ne",
+    "n"
+   ]
+  },
+  {
+   "lema": "uos",
+   "n": 1363,
+   "upos": "PRON",
+   "cubierto": 1,
+   "formas": [
+    "uobis",
+    "uos",
+    "uestrum"
+   ]
+  },
+  {
+   "lema": "sed",
+   "n": 1282,
+   "upos": "CCONJ",
+   "cubierto": 1,
+   "formas": [
+    "sed",
+    "at"
+   ]
+  },
+  {
+   "lema": "quis",
+   "n": 1174,
+   "upos": "PRON",
+   "cubierto": 0.15417376490630325,
+   "formas": [
+    "quid",
+    "quis",
+    "quo"
+   ]
+  },
+  {
+   "lema": "uideo",
+   "n": 1174,
+   "upos": "VERB",
+   "cubierto": 0.9906303236797275,
+   "formas": [
+    "uidi",
+    "uidit",
+    "uidetur"
+   ]
+  },
+  {
+   "lema": "suus",
+   "n": 1144,
+   "upos": "DET",
+   "cubierto": 0.9991258741258742,
+   "formas": [
+    "suis",
+    "sua",
+    "suam"
+   ]
+  },
+  {
+   "lema": "deus",
+   "n": 1127,
+   "upos": "NOUN",
+   "cubierto": 0.9964507542147294,
+   "formas": [
+    "dei",
+    "deus",
+    "deo"
+   ]
+  },
+  {
+   "lema": "habeo",
+   "n": 1126,
+   "upos": "VERB",
+   "cubierto": 0.9857904085257548,
+   "formas": [
+    "habet",
+    "habere",
+    "habent"
+   ]
+  },
+  {
+   "lema": "enim",
+   "n": 1083,
+   "upos": "PART",
+   "cubierto": 0.9990766389658357,
+   "formas": [
+    "enim",
+    "enimuero"
+   ]
+  },
+  {
+   "lema": "ex",
+   "n": 1042,
+   "upos": "ADP",
+   "cubierto": 1,
+   "formas": [
+    "ex",
+    "e"
+   ]
+  },
+  {
+   "lema": "uenio",
+   "n": 1018,
+   "upos": "VERB",
+   "cubierto": 0.9941060903732809,
+   "formas": [
+    "uenit",
+    "uenerunt",
+    "ueni"
+   ]
+  },
+  {
+   "lema": "ipse",
+   "n": 994,
+   "upos": "DET",
+   "cubierto": 0.9989939637826962,
+   "formas": [
+    "ipse",
+    "ipsum",
+    "ipso"
+   ]
+  },
+  {
+   "lema": "se",
+   "n": 965,
+   "upos": "PRON",
+   "cubierto": 0.9326424870466321,
+   "formas": [
+    "se",
+    "sibi",
+    "sese"
+   ]
+  },
+  {
+   "lema": "meus",
+   "n": 953,
+   "upos": "DET",
+   "cubierto": 0.9884575026232949,
+   "formas": [
+    "mea",
+    "meum",
+    "meo"
+   ]
+  },
+  {
+   "lema": "possum",
+   "n": 890,
+   "upos": "VERB",
+   "cubierto": 0.8887640449438202,
+   "formas": [
+    "potest",
+    "posse",
+    "possit"
+   ]
+  },
+  {
+   "lema": "res",
+   "n": 853,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "re",
+    "res",
+    "rebus"
+   ]
+  },
+  {
+   "lema": "quia",
+   "n": 825,
+   "upos": "SCONJ",
+   "cubierto": 1,
+   "formas": [
+    "quia"
+   ]
+  },
+  {
+   "lema": "nos",
+   "n": 812,
+   "upos": "PRON",
+   "cubierto": 0.9975369458128078,
+   "formas": [
+    "nos",
+    "nobis",
+    "nostrum"
+   ]
+  },
+  {
+   "lema": "homo",
+   "n": 789,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "homo",
+    "hominis",
+    "hominum"
+   ]
+  },
+  {
+   "lema": "atque",
+   "n": 776,
+   "upos": "CCONJ",
+   "cubierto": 0.5940721649484536,
+   "formas": [
+    "atque",
+    "ac"
+   ]
+  },
+  {
+   "lema": "magnus",
+   "n": 763,
+   "upos": "ADJ",
+   "cubierto": 0.9724770642201835,
+   "formas": [
+    "magna",
+    "magno",
+    "magnum"
+   ]
+  },
+  {
+   "lema": "tuus",
+   "n": 758,
+   "upos": "DET",
+   "cubierto": 1,
+   "formas": [
+    "tua",
+    "tuum",
+    "tuo"
+   ]
+  },
+  {
+   "lema": "do",
+   "n": 745,
+   "upos": "VERB",
+   "cubierto": 0.6939597315436241,
+   "formas": [
+    "dedit",
+    "dare",
+    "data"
+   ]
+  },
+  {
+   "lema": "noster",
+   "n": 736,
+   "upos": "DET",
+   "cubierto": 1,
+   "formas": [
+    "nostri",
+    "nostra",
+    "nostrum"
+   ]
+  },
+  {
+   "lema": "multus",
+   "n": 676,
+   "upos": "DET",
+   "cubierto": 0,
+   "formas": [
+    "multa",
+    "multi",
+    "multis"
+   ]
+  },
+  {
+   "lema": "per",
+   "n": 657,
+   "upos": "ADP",
+   "cubierto": 1,
+   "formas": [
+    "per"
+   ]
+  },
+  {
+   "lema": "dominus",
+   "n": 656,
+   "upos": "NOUN",
+   "cubierto": 0.9984756097560976,
+   "formas": [
+    "domini",
+    "dominus",
+    "domino"
+   ]
+  },
+  {
+   "lema": "dies",
+   "n": 654,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "die",
+    "dies",
+    "diebus"
+   ]
+  },
+  {
+   "lema": "aut",
+   "n": 647,
+   "upos": "CCONJ",
+   "cubierto": 1,
+   "formas": [
+    "aut"
+   ]
+  },
+  {
+   "lema": "quod",
+   "n": 645,
+   "upos": "SCONJ",
+   "cubierto": 1,
+   "formas": [
+    "quod"
+   ]
+  },
+  {
+   "lema": "quam",
+   "n": 569,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "quam"
+   ]
+  },
+  {
+   "lema": "unus",
+   "n": 546,
+   "upos": "NUM",
+   "cubierto": 0,
+   "formas": [
+    "unum",
+    "unus",
+    "una"
+   ]
+  },
+  {
+   "lema": "mitto",
+   "n": 543,
+   "upos": "VERB",
+   "cubierto": 0.990791896869245,
+   "formas": [
+    "misit",
+    "misi",
+    "miserunt"
+   ]
+  },
+  {
+   "lema": "uolo",
+   "n": 541,
+   "upos": "VERB",
+   "cubierto": 0.933456561922366,
+   "formas": [
+    "uelim",
+    "uolo",
+    "uis"
+   ]
+  },
+  {
+   "lema": "scribo",
+   "n": 538,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "scriptum",
+    "scribis",
+    "scripsi"
+   ]
+  },
+  {
+   "lema": "audio",
+   "n": 511,
+   "upos": "VERB",
+   "cubierto": 0.7318982387475538,
+   "formas": [
+    "audiui",
+    "audientes",
+    "audire"
+   ]
+  },
+  {
+   "lema": "alius",
+   "n": 492,
+   "upos": "DET",
+   "cubierto": 0,
+   "formas": [
+    "alii",
+    "aliud",
+    "alia"
+   ]
+  },
+  {
+   "lema": "etiam",
+   "n": 481,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "etiam",
+    "et"
+   ]
+  },
+  {
+   "lema": "filius",
+   "n": 463,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "filius",
+    "filium",
+    "filii"
+   ]
+  },
+  {
+   "lema": "ergo",
+   "n": 444,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "ergo"
+   ]
+  },
+  {
+   "lema": "locus",
+   "n": 435,
+   "upos": "NOUN",
+   "cubierto": 0.9356321839080459,
+   "formas": [
+    "locum",
+    "loco",
+    "locis"
+   ]
+  },
+  {
+   "lema": "pater",
+   "n": 434,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "pater",
+    "patrem",
+    "patre"
+   ]
+  },
+  {
+   "lema": "scio",
+   "n": 418,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "scio",
+    "scire",
+    "scitis"
+   ]
+  },
+  {
+   "lema": "ita",
+   "n": 404,
+   "upos": "ADV",
+   "cubierto": 0.9381188118811881,
+   "formas": [
+    "ita",
+    "itaque"
+   ]
+  },
+  {
+   "lema": "nihil",
+   "n": 399,
+   "upos": "PRON",
+   "cubierto": 0,
+   "formas": [
+    "nihil",
+    "nil",
+    "nihilominus"
+   ]
+  },
+  {
+   "lema": "accipio",
+   "n": 381,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "accepit",
+    "accepi",
+    "accipere"
+   ]
+  },
+  {
+   "lema": "frater",
+   "n": 378,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "fratres",
+    "frater",
+    "fratrem"
+   ]
+  },
+  {
+   "lema": "sicut",
+   "n": 361,
+   "upos": "SCONJ",
+   "cubierto": 0,
+   "formas": [
+    "sicut",
+    "sicuti"
+   ]
+  },
+  {
+   "lema": "greek.expression",
+   "n": 357,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "το",
+    "εν",
+    "τον"
+   ]
+  },
+  {
+   "lema": "iam",
+   "n": 349,
+   "upos": "ADV",
+   "cubierto": 0.997134670487106,
+   "formas": [
+    "iam",
+    "iamque"
+   ]
+  },
+  {
+   "lema": "bonus",
+   "n": 349,
+   "upos": "ADJ",
+   "cubierto": 0.9885386819484241,
+   "formas": [
+    "bonum",
+    "bona",
+    "boni"
+   ]
+  },
+  {
+   "lema": "fio",
+   "n": 348,
+   "upos": "VERB",
+   "cubierto": 1,
+   "formas": [
+    "fieri",
+    "fiat",
+    "fit"
+   ]
+  },
+  {
+   "lema": "terra",
+   "n": 343,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "terram",
+    "terra",
+    "terrae"
+   ]
+  },
+  {
+   "lema": "spiritus",
+   "n": 339,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "spiritus",
+    "spiritu",
+    "spiritum"
+   ]
+  },
+  {
+   "lema": "loquor",
+   "n": 334,
+   "upos": "VERB",
+   "cubierto": 1,
+   "formas": [
+    "locutus",
+    "loqui",
+    "loquitur"
+   ]
+  },
+  {
+   "lema": "quidem",
+   "n": 334,
+   "upos": "PART",
+   "cubierto": 0,
+   "formas": [
+    "quidem"
+   ]
+  },
+  {
+   "lema": "nam",
+   "n": 333,
+   "upos": "PART",
+   "cubierto": 0,
+   "formas": [
+    "nam",
+    "namque"
+   ]
+  },
+  {
+   "lema": "uester",
+   "n": 333,
+   "upos": "DET",
+   "cubierto": 0.22822822822822822,
+   "formas": [
+    "uestra",
+    "uestrum",
+    "uester"
+   ]
+  },
+  {
+   "lema": "tamen",
+   "n": 332,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "tamen"
+   ]
+  },
+  {
+   "lema": "aio",
+   "n": 329,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "ait",
+    "aiunt",
+    "ais"
+   ]
+  },
+  {
+   "lema": "tempus",
+   "n": 327,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "tempore",
+    "tempus",
+    "temporis"
+   ]
+  },
+  {
+   "lema": "super",
+   "n": 318,
+   "upos": "ADP",
+   "cubierto": 0,
+   "formas": [
+    "super",
+    "superius"
+   ]
+  },
+  {
+   "lema": "quoniam",
+   "n": 313,
+   "upos": "SCONJ",
+   "cubierto": 0,
+   "formas": [
+    "quoniam"
+   ]
+  },
+  {
+   "lema": "ago",
+   "n": 312,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "agere",
+    "agit",
+    "ago"
+   ]
+  },
+  {
+   "lema": "credo",
+   "n": 310,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "crediderunt",
+    "credo",
+    "credit"
+   ]
+  },
+  {
+   "lema": "pars",
+   "n": 307,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "partem",
+    "parte",
+    "pars"
+   ]
+  },
+  {
+   "lema": "eo",
+   "n": 306,
+   "upos": "VERB",
+   "cubierto": 0.8006535947712419,
+   "formas": [
+    "eo",
+    "ire",
+    "ite"
+   ]
+  },
+  {
+   "lema": "nunc",
+   "n": 306,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "nunc",
+    "nune"
+   ]
+  },
+  {
+   "lema": "respondeo",
+   "n": 303,
+   "upos": "VERB",
+   "cubierto": 1,
+   "formas": [
+    "respondit",
+    "respondens",
+    "responderunt"
+   ]
+  },
+  {
+   "lema": "caelum",
+   "n": 299,
+   "upos": "NOUN",
+   "cubierto": 0.9866220735785953,
+   "formas": [
+    "caelo",
+    "caelum",
+    "caelorum"
+   ]
+  },
+  {
+   "lema": "quidam",
+   "n": 297,
+   "upos": "DET",
+   "cubierto": 0,
+   "formas": [
+    "quidam",
+    "quaedam",
+    "quendam"
+   ]
+  },
+  {
+   "lema": "ciuitas",
+   "n": 297,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "ciuitatem",
+    "ciuitates",
+    "ciuitatis"
+   ]
+  },
+  {
+   "lema": "uel",
+   "n": 295,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "uel"
+   ]
+  },
+  {
+   "lema": "uerbum",
+   "n": 293,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "uerbum",
+    "uerba",
+    "uerbis"
+   ]
+  },
+  {
+   "lema": "propter",
+   "n": 286,
+   "upos": "ADP",
+   "cubierto": 0,
+   "formas": [
+    "propter"
+   ]
+  },
+  {
+   "lema": "domus",
+   "n": 285,
+   "upos": "NOUN",
+   "cubierto": 0.9578947368421052,
+   "formas": [
+    "domum",
+    "domo",
+    "domus"
+   ]
+  },
+  {
+   "lema": "magis",
+   "n": 283,
+   "upos": "ADV",
+   "cubierto": 0.3957597173144876,
+   "formas": [
+    "magis",
+    "maxime"
+   ]
+  },
+  {
+   "lema": "sic",
+   "n": 282,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "sic"
+   ]
+  },
+  {
+   "lema": "uero",
+   "n": 282,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "uero"
+   ]
+  },
+  {
+   "lema": "nomen",
+   "n": 280,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "nomine",
+    "nomen",
+    "nomina"
+   ]
+  },
+  {
+   "lema": "pro",
+   "n": 278,
+   "upos": "ADP",
+   "cubierto": 1,
+   "formas": [
+    "pro"
+   ]
+  },
+  {
+   "lema": "idem",
+   "n": 274,
+   "upos": "DET",
+   "cubierto": 0,
+   "formas": [
+    "idem",
+    "eadem",
+    "eodem"
+   ]
+  },
+  {
+   "lema": "duo",
+   "n": 273,
+   "upos": "NUM",
+   "cubierto": 0,
+   "formas": [
+    "duo",
+    "duos",
+    "duobus"
+   ]
+  },
+  {
+   "lema": "lex",
+   "n": 273,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "lege",
+    "legem",
+    "legis"
+   ]
+  },
+  {
+   "lema": "manus",
+   "n": 268,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "manus",
+    "manu",
+    "manibus"
+   ]
+  },
+  {
+   "lema": "puto",
+   "n": 266,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "puto",
+    "putes",
+    "putas"
+   ]
+  },
+  {
+   "lema": "uir",
+   "n": 263,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "uiri",
+    "uir",
+    "uirum"
+   ]
+  },
+  {
+   "lema": "discipulus",
+   "n": 261,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "discipuli",
+    "discipulis",
+    "discipulos"
+   ]
+  },
+  {
+   "lema": "causa",
+   "n": 260,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "causa",
+    "causam",
+    "causas"
+   ]
+  },
+  {
+   "lema": "aliquis",
+   "n": 250,
+   "upos": "PRON",
+   "cubierto": 0.008,
+   "formas": [
+    "aliquid",
+    "aliquo",
+    "aliquem"
+   ]
+  },
+  {
+   "lema": "ubi",
+   "n": 247,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "ubi"
+   ]
+  },
+  {
+   "lema": "nisi",
+   "n": 246,
+   "upos": "SCONJ",
+   "cubierto": 0,
+   "formas": [
+    "nisi"
+   ]
+  },
+  {
+   "lema": "cognosco",
+   "n": 246,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "cognouit",
+    "cognouerunt",
+    "cognoui"
+   ]
+  },
+  {
+   "lema": "gratia",
+   "n": 241,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "gratia",
+    "gratias",
+    "gratiam"
+   ]
+  },
+  {
+   "lema": "ante",
+   "n": 238,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "ante"
+   ]
+  },
+  {
+   "lema": "ecce",
+   "n": 236,
+   "upos": "PART",
+   "cubierto": 1,
+   "formas": [
+    "ecce"
+   ]
+  },
+  {
+   "lema": "publicus",
+   "n": 236,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "publica",
+    "publicae",
+    "publicam"
+   ]
+  },
+  {
+   "lema": "populus",
+   "n": 235,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "populi",
+    "populo",
+    "populum"
+   ]
+  },
+  {
+   "lema": "quaero",
+   "n": 229,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "quaeris",
+    "quaerit",
+    "quaerebant"
+   ]
+  },
+  {
+   "lema": "iste",
+   "n": 229,
+   "upos": "DET",
+   "cubierto": 0.9912663755458515,
+   "formas": [
+    "ista",
+    "istis",
+    "iste"
+   ]
+  },
+  {
+   "lema": "animus",
+   "n": 226,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "animo",
+    "animi",
+    "animus"
+   ]
+  },
+  {
+   "lema": "littera",
+   "n": 225,
+   "upos": "NOUN",
+   "cubierto": 0.9777777777777777,
+   "formas": [
+    "litteras",
+    "litteris",
+    "litterae"
+   ]
+  },
+  {
+   "lema": "pono",
+   "n": 222,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "posuit",
+    "posita",
+    "positum"
+   ]
+  },
+  {
+   "lema": "fero",
+   "n": 220,
+   "upos": "VERB",
+   "cubierto": 0.7,
+   "formas": [
+    "ferre",
+    "tulit",
+    "fert"
+   ]
+  },
+  {
+   "lema": "consilium",
+   "n": 219,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "consilio",
+    "consilium",
+    "consilia"
+   ]
+  },
+  {
+   "lema": "fides",
+   "n": 214,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "fidem",
+    "fide",
+    "fides"
+   ]
+  },
+  {
+   "lema": "uox",
+   "n": 210,
+   "upos": "NOUN",
+   "cubierto": 0.9952380952380953,
+   "formas": [
+    "uocem",
+    "uoce",
+    "uox"
+   ]
+  },
+  {
+   "lema": "opus",
+   "n": 210,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "opus",
+    "opera",
+    "opere"
+   ]
+  },
+  {
+   "lema": "inuenio",
+   "n": 209,
+   "upos": "VERB",
+   "cubierto": 0.9952153110047847,
+   "formas": [
+    "inuenit",
+    "inuenerunt",
+    "inuentus"
+   ]
+  },
+  {
+   "lema": "sine",
+   "n": 207,
+   "upos": "ADP",
+   "cubierto": 1,
+   "formas": [
+    "sine"
+   ]
+  },
+  {
+   "lema": "primus",
+   "n": 205,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "prima",
+    "primus",
+    "primum"
+   ]
+  },
+  {
+   "lema": "post",
+   "n": 203,
+   "upos": "ADP",
+   "cubierto": 0.9901477832512315,
+   "formas": [
+    "post",
+    "posterius"
+   ]
+  },
+  {
+   "lema": "totus",
+   "n": 202,
+   "upos": "DET",
+   "cubierto": 0,
+   "formas": [
+    "totum",
+    "tota",
+    "totius"
+   ]
+  },
+  {
+   "lema": "uoco",
+   "n": 200,
+   "upos": "VERB",
+   "cubierto": 0.985,
+   "formas": [
+    "uocauit",
+    "uocatur",
+    "uocat"
+   ]
+  },
+  {
+   "lema": "nullus",
+   "n": 200,
+   "upos": "DET",
+   "cubierto": 0,
+   "formas": [
+    "nulla",
+    "nullam",
+    "nullum"
+   ]
+  },
+  {
+   "lema": "nemo",
+   "n": 200,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "nemo",
+    "neminem",
+    "nemini"
+   ]
+  },
+  {
+   "lema": "inter",
+   "n": 198,
+   "upos": "ADP",
+   "cubierto": 0,
+   "formas": [
+    "inter"
+   ]
+  },
+  {
+   "lema": "sanctus",
+   "n": 198,
+   "upos": "NOUN",
+   "cubierto": 0.005050505050505051,
+   "formas": [
+    "sancto",
+    "sanctus",
+    "sanctum"
+   ]
+  },
+  {
+   "lema": "at",
+   "n": 197,
+   "upos": "CCONJ",
+   "cubierto": 1,
+   "formas": [
+    "at",
+    "atque"
+   ]
+  },
+  {
+   "lema": "uita",
+   "n": 197,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "uitae",
+    "uita",
+    "uitam"
+   ]
+  },
+  {
+   "lema": "bellum",
+   "n": 195,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "bellum",
+    "bello",
+    "belli"
+   ]
+  },
+  {
+   "lema": "hostis",
+   "n": 194,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "hostes",
+    "hostium",
+    "hostibus"
+   ]
+  },
+  {
+   "lema": "nolo",
+   "n": 193,
+   "upos": "VERB",
+   "cubierto": 0.9896373056994818,
+   "formas": [
+    "nolite",
+    "noli",
+    "nolo"
+   ]
+  },
+  {
+   "lema": "exeo",
+   "n": 192,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "exiit",
+    "exiuit",
+    "exeuntes"
+   ]
+  },
+  {
+   "lema": "regnum",
+   "n": 190,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "regnum",
+    "regno",
+    "regni"
+   ]
+  },
+  {
+   "lema": "apud",
+   "n": 190,
+   "upos": "ADP",
+   "cubierto": 0,
+   "formas": [
+    "apud"
+   ]
+  },
+  {
+   "lema": "uirtus",
+   "n": 187,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "uirtute",
+    "uirtutem",
+    "uirtutis"
+   ]
+  },
+  {
+   "lema": "alter",
+   "n": 186,
+   "upos": "DET",
+   "cubierto": 0,
+   "formas": [
+    "alterum",
+    "alter",
+    "altera"
+   ]
+  },
+  {
+   "lema": "debeo",
+   "n": 181,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "debet",
+    "debemus",
+    "debere"
+   ]
+  },
+  {
+   "lema": "corpus",
+   "n": 180,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "corpus",
+    "corpore",
+    "corporis"
+   ]
+  },
+  {
+   "lema": "sto",
+   "n": 178,
+   "upos": "VERB",
+   "cubierto": 0.9887640449438202,
+   "formas": [
+    "stantes",
+    "stetit",
+    "stans"
+   ]
+  },
+  {
+   "lema": "relinquo",
+   "n": 176,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "reliquit",
+    "relictis",
+    "relicto"
+   ]
+  },
+  {
+   "lema": "dimitto",
+   "n": 176,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "dimisit",
+    "dimittere",
+    "dimitte"
+   ]
+  },
+  {
+   "lema": "tunc",
+   "n": 176,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "tunc"
+   ]
+  },
+  {
+   "lema": "mundus",
+   "n": 174,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "mundo",
+    "mundi",
+    "mundum"
+   ]
+  },
+  {
+   "lema": "secundum",
+   "n": 174,
+   "upos": "ADP",
+   "cubierto": 0,
+   "formas": [
+    "secundum"
+   ]
+  },
+  {
+   "lema": "iudaei",
+   "n": 174,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "iudaei",
+    "iudaeorum",
+    "iudaeis"
+   ]
+  },
+  {
+   "lema": "modus",
+   "n": 171,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "modi",
+    "modo",
+    "modum"
+   ]
+  },
+  {
+   "lema": "turba",
+   "n": 170,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "turba",
+    "turbae",
+    "turbas"
+   ]
+  },
+  {
+   "lema": "sequor",
+   "n": 169,
+   "upos": "VERB",
+   "cubierto": 0.9763313609467456,
+   "formas": [
+    "secuti",
+    "sequi",
+    "sequebatur"
+   ]
+  },
+  {
+   "lema": "angelus",
+   "n": 169,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "angelus",
+    "angeli",
+    "angelum"
+   ]
+  },
+  {
+   "lema": "princeps",
+   "n": 168,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "principes",
+    "princeps",
+    "principibus"
+   ]
+  },
+  {
+   "lema": "modo",
+   "n": 166,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "modo"
+   ]
+  },
+  {
+   "lema": "tantus",
+   "n": 164,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "tanta",
+    "tantum",
+    "tanto"
+   ]
+  },
+  {
+   "lema": "malus",
+   "n": 164,
+   "upos": "ADJ",
+   "cubierto": 0.18292682926829268,
+   "formas": [
+    "malum",
+    "mala",
+    "mali"
+   ]
+  },
+  {
+   "lema": "gens",
+   "n": 164,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "gentes",
+    "gentibus",
+    "gentium"
+   ]
+  },
+  {
+   "lema": "genus",
+   "n": 162,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "genere",
+    "genus",
+    "generis"
+   ]
+  },
+  {
+   "lema": "sermo",
+   "n": 162,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "sermo",
+    "sermone",
+    "sermonem"
+   ]
+  },
+  {
+   "lema": "mulier",
+   "n": 162,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "mulier",
+    "mulieres",
+    "mulierem"
+   ]
+  },
+  {
+   "lema": "expression",
+   "n": 162,
+   "upos": "ADV",
+   "cubierto": 0.09259259259259259,
+   "formas": [
+    "d.",
+    "kal",
+    "diem"
+   ]
+  },
+  {
+   "lema": "pes",
+   "n": 161,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "pedes",
+    "pedibus",
+    "pedum"
+   ]
+  },
+  {
+   "lema": "trado",
+   "n": 161,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "tradidit",
+    "tradiderunt",
+    "tradent"
+   ]
+  },
+  {
+   "lema": "reliquus",
+   "n": 160,
+   "upos": "DET",
+   "cubierto": 0,
+   "formas": [
+    "reliquis",
+    "reliqua",
+    "reliquos"
+   ]
+  },
+  {
+   "lema": "senatus",
+   "n": 160,
+   "upos": "NOUN",
+   "cubierto": 0.9875,
+   "formas": [
+    "senatus",
+    "senatu",
+    "senatum"
+   ]
+  },
+  {
+   "lema": "castra",
+   "n": 160,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "castra",
+    "castris",
+    "castrorum"
+   ]
+  },
+  {
+   "lema": "sedeo",
+   "n": 158,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "sedebat",
+    "sedentem",
+    "sedens"
+   ]
+  },
+  {
+   "lema": "peto",
+   "n": 157,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "petere",
+    "petit",
+    "petunt"
+   ]
+  },
+  {
+   "lema": "iubeo",
+   "n": 155,
+   "upos": "VERB",
+   "cubierto": 1,
+   "formas": [
+    "iussit",
+    "iubet",
+    "iussi"
+   ]
+  },
+  {
+   "lema": "gloria",
+   "n": 155,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "gloriam",
+    "gloria",
+    "gloriae"
+   ]
+  },
+  {
+   "lema": "iudico",
+   "n": 152,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "iudicat",
+    "iudico",
+    "iudicare"
+   ]
+  },
+  {
+   "lema": "usque",
+   "n": 151,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "usque"
+   ]
+  },
+  {
+   "lema": "calendar",
+   "n": 151,
+   "upos": "ADV",
+   "cubierto": 0.11920529801324503,
+   "formas": [
+    "a.",
+    "ante",
+    "idibus"
+   ]
+  },
+  {
+   "lema": "potestas",
+   "n": 150,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "potestatem",
+    "potestate",
+    "potestas"
+   ]
+  },
+  {
+   "lema": "seruus",
+   "n": 148,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "seruus",
+    "serui",
+    "seruos"
+   ]
+  },
+  {
+   "lema": "oportet",
+   "n": 148,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "oportet",
+    "oportere",
+    "oporteat"
+   ]
+  },
+  {
+   "lema": "spes",
+   "n": 146,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "spem",
+    "spe",
+    "spes"
+   ]
+  },
+  {
+   "lema": "quicumque",
+   "n": 145,
+   "upos": "DET",
+   "cubierto": 0,
+   "formas": [
+    "quicumque",
+    "quaecumque",
+    "quodcumque"
+   ]
+  },
+  {
+   "lema": "ceterus",
+   "n": 145,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "ceteris",
+    "cetera",
+    "ceteri"
+   ]
+  },
+  {
+   "lema": "itaque",
+   "n": 145,
+   "upos": "PART",
+   "cubierto": 0,
+   "formas": [
+    "itaque"
+   ]
+  },
+  {
+   "lema": "manduco",
+   "n": 143,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "manducare",
+    "manducat",
+    "manducauerunt"
+   ]
+  },
+  {
+   "lema": "timeo",
+   "n": 142,
+   "upos": "VERB",
+   "cubierto": 0.9577464788732394,
+   "formas": [
+    "timere",
+    "timuerunt",
+    "timeo"
+   ]
+  },
+  {
+   "lema": "propheta",
+   "n": 142,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "propheta",
+    "prophetae",
+    "prophetam"
+   ]
+  },
+  {
+   "lema": "finis",
+   "n": 141,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "fines",
+    "finibus",
+    "finem"
+   ]
+  },
+  {
+   "lema": "ibi",
+   "n": 140,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "ibi"
+   ]
+  },
+  {
+   "lema": "rogo",
+   "n": 140,
+   "upos": "VERB",
+   "cubierto": 0.95,
+   "formas": [
+    "rogo",
+    "rogabant",
+    "rogat"
+   ]
+  },
+  {
+   "lema": "quisquam",
+   "n": 140,
+   "upos": "DET",
+   "cubierto": 0,
+   "formas": [
+    "quicquam",
+    "quisquam",
+    "quemquam"
+   ]
+  },
+  {
+   "lema": "rex",
+   "n": 139,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "rex",
+    "reges",
+    "regem"
+   ]
+  },
+  {
+   "lema": "ager",
+   "n": 139,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "agri",
+    "agris",
+    "agros"
+   ]
+  },
+  {
+   "lema": "signum",
+   "n": 138,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "signa",
+    "signum",
+    "signis"
+   ]
+  },
+  {
+   "lema": "nouus",
+   "n": 138,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "nouum",
+    "noui",
+    "noua"
+   ]
+  },
+  {
+   "lema": "teneo",
+   "n": 138,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "tenere",
+    "tenebat",
+    "tenentes"
+   ]
+  },
+  {
+   "lema": "mors",
+   "n": 138,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "mortem",
+    "morte",
+    "mors"
+   ]
+  },
+  {
+   "lema": "intellego",
+   "n": 138,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "intellego",
+    "intellegere",
+    "intellexerunt"
+   ]
+  },
+  {
+   "lema": "aqua",
+   "n": 137,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "aqua",
+    "aquam",
+    "aquae"
+   ]
+  },
+  {
+   "lema": "tum",
+   "n": 136,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "tum"
+   ]
+  },
+  {
+   "lema": "annus",
+   "n": 136,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "annos",
+    "annis",
+    "anni"
+   ]
+  },
+  {
+   "lema": "coepi",
+   "n": 136,
+   "upos": "VERB",
+   "cubierto": 0.022058823529411766,
+   "formas": [
+    "coepit",
+    "coeperunt",
+    "coeperit"
+   ]
+  },
+  {
+   "lema": "duco",
+   "n": 135,
+   "upos": "VERB",
+   "cubierto": 0.9629629629629629,
+   "formas": [
+    "duxerunt",
+    "duxit",
+    "ducere"
+   ]
+  },
+  {
+   "lema": "romanus",
+   "n": 135,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "romani",
+    "romano",
+    "romanorum"
+   ]
+  },
+  {
+   "lema": "miles",
+   "n": 134,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "milites",
+    "militum",
+    "militibus"
+   ]
+  },
+  {
+   "lema": "mille",
+   "n": 133,
+   "upos": "NUM",
+   "cubierto": 0,
+   "formas": [
+    "milia",
+    "milibus",
+    "mille"
+   ]
+  },
+  {
+   "lema": "cor",
+   "n": 132,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "corde",
+    "cor",
+    "cordis"
+   ]
+  },
+  {
+   "lema": "hora",
+   "n": 132,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "hora",
+    "horam",
+    "horis"
+   ]
+  },
+  {
+   "lema": "accedo",
+   "n": 131,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "accessit",
+    "accesserunt",
+    "accedens"
+   ]
+  },
+  {
+   "lema": "sui",
+   "n": 130,
+   "upos": "PRON",
+   "cubierto": 0.9153846153846154,
+   "formas": [
+    "se",
+    "sibi",
+    "sese"
+   ]
+  },
+  {
+   "lema": "uia",
+   "n": 130,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "uia",
+    "uiam",
+    "uias"
+   ]
+  },
+  {
+   "lema": "uiuo",
+   "n": 130,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "uiuere",
+    "uiuit",
+    "uiuimus"
+   ]
+  },
+  {
+   "lema": "morior",
+   "n": 130,
+   "upos": "VERB",
+   "cubierto": 0.9923076923076923,
+   "formas": [
+    "mortuus",
+    "mori",
+    "mortui"
+   ]
+  },
+  {
+   "lema": "exercitus",
+   "n": 130,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "exercitum",
+    "exercitu",
+    "exercitus"
+   ]
+  },
+  {
+   "lema": "amen",
+   "n": 130,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "amen"
+   ]
+  },
+  {
+   "lema": "paruus",
+   "n": 129,
+   "upos": "ADV",
+   "cubierto": 0.9922480620155039,
+   "formas": [
+    "minus",
+    "minor",
+    "parua"
+   ]
+  },
+  {
+   "lema": "iterum",
+   "n": 129,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "iterum"
+   ]
+  },
+  {
+   "lema": "tam",
+   "n": 129,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "tam"
+   ]
+  },
+  {
+   "lema": "nauis",
+   "n": 128,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "naues",
+    "naui",
+    "nauibus"
+   ]
+  },
+  {
+   "lema": "iter",
+   "n": 127,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "iter",
+    "itinere",
+    "itineribus"
+   ]
+  },
+  {
+   "lema": "nox",
+   "n": 127,
+   "upos": "NOUN",
+   "cubierto": 0.984251968503937,
+   "formas": [
+    "nocte",
+    "noctem",
+    "noctis"
+   ]
+  },
+  {
+   "lema": "iudicium",
+   "n": 127,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "iudicium",
+    "iudicio",
+    "iudicia"
+   ]
+  },
+  {
+   "lema": "diligo",
+   "n": 127,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "diligit",
+    "diliges",
+    "dilexit"
+   ]
+  },
+  {
+   "lema": "proficiscor",
+   "n": 127,
+   "upos": "VERB",
+   "cubierto": 1,
+   "formas": [
+    "profectus",
+    "proficisci",
+    "profectum"
+   ]
+  },
+  {
+   "lema": "neque",
+   "n": 125,
+   "upos": "CCONJ",
+   "cubierto": 1,
+   "formas": [
+    "nec",
+    "neque",
+    "ne"
+   ]
+  },
+  {
+   "lema": "summus",
+   "n": 125,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "summa",
+    "summo",
+    "summum"
+   ]
+  },
+  {
+   "lema": "templum",
+   "n": 125,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "templo",
+    "templum",
+    "templi"
+   ]
+  },
+  {
+   "lema": "tollo",
+   "n": 125,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "tolle",
+    "sustulit",
+    "tollere"
+   ]
+  },
+  {
+   "lema": "surgo",
+   "n": 124,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "surgens",
+    "surge",
+    "surrexit"
+   ]
+  },
+  {
+   "lema": "liber",
+   "n": 124,
+   "upos": "NOUN",
+   "cubierto": 0.12096774193548387,
+   "formas": [
+    "liber",
+    "libro",
+    "librum"
+   ]
+  },
+  {
+   "lema": "oculus",
+   "n": 123,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "oculos",
+    "oculis",
+    "oculus"
+   ]
+  },
+  {
+   "lema": "mare",
+   "n": 123,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "mare",
+    "mari",
+    "maris"
+   ]
+  },
+  {
+   "lema": "curo",
+   "n": 123,
+   "upos": "VERB",
+   "cubierto": 0.22764227642276422,
+   "formas": [
+    "cura",
+    "curauit",
+    "curabo"
+   ]
+  },
+  {
+   "lema": "pax",
+   "n": 123,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "pax",
+    "pace",
+    "pacem"
+   ]
+  },
+  {
+   "lema": "exspecto",
+   "n": 122,
+   "upos": "VERB",
+   "cubierto": 0.639344262295082,
+   "formas": [
+    "exspecto",
+    "exspectare",
+    "expectantes"
+   ]
+  },
+  {
+   "lema": "tres",
+   "n": 121,
+   "upos": "NUM",
+   "cubierto": 0,
+   "formas": [
+    "tribus",
+    "tres",
+    "tria"
+   ]
+  },
+  {
+   "lema": "contra",
+   "n": 120,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "contra"
+   ]
+  },
+  {
+   "lema": "seruo",
+   "n": 120,
+   "upos": "VERB",
+   "cubierto": 0.008333333333333333,
+   "formas": [
+    "seruare",
+    "seruantur",
+    "seruanda"
+   ]
+  },
+  {
+   "lema": "utor",
+   "n": 120,
+   "upos": "VERB",
+   "cubierto": 0.9916666666666667,
+   "formas": [
+    "uti",
+    "usus",
+    "usi"
+   ]
+  },
+  {
+   "lema": "dum",
+   "n": 119,
+   "upos": "SCONJ",
+   "cubierto": 0,
+   "formas": [
+    "dum"
+   ]
+  },
+  {
+   "lema": "ratio",
+   "n": 119,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "ratione",
+    "ratio",
+    "rationem"
+   ]
+  },
+  {
+   "lema": "affero",
+   "n": 119,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "adfert",
+    "afferri",
+    "adtulit"
+   ]
+  },
+  {
+   "lema": "copia",
+   "n": 119,
+   "upos": "NOUN",
+   "cubierto": 0.7815126050420168,
+   "formas": [
+    "copias",
+    "copiis",
+    "copia"
+   ]
+  },
+  {
+   "lema": "transeo",
+   "n": 118,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "transire",
+    "transiret",
+    "transierunt"
+   ]
+  },
+  {
+   "lema": "abeo",
+   "n": 118,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "abiit",
+    "abierunt",
+    "abire"
+   ]
+  },
+  {
+   "lema": "quomodo",
+   "n": 118,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "quomodo",
+    "quo"
+   ]
+  },
+  {
+   "lema": "caro",
+   "n": 118,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "carnem",
+    "carne",
+    "caro"
+   ]
+  },
+  {
+   "lema": "caput",
+   "n": 117,
+   "upos": "NOUN",
+   "cubierto": 0.19658119658119658,
+   "formas": [
+    "caput",
+    "capita",
+    "capite"
+   ]
+  },
+  {
+   "lema": "peccatum",
+   "n": 117,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "peccatum",
+    "peccata",
+    "peccato"
+   ]
+  },
+  {
+   "lema": "occido",
+   "n": 116,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "occiderunt",
+    "occidi",
+    "occidit"
+   ]
+  },
+  {
+   "lema": "supra",
+   "n": 116,
+   "upos": "ADP",
+   "cubierto": 0,
+   "formas": [
+    "supra",
+    "supera"
+   ]
+  },
+  {
+   "lema": "nescio",
+   "n": 116,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "nescio",
+    "nescitis",
+    "nescit"
+   ]
+  },
+  {
+   "lema": "recipio",
+   "n": 116,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "receperunt",
+    "recipit",
+    "recepit"
+   ]
+  },
+  {
+   "lema": "ascendo",
+   "n": 115,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "ascendit",
+    "ascenderunt",
+    "ascendens"
+   ]
+  },
+  {
+   "lema": "testimonium",
+   "n": 115,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "testimonium",
+    "testimonio",
+    "testimonii"
+   ]
+  },
+  {
+   "lema": "constituo",
+   "n": 115,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "constituit",
+    "constituta",
+    "constitutis"
+   ]
+  },
+  {
+   "lema": "intro",
+   "n": 114,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "intrauit",
+    "intrare",
+    "intrantes"
+   ]
+  },
+  {
+   "lema": "consul",
+   "n": 114,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "consules",
+    "consul",
+    "consulibus"
+   ]
+  },
+  {
+   "lema": "doceo",
+   "n": 113,
+   "upos": "VERB",
+   "cubierto": 0.9911504424778761,
+   "formas": [
+    "docens",
+    "docebat",
+    "docere"
+   ]
+  },
+  {
+   "lema": "adhuc",
+   "n": 113,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "adhuc"
+   ]
+  },
+  {
+   "lema": "conuenio",
+   "n": 113,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "conuenit",
+    "conuenire",
+    "conueniunt"
+   ]
+  },
+  {
+   "lema": "panis",
+   "n": 113,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "panem",
+    "panes",
+    "panis"
+   ]
+  },
+  {
+   "lema": "patior",
+   "n": 112,
+   "upos": "VERB",
+   "cubierto": 0.9821428571428571,
+   "formas": [
+    "pati",
+    "patitur",
+    "passus"
+   ]
+  },
+  {
+   "lema": "an",
+   "n": 112,
+   "upos": "PART",
+   "cubierto": 1,
+   "formas": [
+    "an"
+   ]
+  },
+  {
+   "lema": "reddo",
+   "n": 112,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "reddidit",
+    "reddere",
+    "redde"
+   ]
+  },
+  {
+   "lema": "amicus",
+   "n": 112,
+   "upos": "NOUN",
+   "cubierto": 0.9464285714285714,
+   "formas": [
+    "amicos",
+    "amicus",
+    "amicis"
+   ]
+  },
+  {
+   "lema": "uoluntas",
+   "n": 112,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "uoluntatem",
+    "uoluntate",
+    "uoluntas"
+   ]
+  },
+  {
+   "lema": "maneo",
+   "n": 111,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "manet",
+    "manere",
+    "mansit"
+   ]
+  },
+  {
+   "lema": "mortuus",
+   "n": 110,
+   "upos": "ADJ",
+   "cubierto": 1,
+   "formas": [
+    "mortuis",
+    "mortui",
+    "mortuorum"
+   ]
+  },
+  {
+   "lema": "os",
+   "n": 109,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "ore",
+    "os",
+    "ora"
+   ]
+  },
+  {
+   "lema": "semper",
+   "n": 109,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "semper"
+   ]
+  },
+  {
+   "lema": "igitur",
+   "n": 109,
+   "upos": "PART",
+   "cubierto": 0,
+   "formas": [
+    "igitur"
+   ]
+  },
+  {
+   "lema": "puer",
+   "n": 107,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "puer",
+    "puerum",
+    "pueri"
+   ]
+  },
+  {
+   "lema": "nosco",
+   "n": 107,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "nosti",
+    "nosse",
+    "noui"
+   ]
+  },
+  {
+   "lema": "quasi",
+   "n": 107,
+   "upos": "SCONJ",
+   "cubierto": 0,
+   "formas": [
+    "quasi"
+   ]
+  },
+  {
+   "lema": "ecclesia",
+   "n": 107,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "ecclesiae",
+    "ecclesia",
+    "ecclesiis"
+   ]
+  },
+  {
+   "lema": "tamquam",
+   "n": 106,
+   "upos": "SCONJ",
+   "cubierto": 0.009433962264150943,
+   "formas": [
+    "tamquam",
+    "tanquam",
+    "tam"
+   ]
+  },
+  {
+   "lema": "amo",
+   "n": 105,
+   "upos": "VERB",
+   "cubierto": 0.9619047619047619,
+   "formas": [
+    "amas",
+    "amat",
+    "amo"
+   ]
+  },
+  {
+   "lema": "certus",
+   "n": 105,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "certiorem",
+    "certior",
+    "certum"
+   ]
+  },
+  {
+   "lema": "sacerdos",
+   "n": 104,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "sacerdotum",
+    "sacerdotes",
+    "sacerdos"
+   ]
+  },
+  {
+   "lema": "oro",
+   "n": 103,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "oro",
+    "orate",
+    "orare"
+   ]
+  },
+  {
+   "lema": "medius",
+   "n": 103,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "medio",
+    "medium",
+    "media"
+   ]
+  },
+  {
+   "lema": "licet",
+   "n": 103,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "licet",
+    "liceret",
+    "liceat"
+   ]
+  },
+  {
+   "lema": "legio",
+   "n": 103,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "legiones",
+    "legionibus",
+    "legionem"
+   ]
+  },
+  {
+   "lema": "interrogo",
+   "n": 102,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "interrogauit",
+    "interrogabant",
+    "interrogauerunt"
+   ]
+  },
+  {
+   "lema": "existimo",
+   "n": 102,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "existimabat",
+    "existimo",
+    "existimauit"
+   ]
+  },
+  {
+   "lema": "tertius",
+   "n": 102,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "tertia",
+    "tertium",
+    "tertiam"
+   ]
+  },
+  {
+   "lema": "proelium",
+   "n": 102,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "proelio",
+    "proelium",
+    "proeliis"
+   ]
+  },
+  {
+   "lema": "sub",
+   "n": 101,
+   "upos": "ADP",
+   "cubierto": 1,
+   "formas": [
+    "sub"
+   ]
+  },
+  {
+   "lema": "flumen",
+   "n": 101,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "flumen",
+    "flumine",
+    "fluminis"
+   ]
+  },
+  {
+   "lema": "numerus",
+   "n": 101,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "numero",
+    "numerum",
+    "numerus"
+   ]
+  },
+  {
+   "lema": "deinde",
+   "n": 101,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "deinde",
+    "dein"
+   ]
+  },
+  {
+   "lema": "praedico",
+   "n": 101,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "praedicans",
+    "praedicare",
+    "praedixi"
+   ]
+  },
+  {
+   "lema": "epistula",
+   "n": 101,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "epistula",
+    "epistulam",
+    "epistulae"
+   ]
+  },
+  {
+   "lema": "legatus",
+   "n": 101,
+   "upos": "NOUN",
+   "cubierto": 0.15841584158415842,
+   "formas": [
+    "legatos",
+    "legati",
+    "legatis"
+   ]
+  },
+  {
+   "lema": "septem",
+   "n": 101,
+   "upos": "NUM",
+   "cubierto": 0,
+   "formas": [
+    "septem",
+    "decem"
+   ]
+  },
+  {
+   "lema": "aperio",
+   "n": 100,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "aperuit",
+    "aperuisset",
+    "apertum"
+   ]
+  },
+  {
+   "lema": "officium",
+   "n": 100,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "officio",
+    "officium",
+    "officii"
+   ]
+  },
+  {
+   "lema": "mater",
+   "n": 100,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "mater",
+    "matrem",
+    "matri"
+   ]
+  },
+  {
+   "lema": "gero",
+   "n": 100,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "geruntur",
+    "gestis",
+    "gerere"
+   ]
+  },
+  {
+   "lema": "primum",
+   "n": 100,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "primum"
+   ]
+  },
+  {
+   "lema": "uado",
+   "n": 99,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "uade",
+    "uado",
+    "uadit"
+   ]
+  },
+  {
+   "lema": "placeo",
+   "n": 99,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "placet",
+    "placuit",
+    "placere"
+   ]
+  },
+  {
+   "lema": "statim",
+   "n": 99,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "statim"
+   ]
+  },
+  {
+   "lema": "descendo",
+   "n": 99,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "descendit",
+    "descendentem",
+    "descendens"
+   ]
+  },
+  {
+   "lema": "pharisaeus",
+   "n": 99,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "pharisaei",
+    "pharisaeorum",
+    "pharisaeis"
+   ]
+  },
+  {
+   "lema": "cado",
+   "n": 98,
+   "upos": "VERB",
+   "cubierto": 0.9795918367346939,
+   "formas": [
+    "cecidit",
+    "ceciderunt",
+    "cadunt"
+   ]
+  },
+  {
+   "lema": "paro",
+   "n": 98,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "parare",
+    "parate",
+    "parauerunt"
+   ]
+  },
+  {
+   "lema": "saepe",
+   "n": 98,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "saepe",
+    "saepius",
+    "saepissime"
+   ]
+  },
+  {
+   "lema": "ambulo",
+   "n": 98,
+   "upos": "VERB",
+   "cubierto": 0.9795918367346939,
+   "formas": [
+    "ambulare",
+    "ambulabat",
+    "ambulant"
+   ]
+  },
+  {
+   "lema": "iustitia",
+   "n": 98,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "iustitiae",
+    "iustitiam",
+    "iustitia"
+   ]
+  },
+  {
+   "lema": "quantus",
+   "n": 97,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "quantum",
+    "quanta",
+    "quanto"
+   ]
+  },
+  {
+   "lema": "cogito",
+   "n": 97,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "cogitabam",
+    "cogitare",
+    "cogitat"
+   ]
+  },
+  {
+   "lema": "anima",
+   "n": 96,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "animam",
+    "anima",
+    "animae"
+   ]
+  },
+  {
+   "lema": "parum",
+   "n": 96,
+   "upos": "ADV",
+   "cubierto": 0.8854166666666666,
+   "formas": [
+    "minus",
+    "minime",
+    "parum"
+   ]
+  },
+  {
+   "lema": "quo",
+   "n": 95,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "quo"
+   ]
+  },
+  {
+   "lema": "simul",
+   "n": 95,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "simul"
+   ]
+  },
+  {
+   "lema": "mons",
+   "n": 95,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "montem",
+    "monte",
+    "montis"
+   ]
+  },
+  {
+   "lema": "quisque",
+   "n": 94,
+   "upos": "DET",
+   "cubierto": 0.13829787234042554,
+   "formas": [
+    "quisque",
+    "cuique",
+    "quoque"
+   ]
+  },
+  {
+   "lema": "natura",
+   "n": 93,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "natura",
+    "naturae",
+    "naturam"
+   ]
+  },
+  {
+   "lema": "prouincia",
+   "n": 93,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "prouincia",
+    "prouinciam",
+    "prouinciae"
+   ]
+  },
+  {
+   "lema": "satis",
+   "n": 92,
+   "upos": "ADV",
+   "cubierto": 0.9565217391304348,
+   "formas": [
+    "satis",
+    "sat",
+    "satius"
+   ]
+  },
+  {
+   "lema": "inquam",
+   "n": 92,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "inquit",
+    "inquam",
+    "inquies"
+   ]
+  },
+  {
+   "lema": "mensis",
+   "n": 92,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "mense",
+    "mensibus",
+    "menses"
+   ]
+  },
+  {
+   "lema": "uxor",
+   "n": 92,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "uxorem",
+    "uxor",
+    "uxores"
+   ]
+  },
+  {
+   "lema": "quattuor",
+   "n": 91,
+   "upos": "NUM",
+   "cubierto": 0,
+   "formas": [
+    "quattuor"
+   ]
+  },
+  {
+   "lema": "plebs",
+   "n": 91,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "plebis",
+    "plebem",
+    "plebs"
+   ]
+  },
+  {
+   "lema": "bene",
+   "n": 91,
+   "upos": "ADV",
+   "cubierto": 0.3076923076923077,
+   "formas": [
+    "bene",
+    "melius",
+    "optime"
+   ]
+  },
+  {
+   "lema": "capio",
+   "n": 90,
+   "upos": "VERB",
+   "cubierto": 0.9555555555555556,
+   "formas": [
+    "capere",
+    "capi",
+    "caperent"
+   ]
+  },
+  {
+   "lema": "saluus",
+   "n": 90,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "saluum",
+    "saluus",
+    "salui"
+   ]
+  },
+  {
+   "lema": "iustus",
+   "n": 89,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "iustum",
+    "iusti",
+    "iustus"
+   ]
+  },
+  {
+   "lema": "fructus",
+   "n": 89,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "fructum",
+    "fructus",
+    "fructu"
+   ]
+  },
+  {
+   "lema": "clamo",
+   "n": 88,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "clamabant",
+    "clamauit",
+    "clamans"
+   ]
+  },
+  {
+   "lema": "nascor",
+   "n": 87,
+   "upos": "VERB",
+   "cubierto": 1,
+   "formas": [
+    "natus",
+    "nati",
+    "nasci"
+   ]
+  },
+  {
+   "lema": "solus",
+   "n": 87,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "solus",
+    "solum",
+    "sola"
+   ]
+  },
+  {
+   "lema": "spero",
+   "n": 87,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "spero",
+    "sperare",
+    "sperat"
+   ]
+  },
+  {
+   "lema": "quare",
+   "n": 87,
+   "upos": "INTJ",
+   "cubierto": 0.3563218390804598,
+   "formas": [
+    "quare",
+    "qua"
+   ]
+  },
+  {
+   "lema": "multitudo",
+   "n": 87,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "multitudo",
+    "multitudine",
+    "multitudinem"
+   ]
+  },
+  {
+   "lema": "longe",
+   "n": 87,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "longe",
+    "longius",
+    "longissime"
+   ]
+  },
+  {
+   "lema": "similis",
+   "n": 86,
+   "upos": "ADJ",
+   "cubierto": 0.9883720930232558,
+   "formas": [
+    "simile",
+    "similes",
+    "similis"
+   ]
+  },
+  {
+   "lema": "ignis",
+   "n": 85,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "ignis",
+    "ignem",
+    "igni"
+   ]
+  },
+  {
+   "lema": "uniuersus",
+   "n": 85,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "uniuersa",
+    "uniuersam",
+    "uniuersi"
+   ]
+  },
+  {
+   "lema": "saeculum",
+   "n": 85,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "saecula",
+    "saeculorum",
+    "saeculi"
+   ]
+  },
+  {
+   "lema": "uis",
+   "n": 84,
+   "upos": "NOUN",
+   "cubierto": 0.16666666666666666,
+   "formas": [
+    "uim",
+    "ui",
+    "uiribus"
+   ]
+  },
+  {
+   "lema": "sanguis",
+   "n": 84,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "sanguinem",
+    "sanguine",
+    "sanguis"
+   ]
+  },
+  {
+   "lema": "gaudeo",
+   "n": 84,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "gaudeo",
+    "gaudete",
+    "gaudet"
+   ]
+  },
+  {
+   "lema": "duodecim",
+   "n": 84,
+   "upos": "NUM",
+   "cubierto": 0,
+   "formas": [
+    "duodecim"
+   ]
+  },
+  {
+   "lema": "aduersus",
+   "n": 84,
+   "upos": "ADP",
+   "cubierto": 0,
+   "formas": [
+    "aduersus",
+    "aduersum",
+    "aduerso"
+   ]
+  },
+  {
+   "lema": "impleo",
+   "n": 84,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "impleatur",
+    "impleuit",
+    "impleretur"
+   ]
+  },
+  {
+   "lema": "discedo",
+   "n": 83,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "discedere",
+    "discessit",
+    "discedens"
+   ]
+  },
+  {
+   "lema": "oratio",
+   "n": 83,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "oratione",
+    "orationibus",
+    "orationem"
+   ]
+  },
+  {
+   "lema": "uitis",
+   "n": 83,
+   "upos": "NOUN",
+   "cubierto": 0.3855421686746988,
+   "formas": [
+    "uitis",
+    "uites",
+    "uitibus"
+   ]
+  },
+  {
+   "lema": "quoque",
+   "n": 82,
+   "upos": "PART",
+   "cubierto": 1,
+   "formas": [
+    "quoque"
+   ]
+  },
+  {
+   "lema": "lapis",
+   "n": 82,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "lapidem",
+    "lapides",
+    "lapide"
+   ]
+  },
+  {
+   "lema": "adduco",
+   "n": 82,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "adduci",
+    "adducti",
+    "adduxerunt"
+   ]
+  },
+  {
+   "lema": "lego",
+   "n": 82,
+   "upos": "VERB",
+   "cubierto": 0.8902439024390244,
+   "formas": [
+    "legistis",
+    "legi",
+    "legit"
+   ]
+  },
+  {
+   "lema": "bibo",
+   "n": 82,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "bibere",
+    "bibit",
+    "bibam"
+   ]
+  },
+  {
+   "lema": "coram",
+   "n": 82,
+   "upos": "ADP",
+   "cubierto": 0,
+   "formas": [
+    "coram"
+   ]
+  },
+  {
+   "lema": "salus",
+   "n": 82,
+   "upos": "NOUN",
+   "cubierto": 0.4268292682926829,
+   "formas": [
+    "salutem",
+    "salutis",
+    "salus"
+   ]
+  },
+  {
+   "lema": "paucus",
+   "n": 81,
+   "upos": "DET",
+   "cubierto": 0,
+   "formas": [
+    "paucis",
+    "pauci",
+    "paucos"
+   ]
+  },
+  {
+   "lema": "fugio",
+   "n": 81,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "fugit",
+    "fugere",
+    "fugerunt"
+   ]
+  },
+  {
+   "lema": "eques",
+   "n": 81,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "equites",
+    "equitum",
+    "equitibus"
+   ]
+  },
+  {
+   "lema": "item",
+   "n": 81,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "item",
+    "itemque"
+   ]
+  },
+  {
+   "lema": "dignus",
+   "n": 80,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "dignum",
+    "dignus",
+    "digna"
+   ]
+  },
+  {
+   "lema": "nego",
+   "n": 80,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "negauit",
+    "negat",
+    "negare"
+   ]
+  },
+  {
+   "lema": "quinque",
+   "n": 80,
+   "upos": "NUM",
+   "cubierto": 0,
+   "formas": [
+    "quinque"
+   ]
+  },
+  {
+   "lema": "ueritas",
+   "n": 80,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "ueritatem",
+    "ueritate",
+    "ueritatis"
+   ]
+  },
+  {
+   "lema": "arbitror",
+   "n": 80,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "arbitror",
+    "arbitrabatur",
+    "arbitratus"
+   ]
+  },
+  {
+   "lema": "arbor",
+   "n": 79,
+   "upos": "NOUN",
+   "cubierto": 0.9873417721518988,
+   "formas": [
+    "arbor",
+    "arbores",
+    "arborem"
+   ]
+  },
+  {
+   "lema": "ullus",
+   "n": 79,
+   "upos": "DET",
+   "cubierto": 0,
+   "formas": [
+    "ulla",
+    "ullo",
+    "ullam"
+   ]
+  },
+  {
+   "lema": "timor",
+   "n": 79,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "timore",
+    "timor",
+    "timorem"
+   ]
+  },
+  {
+   "lema": "iniuria",
+   "n": 79,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "iniuriam",
+    "iniuria",
+    "iniurias"
+   ]
+  },
+  {
+   "lema": "periculum",
+   "n": 79,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "periculo",
+    "periculum",
+    "periculis"
+   ]
+  },
+  {
+   "lema": "solum",
+   "n": 79,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "solum",
+    "solo",
+    "soli"
+   ]
+  },
+  {
+   "lema": "eicio",
+   "n": 79,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "eicere",
+    "eiecerunt",
+    "eice"
+   ]
+  },
+  {
+   "lema": "multum",
+   "n": 79,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "multum",
+    "plus",
+    "plurimum"
+   ]
+  },
+  {
+   "lema": "refero",
+   "n": 78,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "refert",
+    "referri",
+    "referre"
+   ]
+  },
+  {
+   "lema": "inde",
+   "n": 78,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "inde"
+   ]
+  },
+  {
+   "lema": "ostendo",
+   "n": 78,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "ostendit",
+    "ostendam",
+    "ostende"
+   ]
+  },
+  {
+   "lema": "interficio",
+   "n": 78,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "interficere",
+    "interfecto",
+    "interfici"
+   ]
+  },
+  {
+   "lema": "absum",
+   "n": 77,
+   "upos": "VERB",
+   "cubierto": 0.33766233766233766,
+   "formas": [
+    "absit",
+    "abesse",
+    "abesset"
+   ]
+  },
+  {
+   "lema": "superus",
+   "n": 77,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "superiore",
+    "superioribus",
+    "superiores"
+   ]
+  },
+  {
+   "lema": "pereo",
+   "n": 77,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "pereat",
+    "perierunt",
+    "perire"
+   ]
+  },
+  {
+   "lema": "arma",
+   "n": 77,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "armis",
+    "arma",
+    "armorum"
+   ]
+  },
+  {
+   "lema": "contendo",
+   "n": 77,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "contendit",
+    "contendere",
+    "contenderunt"
+   ]
+  },
+  {
+   "lema": "uinco",
+   "n": 76,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "uicerit",
+    "uictis",
+    "uincere"
+   ]
+  },
+  {
+   "lema": "introeo",
+   "n": 76,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "introiuit",
+    "introire",
+    "introisset"
+   ]
+  },
+  {
+   "lema": "conuerto",
+   "n": 75,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "conuersus",
+    "conuertantur",
+    "conuertit"
+   ]
+  },
+  {
+   "lema": "siue",
+   "n": 75,
+   "upos": "CCONJ",
+   "cubierto": 0,
+   "formas": [
+    "siue",
+    "seu"
+   ]
+  },
+  {
+   "lema": "probo",
+   "n": 75,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "probari",
+    "probare",
+    "probo"
+   ]
+  },
+  {
+   "lema": "inuicem",
+   "n": 75,
+   "upos": "PRON",
+   "cubierto": 0.013333333333333334,
+   "formas": [
+    "inuicem",
+    "in"
+   ]
+  },
+  {
+   "lema": "suscipio",
+   "n": 75,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "suscipere",
+    "suscepit",
+    "suscipe"
+   ]
+  },
+  {
+   "lema": "reuertor",
+   "n": 75,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "reuersi",
+    "reuersus",
+    "reuerti"
+   ]
+  },
+  {
+   "lema": "baptizo",
+   "n": 75,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "baptizati",
+    "baptizatus",
+    "baptizari"
+   ]
+  },
+  {
+   "lema": "facile",
+   "n": 75,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "facile",
+    "facilius",
+    "facillime"
+   ]
+  },
+  {
+   "lema": "cogo",
+   "n": 74,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "cogor",
+    "coegit",
+    "coactus"
+   ]
+  },
+  {
+   "lema": "nuntio",
+   "n": 73,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "nuntiauerunt",
+    "nuntiauit",
+    "nuntiata"
+   ]
+  },
+  {
+   "lema": "numquam",
+   "n": 72,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "numquam",
+    "nunquam"
+   ]
+  },
+  {
+   "lema": "amor",
+   "n": 72,
+   "upos": "NOUN",
+   "cubierto": 0.3055555555555556,
+   "formas": [
+    "amore",
+    "amor",
+    "amoris"
+   ]
+  },
+  {
+   "lema": "senex",
+   "n": 72,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "seniores",
+    "senioribus",
+    "senex"
+   ]
+  },
+  {
+   "lema": "semen",
+   "n": 72,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "semen",
+    "semina",
+    "semine"
+   ]
+  },
+  {
+   "lema": "numquid",
+   "n": 72,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "numquid"
+   ]
+  },
+  {
+   "lema": "facies",
+   "n": 72,
+   "upos": "NOUN",
+   "cubierto": 0.1527777777777778,
+   "formas": [
+    "faciem",
+    "facie",
+    "facies"
+   ]
+  },
+  {
+   "lema": "imperium",
+   "n": 72,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "imperium",
+    "imperio",
+    "imperia"
+   ]
+  },
+  {
+   "lema": "grauis",
+   "n": 71,
+   "upos": "ADJ",
+   "cubierto": 0.9577464788732394,
+   "formas": [
+    "grauis",
+    "grauem",
+    "graui"
+   ]
+  },
+  {
+   "lema": "soluo",
+   "n": 71,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "soluit",
+    "soluere",
+    "solui"
+   ]
+  },
+  {
+   "lema": "uterque",
+   "n": 71,
+   "upos": "DET",
+   "cubierto": 0,
+   "formas": [
+    "utraque",
+    "utrumque",
+    "utriusque"
+   ]
+  },
+  {
+   "lema": "plenus",
+   "n": 71,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "plena",
+    "plenum",
+    "plenus"
+   ]
+  },
+  {
+   "lema": "ualeo",
+   "n": 71,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "ualeas",
+    "ualet",
+    "uale"
+   ]
+  },
+  {
+   "lema": "aeternus",
+   "n": 71,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "aeternam",
+    "aeternum",
+    "aeterna"
+   ]
+  },
+  {
+   "lema": "labor",
+   "n": 70,
+   "upos": "VERB",
+   "cubierto": 0.21428571428571427,
+   "formas": [
+    "labore",
+    "laborem",
+    "laboribus"
+   ]
+  },
+  {
+   "lema": "perdo",
+   "n": 70,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "perdere",
+    "perdet",
+    "perdidit"
+   ]
+  },
+  {
+   "lema": "ius",
+   "n": 70,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "iure",
+    "ius",
+    "iuris"
+   ]
+  },
+  {
+   "lema": "oppidum",
+   "n": 70,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "oppido",
+    "oppidum",
+    "oppidis"
+   ]
+  },
+  {
+   "lema": "inimicus",
+   "n": 70,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "inimicos",
+    "inimici",
+    "inimicus"
+   ]
+  },
+  {
+   "lema": "praecipio",
+   "n": 69,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "praecepit",
+    "praecipio",
+    "praecipere"
+   ]
+  },
+  {
+   "lema": "soleo",
+   "n": 69,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "solet",
+    "solent",
+    "solebat"
+   ]
+  },
+  {
+   "lema": "pugno",
+   "n": 69,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "pugnare",
+    "pugnatum",
+    "pugnandi"
+   ]
+  },
+  {
+   "lema": "donec",
+   "n": 69,
+   "upos": "SCONJ",
+   "cubierto": 0,
+   "formas": [
+    "donec",
+    "done"
+   ]
+  },
+  {
+   "lema": "regio",
+   "n": 69,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "regionem",
+    "regionibus",
+    "regiones"
+   ]
+  },
+  {
+   "lema": "apostolus",
+   "n": 69,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "apostoli",
+    "apostolos",
+    "apostolorum"
+   ]
+  },
+  {
+   "lema": "statuo",
+   "n": 69,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "statuit",
+    "statuerunt",
+    "statuere"
+   ]
+  },
+  {
+   "lema": "ualde",
+   "n": 69,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "ualde"
+   ]
+  },
+  {
+   "lema": "talis",
+   "n": 68,
+   "upos": "DET",
+   "cubierto": 0,
+   "formas": [
+    "talis",
+    "talia",
+    "tales"
+   ]
+  },
+  {
+   "lema": "aduentus",
+   "n": 68,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "aduentu",
+    "aduentum",
+    "aduentus"
+   ]
+  },
+  {
+   "lema": "singulus",
+   "n": 68,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "singulis",
+    "singulos",
+    "singuli"
+   ]
+  },
+  {
+   "lema": "sabbatum",
+   "n": 68,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "sabbato",
+    "sabbati",
+    "sabbatum"
+   ]
+  },
+  {
+   "lema": "sustineo",
+   "n": 67,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "sustinere",
+    "sustinet",
+    "sustineri"
+   ]
+  },
+  {
+   "lema": "urbs",
+   "n": 67,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "urbe",
+    "urbem",
+    "urbis"
+   ]
+  },
+  {
+   "lema": "confero",
+   "n": 67,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "contulerunt",
+    "contulit",
+    "conferre"
+   ]
+  },
+  {
+   "lema": "tantum",
+   "n": 67,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "tantum",
+    "solum"
+   ]
+  },
+  {
+   "lema": "euangelium",
+   "n": 67,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "euangelium",
+    "euangelii",
+    "euangelio"
+   ]
+  },
+  {
+   "lema": "efficio",
+   "n": 66,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "efficere",
+    "efficitur",
+    "effecit"
+   ]
+  },
+  {
+   "lema": "mos",
+   "n": 66,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "more",
+    "mores",
+    "moribus"
+   ]
+  },
+  {
+   "lema": "uerus",
+   "n": 66,
+   "upos": "ADJ",
+   "cubierto": 1,
+   "formas": [
+    "uerum",
+    "uera",
+    "ueri"
+   ]
+  },
+  {
+   "lema": "impero",
+   "n": 66,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "imperat",
+    "imperauit",
+    "imperauerat"
+   ]
+  },
+  {
+   "lema": "conficio",
+   "n": 66,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "confecto",
+    "confecta",
+    "confectis"
+   ]
+  },
+  {
+   "lema": "scriba",
+   "n": 66,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "scribae",
+    "scribis",
+    "scriba"
+   ]
+  },
+  {
+   "lema": "daemonium",
+   "n": 66,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "daemonia",
+    "daemonium",
+    "daemoniorum"
+   ]
+  },
+  {
+   "lema": "germani",
+   "n": 66,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "germani",
+    "germanos",
+    "germanorum"
+   ]
+  },
+  {
+   "lema": "diu",
+   "n": 65,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "diu",
+    "diutius",
+    "diutissime"
+   ]
+  },
+  {
+   "lema": "spatium",
+   "n": 65,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "spatio",
+    "spatium",
+    "spatia"
+   ]
+  },
+  {
+   "lema": "operor",
+   "n": 65,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "operatur",
+    "operantes",
+    "operor"
+   ]
+  },
+  {
+   "lema": "fortuna",
+   "n": 64,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "fortuna",
+    "fortunam",
+    "fortunas"
+   ]
+  },
+  {
+   "lema": "studium",
+   "n": 64,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "studio",
+    "studia",
+    "studium"
+   ]
+  },
+  {
+   "lema": "impono",
+   "n": 64,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "inposuerunt",
+    "inposuisset",
+    "inposuit"
+   ]
+  },
+  {
+   "lema": "confirmo",
+   "n": 64,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "confirmata",
+    "confirmatum",
+    "confirmauit"
+   ]
+  },
+  {
+   "lema": "ample",
+   "n": 64,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "amplius",
+    "amplissime"
+   ]
+  },
+  {
+   "lema": "unusquisque",
+   "n": 64,
+   "upos": "PRON",
+   "cubierto": 0,
+   "formas": [
+    "unusquisque",
+    "unicuique",
+    "unaquaeque"
+   ]
+  },
+  {
+   "lema": "cura",
+   "n": 63,
+   "upos": "NOUN",
+   "cubierto": 0.9841269841269841,
+   "formas": [
+    "cura",
+    "curae",
+    "curam"
+   ]
+  },
+  {
+   "lema": "unde",
+   "n": 63,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "unde"
+   ]
+  },
+  {
+   "lema": "longus",
+   "n": 63,
+   "upos": "ADJ",
+   "cubierto": 1,
+   "formas": [
+    "longas",
+    "longe",
+    "longa"
+   ]
+  },
+  {
+   "lema": "circa",
+   "n": 63,
+   "upos": "ADP",
+   "cubierto": 0,
+   "formas": [
+    "circa"
+   ]
+  },
+  {
+   "lema": "lingua",
+   "n": 63,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "lingua",
+    "linguis",
+    "linguam"
+   ]
+  },
+  {
+   "lema": "negotium",
+   "n": 63,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "negotium",
+    "negotio",
+    "negotiis"
+   ]
+  },
+  {
+   "lema": "proximus",
+   "n": 63,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "proximis",
+    "proximum",
+    "proximi"
+   ]
+  },
+  {
+   "lema": "praesidium",
+   "n": 63,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "praesidio",
+    "praesidium",
+    "praesidia"
+   ]
+  },
+  {
+   "lema": "met",
+   "n": 63,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "met"
+   ]
+  },
+  {
+   "lema": "aedui",
+   "n": 63,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "haeduis",
+    "haeduos",
+    "haeduorum"
+   ]
+  },
+  {
+   "lema": "desum",
+   "n": 62,
+   "upos": "VERB",
+   "cubierto": 0.46774193548387094,
+   "formas": [
+    "desit",
+    "deest",
+    "deerat"
+   ]
+  },
+  {
+   "lema": "sententia",
+   "n": 62,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "sententia",
+    "sententiam",
+    "sententias"
+   ]
+  },
+  {
+   "lema": "praeter",
+   "n": 62,
+   "upos": "ADP",
+   "cubierto": 0,
+   "formas": [
+    "praeter"
+   ]
+  },
+  {
+   "lema": "tribunus",
+   "n": 62,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "tribunus",
+    "tribunis",
+    "tribunum"
+   ]
+  },
+  {
+   "lema": "adoro",
+   "n": 62,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "adorauerunt",
+    "adorare",
+    "adorauit"
+   ]
+  },
+  {
+   "lema": "heluetii",
+   "n": 62,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "heluetii",
+    "heluetios",
+    "heluetiorum"
+   ]
+  },
+  {
+   "lema": "fortis",
+   "n": 61,
+   "upos": "ADJ",
+   "cubierto": 0.9672131147540983,
+   "formas": [
+    "fortis",
+    "fortes",
+    "fortem"
+   ]
+  },
+  {
+   "lema": "sol",
+   "n": 61,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "sol",
+    "sole",
+    "solis"
+   ]
+  },
+  {
+   "lema": "uestimentum",
+   "n": 61,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "uestimenta",
+    "uestimentum",
+    "uestimentis"
+   ]
+  },
+  {
+   "lema": "uinum",
+   "n": 61,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "uinum",
+    "uino",
+    "uini"
+   ]
+  },
+  {
+   "lema": "pecunia",
+   "n": 61,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "pecuniam",
+    "pecunia",
+    "pecuniae"
+   ]
+  },
+  {
+   "lema": "communis",
+   "n": 61,
+   "upos": "ADJ",
+   "cubierto": 1,
+   "formas": [
+    "commune",
+    "communi",
+    "communia"
+   ]
+  },
+  {
+   "lema": "prohibeo",
+   "n": 61,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "prohibere",
+    "prohiberent",
+    "prohibuit"
+   ]
+  },
+  {
+   "lema": "caritas",
+   "n": 61,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "caritate",
+    "caritatem",
+    "caritas"
+   ]
+  },
+  {
+   "lema": "magister",
+   "n": 60,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "magister",
+    "magistrum",
+    "magistros"
+   ]
+  },
+  {
+   "lema": "equitatus",
+   "n": 60,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "equitatu",
+    "equitatum",
+    "equitatus"
+   ]
+  },
+  {
+   "lema": "nonne",
+   "n": 60,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "nonne"
+   ]
+  },
+  {
+   "lema": "synagoga",
+   "n": 60,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "synagogis",
+    "synagoga",
+    "synagogam"
+   ]
+  },
+  {
+   "lema": "potius",
+   "n": 60,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "potius"
+   ]
+  },
+  {
+   "lema": "auris",
+   "n": 59,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "aures",
+    "aurem",
+    "auribus"
+   ]
+  },
+  {
+   "lema": "saluto",
+   "n": 59,
+   "upos": "VERB",
+   "cubierto": 0.9661016949152542,
+   "formas": [
+    "salutate",
+    "salutant",
+    "salutat"
+   ]
+  },
+  {
+   "lema": "miror",
+   "n": 59,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "mirabantur",
+    "mirati",
+    "miror"
+   ]
+  },
+  {
+   "lema": "secundus",
+   "n": 59,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "secundum",
+    "secunda",
+    "secundus"
+   ]
+  },
+  {
+   "lema": "moueo",
+   "n": 58,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "motus",
+    "mouere",
+    "mouet"
+   ]
+  },
+  {
+   "lema": "usus",
+   "n": 58,
+   "upos": "NOUN",
+   "cubierto": 0.5,
+   "formas": [
+    "usu",
+    "usus",
+    "usum"
+   ]
+  },
+  {
+   "lema": "sentio",
+   "n": 58,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "sentire",
+    "sentiat",
+    "sentio"
+   ]
+  },
+  {
+   "lema": "appello",
+   "n": 58,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "appellatur",
+    "appellatus",
+    "appellantur"
+   ]
+  },
+  {
+   "lema": "postulo",
+   "n": 58,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "postulabat",
+    "postulantes",
+    "postulat"
+   ]
+  },
+  {
+   "lema": "gaudium",
+   "n": 58,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "gaudium",
+    "gaudio",
+    "gaudia"
+   ]
+  },
+  {
+   "lema": "auctoritas",
+   "n": 58,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "auctoritate",
+    "auctoritatem",
+    "auctoritas"
+   ]
+  },
+  {
+   "lema": "honor",
+   "n": 57,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "honorem",
+    "honore",
+    "honoris"
+   ]
+  },
+  {
+   "lema": "sero",
+   "n": 57,
+   "upos": "VERB",
+   "cubierto": 0.017543859649122806,
+   "formas": [
+    "sero",
+    "serenda",
+    "seri"
+   ]
+  },
+  {
+   "lema": "fuga",
+   "n": 57,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "fuga",
+    "fugam",
+    "fugae"
+   ]
+  },
+  {
+   "lema": "ideo",
+   "n": 57,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "ideo"
+   ]
+  },
+  {
+   "lema": "seruio",
+   "n": 57,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "seruire",
+    "seruientes",
+    "seruiamus"
+   ]
+  },
+  {
+   "lema": "monumentum",
+   "n": 57,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "monumentum",
+    "monumento",
+    "monumentis"
+   ]
+  },
+  {
+   "lema": "accido",
+   "n": 57,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "accidit",
+    "accidere",
+    "accidisset"
+   ]
+  },
+  {
+   "lema": "mandatum",
+   "n": 57,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "mandatum",
+    "mandata",
+    "mandatis"
+   ]
+  },
+  {
+   "lema": "ira",
+   "n": 56,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "ira",
+    "irae",
+    "iram"
+   ]
+  },
+  {
+   "lema": "mens",
+   "n": 56,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "mente",
+    "mentem",
+    "mentis"
+   ]
+  },
+  {
+   "lema": "tango",
+   "n": 56,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "tetigit",
+    "tetigerit",
+    "tangerent"
+   ]
+  },
+  {
+   "lema": "bestia",
+   "n": 56,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "bestiam",
+    "bestiae",
+    "bestias"
+   ]
+  },
+  {
+   "lema": "dolor",
+   "n": 56,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "dolore",
+    "dolor",
+    "dolorem"
+   ]
+  },
+  {
+   "lema": "fere",
+   "n": 56,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "fere"
+   ]
+  },
+  {
+   "lema": "paenitentia",
+   "n": 56,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "paenitentiam",
+    "paenitentiae",
+    "paenitentia"
+   ]
+  },
+  {
+   "lema": "initium",
+   "n": 56,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "initio",
+    "initium",
+    "initia"
+   ]
+  },
+  {
+   "lema": "uetus",
+   "n": 55,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "ueterem",
+    "uetus",
+    "ueteres"
+   ]
+  },
+  {
+   "lema": "redeo",
+   "n": 55,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "redeo",
+    "redeat",
+    "redeunt"
+   ]
+  },
+  {
+   "lema": "caecus",
+   "n": 55,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "caeci",
+    "caecus",
+    "caecos"
+   ]
+  },
+  {
+   "lema": "impedio",
+   "n": 55,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "impeditos",
+    "impedit",
+    "impeditam"
+   ]
+  },
+  {
+   "lema": "nouissimus",
+   "n": 55,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "nouissimo",
+    "nouissima",
+    "nouissimi"
+   ]
+  },
+  {
+   "lema": "desidero",
+   "n": 55,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "desiderat",
+    "desidero",
+    "desideret"
+   ]
+  },
+  {
+   "lema": "infero",
+   "n": 55,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "inferrent",
+    "inferre",
+    "intulissent"
+   ]
+  },
+  {
+   "lema": "obses",
+   "n": 55,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "obsides",
+    "obsidibus",
+    "obsidum"
+   ]
+  },
+  {
+   "lema": "egredior",
+   "n": 55,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "egressus",
+    "egressi",
+    "egredi"
+   ]
+  },
+  {
+   "lema": "uentus",
+   "n": 54,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "uento",
+    "uentus",
+    "uentis"
+   ]
+  },
+  {
+   "lema": "altus",
+   "n": 54,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "altum",
+    "alta",
+    "alto"
+   ]
+  },
+  {
+   "lema": "habito",
+   "n": 54,
+   "upos": "VERB",
+   "cubierto": 1,
+   "formas": [
+    "habitat",
+    "habitant",
+    "habitare"
+   ]
+  },
+  {
+   "lema": "auxilium",
+   "n": 54,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "auxilium",
+    "auxilia",
+    "auxilio"
+   ]
+  },
+  {
+   "lema": "laudo",
+   "n": 54,
+   "upos": "VERB",
+   "cubierto": 0.9259259259259259,
+   "formas": [
+    "laudo",
+    "laudari",
+    "laudamus"
+   ]
+  },
+  {
+   "lema": "lux",
+   "n": 54,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "lucem",
+    "lux",
+    "luce"
+   ]
+  },
+  {
+   "lema": "frumentum",
+   "n": 54,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "frumentum",
+    "frumenta",
+    "frumenti"
+   ]
+  },
+  {
+   "lema": "eligo",
+   "n": 54,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "elegit",
+    "electos",
+    "elegi"
+   ]
+  },
+  {
+   "lema": "prope",
+   "n": 54,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "prope",
+    "proxime",
+    "propius"
+   ]
+  },
+  {
+   "lema": "semino",
+   "n": 53,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "seminat",
+    "seminatur",
+    "seminatum"
+   ]
+  },
+  {
+   "lema": "diligenter",
+   "n": 53,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "diligenter",
+    "diligentissime",
+    "diligentius"
+   ]
+  },
+  {
+   "lema": "diuido",
+   "n": 53,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "diuisit",
+    "diuidit",
+    "diuisa"
+   ]
+  },
+  {
+   "lema": "alienus",
+   "n": 53,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "alienum",
+    "aliena",
+    "alieno"
+   ]
+  },
+  {
+   "lema": "quando",
+   "n": 53,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "quando"
+   ]
+  },
+  {
+   "lema": "audeo",
+   "n": 52,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "audebat",
+    "ausus",
+    "auderent"
+   ]
+  },
+  {
+   "lema": "incipio",
+   "n": 52,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "incipiens",
+    "incipit",
+    "incipient"
+   ]
+  },
+  {
+   "lema": "silua",
+   "n": 52,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "siluas",
+    "siluis",
+    "siluae"
+   ]
+  },
+  {
+   "lema": "noceo",
+   "n": 52,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "nocere",
+    "nocebit",
+    "noceat"
+   ]
+  },
+  {
+   "lema": "cupio",
+   "n": 52,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "cupio",
+    "cupit",
+    "cupiebat"
+   ]
+  },
+  {
+   "lema": "cito",
+   "n": 52,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "cito",
+    "citius",
+    "citato"
+   ]
+  },
+  {
+   "lema": "infirmus",
+   "n": 52,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "infirmos",
+    "infirma",
+    "infirmus"
+   ]
+  },
+  {
+   "lema": "perspicio",
+   "n": 52,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "perspecta",
+    "perspicias",
+    "perspicio"
+   ]
+  },
+  {
+   "lema": "omnino",
+   "n": 52,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "omnino"
+   ]
+  },
+  {
+   "lema": "resurgo",
+   "n": 52,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "resurrexit",
+    "resurgunt",
+    "resurgere"
+   ]
+  },
+  {
+   "lema": "emo",
+   "n": 51,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "emit",
+    "emi",
+    "emere"
+   ]
+  },
+  {
+   "lema": "aedifico",
+   "n": 51,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "aedificauit",
+    "aedificare",
+    "aedificat"
+   ]
+  },
+  {
+   "lema": "opera",
+   "n": 51,
+   "upos": "NOUN",
+   "cubierto": 0.3137254901960784,
+   "formas": [
+    "operam",
+    "opera",
+    "operae"
+   ]
+  },
+  {
+   "lema": "uereor",
+   "n": 51,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "uereor",
+    "ueritus",
+    "uerebatur"
+   ]
+  },
+  {
+   "lema": "praesto",
+   "n": 51,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "praesto",
+    "praestare",
+    "praestabat"
+   ]
+  },
+  {
+   "lema": "congrego",
+   "n": 51,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "congregati",
+    "congregatis",
+    "congregabit"
+   ]
+  },
+  {
+   "lema": "nondum",
+   "n": 50,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "nondum"
+   ]
+  },
+  {
+   "lema": "quin",
+   "n": 50,
+   "upos": "SCONJ",
+   "cubierto": 0,
+   "formas": [
+    "quin"
+   ]
+  },
+  {
+   "lema": "ue",
+   "n": 50,
+   "upos": "CCONJ",
+   "cubierto": 0.98,
+   "formas": [
+    "ue",
+    "u"
+   ]
+  },
+  {
+   "lema": "impetus",
+   "n": 50,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "impetum",
+    "impetu",
+    "impetus"
+   ]
+  },
+  {
+   "lema": "peruenio",
+   "n": 50,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "peruenit",
+    "peruenerunt",
+    "peruenisset"
+   ]
+  },
+  {
+   "lema": "ordo",
+   "n": 50,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "ordinis",
+    "ordine",
+    "ordinibus"
+   ]
+  },
+  {
+   "lema": "crucifigo",
+   "n": 50,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "crucifixus",
+    "crucifige",
+    "crucifixerunt"
+   ]
+  },
+  {
+   "lema": "adsum",
+   "n": 49,
+   "upos": "VERB",
+   "cubierto": 0.42857142857142855,
+   "formas": [
+    "adesse",
+    "adesses",
+    "aderant"
+   ]
+  },
+  {
+   "lema": "committo",
+   "n": 49,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "committere",
+    "committendum",
+    "committam"
+   ]
+  },
+  {
+   "lema": "uae",
+   "n": 49,
+   "upos": "INTJ",
+   "cubierto": 0,
+   "formas": [
+    "uae"
+   ]
+  },
+  {
+   "lema": "propterea",
+   "n": 49,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "propterea"
+   ]
+  },
+  {
+   "lema": "assumo",
+   "n": 49,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "adsumit",
+    "adsumpsit",
+    "adsumetur"
+   ]
+  },
+  {
+   "lema": "gigno",
+   "n": 48,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "genuit",
+    "genui",
+    "geniti"
+   ]
+  },
+  {
+   "lema": "postquam",
+   "n": 48,
+   "upos": "SCONJ",
+   "cubierto": 0,
+   "formas": [
+    "postquam"
+   ]
+  },
+  {
+   "lema": "lumen",
+   "n": 48,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "lumen",
+    "lumine",
+    "lumina"
+   ]
+  },
+  {
+   "lema": "contineo",
+   "n": 48,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "continetur",
+    "contineret",
+    "continet"
+   ]
+  },
+  {
+   "lema": "malo",
+   "n": 48,
+   "upos": "VERB",
+   "cubierto": 0.9791666666666666,
+   "formas": [
+    "malo",
+    "mallem",
+    "malui"
+   ]
+  },
+  {
+   "lema": "pecco",
+   "n": 48,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "peccaui",
+    "peccauerunt",
+    "peccare"
+   ]
+  },
+  {
+   "lema": "gratus",
+   "n": 48,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "gratum",
+    "grata",
+    "gratius"
+   ]
+  },
+  {
+   "lema": "sapientia",
+   "n": 48,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "sapientia",
+    "sapientiam",
+    "sapientiae"
+   ]
+  },
+  {
+   "lema": "uinea",
+   "n": 48,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "uineam",
+    "uineae",
+    "uineis"
+   ]
+  },
+  {
+   "lema": "iuro",
+   "n": 47,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "iurare",
+    "iurando",
+    "iurauit"
+   ]
+  },
+  {
+   "lema": "o",
+   "n": 47,
+   "upos": "INTJ",
+   "cubierto": 0,
+   "formas": [
+    "o"
+   ]
+  },
+  {
+   "lema": "coepio",
+   "n": 47,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "coepit",
+    "coepi",
+    "coeperunt"
+   ]
+  },
+  {
+   "lema": "aufero",
+   "n": 47,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "auferetur",
+    "aufert",
+    "auferre"
+   ]
+  },
+  {
+   "lema": "decem",
+   "n": 47,
+   "upos": "NUM",
+   "cubierto": 0,
+   "formas": [
+    "decem",
+    "x"
+   ]
+  },
+  {
+   "lema": "procedo",
+   "n": 47,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "procedunt",
+    "processit",
+    "procedit"
+   ]
+  },
+  {
+   "lema": "pertineo",
+   "n": 47,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "pertinet",
+    "pertinere",
+    "pertinent"
+   ]
+  },
+  {
+   "lema": "caueo",
+   "n": 47,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "caue",
+    "cauendum",
+    "cauete"
+   ]
+  },
+  {
+   "lema": "postea",
+   "n": 47,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "postea"
+   ]
+  },
+  {
+   "lema": "iudex",
+   "n": 47,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "iudices",
+    "iudex",
+    "iudicum"
+   ]
+  },
+  {
+   "lema": "magnitudo",
+   "n": 47,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "magnitudine",
+    "magnitudo",
+    "magnitudinem"
+   ]
+  },
+  {
+   "lema": "custodio",
+   "n": 47,
+   "upos": "VERB",
+   "cubierto": 0.8936170212765957,
+   "formas": [
+    "custodit",
+    "custodiunt",
+    "custodiri"
+   ]
+  },
+  {
+   "lema": "consequor",
+   "n": 47,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "consequi",
+    "consecuti",
+    "consecutus"
+   ]
+  },
+  {
+   "lema": "defendo",
+   "n": 47,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "defendere",
+    "defenderet",
+    "defendissem"
+   ]
+  },
+  {
+   "lema": "accuso",
+   "n": 47,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "accusare",
+    "accusarent",
+    "accusaretur"
+   ]
+  },
+  {
+   "lema": "colo",
+   "n": 46,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "colitur",
+    "colere",
+    "colendi"
+   ]
+  },
+  {
+   "lema": "equus",
+   "n": 46,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "equis",
+    "equorum",
+    "equo"
+   ]
+  },
+  {
+   "lema": "fidelis",
+   "n": 46,
+   "upos": "ADJ",
+   "cubierto": 1,
+   "formas": [
+    "fidelis",
+    "fideles",
+    "fidelem"
+   ]
+  },
+  {
+   "lema": "offero",
+   "n": 46,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "obtulerunt",
+    "obtulit",
+    "offerre"
+   ]
+  },
+  {
+   "lema": "abundo",
+   "n": 46,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "abundetis",
+    "abundauit",
+    "abundet"
+   ]
+  },
+  {
+   "lema": "cohors",
+   "n": 46,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "cohortibus",
+    "cohortis",
+    "cohortes"
+   ]
+  },
+  {
+   "lema": "animal",
+   "n": 46,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "animalia",
+    "animal",
+    "animalibus"
+   ]
+  },
+  {
+   "lema": "consuetudo",
+   "n": 46,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "consuetudine",
+    "consuetudinem",
+    "consuetudo"
+   ]
+  },
+  {
+   "lema": "confido",
+   "n": 46,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "confido",
+    "confidebant",
+    "confidens"
+   ]
+  },
+  {
+   "lema": "minister",
+   "n": 46,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "ministri",
+    "minister",
+    "ministris"
+   ]
+  },
+  {
+   "lema": "sino",
+   "n": 45,
+   "upos": "VERB",
+   "cubierto": 0.2,
+   "formas": [
+    "sinite",
+    "sine",
+    "sinat"
+   ]
+  },
+  {
+   "lema": "excipio",
+   "n": 45,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "excepit",
+    "exceptis",
+    "exceptum"
+   ]
+  },
+  {
+   "lema": "fleo",
+   "n": 45,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "flentes",
+    "flere",
+    "flens"
+   ]
+  },
+  {
+   "lema": "beatus",
+   "n": 45,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "beati",
+    "beatus",
+    "beatum"
+   ]
+  },
+  {
+   "lema": "conspectus",
+   "n": 45,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "conspectu",
+    "conspectum",
+    "conspectus"
+   ]
+  },
+  {
+   "lema": "facilis",
+   "n": 45,
+   "upos": "ADJ",
+   "cubierto": 1,
+   "formas": [
+    "facile",
+    "facilius",
+    "facilis"
+   ]
+  },
+  {
+   "lema": "prosum",
+   "n": 45,
+   "upos": "VERB",
+   "cubierto": 0.4,
+   "formas": [
+    "prodest",
+    "proderit",
+    "prodesse"
+   ]
+  },
+  {
+   "lema": "etsi",
+   "n": 45,
+   "upos": "SCONJ",
+   "cubierto": 0,
+   "formas": [
+    "etsi"
+   ]
+  },
+  {
+   "lema": "gladius",
+   "n": 45,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "gladium",
+    "gladio",
+    "gladiis"
+   ]
+  },
+  {
+   "lema": "miser",
+   "n": 45,
+   "upos": "ADJ",
+   "cubierto": 0.9777777777777777,
+   "formas": [
+    "miserum",
+    "miser",
+    "miserius"
+   ]
+  },
+  {
+   "lema": "delecto",
+   "n": 45,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "delectat",
+    "delectant",
+    "delectarunt"
+   ]
+  },
+  {
+   "lema": "laus",
+   "n": 45,
+   "upos": "NOUN",
+   "cubierto": 0.4,
+   "formas": [
+    "laudem",
+    "laudis",
+    "laude"
+   ]
+  },
+  {
+   "lema": "carcer",
+   "n": 45,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "carcere",
+    "carcerem",
+    "carceris"
+   ]
+  },
+  {
+   "lema": "forte",
+   "n": 45,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "forte"
+   ]
+  },
+  {
+   "lema": "socius",
+   "n": 44,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "sociis",
+    "socios",
+    "socii"
+   ]
+  },
+  {
+   "lema": "deduco",
+   "n": 44,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "deducere",
+    "deducit",
+    "deduci"
+   ]
+  },
+  {
+   "lema": "uerum",
+   "n": 44,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "uerum",
+    "uero",
+    "ueri"
+   ]
+  },
+  {
+   "lema": "tenebrae",
+   "n": 44,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "tenebris",
+    "tenebrae",
+    "tenebrarum"
+   ]
+  },
+  {
+   "lema": "soror",
+   "n": 44,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "soror",
+    "sorores",
+    "sororis"
+   ]
+  },
+  {
+   "lema": "uehementer",
+   "n": 44,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "uehementer",
+    "uehementius",
+    "uehementissime"
+   ]
+  },
+  {
+   "lema": "rursus",
+   "n": 44,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "rursus",
+    "rursum"
+   ]
+  },
+  {
+   "lema": "taceo",
+   "n": 44,
+   "upos": "VERB",
+   "cubierto": 1,
+   "formas": [
+    "tacuerunt",
+    "taces",
+    "tace"
+   ]
+  },
+  {
+   "lema": "ciuis",
+   "n": 44,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "ciuium",
+    "ciuis",
+    "ciues"
+   ]
+  },
+  {
+   "lema": "retineo",
+   "n": 44,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "retinere",
+    "retinet",
+    "retineri"
+   ]
+  },
+  {
+   "lema": "ob",
+   "n": 44,
+   "upos": "ADP",
+   "cubierto": 0,
+   "formas": [
+    "ob"
+   ]
+  },
+  {
+   "lema": "dubito",
+   "n": 44,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "dubitabat",
+    "dubitans",
+    "dubitant"
+   ]
+  },
+  {
+   "lema": "ignoro",
+   "n": 44,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "ignorare",
+    "ignoras",
+    "ignorans"
+   ]
+  },
+  {
+   "lema": "radix",
+   "n": 44,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "radices",
+    "radicibus",
+    "radicem"
+   ]
+  },
+  {
+   "lema": "qualis",
+   "n": 43,
+   "upos": "DET",
+   "cubierto": 0,
+   "formas": [
+    "qualis",
+    "quales",
+    "quale"
+   ]
+  },
+  {
+   "lema": "latus",
+   "n": 43,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "latus",
+    "latere",
+    "latera"
+   ]
+  },
+  {
+   "lema": "percutio",
+   "n": 43,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "percussit",
+    "percutere",
+    "percutiebant"
+   ]
+  },
+  {
+   "lema": "uix",
+   "n": 43,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "uix",
+    "uixdum"
+   ]
+  },
+  {
+   "lema": "huc",
+   "n": 43,
+   "upos": "ADV",
+   "cubierto": 0.06976744186046512,
+   "formas": [
+    "huc",
+    "hoc"
+   ]
+  },
+  {
+   "lema": "laboro",
+   "n": 43,
+   "upos": "VERB",
+   "cubierto": 0.8837209302325582,
+   "formas": [
+    "laborant",
+    "laborantes",
+    "laborare"
+   ]
+  },
+  {
+   "lema": "disco",
+   "n": 43,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "didicistis",
+    "discere",
+    "discite"
+   ]
+  },
+  {
+   "lema": "quemadmodum",
+   "n": 43,
+   "upos": "ADV",
+   "cubierto": 0.32558139534883723,
+   "formas": [
+    "quemadmodum",
+    "quem"
+   ]
+  },
+  {
+   "lema": "dormio",
+   "n": 43,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "dormierunt",
+    "dormientes",
+    "dormit"
+   ]
+  },
+  {
+   "lema": "praesens",
+   "n": 43,
+   "upos": "ADJ",
+   "cubierto": 1,
+   "formas": [
+    "praesens",
+    "praesenti",
+    "praesentem"
+   ]
+  },
+  {
+   "lema": "scriptura",
+   "n": 43,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "scriptura",
+    "scripturas",
+    "scripturae"
+   ]
+  },
+  {
+   "lema": "galli",
+   "n": 43,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "gallorum",
+    "gallis",
+    "galli"
+   ]
+  },
+  {
+   "lema": "instituo",
+   "n": 42,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "instituit",
+    "instituta",
+    "institui"
+   ]
+  },
+  {
+   "lema": "acies",
+   "n": 42,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "aciem",
+    "acie",
+    "acies"
+   ]
+  },
+  {
+   "lema": "umquam",
+   "n": 42,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "umquam",
+    "unquam"
+   ]
+  },
+  {
+   "lema": "appareo",
+   "n": 42,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "apparuit",
+    "appareat",
+    "apparet"
+   ]
+  },
+  {
+   "lema": "ouis",
+   "n": 42,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "oues",
+    "ouium",
+    "ouibus"
+   ]
+  },
+  {
+   "lema": "utilis",
+   "n": 42,
+   "upos": "ADJ",
+   "cubierto": 1,
+   "formas": [
+    "utile",
+    "utilis",
+    "utiles"
+   ]
+  },
+  {
+   "lema": "significo",
+   "n": 42,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "significat",
+    "significas",
+    "significata"
+   ]
+  },
+  {
+   "lema": "glorior",
+   "n": 42,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "gloriari",
+    "gloriamur",
+    "glorietur"
+   ]
+  },
+  {
+   "lema": "magistratus",
+   "n": 42,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "magistratus",
+    "magistratum",
+    "magistratibus"
+   ]
+  },
+  {
+   "lema": "comitium",
+   "n": 42,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "comitia",
+    "comitiis",
+    "comitiorum"
+   ]
+  },
+  {
+   "lema": "perhibeo",
+   "n": 42,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "perhibet",
+    "perhibuit",
+    "perhibeo"
+   ]
+  },
+  {
+   "lema": "similiter",
+   "n": 42,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "similiter"
+   ]
+  },
+  {
+   "lema": "sane",
+   "n": 42,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "sane"
+   ]
+  },
+  {
+   "lema": "mando",
+   "n": 41,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "mando",
+    "mandaui",
+    "mandauit"
+   ]
+  },
+  {
+   "lema": "reperio",
+   "n": 41,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "reperire",
+    "repertus",
+    "reperies"
+   ]
+  },
+  {
+   "lema": "notus",
+   "n": 41,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "notum",
+    "nota",
+    "notus"
+   ]
+  },
+  {
+   "lema": "sumo",
+   "n": 41,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "sumere",
+    "sumpsit",
+    "sumens"
+   ]
+  },
+  {
+   "lema": "caedo",
+   "n": 41,
+   "upos": "VERB",
+   "cubierto": 0.4146341463414634,
+   "formas": [
+    "cecidit",
+    "cecidi",
+    "ceciderunt"
+   ]
+  },
+  {
+   "lema": "defero",
+   "n": 41,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "delata",
+    "deferret",
+    "defero"
+   ]
+  },
+  {
+   "lema": "educo",
+   "n": 41,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "eduxit",
+    "eduxisset",
+    "educunt"
+   ]
+  },
+  {
+   "lema": "aliquando",
+   "n": 41,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "aliquando"
+   ]
+  },
+  {
+   "lema": "porta",
+   "n": 41,
+   "upos": "NOUN",
+   "cubierto": 0.34146341463414637,
+   "formas": [
+    "portae",
+    "portam",
+    "portis"
+   ]
+  },
+  {
+   "lema": "multo",
+   "n": 41,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "multo",
+    "multatos",
+    "multarunt"
+   ]
+  },
+  {
+   "lema": "doctrina",
+   "n": 41,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "doctrina",
+    "doctrinam",
+    "doctrinas"
+   ]
+  },
+  {
+   "lema": "familiaris",
+   "n": 41,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "familiari",
+    "familiaris",
+    "familiarem"
+   ]
+  },
+  {
+   "lema": "prius",
+   "n": 41,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "prius"
+   ]
+  },
+  {
+   "lema": "suscito",
+   "n": 41,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "suscitauit",
+    "suscitabit",
+    "suscitat"
+   ]
+  },
+  {
+   "lema": "facultas",
+   "n": 41,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "facultatem",
+    "facultates",
+    "facultas"
+   ]
+  },
+  {
+   "lema": "certe",
+   "n": 41,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "certe",
+    "certissime",
+    "certius"
+   ]
+  },
+  {
+   "lema": "iaceo",
+   "n": 40,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "iacet",
+    "iacebat",
+    "iacentem"
+   ]
+  },
+  {
+   "lema": "trans",
+   "n": 40,
+   "upos": "ADP",
+   "cubierto": 0,
+   "formas": [
+    "trans"
+   ]
+  },
+  {
+   "lema": "frango",
+   "n": 40,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "fregit",
+    "fregi",
+    "fracti"
+   ]
+  },
+  {
+   "lema": "praeterea",
+   "n": 40,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "praeterea"
+   ]
+  },
+  {
+   "lema": "plaga",
+   "n": 40,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "plaga",
+    "plagas",
+    "plagis"
+   ]
+  },
+  {
+   "lema": "nauigo",
+   "n": 40,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "nauigandi",
+    "nauigantes",
+    "nauigauimus"
+   ]
+  },
+  {
+   "lema": "persequor",
+   "n": 40,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "persequeris",
+    "persecuti",
+    "persecutus"
+   ]
+  },
+  {
+   "lema": "ministro",
+   "n": 40,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "ministrare",
+    "ministrabat",
+    "ministrabant"
+   ]
+  },
+  {
+   "lema": "perficio",
+   "n": 40,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "perficere",
+    "perficiam",
+    "perfectum"
+   ]
+  },
+  {
+   "lema": "consuesco",
+   "n": 40,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "consueuit",
+    "consuerunt",
+    "consuerint"
+   ]
+  },
+  {
+   "lema": "appropinquo",
+   "n": 40,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "adpropinquauit",
+    "adpropinquaret",
+    "adpropinquabat"
+   ]
+  },
+  {
+   "lema": "parabola",
+   "n": 40,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "parabolam",
+    "parabolis",
+    "parabolas"
+   ]
+  },
+  {
+   "lema": "tempto",
+   "n": 40,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "temptantes",
+    "temptatis",
+    "temptare"
+   ]
+  },
+  {
+   "lema": "tribulatio",
+   "n": 40,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "tribulatione",
+    "tribulationem",
+    "tribulationibus"
+   ]
+  },
+  {
+   "lema": "celeriter",
+   "n": 40,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "celeriter",
+    "celerius",
+    "celerrime"
+   ]
+  },
+  {
+   "lema": "generatio",
+   "n": 40,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "generatio",
+    "generatione",
+    "generationes"
+   ]
+  },
+  {
+   "lema": "uiuus",
+   "n": 39,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "uiui",
+    "uiuorum",
+    "uiuum"
+   ]
+  },
+  {
+   "lema": "passus",
+   "n": 39,
+   "upos": "NOUN",
+   "cubierto": 0.20512820512820512,
+   "formas": [
+    "passuum",
+    "passus",
+    "passibus"
+   ]
+  },
+  {
+   "lema": "concilium",
+   "n": 39,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "concilium",
+    "concilio",
+    "conciliis"
+   ]
+  },
+  {
+   "lema": "rapio",
+   "n": 39,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "rapuit",
+    "rapit",
+    "raptum"
+   ]
+  },
+  {
+   "lema": "consolor",
+   "n": 39,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "consolari",
+    "consolati",
+    "consolatur"
+   ]
+  },
+  {
+   "lema": "turpis",
+   "n": 39,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "turpe",
+    "turpi",
+    "turpius"
+   ]
+  },
+  {
+   "lema": "occupo",
+   "n": 39,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "occupatis",
+    "occupat",
+    "occupato"
+   ]
+  },
+  {
+   "lema": "membrum",
+   "n": 39,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "membra",
+    "membris",
+    "membrum"
+   ]
+  },
+  {
+   "lema": "puella",
+   "n": 39,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "puella",
+    "puellae",
+    "puellas"
+   ]
+  },
+  {
+   "lema": "metus",
+   "n": 39,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "metu",
+    "metus",
+    "metum"
+   ]
+  },
+  {
+   "lema": "praetereo",
+   "n": 39,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "praeterire",
+    "praeteriens",
+    "praeteribit"
+   ]
+  },
+  {
+   "lema": "breuis",
+   "n": 39,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "breui",
+    "breue",
+    "breuis"
+   ]
+  },
+  {
+   "lema": "opinio",
+   "n": 39,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "opinio",
+    "opinionem",
+    "opinione"
+   ]
+  },
+  {
+   "lema": "colligo",
+   "n": 39,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "collegerunt",
+    "colligendi",
+    "collecta"
+   ]
+  },
+  {
+   "lema": "euangelizo",
+   "n": 39,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "euangelizare",
+    "euangelizantes",
+    "euangelizauit"
+   ]
+  },
+  {
+   "lema": "effundo",
+   "n": 38,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "effudit",
+    "effusus",
+    "effunditur"
+   ]
+  },
+  {
+   "lema": "dux",
+   "n": 38,
+   "upos": "NOUN",
+   "cubierto": 0.15789473684210525,
+   "formas": [
+    "ducem",
+    "dux",
+    "ducibus"
+   ]
+  },
+  {
+   "lema": "dexter",
+   "n": 38,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "dextris",
+    "dextera",
+    "dextrum"
+   ]
+  },
+  {
+   "lema": "circiter",
+   "n": 38,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "circiter"
+   ]
+  },
+  {
+   "lema": "testis",
+   "n": 38,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "testes",
+    "testis",
+    "testem"
+   ]
+  },
+  {
+   "lema": "adnuntio",
+   "n": 38,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "adnuntiant",
+    "adnuntians",
+    "adnuntiabit"
+   ]
+  },
+  {
+   "lema": "peccator",
+   "n": 38,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "peccatores",
+    "peccatorum",
+    "peccator"
+   ]
+  },
+  {
+   "lema": "pario",
+   "n": 37,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "peperit",
+    "parta",
+    "pariet"
+   ]
+  },
+  {
+   "lema": "prior",
+   "n": 37,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "prius",
+    "prior",
+    "prioribus"
+   ]
+  },
+  {
+   "lema": "tueor",
+   "n": 37,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "tueri",
+    "tutas",
+    "tuto"
+   ]
+  },
+  {
+   "lema": "intra",
+   "n": 37,
+   "upos": "ADP",
+   "cubierto": 0,
+   "formas": [
+    "intra"
+   ]
+  },
+  {
+   "lema": "uendo",
+   "n": 37,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "uendidit",
+    "uendentes",
+    "uendebant"
+   ]
+  },
+  {
+   "lema": "filia",
+   "n": 37,
+   "upos": "NOUN",
+   "cubierto": 0.972972972972973,
+   "formas": [
+    "filia",
+    "filiam",
+    "filiae"
+   ]
+  },
+  {
+   "lema": "sex",
+   "n": 37,
+   "upos": "NUM",
+   "cubierto": 0,
+   "formas": [
+    "sex",
+    "ui"
+   ]
+  },
+  {
+   "lema": "permitto",
+   "n": 37,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "permisit",
+    "permitte",
+    "permittere"
+   ]
+  },
+  {
+   "lema": "thronus",
+   "n": 37,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "throno",
+    "thronum",
+    "throni"
+   ]
+  },
+  {
+   "lema": "consummo",
+   "n": 37,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "consummasset",
+    "consummentur",
+    "consummarentur"
+   ]
+  },
+  {
+   "lema": "commoueo",
+   "n": 37,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "commotus",
+    "commota",
+    "commoti"
+   ]
+  },
+  {
+   "lema": "publicanus",
+   "n": 37,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "publicanis",
+    "publicani",
+    "publicanorum"
+   ]
+  },
+  {
+   "lema": "resurrectio",
+   "n": 37,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "resurrectionem",
+    "resurrectione",
+    "resurrectio"
+   ]
+  },
+  {
+   "lema": "plane",
+   "n": 37,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "plane",
+    "planissime",
+    "planius"
+   ]
+  },
+  {
+   "lema": "uere",
+   "n": 37,
+   "upos": "ADV",
+   "cubierto": 1,
+   "formas": [
+    "uere",
+    "uerissime"
+   ]
+  },
+  {
+   "lema": "adeo",
+   "n": 36,
+   "upos": "VERB",
+   "cubierto": 0.027777777777777776,
+   "formas": [
+    "adire",
+    "adeo",
+    "adeunt"
+   ]
+  },
+  {
+   "lema": "sedes",
+   "n": 36,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "sedes",
+    "sedis",
+    "sedem"
+   ]
+  },
+  {
+   "lema": "consto",
+   "n": 36,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "constat",
+    "constabat",
+    "constitit"
+   ]
+  },
+  {
+   "lema": "curro",
+   "n": 36,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "currere",
+    "currens",
+    "currunt"
+   ]
+  },
+  {
+   "lema": "possideo",
+   "n": 36,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "possidet",
+    "possidebit",
+    "possidebunt"
+   ]
+  },
+  {
+   "lema": "forum",
+   "n": 36,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "foro",
+    "forum",
+    "fori"
+   ]
+  },
+  {
+   "lema": "misceo",
+   "n": 36,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "mixta",
+    "mixtum",
+    "miscuit"
+   ]
+  },
+  {
+   "lema": "decerno",
+   "n": 36,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "decreuit",
+    "decreta",
+    "decreuerat"
+   ]
+  },
+  {
+   "lema": "perfero",
+   "n": 36,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "perferre",
+    "perlata",
+    "perferantur"
+   ]
+  },
+  {
+   "lema": "depono",
+   "n": 36,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "deponere",
+    "depones",
+    "deponeret"
+   ]
+  },
+  {
+   "lema": "centurio",
+   "n": 36,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "centurio",
+    "centurionibus",
+    "centuriones"
+   ]
+  },
+  {
+   "lema": "appr(eh)endo",
+   "n": 36,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "adprehendit",
+    "adprehensum",
+    "adprehendens"
+   ]
+  },
+  {
+   "lema": "claudo",
+   "n": 35,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "clausa",
+    "clausum",
+    "claudit"
+   ]
+  },
+  {
+   "lema": "par",
+   "n": 35,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "pares",
+    "par",
+    "parem"
+   ]
+  },
+  {
+   "lema": "ingredior",
+   "n": 35,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "ingressus",
+    "ingredi",
+    "ingressi"
+   ]
+  },
+  {
+   "lema": "induco",
+   "n": 35,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "inducta",
+    "inductus",
+    "inducere"
+   ]
+  },
+  {
+   "lema": "porto",
+   "n": 35,
+   "upos": "VERB",
+   "cubierto": 1,
+   "formas": [
+    "portare",
+    "portabant",
+    "portantes"
+   ]
+  },
+  {
+   "lema": "beneficium",
+   "n": 35,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "beneficio",
+    "beneficium",
+    "beneficiis"
+   ]
+  },
+  {
+   "lema": "coniungo",
+   "n": 35,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "coniungere",
+    "coniungi",
+    "coniuncta"
+   ]
+  },
+  {
+   "lema": "uiginti",
+   "n": 35,
+   "upos": "NUM",
+   "cubierto": 0,
+   "formas": [
+    "uiginti",
+    "xx"
+   ]
+  },
+  {
+   "lema": "subicio",
+   "n": 35,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "subiecit",
+    "subiecta",
+    "subiecti"
+   ]
+  },
+  {
+   "lema": "triginta",
+   "n": 35,
+   "upos": "NUM",
+   "cubierto": 0,
+   "formas": [
+    "triginta",
+    "xxx"
+   ]
+  },
+  {
+   "lema": "agnus",
+   "n": 35,
+   "upos": "NOUN",
+   "cubierto": 1,
+   "formas": [
+    "agni",
+    "agnus",
+    "agnos"
+   ]
+  },
+  {
+   "lema": "transfero",
+   "n": 35,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "transferre",
+    "transtulit",
+    "transferatur"
+   ]
+  },
+  {
+   "lema": "odium",
+   "n": 35,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "odio",
+    "odium",
+    "odia"
+   ]
+  },
+  {
+   "lema": "odi",
+   "n": 35,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "odit",
+    "odisse",
+    "odi"
+   ]
+  },
+  {
+   "lema": "durus",
+   "n": 34,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "duro",
+    "durum",
+    "dura"
+   ]
+  },
+  {
+   "lema": "frons",
+   "n": 34,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "fronte",
+    "frontibus",
+    "frontem"
+   ]
+  },
+  {
+   "lema": "poena",
+   "n": 34,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "poenas",
+    "poena",
+    "poenam"
+   ]
+  },
+  {
+   "lema": "eripio",
+   "n": 34,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "eripuit",
+    "eriperet",
+    "eripiat"
+   ]
+  },
+  {
+   "lema": "subito",
+   "n": 34,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "subito"
+   ]
+  },
+  {
+   "lema": "patria",
+   "n": 34,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "patria",
+    "patriae",
+    "patriam"
+   ]
+  },
+  {
+   "lema": "calix",
+   "n": 34,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "calicem",
+    "calix",
+    "calice"
+   ]
+  },
+  {
+   "lema": "merces",
+   "n": 34,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "mercedem",
+    "merces",
+    "mercede"
+   ]
+  },
+  {
+   "lema": "uigilo",
+   "n": 34,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "uigilate",
+    "uigilare",
+    "uigilantes"
+   ]
+  },
+  {
+   "lema": "stultus",
+   "n": 34,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "stulti",
+    "stultum",
+    "stultus"
+   ]
+  },
+  {
+   "lema": "diues",
+   "n": 34,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "diues",
+    "diuites",
+    "diuitis"
+   ]
+  },
+  {
+   "lema": "misereor",
+   "n": 34,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "misertus",
+    "miserere",
+    "misereor"
+   ]
+  },
+  {
+   "lema": "misericordia",
+   "n": 34,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "misericordiam",
+    "misericordia",
+    "misericordiae"
+   ]
+  },
+  {
+   "lema": "conseruo",
+   "n": 34,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "conseruare",
+    "conseruaturum",
+    "conseruanda"
+   ]
+  },
+  {
+   "lema": "memoria",
+   "n": 34,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "memoriam",
+    "memoria",
+    "memoriae"
+   ]
+  },
+  {
+   "lema": "necessarius",
+   "n": 34,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "necessarium",
+    "necessaria",
+    "necessariis"
+   ]
+  },
+  {
+   "lema": "foris",
+   "n": 34,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "foris",
+    "fores",
+    "foribus"
+   ]
+  },
+  {
+   "lema": "amicitia",
+   "n": 34,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "amicitiam",
+    "amicitia",
+    "amicitiae"
+   ]
+  },
+  {
+   "lema": "scientia",
+   "n": 34,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "scientia",
+    "scientiam",
+    "scientiae"
+   ]
+  },
+  {
+   "lema": "sano",
+   "n": 34,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "sanare",
+    "sanauit",
+    "sanata"
+   ]
+  },
+  {
+   "lema": "permaneo",
+   "n": 34,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "permanere",
+    "permanebo",
+    "permanent"
+   ]
+  },
+  {
+   "lema": "remitto",
+   "n": 34,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "remittetur",
+    "remittuntur",
+    "remisi"
+   ]
+  },
+  {
+   "lema": "hortus",
+   "n": 34,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "horti",
+    "hortis",
+    "horto"
+   ]
+  },
+  {
+   "lema": "pugna",
+   "n": 33,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "pugnae",
+    "pugna",
+    "pugnam"
+   ]
+  },
+  {
+   "lema": "conor",
+   "n": 33,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "conari",
+    "conati",
+    "conatus"
+   ]
+  },
+  {
+   "lema": "ops",
+   "n": 33,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "opes",
+    "opibus",
+    "ope"
+   ]
+  },
+  {
+   "lema": "fama",
+   "n": 33,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "fama",
+    "famam",
+    "famae"
+   ]
+  },
+  {
+   "lema": "carus",
+   "n": 33,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "carissimi",
+    "carissimus",
+    "carius"
+   ]
+  },
+  {
+   "lema": "familia",
+   "n": 33,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "familia",
+    "familias",
+    "familiae"
+   ]
+  },
+  {
+   "lema": "uoluptas",
+   "n": 33,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "uoluptatem",
+    "uoluptate",
+    "uoluptati"
+   ]
+  },
+  {
+   "lema": "contemno",
+   "n": 33,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "contemnant",
+    "contemnere",
+    "contemnas"
+   ]
+  },
+  {
+   "lema": "honestus",
+   "n": 33,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "honestum",
+    "honesta",
+    "honeste"
+   ]
+  },
+  {
+   "lema": "sapio",
+   "n": 33,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "sapere",
+    "sapiens",
+    "sapis"
+   ]
+  },
+  {
+   "lema": "diligentia",
+   "n": 33,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "diligentia",
+    "diligentiam",
+    "diligentiae"
+   ]
+  },
+  {
+   "lema": "dignitas",
+   "n": 33,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "dignitatem",
+    "dignitate",
+    "dignitatis"
+   ]
+  },
+  {
+   "lema": "casus",
+   "n": 33,
+   "upos": "NOUN",
+   "cubierto": 0.5757575757575758,
+   "formas": [
+    "casum",
+    "casu",
+    "casus"
+   ]
+  },
+  {
+   "lema": "tribus",
+   "n": 33,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "tribu",
+    "tribus",
+    "tribubus"
+   ]
+  },
+  {
+   "lema": "modicus",
+   "n": 33,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "modicum",
+    "modico",
+    "modicae"
+   ]
+  },
+  {
+   "lema": "desertum",
+   "n": 33,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "deserto",
+    "desertum",
+    "deserta"
+   ]
+  },
+  {
+   "lema": "praesertim",
+   "n": 33,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "praesertim"
+   ]
+  },
+  {
+   "lema": "castellum",
+   "n": 33,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "castellum",
+    "castella",
+    "castello"
+   ]
+  },
+  {
+   "lema": "cogitatio",
+   "n": 33,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "cogitationes",
+    "cogitatione",
+    "cogitatio"
+   ]
+  },
+  {
+   "lema": "graeci",
+   "n": 33,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "graeci",
+    "graecorum",
+    "graecis"
+   ]
+  },
+  {
+   "lema": "quamquam",
+   "n": 32,
+   "upos": "SCONJ",
+   "cubierto": 0,
+   "formas": [
+    "quamquam"
+   ]
+  },
+  {
+   "lema": "hinc",
+   "n": 32,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "hinc",
+    "hinec"
+   ]
+  },
+  {
+   "lema": "conuoco",
+   "n": 32,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "conuocatis",
+    "conuocat",
+    "conuocauit"
+   ]
+  },
+  {
+   "lema": "parens",
+   "n": 32,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "parentes",
+    "parentibus",
+    "parens"
+   ]
+  },
+  {
+   "lema": "queror",
+   "n": 32,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "queri",
+    "queratur",
+    "queritur"
+   ]
+  },
+  {
+   "lema": "interim",
+   "n": 32,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "interim"
+   ]
+  },
+  {
+   "lema": "considero",
+   "n": 32,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "considerate",
+    "considerandum",
+    "considerare"
+   ]
+  },
+  {
+   "lema": "albus",
+   "n": 32,
+   "upos": "ADJ",
+   "cubierto": 0,
+   "formas": [
+    "albis",
+    "alba",
+    "albus"
+   ]
+  },
+  {
+   "lema": "cibus",
+   "n": 32,
+   "upos": "NOUN",
+   "cubierto": 0,
+   "formas": [
+    "cibum",
+    "cibo",
+    "cibos"
+   ]
+  },
+  {
+   "lema": "prouideo",
+   "n": 32,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "prouideri",
+    "prouidendum",
+    "prouisum"
+   ]
+  },
+  {
+   "lema": "alligo",
+   "n": 32,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "alligata",
+    "alligatus",
+    "alligauit"
+   ]
+  },
+  {
+   "lema": "utique",
+   "n": 32,
+   "upos": "ADV",
+   "cubierto": 0,
+   "formas": [
+    "utique"
+   ]
+  },
+  {
+   "lema": "narro",
+   "n": 32,
+   "upos": "VERB",
+   "cubierto": 0,
+   "formas": [
+    "narrauit",
+    "narrauerunt",
+    "narra"
+   ]
+  }
+ ]
+}
