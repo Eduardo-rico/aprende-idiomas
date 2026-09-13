@@ -1,0 +1,122 @@
+{
+ "generado": "2026-09-13",
+ "corpus": "UD Latin (scripts/.cache/treebanks), cortado POR FUENTE y no por treebank",
+ "porQuePorFuente": "PROIEL es 55 % Vulgata y 45 % Cicerón, César y Paladio: cortar por treebank compara «Vulgata + clásico» contra «clásico», y eso dio el resultado contrario al verdadero",
+ "fuentes": {
+  "Perseus (varios clásicos)": {
+   "tokens": 29223,
+   "frases": 2273,
+   "tokensPorFrase": 12.9,
+   "coordinacionPorMil": 106.8,
+   "subordinacionPorMil": 69.4,
+   "coordSobreSubord": 1.54,
+   "ordenes": {
+    "SOV": 44,
+    "SVO": 17.9,
+    "OSV": 18,
+    "OVS": 8.3,
+    "VSO": 6.2,
+    "VOS": 5.6
+   },
+   "clausulasConSujetoYObjeto": 856,
+   "verboFinal": 62
+  },
+  "Jerome's Vulgate": {
+   "tokens": 109197,
+   "frases": 11755,
+   "tokensPorFrase": 9.3,
+   "coordinacionPorMil": 138.9,
+   "subordinacionPorMil": 89.1,
+   "coordSobreSubord": 1.56,
+   "ordenes": {
+    "SOV": 24.1,
+    "SVO": 47.3,
+    "OSV": 7,
+    "OVS": 7.3,
+    "VSO": 6.8,
+    "VOS": 7.6
+   },
+   "clausulasConSujetoYObjeto": 2477,
+   "verboFinal": 31
+  },
+  "Opus agriculturae": {
+   "tokens": 10931,
+   "frases": 872,
+   "tokensPorFrase": 12.5,
+   "coordinacionPorMil": 146.3,
+   "subordinacionPorMil": 118.8,
+   "coordSobreSubord": 1.23,
+   "ordenes": {
+    "SOV": 57.3,
+    "SVO": 7.6,
+    "OSV": 28,
+    "OVS": 5.7,
+    "VSO": 0.6,
+    "VOS": 0.6
+   },
+   "clausulasConSujetoYObjeto": 157,
+   "verboFinal": 85.4
+  },
+  "Epistulae ad Atticum": {
+   "tokens": 42192,
+   "frases": 3608,
+   "tokensPorFrase": 11.7,
+   "coordinacionPorMil": 101,
+   "subordinacionPorMil": 115.5,
+   "coordSobreSubord": 0.87,
+   "ordenes": {
+    "SOV": 52.3,
+    "SVO": 10.2,
+    "OSV": 30.8,
+    "OVS": 3.4,
+    "VSO": 1.9,
+    "VOS": 1.4
+   },
+   "clausulasConSujetoYObjeto": 847,
+   "verboFinal": 83.1
+  },
+  "Commentarii belli Gallici": {
+   "tokens": 25272,
+   "frases": 1328,
+   "tokensPorFrase": 19,
+   "coordinacionPorMil": 136.4,
+   "subordinacionPorMil": 122.9,
+   "coordSobreSubord": 1.11,
+   "ordenes": {
+    "SOV": 69.7,
+    "SVO": 3.2,
+    "OSV": 22.5,
+    "OVS": 3,
+    "VSO": 0.4,
+    "VOS": 1.1
+   },
+   "clausulasConSujetoYObjeto": 528,
+   "verboFinal": 92.2
+  },
+  "De officiis": {
+   "tokens": 10485,
+   "frases": 570,
+   "tokensPorFrase": 18.4,
+   "coordinacionPorMil": 161.9,
+   "subordinacionPorMil": 116.5,
+   "coordSobreSubord": 1.39,
+   "ordenes": {
+    "SOV": 49.3,
+    "SVO": 22.9,
+    "OSV": 19.3,
+    "OVS": 5,
+    "VSO": 2.1,
+    "VOS": 1.4
+   },
+   "clausulasConSujetoYObjeto": 140,
+   "verboFinal": 68.6
+  }
+ },
+ "loQueDiceElMaterial": "Jerónimo coordina donde el clásico subordina, y su orden de palabras se parece mucho más al español",
+ "veredicto": {
+  "subordinacion": "la Vulgata subordina 89.1‰ y los clásicos entre 69.4‰ y 122.9‰",
+  "frase": "la Vulgata tiene las frases más cortas del corpus: 9.3 tokens frente a 19 de César",
+  "orden": "la Vulgata es SVO en el 47.3 % de sus cláusulas y César en el 3.2 %",
+  "verboFinal": "el verbo va al final en el 31 % de la Vulgata y en el 92.2 % de César"
+ }
+}
