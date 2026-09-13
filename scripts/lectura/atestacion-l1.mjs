@@ -9,8 +9,18 @@
 //
 //   npx tsx scripts/lectura/atestacion-l1.mjs
 import fs from 'fs';
-import { todasLasFormas } from '../../lib/data/languages/la/paradigma-la.ts';
-import { NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1 } from '../../lib/data/languages/la/lexicon-l1.ts';
+// EL DOMINIO SALE DE `todas-las-formas`, y no de tres tablas.
+//
+// Hasta el 2026-09-12 este congelador llamaba a `todasLasFormas(nombres,
+// verbos, adjetivos)` — tres tablas de catorce. O sea que **el guardián que
+// caza las desincronizaciones del lexicón no miraba seis tablas enteras**:
+// indeclinables, pluralia tantum, adjetivos de 3.ª, irregulares, compuestos
+// de `sum`, pronombres y personales. Estaba en verde y ciego.
+//
+// Lo destapó preguntar lo que hay que preguntar al meter una máquina nueva:
+// no «qué invariantes existen» —eso tranquiliza y se contesta solo— sino
+// **cuáles la MIRAN**.
+import { todasLasFormasDeL1 } from '../../lib/data/languages/la/todas-las-formas.ts';
 import { sinMacron } from '../../lib/data/languages/la/cantidad.ts';
 
 const D = 'scripts/.cache/treebanks';
@@ -33,7 +43,7 @@ const norm = (s) => sinMacron(s).replace(/j/g, 'i').replace(/v/g, 'u');
 const out = { tokens, generado: new Date().toISOString().slice(0, 10), lemas: {} };
 // UNA sola fuente de «todo lo que la máquina produce»: el hueco se abrió
 // tres veces por tener cada consumidor su propia lista.
-for (const { clave, forma } of todasLasFormas(NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1)) {
+for (const { clave, forma } of todasLasFormasDeL1()) {
   const i = clave.indexOf('.');
   const lema = clave.slice(0, i), celda = clave.slice(i + 1);
   (out.lemas[lema] ??= {})[celda] = { forma, n: cuenta.get(norm(forma)) ?? 0 };
