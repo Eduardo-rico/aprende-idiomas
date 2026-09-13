@@ -130,7 +130,11 @@ export function coberturaSubj(items: ItemSubj[]): Cobertura[] {
     { comprobacion: 'y sin que el nominal homónimo la tape',
       decididos: items.filter((i) => comoSubjuntivo(i.respuesta) >= comoNombre(i.respuesta)).length, total: n },
     { comprobacion: 'los cuatro tiempos', decididos: tiempos.size, total: 4,
-      motivoDeLosQueQuedanFuera: 'el varia son el tiempo y la conjugación: los cuatro tienen que estar' },
+      // SIN `motivoDeLosQueQuedanFuera`: ese campo EXCUSA a los que faltan,
+      // y lo que había escrito aquí era «los tres tienen que estar», que no
+      // es una excusa sino lo contrario. Escribirlo apagaba justo la
+      // comprobación que lo exige: un lote de un solo tiempo pasaba.
+      },
     { comprobacion: 'las conjugaciones', decididos: conj.size, total: 5 },
     { comprobacion: 'la INVERSIÓN de la vocal, que sólo refuta la 1.ª en presente', decididos: refutan, total: presentes.length,
       motivoDeLosQueQuedanFuera: 'fuera del presente no hay vocal temática que elegir, y en las otras conjugaciones «poner -a- a todo» ES lo correcto' },

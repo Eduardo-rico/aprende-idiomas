@@ -1,0 +1,4714 @@
+{
+ "generado": "2026-09-13",
+ "corpus": "UD Latin (scripts/.cache/treebanks)",
+ "comoSeCuenta": "bigrama participio(VerbForm=Part,Tense=Past) + auxiliar, sin cruzar frase; género y número del rasgo, no de la cadena",
+ "paresDistintos": 587,
+ "ocurrencias": 1424,
+ "paresConParticipioDeL1": 45,
+ "porAuxiliar": {
+  "sunt": 352,
+  "est": 1002,
+  "erat": 35,
+  "erant": 27,
+  "erunt": 2,
+  "erit": 6
+ },
+ "tabla": {
+  "persecuti sunt": {
+   "participio": "persecuti",
+   "auxiliar": "sunt",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "dictum est": {
+   "participio": "dictum",
+   "auxiliar": "est",
+   "n": 32,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "moechatus est": {
+   "participio": "moechatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "praecipitatus est": {
+   "participio": "praecipitatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "suffocati sunt": {
+   "participio": "suffocati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "egressi sunt": {
+   "participio": "egressi",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "siccatus est": {
+   "participio": "siccatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "mortua est": {
+   "participio": "mortua",
+   "auxiliar": "est",
+   "n": 5,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "factum est": {
+   "participio": "factum",
+   "auxiliar": "est",
+   "n": 113,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "secuti sunt": {
+   "participio": "secuti",
+   "auxiliar": "sunt",
+   "n": 13,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "repleti sunt": {
+   "participio": "repleti",
+   "auxiliar": "sunt",
+   "n": 8,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "secutus est": {
+   "participio": "secutus",
+   "auxiliar": "est",
+   "n": 6,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "profectus est": {
+   "participio": "profectus",
+   "auxiliar": "est",
+   "n": 18,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "facta est": {
+   "participio": "facta",
+   "auxiliar": "est",
+   "n": 49,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "motus est": {
+   "participio": "motus",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "osculatus est": {
+   "participio": "osculatus",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "mortuus erat": {
+   "participio": "mortuus",
+   "auxiliar": "erat",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "inuentus est": {
+   "participio": "inuentus",
+   "auxiliar": "est",
+   "n": 6,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "indignatus est": {
+   "participio": "indignatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "factus est": {
+   "participio": "factus",
+   "auxiliar": "est",
+   "n": 43,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "occisus est": {
+   "participio": "occisus",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "dissipati sunt": {
+   "participio": "dissipati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "redactus est": {
+   "participio": "redactus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "dispersi sunt": {
+   "participio": "dispersi",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "habiti sunt": {
+   "participio": "habiti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": true
+  },
+  "baptizatus est": {
+   "participio": "baptizatus",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "confortatus est": {
+   "participio": "confortatus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "factae sunt": {
+   "participio": "factae",
+   "auxiliar": "sunt",
+   "n": 14,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": true
+  },
+  "locutus est": {
+   "participio": "locutus",
+   "auxiliar": "est",
+   "n": 35,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "conuersi sunt": {
+   "participio": "conuersi",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "receptum est": {
+   "participio": "receptum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "missi erant": {
+   "participio": "missi",
+   "auxiliar": "erant",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": true
+  },
+  "comitati sunt": {
+   "participio": "comitati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "exaudita est": {
+   "participio": "exaudita",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "commemoratae sunt": {
+   "participio": "commemoratae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "praecepta sunt": {
+   "participio": "praecepta",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "constitutus est": {
+   "participio": "constitutus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "effusa est": {
+   "participio": "effusa",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "praedestinatus est": {
+   "participio": "praedestinatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "scriptum est": {
+   "participio": "scriptum",
+   "auxiliar": "est",
+   "n": 70,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "facta sunt": {
+   "participio": "facta",
+   "auxiliar": "sunt",
+   "n": 15,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "obscuratum est": {
+   "participio": "obscuratum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "facti sunt": {
+   "participio": "facti",
+   "auxiliar": "sunt",
+   "n": 11,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": true
+  },
+  "scripta sunt": {
+   "participio": "scripta",
+   "auxiliar": "sunt",
+   "n": 14,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "suspecta est": {
+   "participio": "suspecta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "parta erunt": {
+   "participio": "parta",
+   "auxiliar": "erunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "scriptum erat": {
+   "participio": "scriptum",
+   "auxiliar": "erat",
+   "n": 4,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "perspectus est": {
+   "participio": "perspectus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "inuectus est": {
+   "participio": "inuectus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "coactus est": {
+   "participio": "coactus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "plausum est": {
+   "participio": "plausum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "laetati sunt": {
+   "participio": "laetati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "uisa est": {
+   "participio": "uisa",
+   "auxiliar": "est",
+   "n": 4,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "appellatus est": {
+   "participio": "appellatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "interfectus est": {
+   "participio": "interfectus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "potiti sunt": {
+   "participio": "potiti",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "effectum est": {
+   "participio": "effectum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "coopertus est": {
+   "participio": "coopertus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "data est": {
+   "participio": "data",
+   "auxiliar": "est",
+   "n": 20,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "misertus est": {
+   "participio": "misertus",
+   "auxiliar": "est",
+   "n": 4,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "saturati sunt": {
+   "participio": "saturati",
+   "auxiliar": "sunt",
+   "n": 5,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "conturbati sunt": {
+   "participio": "conturbati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "restituta est": {
+   "participio": "restituta",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "inlisum est": {
+   "participio": "inlisum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "inlisus est": {
+   "participio": "inlisus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "diffamatus est": {
+   "participio": "diffamatus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "mortuus est": {
+   "participio": "mortuus",
+   "auxiliar": "est",
+   "n": 25,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "sepultus est": {
+   "participio": "sepultus",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "firmatum est": {
+   "participio": "firmatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "impleti sunt": {
+   "participio": "impleti",
+   "auxiliar": "sunt",
+   "n": 5,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "factae erant": {
+   "participio": "factae",
+   "auxiliar": "erant",
+   "n": 2,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": true
+  },
+  "mortui sunt": {
+   "participio": "mortui",
+   "auxiliar": "sunt",
+   "n": 6,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "cognitus est": {
+   "participio": "cognitus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "manifestatum est": {
+   "participio": "manifestatum",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "defunctus est": {
+   "participio": "defunctus",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "translati sunt": {
+   "participio": "translati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "positi sunt": {
+   "participio": "positi",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "confessus erat": {
+   "participio": "confessus",
+   "auxiliar": "erat",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "multiplicatus est": {
+   "participio": "multiplicatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "natus est": {
+   "participio": "natus",
+   "auxiliar": "est",
+   "n": 9,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "nutritus est": {
+   "participio": "nutritus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "eruditus est": {
+   "participio": "eruditus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "admiratus est": {
+   "participio": "admiratus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "auersi sunt": {
+   "participio": "auersi",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "dispersi erant": {
+   "participio": "dispersi",
+   "auxiliar": "erant",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "curati sunt": {
+   "participio": "curati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "ductus est": {
+   "participio": "ductus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "sublatum est": {
+   "participio": "sublatum",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "posita erat": {
+   "participio": "posita",
+   "auxiliar": "erat",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "inuenta est": {
+   "participio": "inuenta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "natum est": {
+   "participio": "natum",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "turbatus est": {
+   "participio": "turbatus",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "gauisi sunt": {
+   "participio": "gauisi",
+   "auxiliar": "sunt",
+   "n": 5,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "reuersi sunt": {
+   "participio": "reuersi",
+   "auxiliar": "sunt",
+   "n": 9,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "iratus est": {
+   "participio": "iratus",
+   "auxiliar": "est",
+   "n": 4,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "adimpletum est": {
+   "participio": "adimpletum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "audita est": {
+   "participio": "audita",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "defuncti sunt": {
+   "participio": "defuncti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "dictus est": {
+   "participio": "dictus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "posita est": {
+   "participio": "posita",
+   "auxiliar": "est",
+   "n": 7,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "aperti sunt": {
+   "participio": "aperti",
+   "auxiliar": "sunt",
+   "n": 5,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "orta est": {
+   "participio": "orta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "secutae sunt": {
+   "participio": "secutae",
+   "auxiliar": "sunt",
+   "n": 7,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "mundata est": {
+   "participio": "mundata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "miratus est": {
+   "participio": "miratus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "sanatus est": {
+   "participio": "sanatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "mirati sunt": {
+   "participio": "mirati",
+   "auxiliar": "sunt",
+   "n": 7,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "defuncta est": {
+   "participio": "defuncta",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "comminatus est": {
+   "participio": "comminatus",
+   "auxiliar": "est",
+   "n": 6,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "miratae sunt": {
+   "participio": "miratae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "numerati sunt": {
+   "participio": "numerati",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "iustificata est": {
+   "participio": "iustificata",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "tradita sunt": {
+   "participio": "tradita",
+   "auxiliar": "sunt",
+   "n": 4,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "oblatus est": {
+   "participio": "oblatus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "diuisus est": {
+   "participio": "diuisus",
+   "auxiliar": "est",
+   "n": 4,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "congregatae sunt": {
+   "participio": "congregatae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "exorta sunt": {
+   "participio": "exorta",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "datum est": {
+   "participio": "datum",
+   "auxiliar": "est",
+   "n": 17,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "incrassatum est": {
+   "participio": "incrassatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "seminatum est": {
+   "participio": "seminatum",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "seminatus est": {
+   "participio": "seminatus",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "fermentatum est": {
+   "participio": "fermentatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "dictum erat": {
+   "participio": "dictum",
+   "auxiliar": "erat",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "pollicitus est": {
+   "participio": "pollicitus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "contristatus est": {
+   "participio": "contristatus",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "adlatum est": {
+   "participio": "adlatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "turbati sunt": {
+   "participio": "turbati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "scandalizati sunt": {
+   "participio": "scandalizati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "sanata est": {
+   "participio": "sanata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "obliti sunt": {
+   "participio": "obliti",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "transfiguratus est": {
+   "participio": "transfiguratus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "curatus est": {
+   "participio": "curatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "contristati sunt": {
+   "participio": "contristati",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "adsimilatum est": {
+   "participio": "adsimilatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "facta erant": {
+   "participio": "facta",
+   "auxiliar": "erant",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": true
+  },
+  "nati sunt": {
+   "participio": "nati",
+   "auxiliar": "sunt",
+   "n": 4,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "oblati sunt": {
+   "participio": "oblati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "arbitrati sunt": {
+   "participio": "arbitrati",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "paratum est": {
+   "participio": "paratum",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "indignati sunt": {
+   "participio": "indignati",
+   "auxiliar": "sunt",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "secuta est": {
+   "participio": "secuta",
+   "auxiliar": "est",
+   "n": 4,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "commota est": {
+   "participio": "commota",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "arefacta est": {
+   "participio": "arefacta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "paratae sunt": {
+   "participio": "paratae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "inuitati erant": {
+   "participio": "inuitati",
+   "auxiliar": "erant",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "impletae sunt": {
+   "participio": "impletae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "effusus est": {
+   "participio": "effusus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "missi sunt": {
+   "participio": "missi",
+   "auxiliar": "sunt",
+   "n": 4,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": true
+  },
+  "dicta est": {
+   "participio": "dicta",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "paratae erant": {
+   "participio": "paratae",
+   "auxiliar": "erant",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "clausa est": {
+   "participio": "clausa",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "operatus est": {
+   "participio": "operatus",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "lucratus est": {
+   "participio": "lucratus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "paratus est": {
+   "participio": "paratus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "congregati sunt": {
+   "participio": "congregati",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "operata est": {
+   "participio": "operata",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "recordatus est": {
+   "participio": "recordatus",
+   "auxiliar": "est",
+   "n": 4,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "uocatus est": {
+   "participio": "uocatus",
+   "auxiliar": "est",
+   "n": 8,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "impletum est": {
+   "participio": "impletum",
+   "auxiliar": "est",
+   "n": 6,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "crucifixi sunt": {
+   "participio": "crucifixi",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "fixi erant": {
+   "participio": "fixi",
+   "auxiliar": "erant",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "scissum est": {
+   "participio": "scissum",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "mota est": {
+   "participio": "mota",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "scissae sunt": {
+   "participio": "scissae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "aperta sunt": {
+   "participio": "aperta",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "secutae erant": {
+   "participio": "secutae",
+   "auxiliar": "erant",
+   "n": 2,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "exterriti sunt": {
+   "participio": "exterriti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "crucifixus est": {
+   "participio": "crucifixus",
+   "auxiliar": "est",
+   "n": 9,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "positus erat": {
+   "participio": "positus",
+   "auxiliar": "erat",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "furati sunt": {
+   "participio": "furati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "diuulgatum est": {
+   "participio": "diuulgatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "traditus est": {
+   "participio": "traditus",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "persecutus est": {
+   "participio": "persecutus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "mundatus est": {
+   "participio": "mundatus",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "auditum est": {
+   "participio": "auditum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "egressus est": {
+   "participio": "egressus",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "uersus est": {
+   "participio": "uersus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "dispertitus est": {
+   "participio": "dispertitus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "congregata est": {
+   "participio": "congregata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "exortum est": {
+   "participio": "exortum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "exortus est": {
+   "participio": "exortus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "seminati sunt": {
+   "participio": "seminati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "apertae sunt": {
+   "participio": "apertae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "solutum est": {
+   "participio": "solutum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "restitutus est": {
+   "participio": "restitutus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "stupefactus est": {
+   "participio": "stupefactus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "adimpleta est": {
+   "participio": "adimpleta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "reputatus est": {
+   "participio": "reputatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "crucifixi erant": {
+   "participio": "crucifixi",
+   "auxiliar": "erant",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "ostensus est": {
+   "participio": "ostensus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "adsumptus est": {
+   "participio": "adsumptus",
+   "auxiliar": "est",
+   "n": 4,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "conati sunt": {
+   "participio": "conati",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "conpletae sunt": {
+   "participio": "conpletae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "uisum est": {
+   "participio": "uisum",
+   "auxiliar": "est",
+   "n": 12,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "missus est": {
+   "participio": "missus",
+   "auxiliar": "est",
+   "n": 6,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "turbata est": {
+   "participio": "turbata",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "repleta est": {
+   "participio": "repleta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "dicta sunt": {
+   "participio": "dicta",
+   "auxiliar": "sunt",
+   "n": 3,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": true
+  },
+  "reuersa est": {
+   "participio": "reuersa",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "apertum est": {
+   "participio": "apertum",
+   "auxiliar": "est",
+   "n": 5,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "impletus est": {
+   "participio": "impletus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "dicta erant": {
+   "participio": "dicta",
+   "auxiliar": "erant",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": true
+  },
+  "consummati sunt": {
+   "participio": "consummati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "uocatum est": {
+   "participio": "uocatum",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "positus est": {
+   "participio": "positus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "regressi sunt": {
+   "participio": "regressi",
+   "auxiliar": "sunt",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "admirati sunt": {
+   "participio": "admirati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "constitutum est": {
+   "participio": "constitutum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "regressus est": {
+   "participio": "regressus",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "impleta est": {
+   "participio": "impleta",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "clusum est": {
+   "participio": "clusum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "conculcatum est": {
+   "participio": "conculcatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "nuntiatum est": {
+   "participio": "nuntiatum",
+   "auxiliar": "est",
+   "n": 5,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "suffocatus est": {
+   "participio": "suffocatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "reuersus est": {
+   "participio": "reuersus",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "factum erat": {
+   "participio": "factum",
+   "auxiliar": "erat",
+   "n": 3,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "grauati erant": {
+   "participio": "grauati",
+   "auxiliar": "erant",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "clausum est": {
+   "participio": "clausum",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "admiratae sunt": {
+   "participio": "admiratae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "nata sunt": {
+   "participio": "nata",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "passi sunt": {
+   "participio": "passi",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "erecta est": {
+   "participio": "erecta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "parata sunt": {
+   "participio": "parata",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "uocati sunt": {
+   "participio": "uocati",
+   "auxiliar": "sunt",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": true
+  },
+  "mundati sunt": {
+   "participio": "mundati",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "suspensus erat": {
+   "participio": "suspensus",
+   "auxiliar": "erat",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "pacti sunt": {
+   "participio": "pacti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "definitum est": {
+   "participio": "definitum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "deputatus est": {
+   "participio": "deputatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "auulsus est": {
+   "participio": "auulsus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "gauisus est": {
+   "participio": "gauisus",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "actum est": {
+   "participio": "actum",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "obscuratus est": {
+   "participio": "obscuratus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "positum erat": {
+   "participio": "positum",
+   "auxiliar": "erat",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "recordatae sunt": {
+   "participio": "recordatae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "uisa sunt": {
+   "participio": "uisa",
+   "auxiliar": "sunt",
+   "n": 4,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": true
+  },
+  "locuti sunt": {
+   "participio": "locuti",
+   "auxiliar": "sunt",
+   "n": 4,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "inclinata est": {
+   "participio": "inclinata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "gesta erant": {
+   "participio": "gesta",
+   "auxiliar": "erant",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "confessus est": {
+   "participio": "confessus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "aedificatum est": {
+   "participio": "aedificatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "recordati sunt": {
+   "participio": "recordati",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "iudicatus est": {
+   "participio": "iudicatus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "maledicti sunt": {
+   "participio": "maledicti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "deprehensa est": {
+   "participio": "deprehensa",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "placita sunt": {
+   "participio": "placita",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "lacrimatus est": {
+   "participio": "lacrimatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "superpositus erat": {
+   "participio": "superpositus",
+   "auxiliar": "erat",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "glorificatus est": {
+   "participio": "glorificatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "reuelatum est": {
+   "participio": "reuelatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "lotus est": {
+   "participio": "lotus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "protestatus est": {
+   "participio": "protestatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "clarificatus est": {
+   "participio": "clarificatus",
+   "auxiliar": "est",
+   "n": 4,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "scriptus est": {
+   "participio": "scriptus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "ingressus est": {
+   "participio": "ingressus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "partiti sunt": {
+   "participio": "partiti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "consummata sunt": {
+   "participio": "consummata",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "consummatum est": {
+   "participio": "consummatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "conuersa est": {
+   "participio": "conuersa",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "detenta sunt": {
+   "participio": "detenta",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "manifestatus est": {
+   "participio": "manifestatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "eleuatus est": {
+   "participio": "eleuatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "connumeratus erat": {
+   "participio": "connumeratus",
+   "auxiliar": "erat",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "sortitus est": {
+   "participio": "sortitus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "diffusa sunt": {
+   "participio": "diffusa",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "cognominatus est": {
+   "participio": "cognominatus",
+   "auxiliar": "est",
+   "n": 4,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "praeuaricatus est": {
+   "participio": "praeuaricatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "adnumeratus est": {
+   "participio": "adnumeratus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "confusa est": {
+   "participio": "confusa",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "laetatum est": {
+   "participio": "laetatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "derelictus est": {
+   "participio": "derelictus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "conpuncti sunt": {
+   "participio": "conpuncti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "testificatus est": {
+   "participio": "testificatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "baptizati sunt": {
+   "participio": "baptizati",
+   "auxiliar": "sunt",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "adpositae sunt": {
+   "participio": "adpositae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "consolidatae sunt": {
+   "participio": "consolidatae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "praedicatus est": {
+   "participio": "praedicatus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "reprobatus est": {
+   "participio": "reprobatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "meditati sunt": {
+   "participio": "meditati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "recepta sunt": {
+   "participio": "recepta",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "conuersus est": {
+   "participio": "conuersus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "adposita est": {
+   "participio": "adposita",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "conuersati sunt": {
+   "participio": "conuersati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "aperta est": {
+   "participio": "aperta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "commoratus est": {
+   "participio": "commoratus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "missum est": {
+   "participio": "missum",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "scripta erant": {
+   "participio": "scripta",
+   "auxiliar": "erant",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "uisus est": {
+   "participio": "uisus",
+   "auxiliar": "est",
+   "n": 8,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "adpositus est": {
+   "participio": "adpositus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "gauisae sunt": {
+   "participio": "gauisae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "demorati sunt": {
+   "participio": "demorati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "diuisa est": {
+   "participio": "diuisa",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "morati sunt": {
+   "participio": "morati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "suscepti sunt": {
+   "participio": "suscepti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "inuocatum est": {
+   "participio": "inuocatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "consolati sunt": {
+   "participio": "consolati",
+   "auxiliar": "sunt",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "dimissi sunt": {
+   "participio": "dimissi",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "uetati sunt": {
+   "participio": "uetati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "ostensa est": {
+   "participio": "ostensa",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "deprecata est": {
+   "participio": "deprecata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "soluta sunt": {
+   "participio": "soluta",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "introgressus est": {
+   "participio": "introgressus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "laetatus est": {
+   "participio": "laetatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "deprecati sunt": {
+   "participio": "deprecati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "profecti sunt": {
+   "participio": "profecti",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "adiuncti sunt": {
+   "participio": "adiuncti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "praedicatum est": {
+   "participio": "praedicatum",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "comitatus est": {
+   "participio": "comitatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "sublatus est": {
+   "participio": "sublatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "collecti sunt": {
+   "participio": "collecti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "falsa sunt": {
+   "participio": "falsa",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "clausae sunt": {
+   "participio": "clausae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "adlocutus est": {
+   "participio": "adlocutus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "soluta est": {
+   "participio": "soluta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "conatus est": {
+   "participio": "conatus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "adductus est": {
+   "participio": "adductus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "ablata erat": {
+   "participio": "ablata",
+   "auxiliar": "erat",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "passus est": {
+   "participio": "passus",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "permissum est": {
+   "participio": "permissum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "notum est": {
+   "participio": "notum",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "credita sunt": {
+   "participio": "credita",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "manifestata est": {
+   "participio": "manifestata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "exclusa est": {
+   "participio": "exclusa",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "reputatum est": {
+   "participio": "reputatum",
+   "auxiliar": "est",
+   "n": 4,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "remissae sunt": {
+   "participio": "remissae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "tecta sunt": {
+   "participio": "tecta",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "reputata est": {
+   "participio": "reputata",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "exinanita est": {
+   "participio": "exinanita",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "abolita est": {
+   "participio": "abolita",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "diffusa est": {
+   "participio": "diffusa",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "datus est": {
+   "participio": "datus",
+   "auxiliar": "est",
+   "n": 4,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "constituti sunt": {
+   "participio": "constituti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "iustificatus est": {
+   "participio": "iustificatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "alligata est": {
+   "participio": "alligata",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "operatum est": {
+   "participio": "operatum",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "mortuum erat": {
+   "participio": "mortuum",
+   "auxiliar": "erat",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "inuentum est": {
+   "participio": "inuentum",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "subiecta est": {
+   "participio": "subiecta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "consecuta est": {
+   "participio": "consecuta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "excaecati sunt": {
+   "participio": "excaecati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "fracti sunt": {
+   "participio": "fracti",
+   "auxiliar": "sunt",
+   "n": 3,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "ordinatae sunt": {
+   "participio": "ordinatae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "probatus est": {
+   "participio": "probatus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "damnatus est": {
+   "participio": "damnatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "nominatus est": {
+   "participio": "nominatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "diuulgata est": {
+   "participio": "diuulgata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "patefactum est": {
+   "participio": "patefactum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "confirmatum est": {
+   "participio": "confirmatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "significatum est": {
+   "participio": "significatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "donata sunt": {
+   "participio": "donata",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "positum est": {
+   "participio": "positum",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "inflati sunt": {
+   "participio": "inflati",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "immolatus est": {
+   "participio": "immolatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "iuncti sunt": {
+   "participio": "iuncti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "sanctificatus est": {
+   "participio": "sanctificatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "sanctificata est": {
+   "participio": "sanctificata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "nupta est": {
+   "participio": "nupta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "liberata est": {
+   "participio": "liberata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "credita est": {
+   "participio": "credita",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "beneplacitum est": {
+   "participio": "beneplacitum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "prostrati sunt": {
+   "participio": "prostrati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "fornicati sunt": {
+   "participio": "fornicati",
+   "auxiliar": "sunt",
+   "n": 4,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "dati sunt": {
+   "participio": "dati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "probati sunt": {
+   "participio": "probati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "subiecta sunt": {
+   "participio": "subiecta",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "subiectus erit": {
+   "participio": "subiectus",
+   "auxiliar": "erit",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "absorta est": {
+   "participio": "absorta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "glorificatum est": {
+   "participio": "glorificatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "obtusi sunt": {
+   "participio": "obtusi",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "opertum est": {
+   "participio": "opertum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "dilatatum est": {
+   "participio": "dilatatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "consolatus est": {
+   "participio": "consolatus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "refectus est": {
+   "participio": "refectus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "accepta est": {
+   "participio": "accepta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "mensus est": {
+   "participio": "mensus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "praeparata sunt": {
+   "participio": "praeparata",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "raptus est": {
+   "participio": "raptus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "euangelizatum est": {
+   "participio": "euangelizatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "conpulsus est": {
+   "participio": "conpulsus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "proscriptus est": {
+   "participio": "proscriptus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "dictae sunt": {
+   "participio": "dictae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": true
+  },
+  "coniunctus est": {
+   "participio": "coniunctus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "euacuatum est": {
+   "participio": "euacuatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "creatus est": {
+   "participio": "creatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "arbitratus est": {
+   "participio": "arbitratus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "infirmatus est": {
+   "participio": "infirmatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "reposita est": {
+   "participio": "reposita",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "condita sunt": {
+   "participio": "condita",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "creata sunt": {
+   "participio": "creata",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "profecta est": {
+   "participio": "profecta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "creditum est": {
+   "participio": "creditum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "inquinatae sunt": {
+   "participio": "inquinatae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "subuersus est": {
+   "participio": "subuersus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "praescripti sunt": {
+   "participio": "praescripti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "effusi sunt": {
+   "participio": "effusi",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "seruata est": {
+   "participio": "seruata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "datae sunt": {
+   "participio": "datae",
+   "auxiliar": "sunt",
+   "n": 3,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "motae sunt": {
+   "participio": "motae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "amicti sunt": {
+   "participio": "amicti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "data sunt": {
+   "participio": "data",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "conbusta est": {
+   "participio": "conbusta",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "conbustum est": {
+   "participio": "conbustum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "percussa est": {
+   "participio": "percussa",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "praeceptum est": {
+   "participio": "praeceptum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "alligati sunt": {
+   "participio": "alligati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "soluti sunt": {
+   "participio": "soluti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "parati erant": {
+   "participio": "parati",
+   "auxiliar": "erant",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "occisa est": {
+   "participio": "occisa",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "locuta sunt": {
+   "participio": "locuta",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "amaricatus est": {
+   "participio": "amaricatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "occisi sunt": {
+   "participio": "occisi",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "iratae sunt": {
+   "participio": "iratae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "proiectus est": {
+   "participio": "proiectus",
+   "auxiliar": "est",
+   "n": 4,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "curata est": {
+   "participio": "curata",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "admirata est": {
+   "participio": "admirata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "empti sunt": {
+   "participio": "empti",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "mixtus est": {
+   "participio": "mixtus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "messa est": {
+   "participio": "messa",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "calcatus est": {
+   "participio": "calcatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "consummata est": {
+   "participio": "consummata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "manifestata sunt": {
+   "participio": "manifestata",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "inebriati sunt": {
+   "participio": "inebriati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "placitum est": {
+   "participio": "placitum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "inluminata est": {
+   "participio": "inluminata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "amicta erat": {
+   "participio": "amicta",
+   "auxiliar": "erat",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "deaurata est": {
+   "participio": "deaurata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "destitutae sunt": {
+   "participio": "destitutae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "desolata est": {
+   "participio": "desolata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "interfecti sunt": {
+   "participio": "interfecti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "uestitus erat": {
+   "participio": "uestitus",
+   "auxiliar": "erat",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "adprehensa est": {
+   "participio": "adprehensa",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "saturatae sunt": {
+   "participio": "saturatae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "apertus est": {
+   "participio": "apertus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "iudicati sunt": {
+   "participio": "iudicati",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "iudicatum est": {
+   "participio": "iudicatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "scripti sunt": {
+   "participio": "scripti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "adsecuti sunt": {
+   "participio": "adsecuti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "aduersa est": {
+   "participio": "aduersa",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "obstrictus est": {
+   "participio": "obstrictus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "effossae sunt": {
+   "participio": "effossae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "siccatum est": {
+   "participio": "siccatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "nata est": {
+   "participio": "nata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "ablata sunt": {
+   "participio": "ablata",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "designatus est": {
+   "participio": "designatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "panctae sunt": {
+   "participio": "panctae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "iuncta sunt": {
+   "participio": "iuncta",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "adscriptum est": {
+   "participio": "adscriptum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "iniuncta est": {
+   "participio": "iniuncta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "iudicatum erit": {
+   "participio": "iudicatum",
+   "auxiliar": "erit",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "absolutus erit": {
+   "participio": "absolutus",
+   "auxiliar": "erit",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "curata sunt": {
+   "participio": "curata",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "expertus est": {
+   "participio": "expertus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "commissum est": {
+   "participio": "commissum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "ueritus est": {
+   "participio": "ueritus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "reperti sunt": {
+   "participio": "reperti",
+   "auxiliar": "sunt",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "solutus est": {
+   "participio": "solutus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "dilata sunt": {
+   "participio": "dilata",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "factus erit": {
+   "participio": "factus",
+   "auxiliar": "erit",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "demonstrata est": {
+   "participio": "demonstrata",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "perspecta est": {
+   "participio": "perspecta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "questi sunt": {
+   "participio": "questi",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "subuentum est": {
+   "participio": "subuentum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "confecta est": {
+   "participio": "confecta",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "acta sunt": {
+   "participio": "acta",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "promulgata est": {
+   "participio": "promulgata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "mitigata sunt": {
+   "participio": "mitigata",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "animaduersum est": {
+   "participio": "animaduersum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "prouisum est": {
+   "participio": "prouisum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "absolutus est": {
+   "participio": "absolutus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "empta sunt": {
+   "participio": "empta",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "dicta erat": {
+   "participio": "dicta",
+   "auxiliar": "erat",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "confessi sunt": {
+   "participio": "confessi",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "habitus est": {
+   "participio": "habitus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "pacta sunt": {
+   "participio": "pacta",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "debitum est": {
+   "participio": "debitum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "postulatum est": {
+   "participio": "postulatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "exceptum est": {
+   "participio": "exceptum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "delectata est": {
+   "participio": "delectata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "reclamatum est": {
+   "participio": "reclamatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "inrisum est": {
+   "participio": "inrisum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "eiectum est": {
+   "participio": "eiectum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "recitatum est": {
+   "participio": "recitatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "damnatus erat": {
+   "participio": "damnatus",
+   "auxiliar": "erat",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "exorta est": {
+   "participio": "exorta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "adlata est": {
+   "participio": "adlata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "praetermissum est": {
+   "participio": "praetermissum",
+   "auxiliar": "est",
+   "n": 5,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "sublata sunt": {
+   "participio": "sublata",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "habita sunt": {
+   "participio": "habita",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": true
+  },
+  "locutum est": {
+   "participio": "locutum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "lectae sunt": {
+   "participio": "lectae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": true
+  },
+  "aduersatae sunt": {
+   "participio": "aduersatae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "desperata erit": {
+   "participio": "desperata",
+   "auxiliar": "erit",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "amissa est": {
+   "participio": "amissa",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "relatum est": {
+   "participio": "relatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "adlatae sunt": {
+   "participio": "adlatae",
+   "auxiliar": "sunt",
+   "n": 3,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "celebrata est": {
+   "participio": "celebrata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "completi erant": {
+   "participio": "completi",
+   "auxiliar": "erant",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "uentum est": {
+   "participio": "uentum",
+   "auxiliar": "est",
+   "n": 3,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "concessum est": {
+   "participio": "concessum",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "exhausta est": {
+   "participio": "exhausta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "expulsi sunt": {
+   "participio": "expulsi",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "insecutus est": {
+   "participio": "insecutus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "occisus erit": {
+   "participio": "occisus",
+   "auxiliar": "erit",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "intellectum est": {
+   "participio": "intellectum",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "uerita est": {
+   "participio": "uerita",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "facta erunt": {
+   "participio": "facta",
+   "auxiliar": "erunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": true
+  },
+  "cognitum est": {
+   "participio": "cognitum",
+   "auxiliar": "est",
+   "n": 4,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "desperatum est": {
+   "participio": "desperatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "condemnatus est": {
+   "participio": "condemnatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "perscripta erat": {
+   "participio": "perscripta",
+   "auxiliar": "erat",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "redditae sunt": {
+   "participio": "redditae",
+   "auxiliar": "sunt",
+   "n": 4,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "persuasum est": {
+   "participio": "persuasum",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "profectus erat": {
+   "participio": "profectus",
+   "auxiliar": "erat",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "scripta est": {
+   "participio": "scripta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "confectae sunt": {
+   "participio": "confectae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "iniectus est": {
+   "participio": "iniectus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "ambustus est": {
+   "participio": "ambustus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "pacta est": {
+   "participio": "pacta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "recitatae sunt": {
+   "participio": "recitatae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "coeptus est": {
+   "participio": "coeptus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "institutus est": {
+   "participio": "institutus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "mandatum est": {
+   "participio": "mandatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "gestum est": {
+   "participio": "gestum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "inscriptum est": {
+   "participio": "inscriptum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "reprensum est": {
+   "participio": "reprensum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "deuersatus est": {
+   "participio": "deuersatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "inuentae sunt": {
+   "participio": "inuentae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": true
+  },
+  "perspectum est": {
+   "participio": "perspectum",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "adflicta est": {
+   "participio": "adflicta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "denuntiata sunt": {
+   "participio": "denuntiata",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "significata sunt": {
+   "participio": "significata",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "appellatus erat": {
+   "participio": "appellatus",
+   "auxiliar": "erat",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "pacati erant": {
+   "participio": "pacati",
+   "auxiliar": "erant",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "ultus est": {
+   "participio": "ultus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "renuntiatum est": {
+   "participio": "renuntiatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "pugnatum est": {
+   "participio": "pugnatum",
+   "auxiliar": "est",
+   "n": 7,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "captus est": {
+   "participio": "captus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "repertae sunt": {
+   "participio": "repertae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "confecta erat": {
+   "participio": "confecta",
+   "auxiliar": "erat",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "repertus est": {
+   "participio": "repertus",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "ortus est": {
+   "participio": "ortus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "elatum est": {
+   "participio": "elatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "iniectum est": {
+   "participio": "iniectum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "donatus erat": {
+   "participio": "donatus",
+   "auxiliar": "erat",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "restitutum est": {
+   "participio": "restitutum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "capta est": {
+   "participio": "capta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "reductus est": {
+   "participio": "reductus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "posita erant": {
+   "participio": "posita",
+   "auxiliar": "erant",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "demonstratum est": {
+   "participio": "demonstratum",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "uentum erat": {
+   "participio": "uentum",
+   "auxiliar": "erat",
+   "n": 2,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": true
+  },
+  "conscriptae erant": {
+   "participio": "conscriptae",
+   "auxiliar": "erant",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "occupati erant": {
+   "participio": "occupati",
+   "auxiliar": "erant",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "tardatus est": {
+   "participio": "tardatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "concursum est": {
+   "participio": "concursum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "reiecti sunt": {
+   "participio": "reiecti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "relatus est": {
+   "participio": "relatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "perlata est": {
+   "participio": "perlata",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "decreta est": {
+   "participio": "decreta",
+   "auxiliar": "est",
+   "n": 2,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "iussi sunt": {
+   "participio": "iussi",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "coortum est": {
+   "participio": "coortum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "suspicatus erat": {
+   "participio": "suspicatus",
+   "auxiliar": "erat",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "coepta erat": {
+   "participio": "coepta",
+   "auxiliar": "erat",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "polliciti sunt": {
+   "participio": "polliciti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "coorta est": {
+   "participio": "coorta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "adflictae erant": {
+   "participio": "adflictae",
+   "auxiliar": "erant",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "delatae sunt": {
+   "participio": "delatae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "peruentum est": {
+   "participio": "peruentum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "diuisae sunt": {
+   "participio": "diuisae",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "compertum est": {
+   "participio": "compertum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "imperatum est": {
+   "participio": "imperatum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "nacti erant": {
+   "participio": "nacti",
+   "auxiliar": "erant",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "praetermissa sunt": {
+   "participio": "praetermissa",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "relictum est": {
+   "participio": "relictum",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "culta est": {
+   "participio": "culta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "perscripta est": {
+   "participio": "perscripta",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "delata sunt": {
+   "participio": "delata",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "discripta sunt": {
+   "participio": "discripta",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "complexa est": {
+   "participio": "complexa",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "gesta sunt": {
+   "participio": "gesta",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "consecutus est": {
+   "participio": "consecutus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "commissi sunt": {
+   "participio": "commissi",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "commissa est": {
+   "participio": "commissa",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "antegressa est": {
+   "participio": "antegressa",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Fem",
+   "numero": "Sing",
+   "deL1": false
+  },
+  "commoti sunt": {
+   "participio": "commoti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "referti sunt": {
+   "participio": "referti",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "collecta sunt": {
+   "participio": "collecta",
+   "auxiliar": "sunt",
+   "n": 1,
+   "genero": "Neut",
+   "numero": "Plur",
+   "deL1": false
+  },
+  "innatus est": {
+   "participio": "innatus",
+   "auxiliar": "est",
+   "n": 1,
+   "genero": "Masc",
+   "numero": "Sing",
+   "deL1": false
+  }
+ }
+}
