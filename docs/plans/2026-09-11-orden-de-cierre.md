@@ -36,8 +36,28 @@ párate.
 | PT | 3,2M ✅ | 3.292 | 0 bajo piso · prosa corregida el 11-sep (7 falsas + las 6 que metió la corrección) |
 | RO | 2,9M ✅ | 454 servibles | 48 de 107 puntos bajo piso · déficit **354**, residuo 0 |
 | LA | 3 lecturas | ~400 publicados | **40 de 117** puntos con lote (eran 34 el 11-sep) |
-| RU | **7,7M ✅** (de 1,96M) | 0 | **93 puntos**; máquinas de sustantivo, verbo, ADJETIVO y PRONOMBRE — 936 formas, 922 atestadas, 0 rojos |
+| RU | **7,7M ✅** (de 1,96M) | **12** | **1 de 93 puntos cubierto** · déficit **596** (de 604), residuo 0 · 948 formas, 934 atestadas, 0 rojos |
 | CS | 793 lecturas | 0 | sin inventario |
+
+⚠ **RUSO al 2026-09-12 (noche): la tubería entera existe y el primer lote está
+PUBLICADO.** 12 ítems de `u4-declinacion-singular` en `ru/blocks/b4.json`, la
+primera lección del ruso (`lessons/b4.json`), el publicador
+(`publicar-cloze-ru.ts`) y **el contador del déficit, que no existía**
+(`scripts/deficit-ru.ts`: 604 → 596, residuo 0).
+
+Y lo que el contador destapó antes de escribir un ítem, que es lo que hay que
+saber al retomar CUALQUIERA de las cuatro lenguas: **88 de los 93 puntos rusos
+no pueden recibir un ejercicio porque su bloque no tiene lección**, y el
+publicador rechaza el lote entero. Las lecciones van ANTES que los lotes.
+Cuesta un JSON de siete campos por bloque y ningún MDX (§23.1 del relevo ruso).
+Dos bombas más del esqueleto, las dos arregladas: `LessonSchema.blockId` topaba
+en 12 y el ruso tiene 15 bloques —21 puntos inalcanzables, el mismo accidente
+que el C2 del portugués con el 11— y **nada validaba una lección escrita a
+mano**, con cinco incumplimientos vivos en PT y RO.
+
+Suite al 2026-09-12 (noche): **268 ficheros / 2.942 tests, 0 rojos** — los del
+latín incluidos. Cuatro de los rojos anteriores eran TIMEOUT de 5 s contra un
+corpus de 91 MB y no contenido: verdes corridos solos, rojos dentro de la suite.
 
 Suite al 2026-09-12 (tarde): **259 ficheros / 2.818 tests**, y los rojos son
 **todos de la sesión de LATÍN, que está a medio camino**: a las 20:07 era 1
