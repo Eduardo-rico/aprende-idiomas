@@ -693,7 +693,24 @@ export const LessonSchema = z.object({
   // checklist — la revisión adversarial cazó que b11 violaba el 10.
   // C2 eran 408 unidades de déficit INALCANZABLES mientras este número
   // dijera 11: no había dónde aterrizar un ítem de C2.
-  blockId: z.number().int().min(1).max(12),
+  // max(15) desde el 2026-09-12: el INVENTARIO DEL RUSO tiene 15 bloques
+  // (`BLOQUES_RU`), y mientras este número dijera 12 los bloques 13
+  // (derivación y léxico), 14 (pragmática y registro) y 15 (estilo y
+  // puntuación) no podían recibir una lección — o sea **21 puntos y 152
+  // unidades de déficit estructuralmente inalcanzables**, y ningún
+  // instrumento lo decía. Es literalmente lo que le pasó al C2 del portugués
+  // con el 11, y el comentario de arriba ya lo declara: subir el tope al
+  // crear un bloque nuevo es parte del checklist, y al crear los 15 bloques
+  // rusos nadie lo subió.
+  //
+  // ⚠ Y EL TOPE NO ES UN GATE: `LessonListSchema` sólo lo corre
+  // `propose-lessons.ts`, que es el generador por LLM. Las lecciones escritas
+  // a mano entran por `import … from './lessons/bN.json'` con un `as
+  // Lesson[]`, sin validar nada — y PT y RO ya lo incumplen (`pt/b11`
+  // vocabKey, `pt/b12` conceptIds, `ro/b2` y `ro/b3` vocabKey). Eso está
+  // contado en `tests/unit/lecciones-schema.test.ts` en vez de teñido de
+  // verde, y el número es el que hace que una violación NUEVA salga en rojo.
+  blockId: z.number().int().min(1).max(15),
   name: z.string().min(1).max(80),
   objectives: z.array(z.string().min(1)).min(1).max(6),
   conceptIds: z.array(z.string().min(1)).min(1).max(8),
