@@ -13,6 +13,7 @@ import { describe, it, expect } from 'vitest';
 import {
   casillaNominal, prepositivoSg, paradigmaPresente, presente, pasado, imperativo,
   invariantesVerbales, invariantesNominales, temaIngenuo, temaDe, declinacionDe,
+  paradigmaNominal, ortografiar, variantesInstrSgFem,
   type EntradaNominal, type EntradaVerbal,
 } from '../../lib/data/languages/ru/paradigma-ru';
 import { NOMBRES_A1, VERBOS_A1 } from '../../lib/data/languages/ru/lexicon-a1';
@@ -360,5 +361,132 @@ describe('el detector de la ё: en rojo primero', () => {
     expect(n('сестра').lecturaYo?.['gen.sg']).toMatch(/NOMINATIVO PLURAL/);
     expect(n('берег').lecturaYo?.['nom.sg']).toMatch(/беречь/);
     expect(v('мочь').lecturaYo?.['pres.2sg']).toMatch(/Leskov|живёшь/);
+  });
+});
+
+// ══════════════════════════════════════════════════════════════════════
+// LA /o/ DE LA DESINENCIA (2026-09-12) — la regla que `ortografiar` no
+// tenía, con sus DOS ejes: el tema y el acento.
+// ══════════════════════════════════════════════════════════════════════
+describe('LA /o/ DE LA DESINENCIA: una regla con tres grafías y dos ejes', () => {
+  // Las cuatro caras, cada una con su cuenta del corpus. Van las cuatro y
+  // no una: con una sola, una regla que dijera «sibilante ⇒ siempre -ом» o
+  // «blando ⇒ siempre -ём» pasaría el test entero.
+  it.each([
+    ['стол',     'столом',     'duro no sibilante: siempre -ом',            641],
+    ['место',    'местом',     'ídem, neutro',                               60],
+    ['конь',     'конём',      'blando TÓNICA: -ём',                         47],
+    ['учитель',  'учителем',   'blando ÁTONA: -ем',                          68],
+    ['врач',     'врачом',     'sibilante TÓNICA: -ом',                      29],
+    ['товарищ',  'товарищем',  'sibilante ÁTONA: -ем',                      110],
+    ['лицо',     'лицом',      'ц TÓNICA: -ом',                            1503],
+    ['сердце',   'сердцем',    'ц ÁTONA: -ем',                              360],
+    ['душа',     'душой',      '1.ª declinación, sibilante TÓNICA: -ой',    275],
+    ['туча',     'тучей',      '1.ª declinación, sibilante ÁTONA: -ей',      17],
+  ])('%s → %s (%s; corpus %i)', (lema, forma) => {
+    expect(casillaNominal(n(lema), 'instr', 'sg')).toBe(forma);
+  });
+
+  it('el nominativo del neutro lo decide LA MISMA regla: сердце con е, лицо con о', () => {
+    expect(casillaNominal(n('сердце'), 'nom', 'sg')).toBe('сердце');
+    expect(casillaNominal(n('лицо'), 'nom', 'sg')).toBe('лицо');
+    expect(casillaNominal(n('окно'), 'nom', 'sg')).toBe('окно');  // duro: siempre о
+    expect(casillaNominal(n('море'), 'nom', 'sg')).toBe('море');  // blando átono: е
+  });
+
+  it('`ц` entra en la regla de la /o/ y NO en la de la ы: сердцем pero отцы es correcto', () => {
+    // Las dos reglas comparten la letra y no son la misma. Tratarlas como
+    // una —en cualquiera de las dos direcciones— es la media regla.
+    expect(ortografiar('сердц', '%м', { clase: 'duro', tonica: false })).toBe('сердцем');
+    expect(revisarOrtografiaRu('отцы')).toEqual([]);
+  });
+
+  // ── EL INVARIANTE, VISTO EN ROJO Y CON SU CONTROL NEGATIVO ────────
+  it('un tema blando SIN el acento declarado no produce *днем: produce null', () => {
+    const sinDato: EntradaNominal = { lema: 'конь', genero: 'm', tema: 'blando', glosa: 'caballo' };
+    expect(casillaNominal(sinDato, 'instr', 'sg')).toBeNull();
+    const avisos = invariantesNominales([sinDato]);
+    expect(avisos.map((a) => a.clase)).toContain('o-desinencial-sin-declarar');
+  });
+
+  it('CONTROL NEGATIVO: un tema duro no sibilante NO necesita el campo y no da aviso', () => {
+    const duro: EntradaNominal = { lema: 'стол', genero: 'm', tema: 'duro', glosa: 'mesa' };
+    expect(casillaNominal(duro, 'instr', 'sg')).toBe('столом');
+    expect(invariantesNominales([duro])).toEqual([]);
+  });
+
+  it('y el lexicón entero no deja ni un aviso de esta clase', () => {
+    const avisos = invariantesNominales(NOMBRES_A1);
+    expect(avisos.filter((a) => a.clase === 'o-desinencial-sin-declarar')).toEqual([]);
+    // ⚠ y el 2026-09-12 sí los dejaba: дядя, деревня y неделя salieron en
+    // rojo la primera vez que este invariante se corrió, tres omisiones
+    // reales que ningún gate anterior podía ver porque la casilla que falta
+    // desaparece de `paradigmaNominal` y el bucle de la tabla no la visita.
+  });
+
+  it('LA CASILLA QUE FALTA NO ESTÁ EN LA TABLA: por eso el invariante pregunta por nombre', () => {
+    const sinDato: EntradaNominal = { lema: 'конь', genero: 'm', tema: 'blando', glosa: 'caballo' };
+    // El hueco es INVISIBLE en el objeto: no hay clave `instr`.
+    expect(Object.keys(paradigmaNominal(sinDato).sg)).not.toContain('instr');
+    // Y aun así el invariante lo nombra. Ésa es la diferencia entre mirar
+    // la salida y preguntar por las doce casillas.
+    expect(invariantesNominales([sinDato]).length).toBeGreaterThan(0);
+  });
+
+  it('EL LÍMITE DEL CAMPO, fijado: lo leen DOS casillas y ningún lema del lexicón las separa', () => {
+    // Si algún día un lema necesita la /o/ tónica en el nominativo y átona
+    // en el instrumental (o al revés), el campo tiene que partirse en dos,
+    // como `desinenciaTonica` del verbo se partió al llegar `писать`. Este
+    // test no lo puede detectar solo: lo que fija es que HOY no pasa, y que
+    // el día que pase habrá que mirar aquí.
+    for (const e of NOMBRES_A1.filter((x) => x.genero === 'n')) {
+      const nom = casillaNominal(e, 'nom', 'sg')!;
+      const instr = casillaNominal(e, 'instr', 'sg')!;
+      const vocalNom = /о$/.test(nom) ? 'о' : /[её]$/.test(nom) ? 'e' : '—';
+      const vocalInstr = /ом$/.test(instr) ? 'о' : /[её]м$/.test(instr) ? 'e' : '—';
+      expect(vocalNom, `${e.lema}: ${nom} / ${instr}`).toBe(vocalInstr);
+    }
+  });
+});
+
+describe('LA VARIANTE `-ою/-ею` DEL XIX: el error simétrico, medido', () => {
+  it('lleva la casilla en el nombre porque en el adjetivo -ой ocupa CUATRO casillas', () => {
+    // `новой` es genitivo, dativo, instrumental Y prepositivo femenino, y
+    // la variante larga existe SÓLO en el instrumental: una función que
+    // mirara el final de la cadena generaría tres variantes falsas de cada
+    // cuatro. El nombre es lo que impide llamarla mal.
+    expect(variantesInstrSgFem('рукой')).toEqual(['рукою']);
+    expect(variantesInstrSgFem('тучей')).toEqual(['тучею']);
+    expect(variantesInstrSgFem('землёй')).toEqual(['землёю']);
+    expect(variantesInstrSgFem('столом')).toEqual([]);
+    expect(variantesInstrSgFem('дверью')).toEqual([]);
+  });
+
+  it('la máquina produce la NORMA y la variante queda fuera: son dos capas distintas', () => {
+    expect(casillaNominal(n('вода'), 'instr', 'sg')).toBe('водой');     // водой 381
+    expect(variantesInstrSgFem('водой')).toEqual(['водою']);            // водою 153
+  });
+
+  it('la 3.ª declinación NO tiene variante, y eso acota la clase: -ью no es -ой', () => {
+    // La primera versión de este test daba 13 de 16 y lo leí como un fallo
+    // del generador de variantes. No lo era: los tres que faltaban son
+    // `дверь`, `ночь` y `вещь`, cuyo instrumental es `-ью` y **no tiene
+    // forma larga en el XIX**. El test estaba mal escrito, no la función —
+    // y la clase real es «1.ª declinación», no «femenino».
+    for (const lema of ['дверь', 'ночь', 'вещь']) {
+      expect(variantesInstrSgFem(casillaNominal(n(lema), 'instr', 'sg')!)).toEqual([]);
+    }
+  });
+
+  it('los TRECE de la 1.ª declinación tienen variante, y en ONCE está atestada', () => {
+    // Medido con `check-paradigma-ru.ts`: de los 13, **11** tienen la
+    // variante atestada en el corpus — norma 3.004, variante 854, el 22 %
+    // del total, y de 8 % (дядя) a 50 % (страна). La proporción NO es
+    // propiedad de la desinencia sino de cada palabra: `землёй` 16 frente a
+    // `землею` 91, donde la variante GANA 5,7 a 1.
+    const primera = NOMBRES_A1.filter((e) => declinacionDe(e) === 1);
+    const conVariante = primera.filter((e) => variantesInstrSgFem(casillaNominal(e, 'instr', 'sg')!).length > 0);
+    expect(primera.length).toBe(13);
+    expect(conVariante.length).toBe(primera.length);
   });
 });

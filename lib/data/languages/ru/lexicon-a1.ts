@@ -32,6 +32,14 @@ export const NOMBRES_A1: EntradaNominal[] = [
   { lema: 'голова', genero: 'f', tema: 'duro', glosa: 'cabeza' },          // 1439
   { lema: 'школа', genero: 'f', tema: 'duro', glosa: 'escuela' },          // 59
   { lema: 'страна', genero: 'f', tema: 'duro', glosa: 'país' },            // 36
+  // ⚠ EL MISMO PAR, EN LA 1.ª DECLINACIÓN, y hace falta aparte: la /o/ del
+  // instrumental femenino se escribe en OTRA desinencia (`-ой/-ей`, no
+  // `-ом/-ем`), así que una regla acertada en el masculino puede estar mal
+  // escrita aquí. Medido: душой 275 · *душею 0 · тучей 17 · *тучой 0.
+  { lema: 'душа', genero: 'f', tema: 'duro', glosa: 'alma', desinenciaOTonica: true,
+    nota: 'душа 1030 · душой 275: sibilante con la /o/ TÓNICA en la 1.ª declinación. ⚠ Y su variante del XIX es la más frecuente de todo el lexicón: душою 111 frente a душой 275, el 29 % — ver `alternativasAceptadasRu`' },
+  { lema: 'туча', genero: 'f', tema: 'duro', glosa: 'nube (de tormenta)', desinenciaOTonica: false,
+    nota: 'туча 106 · тучей 17 · *тучой 0: sibilante con la /o/ ÁTONA. Con душа sola, «sibilante femenino ⇒ ой» acierta entera' },
   // ⚠ EL PAR QUE DECIDE EL GENITIVO PLURAL, y es la razón de que `карта`
   // esté aquí con 21 apariciones: `карт` (91) NO mete vocal de apoyo y
   // `сестёр` (79) SÍ. Las dos son 1.ª declinación dura con desinencia
@@ -48,6 +56,7 @@ export const NOMBRES_A1: EntradaNominal[] = [
   // declara como su único contenido, porque leer la terminación es gratis.
   { lema: 'папа', genero: 'm', tema: 'duro', glosa: 'papá', animado: true },   // 557
   { lema: 'дядя', genero: 'm', tema: 'blando', glosa: 'tío', animado: true, genPlIrreg: 'дядей', // 1199
+    desinenciaOTonica: false,
     nota: 'el genitivo plural de la 1.ª blanda no tiene una sola forma: недель y деревень toman -ь (con vocal de apoyo) y дядей toma -ей (83). No hay regla que los separe desde el lema, así que la máquina pone la mayoritaria y el reparto va en el lexicón' },
 
   // ── 1.ª DECLINACIÓN, TEMA BLANDO ──────────────────────────────────
@@ -55,9 +64,9 @@ export const NOMBRES_A1: EntradaNominal[] = [
   // roto: su plural es `деревни` (395) por TEMA blando, no por regla
   // ortográfica — `вн` no es velar ni sibilante, así que una regla
   // ortográfica produce `*деревны` y ningún gate que la recalcule lo ve.
-  { lema: 'деревня', genero: 'f', tema: 'blando', glosa: 'aldea', genPlIrreg: 'деревень',
+  { lema: 'деревня', genero: 'f', tema: 'blando', glosa: 'aldea', genPlIrreg: 'деревень', desinenciaOTonica: false,
     nota: 'testigo del tema blando: деревни 395 sin velar ni sibilante delante' },
-  { lema: 'неделя', genero: 'f', tema: 'blando', glosa: 'semana', genPlIrreg: 'недель' },
+  { lema: 'неделя', genero: 'f', tema: 'blando', glosa: 'semana', genPlIrreg: 'недель', desinenciaOTonica: false },
 
   // ── 2.ª DECLINACIÓN MASCULINA, TEMA DURO ──────────────────────────
   { lema: 'стол', genero: 'm', tema: 'duro', glosa: 'mesa' },              // 1473
@@ -68,7 +77,8 @@ export const NOMBRES_A1: EntradaNominal[] = [
   { lema: 'город', genero: 'm', tema: 'duro', glosa: 'ciudad', nomPlIrreg: 'города',
     nota: 'plural en -а́ tónica: la regla da *го́роды y la lengua da города́ (793)' },
   { lema: 'учитель', genero: 'm', tema: 'blando', glosa: 'maestro', animado: true, nomPlIrreg: 'учителя',
-    nota: 'la clase del plural en -а́ también toca temas blandos: учителя, no *учители' },
+    desinenciaOTonica: false,
+    nota: 'la clase del plural en -а́ también toca temas blandos: учителя, no *учители. Y es el OTRO lado de la regla de la /o/: tema blando con desinencia ÁTONA da учителем (68) y no *учителём (0) — con конь y день solos, la regla «blando ⇒ ё» acertaría en todo lo que tiene delante' },
   // ⚠ LOS CUATRO DEL SEGUNDO LOCATIVO. Están aquí en bloque porque son la
   // clase que envenena el generador, y el lexicón es el único sitio donde
   // la casilla puede vivir: no hay regla que la prediga.
@@ -98,10 +108,18 @@ export const NOMBRES_A1: EntradaNominal[] = [
   // `деревня`. Sin los dos juntos, cualquiera de las dos reglas sola
   // acierta en todo lo que tiene delante.
   { lema: 'врач', genero: 'm', tema: 'duro', glosa: 'médico', animado: true, genPlIrreg: 'врачей',
-    nota: 'tema DURO con sibilante: врачи es la regla ortográfica, деревни es la de tema. El par es lo que impide publicar media regla' },
+    desinenciaOTonica: true,
+    nota: 'tema DURO con sibilante: врачи es la regla ortográfica, деревни es la de tema. El par es lo que impide publicar media regla. Y con la /o/ TÓNICA da врачом (29) y no *врачем (0), que es el lado que товарищ contradice' },
+  // ⚠ EL LEMA QUE SEPARA LAS DOS MITADES DE LA REGLA DE LA /o/ TRAS
+  // SIBILANTE, y por eso entra. Con `врач` solo, la regla «sibilante ⇒ ом»
+  // acierta en todo el lexicón: es exactamente el aspecto de una regla a la
+  // que le falta una mitad. Medido: товарищем 110 · *товарищом 0.
+  { lema: 'товарищ', genero: 'm', tema: 'duro', glosa: 'compañero, camarada', animado: true,
+    desinenciaOTonica: false, genPlIrreg: 'товарищей',
+    nota: 'товарищ 397 · товарищем 110 · *товарищом 0. Sibilante con la /o/ ÁTONA: es la frontera de врачом, y sin él la regla de la /o/ sale verde con la mitad escrita' },
   // La vocal fugaz, con su cuenta: день 5909.
   { lema: 'день', genero: 'm', tema: 'blando', glosa: 'día', temaOblicuo: 'дн',
-    irregular: { 'instr.sg': 'днём' },
+    desinenciaOTonica: true,
     nota: '⚠ EL `днём` LO ENCONTRÓ EL LINGÜISTA ADVERSARIAL EL 2026-09-12 Y ESTABA VIVO Y PUBLICADO: la máquina daba *днем, y la propia nota de esta entrada YA ESCRIBÍA «дня, дню, днём, дне». El fichero se contradecía a sí mismo y el gate salía verde, porque `contar()` funde las dos grafías de la ё a propósito y aquí el error ERA la ё. конь y царь sí llevaban su instrumental tónico; a день se le olvidó: la copia N+1 de una regla duplicada. днём 52 con ё · 428 sin. vocal fugaz: дня, дню, днём, дне, дни, дней — el nominativo singular es la ÚNICA casilla que la conserva' },
 
   // ── 2.ª DECLINACIÓN MASCULINA, TEMA BLANDO ────────────────────────
@@ -109,8 +127,8 @@ export const NOMBRES_A1: EntradaNominal[] = [
   // distintas: es el par que demuestra que la declinación no se lee en la
   // terminación y que el género es dato.
   { lema: 'конь', genero: 'm', tema: 'blando', glosa: 'caballo', animado: true,
-    irregular: { 'instr.sg': 'конём' }, genPlIrreg: 'коней',
-    nota: 'кони 120 sin velar ni sibilante — testigo del tema blando; y конём (47) lleva ё porque la desinencia es tónica, que en el sustantivo es dato y no regla' },
+    desinenciaOTonica: true, genPlIrreg: 'коней',
+    nota: 'кони 120 sin velar ni sibilante — testigo del tema blando; y конём (47) lleva ё porque la /o/ de la desinencia es TÓNICA. El 2026-09-12 esta casilla dejó de ser un `irregular` escrito a mano y pasó a salir de la regla con `desinenciaOTonica`: escrita a mano estaba en конь y en царь y FALTABA en день, que es la copia N+1 de siempre' },
   // ⚠ `словарь` ESTUVO AQUÍ Y SALIÓ, y se escribe en vez de borrarse sin
   // más: su plural `словари` sale **0 veces** en 7,7 M de palabras (el lema
   // entero, 15). Un lexicón puede tener lemas que el corpus no certifica
@@ -118,12 +136,12 @@ export const NOMBRES_A1: EntradaNominal[] = [
   // más, y el masculino blando ya lo aportan `конь` y `царь`. Guardar la
   // evidencia negativa es que el siguiente no lo reproponga.
   { lema: 'царь', genero: 'm', tema: 'blando', glosa: 'zar, rey', animado: true,
-    irregular: { 'instr.sg': 'царём' }, genPlIrreg: 'царей',
+    desinenciaOTonica: true, genPlIrreg: 'царей',
     nota: 'masculino blando ANIMADO (царь 1366, царей 24): con конь hace el par que prueba que el acusativo animado sale del genitivo en las dos clases' },
   // `музей` es la cuarta forma falsa de control (`*музеы`) y entra por eso
   // aunque salga 5 veces: el corpus NO puede certificarla y el gate lo
   // dice en vez de disimularlo. Su valor es separar `-й` de `-ий`.
-  { lema: 'музей', genero: 'm', tema: 'blando', glosa: 'museo',
+  { lema: 'музей', genero: 'm', tema: 'blando', glosa: 'museo', desinenciaOTonica: false,
     nota: 'BAJA ATESTACIÓN (музей 5, музеев 2). Está por la regla, no por la frecuencia: es el masculino en -й, que hace «о музее» y NO «о музеи» como la clase -ий' },
 
   // ── 2.ª DECLINACIÓN NEUTRA ────────────────────────────────────────
@@ -133,7 +151,19 @@ export const NOMBRES_A1: EntradaNominal[] = [
   { lema: 'письмо', genero: 'n', tema: 'duro', glosa: 'carta', genPlIrreg: 'писем', nomPlIrreg: 'письма',
     nota: 'vocal de apoyo con pérdida del signo blando: писем, no *письм' },
   { lema: 'слово', genero: 'n', tema: 'duro', glosa: 'palabra', genPlIrreg: 'слов' },
-  { lema: 'море', genero: 'n', tema: 'blando', glosa: 'mar', genPlIrreg: 'морей' },
+  // ⚠ LOS DOS NEUTROS EN `ц`, y son la tercera cara de la misma regla: aquí
+  // la /o/ no está sólo en el instrumental, está TAMBIÉN en el nominativo,
+  // que es lo que hace que `сердце` se escriba con `е` y `лицо` con `о`.
+  // `ц` entra en la regla de la /o/ y NO en la de la `ы` (отцы es correcto):
+  // son dos reglas que comparten la letra, y tratarlas como una es la media
+  // regla de siempre.
+  { lema: 'сердце', genero: 'n', tema: 'duro', glosa: 'corazón', desinenciaOTonica: false, genPlIrreg: 'сердец',
+    nota: 'сердце 3057 · сердцем 360 · *сердцом 0. El nominativo lo decide la MISMA regla que el instrumental: átona ⇒ е en las dos casillas' },
+  { lema: 'лицо', genero: 'n', tema: 'duro', glosa: 'cara, persona', desinenciaOTonica: true, genPlIrreg: 'лиц',
+    nota: 'лицо 5270 · лицом 1503. La /o/ TÓNICA, y el par con сердце es lo que impide escribir «ц ⇒ е» a secas. ⚠ Su rival `лицем` sale 2 veces y hay que LEERLO: es grafía antigua, no una casilla viva — ver `lecturaRival`',
+    lecturaRival: { 'instr.sg': 'лицем (2) es grafía ANTIGUA del mismo instrumental, no otro lema ni otra casilla: «пред лицем», fórmula eclesiástica. Frente a лицом 1503. El corpus TIENE FECHA y esto es la parte de su fecha que no es ruso de hoy' } },
+  { lema: 'море', genero: 'n', tema: 'blando', glosa: 'mar', genPlIrreg: 'морей', desinenciaOTonica: false,
+    nota: 'neutro blando con la /o/ ÁTONA en las dos casillas que la llevan: море (nominativo) y морем (54, instrumental). Su contraparte tónica sería ружьё/ружьём, que no está en el lexicón' },
 
   // ── 3.ª DECLINACIÓN ───────────────────────────────────────────────
   // El otro miembro del par con `конь`. `двери` 1834 y `ночи` 1053: los

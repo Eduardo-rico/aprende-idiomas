@@ -118,6 +118,28 @@ export interface EntradaNominal {
    *  correcto sobre una forma ambigua es un número verdadero que mide otra
    *  cosa, y aquí la ambigüedad cruzaba dos entradas del lexicón. */
   locativo2?: { forma: string; regente: 'в' | 'на' };
+  /** ⚠ EL ACENTO DE LA /o/ DE LA DESINENCIA — el único acento del
+   *  sustantivo que decide una LETRA, y por eso es dato y no presentación.
+   *  Es el hermano exacto de `acento2sgDesinencial` del verbo.
+   *
+   *  Lo leen las casillas del sentinela `%` (ver `ortografiar`): el
+   *  instrumental singular de las tres declinaciones y el nominativo y
+   *  acusativo singular del neutro. `конём`/`учителем`,
+   *  `врачом`/`товарищем`, `лицо`/`сердце`, `душой`/`тучей`.
+   *
+   *  **Obligatorio de hecho, no de tipo**: si el tema es blando, sibilante
+   *  o en `ц` y esto no está declarado, `casillaNominal` devuelve `null` y
+   *  el invariante `o-desinencial-sin-declarar` lo nombra. Con tema duro no
+   *  sibilante es irrelevante y se omite (столом es столом siempre).
+   *
+   *  ⚠ Y EL LÍMITE, ESCRITO EN VEZ DE SUPUESTO: este campo lo leen DOS
+   *  casillas distintas (el instrumental y el nominativo neutro), y en el
+   *  lexicón de hoy **ningún lema las separa** — la /o/ de `лицо́`/`лицо́м` y
+   *  la de `се́рдце`/`се́рдцем` caen del mismo lado en los dos. El día que
+   *  aparezca un lema que las separe, el campo se parte en dos, exactamente
+   *  como `desinenciaTonica` del verbo se partió en `acento1sg` y
+   *  `acento2sg` en cuanto llegó `писать`. Hay test que fija el límite. */
+  desinenciaOTonica?: boolean;
   /** Casillas sueltas que la regla falla y que el corpus corrigió. La
    *  clave es `<caso>.<numero>`. Existe para que una excepción medida se
    *  guarde COMO DATO en vez de moverle el agujero a la regla. */
@@ -171,11 +193,11 @@ type Fila = (string | null)[];
 
 // 1.ª declinación: -а / -я
 const D1: Record<TemaRu, Record<NumeroRu, Fila>> = {
-  duro:   { sg: ['а', 'у', 'ы', 'е', 'ой', 'е'],   pl: ['ы', null, '', 'ам', 'ами', 'ах'] },
-  blando: { sg: ['я', 'ю', 'и', 'е', 'ей', 'е'],   pl: ['и', null, 'ь', 'ям', 'ями', 'ях'] },
+  duro:   { sg: ['а', 'у', 'ы', 'е', '%й', 'е'],   pl: ['ы', null, '', 'ам', 'ами', 'ах'] },
+  blando: { sg: ['я', 'ю', 'и', 'е', '%й', 'е'],   pl: ['и', null, 'ь', 'ям', 'ями', 'ях'] },
   // -ия: dat y prep singular en -ии. El plural es el blando normal salvo
   // el genitivo, que va en -ий (лекций, армий).
-  iy:     { sg: ['я', 'ю', 'и', 'и', 'ей', 'и'],   pl: ['и', null, 'й', 'ям', 'ями', 'ях'] },
+  iy:     { sg: ['я', 'ю', 'и', 'и', '%й', 'и'],   pl: ['и', null, 'й', 'ям', 'ями', 'ях'] },
 };
 
 // 2.ª masculina. El lema aporta su propia desinencia de nominativo
@@ -183,23 +205,23 @@ const D1: Record<TemaRu, Record<NumeroRu, Fila>> = {
 // vuelve a poner: es la misma jugada que el genitivo latino, el dato manda
 // sobre la forma de diccionario.
 const D2M: Record<TemaRu, Record<NumeroRu, Fila>> = {
-  duro:   { sg: ['', null, 'а', 'у', 'ом', 'е'],   pl: ['ы', null, 'ов', 'ам', 'ами', 'ах'] },
-  blando: { sg: ['ь', null, 'я', 'ю', 'ем', 'е'],  pl: ['и', null, 'ей', 'ям', 'ями', 'ях'] },
-  iy:     { sg: ['й', null, 'я', 'ю', 'ем', 'и'],  pl: ['и', null, 'ев', 'ям', 'ями', 'ях'] },
+  duro:   { sg: ['', null, 'а', 'у', '%м', 'е'],   pl: ['ы', null, 'ов', 'ам', 'ами', 'ах'] },
+  blando: { sg: ['ь', null, 'я', 'ю', '%м', 'е'],  pl: ['и', null, 'ей', 'ям', 'ями', 'ях'] },
+  iy:     { sg: ['й', null, 'я', 'ю', '%м', 'и'],  pl: ['и', null, '%в', 'ям', 'ями', 'ях'] },
 };
 /** El masculino en `-й` NO es la clase `-ий`. `музей` hace `о музее` y
  *  `санаторий` hace `о санатории`: sólo la segunda mete la `и`. Por eso
  *  hay dos filas y no una, y el lexicón declara cuál. */
 const D2M_J: Record<NumeroRu, Fila> = {
-  sg: ['й', null, 'я', 'ю', 'ем', 'е'],
-  pl: ['и', null, 'ев', 'ям', 'ями', 'ях'],
+  sg: ['й', null, 'я', 'ю', '%м', 'е'],
+  pl: ['и', null, '%в', 'ям', 'ями', 'ях'],
 };
 
 // 2.ª neutra: -о / -е
 const D2N: Record<TemaRu, Record<NumeroRu, Fila>> = {
-  duro:   { sg: ['о', 'о', 'а', 'у', 'ом', 'е'],   pl: ['а', null, '', 'ам', 'ами', 'ах'] },
-  blando: { sg: ['е', 'е', 'я', 'ю', 'ем', 'е'],   pl: ['я', null, 'ей', 'ям', 'ями', 'ях'] },
-  iy:     { sg: ['е', 'е', 'я', 'ю', 'ем', 'и'],   pl: ['я', null, 'й', 'ям', 'ями', 'ях'] },
+  duro:   { sg: ['%', '%', 'а', 'у', '%м', 'е'],   pl: ['а', null, '', 'ам', 'ами', 'ах'] },
+  blando: { sg: ['%', '%', 'я', 'ю', '%м', 'е'],   pl: ['я', null, 'ей', 'ям', 'ями', 'ях'] },
+  iy:     { sg: ['%', '%', 'я', 'ю', '%м', 'и'],   pl: ['я', null, 'й', 'ям', 'ями', 'ях'] },
 };
 
 // 3.ª: femenino en -ь. El acusativo singular ES el nominativo también en
@@ -246,21 +268,87 @@ function filaDe(e: EntradaNominal, num: NumeroRu): Fila {
 // escribir. `книга` es tema DURO y da `-ы`; la regla velar la escribe `и`.
 // `конь` es tema BLANDO y da `-и` DE ENTRADA, sin pasar por aquí.
 const VELAR_O_SIBILANTE = /[кгхжшщч]$/;
-/** Las cuatro sustituciones que la norma impone (Правила 1956, §13). No
- *  incluye `ц`: `цы` es grafía correcta y frecuente (отцы, огурцы) y
- *  meterla produciría una mala que es lengua real. El motivo está escrito
- *  en `ortografia-ru.ts` y no se duplica: se importa la comprobación. */
-export function ortografiar(tema: string, desinencia: string): string {
+const SIBILANTE = /[жшщч]$/;
+const CE = /ц$/;
+
+/** ⚠ EL SENTINELA `%` ES LA /o/ DE LA DESINENCIA, Y EXISTE PARA QUE LA
+ *  REGLA VIVA EN UN SITIO.
+ *
+ *  Seis casillas del ruso llevan una desinencia cuya vocal es
+ *  subyacentemente /o/ y que se ESCRIBE de tres maneras distintas según el
+ *  tema y el ACENTO:
+ *
+ *    столо́м · ме́стом      tema duro no sibilante  → siempre `о`
+ *    конём  · учи́телем     tema blando             → tónica `ё`, átona `е`
+ *    врачо́м · това́рищем    sibilante (ж ш щ ч)     → tónica `о`, átona `е`
+ *    лицо́   · се́рдце       ц                       → tónica `о`, átona `е`
+ *
+ *  Y es UNA SOLA regla fonológica —la /o/ átona tras consonante blanda,
+ *  sibilante o `ц` se realiza [e]— con tres grafías. Escribirla en las
+ *  tablas casilla por casilla es la regla duplicada que ya se pagó en este
+ *  mismo lexicón: `конь` y `царь` llevaban su instrumental tónico en
+ *  `irregular` y **a `день` se le olvidó**, y el gate salía verde porque el
+ *  error era la ё y `contar()` la funde. Con el sentinela, olvidarlo no
+ *  produce `*днем`: produce `null`, y el invariante lo grita.
+ *
+ *  Las casillas que lo llevan: el instrumental singular de las tres
+ *  declinaciones (`%м`, `%й`), el nominativo y acusativo singular del
+ *  neutro (`%`) y el genitivo plural de la clase en `-й`/`-ий` (`%в`:
+ *  музеев, боёв). El plural oblicuo NO lo lleva: `-ами/-ах` no tienen /o/.
+ */
+export const SENTINELA_O = '%';
+
+/** La grafía de la /o/ de la desinencia, o `null` si el dato no basta para
+ *  decidirla. Devolver `null` es la mitad que hace de esto un invariante y
+ *  no un comentario. */
+export function vocalDesinencialO(tema: string, clase: TemaRu, tonica: boolean | undefined): string | null {
+  const blanda = clase === 'blando' || clase === 'iy';
+  const sibilante = SIBILANTE.test(tema) || CE.test(tema);
+  if (!blanda && !sibilante) return 'о';        // столом, местом, окном
+  if (tonica === undefined) return null;         // la máquina NO SABE
+  if (blanda) return tonica ? 'ё' : 'е';         // конём / учителем
+  return tonica ? 'о' : 'е';                     // врачом / товарищем
+}
+
+/** Las sustituciones que la norma impone (Правила 1956, §13), más la /o/
+ *  del sentinela. No incluye `ц` en la regla de la `ы`: `цы` es grafía
+ *  correcta y frecuente (отцы, огурцы) y meterla produciría una mala que es
+ *  lengua real. El motivo está escrito en `ortografia-ru.ts` y no se
+ *  duplica: se importa la comprobación.
+ *
+ *  ⚠ `ц` SÍ ENTRA EN LA REGLA DE LA /o/ y no en la de la `ы`, y son dos
+ *  reglas distintas por mucho que compartan la letra: `отцы` es correcto y
+ *  `*сердцом` no existe (сердцем 360 · сердцом 0). Tratarlas como una sola
+ *  —en cualquiera de las dos direcciones— es la media regla de siempre.
+ *
+ *  Devuelve `null` cuando la desinencia pide la /o/ y el lexicón no ha
+ *  declarado el acento. */
+export function ortografiar(
+  tema: string,
+  desinencia: string,
+  ctx: { clase?: TemaRu; tonica?: boolean } = {},
+): string | null {
   if (!desinencia) return tema;
   let d = desinencia;
+  if (d.includes(SENTINELA_O)) {
+    const v = vocalDesinencialO(tema, ctx.clase ?? 'duro', ctx.tonica);
+    if (v === null) return null;
+    d = d.split(SENTINELA_O).join(v);
+  }
   if (VELAR_O_SIBILANTE.test(tema)) {
     if (d.startsWith('ы')) d = 'и' + d.slice(1);
   }
-  if (/[жшщч]$/.test(tema)) {
+  if (SIBILANTE.test(tema)) {
     if (d.startsWith('я')) d = 'а' + d.slice(1);
     if (d.startsWith('ю')) d = 'у' + d.slice(1);
   }
   return tema + d;
+}
+
+/** La clase EFECTIVA del número pedido. El plural puede cambiarla
+ *  (`друг` duro → `друзь-` blando), y la grafía de la /o/ depende de ella. */
+export function claseDe(e: EntradaNominal, num: NumeroRu): TemaRu {
+  return num === 'pl' && e.temaPlTema ? e.temaPlTema : e.tema;
 }
 
 /** Una casilla. Devuelve `null` donde la máquina NO SABE, que es lo
@@ -276,6 +364,8 @@ export function casillaNominal(e: EntradaNominal, caso: CasoRu, num: NumeroRu): 
   if (num === 'pl' && caso === 'nom' && e.nomPlIrreg) return e.nomPlIrreg;
   if (num === 'pl' && caso === 'gen' && e.genPlIrreg) return e.genPlIrreg;
 
+  const ctx = { clase: claseDe(e, num), tonica: e.desinenciaOTonica };
+
   // El acusativo no tiene desinencia propia: la animacidad lo manda al
   // nominativo o al genitivo. En la 1.ª declinación sí la tiene (-у/-ю) y
   // por eso la fila la trae; en la 3.ª es el nominativo SIEMPRE, animado o
@@ -284,13 +374,13 @@ export function casillaNominal(e: EntradaNominal, caso: CasoRu, num: NumeroRu): 
     const d = declinacionDe(e);
     if (d === 3) return casillaNominal(e, 'nom', num);
     const propia = filaDe(e, num)[ORDEN.indexOf('ac')] ?? null;
-    if (propia !== null) return ortografiar(temaPara(e, num, 'ac'), propia);
+    if (propia !== null) return ortografiar(temaPara(e, num, 'ac'), propia, ctx);
     return casillaNominal(e, e.animado ? 'gen' : 'nom', num);
   }
 
   const des = filaDe(e, num)[ORDEN.indexOf(caso)] ?? null;
   if (des === null) return null;
-  return ortografiar(temaPara(e, num, caso), des);
+  return ortografiar(temaPara(e, num, caso), des, ctx);
 }
 
 /** El tema del número pedido. `друг` → `друзь-` en plural; `день` → `дн-`
@@ -315,6 +405,56 @@ function temaPara(e: EntradaNominal, num: NumeroRu, caso: CasoRu): string {
 export function prepositivoSg(e: EntradaNominal, regente: 'о' | 'в' | 'на' | 'при'): string | null {
   if (e.locativo2 && regente === e.locativo2.regente) return e.locativo2.forma;
   return casillaNominal(e, 'prep', 'sg');
+}
+
+// ══════════════════════════════════════════════════════════════════════
+// LA VARIANTE DEL XIX QUE LA MÁQUINA NO PRODUCE Y QUE HAY QUE ACEPTAR
+// ══════════════════════════════════════════════════════════════════════
+//
+// ⚠ ES LA CLASE «LA BIBLIOTECA DESENSEÑA EL PUNTO», Y AQUÍ NO ES UN RIESGO
+// TEÓRICO: ES UNA CUARTA PARTE DEL CORPUS.
+//
+// El instrumental singular femenino tiene en la prosa del XIX una segunda
+// forma larga, `-ою/-ею`, que la norma de hoy da por arcaica o poética y
+// que la biblioteca escribe a todas horas. Medido con `buscar()` sobre las
+// 2.180 lecturas:
+//
+//     рукой   1700 · рукою   595      книгой 91 · книгою 21
+//     головой 1957 · головою 510      сестрой 148 · сестрою 31
+//     водой    381 · водою   153      душой 275 · душою 111  (29 %)
+//     землёй    16 · землею   91      ← aquí la variante GANA, 5,7 a 1
+//
+// Tres consecuencias, y la tercera es la que el relevo del ruso ya había
+// escrito como regla general:
+//
+//   1. **La máquina produce la forma de la NORMA** (`-ой`), porque es la
+//      citable y es la de hoy.
+//   2. **`-ою` es una respuesta CORRECTA y hay que aceptarla.** El alumno
+//      lee 1.418 apariciones de estas variantes en el material de
+//      inmersión; un cloze que exija sólo `-ой` suspende a quien escribe
+//      ruso atestado. Es el error simétrico, y es el mismo argumento que
+//      `две новых канарейки` en `u10-sintagma-numeral-adjetivo`.
+//   3. **La LECCIÓN tiene que avisar**, o la inmersión deshace lo enseñado.
+//
+// Y `землёй` 16 frente a `землею` 91 es la razón de que esto no se pueda
+// declarar «marginal» sin medirlo lema a lema: la proporción no es una
+// propiedad de la desinencia, es de cada palabra.
+//
+/** La variante en `-ою/-ею` de UNA casilla concreta: el instrumental
+ *  singular femenino.
+ *
+ *  ⚠ LLEVA LA CASILLA EN EL NOMBRE A PROPÓSITO, y no es cosmética. En el
+ *  ADJETIVO la desinencia `-ой` ocupa CUATRO casillas del femenino
+ *  (genitivo, dativo, instrumental y prepositivo) y la variante larga
+ *  existe **sólo en el instrumental**: `новою` sí, `*о новою` no. Una
+ *  función que mirara sólo el final de la cadena generaría tres variantes
+ *  falsas de cada cuatro. */
+export function variantesInstrSgFem(forma: string): string[] {
+  const f = quitarAcento(forma);
+  if (f.endsWith('ой')) return [f.slice(0, -2) + 'ою'];
+  if (f.endsWith('ей')) return [f.slice(0, -2) + 'ею'];
+  if (f.endsWith('ёй')) return [f.slice(0, -2) + 'ёю'];
+  return [];
 }
 
 export type TablaNominal = Record<NumeroRu, Partial<Record<CasoRu, string>>>;
@@ -509,6 +649,27 @@ export interface Aviso { lema: string; clase: string; detalle: string }
 export function invariantesNominales(entradas: EntradaNominal[]): Aviso[] {
   const out: Aviso[] = [];
   for (const e of entradas) {
+    // ⚠ LA CASILLA QUE FALTA NO APARECE EN LA TABLA, Y POR ESO SE PREGUNTA
+    // POR ELLA UNA A UNA. `paradigmaNominal` filtra los `null` —hace bien,
+    // porque devolver una forma plausible sería peor— así que un
+    // instrumental que la máquina no sabe producir **desaparece del objeto**
+    // y el bucle de abajo, que recorre la tabla, no lo ve nunca. Un hueco
+    // invisible sale en verde: es el silencio del verificador sobre lo que
+    // no modela. Aquí se recorren las doce casillas por su nombre.
+    for (const num of ['sg', 'pl'] as NumeroRu[]) {
+      if (num === 'pl' && e.soloSingular) continue;
+      for (const caso of ORDEN) {
+        if (casillaNominal(e, caso, num) !== null) continue;
+        const porLaO = vocalDesinencialO(temaDe(e), claseDe(e, num), e.desinenciaOTonica) === null;
+        out.push({
+          lema: e.lema,
+          clase: porLaO ? 'o-desinencial-sin-declarar' : 'casilla-nula',
+          detalle: porLaO
+            ? `${caso}.${num}: el tema «${temaDe(e)}-» es ${claseDe(e, num)} o acaba en sibilante/ц, así que la /o/ de la desinencia necesita \`desinenciaOTonica\` (конём frente a учителем, врачом frente a товарищем)`
+            : `${caso}.${num}`,
+        });
+      }
+    }
     const t = paradigmaNominal(e);
     for (const [num, celdas] of Object.entries(t)) {
       if (!celdas) continue;

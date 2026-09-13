@@ -49,6 +49,7 @@
 import {
   paradigmaNominal, paradigmaPresente, pasado, imperativo, prepositivoSg,
   invariantesNominales, invariantesVerbales, temaIngenuo, casillaNominal,
+  variantesInstrSgFem,
   type EntradaNominal, type EntradaVerbal, type PersonaRu,
 } from '../lib/data/languages/ru/paradigma-ru';
 import { NOMBRES_A1, VERBOS_A1 } from '../lib/data/languages/ru/lexicon-a1';
@@ -275,6 +276,34 @@ export const FALSAS: { forma: string; buena: string; porQue: string }[] = [
   { forma: 'деревны', buena: 'деревни', porQue: 'ídem, tema blando en -я' },
   { forma: 'дверы', buena: 'двери', porQue: 'ídem, 3.ª declinación' },
   { forma: 'карот', buena: 'карт', porQue: 'vocal de apoyo donde NO va' },
+  // ── LAS CUATRO DE LA REGLA DE LA /o/ DE LA DESINENCIA (2026-09-12) ──
+  // Van las CUATRO y no una, porque la regla tiene dos ejes —el tema y el
+  // acento— y una sola forma falsa deja sin probar tres cuartas partes.
+  // `товарищом` prueba la mitad átona y `врачем` la tónica: con una sola,
+  // una regla que dijera «sibilante ⇒ siempre -ом» o «⇒ siempre -ем»
+  // pasaría el control.
+  { forma: 'товарищом', buena: 'товарищем', porQue: 'sibilante con la /o/ ÁTONA: va -ем' },
+  { forma: 'врачем', buena: 'врачом', porQue: 'sibilante con la /o/ TÓNICA: va -ом' },
+  { forma: 'сердцом', buena: 'сердцем', porQue: 'ц con la /o/ ÁTONA: va -ем, y ц NO entra en la regla de la ы' },
+  { forma: 'тучой', buena: 'тучей', porQue: 'la misma regla en la 1.ª declinación, que usa OTRA desinencia (-ой/-ей)' },
+];
+
+/** ⚠ LA FORMA FALSA QUE NINGUNO DE LOS DOS CAMINOS DE `veredicto()` PUEDE
+ *  RECHAZAR, y va escrita en vez de omitida.
+ *
+ *  Si alguien pone `desinenciaOTonica: false` en `конь`, la máquina produce
+ *  `конем`. La ortografía no la rechaza —es una cadena perfectamente
+ *  escribible— y el corpus **tampoco**, porque `contar()` funde las dos
+ *  grafías de la ё a propósito: `конем` y `конём` devuelven los dos 47.
+ *
+ *  Lo que la caza es el OTRO instrumento, `candidatasConYo()`, que cuenta
+ *  SIN fundir: конём 17 frente a конем 30 — o sea que ni el orden ayuda, y
+ *  sólo sirve saber que la variante con ё existe. Y si en vez de ponerlo mal
+ *  se OLVIDA, la máquina devuelve `null` y el invariante lo grita. Dos
+ *  guardianes distintos para los dos descuidos, y ninguno de los dos es el
+ *  de este control. Fijado en test. */
+export const FUERA_DEL_ALCANCE_DEL_CONTROL = [
+  { forma: 'конем', buena: 'конём', quienLaCaza: 'candidatasConYo (el corpus funde la ё y no puede)' },
 ];
 
 /** El veredicto de UNA forma, con los dos caminos por separado para que se
@@ -312,10 +341,18 @@ if (/[/\\]check-paradigma-ru\.ts$/.test(process.argv[1] ?? '')) {
     if (!v.rechaza) fallosControl++;
     console.log(`${v.rechaza ? '✓' : '✗'} *${f.forma}  [${v.via}] ${v.detalle}   — ${f.porQue}`);
   }
-  console.log(fallosControl === 0
-    ? `\n${FALSAS.length}/${FALSAS.length} rechazadas.\n`
-    : `\n⚠ ${fallosControl} de ${FALSAS.length} NO se rechazan: el gate no está probado.\n`);
-  if (soloControl) process.exit(fallosControl === 0 ? 0 : 1);
+  // ── EL CONTROL NEGATIVO, que es la mitad que casi siempre falta ───
+  // Un gate que rechaza TODO también rechaza las trece, y su verde es
+  // idéntico al de uno que sirve. Las buenas tienen que pasar limpias.
+  let fallosNegativo = 0;
+  for (const f of FALSAS) {
+    const h = revisar(f.buena);
+    if (h) { fallosNegativo++; console.log(`✗ CONTROL NEGATIVO: la forma BUENA «${f.buena}» la rechaza la ortografía (${h})`); }
+  }
+  console.log(fallosControl === 0 && fallosNegativo === 0
+    ? `\n${FALSAS.length}/${FALSAS.length} rechazadas · ${FALSAS.length}/${FALSAS.length} buenas limpias.\n`
+    : `\n⚠ ${fallosControl} de ${FALSAS.length} NO se rechazan y ${fallosNegativo} buenas se rechazan: el gate no está probado.\n`);
+  if (soloControl) process.exit(fallosControl === 0 && fallosNegativo === 0 ? 0 : 1);
 
   // ── 2 · LOS INVARIANTES PROPIOS ───────────────────────────────────
   const avisos = [...invariantesNominales(NOMBRES_A1), ...invariantesVerbales(VERBOS_A1)];
@@ -412,8 +449,47 @@ if (/[/\\]check-paradigma-ru\.ts$/.test(process.argv[1] ?? '')) {
     console.log();
   }
 
-  const rojo = fallosControl > 0 || perdidas.length > 0 || conYo.length > 0
-    || avisos.some((a) => a.clase.startsWith('ortografia') || a.clase === 'casilla-vacia');
+  // ⚠ LA LISTA DE CLASES QUE TIÑEN DE ROJO ES UN SITIO DONDE UN GATE NUEVO
+  // NACE APAGADO. El 2026-09-12 el invariante `o-desinencial-sin-declarar`
+  // cazó tres omisiones reales del lexicón (дядя, деревня, неделя) y el
+  // script **salió con código 0**, porque su clase no estaba en esta
+  // condición. Un hallazgo que no cambia el veredicto es un informe, no un
+  // gate: añadir el invariante y no añadirlo aquí son dos cambios.
+  const CLASES_ROJAS = ['casilla-vacia', 'casilla-nula', 'o-desinencial-sin-declarar', 'locativo2-inutil'];
+  // ── LA VARIANTE DEL XIX QUE LA MÁQUINA NO PRODUCE ─────────────────
+  //
+  // ⚠ NO ES UN ROJO, Y POR ESO HAY QUE MEDIRLO: es la clase «la biblioteca
+  // desenseña el punto». La máquina produce la forma de la NORMA (`-ой`) y
+  // hace bien —es la citable—, pero el alumno lee el corpus, no la norma, y
+  // si un cloze exige sólo `-ой` suspende a quien escribe ruso atestado. El
+  // gate imprime la proporción lema a lema porque **no es una propiedad de
+  // la desinencia sino de cada palabra**: землею gana a землёй 5,7 a 1 y
+  // страною empata con страной.
+  const variantes: { lema: string; norma: string; nNorma: number; variante: string; nVar: number }[] = [];
+  for (const e of NOMBRES_A1) {
+    if (e.genero !== 'f' && !(e.genero === 'm' && /[ая]$/.test(e.lema))) continue;
+    const instr = casillaNominal(e, 'instr', 'sg');
+    if (!instr) continue;
+    for (const v of variantesInstrSgFem(instr)) {
+      const nVar = contar(v);
+      if (nVar > 0) variantes.push({ lema: e.lema, norma: instr, nNorma: contar(instr), variante: v, nVar });
+    }
+  }
+  if (variantes.length) {
+    console.log('LA VARIANTE `-ою/-ею` DEL XIX — NO es un error y NO es un rojo: es una respuesta');
+    console.log('CORRECTA que la máquina no produce. Un ítem que exija sólo `-ой` suspende a quien');
+    console.log('escribe el ruso que la biblioteca le ha enseñado (error simétrico).');
+    let sn = 0, sv = 0;
+    for (const v of variantes.sort((a, b) => b.nVar - a.nVar)) {
+      sn += v.nNorma; sv += v.nVar;
+      const pct = Math.round((100 * v.nVar) / (v.nNorma + v.nVar));
+      console.log(`  ${v.lema}\t${v.norma} ${v.nNorma} · ${v.variante} ${v.nVar}\t(${pct} % del total es la variante)`);
+    }
+    console.log(`  ── ${variantes.length} lemas · norma ${sn} · variante ${sv} · ${Math.round((100 * sv) / (sn + sv))} % del total\n`);
+  }
+
+  const rojo = fallosControl > 0 || fallosNegativo > 0 || perdidas.length > 0 || conYo.length > 0
+    || avisos.some((a) => a.clase.startsWith('ortografia') || CLASES_ROJAS.includes(a.clase));
   console.log(rojo ? 'ROJO' : 'VERDE');
   process.exit(rojo ? 1 : 0);
 }
