@@ -431,6 +431,14 @@ export const FALSAS: { forma: string; buena: string; porQue: string }[] = [
   { forma: 'деревны', buena: 'деревни', porQue: 'ídem, tema blando en -я' },
   { forma: 'дверы', buena: 'двери', porQue: 'ídem, 3.ª declinación' },
   { forma: 'карот', buena: 'карт', porQue: 'vocal de apoyo donde NO va' },
+  // ⚠ EL TESTIGO DE UN DATO QUE FALTABA Y QUE ESTE GATE APROBABA (2026-09-13).
+  // `лес` no traía `nomPlIrreg` y la máquina producía `*лесы`. El barrido de las
+  // 948 formas no lo vio porque pregunta «¿está atestada?» y `лесы` sale 6
+  // veces — las seis de OTRO LEMA, `леса́` fem. «sedal» («наставит лесы, зверь
+  // глуп — и попадёт»). El dato está arreglado en el lexicón; esto queda para
+  // que la forma falsa siga teniendo que ser rechazada, y la rechaza por corpus
+  // (6 < 461) aunque sus seis apariciones sean un homógrafo.
+  { forma: 'лесы', buena: 'леса', porQue: 'el plural en -а́ tónica que город y берег sí declaraban: лесы 6 (las seis de otro lema) < леса 461' },
   // ── LAS CUATRO DE LA REGLA DE LA /o/ DE LA DESINENCIA (2026-09-12) ──
   // Van las CUATRO y no una, porque la regla tiene dos ejes —el tema y el
   // acento— y una sola forma falsa deja sin probar tres cuartas partes.

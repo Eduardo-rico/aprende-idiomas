@@ -82,7 +82,26 @@ export const NOMBRES_A1: EntradaNominal[] = [
   // ⚠ LOS CUATRO DEL SEGUNDO LOCATIVO. Están aquí en bloque porque son la
   // clase que envenena el generador, y el lexicón es el único sitio donde
   // la casilla puede vivir: no hay regla que la prediga.
-  { lema: 'лес', genero: 'm', tema: 'duro', glosa: 'bosque', locativo2: { forma: 'лесу', regente: 'в' },
+  // ⚠ `nomPlIrreg: 'леса'` ENTRÓ EL 2026-09-13 Y LA MÁQUINA PRODUCÍA `*лесы`.
+  // Es la MISMA clase que `город` y `берег` —el plural en -а́ tónica— y los dos
+  // la traían declarada; a `лес` se le olvidó. Зализняк: лес, мн. леса́.
+  // Medido: `леса` 461 · `лесы` 6, y los oblicuos (лесов 64, лесам 52, лесами
+  // 23, лесах 45) ya eran correctos: sólo fallaba el nominativo plural.
+  //
+  // ⚠ Y POR QUÉ EL GATE SALÍA VERDE, que es la parte que se transfiere: sus
+  // 948 formas comprueban «¿está atestada?», y `лесы` SÍ está — 6 veces. Las
+  // seis son OTRO LEMA: `леса́` femenino «sedal, lazo de caza» («наставит лесы,
+  // зверь глуп — и попадёт», Afanásiev; «конец лесы» de una caña). Un número
+  // correcto sobre una forma ambigua es un número verdadero que mide otra cosa,
+  // y aquí el homógrafo estaba justo donde el dato faltaba.
+  //
+  // Y LO QUE NO SE PUEDE AUTOMATIZAR, escrito en vez de disimulado: un detector
+  // que comparase el `-ы` generado contra el `-а` de la misma raíz marcaría
+  // TODOS los masculinos de la 2.ª, porque `-а` es también su genitivo singular
+  // (`стола`, `дома`) — un gate que marca media clase es un gate apagado. Lo
+  // que sí queda es `*лесы` en la lista de control positivo de
+  // `check-paradigma-ru.ts`, con su lectura: es un testigo, no un detector.
+  { lema: 'лес', genero: 'm', tema: 'duro', glosa: 'bosque', locativo2: { forma: 'лесу', regente: 'в' }, nomPlIrreg: 'леса',
     lecturaRival: { locativo2: 'в лесе sale 3 veces y о лесе 2: el prepositivo regular de лес EXISTE y es correcto, pero está casi muerto en este corpus. No es homógrafo ni caracterización: es la casilla legítima que la clase del segundo locativo desplaza. Por eso son DOS casillas y no una corrección' },
     nota: 'в лесу 381 frente a в лесе 3. ⚠ Y UNA CORRECCIÓN DE MI PROPIA v0: escribí que «el prepositivo regular (о лесе) sigue vivo y por eso son DOS casillas». Medido, о лесе sale **2 veces**. Sigue siendo lengua correcta y la casilla existe, pero no está viva en este corpus, y un ítem que la pida está pidiendo algo que el alumno no ha leído nunca' },
   { lema: 'сад', genero: 'm', tema: 'duro', glosa: 'jardín', locativo2: { forma: 'саду', regente: 'в' },
