@@ -104,6 +104,13 @@ describe('el camino independiente: la frontera de morfema', () => {
       try { d = String(declinacionDe(n)); } catch { continue; }   // sólo se salta lo que no es de las cinco
       const tema = temaPorGenitivo(n.genitivo, d);
       if (!tema || !V.includes(tema[tema.length - 1]!)) continue;
+      // EXCEPCIÓN MEDIDA, no supuesta: un tema que acaba en `qu` —`aqu-`—
+      // no acaba en vocal aunque lo parezca: la `u` es parte de la
+      // consonante labiovelar y va con la sílaba siguiente. `aqua` es
+      // `a-qua`, y la frontera de morfema cae DENTRO de esa consonante.
+      // Lo destapó `aqua` al entrar en el lexicón: doce formas de golpe, y
+      // el equivocado era este test, no el silabeador.
+      if (/qu$/i.test(tema)) continue;
       for (const [celda, f] of Object.entries(paradigmaNominal(n))) {
         const fn = f.normalize('NFC');
         if (sinM(fn).indexOf(sinM(tema)) !== 0) continue;

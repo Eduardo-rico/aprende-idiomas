@@ -18,20 +18,31 @@ const base: ItemIrregular = {
 const con = (p: Partial<ItemIrregular>): ItemIrregular => ({ ...base, ...p });
 const clases = (i: ItemIrregular) => revisarItemIrregular(i).map((f) => f.clase);
 
+// Las afirmaciones son sobre LOS SEIS DEL PUNTO, no sobre la tabla. `dō`
+// entró en `IRREGULARES_L1` el 2026-09-12 porque tres lotes publicados
+// usaban `dat` y el lexicón no tenía el verbo, y no es uno de los seis.
+// Escribirlas contra la tabla las hacía falsas en cuanto la tabla creciera,
+// que es el defecto que este proyecto lleva persiguiendo todo el día:
+// **añadir una máquina desprotege un invariante en silencio** — sólo que
+// aquí no se quedó en verde, se puso en rojo, porque el invariante SÍ
+// miraba lo que había crecido.
+const SEIS = ['eō', 'ferō', 'volō', 'nōlō', 'mālō', 'fīō'];
+const LOS_SEIS = () => IRREGULARES_L1.filter((v) => SEIS.includes(v.lema));
+
 describe('lo que dice la atestación congelada', () => {
   it('la 1.ª del singular no refuta la regla en ninguno de los seis', () => {
-    for (const v of IRREGULARES_L1) expect(celdaDe(v.lema, 'presente', '1sg')!.refuta, v.lema).toBe(false);
+    for (const v of LOS_SEIS()) expect(celdaDe(v.lema, 'presente', '1sg')!.refuta, v.lema).toBe(false);
   });
 
   it('ni la 3.ª del plural del presente, que en los seis acaba en -unt', () => {
-    for (const v of IRREGULARES_L1) {
+    for (const v of LOS_SEIS()) {
       expect(celdaDe(v.lema, 'presente', '3pl')!.refuta, v.lema).toBe(false);
       expect(celdaDe(v.lema, 'presente', '3pl')!.forma).toMatch(/unt$/);
     }
   });
 
   it('el imperfecto y el futuro sólo son irregulares en «eō», y ahí lo son enteros', () => {
-    for (const v of IRREGULARES_L1) {
+    for (const v of LOS_SEIS()) {
       const doce = (['imperfecto', 'futuro'] as const).flatMap((t) =>
         (['1sg', '2sg', '3sg', '1pl', '2pl', '3pl'] as const).map((p) => celdaDe(v.lema, t, p)!.refuta));
       expect(doce.filter(Boolean).length, v.lema).toBe(v.lema === 'eō' ? 12 : 0);

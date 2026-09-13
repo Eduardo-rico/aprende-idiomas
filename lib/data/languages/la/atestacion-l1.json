@@ -1,6 +1,6 @@
 {
  "tokens": 227301,
- "generado": "2026-09-12",
+ "generado": "2026-09-13",
  "lemas": {
   "puella": {
    "nom.sg": {
@@ -50,6 +50,106 @@
    "voc.pl": {
     "forma": "puellae",
     "n": 12
+   }
+  },
+  "causa": {
+   "nom.sg": {
+    "forma": "causa",
+    "n": 157
+   },
+   "ac.sg": {
+    "forma": "causam",
+    "n": 67
+   },
+   "gen.sg": {
+    "forma": "causae",
+    "n": 11
+   },
+   "dat.sg": {
+    "forma": "causae",
+    "n": 11
+   },
+   "abl.sg": {
+    "forma": "causā",
+    "n": 157
+   },
+   "voc.sg": {
+    "forma": "causa",
+    "n": 157
+   },
+   "nom.pl": {
+    "forma": "causae",
+    "n": 11
+   },
+   "ac.pl": {
+    "forma": "causās",
+    "n": 13
+   },
+   "gen.pl": {
+    "forma": "causārum",
+    "n": 0
+   },
+   "dat.pl": {
+    "forma": "causīs",
+    "n": 12
+   },
+   "abl.pl": {
+    "forma": "causīs",
+    "n": 12
+   },
+   "voc.pl": {
+    "forma": "causae",
+    "n": 11
+   }
+  },
+  "aqua": {
+   "nom.sg": {
+    "forma": "aqua",
+    "n": 49
+   },
+   "ac.sg": {
+    "forma": "aquam",
+    "n": 31
+   },
+   "gen.sg": {
+    "forma": "aquae",
+    "n": 25
+   },
+   "dat.sg": {
+    "forma": "aquae",
+    "n": 25
+   },
+   "abl.sg": {
+    "forma": "aquā",
+    "n": 49
+   },
+   "voc.sg": {
+    "forma": "aqua",
+    "n": 49
+   },
+   "nom.pl": {
+    "forma": "aquae",
+    "n": 25
+   },
+   "ac.pl": {
+    "forma": "aquās",
+    "n": 12
+   },
+   "gen.pl": {
+    "forma": "aquārum",
+    "n": 15
+   },
+   "dat.pl": {
+    "forma": "aquīs",
+    "n": 6
+   },
+   "abl.pl": {
+    "forma": "aquīs",
+    "n": 6
+   },
+   "voc.pl": {
+    "forma": "aquae",
+    "n": 25
    }
   },
   "amīca": {
@@ -3626,6 +3726,930 @@
    "voc.pl": {
     "forma": "templa",
     "n": 3
+   }
+  },
+  "veniō": {
+   "presente.1sg": {
+    "forma": "veniō",
+    "n": 22
+   },
+   "presente.2sg": {
+    "forma": "venīs",
+    "n": 3
+   },
+   "presente.3sg": {
+    "forma": "venit",
+    "n": 236
+   },
+   "presente.1pl": {
+    "forma": "venīmus",
+    "n": 26
+   },
+   "presente.2pl": {
+    "forma": "venītis",
+    "n": 0
+   },
+   "presente.3pl": {
+    "forma": "veniunt",
+    "n": 24
+   },
+   "imperfecto.1sg": {
+    "forma": "veniēbam",
+    "n": 0
+   },
+   "imperfecto.2sg": {
+    "forma": "veniēbās",
+    "n": 1
+   },
+   "imperfecto.3sg": {
+    "forma": "veniēbat",
+    "n": 2
+   },
+   "imperfecto.1pl": {
+    "forma": "veniēbāmus",
+    "n": 0
+   },
+   "imperfecto.2pl": {
+    "forma": "veniēbātis",
+    "n": 0
+   },
+   "imperfecto.3pl": {
+    "forma": "veniēbant",
+    "n": 11
+   },
+   "futuro.1sg": {
+    "forma": "veniam",
+    "n": 26
+   },
+   "futuro.2sg": {
+    "forma": "veniēs",
+    "n": 5
+   },
+   "futuro.3sg": {
+    "forma": "veniet",
+    "n": 20
+   },
+   "futuro.1pl": {
+    "forma": "veniēmus",
+    "n": 2
+   },
+   "futuro.2pl": {
+    "forma": "veniētis",
+    "n": 0
+   },
+   "futuro.3pl": {
+    "forma": "venient",
+    "n": 19
+   },
+   "infinitivo": {
+    "forma": "venīre",
+    "n": 61
+   },
+   "perfecto.1sg": {
+    "forma": "vēnī",
+    "n": 74
+   },
+   "perfecto.2sg": {
+    "forma": "vēnistī",
+    "n": 9
+   },
+   "perfecto.3sg": {
+    "forma": "vēnit",
+    "n": 236
+   },
+   "perfecto.1pl": {
+    "forma": "vēnimus",
+    "n": 26
+   },
+   "perfecto.2pl": {
+    "forma": "vēnistis",
+    "n": 2
+   },
+   "perfecto.3pl": {
+    "forma": "vēnērunt",
+    "n": 80
+   },
+   "pluscuamperfecto.1sg": {
+    "forma": "vēneram",
+    "n": 1
+   },
+   "pluscuamperfecto.2sg": {
+    "forma": "vēnerās",
+    "n": 0
+   },
+   "pluscuamperfecto.3sg": {
+    "forma": "vēnerat",
+    "n": 17
+   },
+   "pluscuamperfecto.1pl": {
+    "forma": "vēnerāmus",
+    "n": 0
+   },
+   "pluscuamperfecto.2pl": {
+    "forma": "vēnerātis",
+    "n": 0
+   },
+   "pluscuamperfecto.3pl": {
+    "forma": "vēnerant",
+    "n": 21
+   },
+   "futuro-perfecto.1sg": {
+    "forma": "vēnerō",
+    "n": 8
+   },
+   "futuro-perfecto.2sg": {
+    "forma": "vēneris",
+    "n": 10
+   },
+   "futuro-perfecto.3sg": {
+    "forma": "vēnerit",
+    "n": 41
+   },
+   "futuro-perfecto.1pl": {
+    "forma": "vēnerimus",
+    "n": 2
+   },
+   "futuro-perfecto.2pl": {
+    "forma": "vēneritis",
+    "n": 0
+   },
+   "futuro-perfecto.3pl": {
+    "forma": "vēnerint",
+    "n": 6
+   },
+   "supino": {
+    "forma": "ventum",
+    "n": 10
+   }
+  },
+  "respondeō": {
+   "presente.1sg": {
+    "forma": "respondeō",
+    "n": 0
+   },
+   "presente.2sg": {
+    "forma": "respondēs",
+    "n": 5
+   },
+   "presente.3sg": {
+    "forma": "respondet",
+    "n": 5
+   },
+   "presente.1pl": {
+    "forma": "respondēmus",
+    "n": 1
+   },
+   "presente.2pl": {
+    "forma": "respondētis",
+    "n": 0
+   },
+   "presente.3pl": {
+    "forma": "respondent",
+    "n": 3
+   },
+   "imperfecto.1sg": {
+    "forma": "respondēbam",
+    "n": 0
+   },
+   "imperfecto.2sg": {
+    "forma": "respondēbās",
+    "n": 0
+   },
+   "imperfecto.3sg": {
+    "forma": "respondēbat",
+    "n": 2
+   },
+   "imperfecto.1pl": {
+    "forma": "respondēbāmus",
+    "n": 0
+   },
+   "imperfecto.2pl": {
+    "forma": "respondēbātis",
+    "n": 0
+   },
+   "imperfecto.3pl": {
+    "forma": "respondēbant",
+    "n": 0
+   },
+   "futuro.1sg": {
+    "forma": "respondēbō",
+    "n": 4
+   },
+   "futuro.2sg": {
+    "forma": "respondēbis",
+    "n": 0
+   },
+   "futuro.3sg": {
+    "forma": "respondēbit",
+    "n": 2
+   },
+   "futuro.1pl": {
+    "forma": "respondēbimus",
+    "n": 0
+   },
+   "futuro.2pl": {
+    "forma": "respondēbitis",
+    "n": 1
+   },
+   "futuro.3pl": {
+    "forma": "respondēbunt",
+    "n": 3
+   },
+   "infinitivo": {
+    "forma": "respondēre",
+    "n": 4
+   },
+   "perfecto.1sg": {
+    "forma": "respondī",
+    "n": 4
+   },
+   "perfecto.2sg": {
+    "forma": "respondistī",
+    "n": 3
+   },
+   "perfecto.3sg": {
+    "forma": "respondit",
+    "n": 107
+   },
+   "perfecto.1pl": {
+    "forma": "respondimus",
+    "n": 1
+   },
+   "perfecto.2pl": {
+    "forma": "respondistis",
+    "n": 0
+   },
+   "perfecto.3pl": {
+    "forma": "respondērunt",
+    "n": 23
+   },
+   "pluscuamperfecto.1sg": {
+    "forma": "responderam",
+    "n": 0
+   },
+   "pluscuamperfecto.2sg": {
+    "forma": "responderās",
+    "n": 0
+   },
+   "pluscuamperfecto.3sg": {
+    "forma": "responderat",
+    "n": 1
+   },
+   "pluscuamperfecto.1pl": {
+    "forma": "responderāmus",
+    "n": 0
+   },
+   "pluscuamperfecto.2pl": {
+    "forma": "responderātis",
+    "n": 0
+   },
+   "pluscuamperfecto.3pl": {
+    "forma": "responderant",
+    "n": 0
+   },
+   "futuro-perfecto.1sg": {
+    "forma": "responderō",
+    "n": 0
+   },
+   "futuro-perfecto.2sg": {
+    "forma": "responderis",
+    "n": 1
+   },
+   "futuro-perfecto.3sg": {
+    "forma": "responderit",
+    "n": 1
+   },
+   "futuro-perfecto.1pl": {
+    "forma": "responderimus",
+    "n": 0
+   },
+   "futuro-perfecto.2pl": {
+    "forma": "responderitis",
+    "n": 0
+   },
+   "futuro-perfecto.3pl": {
+    "forma": "responderint",
+    "n": 0
+   },
+   "supino": {
+    "forma": "respōnsum",
+    "n": 9
+   }
+  },
+  "ambulō": {
+   "presente.1sg": {
+    "forma": "ambulō",
+    "n": 1
+   },
+   "presente.2sg": {
+    "forma": "ambulās",
+    "n": 2
+   },
+   "presente.3sg": {
+    "forma": "ambulat",
+    "n": 4
+   },
+   "presente.1pl": {
+    "forma": "ambulāmus",
+    "n": 3
+   },
+   "presente.2pl": {
+    "forma": "ambulātis",
+    "n": 2
+   },
+   "presente.3pl": {
+    "forma": "ambulant",
+    "n": 8
+   },
+   "imperfecto.1sg": {
+    "forma": "ambulābam",
+    "n": 0
+   },
+   "imperfecto.2sg": {
+    "forma": "ambulābās",
+    "n": 1
+   },
+   "imperfecto.3sg": {
+    "forma": "ambulābat",
+    "n": 8
+   },
+   "imperfecto.1pl": {
+    "forma": "ambulābāmus",
+    "n": 0
+   },
+   "imperfecto.2pl": {
+    "forma": "ambulābātis",
+    "n": 0
+   },
+   "imperfecto.3pl": {
+    "forma": "ambulābant",
+    "n": 1
+   },
+   "futuro.1sg": {
+    "forma": "ambulābō",
+    "n": 0
+   },
+   "futuro.2sg": {
+    "forma": "ambulābis",
+    "n": 0
+   },
+   "futuro.3sg": {
+    "forma": "ambulābit",
+    "n": 1
+   },
+   "futuro.1pl": {
+    "forma": "ambulābimus",
+    "n": 0
+   },
+   "futuro.2pl": {
+    "forma": "ambulābitis",
+    "n": 0
+   },
+   "futuro.3pl": {
+    "forma": "ambulābunt",
+    "n": 3
+   },
+   "infinitivo": {
+    "forma": "ambulāre",
+    "n": 10
+   },
+   "perfecto.1sg": {
+    "forma": "ambulāvī",
+    "n": 0
+   },
+   "perfecto.2sg": {
+    "forma": "ambulāvistī",
+    "n": 0
+   },
+   "perfecto.3sg": {
+    "forma": "ambulāvit",
+    "n": 0
+   },
+   "perfecto.1pl": {
+    "forma": "ambulāvimus",
+    "n": 1
+   },
+   "perfecto.2pl": {
+    "forma": "ambulāvistis",
+    "n": 0
+   },
+   "perfecto.3pl": {
+    "forma": "ambulāvērunt",
+    "n": 0
+   },
+   "pluscuamperfecto.1sg": {
+    "forma": "ambulāveram",
+    "n": 0
+   },
+   "pluscuamperfecto.2sg": {
+    "forma": "ambulāverās",
+    "n": 0
+   },
+   "pluscuamperfecto.3sg": {
+    "forma": "ambulāverat",
+    "n": 1
+   },
+   "pluscuamperfecto.1pl": {
+    "forma": "ambulāverāmus",
+    "n": 0
+   },
+   "pluscuamperfecto.2pl": {
+    "forma": "ambulāverātis",
+    "n": 0
+   },
+   "pluscuamperfecto.3pl": {
+    "forma": "ambulāverant",
+    "n": 0
+   },
+   "futuro-perfecto.1sg": {
+    "forma": "ambulāverō",
+    "n": 0
+   },
+   "futuro-perfecto.2sg": {
+    "forma": "ambulāveris",
+    "n": 0
+   },
+   "futuro-perfecto.3sg": {
+    "forma": "ambulāverit",
+    "n": 2
+   },
+   "futuro-perfecto.1pl": {
+    "forma": "ambulāverimus",
+    "n": 0
+   },
+   "futuro-perfecto.2pl": {
+    "forma": "ambulāveritis",
+    "n": 0
+   },
+   "futuro-perfecto.3pl": {
+    "forma": "ambulāverint",
+    "n": 0
+   },
+   "supino": {
+    "forma": "ambulātum",
+    "n": 0
+   }
+  },
+  "habitō": {
+   "presente.1sg": {
+    "forma": "habitō",
+    "n": 2
+   },
+   "presente.2sg": {
+    "forma": "habitās",
+    "n": 2
+   },
+   "presente.3sg": {
+    "forma": "habitat",
+    "n": 8
+   },
+   "presente.1pl": {
+    "forma": "habitāmus",
+    "n": 0
+   },
+   "presente.2pl": {
+    "forma": "habitātis",
+    "n": 4
+   },
+   "presente.3pl": {
+    "forma": "habitant",
+    "n": 7
+   },
+   "imperfecto.1sg": {
+    "forma": "habitābam",
+    "n": 0
+   },
+   "imperfecto.2sg": {
+    "forma": "habitābās",
+    "n": 0
+   },
+   "imperfecto.3sg": {
+    "forma": "habitābat",
+    "n": 1
+   },
+   "imperfecto.1pl": {
+    "forma": "habitābāmus",
+    "n": 0
+   },
+   "imperfecto.2pl": {
+    "forma": "habitābātis",
+    "n": 0
+   },
+   "imperfecto.3pl": {
+    "forma": "habitābant",
+    "n": 6
+   },
+   "futuro.1sg": {
+    "forma": "habitābō",
+    "n": 0
+   },
+   "futuro.2sg": {
+    "forma": "habitābis",
+    "n": 0
+   },
+   "futuro.3sg": {
+    "forma": "habitābit",
+    "n": 3
+   },
+   "futuro.1pl": {
+    "forma": "habitābimus",
+    "n": 0
+   },
+   "futuro.2pl": {
+    "forma": "habitābitis",
+    "n": 0
+   },
+   "futuro.3pl": {
+    "forma": "habitābunt",
+    "n": 0
+   },
+   "infinitivo": {
+    "forma": "habitāre",
+    "n": 6
+   },
+   "perfecto.1sg": {
+    "forma": "habitāvī",
+    "n": 0
+   },
+   "perfecto.2sg": {
+    "forma": "habitāvistī",
+    "n": 0
+   },
+   "perfecto.3sg": {
+    "forma": "habitāvit",
+    "n": 4
+   },
+   "perfecto.1pl": {
+    "forma": "habitāvimus",
+    "n": 0
+   },
+   "perfecto.2pl": {
+    "forma": "habitāvistis",
+    "n": 0
+   },
+   "perfecto.3pl": {
+    "forma": "habitāvērunt",
+    "n": 0
+   },
+   "pluscuamperfecto.1sg": {
+    "forma": "habitāveram",
+    "n": 0
+   },
+   "pluscuamperfecto.2sg": {
+    "forma": "habitāverās",
+    "n": 0
+   },
+   "pluscuamperfecto.3sg": {
+    "forma": "habitāverat",
+    "n": 0
+   },
+   "pluscuamperfecto.1pl": {
+    "forma": "habitāverāmus",
+    "n": 0
+   },
+   "pluscuamperfecto.2pl": {
+    "forma": "habitāverātis",
+    "n": 0
+   },
+   "pluscuamperfecto.3pl": {
+    "forma": "habitāverant",
+    "n": 0
+   },
+   "futuro-perfecto.1sg": {
+    "forma": "habitāverō",
+    "n": 0
+   },
+   "futuro-perfecto.2sg": {
+    "forma": "habitāveris",
+    "n": 0
+   },
+   "futuro-perfecto.3sg": {
+    "forma": "habitāverit",
+    "n": 0
+   },
+   "futuro-perfecto.1pl": {
+    "forma": "habitāverimus",
+    "n": 0
+   },
+   "futuro-perfecto.2pl": {
+    "forma": "habitāveritis",
+    "n": 0
+   },
+   "futuro-perfecto.3pl": {
+    "forma": "habitāverint",
+    "n": 0
+   },
+   "supino": {
+    "forma": "habitātum",
+    "n": 0
+   }
+  },
+  "labōrō": {
+   "presente.1sg": {
+    "forma": "labōrō",
+    "n": 2
+   },
+   "presente.2sg": {
+    "forma": "labōrās",
+    "n": 1
+   },
+   "presente.3sg": {
+    "forma": "labōrat",
+    "n": 2
+   },
+   "presente.1pl": {
+    "forma": "labōrāmus",
+    "n": 2
+   },
+   "presente.2pl": {
+    "forma": "labōrātis",
+    "n": 1
+   },
+   "presente.3pl": {
+    "forma": "labōrant",
+    "n": 5
+   },
+   "imperfecto.1sg": {
+    "forma": "labōrābam",
+    "n": 0
+   },
+   "imperfecto.2sg": {
+    "forma": "labōrābās",
+    "n": 0
+   },
+   "imperfecto.3sg": {
+    "forma": "labōrābat",
+    "n": 0
+   },
+   "imperfecto.1pl": {
+    "forma": "labōrābāmus",
+    "n": 0
+   },
+   "imperfecto.2pl": {
+    "forma": "labōrābātis",
+    "n": 0
+   },
+   "imperfecto.3pl": {
+    "forma": "labōrābant",
+    "n": 0
+   },
+   "futuro.1sg": {
+    "forma": "labōrābō",
+    "n": 0
+   },
+   "futuro.2sg": {
+    "forma": "labōrābis",
+    "n": 0
+   },
+   "futuro.3sg": {
+    "forma": "labōrābit",
+    "n": 1
+   },
+   "futuro.1pl": {
+    "forma": "labōrābimus",
+    "n": 0
+   },
+   "futuro.2pl": {
+    "forma": "labōrābitis",
+    "n": 0
+   },
+   "futuro.3pl": {
+    "forma": "labōrābunt",
+    "n": 0
+   },
+   "infinitivo": {
+    "forma": "labōrāre",
+    "n": 3
+   },
+   "perfecto.1sg": {
+    "forma": "labōrāvī",
+    "n": 3
+   },
+   "perfecto.2sg": {
+    "forma": "labōrāvistī",
+    "n": 0
+   },
+   "perfecto.3sg": {
+    "forma": "labōrāvit",
+    "n": 2
+   },
+   "perfecto.1pl": {
+    "forma": "labōrāvimus",
+    "n": 0
+   },
+   "perfecto.2pl": {
+    "forma": "labōrāvistis",
+    "n": 0
+   },
+   "perfecto.3pl": {
+    "forma": "labōrāvērunt",
+    "n": 2
+   },
+   "pluscuamperfecto.1sg": {
+    "forma": "labōrāveram",
+    "n": 0
+   },
+   "pluscuamperfecto.2sg": {
+    "forma": "labōrāverās",
+    "n": 0
+   },
+   "pluscuamperfecto.3sg": {
+    "forma": "labōrāverat",
+    "n": 0
+   },
+   "pluscuamperfecto.1pl": {
+    "forma": "labōrāverāmus",
+    "n": 0
+   },
+   "pluscuamperfecto.2pl": {
+    "forma": "labōrāverātis",
+    "n": 0
+   },
+   "pluscuamperfecto.3pl": {
+    "forma": "labōrāverant",
+    "n": 0
+   },
+   "futuro-perfecto.1sg": {
+    "forma": "labōrāverō",
+    "n": 0
+   },
+   "futuro-perfecto.2sg": {
+    "forma": "labōrāveris",
+    "n": 0
+   },
+   "futuro-perfecto.3sg": {
+    "forma": "labōrāverit",
+    "n": 0
+   },
+   "futuro-perfecto.1pl": {
+    "forma": "labōrāverimus",
+    "n": 0
+   },
+   "futuro-perfecto.2pl": {
+    "forma": "labōrāveritis",
+    "n": 0
+   },
+   "futuro-perfecto.3pl": {
+    "forma": "labōrāverint",
+    "n": 0
+   },
+   "supino": {
+    "forma": "labōrātum",
+    "n": 0
+   }
+  },
+  "taceō": {
+   "presente.1sg": {
+    "forma": "taceō",
+    "n": 1
+   },
+   "presente.2sg": {
+    "forma": "tacēs",
+    "n": 3
+   },
+   "presente.3sg": {
+    "forma": "tacet",
+    "n": 0
+   },
+   "presente.1pl": {
+    "forma": "tacēmus",
+    "n": 1
+   },
+   "presente.2pl": {
+    "forma": "tacētis",
+    "n": 0
+   },
+   "presente.3pl": {
+    "forma": "tacent",
+    "n": 1
+   },
+   "imperfecto.1sg": {
+    "forma": "tacēbam",
+    "n": 0
+   },
+   "imperfecto.2sg": {
+    "forma": "tacēbās",
+    "n": 0
+   },
+   "imperfecto.3sg": {
+    "forma": "tacēbat",
+    "n": 2
+   },
+   "imperfecto.1pl": {
+    "forma": "tacēbāmus",
+    "n": 0
+   },
+   "imperfecto.2pl": {
+    "forma": "tacēbātis",
+    "n": 0
+   },
+   "imperfecto.3pl": {
+    "forma": "tacēbant",
+    "n": 2
+   },
+   "futuro.1sg": {
+    "forma": "tacēbō",
+    "n": 0
+   },
+   "futuro.2sg": {
+    "forma": "tacēbis",
+    "n": 0
+   },
+   "futuro.3sg": {
+    "forma": "tacēbit",
+    "n": 0
+   },
+   "futuro.1pl": {
+    "forma": "tacēbimus",
+    "n": 0
+   },
+   "futuro.2pl": {
+    "forma": "tacēbitis",
+    "n": 0
+   },
+   "futuro.3pl": {
+    "forma": "tacēbunt",
+    "n": 0
+   },
+   "infinitivo": {
+    "forma": "tacēre",
+    "n": 2
+   },
+   "perfecto.1sg": {
+    "forma": "tacuī",
+    "n": 0
+   },
+   "perfecto.2sg": {
+    "forma": "tacuistī",
+    "n": 0
+   },
+   "perfecto.3sg": {
+    "forma": "tacuit",
+    "n": 2
+   },
+   "perfecto.1pl": {
+    "forma": "tacuimus",
+    "n": 0
+   },
+   "perfecto.2pl": {
+    "forma": "tacuistis",
+    "n": 0
+   },
+   "perfecto.3pl": {
+    "forma": "tacuērunt",
+    "n": 5
+   },
+   "pluscuamperfecto.1sg": {
+    "forma": "tacueram",
+    "n": 0
+   },
+   "pluscuamperfecto.2sg": {
+    "forma": "tacuerās",
+    "n": 0
+   },
+   "pluscuamperfecto.3sg": {
+    "forma": "tacuerat",
+    "n": 2
+   },
+   "pluscuamperfecto.1pl": {
+    "forma": "tacuerāmus",
+    "n": 0
+   },
+   "pluscuamperfecto.2pl": {
+    "forma": "tacuerātis",
+    "n": 0
+   },
+   "pluscuamperfecto.3pl": {
+    "forma": "tacuerant",
+    "n": 0
+   },
+   "futuro-perfecto.1sg": {
+    "forma": "tacuerō",
+    "n": 0
+   },
+   "futuro-perfecto.2sg": {
+    "forma": "tacueris",
+    "n": 0
+   },
+   "futuro-perfecto.3sg": {
+    "forma": "tacuerit",
+    "n": 0
+   },
+   "futuro-perfecto.1pl": {
+    "forma": "tacuerimus",
+    "n": 0
+   },
+   "futuro-perfecto.2pl": {
+    "forma": "tacueritis",
+    "n": 0
+   },
+   "futuro-perfecto.3pl": {
+    "forma": "tacuerint",
+    "n": 1
+   },
+   "supino": {
+    "forma": "tacitum",
+    "n": 2
    }
   },
   "habeō": {
@@ -8482,6 +9506,298 @@
    "n.voc.pl": {
     "forma": "integra",
     "n": 4
+   }
+  },
+  "certus": {
+   "m.nom.sg": {
+    "forma": "certus",
+    "n": 7
+   },
+   "m.ac.sg": {
+    "forma": "certum",
+    "n": 12
+   },
+   "m.gen.sg": {
+    "forma": "certī",
+    "n": 12
+   },
+   "m.dat.sg": {
+    "forma": "certō",
+    "n": 12
+   },
+   "m.abl.sg": {
+    "forma": "certō",
+    "n": 12
+   },
+   "m.voc.sg": {
+    "forma": "certe",
+    "n": 46
+   },
+   "m.nom.pl": {
+    "forma": "certī",
+    "n": 12
+   },
+   "m.ac.pl": {
+    "forma": "certōs",
+    "n": 2
+   },
+   "m.gen.pl": {
+    "forma": "certōrum",
+    "n": 0
+   },
+   "m.dat.pl": {
+    "forma": "certīs",
+    "n": 1
+   },
+   "m.abl.pl": {
+    "forma": "certīs",
+    "n": 1
+   },
+   "m.voc.pl": {
+    "forma": "certī",
+    "n": 12
+   },
+   "f.nom.sg": {
+    "forma": "certa",
+    "n": 11
+   },
+   "f.ac.sg": {
+    "forma": "certam",
+    "n": 2
+   },
+   "f.gen.sg": {
+    "forma": "certae",
+    "n": 1
+   },
+   "f.dat.sg": {
+    "forma": "certae",
+    "n": 1
+   },
+   "f.abl.sg": {
+    "forma": "certā",
+    "n": 11
+   },
+   "f.voc.sg": {
+    "forma": "certa",
+    "n": 11
+   },
+   "f.nom.pl": {
+    "forma": "certae",
+    "n": 1
+   },
+   "f.ac.pl": {
+    "forma": "certās",
+    "n": 0
+   },
+   "f.gen.pl": {
+    "forma": "certārum",
+    "n": 1
+   },
+   "f.dat.pl": {
+    "forma": "certīs",
+    "n": 1
+   },
+   "f.abl.pl": {
+    "forma": "certīs",
+    "n": 1
+   },
+   "f.voc.pl": {
+    "forma": "certae",
+    "n": 1
+   },
+   "n.nom.sg": {
+    "forma": "certum",
+    "n": 12
+   },
+   "n.ac.sg": {
+    "forma": "certum",
+    "n": 12
+   },
+   "n.gen.sg": {
+    "forma": "certī",
+    "n": 12
+   },
+   "n.dat.sg": {
+    "forma": "certō",
+    "n": 12
+   },
+   "n.abl.sg": {
+    "forma": "certō",
+    "n": 12
+   },
+   "n.voc.sg": {
+    "forma": "certum",
+    "n": 12
+   },
+   "n.nom.pl": {
+    "forma": "certa",
+    "n": 11
+   },
+   "n.ac.pl": {
+    "forma": "certa",
+    "n": 11
+   },
+   "n.gen.pl": {
+    "forma": "certōrum",
+    "n": 0
+   },
+   "n.dat.pl": {
+    "forma": "certīs",
+    "n": 1
+   },
+   "n.abl.pl": {
+    "forma": "certīs",
+    "n": 1
+   },
+   "n.voc.pl": {
+    "forma": "certa",
+    "n": 11
+   }
+  },
+  "anxius": {
+   "m.nom.sg": {
+    "forma": "anxius",
+    "n": 3
+   },
+   "m.ac.sg": {
+    "forma": "anxium",
+    "n": 0
+   },
+   "m.gen.sg": {
+    "forma": "anxiī",
+    "n": 1
+   },
+   "m.dat.sg": {
+    "forma": "anxiō",
+    "n": 0
+   },
+   "m.abl.sg": {
+    "forma": "anxiō",
+    "n": 0
+   },
+   "m.voc.sg": {
+    "forma": "anxie",
+    "n": 0
+   },
+   "m.nom.pl": {
+    "forma": "anxiī",
+    "n": 1
+   },
+   "m.ac.pl": {
+    "forma": "anxiōs",
+    "n": 0
+   },
+   "m.gen.pl": {
+    "forma": "anxiōrum",
+    "n": 0
+   },
+   "m.dat.pl": {
+    "forma": "anxiīs",
+    "n": 0
+   },
+   "m.abl.pl": {
+    "forma": "anxiīs",
+    "n": 0
+   },
+   "m.voc.pl": {
+    "forma": "anxiī",
+    "n": 1
+   },
+   "f.nom.sg": {
+    "forma": "anxia",
+    "n": 0
+   },
+   "f.ac.sg": {
+    "forma": "anxiam",
+    "n": 0
+   },
+   "f.gen.sg": {
+    "forma": "anxiae",
+    "n": 0
+   },
+   "f.dat.sg": {
+    "forma": "anxiae",
+    "n": 0
+   },
+   "f.abl.sg": {
+    "forma": "anxiā",
+    "n": 0
+   },
+   "f.voc.sg": {
+    "forma": "anxia",
+    "n": 0
+   },
+   "f.nom.pl": {
+    "forma": "anxiae",
+    "n": 0
+   },
+   "f.ac.pl": {
+    "forma": "anxiās",
+    "n": 0
+   },
+   "f.gen.pl": {
+    "forma": "anxiārum",
+    "n": 0
+   },
+   "f.dat.pl": {
+    "forma": "anxiīs",
+    "n": 0
+   },
+   "f.abl.pl": {
+    "forma": "anxiīs",
+    "n": 0
+   },
+   "f.voc.pl": {
+    "forma": "anxiae",
+    "n": 0
+   },
+   "n.nom.sg": {
+    "forma": "anxium",
+    "n": 0
+   },
+   "n.ac.sg": {
+    "forma": "anxium",
+    "n": 0
+   },
+   "n.gen.sg": {
+    "forma": "anxiī",
+    "n": 1
+   },
+   "n.dat.sg": {
+    "forma": "anxiō",
+    "n": 0
+   },
+   "n.abl.sg": {
+    "forma": "anxiō",
+    "n": 0
+   },
+   "n.voc.sg": {
+    "forma": "anxium",
+    "n": 0
+   },
+   "n.nom.pl": {
+    "forma": "anxia",
+    "n": 0
+   },
+   "n.ac.pl": {
+    "forma": "anxia",
+    "n": 0
+   },
+   "n.gen.pl": {
+    "forma": "anxiōrum",
+    "n": 0
+   },
+   "n.dat.pl": {
+    "forma": "anxiīs",
+    "n": 0
+   },
+   "n.abl.pl": {
+    "forma": "anxiīs",
+    "n": 0
+   },
+   "n.voc.pl": {
+    "forma": "anxia",
+    "n": 0
    }
   }
  }

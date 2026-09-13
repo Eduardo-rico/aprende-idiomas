@@ -42,6 +42,31 @@ export interface VerboIrregular {
 }
 
 export const IRREGULARES_L1: VerboIrregular[] = [
+  // ── `dō` ENTRA EL 2026-09-12, y no por el punto sino por el barrido ──
+  //
+  // Tres lotes ya publicados usan `dat` en ocho marcos —`l2-genitivo-clave`,
+  // `l2-primera`, `l3-dativo-ci`— y el lexicón no tenía el verbo. No podía
+  // entrar como regular: su infinitivo `dare` lleva `a` BREVE y
+  // `conjugacionDe` lo rechaza con razón, porque no es de la 1.ª como
+  // `amāre`. Es irregular por CANTIDAD y hay que guardarlo.
+  //
+  // Formas comprobadas en el corpus, una a una:
+  //   dō×14 dās×1 dat×25 damus×3 datis×6 dant×4
+  //   dabō×28 dabit×19 dabis×5 dabimus×3 dabunt×5 · dabam×5 dabat×9 dabant×5
+  //   dare×51 dedī×29 dedit×111
+  //
+  // NO entra en el lote de `l5-irregulares`: el punto nombra seis
+  // —`eō, ferō, volō, nōlō, mālō, fīō`— y `dō` no es uno de ellos. La tabla
+  // puede tener más verbos que el punto; el lote cubre los del punto.
+  {
+    lema: 'dō', infinitivo: 'dare', glosa: 'dar', perfecto: 'dedī',
+    porQue: 'la `a` del tema es BREVE —`damus`, `datis`, `dare`— salvo en `dās` y el imperativo `dā`: no es un verbo de la 1.ª, que tendría `amāmus` con larga',
+    formas: {
+      presente: { '1sg': 'dō', '2sg': 'dās', '3sg': 'dat', '1pl': 'damus', '2pl': 'datis', '3pl': 'dant' },
+      imperfecto: { '1sg': 'dabam', '2sg': 'dabās', '3sg': 'dabat', '1pl': 'dabāmus', '2pl': 'dabātis', '3pl': 'dabant' },
+      futuro: { '1sg': 'dabō', '2sg': 'dabis', '3sg': 'dabit', '1pl': 'dabimus', '2pl': 'dabitis', '3pl': 'dabunt' },
+    },
+  },
   {
     lema: 'eō', infinitivo: 'īre', glosa: 'ir', perfecto: 'iī',
     porQue: 'alterna el tema entre `e-` e `ī-` —«eō» pero «īmus», «it» pero «eunt»— y su futuro es en `-b-`, como el de la 1.ª',

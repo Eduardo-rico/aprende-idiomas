@@ -80,7 +80,11 @@ describe('los venenos que el gate tiene que cazar', () => {
     // Los cinco que salieron de verdad en el lote ya «verde».
     for (const [marco, mala] of [['Rēgem ___ scīmus.', 'scīmus'], ['Poētam ___ crēdunt.', 'crēdunt'],
                                  ['Mundus ___ dīcitur.', 'Mundus'], ['Vērum ___ potest.', 'Vērum'],
-                                 ['Sē rēgem ___ dīcunt.', 'Sē']] as const) {
+                                 // `Sē` estaba aquí y dejó de servir de veneno el 2026-09-12,
+                                 // cuando entraron los pronombres personales: ahora es palabra
+                                 // conocida. Un veneno que deja de envenenar hay que
+                                 // sustituirlo, no borrarlo en silencio.
+                                 ['Imperātor ___ dīcunt.', 'Imperātor']] as const) {
       expect(palabrasDesconocidas(marco), marco).toContain(mala);
       expect(clases(con({ marco })), marco).toContain('marco-fuera-de-l1');
     }

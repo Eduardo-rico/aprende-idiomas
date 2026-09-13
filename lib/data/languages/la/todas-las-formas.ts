@@ -36,8 +36,9 @@ import { ADJETIVOS_3A, paradigmaAdjetivo3a, ablativoEnE } from './adjetivos-3a';
 import { IRREGULARES_L1 } from './irregulares';
 import { COMPUESTOS_DE_SUM, paradigmaCompuesto } from './compuestos-de-sum';
 import { PRONOMBRES_L1, paradigmaPronombre } from './pronombres-la';
+import { PERSONALES_L1, formasDe, GENITIVO_PARTITIVO } from './personales-la';
 import { participioPresente } from './participios';
-import { pasivaInfectum } from './paradigma-la';
+import { pasivaInfectum, imperativo } from './paradigma-la';
 import { todosLosInfinitivos, SIN_PASIVA } from './infinitivos';
 
 export interface FormaDeL1 { clave: string; forma: string; tabla: string }
@@ -47,7 +48,7 @@ export interface FormaDeL1 { clave: string; forma: string; tabla: string }
 export const TABLAS_QUE_PRODUCEN_FORMAS = [
   'NOMBRES_L1', 'VERBOS_L1', 'ADJETIVOS_L1', 'INDECLINABLES_L1', 'PLURALIA_TANTUM',
   'ADJETIVOS_3A', 'IRREGULARES_L1', 'COMPUESTOS_DE_SUM', 'PRONOMBRES_L1', 'PARTICIPIOS',
-  'PASIVA', 'INFINITIVOS',
+  'PASIVA', 'INFINITIVOS', 'IMPERATIVOS', 'PERSONALES_L1',
 ] as const;
 
 export function todasLasFormasDeL1(): FormaDeL1[] {
@@ -98,6 +99,18 @@ export function todasLasFormasDeL1(): FormaDeL1[] {
     for (const g of ['m', 'f', 'n'] as const)
       for (const i of todosLosInfinitivos(v, g))
         out.push({ clave: `${v.lema}.inf.${i.tiempo}.${i.voz}.${g}`, forma: i.forma, tabla: 'INFINITIVOS' });
+  for (const p of PERSONALES_L1) {
+    for (const f of formasDe(p)) out.push({ clave: `${p.lema}.${f}`, forma: f, tabla: 'PERSONALES_L1' });
+    const part = GENITIVO_PARTITIVO[p.lema];
+    if (part) out.push({ clave: `${p.lema}.gen-partitivo`, forma: part, tabla: 'PERSONALES_L1' });
+  }
+  // EL IMPERATIVO, que la máquina tiene (`imperativo`) y que tampoco
+  // enumeraba nadie. Lo destapó el barrido de vocabulario: `Audīte` salía
+  // como palabra de fuera en un lote de la 1.ª declinación, y es el
+  // imperativo plural de `audiō`.
+  for (const v of VERBOS_L1)
+    for (const num of ['sg', 'pl'] as const)
+      out.push({ clave: `${v.lema}.imp.${num}`, forma: imperativo(v, num), tabla: 'IMPERATIVOS' });
   // Del participio se enumera el de PRESENTE, que es el que declina como
   // adjetivo de 3.ª y el que el inventario examina en `l4-adjetivo-3a`.
   for (const v of VERBOS_L1) {

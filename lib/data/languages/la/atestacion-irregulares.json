@@ -1,11 +1,121 @@
 {
- "generado": "2026-09-12",
+ "generado": "2026-09-13",
  "corpus": "la_perseus + la_proiel (UD)",
  "comoSeCuenta": "las formas de una palabra por unigrama; las locuciones de `nōlō` («nōn vīs») por BIGRAMA, porque contarlas por la palabra suelta les presta las apariciones de `volō`",
- "celdas": 108,
- "refutanLaReglaGeneral": 35,
- "deEsasAtestiguadas": 24,
+ "celdas": 126,
+ "refutanLaReglaGeneral": 52,
+ "deEsasAtestiguadas": 37,
  "lemas": {
+  "dō": {
+   "presente.1sg": {
+    "forma": "dō",
+    "n": 14,
+    "regular": "dō",
+    "refuta": false
+   },
+   "presente.2sg": {
+    "forma": "dās",
+    "n": 1,
+    "regular": "dis",
+    "refuta": true
+   },
+   "presente.3sg": {
+    "forma": "dat",
+    "n": 25,
+    "regular": "dit",
+    "refuta": true
+   },
+   "presente.1pl": {
+    "forma": "damus",
+    "n": 3,
+    "regular": "dimus",
+    "refuta": true
+   },
+   "presente.2pl": {
+    "forma": "datis",
+    "n": 6,
+    "regular": "ditis",
+    "refuta": true
+   },
+   "presente.3pl": {
+    "forma": "dant",
+    "n": 4,
+    "regular": "dunt",
+    "refuta": true
+   },
+   "imperfecto.1sg": {
+    "forma": "dabam",
+    "n": 5,
+    "regular": "dēbam",
+    "refuta": true
+   },
+   "imperfecto.2sg": {
+    "forma": "dabās",
+    "n": 0,
+    "regular": "dēbās",
+    "refuta": true
+   },
+   "imperfecto.3sg": {
+    "forma": "dabat",
+    "n": 9,
+    "regular": "dēbat",
+    "refuta": true
+   },
+   "imperfecto.1pl": {
+    "forma": "dabāmus",
+    "n": 0,
+    "regular": "dēbāmus",
+    "refuta": true
+   },
+   "imperfecto.2pl": {
+    "forma": "dabātis",
+    "n": 0,
+    "regular": "dēbātis",
+    "refuta": true
+   },
+   "imperfecto.3pl": {
+    "forma": "dabant",
+    "n": 5,
+    "regular": "dēbant",
+    "refuta": true
+   },
+   "futuro.1sg": {
+    "forma": "dabō",
+    "n": 28,
+    "regular": "dam",
+    "refuta": true
+   },
+   "futuro.2sg": {
+    "forma": "dabis",
+    "n": 5,
+    "regular": "dēs",
+    "refuta": true
+   },
+   "futuro.3sg": {
+    "forma": "dabit",
+    "n": 19,
+    "regular": "det",
+    "refuta": true
+   },
+   "futuro.1pl": {
+    "forma": "dabimus",
+    "n": 3,
+    "regular": "dēmus",
+    "refuta": true
+   },
+   "futuro.2pl": {
+    "forma": "dabitis",
+    "n": 0,
+    "regular": "dētis",
+    "refuta": true
+   },
+   "futuro.3pl": {
+    "forma": "dabunt",
+    "n": 5,
+    "regular": "dent",
+    "refuta": true
+   }
+  },
   "eō": {
    "presente.1sg": {
     "forma": "eō",

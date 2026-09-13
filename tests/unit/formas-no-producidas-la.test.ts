@@ -97,8 +97,12 @@ describe.runIf(hayCorpus)('la auditoría contra el corpus', () => {
 
   it('y lo que NO cae en ninguna clase sigue siendo poco y legible', () => {
     const sin = auditar().filter((h) => claseDeHueco(h.lema, h.rasgos ?? '', h.forma) === 'sin-clasificar');
-    // 43 entradas y 69 tokens al escribirlo, con las tres erratas ya
-    // sacadas a su propia clase. Lo que queda está mirado uno a uno: la
+    // 53 entradas y 96 tokens al 2026-09-12, tras entrar en el lexicón los
+    // siete verbos, los pronombres personales y `dō`. Subió y volvió a
+    // bajar: lo que lo bajó fue preguntarle al corpus EN SU CONVENCIÓN
+    // —UD pone `vōs` bajo el lema `tu` y `nōs` bajo `ego`— en vez de en la
+    // nuestra. Un desencuentro de etiquetas no es un hueco de la máquina, y
+    // confundirlos fabrica trabajo que no existe. Lo que queda está mirado uno a uno: la
     // grafía `exs-`/`ex-` de `exspectō`, los adverbios en `-ter`/`-ē` que
     // la máquina no forma, el femenino que el corpus lematiza bajo el
     // masculino, y el pluscuamperfecto sincopado (`laudāram`) — que sí es

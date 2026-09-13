@@ -5,6 +5,10 @@ import type { EntradaNominal, EntradaVerbal, EntradaAdjetivo } from './paradigma
 
 export const NOMBRES_L1: EntradaNominal[] = [
   { lema: 'puella', genitivo: 'puellae', genero: 'f', glosa: 'niña' },
+  // Mismo motivo que los verbos: los marcos ya las usaban. `causa` ×157,
+  // `aqua` ×31 en acusativo.
+  { lema: 'causa', genitivo: 'causae', genero: 'f', glosa: 'causa, motivo' },
+  { lema: 'aqua', genitivo: 'aquae', genero: 'f', glosa: 'agua' },
   { lema: 'amīca', genitivo: 'amīcae', genero: 'f', glosa: 'amiga' },
   { lema: 'vīcīna', genitivo: 'vīcīnae', genero: 'f', glosa: 'vecina' },
   { lema: 'fīlia', genitivo: 'fīliae', genero: 'f', glosa: 'hija' },
@@ -125,6 +129,25 @@ export const NOMBRES_L1: EntradaNominal[] = [
 ];
 
 export const VERBOS_L1: EntradaVerbal[] = [
+  // ── ENTRAN EL 2026-09-12 POR MEDICIÓN, NO POR GUSTO ──
+  //
+  // El barrido de vocabulario de los marcos encontró que doce lotes ya
+  // PUBLICADOS usan estos verbos en sus frases y el lexicón no los tenía:
+  // `tacet` en tres lotes, `ambulat` en cuatro, `respondit`, `venis`,
+  // `habitat`, `laborat`. O sea que el material daba por sabido lo que el
+  // curso no enseña. Los siete están atestiguados y no poco:
+  //
+  //   veniō 453 · respondeō 139 · ambulō 31 · habitō 23 · labōrō 12 · taceō 9
+  //
+  // `dō` NO entra aquí aunque sale ×290: su infinitivo `dare` lleva `a`
+  // BREVE y `conjugacionDe` lo rechaza, con razón —no es de la 1.ª como
+  // `amāre`—. Es irregular y necesita tabla propia, como `eō` o `ferō`.
+  { lema: 'veniō', infinitivo: 'venīre', glosa: 'venir', perfecto: 'vēnī', supino: 'ventum' },
+  { lema: 'respondeō', infinitivo: 'respondēre', glosa: 'responder', perfecto: 'respondī', supino: 'respōnsum' },
+  { lema: 'ambulō', infinitivo: 'ambulāre', glosa: 'caminar', perfecto: 'ambulāvī', supino: 'ambulātum' },
+  { lema: 'habitō', infinitivo: 'habitāre', glosa: 'habitar', perfecto: 'habitāvī', supino: 'habitātum' },
+  { lema: 'labōrō', infinitivo: 'labōrāre', glosa: 'trabajar', perfecto: 'labōrāvī', supino: 'labōrātum' },
+  { lema: 'taceō', infinitivo: 'tacēre', glosa: 'callar', perfecto: 'tacuī', supino: 'tacitum' },
   // `habeō` entra por una razón concreta y medida: es el verbo transitivo
   // más frecuente que acepta SUJETO NEUTRO —11 sujetos neutros distintos
   // anotados en el corpus, «mare», «flūmen», «ferrum»…—, y sin él el punto
@@ -205,6 +228,12 @@ export const ADJETIVOS_L1: EntradaAdjetivo[] = [
   // donde el grupo `gr` NO alarga la penúltima breve, que es el punto.
   // Atestiguado: `integra` ×4.
   { lema: 'integer', tema: 'integr', glosa: 'entero, intacto' },
+  // `certa` sale en un marco de `l5-negacion` y está atestiguado ×11.
+  { lema: 'certus', tema: 'cert', glosa: 'cierto, seguro' },
+  // `anxia` sale en un marco de `l5-negacion`. El FEMENINO no aparece en el
+  // corpus, pero el lema sí (`anxius` ×3): una forma regular de un lema
+  // atestiguado no es un invento, que es lo que el congelador ya declara.
+  { lema: 'anxius', tema: 'anxi', glosa: 'angustiado, inquieto' },
 ];
 
 // ── LO QUE NO SE DECLINA, Y LOS COMPARATIVOS ─────────────────────────
@@ -221,6 +250,15 @@ export const ADJETIVOS_L1: EntradaAdjetivo[] = [
 export const INDECLINABLES_L1: string[] = [
   // ── PREPOSICIONES ──
   'cum', 'ex', 'ē', 'in', 'ad', 'ab', 'ā', 'dē', 'per', 'prō', 'sine', 'sub', 'ante', 'post',
+  // ── ENTRAN EL 2026-09-12, por el barrido de los marcos ──
+  // Los lotes ya las usaban: `At` en `l4-demostrativos`, `Cūr` en el de los
+  // irregulares, `satis` y `semper` en el de la negación. Atestiguadas:
+  // `at` ×197, `semper` ×109, `satis` ×104, `cūr` ×20.
+  'at', 'cūr', 'satis', 'semper',
+  // Las dos partículas interrogativas, que `l5-interrogativas` usa en sus
+  // doce marcos y no estaban: `nōnne` ×60, `num` ×22. Y `salvē`, el saludo
+  // con el que empieza un lote de la 1.ª (×2).
+  'nōnne', 'num', 'salvē',
   // ── CONJUNCIONES Y PARTÍCULAS ──
   //
   // `et` es la palabra más frecuente del latín (11.407) y `nōn` la

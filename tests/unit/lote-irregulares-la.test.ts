@@ -17,9 +17,15 @@ describe('el lote pasa su gate', () => {
 });
 
 describe('el varia, que son dos ejes', () => {
-  it('están los seis verbos', () => {
+  it('están los seis verbos que el PUNTO nombra', () => {
+    // Contra los seis del punto, no contra la tabla: `dō` entró en
+    // `IRREGULARES_L1` el 2026-09-12 porque tres lotes publicados usaban
+    // `dat` y el lexicón no tenía el verbo, pero el punto no lo nombra. La
+    // tabla puede tener más verbos que el punto; el lote cubre los del punto.
     expect(new Set(LOTE_IRREGULARES.map((i) => i.verbo.lema)))
-      .toEqual(new Set(IRREGULARES_L1.map((v) => v.lema)));
+      .toEqual(new Set(['eō', 'ferō', 'volō', 'nōlō', 'mālō', 'fīō']));
+    for (const l of ['eō', 'ferō', 'volō', 'nōlō', 'mālō', 'fīō'])
+      expect(IRREGULARES_L1.some((v) => v.lema === l), l).toBe(true);
   });
 
   it('y ninguna 1.ª del singular, porque es el lema y no refuta nada', () => {

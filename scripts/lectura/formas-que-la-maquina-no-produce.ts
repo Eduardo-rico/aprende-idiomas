@@ -55,6 +55,22 @@ export function loQueLaMaquinaProduce(): Map<string, Set<string>> {
     if (!puede.has(lema)) puede.set(lema, new Set());
     puede.get(lema)!.add(sinM(forma));
   }
+  // ── LA LEMATIZACIÓN DE LA FUENTE MANDA ──
+  //
+  // UD pone `vōs` bajo el lema `tu` y `nōs` bajo `ego`: para el treebank son
+  // una sola entrada por persona, no cuatro pronombres. Nuestra tabla los
+  // separa porque son paradigmas distintos, y eso está bien — pero al
+  // preguntarle al corpus hay que preguntarle EN SU CONVENCIÓN, o `vos`
+  // sale como forma que la máquina no produce cuando sí la produce, bajo
+  // otro nombre. No es un hueco de la máquina: es un desencuentro de
+  // etiquetas, y confundirlos fabrica trabajo que no existe.
+  for (const [nuestro, suyo] of [['nōs', 'ego'], ['vōs', 'tu']] as const) {
+    const dellos = puede.get(sinM(nuestro));
+    if (!dellos) continue;
+    const destino = puede.get(sinM(suyo)) ?? new Set<string>();
+    for (const f of dellos) destino.add(f);
+    puede.set(sinM(suyo), destino);
+  }
   // Las variantes del perfecto no están en el paradigma base y sí en el
   // corpus: `-ēre` por `-ērunt`, las sincopadas.
   for (const v of VERBOS_L1) {
@@ -180,7 +196,10 @@ const HETEROCLITOS: Record<string, string> = {
 /** Los irregulares traen infectum en tabla; su perfectum sale del tema de
  *  perfecto, que `irregulares.ts` declara y la máquina general conjuga. */
 const IRREGULAR = new Set(['possum', 'volo', 'nolo', 'malo', 'fero', 'eo', 'fio', 'sum',
-  'prosum', 'desum', 'absum', 'adsum', 'intersum', 'praesum', 'supersum', 'obsum']);
+  'prosum', 'desum', 'absum', 'adsum', 'intersum', 'praesum', 'supersum', 'obsum',
+  // `do` entra el 2026-09-12: su tabla de irregular guarda el infectum y su
+  // perfectum sale del tema `ded-`, igual que el de los otros. `dedit` ×103.
+  'do']);
 const PRONOMBRE = new Set(['is', 'hic', 'ille', 'qui', 'ipse', 'idem', 'iste']);
 
 export function claseDeHueco(lema: string, rasgos = '', forma = ''): ClaseDeHueco {
