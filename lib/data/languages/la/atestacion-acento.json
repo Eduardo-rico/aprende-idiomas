@@ -2,31 +2,31 @@
  "generado": "2026-09-13",
  "corpus": "la_perseus + la_proiel (UD)",
  "tokens": 227300,
- "formas": 6867,
- "sueloDeLaPenultima": 0.7000145623998835,
+ "formas": 6928,
+ "sueloDeLaPenultima": 0.6997690531177829,
  "reparto": {
   "monosilabo": {
-   "total": 117,
-   "atestiguadas": 111
+   "total": 124,
+   "atestiguadas": 118
   },
   "bisilabo": {
-   "total": 1106,
-   "atestiguadas": 863
+   "total": 1142,
+   "atestiguadas": 899
   },
   "breve": {
-   "total": 1943,
-   "atestiguadas": 806
+   "total": 1956,
+   "atestiguadas": 819
   },
   "posicion": {
-   "total": 936,
-   "atestiguadas": 292
+   "total": 940,
+   "atestiguadas": 296
   },
   "macron": {
-   "total": 2765,
-   "atestiguadas": 802
+   "total": 2766,
+   "atestiguadas": 803
   }
  },
- "posicionSobreAtestiguadas": 0.10160055671537926,
+ "posicionSobreAtestiguadas": 0.10085178875638842,
  "tabla": {
   "cum": {
    "silabas": [
@@ -476,6 +476,572 @@
    "tonica": "san",
    "tipo": "breve",
    "n": 1
+  },
+  "ergō": {
+   "silabas": [
+    "er",
+    "gō"
+   ],
+   "tonica": "er",
+   "tipo": "bisilabo",
+   "n": 444
+  },
+  "sīcut": {
+   "silabas": [
+    "sī",
+    "cut"
+   ],
+   "tonica": "sī",
+   "tipo": "bisilabo",
+   "n": 359
+  },
+  "quidem": {
+   "silabas": [
+    "qui",
+    "dem"
+   ],
+   "tonica": "qui",
+   "tipo": "bisilabo",
+   "n": 334
+  },
+  "nam": {
+   "silabas": [
+    "nam"
+   ],
+   "tonica": "nam",
+   "tipo": "monosilabo",
+   "n": 329
+  },
+  "tamen": {
+   "silabas": [
+    "ta",
+    "men"
+   ],
+   "tonica": "ta",
+   "tipo": "bisilabo",
+   "n": 332
+  },
+  "super": {
+   "silabas": [
+    "su",
+    "per"
+   ],
+   "tonica": "su",
+   "tipo": "bisilabo",
+   "n": 317
+  },
+  "quoniam": {
+   "silabas": [
+    "quo",
+    "ni",
+    "am"
+   ],
+   "tonica": "quo",
+   "tipo": "breve",
+   "n": 313
+  },
+  "nunc": {
+   "silabas": [
+    "nunc"
+   ],
+   "tonica": "nunc",
+   "tipo": "monosilabo",
+   "n": 305
+  },
+  "propter": {
+   "silabas": [
+    "prop",
+    "ter"
+   ],
+   "tonica": "prop",
+   "tipo": "bisilabo",
+   "n": 286
+  },
+  "inter": {
+   "silabas": [
+    "in",
+    "ter"
+   ],
+   "tonica": "in",
+   "tipo": "bisilabo",
+   "n": 198
+  },
+  "apud": {
+   "silabas": [
+    "a",
+    "pud"
+   ],
+   "tonica": "a",
+   "tipo": "bisilabo",
+   "n": 190
+  },
+  "secundum": {
+   "silabas": [
+    "se",
+    "cun",
+    "dum"
+   ],
+   "tonica": "cun",
+   "tipo": "posicion",
+   "n": 187
+  },
+  "usque": {
+   "silabas": [
+    "us",
+    "que"
+   ],
+   "tonica": "us",
+   "tipo": "bisilabo",
+   "n": 151
+  },
+  "itaque": {
+   "silabas": [
+    "i",
+    "ta",
+    "que"
+   ],
+   "tonica": "i",
+   "tipo": "breve",
+   "n": 170
+  },
+  "tum": {
+   "silabas": [
+    "tum"
+   ],
+   "tonica": "tum",
+   "tipo": "monosilabo",
+   "n": 136
+  },
+  "āmēn": {
+   "silabas": [
+    "ā",
+    "mēn"
+   ],
+   "tonica": "ā",
+   "tipo": "bisilabo",
+   "n": 130
+  },
+  "iterum": {
+   "silabas": [
+    "i",
+    "te",
+    "rum"
+   ],
+   "tonica": "i",
+   "tipo": "breve",
+   "n": 129
+  },
+  "contrā": {
+   "silabas": [
+    "con",
+    "trā"
+   ],
+   "tonica": "con",
+   "tipo": "bisilabo",
+   "n": 120
+  },
+  "suprā": {
+   "silabas": [
+    "su",
+    "prā"
+   ],
+   "tonica": "su",
+   "tipo": "bisilabo",
+   "n": 115
+  },
+  "adhūc": {
+   "silabas": [
+    "ad",
+    "hūc"
+   ],
+   "tonica": "ad",
+   "tipo": "bisilabo",
+   "n": 113
+  },
+  "statim": {
+   "silabas": [
+    "sta",
+    "tim"
+   ],
+   "tonica": "sta",
+   "tipo": "bisilabo",
+   "n": 99
+  },
+  "saepe": {
+   "silabas": [
+    "sae",
+    "pe"
+   ],
+   "tonica": "sae",
+   "tipo": "bisilabo",
+   "n": 85
+  },
+  "simul": {
+   "silabas": [
+    "si",
+    "mul"
+   ],
+   "tonica": "si",
+   "tipo": "bisilabo",
+   "n": 95
+  },
+  "cōram": {
+   "silabas": [
+    "cō",
+    "ram"
+   ],
+   "tonica": "cō",
+   "tipo": "bisilabo",
+   "n": 82
+  },
+  "item": {
+   "silabas": [
+    "i",
+    "tem"
+   ],
+   "tonica": "i",
+   "tipo": "bisilabo",
+   "n": 77
+  },
+  "multum": {
+   "silabas": [
+    "mul",
+    "tum"
+   ],
+   "tonica": "mul",
+   "tipo": "bisilabo",
+   "n": 57
+  },
+  "inde": {
+   "silabas": [
+    "in",
+    "de"
+   ],
+   "tonica": "in",
+   "tipo": "bisilabo",
+   "n": 78
+  },
+  "numquam": {
+   "silabas": [
+    "num",
+    "quam"
+   ],
+   "tonica": "num",
+   "tipo": "bisilabo",
+   "n": 66
+  },
+  "numquid": {
+   "silabas": [
+    "num",
+    "quid"
+   ],
+   "tonica": "num",
+   "tipo": "bisilabo",
+   "n": 72
+  },
+  "dōnec": {
+   "silabas": [
+    "dō",
+    "nec"
+   ],
+   "tonica": "dō",
+   "tipo": "bisilabo",
+   "n": 68
+  },
+  "tantum": {
+   "silabas": [
+    "tan",
+    "tum"
+   ],
+   "tonica": "tan",
+   "tipo": "bisilabo",
+   "n": 98
+  },
+  "diū": {
+   "silabas": [
+    "di",
+    "ū"
+   ],
+   "tonica": "di",
+   "tipo": "bisilabo",
+   "n": 42
+  },
+  "unde": {
+   "silabas": [
+    "un",
+    "de"
+   ],
+   "tonica": "un",
+   "tipo": "bisilabo",
+   "n": 63
+  },
+  "circā": {
+   "silabas": [
+    "cir",
+    "cā"
+   ],
+   "tonica": "cir",
+   "tipo": "bisilabo",
+   "n": 63
+  },
+  "praeter": {
+   "silabas": [
+    "prae",
+    "ter"
+   ],
+   "tonica": "prae",
+   "tipo": "bisilabo",
+   "n": 62
+  },
+  "potius": {
+   "silabas": [
+    "po",
+    "ti",
+    "us"
+   ],
+   "tonica": "po",
+   "tipo": "breve",
+   "n": 65
+  },
+  "ideō": {
+   "silabas": [
+    "i",
+    "de",
+    "ō"
+   ],
+   "tonica": "i",
+   "tipo": "breve",
+   "n": 57
+  },
+  "prope": {
+   "silabas": [
+    "pro",
+    "pe"
+   ],
+   "tonica": "pro",
+   "tipo": "bisilabo",
+   "n": 39
+  },
+  "dīligenter": {
+   "silabas": [
+    "dī",
+    "li",
+    "gen",
+    "ter"
+   ],
+   "tonica": "gen",
+   "tipo": "posicion",
+   "n": 32
+  },
+  "omnīnō": {
+   "silabas": [
+    "om",
+    "nī",
+    "nō"
+   ],
+   "tonica": "nī",
+   "tipo": "macron",
+   "n": 52
+  },
+  "nōndum": {
+   "silabas": [
+    "nōn",
+    "dum"
+   ],
+   "tonica": "nōn",
+   "tipo": "bisilabo",
+   "n": 50
+  },
+  "quīn": {
+   "silabas": [
+    "quīn"
+   ],
+   "tonica": "quīn",
+   "tipo": "monosilabo",
+   "n": 50
+  },
+  "proptereā": {
+   "silabas": [
+    "prop",
+    "te",
+    "re",
+    "ā"
+   ],
+   "tonica": "te",
+   "tipo": "breve",
+   "n": 49
+  },
+  "posteā": {
+   "silabas": [
+    "pos",
+    "te",
+    "ā"
+   ],
+   "tonica": "pos",
+   "tipo": "breve",
+   "n": 55
+  },
+  "etsī": {
+   "silabas": [
+    "et",
+    "sī"
+   ],
+   "tonica": "et",
+   "tipo": "bisilabo",
+   "n": 45
+  },
+  "rūrsus": {
+   "silabas": [
+    "rūr",
+    "sus"
+   ],
+   "tonica": "rūr",
+   "tipo": "bisilabo",
+   "n": 34
+  },
+  "ob": {
+   "silabas": [
+    "ob"
+   ],
+   "tonica": "ob",
+   "tipo": "monosilabo",
+   "n": 44
+  },
+  "umquam": {
+   "silabas": [
+    "um",
+    "quam"
+   ],
+   "tonica": "um",
+   "tipo": "bisilabo",
+   "n": 39
+  },
+  "similiter": {
+   "silabas": [
+    "si",
+    "mi",
+    "li",
+    "ter"
+   ],
+   "tonica": "mi",
+   "tipo": "breve",
+   "n": 44
+  },
+  "sānē": {
+   "silabas": [
+    "sā",
+    "nē"
+   ],
+   "tonica": "sā",
+   "tipo": "bisilabo",
+   "n": 48
+  },
+  "aliquandō": {
+   "silabas": [
+    "a",
+    "li",
+    "quan",
+    "dō"
+   ],
+   "tonica": "quan",
+   "tipo": "posicion",
+   "n": 41
+  },
+  "trāns": {
+   "silabas": [
+    "trāns"
+   ],
+   "tonica": "trāns",
+   "tipo": "monosilabo",
+   "n": 40
+  },
+  "praetereā": {
+   "silabas": [
+    "prae",
+    "te",
+    "re",
+    "ā"
+   ],
+   "tonica": "te",
+   "tipo": "breve",
+   "n": 40
+  },
+  "celeriter": {
+   "silabas": [
+    "ce",
+    "le",
+    "ri",
+    "ter"
+   ],
+   "tonica": "le",
+   "tipo": "breve",
+   "n": 36
+  },
+  "circiter": {
+   "silabas": [
+    "cir",
+    "ci",
+    "ter"
+   ],
+   "tonica": "cir",
+   "tipo": "breve",
+   "n": 38
+  },
+  "intrā": {
+   "silabas": [
+    "in",
+    "trā"
+   ],
+   "tonica": "in",
+   "tipo": "bisilabo",
+   "n": 39
+  },
+  "plānē": {
+   "silabas": [
+    "plā",
+    "nē"
+   ],
+   "tonica": "plā",
+   "tipo": "bisilabo",
+   "n": 40
+  },
+  "subitō": {
+   "silabas": [
+    "su",
+    "bi",
+    "tō"
+   ],
+   "tonica": "su",
+   "tipo": "breve",
+   "n": 40
+  },
+  "praesertim": {
+   "silabas": [
+    "prae",
+    "ser",
+    "tim"
+   ],
+   "tonica": "ser",
+   "tipo": "posicion",
+   "n": 33
+  },
+  "hinc": {
+   "silabas": [
+    "hinc"
+   ],
+   "tonica": "hinc",
+   "tipo": "monosilabo",
+   "n": 31
+  },
+  "interim": {
+   "silabas": [
+    "in",
+    "te",
+    "rim"
+   ],
+   "tonica": "in",
+   "tipo": "breve",
+   "n": 32
   },
   "puella": {
    "silabas": [

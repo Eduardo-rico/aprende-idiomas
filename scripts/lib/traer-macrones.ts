@@ -60,6 +60,7 @@ import { ADJETIVOS_3A } from '../../lib/data/languages/la/adjetivos-3a';
 import { IRREGULARES_L1 } from '../../lib/data/languages/la/irregulares';
 import { DEPONENTES_L1 } from '../../lib/data/languages/la/deponentes';
 import { PLURALIA_TANTUM } from '../../lib/data/languages/la/plural-tantum';
+import { leerFrases } from './atestar-ut';
 
 const SALIDA = 'lib/data/languages/la/macrones.json';
 const API = 'https://en.wiktionary.org/w/api.php';
@@ -77,6 +78,33 @@ export interface FilaDeMacron {
   origen: Origen;
   /** Cuántos de los dos caminos de la fuente dieron la forma. */
   caminos: 0 | 1 | 2;
+  /** La categoría según la FUENTE (su plantilla de encabezado) y según el
+   *  CORPUS (el UPOS del treebank). Son dos caminos independientes y hay
+   *  que cruzarlos: el corpus etiqueta `tantus` y `cēterus` como ADV —es su
+   *  uso adverbial— y son adjetivos que DECLINAN. Importarlos como
+   *  indeclinables por fiarse de una sola etiqueta es un error de datos.
+   *  Donde no coinciden, la fila lleva `categoriaEnDisputa` y no se importa
+   *  sin mirarla. */
+  posFuente?: string | null;
+  uposCorpus?: string | null;
+  categoriaEnDisputa?: true;
+  /** La fuente marca la cantidad como VARIABLE (`ō̆`): no es un dato que
+   *  este lexicón pueda guardar, que tiene una forma por lema. */
+  cantidadVariable?: true;
+  /** TERCER CAMINO, y el que de verdad decide si algo es indeclinable: el
+   *  treebank. Un indeclinable no lleva NUNCA `Case=`. `lātus` viene
+   *  etiquetado ADV por el corpus y su categoría no contradice a la fuente
+   *  —que calla—, pero sale 41 veces con caso y 2 sin: es un adjetivo
+   *  declinado y meterlo como invariable habría sido un error que ni la
+   *  cantidad ni la categoría podían ver. */
+  conCasoEnElCorpus?: number;
+  sinCasoEnElCorpus?: number;
+  flexiona?: true;
+  /** CUARTO filtro, y es la regla propia del proyecto: ningún lema entra
+   *  sin UNA sola forma atestiguada. `amplē` es latín correcto y la fuente
+   *  lo da bien, pero el corpus sólo trae su comparativo `amplius`: la
+   *  forma de cita no aparece. Un lema así no se puede usar en un marco. */
+  formaAtestiguada?: number;
   /** Si el lema ya estaba en el lexicón escrito a mano, lo que decía. */
   enElLexicon?: string;
   /** Escrito sólo cuando el lexicón y la fuente discrepan. */
@@ -109,15 +137,33 @@ export function argQueEsElLema(args: string, titulo: string): string | null {
 }
 
 const POS = 'noun|verb|adj|proper noun|num|pron|adv|prep|conj|part|det|suffix|prefix';
-export function macronesDe(txt: string, titulo: string): { ipa: string | null; head: string | null } {
+export function macronesDe(txt: string, titulo: string): { ipa: string | null; head: string | null; pos: string | null } {
   const la = seccionLatina(txt);
-  if (!la) return { ipa: null, head: null };
+  if (!la) return { ipa: null, head: null, pos: null };
   const mi = la.match(/\{\{la-IPA\|([^}]*)\}\}/);
   const mh = la.match(new RegExp(`\\{\\{la-(${POS})\\|([^}]*)\\}\\}`));
   return {
     ipa: mi ? argQueEsElLema(mi[1]!, titulo) : null,
     head: mh ? argQueEsElLema(mh[2]!, titulo) : null,
+    pos: mh ? mh[1]! : null,
   };
+}
+
+/** ¿La categoría de la fuente CONTRADICE la del corpus? Sólo importa para
+ *  decidir si un lema es INDECLINABLE, que es lo que cambia el módulo al que
+ *  va.
+ *
+ *  Hay que separar CONTRADICCIÓN de SILENCIO, que no es lo mismo: los
+ *  indeclinables de esta fuente no llevan plantilla de encabezado —`nam` y
+ *  `quoniam` no tienen ninguna—, así que su categoría viene en blanco. Eso
+ *  no es una disputa: es que sólo hay un camino. Tratarlo como disputa
+ *  excluía diecisiete lemas buenos, y es la misma confusión que hace que un
+ *  silencio parezca un dato (ver lo de Lewis & Short en la cabecera). */
+const INDECLINABLE_FUENTE = new Set(['adv', 'prep', 'conj', 'part', 'det']);
+const INDECLINABLE_CORPUS = new Set(['ADV', 'ADP', 'SCONJ', 'CCONJ', 'PART', 'INTJ']);
+export function categoriaContradice(pos: string | null, upos: string | null): boolean {
+  if (!pos || !upos) return false;   // silencio, no contradicción
+  return INDECLINABLE_FUENTE.has(pos) !== INDECLINABLE_CORPUS.has(upos);
 }
 
 /** Concilia los dos caminos. `null` cuando se contradicen de verdad: la
@@ -176,11 +222,25 @@ async function main() {
   const titulos = [...new Set([...propios.map((p) => sinCantidad(p.lema)), ...aCero])];
   console.error(`${titulos.length} títulos (${propios.length} del lexicón + ${aCero.length} del núcleo a cero)`);
 
-  const crudo = new Map<string, { ipa: string | null; head: string | null; falta: boolean }>();
+  const uposDelCorpus = new Map(nucleo.lemas.map((l) => [sinCantidad(l.lema), (l as unknown as { upos: string }).upos]));
+  // TERCER CAMINO: cuenta de rasgos de caso en el treebank, por lema.
+  const casos = new Map<string, { con: number; sin: number }>();
+  const formasDelCorpus = new Map<string, number>();
+  for (const fr of leerFrases()) {
+    for (const t of fr) {
+      const k = sinCantidad(t.lema);
+      let r = casos.get(k);
+      if (!r) { r = { con: 0, sin: 0 }; casos.set(k, r); }
+      if (/Case=/.test(t.feats)) r.con++; else r.sin++;
+      const f = sinCantidad(t.forma);
+      formasDelCorpus.set(f, (formasDelCorpus.get(f) ?? 0) + 1);
+    }
+  }
+  const crudo = new Map<string, { ipa: string | null; head: string | null; pos: string | null; falta: boolean }>();
   for (let i = 0; i < titulos.length; i += 50) {
     for (const p of await lote(titulos.slice(i, i + 50))) {
       const txt = p.revisions?.[0]?.slots?.main?.content ?? '';
-      crudo.set(sinCantidad(p.title), p.missing ? { ipa: null, head: null, falta: true } : { ...macronesDe(txt, p.title), falta: false });
+      crudo.set(sinCantidad(p.title), p.missing ? { ipa: null, head: null, pos: null, falta: true } : { ...macronesDe(txt, p.title), falta: false });
     }
     console.error(`  ${Math.min(i + 50, titulos.length)}/${titulos.length}`);
     await dormir(1500);
@@ -210,12 +270,26 @@ async function main() {
     vistos.add(k);
     const c = crudo.get(k);
     const { forma, caminos } = conciliar(c?.ipa ?? null, c?.head ?? null);
+    const upos = uposDelCorpus.get(k) ?? null;
+    const pos = c?.pos ?? null;
+    const fx = casos.get(k);
     filas.push(forma
-      ? { clave: k, cantidad: forma, origen: 'fuente-externa', caminos }
-      : { clave: k, cantidad: null, origen: 'sin-dato', caminos: 0 });
+      ? {
+        clave: k, cantidad: forma, origen: 'fuente-externa', caminos,
+        posFuente: pos, uposCorpus: upos,
+        ...(categoriaContradice(pos, upos) ? { categoriaEnDisputa: true as const } : {}),
+        ...(tieneBreve(forma) ? { cantidadVariable: true as const } : {}),
+        ...(fx ? { conCasoEnElCorpus: fx.con, sinCasoEnElCorpus: fx.sin } : {}),
+        ...(fx && fx.con > fx.sin ? { flexiona: true as const } : {}),
+        formaAtestiguada: formasDelCorpus.get(sinCantidad(forma)) ?? 0,
+      }
+      : { clave: k, cantidad: null, origen: 'sin-dato', caminos: 0, posFuente: pos, uposCorpus: upos });
   }
 
   const cuenta = (o: Origen) => filas.filter((f) => f.origen === o).length;
+  const disputadas = filas.filter((f) => f.categoriaEnDisputa).length;
+  const variables = filas.filter((f) => f.cantidadVariable).length;
+  const flexionan = filas.filter((f) => f.flexiona).length;
   fs.writeFileSync(SALIDA, `${JSON.stringify({
     generado: new Date().toISOString().slice(0, 10),
     procedencia: {
@@ -233,11 +307,18 @@ async function main() {
     total: filas.length,
     porOrigen: { 'lexicon-propio': cuenta('lexicon-propio'), 'fuente-externa': cuenta('fuente-externa'), 'sin-dato': cuenta('sin-dato') },
     discrepanciasConElLexicon: filas.filter((f) => f.discrepancia).length,
+    categoriaEnDisputa: disputadas,
+    cantidadVariable: variables,
+    flexionanEnElCorpus: flexionan,
+    conLaFormaDeCitaSinAtestiguar: filas.filter((f) => f.origen === 'fuente-externa' && f.formaAtestiguada === 0).length,
+    porQueSeMiraLaFlexion: 'un indeclinable no lleva nunca `Case=`. `lātus` viene etiquetado ADV por el corpus y la fuente calla sobre su categoría, así que ni la cantidad ni la categoría lo cazan: sale 41 veces CON caso y 2 sin, y es un adjetivo declinado',
+    porQueLaCategoriaSeCruza: 'el corpus etiqueta `tantus` y `cēterus` como ADV —su uso adverbial— y son adjetivos que DECLINAN: importarlos como indeclinables por fiarse de una etiqueta sola mete un error de datos que ningún gate de cantidad puede ver. Y `categoriaEnDisputa` es CONTRADICCIÓN, no silencio: los indeclinables de la fuente no llevan plantilla de encabezado, así que su categoría viene en blanco y eso no descalifica nada',
     filas,
   }, null, 1)}\n`);
   console.log(`${SALIDA}: ${filas.length} filas`);
   console.log(`  lexicón propio ${cuenta('lexicon-propio')} · fuente externa ${cuenta('fuente-externa')} · sin dato ${cuenta('sin-dato')}`);
   console.log(`  discrepancias con el lexicón: ${filas.filter((f) => f.discrepancia).length}`);
+  console.log(`  categoría en disputa: ${disputadas} · cantidad variable: ${variables} · flexionan en el corpus: ${flexionan}`);
   for (const f of filas.filter((x) => x.discrepancia)) console.log(`    ${f.enElLexicon} — ${f.discrepancia}`);
 }
 if (process.argv[1]?.endsWith('traer-macrones.ts')) void main();

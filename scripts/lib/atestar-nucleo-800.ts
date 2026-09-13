@@ -82,7 +82,8 @@ async function main() {
     generado: new Date().toISOString().slice(0, 10),
     corpus: 'UD Latin (scripts/.cache/treebanks)',
     comoSeSelecciona: 'por frecuencia de LEMA sobre el corpus entero, fuera puntuación, símbolos, no analizados y nombres propios',
-    loQueFalta: 'la CANTIDAD. El corpus no marca mácrones y este repositorio no tiene fuente que los dé. Escribir 600 formas de cita a mano sería afirmar 600 cantidades sin fuente, y justo en el eje del que cuelga la línea de fonología. La selección está hecha; falta un diccionario o un texto macronizados.',
+    loQueFalta: 'el PARADIGMA. La cantidad dejó de ser el bloqueo el 2026-09-13: `macrones.json` la trae con su procedencia para 471 de los 554 que estaban a cero (85 %). Lo que falta ahora es el resto de la entrada — genitivo y género para los nombres, partes principales para los verbos — que sale de las mismas plantillas de la fuente y aún no se parsea. Los indeclinables, que no necesitan paradigma, ya están dentro.',
+    historia: 'hasta el 2026-09-12 el bloqueo era la CANTIDAD: no había fuente y todos los mácrones del repositorio salían del lexicón escrito a mano, que se validaba contra sí mismo. Queda escrito porque el diagnóstico costó y porque explica por qué la selección estaba hecha desde antes.',
     tokensDelCorpus: tokens,
     cuantos: CUANTOS,
     porcentajeDeTokensQueCubren: Number((100 * cobertura).toFixed(1)),
@@ -92,6 +93,6 @@ async function main() {
   }, null, 1)}\n`);
   console.log(`${SALIDA}: ${CUANTOS} lemas · cubren el ${(100 * cobertura).toFixed(1)} % de los ${tokens} tokens`);
   console.log(`  la máquina ya cubre ≥80 % de: ${plenos} · a cero: ${aCero}`);
-  console.log(`  FALTA: la cantidad. No hay fuente de mácrones en el repositorio.`);
+  console.log(`  FALTA: el paradigma. La cantidad ya la trae macrones.json.`);
 }
 if (process.argv[1]?.endsWith('atestar-nucleo-800.ts')) void main();

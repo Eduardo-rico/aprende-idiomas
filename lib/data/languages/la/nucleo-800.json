@@ -2,12 +2,13 @@
  "generado": "2026-09-13",
  "corpus": "UD Latin (scripts/.cache/treebanks)",
  "comoSeSelecciona": "por frecuencia de LEMA sobre el corpus entero, fuera puntuación, símbolos, no analizados y nombres propios",
- "loQueFalta": "la CANTIDAD. El corpus no marca mácrones y este repositorio no tiene fuente que los dé. Escribir 600 formas de cita a mano sería afirmar 600 cantidades sin fuente, y justo en el eje del que cuelga la línea de fonología. La selección está hecha; falta un diccionario o un texto macronizados.",
+ "loQueFalta": "el PARADIGMA. La cantidad dejó de ser el bloqueo el 2026-09-13: `macrones.json` la trae con su procedencia para 471 de los 554 que estaban a cero (85 %). Lo que falta ahora es el resto de la entrada — genitivo y género para los nombres, partes principales para los verbos — que sale de las mismas plantillas de la fuente y aún no se parsea. Los indeclinables, que no necesitan paradigma, ya están dentro.",
+ "historia": "hasta el 2026-09-12 el bloqueo era la CANTIDAD: no había fuente y todos los mácrones del repositorio salían del lexicón escrito a mano, que se validaba contra sí mismo. Queda escrito porque el diagnóstico costó y porque explica por qué la selección estaba hecha desde antes.",
  "tokensDelCorpus": 214918,
  "cuantos": 800,
  "porcentajeDeTokensQueCubren": 81.6,
- "yaCubiertosPorLaMaquina": 198,
- "sinNingunaFormaProducida": 554,
+ "yaCubiertosPorLaMaquina": 254,
+ "sinNingunaFormaProducida": 489,
  "lemas": [
   {
    "lema": "et",
@@ -487,7 +488,7 @@
    "lema": "multus",
    "n": 676,
    "upos": "DET",
-   "cubierto": 0,
+   "cubierto": 0.03254437869822485,
    "formas": [
     "multa",
     "multi",
@@ -643,7 +644,7 @@
    "lema": "ergo",
    "n": 444,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "ergo"
    ]
@@ -685,7 +686,7 @@
    "lema": "ita",
    "n": 404,
    "upos": "ADV",
-   "cubierto": 0.9381188118811881,
+   "cubierto": 1,
    "formas": [
     "ita",
     "itaque"
@@ -728,7 +729,7 @@
    "lema": "sicut",
    "n": 361,
    "upos": "SCONJ",
-   "cubierto": 0,
+   "cubierto": 0.9944598337950139,
    "formas": [
     "sicut",
     "sicuti"
@@ -814,7 +815,7 @@
    "lema": "quidem",
    "n": 334,
    "upos": "PART",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "quidem"
    ]
@@ -823,7 +824,7 @@
    "lema": "nam",
    "n": 333,
    "upos": "PART",
-   "cubierto": 0,
+   "cubierto": 0.987987987987988,
    "formas": [
     "nam",
     "namque"
@@ -844,7 +845,7 @@
    "lema": "tamen",
    "n": 332,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "tamen"
    ]
@@ -875,7 +876,7 @@
    "lema": "super",
    "n": 318,
    "upos": "ADP",
-   "cubierto": 0,
+   "cubierto": 0.9968553459119497,
    "formas": [
     "super",
     "superius"
@@ -885,7 +886,7 @@
    "lema": "quoniam",
    "n": 313,
    "upos": "SCONJ",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "quoniam"
    ]
@@ -938,7 +939,7 @@
    "lema": "nunc",
    "n": 306,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 0.9967320261437909,
    "formas": [
     "nunc",
     "nune"
@@ -1012,7 +1013,7 @@
    "lema": "propter",
    "n": 286,
    "upos": "ADP",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "propter"
    ]
@@ -1454,7 +1455,7 @@
    "lema": "inter",
    "n": 198,
    "upos": "ADP",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "inter"
    ]
@@ -1550,7 +1551,7 @@
    "lema": "apud",
    "n": 190,
    "upos": "ADP",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "apud"
    ]
@@ -1656,7 +1657,7 @@
    "lema": "secundum",
    "n": 174,
    "upos": "ADP",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "secundum"
    ]
@@ -1740,7 +1741,7 @@
    "lema": "tantus",
    "n": 164,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 0.20121951219512196,
    "formas": [
     "tanta",
     "tantum",
@@ -1927,7 +1928,7 @@
    "lema": "usque",
    "n": 151,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "usque"
    ]
@@ -2013,7 +2014,7 @@
    "lema": "itaque",
    "n": 145,
    "upos": "PART",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "itaque"
    ]
@@ -2185,7 +2186,7 @@
    "lema": "tum",
    "n": 136,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "tum"
    ]
@@ -2348,7 +2349,7 @@
    "lema": "amen",
    "n": 130,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "amen"
    ]
@@ -2368,7 +2369,7 @@
    "lema": "iterum",
    "n": 129,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "iterum"
    ]
@@ -2584,7 +2585,7 @@
    "lema": "contra",
    "n": 120,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "contra"
    ]
@@ -2733,7 +2734,7 @@
    "lema": "supra",
    "n": 116,
    "upos": "ADP",
-   "cubierto": 0,
+   "cubierto": 0.9913793103448276,
    "formas": [
     "supra",
     "supera"
@@ -2798,7 +2799,7 @@
    "lema": "intro",
    "n": 114,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.017543859649122806,
    "formas": [
     "intrauit",
     "intrare",
@@ -2831,7 +2832,7 @@
    "lema": "adhuc",
    "n": 113,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "adhuc"
    ]
@@ -3299,7 +3300,7 @@
    "lema": "statim",
    "n": 99,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "statim"
    ]
@@ -3352,7 +3353,7 @@
    "lema": "saepe",
    "n": 98,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 0.8673469387755102,
    "formas": [
     "saepe",
     "saepius",
@@ -3438,7 +3439,7 @@
    "lema": "simul",
    "n": 95,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "simul"
    ]
@@ -3686,7 +3687,7 @@
    "lema": "similis",
    "n": 86,
    "upos": "ADJ",
-   "cubierto": 0.9883720930232558,
+   "cubierto": 1,
    "formas": [
     "simile",
     "similes",
@@ -3880,7 +3881,7 @@
    "lema": "coram",
    "n": 82,
    "upos": "ADP",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "coram"
    ]
@@ -3933,7 +3934,7 @@
    "lema": "item",
    "n": 81,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 0.9506172839506173,
    "formas": [
     "item",
     "itemque"
@@ -4073,7 +4074,7 @@
    "lema": "multum",
    "n": 79,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 0.4430379746835443,
    "formas": [
     "multum",
     "plus",
@@ -4095,7 +4096,7 @@
    "lema": "inde",
    "n": 78,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "inde"
    ]
@@ -4311,7 +4312,7 @@
    "lema": "numquam",
    "n": 72,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 0.9166666666666666,
    "formas": [
     "numquam",
     "nunquam"
@@ -4354,7 +4355,7 @@
    "lema": "numquid",
    "n": 72,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "numquid"
    ]
@@ -4539,7 +4540,7 @@
    "lema": "donec",
    "n": 69,
    "upos": "SCONJ",
-   "cubierto": 0,
+   "cubierto": 0.9855072463768116,
    "formas": [
     "donec",
     "done"
@@ -4668,7 +4669,7 @@
    "lema": "tantum",
    "n": 67,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 0.9701492537313433,
    "formas": [
     "tantum",
     "solum"
@@ -4777,7 +4778,7 @@
    "lema": "diu",
    "n": 65,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 0.6461538461538462,
    "formas": [
     "diu",
     "diutius",
@@ -4886,7 +4887,7 @@
    "lema": "unde",
    "n": 63,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "unde"
    ]
@@ -4906,7 +4907,7 @@
    "lema": "circa",
    "n": 63,
    "upos": "ADP",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "circa"
    ]
@@ -5001,7 +5002,7 @@
    "lema": "praeter",
    "n": 62,
    "upos": "ADP",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "praeter"
    ]
@@ -5173,7 +5174,7 @@
    "lema": "potius",
    "n": 60,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "potius"
    ]
@@ -5215,7 +5216,7 @@
    "lema": "secundus",
    "n": 59,
    "upos": "ADJ",
-   "cubierto": 0,
+   "cubierto": 0.22033898305084745,
    "formas": [
     "secundum",
     "secunda",
@@ -5336,7 +5337,7 @@
    "lema": "ideo",
    "n": 57,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "ideo"
    ]
@@ -5662,7 +5663,7 @@
    "lema": "prope",
    "n": 54,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 0.7222222222222222,
    "formas": [
     "prope",
     "proxime",
@@ -5684,7 +5685,7 @@
    "lema": "diligenter",
    "n": 53,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 0.6037735849056604,
    "formas": [
     "diligenter",
     "diligentissime",
@@ -5814,7 +5815,7 @@
    "lema": "omnino",
    "n": 52,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "omnino"
    ]
@@ -5900,7 +5901,7 @@
    "lema": "nondum",
    "n": 50,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "nondum"
    ]
@@ -5909,7 +5910,7 @@
    "lema": "quin",
    "n": 50,
    "upos": "SCONJ",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "quin"
    ]
@@ -6003,7 +6004,7 @@
    "lema": "propterea",
    "n": 49,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "propterea"
    ]
@@ -6205,7 +6206,7 @@
    "lema": "postea",
    "n": 47,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "postea"
    ]
@@ -6467,7 +6468,7 @@
    "lema": "etsi",
    "n": 45,
    "upos": "SCONJ",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "etsi"
    ]
@@ -6606,7 +6607,7 @@
    "lema": "rursus",
    "n": 44,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 0.7727272727272727,
    "formas": [
     "rursus",
     "rursum"
@@ -6649,7 +6650,7 @@
    "lema": "ob",
    "n": 44,
    "upos": "ADP",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "ob"
    ]
@@ -6842,7 +6843,7 @@
    "lema": "umquam",
    "n": 42,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 0.9285714285714286,
    "formas": [
     "umquam",
     "unquam"
@@ -6940,7 +6941,7 @@
    "lema": "similiter",
    "n": 42,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "similiter"
    ]
@@ -6949,7 +6950,7 @@
    "lema": "sane",
    "n": 42,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "sane"
    ]
@@ -7035,7 +7036,7 @@
    "lema": "aliquando",
    "n": 41,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "aliquando"
    ]
@@ -7141,7 +7142,7 @@
    "lema": "trans",
    "n": 40,
    "upos": "ADP",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "trans"
    ]
@@ -7161,7 +7162,7 @@
    "lema": "praeterea",
    "n": 40,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "praeterea"
    ]
@@ -7280,7 +7281,7 @@
    "lema": "celeriter",
    "n": 40,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 0.875,
    "formas": [
     "celeriter",
     "celerius",
@@ -7500,7 +7501,7 @@
    "lema": "circiter",
    "n": 38,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "circiter"
    ]
@@ -7575,7 +7576,7 @@
    "lema": "intra",
    "n": 37,
    "upos": "ADP",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "intra"
    ]
@@ -7682,7 +7683,7 @@
    "lema": "plane",
    "n": 37,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 0.9459459459459459,
    "formas": [
     "plane",
     "planissime",
@@ -8031,7 +8032,7 @@
    "lema": "subito",
    "n": 34,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "subito"
    ]
@@ -8414,7 +8415,7 @@
    "lema": "praesertim",
    "n": 33,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "praesertim"
    ]
@@ -8465,7 +8466,7 @@
    "lema": "hinc",
    "n": 32,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 0.96875,
    "formas": [
     "hinc",
     "hinec"
@@ -8508,7 +8509,7 @@
    "lema": "interim",
    "n": 32,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "interim"
    ]

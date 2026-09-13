@@ -19,7 +19,7 @@ const M = macrones as {
 const N = nucleo as {
   cuantos: number; porcentajeDeTokensQueCubren: number;
   yaCubiertosPorLaMaquina: number; sinNingunaFormaProducida: number;
-  loQueFalta: string;
+  loQueFalta: string; historia?: string;
   lemas: { lema: string; n: number; upos: string; cubierto: number; formas: string[] }[];
 };
 
@@ -47,6 +47,15 @@ describe('EL BLOQUEO, QUE ERA LA CANTIDAD Y YA NO LO ES', () => {
   // Este bloque comprobaba lo contrario hasta el 2026-09-13: que NO había
   // fuente de mácrones, para que el bloqueo no fuera una frase que envejece
   // en un documento. Ahora la hay, y comprueba que se usa como es debido.
+
+  it('el fichero YA NO dice que falte la cantidad, porque sería falso', () => {
+    // Una afirmación que fue verdad y dejó de serlo es la misma clase que
+    // el filtro que caduca (§5.quaterdecies): el fichero dice ahora que lo
+    // que falta es el PARADIGMA, y guarda la historia aparte.
+    expect(N.loQueFalta).toContain('PARADIGMA');
+    expect(N.loQueFalta).not.toContain('no tiene fuente');
+    expect(N.historia ?? '').toContain('hasta el 2026-09-12');
+  });
 
   it('hay fuente, y el registro dice de dónde sale cada cantidad', () => {
     expect(M.procedencia.obra).toContain('Wiktionary');

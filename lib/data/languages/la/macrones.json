@@ -19,6 +19,12 @@
   "sin-dato": 83
  },
  "discrepanciasConElLexicon": 8,
+ "categoriaEnDisputa": 18,
+ "cantidadVariable": 8,
+ "flexionanEnElCorpus": 212,
+ "conLaFormaDeCitaSinAtestiguar": 96,
+ "porQueSeMiraLaFlexion": "un indeclinable no lleva nunca `Case=`. `lātus` viene etiquetado ADV por el corpus y la fuente calla sobre su categoría, así que ni la cantidad ni la categoría lo cazan: sale 41 veces CON caso y 2 sin, y es un adjetivo declinado",
+ "porQueLaCategoriaSeCruza": "el corpus etiqueta `tantus` y `cēterus` como ADV —su uso adverbial— y son adjetivos que DECLINAN: importarlos como indeclinables por fiarse de una etiqueta sola mete un error de datos que ningún gate de cantidad puede ver. Y `categoriaEnDisputa` es CONTRADICCIÓN, no silencio: los indeclinables de la fuente no llevan plantilla de encabezado, así que su categoría viene en blanco y eso no descalifica nada",
  "filas": [
   {
    "clave": "puella",
@@ -1551,3325 +1557,6084 @@
    "clave": "multus",
    "cantidad": "multus",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adj",
+   "uposCorpus": "DET",
+   "conCasoEnElCorpus": 659,
+   "sinCasoEnElCorpus": 17,
+   "flexiona": true,
+   "formaAtestiguada": 8
   },
   {
    "clave": "unus",
    "cantidad": "ūnus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "NUM",
+   "conCasoEnElCorpus": 543,
+   "sinCasoEnElCorpus": 3,
+   "flexiona": true,
+   "formaAtestiguada": 123
   },
   {
    "clave": "scribo",
    "cantidad": "scrībō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 160,
+   "sinCasoEnElCorpus": 378,
+   "formaAtestiguada": 12
   },
   {
    "clave": "alius",
    "cantidad": "alius",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "det",
+   "uposCorpus": "DET",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 491,
+   "sinCasoEnElCorpus": 1,
+   "flexiona": true,
+   "formaAtestiguada": 53
   },
   {
    "clave": "ergo",
    "cantidad": "ergō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 444,
+   "formaAtestiguada": 444
   },
   {
    "clave": "scio",
    "cantidad": "sciō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 41,
+   "sinCasoEnElCorpus": 377,
+   "formaAtestiguada": 65
   },
   {
    "clave": "nihil",
    "cantidad": "nihil",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "PRON",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 372,
+   "sinCasoEnElCorpus": 27,
+   "flexiona": true,
+   "formaAtestiguada": 388
   },
   {
    "clave": "accipio",
    "cantidad": "accipiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 75,
+   "sinCasoEnElCorpus": 306,
+   "formaAtestiguada": 2
   },
   {
    "clave": "sicut",
    "cantidad": "sīcut",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "SCONJ",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 361,
+   "formaAtestiguada": 359
   },
   {
    "clave": "greek.expression",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADJ"
   },
   {
    "clave": "quidem",
    "cantidad": "quidem",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "PART",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 334,
+   "formaAtestiguada": 334
   },
   {
    "clave": "nam",
    "cantidad": "nam",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "PART",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 333,
+   "formaAtestiguada": 329
   },
   {
    "clave": "tamen",
    "cantidad": "tamen",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 332,
+   "formaAtestiguada": 332
   },
   {
    "clave": "aio",
    "cantidad": "aiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 329,
+   "formaAtestiguada": 0
   },
   {
    "clave": "super",
    "cantidad": "super",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "prep",
+   "uposCorpus": "ADP",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 318,
+   "formaAtestiguada": 317
   },
   {
    "clave": "quoniam",
    "cantidad": "quoniam",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "SCONJ",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 313,
+   "formaAtestiguada": 313
   },
   {
    "clave": "ago",
    "cantidad": "agō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 79,
+   "sinCasoEnElCorpus": 233,
+   "formaAtestiguada": 15
   },
   {
    "clave": "credo",
    "cantidad": "crēdō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 37,
+   "sinCasoEnElCorpus": 273,
+   "formaAtestiguada": 30
   },
   {
    "clave": "nunc",
    "cantidad": "nunc",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 306,
+   "formaAtestiguada": 305
   },
   {
    "clave": "quidam",
    "cantidad": "quīdam",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "det",
+   "uposCorpus": "DET",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 297,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 153
   },
   {
    "clave": "uel",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADV"
   },
   {
    "clave": "propter",
    "cantidad": "propter",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADP",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 286,
+   "formaAtestiguada": 286
   },
   {
    "clave": "idem",
    "cantidad": "ī̆dem",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "det",
+   "uposCorpus": "DET",
+   "categoriaEnDisputa": true,
+   "cantidadVariable": true,
+   "conCasoEnElCorpus": 270,
+   "sinCasoEnElCorpus": 4,
+   "flexiona": true,
+   "formaAtestiguada": 68
   },
   {
    "clave": "duo",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NUM"
   },
   {
    "clave": "puto",
    "cantidad": "putō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 10,
+   "sinCasoEnElCorpus": 256,
+   "formaAtestiguada": 52
   },
   {
    "clave": "nisi",
    "cantidad": "nisī̆",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "SCONJ",
+   "cantidadVariable": true,
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 246,
+   "formaAtestiguada": 246
   },
   {
    "clave": "cognosco",
    "cantidad": "cognōscō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 48,
+   "sinCasoEnElCorpus": 198,
+   "formaAtestiguada": 4
   },
   {
    "clave": "publicus",
    "cantidad": "pūblicus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 231,
+   "sinCasoEnElCorpus": 5,
+   "flexiona": true,
+   "formaAtestiguada": 1
   },
   {
    "clave": "quaero",
    "cantidad": "quaerō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 31,
+   "sinCasoEnElCorpus": 198,
+   "formaAtestiguada": 11
   },
   {
    "clave": "animus",
    "cantidad": "animus",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 226,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 36
   },
   {
    "clave": "pono",
    "cantidad": "pōnō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 79,
+   "sinCasoEnElCorpus": 143,
+   "formaAtestiguada": 4
   },
   {
    "clave": "consilium",
    "cantidad": "cōnsilium",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 219,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 71
   },
   {
    "clave": "totus",
    "cantidad": "tōtus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "DET",
+   "conCasoEnElCorpus": 202,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 10
   },
   {
    "clave": "nullus",
    "cantidad": "nūllus",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "det",
+   "uposCorpus": "DET",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 200,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 17
   },
   {
    "clave": "nemo",
    "cantidad": "nēmō",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 200,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 147
   },
   {
    "clave": "inter",
    "cantidad": "inter",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "prep",
+   "uposCorpus": "ADP",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 198,
+   "formaAtestiguada": 198
   },
   {
    "clave": "hostis",
    "cantidad": "hostis",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 194,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 15
   },
   {
    "clave": "exeo",
    "cantidad": "exeō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 35,
+   "sinCasoEnElCorpus": 157,
+   "formaAtestiguada": 0
   },
   {
    "clave": "apud",
    "cantidad": "apud",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "prep",
+   "uposCorpus": "ADP",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 190,
+   "formaAtestiguada": 190
   },
   {
    "clave": "alter",
    "cantidad": "alter",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "det",
+   "uposCorpus": "DET",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 186,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 39
   },
   {
    "clave": "debeo",
    "cantidad": "dēbeō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 9,
+   "sinCasoEnElCorpus": 172,
+   "formaAtestiguada": 6
   },
   {
    "clave": "relinquo",
    "cantidad": "relinquō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 49,
+   "sinCasoEnElCorpus": 127,
+   "formaAtestiguada": 4
   },
   {
    "clave": "dimitto",
    "cantidad": "dīmittō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 28,
+   "sinCasoEnElCorpus": 148,
+   "formaAtestiguada": 0
   },
   {
    "clave": "mundus",
    "cantidad": "mundus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 174,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 29
   },
   {
    "clave": "secundum",
    "cantidad": "secundum",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "prep",
+   "uposCorpus": "ADP",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 174,
+   "formaAtestiguada": 187
   },
   {
    "clave": "iudaei",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "modus",
    "cantidad": "modus",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 171,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 9
   },
   {
    "clave": "turba",
    "cantidad": "turba",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 170,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 77
   },
   {
    "clave": "angelus",
    "cantidad": "angelus",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 169,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 51
   },
   {
    "clave": "princeps",
    "cantidad": "prī̆nceps",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "NOUN",
+   "cantidadVariable": true,
+   "conCasoEnElCorpus": 168,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 28
   },
   {
    "clave": "modo",
    "cantidad": "modō̆",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "ADV",
+   "cantidadVariable": true,
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 166,
+   "formaAtestiguada": 215
   },
   {
    "clave": "tantus",
    "cantidad": "tantus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADV",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 154,
+   "sinCasoEnElCorpus": 10,
+   "flexiona": true,
+   "formaAtestiguada": 4
   },
   {
    "clave": "gens",
    "cantidad": "gēns",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 164,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 9
   },
   {
    "clave": "genus",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "sermo",
    "cantidad": "sermō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 162,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 44
   },
   {
    "clave": "mulier",
    "cantidad": "mulier",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 161,
+   "sinCasoEnElCorpus": 1,
+   "flexiona": true,
+   "formaAtestiguada": 74
   },
   {
    "clave": "pes",
    "cantidad": "pēs",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 161,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 4
   },
   {
    "clave": "trado",
    "cantidad": "trādō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 38,
+   "sinCasoEnElCorpus": 123,
+   "formaAtestiguada": 1
   },
   {
    "clave": "reliquus",
    "cantidad": "reliquus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "DET",
+   "conCasoEnElCorpus": 160,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 0
   },
   {
    "clave": "sedeo",
    "cantidad": "sedeō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 66,
+   "sinCasoEnElCorpus": 92,
+   "formaAtestiguada": 1
   },
   {
    "clave": "peto",
    "cantidad": "petō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 26,
+   "sinCasoEnElCorpus": 131,
+   "formaAtestiguada": 7
   },
   {
    "clave": "gloria",
    "cantidad": "glōria",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 155,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 58
   },
   {
    "clave": "iudico",
    "cantidad": "iūdicō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 24,
+   "sinCasoEnElCorpus": 128,
+   "formaAtestiguada": 12
   },
   {
    "clave": "usque",
    "cantidad": "usque",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 151,
+   "formaAtestiguada": 151
   },
   {
    "clave": "potestas",
    "cantidad": "potestās",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 150,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 16
   },
   {
    "clave": "oportet",
    "cantidad": "oportet",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 148,
+   "formaAtestiguada": 84
   },
   {
    "clave": "spes",
    "cantidad": "spēs",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 146,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 42
   },
   {
    "clave": "quicumque",
    "cantidad": "quīcumque",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "DET",
+   "conCasoEnElCorpus": 145,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 52
   },
   {
    "clave": "ceterus",
    "cantidad": "cēterus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADV",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 143,
+   "sinCasoEnElCorpus": 2,
+   "flexiona": true,
+   "formaAtestiguada": 0
   },
   {
    "clave": "itaque",
    "cantidad": "itaque",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "PART",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 145,
+   "formaAtestiguada": 170
   },
   {
    "clave": "manduco",
    "cantidad": "mandūcō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 18,
+   "sinCasoEnElCorpus": 125,
+   "formaAtestiguada": 0
   },
   {
    "clave": "propheta",
    "cantidad": "prophēta",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 142,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 31
   },
   {
    "clave": "finis",
    "cantidad": "fīnis",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 141,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 16
   },
   {
    "clave": "ibi",
    "cantidad": "ibī̆",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "ADV",
+   "cantidadVariable": true,
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 140,
+   "formaAtestiguada": 140
   },
   {
    "clave": "quisquam",
    "cantidad": "quisquam",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "det",
+   "uposCorpus": "DET",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 140,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 29
   },
   {
    "clave": "nouus",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADJ"
   },
   {
    "clave": "teneo",
    "cantidad": "teneō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 20,
+   "sinCasoEnElCorpus": 118,
+   "formaAtestiguada": 3
   },
   {
    "clave": "mors",
    "cantidad": "mors",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 138,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 30
   },
   {
    "clave": "intellego",
    "cantidad": "intellegō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 11,
+   "sinCasoEnElCorpus": 127,
+   "formaAtestiguada": 11
   },
   {
    "clave": "tum",
    "cantidad": "tum",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 136,
+   "formaAtestiguada": 136
   },
   {
    "clave": "romanus",
    "cantidad": "rōmānus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 135,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 10
   },
   {
    "clave": "miles",
    "cantidad": "mīles",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 134,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 6
   },
   {
    "clave": "mille",
    "cantidad": "mīlle",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NUM",
+   "conCasoEnElCorpus": 111,
+   "sinCasoEnElCorpus": 22,
+   "flexiona": true,
+   "formaAtestiguada": 21
   },
   {
    "clave": "cor",
    "cantidad": "cōr",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 132,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 30
   },
   {
    "clave": "hora",
    "cantidad": "hōra",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 132,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 92
   },
   {
    "clave": "accedo",
    "cantidad": "accēdō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 29,
+   "sinCasoEnElCorpus": 102,
+   "formaAtestiguada": 0
   },
   {
    "clave": "uiuo",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "amen",
    "cantidad": "āmēn",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 130,
+   "formaAtestiguada": 130
   },
   {
    "clave": "iterum",
    "cantidad": "iterum",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 129,
+   "formaAtestiguada": 129
   },
   {
    "clave": "nauis",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "iter",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "iudicium",
    "cantidad": "iūdicium",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 127,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 52
   },
   {
    "clave": "diligo",
    "cantidad": "dīligō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "ADV",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 16,
+   "sinCasoEnElCorpus": 111,
+   "formaAtestiguada": 6
   },
   {
    "clave": "summus",
    "cantidad": "summus",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 125,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 5
   },
   {
    "clave": "tollo",
    "cantidad": "tollō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 19,
+   "sinCasoEnElCorpus": 106,
+   "formaAtestiguada": 0
   },
   {
    "clave": "surgo",
    "cantidad": "surgō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 35,
+   "sinCasoEnElCorpus": 89,
+   "formaAtestiguada": 0
   },
   {
    "clave": "oculus",
    "cantidad": "oculus",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 123,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 17
   },
   {
    "clave": "pax",
    "cantidad": "pāx",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 123,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 36
   },
   {
    "clave": "tres",
    "cantidad": "trēs",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "NUM",
+   "conCasoEnElCorpus": 114,
+   "sinCasoEnElCorpus": 8,
+   "flexiona": true,
+   "formaAtestiguada": 40
   },
   {
    "clave": "contra",
    "cantidad": "contrā",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 120,
+   "formaAtestiguada": 120
   },
   {
    "clave": "dum",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "SCONJ"
   },
   {
    "clave": "ratio",
    "cantidad": "ratiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 119,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 30
   },
   {
    "clave": "affero",
    "cantidad": "afferō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 20,
+   "sinCasoEnElCorpus": 99,
+   "formaAtestiguada": 0
   },
   {
    "clave": "transeo",
    "cantidad": "trānseō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 21,
+   "sinCasoEnElCorpus": 97,
+   "formaAtestiguada": 0
   },
   {
    "clave": "abeo",
    "cantidad": "abeō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 10,
+   "sinCasoEnElCorpus": 108,
+   "formaAtestiguada": 0
   },
   {
    "clave": "caro",
    "cantidad": "carō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 118,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 24
   },
   {
    "clave": "peccatum",
    "cantidad": "peccātum",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 117,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 36
   },
   {
    "clave": "occido",
    "cantidad": "occidō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 23,
+   "sinCasoEnElCorpus": 93,
+   "formaAtestiguada": 0
   },
   {
    "clave": "supra",
    "cantidad": "suprā",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADP",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 116,
+   "formaAtestiguada": 115
   },
   {
    "clave": "nescio",
    "cantidad": "nesciō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 4,
+   "sinCasoEnElCorpus": 112,
+   "formaAtestiguada": 44
   },
   {
    "clave": "recipio",
    "cantidad": "recipiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 17,
+   "sinCasoEnElCorpus": 99,
+   "formaAtestiguada": 0
   },
   {
    "clave": "ascendo",
    "cantidad": "ascendō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 28,
+   "sinCasoEnElCorpus": 87,
+   "formaAtestiguada": 2
   },
   {
    "clave": "testimonium",
    "cantidad": "testimōnium",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 115,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 101
   },
   {
    "clave": "constituo",
    "cantidad": "cōnstituō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 31,
+   "sinCasoEnElCorpus": 84,
+   "formaAtestiguada": 1
   },
   {
    "clave": "intro",
    "cantidad": "intrō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 11,
+   "sinCasoEnElCorpus": 103,
+   "formaAtestiguada": 5
   },
   {
    "clave": "consul",
    "cantidad": "cōnsul",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 114,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 25
   },
   {
    "clave": "adhuc",
    "cantidad": "adhūc",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 113,
+   "formaAtestiguada": 113
   },
   {
    "clave": "conuenio",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "panis",
    "cantidad": "pānis",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 113,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 16
   },
   {
    "clave": "reddo",
    "cantidad": "reddō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 19,
+   "sinCasoEnElCorpus": 93,
+   "formaAtestiguada": 5
   },
   {
    "clave": "uoluntas",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "maneo",
    "cantidad": "maneō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 8,
+   "sinCasoEnElCorpus": 103,
+   "formaAtestiguada": 3
   },
   {
    "clave": "os",
    "cantidad": "ōs",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 109,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 39
   },
   {
    "clave": "igitur",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "PART"
   },
   {
    "clave": "nosco",
    "cantidad": "nōscō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 15,
+   "sinCasoEnElCorpus": 92,
+   "formaAtestiguada": 0
   },
   {
    "clave": "quasi",
    "cantidad": "quasī̆",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "SCONJ",
+   "cantidadVariable": true,
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 107,
+   "formaAtestiguada": 108
   },
   {
    "clave": "ecclesia",
    "cantidad": "ecclēsia",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 107,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 28
   },
   {
    "clave": "sacerdos",
    "cantidad": "sacerdōs",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 104,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 8
   },
   {
    "clave": "oro",
    "cantidad": "ōrō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 24,
+   "sinCasoEnElCorpus": 79,
+   "formaAtestiguada": 14
   },
   {
    "clave": "medius",
    "cantidad": "medius",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 102,
+   "sinCasoEnElCorpus": 1,
+   "flexiona": true,
+   "formaAtestiguada": 5
   },
   {
    "clave": "licet",
    "cantidad": "licet",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 103,
+   "formaAtestiguada": 62
   },
   {
    "clave": "legio",
    "cantidad": "legiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 108,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 6
   },
   {
    "clave": "interrogo",
    "cantidad": "interrogō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 7,
+   "sinCasoEnElCorpus": 95,
+   "formaAtestiguada": 2
   },
   {
    "clave": "existimo",
    "cantidad": "exīstimō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 11,
+   "sinCasoEnElCorpus": 91,
+   "formaAtestiguada": 10
   },
   {
    "clave": "tertius",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADJ"
   },
   {
    "clave": "proelium",
    "cantidad": "proelium",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 102,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 32
   },
   {
    "clave": "flumen",
    "cantidad": "flūmen",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 101,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 45
   },
   {
    "clave": "numerus",
    "cantidad": "numerus",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 101,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 19
   },
   {
    "clave": "deinde",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": "adv",
+   "uposCorpus": "ADV"
   },
   {
    "clave": "praedico",
    "cantidad": "praedicō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 29,
+   "sinCasoEnElCorpus": 72,
+   "formaAtestiguada": 5
   },
   {
    "clave": "epistula",
    "cantidad": "epistula",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 101,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 33
   },
   {
    "clave": "septem",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NUM"
   },
   {
    "clave": "aperio",
    "cantidad": "aperiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 40,
+   "sinCasoEnElCorpus": 60,
+   "formaAtestiguada": 0
   },
   {
    "clave": "officium",
    "cantidad": "officium",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 100,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 23
   },
   {
    "clave": "gero",
    "cantidad": "gerō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 34,
+   "sinCasoEnElCorpus": 66,
+   "formaAtestiguada": 0
   },
   {
    "clave": "uado",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "placeo",
    "cantidad": "placeō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 9,
+   "sinCasoEnElCorpus": 90,
+   "formaAtestiguada": 2
   },
   {
    "clave": "statim",
    "cantidad": "statim",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 99,
+   "formaAtestiguada": 99
   },
   {
    "clave": "descendo",
    "cantidad": "dēscendō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 28,
+   "sinCasoEnElCorpus": 71,
+   "formaAtestiguada": 0
   },
   {
    "clave": "pharisaeus",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "paro",
    "cantidad": "parō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 25,
+   "sinCasoEnElCorpus": 73,
+   "formaAtestiguada": 0
   },
   {
    "clave": "saepe",
    "cantidad": "saepe",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 98,
+   "formaAtestiguada": 85
   },
   {
    "clave": "iustitia",
    "cantidad": "iūstitia",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 98,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 30
   },
   {
    "clave": "quantus",
    "cantidad": "quantus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADV",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 92,
+   "sinCasoEnElCorpus": 5,
+   "flexiona": true,
+   "formaAtestiguada": 4
   },
   {
    "clave": "cogito",
    "cantidad": "cōgitō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 15,
+   "sinCasoEnElCorpus": 82,
+   "formaAtestiguada": 7
   },
   {
    "clave": "anima",
    "cantidad": "anima",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 96,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 24
   },
   {
    "clave": "simul",
    "cantidad": "simul",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 95,
+   "formaAtestiguada": 95
   },
   {
    "clave": "natura",
    "cantidad": "nātūra",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 93,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 65
   },
   {
    "clave": "prouincia",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "inquam",
    "cantidad": "inquam",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 1,
+   "sinCasoEnElCorpus": 91,
+   "formaAtestiguada": 22
   },
   {
    "clave": "mensis",
    "cantidad": "mēnsis",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 92,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 9
   },
   {
    "clave": "uxor",
    "cantidad": "uxor",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 92,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 15
   },
   {
    "clave": "quattuor",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NUM"
   },
   {
    "clave": "plebs",
    "cantidad": "plēbs",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 91,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 9
   },
   {
    "clave": "saluus",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADJ"
   },
   {
    "clave": "iustus",
    "cantidad": "iūstus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 90,
+   "sinCasoEnElCorpus": 1,
+   "flexiona": true,
+   "formaAtestiguada": 13
   },
   {
    "clave": "clamo",
    "cantidad": "clāmō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 27,
+   "sinCasoEnElCorpus": 61,
+   "formaAtestiguada": 1
   },
   {
    "clave": "solus",
    "cantidad": "sōlus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 87,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 32
   },
   {
    "clave": "spero",
    "cantidad": "spērō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 9,
+   "sinCasoEnElCorpus": 78,
+   "formaAtestiguada": 33
   },
   {
    "clave": "multitudo",
    "cantidad": "multitūdō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 87,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 31
   },
   {
    "clave": "ignis",
    "cantidad": "ignis",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 85,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 31
   },
   {
    "clave": "uniuersus",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADJ"
   },
   {
    "clave": "saeculum",
    "cantidad": "saeculum",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 85,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 2
   },
   {
    "clave": "sanguis",
    "cantidad": "sanguī̆s",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "cantidadVariable": true,
+   "conCasoEnElCorpus": 84,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 18
   },
   {
    "clave": "gaudeo",
    "cantidad": "gaudeō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 24,
+   "sinCasoEnElCorpus": 60,
+   "formaAtestiguada": 19
   },
   {
    "clave": "duodecim",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NUM"
   },
   {
    "clave": "aduersus",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADP"
   },
   {
    "clave": "impleo",
    "cantidad": "impleō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 22,
+   "sinCasoEnElCorpus": 62,
+   "formaAtestiguada": 0
   },
   {
    "clave": "discedo",
    "cantidad": "discēdō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 7,
+   "sinCasoEnElCorpus": 76,
+   "formaAtestiguada": 0
   },
   {
    "clave": "oratio",
    "cantidad": "ōrātiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 83,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 10
   },
   {
    "clave": "lapis",
    "cantidad": "lapis",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 82,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 8
   },
   {
    "clave": "adduco",
    "cantidad": "addūcō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 26,
+   "sinCasoEnElCorpus": 56,
+   "formaAtestiguada": 1
   },
   {
    "clave": "bibo",
    "cantidad": "bibō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 14,
+   "sinCasoEnElCorpus": 68,
+   "formaAtestiguada": 2
   },
   {
    "clave": "coram",
    "cantidad": "cōram",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADP",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 82,
+   "formaAtestiguada": 82
   },
   {
    "clave": "paucus",
    "cantidad": "paucus",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adj",
+   "uposCorpus": "DET",
+   "conCasoEnElCorpus": 81,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 0
   },
   {
    "clave": "fugio",
    "cantidad": "fugiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 16,
+   "sinCasoEnElCorpus": 65,
+   "formaAtestiguada": 1
   },
   {
    "clave": "eques",
    "cantidad": "eques",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 81,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 1
   },
   {
    "clave": "item",
    "cantidad": "item",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 81,
+   "formaAtestiguada": 77
   },
   {
    "clave": "dignus",
    "cantidad": "dignus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 80,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 24
   },
   {
    "clave": "nego",
    "cantidad": "negō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 4,
+   "sinCasoEnElCorpus": 76,
+   "formaAtestiguada": 1
   },
   {
    "clave": "quinque",
    "cantidad": "quīnque",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "NUM",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 80,
+   "formaAtestiguada": 80
   },
   {
    "clave": "ueritas",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "arbitror",
    "cantidad": "arbitror",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 15,
+   "sinCasoEnElCorpus": 65,
+   "formaAtestiguada": 18
   },
   {
    "clave": "ullus",
    "cantidad": "ūllus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "det",
+   "uposCorpus": "DET",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 79,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 5
   },
   {
    "clave": "iniuria",
    "cantidad": "iniūria",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 79,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 24
   },
   {
    "clave": "periculum",
    "cantidad": "perīculum",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 79,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 21
   },
   {
    "clave": "solum",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": "noun",
+   "uposCorpus": "ADV"
   },
   {
    "clave": "eicio",
    "cantidad": "ēiciō",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 15,
+   "sinCasoEnElCorpus": 64,
+   "formaAtestiguada": 5
   },
   {
    "clave": "multum",
    "cantidad": "multum",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 79,
+   "formaAtestiguada": 57
   },
   {
    "clave": "refero",
    "cantidad": "referō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 22,
+   "sinCasoEnElCorpus": 56,
+   "formaAtestiguada": 2
   },
   {
    "clave": "inde",
    "cantidad": "inde",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 78,
+   "formaAtestiguada": 78
   },
   {
    "clave": "ostendo",
    "cantidad": "ostendō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 7,
+   "sinCasoEnElCorpus": 71,
+   "formaAtestiguada": 0
   },
   {
    "clave": "interficio",
    "cantidad": "interficiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 21,
+   "sinCasoEnElCorpus": 57,
+   "formaAtestiguada": 0
   },
   {
    "clave": "superus",
    "cantidad": "superus",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 76,
+   "sinCasoEnElCorpus": 1,
+   "flexiona": true,
+   "formaAtestiguada": 0
   },
   {
    "clave": "pereo",
    "cantidad": "pereō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 3,
+   "sinCasoEnElCorpus": 74,
+   "formaAtestiguada": 2
   },
   {
    "clave": "contendo",
    "cantidad": "contendō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 3,
+   "sinCasoEnElCorpus": 74,
+   "formaAtestiguada": 0
   },
   {
    "clave": "uinco",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "introeo",
    "cantidad": "introeō",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 11,
+   "sinCasoEnElCorpus": 65,
+   "formaAtestiguada": 0
   },
   {
    "clave": "conuerto",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "siue",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "CCONJ"
   },
   {
    "clave": "probo",
    "cantidad": "probō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 16,
+   "sinCasoEnElCorpus": 59,
+   "formaAtestiguada": 5
   },
   {
    "clave": "suscipio",
    "cantidad": "suscipiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 22,
+   "sinCasoEnElCorpus": 53,
+   "formaAtestiguada": 1
   },
   {
    "clave": "reuertor",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "baptizo",
    "cantidad": "baptizō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 28,
+   "sinCasoEnElCorpus": 47,
+   "formaAtestiguada": 3
   },
   {
    "clave": "cogo",
    "cantidad": "cōgō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 21,
+   "sinCasoEnElCorpus": 53,
+   "formaAtestiguada": 0
   },
   {
    "clave": "nuntio",
    "cantidad": "nūntiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 18,
+   "sinCasoEnElCorpus": 55,
+   "formaAtestiguada": 1
   },
   {
    "clave": "numquam",
    "cantidad": "numquam",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 72,
+   "formaAtestiguada": 66
   },
   {
    "clave": "senex",
    "cantidad": "senex",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 72,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 6
   },
   {
    "clave": "semen",
    "cantidad": "sēmen",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 72,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 29
   },
   {
    "clave": "numquid",
    "cantidad": "numquid",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 72,
+   "formaAtestiguada": 72
   },
   {
    "clave": "imperium",
    "cantidad": "imperium",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 72,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 25
   },
   {
    "clave": "soluo",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "uterque",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "DET"
   },
   {
    "clave": "plenus",
    "cantidad": "plēnus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 71,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 9
   },
   {
    "clave": "ualeo",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "aeternus",
    "cantidad": "aeternus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 71,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 0
   },
   {
    "clave": "perdo",
    "cantidad": "perdō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 12,
+   "sinCasoEnElCorpus": 58,
+   "formaAtestiguada": 0
   },
   {
    "clave": "oppidum",
    "cantidad": "oppidum",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 70,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 19
   },
   {
    "clave": "inimicus",
    "cantidad": "inimīcus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 70,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 11
   },
   {
    "clave": "praecipio",
    "cantidad": "praecipiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 15,
+   "sinCasoEnElCorpus": 54,
+   "formaAtestiguada": 6
   },
   {
    "clave": "soleo",
    "cantidad": "soleō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 7,
+   "sinCasoEnElCorpus": 62,
+   "formaAtestiguada": 4
   },
   {
    "clave": "pugno",
    "cantidad": "pugnō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 28,
+   "sinCasoEnElCorpus": 41,
+   "formaAtestiguada": 2
   },
   {
    "clave": "donec",
    "cantidad": "dōnec",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "SCONJ",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 69,
+   "formaAtestiguada": 68
   },
   {
    "clave": "regio",
    "cantidad": "regiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 69,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 6
   },
   {
    "clave": "apostolus",
    "cantidad": "apostolus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 69,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 12
   },
   {
    "clave": "statuo",
    "cantidad": "statuō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 7,
+   "sinCasoEnElCorpus": 62,
+   "formaAtestiguada": 1
   },
   {
    "clave": "ualde",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADV"
   },
   {
    "clave": "talis",
    "cantidad": "tālis",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "DET",
+   "conCasoEnElCorpus": 68,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 16
   },
   {
    "clave": "aduentus",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "singulus",
    "cantidad": "singulus",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 68,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 0
   },
   {
    "clave": "sabbatum",
    "cantidad": "sabbatum",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 68,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 13
   },
   {
    "clave": "sustineo",
    "cantidad": "sustineō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 4,
+   "sinCasoEnElCorpus": 63,
+   "formaAtestiguada": 0
   },
   {
    "clave": "confero",
    "cantidad": "cōnferō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 13,
+   "sinCasoEnElCorpus": 54,
+   "formaAtestiguada": 0
   },
   {
    "clave": "tantum",
    "cantidad": "tantum",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 67,
+   "formaAtestiguada": 98
   },
   {
    "clave": "euangelium",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "efficio",
    "cantidad": "efficiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 8,
+   "sinCasoEnElCorpus": 58,
+   "formaAtestiguada": 1
   },
   {
    "clave": "mos",
    "cantidad": "mōs",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 66,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 4
   },
   {
    "clave": "impero",
    "cantidad": "imperō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 19,
+   "sinCasoEnElCorpus": 47,
+   "formaAtestiguada": 0
   },
   {
    "clave": "conficio",
    "cantidad": "cōnficiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 41,
+   "sinCasoEnElCorpus": 25,
+   "flexiona": true,
+   "formaAtestiguada": 0
   },
   {
    "clave": "scriba",
    "cantidad": "scrība",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 66,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 6
   },
   {
    "clave": "daemonium",
    "cantidad": "daemonium",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 66,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 23
   },
   {
    "clave": "germani",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "diu",
    "cantidad": "diū",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 65,
+   "formaAtestiguada": 42
   },
   {
    "clave": "spatium",
    "cantidad": "spatium",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 65,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 20
   },
   {
    "clave": "operor",
    "cantidad": "operor",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 20,
+   "sinCasoEnElCorpus": 45,
+   "formaAtestiguada": 5
   },
   {
    "clave": "fortuna",
    "cantidad": "fortūna",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 64,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 28
   },
   {
    "clave": "studium",
    "cantidad": "studium",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 64,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 13
   },
   {
    "clave": "impono",
    "cantidad": "impōnō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 17,
+   "sinCasoEnElCorpus": 47,
+   "formaAtestiguada": 0
   },
   {
    "clave": "confirmo",
    "cantidad": "cōnfirmō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 23,
+   "sinCasoEnElCorpus": 41,
+   "formaAtestiguada": 2
   },
   {
    "clave": "ample",
    "cantidad": "amplē",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 64,
+   "formaAtestiguada": 0
   },
   {
    "clave": "unusquisque",
    "cantidad": "ūnusquisque",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "PRON",
+   "conCasoEnElCorpus": 64,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 32
   },
   {
    "clave": "unde",
    "cantidad": "unde",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 63,
+   "formaAtestiguada": 63
   },
   {
    "clave": "circa",
    "cantidad": "circā",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADP",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 63,
+   "formaAtestiguada": 63
   },
   {
    "clave": "lingua",
    "cantidad": "lingua",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 63,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 22
   },
   {
    "clave": "negotium",
    "cantidad": "negōtium",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 63,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 22
   },
   {
    "clave": "proximus",
    "cantidad": "proximus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 63,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 5
   },
   {
    "clave": "praesidium",
    "cantidad": "praesidium",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 63,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 11
   },
   {
    "clave": "met",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADV"
   },
   {
    "clave": "aedui",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "sententia",
    "cantidad": "sententia",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 62,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 27
   },
   {
    "clave": "praeter",
    "cantidad": "praeter",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "prep",
+   "uposCorpus": "ADP",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 62,
+   "formaAtestiguada": 62
   },
   {
    "clave": "tribunus",
    "cantidad": "tribūnus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 62,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 19
   },
   {
    "clave": "adoro",
    "cantidad": "adōrō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 4,
+   "sinCasoEnElCorpus": 58,
+   "formaAtestiguada": 0
   },
   {
    "clave": "heluetii",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "sol",
    "cantidad": "sōl",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 62,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 19
   },
   {
    "clave": "uestimentum",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "uinum",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "pecunia",
    "cantidad": "pecūnia",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 61,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 14
   },
   {
    "clave": "prohibeo",
    "cantidad": "prohibeō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 10,
+   "sinCasoEnElCorpus": 51,
+   "formaAtestiguada": 1
   },
   {
    "clave": "caritas",
    "cantidad": "cāritās",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 61,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 17
   },
   {
    "clave": "equitatus",
    "cantidad": "equitātus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 60,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 14
   },
   {
    "clave": "synagoga",
    "cantidad": "synagōga",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 60,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 18
   },
   {
    "clave": "potius",
    "cantidad": "potius",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 60,
+   "formaAtestiguada": 65
   },
   {
    "clave": "auris",
    "cantidad": "auris",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 59,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 8
   },
   {
    "clave": "miror",
    "cantidad": "mīror",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 22,
+   "sinCasoEnElCorpus": 37,
+   "formaAtestiguada": 5
   },
   {
    "clave": "secundus",
    "cantidad": "secundus",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 59,
+   "sinCasoEnElCorpus": 1,
+   "flexiona": true,
+   "formaAtestiguada": 10
   },
   {
    "clave": "moueo",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "sentio",
    "cantidad": "sentiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 4,
+   "sinCasoEnElCorpus": 54,
+   "formaAtestiguada": 5
   },
   {
    "clave": "appello",
    "cantidad": "appellō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 16,
+   "sinCasoEnElCorpus": 42,
+   "formaAtestiguada": 2
   },
   {
    "clave": "postulo",
    "cantidad": "postulō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 16,
+   "sinCasoEnElCorpus": 42,
+   "formaAtestiguada": 0
   },
   {
    "clave": "auctoritas",
    "cantidad": "auctōritās",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 58,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 12
   },
   {
    "clave": "honor",
    "cantidad": "honor",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 57,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 3
   },
   {
    "clave": "fuga",
    "cantidad": "fuga",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 57,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 32
   },
   {
    "clave": "ideo",
    "cantidad": "ideō",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 57,
+   "formaAtestiguada": 57
   },
   {
    "clave": "seruio",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "monumentum",
    "cantidad": "monumentum",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 57,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 22
   },
   {
    "clave": "accido",
    "cantidad": "accidō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 57,
+   "formaAtestiguada": 0
   },
   {
    "clave": "mandatum",
    "cantidad": "mandātum",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 57,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 27
   },
   {
    "clave": "tango",
    "cantidad": "tangō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 3,
+   "sinCasoEnElCorpus": 53,
+   "formaAtestiguada": 0
   },
   {
    "clave": "dolor",
    "cantidad": "dolor",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 56,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 11
   },
   {
    "clave": "fere",
    "cantidad": "ferē̆",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "cantidadVariable": true,
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 56,
+   "formaAtestiguada": 56
   },
   {
    "clave": "paenitentia",
    "cantidad": "paenitentia",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 56,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 5
   },
   {
    "clave": "initium",
    "cantidad": "initium",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 56,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 24
   },
   {
    "clave": "uetus",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADJ"
   },
   {
    "clave": "redeo",
    "cantidad": "redeō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 3,
+   "sinCasoEnElCorpus": 52,
+   "formaAtestiguada": 7
   },
   {
    "clave": "caecus",
    "cantidad": "caecus",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 55,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 15
   },
   {
    "clave": "impedio",
    "cantidad": "impediō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 23,
+   "sinCasoEnElCorpus": 32,
+   "formaAtestiguada": 1
   },
   {
    "clave": "nouissimus",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADJ"
   },
   {
    "clave": "desidero",
    "cantidad": "dēsīderō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 4,
+   "sinCasoEnElCorpus": 51,
+   "formaAtestiguada": 7
   },
   {
    "clave": "infero",
    "cantidad": "īnferō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 14,
+   "sinCasoEnElCorpus": 41,
+   "formaAtestiguada": 0
   },
   {
    "clave": "obses",
    "cantidad": "obses",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 55,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 0
   },
   {
    "clave": "egredior",
    "cantidad": "ēgredior",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 40,
+   "sinCasoEnElCorpus": 15,
+   "flexiona": true,
+   "formaAtestiguada": 0
   },
   {
    "clave": "altus",
    "cantidad": "altus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADV",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 53,
+   "sinCasoEnElCorpus": 1,
+   "flexiona": true,
+   "formaAtestiguada": 2
   },
   {
    "clave": "auxilium",
    "cantidad": "auxilium",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 54,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 19
   },
   {
    "clave": "lux",
    "cantidad": "lūx",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 54,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 18
   },
   {
    "clave": "frumentum",
    "cantidad": "frūmentum",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 54,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 16
   },
   {
    "clave": "eligo",
    "cantidad": "ēligō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 26,
+   "sinCasoEnElCorpus": 28,
+   "formaAtestiguada": 0
   },
   {
    "clave": "prope",
    "cantidad": "prope",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 1,
+   "sinCasoEnElCorpus": 53,
+   "formaAtestiguada": 39
   },
   {
    "clave": "semino",
    "cantidad": "sēminō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 13,
+   "sinCasoEnElCorpus": 40,
+   "formaAtestiguada": 1
   },
   {
    "clave": "diligenter",
    "cantidad": "dīligenter",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 53,
+   "formaAtestiguada": 32
   },
   {
    "clave": "diuido",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "alienus",
    "cantidad": "aliēnus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 53,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 2
   },
   {
    "clave": "audeo",
    "cantidad": "audeō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 9,
+   "sinCasoEnElCorpus": 43,
+   "formaAtestiguada": 5
   },
   {
    "clave": "incipio",
    "cantidad": "incipiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 19,
+   "sinCasoEnElCorpus": 33,
+   "formaAtestiguada": 2
   },
   {
    "clave": "silua",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "noceo",
    "cantidad": "noceō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 7,
+   "sinCasoEnElCorpus": 45,
+   "formaAtestiguada": 0
   },
   {
    "clave": "cupio",
    "cantidad": "cupiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 8,
+   "sinCasoEnElCorpus": 44,
+   "formaAtestiguada": 15
   },
   {
    "clave": "cito",
    "cantidad": "citō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "ADV",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 1,
+   "sinCasoEnElCorpus": 51,
+   "formaAtestiguada": 41
   },
   {
    "clave": "infirmus",
    "cantidad": "īnfirmus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 52,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 7
   },
   {
    "clave": "perspicio",
    "cantidad": "perspiciō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 15,
+   "sinCasoEnElCorpus": 37,
+   "formaAtestiguada": 4
   },
   {
    "clave": "omnino",
    "cantidad": "omnīnō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 52,
+   "formaAtestiguada": 52
   },
   {
    "clave": "resurgo",
    "cantidad": "resurgō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 52,
+   "formaAtestiguada": 0
   },
   {
    "clave": "emo",
    "cantidad": "emō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 11,
+   "sinCasoEnElCorpus": 40,
+   "formaAtestiguada": 1
   },
   {
    "clave": "aedifico",
    "cantidad": "aedificō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 12,
+   "sinCasoEnElCorpus": 39,
+   "formaAtestiguada": 2
   },
   {
    "clave": "uereor",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "praesto",
    "cantidad": "praestō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "VERB",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 51,
+   "formaAtestiguada": 8
   },
   {
    "clave": "congrego",
    "cantidad": "congregō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 21,
+   "sinCasoEnElCorpus": 30,
+   "formaAtestiguada": 1
   },
   {
    "clave": "nondum",
    "cantidad": "nōndum",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 50,
+   "formaAtestiguada": 50
   },
   {
    "clave": "quin",
    "cantidad": "quīn",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "SCONJ",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 50,
+   "formaAtestiguada": 50
   },
   {
    "clave": "impetus",
    "cantidad": "impetus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 50,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 12
   },
   {
    "clave": "peruenio",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "ordo",
    "cantidad": "ōrdō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 50,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 5
   },
   {
    "clave": "crucifigo",
    "cantidad": "crucifīgō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 17,
+   "sinCasoEnElCorpus": 33,
+   "formaAtestiguada": 0
   },
   {
    "clave": "committo",
    "cantidad": "committō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 15,
+   "sinCasoEnElCorpus": 34,
+   "formaAtestiguada": 1
   },
   {
    "clave": "uae",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "INTJ"
   },
   {
    "clave": "propterea",
    "cantidad": "proptereā",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 49,
+   "formaAtestiguada": 49
   },
   {
    "clave": "assumo",
    "cantidad": "assūmō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 19,
+   "sinCasoEnElCorpus": 30,
+   "formaAtestiguada": 1
   },
   {
    "clave": "gigno",
    "cantidad": "gignō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 1,
+   "sinCasoEnElCorpus": 47,
+   "formaAtestiguada": 0
   },
   {
    "clave": "postquam",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "SCONJ"
   },
   {
    "clave": "lumen",
    "cantidad": "lūmen",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 48,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 24
   },
   {
    "clave": "contineo",
    "cantidad": "contineō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 8,
+   "sinCasoEnElCorpus": 40,
+   "formaAtestiguada": 1
   },
   {
    "clave": "pecco",
    "cantidad": "peccō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 7,
+   "sinCasoEnElCorpus": 41,
+   "formaAtestiguada": 0
   },
   {
    "clave": "gratus",
    "cantidad": "grātus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 48,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 2
   },
   {
    "clave": "sapientia",
    "cantidad": "sapientia",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 48,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 24
   },
   {
    "clave": "uinea",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "iuro",
    "cantidad": "iūrō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 16,
+   "sinCasoEnElCorpus": 31,
+   "formaAtestiguada": 2
   },
   {
    "clave": "o",
    "cantidad": "ō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "INTJ",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 47,
+   "formaAtestiguada": 47
   },
   {
    "clave": "coepio",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": "verb",
+   "uposCorpus": "VERB"
   },
   {
    "clave": "aufero",
    "cantidad": "auferō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 8,
+   "sinCasoEnElCorpus": 39,
+   "formaAtestiguada": 0
   },
   {
    "clave": "decem",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NUM"
   },
   {
    "clave": "procedo",
    "cantidad": "prōcēdō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 6,
+   "sinCasoEnElCorpus": 41,
+   "formaAtestiguada": 0
   },
   {
    "clave": "pertineo",
    "cantidad": "pertineō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 1,
+   "sinCasoEnElCorpus": 46,
+   "formaAtestiguada": 0
   },
   {
    "clave": "caueo",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "postea",
    "cantidad": "posteā",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 47,
+   "formaAtestiguada": 55
   },
   {
    "clave": "iudex",
    "cantidad": "iūdex",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 47,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 7
   },
   {
    "clave": "magnitudo",
    "cantidad": "magnitūdō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 47,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 18
   },
   {
    "clave": "consequor",
    "cantidad": "cōnsequor",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 24,
+   "sinCasoEnElCorpus": 23,
+   "flexiona": true,
+   "formaAtestiguada": 0
   },
   {
    "clave": "defendo",
    "cantidad": "dēfendō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 12,
+   "sinCasoEnElCorpus": 35,
+   "formaAtestiguada": 0
   },
   {
    "clave": "accuso",
    "cantidad": "accūsō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 4,
+   "sinCasoEnElCorpus": 43,
+   "formaAtestiguada": 3
   },
   {
    "clave": "colo",
    "cantidad": "colō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 19,
+   "sinCasoEnElCorpus": 27,
+   "formaAtestiguada": 0
   },
   {
    "clave": "equus",
    "cantidad": "equus",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 46,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 5
   },
   {
    "clave": "offero",
    "cantidad": "offerō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 9,
+   "sinCasoEnElCorpus": 37,
+   "formaAtestiguada": 0
   },
   {
    "clave": "abundo",
    "cantidad": "abundō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 7,
+   "sinCasoEnElCorpus": 39,
+   "formaAtestiguada": 1
   },
   {
    "clave": "cohors",
    "cantidad": "cohors",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 46,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 3
   },
   {
    "clave": "animal",
    "cantidad": "animal",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 46,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 8
   },
   {
    "clave": "consuetudo",
    "cantidad": "cōnsuētūdō",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 46,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 10
   },
   {
    "clave": "confido",
    "cantidad": "cōnfīdō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 12,
+   "sinCasoEnElCorpus": 34,
+   "formaAtestiguada": 11
   },
   {
    "clave": "minister",
    "cantidad": "minister",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 46,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 13
   },
   {
    "clave": "excipio",
    "cantidad": "excipiō",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 17,
+   "sinCasoEnElCorpus": 28,
+   "formaAtestiguada": 0
   },
   {
    "clave": "fleo",
    "cantidad": "fleō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 18,
+   "sinCasoEnElCorpus": 27,
+   "formaAtestiguada": 0
   },
   {
    "clave": "beatus",
    "cantidad": "beātus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 45,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 14
   },
   {
    "clave": "conspectus",
    "cantidad": "cōnspectus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 45,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 1
   },
   {
    "clave": "etsi",
    "cantidad": "etsī",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "SCONJ",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 45,
+   "formaAtestiguada": 45
   },
   {
    "clave": "delecto",
    "cantidad": "dēlectō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 4,
+   "sinCasoEnElCorpus": 41,
+   "formaAtestiguada": 1
   },
   {
    "clave": "carcer",
    "cantidad": "carcer",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 45,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 1
   },
   {
    "clave": "socius",
    "cantidad": "socius",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adj",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 44,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 6
   },
   {
    "clave": "deduco",
    "cantidad": "dēdūcō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 12,
+   "sinCasoEnElCorpus": 32,
+   "formaAtestiguada": 0
   },
   {
    "clave": "soror",
    "cantidad": "soror",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 44,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 13
   },
   {
    "clave": "uehementer",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADV"
   },
   {
    "clave": "rursus",
    "cantidad": "rūrsus",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 44,
+   "formaAtestiguada": 34
   },
   {
    "clave": "ciuis",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "retineo",
    "cantidad": "retineō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 13,
+   "sinCasoEnElCorpus": 31,
+   "formaAtestiguada": 0
   },
   {
    "clave": "ob",
    "cantidad": "ob",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "prep",
+   "uposCorpus": "ADP",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 44,
+   "formaAtestiguada": 44
   },
   {
    "clave": "dubito",
    "cantidad": "dubitō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 8,
+   "sinCasoEnElCorpus": 36,
+   "formaAtestiguada": 4
   },
   {
    "clave": "ignoro",
    "cantidad": "ignōrō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 10,
+   "sinCasoEnElCorpus": 34,
+   "formaAtestiguada": 4
   },
   {
    "clave": "radix",
    "cantidad": "rādīx",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 44,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 4
   },
   {
    "clave": "qualis",
    "cantidad": "quālis",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "DET",
+   "conCasoEnElCorpus": 43,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 17
   },
   {
    "clave": "latus",
    "cantidad": "lātus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "part",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 41,
+   "sinCasoEnElCorpus": 2,
+   "flexiona": true,
+   "formaAtestiguada": 10
   },
   {
    "clave": "percutio",
    "cantidad": "percutiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 9,
+   "sinCasoEnElCorpus": 34,
+   "formaAtestiguada": 0
   },
   {
    "clave": "uix",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADV"
   },
   {
    "clave": "disco",
    "cantidad": "discō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 6,
+   "sinCasoEnElCorpus": 37,
+   "formaAtestiguada": 5
   },
   {
    "clave": "dormio",
    "cantidad": "dormiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 12,
+   "sinCasoEnElCorpus": 31,
+   "formaAtestiguada": 1
   },
   {
    "clave": "scriptura",
    "cantidad": "scrīptūra",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 43,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 18
   },
   {
    "clave": "galli",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "instituo",
    "cantidad": "īnstituō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 14,
+   "sinCasoEnElCorpus": 28,
+   "formaAtestiguada": 0
   },
   {
    "clave": "acies",
    "cantidad": "aciēs",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 42,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 8
   },
   {
    "clave": "umquam",
    "cantidad": "umquam",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 42,
+   "formaAtestiguada": 39
   },
   {
    "clave": "appareo",
    "cantidad": "appāreō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 2,
+   "sinCasoEnElCorpus": 40,
+   "formaAtestiguada": 0
   },
   {
    "clave": "ouis",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "significo",
    "cantidad": "significō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 9,
+   "sinCasoEnElCorpus": 33,
+   "formaAtestiguada": 0
   },
   {
    "clave": "glorior",
    "cantidad": "glōrior",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 5,
+   "sinCasoEnElCorpus": 37,
+   "formaAtestiguada": 1
   },
   {
    "clave": "magistratus",
    "cantidad": "magistrātus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 42,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 20
   },
   {
    "clave": "comitium",
    "cantidad": "comitium",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 42,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 1
   },
   {
    "clave": "perhibeo",
    "cantidad": "perhibeō",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 4,
+   "sinCasoEnElCorpus": 38,
+   "formaAtestiguada": 6
   },
   {
    "clave": "similiter",
    "cantidad": "similiter",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 42,
+   "formaAtestiguada": 44
   },
   {
    "clave": "sane",
    "cantidad": "sānē",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 42,
+   "formaAtestiguada": 48
   },
   {
    "clave": "mando",
    "cantidad": "mandō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 6,
+   "sinCasoEnElCorpus": 35,
+   "formaAtestiguada": 7
   },
   {
    "clave": "reperio",
    "cantidad": "reperiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 11,
+   "sinCasoEnElCorpus": 30,
+   "formaAtestiguada": 3
   },
   {
    "clave": "notus",
    "cantidad": "nōtus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 43,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 8
   },
   {
    "clave": "sumo",
    "cantidad": "sūmō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 8,
+   "sinCasoEnElCorpus": 33,
+   "formaAtestiguada": 0
   },
   {
    "clave": "defero",
    "cantidad": "dēferō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 11,
+   "sinCasoEnElCorpus": 30,
+   "formaAtestiguada": 2
   },
   {
    "clave": "educo",
    "cantidad": "ēdūcō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 11,
+   "sinCasoEnElCorpus": 30,
+   "formaAtestiguada": 0
   },
   {
    "clave": "aliquando",
    "cantidad": "aliquandō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 41,
+   "formaAtestiguada": 41
   },
   {
    "clave": "multo",
    "cantidad": "multō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 1,
+   "sinCasoEnElCorpus": 40,
+   "formaAtestiguada": 62
   },
   {
    "clave": "doctrina",
    "cantidad": "doctrīna",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 41,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 23
   },
   {
    "clave": "familiaris",
    "cantidad": "familiāris",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADV",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 40,
+   "sinCasoEnElCorpus": 1,
+   "flexiona": true,
+   "formaAtestiguada": 9
   },
   {
    "clave": "prius",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADV"
   },
   {
    "clave": "suscito",
    "cantidad": "suscitō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 3,
+   "sinCasoEnElCorpus": 38,
+   "formaAtestiguada": 0
   },
   {
    "clave": "facultas",
    "cantidad": "facultās",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 41,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 7
   },
   {
    "clave": "iaceo",
    "cantidad": "iaceō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 11,
+   "sinCasoEnElCorpus": 29,
+   "formaAtestiguada": 1
   },
   {
    "clave": "trans",
    "cantidad": "trāns",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "prep",
+   "uposCorpus": "ADP",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 40,
+   "formaAtestiguada": 40
   },
   {
    "clave": "frango",
    "cantidad": "frangō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 16,
+   "sinCasoEnElCorpus": 24,
+   "formaAtestiguada": 0
   },
   {
    "clave": "praeterea",
    "cantidad": "praetereā",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 40,
+   "formaAtestiguada": 40
   },
   {
    "clave": "plaga",
    "cantidad": "plāga",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 40,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 12
   },
   {
    "clave": "nauigo",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "persequor",
    "cantidad": "persequor",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 16,
+   "sinCasoEnElCorpus": 24,
+   "formaAtestiguada": 1
   },
   {
    "clave": "ministro",
    "cantidad": "ministrō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 7,
+   "sinCasoEnElCorpus": 33,
+   "formaAtestiguada": 2
   },
   {
    "clave": "perficio",
    "cantidad": "perficiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 14,
+   "sinCasoEnElCorpus": 26,
+   "formaAtestiguada": 2
   },
   {
    "clave": "consuesco",
    "cantidad": "cōnsuēscō",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 1,
+   "sinCasoEnElCorpus": 39,
+   "formaAtestiguada": 0
   },
   {
    "clave": "appropinquo",
    "cantidad": "appropinquō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 4,
+   "sinCasoEnElCorpus": 36,
+   "formaAtestiguada": 0
   },
   {
    "clave": "parabola",
    "cantidad": "parabola",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 40,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 3
   },
   {
    "clave": "tempto",
    "cantidad": "temptō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 10,
+   "sinCasoEnElCorpus": 30,
+   "formaAtestiguada": 0
   },
   {
    "clave": "tribulatio",
    "cantidad": "trībulātiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 40,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 5
   },
   {
    "clave": "celeriter",
    "cantidad": "celeriter",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 40,
+   "formaAtestiguada": 36
   },
   {
    "clave": "generatio",
    "cantidad": "generātiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 40,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 12
   },
   {
    "clave": "uiuus",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADJ"
   },
   {
    "clave": "concilium",
    "cantidad": "concilium",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 39,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 18
   },
   {
    "clave": "rapio",
    "cantidad": "rapiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 11,
+   "sinCasoEnElCorpus": 28,
+   "formaAtestiguada": 0
   },
   {
    "clave": "consolor",
    "cantidad": "cōnsōlor",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 12,
+   "sinCasoEnElCorpus": 27,
+   "formaAtestiguada": 2
   },
   {
    "clave": "turpis",
    "cantidad": "turpis",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 38,
+   "sinCasoEnElCorpus": 1,
+   "flexiona": true,
+   "formaAtestiguada": 4
   },
   {
    "clave": "occupo",
    "cantidad": "occupō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 17,
+   "sinCasoEnElCorpus": 22,
+   "formaAtestiguada": 0
   },
   {
    "clave": "membrum",
    "cantidad": "membrum",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 39,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 4
   },
   {
    "clave": "praetereo",
    "cantidad": "praetereō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 14,
+   "sinCasoEnElCorpus": 25,
+   "formaAtestiguada": 1
   },
   {
    "clave": "breuis",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADJ"
   },
   {
    "clave": "opinio",
    "cantidad": "opīniō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 39,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 12
   },
   {
    "clave": "colligo",
    "cantidad": "colligō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 14,
+   "sinCasoEnElCorpus": 25,
+   "formaAtestiguada": 0
   },
   {
    "clave": "euangelizo",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "effundo",
    "cantidad": "effundō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 10,
+   "sinCasoEnElCorpus": 28,
+   "formaAtestiguada": 0
   },
   {
    "clave": "dexter",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ"
   },
   {
    "clave": "circiter",
    "cantidad": "circiter",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "prep",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 38,
+   "formaAtestiguada": 38
   },
   {
    "clave": "testis",
    "cantidad": "testis",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 38,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 10
   },
   {
    "clave": "adnuntio",
    "cantidad": "adnūntiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 11,
+   "sinCasoEnElCorpus": 27,
+   "formaAtestiguada": 2
   },
   {
    "clave": "peccator",
    "cantidad": "peccātor",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 38,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 5
   },
   {
    "clave": "pario",
    "cantidad": "pariō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 13,
+   "sinCasoEnElCorpus": 24,
+   "formaAtestiguada": 0
   },
   {
    "clave": "prior",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADV"
   },
   {
    "clave": "tueor",
    "cantidad": "tueor",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 16,
+   "sinCasoEnElCorpus": 21,
+   "formaAtestiguada": 2
   },
   {
    "clave": "intra",
    "cantidad": "intrā",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "prep",
+   "uposCorpus": "ADP",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 37,
+   "formaAtestiguada": 39
   },
   {
    "clave": "uendo",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "sex",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NUM"
   },
   {
    "clave": "permitto",
    "cantidad": "permittō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 3,
+   "sinCasoEnElCorpus": 34,
+   "formaAtestiguada": 0
   },
   {
    "clave": "thronus",
    "cantidad": "thronus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 37,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 1
   },
   {
    "clave": "consummo",
    "cantidad": "cōnsummō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 11,
+   "sinCasoEnElCorpus": 26,
+   "formaAtestiguada": 0
   },
   {
    "clave": "commoueo",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "publicanus",
    "cantidad": "pūblicānus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 37,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 5
   },
   {
    "clave": "resurrectio",
    "cantidad": "resurrēctiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 37,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 6
   },
   {
    "clave": "plane",
    "cantidad": "plānē",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 37,
+   "formaAtestiguada": 40
   },
   {
    "clave": "sedes",
    "cantidad": "sēdēs",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 36,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 11
   },
   {
    "clave": "consto",
    "cantidad": "cōnstō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 1,
+   "sinCasoEnElCorpus": 35,
+   "formaAtestiguada": 0
   },
   {
    "clave": "curro",
    "cantidad": "currō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 9,
+   "sinCasoEnElCorpus": 27,
+   "formaAtestiguada": 1
   },
   {
    "clave": "possideo",
    "cantidad": "possideō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 2,
+   "sinCasoEnElCorpus": 34,
+   "formaAtestiguada": 2
   },
   {
    "clave": "forum",
    "cantidad": "forum",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 36,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 13
   },
   {
    "clave": "misceo",
    "cantidad": "misceō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 22,
+   "sinCasoEnElCorpus": 14,
+   "flexiona": true,
+   "formaAtestiguada": 0
   },
   {
    "clave": "decerno",
    "cantidad": "dēcernō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 9,
+   "sinCasoEnElCorpus": 27,
+   "formaAtestiguada": 1
   },
   {
    "clave": "perfero",
    "cantidad": "perferō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 14,
+   "sinCasoEnElCorpus": 22,
+   "formaAtestiguada": 0
   },
   {
    "clave": "depono",
    "cantidad": "dēpōnō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 10,
+   "sinCasoEnElCorpus": 26,
+   "formaAtestiguada": 0
   },
   {
    "clave": "centurio",
    "cantidad": "centuriō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 36,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 13
   },
   {
    "clave": "appr(eh)endo",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "claudo",
    "cantidad": "claudō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 16,
+   "sinCasoEnElCorpus": 19,
+   "formaAtestiguada": 0
   },
   {
    "clave": "par",
    "cantidad": "pār",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 35,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 7
   },
   {
    "clave": "ingredior",
    "cantidad": "ingredior",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 19,
+   "sinCasoEnElCorpus": 16,
+   "flexiona": true,
+   "formaAtestiguada": 1
   },
   {
    "clave": "induco",
    "cantidad": "indūcō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 14,
+   "sinCasoEnElCorpus": 21,
+   "formaAtestiguada": 0
   },
   {
    "clave": "beneficium",
    "cantidad": "beneficium",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 35,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 6
   },
   {
    "clave": "coniungo",
    "cantidad": "coniungō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 12,
+   "sinCasoEnElCorpus": 23,
+   "formaAtestiguada": 1
   },
   {
    "clave": "uiginti",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NUM"
   },
   {
    "clave": "subicio",
    "cantidad": "subiciō",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 19,
+   "sinCasoEnElCorpus": 16,
+   "flexiona": true,
+   "formaAtestiguada": 0
   },
   {
    "clave": "triginta",
    "cantidad": "trīgintā",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": null,
+   "uposCorpus": "NUM",
+   "conCasoEnElCorpus": 3,
+   "sinCasoEnElCorpus": 32,
+   "formaAtestiguada": 34
   },
   {
    "clave": "transfero",
    "cantidad": "trānsferō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 7,
+   "sinCasoEnElCorpus": 28,
+   "formaAtestiguada": 0
   },
   {
    "clave": "odium",
    "cantidad": "odium",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 35,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 5
   },
   {
    "clave": "odi",
    "cantidad": "ōdī",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 2,
+   "sinCasoEnElCorpus": 33,
+   "formaAtestiguada": 5
   },
   {
    "clave": "durus",
    "cantidad": "dūrus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 34,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 2
   },
   {
    "clave": "frons",
    "cantidad": "frōns",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 34,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 2
   },
   {
    "clave": "poena",
    "cantidad": "poena",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 34,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 8
   },
   {
    "clave": "eripio",
    "cantidad": "ēripiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 8,
+   "sinCasoEnElCorpus": 26,
+   "formaAtestiguada": 0
   },
   {
    "clave": "subito",
    "cantidad": "subitō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 34,
+   "formaAtestiguada": 40
   },
   {
    "clave": "patria",
    "cantidad": "patria",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 34,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 19
   },
   {
    "clave": "calix",
    "cantidad": "calix",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 34,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 4
   },
   {
    "clave": "merces",
    "cantidad": "mercēs",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 34,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 10
   },
   {
    "clave": "uigilo",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "stultus",
    "cantidad": "stultus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 32,
+   "sinCasoEnElCorpus": 2,
+   "flexiona": true,
+   "formaAtestiguada": 5
   },
   {
    "clave": "diues",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "ADJ"
   },
   {
    "clave": "misereor",
    "cantidad": "misereor",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 12,
+   "sinCasoEnElCorpus": 22,
+   "formaAtestiguada": 3
   },
   {
    "clave": "misericordia",
    "cantidad": "misericordia",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 34,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 12
   },
   {
    "clave": "conseruo",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "memoria",
    "cantidad": "memoria",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 34,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 14
   },
   {
    "clave": "necessarius",
    "cantidad": "necessārius",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADV",
+   "categoriaEnDisputa": true,
+   "conCasoEnElCorpus": 33,
+   "sinCasoEnElCorpus": 1,
+   "flexiona": true,
+   "formaAtestiguada": 1
   },
   {
    "clave": "foris",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "amicitia",
    "cantidad": "amīcitia",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 34,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 9
   },
   {
    "clave": "scientia",
    "cantidad": "scientia",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 34,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 17
   },
   {
    "clave": "sano",
    "cantidad": "sānō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 10,
+   "sinCasoEnElCorpus": 24,
+   "formaAtestiguada": 1
   },
   {
    "clave": "permaneo",
    "cantidad": "permaneō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 34,
+   "formaAtestiguada": 0
   },
   {
    "clave": "remitto",
    "cantidad": "remittō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 4,
+   "sinCasoEnElCorpus": 30,
+   "formaAtestiguada": 0
   },
   {
    "clave": "hortus",
    "cantidad": "hortus",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 34,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 5
   },
   {
    "clave": "pugna",
    "cantidad": "pugna",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 33,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 12
   },
   {
    "clave": "conor",
    "cantidad": "cōnor",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 13,
+   "sinCasoEnElCorpus": 20,
+   "formaAtestiguada": 1
   },
   {
    "clave": "ops",
    "cantidad": "ops",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 33,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 0
   },
   {
    "clave": "fama",
    "cantidad": "fāma",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 33,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 19
   },
   {
    "clave": "carus",
    "cantidad": "cārus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 33,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 1
   },
   {
    "clave": "familia",
    "cantidad": "familia",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 33,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 12
   },
   {
    "clave": "uoluptas",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "contemno",
    "cantidad": "contemnō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 7,
+   "sinCasoEnElCorpus": 26,
+   "formaAtestiguada": 1
   },
   {
    "clave": "honestus",
    "cantidad": "honestus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 29,
+   "sinCasoEnElCorpus": 4,
+   "flexiona": true,
+   "formaAtestiguada": 0
   },
   {
    "clave": "sapio",
    "cantidad": "sapiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 11,
+   "sinCasoEnElCorpus": 22,
+   "formaAtestiguada": 0
   },
   {
    "clave": "diligentia",
    "cantidad": "dīligentia",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 33,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 21
   },
   {
    "clave": "dignitas",
    "cantidad": "dignitās",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 33,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 2
   },
   {
    "clave": "tribus",
    "cantidad": "tribus",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 33,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 48
   },
   {
    "clave": "modicus",
    "cantidad": "modicus",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 33,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 0
   },
   {
    "clave": "desertum",
    "cantidad": "dēsertum",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 33,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 15
   },
   {
    "clave": "praesertim",
    "cantidad": "praesertim",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 33,
+   "formaAtestiguada": 33
   },
   {
    "clave": "castellum",
    "cantidad": "castellum",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 33,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 12
   },
   {
    "clave": "cogitatio",
    "cantidad": "cōgitātiō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 33,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 5
   },
   {
    "clave": "graeci",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "NOUN"
   },
   {
    "clave": "quamquam",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "SCONJ"
   },
   {
    "clave": "hinc",
    "cantidad": "hinc",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 32,
+   "formaAtestiguada": 31
   },
   {
    "clave": "conuoco",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "parens",
    "cantidad": "parēns",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 32,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 3
   },
   {
    "clave": "queror",
    "cantidad": "queror",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 8,
+   "sinCasoEnElCorpus": 24,
+   "formaAtestiguada": 0
   },
   {
    "clave": "interim",
    "cantidad": "interim",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adv",
+   "uposCorpus": "ADV",
+   "conCasoEnElCorpus": 0,
+   "sinCasoEnElCorpus": 32,
+   "formaAtestiguada": 32
   },
   {
    "clave": "considero",
    "cantidad": "cōnsīderō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 9,
+   "sinCasoEnElCorpus": 23,
+   "formaAtestiguada": 2
   },
   {
    "clave": "albus",
    "cantidad": "albus",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "adj",
+   "uposCorpus": "ADJ",
+   "conCasoEnElCorpus": 32,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 4
   },
   {
    "clave": "cibus",
    "cantidad": "cibus",
    "origen": "fuente-externa",
-   "caminos": 1
+   "caminos": 1,
+   "posFuente": "noun",
+   "uposCorpus": "NOUN",
+   "conCasoEnElCorpus": 32,
+   "sinCasoEnElCorpus": 0,
+   "flexiona": true,
+   "formaAtestiguada": 3
   },
   {
    "clave": "prouideo",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": null,
+   "uposCorpus": "VERB"
   },
   {
    "clave": "alligo",
    "cantidad": "alligō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 16,
+   "sinCasoEnElCorpus": 16,
+   "formaAtestiguada": 0
   },
   {
    "clave": "utique",
    "cantidad": null,
    "origen": "sin-dato",
-   "caminos": 0
+   "caminos": 0,
+   "posFuente": "adv",
+   "uposCorpus": "ADV"
   },
   {
    "clave": "narro",
    "cantidad": "narrō",
    "origen": "fuente-externa",
-   "caminos": 2
+   "caminos": 2,
+   "posFuente": "verb",
+   "uposCorpus": "VERB",
+   "conCasoEnElCorpus": 2,
+   "sinCasoEnElCorpus": 30,
+   "formaAtestiguada": 2
   }
  ]
 }

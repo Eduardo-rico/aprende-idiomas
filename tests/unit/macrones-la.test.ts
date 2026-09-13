@@ -129,15 +129,15 @@ describe('los dos caminos de la fuente, y cuándo NO se usa', () => {
 describe('el extractor, contra wikitexto de verdad', () => {
   it('lee las dos plantillas y encuentra la sección latina aunque empiece en 0', () => {
     const soloLatin = '==Latin==\n===Pronunciation===\n* {{la-IPA|veniō}}\n===Verb===\n{{la-verb|4.pass-impers|veniō|vēn|vent}}\n';
-    expect(macronesDe(soloLatin, 'venio')).toEqual({ ipa: 'veniō', head: 'veniō' });
+    expect(macronesDe(soloLatin, 'venio')).toEqual({ ipa: 'veniō', head: 'veniō', pos: 'verb' });
   });
 
   it('y se salta los parámetros con nombre de la plantilla de pronunciación', () => {
     const conEccl = '==Latin==\n* {{la-IPA|eccl=yes|pāx}}\n{{la-noun|pāx/pāc<3>|g=f}}\n';
-    expect(macronesDe(conEccl, 'pax')).toEqual({ ipa: 'pāx', head: 'pāx' });
+    expect(macronesDe(conEccl, 'pax')).toEqual({ ipa: 'pāx', head: 'pāx', pos: 'noun' });
   });
 
   it('y devuelve nulos donde no hay sección latina, en vez de inventar', () => {
-    expect(macronesDe('==Spanish==\n{{es-noun|f}}\n', 'paz')).toEqual({ ipa: null, head: null });
+    expect(macronesDe('==Spanish==\n{{es-noun|f}}\n', 'paz')).toEqual({ ipa: null, head: null, pos: null });
   });
 });

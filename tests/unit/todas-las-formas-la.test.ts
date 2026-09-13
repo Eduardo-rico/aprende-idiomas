@@ -46,6 +46,10 @@ const NO_PRODUCEN: Record<string, string> = {
   VOCES_LA: 'son voces de TTS',
   REFLEJOS: 'pares para el auditor de cantidad: las formas ya salen de sus lemas',
   NO_LLEVAN_ENCLITICO: 'lista de LEMAS que no admiten el enclítico; sus formas ya entran por NOMBRES_L1',
+  // Las dos mitades de INDECLINABLES_L1, que es la que el enumerador lee.
+  // Se exportan para que el test de procedencia pueda contarlas por
+  // separado, no para producir formas por su cuenta.
+  INDECLINABLES_IMPORTADOS: 'la mitad de INDECLINABLES_L1 que viene del registro de cantidad; sus formas entran por INDECLINABLES_L1',
   // El guardián cazó estas dos al entrar el subjuntivo, que es la tercera
   // vez en el día que avisa. No son tablas de material: son las etiquetas
   // de los ejes del propio módulo.

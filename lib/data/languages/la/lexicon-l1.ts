@@ -2,6 +2,9 @@
 // de paradigmas declina y conjuga. Entrada = lema + genitivo (o infinitivo),
 // que es el punto `l2-genitivo-clave`.
 import type { EntradaNominal, EntradaVerbal, EntradaAdjetivo } from './paradigma-la';
+// El registro de cantidad con su procedencia. Los indeclinables importados
+// salen de aquí y no de una lista escrita a mano: ver `INDECLINABLES_IMPORTADOS`.
+import REGISTRO from './macrones.json';
 
 export const NOMBRES_L1: EntradaNominal[] = [
   { lema: 'puella', genitivo: 'puellae', genero: 'f', glosa: 'niña' },
@@ -309,7 +312,14 @@ export const ADJETIVOS_L1: EntradaAdjetivo[] = [
 // grado es el punto `l4-grados` y su declinación —`fortior, fortius,
 // fortiōris`— no está en la máquina. Declarar las dos formas que un lote
 // necesita es honesto; fingir que la máquina las deriva no lo sería.
-export const INDECLINABLES_L1: string[] = [
+interface FilaDelRegistro {
+  clave: string; cantidad: string | null; origen: string;
+  uposCorpus?: string | null; categoriaEnDisputa?: boolean;
+  cantidadVariable?: boolean; flexiona?: boolean; formaAtestiguada?: number;
+}
+
+/** Los escritos a mano, de antes de que hubiera fuente. */
+const INDECLINABLES_A_MANO: string[] = [
   // ── PREPOSICIONES ──
   'cum', 'ex', 'ē', 'in', 'ad', 'ab', 'ā', 'dē', 'per', 'prō', 'sine', 'sub', 'ante', 'post',
   // ── ENTRAN EL 2026-09-12, por el barrido de los marcos ──
@@ -362,7 +372,56 @@ export const INDECLINABLES_L1: string[] = [
   'que', 'ne', 've',
   // ── COMPARATIVOS, formas sueltas (ver arriba) ──
   'fortior', 'sanctior',
+  // ── Y LOS IMPORTADOS, que NO se escriben aquí ──
+  //
+  // Ver `INDECLINABLES_IMPORTADOS` justo debajo: salen del registro de
+  // cantidad, no de esta lista. Escribirlos a mano habría sido volver a
+  // meter cantidades sin origen, que es de lo que se acaba de salir.
 ];
+
+/** Los indeclinables que vienen de la FUENTE EXTERNA, leídos del registro y
+ *  no escritos aquí. Que salgan de `macrones.json` no es una comodidad: es
+ *  lo que hace imposible añadir un lema sin declarar de dónde viene su
+ *  cantidad, porque el registro es el único sitio donde puede entrar.
+ *
+ *  ── LOS TRES FILTROS, Y POR QUÉ HACEN FALTA LOS TRES ─────────────
+ *
+ *  De los 77 que el corpus etiqueta como indeclinables, entran 62. Los 15
+ *  que no, cada uno lo para un camino distinto:
+ *
+ *    · 9 por CATEGORÍA — la fuente dice `adj` donde el corpus dice ADV:
+ *      `tantus`, `cēterus`, `quantus`. Es su uso adverbial, y declinan.
+ *    · 5 por CANTIDAD VARIABLE — la fuente marca mácron y breve a la vez
+ *      (`nisī̆`, `modō̆`): este lexicón guarda una forma por lema y no
+ *      puede representar eso.
+ *    · 1 por no estar ATESTIGUADA su forma de cita: `amplē` es correcto y
+ *      la fuente lo da bien, pero el corpus sólo trae `amplius`. Es la
+ *      regla propia del proyecto y la caza un test que ya existía.
+ *    · 7 por FLEXIONAR en el corpus — y éste es el que sólo ve el tercer
+ *      camino. `lātus` viene etiquetado ADV, la fuente CALLA sobre su
+ *      categoría (así que no hay contradicción que detectar), y su cantidad
+ *      es correcta. Sale 41 veces CON caso y 2 sin: es un adjetivo
+ *      declinado. Ni la cantidad ni la categoría podían cazarlo.
+ *
+ *  Un indeclinable no lleva nunca `Case=`, y eso lo dice el treebank, que
+ *  no es ni la fuente ni el lexicón. */
+export const INDECLINABLES_IMPORTADOS: string[] = (() => {
+  const INDECL = new Set(['ADV', 'ADP', 'SCONJ', 'CCONJ', 'PART', 'INTJ']);
+  const sinM = (x: string) => x.normalize('NFD').replace(/[\u0304\u0306]/g, '').normalize('NFC').toLowerCase();
+  const yaEstan = new Set(INDECLINABLES_A_MANO.map(sinM));
+  return (REGISTRO as { filas: FilaDelRegistro[] }).filas
+    .filter((f) => f.origen === 'fuente-externa'
+      && INDECL.has(f.uposCorpus ?? '')
+      && !f.categoriaEnDisputa && !f.cantidadVariable && !f.flexiona
+      // CUARTO filtro, y es la regla de la casa: ningún lema entra sin UNA
+      // sola forma atestiguada. `amplē` es latín correcto y la fuente lo da
+      // bien, pero el corpus sólo trae su comparativo `amplius`.
+      && (f.formaAtestiguada ?? 0) > 0
+      && f.cantidad !== null && !yaEstan.has(sinM(f.cantidad)))
+    .map((f) => f.cantidad as string);
+})();
+
+export const INDECLINABLES_L1: string[] = [...INDECLINABLES_A_MANO, ...INDECLINABLES_IMPORTADOS];
 
 /** Las palabras que ACABAN en `-que`, `-ne` o `-ve` sin llevar enclítico.
  *  Sin esta lista, el troceo partiría `neque` en `ne`+`que` y `quisque` en
