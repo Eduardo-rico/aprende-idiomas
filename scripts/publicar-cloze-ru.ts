@@ -29,6 +29,7 @@ import path from 'node:path';
 import { BLOCKS, ALL_CONCEPTS } from '../lib/data/languages/ru/curriculum';
 import { blocksDir } from '../lib/data/registry';
 import { hashKey } from './lib/cache';
+import { leccionParaPunto } from './lib/leccion-ru';
 import { ITEMS as A1, verificar as verificarA1, respuestaDe, alternativasDe, type ClozeRu } from './lotes/cloze-ru-a1';
 
 const LOTES: Record<string, { items: ClozeRu[]; verificar: (xs: ClozeRu[]) => string[] }> = {
@@ -66,14 +67,20 @@ ITEMS.forEach((x, i) => {
   if (!c) { problemas.push(`ítem ${i + 1}: el punto «${x.p}» no existe en el inventario`); return; }
   const bloque = BLOCKS.find((b) => b.id === c.blockId);
   if (!bloque) { problemas.push(`ítem ${i + 1}: el bloque ${c.blockId} de «${x.p}» no tiene lecciones declaradas`); return; }
-  const padres = new Set<string>([x.p, ...c.prereqs]);
-  const leccion = bloque.lessons.find((l) => (l.conceptIds ?? []).some((k) => padres.has(k))) ?? bloque.lessons[0];
-  if (!leccion) { problemas.push(`ítem ${i + 1}: el bloque ${bloque.id} no tiene lecciones`); return; }
+  // ⚠ DOS PASADAS, y la precedencia vive en `lib/leccion-ru.ts`: primero la
+  // lección que declara EL PUNTO y sólo después la que declara un
+  // prerrequisito. La expresión de una sola pasada que había aquí era correcta
+  // mientras cada bloque tuviera una lección y se volvió incorrecta EN SILENCIO
+  // al entrar b5 y b7 con dos cada uno — y el aviso de «lección por defecto»
+  // usaba el mismo predicado, así que no podía delatarlo.
+  const elegida = leccionParaPunto(bloque.lessons, x.p, c.prereqs);
+  if (!elegida) { problemas.push(`ítem ${i + 1}: el bloque ${bloque.id} no tiene lecciones`); return; }
+  const { leccion, via } = elegida;
   const answer = respuestaDe(x);
   if (!answer) { problemas.push(`ítem ${i + 1}: sin respuesta derivada`); return; }
   const data = { sentence: x.s, blanks: [{ position: 0, answer, alternatives: alternativasDe(x) }], hintEs: x.pista };
   const id = hashKey({ type: 'fill_blank', data, variantOverrides: undefined, esContrast: undefined }).slice(0, 8);
-  if (!(leccion.conceptIds ?? []).some((k) => padres.has(k))) porDefecto.push(`${id} (${x.p}) → ${leccion.id}`);
+  if (via !== 'punto') porDefecto.push(`${id} (${x.p}) → ${leccion.id} [por ${via}]`);
   const clave = x.s.toLowerCase().replace(/\s+/g, ' ').trim();
   if (yaEnCorpus.has(clave)) problemas.push(`${id}: la frase ya está publicada en ${yaEnCorpus.get(clave)}`);
   if (usados.has(clave)) problemas.push(`${id}: frase repetida dentro del lote`);
@@ -92,7 +99,7 @@ ITEMS.forEach((x, i) => {
 
 console.log(`# Publicar cloze RU-${lote} — ${ITEMS.length} ítems en ${porBloque.size} bloques\n`);
 for (const [b, xs] of [...porBloque].sort((a, c) => a[0] - c[0])) console.log(`- b${b}: ${xs.length}`);
-if (porDefecto.length) { console.log(`\n**${porDefecto.length} ítems caen en la lección por DEFECTO:**`); for (const s of porDefecto) console.log(`- ${s}`); }
+if (porDefecto.length) { console.log(`\n**${porDefecto.length} ítems NO caen en una lección que declare su punto:**`); for (const s of porDefecto) console.log(`- ${s}`); }
 if (problemas.length) { console.log(`\n**${problemas.length} PROBLEMAS — no se escribe nada:**`); for (const s of problemas) console.log(`- ${s}`); process.exit(1); }
 console.log('\nGates limpios.');
 if (!write) { console.log('DRY-RUN: el corpus no se ha tocado. Repite con --write.'); process.exit(0); }

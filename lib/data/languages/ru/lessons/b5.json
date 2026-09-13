@@ -1,0 +1,58 @@
+[
+  {
+    "id": "b5-l1-plural-genitivo-animacidad-numerales",
+    "blockId": 5,
+    "name": "Caso II: los seis casos en plural, el genitivo plural, animacidad y numerales",
+    "objectives": [
+      "El plural de los casos es la parte fácil del sistema: dativo -ам, instrumental -ами y prepositivo -ах valen para los tres géneros. Medido en la biblioteca: студентам 15 · студентами 18 · студентах 2; книгам 20 · книгами 88 · книгах 76; окнам 30 · окнами 211 · окнах 182. Por eso lo que hay que practicar no es el caso sino el TEMA: duro, blando y sibilante.",
+      "El genitivo plural es la casilla cara, y tiene tres desinencias sin regla única: -ов/-ев (студентов 41, музеев 2), -ей (рублей 1970, людей 3578, детей 1310, друзей 217) y CERO, que además hace aparecer una vocal que no estaba (окно → окон 254; сестра → сестёр, 16 apariciones con ё y 63 escritas сестер). En tus dos lenguas el plural AÑADE; aquí puede QUITAR, y eso no tiene análogo.",
+      "Y su frontera, que es donde se sobreaplica: la vocal de apoyo no entra en todos los ceros. карта → карт, 91 apariciones, y карот no sale ni una vez en la biblioteca.",
+      "La animacidad entra en la morfología: en masculino singular y en los plurales, el acusativo de lo animado toma la forma del GENITIVO y el de lo inanimado la del nominativo. Con la misma preposición на y en el mismo caso: на брата 72 y на лошадей 41 frente a на стол 547 y на окна 35. No alcanza al singular femenino, que tiene su propia forma de acusativo (сестру) o la comparte con el nominativo: на лошадь, 89 apariciones.",
+      "Dos avisos sobre lo que ya traes y sobre la dirección contraria. De la animacidad, media parte la pone el español mexicano —«veo a Juan» frente a «veo la mesa» es esta misma distinción con otra marca— y el portugués no la tiene («vejo o João»); lo que no traes es que el ruso la aplique también en plural y a los animales. Y de la lematización: volver de о студентах, к врачу, с друзьями al nominativo singular no es la operación anterior al revés, porque derivar desde el lema da una respuesta y volver desde la forma a veces da dos —студента es genitivo Y acusativo, книги es genitivo singular Y nominativo plural—, así que cuando haya dos lecturas correctas las dos cuentan.",
+      "El numeral gobierna al sustantivo, y esto no se parece a nada que traigas: 1 pide nominativo singular, 2-4 piden genitivo SINGULAR (два рубля 80, два года 291, три дня 422) y 5 o más piden genitivo plural (пять рублей 155, пять лет 260, пять минут 182). Y la frontera que desmiente «a partir de dos, plural»: el 21 vuelve al nominativo singular — двадцать один рубль, двадцать один год, 16 apariciones de двадцать один con su sustantivo detrás."
+    ],
+    "conceptIds": [
+      "u5-declinacion-plural",
+      "u5-genitivo-plural",
+      "u5-animacidad-acusativo",
+      "u5-lematizacion",
+      "u5-numerales-rigen-caso"
+    ],
+    "vocabKey": [
+      "студент",
+      "книга",
+      "окно",
+      "лошадь",
+      "брат",
+      "рубль",
+      "год"
+    ],
+    "conceptNotesPath": "b5/l1-plural-genitivo-animacidad-numerales.mdx",
+    "exerciseRefs": []
+  },
+  {
+    "id": "b5-l2-genitivo-negacion-instrumental-predicativo",
+    "blockId": 5,
+    "name": "Caso II (B1): el genitivo de negación y el instrumental predicativo",
+    "objectives": [
+      "El genitivo de negación: bajo negación el objeto alterna entre genitivo y acusativo, y el propio currículo dice que no hay regla mecánica. Las dos opciones suelen ser aceptables con distinto matiz, y la biblioteca trae las dos para el mismo verbo: не люблю этого 11 y не люблю это 1.",
+      "Donde el genitivo domina es cuando lo negado es la existencia o la disponibilidad de algo (нет времени 13, не было денег 14) y en fórmulas hechas (не имею права 38, не имел права 20, не сказал ни слова 35). No hay aquí una casilla que elegir por regla: hay tipos de predicado que se aprenden con ejemplos.",
+      "El instrumental predicativo: он был врачом frente a он врач. Y la corrección que este curso tuvo que hacerse a sí mismo, porque la primera versión de este punto decía lo contrario: quien decide NO es la permanencia de la cualidad, es el TIEMPO VERBAL.",
+      "En pasado el instrumental es la opción por defecto aunque la cualidad sea permanentísima. Medido en la biblioteca: el patrón был + sustantivo en -ом sale 392 veces, был + adjetivo en -ым/-им 312, y entre ellas был хорошим 5, был известным 1 y был русским 1, que son cualidades de las que el español pondría con «ser». En presente, donde la cópula no se dice, el predicado va en nominativo (он врач).",
+      "O sea que aquí no puedes elegir por el significado que la frase tendría en español: el corte ruso no es ser/estar, y esa es la parte de este punto que no traías hecha."
+    ],
+    "conceptIds": [
+      "u5-genitivo-negacion",
+      "u5-instrumental-predicativo"
+    ],
+    "vocabKey": [
+      "врач",
+      "право",
+      "слово",
+      "время",
+      "деньги"
+    ],
+    "conceptNotesPath": "b5/l2-genitivo-negacion-instrumental-predicativo.mdx",
+    "exerciseRefs": []
+  }
+]
