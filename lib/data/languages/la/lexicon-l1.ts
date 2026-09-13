@@ -310,6 +310,19 @@ export const INDECLINABLES_L1: string[] = [
   // palabras. Juntas, este bloque es el 13,7 % del corpus.
   'et', 'nōn', 'ut', 'autem', 'sed', 'enim', 'quia', 'quod', 'aut', 'atque',
   'nec', 'neque', 'sī', 'nē', 'quam', 'ecce', 'iam', 'tunc', 'etiam', 'quoque',
+  // ── LOS ANTICIPADORES DE LA CONSECUTIVA ──
+  //
+  // Entran porque sin ellos `l7-ut-consecutiva` NO SE PUEDE ESCRIBIR: su
+  // `varia` es «el anticipador, que es la pista», y los cinco que el punto
+  // nombra —tam, tantus, ita, sīc, adeō— no estaban ninguno. Preguntarse si
+  // el punto se puede escribir antes de escribirlo es §1.sexdecies del
+  // relevo, y la respuesta era que no.
+  //
+  // Entran los tres frecuentes, medidos en el corpus: `ita` ×379, `sīc`
+  // ×282, `tam` ×130 — más que varios nombres que ya están en L1. `adeō`
+  // (×7), `tālis` (×16) y `tot` (×9) se quedan fuera por raros, y `tantus`
+  // porque es un adjetivo y declina: meterlo es una decisión aparte.
+  'tam', 'ita', 'sīc',
   // ── ENCLÍTICOS ──
   //
   // `-que` no se separa por espacios: va pegado (`populusque`). No basta
