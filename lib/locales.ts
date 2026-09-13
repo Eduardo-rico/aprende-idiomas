@@ -84,6 +84,61 @@ export interface LangChrome {
   };
 }
 
+/** Prosa de la PÁGINA DE LECCIÓN, por lengua.
+ *
+ *  Existe porque estaba escrita a mano EN PORTUGUÉS dentro de
+ *  `loaders.ts` y de la propia página, y se servía a las seis lenguas:
+ *  una lección de ruso le mostraba al alumno «Ouça as duas variantes e
+ *  note a diferença de cadência e timbre», que además de estar en otro
+ *  idioma **habla de un hecho del portugués** —sus dos variantes— que el
+ *  ruso no tiene. No era sólo un fallo de traducción: era una afirmación
+ *  falsa sobre la lengua que se estudia.
+ *
+ *  Sigue la convención declarada arriba: la prosa EXPLICATIVA va en
+ *  español, porque el alumno es hispanohablante; el chrome va en la
+ *  lengua meta y vive en `LANG_CHROME`. Estas cadenas son prosa.
+ *
+ *  `variantes` es `null` cuando la lengua no tiene dos variantes que
+ *  contrastar, y entonces la página NO pinta la sección de audio
+ *  comparado. Es un dato, no una omisión: el portugués es la única con
+ *  dos normas cultas en el proyecto. */
+export interface LangLeccion {
+  /** Párrafo de cuerpo. Vacío cuando no hay nada cierto que decir. */
+  cuerpo: string;
+  /** Relleno de `firstParagraph` cuando la lección no trae objetivos. */
+  sinContenido: (leccion: string) => string;
+  ejemplo: (palabra: string) => string;
+  capitulo: (n: number, bloque: string) => string;
+  /** Etiquetas del audio comparado, o `null` si no hay dos variantes. */
+  variantes: { intro: string; a: string; b: string } | null;
+}
+
+const SIN_VARIANTES = {
+  sinContenido: (l: string) => `El contenido de la lección ${l} está en camino.`,
+  ejemplo: (p: string) => `Ejemplo con «${p}»`,
+  capitulo: (n: number, b: string) => `Capítulo ${n} — ${b}`,
+  variantes: null,
+};
+
+export const LANG_LECCION: Record<LanguageId, LangLeccion> = {
+  pt: {
+    cuerpo: "Ouça as duas variantes e note a diferença de cadência e timbre.",
+    sinContenido: (l) => `Conteúdo da lição ${l} em breve.`,
+    ejemplo: (p) => `Exemplo com «${p}»`,
+    capitulo: (n, b) => `Capítulo ${n} — ${b}`,
+    variantes: {
+      intro: "Ouça as duas variantes e note a diferença de cadência:",
+      a: "PT-BR",
+      b: "PT-PT",
+    },
+  },
+  ro: { ...SIN_VARIANTES, cuerpo: "" },
+  cs: { ...SIN_VARIANTES, cuerpo: "" },
+  ru: { ...SIN_VARIANTES, cuerpo: "" },
+  la: { ...SIN_VARIANTES, cuerpo: "" },
+  grc: { ...SIN_VARIANTES, cuerpo: "" },
+};
+
 export const LANG_CHROME: Record<LanguageId, LangChrome> = {
   pt: {
     title: "Aprende Português",

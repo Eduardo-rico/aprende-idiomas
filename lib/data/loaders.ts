@@ -11,7 +11,7 @@
 // ni historia.
 import path from 'node:path';
 import { promises as fs } from 'node:fs';
-import type { LanguageId } from '@/lib/locales';
+import { LANG_LECCION, type LanguageId } from '@/lib/locales';
 import {
   blocksDir, storiesDir, manifestFile, vocabCatalogFile,
   diagnosticFile, conceptsFile, langExists, lessonsDir, cefrFile,
@@ -486,6 +486,10 @@ export interface LessonViewModel {
     "pt-br": Array<{ url: string; hash: string; voice: string }>;
     "pt-pt": Array<{ url: string; hash: string; voice: string }>;
   };
+  /** Etiquetas del audio comparado, o `null` si la lengua no tiene dos
+   *  variantes que contrastar. La página no pinta esa sección si es
+   *  `null`: el portugués es la única del proyecto con dos normas. */
+  variantes: { intro: string; a: string; b: string } | null;
   /** Margin notes rendered in the right column. */
   marginNotes: Array<{
     variant: "tip" | "warn" | "es" | "variant";
@@ -547,22 +551,22 @@ export async function loadLesson(
   const lessonNumberMatch = lesson.id.match(/-l(\d+)-/);
   const lessonNumber = lessonNumberMatch ? Number(lessonNumberMatch[1]) : lessonIndexInBlock + 1;
 
+  const prosa = LANG_LECCION[lang];
+
   return {
     lessonId: lesson.id,
     blockId: lesson.blockId,
     blockName: block.name,
     lessonNumber,
     title: entry?.title ?? lesson.name,
-    firstParagraph:
-      lesson.objectives[0] ??
-      `Conteúdo da lição ${lesson.name} em breve — gerado pelo orquestrador.`,
+    firstParagraph: lesson.objectives[0] ?? prosa.sinContenido(lesson.name),
     conjugation: [],
-    bodyParagraph:
-      "Ouça as duas variantes e note a diferença de cadência e timbre.",
+    bodyParagraph: prosa.cuerpo,
     quoteText: lesson.vocabKey[0]
-      ? `Exemplo com "${lesson.vocabKey[0]}"`
+      ? prosa.ejemplo(lesson.vocabKey[0])
       : lesson.name,
-    quoteCite: `Capítulo ${chapterNum} — ${block.name}`,
+    quoteCite: prosa.capitulo(chapterNum, block.name),
+    variantes: prosa.variantes,
     audioRefs: {
       "pt-br": brRefs.map((r) => ({
         url: `/audio/${r.hash}.mp3`,

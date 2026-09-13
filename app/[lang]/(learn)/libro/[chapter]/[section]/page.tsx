@@ -91,23 +91,32 @@ export default async function LessonPage({ params }: PageProps) {
               <ConjugationTable rows={lesson.conjugation} />
             )}
 
-            <p>{lesson.bodyParagraph}</p>
+            {lesson.bodyParagraph && <p>{lesson.bodyParagraph}</p>}
 
             <PullQuote cite={lesson.quoteCite}>{lesson.quoteText}</PullQuote>
 
-            <p>Ouça as duas variantes e note a diferença de cadência:</p>
-            <div className="my-2 flex flex-wrap gap-2">
-              <LessonAudioChip
-                label={`"${lesson.quoteText}" — PT-BR`}
-                audioUrl={brAudio}
-                variant="br"
-              />
-              <LessonAudioChip
-                label={`"${lesson.quoteText}" — PT-PT`}
-                audioUrl={ptAudio}
-                variant="pt"
-              />
-            </div>
+            {/* Sección de audio comparado: SÓLO si la lengua tiene dos
+                variantes que contrastar. Estaba escrita a mano en
+                portugués y se pintaba en las seis lenguas, así que una
+                lección de ruso ofrecía dos botones «PT-BR» y «PT-PT»
+                sin audio detrás. Las etiquetas vienen de LANG_LECCION. */}
+            {lesson.variantes && (
+              <>
+                <p>{lesson.variantes.intro}</p>
+                <div className="my-2 flex flex-wrap gap-2">
+                  <LessonAudioChip
+                    label={`"${lesson.quoteText}" — ${lesson.variantes.a}`}
+                    audioUrl={brAudio}
+                    variant="br"
+                  />
+                  <LessonAudioChip
+                    label={`"${lesson.quoteText}" — ${lesson.variantes.b}`}
+                    audioUrl={ptAudio}
+                    variant="pt"
+                  />
+                </div>
+              </>
+            )}
 
             <Link
               // La ruta de práctica es `/[lang]/practice/[lessonId]` y el
