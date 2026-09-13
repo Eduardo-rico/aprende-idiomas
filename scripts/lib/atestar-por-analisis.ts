@@ -37,14 +37,15 @@ const SALIDA = 'lib/data/languages/la/atestacion-por-analisis.json';
 
 /** Los análisis que este proyecto distingue. No es la lista de UD entera:
  *  es la de los puntos que hay o habrá, y crece cuando llegue el que falte. */
-export type Analisis = 'ind' | 'sub' | 'imp' | 'inf' | 'part' | 'ger' | 'sup' | 'nominal' | 'otro';
+export type Analisis = 'ind' | 'sub' | 'imp' | 'inf' | 'part' | 'ger' | 'sup' | 'nominal' | 'otro'
+  | 'partPres' | 'partPast' | 'partFut';
 
 export function analisisDe(feats: string, upos: string): Analisis {
   if (/Mood=Sub/.test(feats)) return 'sub';
   if (/Mood=Imp/.test(feats)) return 'imp';
   if (/Mood=Ind/.test(feats)) return 'ind';
   if (/VerbForm=Inf/.test(feats)) return 'inf';
-  if (/VerbForm=Part/.test(feats)) return 'part';
+  if (/VerbForm=Part/.test(feats)) return 'part';   // el tiempo se añade aparte
   if (/VerbForm=Ger/.test(feats)) return 'ger';
   if (/VerbForm=Sup/.test(feats)) return 'sup';
   if (['NOUN', 'PROPN', 'ADJ', 'PRON', 'DET', 'NUM'].includes(upos)) return 'nominal';
@@ -61,9 +62,18 @@ export function contarPorAnalisis(dir = DIR): { tabla: Map<string, Record<string
       if (c.length < 6 || c[0]!.includes('-') || c[0]!.includes('.')) continue;
       tokens++;
       const k = sinCantidad(c[1]!);
-      const a = analisisDe(c[5] ?? '', c[3] ?? '');
+      const fe = c[5] ?? '';
+      const a = analisisDe(fe, c[3] ?? '');
       const fila = tabla.get(k) ?? {};
       fila[a] = (fila[a] ?? 0) + 1;
+      // Los tres participios son un punto del currículo (`l8-tres-participios`)
+      // y `part` a secas no los separa: el de presente, el de perfecto y el
+      // de futuro son tres formas distintas con tres valores distintos.
+      if (a === 'part') {
+        const t = fe.match(/Tense=(\w+)/)?.[1] ?? '';
+        const k2 = t === 'Pres' ? 'partPres' : t === 'Past' ? 'partPast' : t === 'Fut' ? 'partFut' : null;
+        if (k2) fila[k2] = (fila[k2] ?? 0) + 1;
+      }
       tabla.set(k, fila);
     }
   }
@@ -80,6 +90,11 @@ async function main() {
     if (fila) salida[f.forma] = fila;
   }
   const conSub = Object.values(salida).filter((r) => (r.sub ?? 0) > 0).length;
+  const porParticipio = {
+    presente: Object.values(salida).filter((r) => (r.partPres ?? 0) > 0).length,
+    perfecto: Object.values(salida).filter((r) => (r.partPast ?? 0) > 0).length,
+    futuro: Object.values(salida).filter((r) => (r.partFut ?? 0) > 0).length,
+  };
   fs.writeFileSync(SALIDA, `${JSON.stringify({
     generado: new Date().toISOString().slice(0, 10),
     corpus: 'UD Latin (scripts/.cache/treebanks)',
@@ -87,8 +102,10 @@ async function main() {
     formasDelDominio: todasLasFormasDeL1().length,
     formasAtestiguadas: Object.keys(salida).length,
     formasAtestiguadasComoSubjuntivo: conSub,
+    formasAtestiguadasPorParticipio: porParticipio,
     tabla: salida,
   }, null, 1)}\n`);
-  console.log(`${SALIDA}: ${Object.keys(salida).length} formas atestiguadas de ${todasLasFormasDeL1().length} · ${conSub} con alguna aparición como subjuntivo · ${tokens} tokens`);
+  console.log(`${SALIDA}: ${Object.keys(salida).length} formas atestiguadas de ${todasLasFormasDeL1().length} · ${conSub} como subjuntivo · ${tokens} tokens`);
+  console.log(`  participios: presente ${porParticipio.presente} · perfecto ${porParticipio.perfecto} · futuro ${porParticipio.futuro}`);
 }
 main();

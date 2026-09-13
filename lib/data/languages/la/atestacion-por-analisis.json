@@ -5,6 +5,11 @@
  "formasDelDominio": 9231,
  "formasAtestiguadas": 2463,
  "formasAtestiguadasComoSubjuntivo": 448,
+ "formasAtestiguadasPorParticipio": {
+  "presente": 97,
+  "perfecto": 104,
+  "futuro": 43
+ },
  "tabla": {
   "cum": {
    "otro": 2263
@@ -63,6 +68,7 @@
    "ind": 4,
    "sub": 5,
    "inf": 1,
+   "partPast": 2,
    "ger": 1
   },
   "semper": {
@@ -1091,7 +1097,8 @@
   },
   "manū": {
    "nominal": 67,
-   "part": 3
+   "part": 3,
+   "partPast": 3
   },
   "manuum": {
    "nominal": 3
@@ -1206,7 +1213,8 @@
   },
   "exercitum": {
    "nominal": 59,
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "exercitūs": {
    "nominal": 31
@@ -1757,7 +1765,8 @@
   },
   "ventum": {
    "nominal": 4,
-   "part": 6
+   "part": 6,
+   "partPast": 6
   },
   "respondēs": {
    "ind": 5
@@ -1815,7 +1824,8 @@
   },
   "respōnsum": {
    "nominal": 8,
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "ambulō": {
    "ind": 1
@@ -1863,7 +1873,8 @@
    "ind": 2
   },
   "habitō": {
-   "part": 2
+   "part": 2,
+   "partPast": 2
   },
   "habitās": {
    "ind": 2
@@ -2061,7 +2072,8 @@
    "sub": 1
   },
   "habitum": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "faciō": {
    "ind": 35
@@ -2162,7 +2174,8 @@
   },
   "factum": {
    "nominal": 9,
-   "part": 168
+   "part": 168,
+   "partPast": 166
   },
   "capiō": {
    "ind": 1
@@ -2210,7 +2223,8 @@
    "sub": 2
   },
   "captum": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "doceō": {
    "ind": 2
@@ -2374,7 +2388,8 @@
   },
   "dictum": {
    "nominal": 5,
-   "part": 42
+   "part": 42,
+   "partPast": 41
   },
   "stō": {
    "ind": 5
@@ -2521,6 +2536,7 @@
   },
   "rogātum": {
    "part": 2,
+   "partPast": 2,
    "sup": 1
   },
   "sum": {
@@ -2683,6 +2699,7 @@
   },
   "vocātis": {
    "part": 9,
+   "partPast": 9,
    "ind": 2
   },
   "vocant": {
@@ -2722,7 +2739,8 @@
    "ind": 1
   },
   "vocātum": {
-   "part": 2
+   "part": 2,
+   "partPast": 2
   },
   "laudō": {
    "ind": 6
@@ -2764,7 +2782,8 @@
    "ind": 7
   },
   "salūtātis": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "salūtant": {
    "ind": 9
@@ -2929,6 +2948,7 @@
   "vīsum": {
    "part": 16,
    "nominal": 8,
+   "partPast": 15,
    "sup": 1
   },
   "timeō": {
@@ -3071,7 +3091,8 @@
    "sub": 1
   },
   "ductum": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "mittō": {
    "ind": 16
@@ -3153,7 +3174,8 @@
    "ind": 1
   },
   "missum": {
-   "part": 10
+   "part": 10,
+   "partPast": 8
   },
   "legō": {
    "ind": 2
@@ -3210,7 +3232,8 @@
   },
   "audītis": {
    "ind": 11,
-   "part": 6
+   "part": 6,
+   "partPast": 6
   },
   "audiunt": {
    "ind": 13
@@ -3256,6 +3279,7 @@
   },
   "audītum": {
    "part": 3,
+   "partPast": 3,
    "nominal": 3
   },
   "inveniō": {
@@ -3327,7 +3351,8 @@
   },
   "inventum": {
    "nominal": 1,
-   "part": 3
+   "part": 3,
+   "partPast": 3
   },
   "custōdīs": {
    "nominal": 1
@@ -3336,7 +3361,8 @@
    "ind": 6
   },
   "custōdītis": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "custōdiunt": {
    "ind": 4
@@ -4188,7 +4214,8 @@
    "ind": 3
   },
   "datis": {
-   "part": 6
+   "part": 6,
+   "partPast": 5
   },
   "dant": {
    "ind": 4
@@ -6581,7 +6608,8 @@
    "imp": 4
   },
   "habitā": {
-   "part": 5
+   "part": 5,
+   "partPast": 4
   },
   "labōrā": {
    "imp": 1
@@ -6717,25 +6745,32 @@
    "nominal": 9
   },
   "ventūrus": {
-   "part": 24
+   "part": 24,
+   "partFut": 24
   },
   "ventūrum": {
-   "part": 6
+   "part": 6,
+   "partFut": 6
   },
   "ventūrī": {
-   "part": 3
+   "part": 3,
+   "partFut": 2
   },
   "ventūrō": {
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "ventūrōs": {
-   "part": 5
+   "part": 5,
+   "partFut": 4
   },
   "ventūra": {
-   "part": 7
+   "part": 7,
+   "partFut": 7
   },
   "ventūrā": {
-   "part": 7
+   "part": 7,
+   "partFut": 7
   },
   "respōnsō": {
    "nominal": 4
@@ -6750,7 +6785,8 @@
    "nominal": 1
   },
   "respōnsūrum": {
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "ambulātīs": {
    "ind": 2
@@ -6762,17 +6798,20 @@
    "ind": 4
   },
   "habitātūra": {
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "habitātūrā": {
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "labōrātīs": {
    "ind": 1
   },
   "tacitī": {
    "part": 2,
-   "nominal": 1
+   "nominal": 1,
+   "partPast": 1
   },
   "tacitō": {
    "nominal": 1
@@ -6794,84 +6833,107 @@
   },
   "habitus": {
    "nominal": 1,
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "habitī": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "habitōs": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "habitīs": {
    "part": 1
   },
   "habita": {
-   "part": 5
+   "part": 5,
+   "partPast": 4
   },
   "habitae": {
    "part": 1
   },
   "habitūrus": {
-   "part": 2
+   "part": 2,
+   "partFut": 2
   },
   "habitūrum": {
-   "part": 4
+   "part": 4,
+   "partFut": 3
   },
   "habitūra": {
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "habitūrā": {
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "factus": {
-   "part": 78
+   "part": 78,
+   "partPast": 77
   },
   "factī": {
-   "part": 33
+   "part": 33,
+   "partPast": 33
   },
   "factō": {
    "nominal": 3,
-   "part": 31
+   "part": 31,
+   "partPast": 29
   },
   "factōs": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "factōrum": {
    "nominal": 3,
-   "part": 3
+   "part": 3,
+   "partPast": 3
   },
   "factīs": {
    "part": 6,
-   "nominal": 5
+   "nominal": 5,
+   "partPast": 5
   },
   "facta": {
    "part": 119,
-   "nominal": 6
+   "nominal": 6,
+   "partPast": 115
   },
   "factam": {
-   "part": 4
+   "part": 4,
+   "partPast": 4
   },
   "factae": {
-   "part": 22
+   "part": 22,
+   "partPast": 22
   },
   "factā": {
    "part": 119,
-   "nominal": 6
+   "nominal": 6,
+   "partPast": 115
   },
   "factās": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "factūrus": {
-   "part": 8
+   "part": 8,
+   "partFut": 8
   },
   "factūrum": {
-   "part": 15
+   "part": 15,
+   "partFut": 13
   },
   "factūrī": {
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "factūrōs": {
-   "part": 3
+   "part": 3,
+   "partFut": 3
   },
   "factūra": {
    "part": 1,
@@ -6885,32 +6947,40 @@
    "nominal": 1
   },
   "factūrās": {
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "captus": {
    "part": 4,
+   "partPast": 3,
    "nominal": 1
   },
   "captī": {
-   "part": 2
+   "part": 2,
+   "partPast": 2
   },
   "captō": {
-   "part": 3
+   "part": 3,
+   "partPast": 3
   },
   "captōs": {
-   "part": 2
+   "part": 2,
+   "partPast": 2
   },
   "captōrum": {
    "part": 1
   },
   "captīs": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "capta": {
-   "part": 5
+   "part": 5,
+   "partPast": 3
   },
   "captā": {
-   "part": 5
+   "part": 5,
+   "partPast": 3
   },
   "captūra": {
    "nominal": 2
@@ -6922,10 +6992,12 @@
    "nominal": 2
   },
   "doctus": {
-   "part": 2
+   "part": 2,
+   "partPast": 1
   },
   "doctī": {
    "part": 1,
+   "partPast": 1,
    "nominal": 1
   },
   "doctō": {
@@ -6935,25 +7007,30 @@
    "nominal": 1
   },
   "doctōrum": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "doctīs": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "doctae": {
    "part": 1
   },
   "doctūrus": {
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "dictus": {
-   "part": 3
+   "part": 3,
+   "partPast": 2
   },
   "dictī": {
    "part": 1
   },
   "dictō": {
    "part": 3,
+   "partPast": 3,
    "nominal": 3
   },
   "dictōs": {
@@ -6964,25 +7041,31 @@
    "nominal": 3
   },
   "dictīs": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "dicta": {
    "nominal": 2,
-   "part": 12
+   "part": 12,
+   "partPast": 12
   },
   "dictae": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "dictā": {
    "nominal": 2,
-   "part": 12
+   "part": 12,
+   "partPast": 12
   },
   "dictūrus": {
-   "part": 2
+   "part": 2,
+   "partFut": 1
   },
   "status": {
    "nominal": 12,
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "state": {
    "imp": 5
@@ -7009,13 +7092,16 @@
    "nominal": 1
   },
   "cāsūrum": {
-   "part": 2
+   "part": 2,
+   "partFut": 2
   },
   "rogātus": {
-   "part": 6
+   "part": 6,
+   "partPast": 4
   },
   "rogātī": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "rogāta": {
    "part": 2
@@ -7024,59 +7110,72 @@
    "part": 2
   },
   "futūrus": {
-   "part": 10
+   "part": 10,
+   "partFut": 10
   },
   "futūrum": {
    "nominal": 2,
-   "part": 20
+   "part": 20,
+   "partFut": 20
   },
   "futūrī": {
    "nominal": 1,
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "futūrō": {
    "nominal": 4
   },
   "futūrōs": {
-   "part": 4
+   "part": 4,
+   "partFut": 4
   },
   "futūrōrum": {
    "nominal": 1,
-   "part": 2
+   "part": 2,
+   "partFut": 2
   },
   "futūrīs": {
    "nominal": 1
   },
   "futūra": {
    "part": 10,
+   "partFut": 8,
    "nominal": 4
   },
   "futūram": {
    "part": 7,
+   "partFut": 6,
    "nominal": 1
   },
   "futūrae": {
    "nominal": 1,
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "futūrā": {
    "part": 10,
+   "partFut": 8,
    "nominal": 4
   },
   "futūrārum": {
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "vocātus": {
-   "part": 12
+   "part": 12,
+   "partPast": 12
   },
   "vocātī": {
-   "part": 11
+   "part": 11,
+   "partPast": 11
   },
   "vocātōs": {
    "part": 1
   },
   "vocātīs": {
    "part": 9,
+   "partPast": 9,
    "ind": 2
   },
   "laudātīs": {
@@ -7092,107 +7191,139 @@
    "part": 1
   },
   "salūtātīs": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "exspectātō": {
    "imp": 1
   },
   "exspectātās": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "vīsus": {
-   "part": 13
+   "part": 13,
+   "partPast": 12
   },
   "vīsī": {
-   "part": 2
+   "part": 2,
+   "partPast": 2
   },
   "vīsō": {
-   "part": 8
+   "part": 8,
+   "partPast": 8
   },
   "vīsīs": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "vīsa": {
-   "part": 13
+   "part": 13,
+   "partPast": 10
   },
   "vīsae": {
-   "part": 2
+   "part": 2,
+   "partPast": 1
   },
   "vīsā": {
-   "part": 13
+   "part": 13,
+   "partPast": 10
   },
   "vīsūrus": {
-   "part": 5
+   "part": 5,
+   "partFut": 5
   },
   "vīsūrum": {
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "vīsūrī": {
-   "part": 3
+   "part": 3,
+   "partFut": 3
   },
   "monitus": {
-   "part": 3
+   "part": 3,
+   "partPast": 1
   },
   "monitīs": {
    "nominal": 1,
    "part": 2
   },
   "ductus": {
-   "part": 4
+   "part": 4,
+   "partPast": 4
   },
   "ductōs": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "ductīs": {
-   "part": 2
+   "part": 2,
+   "partPast": 1
   },
   "ducta": {
-   "part": 2
+   "part": 2,
+   "partPast": 2
   },
   "ductā": {
-   "part": 2
+   "part": 2,
+   "partPast": 2
   },
   "ductūrum": {
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "missus": {
-   "part": 22
+   "part": 22,
+   "partPast": 22
   },
   "missī": {
-   "part": 14
+   "part": 14,
+   "partPast": 14
   },
   "missō": {
-   "part": 2
+   "part": 2,
+   "partPast": 2
   },
   "missīs": {
-   "part": 7
+   "part": 7,
+   "partPast": 7
   },
   "missa": {
-   "part": 7
+   "part": 7,
+   "partPast": 7
   },
   "missam": {
-   "part": 2
+   "part": 2,
+   "partPast": 2
   },
   "missae": {
-   "part": 2
+   "part": 2,
+   "partPast": 2
   },
   "missā": {
-   "part": 7
+   "part": 7,
+   "partPast": 7
   },
   "missās": {
-   "part": 2
+   "part": 2,
+   "partPast": 2
   },
   "missūrus": {
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "missūrum": {
-   "part": 3
+   "part": 3,
+   "partFut": 3
   },
   "missūrī": {
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "missūrōs": {
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "lēctō": {
    "nominal": 7
@@ -7207,261 +7338,343 @@
    "nominal": 1
   },
   "lēcta": {
-   "part": 3
+   "part": 3,
+   "partPast": 2
   },
   "lēctae": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "lēctā": {
-   "part": 3
+   "part": 3,
+   "partPast": 2
   },
   "lēctās": {
    "part": 1
   },
   "audītus": {
    "nominal": 3,
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "audītō": {
-   "part": 15
+   "part": 15,
+   "partPast": 15
   },
   "audītīs": {
    "ind": 11,
-   "part": 6
+   "part": 6,
+   "partPast": 6
   },
   "audīta": {
-   "part": 2
+   "part": 2,
+   "partPast": 2
   },
   "audītā": {
-   "part": 2
+   "part": 2,
+   "partPast": 2
   },
   "audītūrus": {
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "audītūrī": {
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "inventus": {
-   "part": 11
+   "part": 11,
+   "partPast": 11
   },
   "inventī": {
-   "part": 2
+   "part": 2,
+   "partPast": 2
   },
   "inventō": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "inventīs": {
-   "part": 4
+   "part": 4,
+   "partPast": 4
   },
   "inventa": {
-   "part": 3
+   "part": 3,
+   "partPast": 2
   },
   "inventae": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "inventā": {
-   "part": 3
+   "part": 3,
+   "partPast": 2
   },
   "inventūrī": {
    "part": 1
   },
   "custōdītus": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "custōdītīs": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "portātam": {
-   "part": 1
+   "part": 1,
+   "partPast": 1
   },
   "portātūrī": {
-   "part": 1
+   "part": 1,
+   "partFut": 1
   },
   "veniēns": {
-   "part": 21
+   "part": 21,
+   "partPres": 21
   },
   "venientem": {
-   "part": 13
+   "part": 13,
+   "partPres": 13
   },
   "venientēs": {
-   "part": 11
+   "part": 11,
+   "partPres": 11
   },
   "veniente": {
-   "part": 2
+   "part": 2,
+   "partPres": 2
   },
   "respondēns": {
-   "part": 107
+   "part": 107,
+   "partPres": 107
   },
   "respondentēs": {
-   "part": 7
+   "part": 7,
+   "partPres": 7
   },
   "ambulāns": {
-   "part": 7
+   "part": 7,
+   "partPres": 7
   },
   "ambulantem": {
-   "part": 5
+   "part": 5,
+   "partPres": 5
   },
   "ambulantēs": {
-   "part": 6
+   "part": 6,
+   "partPres": 6
   },
   "ambulantium": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "ambulantibus": {
-   "part": 2
+   "part": 2,
+   "partPres": 2
   },
   "ambulante": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "habitantī": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "habitantēs": {
-   "part": 4
+   "part": 4,
+   "partPres": 4
   },
   "habitantibus": {
-   "part": 6
+   "part": 6,
+   "partPres": 6
   },
   "labōrantī": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "labōrantēs": {
-   "part": 4
+   "part": 4,
+   "partPres": 4
   },
   "labōrantibus": {
-   "part": 2
+   "part": 2,
+   "partPres": 1
   },
   "tacēns": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "tacente": {
-   "part": 2
+   "part": 2,
+   "partPres": 2
   },
   "habēns": {
-   "part": 54
+   "part": 54,
+   "partPres": 52
   },
   "habentem": {
-   "part": 26
+   "part": 26,
+   "partPres": 23
   },
   "habentis": {
-   "part": 3
+   "part": 3,
+   "partPres": 2
   },
   "habentī": {
-   "part": 7
+   "part": 7,
+   "partPres": 5
   },
   "habentēs": {
-   "part": 43
+   "part": 43,
+   "partPres": 41
   },
   "habentium": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "habentibus": {
-   "part": 3
+   "part": 3,
+   "partPres": 3
   },
   "habente": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "habentia": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "faciēns": {
-   "part": 18
+   "part": 18,
+   "partPres": 18
   },
   "facientem": {
-   "part": 5
+   "part": 5,
+   "partPres": 4
   },
   "facientī": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "facientēs": {
-   "part": 7
+   "part": 7,
+   "partPres": 7
   },
   "facientibus": {
-   "part": 2
+   "part": 2,
+   "partPres": 2
   },
   "faciente": {
-   "part": 2
+   "part": 2,
+   "partPres": 2
   },
   "capiēns": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "capientēs": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "docēns": {
-   "part": 18
+   "part": 18,
+   "partPres": 18
   },
   "docentem": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "docentēs": {
-   "part": 8
+   "part": 8,
+   "partPres": 8
   },
   "docente": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "dīcēns": {
-   "part": 211
+   "part": 211,
+   "partPres": 202
   },
   "dīcentem": {
-   "part": 42
+   "part": 42,
+   "partPres": 33
   },
   "dīcentis": {
-   "part": 5
+   "part": 5,
+   "partPres": 3
   },
   "dīcentī": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "dīcentēs": {
-   "part": 167
+   "part": 167,
+   "partPres": 159
   },
   "dīcentium": {
-   "part": 5
+   "part": 5,
+   "partPres": 3
   },
   "dīcentibus": {
-   "part": 3
+   "part": 3,
+   "partPres": 3
   },
   "dīcente": {
-   "part": 5
+   "part": 5,
+   "partPres": 4
   },
   "dīcentia": {
-   "part": 3
+   "part": 3,
+   "partPres": 2
   },
   "stāns": {
-   "part": 18
+   "part": 18,
+   "partPres": 17
   },
   "stantem": {
-   "part": 13
+   "part": 13,
+   "partPres": 11
   },
   "stantis": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "stantēs": {
-   "part": 21
+   "part": 21,
+   "partPres": 19
   },
   "stantium": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "stantibus": {
-   "part": 4
+   "part": 4,
+   "partPres": 4
   },
   "cadēns": {
-   "part": 4
+   "part": 4,
+   "partPres": 4
   },
   "cadentem": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "cadentis": {
    "part": 1
   },
   "rogāns": {
-   "part": 3
+   "part": 3,
+   "partPres": 3
   },
   "rogantēs": {
-   "part": 2
+   "part": 2,
+   "partPres": 2
   },
   "rogantibus": {
-   "part": 2
+   "part": 2,
+   "partPres": 2
   },
   "amāns": {
    "nominal": 1
@@ -7474,55 +7687,71 @@
    "nominal": 1
   },
   "amantī": {
-   "part": 2
+   "part": 2,
+   "partPres": 1
   },
   "amantēs": {
    "part": 1
   },
   "vocāns": {
-   "part": 3
+   "part": 3,
+   "partPres": 3
   },
   "vocantēs": {
-   "part": 2
+   "part": 2,
+   "partPres": 2
   },
   "laudāns": {
-   "part": 2
+   "part": 2,
+   "partPres": 2
   },
   "laudantem": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "laudantēs": {
-   "part": 2
+   "part": 2,
+   "partPres": 2
   },
   "laudantium": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "exspectāns": {
-   "part": 2
+   "part": 2,
+   "partPres": 2
   },
   "vidēns": {
-   "part": 45
+   "part": 45,
+   "partPres": 45
   },
   "videntēs": {
-   "part": 33
+   "part": 33,
+   "partPres": 33
   },
   "videntibus": {
-   "part": 3
+   "part": 3,
+   "partPres": 3
   },
   "timēns": {
-   "part": 9
+   "part": 9,
+   "partPres": 7
   },
   "timentēs": {
-   "part": 4
+   "part": 4,
+   "partPres": 3
   },
   "timentibus": {
-   "part": 3
+   "part": 3,
+   "partPres": 3
   },
   "monēns": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "monentem": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "dūcentis": {
    "nominal": 8
@@ -7531,67 +7760,87 @@
    "part": 1
   },
   "mittēns": {
-   "part": 11
+   "part": 11,
+   "partPres": 11
   },
   "mittentem": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "mittentēs": {
-   "part": 6
+   "part": 6,
+   "partPres": 6
   },
   "mittentibus": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "legēns": {
-   "part": 2
+   "part": 2,
+   "partPres": 2
   },
   "legentem": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "legentī": {
    "part": 1
   },
   "audiēns": {
-   "part": 12
+   "part": 12,
+   "partPres": 12
   },
   "audientem": {
-   "part": 2
+   "part": 2,
+   "partPres": 2
   },
   "audientī": {
-   "part": 3
+   "part": 3,
+   "partPres": 1
   },
   "audientēs": {
-   "part": 30
+   "part": 30,
+   "partPres": 30
   },
   "audientium": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "audientibus": {
-   "part": 3
+   "part": 3,
+   "partPres": 3
   },
   "audiente": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "inveniēns": {
-   "part": 3
+   "part": 3,
+   "partPres": 3
   },
   "invenientēs": {
-   "part": 4
+   "part": 4,
+   "partPres": 4
   },
   "custōdiēns": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "custōdientēs": {
-   "part": 3
+   "part": 3,
+   "partPres": 3
   },
   "custōdiente": {
-   "part": 1
+   "part": 1,
+   "partPres": 1
   },
   "portāns": {
-   "part": 2
+   "part": 2,
+   "partPres": 2
   },
   "portantēs": {
-   "part": 2
+   "part": 2,
+   "partPres": 2
   }
  }
 }
