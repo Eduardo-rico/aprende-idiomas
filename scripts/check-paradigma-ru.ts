@@ -57,6 +57,11 @@ import {
   FORMAS_ADJ, CASOS_ADJ, temaAdj,
   type EntradaAdjetival, type FormaAdjetival,
 } from '../lib/data/languages/ru/paradigma-adj-ru';
+import {
+  PERSONALES, pronombre, POSESIVOS, casillaPosesiva, DETERMINANTES,
+  invariantesPronominales, variantePronominalXIX,
+  type PersonaPron,
+} from '../lib/data/languages/ru/pronombres-ru';
 import { NOMBRES_A1, VERBOS_A1, ADJETIVOS_A1 } from '../lib/data/languages/ru/lexicon-a1';
 import { quitarAcento, revisarOrtografiaRu } from '../lib/lang/ortografia-ru';
 import { buscar, controles } from './corpus-ru';
@@ -294,6 +299,90 @@ function pruebasAdjetivales(entradas: EntradaAdjetival[]): Prueba[] {
   return out;
 }
 
+// ══ LOS PRONOMBRES, Y LA н- PROTÉTICA SE MIDE CON SU PREPOSICIÓN ═════
+//
+// Una forma pronominal suelta no se puede contar: `его` 54.437 es a la vez
+// el acusativo, el genitivo y el POSESIVO invariable, y `то` 63.834 es la
+// conjunción de «если… то». La única cadena que mide la casilla es la que
+// lleva la preposición delante, igual que el segundo locativo del sustantivo
+// —y por la misma razón: la casilla no existe sin ella—.
+//
+// Las lecturas de los rivales están DECLARADAS aquí y no en un comentario, y
+// las tres se leyeron con `--ctx`: `у его` 94, `для его` 71 y `у их` 10 son
+// casi todas el POSESIVO seguido de su sustantivo («у его невесток», «для его
+// пользы», «у их отца»), o sea otra construcción con la misma cadena. En
+// `у их` una o dos son de verdad el pronombre sin prótesis y en boca de
+// campesino, que es registro y no norma.
+const PROTETICA: { patron: string; rival: string; lectura: string }[] = [
+  { patron: 'у него', rival: 'у его',
+    lectura: 'las 94 de «у его» son el POSESIVO invariable его + sustantivo — «у его невесток», «у его дяди», «у его сиятельства», «у его коня». No es la forma sin prótesis: es otra construcción con la misma cadena, el homógrafo en su forma más limpia' },
+  // ⚠ Y ESTOS DOS RIVALES **NO** SON HOMÓGRAFOS, y es la lectura que más
+  // cambia el diseño de un lote. Las 2+2 apariciones son la forma SIN
+  // prótesis de verdad, y todas en habla popular o folclórica: «так и жмется
+  // к ему» (Chéjov), «высылать к ему моих людей» (Troekúrov gritando,
+  // Pushkin), «я с им побратаются» (fórmula de bylina), «живет она с им»
+  // (campesino). O sea que la pregunta del §0.3 rumano —¿mala, vieja o de
+  // otro dialecto?— se contesta **de otro REGISTRO**, no agramatical.
+  //
+  // Consecuencia: un ítem puede enseñar la norma, que es citable, pero NO
+  // puede presentar `к ему` como agramatical. Y con `у его` pasa lo
+  // contrario: ahí las 94 son posesivo y no hay forma sin prótesis ninguna.
+  // Dos rivales de la misma regla y dos veredictos distintos — contar no los
+  // separaba.
+  { patron: 'к нему', rival: 'к ему',
+    lectura: 'las 2 de «к ему» SÍ son la forma sin prótesis, y las dos en habla popular: «так и жмется к ему» (Chéjov, campesino) y «высылать к ему моих людей с повинной» (Troekúrov gritando, Pushkin). No es homógrafo y no es agramatical: es REGISTRO, a 2 frente a 3855. La norma es citable y el ítem puede enseñarla; marcar `к ему` como error sería corregir lengua real' },
+  { patron: 'с ним', rival: 'с им',
+    lectura: 'las 2 de «с им» son la forma sin prótesis en habla folclórica y campesina: «я с им побратаются» (fórmula de bylina) y «живет она, значит… с им!». Mismo veredicto que «к ему»: registro, no agramaticalidad' },
+  { patron: 'о нём', rival: 'о ём', lectura: '' },
+  { patron: 'у неё', rival: 'у её',
+    lectura: 'mismo caso que «у его» — es el posesivo её + sustantivo' },
+  { patron: 'у них', rival: 'у их',
+    lectura: 'de las 10, la mayoría son el posesivo их + sustantivo («у их отца», «у их ног») y una o dos SÍ son el pronombre sin prótesis en habla de campesino («У их экого стулья-то по баням много»). O sea lengua real de registro, no norma, y a 10 frente a 1507' },
+  { patron: 'для него', rival: 'для его',
+    lectura: 'las 71 son el posesivo — «для его пользы», «для его удовольствия», «для его дирижерского сердца»' },
+];
+
+function pruebasPronominales(): Prueba[] {
+  const out: Prueba[] = [];
+  // 1 · la н- protética, con la preposición y con el rival leído.
+  for (const x of PROTETICA) {
+    const p: Prueba = { lema: 'н- protética', celda: x.patron, forma: x.patron, n: contar(x.patron) };
+    p.rival = x.rival; p.nRival = contar(x.rival);
+    if (x.lectura) p.contaminado = x.lectura;
+    out.push(p);
+  }
+  // 2 · las casillas sueltas que NO son homógrafas de nada: el instrumental
+  // y los plurales oblicuos. Las que sí lo son (его, им, их, то, что) se
+  // dejan fuera a propósito: contarlas daría un número verdadero de otra
+  // cosa, y ése es el fallo que este gate existe para no cometer.
+  for (const per of Object.keys(PERSONALES) as PersonaPron[]) {
+    for (const c of ['instr', 'prep'] as CasoRu[]) {
+      const f = pronombre(per, c, { trasPreposicion: c === 'prep' });
+      if (!f || f.length < 3) continue;
+      out.push({ lema: `pron.${per}`, celda: c, forma: f, n: contar(f) });
+    }
+  }
+  // 3 · los posesivos declinados.
+  for (const e of POSESIVOS) {
+    for (const f of ['m', 'f', 'n', 'pl'] as const) {
+      for (const c of ['gen', 'dat', 'instr', 'prep'] as CasoRu[]) {
+        const x = casillaPosesiva(e, f, c);
+        if (!x) continue;
+        out.push({ lema: e.lema, celda: `${f}.${c}`, forma: x, n: contar(x) });
+      }
+    }
+  }
+  // 4 · los determinantes, sin las cadenas que son homógrafos masivos.
+  const HOMOGRAFOS_MASIVOS = ['это', 'то', 'что', 'чем', 'та', 'ту', 'те'];
+  for (const [lema, d] of Object.entries(DETERMINANTES)) {
+    for (const [celda, forma] of Object.entries(d.tabla)) {
+      if (HOMOGRAFOS_MASIVOS.includes(forma)) continue;
+      out.push({ lema, celda, forma, n: contar(forma) });
+    }
+  }
+  return out;
+}
+
 function pruebasVerbales(verbos: EntradaVerbal[]): Prueba[] {
   const out: Prueba[] = [];
   for (const v of verbos) {
@@ -361,6 +450,11 @@ export const FALSAS: { forma: string; buena: string; porQue: string }[] = [
   { forma: 'синого', buena: 'синего', porQue: 'la fila BLANDA tratada como dura' },
   { forma: 'синым', buena: 'синим', porQue: 'ídem, instrumental' },
   { forma: 'молодый', buena: 'молодой', porQue: 'la desinencia TÓNICA del nominativo masculino' },
+  // ── LOS PRONOMBRES (2026-09-12) ────────────────────────────────────
+  { forma: 'к ему', buena: 'к нему', porQue: 'la н- protética tras preposición: к ему 2 · к нему 3855' },
+  { forma: 'с им', buena: 'с ним', porQue: 'ídem instrumental' },
+  { forma: 'этым', buena: 'этим', porQue: 'la declinación pronominal NO pasa por la regla velar: no hay velar' },
+  { forma: 'нашых', buena: 'наших', porQue: 'la sibilante del posesivo: -их y no -ых' },
 ];
 
 /** ⚠ LA FORMA FALSA QUE NINGUNO DE LOS DOS CAMINOS DE `veredicto()` PUEDE
@@ -379,6 +473,13 @@ export const FALSAS: { forma: string; buena: string; porQue: string }[] = [
  *  de este control. Fijado en test. */
 export const FUERA_DEL_ALCANCE_DEL_CONTROL = [
   { forma: 'конем', buena: 'конём', quienLaCaza: 'candidatasConYo (el corpus funde la ё y no puede)' },
+  // Y la misma clase en el posesivo: `моём` es la buena y `моем` la mala, y
+  // `contar()` devuelve el mismo número para las dos. Estuve a punto de
+  // meterla en `FALSAS` con los campos AL REVÉS —«forma: моём, buena:
+  // моем»—, que habría sido un control positivo que exige rechazar la forma
+  // correcta: el gate cómplice con el signo cambiado. Va aquí, que es donde
+  // están las que este control no puede juzgar.
+  { forma: 'моем', buena: 'моём', quienLaCaza: 'candidatasConYo; y el invariante del nominativo no llega hasta el prepositivo' },
 ];
 
 /** El veredicto de UNA forma, con los dos caminos por separado para que se
@@ -431,14 +532,14 @@ if (/[/\\]check-paradigma-ru\.ts$/.test(process.argv[1] ?? '')) {
 
   // ── 2 · LOS INVARIANTES PROPIOS ───────────────────────────────────
   const avisos = [...invariantesNominales(NOMBRES_A1), ...invariantesVerbales(VERBOS_A1),
-    ...invariantesAdjetivales(ADJETIVOS_A1)];
+    ...invariantesAdjetivales(ADJETIVOS_A1), ...invariantesPronominales()];
   console.log(`── INVARIANTES: ${avisos.length} avisos ──`);
   for (const a of avisos) console.log(`  ${a.clase}\t${a.lema}\t${a.detalle}`);
   console.log();
 
   // ── 3 · EL CORPUS, FORMA A FORMA ──────────────────────────────────
   const pruebas = [...pruebasNominales(NOMBRES_A1), ...pruebasVerbales(VERBOS_A1),
-    ...pruebasAdjetivales(ADJETIVOS_A1)];
+    ...pruebasAdjetivales(ADJETIVOS_A1), ...pruebasPronominales()];
   // EL SEGUNDO CHEQUEO, y es de otra naturaleza que el conteo: ¿el rival es
   // además una casilla de OTRA entrada del lexicón? Donde se puede
   // comprobar, se comprueba, en vez de esperar a que alguien lo declare.
@@ -550,6 +651,14 @@ if (/[/\\]check-paradigma-ru\.ts$/.test(process.argv[1] ?? '')) {
     for (const v of variantesInstrSgFem(instr)) {
       const nVar = contar(v);
       if (nVar > 0) variantes.push({ lema: e.lema, norma: instr, nNorma: contar(instr), variante: v, nVar });
+    }
+  }
+  for (const per of Object.keys(PERSONALES) as PersonaPron[]) {
+    const instr = pronombre(per, 'instr', { trasPreposicion: false });
+    if (!instr) continue;
+    for (const v of variantePronominalXIX(instr)) {
+      const nVar = contar(v);
+      if (nVar > 0) variantes.push({ lema: `pron.${per}`, norma: instr, nNorma: contar(instr), variante: v, nVar });
     }
   }
   if (variantes.length) {
