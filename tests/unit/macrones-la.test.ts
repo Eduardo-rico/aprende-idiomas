@@ -174,6 +174,7 @@ describe('el extractor, contra wikitexto de verdad', () => {
   });
 
   it('y devuelve nulos donde no hay sección latina, en vez de inventar', () => {
-    expect(macronesDe('==Spanish==\n{{es-noun|f}}\n', 'paz')).toEqual({ ipa: null, head: null, pos: null, plantilla: null });
+    expect(macronesDe('==Spanish==\n{{es-noun|f}}\n', 'paz'))
+      .toEqual({ ipa: null, head: null, pos: null, plantilla: null, definicion: null });
   });
 });

@@ -109,6 +109,19 @@ export interface FilaDeMacron {
    *  lo da bien, pero el corpus sólo trae su comparativo `amplius`: la
    *  forma de cita no aparece. Un lema así no se puede usar en un marco. */
   formaAtestiguada?: number;
+  /** La primera DEFINICIÓN inglesa de la sección latina, limpia de marcado.
+   *
+   *  Existe porque la GLOSA del lexicón es el campo más inerte que tiene el
+   *  proyecto —141 campos sin una sola verificación, y es lo que el alumno
+   *  lee— y yo había dado por hecho que no se podía comprobar desde dentro.
+   *  Se puede: la misma página de la que sale la cantidad trae la
+   *  definición. Mismo fetch, misma caché.
+   *
+   *  NO sirve para comparar por cadena: «rey» contra «king, ruler» no casa y
+   *  no hay nada mal. Sirve para ACOTAR a quién preguntar: el juicio lo da
+   *  el lingüista, y esto reduce 141 revisiones a las pocas que no solapan.
+   *  Y un lema sin definición sale «no verificable», nunca «malo». */
+  definicion?: string;
   /** Los argumentos CRUDOS de la plantilla de encabezado. De ahí sale el
    *  paradigma —`rēx/rēg<3>|g=m` da tema, declinación y género;
    *  `4.pass-impers|veniō|vēn|vent` da conjugación y temas—. Se guardan sin
@@ -125,6 +138,8 @@ export const sinCantidad = (s: string) => s.normalize('NFD').replace(/[̄̆]/g, 
   .normalize('NFC').toLowerCase().replace(/j/g, 'i').replace(/v/g, 'u');
 const jiUV = (s: string) => s.replace(/j/g, 'i').replace(/J/g, 'I');
 const tieneBreve = (s: string) => /̆/.test(s.normalize('NFD'));
+
+export function seccionLatinaDe(txt: string): string | null { return seccionLatina(txt); }
 
 function seccionLatina(txt: string): string | null {
   const i = txt.startsWith('==Latin==') ? 0 : txt.indexOf('\n==Latin==') + 1;
@@ -147,9 +162,35 @@ export function argQueEsElLema(args: string, titulo: string): string | null {
 }
 
 const POS = 'noun|verb|adj|proper noun|num|pron|adv|prep|conj|part|det|suffix|prefix';
-export function macronesDe(txt: string, titulo: string): { ipa: string | null; head: string | null; pos: string | null; plantilla: string | null } {
+
+/** Quita el marcado de una línea de definición: enlaces, plantillas,
+ *  etiquetas de contexto y referencias. Lo que queda es texto. */
+export function limpiarDefinicion(linea: string): string {
+  return linea
+    .replace(/\{\{(?:lb|label|qualifier|q)\|[^}]*\}\}/g, '')   // etiquetas de contexto
+    .replace(/\{\{[^}]*\}\}/g, '')                              // el resto de plantillas
+    .replace(/\[\[([^\]|]*\|)?([^\]]*)\]\]/g, '$2')              // enlaces
+    .replace(/<[^>]*>/g, '')
+    .replace(/'''?/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/** La primera definición de la sección latina: la primera línea que empieza
+ *  por `# ` y que deja texto al limpiarla. */
+export function definicionDe(txt: string): string | null {
+  const la = seccionLatinaDe(txt);
+  if (!la) return null;
+  for (const l of la.split('\n')) {
+    if (!l.startsWith('# ') || l.startsWith('#*') || l.startsWith('#:')) continue;
+    const limpia = limpiarDefinicion(l.slice(2));
+    if (limpia.length >= 2) return limpia.slice(0, 160);
+  }
+  return null;
+}
+export function macronesDe(txt: string, titulo: string): { ipa: string | null; head: string | null; pos: string | null; plantilla: string | null; definicion: string | null } {
   const la = seccionLatina(txt);
-  if (!la) return { ipa: null, head: null, pos: null, plantilla: null };
+  if (!la) return { ipa: null, head: null, pos: null, plantilla: null, definicion: null };
   const mi = la.match(/\{\{la-IPA\|([^}]*)\}\}/);
   const mh = la.match(new RegExp(`\\{\\{la-(${POS})\\|([^}]*)\\}\\}`));
   return {
@@ -157,6 +198,7 @@ export function macronesDe(txt: string, titulo: string): { ipa: string | null; h
     head: mh ? argQueEsElLema(mh[2]!, titulo) : null,
     pos: mh ? mh[1]! : null,
     plantilla: mh ? mh[2]! : null,
+    definicion: definicionDe(txt),
   };
 }
 
@@ -255,11 +297,11 @@ async function main() {
       formasDelCorpus.set(f, (formasDelCorpus.get(f) ?? 0) + 1);
     }
   }
-  const crudo = new Map<string, { ipa: string | null; head: string | null; pos: string | null; plantilla: string | null; falta: boolean }>();
+  const crudo = new Map<string, { ipa: string | null; head: string | null; pos: string | null; plantilla: string | null; definicion: string | null; falta: boolean }>();
   for (let i = 0; i < titulos.length; i += 50) {
     for (const p of await lote(titulos.slice(i, i + 50))) {
       const txt = p.revisions?.[0]?.slots?.main?.content ?? '';
-      crudo.set(sinCantidad(p.title), p.missing ? { ipa: null, head: null, pos: null, plantilla: null, falta: true } : { ...macronesDe(txt, p.title), falta: false });
+      crudo.set(sinCantidad(p.title), p.missing ? { ipa: null, head: null, pos: null, plantilla: null, definicion: null, falta: true } : { ...macronesDe(txt, p.title), falta: false });
     }
     console.error(`  ${Math.min(i + 50, titulos.length)}/${titulos.length}`);
     await dormir(1500);
@@ -280,6 +322,7 @@ async function main() {
     filas.push({
       clave: k, cantidad: p.lema, origen: 'lexicon-propio', caminos,
       enElLexicon: p.lema,
+      ...(c?.definicion ? { definicion: c.definicion } : {}),
       ...(discrepa ? { discrepancia: `la fuente da «${forma}»` } : {}),
     });
   }
@@ -302,6 +345,7 @@ async function main() {
         ...(fx && fx.con > fx.sin ? { flexiona: true as const } : {}),
         formaAtestiguada: formasDelCorpus.get(sinCantidad(forma)) ?? 0,
         ...(c?.plantilla ? { plantilla: c.plantilla } : {}),
+        ...(c?.definicion ? { definicion: c.definicion } : {}),
       }
       : { clave: k, cantidad: null, origen: 'sin-dato', caminos: 0, posFuente: pos, uposCorpus: upos });
   }
