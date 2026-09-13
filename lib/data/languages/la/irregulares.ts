@@ -38,6 +38,11 @@ export interface VerboIrregular {
   perfecto: string;
   /** Qué lo hace irregular, en una línea. */
   porQue: string;
+  /** El imperativo, cuando NO se deriva. Entra el 2026-09-12 porque la
+   *  auditoría invertida lo pidió en cuanto se le abrieron los filtros:
+   *  `nōlīte` ×87 y `nōlī` ×36 son la forma corriente de prohibir en la
+   *  Vulgata, `īte` ×22, `date` ×16, `ferte` ×3. Ninguno sale de una regla. */
+  imperativo?: { sg: string; pl: string };
   formas: Record<Tiempo, Partial<Record<Persona, string>>>;
 }
 
@@ -59,6 +64,7 @@ export const IRREGULARES_L1: VerboIrregular[] = [
   // —`eō, ferō, volō, nōlō, mālō, fīō`— y `dō` no es uno de ellos. La tabla
   // puede tener más verbos que el punto; el lote cubre los del punto.
   {
+    imperativo: { sg: 'dā', pl: 'date' },
     lema: 'dō', infinitivo: 'dare', glosa: 'dar', perfecto: 'dedī',
     porQue: 'la `a` del tema es BREVE —`damus`, `datis`, `dare`— salvo en `dās` y el imperativo `dā`: no es un verbo de la 1.ª, que tendría `amāmus` con larga',
     formas: {
@@ -68,6 +74,7 @@ export const IRREGULARES_L1: VerboIrregular[] = [
     },
   },
   {
+    imperativo: { sg: 'ī', pl: 'īte' },
     lema: 'eō', infinitivo: 'īre', glosa: 'ir', perfecto: 'iī',
     porQue: 'alterna el tema entre `e-` e `ī-` —«eō» pero «īmus», «it» pero «eunt»— y su futuro es en `-b-`, como el de la 1.ª',
     formas: {
@@ -77,6 +84,7 @@ export const IRREGULARES_L1: VerboIrregular[] = [
     },
   },
   {
+    imperativo: { sg: 'fer', pl: 'ferte' },
     lema: 'ferō', infinitivo: 'ferre', glosa: 'llevar', perfecto: 'tulī',
     porQue: 'pierde la vocal temática ante consonante —«fers», «fert», «fertis»— y la conserva ante vocal: «ferimus», «ferunt»',
     formas: {
@@ -95,6 +103,7 @@ export const IRREGULARES_L1: VerboIrregular[] = [
     },
   },
   {
+    imperativo: { sg: 'nōlī', pl: 'nōlīte' },
     lema: 'nōlō', infinitivo: 'nōlle', glosa: 'no querer', perfecto: 'nōluī',
     porQue: 'es «nōn» + «volō» y hereda su hueco: la segunda y la tercera del singular son las de `volō` con el «nōn» suelto delante',
     formas: {

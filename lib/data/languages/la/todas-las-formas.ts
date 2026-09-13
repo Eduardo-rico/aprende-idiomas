@@ -30,7 +30,7 @@
 // Y el enumerador con el que yo lo «medí» era, él mismo, una copia más que
 // miraba tres tablas de nueve.
 import { NOMBRES_L1, VERBOS_L1, ADJETIVOS_L1, INDECLINABLES_L1 } from './lexicon-l1';
-import { todasLasFormas as formasBase, declinacionDe, type EntradaNominal } from './paradigma-la';
+import { todasLasFormas as formasBase, paradigmaNominal, type EntradaNominal } from './paradigma-la';
 import { PLURALIA_TANTUM, paradigmaPluralTantum } from './plural-tantum';
 import { ADJETIVOS_3A, paradigmaAdjetivo3a, ablativoEnE } from './adjetivos-3a';
 import { IRREGULARES_L1 } from './irregulares';
@@ -38,8 +38,15 @@ import { COMPUESTOS_DE_SUM, paradigmaCompuesto } from './compuestos-de-sum';
 import { PRONOMBRES_L1, paradigmaPronombre } from './pronombres-la';
 import { PERSONALES_L1, formasDe, GENITIVO_PARTITIVO } from './personales-la';
 import { participioPresente } from './participios';
-import { pasivaInfectum, imperativo } from './paradigma-la';
+import { pasivaInfectum, imperativo, perfectum } from './paradigma-la';
 import { todosLosInfinitivos, SIN_PASIVA } from './infinitivos';
+import { paradigmaSubjuntivo, subjuntivoPasivo, subjuntivo, TIEMPOS_SUBJ, PERSONAS_SUBJ } from './subjuntivo';
+import { participioPerfecto, participioFuturo } from './participios';
+import { declinarAdjetivo, type Caso } from './paradigma-la';
+/** El orden canónico de los casos. `paradigma-la` lo tiene privado, así que
+ *  se repite aquí —seis literales— en vez de exportar un detalle interno. */
+const ORDEN_CASOS: Caso[] = ['nom', 'ac', 'gen', 'dat', 'abl', 'voc'];
+import { IRREGULARES_L1 as IRR } from './irregulares';
 
 export interface FormaDeL1 { clave: string; forma: string; tabla: string }
 
@@ -48,13 +55,22 @@ export interface FormaDeL1 { clave: string; forma: string; tabla: string }
 export const TABLAS_QUE_PRODUCEN_FORMAS = [
   'NOMBRES_L1', 'VERBOS_L1', 'ADJETIVOS_L1', 'INDECLINABLES_L1', 'PLURALIA_TANTUM',
   'ADJETIVOS_3A', 'IRREGULARES_L1', 'COMPUESTOS_DE_SUM', 'PRONOMBRES_L1', 'PARTICIPIOS',
-  'PASIVA', 'INFINITIVOS', 'IMPERATIVOS', 'PERSONALES_L1',
+  'PASIVA', 'INFINITIVOS', 'IMPERATIVOS', 'PERSONALES_L1', 'SUBJUNTIVOS',
 ] as const;
 
 export function todasLasFormasDeL1(): FormaDeL1[] {
   const out: FormaDeL1[] = [];
+  // EL FILTRO VA CONTRA `paradigmaNominal`, NO CONTRA `declinacionDe`.
+  //
+  // `Iēsus` tiene genitivo `Iēsū` y no es de ninguna de las cinco
+  // declinaciones, así que `declinacionDe` lo rechaza — con razón. Pero
+  // `paradigmaNominal` SÍ lo declina, porque está en `IRREGULARES` con su
+  // paradigma entero. Filtrar por `declinacionDe` lo tiraba del dominio, y
+  // eso es recortar el mundo con un guardián que contesta otra pregunta.
+  // Lo cazó el guardián de la evidencia congelada, en cuanto empezó a
+  // mirar el dominio completo.
   const nombresSanos = NOMBRES_L1.filter((n: EntradaNominal) => {
-    try { declinacionDe(n); return true; } catch { return false; }
+    try { paradigmaNominal(n); return true; } catch { return false; }
   });
   // Los indeclinables entran por el parámetro que el enumerador canónico ya
   // tenía y que mi copia no usaba: son formas de pleno derecho —`et`,
@@ -104,6 +120,61 @@ export function todasLasFormasDeL1(): FormaDeL1[] {
     const part = GENITIVO_PARTITIVO[p.lema];
     if (part) out.push({ clave: `${p.lema}.gen-partitivo`, forma: part, tabla: 'PERSONALES_L1' });
   }
+  // EL SUBJUNTIVO, enchufado EN EL MISMO COMMIT en que se construye y no
+  // después. Es la pieza más grande del proyecto —dieciocho puntos la
+  // nombran— y meterla sin enchufarla habría dejado catorce puntos
+  // apoyados en material que ningún guardián mira, con todos los gates en
+  // verde y sin que nada avisara. Hoy mismo se ha visto tres veces qué
+  // pasa cuando una máquina crece y los invariantes no la siguen.
+  for (const v of VERBOS_L1) {
+    for (const [c, f] of Object.entries(paradigmaSubjuntivo(v)))
+      out.push({ clave: `${v.lema}.subj.${c}`, forma: f, tabla: 'SUBJUNTIVOS' });
+    // Y la PASIVA del subjuntivo, que la auditoría pidió en cuanto se le
+    // abrieron los filtros: `vidērētur` ×22 y no la producía nadie.
+    for (const t of TIEMPOS_SUBJ)
+      for (const p of PERSONAS_SUBJ) {
+        const f = subjuntivoPasivo(v, t, p);
+        if (f) out.push({ clave: `${v.lema}.subj-pas.${t}.${p}`, forma: f, tabla: 'SUBJUNTIVOS' });
+      }
+  }
+  // EL SUBJUNTIVO DE LOS IRREGULARES vive en su propia tabla —`velim`,
+  // `possim`, `eam`— y tampoco lo enumeraba nadie, porque `IRREGULARES_L1`
+  // no son `EntradaVerbal`. Se les construye la entrada mínima que el
+  // módulo necesita.
+  for (const v of IRR) {
+    const como = { lema: v.lema, infinitivo: v.infinitivo, glosa: v.glosa, perfecto: v.perfecto };
+    for (const t of TIEMPOS_SUBJ)
+      for (const p of PERSONAS_SUBJ) {
+        let f: string | null = null;
+        try { f = subjuntivo(como, t, p); } catch { f = null; }
+        if (f) out.push({ clave: `${v.lema}.subj.${t}.${p}`, forma: f, tabla: 'SUBJUNTIVOS' });
+      }
+    // Y su INFINITIVO, su IMPERATIVO y su PERFECTUM, que están en la tabla
+    // y no los enumeraba nadie: la auditoría los cazó en cuanto se le
+    // abrieron los filtros —`fierī` ×118, `dedit` ×103, `nōlīte` ×87—.
+    out.push({ clave: `${v.lema}.inf`, forma: v.infinitivo, tabla: 'IRREGULARES_L1' });
+    // El imperativo DECLARADO gana al derivado: `nōlīte` no sale de
+    // ninguna regla y es la forma corriente de prohibir en la Vulgata.
+    for (const num of ['sg', 'pl'] as const) {
+      const dec = v.imperativo?.[num];
+      if (dec) { out.push({ clave: `${v.lema}.imp.${num}`, forma: dec, tabla: 'IRREGULARES_L1' }); continue; }
+      try { out.push({ clave: `${v.lema}.imp.${num}`, forma: imperativo(como, num), tabla: 'IRREGULARES_L1' }); } catch { /* el que no lo forma, no lo forma */ }
+    }
+    for (const [c, f] of Object.entries(perfectum(como)))
+      out.push({ clave: `${v.lema}.${c}`, forma: f, tabla: 'IRREGULARES_L1' });
+  }
+  // Los COMPUESTOS DE `sum` sólo tenían indicativo. Su subjuntivo,
+  // infinitivo y perfectum salen igual, y `possum` solo vale 468 tokens.
+  for (const c of COMPUESTOS_DE_SUM) {
+    const como = { lema: c.lema, infinitivo: `${c.anteConsonante}se`, glosa: c.glosa, perfecto: `${c.anteVocal}uī` };
+    for (const t of TIEMPOS_SUBJ)
+      for (const p of PERSONAS_SUBJ) {
+        let f: string | null = null;
+        try { f = subjuntivo(como, t, p); } catch { f = null; }
+        if (f) out.push({ clave: `${c.lema}.subj.${t}.${p}`, forma: f, tabla: 'COMPUESTOS_DE_SUM' });
+      }
+    out.push({ clave: `${c.lema}.inf`, forma: `${c.anteConsonante}se`, tabla: 'COMPUESTOS_DE_SUM' });
+  }
   // EL IMPERATIVO, que la máquina tiene (`imperativo`) y que tampoco
   // enumeraba nadie. Lo destapó el barrido de vocabulario: `Audīte` salía
   // como palabra de fuera en un lote de la 1.ª declinación, y es el
@@ -111,6 +182,20 @@ export function todasLasFormasDeL1(): FormaDeL1[] {
   for (const v of VERBOS_L1)
     for (const num of ['sg', 'pl'] as const)
       out.push({ clave: `${v.lema}.imp.${num}`, forma: imperativo(v, num), tabla: 'IMPERATIVOS' });
+  // LOS PARTICIPIOS DE PERFECTO Y DE FUTURO, DECLINADOS. Declinan como
+  // adjetivos de 1.ª-2.ª, y hasta hoy sólo se enumeraba el de presente: la
+  // auditoría cazó `facta` ×119, `factus` ×78, `ventūrus` ×24 como formas
+  // que la máquina no producía, y sí las produce — nadie las llamaba.
+  for (const v of VERBOS_L1)
+    for (const [cual, part] of [['perf', participioPerfecto(v)], ['fut', participioFuturo(v)]] as const) {
+      if (!part) continue;
+      const tema = part.lema.normalize('NFC').replace(/us$/, '');
+      const como = { lema: part.lema, tema, glosa: part.glosa };
+      for (const g of ['m', 'f', 'n'] as const)
+        for (const num of ['sg', 'pl'] as const)
+          for (const c of ORDEN_CASOS)
+            out.push({ clave: `${v.lema}.part-${cual}.${g}.${c}.${num}`, forma: declinarAdjetivo(como, g, c, num), tabla: 'PARTICIPIOS' });
+    }
   // Del participio se enumera el de PRESENTE, que es el que declina como
   // adjetivo de 3.ª y el que el inventario examina en `l4-adjetivo-3a`.
   for (const v of VERBOS_L1) {

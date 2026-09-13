@@ -1,10 +1,10 @@
 {
  "generado": "2026-09-13",
  "comoSeCuenta": "por LEMA más RASGOS del treebank, no por cadena: el corpus no lleva mácrones y buscar la cadena devuelve el mismo número para los dos miembros del par",
- "pares": 67,
- "miembrosConCuenta": 119,
- "miembrosSinMapear": 16,
- "paresConUnMiembroACero": 19,
+ "pares": 244,
+ "miembrosConCuenta": 238,
+ "miembrosSinMapear": 255,
+ "paresConUnMiembroACero": 107,
  "lista": {
   "agricola": {
    "tipo": "morfologico",
@@ -19,6 +19,198 @@
      "forma": "agricolā",
      "clave": "agricola.abl.sg",
      "n": 0
+    }
+   ]
+  },
+  "amata": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "amāta",
+     "clave": "amō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "amātā",
+     "clave": "amō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "amatis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "amātis",
+     "clave": "amō.presente.2pl",
+     "n": 0
+    },
+    {
+     "forma": "amātīs",
+     "clave": "amō.part-perf.m.dat.pl",
+     "n": null
+    }
+   ]
+  },
+  "amatura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "amātūra",
+     "clave": "amō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "amātūrā",
+     "clave": "amō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "amaverimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "amāverimus",
+     "clave": "amō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "amāverīmus",
+     "clave": "amō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "amaveris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "amāveris",
+     "clave": "amō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "amāverīs",
+     "clave": "amō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "amaveritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "amāveritis",
+     "clave": "amō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "amāverītis",
+     "clave": "amō.subj.perfecto.2pl",
+     "n": null
+    }
+   ]
+  },
+  "ambulata": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "ambulāta",
+     "clave": "ambulō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "ambulātā",
+     "clave": "ambulō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "ambulatis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "ambulātis",
+     "clave": "ambulō.presente.2pl",
+     "n": 2
+    },
+    {
+     "forma": "ambulātīs",
+     "clave": "ambulō.part-perf.m.dat.pl",
+     "n": null
+    }
+   ]
+  },
+  "ambulatura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "ambulātūra",
+     "clave": "ambulō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "ambulātūrā",
+     "clave": "ambulō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "ambulaverimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "ambulāverimus",
+     "clave": "ambulō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "ambulāverīmus",
+     "clave": "ambulō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "ambulaveris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "ambulāveris",
+     "clave": "ambulō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "ambulāverīs",
+     "clave": "ambulō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "ambulaveritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "ambulāveritis",
+     "clave": "ambulō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "ambulāverītis",
+     "clave": "ambulō.subj.perfecto.2pl",
+     "n": null
     }
    ]
   },
@@ -70,6 +262,102 @@
     }
    ]
   },
+  "audita": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "audīta",
+     "clave": "audiō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "audītā",
+     "clave": "audiō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "auditis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "audītis",
+     "clave": "audiō.presente.2pl",
+     "n": 11
+    },
+    {
+     "forma": "audītīs",
+     "clave": "audiō.part-perf.m.dat.pl",
+     "n": null
+    }
+   ]
+  },
+  "auditura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "audītūra",
+     "clave": "audiō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "audītūrā",
+     "clave": "audiō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "audiverimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "audīverimus",
+     "clave": "audiō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "audīverīmus",
+     "clave": "audiō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "audiveris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "audīveris",
+     "clave": "audiō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "audīverīs",
+     "clave": "audiō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "audiveritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "audīveritis",
+     "clave": "audiō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "audīverītis",
+     "clave": "audiō.subj.perfecto.2pl",
+     "n": null
+    }
+   ]
+  },
   "bestia": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -118,6 +406,70 @@
     }
    ]
   },
+  "capta": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "capta",
+     "clave": "capiō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "captā",
+     "clave": "capiō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "captura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "captūra",
+     "clave": "capiō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "captūrā",
+     "clave": "capiō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "casa": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "cāsa",
+     "clave": "cadō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "cāsā",
+     "clave": "cadō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "casura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "cāsūra",
+     "clave": "cadō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "cāsūrā",
+     "clave": "cadō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
   "causa": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -131,6 +483,102 @@
      "forma": "causā",
      "clave": "causa.abl.sg",
      "n": 129
+    }
+   ]
+  },
+  "ceciderimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "ceciderimus",
+     "clave": "cadō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "ceciderīmus",
+     "clave": "cadō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "cecideris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "cecideris",
+     "clave": "cadō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "ceciderīs",
+     "clave": "cadō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "cecideritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "cecideritis",
+     "clave": "cadō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "ceciderītis",
+     "clave": "cadō.subj.perfecto.2pl",
+     "n": null
+    }
+   ]
+  },
+  "ceperimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "cēperimus",
+     "clave": "capiō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "cēperīmus",
+     "clave": "capiō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "ceperis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "cēperis",
+     "clave": "capiō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "cēperīs",
+     "clave": "capiō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "ceperitis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "cēperitis",
+     "clave": "capiō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "cēperītis",
+     "clave": "capiō.subj.perfecto.2pl",
+     "n": null
     }
    ]
   },
@@ -166,6 +614,150 @@
     }
    ]
   },
+  "custodita": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "custōdīta",
+     "clave": "custōdiō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "custōdītā",
+     "clave": "custōdiō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "custoditis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "custōdītis",
+     "clave": "custōdiō.presente.2pl",
+     "n": 0
+    },
+    {
+     "forma": "custōdītīs",
+     "clave": "custōdiō.part-perf.m.dat.pl",
+     "n": null
+    }
+   ]
+  },
+  "custoditura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "custōdītūra",
+     "clave": "custōdiō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "custōdītūrā",
+     "clave": "custōdiō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "custodiverimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "custōdīverimus",
+     "clave": "custōdiō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "custōdīverīmus",
+     "clave": "custōdiō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "custodiveris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "custōdīveris",
+     "clave": "custōdiō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "custōdīverīs",
+     "clave": "custōdiō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "custodiveritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "custōdīveritis",
+     "clave": "custōdiō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "custōdīverītis",
+     "clave": "custōdiō.subj.perfecto.2pl",
+     "n": null
+    }
+   ]
+  },
+  "dederimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "dederīmus",
+     "clave": "dō.subj.perfecto.1pl",
+     "n": null
+    },
+    {
+     "forma": "dederimus",
+     "clave": "dō.futuro-perfecto.1pl",
+     "n": 0
+    }
+   ]
+  },
+  "dederis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "dederīs",
+     "clave": "dō.subj.perfecto.2sg",
+     "n": null
+    },
+    {
+     "forma": "dederis",
+     "clave": "dō.futuro-perfecto.2sg",
+     "n": 1
+    }
+   ]
+  },
+  "dederitis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "dederītis",
+     "clave": "dō.subj.perfecto.2pl",
+     "n": null
+    },
+    {
+     "forma": "dederitis",
+     "clave": "dō.futuro-perfecto.2pl",
+     "n": 2
+    }
+   ]
+  },
   "diceris": {
    "tipo": "morfologico",
    "vocal": "e",
@@ -178,6 +770,166 @@
     {
      "forma": "dīcēris",
      "clave": "dīcō.pas.futuro.2sg",
+     "n": null
+    }
+   ]
+  },
+  "dicta": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "dicta",
+     "clave": "dīcō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "dictā",
+     "clave": "dīcō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "dictura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "dictūra",
+     "clave": "dīcō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "dictūrā",
+     "clave": "dīcō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "dixerimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "dīxerimus",
+     "clave": "dīcō.futuro-perfecto.1pl",
+     "n": 5
+    },
+    {
+     "forma": "dīxerīmus",
+     "clave": "dīcō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "dixeris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "dīxeris",
+     "clave": "dīcō.futuro-perfecto.2sg",
+     "n": 1
+    },
+    {
+     "forma": "dīxerīs",
+     "clave": "dīcō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "dixeritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "dīxeritis",
+     "clave": "dīcō.futuro-perfecto.2pl",
+     "n": 2
+    },
+    {
+     "forma": "dīxerītis",
+     "clave": "dīcō.subj.perfecto.2pl",
+     "n": null
+    }
+   ]
+  },
+  "docta": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "docta",
+     "clave": "doceō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "doctā",
+     "clave": "doceō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "doctura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "doctūra",
+     "clave": "doceō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "doctūrā",
+     "clave": "doceō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "docuerimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "docuerimus",
+     "clave": "doceō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "docuerīmus",
+     "clave": "doceō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "docueris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "docueris",
+     "clave": "doceō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "docuerīs",
+     "clave": "doceō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "docueritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "docueritis",
+     "clave": "doceō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "docuerītis",
+     "clave": "doceō.subj.perfecto.2pl",
      "n": null
     }
    ]
@@ -230,6 +982,86 @@
     }
    ]
   },
+  "ducta": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "ducta",
+     "clave": "dūcō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "ductā",
+     "clave": "dūcō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "ductura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "ductūra",
+     "clave": "dūcō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "ductūrā",
+     "clave": "dūcō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "duxerimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "dūxerimus",
+     "clave": "dūcō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "dūxerīmus",
+     "clave": "dūcō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "duxeris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "dūxeris",
+     "clave": "dūcō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "dūxerīs",
+     "clave": "dūcō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "duxeritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "dūxeritis",
+     "clave": "dūcō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "dūxerītis",
+     "clave": "dūcō.subj.perfecto.2pl",
+     "n": null
+    }
+   ]
+  },
   "ea": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -259,6 +1091,182 @@
      "forma": "exercitūs",
      "clave": "exercitus.gen.sg",
      "n": 17
+    }
+   ]
+  },
+  "exspectata": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "exspectāta",
+     "clave": "exspectō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "exspectātā",
+     "clave": "exspectō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "exspectatis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "exspectātis",
+     "clave": "exspectō.presente.2pl",
+     "n": 0
+    },
+    {
+     "forma": "exspectātīs",
+     "clave": "exspectō.part-perf.m.dat.pl",
+     "n": null
+    }
+   ]
+  },
+  "exspectatura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "exspectātūra",
+     "clave": "exspectō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "exspectātūrā",
+     "clave": "exspectō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "exspectaverimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "exspectāverimus",
+     "clave": "exspectō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "exspectāverīmus",
+     "clave": "exspectō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "exspectaveris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "exspectāveris",
+     "clave": "exspectō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "exspectāverīs",
+     "clave": "exspectō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "exspectaveritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "exspectāveritis",
+     "clave": "exspectō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "exspectāverītis",
+     "clave": "exspectō.subj.perfecto.2pl",
+     "n": null
+    }
+   ]
+  },
+  "facta": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "facta",
+     "clave": "faciō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "factā",
+     "clave": "faciō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "factura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "factūra",
+     "clave": "faciō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "factūrā",
+     "clave": "faciō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "fecerimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "fēcerimus",
+     "clave": "faciō.futuro-perfecto.1pl",
+     "n": 1
+    },
+    {
+     "forma": "fēcerīmus",
+     "clave": "faciō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "feceris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "fēceris",
+     "clave": "faciō.futuro-perfecto.2sg",
+     "n": 7
+    },
+    {
+     "forma": "fēcerīs",
+     "clave": "faciō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "feceritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "fēceritis",
+     "clave": "faciō.futuro-perfecto.2pl",
+     "n": 4
+    },
+    {
+     "forma": "fēcerītis",
+     "clave": "faciō.subj.perfecto.2pl",
+     "n": null
     }
    ]
   },
@@ -294,6 +1302,70 @@
     }
    ]
   },
+  "fuerimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "fuerimus",
+     "clave": "sum.futuro-perfecto.1pl",
+     "n": 1
+    },
+    {
+     "forma": "fuerīmus",
+     "clave": "sum.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "fueris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "fueris",
+     "clave": "sum.futuro-perfecto.2sg",
+     "n": 1
+    },
+    {
+     "forma": "fuerīs",
+     "clave": "sum.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "fueritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "fueritis",
+     "clave": "sum.futuro-perfecto.2pl",
+     "n": 4
+    },
+    {
+     "forma": "fuerītis",
+     "clave": "sum.subj.perfecto.2pl",
+     "n": null
+    }
+   ]
+  },
+  "futura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "futūra",
+     "clave": "sum.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "futūrā",
+     "clave": "sum.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
   "gratia": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -310,6 +1382,182 @@
     }
    ]
   },
+  "habita": {
+   "tipo": "lexico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "habitā",
+     "clave": "habitō.imp.sg",
+     "n": null
+    },
+    {
+     "forma": "habita",
+     "clave": "habeō.part-perf.f.nom.sg",
+     "n": null
+    }
+   ]
+  },
+  "habitata": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "habitāta",
+     "clave": "habitō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "habitātā",
+     "clave": "habitō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "habitatis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "habitātis",
+     "clave": "habitō.presente.2pl",
+     "n": 4
+    },
+    {
+     "forma": "habitātīs",
+     "clave": "habitō.part-perf.m.dat.pl",
+     "n": null
+    }
+   ]
+  },
+  "habitatura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "habitātūra",
+     "clave": "habitō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "habitātūrā",
+     "clave": "habitō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "habitaverimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "habitāverimus",
+     "clave": "habitō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "habitāverīmus",
+     "clave": "habitō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "habitaveris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "habitāveris",
+     "clave": "habitō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "habitāverīs",
+     "clave": "habitō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "habitaveritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "habitāveritis",
+     "clave": "habitō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "habitāverītis",
+     "clave": "habitō.subj.perfecto.2pl",
+     "n": null
+    }
+   ]
+  },
+  "habitura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "habitūra",
+     "clave": "habeō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "habitūrā",
+     "clave": "habeō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "habuerimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "habuerimus",
+     "clave": "habeō.futuro-perfecto.1pl",
+     "n": 1
+    },
+    {
+     "forma": "habuerīmus",
+     "clave": "habeō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "habueris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "habueris",
+     "clave": "habeō.futuro-perfecto.2sg",
+     "n": 1
+    },
+    {
+     "forma": "habuerīs",
+     "clave": "habeō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "habueritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "habueritis",
+     "clave": "habeō.futuro-perfecto.2pl",
+     "n": 4
+    },
+    {
+     "forma": "habuerītis",
+     "clave": "habeō.subj.perfecto.2pl",
+     "n": null
+    }
+   ]
+  },
   "hoc": {
    "tipo": "morfologico",
    "vocal": "o",
@@ -323,6 +1571,54 @@
      "forma": "hoc",
      "clave": "hic.n.nom.sg",
      "n": 143
+    }
+   ]
+  },
+  "ierimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "ierīmus",
+     "clave": "eō.subj.perfecto.1pl",
+     "n": null
+    },
+    {
+     "forma": "ierimus",
+     "clave": "eō.futuro-perfecto.1pl",
+     "n": 0
+    }
+   ]
+  },
+  "ieris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "ierīs",
+     "clave": "eō.subj.perfecto.2sg",
+     "n": null
+    },
+    {
+     "forma": "ieris",
+     "clave": "eō.futuro-perfecto.2sg",
+     "n": 2
+    }
+   ]
+  },
+  "ieritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "ierītis",
+     "clave": "eō.subj.perfecto.2pl",
+     "n": null
+    },
+    {
+     "forma": "ieritis",
+     "clave": "eō.futuro-perfecto.2pl",
+     "n": 0
     }
    ]
   },
@@ -355,6 +1651,54 @@
      "forma": "integrā",
      "clave": "integer.f.abl.sg",
      "n": 1
+    }
+   ]
+  },
+  "invenerimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "invēnerimus",
+     "clave": "inveniō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "invēnerīmus",
+     "clave": "inveniō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "inveneris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "invēneris",
+     "clave": "inveniō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "invēnerīs",
+     "clave": "inveniō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "inveneritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "invēneritis",
+     "clave": "inveniō.futuro-perfecto.2pl",
+     "n": 2
+    },
+    {
+     "forma": "invēnerītis",
+     "clave": "inveniō.subj.perfecto.2pl",
+     "n": null
     }
    ]
   },
@@ -403,6 +1747,38 @@
      "forma": "invēnit",
      "clave": "inveniō.perfecto.3sg",
      "n": 26
+    }
+   ]
+  },
+  "inventa": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "inventa",
+     "clave": "inveniō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "inventā",
+     "clave": "inveniō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "inventura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "inventūra",
+     "clave": "inveniō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "inventūrā",
+     "clave": "inveniō.part-fut.f.abl.sg",
+     "n": null
     }
    ]
   },
@@ -470,6 +1846,230 @@
     }
    ]
   },
+  "laborata": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "labōrāta",
+     "clave": "labōrō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "labōrātā",
+     "clave": "labōrō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "laboratis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "labōrātis",
+     "clave": "labōrō.presente.2pl",
+     "n": 1
+    },
+    {
+     "forma": "labōrātīs",
+     "clave": "labōrō.part-perf.m.dat.pl",
+     "n": null
+    }
+   ]
+  },
+  "laboratura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "labōrātūra",
+     "clave": "labōrō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "labōrātūrā",
+     "clave": "labōrō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "laboraverimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "labōrāverimus",
+     "clave": "labōrō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "labōrāverīmus",
+     "clave": "labōrō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "laboraveris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "labōrāveris",
+     "clave": "labōrō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "labōrāverīs",
+     "clave": "labōrō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "laboraveritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "labōrāveritis",
+     "clave": "labōrō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "labōrāverītis",
+     "clave": "labōrō.subj.perfecto.2pl",
+     "n": null
+    }
+   ]
+  },
+  "laudata": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "laudāta",
+     "clave": "laudō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "laudātā",
+     "clave": "laudō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "laudatis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "laudātis",
+     "clave": "laudō.presente.2pl",
+     "n": 0
+    },
+    {
+     "forma": "laudātīs",
+     "clave": "laudō.part-perf.m.dat.pl",
+     "n": null
+    }
+   ]
+  },
+  "laudatura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "laudātūra",
+     "clave": "laudō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "laudātūrā",
+     "clave": "laudō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "laudaverimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "laudāverimus",
+     "clave": "laudō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "laudāverīmus",
+     "clave": "laudō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "laudaveris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "laudāveris",
+     "clave": "laudō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "laudāverīs",
+     "clave": "laudō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "laudaveritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "laudāveritis",
+     "clave": "laudō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "laudāverītis",
+     "clave": "laudō.subj.perfecto.2pl",
+     "n": null
+    }
+   ]
+  },
+  "lecta": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "lēcta",
+     "clave": "legō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "lēctā",
+     "clave": "legō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "lectura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "lēctūra",
+     "clave": "legō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "lēctūrā",
+     "clave": "legō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
   "lege": {
    "tipo": "lexico",
    "vocal": "e",
@@ -482,6 +2082,22 @@
     {
      "forma": "lege",
      "clave": "legō.imp.sg",
+     "n": null
+    }
+   ]
+  },
+  "legerimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "lēgerimus",
+     "clave": "legō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "lēgerīmus",
+     "clave": "legō.subj.perfecto.1pl",
      "n": null
     }
    ]
@@ -503,6 +2119,27 @@
     {
      "forma": "legēris",
      "clave": "legō.pas.futuro.2sg",
+     "n": null
+    },
+    {
+     "forma": "lēgerīs",
+     "clave": "legō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "legeritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "lēgeritis",
+     "clave": "legō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "lēgerītis",
+     "clave": "legō.subj.perfecto.2pl",
      "n": null
     }
    ]
@@ -619,6 +2256,54 @@
     }
    ]
   },
+  "maluerimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "māluerīmus",
+     "clave": "mālō.subj.perfecto.1pl",
+     "n": null
+    },
+    {
+     "forma": "māluerimus",
+     "clave": "mālō.futuro-perfecto.1pl",
+     "n": 0
+    }
+   ]
+  },
+  "malueris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "māluerīs",
+     "clave": "mālō.subj.perfecto.2sg",
+     "n": null
+    },
+    {
+     "forma": "mālueris",
+     "clave": "mālō.futuro-perfecto.2sg",
+     "n": 0
+    }
+   ]
+  },
+  "malueritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "māluerītis",
+     "clave": "mālō.subj.perfecto.2pl",
+     "n": null
+    },
+    {
+     "forma": "mālueritis",
+     "clave": "mālō.futuro-perfecto.2pl",
+     "n": 0
+    }
+   ]
+  },
   "manus": {
    "tipo": "morfologico",
    "vocal": "u",
@@ -715,6 +2400,22 @@
     }
    ]
   },
+  "miserimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "mīserimus",
+     "clave": "mittō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "mīserīmus",
+     "clave": "mittō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
   "miseris": {
    "tipo": "lexico",
    "vocal": "i",
@@ -728,6 +2429,27 @@
      "forma": "miserīs",
      "clave": "miser.m.dat.pl",
      "n": 1
+    },
+    {
+     "forma": "mīserīs",
+     "clave": "mittō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "miseritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "mīseritis",
+     "clave": "mittō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "mīserītis",
+     "clave": "mittō.subj.perfecto.2pl",
+     "n": null
     }
    ]
   },
@@ -744,6 +2466,118 @@
      "forma": "miserō",
      "clave": "miser.m.dat.sg",
      "n": 1
+    }
+   ]
+  },
+  "missa": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "missa",
+     "clave": "mittō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "missā",
+     "clave": "mittō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "missura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "missūra",
+     "clave": "mittō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "missūrā",
+     "clave": "mittō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "monita": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "monita",
+     "clave": "moneō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "monitā",
+     "clave": "moneō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "monitura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "monitūra",
+     "clave": "moneō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "monitūrā",
+     "clave": "moneō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "monuerimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "monuerimus",
+     "clave": "moneō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "monuerīmus",
+     "clave": "moneō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "monueris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "monueris",
+     "clave": "moneō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "monuerīs",
+     "clave": "moneō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "monueritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "monueritis",
+     "clave": "moneō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "monuerītis",
+     "clave": "moneō.subj.perfecto.2pl",
+     "n": null
     }
    ]
   },
@@ -776,6 +2610,54 @@
      "forma": "ne",
      "clave": "ne.indecl",
      "n": null
+    }
+   ]
+  },
+  "noluerimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "nōluerīmus",
+     "clave": "nōlō.subj.perfecto.1pl",
+     "n": null
+    },
+    {
+     "forma": "nōluerimus",
+     "clave": "nōlō.futuro-perfecto.1pl",
+     "n": 0
+    }
+   ]
+  },
+  "nolueris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "nōluerīs",
+     "clave": "nōlō.subj.perfecto.2sg",
+     "n": null
+    },
+    {
+     "forma": "nōlueris",
+     "clave": "nōlō.futuro-perfecto.2sg",
+     "n": 0
+    }
+   ]
+  },
+  "nolueritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "nōluerītis",
+     "clave": "nōlō.subj.perfecto.2pl",
+     "n": null
+    },
+    {
+     "forma": "nōlueritis",
+     "clave": "nōlō.futuro-perfecto.2pl",
+     "n": 0
     }
    ]
   },
@@ -824,6 +2706,102 @@
      "forma": "poētā",
      "clave": "poēta.abl.sg",
      "n": 0
+    }
+   ]
+  },
+  "portata": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "portāta",
+     "clave": "portō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "portātā",
+     "clave": "portō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "portatis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "portātis",
+     "clave": "portō.presente.2pl",
+     "n": 0
+    },
+    {
+     "forma": "portātīs",
+     "clave": "portō.part-perf.m.dat.pl",
+     "n": null
+    }
+   ]
+  },
+  "portatura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "portātūra",
+     "clave": "portō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "portātūrā",
+     "clave": "portō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "portaverimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "portāverimus",
+     "clave": "portō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "portāverīmus",
+     "clave": "portō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "portaveris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "portāveris",
+     "clave": "portō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "portāverīs",
+     "clave": "portō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "portaveritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "portāveritis",
+     "clave": "portō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "portāverītis",
+     "clave": "portō.subj.perfecto.2pl",
+     "n": null
     }
    ]
   },
@@ -891,6 +2869,22 @@
     }
    ]
   },
+  "responderimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "responderimus",
+     "clave": "respondeō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "responderīmus",
+     "clave": "respondeō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
   "responderis": {
    "tipo": "morfologico",
    "vocal": "e",
@@ -903,6 +2897,155 @@
     {
      "forma": "respondēris",
      "clave": "respondeō.pas.presente.2sg",
+     "n": null
+    },
+    {
+     "forma": "responderīs",
+     "clave": "respondeō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "responderitis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "responderitis",
+     "clave": "respondeō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "responderītis",
+     "clave": "respondeō.subj.perfecto.2pl",
+     "n": null
+    }
+   ]
+  },
+  "responsa": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "respōnsa",
+     "clave": "respondeō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "respōnsā",
+     "clave": "respondeō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "responsura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "respōnsūra",
+     "clave": "respondeō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "respōnsūrā",
+     "clave": "respondeō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "rogata": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "rogāta",
+     "clave": "rogō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "rogātā",
+     "clave": "rogō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "rogatis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "rogātis",
+     "clave": "rogō.presente.2pl",
+     "n": 0
+    },
+    {
+     "forma": "rogātīs",
+     "clave": "rogō.part-perf.m.dat.pl",
+     "n": null
+    }
+   ]
+  },
+  "rogatura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "rogātūra",
+     "clave": "rogō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "rogātūrā",
+     "clave": "rogō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "rogaverimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "rogāverimus",
+     "clave": "rogō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "rogāverīmus",
+     "clave": "rogō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "rogaveris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "rogāveris",
+     "clave": "rogō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "rogāverīs",
+     "clave": "rogō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "rogaveritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "rogāveritis",
+     "clave": "rogō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "rogāverītis",
+     "clave": "rogō.subj.perfecto.2pl",
      "n": null
     }
    ]
@@ -920,6 +3063,102 @@
      "forma": "rosā",
      "clave": "rosa.abl.sg",
      "n": 0
+    }
+   ]
+  },
+  "salutata": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "salūtāta",
+     "clave": "salūtō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "salūtātā",
+     "clave": "salūtō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "salutatis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "salūtātis",
+     "clave": "salūtō.presente.2pl",
+     "n": 0
+    },
+    {
+     "forma": "salūtātīs",
+     "clave": "salūtō.part-perf.m.dat.pl",
+     "n": null
+    }
+   ]
+  },
+  "salutatura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "salūtātūra",
+     "clave": "salūtō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "salūtātūrā",
+     "clave": "salūtō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "salutaverimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "salūtāverimus",
+     "clave": "salūtō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "salūtāverīmus",
+     "clave": "salūtō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "salutaveris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "salūtāveris",
+     "clave": "salūtō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "salūtāverīs",
+     "clave": "salūtō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "salutaveritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "salūtāveritis",
+     "clave": "salūtō.futuro-perfecto.2pl",
+     "n": 1
+    },
+    {
+     "forma": "salūtāverītis",
+     "clave": "salūtō.subj.perfecto.2pl",
+     "n": null
     }
    ]
   },
@@ -955,6 +3194,118 @@
     }
    ]
   },
+  "stata": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "stata",
+     "clave": "stō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "statā",
+     "clave": "stō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "state": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "stāte",
+     "clave": "stō.imp.pl",
+     "n": null
+    },
+    {
+     "forma": "state",
+     "clave": "stō.part-perf.m.voc.sg",
+     "n": null
+    }
+   ]
+  },
+  "statis": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "stātis",
+     "clave": "stō.presente.2pl",
+     "n": 4
+    },
+    {
+     "forma": "statīs",
+     "clave": "stō.part-perf.m.dat.pl",
+     "n": null
+    }
+   ]
+  },
+  "statura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "statūra",
+     "clave": "stō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "statūrā",
+     "clave": "stō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "steterimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "steterimus",
+     "clave": "stō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "steterīmus",
+     "clave": "stō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "steteris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "steteris",
+     "clave": "stō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "steterīs",
+     "clave": "stō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "steteritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "steteritis",
+     "clave": "stō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "steterītis",
+     "clave": "stō.subj.perfecto.2pl",
+     "n": null
+    }
+   ]
+  },
   "sua": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -968,6 +3319,86 @@
      "forma": "suā",
      "clave": "suus.f.abl.sg",
      "n": 112
+    }
+   ]
+  },
+  "tacita": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "tacita",
+     "clave": "taceō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "tacitā",
+     "clave": "taceō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "tacitura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "tacitūra",
+     "clave": "taceō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "tacitūrā",
+     "clave": "taceō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "tacuerimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "tacuerimus",
+     "clave": "taceō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "tacuerīmus",
+     "clave": "taceō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "tacueris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "tacueris",
+     "clave": "taceō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "tacuerīs",
+     "clave": "taceō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "tacueritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "tacueritis",
+     "clave": "taceō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "tacuerītis",
+     "clave": "taceō.subj.perfecto.2pl",
+     "n": null
     }
    ]
   },
@@ -987,6 +3418,54 @@
     }
    ]
   },
+  "timuerimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "timuerimus",
+     "clave": "timeō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "timuerīmus",
+     "clave": "timeō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "timueris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "timueris",
+     "clave": "timeō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "timuerīs",
+     "clave": "timeō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "timueritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "timueritis",
+     "clave": "timeō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "timuerītis",
+     "clave": "timeō.subj.perfecto.2pl",
+     "n": null
+    }
+   ]
+  },
   "tua": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -1000,6 +3479,102 @@
      "forma": "tuā",
      "clave": "tuus.f.abl.sg",
      "n": 59
+    }
+   ]
+  },
+  "tulerimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "tulerīmus",
+     "clave": "ferō.subj.perfecto.1pl",
+     "n": null
+    },
+    {
+     "forma": "tulerimus",
+     "clave": "ferō.futuro-perfecto.1pl",
+     "n": 0
+    }
+   ]
+  },
+  "tuleris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "tulerīs",
+     "clave": "ferō.subj.perfecto.2sg",
+     "n": null
+    },
+    {
+     "forma": "tuleris",
+     "clave": "ferō.futuro-perfecto.2sg",
+     "n": 0
+    }
+   ]
+  },
+  "tuleritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "tulerītis",
+     "clave": "ferō.subj.perfecto.2pl",
+     "n": null
+    },
+    {
+     "forma": "tuleritis",
+     "clave": "ferō.futuro-perfecto.2pl",
+     "n": 0
+    }
+   ]
+  },
+  "venerimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "vēnerimus",
+     "clave": "veniō.futuro-perfecto.1pl",
+     "n": 2
+    },
+    {
+     "forma": "vēnerīmus",
+     "clave": "veniō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "veneris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "vēneris",
+     "clave": "veniō.futuro-perfecto.2sg",
+     "n": 10
+    },
+    {
+     "forma": "vēnerīs",
+     "clave": "veniō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "veneritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "vēneritis",
+     "clave": "veniō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "vēnerītis",
+     "clave": "veniō.subj.perfecto.2pl",
+     "n": null
     }
    ]
   },
@@ -1051,6 +3626,38 @@
     }
    ]
   },
+  "venta": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "venta",
+     "clave": "veniō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "ventā",
+     "clave": "veniō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "ventura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "ventūra",
+     "clave": "veniō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "ventūrā",
+     "clave": "veniō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
   "vicina": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -1067,6 +3674,22 @@
     }
    ]
   },
+  "viderimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "vīderimus",
+     "clave": "videō.futuro-perfecto.1pl",
+     "n": 2
+    },
+    {
+     "forma": "vīderīmus",
+     "clave": "videō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
   "videris": {
    "tipo": "morfologico",
    "vocal": "i",
@@ -1080,6 +3703,235 @@
      "forma": "vidēris",
      "clave": "videō.pas.presente.2sg",
      "n": null
+    },
+    {
+     "forma": "vīderīs",
+     "clave": "videō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "videritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "vīderitis",
+     "clave": "videō.futuro-perfecto.2pl",
+     "n": 9
+    },
+    {
+     "forma": "vīderītis",
+     "clave": "videō.subj.perfecto.2pl",
+     "n": null
+    }
+   ]
+  },
+  "visa": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "vīsa",
+     "clave": "videō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "vīsā",
+     "clave": "videō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "visura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "vīsūra",
+     "clave": "videō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "vīsūrā",
+     "clave": "videō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "vocata": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "vocāta",
+     "clave": "vocō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "vocātā",
+     "clave": "vocō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "vocatis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "vocātis",
+     "clave": "vocō.presente.2pl",
+     "n": 2
+    },
+    {
+     "forma": "vocātīs",
+     "clave": "vocō.part-perf.m.dat.pl",
+     "n": null
+    }
+   ]
+  },
+  "vocatura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "vocātūra",
+     "clave": "vocō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "vocātūrā",
+     "clave": "vocō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "vocaverimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "vocāverimus",
+     "clave": "vocō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "vocāverīmus",
+     "clave": "vocō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "vocaveris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "vocāveris",
+     "clave": "vocō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "vocāverīs",
+     "clave": "vocō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "vocaveritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "vocāveritis",
+     "clave": "vocō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "vocāverītis",
+     "clave": "vocō.subj.perfecto.2pl",
+     "n": null
+    }
+   ]
+  },
+  "vocem": {
+   "tipo": "lexico",
+   "vocal": "o",
+   "miembros": [
+    {
+     "forma": "vōcem",
+     "clave": "vōx.ac.sg",
+     "n": 80
+    },
+    {
+     "forma": "vocem",
+     "clave": "vocō.subj.presente.1sg",
+     "n": null
+    }
+   ]
+  },
+  "voces": {
+   "tipo": "lexico",
+   "vocal": "o",
+   "miembros": [
+    {
+     "forma": "vōcēs",
+     "clave": "vōx.nom.pl",
+     "n": 9
+    },
+    {
+     "forma": "vocēs",
+     "clave": "vocō.subj.presente.2sg",
+     "n": null
+    }
+   ]
+  },
+  "voluerimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "voluerīmus",
+     "clave": "volō.subj.perfecto.1pl",
+     "n": null
+    },
+    {
+     "forma": "voluerimus",
+     "clave": "volō.futuro-perfecto.1pl",
+     "n": 0
+    }
+   ]
+  },
+  "volueris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "voluerīs",
+     "clave": "volō.subj.perfecto.2sg",
+     "n": null
+    },
+    {
+     "forma": "volueris",
+     "clave": "volō.futuro-perfecto.2sg",
+     "n": 5
+    }
+   ]
+  },
+  "volueritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "voluerītis",
+     "clave": "volō.subj.perfecto.2pl",
+     "n": null
+    },
+    {
+     "forma": "volueritis",
+     "clave": "volō.futuro-perfecto.2pl",
+     "n": 1
     }
    ]
   }

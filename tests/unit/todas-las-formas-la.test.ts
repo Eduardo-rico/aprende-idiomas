@@ -18,6 +18,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { formasUnicasDeL1, TABLAS_QUE_PRODUCEN_FORMAS, todasLasFormasDeL1 } from '@/lib/data/languages/la/todas-las-formas';
 import { decideLaMutaCumLiquida } from '@/scripts/lib/gate-inventario-vs-lexico';
+import atestacion from '@/lib/data/languages/la/atestacion-l1.json';
 
 const DIR = path.join(process.cwd(), 'lib/data/languages/la');
 
@@ -45,6 +46,11 @@ const NO_PRODUCEN: Record<string, string> = {
   VOCES_LA: 'son voces de TTS',
   REFLEJOS: 'pares para el auditor de cantidad: las formas ya salen de sus lemas',
   NO_LLEVAN_ENCLITICO: 'lista de LEMAS que no admiten el enclítico; sus formas ya entran por NOMBRES_L1',
+  // El guardián cazó estas dos al entrar el subjuntivo, que es la tercera
+  // vez en el día que avisa. No son tablas de material: son las etiquetas
+  // de los ejes del propio módulo.
+  TIEMPOS_SUBJ: 'los cuatro nombres de tiempo del subjuntivo, no palabras',
+  PERSONAS_SUBJ: 'las seis personas, no palabras',
 };
 
 describe('el enumerador conoce todas las tablas que producen formas', () => {
@@ -61,6 +67,32 @@ describe('el enumerador conoce todas las tablas que producen formas', () => {
     const porTabla = new Map<string, number>();
     for (const f of todasLasFormasDeL1()) porTabla.set(f.tabla, (porTabla.get(f.tabla) ?? 0) + 1);
     for (const t of TABLAS_QUE_PRODUCEN_FORMAS) expect(porTabla.get(t) ?? 0, t).toBeGreaterThan(0);
+  });
+});
+
+describe('la evidencia congelada mira TODAS las tablas, no tres', () => {
+  it('cada tabla productora tiene sus lemas en atestacion-l1.json', () => {
+    // Hasta el 2026-09-12 el congelador llamaba a `todasLasFormas(nombres,
+    // verbos, adjetivos)`: tres tablas de catorce. O sea que **el guardián
+    // que caza las desincronizaciones del lexicón no miraba seis tablas
+    // enteras** —indeclinables, pluralia, adjetivos de 3.ª, irregulares,
+    // compuestos de `sum`, pronombres y personales— y estaba en verde.
+    //
+    // Lo destapó preguntar, al meter una máquina nueva, no «qué invariantes
+    // existen» sino cuáles la MIRAN.
+    const cong = new Set(Object.keys((atestacion as { lemas: Record<string, unknown> }).lemas));
+    const porTabla = new Map<string, Set<string>>();
+    for (const f of todasLasFormasDeL1()) {
+      const lema = f.clave.split('.')[0]!;
+      if (!porTabla.has(f.tabla)) porTabla.set(f.tabla, new Set());
+      porTabla.get(f.tabla)!.add(lema);
+    }
+    const ciegas: string[] = [];
+    for (const t of TABLAS_QUE_PRODUCEN_FORMAS) {
+      const lemas = [...(porTabla.get(t) ?? [])];
+      if (lemas.length > 0 && lemas.filter((l) => cong.has(l)).length === 0) ciegas.push(t);
+    }
+    expect(ciegas, 'tablas que la evidencia congelada no mira').toEqual([]);
   });
 });
 

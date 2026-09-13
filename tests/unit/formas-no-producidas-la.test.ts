@@ -49,6 +49,18 @@ describe.runIf(hayCorpus)('la auditoría contra el corpus', () => {
   // No es ruido y no se tapa bajando el listón: son CLASES nombrables, y
   // cada una está acotada aquí con su motivo. Un gate que dijera «256» y
   // nada más sería un gate apagado.
+  // ── LAS COTAS SUBIERON EL 2026-09-12 Y ES LA SEÑAL BUENA ──
+  //
+  // Al entrar el subjuntivo se abrieron los tres filtros de esta auditoría,
+  // que decían «sólo indicativo activo y finito» y llevaban meses saltándose
+  // la pasiva, los infinitivos, los participios y —desde ese día— el
+  // subjuntivo entero. O sea que la auditoría estaba en verde sin mirar
+  // nada de lo recién construido.
+  //
+  // Abrirlos subió los huecos porque **empezó a mirar**. Lo que hay que
+  // vigilar sigue siendo el residuo sin clasificar, y lo demás son clases
+  // conocidas: los irregulares y los compuestos de `sum` aportan ahora sus
+  // formas no indicativas, y ahí está el grueso.
   it('los huecos se reparten en clases conocidas, y cada una está acotada', () => {
     const c = huecosPorClase();
     // La grafía alterna de los indeclinables: `ab`/`ā`, `atque`/`ac`,
@@ -57,10 +69,10 @@ describe.runIf(hayCorpus)('la auditoría contra el corpus', () => {
     // El GRADO: la máquina no tiene comparativo ni superlativo. Es un área
     // del currículo sin construir, no un fallo — y se detecta por la
     // anotación del treebank (`Degree=Cmp|Sup`), no adivinando sufijos.
-    expect(c['grado-del-adjetivo']!.entradas).toBeLessThan(150);
+    expect(c['grado-del-adjetivo']!.entradas).toBeLessThan(150);   // no se mueve: la máquina sigue sin grado
     // El perfectum de los irregulares y de los compuestos de `sum`: sale
     // del tema de perfecto, que `irregulares.ts` declara.
-    expect(c['perfectum-del-irregular']!.entradas).toBeLessThan(90);
+    expect(c['perfectum-del-irregular']!.entradas).toBeLessThan(250);
     expect(c['grafia-del-pronombre']!.entradas).toBeLessThan(25);
     expect(c['heteroclito-conocido']!.entradas).toBeLessThanOrEqual(6);
   });
@@ -97,19 +109,23 @@ describe.runIf(hayCorpus)('la auditoría contra el corpus', () => {
 
   it('y lo que NO cae en ninguna clase sigue siendo poco y legible', () => {
     const sin = auditar().filter((h) => claseDeHueco(h.lema, h.rasgos ?? '', h.forma) === 'sin-clasificar');
-    // 53 entradas y 96 tokens al 2026-09-12, tras entrar en el lexicón los
-    // siete verbos, los pronombres personales y `dō`. Subió y volvió a
-    // bajar: lo que lo bajó fue preguntarle al corpus EN SU CONVENCIÓN
-    // —UD pone `vōs` bajo el lema `tu` y `nōs` bajo `ego`— en vez de en la
-    // nuestra. Un desencuentro de etiquetas no es un hueco de la máquina, y
-    // confundirlos fabrica trabajo que no existe. Lo que queda está mirado uno a uno: la
+    // 95 entradas y 208 tokens tras abrir los filtros al entrar el
+    // subjuntivo. Subió de 53 porque la auditoría empezó a mirar el
+    // subjuntivo, la pasiva y los participios — y bajó de 266 a 95 al
+    // enchufar lo que la máquina sí produce y nadie enumeraba: la pasiva
+    // del subjuntivo, los participios de perfecto y futuro declinados, y el
+    // infinitivo, el imperativo y el perfectum de los irregulares.
+    //
+    // Lo que queda dentro está mirado: el perfecto SINCOPADO del subjuntivo
+    // (`audīsset` por `audīvisset`, ×15) —hueco real, misma clase que el
+    // pluscuamperfecto sincopado—, `sēsē`, `mī`, y la grafía `exs-`/`ex-`. Lo que queda está mirado uno a uno: la
     // grafía `exs-`/`ex-` de `exspectō`, los adverbios en `-ter`/`-ē` que
     // la máquina no forma, el femenino que el corpus lematiza bajo el
     // masculino, y el pluscuamperfecto sincopado (`laudāram`) — que sí es
     // un hueco real de la máquina, aunque sea UN token y no bloquee ningún
     // punto: la máquina sincopa el perfecto (`laudāstis`, `laudārunt`) y no
     // el pluscuamperfecto.
-    expect(sin.length).toBeLessThan(60);
+    expect(sin.length).toBeLessThan(130);
   });
 
   it('el heteróclito más grande sigue siendo `loca`, el plural neutro de `locus`', () => {

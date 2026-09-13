@@ -99,12 +99,21 @@ export function auditar(): NoProducida[] {
       const w = sinM(t[1] ?? '');
       if (s.has(w)) continue;
       const r = Object.fromEntries((t[5] ?? '').split('|').map((x) => x.split('=')));
-      // Sólo lo que la máquina SÍ pretende cubrir: indicativo activo y los
-      // seis casos. Pedirle subjuntivos o participios sería contarle como
-      // hueco lo que nunca dijo tener.
-      if (r.VerbForm && r.VerbForm !== 'Fin') continue;
-      if (r.Mood && r.Mood !== 'Ind') continue;
-      if (r.Voice === 'Pass') continue;
+      // ── LOS FILTROS SE ACTUALIZAN CUANDO CRECE LA MÁQUINA ──
+      //
+      // Decían «sólo indicativo activo y finito», y era cierto cuando se
+      // escribieron. El 2026-09-12 la máquina ganó la PASIVA, los
+      // INFINITIVOS, los PARTICIPIOS y el SUBJUNTIVO, y estos tres `continue`
+      // seguían saltándose justo el material nuevo: la auditoría habría
+      // quedado en verde sin mirar nada de lo recién construido.
+      //
+      // Es el caso exacto contra el que avisa §5.octies, y por eso se
+      // arregla EN EL MISMO COMMIT que añade el subjuntivo y no después.
+      //
+      // Lo que sigue fuera es lo que la máquina de verdad no produce: el
+      // gerundio, el gerundivo declinado y el supino.
+      if (r.VerbForm && !['Fin', 'Inf', 'Part'].includes(r.VerbForm)) continue;
+      if (r.Mood && !['Ind', 'Sub', 'Imp'].includes(r.Mood)) continue;
       if (r.Case && !['Nom', 'Acc', 'Gen', 'Dat', 'Abl', 'Voc'].includes(r.Case)) continue;
       const k = `${lem}|${w}`;
       const prev = out.get(k);
