@@ -41,8 +41,9 @@ export const NOMBRES_A1: EntradaNominal[] = [
   { lema: 'карта', genero: 'f', tema: 'duro', glosa: 'mapa, carta',
     nota: 'está por el genitivo plural SIN vocal de apoyo (карт 91), que es la frontera de la regla de сестёр' },
   { lema: 'сестра', genero: 'f', tema: 'duro', glosa: 'hermana',
-    nomPlIrreg: 'сёстры', genPlIrreg: 'сестёр',
-    nota: 'vocal de apoyo CON ё (сестёр 79) y nominativo plural con el acento movido (сёстры)' },
+    nomPlIrreg: 'сёстры', genPlIrreg: 'сестёр', temaPl: 'сёстр',
+    lecturaYo: { 'gen.sg': 'сёстры (24) NO es una variante de сестры: es el NOMINATIVO PLURAL, otra casilla del mismo lema. La máquina tiene razón en el genitivo singular' },
+    nota: '⚠ EL `temaPl: сёстр` LO ENCONTRÓ EL LINGÜISTA ADVERSARIAL EL 2026-09-12 Y ESTABA VIVO: la máquina daba *сестрам/*сестрами/*сестрах. Зализняк: мн. сёстры, сестёр, сёстрам, сёстрами, о сёстрах. Medido con ё frente a sin ё — 4/29, 4/29, 4/5 — que es la tasa exacta de ediciones ё-ificadas, y сёстер da 0, o sea que la ё del genitivo plural cae donde esta entrada dice y no donde caería la de los demás casos. Vocal de apoyo CON ё (сестёр 16 · сёстер 0)' },
   // Masculino con forma femenina: la clase que `u3-genero-por-terminacion`
   // declara como su único contenido, porque leer la terminación es gratis.
   { lema: 'папа', genero: 'm', tema: 'duro', glosa: 'papá', animado: true },   // 557
@@ -77,6 +78,7 @@ export const NOMBRES_A1: EntradaNominal[] = [
   { lema: 'сад', genero: 'm', tema: 'duro', glosa: 'jardín', locativo2: { forma: 'саду', regente: 'в' },
     nota: 'в саду 416 frente a в саде 0' },
   { lema: 'берег', genero: 'm', tema: 'duro', glosa: 'orilla', locativo2: { forma: 'берегу', regente: 'на' }, nomPlIrreg: 'берега',
+    lecturaYo: { 'nom.sg': 'берёг (4) es OTRO LEMA: el pasado masculino de беречь «guardar». No es una variante de берег «orilla»', 'ac.sg': 'ídem', lema: 'ídem — la misma lectura, vista desde el campo del lexicón en vez de desde la casilla generada' },
     nota: 'на берегу 203; y el tema es VELAR, así que su plural regular pasa además por la regla ortográfica' },
   { lema: 'пол', genero: 'm', tema: 'duro', glosa: 'suelo',
     locativo2: { forma: 'полу', regente: 'на' },
@@ -99,7 +101,8 @@ export const NOMBRES_A1: EntradaNominal[] = [
     nota: 'tema DURO con sibilante: врачи es la regla ortográfica, деревни es la de tema. El par es lo que impide publicar media regla' },
   // La vocal fugaz, con su cuenta: день 5909.
   { lema: 'день', genero: 'm', tema: 'blando', glosa: 'día', temaOblicuo: 'дн',
-    nota: 'vocal fugaz: дня, дню, днём, дне, дни, дней — el nominativo singular es la ÚNICA casilla que la conserva' },
+    irregular: { 'instr.sg': 'днём' },
+    nota: '⚠ EL `днём` LO ENCONTRÓ EL LINGÜISTA ADVERSARIAL EL 2026-09-12 Y ESTABA VIVO Y PUBLICADO: la máquina daba *днем, y la propia nota de esta entrada YA ESCRIBÍA «дня, дню, днём, дне». El fichero se contradecía a sí mismo y el gate salía verde, porque `contar()` funde las dos grafías de la ё a propósito y aquí el error ERA la ё. конь y царь sí llevaban su instrumental tónico; a день se le olvidó: la copia N+1 de una regla duplicada. днём 52 con ё · 428 sin. vocal fugaz: дня, дню, днём, дне, дни, дней — el nominativo singular es la ÚNICA casilla que la conserva' },
 
   // ── 2.ª DECLINACIÓN MASCULINA, TEMA BLANDO ────────────────────────
   // `конь` y `дверь` acaban en la misma letra y son declinaciones
@@ -176,11 +179,17 @@ export const VERBOS_A1: EntradaVerbal[] = [
     glosa: 'ir (a pie, en curso)', aspecto: 'impf',
     pasadoIrreg: { m: 'шёл', f: 'шла', n: 'шло', pl: 'шли' },
     nota: 'el pasado no sale del infinitivo: шёл/шла. Y la regla del pasado ni siquiera puede intentarlo, porque идти no acaba en -ть — devuelve null y por eso el dato es obligatorio aquí' },
-  { lema: 'мочь', clase: 1, temaPresente: 'мог', acento2sgDesinencial: true, acento1sgDesinencial: true,
+  // ⚠ `acento2sgDesinencial: false` — corregido el 2026-09-12. La v0 decía
+  // `true` y es falso: **мо́жешь** lleva el acento en el tema. Era inerte
+  // porque el verbo va `irregular` entero, y eso es justo lo que lo hacía
+  // peligroso: un dato falso en un campo que la máquina lee, sin nada que lo
+  // comprobara. Los otros 16 verbos tienen los dos acentos correctos.
+  { lema: 'мочь', clase: 1, temaPresente: 'мог', acento2sgDesinencial: false, acento1sgDesinencial: true,
     glosa: 'poder', aspecto: 'impf',
     irregular: { '1sg': 'могу', '2sg': 'можешь', '3sg': 'может', '1pl': 'можем', '2pl': 'можете', '3pl': 'могут' },
     pasadoIrreg: { m: 'мог', f: 'могла', n: 'могло', pl: 'могли' },
     imperativoIrreg: null,
+    lecturaYo: { 'pres.2sg': 'можёшь sale 1 vez y es la fórmula rimada «Как живёшь-можёшь?» (Leskov), donde la ё es analógica de живёшь. Una aparición en una fórmula fija no es una variante de la casilla' },
     nota: 'alterna г/ж DENTRO del paradigma (могу/можешь/могут), que no es una alternancia de tema sino dos temas, y por eso va guardado entero. Sin imperativo: `imperativoIrreg: null` es la declaración, no un hueco' },
 
   // ── CONJUGACIÓN II ────────────────────────────────────────────────

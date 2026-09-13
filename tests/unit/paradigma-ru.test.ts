@@ -17,7 +17,7 @@ import {
 } from '../../lib/data/languages/ru/paradigma-ru';
 import { NOMBRES_A1, VERBOS_A1 } from '../../lib/data/languages/ru/lexicon-a1';
 import { revisarOrtografiaRu } from '../../lib/lang/ortografia-ru';
-import { clasificar, type Prueba } from '../../scripts/check-paradigma-ru';
+import { clasificar, candidatasConYo, type Prueba } from '../../scripts/check-paradigma-ru';
 
 const n = (lema: string) => NOMBRES_A1.find((x) => x.lema === lema)!;
 const v = (lema: string) => VERBOS_A1.find((x) => x.lema === lema)!;
@@ -305,5 +305,60 @@ describe('CUÁNDO UN PAR ES EVIDENCIA Y CUÁNDO ES UNA TAREA DE LECTURA', () => 
     expect(n('книга').lecturaRival?.['nom.pl']).toMatch(/1 vez/);
     expect(n('лес').lecturaRival?.locativo2).toMatch(/о лесе 2/);
     expect(n('пол').lecturaRival?.locativo2).toMatch(/поле «campo»/);
+  });
+});
+
+// ── EL DETECTOR DE LA Ё, CON SU TESTIGO ROJO Y SU CONTROL NEGATIVO ────
+//
+// ⚠ LA CLASE: LA NORMALIZACIÓN NO FALLA, APRUEBA. `contar()` funde las dos
+// grafías de la ё, y funde BIEN: el corpus es bimodal por edición y buscar
+// `сестёр` a secas se deja el 90 %. El defecto fue usar esa misma función
+// para una pregunta cuya respuesta **es** la distinción que ella borra.
+// Resultado: dos errores vivos y publicados, los dos en verde en todas las
+// comprobaciones. Es la cuarta vez que el proyecto paga esta forma —en
+// rumano fueron el guion de la ênclise, el acento de la crase y la coma de
+// la adversativa— y por eso el detector es una FUNCIÓN APARTE con el nombre
+// puesto, no una bandera que se olvida de pasar.
+describe('el detector de la ё: en rojo primero', () => {
+  // Los dos errores REALES tal como estaban publicados. Éste es el testigo:
+  // si el detector no los caza, no sirve.
+  it('caza *днем cuando la lengua escribe днём (52 con ё · 428 sin)', () => {
+    const c = candidatasConYo('днем');
+    expect(c.map((x) => x.forma)).toContain('днём');
+    expect(c.find((x) => x.forma === 'днём')!.n).toBeGreaterThan(0);
+  });
+
+  it.each(['сестрам', 'сестрами', 'сестрах'])('caza *%s cuando el tema es сёстр-', (mala) => {
+    const c = candidatasConYo(mala);
+    expect(c.map((x) => x.forma)).toContain(mala.replace('се', 'сё'));
+  });
+
+  // ⚠ EL CONTROL NEGATIVO. Un detector que marca todo también marca los dos
+  // de arriba, y su rojo es idéntico al de uno que funciona. Un dato
+  // correcto tiene que dar CERO.
+  it.each(['столе', 'столом', 'дне', 'дня', 'книги', 'читает', 'говорите', 'месте'])(
+    'la forma correcta «%s» no dispara nada', (buena) => {
+      expect(candidatasConYo(buena)).toEqual([]);
+    });
+
+  it('una forma que YA lleva ё no se examina: no hay nada que preguntar', () => {
+    expect(candidatasConYo('днём')).toEqual([]);
+    expect(candidatasConYo('сёстрам')).toEqual([]);
+  });
+
+  it('y el lexicón ya no produce ninguna de las cuatro formas malas', () => {
+    expect(casillaNominal(n('день'), 'instr', 'sg')).toBe('днём');
+    expect(casillaNominal(n('сестра'), 'dat', 'pl')).toBe('сёстрам');
+    expect(casillaNominal(n('сестра'), 'instr', 'pl')).toBe('сёстрами');
+    expect(casillaNominal(n('сестра'), 'prep', 'pl')).toBe('сёстрах');
+  });
+
+  // Las cuatro señales que NO son errores llevan su lectura escrita en el
+  // lexicón, con el mismo criterio que los rivales: una señal leída es un
+  // hecho sabido, una sin leer es lo único que tumba el lexicón.
+  it('las cuatro señales que no son errores están leídas, no silenciadas', () => {
+    expect(n('сестра').lecturaYo?.['gen.sg']).toMatch(/NOMINATIVO PLURAL/);
+    expect(n('берег').lecturaYo?.['nom.sg']).toMatch(/беречь/);
+    expect(v('мочь').lecturaYo?.['pres.2sg']).toMatch(/Leskov|живёшь/);
   });
 });

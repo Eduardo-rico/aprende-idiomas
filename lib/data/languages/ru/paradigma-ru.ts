@@ -140,6 +140,20 @@ export interface EntradaNominal {
    *  escritas en prosa, y el gate no podía verlas — que es exactamente por
    *  lo que una afirmación en prosa no se vuelve a mirar nunca. */
   lecturaRival?: Record<string, string>;
+  /** ⚠ LA LECTURA DE UNA CANDIDATA CON Ё, POR CASILLA.
+   *
+   *  El gate mide, SIN fundir las dos grafías, si la variante con `ё` de
+   *  cada forma generada está atestada. Encontró dos errores vivos
+   *  (`*днем` por `днём`, `*сестрам` por `сёстрам`) que todas las demás
+   *  comprobaciones daban en verde, porque `contar()` funde la ё a
+   *  propósito y el error ERA la ё.
+   *
+   *  Y encontró cuatro señales que no son errores, y las cuatro exigen leer:
+   *  la candidata puede ser OTRA CASILLA del mismo lema (`сестры` gen sg
+   *  frente a `сёстры` nom pl), OTRO LEMA (`берег` frente a `берёг`, pasado
+   *  de `беречь`) o una fórmula fija (`живёшь-можёшь`, Leskov, 1 aparición).
+   *  Aquí va lo leído, con la clave de la casilla. */
+  lecturaYo?: Record<string, string>;
   /** Por qué esta entrada está en el lexicón, cuando el motivo no es «es
    *  frecuente». Lo lee el gate y lo imprime. */
   nota?: string;
@@ -380,6 +394,8 @@ export interface EntradaVerbal {
    *  y no trae las seis casillas, `presente()` devuelve `null`: nunca una
    *  forma plausible. */
   irregular?: Partial<Record<PersonaRu, string>>;
+  /** Ver `lecturaYo` en `EntradaNominal`. */
+  lecturaYo?: Record<string, string>;
   /** Imperativo guardado cuando la regla falla o el verbo no lo tiene. */
   imperativoIrreg?: string | null;
   /** Reflexivo: `-ся` tras consonante, `-сь` tras vocal. La alternancia es

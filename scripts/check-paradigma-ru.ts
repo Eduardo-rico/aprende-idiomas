@@ -68,6 +68,57 @@ function contar(forma: string): number {
   return buscar(alt).n;
 }
 
+/** ⚠ EL PRECIO DE `contar()`, Y EL DETECTOR QUE LO PAGA.
+ *
+ *  `contar()` funde las dos grafías de la ё en una sola consulta, y hace
+ *  bien: la ё es bimodal por edición y buscar `сестёр` a secas se deja el
+ *  90 %. **Pero esa misma fusión ciega al gate contra toda una clase de
+ *  errores: los que CONSISTEN en la ё.** El lingüista adversarial encontró
+ *  dos, vivos y publicados, los dos en verde:
+ *
+ *    · `день` producía `*днем` — la forma es `днём` (52 con ё · 428 sin)
+ *    · `сестра` producía `*сестрам/*сестрами/*сестрах` — el tema oblicuo
+ *      del plural es `сёстр-` (4 · 29, la tasa exacta de ediciones con ё)
+ *
+ *  Y el fichero se contradecía a sí mismo: la `nota` de `день` ya escribía
+ *  «дня, дню, днём, дне». Un arreglo que resuelve un problema real puede
+ *  apagar el instrumento para otro, y eso no se ve desde dentro del arreglo.
+ *
+ *  Esta función mide SIN FUNDIR. Si la máquina produce una forma con `е` y
+ *  la variante con `ё` está atestada, la máquina está produciendo la
+ *  palabra equivocada — porque la regla del proyecto es **producir con ё
+ *  siempre**, ya que es la grafía informativa y la que el TTS necesita. */
+/** CONTAR **SIN** FUNDIR LAS DOS GRAFÍAS DE LA Ё.
+ *
+ *  ⚠ ES UNA FUNCIÓN APARTE Y NO UNA BANDERA DE `contar()`, a propósito:
+ *  **una bandera se olvida de pasar; una función con otro nombre, no.** Y el
+ *  nombre tiene que decir qué la distingue, porque el defecto que esta
+ *  pareja documenta es precisamente haber usado la que FUNDE para una
+ *  pregunta cuya respuesta ES la distinción que ella borra.
+ *
+ *  `contar()` funde y hace bien: para contar apariciones en un corpus
+ *  bimodal por edición, fundir es lo correcto. Para preguntar «¿la lengua
+ *  escribe aquí ё?», no. */
+export function contarSensibleALaYo(forma: string): number {
+  return buscar(quitarAcento(forma)).n;
+}
+
+/** Las variantes con `ё` de una forma que la máquina escribe con `е`, con su
+ *  cuenta SIN fundir. Vacío si la forma ya lleva `ё` o no tiene ninguna `е`
+ *  que pudiera serlo. */
+export function candidatasConYo(forma: string): { forma: string; n: number }[] {
+  const f = quitarAcento(forma);
+  if (f.includes('ё') || !f.includes('е')) return [];
+  const out: { forma: string; n: number }[] = [];
+  for (let i = 0; i < f.length; i++) {
+    if (f[i] !== 'е') continue;
+    const c = f.slice(0, i) + 'ё' + f.slice(i + 1);
+    const n = contarSensibleALaYo(c);
+    if (n > 0) out.push({ forma: c, n });
+  }
+  return out;
+}
+
 export interface Prueba {
   lema: string; celda: string; forma: string; n: number;
   rival?: string; nRival?: number;
@@ -299,6 +350,23 @@ if (/[/\\]check-paradigma-ru\.ts$/.test(process.argv[1] ?? '')) {
 
   console.log(`── CORPUS: ${pruebas.length} formas generadas ──`);
   console.log(`   atestadas: ${pruebas.length - sinAtestar.length} · sin una sola aparición: ${sinAtestar.length}`);
+  // ── LA Ё QUE LA FUSIÓN DE `contar()` NO DEJA VER ──────────────────
+  // Mismo criterio que el del rival: una señal con lectura declarada es un
+  // hecho sabido; una sin lectura es lo único que tumba el lexicón.
+  const lecturas = new Map<string, Record<string, string> | undefined>();
+  for (const e of NOMBRES_A1) lecturas.set(e.lema, e.lecturaYo);
+  for (const v of VERBOS_A1) lecturas.set(v.lema, v.lecturaYo);
+  const conYo: string[] = [];
+  const yoLeidas: string[] = [];
+  for (const p of pruebas) {
+    for (const c of candidatasConYo(p.forma)) {
+      const leida = lecturas.get(p.lema)?.[p.celda];
+      const linea = `${p.lema}\t${p.celda}\tla máquina da «${p.forma}» y «${c.forma}» está atestada ${c.n} veces`;
+      if (leida) yoLeidas.push(`${linea}\n      LEÍDO: ${leida}`);
+      else conYo.push(linea);
+    }
+  }
+
   console.log(`   pares comparados: ${pruebas.filter((p) => p.rival).length}`);
   console.log(`   · el rival da CERO (evidencia limpia): ${pruebas.filter((p) => p.rival && p.nRival === 0 && p.n > 0).length}`);
   console.log(`   · el rival tiene apariciones (hay que LEERLO): ${aLeer.length}`);
@@ -329,7 +397,22 @@ if (/[/\\]check-paradigma-ru\.ts$/.test(process.argv[1] ?? '')) {
     console.log();
   }
 
-  const rojo = fallosControl > 0 || perdidas.length > 0
+  if (yoLeidas.length) {
+    console.log('CANDIDATAS CON Ё QUE YA SE LEYERON — no son errores, y por qué:');
+    for (const x of yoLeidas) console.log(`  ${x}`);
+    console.log();
+  }
+  if (conYo.length) {
+    console.log('⚠ LA MÁQUINA PRODUCE «е» DONDE LA LENGUA ESCRIBE «ё» (esto tumba el lexicón):');
+    console.log('   `contar()` funde las dos grafías a propósito —la ё es bimodal por edición— y');
+    console.log('   por eso esta clase de error sale VERDE en todas las demás comprobaciones.');
+    console.log('   La regla del proyecto es producir con ё SIEMPRE: es la grafía informativa y');
+    console.log('   la que el TTS necesita para no decir otra palabra.');
+    for (const x of conYo) console.log(`  ${x}`);
+    console.log();
+  }
+
+  const rojo = fallosControl > 0 || perdidas.length > 0 || conYo.length > 0
     || avisos.some((a) => a.clase.startsWith('ortografia') || a.clase === 'casilla-vacia');
   console.log(rojo ? 'ROJO' : 'VERDE');
   process.exit(rojo ? 1 : 0);
