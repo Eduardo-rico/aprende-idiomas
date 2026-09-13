@@ -24,6 +24,7 @@ import {
   colaDe, frase, ancla, correr, controlDelAparato, claseIrregular,
   prefijoComun, reglaDeManual, plural, temaDelLema, verboDelMarco,
   barridoColaFija, barridoPorClase, veredictoRival, LECTURA_RIVAL,
+  techoDeLaRutaDelGenero,
   ESTRATEGIAS, PERFILES, RUTAS_POR_LECTURA, FALSAS_DEL_LOTE, veredictoFalsa,
   entradaNom, vista,
   type ClozePlRu,
@@ -106,6 +107,20 @@ describe('la v0 de claseIrregular daba «regular» a город → города
     expect(claseIrregular(e('город'), 'города')).toBe('desinencia');
     expect(claseIrregular(e('друг'), 'друзья')).toBe('tema');
     expect(claseIrregular(e('человек'), 'люди')).toBe('lexema');
+  });
+  it('⚠ EL LÍMITE, AFIRMADO Y NO SUPUESTO: la tabla de temas de manual absorbe dos irregularidades', () => {
+    // E7 del lingüista adversarial. `reglaDeManual` empieza leyendo
+    // TEMAS_DE_MANUAL, así que `сестра → сёстры` (cambio de tema con ё) y
+    // `день → дни` (vocal fugaz) salen REGULARES y G16b es ciego a los dos.
+    // Hoy no publica nada malo porque G0 y G0b los excluyen antes; si mañana
+    // se relaja G0, `сестра` entra como regular y sin frontera.
+    const e = (l: string) => NOMBRES_A1.find((n) => n.lema === l)!;
+    expect(claseIrregular(e('сестра'), casillaNominal(e('сестра'), 'nom', 'pl')!)).toBe('regular');
+    expect(claseIrregular(e('день'), casillaNominal(e('день'), 'nom', 'pl')!)).toBe('regular');
+    // Y lo que la tabla NO puede fabricar, que es lo que salva la partición de
+    // las tres fronteras: ninguna entrada de TEMAS_DE_MANUAL toca друг ni человек.
+    expect(hay(verificar(con(0, { lema: 'сестра' })), /tema de plural «сёстр» lleva ё/)).toBe(true);
+    expect(hay(verificar(con(0, { lema: 'день' })), /vocal fugaz/)).toBe(true);
   });
   it('y el CONTROL NEGATIVO: los nueve regulares del lote siguen siendo regulares', () => {
     const irregulares = ITEMS.filter((x) => claseIrregular(entradaNom(x)!, respuestaDe(x)!) !== 'regular');
@@ -269,9 +284,21 @@ describe('los gates de par y de eje, vistos en rojo', TIMEOUT_CORPUS, () => {
     const uno = ITEMS.slice(0, 4).map((x) => ({ ...x, eje: 'tema-consonante' as const }));
     expect(hay(verificar(uno), /ejes distintos/)).toBe(true);
   });
-  it('G15b · menos de cuatro colas', () => {
+  it('G15b · menos de cuatro clases en total', () => {
     const pocas = ITEMS.slice(0, 4);
-    expect(hay(verificar(pocas), /colas distintas/)).toBe(true);
+    expect(hay(verificar(pocas), /clases irregulares — con menos de cuatro/)).toBe(true);
+  });
+  it('★ G15b · y su segunda mitad, que la v0 no podía tener: menos de TRES desinencias del título', () => {
+    // La v0 contaba `-зья` y `люди` como si fueran desinencias del reparto y
+    // salía verde con cinco «colas» sobre un lote que produce tres de las
+    // cuatro. Testigo: un lote con -ы, -а y los dos irregulares, sin -и.
+    const sinI = [ITEMS[0]!, ITEMS[4]!, ITEMS[7]!, ITEMS[9]!, ITEMS[11]!];
+    expect(hay(verificar(sinI), /sólo 2 de las CUATRO desinencias del título/)).toBe(true);
+  });
+  it('y el CONTROL NEGATIVO de G15b: el lote real produce tres de las cuatro y dos clases irregulares', () => {
+    const colas = [...new Set(ITEMS.map((x) => colaDe(x)))];
+    expect(colas.filter((c) => ['ы', 'и', 'а', 'я'].includes(c!)).sort()).toEqual(['а', 'и', 'ы']);
+    expect(colas.filter((c) => !['ы', 'и', 'а', 'я'].includes(c!)).length).toBe(2);
   });
 });
 
@@ -329,13 +356,51 @@ describe('las rutas aciertan lo predicho', TIMEOUT_CORPUS, () => {
   it('las CIEGAS no pasan del tope de la mitad', () => {
     for (const r of correr(ITEMS, ESTRATEGIAS)) expect(r.aciertos / r.n).toBeLessThanOrEqual(0.5);
   });
-  it('★ y el tope no puede fallar para las que no leen el lema: es un TEOREMA', () => {
-    // Dentro de un par el marco, el verbo y la pista son idénticos; el género
-    // también salvo en el par del neutro. Luego una ruta que sólo lea el tema
-    // del lema recibe entradas que difieren únicamente en el tema.
-    for (const [k, xs] of new Map(ITEMS.map((x) => [x.par, ITEMS.filter((y) => y.par === x.par)])))
-      for (const campo of ['marco', 'pista'] as const)
-        if (campo === 'marco') expect(new Set(xs.map((x) => x.marco)).size, k).toBe(1);
+  // ⚠ LA v0 DE ESTE TEST ERA UN GUARDIÁN QUE VOLVÍA NO-OP SU PROPIA DECISIÓN
+  //   (E8 del lingüista adversarial). Iteraba `for (const campo of ['marco',
+  //   'pista'])` y dentro hacía `if (campo === 'marco')`, así que comprobaba
+  //   `marco` DOS veces y `pista` CERO. Y la mitad que descartaba era la que
+  //   era FALSA: su comentario decía «el marco, el verbo y la pista son
+  //   idénticos» y la pista NO es idéntica dentro de ningún par —lleva la
+  //   glosa, que es distinta por construcción— ni el género lo es en el par
+  //   del neutro. El teorema se sostenía por accidente.
+  it('★ el TEOREMA del §48, enunciado sobre lo que de verdad es constante', () => {
+    const pares = new Map(ITEMS.map((x) => [x.par, ITEMS.filter((y) => y.par === x.par)]));
+    for (const [k, xs] of pares) {
+      // (a) lo que SÍ es idéntico dentro de un par: el marco entero, y con él
+      //     el verbo, la preposición y la posición del hueco.
+      expect(new Set(xs.map((x) => x.marco)).size, `${k} · marco`).toBe(1);
+      // (b) lo que NO lo es, y por eso el teorema cubre sólo a las rutas que no
+      //     leen el lema NI LA GLOSA: la pista difiere en los seis pares.
+      expect(new Set(xs.map((x) => x.pista)).size, `${k} · pista`).toBe(2);
+      // (c) y la parte de la pista que sí es constante —lo que va tras la
+      //     glosa— es lo único que una ruta puede leer sin leer el lema… salvo
+      //     en el par exento, donde el género cambia.
+      const cola = xs.map((x) => x.pista.slice(x.pista.indexOf('—')));
+      const exento = xs[0]!.eje === 'genero-neutro';
+      expect(new Set(cola).size, `${k} · pista tras la glosa`).toBe(exento ? 2 : 1);
+    }
+  });
+  it('⚠ y lo que el teorema NO cubre, afirmado en vez de supuesto: la GLOSA viaja entera en la Vista', () => {
+    // `Vista.pista` lleva la glosa, que es distinta en los dos ítems de cada
+    // par. Ninguna ruta escrita hoy la lee más allá del género, así que el tope
+    // de 6 se sostiene — pero se sostiene por lo que las rutas hacen y no por
+    // lo que el tipo permite. Si alguien escribe una ruta que lea la glosa, el
+    // tope desaparece sin que nada se ponga rojo. Queda AFIRMADO aquí.
+    const v = vista(ITEMS[0]!)!;
+    expect(v.pista).toContain('mesa');
+    expect(new Set(ITEMS.map((x) => x.pista.split(' —')[0])).size).toBe(12);
+  });
+  it('★ `el-genero-de-la-pista` va contra SU techo (6/7) y no contra la mitad', () => {
+    // E5. El teorema del §48 acota a 1 por par a las rutas que no leen el lema,
+    // y el género SÍ es propiedad del lema: sólo la acota donde el gate obliga
+    // a que sea constante, y el par del neutro está exento por diseño.
+    const g = correr(ITEMS, ESTRATEGIAS).find((r) => r.nombre === 'el-genero-de-la-pista')!;
+    expect(techoDeLaRutaDelGenero()).toBe(7);
+    expect(g.aciertos).toBe(6);
+    // Y la mitad incómoda, medida: el 6 lo fabrica el par exento. Sin él, 5.
+    const enElExento = g.cuales.filter((k) => ITEMS[k - 1]!.eje === 'genero-neutro');
+    expect(enElExento).toEqual([5, 6]);
   });
   it('cada ruta CIEGA acierta exactamente su número predicho, con su denominador', () => {
     for (const r of correr(ITEMS, ESTRATEGIAS)) {

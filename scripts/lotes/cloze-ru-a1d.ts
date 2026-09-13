@@ -20,11 +20,30 @@
 //     evidencia negativa está más abajo). Escrito antes de escribir un ítem, porque la lectura
 //     contraria —«doce ítems en la misma casilla son uno»— es la que un gate
 //     heredado haría.
-//   · **EL NÚMERO VA DADO EN LA LENGUA**, por el verbo en plural que precede
-//     al hueco (`стояли`, `лежали`, `виднелись`, `были`, `пришли`,
-//     `собрались`, los seis atestados en la biblioteca). Sin él, el nominativo SINGULAR es el lema y el ítem se
-//     contestaría copiando el paréntesis. Ése es el ANCLA de este lote y el
-//     gate lo comprueba delante del hueco.
+//   · **EL NÚMERO VA DADO DOS VECES: en la pista, en español, y EN LA LENGUA**,
+//     por el verbo en plural que precede al hueco (`стояли`, `лежали`,
+//     `виднелись`, `были`, `пришли`, `собрались`, los seis atestados). Ése es
+//     el ANCLA y el gate lo comprueba delante del hueco.
+//
+//     ⚠ CORRECCIÓN DEL LINGÜISTA ADVERSARIAL (E10), escrita en vez de
+//     arreglada en silencio porque es una afirmación mía que era FALSA. La v0
+//     decía: «Sin él, el nominativo SINGULAR es el lema y el ítem se
+//     contestaría copiando el paréntesis». La pista es obligatoria y canónica
+//     y escribe literalmente «nominativo plural» en los doce (G3 lo exige),
+//     así que quitar el verbo no hace que el lema conteste: hace que el número
+//     siga dado, sólo que **en español y no en ruso**. Lo que G4 protege de
+//     verdad es (a) que el estímulo sea ruso natural y (b) que el número esté
+//     dado las DOS veces — no que sin él el ítem se rompa. Y el mensaje del
+//     propio gate llevaba la misma frase falsa dentro.
+//
+//     ⚠ Y LA CONSECUENCIA MEDIBLE QUE ESTE LOTE NO AÍSLA, dicha en vez de
+//     disimulada: **diez de las doce respuestas se obtienen sin leer una sola
+//     palabra del marco** — `la-regla-de-dos-pasos` saca 9/12 y
+//     `el-paradigma-entero` 12/12 usando sólo `lema` y `genero`. Ninguna ruta
+//     mide qué aporta el marco, porque el marco no aporta nada que la pista no
+//     dé. El arreglo de fondo —quitar «plural» de la pista y dejar
+//     «nominativo · género»— cambiaría los doce ítems ya publicados y no lo
+//     decide un parche: queda escrito para el siguiente.
 //   · **EL GÉNERO VA DADO EN LA PISTA Y EN NINGÚN OTRO SITIO, y eso es un
 //     hecho de la lengua, no un descuido**: el plural ruso NO marca género en
 //     ninguna de sus doce casillas (§21.8 del relevo, calculado por
@@ -394,7 +413,23 @@ export type ClaseIrregular = 'regular' | 'desinencia' | 'tema' | 'lexema';
  *  en este fichero— y no contra `casillaNominal`, que es de donde sale el
  *  dato: un gate que recomputa la regla del generador se da la razón a sí
  *  mismo (B6). Y que la regla de manual no esté rota lo garantiza
- *  `controlDelAparato()` sobre los cuarenta lemas. */
+ *  `controlDelAparato()` sobre los cuarenta lemas.
+ *
+ *  ⚠ SU LÍMITE, AFIRMADO EN UN TEST Y NO SUPUESTO (E7 del lingüista
+ *  adversarial). La v0 de esta prosa decía «RECALCULADA y no leída de ningún
+ *  campo», y es falso a medias: `reglaDeManual` empieza leyendo
+ *  `TEMAS_DE_MANUAL`, así que **la irregularidad de tema que esa tabla absorbe
+ *  este clasificador no la ve**. Medido sobre los 40 lemas: `сестра` →
+ *  `сёстры` (cambio de tema con ё y acento) y `день` → `дни` (vocal fugaz)
+ *  salen los dos «regular», y por tanto **G16b —"ningún irregular sin frontera
+ *  declarada"— es CIEGO a esos dos**. Hoy no publica nada malo porque G0 y G0b
+ *  los excluyen antes por otra razón; pero si mañana se relaja G0 —por ejemplo
+ *  porque el comparador del producto empiece a plegar la ё (§32)— `сестра`
+ *  entraría como regular y sin frontera y nadie se enteraría.
+ *
+ *  Lo que la tabla NO puede fabricar, y por eso la partición de las tres
+ *  fronteras no es un artefacto: `друзь`+`ы` no es `друзья` y `люд`+`ы` no es
+ *  `люди`. Las dos mitades van en test. */
 export function claseIrregular(e: EntradaNominal, resp: string): ClaseIrregular {
   const r = quitarAcento(resp);
   if (r === quitarAcento(reglaDeManual(e.lema, e.genero, e.tema))) return 'regular';
@@ -455,7 +490,7 @@ export function verificar(items: ClozePlRu[]): string[] {
     // G4 · EL ANCLA: un verbo en PLURAL delante del hueco. Sin él el
     //      nominativo singular es el lema y el ítem se contesta copiando.
     if (!a || !/(ли|лись)$/.test(a))
-      v.push(`${id}: delante del hueco no hay un verbo en pasado PLURAL (-ли/-лись) — sin él el número no está dado en la lengua y el lema contestaría`);
+      v.push(`${id}: delante del hueco no hay un verbo en pasado PLURAL (-ли/-лись) — el número dejaría de estar dado EN LA LENGUA y quedaría sólo en la pista, en español. Ver E10 en la cabecera: la v0 de este mensaje decía «y el lema contestaría», y era falso`);
     // G5 · la pista no deletrea la respuesta.
     for (const c of [r, ...alt]) if (PALABRA(quitarAcento(c)).test(x.pista)) v.push(`${id}: la pista deletrea la respuesta «${c}»`);
     // G6 · la respuesta no está escrita en la frase fuera del paréntesis.
@@ -580,12 +615,27 @@ export function verificar(items: ClozePlRu[]): string[] {
   //       llega al piso por muchos ítems que haya (§4.25 rumano).
   const ejes = new Set(items.map((x) => x.eje));
   if (ejes.size < 3) v.push(`el lote declara ${ejes.size} ejes distintos (${[...ejes].join(', ')}) — con menos de tres la cobertura real no llega al piso`);
-  // G15b · Y LAS COLAS TIENEN QUE SER AL MENOS CUATRO. El punto se llama
-  //        «-ы/-и/-а/-я y los irregulares frecuentes»: un lote que produjera
-  //        dos colas mediría medio título. Es §D5 hecho computable sobre lo
-  //        único que en este punto puede variar.
-  const colas = new Set(items.map((x) => colaDe(x)).filter((c) => c !== null));
-  if (colas.size < 4) v.push(`el lote produce ${colas.size} colas distintas (${[...colas].join(', ')}) — el punto declara cuatro desinencias más los irregulares`);
+  // G15b · EL TÍTULO DEL PUNTO TIENE DOS MITADES Y SE CUENTAN APARTE.
+  //
+  //   ⚠ LA v0 CONTABA UNA SOLA COSA Y NO PODÍA FALLAR POR LA RAZÓN QUE SU
+  //   MENSAJE NOMBRABA (E9 del lingüista adversarial). Exigía «al menos cuatro
+  //   colas» contra el título «-ы/-и/-а/-я y los irregulares frecuentes», y
+  //   salía VERDE con cinco… contando `-зья` y `люди` como si fueran
+  //   desinencias del reparto. `люди` ni siquiera es una cola: su prefijo común
+  //   con el lema es cero, así que la «cola» es la palabra entera. De las
+  //   CUATRO desinencias del título el lote produce TRES, y la cabecera lo
+  //   confiesa por escrito — o sea que el gate escrito para impedir que el lote
+  //   midiera medio título aprobaba justo el lote que declara que le falta un
+  //   cuarto. Un gate que puede fallar por una razón y no por la otra tiene que
+  //   decirlo en DOS números.
+  const REPARTO = ['ы', 'и', 'а', 'я'];
+  const colas = [...new Set(items.map((x) => colaDe(x)).filter((c) => c !== null))] as string[];
+  const delReparto = colas.filter((c) => REPARTO.includes(c));
+  const irregulares = colas.filter((c) => !REPARTO.includes(c));
+  if (delReparto.length + irregulares.length < 4)
+    v.push(`el lote produce ${delReparto.length} de las cuatro desinencias del reparto (${delReparto.join(', ') || '—'}) y ${irregulares.length} clases irregulares — con menos de cuatro clases en total mide medio título`);
+  if (delReparto.length < 3)
+    v.push(`el lote produce sólo ${delReparto.length} de las CUATRO desinencias del título (${delReparto.join(', ') || '—'}) — las que falten van con su motivo escrito en la cabecera`);
 
   // G16 · LAS FRONTERAS. No se cuentan: se comprueba que cada una declare de
   //       QUÉ regla es la sobreaplicación, que ninguna regla se repita, que la
@@ -852,7 +902,7 @@ export const ESTRATEGIAS: Ruta[] = [
   },
   {
     nombre: 'el-genero-de-la-pista',
-    porQue: '⚠ LA RUTA QUE EXISTE PORQUE LA PISTA ESCRIBE EL GÉNERO, y sin ella el gate nuevo de este lote (las dos mitades de un par tienen que ser del mismo género) sería una precaución sin medida. Mapea el género de la pista a una cola, con el máximo buscado. Está acotada por el mismo teorema del §48 SÓLO PORQUE el gate obliga a que el género sea constante dentro del par: si un par mezclara géneros, esta ruta leería una etiqueta que separa las dos respuestas sin saber nada del punto. Es la comprobación de que el gate nuevo hace falta, corrida en vez de razonada.',
+    porQue: '⚠ LA RUTA QUE EXISTE PORQUE LA PISTA ESCRIBE EL GÉNERO, y sin ella el gate nuevo de este lote (las dos mitades de un par son del mismo género) sería una precaución sin medida. Mapea el género de la pista a una cola, con el máximo buscado. ★ Y SU TOPE NO ES 6 DE 12: ES 6 DE 7, y la corrección la trajo el lingüista adversarial (E5). El teorema del §48 acota a una ruta que no lee el lema a UN acierto por par… y el género SÍ es propiedad del lema, así que el teorema sólo la acota donde el gate obliga a que el género sea constante — y el par `tolpa` está EXENTO por diseño declarado, porque su eje contrasta justamente el género. Ahí la ruta acierta 2 de 2. El techo real se CALCULA (`techoDeLaRutaDelGenero`) sumando 2 por el par exento y 1 por cada uno de los otros cinco, y se imprime: la ruta saca 6 de 7, o sea el 86 % de lo que puede sacar, y la tabla la enseñaba como «50 %, dentro del tope» contra un denominador que este lote no tiene. ⚠ Y la mitad más incómoda, medida: SIN el par del neutro la ruta sacaría 5 de 12 — el 6 que la deja justo en el límite lo fabrica entero la excepción declarada.',
     predicho: 6,
     aplicablesPredicho: 12,
     correr: (v) => { const c = MAPA_GENERO.get(v.genero); return c ? temaDelLema(v.lema) + c : null; },
@@ -886,6 +936,19 @@ export function barridoPorClase(clase: (x: ClozePlRu) => string): { clase: strin
       .sort((p, q) => q.n - p.n)[0]!;
     return { clase: k, cola: mejor.c, aciertos: mejor.n, n: xs.length };
   });
+}
+/** ★ EL TECHO REAL DE UNA RUTA QUE LEE SÓLO EL GÉNERO, calculado y no supuesto
+ *  (E5). El teorema del §48 da 1 por par a las rutas que no leen el lema; el
+ *  género ES propiedad del lema, así que la cota sólo vale donde el gate obliga
+ *  a que sea constante dentro del par. En el par exento (`genero-neutro`) la
+ *  cota es 2. Se calcula sobre los pares reales para que no se desincronice. */
+export function techoDeLaRutaDelGenero(): number {
+  const pares = new Map<string, ClozePlRu[]>();
+  for (const x of ITEMS) pares.set(x.par, [...(pares.get(x.par) ?? []), x]);
+  let t = 0;
+  for (const xs of pares.values())
+    t += new Set(xs.map((x) => entradaNom(x)?.genero)).size > 1 ? 2 : 1;
+  return t;
 }
 const COLA_FIJA = barridoColaFija()[0]!.cola;
 const MAPA_RIMA = new Map(barridoPorClase((x) => verboDelMarco(frase(x)).slice(-2)).map((r) => [r.clase, r.cola]));
@@ -1069,9 +1132,15 @@ export function rivalDe(x: ClozePlRu): string | null {
   // Para un ítem REGULAR el rival es la otra rama del paso 1: la cola del tema
   // contrario, que es la hipótesis que de verdad compite sobre el mismo lema.
   const t = TEMAS_DE_MANUAL[x.lema] ?? temaDelLema(x.lema);
-  const otra = n.genero === 'n'
-    ? (n.tema === 'duro' ? 'я' : 'а')
-    : (n.tema === 'duro' ? 'и' : u1(t, 'ы'));
+  // ⚠ E6 · LA v0 DABA, PARA EL NEUTRO, LA OTRA RAMA DEL TEMA (`лицо` → `лиця`),
+  //   y ése NO es el error que el par 3 induce: para producir `лиця` hay que
+  //   saber que existe una rama blanda del neutro y aplicarla mal. El error que
+  //   el par sí induce está escrito en `FALSAS_DEL_LOTE` con esas palabras:
+  //   `лицы`, o sea meter el neutro en el reparto -ы/-и. El instrumento
+  //   certificaba «EVIDENCIA» sobre una forma que ningún alumno con este perfil
+  //   escribe — un sello contestando la pregunta de otro. Para un NEUTRO la
+  //   hipótesis que compite sobre el mismo lema es la del GÉNERO equivocado.
+  const otra = n.genero === 'n' ? u1(t, 'ы') : (n.tema === 'duro' ? 'и' : u1(t, 'ы'));
   return t + otra;
 }
 /** ★ CINCO SALIDAS Y NO CUATRO, y la quinta la encontró este lote viendo su
@@ -1085,10 +1154,18 @@ export function rivalDe(x: ClozePlRu): string | null {
  *  u1 (`книг`+`ы`→`книги`) producen la MISMA cadena. Las dos hipótesis existen
  *  y son distintas; lo que no existe es un par de formas que las separe.
  *
- *  **Y eso no es un fallo del rival: es el contenido del par 2.** Justamente
- *  porque las dos ramas colapsan, el contraste `книги`/`карты` lo resuelve
- *  entero `u1-ortografia-sibilantes` y su valor discriminante es cero — lo que
- *  el fichero ya afirmaba en prosa y ahora está medido por el instrumento.
+ *  ⚠ Y LA v0 DE ESTE PÁRRAFO SACABA UNA CONCLUSIÓN DE MÁS (E4 del lingüista
+ *  adversarial): decía «eso no es un fallo del rival, es el contenido del par
+ *  2», y eso vale para `книга` y **NO** para `товарищ`. Para `книга` sí: las
+ *  dos ramas colapsan porque el eje entero de su par es capa DADA
+ *  (`u1-ortografia-sibilantes`), y por eso `sunduk` no discrimina. Para
+ *  `товарищ` el homógrafo es una propiedad incidental de su tema sibilante y
+ *  su par `vecherom` discrimina perfectamente —regular contra tema supletivo,
+ *  colas `-и` y `-зья`—. Un lector de la v0 concluía lo contrario de lo que el
+ *  lote ha construido: **una propiedad del LEMA leída como propiedad del PAR**.
+ *  Y el mensaje que la salida imprimía llevaba «el par 2» escrito a mano, con
+ *  lo cual se lo decía también al ítem 9.
+ *
  *  Un ROJO habría sido falso y un verde habría sido peor: el veredicto tiene
  *  nombre propio y dice que aquí **el corpus no puede ser el segundo camino**.
  *
@@ -1164,6 +1241,14 @@ if (/[/\\]cloze-ru-a1d\.ts$/.test(process.argv[1] ?? '')) {
     }
   };
   tabla('Estrategias CIEGAS (tope: la mitad)', ESTRATEGIAS, true);
+  {
+    const g = correr(ITEMS, ESTRATEGIAS).find((r) => r.nombre === 'el-genero-de-la-pista')!;
+    const techo = techoDeLaRutaDelGenero();
+    console.log(`\n⚠ \`el-genero-de-la-pista\` NO va contra el tope de la mitad: su techo es **${g.aciertos}/${techo}**, no ${g.aciertos}/12.`);
+    console.log('  El teorema del §48 acota a 1 por par a las rutas que no leen el lema, y el género SÍ lo es:');
+    console.log(`  sólo lo acota donde el gate obliga a que sea constante, y el par «tolpa» está EXENTO (eje genero-neutro).`);
+    if (g.aciertos > techo) { console.log('⚠ POR ENCIMA DE SU PROPIO TECHO: el teorema no describe este lote.'); process.exit(1); }
+  }
   tabla('PERFILES de conocimiento parcial (sin tope — dicen qué ítems discriminan)', PERFILES, false);
   tabla('RUTAS POR LECTURA (no van contra el tope a A1: el alumno ha leído cero palabras de ruso)', RUTAS_POR_LECTURA, false);
   const todas = correr(ITEMS, [...ESTRATEGIAS, ...PERFILES, ...RUTAS_POR_LECTURA]);
@@ -1188,14 +1273,14 @@ if (/[/\\]cloze-ru-a1d\.ts$/.test(process.argv[1] ?? '')) {
     const b = barridoPorClase(f);
     console.log(`${nombre}: ${b.map((r) => `${r.clase}→-${r.cola} ${r.aciertos}/${r.n}`).join(' · ')}  = ${b.reduce((a, r) => a + r.aciertos, 0)}/${ITEMS.length}`);
   }
-  console.log('\n## Los RIVALES, con las cuatro salidas del §9.1\n');
+  console.log('\n## Los RIVALES, con las CINCO salidas (las cuatro del §9.1 más HOMÓGRAFO)\n');
   const vers = ITEMS.map((x) => veredictoRival(x)!);
   for (const k of ['EVIDENCIA', 'NULO VACÍO', 'TAREA DE LECTURA', 'HOMÓGRAFO', 'ROJO'] as Veredicto[])
     console.log(`${k}: ${vers.filter((z) => z.veredicto === k).length}`);
   for (const [i, z] of vers.entries()) if (z.veredicto === 'TAREA DE LECTURA')
     console.log(`  · ítem ${i + 1}: «${z.rival}» ${z.nR} — ${LECTURA_RIVAL[quitarAcento(z.rival)]}`);
   for (const [i, z] of vers.entries()) if (z.veredicto === 'HOMÓGRAFO')
-    console.log(`  · ítem ${i + 1}: las dos ramas del paso 1 dan la misma cadena «${z.rival}» — el corpus NO puede separar aquí, y por eso el par 2 no discrimina`);
+    console.log(`  · ítem ${i + 1}: las dos ramas del paso 1 dan la misma cadena «${z.rival}» (par «${ITEMS[i]!.par}») — el corpus no puede separar las dos hipótesis sobre ESTE lema. Que el PAR discrimine o no es otra pregunta: «sunduk» no discrimina porque su eje entero es capa dada; «vecherom» sí`);
   if (vers.some((z) => z.veredicto === 'ROJO')) {
     for (const [i, z] of vers.entries()) if (z.veredicto === 'ROJO') console.log(`⚠ ROJO en el ítem ${i + 1}: «${z.rival}» ${z.nR} ≥ «${respuestaDe(ITEMS[i]!)}» ${z.nB} y sin lectura escrita`);
     process.exit(1);
