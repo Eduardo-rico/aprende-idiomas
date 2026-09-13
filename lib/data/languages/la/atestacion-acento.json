@@ -2,31 +2,31 @@
  "generado": "2026-09-13",
  "corpus": "la_perseus + la_proiel (UD)",
  "tokens": 227300,
- "formas": 3371,
- "sueloDeLaPenultima": 0.6487689113022842,
+ "formas": 3416,
+ "sueloDeLaPenultima": 0.6492974238875878,
  "reparto": {
   "monosilabo": {
    "total": 98,
    "atestiguadas": 96
   },
   "bisilabo": {
-   "total": 690,
-   "atestiguadas": 582
+   "total": 707,
+   "atestiguadas": 596
   },
   "breve": {
-   "total": 1086,
-   "atestiguadas": 491
+   "total": 1100,
+   "atestiguadas": 504
   },
   "posicion": {
    "total": 529,
    "atestiguadas": 142
   },
   "macron": {
-   "total": 968,
-   "atestiguadas": 402
+   "total": 982,
+   "atestiguadas": 412
   }
  },
- "posicionSobreAtestiguadas": 0.08289550496205488,
+ "posicionSobreAtestiguadas": 0.08114285714285714,
  "tabla": {
   "cum": {
    "silabas": [
@@ -614,6 +614,419 @@
    "tonica": "a",
    "tipo": "bisilabo",
    "n": 6
+  },
+  "grātia": {
+   "silabas": [
+    "grā",
+    "ti",
+    "a"
+   ],
+   "tonica": "grā",
+   "tipo": "breve",
+   "n": 101
+  },
+  "grātiam": {
+   "silabas": [
+    "grā",
+    "ti",
+    "am"
+   ],
+   "tonica": "grā",
+   "tipo": "breve",
+   "n": 57
+  },
+  "grātiae": {
+   "silabas": [
+    "grā",
+    "ti",
+    "ae"
+   ],
+   "tonica": "grā",
+   "tipo": "breve",
+   "n": 17
+  },
+  "grātiā": {
+   "silabas": [
+    "grā",
+    "ti",
+    "ā"
+   ],
+   "tonica": "grā",
+   "tipo": "breve",
+   "n": 101
+  },
+  "grātiās": {
+   "silabas": [
+    "grā",
+    "ti",
+    "ās"
+   ],
+   "tonica": "grā",
+   "tipo": "breve",
+   "n": 57
+  },
+  "grātiārum": {
+   "silabas": [
+    "grā",
+    "ti",
+    "ā",
+    "rum"
+   ],
+   "tonica": "ā",
+   "tipo": "macron",
+   "n": 9
+  },
+  "grātiīs": {
+   "silabas": [
+    "grā",
+    "ti",
+    "īs"
+   ],
+   "tonica": "grā",
+   "tipo": "breve",
+   "n": 0
+  },
+  "bestia": {
+   "silabas": [
+    "bes",
+    "ti",
+    "a"
+   ],
+   "tonica": "bes",
+   "tipo": "breve",
+   "n": 5
+  },
+  "bestiam": {
+   "silabas": [
+    "bes",
+    "ti",
+    "am"
+   ],
+   "tonica": "bes",
+   "tipo": "breve",
+   "n": 23
+  },
+  "bestiae": {
+   "silabas": [
+    "bes",
+    "ti",
+    "ae"
+   ],
+   "tonica": "bes",
+   "tipo": "breve",
+   "n": 21
+  },
+  "bestiā": {
+   "silabas": [
+    "bes",
+    "ti",
+    "ā"
+   ],
+   "tonica": "bes",
+   "tipo": "breve",
+   "n": 5
+  },
+  "bestiās": {
+   "silabas": [
+    "bes",
+    "ti",
+    "ās"
+   ],
+   "tonica": "bes",
+   "tipo": "breve",
+   "n": 5
+  },
+  "bestiārum": {
+   "silabas": [
+    "bes",
+    "ti",
+    "ā",
+    "rum"
+   ],
+   "tonica": "ā",
+   "tipo": "macron",
+   "n": 0
+  },
+  "bestiīs": {
+   "silabas": [
+    "bes",
+    "ti",
+    "īs"
+   ],
+   "tonica": "bes",
+   "tipo": "breve",
+   "n": 3
+  },
+  "nātiō": {
+   "silabas": [
+    "nā",
+    "ti",
+    "ō"
+   ],
+   "tonica": "nā",
+   "tipo": "breve",
+   "n": 1
+  },
+  "nātiōnem": {
+   "silabas": [
+    "nā",
+    "ti",
+    "ō",
+    "nem"
+   ],
+   "tonica": "ō",
+   "tipo": "macron",
+   "n": 1
+  },
+  "nātiōnis": {
+   "silabas": [
+    "nā",
+    "ti",
+    "ō",
+    "nis"
+   ],
+   "tonica": "ō",
+   "tipo": "macron",
+   "n": 3
+  },
+  "nātiōnī": {
+   "silabas": [
+    "nā",
+    "ti",
+    "ō",
+    "nī"
+   ],
+   "tonica": "ō",
+   "tipo": "macron",
+   "n": 0
+  },
+  "nātiōne": {
+   "silabas": [
+    "nā",
+    "ti",
+    "ō",
+    "ne"
+   ],
+   "tonica": "ō",
+   "tipo": "macron",
+   "n": 3
+  },
+  "nātiōnēs": {
+   "silabas": [
+    "nā",
+    "ti",
+    "ō",
+    "nēs"
+   ],
+   "tonica": "ō",
+   "tipo": "macron",
+   "n": 11
+  },
+  "nātiōnum": {
+   "silabas": [
+    "nā",
+    "ti",
+    "ō",
+    "num"
+   ],
+   "tonica": "ō",
+   "tipo": "macron",
+   "n": 1
+  },
+  "nātiōnibus": {
+   "silabas": [
+    "nā",
+    "ti",
+    "ō",
+    "ni",
+    "bus"
+   ],
+   "tonica": "ō",
+   "tipo": "breve",
+   "n": 3
+  },
+  "agnus": {
+   "silabas": [
+    "ag",
+    "nus"
+   ],
+   "tonica": "ag",
+   "tipo": "bisilabo",
+   "n": 11
+  },
+  "agnum": {
+   "silabas": [
+    "ag",
+    "num"
+   ],
+   "tonica": "ag",
+   "tipo": "bisilabo",
+   "n": 1
+  },
+  "agnī": {
+   "silabas": [
+    "ag",
+    "nī"
+   ],
+   "tonica": "ag",
+   "tipo": "bisilabo",
+   "n": 18
+  },
+  "agnō": {
+   "silabas": [
+    "ag",
+    "nō"
+   ],
+   "tonica": "ag",
+   "tipo": "bisilabo",
+   "n": 4
+  },
+  "agne": {
+   "silabas": [
+    "ag",
+    "ne"
+   ],
+   "tonica": "ag",
+   "tipo": "bisilabo",
+   "n": 0
+  },
+  "agnōs": {
+   "silabas": [
+    "ag",
+    "nōs"
+   ],
+   "tonica": "ag",
+   "tipo": "bisilabo",
+   "n": 4
+  },
+  "agnōrum": {
+   "silabas": [
+    "ag",
+    "nō",
+    "rum"
+   ],
+   "tonica": "nō",
+   "tipo": "macron",
+   "n": 0
+  },
+  "agnīs": {
+   "silabas": [
+    "ag",
+    "nīs"
+   ],
+   "tonica": "ag",
+   "tipo": "bisilabo",
+   "n": 0
+  },
+  "rēgnum": {
+   "silabas": [
+    "rēg",
+    "num"
+   ],
+   "tonica": "rēg",
+   "tipo": "bisilabo",
+   "n": 126
+  },
+  "rēgnī": {
+   "silabas": [
+    "rēg",
+    "nī"
+   ],
+   "tonica": "rēg",
+   "tipo": "bisilabo",
+   "n": 17
+  },
+  "rēgnō": {
+   "silabas": [
+    "rēg",
+    "nō"
+   ],
+   "tonica": "rēg",
+   "tipo": "bisilabo",
+   "n": 38
+  },
+  "rēgna": {
+   "silabas": [
+    "rēg",
+    "na"
+   ],
+   "tonica": "rēg",
+   "tipo": "bisilabo",
+   "n": 8
+  },
+  "rēgnōrum": {
+   "silabas": [
+    "rēg",
+    "nō",
+    "rum"
+   ],
+   "tonica": "nō",
+   "tipo": "macron",
+   "n": 0
+  },
+  "rēgnīs": {
+   "silabas": [
+    "rēg",
+    "nīs"
+   ],
+   "tonica": "rēg",
+   "tipo": "bisilabo",
+   "n": 1
+  },
+  "signum": {
+   "silabas": [
+    "sig",
+    "num"
+   ],
+   "tonica": "sig",
+   "tipo": "bisilabo",
+   "n": 54
+  },
+  "signī": {
+   "silabas": [
+    "sig",
+    "nī"
+   ],
+   "tonica": "sig",
+   "tipo": "bisilabo",
+   "n": 0
+  },
+  "signō": {
+   "silabas": [
+    "sig",
+    "nō"
+   ],
+   "tonica": "sig",
+   "tipo": "bisilabo",
+   "n": 8
+  },
+  "signa": {
+   "silabas": [
+    "sig",
+    "na"
+   ],
+   "tonica": "sig",
+   "tipo": "bisilabo",
+   "n": 64
+  },
+  "signōrum": {
+   "silabas": [
+    "sig",
+    "nō",
+    "rum"
+   ],
+   "tonica": "nō",
+   "tipo": "macron",
+   "n": 2
+  },
+  "signīs": {
+   "silabas": [
+    "sig",
+    "nīs"
+   ],
+   "tonica": "sig",
+   "tipo": "bisilabo",
+   "n": 11
   },
   "amīca": {
    "silabas": [
@@ -2199,6 +2612,36 @@
    "tonica": "dul",
    "tipo": "breve",
    "n": 0
+  },
+  "Iēsus": {
+   "silabas": [
+    "i",
+    "ē",
+    "sus"
+   ],
+   "tonica": "ē",
+   "tipo": "macron",
+   "n": 472
+  },
+  "Iēsum": {
+   "silabas": [
+    "i",
+    "ē",
+    "sum"
+   ],
+   "tonica": "ē",
+   "tipo": "macron",
+   "n": 139
+  },
+  "Iēsū": {
+   "silabas": [
+    "i",
+    "ē",
+    "sū"
+   ],
+   "tonica": "ē",
+   "tipo": "macron",
+   "n": 235
   },
   "gladius": {
    "silabas": [

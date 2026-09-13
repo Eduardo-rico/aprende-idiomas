@@ -9,6 +9,27 @@ export const NOMBRES_L1: EntradaNominal[] = [
   // `aqua` ×31 en acusativo.
   { lema: 'causa', genitivo: 'causae', genero: 'f', glosa: 'causa, motivo' },
   { lema: 'aqua', genitivo: 'aquae', genero: 'f', glosa: 'agua' },
+  // ── ENTRAN EL 2026-09-12 PARA DESBLOQUEAR DOS PUNTOS ──
+  //
+  // Son las palabras que los propios descriptores nombran, y sin ellas dos
+  // puntos no se pueden escribir con material honesto:
+  //
+  //  · `l1-eclesiastica-ti` («grātia = grátsia, nātiō = natsio») no tenía
+  //    NI UN caso negativo: su excepción es «tras s, t o x no se aplica —
+  //    bestia, mixtiō» y en L1 no había ninguna forma con `ti`+vocal
+  //    precedida de esas tres. Cero, no pocas.
+  //  · `l1-eclesiastica-gn` («agnus = áñus, magnus = máñus, rēgnum =
+  //    réñum») tenía UN solo lema, `magnus`, así que el lote habría medido
+  //    un lema trece veces.
+  //
+  // Atestiguadas: `grātia` ×232, `rēgnum` ×189, `signum` ×137, `bestia`
+  // ×54, `agnus` ×38, `nātiō` ×17.
+  { lema: 'grātia', genitivo: 'grātiae', genero: 'f', glosa: 'gracia, favor' },
+  { lema: 'bestia', genitivo: 'bestiae', genero: 'f', glosa: 'bestia, animal' },
+  { lema: 'nātiō', genitivo: 'nātiōnis', genero: 'f', glosa: 'nación, pueblo' },
+  { lema: 'agnus', genitivo: 'agnī', genero: 'm', glosa: 'cordero' },
+  { lema: 'rēgnum', genitivo: 'rēgnī', genero: 'n', glosa: 'reino' },
+  { lema: 'signum', genitivo: 'signī', genero: 'n', glosa: 'signo, señal' },
   { lema: 'amīca', genitivo: 'amīcae', genero: 'f', glosa: 'amiga' },
   { lema: 'vīcīna', genitivo: 'vīcīnae', genero: 'f', glosa: 'vecina' },
   { lema: 'fīlia', genitivo: 'fīliae', genero: 'f', glosa: 'hija' },

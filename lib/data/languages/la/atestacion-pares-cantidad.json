@@ -1,10 +1,10 @@
 {
  "generado": "2026-09-13",
  "comoSeCuenta": "por LEMA más RASGOS del treebank, no por cadena: el corpus no lleva mácrones y buscar la cadena devuelve el mismo número para los dos miembros del par",
- "pares": 61,
- "miembrosConCuenta": 107,
+ "pares": 63,
+ "miembrosConCuenta": 111,
  "miembrosSinMapear": 16,
- "paresConUnMiembroACero": 18,
+ "paresConUnMiembroACero": 19,
  "lista": {
   "agricola": {
    "tipo": "morfologico",
@@ -67,6 +67,22 @@
      "forma": "aquā",
      "clave": "aqua.abl.sg",
      "n": 35
+    }
+   ]
+  },
+  "bestia": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "bestia",
+     "clave": "bestia.nom.sg",
+     "n": 5
+    },
+    {
+     "forma": "bestiā",
+     "clave": "bestia.abl.sg",
+     "n": 0
     }
    ]
   },
@@ -275,6 +291,22 @@
      "forma": "frūctūs",
      "clave": "frūctus.gen.sg",
      "n": 2
+    }
+   ]
+  },
+  "gratia": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "grātia",
+     "clave": "grātia.nom.sg",
+     "n": 50
+    },
+    {
+     "forma": "grātiā",
+     "clave": "grātia.abl.sg",
+     "n": 51
     }
    ]
   },
