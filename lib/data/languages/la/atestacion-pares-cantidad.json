@@ -1,10 +1,10 @@
 {
  "generado": "2026-09-13",
  "comoSeCuenta": "por LEMA más RASGOS del treebank, no por cadena: el corpus no lleva mácrones y buscar la cadena devuelve el mismo número para los dos miembros del par",
- "pares": 247,
- "miembrosConCuenta": 244,
- "miembrosSinMapear": 255,
- "paresConUnMiembroACero": 107,
+ "pares": 252,
+ "miembrosConCuenta": 247,
+ "miembrosSinMapear": 262,
+ "paresConUnMiembroACero": 110,
  "lista": {
   "agricola": {
    "tipo": "morfologico",
@@ -1843,6 +1843,86 @@
      "forma": "istā",
      "clave": "iste.f.abl.sg",
      "n": 16
+    }
+   ]
+  },
+  "iussa": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "iussa",
+     "clave": "iubeō.part-perf.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "iussā",
+     "clave": "iubeō.part-perf.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "iusserimus": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "iusserimus",
+     "clave": "iubeō.futuro-perfecto.1pl",
+     "n": 0
+    },
+    {
+     "forma": "iusserīmus",
+     "clave": "iubeō.subj.perfecto.1pl",
+     "n": null
+    }
+   ]
+  },
+  "iusseris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "iusseris",
+     "clave": "iubeō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "iusserīs",
+     "clave": "iubeō.subj.perfecto.2sg",
+     "n": null
+    }
+   ]
+  },
+  "iusseritis": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "iusseritis",
+     "clave": "iubeō.futuro-perfecto.2pl",
+     "n": 0
+    },
+    {
+     "forma": "iusserītis",
+     "clave": "iubeō.subj.perfecto.2pl",
+     "n": null
+    }
+   ]
+  },
+  "iussura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "iussūra",
+     "clave": "iubeō.part-fut.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "iussūrā",
+     "clave": "iubeō.part-fut.f.abl.sg",
+     "n": null
     }
    ]
   },

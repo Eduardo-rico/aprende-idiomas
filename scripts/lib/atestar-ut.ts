@@ -104,8 +104,35 @@ export function extraerSubordinadas(frases: Tok[][]): Subordinada[] {
   return out;
 }
 
+/** Para cada verbo regente: cuántas completivas con `ut`/`nē` rige y
+ *  cuántos infinitivos. Es lo que decide si un ítem puede pedir `ut` o
+ *  tiene que pedir el infinitivo. */
+export function regimenPorVerbo(frases: Tok[][]): Record<string, { conUt: number; conInfinitivo: number }> {
+  const out: Record<string, { conUt: number; conInfinitivo: number }> = {};
+  const toca = (l: string) => (out[l] ??= { conUt: 0, conInfinitivo: 0 });
+  for (const fr of frases) {
+    for (const t of fr) {
+      if (!['ut', 'uti', 'ne'].includes(t.lema) || t.deprel !== 'mark') continue;
+      const sub = fr.find((x) => x.id === t.head);
+      if (!sub || !/Mood=Sub/.test(sub.feats)) continue;
+      if (!['ccomp', 'csubj', 'csubj:pass', 'xcomp'].includes(sub.deprel)) continue;
+      const reg = fr.find((x) => x.id === sub.head);
+      if (reg) toca(reg.lema).conUt++;
+    }
+    for (const t of fr) {
+      if (!/VerbForm=Inf/.test(t.feats)) continue;
+      if (!['xcomp', 'ccomp', 'csubj'].includes(t.deprel)) continue;
+      const reg = fr.find((x) => x.id === t.head);
+      if (reg && /VerbForm=Fin/.test(reg.feats)) toca(reg.lema).conInfinitivo++;
+    }
+  }
+  return Object.fromEntries(Object.entries(out).filter(([, v]) => v.conUt + v.conInfinitivo >= 2)
+    .sort((a, b) => (b[1].conUt + b[1].conInfinitivo) - (a[1].conUt + a[1].conInfinitivo)));
+}
+
 async function main() {
-  const subs = extraerSubordinadas(leerFrases());
+  const frases = leerFrases();
+  const subs = extraerSubordinadas(frases);
   const adv = subs.filter((s) => s.deprel === 'advcl');
   const comp = subs.filter((s) => s.deprel === 'ccomp' || s.deprel === 'csubj' || s.deprel === 'csubj:pass');
   const cuenta = (xs: Subordinada[]) => ({
@@ -131,6 +158,11 @@ async function main() {
       sinAnticipador: cuenta(adv.filter((s) => !s.conAnticipador)),
     },
     completivas: cuenta(comp),
+    // EL RÉGIMEN, POR VERBO. `l7-completivas-ut` declara que «algunos rigen
+    // infinitivo y no completiva» y nombra `iubeō` y `vetō`. Quien decide
+    // eso no puede ser yo: aquí está contado. `iubeō` rige 0 completivas
+    // con `ut` y 133 con infinitivo.
+    regimen: regimenPorVerbo(frases),
     // LA CONCORDANCIA DE TIEMPOS, que `l7-ut-final` declara y nadie había
     // medido. `Past` es el imperfecto y `PastPerf` el perfecto.
     concordanciaDeTiempos: subs.filter((s) => s.tiempoRegente !== null)
@@ -148,6 +180,7 @@ async function main() {
   console.log(`  completivas: ut=${salida.completivas.ut} ut nōn=${salida.completivas.utNon} nē=${salida.completivas.ne}`);
   console.log(`  regentes más frecuentes: ${Object.entries(regentes).sort((x, y) => y[1] - x[1]).slice(0, 10).map(([l, n]) => `${l}=${n}`).join(' ')}`);
   console.log(`  concordancia: ${Object.entries(salida.concordanciaDeTiempos).sort((x, y) => y[1] - x[1]).slice(0, 5).map(([k, n]) => `${k}=${n}`).join(' · ')}`);
+  console.log(`  régimen: ${Object.keys(salida.regimen).length} verbos; iubeo=${JSON.stringify(salida.regimen.iubeo)} rogo=${JSON.stringify(salida.regimen.rogo)}`);
 }
 
 // Este fichero se IMPORTA desde el gate —`leerFrases` y `extraerSubordinadas`

@@ -5,8 +5,8 @@
  "total": {
   "presente.activa": 656,
   "presente.pasiva": 237,
-  "perfecto.activa": 63,
-  "perfecto.pasiva": 195,
+  "perfecto.activa": 64,
+  "perfecto.pasiva": 197,
   "futuro.activa": 44
  },
  "lemas": {
@@ -1574,6 +1574,80 @@
    },
    "futuro.activa.n.ac": {
     "forma": "monitūrum esse",
+    "n": 0,
+    "bigrama": 0
+   }
+  },
+  "iubeō": {
+   "presente.activa": {
+    "forma": "iubēre",
+    "n": 0
+   },
+   "presente.pasiva": {
+    "forma": "iubērī",
+    "n": 0
+   },
+   "perfecto.activa": {
+    "forma": "iussisse",
+    "n": 1
+   },
+   "perfecto.pasiva.m.nom": {
+    "forma": "iussus esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "futuro.activa.m.nom": {
+    "forma": "iussūrus esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.m.ac": {
+    "forma": "iussum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.m.ac": {
+    "forma": "iussūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.nom": {
+    "forma": "iussa esse",
+    "n": 2,
+    "bigrama": 0
+   },
+   "futuro.activa.f.nom": {
+    "forma": "iussūra esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.f.ac": {
+    "forma": "iussam esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.f.ac": {
+    "forma": "iussūram esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.nom": {
+    "forma": "iussum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.n.nom": {
+    "forma": "iussūrum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "perfecto.pasiva.n.ac": {
+    "forma": "iussum esse",
+    "n": 0,
+    "bigrama": 0
+   },
+   "futuro.activa.n.ac": {
+    "forma": "iussūrum esse",
     "n": 0,
     "bigrama": 0
    }

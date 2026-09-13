@@ -2,12 +2,12 @@
  "generado": "2026-09-13",
  "corpus": "UD Latin (scripts/.cache/treebanks)",
  "tokens": 227301,
- "formasDelDominio": 9234,
- "formasAtestiguadas": 2466,
- "formasAtestiguadasComoSubjuntivo": 448,
+ "formasDelDominio": 9451,
+ "formasAtestiguadas": 2493,
+ "formasAtestiguadasComoSubjuntivo": 452,
  "formasAtestiguadasPorParticipio": {
-  "presente": 97,
-  "perfecto": 104,
+  "presente": 98,
+  "perfecto": 107,
   "futuro": 43
  },
  "tabla": {
@@ -3041,6 +3041,47 @@
   "monuit": {
    "ind": 2
   },
+  "iubeō": {
+   "ind": 1
+  },
+  "iubēs": {
+   "ind": 5
+  },
+  "iubet": {
+   "ind": 36
+  },
+  "iubēmus": {
+   "ind": 1
+  },
+  "iubent": {
+   "ind": 6
+  },
+  "iubēbat": {
+   "ind": 1
+  },
+  "iubēbō": {
+   "ind": 1
+  },
+  "iubēbis": {
+   "ind": 1
+  },
+  "iussī": {
+   "ind": 8,
+   "part": 2,
+   "partPast": 2
+  },
+  "iussit": {
+   "ind": 58
+  },
+  "iussērunt": {
+   "ind": 4
+  },
+  "iusserat": {
+   "ind": 4
+  },
+  "iusserō": {
+   "ind": 1
+  },
   "dūcō": {
    "ind": 2
   },
@@ -4966,6 +5007,12 @@
   "timentur": {
    "ind": 1
   },
+  "iubeor": {
+   "ind": 1
+  },
+  "iubentur": {
+   "ind": 1
+  },
   "dūcitur": {
    "ind": 2
   },
@@ -5107,6 +5154,9 @@
    "inf": 4
   },
   "monuisse": {
+   "inf": 1
+  },
+  "iussisse": {
    "inf": 1
   },
   "dūcī": {
@@ -5880,6 +5930,18 @@
   },
   "monērem": {
    "sub": 2
+  },
+  "iubeās": {
+   "sub": 1
+  },
+  "iubeat": {
+   "sub": 1
+  },
+  "iubēret": {
+   "sub": 4
+  },
+  "iussisset": {
+   "sub": 7
   },
   "dūcat": {
    "sub": 2
@@ -6699,6 +6761,9 @@
   "timēte": {
    "imp": 4
   },
+  "iubē": {
+   "imp": 3
+  },
   "dūc": {
    "imp": 2
   },
@@ -7258,6 +7323,23 @@
    "nominal": 1,
    "part": 2
   },
+  "iussus": {
+   "part": 2,
+   "partPast": 1
+  },
+  "iussōs": {
+   "part": 2,
+   "partPast": 1
+  },
+  "iussīs": {
+   "nominal": 1
+  },
+  "iussa": {
+   "part": 2
+  },
+  "iussā": {
+   "part": 2
+  },
   "ductus": {
    "part": 4,
    "partPast": 4
@@ -7759,6 +7841,10 @@
    "partPres": 1
   },
   "monentem": {
+   "part": 1,
+   "partPres": 1
+  },
+  "iubente": {
    "part": 1,
    "partPres": 1
   },

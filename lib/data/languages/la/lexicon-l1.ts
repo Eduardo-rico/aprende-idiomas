@@ -226,6 +226,18 @@ export const VERBOS_L1: EntradaVerbal[] = [
   { lema: 'videō', infinitivo: 'vidēre', perfecto: 'vīdī', supino: 'vīsum', glosa: 'ver' },
   { lema: 'timeō', infinitivo: 'timēre', perfecto: 'timuī', glosa: 'temer' },
   { lema: 'moneō', infinitivo: 'monēre', perfecto: 'monuī', supino: 'monitum', glosa: 'advertir' },
+  // ── ENTRA EL 2026-09-12, por `l7-completivas-ut` ──
+  //
+  // Es el ejemplo que el propio punto nombra en su excepción: «`iubeō` y
+  // `vetō` NO llevan `ut`: rigen acusativo con infinitivo. Un alumno que
+  // generalice dirá *`iubet ut veniant`». Sin el verbo en la máquina, la
+  // excepción no se puede escribir.
+  //
+  // Y el corpus la confirma sin margen: `iubeō` rige **0** completivas con
+  // `ut`/`nē` y **133** con infinitivo; `vetō`, 0 y 6. Frecuencia sumada
+  // sobre doce formas corrientes: 119 — más que `taceō` (3), `custōdiō` (3)
+  // o `salūtō` (6), que ya estaban. `vetō` (6) se queda fuera por raro.
+  { lema: 'iubeō', infinitivo: 'iubēre', perfecto: 'iussī', supino: 'iussum', glosa: 'mandar' },
   { lema: 'dūcō', infinitivo: 'dūcere', perfecto: 'dūxī', supino: 'ductum', glosa: 'guiar' },
   { lema: 'mittō', infinitivo: 'mittere', perfecto: 'mīsī', supino: 'missum', glosa: 'enviar' },
   { lema: 'legō', infinitivo: 'legere', perfecto: 'lēgī', supino: 'lēctum', glosa: 'leer' },
