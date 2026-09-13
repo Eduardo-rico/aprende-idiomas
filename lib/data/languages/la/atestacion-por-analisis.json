@@ -2,8 +2,8 @@
  "generado": "2026-09-13",
  "corpus": "UD Latin (scripts/.cache/treebanks)",
  "tokens": 227301,
- "formasDelDominio": 9455,
- "formasAtestiguadas": 2497,
+ "formasDelDominio": 10969,
+ "formasAtestiguadas": 2638,
  "formasAtestiguadasComoSubjuntivo": 452,
  "formasAtestiguadasPorParticipio": {
   "presente": 98,
@@ -4208,6 +4208,38 @@
   "ūtilia": {
    "nominal": 3
   },
+  "facilis": {
+   "nominal": 8
+  },
+  "facilem": {
+   "nominal": 2
+  },
+  "facilī": {
+   "nominal": 3
+  },
+  "facile": {
+   "nominal": 4,
+   "otro": 56
+  },
+  "facilia": {
+   "nominal": 1
+  },
+  "difficilis": {
+   "nominal": 3
+  },
+  "difficilem": {
+   "nominal": 1
+  },
+  "difficilī": {
+   "nominal": 1
+  },
+  "difficilēs": {
+   "nominal": 1
+  },
+  "difficile": {
+   "nominal": 12,
+   "otro": 2
+  },
   "fēlīx": {
    "nominal": 9
   },
@@ -7948,6 +7980,411 @@
   "portantēs": {
    "part": 2,
    "partPres": 2
+  },
+  "melior": {
+   "nominal": 10
+  },
+  "meliōrem": {
+   "nominal": 7
+  },
+  "meliōris": {
+   "nominal": 1
+  },
+  "meliōrī": {
+   "nominal": 1
+  },
+  "meliōre": {
+   "nominal": 2
+  },
+  "meliōrēs": {
+   "nominal": 6
+  },
+  "melius": {
+   "otro": 24,
+   "nominal": 13
+  },
+  "meliōra": {
+   "nominal": 3
+  },
+  "optimus": {
+   "nominal": 2
+  },
+  "optimum": {
+   "nominal": 8
+  },
+  "optimī": {
+   "nominal": 7
+  },
+  "optimō": {
+   "nominal": 11
+  },
+  "optime": {
+   "nominal": 3,
+   "otro": 7
+  },
+  "optimōs": {
+   "nominal": 1
+  },
+  "optimōrum": {
+   "nominal": 2
+  },
+  "optimīs": {
+   "nominal": 1
+  },
+  "optima": {
+   "nominal": 4
+  },
+  "optimam": {
+   "nominal": 2
+  },
+  "optimā": {
+   "nominal": 4
+  },
+  "maior": {
+   "nominal": 52
+  },
+  "maiōrem": {
+   "nominal": 11
+  },
+  "maiōris": {
+   "nominal": 3
+  },
+  "maiōrī": {
+   "nominal": 6
+  },
+  "maiōre": {
+   "nominal": 13
+  },
+  "maiōrēs": {
+   "nominal": 25
+  },
+  "maiōrum": {
+   "nominal": 9
+  },
+  "maiōribus": {
+   "nominal": 9
+  },
+  "maius": {
+   "nominal": 17
+  },
+  "maiōra": {
+   "nominal": 18
+  },
+  "maximus": {
+   "nominal": 4
+  },
+  "maximum": {
+   "nominal": 16
+  },
+  "maximī": {
+   "nominal": 2
+  },
+  "maximō": {
+   "nominal": 12
+  },
+  "maxime": {
+   "nominal": 1,
+   "otro": 114
+  },
+  "maximōs": {
+   "nominal": 3
+  },
+  "maximīs": {
+   "nominal": 10
+  },
+  "maxima": {
+   "nominal": 17
+  },
+  "maximam": {
+   "nominal": 5
+  },
+  "maximā": {
+   "nominal": 17
+  },
+  "maximās": {
+   "nominal": 9
+  },
+  "minor": {
+   "nominal": 14
+  },
+  "minōrem": {
+   "nominal": 5
+  },
+  "minōris": {
+   "nominal": 2
+  },
+  "minōrī": {
+   "nominal": 3
+  },
+  "minōre": {
+   "nominal": 5
+  },
+  "minōrēs": {
+   "nominal": 6
+  },
+  "minōribus": {
+   "nominal": 5
+  },
+  "minus": {
+   "otro": 86,
+   "nominal": 17
+  },
+  "minōra": {
+   "nominal": 4
+  },
+  "minimus": {
+   "nominal": 2
+  },
+  "minimum": {
+   "nominal": 6,
+   "otro": 1
+  },
+  "minimō": {
+   "nominal": 8
+  },
+  "minime": {
+   "otro": 20
+  },
+  "minimīs": {
+   "nominal": 6
+  },
+  "minima": {
+   "nominal": 7
+  },
+  "minimam": {
+   "nominal": 1
+  },
+  "minimae": {
+   "nominal": 1
+  },
+  "minimā": {
+   "nominal": 7
+  },
+  "longior": {
+   "nominal": 2
+  },
+  "longiōrem": {
+   "nominal": 3
+  },
+  "longiōre": {
+   "nominal": 3
+  },
+  "longius": {
+   "nominal": 2,
+   "otro": 28
+  },
+  "longissime": {
+   "otro": 2
+  },
+  "pulcherrimum": {
+   "nominal": 1
+  },
+  "pulcherrime": {
+   "otro": 1
+  },
+  "miseriōrem": {
+   "nominal": 1
+  },
+  "miserius": {
+   "otro": 1,
+   "nominal": 5
+  },
+  "miserrimus": {
+   "nominal": 1
+  },
+  "miserrimum": {
+   "nominal": 1
+  },
+  "miserrimī": {
+   "nominal": 1
+  },
+  "miserrimō": {
+   "nominal": 1
+  },
+  "miserrimīs": {
+   "nominal": 1
+  },
+  "miserrima": {
+   "nominal": 2
+  },
+  "miserrimā": {
+   "nominal": 2
+  },
+  "certior": {
+   "nominal": 14
+  },
+  "certiōrem": {
+   "nominal": 15
+  },
+  "certiōrēs": {
+   "nominal": 5
+  },
+  "certius": {
+   "nominal": 4,
+   "otro": 2
+  },
+  "certiōra": {
+   "nominal": 1
+  },
+  "certissimum": {
+   "nominal": 1
+  },
+  "certissime": {
+   "otro": 2
+  },
+  "certissimam": {
+   "nominal": 1
+  },
+  "certissimae": {
+   "nominal": 1
+  },
+  "vērius": {
+   "nominal": 1
+  },
+  "vēriōra": {
+   "nominal": 1
+  },
+  "vērissime": {
+   "otro": 2
+  },
+  "vērissimae": {
+   "nominal": 1
+  },
+  "gravior": {
+   "nominal": 2
+  },
+  "graviōrem": {
+   "nominal": 1
+  },
+  "graviōrī": {
+   "nominal": 1
+  },
+  "graviōre": {
+   "nominal": 3
+  },
+  "graviōribus": {
+   "nominal": 2
+  },
+  "gravius": {
+   "otro": 4,
+   "nominal": 5
+  },
+  "graviōra": {
+   "nominal": 4
+  },
+  "gravissimus": {
+   "nominal": 1
+  },
+  "gravissimum": {
+   "nominal": 1
+  },
+  "gravissimō": {
+   "nominal": 1
+  },
+  "gravissime": {
+   "otro": 3
+  },
+  "gravissima": {
+   "nominal": 1
+  },
+  "gravissimae": {
+   "nominal": 2
+  },
+  "gravissimā": {
+   "nominal": 1
+  },
+  "fortiōrem": {
+   "nominal": 1
+  },
+  "fortiōrēs": {
+   "nominal": 3
+  },
+  "fortius": {
+   "otro": 3,
+   "nominal": 1
+  },
+  "fortissimus": {
+   "nominal": 2
+  },
+  "fortissimī": {
+   "nominal": 2
+  },
+  "fortissimō": {
+   "nominal": 1
+  },
+  "fortissime": {
+   "otro": 3
+  },
+  "fidēlissima": {
+   "nominal": 2
+  },
+  "fidēlissimā": {
+   "nominal": 2
+  },
+  "ūtilior": {
+   "nominal": 1
+  },
+  "ūtiliōrēs": {
+   "nominal": 1
+  },
+  "ūtilius": {
+   "nominal": 3
+  },
+  "ūtiliōra": {
+   "nominal": 2
+  },
+  "facilior": {
+   "nominal": 2
+  },
+  "faciliōribus": {
+   "nominal": 1
+  },
+  "facilius": {
+   "otro": 31,
+   "nominal": 5
+  },
+  "faciliōra": {
+   "nominal": 1
+  },
+  "facillimum": {
+   "nominal": 1
+  },
+  "facillime": {
+   "otro": 5
+  },
+  "difficiliōrem": {
+   "nominal": 1
+  },
+  "difficilius": {
+   "nominal": 3
+  },
+  "difficillimum": {
+   "nominal": 1
+  },
+  "difficillime": {
+   "otro": 1
+  },
+  "difficillimīs": {
+   "nominal": 1
+  },
+  "fēlīciōrēs": {
+   "nominal": 1
+  },
+  "ācrior": {
+   "nominal": 1
+  },
+  "ācriōre": {
+   "nominal": 2
+  },
+  "ācriōribus": {
+   "nominal": 1
+  },
+  "ācrius": {
+   "nominal": 1,
+   "otro": 4
+  },
+  "ācerrime": {
+   "otro": 1
   }
  }
 }

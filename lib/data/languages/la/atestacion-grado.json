@@ -1,0 +1,2294 @@
+{
+ "generado": "2026-09-13",
+ "corpus": "UD Latin (scripts/.cache/treebanks)",
+ "comoSeCuenta": "el rasgo Degree del treebank (Cmp / Sup / Abs), no la cadena; `Abs` es el superlativo elativo y se suma al superlativo",
+ "adjetivos": 27,
+ "lemasConAlgunGrado": 13,
+ "lemasQueLaMaquinaGRADUAySINningunaAtestacion": [
+  "parvus",
+  "integer",
+  "vērus",
+  "anxius",
+  "similis",
+  "gravis",
+  "commūnis",
+  "praesēns"
+ ],
+ "formasDelDominio": 480,
+ "formasAtestiguadas": 130,
+ "tabla": {
+  "bonus": {
+   "clase": "1ª/2ª",
+   "claseDeSuperlativo": "irregular",
+   "comparativo": "melior",
+   "superlativo": "optimus",
+   "lemaEnCorpus": {
+    "cmp": 44,
+    "sup": 38,
+    "abs": 3
+   },
+   "comparativoEnCorpus": 10,
+   "superlativoEnCorpus": 2
+  },
+  "magnus": {
+   "clase": "1ª/2ª",
+   "claseDeSuperlativo": "irregular",
+   "comparativo": "maior",
+   "superlativo": "maximus",
+   "lemaEnCorpus": {
+    "cmp": 163,
+    "sup": 71,
+    "abs": 5
+   },
+   "comparativoEnCorpus": 52,
+   "superlativoEnCorpus": 3
+  },
+  "parvus": {
+   "clase": "1ª/2ª",
+   "claseDeSuperlativo": "irregular",
+   "comparativo": "minor",
+   "superlativo": "minimus",
+   "lemaEnCorpus": {
+    "cmp": 0,
+    "sup": 0,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 14,
+   "superlativoEnCorpus": 2
+  },
+  "longus": {
+   "clase": "1ª/2ª",
+   "claseDeSuperlativo": "issimus",
+   "comparativo": "longior",
+   "superlativo": "longissimus",
+   "lemaEnCorpus": {
+    "cmp": 11,
+    "sup": 0,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 2,
+   "superlativoEnCorpus": 0
+  },
+  "pulcher": {
+   "clase": "1ª/2ª",
+   "claseDeSuperlativo": "errimus",
+   "comparativo": "pulchrior",
+   "superlativo": "pulcherrimus",
+   "lemaEnCorpus": {
+    "cmp": 0,
+    "sup": 1,
+    "abs": 1
+   },
+   "comparativoEnCorpus": 0,
+   "superlativoEnCorpus": 0
+  },
+  "miser": {
+   "clase": "1ª/2ª",
+   "claseDeSuperlativo": "errimus",
+   "comparativo": "miserior",
+   "superlativo": "miserrimus",
+   "lemaEnCorpus": {
+    "cmp": 6,
+    "sup": 6,
+    "abs": 1
+   },
+   "comparativoEnCorpus": 0,
+   "superlativoEnCorpus": 1
+  },
+  "prīmus": {
+   "clase": "1ª/2ª",
+   "claseDeSuperlativo": "sin-grado",
+   "comparativo": null,
+   "superlativo": null,
+   "lemaEnCorpus": {
+    "cmp": 0,
+    "sup": 0,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 0,
+   "superlativoEnCorpus": 0
+  },
+  "integer": {
+   "clase": "1ª/2ª",
+   "claseDeSuperlativo": "errimus",
+   "comparativo": "integrior",
+   "superlativo": "integerrimus",
+   "lemaEnCorpus": {
+    "cmp": 0,
+    "sup": 0,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 0,
+   "superlativoEnCorpus": 0
+  },
+  "certus": {
+   "clase": "1ª/2ª",
+   "claseDeSuperlativo": "issimus",
+   "comparativo": "certior",
+   "superlativo": "certissimus",
+   "lemaEnCorpus": {
+    "cmp": 39,
+    "sup": 3,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 14,
+   "superlativoEnCorpus": 0
+  },
+  "vērus": {
+   "clase": "1ª/2ª",
+   "claseDeSuperlativo": "issimus",
+   "comparativo": "vērior",
+   "superlativo": "vērissimus",
+   "lemaEnCorpus": {
+    "cmp": 0,
+    "sup": 0,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 0,
+   "superlativoEnCorpus": 0
+  },
+  "anxius": {
+   "clase": "1ª/2ª",
+   "claseDeSuperlativo": "perifrastico",
+   "comparativo": "magis anxius",
+   "superlativo": "maximē anxius",
+   "lemaEnCorpus": {
+    "cmp": 0,
+    "sup": 0,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 0,
+   "superlativoEnCorpus": 0
+  },
+  "suus": {
+   "clase": "1ª/2ª",
+   "claseDeSuperlativo": "sin-grado",
+   "comparativo": null,
+   "superlativo": null,
+   "lemaEnCorpus": {
+    "cmp": 0,
+    "sup": 0,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 0,
+   "superlativoEnCorpus": 0
+  },
+  "meus": {
+   "clase": "1ª/2ª",
+   "claseDeSuperlativo": "sin-grado",
+   "comparativo": null,
+   "superlativo": null,
+   "lemaEnCorpus": {
+    "cmp": 0,
+    "sup": 0,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 0,
+   "superlativoEnCorpus": 0
+  },
+  "tuus": {
+   "clase": "1ª/2ª",
+   "claseDeSuperlativo": "sin-grado",
+   "comparativo": null,
+   "superlativo": null,
+   "lemaEnCorpus": {
+    "cmp": 0,
+    "sup": 0,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 0,
+   "superlativoEnCorpus": 0
+  },
+  "noster": {
+   "clase": "1ª/2ª",
+   "claseDeSuperlativo": "sin-grado",
+   "comparativo": null,
+   "superlativo": null,
+   "lemaEnCorpus": {
+    "cmp": 0,
+    "sup": 0,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 0,
+   "superlativoEnCorpus": 0
+  },
+  "omnis": {
+   "clase": "3ª",
+   "claseDeSuperlativo": "sin-grado",
+   "comparativo": null,
+   "superlativo": null,
+   "lemaEnCorpus": {
+    "cmp": 0,
+    "sup": 0,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 0,
+   "superlativoEnCorpus": 0
+  },
+  "similis": {
+   "clase": "3ª",
+   "claseDeSuperlativo": "illimus",
+   "comparativo": "similior",
+   "superlativo": "simillimus",
+   "lemaEnCorpus": {
+    "cmp": 0,
+    "sup": 0,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 0,
+   "superlativoEnCorpus": 0
+  },
+  "gravis": {
+   "clase": "3ª",
+   "claseDeSuperlativo": "issimus",
+   "comparativo": "gravior",
+   "superlativo": "gravissimus",
+   "lemaEnCorpus": {
+    "cmp": 0,
+    "sup": 0,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 2,
+   "superlativoEnCorpus": 1
+  },
+  "fortis": {
+   "clase": "3ª",
+   "claseDeSuperlativo": "issimus",
+   "comparativo": "fortior",
+   "superlativo": "fortissimus",
+   "lemaEnCorpus": {
+    "cmp": 11,
+    "sup": 4,
+    "abs": 2
+   },
+   "comparativoEnCorpus": 5,
+   "superlativoEnCorpus": 2
+  },
+  "commūnis": {
+   "clase": "3ª",
+   "claseDeSuperlativo": "issimus",
+   "comparativo": "commūnior",
+   "superlativo": "commūnissimus",
+   "lemaEnCorpus": {
+    "cmp": 0,
+    "sup": 0,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 0,
+   "superlativoEnCorpus": 0
+  },
+  "fidēlis": {
+   "clase": "3ª",
+   "claseDeSuperlativo": "issimus",
+   "comparativo": "fidēlior",
+   "superlativo": "fidēlissimus",
+   "lemaEnCorpus": {
+    "cmp": 0,
+    "sup": 2,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 0,
+   "superlativoEnCorpus": 0
+  },
+  "ūtilis": {
+   "clase": "3ª",
+   "claseDeSuperlativo": "issimus",
+   "comparativo": "ūtilior",
+   "superlativo": "ūtilissimus",
+   "lemaEnCorpus": {
+    "cmp": 7,
+    "sup": 0,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 1,
+   "superlativoEnCorpus": 0
+  },
+  "facilis": {
+   "clase": "3ª",
+   "claseDeSuperlativo": "illimus",
+   "comparativo": "facilior",
+   "superlativo": "facillimus",
+   "lemaEnCorpus": {
+    "cmp": 11,
+    "sup": 1,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 2,
+   "superlativoEnCorpus": 0
+  },
+  "difficilis": {
+   "clase": "3ª",
+   "claseDeSuperlativo": "illimus",
+   "comparativo": "difficilior",
+   "superlativo": "difficillimus",
+   "lemaEnCorpus": {
+    "cmp": 4,
+    "sup": 2,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 0,
+   "superlativoEnCorpus": 0
+  },
+  "fēlīx": {
+   "clase": "3ª",
+   "claseDeSuperlativo": "issimus",
+   "comparativo": "fēlīcior",
+   "superlativo": "fēlīcissimus",
+   "lemaEnCorpus": {
+    "cmp": 1,
+    "sup": 0,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 0,
+   "superlativoEnCorpus": 0
+  },
+  "praesēns": {
+   "clase": "3ª",
+   "claseDeSuperlativo": "issimus",
+   "comparativo": "praesentior",
+   "superlativo": "praesentissimus",
+   "lemaEnCorpus": {
+    "cmp": 0,
+    "sup": 0,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 0,
+   "superlativoEnCorpus": 0
+  },
+  "ācer": {
+   "clase": "3ª",
+   "claseDeSuperlativo": "errimus",
+   "comparativo": "ācrior",
+   "superlativo": "ācerrimus",
+   "lemaEnCorpus": {
+    "cmp": 6,
+    "sup": 0,
+    "abs": 0
+   },
+   "comparativoEnCorpus": 1,
+   "superlativoEnCorpus": 0
+  }
+ },
+ "formas": {
+  "melior": {
+   "cmp": 10,
+   "sup": 0
+  },
+  "meliōrem": {
+   "cmp": 7,
+   "sup": 0
+  },
+  "meliōris": {
+   "cmp": 1,
+   "sup": 0
+  },
+  "meliōrī": {
+   "cmp": 1,
+   "sup": 0
+  },
+  "meliōre": {
+   "cmp": 2,
+   "sup": 0
+  },
+  "meliōrēs": {
+   "cmp": 6,
+   "sup": 0
+  },
+  "meliōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "meliōribus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "melius": {
+   "cmp": 35,
+   "sup": 0
+  },
+  "meliōra": {
+   "cmp": 3,
+   "sup": 0
+  },
+  "optimus": {
+   "cmp": 0,
+   "sup": 2
+  },
+  "optimum": {
+   "cmp": 0,
+   "sup": 8
+  },
+  "optimī": {
+   "cmp": 0,
+   "sup": 7
+  },
+  "optimō": {
+   "cmp": 0,
+   "sup": 11
+  },
+  "optime": {
+   "cmp": 0,
+   "sup": 10
+  },
+  "optimōs": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "optimōrum": {
+   "cmp": 0,
+   "sup": 2
+  },
+  "optimīs": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "optima": {
+   "cmp": 0,
+   "sup": 4
+  },
+  "optimam": {
+   "cmp": 0,
+   "sup": 2
+  },
+  "optimae": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "optimā": {
+   "cmp": 0,
+   "sup": 4
+  },
+  "optimās": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "optimārum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "maior": {
+   "cmp": 52,
+   "sup": 0
+  },
+  "maiōrem": {
+   "cmp": 11,
+   "sup": 0
+  },
+  "maiōris": {
+   "cmp": 3,
+   "sup": 0
+  },
+  "maiōrī": {
+   "cmp": 6,
+   "sup": 0
+  },
+  "maiōre": {
+   "cmp": 13,
+   "sup": 0
+  },
+  "maiōrēs": {
+   "cmp": 21,
+   "sup": 0
+  },
+  "maiōrum": {
+   "cmp": 7,
+   "sup": 0
+  },
+  "maiōribus": {
+   "cmp": 8,
+   "sup": 0
+  },
+  "maius": {
+   "cmp": 17,
+   "sup": 0
+  },
+  "maiōra": {
+   "cmp": 18,
+   "sup": 0
+  },
+  "maximus": {
+   "cmp": 0,
+   "sup": 3
+  },
+  "maximum": {
+   "cmp": 0,
+   "sup": 15
+  },
+  "maximī": {
+   "cmp": 0,
+   "sup": 2
+  },
+  "maximō": {
+   "cmp": 0,
+   "sup": 11
+  },
+  "maxime": {
+   "cmp": 0,
+   "sup": 114
+  },
+  "maximōs": {
+   "cmp": 0,
+   "sup": 3
+  },
+  "maximōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "maximīs": {
+   "cmp": 0,
+   "sup": 10
+  },
+  "maxima": {
+   "cmp": 0,
+   "sup": 16
+  },
+  "maximam": {
+   "cmp": 0,
+   "sup": 5
+  },
+  "maximae": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "maximā": {
+   "cmp": 0,
+   "sup": 16
+  },
+  "maximās": {
+   "cmp": 0,
+   "sup": 9
+  },
+  "maximārum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "minor": {
+   "cmp": 14,
+   "sup": 0
+  },
+  "minōrem": {
+   "cmp": 5,
+   "sup": 0
+  },
+  "minōris": {
+   "cmp": 2,
+   "sup": 0
+  },
+  "minōrī": {
+   "cmp": 3,
+   "sup": 0
+  },
+  "minōre": {
+   "cmp": 5,
+   "sup": 0
+  },
+  "minōrēs": {
+   "cmp": 6,
+   "sup": 0
+  },
+  "minōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "minōribus": {
+   "cmp": 5,
+   "sup": 0
+  },
+  "minus": {
+   "cmp": 88,
+   "sup": 0
+  },
+  "minōra": {
+   "cmp": 4,
+   "sup": 0
+  },
+  "minimus": {
+   "cmp": 0,
+   "sup": 2
+  },
+  "minimum": {
+   "cmp": 0,
+   "sup": 6
+  },
+  "minimī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "minimō": {
+   "cmp": 0,
+   "sup": 7
+  },
+  "minime": {
+   "cmp": 0,
+   "sup": 19
+  },
+  "minimōs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "minimōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "minimīs": {
+   "cmp": 0,
+   "sup": 5
+  },
+  "minima": {
+   "cmp": 0,
+   "sup": 7
+  },
+  "minimam": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "minimae": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "minimā": {
+   "cmp": 0,
+   "sup": 7
+  },
+  "minimās": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "minimārum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "longior": {
+   "cmp": 2,
+   "sup": 0
+  },
+  "longiōrem": {
+   "cmp": 3,
+   "sup": 0
+  },
+  "longiōris": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "longiōrī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "longiōre": {
+   "cmp": 3,
+   "sup": 0
+  },
+  "longiōrēs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "longiōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "longiōribus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "longius": {
+   "cmp": 29,
+   "sup": 0
+  },
+  "longiōra": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "longissimus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "longissimum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "longissimī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "longissimō": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "longissime": {
+   "cmp": 0,
+   "sup": 2
+  },
+  "longissimōs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "longissimōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "longissimīs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "longissima": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "longissimam": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "longissimae": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "longissimā": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "longissimās": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "longissimārum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulchrior": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulchriōrem": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulchriōris": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulchriōrī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulchriōre": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulchriōrēs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulchriōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulchriōribus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulchrius": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulchriōra": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulcherrimus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulcherrimum": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "pulcherrimī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulcherrimō": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulcherrime": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "pulcherrimōs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulcherrimōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulcherrimīs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulcherrima": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulcherrimam": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulcherrimae": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulcherrimā": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulcherrimās": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "pulcherrimārum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "miserior": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "miseriōrem": {
+   "cmp": 1,
+   "sup": 0
+  },
+  "miseriōris": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "miseriōrī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "miseriōre": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "miseriōrēs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "miseriōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "miseriōribus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "miserius": {
+   "cmp": 6,
+   "sup": 0
+  },
+  "miseriōra": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "miserrimus": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "miserrimum": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "miserrimī": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "miserrimō": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "miserrime": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "miserrimōs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "miserrimōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "miserrimīs": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "miserrima": {
+   "cmp": 0,
+   "sup": 2
+  },
+  "miserrimam": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "miserrimae": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "miserrimā": {
+   "cmp": 0,
+   "sup": 2
+  },
+  "miserrimās": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "miserrimārum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integrior": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integriōrem": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integriōris": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integriōrī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integriōre": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integriōrēs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integriōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integriōribus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integrius": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integriōra": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integerrimus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integerrimum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integerrimī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integerrimō": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integerrime": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integerrimōs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integerrimōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integerrimīs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integerrima": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integerrimam": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integerrimae": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integerrimā": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integerrimās": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "integerrimārum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "certior": {
+   "cmp": 14,
+   "sup": 0
+  },
+  "certiōrem": {
+   "cmp": 15,
+   "sup": 0
+  },
+  "certiōris": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "certiōrī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "certiōre": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "certiōrēs": {
+   "cmp": 5,
+   "sup": 0
+  },
+  "certiōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "certiōribus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "certius": {
+   "cmp": 6,
+   "sup": 0
+  },
+  "certiōra": {
+   "cmp": 1,
+   "sup": 0
+  },
+  "certissimus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "certissimum": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "certissimī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "certissimō": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "certissime": {
+   "cmp": 0,
+   "sup": 2
+  },
+  "certissimōs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "certissimōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "certissimīs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "certissima": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "certissimam": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "certissimae": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "certissimā": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "certissimās": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "certissimārum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vērior": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vēriōrem": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vēriōris": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vēriōrī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vēriōre": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vēriōrēs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vēriōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vēriōribus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vērius": {
+   "cmp": 1,
+   "sup": 0
+  },
+  "vēriōra": {
+   "cmp": 1,
+   "sup": 0
+  },
+  "vērissimus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vērissimum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vērissimī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vērissimō": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vērissime": {
+   "cmp": 0,
+   "sup": 2
+  },
+  "vērissimōs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vērissimōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vērissimīs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vērissima": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vērissimam": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vērissimae": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "vērissimā": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vērissimās": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "vērissimārum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "similior": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "similiōrem": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "similiōris": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "similiōrī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "similiōre": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "similiōrēs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "similiōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "similiōribus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "similius": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "similiōra": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "simillimus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "simillimum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "simillimī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "simillimō": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "simillime": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "simillimōs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "simillimōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "simillimīs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "simillima": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "simillimam": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "simillimae": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "simillimā": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "simillimās": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "simillimārum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "gravior": {
+   "cmp": 2,
+   "sup": 0
+  },
+  "graviōrem": {
+   "cmp": 1,
+   "sup": 0
+  },
+  "graviōris": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "graviōrī": {
+   "cmp": 1,
+   "sup": 0
+  },
+  "graviōre": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "graviōrēs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "graviōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "graviōribus": {
+   "cmp": 2,
+   "sup": 0
+  },
+  "gravius": {
+   "cmp": 9,
+   "sup": 0
+  },
+  "graviōra": {
+   "cmp": 4,
+   "sup": 0
+  },
+  "gravissimus": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "gravissimum": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "gravissimī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "gravissimō": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "gravissime": {
+   "cmp": 0,
+   "sup": 3
+  },
+  "gravissimōs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "gravissimōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "gravissimīs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "gravissima": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "gravissimam": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "gravissimae": {
+   "cmp": 0,
+   "sup": 2
+  },
+  "gravissimā": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "gravissimās": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "gravissimārum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fortior": {
+   "cmp": 5,
+   "sup": 0
+  },
+  "fortiōrem": {
+   "cmp": 1,
+   "sup": 0
+  },
+  "fortiōris": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fortiōrī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fortiōre": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fortiōrēs": {
+   "cmp": 3,
+   "sup": 0
+  },
+  "fortiōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fortiōribus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fortius": {
+   "cmp": 4,
+   "sup": 0
+  },
+  "fortiōra": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fortissimus": {
+   "cmp": 0,
+   "sup": 2
+  },
+  "fortissimum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fortissimī": {
+   "cmp": 0,
+   "sup": 2
+  },
+  "fortissimō": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "fortissime": {
+   "cmp": 0,
+   "sup": 3
+  },
+  "fortissimōs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fortissimōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fortissimīs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fortissima": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fortissimam": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fortissimae": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fortissimā": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fortissimās": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fortissimārum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūnior": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūniōrem": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūniōris": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūniōrī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūniōre": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūniōrēs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūniōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūniōribus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūnius": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūniōra": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūnissimus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūnissimum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūnissimī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūnissimō": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūnissime": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūnissimōs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūnissimōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūnissimīs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūnissima": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūnissimam": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūnissimae": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūnissimā": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūnissimās": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "commūnissimārum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēlior": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēliōrem": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēliōris": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēliōrī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēliōre": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēliōrēs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēliōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēliōribus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēlius": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēliōra": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēlissimus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēlissimum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēlissimī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēlissimō": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēlissime": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēlissimōs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēlissimōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēlissimīs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēlissima": {
+   "cmp": 0,
+   "sup": 2
+  },
+  "fidēlissimam": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēlissimae": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēlissimā": {
+   "cmp": 0,
+   "sup": 2
+  },
+  "fidēlissimās": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fidēlissimārum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtilior": {
+   "cmp": 1,
+   "sup": 0
+  },
+  "ūtiliōrem": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtiliōris": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtiliōrī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtiliōre": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtiliōrēs": {
+   "cmp": 1,
+   "sup": 0
+  },
+  "ūtiliōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtiliōribus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtilius": {
+   "cmp": 3,
+   "sup": 0
+  },
+  "ūtiliōra": {
+   "cmp": 2,
+   "sup": 0
+  },
+  "ūtilissimus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtilissimum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtilissimī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtilissimō": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtilissime": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtilissimōs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtilissimōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtilissimīs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtilissima": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtilissimam": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtilissimae": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtilissimā": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtilissimās": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ūtilissimārum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "facilior": {
+   "cmp": 2,
+   "sup": 0
+  },
+  "faciliōrem": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "faciliōris": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "faciliōrī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "faciliōre": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "faciliōrēs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "faciliōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "faciliōribus": {
+   "cmp": 1,
+   "sup": 0
+  },
+  "facilius": {
+   "cmp": 35,
+   "sup": 0
+  },
+  "faciliōra": {
+   "cmp": 1,
+   "sup": 0
+  },
+  "facillimus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "facillimum": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "facillimī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "facillimō": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "facillime": {
+   "cmp": 0,
+   "sup": 5
+  },
+  "facillimōs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "facillimōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "facillimīs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "facillima": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "facillimam": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "facillimae": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "facillimā": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "facillimās": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "facillimārum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "difficilior": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "difficiliōrem": {
+   "cmp": 1,
+   "sup": 0
+  },
+  "difficiliōris": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "difficiliōrī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "difficiliōre": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "difficiliōrēs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "difficiliōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "difficiliōribus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "difficilius": {
+   "cmp": 3,
+   "sup": 0
+  },
+  "difficiliōra": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "difficillimus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "difficillimum": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "difficillimī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "difficillimō": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "difficillime": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "difficillimōs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "difficillimōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "difficillimīs": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "difficillima": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "difficillimam": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "difficillimae": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "difficillimā": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "difficillimās": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "difficillimārum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīcior": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīciōrem": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīciōris": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīciōrī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīciōre": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīciōrēs": {
+   "cmp": 1,
+   "sup": 0
+  },
+  "fēlīciōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīciōribus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīcius": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīciōra": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīcissimus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīcissimum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīcissimī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīcissimō": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīcissime": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīcissimōs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīcissimōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīcissimīs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīcissima": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīcissimam": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīcissimae": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīcissimā": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīcissimās": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "fēlīcissimārum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentior": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentiōrem": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentiōris": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentiōrī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentiōre": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentiōrēs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentiōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentiōribus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentius": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentiōra": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentissimus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentissimum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentissimī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentissimō": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentissime": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentissimōs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentissimōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentissimīs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentissima": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentissimam": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentissimae": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentissimā": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentissimās": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "praesentissimārum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ācrior": {
+   "cmp": 1,
+   "sup": 0
+  },
+  "ācriōrem": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ācriōris": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ācriōrī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ācriōre": {
+   "cmp": 2,
+   "sup": 0
+  },
+  "ācriōrēs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ācriōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ācriōribus": {
+   "cmp": 1,
+   "sup": 0
+  },
+  "ācrius": {
+   "cmp": 5,
+   "sup": 0
+  },
+  "ācriōra": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ācerrimus": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ācerrimum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ācerrimī": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ācerrimō": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ācerrime": {
+   "cmp": 0,
+   "sup": 1
+  },
+  "ācerrimōs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ācerrimōrum": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ācerrimīs": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ācerrima": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ācerrimam": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ācerrimae": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ācerrimā": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ācerrimās": {
+   "cmp": 0,
+   "sup": 0
+  },
+  "ācerrimārum": {
+   "cmp": 0,
+   "sup": 0
+  }
+ }
+}

@@ -24,6 +24,7 @@
   "tokens": 3,
   "rasgos": "Case=Abl|Degree=Pos|Number=Sing",
   "deberiaSer": "Degree=Cmp",
-  "motivo": "la forma sólo puede ser el ablativo del COMPARATIVO «gravior»: el positivo «gravis» hace ablativo «gravī» y no admite «-iōre». El lema «gravis» es la convención UD y está bien; lo que está mal es el rasgo «Degree=Pos». Es una errata de ANOTACIÓN, no de transcripción."
+  "motivo": "la forma sólo puede ser el ablativo del COMPARATIVO «gravior»: el positivo «gravis» hace ablativo «gravī» y no admite «-iōre». El lema «gravis» es la convención UD y está bien; lo que está mal es el rasgo «Degree=Pos». Es una errata de ANOTACIÓN, no de transcripción.",
+  "resueltaPorLaMaquina": "2026-09-12: la errata SIGUE SIENDO CIERTA —la anotación dice Degree=Pos y la forma sólo puede ser el ablativo del comparativo—, pero ya no se puede detectar por esta vía: `grado.ts` produce `graviōre`, así que la forma dejó de aparecer en la lista de las que la máquina no produce. Se queda escrita porque es una observación verdadera sobre el corpus y porque borrarla perdería la evidencia; deja de contar como hueco."
  }
 ]

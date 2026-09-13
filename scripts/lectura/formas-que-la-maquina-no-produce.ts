@@ -157,6 +157,11 @@ export type ClaseDeHueco = 'grafia-del-indeclinable' | 'grado-del-adjetivo'
 export interface ErrataDelCorpus {
   lema: string; forma: string; fichero: string; tokens: number;
   rasgos: string; deberiaSer: string; motivo: string;
+  /** Cuando la máquina ha crecido y ya produce la forma, la errata deja de
+   *  poder detectarse por esta vía sin dejar de ser cierta. Se marca aquí,
+   *  con la fecha y el motivo, en vez de borrarla: borrarla perdería la
+   *  evidencia y el siguiente la volvería a descubrir. */
+  resueltaPorLaMaquina?: string;
 }
 const ERRATAS: ErrataDelCorpus[] = JSON.parse(
   fs.readFileSync(`${import.meta.dirname}/erratas-corpus-la.json`, 'utf8'),
@@ -170,7 +175,14 @@ const esErrata = (lema: string, forma: string) =>
  *  mirarla, no borrarla en silencio. */
 export function erratasQueYaNoCasan(): ErrataDelCorpus[] {
   const huecos = new Set(auditar().map((h) => `${sinM(h.lema)}|${sinM(h.forma)}`));
-  return ERRATAS.filter((e) => !huecos.has(`${sinM(e.lema)}|${sinM(e.forma)}`));
+  return ERRATAS.filter((e) => e.resueltaPorLaMaquina === undefined && !huecos.has(`${sinM(e.lema)}|${sinM(e.forma)}`));
+}
+
+/** Las que dejaron de ser detectables porque la máquina creció. No son un
+ *  fallo: son el registro de que esta auditoría sólo ve lo que la máquina
+ *  NO produce, y que su alcance encoge cuando la máquina crece. */
+export function erratasResueltasPorLaMaquina(): ErrataDelCorpus[] {
+  return ERRATAS.filter((e) => e.resueltaPorLaMaquina !== undefined);
 }
 
 /** Indeclinables y partículas cuya grafía alterna en el corpus: `ab`/`ā`,

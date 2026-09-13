@@ -1,11 +1,27 @@
 {
  "generado": "2026-09-13",
  "comoSeCuenta": "por LEMA más RASGOS del treebank, no por cadena: el corpus no lleva mácrones y buscar la cadena devuelve el mismo número para los dos miembros del par",
- "pares": 252,
+ "pares": 272,
  "miembrosConCuenta": 247,
- "miembrosSinMapear": 262,
+ "miembrosSinMapear": 302,
  "paresConUnMiembroACero": 110,
  "lista": {
+  "acerrima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "ācerrima",
+     "clave": "ācer.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "ācerrimā",
+     "clave": "ācer.sup.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
   "agricola": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -598,6 +614,38 @@
     }
    ]
   },
+  "certissima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "certissima",
+     "clave": "certus.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "certissimā",
+     "clave": "certus.sup.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "communissima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "commūnissima",
+     "clave": "commūnis.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "commūnissimā",
+     "clave": "commūnis.sup.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
   "cura": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -802,6 +850,22 @@
     {
      "forma": "dictūrā",
      "clave": "dīcō.part-fut.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "difficillima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "difficillima",
+     "clave": "difficilis.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "difficillimā",
+     "clave": "difficilis.sup.f.abl.sg",
      "n": null
     }
    ]
@@ -1190,6 +1254,22 @@
     }
    ]
   },
+  "facillima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "facillima",
+     "clave": "facilis.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "facillimā",
+     "clave": "facilis.sup.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
   "facta": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -1270,6 +1350,38 @@
     }
    ]
   },
+  "felicissima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "fēlīcissima",
+     "clave": "fēlīx.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "fēlīcissimā",
+     "clave": "fēlīx.sup.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "fidelissima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "fidēlissima",
+     "clave": "fidēlis.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "fidēlissimā",
+     "clave": "fidēlis.sup.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
   "filia": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -1283,6 +1395,22 @@
      "forma": "fīliā",
      "clave": "fīlia.abl.sg",
      "n": 3
+    }
+   ]
+  },
+  "fortissima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "fortissima",
+     "clave": "fortis.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "fortissimā",
+     "clave": "fortis.sup.f.abl.sg",
+     "n": null
     }
    ]
   },
@@ -1379,6 +1507,22 @@
      "forma": "grātiā",
      "clave": "grātia.abl.sg",
      "n": 51
+    }
+   ]
+  },
+  "gravissima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "gravissima",
+     "clave": "gravis.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "gravissimā",
+     "clave": "gravis.sup.f.abl.sg",
+     "n": null
     }
    ]
   },
@@ -1635,6 +1779,22 @@
      "forma": "illā",
      "clave": "ille.f.abl.sg",
      "n": 73
+    }
+   ]
+  },
+  "integerrima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "integerrima",
+     "clave": "integer.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "integerrimā",
+     "clave": "integer.sup.f.abl.sg",
+     "n": null
     }
    ]
   },
@@ -2320,6 +2480,22 @@
     }
    ]
   },
+  "longissima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "longissima",
+     "clave": "longus.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "longissimā",
+     "clave": "longus.sup.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
   "magna": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -2400,6 +2576,22 @@
     }
    ]
   },
+  "maxima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "maxima",
+     "clave": "magnus.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "maximā",
+     "clave": "magnus.sup.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
   "mea": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -2429,6 +2621,22 @@
      "forma": "metūs",
      "clave": "metus.gen.sg",
      "n": 1
+    }
+   ]
+  },
+  "minima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "minima",
+     "clave": "parvus.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "minimā",
+     "clave": "parvus.sup.f.abl.sg",
+     "n": null
     }
    ]
   },
@@ -2546,6 +2754,22 @@
      "forma": "miserō",
      "clave": "miser.m.dat.sg",
      "n": 1
+    }
+   ]
+  },
+  "miserrima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "miserrima",
+     "clave": "miser.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "miserrimā",
+     "clave": "miser.sup.f.abl.sg",
+     "n": null
     }
    ]
   },
@@ -2757,6 +2981,22 @@
     }
    ]
   },
+  "optima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "optima",
+     "clave": "bonus.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "optimā",
+     "clave": "bonus.sup.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
   "parva": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -2885,6 +3125,22 @@
     }
    ]
   },
+  "praesentissima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "praesentissima",
+     "clave": "praesēns.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "praesentissimā",
+     "clave": "praesēns.sup.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
   "prima": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -2914,6 +3170,22 @@
      "forma": "puellā",
      "clave": "puella.abl.sg",
      "n": 1
+    }
+   ]
+  },
+  "pulcherrima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "pulcherrima",
+     "clave": "pulcher.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "pulcherrimā",
+     "clave": "pulcher.sup.f.abl.sg",
+     "n": null
     }
    ]
   },
@@ -3255,6 +3527,22 @@
      "forma": "senātūs",
      "clave": "senātus.gen.sg",
      "n": 48
+    }
+   ]
+  },
+  "simillima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "simillima",
+     "clave": "similis.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "simillimā",
+     "clave": "similis.sup.f.abl.sg",
+     "n": null
     }
    ]
   },
@@ -3610,6 +3898,22 @@
     }
    ]
   },
+  "utilissima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "ūtilissima",
+     "clave": "ūtilis.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "ūtilissimā",
+     "clave": "ūtilis.sup.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
   "venerimus": {
    "tipo": "morfologico",
    "vocal": "i",
@@ -3751,6 +4055,22 @@
      "forma": "vērā",
      "clave": "vērus.f.abl.sg",
      "n": 4
+    }
+   ]
+  },
+  "verissima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "vērissima",
+     "clave": "vērus.sup.f.nom.sg",
+     "n": null
+    },
+    {
+     "forma": "vērissimā",
+     "clave": "vērus.sup.f.abl.sg",
+     "n": null
     }
    ]
   },

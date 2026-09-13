@@ -47,6 +47,9 @@ import { declinarAdjetivo, type Caso } from './paradigma-la';
  *  se repite aquí —seis literales— en vez de exportar un detalle interno. */
 const ORDEN_CASOS: Caso[] = ['nom', 'ac', 'gen', 'dat', 'abl', 'voc'];
 import { IRREGULARES_L1 as IRR } from './irregulares';
+import { ADJETIVOS_L1 as ADJ } from './lexicon-l1';
+import { ADJETIVOS_3A as ADJ3, temaDelAdjetivo } from './adjetivos-3a';
+import { gradosDe, declinarComparativo } from './grado';
 
 export interface FormaDeL1 { clave: string; forma: string; tabla: string }
 
@@ -56,6 +59,10 @@ export const TABLAS_QUE_PRODUCEN_FORMAS = [
   'NOMBRES_L1', 'VERBOS_L1', 'ADJETIVOS_L1', 'INDECLINABLES_L1', 'PLURALIA_TANTUM',
   'ADJETIVOS_3A', 'IRREGULARES_L1', 'COMPUESTOS_DE_SUM', 'PRONOMBRES_L1', 'PARTICIPIOS',
   'PASIVA', 'INFINITIVOS', 'IMPERATIVOS', 'PERSONALES_L1', 'SUBJUNTIVOS',
+  // Entran el 2026-09-12 con `grado.ts`. La auditoría inversa las pedía a
+  // gritos: 126 entradas y 584 tokens, la tercera clase de hueco por tamaño
+  // y la primera de las que dependen de una máquina que no existía.
+  'COMPARATIVOS', 'SUPERLATIVOS',
 ] as const;
 
 export function todasLasFormasDeL1(): FormaDeL1[] {
@@ -202,6 +209,36 @@ export function todasLasFormasDeL1(): FormaDeL1[] {
     const pp = participioPresente(v);
     for (const [c, f] of Object.entries(paradigmaAdjetivo3a(pp)))
       out.push({ clave: `${v.lema}.part-pres.${c}`, forma: f, tabla: 'PARTICIPIOS' });
+  }
+
+  // ══ EL GRADO ═══════════════════════════════════════════════════════
+  //
+  // El comparativo declina como tema consonántico —ablativo en `-e`,
+  // genitivo plural en `-um`— y por eso no lo puede enumerar el declinador
+  // de la 3.ª; el superlativo declina como adjetivo de 1.ª/2.ª. Los que no
+  // admiten grado —posesivos, ordinales, `omnis`— devuelven `null` y no
+  // aparecen: la máquina calla donde no hay forma.
+  const CON_GRADO: { lema: string; tema: string }[] = [
+    ...ADJ.map((a) => ({ lema: a.lema, tema: (a as unknown as { tema: string }).tema })),
+    ...ADJ3.map((a) => ({ lema: a.lema, tema: temaDelAdjetivo(a) })),
+  ];
+  for (const a of CON_GRADO) {
+    const g = gradosDe(a.lema, a.tema);
+    if (g.clase === 'sin-grado' || g.clase === 'perifrastico') continue;
+    for (const gen of ['m', 'f', 'n'] as const)
+      for (const num of ['sg', 'pl'] as const)
+        for (const c of ORDEN_CASOS) {
+          const f = declinarComparativo(g, gen, c, num);
+          if (f) out.push({ clave: `${a.lema}.comp.${gen}.${c}.${num}`, forma: f, tabla: 'COMPARATIVOS' });
+        }
+    if (g.superlativo) {
+      const sup = g.superlativo;
+      const como = { lema: sup, tema: sup.replace(/us$/, ''), glosa: `superlativo de ${a.lema}` };
+      for (const gen of ['m', 'f', 'n'] as const)
+        for (const num of ['sg', 'pl'] as const)
+          for (const c of ORDEN_CASOS)
+            out.push({ clave: `${a.lema}.sup.${gen}.${c}.${num}`, forma: declinarAdjetivo(como, gen, c, num), tabla: 'SUPERLATIVOS' });
+    }
   }
   return out;
 }

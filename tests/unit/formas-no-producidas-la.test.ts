@@ -5,7 +5,8 @@
 // gate no puede ver porque callar no es inventar.
 import { describe, it, expect } from 'vitest';
 import fs from 'node:fs';
-import { auditar, claseDeHueco, erratasQueYaNoCasan, huecosPorClase } from '@/scripts/lectura/formas-que-la-maquina-no-produce';
+import { auditar, claseDeHueco, erratasQueYaNoCasan, erratasResueltasPorLaMaquina, huecosPorClase } from '@/scripts/lectura/formas-que-la-maquina-no-produce';
+import { gradosDe } from '@/lib/data/languages/la/grado';
 import { VERBOS_L1 } from '@/lib/data/languages/la/lexicon-l1';
 import { variantesDelPerfecto } from '@/lib/data/languages/la/paradigma-la';
 
@@ -83,13 +84,25 @@ describe.runIf(hayCorpus)('la auditoría contra el corpus', () => {
   // parece una forma latina rarísima hasta que uno ve que es la palabra
   // INGLESA metida en un texto latino. Mismo patrón que `erratas-ro.json`
   // para el OCR rumano.
-  it('las tres erratas conocidas del corpus siguen ahí, y son suyas, no de la máquina', () => {
+  it('las erratas DETECTABLES del corpus siguen ahí, y son suyas, no de la máquina', () => {
     const c = huecosPorClase();
-    expect(c['errata-del-corpus']!.entradas).toBe(3);
+    expect(c['errata-del-corpus']!.entradas).toBe(2);
     const formas = auditar()
       .filter((h) => claseDeHueco(h.lema, h.rasgos ?? '', h.forma) === 'errata-del-corpus')
       .map((h) => h.forma.toLowerCase());
-    expect(formas.sort()).toEqual(['graviore', 'icurae', 'voice']);
+    expect(formas.sort()).toEqual(['icurae', 'voice']);
+  });
+
+  it('y `graviore` dejó de ser DETECTABLE sin dejar de ser cierta', () => {
+    // El 2026-09-12 entró `grado.ts` y la máquina empezó a producir
+    // `graviōre`. La errata sigue siendo verdad —la anotación dice
+    // `Degree=Pos` y la forma sólo puede ser el ablativo del comparativo—,
+    // pero esta auditoría sólo ve lo que la máquina NO produce, así que su
+    // alcance encoge cuando la máquina crece. Queda escrita y marcada.
+    const r = erratasResueltasPorLaMaquina();
+    expect(r.map((e) => e.forma)).toEqual(['graviore']);
+    expect(r[0]!.resueltaPorLaMaquina ?? '').toContain('grado.ts');
+    expect(gradosDe('gravis', 'grav').comparativo).toBe('gravior');
   });
 
   it('y NINGUNA ha dejado de casar — que es lo que hace útil a la lista', () => {

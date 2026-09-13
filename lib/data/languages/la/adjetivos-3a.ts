@@ -93,6 +93,22 @@ export const ADJETIVOS_3A: EntradaAdjetivo3a[] = [
   { lema: 'commūnis', genitivo: 'commūnis', glosa: 'común', terminaciones: 2 },
   { lema: 'fidēlis', genitivo: 'fidēlis', glosa: 'fiel', terminaciones: 2 },
   { lema: 'ūtilis', genitivo: 'ūtilis', glosa: 'útil', terminaciones: 2 },
+  // ── ENTRAN EL 2026-09-12, por `l4-comparativo` ──
+  //
+  // El punto declara que «los seis en -ilis» hacen el superlativo en
+  // `-illimus` y que quien sobreaplique dirá *`facilissimus`. De los seis
+  // sólo `similis` estaba, y su `simillimus` no aparece en este corpus: el
+  // eje no se podía examinar con formas atestiguadas.
+  //
+  // `facilis` es el ejemplo que el propio punto usa y está medido:
+  // `facilius` ×35, `facillimē` ×5, `facillimum` ×1, y el lema en grado 12
+  // veces. `difficilis`: `difficilius` ×3, `difficillimum` ×1.
+  //
+  // Y son la mitad cara del punto, porque `ūtilis` y `fidēlis` acaban IGUAL
+  // y NO están entre los seis: hacen `ūtilissimus` y `fidēlissimus`. La
+  // regla es una lista, no un sufijo, y sin los dos lados no se ve.
+  { lema: 'facilis', genitivo: 'facilis', glosa: 'fácil', terminaciones: 2 },
+  { lema: 'difficilis', genitivo: 'difficilis', glosa: 'difícil', terminaciones: 2 },
   // ── UNA TERMINACIÓN · el nominativo no dice el género ──
   { lema: 'fēlīx', genitivo: 'fēlīcis', glosa: 'feliz, afortunado', terminaciones: 1 },
   { lema: 'praesēns', genitivo: 'praesentis', glosa: 'presente', terminaciones: 1 },
