@@ -32,6 +32,7 @@ import { hashKey } from './lib/cache';
 import { leccionParaPunto } from './lib/leccion-ru';
 import * as A1 from './lotes/cloze-ru-a1';
 import * as A1B from './lotes/cloze-ru-a1b';
+import * as A1C from './lotes/cloze-ru-a1c';
 
 /** ⚠ EL REGISTRO ES GENÉRICO Y NO ESTÁ TIPADO AL LOTE 1, y el motivo importa.
  *  La v0 importaba `respuestaDe` y `alternativasDe` de `cloze-ru-a1` **por
@@ -81,6 +82,17 @@ const LOTES: Record<string, LoteAnonimo> = {
     alternativasDe: A1B.alternativasDe,
     punto: (x) => x.p, frase: (x) => x.s, pista: (x) => x.pista,
     tags: (x) => [`persona-${x.persona}`, `eje-${x.eje}`, ...(x.frontera ? [`frontera-${x.frontera.regla}`] : [])],
+  }),
+  // ⚠ EL TERCER LOTE NO ESCRIBE SU FRASE: la compone `frase()` metiendo la
+  // forma NOMINAL derivada. Si el publicador leyera `x.marco` publicaría
+  // `{N}` literal, y el ítem saldría con una llave dentro sin que nada
+  // fallara — el fallo que devuelve algo plausible. Por eso el registro pide
+  // la frase a la función del lote y no a un campo.
+  a1c: deLote<A1C.ClozeAdjRu>({
+    items: A1C.ITEMS, verificar: A1C.verificar, respuestaDe: A1C.respuestaDe,
+    alternativasDe: A1C.alternativasDe,
+    punto: (x) => x.p, frase: (x) => A1C.frase(x), pista: (x) => x.pista,
+    tags: (x) => [`caso-${x.caso}`, `num-${x.num}`, `eje-${x.eje}`, ...(x.frontera ? [`frontera-${x.frontera.regla}`] : [])],
   }),
 };
 
