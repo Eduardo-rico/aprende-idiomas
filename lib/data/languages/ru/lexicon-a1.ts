@@ -246,3 +246,38 @@ export const VERBOS_A1: EntradaVerbal[] = [
     glosa: 'gustar', aspecto: 'impf', reflexivo: true, imperativoIrreg: null,
     nota: 'inherentemente reflexivo (no existe *нравить) y con epéntesis de л: es el verbo de `u4-sujeto-dativo`' },
 ];
+
+// ══════════════════════════════════════════════════════════════════════
+// LOS ADJETIVOS
+// ══════════════════════════════════════════════════════════════════════
+//
+// SEIS lemas, y el criterio de entrada es el mismo que el de los nombres:
+// cada uno es el ÚNICO que separa dos reglas que en todo lo demás coinciden.
+// La gramática escolar habla de cuatro declinaciones adjetivales; la máquina
+// tiene dos filas, y estos seis lemas son la prueba de que las otras dos son
+// la dura pasada por la ortografía.
+//
+//   новый    duro, átona       la fila desnuda
+//   молодой  duro, TÓNICA      -ой en el nominativo, y nada más cambia
+//   синий    blando            la segunda fila entera
+//   русский  velar, átona      -ий por la regla de la ы, no por la clase
+//   хороший  sibilante, átona  -ий Y la /o/ átona: хорошего, хорошем
+//   большой  sibilante, TÓNICA el MISMO tema que хороший y OCHO casillas
+//                              distintas, todas por un bit de acento
+import type { EntradaAdjetival } from './paradigma-adj-ru';
+
+export const ADJETIVOS_A1: EntradaAdjetival[] = [
+  { lema: 'новый', tema: 'duro', desinenciaTonica: false, glosa: 'nuevo',
+    nota: 'новый 732 · нового 499 · новым 272 · новое 574. La fila dura desnuda, sin velar ni sibilante que active ninguna regla ortográfica' },
+  { lema: 'молодой', tema: 'duro', desinenciaTonica: true, glosa: 'joven',
+    nota: 'молодой 1910 · молодого 492 · молодым 248. Con la desinencia TÓNICA el nominativo masculino va en -ой, y es la única casilla que cambia: молодого y нового tienen la misma desinencia porque el tema no es sibilante — la /o/ tras consonante dura no alterna. *молодый 0' },
+  { lema: 'синий', tema: 'blando', desinenciaTonica: false, glosa: 'azul (oscuro)',
+    nota: 'синий 83 · синего 40 · синим 38 · синяя 30 · синее 65. La SEGUNDA fila entera: синего y no *синого (0), синяя y no *синая. Es el único lema del lexicón que la usa, así que sin él la fila blanda no la certifica nadie' },
+  { lema: 'русский', tema: 'duro', desinenciaTonica: false, glosa: 'ruso',
+    nota: 'русский 519 · русского 397 · русским 204 · русская 355. ⚠ NO ES UNA TERCERA CLASE: es la fila dura con la regla velar, que escribe -ый como -ий y -ым como -им. Y la /o/ NO alterna, porque к no es sibilante: русского, русском, русской, igual que новый. *русскый 0' },
+  { lema: 'хороший', tema: 'duro', desinenciaTonica: false, glosa: 'bueno',
+    nota: 'хороший 649 · хорошего 415 · хорошим 141 · хорошем 89 · хорошей 125 · хорошее 342. Sibilante con la desinencia ÁTONA: activa LAS DOS reglas, la de la ы (-ий, -им) y la de la /o/ átona (-его, -ему, -ем, -ей, -ее). *хорошый 0 · *хорошой 0 · *хорошом 0' },
+  { lema: 'большой', tema: 'duro', desinenciaTonica: true, glosa: 'grande',
+    nota: '⚠ EL PAR QUE PRUEBA QUE EL ACENTO ES DATO DE LA LENGUA. Mismo tema sibilante que хороший, misma clase, y se diferencian SÓLO en `desinenciaTonica` — de donde salen ocho casillas distintas: большого 368 / хорошего 415, большому 94 / хорошему 37, большом 264 / хорошем 89, большой 1684 / хорошей 125, большое 478 / хорошее 342. Con uno solo de los dos, una regla que dijera «sibilante ⇒ siempre -его» o «⇒ siempre -ого» acertaría en todo el lexicón. *большый 0',
+    lecturaRival: { '*': '⚠ LEÍDO EL 2026-09-12, y la lectura es de LOS DOS LEMAS y no de una casilla, por eso va en la clave `*`: las DOCE casillas de большой con rival vivo (большего 54, большем 15, большей 156, большему 6, большее 59) tienen todas el mismo rival, y ese rival es el COMPARATIVO DECLINADO `бо́льший` «mayor», que es otra palabra con su propio paradigma. Leídas las apariciones una a una con `--ctx`, no hay ni una del positivo большой en caso oblicuo: «в большей чести», «с большей силой», «ещё большей помпы», «большее удовольствие», «самое большее, лет сорок». Es el homógrafo de otro lema, la salida (b) del criterio, y contar no lo separa — sólo leerlo. Escribir esta lectura doce veces, una por casilla, sería la regla copiada que falla en la copia N+1 que nadie añadió' } },
+];

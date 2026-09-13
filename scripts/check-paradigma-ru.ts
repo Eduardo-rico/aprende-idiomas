@@ -50,9 +50,14 @@ import {
   paradigmaNominal, paradigmaPresente, pasado, imperativo, prepositivoSg,
   invariantesNominales, invariantesVerbales, temaIngenuo, casillaNominal,
   variantesInstrSgFem,
-  type EntradaNominal, type EntradaVerbal, type PersonaRu,
+  type EntradaNominal, type EntradaVerbal, type PersonaRu, type CasoRu,
 } from '../lib/data/languages/ru/paradigma-ru';
-import { NOMBRES_A1, VERBOS_A1 } from '../lib/data/languages/ru/lexicon-a1';
+import {
+  casillaAdj, invariantesAdjetivales, casillasQueDiscriminanGenero,
+  FORMAS_ADJ, CASOS_ADJ, temaAdj,
+  type EntradaAdjetival, type FormaAdjetival,
+} from '../lib/data/languages/ru/paradigma-adj-ru';
+import { NOMBRES_A1, VERBOS_A1, ADJETIVOS_A1 } from '../lib/data/languages/ru/lexicon-a1';
 import { quitarAcento, revisarOrtografiaRu } from '../lib/lang/ortografia-ru';
 import { buscar, controles } from './corpus-ru';
 
@@ -228,6 +233,67 @@ function pruebasNominales(entradas: EntradaNominal[]): Prueba[] {
   return out;
 }
 
+// ══ EL ADJETIVO, Y SUS DOS RIVALES ═══════════════════════════════════
+//
+// Las dos reglas que el adjetivo puede tener mal escritas son las dos que
+// `ortografiar` resuelve, así que los rivales son las dos formas que
+// saldrían de enunciarlas a medias:
+//
+//   1. **la regla de la ы sin aplicar**: `*русскый`, `*хорошый`, `*большый`
+//      — la desinencia dura escrita tal cual tras velar o sibilante;
+//   2. **la /o/ átona sin aplicar**: `*хорошого`, `*хорошом`, `*хорошой` —
+//      la sibilante tratada como una consonante dura cualquiera. Y su
+//      simétrica, que es la que de verdad puede colarse: `*большего`,
+//      `*большем`, tratando la sibilante TÓNICA como átona.
+//
+// El segundo par es el que importa, porque `хороший` y `большой` tienen el
+// MISMO tema y se separan sólo por el acento: una regla que ignore el bit
+// acierta la mitad del lexicón.
+function rivalAdjetival(e: EntradaAdjetival, forma: FormaAdjetival, caso: CasoRu, buena: string): string | null {
+  const t = temaAdj(e);
+  const sib = /[жшщч]$/.test(t), velar = /[кгх]$/.test(t);
+  if (!sib && !velar) return null;
+  const resto = buena.slice(t.length);
+  // (1) la и que la regla velar/sibilante escribió: el rival la deja en ы.
+  if (/^и/.test(resto)) return t + 'ы' + resto.slice(1);
+  // (2) la /o/: el rival pone la del otro lado del acento.
+  if (sib && /^е/.test(resto)) return t + 'о' + resto.slice(1);
+  if (sib && /^о/.test(resto)) return t + 'е' + resto.slice(1);
+  return null;
+}
+
+function pruebasAdjetivales(entradas: EntradaAdjetival[]): Prueba[] {
+  const out: Prueba[] = [];
+  for (const e of entradas) {
+    for (const f of FORMAS_ADJ) {
+      for (const c of CASOS_ADJ) {
+        // El acusativo se pide con animacidad resuelta y NO se prueba
+        // aparte: es homógrafo del nominativo o del genitivo, así que
+        // contarlo sería contar dos veces la misma cadena y decir que hay
+        // más evidencia de la que hay.
+        if (c === 'ac') continue;
+        const forma = casillaAdj(e, f, c);
+        if (!forma) continue;
+        const p: Prueba = { lema: e.lema, celda: `${f}.${c}`, forma, n: contar(forma) };
+        const r = rivalAdjetival(e, f, c, forma);
+        // ⚠ LA CLAVE `*`: CUANDO EL RIVAL ES OTRO LEMA, LA LECTURA ES DEL
+        // PAR DE LEMAS Y NO DE LA CASILLA. `большой` tiene DOCE casillas
+        // cuyo rival es el comparativo declinado `бо́льший`, que es otra
+        // palabra: escribir la misma lectura doce veces es la regla copiada
+        // que se desincroniza en la copia N+1. La clave exacta gana sobre
+        // `*`, porque una lectura de casilla sí puede ser específica
+        // (`в лесе` lo es y `бо́льший` no).
+        if (r) {
+          p.rival = r; p.nRival = contar(r);
+          p.contaminado = e.lecturaRival?.[`${f}.${c}`] ?? e.lecturaRival?.['*'];
+        }
+        out.push(p);
+      }
+    }
+  }
+  return out;
+}
+
 function pruebasVerbales(verbos: EntradaVerbal[]): Prueba[] {
   const out: Prueba[] = [];
   for (const v of verbos) {
@@ -286,6 +352,15 @@ export const FALSAS: { forma: string; buena: string; porQue: string }[] = [
   { forma: 'врачем', buena: 'врачом', porQue: 'sibilante con la /o/ TÓNICA: va -ом' },
   { forma: 'сердцом', buena: 'сердцем', porQue: 'ц con la /o/ ÁTONA: va -ем, y ц NO entra en la regla de la ы' },
   { forma: 'тучой', buena: 'тучей', porQue: 'la misma regla en la 1.ª declinación, que usa OTRA desinencia (-ой/-ей)' },
+  // ── EL ADJETIVO (2026-09-12) ───────────────────────────────────────
+  { forma: 'русскый', buena: 'русский', porQue: 'la regla velar en el adjetivo: -ый se escribe -ий' },
+  { forma: 'хорошый', buena: 'хороший', porQue: 'ídem tras sibilante' },
+  { forma: 'хорошого', buena: 'хорошего', porQue: 'la /o/ ÁTONA tras sibilante en el adjetivo' },
+  { forma: 'хорошом', buena: 'хорошем', porQue: 'ídem, prepositivo' },
+  { forma: 'хорошой', buena: 'хорошей', porQue: 'ídem, femenino oblicuo' },
+  { forma: 'синого', buena: 'синего', porQue: 'la fila BLANDA tratada como dura' },
+  { forma: 'синым', buena: 'синим', porQue: 'ídem, instrumental' },
+  { forma: 'молодый', buena: 'молодой', porQue: 'la desinencia TÓNICA del nominativo masculino' },
 ];
 
 /** ⚠ LA FORMA FALSA QUE NINGUNO DE LOS DOS CAMINOS DE `veredicto()` PUEDE
@@ -355,13 +430,15 @@ if (/[/\\]check-paradigma-ru\.ts$/.test(process.argv[1] ?? '')) {
   if (soloControl) process.exit(fallosControl === 0 && fallosNegativo === 0 ? 0 : 1);
 
   // ── 2 · LOS INVARIANTES PROPIOS ───────────────────────────────────
-  const avisos = [...invariantesNominales(NOMBRES_A1), ...invariantesVerbales(VERBOS_A1)];
+  const avisos = [...invariantesNominales(NOMBRES_A1), ...invariantesVerbales(VERBOS_A1),
+    ...invariantesAdjetivales(ADJETIVOS_A1)];
   console.log(`── INVARIANTES: ${avisos.length} avisos ──`);
   for (const a of avisos) console.log(`  ${a.clase}\t${a.lema}\t${a.detalle}`);
   console.log();
 
   // ── 3 · EL CORPUS, FORMA A FORMA ──────────────────────────────────
-  const pruebas = [...pruebasNominales(NOMBRES_A1), ...pruebasVerbales(VERBOS_A1)];
+  const pruebas = [...pruebasNominales(NOMBRES_A1), ...pruebasVerbales(VERBOS_A1),
+    ...pruebasAdjetivales(ADJETIVOS_A1)];
   // EL SEGUNDO CHEQUEO, y es de otra naturaleza que el conteo: ¿el rival es
   // además una casilla de OTRA entrada del lexicón? Donde se puede
   // comprobar, se comprueba, en vez de esperar a que alguien lo declare.
@@ -487,6 +564,20 @@ if (/[/\\]check-paradigma-ru\.ts$/.test(process.argv[1] ?? '')) {
     }
     console.log(`  ── ${variantes.length} lemas · norma ${sn} · variante ${sv} · ${Math.round((100 * sv) / (sn + sv))} % del total\n`);
   }
+
+  // ── LA ATRIBUCIÓN DEL ADJETIVO: qué casilla puede medir el género ──
+  //
+  // No es un rojo: es el dato que un lote necesita ANTES de escribir un
+  // ítem de concordancia. Y se imprime calculado, no leído de una lista,
+  // porque las dos prosas que lo enunciaban —la del inventario y la del
+  // fichero de la máquina— nombraban cada una la mitad.
+  console.log('── ATRIBUCIÓN ADJETIVAL: en qué casillas la concordancia MIDE el género ──');
+  for (const a of ADJETIVOS_A1) {
+    const d = casillasQueDiscriminanGenero(a);
+    console.log(`  ${a.lema}\tdiscriminan los tres géneros: ${d.join(', ')}   (de 6 casos del singular)`);
+  }
+  console.log('  el PLURAL no discrimina en ninguno de los 6: un ítem de concordancia en plural');
+  console.log('  no mide género JAMÁS. Y gen/dat/instr/prep son m=n en los 6 lemas.\n');
 
   const rojo = fallosControl > 0 || fallosNegativo > 0 || perdidas.length > 0 || conYo.length > 0
     || avisos.some((a) => a.clase.startsWith('ortografia') || CLASES_ROJAS.includes(a.clase));
