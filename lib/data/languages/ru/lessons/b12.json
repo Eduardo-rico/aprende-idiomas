@@ -1,0 +1,51 @@
+[
+  {
+    "id": "b12-l1-participios-gerundios",
+    "blockId": 12,
+    "name": "Participios y gerundios: reconocerlos, formarlos y la restricción de sujeto",
+    "objectives": [
+      "El ruso escrito está lleno de participios y sin ellos no se lee prensa: читающий («el que lee»), читавший («el que leía»), читаемый («que es leído»), прочитанный («leído»). En la biblioteca aparecen y no son raros (читавший 9, читающий 5). La mitad pasiva la traes hecha de tus dos lenguas —«el libro leído», «o livro lido»— y el portugués te da además el hábito de que el participio sea una forma con vida propia, con sus dobletes (aceite / aceitado, entregue / entregado). Lo que NO tienes en ninguna de las dos es el participio ACTIVO: читающий no tiene traducción de una palabra, y lo vas a leer como si fuera un adjetivo. En B1 basta con reconocerlos: dada la forma, saber de qué verbo sale y qué relación expresa.",
+      "Formarlos es lo de B2, y la regla que hay que aprender es aspectual y no léxica: el participio pasivo de PRESENTE sólo se hace desde imperfectivos transitivos, y el pasivo de PASADO sólo desde perfectivos. Aquí no traes nada, porque ni el español ni el portugués condicionan la formación del participio al aspecto: no tienen aspecto morfológico. La frontera del punto es justamente pedirle a un verbo perfectivo un participio pasivo de presente, que no existe, y ese es el error que la regla a medias produce.",
+      "El gerundio ruso tiene dos formas, читая (109) para lo imperfectivo y прочитав (53) para lo perfectivo, y las dos las reconoces sin esfuerzo: son «leyendo» y «habiendo leído». Lo que no transfiere, y es el mejor error diana de este bloque, es la restricción de SUJETO: el gerundio ruso exige que su sujeto sea el mismo que el de la oración principal. En español el gerundio colgado se usa todos los días aunque las gramáticas lo condenen; en ruso es agramatical y hay norma que lo dice. Por eso este punto se examina corrigiendo, y el ejercicio te da la forma del gerundio ya hecha: lo que se mide es el sujeto, no la morfología."
+    ],
+    "conceptIds": [
+      "u12-participios-reconocimiento",
+      "u12-participios-produccion",
+      "u12-gerundios"
+    ],
+    "vocabKey": [
+      "читать",
+      "прочитать",
+      "читающий",
+      "прочитанный",
+      "читая",
+      "прочитав"
+    ],
+    "conceptNotesPath": "b12/l1-participios-gerundios.mdx",
+    "exerciseRefs": []
+  },
+  {
+    "id": "b12-l2-pasiva-nominalizacion",
+    "blockId": 12,
+    "name": "Voz y registro: дом строится frente a дом построен, y la nominalización",
+    "objectives": [
+      "Las dos construcciones pasivas del ruso las tienes ya en tus dos lenguas: дом строится (5) es «la casa se construye» y дом построен (построен 16) es «la casa está construida». Incluso el reparto lo haces casi bien por intuición. Lo que no traes, y es todo el contenido de este punto, es que aquí no lo decide ser frente a estar: lo decide el ASPECTO. La pasiva con -ся es imperfectiva y el participio pasivo corto es perfectivo, y eso es una regla de morfología, no una elección de estilo.",
+      "Por eso este punto tiene pocos ejercicios y a propósito: si te repartieran las frases entre proceso y resultado, las acertarías todas traduciendo, y lo que quedaría medido sería tu español. Las casillas que se practican son las contadas en que el atajo de ser y estar da la respuesta equivocada.",
+      "La nominalización —строительство дома en lugar de то, что строят дом— no es una opción de estilo en ruso: es lo que separa la lengua escrita de la hablada. Y aquí transfiere muchísimo: «la construcción del edificio» es prosa administrativa en español igual que en ruso, el portugués administrativo va aún más lejos, y el estrato internacional te regala los sufijos (-ция por -ción, -ство por -dad). Lo que este punto mide no es que la nominalización exista, que ya lo sabes, sino qué sufijo toma cada verbo, y eso se trabaja con la derivación del bloque 13. Aquí lo que se practica es subir y bajar de registro: la misma idea dicha como oración y dicha como sintagma nominal.",
+      "Y un enlace que conviene tener a mano desde ya: el nombre derivado se lleva consigo el régimen del verbo del que sale. En cuanto empieces a nominalizar vas a necesitar el bloque 10 entero, porque cada sustantivo nuevo trae su caso puesto."
+    ],
+    "conceptIds": [
+      "u12-pasiva-sya-vs-participio",
+      "u12-nominalizacion"
+    ],
+    "vocabKey": [
+      "строить",
+      "строиться",
+      "построить",
+      "дом",
+      "строительство"
+    ],
+    "conceptNotesPath": "b12/l2-pasiva-nominalizacion.mdx",
+    "exerciseRefs": []
+  }
+]

@@ -70,12 +70,31 @@ describe("empty scaffolds (Phase 5)", () => {
         expect(conFichero.length).toBeGreaterThan(0);   // si no, el test no mira nada
         expect(c.BLOCKS.map((b) => b.id)).toEqual(conFichero);
         for (const id of conFichero) expect(c.getBlock(id).lessons.length).toBeGreaterThan(0);
-        // Y su CONTROL NEGATIVO: un bloque del inventario que NO tiene fichero
-        // tiene que seguir tirando. Sin esto, declararlos todos pasaría igual.
-        const sinFichero = c.ALL_CONCEPTS.map((x) => x.blockId).filter((id) => !conFichero.includes(id));
-        expect(sinFichero.length).toBeGreaterThan(0);
-        expect(() => c.getBlock(sinFichero[0]!)).toThrow();
-        expect(() => c.getBlock(1)).toThrow();
+        // Y su CONTROL NEGATIVO: un bloque SIN fichero tiene que seguir
+        // tirando. Sin él, declararlos todos pasaría igual.
+        //
+        // ⚠ 2026-09-13: ese control se apagó solo al entrar la ÚLTIMA lección.
+        // Estaba escrito sobre «un bloque del inventario que no tiene fichero»
+        // y exigía `sinFichero.length > 0`; con los 15 bloques ya declarados esa
+        // lista es VACÍA y el test se puso rojo sin que nada estuviera mal —el
+        // §34(2) de este mismo fichero, una expresión correcta con un solo caso
+        // delante, esta vez en su forma terminal: el conjunto sobre el que
+        // medía se agotó—. El arreglo NO es borrar el control, que dejaría la
+        // biyección de arriba sin su mitad negativa: es colgarlo de un id que
+        // NO PUEDE tener fichero nunca, o sea uno fuera del inventario. Así el
+        // control sigue vivo cuando ya no queda ningún bloque sin declarar.
+        const idsInventario = [...new Set(c.ALL_CONCEPTS.map((x) => x.blockId))];
+        const inexistente = Math.max(...idsInventario) + 1;
+        expect(conFichero).not.toContain(inexistente);
+        expect(() => c.getBlock(inexistente)).toThrow();
+        // Y la otra mitad del control, que es la que de verdad se perdió: los
+        // bloques del inventario que NO tienen fichero (hoy ninguno) tampoco
+        // pueden estar en BLOCKS. Es la biyección leída en la otra dirección.
+        const sinFichero = idsInventario.filter((id) => !conFichero.includes(id));
+        for (const id of sinFichero) expect(() => c.getBlock(id)).toThrow();
+        // El bloque 1 ya tiene lección desde el 2026-09-13, así que aquí se
+        // comprueba lo contrario de lo que decía este test hasta hoy.
+        expect(c.getBlock(1).lessons.length).toBeGreaterThan(0);
         // Y que `getConceptsByIds` filtre de verdad y no devuelva [] como
         // el stub: un loader que siempre devuelve vacío es indistinguible
         // de uno roto.

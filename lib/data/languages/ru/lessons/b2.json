@@ -1,0 +1,61 @@
+[
+  {
+    "id": "b2-l1-palatalizacion-reduccion-acento",
+    "blockId": 2,
+    "name": "Fonología I: dura y blanda, cómo se escribe la blandura, reducción y acento",
+    "objectives": [
+      "La oposición entre consonante dura y consonante blanda es el eje del sistema fonológico ruso, y distingue palabras: мать (2550) no es мат (7), брать (316) no es брат (2817), рёв (12) no es ров (20), бил (222) no es был (21399). Parte de esta oposición la traes hecha y conviene contarla antes de darla por difícil: el español tiene la ñ y el portugués tiene nh y lh, o sea dos consonantes palatales productivas, y eso te da casi resuelto el par н/нь y el par л/ль. Lo que no te da ninguna de las dos lenguas es т/ть, д/дь, с/сь, з/зь ni р/рь, que es el resto del sistema, y ahí es donde se trabaja.",
+      "La blandura no se escribe en la consonante: se escribe en la vocal que viene después, o con ь. Los cinco pares de vocales son а/я, о/ё, у/ю, э/е y ы/и, y la lógica es al revés de la que traes: para escribir una consonante blanda hay que mirar lo que va detrás. Y aquí la interferencia empuja en contra, no a favor, porque la ñ, la nh y la lh marcan la palatal EN la consonante. Aparte quedan las letras sin pareja: ж, ш y ц no tienen versión blanda, y ч, щ y й no tienen versión dura, así que en ellas la vocal que se escriba no informa de nada y se decide por la regla ortográfica del bloque anterior.",
+      "La vocal átona rusa no se pronuncia como se escribe: la о átona se abre hacia [ɐ]/[ə] y la е y la я átonas se cierran hacia [ɪ]. Lo que esto te rompe no es la pronunciación, es el reconocimiento: oyes молоко (155), хорошо (5340), язык (543) o сегодня (2581) y no encuentras las vocales que esperabas. Y aquí el portugués paga mucho, más de lo que suele decirse: un hablante de portugués europeo ya sabe que la vocal átona se desdibuja hasta casi caerse. Lo que no transfiere es la DIRECCIÓN, porque el portugués cierra (o → u) y el ruso abre (о → [ɐ]). Ese es el contenido real de este punto: no que exista reducción, sino hacia dónde va.",
+      "El acento ruso es fonemático —distingue palabras— y no se escribe. за́мок y замо́к son dos palabras y la biblioteca escribe las dos igual, 187 veces, sin decirte cuál; lo mismo con мука (88), que es «harina» o «tormento» según dónde caiga, y con писать (764). Que un acento pueda cambiar la palabra ya lo sabes de «ánimo / animo / animó» y de «público / publico / publicó»; lo que es nuevo es que la posición no se marque nunca ni se derive de ninguna regla, y que haya que aprenderla palabra por palabra. Medido sobre las 2.180 lecturas: el signo de acento agudo aparece 0 veces, con el control de que la misma consulta encuentra 43.048 letras ё, así que el cero no es una búsqueda rota. Cuando esta app pinta el acento es una ayuda de presentación.",
+      "Por eso dos de los puntos de este bloque no traen ejercicios y va dicho en vez de disimulado: la respuesta de un ejercicio de acento es una POSICIÓN dentro de la palabra, y este curso no tiene ese formato. Convertirlo en un cloze de la palabra entera mediría vocabulario, no acento. Lo que sí puedes hacer desde hoy es pronunciar con el acento que la app te pinta, porque de él depende toda la reducción del párrafo anterior: un acento mal puesto no deforma una sílaba, deforma la palabra entera."
+    ],
+    "conceptIds": [
+      "u2-palatalizacion",
+      "u2-palatalizacion-escrita",
+      "u2-reduccion-atona",
+      "u2-acento-fonemico"
+    ],
+    "vocabKey": [
+      "мать",
+      "брат",
+      "молоко",
+      "хорошо",
+      "язык",
+      "сегодня",
+      "замок"
+    ],
+    "conceptNotesPath": "b2/l1-palatalizacion-reduccion-acento.mdx",
+    "exerciseRefs": []
+  },
+  {
+    "id": "b2-l2-ensordecimiento-grupos-entonacion-habla",
+    "blockId": 2,
+    "name": "Fonología II: ensordecimiento, grupos iniciales, entonación y habla real",
+    "objectives": [
+      "La consonante sonora final se ensordece y dentro del grupo la asimilación va hacia atrás: друг (3725) se dice con [k] al final y город (1414) con [t]. El mecanismo lo traes entero de tus dos lenguas y conviene no cobrártelo: el español asimila la sonoridad hacia atrás de forma obligatoria en «mismo», «desde» y «rasgo», el portugués sonoriza la s final ante sonora en «as casas», y el español de México ensordece la consonante final de «usted», «verdad» y «Madrid». Lo que queda por aprender es el inventario —qué consonantes rusas entran en el juego y con qué resultado— y el hecho de que la escritura no lo refleje, o sea que vas a oír [druk] y a buscar una palabra que acabe en к.",
+      "El ruso admite grupos de consonantes al principio de palabra que ni el español ni el portugués permiten: встреча (99), взгляд (1238), мгновение (799). Las dos lenguas empujan igual y en la misma dirección equivocada, porque las dos insertan una е de apoyo ante grupo con s («estructura», «Espanha»), y el error es que se cuela sin que te des cuenta. Es de los pocos sitios donde tener portugués no ayuda ni un poco. Y es un error puramente oral: no deja rastro al escribir, así que este punto no lleva ejercicios en este curso y queda declarado como lo que es, trabajo de pronunciación.",
+      "La entonación rusa está descrita en cinco construcciones (ИК-1 a ИК-5, de Bryzgunova) y la que decide de verdad es la ИК-3, la de la pregunta sin palabra interrogativa. Que una frase pueda ser pregunta sin nada más que la curva ya lo sabes: «¿Vienes?» y «Vens?» son exactamente Ты идёшь?. Lo nuevo es la forma de la curva, que en ruso sube brusco en la sílaba tónica y cae, frente al ascenso sostenido del español. Este punto se examina de oído y hoy no tiene ejercicios, por una razón que conviene saber: haría falta una voz que realice de verdad la ИК-3, y una que leyera la frase como afirmación fabricaría un ejercicio cuya respuesta correcta sería falsa.",
+      "El habla real transforma las palabras que ya sabes, y no en casos excepcionales: что (132.218 apariciones) se dice [ʂto], сегодня (2581) dice su г como [v] y конечно (2835) se dice con [ʂ]. Y en la conversación se añade la elisión coloquial —щас, чё, тыща, здрасьте, сёдня—, que hace irreconocible léxico conocido. Un aviso sobre el material: la biblioteca de esta app es prosa escrita, así que esas formas casi no aparecen en ella (щас 0, чё 1, тыща 2) y eso no dice nada sobre el habla, sólo sobre el soporte. Este punto necesita grabaciones de habla espontánea, no una voz sintética leyendo «щас», que sería una falsificación.",
+      "Y el acento, que en el bloque anterior era una posición fija por palabra, se MUEVE dentro del paradigma: голова 1439, голову 4332, голов 102, головы 1166; рука 541, руку 4776, рук 833; нога 192, ногу 690, ног 681. No es una excepción de unos cuantos lemas, es una propiedad del paradigma, y está clasificada en los esquemas acentuales de Zaliznyak. Que el acento se mueva dentro de un paradigma no es nuevo para ti —«canto / cantó», «régimen / regímenes», «carácter / caracteres» hacen lo mismo—; lo nuevo es que se mueva sin ninguna marca escrita y sin regla que lo prediga desde el nominativo. Como el punto anterior, hoy no lleva ejercicios por el mismo motivo de formato."
+    ],
+    "conceptIds": [
+      "u2-ensordecimiento",
+      "u2-grupos-iniciales",
+      "u2-entonacion-ik",
+      "u2-habla-conectada",
+      "u2-acento-movil"
+    ],
+    "vocabKey": [
+      "друг",
+      "город",
+      "взгляд",
+      "что",
+      "конечно",
+      "голова",
+      "рука"
+    ],
+    "conceptNotesPath": "b2/l2-ensordecimiento-grupos-entonacion-habla.mdx",
+    "exerciseRefs": []
+  }
+]
