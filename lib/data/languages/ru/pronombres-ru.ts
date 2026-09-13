@@ -254,7 +254,10 @@ export type LemaDeterminante = 'этот' | 'тот' | 'кто' | 'что' | 'к
 
 type TablaDet = Partial<Record<`${FormaAdjetival}.${CasoRu}`, string>>;
 
-export const DETERMINANTES: Record<LemaDeterminante, { tabla: TablaDet; glosa: string; nota?: string }> = {
+export const DETERMINANTES: Record<
+  LemaDeterminante,
+  { tabla: TablaDet; glosa: string; nota?: string; lecturaYo?: Record<string, string> }
+> = {
   'этот': {
     glosa: 'este, ese',
     nota: 'этот 7492 · этого 8912 · этому 1637 · этим 2693 · этом 5957 · эта 3733 · эту 3996 · этой 3948 · это 49469 · эти 5433 · этих 2643 · этими 495. ⚠ `этим` y no *этым: la declinación pronominal no pasa por la regla velar/sibilante, porque no hay velar ni sibilante — es OTRA declinación. Y `это` 49469 no es sólo el neutro: es el demostrativo-sujeto («это книга»), un homógrafo masivo de su propia casilla',
@@ -283,6 +286,7 @@ export const DETERMINANTES: Record<LemaDeterminante, { tabla: TablaDet; glosa: s
   'что': {
     glosa: 'qué',
     nota: 'что 132218 · чего 6689 · чему 1403 · чем 9809 · чём 10110. ⚠ `что` es la palabra más frecuente del corpus y casi nunca es el interrogativo: es la conjunción «que». Contar `что` no mide esta casilla, y por eso el punto no puede justificarse contando. Y `чем` es instrumental Y la conjunción comparativa',
+    lecturaYo: { 'n.instr': '⚠ LEÍDO EL 2026-09-12, y lo cazó el barrido de la ё la PRIMERA VEZ que se le enseñaron los pronombres. `чём` está atestado 301 veces contando SIN fundir la ё, y NO es una variante del instrumental: es el PREPOSITIVO del mismo lema («о чём», «в чём», «ни в чём»), que esta misma tabla guarda aparte. Es la lectura (b) del criterio, otra casilla del mismo lema. Y lo que se lleva es más grande que la lectura: **éste es el único sitio del paradigma pronominal donde la ё no es una variante de edición sino la MARCA DEL CASO** — `чем` instrumental frente a `чём` prepositivo se distinguen sólo por ella. Como el corpus es bimodal por edición y 1.295 lecturas no escriben la ё nunca, en la mayoría de los textos que el alumno lee las dos casillas son la MISMA cadena. Consecuencia: ningún ítem puede pedir ese contraste a partir de un texto sin ё, y la ё tampoco puede ser la pista (es propiedad de la edición). El par vive en la LECCIÓN, no en un hueco' },
     tabla: { 'n.nom': 'что', 'n.ac': 'что', 'n.gen': 'чего', 'n.dat': 'чему', 'n.instr': 'чем', 'n.prep': 'чём' },
   },
   'какой': {

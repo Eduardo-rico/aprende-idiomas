@@ -30,6 +30,44 @@
 // sale de aquí no es «el punto está mal», es «el alumno va a leer la otra
 // forma, y si la lección no se lo dice, la inmersión desenseña el punto».
 //
+// ══ ⚠ EL LÍMITE ESTRUCTURAL DE LA RAMA DEL PATRÓN, MEDIDO EL 2026-09-12
+// ══ Y DECLARADO EN VEZ DE DISIMULADO ═════════════════════════════════
+//
+// La primera corrida de este gate anunció **9 choques**, y leídos uno a uno
+// **ocho eran falsos**. El único real es `u10-sintagma-numeral-adjetivo`, que
+// es el caso desde el que se escribió el gate.
+//
+// Un gate que marca ocho de nueve por ruido es un gate APAGADO: nadie lee su
+// salida. Y la causa no es un umbral mal puesto, es estructural, así que va
+// escrita entera:
+//
+// **Abstraer el LEXEMA convierte la comparación de dos formas de UN lema en
+// la comparación de dos CLASES de lema**, que es exactamente el defecto que
+// el gate del paradigma tuvo que arreglar («comparar dos cadenas no es
+// comparar dos hipótesis sobre el mismo lema»). En `вижу столы` el gate
+// sustituye la desinencia de `вижу` y de `столы` y compara
+// `вижу \p{L}+ы` 5 contra `вижу \p{L}+и` 24 — pero ese 24 no es `столы`
+// escrito de otra manera: son OTROS sustantivos, los de tema blando o velar,
+// que sólo pueden tomar `-и`. El número es verdadero y mide la distribución
+// de las clases nominales, no un choque de normas.
+//
+// En `два новых дома` sí vale, y la condición que lo hace válido se puede
+// escribir: **la casilla que varía tiene que admitir las DOS desinencias para
+// el MISMO lexema.** El adjetivo tras `два` la cumple (todo adjetivo puede ir
+// en `-ых` o en `-ые` ahí, y de eso va el punto); un sustantivo no la cumple
+// nunca.
+//
+// Acotado el 2026-09-12 con DOS filtros estructurales, ninguno un umbral:
+//   1. si el patrón ENSEÑADO da cero, no hay nada que contradecir;
+//   2. **la palabra sustituida tiene que ser una palabra rusa** — `вижу` →
+//      `виже` no existe, así que el patrón contaba palabras ajenas.
+// Los dos juntos bajan de **9 candidatos a 1**, y el que queda es el único
+// que la lectura confirmó. La condición fuerte —que la casilla admita las dos
+// desinencias para el mismo lexema— sigue SIN implementar: haría falta sacar
+// del corpus todas las palabras que casan cada patrón e intersecar sus temas,
+// y eso pide una búsqueda que devuelva todas las coincidencias y no doce.
+// Mientras no esté, lo que el gate imprime son CANDIDATOS.
+//
 // ══ ESTE GATE NO DECIDE NADA, Y ESO ES DELIBERADO ════════════════════
 //
 // Imprime «el punto enseña X y la biblioteca trae Y, n veces». El juicio lo
@@ -172,6 +210,29 @@ export function barrer(): { choques: Choque[]; medidos: number; puntosConEjemplo
             const pRiv = conPatron(i, r.a);
             const nPE = buscar(pEns).n;
             const nPR = buscar(pRiv).n;
+            // ⚠ Y EL FILTRO QUE FALTABA, MEDIDO EL 2026-09-12: **si el
+            // patrón que el punto ENSEÑA no aparece en la biblioteca, no hay
+            // nada que el corpus pueda contradecir.** Es la asimetría de
+            // siempre —la PRESENCIA prueba, la ausencia no— aplicada al lado
+            // que nadie mira: un choque exige que la forma enseñada esté
+            // atestada, o lo que se compara es «lo que el punto enseña y
+            // nadie escribe» contra «otra cosa cualquiera». Sin este filtro
+            // el gate daba 9 choques y CUATRO tenían el lado enseñado a cero.
+            if (nPE === 0) continue;
+            // ⚠ Y EL SEGUNDO FILTRO ESTRUCTURAL, QUE ES EL QUE MATA EL RUIDO
+            // DE VERDAD: **la palabra sustituida tiene que ser una palabra
+            // rusa.** En `вижу студента` el gate sustituía la desinencia del
+            // VERBO y producía `виже`, que no existe (0 apariciones); el
+            // patrón `\p{L}+е студента` contaba entonces palabras que no
+            // tienen nada que ver (3, ninguna una forma de `видеть`). En el
+            // caso legítimo la sustituida sí es una palabra: `новых` → `новые`
+            // 598. No es un umbral: es la asimetría de la presencia aplicada
+            // al rival — si la forma rival no existe, no hay forma que
+            // compita y no hay choque que leer.
+            //
+            // Con los dos filtros: 9 candidatos → 1, y el que queda es el
+            // único que la lectura confirmó.
+            if (buscar(alt[i]!).n === 0) continue;
             if (nPR > 0 && nPR >= nPE * 0.5) {
               choques.push({
                 punto: p.id, ensena: `${e}   [patrón ${pEns}]`, nEnsena: nPE,
@@ -203,7 +264,13 @@ if (/[/\\]check-norma-vs-corpus-ru\.ts$/.test(process.argv[1] ?? '')) {
     console.log('Ningún choque. Y eso también es información: significa que, de lo que');
     console.log('el inventario escribe en cirílico, la biblioteca no contradice nada más.');
   } else {
-    console.log(`── ${choques.length} CHOQUES: el punto enseña una forma y la biblioteca trae otra ──`);
+    console.log(`── ${choques.length} CANDIDATOS a choque: el punto enseña una forma y la biblioteca trae otra ──`);
+    console.log('   ⚠ CANDIDATOS Y NO HALLAZGOS, y la cifra que lo dice está medida: la primera');
+    console.log('   corrida dio 9 y OCHO eran falsos; con los dos filtros estructurales queda 1.');
+    console.log('   La rama del patrón compara dos CLASES de');
+    console.log('   lema y no dos formas del mismo, y eso no lo arregla un umbral. Ver la');
+    console.log('   cabecera: sólo vale donde la casilla que varía admite las dos desinencias');
+    console.log('   para el MISMO lexema, y eso está sin implementar.');
     console.log('   Esto NO decide nada. Un rival que gana hay que LEERLO —`corpus-ru.ts --ctx`—');
     console.log('   porque contar no separa una forma que compite de un homógrafo de otro lema.\n');
     for (const x of choques) {

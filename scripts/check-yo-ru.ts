@@ -46,7 +46,12 @@
 // salida las manda a leer y el juicio va al lexicón, nunca a un comentario.
 import { candidatasConYo } from './check-paradigma-ru';
 import { controles } from './corpus-ru';
-import { NOMBRES_A1, VERBOS_A1 } from '../lib/data/languages/ru/lexicon-a1';
+import { NOMBRES_A1, VERBOS_A1, ADJETIVOS_A1 } from '../lib/data/languages/ru/lexicon-a1';
+import { casillaAdj, FORMAS_ADJ, CASOS_ADJ } from '../lib/data/languages/ru/paradigma-adj-ru';
+import {
+  PERSONALES, pronombre, POSESIVOS, casillaPosesiva, DETERMINANTES,
+  type PersonaPron,
+} from '../lib/data/languages/ru/pronombres-ru';
 import { PUNTOS_RU } from '../lib/data/languages/ru/inventario-puntos';
 import {
   paradigmaNominal, paradigmaPresente, pasado, imperativo, prepositivoSg,
@@ -78,6 +83,41 @@ export function datoRusoPublicado(): { fuente: string; donde: string; forma: str
     const imp = imperativo(v);
     if (imp) out.push({ fuente: 'paradigma', donde: `${v.lema} imperativo`, forma: imp, leido: v.lecturaYo?.imperativo });
   }
+
+  // ⚠ 1bis · EL ADJETIVO Y EL PRONOMBRE, AÑADIDOS EL 2026-09-12 Y POR UNA
+  //     RAZÓN QUE VALE MÁS QUE LAS FORMAS: **este barrido no los miraba, y
+  //     su cero habría seguido saliendo verde.** Es la tercera vez en el
+  //     proyecto que añadir una máquina desprotege un invariante en
+  //     silencio (en rumano fue `cuarentena.test.ts`, que miraba sólo
+  //     `pt/blocks`). El instrumento no falla: mide menos y devuelve el
+  //     mismo cero. Y aquí importaba de verdad, porque los posesivos y el
+  //     prepositivo del personal son justo donde vive la ё del idioma:
+  //     `моём`, `твоё`, `нём`, `моё`.
+  //
+  //     La regla que hay que aplicar al entrar en una máquina nueva: no
+  //     preguntes qué invariantes EXISTEN, comprueba qué invariantes la
+  //     MIRAN.
+  for (const e of ADJETIVOS_A1)
+    for (const f of FORMAS_ADJ)
+      for (const c of CASOS_ADJ) {
+        const forma = casillaAdj(e, f, c, { animado: false });
+        if (forma) out.push({ fuente: 'adjetivo', donde: `${e.lema} ${f}.${c}`, forma, leido: e.lecturaYo?.[`${f}.${c}`] });
+      }
+  for (const per of Object.keys(PERSONALES) as PersonaPron[])
+    for (const c of ['nom', 'ac', 'gen', 'dat', 'instr', 'prep'] as const)
+      for (const trasPreposicion of [false, true]) {
+        const forma = pronombre(per, c, { trasPreposicion });
+        if (forma) out.push({ fuente: 'pronombre', donde: `${per} ${c}${trasPreposicion ? '+prep' : ''}`, forma });
+      }
+  for (const e of POSESIVOS)
+    for (const f of FORMAS_ADJ)
+      for (const c of CASOS_ADJ) {
+        const forma = casillaPosesiva(e, f, c, { animado: false });
+        if (forma) out.push({ fuente: 'posesivo', donde: `${e.lema} ${f}.${c}`, forma });
+      }
+  for (const [lema, d] of Object.entries(DETERMINANTES))
+    for (const [celda, forma] of Object.entries(d.tabla))
+      out.push({ fuente: 'determinante', donde: `${lema} ${celda}`, forma: forma!, leido: d.lecturaYo?.[celda] });
 
   // 2 · los campos guardados del lexicón. No son redundantes con (1): un
   //     campo puede estar mal y no llegar a ninguna casilla generada.
@@ -158,7 +198,7 @@ if (/[/\\]check-yo-ru\.ts$/.test(process.argv[1] ?? '')) {
 
   const { senales, leidas, medidas } = barrerYo();
   console.log(`── BARRIDO DE LA Ё SOBRE TODO EL DATO RUSO PUBLICADO ──`);
-  console.log(`   cadenas medidas: ${medidas}  (paradigma + lexicón + prosa de los 93 puntos)`);
+  console.log(`   cadenas medidas: ${medidas}  (nombre, verbo, adjetivo, pronombre, lexicón y prosa de los 93 puntos)`);
   console.log(`   señales con lectura escrita: ${leidas.length}`);
   console.log(`   señales SIN leer: ${senales.length}\n`);
 
