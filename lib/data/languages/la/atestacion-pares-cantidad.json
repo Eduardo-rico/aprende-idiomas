@@ -1,0 +1,991 @@
+{
+ "generado": "2026-09-13",
+ "comoSeCuenta": "por LEMA más RASGOS del treebank, no por cadena: el corpus no lleva mácrones y buscar la cadena devuelve el mismo número para los dos miembros del par",
+ "pares": 61,
+ "miembrosConCuenta": 107,
+ "miembrosSinMapear": 16,
+ "paresConUnMiembroACero": 18,
+ "lista": {
+  "agricola": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "agricola",
+     "clave": "agricola.nom.sg",
+     "n": 1
+    },
+    {
+     "forma": "agricolā",
+     "clave": "agricola.abl.sg",
+     "n": 0
+    }
+   ]
+  },
+  "amica": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "amīca",
+     "clave": "amīca.nom.sg",
+     "n": 0
+    },
+    {
+     "forma": "amīcā",
+     "clave": "amīca.abl.sg",
+     "n": 0
+    }
+   ]
+  },
+  "anxia": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "anxia",
+     "clave": "anxius.f.nom.sg",
+     "n": 0
+    },
+    {
+     "forma": "anxiā",
+     "clave": "anxius.f.abl.sg",
+     "n": 0
+    }
+   ]
+  },
+  "aqua": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "aqua",
+     "clave": "aqua.nom.sg",
+     "n": 14
+    },
+    {
+     "forma": "aquā",
+     "clave": "aqua.abl.sg",
+     "n": 35
+    }
+   ]
+  },
+  "bona": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "bona",
+     "clave": "bonus.f.nom.sg",
+     "n": 7
+    },
+    {
+     "forma": "bonā",
+     "clave": "bonus.f.abl.sg",
+     "n": 6
+    }
+   ]
+  },
+  "caderis": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "caderis",
+     "clave": "cadō.pas.presente.2sg",
+     "n": null
+    },
+    {
+     "forma": "cadēris",
+     "clave": "cadō.pas.futuro.2sg",
+     "n": null
+    }
+   ]
+  },
+  "causa": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "causa",
+     "clave": "causa.nom.sg",
+     "n": 28
+    },
+    {
+     "forma": "causā",
+     "clave": "causa.abl.sg",
+     "n": 129
+    }
+   ]
+  },
+  "certa": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "certa",
+     "clave": "certus.f.nom.sg",
+     "n": 3
+    },
+    {
+     "forma": "certā",
+     "clave": "certus.f.abl.sg",
+     "n": 1
+    }
+   ]
+  },
+  "cura": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "cūra",
+     "clave": "cūra.nom.sg",
+     "n": 15
+    },
+    {
+     "forma": "cūrā",
+     "clave": "cūra.abl.sg",
+     "n": 17
+    }
+   ]
+  },
+  "diceris": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "dīceris",
+     "clave": "dīcō.pas.presente.2sg",
+     "n": null
+    },
+    {
+     "forma": "dīcēris",
+     "clave": "dīcō.pas.futuro.2sg",
+     "n": null
+    }
+   ]
+  },
+  "domina": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "domina",
+     "clave": "domina.nom.sg",
+     "n": 0
+    },
+    {
+     "forma": "dominā",
+     "clave": "domina.abl.sg",
+     "n": 2
+    }
+   ]
+  },
+  "domus": {
+   "tipo": "morfologico",
+   "vocal": "u",
+   "miembros": [
+    {
+     "forma": "domus",
+     "clave": "domus.nom.sg",
+     "n": 38
+    },
+    {
+     "forma": "domūs",
+     "clave": "domus.gen.sg",
+     "n": 9
+    }
+   ]
+  },
+  "duceris": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "dūceris",
+     "clave": "dūcō.pas.presente.2sg",
+     "n": null
+    },
+    {
+     "forma": "dūcēris",
+     "clave": "dūcō.pas.futuro.2sg",
+     "n": null
+    }
+   ]
+  },
+  "ea": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "ea",
+     "clave": "is.f.nom.sg",
+     "n": 55
+    },
+    {
+     "forma": "eā",
+     "clave": "is.f.abl.sg",
+     "n": 98
+    }
+   ]
+  },
+  "exercitus": {
+   "tipo": "morfologico",
+   "vocal": "u",
+   "miembros": [
+    {
+     "forma": "exercitus",
+     "clave": "exercitus.nom.sg",
+     "n": 6
+    },
+    {
+     "forma": "exercitūs",
+     "clave": "exercitus.gen.sg",
+     "n": 17
+    }
+   ]
+  },
+  "filia": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "fīlia",
+     "clave": "fīlia.nom.sg",
+     "n": 15
+    },
+    {
+     "forma": "fīliā",
+     "clave": "fīlia.abl.sg",
+     "n": 3
+    }
+   ]
+  },
+  "fructus": {
+   "tipo": "morfologico",
+   "vocal": "u",
+   "miembros": [
+    {
+     "forma": "frūctus",
+     "clave": "frūctus.nom.sg",
+     "n": 6
+    },
+    {
+     "forma": "frūctūs",
+     "clave": "frūctus.gen.sg",
+     "n": 2
+    }
+   ]
+  },
+  "hoc": {
+   "tipo": "morfologico",
+   "vocal": "o",
+   "miembros": [
+    {
+     "forma": "hōc",
+     "clave": "hic.m.abl.sg",
+     "n": 236
+    },
+    {
+     "forma": "hoc",
+     "clave": "hic.n.nom.sg",
+     "n": 143
+    }
+   ]
+  },
+  "illa": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "illa",
+     "clave": "ille.f.nom.sg",
+     "n": 84
+    },
+    {
+     "forma": "illā",
+     "clave": "ille.f.abl.sg",
+     "n": 73
+    }
+   ]
+  },
+  "integra": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "integra",
+     "clave": "integer.f.nom.sg",
+     "n": 3
+    },
+    {
+     "forma": "integrā",
+     "clave": "integer.f.abl.sg",
+     "n": 1
+    }
+   ]
+  },
+  "inveni": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "invēnī",
+     "clave": "inveniō.perfecto.1sg",
+     "n": 10
+    },
+    {
+     "forma": "invenī",
+     "clave": "inveniō.imp.sg",
+     "n": null
+    }
+   ]
+  },
+  "invenimus": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "invenīmus",
+     "clave": "inveniō.presente.1pl",
+     "n": 2
+    },
+    {
+     "forma": "invēnimus",
+     "clave": "inveniō.perfecto.1pl",
+     "n": 5
+    }
+   ]
+  },
+  "invenit": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "invenit",
+     "clave": "inveniō.presente.3sg",
+     "n": 10
+    },
+    {
+     "forma": "invēnit",
+     "clave": "inveniō.perfecto.3sg",
+     "n": 26
+    }
+   ]
+  },
+  "ipsa": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "ipsa",
+     "clave": "ipse.f.nom.sg",
+     "n": 36
+    },
+    {
+     "forma": "ipsā",
+     "clave": "ipse.f.abl.sg",
+     "n": 14
+    }
+   ]
+  },
+  "ira": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "īra",
+     "clave": "īra.nom.sg",
+     "n": 14
+    },
+    {
+     "forma": "īrā",
+     "clave": "īra.abl.sg",
+     "n": 15
+    }
+   ]
+  },
+  "is": {
+   "tipo": "lexico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "īs",
+     "clave": "eō.presente.2sg",
+     "n": 0
+    },
+    {
+     "forma": "is",
+     "clave": "is.m.nom.sg",
+     "n": 72
+    }
+   ]
+  },
+  "ista": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "ista",
+     "clave": "iste.f.nom.sg",
+     "n": 19
+    },
+    {
+     "forma": "istā",
+     "clave": "iste.f.abl.sg",
+     "n": 16
+    }
+   ]
+  },
+  "lege": {
+   "tipo": "lexico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "lēge",
+     "clave": "lēx.abl.sg",
+     "n": 81
+    },
+    {
+     "forma": "lege",
+     "clave": "legō.imp.sg",
+     "n": null
+    }
+   ]
+  },
+  "legeris": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "lēgeris",
+     "clave": "legō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "legeris",
+     "clave": "legō.pas.presente.2sg",
+     "n": null
+    },
+    {
+     "forma": "legēris",
+     "clave": "legō.pas.futuro.2sg",
+     "n": null
+    }
+   ]
+  },
+  "leges": {
+   "tipo": "lexico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "lēgēs",
+     "clave": "lēx.nom.pl",
+     "n": 6
+    },
+    {
+     "forma": "legēs",
+     "clave": "legō.futuro.2sg",
+     "n": 2
+    }
+   ]
+  },
+  "legi": {
+   "tipo": "lexico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "lēgī",
+     "clave": "lēx.dat.sg",
+     "n": 13
+    },
+    {
+     "forma": "legī",
+     "clave": "legō.inf.presente.pasiva.m",
+     "n": null
+    }
+   ]
+  },
+  "legimus": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "legimus",
+     "clave": "legō.presente.1pl",
+     "n": 0
+    },
+    {
+     "forma": "lēgimus",
+     "clave": "legō.perfecto.1pl",
+     "n": 0
+    }
+   ]
+  },
+  "legis": {
+   "tipo": "lexico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "lēgis",
+     "clave": "lēx.gen.sg",
+     "n": 48
+    },
+    {
+     "forma": "legis",
+     "clave": "legō.presente.2sg",
+     "n": 2
+    }
+   ]
+  },
+  "legit": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "legit",
+     "clave": "legō.presente.3sg",
+     "n": 4
+    },
+    {
+     "forma": "lēgit",
+     "clave": "legō.perfecto.3sg",
+     "n": 1
+    }
+   ]
+  },
+  "longa": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "longa",
+     "clave": "longus.f.nom.sg",
+     "n": 2
+    },
+    {
+     "forma": "longā",
+     "clave": "longus.f.abl.sg",
+     "n": 3
+    }
+   ]
+  },
+  "magna": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "magna",
+     "clave": "magnus.f.nom.sg",
+     "n": 57
+    },
+    {
+     "forma": "magnā",
+     "clave": "magnus.f.abl.sg",
+     "n": 85
+    }
+   ]
+  },
+  "manus": {
+   "tipo": "morfologico",
+   "vocal": "u",
+   "miembros": [
+    {
+     "forma": "manus",
+     "clave": "manus.nom.sg",
+     "n": 23
+    },
+    {
+     "forma": "manūs",
+     "clave": "manus.gen.sg",
+     "n": 0
+    }
+   ]
+  },
+  "metus": {
+   "tipo": "morfologico",
+   "vocal": "u",
+   "miembros": [
+    {
+     "forma": "metus",
+     "clave": "metus.nom.sg",
+     "n": 8
+    },
+    {
+     "forma": "metūs",
+     "clave": "metus.gen.sg",
+     "n": 1
+    }
+   ]
+  },
+  "misera": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "misera",
+     "clave": "miser.f.nom.sg",
+     "n": 1
+    },
+    {
+     "forma": "miserā",
+     "clave": "miser.f.abl.sg",
+     "n": 1
+    }
+   ]
+  },
+  "miseram": {
+   "tipo": "lexico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "mīseram",
+     "clave": "mittō.pluscuamperfecto.1sg",
+     "n": 0
+    },
+    {
+     "forma": "miseram",
+     "clave": "miser.f.ac.sg",
+     "n": 4
+    }
+   ]
+  },
+  "miseras": {
+   "tipo": "lexico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "mīserās",
+     "clave": "mittō.pluscuamperfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "miserās",
+     "clave": "miser.f.ac.pl",
+     "n": 2
+    }
+   ]
+  },
+  "miseris": {
+   "tipo": "lexico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "mīseris",
+     "clave": "mittō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "miserīs",
+     "clave": "miser.m.dat.pl",
+     "n": 1
+    }
+   ]
+  },
+  "misero": {
+   "tipo": "lexico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "mīserō",
+     "clave": "mittō.futuro-perfecto.1sg",
+     "n": 2
+    },
+    {
+     "forma": "miserō",
+     "clave": "miser.m.dat.sg",
+     "n": 1
+    }
+   ]
+  },
+  "nauta": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "nauta",
+     "clave": "nauta.nom.sg",
+     "n": 0
+    },
+    {
+     "forma": "nautā",
+     "clave": "nauta.abl.sg",
+     "n": 0
+    }
+   ]
+  },
+  "ne": {
+   "tipo": "lexico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "nē",
+     "clave": "nē.indecl",
+     "n": null
+    },
+    {
+     "forma": "ne",
+     "clave": "ne.indecl",
+     "n": null
+    }
+   ]
+  },
+  "parva": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "parva",
+     "clave": "parvus.f.nom.sg",
+     "n": 3
+    },
+    {
+     "forma": "parvā",
+     "clave": "parvus.f.abl.sg",
+     "n": 5
+    }
+   ]
+  },
+  "poeta": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "poēta",
+     "clave": "poēta.nom.sg",
+     "n": 0
+    },
+    {
+     "forma": "poētā",
+     "clave": "poēta.abl.sg",
+     "n": 0
+    }
+   ]
+  },
+  "prima": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "prīma",
+     "clave": "prīmus.f.nom.sg",
+     "n": 15
+    },
+    {
+     "forma": "prīmā",
+     "clave": "prīmus.f.abl.sg",
+     "n": 19
+    }
+   ]
+  },
+  "puella": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "puella",
+     "clave": "puella.nom.sg",
+     "n": 14
+    },
+    {
+     "forma": "puellā",
+     "clave": "puella.abl.sg",
+     "n": 1
+    }
+   ]
+  },
+  "pulchra": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "pulchra",
+     "clave": "pulcher.f.nom.sg",
+     "n": 2
+    },
+    {
+     "forma": "pulchrā",
+     "clave": "pulcher.f.abl.sg",
+     "n": 0
+    }
+   ]
+  },
+  "regina": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "rēgīna",
+     "clave": "rēgīna.nom.sg",
+     "n": 3
+    },
+    {
+     "forma": "rēgīnā",
+     "clave": "rēgīna.abl.sg",
+     "n": 0
+    }
+   ]
+  },
+  "responderis": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "responderis",
+     "clave": "respondeō.futuro-perfecto.2sg",
+     "n": 0
+    },
+    {
+     "forma": "respondēris",
+     "clave": "respondeō.pas.presente.2sg",
+     "n": null
+    }
+   ]
+  },
+  "rosa": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "rosa",
+     "clave": "rosa.nom.sg",
+     "n": 0
+    },
+    {
+     "forma": "rosā",
+     "clave": "rosa.abl.sg",
+     "n": 0
+    }
+   ]
+  },
+  "senatus": {
+   "tipo": "morfologico",
+   "vocal": "u",
+   "miembros": [
+    {
+     "forma": "senātus",
+     "clave": "senātus.nom.sg",
+     "n": 27
+    },
+    {
+     "forma": "senātūs",
+     "clave": "senātus.gen.sg",
+     "n": 48
+    }
+   ]
+  },
+  "spiritus": {
+   "tipo": "morfologico",
+   "vocal": "u",
+   "miembros": [
+    {
+     "forma": "spīritus",
+     "clave": "spīritus.nom.sg",
+     "n": 86
+    },
+    {
+     "forma": "spīritūs",
+     "clave": "spīritus.gen.sg",
+     "n": 35
+    }
+   ]
+  },
+  "terra": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "terra",
+     "clave": "terra.nom.sg",
+     "n": 34
+    },
+    {
+     "forma": "terrā",
+     "clave": "terra.abl.sg",
+     "n": 74
+    }
+   ]
+  },
+  "veni": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "vēnī",
+     "clave": "veniō.perfecto.1sg",
+     "n": 51
+    },
+    {
+     "forma": "venī",
+     "clave": "veniō.imp.sg",
+     "n": null
+    }
+   ]
+  },
+  "venimus": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "venīmus",
+     "clave": "veniō.presente.1pl",
+     "n": 2
+    },
+    {
+     "forma": "vēnimus",
+     "clave": "veniō.perfecto.1pl",
+     "n": 24
+    }
+   ]
+  },
+  "venit": {
+   "tipo": "morfologico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "venit",
+     "clave": "veniō.presente.3sg",
+     "n": 52
+    },
+    {
+     "forma": "vēnit",
+     "clave": "veniō.perfecto.3sg",
+     "n": 184
+    }
+   ]
+  },
+  "vicina": {
+   "tipo": "morfologico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "vīcīna",
+     "clave": "vīcīna.nom.sg",
+     "n": 0
+    },
+    {
+     "forma": "vīcīnā",
+     "clave": "vīcīna.abl.sg",
+     "n": 0
+    }
+   ]
+  },
+  "videris": {
+   "tipo": "morfologico",
+   "vocal": "i",
+   "miembros": [
+    {
+     "forma": "vīderis",
+     "clave": "videō.futuro-perfecto.2sg",
+     "n": 5
+    },
+    {
+     "forma": "vidēris",
+     "clave": "videō.pas.presente.2sg",
+     "n": null
+    }
+   ]
+  }
+ }
+}
