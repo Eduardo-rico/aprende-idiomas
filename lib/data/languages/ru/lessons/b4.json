@@ -1,0 +1,25 @@
+[
+  {
+    "id": "b4-l1-los-cuatro-casos-productivos",
+    "blockId": 4,
+    "name": "Caso I: qué es un caso, y la forma de cada casilla en singular",
+    "objectives": [
+      "En ruso la función de una palabra la marca su TERMINACIÓN y no su lugar en la frase. No es un mecanismo nuevo para ti: «yo / me / mí» y «eu / me / mim» ya son caso, y los usas sin error; lo que el ruso hace es extender eso a los sustantivos, con seis valores en vez de tres.",
+      "Dada la función ya resuelta, producir la forma: las tres declinaciones del singular —1.ª en -а/-я (книга, деревня), 2.ª de masculinos sin desinencia y neutros (стол, конь, окно, море), 3.ª de femeninos en -ь (дверь, ночь)— con sus temas duros y blandos.",
+      "Decidir la clase ANTES de la ortografía. El reparto -ы/-и es de TEMA: blando (конь, музей, деревня, дверь) pide -и, y sólo después la regla ortográfica escribe como -и la -ы de un tema duro que acabe en к г х ж ш щ ч (книга → книги). Al revés se producen formas que no existen: кони 120 apariciones en la biblioteca frente a 0 de *коны, деревни 395 frente a 0, двери 1834 frente a 0.",
+      "La 3.ª declinación no se obtiene ablandando la 1.ª: дверь hace двери en genitivo, dativo y prepositivo, дверью en instrumental, y el acusativo es igual al nominativo. Y en el instrumental femenino de la 1.ª la biblioteca trae DOS formas vivas —сестрой y сестрою, рукой y рукою—: la segunda es del siglo XIX, aquí no se pide producirla, y la vas a leer en más de un tercio de los casos medibles.",
+      "Leer el caso tras в, на, за y под: con acusativo la frase dice DIRECCIÓN (идёт в школу) y con prepositivo o instrumental dice LUGAR (учится в школе, сидит за столом). El trabajo lo hace la desinencia, no la preposición, que es la misma en los dos.",
+      "Decir la posesión y la ausencia a la rusa (у меня есть книга, у меня нет книги) y usar el experimentante en dativo (мне нравится, мне нужно, мне холодно, мне 30 лет), sabiendo cuáles de esas cuatro se parecen a «me gusta» y cuáles llevan en español sujeto y «tener»."
+    ],
+    "conceptIds": [
+      "u4-que-es-el-caso",
+      "u4-declinacion-singular",
+      "u4-acusativo-direccion",
+      "u4-genitivo-existencial",
+      "u4-sujeto-dativo"
+    ],
+    "vocabKey": ["книга", "ночь", "студент", "учитель", "окно", "школа", "дверь"],
+    "conceptNotesPath": "b4/l1-los-cuatro-casos-productivos.mdx",
+    "exerciseRefs": []
+  }
+]
