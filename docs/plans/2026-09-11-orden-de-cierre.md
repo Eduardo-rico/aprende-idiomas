@@ -36,10 +36,30 @@ párate.
 | PT | 3,2M ✅ | 3.292 | 0 bajo piso · prosa corregida el 11-sep (7 falsas + las 6 que metió la corrección) |
 | RO | 2,9M ✅ | 454 servibles | 48 de 107 puntos bajo piso · déficit **354**, residuo 0 |
 | LA | 3 lecturas | ~400 publicados | **40 de 117** puntos con lote (eran 34 el 11-sep) |
-| RU | **7,7M ✅** (de 1,96M) | 0 | **93 puntos**, máquina de paradigmas + lexicón A1 construidos |
+| RU | **7,7M ✅** (de 1,96M) | 0 | **93 puntos**; máquinas de sustantivo, verbo, ADJETIVO y PRONOMBRE — 936 formas, 922 atestadas, 0 rojos |
 | CS | 793 lecturas | 0 | sin inventario |
 
-Suite: **255 ficheros / 2.697 tests, verde.**
+Suite al 2026-09-12 (tarde): **259 ficheros / 2.818 tests**, y los rojos son
+**todos de la sesión de LATÍN, que está a medio camino**: a las 20:07 era 1
+(`acento-la-dos-caminos`) y a las 20:11 eran **6 en 5 ficheros**
+(`acento-la-dos-caminos`, `todas-las-formas-la`, `gate-infinitivo`,
+`gate-irregulares` ×2, `formas-no-producidas-la`). El hook los atribuye solo:
+los ficheros que los causan (`personales-la.ts`, `irregulares.ts`,
+`lexicon-l1.ts`, `atestacion-*.json`) están en el árbol y no en ningún commit
+de ruso. **Los 4 ficheros de ruso están verdes** (141 tests).
+
+⚠ **RUSO — la morfología ya no bloquea los lotes.** Al 12-sep por la tarde
+están construidos el adjetivo (dos filas para las cuatro declinaciones
+escolares) y el pronombre (personales con н- protética, posesivos,
+demostrativos, interrogativos). Lo que queda es CONTENIDO. Y tres cosas que
+decidirían cualquier lote y están medidas: en el adjetivo **sólo el
+nominativo distingue los tres géneros** —cuatro de los seis casos son
+sincréticos m=n, y el inventario nombraba dos—; **el instrumental femenino
+tiene dos formas vivas** en la biblioteca (`-ой`/`-ою`, 22 % la segunda, y en
+el pronombre hasta el 45 %), así que exigir una sola suspende a quien escribe
+ruso atestado; y `у его` es un homógrafo del posesivo mientras que `к ему` es
+lengua real de registro popular — dos rivales de la misma regla con
+veredictos opuestos.
 
 ## Lo que se resolvió el 11 y el 12 de septiembre
 

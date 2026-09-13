@@ -357,7 +357,7 @@ function pruebasPronominales(): Prueba[] {
   // cosa, y ése es el fallo que este gate existe para no cometer.
   for (const per of Object.keys(PERSONALES) as PersonaPron[]) {
     for (const c of ['instr', 'prep'] as CasoRu[]) {
-      const f = pronombre(per, c, { trasPreposicion: c === 'prep' });
+      const f = pronombre(per, c, { regente: c === 'prep' ? 'о' : null });
       if (!f || f.length < 3) continue;
       out.push({ lema: `pron.${per}`, celda: c, forma: f, n: contar(f) });
     }
@@ -643,35 +643,91 @@ if (/[/\\]check-paradigma-ru\.ts$/.test(process.argv[1] ?? '')) {
   // gate imprime la proporción lema a lema porque **no es una propiedad de
   // la desinencia sino de cada palabra**: землею gana a землёй 5,7 a 1 y
   // страною empata con страной.
-  const variantes: { lema: string; norma: string; nNorma: number; variante: string; nVar: number }[] = [];
+  // ⚠ EL DENOMINADOR SE CUENTA, NO SE SUPONE. La v0 imprimía un porcentaje
+  // para cada lema, y el lingüista adversarial encontró dos cuyo
+  // denominador mide DOS casillas (`дядей` es instrumental singular Y
+  // genitivo plural; `ей` es dativo E instrumental). Al mirarlo con el
+  // instrumento en vez de a mano, el problema es mucho mayor y es
+  // estructural: **en el adjetivo la forma `новой` ocupa CUATRO casillas y
+  // `большой` SEIS**, y sólo una de ellas tiene variante en `-ою`. Un
+  // porcentaje sobre ese denominador es un número verdadero que mide otra
+  // cosa. Así que se CUENTA cuántas casillas del propio paradigma comparten
+  // la forma, y donde son más de una no se imprime porcentaje: se dice.
+  const variantes: { lema: string; norma: string; nNorma: number; variante: string; nVar: number; casillas: number }[] = [];
   for (const e of NOMBRES_A1) {
     if (e.genero !== 'f' && !(e.genero === 'm' && /[ая]$/.test(e.lema))) continue;
     const instr = casillaNominal(e, 'instr', 'sg');
     if (!instr) continue;
+    let casillas = 0;
+    for (const num of ['sg', 'pl'] as const)
+      for (const c of ['nom', 'ac', 'gen', 'dat', 'instr', 'prep'] as CasoRu[])
+        if (casillaNominal(e, c, num) === instr) casillas++;
     for (const v of variantesInstrSgFem(instr)) {
       const nVar = contar(v);
-      if (nVar > 0) variantes.push({ lema: e.lema, norma: instr, nNorma: contar(instr), variante: v, nVar });
+      if (nVar > 0) variantes.push({ lema: e.lema, norma: instr, nNorma: contar(instr), variante: v, nVar, casillas });
+    }
+  }
+  // ⚠ EL ADJETIVO Y EL POSESIVO FALTABAN, Y ES DONDE LA VARIANTE ES MAYOR.
+  // Lo encontró el lingüista adversarial el 2026-09-12: el barrido miraba
+  // `NOMBRES_A1` y `PERSONALES` y no las dos máquinas nuevas. Medido,
+  // `своею` sale **1088** veces — diez veces el máximo de la tabla que el
+  // gate sí imprimía (`душою` 111). O sea que el lado donde el error
+  // simétrico es más caro era justo el que no se medía. Mismo defecto que el
+  // barrido de la ё, el mismo día y por la misma causa.
+  for (const e of ADJETIVOS_A1) {
+    const instr = casillaAdj(e, 'f', 'instr');
+    if (!instr) continue;
+    const casillas = FORMAS_ADJ.flatMap((f) => CASOS_ADJ.map((c) => casillaAdj(e, f, c, { animado: false })))
+      .filter((x) => x === instr).length;
+    for (const v of variantesInstrSgFem(instr)) {
+      const nVar = contar(v);
+      if (nVar > 0) variantes.push({ lema: `adj.${e.lema}`, norma: instr, nNorma: contar(instr), variante: v, nVar, casillas });
+    }
+  }
+  for (const e of POSESIVOS) {
+    const instr = casillaPosesiva(e, 'f', 'instr');
+    if (!instr) continue;
+    const casillas = FORMAS_ADJ.flatMap((f) => CASOS_ADJ.map((c) => casillaPosesiva(e, f, c, { animado: false })))
+      .filter((x) => x === instr).length;
+    for (const v of variantesInstrSgFem(instr)) {
+      const nVar = contar(v);
+      if (nVar > 0) variantes.push({ lema: `pos.${e.lema}`, norma: instr, nNorma: contar(instr), variante: v, nVar, casillas });
     }
   }
   for (const per of Object.keys(PERSONALES) as PersonaPron[]) {
-    const instr = pronombre(per, 'instr', { trasPreposicion: false });
+    const instr = pronombre(per, 'instr', { regente: null });
     if (!instr) continue;
-    for (const v of variantePronominalXIX(instr)) {
+    const casillas = (['nom', 'ac', 'gen', 'dat', 'instr', 'prep'] as CasoRu[])
+      .map((c) => pronombre(per, c, { regente: null })).filter((x) => x === instr).length;
+    for (const v of variantePronominalXIX(instr, 'instr')) {
       const nVar = contar(v);
-      if (nVar > 0) variantes.push({ lema: `pron.${per}`, norma: instr, nNorma: contar(instr), variante: v, nVar });
+      if (nVar > 0) variantes.push({ lema: `pron.${per}`, norma: instr, nNorma: contar(instr), variante: v, nVar, casillas });
     }
   }
   if (variantes.length) {
     console.log('LA VARIANTE `-ою/-ею` DEL XIX — NO es un error y NO es un rojo: es una respuesta');
+    console.log('⚠ Y DOS DENOMINADORES DE ESTA TABLA MIDEN DOS CASILLAS A LA VEZ, así que su');
+    console.log('   porcentaje está SESGADO A LA BAJA y va dicho en vez de disimulado: `дядей` 83');
+    console.log('   es a la vez el instrumental singular («с дядей Ваней») y el genitivo plural');
+    console.log('   («двое дядей его»), y `ей` 11135 es dativo E instrumental. El genitivo plural');
+    console.log('   y el dativo no tienen variante en -ою, así que engordan el denominador sin');
+    console.log('   poder aportar al numerador. Un número correcto sobre una forma ambigua es un');
+    console.log('   número verdadero que mide otra cosa — y el agregado lo arrastra.');
     console.log('CORRECTA que la máquina no produce. Un ítem que exija sólo `-ой` suspende a quien');
     console.log('escribe el ruso que la biblioteca le ha enseñado (error simétrico).');
-    let sn = 0, sv = 0;
+    let sn = 0, sv = 0, limpios = 0;
     for (const v of variantes.sort((a, b) => b.nVar - a.nVar)) {
-      sn += v.nNorma; sv += v.nVar;
-      const pct = Math.round((100 * v.nVar) / (v.nNorma + v.nVar));
-      console.log(`  ${v.lema}\t${v.norma} ${v.nNorma} · ${v.variante} ${v.nVar}\t(${pct} % del total es la variante)`);
+      sv += v.nVar;
+      const ambiguo = v.casillas > 1;
+      if (!ambiguo) { sn += v.nNorma; limpios++; }
+      const cola = ambiguo
+        ? `(SIN PORCENTAJE: ${v.casillas} casillas del paradigma comparten «${v.norma}» y sólo una tiene variante)`
+        : `(${Math.round((100 * v.nVar) / (v.nNorma + v.nVar))} % del total es la variante)`;
+      console.log(`  ${v.lema}\t${v.norma} ${v.nNorma} · ${v.variante} ${v.nVar}\t${cola}`);
     }
-    console.log(`  ── ${variantes.length} lemas · norma ${sn} · variante ${sv} · ${Math.round((100 * sv) / (sn + sv))} % del total\n`);
+    console.log(`  ── ${variantes.length} lemas con la variante atestada · ${sv} apariciones de la variante`);
+    console.log(`     y el porcentaje sólo se puede dar sobre los ${limpios} de denominador LIMPIO:`);
+    console.log(`     norma ${sn} · variante ${variantes.filter((v) => v.casillas === 1).reduce((a, v) => a + v.nVar, 0)} · ${Math.round((100 * variantes.filter((v) => v.casillas === 1).reduce((a, v) => a + v.nVar, 0)) / (sn + variantes.filter((v) => v.casillas === 1).reduce((a, v) => a + v.nVar, 0)))} %\n`);
   }
 
   // ── LA ATRIBUCIÓN DEL ADJETIVO: qué casilla puede medir el género ──

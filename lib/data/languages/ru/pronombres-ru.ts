@@ -107,35 +107,111 @@ export const PERSONALES: Record<PersonaPron, FilaPron> = {
             nota: 'себя 13128 · себе 10824 · собой 2334 · собою 1895 (45 %). SIN NOMINATIVO por construcción, y sin género ni número: es el único pronombre del ruso que no los tiene' },
 };
 
-/** UNA CASILLA DE PRONOMBRE PERSONAL, Y EL CONTEXTO ES OBLIGATORIO.
+// ══ ⚠ LA н- NO DEPENDE DE QUE HAYA PREPOSICIÓN: DEPENDE DE CUÁL ══════
+//
+// **Corrección del lingüista adversarial, 2026-09-12, y es el mismo defecto
+// que `locativo2` ya tenía escrito dos ficheros más allá.** La v0 de este
+// fichero tomaba `trasPreposicion: boolean` y su comentario afirmaba que la
+// regla es «literalmente prefijar `н`, sin una excepción». Es falso, y la
+// clase que lo rompe no es marginal:
+//
+//     навстречу ему  73 · *навстречу нему  0      вслед ему  22 · *вслед нему 0
+//     вслед ей        7 · *вслед ней       0      вслед им    2 · *вслед ним  0
+//     благодаря ему   6 · *благодаря нему  0      подобно ему 5 · *подобно нему 0
+//     навстречу ей   13 · *навстречу ней   0      насчёт его 14 · *насчёт него 0
+//
+// **129 apariciones contra CERO.** Tras preposición de origen ADVERBIAL que
+// rige dativo (навстречу, вслед, благодаря, подобно, вопреки, наперекор,
+// согласно) y tras locución prepositiva (насчёт, в отношении, при помощи, за
+// исключением) el ruso NO añade la н-. АГ-80 I, «начальное н у местоимений
+// 3-го лица»; Розенталь, *Справочник*, «Употребление форм местоимений».
+//
+// Es exactamente lo que `locativo2` tiene escrito: «LA PREPOSICIÓN VA CON LA
+// FORMA, porque es LÉXICA y no libre». Allí se aprendió con `в берегу` 0
+// frente a `на берегу` 203; aquí se escribió el boolean igualmente, y encima
+// con un comentario que juraba que no había excepciones. **Una afirmación en
+// prosa que dice «sin una excepción» es la que nadie vuelve a mirar.**
+//
+// ══ Y LA LISTA ES ALLOWLIST, NO DENYLIST ═════════════════════════════
+//
+// La clase que SÍ toma н- es abierta (todas las preposiciones primarias); la
+// que no la toma es pequeña y enumerable. Enumerar la pequeña sería la
+// denylist disfrazada de allowlist: lo que faltara tomaría н- y saldría
+// `*навстречу нему`. Por eso se enumeran **las dos** y una preposición que no
+// esté en ninguna devuelve `null`: la máquina no adivina, y el que escriba el
+// lote tiene que declararla.
+
+/** Preposiciones primarias: el pronombre de 3.ª toma н-. Con su cuenta. */
+export const PREPOSICIONES_CON_N: Record<string, string> = {
+  'в': 'в нём 775', 'на': 'на него', 'у': 'у него 5404', 'к': 'к нему 3855',
+  'с': 'с ним 4268', 'о': 'о нём 775', 'от': 'от неё 751', 'для': 'для него 989',
+  'из': 'из него', 'до': 'до него', 'за': 'за ним', 'под': 'под ним',
+  'над': 'над ним', 'при': 'при нём 206', 'без': 'без него', 'про': 'про него',
+  'через': 'через него', 'между': 'между ними', 'перед': 'перед ним',
+  'по': 'по нему', 'об': 'об нём',
+};
+
+/** Preposiciones de origen ADVERBIAL que rigen dativo, y locuciones
+ *  prepositivas: **NO** toman н-. Medido, y el número va con cada una. */
+export const PREPOSICIONES_SIN_N: Record<string, string> = {
+  'навстречу': 'навстречу ему 73 · *навстречу нему 0 · навстречу ей 13',
+  'вслед': 'вслед ему 22 · *вслед нему 0 · вслед ей 7 · вслед им 2',
+  'благодаря': 'благодаря ему 6 · *благодаря нему 0',
+  'подобно': 'подобно ему 5 · *подобно нему 0',
+  'вопреки': 'АГ-80 lo pone en la clase; 0 apariciones con pronombre en la biblioteca — la ausencia no prohíbe',
+  'наперекор': 'ídem',
+  'согласно': 'ídem',
+  'насчёт': 'насчёт его 14 (насчет 12 + насчёт 2) · *насчёт него 0 — locución prepositiva lexicalizada',
+  'в отношении': 'в отношении его 2 · 0 con н-',
+  'при помощи': 'locución prepositiva: АГ-80',
+  'за исключением': 'ídem',
+};
+
+/** UNA CASILLA DE PRONOMBRE PERSONAL, Y EL REGENTE ES OBLIGATORIO.
  *
- *  `trasPreposicion` no tiene valor por omisión a propósito. Con `false` en
- *  el tercero de tercera persona sale `его`, con `true` sale `него`, y las
- *  dos son correctas en su sitio: un valor por omisión elegiría una de las
- *  dos en silencio, que es el fallo que devuelve una forma plausible.
+ *  `regente` es **la preposición**, no un booleano, y no tiene valor por
+ *  omisión: `его`, `него` y `ему` tras `навстречу` son las tres correctas en
+ *  su sitio y un valor por omisión elegiría una en silencio.
  *
- *  Devuelve `null` en dos sitios y los dos son hechos de la lengua:
- *  el nominativo de `себя` (no existe) y el prepositivo sin preposición
- *  (tampoco — el caso se llama así por eso). */
+ *  Devuelve `null` en CUATRO sitios, y los cuatro son o hechos de la lengua o
+ *  la máquina diciendo que no sabe:
+ *    · el nominativo de `себя` (no existe);
+ *    · el prepositivo sin preposición (tampoco — el caso se llama así);
+ *    · el nominativo CON preposición (la simétrica);
+ *    · una preposición que no está en ninguna de las dos listas. */
 export function pronombre(
   p: PersonaPron,
   caso: CasoRu,
-  ctx: { trasPreposicion: boolean },
+  ctx: { regente: string | null },
 ): string | null {
   const f = PERSONALES[p];
-  if (caso === 'prep') return ctx.trasPreposicion ? f.prep : null;
-  if (caso === 'nom') return ctx.trasPreposicion ? null : f.nom;
+  const reg = ctx.regente;
+  if (reg !== null && !(reg in PREPOSICIONES_CON_N) && !(reg in PREPOSICIONES_SIN_N)) return null;
+  const conN = reg !== null && reg in PREPOSICIONES_CON_N;
+  if (caso === 'prep') return reg === null ? null : f.prep;
+  if (caso === 'nom') return reg === null ? f.nom : null;
   const base = f[caso];
-  return f.alternaN && ctx.trasPreposicion ? 'н' + base : base;
+  return f.alternaN && conN ? 'н' + base : base;
 }
 
-/** La variante en `-ою` del instrumental, que aquí también existe y con
- *  proporciones MAYORES que en el sustantivo: мною 1863 frente a мной 2646
- *  (41 %), собою 1895 frente a собой 2334 (45 %), тобою 487 (25 %), ею 695.
- *  Es la misma clase del §«la biblioteca desenseña el punto» y el mismo
- *  error simétrico: un ítem que exija sólo `мной` suspende a quien escribe
- *  lo que ha leído. */
-export function variantePronominalXIX(forma: string): string[] {
+/** La variante en `-ою/-ею` del INSTRUMENTAL del pronombre.
+ *
+ *  ⚠ EXIGE EL CASO, Y NO PORQUE QUEDE MÁS ORDENADO. La v0 miraba sólo la
+ *  FORMA, y `ей` es dativo **e** instrumental —lo dice la nota de `3sgF` dos
+ *  líneas más arriba—, así que licenciaba un dativo `*ею` que no existe:
+ *  leídas 12 de las 695 apariciones de `ею` con `--ctx`, todas son
+ *  instrumentales («махнул ею», «завладели ею совершенно»), cero dativas.
+ *
+ *  Y el proyecto ya lo tenía escrito: `variantesInstrSgFem` lleva la casilla
+ *  en el nombre **con ese motivo exacto**, y un fichero más allá la hermana
+ *  nació sin ella. La copia N+1 que se desincroniza, con el aviso delante.
+ *  Lo encontró el lingüista adversarial el 2026-09-12, y el test que fijaba
+ *  el fallo estaba escrito.
+ *
+ *  Proporciones, y son MAYORES que en el sustantivo: собою 1895 frente a
+ *  собой 2334 (45 %), мною 1863 frente a мной 2646 (41 %), тобою 487 (25 %). */
+export function variantePronominalXIX(forma: string, caso: CasoRu): string[] {
+  if (caso !== 'instr') return [];
   const f = quitarAcento(forma);
   if (f === 'ей') return ['ею'];
   if (f.endsWith('ой')) return [f.slice(0, -2) + 'ою'];
@@ -174,7 +250,7 @@ export interface EntradaPosesiva {
 
 export const POSESIVOS: EntradaPosesiva[] = [
   { lema: 'мой',  fila: 'mo',   glosa: 'mi',
-    nota: 'мой 6961 · моего 2058 · моему 1189 · моим 769 · моём 777 · моя 3785 · моей 2777 · моё 2822 · мои 2479' },
+    nota: 'мой 6961 · моего 2058 · моему 1189 · моим 769 · моём 56 con ё · моем 721 sin · моя 3785 · моей 2777 · моё 252 con ё · мое 2570 sin · мои 2479. ⚠ LAS DOS CIFRAS DE LA Ё SE CORRIGIERON EL 2026-09-12: la v0 escribía «моём 777» y «моё 2822», que son los totales FUNDIDOS —lo que devuelve `contar()`— presentados como si fueran la cuenta con ё. En un fichero cuya lección central es que la fusión de la ё deja pasar los errores que CONSISTEN en la ё, citar el total fundido como si fuera el sensible es la mina exacta. Y `моем` 721 está además contaminado por la 1.ª pl de `мыть`' },
   { lema: 'твой', fila: 'mo',   glosa: 'tu' },
   { lema: 'свой', fila: 'mo',   glosa: 'su (del sujeto)',
     nota: 'свой 3035 · своего 4711 · своим 3321 · свою 6209 · своей 5795 · свои 3975. Es el más frecuente de los cinco en oblicuo, y su punto (u6-svoj) NO es de forma: es la elección frente a его/её/их, que son INVARIABLES' },
@@ -296,7 +372,7 @@ export const DETERMINANTES: Record<
   },
   'чей': {
     glosa: 'de quién',
-    nota: 'чей 206 · чьего 23 · чья 136 · чьё 79. BAJA ATESTACIÓN, y entra por la regla y no por la frecuencia: es el único determinante con vocal fugaz (чей → чь-), la misma clase que `день`',
+    nota: 'чей 206 · чьего 23 · чья 136 · чьё 12 con ё · чье 67 sin (total fundido 79 — corregido el 2026-09-12, era el fundido citado como sensible). BAJA ATESTACIÓN, y entra por la regla y no por la frecuencia: es el único determinante con vocal fugaz (чей → чь-), la misma clase que `день`',
     tabla: { 'm.nom': 'чей', 'm.gen': 'чьего', 'f.nom': 'чья', 'n.nom': 'чьё' },
   },
 };
@@ -329,10 +405,12 @@ export function invariantesPronominales(): Aviso[] {
       // como huecos sería marcar como defecto un hecho de la lengua, que es
       // el gate ruidoso.
       if (c === 'nom' && p === 'refl') continue;
-      const trasPreposicion = c === 'prep';
-      mira(p, `${c}${trasPreposicion ? ' (tras prep.)' : ''}`, pronombre(p, c, { trasPreposicion }));
+      const regente = c === 'prep' ? 'о' : null;
+      mira(p, `${c}${regente ? ` (tras ${regente})` : ''}`, pronombre(p, c, { regente }));
       if (PERSONALES[p].alternaN && c !== 'prep' && c !== 'nom') {
-        mira(p, `${c} (tras prep.)`, pronombre(p, c, { trasPreposicion: true }));
+        mira(p, `${c} (tras к)`, pronombre(p, c, { regente: 'к' }));
+        // ⚠ Y LA CLASE SIN н-, que es la que el boolean no podía expresar.
+        mira(p, `${c} (tras навстречу)`, pronombre(p, c, { regente: 'навстречу' }));
       }
     }
     // ⚠ EL INVARIANTE QUE NO SE PUEDE ESCRIBIR COMO NORMA: la н- protética
@@ -341,10 +419,27 @@ export function invariantesPronominales(): Aviso[] {
     // y tampoco. Lo que lo fija es que las tres personas que alternan sean
     // exactamente las que tienen forma distinta tras preposición.
     const alterna = (['ac', 'gen', 'dat', 'instr'] as CasoRu[]).some(
-      (c) => pronombre(p, c, { trasPreposicion: true }) !== pronombre(p, c, { trasPreposicion: false }),
+      (c) => pronombre(p, c, { regente: 'к' }) !== pronombre(p, c, { regente: null }),
     );
     if (alterna !== Boolean(PERSONALES[p].alternaN)) {
       out.push({ lema: p, clase: 'protetica-inconsistente', detalle: `alternaN=${PERSONALES[p].alternaN} y la alternancia real es ${alterna}` });
+    }
+  }
+
+  // ⚠ EL INVARIANTE QUE LA v0 NO PODÍA TENER, porque su firma no expresaba el
+  // hecho: **ninguna preposición de la clase sin prótesis puede producir una
+  // forma con н-.** Con `trasPreposicion: boolean` la condición ni se podía
+  // escribir; con el regente, es una línea. Es el §4.23: para garantizar una
+  // intención, busca el invariante que la implica.
+  for (const reg of Object.keys(PREPOSICIONES_SIN_N)) {
+    for (const p of ['3sgM', '3sgF', '3pl'] as PersonaPron[]) {
+      for (const c of ['ac', 'gen', 'dat', 'instr'] as CasoRu[]) {
+        const f = pronombre(p, c, { regente: reg });
+        const base = PERSONALES[p][c] as string;
+        if (f && f.startsWith('н') && !base.startsWith('н')) {
+          out.push({ lema: p, clase: 'protetica-donde-no-va', detalle: `«${reg} ${f}» — esa preposición NO toma н- (${PREPOSICIONES_SIN_N[reg]})` });
+        }
+      }
     }
   }
 

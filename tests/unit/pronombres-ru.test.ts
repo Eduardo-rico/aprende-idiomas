@@ -21,8 +21,8 @@ describe('LA н- PROTÉTICA: el contexto es obligatorio, como el regente del pre
     ['dat',   'ему', 'нему', 'к нему 3855 · к ему 2'],
     ['instr', 'им',  'ним',  'с ним 4268 · с им 2'],
   ])('3sgM %s: sin preposición %s, con preposición %s', (caso, sin, con) => {
-    expect(pronombre('3sgM', caso as 'gen', { trasPreposicion: false })).toBe(sin);
-    expect(pronombre('3sgM', caso as 'gen', { trasPreposicion: true })).toBe(con);
+    expect(pronombre('3sgM', caso as 'gen', { regente: null })).toBe(sin);
+    expect(pronombre('3sgM', caso as 'gen', { regente: 'к' })).toBe(con);
   });
 
   it('la regla es prefijar `н` y no tiene una sola excepción en las tres personas', () => {
@@ -39,12 +39,12 @@ describe('LA н- PROTÉTICA: el contexto es obligatorio, como el regente del pre
   });
 
   it('las personas 1.ª y 2.ª NO alternan: у меня, к тебе, с нами', () => {
-    expect(pronombre('1sg', 'gen', { trasPreposicion: true })).toBe('меня');
-    expect(pronombre('2sg', 'dat', { trasPreposicion: true })).toBe('тебе');
-    expect(pronombre('1pl', 'instr', { trasPreposicion: true })).toBe('нами');
+    expect(pronombre('1sg', 'gen', { regente: 'к' })).toBe('меня');
+    expect(pronombre('2sg', 'dat', { regente: 'к' })).toBe('тебе');
+    expect(pronombre('1pl', 'instr', { regente: 'к' })).toBe('нами');
     // La `н` de `нас`/`нам`/`нами` es parte del lema y no una prótesis:
     // confundirlas daría `*ннас`.
-    expect(pronombre('1pl', 'gen', { trasPreposicion: true })).toBe('нас');
+    expect(pronombre('1pl', 'gen', { regente: 'к' })).toBe('нас');
   });
 
   it('EL INVARIANTE: `alternaN` tiene que coincidir con la alternancia REAL', () => {
@@ -58,50 +58,50 @@ describe('LA н- PROTÉTICA: el contexto es obligatorio, como el regente del pre
 describe('LAS DOS CASILLAS QUE NO EXISTEN, y devuelven null en vez de una forma plausible', () => {
   it('`себя` no tiene nominativo', () => {
     expect(PERSONALES.refl.nom).toBeNull();
-    expect(pronombre('refl', 'nom', { trasPreposicion: false })).toBeNull();
+    expect(pronombre('refl', 'nom', { regente: null })).toBeNull();
     // Y sí tiene las demás: себя 13128 · себе 10824 · собой 2334.
-    expect(pronombre('refl', 'ac', { trasPreposicion: false })).toBe('себя');
-    expect(pronombre('refl', 'instr', { trasPreposicion: false })).toBe('собой');
+    expect(pronombre('refl', 'ac', { regente: null })).toBe('себя');
+    expect(pronombre('refl', 'instr', { regente: null })).toBe('собой');
   });
 
   it('el PREPOSITIVO no existe sin preposición — el caso se llama así por eso', () => {
-    expect(pronombre('3sgM', 'prep', { trasPreposicion: false })).toBeNull();
-    expect(pronombre('3sgM', 'prep', { trasPreposicion: true })).toBe('нём');
+    expect(pronombre('3sgM', 'prep', { regente: null })).toBeNull();
+    expect(pronombre('3sgM', 'prep', { regente: 'к' })).toBe('нём');
     // Y por eso su forma se guarda CON la н-: una base `ём` no es una
     // palabra rusa y meterla en el fichero sería guardar una no-forma.
     expect(PERSONALES['3sgM'].prep).toBe('нём');
   });
 
   it('y el NOMINATIVO no existe tras preposición, que es la simétrica', () => {
-    expect(pronombre('1sg', 'nom', { trasPreposicion: true })).toBeNull();
+    expect(pronombre('1sg', 'nom', { regente: 'к' })).toBeNull();
   });
 });
 
 describe('LOS SINCRETISMOS DEL PRONOMBRE, que decidirían cualquier lote', () => {
   it('мне es dativo Y prepositivo: la casilla no se puede pedir por la forma', () => {
-    expect(pronombre('1sg', 'dat', { trasPreposicion: false })).toBe('мне');
-    expect(pronombre('1sg', 'prep', { trasPreposicion: true })).toBe('мне');
+    expect(pronombre('1sg', 'dat', { regente: null })).toBe('мне');
+    expect(pronombre('1sg', 'prep', { regente: 'к' })).toBe('мне');
   });
 
   it('ей es dativo Y instrumental, y нас es acusativo, genitivo Y prepositivo', () => {
-    expect(pronombre('3sgF', 'dat', { trasPreposicion: false })).toBe('ей');
-    expect(pronombre('3sgF', 'instr', { trasPreposicion: false })).toBe('ей');
+    expect(pronombre('3sgF', 'dat', { regente: null })).toBe('ей');
+    expect(pronombre('3sgF', 'instr', { regente: null })).toBe('ей');
     for (const c of ['ac', 'gen'] as const) {
-      expect(pronombre('1pl', c, { trasPreposicion: false })).toBe('нас');
+      expect(pronombre('1pl', c, { regente: null })).toBe('нас');
     }
-    expect(pronombre('1pl', 'prep', { trasPreposicion: true })).toBe('нас');
+    expect(pronombre('1pl', 'prep', { regente: 'к' })).toBe('нас');
   });
 
   it('el NEUTRO comparte todo el oblicuo con el masculino: no mide el antecedente', () => {
     for (const c of ['ac', 'gen', 'dat', 'instr'] as const) {
-      expect(pronombre('3sgN', c, { trasPreposicion: false }))
-        .toBe(pronombre('3sgM', c, { trasPreposicion: false }));
+      expect(pronombre('3sgN', c, { regente: null }))
+        .toBe(pronombre('3sgM', c, { regente: null }));
     }
   });
 
   it('`им` es a la vez dativo plural e instrumental singular', () => {
-    expect(pronombre('3pl', 'dat', { trasPreposicion: false })).toBe('им');
-    expect(pronombre('3sgM', 'instr', { trasPreposicion: false })).toBe('им');
+    expect(pronombre('3pl', 'dat', { regente: null })).toBe('им');
+    expect(pronombre('3sgM', 'instr', { regente: null })).toBe('им');
   });
 });
 
@@ -195,10 +195,21 @@ describe('LA VARIANTE DEL XIX, que en el pronombre pesa MÁS que en el sustantiv
   it('собою 45 %, мною 41 %, тобою 25 %: casi la mitad de las apariciones', () => {
     // Un ítem que exija sólo `мной` suspende a quien escribe lo que ha leído,
     // y aquí el reparto es casi 50/50: собой 2334 · собою 1895.
-    expect(variantePronominalXIX('собой')).toEqual(['собою']);
-    expect(variantePronominalXIX('мной')).toEqual(['мною']);
-    expect(variantePronominalXIX('ей')).toEqual(['ею']);       // ей 11135 · ею 695
-    expect(variantePronominalXIX('его')).toEqual([]);
+    expect(variantePronominalXIX('собой', 'instr')).toEqual(['собою']);
+    expect(variantePronominalXIX('мной', 'instr')).toEqual(['мною']);
+    expect(variantePronominalXIX('ей', 'instr')).toEqual(['ею']);   // ей 11135 · ею 695
+    expect(variantePronominalXIX('его', 'instr')).toEqual([]);
+  });
+
+  it('⚠ Y EXIGE EL CASO: `ей` es dativo E instrumental, y `*ею` dativo no existe', () => {
+    // La v0 miraba sólo la FORMA y licenciaba un dativo `*ею`. Leídas 12 de
+    // las 695 apariciones de `ею`, todas son instrumentales («махнул ею»,
+    // «завладели ею совершенно»); cero dativas. Y el motivo estaba escrito un
+    // fichero más allá: `variantesInstrSgFem` lleva la casilla en el nombre
+    // EXACTAMENTE por esto, y la hermana nació sin ella. Lo cazó el lingüista
+    // adversarial, y el test que fijaba el fallo estaba escrito aquí mismo.
+    expect(variantePronominalXIX('ей', 'dat')).toEqual([]);
+    expect(variantePronominalXIX('мне', 'dat')).toEqual([]);
   });
 });
 

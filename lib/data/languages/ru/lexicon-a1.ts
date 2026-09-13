@@ -107,16 +107,16 @@ export const NOMBRES_A1: EntradaNominal[] = [
   // no por tema, que es justo el par que separa las dos reglas de
   // `деревня`. Sin los dos juntos, cualquiera de las dos reglas sola
   // acierta en todo lo que tiene delante.
-  { lema: 'врач', genero: 'm', tema: 'duro', glosa: 'médico', animado: true, genPlIrreg: 'врачей',
+  { lema: 'врач', genero: 'm', tema: 'duro', glosa: 'médico', animado: true,
     desinenciaOTonica: true,
-    nota: 'tema DURO con sibilante: врачи es la regla ortográfica, деревни es la de tema. El par es lo que impide publicar media regla. Y con la /o/ TÓNICA da врачом (29) y no *врачем (0), que es el lado que товарищ contradice' },
+    nota: 'tema DURO con sibilante: врачи es la regla ortográfica, деревни es la de tema. El par es lo que impide publicar media regla. Y con la /o/ TÓNICA da врачом (29) y no *врачем (0), que es el lado que товарищ contradice. ⚠ Y SU `genPlIrreg: врачей` SE RETIRÓ EL 2026-09-12: `врачей` es perfectamente REGULAR —tras sibilante el genitivo plural masculino es -ей, АГ-80— y guardarlo como «irregular» era un motivo escrito FALSO en un campo que el gate lee. Ahora sale de la regla, y con él ножей 27, ключей 26, мужей 80' },
   // ⚠ EL LEMA QUE SEPARA LAS DOS MITADES DE LA REGLA DE LA /o/ TRAS
   // SIBILANTE, y por eso entra. Con `врач` solo, la regla «sibilante ⇒ ом»
   // acierta en todo el lexicón: es exactamente el aspecto de una regla a la
   // que le falta una mitad. Medido: товарищем 110 · *товарищом 0.
   { lema: 'товарищ', genero: 'm', tema: 'duro', glosa: 'compañero, camarada', animado: true,
-    desinenciaOTonica: false, genPlIrreg: 'товарищей',
-    nota: 'товарищ 397 · товарищем 110 · *товарищом 0. Sibilante con la /o/ ÁTONA: es la frontera de врачом, y sin él la regla de la /o/ sale verde con la mitad escrita' },
+    desinenciaOTonica: false,
+    nota: 'товарищ 397 · товарищем 110 · *товарищом 0. Sibilante con la /o/ ÁTONA: es la frontera de врачом, y sin él la regla de la /o/ sale verde con la mitad escrita. Su genitivo plural товарищей (323) sale de la regla desde el 2026-09-12 y ya no va como `genPlIrreg`: el acento NO lo toca, porque tras sibilante la desinencia es -ей en los dos lados' },
   // La vocal fugaz, con su cuenta: день 5909.
   { lema: 'день', genero: 'm', tema: 'blando', glosa: 'día', temaOblicuo: 'дн',
     desinenciaOTonica: true,
@@ -141,6 +141,15 @@ export const NOMBRES_A1: EntradaNominal[] = [
   // `музей` es la cuarta forma falsa de control (`*музеы`) y entra por eso
   // aunque salga 5 veces: el corpus NO puede certificarla y el gate lo
   // dice en vez de disimularlo. Su valor es separar `-й` de `-ий`.
+  // ⚠ EL LEMA QUE PARTIÓ EL CAMPO DEL ACENTO EN DOS, y entra por eso.
+  // `край` tiene el singular ÁTONO y el plural TÓNICO —Зализняк, esquema c—,
+  // y el sentinela de la /o/ vive en las dos: `краем` 10 (*краём 0) y
+  // `краёв` 1 con ё · `краев` 23 sin. Un solo booleano no puede dar las dos,
+  // y sin este lema el campo seguiría pareciendo uno.
+  { lema: 'край', genero: 'm', tema: 'blando', glosa: 'borde, región',
+    desinenciaOTonica: false, desinenciaOTonicaPl: true, nomPlIrreg: 'края',
+    lecturaYo: { 'gen.pl': 'краёв sale 1 vez con ё y краев 23 sin: es la tasa de ediciones ё-ificadas, no una casilla sin ё. La forma es краёв y la tónica del plural es lo que la produce' },
+    nota: 'край 281 · краем 10 · края (nom pl y gen sg) · краёв 1 con ё / краев 23 sin. ⚠ ESTÁ POR LA REGLA Y NO POR LA FRECUENCIA: es el único lema del lexicón cuyo acento de la /o/ CAE DE DISTINTO LADO en singular y en plural, o sea el que obliga a que `desinenciaOTonica` y `desinenciaOTonicaPl` sean dos campos. Lo encontró el lingüista adversarial el 2026-09-12 contra un comentario que proponía un testigo imposible' },
   { lema: 'музей', genero: 'm', tema: 'blando', glosa: 'museo', desinenciaOTonica: false,
     nota: 'BAJA ATESTACIÓN (музей 5, музеев 2). Está por la regla, no por la frecuencia: es el masculino en -й, que hace «о музее» y NO «о музеи» como la clase -ий' },
 

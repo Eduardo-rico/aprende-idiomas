@@ -140,6 +140,30 @@ export interface EntradaNominal {
    *  como `desinenciaTonica` del verbo se partió en `acento1sg` y
    *  `acento2sg` en cuanto llegó `писать`. Hay test que fija el límite. */
   desinenciaOTonica?: boolean;
+  /** ⚠ EL MISMO HECHO EN EL PLURAL, Y EL CAMPO SE PARTIÓ EL 2026-09-12
+   *  PORQUE UN LEMA LOS SEPARA — que es justo lo que el comentario de arriba
+   *  decía que pasaría «algún día» proponiendo un testigo que no podía
+   *  fallar.
+   *
+   *  La v0 tenía UN bit para casillas de números distintos: el sentinela vive
+   *  en cinco casillas del singular y en UNA del plural (`%в`, el genitivo
+   *  plural de la clase en `-й/-ий`). Y el acento ruso se mueve entre
+   *  singular y plural (Зализняк, esquema **c**). Medido en `край`:
+   *
+   *      краем  10 · *краём  0   → el singular es ÁTONO
+   *      краёв   1 · краев  23   → el plural es TÓNICO
+   *
+   *  Un booleano no puede dar las dos. Y el testigo que la v0 proponía
+   *  —`лицо` frente a `сердце`— **no podía fallar nunca**, porque sus dos
+   *  casillas son las dos del SINGULAR y caen juntas por construcción: un
+   *  test cuyo nulo no puede informar de nada. Lo encontró el lingüista
+   *  adversarial, y con el ejemplo dentro del propio fichero: el comentario
+   *  de `SENTINELA_O` ilustra `%в` con «музеев, боёв», o sea con el lema que
+   *  rompe el campo.
+   *
+   *  No ha saltado antes porque el único `-й` del lexicón es `музей`, átono
+   *  en las dos. Si falta, se usa el del singular y el invariante lo dice. */
+  desinenciaOTonicaPl?: boolean;
   /** Casillas sueltas que la regla falla y que el corpus corrigió. La
    *  clave es `<caso>.<numero>`. Existe para que una excepción medida se
    *  guarde COMO DATO en vez de moverle el agujero a la regla. */
@@ -205,7 +229,24 @@ const D1: Record<TemaRu, Record<NumeroRu, Fila>> = {
 // vuelve a poner: es la misma jugada que el genitivo latino, el dato manda
 // sobre la forma de diccionario.
 const D2M: Record<TemaRu, Record<NumeroRu, Fila>> = {
-  duro:   { sg: ['', null, 'а', 'у', '%м', 'е'],   pl: ['ы', null, 'ов', 'ам', 'ами', 'ах'] },
+  // ⚠ EL GENITIVO PLURAL LLEVA EL SENTINELA `%в` Y NO `ов` A SECAS, y es una
+  // corrección del lingüista adversarial (2026-09-12). `ов` a secas es media
+  // regla: tras sibilante la desinencia es `-ей` —ножей 27 · *ножов 0,
+  // ключей 26, мужей 80, товарищей 323 · *товарищов 0— y tras `ц` es la /o/
+  // del sentinela, átona `-ев` (месяцев 252 · *месяцов 0) y tónica `-ов`
+  // (отцов 83). АГ-80 I, genitivo plural de la 2.ª declinación; Зализняк,
+  // tipo 4 (нож, врач).
+  //
+  // Y el diagnóstico que vale más que la regla: **hoy no salía mal sólo
+  // porque `врач` y `товарищ` llevaban cada uno un `genPlIrreg` escrito a
+  // mano, y el campo se llama «irregular» cuando `врачей` es perfectamente
+  // regular** — o sea un motivo escrito FALSO en un campo que el gate lee.
+  // Es la regla duplicada esperando la copia N+1. Peor: si mañana entrara
+  // `нож` sin parche, la máquina daría `*ножов`, el corpus da 0, y el gate lo
+  // imprimiría bajo «SIN ATESTACIÓN — no es un error, es una casilla que el
+  // corpus NO PUEDE certificar», o sea archivaría su propio hallazgo como
+  // ignorancia.
+  duro:   { sg: ['', null, 'а', 'у', '%м', 'е'],   pl: ['ы', null, '%в', 'ам', 'ами', 'ах'] },
   blando: { sg: ['ь', null, 'я', 'ю', '%м', 'е'],  pl: ['и', null, 'ей', 'ям', 'ями', 'ях'] },
   iy:     { sg: ['й', null, 'я', 'ю', '%м', 'и'],  pl: ['и', null, '%в', 'ям', 'ями', 'ях'] },
 };
@@ -331,6 +372,13 @@ export function ortografiar(
   if (!desinencia) return tema;
   let d = desinencia;
   if (d.includes(SENTINELA_O)) {
+    // ⚠ EL GENITIVO PLURAL TRAS SIBILANTE NO ES `%в`: ES `-ей`, y va aquí
+    // porque es la misma casilla y no otra regla suelta. `ножей` 27 ·
+    // `*ножов` 0 · `*ножев` 0; `товарищей` 323; `мужей` 80. Con `ц` sí es la
+    // /o/ normal (`месяцев` 252, `отцов` 83), así que la condición es
+    // SIBILANTE y no «sibilante o ц» — dos reglas que comparten una letra,
+    // otra vez.
+    if (d === SENTINELA_O + 'в' && SIBILANTE.test(tema)) return tema + 'ей';
     const v = vocalDesinencialO(tema, ctx.clase ?? 'duro', ctx.tonica);
     if (v === null) return null;
     d = d.split(SENTINELA_O).join(v);
@@ -364,7 +412,10 @@ export function casillaNominal(e: EntradaNominal, caso: CasoRu, num: NumeroRu): 
   if (num === 'pl' && caso === 'nom' && e.nomPlIrreg) return e.nomPlIrreg;
   if (num === 'pl' && caso === 'gen' && e.genPlIrreg) return e.genPlIrreg;
 
-  const ctx = { clase: claseDe(e, num), tonica: e.desinenciaOTonica };
+  const ctx = {
+    clase: claseDe(e, num),
+    tonica: num === 'pl' ? (e.desinenciaOTonicaPl ?? e.desinenciaOTonica) : e.desinenciaOTonica,
+  };
 
   // El acusativo no tiene desinencia propia: la animacidad lo manda al
   // nominativo o al genitivo. En la 1.ª declinación sí la tiene (-у/-ю) y
@@ -660,7 +711,8 @@ export function invariantesNominales(entradas: EntradaNominal[]): Aviso[] {
       if (num === 'pl' && e.soloSingular) continue;
       for (const caso of ORDEN) {
         if (casillaNominal(e, caso, num) !== null) continue;
-        const porLaO = vocalDesinencialO(temaDe(e), claseDe(e, num), e.desinenciaOTonica) === null;
+        const tonicaDelNumero = num === 'pl' ? (e.desinenciaOTonicaPl ?? e.desinenciaOTonica) : e.desinenciaOTonica;
+        const porLaO = vocalDesinencialO(temaDe(e), claseDe(e, num), tonicaDelNumero) === null;
         out.push({
           lema: e.lema,
           clase: porLaO ? 'o-desinencial-sin-declarar' : 'casilla-nula',

@@ -106,7 +106,7 @@ export function datoRusoPublicado(): { fuente: string; donde: string; forma: str
   for (const per of Object.keys(PERSONALES) as PersonaPron[])
     for (const c of ['nom', 'ac', 'gen', 'dat', 'instr', 'prep'] as const)
       for (const trasPreposicion of [false, true]) {
-        const forma = pronombre(per, c, { trasPreposicion });
+        const forma = pronombre(per, c, { regente: trasPreposicion ? 'о' : null });
         if (forma) out.push({ fuente: 'pronombre', donde: `${per} ${c}${trasPreposicion ? '+prep' : ''}`, forma });
       }
   for (const e of POSESIVOS)
