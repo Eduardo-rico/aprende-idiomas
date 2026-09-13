@@ -40,19 +40,22 @@ describe("empty scaffolds (Phase 5)", () => {
         expect(() => c.getBlock(1)).toThrow();
         expect(c.getBlock(2).lessons.length).toBeGreaterThan(0);
       } else if (lang === 'ru') {
-        // Y desde el 2026-09-11 el RUSO estrena un tercer estado, que ni
-        // el rumano ni el latín tuvieron: **inventario poblado y BLOCKS
-        // vacío del todo**. No es un a medias entre los otros dos: es el
-        // estado correcto de una lengua que ya tiene sus 93 puntos
-        // declarados y todavía no tiene ni una lección, y lo que afirma es
-        // que las herramientas de cobertura ya ven los puntos mientras la
-        // app sigue diciendo la verdad — que no hay nada que practicar.
+        // El 2026-09-11 el RUSO estrenó un tercer estado que ni el rumano ni
+        // el latín tuvieron —inventario poblado y BLOCKS vacío del todo—, y
+        // el 2026-09-12 salió de él: con el primer lote (11 ítems de
+        // `u4-declinacion-singular`) entró `lessons/b4.json`, y con ella el
+        // bloque 4. **Lo que este test afirma no ha cambiado**: que se
+        // declara el bloque que tiene lección y NINGÚN otro. Los otros
+        // catorce siguen fuera, y `getBlock(1)` sigue tirando — ahora por el
+        // motivo concreto (el bloque 1 no tiene lección) y no porque la
+        // lengua esté entera a cero.
         //
-        // Declarar los 15 bloques sin lecciones para «adelantar» rendiría
-        // 15 pantallas rotas en vez del EmptyState. El test lo fija aquí
-        // para que nadie lo haga creyendo que ayuda.
+        // Declarar los 15 bloques sin lecciones para «adelantar» rendiría 15
+        // pantallas rotas en vez del EmptyState. El test lo fija aquí para
+        // que nadie lo haga creyendo que ayuda.
         expect(c.ALL_CONCEPTS.length).toBeGreaterThan(0);
-        expect(c.BLOCKS).toEqual([]);
+        expect(c.BLOCKS.map((b) => b.id)).toEqual([4]);
+        expect(c.getBlock(4).lessons.length).toBe(1);
         expect(() => c.getBlock(1)).toThrow();
         // Y que `getConceptsByIds` filtre de verdad y no devuelva [] como
         // el stub: un loader que siempre devuelve vacío es indistinguible
@@ -67,9 +70,11 @@ describe("empty scaffolds (Phase 5)", () => {
       }
     });
 
-    it("loadAllBlocks: [] en los scaffolds vacíos; ro y la ya sirven contenido", async () => {
+    it("loadAllBlocks: [] en los scaffolds vacíos; ro, la y ru ya sirven contenido", async () => {
       const blocks = await loadAllBlocks(lang);
-      if (lang === 'ro' || lang === 'la') expect(blocks.length).toBeGreaterThan(0);
+      // `ru` entró aquí el 2026-09-12 con sus primeros 12 ejercicios
+      // (`u4-declinacion-singular`). Queda `cs`, que sigue sin Paso 0.
+      if (lang === 'ro' || lang === 'la' || lang === 'ru') expect(blocks.length).toBeGreaterThan(0);
       else expect(blocks).toEqual([]);
     });
 

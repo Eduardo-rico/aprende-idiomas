@@ -1,33 +1,60 @@
 // lib/data/languages/ru/curriculum.ts
 //
-// Fase F (2026-09-11): el INVENTARIO DE PUNTOS (`inventario-puntos.ts`) ya
-// da `ALL_CONCEPTS` — 93 puntos en 15 bloques. **`BLOCKS` sigue VACÍO a
-// propósito**, y el motivo importa porque es lo contrario de lo que parece
-// un descuido: un bloque sólo se declara cuando tiene lecciones en
-// `lessons/bN.json`, y el ruso no tiene ninguna. Declarar los 15 bloques
-// sin lecciones no adelantaría trabajo: rendería 15 pantallas rotas en vez
-// del `_empty-state`, y el publicador rechazaría el lote igual. En rumano
-// esto no estaba escrito en ninguna parte y se descubrió al empezar el
-// lote 17, cuando B1, B2, C1 y C2 no podían recibir contenido y nadie
-// sabía por qué.
+// Fase F: el INVENTARIO DE PUNTOS (`inventario-puntos.ts`) da `ALL_CONCEPTS`
+// —93 puntos en 15 bloques— y los BLOQUES se construyen desde `BLOQUES_RU`
+// **sólo para los que tienen lecciones en `lessons/bN.json`**.
 //
-// Que `ALL_CONCEPTS` esté poblado y `BLOCKS` vacío es el estado correcto
-// de una lengua con inventario y sin lecciones: las herramientas que
-// cuentan cobertura ya ven los 93 puntos, y la app sigue diciendo la
-// verdad, que es que todavía no hay nada que practicar.
+// ⚠ ESTE FICHERO EMPEZÓ CON `BLOCKS` VACÍO A PROPÓSITO, y el motivo sigue
+// vigente para los catorce bloques que siguen sin lección: un bloque
+// declarado sin lecciones no adelanta trabajo, rinde una pantalla rota en vez
+// del `_empty-state`, y el publicador rechaza el lote igual. En rumano esto no
+// estaba escrito en ninguna parte y se descubrió al empezar el lote 17, cuando
+// B1, B2, C1 y C2 no podían recibir contenido y nadie sabía por qué.
+//
+// El 2026-09-12 entró la PRIMERA lección del ruso, `lessons/b4.json`, porque
+// entró el primer lote de ejercicios (`scripts/lotes/cloze-ru-a1.ts`, 11 ítems
+// de `u4-declinacion-singular`). Los otros catorce bloques siguen sin
+// declararse, y eso no es un descuido: es el estado correcto de una lengua con
+// inventario completo y una sola lección escrita. Las herramientas que cuentan
+// cobertura ven los 93 puntos; la app sigue diciendo la verdad.
+//
+// Las lecciones llevan `conceptNotesPath` con la forma que exige el schema
+// (`b4/l1-….mdx`), pero el MDX ruso no existe aún: la página de práctica sólo
+// renderiza MDX para `pt` y para las demás lenguas pasa directo a los
+// ejercicios. Cuando haya notas, se escriben en `mdx/`.
 import type { Block, Concept, Lesson, ConceptId, LessonId } from "@/lib/data/curriculum-types";
-import { CONCEPTOS_RU } from "./inventario-puntos";
+import { CONCEPTOS_RU, BLOQUES_RU } from "./inventario-puntos";
+import b4Lessons from "./lessons/b4.json";
 export type { Block, Concept, Lesson, ConceptId, LessonId };
 
-export const BLOCKS: Block[] = [];
+const LECCIONES: Record<number, Lesson[]> = {
+  4: b4Lessons as Lesson[],
+};
+
+export const BLOCKS: Block[] = BLOQUES_RU
+  .filter((b) => (LECCIONES[b.id] ?? []).length > 0)
+  .map((b) => ({
+    id: b.id,
+    slug: b.slug,
+    name: b.nombre,
+    description: b.nombre,
+    durationWeeks: null,
+    prereqs: [],
+    freeDrill: false,
+    lessons: LECCIONES[b.id] ?? [],
+  }));
+
 export const ALL_CONCEPTS: Concept[] = CONCEPTOS_RU;
 
-export function getBlock(_id: number): Block {
-  throw new Error("No blocks for ru yet (Phase 5 scaffold).");
+export function getBlock(id: number): Block {
+  const b = BLOCKS.find((x) => x.id === id);
+  if (!b) throw new Error(`No block ${id} for ru (fase F: sólo los bloques con lecciones existen).`);
+  return b;
 }
 
-export function getLesson(_id: LessonId): Lesson {
-  throw new Error("No lessons for ru yet (Phase 5 scaffold).");
+export function getLesson(id: LessonId): Lesson {
+  for (const b of BLOCKS) { const l = b.lessons.find((x) => x.id === id); if (l) return l; }
+  throw new Error(`No lesson ${id} for ru.`);
 }
 
 export function getConceptsByIds(ids: ConceptId[]): Concept[] {
