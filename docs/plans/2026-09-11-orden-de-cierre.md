@@ -158,6 +158,38 @@ corpus pierde contra el material.
 --lang=cs` primero, y luego el orden que funcionó dos veces:
 inventario → ortografía → paradigma → voz → lotes.
 
+
+## ⚠ Los dos griegos NO tienen currículo — medido el 2026-09-17
+
+    npx tsx scripts/paso0-idioma.ts --lang=el   → ✖ no hay sección «## Griego moderno»
+    npx tsx scripts/paso0-idioma.ts --lang=grc  → ✖ no hay sección «## Griego antiguo»
+
+`docs/plans/2026-07-28-curriculos-completos.md` tiene **cinco** secciones:
+Portugués, Rumano, **Checo**, Ruso y Latín. **Ninguna de griego.**
+
+**Esto reordena lo que se creía:**
+
+- **El CHECO no está bloqueado por el currículo.** Lo tiene entero y con
+  la misma forma que el rumano: A1→C2 con sus horas, volumen total, «lo
+  que el modelo actual no puede expresar (19)» y «riesgos (13)». Lo que
+  le falta es el **inventario de puntos**, que se deriva de ahí. O sea
+  que el checo arranca con `paso0` verde y sin pedirle nada a Edu.
+- **Los GRIEGOS sí lo están, y por lo mismo los dos.** Antes de escribir
+  un inventario griego hay que escribir su currículo — y eso pasa por el
+  panel adversarial, como pasaron los otros cinco. No es trabajo de una
+  tarde.
+
+⚠ Y el griego ANTIGUO lleva desde el 2026-09-03 en el registro **sin
+currículo**: se añadió con un Paso 0 que nunca pudo correr. Es la misma
+familia que «un filtro cierto que caduca» (§C2 de la doctrina), con otra
+cara: **una lengua entró en `LANGUAGES` sin que nada comprobara que su
+currículo existía**, y el fallo sólo se ve cuando alguien corre el Paso 0
+a mano. Vale la pena un invariante que lo pregunte.
+
+**Consecuencia para el orden**: cuando al checo le toque su turno, va
+directo. El griego moderno —que es el que Edu quiere— necesita **antes**
+su currículo, y ése es su verdadero primer paso, no el inventario.
+
 ## El perfil del alumno, que no es «un hispanohablante»
 
 Es un hispanohablante **de México** —sin `vosotros`— **con portugués C2**.
