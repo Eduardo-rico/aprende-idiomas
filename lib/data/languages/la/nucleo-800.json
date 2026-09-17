@@ -7,8 +7,8 @@
  "tokensDelCorpus": 214918,
  "cuantos": 800,
  "porcentajeDeTokensQueCubren": 81.6,
- "yaCubiertosPorLaMaquina": 499,
- "sinNingunaFormaProducida": 243,
+ "yaCubiertosPorLaMaquina": 547,
+ "sinNingunaFormaProducida": 201,
  "lemas": [
   {
    "lema": "et",
@@ -1763,7 +1763,7 @@
    "lema": "gens",
    "n": 164,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.8475609756097561,
    "formas": [
     "gentes",
     "gentibus",
@@ -1785,7 +1785,7 @@
    "lema": "sermo",
    "n": 162,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "sermo",
     "sermone",
@@ -1948,7 +1948,7 @@
    "lema": "potestas",
    "n": 150,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "potestatem",
     "potestate",
@@ -2153,7 +2153,7 @@
    "lema": "mors",
    "n": 138,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "mortem",
     "morte",
@@ -2420,7 +2420,7 @@
    "lema": "iudicium",
    "n": 127,
    "upos": "NOUN",
-   "cubierto": 0.9763779527559056,
+   "cubierto": 1,
    "formas": [
     "iudicium",
     "iudicio",
@@ -2552,7 +2552,7 @@
    "lema": "pax",
    "n": 123,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "pax",
     "pace",
@@ -2625,7 +2625,7 @@
    "lema": "ratio",
    "n": 119,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "ratione",
     "ratio",
@@ -2701,7 +2701,7 @@
    "lema": "caput",
    "n": 117,
    "upos": "NOUN",
-   "cubierto": 0.19658119658119658,
+   "cubierto": 1,
    "formas": [
     "caput",
     "capita",
@@ -2810,7 +2810,7 @@
    "lema": "consul",
    "n": 114,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "consules",
     "consul",
@@ -2938,7 +2938,7 @@
    "lema": "os",
    "n": 109,
    "upos": "NOUN",
-   "cubierto": 0.07339449541284404,
+   "cubierto": 0.908256880733945,
    "formas": [
     "ore",
     "os",
@@ -3042,7 +3042,7 @@
    "lema": "sacerdos",
    "n": 104,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "sacerdotum",
     "sacerdotes",
@@ -3086,7 +3086,7 @@
    "lema": "legio",
    "n": 103,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "legiones",
     "legionibus",
@@ -3150,7 +3150,7 @@
    "lema": "flumen",
    "n": 101,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "flumen",
     "flumine",
@@ -3525,7 +3525,7 @@
    "lema": "uxor",
    "n": 92,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "uxorem",
     "uxor",
@@ -3633,7 +3633,7 @@
    "lema": "solus",
    "n": 87,
    "upos": "ADJ",
-   "cubierto": 0,
+   "cubierto": 0.3563218390804598,
    "formas": [
     "solus",
     "solum",
@@ -3665,7 +3665,7 @@
    "lema": "multitudo",
    "n": 87,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "multitudo",
     "multitudine",
@@ -3698,7 +3698,7 @@
    "lema": "ignis",
    "n": 85,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "ignis",
     "ignem",
@@ -3742,7 +3742,7 @@
    "lema": "sanguis",
    "n": 84,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "sanguinem",
     "sanguine",
@@ -3806,7 +3806,7 @@
    "lema": "oratio",
    "n": 83,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "oratione",
     "orationibus",
@@ -3890,7 +3890,7 @@
    "lema": "salus",
    "n": 82,
    "upos": "NOUN",
-   "cubierto": 0.4268292682926829,
+   "cubierto": 1,
    "formas": [
     "salutem",
     "salutis",
@@ -4052,7 +4052,7 @@
    "lema": "solum",
    "n": 79,
    "upos": "ADV",
-   "cubierto": 0,
+   "cubierto": 0.9113924050632911,
    "formas": [
     "solum",
     "solo",
@@ -4322,7 +4322,7 @@
    "lema": "amor",
    "n": 72,
    "upos": "NOUN",
-   "cubierto": 0.3055555555555556,
+   "cubierto": 1,
    "formas": [
     "amore",
     "amor",
@@ -4344,7 +4344,7 @@
    "lema": "semen",
    "n": 72,
    "upos": "NOUN",
-   "cubierto": 0.20833333333333334,
+   "cubierto": 1,
    "formas": [
     "semen",
     "semina",
@@ -4518,7 +4518,7 @@
    "lema": "soleo",
    "n": 69,
    "upos": "VERB",
-   "cubierto": 0,
+   "cubierto": 0.11594202898550725,
    "formas": [
     "solet",
     "solent",
@@ -4550,7 +4550,7 @@
    "lema": "regio",
    "n": 69,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "regionem",
     "regionibus",
@@ -4669,7 +4669,7 @@
    "lema": "tantum",
    "n": 67,
    "upos": "ADV",
-   "cubierto": 0.9701492537313433,
+   "cubierto": 1,
    "formas": [
     "tantum",
     "solum"
@@ -4701,7 +4701,7 @@
    "lema": "mos",
    "n": 66,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "more",
     "mores",
@@ -5055,7 +5055,7 @@
    "lema": "sol",
    "n": 61,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "sol",
     "sole",
@@ -5121,7 +5121,7 @@
    "lema": "caritas",
    "n": 61,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "caritate",
     "caritatem",
@@ -5293,7 +5293,7 @@
    "lema": "auctoritas",
    "n": 58,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "auctoritate",
     "auctoritatem",
@@ -5304,7 +5304,7 @@
    "lema": "honor",
    "n": 57,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.9649122807017544,
    "formas": [
     "honorem",
     "honore",
@@ -5434,7 +5434,7 @@
    "lema": "dolor",
    "n": 56,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "dolore",
     "dolor",
@@ -5630,7 +5630,7 @@
    "lema": "lux",
    "n": 54,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "lucem",
     "lux",
@@ -6044,7 +6044,7 @@
    "lema": "lumen",
    "n": 48,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "lumen",
     "lumine",
@@ -6215,7 +6215,7 @@
    "lema": "iudex",
    "n": 47,
    "upos": "NOUN",
-   "cubierto": 0.5319148936170213,
+   "cubierto": 1,
    "formas": [
     "iudices",
     "iudex",
@@ -6226,7 +6226,7 @@
    "lema": "magnitudo",
    "n": 47,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "magnitudine",
     "magnitudo",
@@ -6336,7 +6336,7 @@
    "lema": "cohors",
    "n": 46,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.8260869565217391,
    "formas": [
     "cohortibus",
     "cohortis",
@@ -6347,7 +6347,7 @@
    "lema": "animal",
    "n": 46,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 0.3695652173913043,
    "formas": [
     "animalia",
     "animal",
@@ -6358,7 +6358,7 @@
    "lema": "consuetudo",
    "n": 46,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "consuetudine",
     "consuetudinem",
@@ -6585,7 +6585,7 @@
    "lema": "soror",
    "n": 44,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "soror",
     "sorores",
@@ -6681,7 +6681,7 @@
    "lema": "radix",
    "n": 44,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "radices",
     "radicibus",
@@ -7109,7 +7109,7 @@
    "lema": "facultas",
    "n": 41,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "facultatem",
     "facultates",
@@ -7270,7 +7270,7 @@
    "lema": "tribulatio",
    "n": 40,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "tribulatione",
     "tribulationem",
@@ -7292,7 +7292,7 @@
    "lema": "generatio",
    "n": 40,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "generatio",
     "generatione",
@@ -7435,7 +7435,7 @@
    "lema": "opinio",
    "n": 39,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "opinio",
     "opinionem",
@@ -7479,7 +7479,7 @@
    "lema": "dux",
    "n": 38,
    "upos": "NOUN",
-   "cubierto": 0.15789473684210525,
+   "cubierto": 1,
    "formas": [
     "ducem",
     "dux",
@@ -7532,7 +7532,7 @@
    "lema": "peccator",
    "n": 38,
    "upos": "NOUN",
-   "cubierto": 0.21052631578947367,
+   "cubierto": 1,
    "formas": [
     "peccatores",
     "peccatorum",
@@ -7672,7 +7672,7 @@
    "lema": "resurrectio",
    "n": 37,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "resurrectionem",
     "resurrectione",
@@ -7715,7 +7715,7 @@
    "lema": "sedes",
    "n": 36,
    "upos": "NOUN",
-   "cubierto": 0.4722222222222222,
+   "cubierto": 1,
    "formas": [
     "sedes",
     "sedis",
@@ -8052,7 +8052,7 @@
    "lema": "calix",
    "n": 34,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "calicem",
     "calix",
@@ -8261,7 +8261,7 @@
    "lema": "ops",
    "n": 33,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "opes",
     "opibus",
@@ -8360,7 +8360,7 @@
    "lema": "dignitas",
    "n": 33,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "dignitatem",
     "dignitate",
@@ -8435,7 +8435,7 @@
    "lema": "cogitatio",
    "n": 33,
    "upos": "NOUN",
-   "cubierto": 0,
+   "cubierto": 1,
    "formas": [
     "cogitationes",
     "cogitatione",

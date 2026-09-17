@@ -28,6 +28,8 @@ const primera = (s: string) => (s.split('/')[0] ?? '').trim();
 
 export interface PlantillaNominal {
   lema: string; tema: string | null; declinacion: string | null; genero: string | null;
+  /** `<3.I>`: tema en -i, que cambia el genitivo plural (`hostium`). */
+  iStem?: boolean;
 }
 
 export function leerPlantillaNominal(args: string): PlantillaNominal | null {
@@ -38,11 +40,18 @@ export function leerPlantillaNominal(args: string): PlantillaNominal | null {
   const antes = m[1]!;
   const decl = m[2]!;
   const conTema = antes.includes('/');
+  // El sufijo de la declinación lleva información que NO está en `g=`:
+  // `<3.N>` dice NEUTRO y `<3.I>` dice tema en -i. `caput/capit<3.N>` no
+  // trae `g=` porque el `.N` ya lo dice, y tirarlo dejaba fuera todos los
+  // neutros de la 3.ª —`caput`, `flūmen`, `corpus`, `nōmen`, `tempus`—.
+  const marcas = decl.split('.').slice(1);
+  const gDeMarca = marcas.includes('N') ? 'n' : null;
   return {
     lema: primera(antes),
     tema: conTema ? (antes.split('/')[1] ?? '').trim() : null,
     declinacion: decl.split('.')[0] ?? null,
-    genero: partes.slice(1).map((p) => p.trim()).find((p) => /^g=/.test(p))?.slice(2) ?? null,
+    iStem: marcas.includes('I'),
+    genero: partes.slice(1).map((p) => p.trim()).find((p) => /^g=/.test(p))?.slice(2) ?? gDeMarca,
   };
 }
 

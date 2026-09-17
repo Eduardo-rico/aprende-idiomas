@@ -22,28 +22,65 @@
 //   · si les cuelga OTRA preposición (`in`, `cum`, `de`…) se descartan:
 //     son locativos y compañías, no agentes ni instrumentos
 //
-// ── LO QUE LA MEDICIÓN DICE DEL MATERIAL ─────────────────────────────
+// ── LA CIFRA QUE DE VERDAD DICE ALGO ─────────────────────────────────
 //
-// La regla se sostiene y **la excepción declarada también**, que es lo
-// que no esperaba:
+// No es el reparto por lema: es el reparto sobre lo que la anotación marca
+// como AGENTE.
 //
-//     deus    18 CON ·  0 SIN      gladius  0 CON ·  3 SIN
-//     dominus 10 CON ·  0 SIN      manus    0 CON ·  9 SIN
-//     pater    7 CON ·  0 SIN      timor    0 CON · 10 SIN
-//     homo     8 CON ·  1 SIN      aqua     0 CON ·  6 SIN
+//     obl:agent               431 de 2.032 hits   21,2 %
+//     de ellos, con `ā/ab`    402 de 431          93,3 %
 //
-//     natura   5 CON ·  5 SIN   ← la excepción que el punto declara
+// Ésa es la regla del punto, medida: nueve de cada diez agentes anotados
+// llevan preposición.
 //
-// Y el corte de `natura` NO es ruido: los cinco CON son de Cicerón y son
-// la causa eficiente —`ā nātūrā generātī sumus`, `ā nātūrā datam`—; los
-// cinco SIN son de César y son instrumentales —`nātūrā locī mūnītum`, «por
-// el emplazamiento»—. El mismo lema, dos sentidos, dos tratamientos. El
-// `excepcion` del punto estaba escrito sin gate (§E1) y ahora tiene uno.
+// ── Y LO QUE ESTE SELLO **NO** ES, que es más importante ─────────────
 //
-// El único aparente contraejemplo de los animados se deshace al leerlo:
-// `homo` SIN es «armātīs hominibus … expulsī sunt fabrī», un ablativo
-// absoluto, no un agente. Y `rēx` SIN es «praeparārētur via rēgibus», un
-// dativo de destinatario que la anotación marca ablativo.
+// ⚠ **`sin` NO quiere decir «instrumental», y `con` NO quiere decir
+// «agente».** Descartar las otras preposiciones evita los locativos y las
+// compañías, y nada más. Medido sobre los 1.379 del lado SIN:
+//
+//     cabeza en PARTICIPIO (ablativo absoluto incluido)  592   42,9 %
+//     `obl:arg` — ablativo REGIDO (`ūtor`, `potior`)     241   17,5 %
+//     lema de TIEMPO o LUGAR (`diēs`, `tempus`, `locus`)  75    5,4 %
+//     `obl:agent` sin preposición                         14    1,0 %
+//     resto — los candidatos a instrumental              457   33,1 %
+//
+// Y del lado CON, **251 de 653 (38,4 %) no son `obl:agent`** sino `ā` de
+// separación y de origen.
+//
+// ⚠⚠ **DE AQUÍ NO SE DERIVA LA ANIMACIDAD DE UN LEMA.** Un recuento por
+// lema no es un rasgo semántico, y con este corpus miente en las dos
+// direcciones:
+//
+//     rex         0 CON · 1 SIN   ← y ese único SIN es «praeparārētur via
+//                                   rēgibus», un dativo que la anotación
+//                                   marca ablativo. Un token basta para
+//                                   dar a un REY por instrumento.
+//     monumentum  3 CON · 0 SIN   ← y `cōnstitūtiō`, `gemma`, `plaga`:
+//                                   196 lemas de los 780 saldrían
+//                                   «animados» por este camino.
+//     homo        8 CON · 1 SIN   ← el SIN es un ablativo absoluto
+//     frater      5 CON · 1 SIN
+//
+// Quien quiera la animacidad tiene que declararla con su fuente. Este
+// sello sirve para CORROBORAR una declaración, no para sustituirla.
+//
+// ── LA EXCEPCIÓN DEL PUNTO, QUE SÍ SE CONFIRMA ───────────────────────
+//
+//     natura   5 CON ·  5 SIN
+//
+// Y el corte no es ruido: los cinco CON son la causa eficiente —`ā nātūrā
+// generātī`, `ā nātūrā datam`, `ā nātūrā indūtōs`— y los cinco SIN son
+// instrumentales, todos del molde `nātūrā (locī) mūnītum / mūniēbātur /
+// continentur`, «por el emplazamiento». El mismo lema, dos sentidos, dos
+// tratamientos. El `excepcion` del punto estaba escrito sin gate (§E1) y
+// ahora tiene uno.
+//
+// (Los lemas del lote retirado, por si vuelven: `deus` 18/0, `dominus`
+// 10/0, `pater` 7/0, `gladius` 0/3, `manus` 0/9, `bellum` 0/12,
+// `aqua` 0/6, **`timor` 1/10**. Ese 1 es `nōn tam explōrātās ā timōre`, y
+// es el que cazó un error de quien escribió esto: una sonda del scratchpad
+// había dado 0.)
 import fs from 'node:fs';
 import { leerFrases } from './atestar-ut';
 

@@ -1,10 +1,10 @@
 {
  "generado": "2026-09-13",
  "comoSeCuenta": "por LEMA más RASGOS del treebank, no por cadena: el corpus no lleva mácrones y buscar la cadena devuelve el mismo número para los dos miembros del par",
- "pares": 1307,
- "miembrosConCuenta": 357,
- "miembrosSinMapear": 2283,
- "paresConUnMiembroACero": 134,
+ "pares": 1315,
+ "miembrosConCuenta": 367,
+ "miembrosSinMapear": 2289,
+ "paresConUnMiembroACero": 138,
  "lista": {
   "abundanda": {
    "tipo": "morfologico",
@@ -7287,6 +7287,54 @@
     }
    ]
   },
+  "duces": {
+   "tipo": "lexico",
+   "vocal": "u",
+   "miembros": [
+    {
+     "forma": "dūcēs",
+     "clave": "dūcō.futuro.2sg",
+     "n": 0
+    },
+    {
+     "forma": "ducēs",
+     "clave": "dux.imp.nom.pl",
+     "n": 3
+    }
+   ]
+  },
+  "duci": {
+   "tipo": "lexico",
+   "vocal": "u",
+   "miembros": [
+    {
+     "forma": "dūcī",
+     "clave": "dūcō.inf.presente.pasiva.m",
+     "n": null
+    },
+    {
+     "forma": "ducī",
+     "clave": "dux.imp.dat.sg",
+     "n": 0
+    }
+   ]
+  },
+  "ducis": {
+   "tipo": "lexico",
+   "vocal": "u",
+   "miembros": [
+    {
+     "forma": "dūcis",
+     "clave": "dūcō.presente.2sg",
+     "n": 1
+    },
+    {
+     "forma": "ducis",
+     "clave": "dux.imp.gen.sg",
+     "n": 0
+    }
+   ]
+  },
   "ducta": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -12874,6 +12922,22 @@
     }
    ]
   },
+  "mori": {
+   "tipo": "lexico",
+   "vocal": "o",
+   "miembros": [
+    {
+     "forma": "mōrī",
+     "clave": "mōs.imp.dat.sg",
+     "n": 0
+    },
+    {
+     "forma": "morī",
+     "clave": "morior.dep.inf",
+     "n": null
+    }
+   ]
+  },
   "moritura": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -13675,6 +13739,22 @@
     {
      "forma": "optimā",
      "clave": "bonus.sup.f.abl.sg",
+     "n": null
+    }
+   ]
+  },
+  "ora": {
+   "tipo": "lexico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "ōra",
+     "clave": "ōs.imp.nom.pl",
+     "n": 2
+    },
+    {
+     "forma": "ōrā",
+     "clave": "ōrō.imp-imper.sg",
      "n": null
     }
    ]
@@ -18137,6 +18217,22 @@
     }
    ]
   },
+  "sede": {
+   "tipo": "lexico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "sēde",
+     "clave": "sēdēs.imp.abl.sg",
+     "n": 6
+    },
+    {
+     "forma": "sedē",
+     "clave": "sedeō.imp-imper.sg",
+     "n": null
+    }
+   ]
+  },
   "sedenda": {
    "tipo": "morfologico",
    "vocal": "a",
@@ -18202,6 +18298,38 @@
     {
      "forma": "sēderītis",
      "clave": "sedeō.imp-subj.perfecto.2pl",
+     "n": null
+    }
+   ]
+  },
+  "sedes": {
+   "tipo": "lexico",
+   "vocal": "e",
+   "miembros": [
+    {
+     "forma": "sēdēs",
+     "clave": "sēdēs.imp.nom.sg",
+     "n": 4
+    },
+    {
+     "forma": "sedēs",
+     "clave": "sedeō.imp.presente.2sg",
+     "n": null
+    }
+   ]
+  },
+  "semina": {
+   "tipo": "lexico",
+   "vocal": "a",
+   "miembros": [
+    {
+     "forma": "sēmina",
+     "clave": "sēmen.imp.nom.pl",
+     "n": 9
+    },
+    {
+     "forma": "sēminā",
+     "clave": "sēminō.imp-imper.sg",
      "n": null
     }
    ]

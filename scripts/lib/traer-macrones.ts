@@ -65,7 +65,7 @@ import { IRREGULARES_L1 } from '../../lib/data/languages/la/irregulares';
 import { DEPONENTES_L1 } from '../../lib/data/languages/la/deponentes';
 import { PLURALIA_TANTUM } from '../../lib/data/languages/la/plural-tantum';
 import { leerFrases } from './atestar-ut';
-import { leerPlantillaNominal, entradaNominal, leerPlantillaVerbal, entradaVerbal } from './parsear-paradigma';
+import { leerPlantillaNominal, entradaNominal, generoPropuesto, leerPlantillaVerbal, entradaVerbal } from './parsear-paradigma';
 import { paradigmaNominal, infectum, perfectum } from '../../lib/data/languages/la/paradigma-la';
 
 const SALIDA = 'lib/data/languages/la/macrones.json';
@@ -124,6 +124,10 @@ export interface FilaDeMacron {
    *  el lingüista, y esto reduce 141 revisiones a las pocas que no solapan.
    *  Y un lema sin definición sale «no verificable», nunca «malo». */
   definicion?: string;
+  /** Cuando la regla general y la tabla de la fuente dan genitivos
+   *  distintos. Se queda el de la TABLA —es el de la fuente, no una
+   *  derivación mía— y la discrepancia se escribe. */
+  genitivoDiscrepa?: string;
   /** El paradigma DERIVADO de la plantilla y CONFIRMADO contra el corpus.
    *  Ausente cuando la plantilla no lo da (3.ª sin tema, 2.ª en `-er` sin
    *  tema, irregulares) o cuando el corpus no lo confirma. Ver
@@ -227,6 +231,34 @@ export function categoriaContradice(pos: string | null, upos: string | null): bo
   return INDECLINABLE_FUENTE.has(pos) !== INDECLINABLE_CORPUS.has(upos);
 }
 
+/** LA TABLA DE DECLINACIÓN, expandida por la propia fuente.
+ *
+ *  La plantilla de encabezado da `gēns<3.I>` y de ahí NO se deduce el
+ *  genitivo: la 3.ª declinación no lo tiene en el nominativo. El corpus sí
+ *  lo trae —`gentis` ×2— pero SIN CANTIDAD, y transferirle la del lema sería
+ *  inventar: `gēns` es larga por posición y `gentis` es BREVE. Ése es
+ *  exactamente el par que la predicción daba por más probable.
+ *
+ *  La salida está: `{{la-ndecl|gēns<3.I>}}` expandido por el servidor de la
+ *  fuente devuelve la declinación entera CON cantidad. Es la misma obra, la
+ *  misma licencia y una llamada más.
+ *
+ *  Y de paso VERIFICA lo que la regla general derivó: 107 genitivos que
+ *  hasta ahora sólo tenían una propuesta y su confirmación por el corpus sin
+ *  cantidad. */
+export function genitivosDeLaTabla(wikitexto: string): Map<string, string> {
+  const out = new Map<string, string>();
+  const re = /origin-([^"]+)"[^>]*>\[\[:[^|\]]*\|([^\]]+)\]\]/g;
+  const reGen = /gen\|s-form-of origin-([^"]+)"[^>]*>\[\[:[^|\]]*\|([^\]]+)\]\]/g;
+  let m: RegExpExecArray | null;
+  while ((m = reGen.exec(wikitexto)) !== null) {
+    const lema = m[1]!.trim();
+    if (!out.has(lema)) out.set(lema, m[2]!.trim());
+  }
+  void re;
+  return out;
+}
+
 /** Concilia los dos caminos. `null` cuando se contradicen de verdad: la
  *  discrepancia j/i es gráfica y la marca de cantidad variable (`ō̆`) es la
  *  fuente diciendo que varía, no contradiciéndose. */
@@ -275,6 +307,25 @@ export function lemasDelLexicon(): { lema: string; modulo: string }[] {
   ];
 }
 
+async function expandir(plantillas: string[], intento = 0): Promise<string> {
+  const u = new URL(API);
+  u.searchParams.set('action', 'expandtemplates');
+  u.searchParams.set('format', 'json');
+  u.searchParams.set('formatversion', '2');
+  u.searchParams.set('prop', 'wikitext');
+  u.searchParams.set('text', plantillas.map((p) => `{{la-ndecl|${p}}}`).join('\n'));
+  const r = await fetch(u, { headers: { 'User-Agent': UA } });
+  if (r.status === 429) {
+    if (intento >= 5) throw new Error('429 persistente de Wikimedia al expandir');
+    const espera = 5000 * 2 ** intento;
+    console.error(`  429 al expandir — esperando ${espera / 1000}s`);
+    await dormir(espera);
+    return expandir(plantillas, intento + 1);
+  }
+  if (!r.ok) throw new Error(`HTTP ${r.status} al expandir`);
+  return ((await r.json()) as { expandtemplates?: { wikitext?: string } }).expandtemplates?.wikitext ?? '';
+}
+
 async function main() {
   const propios = lemasDelLexicon();
   const nucleo = JSON.parse(fs.readFileSync('lib/data/languages/la/nucleo-800.json', 'utf8')) as { lemas: { lema: string; cubierto: number }[] };
@@ -298,6 +349,7 @@ async function main() {
   // El genitivo SINGULAR por lema: el plural (`cōpiārum`) no contradice al
   // singular (`cōpiae`), y compararlos daba trece choques falsos.
   const genitivoSg = new Map<string, Set<string>>();
+  const generoBruto = new Map<string, Record<string, number>>();
   for (const fr of leerFrases()) {
     for (const t of fr) {
       const k = sinCantidad(t.lema);
@@ -306,11 +358,23 @@ async function main() {
       if (/Case=/.test(t.feats)) r.con++; else r.sin++;
       const f = sinCantidad(t.forma);
       formasDelCorpus.set(f, (formasDelCorpus.get(f) ?? 0) + 1);
+      if (['NOUN', 'PROPN'].includes(t.upos)) {
+        const gm = t.feats.match(/Gender=(\w+)/)?.[1];
+        if (gm) { const r = generoBruto.get(k) ?? {}; r[gm] = (r[gm] ?? 0) + 1; generoBruto.set(k, r); }
+      }
       if (/Case=Gen/.test(t.feats) && /Number=Sing/.test(t.feats)) {
         const g = genitivoSg.get(k) ?? new Set<string>();
         g.add(f); genitivoSg.set(k, g);
       }
     }
+  }
+
+
+  const MAP_G: Record<string, 'm' | 'f' | 'n'> = { Masc: 'm', Fem: 'f', Neut: 'n' };
+  const generoDelCorpus = new Map<string, 'm' | 'f' | 'n'>();
+  for (const [k, r] of generoBruto) {
+    const may = Object.entries(r).sort((a, b) => b[1] - a[1])[0];
+    if (may && MAP_G[may[0]]) generoDelCorpus.set(k, MAP_G[may[0]]!);
   }
 
   /** El paradigma, derivado y CONFIRMADO. Lo que el corpus no confirma no
@@ -319,7 +383,24 @@ async function main() {
     if (!plantilla) return undefined;
     if (pos === 'noun') {
       const pl = leerPlantillaNominal(plantilla);
-      const e = pl ? entradaNominal(pl) : null;
+      if (!pl) return undefined;
+      const deLaFuente = genitivoDeLaFuente.get(clave);
+      let e = entradaNominal(pl);
+      // La tabla de la fuente MANDA sobre la regla general: es su dato y no
+      // mi derivación. Y donde la regla no llegaba —la 3.ª sin tema— esto es
+      // lo único que hay.
+      if (deLaFuente) {
+        // El género, por tres caminos en orden de autoridad: lo que la
+        // plantilla declara (`g=f`), lo que su sufijo dice (`<3.N>` es
+        // neutro), la regla de la declinación… y si ninguno llega, el
+        // CORPUS, que lo marca con `Gender=`. La 3.ª no tiene regla de
+        // género, así que sin el corpus se quedaban fuera `multitūdō`,
+        // `flūmen` y compañía.
+        const g = e?.genero ?? generoPropuesto(pl) ?? generoDelCorpus.get(clave) ?? null;
+        if (!g) return undefined;
+        if (e && e.genitivo.normalize('NFC') !== deLaFuente.normalize('NFC')) discrepanciasDeGenitivo++;
+        e = { lema: pl.lema, genitivo: deLaFuente, genero: g, glosa: '' };
+      }
       if (!e) return undefined;
       let par: Record<string, string>;
       try { par = paradigmaNominal(e); } catch { return undefined; }
@@ -350,6 +431,30 @@ async function main() {
     console.error(`  ${Math.min(i + 50, titulos.length)}/${titulos.length}`);
     await dormir(1500);
   }
+
+  // ── LA TABLA DE DECLINACIÓN, expandida por la fuente ──────────────
+  //
+  // Se pide en lotes. Da el genitivo CON cantidad, que es lo único que la
+  // 3.ª declinación no permite derivar y que el corpus no puede dar porque
+  // no marca mácrones.
+  const plantillasNominales = [...new Set(titulos
+    .map((t) => crudo.get(t))
+    .filter((c): c is NonNullable<typeof c> => !!c && c.pos === 'noun' && !!c.plantilla)
+    // SÓLO la cabecera: `la-ndecl` se rompe con los argumentos con nombre
+    // —`{{la-ndecl|gēns<3.I>|g=f}}` devuelve error y `{{la-ndecl|gēns<3.I>}}`
+    // la tabla entera—. Pasarle la plantilla completa dejaba fuera 86 de
+    // 242 tablas, y justo las de la 3.ª, que son las que hacían falta.
+    .map((c) => (c.plantilla!.split('|')[0] ?? '').trim())
+    .filter((x) => x !== ''))];
+  const genitivoDeLaFuente = new Map<string, string>();
+  console.error(`expandiendo ${plantillasNominales.length} tablas de declinación…`);
+  for (let i = 0; i < plantillasNominales.length; i += 10) {
+    const w = await expandir(plantillasNominales.slice(i, i + 10));
+    for (const [lema, gen] of genitivosDeLaTabla(w)) genitivoDeLaFuente.set(sinCantidad(lema), gen);
+    await dormir(1200);
+  }
+  console.error(`  genitivos de la fuente: ${genitivoDeLaFuente.size}`);
+  let discrepanciasDeGenitivo = 0;
 
   const filas: FilaDeMacron[] = [];
   const vistos = new Set<string>();
@@ -420,6 +525,8 @@ async function main() {
     cantidadVariable: variables,
     flexionanEnElCorpus: flexionan,
     conParadigma: filas.filter((f) => f.paradigma).length,
+    genitivosDeLaTablaDeLaFuente: genitivoDeLaFuente.size,
+    genitivosDondeLaReglaDiscrepaba: discrepanciasDeGenitivo,
     conLaFormaDeCitaSinAtestiguar: filas.filter((f) => f.origen === 'fuente-externa' && f.formaAtestiguada === 0).length,
     porQueSeMiraLaFlexion: 'un indeclinable no lleva nunca `Case=`. `lātus` viene etiquetado ADV por el corpus y la fuente calla sobre su categoría, así que ni la cantidad ni la categoría lo cazan: sale 41 veces CON caso y 2 sin, y es un adjetivo declinado',
     porQueLaCategoriaSeCruza: 'el corpus etiqueta `tantus` y `cēterus` como ADV —su uso adverbial— y son adjetivos que DECLINAN: importarlos como indeclinables por fiarse de una etiqueta sola mete un error de datos que ningún gate de cantidad puede ver. Y `categoriaEnDisputa` es CONTRADICCIÓN, no silencio: los indeclinables de la fuente no llevan plantilla de encabezado, así que su categoría viene en blanco y eso no descalifica nada',
@@ -430,6 +537,7 @@ async function main() {
   console.log(`  discrepancias con el lexicón: ${filas.filter((f) => f.discrepancia).length}`);
   console.log(`  categoría en disputa: ${disputadas} · cantidad variable: ${variables} · flexionan: ${flexionan}`);
   console.log(`  CON PARADIGMA derivado y confirmado: ${filas.filter((f) => f.paradigma).length}`);
+  console.log(`  genitivos de la TABLA de la fuente: ${genitivoDeLaFuente.size} · donde la regla general discrepaba: ${discrepanciasDeGenitivo}`);
   for (const f of filas.filter((x) => x.discrepancia)) console.log(`    ${f.enElLexicon} — ${f.discrepancia}`);
 }
 if (process.argv[1]?.endsWith('traer-macrones.ts')) void main();

@@ -22,7 +22,9 @@
  "categoriaEnDisputa": 27,
  "cantidadVariable": 9,
  "flexionanEnElCorpus": 237,
- "conParadigma": 248,
+ "conParadigma": 296,
+ "genitivosDeLaTablaDeLaFuente": 233,
+ "genitivosDondeLaReglaDiscrepaba": 2,
  "conLaFormaDeCitaSinAtestiguar": 100,
  "porQueSeMiraLaFlexion": "un indeclinable no lleva nunca `Case=`. `lātus` viene etiquetado ADV por el corpus y la fuente calla sobre su categoría, así que ni la cantidad ni la categoría lo cazan: sale 41 veces CON caso y 2 sin, y es un adjetivo declinado",
  "porQueLaCategoriaSeCruza": "el corpus etiqueta `tantus` y `cēterus` como ADV —su uso adverbial— y son adjetivos que DECLINAN: importarlos como indeclinables por fiarse de una etiqueta sola mete un error de datos que ningún gate de cantidad puede ver. Y `categoriaEnDisputa` es CONTRADICCIÓN, no silencio: los indeclinables de la fuente no llevan plantilla de encabezado, así que su categoría viene en blanco y eso no descalifica nada",
@@ -2761,7 +2763,12 @@
    "flexiona": true,
    "formaAtestiguada": 9,
    "plantilla": "gēns<3.I>|g=f",
-   "definicion": "Roman clan (related by birth or marriage and sharing a common name and often united by certain religious rites)"
+   "definicion": "Roman clan (related by birth or marriage and sharing a common name and often united by certain religious rites)",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "gentis",
+    "genero": "f"
+   }
   },
   {
    "clave": "genus",
@@ -2783,7 +2790,12 @@
    "flexiona": true,
    "formaAtestiguada": 44,
    "plantilla": "sermō<3>|g=m",
-   "definicion": "a conversation, discussion"
+   "definicion": "a conversation, discussion",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "sermōnis",
+    "genero": "m"
+   }
   },
   {
    "clave": "mulier",
@@ -2973,7 +2985,12 @@
    "flexiona": true,
    "formaAtestiguada": 16,
    "plantilla": "potestās<3>",
-   "definicion": "power, ability"
+   "definicion": "power, ability",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "potestātis",
+    "genero": "f"
+   }
   },
   {
    "clave": "oportet",
@@ -3172,7 +3189,12 @@
    "flexiona": true,
    "formaAtestiguada": 30,
    "plantilla": "mors<3.I>|g=f",
-   "definicion": "death"
+   "definicion": "death",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "mortis",
+    "genero": "f"
+   }
   },
   {
    "clave": "intellego",
@@ -3533,7 +3555,12 @@
    "flexiona": true,
    "formaAtestiguada": 36,
    "plantilla": "pāx<3>|g=f",
-   "definicion": "peace"
+   "definicion": "peace",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "pācis",
+    "genero": "f"
+   }
   },
   {
    "clave": "tres",
@@ -3589,7 +3616,12 @@
    "flexiona": true,
    "formaAtestiguada": 30,
    "plantilla": "ratiō<3>",
-   "definicion": "reason, reasoning, explanation, ground, motive, rationality, rationale, purpose"
+   "definicion": "reason, reasoning, explanation, ground, motive, rationality, rationale, purpose",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "ratiōnis",
+    "genero": "f"
+   }
   },
   {
    "clave": "affero",
@@ -3680,7 +3712,12 @@
    "flexiona": true,
    "formaAtestiguada": 64,
    "plantilla": "caput/capit<3.N>",
-   "definicion": "the head"
+   "definicion": "the head",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "capitis",
+    "genero": "n"
+   }
   },
   {
    "clave": "peccatum",
@@ -3853,7 +3890,12 @@
    "flexiona": true,
    "formaAtestiguada": 25,
    "plantilla": "cōnsul<3>|g=m",
-   "definicion": "consul: either of the two highest-ranking officials of the Roman republic, elected annually"
+   "definicion": "consul: either of the two highest-ranking officials of the Roman republic, elected annually",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "cōnsulis",
+    "genero": "m"
+   }
   },
   {
    "clave": "adhuc",
@@ -3968,7 +4010,12 @@
    "flexiona": true,
    "formaAtestiguada": 39,
    "plantilla": "ōs/ōr<3.N.I>",
-   "definicion": "mouth"
+   "definicion": "mouth",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "ōris",
+    "genero": "n"
+   }
   },
   {
    "clave": "igitur",
@@ -4048,7 +4095,12 @@
    "flexiona": true,
    "formaAtestiguada": 8,
    "plantilla": "sacerdōs<3>|g=m|g2=f",
-   "definicion": "priest, priestess, cleric"
+   "definicion": "priest, priestess, cleric",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "sacerdōtis",
+    "genero": "m"
+   }
   },
   {
    "clave": "oro",
@@ -4108,7 +4160,12 @@
    "flexiona": true,
    "formaAtestiguada": 6,
    "plantilla": "legiō<3>|g=f",
-   "definicion": "A legion."
+   "definicion": "A legion.",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "legiōnis",
+    "genero": "f"
+   }
   },
   {
    "clave": "interrogo",
@@ -4187,7 +4244,12 @@
    "flexiona": true,
    "formaAtestiguada": 45,
    "plantilla": "flūmen<3>",
-   "definicion": "a river"
+   "definicion": "a river",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "flūminis",
+    "genero": "n"
+   }
   },
   {
    "clave": "numerus",
@@ -4623,7 +4685,12 @@
    "flexiona": true,
    "formaAtestiguada": 15,
    "plantilla": "uxor<3>|g=f",
-   "definicion": "a wife, a spouse, a consort"
+   "definicion": "a wife, a spouse, a consort",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "uxōris",
+    "genero": "f"
+   }
   },
   {
    "clave": "quattuor",
@@ -4759,7 +4826,12 @@
    "flexiona": true,
    "formaAtestiguada": 31,
    "plantilla": "multitūdō<3>",
-   "definicion": "A great number; multitude, numerousness."
+   "definicion": "A great number; multitude, numerousness.",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "multitūdinis",
+    "genero": "f"
+   }
   },
   {
    "clave": "longe",
@@ -4786,7 +4858,12 @@
    "flexiona": true,
    "formaAtestiguada": 31,
    "plantilla": "ignis/ign<3.M.abl-i-occ-e>",
-   "definicion": "fire"
+   "definicion": "fire",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "ignis",
+    "genero": "m"
+   }
   },
   {
    "clave": "uniuersus",
@@ -4836,7 +4913,12 @@
    "flexiona": true,
    "formaAtestiguada": 18,
    "plantilla": "sanguī̆s/sanguin<3.M>|adj=sanguinārius/sanguinālis/sanguināris|dim=sanguiculus",
-   "definicion": "blood"
+   "definicion": "blood",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "sanguinis",
+    "genero": "m"
+   }
   },
   {
    "clave": "gaudeo",
@@ -4922,7 +5004,12 @@
    "flexiona": true,
    "formaAtestiguada": 10,
    "plantilla": "ōrātiō<3>",
-   "definicion": "speech, discourse, language"
+   "definicion": "speech, discourse, language",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "ōrātiōnis",
+    "genero": "f"
+   }
   },
   {
    "clave": "uitis",
@@ -5008,7 +5095,12 @@
    "flexiona": true,
    "formaAtestiguada": 11,
    "plantilla": "salūs<3>|g=f",
-   "definicion": "safety; security"
+   "definicion": "safety; security",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "salūtis",
+    "genero": "f"
+   }
   },
   {
    "clave": "paucus",
@@ -5543,7 +5635,12 @@
    "flexiona": true,
    "formaAtestiguada": 22,
    "plantilla": "amor<3>",
-   "definicion": "love, affection, devotion (for a person, one's family, one's country)"
+   "definicion": "love, affection, devotion (for a person, one's family, one's country)",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "amōris",
+    "genero": "m"
+   }
   },
   {
    "clave": "senex",
@@ -5576,7 +5673,12 @@
    "flexiona": true,
    "formaAtestiguada": 29,
    "plantilla": "sēmen<3>",
-   "definicion": "seed (of plants)"
+   "definicion": "seed (of plants)",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "sēminis",
+    "genero": "n"
+   }
   },
   {
    "clave": "numquid",
@@ -5606,7 +5708,7 @@
    "definicion": "make, form, shape, figure, configuration",
    "paradigma": {
     "tipo": "nombre",
-    "genitivo": "facieī",
+    "genitivo": "faciēī",
     "genero": "f"
    }
   },
@@ -5820,7 +5922,12 @@
    "flexiona": true,
    "formaAtestiguada": 6,
    "plantilla": "regiō<3>|g=f",
-   "definicion": "direction, line"
+   "definicion": "direction, line",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "regiōnis",
+    "genero": "f"
+   }
   },
   {
    "clave": "apostolus",
@@ -6006,7 +6113,12 @@
    "flexiona": true,
    "formaAtestiguada": 4,
    "plantilla": "mōs/mōr<3.M>",
-   "definicion": "way or manner ; behavior; conduct"
+   "definicion": "way or manner ; behavior; conduct",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "mōris",
+    "genero": "m"
+   }
   },
   {
    "clave": "impero",
@@ -6461,7 +6573,12 @@
    "flexiona": true,
    "formaAtestiguada": 19,
    "plantilla": "sōl<3>|g=m",
-   "definicion": "the Sun"
+   "definicion": "the Sun",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "sōlis",
+    "genero": "m"
+   }
   },
   {
    "clave": "uestimentum",
@@ -6523,7 +6640,12 @@
    "flexiona": true,
    "formaAtestiguada": 17,
    "plantilla": "cāritās<3>",
-   "definicion": "dearness"
+   "definicion": "dearness",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "cāritātis",
+    "genero": "f"
+   }
   },
   {
    "clave": "equitatus",
@@ -6712,7 +6834,12 @@
    "flexiona": true,
    "formaAtestiguada": 12,
    "plantilla": "auctōritās<3>",
-   "definicion": "credibility, prestige, reputation, importance"
+   "definicion": "credibility, prestige, reputation, importance",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "auctōritātis",
+    "genero": "f"
+   }
   },
   {
    "clave": "honor",
@@ -6726,7 +6853,12 @@
    "flexiona": true,
    "formaAtestiguada": 3,
    "plantilla": "honor<3>",
-   "definicion": ", , , ,"
+   "definicion": ", , , ,",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "honōris",
+    "genero": "m"
+   }
   },
   {
    "clave": "sero",
@@ -6874,7 +7006,12 @@
    "flexiona": true,
    "formaAtestiguada": 11,
    "plantilla": "dolor<3>",
-   "definicion": "pain, ache, hurt"
+   "definicion": "pain, ache, hurt",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "dolōris",
+    "genero": "m"
+   }
   },
   {
    "clave": "fere",
@@ -7109,7 +7246,12 @@
    "flexiona": true,
    "formaAtestiguada": 18,
    "plantilla": "lūx<3>|abl_sg=lūce/lūcī|g=f",
-   "definicion": "light (of the sun, stars etc.)"
+   "definicion": "light (of the sun, stars etc.)",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "lūcis",
+    "genero": "f"
+   }
   },
   {
    "clave": "frumentum",
@@ -7661,7 +7803,12 @@
    "flexiona": true,
    "formaAtestiguada": 24,
    "plantilla": "lūmen<3>",
-   "definicion": "light, source of light"
+   "definicion": "light, source of light",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "lūminis",
+    "genero": "n"
+   }
   },
   {
    "clave": "contineo",
@@ -7874,7 +8021,12 @@
    "flexiona": true,
    "formaAtestiguada": 7,
    "plantilla": "iūdex<3>|g=m",
-   "definicion": "judge"
+   "definicion": "judge",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "iūdicis",
+    "genero": "m"
+   }
   },
   {
    "clave": "magnitudo",
@@ -7888,7 +8040,12 @@
    "flexiona": true,
    "formaAtestiguada": 18,
    "plantilla": "magnitūdō<3>",
-   "definicion": "greatness, size, bulk, magnitude; vastness, extent."
+   "definicion": "greatness, size, bulk, magnitude; vastness, extent.",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "magnitūdinis",
+    "genero": "f"
+   }
   },
   {
    "clave": "consequor",
@@ -8024,7 +8181,12 @@
    "flexiona": true,
    "formaAtestiguada": 3,
    "plantilla": "cohors<3.I>|g=f",
-   "definicion": "a court"
+   "definicion": "a court",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "cohortis",
+    "genero": "f"
+   }
   },
   {
    "clave": "animal",
@@ -8038,7 +8200,12 @@
    "flexiona": true,
    "formaAtestiguada": 8,
    "plantilla": "animal<3>",
-   "definicion": "living creature"
+   "definicion": "living creature",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "animālis",
+    "genero": "n"
+   }
   },
   {
    "clave": "consuetudo",
@@ -8052,7 +8219,12 @@
    "flexiona": true,
    "formaAtestiguada": 10,
    "plantilla": "cōnsuētūdō<3>",
-   "definicion": "The act of habituating; state of being habituated or accustomed, habituation."
+   "definicion": "The act of habituating; state of being habituated or accustomed, habituation.",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "cōnsuētūdinis",
+    "genero": "f"
+   }
   },
   {
    "clave": "confido",
@@ -8317,7 +8489,12 @@
    "flexiona": true,
    "formaAtestiguada": 13,
    "plantilla": "soror<3>|g=f",
-   "definicion": "sister"
+   "definicion": "sister",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "sorōris",
+    "genero": "f"
+   }
   },
   {
    "clave": "uehementer",
@@ -8424,7 +8601,12 @@
    "flexiona": true,
    "formaAtestiguada": 4,
    "plantilla": "rādīx<3>|g=f",
-   "definicion": "root"
+   "definicion": "root",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "rādīcis",
+    "genero": "f"
+   }
   },
   {
    "clave": "qualis",
@@ -8600,7 +8782,7 @@
    "definicion": "sharp edge or point",
    "paradigma": {
     "tipo": "nombre",
-    "genitivo": "acieī",
+    "genitivo": "aciēī",
     "genero": "f"
    }
   },
@@ -8970,7 +9152,12 @@
    "flexiona": true,
    "formaAtestiguada": 7,
    "plantilla": "facultās<3>",
-   "definicion": "ability to do any thing easily, skill, capacity, power"
+   "definicion": "ability to do any thing easily, skill, capacity, power",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "facultātis",
+    "genero": "f"
+   }
   },
   {
    "clave": "certe",
@@ -9203,7 +9390,12 @@
    "flexiona": true,
    "formaAtestiguada": 5,
    "plantilla": "trībulātiō<3>",
-   "definicion": "distress, trouble, tribulation"
+   "definicion": "distress, trouble, tribulation",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "trībulātiōnis",
+    "genero": "f"
+   }
   },
   {
    "clave": "celeriter",
@@ -9230,7 +9422,12 @@
    "flexiona": true,
    "formaAtestiguada": 12,
    "plantilla": "generātiō<3>",
-   "definicion": "a generation"
+   "definicion": "a generation",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "generātiōnis",
+    "genero": "f"
+   }
   },
   {
    "clave": "uiuus",
@@ -9391,7 +9588,12 @@
    "flexiona": true,
    "formaAtestiguada": 12,
    "plantilla": "opīniō<3>|g=f",
-   "definicion": "opinion, conjecture, imagination, fancy, belief, expectation"
+   "definicion": "opinion, conjecture, imagination, fancy, belief, expectation",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "opīniōnis",
+    "genero": "f"
+   }
   },
   {
    "clave": "colligo",
@@ -9451,7 +9653,12 @@
    "flexiona": true,
    "formaAtestiguada": 8,
    "plantilla": "dux<3>|g=m|g2=f",
-   "definicion": "leader, head"
+   "definicion": "leader, head",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "ducis",
+    "genero": "m"
+   }
   },
   {
    "clave": "dexter",
@@ -9524,7 +9731,12 @@
    "flexiona": true,
    "formaAtestiguada": 5,
    "plantilla": "peccātor<3>",
-   "definicion": "sinner"
+   "definicion": "sinner",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "peccātōris",
+    "genero": "m"
+   }
   },
   {
    "clave": "pario",
@@ -9686,7 +9898,12 @@
    "flexiona": true,
    "formaAtestiguada": 6,
    "plantilla": "resurrēctiō<3>",
-   "definicion": "resurrection"
+   "definicion": "resurrection",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "resurrēctiōnis",
+    "genero": "f"
+   }
   },
   {
    "clave": "plane",
@@ -9735,7 +9952,12 @@
    "flexiona": true,
    "formaAtestiguada": 11,
    "plantilla": "sēdēs<3>|g=f",
-   "definicion": "seat, chair"
+   "definicion": "seat, chair",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "sēdis",
+    "genero": "f"
+   }
   },
   {
    "clave": "consto",
@@ -10199,7 +10421,12 @@
    "flexiona": true,
    "formaAtestiguada": 4,
    "plantilla": "calix<3>|g=m",
-   "definicion": "cup, chalice"
+   "definicion": "cup, chalice",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "calicis",
+    "genero": "m"
+   }
   },
   {
    "clave": "merces",
@@ -10489,7 +10716,12 @@
    "flexiona": true,
    "formaAtestiguada": 0,
    "plantilla": "ops<3>|g=f",
-   "definicion": "strength, power, power to help, property"
+   "definicion": "strength, power, power to help, property",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "opis",
+    "genero": "f"
+   }
   },
   {
    "clave": "fama",
@@ -10628,7 +10860,12 @@
    "flexiona": true,
    "formaAtestiguada": 2,
    "plantilla": "dignitās<3>",
-   "definicion": "worth, worthiness, merit, desert"
+   "definicion": "worth, worthiness, merit, desert",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "dignitātis",
+    "genero": "f"
+   }
   },
   {
    "clave": "casus",
@@ -10745,7 +10982,12 @@
    "flexiona": true,
    "formaAtestiguada": 5,
    "plantilla": "cōgitātiō<3>",
-   "definicion": "thinking, meditation, reflection"
+   "definicion": "thinking, meditation, reflection",
+   "paradigma": {
+    "tipo": "nombre",
+    "genitivo": "cōgitātiōnis",
+    "genero": "f"
+   }
   },
   {
    "clave": "graeci",
