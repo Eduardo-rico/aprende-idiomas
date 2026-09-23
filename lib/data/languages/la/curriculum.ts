@@ -296,6 +296,14 @@ export const TALLAS: Talla[] = [
       'El subjuntivo latino NO coincide con el español',
     ],
   },
+  {
+    id: 'la-b7-l4-consecutio', blockId: 7, mdx: 'b7/l4-consecutio.mdx',
+    name: 'Concordancia de tiempos',
+    conceptIds: ['l7-consecutio'],
+    objectives: [
+      'Aplicar la concordancia de tiempos',
+    ],
+  },
   // ── b8 · Formas nominales del verbo ──────────────────────────────
   {
     id: 'la-b8-l1-participios', blockId: 8, mdx: 'b8/l1-participios.mdx',

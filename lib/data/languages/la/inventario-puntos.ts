@@ -855,7 +855,7 @@ export const PUNTOS_LA: PuntoLa[] = [
     motivo: 'deriva por regla desde el tiempo de la principal; el español tiene una regla parecida y transfiere bastante',
     cubre: ['L3/GRAMÁTICA · CONSECUTIO'], cita: 'Aplica la concordancia de tiempos',
     varia: 'el tiempo de la principal y si la subordinada es simultánea o anterior',
-    excepcion: 'dos, y son justo donde el alumno saca 8/8 sobregeneralizando: la REPRAESENTATIO (el presente histórico admite secuencia primaria) y el perfecto de subjuntivo en la consecutiva tras principal histórica, para subrayar el hecho ocurrido (Allen & Greenough §482-485, §485.c)' }),
+    excepcion: 'dos, y las dos PERMISIVAS —admiten la otra secuencia, no la exigen—, así que son de lectura y no se pueden castigar en producción: el presente histórico admite secuencia SECUNDARIA (Allen & Greenough §485.e) —no «la repraesentatio», que es otra cosa: tiempos primarios en estilo indirecto tras regente histórico (§585.b)—, y el perfecto de subjuntivo en la consecutiva tras principal histórica, para subrayar el hecho ocurrido (§485.c). Corregido el 2026-09-23 por el latinista: la versión anterior las nombraba mal y daba la dirección al revés' }),
 
   P({ id: 'l7-condicionales', nombre: 'Los tres períodos condicionales y el irreal', bloque: 7, peldano: 'L3',
     descripcion: 'Real con indicativo; potencial con presente de subjuntivo; irreal con imperfecto (presente) o pluscuamperfecto (pasado) EN LAS DOS RAMAS.',

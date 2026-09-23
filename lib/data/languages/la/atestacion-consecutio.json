@@ -1,0 +1,113 @@
+{
+ "generado": "2026-09-23",
+ "corpus": "UD Latin (scripts/.cache/treebanks)",
+ "comoSeCuenta": "cabeza con Mood=Sub, ccomp/csubj de un regente en indicativo personal, con un interrogativo dependiente delante (quis sólo con PronType=Int). Tense+Aspect: Past = imperfecto, PastPerf = perfecto, Pqp = pluscuamperfecto",
+ "total": 110,
+ "interrogativaIndirecta": {
+  "Pres": {
+   "PastPerf": 10,
+   "Pres": 51,
+   "Pqp": 1
+  },
+  "Fut": {
+   "Pres": 9
+  },
+  "PastPerf": {
+   "Past": 9,
+   "Pqp": 6,
+   "PastPerf": 4,
+   "Pres": 3
+  },
+  "Past": {
+   "Past": 15,
+   "Pqp": 1
+  },
+  "FutPerf": {
+   "Pres": 1
+  }
+ },
+ "todasLasSubordinadas": {
+  "Pres": {
+   "Pres": 494,
+   "Past": 50,
+   "PastPerf": 65,
+   "Pqp": 33
+  },
+  "PastPerf": {
+   "Past": 441,
+   "Pqp": 283,
+   "PastPerf": 25,
+   "Pres": 79
+  },
+  "Past": {
+   "Past": 163,
+   "Pqp": 57,
+   "Pres": 1
+  },
+  "Pqp": {
+   "Past": 29,
+   "Pqp": 4,
+   "Pres": 1
+  },
+  "Fut": {
+   "Pres": 153,
+   "PastPerf": 21,
+   "Past": 1,
+   "Pqp": 1
+  },
+  "FutPerf": {
+   "Pres": 8
+  }
+ },
+ "ejemplos": {
+  "Pres → PastPerf": [
+   "Iam scio , unde acceperit denarios mille aureos .",
+   "scitis quid fecerim vobis",
+   "ecce hii sciunt quae dixerim ego"
+  ],
+  "Fut → Pres": [
+   "inveniemus ergo unde saturi fiamus .",
+   "dabitur enim vobis in illa hora quid loquamini",
+   "ostendam autem vobis quem timeatis"
+  ],
+  "Pres → Pres": [
+   "Nescit quid faciat , crucis offla , corvorum cibaria .",
+   "Ita nunc Homeros dicit , quemadmodum inter se pugnent Troiani et Parentini .",
+   "Scitis , quid dicam :"
+  ],
+  "PastPerf → Past": [
+   "Minerva admirans , quare steriles sumerent Interrogavit .",
+   "Ignem ergo quaerens aliquot lustravit domus , Tandem que invenit ubi lucernam accenderet .",
+   "venerunt et viderunt ubi maneret et apud eum manserunt die illo"
+  ],
+  "PastPerf → Pqp": [
+   "et narravit illis quomodo in via vidisset Dominum et quia locutus est ei et quomodo in Damasco fiducialiter egerit in nomine Iesu",
+   "dimissi autem venerunt ad suos et adnuntiaverunt eis quanta ad eos principes sacerdotum et seniores dixissent",
+   "narravit autem nobis quomodo vidisset angelum in domo sua stantem et dicentem sibi"
+  ],
+  "Past → Past": [
+   "Et secundum ea multae res eum hortabantur quare sibi eam rem cogitandam et suscipiendam putaret in primis quod Haeduos fratres consanguineos que saepe numero a ",
+   "et congregans omnes principes sacerdotum et scribas populi sciscitabatur ab eis ubi Christus nasceretur",
+   "non enim sciebat quid diceret"
+  ],
+  "PastPerf → PastPerf": [
+   "non legistis quid fecerit David quando esuriit et qui cum eo erant",
+   "numquam legistis quid fecerit David quando necessitatem habuit et esuriit ipse et qui cum eo erant",
+   "de mortuis autem quod resurgant non legistis in libro Mosi super rubum quomodo dixerit illi Deus inquiens"
+  ],
+  "PastPerf → Pres": [
+   "ne que scio ne que novi quid dicas",
+   "sermo quem locutus sum ille iudicabit eum in novissimo die quia ego ex me ipso non sum locutus sed qui misit me Pater ipse mihi mandatum dedit quid dicam et qui",
+   "Atque ab iis rebus quae sunt in iure societatis humanae quem ad modum ducatur honestum ex quo aptum est officium satis fere diximus"
+  ],
+  "FutPerf → Pres": [
+   "numquid lex nostra iudicat hominem nisi audierit ab ipso prius et cognoverit quid faciat"
+  ],
+  "Past → Pqp": [
+   "iterum ergo interrogabant eum Pharisaei quomodo vidisset"
+  ],
+  "Pres → Pqp": [
+   "quin etiam cum candidatum deduceremus quaerit ex me num consuessem Siculis locum gladiatoribus dare"
+  ]
+ }
+}
