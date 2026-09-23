@@ -163,3 +163,30 @@ describe('nada se promete sin que algo lo mida', () => {
     }
   });
 });
+
+// ── Y LA DIRECCIÓN CONTRARIA: nada se escribe sin que llegue al alumno ──
+//
+// Del 2026-09-11 al 23 los agentes escribieron lotes latinos, cada uno con
+// su gate en verde, y NINGUNO se publicó: 237 ítems esperaban una lección
+// que nadie declaró. El contador de cobertura (`puntosConLote`) cuenta
+// LOTES ESCRITOS, así que decía «63 de 117» mientras el alumno veía lo
+// mismo que doce días antes. Es §G3 de la doctrina en su forma más cara:
+// un contador que lee la fuente y no el dato final.
+//
+// La regla: todo punto con lote está DECLARADO en una lección, o APLAZADO
+// con su motivo en SIN_TALLAR. No hay tercera opción silenciosa.
+describe('nada se escribe sin que llegue al alumno', () => {
+  it('todo punto con lote está en una lección o aplazado con motivo', async () => {
+    const { puntosConLote } = await import('@/scripts/lib/cobertura-de-puntos');
+    const conLote = await puntosConLote();
+    // Guarda §A2: un contador vacío dejaría esto verde sin mirar nada.
+    expect(conLote.size, 'el contador de lotes no devolvió nada: ¿sigue leyendo los lotes?').toBeGreaterThan(30);
+    const declarados = new Set(TALLAS.flatMap((t) => t.conceptIds));
+    const aplazados = new Set(Object.keys(SIN_TALLAR));
+    const huérfanos = [...conLote].filter((p) => !declarados.has(p) && !aplazados.has(p)).sort();
+    expect(
+      huérfanos,
+      `puntos con lote que NINGUNA lección declara ni SIN_TALLAR aplaza — sus ítems están escritos y el publicador los rechaza:\n  ${huérfanos.join('\n  ')}`,
+    ).toEqual([]);
+  }, 120_000);
+});
