@@ -1,0 +1,150 @@
+{
+ "generado": "2026-09-23",
+ "corpus": "la_perseus + la_proiel (UD)",
+ "frases": 20406,
+ "agentesAnotados": 568,
+ "porCabeza": {
+  "gerundivo": {
+   "dativo": 65,
+   "conAb": 4,
+   "dativoNombre": 6,
+   "ejemplosDativoNombre": [
+    "Gallis ← faciendum :: Nisi quid in Caesare populo que Romano sit auxilii omnibus Gallis idem esse faciendum quod Helvetii fecerint ut domo emigrent aliud domicilium alias sedes remotas a Germanis petant…",
+    "Sequanis ← perferendi :: Cum ab his saepius quaereret ne que ullam omnino vocem exprimere posset idem Diviacus Haeduus respondit hoc esse miseriorem et graviorem fortunam Sequanorum quam reliquorum quod so…",
+    "navibus ← extimescendus :: quarum rerum omnium nostris navibus casus erat extimescendus",
+    "legionibus ← committendum :: nam et tot et talis viros periculo obsidionis liberare cupio ne que subsidio ire possum quod his duabus legionibus non puto esse committendum ut illuc ducantur ex quibus tamen non …",
+    "Caesari ← agenda :: Caesari omnia uno tempore erant agenda",
+    "militibus ← desiliendum :: Erat ob has causas summa difficultas quod naves propter magnitudinem nisi in alto constitui non poterant militibus autem ignotis locis impeditis manibus magno et gravi onere armoru…"
+   ],
+   "minoritarios": [
+    "pecore ← uindicanda :: Apricis aut macris aut aridis locis prata iam purganda sunt et a pecore uindicanda",
+    "pueris ← operandum :: Graeci iubent oliuam cum plantatur et legitur a mundis pueris atque uirginibus operandum",
+    "te ← adiuvandi :: nam in eo genere sic studio efferimur ut abs te adiuvandi ab aliis prope reprehendendi simus",
+    "aliis ← reprehendendi :: nam in eo genere sic studio efferimur ut abs te adiuvandi ab aliis prope reprehendendi simus"
+   ],
+   "conAbObl": [
+    "iis ← accipiendas :: Hoc facto proelio Caesar ne que iam sibi legatos audiendos ne que condiciones accipiendas arbitrabatur ab iis qui per dolum atque insidias petita pace ultro bellum intulissent",
+    "pecore ← Seruandae :: Seruandae sunt a pecore quia si rodantur amarescunt",
+    "opere ← revocandi :: ab opere revocandi milites",
+    "Arginusis ← removendam :: iidem gloriae iacturam ne minimam quidem facere vellent ne re publica quidem postulante ut Callicratidas qui cum Lacedaemoniorum dux fuisset Peloponnesiaco bello multa que fecisset…",
+    "natura ← petundum :: utrumque omnino a natura petundum est"
+   ]
+  },
+  "gerundivoConSum": {
+   "dativo": 41,
+   "conAb": 1,
+   "dativoNombre": 6,
+   "ejemplosDativoNombre": [
+    "Gallis ← faciendum :: Nisi quid in Caesare populo que Romano sit auxilii omnibus Gallis idem esse faciendum quod Helvetii fecerint ut domo emigrent aliud domicilium alias sedes remotas a Germanis petant…",
+    "Sequanis ← perferendi :: Cum ab his saepius quaereret ne que ullam omnino vocem exprimere posset idem Diviacus Haeduus respondit hoc esse miseriorem et graviorem fortunam Sequanorum quam reliquorum quod so…",
+    "navibus ← extimescendus :: quarum rerum omnium nostris navibus casus erat extimescendus",
+    "legionibus ← committendum :: nam et tot et talis viros periculo obsidionis liberare cupio ne que subsidio ire possum quod his duabus legionibus non puto esse committendum ut illuc ducantur ex quibus tamen non …",
+    "Caesari ← agenda :: Caesari omnia uno tempore erant agenda",
+    "militibus ← desiliendum :: Erat ob has causas summa difficultas quod naves propter magnitudinem nisi in alto constitui non poterant militibus autem ignotis locis impeditis manibus magno et gravi onere armoru…"
+   ],
+   "minoritarios": [
+    "te ← adiuvandi :: nam in eo genere sic studio efferimur ut abs te adiuvandi ab aliis prope reprehendendi simus"
+   ],
+   "conAbObl": [
+    "pecore ← Seruandae :: Seruandae sunt a pecore quia si rodantur amarescunt",
+    "natura ← petundum :: utrumque omnino a natura petundum est"
+   ]
+  },
+  "infectumPasivo": {
+   "dativo": 1,
+   "conAb": 127,
+   "dativoNombre": 0,
+   "ejemplosDativoNombre": [],
+   "minoritarios": [
+    "mihi ← probantur :: quae de Sicinio audisti ea mihi probantur modo ne illa exceptio in aliquem incurrat bene de nobis meritum"
+   ],
+   "conAbObl": []
+  },
+  "participioPerfecto": {
+   "dativo": 11,
+   "conAb": 211,
+   "dativoNombre": 0,
+   "ejemplosDativoNombre": [],
+   "minoritarios": [
+    "mihi ← suspecta :: valde sum ὀξύπεινος et si quaeris omnia mihi sunt suspecta",
+    "ei ← actum :: nam remisi vos ad illum et ecce nihil dignum morte actum est ei",
+    "vobis ← notum :: notum ergo sit vobis quoniam gentibus missum est hoc salutare Dei ipsi et audient",
+    "mihi ← posita :: de iis litteris quas ad te Thessalonica misit et de sermonibus quos ab illo et Romae apud amicos tuos et in itinere habitos putas ecquid tantum causae sit ignoro sed omnis in tua p…",
+    "mihi ← perspecta :: mihi enim perspecta est et ingenuitas et magnitudo animi tui",
+    "tibi ← perspectum :: ac primum tibi perspectum esse iudicium de te meum laetor",
+    "sibi ← gestae :: sibi enim bene gestae mihi conservatae rei publicae dat testimonium",
+    "mihi ← conservatae :: sibi enim bene gestae mihi conservatae rei publicae dat testimonium",
+    "illis ← notus :: ut in oratoriis quos tu in caelum fers non potuit mentio fieri cuiusquam ab iis qui disputant nisi eius qui illis notus aut auditus esset ita hanc ego de re publica quam institui d…",
+    "Fausto ← conscriptam :: non puto etiam hoc Gnaeum nostrum commissurum ut Domitium relinquat etsi Brundisium Scipionem cum cohortibus duabus praemiserat legionem ei Fausto conscriptam in Siciliam sibi plac…",
+    "sibi ← adhibendam :: Eodem fere tempore Publius Crassus cum in Aquitaniam pervenisset quae ut ante dictum est tertia pars Galliae est cum intellegeret in iis locis sibi bellum gerendum ubi paucis ante …"
+   ],
+   "conAbObl": []
+  }
+ },
+ "aAbPorInicial": {
+  "V/h": {
+   "a": 28,
+   "ab": 533
+  },
+  "b": {
+   "a": 20,
+   "ab": 0
+  },
+  "c": {
+   "a": 97,
+   "ab": 1
+  },
+  "d": {
+   "a": 113,
+   "ab": 9
+  },
+  "f": {
+   "a": 58,
+   "ab": 0
+  },
+  "g": {
+   "a": 30,
+   "ab": 1
+  },
+  "l": {
+   "a": 35,
+   "ab": 7
+  },
+  "m": {
+   "a": 170,
+   "ab": 0
+  },
+  "n": {
+   "a": 55,
+   "ab": 7
+  },
+  "p": {
+   "a": 115,
+   "ab": 0
+  },
+  "q": {
+   "a": 42,
+   "ab": 0
+  },
+  "r": {
+   "a": 11,
+   "ab": 5
+  },
+  "s": {
+   "a": 120,
+   "ab": 27
+  },
+  "t": {
+   "a": 80,
+   "ab": 1
+  },
+  "v": {
+   "a": 53,
+   "ab": 0
+  },
+  "x": {
+   "a": 1,
+   "ab": 0
+  }
+ }
+}

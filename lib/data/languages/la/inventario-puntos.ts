@@ -937,12 +937,18 @@ export const PUNTOS_LA: PuntoLa[] = [
     excepcion: 'con verbos que rigen otro caso el gerundivo no aparece y se mantiene el gerundio: la regla «con objeto, gerundivo» tiene su caso negativo' }),
 
   P({ id: 'l8-perifrastica-pasiva', nombre: 'Perifrástica pasiva: la obligación', bloque: 8, peldano: 'L3',
-    descripcion: '«Carthāgō dēlenda est» = «Cartago debe ser destruida». Gerundivo + sum, con el agente en DATIVO y no en ablativo.',
+    descripcion: '«Carthāgō dēlenda est» = «Cartago debe ser destruida». Gerundivo + sum, con el agente normalmente en DATIVO aunque el español diga «por».',
     prereqs: ['l8-gerundio-gerundivo'], clase: 'sin-equivalente',
     calco: { ordenEnganya: 'no', herencia: 'sin-equivalente', via: 'produccion' },
     motivo: 'sin equivalente: se produce desde la paráfrasis con «deber»',
     cubre: ['L3/GRAMÁTICA · GERUNDIVO'], cita: 'produce la perifrástica pasiva (`Carthāgō dēlenda est`) y la traduce con el matiz de obligación',
-    varia: 'si aparece el agente en dativo, que es donde el alumno pone ablativo por analogía con la pasiva' }),
+    varia: 'si aparece el agente en dativo, que es donde el alumno pone ablativo por analogía con la pasiva',
+    excepcion: 'ā + ablativo a veces, cuando el dativo sería ambiguo (otro dativo en la frase, o un verbo que rige dativo: «quibus est ā vōbīs cōnsulendum») o por énfasis (Allen & Greenough §374 N.1; Cicerón, «ā nātūrā petundum est»). Y a la inversa, el dativo de agente sale también con el participio de perfecto («mihi dēlīberātum est», §375)' }),
+  // ↑ `excepcion` añadida el 2026-09-23 por el latinista: la descripción
+  //   anterior decía «y no en ablativo», regla absoluta falsa (§E2).
+  //   Y la `cita` del descriptor promete «produce la perifrástica»; el lote
+  //   publicado sólo mide el AGENTE (el gerundivo viene dado): cobertura
+  //   parcial, dicha en el objetivo de la lección.
 
   P({ id: 'l8-supino', nombre: 'Supino en -um y en -ū', bloque: 8, peldano: 'L3',
     descripcion: '«vēnērunt rogātum» (finalidad tras verbo de movimiento) y «mīrābile dictū» (limitación tras adjetivo). Dos usos y nada más.',

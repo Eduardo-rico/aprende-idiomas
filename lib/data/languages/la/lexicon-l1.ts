@@ -251,7 +251,7 @@ export const VERBOS_L1: EntradaVerbal[] = [
   { lema: 'legō', infinitivo: 'legere', perfecto: 'lēgī', supino: 'lēctum', glosa: 'leer' },
   { lema: 'audiō', infinitivo: 'audīre', perfecto: 'audīvī', supino: 'audītum', glosa: 'oír' },
   { lema: 'inveniō', infinitivo: 'invenīre', perfecto: 'invēnī', supino: 'inventum', glosa: 'encontrar' },
-  { lema: 'custōdiō', infinitivo: 'custōdīre', perfecto: 'custōdīvī', supino: 'custōdītum', glosa: 'guardar' },
+  { lema: 'custōdiō', infinitivo: 'custōdīre', perfecto: 'custōdīvī', supino: 'custōdītum', glosa: 'guardar, custodiar' },
   { lema: 'portō', infinitivo: 'portāre', perfecto: 'portāvī', supino: 'portātum', glosa: 'llevar' },
 ];
 

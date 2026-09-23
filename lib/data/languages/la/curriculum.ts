@@ -323,6 +323,14 @@ export const TALLAS: Talla[] = [
       'El infinitivo como sujeto y como objeto',
     ],
   },
+  {
+    id: 'la-b8-l3-perifrastica-pasiva', blockId: 8, mdx: 'b8/l3-perifrastica-pasiva.mdx',
+    name: 'Perifrástica pasiva: la obligación',
+    conceptIds: ['l8-perifrastica-pasiva'],
+    objectives: [
+      'Escribir el agente de la perifrástica pasiva: la obligación',
+    ],
+  },
   // ── b10 · Orden ────────────────────────────────────────────────────
   //
   // ⚠ SIN LECCIÓN TODAVÍA, A PROPÓSITO. `l10-que-enclitico` tiene 12

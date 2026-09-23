@@ -219,6 +219,21 @@ export function todasLasFormasDeL1(): FormaDeL1[] {
           for (const c of ORDEN_CASOS)
             out.push({ clave: `${v.lema}.part-${cual}.${g}.${c}.${num}`, forma: declinarAdjetivo(como, g, c, num), tabla: 'PARTICIPIOS' });
     }
+  // EL GERUNDIVO DE LO PROPIO, declinado. Se enumeraba el de los
+  // IMPORTADOS (más abajo) y no el de `VERBOS_L1`: `laudandus` salía como
+  // palabra de fuera de L1 siendo `laudō` del núcleo. Lo destapó el primer
+  // lote de gerundivo (`l8-perifrastica-pasiva`, 2026-09-23), no un gate:
+  // §C1, el enumerador que encoge en silencio, por asimetría entre dos
+  // tablas.
+  for (const v of VERBOS_L1) {
+    if (v.lema.normalize('NFC') === 'sum') continue; // sin gerundivo
+    const ger = gerundivo(v);
+    const comoGer = { lema: ger.lema, tema: ger.lema.normalize('NFC').slice(0, -2), glosa: ger.glosa };
+    for (const g of ['m', 'f', 'n'] as const)
+      for (const num of ['sg', 'pl'] as const)
+        for (const c of ORDEN_CASOS)
+          out.push({ clave: `${v.lema}.gerundivo.${g}.${c}.${num}`, forma: declinarAdjetivo(comoGer, g, c, num), tabla: 'PARTICIPIOS' });
+  }
   // Del participio se enumera el de PRESENTE, que es el que declina como
   // adjetivo de 3.ª y el que el inventario examina en `l4-adjetivo-3a`.
   for (const v of VERBOS_L1) {
