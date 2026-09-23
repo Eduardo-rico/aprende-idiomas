@@ -180,9 +180,13 @@ export const ITEMS: ClozeGenRu[] = [
   // ⚠ §74 PEDÍA LEER `карт` ANTES DE USARLO: ¿homógrafo de otra palabra?
   // Leído: las 91 son el genitivo plural de карта, casi todas «carta de
   // baraja» (колоду карт 13, колода 8, колоды 5, игральных 3); ningún otro
-  // lema da esa cadena. La glosa «mapa, carta» cubre los dos sentidos.
+  // lema da esa cadena. ⚠ La v0 decía «la glosa "mapa, carta" cubre los dos
+  // sentidos», y eso es verdad en Madrid y falso en México, donde «carta» es
+  // письмо — y este marco lleva «старое письмо». Corregida el 2026-09-23 en el
+  // lexicón a «mapa, carta de baraja» (ver su nota), con las dos pistas
+  // publicadas resincronizadas por `resincronizar-pista-ru.ts`.
   { p: P, lema: 'карта', par: 'sredi', eje: 'declinacion',
-    marco: 'Среди ___ ({L}) лежало старое письмо.', pista: 'mapa, carta — genitivo plural · femenino',
+    marco: 'Среди ___ ({L}) лежало старое письмо.', pista: 'mapa, carta de baraja — genitivo plural · femenino',
     rivalesNoAceptados: {
       'карты': 'NO ES UN RIVAL DEL MISMO ANÁLISIS: «среди карты» es el genitivo SINGULAR con среди «en medio de» (среди комнаты 61, среди двора 11), ruso correcto: «en medio del mapa». La pista pide genitivo PLURAL y en esa casilla карты no es respuesta. ⚠ G11 no puede ver esta clase —sólo genera rivales pegados al tema en plural—, así que una lectura correcta en SINGULAR nunca lo pondría rojo (C5): se declara a mano, como места.',
     } },
@@ -606,7 +610,9 @@ export function barridoPorClase(items: ClozeGenRu[], clase: (x: ClozeGenRu) => s
 }
 const mapa = (clase: (x: ClozeGenRu) => string) => new Map(barridoPorClase(ITEMS, clase).map((r) => [r.clase, r.cola]));
 const colaFija = () => COLAS.map((c) => ({ c, n: ITEMS.filter((x) => aciertaCon(x, temaDelLema(x.lema) + c)).length })).sort((p, q) => q.n - p.n)[0]!;
-export const claseDeGlosa = (g: string) => (g.split(/[ ,]+/)[0] ?? '').slice(-1);
+// Parte también por `;` (dictamen del 2026-09-23): una glosa «mapa; naipe»
+// daba el token «mapa;» y una clase fantasma de tamaño 1 que la ruta memoriza.
+export const claseDeGlosa = (g: string) => (g.split(/[ ,;]+/)[0] ?? '').slice(-1);
 const E = (v: Vista) => NOM.get(v.lema)!;
 
 export const ESTRATEGIAS: Ruta[] = [

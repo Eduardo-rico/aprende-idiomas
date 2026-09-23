@@ -242,7 +242,7 @@ export const ITEMS: ClozePlRu[] = [
   {
     p: 'u3-plural-nominativo', lema: 'карта', par: 'sunduk', eje: 'grafia',
     marco: 'В сундуке лежали ___ ({L}).',
-    pista: 'mapa, carta — nominativo plural · femenino',
+    pista: 'mapa, carta de baraja — nominativo plural · femenino',
   },
 
   // ── PAR 3 · EL NEUTRO NO ENTRA EN EL REPARTO -ы/-и NUNCA ────────────

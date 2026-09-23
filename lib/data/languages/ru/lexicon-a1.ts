@@ -57,8 +57,8 @@ export const NOMBRES_A1: EntradaNominal[] = [
   // cero, y ninguna regla las separa — el reparto es LÉXICO. `карт` es el
   // ítem de sobreaplicación de `u5-genitivo-plural`: quien aprenda «la
   // desinencia cero hace aparecer una vocal» escribe `*карот`.
-  { lema: 'карта', genero: 'f', tema: 'duro', glosa: 'mapa, carta',
-    nota: 'está por el genitivo plural SIN vocal de apoyo (карт 91), que es la frontera de la regla de сестёр' },
+  { lema: 'карта', genero: 'f', tema: 'duro', glosa: 'mapa, carta de baraja',
+    nota: 'está por el genitivo plural SIN vocal de apoyo (карт 91), que es la frontera de la regla de сестёр. ⚠ LA GLOSA SE CORRIGIÓ EL 2026-09-23 y la corrección cambió las pistas de dos ítems publicados (b3 y b5): decía «mapa, carta», y para un mexicano «carta» a secas es письмо — el portugués no lo arregla, «carta» también es la del correo —, y el ítem de b5 lleva «старое письмо» en el marco. NO es «naipe»: en portugués «naipe» es el PALO de la baraja, falso amigo para este alumno. Reparto en la biblioteca (leído por el lingüista): de las 91 de карт, 87 naipe y 2 mapa; del lema entero ≈86 % naipe. «mapa» va PRIMERO por el aparato y no por la lengua: la ruta ciega de la glosa de los lotes a2/a2b lee la última letra de la primera palabra, y con «mapa» da la misma clase que antes' },
   { lema: 'сестра', genero: 'f', tema: 'duro', glosa: 'hermana',
     genPlIrreg: 'сестёр', temaPl: 'сёстр',
     lecturaYo: { 'gen.sg': 'сёстры (24) NO es una variante de сестры: es el NOMINATIVO PLURAL, otra casilla del mismo lema. La máquina tiene razón en el genitivo singular' },

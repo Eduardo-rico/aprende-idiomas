@@ -587,7 +587,7 @@ export const PUNTOS_RU: PuntoRu[] = [
     cita: 'declina correctamente sustantivos y adjetivos en los seis casos, singular y plural, incluidos los temas blandos y los sibilantes' }),
 
   P({ id: 'u5-genitivo-plural', nombre: 'El genitivo plural: -ов/-ев, -ей o CERO, con vocal de apoyo', bloque: 5, nivel: 'A2',
-    descripcion: 'Tres desinencias sin regla única, la desinencia CERO que hace aparecer una vocal (окно→окон, сестра→сестёр) y los de tema de plural propio, de altísima frecuencia (людей, детей, друзей). ⚠ `рублей` NO es de ésos (2026-09-23): es el -ей regular del tema blando, como коней o дверей — lo mismo que once `genPlIrreg` del lexicón que se retiraron ese día por guardar como irregular lo que la regla da.',
+    descripcion: 'Tres desinencias sin regla única, la desinencia CERO que hace aparecer una vocal (окно→окон, сестра→сестёр) y los de tema de plural propio, de altísima frecuencia (людей, детей, друзей). `рублей` no es de ésos: es el -ей regular del tema blando, como коней o дверей.',
     prereqs: ['u5-declinacion-plural'], clase: 'paradigma', calco: { castellano: 'no-aplica', portugues: 'no-aplica', internacional: 'engañoso' },
     capas: { examina: 'declinacion', dadas: ['caso', 'genero', 'lexico'] },
     gratis: 'nada, y es probablemente la casilla más cara del idioma. La desinencia CERO no tiene análogo concebible: en las dos lenguas del alumno el plural AÑADE y aquí QUITA, y encima hace aparecer una vocal que no estaba.',

@@ -654,7 +654,7 @@ export function barridoPorClase(items: ClozeOblRu[], clase: (x: ClozeOblRu) => s
 }
 const mapa = (clase: (x: ClozeOblRu) => string) => new Map(barridoPorClase(ITEMS, clase).map((r) => [r.clase, r.cola]));
 const colaFija = () => COLAS.map((c) => ({ c, n: ITEMS.filter((x) => aciertaCon(x, temaDelLema(x.lema) + c)).length })).sort((p, q) => q.n - p.n)[0]!;
-const primeraPalabra = (g: string) => (g.split(/[ ,]+/)[0] ?? '');
+const primeraPalabra = (g: string) => (g.split(/[ ,;]+/)[0] ?? '');  // `;` también: ver claseDeGlosa de a2b
 export const claseDeGlosa = (g: string) => primeraPalabra(g).slice(-1);
 
 export const ESTRATEGIAS: Ruta[] = [
