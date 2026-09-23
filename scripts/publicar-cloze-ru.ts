@@ -34,6 +34,7 @@ import * as A1 from './lotes/cloze-ru-a1';
 import * as A1B from './lotes/cloze-ru-a1b';
 import * as A1C from './lotes/cloze-ru-a1c';
 import * as A1D from './lotes/cloze-ru-a1d';
+import * as A2 from './lotes/cloze-ru-a2';
 
 /** ⚠ EL REGISTRO ES GENÉRICO Y NO ESTÁ TIPADO AL LOTE 1, y el motivo importa.
  *  La v0 importaba `respuestaDe` y `alternativasDe` de `cloze-ru-a1` **por
@@ -104,6 +105,14 @@ const LOTES: Record<string, LoteAnonimo> = {
     alternativasDe: A1D.alternativasDe,
     punto: (x) => x.p, frase: (x) => A1D.frase(x), pista: (x) => x.pista,
     tags: (x) => [`eje-${x.eje}`, ...(x.frontera ? [`frontera-${x.frontera.regla}`] : [])],
+  }),
+  // El QUINTO lote, primero de A2. Aquí el caso SÍ varía (dat/instr/prep, cuatro
+  // de cada) y se etiqueta; el número no, porque es plural en los doce.
+  a2: deLote<A2.ClozeOblRu>({
+    items: A2.ITEMS, verificar: A2.verificar, respuestaDe: A2.respuestaDe,
+    alternativasDe: A2.alternativasDe,
+    punto: (x) => x.p, frase: (x) => A2.frase(x), pista: (x) => x.pista,
+    tags: (x) => [`caso-${x.caso}`, `eje-${x.eje}`, ...(x.frontera ? [`frontera-${x.frontera.regla}`] : [])],
   }),
 };
 
