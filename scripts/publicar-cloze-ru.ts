@@ -35,6 +35,7 @@ import * as A1B from './lotes/cloze-ru-a1b';
 import * as A1C from './lotes/cloze-ru-a1c';
 import * as A1D from './lotes/cloze-ru-a1d';
 import * as A2 from './lotes/cloze-ru-a2';
+import * as A2B from './lotes/cloze-ru-a2b';
 
 /** ⚠ EL REGISTRO ES GENÉRICO Y NO ESTÁ TIPADO AL LOTE 1, y el motivo importa.
  *  La v0 importaba `respuestaDe` y `alternativasDe` de `cloze-ru-a1` **por
@@ -113,6 +114,15 @@ const LOTES: Record<string, LoteAnonimo> = {
     alternativasDe: A2.alternativasDe,
     punto: (x) => x.p, frase: (x) => A2.frase(x), pista: (x) => x.pista,
     tags: (x) => [`caso-${x.caso}`, `eje-${x.eje}`, ...(x.frontera ? [`frontera-${x.frontera.regla}`] : [])],
+  }),
+  // El SEXTO lote, segundo de A2. La casilla es UNA (genitivo plural) y no se
+  // etiqueta, como en el lote 4; lo que varía es la DESINENCIA elegida, y ésa
+  // sí se etiqueta, leída contra el tema del lema y no en la cola (§A6).
+  a2b: deLote<A2B.ClozeGenRu>({
+    items: A2B.ITEMS, verificar: A2B.verificar, respuestaDe: A2B.respuestaDe,
+    alternativasDe: A2B.alternativasDe,
+    punto: (x) => x.p, frase: (x) => A2B.frase(x), pista: (x) => x.pista,
+    tags: (x) => [`des-${A2B.desinenciaDe(A2B.respuestaDe(x) ?? '', x.lema)}`, `eje-${x.eje}`, ...(x.frontera ? [`frontera-${x.frontera.regla}`] : [])],
   }),
 };
 

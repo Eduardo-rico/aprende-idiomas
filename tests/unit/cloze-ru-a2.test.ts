@@ -143,7 +143,9 @@ describe('cada gate, VISTO EN ROJO contra su defecto', T, () => {
 
 describe('★ EL CONTROL DEL APARATO, en rojo y en verde (§47)', T, () => {
   it('limpio sobre las 120 casillas (40 lemas × 3 casos)', () => {
-    expect(NOMBRES_A1).toHaveLength(40);
+    // Era `toHaveLength(40)`; entraron мальчик y мужчина el 2026-09-23. El
+    // control recorre NOMBRES_A1 entero, así que la forma es «no encoge».
+    expect(NOMBRES_A1.length).toBeGreaterThanOrEqual(40);
     expect(controlDelAparato()).toEqual([]);
   });
   it('ROJO con la regla mutada en un lema que NINGÚN ítem toca (музей)', () => {

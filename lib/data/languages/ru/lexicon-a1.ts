@@ -55,6 +55,17 @@ export const NOMBRES_A1: EntradaNominal[] = [
   // Masculino con forma femenina: la clase que `u3-genero-por-terminacion`
   // declara como su único contenido, porque leer la terminación es gratis.
   { lema: 'папа', genero: 'm', tema: 'duro', glosa: 'papá', animado: true },   // 557
+  // ⚠ ENTRÓ EL 2026-09-23 PARA `u5-genitivo-plural`, y por la regla, no por
+  // la frecuencia (aunque la tiene: мужчина 426 · мужчины 364 · мужчин 241).
+  // Es el único masculino del lexicón de la 1.ª declinación que se puede
+  // pluralizar con naturalidad (`папа` → `пап` sale 4 veces), y el genitivo
+  // plural es la casilla donde eso DECIDE: la desinencia la manda la
+  // declinación (y, sólo dentro de la 2.ª, el género), así que мужчин (Ø)
+  // frente a мальчиков (-ов) es el par que tumba la regla «masculino ⇒ -ов»
+  // que dan los manuales de РКИ por género (*мужчинов 0). No es transferencia:
+  // en español y portugués el plural lo decide la terminación (el poeta/los
+  // poetas), así que el patrón le es familiar al alumno.
+  { lema: 'мужчина', genero: 'm', tema: 'duro', glosa: 'hombre', animado: true },
   { lema: 'дядя', genero: 'm', tema: 'blando', glosa: 'tío', animado: true, genPlIrreg: 'дядей', // 1199
     desinenciaOTonica: false,
     nota: 'el genitivo plural de la 1.ª blanda no tiene una sola forma: недель y деревень toman -ь (con vocal de apoyo) y дядей toma -ей (83). No hay regla que los separe desde el lema, así que la máquina pone la mayoritaria y el reparto va en el lexicón' },
@@ -71,6 +82,11 @@ export const NOMBRES_A1: EntradaNominal[] = [
   // ── 2.ª DECLINACIÓN MASCULINA, TEMA DURO ──────────────────────────
   { lema: 'стол', genero: 'm', tema: 'duro', glosa: 'mesa' },              // 1473
   { lema: 'студент', genero: 'm', tema: 'duro', glosa: 'estudiante', animado: true }, // 253
+  // ⚠ ENTRÓ EL 2026-09-23 como la pareja de `мужчина` (ver arriba): masculino
+  // de la 2.ª, animado, tema VELAR y genitivo plural regular en -ов
+  // (мальчиков 95). `студент` ya está en otro par del mismo lote, y el marco
+  // de un par tiene que servir a los dos lemas. мальчик 1070 · мальчики 123.
+  { lema: 'мальчик', genero: 'm', tema: 'duro', glosa: 'niño', animado: true },
   // ⚠ LA CLASE DEL NOMINATIVO PLURAL EN -А́, que es el ítem de
   // sobreaplicación de `u3-plural-nominativo`: la regla acierta la LETRA
   // (`-ы` es lo que toca) y falla la CASILLA. `города` 793.

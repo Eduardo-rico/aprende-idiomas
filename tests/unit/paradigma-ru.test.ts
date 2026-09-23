@@ -486,7 +486,10 @@ describe('LA VARIANTE `-ою/-ею` DEL XIX: el error simétrico, medido', { tim
     // `землею` 91, donde la variante GANA 5,7 a 1.
     const primera = NOMBRES_A1.filter((e) => declinacionDe(e) === 1);
     const conVariante = primera.filter((e) => variantesInstrSgFem(casillaNominal(e, 'instr', 'sg')!).length > 0);
-    expect(primera.length).toBe(13);
+    // 13 hasta el 2026-09-23; `мужчина` es 1.ª declinación y entra con su
+    // variante atestada (мужчиною 10 · мужчиной 54). Lo que se afirma es que
+    // TODOS la tienen, y eso no depende del número.
+    expect(primera.length).toBe(14);
     expect(conVariante.length).toBe(primera.length);
   });
 });

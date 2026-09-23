@@ -179,7 +179,11 @@ describe('el quinto veredicto: un rival homógrafo de su propia respuesta', TIME
 describe('el control del aparato cubre los 40 lemas y se ve en rojo', TIMEOUT_CORPUS, () => {
   it('el CONTROL NEGATIVO: con la regla de verdad, cero discrepancias en los 40', () => {
     expect(controlDelAparato()).toEqual([]);
-    expect(NOMBRES_A1.length).toBe(40);
+    // ⚠ Era `toBe(40)` y se puso rojo al entrar мальчик y мужчина (2026-09-23)
+    // sin que nada estuviera mal: lo que el control promete es cubrir el
+    // lexicón ENTERO, que ya lo hace iterando NOMBRES_A1. Se fija la FORMA
+    // (B7): que el lexicón no encoja por debajo de lo que se midió.
+    expect(NOMBRES_A1.length).toBeGreaterThanOrEqual(40);
   });
   it('EN ROJO con la mitad velar de la regla de u1 quitada', () => {
     const sinVelar = (l: string, g: GeneroRu, t: TemaRu) => {
@@ -486,7 +490,10 @@ describe('las afirmaciones medibles de la cabecera', TIMEOUT_CORPUS, () => {
       return t + (/[кгхжшщч]$/.test(t) ? 'и' : 'ы');
     };
     const ok = NOMBRES_A1.filter((e) => quitarAcento(casillaNominal(e, 'nom', 'pl') ?? '') === ultima(e));
-    expect(ok.length).toBe(30);
+    // Eran 30 de 40; desde el 2026-09-23 son 32 de 42 (мальчик y мужчина
+    // aciertan). Lo que la cabecera afirma es la FORMA: que falla exactamente
+    // estos diez, y eso sigue fijado abajo por su nombre.
+    expect(ok.length).toBe(NOMBRES_A1.length - 10);
     // Y los diez que falla, enumerados: si esta lista cambia, la cabecera miente.
     expect(NOMBRES_A1.filter((e) => !ok.includes(e)).map((e) => e.lema).sort())
       .toEqual(['берег', 'город', 'день', 'друг', 'край', 'лес', 'сердце', 'сестра', 'учитель', 'человек'].sort());

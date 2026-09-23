@@ -66,7 +66,9 @@
 // ELIGIENDO LEMAS PEORES.** Volcado el nominativo plural de los 40 nombres del
 // lexicón y comparado contra la regla de la última letra del lema
 // (о→а, е→я, ь/й→и, а→ы, я→и, consonante→ы, más la regla velar de u1), la
-// regla acierta **30 de 40**. En ruso el tema se LEE en la letra final del
+// regla acierta **30 de 40** (medido el 2026-09-13; desde el 2026-09-23 el
+// lexicón tiene 42 y acierta 32: мальчик y мужчина caen los dos del lado que
+// acierta, y los diez que falla son los mismos, fijados en test). En ruso el tema se LEE en la letra final del
 // lema casi siempre, y eso no es una debilidad del lote: es el motivo por el
 // que el punto declara `grafia` DADA y por el que su contenido discriminante
 // son las CLASES LÉXICAS. Los diez lemas del lexicón donde la regla falla:
@@ -957,7 +959,7 @@ const MAPA_GENERO = new Map(barridoPorClase((x) => entradaNom(x)?.genero ?? '?')
 export const PERFILES: Ruta[] = [
   {
     nombre: 'la-ultima-letra-del-lema',
-    porQue: '★ LA REGLA DE LA PRIMERA PÁGINA DEL MANUAL, y es la que decide el diseño de este lote: о→а, е→я, ь/й→и, я→и, а→ы, consonante→ы, más la regla velar de u1. NO es una ruta ciega —ninguna de las dos lenguas del alumno mapea la vocal final de un sustantivo a una desinencia de plural— y por eso no va contra ningún tope; lo que mide es cuánto del punto se resuelve leyendo el significante. ⚠ Y SU NÚMERO ESTÁ MEDIDO SOBRE LOS 40 LEMAS DEL LEXICÓN ANTES DE ESCRIBIR UN ÍTEM, que es lo que impide leerlo como una propiedad del lote: acierta 30 de 40, o sea que en ruso el tema se LEE en la letra final casi siempre. Los que falla en el lexicón son las clases léxicas, la vocal fugaz y `сердце` —donde falla la regla y no la lengua, porque el tema de `сердце` es DURO y la `е` del lema no lo dice—.',
+    porQue: '★ LA REGLA DE LA PRIMERA PÁGINA DEL MANUAL, y es la que decide el diseño de este lote: о→а, е→я, ь/й→и, я→и, а→ы, consonante→ы, más la regla velar de u1. NO es una ruta ciega —ninguna de las dos lenguas del alumno mapea la vocal final de un sustantivo a una desinencia de plural— y por eso no va contra ningún tope; lo que mide es cuánto del punto se resuelve leyendo el significante. ⚠ Y SU NÚMERO ESTÁ MEDIDO SOBRE LOS 40 LEMAS DEL LEXICÓN ANTES DE ESCRIBIR UN ÍTEM, que es lo que impide leerlo como una propiedad del lote: acierta 30 de 40 (32 de 42 desde el 2026-09-23, con los mismos diez fallos), o sea que en ruso el tema se LEE en la letra final casi siempre. Los que falla en el lexicón son las clases léxicas, la vocal fugaz y `сердце` —donde falla la regla y no la lengua, porque el tema de `сердце` es DURO y la `е` del lema no lo dice—.',
     predicho: 9,
     aplicablesPredicho: 12,
     correr: (v) => {

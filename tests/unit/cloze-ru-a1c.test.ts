@@ -173,7 +173,10 @@ describe('cada gate, visto EN ROJO contra el defecto que existe para cazar', TIM
           else if (c === 'instr' && num === 'sg' && n.genero === 'f') instrSgF++;
           else otras++;
         }
-    expect([instrPl, instrSgF, otras]).toEqual([240, 38, 6]);
+    // 240 con 40 lemas; 252 desde el 2026-09-23 (мальчик y мужчина × 6
+    // adjetivos, los dos en el instrumental plural). Las otras dos clases no
+    // se movieron, que es lo que este test afirma: la colisión vive ahí.
+    expect([instrPl, instrSgF, otras]).toEqual([252, 38, 6]);
   });
 
   // ── LOS PARES ───────────────────────────────────────────────────────
