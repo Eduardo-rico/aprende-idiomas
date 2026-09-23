@@ -408,7 +408,17 @@ async function main() {
         const frase = (str(data.sentence) ?? str(data.front) ?? str(data.source) ?? '').toLowerCase().replace(/\s+/gu, ' ').trim();
         const pantalla = `${frase} ⟦${(str(data.hintEs) ?? str(data.instructionEs) ?? '').toLowerCase().replace(/\s+/gu, ' ').trim()}⟧`;
         if (!frase) problemas.push(`${String(it.id)}: el ejercicio sale sin frase`);
-        if (yaEnCorpus.has(pantalla)) problemas.push(`${id}: el enunciado ya está publicado en ${yaEnCorpus.get(pantalla)}`);
+        // ⚠ EL PUBLICADOR TIENE QUE PODER CORRERSE DOS VECES. `yaEnCorpus` se
+        //   lee de los bloques YA publicados, así que en la segunda pasada
+        //   cada ítem publicado se encontraba A SÍ MISMO —«ya publicado en
+        //   bb8372bc» siendo él bb8372bc— y el publicador, que es todo o
+        //   nada, no escribía NADA. Así estuvo del 2026-09-11 al 23: doce
+        //   días escribiendo lotes que ningún alumno vio, y cada lote salía
+        //   verde porque su gate mira el lote, no la publicación.
+        //   Mismo id = mismo contenido (el id ES el hash): no es un
+        //   duplicado, es él. Duplicado es MISMA pantalla con OTRO id.
+        const yaPublicadoComo = yaEnCorpus.get(pantalla);
+        if (yaPublicadoComo !== undefined && yaPublicadoComo !== id) problemas.push(`${id}: el enunciado ya está publicado en ${yaPublicadoComo}`);
         // ⚠ MISMA PANTALLA CON LA MISMA RESPUESTA NO ES UN DEFECTO: ES EL
         //   MISMO EJERCICIO, y puede servir legítimamente a DOS puntos —el
         //   registro lleva `concepts` en plural—. Pasa dos veces entre
@@ -476,16 +486,38 @@ async function main() {
     for (const s2 of fusionados) console.log(`- ${s2}`);
   }
   if (porDefecto.length) { console.log(`\n**${porDefecto.length} ítems caen en la lección por DEFECTO:**`); for (const s of porDefecto) console.log(`- ${s}`); }
-  if (problemas.length) { console.log(`\n**${problemas.length} PROBLEMAS — no se escribe nada:**`); for (const s of problemas.slice(0, 40)) console.log(`- ${s}`); process.exit(1); }
+  if (problemas.length) { console.log(`\n**${problemas.length} PROBLEMAS — no se escribe nada:**`); for (const s of problemas.slice(0, 40)) console.log(`- ${s}`);
+    // Recortar la lista escondía el tamaño REAL del bloqueo: el encabezado
+    // decía 237 y se leían 40, todos de las mismas tres causas, así que
+    // parecían tres arreglos cuando eran más. Se imprime el RESUMEN POR
+    // CAUSA completo, que es lo que se necesita para decidir.
+    if (problemas.length > 40) {
+      const causa = (x: string) => x.replace(/^[^:]+: /, '').replace(/«[^»]*»/g, '«…»').replace(/ en [0-9a-f]{8}$/, '').replace(/\b(b|bloque )\d+/g, '$1N');
+      const cuenta = new Map<string, number>();
+      for (const x of problemas) cuenta.set(causa(x), (cuenta.get(causa(x)) ?? 0) + 1);
+      console.log(`\n… y ${problemas.length - 40} más. RESUMEN DE LOS ${problemas.length} POR CAUSA:`);
+      for (const [c, n] of [...cuenta].sort((a, b) => b[1] - a[1])) console.log(`  ${String(n).padStart(4)}  ${c}`);
+    }
+    process.exit(1); }
   console.log('\nGates limpios.');
   if (!write) { console.log('DRY-RUN: el corpus no se ha tocado. Repite con --write.'); return; }
   fs.mkdirSync(BLOCKS_DIR, { recursive: true });
   for (const [b, xs] of porBloque) {
     const f = path.join(BLOCKS_DIR, `b${b}.json`);
-    const arr = fs.existsSync(f) ? (JSON.parse(fs.readFileSync(f, 'utf8')) as unknown[]) : [];
-    arr.push(...xs);
+    const arr = fs.existsSync(f) ? (JSON.parse(fs.readFileSync(f, 'utf8')) as Crudo[]) : [];
+    // ⚠ AÑADE SÓLO LO NUEVO. Esto era `arr.push(...xs)` a secas, y
+    //   mientras el publicador no podía correrse dos veces —se bloqueaba
+    //   consigo mismo— nunca importó. El día que se arregló esa
+    //   idempotencia (2026-09-23), la segunda pasada DUPLICÓ los 356 ítems
+    //   ya publicados: 948 escritos, 592 ids únicos. Arreglar un bloqueo
+    //   destapa el defecto que el bloqueo tapaba.
+    //   El id ES el hash del contenido, así que «mismo id» es «mismo
+    //   ejercicio» y se salta; no se reescribe ni se duplica.
+    const yaEstan = new Set(arr.map((x) => String(x.id)));
+    const nuevos = xs.filter((x) => !yaEstan.has(String((x as Crudo).id)));
+    arr.push(...(nuevos as Crudo[]));
     fs.writeFileSync(f, JSON.stringify(arr, null, 2) + '\n');
-    console.log(`escrito la/blocks/b${b}.json (+${xs.length})`);
+    console.log(`escrito la/blocks/b${b}.json (+${nuevos.length} nuevos, ${xs.length - nuevos.length} ya estaban)`);
   }
 }
 

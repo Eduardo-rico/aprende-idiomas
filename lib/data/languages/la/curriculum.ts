@@ -88,6 +88,15 @@ export const SIN_TALLAR: Record<string, string> = {
 };
 
 export const TALLAS: Talla[] = [
+  // ── b1 · Ortografía y cantidad ───────────────────────────────────
+  {
+    id: 'la-b1-l1-cantidad', blockId: 1, mdx: 'b1/l1-cantidad.mdx',
+    name: 'La cantidad vocálica distingue palabras',
+    conceptIds: ['l1-cantidad-fonemica'],
+    objectives: [
+      'La cantidad vocálica distingue palabras',
+    ],
+  },
   // ── b2 · Sustantivo ────────────────────────────────────────────────
   {
     id: 'la-b2-l1-entrada-del-lexico', blockId: 2, mdx: 'b2/l1-entrada-del-lexico.mdx',
@@ -184,6 +193,15 @@ export const TALLAS: Talla[] = [
       'Aplicar la regla de dos mitades del relativo: género y número vienen del ANTECEDENTE, el caso viene de SU PROPIA oración («vir quem videō»)',
     ],
   },
+  {
+    id: 'la-b4-l3-adjetivo-3a-y-grado', blockId: 4, mdx: 'b4/l3-adjetivo-3a-y-grado.mdx',
+    name: 'Adjetivos de la tercera y los grados del adjetivo',
+    conceptIds: ['l4-adjetivo-3a', 'l4-comparativo'],
+    objectives: [
+      'Adjetivos de la tercera: tres, dos y una terminación',
+      'Comparativo y superlativo, regulares e irregulares',
+    ],
+  },
   // ── b5 · Verbo I ───────────────────────────────────────────────────
   {
     id: 'la-b5-l1-partes-y-presente', blockId: 5, mdx: 'b5/l1-partes-y-presente.mdx',
@@ -213,6 +231,14 @@ export const TALLAS: Talla[] = [
       'Negar con «nōn» delante del verbo, que transfiere entero desde el español',
     ],
   },
+  {
+    id: 'la-b5-l4-irregulares', blockId: 5, mdx: 'b5/l4-irregulares.mdx',
+    name: 'Los verbos irregulares',
+    conceptIds: ['l5-irregulares'],
+    objectives: [
+      'Conjugar los irregulares eō, ferō, volō, nōlō, mālō y fīō',
+    ],
+  },
   // ── b6 · Verbo II ──────────────────────────────────────────────────
   {
     id: 'la-b6-l1-perfectum', blockId: 6, mdx: 'b6/l1-perfectum.mdx',
@@ -220,6 +246,63 @@ export const TALLAS: Talla[] = [
     conceptIds: ['l6-perfectum'],
     objectives: [
       'Formar los tres tiempos del tema de perfecto (amāvī, amāveram, amāverō) con sus desinencias propias, y reconocer las dos formas de la 3.ª plural: «-ērunt» y «-ēre»',
+    ],
+  },
+  {
+    id: 'la-b6-l2-pasiva-y-deponentes', blockId: 6, mdx: 'b6/l2-pasiva-y-deponentes.mdx',
+    name: 'La voz pasiva y los deponentes',
+    conceptIds: ['l6-pasiva-infectum', 'l6-pasiva-perifrastica', 'l6-deponentes'],
+    objectives: [
+      'Pasiva del infectum: las desinencias en -r',
+      'Pasiva del perfectum: participio + sum, y el participio CONCUERDA',
+      'Deponentes: forma pasiva, sentido activo',
+    ],
+  },
+  // ── b7 · Subjuntivo ──────────────────────────────────────────────
+  {
+    id: 'la-b7-l1-morfologia', blockId: 7, mdx: 'b7/l1-morfologia.mdx',
+    name: 'Los cuatro tiempos del subjuntivo',
+    conceptIds: ['l7-morfologia-subj'],
+    objectives: [
+      'Los cuatro tiempos del subjuntivo',
+    ],
+  },
+  {
+    id: 'la-b7-l2-oraciones-con-ut', blockId: 7, mdx: 'b7/l2-oraciones-con-ut.mdx',
+    name: 'Las oraciones con ut',
+    conceptIds: ['l7-ut-final', 'l7-ut-consecutiva', 'l7-completivas-ut'],
+    objectives: [
+      'Reconocer las oraciones finales con ut y con nē',
+      'Consecutivas con ut y su anticipador',
+      'Completivas con ut tras verbos de voluntad',
+    ],
+  },
+  {
+    id: 'la-b7-l3-interrogativa-y-contraste', blockId: 7, mdx: 'b7/l3-interrogativa-y-contraste.mdx',
+    name: 'La interrogativa indirecta y el contraste con el español',
+    conceptIds: ['l7-interrogativa-indirecta', 'l7-no-coincide-espanol'],
+    objectives: [
+      'La interrogativa indirecta va en subjuntivo',
+      'El subjuntivo latino NO coincide con el español',
+    ],
+  },
+  // ── b8 · Formas nominales del verbo ──────────────────────────────
+  {
+    id: 'la-b8-l1-participios', blockId: 8, mdx: 'b8/l1-participios.mdx',
+    name: 'Los participios',
+    conceptIds: ['l8-tres-participios', 'l8-participio-concertado', 'l8-ablativo-absoluto'],
+    objectives: [
+      'Los tres participios y sus tres tiempos relativos',
+      'Reconocer y traducir el participio concertado',
+      'Reconocer y traducir el ablativo absoluto',
+    ],
+  },
+  {
+    id: 'la-b8-l2-infinitivo', blockId: 8, mdx: 'b8/l2-infinitivo.mdx',
+    name: 'El infinitivo',
+    conceptIds: ['l8-infinitivo-sustantivo'],
+    objectives: [
+      'El infinitivo como sujeto y como objeto',
     ],
   },
   // ── b10 · Orden ────────────────────────────────────────────────────
@@ -238,6 +321,14 @@ export const TALLAS: Talla[] = [
     conceptIds: ['l11-falsos-regalos'],
     objectives: [
       'Desconfiar de la palabra que se reconoce: «virtūs» es valor y hombría y no virtud moral, «turba» es la multitud sin juicio sobre su conducta, «causa» es el pleito antes que el motivo — y NO desconfiar de todas, porque «frāter», «nōmen» y «terra» son lo que parecen',
+    ],
+  },
+  {
+    id: 'la-b11-l2-preposiciones-caso', blockId: 11, mdx: 'b11/l2-preposiciones-caso.mdx',
+    name: 'Preposiciones que rigen dos casos',
+    conceptIds: ['l11-preposiciones-caso'],
+    objectives: [
+      'Preposiciones que rigen dos casos',
     ],
   },
 ];

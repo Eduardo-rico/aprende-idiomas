@@ -79,8 +79,18 @@ describe('currículo del latín · derivado del inventario', () => {
   it('getBlock y getLesson ya no lanzan para lo publicado, y siguen lanzando para lo que no existe', () => {
     expect(getBlock(BLOCKS[0]!.id).id).toBe(BLOCKS[0]!.id);
     expect(getLesson(LECCIONES[0]!.id).id).toBe(LECCIONES[0]!.id);
-    // b1 (ortografía) no tiene lote todavía: tiene que seguir lanzando.
-    expect(() => getBlock(1)).toThrow();
+    // Esto decía `getBlock(1)` —«b1 no tiene lote todavía»— y caducó el
+    // 2026-09-23 PORQUE EL TRABAJO SE HIZO: b1 recibió su lote. Un control
+    // anclado a una carencia transitoria muere cuando la carencia se cura
+    // (§B8 de la doctrina). Lo que NO caduca es su propósito: que un
+    // bloque sin lecciones lance en vez de devolver algo vacío. Así que se
+    // pregunta a los bloques REALES que siguen sin lección —mientras
+    // quede alguno— y a uno imposible por construcción, que no caduca nunca.
+    const conLeccion = new Set(BLOCKS.map((b) => b.id));
+    for (const b of BLOQUES_LA.filter((x) => !conLeccion.has(x.id))) {
+      expect(() => getBlock(b.id), `b${b.id} no tiene lecciones y aun así no lanza`).toThrow();
+    }
+    expect(() => getBlock(Math.max(...BLOQUES_LA.map((x) => x.id)) + 1)).toThrow();
     expect(() => getLesson('la-no-existe')).toThrow();
   });
 });
