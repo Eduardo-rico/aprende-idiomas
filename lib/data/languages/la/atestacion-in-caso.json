@@ -1,0 +1,8225 @@
+{
+ "generado": "2026-09-23",
+ "corpus": "la_perseus + la_proiel (UD); «vulgata» = frases de PROIEL con `# source = Jerome's Vulgate`",
+ "frases": 20406,
+ "porPreposicion": {
+  "in": {
+   "vulgata": {
+    "ac": 1220,
+    "abl": 2399
+   },
+   "resto": {
+    "ac": 810,
+    "abl": 1534
+   }
+  },
+  "sub": {
+   "vulgata": {
+    "ac": 3,
+    "abl": 53
+   },
+   "resto": {
+    "ac": 10,
+    "abl": 34
+   }
+  },
+  "super": {
+   "vulgata": {
+    "ac": 236,
+    "abl": 27
+   },
+   "resto": {
+    "ac": 45,
+    "abl": 2
+   }
+  }
+ },
+ "inPorVerbo": {
+  "facio": {
+   "ac": 48,
+   "abl": 133
+  },
+  "venio": {
+   "ac": 131,
+   "abl": 48
+  },
+  "habeo": {
+   "ac": 11,
+   "abl": 126
+  },
+  "mitto": {
+   "ac": 125,
+   "abl": 11
+  },
+  "pono": {
+   "ac": 10,
+   "abl": 61
+  },
+  "dico": {
+   "ac": 11,
+   "abl": 58
+  },
+  "credo": {
+   "ac": 46,
+   "abl": 20
+  },
+  "video": {
+   "ac": 3,
+   "abl": 62
+  },
+  "intro": {
+   "ac": 60,
+   "abl": 2
+  },
+  "scribo": {
+   "ac": 3,
+   "abl": 51
+  },
+  "eo": {
+   "ac": 50,
+   "abl": 2
+  },
+  "do": {
+   "ac": 17,
+   "abl": 34
+  },
+  "ascendo": {
+   "ac": 40,
+   "abl": 6
+  },
+  "fio": {
+   "ac": 13,
+   "abl": 31
+  },
+  "maneo": {
+   "ac": 8,
+   "abl": 36
+  },
+  "sto": {
+   "ac": 2,
+   "abl": 38
+  },
+  "introeo": {
+   "ac": 39,
+   "abl": 1
+  },
+  "sedeo": {
+   "ac": 2,
+   "abl": 37
+  },
+  "loquor": {
+   "ac": 3,
+   "abl": 34
+  },
+  "proficiscor": {
+   "ac": 34,
+   "abl": 0
+  },
+  "ago": {
+   "ac": 3,
+   "abl": 30
+  },
+  "recipio": {
+   "ac": 25,
+   "abl": 8
+  },
+  "trado": {
+   "ac": 24,
+   "abl": 7
+  },
+  "cado": {
+   "ac": 24,
+   "abl": 5
+  },
+  "abeo": {
+   "ac": 26,
+   "abl": 2
+  },
+  "baptizo": {
+   "ac": 3,
+   "abl": 25
+  },
+  "accipio": {
+   "ac": 10,
+   "abl": 17
+  },
+  "voco": {
+   "ac": 15,
+   "abl": 11
+  },
+  "vivo": {
+   "ac": 9,
+   "abl": 17
+  },
+  "duco": {
+   "ac": 20,
+   "abl": 5
+  },
+  "invenio": {
+   "ac": 2,
+   "abl": 23
+  },
+  "confero": {
+   "ac": 23,
+   "abl": 2
+  },
+  "doceo": {
+   "ac": 1,
+   "abl": 24
+  },
+  "habito": {
+   "ac": 0,
+   "abl": 24
+  },
+  "descendo": {
+   "ac": 19,
+   "abl": 5
+  },
+  "ambulo": {
+   "ac": 2,
+   "abl": 22
+  },
+  "permaneo": {
+   "ac": 2,
+   "abl": 21
+  },
+  "relinquo": {
+   "ac": 1,
+   "abl": 21
+  },
+  "possum": {
+   "ac": 1,
+   "abl": 21
+  },
+  "servo": {
+   "ac": 3,
+   "abl": 19
+  },
+  "praedico": {
+   "ac": 5,
+   "abl": 17
+  },
+  "exeo": {
+   "ac": 21,
+   "abl": 1
+  },
+  "operor": {
+   "ac": 4,
+   "abl": 18
+  },
+  "audio": {
+   "ac": 1,
+   "abl": 20
+  },
+  "convenio": {
+   "ac": 16,
+   "abl": 5
+  },
+  "verso": {
+   "ac": 0,
+   "abl": 21
+  },
+  "abundo": {
+   "ac": 8,
+   "abl": 13
+  },
+  "glorior": {
+   "ac": 2,
+   "abl": 18
+  },
+  "incido": {
+   "ac": 19,
+   "abl": 0
+  },
+  "utor": {
+   "ac": 2,
+   "abl": 17
+  },
+  "pecco": {
+   "ac": 8,
+   "abl": 10
+  },
+  "conicio": {
+   "ac": 17,
+   "abl": 0
+  },
+  "colloco": {
+   "ac": 1,
+   "abl": 16
+  },
+  "dimitto": {
+   "ac": 7,
+   "abl": 10
+  },
+  "deduco": {
+   "ac": 14,
+   "abl": 2
+  },
+  "cognosco": {
+   "ac": 1,
+   "abl": 15
+  },
+  "revertor": {
+   "ac": 14,
+   "abl": 2
+  },
+  "eicio": {
+   "ac": 6,
+   "abl": 10
+  },
+  "confido": {
+   "ac": 1,
+   "abl": 15
+  },
+  "pervenio": {
+   "ac": 14,
+   "abl": 2
+  },
+  "laboro": {
+   "ac": 1,
+   "abl": 14
+  },
+  "fugio": {
+   "ac": 8,
+   "abl": 7
+  },
+  "constituo": {
+   "ac": 2,
+   "abl": 13
+  },
+  "semino": {
+   "ac": 1,
+   "abl": 14
+  },
+  "converto": {
+   "ac": 13,
+   "abl": 1
+  },
+  "affero": {
+   "ac": 5,
+   "abl": 9
+  },
+  "congrego": {
+   "ac": 11,
+   "abl": 3
+  },
+  "consisto": {
+   "ac": 0,
+   "abl": 14
+  },
+  "surgo": {
+   "ac": 1,
+   "abl": 12
+  },
+  "vado": {
+   "ac": 10,
+   "abl": 3
+  },
+  "sequor": {
+   "ac": 5,
+   "abl": 7
+  },
+  "nascor": {
+   "ac": 4,
+   "abl": 8
+  },
+  "effundo": {
+   "ac": 10,
+   "abl": 2
+  },
+  "quaero": {
+   "ac": 1,
+   "abl": 11
+  },
+  "insum": {
+   "ac": 0,
+   "abl": 12
+  },
+  "statuo": {
+   "ac": 3,
+   "abl": 9
+  },
+  "appareo": {
+   "ac": 1,
+   "abl": 11
+  },
+  "gero": {
+   "ac": 0,
+   "abl": 12
+  },
+  "gaudeo": {
+   "ac": 0,
+   "abl": 12
+  },
+  "iudico": {
+   "ac": 0,
+   "abl": 12
+  },
+  "regno": {
+   "ac": 6,
+   "abl": 6
+  },
+  "divido": {
+   "ac": 9,
+   "abl": 3
+  },
+  "impleo": {
+   "ac": 3,
+   "abl": 9
+  },
+  "iuro": {
+   "ac": 3,
+   "abl": 8
+  },
+  "depono": {
+   "ac": 0,
+   "abl": 11
+  },
+  "spero": {
+   "ac": 1,
+   "abl": 10
+  },
+  "saluto": {
+   "ac": 0,
+   "abl": 10
+  },
+  "tollo": {
+   "ac": 4,
+   "abl": 6
+  },
+  "iaceo": {
+   "ac": 0,
+   "abl": 10
+  },
+  "peto": {
+   "ac": 2,
+   "abl": 8
+  },
+  "contendo": {
+   "ac": 7,
+   "abl": 3
+  },
+  "adduco": {
+   "ac": 10,
+   "abl": 0
+  },
+  "remaneo": {
+   "ac": 0,
+   "abl": 9
+  },
+  "teneo": {
+   "ac": 0,
+   "abl": 9
+  },
+  "volo": {
+   "ac": 2,
+   "abl": 7
+  },
+  "reduco": {
+   "ac": 9,
+   "abl": 0
+  },
+  "contineo": {
+   "ac": 0,
+   "abl": 9
+  },
+  "induco": {
+   "ac": 9,
+   "abl": 0
+  },
+  "transeo": {
+   "ac": 9,
+   "abl": 0
+  },
+  "servio": {
+   "ac": 3,
+   "abl": 6
+  },
+  "redigo": {
+   "ac": 9,
+   "abl": 0
+  },
+  "consto": {
+   "ac": 0,
+   "abl": 8
+  },
+  "transfero": {
+   "ac": 8,
+   "abl": 0
+  },
+  "pugno": {
+   "ac": 1,
+   "abl": 7
+  },
+  "interficio": {
+   "ac": 0,
+   "abl": 8
+  },
+  "clamo": {
+   "ac": 0,
+   "abl": 8
+  },
+  "hiemo": {
+   "ac": 0,
+   "abl": 8
+  },
+  "debeo": {
+   "ac": 0,
+   "abl": 8
+  },
+  "morior": {
+   "ac": 2,
+   "abl": 6
+  },
+  "inhabito": {
+   "ac": 1,
+   "abl": 7
+  },
+  "clarifico": {
+   "ac": 0,
+   "abl": 8
+  },
+  "iustifico": {
+   "ac": 0,
+   "abl": 8
+  },
+  "navigo": {
+   "ac": 6,
+   "abl": 2
+  },
+  "insero": {
+   "ac": 3,
+   "abl": 5
+  },
+  "figo": {
+   "ac": 0,
+   "abl": 7
+  },
+  "includo": {
+   "ac": 3,
+   "abl": 4
+  },
+  "consido": {
+   "ac": 0,
+   "abl": 7
+  },
+  "immitto": {
+   "ac": 7,
+   "abl": 0
+  },
+  "fero": {
+   "ac": 4,
+   "abl": 3
+  },
+  "reperio": {
+   "ac": 0,
+   "abl": 7
+  },
+  "exspecto": {
+   "ac": 1,
+   "abl": 6
+  },
+  "cogito": {
+   "ac": 1,
+   "abl": 6
+  },
+  "occido": {
+   "ac": 1,
+   "abl": 6
+  },
+  "secedo": {
+   "ac": 5,
+   "abl": 2
+  },
+  "consolor": {
+   "ac": 0,
+   "abl": 7
+  },
+  "discedo": {
+   "ac": 4,
+   "abl": 3
+  },
+  "accedo": {
+   "ac": 2,
+   "abl": 5
+  },
+  "eligo": {
+   "ac": 2,
+   "abl": 5
+  },
+  "iacto": {
+   "ac": 4,
+   "abl": 3
+  },
+  "conversor": {
+   "ac": 1,
+   "abl": 6
+  },
+  "suscipio": {
+   "ac": 2,
+   "abl": 5
+  },
+  "patior": {
+   "ac": 0,
+   "abl": 7
+  },
+  "ingredior": {
+   "ac": 7,
+   "abl": 0
+  },
+  "disputo": {
+   "ac": 0,
+   "abl": 7
+  },
+  "adoro": {
+   "ac": 0,
+   "abl": 7
+  },
+  "confirmo": {
+   "ac": 2,
+   "abl": 5
+  },
+  "efficio": {
+   "ac": 2,
+   "abl": 5
+  },
+  "differo": {
+   "ac": 2,
+   "abl": 5
+  },
+  "coicio": {
+   "ac": 7,
+   "abl": 0
+  },
+  "cerno": {
+   "ac": 0,
+   "abl": 7
+  },
+  "verto": {
+   "ac": 6,
+   "abl": 0
+  },
+  "decido": {
+   "ac": 6,
+   "abl": 0
+  },
+  "rapio": {
+   "ac": 2,
+   "abl": 4
+  },
+  "sustineo": {
+   "ac": 2,
+   "abl": 4
+  },
+  "proicio": {
+   "ac": 5,
+   "abl": 1
+  },
+  "pereo": {
+   "ac": 1,
+   "abl": 5
+  },
+  "valeo": {
+   "ac": 0,
+   "abl": 6
+  },
+  "perduco": {
+   "ac": 6,
+   "abl": 0
+  },
+  "procedo": {
+   "ac": 3,
+   "abl": 3
+  },
+  "oro": {
+   "ac": 0,
+   "abl": 6
+  },
+  "revelo": {
+   "ac": 1,
+   "abl": 5
+  },
+  "custodio": {
+   "ac": 3,
+   "abl": 3
+  },
+  "refero": {
+   "ac": 4,
+   "abl": 2
+  },
+  "scandalizo": {
+   "ac": 1,
+   "abl": 5
+  },
+  "manduco": {
+   "ac": 2,
+   "abl": 4
+  },
+  "intendo": {
+   "ac": 6,
+   "abl": 0
+  },
+  "praecedo": {
+   "ac": 4,
+   "abl": 2
+  },
+  "retineo": {
+   "ac": 0,
+   "abl": 6
+  },
+  "manifesto": {
+   "ac": 0,
+   "abl": 6
+  },
+  "adiuvo": {
+   "ac": 1,
+   "abl": 5
+  },
+  "cresco": {
+   "ac": 2,
+   "abl": 4
+  },
+  "abdo": {
+   "ac": 5,
+   "abl": 1
+  },
+  "muto": {
+   "ac": 4,
+   "abl": 1
+  },
+  "subduco": {
+   "ac": 4,
+   "abl": 1
+  },
+  "spargo": {
+   "ac": 1,
+   "abl": 4
+  },
+  "dispono": {
+   "ac": 0,
+   "abl": 5
+  },
+  "caedo": {
+   "ac": 4,
+   "abl": 1
+  },
+  "redeo": {
+   "ac": 4,
+   "abl": 1
+  },
+  "traduco": {
+   "ac": 5,
+   "abl": 0
+  },
+  "contraho": {
+   "ac": 4,
+   "abl": 1
+  },
+  "aperio": {
+   "ac": 2,
+   "abl": 3
+  },
+  "paro": {
+   "ac": 3,
+   "abl": 2
+  },
+  "offero": {
+   "ac": 3,
+   "abl": 2
+  },
+  "ex(s)ulto": {
+   "ac": 0,
+   "abl": 5
+  },
+  "inicio": {
+   "ac": 3,
+   "abl": 2
+  },
+  "moror": {
+   "ac": 0,
+   "abl": 5
+  },
+  "adsum": {
+   "ac": 0,
+   "abl": 5
+  },
+  "specto": {
+   "ac": 1,
+   "abl": 4
+  },
+  "occupo": {
+   "ac": 0,
+   "abl": 5
+  },
+  "assumo": {
+   "ac": 4,
+   "abl": 1
+  },
+  "recumbo": {
+   "ac": 0,
+   "abl": 5
+  },
+  "abscondo": {
+   "ac": 1,
+   "abl": 4
+  },
+  "miror": {
+   "ac": 0,
+   "abl": 5
+  },
+  "bibo": {
+   "ac": 2,
+   "abl": 3
+  },
+  "supervenio": {
+   "ac": 4,
+   "abl": 1
+  },
+  "respicio": {
+   "ac": 5,
+   "abl": 0
+  },
+  "benedico": {
+   "ac": 0,
+   "abl": 5
+  },
+  "devenio": {
+   "ac": 5,
+   "abl": 0
+  },
+  "curro": {
+   "ac": 4,
+   "abl": 1
+  },
+  "misceo": {
+   "ac": 0,
+   "abl": 5
+  },
+  "sero": {
+   "ac": 0,
+   "abl": 5
+  },
+  "perspicio": {
+   "ac": 1,
+   "abl": 4
+  },
+  "conspicio": {
+   "ac": 0,
+   "abl": 4
+  },
+  "sicco": {
+   "ac": 0,
+   "abl": 4
+  },
+  "effero": {
+   "ac": 2,
+   "abl": 2
+  },
+  "expello": {
+   "ac": 2,
+   "abl": 2
+  },
+  "exerceo": {
+   "ac": 1,
+   "abl": 3
+  },
+  "praesto": {
+   "ac": 1,
+   "abl": 3
+  },
+  "crucio": {
+   "ac": 2,
+   "abl": 2
+  },
+  "luceo": {
+   "ac": 0,
+   "abl": 4
+  },
+  "pergo": {
+   "ac": 4,
+   "abl": 0
+  },
+  "ostendo": {
+   "ac": 1,
+   "abl": 3
+  },
+  "recito": {
+   "ac": 0,
+   "abl": 4
+  },
+  "animadverto": {
+   "ac": 2,
+   "abl": 2
+  },
+  "incurro": {
+   "ac": 4,
+   "abl": 0
+  },
+  "percutio": {
+   "ac": 1,
+   "abl": 3
+  },
+  "irruo": {
+   "ac": 4,
+   "abl": 0
+  },
+  "porto": {
+   "ac": 1,
+   "abl": 3
+  },
+  "suspendo": {
+   "ac": 0,
+   "abl": 4
+  },
+  "praedestino": {
+   "ac": 3,
+   "abl": 1
+  },
+  "proficio": {
+   "ac": 1,
+   "abl": 3
+  },
+  "nitor": {
+   "ac": 2,
+   "abl": 2
+  },
+  "considero": {
+   "ac": 0,
+   "abl": 4
+  },
+  "reddo": {
+   "ac": 0,
+   "abl": 4
+  },
+  "incumbo": {
+   "ac": 4,
+   "abl": 0
+  },
+  "gigno": {
+   "ac": 0,
+   "abl": 4
+  },
+  "pateo": {
+   "ac": 2,
+   "abl": 2
+  },
+  "exsisto": {
+   "ac": 0,
+   "abl": 4
+  },
+  "excutio": {
+   "ac": 4,
+   "abl": 0
+  },
+  "intueor": {
+   "ac": 4,
+   "abl": 0
+  },
+  "fodio": {
+   "ac": 2,
+   "abl": 2
+  },
+  "vendo": {
+   "ac": 1,
+   "abl": 3
+  },
+  "nutrio": {
+   "ac": 0,
+   "abl": 4
+  },
+  "reconcilio": {
+   "ac": 1,
+   "abl": 3
+  },
+  "complaceo": {
+   "ac": 0,
+   "abl": 4
+  },
+  "placeo": {
+   "ac": 1,
+   "abl": 3
+  },
+  "sterno": {
+   "ac": 0,
+   "abl": 4
+  },
+  "capio": {
+   "ac": 0,
+   "abl": 4
+  },
+  "ex(s)puo": {
+   "ac": 4,
+   "abl": 0
+  },
+  "divulgo": {
+   "ac": 4,
+   "abl": 0
+  },
+  "accuso": {
+   "ac": 0,
+   "abl": 4
+  },
+  "laudo": {
+   "ac": 0,
+   "abl": 4
+  },
+  "excipio": {
+   "ac": 1,
+   "abl": 3
+  },
+  "confiteor": {
+   "ac": 1,
+   "abl": 3
+  },
+  "contingo": {
+   "ac": 1,
+   "abl": 3
+  },
+  "commendo": {
+   "ac": 3,
+   "abl": 1
+  },
+  "glorifico": {
+   "ac": 0,
+   "abl": 4
+  },
+  "sanctifico": {
+   "ac": 0,
+   "abl": 4
+  },
+  "consummo": {
+   "ac": 1,
+   "abl": 3
+  },
+  "restituo": {
+   "ac": 3,
+   "abl": 1
+  },
+  "assisto": {
+   "ac": 0,
+   "abl": 4
+  },
+  "produco": {
+   "ac": 4,
+   "abl": 0
+  },
+  "incito": {
+   "ac": 3,
+   "abl": 1
+  },
+  "concludo": {
+   "ac": 4,
+   "abl": 0
+  },
+  "oboedio": {
+   "ac": 1,
+   "abl": 3
+  },
+  "perficio": {
+   "ac": 2,
+   "abl": 2
+  },
+  "evangelizo": {
+   "ac": 1,
+   "abl": 3
+  },
+  "signo": {
+   "ac": 0,
+   "abl": 4
+  },
+  "reservo": {
+   "ac": 4,
+   "abl": 0
+  },
+  "reicio": {
+   "ac": 4,
+   "abl": 0
+  },
+  "puto": {
+   "ac": 0,
+   "abl": 4
+  },
+  "influo": {
+   "ac": 4,
+   "abl": 0
+  },
+  "progredior": {
+   "ac": 4,
+   "abl": 0
+  },
+  "infero": {
+   "ac": 3,
+   "abl": 1
+  },
+  "provideo": {
+   "ac": 1,
+   "abl": 3
+  },
+  "haereo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "condo": {
+   "ac": 1,
+   "abl": 2
+  },
+  "disco": {
+   "ac": 1,
+   "abl": 2
+  },
+  "deprehendo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "circumfero": {
+   "ac": 0,
+   "abl": 3
+  },
+  "defero": {
+   "ac": 1,
+   "abl": 2
+  },
+  "compono": {
+   "ac": 1,
+   "abl": 2
+  },
+  "dormio": {
+   "ac": 0,
+   "abl": 3
+  },
+  "pasco": {
+   "ac": 0,
+   "abl": 3
+  },
+  "traho": {
+   "ac": 1,
+   "abl": 2
+  },
+  "subsido": {
+   "ac": 0,
+   "abl": 3
+  },
+  "reficio": {
+   "ac": 0,
+   "abl": 3
+  },
+  "resto": {
+   "ac": 1,
+   "abl": 2
+  },
+  "caveo": {
+   "ac": 1,
+   "abl": 2
+  },
+  "exclamo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "conduco": {
+   "ac": 3,
+   "abl": 0
+  },
+  "introduco": {
+   "ac": 3,
+   "abl": 0
+  },
+  "timeo": {
+   "ac": 1,
+   "abl": 2
+  },
+  "excido": {
+   "ac": 1,
+   "abl": 2
+  },
+  "submitto": {
+   "ac": 2,
+   "abl": 1
+  },
+  "impono": {
+   "ac": 3,
+   "abl": 0
+  },
+  "afficio": {
+   "ac": 0,
+   "abl": 3
+  },
+  "rego": {
+   "ac": 0,
+   "abl": 3
+  },
+  "transfundo": {
+   "ac": 3,
+   "abl": 0
+  },
+  "scio": {
+   "ac": 0,
+   "abl": 3
+  },
+  "queror": {
+   "ac": 0,
+   "abl": 3
+  },
+  "obtineo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "compr(eh)endo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "intersum": {
+   "ac": 1,
+   "abl": 2
+  },
+  "thesaurizo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "discumbo": {
+   "ac": 1,
+   "abl": 2
+  },
+  "intinguo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "requiesco": {
+   "ac": 0,
+   "abl": 3
+  },
+  "metior": {
+   "ac": 0,
+   "abl": 3
+  },
+  "persevero": {
+   "ac": 1,
+   "abl": 2
+  },
+  "persequor": {
+   "ac": 2,
+   "abl": 1
+  },
+  "exalto": {
+   "ac": 2,
+   "abl": 1
+  },
+  "lego": {
+   "ac": 0,
+   "abl": 3
+  },
+  "aspicio": {
+   "ac": 2,
+   "abl": 1
+  },
+  "deficio": {
+   "ac": 0,
+   "abl": 3
+  },
+  "egredior": {
+   "ac": 3,
+   "abl": 0
+  },
+  "consurgo": {
+   "ac": 3,
+   "abl": 0
+  },
+  "pareo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "scindo": {
+   "ac": 2,
+   "abl": 1
+  },
+  "impero": {
+   "ac": 1,
+   "abl": 2
+  },
+  "accumbo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "iacio": {
+   "ac": 3,
+   "abl": 0
+  },
+  "colo": {
+   "ac": 2,
+   "abl": 1
+  },
+  "concipio": {
+   "ac": 0,
+   "abl": 3
+  },
+  "dirigo": {
+   "ac": 2,
+   "abl": 1
+  },
+  "conservo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "stupeo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "praevenio": {
+   "ac": 3,
+   "abl": 0
+  },
+  "depr(eh)endo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "lavo": {
+   "ac": 1,
+   "abl": 2
+  },
+  "diligo": {
+   "ac": 1,
+   "abl": 2
+  },
+  "dispergo": {
+   "ac": 2,
+   "abl": 1
+  },
+  "coepi": {
+   "ac": 1,
+   "abl": 2
+  },
+  "augeo": {
+   "ac": 3,
+   "abl": 0
+  },
+  "praesum": {
+   "ac": 0,
+   "abl": 3
+  },
+  "transfiguro": {
+   "ac": 3,
+   "abl": 0
+  },
+  "distribuo": {
+   "ac": 3,
+   "abl": 0
+  },
+  "taceo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "ordino": {
+   "ac": 1,
+   "abl": 2
+  },
+  "evacuo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "superabundo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "audeo": {
+   "ac": 1,
+   "abl": 2
+  },
+  "creo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "coaedifico": {
+   "ac": 1,
+   "abl": 2
+  },
+  "testificor": {
+   "ac": 0,
+   "abl": 3
+  },
+  "resisto": {
+   "ac": 0,
+   "abl": 3
+  },
+  "vigilo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "arbitror": {
+   "ac": 0,
+   "abl": 3
+  },
+  "flecto": {
+   "ac": 1,
+   "abl": 2
+  },
+  "amo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "aufero": {
+   "ac": 1,
+   "abl": 2
+  },
+  "vito": {
+   "ac": 1,
+   "abl": 2
+  },
+  "adhibeo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "expono": {
+   "ac": 0,
+   "abl": 3
+  },
+  "desidero": {
+   "ac": 0,
+   "abl": 3
+  },
+  "greek.expression": {
+   "ac": 0,
+   "abl": 3
+  },
+  "impedio": {
+   "ac": 0,
+   "abl": 3
+  },
+  "occulto": {
+   "ac": 0,
+   "abl": 3
+  },
+  "confugio": {
+   "ac": 3,
+   "abl": 0
+  },
+  "delecto": {
+   "ac": 0,
+   "abl": 3
+  },
+  "conficio": {
+   "ac": 0,
+   "abl": 3
+  },
+  "consumo": {
+   "ac": 0,
+   "abl": 3
+  },
+  "cogo": {
+   "ac": 3,
+   "abl": 0
+  },
+  "distraho": {
+   "ac": 1,
+   "abl": 2
+  },
+  "claudo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "moveo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "vinco": {
+   "ac": 0,
+   "abl": 2
+  },
+  "rogo": {
+   "ac": 1,
+   "abl": 1
+  },
+  "iubeo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "vindico": {
+   "ac": 2,
+   "abl": 0
+  },
+  "protraho": {
+   "ac": 2,
+   "abl": 0
+  },
+  "pernocto": {
+   "ac": 0,
+   "abl": 2
+  },
+  "dono": {
+   "ac": 0,
+   "abl": 2
+  },
+  "sufficio": {
+   "ac": 1,
+   "abl": 1
+  },
+  "excito": {
+   "ac": 0,
+   "abl": 2
+  },
+  "coorior": {
+   "ac": 1,
+   "abl": 1
+  },
+  "suspicio": {
+   "ac": 1,
+   "abl": 1
+  },
+  "abstulo": {
+   "ac": 1,
+   "abl": 1
+  },
+  "periclitor": {
+   "ac": 0,
+   "abl": 2
+  },
+  "impendeo": {
+   "ac": 1,
+   "abl": 1
+  },
+  "erro": {
+   "ac": 0,
+   "abl": 2
+  },
+  "tego": {
+   "ac": 0,
+   "abl": 2
+  },
+  "perdo": {
+   "ac": 1,
+   "abl": 1
+  },
+  "sentio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "dominor": {
+   "ac": 0,
+   "abl": 2
+  },
+  "accendo": {
+   "ac": 1,
+   "abl": 1
+  },
+  "tracto": {
+   "ac": 0,
+   "abl": 2
+  },
+  "abduco": {
+   "ac": 2,
+   "abl": 0
+  },
+  "expedio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "consentio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "moechor": {
+   "ac": 1,
+   "abl": 1
+  },
+  "nuntio": {
+   "ac": 2,
+   "abl": 0
+  },
+  "laxo": {
+   "ac": 1,
+   "abl": 1
+  },
+  "procido": {
+   "ac": 2,
+   "abl": 0
+  },
+  "detineo": {
+   "ac": 1,
+   "abl": 1
+  },
+  "commuto": {
+   "ac": 1,
+   "abl": 1
+  },
+  "ardeo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "invito": {
+   "ac": 2,
+   "abl": 0
+  },
+  "inveho": {
+   "ac": 2,
+   "abl": 0
+  },
+  "fallo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "diiudico": {
+   "ac": 0,
+   "abl": 2
+  },
+  "vereor": {
+   "ac": 0,
+   "abl": 2
+  },
+  "ceno": {
+   "ac": 0,
+   "abl": 2
+  },
+  "absum": {
+   "ac": 0,
+   "abl": 2
+  },
+  "proficisco": {
+   "ac": 2,
+   "abl": 0
+  },
+  "conscribo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "excello": {
+   "ac": 0,
+   "abl": 2
+  },
+  "nolo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "admiror": {
+   "ac": 0,
+   "abl": 2
+  },
+  "inoperor": {
+   "ac": 0,
+   "abl": 2
+  },
+  "vincio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "decollo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "licet": {
+   "ac": 0,
+   "abl": 2
+  },
+  "curo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "resuscito": {
+   "ac": 0,
+   "abl": 2
+  },
+  "averto": {
+   "ac": 2,
+   "abl": 0
+  },
+  "laetor": {
+   "ac": 0,
+   "abl": 2
+  },
+  "reputo": {
+   "ac": 2,
+   "abl": 0
+  },
+  "recedo": {
+   "ac": 1,
+   "abl": 1
+  },
+  "admoneo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "flagello": {
+   "ac": 0,
+   "abl": 2
+  },
+  "insurgo": {
+   "ac": 2,
+   "abl": 0
+  },
+  "extendo": {
+   "ac": 2,
+   "abl": 0
+  },
+  "emitto": {
+   "ac": 2,
+   "abl": 0
+  },
+  "ligo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "solvo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "nubo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "molo": {
+   "ac": 1,
+   "abl": 1
+  },
+  "emo": {
+   "ac": 2,
+   "abl": 0
+  },
+  "blasphemo": {
+   "ac": 2,
+   "abl": 0
+  },
+  "frango": {
+   "ac": 1,
+   "abl": 1
+  },
+  "interrogo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "confundo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "condio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "contristo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "haesito": {
+   "ac": 0,
+   "abl": 2
+  },
+  "fremo": {
+   "ac": 1,
+   "abl": 1
+  },
+  "narro": {
+   "ac": 1,
+   "abl": 1
+  },
+  "ex(s)urgo": {
+   "ac": 1,
+   "abl": 1
+  },
+  "aedifico": {
+   "ac": 0,
+   "abl": 2
+  },
+  "fungor": {
+   "ac": 0,
+   "abl": 2
+  },
+  "existimo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "oportet": {
+   "ac": 0,
+   "abl": 2
+  },
+  "regredior": {
+   "ac": 1,
+   "abl": 1
+  },
+  "erogo": {
+   "ac": 1,
+   "abl": 1
+  },
+  "subicio": {
+   "ac": 1,
+   "abl": 1
+  },
+  "retribuo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "repono": {
+   "ac": 0,
+   "abl": 2
+  },
+  "possideo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "decurro": {
+   "ac": 2,
+   "abl": 0
+  },
+  "resurgo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "odi": {
+   "ac": 1,
+   "abl": 1
+  },
+  "prospicio": {
+   "ac": 2,
+   "abl": 0
+  },
+  "praebeo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "approbo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "derelinquo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "appono": {
+   "ac": 0,
+   "abl": 2
+  },
+  "educo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "insilio": {
+   "ac": 2,
+   "abl": 0
+  },
+  "infirmo": {
+   "ac": 1,
+   "abl": 1
+  },
+  "libero": {
+   "ac": 2,
+   "abl": 0
+  },
+  "offendo": {
+   "ac": 1,
+   "abl": 1
+  },
+  "exhortor": {
+   "ac": 0,
+   "abl": 2
+  },
+  "instauro": {
+   "ac": 0,
+   "abl": 2
+  },
+  "sapio": {
+   "ac": 1,
+   "abl": 1
+  },
+  "ministro": {
+   "ac": 0,
+   "abl": 2
+  },
+  "invoco": {
+   "ac": 1,
+   "abl": 1
+  },
+  "desum": {
+   "ac": 0,
+   "abl": 2
+  },
+  "epulor": {
+   "ac": 1,
+   "abl": 1
+  },
+  "tempero": {
+   "ac": 0,
+   "abl": 2
+  },
+  "pronuntio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "triumpho": {
+   "ac": 0,
+   "abl": 2
+  },
+  "ingemesco": {
+   "ac": 0,
+   "abl": 2
+  },
+  "exhibeo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "angustio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "magnifico": {
+   "ac": 1,
+   "abl": 1
+  },
+  "infringo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "communico": {
+   "ac": 0,
+   "abl": 2
+  },
+  "gratificor": {
+   "ac": 0,
+   "abl": 2
+  },
+  "propono": {
+   "ac": 1,
+   "abl": 1
+  },
+  "adimpleo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "alieno": {
+   "ac": 0,
+   "abl": 2
+  },
+  "edoceo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "canto": {
+   "ac": 0,
+   "abl": 2
+  },
+  "cupio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "obsecro": {
+   "ac": 0,
+   "abl": 2
+  },
+  "circumvenio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "praescribo": {
+   "ac": 1,
+   "abl": 1
+  },
+  "praetermitto": {
+   "ac": 0,
+   "abl": 2
+  },
+  "repudio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "opto": {
+   "ac": 0,
+   "abl": 2
+  },
+  "exsto": {
+   "ac": 0,
+   "abl": 2
+  },
+  "soleo": {
+   "ac": 1,
+   "abl": 1
+  },
+  "obruo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "prosum": {
+   "ac": 0,
+   "abl": 2
+  },
+  "conquiesco": {
+   "ac": 0,
+   "abl": 2
+  },
+  "appello": {
+   "ac": 0,
+   "abl": 2
+  },
+  "attingo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "repr(eh)endo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "adorior": {
+   "ac": 0,
+   "abl": 2
+  },
+  "consequor": {
+   "ac": 0,
+   "abl": 2
+  },
+  "perturbo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "obnuntio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "contemno": {
+   "ac": 1,
+   "abl": 1
+  },
+  "significo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "elaboro": {
+   "ac": 0,
+   "abl": 2
+  },
+  "meditor": {
+   "ac": 1,
+   "abl": 1
+  },
+  "lateo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "instruo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "indico": {
+   "ac": 2,
+   "abl": 0
+  },
+  "profugio": {
+   "ac": 2,
+   "abl": 0
+  },
+  "proelior": {
+   "ac": 0,
+   "abl": 2
+  },
+  "repello": {
+   "ac": 2,
+   "abl": 0
+  },
+  "accido": {
+   "ac": 1,
+   "abl": 1
+  },
+  "remigro": {
+   "ac": 2,
+   "abl": 0
+  },
+  "succedo": {
+   "ac": 2,
+   "abl": 0
+  },
+  "insisto": {
+   "ac": 1,
+   "abl": 1
+  },
+  "pondero": {
+   "ac": 0,
+   "abl": 2
+  },
+  "imitor": {
+   "ac": 1,
+   "abl": 1
+  },
+  "intellego": {
+   "ac": 0,
+   "abl": 2
+  },
+  "eluceo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "apto": {
+   "ac": 0,
+   "abl": 2
+  },
+  "bacchor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "fleo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "everto": {
+   "ac": 1,
+   "abl": 0
+  },
+  "volvo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "abstraho": {
+   "ac": 0,
+   "abl": 1
+  },
+  "speculor": {
+   "ac": 1,
+   "abl": 0
+  },
+  "desilo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "procumbo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "absumo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "tergeo,": {
+   "ac": 0,
+   "abl": 1
+  },
+  "poto,": {
+   "ac": 0,
+   "abl": 1
+  },
+  "purgo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "noto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "defigo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "coeo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "culo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "prodeo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "garrio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tergeo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "plango": {
+   "ac": 0,
+   "abl": 1
+  },
+  "relego": {
+   "ac": 1,
+   "abl": 0
+  },
+  "extraho": {
+   "ac": 1,
+   "abl": 0
+  },
+  "defluo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "impingo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "inspuo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "coepio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "deprimo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "nanciscor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "opprimo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "praecurro": {
+   "ac": 1,
+   "abl": 0
+  },
+  "deligo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "tento": {
+   "ac": 0,
+   "abl": 1
+  },
+  "repraesento": {
+   "ac": 1,
+   "abl": 0
+  },
+  "recuso": {
+   "ac": 0,
+   "abl": 1
+  },
+  "in-mitto": {
+   "ac": 1,
+   "abl": 0
+  },
+  "allego": {
+   "ac": 1,
+   "abl": 0
+  },
+  "impertio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "metuo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "traicio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "honoro": {
+   "ac": 1,
+   "abl": 0
+  },
+  "flagro": {
+   "ac": 0,
+   "abl": 1
+  },
+  "torqueo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "sisto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "abstineo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "saevio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "hio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "sepono": {
+   "ac": 1,
+   "abl": 0
+  },
+  "machinor": {
+   "ac": 1,
+   "abl": 0
+  },
+  "resideo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "multo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "comprimo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "pertimesco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "volito": {
+   "ac": 0,
+   "abl": 1
+  },
+  "patefacio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "accubo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "expromo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "sono": {
+   "ac": 0,
+   "abl": 1
+  },
+  "perpetior": {
+   "ac": 0,
+   "abl": 1
+  },
+  "agito": {
+   "ac": 1,
+   "abl": 0
+  },
+  "fundo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ducto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "solo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "invideo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "toleror": {
+   "ac": 0,
+   "abl": 1
+  },
+  "revorto": {
+   "ac": 1,
+   "abl": 0
+  },
+  "oppugno": {
+   "ac": 0,
+   "abl": 1
+  },
+  "dissero": {
+   "ac": 0,
+   "abl": 1
+  },
+  "addo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "perfugio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "praesideo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "emico": {
+   "ac": 1,
+   "abl": 0
+  },
+  "sal(l)io": {
+   "ac": 0,
+   "abl": 1
+  },
+  "praecipito": {
+   "ac": 1,
+   "abl": 0
+  },
+  "suffoco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "transcendo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ex(s)isto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "cesso": {
+   "ac": 0,
+   "abl": 1
+  },
+  "dispicio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "arcesso": {
+   "ac": 1,
+   "abl": 0
+  },
+  "commemoro": {
+   "ac": 0,
+   "abl": 1
+  },
+  "hospitor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "comperio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "segrego": {
+   "ac": 1,
+   "abl": 0
+  },
+  "promitto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "evanesco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "immuto": {
+   "ac": 1,
+   "abl": 0
+  },
+  "exardesco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "computo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "expando": {
+   "ac": 0,
+   "abl": 1
+  },
+  "insedeo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "dicito": {
+   "ac": 0,
+   "abl": 1
+  },
+  "propero": {
+   "ac": 1,
+   "abl": 0
+  },
+  "insumo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "edo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "permitto": {
+   "ac": 1,
+   "abl": 0
+  },
+  "afflicto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "congredior": {
+   "ac": 0,
+   "abl": 1
+  },
+  "nescio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "exaudio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "cooperio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "elevo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "illido": {
+   "ac": 1,
+   "abl": 0
+  },
+  "sepelio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "firmo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "subeo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "deservio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "multiplico": {
+   "ac": 0,
+   "abl": 1
+  },
+  "enutrio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "strideo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "propheto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "sano": {
+   "ac": 0,
+   "abl": 1
+  },
+  "diffamo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "possido": {
+   "ac": 0,
+   "abl": 1
+  },
+  "violo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "remitto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "supersemino": {
+   "ac": 0,
+   "abl": 1
+  },
+  "salto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "demergo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "pendeo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "comedo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "nego": {
+   "ac": 0,
+   "abl": 1
+  },
+  "redaedifico": {
+   "ac": 0,
+   "abl": 1
+  },
+  "lucesco": {
+   "ac": 1,
+   "abl": 0
+  },
+  "aio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "saturo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "elido": {
+   "ac": 1,
+   "abl": 0
+  },
+  "obstupesco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "vapulo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "contenebro": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ung(u)o": {
+   "ac": 1,
+   "abl": 0
+  },
+  "compleo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "incedo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tardo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "turbo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "memoro": {
+   "ac": 1,
+   "abl": 0
+  },
+  "erigo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "visito": {
+   "ac": 0,
+   "abl": 1
+  },
+  "reclino": {
+   "ac": 0,
+   "abl": 1
+  },
+  "sperno": {
+   "ac": 1,
+   "abl": 0
+  },
+  "viso": {
+   "ac": 0,
+   "abl": 1
+  },
+  "appropinquo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "extergo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "veneo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "vestio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "planto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "succido": {
+   "ac": 1,
+   "abl": 0
+  },
+  "transplanto": {
+   "ac": 1,
+   "abl": 0
+  },
+  "fulgeo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "ieiuno": {
+   "ac": 0,
+   "abl": 1
+  },
+  "substerno": {
+   "ac": 0,
+   "abl": 1
+  },
+  "premo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "gravo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "manico": {
+   "ac": 0,
+   "abl": 1
+  },
+  "declino": {
+   "ac": 1,
+   "abl": 0
+  },
+  "interpretor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "haurio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "sitio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "salio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "advenio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "circumcido": {
+   "ac": 0,
+   "abl": 1
+  },
+  "mando": {
+   "ac": 0,
+   "abl": 1
+  },
+  "gusto": {
+   "ac": 1,
+   "abl": 0
+  },
+  "sublevo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "involvo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "connumero": {
+   "ac": 0,
+   "abl": 1
+  },
+  "perduro": {
+   "ac": 0,
+   "abl": 1
+  },
+  "asto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "refulgeo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "separo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "destruo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ex(s)ilio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "colligo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "praecipio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "stringo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tondeo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "absolvo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "alloquor": {
+   "ac": 1,
+   "abl": 0
+  },
+  "evenio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "doleo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "impendo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "concito": {
+   "ac": 0,
+   "abl": 1
+  },
+  "studeo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "insanio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "tempto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "suadeo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "transpono": {
+   "ac": 1,
+   "abl": 0
+  },
+  "conor": {
+   "ac": 1,
+   "abl": 0
+  },
+  "diffundo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "consepelio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "erubesco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "captivo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "damno": {
+   "ac": 0,
+   "abl": 1
+  },
+  "cooperor": {
+   "ac": 1,
+   "abl": 0
+  },
+  "supero": {
+   "ac": 0,
+   "abl": 1
+  },
+  "aestimo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "reformo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tribuo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "misereor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "repleo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "esurio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "aro": {
+   "ac": 0,
+   "abl": 1
+  },
+  "trituro": {
+   "ac": 0,
+   "abl": 1
+  },
+  "abutor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "beneplaceo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "prosterno": {
+   "ac": 0,
+   "abl": 1
+  },
+  "vivifico": {
+   "ac": 0,
+   "abl": 1
+  },
+  "absorbeo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "fido": {
+   "ac": 0,
+   "abl": 1
+  },
+  "deformo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "claresco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "transformo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "operio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "excaeco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "illucesco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "renovo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "peregrinor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "suppleo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "vitupero": {
+   "ac": 0,
+   "abl": 1
+  },
+  "locupleto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "aemulor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "formo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "genero": {
+   "ac": 1,
+   "abl": 0
+  },
+  "corroboro": {
+   "ac": 0,
+   "abl": 1
+  },
+  "supporto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "mundo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "conforto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "succingo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "sumo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ex(s)tinguo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "innotesco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "pacificor": {
+   "ac": 1,
+   "abl": 0
+  },
+  "decipio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "radico": {
+   "ac": 0,
+   "abl": 1
+  },
+  "denuntio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "insto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "increpo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "fruor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "corrumpo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "dealbo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "alligo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "noceo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "irascor": {
+   "ac": 1,
+   "abl": 0
+  },
+  "citharizo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "conrumpo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "sordesco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "congruo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "consero": {
+   "ac": 0,
+   "abl": 1
+  },
+  "expendo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "sculpo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "observo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "rigesco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "findo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "succumbo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "subsisto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "suppono": {
+   "ac": 1,
+   "abl": 0
+  },
+  "provoco": {
+   "ac": 1,
+   "abl": 0
+  },
+  "pinguesco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "voluto": {
+   "ac": 1,
+   "abl": 0
+  },
+  "resolvo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "contero": {
+   "ac": 0,
+   "abl": 1
+  },
+  "uro": {
+   "ac": 0,
+   "abl": 1
+  },
+  "superiacio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "mergo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "transmitto": {
+   "ac": 1,
+   "abl": 0
+  },
+  "designo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "regero": {
+   "ac": 1,
+   "abl": 0
+  },
+  "prosilio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "adolesco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "reseco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "bullio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "subigo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "duro": {
+   "ac": 0,
+   "abl": 1
+  },
+  "vitio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "fecundo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "pertundo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "rideo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "recido": {
+   "ac": 1,
+   "abl": 0
+  },
+  "experior": {
+   "ac": 1,
+   "abl": 0
+  },
+  "deporto": {
+   "ac": 1,
+   "abl": 0
+  },
+  "exsulto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "trudo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "obiurgo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "adiudico": {
+   "ac": 0,
+   "abl": 1
+  },
+  "eniteo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "minor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "emergo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "sileo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "advolo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "praestolor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "defleo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "insinuo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "nomino": {
+   "ac": 0,
+   "abl": 1
+  },
+  "subscribo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "coniungo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "pertineo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "impello": {
+   "ac": 1,
+   "abl": 0
+  },
+  "concido": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tolero": {
+   "ac": 0,
+   "abl": 1
+  },
+  "decerno": {
+   "ac": 0,
+   "abl": 1
+  },
+  "prodo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "iuvo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "hortor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ascribo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "laedo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "amitto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "imminuo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tabesco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "indigeo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "escendo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "exhaurio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "derivo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "adhaeresco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "commentor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "refugio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "suspicor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "vendito": {
+   "ac": 0,
+   "abl": 1
+  },
+  "detrudo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "sortior": {
+   "ac": 1,
+   "abl": 0
+  },
+  "acquiesco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "prandeo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "procuro": {
+   "ac": 0,
+   "abl": 1
+  },
+  "negotior": {
+   "ac": 0,
+   "abl": 1
+  },
+  "inscribo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "deicio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "praevideo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "coarto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ingeminisco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "despero": {
+   "ac": 0,
+   "abl": 1
+  },
+  "malo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "compago": {
+   "ac": 1,
+   "abl": 0
+  },
+  "abicio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "committo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "suppeto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "persuadeo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "renuntio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "fluo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "ulciscor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "transporto": {
+   "ac": 1,
+   "abl": 0
+  },
+  "interpello": {
+   "ac": 0,
+   "abl": 1
+  },
+  "fastigo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "aggredior": {
+   "ac": 0,
+   "abl": 1
+  },
+  "decerto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "eno": {
+   "ac": 1,
+   "abl": 0
+  },
+  "compello": {
+   "ac": 1,
+   "abl": 0
+  },
+  "navo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "praefero": {
+   "ac": 0,
+   "abl": 1
+  },
+  "intericio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "admitto": {
+   "ac": 1,
+   "abl": 0
+  },
+  "comporto": {
+   "ac": 1,
+   "abl": 0
+  },
+  "circumsisto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "paeniteo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "vaco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "revincio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "adigo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "praemitto": {
+   "ac": 1,
+   "abl": 0
+  },
+  "proveho": {
+   "ac": 1,
+   "abl": 0
+  },
+  "ventito": {
+   "ac": 1,
+   "abl": 0
+  },
+  "delituo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "commoror": {
+   "ac": 0,
+   "abl": 1
+  },
+  "flo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "conscendo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "devoco": {
+   "ac": 1,
+   "abl": 0
+  },
+  "perluo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "rescindo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "tueor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "irrumpo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "immineo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "procurro": {
+   "ac": 1,
+   "abl": 0
+  },
+  "demitto": {
+   "ac": 1,
+   "abl": 0
+  },
+  "sino": {
+   "ac": 0,
+   "abl": 1
+  },
+  "orbo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "obtempero": {
+   "ac": 0,
+   "abl": 1
+  },
+  "censeo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "vigeo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "defendo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "circumspicio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "innascor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "probo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "invado": {
+   "ac": 1,
+   "abl": 0
+  },
+  "exsequor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "prohibeo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "delabor": {
+   "ac": 1,
+   "abl": 0
+  },
+  "antepono": {
+   "ac": 0,
+   "abl": 1
+  }
+ },
+ "inPorNombre": {
+  "qui": {
+   "ac": 19,
+   "abl": 177
+  },
+  "is": {
+   "ac": 78,
+   "abl": 102
+  },
+  "dies": {
+   "ac": 28,
+   "abl": 98
+  },
+  "locus": {
+   "ac": 62,
+   "abl": 64
+  },
+  "caelum": {
+   "ac": 25,
+   "abl": 70
+  },
+  "terra": {
+   "ac": 46,
+   "abl": 46
+  },
+  "domus": {
+   "ac": 53,
+   "abl": 37
+  },
+  "res": {
+   "ac": 9,
+   "abl": 79
+  },
+  "vos": {
+   "ac": 15,
+   "abl": 69
+  },
+  "ego": {
+   "ac": 40,
+   "abl": 41
+  },
+  "pars": {
+   "ac": 46,
+   "abl": 25
+  },
+  "christus": {
+   "ac": 1,
+   "abl": 66
+  },
+  "nomen": {
+   "ac": 0,
+   "abl": 66
+  },
+  "civitas": {
+   "ac": 35,
+   "abl": 27
+  },
+  "templum": {
+   "ac": 20,
+   "abl": 41
+  },
+  "hic": {
+   "ac": 7,
+   "abl": 50
+  },
+  "ille": {
+   "ac": 20,
+   "abl": 36
+  },
+  "dominus": {
+   "ac": 2,
+   "abl": 52
+  },
+  "castra": {
+   "ac": 32,
+   "abl": 17
+  },
+  "nos": {
+   "ac": 18,
+   "abl": 26
+  },
+  "finis": {
+   "ac": 32,
+   "abl": 12
+  },
+  "regnum": {
+   "ac": 21,
+   "abl": 22
+  },
+  "cor": {
+   "ac": 7,
+   "abl": 35
+  },
+  "spiritus": {
+   "ac": 3,
+   "abl": 38
+  },
+  "gallia": {
+   "ac": 16,
+   "abl": 25
+  },
+  "via": {
+   "ac": 7,
+   "abl": 30
+  },
+  "se": {
+   "ac": 16,
+   "abl": 20
+  },
+  "omnis": {
+   "ac": 7,
+   "abl": 29
+  },
+  "manus": {
+   "ac": 14,
+   "abl": 21
+  },
+  "medius": {
+   "ac": 6,
+   "abl": 29
+  },
+  "synagoga": {
+   "ac": 6,
+   "abl": 29
+  },
+  "mundus": {
+   "ac": 16,
+   "abl": 19
+  },
+  "mare": {
+   "ac": 19,
+   "abl": 15
+  },
+  "conspectus": {
+   "ac": 3,
+   "abl": 31
+  },
+  "ager": {
+   "ac": 9,
+   "abl": 25
+  },
+  "ipse": {
+   "ac": 5,
+   "abl": 29
+  },
+  "tu": {
+   "ac": 19,
+   "abl": 14
+  },
+  "mons": {
+   "ac": 25,
+   "abl": 8
+  },
+  "senatus": {
+   "ac": 6,
+   "abl": 26
+  },
+  "desertum": {
+   "ac": 9,
+   "abl": 22
+  },
+  "tempus": {
+   "ac": 8,
+   "abl": 23
+  },
+  "carcer": {
+   "ac": 16,
+   "abl": 15
+  },
+  "saeculum": {
+   "ac": 25,
+   "abl": 5
+  },
+  "provincia": {
+   "ac": 12,
+   "abl": 17
+  },
+  "lex": {
+   "ac": 1,
+   "abl": 27
+  },
+  "potestas": {
+   "ac": 2,
+   "abl": 22
+  },
+  "spes": {
+   "ac": 8,
+   "abl": 15
+  },
+  "caro": {
+   "ac": 0,
+   "abl": 23
+  },
+  "verbum": {
+   "ac": 1,
+   "abl": 21
+  },
+  "navis": {
+   "ac": 9,
+   "abl": 13
+  },
+  "vita": {
+   "ac": 10,
+   "abl": 12
+  },
+  "forum": {
+   "ac": 3,
+   "abl": 18
+  },
+  "facies": {
+   "ac": 17,
+   "abl": 4
+  },
+  "ecclesia": {
+   "ac": 0,
+   "abl": 21
+  },
+  "liber": {
+   "ac": 0,
+   "abl": 21
+  },
+  "galilaea": {
+   "ac": 17,
+   "abl": 4
+  },
+  "homo": {
+   "ac": 8,
+   "abl": 12
+  },
+  "regio": {
+   "ac": 10,
+   "abl": 10
+  },
+  "gens": {
+   "ac": 7,
+   "abl": 13
+  },
+  "genus": {
+   "ac": 1,
+   "abl": 19
+  },
+  "corpus": {
+   "ac": 4,
+   "abl": 15
+  },
+  "oppidum": {
+   "ac": 9,
+   "abl": 10
+  },
+  "fides": {
+   "ac": 8,
+   "abl": 11
+  },
+  "primus": {
+   "ac": 1,
+   "abl": 18
+  },
+  "virtus": {
+   "ac": 0,
+   "abl": 19
+  },
+  "aeternus": {
+   "ac": 19,
+   "abl": 0
+  },
+  "gratia": {
+   "ac": 6,
+   "abl": 13
+  },
+  "epirus": {
+   "ac": 12,
+   "abl": 7
+  },
+  "hora": {
+   "ac": 7,
+   "abl": 11
+  },
+  "iudicium": {
+   "ac": 7,
+   "abl": 11
+  },
+  "gloria": {
+   "ac": 5,
+   "abl": 13
+  },
+  "monumentum": {
+   "ac": 3,
+   "abl": 14
+  },
+  "tenebrae": {
+   "ac": 4,
+   "abl": 13
+  },
+  "asia": {
+   "ac": 8,
+   "abl": 8
+  },
+  "fuga": {
+   "ac": 6,
+   "abl": 10
+  },
+  "unus": {
+   "ac": 9,
+   "abl": 7
+  },
+  "sermo": {
+   "ac": 0,
+   "abl": 16
+  },
+  "deus": {
+   "ac": 5,
+   "abl": 11
+  },
+  "iudaea": {
+   "ac": 7,
+   "abl": 9
+  },
+  "silva": {
+   "ac": 6,
+   "abl": 9
+  },
+  "animus": {
+   "ac": 1,
+   "abl": 14
+  },
+  "opus": {
+   "ac": 4,
+   "abl": 11
+  },
+  "oratio": {
+   "ac": 0,
+   "abl": 15
+  },
+  "italia": {
+   "ac": 7,
+   "abl": 7
+  },
+  "arma": {
+   "ac": 0,
+   "abl": 14
+  },
+  "veritas": {
+   "ac": 1,
+   "abl": 13
+  },
+  "iesus": {
+   "ac": 3,
+   "abl": 11
+  },
+  "os": {
+   "ac": 4,
+   "abl": 9
+  },
+  "pax": {
+   "ac": 1,
+   "abl": 12
+  },
+  "filius": {
+   "ac": 11,
+   "abl": 2
+  },
+  "causa": {
+   "ac": 2,
+   "abl": 11
+  },
+  "oculus": {
+   "ac": 1,
+   "abl": 11
+  },
+  "urbs": {
+   "ac": 1,
+   "abl": 11
+  },
+  "bellum": {
+   "ac": 3,
+   "abl": 9
+  },
+  "officium": {
+   "ac": 0,
+   "abl": 12
+  },
+  "frons": {
+   "ac": 0,
+   "abl": 12
+  },
+  "flumen": {
+   "ac": 4,
+   "abl": 8
+  },
+  "campus": {
+   "ac": 5,
+   "abl": 7
+  },
+  "amor": {
+   "ac": 0,
+   "abl": 12
+  },
+  "concilium": {
+   "ac": 4,
+   "abl": 8
+  },
+  "iter": {
+   "ac": 0,
+   "abl": 12
+  },
+  "ignis": {
+   "ac": 10,
+   "abl": 2
+  },
+  "macedonia": {
+   "ac": 7,
+   "abl": 5
+  },
+  "britannia": {
+   "ac": 10,
+   "abl": 2
+  },
+  "alius": {
+   "ac": 6,
+   "abl": 5
+  },
+  "sanguis": {
+   "ac": 3,
+   "abl": 8
+  },
+  "bonus": {
+   "ac": 6,
+   "abl": 5
+  },
+  "proelium": {
+   "ac": 3,
+   "abl": 8
+  },
+  "populus": {
+   "ac": 5,
+   "abl": 6
+  },
+  "evangelium": {
+   "ac": 4,
+   "abl": 7
+  },
+  "tribulatio": {
+   "ac": 2,
+   "abl": 9
+  },
+  "mors": {
+   "ac": 7,
+   "abl": 4
+  },
+  "epistula": {
+   "ac": 1,
+   "abl": 10
+  },
+  "circuitus": {
+   "ac": 0,
+   "abl": 11
+  },
+  "aegyptus": {
+   "ac": 6,
+   "abl": 5
+  },
+  "parabola": {
+   "ac": 0,
+   "abl": 11
+  },
+  "castellum": {
+   "ac": 10,
+   "abl": 1
+  },
+  "caritas": {
+   "ac": 0,
+   "abl": 11
+  },
+  "formianus": {
+   "ac": 3,
+   "abl": 8
+  },
+  "caput": {
+   "ac": 4,
+   "abl": 6
+  },
+  "modus": {
+   "ac": 10,
+   "abl": 0
+  },
+  "mens": {
+   "ac": 7,
+   "abl": 3
+  },
+  "sententia": {
+   "ac": 7,
+   "abl": 3
+  },
+  "hostis": {
+   "ac": 10,
+   "abl": 0
+  },
+  "testimonium": {
+   "ac": 10,
+   "abl": 0
+  },
+  "aqua": {
+   "ac": 3,
+   "abl": 7
+  },
+  "medium": {
+   "ac": 2,
+   "abl": 7
+  },
+  "turba": {
+   "ac": 2,
+   "abl": 7
+  },
+  "nubes": {
+   "ac": 1,
+   "abl": 8
+  },
+  "uterus": {
+   "ac": 0,
+   "abl": 9
+  },
+  "numerus": {
+   "ac": 0,
+   "abl": 9
+  },
+  "sabbatum": {
+   "ac": 0,
+   "abl": 9
+  },
+  "resurrectio": {
+   "ac": 2,
+   "abl": 7
+  },
+  "hortus": {
+   "ac": 2,
+   "abl": 7
+  },
+  "servitus": {
+   "ac": 8,
+   "abl": 1
+  },
+  "doctrina": {
+   "ac": 0,
+   "abl": 9
+  },
+  "navicula": {
+   "ac": 5,
+   "abl": 4
+  },
+  "hierosolyma": {
+   "ac": 6,
+   "abl": 3
+  },
+  "adventus": {
+   "ac": 2,
+   "abl": 7
+  },
+  "sicilia": {
+   "ac": 5,
+   "abl": 3
+  },
+  "ordo": {
+   "ac": 4,
+   "abl": 4
+  },
+  "thronus": {
+   "ac": 0,
+   "abl": 8
+  },
+  "arbor": {
+   "ac": 4,
+   "abl": 4
+  },
+  "vinculum": {
+   "ac": 3,
+   "abl": 5
+  },
+  "acies": {
+   "ac": 3,
+   "abl": 5
+  },
+  "gehenna": {
+   "ac": 8,
+   "abl": 0
+  },
+  "contio": {
+   "ac": 1,
+   "abl": 7
+  },
+  "occultus": {
+   "ac": 0,
+   "abl": 8
+  },
+  "treveri": {
+   "ac": 5,
+   "abl": 3
+  },
+  "absconditus": {
+   "ac": 0,
+   "abl": 8
+  },
+  "patria": {
+   "ac": 3,
+   "abl": 5
+  },
+  "atrium": {
+   "ac": 5,
+   "abl": 3
+  },
+  "nox": {
+   "ac": 1,
+   "abl": 7
+  },
+  "praetorium": {
+   "ac": 3,
+   "abl": 5
+  },
+  "sanctus": {
+   "ac": 6,
+   "abl": 2
+  },
+  "noster": {
+   "ac": 8,
+   "abl": 0
+  },
+  "auris": {
+   "ac": 3,
+   "abl": 4
+  },
+  "exsilium": {
+   "ac": 6,
+   "abl": 1
+  },
+  "annus": {
+   "ac": 6,
+   "abl": 1
+  },
+  "timor": {
+   "ac": 0,
+   "abl": 7
+  },
+  "periculum": {
+   "ac": 0,
+   "abl": 7
+  },
+  "custodia": {
+   "ac": 3,
+   "abl": 4
+  },
+  "altus": {
+   "ac": 4,
+   "abl": 3
+  },
+  "uter": {
+   "ac": 6,
+   "abl": 1
+  },
+  "villa": {
+   "ac": 7,
+   "abl": 0
+  },
+  "infirmitas": {
+   "ac": 0,
+   "abl": 7
+  },
+  "platea": {
+   "ac": 3,
+   "abl": 4
+  },
+  "vicus": {
+   "ac": 5,
+   "abl": 2
+  },
+  "memoria": {
+   "ac": 5,
+   "abl": 2
+  },
+  "salus": {
+   "ac": 6,
+   "abl": 1
+  },
+  "tusculanus": {
+   "ac": 3,
+   "abl": 4
+  },
+  "temptatio": {
+   "ac": 6,
+   "abl": 1
+  },
+  "vinea": {
+   "ac": 4,
+   "abl": 3
+  },
+  "stagnum": {
+   "ac": 6,
+   "abl": 1
+  },
+  "pater": {
+   "ac": 2,
+   "abl": 5
+  },
+  "labor": {
+   "ac": 1,
+   "abl": 6
+  },
+  "frater": {
+   "ac": 4,
+   "abl": 3
+  },
+  "hiberna": {
+   "ac": 6,
+   "abl": 1
+  },
+  "litus": {
+   "ac": 2,
+   "abl": 4
+  },
+  "equus": {
+   "ac": 2,
+   "abl": 4
+  },
+  "horreum": {
+   "ac": 5,
+   "abl": 1
+  },
+  "sinus": {
+   "ac": 2,
+   "abl": 4
+  },
+  "lectus": {
+   "ac": 2,
+   "abl": 4
+  },
+  "solitudo": {
+   "ac": 3,
+   "abl": 3
+  },
+  "sol": {
+   "ac": 1,
+   "abl": 5
+  },
+  "iugum": {
+   "ac": 0,
+   "abl": 6
+  },
+  "ioppe": {
+   "ac": 4,
+   "abl": 2
+  },
+  "insula": {
+   "ac": 1,
+   "abl": 5
+  },
+  "ratio": {
+   "ac": 3,
+   "abl": 3
+  },
+  "quisquam": {
+   "ac": 6,
+   "abl": 0
+  },
+  "crastinus": {
+   "ac": 6,
+   "abl": 0
+  },
+  "possessio": {
+   "ac": 5,
+   "abl": 1
+  },
+  "anima": {
+   "ac": 3,
+   "abl": 3
+  },
+  "spina": {
+   "ac": 2,
+   "abl": 4
+  },
+  "gaudium": {
+   "ac": 3,
+   "abl": 3
+  },
+  "remissio": {
+   "ac": 6,
+   "abl": 0
+  },
+  "multus": {
+   "ac": 1,
+   "abl": 5
+  },
+  "peccatum": {
+   "ac": 0,
+   "abl": 6
+  },
+  "praeputium": {
+   "ac": 0,
+   "abl": 6
+  },
+  "sapientia": {
+   "ac": 0,
+   "abl": 6
+  },
+  "antrum": {
+   "ac": 1,
+   "abl": 4
+  },
+  "balneum": {
+   "ac": 2,
+   "abl": 3
+  },
+  "orbis": {
+   "ac": 1,
+   "abl": 4
+  },
+  "fovea": {
+   "ac": 4,
+   "abl": 1
+  },
+  "libertas": {
+   "ac": 4,
+   "abl": 1
+  },
+  "gladius": {
+   "ac": 0,
+   "abl": 5
+  },
+  "vox": {
+   "ac": 0,
+   "abl": 5
+  },
+  "promptus": {
+   "ac": 0,
+   "abl": 5
+  },
+  "negotium": {
+   "ac": 0,
+   "abl": 5
+  },
+  "ministerium": {
+   "ac": 3,
+   "abl": 2
+  },
+  "vestis": {
+   "ac": 1,
+   "abl": 4
+  },
+  "dext(e)ra": {
+   "ac": 1,
+   "abl": 4
+  },
+  "scribo": {
+   "ac": 0,
+   "abl": 5
+  },
+  "discus": {
+   "ac": 0,
+   "abl": 5
+  },
+  "somnus": {
+   "ac": 0,
+   "abl": 5
+  },
+  "quis": {
+   "ac": 0,
+   "abl": 5
+  },
+  "vas": {
+   "ac": 2,
+   "abl": 3
+  },
+  "mensis": {
+   "ac": 3,
+   "abl": 2
+  },
+  "patientia": {
+   "ac": 0,
+   "abl": 5
+  },
+  "vitis": {
+   "ac": 0,
+   "abl": 5
+  },
+  "suus": {
+   "ac": 3,
+   "abl": 2
+  },
+  "sanctificatio": {
+   "ac": 2,
+   "abl": 3
+  },
+  "scrobis": {
+   "ac": 0,
+   "abl": 5
+  },
+  "collis": {
+   "ac": 2,
+   "abl": 3
+  },
+  "deditio": {
+   "ac": 5,
+   "abl": 0
+  },
+  "statio": {
+   "ac": 1,
+   "abl": 4
+  },
+  "porticus": {
+   "ac": 0,
+   "abl": 4
+  },
+  "colonia": {
+   "ac": 2,
+   "abl": 2
+  },
+  "consulatus": {
+   "ac": 0,
+   "abl": 4
+  },
+  "hispania": {
+   "ac": 4,
+   "abl": 0
+  },
+  "sedes": {
+   "ac": 1,
+   "abl": 3
+  },
+  "posterus": {
+   "ac": 3,
+   "abl": 1
+  },
+  "fortuna": {
+   "ac": 1,
+   "abl": 3
+  },
+  "abyssus": {
+   "ac": 4,
+   "abl": 0
+  },
+  "convivium": {
+   "ac": 0,
+   "abl": 4
+  },
+  "cena": {
+   "ac": 0,
+   "abl": 4
+  },
+  "otium": {
+   "ac": 1,
+   "abl": 3
+  },
+  "consilium": {
+   "ac": 0,
+   "abl": 4
+  },
+  "porcus": {
+   "ac": 4,
+   "abl": 0
+  },
+  "vestimentum": {
+   "ac": 2,
+   "abl": 2
+  },
+  "lignum": {
+   "ac": 0,
+   "abl": 4
+  },
+  "cenaculum": {
+   "ac": 2,
+   "abl": 2
+  },
+  "scriptura": {
+   "ac": 0,
+   "abl": 4
+  },
+  "similitudo": {
+   "ac": 4,
+   "abl": 0
+  },
+  "desiderium": {
+   "ac": 1,
+   "abl": 3
+  },
+  "virga": {
+   "ac": 0,
+   "abl": 4
+  },
+  "princeps": {
+   "ac": 0,
+   "abl": 4
+  },
+  "tabernaculum": {
+   "ac": 1,
+   "abl": 3
+  },
+  "alter": {
+   "ac": 3,
+   "abl": 1
+  },
+  "generatio": {
+   "ac": 1,
+   "abl": 3
+  },
+  "infernus": {
+   "ac": 1,
+   "abl": 3
+  },
+  "circumcisio": {
+   "ac": 1,
+   "abl": 3
+  },
+  "syria": {
+   "ac": 3,
+   "abl": 1
+  },
+  "mensura": {
+   "ac": 2,
+   "abl": 2
+  },
+  "lumen": {
+   "ac": 2,
+   "abl": 2
+  },
+  "venter": {
+   "ac": 3,
+   "abl": 1
+  },
+  "bethania": {
+   "ac": 2,
+   "abl": 2
+  },
+  "mille": {
+   "ac": 2,
+   "abl": 2
+  },
+  "gazophylacium": {
+   "ac": 3,
+   "abl": 1
+  },
+  "proximus": {
+   "ac": 1,
+   "abl": 3
+  },
+  "vigilia": {
+   "ac": 0,
+   "abl": 4
+  },
+  "commemoratio": {
+   "ac": 3,
+   "abl": 1
+  },
+  "dilectio": {
+   "ac": 0,
+   "abl": 4
+  },
+  "aer": {
+   "ac": 4,
+   "abl": 0
+  },
+  "tabula": {
+   "ac": 0,
+   "abl": 4
+  },
+  "simplicitas": {
+   "ac": 1,
+   "abl": 3
+  },
+  "osculum": {
+   "ac": 0,
+   "abl": 4
+  },
+  "interitus": {
+   "ac": 2,
+   "abl": 2
+  },
+  "praesentia": {
+   "ac": 0,
+   "abl": 4
+  },
+  "caelestis": {
+   "ac": 0,
+   "abl": 4
+  },
+  "laus": {
+   "ac": 3,
+   "abl": 1
+  },
+  "seminarium": {
+   "ac": 0,
+   "abl": 4
+  },
+  "amicitia": {
+   "ac": 2,
+   "abl": 2
+  },
+  "portus": {
+   "ac": 4,
+   "abl": 0
+  },
+  "cilicia": {
+   "ac": 4,
+   "abl": 0
+  },
+  "discrimen": {
+   "ac": 3,
+   "abl": 1
+  },
+  "latitudo": {
+   "ac": 4,
+   "abl": 0
+  },
+  "colloquium": {
+   "ac": 1,
+   "abl": 3
+  },
+  "menapii": {
+   "ac": 3,
+   "abl": 1
+  },
+  "pratum": {
+   "ac": 0,
+   "abl": 3
+  },
+  "futurus": {
+   "ac": 1,
+   "abl": 2
+  },
+  "aditus": {
+   "ac": 0,
+   "abl": 3
+  },
+  "grex": {
+   "ac": 3,
+   "abl": 0
+  },
+  "figura": {
+   "ac": 1,
+   "abl": 2
+  },
+  "clivus": {
+   "ac": 1,
+   "abl": 2
+  },
+  "summum": {
+   "ac": 1,
+   "abl": 2
+  },
+  "publicus": {
+   "ac": 1,
+   "abl": 2
+  },
+  "piscina": {
+   "ac": 2,
+   "abl": 1
+  },
+  "calamitas": {
+   "ac": 1,
+   "abl": 2
+  },
+  "capitolium": {
+   "ac": 0,
+   "abl": 3
+  },
+  "paenitentia": {
+   "ac": 3,
+   "abl": 0
+  },
+  "theatrum": {
+   "ac": 2,
+   "abl": 1
+  },
+  "curia": {
+   "ac": 0,
+   "abl": 3
+  },
+  "multitudo": {
+   "ac": 1,
+   "abl": 2
+  },
+  "castrum": {
+   "ac": 2,
+   "abl": 1
+  },
+  "ceterus": {
+   "ac": 1,
+   "abl": 2
+  },
+  "perpetuus": {
+   "ac": 3,
+   "abl": 0
+  },
+  "vinum": {
+   "ac": 0,
+   "abl": 3
+  },
+  "excelsum": {
+   "ac": 0,
+   "abl": 3
+  },
+  "metus": {
+   "ac": 0,
+   "abl": 3
+  },
+  "miseria": {
+   "ac": 2,
+   "abl": 1
+  },
+  "lux": {
+   "ac": 2,
+   "abl": 1
+  },
+  "apostolus": {
+   "ac": 2,
+   "abl": 1
+  },
+  "discipulus": {
+   "ac": 3,
+   "abl": 0
+  },
+  "caesarea": {
+   "ac": 1,
+   "abl": 2
+  },
+  "iniustitia": {
+   "ac": 1,
+   "abl": 2
+  },
+  "passio": {
+   "ac": 1,
+   "abl": 2
+  },
+  "sensus": {
+   "ac": 1,
+   "abl": 2
+  },
+  "caminus": {
+   "ac": 2,
+   "abl": 1
+  },
+  "paradisus": {
+   "ac": 1,
+   "abl": 2
+  },
+  "altitudo": {
+   "ac": 3,
+   "abl": 0
+  },
+  "bracchium": {
+   "ac": 0,
+   "abl": 3
+  },
+  "pompeius": {
+   "ac": 2,
+   "abl": 1
+  },
+  "vitium": {
+   "ac": 0,
+   "abl": 3
+  },
+  "modicus": {
+   "ac": 0,
+   "abl": 3
+  },
+  "secundus": {
+   "ac": 0,
+   "abl": 3
+  },
+  "humilitas": {
+   "ac": 0,
+   "abl": 3
+  },
+  "iordanes": {
+   "ac": 1,
+   "abl": 2
+  },
+  "mandatum": {
+   "ac": 0,
+   "abl": 3
+  },
+  "tectum": {
+   "ac": 0,
+   "abl": 3
+  },
+  "error": {
+   "ac": 1,
+   "abl": 2
+  },
+  "maiestas": {
+   "ac": 0,
+   "abl": 3
+  },
+  "duo": {
+   "ac": 2,
+   "abl": 1
+  },
+  "mulier": {
+   "ac": 1,
+   "abl": 2
+  },
+  "praesepium": {
+   "ac": 0,
+   "abl": 3
+  },
+  "signum": {
+   "ac": 3,
+   "abl": 0
+  },
+  "abundantia": {
+   "ac": 1,
+   "abl": 2
+  },
+  "universus": {
+   "ac": 1,
+   "abl": 2
+  },
+  "principium": {
+   "ac": 0,
+   "abl": 3
+  },
+  "cana": {
+   "ac": 0,
+   "abl": 3
+  },
+  "proverbium": {
+   "ac": 0,
+   "abl": 3
+  },
+  "semen": {
+   "ac": 0,
+   "abl": 3
+  },
+  "vir": {
+   "ac": 0,
+   "abl": 3
+  },
+  "novitas": {
+   "ac": 0,
+   "abl": 3
+  },
+  "forma": {
+   "ac": 1,
+   "abl": 2
+  },
+  "membrum": {
+   "ac": 0,
+   "abl": 3
+  },
+  "honor": {
+   "ac": 2,
+   "abl": 1
+  },
+  "ira": {
+   "ac": 3,
+   "abl": 0
+  },
+  "contentio": {
+   "ac": 0,
+   "abl": 3
+  },
+  "illyricum": {
+   "ac": 3,
+   "abl": 0
+  },
+  "scientia": {
+   "ac": 0,
+   "abl": 3
+  },
+  "achaia": {
+   "ac": 0,
+   "abl": 3
+  },
+  "vacuus": {
+   "ac": 3,
+   "abl": 0
+  },
+  "necessitas": {
+   "ac": 0,
+   "abl": 3
+  },
+  "plaga": {
+   "ac": 0,
+   "abl": 3
+  },
+  "viscera": {
+   "ac": 0,
+   "abl": 3
+  },
+  "plenitudo": {
+   "ac": 1,
+   "abl": 2
+  },
+  "captivitas": {
+   "ac": 3,
+   "abl": 0
+  },
+  "aedificatio": {
+   "ac": 3,
+   "abl": 0
+  },
+  "disciplina": {
+   "ac": 1,
+   "abl": 2
+  },
+  "defensio": {
+   "ac": 1,
+   "abl": 2
+  },
+  "delicia": {
+   "ac": 0,
+   "abl": 3
+  },
+  "quintus": {
+   "ac": 1,
+   "abl": 2
+  },
+  "munitio": {
+   "ac": 0,
+   "abl": 3
+  },
+  "arpinas": {
+   "ac": 0,
+   "abl": 3
+  },
+  "studium": {
+   "ac": 0,
+   "abl": 3
+  },
+  "pompeianus": {
+   "ac": 2,
+   "abl": 1
+  },
+  "odium": {
+   "ac": 1,
+   "abl": 2
+  },
+  "publius": {
+   "ac": 1,
+   "abl": 2
+  },
+  "vulgus": {
+   "ac": 3,
+   "abl": 0
+  },
+  "luctus": {
+   "ac": 2,
+   "abl": 1
+  },
+  "cumanus": {
+   "ac": 2,
+   "abl": 1
+  },
+  "arcanum": {
+   "ac": 0,
+   "abl": 3
+  },
+  "trebulanus": {
+   "ac": 1,
+   "abl": 2
+  },
+  "lucius": {
+   "ac": 1,
+   "abl": 2
+  },
+  "pagus": {
+   "ac": 2,
+   "abl": 1
+  },
+  "ius": {
+   "ac": 0,
+   "abl": 3
+  },
+  "nantuates": {
+   "ac": 2,
+   "abl": 1
+  },
+  "oceanus": {
+   "ac": 1,
+   "abl": 2
+  },
+  "continens": {
+   "ac": 2,
+   "abl": 1
+  },
+  "lanx": {
+   "ac": 0,
+   "abl": 2
+  },
+  "postis": {
+   "ac": 0,
+   "abl": 2
+  },
+  "triclinium": {
+   "ac": 1,
+   "abl": 1
+  },
+  "leo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "collum": {
+   "ac": 0,
+   "abl": 2
+  },
+  "pelvis": {
+   "ac": 1,
+   "abl": 1
+  },
+  "tribunal": {
+   "ac": 0,
+   "abl": 2
+  },
+  "solium": {
+   "ac": 1,
+   "abl": 1
+  },
+  "crus": {
+   "ac": 1,
+   "abl": 1
+  },
+  "amicus": {
+   "ac": 2,
+   "abl": 0
+  },
+  "quercus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "africa": {
+   "ac": 0,
+   "abl": 2
+  },
+  "magistratus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "status": {
+   "ac": 1,
+   "abl": 1
+  },
+  "vestigium": {
+   "ac": 0,
+   "abl": 2
+  },
+  "calculus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "fons": {
+   "ac": 2,
+   "abl": 0
+  },
+  "blasphemia": {
+   "ac": 2,
+   "abl": 0
+  },
+  "lacus": {
+   "ac": 2,
+   "abl": 0
+  },
+  "quidam": {
+   "ac": 1,
+   "abl": 1
+  },
+  "auricula": {
+   "ac": 2,
+   "abl": 0
+  },
+  "prima": {
+   "ac": 0,
+   "abl": 2
+  },
+  "pons": {
+   "ac": 0,
+   "abl": 2
+  },
+  "aedes": {
+   "ac": 1,
+   "abl": 1
+  },
+  "exercitus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "maxilla": {
+   "ac": 1,
+   "abl": 1
+  },
+  "captura": {
+   "ac": 1,
+   "abl": 1
+  },
+  "umerus": {
+   "ac": 2,
+   "abl": 0
+  },
+  "moses": {
+   "ac": 1,
+   "abl": 1
+  },
+  "damascus": {
+   "ac": 1,
+   "abl": 1
+  },
+  "visus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "sporta": {
+   "ac": 0,
+   "abl": 2
+  },
+  "grabattus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "superus": {
+   "ac": 1,
+   "abl": 1
+  },
+  "natio": {
+   "ac": 2,
+   "abl": 0
+  },
+  "voluntas": {
+   "ac": 1,
+   "abl": 1
+  },
+  "cogitatio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "immunditia": {
+   "ac": 1,
+   "abl": 1
+  },
+  "mendacium": {
+   "ac": 0,
+   "abl": 2
+  },
+  "usus": {
+   "ac": 2,
+   "abl": 0
+  },
+  "exilis": {
+   "ac": 0,
+   "abl": 2
+  },
+  "summus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "bucca": {
+   "ac": 2,
+   "abl": 0
+  },
+  "maeror": {
+   "ac": 0,
+   "abl": 2
+  },
+  "cursus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "cumanum": {
+   "ac": 0,
+   "abl": 2
+  },
+  "caesar": {
+   "ac": 1,
+   "abl": 1
+  },
+  "tristitia": {
+   "ac": 0,
+   "abl": 2
+  },
+  "aquitania": {
+   "ac": 2,
+   "abl": 0
+  },
+  "veneti": {
+   "ac": 2,
+   "abl": 0
+  },
+  "vadum": {
+   "ac": 0,
+   "abl": 2
+  },
+  "cupiditas": {
+   "ac": 2,
+   "abl": 0
+  },
+  "angulus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "cubiculum": {
+   "ac": 1,
+   "abl": 1
+  },
+  "clibanus": {
+   "ac": 2,
+   "abl": 0
+  },
+  "cognatio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "zona": {
+   "ac": 0,
+   "abl": 2
+  },
+  "magnus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "flamma": {
+   "ac": 0,
+   "abl": 2
+  },
+  "propheta": {
+   "ac": 0,
+   "abl": 2
+  },
+  "manifestus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "albus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "oriens": {
+   "ac": 0,
+   "abl": 2
+  },
+  "panis": {
+   "ac": 0,
+   "abl": 2
+  },
+  "messis": {
+   "ac": 2,
+   "abl": 0
+  },
+  "parens": {
+   "ac": 2,
+   "abl": 0
+  },
+  "tyros": {
+   "ac": 0,
+   "abl": 2
+  },
+  "cilicium": {
+   "ac": 0,
+   "abl": 2
+  },
+  "praedicatio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "ramus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "satum": {
+   "ac": 1,
+   "abl": 1
+  },
+  "consummatio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "secessus": {
+   "ac": 2,
+   "abl": 0
+  },
+  "profundum": {
+   "ac": 1,
+   "abl": 1
+  },
+  "altare": {
+   "ac": 0,
+   "abl": 2
+  },
+  "arca": {
+   "ac": 2,
+   "abl": 0
+  },
+  "sepultura": {
+   "ac": 2,
+   "abl": 0
+  },
+  "nullus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "stola": {
+   "ac": 0,
+   "abl": 2
+  },
+  "praedium": {
+   "ac": 1,
+   "abl": 1
+  },
+  "seditio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "momentum": {
+   "ac": 0,
+   "abl": 2
+  },
+  "magnitudo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "latro": {
+   "ac": 2,
+   "abl": 0
+  },
+  "cubile": {
+   "ac": 0,
+   "abl": 2
+  },
+  "damnatio": {
+   "ac": 1,
+   "abl": 1
+  },
+  "spatium": {
+   "ac": 0,
+   "abl": 2
+  },
+  "proprius": {
+   "ac": 2,
+   "abl": 0
+  },
+  "adulterium": {
+   "ac": 0,
+   "abl": 2
+  },
+  "crux": {
+   "ac": 0,
+   "abl": 2
+  },
+  "latus": {
+   "ac": 2,
+   "abl": 0
+  },
+  "habitaculum": {
+   "ac": 1,
+   "abl": 1
+  },
+  "psalmus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "corruptio": {
+   "ac": 1,
+   "abl": 1
+  },
+  "paulus": {
+   "ac": 2,
+   "abl": 0
+  },
+  "lystra": {
+   "ac": 0,
+   "abl": 2
+  },
+  "derbe": {
+   "ac": 2,
+   "abl": 0
+  },
+  "aequitas": {
+   "ac": 0,
+   "abl": 2
+  },
+  "gradus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "condemnatio": {
+   "ac": 2,
+   "abl": 0
+  },
+  "iustificatio": {
+   "ac": 2,
+   "abl": 0
+  },
+  "delictum": {
+   "ac": 0,
+   "abl": 2
+  },
+  "vetustas": {
+   "ac": 0,
+   "abl": 2
+  },
+  "contumelia": {
+   "ac": 1,
+   "abl": 1
+  },
+  "lapis": {
+   "ac": 1,
+   "abl": 1
+  },
+  "incredulitas": {
+   "ac": 1,
+   "abl": 1
+  },
+  "sollicitudo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "oboedientia": {
+   "ac": 1,
+   "abl": 1
+  },
+  "societas": {
+   "ac": 1,
+   "abl": 1
+  },
+  "astutia": {
+   "ac": 0,
+   "abl": 2
+  },
+  "fermentum": {
+   "ac": 0,
+   "abl": 2
+  },
+  "cibus": {
+   "ac": 1,
+   "abl": 1
+  },
+  "lingua": {
+   "ac": 0,
+   "abl": 2
+  },
+  "claritas": {
+   "ac": 1,
+   "abl": 1
+  },
+  "incorruptio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "tuba": {
+   "ac": 0,
+   "abl": 2
+  },
+  "victoria": {
+   "ac": 0,
+   "abl": 2
+  },
+  "persona": {
+   "ac": 1,
+   "abl": 1
+  },
+  "angustia": {
+   "ac": 0,
+   "abl": 2
+  },
+  "ieiunium": {
+   "ac": 0,
+   "abl": 2
+  },
+  "substantia": {
+   "ac": 0,
+   "abl": 2
+  },
+  "benedictio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "destructio": {
+   "ac": 2,
+   "abl": 0
+  },
+  "factum": {
+   "ac": 0,
+   "abl": 2
+  },
+  "immensus": {
+   "ac": 2,
+   "abl": 0
+  },
+  "regula": {
+   "ac": 0,
+   "abl": 2
+  },
+  "insipientia": {
+   "ac": 0,
+   "abl": 2
+  },
+  "persecutio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "arabia": {
+   "ac": 1,
+   "abl": 1
+  },
+  "simulatio": {
+   "ac": 1,
+   "abl": 1
+  },
+  "occasio": {
+   "ac": 1,
+   "abl": 1
+  },
+  "agnitio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "catena": {
+   "ac": 1,
+   "abl": 1
+  },
+  "prior": {
+   "ac": 1,
+   "abl": 1
+  },
+  "actio": {
+   "ac": 1,
+   "abl": 1
+  },
+  "epulae": {
+   "ac": 0,
+   "abl": 2
+  },
+  "cauda": {
+   "ac": 0,
+   "abl": 2
+  },
+  "tribus": {
+   "ac": 1,
+   "abl": 1
+  },
+  "porta": {
+   "ac": 0,
+   "abl": 2
+  },
+  "surculus": {
+   "ac": 1,
+   "abl": 1
+  },
+  "olea": {
+   "ac": 0,
+   "abl": 2
+  },
+  "summitas": {
+   "ac": 0,
+   "abl": 2
+  },
+  "fructus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "pastinum": {
+   "ac": 0,
+   "abl": 2
+  },
+  "totus": {
+   "ac": 2,
+   "abl": 0
+  },
+  "radix": {
+   "ac": 1,
+   "abl": 1
+  },
+  "truncus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "prunum": {
+   "ac": 0,
+   "abl": 2
+  },
+  "humanitas": {
+   "ac": 0,
+   "abl": 2
+  },
+  "infamia": {
+   "ac": 0,
+   "abl": 2
+  },
+  "decerno": {
+   "ac": 0,
+   "abl": 2
+  },
+  "appius": {
+   "ac": 1,
+   "abl": 1
+  },
+  "suspicio": {
+   "ac": 2,
+   "abl": 0
+  },
+  "aerumna": {
+   "ac": 1,
+   "abl": 1
+  },
+  "casus": {
+   "ac": 2,
+   "abl": 0
+  },
+  "tribunus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "abrogo": {
+   "ac": 0,
+   "abl": 2
+  },
+  "advorsus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "comitium": {
+   "ac": 1,
+   "abl": 1
+  },
+  "apulia": {
+   "ac": 1,
+   "abl": 1
+  },
+  "bonum": {
+   "ac": 0,
+   "abl": 2
+  },
+  "edictum": {
+   "ac": 0,
+   "abl": 2
+  },
+  "longitudo": {
+   "ac": 2,
+   "abl": 0
+  },
+  "sequani": {
+   "ac": 1,
+   "abl": 1
+  },
+  "matrimonium": {
+   "ac": 2,
+   "abl": 0
+  },
+  "quaero": {
+   "ac": 0,
+   "abl": 2
+  },
+  "agmen": {
+   "ac": 0,
+   "abl": 2
+  },
+  "murus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "valles": {
+   "ac": 1,
+   "abl": 1
+  },
+  "venatio": {
+   "ac": 0,
+   "abl": 2
+  },
+  "morini": {
+   "ac": 2,
+   "abl": 0
+  },
+  "aridum": {
+   "ac": 1,
+   "abl": 1
+  },
+  "hiem(p)s": {
+   "ac": 2,
+   "abl": 0
+  },
+  "inopia": {
+   "ac": 0,
+   "abl": 2
+  },
+  "clientela": {
+   "ac": 1,
+   "abl": 1
+  },
+  "tumulus": {
+   "ac": 1,
+   "abl": 1
+  },
+  "suebi": {
+   "ac": 2,
+   "abl": 0
+  },
+  "liberi": {
+   "ac": 1,
+   "abl": 1
+  },
+  "praesidium": {
+   "ac": 0,
+   "abl": 2
+  },
+  "mos": {
+   "ac": 0,
+   "abl": 2
+  },
+  "gaius": {
+   "ac": 0,
+   "abl": 2
+  },
+  "marcus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "catulus": {
+   "ac": 0,
+   "abl": 2
+  },
+  "certamen": {
+   "ac": 1,
+   "abl": 0
+  },
+  "penates": {
+   "ac": 1,
+   "abl": 0
+  },
+  "pecus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "facinus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "aequor": {
+   "ac": 1,
+   "abl": 0
+  },
+  "ossum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "damma": {
+   "ac": 0,
+   "abl": 1
+  },
+  "cervix": {
+   "ac": 0,
+   "abl": 1
+  },
+  "stipes": {
+   "ac": 0,
+   "abl": 1
+  },
+  "iuvenca": {
+   "ac": 1,
+   "abl": 0
+  },
+  "unda": {
+   "ac": 0,
+   "abl": 1
+  },
+  "pulvis": {
+   "ac": 0,
+   "abl": 1
+  },
+  "pascua": {
+   "ac": 0,
+   "abl": 1
+  },
+  "harundo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "pectus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "margo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "unguis": {
+   "ac": 1,
+   "abl": 0
+  },
+  "tribunal,": {
+   "ac": 1,
+   "abl": 0
+  },
+  "pullus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "amphitheatrum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "folium": {
+   "ac": 1,
+   "abl": 0
+  },
+  "cella": {
+   "ac": 0,
+   "abl": 1
+  },
+  "theca": {
+   "ac": 0,
+   "abl": 1
+  },
+  "nummus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "avis": {
+   "ac": 1,
+   "abl": 0
+  },
+  "domusio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "contubernium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "praeceps": {
+   "ac": 0,
+   "abl": 1
+  },
+  "caccabus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "scyphus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "carnis": {
+   "ac": 0,
+   "abl": 1
+  },
+  "matella": {
+   "ac": 0,
+   "abl": 1
+  },
+  "pulvinus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tegula": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tristimonium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "mappa": {
+   "ac": 0,
+   "abl": 1
+  },
+  "prospectus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "catillus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "gremium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "vilicatio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "craticula": {
+   "ac": 0,
+   "abl": 1
+  },
+  "decuria": {
+   "ac": 0,
+   "abl": 1
+  },
+  "funus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "siccus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "speculum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "saltus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "liquor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tugurium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "fluvius": {
+   "ac": 0,
+   "abl": 1
+  },
+  "patina": {
+   "ac": 0,
+   "abl": 1
+  },
+  "latibulum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "planus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "xystus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "sublimis": {
+   "ac": 1,
+   "abl": 0
+  },
+  "basis": {
+   "ac": 0,
+   "abl": 1
+  },
+  "fabella": {
+   "ac": 1,
+   "abl": 0
+  },
+  "sui": {
+   "ac": 1,
+   "abl": 0
+  },
+  "sterquilinum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "penuria": {
+   "ac": 0,
+   "abl": 1
+  },
+  "rivus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "classis": {
+   "ac": 0,
+   "abl": 1
+  },
+  "patricius": {
+   "ac": 1,
+   "abl": 0
+  },
+  "patriciatus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "daci": {
+   "ac": 1,
+   "abl": 0
+  },
+  "parthi": {
+   "ac": 1,
+   "abl": 0
+  },
+  "vicis": {
+   "ac": 1,
+   "abl": 0
+  },
+  "auxilium": {
+   "ac": 1,
+   "abl": 0
+  },
+  "serus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "duplus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "poppaea": {
+   "ac": 0,
+   "abl": 1
+  },
+  "dextera": {
+   "ac": 0,
+   "abl": 1
+  },
+  "occulo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "fama": {
+   "ac": 0,
+   "abl": 1
+  },
+  "posteritas": {
+   "ac": 1,
+   "abl": 0
+  },
+  "latrocinium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "torus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ora": {
+   "ac": 0,
+   "abl": 1
+  },
+  "copia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "moenia": {
+   "ac": 1,
+   "abl": 0
+  },
+  "superbia": {
+   "ac": 1,
+   "abl": 0
+  },
+  "scortum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "propatulum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "nona": {
+   "ac": 1,
+   "abl": 0
+  },
+  "forus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "incertum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "scelus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "appulia": {
+   "ac": 1,
+   "abl": 0
+  },
+  "obscurum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tullius": {
+   "ac": 0,
+   "abl": 1
+  },
+  "decapolis": {
+   "ac": 0,
+   "abl": 1
+  },
+  "extremum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "profluvium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "pes": {
+   "ac": 1,
+   "abl": 0
+  },
+  "plebs": {
+   "ac": 0,
+   "abl": 1
+  },
+  "lectulus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "masculus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "notitia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "durabilitas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "putatio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "durus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ceramicus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tectorium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "iracundia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "cogo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "oppressio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "circulus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "legatio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "deversorium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "altercatio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "legatus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "quaestor": {
+   "ac": 1,
+   "abl": 0
+  },
+  "raeda": {
+   "ac": 0,
+   "abl": 1
+  },
+  "aestiva": {
+   "ac": 0,
+   "abl": 1
+  },
+  "sano": {
+   "ac": 0,
+   "abl": 1
+  },
+  "cruciatus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "imperium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "venelli": {
+   "ac": 1,
+   "abl": 0
+  },
+  "lingula": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ubii": {
+   "ac": 1,
+   "abl": 0
+  },
+  "furtum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "vacuum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "quispiam": {
+   "ac": 1,
+   "abl": 0
+  },
+  "philosophus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "investigatio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "multiloquium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "remigo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "parvus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "mamona": {
+   "ac": 0,
+   "abl": 1
+  },
+  "alienus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tormentum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "mesopotamia": {
+   "ac": 1,
+   "abl": 0
+  },
+  "sepulcrum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "rubus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "manufactus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "dispositio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "perditio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "fel": {
+   "ac": 0,
+   "abl": 1
+  },
+  "gaza": {
+   "ac": 1,
+   "abl": 0
+  },
+  "azotus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "sardus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "transmigratio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "rama": {
+   "ac": 0,
+   "abl": 1
+  },
+  "teloneum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "sodoma": {
+   "ac": 0,
+   "abl": 1
+  },
+  "petrosa": {
+   "ac": 1,
+   "abl": 0
+  },
+  "regeneratio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "sempiternus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "aurum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "donum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "penetrabilis": {
+   "ac": 0,
+   "abl": 1
+  },
+  "occidens": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ianua": {
+   "ac": 0,
+   "abl": 1
+  },
+  "mola": {
+   "ac": 0,
+   "abl": 1
+  },
+  "supplicium": {
+   "ac": 1,
+   "abl": 0
+  },
+  "paropsis": {
+   "ac": 0,
+   "abl": 1
+  },
+  "corbanas": {
+   "ac": 1,
+   "abl": 0
+  },
+  "triduum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "petra": {
+   "ac": 0,
+   "abl": 1
+  },
+  "esaias": {
+   "ac": 0,
+   "abl": 1
+  },
+  "furor": {
+   "ac": 1,
+   "abl": 0
+  },
+  "spica": {
+   "ac": 0,
+   "abl": 1
+  },
+  "puppis": {
+   "ac": 0,
+   "abl": 1
+  },
+  "vanus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "pecunia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "bivium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "cathedra": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ostium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "catinus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "quantus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "dexter": {
+   "ac": 0,
+   "abl": 1
+  },
+  "effigies": {
+   "ac": 0,
+   "abl": 1
+  },
+  "nativitas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "senecta": {
+   "ac": 0,
+   "abl": 1
+  },
+  "montanus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "progenies": {
+   "ac": 1,
+   "abl": 0
+  },
+  "sanctitas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "umbra": {
+   "ac": 0,
+   "abl": 1
+  },
+  "diversorium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ulna": {
+   "ac": 1,
+   "abl": 0
+  },
+  "ruina": {
+   "ac": 1,
+   "abl": 0
+  },
+  "comitatus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "directus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "fluxus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "medicus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "aratrum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "iumentum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "stabulum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "digitus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "oblivio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tres": {
+   "ac": 1,
+   "abl": 0
+  },
+  "filia": {
+   "ac": 1,
+   "abl": 0
+  },
+  "mater": {
+   "ac": 1,
+   "abl": 0
+  },
+  "nurus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "socrus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "ficulnea": {
+   "ac": 0,
+   "abl": 1
+  },
+  "sum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "puteus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "sterquilinium": {
+   "ac": 1,
+   "abl": 0
+  },
+  "novissimus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "sudarium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "responsum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "munus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "crapula": {
+   "ac": 0,
+   "abl": 1
+  },
+  "iudas": {
+   "ac": 1,
+   "abl": 0
+  },
+  "mensa": {
+   "ac": 0,
+   "abl": 1
+  },
+  "agonia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "aridus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "fractio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "dispersio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "natatoria": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ovile": {
+   "ac": 1,
+   "abl": 0
+  },
+  "vagina": {
+   "ac": 1,
+   "abl": 0
+  },
+  "argumentum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "benefactum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "minae": {
+   "ac": 1,
+   "abl": 0
+  },
+  "excessus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "initium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "attalea": {
+   "ac": 1,
+   "abl": 0
+  },
+  "mysia": {
+   "ac": 1,
+   "abl": 0
+  },
+  "beroea": {
+   "ac": 1,
+   "abl": 0
+  },
+  "thessalonica": {
+   "ac": 0,
+   "abl": 1
+  },
+  "cenchreae": {
+   "ac": 0,
+   "abl": 1
+  },
+  "baptisma": {
+   "ac": 0,
+   "abl": 1
+  },
+  "scola": {
+   "ac": 0,
+   "abl": 1
+  },
+  "redargutio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "nihilum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "sanctifico": {
+   "ac": 0,
+   "abl": 1
+  },
+  "iudaei": {
+   "ac": 0,
+   "abl": 1
+  },
+  "stupor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "antipatris": {
+   "ac": 1,
+   "abl": 0
+  },
+  "auditorium": {
+   "ac": 1,
+   "abl": 0
+  },
+  "ventus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "syrtis": {
+   "ac": 1,
+   "abl": 0
+  },
+  "hadria": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tumor": {
+   "ac": 1,
+   "abl": 0
+  },
+  "hospitium": {
+   "ac": 1,
+   "abl": 0
+  },
+  "conductum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "sustentatio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "repromissio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "helias": {
+   "ac": 0,
+   "abl": 1
+  },
+  "laqueus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "captio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "scandalum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "retributio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "bonitas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "oliva": {
+   "ac": 1,
+   "abl": 0
+  },
+  "misericordia": {
+   "ac": 1,
+   "abl": 0
+  },
+  "ministro": {
+   "ac": 0,
+   "abl": 1
+  },
+  "exhortor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "hilaritas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "comesatio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "disceptatio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "alteruter": {
+   "ac": 1,
+   "abl": 0
+  },
+  "credo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "pauper": {
+   "ac": 1,
+   "abl": 0
+  },
+  "carnalis": {
+   "ac": 0,
+   "abl": 1
+  },
+  "malus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ostensio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "mysterium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "azyma": {
+   "ac": 0,
+   "abl": 1
+  },
+  "vocatio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "idolium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "sacrarium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "stadium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "agon": {
+   "ac": 0,
+   "abl": 1
+  },
+  "incertus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "macellum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "deterior": {
+   "ac": 1,
+   "abl": 0
+  },
+  "enigma": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ignobilitas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ictus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "transitus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "pressura": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tolerantia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "lectio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "imago": {
+   "ac": 1,
+   "abl": 0
+  },
+  "manifestatio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "praesens": {
+   "ac": 0,
+   "abl": 1
+  },
+  "sublimitas": {
+   "ac": 1,
+   "abl": 0
+  },
+  "conscientia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "castitas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "longanimitas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "suavitas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "solacium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "consolatio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "experimentum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "divitiae": {
+   "ac": 1,
+   "abl": 0
+  },
+  "obsequium": {
+   "ac": 1,
+   "abl": 0
+  },
+  "angelus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "fames": {
+   "ac": 0,
+   "abl": 1
+  },
+  "frigus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "adoptio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "diligo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "dispensatio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "redemptio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "confidentia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "vanitas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "operatio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "avaritia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "iustitia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "odor": {
+   "ac": 1,
+   "abl": 0
+  },
+  "promissio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "potentia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "praeparatio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "instantia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "apertio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "confusio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "creatura": {
+   "ac": 0,
+   "abl": 1
+  },
+  "subtilitas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "potus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "augmentum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "superstitio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "philippi": {
+   "ac": 0,
+   "abl": 1
+  },
+  "dolus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "iussus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "adquisitio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "exemplum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "revelatio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "acquisitio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "dalmatia": {
+   "ac": 1,
+   "abl": 0
+  },
+  "accusatio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "malitia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "lumbus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "superbus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "luxuria": {
+   "ac": 1,
+   "abl": 0
+  },
+  "spelunca": {
+   "ac": 0,
+   "abl": 1
+  },
+  "absinthium": {
+   "ac": 1,
+   "abl": 0
+  },
+  "visio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "terraemotus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "cithara": {
+   "ac": 0,
+   "abl": 1
+  },
+  "calix": {
+   "ac": 0,
+   "abl": 1
+  },
+  "poculum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "veneficium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "prostitutio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "femur": {
+   "ac": 0,
+   "abl": 1
+  },
+  "quadrum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "sordes": {
+   "ac": 0,
+   "abl": 1
+  },
+  "pulmo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "diversitas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "puto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "solum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "umidus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "arbitrium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "assumptio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "lutosus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "laetor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "eligo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "vinetum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "vespera": {
+   "ac": 1,
+   "abl": 0
+  },
+  "fabrica": {
+   "ac": 0,
+   "abl": 1
+  },
+  "pavimentum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "(h)arena": {
+   "ac": 0,
+   "abl": 1
+  },
+  "exitus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "olla": {
+   "ac": 0,
+   "abl": 1
+  },
+  "porrectio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "libido": {
+   "ac": 1,
+   "abl": 0
+  },
+  "phasianus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "suppono": {
+   "ac": 0,
+   "abl": 1
+  },
+  "offula": {
+   "ac": 1,
+   "abl": 0
+  },
+  "aetas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "offa": {
+   "ac": 1,
+   "abl": 0
+  },
+  "electio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "occultum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "rosa": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tabes": {
+   "ac": 1,
+   "abl": 0
+  },
+  "corium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "cos": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ingressus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "herba": {
+   "ac": 0,
+   "abl": 1
+  },
+  "cortex": {
+   "ac": 0,
+   "abl": 1
+  },
+  "hiemalis": {
+   "ac": 0,
+   "abl": 1
+  },
+  "vepres": {
+   "ac": 0,
+   "abl": 1
+  },
+  "iugerum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "cresco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "fero": {
+   "ac": 0,
+   "abl": 1
+  },
+  "cydonius": {
+   "ac": 0,
+   "abl": 1
+  },
+  "vasculum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "hibernum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "sapa": {
+   "ac": 0,
+   "abl": 1
+  },
+  "mulsa": {
+   "ac": 0,
+   "abl": 1
+  },
+  "longus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "persicum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "calidus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "putredo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "nux": {
+   "ac": 0,
+   "abl": 1
+  },
+  "arbutum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "amygdalum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "flos": {
+   "ac": 0,
+   "abl": 1
+  },
+  "orbiculus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "fungor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "suffragium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "petitio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "pomponia": {
+   "ac": 1,
+   "abl": 0
+  },
+  "piso": {
+   "ac": 1,
+   "abl": 0
+  },
+  "curio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "ludus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "opertum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "amaltheum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "incommoditas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "adiutor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "privatus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "splendor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "postremus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "congressus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "dissensio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "diligentia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "toculio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "solonium": {
+   "ac": 1,
+   "abl": 0
+  },
+  "accipio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "mirandus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "tusculanum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "auspicium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "curiositas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "dilatio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "controversia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "civilis": {
+   "ac": 0,
+   "abl": 1
+  },
+  "opera": {
+   "ac": 0,
+   "abl": 1
+  },
+  "familiaritas": {
+   "ac": 1,
+   "abl": 0
+  },
+  "opinio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "rostrum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "astrum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "fundus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "muto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "rogo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "fraus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "naufragium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "malum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "hereditas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "rogatio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "do": {
+   "ac": 0,
+   "abl": 1
+  },
+  "dico": {
+   "ac": 0,
+   "abl": 1
+  },
+  "vestibulum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "cermalus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "interior": {
+   "ac": 1,
+   "abl": 0
+  },
+  "heros": {
+   "ac": 0,
+   "abl": 1
+  },
+  "bibliotheca": {
+   "ac": 0,
+   "abl": 1
+  },
+  "incipio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ago": {
+   "ac": 0,
+   "abl": 1
+  },
+  "fastus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "sedecula": {
+   "ac": 0,
+   "abl": 1
+  },
+  "sella": {
+   "ac": 0,
+   "abl": 1
+  },
+  "albanus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tuus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "spectaculum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "andromacha": {
+   "ac": 0,
+   "abl": 1
+  },
+  "intimus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "oratorius": {
+   "ac": 0,
+   "abl": 1
+  },
+  "piraeus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "disputo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "scaevola": {
+   "ac": 0,
+   "abl": 1
+  },
+  "orno": {
+   "ac": 0,
+   "abl": 1
+  },
+  "candidatus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "reditus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "discessus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "arpinus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "soror": {
+   "ac": 1,
+   "abl": 0
+  },
+  "aliquis": {
+   "ac": 1,
+   "abl": 0
+  },
+  "comensis": {
+   "ac": 0,
+   "abl": 1
+  },
+  "appuleius": {
+   "ac": 0,
+   "abl": 1
+  },
+  "lycaonia": {
+   "ac": 1,
+   "abl": 0
+  },
+  "melita": {
+   "ac": 0,
+   "abl": 1
+  },
+  "divortium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "amanus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "mustaceus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "cyrrhestica": {
+   "ac": 0,
+   "abl": 1
+  },
+  "motus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "cyprus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "quaestus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "vectigal": {
+   "ac": 0,
+   "abl": 1
+  },
+  "fanum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "brutus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "faenus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "bursa": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ephorus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "perturbatio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "idem": {
+   "ac": 0,
+   "abl": 1
+  },
+  "littera": {
+   "ac": 0,
+   "abl": 1
+  },
+  "turma": {
+   "ac": 0,
+   "abl": 1
+  },
+  "subscriptio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "historia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "chersonesus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "aes": {
+   "ac": 1,
+   "abl": 0
+  },
+  "aedifico": {
+   "ac": 0,
+   "abl": 1
+  },
+  "essedum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "cappadocia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "extremus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "expeto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "abicio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "aerarium": {
+   "ac": 1,
+   "abl": 0
+  },
+  "consul": {
+   "ac": 0,
+   "abl": 1
+  },
+  "formianum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "retineo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "relinquo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "labienus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "calenum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "culpa": {
+   "ac": 0,
+   "abl": 1
+  },
+  "graecia": {
+   "ac": 1,
+   "abl": 0
+  },
+  "suadeo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "bellator": {
+   "ac": 0,
+   "abl": 1
+  },
+  "domitius": {
+   "ac": 1,
+   "abl": 0
+  },
+  "umbria": {
+   "ac": 0,
+   "abl": 1
+  },
+  "nuntius": {
+   "ac": 0,
+   "abl": 1
+  },
+  "seguasivi": {
+   "ac": 1,
+   "abl": 0
+  },
+  "santoni": {
+   "ac": 1,
+   "abl": 0
+  },
+  "rhodanus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "arar": {
+   "ac": 0,
+   "abl": 1
+  },
+  "conventus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "bituriges": {
+   "ac": 0,
+   "abl": 1
+  },
+  "condicio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "phalanx": {
+   "ac": 1,
+   "abl": 0
+  },
+  "bellovaci": {
+   "ac": 1,
+   "abl": 0
+  },
+  "eques": {
+   "ac": 1,
+   "abl": 0
+  },
+  "iniquitas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ripa": {
+   "ac": 0,
+   "abl": 1
+  },
+  "cornu": {
+   "ac": 0,
+   "abl": 1
+  },
+  "angustus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "aestuarium": {
+   "ac": 1,
+   "abl": 0
+  },
+  "commemoro": {
+   "ac": 0,
+   "abl": 1
+  },
+  "miser": {
+   "ac": 1,
+   "abl": 0
+  },
+  "nervii": {
+   "ac": 0,
+   "abl": 1
+  },
+  "fossa": {
+   "ac": 1,
+   "abl": 0
+  },
+  "dicio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "carnutes": {
+   "ac": 1,
+   "abl": 0
+  },
+  "vallum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "allobroges": {
+   "ac": 1,
+   "abl": 0
+  },
+  "andes": {
+   "ac": 0,
+   "abl": 1
+  },
+  "esuvii": {
+   "ac": 1,
+   "abl": 0
+  },
+  "coriosolites": {
+   "ac": 1,
+   "abl": 0
+  },
+  "impetus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "venetia": {
+   "ac": 1,
+   "abl": 0
+  },
+  "convallis": {
+   "ac": 0,
+   "abl": 1
+  },
+  "insidiae": {
+   "ac": 0,
+   "abl": 1
+  },
+  "aulerci": {
+   "ac": 0,
+   "abl": 1
+  },
+  "consuetudo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "capio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ancora": {
+   "ac": 0,
+   "abl": 1
+  },
+  "fluctus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "peto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "altum": {
+   "ac": 1,
+   "abl": 0
+  },
+  "meto": {
+   "ac": 0,
+   "abl": 1
+  },
+  "currus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "belgae": {
+   "ac": 0,
+   "abl": 1
+  },
+  "meldi": {
+   "ac": 0,
+   "abl": 1
+  },
+  "senones": {
+   "ac": 1,
+   "abl": 0
+  },
+  "dubius": {
+   "ac": 1,
+   "abl": 0
+  },
+  "propinquitas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "summa": {
+   "ac": 0,
+   "abl": 1
+  },
+  "aedui": {
+   "ac": 0,
+   "abl": 1
+  },
+  "servus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "perdisco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "institutum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "uxor": {
+   "ac": 1,
+   "abl": 0
+  },
+  "lac": {
+   "ac": 0,
+   "abl": 1
+  },
+  "arduenna": {
+   "ac": 1,
+   "abl": 0
+  },
+  "palus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "mosa": {
+   "ac": 1,
+   "abl": 0
+  },
+  "tueor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "conservo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "difficultas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "noceo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "seges": {
+   "ac": 1,
+   "abl": 0
+  },
+  "philosophia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "exercitatio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "facultas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "uterque": {
+   "ac": 0,
+   "abl": 1
+  },
+  "colo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "quaestio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "deliberatio": {
+   "ac": 1,
+   "abl": 0
+  },
+  "considero": {
+   "ac": 0,
+   "abl": 1
+  },
+  "delibero": {
+   "ac": 0,
+   "abl": 1
+  },
+  "divido": {
+   "ac": 0,
+   "abl": 1
+  },
+  "fabula": {
+   "ac": 0,
+   "abl": 1
+  },
+  "liberalitas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "beneficentia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "colloco": {
+   "ac": 0,
+   "abl": 1
+  },
+  "refero": {
+   "ac": 0,
+   "abl": 1
+  },
+  "permultus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "exiguus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "coniugio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "deleo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tribuo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "percipio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "elatio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "despicientia": {
+   "ac": 0,
+   "abl": 1
+  },
+  "dolor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "exscindo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "beneficium": {
+   "ac": 0,
+   "abl": 1
+  },
+  "exsequor": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tolero": {
+   "ac": 0,
+   "abl": 1
+  },
+  "cura": {
+   "ac": 0,
+   "abl": 1
+  },
+  "adeo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "tranquillum": {
+   "ac": 0,
+   "abl": 1
+  },
+  "aequabilitas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "morositas": {
+   "ac": 1,
+   "abl": 0
+  },
+  "punior": {
+   "ac": 0,
+   "abl": 1
+  },
+  "gyrus": {
+   "ac": 1,
+   "abl": 0
+  },
+  "honestas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "varietas": {
+   "ac": 0,
+   "abl": 1
+  },
+  "habeo": {
+   "ac": 0,
+   "abl": 1
+  },
+  "appetitus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "iocus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "turpitudo": {
+   "ac": 1,
+   "abl": 0
+  },
+  "familiaris": {
+   "ac": 0,
+   "abl": 1
+  },
+  "suscipio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "praetura": {
+   "ac": 0,
+   "abl": 1
+  },
+  "ambulatio": {
+   "ac": 0,
+   "abl": 1
+  },
+  "peregrinus": {
+   "ac": 0,
+   "abl": 1
+  },
+  "cognitio": {
+   "ac": 0,
+   "abl": 1
+  }
+ }
+}
