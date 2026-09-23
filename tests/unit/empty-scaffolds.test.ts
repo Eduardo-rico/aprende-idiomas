@@ -36,10 +36,20 @@ describe("empty scaffolds (Phase 5)", () => {
         // `getBlock(1)` SÍ tira — que es la afirmación que este test hacía
         // y que en latín sigue siendo verdad, sólo que ahora por el motivo
         // concreto y no por estar el idioma entero a cero.
+        //
+        // ⚠ El 2026-09-23 el bloque 1 recibió su lote y su lección, y
+        // `getBlock(1)` dejó de tirar: la afirmación caducó PORQUE EL
+        // TRABAJO SE HIZO (§B8). Era la SEGUNDA copia de esa misma
+        // afirmación —la primera, en `curriculum-la.test.ts`, se reancló el
+        // mismo día y ésta se quedó atrás—. Lo que no caduca es el
+        // propósito: un bloque sin lección tira, y uno con lección no.
         expect(c.ALL_CONCEPTS.length).toBeGreaterThan(0);
         expect(c.BLOCKS.length).toBeGreaterThan(0);
-        expect(() => c.getBlock(1)).toThrow();
-        expect(c.getBlock(2).lessons.length).toBeGreaterThan(0);
+        for (const b of c.BLOCKS) expect(c.getBlock(b.id).lessons.length).toBeGreaterThan(0);
+        const conLeccion = new Set(c.BLOCKS.map((b) => b.id));
+        const sinLeccion = [...Array(20).keys()].map((i) => i + 1).filter((i) => !conLeccion.has(i));
+        expect(sinLeccion.length, 'el latín tiene bloques sin lección: tiene que quedar alguno para esta comprobación').toBeGreaterThan(0);
+        for (const id of sinLeccion) expect(() => c.getBlock(id)).toThrow();
       } else if (lang === 'ru') {
         // El 2026-09-11 el RUSO estrenó un tercer estado que ni el rumano ni
         // el latín tuvieron —inventario poblado y BLOCKS vacío del todo—, y
