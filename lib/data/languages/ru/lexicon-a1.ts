@@ -13,6 +13,17 @@
 //      cero, y una mete vocal de apoyo y la otra no. Sin esos pares el
 //      gate sale verde sobre una regla a la que le falta una mitad.
 //
+// ⚠ `genPlIrreg` y `nomPlIrreg` DICEN «IRREGULAR», Y SE LEEN. El 2026-09-23
+// se retiraron CATORCE que eran formas regulares: once genitivos plurales
+// (недель, людей, коней, царей, мест, слов, лиц, морей, дверей, ночей, вещей)
+// y tres nominativos (сёстры, люди, письма — los dos primeros ya salen de
+// `temaPl`). Borrados, la máquina produce la MISMA cadena en los catorce: es
+// lo que los hacía un motivo falso (§E3) y no un dato. Ahora el invariante
+// `irregular-que-sale-de-la-regla` de `paradigma-ru.ts` se pone ROJO si uno
+// de estos campos guarda lo que la regla ya da. Lo que queda guardado es lo
+// que la regla NO da: la vocal de apoyo (сестёр, деревень, окон, писем,
+// сердец), el -ей de la 1.ª blanda (дядей) y el -ей sin ь de друзей.
+//
 // Las cuentas son de `buscar()` —con límite de palabra unicode a los dos
 // lados— y son la CIFRA QUE EL GATE CORRE, no otra sacada de un `grep`
 // distinto. Que la cifra citada y la que corre el gate salgan del mismo
@@ -49,7 +60,7 @@ export const NOMBRES_A1: EntradaNominal[] = [
   { lema: 'карта', genero: 'f', tema: 'duro', glosa: 'mapa, carta',
     nota: 'está por el genitivo plural SIN vocal de apoyo (карт 91), que es la frontera de la regla de сестёр' },
   { lema: 'сестра', genero: 'f', tema: 'duro', glosa: 'hermana',
-    nomPlIrreg: 'сёстры', genPlIrreg: 'сестёр', temaPl: 'сёстр',
+    genPlIrreg: 'сестёр', temaPl: 'сёстр',
     lecturaYo: { 'gen.sg': 'сёстры (24) NO es una variante de сестры: es el NOMINATIVO PLURAL, otra casilla del mismo lema. La máquina tiene razón en el genitivo singular' },
     nota: '⚠ EL `temaPl: сёстр` LO ENCONTRÓ EL LINGÜISTA ADVERSARIAL EL 2026-09-12 Y ESTABA VIVO: la máquina daba *сестрам/*сестрами/*сестрах. Зализняк: мн. сёстры, сестёр, сёстрам, сёстрами, о сёстрах. Medido con ё frente a sin ё — 4/29, 4/29, 4/5 — que es la tasa exacta de ediciones ё-ificadas, y сёстер da 0, o sea que la ё del genitivo plural cae donde esta entrada dice y no donde caería la de los demás casos. Vocal de apoyo CON ё (сестёр 16 · сёстер 0)' },
   // Masculino con forma femenina: la clase que `u3-genero-por-terminacion`
@@ -77,7 +88,7 @@ export const NOMBRES_A1: EntradaNominal[] = [
   // ortográfica produce `*деревны` y ningún gate que la recalcule lo ve.
   { lema: 'деревня', genero: 'f', tema: 'blando', glosa: 'aldea', genPlIrreg: 'деревень', desinenciaOTonica: false,
     nota: 'testigo del tema blando: деревни 395 sin velar ni sibilante delante' },
-  { lema: 'неделя', genero: 'f', tema: 'blando', glosa: 'semana', genPlIrreg: 'недель', desinenciaOTonica: false },
+  { lema: 'неделя', genero: 'f', tema: 'blando', glosa: 'semana', desinenciaOTonica: false },
 
   // ── 2.ª DECLINACIÓN MASCULINA, TEMA DURO ──────────────────────────
   { lema: 'стол', genero: 'm', tema: 'duro', glosa: 'mesa' },              // 1473
@@ -136,7 +147,7 @@ export const NOMBRES_A1: EntradaNominal[] = [
     nomPlIrreg: 'друзья', temaPl: 'друзь', temaPlTema: 'blando', genPlIrreg: 'друзей',
     nota: 'друзья 261, друзей 217 — tema de plural distinto (друзь-), no una desinencia rara' },
   { lema: 'человек', genero: 'm', tema: 'duro', glosa: 'persona', animado: true,
-    nomPlIrreg: 'люди', temaPl: 'люд', temaPlTema: 'blando', genPlIrreg: 'людей', irregular: { 'instr.pl': 'людьми' },
+    temaPl: 'люд', temaPlTema: 'blando', irregular: { 'instr.pl': 'людьми' },
     nota: 'человек 8976 · люди 3973 · людей 3578: supleción léxica entera' },
   // Sibilante final: su plural es `-и` por ORTOGRAFÍA (el tema es duro) y
   // no por tema, que es justo el par que separa las dos reglas de
@@ -162,7 +173,7 @@ export const NOMBRES_A1: EntradaNominal[] = [
   // distintas: es el par que demuestra que la declinación no se lee en la
   // terminación y que el género es dato.
   { lema: 'конь', genero: 'm', tema: 'blando', glosa: 'caballo', animado: true,
-    desinenciaOTonica: true, genPlIrreg: 'коней',
+    desinenciaOTonica: true,
     nota: 'кони 120 sin velar ni sibilante — testigo del tema blando; y конём (47) lleva ё porque la /o/ de la desinencia es TÓNICA. El 2026-09-12 esta casilla dejó de ser un `irregular` escrito a mano y pasó a salir de la regla con `desinenciaOTonica`: escrita a mano estaba en конь y en царь y FALTABA en день, que es la copia N+1 de siempre' },
   // ⚠ `словарь` ESTUVO AQUÍ Y SALIÓ, y se escribe en vez de borrarse sin
   // más: su plural `словари` sale **0 veces** en 7,7 M de palabras (el lema
@@ -171,7 +182,7 @@ export const NOMBRES_A1: EntradaNominal[] = [
   // más, y el masculino blando ya lo aportan `конь` y `царь`. Guardar la
   // evidencia negativa es que el siguiente no lo reproponga.
   { lema: 'царь', genero: 'm', tema: 'blando', glosa: 'zar, rey', animado: true,
-    desinenciaOTonica: true, genPlIrreg: 'царей',
+    desinenciaOTonica: true,
     nota: 'masculino blando ANIMADO (царь 1366, царей 24): con конь hace el par que prueba que el acusativo animado sale del genitivo en las dos clases' },
   // `музей` es la cuarta forma falsa de control (`*музеы`) y entra por eso
   // aunque salga 5 veces: el corpus NO puede certificarla y el gate lo
@@ -191,10 +202,10 @@ export const NOMBRES_A1: EntradaNominal[] = [
   // ── 2.ª DECLINACIÓN NEUTRA ────────────────────────────────────────
   { lema: 'окно', genero: 'n', tema: 'duro', glosa: 'ventana', genPlIrreg: 'окон',
     nota: 'окон 254: vocal de apoyo SIN ё, frente a сестёр que la lleva con ё' },
-  { lema: 'место', genero: 'n', tema: 'duro', glosa: 'lugar', genPlIrreg: 'мест' },
-  { lema: 'письмо', genero: 'n', tema: 'duro', glosa: 'carta', genPlIrreg: 'писем', nomPlIrreg: 'письма',
+  { lema: 'место', genero: 'n', tema: 'duro', glosa: 'lugar' },
+  { lema: 'письмо', genero: 'n', tema: 'duro', glosa: 'carta', genPlIrreg: 'писем',
     nota: 'vocal de apoyo con pérdida del signo blando: писем, no *письм' },
-  { lema: 'слово', genero: 'n', tema: 'duro', glosa: 'palabra', genPlIrreg: 'слов' },
+  { lema: 'слово', genero: 'n', tema: 'duro', glosa: 'palabra' },
   // ⚠ LOS DOS NEUTROS EN `ц`, y son la tercera cara de la misma regla: aquí
   // la /o/ no está sólo en el instrumental, está TAMBIÉN en el nominativo,
   // que es lo que hace que `сердце` se escriba con `е` y `лицо` con `о`.
@@ -203,19 +214,19 @@ export const NOMBRES_A1: EntradaNominal[] = [
   // regla de siempre.
   { lema: 'сердце', genero: 'n', tema: 'duro', glosa: 'corazón', desinenciaOTonica: false, genPlIrreg: 'сердец',
     nota: 'сердце 3057 · сердцем 360 · *сердцом 0. El nominativo lo decide la MISMA regla que el instrumental: átona ⇒ е en las dos casillas' },
-  { lema: 'лицо', genero: 'n', tema: 'duro', glosa: 'cara, persona', desinenciaOTonica: true, genPlIrreg: 'лиц',
+  { lema: 'лицо', genero: 'n', tema: 'duro', glosa: 'cara, persona', desinenciaOTonica: true,
     nota: 'лицо 5270 · лицом 1503. La /o/ TÓNICA, y el par con сердце es lo que impide escribir «ц ⇒ е» a secas. ⚠ Su rival `лицем` sale 2 veces y hay que LEERLO: es grafía antigua, no una casilla viva — ver `lecturaRival`',
     lecturaRival: { 'instr.sg': 'лицем (2) es grafía ANTIGUA del mismo instrumental, no otro lema ni otra casilla: «пред лицем», fórmula eclesiástica. Frente a лицом 1503. El corpus TIENE FECHA y esto es la parte de su fecha que no es ruso de hoy' } },
-  { lema: 'море', genero: 'n', tema: 'blando', glosa: 'mar', genPlIrreg: 'морей', desinenciaOTonica: false,
+  { lema: 'море', genero: 'n', tema: 'blando', glosa: 'mar', desinenciaOTonica: false,
     nota: 'neutro blando con la /o/ ÁTONA en las dos casillas que la llevan: море (nominativo) y морем (54, instrumental). Su contraparte tónica sería ружьё/ружьём, que no está en el lexicón' },
 
   // ── 3.ª DECLINACIÓN ───────────────────────────────────────────────
   // El otro miembro del par con `конь`. `двери` 1834 y `ночи` 1053: los
   // dos son tema blando y ninguno lleva velar ni sibilante.
-  { lema: 'дверь', genero: 'f', tema: 'blando', glosa: 'puerta', genPlIrreg: 'дверей',
+  { lema: 'дверь', genero: 'f', tema: 'blando', glosa: 'puerta',
     nota: 'двери 1834 — el plural sale del tema, no de la ortografía' },
-  { lema: 'ночь', genero: 'f', tema: 'blando', glosa: 'noche', genPlIrreg: 'ночей' },
-  { lema: 'вещь', genero: 'f', tema: 'blando', glosa: 'cosa', genPlIrreg: 'вещей' },
+  { lema: 'ночь', genero: 'f', tema: 'blando', glosa: 'noche' },
+  { lema: 'вещь', genero: 'f', tema: 'blando', glosa: 'cosa' },
 ];
 
 export const VERBOS_A1: EntradaVerbal[] = [

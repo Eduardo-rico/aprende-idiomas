@@ -741,6 +741,26 @@ export function invariantesNominales(entradas: EntradaNominal[]): Aviso[] {
     if (e.locativo2 && e.locativo2.forma === casillaNominal(e, 'prep', 'sg')) {
       out.push({ lema: e.lema, clase: 'locativo2-inutil', detalle: `coincide con el prepositivo regular (${e.locativo2.forma})` });
     }
+    // ⚠ EL MISMO DEFECTO QUE `locativo2-inutil`, en los campos que se llaman
+    // IRREGULAR. Un campo guardado que la regla ya produce no cambia ninguna
+    // forma —por eso ningún camino por consecuencias lo ve (§C6)— y sí AFIRMA
+    // algo falso a quien lo lee: el 2026-09-23 había once `genPlIrreg` y tres
+    // `nomPlIrreg` así (мест, слов, лиц, вещей, коней…; сёстры, люди, письма),
+    // y un lote que clasificara «irregular» por la presencia del campo habría
+    // fabricado fronteras falsas. Se pregunta QUITANDO el campo y
+    // regenerando; si la cadena no cambia, el campo miente.
+    const sinCampo = (quitar: (x: EntradaNominal) => void, caso: CasoRu, num: NumeroRu, guardada: string) => {
+      const x: EntradaNominal = { ...e, irregular: e.irregular ? { ...e.irregular } : undefined };
+      quitar(x);
+      if (casillaNominal(x, caso, num) === guardada)
+        out.push({ lema: e.lema, clase: 'irregular-que-sale-de-la-regla', detalle: `${caso}.${num} = ${guardada} está guardado como irregular y la regla ya lo da` });
+    };
+    if (e.genPlIrreg) sinCampo((x) => { delete x.genPlIrreg; }, 'gen', 'pl', e.genPlIrreg);
+    if (e.nomPlIrreg) sinCampo((x) => { delete x.nomPlIrreg; }, 'nom', 'pl', e.nomPlIrreg);
+    for (const [k, v] of Object.entries(e.irregular ?? {})) {
+      const [caso, num] = k.split('.') as [CasoRu, NumeroRu];
+      sinCampo((x) => { delete (x.irregular as Record<string, string>)[k]; }, caso, num, v as string);
+    }
   }
   return out;
 }

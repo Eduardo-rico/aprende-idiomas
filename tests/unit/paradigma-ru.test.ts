@@ -265,6 +265,24 @@ describe('el lexicón declara lo que no se deriva', { timeout: 120_000 }, () => 
     const falso: EntradaNominal = { ...n('стол'), locativo2: { forma: 'столе', regente: 'в' } };
     expect(invariantesNominales([falso]).map((a) => a.clase)).toContain('locativo2-inutil');
   });
+
+  // El 2026-09-23 había once `genPlIrreg` y tres `nomPlIrreg` que la regla ya
+  // producía (мест, слов, вещей…; сёстры, люди, письма): un campo que se llama
+  // IRREGULAR y miente, que es la mina del §E3 en un campo que se lee.
+  it('ROJO: un «irregular» que la regla ya da — genPlIrreg, nomPlIrreg e irregular, los tres campos', () => {
+    const clases = (e: EntradaNominal) => invariantesNominales([e]).map((a) => a.clase);
+    expect(clases({ ...n('место'), genPlIrreg: 'мест' })).toContain('irregular-que-sale-de-la-regla');
+    expect(clases({ ...n('вещь'), genPlIrreg: 'вещей' })).toContain('irregular-que-sale-de-la-regla');
+    expect(clases({ ...n('письмо'), nomPlIrreg: 'письма' })).toContain('irregular-que-sale-de-la-regla');
+    expect(clases({ ...n('стол'), irregular: { 'instr.pl': 'столами' } })).toContain('irregular-que-sale-de-la-regla');
+  });
+
+  it('CONTROL NEGATIVO: los irregulares de VERDAD no se denuncian (vocal de apoyo, -ей de la 1.ª, друзей, людьми)', () => {
+    for (const lema of ['сестра', 'окно', 'письмо', 'сердце', 'деревня', 'дядя', 'друг', 'человек', 'город', 'учитель'])
+      expect(invariantesNominales([n(lema)]).map((a) => a.clase), lema).not.toContain('irregular-que-sale-de-la-regla');
+    // Y la guarda: que el control mire lemas que SÍ guardan algo.
+    expect(NOMBRES_A1.filter((e) => e.genPlIrreg).length).toBeGreaterThanOrEqual(7);
+  });
 });
 
 

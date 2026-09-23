@@ -641,7 +641,7 @@ if (/[/\\]check-paradigma-ru\.ts$/.test(process.argv[1] ?? '')) {
   // script **salió con código 0**, porque su clase no estaba en esta
   // condición. Un hallazgo que no cambia el veredicto es un informe, no un
   // gate: añadir el invariante y no añadirlo aquí son dos cambios.
-  const CLASES_ROJAS = ['casilla-vacia', 'casilla-nula', 'o-desinencial-sin-declarar', 'locativo2-inutil'];
+  const CLASES_ROJAS = ['casilla-vacia', 'casilla-nula', 'o-desinencial-sin-declarar', 'locativo2-inutil', 'irregular-que-sale-de-la-regla'];
   // ── LA VARIANTE DEL XIX QUE LA MÁQUINA NO PRODUCE ─────────────────
   //
   // ⚠ NO ES UN ROJO, Y POR ESO HAY QUE MEDIRLO: es la clase «la biblioteca
