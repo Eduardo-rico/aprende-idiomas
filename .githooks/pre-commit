@@ -121,6 +121,10 @@ if [ -n "$rama" ] && git rev-parse --verify --quiet "origin/$rama" >/dev/null; t
   fi
 fi
 
+# Primero, y es instantáneo: un commit con datos de dos lenguas es un
+# barrido del índice compartido (ver .githooks/lib/un-idioma.sh).
+sh "$(git rev-parse --show-toplevel)/.githooks/lib/un-idioma.sh" || { trap - EXIT; limpia; exit 1; }
+
 echo "pre-commit: tsc --noEmit"
 if ! npx tsc --noEmit > "$TMP_TSC" 2>&1; then
   cat "$TMP_TSC"
