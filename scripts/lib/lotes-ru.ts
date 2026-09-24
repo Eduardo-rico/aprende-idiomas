@@ -10,6 +10,7 @@ import * as A1C from '../lotes/cloze-ru-a1c';
 import * as A1D from '../lotes/cloze-ru-a1d';
 import * as A2 from '../lotes/cloze-ru-a2';
 import * as A2B from '../lotes/cloze-ru-a2b';
+import * as A2C from '../lotes/cloze-ru-a2c';
 
 /** ⚠ EL REGISTRO ES GENÉRICO Y NO ESTÁ TIPADO AL LOTE 1, y el motivo importa.
  *  La v0 importaba `respuestaDe` y `alternativasDe` de `cloze-ru-a1` **por
@@ -97,6 +98,14 @@ export const LOTES: Record<string, LoteAnonimo> = {
     alternativasDe: A2B.alternativasDe,
     punto: (x) => x.p, frase: (x) => A2B.frase(x), pista: (x) => x.pista,
     tags: (x) => [`des-${A2B.desinenciaDe(A2B.respuestaDe(x) ?? '', x.lema)}`, `eje-${x.eje}`, ...(x.frontera ? [`frontera-${x.frontera.regla}`] : [])],
+  }),
+  // El SÉPTIMO lote, tercero de A2: el determinante. La casilla varía (una por
+  // par) y se etiqueta; el lema (этот/тот) no, porque es lo que el par contrasta.
+  a2c: deLote<A2C.ClozeDemRu>({
+    items: A2C.ITEMS, verificar: A2C.verificar, respuestaDe: A2C.respuestaDe,
+    alternativasDe: A2C.alternativasDe,
+    punto: (x) => x.p, frase: (x) => A2C.frase(x), pista: (x) => x.pista,
+    tags: (x) => [`casilla-${x.forma}.${x.caso}`, `eje-${x.eje}`, ...(x.frontera ? [`frontera-${x.frontera.regla}`] : [])],
   }),
 };
 
