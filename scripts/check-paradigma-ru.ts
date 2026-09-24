@@ -400,7 +400,7 @@ function pruebasVerbales(verbos: EntradaVerbal[]): Prueba[] {
         const ing = temaIngenuo(v.lema);
         if (ing && ing !== (v.tema1sg ?? v.temaPresente)) {
           const rival = ing + (v.reflexivo ? 'юсь' : 'ю');
-          pr.rival = rival; pr.nRival = contar(rival);
+          pr.rival = rival; pr.nRival = contar(rival); pr.contaminado = v.lecturaRival?.[`pres.${p}`];
         }
       }
       out.push(pr);

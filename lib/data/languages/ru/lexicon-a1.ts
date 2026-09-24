@@ -276,6 +276,36 @@ export const VERBOS_A1: EntradaVerbal[] = [
     imperativoIrreg: null,
     lecturaYo: { 'pres.2sg': 'можёшь sale 1 vez y es la fórmula rimada «Как живёшь-можёшь?» (Leskov), donde la ё es analógica de живёшь. Una aparición en una fórmula fija no es una variante de la casilla' },
     nota: 'alterna г/ж DENTRO del paradigma (могу/можешь/могут), que no es una alternancia de tema sino dos temas, y por eso va guardado entero. Sin imperativo: `imperativoIrreg: null` es la declaración, no un hueco' },
+  // ⚠ LOS CUATRO QUE FALTABAN PARA `u7-irregulares-frecuentes` (entraron el
+  // 2026-09-23). Van ENTEROS en `irregular`, como мочь: ninguno sigue una clase,
+  // y derivarlos produciría formas plausibles (*хотишь 3, *бежу 1 — atestadas
+  // en habla popular, y por eso no se pueden usar como falsas sin leerlas).
+  // Contadas con `corpus-ru.ts` esa misma tarde; `temaPresente` y los dos
+  // acentos son INERTES en un verbo `irregular` (la máquina no los lee para el
+  // presente) y se escriben con el valor real, no con uno cómodo (§13, мочь).
+  { lema: 'хотеть', clase: 1, temaPresente: 'хоч', acento2sgDesinencial: false, acento1sgDesinencial: true,
+    glosa: 'querer', aspecto: 'impf',
+    irregular: { '1sg': 'хочу', '2sg': 'хочешь', '3sg': 'хочет', '1pl': 'хотим', '2pl': 'хотите', '3pl': 'хотят' },
+    imperativoIrreg: null,
+    nota: 'CAMBIA DE CONJUGACIÓN a mitad del paradigma: хочу/хочешь/хочет van por la I con alternancia т→ч, хотим/хотите/хотят por la II sin ella (хочет 1534 · хотим 114 · хотят 447). Pasado regular: хотел 3885. Sin imperativo usable (хоти 0)' },
+  { lema: 'есть', clase: 1, temaPresente: 'ед', acento2sgDesinencial: false, acento1sgDesinencial: false,
+    glosa: 'comer', aspecto: 'impf',
+    irregular: { '1sg': 'ем', '2sg': 'ешь', '3sg': 'ест', '1pl': 'едим', '2pl': 'едите', '3pl': 'едят' },
+    pasadoIrreg: { m: 'ел', f: 'ела', n: 'ело', pl: 'ели' },
+    imperativoIrreg: 'ешь',
+    lecturaYo: { 'pres.1sg': 'ём (4) NO es una variante de ем: es «в ём», el prepositivo de он SIN la н- protética, en habla popular (Dostoievski, «Подросток»: «В ём ума гущина» — ⚠ escrito primero «Братья Карамазовы», de memoria, y lo cazó `cita-ru.ts` antes del commit; Mamin-Sibiriak ×2, «Богач и Ерёмка»; Saltykov, «Баран-непомнящий»). Otro lema y otra casilla' },
+    nota: 'conjugación ATEMÁTICA (ем, ешь, ест, едим, едите, едят), pasado sin la д del tema (ел, no *есл — la regla del infinitivo daría *есл). ⚠ HOMÓGRAFOS QUE NINGÚN CONTEO SEPARA: `есть` 11106 es sobre todo el existencial «hay» (у меня есть); `ели` 206 es también «abetos»; `ешь` es a la vez la 2.ª sg y el imperativo. Un ítem de este verbo no se justifica contando la cadena' },
+  { lema: 'дать', clase: 1, temaPresente: 'дад', acento2sgDesinencial: false, acento1sgDesinencial: false,
+    glosa: 'dar', aspecto: 'pf',
+    irregular: { '1sg': 'дам', '2sg': 'дашь', '3sg': 'даст', '1pl': 'дадим', '2pl': 'дадите', '3pl': 'дадут' },
+    imperativoIrreg: 'дай',
+    lecturaRival: { 'pres.1sg': 'даю (211) es OTRO LEMA: el presente de давать, el imperfectivo de este mismo par («даю тебе три дни сроку», Afanásiev). No es la regla ingenua aplicada a дать: es su pareja aspectual, que existe y es correcta en su sitio' },
+    nota: 'ATEMÁTICO como есть (дам, дашь, даст, дадим, дадите, дадут) y PERFECTIVO: estas formas son FUTURO, no presente — un ítem que las pida con la etiqueta «presente» mide mal el aspecto. Pasado regular (дал 1555). ⚠ `дам` 880 es también el genitivo plural de дама' },
+  { lema: 'бежать', clase: 2, temaPresente: 'беж', acento2sgDesinencial: true, acento1sgDesinencial: true,
+    glosa: 'correr', aspecto: 'impf',
+    irregular: { '1sg': 'бегу', '2sg': 'бежишь', '3sg': 'бежит', '1pl': 'бежим', '2pl': 'бежите', '3pl': 'бегут' },
+    imperativoIrreg: 'беги',
+    nota: 'MEZCLA DE CONJUGACIONES: бегу/бегут con г y desinencias de la I (-у, -ут), el resto con ж y desinencias de la II (бежишь 24, бежит 422). Imperativo беги 113, del tema de 1.ª sg. Pasado regular (бежал 318)' },
 
   // ── CONJUGACIÓN II ────────────────────────────────────────────────
   { lema: 'говорить', clase: 2, temaPresente: 'говор', acento2sgDesinencial: true, acento1sgDesinencial: true,

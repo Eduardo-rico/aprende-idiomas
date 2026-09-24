@@ -587,6 +587,12 @@ export interface EntradaVerbal {
   irregular?: Partial<Record<PersonaRu, string>>;
   /** Ver `lecturaYo` en `EntradaNominal`. */
   lecturaYo?: Record<string, string>;
+  /** Ver `lecturaRival` en `EntradaNominal`: la lectura de un rival VIVO, con
+   *  la clave de la casilla (`pres.1sg`). Faltaba en el verbo hasta el
+   *  2026-09-23: el primer verbo cuyo rival ingenuo es palabra de OTRO lema
+   *  (`дать` → *даю, que es el presente de давать) dejaba el gate en rojo sin
+   *  campo donde escribir la lectura. */
+  lecturaRival?: Record<string, string>;
   /** Imperativo guardado cuando la regla falla o el verbo no lo tiene. */
   imperativoIrreg?: string | null;
   /** Reflexivo: `-ся` tras consonante, `-сь` tras vocal. La alternancia es
